@@ -62,6 +62,27 @@ def lineas_de_pagina(pagina):
     detectarlos por regex y despues separarlos por posicion).
     """
     chars = [c for c in pagina.chars if c.get("text") is not None]
+
+    # Algunos PDF (los de recursos) dibujan ciertas celdas dos veces, caracter
+    # sobre caracter, para simular negrita. Sin deduplicar, "70,846,672,293.00"
+    # se lee "7700,,884466,,667722,,229933..0000" y no hay regex que lo salve.
+    # El calco no siempre cae exacto: se corre entre 0.01 y 0.1 pt, asi que hay
+    # que deduplicar por proximidad. La tolerancia es holgada frente al ancho de
+    # un digito (3.3 pt), asi que dos digitos iguales y contiguos de verdad, como
+    # el "11" de 1.185, nunca se confunden con un calco.
+    TOL_CALCO = 0.5
+    chars.sort(key=lambda c: (round(c["top"], 1), c["x0"]))
+    unicos = []
+    for c in chars:
+        previo = unicos[-1] if unicos else None
+        if (previo is not None
+                and previo["text"] == c["text"]
+                and abs(previo["top"] - c["top"]) <= TOL_CALCO
+                and abs(previo["x0"] - c["x0"]) <= TOL_CALCO):
+            continue
+        unicos.append(c)
+    chars = unicos
+
     chars.sort(key=lambda c: (round(c["top"], 1), c["x0"]))
 
     lineas, actual, tope = [], [], None
@@ -76,59 +97,126 @@ def lineas_de_pagina(pagina):
     if actual:
         lineas.append(actual)
 
+    # El texto de la linea es la concatenacion cruda de los caracteres, sin
+    # meter separadores donde el PDF deja un hueco. Es a proposito: los importes
+    # se detectan por regex sobre este texto, y un espacio inventado en el lugar
+    # equivocado partiria un importe en dos y devolveria numeros que no existen.
+    # Para lo que si necesita separar por hueco esta tokens_por_hueco().
     salida = []
     for grupo in lineas:
         grupo.sort(key=lambda c: c["x0"])
-        piezas, mapa, anterior = [], [], None
+        piezas, mapa = [], []
         for c in grupo:
-            if anterior is not None and c["x0"] - anterior["x1"] > 0.9:
-                piezas.append(" ")
-                mapa.append(None)
             piezas.append(c["text"])
             mapa.extend([c] * len(c["text"]))
         salida.append({"texto": "".join(piezas), "chars": mapa})
     return salida
 
 
+def tokens_por_hueco(linea, umbral=2.0):
+    """Parte la linea en tokens cortando por espacio o por hueco horizontal.
+
+    Lo usa el formulario de stock de deuda, que no separa las celdas con
+    espacios: 'CONSOLIDADA4.983.984.3943.388.144.415' son un rotulo y dos
+    importes de columnas distintas, y lo unico que los distingue es que entre
+    ellos hay 25 pt de hueco.
+
+    Devuelve [(texto, primer_char, ultimo_char)].
+    """
+    mapa = linea["chars"]
+    tokens, actual = [], []
+    anterior = None
+    for i, ch in enumerate(linea["texto"]):
+        c = mapa[i]
+        corta = (c is None or ch.isspace()
+                 or (anterior is not None and c["x0"] - anterior["x1"] > umbral))
+        if corta and actual:
+            tokens.append(("".join(x[0] for x in actual), actual[0][1], actual[-1][1]))
+            actual = []
+        if c is not None and not ch.isspace():
+            actual.append((ch, c))
+            anterior = c
+    if actual:
+        tokens.append(("".join(x[0] for x in actual), actual[0][1], actual[-1][1]))
+    return tokens
+
+
+RE_CORRIDA = re.compile(r"[-0-9.,]+")
+
+
+def _descomponer(corrida):
+    """Parte una corrida de digitos y signos en importes, o None si sobra algo.
+
+    Es lo que separa un importe de verdad de un numero que vive dentro de un
+    rotulo. 'LEY 13.010' termina en una corrida '13.010': el regex de importes
+    engancha '13.01' y queda un '0' suelto, asi que la corrida NO son importes y
+    se descarta entera. En cambio '97,684,606,849.0014,477,501,892.00' se
+    descompone sin resto en dos importes, que es justo el caso pegado que hay
+    que leer bien.
+    """
+    piezas, i = [], 0
+    while i < len(corrida):
+        m = RE_IMPORTE.match(corrida, i)
+        if not m:
+            return None
+        piezas.append((m.start(), m.end()))
+        i = m.end()
+    return piezas or None
+
+
 def partir_linea(linea):
     """Separa la linea en (rotulo, importes).
 
-    La zona numerica arranca despues de la ultima letra, asi un codigo de partida
-    como '1.1.10' nunca se confunde con un importe. El rotulo es todo lo que hay
-    a la izquierda del primer importe, que es lo que hace falta para reconocer
-    filas como 'TOTAL BIENES DE CONSUMO17,057,360,033.00...', donde el texto y el
-    numero salen pegados sin espacio.
+    La zona numerica arranca despues de la ultima letra, y ademas cada corrida
+    numerica tiene que descomponerse entera en importes. Con las dos condiciones,
+    ni un codigo de partida ni una ley citada en el rotulo se cuelan como dato.
     """
     texto, mapa = linea["texto"], linea["chars"]
-    limite = 0.0
+    # El corte entre rotulo y numeros se toma por POSICION EN EL TEXTO, no por
+    # coordenada. Con coordenadas falla: en 'TOTALES GENERALES155,971,165,667.00'
+    # el kerning hace que el primer digito empiece 1.2 pt ANTES del borde
+    # derecho de la ultima letra, y la fila entera se descartaba.
+    ultima_letra = -1
     for i, ch in enumerate(texto):
-        if ch.isalpha() and mapa[i] is not None:
-            limite = max(limite, mapa[i]["x1"])
+        if ch.isalpha():
+            ultima_letra = i
 
     importes, corte = [], len(texto)
-    for m in RE_IMPORTE.finditer(texto):
-        ini, fin = m.start(), m.end()
-        chars = [mapa[i] for i in range(ini, fin) if mapa[i] is not None]
+    for corrida in RE_CORRIDA.finditer(texto):
+        if corrida.start() < ultima_letra:
+            continue
+        chars = [mapa[i] for i in range(corrida.start(), corrida.end())
+                 if mapa[i] is not None]
         if not chars:
             continue
-        if chars[0]["x0"] < limite:
+        piezas = _descomponer(corrida.group())
+        if piezas is None:
             continue
         if not importes:
-            corte = ini
-        importes.append((m.group(), chars[-1]["x1"]))
+            corte = corrida.start()
+        for a, b in piezas:
+            ini_abs, fin_abs = corrida.start() + a, corrida.start() + b
+            cs = [mapa[i] for i in range(ini_abs, fin_abs) if mapa[i] is not None]
+            if cs:
+                importes.append((texto[ini_abs:fin_abs], cs[-1]["x1"]))
     return texto[:corte].strip(), importes
 
 
 def detectar_columnas(bordes, n_columnas):
-    """Mapea bordes derechos observados a indices de columna 0..n_columnas-1.
+    """Mapea bordes derechos de importes a indices de columna 0..n_columnas-1.
 
-    Agrupa los bordes en cumulos y, usando el paso regular de la grilla, calcula
-    el indice de cada cumulo contando desde la ULTIMA columna hacia la izquierda.
-    Contar desde la derecha es lo que permite que una columna intermedia vacia no
-    corra todo el resto (que es justo lo que pasa con 'Preventivo', vacia en los
-    PDF de gastos por objeto).
+    Los importes van alineados a la derecha, asi que sus bordes derechos se
+    agrupan en cumulos, uno por columna ocupada. El problema es que una columna
+    puede estar vacia en TODAS las filas ('Preventivo' en gastos por objeto,
+    'Recurso Estimado' en algunos trimestres de recursos), y entonces hay menos
+    cumulos que columnas y contarlos en orden corre todo el resto.
 
-    Devuelve [(centro, indice)] o None si la grilla no es regular.
+    Se resuelve midiendo el paso de la grilla y avanzando de cumulo en cumulo:
+    un hueco de un paso es la columna siguiente, uno de dos pasos significa que
+    quedo una columna vacia en el medio. Al final se ancla la ultima columna
+    ocupada contra la ultima columna de la tabla.
+
+    Devuelve [(centro, indice)] o None si no cierra.
     """
     if not bordes:
         return None
@@ -149,25 +237,31 @@ def detectar_columnas(bordes, n_columnas):
         return [(centros[0], n_columnas - 1)]
 
     huecos = [b - a for a, b in zip(centros, centros[1:])]
-    paso = min(huecos)
+    estimado = statistics.median(huecos)
+    if estimado <= 0:
+        return None
+    # Un hueco puede valer mas de un paso si quedaron columnas vacias en el
+    # medio; se refina el paso dividiendo cada hueco por la cantidad de pasos
+    # que representa.
+    saltos = [max(1, int(round(h / estimado))) for h in huecos]
+    paso = statistics.median([h / k for h, k in zip(huecos, saltos)])
     if paso <= 0:
         return None
 
-    derecha = centros[-1]
-    mapa = []
-    for c in centros:
-        desplazamiento = (derecha - c) / paso
-        indice = n_columnas - 1 - int(round(desplazamiento))
-        # La grilla tiene que ser regular: si un centro no cae sobre un multiplo
-        # del paso, no confiamos en el mapeo y abortamos.
-        if abs(desplazamiento - round(desplazamiento)) > 0.2:
+    indices, actual_i = [0], 0
+    for h, k in zip(huecos, saltos):
+        if abs(h / paso - k) > 0.25:
             return None
-        if not 0 <= indice < n_columnas:
-            return None
-        mapa.append((c, indice))
-    if len({i for _, i in mapa}) != len(mapa):
+        actual_i += k
+        indices.append(actual_i)
+
+    corrimiento = (n_columnas - 1) - indices[-1]
+    if corrimiento < 0:
         return None
-    return mapa
+    indices = [i + corrimiento for i in indices]
+    if indices[0] < 0:
+        return None
+    return list(zip(centros, indices))
 
 
 def asignar(importes, mapa_columnas, n_columnas):

@@ -52,9 +52,13 @@ verificable sin abrir los PDFs. Ningún PDF fue parseado todavía.
   `NO_DESCARGADOS.txt`, el Municipio subió ese PDF dos veces y por eso **no
   existe** el "gastos por objeto" del III trim. 2025. Se conservan los dos porque
   cada uno tiene su URL de origen en el inventario.
-- **Pares con nombre parecido que NO son duplicados** (md5 distinto, se conservan
-  los dos): `2024_i_stock_de_deuda.pdf` vs `stock_de_deuda_-_i_trim_2024_msi.pdf`;
-  `sef_-_i_trim_2024_msi.pdf` vs `sef_msi_-_2024.pdf`.
+- **`stock_de_deuda_-_i_trim_2024_msi.pdf` está mal archivado.** Al parsearlo
+  (tarea 2) resultó que no es un stock de deuda sino un *estado de ejecución del
+  presupuesto de gastos por fuente de financiamiento* del I trim. 2024. El nombre
+  del archivo engaña. Se deja donde está para no romper la trazabilidad, pero no
+  es comparable con los otros diez PDF de `deuda_publica/`.
+- **`sef_-_i_trim_2024_msi.pdf` y `sef_msi_-_2024.pdf` NO son duplicados**
+  (md5 distinto): uno es el I trimestre y el otro el anual.
 - **Los PDF no fueron abiertos.** Todo lo de arriba sale de nombres de archivo,
   tamaños, md5 y de los dos archivos de control. El contenido se valida en la
   siguiente tarea.
