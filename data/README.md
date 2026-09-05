@@ -52,16 +52,13 @@ Dos rangos se salen del molde y están marcados en `periodo_tipo`:
 - **`2025_iii_gastos_por_fyf_0.pdf` es copia byte a byte** de
   `2025_iii_gastos_por_fyf.pdf` (mismo md5). Se procesa una sola vez.
 
-## Las inconsistencias que sí importan
+## Desglose de las inconsistencias
 
 De las 171, 160 son informes de trimestre suelto sin columna de crédito y 4 son
-redondeos de ±1 peso del formulario de deuda. Quedan 7 sobre informes anuales,
-que son hallazgos reales sobre la gestión y no defectos de los datos:
+redondeos de ±1 peso del formulario de deuda.
 
-- **Recursos percibidos por encima de lo calculado** en Ingresos no tributarios y
-  Rentas de la propiedad (2024 y 2025), y en Transferencias corrientes (2025).
-- **Gasto devengado por encima del crédito vigente** en Promoción y asistencia
-  social y en Educación y cultural (2025 anual).
+7 filas quedan sin explicar y requieren revisión manual. No se interpretan en
+este archivo. Están en `INCONSISTENCIAS.csv` con `periodo_tipo = acumulado_anual`.
 
 ## Verificación
 
