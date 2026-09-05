@@ -63,6 +63,40 @@ que son hallazgos reales sobre la gestión y no defectos de los datos:
 - **Gasto devengado por encima del crédito vigente** en Promoción y asistencia
   social y en Educación y cultural (2025 anual).
 
+
+## Pesos constantes
+
+Todas las series están además en pesos constantes de **diciembre de 2025**. La
+columna nominal nunca se pisa: al lado de cada importe hay uno deflactado.
+
+| Archivo | Qué contiene |
+|---|---|
+| `ipc_indec_mensual.csv` | IPC mensual 2010-01 a 2026-07. IPC del INDEC desde dic-2016, IPC de San Luis empalmado antes. Columna `serie_origen` en cada fila. |
+| `deflactor.csv` | Coeficiente anual y a diciembre, por año. Base dic-2025 = 100. |
+| `deflactor_periodos.csv` | Coeficiente de cada rango de fechas de los informes trimestrales, con el detalle de días por mes. |
+| `serie_gastos_totales_real.csv` | Gasto total por año en pesos de dic-2025. |
+| `SALTOS_REALES.csv` | Años con variación real mayor a 40%. Para revisión humana, sin corregir. |
+| `METODOLOGIA_DEFLACTOR.md` | El empalme, el coeficiente y cómo rehacer la cuenta. **Leer antes de comparar años.** |
+
+Columnas agregadas a cada dataset: `coef_deflactor`, `base_coef`,
+`monto_constante_dic2025` y `<columna>_const_dic2025` para cada importe.
+
+**Cualquier comparación que cruce diciembre de 2016 lleva nota al pie sobre el
+empalme.** La nota está escrita en `METODOLOGIA_DEFLACTOR.md`, sección 6.
+
+## Orden de corrida
+
+El parser reescribe los CSV desde los PDF, así que va primero:
+
+```
+python3 03_scripts/test_parser.py      # parsea los PDF y valida
+python3 03_scripts/deflactor.py        # baja el IPC, empalma y deflacta
+python3 03_scripts/test_deflactor.py   # test dorado del empalme + validaciones
+```
+
+Al revés, el parser se lleva puestas las columnas del deflactor.
+`test_deflactor.py` lo detecta y lo dice.
+
 ## Verificación
 
 ```
