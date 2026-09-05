@@ -32,3 +32,16 @@ Ninguno.
 | `msi-presupuesto-municipal-2016.pdf` | Las tablas estan pegadas como imagen, cero importes en el texto. Ademas el archivo se llama 2016 y la portada dice 'AÑO 2016', pero todas las laminas de datos dicen 2015: el anio del contenido no esta claro. |
 | `_presupuesto2017.pdf.pdf` | Las tablas estan pegadas como imagen: la capa de texto solo trae titulos y comentarios, cero importes. |
 | `presupuesto_municipal_2022-presentacion_en_el_honorable_concejo_deliberante-noviembre_2021_1.pdf` | Las tablas estan pegadas como imagen: la capa de texto solo trae los titulos de las laminas, cero importes. |
+
+## Rendiciones de cuentas: no se pudieron parsear
+
+Ninguno.
+
+## Rendiciones de cuentas: excluidas a proposito
+
+| Archivo | Motivo |
+|---|---|
+| `_rendicion2017.pdf.pdf` | Las tablas estan pegadas como imagen: 23 paginas con 836 caracteres de texto y cero importes. Sin OCR no hay nada que extraer. |
+| `msi-rendicion-2015.pdf` | Las tablas estan pegadas como imagen: 26 paginas con 920 caracteres de texto y cero importes. |
+| `msi-rendicion-a-o-2014.pdf` | Las tablas estan pegadas como imagen: 38 paginas con 1487 caracteres de texto y cero importes. |
+| `msi_rendicion_2022_1.pdf` | Las tablas estan pegadas como imagen: 15 paginas con 183 caracteres de texto y cero importes. |

@@ -70,10 +70,19 @@ def a_centavos(texto):
         decimal = "." if pos_punto > pos_coma else ","
     elif pos_punto >= 0 or pos_coma >= 0:
         sep = "." if pos_punto >= 0 else ","
-        cola = limpio.rsplit(sep, 1)[1]
-        decimal = sep if (limpio.count(sep) == 1 and len(cola) <= 2) else None
-    else:
-        decimal = None
+        grupos = limpio.split(sep)
+        cola = grupos[-1]
+        # Con un solo tipo de separador hay dos casos de decimal: el obvio, un
+        # separador unico con una o dos cifras detras; y el de la rendicion 2010,
+        # donde el mismo documento escribe '588,384,592,29' usando coma para
+        # miles Y para decimales. Ahi el ultimo grupo de dos cifras detras de
+        # grupos de tres es el decimal, no un cuarto grupo de miles.
+        if len(grupos) == 2 and len(cola) <= 2:
+            decimal = sep
+        elif len(cola) == 2 and all(len(g) == 3 for g in grupos[1:-1]) and len(grupos) > 2:
+            decimal = sep
+        else:
+            decimal = None
 
     if decimal:
         entero, _, decimales = limpio.rpartition(decimal)
@@ -100,10 +109,14 @@ def formatear(centavos):
 # el corpus y se acepta el que cubre la corrida sin dejar resto.
 RE_CORRIDA = re.compile(r"[-0-9.,]{4,}")
 FORMATOS = [
-    re.compile(r"-?\d{1,3}(?:,\d{3})+\.\d{2}"),   # 1,234,567.89
-    re.compile(r"-?\d{1,3}(?:\.\d{3})+,\d{2}"),   # 1.234.567,89
-    re.compile(r"-?\d{1,3}(?:,\d{3})+"),          # 1,234,567
-    re.compile(r"-?\d{1,3}(?:\.\d{3})+"),          # 1.234.567
+    re.compile(r"-?\d{1,3}(?:,\d{3})+\.\d{1,2}"),  # 1,234,567.89
+    re.compile(r"-?\d{1,3}(?:\.\d{3})+,\d{1,2}"),  # 1.234.567,89
+    re.compile(r"-?\d{1,3}(?:,\d{3})+"),           # 1,234,567
+    re.compile(r"-?\d{1,3}(?:\.\d{3})+"),           # 1.234.567
+    # Ultimo recurso: coma para miles Y para decimales, '588,384,592,29'. Asi
+    # imprime el titulo de la lamina de origenes de la rendicion 2010. Va al
+    # final para que los formatos bien formados se prueben antes.
+    re.compile(r"-?\d{1,3}(?:,\d{3})+,\d{2}"),
 ]
 
 
