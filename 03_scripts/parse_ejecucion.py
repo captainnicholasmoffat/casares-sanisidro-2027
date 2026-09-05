@@ -430,6 +430,35 @@ def archivos(subcarpeta, patron):
     return sorted(glob.glob(os.path.join(RAW, subcarpeta, patron)))
 
 
+def escribir_no_parseados(secciones):
+    """Escribe NO_PARSEADOS.md con todas las secciones que le pasen.
+
+    Lo llama parse_ejecucion.py con sus propias secciones cuando se corre
+    suelto, y test_parser.py con las de los cuatro informes mas las de los
+    presupuestos historicos, que es la version completa.
+    """
+    with open(os.path.join(RAIZ, "NO_PARSEADOS.md"), "w", encoding="utf-8") as fh:
+        fh.write("# PDF no incorporados a los CSV\n\n")
+        fh.write("Generado por `03_scripts/test_parser.py`. Cada archivo de esta ")
+        fh.write("lista esta fuera de los CSV, con el motivo exacto.\n")
+        for titulo, tipo, filas in secciones:
+            fh.write("\n## %s\n\n" % titulo)
+            if not filas:
+                fh.write("Ninguno.\n")
+                continue
+            if tipo == "duplicado":
+                fh.write("Mismo md5 que el original, asi que se procesa una sola ")
+                fh.write("vez. Los datos estan en los CSV bajo el nombre del ")
+                fh.write("original.\n\n| Archivo omitido | Copia de | md5 |\n")
+                fh.write("|---|---|---|\n")
+                for nombre, original, huella in filas:
+                    fh.write("| `%s` | `%s` | `%s` |\n" % (nombre, original, huella))
+            else:
+                fh.write("| Archivo | Motivo |\n|---|---|\n")
+                for nombre, motivo in filas:
+                    fh.write("| `%s` | %s |\n" % (nombre, motivo))
+
+
 def escribir_csv(ruta, campos, filas, numericos):
     """Escribe el CSV formateando los campos numericos desde centavos."""
     os.makedirs(os.path.dirname(ruta), exist_ok=True)
@@ -522,27 +551,13 @@ def main():
                           ("deuda_stock.csv", n4)):
         print("  %-34s %5d filas" % (nombre, filas))
 
-    with open(os.path.join(RAIZ, "NO_PARSEADOS.md"), "w", encoding="utf-8") as fh:
-        fh.write("# PDF no incorporados a los CSV\n\n")
-        fh.write("Generado por `03_scripts/parse_ejecucion.py`.\n\n")
-        fh.write("## No se pudieron parsear\n\n")
-        if no_parseados:
-            fh.write("Ningun dato de estos archivos entro a los CSV.\n\n")
-            fh.write("| Archivo | Motivo |\n|---|---|\n")
-            for nombre, motivo in no_parseados:
-                fh.write("| `%s` | %s |\n" % (nombre, motivo))
-        else:
-            fh.write("Ninguno.\n")
-        fh.write("\n## Omitidos por ser copia exacta de otro\n\n")
-        if duplicados:
-            fh.write("Mismo md5 que el archivo original, asi que se procesa una ")
-            fh.write("sola vez. Los datos estan en los CSV bajo el nombre del ")
-            fh.write("original.\n\n")
-            fh.write("| Archivo omitido | Copia de | md5 |\n|---|---|---|\n")
-            for nombre, original, huella in duplicados:
-                fh.write("| `%s` | `%s` | `%s` |\n" % (nombre, original, huella))
-        else:
-            fh.write("Ninguno.\n")
+    escribir_no_parseados([
+        ("Ejecucion presupuestaria: no se pudieron parsear", "motivo",
+         no_parseados),
+        ("Ejecucion presupuestaria: omitidos por ser copia exacta de otro",
+         "duplicado", duplicados),
+    ])
+
     print("\n  %d PDF no parseados, %d omitidos por duplicado (NO_PARSEADOS.md)"
           % (len(no_parseados), len(duplicados)))
 

@@ -22,6 +22,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import parse_ejecucion as P
+import parse_presupuestos as PP
 
 EJECUCION = os.path.join(P.RAW, "ejecucion_presupuestaria")
 
@@ -37,6 +38,15 @@ DORADO = [
     ("7", "SERVICIO DE LA DEUDA Y DISMINUCION DE OTROS PASIVOS", 1489803003579),
 ]
 DORADO_SUMA = 32430395540545
+
+# Ancla de la serie historica: recursos por origen del presupuesto 2011, en
+# centavos. Fuente: presupuesto2011.pdf pagina 4, verificado a mano.
+ANCLA_2011 = [
+    ("municipal", 39798500000),
+    ("provincial", 21331040000),
+    ("nacional", 614400000),
+    ("otros", 1311500000),
+]
 
 
 class FalloDeTest(Exception):
@@ -84,12 +94,39 @@ def test_dorado():
     print()
 
 
+def test_ancla_2011():
+    """Los cuatro origenes de recursos del presupuesto 2011, exactos."""
+    spec = next(s for s in PP.ESPECIFICACIONES if s["archivo"] == "presupuesto2011.pdf")
+    filas = PP.extraer(spec)
+    obtenido = {f["subconcepto"]: f["monto"] for f in filas
+                if f["concepto"] == "recursos_por_origen"}
+
+    errores = []
+    for clave, esperado in ANCLA_2011:
+        if obtenido.get(clave) != esperado:
+            errores.append("%s: esperado %s, obtenido %s" % (
+                clave, PP.formatear(esperado), PP.formatear(obtenido.get(clave))))
+    if errores:
+        raise FalloDeTest("ANCLA 2011 FALLADA:\n  " + "\n  ".join(errores))
+
+    print("ANCLA 2011 — presupuesto2011.pdf, recursos por origen")
+    print("-" * 74)
+    total = sum(v for _, v in ANCLA_2011)
+    for clave, esperado in ANCLA_2011:
+        print("  %-12s %22s   %5.1f%%  OK" % (
+            clave, PP.formatear(esperado), esperado * 100.0 / total))
+    print("  %-12s %22s          OK" % ("TOTAL", PP.formatear(total)))
+    print()
+
+
 # --------------------------------------------------------------------------
 # validaciones por trimestre
 # --------------------------------------------------------------------------
 
 def _clave(fila):
     """Identificador legible de la fila dentro de su trimestre."""
+    if "fila" in fila:
+        return fila["fila"]
     for campos in (("objeto_codigo", "objeto"), ("rubro_codigo", "rubro"),
                    ("codigo", "concepto")):
         if campos[0] in fila:
@@ -175,8 +212,37 @@ def validar_deuda(filas, fallas):
                                    P.formatear(suma - esperado))))
 
 
+def validar_presupuestos(filas, fallas):
+    """Por documento: los origenes suman el total, los objetos suman el total."""
+    por_doc = {}
+    for f in filas:
+        por_doc.setdefault((f["anio"], f["fuente"]), []).append(f)
+
+    for (anio, fuente), grupo in sorted(por_doc.items()):
+        partes = {}
+        for f in grupo:
+            partes.setdefault(f["concepto"], {})[f["subconcepto"]] = f["monto"]
+
+        for concepto, clave_total, etiqueta in (
+                ("recursos_por_origen", "total_recursos", "los origenes"),
+                ("gastos_por_objeto", "total_gastos", "los objetos del gasto")):
+            detalle = partes.get(concepto)
+            total = partes.get(clave_total, {}).get("")
+            if not detalle or total is None:
+                continue
+            suma = sum(detalle.values())
+            if suma != total:
+                fallas.append(({"fuente": fuente, "anio": anio, "trimestre": "",
+                                "fila": concepto},
+                               "suma de %s = %s, %s del documento = %s "
+                               "(diferencia %s)" % (
+                                   etiqueta, PP.formatear(suma), clave_total,
+                                   PP.formatear(total), PP.formatear(suma - total))))
+
+
 def main():
     test_dorado()
+    test_ancla_2011()
 
     print("PARSEO DE TODOS LOS TRIMESTRES")
     print("-" * 74)
@@ -213,6 +279,23 @@ def main():
 
     validar_deuda(deuda, fallas)
 
+    print("PARSEO DE LOS PRESUPUESTOS HISTORICOS")
+    print("-" * 74)
+    presupuestos = PP.main()
+    print()
+    validar_presupuestos(presupuestos["filas"], fallas)
+
+    P.escribir_no_parseados([
+        ("Ejecucion presupuestaria: no se pudieron parsear", "motivo",
+         resultado["no_parseados"]),
+        ("Ejecucion presupuestaria: omitidos por ser copia exacta de otro",
+         "duplicado", resultado["duplicados"]),
+        ("Presupuestos historicos: no se pudieron parsear", "motivo",
+         presupuestos["no_parseados"]),
+        ("Presupuestos historicos: excluidos a proposito", "motivo",
+         presupuestos["excluidos"]),
+    ])
+
     ruta = os.path.join(P.DATA, "INCONSISTENCIAS.csv")
     os.makedirs(P.DATA, exist_ok=True)
     with open(ruta, "w", newline="", encoding="utf-8") as fh:
@@ -227,7 +310,9 @@ def main():
     print("VALIDACIONES")
     print("-" * 74)
     print("  filas revisadas: %d gastos por objeto, %d recursos, %d finalidad y"
-          " funcion, %d deuda" % (len(objeto), len(recursos), len(fyf), len(deuda)))
+          " funcion, %d deuda, %d presupuesto historico"
+          % (len(objeto), len(recursos), len(fyf), len(deuda),
+             len(presupuestos["filas"])))
     print("  chequeos: aprobado+modificaciones==vigente | devengado<=vigente |"
           " suma de partes==total general del PDF")
     if fallas:
@@ -247,7 +332,7 @@ def main():
     else:
         print("  0 inconsistencias. INCONSISTENCIAS.csv queda vacio.")
     print()
-    print("TEST DORADO OK")
+    print("TEST DORADO OK — ANCLA 2011 OK")
     return 0
 
 
