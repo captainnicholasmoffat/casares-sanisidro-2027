@@ -247,10 +247,15 @@ def _reparar_texto(t):
     cuando la vuelta latin-1 -> utf-8 da un texto valido; si no, se deja como
     esta. No se toca ningun numero.
     """
-    try:
-        return t.encode("latin-1").decode("utf-8")
-    except (UnicodeEncodeError, UnicodeDecodeError):
-        return t
+    def _arreglar(m):
+        try:
+            return m.group(0).encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            return m.group(0)
+    # Solo los tramos que parecen utf-8 leido como latin-1. El resto del texto
+    # no se toca, porque en la misma etiqueta conviven acentos sanos ("mas")
+    # con la enie rota ("aÃ±os").
+    return re.sub("[\u00c2\u00c3][\u0080-\u00bf]+", _arreglar, t)
 
 
 def _celdas(fila):

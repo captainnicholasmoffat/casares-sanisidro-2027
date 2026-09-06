@@ -172,133 +172,147 @@ def eje_principal(coords):
     return v
 
 
-def partir_localidad(radios, k, poblacion, centroides, vecinos):
-    """
-    Parte los radios de una localidad en k zonas contiguas de poblacion
-    parecida, creciendo por adyacencia a lo largo del eje principal.
-    """
-    import numpy as np
-    if k <= 1:
-        return [set(radios)]
-    v = eje_principal([centroides[r] for r in radios])
-    proy = {r: float(np.dot(centroides[r], v)) for r in radios}
-    total = sum(poblacion[r] for r in radios)
-    cuota = total / k
+# --------------------------------------------------------------------------
+# Semillas: las 6 localidades oficiales del partido
+# --------------------------------------------------------------------------
+#
+# Son los puntos de la capa sublocalidad_entidad_bahra del IGN (BAHRA, la base
+# oficial de asentamientos que arman IGN e INDEC), con el mismo codigo que usa
+# el nomenclador del INDEC. Estan copiados aca en vez de bajarlos en cada
+# corrida porque son seis puntos que no cambian, y para que el script pueda
+# correrse sin red. La descarga cruda queda en 01_raw/censo2022/.
+#
+# ES LO UNICO OFICIAL QUE HAY SOBRE LAS LOCALIDADES: son puntos, no poligonos.
+# No existe limite publicado de ninguna de las seis.
 
-    libres = set(radios)
-    zonas = []
-    for n in range(k):
-        if not libres:
+SEMILLAS = [
+    ("0675601005", "San Isidro",       -58.5112940171937, -34.4698826533230),
+    ("0675601002", "Beccar",           -58.5313611443379, -34.4601958059158),
+    ("0675601004", "Martinez",         -58.4993801358530, -34.4890104372004),
+    ("0675601001", "Acassuso",         -58.5026800107625, -34.4782286640340),
+    ("0675601003", "Boulogne Sur Mer", -58.5669108609788, -34.5094800482416),
+    ("0675601006", "Villa Adelina",    -58.5473555040385, -34.5188556851314),
+]
+
+FUENTE_SEMILLAS = ("IGN/INDEC, BAHRA, capa sublocalidad_entidad_bahra, "
+                   "departamento 06756")
+
+
+def radios_semilla(geo):
+    """
+    El radio que contiene cada punto BAHRA. Si un punto cayera justo sobre un
+    borde o fuera de todo radio, se toma el radio mas cercano y se avisa.
+    """
+    import geopandas as gpd
+    from shapely.geometry import Point
+    pts = gpd.GeoDataFrame(
+        {"cod": [s[0] for s in SEMILLAS], "loc": [s[1] for s in SEMILLAS]},
+        geometry=[Point(s[2], s[3]) for s in SEMILLAS],
+        crs=CRS_SALIDA).to_crs(CRS_METRICO)
+
+    salida, avisos = {}, []
+    for _, p in pts.iterrows():
+        dentro = geo[geo.geometry.contains(p.geometry)]
+        if len(dentro) == 1:
+            radio = dentro["radio_id"].iloc[0]
+        else:
+            d = geo.geometry.distance(p.geometry)
+            radio = geo["radio_id"].iloc[int(d.idxmin())]
+            avisos.append("el punto de %s no cae dentro de un unico radio; se "
+                          "usa el mas cercano, %s" % (p["loc"], radio))
+        if radio in salida.values():
+            raise ErrorDeZonas("dos localidades comparten el radio semilla %s"
+                               % radio)
+        salida[p["loc"]] = radio
+    return salida, avisos
+
+
+# --------------------------------------------------------------------------
+# Crecimiento
+# --------------------------------------------------------------------------
+
+def crecer(semillas, poblacion, centroides, vecinos, geo_idx):
+    """
+    Las seis zonas crecen a la vez desde su semilla, radio por radio.
+
+    En cada paso avanza la zona que MENOS poblacion acumulada tiene entre las
+    que todavia tienen algun radio libre pegado. Esa zona se queda con el radio
+    libre de su frontera cuyo centroide esta mas cerca del centroide de su
+    propia semilla, en metros.
+
+    Por que asi: crecer siempre la mas chica es lo que empareja el tamano sin
+    que nadie elija nada, y tomar solo radios de la frontera es lo que
+    garantiza que cada zona quede de una sola pieza.
+
+    EMPATES. Se resuelven en este orden, y siempre dan el mismo resultado:
+      1. Entre zonas empatadas en poblacion, avanza la de nombre alfabetico
+         menor.
+      2. Entre radios de la frontera empatados en distancia (hasta el
+         milimetro), entra el de radio_id menor.
+    Los radio_id son unicos, asi que nunca queda un empate sin resolver.
+    """
+    zonas = {loc: {r} for loc, r in semillas.items()}
+    asignacion = {r: loc for loc, r in semillas.items()}
+    acumulado = {loc: poblacion[semillas[loc]] for loc in semillas}
+    frontera = {loc: {v for v in vecinos[semillas[loc]] if v not in asignacion}
+                for loc in semillas}
+    orden = []
+
+    libres = len(poblacion) - len(semillas)
+    while libres > 0:
+        candidatas = [loc for loc in sorted(zonas)
+                      if any(v not in asignacion for v in frontera[loc])]
+        if not candidatas:
             break
-        if n == k - 1:
-            zonas.append(set(libres))
-            libres.clear()
-            break
-        semilla = min(libres, key=lambda r: (proy[r], r))
-        zona = {semilla}
-        libres.discard(semilla)
-        acumulado = poblacion[semilla]
-        frontera = {x for x in vecinos[semilla] if x in libres}
-        while libres and acumulado < cuota and frontera:
-            elegido = min(frontera, key=lambda r: (proy[r], r))
-            frontera.discard(elegido)
-            libres.discard(elegido)
-            zona.add(elegido)
-            acumulado += poblacion[elegido]
-            frontera |= {x for x in vecinos[elegido] if x in libres}
-        zonas.append(zona)
-    return [z for z in zonas if z]
+        loc = min(candidatas, key=lambda z: (acumulado[z], z))
+        origen = centroides[semillas[loc]]
+        disponibles = [v for v in frontera[loc] if v not in asignacion]
+        elegido = min(disponibles,
+                      key=lambda r: (round(_dist(centroides[r], origen), 3), r))
+        zonas[loc].add(elegido)
+        asignacion[elegido] = loc
+        acumulado[loc] += poblacion[elegido]
+        frontera[loc] |= {v for v in vecinos[elegido] if v not in asignacion}
+        orden.append((elegido, loc))
+        libres -= 1
+
+    sueltos = [r for r in poblacion if r not in asignacion]
+    if sueltos:
+        raise ErrorDeZonas(
+            "quedaron %d radios sin zona; no son alcanzables por adyacencia "
+            "desde ninguna semilla: %s" % (len(sueltos), sorted(sueltos)[:5]))
+    return asignacion, orden
 
 
-def reparar_contiguidad(asignacion, vecinos, largos):
-    """
-    Toda zona tiene que ser una sola pieza. Si a una le quedaron pedazos
-    sueltos, cada pedazo se pega a la zona vecina con la que comparte mas
-    metros de borde. Se repite hasta que no queda ninguno.
-    """
-    movidos = []
-    for _ in range(200):
-        por_zona = {}
-        for radio, zona in asignacion.items():
-            por_zona.setdefault(zona, set()).add(radio)
-        suelto = None
-        for zona, radios in sorted(por_zona.items()):
-            comps = componentes(radios, vecinos)
-            if len(comps) > 1:
-                suelto = (zona, comps[1:])
-                break
-        if suelto is None:
-            return movidos
-        zona, pedazos = suelto
-        for pedazo in pedazos:
-            candidatos = {}
-            for r in pedazo:
-                for v in vecinos[r]:
-                    z = asignacion[v]
-                    if z != zona:
-                        candidatos[z] = candidatos.get(z, 0.0) + largos[(r, v)]
-            if not candidatos:
-                raise ErrorDeZonas(
-                    "el pedazo %s de la zona %s no toca ninguna otra zona"
-                    % (sorted(pedazo)[:3], zona))
-            destino = max(sorted(candidatos.items()), key=lambda x: x[1])[0]
-            for r in pedazo:
-                asignacion[r] = destino
-            movidos.append((sorted(pedazo), zona, destino))
-    raise ErrorDeZonas("la reparacion de contiguidad no converge")
+def _dist(a, b):
+    return math.hypot(a[0] - b[0], a[1] - b[1])
 
 
-def armar(geo, censo, localidades, vecinos, largos, objetivo):
-    """Devuelve {radio: zona} para un objetivo de cantidad de zonas."""
-    import numpy as np
-    centroides = {r: (g.centroid.x, g.centroid.y)
-                  for r, g in zip(geo["radio_id"], geo.geometry)}
-    poblacion = {r: _int(censo[r]["poblacion_sexo__total"]) for r in censo}
-    total = sum(poblacion.values())
-    cuota = total / objetivo
+def verificar(asignacion, vecinos, radios, semillas):
+    """Las tres validaciones que pide la tarea. Cualquiera que falle corta."""
+    problemas = []
 
-    por_localidad = {}
-    for radio, loc in localidades.items():
-        por_localidad.setdefault(loc, []).append(radio)
+    sin_zona = [r for r in radios if r not in asignacion]
+    if sin_zona:
+        problemas.append("%d radios sin zona: %s"
+                         % (len(sin_zona), sin_zona[:5]))
+    de_mas = [r for r in asignacion if r not in set(radios)]
+    if de_mas:
+        problemas.append("hay zonas con radios que no son del partido: %s"
+                         % de_mas[:5])
 
-    asignacion = {}
-    for loc in sorted(por_localidad):
-        radios = sorted(por_localidad[loc])
-        pob = sum(poblacion[r] for r in radios)
-        k = max(1, int(round(pob / cuota)))
-        # Una localidad no puede partirse en mas pedazos que radios tiene.
-        k = min(k, len(radios))
-        piezas = partir_localidad(radios, k, poblacion, centroides, vecinos)
-        for n, pieza in enumerate(piezas, 1):
-            nombre = loc if len(piezas) == 1 else "%s %d" % (loc, n)
-            for r in pieza:
-                asignacion[r] = nombre
-    movidos = reparar_contiguidad(asignacion, vecinos, largos)
-    return asignacion, poblacion, movidos
-
-
-def elegir_objetivo(geo, censo, localidades, vecinos, largos):
-    """
-    Prueba cada objetivo entre 6 y 12 y se queda con el que deja la relacion
-    entre la zona mas grande y la mas chica mas cerca de 1.
-    """
-    ensayos = []
-    for objetivo in range(ZONAS_MIN, ZONAS_MAX + 1):
-        asignacion, poblacion, movidos = armar(
-            geo, censo, localidades, vecinos, largos, objetivo)
-        por_zona = {}
-        for r, z in asignacion.items():
-            por_zona[z] = por_zona.get(z, 0) + poblacion[r]
-        n = len(por_zona)
-        if not (ZONAS_MIN <= n <= ZONAS_MAX):
-            ensayos.append((objetivo, n, None, "queda fuera de %d-%d zonas"
-                            % (ZONAS_MIN, ZONAS_MAX)))
-            continue
-        ratio = max(por_zona.values()) / min(por_zona.values())
-        ensayos.append((objetivo, n, ratio, ""))
-    validos = [e for e in ensayos if e[2] is not None]
-    if not validos:
-        raise ErrorDeZonas("ningun objetivo entre %d y %d da un resultado valido"
-                           % (ZONAS_MIN, ZONAS_MAX))
-    mejor = min(validos, key=lambda e: (round(e[2], 6), e[1], e[0]))
-    return mejor[0], ensayos
+    por_zona = {}
+    for r, z in asignacion.items():
+        por_zona.setdefault(z, set()).add(r)
+    for zona in sorted(por_zona):
+        comps = componentes(por_zona[zona], vecinos)
+        if len(comps) > 1:
+            problemas.append(
+                "la zona %s no es contigua: quedo en %d pedazos (%s)"
+                % (zona, len(comps), [len(c) for c in comps]))
+    if len(por_zona) != len(semillas):
+        problemas.append("se esperaban %d zonas y hay %d"
+                         % (len(semillas), len(por_zona)))
+    if problemas:
+        raise ErrorDeZonas("\n".join("  " + p for p in problemas))
+    return por_zona
