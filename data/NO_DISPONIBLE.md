@@ -54,13 +54,18 @@ Las 6 entidades oficiales, con su código INDEC y su punto:
 nosotros. Lo único oficial es la geometría de los 360 radios y estos 6 puntos.
 Está explicado en `data/METODOLOGIA_ZONAS.md`.
 
-## 3. Barrios que no son localidades oficiales
+## 3. Los barrios no existen como dato
 
-La Cava, el Bajo de San Isidro, La Horqueta, Las Lomas y Punta Chica **no son
-localidades censales ni entidades BAHRA**. No tienen código INDEC ni geometría
-oficial de ningún organismo. Aparecen en el habla y en la gestión, no en los
-datos. Cualquier delimitación de estos barrios es una construcción nuestra y se
-declara como tal.
+Las seis entidades de la sección anterior son las únicas unidades por debajo del
+partido que tienen código INDEC. **Los barrios no son localidades censales ni
+entidades BAHRA**: no tienen código, ni geometría oficial de ningún organismo.
+Aparecen en el habla y en la gestión, no en los datos.
+
+Por eso, en todos los archivos de este repo, los radios se identifican por su
+**código de radio** y su **fracción censal**, nunca por nombre de barrio.
+Cualquier correspondencia entre un grupo de radios y un barrio conocido es una
+hipótesis que hay que verificar contra la geografía real antes de escribirla. No
+se afirma ninguna.
 
 ## 4. Un defecto de la fuente que sí se corrigió
 

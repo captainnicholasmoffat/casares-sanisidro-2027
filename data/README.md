@@ -84,6 +84,29 @@ Columnas agregadas a cada dataset: `coef_deflactor`, `base_coef`,
 **Cualquier comparación que cruce diciembre de 2016 lleva nota al pie sobre el
 empalme.** La nota está escrita en `METODOLOGIA_DEFLACTOR.md`, sección 6.
 
+
+## Mapa territorial (Censo 2022)
+
+| Archivo | Qué contiene |
+|---|---|
+| `radios_censales_sanisidro.geojson` | Los 360 radios censales del partido, código INDEC 06756. |
+| `censo2022_sanisidro_por_radio.csv` | 105 columnas por radio: población, hogares, viviendas, NBI, IPMH, hacinamiento, tenencia, agua, cloacas, gas, educación y edad. |
+| `censo2022_diccionario_columnas.csv` | Qué es cada columna y de qué variable de Redatam sale. |
+| `censo2022_sanisidro_otros_niveles.csv` | Lo que el Censo no publica por radio, al nivel que sí existe. |
+| `zonas_propuestas_sanisidro.geojson` | Las 6 zonas vecinales con sus indicadores. |
+| `zonas_indicadores.csv` | Indicadores por zona, de peor a mejor. |
+| `zonas_asignacion_radios.csv` | La zona de cada radio. |
+| `zonas_excepciones.csv` | Los radios movidos por la excepción de conglomerado crítico. |
+| `METODOLOGIA_ZONAS.md` | La regla completa. **Leer antes de usar el mapa.** |
+| `NO_DISPONIBLE.md` | Lo que no está y a qué nivel sí. |
+
+**Los límites de las zonas son nuestros, no oficiales.** Lo único oficial es la
+geometría de los radios del INDEC y los 6 puntos BAHRA de las localidades.
+Cuando se publique el mapa hay que decirlo.
+
+Los radios se identifican por código y fracción censal, nunca por nombre de
+barrio: los barrios no existen como dato oficial.
+
 ## Orden de corrida
 
 El parser reescribe los CSV desde los PDF, así que va primero:
@@ -92,6 +115,10 @@ El parser reescribe los CSV desde los PDF, así que va primero:
 python3 03_scripts/test_parser.py      # parsea los PDF y valida
 python3 03_scripts/deflactor.py        # baja el IPC, empalma y deflacta
 python3 03_scripts/test_deflactor.py   # test dorado del empalme + validaciones
+
+python3 03_scripts/censo_radios.py     # radios y datos del Censo 2022
+python3 03_scripts/zonas.py            # arma las 6 zonas
+python3 03_scripts/test_censo_zonas.py # validaciones del censo y las zonas
 ```
 
 Al revés, el parser se lleva puestas las columnas del deflactor.
