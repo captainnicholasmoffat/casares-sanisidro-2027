@@ -4,7 +4,8 @@ Fuentes oficiales descargadas para el proyecto San Isidro 2027. **Los nombres de
 archivo son los originales de la fuente y no se renombran**: son la trazabilidad
 contra la URL de origen registrada en `INVENTARIO.txt`.
 
-Totales: **89 PDF + 13 XLSX = 102 archivos**.
+Totales: **89 PDF + 13 XLSX = 102 archivos** descargados por el worker, más los
+archivos aportados a mano que se listan abajo.
 
 Los años de la tabla se derivan del nombre de archivo, que es lo único
 verificable sin abrir los PDFs. Ningún PDF fue parseado todavía.
@@ -22,6 +23,7 @@ verificable sin abrir los PDFs. Ningún PDF fue parseado todavía.
 | `sanisidro_transparencia/otros/` | 1 PDF | 2024–2025 | Documento de prioridades estratégicas del Municipio. |
 | `presupuestos/` | 19 PDF | 2010–2014, 2016–2026 (falta 2015) | Presupuestos municipales: ordenanzas, presentaciones ante el HCD e informes ARSI. Un archivo (`ordenanza_presupuesto_hcd_-_msi_2.pdf`) no lleva año en el nombre. |
 | `transferencias_pba/` | 13 XLSX | 2021–2026 (cortes a diciembre; 2026 a junio) | Transferencias y descentralización de la Provincia de Buenos Aires a los municipios. Descarga manual del usuario (ver abajo). |
+| `rafam_2025_106_municipios.csv` | 1 CSV | 2025 | Ejecución presupuestaria 2025 de **106 de los 135** municipios bonaerenses, del RAFAM provincial. Aportado por el usuario el 2026-09-07. **Sin URL de origen registrada todavía.** Es la fuente del EXHIBIT 05. |
 
 ## Archivos de control
 

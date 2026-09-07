@@ -1,12 +1,12 @@
 # Índice de gráficos
 
-18 de los 20 exhibits pedidos. Los dos que faltan están explicados en
+19 de los 20 exhibits pedidos. El que falta está explicado en
 `06_charts/FALTAN_DATOS.md`.
 
 Todos se regeneran de cero con:
 
 ```
-python3 03_scripts/generar_todos_los_graficos.py        # los 18
+python3 03_scripts/generar_todos_los_graficos.py        # los 19
 python3 03_scripts/generar_todos_los_graficos.py 15     # uno solo
 ```
 
@@ -24,7 +24,7 @@ nunca transparente. **Ningún número está escrito a mano**: todos salen de
 | 02 | Boulogne y Beccar concentran toda la carencia del partido | `data/zonas_indicadores.csv` | `graficos_cap1.py` → `ex02` |
 | 03 | El mismo orden, dado vuelta: donde falta todo, tampoco hay título | `data/zonas_indicadores.csv` | `graficos_cap1.py` → `ex03` |
 | 04 | Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta | `data/coparticipacion_comparada.csv` | `graficos_cap1.py` → `ex04` |
-| ~~05~~ | ~~San Isidro contra la mediana provincial~~ | **falta dato** | — |
+| 05 | San Isidro gasta menos en sueldos y mucho más en obra que la mediana bonaerense | `data/rafam_2025_municipios.csv` (generado por `parse_rafam.py` desde `01_raw/rafam_2025_106_municipios.csv`) | `graficos_cap1.py` → `ex05` |
 
 ## Capítulo 2 — La gestión
 
@@ -92,13 +92,51 @@ cortado. `titular()` y `pie()` además envuelven el texto midiendo el ancho real
 de la figura, no asumiéndolo.
 
 **Acentos.** `estilo.verificar_acentos()` recorre el texto que la figura va a
-**dibujar** y falla si encuentra una de 37 palabras que en español llevan tilde
-escrita sin ella. Se mira lo que se dibuja y no el código fuente: un nombre de
-variable sin acento no importa porque no se ve.
+**dibujar** y falla si encuentra una palabra de su lista que en español lleva
+tilde escrita sin ella. Se mira lo que se dibuja y no el código fuente: un
+nombre de variable sin acento no importa porque no se ve.
 
 Encontró seis casos que una revisión del código no alcanzaba: tres armados con
 `%` dentro de un `annotate()`, y tres que venían sin tilde **del propio CSV del
-Municipio**.
+Municipio**. Al ampliar la lista y hacerla sensible también a la mayúscula
+inicial aparecieron trece más, todos en títulos y pies escritos a mano —entre
+ellos `El deficit de 2025`, `Qué subio y que bajo en terminos reales` y, en el
+título del EXHIBIT 14, `En el ano 4`, que sin tilde dice otra cosa.
+
+Las rutas y los nombres de archivo quedan afuera a propósito: el archivo se
+llama `ejecucion_gastos_objeto.csv` y escribirlo con tilde en el pie de un
+gráfico manda al lector a un archivo que no existe. Es la misma regla de
+siempre —los identificadores en snake_case nunca llevan tilde— ahora hecha
+mecánica.
+
+**Colisiones.** `estilo.verificar_colisiones()` compara **las cajas de todos
+los textos entre sí** y falla si dos se solapan más del 10% del más chico. El
+verificador de desborde controlaba el borde del lienzo pero no que dos textos
+se pisaran entre ellos.
+
+Encontró colisiones en **9 de los 18** gráficos, y la causa de fondo era una
+sola: `subplots_adjust` coloca la caja de los ejes, pero los números del eje y
+los rótulos cuelgan **afuera** de esa caja. Se cambió por
+`tight_layout(rect=...)`, que encaja los ejes **con** sus decoraciones, y
+`marco()` pasó a **medir** cada bloque de la cabecera en vez de apoyarlo en una
+altura fija. Lo que quedó después se arregló uno por uno.
+
+Dos detalles que costaron encontrar y que valen para cualquier gráfico nuevo:
+
+- La caja de una `Annotation` incluye **la flecha**, no sólo el texto. Una
+  etiqueta con línea guía larga reportaba una caja del tamaño de media figura y
+  el verificador la acusaba de pisar todo lo que la línea cruzaba.
+  `estilo.caja_de_texto()` mide sólo lo escrito.
+- Una `Annotation` no sabe dónde cae su texto hasta que se le actualizan las
+  posiciones. Medirla antes devuelve la caja apoyada en el destino de la flecha
+  y no en el del texto, así que el colocador de etiquetas de los mapas daba por
+  buenas posiciones que después se pisaban.
+
+En los dos mapas los nombres de zona se colocan **midiendo**: de mayor a menor
+área, cada etiqueta se prueba en su lugar y, si choca, en ocho direcciones a
+cuatro distancias, y la que se mueve se lleva una línea guía. Si después de las
+32 pruebas no hay lugar, se dibuja igual: un nombre de zona que falta es peor
+que un nombre de zona apretado, y el verificador lo denuncia.
 
 Los datos nunca se tocan. Lo que la fuente escribe sin tilde se corrige **al
 mostrarlo**, con dos tablas de nombres: `estilo.zona_bonita()` para las zonas

@@ -205,6 +205,56 @@ def pie(fig, fuente, nota=None):
                  fontsize=6.2, color=AMBAR, family="sans-serif")
 
 
+def _alto_en_figura(fig, artista):
+    """Alto de un texto ya dibujado, en fraccion de figura."""
+    fig.canvas.draw()
+    caja = artista.get_window_extent(renderer=fig.canvas.get_renderer())
+    return caja.transformed(fig.transFigure.inverted()).height
+
+
+def marco(fig, exhibit, titulo, bajada=None, fuente=None, nota=None,
+          x=0.012, aire=0.014):
+    """
+    Dibuja la cabecera y el pie MIDIENDO cada bloque, y devuelve el (top,
+    bottom) que le queda libre al grafico.
+
+    Antes las posiciones estaban fijas y el resultado dependia de que el titulo
+    entrara en una linea: si envolvia en dos, se comia la bajada. Y el pie
+    estaba clavado abajo, asi que chocaba con las etiquetas del eje. Aca cada
+    bloque se dibuja, se mide y el siguiente arranca donde termina el anterior.
+
+    Devuelve (top, bottom) para pasarle a subplots_adjust.
+    """
+    y = 0.985
+    t = fig.text(x, y, exhibit, ha="left", va="top", fontsize=6.5,
+                 color=RIO, family="sans-serif", weight="bold")
+    y -= _alto_en_figura(fig, t) + aire * 0.5
+
+    t = fig.text(x, y, envolver(titulo, 11.5), ha="left", va="top",
+                 fontsize=11.5, color=TINTA, family="serif")
+    y -= _alto_en_figura(fig, t) + aire * 0.6
+
+    if bajada:
+        t = fig.text(x, y, envolver(bajada, 7.4), ha="left", va="top",
+                     fontsize=7.4, color=TINTA, alpha=0.72,
+                     family="sans-serif")
+        y -= _alto_en_figura(fig, t)
+    top = max(0.30, y - aire * 1.6)
+
+    y = 0.012
+    if fuente:
+        t = fig.text(x, y, envolver("Fuente: " + fuente, 6.2), ha="left",
+                     va="bottom", fontsize=6.2, color=TINTA, alpha=0.62,
+                     family="sans-serif")
+        y += _alto_en_figura(fig, t) + aire * 0.4
+    if nota:
+        t = fig.text(x, y, envolver(nota, 6.2), ha="left", va="bottom",
+                     fontsize=6.2, color=AMBAR, family="sans-serif")
+        y += _alto_en_figura(fig, t)
+    bottom = min(0.70, y + aire * 1.9)
+    return top, bottom
+
+
 def etiqueta_serie(ax, x, y, texto, color, dx=4, dy=0, **kw):
     """Etiqueta la serie al lado del dato en vez de mandarla a una leyenda."""
     ax.annotate(texto, (x, y), xytext=(dx, dy), textcoords="offset points",
@@ -224,13 +274,31 @@ def limpiar(ax, grilla="y"):
     ax.set_axisbelow(True)
 
 
-def guardar(fig, nombre, ajuste=None):
-    """PNG a 300 dpi y SVG, los dos con fondo PAPEL y nunca transparente."""
+def guardar(fig, nombre, ajuste=None, encajar=True):
+    """
+    PNG a 300 dpi y SVG, los dos con fondo PAPEL y nunca transparente.
+
+    El area libre que devuelve marco() se le pasa a tight_layout como
+    rectangulo, no a subplots_adjust. La diferencia importa: subplots_adjust
+    coloca la CAJA de los ejes, pero las etiquetas de los ticks y el rotulo del
+    eje cuelgan por fuera de esa caja y terminan encima del pie. tight_layout
+    encaja los ejes CON sus decoraciones adentro del rectangulo.
+
+    encajar=False para los mapas, que llevan ejes agregados a mano y a los que
+    tight_layout les mueve la barra de color.
+    """
     os.makedirs(SALIDA, exist_ok=True)
     if ajuste:
-        fig.subplots_adjust(**ajuste)
+        if encajar:
+            fig.tight_layout(rect=(ajuste.get("left", 0),
+                                   ajuste.get("bottom", 0),
+                                   ajuste.get("right", 1),
+                                   ajuste.get("top", 1)))
+        else:
+            fig.subplots_adjust(**ajuste)
     DESBORDES[nombre] = verificar_desborde(fig)
     SIN_ACENTO[nombre] = verificar_acentos(fig)
+    COLISIONES[nombre] = verificar_colisiones(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -242,6 +310,7 @@ def guardar(fig, nombre, ajuste=None):
 
 DESBORDES = {}
 SIN_ACENTO = {}
+COLISIONES = {}
 
 # Palabras que en un documento en español SIEMPRE llevan tilde. Si alguna
 # aparece sin tilde en un texto que se dibuja, el grafico no se publica.
@@ -264,7 +333,41 @@ ACENTOS_OBLIGATORIOS = {
     "composicion": "composición", "ecologia": "ecología",
     "critico": "crítico", "geometria": "geometría", "vacios": "vacíos",
     "Lopez": "López", "tamano": "tamaño", "senala": "señala",
+    # Segunda tanda: las que aparecieron al mirar los titulos uno por uno.
+    # "ano" va aca aunque parezca obvia, porque escrita sin tilde dice otra
+    # cosa y estaba en el titulo del exhibit 14.
+    "ano": "año", "anos": "años", "deficit": "déficit",
+    "superavit": "superávit", "inflacion": "inflación",
+    "inversion": "inversión", "terminos": "términos", "titulo": "título",
+    "subio": "subió", "estan": "están", "tambien": "también",
+    "millon": "millón", "codigo": "código", "grafico": "gráfico",
+    "graficos": "gráficos", "numeros": "números",
+    "metodologia": "metodología", "economica": "económica",
+    "ultimo": "último", "ultima": "última", "ultimos": "últimos",
+    "proximo": "próximo", "maximos": "máximos", "minimos": "mínimos",
+    "educacion": "educación", "atencion": "atención",
+    "administracion": "administración", "recaudacion": "recaudación",
+    "clasificacion": "clasificación",
+    "reclasificacion": "reclasificación", "comision": "comisión",
+    "categoria": "categoría", "energia": "energía", "practica": "práctica",
+    "publicos": "públicos", "publicas": "públicas",
 }
+
+
+def _es_nombre_de_archivo(texto, pos):
+    """
+    True si la palabra que empieza en 'pos' es parte de una ruta o de un
+    nombre de archivo.
+
+    Los identificadores en snake_case y las rutas NO llevan tilde: el archivo
+    se llama ejecucion_gastos_objeto.csv y escribirlo "ejecución" en el pie de
+    un grafico manda al lector a un archivo que no existe. La regla ya estaba
+    escrita en el proyecto; esto la hace mecanica.
+    """
+    ini = texto.rfind(" ", 0, pos) + 1
+    fin = texto.find(" ", pos)
+    ficha = texto[ini:fin if fin >= 0 else len(texto)]
+    return "/" in ficha or "_" in ficha or "." in ficha.rstrip(".,;:")
 
 
 def verificar_acentos(fig):
@@ -289,11 +392,34 @@ def verificar_acentos(fig):
         if not texto or texto.isupper():
             continue
         for mala, buena in ACENTOS_OBLIGATORIOS.items():
-            if re.search(r"(?<![A-Za-zÁÉÍÓÚÑáéíóúñ])%s(?![A-Za-zÁÉÍÓÚÑáéíóúñ])"
-                         % re.escape(mala), texto):
-                fallas.append("%r dice %r y va %r"
-                              % (texto.replace("\n", " ")[:52], mala, buena))
+            # Con mayuscula inicial tambien: "Coparticipacion" al principio de
+            # un rotulo se escapaba de la busqueda sensible a mayusculas.
+            for m, b in ((mala, buena),
+                         (mala[0].upper() + mala[1:],
+                          buena[0].upper() + buena[1:])):
+                if m == mala.upper():
+                    continue
+                for hallado in re.finditer(
+                        r"(?<![A-Za-zÁÉÍÓÚÑáéíóúñ])%s"
+                        r"(?![A-Za-zÁÉÍÓÚÑáéíóúñ])" % re.escape(m), texto):
+                    if _es_nombre_de_archivo(texto, hallado.start()):
+                        continue
+                    fallas.append("%r dice %r y va %r"
+                                  % (texto.replace("\n", " ")[:52], m, b))
     return sorted(set(fallas))
+
+
+def caja_de_texto(t, ren):
+    """
+    La caja de LO ESCRITO, sin la flecha.
+
+    Annotation.get_window_extent() devuelve la union del texto y de su flecha,
+    asi que una etiqueta con linea guia larga reportaba una caja del tamaño de
+    media figura y el verificador de colisiones la acusaba de pisar a todo lo
+    que la linea cruzaba. Una linea guia que pasa al lado de un rotulo no es
+    una colision: es para lo que existe la linea guia.
+    """
+    return matplotlib.text.Text.get_window_extent(t, renderer=ren)
 
 
 def verificar_desborde(fig, tolerancia_px=1.0):
@@ -322,7 +448,7 @@ def verificar_desborde(fig, tolerancia_px=1.0):
         if ejes is not None and not getattr(ejes, "axison", True):
             continue
         try:
-            caja = t.get_window_extent(renderer=ren)
+            caja = caja_de_texto(t, ren)
         except Exception:
             continue
         fuera = []
@@ -338,6 +464,68 @@ def verificar_desborde(fig, tolerancia_px=1.0):
             muestra = t.get_text().replace("\n", " ")[:52]
             fallas.append("%r se sale por %s" % (muestra, " y ".join(fuera)))
     return fallas
+
+
+def _cajas_de_texto(fig):
+    """Las cajas de todos los textos que se van a dibujar, ya renderizadas."""
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+    cajas = []
+    for t in fig.findobj(matplotlib.text.Text):
+        if not t.get_visible() or not (t.get_text() or "").strip():
+            continue
+        ejes = getattr(t, "axes", None)
+        if ejes is not None and not getattr(ejes, "axison", True):
+            # Los mapas apagan sus ejes: sus ticks existen pero no se dibujan.
+            # Los textos que pusimos a mano sobre el mapa si cuentan, y esos no
+            # son ticks, asi que se distinguen por no tener eje asociado a un
+            # tick.
+            if t in list(ejes.get_xticklabels()) + list(ejes.get_yticklabels()):
+                continue
+        try:
+            caja = caja_de_texto(t, ren)
+        except Exception:
+            continue
+        if caja.width <= 0 or caja.height <= 0:
+            continue
+        cajas.append((t, caja))
+    return cajas
+
+
+def verificar_colisiones(fig, umbral=0.10, holgura_px=1.0):
+    """
+    Falla si dos textos se pisan.
+
+    Controlar el borde del lienzo no alcanza: un titulo puede estar entero
+    adentro de la imagen y aun asi caer encima de otro. Se comparan todas las
+    cajas entre si y se reporta el par cuando el area solapada supera el
+    umbral del area del texto mas chico de los dos.
+
+    holgura_px encoge cada caja antes de comparar: las cajas de matplotlib
+    traen un poco de aire alrededor de las letras y sin esto dos textos que
+    apenas se rozan darian falso positivo.
+    """
+    cajas = _cajas_de_texto(fig)
+    fallas = []
+    for i in range(len(cajas)):
+        t1, c1 = cajas[i]
+        for j in range(i + 1, len(cajas)):
+            t2, c2 = cajas[j]
+            x0 = max(c1.x0, c2.x0) + holgura_px
+            x1 = min(c1.x1, c2.x1) - holgura_px
+            y0 = max(c1.y0, c2.y0) + holgura_px
+            y1 = min(c1.y1, c2.y1) - holgura_px
+            if x1 <= x0 or y1 <= y0:
+                continue
+            solape = (x1 - x0) * (y1 - y0)
+            menor = min(c1.width * c1.height, c2.width * c2.height)
+            if menor <= 0 or solape / menor < umbral:
+                continue
+            a = t1.get_text().replace("\n", " ")[:34]
+            b = t2.get_text().replace("\n", " ")[:34]
+            fallas.append("%r se pisa con %r (%.0f%% del mas chico)"
+                          % (a, b, 100 * solape / menor))
+    return sorted(set(fallas))
 
 
 def verificar_paleta(nombre):
@@ -397,12 +585,23 @@ def _en_la_rampa(r, g, b, tolerancia=8):
     return False
 
 
-def podar_tick_superior(ax, eje="x", n=6):
+def sin_offset(ax):
+    """
+    Mata el "1e6" que matplotlib pone en la esquina cuando los valores del eje
+    son grandes. En un mapa con coordenadas UTM aparece aunque el eje este
+    apagado, y se planta arriba a la izquierda encima de la bajada.
+    """
+    for eje in (ax.xaxis, ax.yaxis):
+        eje.get_offset_text().set_visible(False)
+        eje.set_major_formatter(matplotlib.ticker.NullFormatter())
+
+
+def podar_tick_superior(ax, eje="x", n=6, podar="upper"):
     """
     El ultimo tick de un eje que llega al borde se dibuja medio afuera del
     lienzo. prune="upper" lo saca sin tocar la escala.
     """
-    loc = MaxNLocator(nbins=n, prune="upper")
+    loc = MaxNLocator(nbins=n, prune=podar)
     (ax.xaxis if eje == "x" else ax.yaxis).set_major_locator(loc)
 
 
@@ -444,6 +643,25 @@ NOMBRE_ZONA = {
 
 def zona_bonita(nombre):
     return NOMBRE_ZONA.get(nombre, nombre)
+
+
+def dos_lineas(texto, maximo=11):
+    """
+    Parte un rotulo largo en dos lineas por el espacio mas cercano al medio.
+
+    Es para los ejes con una categoria por columna: seis zonas en 5,3 pulgadas
+    dejan unos trece caracteres por columna, y "Boulogne Sur Mer" no entra.
+    Cortar por el medio y no por el ancho da dos lineas parecidas en vez de una
+    larga y una de dos letras.
+    """
+    t = (texto or "").strip()
+    if len(t) <= maximo or " " not in t:
+        return t
+    medio = len(t) / 2.0
+    corte = min((i for i, c in enumerate(t) if c == " "),
+                key=lambda i: abs(i - medio))
+    return t[:corte] + "\n" + t[corte + 1:]
+
 
 
 # Los nombres de funcion vienen en mayusculas y sin tildes del PDF del

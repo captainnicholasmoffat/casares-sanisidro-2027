@@ -61,14 +61,15 @@ def ex06():
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylabel("millones de pesos corrientes de cada año", fontsize=6.8)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 06",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 06",
               "En 2025 quedaron 35.994 millones sin cobrar de lo ya facturado",
               "Recursos corrientes devengados contra percibidos. La franja "
               "punteada es mora: plata que el Municipio tiene derecho a cobrar "
-              "y no entro.")
-    E.pie(fig, FUENTE_EJEC)
+              "y no entró.",
+        FUENTE_EJEC)
     return E.guardar(fig, "EXHIBIT_06_percepcion_2024_2025",
-                     dict(left=0.125, right=0.985, top=0.685, bottom=0.11))
+                     dict(left=0.125, right=0.985, top=top, bottom=bottom))
 
 
 def ex07():
@@ -113,13 +114,14 @@ def ex07():
     lim = max(abs(v) for _, v in filas) * 1.55
     ax.set_xlim(-lim, lim)
     E.limpiar(ax, grilla="x")
-    E.titular(fig, "EXHIBIT 07",
-              "Qué subio y que bajo en terminos reales entre 2024 y 2025",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 07",
+              "Qué subió y qué bajó en términos reales entre 2024 y 2025",
               "Variación real del gasto devengado por función, en pesos "
-              "constantes de diciembre de 2025.")
-    E.pie(fig, FUENTE_EJEC,
+              "constantes de diciembre de 2025.",
+        FUENTE_EJEC,
           "Se excluyen Transporte, Comercio y Agua potable: cambian de "
           "contenido entre los dos años por reclasificación contable, no "
           "porque haya cambiado el gasto.")
     return E.guardar(fig, "EXHIBIT_07_variacion_por_funcion",
-                     dict(left=0.30, right=0.93, top=0.735, bottom=0.115))
+                     dict(left=0.30, right=0.93, top=top, bottom=bottom))

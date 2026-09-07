@@ -30,16 +30,13 @@ import graficos_cap5 as C5
 # Los exhibits que NO se generan porque el dato no existe en el repo. No se
 # inventa ninguno: quedan explicados en 06_charts/FALTAN_DATOS.md.
 SIN_DATO = {
-    "05": ("San Isidro contra la mediana provincial en % personal y % obra "
-           "publica", "no hay ejecución presupuestaria de los otros 134 "
-           "municipios en el repo"),
     "19": ("Las ocho medidas de transparencia, cumplidas contra pendientes",
            "no existe el dataset de medidas de transparencia"),
 }
 
 EXHIBITS = [
     ("01", 1, C1.ex01), ("02", 1, C1.ex02), ("03", 1, C1.ex03),
-    ("04", 1, C1.ex04),
+    ("04", 1, C1.ex04), ("05", 1, C1.ex05),
     ("06", 2, C2.ex06), ("07", 2, C2.ex07),
     ("08", 3, C3.ex08), ("09", 3, C3.ex09), ("10", 3, C3.ex10),
     ("11", 3, C3.ex11), ("12", 3, C3.ex12),
@@ -66,10 +63,13 @@ def main(pedidos=None):
         sin_tilde = E.SIN_ACENTO.get(nombre) or []
         if sin_tilde:
             problemas.append((nombre, "palabras sin tilde", sin_tilde))
+        pisados = E.COLISIONES.get(nombre) or []
+        if pisados:
+            problemas.append((nombre, "textos que se pisan", pisados))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
-                 "FALLA" if (sucios or fuera or sin_tilde) else "OK"))
+                 "FALLA" if (sucios or fuera or sin_tilde or pisados) else "OK"))
     return hechos, problemas
 
 
@@ -96,5 +96,5 @@ if __name__ == "__main__":
             for d in detalle[:6]:
                 print("      %s" % d)
         sys.exit(1)
-    print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo "
-          "y ninguna palabra sin tilde" % len(hechos))
+    print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
+          "ninguna palabra sin tilde y ningún texto pisado" % len(hechos))

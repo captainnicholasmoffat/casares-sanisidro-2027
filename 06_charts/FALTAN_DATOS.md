@@ -1,37 +1,17 @@
 # Gráficos que no se hicieron, y por qué
 
-Dos de los veinte exhibits pedidos **no se generaron**. Ninguno se rellenó con
-números aproximados ni con una fuente distinta de la que pedía: si el dato no
-está, el gráfico no existe.
+Uno de los veinte exhibits pedidos **no se generó**. No se rellenó con números
+aproximados ni con una fuente distinta de la que pedía: si el dato no está, el
+gráfico no existe.
 
 Fecha: **2026-09-07**.
 
----
-
-## EXHIBIT 05 — San Isidro contra la mediana provincial
-
-**Pedido:** % personal y % obra pública de San Isidro contra los 106 municipios
-de la Provincia, con el resto de fondo en gris CAL.
-
-**Falta:** la ejecución presupuestaria de los otros 134 municipios.
-
-El repo tiene **transferencias** por municipio —los 13 XLSX de la Provincia, que
-sí traen los 135— pero eso es lo que la Provincia les **manda**, no lo que cada
-municipio **gasta**. Con transferencias no se puede calcular ni el % de personal
-ni el % de obra pública de nadie.
-
-**Qué se necesitaría:** el Registro Único de Municipios (RUM) o los estados de
-ejecución presupuestaria municipal que publica el Ministerio de Hacienda de la
-Provincia, con apertura por objeto del gasto para todos los partidos. No están
-en `01_raw/`.
-
-**Qué se pierde:** el argumento comparativo. Hoy podemos decir cuánto gasta San
-Isidro en personal (34,4%) y en obra pública (17,8%), pero **no** si eso es mucho
-o poco contra sus pares.
-
-**Lo que sí se puede afirmar mientras tanto**, con lo que hay: la posición de San
-Isidro en el reparto de transferencias contra Tigre, Vicente López y San
-Fernando. Está en el **EXHIBIT 04**.
+> **El EXHIBIT 05 ya no falta.** Nick subió
+> `01_raw/rafam_2025_106_municipios.csv` —ejecución 2025 de 106 de los 135
+> municipios bonaerenses, del RAFAM provincial— el 7 de septiembre de 2026. El
+> gráfico está hecho. Siguen faltando 29 municipios y el gráfico lo dice: no se
+> estimó ninguno. Lo que queda pendiente es **registrar la URL de origen de esa
+> planilla** en `01_raw/NO_DESCARGADOS.txt`; hoy figura como aportada.
 
 ---
 
@@ -100,7 +80,7 @@ Reproduce los dos valores a etiquetar al centavo: **Beccar 136.996,14** y
 
 ## Cómo se completan
 
-Los dos gráficos faltantes ya están declarados en
+El gráfico faltante ya está declarado en
 `03_scripts/generar_todos_los_graficos.py`, en el diccionario `SIN_DATO`.
 Cuando aparezca el dato:
 
@@ -108,4 +88,5 @@ Cuando aparezca el dato:
 2. Se la agrega a la lista `EXHIBITS`.
 3. Se la saca de `SIN_DATO`.
 
-El orquestador los cuenta y verifica la paleta como a los demás.
+El orquestador lo cuenta y le corre los cuatro verificadores como a los demás.
+Así se completó el EXHIBIT 05: tres pasos, sin tocar nada más.

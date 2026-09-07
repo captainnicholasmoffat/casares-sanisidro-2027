@@ -55,15 +55,16 @@ def ex01():
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylabel("millones de pesos de diciembre de 2025", fontsize=6.8)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 01",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 01",
               "El gasto municipal real cae 34,9% entre 2017 y 2024",
               "Gasto total en pesos constantes. Un solo concepto en todos los "
-              "años: gastos corrientes más de capital, sin aplicaciones financieras.")
-    E.pie(fig, FUENTE_SERIE,
+              "años: gastos corrientes más de capital, sin aplicaciones financieras.",
+        FUENTE_SERIE,
           "2013, 2018 y 2023 no tienen rendición de cuentas publicada. No se "
           "interpolaron: el hueco queda a la vista.")
     return E.guardar(fig, "EXHIBIT_01_gasto_real_2010_2025",
-                     dict(left=0.115, right=0.985, top=0.70, bottom=0.155))
+                     dict(left=0.115, right=0.985, top=top, bottom=bottom))
 
 
 def ex02():
@@ -87,17 +88,20 @@ def ex02():
                     textcoords="offset points", ha="center", fontsize=6.2,
                     color=color, weight="bold")
     ax.set_xticks(x)
-    ax.set_xticklabels([E.zona_bonita(z["zona"]) for z in zonas], fontsize=7.2)
+    ax.set_xticklabels([E.dos_lineas(E.zona_bonita(z["zona"])) for z in zonas],
+                       fontsize=7.2, linespacing=1.25)
     ax.yaxis.set_major_formatter(E.eje_pct())
-    ax.set_ylim(0, max(float(z["pct_sin_gas_red"]) for z in zonas) * 1.28)
+    ax.set_ylim(0, max(float(z["pct_sin_gas_red"]) for z in zonas) * 1.34)
+    E.podar_tick_superior(ax, "y", 5)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 02",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 02",
               "Boulogne y Beccar concentran toda la carencia del partido",
               "Cuatro indicadores por zona, ordenadas de peor a mejor por NBI. "
-              "El NBI del partido es 3,16%.")
-    E.pie(fig, FUENTE_CENSO)
+              "El NBI del partido es 3,16%.",
+        FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_02_zonas_carencias",
-                     dict(left=0.06, right=0.985, top=0.70, bottom=0.13))
+                     dict(left=0.06, right=0.985, top=top, bottom=bottom))
 
 
 def ex03():
@@ -111,17 +115,22 @@ def ex03():
                     textcoords="offset points", ha="center", fontsize=7,
                     color=E.TINTA, weight="bold")
     ax.set_xticks(range(len(zonas)))
-    ax.set_xticklabels([E.zona_bonita(z["zona"]) for z in zonas], fontsize=7.2)
+    ax.set_xticklabels([E.dos_lineas(E.zona_bonita(z["zona"])) for z in zonas],
+                       fontsize=7.2, linespacing=1.25)
     ax.yaxis.set_major_formatter(E.eje_pct())
     ax.set_ylim(0, max(vals) * 1.22)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 03",
-              "El mismo orden, dado vuelta: donde falta todo, tampoco hay titulo",
+    # Sin podar, el ultimo tick queda pegado al borde de arriba y la bajada le
+    # pasa por encima.
+    E.podar_tick_superior(ax, "y", 5)
+    top, bottom = E.marco(
+        fig, "EXHIBIT 03",
+              "El mismo orden, dado vuelta: donde falta todo, tampoco hay título",
               "Población con universidad completa o más, por zona. Mismo orden "
-              "que el exhibit 02, de peor a mejor en NBI.")
-    E.pie(fig, FUENTE_CENSO)
+              "que el exhibit 02, de peor a mejor en NBI.",
+        FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_03_educacion_por_zona",
-                     dict(left=0.06, right=0.985, top=0.685, bottom=0.145))
+                     dict(left=0.06, right=0.985, top=top, bottom=bottom))
 
 
 def ex04():
@@ -135,7 +144,15 @@ def ex04():
     bonito = {"SAN ISIDRO": "San Isidro", "TIGRE": "Tigre",
               "VICENTE LOPEZ": "Vicente López", "SAN FERNANDO": "San Fernando"}
 
-    fig, ax = E.figura(3.3)
+    # Cuanto separar verticalmente cada etiqueta, en puntos. A la izquierda
+    # Tigre y Vicente Lopez arrancan a menos de un punto de distancia; a la
+    # derecha, en 2025, San Isidro y Tigre terminan pegados porque justo ahi
+    # se cruzan, que es lo que el grafico cuenta.
+    desplazo = {"SAN ISIDRO": 5, "TIGRE": -5, "VICENTE LOPEZ": 6,
+                "SAN FERNANDO": 0}
+    desplazo_fin = {"SAN ISIDRO": -7, "TIGRE": 7, "VICENTE LOPEZ": 0,
+                    "SAN FERNANDO": 0}
+    fig, ax = E.figura(3.5)
     for m in munis:
         ys = [float(f["participacion_pct"]) for a in anios
               for f in filas if int(f["anio"]) == a and f["municipio"] == m]
@@ -144,21 +161,118 @@ def ex04():
                 marker="o", markersize=2.6 if m == "SAN ISIDRO" else 1.8)
         E.etiqueta_serie(ax, anios[-1], ys[-1],
                          "%s  %s" % (bonito[m], E.pct(ys[-1], 4)),
-                         colores[m], dx=6)
+                         colores[m], dx=6, dy=desplazo_fin.get(m, 0))
+        # Las de la izquierda quedan DENTRO del area del grafico: si se apoyan
+        # sobre el borde caen encima de los numeros del eje y.
         E.etiqueta_serie(ax, anios[0], ys[0], E.pct(ys[0], 4),
-                         colores[m], dx=-6, ha="right")
+                         colores[m], dx=-9, dy=desplazo.get(m, 0), ha="right")
 
-    ax.set_xlim(anios[0] - 0.55, anios[-1] + 1.55)
+    ax.set_xlim(anios[0] - 1.5, anios[-1] + 1.55)
     ax.set_xticks(anios)
     ax.set_xticklabels([str(a) for a in anios], fontsize=7)
     ax.yaxis.set_major_formatter(E.eje_pct(1))
+    E.podar_tick_superior(ax, "y", 5)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 04",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 04",
               "Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta",
               "Participación de cada municipio en el total transferido por la "
-              "Provincia a los 135 municipios. Años completos.")
-    E.pie(fig, FUENTE_PBA,
-          "2026 va con seis meses y queda fuera del grafico. San Isidro cae a "
+              "Provincia a los 135 municipios. Años completos.",
+        FUENTE_PBA,
+          "2026 va con seis meses y queda fuera del gráfico. San Isidro cae a "
           "1,6811% y Tigre sube a 1,8370%.")
     return E.guardar(fig, "EXHIBIT_04_coparticipacion_comparada",
-                     dict(left=0.085, right=0.80, top=0.70, bottom=0.13))
+                     dict(left=0.085, right=0.80, top=top, bottom=bottom))
+
+
+def ex05():
+    """
+    San Isidro contra los otros 105 municipios, en peso del personal y en
+    peso de la obra publica.
+
+    Los 106 municipios van como puntos, uno por fila, ordenados por valor. Un
+    grafico de barras con 106 barras no se lee; una tira de puntos si, y ademas
+    deja ver donde se amontonan. San Isidro va en RIO y con su puesto escrito,
+    porque el numero que se cita despues es ese.
+
+    Los dos ordenes van al reves a proposito y esta dicho en cada panel:
+    en personal el puesto 1 es el que MENOS gasta en personal, en obra el
+    puesto 1 es el que MAS invierte. Se leen igual de izquierda a derecha pero
+    no quieren decir lo mismo.
+    """
+    import statistics
+    from matplotlib.patheffects import withStroke
+    filas = E.leer("data/rafam_2025_municipios.csv")
+    n = len(filas)
+    paneles = [
+        ("pct_personal", "puesto_personal",
+         "Peso del personal", "gastos en personal sobre gasto devengado",
+         "1 = el que menos peso le da al personal"),
+        ("pct_obra", "puesto_obra",
+         "Peso de la obra pública", "bienes de uso sobre gasto devengado",
+         "1 = el que más invierte en obra"),
+    ]
+    fig = E.figura(3.5, ejes=False)[0]
+    ejes = fig.subplots(1, 2)
+    for ax, (clave, puesto, titulo, subtitulo, sentido) in zip(ejes, paneles):
+        vals = sorted(float(f[clave]) for f in filas)
+        mediana = statistics.median(vals)
+        si = [f for f in filas if f["municipio"] == "San Isidro"][0]
+        v_si, p_si = float(si[clave]), int(si[puesto])
+
+        ax.scatter(vals, range(1, n + 1), s=7, color=E.CAL, zorder=3,
+                   edgecolors="none")
+        ax.axvline(mediana, color=E.TINTA, linewidth=0.9, zorder=4,
+                   linestyle=(0, (3, 2)))
+        # La tira siempre va de menor a mayor, en los dos paneles: la fila del
+        # punto es su lugar en ese orden. El PUESTO es otra cosa y va escrito,
+        # porque en obra el 1 es el de mas arriba y en personal el de mas
+        # abajo. Mezclar las dos cosas dibujaria a San Isidro cuarto desde
+        # abajo cuando es cuarto desde arriba.
+        y_si = vals.index(v_si) + 1
+        ax.scatter([v_si], [y_si], s=34, color=E.RIO, zorder=6,
+                   edgecolors=E.PAPEL, linewidths=0.8)
+        # La etiqueta va del lado donde queda lienzo: si el punto esta pasada
+        # la mitad del eje, a la izquierda.
+        derecha = v_si < max(vals) * 0.55
+        ax.annotate("San Isidro  %s\npuesto %d de %d" % (E.pct(v_si, 1), p_si, n),
+                    (v_si, y_si), xytext=(7 if derecha else -7, 0),
+                    textcoords="offset points",
+                    ha="left" if derecha else "right", va="center",
+                    fontsize=6.8, color=E.RIO, weight="bold",
+                    path_effects=[withStroke(linewidth=2.6,
+                                             foreground=E.PAPEL)])
+        # El rotulo de la mediana se apoya en la punta de la linea que queda
+        # LEJOS de San Isidro. Con las dos en el mismo extremo se pisaban, y
+        # cual extremo esta libre depende del panel: en personal San Isidro
+        # esta abajo, en obra arriba.
+        arriba = y_si < n / 2
+        ax.annotate("mediana de los %d\n%s" % (n, E.pct(mediana, 1)),
+                    (mediana, n if arriba else 0),
+                    xytext=(4, -2 if arriba else 3),
+                    textcoords="offset points", ha="left",
+                    va="top" if arriba else "bottom", fontsize=6.2,
+                    color=E.TINTA)
+        ax.set_title("%s\n%s" % (titulo, subtitulo), fontsize=7.2,
+                     color=E.TINTA, loc="left", pad=6, linespacing=1.4)
+        ax.set_xlabel(sentido, fontsize=6.2, color=E.TINTA, alpha=0.72)
+        ax.xaxis.set_major_formatter(E.eje_pct(0))
+        ax.set_xlim(0, max(vals) * 1.45)
+        ax.set_ylim(0, n * 1.12)
+        ax.set_yticks([])
+        E.limpiar(ax, grilla="x")
+        E.podar_tick_superior(ax, "x", 4)
+
+    top, bottom = E.marco(
+        fig, "EXHIBIT 05",
+              "San Isidro gasta menos en sueldos y mucho más en obra que la "
+              "mediana bonaerense",
+              "Cada punto es un municipio, ordenados por valor. Ejecución "
+              "2025, gasto devengado.",
+        "data/rafam_2025_municipios.csv, sobre "
+               "01_raw/rafam_2025_106_municipios.csv",
+          "Son 106 de los 135 municipios: los otros 29 no están en la "
+          "planilla. No se estimó ninguno.")
+    return E.guardar(fig, "EXHIBIT_05_personal_y_obra_vs_provincia",
+                     dict(left=0.045, right=0.985, top=top, bottom=bottom,
+                          wspace=0.30))

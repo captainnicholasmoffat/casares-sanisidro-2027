@@ -108,27 +108,65 @@ def ex13():
                for f in filas]
     ax.bar(range(len(filas)), vals, width=0.62, color=colores, zorder=3)
     for i, f in enumerate(filas):
-        destacár = f["zona"] in ("Beccar", "Martinez")
+        destacar = f["zona"] in ("Beccar", "Martinez")
         ax.annotate(E.numero(f["pesos_por_habitante"]), (i, vals[i]),
                     xytext=(0, 5), textcoords="offset points", ha="center",
-                    fontsize=7.4 if destacár else 6.8,
-                    color=E.BARRANCA if destacár else E.TINTA,
+                    fontsize=7.4 if destacar else 6.8,
+                    color=E.BARRANCA if destacar else E.TINTA,
                     weight="bold")
     ax.set_xticks(range(len(filas)))
-    ax.set_xticklabels([E.zona_bonita(f["zona"]) for f in filas], fontsize=7.2)
+    # "Boulogne Sur Mer" no entra en una columna al lado de "Villa Adelina":
+    # los nombres largos van partidos en dos lineas.
+    ax.set_xticklabels([E.dos_lineas(E.zona_bonita(f["zona"])) for f in filas],
+                       fontsize=7.2, linespacing=1.25)
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylim(0, max(vals) * 1.2)
     ax.set_ylabel("pesos de dic-2025 por habitante", fontsize=6.8)
     E.limpiar(ax)
-    E.titular(fig, "EXHIBIT 13",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 13",
               "La partida vecinal reparte casi el doble por vecino en Beccar que en Martínez",
               "Reparto de los %s millones del año 4. Mitad por población y "
               "mitad por un índice que promedia NBI, cloacas, gas de red y "
-              "hacinamiento." % E.numero(total / 1e6))
-    E.pie(fig, "data/reparto_vecinal_por_zona.csv, calculado de "
+              "hacinamiento." % E.numero(total / 1e6),
+        "data/reparto_vecinal_por_zona.csv, calculado de "
                "data/baseline_2025.csv y data/zonas_indicadores.csv")
     return E.guardar(fig, "EXHIBIT_13_reparto_vecinal",
-                     dict(left=0.125, right=0.985, top=0.685, bottom=0.13))
+                     dict(left=0.125, right=0.985, top=top, bottom=bottom))
+
+
+def _rotulo_de_tramo(fig, ax, texto, x0, x1, y, color_dentro, color_afuera,
+                     pegado_a_la_derecha=False):
+    """
+    Escribe el rotulo centrado dentro del tramo si entra, y si no entra lo
+    saca a la derecha del tramo.
+
+    Se MIDE, no se supone: el tramo del año 1 es el 12,5% de la barra y el
+    texto es mas ancho que eso, asi que centrado se derramaba hacia la
+    izquierda encima del rotulo "Año 1" del eje. El del año 4 es el 50% y ahi
+    entra holgado. La misma regla sirve para los dos y para cualquier valor
+    que traiga el modelo mañana.
+    """
+    from matplotlib.patheffects import withStroke
+    if pegado_a_la_derecha:
+        ax.annotate(texto, (x1, y), xytext=(-6, 0),
+                    textcoords="offset points", ha="right", va="center",
+                    fontsize=6.6, color=color_dentro, weight="bold", zorder=6)
+        return False
+    t = ax.annotate(texto, ((x0 + x1) / 2.0, y), ha="center", va="center",
+                    fontsize=6.6, color=color_dentro, weight="bold", zorder=6)
+    fig.canvas.draw()
+    caja = t.get_window_extent(renderer=fig.canvas.get_renderer())
+    px0 = ax.transData.transform((x0, y))[0]
+    px1 = ax.transData.transform((x1, y))[0]
+    if caja.width <= (px1 - px0) - 8:
+        return False
+    t.remove()
+    ax.annotate(texto, (x1, y), xytext=(5, 0),
+                textcoords="offset points", ha="left", va="center",
+                fontsize=6.6, color=color_afuera, weight="bold", zorder=6,
+                path_effects=[withStroke(linewidth=2.2, foreground=E.PAPEL)])
+    return True
 
 
 def ex14():
@@ -145,14 +183,17 @@ def ex14():
         ax.barh([i], [v / 1e6], height=0.42, color=E.RIO, zorder=4)
         ax.barh([i], [(obra - v) / 1e6], left=v / 1e6, height=0.42,
                 color=E.CAL, zorder=3)
-        ax.annotate("deciden los vecinos\n%s M   %s"
-                    % (E.numero(v / 1e6), E.pct(100 * v / obra, 1)),
-                    (v / 2e6, i), ha="center", va="center", fontsize=6.6,
-                    color=E.PAPEL, weight="bold")
-        ax.annotate("decide el Ejecutivo   %s M   %s"
-                    % (E.numero((obra - v) / 1e6), E.pct(100 * (obra - v) / obra, 1)),
-                    ((v + (obra - v) / 2) / 1e6, i), ha="center", va="center",
-                    fontsize=6.6, color=E.TINTA)
+        afuera = _rotulo_de_tramo(
+            fig, ax, "deciden los vecinos\n%s M   %s"
+            % (E.numero(v / 1e6), E.pct(100 * v / obra, 1)),
+            0, v / 1e6, i, E.PAPEL, E.RIO)
+        # Si el rotulo azul tuvo que salirse del tramo, el gris se corre al
+        # extremo derecho para dejarle lugar en vez de quedar centrado encima.
+        _rotulo_de_tramo(fig, ax, "decide el Ejecutivo   %s M   %s"
+                         % (E.numero((obra - v) / 1e6),
+                            E.pct(100 * (obra - v) / obra, 1)),
+                         v / 1e6, obra / 1e6, i, E.TINTA, E.TINTA,
+                         pegado_a_la_derecha=afuera)
     ax.set_yticks([0, 1])
     ax.set_yticklabels(["Año 1", "Año 4"], fontsize=8.5)
     ax.invert_yaxis()
@@ -161,14 +202,15 @@ def ex14():
     ax.set_xlabel("millones de pesos de diciembre de 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
-    E.titular(fig, "EXHIBIT 14",
-              "En el ano 4, la mitad de la obra pública la deciden las comisiones vecinales",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 14",
+              "En el año 4, la mitad de la obra pública la deciden las comisiones vecinales",
               "Sobre la obra pública ejecutada en 2025: %s millones. Es "
               "reasignación de quien decide, no gasto nuevo."
-              % E.numero(obra / 1e6))
-    E.pie(fig, "data/baseline_2025.csv, bienes de uso devengados en 2025")
+              % E.numero(obra / 1e6),
+        "data/baseline_2025.csv, bienes de uso devengados en 2025")
     return E.guardar(fig, "EXHIBIT_14_obra_publica_vecinal",
-                     dict(left=0.085, right=0.945, top=0.68, bottom=0.155))
+                     dict(left=0.085, right=0.945, top=top, bottom=bottom))
 
 
 # --------------------------------------------------------------------------
@@ -208,9 +250,19 @@ def _norte(ax, geo):
             fontsize=6.5, color=E.TINTA, weight="bold")
 
 
-def _leyenda_rampa(fig, vmin, vmax, etiqueta, x=0.70, y=0.905, ancho=0.26,
-                   alto=0.018):
-    """Barra de color horizontal arriba a la derecha, sin colorbar de matplotlib."""
+def _leyenda_rampa(fig, vmin, vmax, etiqueta, y, x=0.035, ancho=0.30,
+                   alto=0.016):
+    """
+    Barra de color horizontal, sin colorbar de matplotlib.
+
+    La 'y' la manda quien llama y sale de marco(): antes estaba clavada en
+    0.905, o sea adentro del bloque de cabecera, y la bajada le pasaba por
+    encima. Ahora se apoya debajo de la cabecera, dentro del area del mapa,
+    donde el partido no dibuja nada porque es una franja diagonal.
+
+    Va a la IZQUIERDA. A la derecha el partido llega hasta arriba de todo y el
+    numero de la punta izquierda de la barra quedaba escrito sobre el contorno.
+    """
     import numpy as np
     cax = fig.add_axes([x, y, ancho, alto])
     grad = np.linspace(0, 1, 256).reshape(1, -1)
@@ -218,12 +270,105 @@ def _leyenda_rampa(fig, vmin, vmax, etiqueta, x=0.70, y=0.905, ancho=0.26,
     cax.set_xticks([]); cax.set_yticks([])
     for lado in cax.spines.values():
         lado.set_color(E.TINTA); lado.set_linewidth(0.5)
-    fig.text(x, y - 0.022, E.pct(vmin, 1), fontsize=6, color=E.TINTA,
+    fig.text(x, y - 0.010, E.pct(vmin, 1), fontsize=6, color=E.TINTA,
              ha="left", va="top")
-    fig.text(x + ancho, y - 0.022, E.pct(vmax, 1), fontsize=6, color=E.TINTA,
+    fig.text(x + ancho, y - 0.010, E.pct(vmax, 1), fontsize=6, color=E.TINTA,
              ha="right", va="top")
-    fig.text(x + ancho / 2, y + alto + 0.006, etiqueta, fontsize=6.2,
+    fig.text(x + ancho / 2, y + alto + 0.005, etiqueta, fontsize=6.2,
              color=E.TINTA, ha="center", va="bottom")
+
+
+def _cajas_de_figura(fig, salvo=()):
+    """Las cajas de los textos ya dibujados en la figura, en pixeles."""
+    import matplotlib.text
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+    cajas = []
+    for t in fig.findobj(matplotlib.text.Text):
+        if t in salvo or not t.get_visible() or not (t.get_text() or "").strip():
+            continue
+        ejes = getattr(t, "axes", None)
+        if ejes is not None and not getattr(ejes, "axison", True):
+            if t in list(ejes.get_xticklabels()) + list(ejes.get_yticklabels()):
+                continue
+        try:
+            c = E.caja_de_texto(t, ren)
+        except Exception:
+            continue
+        if c.width > 0 and c.height > 0:
+            cajas.append(c)
+    return cajas
+
+
+def _etiquetas_sin_pisarse(fig, ax, items, geo, fontsize=7.6, ocupadas=None):
+    """
+    Coloca las etiquetas de zona en el centro de cada poligono y, cuando dos
+    quedan encima, aparta la que llega despues y le deja una linea guia.
+
+    Centrar siempre en el poligono es lo correcto mientras las zonas sean
+    parejas; en cuanto dos comparten frontera y una es angosta, o hay una
+    llamada al lado, las etiquetas se tocan. La regla: se mide, y solo se mueve
+    la que hace falta.
+
+    Se prueban ocho direcciones a tres distancias, empezando por la que saca la
+    etiqueta del centro del partido. Antes se probaba una sola direccion y si
+    esa estaba tomada la etiqueta no se dibujaba: en el mapa por radio
+    desaparecian "Beccar" y "San Isidro", que es peor que un solape. Si
+    despues de las 32 pruebas no hay lugar, se dibuja igual en su sitio
+    original y el verificador de colisiones lo denuncia.
+    """
+    import math
+    from matplotlib.patheffects import withStroke
+    x0, y0, x1, y1 = geo.total_bounds
+    ancho, alto = x1 - x0, y1 - y0
+    # Las cajas que ya estan en la figura (cabecera, pie, barra de color,
+    # llamadas) cuentan como ocupadas: una etiqueta de zona no puede caer
+    # encima de ellas tampoco.
+    puestos = list(ocupadas or [])
+    # De mayor a menor area: las grandes se quedan en su lugar.
+    items = sorted(items, key=lambda it: -it["area"])
+    for it in items:
+        # Direccion de salida: la que aleja del centro del partido. Las otras
+        # siete se prueban despues, en orden de cercania a esa.
+        base = math.atan2(it["y"] - (y0 + y1) / 2, it["x"] - (x0 + x1) / 2)
+        vueltas = [0, 1, -1, 2, -2, 3, -3, 4]
+        intentos = [(0.0, 0.0)]
+        for r in (0.055, 0.10, 0.155, 0.215):
+            for k in vueltas:
+                a = base + k * math.pi / 4
+                intentos.append((math.cos(a) * ancho * r,
+                                 math.sin(a) * alto * r))
+        fig.canvas.draw()
+        ren = fig.canvas.get_renderer()
+        for k, (dx, dy) in enumerate(intentos):
+            px, py = it["x"] + dx, it["y"] + dy
+            movida = k > 0
+            t = ax.annotate(
+                it["texto"], xy=(it["x"], it["y"]), xytext=(px, py),
+                textcoords="data", ha="center", va="center",
+                fontsize=fontsize, color=it["color"], weight="bold",
+                zorder=6, linespacing=1.35,
+                arrowprops=(dict(arrowstyle="-", color=E.TINTA, linewidth=0.7,
+                                 alpha=0.75, shrinkA=1, shrinkB=1)
+                            if movida else None),
+                path_effects=[withStroke(linewidth=4.2,
+                                         foreground=it["halo"])])
+            # Una Annotation no sabe donde cae su texto hasta que se le
+            # actualizan las posiciones: antes de eso devuelve la caja apoyada
+            # en el punto de destino de la flecha y no en el del texto. Medir
+            # sin esto daba por buenas posiciones que despues se pisaban.
+            t.update_positions(ren)
+            caja = E.caja_de_texto(t, ren)
+            if not any(caja.overlaps(c) for c in puestos):
+                puestos.append(caja)
+                break
+            if k < len(intentos) - 1:
+                t.remove()
+            else:
+                # Ultimo recurso: se dibuja igual. Un nombre de zona que falta
+                # es peor que un nombre de zona apretado.
+                puestos.append(caja)
+    fig.canvas.draw()
 
 
 def ex15():
@@ -241,31 +386,37 @@ def ex15():
            edgecolor=E.PAPEL, linewidth=1.6, zorder=3)
     z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=1.1, zorder=4)
 
+    items = []
     for _, r in z.iterrows():
         p = r.geometry.representative_point()
-        # Texto claro sobre las zonas oscuras y oscuro sobre las claras.
         prop = (r["pct_nbi"] - vmin) / (vmax - vmin) if vmax > vmin else 0
-        color = E.PAPEL if prop > 0.55 else E.TINTA
-        halo = E.TINTA if prop > 0.55 else E.PAPEL
-        ax.text(p.x, p.y, "%s\n%s NBI" % (E.zona_bonita(r["zona"]), E.pct(r["pct_nbi"], 2)),
-                ha="center", va="center", fontsize=7.6, color=color,
-                weight="bold", zorder=6, linespacing=1.35,
-                path_effects=[withStroke(linewidth=2.0, foreground=halo)])
+        items.append({
+            "x": p.x, "y": p.y, "area": r.geometry.area,
+            "texto": "%s\n%s NBI" % (E.zona_bonita(r["zona"]),
+                                     E.pct(r["pct_nbi"], 2)),
+            "color": E.PAPEL if prop > 0.55 else E.TINTA,
+            "halo": E.TINTA if prop > 0.55 else E.PAPEL})
 
     E.apagar_ejes(ax)
+    E.sin_offset(ax)
     _barra_escala(ax, z)
     _norte(ax, z)
-    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI")
-    E.titular(fig, "EXHIBIT 15",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 15",
               "Las seis zonas vecinales de San Isidro",
               "Coloreadas por porcentaje de hogares con necesidades básicas "
-              "insatisfechas. El partido entero promedia 3,16%.")
-    E.pie(fig, FUENTE_CENSO,
+              "insatisfechas. El partido entero promedia 3,16%.",
+        FUENTE_CENSO,
           "Los límites de las zonas son propios, no oficiales. Lo único oficial "
           "es la geometría de los 360 radios censales del INDEC y los seis "
           "puntos BAHRA de las localidades. Ver data/METODOLOGIA_ZONAS.md.")
-    return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi",
-                     dict(left=0.02, right=0.98, top=0.865, bottom=0.055))
+    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI", y=top - 0.055)
+    # El area del mapa se fija ANTES de colocar los nombres. Si se movia
+    # despues, cada etiqueta cambiaba de lugar y de tamaño relativo y el
+    # trabajo de medirlas para que no se pisaran se perdia entero.
+    fig.subplots_adjust(left=0.02, right=0.98, top=top, bottom=bottom)
+    _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
+    return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi")
 
 
 def ex16():
@@ -292,10 +443,10 @@ def ex16():
     con = radios[radios["pct_nbi"].notna()]
     vmin, vmax = con["pct_nbi"].min(), con["pct_nbi"].max()
 
-    # El conglomerado crítico: los radios de la fraccion 32 que están en el
+    # El conglomerado critico: los radios de la fraccion 32 que están en el
     # decil superior de NBI del partido.
     umbral = con["pct_nbi"].quantile(0.9)
-    crítico = con[(con["fraccion"] == "32") & (con["pct_nbi"] >= umbral)]
+    critico = con[(con["fraccion"] == "32") & (con["pct_nbi"] >= umbral)]
 
     fig, ax = E.figura(4.6)
     radios.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
@@ -305,36 +456,51 @@ def ex16():
     z = z.to_crs(CRS_METRICO)
     z.boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.8, zorder=4,
                     alpha=0.55)
-    crítico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=2.0,
+    critico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=2.0,
                                      zorder=6)
 
-    p = crítico.dissolve().geometry.representative_point().iloc[0]
-    x0, y0, x1, y1 = radios.total_bounds
-    ax.annotate("fracción censal 32\n%d radios, %s hab\nel peor NBI del partido"
-                % (len(crítico),
-                   E.numero(sum(int(censo[r]["poblacion_sexo__total"])
-                                for r in crítico["radio_id"]))),
-                (p.x, p.y), xytext=(p.x + (x1 - x0) * 0.24, p.y + (y1 - y0) * 0.14),
-                fontsize=7, color=E.TINTA, weight="bold", ha="left",
-                linespacing=1.35, zorder=7,
-                arrowprops=dict(arrowstyle="-", color=E.TINTA, linewidth=0.9))
-
-    for _, r in z.iterrows():
-        q = r.geometry.representative_point()
-        ax.text(q.x, q.y, E.zona_bonita(r["zona"]), ha="center", va="center", fontsize=6.6,
-                color=E.TINTA, alpha=0.85, zorder=5,
-                path_effects=[withStroke(linewidth=2.2, foreground=E.PAPEL)])
-
     E.apagar_ejes(ax)
+    E.sin_offset(ax)
     _barra_escala(ax, radios)
     _norte(ax, radios)
-    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI, por radio censal")
-    E.titular(fig, "EXHIBIT 16",
+    top, bottom = E.marco(
+        fig, "EXHIBIT 16",
               "La carencia no está repartida: esta concentrada en nueve radios",
               "Los 360 radios censales del partido. El contorno grueso es el "
-              "conglomerado de la fracción 32, dentro de Beccar.")
-    E.pie(fig, FUENTE_CENSO,
-          "Los nueve radios se identifican por codigo y fracción censal, nunca "
+              "conglomerado de la fracción 32, dentro de Beccar.",
+        FUENTE_CENSO,
+          "Los nueve radios se identifican por código y fracción censal, nunca "
           "por nombre de barrio: los barrios no tienen geometría oficial.")
-    return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi",
-                     dict(left=0.02, right=0.98, top=0.865, bottom=0.055))
+    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI, por radio censal",
+                   y=top - 0.055)
+    # El area del mapa se fija ANTES de la llamada y de los nombres de zona:
+    # todo eso va en coordenadas de dato y se corre si el eje se mueve despues.
+    fig.subplots_adjust(left=0.02, right=0.98, top=top, bottom=bottom)
+
+    # La llamada de la fracción 32 va DESPUES de la cabecera y de la barra de
+    # color, y se apoya en el rincon de abajo a la derecha, que es el unico
+    # pedazo grande de lienzo vacio: el partido es una franja en diagonal.
+    # Pegada al conglomerado no entra por ningun lado, porque ahi al lado
+    # estan "Beccar" y "San Isidro", las dos zonas mas angostas del partido.
+    p = critico.dissolve().geometry.representative_point().iloc[0]
+    x0, y0, x1, y1 = radios.total_bounds
+    llamada = ax.annotate(
+        "fracción censal 32\n%d radios, %s hab\nel peor NBI del partido"
+        % (len(critico), E.numero(sum(int(censo[r]["poblacion_sexo__total"])
+                                      for r in critico["radio_id"]))),
+        (p.x, p.y), xytext=(x0 + (x1 - x0) * 0.99, y0 + (y1 - y0) * 0.34),
+        ha="right",
+        fontsize=7, color=E.TINTA, weight="bold", va="center",
+        linespacing=1.35, zorder=7,
+        arrowprops=dict(arrowstyle="-", color=E.TINTA, linewidth=0.9,
+                        shrinkA=1, shrinkB=1),
+        path_effects=[withStroke(linewidth=3.4, foreground=E.PAPEL)])
+
+    # Los nombres de zona se colocan al final y esquivan todo lo anterior.
+    items = [{"x": r.geometry.representative_point().x,
+              "y": r.geometry.representative_point().y,
+              "area": r.geometry.area, "texto": E.zona_bonita(r["zona"]),
+              "color": E.TINTA, "halo": E.PAPEL} for _, r in z.iterrows()]
+    _etiquetas_sin_pisarse(fig, ax, items, radios, fontsize=6.6,
+                           ocupadas=_cajas_de_figura(fig))
+    return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi")
