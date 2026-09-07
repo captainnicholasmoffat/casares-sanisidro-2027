@@ -651,10 +651,35 @@ PREFERENCIA_CONCEPTO = [
 
 UMBRAL_SALTO = Decimal("40")
 
+# Esta serie mezcla conceptos y no sirve para comparar entre anios. La
+# advertencia va dentro del archivo, no solo en la documentacion, porque el CSV
+# viaja solo.
+ADVERTENCIA_SERIE_HETEROGENEA = """\
+# ADVERTENCIA. Esta serie MEZCLA CONCEPTOS DE GASTO distintos segun el anio,
+# porque cada fuente publica el suyo. La columna concepto_heterogeneo dice cual
+# es el de cada fila.
+#
+# LAS VARIACIONES INTERANUALES QUE CRUZAN UN CAMBIO DE CONCEPTO NO SON
+# COMPARACIONES LIMPIAS. Comparar un anio de "gastos con imputacion al
+# presupuesto" contra uno de "devengado por objeto" es comparar cosas que no
+# miden lo mismo.
+#
+# Ademas el "total de gastos" de las rendiciones cambia de contenido a mitad de
+# camino: en 2010-2012 INCLUYE las aplicaciones financieras y en 2019-2021 NO
+# las incluye.
+#
+# Para comparar entre anios usar data/serie_gastos_comparable.csv, que tiene un
+# solo concepto. Los pares que si se pueden comparar dentro de ESTA serie estan
+# en data/COMPARACIONES_VALIDAS.md.
+#
+# Este archivo queda como material de trabajo, no para publicar.
+"""
+
 
 def _leer_csv(ruta):
+    # Algunos CSV llevan una advertencia en lineas que arrancan con "#".
     with open(os.path.join(REPO, ruta), encoding="utf-8", newline="") as f:
-        return list(csv.DictReader(f))
+        return list(csv.DictReader(l for l in f if not l.startswith("#")))
 
 
 def serie_gastos_totales():
@@ -773,14 +798,17 @@ def escribir_serie_y_saltos(serie):
         anteriores = p
 
     ruta_serie = os.path.join(DATA, "serie_gastos_totales_real.csv")
-    cols = ["anio", "concepto", "monto_nominal", "coef_deflactor",
+    cols = ["anio", "concepto_heterogeneo", "monto_nominal", "coef_deflactor",
             "monto_constante_dic2025", "var_real_pct", "brecha_anios",
             "filas_sumadas", "prioridad_fuente", "dataset", "fuente"]
     with open(ruta_serie, "w", encoding="utf-8", newline="") as f:
+        # La advertencia la escribe el propio generador, para que el archivo
+        # nunca exista sin ella.
+        f.write(ADVERTENCIA_SERIE_HETEROGENEA)
         w = csv.writer(f)
         w.writerow(cols)
         for p in serie:
-            w.writerow([p["anio"], p["concepto"],
+            w.writerow([p["anio"], p["concepto"],  # concepto_heterogeneo
                         _fmt(p["monto_nominal"], 2), p["coef_deflactor"],
                         _fmt(p["monto_constante_dic2025"], 2),
                         _fmt(p["var_real_pct"], 2), p["brecha_anios"],

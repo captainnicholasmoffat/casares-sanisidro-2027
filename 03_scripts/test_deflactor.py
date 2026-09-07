@@ -48,8 +48,9 @@ class FalloDeTest(Exception):
 
 
 def _leer(ruta):
+    # Algunos CSV llevan una advertencia en lineas que arrancan con "#".
     with open(os.path.join(REPO, ruta), encoding="utf-8", newline="") as f:
-        return list(csv.DictReader(f))
+        return list(csv.DictReader(l for l in f if not l.startswith("#")))
 
 
 def _num(txt):

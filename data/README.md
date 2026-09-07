@@ -107,6 +107,23 @@ Cuando se publique el mapa hay que decirlo.
 Los radios se identifican por código y fracción censal, nunca por nombre de
 barrio: los barrios no existen como dato oficial.
 
+
+## Serie de gasto comparable
+
+**Para comparar entre años usar `serie_gastos_comparable.csv`, no la otra.**
+
+| Archivo | Qué contiene |
+|---|---|
+| `serie_gastos_comparable.csv` | Un solo concepto en todos los años: gastos corrientes + de capital, sin aplicaciones financieras. 13 años entre 2010 y 2025. Los años sin dato van vacíos. |
+| `conceptos_disponibles_por_anio.csv` | Todos los conceptos de gasto de cada año en todas las fuentes, ejecutado y presupuestado. |
+| `COMPARACIONES_VALIDAS.md` | Qué pares de años se pueden comparar y cuáles no. **Leer antes de citar cualquier variación.** |
+| `serie_gastos_totales_real.csv` | Material de trabajo. **Mezcla 6 conceptos distintos** según el año; lleva la advertencia arriba del archivo. |
+
+El `total de gastos` de las rendiciones cambia de contenido a mitad de camino:
+en 2010-2012 incluye las aplicaciones financieras y en 2019-2021 no. Es el paso
+al formato Ahorro-Inversión de los informes ARSI. Por eso la serie heterogénea
+no sirve para comparar.
+
 ## Orden de corrida
 
 El parser reescribe los CSV desde los PDF, así que va primero:
@@ -119,7 +136,13 @@ python3 03_scripts/test_deflactor.py   # test dorado del empalme + validaciones
 python3 03_scripts/censo_radios.py     # radios y datos del Censo 2022
 python3 03_scripts/zonas.py            # arma las 6 zonas
 python3 03_scripts/test_censo_zonas.py # validaciones del censo y las zonas
+
+python3 03_scripts/serie_comparable.py      # serie de un solo concepto
+python3 03_scripts/test_serie_comparable.py # validaciones de la serie
 ```
+
+`serie_comparable.py` va DESPUÉS del deflactor: lee los importes constantes que
+el deflactor deja en cada dataset.
 
 Al revés, el parser se lleva puestas las columnas del deflactor: reescribe
 desde los PDF no sólo la ejecución trimestral sino también
