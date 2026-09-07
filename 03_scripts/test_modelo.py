@@ -176,7 +176,44 @@ def test_parametros_desde_datos():
     return calculados
 
 
+def verificar_orden_de_corrida():
+    """
+    Guardia de orden, la misma que ya tienen test_deflactor y
+    test_serie_comparable. El modelo se apoya en los importes constantes que
+    deja el deflactor; si alguien corre el parser despues, los CSV vuelven a
+    quedar solo con la columna nominal y hay que decir POR QUE, no reventar con
+    un KeyError adentro de una comprension de lista.
+    """
+    faltan = []
+    for ruta in ("data/ejecucion_gastos_objeto.csv",
+                 "data/ejecucion_recursos.csv"):
+        if not os.path.exists(os.path.join(REPO, ruta)):
+            continue
+        filas = _leer(ruta)
+        if filas and "monto_constante_dic2025" not in filas[0]:
+            faltan.append(ruta)
+    for ruta in ("data/baseline_2025.csv", "data/modelo_flujo_caja.csv",
+                 "data/sef_anual.csv"):
+        if not os.path.exists(os.path.join(REPO, ruta)):
+            faltan.append(ruta + " (no existe)")
+    if faltan:
+        raise FalloDeTest(
+            "Falta correr la cadena antes del modelo:\n"
+            + "\n".join("    " + r for r in faltan)
+            + "\n  Pasa cuando se corre test_parser.py despues del deflactor."
+              "\n  Correr, en este orden:"
+              "\n    python3 03_scripts/deflactor.py"
+              "\n    python3 03_scripts/parse_sef.py"
+              "\n    python3 03_scripts/modelo.py")
+
+
 def main():
+    try:
+        verificar_orden_de_corrida()
+    except FalloDeTest as e:
+        print("ORDEN DE CORRIDA INCORRECTO\n  %s" % e)
+        return 1
+
     print("=" * 78)
     print("MODELO DE FLUJO DE CAJA - VALIDACIONES")
     print("=" * 78)
