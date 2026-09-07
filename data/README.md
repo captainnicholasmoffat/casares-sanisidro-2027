@@ -155,6 +155,16 @@ con 11 meses de datos casi nulos en vez de 6 reales.
 Todo en **pesos constantes de diciembre de 2025 y sin supuesto de inflación**.
 El año 2025 del modelo es la ejecución real, no una estimación.
 
+## Gráficos
+
+`06_charts/` — 18 exhibits en PNG a 300 dpi y SVG, 1600 px de ancho.
+Empezar por `06_charts/INDICE_GRAFICOS.md`. Los dos que faltan y por qué:
+`06_charts/FALTAN_DATOS.md`.
+
+El sistema visual está en `03_scripts/estilo.py` y lo importan todos: nadie
+define un color a mano. Paleta única sin rojo ni verde, y un verificador que
+abre cada SVG y falla si aparece un color que no sea de la paleta.
+
 ## Orden de corrida
 
 El parser reescribe los CSV desde los PDF, así que va primero:
@@ -176,7 +186,13 @@ python3 03_scripts/parse_sef.py            # estado económico-financiero a CSV
 python3 03_scripts/parametros_modelo.py    # los parámetros, desde las series
 python3 03_scripts/modelo.py               # escenarios y sensibilidad
 python3 03_scripts/test_modelo.py          # validaciones del modelo
+
+python3 03_scripts/generar_todos_los_graficos.py     # los 18 gráficos
+python3 03_scripts/generar_todos_los_graficos.py 15  # uno solo
 ```
+
+Los gráficos van al final: leen de `data/`, así que todo lo anterior tiene que
+estar corrido.
 
 `serie_comparable.py` va DESPUÉS del deflactor: lee los importes constantes que
 el deflactor deja en cada dataset.
