@@ -206,7 +206,7 @@ Los años afectados en la serie de gastos totales son **2014, 2015 y 2016**. De
 
 ## 7. Qué está deflactado y qué falta
 
-Nueve datasets llevan pesos constantes:
+Diez datasets llevan pesos constantes:
 
 | Dataset | Columna principal | Coeficiente |
 |---|---|---|
@@ -219,6 +219,7 @@ Nueve datasets llevan pesos constantes:
 | `data/deuda_stock.csv` | `saldo` | del mes de la fecha de corte |
 | `SanIsidro_datos_fiscales/DATOS_SanIsidro_2014-2022.csv` | `monto_pesos` | anual |
 | `DATOS_SanIsidro_2014-2022.csv` (copia en la raíz) | `monto_pesos` | anual |
+| `02_clean/transferencias_pba_2021_2026.csv` | `monto` | del mes |
 
 **Dos columnas que NO se deflactan y hay que dejar quietas:** `porcentaje` en
 `rendiciones_2010_2021.csv` y `diferencia_pct` en `presupuestado_vs_ejecutado.csv`.
@@ -229,15 +230,12 @@ la lista de columnas de plata en el script.
 coeficiente anual sale de 7 meses. La columna `base_coef` de esa fila lo dice:
 *"anual 2026, promedio de 7 meses ponderado por días"*.
 
+Las transferencias provinciales son **mensuales**, así que cada fila va con el
+coeficiente de su mes, que sale del rango de fechas de la propia fila.
+
 ### Lo que falta
 
-| Dataset | Estado |
-|---|---|
-| `02_clean/transferencias_pba_2021_2025.csv` | No existe. Los datos crudos sí están, como 13 XLSX en `01_raw/transferencias_pba/`, sin parsear. |
-
-Está declarado en `DATASETS` y el script lo reporta como *"no existe en el
-repo"*. Cuando aparezca, se le completa la lista de columnas de importes y queda
-deflactado en la misma corrida.
+Nada de la lista original. Los diez datasets del repo llevan pesos constantes.
 
 ## 7 bis. La serie real de gastos totales
 

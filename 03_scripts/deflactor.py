@@ -509,10 +509,13 @@ DATASETS = [
         "montos": ["monto_pesos"],
     },
     {
-        "ruta": "02_clean/transferencias_pba_2021_2025.csv",
-        "modo": "anual",
-        "principal": None,
-        "col_anio": "anio",
+        # Transferencias de la Provincia, mensuales. Van con el coeficiente del
+        # mes, que sale del rango de fechas de la propia fila (periodo_desde y
+        # periodo_hasta son el primero y el ultimo dia del mes).
+        "ruta": "02_clean/transferencias_pba_2021_2026.csv",
+        "modo": "periodo",
+        "principal": "monto",
+        "montos": ["monto", "total_publicado_de_la_hoja"],
     },
 ]
 
@@ -538,10 +541,17 @@ def aplicar(serie, spec, periodos_vistos):
         return {"ruta": spec["ruta"], "estado": "no existe en el repo",
                 "filas": 0, "deflactados": 0}
 
+    # Algunos CSV arrancan con lineas de advertencia que empiezan con "#". Se
+    # separan para poder leer la tabla, y se vuelven a escribir tal cual al
+    # final: la advertencia no se puede perder al deflactar.
     with open(ruta, encoding="utf-8", newline="") as f:
-        lector = csv.DictReader(f)
-        cabecera = list(lector.fieldnames)
-        filas = list(lector)
+        crudo = f.readlines()
+    comentarios = []
+    while crudo and crudo[0].startswith("#"):
+        comentarios.append(crudo.pop(0))
+    lector = csv.DictReader(crudo)
+    cabecera = list(lector.fieldnames or [])
+    filas = list(lector)
 
     montos = [c for c in spec.get("montos") or [] if c in cabecera]
     if not montos:
@@ -596,6 +606,7 @@ def aplicar(serie, spec, periodos_vistos):
             deflactados += 1
 
     with open(ruta, "w", encoding="utf-8", newline="") as f:
+        f.writelines(comentarios)
         w = csv.DictWriter(f, fieldnames=salida, extrasaction="ignore")
         w.writeheader()
         w.writerows(filas)
