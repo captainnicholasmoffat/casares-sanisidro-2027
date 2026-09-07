@@ -434,16 +434,33 @@ def construir_deflactor(serie, origen):
 
 DATASETS = [
     {
+        # Presupuesto votado para cada anio. Es un flujo planificado a lo largo
+        # del ejercicio, asi que va con el coeficiente anual, igual que la
+        # ejecucion. La columna "pagina" no es plata y no se toca.
         "ruta": "data/presupuesto_historico_2010_2026.csv",
         "modo": "anual",
-        "principal": None,          # se detecta al aparecer el archivo
+        "principal": "monto",
         "col_anio": "anio",
+        "montos": ["monto"],
     },
     {
+        # Rendicion de cuentas anual. OJO: la columna "porcentaje" es un
+        # porcentaje, no un importe. Deflactarla seria un disparate, asi que
+        # no entra en "montos".
         "ruta": "data/rendiciones_2010_2021.csv",
         "modo": "anual",
-        "principal": None,
+        "principal": "monto",
         "col_anio": "anio",
+        "montos": ["monto"],
+    },
+    {
+        # Cruce de lo presupuestado contra lo ejecutado. Las tres columnas de
+        # plata se deflactan; "diferencia_pct" es un porcentaje y queda afuera.
+        "ruta": "data/presupuestado_vs_ejecutado.csv",
+        "modo": "anual",
+        "principal": "ejecutado",
+        "col_anio": "anio",
+        "montos": ["presupuestado", "ejecutado", "diferencia"],
     },
     {
         "ruta": "data/ejecucion_gastos_objeto.csv",
@@ -641,9 +658,31 @@ def _leer_csv(ruta):
 
 
 def serie_gastos_totales():
-    puntos = {}
+    """
+    Gasto total del Municipio por anio, en pesos de dic-2025.
 
-    # Rendiciones y fallos del HTC, 2014-2022.
+    Hay tres fuentes distintas y no todas cubren los mismos anios. Cuando dos
+    coinciden en un anio, gana la de MENOR rango de esta lista, y el rango
+    queda escrito en la columna "prioridad_fuente" del CSV:
+
+      1. Fallo del Tribunal de Cuentas o rendicion de cuentas, concepto
+         "Gastos con imputacion al presupuesto" (DATOS_SanIsidro_2014-2022).
+      2. Rendicion de cuentas parseada del PDF, fila total_gastos
+         (rendiciones_2010_2021).
+      3. Informe trimestral de ejecucion, acumulado anual: suma del devengado
+         de los objetos del gasto (ejecucion_gastos_objeto).
+
+    Nada se promedia ni se corrige: se elige una fila publicada y se dice cual.
+    """
+    candidatos = {}
+
+    def proponer(anio, rango, dato):
+        actual = candidatos.get(anio)
+        if actual is None or rango < actual["prioridad_fuente"]:
+            dato["prioridad_fuente"] = rango
+            candidatos[anio] = dato
+
+    # 1. Rendiciones y fallos del HTC, 2014-2022.
     datos = "SanIsidro_datos_fiscales/DATOS_SanIsidro_2014-2022.csv"
     if os.path.exists(os.path.join(REPO, datos)):
         por_anio = {}
@@ -659,19 +698,39 @@ def serie_gastos_totales():
                         return n
                 return len(PREFERENCIA_CONCEPTO)
             elegida = sorted(filas, key=rango)[0]
-            puntos[anio] = {
+            proponer(anio, 1, {
                 "anio": anio,
                 "concepto": elegida["concepto"],
                 "monto_nominal": Decimal(elegida["monto_pesos"]),
-                "monto_constante_dic2025": Decimal(
-                    elegida[COL_PRINCIPAL]),
+                "monto_constante_dic2025": Decimal(elegida[COL_PRINCIPAL]),
                 "coef_deflactor": elegida["coef_deflactor"],
                 "fuente": elegida["fuente"],
                 "dataset": datos,
                 "filas_sumadas": 1,
-            }
+            })
 
-    # Ejecucion presupuestaria, informes acumulados anuales.
+    # 2. Rendiciones de cuentas parseadas de los PDF, 2010-2021.
+    rend = "data/rendiciones_2010_2021.csv"
+    if os.path.exists(os.path.join(REPO, rend)):
+        for fila in _leer_csv(rend):
+            if fila.get("concepto") != "total_gastos":
+                continue
+            if not fila.get("monto") or not fila.get(COL_PRINCIPAL):
+                continue
+            proponer(int(fila["anio"]), 2, {
+                "anio": int(fila["anio"]),
+                "concepto": "Total de gastos de la rendicion de cuentas%s" % (
+                    " (%s)" % fila["subconcepto"] if fila.get("subconcepto")
+                    else ""),
+                "monto_nominal": Decimal(fila["monto"]),
+                "monto_constante_dic2025": Decimal(fila[COL_PRINCIPAL]),
+                "coef_deflactor": fila["coef_deflactor"],
+                "fuente": fila["fuente"],
+                "dataset": rend,
+                "filas_sumadas": 1,
+            })
+
+    # 3. Ejecucion presupuestaria, informes acumulados anuales.
     eje = "data/ejecucion_gastos_objeto.csv"
     if os.path.exists(os.path.join(REPO, eje)):
         por_anio = {}
@@ -682,7 +741,7 @@ def serie_gastos_totales():
                 continue
             por_anio.setdefault(int(fila["anio"]), []).append(fila)
         for anio, filas in por_anio.items():
-            puntos[anio] = {
+            proponer(anio, 3, {
                 "anio": anio,
                 "concepto": ("Devengado, suma de los %d objetos del gasto del "
                              "informe acumulado anual" % len(filas)),
@@ -694,9 +753,9 @@ def serie_gastos_totales():
                 "fuente": filas[0]["fuente"],
                 "dataset": eje,
                 "filas_sumadas": len(filas),
-            }
+            })
 
-    return [puntos[a] for a in sorted(puntos)]
+    return [candidatos[a] for a in sorted(candidatos)]
 
 
 def escribir_serie_y_saltos(serie):
@@ -716,7 +775,7 @@ def escribir_serie_y_saltos(serie):
     ruta_serie = os.path.join(DATA, "serie_gastos_totales_real.csv")
     cols = ["anio", "concepto", "monto_nominal", "coef_deflactor",
             "monto_constante_dic2025", "var_real_pct", "brecha_anios",
-            "filas_sumadas", "dataset", "fuente"]
+            "filas_sumadas", "prioridad_fuente", "dataset", "fuente"]
     with open(ruta_serie, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(cols)
@@ -725,7 +784,8 @@ def escribir_serie_y_saltos(serie):
                         _fmt(p["monto_nominal"], 2), p["coef_deflactor"],
                         _fmt(p["monto_constante_dic2025"], 2),
                         _fmt(p["var_real_pct"], 2), p["brecha_anios"],
-                        p["filas_sumadas"], p["dataset"], p["fuente"]])
+                        p["filas_sumadas"], p["prioridad_fuente"],
+                        p["dataset"], p["fuente"]])
 
     saltos = [p for p in serie
               if p.get("var_real_pct") is not None

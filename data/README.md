@@ -121,8 +121,10 @@ python3 03_scripts/zonas.py            # arma las 6 zonas
 python3 03_scripts/test_censo_zonas.py # validaciones del censo y las zonas
 ```
 
-Al revés, el parser se lleva puestas las columnas del deflactor.
-`test_deflactor.py` lo detecta y lo dice.
+Al revés, el parser se lleva puestas las columnas del deflactor: reescribe
+desde los PDF no sólo la ejecución trimestral sino también
+`presupuesto_historico_2010_2026.csv`, `rendiciones_2010_2021.csv` y
+`presupuestado_vs_ejecutado.csv`. `test_deflactor.py` lo detecta y lo dice.
 
 ## Verificación
 

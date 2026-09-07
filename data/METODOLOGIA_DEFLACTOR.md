@@ -204,22 +204,64 @@ Los años afectados en la serie de gastos totales son **2014, 2015 y 2016**. De
 
 ---
 
-## 7. Qué NO está deflactado todavía
+## 7. Qué está deflactado y qué falta
 
-Tres de los ocho datasets de la lista original no existen en el repo:
+Nueve datasets llevan pesos constantes:
+
+| Dataset | Columna principal | Coeficiente |
+|---|---|---|
+| `data/presupuesto_historico_2010_2026.csv` | `monto` | anual |
+| `data/rendiciones_2010_2021.csv` | `monto` | anual |
+| `data/presupuestado_vs_ejecutado.csv` | `ejecutado` | anual |
+| `data/ejecucion_gastos_objeto.csv` | `devengado` | del período del informe |
+| `data/ejecucion_recursos.csv` | `percibido` | del período del informe |
+| `data/gastos_finalidad_funcion.csv` | `devengado` | del período del informe |
+| `data/deuda_stock.csv` | `saldo` | del mes de la fecha de corte |
+| `SanIsidro_datos_fiscales/DATOS_SanIsidro_2014-2022.csv` | `monto_pesos` | anual |
+| `DATOS_SanIsidro_2014-2022.csv` (copia en la raíz) | `monto_pesos` | anual |
+
+**Dos columnas que NO se deflactan y hay que dejar quietas:** `porcentaje` en
+`rendiciones_2010_2021.csv` y `diferencia_pct` en `presupuestado_vs_ejecutado.csv`.
+Son porcentajes, no importes. Deflactarlos no significaría nada. Están fuera de
+la lista de columnas de plata en el script.
+
+**El presupuesto 2026 es parcial.** El IPC llega a julio de 2026, así que su
+coeficiente anual sale de 7 meses. La columna `base_coef` de esa fila lo dice:
+*"anual 2026, promedio de 7 meses ponderado por días"*.
+
+### Lo que falta
 
 | Dataset | Estado |
 |---|---|
-| `data/presupuesto_historico_2010_2026.csv` | No existe. |
-| `data/rendiciones_2010_2021.csv` | No existe. |
 | `02_clean/transferencias_pba_2021_2025.csv` | No existe. Los datos crudos sí están, como 13 XLSX en `01_raw/transferencias_pba/`, sin parsear. |
 
-`03_scripts/deflactor.py` ya los tiene declarados en `DATASETS` y los reporta
-como *"no existe en el repo"*. Cuando aparezcan, se completa la columna de
-importes en esa entrada y quedan deflactados en la misma corrida. No se estimó ni
-se rellenó nada.
+Está declarado en `DATASETS` y el script lo reporta como *"no existe en el
+repo"*. Cuando aparezca, se le completa la lista de columnas de importes y queda
+deflactado en la misma corrida.
 
----
+## 7 bis. La serie real de gastos totales
+
+`data/serie_gastos_totales_real.csv` cubre **13 años entre 2010 y 2025**.
+Faltan 2013, 2018 y 2023, que no tienen rendición publicada.
+
+Hay tres fuentes y no todas cubren los mismos años. Cuando dos coinciden en un
+año gana la de menor rango, y el rango queda escrito en la columna
+`prioridad_fuente`:
+
+| Rango | Fuente | Años que aporta |
+|---:|---|---|
+| 1 | Fallo del Tribunal de Cuentas o rendición, concepto *"Gastos con imputación al presupuesto"* | 2014-2017, 2022 |
+| 2 | Rendición de cuentas parseada del PDF, fila `total_gastos` | 2010-2012, 2019-2021 |
+| 3 | Informe trimestral de ejecución, acumulado anual: suma del devengado de los objetos | 2024, 2025 |
+
+Nada se promedia ni se corrige: se elige una fila publicada y se dice cuál.
+La columna `concepto` dice qué mide cada año y `brecha_anios` cuántos años hay
+entre un punto y el anterior, para que nadie lea como variación interanual lo
+que en realidad acumula dos o tres años.
+
+**Ningún año varía más de 40% en términos reales contra el anterior**, así que
+`data/SALTOS_REALES.csv` queda con la cabecera y sin filas. El mayor movimiento
+es −21,3% en 2024 contra 2022, que son dos años.
 
 ## 8. Archivos
 
