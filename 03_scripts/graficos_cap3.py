@@ -9,7 +9,7 @@ import estilo as E
 
 FUENTE_MODELO = ("modelo de flujo de caja, data/modelo_flujo_caja.csv. Pesos "
                  "constantes de diciembre de 2025, sin supuesto de inflacion")
-FUENTE_SEF = ("Municipio de San Isidro, Estado de Situacion Economico-"
+FUENTE_SEF = ("Municipio de San Isidro, Estado de Situación Económico-"
               "Financiera 2025, cuenta Ahorro-Inversion-Financiamiento")
 
 
@@ -53,14 +53,14 @@ def ex08():
     E.titular(fig, "EXHIBIT 08",
               "Sin cambios, San Isidro vuelve al azul en 2028. En el adverso, nunca",
               "Resultado financiero proyectado. El escenario reformista por "
-              "reasignacion coincide con el base y no se dibuja aparte.")
+              "reasignación coincide con el base y no se dibuja aparte.")
     E.pie(fig, FUENTE_MODELO)
     return E.guardar(fig, "EXHIBIT_08_escenarios_resultado",
-                     dict(left=0.10, right=0.775, top=0.70, bottom=0.115))
+                     dict(left=0.135, right=0.775, top=0.70, bottom=0.115))
 
 
 def ex09():
-    """Base contra reformista por percepcion, con el area entre medio."""
+    """Base contra reformista por percepción, con el area entre medio."""
     por = _modelo()
     a, b = por["base"], por["reformista_percepcion"]
     xs = [int(r["anio"]) for r in a]
@@ -90,7 +90,7 @@ def ex09():
               "2031 y 2.924 en 2037.")
     E.pie(fig, FUENTE_MODELO)
     return E.guardar(fig, "EXHIBIT_09_base_vs_reformista",
-                     dict(left=0.10, right=0.775, top=0.70, bottom=0.115))
+                     dict(left=0.135, right=0.775, top=0.70, bottom=0.115))
 
 
 def ex10():
@@ -102,7 +102,7 @@ def ex10():
             base = float(r["resultado_financiero"]) / 1e6
     nombres = {"recursos_propios": "Recursos propios",
                "coparticipacion": "Coparticipacion",
-               "percepcion": "Percepcion de recursos"}
+               "percepcion": "Percepción de recursos"}
     items = []
     for r in filas:
         v = float(r["resultado_financiero"]) / 1e6 - base
@@ -135,7 +135,7 @@ def ex10():
               "Base: %s millones." % E.numero(base))
     E.pie(fig, "data/sensibilidad.csv")
     return E.guardar(fig, "EXHIBIT_10_tornado_sensibilidad",
-                     dict(left=0.30, right=0.975, top=0.695, bottom=0.10))
+                     dict(left=0.325, right=0.93, top=0.695, bottom=0.10))
 
 
 def ex11():
@@ -176,36 +176,39 @@ def ex11():
     base_x = (nucleo + contratos) / 1e6
     for i, (etiqueta, v, color) in enumerate(
             [("programa de empleo y vivienda", programa, E.BARRANCA),
-             ("obra publica vecinal (cap. 4)", obra_vecinal, E.AMBAR)]):
+             ("obra pública vecinal (cap. 4)", obra_vecinal, E.AMBAR)]):
         ax.barh([-0.55 - i * 0.24], [v / 1e6], left=base_x, height=0.17,
                 color=color, zorder=3)
-        ax.annotate("%s   %s M  (%s del flexible)"
+        # La etiqueta va a la izquierda del extremo de la barra: hacia la
+        # derecha no hay lienzo y el texto se saldria de la imagen.
+        ax.annotate("%s: %s M, el %s del flexible"
                     % (etiqueta, E.numero(v / 1e6), E.pct(100 * v / flexible, 1)),
-                    (base_x + v / 1e6, -0.55 - i * 0.24), xytext=(5, 0),
-                    textcoords="offset points", va="center", fontsize=6.4,
-                    color=color, weight="bold")
+                    (base_x, -0.55 - i * 0.24), xytext=(-6, 0),
+                    textcoords="offset points", va="center", ha="right",
+                    fontsize=6.4, color=color, weight="bold")
     ax.set_ylim(-1.15, 0.42)
     ax.set_yticks([])
     ax.set_xlim(0, total / 1e6 * 1.02)
+    E.podar_tick_superior(ax)
     ax.xaxis.set_major_formatter(E.eje_numero())
     ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
     E.titular(fig, "EXHIBIT 11",
               "El 73,1% del presupuesto no se puede tocar dentro del ejercicio",
-              "Composicion del gasto 2025 por rigidez, y que parte del margen "
+              "Composición del gasto 2025 por rigidez, y que parte del margen "
               "flexible se llevan las dos propuestas del programa.")
-    E.pie(fig, "data/ejecucion_gastos_objeto.csv y data/modelo_flujo_caja.csv",
+    E.pie(fig, "data/ejecución_gastos_objeto.csv y data/modelo_flujo_caja.csv",
           "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. "
-          "Caben, pero no queda lugar para una tercera del mismo tamano.")
+          "Caben, pero no queda lugar para una tercera del mismo tamaño.")
     return E.guardar(fig, "EXHIBIT_11_rigidez_del_gasto",
-                     dict(left=0.03, right=0.985, top=0.685, bottom=0.155))
+                     dict(left=0.32, right=0.985, top=0.685, bottom=0.20))
 
 
 def ex12():
     """Cascada: de donde sale el deficit de 6.051 millones."""
     b = {r["clave"]: float(r["monto"]) for r in E.leer("data/baseline_2025.csv")}
-    pasos = [
+    pasós = [
         ("Ingresos corrientes\npercibidos", b["ingresos_corrientes"], E.RIO, False),
         ("Gastos corrientes\ndevengados", -b["gastos_corrientes"], E.BARRANCA, False),
         ("Ahorro corriente", b["ahorro_corriente"], E.TINTA, True),
@@ -215,7 +218,7 @@ def ex12():
     ]
     fig, ax = E.figura(3.3)
     acum = 0.0
-    for i, (etiqueta, v, color, total) in enumerate(pasos):
+    for i, (etiqueta, v, color, total) in enumerate(pasós):
         if total:
             ax.bar([i], [v / 1e6], width=0.6, color=color, zorder=3)
             y_texto = v / 1e6
@@ -231,8 +234,8 @@ def ex12():
                     textcoords="offset points", ha="center", fontsize=6.6,
                     color=color, weight="bold")
     ax.axhline(0, color=E.TINTA, linewidth=0.9, zorder=4)
-    ax.set_xticks(range(len(pasos)))
-    ax.set_xticklabels([p[0] for p in pasos], fontsize=6.5)
+    ax.set_xticks(range(len(pasós)))
+    ax.set_xticklabels([p[0] for p in pasós], fontsize=6.5)
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylabel("millones de pesos de 2025", fontsize=6.8)
     E.limpiar(ax)
@@ -242,6 +245,6 @@ def ex12():
               "vuelta el resultado son los 57.832 millones de gasto de capital.")
     E.pie(fig, FUENTE_SEF,
           "Los ingresos van por lo PERCIBIDO y los gastos por lo DEVENGADO: es "
-          "la convencion de la cuenta Ahorro-Inversion, no una eleccion nuestra.")
+          "la convención de la cuenta Ahorro-Inversion, no una elección nuestra.")
     return E.guardar(fig, "EXHIBIT_12_cascada_resultado_2025",
-                     dict(left=0.095, right=0.985, top=0.685, bottom=0.145))
+                     dict(left=0.135, right=0.985, top=0.685, bottom=0.145))

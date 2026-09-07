@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
 import matplotlib.pyplot as plt
 
-FUENTE_CENSO = ("INDEC, Censo Nacional de Poblacion, Hogares y Viviendas 2022, "
+FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, "
                 "procesado con Redatam 7; zonas propias sobre radios censales")
 
 # --------------------------------------------------------------------------
@@ -46,7 +46,7 @@ PESO_NECESIDAD = 0.5
 
 
 def indice_de_necesidad(zonas):
-    """Promedio de los cuatro indicadores, cada uno sobre su propio maximo."""
+    """Promedio de los cuatro indicadores, cada uno sobre su propio máximo."""
     maximos = {k: max(float(z[k]) for z in zonas) for k in INDICADORES_NECESIDAD}
     return {z["zona"]: sum(float(z[k]) / maximos[k]
                            for k in INDICADORES_NECESIDAD) / len(INDICADORES_NECESIDAD)
@@ -73,16 +73,16 @@ def reparto_vecinal():
 
     ruta = os.path.join(E.DATA, "reparto_vecinal_por_zona.csv")
     with open(ruta, "w", encoding="utf-8", newline="") as f:
-        f.write("# Reparto de la partida vecinal: el 50%% de la obra publica del\n")
-        f.write("# anio 4, o sea %s pesos de diciembre de 2025.\n"
+        f.write("# Reparto de la partida vecinal: el 50%% de la obra pública del\n")
+        f.write("# año 4, o sea %s pesos de diciembre de 2025.\n"
                 % E.numero(total, 2))
-        f.write("# Peso = %d%% por poblacion + %d%% por indice de necesidad.\n"
+        f.write("# Peso = %d%% por población + %d%% por índice de necesidad.\n"
                 % (PESO_POBLACION * 100, PESO_NECESIDAD * 100))
-        f.write("# El indice promedia %d indicadores, cada uno dividido por su\n"
+        f.write("# El índice promedia %d indicadores, cada uno dividido por su\n"
                 % len(INDICADORES_NECESIDAD))
-        f.write("# maximo entre las seis zonas: %s.\n"
+        f.write("# máximo entre las seis zonas: %s.\n"
                 % ", ".join(INDICADORES_NECESIDAD))
-        f.write("# Poblacion en viviendas particulares, %s personas.\n"
+        f.write("# Población en viviendas particulares, %s personas.\n"
                 % E.numero(sp))
         w_csv = csv.writer(f)
         w_csv.writerow(["zona", "poblacion"]
@@ -107,31 +107,31 @@ def ex13():
                for f in filas]
     ax.bar(range(len(filas)), vals, width=0.62, color=colores, zorder=3)
     for i, f in enumerate(filas):
-        destacar = f["zona"] in ("Beccar", "Martinez")
+        destacár = f["zona"] in ("Beccar", "Martinez")
         ax.annotate(E.numero(f["pesos_por_habitante"]), (i, vals[i]),
                     xytext=(0, 5), textcoords="offset points", ha="center",
-                    fontsize=7.4 if destacar else 6.8,
-                    color=E.BARRANCA if destacar else E.TINTA,
+                    fontsize=7.4 if destacár else 6.8,
+                    color=E.BARRANCA if destacár else E.TINTA,
                     weight="bold")
     ax.set_xticks(range(len(filas)))
-    ax.set_xticklabels([f["zona"] for f in filas], fontsize=7.2)
+    ax.set_xticklabels([E.zona_bonita(f["zona"]) for f in filas], fontsize=7.2)
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylim(0, max(vals) * 1.2)
     ax.set_ylabel("pesos de dic-2025 por habitante", fontsize=6.8)
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 13",
-              "La partida vecinal reparte casi el doble por vecino en Beccar que en Martinez",
-              "Reparto de los %s millones del anio 4. Mitad por poblacion y "
-              "mitad por un indice que promedia NBI, cloacas, gas de red y "
+              "La partida vecinal reparte casi el doble por vecino en Beccar que en Martínez",
+              "Reparto de los %s millones del año 4. Mitad por población y "
+              "mitad por un índice que promedia NBI, cloacas, gas de red y "
               "hacinamiento." % E.numero(total / 1e6))
     E.pie(fig, "data/reparto_vecinal_por_zona.csv, calculado de "
                "data/baseline_2025.csv y data/zonas_indicadores.csv")
     return E.guardar(fig, "EXHIBIT_13_reparto_vecinal",
-                     dict(left=0.085, right=0.985, top=0.685, bottom=0.13))
+                     dict(left=0.125, right=0.985, top=0.685, bottom=0.13))
 
 
 def ex14():
-    """Obra publica: cuanto deciden los vecinos en el anio 1 y en el anio 4."""
+    """Obra pública: cuanto deciden los vecinos en el año 1 y en el año 4."""
     b = {r["clave"]: float(r["monto"]) for r in E.leer("data/baseline_2025.csv")}
     obra = b["obra_publica_total"]
     vecinal4 = b["obra_publica_vecinal_anio4"]
@@ -140,7 +140,7 @@ def ex14():
     vecinal1 = vecinal4 / 4
 
     fig, ax = E.figura(2.85)
-    for i, (etiqueta, v) in enumerate((("Ano 1", vecinal1), ("Ano 4", vecinal4))):
+    for i, (etiqueta, v) in enumerate((("Año 1", vecinal1), ("Año 4", vecinal4))):
         ax.barh([i], [v / 1e6], height=0.42, color=E.RIO, zorder=4)
         ax.barh([i], [(obra - v) / 1e6], left=v / 1e6, height=0.42,
                 color=E.CAL, zorder=3)
@@ -153,7 +153,7 @@ def ex14():
                     ((v + (obra - v) / 2) / 1e6, i), ha="center", va="center",
                     fontsize=6.6, color=E.TINTA)
     ax.set_yticks([0, 1])
-    ax.set_yticklabels(["Ano 1", "Ano 4"], fontsize=8.5)
+    ax.set_yticklabels(["Año 1", "Año 4"], fontsize=8.5)
     ax.invert_yaxis()
     ax.set_xlim(0, obra / 1e6 * 1.01)
     ax.xaxis.set_major_formatter(E.eje_numero())
@@ -161,13 +161,13 @@ def ex14():
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
     E.titular(fig, "EXHIBIT 14",
-              "En el ano 4, la mitad de la obra publica la deciden las comisiones vecinales",
-              "Sobre la obra publica ejecutada en 2025: %s millones. Es "
-              "reasignacion de quien decide, no gasto nuevo."
+              "En el ano 4, la mitad de la obra pública la deciden las comisiones vecinales",
+              "Sobre la obra pública ejecutada en 2025: %s millones. Es "
+              "reasignación de quien decide, no gasto nuevo."
               % E.numero(obra / 1e6))
     E.pie(fig, "data/baseline_2025.csv, bienes de uso devengados en 2025")
     return E.guardar(fig, "EXHIBIT_14_obra_publica_vecinal",
-                     dict(left=0.075, right=0.985, top=0.68, bottom=0.155))
+                     dict(left=0.085, right=0.945, top=0.68, bottom=0.155))
 
 
 # --------------------------------------------------------------------------
@@ -176,7 +176,7 @@ def ex14():
 #
 # Rampa secuencial de PAPEL a BARRANCA. Secuencial y no divergente porque el
 # NBI no tiene un centro natural: no hay un "bien" y un "mal" a los lados de
-# cero, hay mas y menos carencia. Una rampa divergente inventaria un punto
+# cero, hay más y menos carencia. Una rampa divergente inventaria un punto
 # medio que no existe.
 
 CRS_METRICO = "EPSG:32721"
@@ -246,29 +246,29 @@ def ex15():
         prop = (r["pct_nbi"] - vmin) / (vmax - vmin) if vmax > vmin else 0
         color = E.PAPEL if prop > 0.55 else E.TINTA
         halo = E.TINTA if prop > 0.55 else E.PAPEL
-        ax.text(p.x, p.y, "%s\n%s NBI" % (r["zona"], E.pct(r["pct_nbi"], 2)),
+        ax.text(p.x, p.y, "%s\n%s NBI" % (E.zona_bonita(r["zona"]), E.pct(r["pct_nbi"], 2)),
                 ha="center", va="center", fontsize=7.6, color=color,
                 weight="bold", zorder=6, linespacing=1.35,
                 path_effects=[withStroke(linewidth=2.0, foreground=halo)])
 
-    ax.set_axis_off()
+    E.apagar_ejes(ax)
     _barra_escala(ax, z)
     _norte(ax, z)
     _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI")
     E.titular(fig, "EXHIBIT 15",
               "Las seis zonas vecinales de San Isidro",
-              "Coloreadas por porcentaje de hogares con necesidades basicas "
+              "Coloreadas por porcentaje de hogares con necesidades básicas "
               "insatisfechas. El partido entero promedia 3,16%.")
     E.pie(fig, FUENTE_CENSO,
-          "Los limites de las zonas son propios, no oficiales. Lo unico oficial "
-          "es la geometria de los 360 radios censales del INDEC y los seis "
+          "Los límites de las zonas son propios, no oficiales. Lo único oficial "
+          "es la geometría de los 360 radios censales del INDEC y los seis "
           "puntos BAHRA de las localidades. Ver data/METODOLOGIA_ZONAS.md.")
     return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi",
                      dict(left=0.02, right=0.98, top=0.865, bottom=0.055))
 
 
 def ex16():
-    """Mapa por radio censal, con el conglomerado de la fraccion 32."""
+    """Mapa por radio censal, con el conglomerado de la fracción 32."""
     import geopandas as gpd
     from matplotlib.patheffects import withStroke
 
@@ -291,10 +291,10 @@ def ex16():
     con = radios[radios["pct_nbi"].notna()]
     vmin, vmax = con["pct_nbi"].min(), con["pct_nbi"].max()
 
-    # El conglomerado critico: los radios de la fraccion 32 que estan en el
+    # El conglomerado crítico: los radios de la fraccion 32 que están en el
     # decil superior de NBI del partido.
     umbral = con["pct_nbi"].quantile(0.9)
-    critico = con[(con["fraccion"] == "32") & (con["pct_nbi"] >= umbral)]
+    crítico = con[(con["fraccion"] == "32") & (con["pct_nbi"] >= umbral)]
 
     fig, ax = E.figura(4.6)
     radios.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
@@ -304,15 +304,15 @@ def ex16():
     z = z.to_crs(CRS_METRICO)
     z.boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.8, zorder=4,
                     alpha=0.55)
-    critico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=2.0,
+    crítico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=2.0,
                                      zorder=6)
 
-    p = critico.dissolve().geometry.representative_point().iloc[0]
+    p = crítico.dissolve().geometry.representative_point().iloc[0]
     x0, y0, x1, y1 = radios.total_bounds
-    ax.annotate("fraccion censal 32\n%d radios, %s hab\nel peor NBI del partido"
-                % (len(critico),
+    ax.annotate("fracción censal 32\n%d radios, %s hab\nel peor NBI del partido"
+                % (len(crítico),
                    E.numero(sum(int(censo[r]["poblacion_sexo__total"])
-                                for r in critico["radio_id"]))),
+                                for r in crítico["radio_id"]))),
                 (p.x, p.y), xytext=(p.x + (x1 - x0) * 0.24, p.y + (y1 - y0) * 0.14),
                 fontsize=7, color=E.TINTA, weight="bold", ha="left",
                 linespacing=1.35, zorder=7,
@@ -320,20 +320,20 @@ def ex16():
 
     for _, r in z.iterrows():
         q = r.geometry.representative_point()
-        ax.text(q.x, q.y, r["zona"], ha="center", va="center", fontsize=6.6,
+        ax.text(q.x, q.y, E.zona_bonita(r["zona"]), ha="center", va="center", fontsize=6.6,
                 color=E.TINTA, alpha=0.85, zorder=5,
                 path_effects=[withStroke(linewidth=2.2, foreground=E.PAPEL)])
 
-    ax.set_axis_off()
+    E.apagar_ejes(ax)
     _barra_escala(ax, radios)
     _norte(ax, radios)
     _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI, por radio censal")
     E.titular(fig, "EXHIBIT 16",
-              "La carencia no esta repartida: esta concentrada en nueve radios",
+              "La carencia no está repartida: esta concentrada en nueve radios",
               "Los 360 radios censales del partido. El contorno grueso es el "
-              "conglomerado de la fraccion 32, dentro de Beccar.")
+              "conglomerado de la fracción 32, dentro de Beccar.")
     E.pie(fig, FUENTE_CENSO,
-          "Los nueve radios se identifican por codigo y fraccion censal, nunca "
-          "por nombre de barrio: los barrios no tienen geometria oficial.")
+          "Los nueve radios se identifican por codigo y fracción censal, nunca "
+          "por nombre de barrio: los barrios no tienen geometría oficial.")
     return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi",
                      dict(left=0.02, right=0.98, top=0.865, bottom=0.055))

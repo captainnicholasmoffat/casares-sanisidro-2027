@@ -7,19 +7,19 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
 
-FUENTE_EJEC = ("Municipio de San Isidro, ejecucion presupuestaria 2025, "
+FUENTE_EJEC = ("Municipio de San Isidro, ejecución presupuestaria 2025, "
                "informe anual. Gasto devengado")
-FUENTE_CENSO = ("INDEC, Censo Nacional de Poblacion, Hogares y Viviendas 2022, "
+FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, "
                 "procesado con Redatam 7")
 
-# Se destacan porque son las dos funciones que el programa senala como
-# desatendidas. No se eligen por su valor: estan escritas aca y el grafico
+# Se destacán porque son las dos funciones que el programa señala como
+# desatendidas. No se eligen por su valor: están escritas acá y el grafico
 # resalta las que coincidan.
 DESTACAR = {"ECOLOGIA Y MEDIO AMBIENTE", "AGUA POTABLE Y ALCANTARILLADO"}
 
 
 def ex17():
-    """Gasto por funcion 2025, ordenado."""
+    """Gasto por función 2025, ordenado."""
     filas = []
     total = 0.0
     for r in E.leer("data/gastos_finalidad_funcion.csv"):
@@ -35,29 +35,30 @@ def ex17():
     ax.barh(list(y), [v / 1e6 for _, v in filas], height=0.66, color=colores,
             zorder=3)
     for i, (nombre, v) in enumerate(filas):
-        destacada = nombre.upper() in DESTACAR
+        destacáda = nombre.upper() in DESTACAR
         ax.annotate("%s M   %s" % (E.numero(v / 1e6), E.pct(100 * v / total, 1)),
                     (v / 1e6, i), xytext=(4, 0), textcoords="offset points",
                     va="center", fontsize=6.4,
-                    color=E.BARRANCA if destacada else E.TINTA,
-                    weight="bold" if destacada else "normal")
+                    color=E.BARRANCA if destacáda else E.TINTA,
+                    weight="bold" if destacáda else "normal")
     ax.set_yticks(list(y))
-    ax.set_yticklabels([n.title() for n, _ in filas], fontsize=6.6)
+    ax.set_yticklabels([E.etiqueta_corta(n, 24) for n, _ in filas],
+                       fontsize=6.2, linespacing=1.15)
     ax.xaxis.set_major_formatter(E.eje_numero())
-    ax.set_xlim(0, max(v for _, v in filas) / 1e6 * 1.25)
+    ax.set_xlim(0, max(v for _, v in filas) / 1e6 * 1.42)
     ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
     E.limpiar(ax, grilla="x")
     E.titular(fig, "EXHIBIT 17",
-              "Ecologia y agua potable juntas no llegan al 1,5% del presupuesto",
-              "Gasto por funcion, ejercicio 2025. En BARRANCA las dos "
-              "funciones que el programa senala como desatendidas.")
+              "Ecología y agua potable juntas no llegan al 1,5% del presupuesto",
+              "Gasto por función, ejercicio 2025. En BARRANCA las dos "
+              "funciónes que el programa señala como desatendidas.")
     E.pie(fig, FUENTE_EJEC)
     return E.guardar(fig, "EXHIBIT_17_gasto_por_funcion",
-                     dict(left=0.235, right=0.975, top=0.755, bottom=0.10))
+                     dict(left=0.30, right=0.90, top=0.755, bottom=0.10))
 
 
 def ex18():
-    """Empleo y vivienda contra todo lo demas."""
+    """Empleo y vivienda contra todo lo demás."""
     b = {r["clave"]: float(r["monto"]) for r in E.leer("data/baseline_2025.csv")}
     total = b["gastos_totales"]
     empleo, vivienda = b["gasto_empleo"], b["gasto_vivienda"]
@@ -74,7 +75,7 @@ def ex18():
                 % (E.numero(resto / 1e6), E.pct(100 * resto / total, 2)),
                 (resto / 2e6, 0), ha="center", va="center", fontsize=7.4,
                 color=E.TINTA, weight="bold")
-    # Las dos partidas son tan chicas que hay que sacarlas con lineas guia.
+    # Las dos partidas son tan chicas que hay que sacárlas con lineas guia.
     for i, (etiqueta, v, color) in enumerate(
             (("Vivienda: %s M, el %s del presupuesto"
               % (E.numero(vivienda / 1e6, 1), E.pct(100 * vivienda / total, 2)),
@@ -90,7 +91,8 @@ def ex18():
                     arrowprops=dict(arrowstyle="-", color=color, linewidth=0.8))
     ax.set_ylim(-0.75, 0.75)
     ax.set_yticks([])
-    ax.set_xlim(0, total / 1e6 * 1.01)
+    ax.set_xlim(0, total / 1e6 * 1.005)
+    E.podar_tick_superior(ax)
     ax.xaxis.set_major_formatter(E.eje_numero())
     ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
@@ -99,9 +101,9 @@ def ex18():
               "Empleo y vivienda son 5 de cada 3.000 pesos que gasta el Municipio",
               "Las dos partidas juntas suman el 0,16% del presupuesto "
               "ejecutado en 2025.")
-    E.pie(fig, "Estado de Situacion Economico-Financiera 2025, gastos por programa")
+    E.pie(fig, "Estado de Situación Económico-Financiera 2025, gastos por programa")
     return E.guardar(fig, "EXHIBIT_18_empleo_vivienda_vs_resto",
-                     dict(left=0.045, right=0.985, top=0.665, bottom=0.16))
+                     dict(left=0.055, right=0.90, top=0.665, bottom=0.185))
 
 
 def ex20():
@@ -122,7 +124,7 @@ def ex20():
                     textcoords="offset points", ha="center", fontsize=7,
                     color=colores[i], weight="bold")
     ax.set_xticks(range(len(datos)))
-    ax.set_xticklabels([n for n, _ in datos], fontsize=7.2)
+    ax.set_xticklabels([E.zona_bonita(n) for n, _ in datos], fontsize=7.2)
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylim(0, max(v for _, v in datos) * 1.24)
     ax.set_ylabel("hogares", fontsize=6.8)
@@ -135,4 +137,4 @@ def ex20():
           "En cantidad de hogares, no en porcentaje: un porcentaje chico sobre "
           "una zona grande sigue siendo mucha gente.")
     return E.guardar(fig, "EXHIBIT_20_hogares_sin_gas",
-                     dict(left=0.085, right=0.985, top=0.685, bottom=0.13))
+                     dict(left=0.115, right=0.985, top=0.685, bottom=0.13))

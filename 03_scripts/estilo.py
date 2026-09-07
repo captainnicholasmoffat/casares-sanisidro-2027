@@ -26,7 +26,7 @@ import re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
+from matplotlib.ticker import FuncFormatter, MaxNLocator
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(AQUI)
@@ -134,6 +134,41 @@ def eje_millones(decimales=0):
 # El armazon de cada grafico
 # --------------------------------------------------------------------------
 
+def envolver(texto, fontsize, ancho_in=None, margen_in=0.13):
+    """
+    Corta el texto en varias lineas para que entre en el ancho de la figura.
+
+    El ancho disponible se mide en pulgadas contra el lienzo, no se asume. La
+    estimacion es conservadora: 0,52 del cuerpo de la fuente por caracter, que
+    es mas ancho que el promedio real de DejaVu Sans, asi que si se equivoca se
+    equivoca cortando de mas y no de menos. Lo que quede afuera igual lo
+    atrapa verificar_desborde().
+    """
+    import textwrap
+    ancho_in = (ancho_in or ANCHO_IN) - 2 * margen_in
+    por_caracter = 0.52 * fontsize / 72.0
+    n = max(20, int(ancho_in / por_caracter))
+    return "\n".join(textwrap.wrap(texto, n)) if texto else texto
+
+
+def etiqueta_corta(texto, ancho=26, lineas=2):
+    """
+    Nombre largo de funcion o finalidad, listo para un eje: en minusculas con
+    la inicial en mayuscula, cortado en varias lineas y con puntos suspensivos
+    si aun asi no entra. Los nombres vienen del PDF y algunos ya llegan
+    truncados por la fuente.
+    """
+    import textwrap
+    t = texto.strip()
+    t = t[0].upper() + t[1:].lower() if t else t
+    partes = textwrap.wrap(t, ancho)[:lineas]
+    if not partes:
+        return t
+    if len("\n".join(partes)) < len(t):
+        partes[-1] = partes[-1].rstrip(" ,(") + "..."
+    return "\n".join(partes)
+
+
 def figura(alto_in=3.2, ejes=True):
     fig = plt.figure(figsize=(ANCHO_IN, alto_in))
     if not ejes:
@@ -149,20 +184,24 @@ def titular(fig, exhibit, titulo, bajada=None):
     """
     fig.text(0.012, 0.975, exhibit, ha="left", va="top", fontsize=6.5,
              color=RIO, family="sans-serif", weight="bold")
-    fig.text(0.012, 0.935, titulo, ha="left", va="top", fontsize=11.5,
-             color=TINTA, family="serif")
+    fig.text(0.012, 0.935, envolver(titulo, 11.5), ha="left", va="top",
+             fontsize=11.5, color=TINTA, family="serif")
     if bajada:
-        fig.text(0.012, 0.885, bajada, ha="left", va="top", fontsize=7.4,
-                 color=TINTA, alpha=0.72, family="sans-serif")
+        fig.text(0.012, 0.885, envolver(bajada, 7.4), ha="left", va="top",
+                 fontsize=7.4, color=TINTA, alpha=0.72, family="sans-serif")
 
 
 def pie(fig, fuente, nota=None):
     """Linea de fuente al pie. Sin esto el grafico no se publica."""
-    fig.text(0.012, 0.028, "Fuente: " + fuente, ha="left", va="bottom",
-             fontsize=6.2, color=TINTA, alpha=0.62, family="sans-serif")
+    texto = envolver("Fuente: " + fuente, 6.2)
+    lineas_fuente = texto.count("\n") + 1
+    fig.text(0.012, 0.028, texto, ha="left", va="bottom", fontsize=6.2,
+             color=TINTA, alpha=0.62, family="sans-serif")
     if nota:
-        fig.text(0.012, 0.002, nota, ha="left", va="bottom", fontsize=6.2,
-                 color=AMBAR, family="sans-serif")
+        # La nota se apoya encima de la fuente, cuantas lineas haga falta.
+        y = 0.028 + lineas_fuente * 0.026 + 0.008
+        fig.text(0.012, y, envolver(nota, 6.2), ha="left", va="bottom",
+                 fontsize=6.2, color=AMBAR, family="sans-serif")
 
 
 def etiqueta_serie(ax, x, y, texto, color, dx=4, dy=0, **kw):
@@ -189,6 +228,7 @@ def guardar(fig, nombre, ajuste=None):
     os.makedirs(SALIDA, exist_ok=True)
     if ajuste:
         fig.subplots_adjust(**ajuste)
+    DESBORDES[nombre] = verificar_desborde(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -196,6 +236,53 @@ def guardar(fig, nombre, ajuste=None):
                     dpi=DPI)
     plt.close(fig)
     return png, svg
+
+
+DESBORDES = {}
+
+
+def verificar_desborde(fig, tolerancia_px=1.0):
+    """
+    Ningun caracter puede quedar afuera del lienzo.
+
+    Recorre todos los objetos de texto de la figura, les pide su caja al
+    renderer ya dibujado y la compara contra el lienzo. Devuelve la lista de
+    los que se salen, con cuantos pixeles y para que lado.
+
+    Es la misma idea que verificar_paleta(): que la regla sea una restriccion y
+    no una intencion. Un titulo cortado no se nota hasta que alguien abre el
+    PNG, y para entonces ya esta publicado.
+    """
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+    ancho, alto = fig.get_size_inches() * fig.dpi
+    fallas = []
+    for t in fig.findobj(matplotlib.text.Text):
+        if not t.get_visible() or not (t.get_text() or "").strip():
+            continue
+        # Los mapas apagan sus ejes con set_axis_off(): las etiquetas de los
+        # ticks siguen existiendo como objetos pero no se dibujan, asi que no
+        # cuentan como desborde.
+        ejes = getattr(t, "axes", None)
+        if ejes is not None and not getattr(ejes, "axison", True):
+            continue
+        try:
+            caja = t.get_window_extent(renderer=ren)
+        except Exception:
+            continue
+        fuera = []
+        if caja.x0 < -tolerancia_px:
+            fuera.append("izquierda %.0f px" % -caja.x0)
+        if caja.x1 > ancho + tolerancia_px:
+            fuera.append("derecha %.0f px" % (caja.x1 - ancho))
+        if caja.y0 < -tolerancia_px:
+            fuera.append("abajo %.0f px" % -caja.y0)
+        if caja.y1 > alto + tolerancia_px:
+            fuera.append("arriba %.0f px" % (caja.y1 - alto))
+        if fuera:
+            muestra = t.get_text().replace("\n", " ")[:52]
+            fallas.append("%r se sale por %s" % (muestra, " y ".join(fuera)))
+    return fallas
 
 
 def verificar_paleta(nombre):
@@ -255,6 +342,25 @@ def _en_la_rampa(r, g, b, tolerancia=8):
     return False
 
 
+def podar_tick_superior(ax, eje="x", n=6):
+    """
+    El ultimo tick de un eje que llega al borde se dibuja medio afuera del
+    lienzo. prune="upper" lo saca sin tocar la escala.
+    """
+    loc = MaxNLocator(nbins=n, prune="upper")
+    (ax.xaxis if eje == "x" else ax.yaxis).set_major_locator(loc)
+
+
+def apagar_ejes(ax):
+    """
+    set_axis_off() no borra los objetos de texto de los ticks: los deja
+    invisibles pero existiendo. Para un mapa hay que sacarlos de verdad.
+    """
+    ax.set_axis_off()
+    ax.set_xticks([])
+    ax.set_yticks([])
+
+
 def rampa(desde=PAPEL, hasta=BARRANCA, n=256):
     """Rampa secuencial de PAPEL a BARRANCA para los mapas."""
     from matplotlib.colors import LinearSegmentedColormap
@@ -266,6 +372,23 @@ def leer(ruta):
     import csv
     with open(os.path.join(REPO, ruta), encoding="utf-8", newline="") as f:
         return list(csv.DictReader(l for l in f if not l.startswith("#")))
+
+
+# Los nombres de zona en los CSV vienen sin acento porque salen de la
+# geometria. Para mostrarlos se usa esta tabla: el dato no se toca, la etiqueta
+# si. Cambiar el CSV para que diga "Martinez" con acento romperia las claves.
+NOMBRE_ZONA = {
+    "Martinez": "Martínez",
+    "Beccar": "Beccar",
+    "Boulogne Sur Mer": "Boulogne Sur Mer",
+    "Villa Adelina": "Villa Adelina",
+    "San Isidro": "San Isidro",
+    "Acassuso": "Acassuso",
+}
+
+
+def zona_bonita(nombre):
+    return NOMBRE_ZONA.get(nombre, nombre)
 
 
 ORDEN_ZONAS = None

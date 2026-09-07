@@ -84,5 +84,17 @@ pintan (`fill`, `stroke`, `stop-color`) y falla si aparece un color que no
 sea de la paleta, un gris de antialias o un tono de la rampa de los mapas. El
 orquestador lo corre sobre los 18 y sale distinto de cero si alguno falla.
 
+`estilo.verificar_desborde()` recorre todos los objetos de texto de la figura,
+le pide a cada uno su caja al renderer ya dibujado y la compara contra el
+lienzo. Si algún carácter queda afuera, el orquestador falla. Corre solo, dentro
+de `guardar()`, así que no hay forma de publicar un gráfico con el título
+cortado. `titular()` y `pie()` además envuelven el texto midiendo el ancho real
+de la figura, no asumiéndolo.
+
+**Acentos.** Todo el texto va en español correcto: años, más, máximo, mínimo,
+ejecución, población, Martínez, básicas, límites. Los nombres de zona en los CSV
+están sin acento porque son claves de datos; para mostrarlos se usa
+`estilo.zona_bonita()`, que mapea `Martinez` a `Martínez` sin tocar el dato.
+
 **Números a la castellana** con `numero()`, `pct()` y `millones()`: miles
 con punto y decimales con coma. 324.304 y 89,32%. Nunca a mano.

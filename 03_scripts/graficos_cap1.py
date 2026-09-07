@@ -9,17 +9,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
 import matplotlib.pyplot as plt
 
-FUENTE_SERIE = ("elaboracion propia sobre rendiciones de cuentas y ejecucion "
+FUENTE_SERIE = ("elaboración propia sobre rendiciones de cuentas y ejecución "
                 "presupuestaria del Municipio de San Isidro, deflactado con "
                 "IPC INDEC empalmado (data/serie_gastos_comparable.csv)")
-FUENTE_CENSO = ("INDEC, Censo Nacional de Poblacion, Hogares y Viviendas 2022, "
+FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, "
                 "procesado con Redatam 7 (data/zonas_indicadores.csv)")
 FUENTE_PBA = ("Ministerio de Hacienda y Finanzas de la Provincia de Buenos "
               "Aires, transferencias a municipios 2021-2025")
 
 
 def ex01():
-    """Gasto real 2010-2025. Los anios sin dato se ven vacios."""
+    """Gasto real 2010-2025. Los años sin dato se ven vacíos."""
     filas = E.leer("data/serie_gastos_comparable.csv")
     anios = [int(f["anio"]) for f in filas]
     vals = [float(f["monto_constante_dic2025"]) / 1e6 if f["monto_constante_dic2025"]
@@ -56,13 +56,13 @@ def ex01():
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 01",
               "El gasto municipal real cae 34,9% entre 2017 y 2024",
-              "Gasto total en pesos constantes. Un solo concepto en todos los "
-              "anios: gastos corrientes mas de capital, sin aplicaciones financieras.")
+              "Gasto total en pesos constantes. Un sólo concepto en todos los "
+              "años: gastos corrientes más de capital, sin aplicaciones financieras.")
     E.pie(fig, FUENTE_SERIE,
-          "2013, 2018 y 2023 no tienen rendicion de cuentas publicada. No se "
+          "2013, 2018 y 2023 no tienen rendición de cuentas publicada. No se "
           "interpolaron: el hueco queda a la vista.")
     return E.guardar(fig, "EXHIBIT_01_gasto_real_2010_2025",
-                     dict(left=0.075, right=0.985, top=0.70, bottom=0.155))
+                     dict(left=0.115, right=0.985, top=0.70, bottom=0.155))
 
 
 def ex02():
@@ -86,7 +86,7 @@ def ex02():
                     textcoords="offset points", ha="center", fontsize=6.2,
                     color=color, weight="bold")
     ax.set_xticks(x)
-    ax.set_xticklabels([z["zona"] for z in zonas], fontsize=7.2)
+    ax.set_xticklabels([E.zona_bonita(z["zona"]) for z in zonas], fontsize=7.2)
     ax.yaxis.set_major_formatter(E.eje_pct())
     ax.set_ylim(0, max(float(z["pct_sin_gas_red"]) for z in zonas) * 1.28)
     E.limpiar(ax)
@@ -110,13 +110,13 @@ def ex03():
                     textcoords="offset points", ha="center", fontsize=7,
                     color=E.TINTA, weight="bold")
     ax.set_xticks(range(len(zonas)))
-    ax.set_xticklabels([z["zona"] for z in zonas], fontsize=7.2)
+    ax.set_xticklabels([E.zona_bonita(z["zona"]) for z in zonas], fontsize=7.2)
     ax.yaxis.set_major_formatter(E.eje_pct())
     ax.set_ylim(0, max(vals) * 1.22)
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 03",
               "El mismo orden, dado vuelta: donde falta todo, tampoco hay titulo",
-              "Poblacion con universidad completa o mas, por zona. Mismo orden "
+              "Población con universidad completa o más, por zona. Mismo orden "
               "que el exhibit 02, de peor a mejor en NBI.")
     E.pie(fig, FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_03_educacion_por_zona",
@@ -124,7 +124,7 @@ def ex03():
 
 
 def ex04():
-    """La participacion de cuatro municipios del norte, 2021-2025."""
+    """La participación de cuatro municipios del norte, 2021-2025."""
     filas = [f for f in E.leer("data/coparticipacion_comparada.csv")
              if int(f["meses"]) == 12]
     anios = sorted({int(f["anio"]) for f in filas})
@@ -132,7 +132,7 @@ def ex04():
     colores = {"SAN ISIDRO": E.RIO, "TIGRE": E.BARRANCA,
                "VICENTE LOPEZ": E.TINTA, "SAN FERNANDO": E.AMBAR}
     bonito = {"SAN ISIDRO": "San Isidro", "TIGRE": "Tigre",
-              "VICENTE LOPEZ": "Vicente Lopez", "SAN FERNANDO": "San Fernando"}
+              "VICENTE LOPEZ": "Vicente López", "SAN FERNANDO": "San Fernando"}
 
     fig, ax = E.figura(3.3)
     for m in munis:
@@ -154,8 +154,8 @@ def ex04():
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 04",
               "Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta",
-              "Participacion de cada municipio en el total transferido por la "
-              "Provincia a los 135 municipios. Anios completos.")
+              "Participación de cada municipio en el total transferido por la "
+              "Provincia a los 135 municipios. Años completos.")
     E.pie(fig, FUENTE_PBA,
           "2026 va con seis meses y queda fuera del grafico. San Isidro cae a "
           "1,6811% y Tigre sube a 1,8370%.")

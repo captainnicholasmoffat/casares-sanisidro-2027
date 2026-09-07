@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capitulo 2 - La gestion. Exhibits 06 y 07."""
+"""Capitulo 2 - La gestión. Exhibits 06 y 07."""
 
 import os
 import sys
@@ -7,13 +7,13 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
 
-FUENTE_EJEC = ("elaboracion propia sobre la ejecucion presupuestaria "
+FUENTE_EJEC = ("elaboración propia sobre la ejecución presupuestaria "
                "trimestral del Municipio de San Isidro, informes anuales "
                "2024 y 2025")
 
 # Estas tres funciones cambian de contenido entre 2024 y 2025 por
 # reclasificacion contable, no porque haya cambiado el gasto. Compararlas seria
-# publicar una variacion que no ocurrio.
+# publicar una variación que no ocurrio.
 RECLASIFICADAS = {"TRANSPORTE", "COMERCIO, TURISMO Y OTROS SERVICIOS",
                   "AGUA POTABLE Y ALCANTARILLADO"}
 
@@ -32,7 +32,7 @@ def _anual(anio):
 
 
 def ex06():
-    """Percepcion 2024 contra 2025, con lo no cobrado a la vista."""
+    """Percepción 2024 contra 2025, con lo no cobrado a la vista."""
     datos = [(a,) + _anual(a) for a in (2024, 2025)]
     fig, ax = E.figura(3.1)
     x = [0, 1]
@@ -58,7 +58,7 @@ def ex06():
     ax.set_xlim(-0.55, 1.55)
     ax.set_ylim(0, max(d[1] for d in datos) / 1e6 * 1.16)
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("millones de pesos corrientes de cada anio", fontsize=6.8)
+    ax.set_ylabel("millones de pesos corrientes de cada año", fontsize=6.8)
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 06",
               "En 2025 quedaron 35.994 millones sin cobrar de lo ya facturado",
@@ -67,11 +67,11 @@ def ex06():
               "y no entro.")
     E.pie(fig, FUENTE_EJEC)
     return E.guardar(fig, "EXHIBIT_06_percepcion_2024_2025",
-                     dict(left=0.085, right=0.985, top=0.685, bottom=0.11))
+                     dict(left=0.125, right=0.985, top=0.685, bottom=0.11))
 
 
 def ex07():
-    """Variacion real por funcion, divergente desde cero."""
+    """Variación real por función, divergente desde cero."""
     defl = {int(r["anio"]): float(r["coef_anual"])
             for r in E.leer("data/deflactor.csv") if r["coef_anual"]}
     por = {}
@@ -106,18 +106,19 @@ def ex07():
                     textcoords="offset points", ha=ha, va="center",
                     fontsize=6.6, color=colores[i], weight="bold")
     ax.set_yticks(list(y))
-    ax.set_yticklabels([n.title() for n, _ in filas], fontsize=6.8)
+    ax.set_yticklabels([E.etiqueta_corta(n, 24) for n, _ in filas],
+                       fontsize=6.2, linespacing=1.15)
     ax.xaxis.set_major_formatter(E.eje_pct())
-    lim = max(abs(v) for _, v in filas) * 1.35
+    lim = max(abs(v) for _, v in filas) * 1.55
     ax.set_xlim(-lim, lim)
     E.limpiar(ax, grilla="x")
     E.titular(fig, "EXHIBIT 07",
-              "Que subio y que bajo en terminos reales entre 2024 y 2025",
-              "Variacion real del gasto devengado por funcion, en pesos "
+              "Qué subio y que bajo en terminos reales entre 2024 y 2025",
+              "Variación real del gasto devengado por función, en pesos "
               "constantes de diciembre de 2025.")
     E.pie(fig, FUENTE_EJEC,
           "Se excluyen Transporte, Comercio y Agua potable: cambian de "
-          "contenido entre los dos anios por reclasificacion contable, no "
+          "contenido entre los dos años por reclasificación contable, no "
           "porque haya cambiado el gasto.")
     return E.guardar(fig, "EXHIBIT_07_variacion_por_funcion",
-                     dict(left=0.235, right=0.975, top=0.735, bottom=0.115))
+                     dict(left=0.30, right=0.93, top=0.735, bottom=0.115))

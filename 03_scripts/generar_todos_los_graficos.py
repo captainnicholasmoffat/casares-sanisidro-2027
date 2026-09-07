@@ -2,11 +2,11 @@
 """
 Regenera todos los graficos del programa de gobierno, de cero.
 
-Cada capitulo vive en su propio modulo y cada exhibit en su propia funcion, asi
-que se puede regenerar uno solo sin correr los veinte:
+Cada capitulo vive en su propio modulo y cada exhibit en su propia función, asi
+que se puede regenerar uno sólo sin correr los veinte:
 
     python3 03_scripts/generar_todos_los_graficos.py            # todos
-    python3 03_scripts/generar_todos_los_graficos.py 15         # solo el 15
+    python3 03_scripts/generar_todos_los_graficos.py 15         # sólo el 15
     python3 03_scripts/generar_todos_los_graficos.py 08 09 10   # varios
 
 Al final verifica la paleta de cada SVG generado. Si algun grafico tiene un
@@ -30,7 +30,7 @@ import graficos_cap5 as C5
 # inventa ninguno: quedan explicados en 06_charts/FALTAN_DATOS.md.
 SIN_DATO = {
     "05": ("San Isidro contra la mediana provincial en % personal y % obra "
-           "publica", "no hay ejecucion presupuestaria de los otros 134 "
+           "publica", "no hay ejecución presupuestaria de los otros 134 "
            "municipios en el repo"),
     "19": ("Las ocho medidas de transparencia, cumplidas contra pendientes",
            "no existe el dataset de medidas de transparencia"),
@@ -58,18 +58,21 @@ def main(pedidos=None):
         nombre = os.path.basename(png)[:-4]
         sucios = E.verificar_paleta(nombre)
         if sucios:
-            problemas.append((nombre, sucios))
+            problemas.append((nombre, "paleta", sucios))
+        fuera = E.DESBORDES.get(nombre) or []
+        if fuera:
+            problemas.append((nombre, "texto fuera del lienzo", fuera))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
-                 "colores fuera de paleta!" if sucios else "OK"))
+                 "FALLA" if (sucios or fuera) else "OK"))
     return hechos, problemas
 
 
 if __name__ == "__main__":
     pedidos = {a.zfill(2) for a in sys.argv[1:]} or None
     print("=" * 84)
-    print("FABRICA DE GRAFICOS - paleta unica, 1600 px, PNG a 300 dpi y SVG")
+    print("FABRICA DE GRAFICOS - paleta única, 1600 px, PNG a 300 dpi y SVG")
     print("=" * 84)
     hechos, problemas = main(pedidos)
     print()
@@ -83,8 +86,11 @@ if __name__ == "__main__":
           % (len(hechos), len(hechos), len(hechos)))
     if problemas:
         print()
-        print("PALETA VIOLADA:")
-        for nombre, sucios in problemas:
-            print("  %s: %s" % (nombre, sucios))
+        print("PROBLEMAS:")
+        for nombre, tipo, detalle in problemas:
+            print("  %s  [%s]" % (nombre, tipo))
+            for d in detalle[:6]:
+                print("      %s" % d)
         sys.exit(1)
-    print("todos los graficos usan solo la paleta")
+    print("los %d gráficos usan sólo la paleta y ningún carácter queda fuera "
+          "del lienzo" % len(hechos))
