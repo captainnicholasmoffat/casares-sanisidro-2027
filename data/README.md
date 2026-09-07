@@ -124,12 +124,28 @@ en 2010-2012 incluye las aplicaciones financieras y en 2019-2021 no. Es el paso
 al formato Ahorro-Inversión de los informes ARSI. Por eso la serie heterogénea
 no sirve para comparar.
 
+## Transferencias de la Provincia
+
+`02_clean/transferencias_pba_2021_2026.csv` — 1.032 filas, 66 meses de enero de
+2021 a junio de 2026, parseadas de los 13 XLSX de `01_raw/transferencias_pba/`
+por `03_scripts/parse_transferencias.py`.
+
+**Ojo al sumar:** la familia `descentralizacion` ya está adentro de la columna
+Descentralización de la familia `transferencias`. Sumar las dos cuenta dos
+veces. Hay que filtrar por familia antes de totalizar. La advertencia está
+también arriba del propio CSV.
+
+Las hojas de los meses que todavía no ocurrieron vienen en los XLSX como
+plantillas vacías. Se descartan y queda anotado cuáles: sin eso, 2026 aparecería
+con 11 meses de datos casi nulos en vez de 6 reales.
+
 ## Orden de corrida
 
 El parser reescribe los CSV desde los PDF, así que va primero:
 
 ```
-python3 03_scripts/test_parser.py      # parsea los PDF y valida
+python3 03_scripts/test_parser.py           # parsea los PDF y valida
+python3 03_scripts/parse_transferencias.py  # XLSX de la Provincia a 02_clean
 python3 03_scripts/deflactor.py        # baja el IPC, empalma y deflacta
 python3 03_scripts/test_deflactor.py   # test dorado del empalme + validaciones
 
