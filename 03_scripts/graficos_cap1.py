@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Capitulo 1 - Diagnostico. Exhibits 01 a 05."""
 
 import os
@@ -36,13 +37,13 @@ def ex01():
     tope = max(v for _, v in con)
     for a in sin:
         ax.bar([a], [tope], width=0.68, color=E.CAL, zorder=2)
-        ax.text(a, tope * 0.5, "sin\nrendicion", ha="center", va="center",
+        ax.text(a, tope * 0.5, "sin\nrendición", ha="center", va="center",
                 fontsize=5.6, color=E.TINTA, alpha=0.55, rotation=90)
 
     maxi = max(con, key=lambda x: x[1])
     mini = min(con, key=lambda x: x[1])
-    for (a, v), etiqueta, color in ((maxi, "maximo", E.TINTA),
-                                    (mini, "minimo", E.BARRANCA)):
+    for (a, v), etiqueta, color in ((maxi, "máximo", E.TINTA),
+                                    (mini, "mínimo", E.BARRANCA)):
         ax.bar([a], [v], width=0.68, color=color, zorder=4)
         ax.annotate("%s %d\n%s M" % (etiqueta, a, E.numero(v)),
                     (a, v), xytext=(0, 7), textcoords="offset points",
@@ -56,7 +57,7 @@ def ex01():
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 01",
               "El gasto municipal real cae 34,9% entre 2017 y 2024",
-              "Gasto total en pesos constantes. Un sólo concepto en todos los "
+              "Gasto total en pesos constantes. Un solo concepto en todos los "
               "años: gastos corrientes más de capital, sin aplicaciones financieras.")
     E.pie(fig, FUENTE_SERIE,
           "2013, 2018 y 2023 no tienen rendición de cuentas publicada. No se "

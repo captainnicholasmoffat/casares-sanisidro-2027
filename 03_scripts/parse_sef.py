@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Estado de Situacion Economico-Financiera (SEF) anual, a CSV.
 

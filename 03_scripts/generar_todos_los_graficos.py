@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Regenera todos los graficos del programa de gobierno, de cero.
 
 Cada capitulo vive en su propio modulo y cada exhibit en su propia función, asi
-que se puede regenerar uno sólo sin correr los veinte:
+que se puede regenerar uno solo sin correr los veinte:
 
     python3 03_scripts/generar_todos_los_graficos.py            # todos
-    python3 03_scripts/generar_todos_los_graficos.py 15         # sólo el 15
+    python3 03_scripts/generar_todos_los_graficos.py 15         # solo el 15
     python3 03_scripts/generar_todos_los_graficos.py 08 09 10   # varios
 
 Al final verifica la paleta de cada SVG generado. Si algun grafico tiene un
@@ -62,10 +63,13 @@ def main(pedidos=None):
         fuera = E.DESBORDES.get(nombre) or []
         if fuera:
             problemas.append((nombre, "texto fuera del lienzo", fuera))
+        sin_tilde = E.SIN_ACENTO.get(nombre) or []
+        if sin_tilde:
+            problemas.append((nombre, "palabras sin tilde", sin_tilde))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
-                 "FALLA" if (sucios or fuera) else "OK"))
+                 "FALLA" if (sucios or fuera or sin_tilde) else "OK"))
     return hechos, problemas
 
 
@@ -92,5 +96,5 @@ if __name__ == "__main__":
             for d in detalle[:6]:
                 print("      %s" % d)
         sys.exit(1)
-    print("los %d gráficos usan sólo la paleta y ningún carácter queda fuera "
-          "del lienzo" % len(hechos))
+    print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo "
+          "y ninguna palabra sin tilde" % len(hechos))

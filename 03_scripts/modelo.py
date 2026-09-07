@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Modelo de flujo de caja del Municipio de San Isidro, 2026-2037.
 

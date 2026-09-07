@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Extraccion posicional de tablas de los PDF de transparencia de San Isidro.
 

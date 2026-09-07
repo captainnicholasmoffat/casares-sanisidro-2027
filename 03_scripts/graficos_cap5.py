@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Capitulo 5 - Sectorial. Exhibits 17, 18 y 20. El 19 no se genera."""
 
 import os
@@ -42,8 +43,8 @@ def ex17():
                     color=E.BARRANCA if destacáda else E.TINTA,
                     weight="bold" if destacáda else "normal")
     ax.set_yticks(list(y))
-    ax.set_yticklabels([E.etiqueta_corta(n, 24) for n, _ in filas],
-                       fontsize=6.2, linespacing=1.15)
+    ax.set_yticklabels([E.envolver(E.nombre_funcion(n), 6.2, 1.15)
+                        for n, _ in filas], fontsize=6.2, linespacing=1.15)
     ax.xaxis.set_major_formatter(E.eje_numero())
     ax.set_xlim(0, max(v for _, v in filas) / 1e6 * 1.42)
     ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)

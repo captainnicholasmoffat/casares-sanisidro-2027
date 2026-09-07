@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Verifica el contenido de 01_raw/ contra 01_raw/INVENTARIO.txt.
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Censo 2022 por radio censal, partido de San Isidro.
 

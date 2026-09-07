@@ -164,7 +164,7 @@ Ya no queda ningún año derivado sin contrastar contra una fuente
 independiente.
 
 **Los años que no cierran no se derivan**: para ellos se usa el valor
-publicado directo, que existe. La identidad sólo habilita la
+publicado directo, que existe. La identidad solo habilita la
 derivación en los años donde no hay apertura por carácter, que son
 los que aparecen como `derivado` en la serie.
 

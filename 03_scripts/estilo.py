@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 El sistema visual del programa de gobierno. Lo importan todos los scripts de
 graficos y NADIE define un color a mano.
@@ -229,6 +230,7 @@ def guardar(fig, nombre, ajuste=None):
     if ajuste:
         fig.subplots_adjust(**ajuste)
     DESBORDES[nombre] = verificar_desborde(fig)
+    SIN_ACENTO[nombre] = verificar_acentos(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -239,6 +241,59 @@ def guardar(fig, nombre, ajuste=None):
 
 
 DESBORDES = {}
+SIN_ACENTO = {}
+
+# Palabras que en un documento en español SIEMPRE llevan tilde. Si alguna
+# aparece sin tilde en un texto que se dibuja, el grafico no se publica.
+# La clave es la forma incorrecta; el valor, la correcta.
+ACENTOS_OBLIGATORIOS = {
+    "anios": "años", "anio": "año", "mas": "más", "maximo": "máximo",
+    "minimo": "mínimo", "elaboracion": "elaboración",
+    "ejecucion": "ejecución", "rendicion": "rendición",
+    "poblacion": "población", "Martinez": "Martínez", "basicas": "básicas",
+    "unico": "único", "unica": "única", "limites": "límites",
+    "funcion": "función", "gestion": "gestión", "publico": "público",
+    "publica": "pública", "periodo": "período", "segun": "según",
+    "analisis": "análisis", "dia": "día", "asi": "así", "aqui": "aquí",
+    "despues": "después", "ademas": "además", "regimen": "régimen",
+    "indice": "índice", "numero": "número", "fraccion": "fracción",
+    "participacion": "participación", "percepcion": "percepción",
+    "reasignacion": "reasignación", "coparticipacion": "coparticipación",
+    "situacion": "situación", "economico": "económico",
+    "proporcion": "proporción", "variacion": "variación",
+    "composicion": "composición", "ecologia": "ecología",
+    "critico": "crítico", "geometria": "geometría", "vacios": "vacíos",
+    "Lopez": "López", "tamano": "tamaño", "senala": "señala",
+}
+
+
+def verificar_acentos(fig):
+    """
+    Recorre el texto que la figura va a DIBUJAR y falla si encuentra una
+    palabra que en español lleva tilde escrita sin ella.
+
+    Se mira lo que se dibuja y no el codigo fuente: un nombre de variable sin
+    acento no importa porque no se ve, y un dato que viene del CSV tampoco es
+    culpa nuestra. Lo que no puede pasar es que un titulo diga "poblacion".
+
+    Los textos enteramente en mayusculas se saltean: son valores de datos que
+    vienen asi de la fuente (SAN ISIDRO, ECOLOGIA Y MEDIO AMBIENTE) y
+    corregirlos seria alterar el dato.
+    """
+    import unicodedata
+    fallas = []
+    for t in fig.findobj(matplotlib.text.Text):
+        if not t.get_visible():
+            continue
+        texto = (t.get_text() or "").strip()
+        if not texto or texto.isupper():
+            continue
+        for mala, buena in ACENTOS_OBLIGATORIOS.items():
+            if re.search(r"(?<![A-Za-zÁÉÍÓÚÑáéíóúñ])%s(?![A-Za-zÁÉÍÓÚÑáéíóúñ])"
+                         % re.escape(mala), texto):
+                fallas.append("%r dice %r y va %r"
+                              % (texto.replace("\n", " ")[:52], mala, buena))
+    return sorted(set(fallas))
 
 
 def verificar_desborde(fig, tolerancia_px=1.0):
@@ -389,6 +444,44 @@ NOMBRE_ZONA = {
 
 def zona_bonita(nombre):
     return NOMBRE_ZONA.get(nombre, nombre)
+
+
+# Los nombres de funcion vienen en mayusculas y sin tildes del PDF del
+# Municipio, y uno llega truncado por la propia fuente. El dato NO se toca: se
+# muestran con esta tabla, igual que los nombres de zona. Lo que la fuente
+# escribe mal no se corrige en el CSV, se corrige al mostrarlo y queda dicho.
+NOMBRE_FUNCION = {
+    "A CLASIFICAR": "A clasificar",
+    "ADMINISTRACION FISCAL": "Administración fiscal",
+    "AGRICULTURA": "Agricultura",
+    "AGUA POTABLE Y ALCANTARILLADO": "Agua potable y alcantarillado",
+    "CIENCIA Y TECNICA": "Ciencia y técnica",
+    "COMERCIO, TURISMO Y OTROS SERVICIOS": "Comercio, turismo y otros servicios",
+    "COMUNICACIONES": "Comunicaciones",
+    "CONTROL DE LA GESTION PUBLICA": "Control de la gestión pública",
+    "DIRECCION SUPERIOR EJECUTIVA": "Dirección superior ejecutiva",
+    "ECOLOGIA Y MEDIO AMBIENTE": "Ecología y medio ambiente",
+    "EDUCACION Y CULTURAL": "Educación y cultura",
+    "JUDICIAL": "Judicial",
+    "LEGISLATIVA": "Legislativa",
+    "PROMOCION Y ASISTENCIA SOCIAL": "Promoción y asistencia social",
+    "RELACIONES CON LA COMUNIDAD": "Relaciones con la comunidad",
+    "RELACIONES INTERIORES": "Relaciones interiores",
+    "SALUD": "Salud",
+    "SEGURIDAD INTERNA": "Seguridad interna",
+    "SERVICIOS DE LA DEUDA PUBLICA (INTERESES Y GAST":
+        "Servicios de la deuda pública",
+    "TRABAJO": "Trabajo",
+    "TRANSPORTE": "Transporte",
+    "URBANISMO": "Urbanismo",
+    "VIVIENDA": "Vivienda",
+    "VIVIENDA Y URBANISMO": "Vivienda y urbanismo",
+}
+
+
+def nombre_funcion(clave):
+    """El nombre de la funcion listo para mostrar. El dato queda intacto."""
+    return NOMBRE_FUNCION.get(clave.strip().upper(), etiqueta_corta(clave))
 
 
 ORDEN_ZONAS = None

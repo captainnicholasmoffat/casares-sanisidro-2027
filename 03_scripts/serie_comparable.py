@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Serie de gasto total comparable: un solo concepto en todos los anios.
 
@@ -577,7 +578,7 @@ def escribir_comparaciones(pares_a, pares_b, con_dato, por_concepto, checks):
     malos = [c for c in checks if c["cierra"] != "si"]
     if malos:
         w("**Los años que no cierran no se derivan**: para ellos se usa el valor")
-        w("publicado directo, que existe. La identidad sólo habilita la")
+        w("publicado directo, que existe. La identidad solo habilita la")
         w("derivación en los años donde no hay apertura por carácter, que son")
         w("los que aparecen como `derivado` en la serie.\n")
     w("---\n")

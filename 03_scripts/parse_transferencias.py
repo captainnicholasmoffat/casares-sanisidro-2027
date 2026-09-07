@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Transferencias de la Provincia de Buenos Aires al Municipio de San Isidro.
 

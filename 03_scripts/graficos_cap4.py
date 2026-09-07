@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Capitulo 4 - El mecanismo. Exhibits 13 a 16, incluidos los dos mapas."""
 
 import csv

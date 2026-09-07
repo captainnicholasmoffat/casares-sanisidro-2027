@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Capitulo 3 - La plata. Exhibits 08 a 12."""
 
 import os

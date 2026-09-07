@@ -91,10 +91,22 @@ de `guardar()`, así que no hay forma de publicar un gráfico con el título
 cortado. `titular()` y `pie()` además envuelven el texto midiendo el ancho real
 de la figura, no asumiéndolo.
 
-**Acentos.** Todo el texto va en español correcto: años, más, máximo, mínimo,
-ejecución, población, Martínez, básicas, límites. Los nombres de zona en los CSV
-están sin acento porque son claves de datos; para mostrarlos se usa
-`estilo.zona_bonita()`, que mapea `Martinez` a `Martínez` sin tocar el dato.
+**Acentos.** `estilo.verificar_acentos()` recorre el texto que la figura va a
+**dibujar** y falla si encuentra una de 37 palabras que en español llevan tilde
+escrita sin ella. Se mira lo que se dibuja y no el código fuente: un nombre de
+variable sin acento no importa porque no se ve.
+
+Encontró seis casos que una revisión del código no alcanzaba: tres armados con
+`%` dentro de un `annotate()`, y tres que venían sin tilde **del propio CSV del
+Municipio**.
+
+Los datos nunca se tocan. Lo que la fuente escribe sin tilde se corrige **al
+mostrarlo**, con dos tablas de nombres: `estilo.zona_bonita()` para las zonas
+(`Martinez` → `Martínez`) y `estilo.nombre_funcion()` para las funciones
+(`CONTROL DE LA GESTION PUBLICA` → `Control de la gestión pública`). Cambiar el
+CSV rompería las claves y además falsearía la fuente.
+
+Cada script lleva `# -*- coding: utf-8 -*-`.
 
 **Números a la castellana** con `numero()`, `pct()` y `millones()`: miles
 con punto y decimales con coma. 324.304 y 89,32%. Nunca a mano.

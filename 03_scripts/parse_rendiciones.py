@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Rendiciones de cuentas de San Isidro: la serie de ejecucion real.
 

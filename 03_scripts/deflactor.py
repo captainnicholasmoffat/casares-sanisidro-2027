@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Deflactor de precios para las series fiscales de San Isidro.
 

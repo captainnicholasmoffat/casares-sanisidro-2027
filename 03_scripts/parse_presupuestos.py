@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Serie presupuestaria historica de San Isidro, 2010-2026.
 

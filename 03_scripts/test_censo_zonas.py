@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Tests del censo por radio y de la agrupacion en zonas.
 

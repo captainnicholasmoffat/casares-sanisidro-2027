@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Capitulo 2 - La gestión. Exhibits 06 y 07."""
 
 import os
@@ -106,8 +107,8 @@ def ex07():
                     textcoords="offset points", ha=ha, va="center",
                     fontsize=6.6, color=colores[i], weight="bold")
     ax.set_yticks(list(y))
-    ax.set_yticklabels([E.etiqueta_corta(n, 24) for n, _ in filas],
-                       fontsize=6.2, linespacing=1.15)
+    ax.set_yticklabels([E.envolver(E.nombre_funcion(n), 6.2, 1.15)
+                        for n, _ in filas], fontsize=6.2, linespacing=1.15)
     ax.xaxis.set_major_formatter(E.eje_pct())
     lim = max(abs(v) for _, v in filas) * 1.55
     ax.set_xlim(-lim, lim)
