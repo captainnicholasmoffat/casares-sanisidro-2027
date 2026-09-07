@@ -45,6 +45,18 @@ SHARE_COPARTICIPABLE = Decimal("0.824")
 OBJETIVO_MIN = Decimal("0.02")
 OBJETIVO_MEDIO = Decimal("0.025")
 OBJETIVO_MAX = Decimal("0.03")
+
+# Meta de percepcion del escenario que se financia cobrando mejor. En 2025 la
+# percepcion fue 89,32%: subirla a 92% son menos de tres puntos y ya cubre el
+# programa entero. No requiere subir ninguna alicuota, solo cobrar lo que ya
+# se factura.
+PERCEPCION_OBJETIVO = Decimal("92")
+
+# Capitulo 4: las comisiones vecinales manejan el 50% de la obra publica en el
+# anio 4. Sobre los bienes de uso devengados de 2025 son 28.908 millones. Es
+# REASIGNACION DENTRO de bienes de uso, no gasto nuevo: no cambia ninguna linea
+# del flujo de caja, cambia quien decide en que se gasta.
+SHARE_OBRA_VECINAL = Decimal("0.50")
 ANIOS_RAMPA = 4
 
 # Amortizacion del stock existente. El formulario de deuda publica el
@@ -128,6 +140,15 @@ def baseline():
             if r["anio"] == str(ANIO_BASE) and r["bloque"] == "gastos_por_programa"}
     b["gasto_empleo"] = prog.get("APOYO Y PROMOCION AL EMPLEO", D0)
     b["gasto_vivienda"] = prog.get("INFRAESTRUCTURA HABITACIONAL", D0)
+
+    # Capitulo 4: obra publica manejada por las comisiones vecinales.
+    obra = D0
+    for r in _leer("data/ejecucion_gastos_objeto.csv"):
+        if (int(r["anio"]) == ANIO_BASE and r["periodo_tipo"] == "acumulado_anual"
+                and r["objeto_codigo"] == "4" and r["devengado"]):
+            obra = Decimal(r["devengado"])
+    b["obra_publica_total"] = obra
+    b["obra_publica_vecinal_anio4"] = _q(obra * SHARE_OBRA_VECINAL)
     return b
 
 
@@ -142,6 +163,15 @@ def deuda_inicial():
         if r["codigo"] == "1" and r["amortiz_ej1"]:
             amort += Decimal(r["amortiz_ej1"])
     return {"stock": stock, "amortizacion_ej1": amort}
+
+
+# De donde sale cada linea de la base. No todo viene del mismo lado y decir
+# "SEF" en una fila que sale de la ejecucion por objeto seria mentir en la
+# columna que existe justamente para que se pueda ir a buscar el numero.
+FUENTE_SEF = "SEF 2025 anual, cuenta Ahorro-Inversion"
+FUENTE_DEUDA = "formulario Ley 12.462, 2025 IV"
+FUENTE_PROGRAMA = "SEF 2025 anual, gastos por programa"
+FUENTE_OBJETO = "data/ejecucion_gastos_objeto.csv, 2025 acumulado anual"
 
 
 def escribir_baseline(b):
@@ -165,7 +195,18 @@ def escribir_baseline(b):
         ("deuda", "amortizacion_prox_ejercicio", "Amortizacion del ejercicio 1"),
         ("programa", "gasto_empleo", "Apoyo y promocion al empleo"),
         ("programa", "gasto_vivienda", "Infraestructura habitacional"),
+        ("programa", "obra_publica_total", "Bienes de uso (obra publica)"),
+        ("programa", "obra_publica_vecinal_anio4",
+         "  de la cual, a comisiones vecinales en el anio 4 (50%)"),
     ]
+    FUENTE_DE = {c: FUENTE_SEF for _, c, _ in orden}
+    FUENTE_DE["stock_deuda"] = FUENTE_DEUDA
+    FUENTE_DE["amortizacion_prox_ejercicio"] = FUENTE_DEUDA
+    FUENTE_DE["gasto_empleo"] = FUENTE_PROGRAMA
+    FUENTE_DE["gasto_vivienda"] = FUENTE_PROGRAMA
+    FUENTE_DE["obra_publica_total"] = FUENTE_OBJETO
+    FUENTE_DE["obra_publica_vecinal_anio4"] = FUENTE_OBJETO + " x 50%"
+
     with open(ruta, "w", encoding="utf-8", newline="") as f:
         f.write("# Linea de base del modelo: la EJECUCION REAL de 2025, no una\n")
         f.write("# estimacion. Pesos constantes de diciembre de 2025, que para\n")
@@ -179,8 +220,7 @@ def escribir_baseline(b):
             v = b[clave]
             w.writerow([bloque, clave, etiqueta, _q(v),
                         _q(100 * v / b["gastos_totales"], 4),
-                        "SEF 2025 anual" if bloque != "deuda"
-                        else "formulario Ley 12.462, 2025 IV"])
+                        FUENTE_DE[clave]])
     return ruta
 
 
@@ -214,7 +254,7 @@ class Escenario:
     def __init__(self, nombre, g_propios, d_copa, percepcion_objetivo=None,
                  g_gasto_corriente=Decimal("0"), g_gasto_capital=Decimal("0"),
                  objetivo_programa=None, anios_rampa=ANIOS_RAMPA,
-                 descripcion=""):
+                 financiamiento="reasignacion", descripcion=""):
         self.nombre = nombre
         self.g_propios = g_propios
         self.d_copa = d_copa
@@ -223,6 +263,12 @@ class Escenario:
         self.g_gasto_capital = g_gasto_capital
         self.objetivo_programa = objetivo_programa
         self.anios_rampa = anios_rampa
+        # Como se paga el programa:
+        #   reasignacion  sale del gasto flexible. El gasto TOTAL no cambia, y
+        #                 por eso el resultado financiero es igual al del base.
+        #   percepcion    se paga cobrando mejor. El gasto total SI sube, pero
+        #                 los ingresos suben mas, asi que el resultado mejora.
+        self.financiamiento = financiamiento
         self.descripcion = descripcion
 
 
@@ -283,12 +329,21 @@ def proyectar(b, esc, hasta=FIN_LARGO):
             objetivo = (g_ctes + g_cap) * esc.objetivo_programa
             prog = prog_base + (objetivo - prog_base) * paso
             reasignacion = prog - prog_base
-            # Se financia REASIGNANDO desde el gasto flexible, asi que el gasto
-            # total no se toca: lo que cambia es su composicion. Por eso el
-            # resultado financiero del escenario reformista es el mismo que el
-            # del base. Las otras dos formas de financiarlo (cobrar mejor y
-            # endeudarse) estan cuantificadas aparte, en
-            # data/financiamiento_opciones.csv.
+            if esc.financiamiento == "reasignacion":
+                # Sale del gasto flexible: el gasto TOTAL no se toca, lo que
+                # cambia es su composicion. Por eso este escenario da el mismo
+                # resultado financiero que el base.
+                pass
+            else:
+                # Se paga cobrando mejor: el gasto total SUBE. Los ingresos
+                # suben mas, por la mejora de percepcion ya aplicada arriba.
+                # Empleo es gasto corriente y vivienda es gasto de capital, asi
+                # que el incremento se reparte con la misma proporcion que
+                # tienen hoy las dos partidas.
+                parte_corriente = (b["gasto_empleo"] / prog_base
+                                   if prog_base else Decimal("0.5"))
+                g_ctes += reasignacion * parte_corriente
+                g_cap += reasignacion * (1 - parte_corriente)
 
         g_totales = g_ctes + g_cap
         resultado = ing_totales - g_totales
@@ -338,9 +393,19 @@ def escenarios(par):
                   descripcion="recursos propios crecen 2 puntos menos y la "
                               "coparticipacion cae 3,5% anual en vez de 2,2%"),
         Escenario("reformista", g, d, objetivo_programa=OBJETIVO_MEDIO,
+                  financiamiento="reasignacion",
                   descripcion="base mas el programa de empleo y vivienda "
                               "llevado al 2,5% del gasto en 4 anios, "
-                              "financiado por reasignacion"),
+                              "financiado por reasignacion dentro del gasto "
+                              "flexible"),
+        Escenario("reformista_percepcion", g, d,
+                  objetivo_programa=OBJETIVO_MEDIO,
+                  percepcion_objetivo=PERCEPCION_OBJETIVO / 100,
+                  financiamiento="percepcion",
+                  descripcion="el mismo programa, pero pagado cobrando mejor: "
+                              "la percepcion de recursos corrientes sube de "
+                              "89,32%% a %s%% en 4 anios. No se le saca plata "
+                              "a ninguna partida" % PERCEPCION_OBJETIVO),
     ]
 
 
@@ -528,6 +593,17 @@ def main():
         f.write("# PESOS CONSTANTES DE DICIEMBRE DE 2025, sin supuesto de\n")
         f.write("# inflacion. El anio 2025 es la EJECUCION REAL, no una\n")
         f.write("# proyeccion. Ver data/METODOLOGIA_MODELO.md.\n")
+        f.write("#\n")
+        f.write("# NO ES UN ERROR DE COPIADO: el escenario reformista tiene el\n")
+        f.write("# MISMO resultado financiero que el base, porque se financia\n")
+        f.write("# integramente por reasignacion dentro del gasto flexible. El\n")
+        f.write("# gasto TOTAL no cambia, cambia su composicion. Difiere del base\n")
+        f.write("# solo en las columnas gasto_programa_empleo_vivienda y\n")
+        f.write("# reasignacion_necesaria.\n")
+        f.write("#\n")
+        f.write("# El escenario reformista_percepcion es el MISMO programa pagado\n")
+        f.write("# cobrando mejor (percepcion de 89,32%% a 92%% en 4 anios). Ese SI\n")
+        f.write("# mueve el resultado financiero, y hacia arriba.\n")
         w = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
         w.writeheader()
         for x in todas:

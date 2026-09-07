@@ -169,13 +169,14 @@ subir una sola tasa.
 
 ---
 
-## 3. Los tres escenarios
+## 3. Los escenarios
 
-| Escenario | Recursos propios | Coparticipación | Programa |
-|---|---|---|---|
-| **base** | +1,95% anual | −2,196% anual | no |
-| **adverso** | −0,05% anual (2 puntos menos) | −3,5% anual | no |
-| **reformista** | +1,95% anual | −2,196% anual | sí, al 2,5% del gasto en 4 años |
+| Escenario | Recursos propios | Coparticipación | Programa | Cómo se paga |
+|---|---|---|---|---|
+| **base** | +1,95% anual | −2,196% anual | no | — |
+| **adverso** | −0,05% anual (2 puntos menos) | −3,5% anual | no | — |
+| **reformista** | +1,95% anual | −2,196% anual | sí, 2,5% del gasto en 4 años | reasignación |
+| **reformista_percepcion** | +1,95% anual | −2,196% anual | sí, el mismo | cobrando mejor |
 
 Resultado financiero, en millones de pesos de diciembre de 2025:
 
@@ -184,11 +185,33 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 | base | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
 | adverso | −6.051 | −13.637 | −20.484 | −26.668 | −32.257 |
 | reformista | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
+| **reformista_percepcion** | −6.051 | **+3.177** | **+12.678** | **+22.759** | **+33.959** |
 
-El reformista da igual que el base **por construcción**: el programa se financia
-reasignando, así que el gasto total no cambia — cambia su composición.
+> **Que `reformista` dé idéntico a `base` NO es un error de copiado.** El
+> programa se financia **íntegramente por reasignación dentro del gasto
+> flexible**: el gasto **total** no cambia, cambia su composición. Por eso las
+> dos filas coinciden en todas las columnas de resultado, y difieren sólo en
+> `gasto_programa_empleo_vivienda` y `reasignacion_necesaria`. La advertencia
+> está también arriba del propio CSV, porque el archivo viaja solo.
 
----
+**`reformista_percepcion` es el mismo programa pagado de otra manera**: la
+percepción de recursos corrientes sube de 89,32% a 92% en cuatro años. Ahí el
+gasto total **sí** sube (309.236 → 316.461 millones), pero los ingresos suben más,
+y el resultado financiero queda **por encima del escenario base**: +12.678 contra
++10.375 millones en 2031. No se le saca plata a ninguna partida: se cobra lo que
+ya se facturó.
+
+### Cuál conviene, en una línea
+
+| | Reasignación | Cobrando mejor |
+|---|---|---|
+| Resultado financiero | igual que el base | **mejor que el base** |
+| A quién le saca plata | a otras partidas del gasto flexible | a nadie |
+| Qué requiere | decidir qué se recorta | mejorar la cobranza 2,7 puntos |
+| Riesgo | conflicto por cada partida tocada | que la cobranza no mejore |
+
+Las dos están modeladas para que la elección se haga con números y no con
+intuición. El modelo no elige.
 
 ## 4. El programa: empleo y vivienda
 
@@ -225,6 +248,28 @@ En régimen (2029 en adelante), para el objetivo del 2,5%:
 La opción (i) sale del gasto flexible: bienes de consumo, bienes de uso,
 transferencias. Cuáles exactamente es una decisión política, y el detalle por
 finalidad y función está en `data/gastos_finalidad_funcion.csv`.
+
+### La obra pública de las comisiones vecinales (capítulo 4)
+
+El capítulo 4 propone que las comisiones vecinales manejen el **50% de la obra
+pública en el año 4**. Sobre la ejecución 2025:
+
+| | Millones | % del gasto |
+|---|---:|---:|
+| Bienes de uso (obra pública), devengado 2025 | 57.816 | 18,70% |
+| **50% a comisiones vecinales en el año 4** | **28.908** | **9,35%** |
+
+**Esto es reasignación DENTRO de bienes de uso, no gasto nuevo.** No cambia
+ninguna línea del flujo de caja: no mueve el resultado financiero, ni el ahorro
+corriente, ni el stock de deuda. Lo que cambia es **quién decide** en qué se
+gasta esa plata, no cuánta plata hay. Está en `data/baseline_2025.csv` como
+`obra_publica_vecinal_anio4` para que el modelo lo tenga explícito y se pueda
+decir que está contemplado y cuantificado.
+
+Ojo con una interacción: los 28.908 millones de obra vecinal y los 7.225
+millones del programa de empleo y vivienda **salen los dos del mismo bolsillo**
+—el gasto flexible de 87.326 millones—. Juntos son el **41,4%** de ese margen.
+Caben, pero no dejan lugar para una tercera reasignación del mismo tamaño.
 
 La opción (ii) sola alcanza y sobra: subir la cobranza tres puntos —de 89,3% a
 92,3%— ya cubre el programa entero. Es la más barata políticamente y la que no

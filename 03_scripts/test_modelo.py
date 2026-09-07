@@ -212,14 +212,14 @@ def main():
     filas = _leer("data/modelo_flujo_caja.csv")
     escs = sorted({f["escenario"] for f in filas})
     hitos = [2025, 2028, 2031, 2034, 2037]
-    print("  %-12s %s" % ("escenario", " ".join("%12d" % h for h in hitos)))
+    print("  %-22s %s" % ("escenario", " ".join("%12d" % h for h in hitos)))
     for esc in escs:
         vals = []
         for h in hitos:
             x = [f for f in filas if f["escenario"] == esc and int(f["anio"]) == h]
             vals.append("%12.0f" % (_d(x[0]["resultado_financiero"]) / 1_000_000)
                         if x else "%12s" % "-")
-        print("  %-12s %s" % (esc, " ".join(vals)))
+        print("  %-22s %s" % (esc, " ".join(vals)))
     print()
     if fallas:
         print("HAY %d VALIDACION(ES) EN FALLA" % fallas)

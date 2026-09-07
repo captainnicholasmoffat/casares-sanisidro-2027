@@ -51,7 +51,44 @@ no hay ningún dato en el repo sobre a qué tasa se financia el Municipio, el
 modelo corre tres tasas reales (0%, 5% y 10%) y en todas el aporte neto al
 resultado cae rápido a medida que entra el servicio de la deuda —de 7.225
 millones de crédito tomado, el efecto neto en régimen queda entre 2.529 y 723
-millones según la tasa—. La conclusión práctica: **la combinación de reasignación
-y mejora de cobranza financia el programa completo sin tomar un peso de deuda y
-sin subir una sola alícuota**, y deja además margen para mejorar el resultado
-financiero del ejercicio.
+millones según la tasa—.
+
+## Las dos formas de pagarlo, modeladas
+
+El modelo corre las dos y **no elige**:
+
+| | 2028 | 2031 | 2034 | 2037 |
+|---|---:|---:|---:|---:|
+| base, sin programa | +1.645 | +10.375 | +20.162 | +31.035 |
+| **reformista** (reasignación) | +1.645 | +10.375 | +20.162 | +31.035 |
+| **reformista_percepcion** (cobrando mejor) | **+3.177** | **+12.678** | **+22.759** | **+33.959** |
+
+Millones de pesos de dic-2025.
+
+Que `reformista` dé **idéntico** al base no es un error: el programa se financia
+reasignando dentro del gasto flexible, así que el gasto total no cambia — cambia
+su composición. Difiere del base sólo en las columnas
+`gasto_programa_empleo_vivienda` y `reasignacion_necesaria`.
+
+`reformista_percepcion` es el mismo programa pagado subiendo la cobranza de
+89,32% a 92% en cuatro años. Ahí el gasto total sí sube, pero los ingresos suben
+más: el resultado financiero termina **por encima del escenario base**, +12.678
+contra +10.375 millones en 2031. Es la versión políticamente más fuerte: **no le
+sacamos plata a nadie, cobramos lo que ya facturamos.**
+
+La conclusión práctica: **la combinación de reasignación y mejora de cobranza
+financia el programa completo sin tomar un peso de deuda y sin subir una sola
+alícuota**, y deja además margen para mejorar el resultado del ejercicio.
+
+## La obra pública vecinal ya está contemplada
+
+El capítulo 4 propone que las comisiones vecinales manejen el **50% de la obra
+pública en el año 4**: sobre la ejecución 2025 son **28.908 millones** de los
+57.816 de bienes de uso. **Es reasignación dentro de la obra pública, no gasto
+nuevo**: no mueve el resultado financiero ni una línea. Cambia quién decide, no
+cuánto hay. Está cuantificado en `data/baseline_2025.csv`.
+
+Un límite que conviene tener a la vista: la obra vecinal (28.908 millones) y el
+programa de empleo y vivienda (7.225 millones) **salen del mismo bolsillo**, el
+gasto flexible de 87.326 millones. Juntos se llevan el **41,4%** de ese margen.
+Caben, pero no queda lugar para una tercera reasignación del mismo tamaño.
