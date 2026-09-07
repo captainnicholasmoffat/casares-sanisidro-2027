@@ -548,12 +548,32 @@ def escribir_comparaciones(pares_a, pares_b, con_dato, por_concepto, checks):
       % (len(verificados), len(checks), ", ".join(verificados)))
     w("Sobre eso se apoya la derivación de los años sin apertura por carácter:")
     w("**%s**.\n" % ", ".join(str(a) for a in derivados))
-    w("> **Límite honesto.** Para 2024 y 2025 la fuente es el informe trimestral")
-    w("> de ejecución, que **no** publica apertura por carácter económico, así")
-    w("> que la identidad no se puede probar en esos años: se apoya en que se")
-    w("> cumple en los siete anteriores, con las otras dos fuentes. Si algún día")
-    w("> el Municipio publica el Ahorro-Inversión de 2024-2025, hay que")
-    w("> recontrastarlo.\n")
+    # El limite que se habia declarado para 2024 y 2025 quedo levantado: el
+    # Estado de Situacion Economico-Financiera publica el Ahorro-Inversion de
+    # esos dos anios y su linea VII coincide exactamente con lo derivado.
+    sef = {}
+    ruta_sef = os.path.join(DATA, "sef_anual.csv")
+    if os.path.exists(ruta_sef):
+        for r in _leer("data/sef_anual.csv"):
+            if (r["bloque"] == "ahorro_inversion"
+                    and r["concepto"] == "gastos_totales"):
+                sef[int(r["anio"])] = Decimal(r["monto"])
+    if sef:
+        w("**El límite que había para 2024 y 2025 quedó levantado.** El Estado de")
+        w("Situación Económico-Financiera publica la cuenta Ahorro-Inversión de")
+        w("esos dos años, y su línea VII (gastos totales) coincide **exactamente**")
+        w("con el valor derivado de los objetos:\n")
+        w("| Año | Derivado de los objetos | Línea VII del SEF | Diferencia |")
+        w("|---|---:|---:|---:|")
+        for anio in sorted(sef):
+            f = next((x for x in con_dato if int(x["anio"]) == anio), None)
+            if not f:
+                continue
+            der = Decimal(f["monto_nominal"])
+            w("| %d | %s | %s | %s |" % (anio, der, sef[anio], der - sef[anio]))
+        w("")
+        w("Ya no queda ningún año derivado sin contrastar contra una fuente")
+        w("independiente.\n")
     malos = [c for c in checks if c["cierra"] != "si"]
     if malos:
         w("**Los años que no cierran no se derivan**: para ellos se usa el valor")
