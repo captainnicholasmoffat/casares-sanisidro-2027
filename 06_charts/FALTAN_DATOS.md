@@ -59,27 +59,42 @@ data/medidas_transparencia.csv
 
 ---
 
-## Un tercer dato que sí se resolvió, pero conviene saber cómo
+## Un tercer dato que faltaba y ya no falta
 
 El **EXHIBIT 13** (reparto de la partida vecinal por zona) necesitaba una regla
-de reparto que **tampoco estaba en el repo**. No se inventó un número: se
-implementó una regla escrita y publicada, mitad por población y mitad por
-hogares con NBI, en `03_scripts/graficos_cap4.py` y con la salida en
-`data/reparto_vecinal_por_zona.csv`.
+de reparto que no estaba en el repo. Ya está, escrita y publicada en
+`03_scripts/graficos_cap4.py`, con la salida en
+`data/reparto_vecinal_por_zona.csv`:
 
-Esa regla reproduce **exactamente la proporción** entre Beccar y Martínez que se
-pidió etiquetar (1,891 contra 1,891), pero los niveles quedan **4,8% por debajo**:
+```
+POOL = bienes de uso devengados 2025 x 0,50 = 28.907.854.675,13
 
-| Zona | Calculado | Pedido | Diferencia |
-|---|---:|---:|---:|
-| Beccar | 130.785 | 136.996 | −4,5% |
-| Martínez | 69.097 | 72.446 | −4,6% |
+indicadores = [pct_nbi, pct_sin_cloaca, pct_sin_gas_red, pct_hacinamiento]
+para cada indicador k:  max_k = el mayor valor entre las seis zonas
+need_zona = promedio( valor_zona[k] / max_k )  sobre los cuatro
 
-Las dos diferencias son del mismo signo y casi del mismo tamaño, así que la
-regla de reparto es la misma y lo que cambia es **la base**: el monto total a
-repartir, o la población usada. El gráfico publica los números que dan los datos
-del repo. **Si la base correcta es otra, hay que decir cuál y el gráfico se
-regenera solo.**
+peso_zona = 0,5 x (poblacion_zona / 295.978)
+          + 0,5 x (need_zona / suma_need)
+monto     = POOL x peso_zona
+```
+
+**Por qué se normaliza cada indicador por su propio máximo:** sin eso, "sin gas
+de red" —que llega al 41,5%— aplastaría a "NBI" —que llega al 5,8%— y el índice
+sería en los hechos un solo indicador disfrazado de cuatro.
+
+**Por qué la población suma 295.978 y no 297.282:** son las personas en
+viviendas **particulares**. Los 1.304 restantes viven en viviendas colectivas,
+que el Censo no publica por radio y por lo tanto no se pueden asignar a ninguna
+zona.
+
+Reproduce los dos valores a etiquetar al centavo: **Beccar 136.996,14** y
+**Martínez 72.446,13**.
+
+> Antes de tener esta fórmula se había implementado una aproximación con un solo
+> indicador de necesidad (cantidad de hogares con NBI). Daba la proporción
+> correcta entre las zonas pero los niveles quedaban 4,8% abajo. Queda anotado
+> porque explica por qué un método puede ordenar bien y aun así estar mal: el
+> orden lo daba cualquiera de los dos, los niveles sólo la fórmula completa.
 
 ---
 

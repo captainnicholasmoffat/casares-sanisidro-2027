@@ -47,7 +47,7 @@ nunca transparente. **Ningún número está escrito a mano**: todos salen de
 
 | # | Título | Datos de origen | Script |
 |---|---|---|---|
-| 13 | La partida vecinal reparte casi el doble por vecino en Beccar que en Martínez | `data/reparto_vecinal_por_zona.csv` (generado), `data/baseline_2025.csv`, `data/zonas_indicadores.csv` | `graficos_cap4.py` → `ex13` |
+| 13 | La partida vecinal reparte casi el doble por vecino en Beccar que en Martínez. Regla: mitad por población, mitad por un índice de cuatro indicadores normalizados | `data/reparto_vecinal_por_zona.csv` (generado), `data/baseline_2025.csv`, `data/zonas_indicadores.csv` | `graficos_cap4.py` → `ex13` |
 | 14 | En el año 4, la mitad de la obra pública la deciden las comisiones vecinales | `data/baseline_2025.csv` | `graficos_cap4.py` → `ex14` |
 | **15** | **Las seis zonas vecinales de San Isidro** | `data/zonas_propuestas_sanisidro.geojson` | `graficos_cap4.py` → `ex15` |
 | 16 | La carencia no está repartida: está concentrada en nueve radios | `data/radios_censales_sanisidro.geojson`, `data/censo2022_sanisidro_por_radio.csv`, `data/zonas_asignacion_radios.csv` | `graficos_cap4.py` → `ex16` |

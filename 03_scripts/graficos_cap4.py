@@ -12,46 +12,90 @@ import matplotlib.pyplot as plt
 FUENTE_CENSO = ("INDEC, Censo Nacional de Poblacion, Hogares y Viviendas 2022, "
                 "procesado con Redatam 7; zonas propias sobre radios censales")
 
-# Regla de reparto de la partida vecinal. Mitad por poblacion y mitad por
-# hogares con NBI: la mitad reconoce que cada vecino cuenta igual y la otra
-# mitad que no todas las zonas arrancan del mismo lugar. Es una REGLA, no un
-# reparto negociado, y esta escrita para que cualquiera la recalcule.
+# --------------------------------------------------------------------------
+# Regla de reparto de la partida vecinal
+# --------------------------------------------------------------------------
+#
+# POOL = bienes de uso devengados en 2025 x 50%. Es la mitad de la obra publica
+# que el capitulo 4 pone a decidir a las comisiones vecinales.
+#
+# INDICE DE NECESIDAD, sobre CUATRO indicadores y no sobre uno:
+#     para cada indicador k, max_k = el mayor valor entre las seis zonas
+#     need_zona = promedio( valor_zona[k] / max_k )  sobre los cuatro
+#
+# Normalizar cada indicador por su propio maximo es lo que permite promediarlos:
+# sin eso, "sin gas de red" (que llega al 41%) aplastaria a "NBI" (que llega al
+# 5,8%) y el indice seria en los hechos un solo indicador disfrazado de cuatro.
+#
+# PESO de cada zona:
+#     w = 0,5 x (poblacion_zona / poblacion_total)
+#       + 0,5 x (need_zona / suma_need)
+#
+# La mitad por poblacion reconoce que cada vecino cuenta igual; la otra mitad,
+# que no todas las zonas arrancan del mismo lugar.
+#
+# La poblacion es la de zonas_indicadores.csv, que suma 295.978: son las
+# personas en viviendas PARTICULARES. Los 297.282 del partido incluyen 1.304 en
+# viviendas colectivas, que el Censo no publica por radio y por lo tanto no se
+# pueden asignar a ninguna zona.
+
+INDICADORES_NECESIDAD = ["pct_nbi", "pct_sin_cloaca", "pct_sin_gas_red",
+                         "pct_hacinamiento"]
 PESO_POBLACION = 0.5
-PESO_NBI = 0.5
+PESO_NECESIDAD = 0.5
+
+
+def indice_de_necesidad(zonas):
+    """Promedio de los cuatro indicadores, cada uno sobre su propio maximo."""
+    maximos = {k: max(float(z[k]) for z in zonas) for k in INDICADORES_NECESIDAD}
+    return {z["zona"]: sum(float(z[k]) / maximos[k]
+                           for k in INDICADORES_NECESIDAD) / len(INDICADORES_NECESIDAD)
+            for z in zonas}, maximos
 
 
 def reparto_vecinal():
     zonas = E.zonas_ordenadas()
     total = float([r["monto"] for r in E.leer("data/baseline_2025.csv")
                    if r["clave"] == "obra_publica_vecinal_anio4"][0])
+    need, maximos = indice_de_necesidad(zonas)
     pob = {z["zona"]: int(z["poblacion"]) for z in zonas}
-    nbi = {z["zona"]: int(z["hogares"]) * float(z["pct_nbi"]) / 100 for z in zonas}
-    sp, sn = sum(pob.values()), sum(nbi.values())
+    sp, sn = sum(pob.values()), sum(need.values())
+
     filas = []
     for z in zonas:
         n = z["zona"]
-        parte = PESO_POBLACION * pob[n] / sp + PESO_NBI * nbi[n] / sn
-        monto = total * parte
+        w = PESO_POBLACION * pob[n] / sp + PESO_NECESIDAD * need[n] / sn
+        monto = total * w
         filas.append({"zona": n, "poblacion": pob[n],
-                      "hogares_con_nbi": round(nbi[n]),
-                      "participacion": parte, "monto": monto,
+                      "indice_necesidad": need[n], "peso": w, "monto": monto,
                       "pesos_por_habitante": monto / pob[n]})
     filas.sort(key=lambda f: -f["pesos_por_habitante"])
+
     ruta = os.path.join(E.DATA, "reparto_vecinal_por_zona.csv")
     with open(ruta, "w", encoding="utf-8", newline="") as f:
-        f.write("# Reparto de la partida vecinal (50%% de la obra publica del\n")
-        f.write("# anio 4) entre las seis zonas. Regla: %d%% por poblacion y\n"
-                % (PESO_POBLACION * 100))
-        f.write("# %d%% por hogares con NBI. Pesos de diciembre de 2025.\n"
-                % (PESO_NBI * 100))
-        w = csv.writer(f)
-        w.writerow(["zona", "poblacion", "hogares_con_nbi", "participacion_pct",
-                    "monto", "pesos_por_habitante", "fuente"])
+        f.write("# Reparto de la partida vecinal: el 50%% de la obra publica del\n")
+        f.write("# anio 4, o sea %s pesos de diciembre de 2025.\n"
+                % E.numero(total, 2))
+        f.write("# Peso = %d%% por poblacion + %d%% por indice de necesidad.\n"
+                % (PESO_POBLACION * 100, PESO_NECESIDAD * 100))
+        f.write("# El indice promedia %d indicadores, cada uno dividido por su\n"
+                % len(INDICADORES_NECESIDAD))
+        f.write("# maximo entre las seis zonas: %s.\n"
+                % ", ".join(INDICADORES_NECESIDAD))
+        f.write("# Poblacion en viviendas particulares, %s personas.\n"
+                % E.numero(sp))
+        w_csv = csv.writer(f)
+        w_csv.writerow(["zona", "poblacion"]
+                       + ["max_" + k for k in INDICADORES_NECESIDAD]
+                       + ["indice_necesidad", "peso_pct", "monto",
+                          "pesos_por_habitante", "fuente"])
         for x in filas:
-            w.writerow([x["zona"], x["poblacion"], x["hogares_con_nbi"],
-                        round(100 * x["participacion"], 4), round(x["monto"], 2),
-                        round(x["pesos_por_habitante"], 2),
-                        "data/baseline_2025.csv y data/zonas_indicadores.csv"])
+            w_csv.writerow([x["zona"], x["poblacion"]]
+                           + [round(maximos[k], 4) for k in INDICADORES_NECESIDAD]
+                           + [round(x["indice_necesidad"], 6),
+                              round(100 * x["peso"], 4), round(x["monto"], 2),
+                              round(x["pesos_por_habitante"], 2),
+                              "data/baseline_2025.csv y data/zonas_indicadores.csv"])
     return filas, total
 
 
@@ -77,8 +121,9 @@ def ex13():
     E.limpiar(ax)
     E.titular(fig, "EXHIBIT 13",
               "La partida vecinal reparte casi el doble por vecino en Beccar que en Martinez",
-              "Reparto de los %s millones del anio 4. Regla: mitad por "
-              "poblacion, mitad por hogares con NBI." % E.numero(total / 1e6))
+              "Reparto de los %s millones del anio 4. Mitad por poblacion y "
+              "mitad por un indice que promedia NBI, cloacas, gas de red y "
+              "hacinamiento." % E.numero(total / 1e6))
     E.pie(fig, "data/reparto_vecinal_por_zona.csv, calculado de "
                "data/baseline_2025.csv y data/zonas_indicadores.csv")
     return E.guardar(fig, "EXHIBIT_13_reparto_vecinal",
