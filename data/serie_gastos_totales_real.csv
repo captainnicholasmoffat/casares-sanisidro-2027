@@ -1,4 +1,22 @@
-anio,concepto,monto_nominal,coef_deflactor,monto_constante_dic2025,var_real_pct,brecha_anios,filas_sumadas,prioridad_fuente,dataset,fuente
+# ADVERTENCIA. Esta serie MEZCLA CONCEPTOS DE GASTO distintos segun el anio,
+# porque cada fuente publica el suyo. La columna concepto_heterogeneo dice cual
+# es el de cada fila.
+#
+# LAS VARIACIONES INTERANUALES QUE CRUZAN UN CAMBIO DE CONCEPTO NO SON
+# COMPARACIONES LIMPIAS. Comparar un anio de "gastos con imputacion al
+# presupuesto" contra uno de "devengado por objeto" es comparar cosas que no
+# miden lo mismo.
+#
+# Ademas el "total de gastos" de las rendiciones cambia de contenido a mitad de
+# camino: en 2010-2012 INCLUYE las aplicaciones financieras y en 2019-2021 NO
+# las incluye.
+#
+# Para comparar entre anios usar data/serie_gastos_comparable.csv, que tiene un
+# solo concepto. Los pares que si se pueden comparar dentro de ESTA serie estan
+# en data/COMPARACIONES_VALIDAS.md.
+#
+# Este archivo queda como material de trabajo, no para publicar.
+anio,concepto_heterogeneo,monto_nominal,coef_deflactor,monto_constante_dic2025,var_real_pct,brecha_anios,filas_sumadas,prioridad_fuente,dataset,fuente
 2010,Total de gastos de la rendicion de cuentas,625205910.74,536.79822939,335609425889.39,,,1,2,data/rendiciones_2010_2021.csv,rendicion2010.pdf
 2011,Total de gastos de la rendicion de cuentas,796736310.85,433.37416669,345284934786.28,2.88,1,1,2,data/rendiciones_2010_2021.csv,rendicionctas20111.pdf
 2012,Total de gastos de la rendicion de cuentas,972801913.59,350.37108754,340841664425.52,-1.29,1,1,2,data/rendiciones_2010_2021.csv,rendicionctas-2012_02.pdf
