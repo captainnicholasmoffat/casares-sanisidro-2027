@@ -285,7 +285,33 @@ def identidades(caracter, objetos):
     return filas
 
 
+def verificar_orden_de_corrida():
+    """
+    Guardia de orden. serie_comparable lee los importes CONSTANTES que deja el
+    deflactor. Si alguien corre el parser despues del deflactor, los CSV vuelven
+    a quedar solo con la columna nominal y aca hay que decir por que, no
+    reventar con un TypeError diez llamadas mas abajo.
+    """
+    faltan = []
+    for ruta, col in ((RENDICIONES, "monto_constante_dic2025"),
+                      (DATOS_SI, "monto_constante_dic2025"),
+                      (EJECUCION, "monto_constante_dic2025")):
+        if not os.path.exists(os.path.join(REPO, ruta)):
+            continue
+        filas = _leer(ruta)
+        if filas and col not in filas[0]:
+            faltan.append(ruta)
+    if faltan:
+        raise ErrorDeSerie(
+            "Estos datasets no tienen los importes constantes:\n"
+            + "\n".join("    " + r for r in faltan)
+            + "\n  Pasa cuando se corre test_parser.py despues del deflactor:"
+              "\n  el parser reescribe los CSV desde los PDF y se lleva puestas"
+              "\n  las columnas. Correr:  python3 03_scripts/deflactor.py")
+
+
 def serie_comparable():
+    verificar_orden_de_corrida()
     caracter = por_caracter_rendiciones()
     for anio, v in por_caracter_datos_si().items():
         caracter.setdefault(anio, {}).update(v)

@@ -171,6 +171,12 @@ def test_pares_mismo_concepto():
 
 
 def main():
+    try:
+        S.verificar_orden_de_corrida()
+    except S.ErrorDeSerie as e:
+        print("ORDEN DE CORRIDA INCORRECTO\n  %s" % e)
+        return 1
+
     print("=" * 78)
     print("SERIE COMPARABLE - VALIDACIONES")
     print("=" * 78)
