@@ -139,6 +139,22 @@ Las hojas de los meses que todavía no ocurrieron vienen en los XLSX como
 plantillas vacías. Se descartan y queda anotado cuáles: sin eso, 2026 aparecería
 con 11 meses de datos casi nulos en vez de 6 reales.
 
+## Modelo de flujo de caja
+
+| Archivo | Qué contiene |
+|---|---|
+| `RESUMEN_MODELO.md` | Tres párrafos: qué pasa si no se cambia nada, qué cuesta el programa, de dónde sale la plata. **Empezar por acá.** |
+| `METODOLOGIA_MODELO.md` | Los parámetros, los supuestos y lo que el modelo NO hace. |
+| `baseline_2025.csv` | La ejecución real 2025, del estado económico-financiero oficial. |
+| `modelo_flujo_caja.csv` | Tres escenarios, 2025-2037. |
+| `financiamiento_opciones.csv` | Las tres formas de pagar el programa, sin elegir ninguna. |
+| `sensibilidad.csv` | Qué pasa al mover cada parámetro. |
+| `parametros_modelo.csv` | Los parámetros y de dónde sale cada uno. |
+| `sef_anual.csv` | Estado de Situación Económico-Financiera 2024 y 2025. |
+
+Todo en **pesos constantes de diciembre de 2025 y sin supuesto de inflación**.
+El año 2025 del modelo es la ejecución real, no una estimación.
+
 ## Orden de corrida
 
 El parser reescribe los CSV desde los PDF, así que va primero:
@@ -155,6 +171,11 @@ python3 03_scripts/test_censo_zonas.py # validaciones del censo y las zonas
 
 python3 03_scripts/serie_comparable.py      # serie de un solo concepto
 python3 03_scripts/test_serie_comparable.py # validaciones de la serie
+
+python3 03_scripts/parse_sef.py            # estado económico-financiero a CSV
+python3 03_scripts/parametros_modelo.py    # los parámetros, desde las series
+python3 03_scripts/modelo.py               # escenarios y sensibilidad
+python3 03_scripts/test_modelo.py          # validaciones del modelo
 ```
 
 `serie_comparable.py` va DESPUÉS del deflactor: lee los importes constantes que

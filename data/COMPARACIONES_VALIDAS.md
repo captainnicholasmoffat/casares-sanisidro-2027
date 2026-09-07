@@ -150,12 +150,18 @@ La identidad cierra en **6 de los 7 años** donde se puede probar (2010, 2012, 2
 Sobre eso se apoya la derivación de los años sin apertura por carácter:
 **2016, 2024, 2025**.
 
-> **Límite honesto.** Para 2024 y 2025 la fuente es el informe trimestral
-> de ejecución, que **no** publica apertura por carácter económico, así
-> que la identidad no se puede probar en esos años: se apoya en que se
-> cumple en los siete anteriores, con las otras dos fuentes. Si algún día
-> el Municipio publica el Ahorro-Inversión de 2024-2025, hay que
-> recontrastarlo.
+**El límite que había para 2024 y 2025 quedó levantado.** El Estado de
+Situación Económico-Financiera publica la cuenta Ahorro-Inversión de
+esos dos años, y su línea VII (gastos totales) coincide **exactamente**
+con el valor derivado de los objetos:
+
+| Año | Derivado de los objetos | Línea VII del SEF | Diferencia |
+|---|---:|---:|---:|
+| 2024 | 187869710599.60 | 187869710599.60 | 0.00 |
+| 2025 | 309235829980.55 | 309235829980.55 | 0.00 |
+
+Ya no queda ningún año derivado sin contrastar contra una fuente
+independiente.
 
 **Los años que no cierran no se derivan**: para ellos se usa el valor
 publicado directo, que existe. La identidad sólo habilita la
