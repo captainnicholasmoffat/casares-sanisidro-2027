@@ -567,7 +567,55 @@ def escribir_comparaciones(pares_a, pares_b, con_dato, por_concepto, checks):
     w("  La columna `brecha_anios` dice cuántos años acumula cada variación.")
     w("- **No** mezclar presupuestado con ejecutado. El presupuesto está en")
     w("  `data/presupuesto_historico_2010_2026.csv` y es otra cosa.\n")
-    w("## 6. Años sin dato\n")
+    w("## 6. Quién gobernaba: la caída no es de una sola gestión\n")
+    w("Esto no es un matiz, es la diferencia entre un dato que se sostiene y")
+    w("uno que se cae en la primera repregunta.\n")
+    w("**Mauricio Lanús asumió en diciembre de 2023.** La caída del gasto real")
+    w("empieza mucho antes.\n")
+    por_anio = {int(f["anio"]): f for f in con_dato}
+
+    def var_entre(a, b):
+        if a not in por_anio or b not in por_anio:
+            return None
+        return ((Decimal(por_anio[b]["monto_constante_dic2025"])
+                 / Decimal(por_anio[a]["monto_constante_dic2025"]) - 1) * 100
+                ).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+    tramos = [
+        (2017, 2022, "gestión anterior", "del pico al último año antes de Lanús"),
+        (2022, 2025, "gestión Lanús", "último año antes de asumir contra hoy"),
+        (2017, 2025, "las dos juntas", "el número completo"),
+    ]
+    w("| Tramo | Años | Var. real | Qué es |")
+    w("|---|---|---:|---|")
+    for a, b, quien, que in tramos:
+        v = var_entre(a, b)
+        if v is None:
+            continue
+        w("| %s | %d → %d | %s%% | %s |" % (quien, a, b, v, que))
+    w("")
+    # Solo el tramo que importa: despues del pico de 2017 y antes de que
+    # asumiera Lanus. Los anios que caen antes de 2017 no dicen nada sobre
+    # esta discusion.
+    caidas = [(f["anio"], f["var_real_pct"]) for f in con_dato
+              if f["var_real_pct"] and Decimal(f["var_real_pct"]) < 0
+              and 2017 < int(f["anio"]) < 2024]
+    w("Entre el pico de 2017 y la asunción de Lanús, los años que caen son")
+    w("%s. Los tres son de la gestión anterior.\n"
+      % ", ".join("**%s** (%s%%)" % (a, v) for a, v in caidas))
+    w("### Lo que el dato SÍ sostiene\n")
+    w("> El gasto municipal real de San Isidro viene cayendo desde 2017. La")
+    w("> gestión de Lanús no revirtió esa caída: la continuó.\n")
+    w("### Lo que el dato NO sostiene\n")
+    w("> Que la caída del %s%% entre 2017 y 2025 sea el resultado de la gestión"
+      % var_entre(2017, 2025))
+    w("> de Lanús. **No lo es.** La mayor parte es anterior a diciembre de 2023:")
+    w("> 2019, 2020 y 2021 caen con la gestión anterior.\n")
+    w("Si alguien presenta el número completo como obra de esta gestión, las")
+    w("fechas lo desmienten y el informe entero pierde credibilidad. Se cita")
+    w("con el tramo, siempre.\n")
+    w("---\n")
+    w("## 7. Años sin dato\n")
     w("No hay rendición de cuentas ni informe de ejecución anual publicado para")
     w("**2013, 2018 y 2023**. Quedan vacíos en la serie comparable. No se")
     w("interpolan ni se sustituyen por otro concepto.\n")

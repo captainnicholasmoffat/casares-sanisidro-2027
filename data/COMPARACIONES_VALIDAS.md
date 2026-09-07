@@ -241,7 +241,41 @@ Un solo año, no hay par posible.
 - **No** mezclar presupuestado con ejecutado. El presupuesto está en
   `data/presupuesto_historico_2010_2026.csv` y es otra cosa.
 
-## 6. Años sin dato
+## 6. Quién gobernaba: la caída no es de una sola gestión
+
+Esto no es un matiz, es la diferencia entre un dato que se sostiene y
+uno que se cae en la primera repregunta.
+
+**Mauricio Lanús asumió en diciembre de 2023.** La caída del gasto real
+empieza mucho antes.
+
+| Tramo | Años | Var. real | Qué es |
+|---|---|---:|---|
+| gestión anterior | 2017 → 2022 | -17.15% | del pico al último año antes de Lanús |
+| gestión Lanús | 2022 → 2025 | -8.76% | último año antes de asumir contra hoy |
+| las dos juntas | 2017 → 2025 | -24.41% | el número completo |
+
+Entre el pico de 2017 y la asunción de Lanús, los años que caen son
+**2019** (-9.08%), **2020** (-10.38%), **2021** (-1.73%). Los tres son de la gestión anterior.
+
+### Lo que el dato SÍ sostiene
+
+> El gasto municipal real de San Isidro viene cayendo desde 2017. La
+> gestión de Lanús no revirtió esa caída: la continuó.
+
+### Lo que el dato NO sostiene
+
+> Que la caída del -24.41% entre 2017 y 2025 sea el resultado de la gestión
+> de Lanús. **No lo es.** La mayor parte es anterior a diciembre de 2023:
+> 2019, 2020 y 2021 caen con la gestión anterior.
+
+Si alguien presenta el número completo como obra de esta gestión, las
+fechas lo desmienten y el informe entero pierde credibilidad. Se cita
+con el tramo, siempre.
+
+---
+
+## 7. Años sin dato
 
 No hay rendición de cuentas ni informe de ejecución anual publicado para
 **2013, 2018 y 2023**. Quedan vacíos en la serie comparable. No se
