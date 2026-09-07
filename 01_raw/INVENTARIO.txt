@@ -94,3 +94,43 @@ sanisidro_transparencia/gastos_por_finalidad_y_funcion/2026_i_gastos_por_fyf.pdf
 sanisidro_transparencia/gastos_por_finalidad_y_funcion/2026_ii_gastos_por_fyf.pdf       232030  https://www.sanisidro.gob.ar/sites/default/files/img/2026_ii_gastos_por_fyf.pdf
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 TOTAL: 89 archivos, 87.3 MB
+
+# ---------------------------------------------------------------------------
+# CENSO 2022. No lo bajo el worker de Chrome: lo bajo 03_scripts/censo_radios.py.
+# La geometria de los radios es un ZIP del catalogo de datos de la Provincia.
+# Los .html.gz son las respuestas CRUDAS del motor Redatam del INDEC, guardadas
+# tal cual las devuelve el servidor. Son respuestas a un POST, no a un GET: la
+# URL sola no las reproduce. La entidad, el universo y la variable de cada una
+# estan en la lista CONSULTAS de 03_scripts/censo_radios.py.
+# ---------------------------------------------------------------------------
+censo2022/radios-censales-2022-shp.zip                                           13524197  https://catalogo.datos.gba.gob.ar/dataset/33b080d2-e369-4076-acd4-511db0e9bffb/resource/603ce4ba-a0da-429e-ae04-119f99556207/download/radios-censales-2022-shp.zip
+censo2022/redatam/educacion_mni.html.gz                                           1477570  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_agua.html.gz                                             537468  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_agua_dist.html.gz                                        369271  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_combustible.html.gz                                      592668  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_desague.html.gz                                          523486  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_hacinamiento.html.gz                                     808426  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_ipmh.html.gz                                             569995  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_nbi.html.gz                                              335280  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/hogares_tenencia.html.gz                                         624583  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/poblacion_colectiva.html.gz                                        2451  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/poblacion_edad.html.gz                                           482275  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/poblacion_edad_quinq.html.gz                                    2314087  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/poblacion_sexo.html.gz                                           354701  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/viviendas_localidad.html.gz                                      196764  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+censo2022/redatam/viviendas_tipo.html.gz                                           598712  https://redatam.indec.gob.ar/argbin/RpWebStats.exe/Frequency
+
+# ---------------------------------------------------------------------------
+# INDICES DE PRECIOS. Bajados a mano el 2026-09-07; el detalle con md5 esta en
+# 01_raw/indec/DESCARGA.txt.
+# ---------------------------------------------------------------------------
+indec/serie_ipc_divisiones.csv                                                    1220697  https://www.indec.gob.ar/ftp/cuadros/economia/serie_ipc_divisiones.csv
+indec/indice-precios-consumidor-san-luis-2003-100.csv                               22148  https://infra.datos.gob.ar/catalog/sspm/dataset/197/distribution/197.1/download/indice-precios-consumidor-san-luis-2003-100.csv
+
+# ---------------------------------------------------------------------------
+# RAFAM 2025. Ejecucion de 106 de los 135 municipios bonaerenses. Lo aporto el
+# usuario el 2026-09-07. La fuente es La Verdadera PBA, un sitio de TERCEROS
+# que procesa datos oficiales de RAFAM: NO es la fuente oficial. Ver la
+# advertencia en 01_raw/NO_DESCARGADOS.txt antes de publicar cualquier cifra.
+# ---------------------------------------------------------------------------
+rafam_2025_106_municipios.csv                                                       18685  https://la-verdadera-pba.pages.dev

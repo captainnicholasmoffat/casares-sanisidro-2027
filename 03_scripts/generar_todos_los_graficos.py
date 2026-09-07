@@ -28,11 +28,10 @@ import graficos_cap4 as C4
 import graficos_cap5 as C5
 
 # Los exhibits que NO se generan porque el dato no existe en el repo. No se
-# inventa ninguno: quedan explicados en 06_charts/FALTAN_DATOS.md.
-SIN_DATO = {
-    "19": ("Las ocho medidas de transparencia, cumplidas contra pendientes",
-           "no existe el dataset de medidas de transparencia"),
-}
+# inventa ninguno: quedan explicados en 06_charts/FALTAN_DATOS.md. Hoy no hay
+# ninguno: los veinte estan hechos. El diccionario queda porque es donde se
+# declara un faltante el dia que aparezca.
+SIN_DATO = {}
 
 EXHIBITS = [
     ("01", 1, C1.ex01), ("02", 1, C1.ex02), ("03", 1, C1.ex03),
@@ -42,7 +41,8 @@ EXHIBITS = [
     ("11", 3, C3.ex11), ("12", 3, C3.ex12),
     ("13", 4, C4.ex13), ("14", 4, C4.ex14), ("15", 4, C4.ex15),
     ("16", 4, C4.ex16),
-    ("17", 5, C5.ex17), ("18", 5, C5.ex18), ("20", 5, C5.ex20),
+    ("17", 5, C5.ex17), ("18", 5, C5.ex18), ("19", 5, C5.ex19),
+    ("20", 5, C5.ex20),
 ]
 
 
@@ -80,12 +80,12 @@ if __name__ == "__main__":
     print("=" * 84)
     hechos, problemas = main(pedidos)
     print()
-    if not pedidos:
+    if not pedidos and SIN_DATO:
         print("no generados por falta de dato: %s" % ", ".join(sorted(SIN_DATO)))
         for n, (titulo, por) in sorted(SIN_DATO.items()):
             print("  %s  %s" % (n, por))
         print("  -> 06_charts/FALTAN_DATOS.md")
-    print()
+        print()
     print("%d graficos, %d PNG y %d SVG en 06_charts/"
           % (len(hechos), len(hechos), len(hechos)))
     if problemas:

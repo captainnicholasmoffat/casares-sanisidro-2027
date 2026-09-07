@@ -269,10 +269,14 @@ def ex05():
               "mediana bonaerense",
               "Cada punto es un municipio, ordenados por valor. Ejecución "
               "2025, gasto devengado.",
-        "data/rafam_2025_municipios.csv, sobre "
-               "01_raw/rafam_2025_106_municipios.csv",
+        "RAFAM 2025, vía La Verdadera PBA (la-verdadera-pba.pages.dev), "
+               "capturado el 3 de septiembre de 2026. "
+               "data/rafam_2025_municipios.csv",
           "Son 106 de los 135 municipios: los otros 29 no están en la "
-          "planilla. No se estimó ninguno.")
+          "planilla. No se estimó ninguno. La Verdadera PBA procesa datos de "
+          "RAFAM pero no es la fuente oficial: el dato de San Isidro está "
+          "validado contra la ejecución del propio Municipio, el de los otros "
+          "105 no.")
     return E.guardar(fig, "EXHIBIT_05_personal_y_obra_vs_provincia",
                      dict(left=0.045, right=0.985, top=top, bottom=bottom,
                           wspace=0.30))

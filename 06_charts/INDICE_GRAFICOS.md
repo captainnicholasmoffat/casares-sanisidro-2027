@@ -1,12 +1,12 @@
 # Índice de gráficos
 
-19 de los 20 exhibits pedidos. El que falta está explicado en
-`06_charts/FALTAN_DATOS.md`.
+**Los 20 exhibits pedidos.** No falta ninguno. Cómo se cerraron los tres que
+faltaban está en `06_charts/FALTAN_DATOS.md`.
 
 Todos se regeneran de cero con:
 
 ```
-python3 03_scripts/generar_todos_los_graficos.py        # los 19
+python3 03_scripts/generar_todos_los_graficos.py        # los 20
 python3 03_scripts/generar_todos_los_graficos.py 15     # uno solo
 ```
 
@@ -58,7 +58,7 @@ nunca transparente. **Ningún número está escrito a mano**: todos salen de
 |---|---|---|---|
 | 17 | Ecología y agua potable juntas no llegan al 1,5% del presupuesto | `data/gastos_finalidad_funcion.csv` | `graficos_cap5.py` → `ex17` |
 | 18 | Empleo y vivienda son 5 de cada 3.000 pesos que gasta el Municipio | `data/baseline_2025.csv` | `graficos_cap5.py` → `ex18` |
-| ~~19~~ | ~~Las ocho medidas de transparencia~~ | **falta dato** | — |
+| 19 | Las ocho medidas de transparencia: hoy no hay ninguna cumplida | `data/transparencia_medidas.csv` | `graficos_cap5.py` → `ex19` |
 | 20 | 25.166 hogares de San Isidro cocinan sin gas de red | `data/zonas_indicadores.csv` | `graficos_cap5.py` → `ex20` |
 
 ---
@@ -143,6 +143,13 @@ mostrarlo**, con dos tablas de nombres: `estilo.zona_bonita()` para las zonas
 (`Martinez` → `Martínez`) y `estilo.nombre_funcion()` para las funciones
 (`CONTROL DE LA GESTION PUBLICA` → `Control de la gestión pública`). Cambiar el
 CSV rompería las claves y además falsearía la fuente.
+
+El EXHIBIT 19 usa la misma técnica sobre un CSV que escribimos nosotros:
+`data/transparencia_medidas.csv` va en ASCII y `estilo.nombre_medida()`,
+`nombre_estado()` y `nombre_evidencia()` le ponen las tildes al dibujarlo. Si
+una clave del CSV no está en esas tablas se devuelve tal cual y el verificador
+de acentos la denuncia, así que no hay forma de que un texto sin tilde pase sin
+que alguien se entere.
 
 Cada script lleva `# -*- coding: utf-8 -*-`.
 

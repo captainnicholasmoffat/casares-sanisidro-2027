@@ -1,0 +1,30 @@
+# Las ocho medidas de transparencia del programa de gobierno.
+#
+# ESTO NO ES UN DATO PUBLICO QUE SE VAYA A BUSCAR A UN ORGANISMO: es una
+# definicion del propio programa. Las ocho medidas las escribio Nick el
+# 2026-09-07 y esta es la fuente. Ningun archivo del Municipio las contiene.
+#
+# El estado de cada una si es verificable, y se verifico contra el portal de
+# transparencia del Municipio en septiembre de 2026. La evidencia de las
+# secciones que no existen y del portal de datos caido esta en
+# 01_raw/NO_DESCARGADOS.txt, que la registro al intentar descargarlas.
+#
+# El archivo va en ASCII, sin tildes, como todos los datos del repo. Los
+# acentos se ponen al MOSTRAR, con las tablas de estilo.py. Cambiar el CSV
+# romperia las claves.
+#
+# estado_actual:
+#   no_existe          la seccion no esta publicada en ningun lado
+#   enlace_incorrecto  hay un enlace pero lleva a otra cosa
+#   caido              el sitio existe y no responde
+#   desactualizado     esta publicado pero la ultima version es vieja
+# Ninguna esta cumplida. La columna "cumplida" no tiene ni una fila.
+medida,estado_actual,fuente_verificacion
+Publicar el organigrama municipal,no_existe,portal de transparencia municipal
+Publicar la planta de personal y la escala salarial,no_existe,portal de transparencia municipal
+Publicar compras contrataciones y licitaciones,no_existe,portal de transparencia municipal
+Publicar las declaraciones juradas de funcionarios,enlace_incorrecto,el enlace lleva a declaraciones de contribuyentes
+Reponer el Portal de Datos Abiertos,caido,devuelve error 504
+Publicar la rendicion de cuentas,desactualizado,la ultima publicada es de 2022
+Publicar la Ordenanza Fiscal e Impositiva vigente,desactualizado,la ultima publicada es de 2024
+Publicar la ejecucion presupuestaria por zona,no_existe,no existe en ningun municipio del conurbano norte

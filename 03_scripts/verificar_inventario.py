@@ -40,7 +40,8 @@ REUBICACIONES = {
 
 # Archivos bajo 01_raw/ que no son datos descargados y por lo tanto no se
 # comparan contra el inventario.
-NO_DATOS = {"INVENTARIO.txt", "NO_DESCARGADOS.txt", "INDICE.md"}
+NO_DATOS = {"INVENTARIO.txt", "NO_DESCARGADOS.txt", "INDICE.md",
+            "indec/DESCARGA.txt"}
 
 # Carpetas cuyo contenido se obtuvo por fuera del worker (sin entrada en el
 # inventario). No cuentan como sobrantes.
@@ -64,6 +65,10 @@ def leer_inventario(path):
     for numero, linea in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         linea = linea.rstrip()
         if not linea or linea.startswith("-") or linea.startswith("TOTAL:"):
+            continue
+        # Lineas de comentario: el inventario ahora explica de donde salio cada
+        # bloque que no bajo el worker de Chrome.
+        if linea.lstrip().startswith("#"):
             continue
         if linea.startswith("INVENTARIO") or linea.startswith("Fecha") or linea.startswith("ARCHIVO"):
             continue
@@ -175,12 +180,20 @@ def main():
             print("  {}  ({} bytes)".format(r, reales[r]))
         print()
 
-    total_pdf = sum(1 for r in reales if r.lower().endswith(".pdf"))
-    total_xlsx = sum(1 for r in reales if r.lower().endswith(".xlsx"))
+    # Se cuenta por extension real y no solo PDF y XLSX: desde que el censo,
+    # los indices de precios y el RAFAM entraron al inventario, un recuento de
+    # dos tipos dejaba veinte archivos sin contar.
+    tipos = {}
+    for r in reales:
+        ext = r.rsplit(".", 1)[-1].lower() if "." in r else "(sin extension)"
+        if r.lower().endswith(".html.gz"):
+            ext = "html.gz"
+        tipos[ext] = tipos.get(ext, 0) + 1
     print("RECUENTO POR TIPO")
     print("-" * 78)
-    print("  PDF:  {}".format(total_pdf))
-    print("  XLSX: {}".format(total_xlsx))
+    for ext in sorted(tipos, key=lambda e: (-tipos[e], e)):
+        print("  {:<14} {}".format(ext.upper() + ":", tipos[ext]))
+    print("  {:<14} {}".format("TOTAL:", sum(tipos.values())))
     print()
 
     ok = not faltantes and not diferencias and not sobrantes and not ilegibles

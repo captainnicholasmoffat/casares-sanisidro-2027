@@ -1,10 +1,64 @@
-# Gráficos que no se hicieron, y por qué
+# Gráficos que faltaron, y cómo se cerraron
 
-Uno de los veinte exhibits pedidos **no se generó**. No se rellenó con números
-aproximados ni con una fuente distinta de la que pedía: si el dato no está, el
-gráfico no existe.
+**Ya no falta ninguno: están los veinte.** Este archivo queda como el registro
+de los tres datos que faltaron, qué se hizo para conseguirlos y qué quedó
+pendiente de validar. Ninguno se rellenó con números aproximados ni con una
+fuente distinta de la que pedía: si el dato no estaba, el gráfico no existía.
 
 Fecha: **2026-09-07**.
+
+---
+
+## EXHIBIT 05 — San Isidro contra la mediana provincial
+
+**Faltaba:** la ejecución presupuestaria de los otros 134 municipios. El repo
+tenía transferencias por municipio, que es lo que la Provincia les **manda**, no
+lo que cada municipio **gasta**.
+
+**Se cerró** con `01_raw/rafam_2025_106_municipios.csv`, que Nick capturó el
+2026-09-03 de `la-verdadera-pba.pages.dev` (106 informes municipales, parseados
+con pdfplumber).
+
+`03_scripts/parse_rafam.py` no le cree a las columnas `pct_` de la planilla:
+recalcula los dos porcentajes desde los importes devengados y **falla** si
+alguno difiere más de 0,05 puntos del declarado. Los 106 coinciden.
+
+| | San Isidro | Mediana de los 106 | Puesto |
+|---|---:|---:|---|
+| Personal sobre gasto devengado | 34,41% | 50,74% | 20 de 106 (1 = menor peso) |
+| Obra pública sobre gasto devengado | 17,83% | 5,44% | 4 de 106 (1 = mayor inversión) |
+
+Las medianas son el promedio de los dos valores centrales, que con 106 casos es
+la definición. Tomando sólo el valor 54 dan 50,85% y 5,46%. Los puestos no se
+mueven con ninguna de las dos.
+
+> **Lo que queda pendiente.** La Verdadera PBA procesa datos oficiales de RAFAM
+> pero **no es la fuente oficial**. El dato de San Isidro está validado al millón
+> contra la ejecución 2025 del propio Municipio en las siete categorías del
+> gasto por objeto. **Los otros 105 no.** Antes de imprimir, cualquier cifra de
+> esos 105 que se cite en el documento hay que validarla contra RAFAM o SIMCo.
+> La advertencia está escrita en `01_raw/NO_DESCARGADOS.txt`.
+
+---
+
+## EXHIBIT 19 — Las ocho medidas de transparencia
+
+**Faltaba:** el listado de las ocho medidas y el estado de cada una. No era un
+dato público que hubiera que ir a buscar a un organismo: es una **definición del
+propio programa de gobierno**. Las ocho medidas había que escribirlas, no
+parsearlas.
+
+**Se cerró** con `data/transparencia_medidas.csv`, escrito por Nick el
+2026-09-07. Ocho filas: medida, estado actual y contra qué se verificó.
+
+El estado de cada una **sí** es verificable, y buena parte de la evidencia ya
+estaba en el repo: `01_raw/NO_DESCARGADOS.txt` la registró en su momento, al
+intentar descargar las secciones que no existen y el portal de datos que
+devuelve 504.
+
+El CSV va en ASCII como todos los datos del repo; los acentos se ponen **al
+mostrar**, con `estilo.nombre_medida()`, `nombre_estado()` y
+`nombre_evidencia()`. Misma técnica que `nombre_funcion()` y `zona_bonita()`.
 
 > **El EXHIBIT 05 ya no falta.** Nick subió
 > `01_raw/rafam_2025_106_municipios.csv` —ejecución 2025 de 106 de los 135
@@ -12,30 +66,6 @@ Fecha: **2026-09-07**.
 > gráfico está hecho. Siguen faltando 29 municipios y el gráfico lo dice: no se
 > estimó ninguno. Lo que queda pendiente es **registrar la URL de origen de esa
 > planilla** en `01_raw/NO_DESCARGADOS.txt`; hoy figura como aportada.
-
----
-
-## EXHIBIT 19 — Las ocho medidas de transparencia
-
-**Pedido:** las ocho medidas de transparencia, cumplidas contra pendientes.
-
-**Falta:** el listado de las ocho medidas y el estado de cada una. **No existe
-ningún archivo en el repo con ese dato.**
-
-Esto no es un dato público que haya que ir a buscar a un organismo: es una
-definición del propio programa de gobierno. Las ocho medidas hay que
-**escribirlas**, no parsearlas.
-
-**Qué se necesitaría:** un CSV con una fila por medida —nombre, estado
-(cumplida / pendiente / parcial), evidencia y fecha—. Con ese archivo el gráfico
-sale en minutos y se agrega al orquestador sin tocar nada más.
-
-Sugerencia de estructura, para que quede reproducible como todo lo demás:
-
-```
-data/medidas_transparencia.csv
-  medida, descripcion, estado, evidencia, fecha_verificacion, fuente
-```
 
 ---
 

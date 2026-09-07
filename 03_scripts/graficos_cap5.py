@@ -111,6 +111,85 @@ def ex18():
                      dict(left=0.055, right=0.90, top=top, bottom=bottom))
 
 
+# Los cinco estados posibles, de peor a mejor. "cumplida" esta en la lista a
+# proposito aunque hoy no la tenga ninguna: es el estado al que hay que llegar
+# y el CSV tiene que poder decirlo el dia que pase.
+ESTADOS = ["no_existe", "enlace_incorrecto", "caido", "desactualizado",
+           "cumplida"]
+
+# Las columnas del cuerpo, en fraccion del ancho del eje. El casillero, el
+# texto de la medida y, una linea mas abajo, el estado y la evidencia.
+X_CASILLA, X_TEXTO, X_EVIDENCIA = 0.008, 0.045, 0.30
+
+
+def ex19():
+    """
+    Las ocho medidas de transparencia y el estado de cada una.
+
+    No hay cantidades que medir: hay ocho cosas y ninguna esta hecha. Va como
+    una lista con un casillero por medida, y los ocho casilleros estan vacios.
+    Ocho cuadrados sin tildar se leen antes que cualquier numero, y asi el
+    lector no tiene que creerle a la bajada: lo ve.
+
+    Las ocho salen de data/transparencia_medidas.csv. El CSV esta en ASCII,
+    igual que todos los datos del repo, y los acentos se ponen al MOSTRAR con
+    las tablas de estilo.py.
+    """
+    filas = E.leer("data/transparencia_medidas.csv")
+    orden = {e: i for i, e in enumerate(ESTADOS)}
+    filas.sort(key=lambda r: (orden[r["estado_actual"]], r["medida"]))
+    n = len(filas)
+    cumplidas = sum(1 for r in filas if r["estado_actual"] == "cumplida")
+
+    # Alto: cada medida ocupa DOS lineas de texto, la medida y su estado.
+    # Con la figura mas baja las dos lineas de una fila se tocaban.
+    fig, ax = E.figura(4.5)
+    for i, r in enumerate(filas):
+        y = n - 1 - i
+        # El casillero: un cuadrado sin rellenar. Si alguna vez una medida se
+        # cumple, el CSV lo dira y el cuadrado se pinta solo.
+        hecha = r["estado_actual"] == "cumplida"
+        ax.plot([X_CASILLA], [y + 0.22], marker="s", markersize=6.4,
+                markerfacecolor=E.RIO if hecha else "none",
+                markeredgecolor=E.RIO if hecha else E.TINTA,
+                markeredgewidth=1.0, zorder=5, clip_on=False)
+        ax.annotate(E.nombre_medida(r["medida"]), (X_TEXTO, y + 0.22),
+                    ha="left", va="center", fontsize=7.4, color=E.TINTA)
+        ax.annotate(E.nombre_estado(r["estado_actual"]), (X_TEXTO, y - 0.22),
+                    ha="left", va="center", fontsize=6.4, color=E.BARRANCA,
+                    weight="bold")
+        ax.annotate(E.nombre_evidencia(r["fuente_verificacion"]),
+                    (X_EVIDENCIA, y - 0.24), ha="left", va="center",
+                    fontsize=6.2, color=E.TINTA, alpha=0.66)
+        if i:
+            ax.axhline(y + 0.58, color=E.CAL, linewidth=0.8, zorder=2)
+
+    ax.annotate("cumplidas hoy: %d de %d" % (cumplidas, n),
+                (X_CASILLA, n - 0.30), ha="left", va="center", fontsize=6.4,
+                color=E.TINTA, alpha=0.66)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_xlim(0, 1)
+    ax.set_ylim(-0.55, n - 0.15)
+    E.limpiar(ax, grilla=None)
+    for lado in ax.spines.values():
+        lado.set_visible(False)
+    top, bottom = E.marco(
+        fig, "EXHIBIT 19",
+              "Las ocho medidas de transparencia: hoy no hay ninguna cumplida",
+              "Estado verificado en septiembre de 2026 contra el portal de "
+              "transparencia del Municipio. Ninguna de las ocho cuesta un peso "
+              "de presupuesto y las ocho se cumplen en cien días.",
+        "data/transparencia_medidas.csv. Las ocho medidas son definición del "
+               "programa de gobierno, no un dato público; el estado de cada "
+               "una sí se verificó",
+          "Los ocho casilleros están vacíos porque ninguna medida está "
+          "cumplida. El día que una se cumpla, lo dice el CSV y el cuadrado "
+          "se pinta solo.")
+    return E.guardar(fig, "EXHIBIT_19_medidas_transparencia",
+                     dict(left=0.022, right=0.985, top=top, bottom=bottom))
+
+
 def ex20():
     """Hogares sin gas de red, en cantidad, no en porcentaje."""
     zonas = E.zonas_ordenadas()

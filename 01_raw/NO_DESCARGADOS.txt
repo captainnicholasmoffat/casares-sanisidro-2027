@@ -55,13 +55,26 @@ Archivo faltante en el propio sitio:
   duplicado (2025_iii_gastos_por_fyf_0.pdf). No hay PDF de gastos por objeto para ese trimestre.
 
 
-ARCHIVO APORTADO SIN URL DE ORIGEN
+ARCHIVO APORTADO POR FUERA DEL WORKER
 rafam_2025_106_municipios.csv (18685 bytes, subido el 2026-09-07)
 Que es: ejecucion presupuestaria 2025 de 106 de los 135 municipios de la Provincia
         de Buenos Aires, del RAFAM. Es la fuente del EXHIBIT 05.
-Estado: PENDIENTE registrar la URL o el documento de origen. Hasta que se registre,
-        el pie del grafico cita el archivo del repo y no una fuente publica.
-Que se verifico: los porcentajes que trae la planilla coinciden con los que salen de
-        sus propios importes devengados en los 106 municipios (03_scripts/parse_rafam.py
-        falla si alguno difiere mas de 0,05 puntos). Eso dice que la planilla es
-        consistente consigo misma, NO que sea la cifra oficial.
+Origen: https://la-verdadera-pba.pages.dev
+        PDFs individuales: https://la-verdadera-pba.pages.dev/presentaciones/{Municipio}.pdf
+Capturado: 2026-09-03
+Metodo: descarga de los 106 informes municipales disponibles y parseo con pdfplumber.
+Validacion de San Isidro: coincide al millon con el estado de ejecucion 2025 del propio
+        Municipio en las siete categorias del gasto por objeto.
+Validacion de consistencia interna: 03_scripts/parse_rafam.py recalcula los dos
+        porcentajes desde los importes devengados de la propia planilla y FALLA si
+        alguno difiere mas de 0,05 puntos del declarado. Los 106 coinciden. Eso dice
+        que la planilla es consistente consigo misma, NO que sea la cifra oficial.
+
+*** ADVERTENCIA ***
+La Verdadera PBA es un sitio de TERCEROS que procesa datos oficiales de RAFAM.
+NO es la fuente oficial. Cualquier cifra de este archivo que se publique en el
+documento final tiene que validarse contra RAFAM o SIMCo antes de imprimir.
+Para SAN ISIDRO ya esta validada. Para los otros 105 municipios, NO.
+Lo que el EXHIBIT 05 usa de esos 105 es su posicion en el orden y la mediana:
+si alguno estuviera mal, se movera el puesto de San Isidro o la mediana, no su
+propio valor.

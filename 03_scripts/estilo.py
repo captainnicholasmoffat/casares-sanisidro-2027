@@ -702,6 +702,68 @@ def nombre_funcion(clave):
     return NOMBRE_FUNCION.get(clave.strip().upper(), etiqueta_corta(clave))
 
 
+# Las ocho medidas de transparencia y sus estados. El CSV va en ASCII, igual
+# que todos los datos del repo, y la tilde se pone al mostrarlo: misma tecnica
+# que NOMBRE_FUNCION y NOMBRE_ZONA. Si una clave del CSV no esta en estas
+# tablas, nombre_medida() y nombre_estado() la devuelven tal cual y el
+# verificador de acentos la denuncia: no hay forma de que un texto sin tilde
+# pase sin que alguien se entere.
+NOMBRE_MEDIDA = {
+    "Publicar el organigrama municipal":
+        "Publicar el organigrama municipal",
+    "Publicar la planta de personal y la escala salarial":
+        "Publicar la planta de personal y la escala salarial",
+    "Publicar compras contrataciones y licitaciones":
+        "Publicar compras, contrataciones y licitaciones",
+    "Publicar las declaraciones juradas de funcionarios":
+        "Publicar las declaraciones juradas de funcionarios",
+    "Reponer el Portal de Datos Abiertos":
+        "Reponer el Portal de Datos Abiertos",
+    "Publicar la rendicion de cuentas":
+        "Publicar la rendición de cuentas",
+    "Publicar la Ordenanza Fiscal e Impositiva vigente":
+        "Publicar la Ordenanza Fiscal e Impositiva vigente",
+    "Publicar la ejecucion presupuestaria por zona":
+        "Publicar la ejecución presupuestaria por zona",
+}
+
+NOMBRE_ESTADO = {
+    "no_existe": "No existe",
+    "enlace_incorrecto": "Enlace incorrecto",
+    "caido": "Caído",
+    "desactualizado": "Desactualizado",
+    "cumplida": "Cumplida",
+}
+
+NOMBRE_EVIDENCIA = {
+    "portal de transparencia municipal":
+        "no está en el portal de transparencia",
+    "el enlace lleva a declaraciones de contribuyentes":
+        "lleva a declaraciones de contribuyentes",
+    "devuelve error 504":
+        "devuelve error 504",
+    "la ultima publicada es de 2022":
+        "la última publicada es de 2022",
+    "la ultima publicada es de 2024":
+        "la última publicada es de 2024",
+    "no existe en ningun municipio del conurbano norte":
+        "no existe en ningún municipio del norte",
+}
+
+
+def nombre_medida(clave):
+    """La medida de transparencia lista para mostrar. El CSV queda en ASCII."""
+    return NOMBRE_MEDIDA.get(clave.strip(), clave.strip())
+
+
+def nombre_estado(clave):
+    return NOMBRE_ESTADO.get(clave.strip(), clave.strip())
+
+
+def nombre_evidencia(clave):
+    return NOMBRE_EVIDENCIA.get(clave.strip(), clave.strip())
+
+
 ORDEN_ZONAS = None
 
 
