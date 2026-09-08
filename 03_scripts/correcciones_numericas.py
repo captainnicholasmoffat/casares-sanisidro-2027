@@ -288,6 +288,36 @@ def siete():
     print("  constante). Comparados de a uno por vez no se contradicen.")
 
 
+def ocho():
+    titulo(8, "2024 EN BASE A, PARA QUE LAS TABLAS COMPAREN LO MISMO")
+    dA, pA = recursos(2024, ("1.",))
+    dB, pB = recursos(2024, ("1.", "2.", "3."))
+    print("  BASE A, recursos corrientes (rubro 1)")
+    print("     devengado  %s" % dA)
+    print("     percibido  %s" % pA)
+    print("     tasa       %s%%" % E.numero(100 * pA / dA, 6))
+    print("     sin cobrar %s" % (dA - pA))
+    print()
+    print("  Como va en las tablas, en millones:")
+    print("     2024   %s M dev / %s M perc / %s%%"
+          % (m(dA, 0), m(pA, 0), E.numero(100 * pA / dA, 2)))
+    d25, p25 = recursos(2025, ("1.",))
+    print("     2025   %s M dev / %s M perc / %s%%"
+          % (m(d25, 0), m(p25, 0), E.numero(100 * p25 / d25, 2)))
+    print()
+    print("  Contra la base B que estaba en las tablas:")
+    print("     B      %s M dev / %s M perc / %s%%"
+          % (m(dB, 0), m(pB, 0), E.numero(100 * pB / dB, 2)))
+    print("     la diferencia entre las dos bases en 2024 es de %s pesos"
+          % E.numero(dB - dA, 2))
+    print()
+    print("  En 2024 el rubro 2.1 RECURSOS PROPIOS DE CAPITAL fueron %s pesos."
+          % E.numero(dB - dA, 2))
+    print("  En 2025 fueron %s M. Por eso la correccion de base, que en 2025"
+          % m(recursos(2025, ("2.", "3."))[0]))
+    print("  vale 2.030 M, en 2024 no llega ni al millon.")
+
+
 def main():
     d25, p25 = uno()
     dos(d25, p25)
@@ -297,6 +327,7 @@ def main():
     cinco(acum)
     seis(acum)
     siete()
+    ocho()
     print()
     return 0
 

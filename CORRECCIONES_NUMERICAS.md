@@ -1,4 +1,4 @@
-# Correcciones numéricas — siete cifras que se contradecían entre capítulos
+# Correcciones numéricas — ocho cifras que se contradecían entre capítulos
 
 No se editó ningún capítulo. Este archivo devuelve, para cada cifra, **el valor
 correcto, el archivo fuente, la cuenta y en qué capítulos hay que cambiarla.**
@@ -10,7 +10,7 @@ no escribe nada. Ningún número de este archivo está escrito a mano:
 python3 03_scripts/correcciones_numericas.py
 ```
 
-Fecha: **2026-09-08**. Los importes van en millones de pesos **nominales de
+Fecha: **2026-09-08**. El punto 8 se agregó el mismo día. Los importes van en millones de pesos **nominales de
 2025**, salvo donde diga otra cosa.
 
 ---
@@ -26,6 +26,7 @@ Fecha: **2026-09-08**. Los importes van en millones de pesos **nominales de
 | 5 | Hacinamiento por zona | seis valores, ver abajo | 14,7% y 2,6% sin decir de qué zonas | 1 |
 | 6 | Boulogne + Beccar combinadas | cinco valores, ver abajo | cuatro de las cinco filas eran Beccar sola | 1, cuadro de apertura |
 | 7 | Gasto total 2025 | dos conceptos distintos, ver abajo | 324.304 M y 348.876 M sin aclarar | 1 §1.2 y §1.5 |
+| 8 | Percepción 2024 en base A | **229.946 / 215.023 / 93,51%** | 215.024 M en el percibido | 2, 3 (tablas 2024–2025) |
 
 ---
 
@@ -290,6 +291,56 @@ los dos ejes que se cruzaron.
 
 **Fuente:** `data/ejecucion_gastos_objeto.csv`, `data/serie_gastos_comparable.csv`
 (fila 2025), `data/deflactor.csv` (`coef_anual` 2025) y `data/baseline_2025.csv`.
+
+---
+
+## 8. La fila de 2024 en base A
+
+**Las tres cifras pedidas, base A —recursos corrientes, rubro 1, sin el 2.1:**
+
+| | Devengado | Percibido | Tasa |
+|---|---:|---:|---:|
+| **2024, base A** | **229.945.522.987,77** | **215.023.499.681,17** | **93,510627%** |
+
+Sin cobrar: **14.922.023.306,60**.
+
+**Como va en la tabla, al lado de 2025 y en la misma base:**
+
+| Año | Devengado | Percibido | Percepción | Sin cobrar |
+|---|---:|---:|---:|---:|
+| 2024 | 229.946 M | **215.023 M** | 93,51% | 14.922 M |
+| 2025 | 337.149 M | 301.155 M | 89,32% | 35.994 M |
+
+**Cambia un dígito, y no es el que se esperaba.** En 2024 el rubro 2.1
+RECURSOS PROPIOS DE CAPITAL fueron **178.900,89 pesos**. En 2025 fueron
+**2.030,1 millones**. La corrección de base, que en 2025 mueve la tasa de
+89,3879% a 89,3240%, en 2024 mueve la sexta cifra decimal:
+
+| 2024 | Devengado | Percibido | Tasa |
+|---|---:|---:|---:|
+| base A | 229.945.522.987,77 | 215.023.499.681,17 | 93,510627% |
+| base B | 229.945.701.888,66 | 215.023.678.582,06 | 93,510632% |
+
+Redondeado a millones, **lo único que cambia es el percibido: 215.024 → 215.023.**
+El devengado y la tasa se escriben igual en las dos bases.
+
+**Qué hacer con esto.** Cambiar el 215.024 por 215.023 y listo. Pero lo que
+importa no es el millón: es que la fila de 2024 quede **declarada** en la misma
+base que la de 2025. Hoy las dos filas comparan bien por casualidad —porque en
+2024 casi no hubo venta de activos—, no por construcción. El año que el
+Municipio venda algo, la tabla se rompe sola y nadie se entera.
+
+Poner al pie de las dos tablas: **"recursos corrientes, rubro 1 de la ejecución
+presupuestaria; no incluye recursos de capital"**.
+
+**Fuente:** `data/ejecucion_recursos.csv`, año 2024, `periodo_tipo =
+acumulado_anual`, rubros 1.1, 1.2, 1.6 y 1.7. Viene de
+`01_raw/sanisidro_transparencia/ejecucion_presupuestaria/2024_iv_recursos_-_anual.pdf`.
+
+**Ojo con el punto 2.** La tasa de 2024 no cambia a la precisión que se usa,
+así que **los 14.115,3 M de "volver a cobrar como 2024" siguen valiendo**: ya
+estaban calculados con la tasa de base A. Lo que estaba mal basado ahí era el
+**2025**, no el 2024.
 
 ---
 
