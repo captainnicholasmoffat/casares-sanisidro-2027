@@ -1,19 +1,43 @@
-# Entorno de los scripts de 03_scripts/.
-#
-# Las versiones estan FIJAS a proposito. matplotlib decide el ancho de cada
-# glifo, asi que con otra version los 20 exhibits salen distintos aunque el
-# dato sea el mismo, y el verificador de colisiones acusa colisiones que no
-# existen. Los graficos publicados se hicieron con 3.11.1.
-#
-# geopandas hace falta para dos cosas y las dos importan: el EXHIBIT 15, que
-# es el mapa de la tapa, y el chequeo de contigüidad de zonas de
-# test_censo_zonas.py, que es la base del capitulo 4. Sin geopandas ese test
-# no falla: no corre. Un test que no corre no es un test que pasa.
+# ENTORNO DE 03_scripts/
 #
 #   pip install -r requirements.txt --break-system-packages
 #
-# ORDEN DE LOS TESTS. test_parser.py reescribe los CSV desde los PDF y se lleva
-# puestas las columnas en pesos constantes. Correr, en este orden:
+# ------------------------------------------------------------------------
+# POR QUE LAS VERSIONES ESTAN FIJAS Y NO SON RANGOS
+# ------------------------------------------------------------------------
+# Porque el entorno afecta al RESULTADO, no solo a que el codigo corra.
+#
+# matplotlib decide el ancho de cada glifo. El verificador de colisiones mide
+# cajas de texto, y esas cajas dependen de la version que renderiza: con 3.10.8
+# acusa una colision en el EXHIBIT 14 que con 3.11.1 no existe, y los 20 SVG
+# salen distintos aunque el dato sea identico. Los graficos publicados se
+# hicieron con 3.11.1.
+#
+# Si el entorno no es reproducible, los tests dejan de significar algo: nadie
+# puede reproducir el resultado que estan verificando.
+#
+# ------------------------------------------------------------------------
+# QUE HACE FALTA PARA QUE
+# ------------------------------------------------------------------------
+# matplotlib   los 20 exhibits y los cuatro verificadores de figura
+# geopandas    EXHIBIT 15 (el mapa de la tapa) y EXHIBIT 16, y el chequeo de
+#              contiguidad de zonas de test_censo_zonas.py, que es la base del
+#              capitulo 4. Sin geopandas ese test NO FALLA: no corre. Un test
+#              que no corre no es un test que pasa.
+# shapely      geometria de las zonas, la usa geopandas
+# pyproj       proyeccion de los mapas, la usa geopandas
+# pyogrio      lectura del geojson de zonas, la usa geopandas
+# pandas       lectura de series en deflactor.py y serie_comparable.py
+# numpy        aritmetica de las series y del modelo
+# pdfplumber   parseo de los PDF de ejecucion presupuestaria
+# openpyxl     planillas de transferencias provinciales
+#
+# ------------------------------------------------------------------------
+# ORDEN DE LOS TESTS - IMPORTA
+# ------------------------------------------------------------------------
+# test_parser.py reescribe los CSV desde los PDF y se lleva puestas las
+# columnas en pesos constantes. Si corre al final, los tres anteriores quedan
+# validando datos sucios y los siguientes fallan sin motivo real.
 #
 #   python3 03_scripts/test_parser.py
 #   python3 03_scripts/deflactor.py
@@ -23,8 +47,17 @@
 #   python3 03_scripts/test_modelo.py
 #   python3 03_scripts/test_serie_comparable.py
 #   python3 03_scripts/test_censo_zonas.py
+#   python3 03_scripts/generar_todos_los_graficos.py
+#
+# Los cinco tests y los cinco verificadores tienen que pasar antes de
+# cualquier push. El generador sale distinto de cero si salta cualquiera.
 
 matplotlib==3.11.1
 geopandas==1.1.4
-pdfplumber
-pandas
+shapely==2.1.2
+pyproj==3.8.0
+pyogrio==0.13.0
+pandas==3.0.2
+numpy==2.4.4
+pdfplumber==0.11.9
+openpyxl==3.1.5
