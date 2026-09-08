@@ -33,6 +33,7 @@ Contiene todas las fuentes que el documento cita, y ninguna más. También conti
 | Sistema SIMCo | Validación cruzada de las series fiscales | 1, 3 | **VERIFICADA** |
 | Ejecución RAFAM 2025, 106 municipios | Mediana provincial y posición de San Isidro | 1, 2 | **PROCESADA POR TERCEROS** — ver 2.1 |
 | Sistema de Boletines Oficiales Municipales (SIBOM) | Ordenanza 7124/2025 y Decreto 2099/2025 de Pinamar | 4, 6 | **VERIFICADA** |
+| SIBOM — tres decretos de Pilar bajo el art. 132 inc. c) | El precedente de contratación directa a cooperativas de vecinos, y la acreditación de la adhesión | 4 | **VERIFICADA** |
 
 ### 1.3 Nacionales
 
@@ -56,6 +57,15 @@ Contiene todas las fuentes que el documento cita, y ninguna más. También conti
 - LOM, Decreto-Ley 6769/58 (texto oficial): `https://normas.gba.gob.ar/documentos/OVG48SW0.html`
 - Pinamar, Ordenanza 7124/2025: `https://sibom.slyt.gba.gob.ar/bulletins/14382/contents/2343293`
 - Pinamar, Decreto 2099/2025 (el veto): `https://sibom.slyt.gba.gob.ar/bulletins/14388/contents/2344255`
+
+**Pilar — contratación directa a cooperativas de vecinos bajo el art. 132 inc. c)**
+
+- Expediente municipal Nº 144/2019, Cooperativa de Trabajo Nueva Unión Ltda., Barrio Los Cachorros, Manuel Alberti: `https://sibom.slyt.gba.gob.ar/bulletins/2049/contents/1312293`
+  **Es el que documenta el requisito de adhesión.** Consta textualmente que *"se cumplimentó con lo establecido por el artículo mencionado en el párrafo anterior, acreditándose la adhesión de los vecinos beneficiarios de las obras."*
+- Ente Coordinador de Cooperativas, 600 m² de veredas, Barrio Río Luján: `https://sibom.slyt.gba.gob.ar/bulletins/269/contents/1155763`
+  Encomienda directa a cooperativa *"en concordancia con lo previsto en el artículo 132 inc. c) de la Ley Orgánica Municipal"*.
+- Secretaría de Obras Públicas, Cooperativa de Trabajo Unión y Progreso Limitada, fresado y reconstitución de pavimento: `https://sibom.slyt.gba.gov.ar/bulletins/234/contents/1148249`
+  Mismo encuadre. *(El SIBOM publica bajo dos dominios, `.gob.ar` y `.gov.ar`. Esta URL usa el segundo; no es un error de transcripción.)*
 
 *Capturas de septiembre de 2026.*
 
@@ -99,7 +109,7 @@ El Municipio publica su stock de deuda y sus amortizaciones, pero no la tasa a l
 | **Anexo de zonas de la Ordenanza 6045/1984** | No está publicado en el Digesto municipal. El art. 5 lo menciona; el anexo no aparece. | Los límites oficiales de las zonas vecinales. Por eso la zonificación de este documento se construyó desde los 360 radios censales y se declara como propuesta, no como límite oficial. |
 | **Rendiciones de cuentas 2013, 2016, 2018 y 2023–2026** | El Municipio no las publicó. La última publicada es la de 2022. | Cerrarían la serie de gasto real. Los huecos quedan a la vista en el cuadro del capítulo 1: no se interpolaron. |
 | **Gastos por objeto del III trimestre de 2025** | El Municipio subió por error el PDF de "gastos por finalidad y función" duplicado. El archivo correcto no existe en el sitio. | Un trimestre de la serie por objeto. |
-| **Los decretos de Pilar que contratan cooperativas bajo el art. 132 inc. c)** | No se localizaron en el Boletín Oficial Municipal. El capítulo 4 cita el precedente; los expedientes concretos no están en este repositorio. | El circuito administrativo completo: quién inicia el expediente, cómo se acredita el 60% de adhesión, qué dictámenes intervienen, cómo se certifica el avance de obra y cómo se paga. **Es el vacío más importante de este anexo** y está señalado como tal en los pendientes del capítulo 4. |
+| **El circuito administrativo del art. 132 inc. c)** | Los tres decretos de Pilar muestran el encuadre y el resultado, no el trámite paso a paso. | Quién inicia el expediente, cómo se acredita la adhesión, qué dictámenes intervienen, cómo se certifica el avance de obra y cómo se paga. **Es el vacío más importante de este anexo.** El precedente está verificado; el procedimiento no está reconstruido. |
 | **Organigrama, planta de personal, DDJJ de funcionarios, compras y licitaciones** | No existen esas secciones en el portal de transparencia. Probadas las URL, devuelven 404. El enlace de "Declaraciones Juradas" lleva a declaraciones de **contribuyentes**. | Son exactamente las medidas que el capítulo 6 se compromete a publicar. Su ausencia **es** el dato. |
 
 ---

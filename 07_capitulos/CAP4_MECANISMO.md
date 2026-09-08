@@ -133,9 +133,9 @@ El mismo artículo exige que esa contratación directa proceda **sólo si los ve
 Donde una zona quiera y reúna ese 60%, **su asociación vecinal ejecuta la obra como parte contratante**: la hace, la cobra, la rinde y responde por ella.
 
 ### Ya funciona en otro municipio bonaerense
-El Municipio de Pilar contrata cooperativas de vecinos bajo el artículo 132 inciso c) desde hace años, con la constancia de adhesión agregada al expediente y los decretos publicados en el Boletín Oficial Municipal de la Provincia.
+El Municipio de Pilar contrata cooperativas de vecinos bajo el artículo 132 inciso c). Hay **al menos tres decretos publicados** en el Boletín Oficial Municipal de la Provincia, y en uno de ellos —el del expediente 144/2019, por obras en el Barrio Los Cachorros de Manuel Alberti— consta expresamente la acreditación de la adhesión de los vecinos beneficiarios. Los tres están enlazados en el anexo de fuentes.
 
-No es un experimento. Es hacer en San Isidro algo que la ley habilita desde 1976 y que otro municipio bonaerense ya hace.
+Es hacer en San Isidro algo que la ley habilita desde 1976 y que otro municipio bonaerense ya hace.
 
 ---
 
@@ -217,4 +217,4 @@ Los límites de las seis zonas son una propuesta construida sobre los 360 radios
 1. **El anexo de zonas del art. 5 de la Ordenanza 6045 no existe publicado.** Por eso el mapa territorial se construyó desde el Censo. Si aparece, hay que contrastar las seis zonas propuestas contra las oficiales.
 2. **La rampa de cuatro años es una decisión de política, no un resultado del modelo.** El modelo la aplica porque `ANIOS_RAMPA = 4` está fijado en `modelo.py`. Si se cambia, cambian las cuatro filas de §4.3 y la columna reformista del capítulo 3.
 3. **El 60% del art. 132 inc. c) es por obra, no por zona.** El texto del capítulo lo dice correctamente, pero conviene tener preparada la respuesta a quien lea "el 60% de la zona": son los beneficiarios de esa obra concreta, no el padrón de la zona.
-4. **Falta el circuito administrativo.** El capítulo dice qué se puede hacer y con qué artículos, pero no cómo se tramita un expediente de contratación directa bajo el art. 132 inc. c). Los decretos de Pilar son el modelo a copiar y no están transcriptos en ningún lado del proyecto.
+4. **Falta el circuito administrativo.** El capítulo dice qué se puede hacer, con qué artículos y con qué precedente verificado, pero no cómo se tramita: quién inicia el expediente, cómo se acredita la adhesión, qué dictámenes intervienen, cómo se certifica el avance de obra y cómo se paga. Los tres decretos de Pilar muestran el encuadre y el resultado, no el trámite paso a paso. Pasó de "no tenemos el precedente" a "tenemos el precedente y no el procedimiento". Es trabajo de un research worker sobre el Boletín Oficial Municipal.
