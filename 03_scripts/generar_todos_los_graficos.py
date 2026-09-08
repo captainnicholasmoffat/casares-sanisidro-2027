@@ -46,6 +46,37 @@ EXHIBITS = [
 ]
 
 
+try:
+    from verificar_numeros_a_mano import revisar as _revisar_a_mano
+except Exception:                                    # pragma: no cover
+    _revisar_a_mano = None
+
+SCRIPTS_DE_GRAFICOS = ["graficos_cap1.py", "graficos_cap2.py",
+                       "graficos_cap3.py", "graficos_cap4.py",
+                       "graficos_cap5.py"]
+
+
+def numeros_a_mano():
+    """Quinto verificador: ningun numero escrito a mano en el texto de un
+    grafico. Corre sobre los scripts, no sobre la figura, porque el defecto
+    esta en el codigo: un subtitulo con el numero escrito sobrevive a todas
+    las corridas siguientes diciendo lo que ya no es cierto."""
+    if _revisar_a_mano is None:
+        return []
+    aqui = os.path.dirname(os.path.abspath(__file__))
+    fuera = []
+    for nombre in SCRIPTS_DE_GRAFICOS:
+        ruta = os.path.join(aqui, nombre)
+        if not os.path.exists(ruta):
+            continue
+        for linea, texto, nums in _revisar_a_mano(ruta):
+            fuera.append("%s:%d  %s  -> %s"
+                         % (nombre, linea,
+                            texto if len(texto) <= 60 else texto[:57] + "...",
+                            ", ".join(nums)))
+    return fuera
+
+
 def main(pedidos=None):
     hechos, problemas = [], []
     for numero, capitulo, fn in EXHIBITS:
@@ -79,6 +110,9 @@ if __name__ == "__main__":
     print("FABRICA DE GRAFICOS - paleta única, 1600 px, PNG a 300 dpi y SVG")
     print("=" * 84)
     hechos, problemas = main(pedidos)
+    a_mano = numeros_a_mano()
+    if a_mano:
+        problemas.append(("los scripts", "numeros escritos a mano", a_mano))
     print()
     if not pedidos and SIN_DATO:
         print("no generados por falta de dato: %s" % ", ".join(sorted(SIN_DATO)))
@@ -97,4 +131,5 @@ if __name__ == "__main__":
                 print("      %s" % d)
         sys.exit(1)
     print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
-          "ninguna palabra sin tilde y ningún texto pisado" % len(hechos))
+          "ninguna palabra sin tilde, ningún texto pisado y ningún número "
+          "escrito a mano" % len(hechos))

@@ -267,7 +267,11 @@ def percepcion(anio=2025):
         raise ErrorDeParametros("no hay recursos corrientes de %d" % anio)
     return {"anio": anio, "devengado": dev, "percibido": per,
             "sin_cobrar": dev - per,
-            "percepcion_pct": _q(100 * per / dev, 2)}
+            "percepcion_pct": _q(100 * per / dev, 2),
+            # Sin redondear. Redondear la tasa a dos decimales ANTES de restarla
+            # de la meta mete 13,3 M de error en el aporte del escenario que se
+            # financia cobrando mejor. Se muestra la redondeada, se calcula con esta.
+            "percepcion_pct_exacta": 100 * per / dev}
 
 
 # --------------------------------------------------------------------------

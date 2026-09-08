@@ -45,6 +45,23 @@ INDICADORES_NECESIDAD = ["pct_nbi", "pct_sin_cloaca", "pct_sin_gas_red",
 PESO_POBLACION = 0.5
 PESO_NECESIDAD = 0.5
 
+# La parte de la obra publica que administran las comisiones en el anio 4. Se
+# importa del modelo: es la MISMA constante, no una copia.
+try:
+    from modelo import SHARE_OBRA_VECINAL as _SHARE
+    SHARE_OBRA_VECINAL = float(_SHARE)
+except Exception:                                     # pragma: no cover
+    SHARE_OBRA_VECINAL = 0.50
+
+
+def _nbi_del_partido():
+    """NBI del partido, contado desde los 360 radios. No se escribe a mano."""
+    con = tot = 0
+    for f in E.leer("data/censo2022_sanisidro_por_radio.csv"):
+        con += int(float(f.get("hogares_nbi__si") or 0))
+        tot += int(float(f.get("hogares_nbi__total") or 0))
+    return 100.0 * con / tot if tot else 0.0
+
 
 def indice_de_necesidad(zonas):
     """Promedio de los cuatro indicadores, cada uno sobre su propio máximo."""
@@ -74,7 +91,8 @@ def reparto_vecinal():
 
     ruta = os.path.join(E.DATA, "reparto_vecinal_por_zona.csv")
     with open(ruta, "w", encoding="utf-8", newline="") as f:
-        f.write("# Reparto de la partida vecinal: el 50%% de la obra pública del\n")
+        f.write("# Reparto de la partida vecinal: el %d%%%% de la obra pública del\n"
+                % (SHARE_OBRA_VECINAL * 100))
         f.write("# año 4, o sea %s pesos de diciembre de 2025.\n"
                 % E.numero(total, 2))
         f.write("# Peso = %d%% por población + %d%% por índice de necesidad.\n"
@@ -405,7 +423,8 @@ def ex15():
         fig, "EXHIBIT 15",
               "Las seis zonas vecinales de San Isidro",
               "Coloreadas por porcentaje de hogares con necesidades básicas "
-              "insatisfechas. El partido entero promedia 3,16%.",
+              "insatisfechas. El partido entero promedia %s."
+              % E.pct(_nbi_del_partido(), 2),
         FUENTE_CENSO,
           "Los límites de las zonas son propios, no oficiales. Lo único oficial "
           "es la geometría de los 360 radios censales del INDEC y los seis "

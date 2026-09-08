@@ -19,6 +19,16 @@ FUENTE_PBA = ("Ministerio de Hacienda y Finanzas de la Provincia de Buenos "
               "Aires, transferencias a municipios 2021-2025")
 
 
+def _pico_a_piso(con):
+    """(anio del maximo, anio del minimo, valor minimo, valor maximo).
+
+    La caida del subtitulo del EXHIBIT 01 sale de aca. Escribirla a mano seria
+    lo mismo que el 2.303 del EXHIBIT 09: la serie cambia y el titulo no."""
+    amax, vmax = max(con, key=lambda t: t[1])
+    amin, vmin = min(con, key=lambda t: t[1])
+    return amax, amin, vmin, vmax
+
+
 def ex01():
     """Gasto real 2010-2025. Los años sin dato se ven vacíos."""
     filas = E.leer("data/serie_gastos_comparable.csv")
@@ -57,7 +67,9 @@ def ex01():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 01",
-              "El gasto municipal real cae 34,9% entre 2017 y 2024",
+              "El gasto municipal real cae %s entre %d y %d"
+              % (E.pct(100 * (1 - _pico_a_piso(con)[2] / _pico_a_piso(con)[3]), 1),
+                 _pico_a_piso(con)[0], _pico_a_piso(con)[1]),
               "Gasto total en pesos constantes. Un solo concepto en todos los "
               "años: gastos corrientes más de capital, sin aplicaciones financieras.",
         FUENTE_SERIE,
@@ -65,6 +77,15 @@ def ex01():
           "interpolaron: el hueco queda a la vista.")
     return E.guardar(fig, "EXHIBIT_01_gasto_real_2010_2025",
                      dict(left=0.115, right=0.985, top=top, bottom=bottom))
+
+
+def _nbi_del_partido():
+    """NBI del partido, contado desde los 360 radios. No se escribe a mano."""
+    con = tot = 0
+    for f in E.leer("data/censo2022_sanisidro_por_radio.csv"):
+        con += int(float(f.get("hogares_nbi__si") or 0))
+        tot += int(float(f.get("hogares_nbi__total") or 0))
+    return 100.0 * con / tot if tot else 0.0
 
 
 def ex02():
@@ -98,7 +119,7 @@ def ex02():
         fig, "EXHIBIT 02",
               "Boulogne y Beccar concentran toda la carencia del partido",
               "Cuatro indicadores por zona, ordenadas de peor a mejor por NBI. "
-              "El NBI del partido es 3,16%.",
+              "El NBI del partido es %s." % E.pct(_nbi_del_partido(), 2),
         FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_02_zonas_carencias",
                      dict(left=0.06, right=0.985, top=top, bottom=bottom))
@@ -131,6 +152,20 @@ def ex03():
         FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_03_educacion_por_zona",
                      dict(left=0.06, right=0.985, top=top, bottom=bottom))
+
+
+def _parcial():
+    """(anio, {municipio: participacion}) del ultimo anio incompleto.
+
+    El pie del EXHIBIT 04 lo cita. Sale del CSV: cuando se publique el anual de
+    ese anio, el pie se actualiza solo o desaparece."""
+    filas = [f for f in E.leer("data/coparticipacion_comparada.csv")
+             if int(f["meses"]) < 12]
+    if not filas:
+        return None, {}
+    anio = max(int(f["anio"]) for f in filas)
+    return anio, {f["municipio"]: float(f["participacion_pct"])
+                  for f in filas if int(f["anio"]) == anio}
 
 
 def ex04():
@@ -179,8 +214,10 @@ def ex04():
               "Participación de cada municipio en el total transferido por la "
               "Provincia a los 135 municipios. Años completos.",
         FUENTE_PBA,
-          "2026 va con seis meses y queda fuera del gráfico. San Isidro cae a "
-          "1,6811% y Tigre sube a 1,8370%.")
+          "%d va con seis meses y queda fuera del gráfico. San Isidro cae a "
+          "%s y Tigre sube a %s."
+          % (_parcial()[0], E.pct(_parcial()[1]["SAN ISIDRO"], 4),
+             E.pct(_parcial()[1]["TIGRE"], 4)))
     return E.guardar(fig, "EXHIBIT_04_coparticipacion_comparada",
                      dict(left=0.085, right=0.80, top=top, bottom=bottom))
 

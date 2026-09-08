@@ -132,6 +132,7 @@ def baseline():
         "aplicaciones_financieras": aif("aplicaciones_financieras"),
         "devengado_corriente": perc["devengado"],
         "percepcion_pct": perc["percepcion_pct"],
+        "percepcion_pct_exacta": perc["percepcion_pct_exacta"],
         "stock_deuda": deuda["stock"],
         "amortizacion_prox_ejercicio": deuda["amortizacion_ej1"],
     }
@@ -278,7 +279,7 @@ def _pot(base, tasa, n):
 
 
 def proyectar(b, esc, hasta=FIN_LARGO):
-    perc_base = b["percepcion_pct"] / 100
+    perc_base = b["percepcion_pct_exacta"] / 100
     filas = []
     stock = b["stock_deuda"]
     remanente_amortizable = stock - b["amortizacion_prox_ejercicio"]
@@ -448,7 +449,7 @@ def opciones_financiamiento(b, filas_reformista):
 
     # --- ii) cobrar mejor ---
     perc = P.percepcion(ANIO_BASE)
-    base_pct = perc["percepcion_pct"]
+    base_pct = perc["percepcion_pct_exacta"]
     for objetivo in (Decimal("92"), Decimal("95"), Decimal("97")):
         extra = perc["devengado"] * (objetivo - base_pct) / 100
         for anio, c in sorted(costo.items()):

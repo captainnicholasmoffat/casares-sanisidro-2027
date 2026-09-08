@@ -82,6 +82,17 @@ def ex08():
                      dict(left=0.135, right=0.775, top=top, bottom=bottom))
 
 
+def _dif(anio):
+    """Diferencia reformista_percepcion - base, en millones. Se calcula, no se
+    escribe a mano: cada corrida del modelo la mueve."""
+    v = {}
+    for r in E.leer("data/modelo_flujo_caja.csv"):
+        if int(r["anio"]) == anio and r["escenario"] in ("base",
+                                                         "reformista_percepcion"):
+            v[r["escenario"]] = float(r["resultado_financiero"])
+    return round((v["reformista_percepcion"] - v["base"]) / 1e6)
+
+
 def ex09():
     """Base contra reformista por percepción, con el area entre medio."""
     por = _modelo()
@@ -98,11 +109,17 @@ def ex09():
     E.etiqueta_serie(ax, xs[-1], ya[-1], "Base", E.TINTA, dx=6, dy=-7)
     E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\ncobrando mejor", E.RIO,
                      dx=6, dy=8)
+    # La anotacion iba centrada sobre el area sombreada, que en este grafico
+    # tiene el ancho de una linea: el texto quedaba encima de las dos curvas.
+    # Va abajo a la derecha, en el hueco vacio, con una guia hasta la franja.
     medio = len(xs) // 2
     ax.annotate("el programa se ejecuta entero\nY el resultado mejora",
-                (xs[medio], (ya[medio] + yb[medio]) / 2), xytext=(0, 0),
-                textcoords="offset points", ha="center", va="center",
-                fontsize=6.6, color=E.RIO, weight="bold")
+                xy=(xs[medio], (ya[medio] + yb[medio]) / 2),
+                xytext=(xs[medio] + 1.2, min(ya) * 0.55),
+                ha="left", va="center", fontsize=6.6, color=E.RIO,
+                weight="bold",
+                arrowprops=dict(arrowstyle="-", color=E.RIO, linewidth=0.7,
+                                shrinkA=2, shrinkB=3, alpha=0.75))
     # Arranca un poco antes de 2025 para que el primer rotulo del eje x no
     # caiga encima del ultimo numero del eje y.
     ax.set_xlim(2024.4, 2040)
@@ -113,8 +130,8 @@ def ex09():
     top, bottom = E.marco(
         fig, "EXHIBIT 09",
               "Pagar el programa cobrando mejor deja al Municipio mejor que no hacerlo",
-              "El area sombreada es la diferencia: 2.303 millones a favor en "
-              "2031 y 2.924 en 2037.",
+              "El area sombreada es la diferencia: %s millones a favor en "
+              "2031 y %s en 2037." % (E.numero(_dif(2031)), E.numero(_dif(2037))),
         FUENTE_MODELO)
     return E.guardar(fig, "EXHIBIT_09_base_vs_reformista",
                      dict(left=0.135, right=0.775, top=top, bottom=bottom))
@@ -226,12 +243,14 @@ def ex11():
     ax.spines["bottom"].set_visible(True)
     top, bottom = E.marco(
         fig, "EXHIBIT 11",
-              "El 73,1% del presupuesto no se puede tocar dentro del ejercicio",
+              "El %s del presupuesto no se puede tocar dentro del ejercicio"
+              % E.pct(100 * (nucleo + contratos) / total, 1),
               "Composición del gasto 2025 por rigidez, y que parte del margen "
               "flexible se llevan las dos propuestas del programa.",
         "data/ejecucion_gastos_objeto.csv y data/modelo_flujo_caja.csv",
-          "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. "
-          "Caben, pero no queda lugar para una tercera del mismo tamaño.")
+          "Las dos propuestas juntas se llevan el %s del gasto flexible. "
+          "Caben, pero no queda lugar para una tercera del mismo tamaño."
+          % E.pct(100 * (programa + obra_vecinal) / flexible, 1))
     return E.guardar(fig, "EXHIBIT_11_rigidez_del_gasto",
                      dict(left=0.32, right=0.985, top=top, bottom=bottom))
 
@@ -285,8 +304,10 @@ def ex12():
     top, bottom = E.marco(
         fig, "EXHIBIT 12",
               "El déficit de 2025 no viene del gasto corriente: viene de la obra",
-              "El ahorro corriente fue positivo en 49.751 millones. Lo que da "
-              "vuelta el resultado son los 57.832 millones de gasto de capital.",
+              "El ahorro corriente fue positivo en %s millones. Lo que da "
+              "vuelta el resultado son los %s millones de gasto de capital."
+              % (E.numero(b["ahorro_corriente"] / 1e6),
+                 E.numero(b["gastos_de_capital"] / 1e6)),
         FUENTE_SEF,
           "Los ingresos van por lo PERCIBIDO y los gastos por lo DEVENGADO: es "
           "la convención de la cuenta Ahorro-Inversión, no una elección nuestra.")

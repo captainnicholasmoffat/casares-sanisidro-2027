@@ -19,6 +19,16 @@ FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, 
 DESTACAR = {"ECOLOGIA Y MEDIO AMBIENTE", "AGUA POTABLE Y ALCANTARILLADO"}
 
 
+def _techo_de(pct):
+    """Redondea hacia arriba al proximo medio punto.
+
+    El subtitulo del EXHIBIT 17 dice "no llegan al X%": X tiene que ser un techo
+    por encima del valor real, no el valor. Se calcula, no se escribe: si las
+    dos funciones crecen, el techo sube solo."""
+    import math
+    return math.ceil(pct * 2) / 2
+
+
 def ex17():
     """Gasto por función 2025, ordenado."""
     filas = []
@@ -51,12 +61,24 @@ def ex17():
     E.limpiar(ax, grilla="x")
     top, bottom = E.marco(
         fig, "EXHIBIT 17",
-              "Ecología y agua potable juntas no llegan al 1,5% del presupuesto",
+              "Ecología y agua potable juntas no llegan al %s del presupuesto"
+              % E.pct(_techo_de(sum(v for n, v in filas
+                                    if n.upper() in DESTACAR) * 100 / total), 1),
               "Gasto por función, ejercicio 2025. En BARRANCA las dos "
               "funciones que el programa señala como desatendidas.",
         FUENTE_EJEC)
     return E.guardar(fig, "EXHIBIT_17_gasto_por_funcion",
                      dict(left=0.30, right=0.90, top=top, bottom=bottom))
+
+
+def _de_cada(parte, total, numerador=5):
+    """(numerador, denominador redondeado) para decir "N de cada M pesos".
+
+    Sale de la proporcion real. Escrito a mano, un cambio de partida deja la
+    frase diciendo una razon que ya no es cierta."""
+    m = numerador * total / parte
+    paso = 10 ** (len(str(int(m))) - 2)
+    return numerador, E.numero(round(m / paso) * paso)
 
 
 def ex18():
@@ -103,9 +125,10 @@ def ex18():
     ax.spines["bottom"].set_visible(True)
     top, bottom = E.marco(
         fig, "EXHIBIT 18",
-              "Empleo y vivienda son 5 de cada 3.000 pesos que gasta el Municipio",
-              "Las dos partidas juntas suman el 0,16% del presupuesto "
-              "ejecutado en 2025.",
+              "Empleo y vivienda son %d de cada %s pesos que gasta el Municipio"
+              % _de_cada(empleo + vivienda, total),
+              "Las dos partidas juntas suman el %s del presupuesto "
+              "ejecutado en 2025." % E.pct(100 * (empleo + vivienda) / total, 2),
         "Estado de Situación Económico-Financiera 2025, gastos por programa")
     return E.guardar(fig, "EXHIBIT_18_empleo_vivienda_vs_resto",
                      dict(left=0.055, right=0.90, top=top, bottom=bottom))
@@ -192,9 +215,26 @@ def ex19():
 
 def ex20():
     """Hogares sin gas de red, en cantidad, no en porcentaje."""
+    # Cuando existe el conteo, se usa el conteo. Derivar la cantidad de hogares
+    # del porcentaje publicado a dos decimales daba 25.166; contando hogar por
+    # hogar en los 360 radios da 25.165.
+    SIN_GAS = ["hogares_combustible__electricidad",
+               "hogares_combustible__gas_en_garrafa",
+               "hogares_combustible__gas_en_tubo_o_a_granel_zeppelin",
+               "hogares_combustible__lena_o_carbon",
+               "hogares_combustible__otro_combustible"]
+    censo = {r["radio_id"]: r
+             for r in E.leer("data/censo2022_sanisidro_por_radio.csv")}
+    conteo = {}
+    for r in E.leer("data/zonas_asignacion_radios.csv"):
+        f = censo.get(r["radio_id"])
+        if not f:
+            continue
+        conteo[r["zona"]] = conteo.get(r["zona"], 0) + sum(
+            int(float(f.get(c) or 0)) for c in SIN_GAS)
+
     zonas = E.zonas_ordenadas()
-    datos = [(z["zona"], int(z["hogares"]) * float(z["pct_sin_gas_red"]) / 100)
-             for z in zonas]
+    datos = [(z["zona"], conteo[z["zona"]]) for z in zonas]
     datos.sort(key=lambda x: -x[1])
     total = sum(v for _, v in datos)
     dos = datos[0][1] + datos[1][1]

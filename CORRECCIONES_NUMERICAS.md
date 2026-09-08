@@ -355,3 +355,133 @@ estaban calculados con la tasa de base A. Lo que estaba mal basado ahí era el
    el titular deja de ser "Boulogne y Beccar" sostenido por números de Beccar
    sola. Hay que decidir si el cuadro pasa a ser de las dos zonas combinadas o
    si se separa en dos columnas. Las dos versiones están calculadas arriba.
+
+---
+
+# 9. EL MODELO, REGENERADO CON LA TASA SIN REDONDEAR
+
+## El bug
+`modelo.py` tomaba la tasa de percepcion **ya redondeada a dos decimales**
+(89,32%) y la restaba de la meta. La tasa real es 89,323958%. Ese redondeo
+valia 13,3 M en el aporte del escenario que se financia cobrando mejor.
+
+Dos lugares lo usaban: `proyectar()`, que arma la columna reformista, y
+`opciones_financiamiento()`, que calcula el aporte de cada meta.
+
+## La correccion
+`parametros_modelo.percepcion()` ahora devuelve tambien `percepcion_pct_exacta`,
+sin cuantizar. Se **muestra** la redondeada y se **calcula** con la exacta.
+
+## Lo que se movio
+
+| | Antes | Ahora |
+|---|---|---|
+| Aporte al 92% | 8.860 M (base B) / 9.036 M (tasa redondeada) | **9.022,2 M** |
+| Reformista 2028 | +3.177 | **+3.166** |
+| Reformista 2031 | +12.678 | **+12.664** |
+| Reformista 2034 | +22.759 | **+22.744** |
+| Reformista 2037 | +33.959 | **+33.943** |
+| Diferencia contra base, 2031 | 2.303 M | **2.289 M** |
+| Percepcion al 86,32%, 2031 | −292 M | **−305 M** |
+
+## Lo que NO se movio
+Escenario base y escenario adverso, identicos en los cinco anios. Gasto total
+309.236 -> 316.461 M. Ano cero en **−6.051.064.048**, diferencia cero.
+7.730,9 / 505,7 / 7.225,2 confirmados por la corrida.
+
+---
+
+# 10. EXHIBIT 20, Y LA REGLA QUE SALE DE EL
+
+El EXHIBIT 20 titulaba 25.166 hogares sin gas de red. Lo derivaba:
+`hogares de la zona x porcentaje publicado a dos decimales`. Contando hogar por
+hogar en los 360 radios da **25.165**. Ahora cuenta.
+
+**Cuando existe el conteo, se usa el conteo.** Los porcentajes son para mostrar,
+nunca para calcular otra cosa encima. Derivar de un intermedio ya redondeado
+mete error donde habia un dato exacto.
+
+---
+
+# 11. QUINTO VERIFICADOR — NUMEROS ESCRITOS A MANO
+
+## De donde sale
+El subtitulo del EXHIBIT 09 decia *"la diferencia: 2.303 millones a favor en
+2031 y 2.924 en 2037"*, escrito a mano en el codigo. Al regenerar el modelo la
+diferencia paso a 2.289 y 2.908, y el grafico habria seguido diciendo 2.303,
+contradiciendo a la tabla del propio capitulo 3 en el PDF final.
+
+Es peor que una cifra mal en el texto: **el texto de un capitulo lo lee alguien;
+el subtitulo de un grafico no lo vuelve a mirar nadie.**
+
+## La regla
+Ningun grafico puede tener un numero escrito a mano en ninguna parte —titulo,
+subtitulo, anotacion, etiqueta o pie—. Todo numero que se muestre sale del CSV.
+
+## El verificador
+`03_scripts/verificar_numeros_a_mano.py`. Parsea el AST de los cinco scripts de
+graficos y busca valores dentro de literales de texto. Los anios sueltos no
+cuentan: 2025 es la etiqueta de un ejercicio, no un dato. Corre enganchado a
+`generar_todos_los_graficos.py`, junto a los otros cuatro.
+
+## Los doce que encontro
+
+| Script | Que estaba a mano |
+|---|---|
+| graficos_cap1 | caida 34,9% · NBI del partido 3,16% · 1,6811% y 1,8370% de 2026 |
+| graficos_cap2 | los 35.994 M del titulo |
+| graficos_cap3 | rigidez 73,1% · flexible 41,4% · 49.751 M y 57.832 M |
+| graficos_cap4 | NBI 3,16% del mapa · el 50% en la cabecera del CSV de reparto |
+| graficos_cap5 | 1,5% · "5 de cada 3.000" · 0,16% |
+
+Los doce ahora se calculan.
+
+**Uno estaba mal:** *"Empleo y vivienda son 5 de cada 3.000 pesos"*. La
+proporcion real es 5 de cada **3.100**. El numero escrito a mano exageraba.
+
+Los otros once eran correctos y fragiles: hubieran sobrevivido a la proxima
+corrida diciendo lo que ya no era cierto.
+
+---
+
+# 12. COLISIONES DE TEXTO
+
+**EXHIBIT 09.** La anotacion iba centrada sobre el area sombreada, que en ese
+grafico tiene el ancho de una linea: el texto quedaba encima de las dos curvas.
+Va al hueco de abajo a la derecha, con linea guia.
+
+**EXHIBIT 06.** Tres defectos. El bloque "percibido X M (Y%)" en dos lineas era
+mas ancho que la barra y se cortaba: va en tres. Las dos etiquetas de mora
+pisaban la franja punteada: salen al costado, la de 2024 a la izquierda y la de
+2025 a la derecha, cada una al lado donde hay lugar. El rotulo del eje pisaba
+el subtitulo: se acorto.
+
+Los 20 pasan los cinco verificadores.
+
+---
+
+# 13. EL ENTORNO — `requirements.txt`
+
+## matplotlib fija en 3.11.1
+matplotlib decide el ancho de cada glifo. Con 3.10.8 los 20 exhibits salian
+distintos aunque el dato fuera el mismo, y el verificador de colisiones acusaba
+al EXHIBIT 14 por una colision que con 3.11.1 no existe.
+
+## geopandas
+Hace falta para el EXHIBIT 15 —el mapa de la tapa— y para el chequeo de
+contiguidad de zonas de `test_censo_zonas.py`, que es la base del capitulo 4.
+Sin geopandas ese test **no falla: no corre**, y un test que no corre no es un
+test que pasa.
+
+## El orden de los tests
+`test_parser.py` reescribe los CSV desde los PDF y se lleva puestas las columnas
+en pesos constantes, asi que los tres que corren despues fallan sobre datos
+sucios. El orden correcto esta en `requirements.txt`.
+
+## Estado final, corrido en ese orden
+Los cinco tests **PASAN**. El quinto verificador da **LIMPIO**. El ano cero del
+modelo reproduce **−6.051.064.048** con diferencia cero.
+
+## Los mapas, verificados
+Los EXHIBIT 14, 15 y 16 se regeneraron con geopandas y se compararon contra la
+version anterior: texto identico y geometria identica. Ya no es una suposicion.

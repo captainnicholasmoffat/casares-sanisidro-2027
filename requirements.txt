@@ -1,0 +1,30 @@
+# Entorno de los scripts de 03_scripts/.
+#
+# Las versiones estan FIJAS a proposito. matplotlib decide el ancho de cada
+# glifo, asi que con otra version los 20 exhibits salen distintos aunque el
+# dato sea el mismo, y el verificador de colisiones acusa colisiones que no
+# existen. Los graficos publicados se hicieron con 3.11.1.
+#
+# geopandas hace falta para dos cosas y las dos importan: el EXHIBIT 15, que
+# es el mapa de la tapa, y el chequeo de contigüidad de zonas de
+# test_censo_zonas.py, que es la base del capitulo 4. Sin geopandas ese test
+# no falla: no corre. Un test que no corre no es un test que pasa.
+#
+#   pip install -r requirements.txt --break-system-packages
+#
+# ORDEN DE LOS TESTS. test_parser.py reescribe los CSV desde los PDF y se lleva
+# puestas las columnas en pesos constantes. Correr, en este orden:
+#
+#   python3 03_scripts/test_parser.py
+#   python3 03_scripts/deflactor.py
+#   python3 03_scripts/parse_sef.py
+#   python3 03_scripts/modelo.py
+#   python3 03_scripts/test_deflactor.py
+#   python3 03_scripts/test_modelo.py
+#   python3 03_scripts/test_serie_comparable.py
+#   python3 03_scripts/test_censo_zonas.py
+
+matplotlib==3.11.1
+geopandas==1.1.4
+pdfplumber
+pandas

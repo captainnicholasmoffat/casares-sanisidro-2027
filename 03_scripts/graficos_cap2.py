@@ -38,32 +38,46 @@ def ex06():
     fig, ax = E.figura(3.1)
     x = [0, 1]
     for i, (anio, dev, per) in enumerate(datos):
-        ax.bar([i], [per / 1e6], width=0.42, color=E.RIO, zorder=3)
-        ax.bar([i], [(dev - per) / 1e6], width=0.42, bottom=per / 1e6,
+        ax.bar([i], [per / 1e6], width=0.62, color=E.RIO, zorder=3)
+        ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
                color=E.CAL, zorder=3)
-        ax.bar([i], [(dev - per) / 1e6], width=0.42, bottom=per / 1e6,
+        ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
                color="none", edgecolor=E.BARRANCA, linewidth=0.9,
                linestyle=(0, (2.5, 1.5)), zorder=4)
-        ax.annotate("percibido\n%s M  (%s)" % (E.numero(per / 1e6),
-                                               E.pct(100 * per / dev, 2)),
+        # "percibido 215.023 M  (93,51%)" en una sola linea es mas ancho que la
+        # barra y se cortaba contra el borde. Va en tres lineas.
+        ax.annotate("percibido\n%s M\n(%s)" % (E.numero(per / 1e6),
+                                                E.pct(100 * per / dev, 2)),
                     (i, per / 2e6), ha="center", va="center", fontsize=6.8,
-                    color=E.PAPEL, weight="bold")
+                    color=E.PAPEL, weight="bold", linespacing=1.35)
+        # La franja de mora es mas fina que su etiqueta en los dos anios: el
+        # texto pisaba la franja punteada. Sale al costado, con una guia, y a
+        # cada barra le toca el lado donde hay lugar: la primera a la
+        # izquierda, la ultima a la derecha.
+        centro = (per + (dev - per) / 2) / 1e6
+        a_la_derecha = (i == len(datos) - 1)
+        borde = i + (0.31 if a_la_derecha else -0.31)
+        lejos = i + (0.42 if a_la_derecha else -0.42)
         ax.annotate("sin cobrar %s M" % E.numero((dev - per) / 1e6),
-                    (i, (per + (dev - per) / 2) / 1e6), ha="center",
-                    va="center", fontsize=6.8, color=E.BARRANCA, weight="bold")
+                    xy=(borde, centro), xytext=(lejos, centro),
+                    ha="left" if a_la_derecha else "right", va="center",
+                    fontsize=6.8, color=E.BARRANCA, weight="bold",
+                    arrowprops=dict(arrowstyle="-", color=E.BARRANCA,
+                                    linewidth=0.7, shrinkA=1, shrinkB=1))
         ax.annotate("devengado %s M" % E.numero(dev / 1e6), (i, dev / 1e6),
                     xytext=(0, 5), textcoords="offset points", ha="center",
                     fontsize=7, color=E.TINTA, weight="bold")
     ax.set_xticks(x)
     ax.set_xticklabels(["2024", "2025"], fontsize=9)
-    ax.set_xlim(-0.55, 1.55)
+    ax.set_xlim(-1.05, 2.05)
     ax.set_ylim(0, max(d[1] for d in datos) / 1e6 * 1.16)
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("millones de pesos corrientes de cada año", fontsize=6.8)
+    ax.set_ylabel("millones de pesos de cada año", fontsize=6.8)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 06",
-              "En 2025 quedaron 35.994 millones sin cobrar de lo ya facturado",
+              "En %d quedaron %s millones sin cobrar de lo ya facturado"
+              % (datos[-1][0], E.numero((datos[-1][1] - datos[-1][2]) / 1e6)),
               "Recursos corrientes devengados contra percibidos. La franja "
               "punteada es mora: plata que el Municipio tiene derecho a cobrar "
               "y no entró.",
