@@ -717,8 +717,8 @@ NOMBRE_MEDIDA = {
         "Publicar compras, contrataciones y licitaciones",
     "Publicar las declaraciones juradas de funcionarios":
         "Publicar las declaraciones juradas de funcionarios",
-    "Reponer el Portal de Datos Abiertos":
-        "Reponer el Portal de Datos Abiertos",
+    "Reponer el Portal de Datos Abiertos o publicar sus datasets por otra via":
+        "Reponer el Portal de Datos Abiertos o publicar sus datasets por otra vía",
     "Publicar la rendicion de cuentas":
         "Publicar la rendición de cuentas",
     "Publicar la Ordenanza Fiscal e Impositiva vigente":

@@ -147,18 +147,27 @@ X_CASILLA, X_TEXTO, X_EVIDENCIA = 0.008, 0.045, 0.30
 
 def ex19():
     """
-    Las ocho medidas de transparencia y el estado de cada una.
+    Las medidas de transparencia de cien dias y el estado de cada una.
 
-    No hay cantidades que medir: hay ocho cosas y ninguna esta hecha. Va como
-    una lista con un casillero por medida, y los ocho casilleros estan vacios.
-    Ocho cuadrados sin tildar se leen antes que cualquier numero, y asi el
-    lector no tiene que creerle a la bajada: lo ve.
+    No hay cantidades que medir: hay una lista de cosas y ninguna esta hecha.
+    Va como una lista con un casillero por medida, todos vacios. Los cuadrados
+    sin tildar se leen antes que cualquier numero, y asi el lector no tiene que
+    creerle a la bajada: lo ve.
 
-    Las ocho salen de data/transparencia_medidas.csv. El CSV esta en ASCII,
-    igual que todos los datos del repo, y los acentos se ponen al MOSTRAR con
-    las tablas de estilo.py.
+    Salen de data/transparencia_medidas.csv, filtrando plazo == cien_dias. La
+    de plazo "mandato" —publicar la ejecucion por zona— queda fuera del grafico
+    a proposito: las de cien dias son publicar cosas que ya existen; esa exige
+    cambiar como se imputa el gasto. Se nombra al pie.
+
+    Ningun numero de este grafico esta escrito a mano: la cantidad de medidas
+    sale de contar las filas.
+
+    El CSV esta en ASCII, igual que todos los datos del repo, y los acentos se
+    ponen al MOSTRAR con las tablas de estilo.py.
     """
-    filas = E.leer("data/transparencia_medidas.csv")
+    todas = E.leer("data/transparencia_medidas.csv")
+    filas = [r for r in todas if r.get("plazo", "cien_dias") == "cien_dias"]
+    del_mandato = [r for r in todas if r.get("plazo") == "mandato"]
     orden = {e: i for i, e in enumerate(ESTADOS)}
     filas.sort(key=lambda r: (orden[r["estado_actual"]], r["medida"]))
     n = len(filas)
@@ -199,16 +208,19 @@ def ex19():
         lado.set_visible(False)
     top, bottom = E.marco(
         fig, "EXHIBIT 19",
-              "Las ocho medidas de transparencia: hoy no hay ninguna cumplida",
+              "Las %d medidas de transparencia: hoy no hay ninguna cumplida" % n,
               "Estado verificado en septiembre de 2026 contra el portal de "
-              "transparencia del Municipio. Ninguna de las ocho cuesta un peso "
-              "de presupuesto y las ocho se cumplen en cien días.",
-        "data/transparencia_medidas.csv. Las ocho medidas son definición del "
+              "transparencia del Municipio. Ninguna de las %d cuesta un peso "
+              "de presupuesto y las %d se cumplen en cien días." % (n, n),
+        "data/transparencia_medidas.csv. Las medidas son definición del "
                "programa de gobierno, no un dato público; el estado de cada "
                "una sí se verificó",
-          "Los ocho casilleros están vacíos porque ninguna medida está "
+          "Los %d casilleros están vacíos porque ninguna medida está "
           "cumplida. El día que una se cumpla, lo dice el CSV y el cuadrado "
-          "se pinta solo.")
+          "se pinta solo.%s"
+          % (n, (" Hay %d más comprometida para el mandato, no para los cien "
+                 "días: exige construir un sistema, no publicar un archivo."
+                 % len(del_mandato)) if del_mandato else ""))
     return E.guardar(fig, "EXHIBIT_19_medidas_transparencia",
                      dict(left=0.022, right=0.985, top=top, bottom=bottom))
 
