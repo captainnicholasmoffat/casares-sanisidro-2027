@@ -50,9 +50,27 @@ PNG correspondiente de `06_charts/`.
 | 5 — Qué hacemos en cada área | 07, 17, 18, 19, 20 |
 | 6 — Contra qué queremos que nos midan | — |
 
+La introducción (`00_INTRODUCCION.md`) no llama ningún exhibit a propósito: plantea
+la pregunta y explica cómo se contesta, no resume el documento.
+
+## Orden de armado
+
+```
+00_INTRODUCCION.md
+CAP1_DIAGNOSTICO.md
+CAP2_GESTION_MEDIDA.md
+CAP3_LA_PLATA.md
+CAP4_MECANISMO.md
+CAP5_SECTORIAL.md
+CAP6_CIERRE.md
+```
+
+La introducción va sin firma en el cuerpo y cierra con una línea al pie:
+*José Luis Casares, candidato a intendente de San Isidro.* El documento tiene que
+sostenerse solo; la línea deja asentado quién responde por él, que es distinto de
+encabezarlo. La tapa no lleva el nombre.
+
 ## Falta
 
-- La introducción, dos páginas. Se escribe última: tiene que conocer el
-  documento entero.
 - El anexo de fuentes, generado desde lo que efectivamente se cite.
 - El armado del PDF, con la paleta de `07_IDENTIDAD_DEL_DOCUMENTO.md` (Drive).
