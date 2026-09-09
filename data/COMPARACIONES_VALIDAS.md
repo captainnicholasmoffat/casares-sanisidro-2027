@@ -1,7 +1,7 @@
 # Qué comparaciones de gasto se sostienen
 
 Pesos constantes de diciembre de 2025. Generado por
-`03_scripts/serie_comparable.py` el 2026-09-08.
+`03_scripts/serie_comparable.py` el 2026-09-09.
 
 Una comparación entre dos años se sostiene **si los dos años miden el
 mismo concepto de gasto**. Si no, no es una comparación: es un cambio de

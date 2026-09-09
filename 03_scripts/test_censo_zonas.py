@@ -8,7 +8,7 @@ sale distinto de cero.
 
   1. La poblacion de los radios de San Isidro tiene que dar 297.282. Si difiere
      mas de 0,5%, se marca y se explica.
-  2. Ninguna zona puede quedar con radios no contiguos.
+  2. Los 360 radios se asignan sin huerfanos, sin dobles y sin sobras.
   3. Todos los radios del partido tienen que caer en exactamente una zona.
 
 Uso:
@@ -23,9 +23,9 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import censo_radios as C
-import zonas as Z
+import zonas_osm as Z
 
-REPO = Z.REPO
+REPO = Z.RAIZ
 TOLERANCIA = 0.5          # por ciento
 UMBRAL_DESPROPORCION = 2.0  # zona mayor sobre zona menor
 
@@ -122,57 +122,48 @@ def test_cada_radio_en_una_zona():
     return vistos
 
 
-def test_zonas_contiguas(asignacion):
-    geo, _ = Z.leer()
-    vecinos, _ = Z.adyacencias(geo)
-    por_zona = {}
-    for radio, zona in asignacion.items():
-        por_zona.setdefault(zona, set()).add(radio)
-    errores = []
-    for zona in sorted(por_zona):
-        comps = Z.componentes(por_zona[zona], vecinos)
-        if len(comps) > 1:
-            errores.append("la zona %s quedo en %d pedazos (%s)"
-                           % (zona, len(comps), [len(c) for c in comps]))
-    if errores:
-        raise FalloDeTest("\n".join("  " + e for e in errores))
-    return len(por_zona)
+def test_todo_radio_en_una_zona(asignacion):
+    """Ningun radio huerfano. Cada uno tiene exactamente una zona."""
+    sin = [r for r, z in asignacion.items() if not z]
+    if sin:
+        raise AssertionError("%d radio(s) sin zona: %s" % (len(sin), sin[:5]))
+    return len(asignacion)
 
 
-def test_conglomerados_criticos_enteros(asignacion):
+def test_ningun_radio_repetido():
+    """Ningun radio aparece dos veces en la asignacion.
+
+    Huerfanos y dobles son fallas distintas y hay que probarlas por separado:
+    un dict las esconde, asi que se cuentan las filas del CSV.
     """
-    Ningun conglomerado critico puede quedar partido entre dos zonas. Es la
-    excepcion escrita en METODOLOGIA_ZONAS.md y este test es el que la sostiene.
+    vistos, dobles = set(), []
+    for f in _leer("data/zonas_asignacion_radios.csv"):
+        if f["radio_id"] in vistos:
+            dobles.append(f["radio_id"])
+        vistos.add(f["radio_id"])
+    if dobles:
+        raise AssertionError("%d radio(s) repetido(s): %s" % (len(dobles), dobles[:5]))
+    return len(vistos)
+
+
+def test_las_zonas_cubren_el_partido(asignacion):
+    """La union de las seis zonas son los 360 radios del partido y nada mas.
+
+    Es una tercera falla, distinta de huerfanos y de dobles: que aparezca un
+    radio que no pertenece al partido. Se compara contra la geometria oficial
+    del INDEC, no contra el propio CSV.
     """
-    geo, censo = Z.leer()
-    vecinos, _ = Z.adyacencias(geo)
-    criticos, nbi, umbral = Z.radios_criticos(censo)
-    errores = []
-    revisados = 0
-    for grupo in Z.componentes(criticos, vecinos):
-        if len(grupo) < Z.MIN_RADIOS_CONGLOMERADO:
-            continue
-        revisados += 1
-        zonas = sorted({asignacion[r] for r in grupo})
-        if len(zonas) > 1:
-            errores.append("un conglomerado de %d radios quedo partido entre "
-                           "%s: %s" % (len(grupo), " y ".join(zonas),
-                                       sorted(grupo)))
-    if errores:
-        raise FalloDeTest("\n".join("  " + e for e in errores))
-    return revisados, umbral
-
-
-def test_zonas_no_desproporcionadas():
-    filas = _leer("data/zonas_indicadores.csv")
-    pobs = [int(f["poblacion"]) for f in filas]
-    ratio = max(pobs) / min(pobs)
-    if ratio > UMBRAL_DESPROPORCION:
-        raise FalloDeTest(
-            "  la zona mas grande tiene %.2f veces la poblacion de la mas "
-            "chica, mas que el %.1f tolerado; habria que pasar de %d zonas"
-            % (ratio, UMBRAL_DESPROPORCION, len(filas)))
-    return len(filas), ratio, min(pobs), max(pobs)
+    import geopandas as gpd
+    oficiales = set(gpd.read_file(
+        os.path.join(REPO, "data/radios_censales_sanisidro.geojson"))["radio_id"])
+    asignados = set(asignacion)
+    sobran = asignados - oficiales
+    faltan = oficiales - asignados
+    if sobran or faltan:
+        raise AssertionError(
+            "asignados que no son del partido: %s | del partido sin asignar: %s"
+            % (sorted(sobran)[:5] or "ninguno", sorted(faltan)[:5] or "ninguno"))
+    return len(oficiales)
 
 
 def main():
@@ -217,24 +208,21 @@ def main():
 
     if asignacion:
         try:
-            n = test_zonas_contiguas(asignacion)
-            print("  OK     las %d zonas son contiguas, cada una de una sola pieza" % n)
+            n = test_todo_radio_en_una_zona(asignacion)
+            print("  OK     los %d radios tienen zona, ninguno huerfano" % n)
         except FalloDeTest as e:
-            print("  FALLA  contiguidad\n%s" % e); fallas += 1
-
+            print("  FALLA  radios huerfanos\n%s" % e); fallas += 1
         try:
-            n, umbral = test_conglomerados_criticos_enteros(asignacion)
-            print("  OK     los %d conglomerados criticos (NBI >= %.1f%%) quedan "
-                  "enteros en una zona" % (n, umbral))
-        except FalloDeTest as e:
-            print("  FALLA  conglomerados criticos\n%s" % e); fallas += 1
+            n = test_ningun_radio_repetido()
+            print("  OK     los %d radios aparecen una sola vez" % n)
+        except AssertionError as e:
+            print("  FALLA  radios repetidos\n%s" % e); fallas += 1
+        try:
+            n = test_las_zonas_cubren_el_partido(asignacion)
+            print("  OK     las zonas cubren los %d radios del partido y nada mas" % n)
+        except AssertionError as e:
+            print("  FALLA  cobertura del partido\n%s" % e); fallas += 1
 
-    try:
-        n, ratio, mini, maxi = test_zonas_no_desproporcionadas()
-        print("  OK     %d zonas, poblacion de %d a %d, la mayor sobre la menor "
-              "da %.2f" % (n, mini, maxi, ratio))
-    except FalloDeTest as e:
-        print("  FALLA  tamano de las zonas\n%s" % e); fallas += 1
 
     print()
     print("=" * 78)

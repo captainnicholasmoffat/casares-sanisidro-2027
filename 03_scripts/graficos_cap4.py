@@ -11,7 +11,7 @@ import estilo as E
 import matplotlib.pyplot as plt
 
 FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, "
-                "procesado con Redatam 7; zonas propias sobre radios censales")
+                "procesado con Redatam 7; límites de localidad de OpenStreetMap")
 
 # --------------------------------------------------------------------------
 # Regla de reparto de la partida vecinal
@@ -40,8 +40,24 @@ FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, 
 # viviendas colectivas, que el Censo no publica por radio y por lo tanto no se
 # pueden asignar a ninguna zona.
 
-INDICADORES_NECESIDAD = ["pct_nbi", "pct_sin_cloaca", "pct_sin_gas_red",
-                         "pct_hacinamiento"]
+# Los cuatro indicadores del indice de necesidad, EN CONTEO DE HOGARES.
+#
+# Antes eran tasas —pct_nbi, pct_sin_cloaca...— y eso repartia mal. Un
+# porcentaje no sabe cuanta gente hay detras: Acassuso, con 936 hogares sin gas,
+# entraba a la formula por una escala parecida a Beccar, que tiene 8.221, porque
+# lo que se comparaba eran tasas. Con el indice en tasas Acassuso quedaba
+# PRIMERA por habitante teniendo el NBI mas bajo del partido.
+#
+# Es la regla 7 otra vez —cuando existe el conteo, se usa el conteo— pero un
+# nivel mas abajo que las cuatro veces anteriores: aca el conteo contra la tasa
+# no corrige una cifra impresa, cambia una DECISION. Reparte 28.908 millones
+# distinto y mueve a Acassuso de primera a quinta.
+#
+# Y es lo que corresponde politicamente: la plata de obra tiene que ir donde hay
+# obras que hacer, y las obras se cuentan en casas. 8.221 hogares sin gas
+# necesitan mas canos que 936, sin importar que proporcion representen de su
+# zona.
+INDICADORES_NECESIDAD = ["nbi", "sin_cloaca", "sin_gas_red", "hacinamiento"]
 PESO_POBLACION = 0.5
 PESO_NECESIDAD = 0.5
 
@@ -64,18 +80,29 @@ def _nbi_del_partido():
 
 
 def indice_de_necesidad(zonas):
-    """Promedio de los cuatro indicadores, cada uno sobre su propio máximo."""
-    maximos = {k: max(float(z[k]) for z in zonas) for k in INDICADORES_NECESIDAD}
-    return {z["zona"]: sum(float(z[k]) / maximos[k]
+    """Participación de cada zona en la carencia del partido, promediada sobre
+    los cuatro indicadores.
+
+        need[zona] = media, sobre los 4 indicadores, de
+                     hogares con la carencia en la zona
+                     ------------------------------------
+                     hogares con la carencia en el partido
+
+    Suma 1 sobre las seis zonas por construcción, así que ya es una
+    participación y no hace falta normalizarla.
+    """
+    totales = {k: sum(int(z[k]) for z in zonas) for k in INDICADORES_NECESIDAD}
+    need = {z["zona"]: sum(int(z[k]) / totales[k]
                            for k in INDICADORES_NECESIDAD) / len(INDICADORES_NECESIDAD)
-            for z in zonas}, maximos
+            for z in zonas}
+    return need, totales
 
 
 def reparto_vecinal():
     zonas = E.zonas_ordenadas()
     total = float([r["monto"] for r in E.leer("data/baseline_2025.csv")
                    if r["clave"] == "obra_publica_vecinal_anio4"][0])
-    need, maximos = indice_de_necesidad(zonas)
+    need, totales = indice_de_necesidad(zonas)
     pob = {z["zona"]: int(z["poblacion"]) for z in zonas}
     sp, sn = sum(pob.values()), sum(need.values())
 
@@ -85,6 +112,7 @@ def reparto_vecinal():
         w = PESO_POBLACION * pob[n] / sp + PESO_NECESIDAD * need[n] / sn
         monto = total * w
         filas.append({"zona": n, "poblacion": pob[n],
+                      "carencias": {k: int(z[k]) for k in INDICADORES_NECESIDAD},
                       "indice_necesidad": need[n], "peso": w, "monto": monto,
                       "pesos_por_habitante": monto / pob[n]})
     filas.sort(key=lambda f: -f["pesos_por_habitante"])
@@ -97,20 +125,26 @@ def reparto_vecinal():
                 % E.numero(total, 2))
         f.write("# Peso = %d%% por población + %d%% por índice de necesidad.\n"
                 % (PESO_POBLACION * 100, PESO_NECESIDAD * 100))
-        f.write("# El índice promedia %d indicadores, cada uno dividido por su\n"
+        f.write("# El índice mide necesidad en HOGARES, no en porcentajes: para\n")
+        f.write("# cada uno de los %d indicadores toma la parte del partido que\n"
                 % len(INDICADORES_NECESIDAD))
-        f.write("# máximo entre las seis zonas: %s.\n"
-                % ", ".join(INDICADORES_NECESIDAD))
+        f.write("# está en la zona, y promedia. Los %d: %s.\n"
+                % (len(INDICADORES_NECESIDAD), ", ".join(INDICADORES_NECESIDAD)))
+        _gas = [int(z["sin_gas_red"]) for z in zonas]
+        f.write("# Las obras se cuentan en casas: %s hogares sin gas necesitan\n"
+                % E.numero(max(_gas)))
+        f.write("# más caños que %s, sin importar la proporción de su zona.\n"
+                % E.numero(min(_gas)))
         f.write("# Población en viviendas particulares, %s personas.\n"
                 % E.numero(sp))
         w_csv = csv.writer(f)
         w_csv.writerow(["zona", "poblacion"]
-                       + ["max_" + k for k in INDICADORES_NECESIDAD]
+                       + ["hogares_" + k for k in INDICADORES_NECESIDAD]
                        + ["indice_necesidad", "peso_pct", "monto",
                           "pesos_por_habitante", "fuente"])
         for x in filas:
             w_csv.writerow([x["zona"], x["poblacion"]]
-                           + [round(maximos[k], 4) for k in INDICADORES_NECESIDAD]
+                           + [x["carencias"][k] for k in INDICADORES_NECESIDAD]
                            + [round(x["indice_necesidad"], 6),
                               round(100 * x["peso"], 4), round(x["monto"], 2),
                               round(x["pesos_por_habitante"], 2),
@@ -409,9 +443,15 @@ def ex15():
         p = r.geometry.representative_point()
         prop = (r["pct_nbi"] - vmin) / (vmax - vmin) if vmax > vmin else 0
         items.append({
+            # SOLO EL NOMBRE. El porcentaje va en la tabla de al lado.
+            # El color ya lleva el dato: la rampa dice cuanta carencia hay en
+            # cada zona y el numero adentro del poligono lo repetia. Lo que el
+            # poligono si necesita es que se sepa como se llama.
+            # Ademas resuelve el problema de raiz y no un caso: Acassuso tiene
+            # 16 radios y su etiqueta no entraba adentro, pero un mapa que solo
+            # lleva nombres funciona con cualquier geometria.
             "x": p.x, "y": p.y, "area": r.geometry.area,
-            "texto": "%s\n%s NBI" % (E.zona_bonita(r["zona"]),
-                                     E.pct(r["pct_nbi"], 2)),
+            "texto": E.zona_bonita(r["zona"]),
             "color": E.PAPEL if prop > 0.55 else E.TINTA,
             "halo": E.TINTA if prop > 0.55 else E.PAPEL})
 
@@ -426,16 +466,47 @@ def ex15():
               "insatisfechas. El partido entero promedia %s."
               % E.pct(_nbi_del_partido(), 2),
         FUENTE_CENSO,
-          "Los límites de las zonas son propios, no oficiales. Lo único oficial "
-          "es la geometría de los 360 radios censales del INDEC y los seis "
-          "puntos BAHRA de las localidades. Ver data/METODOLOGIA_ZONAS.md.")
-    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI", y=top - 0.055)
+          "Límites de localidades según OpenStreetMap, que no es fuente "
+          "oficial; radios censales del INDEC, Censo 2022. Cada radio va a la "
+          "localidad que contiene su punto representativo. Ver "
+          "data/METODOLOGIA_ZONAS.md.")
+    # La rampa va sin rotulo: el titulo de la tabla de al lado ya lo dice,
+    # y con los dos el numero de la escala se pisaba con el texto.
+    _leyenda_rampa(fig, vmin, vmax, "", y=top - 0.055)
     # El area del mapa se fija ANTES de colocar los nombres. Si se movia
     # despues, cada etiqueta cambiaba de lugar y de tamaño relativo y el
     # trabajo de medirlas para que no se pisaran se perdia entero.
-    fig.subplots_adjust(left=0.02, right=0.98, top=top, bottom=bottom)
+    fig.subplots_adjust(left=0.38, right=0.99, top=top, bottom=bottom)
+    _tabla_nbi(fig, z, y_top=top - 0.175)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi")
+
+
+def _tabla_nbi(fig, z, y_top, x=0.025, ancho=0.235):
+    """Las seis zonas y su NBI, al costado del mapa.
+
+    Ordenadas de peor a mejor, no alfabeticamente: el orden tiene que decir
+    algo. El mapa muestra territorio y la tabla muestra numeros — una division
+    mas limpia que meter las dos cosas adentro de un poligono.
+    """
+    filas = sorted(z.itertuples(), key=lambda r: -float(r.pct_nbi))
+    fig.text(x, y_top + 0.030, "% de hogares con NBI", fontsize=6.3,
+             color=E.TINTA, weight="bold")
+    fig.lines.append(plt.Line2D([x, x + ancho], [y_top + 0.019] * 2,
+                                transform=fig.transFigure, color=E.TINTA,
+                                linewidth=0.8))
+    for i, r in enumerate(filas):
+        y = y_top - 0.008 - i * 0.031
+        # 6,3 y no 7: "Boulogne Sur Mer" a 7 puntos es mas ancho que la
+        # columna y se pisaba con su propio valor. Lo denuncio el verificador
+        # de colisiones, no el ojo.
+        fig.text(x, y, E.zona_bonita(r.zona), fontsize=6.3, color=E.TINTA,
+                 va="center")
+        fig.text(x + ancho, y, E.pct(float(r.pct_nbi), 2), fontsize=6.3,
+                 color=E.TINTA, weight="bold", ha="right", va="center")
+        fig.lines.append(plt.Line2D([x, x + ancho], [y - 0.0155] * 2,
+                                    transform=fig.transFigure, color=E.CAL,
+                                    linewidth=0.5))
 
 
 def ex16():

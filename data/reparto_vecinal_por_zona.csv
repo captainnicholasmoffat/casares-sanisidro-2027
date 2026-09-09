@@ -1,13 +1,16 @@
 # Reparto de la partida vecinal: el 50%% de la obra pública del
 # año 4, o sea 28.907.854.675,13 pesos de diciembre de 2025.
 # Peso = 50% por población + 50% por índice de necesidad.
-# El índice promedia 4 indicadores, cada uno dividido por su
-# máximo entre las seis zonas: pct_nbi, pct_sin_cloaca, pct_sin_gas_red, pct_hacinamiento.
+# El índice mide necesidad en HOGARES, no en porcentajes: para
+# cada uno de los 4 indicadores toma la parte del partido que
+# está en la zona, y promedia. Los 4: nbi, sin_cloaca, sin_gas_red, hacinamiento.
+# Las obras se cuentan en casas: 8.221 hogares sin gas necesitan
+# más caños que 936, sin importar la proporción de su zona.
 # Población en viviendas particulares, 295.978 personas.
-zona,poblacion,max_pct_nbi,max_pct_sin_cloaca,max_pct_sin_gas_red,max_pct_hacinamiento,indice_necesidad,peso_pct,monto,pesos_por_habitante,fuente
-Beccar,50522,5.77,11.29,41.46,14.69,0.996101,23.9427,6921318948.43,136996.14,data/baseline_2025.csv y data/zonas_indicadores.csv
-Boulogne Sur Mer,55157,5.77,11.29,41.46,14.69,0.882328,22.9658,6638926862.84,120364.18,data/baseline_2025.csv y data/zonas_indicadores.csv
-Villa Adelina,52954,5.77,11.29,41.46,14.69,0.480249,16.3742,4733435189.24,89387.68,data/baseline_2025.csv y data/zonas_indicadores.csv
-San Isidro,41213,5.77,11.29,41.46,14.69,0.336956,12.1743,3519329122.53,85393.67,data/baseline_2025.csv y data/zonas_indicadores.csv
-Acassuso,54779,5.77,11.29,41.46,14.69,0.318431,14.1795,4098979801.3,74827.58,data/baseline_2025.csv y data/zonas_indicadores.csv
-Martinez,41353,5.77,11.29,41.46,14.69,0.218362,10.3635,2995864750.79,72446.13,data/baseline_2025.csv y data/zonas_indicadores.csv
+zona,poblacion,hogares_nbi,hogares_sin_cloaca,hogares_sin_gas_red,hogares_hacinamiento,indice_necesidad,peso_pct,monto,pesos_por_habitante,fuente
+Beccar,63719,1088,2321,8221,2794,0.330401,27.2842,7887275760.41,123782.16,data/baseline_2025.csv y data/zonas_indicadores.csv
+Boulogne Sur Mer,74832,1280,2295,6947,3121,0.340009,29.6419,8568845596.38,114507.77,data/baseline_2025.csv y data/zonas_indicadores.csv
+Villa Adelina,35542,356,722,2034,950,0.101194,11.0639,3198322399.16,89987.13,data/baseline_2025.csv y data/zonas_indicadores.csv
+San Isidro,45872,354,574,3221,809,0.103026,12.9005,3729271998.81,81297.35,data/baseline_2025.csv y data/zonas_indicadores.csv
+Acassuso,11035,45,102,936,120,0.019947,2.8615,827200770.02,74961.56,data/baseline_2025.csv y data/zonas_indicadores.csv
+Martinez,64978,374,474,3806,775,0.105423,16.248,4696938150.35,72285.05,data/baseline_2025.csv y data/zonas_indicadores.csv

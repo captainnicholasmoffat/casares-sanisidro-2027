@@ -51,6 +51,11 @@ try:
 except Exception:                                    # pragma: no cover
     _revisar_a_mano = None
 
+try:
+    from verificar_geografia import verificar as _verificar_geografia
+except Exception:                                    # pragma: no cover
+    _verificar_geografia = None
+
 SCRIPTS_DE_GRAFICOS = ["graficos_cap1.py", "graficos_cap2.py",
                        "graficos_cap3.py", "graficos_cap4.py",
                        "graficos_cap5.py"]
@@ -117,6 +122,12 @@ if __name__ == "__main__":
     a_mano = numeros_a_mano()
     if a_mano:
         problemas.append(("los scripts", "numeros escritos a mano", a_mano))
+    # SEPTIMO. Los seis anteriores controlan COMO se dibuja un grafico; ninguno
+    # si lo que dibuja es cierto. Se puede tener un grafico perfectamente
+    # formado que miente, y eso fue exactamente lo que paso con el mapa.
+    if _verificar_geografia is not None and _verificar_geografia():
+        problemas.append(("el mapa", "la geografia no cae donde dice",
+                          ["ver: python3 03_scripts/verificar_geografia.py"]))
     print()
     if not pedidos and SIN_DATO:
         print("no generados por falta de dato: %s" % ", ".join(sorted(SIN_DATO)))
