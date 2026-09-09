@@ -523,3 +523,48 @@ def ex16():
     _etiquetas_sin_pisarse(fig, ax, items, radios, fontsize=6.6,
                            ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi")
+
+
+def tapa_mapa():
+    """El mapa de la tapa: el MISMO de ex15, sin marco.
+
+    En la tapa el mapa es una imagen que plantea una pregunta, no un exhibit
+    citado: va sin el rotulo "EXHIBIT 15" y sin la linea de fuente. El pie de
+    fuente vive en el §1.1, que es donde el dato se usa. Un lector que lo ve en
+    la tapa sin entenderlo del todo y lo reencuentra explicado en el capitulo 1,
+    entiende el documento.
+
+    No se recorta el PNG del exhibit: se dibuja de nuevo sin el marco. Recortar
+    depende de que el marco mida siempre lo mismo, y no tiene por que.
+    """
+    import geopandas as gpd
+
+    z = gpd.read_file(os.path.join(E.DATA, "zonas_propuestas_sanisidro.geojson"))
+    z = z.to_crs(CRS_METRICO)
+    z["pct_nbi"] = z["pct_nbi"].astype(float)
+    vmin, vmax = z["pct_nbi"].min(), z["pct_nbi"].max()
+
+    fig, ax = E.figura(4.15)
+    z.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
+           edgecolor=E.PAPEL, linewidth=1.6, zorder=3)
+    z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=1.1, zorder=4)
+
+    items = []
+    for _, r in z.iterrows():
+        p = r.geometry.representative_point()
+        prop = (r["pct_nbi"] - vmin) / (vmax - vmin) if vmax > vmin else 0
+        items.append({
+            "x": p.x, "y": p.y, "area": r.geometry.area,
+            "texto": "%s\n%s NBI" % (E.zona_bonita(r["zona"]),
+                                     E.pct(r["pct_nbi"], 2)),
+            "color": E.PAPEL if prop > 0.55 else E.TINTA,
+            "halo": E.TINTA if prop > 0.55 else E.PAPEL})
+
+    E.apagar_ejes(ax)
+    E.sin_offset(ax)
+    _barra_escala(ax, z)
+    _norte(ax, z)
+    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI", y=0.955)
+    fig.subplots_adjust(left=0.02, right=0.98, top=0.925, bottom=0.02)
+    _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
+    return E.guardar(fig, "TAPA_mapa_zonas")

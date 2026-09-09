@@ -104,10 +104,14 @@ def ex02():
         pos = [xx - 0.39 + ancho * (i + 0.5) for xx in x]
         vals = [float(z[col]) for z in zonas]
         ax.bar(pos, vals, width=ancho * 0.9, color=color, zorder=3)
-        # Etiqueta la serie sobre la primera zona, sin leyenda flotante.
-        ax.annotate(etiqueta, (pos[0], vals[0]), xytext=(0, 5),
+        # Etiqueta la serie sobre su barra MAS ALTA, no sobre la primera zona.
+        # Sobre la primera, las cuatro etiquetas caian una encima de otra y
+        # detras de las barras vecinas: el verificador de colisiones no lo veia
+        # porque mide texto contra texto, y esto era texto contra barra.
+        k = max(range(len(vals)), key=lambda j: vals[j])
+        ax.annotate(etiqueta, (pos[k], vals[k]), xytext=(0, 4),
                     textcoords="offset points", ha="center", fontsize=6.2,
-                    color=color, weight="bold")
+                    color=color, weight="bold", zorder=6)
     ax.set_xticks(x)
     ax.set_xticklabels([E.dos_lineas(E.zona_bonita(z["zona"])) for z in zonas],
                        fontsize=7.2, linespacing=1.25)

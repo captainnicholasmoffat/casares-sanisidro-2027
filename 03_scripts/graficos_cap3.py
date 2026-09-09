@@ -283,11 +283,16 @@ def ex12():
             acum += v
         topes.append(y_texto)
         signo = "+" if v >= 0 and not total else ("" if total else "")
+        # La etiqueta va SIEMPRE del lado de afuera de la barra. En un paso
+        # negativo el extremo esta abajo, y poner el texto "arriba del punto"
+        # lo metia adentro de la barra, en el mismo color: se leia "-2" y "M"
+        # y el resto desaparecia. Lo encontro el verificador de texto tapado.
+        hacia_arriba = (v >= 0) if not total else (y_texto >= 0)
         ax.annotate("%s%s M" % (signo, E.numero(v / 1e6)), (i, y_texto),
-                    xytext=(0, 7 if y_texto >= 0 else -11),
+                    xytext=(0, 7 if hacia_arriba else -11),
                     textcoords="offset points", ha="center",
-                    va="bottom" if y_texto >= 0 else "top", fontsize=6.6,
-                    color=color, weight="bold")
+                    va="bottom" if hacia_arriba else "top", fontsize=6.6,
+                    color=color, weight="bold", zorder=6)
     ax.axhline(0, color=E.TINTA, linewidth=0.9, zorder=4)
     # El eje se abre por abajo lo suficiente para que las etiquetas de las dos
     # barras negativas caigan DENTRO del grafico y no sobre los rotulos del

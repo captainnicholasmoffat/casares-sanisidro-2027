@@ -97,10 +97,14 @@ def main(pedidos=None):
         pisados = E.COLISIONES.get(nombre) or []
         if pisados:
             problemas.append((nombre, "textos que se pisan", pisados))
+        tapados = E.TEXTO_TAPADO.get(nombre) or []
+        if tapados:
+            problemas.append((nombre, "texto tapado por el grafico", tapados))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
-                 "FALLA" if (sucios or fuera or sin_tilde or pisados) else "OK"))
+                 "FALLA" if (sucios or fuera or sin_tilde or pisados
+                             or tapados) else "OK"))
     return hechos, problemas
 
 
@@ -131,5 +135,5 @@ if __name__ == "__main__":
                 print("      %s" % d)
         sys.exit(1)
     print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
-          "ninguna palabra sin tilde, ningún texto pisado y ningún número "
-          "escrito a mano" % len(hechos))
+          "ninguna palabra sin tilde, ningún texto pisado, ningún texto "
+          "tapado por el gráfico y ningún número escrito a mano" % len(hechos))

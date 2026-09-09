@@ -27,6 +27,7 @@ import re
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
 from matplotlib.ticker import FuncFormatter, MaxNLocator
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -299,6 +300,7 @@ def guardar(fig, nombre, ajuste=None, encajar=True):
     DESBORDES[nombre] = verificar_desborde(fig)
     SIN_ACENTO[nombre] = verificar_acentos(fig)
     COLISIONES[nombre] = verificar_colisiones(fig)
+    TEXTO_TAPADO[nombre] = verificar_texto_tapado(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -311,6 +313,118 @@ def guardar(fig, nombre, ajuste=None, encajar=True):
 DESBORDES = {}
 SIN_ACENTO = {}
 COLISIONES = {}
+
+
+TEXTO_TAPADO = {}
+
+
+def verificar_texto_tapado(fig, umbral=0.22):
+    """
+    SEXTO VERIFICADOR. Falla si un texto queda encima de una barra, una linea
+    o un area rellena y por lo tanto no se puede leer.
+
+    Por que existe
+    --------------
+    El EXHIBIT 02 rotulaba sus cuatro series sobre la PRIMERA zona. Las cuatro
+    etiquetas caian una encima de otra y, peor, detras de las barras vecinas.
+    Paso los cinco verificadores anteriores y nadie lo vio hasta que alguien
+    miro el PDF armado: verificar_colisiones() mide texto contra TEXTO, y esto
+    era texto contra BARRA.
+
+    Que mira
+    --------
+    Cada texto contra cada elemento con relleno (barras, rectangulos, areas) y
+    contra cada linea gruesa. Denuncia cuando se solapan y ademas:
+      - el elemento se dibuja por ENCIMA del texto (zorder mayor), o
+      - el texto y el relleno tienen un contraste bajo.
+
+    Que NO mira
+    -----------
+    Los textos con halo (path_effects) estan hechos a proposito para ir encima
+    de una forma: las etiquetas de los mapas. Se saltean.
+    Tampoco los textos con caja propia (bbox), por lo mismo.
+    """
+    from matplotlib.patches import Rectangle
+
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+
+    def luminancia(c, sobre=None):
+        """Luminancia percibida. Si el color tiene alpha, se mezcla contra el
+        fondo antes de medir: un relleno al 16% no tapa nada, y tratarlo como
+        opaco denunciaba gráficos que se leen perfecto."""
+        try:
+            r, g, b, a = mcolors.to_rgba(c)
+        except Exception:
+            return None
+        lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+        if sobre is not None and a < 1:
+            lum = a * lum + (1 - a) * sobre
+        return lum
+
+    fondo = luminancia(PAPEL)
+    fuera = []
+
+    for ax in fig.get_axes():
+        formas = []
+        for art in list(ax.patches) + list(ax.collections):
+            if not getattr(art, "get_visible", lambda: True)():
+                continue
+            fc = None
+            try:
+                fc = art.get_facecolor()
+                if hasattr(fc, "__len__") and len(fc) and hasattr(fc[0], "__len__"):
+                    fc = fc[0]
+            except Exception:
+                pass
+            if isinstance(art, Rectangle) and art.get_width() == 0:
+                continue
+            try:
+                bb = art.get_window_extent(ren)
+            except Exception:
+                continue
+            if bb.width < 2 or bb.height < 2:
+                continue
+            formas.append((bb, art.get_zorder(), fc))
+
+        for t in ax.texts:
+            if t.get_path_effects():          # halo: va encima a proposito
+                continue
+            if t.get_bbox_patch() is not None:  # caja propia: idem
+                continue
+            txt = (t.get_text() or "").strip()
+            if not txt:
+                continue
+            try:
+                tb = t.get_window_extent(ren)
+            except Exception:
+                continue
+            area_t = max(tb.width * tb.height, 1e-9)
+            lum_t = luminancia(t.get_color())
+            for bb, z, fc in formas:
+                ancho = min(tb.x1, bb.x1) - max(tb.x0, bb.x0)
+                alto = min(tb.y1, bb.y1) - max(tb.y0, bb.y0)
+                if ancho <= 0 or alto <= 0:
+                    continue
+                frac = (ancho * alto) / area_t
+                if frac < umbral:
+                    continue
+                # ESTRICTAMENTE mayor: a igual zorder matplotlib dibuja el
+                # texto DESPUES del relleno, asi que se lee. Con >= se
+                # denunciaba cada etiqueta escrita adentro de su propia barra.
+                tapado = z > t.get_zorder()
+                lum_f = luminancia(fc, sobre=fondo)
+                poco_contraste = (lum_t is not None and lum_f is not None
+                                  and abs(lum_t - lum_f) < 0.28
+                                  and (fondo is None or abs(lum_f - fondo) > 0.05))
+                if tapado or poco_contraste:
+                    fuera.append(
+                        "%r queda %s un elemento del grafico (%d%% del texto)"
+                        % (txt[:40],
+                           "detras de" if tapado else "sobre",
+                           round(frac * 100)))
+                    break
+    return fuera
 
 # Palabras que en un documento en español SIEMPRE llevan tilde. Si alguna
 # aparece sin tilde en un texto que se dibuja, el grafico no se publica.
