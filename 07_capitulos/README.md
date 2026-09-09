@@ -76,7 +76,7 @@ encabezarlo. La tapa no lleva el nombre.
 python3 03_scripts/armar_pdf.py
 ```
 
-Produce `PROGRAMA_SAN_ISIDRO_2027.pdf`: 53 páginas, tapa · índice · introducción
+Produce `PROGRAMA_SAN_ISIDRO_2027.pdf`: 57 páginas, tapa · índice · introducción
 · capítulos 1 a 6 · anexo.
 
 El corte por `# NO VA AL PDF` es un `split`, y el script **relee el PDF armado y

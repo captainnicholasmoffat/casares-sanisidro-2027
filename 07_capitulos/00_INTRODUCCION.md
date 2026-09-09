@@ -8,7 +8,7 @@ El documento define entonces tres prioridades —Seguridad Ciudadana, Espacio P�
 
 **Las palabras empleo, vivienda, salud, educación, pobreza y desarrollo social no aparecen en ninguna parte de él.**
 
-Al mismo tiempo, en San Isidro, 25.165 hogares cocinan sin gas de red. El Municipio destina a política de empleo el 0,05% de su presupuesto y a infraestructura habitacional el 0,10%. Y no es un municipio pobre: invierte en obra pública más del triple que el municipio bonaerense típico, y está cuarto entre 106 en ese rubro.
+Al mismo tiempo, en San Isidro, 25.165 hogares cocinan sin gas de red, y seis de cada diez están en las dos localidades donde vive casi la mitad del partido. El Municipio destina a política de empleo el 0,05% de su presupuesto y a infraestructura habitacional el 0,10%. Y no es un municipio pobre: invierte en obra pública más del triple que el municipio bonaerense típico, y está cuarto entre 106 en ese rubro.
 
 De ahí sale la pregunta que este programa se hace, y es la única pregunta que lo origina:
 
@@ -28,7 +28,7 @@ Las series fiscales salen de los informes de ejecución presupuestaria y las ren
 
 **El modelo, los datos, las series y los veinte gráficos son públicos y reproducibles.** Están en un repositorio abierto, con las pruebas automáticas que los verifican. Cualquiera puede correrlos y llegar a los mismos números, o encontrar que no llega.
 
-Eso incluye los límites. Donde un dato no se pudo validar, el documento lo dice en el capítulo que lo usa y no en una nota al final: los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados uno por uno; el Municipio cambió su nomenclador de funciones en 2025, lo que vuelve incomparable buena parte de las series interanuales; y no existe información pública sobre el costo de financiamiento municipal, razón por la cual este programa no propone endeudarse.
+Eso incluye los límites. Donde un dato no se pudo validar, el documento lo dice en el capítulo que lo usa y no en una nota al final: los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados uno por uno; los límites de las localidades son de OpenStreetMap, porque la Municipalidad no publica los suyos; el Municipio cambió su nomenclador de funciones en 2025, lo que vuelve incomparable buena parte de las series interanuales; y no existe información pública sobre el costo de financiamiento municipal, razón por la cual este programa no propone endeudarse.
 
 Un programa de gobierno que pide que le crean no se puede auditar. Éste pide que le revisen las cuentas.
 
