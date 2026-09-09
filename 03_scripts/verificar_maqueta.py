@@ -51,6 +51,18 @@ MIN_LLENADO = 0.80        # de la altura util, por columna
 MIN_LINEA_SUELTA = 4      # palabras: menos que esto arriba de una columna es viuda
 
 
+def _es_remate(linea):
+    """Un remate o una cifra destacada NO es un titulo, aunque mida lo mismo.
+
+    Los dos van en cuerpo grande y los dos cierran una seccion, asi que estar al
+    pie de la pagina sin nada debajo es su lugar y no un defecto. Un titulo
+    anuncia lo que viene; un remate cierra lo que pasó. Se distinguen por como
+    terminan: el remate es una oracion y termina en punto.
+    """
+    texto = " ".join(w["text"] for w in linea).strip()
+    return texto.endswith((".", "!", "?", "”", '"'))
+
+
 def _lineas(ws, tol=2.6):
     """Agrupa palabras en lineas visuales, ordenadas de arriba a abajo."""
     ls = []
@@ -137,7 +149,8 @@ def revisar(ruta=PDF):
             # --- 2. titulo al pie de su columna ---
             for c in (0, 1):
                 tits = [l for l in cols[c]
-                        if max(w.get("size", 0) for w in l) > CUERPO_TITULO]
+                        if max(w.get("size", 0) for w in l) > CUERPO_TITULO
+                        and not _es_remate(l)]
                 if not tits:
                     continue
                 y = max(w["top"] for w in tits[-1])

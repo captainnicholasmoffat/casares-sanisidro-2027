@@ -206,34 +206,72 @@ def ex11():
     obra_vecinal = float([r["monto"] for r in E.leer("data/baseline_2025.csv")
                           if r["clave"] == "obra_publica_vecinal_anio4"][0])
 
+    # --------------------------------------------------------------
+    # LOS ROTULOS VAN AFUERA DE LOS SEGMENTOS, NO ADENTRO
+    # --------------------------------------------------------------
+    # Antes cada tramo llevaba su nombre CENTRADO adentro de su segmento. El
+    # nombre mas largo —"Contratos de servicios / no dentro del ejercicio"— es
+    # mas ancho que su segmento, asi que se derramaba sobre los dos vecinos: la
+    # parte que caia sobre el tramo oscuro era texto oscuro sobre oscuro y la
+    # que caia sobre el tramo claro era texto claro sobre claro. Desaparecian
+    # letras enteras y se leia "ontratos de servicio".
+    #
+    # Ahora el nombre y la cifra van ARRIBA de la barra, alineados al borde de
+    # su tramo, cada uno en el color de su tramo. Nada queda adentro, asi que
+    # el ancho del texto deja de depender del ancho del segmento.
     fig, ax = E.figura(2.9)
     tramos = [("Personal y deuda\nno se tocan", nucleo, E.TINTA),
-              ("Contratos de servicios\nno dentro del ejercicio", contratos, E.CAL),
+              ("Contratos de servicios\nno dentro del ejercicio", contratos,
+               E.CAL, E.TINTA),
               ("Gasto flexible\nreasignable", flexible, E.RIO)]
     izq = 0.0
-    for etiqueta, v, color in tramos:
-        ax.barh([0], [v / 1e6], left=izq / 1e6, height=0.34, color=color, zorder=3)
-        ax.annotate("%s\n%s M   %s" % (etiqueta, E.numero(v / 1e6),
+    for tramo in tramos:
+        etiqueta, v, color = tramo[0], tramo[1], tramo[2]
+        # El tramo claro se rotula en Tinta: su propio color no se lee sobre
+        # papel.
+        tinta_rotulo = tramo[3] if len(tramo) > 3 else color
+        ax.barh([0], [v / 1e6], left=izq / 1e6, height=0.30, color=color,
+                zorder=3)
+        # El ultimo tramo llega al borde derecho del eje: si se alineara a la
+        # izquierda como los otros, su cifra se saldria del lienzo.
+        ultimo = izq + v >= total - 1
+        ax.annotate("%s\n%s M · %s" % (etiqueta, E.numero(v / 1e6),
                                        E.pct(100 * v / total, 1)),
-                    ((izq + v / 2) / 1e6, 0), ha="center", va="center",
-                    fontsize=6.4, weight="bold",
-                    color=E.TINTA if color is E.CAL else E.PAPEL)
+                    ((izq + v) / 1e6 if ultimo else izq / 1e6, 0.20),
+                    xytext=(-2 if ultimo else 2, 3), textcoords="offset points",
+                    ha="right" if ultimo else "left", va="bottom",
+                    fontsize=6.4, weight="bold", color=tinta_rotulo,
+                    linespacing=1.3)
         izq += v
-    # Debajo, que se lleva el margen flexible.
+
+    # --------------------------------------------------------------
+    # LAS DOS PROPUESTAS CUELGAN DEL TRAMO FLEXIBLE
+    # --------------------------------------------------------------
+    # Antes flotaban abajo sin nada que las atara al tramo del que salen, y se
+    # leian como un segundo grafico pegado. La guia vertical punteada baja
+    # desde el borde izquierdo del tramo flexible y las dos barras arrancan
+    # exactamente ahi: se ve que salen de ese tramo y de ningun otro.
     base_x = (nucleo + contratos) / 1e6
+    y_ultima = -0.55 - 0.24
+    ax.plot([base_x, base_x], [-0.16, y_ultima - 0.13], color=E.RIO,
+            linewidth=0.8, linestyle=(0, (2, 2)), zorder=2)
+    ax.annotate("de ese margen flexible salen las dos propuestas",
+                (base_x, -0.30), xytext=(6, 0), textcoords="offset points",
+                ha="left", va="center", fontsize=6.0, color=E.RIO,
+                style="italic")
     for i, (etiqueta, v, color) in enumerate(
             [("programa de empleo y vivienda", programa, E.BARRANCA),
              ("obra pública vecinal (cap. 4)", obra_vecinal, E.AMBAR)]):
         ax.barh([-0.55 - i * 0.24], [v / 1e6], left=base_x, height=0.17,
                 color=color, zorder=3)
-        # La etiqueta va a la izquierda del extremo de la barra: hacia la
-        # derecha no hay lienzo y el texto se saldria de la imagen.
+        # La etiqueta va a la izquierda del arranque de la barra: hacia la
+        # derecha queda menos de un cuarto del eje y el texto se saldria.
         ax.annotate("%s: %s M, el %s del flexible"
                     % (etiqueta, E.numero(v / 1e6), E.pct(100 * v / flexible, 1)),
                     (base_x, -0.55 - i * 0.24), xytext=(-6, 0),
                     textcoords="offset points", va="center", ha="right",
                     fontsize=6.4, color=color, weight="bold")
-    ax.set_ylim(-1.15, 0.42)
+    ax.set_ylim(-1.05, 0.72)
     ax.set_yticks([])
     ax.set_xlim(0, total / 1e6 * 1.02)
     E.podar_tick_superior(ax)
@@ -251,8 +289,12 @@ def ex11():
           "Las dos propuestas juntas se llevan el %s del gasto flexible. "
           "Caben, pero no queda lugar para una tercera del mismo tamaño."
           % E.pct(100 * (programa + obra_vecinal) / flexible, 1))
+    # left=0.32 reservaba un tercio del lienzo para las etiquetas de las dos
+    # propuestas y dejaba la barra apilada metida en el 68% de la derecha, con
+    # los segmentos mas angostos todavia que sus rotulos. Ahora los rotulos
+    # estan afuera y la barra usa el ancho entero.
     return E.guardar(fig, "EXHIBIT_11_rigidez_del_gasto",
-                     dict(left=0.32, right=0.985, top=top, bottom=bottom))
+                     dict(left=0.06, right=0.985, top=top, bottom=bottom))
 
 
 def ex12():

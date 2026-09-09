@@ -106,11 +106,15 @@ def main(pedidos=None):
         tapados = E.TEXTO_TAPADO.get(nombre) or []
         if tapados:
             problemas.append((nombre, "texto tapado por el grafico", tapados))
+        derramados = E.DERRAMADOS.get(nombre) or []
+        if derramados:
+            problemas.append((nombre, "texto derramado fuera de su forma",
+                              derramados))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
                  "FALLA" if (sucios or fuera or sin_tilde or pisados
-                             or tapados) else "OK"))
+                             or tapados or derramados) else "OK"))
     return hechos, problemas
 
 
@@ -146,9 +150,23 @@ if __name__ == "__main__":
             for d in detalle[:6]:
                 print("      %s" % d)
         sys.exit(1)
+    # pies.json SE ACTUALIZA, NO SE REESCRIBE.
+    # El armador del PDF lee de aca el rotulo, el titulo y la bajada de cada
+    # exhibit. Volcar E.PIES tal cual borraba los diecinueve que no se
+    # regeneraron cuando la fabrica corre con un exhibit puntual —"generar 16"—
+    # y esos diecinueve perdian su titulo en el PDF sin que nada fallara: el
+    # armador cae al texto del marcador del capitulo, que es mas corto, y el
+    # titulo que dice la conclusion desaparece en silencio.
     import json as _json
-    with open(os.path.join(E.SALIDA, "pies.json"), "w", encoding="utf-8") as _f:
-        _json.dump(E.PIES, _f, ensure_ascii=False, indent=1)
+    ruta_pies = os.path.join(E.SALIDA, "pies.json")
+    previos = {}
+    if os.path.exists(ruta_pies):
+        with open(ruta_pies, encoding="utf-8") as _f:
+            previos = _json.load(_f)
+    previos.update(E.PIES)
+    with open(ruta_pies, "w", encoding="utf-8") as _f:
+        _json.dump(previos, _f, ensure_ascii=False, indent=1)
     print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
           "ninguna palabra sin tilde, ningún texto pisado, ningún texto "
-          "tapado por el gráfico y ningún número escrito a mano" % len(hechos))
+          "tapado por el gráfico, ningún rótulo derramado fuera de su forma y "
+          "ningún número escrito a mano" % len(hechos))

@@ -354,6 +354,18 @@ def _cajas_de_figura(fig, salvo=()):
     return cajas
 
 
+# Cuanto tiene que separarse una etiqueta de la de al lado, en pixeles del
+# lienzo de 1600 px. Menos que esto y las dos se leen como un solo bloque.
+HOLGURA_ETIQUETA = 26
+
+
+def _con_aire(caja, aire=HOLGURA_ETIQUETA):
+    """La caja agrandada, para exigir separacion y no solo no-solape."""
+    from matplotlib.transforms import Bbox
+    return Bbox.from_extents(caja.x0 - aire, caja.y0 - aire,
+                             caja.x1 + aire, caja.y1 + aire)
+
+
 def _cabe_en_el_poligono(ax, caja, geom, minimo=0.75):
     """True si al menos `minimo` del ancho de la etiqueta cae sobre el poligono.
 
@@ -443,7 +455,14 @@ def _etiquetas_sin_pisarse(fig, ax, items, geo, fontsize=7.6, ocupadas=None):
             if not movida and not _cabe_en_el_poligono(ax, caja, it.get("geom")):
                 t.remove()
                 continue
-            if not any(caja.overlaps(c) for c in puestos):
+            # HOLGURA. `overlaps` solo denuncia el solape: dos etiquetas que
+            # se tocan borde con borde pasan por buenas y se leen como una sola
+            # cosa. Eso hacia que "Martínez" quedara pegada a la llamada de la
+            # fracción 32 en el EXHIBIT 16, y el lector entendia que la
+            # fracción 32 esta en Martínez cuando esta en Beccar — justo lo
+            # contrario de lo que el exhibit dice. Se agranda cada caja antes
+            # de comparar, asi que ademas de no pisarse tienen que separarse.
+            if not any(_con_aire(caja).overlaps(c) for c in puestos):
                 puestos.append(caja)
                 break
             if k < len(intentos) - 1:
@@ -624,7 +643,15 @@ def ex16():
         linespacing=1.35, zorder=7,
         arrowprops=dict(arrowstyle="-", color=E.TINTA, linewidth=0.9,
                         shrinkA=1, shrinkB=1),
-        path_effects=[withStroke(linewidth=3.4, foreground=E.PAPEL)])
+        # LA LLAMADA VA EN UNA CAJA, y no suelta sobre el mapa.
+        # Suelta, es un bloque de texto en negrita y en Tinta, exactamente el
+        # mismo aspecto que los nombres de zona. Cayendo debajo de "Martínez"
+        # se leia como una sola cosa: que la fracción 32 esta en Martínez,
+        # cuando esta en Beccar — lo contrario de lo que el exhibit dice. Con
+        # caja, el lector distingue de un vistazo que es una anotacion y no un
+        # nombre de lugar, y ya no depende de que la separacion alcance.
+        bbox=dict(boxstyle="round,pad=0.5", facecolor=E.PAPEL,
+                  edgecolor=E.TINTA, linewidth=0.7, alpha=0.97))
 
     # Los nombres de zona se colocan al final y esquivan todo lo anterior.
     items = [{"x": r.geometry.representative_point().x,

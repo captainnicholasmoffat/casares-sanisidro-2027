@@ -116,6 +116,34 @@ CAPS = os.path.join(RAIZ, "07_capitulos")
 CHARTS = os.path.join(RAIZ, "06_charts")
 SALIDA = os.path.join(RAIZ, "PROGRAMA_SAN_ISIDRO_2027.pdf")
 
+# --------------------------------------------------------------------------
+# LA TIPOGRAFIA VIVE EN EL REPO Y SE CARGA POR RUTA
+# --------------------------------------------------------------------------
+# Source Serif 4, de Frank Grießhammer para Adobe, bajo SIL Open Font License
+# 1.1 (05_tipografia/OFL.txt). Los dos archivos estan versionados en el repo y
+# el CSS los carga con @font-face apuntando al archivo, NO por nombre de fuente
+# instalada en el sistema. La diferencia importa en un documento con indice: si
+# el armado dependiera de que la fuente este instalada, en una maquina sin ella
+# WeasyPrint caeria a otra, cambiaria el ancho de cada linea, y el indice
+# imprimiria numeros de pagina que no son.
+#
+# POR QUE ESTA Y NO OTRA, en las dos condiciones que importaban:
+#   - color a cuerpo chico en columna angosta: altura de x 0,475 em contra
+#     0,400 de EB Garamond; y ancho de la 'n' 0,606 em contra 0,662 de
+#     Literata, o sea mas caracteres por linea en una columna de 85 mm, que es
+#     menos guiones y menos rios de blanco.
+#   - numeros para tablas: trae tabulares y de caja alta (tnum + lnum), que es
+#     lo que alinea una columna de cifras.
+#   - y versalitas de verdad (smcp), que son las de los rotulos de exhibit y
+#     los encabezados de tabla. Simuladas por el motor salen como mayusculas
+#     achicadas, con el trazo mas fino que el del texto de al lado.
+# Ademas tiene eje de TAMAÑO OPTICO: el dibujo a cuerpo 9 no es el mismo
+# reducido, es otro, con mas altura de x y mas espacio entre letras.
+TIPOS = os.path.join(RAIZ, "05_tipografia")
+SERIF = "Source Serif 4"
+OPSZ_TEXTO = 9        # el dibujo para cuerpo de texto
+OPSZ_TITULO = 24      # el dibujo para titulo: mas contraste y menos espaciado
+
 MARCADOR = "# NO VA AL PDF"
 MARGEN_PIE = 15          # mm: el margen de abajo de @page, que mide el hueco
 # Las piezas llevan prefijo propio en el id: los h1 y los h2 tambien dejan
@@ -251,6 +279,14 @@ def _exhibit(num, titulo):
     nombre = archivo[:-4]
     ruta, proporcion = recortar(archivo)
     pie = PIES.get(nombre, {})
+    # Sin entrada en pies.json el exhibit sale con el texto del marcador del
+    # capitulo en vez de su titulo, que es mas corto y no dice la conclusion.
+    # Es una perdida que no rompe nada y por eso hay que denunciarla: paso de
+    # verdad cuando la fabrica corrio con un solo exhibit y reescribio el json.
+    if not pie.get("titulo"):
+        raise RuntimeError(
+            "el EXHIBIT %s no tiene título en 06_charts/pies.json: correr "
+            "03_scripts/generar_todos_los_graficos.py entero" % num)
 
     # Un exhibit apaisado se lee bien al ancho de la caja. Uno casi cuadrado
     # —los dos mapas y la lista larga de funciones— llega a 180 mm de alto si se
@@ -392,10 +428,12 @@ def bloques(md, slug):
                     if lineas[j].strip():
                         cuerpo.append(lineas[j].strip())
                     j += 1
-                add(True, '<div class="nota-lectura"><p><span class="et">%s.</span> '
+                add(True, '<div class="nota-envoltorio">'
+                          '<div class="nota-lectura"><p><span class="et">%s.</span> '
                           '%s</p>%s</div>'
                     % (_inline(titulo), _inline(cuerpo[0]) if cuerpo else "",
-                       "".join("<p>%s</p>" % _inline(c) for c in cuerpo[1:])))
+                       "".join("<p>%s</p>" % _inline(c) for c in cuerpo[1:])
+                       + "</div>"))
                 i = j
                 continue
             tipo = next((t for t, claves in CAJAS
@@ -775,17 +813,26 @@ def indice(entradas):
 # ==========================================================================
 
 CSS = """
+@font-face { font-family: "%(serif)s";
+             src: url("file://%(tipos)s/SourceSerif4[opsz,wght].ttf");
+             font-weight: 200 900; font-style: normal; }
+@font-face { font-family: "%(serif)s";
+             src: url("file://%(tipos)s/SourceSerif4-Italic[opsz,wght].ttf");
+             font-weight: 200 900; font-style: italic; }
+
 @page {
   size: A4; margin: 17mm 17mm %(pie)dmm 17mm; background: %(papel)s;
-  @top-left     { content: string(cap); font-family: "DejaVu Sans";
-                  font-size: 6pt; letter-spacing: 1.15pt; color: %(ambar)s;
-                  text-transform: uppercase; margin-bottom: 6mm; }
-  @bottom-left  { content: "%(corto)s"; font-family: "DejaVu Sans";
-                  font-size: 6.4pt; letter-spacing: .15pt; white-space: pre;
-                  color: %(tinta)s; opacity: .5; vertical-align: top; }
+  @top-left     { content: string(cap); font-family: "%(serif)s";
+                  font-size: 7.4pt; font-weight: 600; letter-spacing: .9pt;
+                  color: %(ambar)s; text-transform: lowercase;
+                  font-variant-caps: small-caps; margin-bottom: 6mm; }
+  @bottom-left  { content: "%(corto)s"; font-family: "%(serif)s";
+                  font-size: 7pt; letter-spacing: .1pt; white-space: pre;
+                  color: %(tinta)s; opacity: .55; vertical-align: top; }
   @bottom-right { content: "Página " counter(page) " de " counter(pages);
-                  font-family: "DejaVu Sans"; font-size: 6.4pt;
-                  white-space: pre; color: %(tinta)s; opacity: .5;
+                  font-family: "%(serif)s"; font-size: 7pt;
+                  font-variant-numeric: tabular-nums lining-nums;
+                  white-space: pre; color: %(tinta)s; opacity: .55;
                   vertical-align: top; }
   /* La regla del pie es el borde de abajo de la caja de pagina: cae justo
      entre el final de la caja de texto y la linea del pie, y no le come ancho
@@ -799,8 +846,10 @@ CSS = """
   @bottom-right { content: ""; } }
 
 html { background: %(papel)s; }
-body { font-family: "DejaVu Serif", Georgia, serif; font-size: 8.15pt;
-       line-height: 1.44; color: %(tinta)s; }
+body { font-family: "%(serif)s", Georgia, serif; font-size: 8.7pt;
+       line-height: 1.42; color: %(tinta)s;
+       font-variation-settings: "opsz" %(opsz)d;
+       font-variant-numeric: lining-nums; }
 
 /* --------------------------------------------------------------------
    BANDAS. La prosa a dos columnas balanceadas; todo lo demas al ancho.
@@ -816,7 +865,7 @@ p { margin: 0 0 .55em; text-align: justify; hyphens: auto; }
 p, li { orphans: 3; widows: 3; }
 strong { font-weight: bold; }
 em { font-style: italic; }
-code { font-family: "DejaVu Sans Mono"; font-size: 7.6pt; background: %(cal)s;
+code { font-family: "DejaVu Sans Mono"; font-size: 7.4pt; background: %(cal)s;
        padding: .5pt 2pt; }
 a { color: %(rio)s; text-decoration: none; }
 hr { border: 0; border-top: .5pt solid %(cal)s; margin: 1.1em 0 .95em; }
@@ -826,27 +875,31 @@ hr { border: 0; border-top: .5pt solid %(cal)s; margin: 1.1em 0 .95em; }
    -------------------------------------------------------------------- */
 /* Titulo de capitulo: la numeracion en Barranca, el nombre en Tinta, una
    regla gruesa encima. Empieza pagina. */
-h1 { font-size: 17pt; line-height: 1.16; margin: 0 0 .32em;
+h1 { font-size: 17.5pt; line-height: 1.16; margin: 0 0 .24em;
+     font-weight: 700; font-variation-settings: "opsz" %(opszt)d;
      letter-spacing: .2pt; string-set: cap content();
      break-before: page; break-after: avoid;
-     border-top: 1.6pt solid %(barranca)s; padding-top: 3.4mm; }
+     border-top: 1.6pt solid %(barranca)s; padding-top: 2.6mm; }
 h1 .cn { color: %(barranca)s; }
 
 /* La bajada: una linea que dice de que va la seccion, en italica. */
-p.bajada { font-style: italic; font-size: 10.6pt; line-height: 1.32;
-           color: %(rio)s; margin: .15em 0 1.1em; max-width: 150mm;
+p.bajada { font-style: italic; font-size: 11pt;
+           font-variation-settings: "opsz" 14; line-height: 1.32;
+           color: %(rio)s; margin: .12em 0 .85em; max-width: 150mm;
            text-align: left; hyphens: none; break-after: avoid; }
 
 /* NUMERO DE SECCION GRANDE, EN SERIF, EN ACENTO, PEGADO AL TITULO. */
-h2 { font-size: 12.4pt; line-height: 1.18; margin: 1.5em 0 .55em;
+h2 { font-size: 12.8pt; line-height: 1.18; margin: 1.25em 0 .5em;
+     font-weight: 600; font-variation-settings: "opsz" 16;
      color: %(tinta)s; break-after: avoid; break-inside: avoid;
      text-indent: -0.05em; }
-h2 .n { font-size: 16.5pt; font-weight: bold; color: %(barranca)s;
+h2 .n { font-size: 17pt; font-weight: 700; color: %(barranca)s;
+        font-variant-numeric: lining-nums;
         margin-right: .3em; letter-spacing: -.2pt; }
 h1 + p.bajada + .banda h2:first-child,
 h1 + p.bajada + .con-titulo > h2 { margin-top: .2em; }
 
-h3 { font-family: "DejaVu Serif"; font-size: 9.4pt; font-weight: bold;
+h3 { font-size: 9.6pt; font-weight: 700;
      margin: 1.35em 0 .4em; color: %(tinta)s;
      break-after: avoid; break-inside: avoid; }
 h3::before { content: ""; display: block; width: 9mm;
@@ -857,14 +910,16 @@ h3::before { content: ""; display: block; width: 9mm;
    -------------------------------------------------------------------- */
 /* Un dato que merece verse sin leer. Son parrafos que YA estan escritos como
    una cifra sola; solo se les da el peso que tienen. */
-p.dato { font-size: 14pt; line-height: 1.26; color: %(barranca)s;
+p.dato { font-size: 15pt; line-height: 1.24; color: %(barranca)s;
+         font-variation-settings: "opsz" 16;
          margin: 1.1em 0 1.15em; padding: 3.5mm 0 3.5mm 5mm;
          border-left: 3.5pt solid %(barranca)s; text-align: left;
          hyphens: none; break-inside: avoid; max-width: 158mm; }
 p.dato strong { color: %(tinta)s; font-weight: bold; }
 
 /* Una por seccion, y solo las que ya estaban escritas. */
-p.remate { font-size: 10.6pt; line-height: 1.36; color: %(tinta)s;
+p.remate { font-size: 11.2pt; line-height: 1.34; color: %(tinta)s;
+           font-variation-settings: "opsz" 14;
            font-style: italic; margin: 1.1em 0 1.2em; padding: 0 0 0 5mm;
            border-left: 2.5pt solid %(rio)s; text-align: left;
            hyphens: none; break-inside: avoid; max-width: 158mm; }
@@ -875,9 +930,9 @@ p.remate strong { font-style: normal; font-weight: bold; }
    -------------------------------------------------------------------- */
 .caja { break-inside: avoid; margin: .9em 0 1.05em; padding: 2.4mm 3mm;
         background: %(cal)s; font-size: 8.2pt; line-height: 1.42; }
-.caja h5 { font-family: "DejaVu Sans"; font-size: 6.3pt; font-weight: bold;
-           letter-spacing: .95pt; text-transform: uppercase;
-           margin: 0 0 1.6mm; color: %(ambar)s; line-height: 1.35; }
+.caja h5 { font-size: 7.6pt; font-weight: 700; letter-spacing: .55pt;
+           text-transform: lowercase; font-variant-caps: small-caps;
+           margin: 0 0 1.6mm; color: %(ambar)s; line-height: 1.32; }
 .caja p { margin: 0 0 .45em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
 .caja.metodo { border-left: 2.5pt solid %(ambar)s; }
@@ -887,14 +942,22 @@ p.remate strong { font-style: normal; font-weight: bold; }
 /* Nota de lectura al pie de seccion: cuerpo chico, entrada en negrita. */
 .nota-lectura { margin: 1.1em 0 1.15em;
                 border-top: .5pt solid %(cal)s; padding-top: 2.4mm;
-                font-size: 7.4pt; line-height: 1.42; color: %(tinta)s;
+                font-size: 7.9pt; line-height: 1.4; color: %(tinta)s;
                 opacity: .82; columns: 2; column-gap: 6.5mm; }
-.nota-lectura p { margin: 0 0 .4em; text-align: left; hyphens: none;
-                  orphans: 1; widows: 1; }
+/* LA NOTA NO SE PARTE. Se probaron las dos: dejandola partir, el resto caia
+   arriba de la pagina siguiente en una, cuatro u ocho lineas sueltas, que se
+   leen como un error de armado. Sin partir, cuando no entra al pie se va
+   entera y la ultima pagina del capitulo queda con la nota sola. Eso segundo
+   se lee como un colofon, que es lo que la nota es. */
+/* El que lleva el break-inside es el ENVOLTORIO y no la caja de dos columnas:
+   WeasyPrint parte igual una caja multicolumna aunque le pidas que no. */
+.nota-envoltorio { break-inside: avoid; }
+.nota-lectura p { margin: 0 0 .4em; text-align: left; hyphens: none; }
 .nota-lectura .et { font-weight: bold; opacity: 1; }
 
-.et { font-family: "DejaVu Sans"; font-size: 6.2pt; font-weight: bold;
-      letter-spacing: .75pt; text-transform: uppercase; color: %(ambar)s; }
+.et { font-size: 7.4pt; font-weight: 700; letter-spacing: .5pt;
+      text-transform: lowercase; font-variant-caps: small-caps;
+      font-style: normal; color: %(ambar)s; }
 
 ul, ol { margin: 0 0 .65em; padding: 0 0 0 4.6mm; }
 li { margin-bottom: .3em; text-align: justify; hyphens: auto; }
@@ -905,16 +968,22 @@ ol li::marker { color: %(barranca)s; font-weight: bold; }
    TABLAS. Banda de encabezado oscura, versalitas claras, filas alternadas,
    primera columna en color.
    -------------------------------------------------------------------- */
-.tw { break-inside: avoid; margin: 1em 0 1.15em; }
-.tw.ancho { margin: 1.15em 0 1.3em; }
-table { width: 100%%; border-collapse: collapse;
-        font-family: "DejaVu Sans"; font-size: 7pt; line-height: 1.32; }
-.tw:not(.ancho) table { font-size: 6.6pt; }
+.tw { break-inside: avoid; margin: .85em 0 1em; }
+.tw.ancho { margin: 1em 0 1.1em; }
+table { width: 100%%; border-collapse: collapse; font-size: 7.5pt;
+        line-height: 1.3;
+        font-variant-numeric: tabular-nums lining-nums; }
+.tw:not(.ancho) table { font-size: 7.1pt; }
+/* VERSALITAS DE VERDAD en la banda de encabezado: el texto se pasa a
+   minuscula y la fuente devuelve sus versalitas dibujadas. Puestas como
+   mayusculas achicadas, el trazo sale mas fino que el de la fila de abajo y la
+   banda se ve descolorida. */
 thead th { background: %(tinta)s; color: %(papel)s; text-align: left;
-           padding: 2.4mm 2.2mm; font-size: 6.1pt; font-weight: bold;
-           letter-spacing: .75pt; text-transform: uppercase; line-height: 1.25;
+           padding: 2.1mm 2.2mm; font-size: 7.3pt; font-weight: 600;
+           letter-spacing: .5pt; text-transform: lowercase;
+           font-variant-caps: small-caps; line-height: 1.22;
            vertical-align: bottom; }
-td { padding: 1.7mm 2.2mm; border-bottom: .4pt solid %(cal)s;
+td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid %(cal)s;
      vertical-align: top; }
 tbody tr:nth-child(odd) { background: rgba(237, 233, 226, .55); }
 tbody td:first-child { color: %(rio)s; font-weight: bold; }
@@ -923,7 +992,7 @@ th:first-child, td:first-child { text-align: left; }
 /* Una tabla de texto no se alinea a la derecha: ahi la columna no es una
    cifra, es una oracion. */
 .tw.texto th, .tw.texto td { text-align: left; }
-.etq { font-family: "DejaVu Serif"; font-style: italic; font-size: 6.6pt;
+.etq { font-style: italic; font-size: 7pt;
        line-height: 1.34; margin: 1.6mm 0 0; color: %(tinta)s; opacity: .62;
        text-align: left; hyphens: none; }
 .etq .et { opacity: 1; }
@@ -932,22 +1001,26 @@ th:first-child, td:first-child { text-align: left; }
    EXHIBITS. Rotulo en versalitas, titulo que dice la conclusion, bajada,
    figura, y fuente al pie en cuerpo 6-7 italico gris.
    -------------------------------------------------------------------- */
-.exh { break-inside: avoid; margin: 1.15em 0 1.35em; }
-.exh-cab { margin-bottom: 2.2mm; break-after: avoid; }
-.exh-rot { font-family: "DejaVu Sans"; font-size: 6.2pt; font-weight: bold;
-           letter-spacing: 1.15pt; text-transform: uppercase; color: %(ambar)s;
-           margin: 0 0 1.1mm; text-align: left; }
-.exh-tit { font-family: "DejaVu Serif"; font-size: 10.6pt; font-weight: normal;
-           line-height: 1.22; color: %(barranca)s; margin: 0; text-align: left;
-           hyphens: none; }
-.exh-baj { font-family: "DejaVu Sans"; font-size: 7pt; line-height: 1.36;
+.exh { break-inside: avoid; margin: 1em 0 1.15em; }
+.exh-cab { margin-bottom: 1.8mm; break-after: avoid; }
+.exh-rot { font-size: 7.6pt; font-weight: 700; letter-spacing: .8pt;
+           text-transform: lowercase; font-variant-caps: small-caps;
+           color: %(ambar)s; margin: 0 0 1.1mm; text-align: left; }
+.exh-tit { font-size: 11.2pt; font-weight: 600; line-height: 1.2;
+           color: %(barranca)s; margin: 0; text-align: left; hyphens: none;
+           font-variation-settings: "opsz" 14; }
+.exh-baj { font-size: 7.6pt; line-height: 1.34;
            color: %(tinta)s; opacity: .68; margin: 1.3mm 0 0; text-align: left;
            hyphens: none; max-width: 168mm; }
 .exh img { display: block; margin: 0 auto; max-width: 100%%;
            max-height: 58mm; width: auto; height: auto; }
-.exh.alto img { max-height: 78mm; }
-.exh-fuente, .exh-nota { font-family: "DejaVu Serif"; font-style: italic;
-                         font-size: 6.6pt; line-height: 1.36; margin: 2.2mm 0 0;
+/* Los dos mapas y las listas largas. A 78 mm el mapa entraba en la mitad del
+   ancho de la caja y la otra mitad quedaba en papel: el partido es una franja
+   en diagonal y su lienzo es casi cuadrado, asi que lo que manda es el alto.
+   El acomodador se encarga del hueco que deje al pie de pagina. */
+.exh.alto img { max-height: 84mm; }
+.exh-fuente, .exh-nota { font-style: italic;
+                         font-size: 7pt; line-height: 1.34; margin: 1.8mm 0 0;
                          text-align: left; hyphens: none; opacity: .66; }
 .exh-nota { color: %(ambar)s; opacity: .95; margin-top: 1.2mm; }
 
@@ -959,8 +1032,9 @@ th:first-child, td:first-child { text-align: left; }
 .tapa-img { position: absolute; left: -11mm; bottom: 4mm; width: 232mm;
             height: auto; }
 .tapa-txt { position: absolute; left: 17mm; top: 30mm; width: 165mm; }
-.tapa h1 { font-size: 26pt; line-height: 1.16; margin: 0; letter-spacing: .6pt;
-           border: 0; padding: 0; break-before: avoid; }
+.tapa h1 { font-size: 27pt; line-height: 1.15; margin: 0; letter-spacing: .4pt;
+           border: 0; padding: 0; break-before: avoid; font-weight: 700;
+           font-variation-settings: "opsz" 40; }
 .tapa .t2 { color: %(rio)s; margin-bottom: 6mm; }
 .tapa .sub { font-size: 11pt; line-height: 1.5; text-align: left;
              max-width: 118mm; margin: 0; hyphens: none;
@@ -970,15 +1044,15 @@ th:first-child, td:first-child { text-align: left; }
    INDICE
    -------------------------------------------------------------------- */
 .indice { break-before: page; }
-h1.ix-h { font-size: 17pt; margin-bottom: 5mm; }
+h1.ix-h { font-size: 17.5pt; margin-bottom: 5mm; }
 ul.ix { list-style: none; margin: 0; padding: 0;
-        font-family: "DejaVu Serif"; }
+        font-variant-numeric: tabular-nums lining-nums; }
 ul.ix li { margin: 0; }
 ul.ix a { color: %(tinta)s; display: block; text-decoration: none;
           padding-bottom: 1.1mm; }
 ul.ix a::after { content: target-counter(attr(href), page); float: right;
-                 font-family: "DejaVu Sans"; font-size: 7.6pt;
-                 color: %(tinta)s; opacity: .6; padding-left: 3mm; }
+                 font-size: 8.2pt; color: %(tinta)s; opacity: .6;
+                 padding-left: 3mm; }
 li.ix-cap { margin-top: 3.6mm; }
 li.ix-cap:first-child { margin-top: 0; }
 li.ix-cap a { font-size: 10.8pt; color: %(barranca)s;
@@ -990,7 +1064,8 @@ li.ix-sub a { font-size: 8.1pt; padding: .85mm 0 .85mm;
 span.ix-n { display: inline-block; width: 11mm; color: %(rio)s;
             font-weight: bold; }
 """ % dict(papel=PAPEL, tinta=TINTA, rio=RIO, barranca=BARRANCA,
-           cal=CAL, ambar=AMBAR, corto=TITULO_CORTO, pie=MARGEN_PIE)
+           cal=CAL, ambar=AMBAR, corto=TITULO_CORTO, pie=MARGEN_PIE,
+           serif=SERIF, tipos=TIPOS, opsz=OPSZ_TEXTO, opszt=OPSZ_TITULO)
 
 
 # ==========================================================================
@@ -1053,23 +1128,25 @@ def main():
     from pypdf import PdfReader
     paginas = len(PdfReader(SALIDA).pages)
     problemas, txt = verificar_pdf(SALIDA)
-    # pdftotext le mete un espacio a cada letra interletrada, asi que las
-    # etiquetas se cuentan sobre el texto sin espacios.
-    plano = re.sub(r'\s+', '', txt)
+    # Los rotulos van en VERSALITAS: el texto real es minuscula y la fuente
+    # dibuja las versalitas. pdftotext devuelve la minuscula, y ademas le mete
+    # un espacio a cada letra interletrada. Por eso se cuenta sobre el texto sin
+    # espacios y sin distinguir mayusculas.
 
+    plano = re.sub(r'\s+', '', txt).lower()
     print("=" * 74)
     print("PDF ARMADO — %s" % os.path.basename(SALIDA))
     print("=" * 74)
     print("  páginas            : %d" % paginas)
     print("  secciones          : %d" % len(ORDEN))
     print("  subsecciones       : %d" % sum(len(s) for _, _, s in entradas))
-    print("  exhibits insertados: %d" % txt.count("EXHIBIT"))
+    print("  exhibits insertados: %d" % plano.count("exhibit"))
     print("  figuras acomodadas : %d" % movidos)
     print("  hueco evitable     : %.0f mm en total" % hueco)
     print("  etiquetas          : %s"
-          % (", ".join("%s x%d" % (e, plano.count(e.replace(" ", "")))
+          % (", ".join("%s x%d" % (e, plano.count(e.replace(" ", "").lower()))
                        for e in sorted(LEYENDA_ETIQUETA)
-                       if plano.count(e.replace(" ", ""))) or "ninguna"))
+                       if plano.count(e.replace(" ", "").lower())) or "ninguna"))
     if problemas:
         print("\nPROBLEMAS:")
         for p in problemas:

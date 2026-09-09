@@ -55,9 +55,18 @@
 matplotlib==3.11.1
 geopandas==1.1.4
 shapely==2.1.2
-pyproj==3.8.0
+pyproj==3.8.0        # con Python < 3.12 no existe: usar 3.7.2, no toca ninguna medida de texto
 pyogrio==0.13.0
 pandas==3.0.2
 numpy==2.4.4
 pdfplumber==0.11.9
 openpyxl==3.1.5
+
+# --- ARMADO DEL PDF -------------------------------------------------------
+# Van fijas por el mismo motivo que matplotlib: el motor decide el ancho de
+# cada linea, y el indice del documento imprime la pagina real de cada
+# seccion. Otra version parte distinto y el indice queda mintiendo.
+weasyprint==70.0     # el motor de impresion: CSS de pagina, columnas, indice
+pypdf==6.18.0        # cuenta las paginas del PDF armado
+pillow==12.3.0       # recorte de la cabecera de los exhibits
+pyphen==0.18.1       # partido de palabras en castellano, para la columna angosta

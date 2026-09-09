@@ -116,24 +116,38 @@ def ex02():
     ancho = 0.78 / n
     x = list(range(len(zonas)))
 
+    # --------------------------------------------------------------
+    # LEYENDA, NO ETIQUETAS SOBRE LAS BARRAS
+    # --------------------------------------------------------------
+    # Rotular cada serie sobre su barra mas alta funciona cuando las series
+    # tienen su maximo en zonas distintas. Aca NO: tres de las cuatro lo tienen
+    # en Beccar, y a alturas de 10,6 / 12,7 / 37,3 sobre un eje que llega a 50.
+    # Las dos primeras quedaban a dos puntos una de otra y se pisaban entre si
+    # y contra las barras. El verificador de colisiones no lo denunciaba porque
+    # el solape no llegaba al umbral, y el de texto tapado tampoco porque las
+    # etiquetas van por encima de las barras.
+    #
+    # Con cuatro series que comparten las mismas seis categorias, el lugar de
+    # los nombres es una leyenda: se lee una vez y vale para todo el grafico.
+    # Va en una sola fila, arriba a la derecha, sobre el rincon que dejan libre
+    # las zonas de menor carencia, que son las de la derecha.
     fig, ax = E.figura(3.35)
     for i, (etiqueta, col, color) in enumerate(series):
         pos = [xx - 0.39 + ancho * (i + 0.5) for xx in x]
         vals = [float(z[col]) for z in zonas]
-        ax.bar(pos, vals, width=ancho * 0.9, color=color, zorder=3)
-        # Etiqueta la serie sobre su barra MAS ALTA, no sobre la primera zona.
-        # Sobre la primera, las cuatro etiquetas caian una encima de otra y
-        # detras de las barras vecinas: el verificador de colisiones no lo veia
-        # porque mide texto contra texto, y esto era texto contra barra.
-        k = max(range(len(vals)), key=lambda j: vals[j])
-        ax.annotate(etiqueta, (pos[k], vals[k]), xytext=(0, 4),
-                    textcoords="offset points", ha="center", fontsize=6.2,
-                    color=color, weight="bold", zorder=6)
+        ax.bar(pos, vals, width=ancho * 0.9, color=color, zorder=3,
+               label=etiqueta)
+    leyenda = ax.legend(loc="upper right", ncols=len(series), frameon=False,
+                        fontsize=6.2, handlelength=0.85, handleheight=0.85,
+                        handletextpad=0.35, columnspacing=1.0,
+                        borderaxespad=0.2, labelcolor="linecolor")
+    for t in leyenda.get_texts():
+        t.set_fontweight("bold")
     ax.set_xticks(x)
     ax.set_xticklabels([E.dos_lineas(E.zona_bonita(z["zona"])) for z in zonas],
                        fontsize=7.2, linespacing=1.25)
     ax.yaxis.set_major_formatter(E.eje_pct())
-    ax.set_ylim(0, max(float(z["pct_sin_gas_red"]) for z in zonas) * 1.34)
+    ax.set_ylim(0, max(float(z["pct_sin_gas_red"]) for z in zonas) * 1.30)
     E.podar_tick_superior(ax, "y", 5)
     E.limpiar(ax)
     top, bottom = E.marco(

@@ -320,6 +320,7 @@ def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
     SIN_ACENTO[nombre] = verificar_acentos(fig)
     COLISIONES[nombre] = verificar_colisiones(fig)
     TEXTO_TAPADO[nombre] = verificar_texto_tapado(fig)
+    DERRAMADOS[nombre] = verificar_texto_derramado(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -340,6 +341,7 @@ COLISIONES = {}
 
 
 TEXTO_TAPADO = {}
+DERRAMADOS = {}
 
 
 def verificar_texto_tapado(fig, umbral=0.22):
@@ -664,6 +666,100 @@ def verificar_colisiones(fig, umbral=0.10, holgura_px=1.0):
             fallas.append("%r se pisa con %r (%.0f%% del mas chico)"
                           % (a, b, 100 * solape / menor))
     return sorted(set(fallas))
+
+
+def verificar_texto_derramado(fig, holgura_px=1.5):
+    """
+    OCTAVO VERIFICADOR. Falla si un texto se sale de la forma que lo contiene.
+
+    Por que existe
+    --------------
+    El EXHIBIT 11 rotulaba cada tramo de una barra apilada CENTRADO adentro de
+    su tramo. El rotulo mas largo era mas ancho que su tramo, asi que se
+    derramaba sobre los dos vecinos: la parte que caia sobre el tramo oscuro era
+    texto oscuro sobre oscuro, y la que caia sobre el claro, texto claro sobre
+    claro. En el PDF se leia "ontratos de servicio", sin la C, y una cifra
+    partida al medio.
+
+    Los siete verificadores anteriores lo dejaron pasar, y cada uno por su
+    motivo, que conviene tener escrito porque es el hueco que este tapa:
+      - verificar_colisiones mide texto contra TEXTO, y los tres rotulos no se
+        tocaban entre si: se derramaban sobre BARRAS;
+      - verificar_texto_tapado mide el texto contra la forma que tiene DEBAJO
+        en el mismo punto, y en el centro del tramo el contraste era correcto:
+        el problema estaba en las puntas;
+      - verificar_desborde mide contra el borde del LIENZO, y el texto estaba
+        holgadamente adentro de la imagen.
+
+    Que mira
+    --------
+    Un texto cuyo centro cae adentro de una forma rellena esta rotulando esa
+    forma. Entonces tiene que ENTRAR en ella. Si sobresale, sale sobre lo que
+    haya al lado, que es lo que no se puede leer.
+
+    Que NO mira
+    -----------
+    Los textos con halo o con caja propia: estan hechos para ir por encima de
+    cualquier cosa. Y los textos cuyo centro NO cae sobre ninguna forma: esos no
+    rotulan una forma, van sobre el papel, y de ellos se ocupan los otros.
+    """
+    fig.canvas.draw()
+    ren = fig.canvas.get_renderer()
+    fuera = []
+    for ax in fig.get_axes():
+        formas = []
+        for art in list(ax.patches):
+            if not art.get_visible():
+                continue
+            try:
+                bb = art.get_window_extent(ren)
+            except Exception:
+                continue
+            if bb.width < 2 or bb.height < 2:
+                continue
+            formas.append(bb)
+        for t in ax.texts:
+            if t.get_path_effects() or t.get_bbox_patch() is not None:
+                continue
+            txt = (t.get_text() or "").strip()
+            if not txt:
+                continue
+            try:
+                c = caja_de_texto(t, ren)
+            except Exception:
+                continue
+            cx, cy = (c.x0 + c.x1) / 2, (c.y0 + c.y1) / 2
+            dentro = [bb for bb in formas
+                      if bb.x0 <= cx <= bb.x1 and bb.y0 <= cy <= bb.y1]
+            if not dentro:
+                continue
+            # La mas chica de las que lo contienen es la que rotula: en una
+            # barra apilada, el tramo y no la barra entera.
+            bb = min(dentro, key=lambda b: b.width * b.height)
+            sobra_x = max(bb.x0 - c.x0, c.x1 - bb.x1)
+            if sobra_x <= holgura_px:
+                continue
+            # Salirse no basta para denunciar: lo que no se puede leer es lo
+            # que se sale ENCIMA DE OTRA FORMA. "sin rendición" del EXHIBIT 01
+            # sobresale 5 px de su banda y esos 5 px caen sobre el papel que
+            # separa dos barras, donde se lee perfecto. Se comprueba si el
+            # sobrante pisa alguna otra forma; si no pisa nada, no es un error.
+            from matplotlib.transforms import Bbox
+            sobrantes = []
+            if c.x0 < bb.x0 - holgura_px:
+                sobrantes.append(Bbox.from_extents(c.x0, c.y0, bb.x0, c.y1))
+            if c.x1 > bb.x1 + holgura_px:
+                sobrantes.append(Bbox.from_extents(bb.x1, c.y0, c.x1, c.y1))
+            pisadas = [o for o in formas if o is not bb
+                       and any(o.overlaps(sb) for sb in sobrantes)]
+            if not pisadas:
+                continue
+            fuera.append("%r se sale %.0f px de la forma que rotula y cae "
+                         "encima de otra (la forma mide %.0f px de ancho y el "
+                         "texto %.0f)"
+                         % (txt.replace("\n", " ")[:40], sobra_x,
+                            bb.width, c.width))
+    return sorted(set(fuera))
 
 
 def verificar_paleta(nombre):
