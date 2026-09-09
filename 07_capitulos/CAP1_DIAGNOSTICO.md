@@ -12,8 +12,6 @@ San Isidro tiene 297.282 habitantes y 110.559 hogares (Censo 2022). Repartidos e
 
 No es poco dinero. Y sin embargo el partido está partido en dos, y la línea es geográfica: las localidades del oeste y del norte contra las de la costa sur.
 
-`[EXHIBIT 15 — Las seis zonas vecinales de San Isidro]`
-
 | Zona | Población | NBI | Sin cloaca | Sin gas de red | Hacinamiento | Universitario |
 |---|---|---|---|---|---|---|
 | **Boulogne Sur Mer** | 74.832 | **5,09%** | 9,16% | 27,64% | 12,42% | 9,00% |
@@ -25,9 +23,11 @@ No es poco dinero. Y sin embargo el partido está partido en dos, y la línea es
 
 *Los cuatro primeros indicadores están medidos sobre hogares; el último, sobre población.*
 
-`[EXHIBIT 02 — Carencias de servicios básicos por zona]`
+`[EXHIBIT 15 — Las seis zonas vecinales de San Isidro]`
 
 Un hogar de Boulogne o Béccar tiene **tres veces y media más probabilidad** de tener necesidades básicas insatisfechas que uno de Martínez. **Cinco veces y media** de no tener cloacas. **Cuatro veces** de vivir en condiciones de hacinamiento. Y **menos de la mitad de probabilidad** de que alguien en la casa haya terminado la universidad.
+
+`[EXHIBIT 02 — Carencias de servicios básicos por zona]`
 
 `[EXHIBIT 03 — Nivel educativo alcanzado por zona]`
 

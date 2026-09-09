@@ -497,10 +497,12 @@ def ex15():
               "insatisfechas. El partido entero promedia %s."
               % E.pct(_nbi_del_partido(), 2),
         FUENTE_CENSO,
-          "Límites de localidades según OpenStreetMap, que no es fuente "
-          "oficial; radios censales del INDEC, Censo 2022. Cada radio va a la "
-          "localidad que contiene su punto representativo. Ver "
-          "data/METODOLOGIA_ZONAS.md.")
+          # La linea de fuente ya dice que los limites son de OpenStreetMap.
+          # Esta nota solo agrega lo que aquella no dice: que OSM no es fuente
+          # oficial y como se asigna cada radio.
+          "OpenStreetMap no es fuente oficial. Cada radio censal va a la "
+          "localidad que contiene su punto representativo; los 360 caen dentro "
+          "de exactamente una. Ver data/METODOLOGIA_ZONAS.md.")
     # La rampa va sin rotulo: el titulo de la tabla de al lado ya lo dice,
     # y con los dos el numero de la escala se pisaba con el texto.
     _leyenda_rampa(fig, vmin, vmax, "", y=top - 0.295, x=0.025,
@@ -677,4 +679,4 @@ def tapa_mapa():
     E.sin_offset(ax)
     fig.subplots_adjust(left=0.02, right=0.98, top=0.98, bottom=0.02)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
-    return E.guardar(fig, "TAPA_mapa_zonas")
+    return E.guardar(fig, "TAPA_mapa_zonas", transparente=True)

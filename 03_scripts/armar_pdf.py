@@ -339,21 +339,22 @@ def _agrupar_titulos(html_txt):
         return '<div class="keep">%s</div>' % "\n".join(partes)
 
     html_txt = RE_H2.sub(envolver, html_txt)
-    # Cuando el primer bloque es un parrafo corto —una linea de entrada—, el
-    # titulo y esa linea entran al pie y el CUADRO que viene despues se va solo
-    # a la pagina siguiente. Paso con "6.5 Que no prometemos, y de quien
-    # depende", cuya entrada tiene diez palabras. En ese caso el grupo se
-    # extiende al bloque siguiente.
-    html_txt = re.sub(
-        r'<div class="keep">((?:(?!</div>).)*?<p>[^<]{0,190}</p>)</div>\n('
-        + BLOQUE + ')',
-        lambda m: '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2)),
-        html_txt, flags=re.S)
     # Los h3 sueltos, los que no venian pegados a un h2.
     html_txt = RE_H3.sub(
-        lambda m: ('<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2))
-                   if '<div class="keep">' not in html_txt[max(0, m.start() - 60):m.start()]
-                   else m.group(0)), html_txt)
+        lambda m: '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2)),
+        html_txt)
+    # Cuando el primer bloque es un parrafo corto —una linea de entrada—, el
+    # titulo y esa linea entran al pie y lo que viene despues se va solo a la
+    # pagina siguiente. Paso con "4.5 Quien decide y quien ejecuta", cuya
+    # entrada tiene once palabras. El grupo se extiende al bloque siguiente.
+    #
+    # Va DESPUES de envolver los h3: si corre antes, el bloque siguiente
+    # todavia es un <h3> pelado y no hay nada que agarrar.
+    html_txt = re.sub(
+        r'<div class="keep">((?:(?!</div>).)*?<p>[^<]{0,190}</p>)</div>\n'
+        r'(<div class="keep">(?:(?!<div class="keep">).)*?</div>|' + BLOQUE + ')',
+        lambda m: '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2)),
+        html_txt, flags=re.S)
     return html_txt
 
 
@@ -490,19 +491,30 @@ th:first-child, td:first-child { text-align: left; }
 
 /* ---- exhibits ---- */
 .exh { break-inside: avoid; margin: 1.1em 0 1.3em; }
-.exh img { width: 100%%; }
+/* Un exhibit mas alto que media pagina no entra casi nunca junto al texto que
+   lo introduce, y al irse entero deja la pagina anterior a medio llenar. El
+   tope hace que quepan; el ancho manda y la altura se ajusta. */
+.exh img { max-width: 100%%; max-height: 104mm; width: auto; height: auto;
+           display: block; margin: 0 auto; }
 .exh figcaption { font-family: "DejaVu Sans"; font-size: 6.9pt;
                   color: %(tinta)s; opacity: .7; margin-top: 3pt; }
 .exh-n { color: %(rio)s; font-weight: bold; letter-spacing: .4pt; }
 
 /* ---- tapa ---- */
-.tapa { height: 297mm; padding: 26mm 18mm 0; box-sizing: border-box; }
+/* La tapa ES el mapa, con el titulo encima. Antes el mapa flotaba en el medio
+   y el tercio inferior quedaba vacio: no era respiracion, era hueco, y en la
+   primera pagina que alguien ve eso se lee como que no supimos que poner. */
+.tapa { height: 297mm; padding: 22mm 16mm 14mm; box-sizing: border-box;
+        display: flex; flex-direction: column; }
 .tapa h1 { break-before: avoid; margin: 0; letter-spacing: 1.2pt; }
 .tapa .t1 { font-size: 27pt; }
-.tapa .t2 { font-size: 27pt; color: %(rio)s; margin-bottom: 8mm; }
+.tapa .t2 { font-size: 27pt; color: %(rio)s; margin-bottom: 7mm; }
 .tapa .sub { font-size: 11.5pt; line-height: 1.5; text-align: left;
-             max-width: 118mm; }
-.tapa-img { width: 100%%; margin-top: 10mm; }
+             max-width: 118mm; margin: 0; }
+.tapa-txt { flex: 0 0 auto; }
+.tapa-img { flex: 1 1 auto; width: 100%%; height: 100%%;
+            object-fit: contain; object-position: center bottom;
+            margin-top: 6mm; }
 
 /* ---- indice ---- */
 .indice h1 { break-before: page; }

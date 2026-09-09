@@ -275,7 +275,7 @@ def limpiar(ax, grilla="y"):
     ax.set_axisbelow(True)
 
 
-def guardar(fig, nombre, ajuste=None, encajar=True):
+def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
     """
     PNG a 300 dpi y SVG, los dos con fondo PAPEL y nunca transparente.
 
@@ -304,8 +304,13 @@ def guardar(fig, nombre, ajuste=None, encajar=True):
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
-        fig.savefig(ruta, facecolor=PAPEL, edgecolor=PAPEL, transparent=False,
-                    dpi=DPI)
+        # transparente=True solo para la imagen de tapa: el PNG lo pinta
+        # matplotlib y la pagina la pinta el motor de PDF, y dos beiges que
+        # deberian ser el mismo dejan ver el rectangulo de la imagen. Sin fondo
+        # propio no hay rectangulo que ver.
+        fig.savefig(ruta, facecolor="none" if transparente else PAPEL,
+                    edgecolor="none" if transparente else PAPEL,
+                    transparent=transparente, dpi=DPI)
     plt.close(fig)
     return png, svg
 
