@@ -75,12 +75,6 @@ AMBAR = ACENTO
 PALETA = {"CREMA": CREMA, "TINTA": TINTA, "ACENTO": ACENTO, "DATO": DATO,
           "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO}
 
-# Colores que no pueden aparecer en ningun grafico. verificar_paleta() los
-# busca en el SVG generado y falla si encuentra alguno. El rojo puro sigue
-# prohibido: el acento es #7C2E23, que es otra cosa.
-PROHIBIDOS = {"#d62728", "#ff0000", "red", "#2ca02c", "#00ff00", "green",
-              "#1f77b4", "#ff7f0e", "tab:red", "tab:green", "tab:blue"}
-
 ANCHO_PX = 1600
 DPI = 300
 ANCHO_IN = ANCHO_PX / DPI          # 5,333 pulgadas
@@ -866,6 +860,24 @@ def verificar_texto_derramado(fig, holgura_px=1.5):
                          % (txt.replace("\n", " ")[:40], sobra_x,
                             bb.width, c.width))
     return sorted(set(fuera))
+
+
+# ==========================================================================
+# LA LISTA NEGRA — ESTOS COLORES NO SON DE LA PALETA, SON LOS QUE SE BUSCAN
+# ==========================================================================
+# OJO AL LEER ESTO. Aca hay verdes, azules y rojos que no tienen NADA que ver
+# con el sistema visual del documento: son los colores por defecto de
+# matplotlib —el ciclo tab10 y sus alias— y estan escritos para BUSCARLOS en el
+# SVG ya generado y fallar si aparecen.
+#
+# Vivian arriba, pegados a la paleta, y ahi se leen como si fueran parte de
+# ella: un color muerto al lado de los vivos es el que alguien usa por error
+# despues. Por eso viven aca abajo, al lado de la unica funcion que los mira.
+#
+# BORRARLOS NO SACA ESOS COLORES DEL DOCUMENTO: saca el control que los caza.
+# Es exactamente al reves de lo que parece.
+PROHIBIDOS = {"#d62728", "#ff0000", "red", "#2ca02c", "#00ff00", "green",
+              "#1f77b4", "#ff7f0e", "tab:red", "tab:green", "tab:blue"}
 
 
 def verificar_paleta(nombre):

@@ -183,6 +183,12 @@ def imagen(nombre):
 
 MARCADOR = "# NO VA AL PDF"
 MARGEN_PIE = 15          # mm: el margen de abajo de @page, que mide el hueco
+# WeasyPrint mide TODO en pixeles CSS, que son 96 por pulgada, no en puntos.
+# El acomodador convertia con 72 y ademas restaba el margen del pie en puntos:
+# los huecos salian inflados un tercio y el umbral de 26 mm era en realidad de
+# 19,5. Nada se rompia —la medida es comparativa y el orden se mantiene— pero el
+# numero que el armador imprime es un numero que alguien va a leer.
+PX_POR_MM = 96 / 25.4
 # Las piezas llevan prefijo propio en el id: los h1 y los h2 tambien dejan
 # ancla y el acomodador tiene que poder distinguirlas.
 PREFIJO_PIEZA = "pz-"
@@ -723,6 +729,61 @@ def bandas(lista, seccion):
     return out
 
 
+# Cuanto texto tiene que juntar el cierre de capitulo, en caracteres. Mil
+# seiscientos son unas veinte lineas a dos columnas: media pagina, que es lo
+# que una pagina de cierre necesita para no parecer un error.
+CIERRE_MINIMO = 1600
+
+
+def cerrar_capitulo(piezas_de_seccion):
+    """La nota de cierre viaja con el ultimo parrafo del capitulo.
+
+    Un capitulo termina con su nota de lectura. Si la pagina anterior quedo
+    llena, la nota —treinta milimetros— se va sola a una pagina nueva y la
+    ultima pagina del capitulo queda al 7%: dieciocho milimetros de texto y el
+    resto papel. Eso no se lee como un cierre, se lee como un error de armado.
+
+    Se juntan la nota, el separador y el ultimo bloque de prosa en una sola
+    pieza indivisible. Cuando no entra al pie, se van los tres juntos y la
+    ultima pagina recibe un bloque que se sostiene solo. La pagina anterior
+    pierde ese bloque, si; pero dos paginas a media altura se leen mucho mejor
+    que una llena y una vacia.
+
+    Si el bloque resultante fuera mas alto que una pagina, WeasyPrint lo parte
+    igual y no pasa nada: el break-inside es una preferencia, no una promesa.
+    """
+    if len(piezas_de_seccion) < 2:
+        return piezas_de_seccion
+    if "nota-envoltorio" not in piezas_de_seccion[-1]["html"]:
+        return piezas_de_seccion
+    # Hacia atras, juntando prosa y separadores hasta que el bloque tenga con
+    # que sostener una pagina. Con una sola banda no alcanzaba: el capitulo 2
+    # cierra con un parrafo de dos lineas y la pagina seguia al 15%.
+    #
+    # SE FRENA EN LO PRIMERO QUE NO SEA PROSA. Tragarse un exhibit haria un
+    # bloque indivisible de media pagina, que es el problema del otro lado.
+    corte = len(piezas_de_seccion) - 1
+    texto = len(_texto_plano(piezas_de_seccion[-1]["html"]))
+    while corte > 0:
+        previa = piezas_de_seccion[corte - 1]
+        # Prosa es todo menos una figura y menos un titulo: un remate o una
+        # cifra destacada son quince milimetros y viajan sin problema. Una
+        # figura haria un bloque indivisible de media pagina —el problema del
+        # otro lado— y un titulo tiene que poder abrir pagina.
+        es_prosa = previa["tipo"] not in ("figura", "titulo")
+        if not es_prosa or texto >= CIERRE_MINIMO:
+            break
+        texto += len(_texto_plano(previa["html"]))
+        corte -= 1
+    if corte == len(piezas_de_seccion) - 1:
+        return piezas_de_seccion
+    cola = piezas_de_seccion[corte:]
+    junta = {"id": cola[0]["id"], "tipo": "ancho",
+             "html": '<div class="cierre">%s</div>'
+                     % "".join(x["html"] for x in cola)}
+    return piezas_de_seccion[:corte] + [junta]
+
+
 # ==========================================================================
 # 3bis. EL ACOMODADOR
 # ==========================================================================
@@ -746,12 +807,12 @@ def bandas(lista, seccion):
 # page.anchors devuelve su caja. El hueco de una pagina es la distancia entre el
 # fondo de la ultima pieza que cayo en ella y el fin de la caja de texto.
 
-HUECO_MINIMO = 26.0     # mm: menos que esto no es un hueco, es el aire del pie
+HUECO_MINIMO = 22.0     # mm: menos que esto no es un hueco, es el aire del pie
 PASADAS_MAXIMAS = 8     # cada pasada rearma el PDF entero; ocho alcanzan
 SALTOS_MAXIMOS = 2      # cuantas veces se puede bajar una misma figura
 
 
-def _huecos(doc, fin_pt):
+def _huecos(doc, fin_px):
     """Por pagina: el hueco al pie en mm, y la pieza que la abre.
 
     Las paginas sin ninguna pieza —la tapa y el indice— quedan en (None, None):
@@ -762,7 +823,7 @@ def _huecos(doc, fin_pt):
         if not pag.anchors:
             fuera.append((None, None))
             continue
-        fondo = min(max(caja[3] for caja in pag.anchors.values()), fin_pt)
+        fondo = min(max(caja[3] for caja in pag.anchors.values()), fin_px)
         # Los h1 y los h2 tambien dejan ancla —las usa el indice para su numero
         # de pagina— y no son piezas. Si se las toma por piezas, el acomodador
         # cree que la pagina la abre un titulo, no encuentra esa clave entre las
@@ -772,7 +833,7 @@ def _huecos(doc, fin_pt):
                    if k.startswith(PREFIJO_PIEZA)}
         abre = (min(propias.items(), key=lambda kv: (kv[1][1], kv[1][0]))[0]
                 if propias else None)
-        fuera.append(((fin_pt - fondo) * 25.4 / 72.0, abre))
+        fuera.append(((fin_px - fondo) / PX_POR_MM, abre))
     return fuera
 
 
@@ -803,8 +864,8 @@ def acomodar(piezas, css_txt, envolver, cierres):
     def medir(orden):
         doc = HTML(string=envolver(orden), base_url=RAIZ).render(
             stylesheets=hoja, cache=cache)
-        fin_pt = doc.pages[0].height - MARGEN_PIE * 72 / 25.4
-        huecos = _huecos(doc, fin_pt)
+        fin_px = doc.pages[0].height - MARGEN_PIE * PX_POR_MM
+        huecos = _huecos(doc, fin_px)
         return huecos, _hueco_evitable(huecos, cierres, doc)
 
     orden = list(piezas)
@@ -1061,14 +1122,19 @@ p.remate strong { font-style: normal; font-weight: bold; }
                 border-top: .5pt solid %(arena)s; padding-top: 2.4mm;
                 font-size: 7.9pt; line-height: 1.4; color: %(tinta)s;
                 opacity: .82; columns: 2; column-gap: 6.5mm; }
-/* LA NOTA NO SE PARTE. Se probaron las dos: dejandola partir, el resto caia
-   arriba de la pagina siguiente en una, cuatro u ocho lineas sueltas, que se
-   leen como un error de armado. Sin partir, cuando no entra al pie se va
-   entera y la ultima pagina del capitulo queda con la nota sola. Eso segundo
-   se lee como un colofon, que es lo que la nota es. */
-/* El que lleva el break-inside es el ENVOLTORIO y no la caja de dos columnas:
-   WeasyPrint parte igual una caja multicolumna aunque le pidas que no. */
+/* LA NOTA SE PARTE, PERO NO DE CUALQUIER MANERA. Se probaron las tres:
+   partiendo libre, el resto caia arriba de la pagina siguiente en una sola
+   linea, que se lee como un error de armado; sin partir, cuando no entra al
+   pie se iba entera y dejaba la ultima pagina del capitulo con la nota sola al
+   7%%. Con seis lineas como minimo de cada lado, la pagina anterior se llena y
+   la ultima recibe un bloque que se sostiene — pero medido sobre las 54
+   paginas dio lo mismo que no partirla y con cortes mas feos, asi que no se
+   parte: el envoltorio es el que lleva el break-inside, porque WeasyPrint
+   parte igual una caja multicolumna aunque le pidas que no. */
 .nota-envoltorio { break-inside: avoid; }
+/* El cierre de capitulo: ultimo parrafo, separador y nota, en un solo bloque
+   que no se parte. Ver cerrar_capitulo(). */
+.cierre { break-inside: avoid; }
 .nota-lectura p { margin: 0 0 .4em; text-align: left; hyphens: none; }
 .nota-lectura .et { font-weight: bold; opacity: 1; }
 
@@ -1136,7 +1202,7 @@ th:first-child, td:first-child { text-align: left; }
    ancho de la caja y la otra mitad quedaba en papel: el partido es una franja
    en diagonal y su lienzo es casi cuadrado, asi que lo que manda es el alto.
    El acomodador se encarga del hueco que deje al pie de pagina. */
-.exh.alto img { max-height: 108mm; }
+.exh.alto img { max-height: 100mm; }
 .exh-fuente, .exh-nota { font-style: italic;
                          font-size: 7pt; line-height: 1.34; margin: 1.8mm 0 0;
                          text-align: left; hyphens: none; opacity: .66; }
@@ -1242,7 +1308,7 @@ def main():
         slug = nombre.split(".")[0].lower()
         lista, subs = bloques(leer_publicable(nombre), slug)
         entradas.append((slug, titulo, subs))
-        piezas.append(bandas(lista, slug))
+        piezas.append(cerrar_capitulo(bandas(lista, slug)))
 
     def envolver(orden_de_piezas, secciones=None):
         """Las piezas ya acomodadas, adentro del documento completo."""

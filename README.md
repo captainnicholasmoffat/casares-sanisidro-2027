@@ -70,6 +70,42 @@ CSS hizo lo que uno cree:
 pdftoppm -png -r 80 PROGRAMA_SAN_ISIDRO_2027.pdf salida
 ```
 
+## La paleta
+
+La del informe de referencia, muestreada de su PDF pixel por pixel: son los
+colores más frecuentes de sus páginas descontando los grises del antialias.
+Vive en `03_scripts/estilo.py` y el CSS del armador usa los mismos seis, así que
+el documento y sus veinte exhibits son una sola cosa.
+
+| | | |
+|---|---|---|
+| Crema | `#F5F0E8` | el fondo de toda la página |
+| Tinta | `#2A211C` | el texto, negro cálido |
+| Acento | `#7C2E23` | ladrillo: eyebrow, números de sección, títulos |
+| Dato | `#5E7157` | verde salvia: la serie principal |
+| Arena | `#EAE0CF` | bandas de encabezado y cajas laterales |
+| Filas | `#E8E4D9` | filas alternadas |
+| Salvia clara | `#7E9070` | la **cuarta** serie, cuando hacen falta cuatro |
+
+La séptima existe por una razón concreta: el exhibit 2 compara cuatro series
+sobre las mismas seis categorías, y con seis colores hay tres tintas que se lean
+sobre el crema. Está en las páginas de la referencia y se muestreó igual que las
+otras seis. Se usa en los exhibits **2**, **4** y **10**, y en ningún otro lado.
+
+**El acento es un rojo ladrillo.** La regla anterior del repositorio prohibía el
+rojo porque en la Argentina se lee como color político. Queda sin efecto por
+decisión tomada. Lo que se sigue buscando es el **rojo puro**, que nunca es una
+elección de diseño sino un valor por defecto que se coló.
+
+### La lista negra no es la paleta
+
+`estilo.PROHIBIDOS` tiene verdes, azules y rojos —`#2ca02c`, `#1f77b4`,
+`#00ff00`— que **no** son del sistema visual: son los colores por defecto de
+matplotlib, escritos ahí para **buscarlos** en el SVG generado y fallar si
+aparecen. Vive al lado de `verificar_paleta()` y no de la paleta, justamente
+para que no se confunda. Borrarlos no saca esos colores del documento: saca el
+control que los caza.
+
 ## Tipografía
 
 **Source Serif 4**, de Frank Grießhammer para Adobe, bajo **SIL Open Font
