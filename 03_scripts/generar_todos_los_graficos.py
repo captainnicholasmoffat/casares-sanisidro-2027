@@ -21,6 +21,7 @@ import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
+E.PIE_EXTERNO = True
 import graficos_cap1 as C1
 import graficos_cap2 as C2
 import graficos_cap3 as C3
@@ -145,6 +146,9 @@ if __name__ == "__main__":
             for d in detalle[:6]:
                 print("      %s" % d)
         sys.exit(1)
+    import json as _json
+    with open(os.path.join(E.SALIDA, "pies.json"), "w", encoding="utf-8") as _f:
+        _json.dump(E.PIES, _f, ensure_ascii=False, indent=1)
     print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
           "ninguna palabra sin tilde, ningún texto pisado, ningún texto "
           "tapado por el gráfico y ningún número escrito a mano" % len(hechos))

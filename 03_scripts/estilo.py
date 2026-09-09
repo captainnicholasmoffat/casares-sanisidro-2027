@@ -213,6 +213,17 @@ def _alto_en_figura(fig, artista):
     return caja.transformed(fig.transFigure.inverted()).height
 
 
+# Cuando PIE_EXTERNO esta activo, marco() NO dibuja la fuente ni la nota
+# adentro del PNG: las registra para que las escriba quien maqueta.
+#
+# Un pie dibujado por matplotlib sale al mismo cuerpo y al mismo peso que el
+# contenido del grafico y compite con el. Al pie de un exhibit en el documento
+# va en cuerpo 7, italica y gris, que es donde tiene que estar.
+PIE_EXTERNO = False
+PIES = {}
+_PIE_PENDIENTE = {}
+
+
 def marco(fig, exhibit, titulo, bajada=None, fuente=None, nota=None,
           x=0.012, aire=0.014):
     """
@@ -243,6 +254,11 @@ def marco(fig, exhibit, titulo, bajada=None, fuente=None, nota=None,
     top = max(0.30, y - aire * 1.6)
 
     y = 0.012
+    if PIE_EXTERNO:
+        _PIE_PENDIENTE.clear()
+        _PIE_PENDIENTE.update(exhibit=exhibit, titulo=titulo, bajada=bajada,
+                              fuente=fuente, nota=nota)
+        return top, min(0.70, y + aire * 1.9)
     if fuente:
         t = fig.text(x, y, envolver("Fuente: " + fuente, 6.2), ha="left",
                      va="bottom", fontsize=6.2, color=TINTA, alpha=0.62,
@@ -297,6 +313,9 @@ def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
                                    ajuste.get("top", 1)))
         else:
             fig.subplots_adjust(**ajuste)
+    if PIE_EXTERNO and _PIE_PENDIENTE:
+        PIES[nombre] = dict(_PIE_PENDIENTE)
+        _PIE_PENDIENTE.clear()
     DESBORDES[nombre] = verificar_desborde(fig)
     SIN_ACENTO[nombre] = verificar_acentos(fig)
     COLISIONES[nombre] = verificar_colisiones(fig)

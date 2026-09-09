@@ -1,0 +1,142 @@
+{
+ "EXHIBIT_01_gasto_real_2010_2025": {
+  "exhibit": "EXHIBIT 01",
+  "titulo": "El gasto municipal real cae 34,8% entre 2017 y 2024",
+  "bajada": "Gasto total en pesos constantes. Un solo concepto en todos los años: gastos corrientes más de capital, sin aplicaciones financieras.",
+  "fuente": "elaboración propia sobre rendiciones de cuentas y ejecución presupuestaria del Municipio de San Isidro, deflactado con IPC INDEC empalmado (data/serie_gastos_comparable.csv)",
+  "nota": "2013, 2018 y 2023 no tienen rendición de cuentas publicada. No se interpolaron: el hueco queda a la vista."
+ },
+ "EXHIBIT_02_zonas_carencias": {
+  "exhibit": "EXHIBIT 02",
+  "titulo": "Boulogne y Béccar concentran el 67% de la carencia del partido",
+  "bajada": "Cuatro indicadores por zona, ordenadas de peor a mejor por NBI. El NBI del partido es 3,16%.",
+  "fuente": "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7 (data/zonas_indicadores.csv)",
+  "nota": null
+ },
+ "EXHIBIT_03_educacion_por_zona": {
+  "exhibit": "EXHIBIT 03",
+  "titulo": "El mismo orden, dado vuelta: donde falta todo, tampoco hay título",
+  "bajada": "Población con universidad completa o más, por zona. Mismo orden que el exhibit 02, de peor a mejor en NBI.",
+  "fuente": "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7 (data/zonas_indicadores.csv)",
+  "nota": null
+ },
+ "EXHIBIT_04_coparticipacion_comparada": {
+  "exhibit": "EXHIBIT 04",
+  "titulo": "Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta",
+  "bajada": "Participación de cada municipio en el total transferido por la Provincia a los 135 municipios. Años completos.",
+  "fuente": "Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires, transferencias a municipios 2021-2025",
+  "nota": "2026 va con seis meses y queda fuera del gráfico. San Isidro cae a 1,6811% y Tigre sube a 1,8370%."
+ },
+ "EXHIBIT_05_personal_y_obra_vs_provincia": {
+  "exhibit": "EXHIBIT 05",
+  "titulo": "San Isidro gasta menos en sueldos y mucho más en obra que la mediana bonaerense",
+  "bajada": "Cada punto es un municipio, ordenados por valor. Ejecución 2025, gasto devengado.",
+  "fuente": "RAFAM 2025, vía La Verdadera PBA (la-verdadera-pba.pages.dev), capturado el 3 de septiembre de 2026. data/rafam_2025_municipios.csv",
+  "nota": "Son 106 de los 135 municipios: los otros 29 no están en la planilla. No se estimó ninguno. La Verdadera PBA procesa datos de RAFAM pero no es la fuente oficial: el dato de San Isidro está validado contra la ejecución del propio Municipio, el de los otros 105 no."
+ },
+ "EXHIBIT_06_percepcion_2024_2025": {
+  "exhibit": "EXHIBIT 06",
+  "titulo": "En 2025 quedaron 35.994 millones sin cobrar de lo ya facturado",
+  "bajada": "Recursos corrientes devengados contra percibidos. La franja punteada es mora: plata que el Municipio tiene derecho a cobrar y no entró.",
+  "fuente": "elaboración propia sobre la ejecución presupuestaria trimestral del Municipio de San Isidro, informes anuales 2024 y 2025",
+  "nota": null
+ },
+ "EXHIBIT_07_variacion_por_funcion": {
+  "exhibit": "EXHIBIT 07",
+  "titulo": "Servicios de la deuda pública creció 36,3% real en un año; promoción y asistencia social cayó 32,5%",
+  "bajada": "Variación real del gasto devengado por función, en pesos constantes de diciembre de 2025.",
+  "fuente": "elaboración propia sobre la ejecución presupuestaria trimestral del Municipio de San Isidro, informes anuales 2024 y 2025",
+  "nota": "Se excluyen Transporte, Comercio y Agua potable: cambian de contenido entre los dos años por reclasificación contable, no porque haya cambiado el gasto."
+ },
+ "EXHIBIT_08_escenarios_resultado": {
+  "exhibit": "EXHIBIT 08",
+  "titulo": "Sin cambios, San Isidro vuelve al azul en 2028. En el adverso, nunca",
+  "bajada": "Resultado financiero proyectado. El escenario reformista por reasignación coincide con el base y no se dibuja aparte.",
+  "fuente": "modelo de flujo de caja, data/modelo_flujo_caja.csv. Pesos constantes de diciembre de 2025, sin supuesto de inflación",
+  "nota": null
+ },
+ "EXHIBIT_09_base_vs_reformista": {
+  "exhibit": "EXHIBIT 09",
+  "titulo": "Pagar el programa cobrando mejor deja al Municipio mejor que no hacerlo",
+  "bajada": "El area sombreada es la diferencia: 2.289 millones a favor en 2031 y 2.908 en 2037.",
+  "fuente": "modelo de flujo de caja, data/modelo_flujo_caja.csv. Pesos constantes de diciembre de 2025, sin supuesto de inflación",
+  "nota": null
+ },
+ "EXHIBIT_10_tornado_sensibilidad": {
+  "exhibit": "EXHIBIT 10",
+  "titulo": "Lo que manda es cuánto crecen los recursos propios",
+  "bajada": "Efecto sobre el resultado financiero de 2031 de mover cada variable, con las otras dos en su valor del escenario base. Base: 10.375 millones.",
+  "fuente": "data/sensibilidad.csv",
+  "nota": null
+ },
+ "EXHIBIT_11_rigidez_del_gasto": {
+  "exhibit": "EXHIBIT 11",
+  "titulo": "El 73,1% del presupuesto no se puede tocar dentro del ejercicio",
+  "bajada": "Composición del gasto 2025 por rigidez, y que parte del margen flexible se llevan las dos propuestas del programa.",
+  "fuente": "data/ejecucion_gastos_objeto.csv y data/modelo_flujo_caja.csv",
+  "nota": "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. Caben, pero no queda lugar para una tercera del mismo tamaño."
+ },
+ "EXHIBIT_12_cascada_resultado_2025": {
+  "exhibit": "EXHIBIT 12",
+  "titulo": "El déficit de 2025 no viene del gasto corriente: viene de la obra",
+  "bajada": "El ahorro corriente fue positivo en 49.751 millones. Lo que da vuelta el resultado son los 57.832 millones de gasto de capital.",
+  "fuente": "Municipio de San Isidro, Estado de Situación Económico-Financiera 2025, cuenta Ahorro-Inversión-Financiamiento",
+  "nota": "Los ingresos van por lo PERCIBIDO y los gastos por lo DEVENGADO: es la convención de la cuenta Ahorro-Inversión, no una elección nuestra."
+ },
+ "EXHIBIT_13_reparto_vecinal": {
+  "exhibit": "EXHIBIT 13",
+  "titulo": "La partida vecinal reparte un 71% más por vecino en Béccar que en Martínez",
+  "bajada": "Reparto de los 28.908 millones del año 4. Mitad por población y mitad por un índice que promedia NBI, cloacas, gas de red y hacinamiento.",
+  "fuente": "data/reparto_vecinal_por_zona.csv, calculado de data/baseline_2025.csv y data/zonas_indicadores.csv",
+  "nota": null
+ },
+ "EXHIBIT_14_obra_publica_vecinal": {
+  "exhibit": "EXHIBIT 14",
+  "titulo": "En el año 4, la mitad de la obra pública la deciden las comisiones vecinales",
+  "bajada": "Sobre la obra pública ejecutada en 2025: 57.816 millones. Es reasignación de quien decide, no gasto nuevo.",
+  "fuente": "data/baseline_2025.csv, bienes de uso devengados en 2025",
+  "nota": null
+ },
+ "EXHIBIT_15_mapa_zonas_nbi": {
+  "exhibit": "EXHIBIT 15",
+  "titulo": "El partido se parte en dos: el oeste y el norte contra la costa sur",
+  "bajada": "Coloreadas por porcentaje de hogares con necesidades básicas insatisfechas. El partido entero promedia 3,16%.",
+  "fuente": "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7; límites de localidad de OpenStreetMap",
+  "nota": "OpenStreetMap no es fuente oficial. Cada radio censal va a la localidad que contiene su punto representativo; los 360 caen dentro de exactamente una. Ver data/METODOLOGIA_ZONAS.md."
+ },
+ "EXHIBIT_16_mapa_radios_nbi": {
+  "exhibit": "EXHIBIT 16",
+  "titulo": "La carencia no está repartida: está concentrada en nueve radios",
+  "bajada": "Los 360 radios censales del partido. El contorno grueso es el conglomerado de la fracción 32, dentro de Beccar.",
+  "fuente": "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7; límites de localidad de OpenStreetMap",
+  "nota": "Los nueve radios se identifican por código y fracción censal, nunca por nombre de barrio: los barrios no tienen geometría oficial."
+ },
+ "EXHIBIT_17_gasto_por_funcion": {
+  "exhibit": "EXHIBIT 17",
+  "titulo": "Ecología y agua potable juntas no llegan al 1,5% del presupuesto",
+  "bajada": "Gasto por función, ejercicio 2025. En BARRANCA las dos funciones que el programa señala como desatendidas.",
+  "fuente": "Municipio de San Isidro, ejecución presupuestaria 2025, informe anual. Gasto devengado",
+  "nota": null
+ },
+ "EXHIBIT_18_empleo_vivienda_vs_resto": {
+  "exhibit": "EXHIBIT 18",
+  "titulo": "Empleo y vivienda son 5 de cada 3.100 pesos que gasta el Municipio",
+  "bajada": "Las dos partidas juntas suman el 0,16% del presupuesto ejecutado en 2025.",
+  "fuente": "Estado de Situación Económico-Financiera 2025, gastos por programa",
+  "nota": null
+ },
+ "EXHIBIT_19_medidas_transparencia": {
+  "exhibit": "EXHIBIT 19",
+  "titulo": "Las 7 medidas de transparencia: hoy no hay ninguna cumplida",
+  "bajada": "Estado verificado en septiembre de 2026 contra el portal de transparencia del Municipio. Ninguna de las 7 cuesta un peso de presupuesto y las 7 se cumplen en cien días.",
+  "fuente": "data/transparencia_medidas.csv. Las medidas son definición del programa de gobierno, no un dato público; el estado de cada una sí se verificó",
+  "nota": "Los 7 casilleros están vacíos porque ninguna medida está cumplida. El día que una se cumpla, lo dice el CSV y el cuadrado se pinta solo. Hay 1 más comprometida para el mandato, no para los cien días: exige construir un sistema, no publicar un archivo."
+ },
+ "EXHIBIT_20_hogares_sin_gas": {
+  "exhibit": "EXHIBIT 20",
+  "titulo": "25.165 hogares de San Isidro cocinan sin gas de red",
+  "bajada": "Boulogne y Beccar concentran 15.168, el 60,3% del total del partido.",
+  "fuente": "INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7",
+  "nota": "En cantidad de hogares, no en porcentaje: un porcentaje chico sobre una zona grande sigue siendo mucha gente."
+ }
+}

@@ -95,6 +95,8 @@ ETIQUETAS = [
 # documento suene a folleto: si una seccion no tiene, se queda sin.
 REMATES = json.load(open(os.path.join(AQUI, "remates.json"), encoding="utf-8")) \
     if os.path.exists(os.path.join(AQUI, "remates.json")) else {}
+DATOS = json.load(open(os.path.join(AQUI, "datos.json"), encoding="utf-8")) \
+    if os.path.exists(os.path.join(AQUI, "datos.json")) else {}
 
 # Las CAJAS DESTACADAS son para cuatro cosas y ninguna mas. Si se empieza a
 # encajonar lo que parece importante, dejan de significar algo.
@@ -152,18 +154,45 @@ def _inline(t):
     return t
 
 
+PIES = json.load(open(os.path.join(CHARTS, "pies.json"), encoding="utf-8")) \
+    if os.path.exists(os.path.join(CHARTS, "pies.json")) else {}
+
+
 def _exhibit(num, titulo):
-    """Un exhibit: numero, titulo descriptivo y linea de fuente al pie."""
+    """Un exhibit: la figura, y su fuente al pie EN EL DOCUMENTO.
+
+    La fuente ya no se dibuja adentro del PNG. Un pie que dibuja matplotlib sale
+    al mismo cuerpo y al mismo peso que el contenido del grafico y compite con
+    el; acá va en cuerpo 7, itálica y gris, debajo de la figura, que es su
+    lugar.
+    """
     cands = [f for f in os.listdir(CHARTS)
              if f.startswith("EXHIBIT_%s_" % num) and f.endswith(".png")]
     if not cands:
         raise RuntimeError("falta el PNG del EXHIBIT %s" % num)
+    nombre = sorted(cands)[0][:-4]
     ruta = os.path.join(CHARTS, sorted(cands)[0])
+    # Un grafico ancho cruza las dos columnas; uno cuadrado o alto vive adentro
+    # de una. Forzar a todos a cruzar deja al mapa chico en el medio con dos
+    # margenes blancos; dejarlos a todos en una columna aplasta las series
+    # largas. Lo decide la proporcion de la imagen.
+    from PIL import Image
+    with Image.open(ruta) as im:
+        ancho_relativo = im.width / im.height
+    clase = "exh ancho" if ancho_relativo >= 1.10 else "exh"
+    pie = PIES.get(nombre, {})
+    pies = []
+    if pie.get("nota"):
+        pies.append('<p class="exh-nota">%s</p>' % _inline(pie["nota"]))
+    if pie.get("fuente"):
+        pies.append('<p class="exh-fuente">Fuente: %s</p>'
+                    % _inline(pie["fuente"]))
     # SIN figcaption: el PNG ya trae su numero, su titulo descriptivo y su
     # linea de fuente al pie. Agregar un pie aparte los duplicaba.
-    return ('<figure class="exh" title="%s">'
-            '<img src="file://%s" alt="EXHIBIT %s — %s"/>'
-            '</figure>' % (html.escape(titulo), ruta, num, html.escape(titulo)))
+    return ('<figure class="%s" title="%s">'
+            '<img src="file://%s" alt="EXHIBIT %s — %s"/>%s'
+            '</figure>' % (clase, html.escape(titulo), ruta, num,
+                           html.escape(titulo), "".join(pies)))
 
 
 def _tabla(bloque):
@@ -181,7 +210,8 @@ def _tabla(bloque):
     def celdas(l):
         return [c.strip() for c in l.strip().strip("|").split("|")]
 
-    out = ['<div class="tw">']
+    ancha = len(celdas(encabezado)) >= 4
+    out = ['<div class="tw%s">' % (" ancho" if ancha else "")]
     if etiqueta:
         out.append('<p class="etq"><span class="etq-b">%s</span> %s</p>'
                    % (etiqueta, LEYENDA_ETIQUETA[etiqueta]))
@@ -298,25 +328,31 @@ def a_html(md, slug):
                 out.append('<p class="version">%s</p>' % _inline(l.strip()[1:-1]))
                 i += 1
                 continue
-            clase = ' class="remate"' if l.strip() in _remates_de(slug) else ""
+            if l.strip() in _lista(DATOS, slug):
+                clase = ' class="dato"'
+            elif l.strip() in _lista(REMATES, slug):
+                clase = ' class="remate"'
+            else:
+                clase = ""
             out.append("<p%s>%s</p>" % (clase, _inline(l.strip())))
         i += 1
     return _agrupar_titulos("\n".join(out))
 
 
-def _remates_de(slug):
-    """Las frases de remate del capitulo, tal como estan escritas en el .md."""
+def _lista(mapa, slug):
+    """Las frases marcadas de un capitulo, tal como estan escritas en el .md."""
     for nombre, _ in ORDEN:
         if nombre.split(".")[0].lower() == slug:
-            return set(REMATES.get(nombre, []))
+            return set(mapa.get(nombre, []))
     return set()
 
 
 BLOQUE = (r'<(?:p|ul|ol|blockquote|aside)[ >].*?</(?:p|ul|ol|blockquote|aside)>'
           r'|<div class="tw">.*?</div>')
 
-# Un h2 arrastra, si lo hay, el h3 que le sigue, y el primer bloque de contenido.
-RE_H2 = re.compile(r'(<h2>.*?</h2>)\n(?:(<h3>.*?</h3>)\n)?(' + BLOQUE + ')', re.S)
+# El h2 cruza las dos columnas, asi que NO se envuelve: un .keep alrededor lo
+# encerraria en una sola. Solo los h3, que viven adentro de una columna.
+RE_H2 = None
 RE_H3 = re.compile(r'(<h3>.*?</h3>)\n(' + BLOQUE + ')', re.S)
 
 
@@ -334,11 +370,6 @@ def _agrupar_titulos(html_txt):
     equivocado, y el HTML mal anidado hacia que el navegador de impresion
     ignorara el break-inside. Ahora el h3 se captura en la misma regla del h2.
     """
-    def envolver(m):
-        partes = [g for g in m.groups() if g]
-        return '<div class="keep">%s</div>' % "\n".join(partes)
-
-    html_txt = RE_H2.sub(envolver, html_txt)
     # Los h3 sueltos, los que no venian pegados a un h2.
     html_txt = RE_H3.sub(
         lambda m: '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2)),
@@ -397,16 +428,29 @@ def indice(entradas):
 CSS = """
 @page {
   size: A4; margin: 20mm 18mm 18mm 18mm; background: %(papel)s;
+  @top-left     { content: string(cap); font-family: "DejaVu Sans";
+                  font-size: 6.3pt; letter-spacing: .9pt; color: %(rio)s;
+                  text-transform: uppercase; margin-bottom: 5mm; }
   @bottom-left  { content: "%(corto)s"; font-family: "DejaVu Sans";
                   font-size: 7pt; color: %(tinta)s; opacity: .55; }
   @bottom-right { content: counter(page); font-family: "DejaVu Sans";
                   font-size: 7.5pt; color: %(tinta)s; opacity: .75; }
 }
-@page :first { margin: 0; @bottom-left { content: ""; } @bottom-right { content: ""; } }
+@page :first { margin: 0; @top-left { content: ""; } @bottom-left { content: ""; } @bottom-right { content: ""; } }
 
 html { background: %(papel)s; }
-body { font-family: "DejaVu Serif", Georgia, serif; font-size: 9.6pt;
-       line-height: 1.52; color: %(tinta)s; }
+body { font-family: "DejaVu Serif", Georgia, serif; font-size: 8.8pt;
+       line-height: 1.44; color: %(tinta)s; }
+
+/* LA PROSA VA A DOS COLUMNAS. Los exhibits, las tablas y las cajas cruzan las
+   dos. Esa alternancia es la mitad del efecto: una columna angosta se lee mas
+   rapido, y lo que corta el ritmo es siempre un dato. */
+.cuerpo { columns: 2; column-gap: 6.5mm; column-fill: auto; }
+h1, h2, .caja, p.remate, p.dato, p.bajada, p.version,
+hr { column-span: all; }
+.exh.ancho, .tw.ancho { column-span: all; }
+.exh img { max-height: 74mm; }
+.exh.ancho img { max-height: 96mm; width: 100%%; }
 p { margin: 0 0 .58em; text-align: justify; hyphens: auto; }
 strong { font-weight: bold; }
 code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background: %(cal)s;
@@ -416,26 +460,34 @@ hr { border: 0; border-top: .5pt solid %(cal)s; margin: 1.5em 0; }
 
 /* JERARQUIA. El numero de seccion grande y en Rio, el titulo en serif y la
    bajada en italica: de un vistazo se sabe donde esta uno en el documento. */
-h1 { font-size: 21pt; line-height: 1.14; margin: 0 0 .35em;
+h1 { font-size: 19pt; line-height: 1.12; margin: 0 0 .28em;
      string-set: cap content(); break-before: page; }
 /* La bajada: una linea que dice de que va la seccion, en Rio y en italica. */
-p.bajada { font-family: "DejaVu Serif"; font-style: italic; font-size: 11.4pt;
-           line-height: 1.34; color: %(rio)s; margin: .1em 0 .9em;
+p.bajada { font-family: "DejaVu Serif"; font-style: italic; font-size: 10.4pt;
+           line-height: 1.3; color: %(rio)s; margin: .1em 0 .55em;
            max-width: 138mm; text-align: left; }
 /* La nota de version no es contenido: chica y apagada. */
 p.version { font-family: "DejaVu Sans"; font-size: 6.9pt; line-height: 1.35;
             color: %(tinta)s; opacity: .55; margin: 0 0 .3em;
             text-align: left; max-width: 138mm; }
-p.version + p.version { margin-bottom: 1.4em; }
-h2 { font-size: 13.4pt; line-height: 1.2; margin: 1.6em 0 .45em;
+p.version + p.version { margin-bottom: .9em; }
+h2 { font-size: 12.6pt; line-height: 1.18; margin: 1.15em 0 .4em;
      color: %(tinta)s; }
-h2 .num { color: %(rio)s; font-size: 17pt; font-weight: bold;
+h2 .num { color: %(rio)s; font-size: 16pt; font-weight: bold;
           margin-right: .28em; }
 h3 { font-family: "DejaVu Sans"; font-size: 9.2pt; font-weight: bold;
      margin: 1.2em 0 .35em; color: %(rio)s;
      letter-spacing: .2pt; }
 
 /* REMATE. Una por seccion, y solo las que ya estaban escritas. */
+/* Un dato que merece verse sin leer. Son parrafos que YA estan escritos como
+   una cifra sola; solo se les da el peso que tienen. */
+p.dato { font-family: "DejaVu Sans"; font-size: 15pt; line-height: 1.24;
+         font-weight: bold; color: %(rio)s; margin: .7em 0 .8em;
+         padding: 5pt 0 5pt 9pt; border-left: 3pt solid %(barranca)s;
+         text-align: left; break-inside: avoid; }
+p.dato strong { color: %(tinta)s; }
+
 p.remate { font-size: 11.4pt; line-height: 1.38; color: %(tinta)s;
            margin: 1em 0 1.1em; padding: 0 0 0 9pt;
            border-left: 2.5pt solid %(rio)s; text-align: left;
@@ -474,12 +526,17 @@ li { margin-bottom: .22em; text-align: justify; }
 
 /* ---- tablas ---- */
 .tw { break-inside: avoid; margin: .95em 0 1.15em; }
+/* Tabla densa y legible: encabezado en versalitas sobre banda oscura, filas
+   alternadas suaves, primera columna en el color de acento. Una tabla asi entra
+   en un cuarto de pagina y se lee mejor que un PNG de tabla. */
 table { width: 100%%; border-collapse: collapse;
-        font-family: "DejaVu Sans"; font-size: 7.9pt; }
-th { text-align: left; padding: 4pt 5pt; border-bottom: 1pt solid %(tinta)s;
-     font-weight: bold; }
-td { padding: 3.4pt 5pt; border-bottom: .4pt solid %(cal)s;
+        font-family: "DejaVu Sans"; font-size: 7.1pt; }
+thead th { background: %(tinta)s; color: %(papel)s; text-align: left;
+           padding: 3.4pt 5pt; font-size: 6.3pt; font-weight: bold;
+           letter-spacing: .45pt; text-transform: uppercase; }
+td { padding: 2.7pt 5pt; border-bottom: .4pt solid %(cal)s;
      vertical-align: top; }
+tbody td:first-child { color: %(rio)s; font-weight: bold; }
 tbody tr:nth-child(even) { background: %(cal)s; }
 th:not(:first-child), td:not(:first-child) { text-align: right; }
 th:first-child, td:first-child { text-align: left; }
@@ -490,11 +547,16 @@ th:first-child, td:first-child { text-align: left; }
 .etq-b { font-weight: bold; letter-spacing: .3pt; }
 
 /* ---- exhibits ---- */
-.exh { break-inside: avoid; margin: 1.1em 0 1.3em; }
+.exh { break-inside: avoid; margin: .9em 0 1.05em; }
+.exh-fuente { font-family: "DejaVu Serif"; font-style: italic; font-size: 6.6pt;
+              line-height: 1.3; color: %(tinta)s; opacity: .58;
+              margin: 2.5pt 0 0; text-align: left; }
+.exh-nota { font-family: "DejaVu Sans"; font-size: 6.6pt; line-height: 1.32;
+            color: %(ambar)s; margin: 3pt 0 0; text-align: left; }
 /* Un exhibit mas alto que media pagina no entra casi nunca junto al texto que
    lo introduce, y al irse entero deja la pagina anterior a medio llenar. El
    tope hace que quepan; el ancho manda y la altura se ajusta. */
-.exh img { max-width: 100%%; max-height: 104mm; width: auto; height: auto;
+.exh img { max-width: 100%%; width: auto; height: auto;
            display: block; margin: 0 auto; }
 .exh figcaption { font-family: "DejaVu Sans"; font-size: 6.9pt;
                   color: %(tinta)s; opacity: .7; margin-top: 3pt; }
@@ -557,7 +619,8 @@ def main():
     for nombre, titulo in ORDEN:
         slug = nombre.split(".")[0].lower()
         entradas.append((slug, titulo))
-        cuerpo.append(a_html(leer_publicable(nombre), slug))
+        cuerpo.append('<section class="cuerpo">%s</section>'
+                      % a_html(leer_publicable(nombre), slug))
 
     partes.append(indice(entradas))
     partes.extend(cuerpo)
