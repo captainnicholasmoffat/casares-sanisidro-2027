@@ -42,6 +42,63 @@ ROJO PROHIBIDO: en Argentina se lee como color politico. No aparece en
 ninguna parte, y verificar_pdf() falla si se cuela.
 """
 
+# ==========================================================================
+# LAS PASADAS DEL ARMADOR, EN ORDEN
+# ==========================================================================
+# El orden importa y ya causo cinco bugs. Esta es la lista, con el motivo de
+# cada paso y con lo que rompe si se lo mueve:
+#
+#   1. leer_publicable()      corta por el marcador NO VA AL PDF.
+#                             Va primero: nada de lo que sigue debe ver un
+#                             pendiente. Si corriera despues, el resto de las
+#                             pasadas maquetaria texto que no se publica.
+#
+#   2. a_html(), linea a linea, en un solo recorrido:
+#      2a. exhibits            `[EXHIBIT NN — ...]` -> <figure>, con el pie que
+#                              sale de 06_charts/pies.json.
+#      2b. tablas              markdown -> <table>, y la etiqueta de confianza
+#                              que le corresponda por su encabezado.
+#      2c. h1 / bajada / version   los tres primeros bloques de un capitulo
+#                              tienen roles distintos y se marcan aca.
+#      2d. h2 con su numero    el numero se separa para darle otro peso.
+#      2e. cajas               un h3 cuyo titulo esta en CAJAS abre un <aside>
+#                              y se come los parrafos que le siguen.
+#      2f. citas               un blockquote -> caja legal.
+#      2g. remates y datos     parrafos que coinciden con remates.json o
+#                              datos.json. Se comparan por texto EXACTO: si
+#                              alguien reescribe la frase en el .md, el estilo
+#                              se pierde en silencio.
+#
+#   3. _agrupar_titulos()     envuelve h3 + su primer bloque en .keep.
+#                             VA DESPUES de 2, obviamente, pero ADENTRO tiene
+#                             su propio orden: primero RE_H3 y despues la
+#                             extension. Al reves, el bloque siguiente todavia
+#                             es un <h3> pelado y no hay nada que agarrar — ese
+#                             fue el bug de "4.5 Quien decide y quien ejecuta".
+#
+#   4. tapa() e indice()      se anteponen al cuerpo ya armado.
+#
+#   5. WeasyPrint             aplica el CSS. Multicolumna: SOLO los exhibits
+#                             anchos y las tablas anchas cruzan. Cada elemento
+#                             que cruza corta el flujo y abre una fila de
+#                             columnas nueva.
+#
+#   6. verificar_pdf()        relee el PDF y falla si se colo un pendiente o
+#                             aparece rojo. No alcanza con cortar bien: hay que
+#                             comprobar que se corto.
+#
+# SI ALGUIEN INSERTA UNA PASADA NUEVA, mirar estas cuatro cosas:
+#   - Si toca texto: que corra DESPUES del corte (1) o vera pendientes.
+#   - Si envuelve elementos en un <div>: que no encierre nada que tenga
+#     column-span, o lo encerrara en una sola columna. Ese fue el bug de los
+#     h2 en doble columna.
+#   - Si depende de que otra pasada ya haya corrido: dejarlo escrito aca, con
+#     el nombre de la otra. Cinco bugs salieron de suponerlo.
+#   - Correr 03_scripts/verificar_maqueta.py sobre el PDF resultante. Una
+#     pasada nueva mueve todo, y las viudas y los titulos al pie vuelven a
+#     aparecer donde no estaban.
+# ==========================================================================
+
 import html
 import json
 import os
@@ -210,7 +267,7 @@ def _tabla(bloque):
     def celdas(l):
         return [c.strip() for c in l.strip().strip("|").split("|")]
 
-    ancha = len(celdas(encabezado)) >= 4
+    ancha = len(celdas(encabezado)) >= 5
     out = ['<div class="tw%s">' % (" ancho" if ancha else "")]
     if etiqueta:
         out.append('<p class="etq"><span class="etq-b">%s</span> %s</p>'
@@ -446,11 +503,15 @@ body { font-family: "DejaVu Serif", Georgia, serif; font-size: 8.8pt;
    dos. Esa alternancia es la mitad del efecto: una columna angosta se lee mas
    rapido, y lo que corta el ritmo es siempre un dato. */
 .cuerpo { columns: 2; column-gap: 6.5mm; column-fill: auto; }
-h1, h2, .caja, p.remate, p.dato, p.bajada, p.version,
-hr { column-span: all; }
+/* SOLO cruzan las dos columnas los exhibits anchos y las tablas anchas.
+   Cada elemento que cruza corta el flujo y abre una fila de columnas nueva; con
+   los titulos, las cajas, los remates y los datos cruzando tambien, el
+   documento se fragmentaba en filas cortas y quedaban paginas con la mitad
+   inferior vacia. Los titulos y las cajas viven adentro de una columna. */
+h1, p.bajada, p.version, hr { column-span: all; }
 .exh.ancho, .tw.ancho { column-span: all; }
 .exh img { max-height: 74mm; }
-.exh.ancho img { max-height: 96mm; width: 100%%; }
+.exh.ancho img { max-height: 84mm; width: 100%%; }
 p { margin: 0 0 .58em; text-align: justify; hyphens: auto; }
 strong { font-weight: bold; }
 code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background: %(cal)s;
@@ -471,9 +532,9 @@ p.version { font-family: "DejaVu Sans"; font-size: 6.9pt; line-height: 1.35;
             color: %(tinta)s; opacity: .55; margin: 0 0 .3em;
             text-align: left; max-width: 138mm; }
 p.version + p.version { margin-bottom: .9em; }
-h2 { font-size: 12.6pt; line-height: 1.18; margin: 1.15em 0 .4em;
+h2 { font-size: 11.6pt; line-height: 1.16; margin: 1.1em 0 .38em;
      color: %(tinta)s; }
-h2 .num { color: %(rio)s; font-size: 16pt; font-weight: bold;
+h2 .num { color: %(rio)s; font-size: 14pt; font-weight: bold;
           margin-right: .28em; }
 h3 { font-family: "DejaVu Sans"; font-size: 9.2pt; font-weight: bold;
      margin: 1.2em 0 .35em; color: %(rio)s;
@@ -482,13 +543,13 @@ h3 { font-family: "DejaVu Sans"; font-size: 9.2pt; font-weight: bold;
 /* REMATE. Una por seccion, y solo las que ya estaban escritas. */
 /* Un dato que merece verse sin leer. Son parrafos que YA estan escritos como
    una cifra sola; solo se les da el peso que tienen. */
-p.dato { font-family: "DejaVu Sans"; font-size: 15pt; line-height: 1.24;
+p.dato { font-family: "DejaVu Sans"; font-size: 12.6pt; line-height: 1.24;
          font-weight: bold; color: %(rio)s; margin: .7em 0 .8em;
          padding: 5pt 0 5pt 9pt; border-left: 3pt solid %(barranca)s;
          text-align: left; break-inside: avoid; }
 p.dato strong { color: %(tinta)s; }
 
-p.remate { font-size: 11.4pt; line-height: 1.38; color: %(tinta)s;
+p.remate { font-size: 10.2pt; line-height: 1.38; color: %(tinta)s;
            margin: 1em 0 1.1em; padding: 0 0 0 9pt;
            border-left: 2.5pt solid %(rio)s; text-align: left;
            break-inside: avoid; }
@@ -514,9 +575,19 @@ h1 + p, h2 + p { margin-top: 0; }
    que el lector lee como error. WeasyPrint ignora break-after:avoid en los
    encabezados, asi que el armador agrupa cada titulo con su primer bloque en
    un .keep, que no se puede partir. */
+/* HUERFANOS EN DOBLE COLUMNA.
+   El agrupador anterior envolvia titulo y primer bloque en un .keep, y con dos
+   columnas eso encerraba el titulo en una sola. Sin el, ocho titulos caian al
+   pie de su columna sin nada debajo.
+   La solucion en multicolumna es otra: el titulo no puede terminar una columna,
+   y las primeras lineas de lo que sigue van con el. */
+h2, h3 { break-after: avoid; break-inside: avoid; }
 .keep { break-inside: avoid; }
-.keep h2, .keep h3 { margin-top: 0; }
-p, li { orphans: 2; widows: 2; }
+.keep h3 { margin-top: 0; }
+/* Cuatro lineas antes de cortar, arriba y abajo: con columnas de 84 mm una
+   viuda de una linea se ve mucho mas que en una pagina entera. */
+p, li { orphans: 3; widows: 3; }
+
 
 blockquote { margin: .9em 0 .9em 0; padding: .55em .9em; background: %(cal)s;
              border-left: 2.5pt solid %(rio)s; font-size: 9.2pt;

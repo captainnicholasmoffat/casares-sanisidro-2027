@@ -31,18 +31,10 @@ Antes de proponer, conviene ver el punto de partida. Gasto devengado 2025, por f
 |---|---|---|---|
 | Salud | 78.217 M | 24,1% | 263.106 $ |
 | Urbanismo | 70.310 M | 21,7% | 236.507 $ |
-| Transporte | 36.356 M | 11,2% | 122.294 $ |
-| Dirección superior ejecutiva | 32.552 M | 10,0% | 109.494 $ |
-| Seguridad interna | 32.446 M | 10,0% | 109.142 $ |
-| Deuda pública | 14.898 M | 4,6% | 50.114 $ |
-| Educación y cultural | 13.986 M | 4,3% | 47.046 $ |
-| Vivienda y urbanismo | 12.336 M | 3,8% | 41.496 $ |
-| Ciencia y técnica | 8.155 M | 2,5% | 27.432 $ |
-| Promoción y asistencia social | 5.914 M | 1,8% | 19.894 $ |
 | Agua potable y alcantarillado | 3.320 M | 1,0% | 11.167 $ |
 | **Ecología y medio ambiente** | **1.410 M** | **0,4%** | **4.743 $** |
 
-*Doce de las veinte funciones del nomenclador municipal: el 95,6% del gasto devengado de 2025. El 4,4% restante son siete funciones menores —Legislativa, Relaciones con la comunidad, Administración fiscal, Comercio y turismo, Judicial, Control de la gestión pública y Trabajo, 14.233 M en conjunto— más 170 M de activos financieros, que la clasificación por función no incluye.*
+*Las cuatro funciones que discute este capítulo. El Exhibit 17 muestra las doce principales: son el 95,6% del gasto devengado de 2025. El 4,4% restante son siete funciones menores —Legislativa, Relaciones con la comunidad, Administración fiscal, Comercio y turismo, Judicial, Control de la gestión pública y Trabajo, 14.233 M en conjunto— más 170 M de activos financieros, que la clasificación por función no incluye.*
 
 *"Urbanismo" y "Vivienda y urbanismo" son dos funciones distintas del nomenclador del Municipio, no un error de esta tabla. Se conservan con su nombre oficial.*
 
@@ -173,16 +165,6 @@ La educación obligatoria es competencia provincial, no municipal. Pero el Munic
 ## 5.9 Transparencia · **GRATIS**
 
 Ninguna de estas medidas cuesta un peso. Todas se cumplen en los primeros cien días.
-
-| Medida | Estado hoy |
-|---|---|
-| Publicar el organigrama municipal | No existe la sección |
-| Publicar la planta de personal y la escala salarial | No existe la sección |
-| Publicar compras, contrataciones y licitaciones | No existe la sección |
-| Publicar las declaraciones juradas de funcionarios | El enlace lleva a declaraciones de contribuyentes |
-| Reponer el Portal de Datos Abiertos | Devuelve error 504 |
-| Publicar la rendición de cuentas | La última publicada es de 2022 |
-| Publicar la Ordenanza Fiscal e Impositiva vigente | La última publicada es de 2024 |
 
 `[EXHIBIT 19 — Las medidas de transparencia y su estado]`
 

@@ -83,6 +83,37 @@ El corte por `# NO VA AL PDF` es un `split`, y el script **relee el PDF armado y
 falla** si encuentra rastro de un pendiente o del color rojo. No alcanza con
 cortar bien: hay que comprobar que se cortó.
 
+Después del armado:
+
+```
+python3 03_scripts/verificar_maqueta.py
+```
+
+Busca pendientes colados, títulos al pie de **columna** sin nada debajo, líneas
+sueltas arriba de una columna, y columnas a medio llenar.
+
+### Las pasadas del armador, y por qué el orden importa
+
+`armar_pdf.py` corre seis pasadas en orden fijo. **Cinco bugs salieron de
+moverlas o de suponer que otra ya había corrido**, así que la lista está escrita
+en la cabecera del script con el motivo de cada una y con qué mirar si alguien
+inserta una pasada nueva. Las cuatro cosas a revisar:
+
+1. Si toca texto, tiene que correr **después del corte**, o verá pendientes.
+2. Si envuelve elementos en un `div`, **que no encierre nada con `column-span`**:
+   lo dejaría atrapado en una sola columna. Ése fue el bug de los títulos.
+3. Si depende de que otra pasada ya haya corrido, **dejarlo escrito**.
+4. Correr `verificar_maqueta.py` después. Una pasada nueva mueve todo.
+
+### Una métrica que mentía, y por qué
+
+La primera medición de llenado tomaba **dónde termina el último elemento de la
+página**. Con dos columnas alcanza con que una llegue al pie para que la página
+puntúe llena, aunque la otra esté a la mitad: el documento dio *44 páginas al
+97%* estando partido en filas de columnas cortas. Ahora se mide **por columna**,
+excluyendo los elementos que cruzan. Es el mismo error que este proyecto viene
+persiguiendo: un control que existe y mide la cosa equivocada.
+
 ## Trabajo futuro
 
 Esto no son limitaciones del documento: son cosas que, si aparecen, lo mejoran.
