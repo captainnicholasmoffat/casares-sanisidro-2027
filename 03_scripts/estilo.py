@@ -4,18 +4,21 @@
 El sistema visual del programa de gobierno. Lo importan todos los scripts de
 graficos y NADIE define un color a mano.
 
-LA PALETA
-  PAPEL     fondo de todo
-  TINTA     texto, ejes, titulares
-  RIO       serie primaria
-  BARRANCA  serie secundaria y contraste
-  CAL       fondos, bandas, grillas
-  AMBAR     SOLO advertencias y notas
+LA PALETA — la del informe de referencia, muestreada de su PDF
+  CREMA       fondo de todo
+  TINTA       texto, ejes, titulares
+  ACENTO      ladrillo profundo: la serie que el grafico quiere que se vea,
+              los remates y las notas
+  DATO        verde salvia: la serie principal
+  DATO_CLARO  salvia clara: la cuarta serie, cuando hacen falta cuatro
+  ARENA       bandas de encabezado y cajas
+  FILA        filas alternadas y grillas
 
-PROHIBIDO el rojo y el verde. En la Argentina el rojo se lee como color
-politico y el verde como su respuesta. Un grafico de gasto publico no puede
-tener ninguno de los dos. Tampoco se usa ninguna paleta por defecto de
-matplotlib: la funcion aplicar() las desarma al importar el modulo.
+EL ACENTO ES UN ROJO LADRILLO. La regla anterior de este archivo prohibia el
+rojo porque en la Argentina se lee como color politico. Queda sin efecto por
+decision tomada: el sistema visual se copia entero del informe de referencia.
+Lo que sigue prohibido es el rojo puro y las paletas por defecto de matplotlib:
+la funcion aplicar() las desarma al importar el modulo.
 
 NUMEROS: miles con punto y decimales con coma. 324.304 y 89,39%. Siempre con
 numero(), pct() o millones(). Nunca con f-strings a mano.
@@ -35,18 +38,46 @@ REPO = os.path.dirname(AQUI)
 DATA = os.path.join(REPO, "data")
 SALIDA = os.path.join(REPO, "06_charts")
 
-PAPEL = "#FAF8F4"
-TINTA = "#16293A"
-RIO = "#2D6E7E"
-BARRANCA = "#A8763F"
-CAL = "#EDE9E2"
-AMBAR = "#8A6A1F"
+# --------------------------------------------------------------------------
+# LA PALETA
+# --------------------------------------------------------------------------
+# Es la del informe de referencia, muestreada de su PDF pixel por pixel, y se
+# usa tal cual. Se termino la busqueda de identidad propia: el sistema visual
+# se copia entero y el trabajo se va a lo que si es nuestro, que son los datos.
+#
+# Los seis valores estan verificados contra el original: son los seis colores
+# mas frecuentes de sus paginas, descontando los grises del antialias.
+#
+# EL ACENTO ES UN ROJO LADRILLO. La regla anterior del repo prohibia el rojo
+# porque en Argentina se lee como color politico. Queda sin efecto por decision
+# tomada: el ladrillo profundo de la referencia es el acento del documento.
+CREMA = "#F5F0E8"        # el fondo de toda la pagina
+TINTA = "#2A211C"        # el texto, negro calido
+ACENTO = "#7C2E23"       # ladrillo profundo: titulos, numeros de seccion, marca
+DATO = "#5E7157"         # verde salvia: la serie principal de los graficos
+ARENA = "#EAE0CF"        # bandas de encabezado, cajas laterales
+FILA = "#E8E4D9"         # filas alternadas de tabla
 
-PALETA = {"PAPEL": PAPEL, "TINTA": TINTA, "RIO": RIO,
-          "BARRANCA": BARRANCA, "CAL": CAL, "AMBAR": AMBAR}
+# La septima. El EXHIBIT 02 compara CUATRO series en las mismas seis
+# categorias y con seis colores solo hay tres tintas que se lean sobre el
+# crema. Esta es la salvia clara de la propia referencia —esta en sus paginas,
+# muestreada igual que las otras seis— y no un color nuevo inventado.
+DATO_CLARO = "#7E9070"
+
+# Nombres viejos, para no romper nada que todavia los use. NO USAR EN CODIGO
+# NUEVO: dicen el color de la paleta anterior y ya no es el que pintan.
+PAPEL = CREMA
+RIO = DATO
+BARRANCA = ACENTO
+CAL = ARENA
+AMBAR = ACENTO
+
+PALETA = {"CREMA": CREMA, "TINTA": TINTA, "ACENTO": ACENTO, "DATO": DATO,
+          "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO}
 
 # Colores que no pueden aparecer en ningun grafico. verificar_paleta() los
-# busca en el SVG generado y falla si encuentra alguno.
+# busca en el SVG generado y falla si encuentra alguno. El rojo puro sigue
+# prohibido: el acento es #7C2E23, que es otra cosa.
 PROHIBIDOS = {"#d62728", "#ff0000", "red", "#2ca02c", "#00ff00", "green",
               "#1f77b4", "#ff7f0e", "tab:red", "tab:green", "tab:blue"}
 
@@ -54,20 +85,70 @@ ANCHO_PX = 1600
 DPI = 300
 ANCHO_IN = ANCHO_PX / DPI          # 5,333 pulgadas
 
-SERIF = ["DejaVu Serif", "Georgia", "serif"]
-SANS = ["DejaVu Sans", "Helvetica", "sans-serif"]
+# --------------------------------------------------------------------------
+# LA TIPOGRAFIA DEL DOCUMENTO, TAMBIEN EN LOS GRAFICOS
+# --------------------------------------------------------------------------
+# Un exhibit rotulado con la fuente por defecto de matplotlib al lado de un
+# texto compuesto en Source Serif 4 se ve como una captura de pantalla pegada
+# adentro del documento. Asi que los graficos usan las mismas dos familias que
+# la pagina, cargadas de 05_tipografia/.
+#
+# Los archivos vendorizados son VARIABLES y matplotlib no sabe mover un eje:
+# carga la instancia por defecto y nada mas, o sea que no habria negrita. Por
+# eso se instancian —una vez, a un cache que no se versiona— los pesos que se
+# usan, y esas estaticas son las que se registran.
+TIPOS = os.path.join(REPO, "05_tipografia")
+CACHE_TIPOS = os.path.join(REPO, "_tipos_estaticos")
+
+_INSTANCIAS = [
+    ("SourceSerif4[opsz,wght].ttf", "SourceSerif4-Regular.ttf",
+     {"opsz": 11, "wght": 400}),
+    ("SourceSerif4[opsz,wght].ttf", "SourceSerif4-Bold.ttf",
+     {"opsz": 11, "wght": 700}),
+    ("SourceSerif4-Italic[opsz,wght].ttf", "SourceSerif4-Italic.ttf",
+     {"opsz": 11, "wght": 400}),
+    ("Inter[opsz,wght].ttf", "Inter-Regular.ttf", {"opsz": 14, "wght": 400}),
+    ("Inter[opsz,wght].ttf", "Inter-Bold.ttf", {"opsz": 14, "wght": 700}),
+]
+
+
+def _instanciar_tipografia():
+    """Genera y registra las estaticas. Devuelve (serif, sans) para rcParams."""
+    from fontTools import ttLib
+    from fontTools.varLib import instancer
+    from matplotlib import font_manager
+    os.makedirs(CACHE_TIPOS, exist_ok=True)
+    for origen, destino, ejes in _INSTANCIAS:
+        ruta_o = os.path.join(TIPOS, origen)
+        ruta_d = os.path.join(CACHE_TIPOS, destino)
+        if (not os.path.exists(ruta_d)
+                or os.path.getmtime(ruta_d) < os.path.getmtime(ruta_o)):
+            fuente = ttLib.TTFont(ruta_o)
+            instancer.instantiateVariableFont(fuente, ejes, inplace=True)
+            fuente.save(ruta_d)
+        font_manager.fontManager.addfont(ruta_d)
+    return ["Source Serif 4", "DejaVu Serif"], ["Inter", "DejaVu Sans"]
+
+
+try:
+    SERIF, SANS = _instanciar_tipografia()
+except Exception as _e:                                      # pragma: no cover
+    # Sin las fuentes el documento sale con otra letra y las cajas de texto
+    # miden distinto: el verificador de colisiones dejaria de significar algo.
+    raise RuntimeError(
+        "no se pudieron cargar las tipografias de 05_tipografia/: %s" % _e)
 
 
 def aplicar():
     """Desarma los valores por defecto de matplotlib y pone los nuestros."""
     plt.rcdefaults()
     plt.rcParams.update({
-        "figure.facecolor": PAPEL,
-        "figure.edgecolor": PAPEL,
-        "savefig.facecolor": PAPEL,
-        "savefig.edgecolor": PAPEL,
+        "figure.facecolor": CREMA,
+        "figure.edgecolor": CREMA,
+        "savefig.facecolor": CREMA,
+        "savefig.edgecolor": CREMA,
         "savefig.transparent": False,
-        "axes.facecolor": PAPEL,
+        "axes.facecolor": CREMA,
         "axes.edgecolor": TINTA,
         "axes.labelcolor": TINTA,
         "axes.linewidth": 0.7,
@@ -75,7 +156,7 @@ def aplicar():
         "axes.spines.right": False,
         "axes.grid": True,
         "axes.grid.axis": "y",
-        "grid.color": CAL,
+        "grid.color": FILA,
         "grid.linewidth": 0.8,
         "grid.alpha": 1.0,
         "axes.axisbelow": True,
@@ -92,7 +173,8 @@ def aplicar():
         "figure.dpi": DPI,
         "savefig.dpi": DPI,
         # Sin ciclo de color por defecto: el que quiera un color lo pide.
-        "axes.prop_cycle": matplotlib.cycler(color=[RIO, BARRANCA, TINTA, AMBAR]),
+        "axes.prop_cycle": matplotlib.cycler(
+            color=[DATO, ACENTO, TINTA, DATO_CLARO]),
     })
 
 
@@ -185,7 +267,7 @@ def titular(fig, exhibit, titulo, bajada=None):
     bajada opcional que dice que hay que mirar.
     """
     fig.text(0.012, 0.975, exhibit, ha="left", va="top", fontsize=6.5,
-             color=RIO, family="sans-serif", weight="bold")
+             color=DATO, family="sans-serif", weight="bold")
     fig.text(0.012, 0.935, envolver(titulo, 11.5), ha="left", va="top",
              fontsize=11.5, color=TINTA, family="serif")
     if bajada:
@@ -203,7 +285,7 @@ def pie(fig, fuente, nota=None):
         # La nota se apoya encima de la fuente, cuantas lineas haga falta.
         y = 0.028 + lineas_fuente * 0.026 + 0.008
         fig.text(0.012, y, envolver(nota, 6.2), ha="left", va="bottom",
-                 fontsize=6.2, color=AMBAR, family="sans-serif")
+                 fontsize=6.2, color=ACENTO, family="sans-serif")
 
 
 def _alto_en_figura(fig, artista):
@@ -220,6 +302,9 @@ def _alto_en_figura(fig, artista):
 # contenido del grafico y compite con el. Al pie de un exhibit en el documento
 # va en cuerpo 7, italica y gris, que es donde tiene que estar.
 PIE_EXTERNO = False
+# Y LA CABECERA TAMBIEN: el rotulo, el titulo y la bajada los compone el
+# armador del PDF. Ver marco(). La enciende generar_todos_los_graficos.py.
+CABECERA_EXTERNA = False
 PIES = {}
 _PIE_PENDIENTE = {}
 
@@ -237,9 +322,30 @@ def marco(fig, exhibit, titulo, bajada=None, fuente=None, nota=None,
 
     Devuelve (top, bottom) para pasarle a subplots_adjust.
     """
+    if CABECERA_EXTERNA:
+        # LA CABECERA NO SE DIBUJA: la compone el armador del PDF con la
+        # tipografia y los cuerpos de la pagina, leyendo este mismo texto de
+        # 06_charts/pies.json.
+        #
+        # Antes se dibujaba igual y el armador se la recortaba al PNG buscando
+        # la franja de fondo mas alta del tercio superior. Funcionaba mientras
+        # el grafico empezaba con aire debajo del titulo. Con el mapa base
+        # —agua y vecinos que llegan hasta el borde— ese aire desaparecio, el
+        # recorte corto por el hueco equivocado y la bajada quedo impresa DOS
+        # veces: una dibujada adentro de la imagen y otra compuesta arriba.
+        # Recortar era el arreglo de un problema que no habia que tener.
+        _PIE_PENDIENTE.clear()
+        _PIE_PENDIENTE.update(exhibit=exhibit, titulo=titulo, bajada=bajada,
+                              fuente=fuente, nota=nota)
+        # No 1,0: el rotulo mas alto del eje y va CENTRADO en su marca, asi
+        # que la mitad de su cuerpo queda por encima de la caja de los ejes y
+        # sin este aire se sale del lienzo. Lo denunciaba el verificador de
+        # desborde en cuatro exhibits.
+        return 0.955, min(0.70, 0.012 + aire * 1.9)
+
     y = 0.985
     t = fig.text(x, y, exhibit, ha="left", va="top", fontsize=6.5,
-                 color=RIO, family="sans-serif", weight="bold")
+                 color=DATO, family="sans-serif", weight="bold")
     y -= _alto_en_figura(fig, t) + aire * 0.5
 
     t = fig.text(x, y, envolver(titulo, 11.5), ha="left", va="top",
@@ -266,7 +372,7 @@ def marco(fig, exhibit, titulo, bajada=None, fuente=None, nota=None,
         y += _alto_en_figura(fig, t) + aire * 0.4
     if nota:
         t = fig.text(x, y, envolver(nota, 6.2), ha="left", va="bottom",
-                     fontsize=6.2, color=AMBAR, family="sans-serif")
+                     fontsize=6.2, color=ACENTO, family="sans-serif")
         y += _alto_en_figura(fig, t)
     bottom = min(0.70, y + aire * 1.9)
     return top, bottom
@@ -286,14 +392,14 @@ def limpiar(ax, grilla="y"):
     ax.spines["bottom"].set_linewidth(0.7)
     ax.grid(False)
     if grilla:
-        ax.grid(True, axis=grilla, color=CAL, linewidth=0.8, zorder=0)
+        ax.grid(True, axis=grilla, color=ARENA, linewidth=0.8, zorder=0)
     ax.tick_params(length=0, pad=3)
     ax.set_axisbelow(True)
 
 
 def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
     """
-    PNG a 300 dpi y SVG, los dos con fondo PAPEL y nunca transparente.
+    PNG a 300 dpi y SVG, los dos con fondo CREMA y nunca transparente.
 
     El area libre que devuelve marco() se le pasa a tight_layout como
     rectangulo, no a subplots_adjust. La diferencia importa: subplots_adjust
@@ -328,8 +434,8 @@ def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
         # matplotlib y la pagina la pinta el motor de PDF, y dos beiges que
         # deberian ser el mismo dejan ver el rectangulo de la imagen. Sin fondo
         # propio no hay rectangulo que ver.
-        fig.savefig(ruta, facecolor="none" if transparente else PAPEL,
-                    edgecolor="none" if transparente else PAPEL,
+        fig.savefig(ruta, facecolor="none" if transparente else CREMA,
+                    edgecolor="none" if transparente else CREMA,
                     transparent=transparente, dpi=DPI)
     plt.close(fig)
     return png, svg
@@ -388,7 +494,7 @@ def verificar_texto_tapado(fig, umbral=0.22):
             lum = a * lum + (1 - a) * sobre
         return lum
 
-    fondo = luminancia(PAPEL)
+    fondo = luminancia(CREMA)
     fuera = []
 
     for ax in fig.get_axes():
@@ -788,11 +894,44 @@ def verificar_paleta(nombre):
             continue
         if _en_la_rampa(r, g, bl):                    # tono de los mapas
             continue
+        if _es_dilucion(r, g, bl):                    # tinta aguada sobre crema
+            continue
         otros.add(m)
     return hallados + sorted(otros)
 
 
 # --------------------------------------------------------------------------
+
+def _es_dilucion(r, g, b, tolerancia=7):
+    """True si el color es un color de la paleta aguado sobre el crema.
+
+    El mapa base necesita tonos intermedios que no son colores nuevos: el agua
+    es la tinta al 8% sobre el crema, los partidos vecinos al 5%, las vias al
+    40%. Todos caen sobre la recta que une el crema con la tinta, asi que se
+    reconocen y se aceptan. Un color de verdad nuevo no cae sobre ninguna de
+    esas rectas y sigue fallando.
+
+    No alcanza con la regla del gris del antialias: nuestra tinta es un negro
+    CALIDO, y su dilucion tiene los tres canales separados por mas de seis
+    puntos. Con esa regla sola, cada linea del mapa base era un color prohibido.
+    """
+    base = _hex_a_rgb(CREMA)
+    for c in (TINTA, ACENTO, DATO, DATO_CLARO, ARENA, FILA):
+        cr, cg, cb = _hex_a_rgb(c)
+        dr, dg, db = cr - base[0], cg - base[1], cb - base[2]
+        denom = dr * dr + dg * dg + db * db
+        if not denom:
+            continue
+        # La proyeccion del color sobre la recta crema -> color de paleta.
+        t = ((r - base[0]) * dr + (g - base[1]) * dg + (b - base[2]) * db) / denom
+        if not -0.02 <= t <= 1.02:
+            continue
+        px, py, pz = (base[0] + dr * t, base[1] + dg * t, base[2] + db * t)
+        if (abs(r - px) <= tolerancia and abs(g - py) <= tolerancia
+                and abs(b - pz) <= tolerancia):
+            return True
+    return False
+
 
 def _hex_a_rgb(h):
     return tuple(int(h[i:i + 2], 16) for i in (1, 3, 5))
@@ -800,11 +939,11 @@ def _hex_a_rgb(h):
 
 def _en_la_rampa(r, g, b, tolerancia=8):
     """
-    Los mapas pintan con la rampa PAPEL -> BARRANCA, asi que sus tonos
+    Los mapas pintan con la rampa CREMA -> ACENTO, asi que sus tonos
     intermedios son legitimos aunque no esten en la paleta. Se acepta un color
     si cae sobre esa recta en el espacio RGB.
     """
-    for desde, hasta in ((PAPEL, BARRANCA), (CAL, BARRANCA), (PAPEL, RIO)):
+    for desde, hasta in ((CREMA, ACENTO), (ARENA, ACENTO), (CREMA, DATO)):
         d, h = _hex_a_rgb(desde), _hex_a_rgb(hasta)
         # Proyeccion del color sobre el segmento d-h.
         vx = [h[i] - d[i] for i in range(3)]
@@ -849,8 +988,8 @@ def apagar_ejes(ax):
     ax.set_yticks([])
 
 
-def rampa(desde=PAPEL, hasta=BARRANCA, n=256):
-    """Rampa secuencial de PAPEL a BARRANCA para los mapas."""
+def rampa(desde=CREMA, hasta=ACENTO, n=256):
+    """Rampa secuencial de CREMA a ACENTO para los mapas."""
     from matplotlib.colors import LinearSegmentedColormap
     return LinearSegmentedColormap.from_list("sanisidro", [desde, hasta], N=n)
 

@@ -44,15 +44,15 @@ def _barra_apilada(rotulo_adentro):
     """
     fig, ax = E.figura(2.4)
     tramos = [("Personal y deuda no se tocan", 39.0, E.TINTA),
-              ("Contratos de servicios no dentro del ejercicio", 34.1, E.CAL),
-              ("Gasto flexible reasignable", 26.9, E.RIO)]
+              ("Contratos de servicios no dentro del ejercicio", 34.1, E.ARENA),
+              ("Gasto flexible reasignable", 26.9, E.DATO)]
     izq = 0.0
     for etiqueta, v, color in tramos:
         ax.barh([0], [v], left=izq, height=0.3, color=color, zorder=3)
         if rotulo_adentro:
             ax.annotate(etiqueta, (izq + v / 2, 0), ha="center", va="center",
                         fontsize=6.4, weight="bold",
-                        color=E.TINTA if color is E.CAL else E.PAPEL)
+                        color=E.TINTA if color is E.ARENA else E.CREMA)
         else:
             ax.annotate(etiqueta, (izq, 0.2), xytext=(2, 3),
                         textcoords="offset points", ha="left", va="bottom",
@@ -91,9 +91,9 @@ def test_derramado_perdona_el_sobrante_sobre_papel():
     """
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(5.33, 2.0), dpi=E.DPI)
-    fig.patch.set_facecolor(E.PAPEL)
-    ax.set_facecolor(E.PAPEL)
-    ax.bar([0], [10], width=0.2, color=E.CAL, zorder=2)
+    fig.patch.set_facecolor(E.CREMA)
+    ax.set_facecolor(E.CREMA)
+    ax.bar([0], [10], width=0.2, color=E.ARENA, zorder=2)
     ax.text(0, 5, "sin rendición", ha="center", va="center", rotation=90,
             fontsize=5.6, color=E.TINTA)
     ax.set_xlim(-1, 1)

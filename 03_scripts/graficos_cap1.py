@@ -41,19 +41,19 @@ def ex01():
     sin = [a for a, v in zip(anios, vals) if v is None]
 
     ax.bar([a for a, _ in con], [v for _, v in con], width=0.68,
-           color=E.RIO, zorder=3)
+           color=E.DATO, zorder=3)
     # Los anios sin dato: banda vertical en CAL y la palabra, para que el hueco
     # se vea como hueco y no como un cero.
     tope = max(v for _, v in con)
     for a in sin:
-        ax.bar([a], [tope], width=0.68, color=E.CAL, zorder=2)
+        ax.bar([a], [tope], width=0.68, color=E.ARENA, zorder=2)
         ax.text(a, tope * 0.5, "sin\nrendición", ha="center", va="center",
                 fontsize=5.6, color=E.TINTA, alpha=0.55, rotation=90)
 
     maxi = max(con, key=lambda x: x[1])
     mini = min(con, key=lambda x: x[1])
     for (a, v), etiqueta, color in ((maxi, "máximo", E.TINTA),
-                                    (mini, "mínimo", E.BARRANCA)):
+                                    (mini, "mínimo", E.ACENTO)):
         ax.bar([a], [v], width=0.68, color=color, zorder=4)
         ax.annotate("%s %d\n%s M" % (etiqueta, a, E.numero(v)),
                     (a, v), xytext=(0, 7), textcoords="offset points",
@@ -108,10 +108,10 @@ def _parte_de_la_carencia(zonas):
 def ex02():
     """Las seis zonas, cuatro indicadores, de peor a mejor."""
     zonas = E.zonas_ordenadas()
-    series = [("% hogares con NBI", "pct_nbi", E.RIO),
-              ("% sin cloaca", "pct_sin_cloaca", E.BARRANCA),
+    series = [("% hogares con NBI", "pct_nbi", E.DATO),
+              ("% sin cloaca", "pct_sin_cloaca", E.ACENTO),
               ("% sin gas de red", "pct_sin_gas_red", E.TINTA),
-              ("% con hacinamiento", "pct_hacinamiento", E.AMBAR)]
+              ("% con hacinamiento", "pct_hacinamiento", E.DATO_CLARO)]
     n = len(series)
     ancho = 0.78 / n
     x = list(range(len(zonas)))
@@ -166,7 +166,7 @@ def ex03():
     zonas = E.zonas_ordenadas()
     vals = [float(z["pct_edu_universitaria_completa_o_mas"]) for z in zonas]
     fig, ax = E.figura(3.0)
-    ax.bar(range(len(zonas)), vals, width=0.62, color=E.RIO, zorder=3)
+    ax.bar(range(len(zonas)), vals, width=0.62, color=E.DATO, zorder=3)
     for i, v in enumerate(vals):
         ax.annotate(E.pct(v, 1), (i, v), xytext=(0, 4),
                     textcoords="offset points", ha="center", fontsize=7,
@@ -182,9 +182,16 @@ def ex03():
     E.podar_tick_superior(ax, "y", 5)
     top, bottom = E.marco(
         fig, "EXHIBIT 03",
-              "El mismo orden, dado vuelta: donde falta todo, tampoco hay título",
+              # "título" es título UNIVERSITARIO: el juego es con el orden
+              # invertido del exhibit anterior. Dicho a secas, en un documento
+              # lleno de títulos, se leia como un rotulo que quedo sin escribir.
+              "El mismo orden, dado vuelta: donde falta todo, tampoco hay "
+              "título universitario",
+              # El numero del exhibit que se cita es el del DOCUMENTO, que sale
+              # del renumerado por orden de aparicion de armar_pdf.py, no el del
+              # nombre de archivo.
               "Población con universidad completa o más, por zona. Mismo orden "
-              "que el exhibit 02, de peor a mejor en NBI.",
+              "que el exhibit 2, de peor a mejor en NBI.",
         FUENTE_CENSO)
     return E.guardar(fig, "EXHIBIT_03_educacion_por_zona",
                      dict(left=0.06, right=0.985, top=top, bottom=bottom))
@@ -210,8 +217,8 @@ def ex04():
              if int(f["meses"]) == 12]
     anios = sorted({int(f["anio"]) for f in filas})
     munis = ["SAN ISIDRO", "TIGRE", "VICENTE LOPEZ", "SAN FERNANDO"]
-    colores = {"SAN ISIDRO": E.RIO, "TIGRE": E.BARRANCA,
-               "VICENTE LOPEZ": E.TINTA, "SAN FERNANDO": E.AMBAR}
+    colores = {"SAN ISIDRO": E.DATO, "TIGRE": E.ACENTO,
+               "VICENTE LOPEZ": E.TINTA, "SAN FERNANDO": E.DATO_CLARO}
     bonito = {"SAN ISIDRO": "San Isidro", "TIGRE": "Tigre",
               "VICENTE LOPEZ": "Vicente López", "SAN FERNANDO": "San Fernando"}
 
@@ -293,7 +300,7 @@ def ex05():
         si = [f for f in filas if f["municipio"] == "San Isidro"][0]
         v_si, p_si = float(si[clave]), int(si[puesto])
 
-        ax.scatter(vals, range(1, n + 1), s=7, color=E.CAL, zorder=3,
+        ax.scatter(vals, range(1, n + 1), s=7, color=E.ARENA, zorder=3,
                    edgecolors="none")
         ax.axvline(mediana, color=E.TINTA, linewidth=0.9, zorder=4,
                    linestyle=(0, (3, 2)))
@@ -303,8 +310,8 @@ def ex05():
         # abajo. Mezclar las dos cosas dibujaria a San Isidro cuarto desde
         # abajo cuando es cuarto desde arriba.
         y_si = vals.index(v_si) + 1
-        ax.scatter([v_si], [y_si], s=34, color=E.RIO, zorder=6,
-                   edgecolors=E.PAPEL, linewidths=0.8)
+        ax.scatter([v_si], [y_si], s=34, color=E.DATO, zorder=6,
+                   edgecolors=E.CREMA, linewidths=0.8)
         # La etiqueta va del lado donde queda lienzo: si el punto esta pasada
         # la mitad del eje, a la izquierda.
         derecha = v_si < max(vals) * 0.55
@@ -312,9 +319,9 @@ def ex05():
                     (v_si, y_si), xytext=(7 if derecha else -7, 0),
                     textcoords="offset points",
                     ha="left" if derecha else "right", va="center",
-                    fontsize=6.8, color=E.RIO, weight="bold",
+                    fontsize=6.8, color=E.DATO, weight="bold",
                     path_effects=[withStroke(linewidth=2.6,
-                                             foreground=E.PAPEL)])
+                                             foreground=E.CREMA)])
         # El rotulo de la mediana se apoya en la punta de la linea que queda
         # LEJOS de San Isidro. Con las dos en el mismo extremo se pisaban, y
         # cual extremo esta libre depende del panel: en personal San Isidro

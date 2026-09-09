@@ -38,18 +38,18 @@ def ex06():
     fig, ax = E.figura(3.1)
     x = [0, 1]
     for i, (anio, dev, per) in enumerate(datos):
-        ax.bar([i], [per / 1e6], width=0.62, color=E.RIO, zorder=3)
+        ax.bar([i], [per / 1e6], width=0.62, color=E.DATO, zorder=3)
         ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
-               color=E.CAL, zorder=3)
+               color=E.ARENA, zorder=3)
         ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
-               color="none", edgecolor=E.BARRANCA, linewidth=0.9,
+               color="none", edgecolor=E.ACENTO, linewidth=0.9,
                linestyle=(0, (2.5, 1.5)), zorder=4)
         # "percibido 215.023 M  (93,51%)" en una sola linea es mas ancho que la
         # barra y se cortaba contra el borde. Va en tres lineas.
         ax.annotate("percibido\n%s M\n(%s)" % (E.numero(per / 1e6),
                                                 E.pct(100 * per / dev, 2)),
                     (i, per / 2e6), ha="center", va="center", fontsize=6.8,
-                    color=E.PAPEL, weight="bold", linespacing=1.35)
+                    color=E.CREMA, weight="bold", linespacing=1.35)
         # La franja de mora es mas fina que su etiqueta en los dos anios: el
         # texto pisaba la franja punteada. Sale al costado, con una guia, y a
         # cada barra le toca el lado donde hay lugar: la primera a la
@@ -61,8 +61,8 @@ def ex06():
         ax.annotate("sin cobrar %s M" % E.numero((dev - per) / 1e6),
                     xy=(borde, centro), xytext=(lejos, centro),
                     ha="left" if a_la_derecha else "right", va="center",
-                    fontsize=6.8, color=E.BARRANCA, weight="bold",
-                    arrowprops=dict(arrowstyle="-", color=E.BARRANCA,
+                    fontsize=6.8, color=E.ACENTO, weight="bold",
+                    arrowprops=dict(arrowstyle="-", color=E.ACENTO,
                                     linewidth=0.7, shrinkA=1, shrinkB=1))
         ax.annotate("devengado %s M" % E.numero(dev / 1e6), (i, dev / 1e6),
                     xytext=(0, 5), textcoords="offset points", ha="center",
@@ -112,7 +112,7 @@ def ex07():
 
     fig, ax = E.figura(3.6)
     y = range(len(filas))
-    colores = [E.RIO if v >= 0 else E.BARRANCA for _, v in filas]
+    colores = [E.DATO if v >= 0 else E.ACENTO for _, v in filas]
     ax.barh(list(y), [v for _, v in filas], height=0.62, color=colores, zorder=3)
     ax.axvline(0, color=E.TINTA, linewidth=0.8, zorder=4)
     for i, (nombre, v) in enumerate(filas):

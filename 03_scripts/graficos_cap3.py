@@ -26,8 +26,8 @@ def _modelo():
 def ex08():
     """Los tres escenarios, con el cruce por cero marcado."""
     por = _modelo()
-    series = [("base", "Base", E.RIO),
-              ("adverso", "Adverso", E.BARRANCA),
+    series = [("base", "Base", E.DATO),
+              ("adverso", "Adverso", E.ACENTO),
               ("reformista_percepcion", "Reformista, cobrando mejor", E.TINTA)]
     # Base y reformista terminan a menos de un cuerpo de distancia.
     separacion = {"base": -6, "reformista_percepcion": 6, "adverso": 0}
@@ -46,7 +46,7 @@ def ex08():
             if y0 < 0 <= y1 or y0 > 0 >= y1:
                 xc = x0 + (0 - y0) * (x1 - x0) / (y1 - y0)
                 ax.plot([xc], [0], marker="o", markersize=4, color=color,
-                        markeredgecolor=E.PAPEL, markeredgewidth=0.9, zorder=6)
+                        markeredgecolor=E.CREMA, markeredgewidth=0.9, zorder=6)
                 cruces.append((xc, color))
 
     # Base y reformista cruzan cero el mismo anio y las dos etiquetas caian
@@ -102,12 +102,12 @@ def ex09():
     yb = [float(r["resultado_financiero"]) / 1e6 for r in b]
 
     fig, ax = E.figura(3.3)
-    ax.fill_between(xs, ya, yb, color=E.RIO, alpha=0.16, zorder=2, linewidth=0)
+    ax.fill_between(xs, ya, yb, color=E.DATO, alpha=0.16, zorder=2, linewidth=0)
     ax.axhline(0, color=E.TINTA, linewidth=0.9, zorder=4)
     ax.plot(xs, ya, color=E.TINTA, linewidth=1.4, zorder=3)
-    ax.plot(xs, yb, color=E.RIO, linewidth=2.0, zorder=3)
+    ax.plot(xs, yb, color=E.DATO, linewidth=2.0, zorder=3)
     E.etiqueta_serie(ax, xs[-1], ya[-1], "Base", E.TINTA, dx=6, dy=-7)
-    E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\ncobrando mejor", E.RIO,
+    E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\ncobrando mejor", E.DATO,
                      dx=6, dy=8)
     # La anotacion iba centrada sobre el area sombreada, que en este grafico
     # tiene el ancho de una linea: el texto quedaba encima de las dos curvas.
@@ -116,9 +116,9 @@ def ex09():
     ax.annotate("el programa se ejecuta entero\nY el resultado mejora",
                 xy=(xs[medio], (ya[medio] + yb[medio]) / 2),
                 xytext=(xs[medio] + 1.2, min(ya) * 0.55),
-                ha="left", va="center", fontsize=6.6, color=E.RIO,
+                ha="left", va="center", fontsize=6.6, color=E.DATO,
                 weight="bold",
-                arrowprops=dict(arrowstyle="-", color=E.RIO, linewidth=0.7,
+                arrowprops=dict(arrowstyle="-", color=E.DATO, linewidth=0.7,
                                 shrinkA=2, shrinkB=3, alpha=0.75))
     # Arranca un poco antes de 2025 para que el primer rotulo del eje x no
     # caiga encima del ultimo numero del eje y.
@@ -157,7 +157,7 @@ def ex10():
 
     fig, ax = E.figura(3.2)
     y = range(len(items))
-    colores = [E.RIO if v >= 0 else E.BARRANCA for _, v in items]
+    colores = [E.DATO if v >= 0 else E.ACENTO for _, v in items]
     ax.barh(list(y), [v for _, v in items], height=0.6, color=colores, zorder=3)
     ax.axvline(0, color=E.TINTA, linewidth=0.9, zorder=4)
     for i, (_, v) in enumerate(items):
@@ -222,8 +222,8 @@ def ex11():
     fig, ax = E.figura(2.9)
     tramos = [("Personal y deuda\nno se tocan", nucleo, E.TINTA),
               ("Contratos de servicios\nno dentro del ejercicio", contratos,
-               E.CAL, E.TINTA),
-              ("Gasto flexible\nreasignable", flexible, E.RIO)]
+               E.ARENA, E.TINTA),
+              ("Gasto flexible\nreasignable", flexible, E.DATO)]
     izq = 0.0
     for tramo in tramos:
         etiqueta, v, color = tramo[0], tramo[1], tramo[2]
@@ -253,15 +253,15 @@ def ex11():
     # exactamente ahi: se ve que salen de ese tramo y de ningun otro.
     base_x = (nucleo + contratos) / 1e6
     y_ultima = -0.55 - 0.24
-    ax.plot([base_x, base_x], [-0.16, y_ultima - 0.13], color=E.RIO,
+    ax.plot([base_x, base_x], [-0.16, y_ultima - 0.13], color=E.DATO,
             linewidth=0.8, linestyle=(0, (2, 2)), zorder=2)
     ax.annotate("de ese margen flexible salen las dos propuestas",
                 (base_x, -0.30), xytext=(6, 0), textcoords="offset points",
-                ha="left", va="center", fontsize=6.0, color=E.RIO,
+                ha="left", va="center", fontsize=6.0, color=E.DATO,
                 style="italic")
     for i, (etiqueta, v, color) in enumerate(
-            [("programa de empleo y vivienda", programa, E.BARRANCA),
-             ("obra pública vecinal (cap. 4)", obra_vecinal, E.AMBAR)]):
+            [("programa de empleo y vivienda", programa, E.ACENTO),
+             ("obra pública vecinal (cap. 4)", obra_vecinal, E.DATO_CLARO)]):
         ax.barh([-0.55 - i * 0.24], [v / 1e6], left=base_x, height=0.17,
                 color=color, zorder=3)
         # La etiqueta va a la izquierda del arranque de la barra: hacia la
@@ -303,12 +303,12 @@ def ex12():
     # Los rotulos van en tres lineas cortas: en dos, "Ingresos corrientes" y
     # "Gastos corrientes" son mas anchos que la columna y se pisan entre si.
     pasos = [
-        ("Ingresos\ncorrientes\npercibidos", b["ingresos_corrientes"], E.RIO, False),
-        ("Gastos\ncorrientes\ndevengados", -b["gastos_corrientes"], E.BARRANCA, False),
+        ("Ingresos\ncorrientes\npercibidos", b["ingresos_corrientes"], E.DATO, False),
+        ("Gastos\ncorrientes\ndevengados", -b["gastos_corrientes"], E.ACENTO, False),
         ("Ahorro\ncorriente", b["ahorro_corriente"], E.TINTA, True),
-        ("Recursos\nde capital", b["recursos_de_capital"], E.RIO, False),
-        ("Gastos\nde capital", -b["gastos_de_capital"], E.BARRANCA, False),
-        ("Resultado\nfinanciero", b["resultado_financiero"], E.AMBAR, True),
+        ("Recursos\nde capital", b["recursos_de_capital"], E.DATO, False),
+        ("Gastos\nde capital", -b["gastos_de_capital"], E.ACENTO, False),
+        ("Resultado\nfinanciero", b["resultado_financiero"], E.ACENTO, True),
     ]
     fig, ax = E.figura(3.3)
     acum = 0.0

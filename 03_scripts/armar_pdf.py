@@ -141,8 +141,45 @@ SALIDA = os.path.join(RAIZ, "PROGRAMA_SAN_ISIDRO_2027.pdf")
 # reducido, es otro, con mas altura de x y mas espacio entre letras.
 TIPOS = os.path.join(RAIZ, "05_tipografia")
 SERIF = "Source Serif 4"
+SANS = "Inter"
 OPSZ_TEXTO = 9        # el dibujo para cuerpo de texto
 OPSZ_TITULO = 24      # el dibujo para titulo: mas contraste y menos espaciado
+
+# --------------------------------------------------------------------------
+# LOS HUECOS DE LAS IMAGENES GENERADAS
+# --------------------------------------------------------------------------
+# La tapa y la apertura de cada capitulo llevan una imagen generada. NO se
+# generan aca ni las genera este armador: llegan como archivos a 08_imagenes/ y
+# el armador solo las coloca. Si no estan, el documento se arma igual — la tapa
+# vuelve al mapa y los capitulos abren sin banda — asi que el hueco vacio nunca
+# rompe el build.
+#
+# QUE TIENE QUE LLEGAR, Y CON QUE MEDIDA:
+#
+#   08_imagenes/tapa.png            2480 x 3508 px   vertical, 1:1,414 (A4)
+#                                   sangra la pagina entera, con el titulo
+#                                   encima; la mitad de arriba tiene que quedar
+#                                   tranquila para que el titulo se lea.
+#
+#   08_imagenes/apertura_cap1.png   2100 x 700 px    apaisada, 3:1
+#   … hasta apertura_cap6.png       banda al ancho de la caja de texto, arriba
+#                                   del titulo de capitulo.
+#
+# Las dos a 300 dpi. ABSTRACTAS O CONCEPTUALES: ninguna imagen puede parecer
+# una fotografia de un lugar o de una persona de San Isidro. Si alguien
+# descubriera que una imagen de La Cava o de Beccar es sintetica, el documento
+# pierde lo unico que tiene, que es que se le pueden revisar las cuentas.
+# Por eso ademas cada una lleva su linea al pie diciendo que es una ilustracion.
+IMAGENES = os.path.join(RAIZ, "08_imagenes")
+PIE_ILUSTRACION = ("Ilustración generada. No es una fotografía de San Isidro "
+                   "ni de ninguno de sus barrios.")
+
+
+def imagen(nombre):
+    """La ruta de una imagen generada, o None si todavia no llego."""
+    ruta = os.path.join(IMAGENES, nombre)
+    return ruta if os.path.exists(ruta) else None
+
 
 MARCADOR = "# NO VA AL PDF"
 MARGEN_PIE = 15          # mm: el margen de abajo de @page, que mide el hueco
@@ -153,10 +190,24 @@ PREFIJO_PIEZA = "pz-"
 RE_VERSION = re.compile(
     r'^\*\s*(?:Borrador\b|Reemplaza al borrador\b).*\*\s*$', re.M)
 
-# --- Identidad, cerrada en 07_IDENTIDAD_DEL_DOCUMENTO.md -------------------
-PAPEL, TINTA = "#FAF8F4", "#16293A"
-RIO, BARRANCA = "#2D6E7E", "#A8763F"
-CAL, AMBAR = "#EDE9E2", "#8A6A1F"
+# --------------------------------------------------------------------------
+# LA PALETA — la del informe de referencia, y nada mas
+# --------------------------------------------------------------------------
+# Muestreada de su PDF pixel por pixel: son los seis colores mas frecuentes de
+# sus paginas descontando los grises del antialias. Se usa tal cual, y es la
+# misma que estilo.py le da a los veinte exhibits, asi que el documento y sus
+# graficos son una sola cosa.
+#
+# EL ACENTO ES UN ROJO LADRILLO. La regla anterior prohibia el rojo porque en
+# la Argentina se lee como color politico. Queda sin efecto por decision
+# tomada. Lo que verificar_pdf() sigue buscando es el rojo PURO, que es otra
+# cosa y nunca es una eleccion de diseño sino un valor por defecto que se colo.
+CREMA = "#F5F0E8"        # el fondo de toda la pagina
+TINTA = "#2A211C"        # el texto, negro calido
+ACENTO = "#7C2E23"       # ladrillo: eyebrow, numeros de seccion, titulos
+DATO = "#5E7157"         # verde salvia
+ARENA = "#EAE0CF"        # bandas de encabezado y cajas laterales
+FILA = "#E8E4D9"         # filas alternadas
 
 TITULO = "PROGRAMA DE GOBIERNO"
 ANIO = "SAN ISIDRO 2027"
@@ -251,6 +302,41 @@ def leer_publicable(nombre):
 # maqueta, y por eso se calcula aca y en un solo lugar.
 
 RE_EXHIBIT = re.compile(r'^`\[EXHIBIT (\d+)\s*—\s*([^\]]+)\]`\s*$')
+
+
+# ==========================================================================
+# EL RENUMERADO
+# ==========================================================================
+# Los exhibits se numeraron por capitulo mientras se hacian, asi que el lector
+# encontraba el 15 en la pagina 7 y el 1 en la pagina 11. Un numero que no
+# sigue el orden de lectura no sirve para nada: no ayuda a buscar y hace pensar
+# que faltan.
+#
+# Se renumeran POR ORDEN DE APARICION, del 1 al 20 y sin saltos. Se hace ACA, al
+# armar, y no en los .md ni en los nombres de archivo: el nombre del PNG y el
+# `[EXHIBIT 15 — ...]` del capitulo siguen siendo el identificador estable con
+# el que se hizo el grafico y con el que se lo vuelve a encontrar. Lo que cambia
+# es como se lo llama en la pagina.
+
+# La misma expresion, pero para buscarla LINEA POR LINEA adentro del texto
+# entero de un capitulo. RE_EXHIBIT va anclada con ^...$ y sin MULTILINE solo
+# matchea si el capitulo empieza con un exhibit: sin esto el mapa de numeros
+# salia vacio y todos los exhibits conservaban su numero viejo, en silencio.
+RE_EXHIBIT_TEXTO = re.compile(RE_EXHIBIT.pattern, re.M)
+
+
+def numeros_por_aparicion():
+    """{numero viejo: numero nuevo}, recorriendo los capitulos en orden."""
+    vistos = []
+    for nombre, _ in ORDEN:
+        for m in RE_EXHIBIT_TEXTO.finditer(leer_publicable(nombre)):
+            n = m.group(1).zfill(2)
+            if n not in vistos:
+                vistos.append(n)
+    return {viejo: i for i, viejo in enumerate(vistos, 1)}
+
+
+NUMEROS = {}
 RE_H2NUM = re.compile(r'^(\d+(?:\.\d+)?)\s+(.*)$')
 RE_H1CAP = re.compile(r'^(CAPÍTULO\s+\d+\s*—)\s*(.*)$')
 
@@ -292,10 +378,9 @@ def _exhibit(num, titulo):
     # —los dos mapas y la lista larga de funciones— llega a 180 mm de alto si se
     # lo deja crecer, se come una pagina entera y deja hueco en la anterior. El
     # tope lo decide la proporcion.
-    clase = "exh" if proporcion >= 1.55 else "exh alto"
+    clase = "exh" if proporcion >= 1.45 else "exh alto"
 
-    cab = ['<p class="exh-rot">%s</p>'
-           % html.escape(pie.get("exhibit", "EXHIBIT %s" % num))]
+    cab = ['<p class="exh-rot">Exhibit %d</p>' % NUMEROS.get(num, int(num))]
     cab.append('<h4 class="exh-tit">%s</h4>'
                % _inline(pie.get("titulo") or titulo))
     if pie.get("bajada"):
@@ -362,6 +447,19 @@ def _tabla(bloque):
                    % (etiqueta, LEYENDA_ETIQUETA[etiqueta]))
     out.append("</div>")
     return ancha, "".join(out)
+
+
+def _apertura(slug):
+    """La banda ilustrada que abre un capitulo, si llego su archivo."""
+    m = re.match(r"^cap(\d+)_", slug)
+    if not m:
+        return ""
+    ruta = imagen("apertura_cap%s.png" % m.group(1))
+    if not ruta:
+        return ""
+    return ('<figure class="apertura"><img src="file://%s" alt=""/>'
+            '<figcaption>%s</figcaption></figure>'
+            % (ruta, html.escape(PIE_ILUSTRACION)))
 
 
 def _h1(texto, slug):
@@ -474,6 +572,9 @@ def bloques(md, slug):
 
         elif l.startswith("# "):
             vistos_h1 += 1
+            banda = _apertura(slug)
+            if banda:
+                add(True, banda)
             add(True, _h1(l[2:], slug))
 
         elif l.startswith("> "):
@@ -773,23 +874,27 @@ def acomodar(piezas, css_txt, envolver, cierres):
 # ==========================================================================
 
 def tapa():
-    """El mapa ocupa la pagina y el titulo va encima.
+    """La imagen de tapa, con el titulo encima.
 
-    El PNG del mapa tiene el fondo en PAPEL, el mismo del documento, asi que
-    sangrarlo a los cuatro lados no deja borde: la mancha del partido queda
-    flotando en la pagina y el titulo se apoya en el aire que el mapa deja
-    arriba a la izquierda. Antes el mapa era una figura chica en el medio con
-    dos margenes blancos, y el tercio de abajo quedaba vacio.
+    Si todavia no llego la imagen generada, la tapa la hace el mapa de zonas,
+    que es lo que habia. Las dos ocupan la pagina entera; el titulo va arriba a
+    la izquierda, sobre el aire.
 
     Sin nombre ni foto del candidato. Decision cerrada en la identidad.
     """
-    mapa = os.path.join(CHARTS, "TAPA_mapa_zonas.png")
-    return ('<section class="tapa">'
-            '<img class="tapa-img" src="file://%s" alt=""/>'
+    ilustracion = imagen("tapa.png")
+    if ilustracion:
+        fondo = ('<img class="tapa-img cubre" src="file://%s" alt=""/>'
+                 '<p class="tapa-credito">%s</p>' % (ilustracion,
+                                                     PIE_ILUSTRACION))
+    else:
+        fondo = ('<img class="tapa-img" src="file://%s" alt=""/>'
+                 % os.path.join(CHARTS, "TAPA_mapa_zonas.png"))
+    return ('<section class="tapa">%s'
             '<div class="tapa-txt">'
             '<h1 class="t1">%s</h1><h1 class="t2">%s</h1>'
             '<p class="sub">%s</p></div>'
-            '</section>' % (mapa, TITULO, ANIO, SUBTITULO))
+            '</section>' % (fondo, TITULO, ANIO, SUBTITULO))
 
 
 def indice(entradas):
@@ -819,13 +924,21 @@ CSS = """
 @font-face { font-family: "%(serif)s";
              src: url("file://%(tipos)s/SourceSerif4-Italic[opsz,wght].ttf");
              font-weight: 200 900; font-style: italic; }
+@font-face { font-family: "%(sans)s";
+             src: url("file://%(tipos)s/Inter[opsz,wght].ttf");
+             font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "%(sans)s";
+             src: url("file://%(tipos)s/Inter-Italic[opsz,wght].ttf");
+             font-weight: 100 900; font-style: italic; }
 
 @page {
-  size: A4; margin: 17mm 17mm %(pie)dmm 17mm; background: %(papel)s;
-  @top-left     { content: string(cap); font-family: "%(serif)s";
-                  font-size: 7.4pt; font-weight: 600; letter-spacing: .9pt;
-                  color: %(ambar)s; text-transform: lowercase;
-                  font-variant-caps: small-caps; margin-bottom: 6mm; }
+  size: A4; margin: 17mm 17mm %(pie)dmm 17mm; background: %(crema)s;
+  /* EL EYEBROW. Arriba de todo, en versalitas y en el acento: dice en que
+     seccion esta parado el lector antes de que empiece a leer. */
+  @top-left     { content: string(cap); font-family: "%(sans)s";
+                  font-size: 6.2pt; font-weight: 600; letter-spacing: 1.35pt;
+                  color: %(acento)s; text-transform: uppercase;
+                  margin-bottom: 6mm; }
   @bottom-left  { content: "%(corto)s"; font-family: "%(serif)s";
                   font-size: 7pt; letter-spacing: .1pt; white-space: pre;
                   color: %(tinta)s; opacity: .55; vertical-align: top; }
@@ -839,13 +952,13 @@ CSS = """
      a ninguna de las dos cajas de margen. Poner la regla como border-top de
      @bottom-left obligaba a fijarle un ancho, y ese ancho aplastaba el numero
      de pagina hasta partirlo en tres lineas. */
-  border-bottom: .4pt solid %(cal)s; padding-bottom: 3.5mm;
+  border-bottom: .4pt solid %(arena)s; padding-bottom: 3.5mm;
 }
 @page :first { margin: 0; border: 0; padding: 0;
   @top-left { content: ""; } @bottom-left { content: ""; }
   @bottom-right { content: ""; } }
 
-html { background: %(papel)s; }
+html { background: %(crema)s; }
 body { font-family: "%(serif)s", Georgia, serif; font-size: 8.7pt;
        line-height: 1.42; color: %(tinta)s;
        font-variation-settings: "opsz" %(opsz)d;
@@ -865,10 +978,10 @@ p { margin: 0 0 .55em; text-align: justify; hyphens: auto; }
 p, li { orphans: 3; widows: 3; }
 strong { font-weight: bold; }
 em { font-style: italic; }
-code { font-family: "DejaVu Sans Mono"; font-size: 7.4pt; background: %(cal)s;
+code { font-family: "DejaVu Sans Mono"; font-size: 7.4pt; background: %(arena)s;
        padding: .5pt 2pt; }
-a { color: %(rio)s; text-decoration: none; }
-hr { border: 0; border-top: .5pt solid %(cal)s; margin: 1.1em 0 .95em; }
+a { color: %(acento)s; text-decoration: none; }
+hr { border: 0; border-top: .5pt solid %(arena)s; margin: 1.1em 0 .95em; }
 
 /* --------------------------------------------------------------------
    JERARQUIA
@@ -879,13 +992,13 @@ h1 { font-size: 17.5pt; line-height: 1.16; margin: 0 0 .24em;
      font-weight: 700; font-variation-settings: "opsz" %(opszt)d;
      letter-spacing: .2pt; string-set: cap content();
      break-before: page; break-after: avoid;
-     border-top: 1.6pt solid %(barranca)s; padding-top: 2.6mm; }
-h1 .cn { color: %(barranca)s; }
+     border-top: 1.6pt solid %(acento)s; padding-top: 2.6mm; }
+h1 .cn { color: %(acento)s; }
 
 /* La bajada: una linea que dice de que va la seccion, en italica. */
 p.bajada { font-style: italic; font-size: 11pt;
            font-variation-settings: "opsz" 14; line-height: 1.32;
-           color: %(rio)s; margin: .12em 0 .85em; max-width: 150mm;
+           color: %(acento)s; margin: .12em 0 .85em; max-width: 150mm;
            text-align: left; hyphens: none; break-after: avoid; }
 
 /* NUMERO DE SECCION GRANDE, EN SERIF, EN ACENTO, PEGADO AL TITULO. */
@@ -893,7 +1006,7 @@ h2 { font-size: 12.8pt; line-height: 1.18; margin: 1.25em 0 .5em;
      font-weight: 600; font-variation-settings: "opsz" 16;
      color: %(tinta)s; break-after: avoid; break-inside: avoid;
      text-indent: -0.05em; }
-h2 .n { font-size: 17pt; font-weight: 700; color: %(barranca)s;
+h2 .n { font-size: 17pt; font-weight: 700; color: %(acento)s;
         font-variant-numeric: lining-nums;
         margin-right: .3em; letter-spacing: -.2pt; }
 h1 + p.bajada + .banda h2:first-child,
@@ -903,25 +1016,26 @@ h3 { font-size: 9.6pt; font-weight: 700;
      margin: 1.35em 0 .4em; color: %(tinta)s;
      break-after: avoid; break-inside: avoid; }
 h3::before { content: ""; display: block; width: 9mm;
-             border-top: 1.4pt solid %(barranca)s; margin-bottom: 1.6mm; }
+             border-top: 1.4pt solid %(acento)s; margin-bottom: 1.6mm; }
 
 /* --------------------------------------------------------------------
    CIFRAS DESTACADAS Y REMATES
    -------------------------------------------------------------------- */
 /* Un dato que merece verse sin leer. Son parrafos que YA estan escritos como
    una cifra sola; solo se les da el peso que tienen. */
-p.dato { font-size: 15pt; line-height: 1.24; color: %(barranca)s;
+p.dato { font-size: 15pt; line-height: 1.24; color: %(acento)s;
          font-variation-settings: "opsz" 16;
          margin: 1.1em 0 1.15em; padding: 3.5mm 0 3.5mm 5mm;
-         border-left: 3.5pt solid %(barranca)s; text-align: left;
+         border-left: 3.5pt solid %(acento)s; text-align: left;
          hyphens: none; break-inside: avoid; max-width: 158mm; }
-p.dato strong { color: %(tinta)s; font-weight: bold; }
+p.dato strong { color: %(acento)s; font-weight: 700; }
 
 /* Una por seccion, y solo las que ya estaban escritas. */
 p.remate { font-size: 11.2pt; line-height: 1.34; color: %(tinta)s;
+           background: %(arena)s; padding: 3mm 4mm 3mm 5mm;
            font-variation-settings: "opsz" 14;
            font-style: italic; margin: 1.1em 0 1.2em; padding: 0 0 0 5mm;
-           border-left: 2.5pt solid %(rio)s; text-align: left;
+           border-left: 2.5pt solid %(acento)s; text-align: left;
            hyphens: none; break-inside: avoid; max-width: 158mm; }
 p.remate strong { font-style: normal; font-weight: bold; }
 
@@ -929,19 +1043,22 @@ p.remate strong { font-style: normal; font-weight: bold; }
    CAJAS. Tres usos y ninguno mas.
    -------------------------------------------------------------------- */
 .caja { break-inside: avoid; margin: .9em 0 1.05em; padding: 2.4mm 3mm;
-        background: %(cal)s; font-size: 8.2pt; line-height: 1.42; }
+        background: %(arena)s; font-size: 8.2pt; line-height: 1.42; }
 .caja h5 { font-size: 7.6pt; font-weight: 700; letter-spacing: .55pt;
            text-transform: lowercase; font-variant-caps: small-caps;
-           margin: 0 0 1.6mm; color: %(ambar)s; line-height: 1.32; }
+           margin: 0 0 1.6mm; color: %(acento)s; line-height: 1.32; }
 .caja p { margin: 0 0 .45em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
-.caja.metodo { border-left: 2.5pt solid %(ambar)s; }
-.caja.hipotesis { border-left: 2.5pt solid %(barranca)s; }
-.caja.legal { border-left: 2.5pt solid %(rio)s; font-style: italic; }
+/* Las tres cajas comparten fondo arena y barra del acento: son la misma
+   pieza del sistema y distinguirlas por color inventaba una jerarquia que el
+   texto no tiene. Lo que las separa es su titulo. */
+.caja.metodo, .caja.hipotesis, .caja.legal {
+    border-left: 2.5pt solid %(acento)s; }
+.caja.legal { font-style: italic; }
 
 /* Nota de lectura al pie de seccion: cuerpo chico, entrada en negrita. */
 .nota-lectura { margin: 1.1em 0 1.15em;
-                border-top: .5pt solid %(cal)s; padding-top: 2.4mm;
+                border-top: .5pt solid %(arena)s; padding-top: 2.4mm;
                 font-size: 7.9pt; line-height: 1.4; color: %(tinta)s;
                 opacity: .82; columns: 2; column-gap: 6.5mm; }
 /* LA NOTA NO SE PARTE. Se probaron las dos: dejandola partir, el resto caia
@@ -957,12 +1074,12 @@ p.remate strong { font-style: normal; font-weight: bold; }
 
 .et { font-size: 7.4pt; font-weight: 700; letter-spacing: .5pt;
       text-transform: lowercase; font-variant-caps: small-caps;
-      font-style: normal; color: %(ambar)s; }
+      font-style: normal; color: %(acento)s; }
 
 ul, ol { margin: 0 0 .65em; padding: 0 0 0 4.6mm; }
 li { margin-bottom: .3em; text-align: justify; hyphens: auto; }
-ul li::marker { color: %(barranca)s; }
-ol li::marker { color: %(barranca)s; font-weight: bold; }
+ul li::marker { color: %(acento)s; }
+ol li::marker { color: %(acento)s; font-weight: bold; }
 
 /* --------------------------------------------------------------------
    TABLAS. Banda de encabezado oscura, versalitas claras, filas alternadas,
@@ -978,15 +1095,16 @@ table { width: 100%%; border-collapse: collapse; font-size: 7.5pt;
    minuscula y la fuente devuelve sus versalitas dibujadas. Puestas como
    mayusculas achicadas, el trazo sale mas fino que el de la fila de abajo y la
    banda se ve descolorida. */
-thead th { background: %(tinta)s; color: %(papel)s; text-align: left;
+thead th { background: %(arena)s; color: %(tinta)s; text-align: left;
            padding: 2.1mm 2.2mm; font-size: 7.3pt; font-weight: 600;
            letter-spacing: .5pt; text-transform: lowercase;
            font-variant-caps: small-caps; line-height: 1.22;
-           vertical-align: bottom; }
-td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid %(cal)s;
+           vertical-align: bottom;
+           border-bottom: .5pt solid rgba(42, 33, 28, .35); }
+td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid rgba(42, 33, 28, .12);
      vertical-align: top; }
-tbody tr:nth-child(odd) { background: rgba(237, 233, 226, .55); }
-tbody td:first-child { color: %(rio)s; font-weight: bold; }
+tbody tr:nth-child(odd) { background: %(fila)s; }
+tbody td:first-child { color: %(acento)s; font-weight: bold; }
 th:not(:first-child), td:not(:first-child) { text-align: right; }
 th:first-child, td:first-child { text-align: left; }
 /* Una tabla de texto no se alinea a la derecha: ahi la columna no es una
@@ -1005,24 +1123,24 @@ th:first-child, td:first-child { text-align: left; }
 .exh-cab { margin-bottom: 1.8mm; break-after: avoid; }
 .exh-rot { font-size: 7.6pt; font-weight: 700; letter-spacing: .8pt;
            text-transform: lowercase; font-variant-caps: small-caps;
-           color: %(ambar)s; margin: 0 0 1.1mm; text-align: left; }
+           color: %(acento)s; margin: 0 0 1.1mm; text-align: left; }
 .exh-tit { font-size: 11.2pt; font-weight: 600; line-height: 1.2;
-           color: %(barranca)s; margin: 0; text-align: left; hyphens: none;
+           color: %(acento)s; margin: 0; text-align: left; hyphens: none;
            font-variation-settings: "opsz" 14; }
 .exh-baj { font-size: 7.6pt; line-height: 1.34;
            color: %(tinta)s; opacity: .68; margin: 1.3mm 0 0; text-align: left;
            hyphens: none; max-width: 168mm; }
 .exh img { display: block; margin: 0 auto; max-width: 100%%;
-           max-height: 58mm; width: auto; height: auto; }
+           max-height: 82mm; width: auto; height: auto; }
 /* Los dos mapas y las listas largas. A 78 mm el mapa entraba en la mitad del
    ancho de la caja y la otra mitad quedaba en papel: el partido es una franja
    en diagonal y su lienzo es casi cuadrado, asi que lo que manda es el alto.
    El acomodador se encarga del hueco que deje al pie de pagina. */
-.exh.alto img { max-height: 84mm; }
+.exh.alto img { max-height: 108mm; }
 .exh-fuente, .exh-nota { font-style: italic;
                          font-size: 7pt; line-height: 1.34; margin: 1.8mm 0 0;
                          text-align: left; hyphens: none; opacity: .66; }
-.exh-nota { color: %(ambar)s; opacity: .95; margin-top: 1.2mm; }
+.exh-nota { color: %(acento)s; opacity: .95; margin-top: 1.2mm; }
 
 /* --------------------------------------------------------------------
    TAPA
@@ -1031,14 +1149,35 @@ th:first-child, td:first-child { text-align: left; }
         page-break-after: always; }
 .tapa-img { position: absolute; left: -11mm; bottom: 4mm; width: 232mm;
             height: auto; }
+/* La ilustracion de tapa sangra los cuatro lados. */
+.tapa-img.cubre { left: 0; top: 0; bottom: auto; width: 210mm; height: 297mm;
+                  object-fit: cover; }
+.tapa-credito { position: absolute; left: 17mm; bottom: 9mm; margin: 0;
+                font-family: "%(sans)s"; font-size: 5.6pt; letter-spacing: .3pt;
+                color: %(crema)s; opacity: .8; }
+
+/* --------------------------------------------------------------------
+   LA BANDA QUE ABRE CADA CAPITULO
+   -------------------------------------------------------------------- */
+/* Va ARRIBA del titulo y del eyebrow del capitulo, al ancho de la caja. Es
+   una ilustracion, y lo dice: un documento que se ofrece para que le revisen
+   las cuentas no puede dejar que una imagen generada pase por una foto. */
+figure.apertura { margin: 0 0 5mm; break-after: avoid; break-inside: avoid; }
+figure.apertura img { display: block; width: 100%%; height: 44mm;
+                      object-fit: cover; }
+figure.apertura figcaption { font-family: "%(sans)s"; font-size: 5.8pt;
+                             letter-spacing: .2pt; color: %(tinta)s;
+                             opacity: .5; margin-top: 1.4mm;
+                             text-align: right; }
+figure.apertura + h1 { break-before: avoid; }
 .tapa-txt { position: absolute; left: 17mm; top: 30mm; width: 165mm; }
 .tapa h1 { font-size: 27pt; line-height: 1.15; margin: 0; letter-spacing: .4pt;
            border: 0; padding: 0; break-before: avoid; font-weight: 700;
            font-variation-settings: "opsz" 40; }
-.tapa .t2 { color: %(rio)s; margin-bottom: 6mm; }
+.tapa .t2 { color: %(acento)s; margin-bottom: 6mm; }
 .tapa .sub { font-size: 11pt; line-height: 1.5; text-align: left;
              max-width: 118mm; margin: 0; hyphens: none;
-             border-top: 1.6pt solid %(barranca)s; padding-top: 4mm;
+             border-top: 1.6pt solid %(acento)s; padding-top: 4mm;
              display: inline-block; }
 /* --------------------------------------------------------------------
    INDICE
@@ -1055,17 +1194,17 @@ ul.ix a::after { content: target-counter(attr(href), page); float: right;
                  padding-left: 3mm; }
 li.ix-cap { margin-top: 3.6mm; }
 li.ix-cap:first-child { margin-top: 0; }
-li.ix-cap a { font-size: 10.8pt; color: %(barranca)s;
-              border-bottom: .6pt solid %(barranca)s; padding-bottom: 1.6mm; }
-li.ix-cap a::after { color: %(barranca)s; opacity: 1; font-weight: bold;
+li.ix-cap a { font-size: 10.8pt; color: %(acento)s;
+              border-bottom: .6pt solid %(acento)s; padding-bottom: 1.6mm; }
+li.ix-cap a::after { color: %(acento)s; opacity: 1; font-weight: bold;
                      font-size: 8.4pt; }
 li.ix-sub a { font-size: 8.1pt; padding: .85mm 0 .85mm;
               border-bottom: .4pt dotted rgba(22, 41, 58, .22); }
-span.ix-n { display: inline-block; width: 11mm; color: %(rio)s;
+span.ix-n { display: inline-block; width: 11mm; color: %(acento)s;
             font-weight: bold; }
-""" % dict(papel=PAPEL, tinta=TINTA, rio=RIO, barranca=BARRANCA,
-           cal=CAL, ambar=AMBAR, corto=TITULO_CORTO, pie=MARGEN_PIE,
-           serif=SERIF, tipos=TIPOS, opsz=OPSZ_TEXTO, opszt=OPSZ_TITULO)
+""" % dict(crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
+           fila=FILA, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
+           sans=SANS, tipos=TIPOS, opsz=OPSZ_TEXTO, opszt=OPSZ_TITULO)
 
 
 # ==========================================================================
@@ -1097,6 +1236,7 @@ def verificar_pdf(ruta):
 def main():
     from weasyprint import HTML, CSS as WCSS
 
+    NUMEROS.update(numeros_por_aparicion())
     entradas, piezas = [], []
     for nombre, titulo in ORDEN:
         slug = nombre.split(".")[0].lower()

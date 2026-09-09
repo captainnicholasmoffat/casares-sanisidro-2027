@@ -40,9 +40,12 @@ def ex17():
             total += float(r["devengado"])
     filas.sort(key=lambda x: x[1])
 
-    fig, ax = E.figura(5.4)
+    # Diecinueve funciones, y con la tipografia del documento los nombres largos
+    # envuelven en dos lineas: a 5,4 pulgadas se pisaban de a pares. El lienzo
+    # crece; en la pagina lo limita el tope de altura del exhibit, no esto.
+    fig, ax = E.figura(6.25)
     y = range(len(filas))
-    colores = [E.BARRANCA if n.upper() in DESTACAR else E.RIO for n, _ in filas]
+    colores = [E.ACENTO if n.upper() in DESTACAR else E.DATO for n, _ in filas]
     ax.barh(list(y), [v / 1e6 for _, v in filas], height=0.66, color=colores,
             zorder=3)
     for i, (nombre, v) in enumerate(filas):
@@ -50,7 +53,7 @@ def ex17():
         ax.annotate("%s M   %s" % (E.numero(v / 1e6), E.pct(100 * v / total, 1)),
                     (v / 1e6, i), xytext=(4, 0), textcoords="offset points",
                     va="center", fontsize=6.4,
-                    color=E.BARRANCA if destacada else E.TINTA,
+                    color=E.ACENTO if destacada else E.TINTA,
                     weight="bold" if destacada else "normal")
     ax.set_yticks(list(y))
     ax.set_yticklabels([E.envolver(E.nombre_funcion(n), 6.2, 1.15)
@@ -90,9 +93,9 @@ def ex18():
 
     fig, ax = E.figura(2.8)
     izq = 0.0
-    for etiqueta, v, color in (("Todo el resto del presupuesto", resto, E.CAL),
-                               ("Vivienda", vivienda, E.RIO),
-                               ("Empleo", empleo, E.BARRANCA)):
+    for etiqueta, v, color in (("Todo el resto del presupuesto", resto, E.ARENA),
+                               ("Vivienda", vivienda, E.DATO),
+                               ("Empleo", empleo, E.ACENTO)):
         ax.barh([0], [v / 1e6], left=izq / 1e6, height=0.3, color=color, zorder=3)
         izq += v
     ax.annotate("Todo el resto del presupuesto\n%s M   %s"
@@ -106,10 +109,10 @@ def ex18():
     for i, (etiqueta, medio, color) in enumerate(
             (("Vivienda: %s M, el %s del presupuesto"
               % (E.numero(vivienda / 1e6, 1), E.pct(100 * vivienda / total, 2)),
-              (resto + vivienda / 2) / 1e6, E.RIO),
+              (resto + vivienda / 2) / 1e6, E.DATO),
              ("Empleo: %s M, el %s del presupuesto"
               % (E.numero(empleo / 1e6, 1), E.pct(100 * empleo / total, 2)),
-              (resto + vivienda + empleo / 2) / 1e6, E.BARRANCA))):
+              (resto + vivienda + empleo / 2) / 1e6, E.ACENTO))):
         ax.annotate(etiqueta, (medio, 0.16 if i == 0 else -0.16),
                     xytext=(total / 1e6 * 0.93, 0.60 if i == 0 else -0.60),
                     textcoords="data", ha="right",
@@ -182,19 +185,19 @@ def ex19():
         # cumple, el CSV lo dira y el cuadrado se pinta solo.
         hecha = r["estado_actual"] == "cumplida"
         ax.plot([X_CASILLA], [y + 0.22], marker="s", markersize=6.4,
-                markerfacecolor=E.RIO if hecha else "none",
-                markeredgecolor=E.RIO if hecha else E.TINTA,
+                markerfacecolor=E.DATO if hecha else "none",
+                markeredgecolor=E.DATO if hecha else E.TINTA,
                 markeredgewidth=1.0, zorder=5, clip_on=False)
         ax.annotate(E.nombre_medida(r["medida"]), (X_TEXTO, y + 0.22),
                     ha="left", va="center", fontsize=7.4, color=E.TINTA)
         ax.annotate(E.nombre_estado(r["estado_actual"]), (X_TEXTO, y - 0.22),
-                    ha="left", va="center", fontsize=6.4, color=E.BARRANCA,
+                    ha="left", va="center", fontsize=6.4, color=E.ACENTO,
                     weight="bold")
         ax.annotate(E.nombre_evidencia(r["fuente_verificacion"]),
                     (X_EVIDENCIA, y - 0.24), ha="left", va="center",
                     fontsize=6.2, color=E.TINTA, alpha=0.66)
         if i:
-            ax.axhline(y + 0.58, color=E.CAL, linewidth=0.8, zorder=2)
+            ax.axhline(y + 0.58, color=E.ARENA, linewidth=0.8, zorder=2)
 
     ax.annotate("cumplidas hoy: %d de %d" % (cumplidas, n),
                 (X_CASILLA, n - 0.30), ha="left", va="center", fontsize=6.4,
@@ -252,7 +255,7 @@ def ex20():
     dos = datos[0][1] + datos[1][1]
 
     fig, ax = E.figura(3.1)
-    colores = [E.BARRANCA if i < 2 else E.RIO for i in range(len(datos))]
+    colores = [E.ACENTO if i < 2 else E.DATO for i in range(len(datos))]
     ax.bar(range(len(datos)), [v for _, v in datos], width=0.62, color=colores,
            zorder=3)
     for i, (_, v) in enumerate(datos):

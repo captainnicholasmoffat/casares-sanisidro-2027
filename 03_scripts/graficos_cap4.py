@@ -8,6 +8,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
+import mapa_base as MB
 import matplotlib.pyplot as plt
 
 FUENTE_CENSO = ("INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, "
@@ -156,7 +157,7 @@ def ex13():
     filas, total = reparto_vecinal()
     fig, ax = E.figura(3.15)
     vals = [f["pesos_por_habitante"] for f in filas]
-    colores = [E.BARRANCA if f["zona"] in ("Beccar", "Martinez") else E.RIO
+    colores = [E.ACENTO if f["zona"] in ("Beccar", "Martinez") else E.DATO
                for f in filas]
     ax.bar(range(len(filas)), vals, width=0.62, color=colores, zorder=3)
     for i, f in enumerate(filas):
@@ -164,7 +165,7 @@ def ex13():
         ax.annotate(E.numero(f["pesos_por_habitante"]), (i, vals[i]),
                     xytext=(0, 5), textcoords="offset points", ha="center",
                     fontsize=7.4 if destacar else 6.8,
-                    color=E.BARRANCA if destacar else E.TINTA,
+                    color=E.ACENTO if destacar else E.TINTA,
                     weight="bold")
     ax.set_xticks(range(len(filas)))
     # "Boulogne Sur Mer" no entra en una columna al lado de "Villa Adelina":
@@ -219,7 +220,7 @@ def _rotulo_de_tramo(fig, ax, texto, x0, x1, y, color_dentro, color_afuera,
     ax.annotate(texto, (x1, y), xytext=(5, 0),
                 textcoords="offset points", ha="left", va="center",
                 fontsize=6.6, color=color_afuera, weight="bold", zorder=6,
-                path_effects=[withStroke(linewidth=2.2, foreground=E.PAPEL)])
+                path_effects=[withStroke(linewidth=2.2, foreground=E.CREMA)])
     return True
 
 
@@ -234,13 +235,13 @@ def ex14():
 
     fig, ax = E.figura(2.85)
     for i, (etiqueta, v) in enumerate((("Año 1", vecinal1), ("Año 4", vecinal4))):
-        ax.barh([i], [v / 1e6], height=0.42, color=E.RIO, zorder=4)
+        ax.barh([i], [v / 1e6], height=0.42, color=E.DATO, zorder=4)
         ax.barh([i], [(obra - v) / 1e6], left=v / 1e6, height=0.42,
-                color=E.CAL, zorder=3)
+                color=E.ARENA, zorder=3)
         afuera = _rotulo_de_tramo(
             fig, ax, "deciden los vecinos\n%s M   %s"
             % (E.numero(v / 1e6), E.pct(100 * v / obra, 1)),
-            0, v / 1e6, i, E.PAPEL, E.RIO)
+            0, v / 1e6, i, E.CREMA, E.DATO)
         # Si el rotulo azul tuvo que salirse del tramo, el gris se corre al
         # extremo derecho para dejarle lugar en vez de quedar centrado encima.
         _rotulo_de_tramo(fig, ax, "decide el Ejecutivo   %s M   %s"
@@ -279,9 +280,13 @@ def ex14():
 CRS_METRICO = "EPSG:32721"
 
 
-def _barra_escala(ax, geo, metros=2000):
-    """Barra de escala en metros. Un mapa sin escala no se puede auditar."""
-    x0, y0, x1, y1 = geo.total_bounds
+def _barra_escala(ax, geo, metros=2000, caja=None):
+    """Barra de escala en metros. Un mapa sin escala no se puede auditar.
+
+    Se apoya en el ENCUADRE y no en la caja del partido: con el mapa base
+    alrededor, el encuadre es mas grande y la barra caia adentro del dibujo.
+    """
+    x0, y0, x1, y1 = caja if caja else geo.total_bounds
     ancho = x1 - x0
     bx = x0 + ancho * 0.035
     by = y0 + (y1 - y0) * 0.045
@@ -292,8 +297,8 @@ def _barra_escala(ax, geo, metros=2000):
             fontsize=6, color=E.TINTA)
 
 
-def _norte(ax, geo):
-    x0, y0, x1, y1 = geo.total_bounds
+def _norte(ax, geo, caja=None):
+    x0, y0, x1, y1 = caja if caja else geo.total_bounds
     nx = x1 - (x1 - x0) * 0.045
     ny = y0 + (y1 - y0) * 0.055
     alto = (y1 - y0) * 0.075
@@ -438,7 +443,7 @@ def _etiquetas_sin_pisarse(fig, ax, items, geo, fontsize=7.6, ocupadas=None):
                 arrowprops=(dict(arrowstyle="-", color=E.TINTA, linewidth=0.7,
                                  alpha=0.75, shrinkA=1, shrinkB=1)
                             if movida else None),
-                path_effects=[withStroke(linewidth=4.2,
+                path_effects=[withStroke(linewidth=2.6,
                                          foreground=it["halo"])])
             # Una Annotation no sabe donde cae su texto hasta que se le
             # actualizan las posiciones: antes de eso devuelve la caja apoyada
@@ -485,9 +490,11 @@ def ex15():
     vmin, vmax = z["pct_nbi"].min(), z["pct_nbi"].max()
 
     fig, ax = E.figura(4.6)
+    # EL MAPA BASE VA PRIMERO: agua, vecinos y vias abajo de todo.
+    caja = MB.dibujar(ax, z)
     z.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
-           edgecolor=E.PAPEL, linewidth=1.6, zorder=3)
-    z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=1.1, zorder=4)
+           edgecolor=E.CREMA, linewidth=0.5, zorder=3)
+    z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.5, zorder=4)
 
     items = []
     for _, r in z.iterrows():
@@ -504,8 +511,8 @@ def ex15():
             "x": p.x, "y": p.y, "area": r.geometry.area,
             "geom": r.geometry,
             "texto": E.zona_bonita(r["zona"]),
-            "color": E.PAPEL if prop > 0.55 else E.TINTA,
-            "halo": E.TINTA if prop > 0.55 else E.PAPEL})
+            "color": E.CREMA if prop > 0.55 else E.TINTA,
+            "halo": E.TINTA if prop > 0.55 else E.CREMA})
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
@@ -534,8 +541,13 @@ def ex15():
     # cruza la lamina en diagonal. Antes el mapa estaba corrido a la derecha y
     # un tercio de la imagen quedaba sin usar.
     fig.subplots_adjust(left=0.02, right=0.99, top=top, bottom=bottom)
-    _barra_escala(ax, z)
-    _norte(ax, z)
+    ax.set_xlim(caja[0], caja[2])
+    ax.set_ylim(caja[1], caja[3])
+    MB.relieve_encima(ax, z, caja)
+    MB.rotulo_agua(ax, caja)
+    _barra_escala(ax, z, caja=caja)
+    MB.clave_vias(ax, caja)
+    _norte(ax, z, caja=caja)
     _tabla_nbi(fig, z, y_top=top - 0.055)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi")
@@ -564,7 +576,7 @@ def _tabla_nbi(fig, z, y_top, x=0.025, ancho=0.235):
         fig.text(x + ancho, y, E.pct(float(r.pct_nbi), 2), fontsize=6.3,
                  color=E.TINTA, weight="bold", ha="right", va="center")
         fig.lines.append(plt.Line2D([x, x + ancho], [y - 0.0155] * 2,
-                                    transform=fig.transFigure, color=E.CAL,
+                                    transform=fig.transFigure, color=E.ARENA,
                                     linewidth=0.5))
 
 
@@ -598,20 +610,22 @@ def ex16():
     critico = con[(con["fraccion"] == "32") & (con["pct_nbi"] >= umbral)]
 
     fig, ax = E.figura(4.6)
+    caja = MB.dibujar(ax, radios)
     radios.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
-                edgecolor=E.PAPEL, linewidth=0.25, zorder=3,
-                missing_kwds={"color": E.CAL})
+                edgecolor=E.CREMA, linewidth=0.15, zorder=3,
+                missing_kwds={"color": E.ARENA})
     z = gpd.read_file(os.path.join(E.DATA, "zonas_propuestas_sanisidro.geojson"))
     z = z.to_crs(CRS_METRICO)
-    z.boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.8, zorder=4,
-                    alpha=0.55)
-    critico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=2.0,
+    z.boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.35, zorder=4,
+                    alpha=0.6)
+    critico.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=1.1,
                                      zorder=6)
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
-    _barra_escala(ax, radios)
-    _norte(ax, radios)
+    _barra_escala(ax, radios, caja=caja)
+    MB.clave_vias(ax, caja)
+    _norte(ax, radios, caja=caja)
     top, bottom = E.marco(
         fig, "EXHIBIT 16",
               "La carencia no está repartida: está concentrada en nueve radios",
@@ -625,6 +639,10 @@ def ex16():
     # El area del mapa se fija ANTES de la llamada y de los nombres de zona:
     # todo eso va en coordenadas de dato y se corre si el eje se mueve despues.
     fig.subplots_adjust(left=0.02, right=0.98, top=top, bottom=bottom)
+    ax.set_xlim(caja[0], caja[2])
+    ax.set_ylim(caja[1], caja[3])
+    MB.relieve_encima(ax, radios, caja)
+    MB.rotulo_agua(ax, caja, alto=0.66)
 
     # La llamada de la fracción 32 va DESPUES de la cabecera y de la barra de
     # color, y se apoya en el rincon de abajo a la derecha, que es el unico
@@ -650,14 +668,14 @@ def ex16():
         # cuando esta en Beccar — lo contrario de lo que el exhibit dice. Con
         # caja, el lector distingue de un vistazo que es una anotacion y no un
         # nombre de lugar, y ya no depende de que la separacion alcance.
-        bbox=dict(boxstyle="round,pad=0.5", facecolor=E.PAPEL,
+        bbox=dict(boxstyle="round,pad=0.5", facecolor=E.CREMA,
                   edgecolor=E.TINTA, linewidth=0.7, alpha=0.97))
 
     # Los nombres de zona se colocan al final y esquivan todo lo anterior.
     items = [{"x": r.geometry.representative_point().x,
               "y": r.geometry.representative_point().y,
               "area": r.geometry.area, "texto": E.zona_bonita(r["zona"]),
-              "color": E.TINTA, "halo": E.PAPEL} for _, r in z.iterrows()]
+              "color": E.TINTA, "halo": E.CREMA} for _, r in z.iterrows()]
     _etiquetas_sin_pisarse(fig, ax, items, radios, fontsize=6.6,
                            ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi")
@@ -687,9 +705,10 @@ def tapa_mapa():
     vmin, vmax = z["pct_nbi"].min(), z["pct_nbi"].max()
 
     fig, ax = E.figura(4.15)
+    caja = MB.dibujar(ax, z, vias=False, nombres_vecinos=False)
     z.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
-           edgecolor=E.PAPEL, linewidth=1.6, zorder=3)
-    z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=1.1, zorder=4)
+           edgecolor=E.CREMA, linewidth=0.5, zorder=3)
+    z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.5, zorder=4)
 
     items = []
     for _, r in z.iterrows():
@@ -699,11 +718,14 @@ def tapa_mapa():
             "x": p.x, "y": p.y, "area": r.geometry.area,
             "geom": r.geometry,
             "texto": E.zona_bonita(r["zona"]),
-            "color": E.PAPEL if prop > 0.55 else E.TINTA,
-            "halo": E.TINTA if prop > 0.55 else E.PAPEL})
+            "color": E.CREMA if prop > 0.55 else E.TINTA,
+            "halo": E.TINTA if prop > 0.55 else E.CREMA})
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
     fig.subplots_adjust(left=0.02, right=0.98, top=0.98, bottom=0.02)
+    ax.set_xlim(caja[0], caja[2])
+    ax.set_ylim(caja[1], caja[3])
+    MB.relieve_encima(ax, z, caja)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "TAPA_mapa_zonas", transparente=True)

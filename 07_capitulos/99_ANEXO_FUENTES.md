@@ -319,6 +319,6 @@ La segunda es que es la única forma de que la afirmación central de este docum
 
 **Siete errores contados es una cifra rara en un documento como éste, y es a propósito.** Un anexo que declara cero está diciendo que nadie revisó, o que revisó y no lo cuenta. Y son siete y no seis porque el séptimo apareció después de dar la lista por cerrada: parar en un número redondo habría sido otra forma de no contarlos.
 
-Hay además un límite que se conoce y no se intenta resolver. El verificador de acentos tiene una lista de palabras que en español siempre llevan tilde, y falla si alguna aparece sin ella. "Está" no puede estar en esa lista, porque "esta" también es una palabra correcta: un verificador que no distingue *esta zona* de *está concentrada* daría falsos positivos en todo el documento, y un verificador ruidoso enseña a ignorar la suite entera. El título del EXHIBIT 16 tuvo esa falta de tilde y la encontró un lector.
+Hay además un límite que se conoce y no se intenta resolver. El verificador de acentos tiene una lista de palabras que en español siempre llevan tilde, y falla si alguna aparece sin ella. "Está" no puede estar en esa lista, porque "esta" también es una palabra correcta: un verificador que no distingue *esta zona* de *está concentrada* daría falsos positivos en todo el documento, y un verificador ruidoso enseña a ignorar la suite entera. El título del EXHIBIT 15 tuvo esa falta de tilde y la encontró un lector.
 
 **La invitación es literal: correlo, y si algo no cierra, decilo.**

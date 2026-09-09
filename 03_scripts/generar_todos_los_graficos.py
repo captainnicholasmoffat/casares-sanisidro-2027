@@ -22,6 +22,7 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import estilo as E
 E.PIE_EXTERNO = True
+E.CABECERA_EXTERNA = True
 import graficos_cap1 as C1
 import graficos_cap2 as C2
 import graficos_cap3 as C3
