@@ -130,7 +130,12 @@ def ex07():
     E.limpiar(ax, grilla="x")
     top, bottom = E.marco(
         fig, "EXHIBIT 07",
-              "Qué subió y qué bajó en términos reales entre 2024 y 2025",
+              # De etiqueta a conclusión: el titulo decia QUE muestra el
+              # grafico, no que dice. Los dos extremos se calculan de las
+              # mismas filas que se dibujan.
+              "%s creció %s real en un año; %s cayó %s"
+              % (E.nombre_funcion(filas[-1][0]), E.pct(filas[-1][1], 1),
+                 E.nombre_funcion(filas[0][0]).lower(), E.pct(abs(filas[0][1]), 1)),
               "Variación real del gasto devengado por función, en pesos "
               "constantes de diciembre de 2025.",
         FUENTE_EJEC,

@@ -43,6 +43,7 @@ ninguna parte, y verificar_pdf() falla si se cuela.
 """
 
 import html
+import json
 import os
 import re
 import subprocess
@@ -86,6 +87,25 @@ ETIQUETAS = [
     (("| Parámetro | Valor |",), "MODELADO"),
     (("| Municipio | Gasto devengado total",), "PROCESADO POR TERCEROS"),
     (("| Zona | Población |",), "LÍMITES DE OPENSTREETMAP"),
+]
+
+# Las frases de remate de cada seccion. NO SE INVENTA NINGUNA: son las que ya
+# estan escritas en los capitulos, y el armador solo les da peso tipografico.
+# Sembrar remates para que todas las secciones tengan uno es lo que hace que un
+# documento suene a folleto: si una seccion no tiene, se queda sin.
+REMATES = json.load(open(os.path.join(AQUI, "remates.json"), encoding="utf-8")) \
+    if os.path.exists(os.path.join(AQUI, "remates.json")) else {}
+
+# Las CAJAS DESTACADAS son para cuatro cosas y ninguna mas. Si se empieza a
+# encajonar lo que parece importante, dejan de significar algo.
+#   metodo   advertencias metodologicas y limites declarados
+#   legal    citas textuales de una norma
+#   hipotesis las cuatro que se cayeron al contrastarlas
+CAJAS = [
+    ("metodo", ("Conviene ser exacto", "Conviene decir de entrada",
+                "El límite de este dato", "La advertencia sobre este cuadro",
+                "Sobre la línea de base", "Por qué esta tabla tiene sólo")),
+    ("hipotesis", ("Cuatro de las críticas", "Cuatro hipótesis contra")),
 ]
 
 LEYENDA_ETIQUETA = {
@@ -181,6 +201,11 @@ def _tabla(bloque):
 def a_html(md, slug):
     lineas = md.split("\n")
     out, i, n = [], 0, len(lineas)
+    # Los tres primeros bloques de un capitulo tienen roles distintos y hasta
+    # ahora compartian estilo: el h1 es el titulo, el h2 SIN numero que le sigue
+    # es la bajada —una linea que dice de que va la seccion— y los parrafos en
+    # italica que vienen despues son la nota de version, que no es contenido.
+    vistos_h1 = 0
     while i < n:
         l = lineas[i]
 
@@ -199,10 +224,39 @@ def a_html(md, slug):
             continue
 
         if l.startswith("### "):
+            tipo = next((t for t, claves in CAJAS
+                         if any(l[4:].startswith(c) for c in claves)), None)
+            if tipo:
+                j = i + 1
+                cuerpo = []
+                while j < n and not lineas[j].startswith(("#", "---", "|")):
+                    if lineas[j].strip():
+                        cuerpo.append(lineas[j].strip())
+                    elif cuerpo:
+                        break
+                    j += 1
+                out.append('<aside class="caja %s"><h4>%s</h4>%s</aside>'
+                           % (tipo, _inline(l[4:]),
+                              "".join("<p>%s</p>" % _inline(c) for c in cuerpo)))
+                i = j
+                continue
             out.append("<h3>%s</h3>" % _inline(l[4:]))
         elif l.startswith("## "):
-            out.append("<h2>%s</h2>" % _inline(l[3:]))
+            m2 = re.match(r"^(\d+(?:\.\d+)?)\s+(.*)$", l[3:].strip())
+            # El h2 sin numero que sigue al titulo del capitulo es la bajada.
+            if not m2 and vistos_h1 == 1 and not any(
+                    "<h2" in o or "bajada" in o for o in out):
+                out.append('<p class="bajada">%s</p>' % _inline(l[3:]))
+                i += 1
+                continue
+            # El numero de seccion se separa para poder darle otro peso.
+            if m2:
+                out.append('<h2><span class="num">%s</span>%s</h2>'
+                           % (m2.group(1), _inline(m2.group(2))))
+            else:
+                out.append("<h2>%s</h2>" % _inline(l[3:]))
         elif l.startswith("# "):
+            vistos_h1 += 1
             out.append('<h1 id="%s">%s</h1>' % (slug, _inline(l[2:])))
         elif l.startswith("> "):
             j = i
@@ -210,8 +264,8 @@ def a_html(md, slug):
             while j < n and lineas[j].startswith(">"):
                 cita.append(lineas[j].lstrip("> ").rstrip())
                 j += 1
-            out.append("<blockquote>%s</blockquote>"
-                       % "<br>".join(_inline(c) for c in cita if c))
+            out.append('<aside class="caja legal">%s</aside>'
+                       % "".join("<p>%s</p>" % _inline(c) for c in cita if c))
             i = j
             continue
         elif l.strip() == "---":
@@ -237,30 +291,69 @@ def a_html(md, slug):
             i = j
             continue
         elif l.strip():
-            out.append("<p>%s</p>" % _inline(l.strip()))
+            # La nota de version: parrafo entero en italica, antes de la
+            # primera seccion numerada. No es contenido y no lleva su peso.
+            if (re.fullmatch(r"\*[^*].*\*", l.strip())
+                    and not any('class="num"' in o for o in out)):
+                out.append('<p class="version">%s</p>' % _inline(l.strip()[1:-1]))
+                i += 1
+                continue
+            clase = ' class="remate"' if l.strip() in _remates_de(slug) else ""
+            out.append("<p%s>%s</p>" % (clase, _inline(l.strip())))
         i += 1
     return _agrupar_titulos("\n".join(out))
 
 
-RE_H23 = re.compile(
-    r'(<h[23]>.*?</h[23]>)\n'
-    r'(<h3>.*?</h3>|<(?:p|ul|ol|blockquote)[ >].*?</(?:p|ul|ol|blockquote)>'
-    r'|<div class="tw">.*?</div>)', re.S)
+def _remates_de(slug):
+    """Las frases de remate del capitulo, tal como estan escritas en el .md."""
+    for nombre, _ in ORDEN:
+        if nombre.split(".")[0].lower() == slug:
+            return set(REMATES.get(nombre, []))
+    return set()
+
+
+BLOQUE = (r'<(?:p|ul|ol|blockquote|aside)[ >].*?</(?:p|ul|ol|blockquote|aside)>'
+          r'|<div class="tw">.*?</div>')
+
+# Un h2 arrastra, si lo hay, el h3 que le sigue, y el primer bloque de contenido.
+RE_H2 = re.compile(r'(<h2>.*?</h2>)\n(?:(<h3>.*?</h3>)\n)?(' + BLOQUE + ')', re.S)
+RE_H3 = re.compile(r'(<h3>.*?</h3>)\n(' + BLOQUE + ')', re.S)
 
 
 def _agrupar_titulos(html_txt):
-    """Cada h2/h3 viaja pegado a su primer bloque, en un contenedor indivisible.
+    """Cada titulo viaja pegado a su primer bloque, en un contenedor indivisible.
 
     Sin esto, "4.2 La deuda que la Provincia tiene con sus municipios" quedaba
-    al pie de la pagina 25 con su primer parrafo en la 26. El lector lo lee
-    como un error de armado, y con razon.
+    al pie de una pagina con su primer parrafo en la siguiente. El lector lo lee
+    como un error de armado, y con razon. WeasyPrint ignora break-after:avoid en
+    los encabezados, asi que el agrupamiento se hace aca.
+
+    UNA SOLA PASADA por regla. Antes se pasaba dos veces para atrapar el caso
+    h2-h3-parrafo, y la segunda envolvia lo que la primera ya habia envuelto:
+    salia <div class="keep"><div class="keep"><h2> con el cierre en el lugar
+    equivocado, y el HTML mal anidado hacia que el navegador de impresion
+    ignorara el break-inside. Ahora el h3 se captura en la misma regla del h2.
     """
     def envolver(m):
-        return '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2))
-    # Se aplica dos veces: un h2 seguido de un h3 seguido de un parrafo queda
-    # agrupado en la segunda pasada.
-    for _ in range(2):
-        html_txt = RE_H23.sub(envolver, html_txt)
+        partes = [g for g in m.groups() if g]
+        return '<div class="keep">%s</div>' % "\n".join(partes)
+
+    html_txt = RE_H2.sub(envolver, html_txt)
+    # Cuando el primer bloque es un parrafo corto —una linea de entrada—, el
+    # titulo y esa linea entran al pie y el CUADRO que viene despues se va solo
+    # a la pagina siguiente. Paso con "6.5 Que no prometemos, y de quien
+    # depende", cuya entrada tiene diez palabras. En ese caso el grupo se
+    # extiende al bloque siguiente.
+    html_txt = re.sub(
+        r'<div class="keep">((?:(?!</div>).)*?<p>[^<]{0,190}</p>)</div>\n('
+        + BLOQUE + ')',
+        lambda m: '<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2)),
+        html_txt, flags=re.S)
+    # Los h3 sueltos, los que no venian pegados a un h2.
+    html_txt = RE_H3.sub(
+        lambda m: ('<div class="keep">%s\n%s</div>' % (m.group(1), m.group(2))
+                   if '<div class="keep">' not in html_txt[max(0, m.start() - 60):m.start()]
+                   else m.group(0)), html_txt)
     return html_txt
 
 
@@ -320,11 +413,48 @@ code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background: %(cal)s;
 a { color: %(rio)s; text-decoration: none; }
 hr { border: 0; border-top: .5pt solid %(cal)s; margin: 1.5em 0; }
 
-h1 { font-size: 20pt; line-height: 1.16; margin: 0 0 .5em;
+/* JERARQUIA. El numero de seccion grande y en Rio, el titulo en serif y la
+   bajada en italica: de un vistazo se sabe donde esta uno en el documento. */
+h1 { font-size: 21pt; line-height: 1.14; margin: 0 0 .35em;
      string-set: cap content(); break-before: page; }
-h2 { font-size: 12.6pt; margin: 1.5em 0 .5em; color: %(tinta)s; }
-h3 { font-family: "DejaVu Sans"; font-size: 9.4pt; font-weight: bold;
-     margin: 1.25em 0 .4em; color: %(rio)s; }
+/* La bajada: una linea que dice de que va la seccion, en Rio y en italica. */
+p.bajada { font-family: "DejaVu Serif"; font-style: italic; font-size: 11.4pt;
+           line-height: 1.34; color: %(rio)s; margin: .1em 0 .9em;
+           max-width: 138mm; text-align: left; }
+/* La nota de version no es contenido: chica y apagada. */
+p.version { font-family: "DejaVu Sans"; font-size: 6.9pt; line-height: 1.35;
+            color: %(tinta)s; opacity: .55; margin: 0 0 .3em;
+            text-align: left; max-width: 138mm; }
+p.version + p.version { margin-bottom: 1.4em; }
+h2 { font-size: 13.4pt; line-height: 1.2; margin: 1.6em 0 .45em;
+     color: %(tinta)s; }
+h2 .num { color: %(rio)s; font-size: 17pt; font-weight: bold;
+          margin-right: .28em; }
+h3 { font-family: "DejaVu Sans"; font-size: 9.2pt; font-weight: bold;
+     margin: 1.2em 0 .35em; color: %(rio)s;
+     letter-spacing: .2pt; }
+
+/* REMATE. Una por seccion, y solo las que ya estaban escritas. */
+p.remate { font-size: 11.4pt; line-height: 1.38; color: %(tinta)s;
+           margin: 1em 0 1.1em; padding: 0 0 0 9pt;
+           border-left: 2.5pt solid %(rio)s; text-align: left;
+           break-inside: avoid; }
+p.remate strong { font-weight: bold; }
+
+/* CAJAS. Cuatro usos y ninguno mas: advertencia metodologica, cita legal
+   textual, limite declarado, hipotesis descartada. */
+.caja { break-inside: avoid; margin: 1em 0 1.15em; padding: .62em .8em;
+        background: %(cal)s; font-size: 8.9pt; }
+.caja h4 { font-family: "DejaVu Sans"; font-size: 7.4pt; font-weight: bold;
+           letter-spacing: .5pt; text-transform: uppercase;
+           margin: 0 0 .35em; color: %(ambar)s; }
+.caja p { margin: 0 0 .4em; text-align: left; }
+.caja p:last-child { margin-bottom: 0; }
+.caja.metodo { border-left: 2.5pt solid %(ambar)s; }
+.caja.hipotesis { border-left: 2.5pt solid %(barranca)s; }
+.caja.legal { border-left: 2.5pt solid %(rio)s; font-family: "DejaVu Serif";
+              font-style: italic; }
+.caja.legal h4 { color: %(rio)s; }
 h1 + p, h2 + p { margin-top: 0; }
 
 /* Un titulo al pie con su primer parrafo en la pagina siguiente es un salto

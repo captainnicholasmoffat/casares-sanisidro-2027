@@ -88,6 +88,23 @@ def _nbi_del_partido():
     return 100.0 * con / tot if tot else 0.0
 
 
+def _parte_de_la_carencia(zonas):
+    """Qué parte del déficit del partido está en esas zonas.
+
+    Es el mismo índice que reparte la plata en el capítulo 4: el promedio, sobre
+    los cuatro indicadores, de la parte del partido que cae en la zona.
+
+    Se calcula. El título decía "toda la carencia", que era una afirmación
+    escrita a mano — el verificador de números no la veía porque no es un
+    número, y quedó vieja cuando cambiaron las zonas.
+    """
+    IND = ["nbi", "sin_cloaca", "sin_gas_red", "hacinamiento"]
+    z = E.leer("data/zonas_indicadores.csv")
+    tot = {k: sum(int(r[k]) for r in z) for k in IND}
+    return 100 * sum(sum(int(r[k]) / tot[k] for k in IND) / len(IND)
+                     for r in z if r["zona"] in zonas)
+
+
 def ex02():
     """Las seis zonas, cuatro indicadores, de peor a mejor."""
     zonas = E.zonas_ordenadas()
@@ -121,7 +138,8 @@ def ex02():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 02",
-              "Boulogne y Beccar concentran toda la carencia del partido",
+              "Boulogne y Béccar concentran el %s de la carencia del partido"
+              % E.pct(_parte_de_la_carencia(("Boulogne Sur Mer", "Beccar")), 0),
               "Cuatro indicadores por zona, ordenadas de peor a mejor por NBI. "
               "El NBI del partido es %s." % E.pct(_nbi_del_partido(), 2),
         FUENTE_CENSO)

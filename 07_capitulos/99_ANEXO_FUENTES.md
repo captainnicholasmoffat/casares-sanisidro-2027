@@ -285,7 +285,7 @@ Este documento lo produjo un equipo chico. Auditar dieciséis años de ejecució
 
 Lo que lo hizo posible fue automatizar el procesamiento: **121 archivos de fuentes públicas —89 PDF, 15 respuestas del motor censal, 13 planillas y 3 CSV— parseados con herramientas de software**, y cada cifra resultante sujeta a una prueba automática que la verifica contra el dato de origen.
 
-Eso tiene una consecuencia que conviene decir con todas las letras: **los errores existieron y están contados.** Son seis, y están en `CORRECCIONES_NUMERICAS.md` con su cálculo y su corrección.
+Eso tiene una consecuencia que conviene decir con todas las letras: **los errores existieron y están contados.** Son siete, y están en `CORRECCIONES_NUMERICAS.md` con su cálculo y su corrección.
 
 **Los cuatro primeros son de cálculo.** Una mediana tomada del valor 54 de una lista par en vez del promedio de los dos centrales. Una cantidad de hogares derivada de un porcentaje ya redondeado en lugar de contada. Una tasa de percepción redondeada a dos decimales antes de restarla de la meta. El subtítulo de un gráfico con un número escrito a mano que habría sobrevivido a la siguiente corrida diciendo lo que ya no era cierto.
 
@@ -297,7 +297,19 @@ Lo que importa acá es por qué ninguno de los controles lo vio. Había seis ver
 
 **El sexto es de una clase que tampoco teníamos, y ningún verificador puede atraparlo.** Cuando las zonas pasaron a ser de OpenStreetMap, la etiqueta de confianza de los cuadros por zona siguió diciendo "ZONIFICACIÓN PROPIA". No había nada malformado: el rótulo era correcto el día que se escribió y dejó de serlo cuando cambió lo que describía. **Cambia la fuente y queda un rótulo describiendo la anterior.** Se detectó leyendo, no corriendo código, y por eso está en la lista.
 
-Hubo un séptimo del mismo tipo, un nivel más abajo, y se arregló solo por analogía: el colocador de etiquetas de los mapas comprobaba que una etiqueta no chocara con otro texto, pero no que entrara en su propio polígono. La de Acassuso, que tiene 16 radios, terminaba flotando fuera del contorno del partido sin nada que la atara. **El control existía y medía la cosa equivocada.**
+Del mismo tipo, un nivel más abajo, apareció otro que se arregló por analogía: el colocador de etiquetas de los mapas comprobaba que una etiqueta no chocara con otro texto, pero no que entrara en su propio polígono. La de Acassuso, que tiene 16 radios, terminaba flotando fuera del contorno del partido sin nada que la atara. **El control existía y medía la cosa equivocada.**
+
+**El séptimo es el que dice algo sobre el límite de todo este aparato, y por eso va último.**
+
+Uno de los siete verificadores busca números escritos a mano en los textos de los gráficos, porque un número fijo en un título sobrevive a la siguiente corrida diciendo lo que ya no es cierto. Funciona: encontró doce.
+
+Pero **busca dígitos**. Dos títulos de exhibit decían *"Boulogne y Béccar concentran toda la carencia del partido"* y *"la partida vecinal reparte casi el doble por vecino en Béccar que en Martínez"*. Las dos son cuantificaciones —dicen 100% y aproximadamente el doble— y las dos dejaron de ser ciertas cuando cambiaron las zonas: la concentración es del 67% y el reparto es 1,71 veces. Ninguna tenía un dígito, así que el verificador las dejó pasar.
+
+**Un número escrito a mano se detecta. Una afirmación escrita a mano, no.**
+
+Y la conclusión honesta es que **no sabemos automatizarlo.** Detectar que "toda" dejó de ser cierto exige entender la frase, no parsearla. Lo único que se puede hacer es lo que se hizo acá: que la frase se construya del dato, de modo que el título diga 67% porque lo calculó y no porque alguien lo escribió. Pero eso depende de que quien escriba el título lo escriba así, y ningún control lo obliga.
+
+Queda declarado como el límite conocido del método, no como algo resuelto.
 
 Esto no se cuenta como alarde. Se cuenta por dos razones.
 
@@ -305,6 +317,8 @@ La primera es que explica por qué un equipo sin estructura pudo hacer una audit
 
 La segunda es que es la única forma de que la afirmación central de este documento signifique algo. Un programa de gobierno que dice "los números están bien" pide confianza. Éste dice dónde están los números, con qué se los verificó, cuáles estuvieron mal y cómo volver a correrlos.
 
-**Seis errores contados es una cifra rara en un documento como éste, y es a propósito.** Un anexo que declara cero está diciendo que nadie revisó, o que revisó y no lo cuenta.
+**Siete errores contados es una cifra rara en un documento como éste, y es a propósito.** Un anexo que declara cero está diciendo que nadie revisó, o que revisó y no lo cuenta. Y son siete y no seis porque el séptimo apareció después de dar la lista por cerrada: parar en un número redondo habría sido otra forma de no contarlos.
+
+Hay además un límite que se conoce y no se intenta resolver. El verificador de acentos tiene una lista de palabras que en español siempre llevan tilde, y falla si alguna aparece sin ella. "Está" no puede estar en esa lista, porque "esta" también es una palabra correcta: un verificador que no distingue *esta zona* de *está concentrada* daría falsos positivos en todo el documento, y un verificador ruidoso enseña a ignorar la suite entera. El título del EXHIBIT 16 tuvo esa falta de tilde y la encontró un lector.
 
 **La invitación es literal: correlo, y si algo no cierra, decilo.**

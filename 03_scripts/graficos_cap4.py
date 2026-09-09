@@ -177,7 +177,9 @@ def ex13():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 13",
-              "La partida vecinal reparte casi el doble por vecino en Beccar que en Martínez",
+              "La partida vecinal reparte un %s más por vecino en Béccar que "
+              "en Martínez" % E.pct(100 * (filas[0]["pesos_por_habitante"]
+                                           / filas[-1]["pesos_por_habitante"] - 1), 0),
               "Reparto de los %s millones del año 4. Mitad por población y "
               "mitad por un índice que promedia NBI, cloacas, gas de red y "
               "hacinamiento." % E.numero(total / 1e6),
@@ -490,7 +492,7 @@ def ex15():
     E.sin_offset(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 15",
-              "Las seis zonas vecinales de San Isidro",
+              "El partido se parte en dos: el oeste y el norte contra la costa sur",
               "Coloreadas por porcentaje de hogares con necesidades básicas "
               "insatisfechas. El partido entero promedia %s."
               % E.pct(_nbi_del_partido(), 2),
@@ -591,7 +593,7 @@ def ex16():
     _norte(ax, radios)
     top, bottom = E.marco(
         fig, "EXHIBIT 16",
-              "La carencia no está repartida: esta concentrada en nueve radios",
+              "La carencia no está repartida: está concentrada en nueve radios",
               "Los 360 radios censales del partido. El contorno grueso es el "
               "conglomerado de la fracción 32, dentro de Beccar.",
         FUENTE_CENSO,
