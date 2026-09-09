@@ -352,6 +352,27 @@ def _cajas_de_figura(fig, salvo=()):
     return cajas
 
 
+def _cabe_en_el_poligono(ax, caja, geom, minimo=0.75):
+    """True si al menos `minimo` del ancho de la etiqueta cae sobre el poligono.
+
+    Se mide en coordenadas de datos: se toman los dos extremos de la caja a la
+    altura de su centro y se comprueba que el poligono los contenga.
+    """
+    if geom is None:
+        return True
+    from shapely.geometry import Point
+    inv = ax.transData.inverted()
+    y = (caja.y0 + caja.y1) / 2
+    dentro = 0
+    muestras = 9
+    for i in range(muestras):
+        x = caja.x0 + (caja.x1 - caja.x0) * (i + 0.5) / muestras
+        px, py = inv.transform((x, y))
+        if geom.contains(Point(px, py)):
+            dentro += 1
+    return dentro / muestras >= minimo
+
+
 def _etiquetas_sin_pisarse(fig, ax, items, geo, fontsize=7.6, ocupadas=None):
     """
     Coloca las etiquetas de zona en el centro de cada poligono y, cuando dos
@@ -411,6 +432,15 @@ def _etiquetas_sin_pisarse(fig, ax, items, geo, fontsize=7.6, ocupadas=None):
             # sin esto daba por buenas posiciones que despues se pisaban.
             t.update_positions(ren)
             caja = E.caja_de_texto(t, ren)
+            # Quedarse quieto solo vale si la etiqueta ENTRA en su poligono.
+            # Acassuso tiene 16 radios y su nombre es mas ancho: al no chocar
+            # con nada, el colocador aceptaba la posicion original y la etiqueta
+            # terminaba flotando sobre el fondo, fuera del contorno del partido,
+            # sin linea que la atara a nada. Si no entra, se trata como ocupada
+            # y sale con guia.
+            if not movida and not _cabe_en_el_poligono(ax, caja, it.get("geom")):
+                t.remove()
+                continue
             if not any(caja.overlaps(c) for c in puestos):
                 puestos.append(caja)
                 break
@@ -451,14 +481,13 @@ def ex15():
             # 16 radios y su etiqueta no entraba adentro, pero un mapa que solo
             # lleva nombres funciona con cualquier geometria.
             "x": p.x, "y": p.y, "area": r.geometry.area,
+            "geom": r.geometry,
             "texto": E.zona_bonita(r["zona"]),
             "color": E.PAPEL if prop > 0.55 else E.TINTA,
             "halo": E.TINTA if prop > 0.55 else E.PAPEL})
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
-    _barra_escala(ax, z)
-    _norte(ax, z)
     top, bottom = E.marco(
         fig, "EXHIBIT 15",
               "Las seis zonas vecinales de San Isidro",
@@ -472,12 +501,19 @@ def ex15():
           "data/METODOLOGIA_ZONAS.md.")
     # La rampa va sin rotulo: el titulo de la tabla de al lado ya lo dice,
     # y con los dos el numero de la escala se pisaba con el texto.
-    _leyenda_rampa(fig, vmin, vmax, "", y=top - 0.055)
+    _leyenda_rampa(fig, vmin, vmax, "", y=top - 0.295, x=0.025,
+                   ancho=0.235)
     # El area del mapa se fija ANTES de colocar los nombres. Si se movia
     # despues, cada etiqueta cambiaba de lugar y de tamaño relativo y el
     # trabajo de medirlas para que no se pisaran se perdia entero.
-    fig.subplots_adjust(left=0.38, right=0.99, top=top, bottom=bottom)
-    _tabla_nbi(fig, z, y_top=top - 0.175)
+    # El mapa toma todo el ancho. La tabla va arriba a la izquierda y la escala
+    # con el norte abajo a la izquierda, los dos huecos que deja el partido, que
+    # cruza la lamina en diagonal. Antes el mapa estaba corrido a la derecha y
+    # un tercio de la imagen quedaba sin usar.
+    fig.subplots_adjust(left=0.02, right=0.99, top=top, bottom=bottom)
+    _barra_escala(ax, z)
+    _norte(ax, z)
+    _tabla_nbi(fig, z, y_top=top - 0.055)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "EXHIBIT_15_mapa_zonas_nbi")
 
@@ -597,16 +633,20 @@ def ex16():
 
 
 def tapa_mapa():
-    """El mapa de la tapa: el MISMO de ex15, sin marco.
+    """El mapa de la tapa: SOLO los seis nombres.
 
-    En la tapa el mapa es una imagen que plantea una pregunta, no un exhibit
-    citado: va sin el rotulo "EXHIBIT 15" y sin la linea de fuente. El pie de
-    fuente vive en el §1.1, que es donde el dato se usa. Un lector que lo ve en
-    la tapa sin entenderlo del todo y lo reencuentra explicado en el capitulo 1,
-    entiende el documento.
+    Sin porcentajes, sin barra de color, sin escala y sin norte. Nadie le pone
+    una fuente al pie a una portada, asi que un "0,94% NBI" ahi flota sin
+    explicacion: el lector ve un numero antes de saber que mide.
 
-    No se recorta el PNG del exhibit: se dibuja de nuevo sin el marco. Recortar
-    depende de que el marco mida siempre lo mismo, y no tiene por que.
+    La tapa muestra un partido dividido en seis y coloreado. El capitulo 1
+    explica que significa el color. Que la portada haga una pregunta, no que de
+    una respuesta a medias.
+
+    Tampoco lleva el rotulo "EXHIBIT 15" ni la linea de fuente: en la tapa el
+    mapa es una imagen, no un exhibit citado. Su pie vive en el §1.1, que es
+    donde el dato se usa. No se recorta el PNG del exhibit — se dibuja de nuevo,
+    porque recortar depende de que el marco mida siempre lo mismo.
     """
     import geopandas as gpd
 
@@ -626,16 +666,13 @@ def tapa_mapa():
         prop = (r["pct_nbi"] - vmin) / (vmax - vmin) if vmax > vmin else 0
         items.append({
             "x": p.x, "y": p.y, "area": r.geometry.area,
-            "texto": "%s\n%s NBI" % (E.zona_bonita(r["zona"]),
-                                     E.pct(r["pct_nbi"], 2)),
+            "geom": r.geometry,
+            "texto": E.zona_bonita(r["zona"]),
             "color": E.PAPEL if prop > 0.55 else E.TINTA,
             "halo": E.TINTA if prop > 0.55 else E.PAPEL})
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
-    _barra_escala(ax, z)
-    _norte(ax, z)
-    _leyenda_rampa(fig, vmin, vmax, "% de hogares con NBI", y=0.955)
-    fig.subplots_adjust(left=0.02, right=0.98, top=0.925, bottom=0.02)
+    fig.subplots_adjust(left=0.02, right=0.98, top=0.98, bottom=0.02)
     _etiquetas_sin_pisarse(fig, ax, items, z, ocupadas=_cajas_de_figura(fig))
     return E.guardar(fig, "TAPA_mapa_zonas")
