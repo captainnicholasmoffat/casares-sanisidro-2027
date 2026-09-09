@@ -1,8 +1,8 @@
 # CAPÍTULO 5 — QUÉ HACEMOS EN CADA ÁREA
 ## Propuestas sectoriales, con su costo declarado
 
-*Borrador 2 · septiembre 2026*
-*Reemplaza al borrador 1. Cambios: cobertura de la tabla de funciones declarada, cambio de nomenclador 2024–2025 documentado, metas verificables mudadas al capítulo 6, cifras alineadas con los capítulos 1 y 3.*
+*Borrador 3 · septiembre 2026*
+*Borrador 3. Reemplaza al borrador 2. Cambios: los hogares con carencias se recuentan sobre los límites de localidad de OpenStreetMap; los totales del partido no se mueven, sí dónde están.*
 
 ---
 
@@ -104,13 +104,13 @@ No es nuestra categoría ni nuestro recorte. Es el clasificador oficial de San I
 
 **Hoy:** Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado, 3.320 millones, el 1,0%.
 
-**El problema, medido:** 6.488 hogares sin cloacas. **25.165 sin gas de red**, de los cuales **12.756 están en Boulogne y Béccar**. 8.569 con hacinamiento.
+**El problema, medido:** 6.488 hogares sin cloacas. **25.165 sin gas de red**, de los cuales **15.168 —el 60%— están en Boulogne y Béccar**. 8.569 con hacinamiento.
 
 `[EXHIBIT 20 — Hogares sin gas de red, por zona]`
 
 **Propuesta:** el déficit de servicios básicos se ataca con la partida de obra pública vecinal del capítulo 4.
 
-En las dos zonas con peores indicadores hay **12.756 hogares sin gas de red y 3.816 sin cloacas**. Ése es el déficit medido que la partida de obra vecinal puede atacar, y es exactamente el tipo de obra que el artículo 132 inciso c) permite ejecutar a una asociación vecinal.
+En las dos zonas con peores indicadores hay **15.168 hogares sin gas de red y 4.616 sin cloacas**: el 60% y el 71% del déficit del partido. Ése es el déficit medido que la partida de obra vecinal puede atacar, y es exactamente el tipo de obra que el artículo 132 inciso c) permite ejecutar a una asociación vecinal.
 
 ---
 
@@ -225,5 +225,6 @@ En 2025 el Municipio clasificó su gasto en veinte funciones y en 2024 en catorc
 
 1. **El −32,5% de Promoción y asistencia social salió del capítulo.** Cayó de 9.881 a 6.673 millones reales, pero dentro de la misma finalidad aparecieron dos funciones nuevas que suman 23.117 millones. Con los datos públicos no se distingue un recorte de un desdoblamiento. **Se puede recuperar:** hace falta el detalle por programa dentro de Promoción y asistencia social en 2024 y en 2025. Si son los mismos programas con menos plata, el dato vuelve entero y vuelve probado. Es trabajo de un research worker sobre los estados de ejecución por programa.
 2. **Las tres reclasificaciones de más del 100%** —Transporte, Comercio y Agua potable— quedan sin rastrear. Ya no son una anomalía suelta: son parte del cambio de nomenclador de 2025. No se usan.
-3. **Hogares sin cloaca: el conteo da 6.488, no 6.513.** El 6.513 de los borradores salía de aplicar un porcentaje redondeado sobre 110.559 hogares, cuando el universo de desagüe del Censo son 110.265: hay 294 hogares sin dato. Corregido acá y en el capítulo 1. Los otros tres casos de la regla 7 eran un redondeo y se veían al recalcular; éste no se veía de ninguna manera leyendo, porque 6.513 es exactamente lo que uno espera ver: dos errores que se cancelaban parcialmente y daban un número plausible. Los 294 hogares sin dato de desagüe son la parte que ningún porcentaje muestra.
-4. **El Fondo Educativo son 3.931,0 M devengados en 2025**, no 4.311. Verificado contra `sef_anual.csv`, gastos por programa. En 2024 fueron 1.985,2 M.
+3. **Los conteos por zona se rehicieron sobre los límites de OpenStreetMap.** Los totales del partido no se movieron —25.165 sin gas, 6.488 sin cloaca— pero el reparto entre zonas sí: Boulogne y Béccar pasan de 12.756 a 15.168 hogares sin gas y de 3.816 a 4.616 sin cloaca, porque las dos zonas ahora son el 46,8% del partido y no un tercio.
+4. **Hogares sin cloaca: el conteo da 6.488, no 6.513.** El 6.513 de los borradores salía de aplicar un porcentaje redondeado sobre 110.559 hogares, cuando el universo de desagüe del Censo son 110.265: hay 294 hogares sin dato. Corregido acá y en el capítulo 1. Los otros tres casos de la regla 7 eran un redondeo y se veían al recalcular; éste no se veía de ninguna manera leyendo, porque 6.513 es exactamente lo que uno espera ver: dos errores que se cancelaban parcialmente y daban un número plausible. Los 294 hogares sin dato de desagüe son la parte que ningún porcentaje muestra.
+5. **El Fondo Educativo son 3.931,0 M devengados en 2025**, no 4.311. Verificado contra `sef_anual.csv`, gastos por programa. En 2024 fueron 1.985,2 M.

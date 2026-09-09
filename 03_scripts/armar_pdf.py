@@ -85,16 +85,16 @@ ETIQUETAS = [
     (("| Año | Base, sin programa",), "MODELADO"),
     (("| Parámetro | Valor |",), "MODELADO"),
     (("| Municipio | Gasto devengado total",), "PROCESADO POR TERCEROS"),
-    (("| Indicador | Boulogne + Béccar",), "ZONIFICACIÓN PROPIA"),
-    (("| Zona | Población |",), "ZONIFICACIÓN PROPIA"),
+    (("| Zona | Población |",), "LÍMITES DE OPENSTREETMAP"),
 ]
 
 LEYENDA_ETIQUETA = {
     "MODELADO": "proyección del modelo de flujo de caja, no dato observado",
     "PROCESADO POR TERCEROS": "RAFAM vía La Verdadera PBA; San Isidro validado, "
                               "los otros 105 no",
-    "ZONIFICACIÓN PROPIA": "zonas construidas sobre radios censales; los límites "
-                           "oficiales no están publicados",
+    "LÍMITES DE OPENSTREETMAP": "los límites de localidad son de OSM, que no es "
+                                "fuente oficial, proyectados sobre los radios "
+                                "censales del INDEC",
     "SIN VERIFICAR": "no se pudo contrastar contra fuente primaria",
 }
 

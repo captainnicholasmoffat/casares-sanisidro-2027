@@ -1,8 +1,8 @@
 # CAPÍTULO 4 — EL MECANISMO
 ## Comisiones vecinales con presupuesto propio: cuánta plata, quién decide, quién la ejecuta
 
-*Borrador 3 · septiembre 2026*
-*Reemplaza al borrador 2. Cambios: rampa de cuatro años completa en §4.3, registro alineado con el resto del documento, cifras de otros capítulos reducidas a referencia.*
+*Borrador 4 · septiembre 2026*
+*Reemplaza al borrador 3. Cambios: las zonas pasan a ser los límites de localidad de OpenStreetMap, y el índice de necesidad mide hogares en vez de porcentajes. Las dos cosas cambian el reparto.*
 
 ---
 
@@ -79,30 +79,58 @@ Y hay una razón práctica que pesa más: **si el año 1 sale mal, se cae el mod
 
 ---
 
-## 4.4 Cómo se reparte: no per cápita
+## 4.4 Cómo se reparte: por población y por necesidad contada
 
 Repartir en partes iguales por habitante sería tratar como iguales a barrios que no lo son. La ordenanza fija una fórmula: **50% por población, 50% por un índice de necesidad** construido con cuatro indicadores del Censo 2022 —NBI, hogares sin cloacas, sin gas de red y con hacinamiento—.
 
-`[EXHIBIT 16 — Necesidades básicas insatisfechas por radio censal]`
+### El índice cuenta hogares, no porcentajes
 
-Sobre la meta de año 4:
+Ésta es la decisión metodológica del capítulo y conviene dejarla a la vista para que se pueda discutir.
 
-| Zona | Población | Monto anual | Por habitante |
-|---|---|---|---|
-| **Béccar** | 50.522 | 6.921 M | **136.996 $** |
-| **Boulogne Sur Mer** | 55.157 | 6.639 M | **120.364 $** |
-| Villa Adelina | 52.954 | 4.733 M | 89.388 $ |
-| San Isidro | 41.213 | 3.519 M | 85.394 $ |
-| Acassuso | 54.779 | 4.099 M | 74.828 $ |
-| Martínez | 41.353 | 2.996 M | 72.446 $ |
+El índice **no promedia tasas**. Para cada uno de los cuatro indicadores toma la parte del déficit del partido que está en cada zona, y promedia las cuatro:
+
+> *necesidad de una zona = promedio, sobre los cuatro indicadores, de los hogares con esa carencia en la zona sobre los hogares con esa carencia en todo el partido.*
+
+**Porque las obras se cuentan en casas.** Ocho mil doscientos veintiún hogares sin gas de red necesitan más caños que novecientos treinta y seis, sin importar qué proporción representen de su zona. Un porcentaje no sabe cuánta gente hay detrás.
+
+La diferencia no es teórica. Con el índice en tasas, Acassuso —que tiene 936 hogares sin gas— entraba a la fórmula por una escala parecida a Béccar, que tiene 8.221, y terminaba **primera en pesos por habitante teniendo el NBI más bajo del partido**. Con el índice en hogares queda quinta, que es donde corresponde.
+
+### Y por eso el índice mide cuatro cosas y no sólo pobreza
+
+El capítulo 1 muestra algo que conviene mirar dos veces: **Acassuso tiene el NBI más bajo del partido, 0,94%, y sin embargo el 19,48% de sus hogares no tiene gas de red** —más que Martínez, más que San Isidro y más que Villa Adelina—.
+
+**El déficit de infraestructura no sigue al de ingresos.** Si la fórmula midiera pobreza sola, Acassuso quedaría última y sus 936 hogares sin gas no existirían para el reparto. Miden cuatro cosas porque hay cuatro cosas que faltan, y no siempre faltan juntas.
+
+### El resultado, sobre la meta de año 4
+
+| Zona | Población | Necesidad | Monto anual | Por habitante |
+|---|---|---|---|---|
+| **Béccar** | 63.719 | 33,0% | 7.887 M | **123.782 $** |
+| **Boulogne Sur Mer** | 74.832 | 34,0% | 8.569 M | **114.508 $** |
+| Villa Adelina | 35.542 | 10,1% | 3.198 M | 89.987 $ |
+| San Isidro | 45.872 | 10,3% | 3.729 M | 81.297 $ |
+| Acassuso | 11.035 | 2,0% | 827 M | 74.962 $ |
+| Martínez | 64.978 | 10,5% | 4.697 M | 72.285 $ |
 
 `[EXHIBIT 13 — Reparto de la partida vecinal por zona]`
 
-Béccar recibe **1,89 veces por habitante** lo que recibe Martínez. Boulogne, 1,66 veces.
+`[EXHIBIT 16 — Necesidades básicas insatisfechas por radio censal]`
 
-**Esto se dice en voz alta, no se esconde.** Un hogar de Boulogne o Béccar tiene casi cinco veces más probabilidad de tener necesidades básicas insatisfechas y más de seis de no tener cloacas. La fórmula corrige eso, y va escrita en la ordenanza para que no dependa del intendente de turno.
+Béccar recibe **1,71 veces por habitante** lo que recibe Martínez. Boulogne, 1,58 veces.
+
+**Y acá el diagnóstico y el mecanismo miden lo mismo.** Boulogne Sur Mer y Béccar son el **46,8% de la población del partido** y concentran el **67% de la necesidad que esta fórmula mide**. El capítulo 1 lo dice en conteos —el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca— y la fórmula llega al mismo lugar por su cuenta.
+
+**Esto se dice en voz alta, no se esconde.** La fórmula corrige, y va escrita en la ordenanza para que no dependa del intendente de turno.
 
 Martínez y Acassuso también reciben, y reciben más de lo que reciben hoy: hoy ningún barrio decide nada.
+
+### Por qué las seis zonas son de tamaños tan distintos
+
+Van de 11.035 habitantes en Acassuso a 74.832 en Boulogne Sur Mer. **Es una consecuencia de haber respetado el territorio, no un descuido.**
+
+Las seis zonas son las seis localidades reales del partido, con los límites que tienen. La alternativa —construir seis zonas de población pareja— es lo que se hizo primero y produjo un mapa que no era San Isidro: zonas que cruzaban el partido de punta a punta para juntar habitantes, localidades costeras que quedaban sin costa.
+
+**El tamaño desigual no desequilibra el reparto**, porque la fórmula pondera necesidad contada. Una zona chica con poca carencia recibe poco; una grande con mucha, mucho. Acassuso, la más chica y la de menor NBI, recibe 827 millones: alcanzan de sobra para las 102 conexiones de cloaca y las 936 de gas que le faltan.
 
 ---
 
@@ -191,7 +219,7 @@ No se acotan: se derogan. Es el primer proyecto de ordenanza que este gobierno e
 1. En la Provincia de Buenos Aires un órgano vecinal no puede tener decisión vinculante: el veto de Pinamar de diciembre de 2025 lo demuestra.
 2. Lo que sí puede volverse obligatorio es la partida, y la ley permite además que las asociaciones vecinales ejecuten la obra como parte contratante.
 3. La propuesta lleva a las comisiones a administrar 28.908 millones anuales en cuatro años: uno de cada dos pesos de obra pública.
-4. Se reparte por población y por necesidad, no per cápita, y la fórmula va escrita en la ordenanza.
+4. Se reparte mitad por población y mitad por necesidad medida en hogares, no en porcentajes, y la fórmula va escrita en la ordenanza.
 5. El primer acto de gobierno es derogar los artículos que hoy le permiten al intendente disolver una asociación vecinal.
 
 Este mecanismo decide la mitad de la obra pública. El capítulo siguiente dice qué hacemos con todo lo demás.
@@ -205,7 +233,7 @@ Las cifras de obra pública y su distribución por zona surgen de la ejecución 
 
 El reparto se calcula sobre 295.978 habitantes, la población en viviendas particulares del Censo 2022. Las 1.304 personas restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden asignarse a una zona.
 
-Los límites de las seis zonas son una propuesta construida sobre los 360 radios censales oficiales, no los límites oficiales de las localidades, que la Municipalidad no tiene publicados.
+Las seis zonas son **los límites de las localidades del partido según OpenStreetMap**, proyectados sobre los 360 radios censales del INDEC: cada radio va a la localidad que contiene su punto representativo, y los 360 caen dentro de exactamente una. **OpenStreetMap no es fuente oficial**; la Municipalidad no publica los límites de sus localidades y el anexo de zonas de la Ordenanza 6045/1984 tampoco está publicado. El anexo de fuentes lista las seis relaciones para que cualquiera las abra.
 
 ---
 ---
@@ -214,7 +242,7 @@ Los límites de las seis zonas son una propuesta construida sobre los 360 radios
 
 ## Pendientes de este capítulo
 
-1. **El anexo de zonas del art. 5 de la Ordenanza 6045 no existe publicado.** Por eso el mapa territorial se construyó desde el Censo. Si aparece, hay que contrastar las seis zonas propuestas contra las oficiales.
+1. **El anexo de zonas del art. 5 de la Ordenanza 6045 no existe publicado.** Si aparece, hay que contrastar las seis localidades de OpenStreetMap contra las oficiales. Ya no es un vacío del documento: no se está reemplazando con una construcción propia sino con una fuente pública verificable.
 2. **La rampa de cuatro años es una decisión de política, no un resultado del modelo.** El modelo la aplica porque `ANIOS_RAMPA = 4` está fijado en `modelo.py`. Si se cambia, cambian las cuatro filas de §4.3 y la columna reformista del capítulo 3.
 3. **El 60% del art. 132 inc. c) es por obra, no por zona.** El texto del capítulo lo dice correctamente, pero conviene tener preparada la respuesta a quien lea "el 60% de la zona": son los beneficiarios de esa obra concreta, no el padrón de la zona.
 4. **Falta el circuito administrativo.** El capítulo dice qué se puede hacer, con qué artículos y con qué precedente verificado, pero no cómo se tramita: quién inicia el expediente, cómo se acredita la adhesión, qué dictámenes intervienen, cómo se certifica el avance de obra y cómo se paga. Los tres decretos de Pilar muestran el encuadre y el resultado, no el trámite paso a paso. Pasó de "no tenemos el precedente" a "tenemos el precedente y no el procedimiento". Es trabajo de un research worker sobre el Boletín Oficial Municipal.

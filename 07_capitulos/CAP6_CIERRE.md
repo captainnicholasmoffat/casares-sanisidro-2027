@@ -1,7 +1,8 @@
 # CAPÍTULO 6 — CONTRA QUÉ QUEREMOS QUE NOS MIDAN
 ## Primeros cien días y compromisos verificables del mandato
 
-*Borrador 1 · septiembre 2026*
+*Borrador 2 · septiembre 2026*
+*Reemplaza al borrador 1. Cambio: la línea de base de cloacas se recontó sobre los límites de localidad de OpenStreetMap.*
 
 ---
 
@@ -89,7 +90,7 @@ Un programa sin metas medibles no se puede auditar. Éstas sí, y ninguna depend
 
 | Meta | Línea de base | Fuente de verificación |
 |---|---|---|
-| Reducir a la mitad los hogares sin cloacas en Boulogne y Béccar | **3.816 hogares** (Censo 2022) | Registro de conexiones y próximo censo |
+| Reducir a la mitad los hogares sin cloacas en Boulogne y Béccar | **4.616 hogares** (Censo 2022) | Registro de conexiones y próximo censo |
 | Llevar el gasto conjunto en empleo y vivienda a 7.730,9 M anuales | **505,7 M** (2025) | Ejecución presupuestaria por programa |
 | Llevar la percepción de recursos corrientes al 92% | **89,32%** (2025) | Estado de ejecución acumulado anual |
 | Llevar la función ambiental al 1,5% del presupuesto | **0,4%** (2025) | Gastos por finalidad y función |
@@ -157,7 +158,7 @@ Fecha fija y formato fijo, a propósito. "Se publica" no se puede incumplir; un 
 ### Nota sobre las fuentes de este capítulo
 Este capítulo no introduce datos nuevos. Cada cifra proviene del capítulo que la desarrolla: los indicadores territoriales del capítulo 1, la auditoría del plan vigente del capítulo 2, el modelo fiscal y las líneas de base presupuestarias del capítulo 3, la rampa y la fórmula de distribución del capítulo 4, y el estado del portal de transparencia del capítulo 5.
 
-Los 3.816 hogares sin cloaca de Boulogne y Béccar están contados hogar por hogar sobre los 360 radios censales del Censo 2022, no derivados de un porcentaje.
+Los 4.616 hogares sin cloaca de Boulogne y Béccar están contados hogar por hogar sobre los 360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los límites de localidad de OpenStreetMap proyectados sobre esos radios; el capítulo 4 y el anexo lo detallan.
 
 ---
 ---

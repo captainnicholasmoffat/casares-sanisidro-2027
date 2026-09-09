@@ -1,8 +1,8 @@
 # CAPÍTULO 1 — DIAGNÓSTICO
 ## San Isidro: un municipio que invierte mucho y llega poco
 
-*Borrador 2 · septiembre 2026*
-*Reemplaza al borrador 1. Cambios: cuadro territorial recalculado para las dos zonas combinadas, mediana provincial corregida, análisis de coparticipación mudado al capítulo 3.*
+*Borrador 3 · septiembre 2026*
+*Reemplaza al borrador 2. Cambios: las zonas pasan a ser los límites de localidad de OpenStreetMap y todos los indicadores territoriales se recalcularon sobre ellos.*
 
 ---
 
@@ -10,34 +10,34 @@
 
 San Isidro tiene 297.282 habitantes y 110.559 hogares (Censo 2022). Repartidos entre esos hogares, el municipio gastó en 2025 el equivalente a **1.090.897 pesos por habitante**.
 
-No es poco dinero. Y sin embargo, en el mismo distrito y a seis kilómetros de distancia, conviven estas dos realidades:
+No es poco dinero. Y sin embargo el partido está partido en dos, y la línea es geográfica: las localidades del oeste y del norte contra las de la costa sur.
 
-`[EXHIBIT 15 — Mapa del partido por zona]`
+`[EXHIBIT 15 — Las seis zonas vecinales de San Isidro]`
 
-| Indicador | Boulogne + Béccar | Martínez |
-|---|---|---|
-| Hogares con Necesidades Básicas Insatisfechas | 5,73% | 1,19% |
-| Hogares sin conexión a cloacas | 10,60% | 1,69% |
-| Hogares sin gas de red | 35,24% | 14,09% |
-| Hogares con hacinamiento | 14,25% | 2,61% |
-| Población con universitario completo | 8,08% | 24,95% |
+| Zona | Población | NBI | Sin cloaca | Sin gas de red | Hacinamiento | Universitario |
+|---|---|---|---|---|---|---|
+| **Boulogne Sur Mer** | 74.832 | **5,09%** | 9,16% | 27,64% | 12,42% | 9,00% |
+| **Béccar** | 63.719 | **4,93%** | 10,59% | 37,27% | 12,67% | 12,85% |
+| Villa Adelina | 35.542 | 2,73% | 5,54% | 15,59% | 7,28% | 9,32% |
+| San Isidro | 45.872 | 1,83% | 2,97% | 16,64% | 4,18% | 25,25% |
+| Martínez | 64.978 | 1,43% | 1,81% | 14,55% | 2,96% | 24,39% |
+| Acassuso | 11.035 | 0,94% | 2,12% | 19,48% | 2,50% | 32,28% |
 
-*Los cuatro primeros indicadores están ponderados por hogares; el último, por población.*
+*Los cuatro primeros indicadores están medidos sobre hogares; el último, sobre población.*
 
 `[EXHIBIT 02 — Carencias de servicios básicos por zona]`
 
-Un hogar de Boulogne o Béccar tiene **casi cinco veces más probabilidad** de tener necesidades básicas insatisfechas que uno de Martínez. **Más de seis veces** de no tener cloacas. **Cinco veces y media** de vivir en condiciones de hacinamiento.
-
-Y sólo **un tercio de probabilidad** de que alguien en la casa haya terminado la universidad.
+Un hogar de Boulogne o Béccar tiene **tres veces y media más probabilidad** de tener necesidades básicas insatisfechas que uno de Martínez. **Cinco veces y media** de no tener cloacas. **Cuatro veces** de vivir en condiciones de hacinamiento. Y **menos de la mitad de probabilidad** de que alguien en la casa haya terminado la universidad.
 
 `[EXHIBIT 03 — Nivel educativo alcanzado por zona]`
 
-En Boulogne Sur Mer y Béccar viven **105.679 personas en 36.199 hogares: el 35,5% del partido.** No es una minoría marginal. Es más de un tercio de San Isidro.
-
 ### El dato que resume todo
-**25.165 hogares de San Isidro cocinan sin gas de red.** Son el 22,8% del partido. **12.756 de ellos —más de la mitad— están en Boulogne y Béccar.**
 
-Estamos hablando de uno de los municipios con mayor capacidad de inversión de la Provincia de Buenos Aires.
+En Boulogne Sur Mer y Béccar viven **138.551 personas en 47.193 hogares: el 46,8% del partido.**
+
+**Casi la mitad de San Isidro vive donde está el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.**
+
+No es una minoría a la que se pueda postergar. Es la mitad del partido.
 
 ---
 
@@ -61,7 +61,7 @@ Sobre 106 municipios bonaerenses con datos de ejecución 2025:
 
 `[EXHIBIT 05 — Peso de la planta y de la obra pública: San Isidro contra los 106 municipios]`
 
-San Isidro invierte en obra pública más del triple que el municipio bonaerense típico. **Y el 35,2% de los hogares de Boulogne y Béccar sigue sin gas de red.**
+San Isidro invierte en obra pública más del triple que el municipio bonaerense típico. **Y el 32,1% de los hogares de Boulogne y Béccar sigue sin gas de red.**
 
 El problema no es cuánto se gasta. Es en qué.
 
@@ -161,7 +161,7 @@ Hay una salvedad, y es estructural: la participación de San Isidro en las trans
 ## 1.7 Lo que dice este capítulo, en cinco líneas
 
 1. San Isidro es un municipio rico que invierte más en obra pública que el 96% de los municipios bonaerenses.
-2. Un tercio de su población vive en zonas donde el 35,2% de los hogares no tiene gas de red.
+2. Casi la mitad de su población —el 46,8%, en Boulogne Sur Mer y Béccar— vive donde está el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.
 3. El municipio destina el 0,05% de su presupuesto a empleo y el 0,10% a vivienda.
 4. No es un error de gestión: es exactamente lo que produce un plan de gobierno donde esas palabras no aparecen.
 5. San Isidro tiene la plata y la autonomía para cambiarlo. Lo que falta es que decida quien vive donde está el problema.
@@ -173,6 +173,17 @@ Hay una salvedad, y es estructural: la participación de San Isidro en las trans
 ### Nota metodológica
 Las series fiscales provienen de los informes de ejecución presupuestaria y rendiciones de cuentas publicados por la Municipalidad de San Isidro, de los fallos del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires y del sistema SIMCo provincial, validadas de forma cruzada entre sí. Los datos territoriales provienen del Censo Nacional de Población, Hogares y Viviendas 2022 (INDEC), a nivel de radio censal. Los importes están expresados en pesos constantes de diciembre de 2025 salvo indicación expresa.
 
-Las zonas utilizadas en 1.1 son una propuesta de zonificación construida sobre datos censales oficiales, no los límites oficiales de las localidades, que no se encuentran publicados. La metodología de agrupación es reproducible y está documentada.
+Las seis zonas de 1.1 son **los límites de las localidades del partido según OpenStreetMap**, proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su punto representativo. Los 360 caen dentro de exactamente una, sin huérfanos y sin dobles. **OpenStreetMap no es fuente oficial**, y la Municipalidad no tiene publicados los límites de sus localidades; el anexo detalla las seis relaciones para que cualquiera las abra y verifique. Las poblaciones por zona son muy desiguales —de 11.035 a 74.832 habitantes— porque son las localidades reales y no zonas construidas para quedar parejas.
 
 Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de ejecución RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de ejecución del propio Municipio y coinciden en las siete categorías del gasto por objeto. Las de los otros municipios no fueron validadas individualmente: se usan para calcular la mediana provincial y la posición relativa de San Isidro.
+
+---
+---
+
+# NO VA AL PDF
+
+## Pendientes de este capítulo
+
+1. **El cuadro de 1.1 pasó de dos columnas a seis filas.** Con el 46,8% de la población de un lado, "las dos peores contra la mejor" se lee como recorte conveniente. Seis filas muestran que el partido es un gradiente continuo de 5,09% a 0,94% y que la línea es geográfica —oeste y norte contra costa sur—, no una elección nuestra de qué comparar.
+2. **Los ratios se ablandaron y están publicados como quedaron.** NBI de 4,8× a 3,5×, cloacas de 6,3× a 5,4×, gas de 2,5× a 2,2×, hacinamiento de 5,5× a 4,2×, universitario de un tercio a 0,44×. El eje del capítulo ya no son los ratios.
+3. **El 67% de la necesidad medida no está en este capítulo.** Boulogne y Béccar concentran el 67,0% del índice que reparte la plata en el capítulo 4. Es la frase que hace que diagnóstico y mecanismo midan lo mismo, pero exige explicar el índice, que se define en el capítulo 4. Decisión de Nick: dejarla acá con una remisión, o que el capítulo 4 la levante cuando presenta la fórmula.
