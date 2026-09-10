@@ -84,9 +84,28 @@ AMBAR = ACENTO
 PALETA = {"CREMA": CREMA, "TINTA": TINTA, "ACENTO": ACENTO, "DATO": DATO,
           "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO}
 
-ANCHO_PX = 1600
+# EL LIENZO MIDE LO QUE MIDE LA CAJA DE TEXTO, Y NO MENOS.
+# Los graficos se dibujaban en 5,33 pulgadas —135 mm— y la pagina los estiraba
+# hasta los 181 mm de la caja de texto: un factor de 1,34 que agrandaba CADA
+# rotulo del grafico. Un "7,5 pt" pedido en el codigo salia impreso a 10, o
+# sea tres puntos mas grande que el mismo rotulo en la referencia. Dibujando
+# ya al ancho de la caja, un punto pedido es un punto impreso.
+#
+# El alto se multiplica por el mismo factor para que la COMPOSICION de cada
+# grafico no cambie: lo unico que cambia es la proporcion entre el tamaño de
+# la letra y el del lienzo, que es justo lo que habia que corregir.
+CAJA_TEXTO_MM = 570.0 * (210.0 / 232.8) / 72 * 25.4   # 181,4 mm
+ANCHO_IN = CAJA_TEXTO_MM / 25.4
 DPI = 300
-ANCHO_IN = ANCHO_PX / DPI          # 5,333 pulgadas
+ANCHO_PX = int(round(ANCHO_IN * DPI))
+# El alto NO se estira con el ancho. Los graficos de la referencia son
+# apaisados —entre 2,7 y 3,9 de ancho por cada uno de alto— y los nuestros,
+# estirando el alto junto con el ancho, quedaban en 1,7: el doble de altos
+# para el mismo dato, y por eso un grafico de dos barras se comia media
+# pagina. Manteniendo el alto en pulgadas y ensanchando el lienzo, la
+# proporcion cae a 2,3 y la letra queda todavia mas chica contra el dibujo,
+# que es la direccion correcta.
+FACTOR_ALTO = 1.0
 
 # --------------------------------------------------------------------------
 # LA TIPOGRAFIA DEL DOCUMENTO, TAMBIEN EN LOS GRAFICOS
@@ -168,12 +187,14 @@ def aplicar():
         "text.color": TINTA,
         "xtick.color": TINTA,
         "ytick.color": TINTA,
-        "xtick.labelsize": 7,
-        "ytick.labelsize": 7,
+        # 7,9 pt es el cuerpo de los rotulos dentro de los graficos de la
+        # referencia; por la escala de la pagina da 7,13.
+        "xtick.labelsize": 7.13,
+        "ytick.labelsize": 7.13,
         "font.family": "sans-serif",
         "font.sans-serif": SANS,
         "font.serif": SERIF,
-        "font.size": 7.5,
+        "font.size": 7.13,
         "legend.frameon": False,
         "figure.dpi": DPI,
         "savefig.dpi": DPI,
@@ -259,7 +280,9 @@ def etiqueta_corta(texto, ancho=26, lineas=2):
 
 
 def figura(alto_in=3.2, ejes=True):
-    fig = plt.figure(figsize=(ANCHO_IN, alto_in))
+    # El alto llega en las unidades del lienzo viejo de 5,33 pulgadas: se
+    # convierte, asi que cada grafico conserva exactamente su proporcion.
+    fig = plt.figure(figsize=(ANCHO_IN, alto_in * FACTOR_ALTO))
     if not ejes:
         return fig, None
     ax = fig.add_subplot(111)

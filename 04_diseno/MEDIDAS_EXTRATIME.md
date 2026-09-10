@@ -9,6 +9,26 @@ Los scripts de medición están en `04_diseno/medir/`.
 
 ---
 
+## 0. LA ESCALA — todo se multiplica por 210/232,8
+
+Su página mide **660 pt de ancho = 232,8 mm**; la nuestra, 210. Copiar sus
+cuerpos tal cual en una página un 10 % más angosta **agranda la letra**: el
+mismo 9,7 pt en una columna de 86 mm en vez de una de 96 da menos caracteres
+por línea, o sea una mancha más gruesa y menos densa.
+
+Así que **cada número de este archivo se multiplica por 0,9021** antes de
+llegar al CSS. Márgenes, medianil, cuerpos, interlíneas, filetes, bandas de
+tabla, sangrías y separaciones. La página resultante es la de ellos reducida
+al 90,2 %: misma cantidad de caracteres por línea, mismo gris de la mancha,
+misma proporción entre cada pieza y la de al lado. Está implementado en
+`03_scripts/armar_pdf.py` como `ESCALA`, `e()` y `emm()` sobre el diccionario
+`REF`: no hay ni un número elegido a ojo.
+
+**Lo mismo vale para los gráficos.** Se dibujaban en 5,33 pulgadas y la página
+los estiraba hasta los 181,4 mm de la caja de texto: un factor de 1,34 que
+agrandaba cada rótulo. Un "7,5 pt" pedido en el código salía impreso a 10. Se
+dibujan al ancho de la caja, así que un punto pedido es un punto impreso.
+
 ## 1. PÁGINA
 
 | qué | pt | mm |
@@ -117,12 +137,26 @@ aire de la referencia, y las páginas terminan a media altura.
 | ancho | siempre a los 570 pt completos, nunca a una columna |
 | filete | 0,75 pt |
 
-## 6. FILETES Y CAJAS
+## 6. FILETES Y LA CAJA
 
 - **Todos los filetes del documento miden 0,75 pt.** 567 de 570 rectángulos finos
-  medidos dan exactamente ese grosor. No hay filetes gruesos.
-- Caja destacada: fondo `#EFE7DA`, filete vertical izquierdo en verde, cintillo
-  en Inter versalita espaciada arriba, cuerpo Spectral 9,7.
+  medidos dan exactamente ese grosor. El **único trazo grueso de todo el
+  documento** es el que lleva la caja al costado, y mide 3 pt.
+
+### La caja, medida píxel por píxel sobre la página 8
+
+| qué | valor |
+|---|---|
+| fondo | `#EFE7DA` — un tercer tan, ni arena ni fila |
+| filete izquierdo | **3,0 pt** en salvia `#5F7057` |
+| cintillo | Inter 6,4 pt mayúscula, tracking 0,55 pt, **en salvia** — no en ladrillo |
+| cuerpo | Spectral Regular **9,0 pt** / 13,0 — *menos* que el cuerpo de la página |
+| sangría | 12,4 pt desde el borde de la caja |
+| aire arriba y abajo | 12 pt |
+| ancho | **toda la caja de texto**, nunca dentro de una columna |
+
+Es la pieza que más la distingue y la que faltaba: metida adentro de una
+columna de 86 mm no es esta pieza, es otra.
 
 ## 7. PALETA MEDIDA — proporción real de píxeles sobre las 30 páginas
 

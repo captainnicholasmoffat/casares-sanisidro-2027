@@ -155,7 +155,7 @@ def reparto_vecinal():
 
 def ex13():
     filas, total = reparto_vecinal()
-    fig, ax = E.figura(3.15)
+    fig, ax = E.figura(3.22)
     vals = [f["pesos_por_habitante"] for f in filas]
     colores = [E.ACENTO if f["zona"] in ("Beccar", "Martinez") else E.DATO
                for f in filas]
@@ -176,6 +176,8 @@ def ex13():
     ax.set_ylim(0, max(vals) * 1.2)
     ax.set_ylabel("pesos de dic-2025 por habitante", fontsize=6.8)
     E.limpiar(ax)
+    # El tick de arriba se dibujaba medio afuera del lienzo.
+    E.podar_tick_superior(ax, "y", 5)
     top, bottom = E.marco(
         fig, "EXHIBIT 13",
               "La partida vecinal reparte un %s más por vecino en Béccar que "

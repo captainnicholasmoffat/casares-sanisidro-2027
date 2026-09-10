@@ -263,7 +263,8 @@ def ex04():
           % (_parcial()[0], E.pct(_parcial()[1]["SAN ISIDRO"], 4),
              E.pct(_parcial()[1]["TIGRE"], 4)))
     return E.guardar(fig, "EXHIBIT_04_coparticipacion_comparada",
-                     dict(left=0.085, right=0.80, top=top, bottom=bottom))
+                     dict(left=0.085, right=0.80, top=top,
+                          bottom=bottom + 0.012))
 
 
 def ex05():
