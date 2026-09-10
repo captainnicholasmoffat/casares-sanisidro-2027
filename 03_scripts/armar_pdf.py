@@ -541,7 +541,11 @@ def _h1(texto, slug):
     """
     m = RE_H1CAP.match(texto.strip())
     if m:
-        return ('<h1 id="%s"><span class="cn">%s</span>%s</h1>'
+        # OJO: el espacio entre el numero y el nombre tiene que estar en el
+        # TEXTO, no solo en el margen del CSS. La cornisa se compone con
+        # string-set: cap content(), que copia el texto y no ve los margenes:
+        # sin ese espacio imprimia "5QUÉ HACEMOS EN CADA ÁREA".
+        return ('<h1 id="%s"><span class="cn">%s</span> %s</h1>'
                 % (slug, _inline(m.group(1)), _inline(m.group(2))))
     return '<h1 id="%s">%s</h1>' % (slug, _inline(texto))
 
@@ -1380,9 +1384,10 @@ h1 { font-size: %(h1).1fpt; line-height: %(h1_int).3f;
      margin: 0 0 %(sep_h1_bajada).1fmm;
      font-weight: 700; letter-spacing: 0; color: %(tinta)s;
      string-set: cap content(); break-before: page; break-after: avoid; }
-/* En su titulo el numero y el nombre estan separados por medio cuadratin,
-   no por un espacio de palabra mas un margen. */
-h1 .cn { color: %(acento)s; margin-right: .36em; }
+/* En su titulo el numero y el nombre estan separados por algo mas que un
+   espacio de palabra: el espacio va en el texto —lo necesita la cornisa— y el
+   margen lo completa hasta el medio cuadratin. */
+h1 .cn { color: %(acento)s; margin-right: .12em; }
 
 p.bajada { font-style: italic; font-weight: 500; font-size: %(bajada).1fpt;
            line-height: %(bajada_int).3f; color: %(dato)s;
