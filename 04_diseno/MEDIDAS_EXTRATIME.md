@@ -89,7 +89,22 @@ Medido de línea a línea sobre la página 5.
 | cuerpo → siguiente exhibit | 22 | 7,8 |
 | nota de lectura → pie | 47 | 16,6 |
 
-**La separación entre bloques es 22 pt = 7,8 mm.** Nada de veinte milímetros de aire.
+**Ojo: esto NO es el margen de CSS.** Las distancias están medidas de alto de
+línea a alto de línea, y adentro de los 22 pt entre bloque y bloque está el alto
+de la línea del bloque de arriba. El margen es la diferencia:
+
+| de → a | medido | alto de línea | **margen real** |
+|---|---|---|---|
+| bloque → bloque | 22 pt | 14,5 pt | **2,6 mm** |
+| rótulo → título del exhibit | 14 pt | 8,7 pt | **1,9 mm** |
+| título del exhibit → figura | 21 pt | 14,6 pt | **2,3 mm** |
+| última fila → fuente | 25 pt | 20,2 pt | **1,7 mm** |
+| fuente → cuerpo | 22 pt | 11,5 pt | **3,7 mm** |
+| título de capítulo → bajada | 25 pt | 19,5 pt | **1,9 mm** |
+| bajada → entrada | 25 pt | 15,0 pt | **3,5 mm** |
+
+Puestos los 22 pt directamente como margen, el documento lleva **tres veces** el
+aire de la referencia, y las páginas terminan a media altura.
 
 ## 5. TABLAS
 

@@ -857,9 +857,9 @@ def cerrar_capitulo(piezas_de_seccion):
 # page.anchors devuelve su caja. El hueco de una pagina es la distancia entre el
 # fondo de la ultima pieza que cayo en ella y el fin de la caja de texto.
 
-HUECO_MINIMO = 22.0     # mm: menos que esto no es un hueco, es el aire del pie
-PASADAS_MAXIMAS = 8     # cada pasada rearma el PDF entero; ocho alcanzan
-SALTOS_MAXIMOS = 2      # cuantas veces se puede bajar una misma figura
+HUECO_MINIMO = 16.0     # mm: menos que esto no es un hueco, es el aire del pie
+PASADAS_MAXIMAS = 14    # cada pasada rearma el PDF entero
+SALTOS_MAXIMOS = 4      # cuantas veces se puede bajar una misma figura
 
 
 def _huecos(doc, fin_px):
@@ -935,7 +935,13 @@ def acomodar(piezas, css_txt, envolver, cierres):
             k = indice.get(abre)
             if k is None or k + 1 >= len(orden):
                 continue
-            if orden[k]["tipo"] != "figura" or orden[k + 1]["tipo"] != "banda":
+            # Se bajan las FIGURAS y las piezas ANCHAS —tablas, listados,
+            # cifras destacadas—: las dos son bloques indivisibles que cuando
+            # no entran en el pie se van enteras a la pagina siguiente y dejan
+            # el hueco. Antes solo se bajaban las figuras, y la mitad de los
+            # huecos grandes los abria una tabla.
+            if (orden[k]["tipo"] not in ("figura", "ancho")
+                    or orden[k + 1]["tipo"] != "banda"):
                 continue
             if saltos.get(abre, 0) >= SALTOS_MAXIMOS:
                 continue          # una figura no se aleja mas de dos parrafos
@@ -1056,6 +1062,23 @@ CSS = _FACES + """
    El medianil de la referencia mide 24 pt sobre 570 de caja, o sea el
    4,2 %%. Sobre 178 mm da 7,5 mm, y las columnas quedan de 85,25 mm.
 
+   EL RITMO VERTICAL SE MIDIO MAL LA PRIMERA VEZ, Y ASI QUEDO ESCRITO.
+   Las distancias de la referencia estan medidas de ALTO DE LINEA a ALTO DE
+   LINEA —22 pt entre bloque y bloque, 14 entre el rotulo y el titulo de un
+   exhibit— y eso NO es el margen de CSS: adentro de esos 22 pt esta el alto de
+   la linea del bloque de arriba. El margen real es la diferencia. Con 22 pt
+   puestos como margen el documento llevaba TRES VECES el aire de la
+   referencia, y de ahi salian las paginas que terminaban a media altura.
+
+     de -> a                          medido   alto de linea   margen
+     bloque -> bloque                  22 pt      14,5 pt       2,6 mm
+     rotulo -> titulo del exhibit      14 pt       8,7 pt       1,9 mm
+     titulo del exhibit -> figura      21 pt      14,6 pt       2,3 mm
+     ultima fila -> fuente             25 pt      20,2 pt       1,7 mm
+     fuente -> cuerpo                  22 pt      11,5 pt       3,7 mm
+     titulo de capitulo -> bajada      25 pt      19,5 pt       1,9 mm
+     bajada -> entrada                 25 pt      15,0 pt       3,5 mm
+
    NO SE COPIA EL ALTO. El original es una exportacion continua de Figma:
    sus paginas miden entre 872 y 2685 pt porque cada capitulo es un lienzo,
    no una hoja. Nosotros paginamos A4 de verdad.
@@ -1120,12 +1143,12 @@ code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background: %(arena)s;
    filete del acento al costado, que es lo que hace la referencia con sus
    piezas de dato en bruto. */
 pre.listado { font-family: "DejaVu Sans Mono"; font-size: 7.2pt;
-              line-height: 1.42; margin: 7.8mm 0; padding: 3.5mm 4mm;
+              line-height: 1.42; margin: 3.2mm 0; padding: 3.5mm 4mm;
               background: %(arena)s; border-left: .75pt solid %(acento)s;
               color: %(tinta)s; white-space: pre; overflow: hidden;
               break-inside: avoid; }
 a { color: %(acento)s; text-decoration: none; }
-hr { border: 0; border-top: .75pt solid %(arena)s; margin: 7.8mm 0 6.5mm; }
+hr { border: 0; border-top: .75pt solid %(arena)s; margin: 3.5mm 0 3.2mm; }
 
 /* --------------------------------------------------------------------
    JERARQUIA — los cuerpos son los medidos, uno por uno
@@ -1133,14 +1156,14 @@ hr { border: 0; border-top: .75pt solid %(arena)s; margin: 7.8mm 0 6.5mm; }
 /* Titulo de capitulo, Spectral Bold 16,5. EL NUMERO EN LADRILLO Y EL NOMBRE
    EN TINTA, que es lo que hace la referencia. Lo que se veia como un error
    era el NOMBRE partido en dos colores; el numero aparte es jerarquia. */
-h1 { font-size: 16.5pt; line-height: 1.18; margin: 0 0 8.8mm;
+h1 { font-size: 16.5pt; line-height: 1.18; margin: 0 0 1.9mm;
      font-weight: 700; letter-spacing: 0; color: %(tinta)s;
      string-set: cap content(); break-before: page; break-after: avoid; }
 h1 .cn { color: %(acento)s; margin-right: .28em; }
 
 /* La bajada del capitulo: Spectral MediumItalic 10,9 en salvia. */
 p.bajada { font-style: italic; font-weight: 500; font-size: 10.9pt;
-           line-height: 1.38; color: %(dato)s; margin: -6mm 0 8.8mm;
+           line-height: 1.38; color: %(dato)s; margin: 0 0 3.5mm;
            max-width: 152mm; text-align: left; hyphens: none;
            break-after: avoid; }
 p.bajada strong { color: %(dato)s; font-weight: 600; }
@@ -1149,9 +1172,9 @@ p.bajada strong { color: %(dato)s; font-weight: 600; }
    mas grande que el cuerpo, como en la referencia. Despues empiezan las
    columnas. */
 p.entrada { font-size: 10pt; line-height: 1.6; text-align: left;
-            margin: 0 0 7.8mm; hyphens: none; }
+            margin: 0 0 3.2mm; hyphens: none; }
 
-h2 { font-size: 12.2pt; line-height: 1.25; margin: 7.8mm 0 3.4mm;
+h2 { font-size: 12.2pt; line-height: 1.25; margin: 5.5mm 0 2.0mm;
      font-weight: 600; color: %(tinta)s; break-after: avoid;
      break-inside: avoid; text-indent: -0.05em; }
 h2 .n { font-weight: 700; color: %(acento)s;
@@ -1159,7 +1182,7 @@ h2 .n { font-weight: 700; color: %(acento)s;
 h1 + p.bajada + .banda h2:first-child,
 h1 + p.bajada + .con-titulo > h2 { margin-top: 0; }
 
-h3 { font-size: 9.7pt; font-weight: 600; margin: 6.5mm 0 2.6mm;
+h3 { font-size: 9.7pt; font-weight: 600; margin: 4.5mm 0 1.8mm;
      color: %(acento)s; break-after: avoid; break-inside: avoid; }
 h3::before { content: ""; display: block; width: 9mm;
              border-top: .75pt solid %(acento)s; margin-bottom: 1.8mm; }
@@ -1169,14 +1192,14 @@ h3::before { content: ""; display: block; width: 9mm;
    -------------------------------------------------------------------- */
 p.dato { font-size: 14pt; line-height: 1.3; color: %(acento)s;
          font-weight: 500;
-         margin: 7.8mm 0; padding: 0 0 0 5mm; text-align: left;
+         margin: 4.5mm 0; padding: 0 0 0 5mm; text-align: left;
          border-left: .75pt solid %(acento)s;
          hyphens: none; break-inside: avoid; max-width: 158mm; }
 p.dato strong { color: %(acento)s; font-weight: 600; }
 
 p.remate { font-size: 10.9pt; line-height: 1.38; color: %(tinta)s;
            font-style: italic; font-weight: 500;
-           margin: 7.8mm 0; padding: 0 0 0 5mm;
+           margin: 4.5mm 0; padding: 0 0 0 5mm;
            border-left: .75pt solid %(acento)s; text-align: left;
            hyphens: none; break-inside: avoid; max-width: 158mm; }
 p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
@@ -1184,7 +1207,7 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 /* --------------------------------------------------------------------
    CAJAS. Fondo arena, filete de 0,75 al costado, cintillo en Inter.
    -------------------------------------------------------------------- */
-.caja { break-inside: avoid; margin: 7.8mm 0; padding: 4mm 5mm;
+.caja { break-inside: avoid; margin: 3.2mm 0; padding: 4mm 5mm;
         background: %(arena)s; font-size: 9pt; line-height: 1.45; }
 .caja h5 { font-family: "%(sans)s"; font-size: 6.4pt; font-weight: 600;
            letter-spacing: .75pt; text-transform: uppercase;
@@ -1200,7 +1223,7 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 
 /* Nota de lectura al pie de seccion. En la referencia es Spectral italico
    7,9 en gris calido, con la entrada en SemiBold, a todo el ancho. */
-.nota-lectura { margin: 7.8mm 0 0;
+.nota-lectura { margin: 3.7mm 0 0;
                 border-top: .75pt solid %(arena)s; padding-top: 3mm;
                 font-size: 7.9pt; line-height: 1.46; color: %(tinta)s;
                 font-style: italic; opacity: .68;
@@ -1226,7 +1249,7 @@ ol li::marker { color: %(acento)s; font-weight: 600; }
    primera columna en ladrillo, filas alternadas en #E8E4D9.
    Medido: banda de cabecera 17,3 pt, fila 20,2 pt, sangria de celda 6 pt.
    -------------------------------------------------------------------- */
-.tw { break-inside: avoid; margin: 7.8mm 0; }
+.tw { break-inside: avoid; margin: 3.2mm 0; }
 table { width: 100%%; border-collapse: collapse;
         font-family: "%(sans)s"; font-size: 7.9pt; line-height: 1.4;
         font-variant-numeric: tabular-nums lining-nums; }
@@ -1258,11 +1281,11 @@ th:first-child, td:first-child { text-align: left; }
    Ritmo medido: rotulo -> titulo 14 pt; titulo -> figura 21 pt;
    figura -> fuente 25 pt.
    -------------------------------------------------------------------- */
-.exh { break-inside: avoid; margin: 7.8mm 0; }
-.exh-cab { margin-bottom: 7.4mm; break-after: avoid; }
+.exh { break-inside: avoid; margin: 3.2mm 0; }
+.exh-cab { margin-bottom: 2.3mm; break-after: avoid; }
 .exh-rot { font-family: "%(sans)s"; font-size: 6.7pt; font-weight: 500;
            letter-spacing: .75pt; text-transform: uppercase;
-           color: %(acento)s; margin: 0 0 4.9mm; text-align: left; }
+           color: %(acento)s; margin: 0 0 1.9mm; text-align: left; }
 .exh-tit { font-size: 11.2pt; font-weight: 600; line-height: 1.3;
            color: %(acento)s; margin: 0; text-align: left; hyphens: none; }
 .exh-baj { font-size: 7.9pt; line-height: 1.46; font-style: italic;
@@ -1272,7 +1295,7 @@ th:first-child, td:first-child { text-align: left; }
            max-height: 92mm; width: auto; height: auto; }
 .exh.alto img { max-height: 108mm; }
 .exh-fuente, .exh-nota { font-style: italic; font-size: 7.9pt;
-                         line-height: 1.46; margin: 8.8mm 0 0;
+                         line-height: 1.46; margin: 1.7mm 0 0;
                          text-align: left; hyphens: none;
                          color: %(tinta)s; opacity: .68; }
 .exh-nota { color: %(acento)s; opacity: .9; margin-top: 3mm; }

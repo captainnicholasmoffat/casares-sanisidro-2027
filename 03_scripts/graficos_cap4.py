@@ -690,7 +690,13 @@ def _encuadre_vertical(zonas, proporcion=297 / 210):
     de PDF recorta los costados. Estirando el encuadre por el lado corto ANTES
     de dibujar, el mapa llena la hoja con mas territorio, no con mas escala.
     """
-    x0, y0, x1, y1 = MB.encuadre(zonas)
+    # El margen de MB.encuadre es del 16 %, que es lo que necesita un exhibit
+    # para que le entren los nombres de los vecinos. En la tapa no hay nombres
+    # de vecinos y el partido tiene que ser lo mas grande posible, asi que se
+    # parte de un margen del 4 % y recien despues se estira a la hoja.
+    x0, y0, x1, y1 = zonas.total_bounds
+    dx, dy = (x1 - x0) * 0.04, (y1 - y0) * 0.04
+    x0, y0, x1, y1 = x0 - dx, y0 - dy, x1 + dx, y1 + dy
     ancho, alto = x1 - x0, y1 - y0
     if alto / ancho < proporcion:
         falta = ancho * proporcion - alto
