@@ -200,9 +200,25 @@ DENTRO = {
                 "la misma tasa municipal."),
         "1.5": (["06_villa_adelina_comercial_b"], None),
         "1.6": (["03_plaza_mitre_b"], None),
+        "*": (["12_barranca_desde_arriba"], None),
+    },
+    # La clave "*" no es una subseccion: es el FINAL del capitulo. Ahi va la
+    # imagen que cierra, en las paginas que terminaban a media altura.
+    "00_introduccion": {
+        "*": (["01b_costanera_paseo_a"], None),
+    },
+    "cap2_gestion_medida": {
+        "2.5": (["13_vecinos_parada"], None),
+    },
+    "cap4_mecanismo": {
+        "*": (["14_comision_plano"], None),
+    },
+    "cap6_cierre": {
+        "*": (["16_calle_amanecer"], None),
     },
     "cap5_sectorial": {
         "5.3": (["10_taller_formacion_a"], None),
+        "5.9": (["15_expedientes"], None),
         # La variante _b es un recorte de techos: la caja de 181 x 76 corta
         # por el medio de una foto vertical y en la _b ese medio es el
         # tejado. La _a tiene la estacion entera, el anden y la gente.
@@ -631,13 +647,16 @@ def bloques(md, slug):
     dentro = dict(DENTRO.get(slug, {}))
     pendiente = [None]
 
-    def soltar_ilustracion():
+    def soltar_ilustracion(cierre=False):
         if pendiente[0] is None:
             return
         nombres, pie = pendiente[0]
         pendiente[0] = None
-        fig = _figura_ilustracion(nombres, pie,
-                                  "par" if len(nombres) > 1 else "sola")
+        # La que cierra un capitulo va mas alta: es la ultima pagina y hay
+        # lugar, y una imagen de cierre a media altura se lee como relleno.
+        clase = ("par" if len(nombres) > 1
+                 else ("sola cierre" if cierre else "sola"))
+        fig = _figura_ilustracion(nombres, pie, clase)
         if fig:
             add(True, fig)
 
@@ -835,6 +854,9 @@ def bloques(md, slug):
                 add(False, "<p>%s</p>" % _inline(txt))
         i += 1
     soltar_ilustracion()
+    if "*" in dentro:
+        pendiente[0] = dentro.pop("*")
+        soltar_ilustracion(cierre=True)
     return out, subsecciones
 
 
@@ -1690,6 +1712,7 @@ figure.apertura + h1 { break-before: avoid; }
 figure.ilu { margin: %(sep).1fmm 0; break-inside: avoid; }
 figure.ilu.sola img { display: block; width: 100%%; height: 76mm;
                       object-fit: cover; }
+figure.ilu.cierre img { height: 128mm; }
 /* EL PAR ENFRENTADO. Mitad y mitad, separadas por el mismo medianil que las
    columnas: las dos fotos se leen como una sola pieza de comparacion. */
 figure.ilu .par { display: flex; gap: %(md).1fmm; }
