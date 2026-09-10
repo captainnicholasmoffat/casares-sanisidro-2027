@@ -189,7 +189,13 @@ APERTURAS = {
 # juntas y no una en cada pagina.
 DENTRO = {
     "cap1_diagnostico": {
-        "1.1": (["04_boulogne_obra_b", "05_martinez_calle_a"],
+        # La variante _a de Martinez estaba mal: las casas pegadas una a otra,
+        # la calle demasiado angosta y el asfalto sin textura. Se leia
+        # inventada, y una imagen que se lee inventada en un documento que se
+        # ofrece para que le revisen las cuentas cuesta mas de lo que aporta.
+        # La _b tiene el ancho de calzada real, la vereda con su baldosa, las
+        # casas retiradas detras de su reja y la copa cerrada de verdad.
+        "1.1": (["04_boulogne_obra_b", "05_martinez_calle_b"],
                 "Boulogne Sur Mer y Martínez. La misma distancia al río, "
                 "la misma tasa municipal."),
         "1.5": (["06_villa_adelina_comercial_b"], None),
@@ -197,7 +203,10 @@ DENTRO = {
     },
     "cap5_sectorial": {
         "5.3": (["10_taller_formacion_a"], None),
-        "5.6": (["09_tren_costa_b"], None),
+        # La variante _b es un recorte de techos: la caja de 181 x 76 corta
+        # por el medio de una foto vertical y en la _b ese medio es el
+        # tejado. La _a tiene la estacion entera, el anden y la gente.
+        "5.6": (["09_tren_costa_a"], None),
     },
 }
 
