@@ -189,3 +189,75 @@ Muestreo a 100 dpi, tolerancia de suma de canales < 60 para color y < 20 para fo
 Ninguna página de la referencia es sólo tipografía negra sobre crema.
 La página más pobre en color tiene 0,68 %; la más rica, 13,91 %.
 
+---
+
+# LAS REGLAS DE COMPOSICIÓN
+
+Medidas sobre las páginas 5, 8, 11 y 13 clasificando **cada línea** por dónde
+cae respecto del medianil. No son opiniones sobre el diseño: son lo que hace
+la referencia, contado.
+
+## 1. La anatomía de una sección, en orden
+
+```
+cornisa                       Inter mayúscula espaciada, arriba a la izquierda
+título                        número + nombre, A TODO EL ANCHO
+bajada                        Spectral MediumItalic, A TODO EL ANCHO, 2 a 6 líneas
+entrada                       Spectral 10 pt, A TODO EL ANCHO, 2 a 5 líneas
+exhibit / tabla + fuente      A TODO EL ANCHO
+prosa                         A DOS COLUMNAS
+caja                          al ancho, o en UNA columna con la prosa al lado
+exhibit / tabla + fuente      A TODO EL ANCHO
+nota de lectura               A TODO EL ANCHO
+```
+
+## 2. Cuándo algo cruza las dos columnas
+
+**Sólo si hay al menos cuatro líneas para llenarlo.** Una línea sola cruzando
+los 181 mm, con la columna de al lado vacía debajo, no se lee como una entrada:
+se lee como un error de armado.
+
+A cuerpo 8,75 en una caja de 181,4 mm entran **130 caracteres por línea**, así
+que hacen falta **520**. Si el primer párrafo no llega solo, se le suman los que
+siguen —hasta tres— y se decide sobre el total: la entrada es una *región* de
+lectura, no necesariamente un párrafo. Si ni así llega, **no hay entrada** y la
+sección arranca directamente a dos columnas.
+
+Los exhibits, las tablas, los listados, las fuentes y las notas cruzan siempre,
+sin importar su largo: no son prosa, son piezas.
+
+## 3. La caja tiene dos posiciones y el contexto decide
+
+| dónde estaba | qué la rodea | cómo va |
+|---|---|---|
+| su página 8 | entre dos exhibits | **a todo el ancho** |
+| su página 13 | entre prosa corriente | **en una columna**, con la prosa al lado |
+
+Una caja que interrumpe prosa se pone al costado y deja seguir leyendo; una que
+separa dos piezas anchas se pone al ancho.
+
+## 4. Cómo se introduce una sección
+
+Sus 25 secciones se introducen igual, sin una sola excepción:
+
+```
+3 Why the category's economics break
+```
+
+**Número solo, y el título en minúscula.** Nunca escriben la palabra
+"chapter", nunca usan raya, nunca van en mayúsculas. El número en ladrillo, el
+nombre en tinta.
+
+## 5. El color entra por el texto
+
+Las negritas del cuerpo no son negras. **Las cifras van en ladrillo y los
+conceptos en salvia**: dos acentos corriendo por la prosa, no uno. Es de donde
+sale el color de las páginas que no tienen ni tabla ni gráfico.
+
+## 6. Lo que la referencia NO hace
+
+- No pone un filete arriba de cada subtítulo.
+- No usa versalitas en ninguna parte: lo que parecen versalitas es Inter en
+  mayúsculas espaciadas.
+- No tiene filetes gruesos, salvo uno: los 3 pt al costado de la caja.
+- No deja una página que sea sólo tipografía negra sobre crema.

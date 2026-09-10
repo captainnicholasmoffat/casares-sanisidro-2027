@@ -374,6 +374,32 @@ RE_H1CAP = re.compile(r'^(CAPÍTULO\s+\d+\s*—)\s*(.*)$')
 # se imprimen.
 RE_CIFRA = re.compile(r'\d')
 
+# CUANTO TEXTO HACE FALTA PARA CRUZAR LAS DOS COLUMNAS.
+# Un parrafo a todo el ancho es una ENTRADA de lectura: el lector arranca la
+# seccion con una linea larga y recien despues se mete en la columna. Pero eso
+# solo funciona si hay texto para llenarla. Una sola linea cruzando los 181 mm,
+# con la columna de al lado vacia debajo, no se lee como una entrada: se lee
+# como un error de armado.
+#
+# LA REGLA: minimo CUATRO LINEAS. A cuerpo 8,75 en una caja de 181,4 mm entran
+# 130 caracteres por linea, asi que hacen falta 520. Un parrafo mas corto que
+# eso se queda en la columna, donde 520 caracteres son ocho lineas y llenan.
+#
+# Si el primer parrafo no llega solo, se le suman los que siguen —hasta tres—
+# y se decide sobre el total: la entrada de la referencia es una REGION de
+# lectura, no necesariamente un parrafo. Si ni asi llega, no hay entrada y la
+# seccion arranca directamente a dos columnas.
+#
+# Medido sobre nuestro texto: los parrafos de apertura tienen una mediana de
+# 131 caracteres —una linea— y solo cuatro secciones de cuarenta y seis llegan
+# a las cuatro lineas. O sea que la entrada ancha aparece poco, y esta bien que
+# asi sea: la referencia tambien la usaria poco si sus parrafos midieran esto.
+CARACTERES_POR_LINEA_ANCHA = 130
+CARACTERES_POR_LINEA_COLUMNA = 62
+LINEAS_MINIMAS_ENTRADA = 4
+ENTRADA_MINIMA = CARACTERES_POR_LINEA_ANCHA * LINEAS_MINIMAS_ENTRADA
+PARRAFOS_MAXIMOS_ENTRADA = 3
+
 
 def _fuerte(m):
     dentro = m.group(1)
@@ -701,12 +727,41 @@ def bloques(md, slug):
             elif txt in _lista(REMATES, slug):
                 add(True, '<p class="remate">%s</p>' % _inline(txt))
             elif toca_entrada[0]:
-                add(True, '<p class="entrada">%s</p>' % _inline(txt))
+                # Se miran los parrafos que siguen, hasta tres, y se decide
+                # sobre el total: o cruzan las dos columnas todos juntos, o no
+                # cruza ninguno.
+                j, corrida, largo = i, [], 0
+                while (j < n and len(corrida) < PARRAFOS_MAXIMOS_ENTRADA):
+                    c = lineas[j].strip()
+                    if not c:
+                        j += 1
+                        continue
+                    if not _es_parrafo(c):
+                        break
+                    corrida.append(c)
+                    largo += len(c)
+                    j += 1
+                    if largo >= ENTRADA_MINIMA:
+                        break
+                if largo >= ENTRADA_MINIMA:
+                    add(True, "".join('<p class="entrada">%s</p>' % _inline(c)
+                                      for c in corrida))
+                    toca_entrada[0] = False
+                    i = j
+                    continue
                 toca_entrada[0] = False
+                add(False, "<p>%s</p>" % _inline(txt))
             else:
                 add(False, "<p>%s</p>" % _inline(txt))
         i += 1
     return out, subsecciones
+
+
+def _es_parrafo(t):
+    """True si la linea de markdown es prosa corriente y no otra cosa."""
+    return (bool(t) and not t.startswith(("|", "- ", "#", "> ", "```", "**["))
+            and not re.match(r'^\d+\.\s', t)
+            and not RE_EXHIBIT.match(t))
 
 
 def _entre_prosa(emitidos):
@@ -820,7 +875,22 @@ def bandas(lista, seccion):
                 # constantes de diciembre de 2025:"—. Separarla de su tabla deja
                 # el titulo al pie de la pagina anunciando algo que no esta. Si
                 # esa tabla es chica, entra al grupo con ella.
-                corte = 1
+                # EL GRUPO TIENE QUE LLENAR LAS DOS COLUMNAS, NO UNA.
+                # Con un solo parrafo de tres lineas, la banda del grupo
+                # balanceaba tres lineas en la columna izquierda y dejaba la
+                # derecha vacia justo debajo del titulo: un escalon en blanco
+                # arriba de la pagina. Se toman parrafos hasta juntar cuatro
+                # lineas de columna —dos por lado, 62 caracteres cada una— con
+                # un tope de tres, que es lo que evita que el grupo se vuelva
+                # un ladrillo que no entra en ningun pie.
+                corte, junta = 0, 0
+                while (corte < len(corrida) and corte < 3
+                       and junta < 4 * CARACTERES_POR_LINEA_COLUMNA):
+                    if not corrida[corte].startswith("<p"):
+                        break
+                    junta += len(_texto_plano(corrida[corte]))
+                    corte += 1
+                corte = max(corte, 1)
                 if (len(corrida) > 1
                         and _texto_plano(corrida[0]).endswith(":")
                         and corrida[1].startswith('<div class="tw')
