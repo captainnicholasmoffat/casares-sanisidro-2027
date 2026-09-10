@@ -111,11 +111,17 @@ def main(pedidos=None):
         if derramados:
             problemas.append((nombre, "texto derramado fuera de su forma",
                               derramados))
+        # NOVENO. Los ocho anteriores miran donde cae cada cosa; ninguno mira
+        # si lo que cae se ve. El EXHIBIT 04 dibujaba sus ciento seis puntos
+        # en arena sobre crema y los ocho decian OK.
+        flojos = E.SIN_CONTRASTE.get(nombre) or []
+        if flojos:
+            problemas.append((nombre, "color de serie sin contraste", flojos))
         hechos.append((numero, capitulo, nombre, time.time() - t0))
         print("  %s  cap.%d  %-46s %5.1fs  %s"
               % (numero, capitulo, nombre, time.time() - t0,
                  "FALLA" if (sucios or fuera or sin_tilde or pisados
-                             or tapados or derramados) else "OK"))
+                             or tapados or derramados or flojos) else "OK"))
     return hechos, problemas
 
 
@@ -169,5 +175,6 @@ if __name__ == "__main__":
         _json.dump(previos, _f, ensure_ascii=False, indent=1)
     print("los %d gráficos: paleta correcta, ningún carácter fuera del lienzo, "
           "ninguna palabra sin tilde, ningún texto pisado, ningún texto "
-          "tapado por el gráfico, ningún rótulo derramado fuera de su forma y "
-          "ningún número escrito a mano" % len(hechos))
+          "tapado por el gráfico, ningún rótulo derramado fuera de su forma, "
+          "ningún número escrito a mano y ningún color de serie por debajo "
+          "de 1,7 de contraste contra el papel" % len(hechos))

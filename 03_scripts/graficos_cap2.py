@@ -39,8 +39,11 @@ def ex06():
     x = [0, 1]
     for i, (anio, dev, per) in enumerate(datos):
         ax.bar([i], [per / 1e6], width=0.62, color=E.DATO, zorder=3)
+        # Lo no cobrado es un dato del grafico —es el numero que el titulo
+        # cita— asi que va en un color de dato. En arena sobre crema quedaba a
+        # 1,15 de contraste: el tramo mas importante era el que no se veia.
         ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
-               color=E.ARENA, zorder=3)
+               color=E.DATO_CLARO, zorder=3)
         ax.bar([i], [(dev - per) / 1e6], width=0.62, bottom=per / 1e6,
                color="none", edgecolor=E.ACENTO, linewidth=0.9,
                linestyle=(0, (2.5, 1.5)), zorder=4)

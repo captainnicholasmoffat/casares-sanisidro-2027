@@ -119,31 +119,40 @@ SALIDA = os.path.join(RAIZ, "PROGRAMA_SAN_ISIDRO_2027.pdf")
 # --------------------------------------------------------------------------
 # LA TIPOGRAFIA VIVE EN EL REPO Y SE CARGA POR RUTA
 # --------------------------------------------------------------------------
-# Source Serif 4, de Frank Grießhammer para Adobe, bajo SIL Open Font License
-# 1.1 (05_tipografia/OFL.txt). Los dos archivos estan versionados en el repo y
-# el CSS los carga con @font-face apuntando al archivo, NO por nombre de fuente
-# instalada en el sistema. La diferencia importa en un documento con indice: si
-# el armado dependiera de que la fuente este instalada, en una maquina sin ella
-# WeasyPrint caeria a otra, cambiaria el ancho de cada linea, y el indice
-# imprimiria numeros de pagina que no son.
+# Spectral, de Production Type para Google, e Inter, de Rasmus Andersson.
+# Las dos bajo SIL Open Font License 1.1 (05_tipografia/OFL-Spectral.txt y
+# OFL-Inter.txt). Los archivos estan versionados en el repo y el CSS los carga
+# con @font-face apuntando a la RUTA, no al nombre de una fuente instalada. La
+# diferencia importa en un documento con indice: si el armado dependiera de que
+# la fuente este en la maquina, en una sin ella WeasyPrint caeria a otra,
+# cambiaria el ancho de cada linea, y el indice imprimiria numeros que no son.
 #
-# POR QUE ESTA Y NO OTRA, en las dos condiciones que importaban:
-#   - color a cuerpo chico en columna angosta: altura de x 0,475 em contra
-#     0,400 de EB Garamond; y ancho de la 'n' 0,606 em contra 0,662 de
-#     Literata, o sea mas caracteres por linea en una columna de 85 mm, que es
-#     menos guiones y menos rios de blanco.
-#   - numeros para tablas: trae tabulares y de caja alta (tnum + lnum), que es
-#     lo que alinea una columna de cifras.
-#   - y versalitas de verdad (smcp), que son las de los rotulos de exhibit y
-#     los encabezados de tabla. Simuladas por el motor salen como mayusculas
-#     achicadas, con el trazo mas fino que el del texto de al lado.
-# Ademas tiene eje de TAMAÑO OPTICO: el dibujo a cuerpo 9 no es el mismo
-# reducido, es otro, con mas altura de x y mas espacio entre letras.
+# POR QUE ESTAS DOS: porque son las de la referencia. Medido con pdfplumber
+# sobre las treinta paginas del Extra Time, el PDF trae exactamente estos dos
+# nombres —Spectral en Regular, Italic, MediumItalic, SemiBold y Bold, e Inter
+# Regular— y ninguno mas. Estaba vendorizada Source Serif 4, que es una serif
+# excelente y no es la de la referencia. Copiar el sistema incluye copiar la
+# letra: el color de la mancha a cuerpo 9,7 en columna de 85 mm es la mitad de
+# lo que hace que dos paginas se parezcan.
+#
+# Spectral es la serif de TEXTO y de TITULO. Inter es la sans, y aparece solo
+# donde la referencia la usa: cornisa, rotulo de exhibit, cabecera de tabla,
+# cuerpo de tabla, rotulos dentro de los graficos y pie de pagina. Nunca en
+# prosa.
+#
+# Los cortes son ESTATICOS, no variables: Spectral no tiene eje de tamaño
+# optico, asi que no hay nada que instanciar y cada peso es su archivo.
 TIPOS = os.path.join(RAIZ, "05_tipografia")
-SERIF = "Source Serif 4"
+SERIF = "Spectral"
 SANS = "Inter"
-OPSZ_TEXTO = 9        # el dibujo para cuerpo de texto
-OPSZ_TITULO = 24      # el dibujo para titulo: mas contraste y menos espaciado
+# Los seis cortes de Spectral que usa la referencia, con el peso y el estilo
+# con que el CSS los va a pedir.
+CORTES_SERIF = [("Spectral-Regular.ttf", 400, "normal"),
+                ("Spectral-Italic.ttf", 400, "italic"),
+                ("Spectral-Medium.ttf", 500, "normal"),
+                ("Spectral-MediumItalic.ttf", 500, "italic"),
+                ("Spectral-SemiBold.ttf", 600, "normal"),
+                ("Spectral-Bold.ttf", 700, "normal")]
 
 # --------------------------------------------------------------------------
 # LOS HUECOS DE LAS IMAGENES GENERADAS
@@ -211,7 +220,8 @@ RE_VERSION = re.compile(
 CREMA = "#F5F0E8"        # el fondo de toda la pagina
 TINTA = "#2A211C"        # el texto, negro calido
 ACENTO = "#7C2E23"       # ladrillo: eyebrow, numeros de seccion, titulos
-DATO = "#5E7157"         # verde salvia
+DATO = "#5E7157"         # verde salvia: la serie principal
+DATO_CLARO = "#7E9070"   # salvia clara: la cuarta serie
 ARENA = "#EAE0CF"        # bandas de encabezado y cajas laterales
 FILA = "#E8E4D9"         # filas alternadas
 
@@ -498,8 +508,19 @@ def bloques(md, slug):
     # un titulo de seccion mas, en negrita y en el indice.
     es_capitulo = bool(re.search(r'^#\s+CAPÍTULO\s+\d+', md, re.M))
     subsecciones = []
+    # LA ENTRADA. En la referencia el primer parrafo de cada capitulo va a
+    # TODO EL ANCHO y un punto mas grande que el cuerpo, y recien despues
+    # empiezan las columnas. Es lo que le da a la pagina de apertura una
+    # entrada de lectura en vez de tirar al lector directo a una columna de
+    # 85 mm. Se marca el parrafo que sigue a la bajada del capitulo.
+    toca_entrada = [False]
 
     def add(ancho, htm):
+        # Cualquier pieza que no sea la entrada misma cancela la espera: la
+        # entrada es el parrafo que viene PEGADO a la bajada, no el primer
+        # parrafo que aparezca tres titulos mas abajo.
+        if out and 'class="entrada"' not in htm and 'class="bajada"' not in htm:
+            toca_entrada[0] = toca_entrada[0] and htm.startswith("<p>")
         out.append((ancho, htm))
 
     while i < n:
@@ -509,6 +530,25 @@ def bloques(md, slug):
         if m:
             add(True, _exhibit(m.group(1).zfill(2), m.group(2).strip()))
             i += 1
+            continue
+
+        # LOS BLOQUES CERCADOS SON LISTADOS, Y VAN AL ANCHO DE LA CAJA.
+        # No habia rama para ellos: cada linea de adentro caia como un parrafo
+        # suelto, en serif, justificada y partida por la columna de 85 mm. Las
+        # cuatro ultimas paginas del anexo —la salida del verificador
+        # geografico, la lista de comandos para reproducir los numeros— eran
+        # por eso un muro ilegible. Al ancho de la caja y en monoespaciada, la
+        # linea mas larga de todas mide 68 caracteres y entran holgadas.
+        if l.strip().startswith("```"):
+            j = i + 1
+            crudas = []
+            while j < n and not lineas[j].strip().startswith("```"):
+                crudas.append(lineas[j])
+                j += 1
+            if crudas:
+                add(True, '<pre class="listado">%s</pre>'
+                    % "\n".join(_escapar(x) for x in crudas))
+            i = j + 1
             continue
 
         if l.strip().startswith("|"):
@@ -564,6 +604,7 @@ def bloques(md, slug):
             # El h2 SIN numero que sigue al titulo del capitulo es la bajada.
             if not m2 and es_capitulo and vistos_h1 == 1 and not hay_bajada:
                 add(True, '<p class="bajada">%s</p>' % _inline(crudo))
+                toca_entrada[0] = True
                 hay_bajada = True
                 i += 1
                 continue
@@ -622,10 +663,19 @@ def bloques(md, slug):
                 add(True, '<p class="dato">%s</p>' % _inline(txt))
             elif txt in _lista(REMATES, slug):
                 add(True, '<p class="remate">%s</p>' % _inline(txt))
+            elif toca_entrada[0]:
+                add(True, '<p class="entrada">%s</p>' % _inline(txt))
+                toca_entrada[0] = False
             else:
                 add(False, "<p>%s</p>" % _inline(txt))
         i += 1
     return out, subsecciones
+
+
+def _escapar(t):
+    """El texto de un listado va tal cual: sin negritas, sin cursivas, y con
+    los tres caracteres que el HTML se comeria puestos como entidad."""
+    return (t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
 def _lista(mapa, slug):
@@ -952,6 +1002,7 @@ def tapa():
         fondo = ('<img class="tapa-img" src="file://%s" alt=""/>'
                  % os.path.join(CHARTS, "TAPA_mapa_zonas.png"))
     return ('<section class="tapa">%s'
+            '<div class="tapa-faja"></div>'
             '<div class="tapa-txt">'
             '<h1 class="t1">%s</h1><h1 class="t2">%s</h1>'
             '<p class="sub">%s</p></div>'
@@ -978,13 +1029,14 @@ def indice(entradas):
 # 5. CSS
 # ==========================================================================
 
-CSS = """
-@font-face { font-family: "%(serif)s";
-             src: url("file://%(tipos)s/SourceSerif4[opsz,wght].ttf");
-             font-weight: 200 900; font-style: normal; }
-@font-face { font-family: "%(serif)s";
-             src: url("file://%(tipos)s/SourceSerif4-Italic[opsz,wght].ttf");
-             font-weight: 200 900; font-style: italic; }
+# Los seis @font-face de Spectral se escriben solos desde CORTES_SERIF: son
+# archivos estaticos y cada uno declara su peso y su estilo.
+_FACES = "\n".join(
+    '@font-face { font-family: "%s"; src: url("file://%s/%s");\n'
+    '             font-weight: %d; font-style: %s; }' % (SERIF, TIPOS, f, w, e)
+    for f, w, e in CORTES_SERIF)
+
+CSS = _FACES + """
 @font-face { font-family: "%(sans)s";
              src: url("file://%(tipos)s/Inter[opsz,wght].ttf");
              font-weight: 100 900; font-style: normal; }
@@ -992,290 +1044,383 @@ CSS = """
              src: url("file://%(tipos)s/Inter-Italic[opsz,wght].ttf");
              font-weight: 100 900; font-style: italic; }
 
+/* ====================================================================
+   LA GEOMETRIA SALE DE 04_diseno/MEDIDAS_EXTRATIME.md
+
+   La referencia mide 660 pt de ancho con margenes de 45 pt: la caja de
+   texto se lleva el 86,4 %% del ancho y cada margen el 6,8 %%. Trasladado a
+   A4 eso da margenes de 14,3 mm; se usan 16, porque esto es papel y no
+   pantalla, y una hoja que se imprime necesita donde agarrarla. Caja de
+   texto: 178 mm.
+
+   El medianil de la referencia mide 24 pt sobre 570 de caja, o sea el
+   4,2 %%. Sobre 178 mm da 7,5 mm, y las columnas quedan de 85,25 mm.
+
+   NO SE COPIA EL ALTO. El original es una exportacion continua de Figma:
+   sus paginas miden entre 872 y 2685 pt porque cada capitulo es un lienzo,
+   no una hoja. Nosotros paginamos A4 de verdad.
+   ==================================================================== */
 @page {
-  size: A4; margin: 17mm 17mm %(pie)dmm 17mm; background: %(crema)s;
-  /* EL EYEBROW. Arriba de todo, en versalitas y en el acento: dice en que
-     seccion esta parado el lector antes de que empiece a leer. */
+  size: A4; margin: 15mm 16mm %(pie)dmm 16mm; background: %(crema)s;
+  /* LA CORNISA. Inter en mayusculas espaciadas, como la referencia: dice en
+     que seccion esta parado el lector antes de que empiece a leer. */
   @top-left     { content: string(cap); font-family: "%(sans)s";
-                  font-size: 6.2pt; font-weight: 600; letter-spacing: 1.35pt;
+                  font-size: 6.7pt; font-weight: 500; letter-spacing: 1pt;
                   color: %(acento)s; text-transform: uppercase;
-                  margin-bottom: 6mm; }
-  @bottom-left  { content: "%(corto)s"; font-family: "%(serif)s";
-                  font-size: 7pt; letter-spacing: .1pt; white-space: pre;
-                  color: %(tinta)s; opacity: .55; vertical-align: top; }
+                  margin-bottom: 5.5mm; }
+  @bottom-left  { content: "%(corto)s"; font-family: "%(sans)s";
+                  font-size: 6.4pt; letter-spacing: .15pt; white-space: pre;
+                  color: %(tinta)s; opacity: .65; vertical-align: top; }
   @bottom-right { content: "Página " counter(page) " de " counter(pages);
-                  font-family: "%(serif)s"; font-size: 7pt;
+                  font-family: "%(sans)s"; font-size: 6.4pt;
                   font-variant-numeric: tabular-nums lining-nums;
-                  white-space: pre; color: %(tinta)s; opacity: .55;
+                  white-space: pre; color: %(tinta)s; opacity: .65;
                   vertical-align: top; }
-  /* La regla del pie es el borde de abajo de la caja de pagina: cae justo
-     entre el final de la caja de texto y la linea del pie, y no le come ancho
-     a ninguna de las dos cajas de margen. Poner la regla como border-top de
-     @bottom-left obligaba a fijarle un ancho, y ese ancho aplastaba el numero
-     de pagina hasta partirlo en tres lineas. */
-  border-bottom: .4pt solid %(arena)s; padding-bottom: 3.5mm;
+  /* Todos los filetes de la referencia miden 0,75 pt: 567 de los 570
+     rectangulos finos medidos dan exactamente ese grosor. No hay filetes
+     gruesos en ninguna parte del documento, y los que habia aca —1,6 pt
+     bajo el titulo de capitulo, 3,5 pt al costado de una cifra— eran
+     nuestros, no suyos. */
+  border-bottom: .75pt solid %(arena)s; padding-bottom: 3.5mm;
 }
 @page :first { margin: 0; border: 0; padding: 0;
   @top-left { content: ""; } @bottom-left { content: ""; }
   @bottom-right { content: ""; } }
 
 html { background: %(crema)s; }
-body { font-family: "%(serif)s", Georgia, serif; font-size: 8.7pt;
-       line-height: 1.42; color: %(tinta)s;
-       font-variation-settings: "opsz" %(opsz)d;
+/* Cuerpo 9,7 pt con interlinea de 14,5 —los dos medidos— dan 54 caracteres
+   por columna de 85 mm. La referencia tiene 60 en una columna de 95. Es la
+   misma medida de lectura. Lo anterior era 8,7 sobre 1,42, que es cuerpo de
+   nota al pie usado como cuerpo de texto. */
+body { font-family: "%(serif)s", Georgia, serif; font-size: 9.7pt;
+       line-height: 1.49; color: %(tinta)s;
        font-variant-numeric: lining-nums; }
 
 /* --------------------------------------------------------------------
    BANDAS. La prosa a dos columnas balanceadas; todo lo demas al ancho.
-   column-fill: balance (el que viene por defecto) es lo que evita que la
-   primera columna se estire hasta el pie de la pagina.
    -------------------------------------------------------------------- */
-.banda { columns: 2; column-gap: 6.5mm; }
+.banda { columns: 2; column-gap: 7.5mm; }
 .banda > *:first-child { margin-top: 0; }
 .con-titulo { break-inside: avoid; }
 .con-titulo .banda { margin-top: 0; }
 
-p { margin: 0 0 .55em; text-align: justify; hyphens: auto; }
+p { margin: 0 0 .5em; text-align: justify; hyphens: auto; }
 p, li { orphans: 3; widows: 3; }
-strong { font-weight: bold; }
+/* EL COLOR ENTRA POR LA PROSA. En la referencia las negritas del cuerpo no
+   son negras: las cifras y los nombres propios van en ladrillo y los
+   conceptos en salvia. Es de donde sale el color de las paginas que no
+   tienen ni tabla ni grafico —que aca eran veinte, y salian en gris—.
+   El texto no se toca: las negritas YA ESTAN ESCRITAS en el markdown, lo
+   unico que cambia es de que color se imprimen. */
+strong { font-weight: 600; color: %(acento)s; }
 em { font-style: italic; }
-code { font-family: "DejaVu Sans Mono"; font-size: 7.4pt; background: %(arena)s;
+code { font-family: "DejaVu Sans Mono"; font-size: 8pt; background: %(arena)s;
        padding: .5pt 2pt; }
+/* El listado: monoespaciada al ancho de la caja, sobre banda de arena y con
+   filete del acento al costado, que es lo que hace la referencia con sus
+   piezas de dato en bruto. */
+pre.listado { font-family: "DejaVu Sans Mono"; font-size: 7.2pt;
+              line-height: 1.42; margin: 7.8mm 0; padding: 3.5mm 4mm;
+              background: %(arena)s; border-left: .75pt solid %(acento)s;
+              color: %(tinta)s; white-space: pre; overflow: hidden;
+              break-inside: avoid; }
 a { color: %(acento)s; text-decoration: none; }
-hr { border: 0; border-top: .5pt solid %(arena)s; margin: 1.1em 0 .95em; }
+hr { border: 0; border-top: .75pt solid %(arena)s; margin: 7.8mm 0 6.5mm; }
 
 /* --------------------------------------------------------------------
-   JERARQUIA
+   JERARQUIA — los cuerpos son los medidos, uno por uno
    -------------------------------------------------------------------- */
-/* Titulo de capitulo: la numeracion en Barranca, el nombre en Tinta, una
-   regla gruesa encima. Empieza pagina. */
-h1 { font-size: 17.5pt; line-height: 1.16; margin: 0 0 .24em;
-     font-weight: 700; font-variation-settings: "opsz" %(opszt)d;
-     letter-spacing: .2pt; string-set: cap content();
-     break-before: page; break-after: avoid;
-     border-top: 1.6pt solid %(acento)s; padding-top: 2.6mm; }
-h1 .cn { color: %(acento)s; }
+/* Titulo de capitulo, Spectral Bold 16,5. EL NUMERO EN LADRILLO Y EL NOMBRE
+   EN TINTA, que es lo que hace la referencia. Lo que se veia como un error
+   era el NOMBRE partido en dos colores; el numero aparte es jerarquia. */
+h1 { font-size: 16.5pt; line-height: 1.18; margin: 0 0 8.8mm;
+     font-weight: 700; letter-spacing: 0; color: %(tinta)s;
+     string-set: cap content(); break-before: page; break-after: avoid; }
+h1 .cn { color: %(acento)s; margin-right: .28em; }
 
-/* La bajada: una linea que dice de que va la seccion, en italica. */
-p.bajada { font-style: italic; font-size: 11pt;
-           font-variation-settings: "opsz" 14; line-height: 1.32;
-           color: %(acento)s; margin: .12em 0 .85em; max-width: 150mm;
-           text-align: left; hyphens: none; break-after: avoid; }
+/* La bajada del capitulo: Spectral MediumItalic 10,9 en salvia. */
+p.bajada { font-style: italic; font-weight: 500; font-size: 10.9pt;
+           line-height: 1.38; color: %(dato)s; margin: -6mm 0 8.8mm;
+           max-width: 152mm; text-align: left; hyphens: none;
+           break-after: avoid; }
+p.bajada strong { color: %(dato)s; font-weight: 600; }
 
-/* NUMERO DE SECCION GRANDE, EN SERIF, EN ACENTO, PEGADO AL TITULO. */
-h2 { font-size: 12.8pt; line-height: 1.18; margin: 1.25em 0 .5em;
-     font-weight: 600; font-variation-settings: "opsz" 16;
-     color: %(tinta)s; break-after: avoid; break-inside: avoid;
-     text-indent: -0.05em; }
-h2 .n { font-size: 17pt; font-weight: 700; color: %(acento)s;
-        font-variant-numeric: lining-nums;
-        margin-right: .3em; letter-spacing: -.2pt; }
+/* La entrada: el primer parrafo del capitulo va a TODO EL ANCHO y un punto
+   mas grande que el cuerpo, como en la referencia. Despues empiezan las
+   columnas. */
+p.entrada { font-size: 10pt; line-height: 1.6; text-align: left;
+            margin: 0 0 7.8mm; hyphens: none; }
+
+h2 { font-size: 12.2pt; line-height: 1.25; margin: 7.8mm 0 3.4mm;
+     font-weight: 600; color: %(tinta)s; break-after: avoid;
+     break-inside: avoid; text-indent: -0.05em; }
+h2 .n { font-weight: 700; color: %(acento)s;
+        font-variant-numeric: lining-nums; margin-right: .32em; }
 h1 + p.bajada + .banda h2:first-child,
-h1 + p.bajada + .con-titulo > h2 { margin-top: .2em; }
+h1 + p.bajada + .con-titulo > h2 { margin-top: 0; }
 
-h3 { font-size: 9.6pt; font-weight: 700;
-     margin: 1.35em 0 .4em; color: %(tinta)s;
-     break-after: avoid; break-inside: avoid; }
+h3 { font-size: 9.7pt; font-weight: 600; margin: 6.5mm 0 2.6mm;
+     color: %(acento)s; break-after: avoid; break-inside: avoid; }
 h3::before { content: ""; display: block; width: 9mm;
-             border-top: 1.4pt solid %(acento)s; margin-bottom: 1.6mm; }
+             border-top: .75pt solid %(acento)s; margin-bottom: 1.8mm; }
 
 /* --------------------------------------------------------------------
    CIFRAS DESTACADAS Y REMATES
    -------------------------------------------------------------------- */
-/* Un dato que merece verse sin leer. Son parrafos que YA estan escritos como
-   una cifra sola; solo se les da el peso que tienen. */
-p.dato { font-size: 15pt; line-height: 1.24; color: %(acento)s;
-         font-variation-settings: "opsz" 16;
-         margin: 1.1em 0 1.15em; padding: 3.5mm 0 3.5mm 5mm;
-         border-left: 3.5pt solid %(acento)s; text-align: left;
+p.dato { font-size: 14pt; line-height: 1.3; color: %(acento)s;
+         font-weight: 500;
+         margin: 7.8mm 0; padding: 0 0 0 5mm; text-align: left;
+         border-left: .75pt solid %(acento)s;
          hyphens: none; break-inside: avoid; max-width: 158mm; }
-p.dato strong { color: %(acento)s; font-weight: 700; }
+p.dato strong { color: %(acento)s; font-weight: 600; }
 
-/* Una por seccion, y solo las que ya estaban escritas. */
-p.remate { font-size: 11.2pt; line-height: 1.34; color: %(tinta)s;
-           background: %(arena)s; padding: 3mm 4mm 3mm 5mm;
-           font-variation-settings: "opsz" 14;
-           font-style: italic; margin: 1.1em 0 1.2em; padding: 0 0 0 5mm;
-           border-left: 2.5pt solid %(acento)s; text-align: left;
+p.remate { font-size: 10.9pt; line-height: 1.38; color: %(tinta)s;
+           font-style: italic; font-weight: 500;
+           margin: 7.8mm 0; padding: 0 0 0 5mm;
+           border-left: .75pt solid %(acento)s; text-align: left;
            hyphens: none; break-inside: avoid; max-width: 158mm; }
-p.remate strong { font-style: normal; font-weight: bold; }
+p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 
 /* --------------------------------------------------------------------
-   CAJAS. Tres usos y ninguno mas.
+   CAJAS. Fondo arena, filete de 0,75 al costado, cintillo en Inter.
    -------------------------------------------------------------------- */
-.caja { break-inside: avoid; margin: .9em 0 1.05em; padding: 2.4mm 3mm;
-        background: %(arena)s; font-size: 8.2pt; line-height: 1.42; }
-.caja h5 { font-size: 7.6pt; font-weight: 700; letter-spacing: .55pt;
-           text-transform: lowercase; font-variant-caps: small-caps;
-           margin: 0 0 1.6mm; color: %(acento)s; line-height: 1.32; }
+.caja { break-inside: avoid; margin: 7.8mm 0; padding: 4mm 5mm;
+        background: %(arena)s; font-size: 9pt; line-height: 1.45; }
+.caja h5 { font-family: "%(sans)s"; font-size: 6.4pt; font-weight: 600;
+           letter-spacing: .75pt; text-transform: uppercase;
+           margin: 0 0 2.4mm; color: %(acento)s; line-height: 1.3; }
 .caja p { margin: 0 0 .45em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
-/* Las tres cajas comparten fondo arena y barra del acento: son la misma
-   pieza del sistema y distinguirlas por color inventaba una jerarquia que el
-   texto no tiene. Lo que las separa es su titulo. */
+/* Las tres cajas comparten fondo arena y filete: son la misma pieza del
+   sistema y distinguirlas por color inventaba una jerarquia que el texto no
+   tiene. Lo que las separa es su titulo. */
 .caja.metodo, .caja.hipotesis, .caja.legal {
-    border-left: 2.5pt solid %(acento)s; }
+    border-left: .75pt solid %(dato)s; }
 .caja.legal { font-style: italic; }
 
-/* Nota de lectura al pie de seccion: cuerpo chico, entrada en negrita. */
-.nota-lectura { margin: 1.1em 0 1.15em;
-                border-top: .5pt solid %(arena)s; padding-top: 2.4mm;
-                font-size: 7.9pt; line-height: 1.4; color: %(tinta)s;
-                opacity: .82; columns: 2; column-gap: 6.5mm; }
-/* LA NOTA SE PARTE, PERO NO DE CUALQUIER MANERA. Se probaron las tres:
-   partiendo libre, el resto caia arriba de la pagina siguiente en una sola
-   linea, que se lee como un error de armado; sin partir, cuando no entra al
-   pie se iba entera y dejaba la ultima pagina del capitulo con la nota sola al
-   7%%. Con seis lineas como minimo de cada lado, la pagina anterior se llena y
-   la ultima recibe un bloque que se sostiene — pero medido sobre las 54
-   paginas dio lo mismo que no partirla y con cortes mas feos, asi que no se
-   parte: el envoltorio es el que lleva el break-inside, porque WeasyPrint
-   parte igual una caja multicolumna aunque le pidas que no. */
+/* Nota de lectura al pie de seccion. En la referencia es Spectral italico
+   7,9 en gris calido, con la entrada en SemiBold, a todo el ancho. */
+.nota-lectura { margin: 7.8mm 0 0;
+                border-top: .75pt solid %(arena)s; padding-top: 3mm;
+                font-size: 7.9pt; line-height: 1.46; color: %(tinta)s;
+                font-style: italic; opacity: .68;
+                columns: 2; column-gap: 7.5mm; }
 .nota-envoltorio { break-inside: avoid; }
-/* El cierre de capitulo: ultimo parrafo, separador y nota, en un solo bloque
-   que no se parte. Ver cerrar_capitulo(). */
 .cierre { break-inside: avoid; }
 .nota-lectura p { margin: 0 0 .4em; text-align: left; hyphens: none; }
-.nota-lectura .et { font-weight: bold; opacity: 1; }
+.nota-lectura strong { color: inherit; }
+.nota-lectura .et { font-weight: 600; opacity: 1; }
 
-.et { font-size: 7.4pt; font-weight: 700; letter-spacing: .5pt;
-      text-transform: lowercase; font-variant-caps: small-caps;
-      font-style: normal; color: %(acento)s; }
+/* La entrada en SemiBold de una fuente o de una nota: Spectral, no
+   versalitas. La referencia no usa versalitas en ninguna parte —lo que
+   parecian versalitas es Inter en mayusculas espaciadas—. */
+.et { font-weight: 600; font-style: normal; color: inherit; }
 
-ul, ol { margin: 0 0 .65em; padding: 0 0 0 4.6mm; }
+ul, ol { margin: 0 0 .6em; padding: 0 0 0 4.8mm; }
 li { margin-bottom: .3em; text-align: justify; hyphens: auto; }
 ul li::marker { color: %(acento)s; }
-ol li::marker { color: %(acento)s; font-weight: bold; }
+ol li::marker { color: %(acento)s; font-weight: 600; }
 
 /* --------------------------------------------------------------------
-   TABLAS. Banda de encabezado oscura, versalitas claras, filas alternadas,
-   primera columna en color.
+   TABLAS. Banda de cabecera en arena con Inter mayuscula en ladrillo,
+   primera columna en ladrillo, filas alternadas en #E8E4D9.
+   Medido: banda de cabecera 17,3 pt, fila 20,2 pt, sangria de celda 6 pt.
    -------------------------------------------------------------------- */
-.tw { break-inside: avoid; margin: .85em 0 1em; }
-.tw.ancho { margin: 1em 0 1.1em; }
-table { width: 100%%; border-collapse: collapse; font-size: 7.5pt;
-        line-height: 1.3;
+.tw { break-inside: avoid; margin: 7.8mm 0; }
+table { width: 100%%; border-collapse: collapse;
+        font-family: "%(sans)s"; font-size: 7.9pt; line-height: 1.4;
         font-variant-numeric: tabular-nums lining-nums; }
-.tw:not(.ancho) table { font-size: 7.1pt; }
-/* VERSALITAS DE VERDAD en la banda de encabezado: el texto se pasa a
-   minuscula y la fuente devuelve sus versalitas dibujadas. Puestas como
-   mayusculas achicadas, el trazo sale mas fino que el de la fila de abajo y la
-   banda se ve descolorida. */
-thead th { background: %(arena)s; color: %(tinta)s; text-align: left;
-           padding: 2.1mm 2.2mm; font-size: 7.3pt; font-weight: 600;
-           letter-spacing: .5pt; text-transform: lowercase;
-           font-variant-caps: small-caps; line-height: 1.22;
-           vertical-align: bottom;
-           border-bottom: .5pt solid rgba(42, 33, 28, .35); }
-td { padding: 1.5mm 2.2mm; border-bottom: .4pt solid rgba(42, 33, 28, .12);
-     vertical-align: top; }
-tbody tr:nth-child(odd) { background: %(fila)s; }
-tbody td:first-child { color: %(acento)s; font-weight: bold; }
+.tw:not(.ancho) table { font-size: 7.4pt; }
+thead th { background: %(arena)s; color: %(acento)s; text-align: left;
+           padding: 1.6mm 2.1mm; font-size: 6.4pt; font-weight: 600;
+           letter-spacing: .5pt; text-transform: uppercase; line-height: 1.25;
+           vertical-align: bottom; }
+td { padding: 1.7mm 2.1mm; vertical-align: top; }
+tbody tr:nth-child(even) { background: %(fila)s; }
+tbody td:first-child { color: %(acento)s; font-weight: 600; }
+/* La columna que el texto marca como la nuestra va en salvia, que es lo que
+   hace la referencia con su columna "EXTRA TIME". */
+tbody td.destacada { color: %(dato)s; font-weight: 600; }
+thead th.destacada { color: %(dato)s; }
 th:not(:first-child), td:not(:first-child) { text-align: right; }
 th:first-child, td:first-child { text-align: left; }
 /* Una tabla de texto no se alinea a la derecha: ahi la columna no es una
    cifra, es una oracion. */
 .tw.texto th, .tw.texto td { text-align: left; }
-.etq { font-style: italic; font-size: 7pt;
-       line-height: 1.34; margin: 1.6mm 0 0; color: %(tinta)s; opacity: .62;
+.etq { font-style: italic; font-size: 7.9pt; font-family: "%(serif)s";
+       line-height: 1.46; margin: 2.4mm 0 0; color: %(tinta)s; opacity: .68;
        text-align: left; hyphens: none; }
 .etq .et { opacity: 1; }
 
 /* --------------------------------------------------------------------
-   EXHIBITS. Rotulo en versalitas, titulo que dice la conclusion, bajada,
-   figura, y fuente al pie en cuerpo 6-7 italico gris.
+   EXHIBITS. Rotulo en Inter mayuscula, titulo que dice la conclusion,
+   bajada, figura, y fuente al pie en Spectral italico.
+   Ritmo medido: rotulo -> titulo 14 pt; titulo -> figura 21 pt;
+   figura -> fuente 25 pt.
    -------------------------------------------------------------------- */
-.exh { break-inside: avoid; margin: 1em 0 1.15em; }
-.exh-cab { margin-bottom: 1.8mm; break-after: avoid; }
-.exh-rot { font-size: 7.6pt; font-weight: 700; letter-spacing: .8pt;
-           text-transform: lowercase; font-variant-caps: small-caps;
-           color: %(acento)s; margin: 0 0 1.1mm; text-align: left; }
-.exh-tit { font-size: 11.2pt; font-weight: 600; line-height: 1.2;
-           color: %(acento)s; margin: 0; text-align: left; hyphens: none;
-           font-variation-settings: "opsz" 14; }
-.exh-baj { font-size: 7.6pt; line-height: 1.34;
-           color: %(tinta)s; opacity: .68; margin: 1.3mm 0 0; text-align: left;
-           hyphens: none; max-width: 168mm; }
+.exh { break-inside: avoid; margin: 7.8mm 0; }
+.exh-cab { margin-bottom: 7.4mm; break-after: avoid; }
+.exh-rot { font-family: "%(sans)s"; font-size: 6.7pt; font-weight: 500;
+           letter-spacing: .75pt; text-transform: uppercase;
+           color: %(acento)s; margin: 0 0 4.9mm; text-align: left; }
+.exh-tit { font-size: 11.2pt; font-weight: 600; line-height: 1.3;
+           color: %(acento)s; margin: 0; text-align: left; hyphens: none; }
+.exh-baj { font-size: 7.9pt; line-height: 1.46; font-style: italic;
+           color: %(tinta)s; opacity: .68; margin: 2.4mm 0 0;
+           text-align: left; hyphens: none; max-width: 168mm; }
 .exh img { display: block; margin: 0 auto; max-width: 100%%;
-           max-height: 82mm; width: auto; height: auto; }
-/* Los dos mapas y las listas largas. A 78 mm el mapa entraba en la mitad del
-   ancho de la caja y la otra mitad quedaba en papel: el partido es una franja
-   en diagonal y su lienzo es casi cuadrado, asi que lo que manda es el alto.
-   El acomodador se encarga del hueco que deje al pie de pagina. */
-.exh.alto img { max-height: 100mm; }
-.exh-fuente, .exh-nota { font-style: italic;
-                         font-size: 7pt; line-height: 1.34; margin: 1.8mm 0 0;
-                         text-align: left; hyphens: none; opacity: .66; }
-.exh-nota { color: %(acento)s; opacity: .95; margin-top: 1.2mm; }
+           max-height: 92mm; width: auto; height: auto; }
+.exh.alto img { max-height: 108mm; }
+.exh-fuente, .exh-nota { font-style: italic; font-size: 7.9pt;
+                         line-height: 1.46; margin: 8.8mm 0 0;
+                         text-align: left; hyphens: none;
+                         color: %(tinta)s; opacity: .68; }
+.exh-nota { color: %(acento)s; opacity: .9; margin-top: 3mm; }
 
 /* --------------------------------------------------------------------
    TAPA
    -------------------------------------------------------------------- */
 .tapa { position: relative; width: 210mm; height: 297mm; overflow: hidden;
-        page-break-after: always; }
-.tapa-img { position: absolute; left: -11mm; bottom: 4mm; width: 232mm;
-            height: auto; }
-/* La ilustracion de tapa sangra los cuatro lados. */
-.tapa-img.cubre { left: 0; top: 0; bottom: auto; width: 210mm; height: 297mm;
+        page-break-after: always; background: %(crema)s; }
+/* EL MAPA LLENA LA PAGINA. Antes entraba como una estampita al pie, con dos
+   tercios de papel arriba: la tapa de un programa de gobierno de un partido
+   tiene que ser el partido. */
+.tapa-img { position: absolute; left: 0; top: 0; width: 210mm; height: 297mm;
+            object-fit: cover; }
+.tapa-img.cubre { left: 0; top: 0; width: 210mm; height: 297mm;
                   object-fit: cover; }
-.tapa-credito { position: absolute; left: 17mm; bottom: 9mm; margin: 0;
-                font-family: "%(sans)s"; font-size: 5.6pt; letter-spacing: .3pt;
-                color: %(crema)s; opacity: .8; }
+/* La franja que sostiene el titulo: crema con un poco de transparencia, para
+   que el titulo se lea sin tapar el mapa. */
+.tapa-faja { position: absolute; left: 0; top: 0; width: 210mm;
+             height: 118mm;
+             background: linear-gradient(180deg,
+                 rgba(245,240,232,.97) 0%%, rgba(245,240,232,.95) 62%%,
+                 rgba(245,240,232,0) 100%%); }
+.tapa-credito { position: absolute; left: 16mm; bottom: 8mm; margin: 0;
+                font-family: "%(sans)s"; font-size: 6.4pt; letter-spacing: .3pt;
+                color: %(tinta)s; opacity: .65; }
 
 /* --------------------------------------------------------------------
    LA BANDA QUE ABRE CADA CAPITULO
    -------------------------------------------------------------------- */
-/* Va ARRIBA del titulo y del eyebrow del capitulo, al ancho de la caja. Es
-   una ilustracion, y lo dice: un documento que se ofrece para que le revisen
-   las cuentas no puede dejar que una imagen generada pase por una foto. */
-figure.apertura { margin: 0 0 5mm; break-after: avoid; break-inside: avoid; }
+figure.apertura { margin: 0 0 6mm; break-after: avoid; break-inside: avoid; }
 figure.apertura img { display: block; width: 100%%; height: 44mm;
                       object-fit: cover; }
-figure.apertura figcaption { font-family: "%(sans)s"; font-size: 5.8pt;
+figure.apertura figcaption { font-family: "%(sans)s"; font-size: 6.4pt;
                              letter-spacing: .2pt; color: %(tinta)s;
-                             opacity: .5; margin-top: 1.4mm;
+                             opacity: .55; margin-top: 1.6mm;
                              text-align: right; }
 figure.apertura + h1 { break-before: avoid; }
-.tapa-txt { position: absolute; left: 17mm; top: 30mm; width: 165mm; }
-.tapa h1 { font-size: 27pt; line-height: 1.15; margin: 0; letter-spacing: .4pt;
+.tapa-txt { position: absolute; left: 16mm; top: 22mm; width: 178mm; }
+.tapa h1 { font-size: 40pt; line-height: 1.06; margin: 0; letter-spacing: -.4pt;
            border: 0; padding: 0; break-before: avoid; font-weight: 700;
-           font-variation-settings: "opsz" 40; }
-.tapa .t2 { color: %(acento)s; margin-bottom: 6mm; }
-.tapa .sub { font-size: 11pt; line-height: 1.5; text-align: left;
-             max-width: 118mm; margin: 0; hyphens: none;
-             border-top: 1.6pt solid %(acento)s; padding-top: 4mm;
+           color: %(tinta)s; }
+.tapa .t2 { color: %(acento)s; margin-bottom: 7mm; }
+.tapa .sub { font-size: 10.9pt; line-height: 1.45; text-align: left;
+             max-width: 128mm; margin: 0; hyphens: none; font-style: italic;
+             font-weight: 500; color: %(dato)s;
+             border-top: .75pt solid %(acento)s; padding-top: 4mm;
              display: inline-block; }
 /* --------------------------------------------------------------------
    INDICE
    -------------------------------------------------------------------- */
 .indice { break-before: page; }
-h1.ix-h { font-size: 17.5pt; margin-bottom: 5mm; }
+h1.ix-h { font-size: 16.5pt; margin-bottom: 6mm; }
 ul.ix { list-style: none; margin: 0; padding: 0;
         font-variant-numeric: tabular-nums lining-nums; }
 ul.ix li { margin: 0; }
 ul.ix a { color: %(tinta)s; display: block; text-decoration: none;
-          padding-bottom: 1.1mm; }
+          padding-bottom: 1.2mm; }
 ul.ix a::after { content: target-counter(attr(href), page); float: right;
-                 font-size: 8.2pt; color: %(tinta)s; opacity: .6;
+                 font-size: 8.6pt; color: %(tinta)s; opacity: .6;
                  padding-left: 3mm; }
-li.ix-cap { margin-top: 3.6mm; }
+li.ix-cap { margin-top: 4mm; }
 li.ix-cap:first-child { margin-top: 0; }
-li.ix-cap a { font-size: 10.8pt; color: %(acento)s;
-              border-bottom: .6pt solid %(acento)s; padding-bottom: 1.6mm; }
-li.ix-cap a::after { color: %(acento)s; opacity: 1; font-weight: bold;
-                     font-size: 8.4pt; }
-li.ix-sub a { font-size: 8.1pt; padding: .85mm 0 .85mm;
-              border-bottom: .4pt dotted rgba(22, 41, 58, .22); }
+li.ix-cap a { font-size: 11.2pt; font-weight: 600; color: %(acento)s;
+              border-bottom: .75pt solid %(acento)s; padding-bottom: 1.8mm; }
+li.ix-cap a::after { color: %(acento)s; opacity: 1; font-weight: 600;
+                     font-size: 8.6pt; }
+li.ix-sub a { font-size: 8.6pt; padding: 1mm 0;
+              border-bottom: .75pt dotted rgba(124, 46, 35, .22); }
 span.ix-n { display: inline-block; width: 11mm; color: %(acento)s;
-            font-weight: bold; }
+            font-weight: 600; }
 """ % dict(crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
            fila=FILA, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
-           sans=SANS, tipos=TIPOS, opsz=OPSZ_TEXTO, opszt=OPSZ_TITULO)
+           sans=SANS, tipos=TIPOS)
 
 
 # ==========================================================================
 # 6. VERIFICACION DEL PDF YA ARMADO
 # ==========================================================================
+
+# --------------------------------------------------------------------------
+# DECIMO VERIFICADOR: DENSIDAD DE COLOR, PAGINA POR PAGINA
+# --------------------------------------------------------------------------
+# Se muestrea el PDF ya armado y se cuenta, en cada pagina, que proporcion de
+# pixeles cae en un color de la paleta y que proporcion es papel. Una pagina
+# que es solo tipografia negra sobre crema es una pagina que el lector saltea,
+# y en la version anterior habia veinte seguidas asi.
+#
+# LOS UMBRALES SALEN DE LA REFERENCIA, MEDIDA. Sobre las treinta paginas del
+# Extra Time (04_diseno/MEDIDAS_EXTRATIME.md, seccion 8) el color ocupa 4,00 %
+# de media, con un minimo de 0,68 % y un maximo de 13,91 %; el papel ocupa
+# 80,9 % de media, con un maximo de 96,8 %. Los umbrales que se habian
+# propuesto —color por encima de 0,8 % y papel por debajo de 89 %— son mas
+# exigentes que la propia referencia y voltearian cuatro de sus treinta
+# paginas. Se toma el piso real de la referencia, 0,65 %, y su techo real,
+# 96 %, redondeados hacia el lado que perdona.
+#
+# La tapa y el indice quedan fuera: la tapa es una imagen a sangre y el indice
+# es una lista, y ninguna de las dos es una pagina de lectura.
+COLOR_MINIMO = 0.65      # % de pixeles de la pagina en un color de la paleta
+PAPEL_MAXIMO = 96.0      # % de pixeles de la pagina en crema
+
+
+def _paginas_a_pixeles(ruta, dpi=48):
+    """Cada pagina del PDF como un array de RGB. Usa pdftoppm, que ya esta."""
+    import glob
+    import shutil
+    import tempfile
+    import numpy as np
+    from PIL import Image
+    tmp = tempfile.mkdtemp(prefix="densidad-")
+    try:
+        subprocess.run(["pdftoppm", "-r", str(dpi), "-png", ruta,
+                        os.path.join(tmp, "p")], check=True,
+                       capture_output=True)
+        for f in sorted(glob.glob(os.path.join(tmp, "p-*.png"))):
+            with Image.open(f) as im:
+                yield np.asarray(im.convert("RGB")).astype(int)
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def verificar_densidad(ruta, desde=3):
+    """Denuncia cada pagina sin color o ahogada en papel. desde: 1-indexado."""
+    import numpy as np
+    fallas = []
+    paleta = [_hex_a_rgb(c) for c in (ACENTO, DATO, DATO_CLARO, ARENA, FILA)]
+    crema = np.array(_hex_a_rgb(CREMA))
+    for i, a in enumerate(_paginas_a_pixeles(ruta), start=1):
+        if i < desde:
+            continue
+        n = a.shape[0] * a.shape[1]
+        color = sum(int((np.abs(a - np.array(c)).sum(axis=2) < 60).sum())
+                    for c in paleta)
+        papel = int((np.abs(a - crema).sum(axis=2) < 20).sum())
+        pc, pp = 100.0 * color / n, 100.0 * papel / n
+        if pc < COLOR_MINIMO:
+            fallas.append("página %d: %.2f%% de color, hace falta %.2f%%"
+                          % (i, pc, COLOR_MINIMO))
+        elif pp > PAPEL_MAXIMO:
+            fallas.append("página %d: %.1f%% de papel, el techo es %.1f%%"
+                          % (i, pp, PAPEL_MAXIMO))
+    return fallas
+
+
+def _hex_a_rgb(h):
+    return tuple(int(h[i:i + 2], 16) for i in (1, 3, 5))
+
 
 def verificar_pdf(ruta):
     """Falla si sobrevive un pendiente, una nota de version, o aparece rojo."""
@@ -1334,6 +1479,8 @@ def main():
     from pypdf import PdfReader
     paginas = len(PdfReader(SALIDA).pages)
     problemas, txt = verificar_pdf(SALIDA)
+    apagadas = verificar_densidad(SALIDA)
+    problemas += apagadas
     # Los rotulos van en VERSALITAS: el texto real es minuscula y la fuente
     # dibuja las versalitas. pdftotext devuelve la minuscula, y ademas le mete
     # un espacio a cada letra interletrada. Por eso se cuenta sobre el texto sin

@@ -62,6 +62,15 @@ FILA = "#E8E4D9"         # filas alternadas de tabla
 # categorias y con seis colores solo hay tres tintas que se lean sobre el
 # crema. Esta es la salvia clara de la propia referencia —esta en sus paginas,
 # muestreada igual que las otras seis— y no un color nuevo inventado.
+# LOS DOS TONOS DE SUELO. No son colores nuevos: son la TINTA aguada sobre el
+# CREMA, al 12 % y al 22 %, y caen exactos sobre la recta que une los dos. Son
+# lo que sostiene un hueco de dato o separa dos filas, y estan hechos para NO
+# competir con lo que va encima. Antes ese trabajo lo hacia la ARENA, que es un
+# color de banda de tabla y de caja: puesta a hacer de dato quedaba a 1,15 de
+# contraste contra el papel, o sea invisible, y el noveno verificador la caza.
+HUECO = "#DDD7D0"        # la banda de un año sin dato
+FILETE = "#C8C2BB"       # una linea que separa, no que dice
+
 DATO_CLARO = "#7E9070"
 
 # Nombres viejos, para no romper nada que todavia los use. NO USAR EN CODIGO
@@ -83,35 +92,37 @@ ANCHO_IN = ANCHO_PX / DPI          # 5,333 pulgadas
 # LA TIPOGRAFIA DEL DOCUMENTO, TAMBIEN EN LOS GRAFICOS
 # --------------------------------------------------------------------------
 # Un exhibit rotulado con la fuente por defecto de matplotlib al lado de un
-# texto compuesto en Source Serif 4 se ve como una captura de pantalla pegada
-# adentro del documento. Asi que los graficos usan las mismas dos familias que
-# la pagina, cargadas de 05_tipografia/.
+# texto compuesto en Spectral se ve como una captura de pantalla pegada adentro
+# del documento. Asi que los graficos usan las mismas dos familias que la
+# pagina, cargadas de 05_tipografia/.
 #
-# Los archivos vendorizados son VARIABLES y matplotlib no sabe mover un eje:
-# carga la instancia por defecto y nada mas, o sea que no habria negrita. Por
-# eso se instancian —una vez, a un cache que no se versiona— los pesos que se
-# usan, y esas estaticas son las que se registran.
+# Spectral viene en cortes ESTATICOS: se registran tal cual, no hay nada que
+# instanciar. Inter es variable y matplotlib no sabe mover un eje —carga la
+# instancia por defecto y nada mas, o sea que no habria negrita—, asi que de
+# Inter se instancian los dos pesos que se usan a un cache que no se versiona.
 TIPOS = os.path.join(REPO, "05_tipografia")
 CACHE_TIPOS = os.path.join(REPO, "_tipos_estaticos")
 
+# Los cortes de Spectral se registran directo del repo.
+_ESTATICAS = ["Spectral-Regular.ttf", "Spectral-Italic.ttf",
+              "Spectral-Medium.ttf", "Spectral-MediumItalic.ttf",
+              "Spectral-SemiBold.ttf", "Spectral-Bold.ttf"]
+
 _INSTANCIAS = [
-    ("SourceSerif4[opsz,wght].ttf", "SourceSerif4-Regular.ttf",
-     {"opsz": 11, "wght": 400}),
-    ("SourceSerif4[opsz,wght].ttf", "SourceSerif4-Bold.ttf",
-     {"opsz": 11, "wght": 700}),
-    ("SourceSerif4-Italic[opsz,wght].ttf", "SourceSerif4-Italic.ttf",
-     {"opsz": 11, "wght": 400}),
     ("Inter[opsz,wght].ttf", "Inter-Regular.ttf", {"opsz": 14, "wght": 400}),
+    ("Inter[opsz,wght].ttf", "Inter-Medium.ttf", {"opsz": 14, "wght": 500}),
     ("Inter[opsz,wght].ttf", "Inter-Bold.ttf", {"opsz": 14, "wght": 700}),
 ]
 
 
 def _instanciar_tipografia():
-    """Genera y registra las estaticas. Devuelve (serif, sans) para rcParams."""
+    """Registra las estaticas y las instancias. Devuelve (serif, sans)."""
     from fontTools import ttLib
     from fontTools.varLib import instancer
     from matplotlib import font_manager
     os.makedirs(CACHE_TIPOS, exist_ok=True)
+    for nombre in _ESTATICAS:
+        font_manager.fontManager.addfont(os.path.join(TIPOS, nombre))
     for origen, destino, ejes in _INSTANCIAS:
         ruta_o = os.path.join(TIPOS, origen)
         ruta_d = os.path.join(CACHE_TIPOS, destino)
@@ -121,7 +132,7 @@ def _instanciar_tipografia():
             instancer.instantiateVariableFont(fuente, ejes, inplace=True)
             fuente.save(ruta_d)
         font_manager.fontManager.addfont(ruta_d)
-    return ["Source Serif 4", "DejaVu Serif"], ["Inter", "DejaVu Sans"]
+    return ["Spectral", "DejaVu Serif"], ["Inter", "DejaVu Sans"]
 
 
 try:
@@ -421,6 +432,7 @@ def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
     COLISIONES[nombre] = verificar_colisiones(fig)
     TEXTO_TAPADO[nombre] = verificar_texto_tapado(fig)
     DERRAMADOS[nombre] = verificar_texto_derramado(fig)
+    SIN_CONTRASTE[nombre] = verificar_contraste(fig)
     png = os.path.join(SALIDA, nombre + ".png")
     svg = os.path.join(SALIDA, nombre + ".svg")
     for ruta in (png, svg):
@@ -436,6 +448,7 @@ def guardar(fig, nombre, ajuste=None, encajar=True, transparente=False):
 
 
 DESBORDES = {}
+SIN_CONTRASTE = {}
 SIN_ACENTO = {}
 COLISIONES = {}
 
@@ -880,6 +893,137 @@ PROHIBIDOS = {"#d62728", "#ff0000", "red", "#2ca02c", "#00ff00", "green",
               "#1f77b4", "#ff7f0e", "tab:red", "tab:green", "tab:blue"}
 
 
+# --------------------------------------------------------------------------
+# NOVENO VERIFICADOR: CONTRASTE
+# --------------------------------------------------------------------------
+# El EXHIBIT 04 salio publicado con los ciento seis municipios dibujados en
+# ARENA #EAE0CF sobre el papel CREMA #F5F0E8. Los dos colores estan en la
+# paleta, asi que verificar_paleta dijo OK. Ninguno de los otros siete miraba
+# tampoco: no hay texto tapado —no hay texto—, no hay colision, no hay
+# desborde, el acento esta. Y el grafico no se veia: la relacion de contraste
+# entre esos dos cremas es 1,13, y el dato del grafico son esos puntos.
+#
+# LA REGLA. Una SERIE es de un color; una ESCALA es de muchos. Una serie tiene
+# que separarse del fondo lo suficiente para verse: se le pide 1,7 de relacion
+# de contraste WCAG, que es lo que deja pasar la salvia (4,64), la salvia clara
+# (3,22), el ladrillo (8,1) y la tinta (14,3), y lo que voltea a la arena
+# (1,13) y al color de fila (1,10). Esos dos ultimos son fondo de banda y de
+# caja, no son colores de dato, y ahi es donde se habian metido.
+#
+# Un artista con TRES O MAS colores distintos es una escala —la rampa de los
+# mapas, por ejemplo— y ahi lo que importa no es que cada tono se separe del
+# papel sino que la escala entera tenga recorrido: se le mira el extremo mas
+# oscuro y se le pide lo mismo que a una serie.
+UMBRAL_CONTRASTE = 1.7
+
+
+def _luminancia(rgb):
+    """Luminancia relativa WCAG de un color en 0..1."""
+    def canal(c):
+        return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = (canal(float(c)) for c in rgb[:3])
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def contraste(color_a, color_b):
+    """Relacion de contraste WCAG entre dos colores, de 1 a 21."""
+    from matplotlib.colors import to_rgb
+    la, lb = _luminancia(to_rgb(color_a)), _luminancia(to_rgb(color_b))
+    hi, lo = max(la, lb), min(la, lb)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+def _colores_del_artista(art):
+    """Los colores con que un artista PINTA, ya sean relleno o trazo."""
+    import numpy as np
+    fuera = []
+    for getter in ("get_facecolor", "get_facecolors", "get_color",
+                   "get_edgecolor", "get_edgecolors"):
+        f = getattr(art, getter, None)
+        if f is None:
+            continue
+        try:
+            v = f()
+        except Exception:                                # pragma: no cover
+            continue
+        if v is None:
+            continue
+        a = np.atleast_2d(np.asarray(v, dtype=object))
+        if a.dtype == object or a.ndim != 2 or a.shape[1] < 3:
+            try:
+                from matplotlib.colors import to_rgba
+                a = np.atleast_2d([to_rgba(v)])
+            except Exception:                            # pragma: no cover
+                continue
+        for fila in np.asarray(a, dtype=float):
+            if len(fila) >= 4 and fila[3] < 0.25:        # transparente
+                continue
+            fuera.append(tuple(round(float(c), 4) for c in fila[:3]))
+        if fuera and getter in ("get_facecolor", "get_facecolors",
+                                "get_color"):
+            break                                        # el relleno manda
+    return fuera
+
+
+def verificar_contraste(fig, umbral=UMBRAL_CONTRASTE):
+    """Denuncia todo color de serie que no se separa del fondo que lo sostiene.
+
+    Devuelve una lista de descripciones; vacia quiere decir que todo lo que
+    pinta se ve.
+    """
+    from matplotlib.colors import to_rgb
+    fallas = []
+    for ax in fig.axes:
+        fondo = ax.get_facecolor()
+        if len(fondo) >= 4 and fondo[3] < 0.25:
+            fondo = fig.get_facecolor()
+        piezas = (list(ax.collections) + list(ax.patches) + list(ax.lines))
+        for art in piezas:
+            if not art.get_visible():
+                continue
+            cols = _colores_del_artista(art)
+            if not cols:
+                continue
+            unicos = sorted(set(cols))
+            # Los halos y los bordes en el color del papel no son dato, y el
+            # SUELO del mapa tampoco: el agua, los partidos vecinos y las vias
+            # son la tinta aguada sobre el crema —caen exactos sobre la recta
+            # que une los dos— y estan dibujados justamente para NO competir
+            # con el dato que va encima. Pedirles 1,7 seria pedirle al mapa que
+            # se rompa para callar al verificador. La arena y el color de fila
+            # no caen sobre esa recta, asi que siguen fallando: son colores de
+            # banda y de caja que se habian metido a hacer de serie.
+            unicos = [c for c in unicos
+                      if contraste(c, fondo) > 1.02
+                      and not _es_tinta_aguada(*[x * 255 for x in c])]
+            if not unicos:
+                continue
+            if len(unicos) >= 3:                          # es una escala
+                revisar = [max(unicos, key=lambda c: contraste(c, fondo))]
+                que = "la escala de %s" % type(art).__name__
+            else:
+                revisar = unicos
+                que = type(art).__name__
+            for c in revisar:
+                r = contraste(c, fondo)
+                if r < umbral:
+                    fallas.append(
+                        "%s pinta en #%02x%02x%02x sobre #%02x%02x%02x: "
+                        "contraste %.2f, hace falta %.2f"
+                        % (que, int(c[0] * 255), int(c[1] * 255),
+                           int(c[2] * 255),
+                           int(to_rgb(fondo)[0] * 255),
+                           int(to_rgb(fondo)[1] * 255),
+                           int(to_rgb(fondo)[2] * 255), r, umbral))
+    # Un mismo color mal usado en cuatro artistas da cuatro lineas iguales.
+    vistas, salida = set(), []
+    for f in fallas:
+        if f not in vistas:
+            vistas.add(f)
+            salida.append(f)
+    return salida
+
+
 def verificar_paleta(nombre):
     """
     Abre el SVG generado y busca colores prohibidos. Es la red que atrapa un
@@ -943,6 +1087,24 @@ def _es_dilucion(r, g, b, tolerancia=7):
                 and abs(b - pz) <= tolerancia):
             return True
     return False
+
+
+def _es_tinta_aguada(r, g, b, tolerancia=6):
+    """True si el color cae sobre la recta que une el CREMA con la TINTA.
+
+    Es el suelo de los mapas: el agua es la tinta al 8 % sobre el crema, los
+    partidos vecinos al 5 %, las vias al 20 %. Ninguno es un color de dato.
+    La ARENA no cae sobre esa recta —su azul se aparta catorce puntos— asi que
+    esta funcion no la perdona.
+    """
+    base, fin = _hex_a_rgb(CREMA), _hex_a_rgb(TINTA)
+    dr, dg, db = (fin[k] - base[k] for k in range(3))
+    denom = dr * dr + dg * dg + db * db
+    t = ((r - base[0]) * dr + (g - base[1]) * dg + (b - base[2]) * db) / denom
+    if not -0.02 <= t <= 1.02:
+        return False
+    return all(abs(v - (base[k] + d * t)) <= tolerancia
+               for k, (v, d) in enumerate(zip((r, g, b), (dr, dg, db))))
 
 
 def _hex_a_rgb(h):

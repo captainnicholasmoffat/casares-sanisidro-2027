@@ -237,7 +237,7 @@ def ex14():
     for i, (etiqueta, v) in enumerate((("Año 1", vecinal1), ("Año 4", vecinal4))):
         ax.barh([i], [v / 1e6], height=0.42, color=E.DATO, zorder=4)
         ax.barh([i], [(obra - v) / 1e6], left=v / 1e6, height=0.42,
-                color=E.ARENA, zorder=3)
+                color=E.DATO_CLARO, zorder=3)
         afuera = _rotulo_de_tramo(
             fig, ax, "deciden los vecinos\n%s M   %s"
             % (E.numero(v / 1e6), E.pct(100 * v / obra, 1)),
@@ -681,6 +681,26 @@ def ex16():
     return E.guardar(fig, "EXHIBIT_16_mapa_radios_nbi")
 
 
+def _encuadre_vertical(zonas, proporcion=297 / 210):
+    """El encuadre del partido estirado a la proporcion de una hoja A4.
+
+    MB.encuadre devuelve el rectangulo ajustado al partido mas un margen, y su
+    forma es la del partido. Puesto en una pagina vertical, matplotlib respeta
+    la escala —un mapa no se deforma— y sobra papel arriba y abajo o el motor
+    de PDF recorta los costados. Estirando el encuadre por el lado corto ANTES
+    de dibujar, el mapa llena la hoja con mas territorio, no con mas escala.
+    """
+    x0, y0, x1, y1 = MB.encuadre(zonas)
+    ancho, alto = x1 - x0, y1 - y0
+    if alto / ancho < proporcion:
+        falta = ancho * proporcion - alto
+        y0, y1 = y0 - falta / 2, y1 + falta / 2
+    else:
+        falta = alto / proporcion - ancho
+        x0, x1 = x0 - falta / 2, x1 + falta / 2
+    return x0, y0, x1, y1
+
+
 def tapa_mapa():
     """El mapa de la tapa: SOLO los seis nombres.
 
@@ -704,8 +724,14 @@ def tapa_mapa():
     z["pct_nbi"] = z["pct_nbi"].astype(float)
     vmin, vmax = z["pct_nbi"].min(), z["pct_nbi"].max()
 
-    fig, ax = E.figura(4.15)
-    caja = MB.dibujar(ax, z, vias=False, nombres_vecinos=False)
+    # LA TAPA ES UNA PAGINA A4 ENTERA, ASI QUE EL MAPA SE DIBUJA EN A4.
+    # Estaba dibujado apaisado, 5,33 x 4,15 pulgadas, y la pagina lo recortaba
+    # por los costados para llenarla: Acassuso se perdia contra el borde
+    # derecho. Dibujado ya en 1:1,414 no hay nada que recortar, y ademas el
+    # partido —que es una franja en diagonal— agradece el formato vertical.
+    fig, ax = E.figura(E.ANCHO_IN * 297 / 210)
+    caja = MB.dibujar(ax, z, caja=_encuadre_vertical(z), vias=False,
+                      nombres_vecinos=False)
     z.plot(ax=ax, column="pct_nbi", cmap=E.rampa(), vmin=vmin, vmax=vmax,
            edgecolor=E.CREMA, linewidth=0.5, zorder=3)
     z.dissolve().boundary.plot(ax=ax, edgecolor=E.TINTA, linewidth=0.5, zorder=4)
@@ -723,7 +749,8 @@ def tapa_mapa():
 
     E.apagar_ejes(ax)
     E.sin_offset(ax)
-    fig.subplots_adjust(left=0.02, right=0.98, top=0.98, bottom=0.02)
+    # A SANGRE: el mapa de tapa no tiene margen, llega a los cuatro bordes.
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
     ax.set_xlim(caja[0], caja[2])
     ax.set_ylim(caja[1], caja[3])
     MB.relieve_encima(ax, z, caja)

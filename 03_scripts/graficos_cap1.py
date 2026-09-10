@@ -42,11 +42,12 @@ def ex01():
 
     ax.bar([a for a, _ in con], [v for _, v in con], width=0.68,
            color=E.DATO, zorder=3)
-    # Los anios sin dato: banda vertical en CAL y la palabra, para que el hueco
-    # se vea como hueco y no como un cero.
+    # Los anios sin dato: banda vertical en el tono de HUECO y la palabra, para
+    # que el hueco se vea como hueco y no como un cero. Va en tinta aguada y no
+    # en arena a proposito: no es una serie, es la ausencia de una.
     tope = max(v for _, v in con)
     for a in sin:
-        ax.bar([a], [tope], width=0.68, color=E.ARENA, zorder=2)
+        ax.bar([a], [tope], width=0.68, color=E.HUECO, zorder=2)
         ax.text(a, tope * 0.5, "sin\nrendición", ha="center", va="center",
                 fontsize=5.6, color=E.TINTA, alpha=0.55, rotation=90)
 
@@ -292,7 +293,7 @@ def ex05():
          "Peso de la obra pública", "bienes de uso sobre gasto devengado",
          "1 = el que más invierte en obra"),
     ]
-    fig = E.figura(3.5, ejes=False)[0]
+    fig = E.figura(3.1, ejes=False)[0]
     ejes = fig.subplots(1, 2)
     for ax, (clave, puesto, titulo, subtitulo, sentido) in zip(ejes, paneles):
         vals = sorted(float(f[clave]) for f in filas)
@@ -300,8 +301,13 @@ def ex05():
         si = [f for f in filas if f["municipio"] == "San Isidro"][0]
         v_si, p_si = float(si[clave]), int(si[puesto])
 
-        ax.scatter(vals, range(1, n + 1), s=7, color=E.ARENA, zorder=3,
-                   edgecolors="none")
+        # LOS 106 EN SALVIA, NO EN ARENA. Dibujados en ARENA #EAE0CF sobre
+        # el papel CREMA #F5F0E8 los ciento seis municipios eran invisibles:
+        # dos tonos de crema separados por diez unidades de luminosidad. El
+        # dato de este grafico son ellos —San Isidro solo tiene sentido contra
+        # ellos— y no se veian. Van en DATO, y San Isidro en ACENTO.
+        ax.scatter(vals, range(1, n + 1), s=9, color=E.DATO, zorder=3,
+                   edgecolors="none", alpha=0.85)
         ax.axvline(mediana, color=E.TINTA, linewidth=0.9, zorder=4,
                    linestyle=(0, (3, 2)))
         # La tira siempre va de menor a mayor, en los dos paneles: la fila del
@@ -310,36 +316,58 @@ def ex05():
         # abajo. Mezclar las dos cosas dibujaria a San Isidro cuarto desde
         # abajo cuando es cuarto desde arriba.
         y_si = vals.index(v_si) + 1
-        ax.scatter([v_si], [y_si], s=34, color=E.DATO, zorder=6,
-                   edgecolors=E.CREMA, linewidths=0.8)
-        # La etiqueta va del lado donde queda lienzo: si el punto esta pasada
-        # la mitad del eje, a la izquierda.
-        derecha = v_si < max(vals) * 0.55
+        ax.scatter([v_si], [y_si], s=52, color=E.ACENTO, zorder=6,
+                   edgecolors=E.CREMA, linewidths=1.0)
+        # LAS DOS ETIQUETAS VAN A LAS DOS CUÑAS VACIAS. Los puntos forman una
+        # diagonal de abajo-izquierda a arriba-derecha, asi que el lienzo
+        # libre son las esquinas de arriba-izquierda y abajo-derecha. Antes la
+        # etiqueta de San Isidro salia hacia el lado con mas lienzo horizontal
+        # y en el panel de obra ese lado era el de la mediana: el nombre
+        # quedaba atravesado por la linea de puntos y encima de los datos.
+        # Bajandola a la cuña de abajo-derecha no cruza nada, y la mediana
+        # sube a la de arriba-izquierda.
+        # Cual de las dos cuñas usar depende de donde caiga el punto: si esta
+        # en la mitad de arriba de la tira, la que le queda libre y con lienzo
+        # es la de abajo-derecha; si esta en la mitad de abajo, la de
+        # arriba-izquierda. Bajando siempre —que fue el primer intento— la
+        # etiqueta del panel de personal, con San Isidro en el puesto 20, se
+        # caia del eje y se sentaba encima de los porcentajes.
+        alto = y_si > n / 2
         ax.annotate("San Isidro  %s\npuesto %d de %d" % (E.pct(v_si, 1), p_si, n),
-                    (v_si, y_si), xytext=(7 if derecha else -7, 0),
+                    (v_si, y_si), xytext=(7, -6) if alto else (-7, 6),
                     textcoords="offset points",
-                    ha="left" if derecha else "right", va="center",
-                    fontsize=6.8, color=E.DATO, weight="bold",
+                    ha="left" if alto else "right",
+                    va="top" if alto else "bottom",
+                    fontsize=6.8, color=E.ACENTO, weight="bold",
+                    linespacing=1.35,
                     path_effects=[withStroke(linewidth=2.6,
                                              foreground=E.CREMA)])
-        # El rotulo de la mediana se apoya en la punta de la linea que queda
-        # LEJOS de San Isidro. Con las dos en el mismo extremo se pisaban, y
-        # cual extremo esta libre depende del panel: en personal San Isidro
-        # esta abajo, en obra arriba.
-        arriba = y_si < n / 2
+        # La mediana se apoya al PIE de su linea y hacia la derecha. Ese
+        # rincon —debajo del primer decil y a la derecha de la mediana— esta
+        # vacio en los dos paneles porque la tira de puntos arranca pegada al
+        # cero. Arriba peleaba con el rotulo del eje y con San Isidro.
         ax.annotate("mediana de los %d\n%s" % (n, E.pct(mediana, 1)),
-                    (mediana, n if arriba else 0),
-                    xytext=(4, -2 if arriba else 3),
-                    textcoords="offset points", ha="left",
-                    va="top" if arriba else "bottom", fontsize=6.2,
-                    color=E.TINTA)
+                    (mediana, 1), xytext=(5, 0),
+                    textcoords="offset points", ha="left", va="bottom",
+                    fontsize=6.2, color=E.TINTA, linespacing=1.35,
+                    path_effects=[withStroke(linewidth=2.6,
+                                             foreground=E.CREMA)])
         ax.set_title("%s\n%s" % (titulo, subtitulo), fontsize=7.2,
                      color=E.TINTA, loc="left", pad=6, linespacing=1.4)
         ax.set_xlabel(sentido, fontsize=6.2, color=E.TINTA, alpha=0.72)
         ax.xaxis.set_major_formatter(E.eje_pct(0))
-        ax.set_xlim(0, max(vals) * 1.45)
-        ax.set_ylim(0, n * 1.12)
-        ax.set_yticks([])
+        # EL EJE SE AJUSTA AL DATO. Con 1,45 el panel de obra llegaba al 33 %%
+        # cuando el municipio mas alto tiene 25: un tercio del ancho era papel
+        # en blanco, y la nube de puntos quedaba apretada contra el margen
+        # izquierdo. El 1,08 deja el aire justo para que el punto mas alto no
+        # toque el borde.
+        ax.set_xlim(0, max(vals) * 1.08)
+        ax.set_ylim(0.5, n + 0.5)
+        # El eje vertical es el orden, y hasta ahora no lo decia: sin un solo
+        # rotulo el lector no sabia si la altura era una cifra o un ranking.
+        ax.set_yticks([1, n])
+        ax.set_yticklabels(["1", str(n)], fontsize=6.2)
+        ax.tick_params(axis="y", length=0, pad=2)
         E.limpiar(ax, grilla="x")
         E.podar_tick_superior(ax, "x", 4)
 

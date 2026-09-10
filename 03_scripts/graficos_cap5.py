@@ -93,7 +93,8 @@ def ex18():
 
     fig, ax = E.figura(2.8)
     izq = 0.0
-    for etiqueta, v, color in (("Todo el resto del presupuesto", resto, E.ARENA),
+    for etiqueta, v, color in (("Todo el resto del presupuesto", resto,
+                                E.DATO_CLARO),
                                ("Vivienda", vivienda, E.DATO),
                                ("Empleo", empleo, E.ACENTO)):
         ax.barh([0], [v / 1e6], left=izq / 1e6, height=0.3, color=color, zorder=3)
@@ -197,7 +198,7 @@ def ex19():
                     (X_EVIDENCIA, y - 0.24), ha="left", va="center",
                     fontsize=6.2, color=E.TINTA, alpha=0.66)
         if i:
-            ax.axhline(y + 0.58, color=E.ARENA, linewidth=0.8, zorder=2)
+            ax.axhline(y + 0.58, color=E.FILETE, linewidth=0.8, zorder=2)
 
     ax.annotate("cumplidas hoy: %d de %d" % (cumplidas, n),
                 (X_CASILLA, n - 0.30), ha="left", va="center", fontsize=6.4,

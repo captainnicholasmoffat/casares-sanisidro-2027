@@ -222,7 +222,7 @@ def ex11():
     fig, ax = E.figura(2.9)
     tramos = [("Personal y deuda\nno se tocan", nucleo, E.TINTA),
               ("Contratos de servicios\nno dentro del ejercicio", contratos,
-               E.ARENA, E.TINTA),
+               E.DATO_CLARO, E.TINTA),
               ("Gasto flexible\nreasignable", flexible, E.DATO)]
     izq = 0.0
     for tramo in tramos:
