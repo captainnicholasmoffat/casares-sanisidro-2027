@@ -156,39 +156,73 @@ CORTES_SERIF = [("Spectral-Regular.ttf", 400, "normal"),
                 ("Spectral-Bold.ttf", 700, "normal")]
 
 # --------------------------------------------------------------------------
-# LOS HUECOS DE LAS IMAGENES GENERADAS
+# LAS ILUSTRACIONES
 # --------------------------------------------------------------------------
-# La tapa y la apertura de cada capitulo llevan una imagen generada. NO se
-# generan aca ni las genera este armador: llegan como archivos a 08_imagenes/ y
-# el armador solo las coloca. Si no estan, el documento se arma igual — la tapa
-# vuelve al mapa y los capitulos abren sin banda — asi que el hueco vacio nunca
-# rompe el build.
+# Once ilustraciones, cada una en el lugar donde el texto habla de eso. NO se
+# generan aca: llegan como archivos a 09_imagenes/ y el armador solo las
+# coloca. Si falta alguna el documento se arma igual, sin ella.
 #
-# QUE TIENE QUE LLEGAR, Y CON QUE MEDIDA:
+# CADA UNA LLEVA SU PIE. Ninguna representa a una persona identificable ni
+# documenta un hecho concreto, y el documento tiene que decirlo: si alguien
+# descubriera que una imagen se ofrece como fotografia de un lugar o de un
+# vecino de San Isidro, el documento pierde lo unico que tiene, que es que se
+# le pueden revisar las cuentas.
+IMAGENES = os.path.join(RAIZ, "09_imagenes")
+PIE_ILUSTRACION = "Ilustración."
+
+# La tapa, a sangre, con el titulo encima.
+TAPA_ILUSTRACION = "01_costanera_juncos_a"
+
+# La banda que abre cada capitulo, al ancho de la caja y arriba del titulo.
+APERTURAS = {
+    "cap1_diagnostico": "02_catedral_a",
+    "cap3_la_plata": "07_barranca_escalinata_a",
+    "cap4_mecanismo": "11_asamblea_vecinal_a",
+    "cap5_sectorial": "08_puerto_nautica_a",
+}
+
+# Las de adentro, al final de la subseccion que nombra la clave. Una lista de
+# dos imagenes se compone como un PAR ENFRENTADO, mitad y mitad.
 #
-#   08_imagenes/tapa.png            2480 x 3508 px   vertical, 1:1,414 (A4)
-#                                   sangra la pagina entera, con el titulo
-#                                   encima; la mitad de arriba tiene que quedar
-#                                   tranquila para que el titulo se lea.
-#
-#   08_imagenes/apertura_cap1.png   2100 x 700 px    apaisada, 3:1
-#   … hasta apertura_cap6.png       banda al ancho de la caja de texto, arriba
-#                                   del titulo de capitulo.
-#
-# Las dos a 300 dpi. ABSTRACTAS O CONCEPTUALES: ninguna imagen puede parecer
-# una fotografia de un lugar o de una persona de San Isidro. Si alguien
-# descubriera que una imagen de La Cava o de Beccar es sintetica, el documento
-# pierde lo unico que tiene, que es que se le pueden revisar las cuentas.
-# Por eso ademas cada una lleva su linea al pie diciendo que es una ilustracion.
-IMAGENES = os.path.join(RAIZ, "08_imagenes")
-PIE_ILUSTRACION = ("Ilustración generada. No es una fotografía de San Isidro "
-                   "ni de ninguno de sus barrios.")
+# El par de la 1.1 es el argumento del capitulo en dos fotos: Boulogne con sus
+# cables y su poda a muñon contra Martinez con la copa cerrada. Por eso van
+# juntas y no una en cada pagina.
+DENTRO = {
+    "cap1_diagnostico": {
+        "1.1": (["04_boulogne_obra_b", "05_martinez_calle_a"],
+                "Boulogne Sur Mer y Martínez. La misma distancia al río, "
+                "la misma tasa municipal."),
+        "1.5": (["06_villa_adelina_comercial_b"], None),
+        "1.6": (["03_plaza_mitre_b"], None),
+    },
+    "cap5_sectorial": {
+        "5.3": (["10_taller_formacion_a"], None),
+        "5.6": (["09_tren_costa_b"], None),
+    },
+}
 
 
 def imagen(nombre):
-    """La ruta de una imagen generada, o None si todavia no llego."""
-    ruta = os.path.join(IMAGENES, nombre)
-    return ruta if os.path.exists(ruta) else None
+    """La ruta de una ilustracion, o None si todavia no llego."""
+    for ext in (".jpg", ".png"):
+        ruta = os.path.join(IMAGENES, nombre + ext)
+        if os.path.exists(ruta):
+            return ruta
+    return None
+
+
+def _figura_ilustracion(nombres, pie, clase=""):
+    """Una ilustracion, o dos enfrentadas, con su pie."""
+    rutas = [imagen(n) for n in nombres]
+    if any(r is None for r in rutas):
+        return None
+    imgs = "".join('<img src="file://%s" alt=""/>' % r for r in rutas)
+    if len(rutas) > 1:
+        imgs = '<div class="par">%s</div>' % imgs
+    texto = ("%s %s" % (html.escape(pie), PIE_ILUSTRACION) if pie
+             else PIE_ILUSTRACION)
+    return ('<figure class="ilu %s">%s<figcaption>%s</figcaption></figure>'
+            % (clase, imgs, texto))
 
 
 MARCADOR = "# NO VA AL PDF"
@@ -500,7 +534,13 @@ def _tabla(bloque):
     # Una tabla de dos columnas cortas entra comoda adentro de una columna de
     # 84 mm y ahi hace su trabajo. Una de cuatro columnas, o una de dos con
     # celdas de parrafo —las del anexo—, necesita el ancho de la caja.
-    ancha = len(cols) >= 4 or largo > 58
+    # TODAS LAS TABLAS VAN AL ANCHO DE LA CAJA. En la referencia no hay una
+    # sola tabla metida adentro de una columna, y hay un motivo mecanico
+    # ademas del estetico: una tabla dentro de una banda a dos columnas se
+    # parte por la mitad y la columna de al lado arranca con una fila suelta
+    # —"324.304 34,4 17,8"— o peor, con la cabecera. break-inside: avoid no
+    # alcanza para impedirlo.
+    ancha = True
 
     out = ['<div class="tw%s">' % (" ancho" if ancha else "")]
     out.append("<table><thead><tr>")
@@ -519,11 +559,11 @@ def _tabla(bloque):
 
 
 def _apertura(slug):
-    """La banda ilustrada que abre un capitulo, si llego su archivo."""
-    m = re.match(r"^cap(\d+)_", slug)
-    if not m:
+    """La banda ilustrada que abre un capitulo, si le toca una."""
+    nombre = APERTURAS.get(slug)
+    if not nombre:
         return ""
-    ruta = imagen("apertura_cap%s.png" % m.group(1))
+    ruta = imagen(nombre)
     if not ruta:
         return ""
     return ('<figure class="apertura"><img src="file://%s" alt=""/>'
@@ -575,6 +615,22 @@ def bloques(md, slug):
     # entrada de lectura en vez de tirar al lector directo a una columna de
     # 85 mm. Se marca el parrafo que sigue a la bajada del capitulo.
     toca_entrada = [False]
+    # LAS ILUSTRACIONES DE ADENTRO VAN AL FINAL DE SU SUBSECCION, no al
+    # principio: la seccion desarrolla su argumento y la imagen lo cierra.
+    # Se guarda cual esta pendiente y se suelta al llegar al titulo siguiente
+    # o al terminar el capitulo.
+    dentro = dict(DENTRO.get(slug, {}))
+    pendiente = [None]
+
+    def soltar_ilustracion():
+        if pendiente[0] is None:
+            return
+        nombres, pie = pendiente[0]
+        pendiente[0] = None
+        fig = _figura_ilustracion(nombres, pie,
+                                  "par" if len(nombres) > 1 else "sola")
+        if fig:
+            add(True, fig)
 
     def add(ancho, htm):
         # La entrada es el parrafo que viene PEGADO al titulo o a la bajada, no
@@ -682,6 +738,9 @@ def bloques(md, slug):
             sid = "%s-%s" % (slug, len(subsecciones))
             if m2:
                 subsecciones.append((sid, m2.group(1), m2.group(2)))
+                soltar_ilustracion()
+                if m2.group(1) in dentro:
+                    pendiente[0] = dentro.pop(m2.group(1))
                 toca_entrada[0] = True
                 add(True, '<h2 id="%s"><span class="n">%s</span>%s</h2>'
                     % (sid, m2.group(1), _inline(m2.group(2))))
@@ -692,10 +751,11 @@ def bloques(md, slug):
 
         elif l.startswith("# "):
             vistos_h1 += 1
-            banda = _apertura(slug)
-            if banda:
-                add(True, banda)
-            add(True, _h1(l[2:], slug))
+            # LA BANDA Y EL TITULO SON UNA SOLA PIEZA. Emitidas por separado,
+            # la banda se quedaba al pie de la pagina anterior y el titulo
+            # saltaba solo a la siguiente: el capitulo abria con una foto
+            # cerrando el capitulo de antes.
+            add(True, _apertura(slug) + _h1(l[2:], slug))
 
         elif l.startswith("> "):
             j, cita = i, []
@@ -765,6 +825,7 @@ def bloques(md, slug):
             else:
                 add(False, "<p>%s</p>" % _inline(txt))
         i += 1
+    soltar_ilustracion()
     return out, subsecciones
 
 
@@ -965,19 +1026,33 @@ def cerrar_capitulo(piezas_de_seccion):
     #
     # SE FRENA EN LO PRIMERO QUE NO SEA PROSA. Tragarse un exhibit haria un
     # bloque indivisible de media pagina, que es el problema del otro lado.
+    # EL RECORRIDO HACIA ATRAS, hasta juntar con que sostener una pagina.
+    # Con una sola banda no alcanzaba: el capitulo 2 cierra con un parrafo de
+    # dos lineas y la pagina seguia al 15 %. Y frenando en lo primero que no
+    # es prosa tampoco: en los capitulos 3 y 5 lo que hay detras de la nota es
+    # un titulo, el bloque quedaba en setecientos caracteres, se iba solo a
+    # una pagina nueva y esa pagina salia al 2 %.
+    #
+    # Asi que se cruza lo que haga falta, CON UN SOLO LIMITE: una figura. Un
+    # exhibit mide media pagina; dos, mas que una pagina entera, y ahi el
+    # bloque indivisible se vuelve el problema del otro lado.
     corte = len(piezas_de_seccion) - 1
     texto = len(_texto_plano(piezas_de_seccion[-1]["html"]))
-    while corte > 0:
+    figuras = 0
+    while corte > 0 and texto < CIERRE_MINIMO:
         previa = piezas_de_seccion[corte - 1]
-        # Prosa es todo menos una figura y menos un titulo: un remate o una
-        # cifra destacada son quince milimetros y viajan sin problema. Una
-        # figura haria un bloque indivisible de media pagina —el problema del
-        # otro lado— y un titulo tiene que poder abrir pagina.
-        es_prosa = previa["tipo"] not in ("figura", "titulo")
-        if not es_prosa or texto >= CIERRE_MINIMO:
-            break
+        if previa["tipo"] == "figura":
+            if figuras:
+                break
+            figuras += 1
         texto += len(_texto_plano(previa["html"]))
         corte -= 1
+    if texto < CIERRE_MINIMO:
+        # Ni asi alcanza: entonces se parte la nota, que se lee mucho mejor
+        # que una pagina en blanco con una nota arriba.
+        piezas_de_seccion[-1]["html"] = piezas_de_seccion[-1]["html"].replace(
+            'class="nota-envoltorio"', 'class="nota-envoltorio parte"', 1)
+        return piezas_de_seccion
     if corte == len(piezas_de_seccion) - 1:
         return piezas_de_seccion
     cola = piezas_de_seccion[corte:]
@@ -1152,7 +1227,7 @@ def tapa():
 
     Sin nombre ni foto del candidato. Decision cerrada en la identidad.
     """
-    ilustracion = imagen("tapa.png")
+    ilustracion = imagen(TAPA_ILUSTRACION)
     if ilustracion:
         fondo = ('<img class="tapa-img cubre" src="file://%s" alt=""/>'
                  '<p class="tapa-credito">%s</p>' % (ilustracion,
@@ -1363,7 +1438,9 @@ body { font-family: "%(serif)s", Georgia, serif; font-size: %(cuerpo).2fpt;
 .con-titulo .banda { margin-top: 0; }
 
 p { margin: 0 0 .5em; text-align: justify; hyphens: auto; }
-p, li { orphans: 3; widows: 3; }
+/* Cuatro lineas: con tres, una columna todavia podia arrancar con el resto
+   de una oracion —"lo demuestra."— y eso se lee como un renglon perdido. */
+p, li { orphans: 4; widows: 4; }
 /* EL COLOR ENTRA POR LA PROSA, como en la referencia: las negritas del cuerpo
    no son negras. El texto no se toca —las negritas ya estaban escritas—, lo
    unico que cambia es de que color salen. */
@@ -1475,7 +1552,10 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
                 font-size: %(fuente).1fpt; line-height: %(fuente_int).3f;
                 color: %(tinta)s; font-style: italic; opacity: .68;
                 columns: 2; column-gap: %(md).1fmm; }
+/* La nota no se parte... salvo cuando partirla es lo unico que evita una
+   pagina en blanco con una nota arriba. Lo decide cerrar_capitulo(). */
 .nota-envoltorio { break-inside: avoid; }
+.nota-envoltorio.parte { break-inside: auto; }
 .cierre { break-inside: avoid; }
 .nota-lectura p { margin: 0 0 .4em; text-align: left; hyphens: none; }
 .nota-lectura strong { color: inherit; }
@@ -1576,15 +1656,36 @@ pre.listado { font-family: "DejaVu Sans Mono"; font-size: %(mono).1fpt;
                 font-family: "%(sans)s"; font-size: %(pie_pt).1fpt;
                 letter-spacing: .3pt; color: %(tinta)s; opacity: .65; }
 
-figure.apertura { margin: 0 0 %(sep_caja).1fmm; break-after: avoid;
-                  break-inside: avoid; }
-figure.apertura img { display: block; width: 100%%; height: 44mm;
-                      object-fit: cover; }
-figure.apertura figcaption { font-family: "%(sans)s";
-                             font-size: %(pie_pt).1fpt; letter-spacing: .2pt;
-                             color: %(tinta)s; opacity: .55;
-                             margin-top: 1.4mm; text-align: right; }
+/* --------------------------------------------------------------------
+   LAS ILUSTRACIONES
+   --------------------------------------------------------------------
+   Las once son verticales, de 3:4. Recortadas a una banda de 4:1 no queda
+   nada de la imagen, asi que la apertura de capitulo es una banda ALTA —2,3
+   a 1— y las de adentro se recortan a apaisado suave. El pie va en Spectral
+   italico gris, el mismo que la fuente de un exhibit: es una nota al pie de
+   una pieza, no un rotulo.
+   -------------------------------------------------------------------- */
+figure.apertura { margin: 0 0 %(sep_caja).1fmm; break-before: page;
+                  break-after: avoid; break-inside: avoid; }
+/* Con la banda delante, el salto de pagina lo lleva ella y el titulo va
+   pegado detras. */
 figure.apertura + h1 { break-before: avoid; }
+figure.apertura img { display: block; width: 100%%; height: 78mm;
+                      object-fit: cover; }
+figure.apertura figcaption, figure.ilu figcaption {
+    font-style: italic; font-size: %(fuente).1fpt;
+    line-height: %(fuente_int).3f; color: %(tinta)s; opacity: .68;
+    margin-top: %(sep_fig).1fmm; text-align: left; }
+figure.apertura + h1 { break-before: avoid; }
+
+figure.ilu { margin: %(sep).1fmm 0; break-inside: avoid; }
+figure.ilu.sola img { display: block; width: 100%%; height: 76mm;
+                      object-fit: cover; }
+/* EL PAR ENFRENTADO. Mitad y mitad, separadas por el mismo medianil que las
+   columnas: las dos fotos se leen como una sola pieza de comparacion. */
+figure.ilu .par { display: flex; gap: %(md).1fmm; }
+figure.ilu .par img { display: block; width: 50%%; height: 66mm;
+                      object-fit: cover; }
 .tapa-txt { position: absolute; left: %(mg).1fmm; top: 22mm;
             width: %(cj).1fmm; }
 .tapa h1 { font-size: %(tapa_h1).1fpt; line-height: 1.06; margin: 0;
