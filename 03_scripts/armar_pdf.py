@@ -540,10 +540,12 @@ def bloques(md, slug):
     toca_entrada = [False]
 
     def add(ancho, htm):
-        # Cualquier pieza que no sea la entrada misma cancela la espera: la
-        # entrada es el parrafo que viene PEGADO a la bajada, no el primer
-        # parrafo que aparezca tres titulos mas abajo.
-        if out and 'class="entrada"' not in htm and 'class="bajada"' not in htm:
+        # La entrada es el parrafo que viene PEGADO al titulo o a la bajada, no
+        # el primer parrafo que aparezca tres bloques mas abajo. Cualquier otra
+        # cosa que se meta en el medio cancela la espera.
+        if (out and not htm.startswith("<h2")
+                and 'class="entrada"' not in htm
+                and 'class="bajada"' not in htm):
             toca_entrada[0] = toca_entrada[0] and htm.startswith("<p>")
         out.append((ancho, htm))
 
@@ -615,7 +617,15 @@ def bloques(md, slug):
                     elif cuerpo:
                         break
                     j += 1
-                add(True, '<aside class="caja %s"><h5>%s</h5>%s</aside>'
+                # DONDE VA LA CAJA. En la referencia estan las dos
+                # formas y no es capricho: en su pagina 8 la caja va a TODO EL
+                # ANCHO, entre dos exhibits; en su pagina 13 va en la COLUMNA
+                # DE LA DERECHA, con la prosa corriendo por la izquierda a su
+                # lado. Lo que decide es el contexto: una caja que interrumpe
+                # prosa corriente se pone al costado y deja seguir leyendo;
+                # una que separa dos piezas anchas se pone al ancho.
+                add(not _entre_prosa(out),
+                    '<aside class="caja %s"><h5>%s</h5>%s</aside>'
                     % (tipo, _inline(titulo),
                        "".join("<p>%s</p>" % _inline(c) for c in cuerpo)))
                 i = j
@@ -635,10 +645,12 @@ def bloques(md, slug):
             sid = "%s-%s" % (slug, len(subsecciones))
             if m2:
                 subsecciones.append((sid, m2.group(1), m2.group(2)))
+                toca_entrada[0] = True
                 add(True, '<h2 id="%s"><span class="n">%s</span>%s</h2>'
                     % (sid, m2.group(1), _inline(m2.group(2))))
             else:
                 subsecciones.append((sid, None, crudo))
+                toca_entrada[0] = True
                 add(True, '<h2 id="%s">%s</h2>' % (sid, _inline(crudo)))
 
         elif l.startswith("# "):
@@ -653,7 +665,8 @@ def bloques(md, slug):
             while j < n and lineas[j].startswith(">"):
                 cita.append(lineas[j].lstrip("> ").rstrip())
                 j += 1
-            add(True, '<aside class="caja legal">%s</aside>'
+            add(not _entre_prosa(out),
+                '<aside class="caja legal">%s</aside>'
                 % "".join("<p>%s</p>" % _inline(c) for c in cita if c))
             i = j
             continue
@@ -694,6 +707,14 @@ def bloques(md, slug):
                 add(False, "<p>%s</p>" % _inline(txt))
         i += 1
     return out, subsecciones
+
+
+def _entre_prosa(emitidos):
+    """True si lo ultimo que se emitio es un parrafo de prosa corriente."""
+    for ancho, htm in reversed(emitidos):
+        if htm.strip():
+            return htm.startswith("<p>")
+    return False
 
 
 def _escapar(t):
@@ -743,6 +764,33 @@ def bandas(lista, seccion):
     while i < n:
         ancho, htm = lista[i]
         if ancho:
+            # UN h2 CON SU ENTRADA. La entrada es ancha —va cruzando las dos
+            # columnas, como en la referencia—, asi que no la agarra la regla
+            # de abajo, que junta el titulo con la banda. Sin esto el titulo
+            # quedaria suelto y podria caer al pie de una pagina con su
+            # entrada en la siguiente.
+            if (htm.startswith("<h2") and i + 1 < n and lista[i + 1][0]
+                    and 'class="entrada"' in lista[i + 1][1]):
+                grupo = htm + lista[i + 1][1]
+                j = i + 2
+                # Y si despues de la entrada empieza prosa a dos columnas, las
+                # primeras lineas entran al grupo: es el mismo motivo.
+                if j < n and not lista[j][0]:
+                    corrida = []
+                    while j < n and not lista[j][0]:
+                        corrida.append(lista[j][1])
+                        j += 1
+                    grupo += ('<div class="banda">%s</div>'
+                              % "".join(corrida[:1]))
+                    resto = corrida[1:]
+                else:
+                    resto = []
+                pieza('<div class="con-titulo">%s</div>' % grupo, "titulo")
+                if resto:
+                    pieza('<div class="banda">%s</div>' % "".join(resto),
+                          "banda")
+                i = j
+                continue
             # Un h2 arrastra el arranque de la banda que le sigue.
             if htm.startswith("<h2") and i + 1 < n and not lista[i + 1][0]:
                 j = i + 1
@@ -1322,6 +1370,12 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 .caja p { margin: 0 0 .5em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
 .caja.legal { font-style: italic; }
+/* LA CAJA AL COSTADO. Metida adentro de una banda a dos columnas ocupa una
+   columna sola y la prosa sigue corriendo por la otra, que es lo que hace la
+   referencia en su pagina 13. Misma pieza, mismo fondo, mismo filete: lo
+   unico que cambia es que no interrumpe la lectura, la acompaña. */
+.banda .caja { margin: 0 0 %(sep).1fmm; }
+.con-titulo p.entrada { margin-top: 0; }
 
 /* Nota de lectura al pie de seccion: Spectral italico en gris calido, con la
    entrada en SemiBold, a todo el ancho. */
