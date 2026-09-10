@@ -104,6 +104,7 @@ import html
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 
@@ -358,9 +359,31 @@ RE_H2NUM = re.compile(r'^(\d+(?:\.\d+)?)\s+(.*)$')
 RE_H1CAP = re.compile(r'^(CAPÍTULO\s+\d+\s*—)\s*(.*)$')
 
 
+# LAS NEGRITAS DE LA PROSA VAN EN DOS COLORES, COMO EN LA REFERENCIA.
+# En sus paginas el color no entra solo por las tablas y los graficos: entra
+# por el texto. Las CIFRAS y los importes van en ladrillo —"$0.83-1.9M",
+# "$15-40K a month"— y los CONCEPTOS en salvia —"memberships cover the fixed
+# costs", "First, curated third-party"—. Dos acentos corriendo por el cuerpo,
+# no uno.
+#
+# El reparto se hace solo, y por una regla que no opina: si el tramo en
+# negrita tiene un digito, es una cifra y va en ladrillo; si no lo tiene, es
+# un concepto y va en salvia. Sobre los 464 tramos que ya estan escritos en el
+# markdown da 183 cifras y 281 conceptos. EL TEXTO NO SE TOCA: las negritas ya
+# estaban puestas por quien escribio, lo unico que decide esto es de que color
+# se imprimen.
+RE_CIFRA = re.compile(r'\d')
+
+
+def _fuerte(m):
+    dentro = m.group(1)
+    clase = "" if RE_CIFRA.search(dentro) else ' class="idea"'
+    return "<strong%s>%s</strong>" % (clase, dentro)
+
+
 def _inline(t):
     t = html.escape(t)
-    t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'\*\*(.+?)\*\*', _fuerte, t)
     t = re.sub(r'(?<!\*)\*([^*]+?)\*(?!\*)', r'<em>\1</em>', t)
     t = re.sub(r'`([^`]+?)`', r'<code>\1</code>', t)
     t = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', t)
@@ -1092,6 +1115,53 @@ REF = dict(
     sep_cornisa_h1=37.0 - 8.7,            # 28,3
 )
 
+def instalar_tipografias():
+    """Pone las tipografias del repo donde WeasyPrint las va a encontrar.
+
+    ESTO ES EL ARREGLO DE UN BUG QUE SE COMIO TODO EL DISEÑO. El CSS declaraba
+    sus @font-face apuntando al archivo por ruta absoluta —que es lo correcto y
+    lo que dice el README—, y WeasyPrint 70 los ignoraba en silencio: no avisa,
+    no falla, simplemente cae a DejaVu. El documento entero venia compuesto en
+    DejaVu Serif desde el primer dia.
+
+    Y DejaVu no es un reemplazo neutro: tiene la altura de x mucho mas grande y
+    los glifos mucho mas anchos que Spectral, asi que la misma medida en puntos
+    se ve varios cuerpos mas grande y entran 51 caracteres por linea donde la
+    referencia mete 61. Todo el trabajo de ajustar la escala corregia un sintoma
+    —"la letra se ve mas grande"— cuya causa era esta.
+
+    En esta version de WeasyPrint el unico camino que carga de verdad es
+    fontconfig, asi que el armador copia los archivos versionados a la carpeta
+    de fuentes del usuario y refresca el cache antes de componer. Las fuentes
+    siguen viniendo del repo —no se depende de que esten instaladas en la
+    maquina—, y el armado sigue siendo reproducible: lo que cambia es que ahora
+    de verdad se usan.
+    """
+    destino = os.path.expanduser("~/.local/share/fonts")
+    os.makedirs(destino, exist_ok=True)
+    copiadas = 0
+    for f in sorted(os.listdir(TIPOS)):
+        if not f.endswith(".ttf"):
+            continue
+        origen, final = os.path.join(TIPOS, f), os.path.join(destino, f)
+        if (not os.path.exists(final)
+                or os.path.getmtime(final) < os.path.getmtime(origen)):
+            shutil.copy2(origen, final)
+            copiadas += 1
+    if copiadas:
+        subprocess.run(["fc-cache", "-f", destino], capture_output=True)
+    # Y se comprueba: un fallback silencioso es justamente lo que paso.
+    hay = subprocess.run(["fc-list", "--format", "%{family}\n"],
+                         capture_output=True, text=True).stdout
+    faltan = [n for n in (SERIF, SANS) if n.lower() not in hay.lower()]
+    if faltan:                                            # pragma: no cover
+        raise RuntimeError(
+            "fontconfig no encuentra %s despues de instalarlas desde %s: el "
+            "documento saldria compuesto en otra letra" % (", ".join(faltan),
+                                                           TIPOS))
+    return copiadas
+
+
 # Los seis @font-face de Spectral se escriben solos desde CORTES_SERIF: son
 # archivos estaticos y cada uno declara su peso y su estilo.
 _FACES = "\n".join(
@@ -1163,6 +1233,7 @@ p, li { orphans: 3; widows: 3; }
    no son negras. El texto no se toca —las negritas ya estaban escritas—, lo
    unico que cambia es de que color salen. */
 strong { font-weight: 600; color: %(acento)s; }
+strong.idea { color: %(dato)s; }
 em { font-style: italic; }
 code { font-family: "DejaVu Sans Mono"; font-size: %(mono).1fpt;
        background: %(arena)s; padding: .5pt 2pt; }
@@ -1204,9 +1275,9 @@ h1 + p.bajada + .con-titulo > h2 { margin-top: 0; }
 h3 { font-size: %(h3).1fpt; font-weight: 600;
      margin: %(sep_h3).1fmm 0 %(sep_h3b).1fmm;
      color: %(acento)s; break-after: avoid; break-inside: avoid; }
-h3::before { content: ""; display: block; width: 8mm;
-             border-top: %(filete).2fpt solid %(acento)s;
-             margin-bottom: %(sep_h3b).1fmm; }
+/* Sin filete encima. Era un invento nuestro: la referencia no pone una
+   reglita arriba de cada subtitulo, y tres seguidos en una columna de 86 mm
+   se leen como un formulario. */
 
 /* --------------------------------------------------------------------
    CIFRAS DESTACADAS Y REMATES
@@ -1554,6 +1625,7 @@ def verificar_pdf(ruta):
 def main():
     from weasyprint import HTML, CSS as WCSS
 
+    instalar_tipografias()
     NUMEROS.update(numeros_por_aparicion())
     entradas, piezas = [], []
     for nombre, titulo in ORDEN:

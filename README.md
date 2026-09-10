@@ -157,3 +157,29 @@ reducido, es otro, con más altura de x y más espacio entre letras.
 
 `CORRECCIONES_NUMERICAS.md` registra cada cifra que se corrigió, con su cálculo
 y su fuente.
+
+## Un fallback silencioso compuso el documento entero en la letra equivocada
+
+El CSS declaraba sus `@font-face` apuntando al archivo por ruta absoluta —que es
+lo correcto y lo que este README decía— y **WeasyPrint 70 los ignoraba sin
+avisar**: no falla, no advierte, simplemente cae a DejaVu. El documento venía
+compuesto en **DejaVu Serif** desde el primer día, con el CSS pidiendo Spectral.
+
+Y DejaVu no es un reemplazo neutro. Tiene la altura de x mucho mayor y los
+glifos mucho más anchos, así que la misma medida en puntos se ve varios cuerpos
+más grande: **51 caracteres por línea donde la referencia mete 61**. Todo el
+trabajo de ajustar la escala estaba corrigiendo un síntoma —"la letra se ve más
+grande"— cuya causa era ésta.
+
+Los gráficos **sí** usaban Spectral: matplotlib carga por ruta con
+`font_manager.addfont()` y eso funciona. Así que la página y sus gráficos venían
+en dos tipografías distintas.
+
+**El arreglo.** En esta versión de WeasyPrint el único camino que carga de verdad
+es fontconfig, así que `armar_pdf.instalar_tipografias()` copia los `.ttf`
+versionados a la carpeta de fuentes del usuario, refresca el caché y
+**comprueba con `fc-list` que las dos familias estén**, porque un fallback
+silencioso es exactamente lo que pasó. Si no están, el armado falla en vez de
+imprimir otra letra.
+
+Después del arreglo: **62 caracteres por línea contra los 61 de la referencia.**
