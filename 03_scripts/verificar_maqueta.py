@@ -39,8 +39,13 @@ RAIZ = os.path.dirname(AQUI)
 PDF = os.path.join(RAIZ, "PROGRAMA_SAN_ISIDRO_2027.pdf")
 
 MARCADOR = "NO VA AL PDF"
+# Las palabras de la cornisa y del pie, que se repiten en cada pagina y no son
+# texto del documento. La cornisa lleva el titulo de la seccion en mayusculas,
+# y desde que los titulos siguen el formato de la referencia eso es el numero
+# solo mas el nombre: "1 DIAGNÓSTICO", "A ANEXO DE FUENTES".
 CORRIDO = {"Programa", "de", "gobierno", "·", "San", "Isidro", "2027",
-           "CAPÍTULO", "INTRODUCCIÓN", "ANEXO", "DE", "FUENTES", "LA", "EL",
+           "1", "2", "3", "4", "5", "6", "A",
+           "INTRODUCCIÓN", "ANEXO", "DE", "FUENTES", "LA", "EL",
            "QUÉ", "CONTRA", "GESTIÓN,", "MEDIDA", "PLATA", "MECANISMO",
            "DIAGNÓSTICO", "HACEMOS", "EN", "CADA", "ÁREA", "QUEREMOS", "QUE",
            "NOS", "MIDAN"}

@@ -1,4 +1,4 @@
-# CAPÍTULO 5 — QUÉ HACEMOS EN CADA ÁREA
+# 5 Qué hacemos en cada área
 ## Propuestas sectoriales, con su costo declarado
 
 *Borrador 3 · septiembre 2026*

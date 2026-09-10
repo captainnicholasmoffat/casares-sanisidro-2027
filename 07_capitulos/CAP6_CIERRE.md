@@ -1,4 +1,4 @@
-# CAPÍTULO 6 — CONTRA QUÉ QUEREMOS QUE NOS MIDAN
+# 6 Contra qué queremos que nos midan
 ## Primeros cien días y compromisos verificables del mandato
 
 *Borrador 2 · septiembre 2026*

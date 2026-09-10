@@ -1,4 +1,4 @@
-# INTRODUCCIÓN
+# Introducción
 
 ## La pregunta
 

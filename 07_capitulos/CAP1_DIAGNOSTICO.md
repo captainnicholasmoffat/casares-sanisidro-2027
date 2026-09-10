@@ -1,4 +1,4 @@
-# CAPÍTULO 1 — DIAGNÓSTICO
+# 1 Diagnóstico
 ## San Isidro: un municipio que invierte mucho y llega poco
 
 *Borrador 3 · septiembre 2026*

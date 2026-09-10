@@ -1,4 +1,4 @@
-# CAPÍTULO 2 — LA GESTIÓN, MEDIDA
+# 2 La gestión, medida
 ## Qué se puede probar sobre la administración de Ramón Lanús
 
 *Borrador 2 · septiembre 2026*

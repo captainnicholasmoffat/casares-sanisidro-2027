@@ -1,4 +1,4 @@
-# CAPÍTULO 3 — LA PLATA
+# 3 La plata
 ## Cuánto hay, cuánto dura, y de dónde sale lo que este programa propone
 
 *Borrador 3 · septiembre 2026*

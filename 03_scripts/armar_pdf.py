@@ -235,13 +235,13 @@ TITULO_CORTO = "Programa de gobierno · San Isidro 2027"
 
 ORDEN = [
     ("00_INTRODUCCION.md", "Introducción"),
-    ("CAP1_DIAGNOSTICO.md", "1 · Diagnóstico"),
-    ("CAP2_GESTION_MEDIDA.md", "2 · La gestión, medida"),
-    ("CAP3_LA_PLATA.md", "3 · La plata"),
-    ("CAP4_MECANISMO.md", "4 · El mecanismo"),
-    ("CAP5_SECTORIAL.md", "5 · Qué hacemos en cada área"),
-    ("CAP6_CIERRE.md", "6 · Contra qué queremos que nos midan"),
-    ("99_ANEXO_FUENTES.md", "Anexo de fuentes"),
+    ("CAP1_DIAGNOSTICO.md", "1 Diagnóstico"),
+    ("CAP2_GESTION_MEDIDA.md", "2 La gestión, medida"),
+    ("CAP3_LA_PLATA.md", "3 La plata"),
+    ("CAP4_MECANISMO.md", "4 El mecanismo"),
+    ("CAP5_SECTORIAL.md", "5 Qué hacemos en cada área"),
+    ("CAP6_CIERRE.md", "6 Contra qué queremos que nos midan"),
+    ("99_ANEXO_FUENTES.md", "A Anexo de fuentes"),
 ]
 
 # El primer encabezado de la tabla -> etiqueta. Se detecta por contenido, no
@@ -356,7 +356,10 @@ def numeros_por_aparicion():
 
 NUMEROS = {}
 RE_H2NUM = re.compile(r'^(\d+(?:\.\d+)?)\s+(.*)$')
-RE_H1CAP = re.compile(r'^(CAPÍTULO\s+\d+\s*—)\s*(.*)$')
+# El titulo de una seccion, en el formato de la referencia: el numero solo y
+# el nombre en minuscula —"3 Why the category's economics break"—. El anexo
+# lleva letra, como el suyo: "A Methodology, sources & verification".
+RE_H1CAP = re.compile(r'^(\d+|[A-Z])\s+(.+)$')
 
 
 # LAS NEGRITAS DE LA PROSA VAN EN DOS COLORES, COMO EN LA REFERENCIA.
@@ -531,13 +534,14 @@ def _apertura(slug):
 def _h1(texto, slug):
     """El titulo de capitulo. Las palabras, todas; el peso, repartido.
 
-    "CAPÍTULO 1 — DIAGNÓSTICO" se compone en una linea con la numeracion en
-    Barranca y el nombre en Tinta. No se reescribe ni se reordena: el numero de
-    seccion grande y en color de acento pegado al titulo es exactamente eso.
+    "2 La gestión, medida" se compone con el numero en ladrillo y el nombre en
+    tinta, que es como la referencia introduce sus veinticinco secciones sin
+    una sola excepcion: numero solo, nombre en minuscula, sin la palabra
+    "capitulo" y sin raya.
     """
     m = RE_H1CAP.match(texto.strip())
     if m:
-        return ('<h1 id="%s"><span class="cn">%s</span> %s</h1>'
+        return ('<h1 id="%s"><span class="cn">%s</span>%s</h1>'
                 % (slug, _inline(m.group(1)), _inline(m.group(2))))
     return '<h1 id="%s">%s</h1>' % (slug, _inline(texto))
 
@@ -556,7 +560,10 @@ def bloques(md, slug):
     # almohadilla adelante. Buscar "^CAPÍTULO" contra el texto crudo no matchea
     # nunca, y entonces NINGUN capitulo tenia bajada: la suya se maquetaba como
     # un titulo de seccion mas, en negrita y en el indice.
-    es_capitulo = bool(re.search(r'^#\s+CAPÍTULO\s+\d+', md, re.M))
+    # Solo los capitulos NUMERADOS llevan bajada: el h2 sin numero que sigue
+    # al titulo. En la introduccion y en el anexo ese h2 es una seccion de
+    # verdad, y tomarlo por bajada lo borraria del indice.
+    es_capitulo = bool(re.search(r'^#\s+\d+\s', md, re.M))
     subsecciones = []
     # LA ENTRADA. En la referencia el primer parrafo de cada capitulo va a
     # TODO EL ANCHO y un punto mas grande que el cuerpo, y recien despues
@@ -1161,9 +1168,15 @@ def indice(entradas):
     """Indice con la pagina real de cada seccion y de cada subseccion."""
     filas = []
     for slug, titulo, subs in entradas:
+        # EL NUMERO CUELGA EN EL MARGEN. En su pagina de contenidos el
+        # numero va en x=45 y el nombre en x=67: los nombres arrancan todos
+        # alineados y el numero queda afuera de esa alineacion.
+        m = RE_H1CAP.match(titulo)
+        num, nombre = (m.group(1), m.group(2)) if m else ("", titulo)
         filas.append('<li class="ix-cap"><a href="#%s">'
+                     '<span class="ix-n">%s</span>'
                      '<span class="ix-t">%s</span></a></li>'
-                     % (slug, html.escape(titulo)))
+                     % (slug, html.escape(num), html.escape(nombre)))
         for sid, num, tit in subs:
             filas.append('<li class="ix-sub"><a href="#%s">'
                          '<span class="ix-n">%s</span>'
@@ -1367,7 +1380,9 @@ h1 { font-size: %(h1).1fpt; line-height: %(h1_int).3f;
      margin: 0 0 %(sep_h1_bajada).1fmm;
      font-weight: 700; letter-spacing: 0; color: %(tinta)s;
      string-set: cap content(); break-before: page; break-after: avoid; }
-h1 .cn { color: %(acento)s; margin-right: .28em; }
+/* En su titulo el numero y el nombre estan separados por medio cuadratin,
+   no por un espacio de palabra mas un margen. */
+h1 .cn { color: %(acento)s; margin-right: .36em; }
 
 p.bajada { font-style: italic; font-weight: 500; font-size: %(bajada).1fpt;
            line-height: %(bajada_int).3f; color: %(dato)s;
@@ -1598,7 +1613,7 @@ li.ix-cap a::after { color: %(acento)s; opacity: 1; font-weight: 600;
                      font-size: %(tabla).1fpt; }
 li.ix-sub a { font-size: %(entrada).1fpt; padding: .9mm 0;
               border-bottom: %(filete).2fpt dotted rgba(124, 46, 35, .22); }
-span.ix-n { display: inline-block; width: 11mm; color: %(acento)s;
+span.ix-n { display: inline-block; width: %(sangria_ix).1fmm; color: %(acento)s;
             font-weight: 600; }
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
@@ -1645,6 +1660,8 @@ span.ix-n { display: inline-block; width: 11mm; color: %(acento)s;
     sep_caja_rot=emm(17.0 - 8.3, 1),
     caja_sangria=emm(REF["caja_sangria"], 1),
     caja_alto=emm(REF["caja_alto"], 1),
+    # En su pagina de contenidos el numero va en x=45 y el nombre en x=67.
+    sangria_ix=emm(22.0, 1),
     celda=emm(REF["celda"], 1),
     celda_v=emm((REF["banda_cab"] - REF["tabla_cab"] * 1.25) / 2, 1),
     celda_v2=emm((REF["banda_fila"] - REF["tabla_int"]) / 2, 1),

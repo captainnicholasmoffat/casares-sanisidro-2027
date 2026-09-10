@@ -1,4 +1,4 @@
-# CAPÍTULO 4 — EL MECANISMO
+# 4 El mecanismo
 ## Comisiones vecinales con presupuesto propio: cuánta plata, quién decide, quién la ejecuta
 
 *Borrador 4 · septiembre 2026*
