@@ -280,7 +280,7 @@ RE_VERSION = re.compile(
 CREMA = "#F5F0E8"        # el fondo de toda la pagina
 TINTA = "#2A211C"        # el texto, negro calido
 ACENTO = "#7C2E23"       # ladrillo: eyebrow, numeros de seccion, titulos
-DATO = "#5E7157"         # verde salvia: la serie principal
+DATO = "#5F7057"         # verde salvia: la serie principal
 DATO_CLARO = "#7E9070"   # salvia clara: la cuarta serie
 ARENA = "#EAE0CF"        # bandas de encabezado y cajas laterales
 FILA = "#E8E4D9"         # filas alternadas
@@ -1468,16 +1468,16 @@ REF = dict(
     cuerpo=9.7, cuerpo_int=14.5,          # el cuerpo a dos columnas
     entrada=10.0, entrada_int=16.0,       # el primer parrafo, a todo el ancho
     h1=16.5, h1_int=19.5,
-    bajada=10.9, bajada_int=15.0,
+    bajada=10.875, bajada_int=15.0,
     h2=11.2, h3=9.7,
     exh_rot=6.7, exh_tit=11.2, exh_tit_int=14.6,
-    tabla_cab=6.4, tabla=7.9, tabla_int=11.1,
+    tabla_cab=6.375, tabla=7.875, tabla_int=11.1,
     banda_cab=17.3, banda_fila=20.2, celda=6.0,
-    fuente=7.9, fuente_int=11.5,
+    fuente=7.875, fuente_int=11.5,
     cornisa=6.7, pie=6.4,
     filete=0.75,
-    caja_cuerpo=9.0, caja_int=13.0, caja_rot=6.4,
-    caja_filete=3.0, caja_sangria=12.4, caja_alto=12.0,
+    caja_cuerpo=9.0, caja_int=13.0, caja_rot=6.375,
+    caja_filete=2.25, caja_sangria=12.0, caja_alto=12.0,
     sep_bloque=22.0 - 14.5,               # 7,5 pt de margen real
     sep_rot_tit=14.0 - 8.7,               # 5,3
     sep_tit_fig=21.0 - 14.6,              # 6,4
@@ -1753,16 +1753,22 @@ aside.caja.remate > p strong { font-style: normal; font-weight: 600;
    la caja de texto: metida adentro de una columna de 86 mm no es esta pieza,
    es otra.
    -------------------------------------------------------------------- */
+/* LA CAJA, con los valores de su hoja de estilos:
+       background: var(--panel)  #EFE7DA
+       border-left: 2.25pt solid var(--sage)   <- 2,25, no 3
+       padding: 10.75pt 12pt 11pt
+       .clabel: Inter 600 6.375 sage, letter-spacing .765pt, line-height 9pt
+   El filete al costado lo teniamos en 3 pt y el rotulo en peso 500. */
 .caja { break-inside: avoid; margin: %(sep_caja).1fmm 0;
-        padding: %(caja_alto).1fmm %(caja_sangria).1fmm;
+        padding: %(caja_arriba).2fmm %(caja_sangria).2fmm %(caja_abajo).2fmm;
         background: %(tan)s; font-size: %(caja_cuerpo).1fpt;
         line-height: %(caja_int).3f;
-        border-left: %(caja_filete).1fpt solid %(dato)s; }
-.caja h5 { font-family: "%(sans)s"; font-size: %(caja_rot).1fpt;
-           font-weight: 500; letter-spacing: %(tr_caja).2fpt;
+        border-left: %(caja_filete).2fpt solid %(dato)s; }
+.caja h5 { font-family: "%(sans)s"; font-size: %(caja_rot).3fpt;
+           font-weight: 600; letter-spacing: %(tr_caja).2fpt;
            text-transform: uppercase;
            margin: 0 0 %(sep_caja_rot).1fmm; color: %(dato)s;
-           line-height: 1.3; }
+           line-height: %(caja_rot_int).2fpt; }
 .caja p { margin: 0 0 .5em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
 .caja.legal { font-style: italic; }
@@ -1883,19 +1889,27 @@ table { width: 100%%; border-collapse: collapse;
         font-variant-numeric: tabular-nums lining-nums; }
 .tw:not(.ancho) table { font-size: %(tabla_chica).1fpt; }
 thead th { background: %(arena)s; color: %(acento)s; text-align: left;
-           padding: %(celda_v).1fmm %(celda).1fmm;
-           font-size: %(tabla_cab).1fpt; font-weight: 600;
+           padding: %(cab_arriba).2fmm %(celda).1fmm 0;
+           height: %(cab_alto).2fmm;
+           font-size: %(tabla_cab).2fpt; font-weight: 600;
            letter-spacing: %(tr_tabla).2fpt; text-transform: uppercase;
-           line-height: 1.25; vertical-align: bottom; }
-/* SUS TABLAS NO TIENEN FILAS ALTERNADAS. Ninguna: sobre las treinta paginas
-   hay 76 bandas de arena —todas de cabecera— y CERO bandas del color de
-   fila. Lo que separa una fila de la siguiente es un PELO OSCURO de 0,75 pt
-   debajo de cada celda: hay 364 en el documento, dibujados celda por celda.
-   Las filas alternadas eran un invento nuestro, y encima con un filete pálido
-   que no separa nada: por eso sus tablas se leen nitidas y las nuestras
-   lavadas. */
-td { padding: %(celda_v2).1fmm %(celda).1fmm; vertical-align: top;
-     border-bottom: %(filete).2fpt solid %(tinta)s; }
+           line-height: 1; vertical-align: top;
+           border-bottom: %(filete).2fpt solid rgba(40, 34, 22, .24); }
+/* EL FILETE DE FILA VA AL 13 %%, NO AL 100 %%. Esto es lo que hacia que
+   nuestras tablas se leyeran como una planilla de calculo.
+   Conte bien los filetes —364, uno bajo cada celda— pero no la opacidad:
+   pdfplumber informa el COLOR del trazo, no su alfa, asi que un pelo de
+   tinta al 13 %% y uno al 100 %% se leen iguales al medir el PDF. En su hoja
+   de estilos, que ahora tengo, dice:
+       td { border-bottom: .75pt solid rgba(40,34,22,.13) }   <- 13 %%
+       th { border-bottom: .75pt solid rgba(40,34,22,.24) }   <- 24 %%
+   Nosotros dibujabamos las 364 en tinta plena. Una reja negra debajo de cada
+   fila es exactamente el aspecto de una planilla, y era mio, no de la
+   referencia. Tampoco tienen filas alternadas: eso ya estaba bien sacado.
+   El cuerpo de la celda es INTER de 7,875 con interlinea de 11,25. */
+td { padding: %(celda_arriba).2fmm %(celda).1fmm 0; vertical-align: top;
+     font-size: %(tabla).3fpt; line-height: %(celda_int).3f;
+     border-bottom: %(filete).2fpt solid rgba(40, 34, 22, .13); }
 tbody td:first-child { color: %(acento)s; font-weight: 600; }
 tbody td.destacada { color: %(dato)s; font-weight: 600; }
 thead th.destacada { color: %(dato)s; }
@@ -2096,6 +2110,11 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
     coral=CORAL, gris=GRIS,
+    # TABLA Y CAJA, de su hoja de estilos y no ya del PDF medido
+    cab_alto=emm(17.25, 2), cab_arriba=emm(4.25, 2),
+    celda_arriba=emm(3.5, 2), celda_int=11.25 / 7.875,
+    caja_arriba=emm(10.75, 2), caja_abajo=emm(11.0, 2),
+    caja_rot_int=e(9.0),
     # el tablero, todo medido sobre su pagina 22
     tb_filete=e(0.7), tb_rot=e(6.4), tb_cifra=e(19.0), tb_nota=e(7.5),
     tb_track=e(6.4) * 0.083,
@@ -2141,8 +2160,8 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     # La cabecera de tabla casi no lleva y la cornisa lleva el triple: no es
     # un valor unico repartido, es una escala de enfasis.
     tr_rot=e(REF["exh_rot"]) * 0.153,
-    tr_tabla=e(REF["tabla_cab"]) * 0.075,
-    tr_caja=e(REF["caja_rot"]) * 0.134,
+    tr_tabla=e(REF["tabla_cab"]) * 0.050,
+    tr_caja=e(REF["caja_rot"]) * 0.120,
     tr_pie=e(REF["pie"]) * 0.039,
     # separaciones
     sep=emm(REF["sep_bloque"], 1),

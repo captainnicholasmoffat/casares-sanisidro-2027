@@ -50,14 +50,22 @@ print("  8 caras adentro")
 navegador = """
 /* ---- SOLO PARA PANTALLA ----
    El PDF pagina con @page y un navegador no. Esto no cambia ni un color ni
-   un cuerpo: le da a la mancha el ancho, el margen y el fondo del A4 para
-   que se lea igual que impresa. */
+   un cuerpo.
+
+   EL PADDING VA EN LAS SECCIONES, NO EN EL BODY. Puesto en el body, la tapa
+   —que mide 210 x 297 mm exactos y lleva la imagen a sangre— quedaba metida
+   adentro del margen y se veia distinta de la del PDF. La tapa no lleva
+   margen: es una pagina entera. */
 @media screen{
  html{background:#C9C3B8;}
- body{width:210mm;margin:0 auto;padding:12mm 14.3mm 15mm;background:#F5F0E8;
+ body{width:210mm;margin:0 auto;padding:0;background:#F5F0E8;
       box-sizing:border-box;box-shadow:0 0 30px rgba(0,0,0,.28);}
- img{max-width:100%;height:auto;}
- .tapa{margin:-12mm -14.3mm 0;}
+ section.indice, section.cap{display:block;padding:12mm 14.3mm 15mm;}
+ section.tapa{width:210mm;height:297mm;margin:0;}
+ /* el filete del pie es un elemento fijo de impresion: en pantalla se
+    quedaria pegado al borde de la ventana toda la lectura */
+ .filete-pie{display:none;}
+ img:not(.tapa-img){max-width:100%;height:auto;}
 }
 """
 cuerpo=cuerpo.replace("</head>",
