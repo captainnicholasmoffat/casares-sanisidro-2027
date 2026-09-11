@@ -1617,7 +1617,6 @@ def tapa():
         fondo = ('<img class="tapa-img" src="file://%s" alt=""/>'
                  % os.path.join(CHARTS, "TAPA_mapa_zonas.png"))
     return ('<section class="tapa">%s'
-            '<div class="tapa-faja"></div>'
             '<div class="tapa-txt">'
             '<h1 class="t1">%s</h1><h1 class="t2">%s</h1>'
             '<p class="sub">%s</p></div>'
@@ -2241,14 +2240,14 @@ pre.listado { font-family: "DejaVu Sans Mono"; font-size: %(mono).1fpt;
             object-fit: cover; }
 .tapa-img.cubre { left: 0; top: 0; width: 210mm; height: 297mm;
                   object-fit: cover; }
-.tapa-faja { position: absolute; left: 0; top: 0; width: 210mm;
-             height: 118mm;
-             background: linear-gradient(180deg,
-                 rgba(245,240,232,.97) 0%%, rgba(245,240,232,.95) 62%%,
-                 rgba(245,240,232,0) 100%%); }
-.tapa-credito { position: absolute; left: %(mg).1fmm; bottom: 8mm; margin: 0;
-                font-family: "%(sans)s"; font-size: %(pie_pt).1fpt;
-                letter-spacing: .3pt; color: %(tinta)s; opacity: .65; }
+/* LA TAPA NO LLEVA FRANJA. La meti al aplicar el sistema visual —un
+   degradado crema de 118 mm sobre la foto, para asentar el titulo— y se come
+   el cielo entero, que es lo primero que se ve del documento. La tapa
+   original tiene el titulo DIRECTO SOBRE LA FOTO, sin nada en el medio.
+   No se vuelve a poner. */
+.tapa-credito { position: absolute; left: 16mm; bottom: 8mm; margin: 0;
+                font-family: "%(sans)s"; font-size: 6.4pt; letter-spacing: .3pt;
+                color: %(crema)s; opacity: .85; }
 
 /* --------------------------------------------------------------------
    LAS ILUSTRACIONES
@@ -2281,16 +2280,17 @@ figure.ilu.cierre img { height: 128mm; }
 figure.ilu .par { display: flex; gap: %(md).1fmm; }
 figure.ilu .par img { display: block; width: 50%%; height: 66mm;
                       object-fit: cover; }
-.tapa-txt { position: absolute; left: %(mg).1fmm; top: 22mm;
-            width: %(cj).1fmm; }
-.tapa h1 { font-size: %(tapa_h1).1fpt; line-height: 1.06; margin: 0;
-           letter-spacing: -.4pt; border: 0; padding: 0;
-           break-before: avoid; font-weight: 700; color: %(tinta)s; }
-.tapa .t2 { color: %(acento)s; margin-bottom: 6mm; }
-.tapa .sub { font-size: %(bajada).1fpt; line-height: 1.45; text-align: left;
-             max-width: 122mm; margin: 0; hyphens: none; font-style: italic;
-             font-weight: 500; color: %(dato)s;
-             border-top: %(filete).2fpt solid %(acento)s; padding-top: 3.5mm;
+/* LA TAPA, COMO ESTABA: titulo de 40 pt en tres lineas, directo sobre la
+   foto, sin franja crema en el medio. */
+.tapa-txt { position: absolute; left: 16mm; top: 22mm; width: 178mm; }
+.tapa h1 { font-size: 40pt; line-height: 1.06; margin: 0; letter-spacing: -.4pt;
+           border: 0; padding: 0; break-before: avoid; font-weight: 700;
+           color: %(tinta)s; }
+.tapa .t2 { color: %(acento)s; margin-bottom: 7mm; }
+.tapa .sub { font-size: 10.9pt; line-height: 1.45; text-align: left;
+             max-width: 128mm; margin: 0; hyphens: none; font-style: italic;
+             font-weight: 500; color: %(acento)s;
+             border-top: .75pt solid %(acento)s; padding-top: 4mm;
              display: inline-block; }
 /* --------------------------------------------------------------------
    INDICE — la anatomia de su pagina de contenidos, medida
