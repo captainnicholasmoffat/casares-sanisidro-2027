@@ -357,6 +357,15 @@ LEYENDA_ETIQUETA = {
 # documento suene a folleto: si una seccion no tiene, se queda sin.
 REMATES = json.load(open(os.path.join(AQUI, "remates.json"), encoding="utf-8")) \
     if os.path.exists(os.path.join(AQUI, "remates.json")) else {}
+# EL ROTULO DE LA CAJA. Catorce de las veintiseis cajas de la referencia lo
+# llevan: Inter mayuscula espaciada en salvia, sobre el texto, adentro de la
+# caja. Es lo que convierte una cita en una pieza: dice de que es la caja
+# antes de que se lea una palabra. Nosotros no teniamos ninguno.
+# Cada rotulo es el nucleo de SU PROPIA frase puesto en mayuscula —no se
+# inventa nada y no se agrega una idea que el remate no diga ya—.
+ROTULOS_REMATE = json.load(
+    open(os.path.join(AQUI, "rotulos_remate.json"), encoding="utf-8")) \
+    if os.path.exists(os.path.join(AQUI, "rotulos_remate.json")) else {}
 DATOS = json.load(open(os.path.join(AQUI, "datos.json"), encoding="utf-8")) \
     if os.path.exists(os.path.join(AQUI, "datos.json")) else {}
 
@@ -731,6 +740,31 @@ def bloques(md, slug):
         # para la introduccion, donde el primer h2 es una seccion de verdad.
         # Declararla saca la adivinanza del medio y permite que la bajada sea
         # de dos a cuatro lineas, como las 26 de la referencia, en vez de una.
+        # EL TABLERO DE CIFRAS. Medido sobre su pagina 22, el exhibit 28:
+        #   filete de 0,7 pt en arena #C6AE8E, a todo el ancho
+        #   rotulo   Inter 6,4 MAYUSCULA en gris calido
+        #   cifra    Spectral Bold 19 en ladrillo
+        #   nota     Spectral cursiva 7,5 en gris calido, dos lineas
+        #   filete de cierre, igual al de arriba
+        # Cuatro columnas de 142,5 pt en los 570 de la caja. SIN FONDO: son
+        # dos filetes y aire. Nosotros no teniamos ninguna pieza asi y es la
+        # unica que pone una cifra a cuerpo de titulo.
+        if l.startswith("TABLERO:"):
+            celdas = []
+            for tro in l[8:].split(";;"):
+                partes = [x.strip() for x in tro.split("|")]
+                if len(partes) != 3:
+                    continue
+                celdas.append(
+                    '<div class="tb-c"><p class="tb-r">%s</p>'
+                    '<p class="tb-n">%s</p><p class="tb-p">%s</p></div>'
+                    % (html.escape(partes[0]), _inline(partes[1]),
+                       _inline(partes[2])))
+            if celdas:
+                add(True, '<div class="tablero">%s</div>' % "".join(celdas))
+            i += 1
+            continue
+
         if l.startswith("BAJADA:"):
             add(True, '<p class="bajada">%s</p>' % _inline(l[7:].strip()))
             hay_bajada = True
@@ -889,7 +923,10 @@ def bloques(md, slug):
             if txt in _lista(DATOS, slug):
                 add(True, '<p class="dato">%s</p>' % _inline(txt))
             elif txt in _lista(REMATES, slug):
-                add(True, '<p class="remate">%s</p>' % _inline(txt))
+                rot = ROTULOS_REMATE.get(txt)
+                add(True, '<aside class="caja remate">%s<p>%s</p></aside>'
+                    % ('<h5>%s</h5>' % html.escape(rot) if rot else "",
+                       _inline(txt)))
             elif toca_entrada[0]:
                 # Se miran los parrafos que siguen, hasta tres, y se decide
                 # sobre el total: o cruzan las dos columnas todos juntos, o no
@@ -1696,14 +1733,13 @@ p.dato strong { color: %(acento)s; font-weight: 600; }
    reglita de 0,68 pt en ladrillo con cursiva al lado —un subrayado lateral,
    no una pieza—. Mismo fondo y mismo filete que la caja legal: son la misma
    familia y ahora se leen como tal. */
-p.remate { font-size: %(bajada).1fpt; line-height: %(bajada_int).3f;
+aside.caja.remate > p { font-size: %(bajada).1fpt;
+           line-height: %(bajada_int).3f;
            color: %(tinta)s; font-style: italic; font-weight: 500;
-           margin: %(sep_caja).1fmm 0;
-           background: %(tan)s;
-           padding: %(caja_alto).1fmm %(caja_sangria).1fmm;
-           border-left: %(caja_filete).1fpt solid %(dato)s; text-align: left;
+           text-align: left;
            hyphens: none; break-inside: avoid; }
-p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
+aside.caja.remate > p strong { font-style: normal; font-weight: 600;
+                              color: %(acento)s; }
 
 /* --------------------------------------------------------------------
    LA CAJA — medida pixel por pixel sobre la pagina 8 de la referencia
@@ -1761,6 +1797,31 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 .et { font-weight: 600; font-style: normal; color: %(tinta)s; opacity: 1; }
 
 /* --------------------------------------------------------------------
+   EL TABLERO DE CIFRAS — medido sobre su pagina 22
+
+   Es la unica pieza de la referencia que pone una cifra a cuerpo de titulo,
+   y no lleva fondo: dos filetes de arena y aire. Cuatro columnas iguales en
+   los 570 pt de la caja, el texto a 10 pt del arranque de cada una.
+   -------------------------------------------------------------------- */
+.tablero { display: table; width: 100%%; table-layout: fixed;
+           border-top: %(tb_filete).2fpt solid %(ix_punto)s;
+           border-bottom: %(tb_filete).2fpt solid %(ix_punto)s;
+           margin: %(sep_caja).1fmm 0;
+           padding: %(tb_aire).1fmm 0 %(tb_pie).1fmm;
+           break-inside: avoid; }
+.tb-c { display: table-cell; vertical-align: top; padding-right: 6mm; }
+.tb-r { font-family: "%(sans)s"; font-size: %(tb_rot).2fpt; font-weight: 400;
+        letter-spacing: %(tb_track).2fpt; text-transform: uppercase;
+        color: %(gris)s; margin: 0 0 %(tb_sep1).1fmm; line-height: 1.25;
+        text-align: left; hyphens: none; }
+.tb-n { font-size: %(tb_cifra).2fpt; font-weight: 700; color: %(acento)s;
+        line-height: 1.05; margin: 0 0 %(tb_sep2).1fmm;
+        font-variant-numeric: tabular-nums lining-nums;
+        text-align: left; hyphens: none; }
+.tb-p { font-size: %(tb_nota).2fpt; font-style: italic; color: %(gris)s;
+        line-height: 1.32; margin: 0; text-align: left; hyphens: none; }
+
+/* --------------------------------------------------------------------
    LA LISTA — medida sobre su pagina 3, que es toda ella una lista
 
    Es la pieza mas fuerte de su resumen ejecutivo y la teniamos como una
@@ -1778,12 +1839,19 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
    usa ninguna otra cosa del cuerpo, y cuelga afuera: se lee la lista antes
    de leer una palabra.
    -------------------------------------------------------------------- */
-ul, ol { list-style: none; margin: 0 0 %(sep).1fmm; padding: 0;
-         counter-reset: item; }
-li { position: relative; padding-left: %(li_sangria).2fmm;
+/* OJO CON EL INDICE. Esta regla se escribio como `ul, ol` y `li` a secas, y
+   el indice ES un ul: cada entrada se llevo su bolo en ocre colgado en el
+   margen, su sangria de 7,4 mm y su aire de 3,5 mm. La guia de puntos empezo
+   a cruzar desde el borde y el numero de seccion quedo debajo del bolo. El
+   indice tiene su propia anatomia, medida sobre la pagina 2 de la
+   referencia, y no comparte NADA con la lista del cuerpo. */
+ul:not(.ix), ol { list-style: none; margin: 0 0 %(sep).1fmm; padding: 0;
+                  counter-reset: item; }
+ul:not(.ix) > li, ol > li {
+     position: relative; padding-left: %(li_sangria).2fmm;
      margin-bottom: %(li_aire).2fmm;
      text-align: justify; hyphens: auto; }
-li:last-child { margin-bottom: 0; }
+ul:not(.ix) > li:last-child, ol > li:last-child { margin-bottom: 0; }
 /* LA MARCA SIN NUMERO. En sus 30 paginas NO HAY UNA SOLA lista sin
    numerar: las diecisiete marcas colgadas del margen son todas cifras. O
    sea que para una lista de guiones no hay referencia que copiar, y
@@ -1793,8 +1861,9 @@ li:last-child { margin-bottom: 0; }
    de la primera linea. */
 ol > li::before { counter-increment: item; content: counter(item);
                   font-size: %(li_marca).2fpt; }
-ul > li::before { content: "•"; font-size: %(li_bolo).2fpt; }
-li::before { position: absolute; left: 0; top: 0;
+ul:not(.ix) > li::before { content: "•"; font-size: %(li_bolo).2fpt; }
+ul:not(.ix) > li::before, ol > li::before {
+             position: absolute; left: 0; top: 0;
              color: %(ocre)s; font-weight: 700;
              line-height: %(li_linea).2fpt; }
 /* La entrada de cada item va en ladrillo, como en la suya. _fuerte() ya
@@ -2027,6 +2096,11 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
     coral=CORAL, gris=GRIS,
+    # el tablero, todo medido sobre su pagina 22
+    tb_filete=e(0.7), tb_rot=e(6.4), tb_cifra=e(19.0), tb_nota=e(7.5),
+    tb_track=e(6.4) * 0.083,
+    tb_aire=emm(7.9, 1), tb_pie=emm(16.0, 1),
+    tb_sep1=emm(25.4 - 6.4 * 1.25, 1), tb_sep2=emm(21.2 - 19.0 * 1.05, 1),
     fila=FILA, tan=TAN, ocre=OCRE, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
     sans=SANS, tipos=TIPOS,
     # geometria

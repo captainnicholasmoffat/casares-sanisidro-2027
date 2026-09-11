@@ -62,6 +62,8 @@ El límite fiscal también está declarado: las dos propuestas grandes ocupan el
 
 ---
 
+TABLERO: LO QUE CUESTA POR AÑO | 7.225,2 M | El 8,3 % del gasto que el Municipio puede reasignar libremente. ;; LO QUE DECIDEN LOS VECINOS | 28.908 M | Al cuarto año: uno de cada dos pesos de obra pública municipal. ;; HOGARES SIN GAS DE RED | 25.165 | Seis de cada diez están en Boulogne Sur Mer y Béccar. ;; LA MITAD QUE FALTA | 46,8 % | 138.551 personas en 47.193 hogares, donde falta todo.
+
 ## Contra qué pide que lo midan
 
 Este documento audita un plan de gobierno contra sus propias metas publicadas. Ese ejercicio sólo es legítimo si quien lo hace acepta que se lo hagan.
