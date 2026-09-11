@@ -60,7 +60,7 @@ def ex17():
                         for n, _ in filas], fontsize=6.2, linespacing=1.15)
     ax.xaxis.set_major_formatter(E.eje_numero())
     ax.set_xlim(0, max(v for _, v in filas) / 1e6 * 1.42)
-    ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
+    ax.set_xlabel("MILLONES DE PESOS DEVENGADOS EN 2025", fontsize=6.8)
     E.limpiar(ax, grilla="x")
     top, bottom = E.marco(
         fig, "EXHIBIT 17",
@@ -124,7 +124,7 @@ def ex18():
     ax.set_xlim(0, total / 1e6 * 1.005)
     E.podar_tick_superior(ax)
     ax.xaxis.set_major_formatter(E.eje_numero())
-    ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
+    ax.set_xlabel("MILLONES DE PESOS DEVENGADOS EN 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
     top, bottom = E.marco(
@@ -269,7 +269,7 @@ def ex20():
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylim(0, max(v for _, v in datos) * 1.30)
     E.podar_tick_superior(ax, "y", 5)
-    ax.set_ylabel("hogares", fontsize=6.8)
+    ax.set_ylabel("HOGARES", fontsize=6.8)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 20",

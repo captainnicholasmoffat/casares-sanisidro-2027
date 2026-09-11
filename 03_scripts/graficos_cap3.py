@@ -70,7 +70,7 @@ def ex08():
     ax.set_xlim(2024.4, 2040.5)
     ax.set_xticks(range(2025, 2038, 2))
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("resultado financiero, millones de pesos dic-2025", fontsize=6.6)
+    ax.set_ylabel("RESULTADO FINANCIERO, MILLONES DE PESOS DIC-2025", fontsize=6.6)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 08",
@@ -125,7 +125,7 @@ def ex09():
     ax.set_xlim(2024.4, 2040)
     ax.set_xticks(range(2025, 2038, 2))
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("resultado financiero, millones de pesos dic-2025", fontsize=6.6)
+    ax.set_ylabel("RESULTADO FINANCIERO, MILLONES DE PESOS DIC-2025", fontsize=6.6)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 09",
@@ -276,7 +276,7 @@ def ex11():
     ax.set_xlim(0, total / 1e6 * 1.02)
     E.podar_tick_superior(ax)
     ax.xaxis.set_major_formatter(E.eje_numero())
-    ax.set_xlabel("millones de pesos devengados en 2025", fontsize=6.8)
+    ax.set_xlabel("MILLONES DE PESOS DEVENGADOS EN 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
     top, bottom = E.marco(
@@ -345,7 +345,7 @@ def ex12():
     ax.set_xticks(range(len(pasos)))
     ax.set_xticklabels([p[0] for p in pasos], fontsize=6.4, linespacing=1.2)
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("millones de pesos de 2025", fontsize=6.8)
+    ax.set_ylabel("MILLONES DE PESOS DE 2025", fontsize=6.8)
     E.limpiar(ax)
     E.podar_tick_superior(ax, "y")
     top, bottom = E.marco(

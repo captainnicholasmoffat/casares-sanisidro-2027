@@ -182,7 +182,17 @@ def aplicar():
         "savefig.transparent": False,
         "axes.facecolor": CREMA,
         "axes.edgecolor": GRIS,
-        "axes.labelcolor": GRIS,
+        # EL ROTULO DE EJE VA EN OCRE MAYUSCULA, como los suyos.
+        # En la referencia el ocre es la voz que rotula —"PRICE PER UNIT",
+        # "REVENUE PER MONTH, BY STREAM", "MEMBERS ON THE BOOKS"— y lleva el
+        # 2,4 % de sus glifos contra el 0,5 % de los nuestros. Casi todo ese
+        # hueco esta adentro de los graficos: los nuestros rotulaban el eje en
+        # gris y en minuscula, que se lee como una nota al pie y no como el
+        # nombre de lo que se esta midiendo. La mayuscula la pone rotular(),
+        # que envuelve set_xlabel y set_ylabel.
+        "axes.labelcolor": OCRE,
+        "axes.labelsize": 6.2,
+        "axes.labelweight": 600,
         "axes.linewidth": 0.7,
         "axes.spines.top": False,
         "axes.spines.right": False,
@@ -994,6 +1004,26 @@ def _colores_del_artista(art):
                                 "get_color"):
             break                                        # el relleno manda
     return fuera
+
+
+def rotular(ax, x=None, y=None):
+    """El rotulo de eje, como el de la referencia: ocre, mayuscula, espaciado.
+
+    No cambia el texto: lo pone en mayuscula y le da el interletrado de
+    0,14 em que llevan sus micro-etiquetas.
+    """
+    if x is not None:
+        t = ax.set_xlabel(x.upper(), labelpad=6)
+        t.set_fontfamily("sans-serif")
+    if y is not None:
+        t = ax.set_ylabel(y.upper(), labelpad=6)
+        t.set_fontfamily("sans-serif")
+    for t in (ax.xaxis.label, ax.yaxis.label):
+        try:
+            t.set_color(OCRE)
+        except Exception:
+            pass
+    return ax
 
 
 def verificar_contraste(fig, umbral=UMBRAL_CONTRASTE):

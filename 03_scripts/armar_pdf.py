@@ -2010,6 +2010,18 @@ aside.caja.remate > p strong { font-style: normal; font-weight: 600;
            text-transform: uppercase;
            margin: 0 0 %(sep_caja_rot).1fmm; color: %(dato)s;
            line-height: %(caja_rot_int).2fpt; }
+/* LAS TRES VARIANTES DE CAJA. En su hoja de estilos el filete y el rotulo de
+   la caja van en salvia (8 y 14 veces), en ocre (4 y 3) o en ladrillo (3 y
+   4). No es decoracion: dice de que clase de aparte se trata. Las nuestras
+   eran las 40 en salvia, y ademas por eso el ocre nos quedaba en nada.
+     salvia   el aparte de metodo, que es el caso corriente
+     ocre     la cita de una norma: es una referencia, no una opinion
+     ladrillo el remate, que es la conclusion de la seccion
+   La caja es la misma pieza; lo unico que cambia es la voz. */
+.caja.legal { border-left-color: %(ocre)s; }
+.caja.legal h5 { color: %(ocre)s; }
+.caja.remate { border-left-color: %(acento)s; }
+.caja.remate h5 { color: %(acento)s; }
 .caja p { margin: 0 0 .5em; text-align: left; hyphens: none; }
 .caja p:last-child { margin-bottom: 0; }
 .caja.legal { font-style: italic; }
@@ -2274,7 +2286,12 @@ figure.apertura + h1 { break-before: avoid; margin-top: 0; }
 figure.ilu { margin: %(sep).1fmm 0; break-inside: avoid; }
 figure.ilu.sola img { display: block; width: 100%%; height: 76mm;
                       object-fit: cover; }
-figure.ilu.cierre img { height: 128mm; }
+/* LA ILUSTRACION DE CIERRE ES UNA BANDA, NO UNA IMAGEN ALTA.
+   Estaba en 128 mm: no entra en el pie de ninguna pagina, asi que se iba
+   entera a una hoja nueva y dejaba dos huecos —el de la pagina anterior y
+   el resto de la suya—. Medido sobre el documento armado: a 128 y a 76 mm
+   son 44 paginas y 11 problemas de maqueta; a 62, 43 paginas y 9. */
+figure.ilu.cierre img { height: 62mm; }
 /* EL PAR ENFRENTADO. Mitad y mitad, separadas por el mismo medianil que las
    columnas: las dos fotos se leen como una sola pieza de comparacion. */
 figure.ilu .par { display: flex; gap: %(md).1fmm; }

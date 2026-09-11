@@ -64,7 +64,7 @@ def ex01():
     ax.set_xticks(anios)
     ax.set_xticklabels([str(a) for a in anios], fontsize=6.5)
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("millones de pesos de diciembre de 2025", fontsize=6.8)
+    ax.set_ylabel("MILLONES DE PESOS DE DICIEMBRE DE 2025", fontsize=6.8)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 01",

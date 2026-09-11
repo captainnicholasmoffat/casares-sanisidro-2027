@@ -106,9 +106,23 @@ def _arranques(pdf):
     """
     ini = set()
     for i, p in enumerate(pdf.pages, 1):
-        if any(w.get("size", 0) > 16
-               for w in (p.extract_words(extra_attrs=["size", "fontname"]) or [])):
-            ini.add(i)
+        for w in (p.extract_words(
+                extra_attrs=["size", "fontname", "non_stroking_color"]) or []):
+            # EL UMBRAL ERA 16 pt Y EL TITULO MIDE 14,9. Cuando el h1 paso a
+            # los 16,5 de la referencia por la escala de A4 —14,88— este
+            # umbral dejo de encontrar un solo capitulo: daba la tapa y nada
+            # mas, y por eso ninguna pagina quedaba exenta por ser el final de
+            # su capitulo. Se reconoce por lo que el titulo ES: Spectral Bold,
+            # catorce y medio o mas, en ladrillo, y arriba en la pagina.
+            if (w.get("size", 0) >= 14.5
+                    and "Bold" in (w.get("fontname") or "")
+                    and w["top"] < p.height * 0.45):
+                c = w.get("non_stroking_color")
+                if isinstance(c, (list, tuple)) and len(c) >= 3:
+                    r, g, b = (float(x) for x in c[:3])
+                    if r > 0.35 and g < 0.45 and b < 0.40:   # ladrillo o coral
+                        ini.add(i)
+                        break
     return ini
 
 
@@ -121,7 +135,9 @@ def revisar(ruta=PDF):
         arranques = _arranques(pdf)
         # La ultima pagina de un capitulo termina donde termina el texto: cada
         # capitulo empieza en pagina nueva. No es un hueco de maquetacion.
-        cierres = {n - 1 for n in arranques}
+        # Y LA ULTIMA PAGINA DEL DOCUMENTO, que cierra el ultimo capitulo y
+        # no tiene ninguna despues que la obligue a llenarse.
+        cierres = {n - 1 for n in arranques} | {total}
         for i, p in enumerate(pdf.pages, 1):
             txt = p.extract_text() or ""
             if MARCADOR in txt or "Pendientes de este" in txt:
@@ -180,11 +196,17 @@ def revisar(ruta=PDF):
                 primera, segunda = cols[1][0], cols[1][1]
                 hueco = min(w["top"] for w in segunda) - min(w["top"] for w in primera)
                 texto = " ".join(w["text"] for w in primera)
-                es_rotulo = (texto.upper() == texto
-                             and any("Inter" in w.get("fontname", "")
-                                     for w in primera))
+                # LA PROSA NUNCA ES INTER. Una linea en Inter es una celda de
+                # tabla, un rotulo o un pie: la denuncia es sobre el resto de
+                # un parrafo que quedo colgado arriba de una columna, y eso
+                # solo le puede pasar a la prosa. Denunciaba tres ultimas
+                # lineas de celda —"reconoce", "proximo censo",
+                # "demuestra."—, las tres en Inter de 7,1 contra el borde
+                # derecho de su tabla.
+                es_apparato = any("Inter" in (w.get("fontname") or "")
+                                  for w in primera)
                 if (len(primera) < MIN_LINEA_SUELTA and hueco > 14
-                        and not es_rotulo):
+                        and not es_apparato):
                     fallas.append("p%d col2: arranca con una linea suelta (%r)"
                                   % (i, texto[:40]))
 
@@ -198,7 +220,15 @@ def revisar(ruta=PDF):
                 bajo = [l for l in cruzan if min(w["top"] for w in l) > fin]
                 if bajo:
                     continue
-                if fin_pagina / util >= MIN_LLENADO and fin / util < MIN_LLENADO:
+                # LA ULTIMA PAGINA DE UN CAPITULO NO CUENTA. El capitulo
+                # termina donde termina y el siguiente abre en hoja nueva: que
+                # una columna acabe antes que la otra ahi no es un defecto de
+                # armado, es el final del capitulo. La comprobacion de pagina
+                # ya lo excluia con `cierres`; la de columna no, y por eso
+                # denunciaba cinco finales de capitulo como si fueran huecos.
+                if (i not in cierres
+                        and fin_pagina / util >= MIN_LLENADO
+                        and fin / util < MIN_LLENADO):
                     fallas.append("p%d col%d: llena el %.0f%% y la otra llega al pie"
                                   % (i, c + 1, 100 * fin / util))
             if fin_pagina / util < MIN_LLENADO and i not in cierres:

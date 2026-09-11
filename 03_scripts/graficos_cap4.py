@@ -174,7 +174,7 @@ def ex13():
                        fontsize=7.2, linespacing=1.25)
     ax.yaxis.set_major_formatter(E.eje_numero())
     ax.set_ylim(0, max(vals) * 1.2)
-    ax.set_ylabel("pesos de dic-2025 por habitante", fontsize=6.8)
+    ax.set_ylabel("PESOS DE DIC-2025 POR HABITANTE", fontsize=6.8)
     E.limpiar(ax)
     # El tick de arriba se dibujaba medio afuera del lienzo.
     E.podar_tick_superior(ax, "y", 5)
@@ -256,7 +256,7 @@ def ex14():
     ax.invert_yaxis()
     ax.set_xlim(0, obra / 1e6 * 1.01)
     ax.xaxis.set_major_formatter(E.eje_numero())
-    ax.set_xlabel("millones de pesos de diciembre de 2025", fontsize=6.8)
+    ax.set_xlabel("MILLONES DE PESOS DE DICIEMBRE DE 2025", fontsize=6.8)
     E.limpiar(ax, grilla=None)
     ax.spines["bottom"].set_visible(True)
     top, bottom = E.marco(

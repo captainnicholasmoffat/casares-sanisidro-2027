@@ -75,7 +75,7 @@ def ex06():
     ax.set_xlim(-1.05, 2.05)
     ax.set_ylim(0, max(d[1] for d in datos) / 1e6 * 1.16)
     ax.yaxis.set_major_formatter(E.eje_numero())
-    ax.set_ylabel("millones de pesos de cada año", fontsize=6.8)
+    ax.set_ylabel("MILLONES DE PESOS DE CADA AÑO", fontsize=6.8)
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 06",
