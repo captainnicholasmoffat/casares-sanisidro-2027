@@ -1279,23 +1279,38 @@ def tapa():
 
 
 def indice(entradas):
-    """Indice con la pagina real de cada seccion y de cada subseccion."""
+    """El indice, con la anatomia de su pagina de contenidos.
+
+    Medida linea por linea sobre su pagina 2. Su indice tiene DOS NIVELES y
+    ninguno de los dos es el que teniamos:
+
+      - un CINTILLO DE GRUPO en Inter mayuscula espaciada, pegado al margen,
+        sin numero de pagina y sin filete: "THE THESIS", "THE BUILD";
+      - una ENTRADA por seccion, con el numero colgando en el margen a 22 pt
+        del titulo, el titulo alineado con todos los demas, una guia de
+        puntos que llega hasta el borde derecho y el numero de pagina
+        alineado a la derecha.
+
+    Nuestros capitulos ocupan el lugar de sus cintillos y nuestras
+    subsecciones el de sus entradas: es la misma estructura de dos niveles
+    con el mismo tratamiento, aplicada a lo que nuestro documento tiene.
+
+    NO HAY UNA SOLA REGLA HORIZONTAL en su indice. Ni bajo el titulo de la
+    pagina, ni entre entradas, ni bajo los capitulos. Las teniamos las tres.
+    """
     filas = []
     for slug, titulo, subs in entradas:
-        # EL NUMERO CUELGA EN EL MARGEN. En su pagina de contenidos el
-        # numero va en x=45 y el nombre en x=67: los nombres arrancan todos
-        # alineados y el numero queda afuera de esa alineacion.
         m = RE_H1CAP.match(titulo)
         num, nombre = (m.group(1), m.group(2)) if m else ("", titulo)
-        filas.append('<li class="ix-cap"><a href="#%s">'
-                     '<span class="ix-n">%s</span>'
-                     '<span class="ix-t">%s</span></a></li>'
-                     % (slug, html.escape(num), html.escape(nombre)))
-        for sid, num, tit in subs:
-            filas.append('<li class="ix-sub"><a href="#%s">'
-                         '<span class="ix-n">%s</span>'
-                         '<span class="ix-t">%s</span></a></li>'
-                         % (sid, html.escape(num or ""), html.escape(tit)))
+        cintillo = ("%s %s" % (num, nombre)) if num else nombre
+        filas.append('<li class="ix-cap"><a href="#%s">%s</a></li>'
+                     % (slug, html.escape(cintillo)))
+        for sid, n, tit in subs:
+            filas.append(
+                '<li class="ix-sub"><a href="#%s">'
+                '<span class="ix-n">%s</span>'
+                '<span class="ix-t">%s</span></a></li>'
+                % (sid, html.escape(n or ""), html.escape(tit)))
     return ('<section class="indice"><h1 class="ix-h">Índice</h1>'
             '<ul class="ix">%s</ul></section>' % "".join(filas))
 
@@ -1460,7 +1475,14 @@ CSS = _FACES + """
   @bottom-right { content: ""; } }
 
 html { background: %(crema)s; }
-body { font-family: "%(serif)s", Georgia, serif; font-size: %(cuerpo).2fpt;
+/* EL MARGEN DE BODY VA EN CERO, Y ESTO NO ES UN DETALLE.
+   El estilo por defecto le da a body 8 px de margen, que son 6 pt: todo el
+   documento venia 2,1 mm metido hacia adentro por los cuatro lados respecto
+   del margen que declara @page. La caja de texto media 173,8 mm en vez de
+   181,4, y cada medida tomada de la referencia caia sobre una caja que no
+   era la que se habia calculado. Se nota al medir la pagina: la cornisa, que
+   vive en una caja de margen, arrancaba en 40,5 pt y el texto en 46,5. */
+body { margin: 0; font-family: "%(serif)s", Georgia, serif; font-size: %(cuerpo).2fpt;
        line-height: %(cuerpo_int).3f; color: %(tinta)s;
        font-variant-numeric: lining-nums; }
 
@@ -1734,29 +1756,66 @@ figure.ilu .par img { display: block; width: 50%%; height: 66mm;
              border-top: %(filete).2fpt solid %(acento)s; padding-top: 3.5mm;
              display: inline-block; }
 /* --------------------------------------------------------------------
-   INDICE
+   INDICE — la anatomia de su pagina de contenidos, medida
+   --------------------------------------------------------------------
+   Su pagina 2, linea por linea, escalada por 210/232,8:
+
+     titulo de la pagina   Spectral Bold 16,5  EN LADRILLO, no en tinta
+     cintillo de grupo     Inter 6,7 mayuscula espaciada, pegado al margen
+     numero de seccion     Spectral Regular 8,6, colgando en el margen
+     titulo de seccion     Spectral Regular 9,7, a 22 pt del margen
+     numero de pagina      Spectral Regular 8,6, alineado a la derecha
+     guia                  puntos de 0,75 pt con paso de 1,5
+     fila a fila           21,0 pt de alto
+     cintillo              6,2 pt mas de aire encima
+
+   Y NINGUNA REGLA HORIZONTAL. Ni bajo el titulo, ni entre entradas, ni
+   bajo los capitulos. El indice anterior tenia las tres.
    -------------------------------------------------------------------- */
 .indice { break-before: page; }
-h1.ix-h { font-size: %(h1).1fpt; margin-bottom: %(sep_caja).1fmm; }
+h1.ix-h { font-size: %(h1).1fpt; color: %(acento)s;
+          margin: 0 0 %(ix_tit).1fmm; border: 0; }
 ul.ix { list-style: none; margin: 0; padding: 0;
         font-variant-numeric: tabular-nums lining-nums; }
 ul.ix li { margin: 0; }
-ul.ix a { color: %(tinta)s; display: block; text-decoration: none;
-          padding-bottom: 1mm; }
-ul.ix a::after { content: target-counter(attr(href), page); float: right;
-                 font-size: %(tabla).1fpt; color: %(tinta)s; opacity: .6;
-                 padding-left: 3mm; }
-li.ix-cap { margin-top: %(sep).1fmm; }
+ul.ix a { text-decoration: none; color: %(tinta)s; }
+
+/* El capitulo hace de cintillo de grupo: Inter mayuscula espaciada, contra
+   el margen, sin numero de pagina y sin filete. */
+li.ix-cap { margin-top: %(ix_grupo).1fmm; }
 li.ix-cap:first-child { margin-top: 0; }
-li.ix-cap a { font-size: %(exh_tit).1fpt; font-weight: 600; color: %(acento)s;
-              border-bottom: %(filete).2fpt solid %(acento)s;
-              padding-bottom: 1.6mm; }
-li.ix-cap a::after { color: %(acento)s; opacity: 1; font-weight: 600;
-                     font-size: %(tabla).1fpt; }
-li.ix-sub a { font-size: %(entrada).1fpt; padding: .9mm 0;
-              border-bottom: %(filete).2fpt dotted rgba(124, 46, 35, .22); }
-span.ix-n { display: inline-block; width: %(sangria_ix).1fmm; color: %(acento)s;
-            font-weight: 600; }
+li.ix-cap a { display: block; font-family: "%(sans)s";
+              font-size: %(ix_cintillo).2fpt; font-weight: 500;
+              letter-spacing: %(ix_track).2fpt; text-transform: uppercase;
+              color: %(acento)s; line-height: %(ix_fila).3f; }
+
+/* La entrada: numero colgado, titulo, guia de puntos, numero de pagina.
+   SIN FLEXBOX. Con la ancla en display:flex, WeasyPrint resuelve
+   target-counter antes de colocar los items y todos los numeros de pagina
+   salian 0. La guia se dibuja como una linea punteada absoluta que cruza la
+   fila entera, y el titulo y el numero de pagina la tapan con un fondo del
+   color del papel: es la tecnica de siempre y aca es ademas la unica que
+   funciona. */
+li.ix-sub { position: relative; }
+li.ix-sub a { display: block; padding-left: %(sangria_ix).1fmm;
+              font-size: %(ix_entrada).2fpt; line-height: %(ix_alto).3f; }
+li.ix-sub a::before { content: ""; position: absolute;
+                      left: %(sangria_ix).1fmm; right: 0; bottom: 1.1mm;
+                      border-bottom: %(filete).2fpt dotted
+                                     rgba(124, 46, 35, .46); }
+span.ix-n { position: absolute; left: 0; color: %(acento)s;
+            font-size: %(ix_num).2fpt; }
+span.ix-t { position: relative; color: %(tinta)s; background: %(crema)s;
+            padding-right: 1.6mm; }
+/* ABSOLUTO, NO FLOTADO. Flotando, el numero de pagina se apoya en el borde
+   de arriba de la caja de linea y queda medio punto por encima del titulo;
+   en su indice los dos comparten la linea de base. Absoluto a la derecha
+   conserva la posicion estatica de la linea, o sea la misma base. */
+li.ix-sub a::after { content: target-counter(attr(href), page);
+                     position: absolute; right: 0; background: %(crema)s;
+                     padding-left: 1.6mm; font-size: %(ix_num).2fpt;
+                     color: %(tinta)s; opacity: .68; }
+
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
     fila=FILA, tan=TAN, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
@@ -1804,6 +1863,12 @@ span.ix-n { display: inline-block; width: %(sangria_ix).1fmm; color: %(acento)s;
     caja_alto=emm(REF["caja_alto"], 1),
     # En su pagina de contenidos el numero va en x=45 y el nombre en x=67.
     sangria_ix=emm(22.0, 1),
+    ix_tit=emm(28.5 - 21.7, 1),        # "Contents" -> primer cintillo
+    ix_grupo=emm(27.2 - 21.0, 1),      # aire de mas encima de un cintillo
+    ix_cintillo=e(6.7), ix_entrada=e(9.7), ix_num=e(8.6),
+    ix_track=e(0.6),
+    ix_fila=21.0 / 6.7,                # el cintillo ocupa una fila entera
+    ix_alto=21.0 / 9.7,                # 21 pt de fila, como los suyos
     celda=emm(REF["celda"], 1),
     celda_v=emm((REF["banda_cab"] - REF["tabla_cab"] * 1.25) / 2, 1),
     celda_v2=emm((REF["banda_fila"] - REF["tabla_int"]) / 2, 1),
