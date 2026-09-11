@@ -43,16 +43,26 @@ separa: por eso sus tablas se leen nítidas y las nuestras lavadas.
 ## 3. Dispositivos suyos que no existen en nuestro documento
 
 ```
-banda 147,7 pt #282216   x13  +  #fcfaf6 x13   PANEL OSCURO con texto crema
-banda  82,5 pt #fbf6ec   x38                   FICHA CLARA, mas clara que el papel
+banda  82,5 pt #fbf6ec   x38                   FICHA, mas clara que el papel
+banda 147,7 pt #282216   x26                   marco de foto dentro de esas fichas
 banda  21,7 / 31,5 / 42 pt #66734c x29         barras oliva
 filete 0,75 pt #d9cdba   x196                  filete tostado
 punto de guia 0,45 pt #db6b4b x127             guias punteadas de grafico
 ```
 
-El **panel oscuro** —fondo casi negro, texto crema, media página de alto,
-trece veces en el documento— es su pieza de mayor contraste y nosotros no
-tenemos nada equivalente.
+**CORRECCION.** La primera version de esta auditoria decia que la referencia
+tiene un *panel oscuro de media pagina, trece veces en el documento*. Es
+falso, y el error es el mismo que esta auditoria existe para evitar: se leyo
+el censo de rectangulos y se describio una pieza sin abrir la pagina.
+
+Los 26 rectangulos `#282216` de 147 pt estan **todos en la pagina 11**, y son
+los marcos de foto de una **grilla de fichas de producto**: cuatro columnas,
+fondo `#fbf6ec` mas claro que el papel, foto arriba, titulo en ladrillo,
+descripcion en tinta y URL en salvia al pie. Las fotos los tapan. El unico
+otro es el marco de un grafico de posicionamiento en la pagina 17.
+
+No hay nada que incorporar ahi: es un catalogo de equipamiento y este
+documento no tiene catalogo.
 
 ## 4. Su escala tipográfica tiene el doble de escalones
 
