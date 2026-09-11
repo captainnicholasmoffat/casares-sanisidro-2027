@@ -217,7 +217,7 @@ Los dos primeros dependen enteramente de la administración municipal. **El futu
 ---
 
 ### Nota metodológica
-El modelo está construido sobre la ejecución presupuestaria 2010–2026 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el Estado de Situación Económico-Financiera municipal y las planillas de transferencias de la Dirección Provincial de Coordinación Municipal. Todas las series fueron deflactadas por IPC (INDEC 2016–2026; IPC San Luis 2010–2016, con el empalme declarado en el anexo metodológico).
+El modelo está construido sobre la ejecución presupuestaria 2010–2026 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el Estado de Situación Económico-Financiera municipal y las planillas de transferencias de la Dirección Provincial de Coordinación Municipal. Todas las series fueron deflactadas por IPC (INDEC 2016–2026; IPC San Luis 2010–2016, con el empalme declarado).
 
 Los cuatro parámetros fueron calculados desde la serie histórica, no supuestos. El año cero reproduce la ejecución 2025 oficial con diferencia cero. Las identidades contables se verifican automáticamente en los treinta y nueve años-escenario proyectados. El modelo, los datos y las pruebas de validación son públicos y reproducibles.
 

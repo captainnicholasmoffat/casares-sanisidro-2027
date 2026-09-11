@@ -158,7 +158,7 @@ Fecha fija y formato fijo, a propósito. "Se publica" no se puede incumplir; un 
 ### Nota sobre las fuentes de este capítulo
 Este capítulo no introduce datos nuevos. Cada cifra proviene del capítulo que la desarrolla: los indicadores territoriales del capítulo 1, la auditoría del plan vigente del capítulo 2, el modelo fiscal y las líneas de base presupuestarias del capítulo 3, la rampa y la fórmula de distribución del capítulo 4, y el estado del portal de transparencia del capítulo 5.
 
-Los 4.616 hogares sin cloaca de Boulogne y Béccar están contados hogar por hogar sobre los 360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los límites de localidad de OpenStreetMap proyectados sobre esos radios; el capítulo 4 y el anexo lo detallan.
+Los 4.616 hogares sin cloaca de Boulogne y Béccar están contados hogar por hogar sobre los 360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los límites de localidad de OpenStreetMap proyectados sobre esos radios; el capítulo 4 lo detalla.
 
 ---
 ---

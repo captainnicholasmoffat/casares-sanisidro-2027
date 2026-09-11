@@ -292,6 +292,11 @@ SUBTITULO = ("Con los recursos que el Municipio ya tiene,<br>"
              "y con decisión vecinal sobre la inversión pública.")
 TITULO_CORTO = "Programa de gobierno · San Isidro 2027"
 
+# EL ANEXO DE FUENTES NO SE PUBLICA. El archivo sigue en 07_capitulos/ —es el
+# registro de como se hizo el documento y ahi tiene que estar— pero no entra al
+# PDF: un programa de gobierno no lleva adentro la linea de comandos con la que
+# se arma. Ese material es el README del repositorio, que es donde cualquiera
+# que quiera correr los numeros va a buscarlo.
 ORDEN = [
     ("00_INTRODUCCION.md", "Introducción"),
     ("CAP1_DIAGNOSTICO.md", "1 Diagnóstico"),
@@ -300,7 +305,6 @@ ORDEN = [
     ("CAP4_MECANISMO.md", "4 El mecanismo"),
     ("CAP5_SECTORIAL.md", "5 Qué hacemos en cada área"),
     ("CAP6_CIERRE.md", "6 Contra qué queremos que nos midan"),
-    ("99_ANEXO_FUENTES.md", "A Anexo de fuentes"),
 ]
 
 # El primer encabezado de la tabla -> etiqueta. Se detecta por contenido, no

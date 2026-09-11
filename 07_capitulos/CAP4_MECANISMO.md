@@ -161,7 +161,7 @@ El mismo artículo exige que esa contratación directa proceda **sólo si los ve
 Donde una zona quiera y reúna ese 60%, **su asociación vecinal ejecuta la obra como parte contratante**: la hace, la cobra, la rinde y responde por ella.
 
 ### Ya funciona en otro municipio bonaerense
-El Municipio de Pilar contrata cooperativas de vecinos bajo el artículo 132 inciso c). Hay **al menos tres decretos publicados** en el Boletín Oficial Municipal de la Provincia, y en uno de ellos —el del expediente 144/2019, por obras en el Barrio Los Cachorros de Manuel Alberti— consta expresamente la acreditación de la adhesión de los vecinos beneficiarios. Los tres están enlazados en el anexo de fuentes.
+El Municipio de Pilar contrata cooperativas de vecinos bajo el artículo 132 inciso c). Hay **al menos tres decretos publicados** en el Boletín Oficial Municipal de la Provincia, y en uno de ellos —el del expediente 144/2019, por obras en el Barrio Los Cachorros de Manuel Alberti— consta expresamente la acreditación de la adhesión de los vecinos beneficiarios.
 
 Es hacer en San Isidro algo que la ley habilita desde 1976 y que otro municipio bonaerense ya hace.
 
@@ -229,11 +229,11 @@ Este mecanismo decide la mitad de la obra pública. El capítulo siguiente dice 
 ### Nota sobre las fuentes de este capítulo
 Los artículos 60, 132 y 119 de la Ley Orgánica de las Municipalidades fueron verificados contra tres fuentes oficiales independientes: la copia de la LOM del Ministerio del Interior de la Nación, el digesto del Concejo Deliberante de La Plata y el digesto del Municipio de Tigre. El artículo 211 de la Constitución provincial fue verificado contra el texto constitucional oficial. El Decreto 2099/2025 de Pinamar fue verificado contra el Sistema de Boletines Oficiales Municipales de la Provincia. La Ordenanza 6045/1984 de San Isidro fue verificada contra el Digesto municipal; su única modificación posterior es la Ordenanza 7164/1993, que no altera los artículos 5, 8, 9 ni 10.
 
-Las cifras de obra pública y su distribución por zona surgen de la ejecución presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio censal. La fórmula de distribución es reproducible y está documentada en el anexo metodológico. Los montos están expresados en pesos de 2025 y el capítulo 3 modela su evolución.
+Las cifras de obra pública y su distribución por zona surgen de la ejecución presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio censal. La fórmula de distribución es reproducible y está documentada. Los montos están expresados en pesos de 2025 y el capítulo 3 modela su evolución.
 
 El reparto se calcula sobre 295.978 habitantes, la población en viviendas particulares del Censo 2022. Las 1.304 personas restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden asignarse a una zona.
 
-Las seis zonas son **los límites de las localidades del partido según OpenStreetMap**, proyectados sobre los 360 radios censales del INDEC: cada radio va a la localidad que contiene su punto representativo, y los 360 caen dentro de exactamente una. **OpenStreetMap no es fuente oficial**; la Municipalidad no publica los límites de sus localidades y el anexo de zonas de la Ordenanza 6045/1984 tampoco está publicado. El anexo de fuentes lista las seis relaciones para que cualquiera las abra.
+Las seis zonas son **los límites de las localidades del partido según OpenStreetMap**, proyectados sobre los 360 radios censales del INDEC: cada radio va a la localidad que contiene su punto representativo, y los 360 caen dentro de exactamente una. **OpenStreetMap no es fuente oficial**; la Municipalidad no publica los límites de sus localidades y el anexo de zonas de la Ordenanza 6045/1984 tampoco está publicado.
 
 ---
 ---
