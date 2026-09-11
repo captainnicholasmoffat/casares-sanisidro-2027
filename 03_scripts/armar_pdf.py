@@ -762,6 +762,26 @@ def bloques(md, slug):
         # Cuatro columnas de 142,5 pt en los 570 de la caja. SIN FONDO: son
         # dos filetes y aire. Nosotros no teniamos ninguna pieza asi y es la
         # unica que pone una cifra a cuerpo de titulo.
+        if l.startswith("CAPAS:"):
+            pasos = []
+            for tro in l[6:].split(";;"):
+                partes = [x.strip() for x in tro.split("|")]
+                if len(partes) == 3:
+                    pasos.append(tuple(partes))
+            if len(pasos) >= 2:
+                add(True, '<figure class="dgw">%s</figure>'
+                    % diagrama_capas(pasos))
+            i += 1
+            continue
+
+        if l.startswith("CICLO:"):
+            tro = [x.strip() for x in l[6:].split("|")]
+            if len(tro) >= 8:
+                add(True, '<figure class="dgw">%s</figure>'
+                    % diagrama_ciclo(tro[:5], tro[5], tro[6], tro[7]))
+            i += 1
+            continue
+
         if l.startswith("TABLERO:"):
             celdas = []
             for tro in l[8:].split(";;"):
@@ -1431,6 +1451,154 @@ def acomodar(piezas, css_txt, envolver, cierres):
 # 4. TAPA E INDICE
 # ==========================================================================
 
+# ==========================================================================
+# EL DIAGRAMA DE CICLO
+# ==========================================================================
+# Copiado de su exhibit de los cinco verbos, medido en su propio SVG:
+#
+#   svg        570 x 300, viewBox 0 0 570 300  (570 pt = el ancho de la caja)
+#   circulo    cx 285, cy 153.295, r 117.4995, trazo coral de 1.27,
+#              punteado 3.916651
+#   nodos      r 30.354, sobre el circulo a -90, -18, 54, 126 y 198 grados
+#   el ancla   relleno coral, su rotulo en papel
+#   los otros  relleno #FCFAF6, trazo salvia clara de 1.5666604, rotulo en
+#              ladrillo
+#   rotulo     Inter 600 de 14.685
+#   cornisa    Inter 600 de 8.3175 en ocre, interletrado 1
+#   centro     Spectral 600 cursiva de 14.685 en coral, y una linea de 10
+#
+# Las flechas son triangulos de 10 x 8 apoyados sobre el circulo, girados
+# con la tangente.
+import math as _math
+
+
+def _flecha(cx, cy, r, grados, color):
+    """Un triangulo apoyado en el circulo, apuntando en el sentido del giro."""
+    a = _math.radians(grados)
+    px, py = cx + r * _math.cos(a), cy + r * _math.sin(a)
+    tx, ty = -_math.sin(a), _math.cos(a)          # tangente, sentido horario
+    nx, ny = _math.cos(a), _math.sin(a)           # normal
+    largo, ancho = 10.5, 7.8
+    p1 = (px + tx * largo / 2, py + ty * largo / 2)
+    p2 = (px - tx * largo / 2 + nx * ancho / 2, py - ty * largo / 2 + ny * ancho / 2)
+    p3 = (px - tx * largo / 2 - nx * ancho / 2, py - ty * largo / 2 - ny * ancho / 2)
+    return ('<path d="M%.2f %.2f L%.2f %.2f L%.2f %.2f Z" fill="%s"/>'
+            % (p1[0], p1[1], p2[0], p2[1], p3[0], p3[1], color))
+
+
+def diagrama_ciclo(nodos, centro, bajo_centro, cornisa):
+    """Un ciclo de cinco nodos, con la anatomia de la referencia."""
+    CX, CY, R, RN = 285.0, 153.295, 117.4995, 30.354
+    ang = [-90 + 72 * k for k in range(len(nodos))]
+    piezas = ['<svg class="dg" width="100%%" viewBox="0 0 570 300" '
+              'preserveAspectRatio="xMidYMid meet">',
+              '<circle cx="%.3f" cy="%.3f" r="%.4f" fill="none" stroke="%s" '
+              'stroke-width="1.27" stroke-dasharray="3.916651 3.916651"/>'
+              % (CX, CY, R, CORAL)]
+    for k in range(len(nodos)):
+        piezas.append(_flecha(CX, CY, R, ang[k] + 36, CORAL))
+    for k, texto in enumerate(nodos):
+        a = _math.radians(ang[k])
+        x, y = CX + R * _math.cos(a), CY + R * _math.sin(a)
+        if k == 0:
+            piezas.append('<circle cx="%.3f" cy="%.3f" r="%.3f" fill="%s"/>'
+                          % (x, y, RN, CORAL))
+            relleno = BLANCO
+        else:
+            piezas.append('<circle cx="%.3f" cy="%.3f" r="%.3f" fill="%s" '
+                          'stroke="%s" stroke-width="1.5666604"/>'
+                          % (x, y, RN, BLANCO, DATO_CLARO))
+            relleno = ACENTO
+        piezas.append('<text x="%.3f" y="%.3f" text-anchor="middle" '
+                      'font-size="11.5" font-weight="600" font-family="%s" '
+                      'fill="%s">%s</text>'
+                      % (x, y + 3.9, SANS, relleno, html.escape(texto)))
+    piezas.append('<text x="%.1f" y="%.1f" text-anchor="middle" font-size="8.3175" '
+                  'font-weight="600" font-family="%s" fill="%s" '
+                  'letter-spacing="1">%s</text>'
+                  % (CX, CY - 73.5, SANS, OCRE, html.escape(cornisa)))
+    piezas.append('<text x="%.1f" y="%.1f" text-anchor="middle" font-family="%s" '
+                  'font-size="14.685" font-weight="600" font-style="italic" '
+                  'fill="%s">%s</text>'
+                  % (CX, CY - 5.9, SERIF, CORAL, html.escape(centro)))
+    piezas.append('<text x="%.1f" y="%.1f" text-anchor="middle" font-family="%s" '
+                  'font-size="10" fill="%s">%s</text>'
+                  % (CX, CY + 11.7, SERIF, GRIS, html.escape(bajo_centro)))
+    piezas.append("</svg>")
+    return "".join(piezas)
+
+
+def _envuelve(t, ancho):
+    fuera, linea = [], ""
+    for p in t.split():
+        if len(linea) + len(p) + 1 > ancho and linea:
+            fuera.append(linea); linea = p
+        else:
+            linea = (linea + " " + p).strip()
+    if linea:
+        fuera.append(linea)
+    return fuera
+
+
+def diagrama_capas(pasos):
+    """Nodos en fila con flecha entre uno y otro.
+
+    La otra forma de diagrama que usa la referencia: circulos en linea, el
+    ultimo destacado, con un rotulo debajo de cada uno. Misma anatomia que el
+    ciclo —mismo radio, mismo trazo, mismos cuerpos— en otra disposicion.
+    """
+    RN, ANCHO = 30.354, 570.0
+    CY = 46.0
+    n = len(pasos)
+    paso = ANCHO / n
+    # EL ALTO SALE DEL TEXTO, NO AL REVES. Con el alto fijo en 132, un pie de
+    # cuatro lineas se cortaba a la tercera: el viewBox recorta lo que sobra y
+    # no hay aviso. Se cuenta cuantas lineas envuelve el pie mas largo.
+    envueltos = [_envuelve(x[2], 40) for x in pasos]
+    lineas_pie = max(len(x) for x in envueltos)
+    ALTO = CY + RN + 30.5 + lineas_pie * 11.0
+    piezas = ['<svg class="dg" width="100%%" viewBox="0 0 570 %.0f" '
+              'preserveAspectRatio="xMidYMid meet">' % ALTO]
+    xs = [paso * (k + 0.5) for k in range(n)]
+    for k in range(n - 1):
+        x0, x1 = xs[k] + RN + 7.0, xs[k + 1] - RN - 7.0
+        piezas.append('<line x1="%.2f" y1="%.2f" x2="%.2f" y2="%.2f" '
+                      'stroke="%s" stroke-width="1.27" '
+                      'stroke-dasharray="3.916651 3.916651"/>'
+                      % (x0, CY, x1 - 6, CY, CORAL))
+        piezas.append('<path d="M%.2f %.2f L%.2f %.2f L%.2f %.2f Z" fill="%s"/>'
+                      % (x1, CY, x1 - 8.5, CY - 3.9, x1 - 8.5, CY + 3.9, CORAL))
+    for k, (marca, titulo, pie) in enumerate(pasos):
+        x = xs[k]
+        ultimo = (k == n - 1)
+        if ultimo:
+            piezas.append('<circle cx="%.2f" cy="%.2f" r="%.3f" fill="%s"/>'
+                          % (x, CY, RN, CORAL))
+            col = BLANCO
+        else:
+            piezas.append('<circle cx="%.2f" cy="%.2f" r="%.3f" fill="%s" '
+                          'stroke="%s" stroke-width="1.5666604"/>'
+                          % (x, CY, RN, BLANCO, DATO_CLARO))
+            col = ACENTO
+        piezas.append('<text x="%.2f" y="%.2f" text-anchor="middle" '
+                      'font-size="11.5" font-weight="600" font-family="%s" '
+                      'fill="%s">%s</text>'
+                      % (x, CY + 3.9, SANS, col, html.escape(marca)))
+        piezas.append('<text x="%.2f" y="%.2f" text-anchor="middle" '
+                      'font-family="%s" font-size="10.5" font-weight="600" '
+                      'fill="%s">%s</text>'
+                      % (x, CY + RN + 17.0, SERIF, ACENTO, html.escape(titulo)))
+        for j, linea in enumerate(envueltos[k]):
+            piezas.append('<text x="%.2f" y="%.2f" text-anchor="middle" '
+                          'font-family="%s" font-size="8.6" fill="%s">%s</text>'
+                          % (x, CY + RN + 30.5 + j * 11.0, SERIF, GRIS,
+                             html.escape(linea)))
+    piezas.append("</svg>")
+    return "".join(piezas)
+
+
+
+
 def tapa():
     """La imagen de tapa, con el titulo encima.
 
@@ -1875,6 +2043,10 @@ aside.caja.remate > p strong { font-style: normal; font-weight: 600;
 /* "Fuente:" va en tinta PLENA y el resto en gris calido: en la referencia
    son dos colores distintos, no el mismo aguado. */
 .et { font-weight: 600; font-style: normal; color: %(tinta)s; opacity: 1; }
+
+/* El diagrama de ciclo: va a todo el ancho de la caja, como el suyo. */
+figure.dgw { margin: %(sep_caja).1fmm 0; break-inside: avoid; }
+svg.dg { display: block; width: 100%%; }
 
 /* --------------------------------------------------------------------
    LA ETIQUETA — el chip de la referencia, medido en su hoja de estilos

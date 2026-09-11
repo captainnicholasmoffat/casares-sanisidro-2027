@@ -107,7 +107,7 @@ def _arranques(pdf):
     ini = set()
     for i, p in enumerate(pdf.pages, 1):
         if any(w.get("size", 0) > 16
-               for w in (p.extract_words(extra_attrs=["size"]) or [])):
+               for w in (p.extract_words(extra_attrs=["size", "fontname"]) or [])):
             ini.add(i)
     return ini
 
@@ -129,7 +129,7 @@ def revisar(ruta=PDF):
             if i < 3 or i == total:       # tapa, indice y ultima
                 continue
 
-            ws = [w for w in (p.extract_words(extra_attrs=["size"]) or [])
+            ws = [w for w in (p.extract_words(extra_attrs=["size", "fontname"]) or [])
                   if w["text"] not in CORRIDO
                   and not re.fullmatch(r"\d+", w["text"])]
             if not ws:
@@ -171,12 +171,22 @@ def revisar(ruta=PDF):
                                      " ".join(w["text"] for w in tits[-1])[:44]))
 
             # --- 3. linea suelta arriba de la columna derecha ---
+            # UN ROTULO DE CAJA NO ES UNA LINEA SUELTA. Es Inter en mayuscula
+            # espaciada y empieza una pieza: que abra la columna es lo que
+            # tiene que hacer, no un resto del parrafo anterior. Denunciaba
+            # tres —"LIMITE ESTE DATO", "PLAN ESTA VENCIDO", "OPCION —
+            # ENDEUDAMIENTO"— que son las tres el rotulo de su caja.
             if cols[1] and len(cols[1]) > 1:
                 primera, segunda = cols[1][0], cols[1][1]
                 hueco = min(w["top"] for w in segunda) - min(w["top"] for w in primera)
-                if len(primera) < MIN_LINEA_SUELTA and hueco > 14:
+                texto = " ".join(w["text"] for w in primera)
+                es_rotulo = (texto.upper() == texto
+                             and any("Inter" in w.get("fontname", "")
+                                     for w in primera))
+                if (len(primera) < MIN_LINEA_SUELTA and hueco > 14
+                        and not es_rotulo):
                     fallas.append("p%d col2: arranca con una linea suelta (%r)"
-                                  % (i, " ".join(w["text"] for w in primera)[:40]))
+                                  % (i, texto[:40]))
 
             # --- 4. llenado, POR COLUMNA ---
             for c in (0, 1):

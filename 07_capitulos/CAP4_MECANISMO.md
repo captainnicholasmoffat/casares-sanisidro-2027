@@ -138,6 +138,8 @@ Las seis zonas son las seis localidades reales del partido, con los límites que
 
 Acá está lo que distingue este modelo del presupuesto participativo clásico.
 
+CAPAS: Capa 1 | Los vecinos priorizan | Esta capa es lo que hacen Porto Alegre, Rosario y Morón. Jurídicamente es consultiva, y por eso sobrevive a un veto. ;; Capa 2 | Los vecinos ejecutan | Ley Orgánica, artículos 60 y 132 inciso c). El Municipio de Pilar ya contrata así desde 1976.
+
 ### Capa 1 — Los vecinos priorizan
 Cada comisión zonal define, en asamblea abierta, en qué se invierte la partida de su zona. El Departamento Ejecutivo queda obligado por ordenanza a **responder por escrito, con fundamentos y en plazo**, a cada priorización.
 
@@ -166,6 +168,8 @@ El Municipio de Pilar contrata cooperativas de vecinos bajo el artículo 132 inc
 Es hacer en San Isidro algo que la ley habilita desde 1976 y que otro municipio bonaerense ya hace.
 
 ---
+
+CICLO: Prioriza | Responde | Peticiona | Ejecuta | Rinde | Se queda en el barrio | el trabajo y el dinero | LA PARTIDA · FIJADA POR ORDENANZA
 
 ## 4.6 Por qué las dos capas juntas cambian todo
 
