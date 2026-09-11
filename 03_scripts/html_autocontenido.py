@@ -17,19 +17,44 @@ css=A.CSS
 def b64(ruta, mime):
     return "data:%s;base64,%s" % (mime, base64.b64encode(open(ruta,"rb").read()).decode())
 
-def img64(ruta, ancho=1500, calidad=84):
-    im=Image.open(ruta)
+def img64(ruta, ancho=1100, calidad=80, recorte=None):
+    """La imagen en base64. Con `recorte` se entrega ya cortada a ese aspecto.
+
+    LA TAPA VA PRE-RECORTADA. En el PDF la foto se coloca en 628,6 x 841,9 pt
+    sobre una hoja de 595,3 y el overflow oculto la recorta; en el navegador
+    eso lo hace `object-fit: cover`, que es la unica propiedad de la que
+    depende toda la pagina de tapa. Entregando la foto ya cortada a 210:297,
+    la tapa se arma con un `width:100%; height:100%` y no depende de nada.
+    """
+    im=Image.open(ruta).convert("RGB")
+    if recorte:
+        objetivo = recorte
+        actual = im.width / im.height
+        if actual > objetivo:                      # sobra ancho: cortar a los lados
+            w = int(round(im.height * objetivo))
+            x = (im.width - w) // 2
+            im = im.crop((x, 0, x + w, im.height))
+        elif actual < objetivo:                    # sobra alto: cortar arriba y abajo
+            h = int(round(im.width / objetivo))
+            y = (im.height - h) // 2
+            im = im.crop((0, y, im.width, y + h))
     if im.width>ancho: im=im.resize((ancho,int(im.height*ancho/im.width)), Image.LANCZOS)
-    b=io.BytesIO(); im.convert("RGB").save(b,"JPEG",quality=calidad,optimize=True)
+    b=io.BytesIO(); im.save(b,"JPEG",quality=calidad,optimize=True)
     return "data:image/jpeg;base64,"+base64.b64encode(b.getvalue()).decode()
 
 # 1. imagenes
 rutas=sorted(set(re.findall(r'src="(file://[^"]+)"', cuerpo)))
+tapa = re.search(r'class="tapa-img[^"]*" src="(file://[^"]+)"', cuerpo)
+tapa = tapa.group(1) if tapa else None
 for u in rutas:
-    p=u.replace("file://","")
-    if not os.path.exists(p): print("  falta:",p); continue
-    cuerpo=cuerpo.replace('src="%s"'%u, 'src="%s"'%img64(p))
-print(f"  {len(rutas)} imagenes adentro")
+    q=u.replace("file://","")
+    if not os.path.exists(q): print("  falta:",q); continue
+    if u == tapa:
+        dato = img64(q, ancho=1400, calidad=86, recorte=210.0/297.0)
+    else:
+        dato = img64(q)
+    cuerpo=cuerpo.replace('src="%s"'%u, 'src="%s"'%dato)
+print(f"  {len(rutas)} imagenes adentro (la tapa, ya recortada a 210:297)")
 
 # 2. fuentes: el CSS del PDF las pide por familia instalada; aca van embebidas
 caras=[("Spectral","400","normal","Spectral-Regular.ttf"),
@@ -76,9 +101,9 @@ navegador = """
  section.tapa{position:relative!important;width:210mm!important;
               height:297mm!important;overflow:hidden!important;}
  section.tapa img.tapa-img{position:absolute!important;left:0!important;
-              top:0!important;width:210mm!important;height:297mm!important;
+              top:0!important;width:100%!important;height:100%!important;
               max-width:none!important;max-height:none!important;
-              object-fit:cover!important;}
+              display:block!important;}
 }
 """
 # 3bis. FUERA LAS @font-face DEL DOCUMENTO. El CSS del PDF declara las mismas
