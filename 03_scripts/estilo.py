@@ -71,6 +71,11 @@ FILA = "#E8E4D9"         # filas alternadas de tabla
 HUECO = "#DDD7D0"        # la banda de un año sin dato
 FILETE = "#C8C2BB"       # una linea que separa, no que dice
 
+# EL OCRE. Sexta voz de la paleta, sumada despues de medir la referencia
+# entera: lleva todas sus cornisas, sus rotulos y sus micro-etiquetas —1.833
+# glifos— y no es un rojo, es un oro apagado.
+OCRE = "#B4863A"
+
 DATO_CLARO = "#7E9070"
 
 # Nombres viejos, para no romper nada que todavia los use. NO USAR EN CODIGO
@@ -82,7 +87,8 @@ CAL = ARENA
 AMBAR = ACENTO
 
 PALETA = {"CREMA": CREMA, "TINTA": TINTA, "ACENTO": ACENTO, "DATO": DATO,
-          "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO}
+          "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO,
+          "OCRE": OCRE}
 
 # EL LIENZO MIDE LO QUE MIDE LA CAJA DE TEXTO, Y NO MENOS.
 # Los graficos se dibujaban en 5,33 pulgadas —135 mm— y la pagina los estiraba
@@ -1095,7 +1101,7 @@ def _es_dilucion(r, g, b, tolerancia=7):
     puntos. Con esa regla sola, cada linea del mapa base era un color prohibido.
     """
     base = _hex_a_rgb(CREMA)
-    for c in (TINTA, ACENTO, DATO, DATO_CLARO, ARENA, FILA):
+    for c in (TINTA, ACENTO, DATO, DATO_CLARO, OCRE, ARENA, FILA):
         cr, cg, cb = _hex_a_rgb(c)
         dr, dg, db = cr - base[0], cg - base[1], cb - base[2]
         denom = dr * dr + dg * dg + db * db

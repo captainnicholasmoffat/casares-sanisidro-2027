@@ -172,9 +172,14 @@ columna de 86 mm no es esta pieza, es otra.
 | coral de gráfico | `#DB6B4B` | 0,17 |
 | dato (salvia) | `#5F7057` | 0,15 |
 | salvia clara | `#7E9070` | 0,12 |
+| **ocre** | **`#B4863A`** | **sumado a la paleta** |
 
-La paleta que fijó Nick es exactamente ésta menos el coral (rojo, prohibido) y
-el oliva. El tan de caja `#EFE7DA` y el ocre de cornisa `#B48639` son dos colores
+La paleta que fijó Nick es ésta menos el coral (rojo, prohibido) y el oliva.
+**El ocre `#B4863A` se sumó después**, al medir el documento entero: lleva
+todas sus cornisas, sus rótulos de exhibit y sus micro-etiquetas —1.833
+glifos, la sexta familia de color más usada— y no es un rojo, es un oro
+apagado. Sin él, esa voz había que hacerla con ladrillo o con salvia, que ya
+están ocupados, y los rótulos se confundían con los títulos. El tan de caja `#EFE7DA` y el ocre de cornisa `#B48639` son dos colores
 que la referencia usa y la paleta fijada no tiene.
 
 ## 8. DENSIDAD DE COLOR POR PÁGINA — el umbral del décimo verificador

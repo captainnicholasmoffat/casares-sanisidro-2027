@@ -285,6 +285,13 @@ DATO_CLARO = "#7E9070"   # salvia clara: la cuarta serie
 ARENA = "#EAE0CF"        # bandas de encabezado y cajas laterales
 FILA = "#E8E4D9"         # filas alternadas
 TAN = "#EFE7DA"          # el fondo de la caja al margen
+# EL OCRE. Sexta voz de la paleta, sumada despues de medir la referencia
+# entera: lleva TODAS sus cornisas, sus rotulos de exhibit y sus
+# micro-etiquetas —1.833 glifos, la sexta familia de color mas usada del
+# documento— y no es un rojo, es un oro apagado. Sin el, esa voz habia que
+# hacerla con ladrillo o con salvia, que ya estan ocupados en otra cosa, y por
+# eso nuestros rotulos se confundian con nuestros titulos.
+OCRE = "#B4863A"         # rotulos, cintillos, micro-etiquetas
 
 TITULO = "PROGRAMA DE GOBIERNO"
 ANIO = "SAN ISIDRO 2027"
@@ -1457,7 +1464,7 @@ CSS = _FACES + """
      indice eso imprimia "ÍNDICE" arriba y "Índice" debajo: la misma palabra
      dos veces. La referencia no pone ahi el nombre de la seccion. */
   @bottom-left  { content: "%(corto)s"; font-family: "%(sans)s";
-                  font-size: %(pie_pt).1fpt; letter-spacing: .1pt;
+                  font-size: %(pie_pt).1fpt; letter-spacing: %(tr_pie).2fpt;
                   white-space: pre;
                   color: %(tinta)s; opacity: .65; vertical-align: top; }
   @bottom-right { content: "Página " counter(page) " de " counter(pages);
@@ -1501,8 +1508,10 @@ p, li { orphans: 4; widows: 4; }
 /* EL COLOR ENTRA POR LA PROSA, como en la referencia: las negritas del cuerpo
    no son negras. El texto no se toca —las negritas ya estaban escritas—, lo
    unico que cambia es de que color salen. */
-strong { font-weight: 600; color: %(acento)s; }
-strong.idea { color: %(dato)s; }
+/* Medido: la cifra va en Spectral BOLD ladrillo y el concepto en Spectral
+   SEMIBOLD salvia. No es el mismo peso: la cifra pesa mas. */
+strong { font-weight: 700; color: %(acento)s; }
+strong.idea { font-weight: 600; color: %(dato)s; }
 em { font-style: italic; }
 code { font-family: "DejaVu Sans Mono"; font-size: %(mono).1fpt;
        background: %(arena)s; padding: .5pt 2pt; }
@@ -1624,7 +1633,9 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 /* La entrada en SemiBold de una fuente o de una nota: Spectral, no
    versalitas. La referencia no usa versalitas en ninguna parte — lo que
    parecian versalitas es Inter en mayusculas espaciadas. */
-.et { font-weight: 600; font-style: normal; color: inherit; }
+/* "Fuente:" va en tinta PLENA y el resto en gris calido: en la referencia
+   son dos colores distintos, no el mismo aguado. */
+.et { font-weight: 600; font-style: normal; color: %(tinta)s; opacity: 1; }
 
 ul, ol { margin: 0 0 .6em; padding: 0 0 0 4.4mm; }
 li { margin-bottom: .3em; text-align: justify; hyphens: auto; }
@@ -1673,9 +1684,12 @@ th:first-child, td:first-child { text-align: left; }
    -------------------------------------------------------------------- */
 .exh { break-inside: avoid; margin: %(sep).1fmm 0; }
 .exh-cab { margin-bottom: %(sep_tit).1fmm; break-after: avoid; }
+/* EL ROTULO EN OCRE, no en ladrillo: medido sobre sus paginas 5, 8 y 13, los
+   tres dicen #b4863a. En ladrillo competia con el titulo del exhibit, que va
+   justo debajo y tambien es ladrillo. */
 .exh-rot { font-family: "%(sans)s"; font-size: %(exh_rot).1fpt;
            font-weight: 500; letter-spacing: %(tr_rot).2fpt;
-           text-transform: uppercase; color: %(acento)s;
+           text-transform: uppercase; color: %(ocre)s;
            margin: 0 0 %(sep_rot).1fmm; text-align: left; }
 .exh-tit { font-size: %(exh_tit).1fpt; font-weight: 600;
            line-height: %(exh_tit_int).3f; color: %(acento)s; margin: 0;
@@ -1804,9 +1818,9 @@ li.ix-cap:first-child { margin-top: 0; }
    es un rojo—, asi que el cintillo toma la otra voz que la paleta si tiene y
    que el documento ya usa para las bajadas: la salvia. */
 li.ix-cap a { display: block; font-family: "%(sans)s";
-              font-size: %(ix_cintillo).2fpt; font-weight: 500;
+              font-size: %(ix_cintillo).2fpt; font-weight: 400;
               letter-spacing: %(ix_track).2fpt; text-transform: uppercase;
-              color: %(dato)s; line-height: %(ix_fila).3f; }
+              color: %(ocre)s; line-height: %(ix_fila).3f; }
 
 /* La entrada: numero colgado, titulo, guia de puntos, numero de pagina.
    SIN FLEXBOX. Con la ancla en display:flex, WeasyPrint resuelve
@@ -1818,12 +1832,24 @@ li.ix-cap a { display: block; font-family: "%(sans)s";
 li.ix-sub { position: relative; }
 li.ix-sub a { display: block; padding-left: %(sangria_ix).1fmm;
               font-size: %(ix_entrada).2fpt; line-height: %(ix_alto).3f; }
+/* LA GUIA VA POR EL MEDIO DE LA FILA, NO POR ABAJO. Medida sobre su
+   pagina 2: los puntos estan en top=126,75 y la caja del titulo va de
+   122,29 a 131,99 —o sea el centro exacto de la caja, no la linea de base.
+   Puesta en `bottom`, la guia salia por debajo del titulo, el fondo crema
+   del titulo no la tapaba, y cada entrada del indice quedaba subrayada.
+   Con `top: 50%%` sobre una caja vacia, el borde inferior cae justo en el
+   medio de la fila y el titulo y el numero de pagina la cortan. */
 li.ix-sub a::before { content: ""; position: absolute;
-                      left: %(sangria_ix).1fmm; right: 0; bottom: 1.1mm;
-                      border-bottom: %(filete).2fpt dotted
-                                     rgba(124, 46, 35, .34); }
+                      left: %(sangria_ix).1fmm; right: 0; top: 50%%;
+                      border-bottom: %(ix_guia).2fpt dotted %(ix_punto)s; }
+/* CAJA DE LINEA EXPLICITA. Un elemento absoluto sin `top` se cuelga de su
+   posicion estatica POR EL BORDE DE ARRIBA, no por la base; con un cuerpo
+   mas chico que el de la entrada, su caja es mas baja y la cifra quedaba
+   1,86 pt por encima del titulo. En su indice el numero de seccion, el
+   titulo y el numero de pagina comparten base. Fijando la misma altura de
+   linea en puntos, las tres bases coinciden salvo 0,35 pt de ascendente. */
 span.ix-n { position: absolute; left: 0; color: %(acento)s;
-            font-size: %(ix_num).2fpt; }
+            font-size: %(ix_num).2fpt; line-height: %(ix_caja).2fpt; }
 span.ix-t { position: relative; color: %(tinta)s; background: %(crema)s;
             padding-right: 1.6mm; }
 /* ABSOLUTO, NO FLOTADO. Flotando, el numero de pagina se apoya en el borde
@@ -1833,11 +1859,12 @@ span.ix-t { position: relative; color: %(tinta)s; background: %(crema)s;
 li.ix-sub a::after { content: target-counter(attr(href), page);
                      position: absolute; right: 0; background: %(crema)s;
                      padding-left: 1.6mm; font-size: %(ix_num).2fpt;
+                     line-height: %(ix_caja).2fpt;
                      color: %(tinta)s; opacity: .68; }
 
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
-    fila=FILA, tan=TAN, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
+    fila=FILA, tan=TAN, ocre=OCRE, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
     sans=SANS, tipos=TIPOS,
     # geometria
     mg=emm(REF["margen"], 1), mgsup=emm(REF["margen"] - 5, 1),
@@ -1861,8 +1888,25 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     caja_int=REF["caja_int"] / REF["caja_cuerpo"],
     caja_rot=e(REF["caja_rot"]), caja_filete=e(REF["caja_filete"]),
     filete=e(REF["filete"]),
-    # interletrado, medido: cornisa 0,9 pt, rotulo 0,6, cabecera 0,3
-    tr_cornisa=e(0.9), tr_rot=e(0.6), tr_tabla=e(0.3), tr_caja=e(0.55),
+    # INTERLETRADO, DESPEJADO CONTRA EL ARCHIVO DE LA FUENTE.
+    # Restarle "el lateral natural" al hueco entre glifos era una cuenta
+    # inventada y daba la mitad. Lo correcto es medir el ancho impreso de
+    # cada palabra, calcular con Inter[wght=400] el ancho que esa palabra
+    # tendria sin interletrado, y despejar:  ls = (impreso - natural)/(n-1).
+    # Sobre las 30 paginas, por oficio de cada rotulo (en em, o sea que no
+    # hay que escalarlo: es proporcion, no medida):
+    #     cornisa fija        0,218 em   (145 palabras)
+    #     cintillo de indice  0,174 em   ( 15)
+    #     rotulo de exhibit   0,153 em   ( 80)
+    #     rotulo de caja      0,134 em   ( 84)
+    #     cabecera de tabla   0,075 em   (151)
+    #     pie de pagina       0,039 em   (164)
+    # La cabecera de tabla casi no lleva y la cornisa lleva el triple: no es
+    # un valor unico repartido, es una escala de enfasis.
+    tr_rot=e(REF["exh_rot"]) * 0.153,
+    tr_tabla=e(REF["tabla_cab"]) * 0.075,
+    tr_caja=e(REF["caja_rot"]) * 0.134,
+    tr_pie=e(REF["pie"]) * 0.039,
     # separaciones
     sep=emm(REF["sep_bloque"], 1),
     sep_rot=emm(REF["sep_rot_tit"], 1),
@@ -1892,11 +1936,14 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     ix_tit=emm(28.5, 1) - e(16.5) * 1.18 / 72 * 25.4,   # menos su caja de linea
     ix_grupo=emm(27.65 - 21.7, 1),     # aire de mas encima de un cintillo
     ix_cintillo=e(6.7), ix_entrada=e(9.7), ix_num=e(8.6),
-    ix_track=e(0.75),
+    ix_track=e(6.7) * 0.174,
+    ix_caja=e(21.7),                   # la fila entera, en puntos
+    ix_guia=e(0.75),                   # punto de 0,75 con paso de 1,5
+    ix_punto='rgba(180, 134, 58, .62)',  # ocre al 62 %% = #CDAE7C
     ix_fila=21.7 / 6.7,                # el cintillo ocupa una fila entera
     ix_alto=21.7 / 9.7,                # 21,7 pt de fila, como los suyos
     celda=emm(REF["celda"], 1),
-    celda_v=emm((REF["banda_cab"] - REF["tabla_cab"] * 1.25) / 2, 1),
+    celda_v=emm((17.2 - REF["tabla_cab"] * 1.25) / 2, 1),
     celda_v2=emm((REF["banda_fila"] - REF["tabla_int"]) / 2, 1),
 )
 
@@ -1951,7 +1998,7 @@ def verificar_densidad(ruta, desde=3):
     """Denuncia cada pagina sin color o ahogada en papel. desde: 1-indexado."""
     import numpy as np
     fallas = []
-    paleta = [_hex_a_rgb(c) for c in (ACENTO, DATO, DATO_CLARO, ARENA, FILA)]
+    paleta = [_hex_a_rgb(c) for c in (ACENTO, DATO, DATO_CLARO, OCRE, ARENA, FILA)]
     crema = np.array(_hex_a_rgb(CREMA))
     for i, a in enumerate(_paginas_a_pixeles(ruta), start=1):
         if i < desde:
