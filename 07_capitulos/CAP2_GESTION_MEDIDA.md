@@ -1,5 +1,5 @@
 # 2 La gestión, medida
-## Qué se puede probar sobre la administración de Ramón Lanús
+BAJADA: Cuatro de las críticas que cabía esperar contra la gestión actual no resisten los datos, y este capítulo las descarta una por una. Lo que sí se puede probar es que la cobranza se deterioró 4,19 puntos en un año. No lo criticamos por hacer mal lo que se propuso, sino por lo que no se propuso.
 
 *Borrador 2 · septiembre 2026*
 *Reemplaza al borrador 1. Cambios: mediana provincial corregida, tabla de percepción rebasada sobre recursos corrientes, auditoría completa del plan de gobierno traída desde el capítulo 1, tabla de transparencia reducida a prosa.*

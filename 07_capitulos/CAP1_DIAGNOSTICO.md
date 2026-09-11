@@ -1,5 +1,5 @@
 # 1 Diagnóstico
-## San Isidro: un municipio que invierte mucho y llega poco
+BAJADA: San Isidro invierte en obra pública más que el 96% de los municipios bonaerenses y destina el 0,05% de su presupuesto a empleo. Casi la mitad de su población vive donde está el 60% de los hogares sin gas de red. No es un error de gestión: es lo que produce un plan donde esas palabras no aparecen.
 
 *Borrador 3 · septiembre 2026*
 *Reemplaza al borrador 2. Cambios: las zonas pasan a ser los límites de localidad de OpenStreetMap y todos los indicadores territoriales se recalcularon sobre ellos.*

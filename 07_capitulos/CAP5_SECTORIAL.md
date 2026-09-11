@@ -1,5 +1,5 @@
 # 5 Qué hacemos en cada área
-## Propuestas sectoriales, con su costo declarado
+BAJADA: Cada área lleva una de cuatro etiquetas —plata nueva, reasignación, gestión o gratis— que dice de dónde sale lo que propone. Un programa que promete plata nueva en todo es un programa que no leyó el presupuesto: el margen tiene un techo y está declarado en el capítulo 3.
 
 *Borrador 3 · septiembre 2026*
 *Borrador 3. Reemplaza al borrador 2. Cambios: los hogares con carencias se recuentan sobre los límites de localidad de OpenStreetMap; los totales del partido no se mueven, sí dónde están.*

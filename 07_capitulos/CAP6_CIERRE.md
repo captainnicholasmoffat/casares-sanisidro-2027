@@ -1,5 +1,5 @@
 # 6 Contra qué queremos que nos midan
-## Primeros cien días y compromisos verificables del mandato
+BAJADA: Ocho metas con línea de base fijada hoy, fuente de verificación pública y un informe de cumplimiento cada 31 de marzo. En la primera sesión del Concejo entra el proyecto que deroga los artículos que hoy permiten disolver una asociación vecinal. Auditamos un plan de gobierno para escribir éste; el nuestro queda escrito con las mismas reglas.
 
 *Borrador 2 · septiembre 2026*
 *Reemplaza al borrador 1. Cambio: la línea de base de cloacas se recontó sobre los límites de localidad de OpenStreetMap.*

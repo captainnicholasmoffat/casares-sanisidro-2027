@@ -1,5 +1,5 @@
 # 3 La plata
-## Cuánto hay, cuánto dura, y de dónde sale lo que este programa propone
+BAJADA: El Municipio cerró 2025 con un déficit de 6.051 millones que se corrige solo hacia 2028. Este programa cuesta 7.225,2 millones de plata nueva por año, el 8,3% del gasto que puede reasignar libremente, y se financia volviendo a cobrar como el propio Municipio cobraba en 2024, sin subir una sola tasa.
 
 *Borrador 3 · septiembre 2026*
 *Reemplaza al borrador 2. Cambios: percepción rebasada sobre recursos corrientes, desdoble del costo del programa entre plata nueva y reasignación, descomposición de la coparticipación traída desde el capítulo 1.*

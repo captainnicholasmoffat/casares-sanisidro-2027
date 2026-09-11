@@ -292,12 +292,20 @@ TAN = "#EFE7DA"          # el fondo de la caja al margen
 # hacerla con ladrillo o con salvia, que ya estan ocupados en otra cosa, y por
 # eso nuestros rotulos se confundian con nuestros titulos.
 OCRE = "#B4863A"         # rotulos, cintillos, micro-etiquetas
+# EL CORAL. Septima voz, y la unica que hace un solo trabajo: LA CIFRA QUE
+# NUMERA. En la referencia lleva los 26 numeros de seccion del titulo, los 26
+# del indice y nada mas del cuerpo. Es un rojo anaranjado y por eso habia
+# quedado afuera; entra por decision tomada, con el mismo criterio que el
+# ladrillo: lo que verificar_pdf() prohibe es el rojo PURO.
+CORAL = "#DB6B4B"        # la cifra que numera: titulo de seccion e indice
 
 TITULO = "PROGRAMA DE GOBIERNO"
 ANIO = "SAN ISIDRO 2027"
 SUBTITULO = ("Con los recursos que el Municipio ya tiene,<br>"
              "y con decisión vecinal sobre la inversión pública.")
 TITULO_CORTO = "Programa de gobierno · San Isidro 2027"
+# El capitulo que el indice levanta del resto, como ellos levantan THE MODEL.
+GRUPO_PROPUESTA = "El mecanismo"
 
 # EL ANEXO DE FUENTES NO SE PUBLICA. El archivo sigue en 07_capitulos/ —es el
 # registro de como se hizo el documento y ahi tiene que estar— pero no entra al
@@ -469,6 +477,30 @@ RE_CIFRA = re.compile(r'\d')
 # asi sea: la referencia tambien la usaria poco si sus parrafos midieran esto.
 CARACTERES_POR_LINEA_ANCHA = 130
 CARACTERES_POR_LINEA_COLUMNA = 62
+# UNA CORRIDA CORTA NO VA A DOS COLUMNAS.
+# `orphans: 4` y `widows: 4` impiden partir un parrafo si a algun lado le
+# quedan menos de cuatro lineas. Un parrafo de siete —el largo normal de un
+# parrafo nuestro— no se puede partir 4+3, asi que WeasyPrint lo deja ENTERO
+# en la columna izquierda y la derecha queda vacia de arriba abajo. Ese es el
+# escalon en blanco que aparecia en media docena de paginas.
+# A todo el ancho no hay nada que partir y el problema no existe. Ademas es lo
+# que hace la referencia: sus dos primeras paginas de texto son enteras a una
+# sola columna, y las dos columnas aparecen recien cuando hay con que llenarlas.
+CORRIDA_MINIMA_COLUMNAS = 10 * CARACTERES_POR_LINEA_COLUMNA
+
+
+def _corta(corrida):
+    """True si la corrida no da para llenar las dos columnas."""
+    if not all(x.startswith("<p") for x in corrida):
+        return False          # una figura o una tabla ya ocupa alto propio
+    return sum(len(_texto_plano(x)) for x in corrida) < CORRIDA_MINIMA_COLUMNAS
+
+
+def _envolver(corrida):
+    """La corrida como banda a dos columnas, o suelta si es corta."""
+    if _corta(corrida):
+        return "".join(corrida)
+    return '<div class="banda">%s</div>' % "".join(corrida)
 LINEAS_MINIMAS_ENTRADA = 4
 ENTRADA_MINIMA = CARACTERES_POR_LINEA_ANCHA * LINEAS_MINIMAS_ENTRADA
 PARRAFOS_MAXIMOS_ENTRADA = 3
@@ -683,6 +715,19 @@ def bloques(md, slug):
 
     while i < n:
         l = lineas[i]
+
+        # LA BAJADA, DECLARADA. Antes se adivinaba: "el h2 sin numero que
+        # sigue al titulo, si el capitulo esta numerado". Esa regla ya habia
+        # fallado una vez —ningun capitulo tenia bajada— y ademas no servia
+        # para la introduccion, donde el primer h2 es una seccion de verdad.
+        # Declararla saca la adivinanza del medio y permite que la bajada sea
+        # de dos a cuatro lineas, como las 26 de la referencia, en vez de una.
+        if l.startswith("BAJADA:"):
+            add(True, '<p class="bajada">%s</p>' % _inline(l[7:].strip()))
+            hay_bajada = True
+            toca_entrada[0] = True
+            i += 1
+            continue
 
         m = RE_EXHIBIT.match(l.strip())
         if m:
@@ -956,8 +1001,7 @@ def bandas(lista, seccion):
                     resto = []
                 pieza('<div class="con-titulo">%s</div>' % grupo, "titulo")
                 if resto:
-                    pieza('<div class="banda">%s</div>' % "".join(resto),
-                          "banda")
+                    pieza(_envolver(resto), "banda")
                 i = j
                 continue
             # Un h2 arrastra el arranque de la banda que le sigue.
@@ -980,8 +1024,7 @@ def bandas(lista, seccion):
                 # aire que suele quedar al pie.
                 if corrida[0].startswith('<div class="tw'):
                     pieza(htm, "ancho")
-                    pieza('<div class="banda">%s</div>' % "".join(corrida),
-                          "banda")
+                    pieza(_envolver(corrida), "banda")
                     i = j
                     continue
                 # LA UNICA EXCEPCION: una entrada que TERMINA EN DOS PUNTOS no
@@ -1012,12 +1055,11 @@ def bandas(lista, seccion):
                         and len(_texto_plano(corrida[1])) <= 400):
                     corte = 2
                 cabeza, resto = corrida[:corte], corrida[corte:]
-                grupo = ['<div class="banda">%s</div>' % "".join(cabeza)]
+                grupo = [_envolver(cabeza)]
                 pieza('<div class="con-titulo">%s%s</div>'
                       % (htm, "".join(grupo)), "titulo")
                 if resto:
-                    pieza('<div class="banda">%s</div>' % "".join(resto),
-                          "banda")
+                    pieza(_envolver(resto), "banda")
                 i = j
                 continue
             tipo = ("figura" if htm.startswith(("<figure", '<div class="tw'))
@@ -1030,7 +1072,7 @@ def bandas(lista, seccion):
         while j < n and not lista[j][0]:
             corrida.append(lista[j][1])
             j += 1
-        pieza('<div class="banda">%s</div>' % "".join(corrida), "banda")
+        pieza(_envolver(corrida), "banda")
         i = j
     return out
 
@@ -1060,7 +1102,16 @@ def cerrar_capitulo(piezas_de_seccion):
     """
     if len(piezas_de_seccion) < 2:
         return piezas_de_seccion
-    if "nota-envoltorio" not in piezas_de_seccion[-1]["html"]:
+    # LA NOTA NO SIEMPRE ES LA ULTIMA PIEZA. La ilustracion de cierre del
+    # capitulo —la del "*" en DENTRO— se suelta DESPUES de la nota, asi que
+    # mirar solo la ultima pieza daba siempre que no, y el cierre no se
+    # agrupaba nunca. Resultado: la ilustracion se iba sola a una pagina y
+    # quedaba una hoja con una foto arriba y dos tercios de papel. Se busca la
+    # nota entre las ultimas piezas y el grupo se estira HASTA EL FINAL, de
+    # modo que la ilustracion viaja adentro.
+    pos = next((k for k in range(len(piezas_de_seccion) - 1, -1, -1)
+                if "nota-envoltorio" in piezas_de_seccion[k]["html"]), None)
+    if pos is None or pos < len(piezas_de_seccion) - 3:
         return piezas_de_seccion
     # Hacia atras, juntando prosa y separadores hasta que el bloque tenga con
     # que sostener una pagina. Con una sola banda no alcanzaba: el capitulo 2
@@ -1078,9 +1129,9 @@ def cerrar_capitulo(piezas_de_seccion):
     # Asi que se cruza lo que haga falta, CON UN SOLO LIMITE: una figura. Un
     # exhibit mide media pagina; dos, mas que una pagina entera, y ahi el
     # bloque indivisible se vuelve el problema del otro lado.
-    corte = len(piezas_de_seccion) - 1
-    texto = len(_texto_plano(piezas_de_seccion[-1]["html"]))
-    figuras = 0
+    corte = pos
+    texto = sum(len(_texto_plano(x["html"])) for x in piezas_de_seccion[pos:])
+    figuras = sum(1 for x in piezas_de_seccion[pos:] if x["tipo"] == "figura")
     while corte > 0 and texto < CIERRE_MINIMO:
         previa = piezas_de_seccion[corte - 1]
         if previa["tipo"] == "figura":
@@ -1092,10 +1143,10 @@ def cerrar_capitulo(piezas_de_seccion):
     if texto < CIERRE_MINIMO:
         # Ni asi alcanza: entonces se parte la nota, que se lee mucho mejor
         # que una pagina en blanco con una nota arriba.
-        piezas_de_seccion[-1]["html"] = piezas_de_seccion[-1]["html"].replace(
+        piezas_de_seccion[pos]["html"] = piezas_de_seccion[pos]["html"].replace(
             'class="nota-envoltorio"', 'class="nota-envoltorio parte"', 1)
         return piezas_de_seccion
-    if corte == len(piezas_de_seccion) - 1:
+    if corte == pos and pos == len(piezas_de_seccion) - 1:
         return piezas_de_seccion
     cola = piezas_de_seccion[corte:]
     junta = {"id": cola[0]["id"], "tipo": "ancho",
@@ -1305,6 +1356,11 @@ def indice(entradas):
     NO HAY UNA SOLA REGLA HORIZONTAL en su indice. Ni bajo el titulo de la
     pagina, ni entre entradas, ni bajo los capitulos. Las teniamos las tres.
     """
+    # EL GRUPO RESALTADO. En su indice las seis entradas de THE MODEL —el
+    # grupo donde esta lo que vienen a vender— van en Spectral SemiBold
+    # ladrillo y el resto en Spectral Regular tinta: 35 palabras de las 108.
+    # Un solo grupo levantado del resto, y es el de la propuesta. El nuestro
+    # es EL MECANISMO: las comisiones vecinales con presupuesto propio.
     filas = []
     for slug, titulo, subs in entradas:
         # SIN NUMERO. Sus cintillos de grupo son "THE THESIS", "THE BUILD":
@@ -1312,14 +1368,16 @@ def indice(entradas):
         # el de cada entrada —1.1, 1.2— asi que repetirlo arriba es ruido.
         m = RE_H1CAP.match(titulo)
         nombre = m.group(2) if m else titulo
+        propuesta = GRUPO_PROPUESTA.lower() in nombre.lower()
         filas.append('<li class="ix-cap"><a href="#%s">%s</a></li>'
                      % (slug, html.escape(nombre)))
         for sid, n, tit in subs:
             filas.append(
-                '<li class="ix-sub"><a href="#%s">'
+                '<li class="ix-sub%s"><a href="#%s">'
                 '<span class="ix-n">%s</span>'
                 '<span class="ix-t">%s</span></a></li>'
-                % (sid, html.escape(n or ""), html.escape(tit)))
+                % (" propuesta" if propuesta else "",
+                   sid, html.escape(n or ""), html.escape(tit)))
     return ('<section class="indice"><h1 class="ix-h">Índice</h1>'
             '<ul class="ix">%s</ul></section>' % "".join(filas))
 
@@ -1365,7 +1423,7 @@ REF = dict(
     entrada=10.0, entrada_int=16.0,       # el primer parrafo, a todo el ancho
     h1=16.5, h1_int=19.5,
     bajada=10.9, bajada_int=15.0,
-    h2=12.2, h3=9.7,
+    h2=11.2, h3=9.7,
     exh_rot=6.7, exh_tit=11.2, exh_tit_int=14.6,
     tabla_cab=6.4, tabla=7.9, tabla_int=11.1,
     banda_cab=17.3, banda_fila=20.2, celda=6.0,
@@ -1566,14 +1624,18 @@ hr { border: 0; margin: %(sep).1fmm 0; height: 0; }
    38,3 pt del borde y el titulo a 72,1: hay 30 pt de aire entre una y otro.
    Sacada la cornisa, ese aire tiene que ponerlo el titulo, o el capitulo
    arranca pegado al borde de arriba y la composicion no es la suya. */
+/* EL TITULO VA EN LADRILLO. Los 174 glifos de titulo de seccion de la
+   referencia estan TODOS en ladrillo y su cifra en coral; los nuestros
+   estaban en tinta —20 en tinta contra 7 en ladrillo— y por eso la pagina
+   abria en gris. */
 h1 { font-size: %(h1).1fpt; line-height: %(h1_int).3f;
      margin: %(aire_arriba).1fmm 0 %(sep_h1_bajada).1fmm;
-     font-weight: 700; letter-spacing: 0; color: %(tinta)s;
+     font-weight: 700; letter-spacing: 0; color: %(acento)s;
      break-before: page; break-after: avoid; }
 /* En su titulo el numero y el nombre estan separados por algo mas que un
    espacio de palabra: el espacio va en el texto —lo necesita la cornisa— y el
    margen lo completa hasta el medio cuadratin. */
-h1 .cn { color: %(acento)s; margin-right: .12em; }
+h1 .cn { color: %(coral)s; margin-right: .12em; }
 
 p.bajada { font-style: italic; font-weight: 500; font-size: %(bajada).1fpt;
            line-height: %(bajada_int).3f; color: %(dato)s;
@@ -1587,11 +1649,17 @@ p.bajada strong { color: %(dato)s; font-weight: 600; }
 p.entrada { font-size: %(entrada).1fpt; line-height: %(entrada_int).3f;
             text-align: left; margin: 0 0 %(sep).1fmm; hyphens: none; }
 
+/* EL SUBTITULO: 11,2 EN LADRILLO. En las 30 paginas de la referencia NO HAY
+   UN SOLO GLIFO A 12,2 pt —el 12,2 que teniamos salio de una medicion que
+   nunca estuvo ahi—. Su nivel de subtitulo son las 410 palabras en Spectral
+   SemiBold 11,2 ladrillo contra el margen, las mismas que rotulan sus
+   exhibits. Un solo nivel, un solo color. El nuestro iba a 12,2 en tinta:
+   mas grande que el suyo y sin color, que es la peor de las dos. */
 h2 { font-size: %(h2).1fpt; line-height: 1.25;
      margin: %(sep_h2).1fmm 0 %(sep_h2b).1fmm;
-     font-weight: 600; color: %(tinta)s; break-after: avoid;
+     font-weight: 600; color: %(acento)s; break-after: avoid;
      break-inside: avoid; text-indent: -0.05em; }
-h2 .n { font-weight: 700; color: %(acento)s;
+h2 .n { font-weight: 700; color: %(coral)s;
         font-variant-numeric: lining-nums; margin-right: .32em; }
 h1 + p.bajada + .banda h2:first-child,
 h1 + p.bajada + .con-titulo > h2 { margin-top: 0; }
@@ -1613,11 +1681,18 @@ p.dato { font-size: %(dato_pt).1fpt; line-height: 1.3; color: %(acento)s;
          hyphens: none; break-inside: avoid; }
 p.dato strong { color: %(acento)s; font-weight: 600; }
 
+/* EL REMATE ES UNA CAJA, NO UN FILETE. Es la frase con que cierra cada
+   seccion, y la referencia cierra las suyas con la caja: fondo tan, filete
+   de 3 pt al costado y el texto adentro. Nosotros lo teniamos como una
+   reglita de 0,68 pt en ladrillo con cursiva al lado —un subrayado lateral,
+   no una pieza—. Mismo fondo y mismo filete que la caja legal: son la misma
+   familia y ahora se leen como tal. */
 p.remate { font-size: %(bajada).1fpt; line-height: %(bajada_int).3f;
            color: %(tinta)s; font-style: italic; font-weight: 500;
            margin: %(sep_caja).1fmm 0;
-           padding: 0 0 0 %(caja_sangria).1fmm;
-           border-left: %(filete).2fpt solid %(acento)s; text-align: left;
+           background: %(tan)s;
+           padding: %(caja_alto).1fmm %(caja_sangria).1fmm;
+           border-left: %(caja_filete).1fpt solid %(dato)s; text-align: left;
            hyphens: none; break-inside: avoid; }
 p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
 
@@ -1925,10 +2000,11 @@ li.ix-sub a::before { content: ""; position: absolute;
    1,86 pt por encima del titulo. En su indice el numero de seccion, el
    titulo y el numero de pagina comparten base. Fijando la misma altura de
    linea en puntos, las tres bases coinciden salvo 0,35 pt de ascendente. */
-span.ix-n { position: absolute; left: 0; color: %(acento)s;
+span.ix-n { position: absolute; left: 0; color: %(coral)s;
             font-size: %(ix_num).2fpt; line-height: %(ix_caja).2fpt; }
 span.ix-t { position: relative; color: %(tinta)s; background: %(crema)s;
             padding-right: 1.6mm; }
+li.ix-sub.propuesta span.ix-t { font-weight: 600; color: %(acento)s; }
 /* ABSOLUTO, NO FLOTADO. Flotando, el numero de pagina se apoya en el borde
    de arriba de la caja de linea y queda medio punto por encima del titulo;
    en su indice los dos comparten la linea de base. Absoluto a la derecha
@@ -1941,6 +2017,7 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
 
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
+    coral=CORAL,
     fila=FILA, tan=TAN, ocre=OCRE, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
     sans=SANS, tipos=TIPOS,
     # geometria

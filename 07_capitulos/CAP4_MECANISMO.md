@@ -1,5 +1,5 @@
 # 4 El mecanismo
-## Comisiones vecinales con presupuesto propio: cuánta plata, quién decide, quién la ejecuta
+BAJADA: En la Provincia de Buenos Aires un órgano vecinal no puede tener decisión vinculante, pero la partida sí puede volverse obligatoria y la ley permite que las asociaciones vecinales ejecuten la obra como parte contratante. Sobre esos dos hechos se apoya el mecanismo: 28.908 millones anuales, uno de cada dos pesos de obra pública.
 
 *Borrador 4 · septiembre 2026*
 *Reemplaza al borrador 3. Cambios: las zonas pasan a ser los límites de localidad de OpenStreetMap, y el índice de necesidad mide hogares en vez de porcentajes. Las dos cosas cambian el reparto.*

@@ -1,5 +1,7 @@
 # Introducción
 
+BAJADA: El plan de gobierno vigente tiene tres prioridades, diecinueve objetivos y setenta y siete metas numeradas, y no menciona empleo, vivienda, salud ni educación. Este programa nace de esa omisión, está construido con documentos públicos y pide que lo midan contra sus propias metas.
+
 ## La pregunta
 
 En el prólogo de su plan de gobierno "Prioridades Estratégicas 2024–2025", el intendente de San Isidro escribe que las prioridades que siguen no fueron fijadas por su equipo: que surgen de haber escuchado los principales problemas y necesidades de los vecinos.
