@@ -298,6 +298,15 @@ OCRE = "#B4863A"         # rotulos, cintillos, micro-etiquetas
 # quedado afuera; entra por decision tomada, con el mismo criterio que el
 # ladrillo: lo que verificar_pdf() prohibe es el rojo PURO.
 CORAL = "#DB6B4B"        # la cifra que numera: titulo de seccion e indice
+# EL GRIS CALIDO. Octava voz, y la que mas falta hacia: en la referencia
+# lleva EL 18,9 % DE TODOS LOS GLIFOS —uno de cada cinco— y nosotros no la
+# usabamos en ninguna parte. Sola, en Spectral cursiva de 7,9, lleva 13.912
+# glifos: todo el aparato del documento —las fuentes, las notas, las bajadas
+# de exhibit, los limites de cada dato—. Nosotros poniamos ese aparato en
+# ladrillo y en tinta aguada, y por eso nuestro ladrillo estaba al doble que
+# el suyo (19,4 % contra 9,0 %): usado para todo, no significaba nada.
+# La tinta al 68 % no es lo mismo: da un gris frio y sin cuerpo.
+GRIS = "#6E625A"         # el aparato: fuentes, notas, limites, remisiones
 
 TITULO = "PROGRAMA DE GOBIERNO"
 ANIO = "SAN ISIDRO 2027"
@@ -1523,7 +1532,7 @@ CSS = _FACES + """
   @bottom-left  { content: "%(corto)s"; font-family: "%(sans)s";
                   font-size: %(pie_pt).1fpt; letter-spacing: %(tr_pie).2fpt;
                   white-space: pre;
-                  color: %(tinta)s; opacity: .65; vertical-align: top; }
+                  color: %(gris)s; vertical-align: top; }
   @bottom-right { content: "Página " counter(page) " de " counter(pages);
                   font-family: "%(sans)s"; font-size: %(pie_pt).1fpt;
                   font-variant-numeric: tabular-nums lining-nums;
@@ -1734,7 +1743,7 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
                 border-top: %(filete).2fpt solid %(arena)s;
                 padding-top: %(sep).1fmm;
                 font-size: %(fuente).1fpt; line-height: %(fuente_int).3f;
-                color: %(tinta)s; font-style: italic; opacity: .68;
+                color: %(gris)s; font-style: italic;
                 columns: 2; column-gap: %(md).1fmm; }
 /* La nota no se parte... salvo cuando partirla es lo unico que evita una
    pagina en blanco con una nota arriba. Lo decide cerrar_capitulo(). */
@@ -1847,7 +1856,7 @@ th:first-child, td:first-child { text-align: left; }
            line-height: %(exh_tit_int).3f; color: %(acento)s; margin: 0;
            text-align: left; hyphens: none; }
 .exh-baj { font-size: %(fuente).1fpt; line-height: %(fuente_int).3f;
-           font-style: italic; color: %(tinta)s; opacity: .68;
+           font-style: italic; color: %(gris)s;
            margin: %(sep_fig).1fmm 0 0; text-align: left; hyphens: none; }
 /* El PNG ya viene dibujado a los 181,4 mm de la caja, asi que se imprime a
    escala 1: un punto pedido adentro del grafico es un punto en el papel. El
@@ -1859,8 +1868,8 @@ th:first-child, td:first-child { text-align: left; }
                          line-height: %(fuente_int).3f;
                          margin: %(sep_fig).1fmm 0 0;
                          text-align: left; hyphens: none;
-                         color: %(tinta)s; opacity: .68; }
-.exh-nota { color: %(acento)s; opacity: .9; margin-top: %(sep_rot).1fmm; }
+                         color: %(gris)s; }
+.exh-nota { color: %(gris)s; margin-top: %(sep_rot).1fmm; }
 
 /* El listado: monoespaciada al ancho de la caja, sobre banda de arena y con
    filete del acento al costado. */
@@ -2013,11 +2022,11 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
                      position: absolute; right: 0; background: %(crema)s;
                      padding-left: 1.6mm; font-size: %(ix_num).2fpt;
                      line-height: %(ix_caja).2fpt;
-                     color: %(tinta)s; opacity: .68; }
+                     color: %(gris)s; }
 
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
-    coral=CORAL,
+    coral=CORAL, gris=GRIS,
     fila=FILA, tan=TAN, ocre=OCRE, corto=TITULO_CORTO, pie=MARGEN_PIE, serif=SERIF,
     sans=SANS, tipos=TIPOS,
     # geometria

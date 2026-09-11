@@ -74,6 +74,7 @@ FILETE = "#C8C2BB"       # una linea que separa, no que dice
 # EL OCRE. Sexta voz de la paleta, sumada despues de medir la referencia
 # entera: lleva todas sus cornisas, sus rotulos y sus micro-etiquetas —1.833
 # glifos— y no es un rojo, es un oro apagado.
+GRIS = "#6E625A"         # el aparato: ejes, marcas, notas al pie del grafico
 OCRE = "#B4863A"
 
 DATO_CLARO = "#7E9070"
@@ -87,6 +88,7 @@ CAL = ARENA
 AMBAR = ACENTO
 
 PALETA = {"CREMA": CREMA, "TINTA": TINTA, "ACENTO": ACENTO, "DATO": DATO,
+          "GRIS": GRIS,
           "ARENA": ARENA, "FILA": FILA, "DATO_CLARO": DATO_CLARO,
           "OCRE": OCRE}
 
@@ -179,8 +181,8 @@ def aplicar():
         "savefig.edgecolor": CREMA,
         "savefig.transparent": False,
         "axes.facecolor": CREMA,
-        "axes.edgecolor": TINTA,
-        "axes.labelcolor": TINTA,
+        "axes.edgecolor": GRIS,
+        "axes.labelcolor": GRIS,
         "axes.linewidth": 0.7,
         "axes.spines.top": False,
         "axes.spines.right": False,
@@ -191,8 +193,8 @@ def aplicar():
         "grid.alpha": 1.0,
         "axes.axisbelow": True,
         "text.color": TINTA,
-        "xtick.color": TINTA,
-        "ytick.color": TINTA,
+        "xtick.color": GRIS,
+        "ytick.color": GRIS,
         # 7,9 pt es el cuerpo de los rotulos dentro de los graficos de la
         # referencia; por la escala de la pagina da 7,13.
         "xtick.labelsize": 7.13,
