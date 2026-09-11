@@ -1300,11 +1300,13 @@ def indice(entradas):
     """
     filas = []
     for slug, titulo, subs in entradas:
+        # SIN NUMERO. Sus cintillos de grupo son "THE THESIS", "THE BUILD":
+        # una etiqueta, no una numeracion. El numero del capitulo ya viaja en
+        # el de cada entrada —1.1, 1.2— asi que repetirlo arriba es ruido.
         m = RE_H1CAP.match(titulo)
-        num, nombre = (m.group(1), m.group(2)) if m else ("", titulo)
-        cintillo = ("%s %s" % (num, nombre)) if num else nombre
+        nombre = m.group(2) if m else titulo
         filas.append('<li class="ix-cap"><a href="#%s">%s</a></li>'
-                     % (slug, html.escape(cintillo)))
+                     % (slug, html.escape(nombre)))
         for sid, n, tit in subs:
             filas.append(
                 '<li class="ix-sub"><a href="#%s">'
@@ -1451,11 +1453,9 @@ CSS = _FACES + """
 @page {
   size: A4; margin: %(mgsup).1fmm %(mg).1fmm %(pie)dmm %(mg).1fmm;
   background: %(crema)s;
-  @top-left     { content: string(cap); font-family: "%(sans)s";
-                  font-size: %(cornisa).1fpt; font-weight: 500;
-                  letter-spacing: %(tr_cornisa).2fpt;
-                  color: %(acento)s; text-transform: uppercase;
-                  margin-bottom: %(sep_cornisa).1fmm; }
+  /* SIN CORNISA. Repetia el nombre de la seccion en cada pagina, y en el
+     indice eso imprimia "ÍNDICE" arriba y "Índice" debajo: la misma palabra
+     dos veces. La referencia no pone ahi el nombre de la seccion. */
   @bottom-left  { content: "%(corto)s"; font-family: "%(sans)s";
                   font-size: %(pie_pt).1fpt; letter-spacing: .1pt;
                   white-space: pre;
@@ -1471,7 +1471,7 @@ CSS = _FACES + """
   border-bottom: %(filete).2fpt solid %(arena)s; padding-bottom: 3mm;
 }
 @page :first { margin: 0; border: 0; padding: 0;
-  @top-left { content: ""; } @bottom-left { content: ""; }
+  @bottom-left { content: ""; }
   @bottom-right { content: ""; } }
 
 html { background: %(crema)s; }
@@ -1514,10 +1514,14 @@ hr { border: 0; border-top: %(filete).2fpt solid %(arena)s;
    JERARQUIA
    -------------------------------------------------------------------- */
 /* El numero en ladrillo y el nombre en tinta, que es lo que hace ella. */
+/* EL AIRE QUE DEJABA LA CORNISA. En su pagina la linea de marca esta a
+   38,3 pt del borde y el titulo a 72,1: hay 30 pt de aire entre una y otro.
+   Sacada la cornisa, ese aire tiene que ponerlo el titulo, o el capitulo
+   arranca pegado al borde de arriba y la composicion no es la suya. */
 h1 { font-size: %(h1).1fpt; line-height: %(h1_int).3f;
-     margin: 0 0 %(sep_h1_bajada).1fmm;
+     margin: %(aire_arriba).1fmm 0 %(sep_h1_bajada).1fmm;
      font-weight: 700; letter-spacing: 0; color: %(tinta)s;
-     string-set: cap content(); break-before: page; break-after: avoid; }
+     break-before: page; break-after: avoid; }
 /* En su titulo el numero y el nombre estan separados por algo mas que un
    espacio de palabra: el espacio va en el texto —lo necesita la cornisa— y el
    margen lo completa hasta el medio cuadratin. */
@@ -1642,8 +1646,15 @@ thead th { background: %(arena)s; color: %(acento)s; text-align: left;
            font-size: %(tabla_cab).1fpt; font-weight: 600;
            letter-spacing: %(tr_tabla).2fpt; text-transform: uppercase;
            line-height: 1.25; vertical-align: bottom; }
-td { padding: %(celda_v2).1fmm %(celda).1fmm; vertical-align: top; }
-tbody tr:nth-child(even) { background: %(fila)s; }
+/* SUS TABLAS NO TIENEN FILAS ALTERNADAS. Ninguna: sobre las treinta paginas
+   hay 76 bandas de arena —todas de cabecera— y CERO bandas del color de
+   fila. Lo que separa una fila de la siguiente es un PELO OSCURO de 0,75 pt
+   debajo de cada celda: hay 364 en el documento, dibujados celda por celda.
+   Las filas alternadas eran un invento nuestro, y encima con un filete pálido
+   que no separa nada: por eso sus tablas se leen nitidas y las nuestras
+   lavadas. */
+td { padding: %(celda_v2).1fmm %(celda).1fmm; vertical-align: top;
+     border-bottom: %(filete).2fpt solid %(tinta)s; }
 tbody td:first-child { color: %(acento)s; font-weight: 600; }
 tbody td.destacada { color: %(dato)s; font-weight: 600; }
 thead th.destacada { color: %(dato)s; }
@@ -1726,14 +1737,14 @@ figure.apertura { margin: 0 0 %(sep_caja).1fmm; break-before: page;
                   break-after: avoid; break-inside: avoid; }
 /* Con la banda delante, el salto de pagina lo lleva ella y el titulo va
    pegado detras. */
-figure.apertura + h1 { break-before: avoid; }
+figure.apertura + h1 { break-before: avoid; margin-top: 0; }
 figure.apertura img { display: block; width: 100%%; height: 78mm;
                       object-fit: cover; }
 figure.apertura figcaption, figure.ilu figcaption {
     font-style: italic; font-size: %(fuente).1fpt;
     line-height: %(fuente_int).3f; color: %(tinta)s; opacity: .68;
     margin-top: %(sep_fig).1fmm; text-align: left; }
-figure.apertura + h1 { break-before: avoid; }
+figure.apertura + h1 { break-before: avoid; margin-top: 0; }
 
 figure.ilu { margin: %(sep).1fmm 0; break-inside: avoid; }
 figure.ilu.sola img { display: block; width: 100%%; height: 76mm;
@@ -1774,7 +1785,7 @@ figure.ilu .par img { display: block; width: 50%%; height: 66mm;
    -------------------------------------------------------------------- */
 .indice { break-before: page; }
 h1.ix-h { font-size: %(h1).1fpt; color: %(acento)s;
-          margin: 0 0 %(ix_tit).1fmm; border: 0; }
+          margin: %(aire_arriba).1fmm 0 %(ix_tit).1fmm; border: 0; }
 ul.ix { list-style: none; margin: 0; padding: 0;
         font-variant-numeric: tabular-nums lining-nums; }
 ul.ix li { margin: 0; }
@@ -1784,10 +1795,18 @@ ul.ix a { text-decoration: none; color: %(tinta)s; }
    el margen, sin numero de pagina y sin filete. */
 li.ix-cap { margin-top: %(ix_grupo).1fmm; }
 li.ix-cap:first-child { margin-top: 0; }
+/* EL CINTILLO VA EN SALVIA, NO EN LADRILLO. Su indice usa CINCO colores en
+   una sola pagina: ocre en la cornisa y en los cintillos de grupo, ladrillo
+   en el titulo de la pagina, coral en el numero de seccion, tinta en el
+   titulo y gris calido en el numero de pagina. Cinco voces distintas, cada
+   una para una cosa. El nuestro tenia dos, y el ladrillo hacia tres trabajos
+   a la vez. El ocre y el coral no estan en nuestra paleta —y el coral ademas
+   es un rojo—, asi que el cintillo toma la otra voz que la paleta si tiene y
+   que el documento ya usa para las bajadas: la salvia. */
 li.ix-cap a { display: block; font-family: "%(sans)s";
               font-size: %(ix_cintillo).2fpt; font-weight: 500;
               letter-spacing: %(ix_track).2fpt; text-transform: uppercase;
-              color: %(acento)s; line-height: %(ix_fila).3f; }
+              color: %(dato)s; line-height: %(ix_fila).3f; }
 
 /* La entrada: numero colgado, titulo, guia de puntos, numero de pagina.
    SIN FLEXBOX. Con la ancla en display:flex, WeasyPrint resuelve
@@ -1802,7 +1821,7 @@ li.ix-sub a { display: block; padding-left: %(sangria_ix).1fmm;
 li.ix-sub a::before { content: ""; position: absolute;
                       left: %(sangria_ix).1fmm; right: 0; bottom: 1.1mm;
                       border-bottom: %(filete).2fpt dotted
-                                     rgba(124, 46, 35, .46); }
+                                     rgba(124, 46, 35, .34); }
 span.ix-n { position: absolute; left: 0; color: %(acento)s;
             font-size: %(ix_num).2fpt; }
 span.ix-t { position: relative; color: %(tinta)s; background: %(crema)s;
@@ -1862,13 +1881,20 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     caja_sangria=emm(REF["caja_sangria"], 1),
     caja_alto=emm(REF["caja_alto"], 1),
     # En su pagina de contenidos el numero va en x=45 y el nombre en x=67.
+    # 72,1 - 38,3 - la caja de linea de la cornisa (8,7) = 25,1 pt
+    aire_arriba=emm(25.1, 1),
     sangria_ix=emm(22.0, 1),
-    ix_tit=emm(28.5 - 21.7, 1),        # "Contents" -> primer cintillo
-    ix_grupo=emm(27.2 - 21.0, 1),      # aire de mas encima de un cintillo
+    # Medido sobre sus veinticinco entradas, no sobre dos: el paso entre
+    # entradas es 21,70 pt —no 21,0—, el cintillo se lleva 27,65 desde la
+    # entrada anterior y devuelve 21,70 a la siguiente, y del titulo de la
+    # pagina al primer cintillo hay 28,5. Estaba en 18,90 de paso cuando le
+    # corresponden 19,57: un 3,4 % apretado, que en cuarenta filas se ve.
+    ix_tit=emm(28.5, 1) - e(16.5) * 1.18 / 72 * 25.4,   # menos su caja de linea
+    ix_grupo=emm(27.65 - 21.7, 1),     # aire de mas encima de un cintillo
     ix_cintillo=e(6.7), ix_entrada=e(9.7), ix_num=e(8.6),
-    ix_track=e(0.6),
-    ix_fila=21.0 / 6.7,                # el cintillo ocupa una fila entera
-    ix_alto=21.0 / 9.7,                # 21 pt de fila, como los suyos
+    ix_track=e(0.75),
+    ix_fila=21.7 / 6.7,                # el cintillo ocupa una fila entera
+    ix_alto=21.7 / 9.7,                # 21,7 pt de fila, como los suyos
     celda=emm(REF["celda"], 1),
     celda_v=emm((REF["banda_cab"] - REF["tabla_cab"] * 1.25) / 2, 1),
     celda_v2=emm((REF["banda_fila"] - REF["tabla_int"]) / 2, 1),
