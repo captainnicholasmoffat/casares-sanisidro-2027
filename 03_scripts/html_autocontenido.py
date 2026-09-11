@@ -66,8 +66,29 @@ navegador = """
     quedaria pegado al borde de la ventana toda la lectura */
  .filete-pie{display:none;}
  img:not(.tapa-img){max-width:100%;height:auto;}
+ /* LA TAPA, CON LA MISMA GEOMETRIA QUE EN EL PDF.
+    En el PDF la imagen se coloca en 628,6 x 841,9 pt sobre una hoja de
+    595,3: se desborda 16,7 pt por lado y el overflow:hidden de la seccion
+    la recorta. Sin forzarlo, en el navegador la imagen se ajustaba al ancho
+    y quedaba una franja de papel abajo, con la foto mas abierta que en el
+    PDF. Se declara con !important porque la regla del cuerpo del documento
+    convive con la del bloque de pantalla y aca no puede perder. */
+ section.tapa{position:relative!important;width:210mm!important;
+              height:297mm!important;overflow:hidden!important;}
+ section.tapa img.tapa-img{position:absolute!important;left:0!important;
+              top:0!important;width:210mm!important;height:297mm!important;
+              max-width:none!important;max-height:none!important;
+              object-fit:cover!important;}
 }
 """
+# 3bis. FUERA LAS @font-face DEL DOCUMENTO. El CSS del PDF declara las mismas
+# familias apuntando a file:///home/user/.../05_tipografia/*.ttf, y van DESPUES
+# de las que acabo de embeber: en CSS gana la ultima, asi que en cualquier
+# maquina que no sea esta las fuentes no cargan y el documento entero cae a
+# Georgia. Aca no se notaba porque esas rutas existen.
+css = re.sub(r'@font-face\s*\{[^}]*\}', '', css)
+print("  @font-face del documento: fuera")
+
 cuerpo=cuerpo.replace("</head>",
     "<style>%s\n%s\n%s</style></head>" % (faces, css, navegador))
 io.open(SAL,"w",encoding="utf-8").write(cuerpo)
