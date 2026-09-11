@@ -815,7 +815,7 @@ def bloques(md, slug):
             while j < n and re.match(r'^\d+\.\s', lineas[j].strip()):
                 items.append(re.sub(r'^\d+\.\s', '', lineas[j].strip()))
                 j += 1
-            add(False, "<ol>%s</ol>"
+            add(True, "<ol>%s</ol>"
                 % "".join("<li>%s</li>" % _inline(x) for x in items))
             i = j
             continue
@@ -825,7 +825,7 @@ def bloques(md, slug):
             while j < n and lineas[j].strip().startswith("- "):
                 items.append(lineas[j].strip()[2:])
                 j += 1
-            add(False, "<ul>%s</ul>"
+            add(True, "<ul>%s</ul>"
                 % "".join("<li>%s</li>" % _inline(x) for x in items))
             i = j
             continue
@@ -1459,7 +1459,6 @@ CSS = _FACES + """
    ==================================================================== */
 @page {
   size: A4; margin: %(mgsup).1fmm %(mg).1fmm %(pie)dmm %(mg).1fmm;
-  background: %(crema)s;
   /* SIN CORNISA. Repetia el nombre de la seccion en cada pagina, y en el
      indice eso imprimia "ÍNDICE" arriba y "Índice" debajo: la misma palabra
      dos veces. La referencia no pone ahi el nombre de la seccion. */
@@ -1474,14 +1473,50 @@ CSS = _FACES + """
                   vertical-align: top; }
   /* Todos los filetes de la referencia miden 0,75 pt: 567 de los 570
      rectangulos finos medidos dan ese grosor. El unico grueso del documento
-     es el que lleva la caja al costado, y mide 3. */
-  border-bottom: %(filete).2fpt solid %(arena)s; padding-bottom: 3mm;
+     es el que lleva la caja al costado, y mide 3.
+
+     EL FILETE DE PIE. Estaba escrito como `border-bottom` del @page y no
+     dibujaba nada: en las 44 paginas no hay un solo rectangulo debajo de
+     700 pt. Se pinta como fondo del @page, que si funciona y ademas se
+     puede apagar en la tapa. Va a ras del borde de abajo de la caja de
+     texto —45 pt del borde de la hoja en la referencia, que es su mismo
+     margen— y el texto del pie queda por debajo. Sus paginas 3 a 21 lo
+     llevan; la tapa y el indice no. */
+  border: 0;
+  background: %(crema)s;
 }
 @page :first { margin: 0; border: 0; padding: 0;
+  background-image: none;
   @bottom-left { content: ""; }
   @bottom-right { content: ""; } }
 
 html { background: %(crema)s; }
+
+/* --------------------------------------------------------------------
+   EL FILETE DEL PIE
+
+   Lo llevan sus paginas 3 a 21, en tinta, de 0,75 pt, a todo el ancho de
+   la caja y justo sobre la linea del margen de abajo; el texto del pie va
+   por debajo. Nosotros no teniamos ninguno.
+
+   Dos intentos que NO sirven, anotados para no repetirlos:
+     - `border-bottom` en el @page no dibuja nada. En las 44 paginas no
+       habia un solo rectangulo por debajo de los 700 pt.
+     - `border-top` en @bottom-left y @bottom-right dibuja dos filetes
+       cortos, uno bajo cada texto, con un hueco en el medio: las cajas de
+       margen se achican a su contenido.
+     - Como fondo del @page tampoco: WeasyPrint 70 ignora el
+       `background-size` de un `linear-gradient` en @page y el degradado
+       llena la hoja entera. Da una pagina en tinta con un recuadro crema.
+   Queda el elemento fijo, que se estira de margen a margen y da el filete
+   entero. Se dibuja tambien en la tapa —no hay forma de apagarlo por
+   pagina— asi que va con `z-index: -1` y la ilustracion a sangre, que se
+   pinta encima, lo tapa. En las paginas de texto no hay nada que lo tape.
+   -------------------------------------------------------------------- */
+.filete-pie { position: fixed; left: 0; right: 0; bottom: 0; height: 0;
+              z-index: -1;
+              border-top: %(filete).2fpt solid %(tinta)s; }
+
 /* EL MARGEN DE BODY VA EN CERO, Y ESTO NO ES UN DETALLE.
    El estilo por defecto le da a body 8 px de margen, que son 6 pt: todo el
    documento venia 2,1 mm metido hacia adentro por los cuatro lados respecto
@@ -1516,8 +1551,12 @@ em { font-style: italic; }
 code { font-family: "DejaVu Sans Mono"; font-size: %(mono).1fpt;
        background: %(arena)s; padding: .5pt 2pt; }
 a { color: %(acento)s; text-decoration: none; }
-hr { border: 0; border-top: %(filete).2fpt solid %(arena)s;
-     margin: %(sep).1fmm 0; }
+/* EL SEPARADOR NO DIBUJA LINEA. Son 60 filetes de arena a todo el ancho
+   repartidos por el documento, uno entre cada dos subsecciones. En sus 30
+   paginas no hay NI UNO: sus unicos filetes largos son el del pie (uno por
+   pagina, en tinta) y los de las tablas. El corte del original se respeta
+   —sigue siendo un corte— pero se dice con aire, que es como lo dice ella. */
+hr { border: 0; margin: %(sep).1fmm 0; height: 0; }
 
 /* --------------------------------------------------------------------
    JERARQUIA
@@ -1637,10 +1676,48 @@ p.remate strong { font-style: normal; font-weight: 600; color: %(acento)s; }
    son dos colores distintos, no el mismo aguado. */
 .et { font-weight: 600; font-style: normal; color: %(tinta)s; opacity: 1; }
 
-ul, ol { margin: 0 0 .6em; padding: 0 0 0 4.4mm; }
-li { margin-bottom: .3em; text-align: justify; hyphens: auto; }
-ul li::marker { color: %(acento)s; }
-ol li::marker { color: %(acento)s; font-weight: 600; }
+/* --------------------------------------------------------------------
+   LA LISTA — medida sobre su pagina 3, que es toda ella una lista
+
+   Es la pieza mas fuerte de su resumen ejecutivo y la teniamos como una
+   vinneta de tres puntos metida en media columna. La suya:
+
+     marca        Spectral Bold 10,5 en OCRE, colgada en el margen (x=45)
+     texto        a 23,2 pt del margen (x=68,2)
+     entrada      Spectral Bold 9,45 en LADRILLO, en la misma linea
+     cuerpo       Spectral Regular 9,45 en tinta, interlinea 13,5
+     remision     Spectral Italic 9,45 en gris calido — "(Section 3)"
+     entre items  11,2 pt de aire de mas
+     ancho        TODO el ancho de la caja, nunca en columna
+
+   La marca es mas grande que el texto que encabeza, va en un color que no
+   usa ninguna otra cosa del cuerpo, y cuelga afuera: se lee la lista antes
+   de leer una palabra.
+   -------------------------------------------------------------------- */
+ul, ol { list-style: none; margin: 0 0 %(sep).1fmm; padding: 0;
+         counter-reset: item; }
+li { position: relative; padding-left: %(li_sangria).2fmm;
+     margin-bottom: %(li_aire).2fmm;
+     text-align: justify; hyphens: auto; }
+li:last-child { margin-bottom: 0; }
+/* LA MARCA SIN NUMERO. En sus 30 paginas NO HAY UNA SOLA lista sin
+   numerar: las diecisiete marcas colgadas del margen son todas cifras. O
+   sea que para una lista de guiones no hay referencia que copiar, y
+   numerar la nuestra seria agregarle al texto una enumeracion que no
+   tiene. Queda un bolo en ocre con la masa de una cifra —no el punto
+   medio de 9 pt, que al lado del ladrillo no se veia— alineado a la base
+   de la primera linea. */
+ol > li::before { counter-increment: item; content: counter(item);
+                  font-size: %(li_marca).2fpt; }
+ul > li::before { content: "•"; font-size: %(li_bolo).2fpt; }
+li::before { position: absolute; left: 0; top: 0;
+             color: %(ocre)s; font-weight: 700;
+             line-height: %(li_linea).2fpt; }
+/* La entrada de cada item va en ladrillo, como en la suya. _fuerte() ya
+   manda a ladrillo lo que lleva cifras y a salvia lo que no; dentro de una
+   lista manda siempre el ladrillo, que es lo que ella hace en las ocho. */
+li > strong:first-child, li > strong.idea:first-child {
+     color: %(acento)s; font-weight: 700; }
 
 /* --------------------------------------------------------------------
    TABLAS. Banda de cabecera 17,3 pt en arena con Inter mayuscula en
@@ -1937,6 +2014,9 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     ix_grupo=emm(27.65 - 21.7, 1),     # aire de mas encima de un cintillo
     ix_cintillo=e(6.7), ix_entrada=e(9.7), ix_num=e(8.6),
     ix_track=e(6.7) * 0.174,
+    li_sangria=emm(23.2, 2), li_aire=emm(11.2, 2), li_marca=e(10.5),
+    li_bolo=e(9.6),
+    li_linea=e(REF['cuerpo']) * (REF['cuerpo_int'] / REF['cuerpo']),
     ix_caja=e(21.7),                   # la fila entera, en puntos
     ix_guia=e(0.75),                   # punto de 0,75 con paso de 1,5
     ix_punto='rgba(180, 134, 58, .62)',  # ocre al 62 %% = #CDAE7C
@@ -2061,7 +2141,8 @@ def main():
         partes = [tapa(), indice(secciones if secciones is not None else entradas),
                   '<section class="cap">%s</section>' % cuerpo]
         return ('<!doctype html><html lang="es"><head><meta charset="utf-8">'
-                '<title>%s</title></head><body>%s</body></html>'
+                '<title>%s</title></head><body>'
+                '<div class="filete-pie"></div>%s</body></html>'
                 % (TITULO_CORTO, "\n".join(partes)))
 
     # La ultima pieza de cada capitulo: su pagina no cuenta como hueco.
