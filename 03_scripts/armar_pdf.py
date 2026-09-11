@@ -307,6 +307,13 @@ CORAL = "#DB6B4B"        # la cifra que numera: titulo de seccion e indice
 # el suyo (19,4 % contra 9,0 %): usado para todo, no significaba nada.
 # La tinta al 68 % no es lo mismo: da un gris frio y sin cuerpo.
 GRIS = "#6E625A"         # el aparato: fuentes, notas, limites, remisiones
+# LOS QUE FALTABAN. Su :root declara dieciseis fichas de color y nosotros
+# teniamos nueve. Estas cinco estaban afuera y cada una hace un trabajo:
+FILETE_FINO = "#D9CDBA"  # --hair: el filete de fila mas claro de sus tablas
+GUIA = "#C6AE8E"         # --rule: la guia de puntos del indice, exacta
+PILDORA_SALVIA = "#E4EADF"   # --pill-sage: fondo de etiqueta
+PILDORA_OCRE = "#F2E7D4"     # --pill-amber: fondo de etiqueta
+BLANCO = "#FCFAF6"       # --white: el papel de las fichas sobre fondo oscuro
 
 TITULO = "PROGRAMA DE GOBIERNO"
 ANIO = "SAN ISIDRO 2027"
@@ -385,6 +392,12 @@ CAJAS = [
 # seccion. Va al ancho de la caja, en cuerpo chico, con el titulo de entrada en
 # negrita corrido con el primer parrafo.
 NOTAS_AL_PIE = ("Nota metodológica", "Nota sobre las fuentes")
+
+# Cuanto puede medir una sub-subseccion para que sea un aparte y no una
+# subseccion. Su caja de una columna mide 275,25 x 150 pt: a 9 pt de cuerpo y
+# armado, 300 deja 40 cajas en 43 paginas —0,93 por pagina— contra las 26 en
+# 30 de la referencia, que son 0,87. Con 660 daban 56, un 50 % de mas.
+APARTE_MAXIMO = 300
 
 PIES = json.load(open(os.path.join(CHARTS, "pies.json"), encoding="utf-8")) \
     if os.path.exists(os.path.join(CHARTS, "pies.json")) else {}
@@ -828,6 +841,20 @@ def bloques(md, slug):
                 continue
             tipo = next((t for t, claves in CAJAS
                          if any(titulo.startswith(c) for c in claves)), None)
+            # Y CUALQUIER SUB-SUBSECCION CORTA. La referencia tiene DIEZ cajas
+            # de una columna —275,25 pt de ancho, con la prosa corriendo a su
+            # lado en 274,5— y nosotros cero. Lo que mete adentro son apartes:
+            # una nota al margen de cuatro o cinco lineas que no interrumpe la
+            # lectura. Nuestras sub-subsecciones cortas son exactamente eso.
+            # El corte es por largo, medido, no por criterio: lo que no llena
+            # media columna no es una subseccion, es un aparte.
+            if not tipo:
+                j0, largo = i + 1, 0
+                while j0 < n and not lineas[j0].startswith(("#", "---", "|", "`")):
+                    largo += len(lineas[j0].strip())
+                    j0 += 1
+                if 0 < largo <= APARTE_MAXIMO:
+                    tipo = "aparte"
             if tipo:
                 j = i + 1
                 cuerpo = []
@@ -864,15 +891,19 @@ def bloques(md, slug):
                 continue
             sid = "%s-%s" % (slug, len(subsecciones))
             if m2:
-                subsecciones.append((sid, m2.group(1), m2.group(2)))
+                # SIN MARCAS DE MARKDOWN. El indice escapaba el titulo crudo
+                # y en el capitulo 5 imprimia "Empleo · **PLATA NUEVA**",
+                # asteriscos incluidos, en cinco entradas. El h2 si pasaba por
+                # _inline(); la entrada del indice, no.
+                subsecciones.append((sid, m2.group(1), _crudo(m2.group(2))))
                 soltar_ilustracion()
                 if m2.group(1) in dentro:
                     pendiente[0] = dentro.pop(m2.group(1))
                 toca_entrada[0] = True
                 add(True, '<h2 id="%s"><span class="n">%s</span>%s</h2>'
-                    % (sid, m2.group(1), _inline(m2.group(2))))
+                    % (sid, m2.group(1), _con_etiqueta(m2.group(2))))
             else:
-                subsecciones.append((sid, None, crudo))
+                subsecciones.append((sid, None, _crudo(crudo)))
                 toca_entrada[0] = True
                 add(True, '<h2 id="%s">%s</h2>' % (sid, _inline(crudo)))
 
@@ -981,6 +1012,49 @@ def _escapar(t):
     """El texto de un listado va tal cual: sin negritas, sin cursivas, y con
     los tres caracteres que el HTML se comeria puestos como entidad."""
     return (t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+
+
+# LAS ETIQUETAS DE COSTO SON CHIPS. En los titulos del capitulo 5 —"5.3
+# Empleo · **PLATA NUEVA**"— lo que va en negrita despues del punto medio no
+# es un enfasis: es una etiqueta que dice de donde sale la plata, y es
+# exactamente la pieza que la referencia usa veinte veces ("Modelled", "EXT",
+# "CRITICAL PATH"). Su chip, medido en su hoja de estilos:
+#     Inter 600 de 5,6 con interletrado de 0,4 pt, relleno 1 x 2,75,
+#     en linea, sobre una pildora de color.
+# El color dice que clase de plata es, y eso ya lo dice el texto:
+#     PLATA NUEVA   -> ladrillo, porque cuesta
+#     REASIGNACION  -> ocre, porque mueve lo que ya esta
+#     GESTION/GRATIS-> salvia, porque no cuesta
+COLOR_ETIQUETA = (
+    ("PLATA NUEVA", "et-cuesta"),
+    ("REASIGNACIÓN", "et-mueve"),
+    ("GESTIÓN", "et-gratis"),
+    ("GRATIS", "et-gratis"),
+)
+
+
+def _clase_etiqueta(txt):
+    t = txt.upper()
+    for clave, clase in COLOR_ETIQUETA:
+        if clave in t:
+            return clase
+    return "et-mueve"
+
+
+def _con_etiqueta(t):
+    """Un titulo cuyo tramo en negrita final es una etiqueta de costo."""
+    m = re.search(r'\s*·\s*\*\*(.+?)\*\*\s*$', t)
+    if not m:
+        return _inline(t)
+    txt = m.group(1)
+    return (_inline(t[:m.start()])
+            + '<span class="etiq %s">%s</span>'
+            % (_clase_etiqueta(txt), html.escape(txt)))
+
+
+def _crudo(t):
+    """El titulo sin sus marcas de markdown, para el indice."""
+    return re.sub(r'\*\*(.+?)\*\*', r'\1', t).replace("`", "")
 
 
 def _lista(mapa, slug):
@@ -1803,6 +1877,28 @@ aside.caja.remate > p strong { font-style: normal; font-weight: 600;
 .et { font-weight: 600; font-style: normal; color: %(tinta)s; opacity: 1; }
 
 /* --------------------------------------------------------------------
+   LA ETIQUETA — el chip de la referencia, medido en su hoja de estilos
+
+     .tag { font-family: Inter; font-weight: 600; font-size: 5.6pt;
+            letter-spacing: .4pt; padding: 1pt 2.75pt; display: inline-block }
+     .tag.t-v { background: var(--pill-sage); color: var(--sage) }
+     .tag.t-m { background: var(--pill-amber); color: var(--amber) }
+            { background: rgba(124,46,35,.09); color: var(--oxblood) }
+
+   Lo usan veinte veces —"Modelled", "EXT", "CRITICAL PATH"— y nosotros cero,
+   aunque el texto ya trae las suyas escritas.
+   -------------------------------------------------------------------- */
+span.etiq { display: inline-block; font-family: "%(sans)s";
+            font-size: %(etiq_pt).2fpt; font-weight: 600;
+            letter-spacing: %(etiq_track).2fpt; text-transform: uppercase;
+            padding: %(etiq_v).2fmm %(etiq_h).2fmm;
+            margin-left: %(etiq_izq).2fmm; vertical-align: %(etiq_base).2fpt;
+            line-height: 1.2; }
+span.etiq.et-cuesta { background: rgba(124, 46, 35, .09); color: %(acento)s; }
+span.etiq.et-mueve  { background: %(pild_ocre)s;   color: %(ocre)s; }
+span.etiq.et-gratis { background: %(pild_salvia)s; color: %(dato)s; }
+
+/* --------------------------------------------------------------------
    EL TABLERO DE CIFRAS — medido sobre su pagina 22
 
    Es la unica pieza de la referencia que pone una cifra a cuerpo de titulo,
@@ -2110,6 +2206,10 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
 """ % dict(
     crema=CREMA, tinta=TINTA, acento=ACENTO, dato=DATO, arena=ARENA,
     coral=CORAL, gris=GRIS,
+    pild_ocre=PILDORA_OCRE, pild_salvia=PILDORA_SALVIA, hair=FILETE_FINO,
+    # el chip, de su hoja de estilos
+    etiq_pt=e(5.6), etiq_track=e(0.4), etiq_v=emm(1.0, 2), etiq_h=emm(2.75, 2),
+    etiq_izq=emm(2.25, 2), etiq_base=e(-0.75),
     # TABLA Y CAJA, de su hoja de estilos y no ya del PDF medido
     cab_alto=emm(17.25, 2), cab_arriba=emm(4.25, 2),
     celda_arriba=emm(3.5, 2), celda_int=11.25 / 7.875,
@@ -2198,7 +2298,7 @@ li.ix-sub a::after { content: target-counter(attr(href), page);
     li_linea=e(REF['cuerpo']) * (REF['cuerpo_int'] / REF['cuerpo']),
     ix_caja=e(21.7),                   # la fila entera, en puntos
     ix_guia=e(0.75),                   # punto de 0,75 con paso de 1,5
-    ix_punto='rgba(180, 134, 58, .62)',  # ocre al 62 %% = #CDAE7C
+    ix_punto=GUIA,                     # --rule de su :root, exacto
     ix_fila=21.7 / 6.7,                # el cintillo ocupa una fila entera
     ix_alto=21.7 / 9.7,                # 21,7 pt de fila, como los suyos
     celda=emm(REF["celda"], 1),
