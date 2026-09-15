@@ -1,63 +1,56 @@
-# Corpus Boletín Oficial de San Isidro — qué hay y dónde
+# Corpus Boletín Oficial de San Isidro — paquete completo
 
 Armado el 14 de septiembre de 2026. Fuente: Boletín Oficial del Municipio de San Isidro.
 
-## Qué está en esta carpeta de Drive
+## Qué hay adentro
 
-Los informes y las tablas de análisis. Es la capa que se lee.
+| Carpeta / archivo | Qué es | Tamaño sin comprimir |
+|---|---|---|
+| `ttxt/` | 6.201 textos completos de actos de TESI (feb 2024 – sep 2026) | 61 MB |
+| `txt/` | 1.735 boletines históricos completos en texto (2002 – mar 2024) | 266 MB |
+| `tesi_rows.json` | 15.464 actos de TESI, metadatos crudos del buscador | 8,8 MB |
+| `tesi_full.json` | Los mismos 15.464 enriquecidos con el texto de los PDF | 9,3 MB |
+| `archivo_rows.jsonl` | 37.132 actos históricos segmentados | 29 MB |
+| `adj_rows.json` / `adj_montos.json` | Los 573 decretos de adjudicación y sus montos | 0,5 MB |
+| `meta.json` | Índice de los 1.750 boletines históricos con fecha y URL | 0,35 MB |
+| `tpdf_index.json` | Índice de los PDF de TESI descargados | 1,3 MB |
+| `cuit_dom_map.json` | CUIT con dirección hallada en actos municipales | 0,06 MB |
+| `01` a `13` .csv | Las 13 tablas de salida | 31 MB |
+| `INFORME.md`, `ADENDA.md`, `ADENDA_2.md` | Los tres informes | |
+| `*.py` | Los scripts que generaron todo, para reproducirlo | |
 
-| Archivo | Qué contesta |
-|---|---|
-| `INFORME.md` | Informe principal: qué se bajó, el hallazgo de los 573 decretos sin domicilio, tasas y vigencias, urbanismo, control del Concejo, qué no se pudo |
-| `ADENDA.md` | Urbanismo por localidad y montos adjudicados por año y por mes |
-| `ADENDA_2.md` | Concentración con atribución exacta y las tres zonas de la obra vial delimitadas calle por calle |
-| `06_adjudicatarios_por_cuit.csv` | Los 350 adjudicatarios únicos con su CUIT y cuántos decretos ganó cada uno |
-| `10_urbanismo_por_localidad.csv` | Los 95 decretos urbanos con localidad, dirección y catastro |
-| `11_montos_por_mes.csv` | Monto adjudicado mes a mes, febrero 2024 a julio 2026 |
-| `12_ranking_adjudicatarios_por_monto.csv` | Ranking completo de 332 adjudicatarios, método mixto |
-| `13_ranking_estricto_407_decretos.csv` | Ranking de 236 adjudicatarios, sólo con atribución exacta. **Es el que hay que citar.** |
+## Qué NO hay
 
-## Qué NO está acá y dónde conseguirlo
+Los PDF originales: 6.201 de TESI y 1.741 históricos, 5,6 GB en total.
+Se dejaron afuera a propósito. **Cada renglón de cada CSV trae la URL del PDF fuente**,
+así que se rebajan cuando hagan falta.
 
-El corpus crudo: 6.201 textos completos de actos de TESI, 1.735 boletines
-históricos en texto, los JSON estructurados y los CSV grandes (el completo de
-15.464 actos y el histórico de 37.132). Son 70 MB comprimidos.
+## Cómo rearmar el paquete
 
-Cap'n Nick los tiene en tres archivos de 24 MB
-(`corpus_sanisidro.tar.gz.part00`, `part01`, `part02`). Pedíselos y los sube acá.
-El MD5 del archivo rearmado es `8253670726a96fe2c99147d08d6a56e1`.
+Los tres trozos se unen así.
 
-Para unirlos, en Mac o Linux:
+En Mac o Linux, en la carpeta donde estén los tres archivos:
 
     cat corpus_sanisidro.tar.gz.part00 corpus_sanisidro.tar.gz.part01 corpus_sanisidro.tar.gz.part02 > corpus_sanisidro.tar.gz
     tar xzf corpus_sanisidro.tar.gz
 
-En Windows, PowerShell:
+En Windows, en PowerShell:
 
     cmd /c copy /b corpus_sanisidro.tar.gz.part00+corpus_sanisidro.tar.gz.part01+corpus_sanisidro.tar.gz.part02 corpus_sanisidro.tar.gz
     tar -xzf corpus_sanisidro.tar.gz
 
-Los PDF originales (5,6 GB, 6.201 de TESI y 1.741 históricos) se dejaron afuera
-a propósito: **cada renglón de cada CSV trae la URL de su PDF fuente**, así que
-se rebajan cuando hagan falta.
+Para verificar que se unió bien, el MD5 del archivo rearmado tiene que dar:
+
+    8253670726a96fe2c99147d08d6a56e1
 
 ## Aviso técnico para quien vuelva a bajar del Municipio
 
-Los dominios `boletines.sanisidro.gob.ar` y `www.sanisidro.gob.ar` sirven su
-certificado sin la cadena intermedia de Sectigo. Cualquier cliente que verifique
-bien da error y parece un 403. No es un bloqueo. Se resuelve completando la
-cadena con el certificado intermedio que sí publica `tesi.sanisidro.gob.ar`.
+Los dominios `boletines.sanisidro.gob.ar` y `www.sanisidro.gob.ar` sirven su certificado
+sin la cadena intermedia de Sectigo. Cualquier cliente que verifique bien da error y
+parece un 403. No es un bloqueo. Se resuelve completando la cadena con el certificado
+intermedio que sí publica `tesi.sanisidro.gob.ar`.
 
 ## Fuentes exactas
 
-- Listado estructurado 2024–2026: `https://tesi.sanisidro.gob.ar/boletin?page=N` (516 páginas, 30 por página)
-- Archivo histórico 2002–2024: `https://boletines.sanisidro.gob.ar/index.php/boletin` (1.750 ids)
-
-## Cortes de fecha, para no equivocarse
-
-- TESI: firmas del 04/01/2024 al 01/09/2026; publicaciones del 20/02/2024 al 08/09/2026.
-- Archivo histórico: hasta el boletín extra 1278, del 21/03/2024.
-- El corte entre las dos fuentes es de fuente, no político. Para un corte por
-  gestión hay que filtrar `fecha_firma >= 2023-12-10` y decirlo.
-- En el histórico hay outliers de parseo en `fecha_firma` (se vieron 1971 y 2915).
-  Filtrar por rango antes de usar esa columna.
+- Listado estructurado 2024–2026: `https://tesi.sanisidro.gob.ar/boletin?page=N` (516 páginas)
+- Archivo histórico 2002–2024: `https://boletines.sanisidro.gob.ar/index.php/boletin`
