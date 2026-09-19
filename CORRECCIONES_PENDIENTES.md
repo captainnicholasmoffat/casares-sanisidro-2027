@@ -294,34 +294,101 @@ NO escribir el motivo que Cap'n Nick atribuye (sobrefacturación) sin
 expediente. Sí el efecto: se cementa lo que estaba verde porque la
 obra se decide arriba y nadie con interés en ese parque puede frenarla.
 
-## 68 · RECOLECCIÓN DE RESIDUOS
-49.270 millones al año, la subfunción más cara. Corre sobre la
-Licitación 17/2008 que el propio Municipio declaró desierta.
-DECISIÓN: no proponer que las comisiones ejecuten el servicio. La obra
-vecinal funciona porque es discreta; la recolección es un servicio
-diario que no puede fallar un día, y una zona sin recolección una
-semana es un problema sanitario.
-Sí proponer: licitarlo con pliego discutido antes —frecuencias,
-horarios, zonas, qué se separa—, indicador de servicio por zona para
-cada comisión, y penalidades aplicadas con el reclamo vecinal como
-prueba.
-El reciclado y los puntos de acopio sí pueden ser vecinales desde el
-día uno: las cooperativas ya funcionan en el conurbano.
-PENDIENTE: informe del worker de Chrome sobre si hubo licitación entre
-2009 y hoy.
+## 68 · RECOLECCIÓN DE RESIDUOS · REESCRITA CON EL INFORME 01
+ATENCIÓN: lo que el documento dice HOY ES REFUTABLE y hay que
+corregirlo antes de publicar.
 
-## 69 · IA APLICADA A SALUD
-La sección propone turno digital, precio unitario y arreglar
-filtraciones. Todo administrativo. Nada sobre la atención misma.
-Línea que no se cruza: la IA marca, el médico decide. No prometer que
-la IA diagnostique; la responsabilidad es del profesional.
-Empezar por lo que falta: el Materno Infantil ya se digitalizó y el
-Central no.
-Los egresados desarrollan sobre los sistemas del Municipio y las
+**LO QUE ESTÁ MAL.** El documento afirma que nunca se licitó. Es falso:
+el Decreto 2278 del 26/12/2019 llamó a Licitación Pública 40/2019,
+"Locación del Servicio de Higiene Urbana del Partido de San Isidro",
+expediente 17634/2019, presupuesto oficial 5.100 millones, apertura
+prevista el 2/03/2020. Si publicamos "nunca se licitó", muestran ese
+decreto y se cae el hallazgo entero.
+
+**LO QUE SÍ SE PUEDE AFIRMAR, y es más fuerte:**
+- La LP 17/2008 se declaró DESIERTA por Decreto 513 del 24/02/2009. El
+  servicio se contrató por negociación directa con un oferente de esa
+  misma licitación, por SEIS MESES, en mayo de 2009.
+- La LP 40/2019 se llamó y FRACASÓ: el Decreto 1566 del 13/11/2020
+  desestimó la totalidad de las ofertas y dejó sin efecto el llamado,
+  porque la mejor oferta económica superaba las estimaciones
+  municipales. Firmado por Gustavo Posse.
+- NINGUNA licitación pública resultó en adjudicación del servicio
+  troncal desde 2009.
+- Esos seis meses llevan MÁS DE DIECISIETE AÑOS de prórroga, y el
+  Decreto 2293/2022 la formalizó "hasta que se resuelva una nueva
+  contratación": prórroga sin fecha de vencimiento.
+- La única licitación adjudicada a la UTE en el período es la 17/2014,
+  y es por servicios COMPLEMENTARIOS, no por el troncal.
+- La administración llama "adjudicación" a lo que sus propios papeles
+  describen como contratación directa tras una licitación desierta, y
+  la columna "DTO. ADJ." está EN BLANCO.
+
+**EL TITULAR CORREGIDO:** no es que nunca se intentó. Es que se
+intentó dos veces, las dos fracasaron, y desde hace diecisiete años se
+prorroga un contrato de seis meses sin fecha de cierre.
+
+**OTRA CORRECCIÓN A LA PREMISA:** el Boletín Oficial SÍ cubre
+2024–2026, en otra plataforma. La afirmación de que no cubre ese
+período está mal y hay que revisarla en todo el documento.
+
+**LA PROPUESTA no cambia:** no que las comisiones ejecuten el servicio
+—es diario y no puede fallar—, sino licitarlo con pliego discutido
+antes, indicador de servicio por zona para cada comisión, y penalidades
+con el reclamo vecinal como prueba. El reciclado y los puntos de acopio
+sí pueden ser vecinales desde el día uno.
+Y ahora hay un argumento extra: si dos licitaciones fracasaron porque
+las ofertas superaban la estimación municipal, el problema puede estar
+en cómo se arma el pliego. Eso es exactamente lo que discutir el pliego
+antes vendría a resolver.
+
+FUENTES: BO 1041 y BO 1062 en boletines.sanisidro.gob.ar. Ver
+INFORME_01 para los enlaces completos.
+
+
+## 69 · SALUD · REESCRITA CON EL INFORME 02
+EL ENCUADRE CAMBIA: no proponemos, auditamos.
+
+**SAN ISIDRO YA TIENE IA EN IMÁGENES DESDE ABRIL DE 2023, EN LOS TRES
+HOSPITALES.** Fuente oficial municipal: "El primer municipio en sumar
+inteligencia artificial en salud", 20/04/2023. Hospital Central,
+Materno Infantil y Hospital de Boulogne. El entonces secretario de
+Salud era Juan Viaggio.
+Por lo tanto NO se escribe como propuesta nueva. Se escribe como
+auditoría: qué mide, con qué resultados, y por qué el proveedor no
+aparece nombrado en ninguna fuente pública. Que un municipio contrate
+un sistema de diagnóstico asistido y no diga de quién es, es el
+hallazgo.
+
+**EL CONTRASTE QUE SE ESCRIBE SOLO, y es el dato más fuerte:**
+No existe turno médico en línea en NINGÚN efector de salud humana del
+partido. Ni uno. Son telefónicos o presenciales.
+En cambio, el turno para CASTRAR UNA MASCOTA se saca cien por ciento
+en línea, por la plataforma TESI, con usuario y contraseña.
+El Municipio YA TIENE la infraestructura de turnos digitales montada y
+operativa —la usa para licencias de conducir, obras particulares,
+catastro y zoonosis— y no la aplicó a los hospitales.
+No es un problema de tecnología ni de plata: es de prioridad.
+
+**Detalle verificado el 19/09/2026:** en el Hospital Central,
+Cardiología, Diabetología, Endocrinología y Neurología son SÓLO por
+teléfono. En el Materno Infantil, 18 especialidades por teléfono en
+una ventana de cuatro horas y 20 sólo presenciales, incluidas
+Ecografía, ECG, Laboratorio y Radiología Infantil.
+
+**Mi Salud Digital:** el worker NO ENCONTRÓ que San Isidro haya
+adherido. Revisar si el documento afirma lo contrario en algún lado.
+
+**HALLAZGO ESTRUCTURAL a incorporar:** tomografía y resonancia NO son
+equipamiento propio de los hospitales. Ver el Informe 02, parte C.
+
+**Lo que se mantiene:** la IA marca y el médico decide. Y las
 universidades del partido validan.
-PENDIENTE: informe del worker de Chrome sobre qué se usa en hospitales
-públicos con resultados medidos, qué corre sobre equipamiento
-existente, y qué exige ANMAT.
+**Casos con evidencia para citar:** RETINAR (CONICET/UNCPBA) es el
+mejor caso argentino; la red de teleoftalmología de la Provincia
+existe; el Hospital San Bernardo de Salta fue el primer hospital
+público argentino con IA en radiografías.
+
 
 ## 70 · AUDITORÍA DE COMPRAS EN LA APLICACIÓN
 El caso de los guantes se descubrió comparando un precio contra otro,
@@ -339,7 +406,27 @@ y no expone a nadie.
 NO transmitir el interior de hospitales: hay pacientes e historias
 clínicas a la vista.
 
-## 71 · CÁMARAS Y SEGURIDAD — TRES USOS SEPARADOS
+## 71 · CÁMARAS Y SEGURIDAD · EL ENCUADRE CAMBIA CON EL INFORME 03
+
+**HALLAZGO QUE DA VUELTA LA SECCIÓN: la analítica con IA YA ESTÁ
+OPERANDO.** San Isidro completó el recambio de su sistema: entre 2.600
+y 2.646 cámaras de alta definición CON INTELIGENCIA ARTIFICIAL y
+alertas en tiempo real, sobre fibra óptica propia, gestionadas por el
+Centro de Operaciones Municipal. Inversión anunciada: 15.000 millones.
+
+**Y NO HAY NINGUNA ORDENANZA LOCAL QUE LO REGULE.** El worker buscó y
+no encontró norma municipal que regule el Centro de Operaciones, la
+conservación de imágenes ni la analítica con IA.
+
+Por lo tanto NO se propone instalar analítica: ya está. Lo que se
+propone es LA NORMA QUE HOY NO EXISTE. Un sistema de 2.646 cámaras con
+IA operando sin marco legal local es el hallazgo, y encaja con todo el
+argumento del documento: una facultad sin norma escrita se usa como
+quiera el que gobierne.
+La ordenanza fija los tres usos que siguen, los plazos de
+conservación, quién accede y con qué registro.
+
+TRES USOS SEPARADOS (esto se mantiene):
 DECISIÓN de Cap'n Nick, tras discusión:
 1. Detección en vivo de hechos violentos, con alerta al patrullaje más
    cercano. Es análisis de eventos, no de personas.
@@ -349,8 +436,8 @@ DECISIÓN de Cap'n Nick, tras discusión:
    el sistema lo haga en minutos es eficiencia, no un poder nuevo.
 3. Seguimiento sostenido de una persona en el tiempo: SÓLO con orden
    judicial, con registro público de cuántas órdenes se cumplieron.
-Los tres corren sobre el anillo de cámaras ya comprado: el fierro
-está, falta el software.
+Los tres corren sobre las cámaras que YA operan con IA: el fierro está
+y el software también. Lo que falta es la norma.
 NO se escribe: registro municipal de personas armado por el Municipio
 sin juez, ni reconocimiento facial masivo — el capítulo 5 ya dice
 expresamente que este programa no lo propone.
@@ -461,24 +548,29 @@ prueba, las adjudicaciones están pero sin domicilio, las rendiciones
 están aprobadas por el Tribunal pero sin estados contables. Varias se
 corrigieron en el texto y puede que el cuadro no.
 
-## 79 · COLECTIVOS Y RUIDO
-Dos propuestas, las dos por ordenanza y de bajo costo.
-Recorridos: que las líneas circulen por avenidas y no por calles
-internas. El Municipio autoriza recorridos dentro del partido. Caso
-concreto a verificar: la línea 437 por Elcano, en el Bajo.
-Ruido: dos fuentes distintas, motores viejos de colectivo y escapes
-modificados de motos. Medición automática con sensor y lectura de
-patente: el sistema detecta, la autoridad de tránsito labra, el
-infractor puede descargar. Igual que el radar de velocidad. Si no, la
-primera apelación tumba el sistema.
+## 79 · COLECTIVOS Y RUIDO · CORREGIDA CON EL INFORME 03
+
+**LA MITAD DE ESTA CORRECCIÓN SE CAE: la línea 437 es PROVINCIAL, no
+municipal.** El recorrido no lo decide el Municipio. NO escribir que el
+Municipio puede sacar los colectivos de las calles internas: no puede.
+Lo que sí puede es gestionar ante la Provincia, y eso es mucho más
+débil. Ver el Informe 03 para el detalle de competencias.
+
+**LO QUE SÍ QUEDA EN PIE: el ruido.**
+Dos fuentes, motores viejos de colectivo y escapes modificados de
+motos. Medición automática con sensor y lectura de patente: el sistema
+detecta, la autoridad de tránsito labra, el infractor puede descargar.
+Igual que el radar de velocidad. Si no, la primera apelación tumba el
+sistema.
 Los sensores van donde está el problema, medido primero.
-El ruido es materia ambiental y hoy la partida de ambiente se describe
-sólo como arbolado, residuos y saneamiento. Es la contaminación que
-nadie mide y afecta todos los días.
+El ruido es materia ambiental y hoy la partida se describe sólo como
+arbolado, residuos y saneamiento. Es la contaminación que nadie mide y
+afecta todos los días.
 Efecto esperado: con dos multas, el caño de escape vuelve a tener
 silenciador. No hace falta perseguir a nadie.
-PENDIENTE: informe de Chrome sobre el 437, las normas de ruido, y el
-caso de los radares sonoros de París.
+Ver el Informe 03 para las normas de ruido aplicables y el caso de los
+radares sonoros.
+
 
 ## 80 · PRODUCTIVIDAD DE LA PLANTA
 Hoy el 5.12 dice que no se reduce la planta y ahí se queda: es una
@@ -494,24 +586,42 @@ Políticamente: el sindicato está en conflicto. "Te sacamos lo aburrido
 y no tocamos tu puesto" es más defendible que sólo prometer no
 despedir. El empleado pasa de obstáculo a parte.
 
-## 81 · LAS CUATRO ÁREAS SIN PROPUESTA · PRIORITARIA
-Hoy el documento dice que no tiene propuesta en niñez, adultos
-mayores, género y discapacidad, y lo llama "el hueco más grande de
-este capítulo". Para un programa de gobierno es indefendible.
-DATOS YA EXTRAÍDOS DEL CENSO 2022, por si sirven de base:
+## 81 · LAS CUATRO ÁREAS · REESCRITA CON EL INFORME 04
+Ya no hay que decir "no tenemos propuesta": hay datos y hay hallazgos.
+
+**GÉNERO es el área con menos estructura del Municipio:**
+- Una sola sede.
+- SIN PARTIDA PROPIA: no hay programa presupuestario ni función de
+  género. Queda subsumida en el programa 44, "Asistencia a la Niñez,
+  Juventud, Mujeres y Adulto Mayor", compartido con otros tres
+  colectivos.
+- NO HAY REFUGIO ni casa de abrigo: la búsqueda en el Boletín Oficial
+  desde el 15/03/2024 devuelve cero resultados.
+- No se encontró programa formalizado de patrocinio jurídico gratuito.
+- La página institucional "Mujer y políticas de género" ESTÁ VACÍA,
+  sólo tiene el título, y la línea de atención es un número de
+  WhatsApp de guardia, no una línea institucional.
+
+**DISCAPACIDAD es el área con menos dinero:**
+- El programa propio, "Asistencia a personas con discapacidad y
+  contención familiar", devengó 65.940.164 pesos en todo 2025: el
+  0,020% del gasto municipal.
+- Es MENOS que "Abordaje de las adicciones" en el mismo nivel de
+  apertura, y VEINTE VECES MENOS que Cultura.
+
+**DATOS DEL CENSO ya extraídos, para la desagregación territorial:**
 - Partido: 295.978 habitantes. Hasta 14 años: 51.388 (17,4%). De 65 y
   más: 52.769 (17,8%). Mujeres: 156.763 (53,0%).
-- SAN ISIDRO YA TIENE MÁS VIEJOS QUE CHICOS, y el documento no lo dice
-  en ninguna parte.
+- SAN ISIDRO YA TIENE MÁS VIEJOS QUE CHICOS y el documento no lo dice.
 - Los mapas están invertidos: Béccar 21,0% de menores de 14 y Boulogne
-  18,7%; Martínez 22,4% de mayores de 65 y Acassuso 22,5%. No se puede
-  hacer la misma política en todo el partido: los centros de infancia
-  van donde están los chicos y los de vejez donde están los mayores.
-- Chicos en hogares con NBI: unos 1.810, y el 76% está en Boulogne y
-  Béccar.
-El censo NO tiene datos de discapacidad ni de violencia de género.
-PENDIENTE: informe de Chrome sobre qué programas existen hoy y qué
-datos hay por partido.
+  18,7%; Martínez 22,4% de mayores de 65 y Acassuso 22,5%. Los centros
+  de infancia van donde están los chicos y los de vejez donde están
+  los mayores.
+- Chicos en hogares con NBI: unos 1.810, y el 76% en Boulogne y Béccar.
+
+Ver el Informe 04 para el detalle de las cinco áreas, las fuentes y lo
+que quedó sin encontrar.
+
 
 ## 82 · CULTURA — PROPUESTA PROPIA
 Hoy la cultura está enterrada dentro de "Educación y cultura" sin
@@ -567,7 +677,7 @@ los cambia:
 5. **La 84 al final**, cuando todo lo demás esté cerrado.
 
 ## LO QUE FALTA DECIDIR A CAP'N NICK
-- CONFIRMADO por Cap'n Nick de primera mano: Casares presidió la comisión
-  que creó la UNSO (corrección 60). Ya no depende de Wikipedia.
-  No queda ninguna decisión pendiente: presupuesto de la plataforma
-  (1.273 M), apertura de empleo (60/40 y 3 M por persona) y UNSO.
+- Confirmar si presidió la comisión que creó la UNSO (corrección 60).
+  Es la única pendiente. Las otras dos ya se decidieron: el
+  presupuesto de la plataforma (1.273 M) y la apertura de empleo
+  (60/40 y 3 M por persona).

@@ -104,14 +104,15 @@ _IDX = [
  ("i", "5.5 &nbsp;Ambiente", "cap5b"),
  ("i", "5.6 &nbsp;Salud", "cap5bb"),
  ("i", "5.7 &nbsp;Seguridad", "cap5bc"),
- ("i", "5.8 &nbsp;Educaci&oacute;n", "cap5b2"),
+ ("i", "5.8 &nbsp;Educaci&oacute;n y cultura", "cap5b2"),
  ("i", "5.9 &nbsp;Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos", "cap5b2"),
  ("i", "5.10 &nbsp;Transparencia", "cap5b2b"),
  ("i", "5.11 &nbsp;Transporte y comercio", "cap5b2b"),
  ("i", "5.12 &nbsp;Los que tienen que ejecutar todo esto", "cap5b3"),
- ("i", "5.13 &nbsp;Lo que este cap&iacute;tulo no promete", "cap5b3"),
- ("i", "5.14 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
- ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap5b3"),
+ ("i", "5.13 &nbsp;Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad", "cap5b3"),
+ ("i", "5.14 &nbsp;Lo que este cap&iacute;tulo no promete", "cap5b3"),
+ ("i", "5.15 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
+ ("i", "5.16 &nbsp;Lo que dice este cap&iacute;tulo, en siete l&iacute;neas", "cap5b3"),
  ("g", "6 &middot; Contra qu&eacute; queremos que nos midan", None),
  ("i", "6.1 &nbsp;Los primeros cien d&iacute;as", "cap6"),
  ("i", "6.2 &nbsp;La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o", "cap6"),
@@ -258,7 +259,7 @@ mismo tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 <div class="cols">
 <p>Este documento audita un plan de gobierno contra sus propias metas publicadas. Ese ejercicio
 s&oacute;lo es leg&iacute;timo si quien lo hace acepta que se lo hagan.</p>
-<p>Por eso el cap&iacute;tulo 6 fija catorce metas
+<p>Por eso el cap&iacute;tulo 6 fija diecis&eacute;is metas
 verificables, con su l&iacute;nea de base calculada hoy y
 la fuente p&uacute;blica con la que se comprueba cada una. Est&aacute;n escritas antes de gobernar, y no
 se van a mover despu&eacute;s.</p>
