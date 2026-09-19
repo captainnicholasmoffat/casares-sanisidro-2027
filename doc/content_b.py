@@ -9,28 +9,17 @@ C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
 <div class="stand">Cuatro de las cr&iacute;ticas que cab&iacute;a esperar contra la gesti&oacute;n actual no resisten los datos, y este cap&iacute;tulo las descarta una por una. Lo que s&iacute; se puede probar es que la cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o. No lo criticamos por hacer mal lo que se propuso, sino por lo que no se propuso.</div>
 
-<h2><span class="n">2.1</span>C&oacute;mo se escribi&oacute; este cap&iacute;tulo</h2>
-<div class="cols">
-<p>Este cap&iacute;tulo audita la gesti&oacute;n municipal actual usando exclusivamente documentos que
-public&oacute; la propia Municipalidad de San Isidro. Lo que queda despu&eacute;s de ese filtro es
-m&aacute;s chico, m&aacute;s espec&iacute;fico y mucho m&aacute;s dif&iacute;cil de contestar.</p>
-<p>Empieza por lo que no se sostiene. La mayor&iacute;a de las cr&iacute;ticas que uno esperar&iacute;a
-hacerle a esta gesti&oacute;n no resisten los datos: las contrastamos una por una y se cayeron.</p>
-<p><b>La regla fue una sola:</b> no se usa ninguna fuente que la propia Municipalidad no haya publicado.
-Ni trascendidos, ni versiones, ni notas period&iacute;sticas, ni informes de terceros salvo para la
-comparaci&oacute;n con los otros 105 municipios, cuyo origen y l&iacute;mite se declaran en el
+<div class="note">
+<p><b>La regla de este cap&iacute;tulo.</b> No se usa ninguna fuente que la propia Municipalidad no haya
+publicado. Ni trascendidos, ni versiones, ni notas period&iacute;sticas, ni informes de terceros salvo
+para la comparaci&oacute;n con los otros 105 municipios, cuyo origen y l&iacute;mite se declaran en el
 cap&iacute;tulo 1.</p>
-<p><b>Por qu&eacute; esa regla y no otra.</b> Porque una auditor&iacute;a que usa fuentes que el auditado
-no reconoce se discute por la fuente y nunca por el hallazgo. Us&aacute;ndole sus propios estados de
-ejecuci&oacute;n, su propia situaci&oacute;n econ&oacute;mico-financiera y su propio plan firmado,
-<span class="sg">no queda de d&oacute;nde agarrarse para negar los n&uacute;meros</span>: hay que discutir
-la lectura.</p>
-<p><b>Y tiene un costo que aceptamos.</b> Todo lo que el Municipio no publica queda fuera de este
-cap&iacute;tulo, aunque lo sospechemos. No hay una sola afirmaci&oacute;n ac&aacute; que dependa de
-informaci&oacute;n a la que no pueda acceder cualquier vecino esta misma tarde.</p>
+<p><b>Y su costo, que aceptamos.</b> Todo lo que el Municipio no publica queda fuera, aunque lo
+sospechemos. No hay una sola afirmaci&oacute;n ac&aacute; que dependa de informaci&oacute;n a la que no
+pueda acceder cualquier vecino esta misma tarde.</p>
 </div>
 
-<h2><span class="n">2.2</span>Cuatro acusaciones que no se sostienen</h2>
+<h2><span class="n">2.1</span>Cuatro acusaciones que no se sostienen</h2>
 <div class="cols">
 <h3 style="margin-top:0">&laquo;Lan&uacute;s administra mal las cuentas del municipio&raquo; &mdash; FALSO</h3>
 <p>Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro est&aacute; en el
@@ -62,7 +51,7 @@ gesti&oacute;n actual 2022&rarr;2025, <b>&minus;8,8%</b>.</p>
 <div class="pull q"><p>Lo que el dato sostiene no es que Lan&uacute;s haya destruido nada, sino que en
 quince a&ntilde;os ninguna gesti&oacute;n ampli&oacute; la capacidad de hacer del Municipio.</p></div>
 
-<h2><span class="n">2.3</span>Ejecutar el presupuesto no es prestar el servicio</h2>
+<h2><span class="n">2.2</span>Ejecutar el presupuesto no es prestar el servicio</h2>
 <p class="lead">Que una partida se devengue al 99% prueba que el dinero se gast&oacute;. No prueba que la
 obra se hizo, ni que se hizo a tiempo, ni que lleg&oacute; a todos por igual. Es la misma distinci&oacute;n
 entre devengado y percibido del cap&iacute;tulo 3, aplicada a la gesti&oacute;n.</p>
@@ -111,7 +100,7 @@ Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y 
 programa se compromete a hacer</b>, y es la prueba m&aacute;s simple de si el servicio llega parejo.</p>
 </div>
 
-<h2><span class="n">2.4</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
+<h2><span class="n">2.3</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
 <div class="cols">
 <p>&Eacute;sta es la cr&iacute;tica que sobrevive, y es la m&aacute;s concreta de todas porque no depende
 de ninguna interpretaci&oacute;n.</p>
@@ -153,7 +142,7 @@ preciso: en 2025 la percepci&oacute;n cay&oacute; a 89,3% desde 93,5% el a&ntild
 vuelve a valores de 2024, fue un a&ntilde;o at&iacute;pico. Si no, es un problema de gesti&oacute;n.</p>
 </div>
 
-<h2><span class="n">2.5</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
+<h2><span class="n">2.4</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
 <p>El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente, se
 compromete en su meta III.4.c a publicar un &iacute;ndice de transparencia activa, y en la III.4.b fija un
 objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
@@ -191,7 +180,7 @@ Cuentas los haya aprobado. Se publica lo que se mide en los rankings de transpar
 dem&aacute;s queda donde nadie lo encuentra.</p>
 </div>
 
-<h2><span class="n">2.6</span>El hallazgo central: el plan no menciona a la gente</h2>
+<h2><span class="n">2.5</span>El hallazgo central: el plan no menciona a la gente</h2>
 <div class="cols">
 <p>&Eacute;sta no es una cr&iacute;tica de gesti&oacute;n. Es una cr&iacute;tica de prioridades, y
 est&aacute; sostenida por el propio documento del intendente.</p>
@@ -250,7 +239,7 @@ resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
 
-<h2><span class="n">2.7</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">2.6</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
 <ol class="n">
 <li>Su plan de gobierno no menciona la palabra <b>salud</b> ni una sola vez en 3.137 palabras, y tampoco
 vivienda, empleo, pobreza, cloaca ni agua. Nombra hospitales y escuelas s&oacute;lo para se&ntilde;alizar
@@ -264,8 +253,6 @@ que, dijo el intendente, <b>nunca se hizo</b>.</li>
 <li>Publica lo que se mide en los rankings de transparencia fiscal, y lo dem&aacute;s &mdash;organigrama,
 adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El portal de datos abiertos
 est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra cosa.</li>
-<li>Su plan de gobierno no menciona empleo, vivienda, salud ni educaci&oacute;n, y su presupuesto lo
-refleja con exactitud.</li>
 </ol>
 <div class="pull"><div class="plabel">Qu&eacute; se le critica, exactamente</div><p>La cr&iacute;tica es doble, y las dos mitades est&aacute;n probadas ac&aacute;.
 <b>Lo que se propuso lo cumpli&oacute; a medias</b>: ejecuta el presupuesto casi entero y el servicio no
@@ -296,11 +283,8 @@ C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
 <h1><span class="n">3</span>Los fondos</h1>
 <div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028, y en 2027 si se cobra mejor. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</div>
 
-<h2><span class="n">3.1</span>Por qu&eacute; este cap&iacute;tulo existe</h2>
-<p class="lead">Cualquiera puede prometer. Lo que distingue un programa de gobierno de un folleto de
-campa&ntilde;a es responder tres preguntas con n&uacute;meros: <span class="sg">c&oacute;mo quedan las cuentas dentro de cuatro a&ntilde;os si nadie cambia nada, cu&aacute;nto cuesta lo que proponemos, y de d&oacute;nde salen los fondos.</span></p>
 <div class="cols">
-<p>Este cap&iacute;tulo las contesta con un modelo de flujo de caja municipal a cuatro y a diez
+<p>Las cuentas de este cap&iacute;tulo salen de un modelo de flujo de caja municipal a cuatro y a diez
 a&ntilde;os, construido sobre diecis&eacute;is a&ntilde;os de ejecuci&oacute;n presupuestaria real.</p>
 <p><span class="sg">El modelo se puede auditar.</span> Su a&ntilde;o cero reproduce la ejecuci&oacute;n
 2025 del Municipio de San Isidro exactamente: un resultado financiero de &minus;6.051 millones de pesos.
@@ -310,10 +294,10 @@ No es una aproximaci&oacute;n. Es la cifra que figura en el estado oficial.</p>
 de 2025.</p>
 <p>Todo est&aacute; en pesos constantes de diciembre de 2025. <span class="sg">No hay supuesto de
 inflaci&oacute;n</span>: proyectar precios a diez a&ntilde;os en la Argentina es indefendible, y no hace
-falta para responder ninguna de las tres preguntas.</p>
+falta para responder ninguna de las preguntas que este cap&iacute;tulo contesta.</p>
 </div>
 
-<h2><span class="n">3.2</span>La trampa contable que casi nos hace decir lo contrario</h2>
+<h2><span class="n">3.1</span>La trampa contable que casi nos hace decir lo contrario</h2>
 <p>El Estado de Ahorro-Inversi&oacute;n-Financiamiento &mdash;el formato oficial de la contabilidad
 municipal&mdash; <span class="sg">mide los recursos por lo efectivamente percibido y los gastos por lo
 devengado</span>. Esa asimetr&iacute;a no es un detalle t&eacute;cnico:</p>
@@ -334,7 +318,7 @@ diagn&oacute;sticos opuestos con los mismos datos.</p>
      "Municipio de San Isidro, Estado de Situaci&oacute;n Econ&oacute;mico-Financiera 2025.",
      "los 51.781 millones son el ahorro corriente (301.155 percibidos menos 251.404 de gasto corriente = 49.751) m&aacute;s 2.030 de recursos de capital. Los ingresos van por lo percibido y los gastos por lo devengado: es la convenci&oacute;n de la cuenta Ahorro-Inversi&oacute;n, no una elecci&oacute;n nuestra.") + """
 
-<h2><span class="n">3.3</span>Los cuatro n&uacute;meros que gobiernan el futuro fiscal de San Isidro</h2>
+<h2><span class="n">3.2</span>Los cuatro n&uacute;meros que gobiernan el futuro fiscal de San Isidro</h2>
 <p class="tight">Ninguno es un supuesto. Los cuatro salen de la serie hist&oacute;rica.</p>
 """ + exhead("c", "Los cuatro par&aacute;metros, y de d&oacute;nde sale cada uno") + """
 <table>
@@ -368,7 +352,7 @@ Eso define d&oacute;nde tiene que poner la energ&iacute;a un intendente: en admi
 en reclamar en La Plata.</p>
 </div>
 
-<h2><span class="n">3.4</span>C&oacute;mo quedan las cuentas si nadie cambia nada</h2>
+<h2><span class="n">3.3</span>C&oacute;mo quedan las cuentas si nadie cambia nada</h2>
 <p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado. Es
 deliberadamente conservadora: congela el gasto real en el nivel de 2025 durante doce a&ntilde;os. El
 modelo detallado que acompa&ntilde;a a este programa, con el gasto reconstruido por objeto, arroja cifras
@@ -396,7 +380,7 @@ recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce
 # CAPITULO 3 — parte B
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
-<h2><span class="n">3.5</span>Cu&aacute;nto cuesta este programa</h2>
+<h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
 <p class="lead">Son dos propuestas grandes y cuestan de manera distinta. Conviene separarlas antes de
 sumarlas, porque sumarlas da una cifra falsa.</p>
 <div class="cols">
@@ -481,17 +465,13 @@ sistem&aacute;ticamente lo que se ve, y ah&iacute; es donde hay margen.</p>
 <p><b>Y esto tiene un costo pol&iacute;tico que no escondemos.</b> Hay personas trabajando en esos
 programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
-secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
+secci&oacute;n 4.13 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
 </div>
 <div class="cols">
 <p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.906 de
 reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,
 decidir distinto con el dinero que ya existe. <span class="sg">Juntos ocupan el 9,1% del gasto flexible, y queda el 90,9%
 libre.</span></p>
-<p><b>Por qu&eacute; se declaran por separado y no se suman en un titular.</b> Porque son cosas
-distintas: los fondos nuevos dependen de actualizar la base de valuaci&oacute;n y los reasignados
-dependen s&oacute;lo de una decisi&oacute;n presupuestaria. Presentarlos juntos ocultar&iacute;a que el
-riesgo de cada uno es diferente.</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -529,7 +509,7 @@ del presupuesto flexible quedan ocupando. Sobre un gasto flexible de 87.326 mill
 <p>&Eacute;se es el techo, y lo declaramos: no queda lugar para una tercera propuesta de este
 tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 
-<h2><span class="n">3.6</span>De d&oacute;nde salen los fondos</h2>
+<h2><span class="n">3.5</span>De d&oacute;nde salen los fondos</h2>
 <div class="cols">
 <h3 style="margin-top:0">Opci&oacute;n 1 &mdash; Reasignar partidas</h3>
 <p>Sacar 7.225,2 millones de otras partidas del gasto flexible. Fiscalmente neutro. Cuesta
@@ -735,34 +715,45 @@ programa. No se le saca la partida a nadie. No se sube ninguna tasa.</p></div>
      "ex11.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.") + """
 
-<h2><span class="n">3.7</span>Qu&eacute; habr&iacute;a que vigilar</h2>
+<h2><span class="n">3.6</span>Qu&eacute; habr&iacute;a que vigilar</h2>
 <ol class="n">
 <li><b>Que la recaudaci&oacute;n propia crezca menos de 1% real anual.</b> Es el punto de quiebre: por
 debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
 <li><b>Que la percepci&oacute;n siga cayendo.</b> Ya cay&oacute; 4,19 puntos entre 2024 y 2025. Otros
 tres puntos &mdash;bajar del 89,32% al 86,32%&mdash; dejan el resultado de 2031 pr&aacute;cticamente en
 cero: &minus;305 millones. Es el riesgo m&aacute;s concreto, porque ya se est&aacute; materializando.</li>
-<li><b>Que la coparticipaci&oacute;n se acelere.</b> El menos grave, y el &uacute;nico que no depende del
-Municipio.</li>
+<li><b>Que la coparticipaci&oacute;n se acelere.</b> El menos grave de los tres primeros, y el
+&uacute;nico de ellos que no depende del Municipio.</li>
+<li><b>Y la tasa del bono, que es la m&aacute;s concreta de las cuatro.</b> El capital de los 30.000
+millones se devuelve en <b>ocho cuotas trimestrales de 3.750 millones, de noviembre de 2027 a agosto de
+2029</b>: entero dentro del mandato, y con el grueso en los dos primeros a&ntilde;os. La tasa es
+<b>variable, TAMAR m&aacute;s 7%</b>, de modo que el servicio lo fija el mercado mayorista y no una
+decisi&oacute;n municipal.</li>
 </ol>
 """ + ex("g", "Lo que manda es cu&aacute;nto crecen los recursos propios",
      "Efecto sobre el resultado financiero de 2031 de mover cada variable, con las otras dos en su valor del escenario base. Base: 12.664 millones.",
      "ex12.png",
-     "an&aacute;lisis de sensibilidad del modelo de flujo de caja.") + """
-<div class="pull"><div class="plabel">D&oacute;nde se decide el futuro fiscal</div><p>Los dos primeros dependen enteramente de la administraci&oacute;n municipal. El
-futuro fiscal de San Isidro se decide en San Isidro.</p></div>
+     "an&aacute;lisis de sensibilidad del modelo de flujo de caja.",
+     "el bono no aparece en las barras porque para 2031 ya est&aacute; amortizado. Pesa en 2028 y 2029, los dos primeros a&ntilde;os del mandato, y no se proyecta ac&aacute;: el modelo est&aacute; en pesos constantes y TAMAR es una tasa nominal, as&iacute; que su costo real depende de la inflaci&oacute;n y ese dato no existe.") + """
+<div class="pull"><div class="plabel">D&oacute;nde se decide el futuro fiscal</div><p>Los dos primeros dependen enteramente de la administraci&oacute;n municipal, y son los que
+m&aacute;s mueven el resultado: en eso el futuro fiscal de San Isidro se decide en San Isidro.
+<b>El servicio del bono no</b>: lo fija la tasa mayorista, y es la primera variable fiscal relevante que
+queda fuera del control del Municipio.</p></div>
 
-<h2><span class="n">3.8</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">3.7</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
 <ol class="n">
-<li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028, y en 2027 si se cobra mejor
-si nada empeora.</li>
+<li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que el modelo corrige solo hacia
+2028 si nada empeora, y un a&ntilde;o antes si se cobra mejor.</li>
 <li>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o: el 8,3% del gasto que el
 Municipio puede reasignar libremente. La obra vecinal del cap&iacute;tulo 4 no suma a esa cifra, porque es
 reasignaci&oacute;n.</li>
 <li>Se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota, y el
 resultado fiscal mejora.</li>
-<li>La variable que decide el futuro fiscal del Municipio no es la Provincia: es cu&aacute;nto recauda y
-cu&aacute;nto cobra San Isidro.</li>
+<li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a TAMAR m&aacute;s 7%.
+De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
+de 2027.</li>
+<li>Lo que m&aacute;s mueve el resultado no es la Provincia: es cu&aacute;nto recauda y cu&aacute;nto
+cobra San Isidro. Lo &uacute;nico relevante que queda fuera de su alcance es la tasa de ese bono.</li>
 </ol>
 """ + fig("f_plaza", "Plaza de barrio, un s&aacute;bado. Ilustraci&oacute;n.") + """
 <div class="hairline"></div>

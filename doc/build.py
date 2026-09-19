@@ -18,9 +18,18 @@ PAGE_W_PT = 660.0
 PAGE_W_PX = PAGE_W_PT * PT     # 880
 
 _cache = {}
+_missing = set()
+# 1x1 transparente: si la ilustracion no esta en el paquete el <img> igual
+# ocupa el alto que le fija design.css, asi que la pagina mide lo mismo.
+BLANK = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAA"
+         "AC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=")
 def data_uri(name):
     if name in _cache: return _cache[name]
     p = ASSETS / name
+    if not p.exists():
+        _missing.add(name)
+        _cache[name] = BLANK
+        return BLANK
     mime = "image/png" if p.suffix == ".png" else "image/jpeg"
     u = f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
     _cache[name] = u
@@ -62,13 +71,18 @@ SHELL = """<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
 
 
 def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
-    total = len(sections) + (1 if cover_pdf else 0)
+    # la tapa cuenta como pagina 1 aunque el PDF vectorial no este en el
+    # paquete: si no, la numeracion del pie y la del indice se corren una.
+    total = len(sections) + 1
+    if cover_pdf and not pathlib.Path(cover_pdf).exists():
+        print(f"  !! falta la tapa {cover_pdf}: se arma sin ella")
+        cover_pdf = None
     pages = []
     with sync_playwright() as pw:
         br = pw.chromium.launch()
         pg = br.new_page(viewport={"width": int(PAGE_W_PX), "height": 1200})
         for i, s in enumerate(sections):
-            n = i + 2 if cover_pdf else i + 1
+            n = i + 2
             foot = (f'<div class="runfoot"><span>{doc_title}</span>'
                     f'<span>P&aacute;gina {n} de {total}</span></div>')
             head = (f'<div class="runhead">{s["runhead"]}</div>'
@@ -112,6 +126,10 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
     dest.parent.mkdir(parents=True, exist_ok=True)
     with open(dest, "wb") as fh:
         wr.write(fh)
+    if _missing:
+        print(f"\n  !! {len(_missing)} ilustraciones ausentes, reemplazadas por un"
+              f" pixel transparente (el alto de pagina no cambia):")
+        for m in sorted(_missing): print("     -", m)
     print("\n->", dest, f"{dest.stat().st_size/1e6:.1f} MB", f"| {total} paginas")
     return dest
 

@@ -266,6 +266,7 @@ expresamente la acreditaci&oacute;n de la adhesi&oacute;n de los vecinos benefic
 </div>
 
 
+
 <h2><span class="n">4.6</span>C&oacute;mo se constituye una comisi&oacute;n, y c&oacute;mo rinde</h2>
 <p class="lead">Un mecanismo que administra 28.908 millones de pesos al a&ntilde;o tiene que decir
 qui&eacute;n lo integra, c&oacute;mo se vota, cu&aacute;nto dura y qu&eacute; pasa cuando falla. Esta
@@ -282,14 +283,52 @@ sola obra.</p>
 es una sola. Donde no haya ninguna en condiciones, el Municipio convoca a asamblea abierta y
 acompa&ntilde;a la constituci&oacute;n. <b>Ese caso no es hipot&eacute;tico y el cap&iacute;tulo 6 lo
 carga como riesgo.</b></p>
-<h3 style="margin-top:0">Vota quien vive o trabaja en la zona, desde los 16, uno por persona</h3>
-<p>No vota el hogar y no votan s&oacute;lo los socios. <span class="sg">Un voto por hogar le da el doble
-de peso al que tiene casa propia</span>, justo en las zonas donde el problema es la vivienda. Y limitarlo
-al padr&oacute;n de socios deja la partida en manos de quien controla ese padr&oacute;n.</p>
+<h3 style="margin-top:0">Un voto por persona, desde los 16, para quien vive o trabaja en la zona</h3>
+<p>&Eacute;sa es la regla entera, y el motivo entra en una l&iacute;nea:
+<span class="sg">la obra la usan las personas, no las casas</span>. La cloaca de una cuadra sirve igual
+a los nueve que viven en una casa que al que vive solo, y el inquilino la usa tanto como el
+propietario.</p>
 <p>Se vota en asamblea abierta, con la lista de asistentes publicada. La edad de 16 es la misma con la
 que se vota en la Provincia. <span class="sg">Y vota tambi&eacute;n quien desarrolla en la zona su
 actividad principal</span>, comercial o comunitaria, acredit&aacute;ndolo: el detalle est&aacute; en la
 regla de alcance, m&aacute;s abajo.</p>
+</div>
+
+<h3>C&oacute;mo se logra que la gente venga</h3>
+<div class="cols">
+<p><b>Las barreras est&aacute;n identificadas y son las mismas en todos lados:</b> falta de tiempo, falta
+de movilidad y <b>falta de con qui&eacute;n dejar a los chicos</b>. La &uacute;ltima casi nunca se
+nombra y es la m&aacute;s barata de resolver: una asamblea con espacio de cuidado para ni&ntilde;os
+cuesta poco y cambia qui&eacute;n puede ir.</p>
+<p><b>Horario y lugar tambi&eacute;n deciden qui&eacute;n participa.</b> Las asambleas se convocan fuera
+del horario laboral, en el propio barrio y no en el centro administrativo, y se complementan con votaci&oacute;n
+digital para quien no puede asistir. Ninguna de las tres cosas cuesta dinero.</p>
+<p><b>Comunicar el resultado es parte del mecanismo, no cortes&iacute;a.</b> Publicar qu&eacute; se
+decidi&oacute;, qu&eacute; se ejecut&oacute; y qu&eacute; falta no cambia la participaci&oacute;n de este
+a&ntilde;o: <span class="sg">cambia la del a&ntilde;o siguiente</span>. Donde no se comunic&oacute;, la
+convocatoria cay&oacute; edici&oacute;n tras edici&oacute;n.</p>
+<p><b>Y una regla que este programa adopta de una experiencia espa&ntilde;ola:</b> en las asambleas no
+participa ning&uacute;n dirigente pol&iacute;tico en ejercicio. Ni del oficialismo ni de la
+oposici&oacute;n. La comisi&oacute;n es de vecinos.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que esto tiene que ver con la cobranza del cap&iacute;tulo 3</div>
+<p>Hay un efecto documentado que este programa no invent&oacute;: <b>participar en la decisi&oacute;n
+presupuestaria mejora el cumplimiento tributario m&aacute;s que las sanciones</b>. En Ibanda, Uganda, el
+cumplimiento de las obligaciones tributarias <b>se multiplic&oacute; por diecis&eacute;is</b> despu&eacute;s
+del programa piloto de presupuesto participativo, al punto de que el gobierno provincial lo exigi&oacute;
+como requisito para girar fondos a las &aacute;reas locales.</p>
+<p>El cap&iacute;tulo 3 muestra que San Isidro factur&oacute; 9,1% m&aacute;s en t&eacute;rminos reales y
+cobr&oacute; 2,3% m&aacute;s. <span class="sg">La distancia entre lo que se factura y lo que se paga no
+se cierra s&oacute;lo con intimaciones</span>: se cierra cuando el vecino sabe en qu&eacute; se gasta su
+tasa porque lo decidi&oacute; &eacute;l.</p>
+<p><b>No lo ponemos como meta ni lo metemos en el modelo</b>, porque la magnitud de un caso ugand&eacute;s
+no es transferible a San Isidro y no vamos a proyectar sobre eso. Lo decimos porque es la raz&oacute;n
+m&aacute;s honesta por la que este mecanismo puede mejorar la recaudaci&oacute;n sin subir una sola tasa.</p>
+</div>
+
+
+<div class="cols">
 <h3 style="margin-top:0">El mandato dura cuatro a&ntilde;os</h3>
 <p>Coincide con el mandato del intendente, de modo que la comisi&oacute;n que se constituye al inicio
 acompa&ntilde;a la rampa completa del a&ntilde;o 1 al a&ntilde;o 4 y responde por ella entera.</p>
@@ -314,6 +353,7 @@ recurso. Lo que esta secci&oacute;n habilita es otra cosa: <b>intervenir una com
 causa escrita, con plazo para volver a constituirse y con la partida retenida en su propia zona. Se
 interviene la administraci&oacute;n de una partida, no se disuelve una organizaci&oacute;n de vecinos.</p>
 </div>
+
 <h3>Qui&eacute;n controla: nadie nuevo</h3>
 <div class="cols">
 <p>Este programa <span class="sg">no crea una oficina de control</span>. No hace falta y la
@@ -327,6 +367,30 @@ cu&aacute;nto y en qu&eacute; estado est&aacute;. Publicada, no archivada.</p>
 <p>Es la misma l&oacute;gica de las siete medidas del cap&iacute;tulo 5: costo cero, y lo que cambia no es
 qui&eacute;n controla sino qui&eacute;n puede ver.</p>
 </div>
+
+
+<h3>Qui&eacute;n decide y qui&eacute;n cobra no pueden ser la misma persona</h3>
+<p class="tight">La capa 2 permite que la asociaci&oacute;n vecinal ejecute la obra que la comisi&oacute;n
+prioriz&oacute;. Eso abre un problema que hay que cerrar en la ordenanza, no despu&eacute;s.</p>
+<div class="cols">
+<p><b>La literatura sobre conflictos de inter&eacute;s lo dice sin vueltas:</b> cuanto mayor es la
+participaci&oacute;n de alguien en la ejecuci&oacute;n del presupuesto, mayor es la probabilidad de que
+se perciba un conflicto de inter&eacute;s. <span class="sg">Y basta con que se perciba para que el
+mecanismo pierda legitimidad</span>, aunque no haya delito.</p>
+<p><b>La regla, entonces, es de incompatibilidad.</b> Quien integra la comisi&oacute;n que prioriza
+<b>no puede formar parte de la asociaci&oacute;n que ejecuta esa obra</b>, ni tener inter&eacute;s
+econ&oacute;mico en ella, ni ser proveedor. Si lo tiene, se excusa y queda asentado en el acta.</p>
+<p><b>Y dos cuerpos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de
+Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con funciones definidas por ley. El
+que hace la obra no es el que la controla. Ac&aacute; vale lo mismo: la asamblea que prioriza elige
+adem&aacute;s <b>tres vecinos que no ejecutan y que firman la recepci&oacute;n de la obra</b>.</p>
+<p><b>Un candado m&aacute;s, contra la falla m&aacute;s com&uacute;n.</b> En Bariloche las juntas
+vecinales denunciaron que el gobierno destin&oacute; el dinero del presupuesto participativo a obras
+viales por decisi&oacute;n propia, sin acuerdo de los vecinos. <span class="sg">La partida afectada del
+art&iacute;culo 119 protege el dinero; lo que hay que proteger tambi&eacute;n es el destino</span>:
+priorizada una obra, el Ejecutivo no puede sustituirla por otra sin volver a la asamblea.</p>
+</div>
+
 
 <h3>Lo que una comisi&oacute;n zonal no decide</h3>
 <p class="lead">Una partida por zona sirve para la obra de esa zona. No sirve, y no debe servir, para
@@ -351,6 +415,7 @@ Chengdu usan variantes del mismo esquema.</p>
 es la excepci&oacute;n cercana: reparte con un &iacute;ndice de prioridad social y destina por ordenanza
 el 10% o m&aacute;s de su obra p&uacute;blica desde 2020.</p>
 </div>
+
 
 <h3>Para lo que excede al barrio: un panel sorteado</h3>
 <p class="tight">Una asamblea abierta no sirve para decidir sobre un bien de todo el partido, porque a una
@@ -377,6 +442,7 @@ clim&aacute;tica incluyendo expresamente a estudiantes que viven lejos de su cas
 dise&ntilde;o del sorteo</span>: el que la usa entra en la bolsa aunque duerma en otro lado.</p>
 </div>
 
+
 <h3>Por qu&eacute; se le paga al que participa</h3>
 <div class="cols">
 <p><b>No es un incentivo: es sacar el filtro econ&oacute;mico de la puerta.</b> Si participar es gratis y
@@ -401,6 +467,7 @@ trabajo perdido. <b>Por eso la barrera se ataca primero con lo que no cuesta</b>
 el barrio, cuidado de ni&ntilde;os, votaci&oacute;n digital&mdash; y el honorario es un complemento, no
 la soluci&oacute;n. El monto se presupuesta antes de crear el panel, y no se estima ac&aacute;.</p>
 </div>
+
 
 <h3>C&oacute;mo se protege de que lo capturen</h3>
 <p class="tight">Cualquier mecanismo participativo puede corromperse, y varios se corrompieron. Estas son
@@ -466,6 +533,7 @@ contrate ni se demuela antes de que exista un procedimiento de consulta que alca
 partido</b>.</p>
 </div>
 
+
 <h2><span class="n">4.7</span>El Concejo Deliberante: diez bloques y ninguna mayor&iacute;a</h2>
 <p class="lead">Todo lo que propone este cap&iacute;tulo se aprueba por ordenanza. Conviene entonces decir
 qui&eacute;n las vota, y no dar por supuesto que alguien va a poder gobernar solo.</p>
@@ -520,6 +588,45 @@ otra raz&oacute;n para que la f&oacute;rmula y la rampa est&eacute;n escritas y 
 a&ntilde;o.</p>
 </div>
 
+
+<h3>Lo que el propio Ejecutivo dice sobre el l&iacute;mite del Concejo</h3>
+<p class="tight">Este cap&iacute;tulo propone atar la partida vecinal a una ordenanza. Conviene mostrar,
+con actos publicados, por qu&eacute; hace falta que sea una ordenanza y no una decisi&oacute;n
+administrativa.</p>
+<div class="cols">
+<p><b>Entre junio y agosto de 2025 el Departamento Ejecutivo vet&oacute; cuatro ordenanzas</b>
+&mdash;la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405&mdash; y observ&oacute; parcialmente
+otras dos. Todas en un lapso de once semanas. <span class="sg">Vetar es una facultad legal y este
+programa no la discute.</span></p>
+<p><b>Lo que interesa es el fundamento, porque est&aacute; escrito.</b> Al vetar la Ordenanza 9399, el
+Ejecutivo sostuvo que las decisiones t&eacute;cnicas y discrecionales son exclusivas suyas y que el
+Departamento Deliberativo no puede invadir esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>.
+Y calific&oacute; un plazo de cuarenta y ocho horas fijado por el Concejo como
+<b>&laquo;arbitrario, desproporcionado&raquo;</b>.</p>
+<p><b>Ese es exactamente el problema que este cap&iacute;tulo resuelve.</b> Si la prioridad vecinal fuera
+una instrucci&oacute;n administrativa, caer&iacute;a bajo esa misma doctrina: decisi&oacute;n
+discrecional del Ejecutivo, revocable cuando incomode.
+<span class="sg">Por eso el mecanismo va por ordenanza y con partida afectada</span>, que es lo que el
+art&iacute;culo 119 permite y lo que un veto no alcanza a desarmar solo.</p>
+<p><b>Y por eso la obligaci&oacute;n de respuesta lleva plazo escrito.</b> Si el plazo no est&aacute; en
+la norma, el propio Ejecutivo ya dijo qu&eacute; piensa de los plazos que le fija el Concejo.</p>
+</div>
+<div class="callout a">
+<div class="clabel">Un dato que no existe, y por qu&eacute; eso importa</div>
+<p>Quisimos contar cu&aacute;ntos pedidos de informes present&oacute; el Concejo y cu&aacute;ntos
+respondi&oacute; el Ejecutivo. <b>No se puede: el Bolet&iacute;n Oficial publica lo que el Ejecutivo
+promulga, no la actividad del cuerpo deliberativo.</b></p>
+<p>Y la explicaci&oacute;n la da el propio Ejecutivo en uno de esos vetos: un pedido de informes debe
+hacerse por <b>Comunicaci&oacute;n</b>, seg&uacute;n el reglamento interno del Concejo y el
+art&iacute;culo 77 de la Ley Org&aacute;nica. <span class="sg">Las comunicaciones no se promulgan, y por
+lo tanto no se publican en ning&uacute;n lado.</span></p>
+<p><b>De modo que el control del Concejo sobre el Ejecutivo transcurre entero fuera de toda fuente
+p&uacute;blica.</b> No es que no encontramos el n&uacute;mero: es que el n&uacute;mero no existe para
+ning&uacute;n vecino que quiera buscarlo. Publicar las comunicaciones y sus respuestas no cuesta un peso
+y no requiere autorizaci&oacute;n de nadie.</p>
+</div>
+
+
 <h2><span class="n">4.8</span>Por qu&eacute; las dos capas juntas cambian todo</h2>
 <div class="cols">
 <p>Un presupuesto participativo cl&aacute;sico deja al vecino como peticionante: prioriza una lista y el
@@ -549,54 +656,7 @@ eso hay que decirlo antes y no despu&eacute;s.</p>
 repartir culpas despu&eacute;s.</p>
 </div>
 
-<h2><span class="n">4.9</span>Las otras dos facultades</h2>
-<div class="cols">
-<p><b>Acceso a la informaci&oacute;n.</b> Cada comisi&oacute;n recibe trimestralmente la ejecuci&oacute;n
-presupuestaria de su zona: qu&eacute; se gast&oacute;, en qu&eacute; y d&oacute;nde.</p>
-<p>Conviene ser exacto sobre qu&eacute; implica esto: <span class="sg">hay que construirlo</span>. Esa
-informaci&oacute;n no existe desagregada territorialmente en ning&uacute;n municipio del conurbano norte,
-porque requiere imputar el gasto con referencia territorial y hoy el Municipio no lo hace. No es publicar
-un archivo que ya existe: es un cambio en c&oacute;mo se registra el gasto. Por eso el cap&iacute;tulo 6 lo
-compromete como meta del mandato y no de los primeros cien d&iacute;as.</p>
-<p><b>Protecci&oacute;n de la partida.</b> El <b>art&iacute;culo 119 de la LOM</b> permite al Departamento
-Ejecutivo crear y ampliar partidas financiadas con recursos afectados sin volver al Concejo. Afectando el
-recurso, los fondos de las comisiones deja de depender de la negociaci&oacute;n presupuestaria de cada
-a&ntilde;o.</p>
-</div>
 
-<h2><span class="n">4.10</span>El primer acto de gobierno: derogar tres art&iacute;culos</h2>
-<div class="cols">
-<p>San Isidro tiene vigente la <b>Ordenanza 6045/1984</b> de sociedades de fomento, cuya oficina de
-aplicaci&oacute;n fue disuelta. Sus <b>art&iacute;culos 8, 9 y 10</b> facultan al Departamento Ejecutivo a
-investigar, intervenir, hacer caducar la autorizaci&oacute;n y <span class="sg">disolver</span> una
-asociaci&oacute;n vecinal. Sin plazo de defensa. Sin recurso ante el Concejo Deliberante.</p>
-<p>Un programa construido sobre autonom&iacute;a vecinal no puede convivir con un art&iacute;culo que le
-permite al intendente disolver asociaciones de vecinos. <b>No se acotan: se derogan.</b> Es el primer
-proyecto de ordenanza que este gobierno env&iacute;a al Concejo.</p>
-<p><b>Qu&eacute; pasa con las sociedades de fomento que hoy existen.</b> Siguen existiendo y no se tocan.
-La 6045 las autoriza y las registra; lo que se deroga es la facultad del Ejecutivo de disolverlas.
-<span class="sg">Son exactamente las organizaciones que la secci&oacute;n 4.6 reconoce como comisi&oacute;n
-de su zona</span>: este programa no las reemplaza, las convierte en la contraparte de una partida. La
-oficina de aplicaci&oacute;n de la 6045 fue disuelta y el registro qued&oacute; sin actualizar, as&iacute;
-que la ordenanza de la partida vecinal lo repone, con el padr&oacute;n publicado.</p>
-</div>
-
-<h2><span class="n">4.11</span>Qu&eacute; prometemos y qu&eacute; no</h2>
-""" + exhead("c", "La lista completa, de los dos lados") + """
-<table>
-<colgroup><col><col></colgroup>
-<tr class="hd"><th>Prometemos</th><th class="r">No prometemos</th></tr>
-<tr><td class="l">La mitad de la obra p&uacute;blica municipal decidida por los vecinos, en cuatro a&ntilde;os</td><td class="n">Que los vecinos voten el presupuesto municipal completo</td></tr>
-<tr><td class="l">Partida por zona fijada por ordenanza, con f&oacute;rmula de necesidad escrita</td><td class="n">Que las comisiones reemplacen al Concejo Deliberante</td></tr>
-<tr><td class="l">Ejecuci&oacute;n directa de obras por asociaciones vecinales, con el 60% de adhesi&oacute;n</td><td class="n">Que toda propuesta vecinal se ejecute autom&aacute;ticamente</td></tr>
-<tr><td class="l">Respuesta escrita y fundada, en plazo, a cada priorizaci&oacute;n</td><td class="n">Consulta popular vinculante: la ley provincial no la habilita</td></tr>
-<tr><td class="l">Informaci&oacute;n presupuestaria trimestral por zona</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
-<tr><td class="l">Incompatibilidad entre priorizar y ejecutar, con acta de excusaci&oacute;n</td><td class="m">Que una comisi&oacute;n contrate a sus propios integrantes</td></tr>
-<tr><td class="l">Asamblea con espacio de cuidado de ni&ntilde;os y horario fuera del laboral</td><td class="m">Pagar por participar en la comisi&oacute;n vecinal</td></tr>
-<tr><td class="l">Derogar los arts. 8 a 10 de la Ordenanza 6045</td><td class="n">Autonom&iacute;a municipal plena: la Constituci&oacute;n provincial no la reconoce</td></tr>
-</table>
-<div class="pull"><div class="plabel">Lo que se promete y lo que se reclama</div><p>Lo que un intendente puede hacer solo, lo hacemos. Lo que requiere a la Legislatura,
-lo reclamamos, y decimos que es un reclamo.</p></div>
 
 """ + exhead("g", "El mismo dinero, dos circuitos",
              "A la izquierda, c&oacute;mo funciona hoy. A la derecha, qu&eacute; cambia. El presupuesto es el mismo en los dos.") + """
@@ -608,14 +668,14 @@ lo reclamamos, y decimos que es un reclamo.</p></div>
 <circle cx="200" cy="82" r="38" fill="#6E625A"/>
 <text x="200" y="78" text-anchor="middle" fill="#FCFAF6">El Ejecutivo</text><text x="200" y="91" text-anchor="middle" fill="#FCFAF6">decide solo</text>
 <circle cx="312" cy="164" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
-<text x="312" y="160" text-anchor="middle" fill="#6E625A">Contrata</text><text x="312" y="173" text-anchor="middle" fill="#6E625A">afuera</text>
+<text x="312" y="153" text-anchor="middle" fill="#6E625A" font-size="9.4">Contrata</text><text x="312" y="166" text-anchor="middle" fill="#6E625A" font-size="9.4">afuera del</text><text x="312" y="179" text-anchor="middle" fill="#6E625A" font-size="9.4">municipio</text>
 <circle cx="269" cy="296" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
-<text x="269" y="292" text-anchor="middle" fill="#6E625A">El sueldo</text><text x="269" y="305" text-anchor="middle" fill="#6E625A">se va</text>
+<text x="269" y="285" text-anchor="middle" fill="#6E625A" font-size="9.4">El sueldo</text><text x="269" y="298" text-anchor="middle" fill="#6E625A" font-size="9.4">se va del</text><text x="269" y="311" text-anchor="middle" fill="#6E625A" font-size="9.4">municipio</text>
 <circle cx="131" cy="296" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
-<text x="131" y="289" text-anchor="middle" fill="#6E625A">Se demuele</text><text x="131" y="302" text-anchor="middle" fill="#6E625A">lo que daba</text>
-<text x="131" y="315" text-anchor="middle" fill="#6E625A">trabajo</text>
+<text x="131" y="283" text-anchor="middle" fill="#6E625A" font-size="8.6">Se demuelen</text><text x="131" y="294" text-anchor="middle" fill="#6E625A" font-size="8.6">locales</text>
+<text x="131" y="305" text-anchor="middle" fill="#6E625A" font-size="8.6">que daban</text><text x="131" y="316" text-anchor="middle" fill="#6E625A" font-size="8.6">trabajo</text>
 <circle cx="88" cy="164" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
-<text x="88" y="160" text-anchor="middle" fill="#6E625A">Obra donde</text><text x="88" y="173" text-anchor="middle" fill="#6E625A">se ve</text>
+<text x="88" y="151" text-anchor="middle" fill="#6E625A" font-size="8.6">Obra donde</text><text x="88" y="162" text-anchor="middle" fill="#6E625A" font-size="8.6">se luce,</text><text x="88" y="173" text-anchor="middle" fill="#6E625A" font-size="8.6">no donde</text><text x="88" y="184" text-anchor="middle" fill="#6E625A" font-size="8.6">hace falta</text>
 </g>
 <path d="M330 120 L390 78" stroke="#7C2E23" stroke-width="1.4" stroke-dasharray="5 3"/>
 <path d="M396 74 L382 74 L387 84 Z" fill="#7C2E23"/>
@@ -631,15 +691,15 @@ lo reclamamos, y decimos que es un reclamo.</p></div>
 <circle cx="630" cy="82" r="38" fill="#DB6B4B"/>
 <text x="630" y="78" text-anchor="middle" fill="#FCFAF6">Decide el</text><text x="630" y="91" text-anchor="middle" fill="#FCFAF6">barrio</text>
 <circle cx="742" cy="164" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
-<text x="742" y="160" text-anchor="middle" fill="#7C2E23">Contrata</text><text x="742" y="173" text-anchor="middle" fill="#7C2E23">ac&aacute;</text>
+<text x="742" y="160" text-anchor="middle" fill="#7C2E23" font-size="9.4">Contrata en</text><text x="742" y="173" text-anchor="middle" fill="#7C2E23" font-size="9.4">el municipio</text>
 <circle cx="699" cy="296" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
 <text x="699" y="289" text-anchor="middle" fill="#7C2E23" font-size="9.6">Trabaja un</text><text x="699" y="301" text-anchor="middle" fill="#7C2E23" font-size="9.6">vecino formado</text>
 <text x="699" y="313" text-anchor="middle" fill="#7C2E23" font-size="9.6">ac&aacute;</text>
 <circle cx="561" cy="296" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
 <text x="561" y="292" text-anchor="middle" fill="#7C2E23">El sueldo</text><text x="561" y="305" text-anchor="middle" fill="#7C2E23">se gasta ac&aacute;</text>
 <circle cx="518" cy="164" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
-<text x="518" y="156" text-anchor="middle" fill="#7C2E23">Obra donde</text><text x="518" y="169" text-anchor="middle" fill="#7C2E23">cambia el</text>
-<text x="518" y="182" text-anchor="middle" fill="#7C2E23">d&iacute;a a d&iacute;a</text>
+<text x="518" y="151" text-anchor="middle" fill="#7C2E23" font-size="8.6">Obra donde</text><text x="518" y="162" text-anchor="middle" fill="#7C2E23" font-size="8.6">hace falta,</text>
+<text x="518" y="173" text-anchor="middle" fill="#7C2E23" font-size="8.6">aunque no</text><text x="518" y="184" text-anchor="middle" fill="#7C2E23" font-size="8.6">se vea</text>
 </g>
 <text x="630" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">cada vuelta deja</text>
 <text x="630" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">m&aacute;s capacidad</text>
@@ -685,10 +745,46 @@ contratan afuera. <span class="sg">Las dos piezas juntas son una pol&iacute;tica
 programa m&aacute;s.</span></p>
 </div>
 
-<h3>El cuello de botella no es la voluntad: es el tiempo de leer</h3>
+
+<h2><span class="n">4.9</span>Las otras dos facultades</h2>
+<div class="cols">
+<p><b>Acceso a la informaci&oacute;n.</b> Cada comisi&oacute;n recibe trimestralmente la ejecuci&oacute;n
+presupuestaria de su zona: qu&eacute; se gast&oacute;, en qu&eacute; y d&oacute;nde.</p>
+<p>Conviene ser exacto sobre qu&eacute; implica esto: <span class="sg">hay que construirlo</span>. Esa
+informaci&oacute;n no existe desagregada territorialmente en ning&uacute;n municipio del conurbano norte,
+porque requiere imputar el gasto con referencia territorial y hoy el Municipio no lo hace. No es publicar
+un archivo que ya existe: es un cambio en c&oacute;mo se registra el gasto. Por eso el cap&iacute;tulo 6 lo
+compromete como meta del mandato y no de los primeros cien d&iacute;as.</p>
+<p><b>Protecci&oacute;n de la partida.</b> El <b>art&iacute;culo 119 de la LOM</b> permite al Departamento
+Ejecutivo crear y ampliar partidas financiadas con recursos afectados sin volver al Concejo. Afectando el
+recurso, los fondos de las comisiones deja de depender de la negociaci&oacute;n presupuestaria de cada
+a&ntilde;o.</p>
+</div>
+
+
+<h2><span class="n">4.10</span>El primer acto de gobierno: derogar tres art&iacute;culos</h2>
+<div class="cols">
+<p>San Isidro tiene vigente la <b>Ordenanza 6045/1984</b> de sociedades de fomento, cuya oficina de
+aplicaci&oacute;n fue disuelta. Sus <b>art&iacute;culos 8, 9 y 10</b> facultan al Departamento Ejecutivo a
+investigar, intervenir, hacer caducar la autorizaci&oacute;n y <span class="sg">disolver</span> una
+asociaci&oacute;n vecinal. Sin plazo de defensa. Sin recurso ante el Concejo Deliberante.</p>
+<p>Un programa construido sobre autonom&iacute;a vecinal no puede convivir con un art&iacute;culo que le
+permite al intendente disolver asociaciones de vecinos. <b>No se acotan: se derogan.</b> Es el primer
+proyecto de ordenanza que este gobierno env&iacute;a al Concejo.</p>
+<p><b>Qu&eacute; pasa con las sociedades de fomento que hoy existen.</b> Siguen existiendo y no se tocan.
+La 6045 las autoriza y las registra; lo que se deroga es la facultad del Ejecutivo de disolverlas.
+<span class="sg">Son exactamente las organizaciones que la secci&oacute;n 4.6 reconoce como comisi&oacute;n
+de su zona</span>: este programa no las reemplaza, las convierte en la contraparte de una partida. La
+oficina de aplicaci&oacute;n de la 6045 fue disuelta y el registro qued&oacute; sin actualizar, as&iacute;
+que la ordenanza de la partida vecinal lo repone, con el padr&oacute;n publicado.</p>
+</div>
+
+
+<h2><span class="n">4.11</span>La aplicaci&oacute;n: el sistema de informaci&oacute;n del Municipio</h2>
 <p class="lead">Todo lo que propone este cap&iacute;tulo produce informaci&oacute;n: actas, obras
-priorizadas, decretos de adjudicaci&oacute;n, ejecuci&oacute;n trimestral, respuestas fundadas. Nadie
-tiene las horas para leerla, y <span class="sg">lo que nadie lee no controla nada</span>.</p>
+priorizadas, decretos de adjudicaci&oacute;n, ejecuci&oacute;n, respuestas fundadas. Nadie tiene las
+horas para leerla, y <span class="sg">lo que nadie lee no controla nada</span>. Esta secci&oacute;n es
+la que hace viable todo lo anterior, y por eso est&aacute; numerada y no al pie.</p>
 <div class="cols">
 <p><b>Es el l&iacute;mite hist&oacute;rico de todos estos mecanismos, y explica por qu&eacute; se
 apagan.</b> Reikiavik cay&oacute; del 8,1% al 7,3% de participaci&oacute;n en tres a&ntilde;os;
@@ -702,136 +798,145 @@ que lee todo lo publicado y contesta preguntas en castellano. <span class="sg">Q
 decidi&oacute; en mi zona este a&ntilde;o. En qu&eacute; est&aacute; la cloaca de mi calle. Qui&eacute;n
 gan&oacute; esa licitaci&oacute;n. Cu&aacute;nto se gast&oacute; ac&aacute; comparado con
 Mart&iacute;nez.</span></p>
-<p><b>Con dos reglas que lo vuelven confiable.</b> Responde s&oacute;lo sobre lo publicado y
-<b>siempre muestra de qu&eacute; documento sali&oacute;</b>. Y si el dato no existe, lo dice: esa
-respuesta tambi&eacute;n es informaci&oacute;n. <b>No modera, no filtra y no decide qu&eacute; se
-publica</b>, porque un filtro autom&aacute;tico entre el vecino y la denuncia ser&iacute;a exactamente lo
-que este cap&iacute;tulo combate.</p>
+<p><b>Pero una aplicaci&oacute;n que se abre una vez al a&ntilde;o para votar no la usa nadie.</b> Por
+eso &eacute;sta no es una aplicaci&oacute;n de votaci&oacute;n: es el sistema de informaci&oacute;n del
+Municipio, y la partida vecinal es uno de sus m&oacute;dulos.
+<span class="sg">Lo que la sostiene durante los otros once meses es el turno, el trabajo y el
+tr&aacute;mite.</span></p>
 </div>
 
-<h3>La plataforma no se inventa: se adopta y se le construyen los m&oacute;dulos</h3>
+<h3>Qu&eacute; hace</h3>
 <div class="cols">
-<p><b>Existe y es software libre.</b> Decidim, desarrollada por Barcelona, la usan hoy
-<b>Nueva York, Helsinki, la Comisi&oacute;n Europea, el Senado franc&eacute;s y M&eacute;rida</b>. Trae
-asambleas, propuestas, votaci&oacute;n de presupuesto participativo, comentarios y seguimiento de
-resultados. <span class="sg">El sistema donde se votan 28.908 millones no se improvisa: se usa el que ya
-auditaron ciudades m&aacute;s grandes.</span></p>
-<p><b>Lo que s&iacute; se construye ac&aacute; son los m&oacute;dulos que San Isidro necesita y no
-existen</b>: la conexi&oacute;n con el padr&oacute;n municipal, la publicaci&oacute;n de la
-ejecuci&oacute;n por zona, el avance de cada obra priorizada, el cruce con el registro de asociaciones, y
-el asistente de consulta.</p>
-<p><b>Y los construye gente del partido.</b> Docentes y t&eacute;cnicos locales, con egresados del Centro
-de Formaci&oacute;n Laboral integrados al equipo. Es contrataci&oacute;n con el mismo criterio de
-proximidad del art&iacute;culo 132, y es exactamente el ciclo que este cap&iacute;tulo
-grafica: <b>formar ac&aacute;, contratar ac&aacute;, que el trabajo quede ac&aacute;</b>.</p>
-<p><b>Adem&aacute;s, se transmiten las asambleas y quedan grabadas y buscables</b>, con aviso de
-filmaci&oacute;n al inicio, y hay un canal donde un vecino sube una denuncia con su prueba. Lo que se
-denuncia lo revisa el comit&eacute; de vigilancia, que son vecinos, no un algoritmo.</p>
+<p><b>Votaci&oacute;n y priorizaci&oacute;n de la partida vecinal</b>, con el padr&oacute;n de la zona y
+el acta publicada. Y <b>seguimiento de cada obra priorizada</b>, con alerta autom&aacute;tica cuando se
+atrasa.</p>
+<p><b>Asistente de consulta</b>, que lee todo lo publicado y contesta en castellano mostrando de
+qu&eacute; documento sali&oacute;.</p>
+<p><b>Transmisi&oacute;n de las asambleas, transcriptas y buscables</b>, con consulta en vivo durante la
+transmisi&oacute;n. Buscar una palabra en la asamblea de hace dos a&ntilde;os tiene que costar lo mismo
+que buscarla en este PDF.</p>
+<p><b>Mercado laboral, p&uacute;blico y privado.</b> Es lo que sostiene el uso todo el a&ntilde;o y no
+s&oacute;lo en la semana de la asamblea, y es el enganche con el cap&iacute;tulo 5.</p>
+<p><b>Turnos de hospitales y centros de salud</b>, integrados al sistema provincial Mi Salud Digital, y
+tambi&eacute;n de la veterinaria municipal.</p>
+<p><b>Ocupaci&oacute;n de guardias en tiempo real, como n&uacute;mero y no como imagen:</b>
+&laquo;catorce personas esperando, demora estimada cuarenta minutos&raquo;, para que la gente elija a
+cu&aacute;l ir. No se transmite el interior de un hospital: hay pacientes e historias cl&iacute;nicas a
+la vista.</p>
+<p><b>Auditor&iacute;a de compras:</b> precio unitario, stock y comparaci&oacute;n autom&aacute;tica
+contra las compras anteriores, contra los otros dos hospitales y contra los municipios que publiquen.</p>
+<p><b>Habilitaciones comerciales</b>, con consulta previa desde la c&aacute;mara del tel&eacute;fono
+antes de firmar un alquiler.</p>
+<p><b>Canal de denuncias</b>, revisado por el comit&eacute; de vigilancia de vecinos, que son personas y
+no un algoritmo.</p>
+<p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
+suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el domicilio del
+adjudicatario, el tiempo de respuesta de los reclamos y las trece metas del cap&iacute;tulo 6.</p>
 </div>
-<div class="callout g">
-<div class="clabel">Lo que San Isidro devuelve, y no cuesta nada</div>
-<p>Los m&oacute;dulos se publican como software libre con el nombre del partido. <b>Cualquier municipio
-argentino puede usarlos sin pagar una licencia</b>, del mismo modo que San Isidro usa lo que
-construy&oacute; Barcelona.</p>
-<p><span class="sg">Ah&iacute; el partido deja de ser el que copia y pasa a ser el que aporta.</span> Y
-el asistente puede consultar lo que publican otros municipios, de modo que un vecino pueda preguntar
-cu&aacute;nto cost&oacute; una obra parecida en Vicente L&oacute;pez <b>antes</b> de votar. La
-comparaci&oacute;n es la &uacute;nica herramienta de control que funciona sin auditores.</p>
-</div>
+<div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
+<p>Publicar en un PDF que nadie abre se puede simular. Publicar en un sistema donde el dato entra el
+d&iacute;a que se genera y cualquiera lo consulta, no.</p></div>
 
-<h3>Qui&eacute;n decide y qui&eacute;n cobra no pueden ser la misma persona</h3>
-<p class="tight">La capa 2 permite que la asociaci&oacute;n vecinal ejecute la obra que la comisi&oacute;n
-prioriz&oacute;. Eso abre un problema que hay que cerrar en la ordenanza, no despu&eacute;s.</p>
+<h3>Las reglas del asistente, que son las que lo vuelven confiable</h3>
 <div class="cols">
-<p><b>La literatura sobre conflictos de inter&eacute;s lo dice sin vueltas:</b> cuanto mayor es la
-participaci&oacute;n de alguien en la ejecuci&oacute;n del presupuesto, mayor es la probabilidad de que
-se perciba un conflicto de inter&eacute;s. <span class="sg">Y basta con que se perciba para que el
-mecanismo pierda legitimidad</span>, aunque no haya delito.</p>
-<p><b>La regla, entonces, es de incompatibilidad.</b> Quien integra la comisi&oacute;n que prioriza
-<b>no puede formar parte de la asociaci&oacute;n que ejecuta esa obra</b>, ni tener inter&eacute;s
-econ&oacute;mico en ella, ni ser proveedor. Si lo tiene, se excusa y queda asentado en el acta.</p>
-<p><b>Y dos cuerpos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de
-Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con funciones definidas por ley. El
-que hace la obra no es el que la controla. Ac&aacute; vale lo mismo: la asamblea que prioriza elige
-adem&aacute;s <b>tres vecinos que no ejecutan y que firman la recepci&oacute;n de la obra</b>.</p>
-<p><b>Un candado m&aacute;s, contra la falla m&aacute;s com&uacute;n.</b> En Bariloche las juntas
-vecinales denunciaron que el gobierno destin&oacute; el dinero del presupuesto participativo a obras
-viales por decisi&oacute;n propia, sin acuerdo de los vecinos. <span class="sg">La partida afectada del
-art&iacute;culo 119 protege el dinero; lo que hay que proteger tambi&eacute;n es el destino</span>:
-priorizada una obra, el Ejecutivo no puede sustituirla por otra sin volver a la asamblea.</p>
+<p><b>Responde s&oacute;lo sobre lo publicado, y siempre muestra de qu&eacute; documento sali&oacute;.</b>
+Si el dato no existe, lo dice: esa respuesta tambi&eacute;n es informaci&oacute;n, y este documento la
+usa todo el tiempo.</p>
+<p><b>No modera, no filtra y no decide qu&eacute; se publica.</b> Un filtro autom&aacute;tico entre el
+vecino y la denuncia ser&iacute;a exactamente lo que este cap&iacute;tulo combate.</p>
+<p><b>Se&ntilde;ala anomal&iacute;as, no acusa.</b> Dice &laquo;este precio est&aacute; 40% por encima
+de la compra anterior&raquo; y muestra los dos documentos. <span class="sg">Qui&eacute;n explica es el
+funcionario y qui&eacute;n decide si hay delito es un juez.</span></p>
+<p><b>Y sugiere d&oacute;nde est&aacute; el dato, nunca qu&eacute; conviene votar.</b> Puede consultar
+lo que publican otros municipios, de modo que un vecino compare cu&aacute;nto cost&oacute; una obra
+parecida en otro lado <b>antes</b> de votar. La comparaci&oacute;n es la &uacute;nica herramienta de
+control que funciona sin auditores.</p>
 </div>
 
-<h3>C&oacute;mo se logra que la gente venga</h3>
+<h3>Se desarrolla ac&aacute;, y por qu&eacute; no se adopta la plataforma que ya existe</h3>
 <div class="cols">
-<p><b>Las barreras est&aacute;n identificadas y son las mismas en todos lados:</b> falta de tiempo, falta
-de movilidad y <b>falta de con qui&eacute;n dejar a los chicos</b>. La &uacute;ltima casi nunca se
-nombra y es la m&aacute;s barata de resolver: una asamblea con espacio de cuidado para ni&ntilde;os
-cuesta poco y cambia qui&eacute;n puede ir.</p>
-<p><b>Horario y lugar tambi&eacute;n deciden qui&eacute;n participa.</b> Las asambleas se convocan fuera
-del horario laboral, en el propio barrio y no en el centro administrativo, y se complementan con votaci&oacute;n
-digital para quien no puede asistir. Ninguna de las tres cosas cuesta dinero.</p>
-<p><b>Comunicar el resultado es parte del mecanismo, no cortes&iacute;a.</b> Publicar qu&eacute; se
-decidi&oacute;, qu&eacute; se ejecut&oacute; y qu&eacute; falta no cambia la participaci&oacute;n de este
-a&ntilde;o: <span class="sg">cambia la del a&ntilde;o siguiente</span>. Donde no se comunic&oacute;, la
-convocatoria cay&oacute; edici&oacute;n tras edici&oacute;n.</p>
-<p><b>Y una regla que este programa adopta de una experiencia espa&ntilde;ola:</b> en las asambleas no
-participa ning&uacute;n dirigente pol&iacute;tico en ejercicio. Ni del oficialismo ni de la
-oposici&oacute;n. La comisi&oacute;n es de vecinos.</p>
-</div>
-<div class="callout g">
-<div class="clabel">Lo que esto tiene que ver con la cobranza del cap&iacute;tulo 3</div>
-<p>Hay un efecto documentado que este programa no invent&oacute;: <b>participar en la decisi&oacute;n
-presupuestaria mejora el cumplimiento tributario m&aacute;s que las sanciones</b>. En Ibanda, Uganda, el
-cumplimiento de las obligaciones tributarias <b>se multiplic&oacute; por diecis&eacute;is</b> despu&eacute;s
-del programa piloto de presupuesto participativo, al punto de que el gobierno provincial lo exigi&oacute;
-como requisito para girar fondos a las &aacute;reas locales.</p>
-<p>El cap&iacute;tulo 3 muestra que San Isidro factur&oacute; 9,1% m&aacute;s en t&eacute;rminos reales y
-cobr&oacute; 2,3% m&aacute;s. <span class="sg">La distancia entre lo que se factura y lo que se paga no
-se cierra s&oacute;lo con intimaciones</span>: se cierra cuando el vecino sabe en qu&eacute; se gasta su
-tasa porque lo decidi&oacute; &eacute;l.</p>
-<p><b>No lo ponemos como meta ni lo metemos en el modelo</b>, porque la magnitud de un caso ugand&eacute;s
-no es transferible a San Isidro y no vamos a proyectar sobre eso. Lo decimos porque es la raz&oacute;n
-m&aacute;s honesta por la que este mecanismo puede mejorar la recaudaci&oacute;n sin subir una sola tasa.</p>
+<p><b>La candidata obvia era Decidim</b>, la plataforma de participaci&oacute;n que desarroll&oacute;
+Barcelona y que usan Nueva York, Helsinki, la Comisi&oacute;n Europea y el Senado franc&eacute;s. Se
+mir&oacute; y se descart&oacute;, por una raz&oacute;n de licencia y no de calidad.</p>
+<p><b>Decidim es AGPL, que es una licencia copyleft:</b> todo m&oacute;dulo construido encima debe
+publicarse libre. <span class="sg">Eso impedir&iacute;a licenciar o cobrar por lo que San Isidro
+desarrolle</span>, y lo que se desarrolle es el activo que este cap&iacute;tulo quiere dejar instalado
+en el partido.</p>
+<p><b>Queda como referencia de dise&ntilde;o, no como base de c&oacute;digo.</b> Mirar un producto y
+hacer el propio es legal; partir de su c&oacute;digo, no. El cimiento son componentes con licencia
+permisiva &mdash;MIT, Apache&mdash;, que no arrastran esa obligaci&oacute;n.</p>
+<p><b>Y la construye gente del partido.</b> Docentes y t&eacute;cnicos locales, con egresados del Centro
+de Formaci&oacute;n Laboral integrados al equipo, contratados con el mismo criterio de proximidad del
+art&iacute;culo 132. Las universidades del partido auditan la seguridad, <span class="sg">y esa
+auditor&iacute;a es a su vez trabajo</span>.</p>
 </div>
 
-<h3>Lo que el propio Ejecutivo dice sobre el l&iacute;mite del Concejo</h3>
-<p class="tight">Este cap&iacute;tulo propone atar la partida vecinal a una ordenanza. Conviene mostrar,
-con actos publicados, por qu&eacute; hace falta que sea una ordenanza y no una decisi&oacute;n
-administrativa.</p>
+<h3>El t&iacute;tulo, que es lo que hace que el egresado no quede atado</h3>
 <div class="cols">
-<p><b>Entre junio y agosto de 2025 el Departamento Ejecutivo vet&oacute; cuatro ordenanzas</b>
-&mdash;la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405&mdash; y observ&oacute; parcialmente
-otras dos. Todas en un lapso de once semanas. <span class="sg">Vetar es una facultad legal y este
-programa no la discute.</span></p>
-<p><b>Lo que interesa es el fundamento, porque est&aacute; escrito.</b> Al vetar la Ordenanza 9399, el
-Ejecutivo sostuvo que las decisiones t&eacute;cnicas y discrecionales son exclusivas suyas y que el
-Departamento Deliberativo no puede invadir esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>.
-Y calific&oacute; un plazo de cuarenta y ocho horas fijado por el Concejo como
-<b>&laquo;arbitrario, desproporcionado&raquo;</b>.</p>
-<p><b>Ese es exactamente el problema que este cap&iacute;tulo resuelve.</b> Si la prioridad vecinal fuera
-una instrucci&oacute;n administrativa, caer&iacute;a bajo esa misma doctrina: decisi&oacute;n
-discrecional del Ejecutivo, revocable cuando incomode.
-<span class="sg">Por eso el mecanismo va por ordenanza y con partida afectada</span>, que es lo que el
-art&iacute;culo 119 permite y lo que un veto no alcanza a desarmar solo.</p>
-<p><b>Y por eso la obligaci&oacute;n de respuesta lleva plazo escrito.</b> Si el plazo no est&aacute; en
-la norma, el propio Ejecutivo ya dijo qu&eacute; piensa de los plazos que le fija el Concejo.</p>
-</div>
-<div class="callout a">
-<div class="clabel">Un dato que no existe, y por qu&eacute; eso importa</div>
-<p>Quisimos contar cu&aacute;ntos pedidos de informes present&oacute; el Concejo y cu&aacute;ntos
-respondi&oacute; el Ejecutivo. <b>No se puede: el Bolet&iacute;n Oficial publica lo que el Ejecutivo
-promulga, no la actividad del cuerpo deliberativo.</b></p>
-<p>Y la explicaci&oacute;n la da el propio Ejecutivo en uno de esos vetos: un pedido de informes debe
-hacerse por <b>Comunicaci&oacute;n</b>, seg&uacute;n el reglamento interno del Concejo y el
-art&iacute;culo 77 de la Ley Org&aacute;nica. <span class="sg">Las comunicaciones no se promulgan, y por
-lo tanto no se publican en ning&uacute;n lado.</span></p>
-<p><b>De modo que el control del Concejo sobre el Ejecutivo transcurre entero fuera de toda fuente
-p&uacute;blica.</b> No es que no encontramos el n&uacute;mero: es que el n&uacute;mero no existe para
-ning&uacute;n vecino que quiera buscarlo. Publicar las comunicaciones y sus respuestas no cuesta un peso
-y no requiere autorizaci&oacute;n de nadie.</p>
+<p><b>Las universidades del partido certifican, con la UNSO a la cabeza</b> por ser nacional y tener
+sede en San Isidro. Los t&iacute;tulos tienen validez oficial.</p>
+<p><b>Sin eso, el egresado tiene experiencia y no puede probarla</b>, y queda atado al Municipio como
+&uacute;nico empleador que sabe lo que sabe hacer. Con t&iacute;tulo, lo que aprendi&oacute; construyendo
+la plataforma vale en cualquier empresa del pa&iacute;s.</p>
+<p><span class="sg">El municipio es la cuna y no el techo: si se van, funcion&oacute;.</span> Un programa
+de formaci&oacute;n cuyo &uacute;nico destino es el propio Estado que lo dicta no es pol&iacute;tica de
+empleo, es planta encubierta.</p>
 </div>
 
-<h2><span class="n">4.12</span>A qui&eacute;n le molesta esto</h2>
+<h3>Cu&aacute;nto cuesta y de d&oacute;nde sale</h3>
+""" + exhead("c", "Treinta y nueve personas, abiertas por funci&oacute;n",
+             "Equipo en r&eacute;gimen. Estimaci&oacute;n propia del equipo de este programa: hay que presupuestarla y licitarla antes de comprometerla.") + """
+<table>
+<colgroup><col style="width:250pt"><col><col></colgroup>
+<tr class="hd"><th>Funci&oacute;n</th><th class="r">Personas</th><th>Qu&eacute; construye</th></tr>
+<tr><td class="l">Desarrollo de producto</td><td class="n">10</td><td class="m">Partida vecinal, seguimiento de obra, publicaci&oacute;n de datos</td></tr>
+<tr><td class="l">Datos e inteligencia artificial</td><td class="n">7</td><td class="m">El asistente, la auditor&iacute;a de compras y la detecci&oacute;n de anomal&iacute;as</td></tr>
+<tr><td class="l">Salud y habilitaciones</td><td class="n">6</td><td class="m">Turnos, ocupaci&oacute;n de guardias, consulta previa, integraci&oacute;n con los sistemas provinciales</td></tr>
+<tr><td class="l">Video y transcripci&oacute;n</td><td class="n">3</td><td class="m">Transmisi&oacute;n de asambleas, transcripci&oacute;n y buscador</td></tr>
+<tr><td class="l">Mercado laboral</td><td class="n">3</td><td class="m">La bolsa de trabajo p&uacute;blica y privada</td></tr>
+<tr><td class="l">Seguridad de la aplicaci&oacute;n</td><td class="n">3</td><td class="m">Lo que despu&eacute;s auditan las universidades del partido</td></tr>
+<tr><td class="l">Producto y dise&ntilde;o</td><td class="n">3</td><td class="m">Que se entienda: es la mitad del problema</td></tr>
+<tr><td class="l">Soporte y mesa de ayuda</td><td class="n">3</td><td class="m">Atiende a quien no puede solo, que es de quien depende que esto no excluya</td></tr>
+<tr><td class="l">Coordinaci&oacute;n</td><td class="n">1</td><td class="m">&mdash;</td></tr>
+<tr class="hi"><td class="l">Total</td><td class="n"><b>39</b></td><td class="m"><b>1.273 M anuales, con infraestructura y auditor&iacute;a externa</b></td></tr>
+</table>
+<p class="cap"><b>Nota:</b> es una estimaci&oacute;n del equipo de este programa, no una cifra oficial ni
+un presupuesto aprobado. <span class="tag m">Estimado</span></p>
+<div class="cols">
+<p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.205 millones al a&ntilde;o.</b> Los 1.273 millones
+son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
+<p><b>Y conviene la comparaci&oacute;n, para que la cifra no asuste.</b> 1.273 millones es
+<span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
+&mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;. El sistema que publica todo lo que
+este programa promete sale menos de la doceava parte de lo que sale embellecer.</p>
+<p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de las otras
+&aacute;reas &mdash;anal&iacute;tica de seguridad, habilitaciones, salud, automatizaci&oacute;n de
+tareas de la planta&mdash; los paga la partida de contrataci&oacute;n del cap&iacute;tulo 5, que es otra
+plata y otro destino.</p>
+<p><b>Y se licita.</b> El monto se presupuesta y se licita antes de comprometerse, igual que las otras
+estimaciones del cap&iacute;tulo 3. Lo que queda comprometido ac&aacute; no es el n&uacute;mero: es que
+el sistema exista y que lo construya gente del partido.</p>
+</div>
+
+
+<h2><span class="n">4.12</span>Qu&eacute; prometemos y qu&eacute; no</h2>
+""" + exhead("c", "La lista completa, de los dos lados") + """
+<table>
+<colgroup><col><col></colgroup>
+<tr class="hd"><th>Prometemos</th><th class="r">No prometemos</th></tr>
+<tr><td class="l">La mitad de la obra p&uacute;blica municipal decidida por los vecinos, en cuatro a&ntilde;os</td><td class="n">Que los vecinos voten el presupuesto municipal completo</td></tr>
+<tr><td class="l">Partida por zona fijada por ordenanza, con f&oacute;rmula de necesidad escrita</td><td class="n">Que las comisiones reemplacen al Concejo Deliberante</td></tr>
+<tr><td class="l">Ejecuci&oacute;n directa de obras por asociaciones vecinales, con el 60% de adhesi&oacute;n</td><td class="n">Que toda propuesta vecinal se ejecute autom&aacute;ticamente</td></tr>
+<tr><td class="l">Respuesta escrita y fundada, en plazo, a cada priorizaci&oacute;n</td><td class="n">Consulta popular vinculante: la ley provincial no la habilita</td></tr>
+<tr><td class="l">Informaci&oacute;n presupuestaria trimestral por zona</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
+<tr><td class="l">Incompatibilidad entre priorizar y ejecutar, con acta de excusaci&oacute;n</td><td class="m">Que una comisi&oacute;n contrate a sus propios integrantes</td></tr>
+<tr><td class="l">Asamblea con espacio de cuidado de ni&ntilde;os y horario fuera del laboral</td><td class="m">Pagar por participar en la comisi&oacute;n vecinal</td></tr>
+<tr><td class="l">Derogar los arts. 8 a 10 de la Ordenanza 6045</td><td class="n">Autonom&iacute;a municipal plena: la Constituci&oacute;n provincial no la reconoce</td></tr>
+</table>
+<div class="pull"><div class="plabel">Lo que se promete y lo que se reclama</div><p>Lo que un intendente puede hacer solo, lo hacemos. Lo que requiere a la Legislatura,
+lo reclamamos, y decimos que es un reclamo.</p></div>
+
+<h2><span class="n">4.13</span>A qui&eacute;n le molesta esto</h2>
 <p class="lead">El cap&iacute;tulo 3 dice cu&aacute;nto cuesta este programa en dinero. Falta decir
 cu&aacute;nto cuesta en otra moneda, porque tambi&eacute;n se paga.</p>
 <div class="cols">
@@ -847,17 +952,15 @@ asamblea. Es una p&eacute;rdida real de discrecionalidad y no tiene sentido nega
 60% y ejecute directamente, hay una contratista que no factura eso. No es la mitad del mercado
 &mdash;s&oacute;lo ocurre donde la zona quiera y pueda&mdash; pero es trabajo que cambia de manos, y hay
 que decirlo antes de que lo diga otro.</p>
-<p><b>Y a quien cobre mal hoy.</b> Llevar la percepci&oacute;n del 89,32% al 92% significa ir a buscar
-2,68 puntos de deuda que hoy no se persigue. No afecta a quien paga en t&eacute;rmino: afecta a quien
-no paga. <span class="sg">Eso tambi&eacute;n es costo pol&iacute;tico</span>, y es el que financia todo
-lo dem&aacute;s.</p>
+<p><b>Y a quien la tabla de valuaci&oacute;n de 2008 le viene cobrando de menos.</b> El
+cap&iacute;tulo 3 muestra que la escala municipal reconoce poco m&aacute;s de la mitad de la distancia
+real entre una zona y otra, y que hay <b>768 manzanas con el mismo puntaje</b> que no valen lo mismo.
+Actualizar esa tabla no mueve la al&iacute;cuota y no toca a quien ya paga lo que corresponde:
+<span class="sg">le cuesta exactamente a quien viene pagando por debajo de lo que vale su
+manzana</span>, y es lo que financia todo lo dem&aacute;s.</p>
 </div>
-<div class="pull"><div class="plabel">Por qu&eacute; va escrito ac&aacute;</div>
-<p>Un programa que declara sus l&iacute;mites fiscales con precisi&oacute;n y esconde a qui&eacute;n le
-molesta est&aacute; declarando la mitad. Esta secci&oacute;n existe para que nadie la escriba por
-nosotros.</p></div>
 
-<h2><span class="n">4.13</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">4.14</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
 <li>En la Provincia de Buenos Aires un &oacute;rgano vecinal no puede tener decisi&oacute;n vinculante: el
 veto de Pinamar de diciembre de 2025 lo demuestra.</li>
@@ -869,6 +972,9 @@ de cada dos pesos de obra p&uacute;blica.</li>
 f&oacute;rmula va escrita en la ordenanza.</li>
 <li>El primer acto de gobierno es derogar los art&iacute;culos que hoy le permiten al intendente disolver
 una asociaci&oacute;n vecinal.</li>
+<li>Y nada de esto funciona sin la aplicaci&oacute;n. Este mecanismo produce m&aacute;s informaci&oacute;n
+de la que un vecino puede leer, y el asistente es lo que la vuelve consultable: sin eso el voto es una
+firma a ciegas, que es exactamente por lo que estos sistemas se apagan en todas partes.</li>
 </ol>
 <p><b>Este mecanismo decide la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice
 qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
@@ -1825,23 +1931,7 @@ C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
 <div class="stand">Trece metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
-<h2><span class="n">6.1</span>Por qu&eacute; este cap&iacute;tulo existe</h2>
-<p class="lead">Los cinco cap&iacute;tulos anteriores auditan una gesti&oacute;n contra sus propias metas
-publicadas. Ese ejercicio s&oacute;lo es leg&iacute;timo si estamos dispuestos a que nos lo hagan.</p>
-<div class="cols">
-<p>Buscamos el documento &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, contamos sus
-diecinueve objetivos y sus setenta y siete metas, verificamos cu&aacute;les se cumplieron y cu&aacute;les
-no, y mostramos qu&eacute; palabras no aparecen en ninguna parte de &eacute;l.</p>
-<p><span class="sg">Este cap&iacute;tulo es nuestra lista.</span> Plazos, l&iacute;neas de base y fuentes
-de verificaci&oacute;n, escritos antes de gobernar, sabiendo que alguien va a abrir este PDF dentro de
-cuatro a&ntilde;os y va a hacer exactamente lo que nosotros hicimos con el plan de Ram&oacute;n
-Lan&uacute;s.</p>
-</div>
-<p>No hay propuestas nuevas ac&aacute;. Todo lo que sigue ya est&aacute; decidido, costeado y fundado en
-los cap&iacute;tulos 1 a 5. Lo que agrega este cap&iacute;tulo es <span class="sg">cu&aacute;ndo,
-cu&aacute;nto y con qu&eacute; documento se comprueba</span>.</p>
-
-<h2><span class="n">6.2</span>Los primeros cien d&iacute;as</h2>
+<h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="tight">Tres cosas, y ninguna requiere fondos nuevos ni permiso de nadie.</p>
 <div class="cols">
 <h3 style="margin-top:0">1. Derogar los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045/1984</h3>
@@ -1894,7 +1984,7 @@ comisi&oacute;n.</li>
 Oficial Municipal. Lo que se vuelve jur&iacute;dicamente obligatorio es la partida, no el proyecto votado:
 &eacute;sa es la raz&oacute;n por la que esto sobrevive a un veto.</p>
 
-<h2><span class="n">6.3</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
+<h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
 """ + exhead("c", "El compromiso central del programa, con su calendario",
              "Sobre la ejecuci&oacute;n 2025, en pesos de diciembre de 2025.") + """
 <table>
@@ -1927,7 +2017,7 @@ zona: troncales, plantas, obras que sirven a varias localidades a la vez. Esa de
 siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo.</p>
 </div>
 
-<h2><span class="n">6.4</span>Las metas verificables del mandato</h2>
+<h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
 <p class="tight">Un programa sin metas medibles no se puede auditar. &Eacute;stas s&iacute;, y ninguna
 depende de un dato que haya que creernos.</p>
 """ + exhead("c", "Trece metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
@@ -1977,7 +2067,7 @@ llega el momento de medir no est&aacute; midiendo nada.</p>
 </div>
 
 
-<h2><span class="n">6.5</span>El calendario del mandato, mes por mes</h2>
+<h2><span class="n">6.4</span>El calendario del mandato, mes por mes</h2>
 <p class="tight">Todo lo que sigue ya est&aacute; comprometido en los cap&iacute;tulos 4 y 5. Ac&aacute;
 s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cada cosa.</p>
 """ + exhead("c", "De la primera sesi&oacute;n del Concejo al informe final",
@@ -2009,7 +2099,7 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 vecinos antes del primer ciclo de asambleas. Decirlo evita el reproche de que el primer a&ntilde;o no se
 ve nada: el primer a&ntilde;o se construye la capacidad, y la rampa empieza baja por esa raz&oacute;n.</p>
 
-<h2><span class="n">6.6</span>Qu&eacute; no prometemos, y de qui&eacute;n depende</h2>
+<h2><span class="n">6.5</span>Qu&eacute; no prometemos, y de qui&eacute;n depende</h2>
 <p class="tight">La mitad de la honestidad de un programa est&aacute; en esta lista.</p>
 """ + exhead("c", "Lo que no est&aacute; en nuestras manos, y por qu&eacute;") + """
 <table>
@@ -2030,7 +2120,7 @@ hizo.</b> Ese reclamo es de este programa. No es una promesa de gesti&oacute;n, 
 como si lo fuera.</p>
 
 
-<h2><span class="n">6.7</span>Qu&eacute; puede salir mal</h2>
+<h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
 <p class="tight">Un programa que audita a otro tiene que decir contra qu&eacute; se puede caer el propio.
 Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay, se dice que no hay.</p>
 """ + exhead("c", "El registro de riesgos, con su estado y lo que lo reduce") + """
@@ -2046,7 +2136,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <tr><td class="l">Captura de una comisi&oacute;n</td>
 <td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> voto por persona y no por hogar, asamblea abierta con lista de asistentes publicada, rendici&oacute;n trimestral p&uacute;blica, y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
 <tr class="hi"><td class="l">La percepci&oacute;n no se recupera</td>
-<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, este programa se financia por la opci&oacute;n 1 del 3.6 &mdash;reasignar partidas&mdash;, que es fiscalmente neutra y cuesta pol&iacute;ticamente. No hay una tercera v&iacute;a y no la vamos a inventar.</td></tr>
+<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, este programa se financia por la opci&oacute;n 1 del 3.5 &mdash;reasignar partidas&mdash;, que es fiscalmente neutra y cuesta pol&iacute;ticamente. No hay una tercera v&iacute;a y no la vamos a inventar.</td></tr>
 <tr><td class="l">Los recursos propios crecen menos de 1% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.7). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
@@ -2059,7 +2149,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <p class="cap"><b>Nota:</b> tres de los nueve no tienen mitigaci&oacute;n propia y est&aacute; dicho en la
 fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
 
-<h2><span class="n">6.8</span>C&oacute;mo se audita todo esto</h2>
+<h2><span class="n">6.7</span>C&oacute;mo se audita todo esto</h2>
 <p class="tight">Cuatro condiciones que nos imponemos, y que hacen auditable el resto.</p>
 <ol class="n">
 <li><b>Las cifras de este documento son p&uacute;blicas y reproducibles.</b> El modelo fiscal, las series
@@ -2082,7 +2172,7 @@ alcanzado. Fecha fija y formato fijo, a prop&oacute;sito: &laquo;se publica&raqu
 un documento con nombre que no aparece el 31 de marzo, s&iacute;.</li>
 </ol>
 
-<h2><span class="n">6.9</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">6.8</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
 <ol class="n">
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
