@@ -3,7 +3,7 @@ from content_a import RH
 
 GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <h1>Glosario</h1>
-<div class="stand">Doce palabras que este documento usa todo el tiempo, explicadas como se las
+<div class="stand">Catorce palabras que este documento usa todo el tiempo, explicadas como se las
 explicar&iacute;a a un vecino. Si alguna no se entiende, el problema es del documento.</div>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>

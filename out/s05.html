@@ -1,0 +1,518 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div>
+<h2><span class="n">1.4</span>Por qu&eacute; pasa esto: est&aacute; escrito</h2>
+<p class="lead">Las cifras de las tres secciones anteriores no son un accidente administrativo. Son la
+consecuencia aritm&eacute;tica de un plan de gobierno publicado y firmado, y eso se puede demostrar.</p>
+<div class="cols">
+<p><b>El gasto sigue al plan, y se verifica en las dos direcciones.</b> Las tres prioridades declaradas
+&mdash;seguridad, espacio p&uacute;blico y ambiente, innovaci&oacute;n&mdash; son exactamente las que
+crecen. Seguridad interna subi&oacute; 34,8% real en un a&ntilde;o y fue la funci&oacute;n que m&aacute;s
+creci&oacute; de todas. Lo que no figura en el plan es lo que no crece, no se ejecuta entero, o
+directamente no aparece en el presupuesto.</p>
+<p><b>Por eso el 0,05% no es un descuido.</b> Un descuido se corrige cuando alguien lo nota. Esto lleva
+dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto lo cumple con exactitud
+todos los a&ntilde;os. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
+manera.</span></p>
+<p><b>Y explica lo que el cuadro anterior muestra.</b> Una partida que no est&aacute; entre las
+prioridades no s&oacute;lo nace chica: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
+empleo contra el 99,1% de la obra p&uacute;blica no es una casualidad contable.</p>
+<p><b>Lo que sigue, entonces, no es un reproche de gesti&oacute;n.</b> El cap&iacute;tulo 2 audita ese
+plan contra sus propias metas y concede lo que hay que conceder. Lo que este programa discute no es
+c&oacute;mo se administra San Isidro, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
+lista</span>.</p>
+</div>
+
+<h2><span class="n">1.5</span>San Isidro se financia solo. Eso cambia todo.</h2>
+<div class="cols">
+<p>En 2025 el Municipio recibi&oacute; 82.268 millones de pesos de la Provincia de Buenos Aires, contra
+324.304 millones de gasto devengado total.</p>
+<p><b>Y esa proporci&oacute;n viene creciendo.</b> Desde 2010 los recursos de origen municipal
+aumentaron <b>33,6% en t&eacute;rminos reales</b> &mdash;el 1,95% anual que el cap&iacute;tulo 3 usa como
+par&aacute;metro del modelo&mdash;, mientras las transferencias provinciales ca&iacute;an. San Isidro
+depende hoy menos de la Provincia que hace quince a&ntilde;os, y no por decisi&oacute;n de nadie: por
+aritm&eacute;tica.</p>
+<p>Esto tiene una consecuencia pol&iacute;tica directa: <span class="sg">un intendente de San Isidro no
+depende de La Plata.</span> La mayor parte del presupuesto se define localmente, se aprueba por ordenanza
+del Concejo Deliberante y se puede reasignar por decisi&oacute;n local. Todo lo que este programa propone
+puede financiarse sin pedirle permiso a nadie.</p>
+</div>
+<div class="pull"><p>La Provincia financia aproximadamente el 25% de San Isidro. El municipio recauda el
+75% restante.</p></div>
+<p>Hay una salvedad, y es estructural: la participaci&oacute;n de San Isidro en las transferencias
+provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%. No es castigo pol&iacute;tico
+&mdash;toda la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es
+una f&oacute;rmula&mdash;, pero se compone a&ntilde;o a a&ntilde;o y cualquier proyecci&oacute;n honesta a
+diez a&ntilde;os tiene que cargarlo. <b>El cap&iacute;tulo 3 lo descompone fondo por fondo y lo incorpora
+al modelo.</b></p>
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;10</div><div class="extitle">Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta</div><div class="exsub">Participaci&oacute;n de cada municipio en el total transferido por la Provincia a los 135 municipios. A&ntilde;os completos.</div><div class="chart "><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="569.645746pt" height="137.007563pt" viewBox="0 0 569.645746 137.007563" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:29.862351</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 137.007563 
+L 569.645746 137.007563 
+L 569.645746 0 
+L 0 0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 21.207094 126.18 
+L 462.957094 126.18 
+L 462.957094 1.44 
+L 21.207094 1.44 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="25.55931" y="134.194969" transform="rotate(-0 25.55931 134.194969)">2021</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="134.364729" y="134.194969" transform="rotate(-0 134.364729 134.194969)">2022</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="243.170148" y="134.194969" transform="rotate(-0 243.170148 134.194969)">2023</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="351.975567" y="134.194969" transform="rotate(-0 351.975567 134.194969)">2024</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="460.780985" y="134.194969" transform="rotate(-0 460.780985 134.194969)">2025</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 21.207094 116.94 
+L 462.957094 116.94 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7"/>
+     <g id="text_6">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="119.447484" transform="rotate(-0 18.207094 119.447484)">0,8%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 21.207094 98.46 
+L 462.957094 98.46 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9"/>
+     <g id="text_7">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="100.967484" transform="rotate(-0 18.207094 100.967484)">1,0%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 21.207094 79.98 
+L 462.957094 79.98 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11"/>
+     <g id="text_8">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="82.487484" transform="rotate(-0 18.207094 82.487484)">1,2%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 21.207094 61.5 
+L 462.957094 61.5 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13"/>
+     <g id="text_9">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="64.007484" transform="rotate(-0 18.207094 64.007484)">1,4%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 21.207094 43.02 
+L 462.957094 43.02 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="45.527484" transform="rotate(-0 18.207094 45.527484)">1,6%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 21.207094 24.54 
+L 462.957094 24.54 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17"/>
+     <g id="text_11">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="27.047484" transform="rotate(-0 18.207094 27.047484)">1,8%</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_18">
+      <path d="M 21.207094 6.06 
+L 462.957094 6.06 
+" clip-path="url(#pca1aeea689)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19"/>
+     <g id="text_12">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="18.207094" y="8.567484" transform="rotate(-0 18.207094 8.567484)">2,0%</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_20">
+    <path d="M 25.55931 11.80728 
+L 134.364729 7.77864 
+L 243.170148 13.06392 
+L 351.975567 17.22192 
+L 460.780985 27.02556 
+" style="fill: none; stroke: #66734c; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m9cfba82b9c" d="M 0 1.2 
+C 0.318244 1.2 0.623496 1.07356 0.848528 0.848528 
+C 1.07356 0.623496 1.2 0.318244 1.2 0 
+C 1.2 -0.318244 1.07356 -0.623496 0.848528 -0.848528 
+C 0.623496 -1.07356 0.318244 -1.2 0 -1.2 
+C -0.318244 -1.2 -0.623496 -1.07356 -0.848528 -0.848528 
+C -1.07356 -0.623496 -1.2 -0.318244 -1.2 0 
+C -1.2 0.318244 -1.07356 0.623496 -0.848528 0.848528 
+C -0.623496 1.07356 -0.318244 1.2 0 1.2 
+z
+" style="stroke: #66734c"/>
+    </defs>
+    <g>
+     <use xlink:href="#m9cfba82b9c" x="25.55931" y="11.80728" style="fill: #66734c; stroke: #66734c"/>
+     <use xlink:href="#m9cfba82b9c" x="134.364729" y="7.77864" style="fill: #66734c; stroke: #66734c"/>
+     <use xlink:href="#m9cfba82b9c" x="243.170148" y="13.06392" style="fill: #66734c; stroke: #66734c"/>
+     <use xlink:href="#m9cfba82b9c" x="351.975567" y="17.22192" style="fill: #66734c; stroke: #66734c"/>
+     <use xlink:href="#m9cfba82b9c" x="460.780985" y="27.02556" style="fill: #66734c; stroke: #66734c"/>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 25.55931 40.73772 
+L 134.364729 32.65272 
+L 243.170148 28.87356 
+L 351.975567 23.34804 
+L 460.780985 21.537 
+" style="fill: none; stroke: #7c2e23; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m6a7c934d1d" d="M 0 1.2 
+C 0.318244 1.2 0.623496 1.07356 0.848528 0.848528 
+C 1.07356 0.623496 1.2 0.318244 1.2 0 
+C 1.2 -0.318244 1.07356 -0.623496 0.848528 -0.848528 
+C 0.623496 -1.07356 0.318244 -1.2 0 -1.2 
+C -0.318244 -1.2 -0.623496 -1.07356 -0.848528 -0.848528 
+C -1.07356 -0.623496 -1.2 -0.318244 -1.2 0 
+C -1.2 0.318244 -1.07356 0.623496 -0.848528 0.848528 
+C -0.623496 1.07356 -0.318244 1.2 0 1.2 
+z
+" style="stroke: #7c2e23"/>
+    </defs>
+    <g>
+     <use xlink:href="#m6a7c934d1d" x="25.55931" y="40.73772" style="fill: #7c2e23; stroke: #7c2e23"/>
+     <use xlink:href="#m6a7c934d1d" x="134.364729" y="32.65272" style="fill: #7c2e23; stroke: #7c2e23"/>
+     <use xlink:href="#m6a7c934d1d" x="243.170148" y="28.87356" style="fill: #7c2e23; stroke: #7c2e23"/>
+     <use xlink:href="#m6a7c934d1d" x="351.975567" y="23.34804" style="fill: #7c2e23; stroke: #7c2e23"/>
+     <use xlink:href="#m6a7c934d1d" x="460.780985" y="21.537" style="fill: #7c2e23; stroke: #7c2e23"/>
+    </g>
+   </g>
+   <g id="line2d_22">
+    <path d="M 25.55931 35.4894 
+L 134.364729 44.50764 
+L 243.170148 45.792 
+L 351.975567 51.27132 
+L 460.780985 54.88416 
+" style="fill: none; stroke: #2a211c; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m6dee48fd47" d="M 0 1.2 
+C 0.318244 1.2 0.623496 1.07356 0.848528 0.848528 
+C 1.07356 0.623496 1.2 0.318244 1.2 0 
+C 1.2 -0.318244 1.07356 -0.623496 0.848528 -0.848528 
+C 0.623496 -1.07356 0.318244 -1.2 0 -1.2 
+C -0.318244 -1.2 -0.623496 -1.07356 -0.848528 -0.848528 
+C -1.07356 -0.623496 -1.2 -0.318244 -1.2 0 
+C -1.2 0.318244 -1.07356 0.623496 -0.848528 0.848528 
+C -0.623496 1.07356 -0.318244 1.2 0 1.2 
+z
+" style="stroke: #2a211c"/>
+    </defs>
+    <g>
+     <use xlink:href="#m6dee48fd47" x="25.55931" y="35.4894" style="fill: #2a211c; stroke: #2a211c"/>
+     <use xlink:href="#m6dee48fd47" x="134.364729" y="44.50764" style="fill: #2a211c; stroke: #2a211c"/>
+     <use xlink:href="#m6dee48fd47" x="243.170148" y="45.792" style="fill: #2a211c; stroke: #2a211c"/>
+     <use xlink:href="#m6dee48fd47" x="351.975567" y="51.27132" style="fill: #2a211c; stroke: #2a211c"/>
+     <use xlink:href="#m6dee48fd47" x="460.780985" y="54.88416" style="fill: #2a211c; stroke: #2a211c"/>
+    </g>
+   </g>
+   <g id="line2d_23">
+    <path d="M 25.55931 117.15252 
+L 134.364729 111.5808 
+L 243.170148 107.20104 
+L 351.975567 107.007 
+L 460.780985 107.89404 
+" style="fill: none; stroke: #c9cfbe; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="m6b31aa8a33" d="M 0 1.2 
+C 0.318244 1.2 0.623496 1.07356 0.848528 0.848528 
+C 1.07356 0.623496 1.2 0.318244 1.2 0 
+C 1.2 -0.318244 1.07356 -0.623496 0.848528 -0.848528 
+C 0.623496 -1.07356 0.318244 -1.2 0 -1.2 
+C -0.318244 -1.2 -0.623496 -1.07356 -0.848528 -0.848528 
+C -1.07356 -0.623496 -1.2 -0.318244 -1.2 0 
+C -1.2 0.318244 -1.07356 0.623496 -0.848528 0.848528 
+C -0.623496 1.07356 -0.318244 1.2 0 1.2 
+z
+" style="stroke: #c9cfbe"/>
+    </defs>
+    <g>
+     <use xlink:href="#m6b31aa8a33" x="25.55931" y="117.15252" style="fill: #c9cfbe; stroke: #c9cfbe"/>
+     <use xlink:href="#m6b31aa8a33" x="134.364729" y="111.5808" style="fill: #c9cfbe; stroke: #c9cfbe"/>
+     <use xlink:href="#m6b31aa8a33" x="243.170148" y="107.20104" style="fill: #c9cfbe; stroke: #c9cfbe"/>
+     <use xlink:href="#m6b31aa8a33" x="351.975567" y="107.007" style="fill: #c9cfbe; stroke: #c9cfbe"/>
+     <use xlink:href="#m6b31aa8a33" x="460.780985" y="107.89404" style="fill: #c9cfbe; stroke: #c9cfbe"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 21.207094 126.18 
+L 462.957094 126.18 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: start; fill: #66734c" x="471.661527" y="28.957122" transform="rotate(-0 471.661527 28.957122)">  San Isidro 1,7731%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: start; fill: #7c2e23" x="471.661527" y="19.283219" transform="rotate(-0 471.661527 19.283219)">  Tigre 1,8325%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="471.661527" y="56.955722" transform="rotate(-0 471.661527 56.955722)">  Vicente López 1,4716%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: start; fill: #c9cfbe" x="471.661527" y="109.825602" transform="rotate(-0 471.661527 109.825602)">  San Fernando 0,8979%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pca1aeea689">
+   <rect x="21.207094" y="1.44" width="441.75" height="124.74"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires, transferencias a municipios 2021&ndash;2025.</p><p class="cap"><b>Nota:</b> 2026 va con seis meses y queda fuera del gr&aacute;fico. San Isidro cae a 1,6811% y Tigre sube a 1,8370%.</p></div>
+
+<h2><span class="n">1.6</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<ol class="n">
+<li>San Isidro es un municipio rico que invierte m&aacute;s en obra p&uacute;blica que el 96% de los
+municipios bonaerenses.</li>
+<li>Casi la mitad de su poblaci&oacute;n &mdash;el 46,8%, en Boulogne Sur Mer y B&eacute;ccar&mdash; vive
+donde est&aacute; el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.</li>
+<li>El municipio destina el 0,05% de su presupuesto a empleo y el 0,10% a vivienda.</li>
+<li>No es un error de gesti&oacute;n: es exactamente lo que produce un plan de gobierno donde esas
+palabras no aparecen.</li>
+<li>San Isidro tiene los fondos y la autonom&iacute;a para cambiarlo. Lo que falta es que decida quien vive
+donde est&aacute; el problema.</li>
+</ol>
+<p><b>Los cap&iacute;tulos siguientes proponen ese mecanismo.</b></p>
+<div class="hairline"></div>
+<div class="note">
+<p><b>Nota metodol&oacute;gica.</b> Las series fiscales provienen de los informes de ejecuci&oacute;n
+presupuestaria y rendiciones de cuentas publicados por la Municipalidad de San Isidro, de los fallos del
+Honorable Tribunal de Cuentas de la Provincia de Buenos Aires y del sistema SIMCo provincial, validadas de
+forma cruzada entre s&iacute;. Los datos territoriales provienen del Censo Nacional de Poblaci&oacute;n,
+Hogares y Viviendas 2022 (INDEC), a nivel de radio censal. Los importes est&aacute;n expresados en pesos
+constantes de diciembre de 2025 salvo indicaci&oacute;n expresa.</p>
+<p>Las seis zonas de 1.1 son los l&iacute;mites de las localidades del partido seg&uacute;n OpenStreetMap,
+proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su
+punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles. Las
+poblaciones por zona son muy desiguales &mdash;de 11.035 a 74.832 habitantes&mdash; porque son las
+localidades reales y no zonas construidas para quedar parejas.</p>
+<p>Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de
+ejecuci&oacute;n RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales
+de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de ejecuci&oacute;n del propio
+Municipio y coinciden en las siete categor&iacute;as del gasto por objeto. Las de los otros municipios no
+fueron validadas individualmente: se usan para calcular la mediana provincial y la posici&oacute;n relativa
+de San Isidro.</p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 7 de 35</span></div></div></body></html>

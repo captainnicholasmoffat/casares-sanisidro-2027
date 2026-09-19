@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">4.7</span>El Concejo Deliberante: diez bloques y ninguna mayor&iacute;a</h2>
+<p class="lead">Todo lo que propone este cap&iacute;tulo se aprueba por ordenanza. Conviene entonces decir
+qui&eacute;n las vota, y no dar por supuesto que alguien va a poder gobernar solo.</p>
+<div class="cols">
+<p>El Concejo Deliberante de San Isidro tiene <b>24 concejales</b>, repartidos hoy en <b>diez
+bloques</b>. El m&aacute;s grande tiene cuatro bancas. Para sancionar una ordenanza hacen falta trece
+votos.</p>
+<p><span class="sg">La aritm&eacute;tica es la que es: ning&uacute;n bloque puede aprobar nada por su
+cuenta, y cualquier ordenanza necesita el acuerdo de cuatro bloques como m&iacute;nimo.</span> Eso vale
+para este programa igual que para cualquier otro.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;33</div><div class="extitle">Diez bloques para veinticuatro bancas: hacen falta trece votos</div><div class="exsub">Integraci&oacute;n publicada por el propio Concejo Deliberante de San Isidro.</div></div>
+<table>
+<colgroup><col><col style="width:80pt"></colgroup>
+<tr class="hd"><th>Bloque</th><th class="r">Bancas</th></tr>
+<tr><td class="l">Primero San Isidro</td><td class="n">4</td></tr>
+<tr><td class="l">ConVocaci&oacute;n por San Isidro</td><td class="n">4</td></tr>
+<tr><td class="l">Frente Renovador &ndash; Frente Patria</td><td class="n">4</td></tr>
+<tr><td class="l">La Libertad Avanza</td><td class="n">3</td></tr>
+<tr><td class="l">Fuerza Patria</td><td class="n">2</td></tr>
+<tr><td class="l">Acci&oacute;n Vecinal San Isidro es Distinto</td><td class="n">2</td></tr>
+<tr><td class="l">Uni&oacute;n C&iacute;vica Radical</td><td class="n">2</td></tr>
+<tr><td class="l">Movimiento Derecho al Futuro</td><td class="n">1</td></tr>
+<tr><td class="l">Liberal Republicano</td><td class="n">1</td></tr>
+<tr><td class="l">Partido Dem&oacute;crata</td><td class="n">1</td></tr>
+<tr class="hi"><td class="l">Total</td><td class="n"><b>24</b></td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> Honorable Concejo Deliberante de San Isidro, integraci&oacute;n de bloques
+publicada en su sitio oficial, consultada en septiembre de 2026.</p>
+<p class="cap"><b>Nota:</b> el cuerpo renueva la mitad de sus bancas cada dos a&ntilde;os, de modo que la
+composici&oacute;n cambia en diciembre de 2027, dentro del primer a&ntilde;o de mandato.</p>
+<div class="pull"><div class="plabel">Lo que se sigue de esto</div>
+<p>Este programa no puede aprobarse sin votos de otros bloques. No lo presentamos como un tr&aacute;mite
+ni suponemos una mayor&iacute;a que no existe.</p></div>
+<div class="cols">
+<p><b>Por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable.</b> No pide reformar la Ley
+Org&aacute;nica, no pide facultades nuevas para el intendente y no crea un &oacute;rgano que compita con
+el Concejo. Pide fijar una partida por ordenanza y obligar al Ejecutivo a responder por escrito: dos
+cosas que <span class="sg">le sacan discrecionalidad al intendente, no al Concejo</span>.</p>
+<p><b>Y el primer proyecto es el m&aacute;s f&aacute;cil de acompa&ntilde;ar.</b> Derogar los
+art&iacute;culos que hoy permiten al Ejecutivo disolver una asociaci&oacute;n vecinal no le cuesta un peso
+a nadie ni le quita nada a ning&uacute;n bloque. Es la prueba de si hay acuerdo, y llega en la primera
+sesi&oacute;n.</p>
+<p><b>Qu&eacute; pasa si no hay acuerdo.</b> La rampa del cap&iacute;tulo 4 no arranca, y este programa lo
+dir&aacute; con esas palabras en el informe del 31 de marzo, con el expediente y su estado. No hay plan
+alternativo por decreto: <span class="sg">un mecanismo que dependiera de un decreto no
+sobrevivir&iacute;a al intendente siguiente</span>, que es justamente lo que se busca evitar.</p>
+<p>La renovaci&oacute;n de diciembre de 2027 cambia la mitad del cuerpo. Un programa que necesita cuatro
+bloques tiene que poder explicarse a bloques que todav&iacute;a no est&aacute;n sentados, y &eacute;sa es
+otra raz&oacute;n para que la f&oacute;rmula y la rampa est&eacute;n escritas y no negociadas cada
+a&ntilde;o.</p>
+</div>
+
+
+<h3>Lo que el propio Ejecutivo dice sobre el l&iacute;mite del Concejo</h3>
+<p class="tight">Este cap&iacute;tulo propone atar la partida vecinal a una ordenanza. Conviene mostrar,
+con actos publicados, por qu&eacute; hace falta que sea una ordenanza y no una decisi&oacute;n
+administrativa.</p>
+<div class="cols">
+<p><b>Entre junio y agosto de 2025 el Departamento Ejecutivo vet&oacute; cuatro ordenanzas</b>
+&mdash;la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405&mdash; y observ&oacute; parcialmente
+otras dos. Todas en un lapso de once semanas. <span class="sg">Vetar es una facultad legal y este
+programa no la discute.</span></p>
+<p><b>Lo que interesa es el fundamento, porque est&aacute; escrito.</b> Al vetar la Ordenanza 9399, el
+Ejecutivo sostuvo que las decisiones t&eacute;cnicas y discrecionales son exclusivas suyas y que el
+Departamento Deliberativo no puede invadir esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>.
+Y calific&oacute; un plazo de cuarenta y ocho horas fijado por el Concejo como
+<b>&laquo;arbitrario, desproporcionado&raquo;</b>.</p>
+<p><b>Ese es exactamente el problema que este cap&iacute;tulo resuelve.</b> Si la prioridad vecinal fuera
+una instrucci&oacute;n administrativa, caer&iacute;a bajo esa misma doctrina: decisi&oacute;n
+discrecional del Ejecutivo, revocable cuando incomode.
+<span class="sg">Por eso el mecanismo va por ordenanza y con partida afectada</span>, que es lo que el
+art&iacute;culo 119 permite y lo que un veto no alcanza a desarmar solo.</p>
+<p><b>Y por eso la obligaci&oacute;n de respuesta lleva plazo escrito.</b> Si el plazo no est&aacute; en
+la norma, el propio Ejecutivo ya dijo qu&eacute; piensa de los plazos que le fija el Concejo.</p>
+</div>
+<div class="callout a">
+<div class="clabel">Un dato que no existe, y por qu&eacute; eso importa</div>
+<p>Quisimos contar cu&aacute;ntos pedidos de informes present&oacute; el Concejo y cu&aacute;ntos
+respondi&oacute; el Ejecutivo. <b>No se puede: el Bolet&iacute;n Oficial publica lo que el Ejecutivo
+promulga, no la actividad del cuerpo deliberativo.</b></p>
+<p>Y la explicaci&oacute;n la da el propio Ejecutivo en uno de esos vetos: un pedido de informes debe
+hacerse por <b>Comunicaci&oacute;n</b>, seg&uacute;n el reglamento interno del Concejo y el
+art&iacute;culo 77 de la Ley Org&aacute;nica. <span class="sg">Las comunicaciones no se promulgan, y por
+lo tanto no se publican en ning&uacute;n lado.</span></p>
+<p><b>De modo que el control del Concejo sobre el Ejecutivo transcurre entero fuera de toda fuente
+p&uacute;blica.</b> No es que no encontramos el n&uacute;mero: es que el n&uacute;mero no existe para
+ning&uacute;n vecino que quiera buscarlo. Publicar las comunicaciones y sus respuestas no cuesta un peso
+y no requiere autorizaci&oacute;n de nadie.</p>
+</div>
+
+
+<h2><span class="n">4.8</span>Por qu&eacute; las dos capas juntas cambian todo</h2>
+<div class="cols">
+<p>Un presupuesto participativo cl&aacute;sico deja al vecino como peticionante: prioriza una lista y el
+municipio ejecuta. El dinero de la obra se va del barrio hacia una empresa contratista.</p>
+
+<p><b>La diferencia no es de grado, es de naturaleza.</b> En el modelo cl&aacute;sico el vecino
+propone y el Estado hace; el poder que se reparte es el de sugerir. Ac&aacute; el vecino propone
+<span class="sg">y adem&aacute;s hace</span>: lo que se reparte es la ejecuci&oacute;n, que es donde
+est&aacute;n el dinero, el trabajo y el aprendizaje.</p>
+<p><b>Tres cosas cambian cuando la obra la ejecuta el barrio.</b> Primero, el dinero se queda: la
+cooperativa contrata gente del lugar y compra donde puede. Segundo, el control es directo, porque quien
+recibe la obra conoce a quien la hizo y lo cruza en la calle. Tercero, la capacidad queda instalada: una
+asociaci&oacute;n que ejecut&oacute; una obra puede ejecutar la siguiente, y eso no se pierde cuando
+cambia el intendente.</p>
+<p><b>Y hay una consecuencia que el cap&iacute;tulo 1 vuelve ineludible.</b> En un distrito donde la
+pol&iacute;tica de empleo municipal son 170 millones &mdash;572 pesos por habitante por a&ntilde;o&mdash;
+una obra ejecutada por vecinos es pol&iacute;tica de empleo real, financiada con la partida de obra y no
+con la de empleo. <span class="sg">Los 28.908 millones del a&ntilde;o 4 son casi cuatro veces este programa
+completo de empleo y vivienda</span>, y no le cuestan un peso adicional al presupuesto.</p>
+<p><b>El costo de esta capa es que exige m&aacute;s.</b> La primera no pide nada al vecino salvo ir a una
+asamblea; la segunda le pide constituirse, reunir el 60% por escrito, contratar, rendir y responder. Por
+eso la rampa empieza en 12,5% y por eso 4.6 detalla qu&eacute; pasa cuando una comisi&oacute;n no
+est&aacute; a la altura. <span class="sg">Repartir ejecuci&oacute;n es repartir responsabilidad</span>, y
+eso hay que decirlo antes y no despu&eacute;s.</p>
+
+<p>Y la exigencia del 60% obliga a construir consenso <span class="sg">antes</span> de pedir, no a
+repartir culpas despu&eacute;s.</p>
+</div>
+
+
+
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;34</div><div class="extitle">El mismo dinero, dos circuitos</div><div class="exsub">A la izquierda, c&oacute;mo funciona hoy. A la derecha, qu&eacute; cambia. El presupuesto es el mismo en los dos.</div></div>
+<div class="diag" style="text-align:center;margin:12pt 0 8pt">
+<svg width="530pt" height="256pt" viewBox="0 0 830 400" style="width:530pt;height:256pt">
+<text x="200" y="24" text-anchor="middle" font-size="10.5" font-weight="600" font-family="Inter" fill="#7C2E23" letter-spacing="1.4">HOY &middot; EL CIRCUITO PIERDE</text>
+<circle cx="200" cy="200" r="118" fill="none" stroke="#B9A99A" stroke-width="1.2" stroke-dasharray="4 4"/>
+<g font-family="Inter" font-size="10.2" font-weight="600">
+<circle cx="200" cy="82" r="38" fill="#6E625A"/>
+<text x="200" y="78" text-anchor="middle" fill="#FCFAF6">El Ejecutivo</text><text x="200" y="91" text-anchor="middle" fill="#FCFAF6">decide solo</text>
+<circle cx="312" cy="164" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
+<text x="312" y="153" text-anchor="middle" fill="#6E625A" font-size="9.4">Contrata</text><text x="312" y="166" text-anchor="middle" fill="#6E625A" font-size="9.4">afuera del</text><text x="312" y="179" text-anchor="middle" fill="#6E625A" font-size="9.4">municipio</text>
+<circle cx="269" cy="296" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
+<text x="269" y="285" text-anchor="middle" fill="#6E625A" font-size="9.4">El sueldo</text><text x="269" y="298" text-anchor="middle" fill="#6E625A" font-size="9.4">se va del</text><text x="269" y="311" text-anchor="middle" fill="#6E625A" font-size="9.4">municipio</text>
+<circle cx="131" cy="296" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
+<text x="131" y="283" text-anchor="middle" fill="#6E625A" font-size="8.6">Se demuelen</text><text x="131" y="294" text-anchor="middle" fill="#6E625A" font-size="8.6">locales</text>
+<text x="131" y="305" text-anchor="middle" fill="#6E625A" font-size="8.6">que daban</text><text x="131" y="316" text-anchor="middle" fill="#6E625A" font-size="8.6">trabajo</text>
+<circle cx="88" cy="164" r="38" fill="#FCFAF6" stroke="#B9A99A" stroke-width="1.5"/>
+<text x="88" y="151" text-anchor="middle" fill="#6E625A" font-size="8.6">Obra donde</text><text x="88" y="162" text-anchor="middle" fill="#6E625A" font-size="8.6">se luce,</text><text x="88" y="173" text-anchor="middle" fill="#6E625A" font-size="8.6">no donde</text><text x="88" y="184" text-anchor="middle" fill="#6E625A" font-size="8.6">hace falta</text>
+</g>
+<path d="M330 120 L390 78" stroke="#7C2E23" stroke-width="1.4" stroke-dasharray="5 3"/>
+<path d="M396 74 L382 74 L387 84 Z" fill="#7C2E23"/>
+<text x="200" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">la mitad del dinero</text>
+<text x="200" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">sal&iacute;a del partido</text>
+<line x1="415" y1="46" x2="415" y2="356" stroke="#C6AE8E" stroke-width="1"/>
+<text x="630" y="24" text-anchor="middle" font-size="10.5" font-weight="600" font-family="Inter" fill="#5F7057" letter-spacing="1.4">ESTE PROGRAMA &middot; EL CIRCUITO RETIENE</text>
+<circle cx="630" cy="200" r="118" fill="none" stroke="#DB6B4B" stroke-width="1.4" stroke-dasharray="4 4"/>
+<path d="M703 106 L697 96 L692 104 Z" fill="#DB6B4B"/><path d="M745 242 L753 232 L744 229 Z" fill="#DB6B4B"/>
+<path d="M622 318 L633 323 L633 314 Z" fill="#DB6B4B"/><path d="M513 232 L512 244 L521 241 Z" fill="#DB6B4B"/>
+<path d="M556 100 L544 103 L550 111 Z" fill="#DB6B4B"/>
+<g font-family="Inter" font-size="10.2" font-weight="600">
+<circle cx="630" cy="82" r="38" fill="#DB6B4B"/>
+<text x="630" y="78" text-anchor="middle" fill="#FCFAF6">Decide el</text><text x="630" y="91" text-anchor="middle" fill="#FCFAF6">barrio</text>
+<circle cx="742" cy="164" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
+<text x="742" y="160" text-anchor="middle" fill="#7C2E23" font-size="9.4">Contrata en</text><text x="742" y="173" text-anchor="middle" fill="#7C2E23" font-size="9.4">el municipio</text>
+<circle cx="699" cy="296" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
+<text x="699" y="289" text-anchor="middle" fill="#7C2E23" font-size="9.6">Trabaja un</text><text x="699" y="301" text-anchor="middle" fill="#7C2E23" font-size="9.6">vecino formado</text>
+<text x="699" y="313" text-anchor="middle" fill="#7C2E23" font-size="9.6">ac&aacute;</text>
+<circle cx="561" cy="296" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
+<text x="561" y="292" text-anchor="middle" fill="#7C2E23">El sueldo</text><text x="561" y="305" text-anchor="middle" fill="#7C2E23">se gasta ac&aacute;</text>
+<circle cx="518" cy="164" r="38" fill="#FCFAF6" stroke="#5F7057" stroke-width="1.5"/>
+<text x="518" y="151" text-anchor="middle" fill="#7C2E23" font-size="8.6">Obra donde</text><text x="518" y="162" text-anchor="middle" fill="#7C2E23" font-size="8.6">hace falta,</text>
+<text x="518" y="173" text-anchor="middle" fill="#7C2E23" font-size="8.6">aunque no</text><text x="518" y="184" text-anchor="middle" fill="#7C2E23" font-size="8.6">se vea</text>
+</g>
+<text x="630" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">cada vuelta deja</text>
+<text x="630" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">m&aacute;s capacidad</text>
+</svg>
+</div>
+<p class="cap"><b>Nota:</b> cloacas y gas de red cambian c&oacute;mo vive una familia todos los d&iacute;as.
+Un &aacute;rbol m&aacute;s en una plaza que ya ten&iacute;a &aacute;rboles, no. Esa es la diferencia entre
+las dos flechas de la izquierda de cada circuito.</p>
+<div class="cols">
+<p><b>Decide el barrio.</b> Hoy la obra la decide el Ejecutivo, y los diez primeros adjudicatarios se
+llevan el 54,5% de lo contratado. Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
+hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
+<p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, la
+plata entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;que era la mitad de
+los adjudicatarios en la &uacute;ltima medici&oacute;n disponible&mdash;.</p>
+<p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: quien se
+form&oacute; en el Centro de Formaci&oacute;n Laboral consigue trabajo en la obra de su propia zona.
+<b>Sin ejecuci&oacute;n vecinal, la formaci&oacute;n entrena gente para que la emplee otro
+distrito.</b></p>
+<p><b>Gasta y recauda donde vive.</b> Ese salario se consume en el partido, y esa actividad es base
+imponible. El cap&iacute;tulo 3 muestra que los recursos propios son el 75% de lo que el Municipio gasta:
+<span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, sin subir una sola
+tasa.</span></p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que hace que el ciclo no se apague</div>
+<p>El 60% de adhesi&oacute;n por escrito del art&iacute;culo 132 obliga al barrio a ponerse de acuerdo
+<b>antes</b> de pedir. Eso deja instalada una capacidad de organizarse que no se compra y que sirve para
+la vuelta siguiente. <span class="sg">Cada ciclo empieza con m&aacute;s capacidad que el anterior</span>,
+y por eso la rampa va del 12,5% al 50%: no es prudencia financiera, es que la capacidad se construye.</p>
+<p>Es tambi&eacute;n lo que falta en los presupuestos participativos que se apagaron. Donde el vecino
+s&oacute;lo vota una lista de obras que ejecuta otro, la participaci&oacute;n cae a&ntilde;o a a&ntilde;o.
+Donde el vecino decide, ejecuta y cobra, la vuelta siguiente tiene m&aacute;s gente, no menos.</p>
+</div>
+<div class="cols">
+<p><b>Y las otras propuestas son ramas del mismo circuito, no ciclos aparte.</b> La anal&iacute;tica de
+seguridad del 5.7 se contrata a empresas del partido y la ocupa gente formada ac&aacute;. El sistema de
+habilitaciones del 5.9 tambi&eacute;n, y adem&aacute;s abarata abrir un local, lo que agrega actividad al
+mismo circuito.</p>
+<p><b>Por eso el orden importa.</b> Empezar por la formaci&oacute;n sin obra vecinal produce egresados sin
+d&oacute;nde trabajar. Empezar por la obra vecinal sin formaci&oacute;n produce cooperativas que
+contratan afuera. <span class="sg">Las dos piezas juntas son una pol&iacute;tica; cada una sola es un
+programa m&aacute;s.</span></p>
+</div>
+
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 18 de 35</span></div></div></body></html>

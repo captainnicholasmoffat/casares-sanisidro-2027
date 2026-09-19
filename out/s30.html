@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
+<p class="tight">Un programa que audita a otro tiene que decir contra qu&eacute; se puede caer el propio.
+Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay, se dice que no hay.</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;51</div><div class="extitle">El registro de riesgos, con su estado y lo que lo reduce</div></div>
+<table>
+<colgroup><col style="width:150pt"><col></colgroup>
+<tr class="hd"><th>Riesgo</th><th>D&oacute;nde est&aacute; parado y qu&eacute; lo reduce</th></tr>
+<tr class="hi"><td class="l">El Concejo no acompa&ntilde;a <span class="tag m">Cr&iacute;tico</span></td>
+<td>Hacen falta trece votos y diez bloques se reparten veinticuatro bancas: nada se aprueba sin cuatro bloques de acuerdo. <b>Mitigaci&oacute;n:</b> el mecanismo est&aacute; dise&ntilde;ado para ser votable &mdash;no reforma la LOM, no pide facultades nuevas, no compite con el Concejo&mdash; y el primer proyecto, derogar los arts. 8 a 10, no le cuesta nada a ning&uacute;n bloque. Si aun as&iacute; no hay acuerdo, la rampa no arranca y se dice en el informe del 31 de marzo.</td></tr>
+<tr><td class="l">Zonas sin asociaci&oacute;n vecinal en condiciones de ejecutar</td>
+<td>El art&iacute;culo 132 exige una asociaci&oacute;n como parte contratante; si no la hay, la zona no puede ejecutar. <b>Mitigaci&oacute;n:</b> el Municipio convoca y acompa&ntilde;a la constituci&oacute;n (4.6), y mientras tanto la partida de esa zona se ejecuta por administraci&oacute;n, en esa zona. La priorizaci&oacute;n vecinal funciona igual: lo que se demora es la ejecuci&oacute;n directa.</td></tr>
+<tr><td class="l">Una comisi&oacute;n falla en el a&ntilde;o 1</td>
+<td>Es el a&ntilde;o en que el modelo se prueba y el que decide si contin&uacute;a. <b>Mitigaci&oacute;n:</b> la rampa empieza en 12,5% justamente para que un fracaso cueste un octavo y no la mitad; se interviene y se vuelve a constituir, con la partida retenida en la propia zona (4.6).</td></tr>
+<tr><td class="l">Captura de una comisi&oacute;n</td>
+<td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> un voto por persona, asamblea abierta con lista de asistentes publicada, rendici&oacute;n p&uacute;blica continua en la aplicaci&oacute;n, y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
+<tr class="hi"><td class="l">La percepci&oacute;n no se recupera</td>
+<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, este programa se financia por la opci&oacute;n 1 del 3.5 &mdash;reasignar partidas&mdash;, que es fiscalmente neutra y cuesta pol&iacute;ticamente. No hay una tercera v&iacute;a y no la vamos a inventar.</td></tr>
+<tr><td class="l">Los recursos propios crecen menos de 1% real</td>
+<td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.7). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
+<tr><td class="l">La coparticipaci&oacute;n se acelera</td>
+<td>El menos grave de los tres fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
+<tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
+<td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio; se declara.</td></tr>
+<tr><td class="l">El dato territorial resulta m&aacute;s caro de construir de lo previsto</td>
+<td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.5) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las otras siete medidas de transparencia no dependen de &eacute;l.</td></tr>
+</table>
+<p class="cap"><b>Nota:</b> tres de los nueve no tienen mitigaci&oacute;n propia y est&aacute; dicho en la
+fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
+
+<h2><span class="n">6.7</span>C&oacute;mo se audita todo esto</h2>
+<p class="tight">Cuatro condiciones que nos imponemos, y que hacen auditable el resto.</p>
+<ol class="n">
+<li><b>Las cifras de este documento son p&uacute;blicas y reproducibles.</b> El modelo fiscal, las series
+2010&ndash;2025, la zonificaci&oacute;n censal y los veinte gr&aacute;ficos se publican en un repositorio abierto al
+presentarse este programa, con las pruebas de validaci&oacute;n que los verifican. Cualquiera puede
+correrlos.</li>
+<li><b>Los l&iacute;mites est&aacute;n declarados donde aparecen.</b> Los datos de los otros 105 municipios
+vienen de un procesador de terceros y no fueron validados uno por uno; el cambio de nomenclador de
+funciones de 2025 hace incomparables buena parte de las series 2024&ndash;2025; el costo de financiamiento
+del Municipio no tiene dato p&uacute;blico. Las tres cosas est&aacute;n escritas en el cap&iacute;tulo que
+las usa, no en una nota al final.</li>
+<li><b>Cuatro hip&oacute;tesis contra la gesti&oacute;n actual se cayeron al contrastarlas, y est&aacute;n
+publicadas.</b> Que Lan&uacute;s administra mal las cuentas, que la Provincia castiga a San Isidro, que el
+d&eacute;ficit es nuevo y que esta gesti&oacute;n destruy&oacute; el presupuesto: las cuatro son falsas y
+el cap&iacute;tulo 2 explica por qu&eacute;. Publicarlas es la garant&iacute;a de que el resto pas&oacute;
+por el mismo filtro.</li>
+<li><b>La rendici&oacute;n tiene nombre y fecha.</b> Se publica un <b>Informe de cumplimiento del programa
+de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el valor
+alcanzado. Fecha fija y formato fijo, a prop&oacute;sito: &laquo;se publica&raquo; no se puede incumplir;
+un documento con nombre que no aparece el 31 de marzo, s&iacute;.</li>
+</ol>
+
+<h2><span class="n">6.8</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<ol class="n">
+<li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
+hoy permiten disolver una asociaci&oacute;n vecinal.</li>
+<li>A los cien d&iacute;as est&aacute;n publicadas las siete medidas de transparencia y presentada la
+ordenanza de la partida vecinal.</li>
+<li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
+anuales&mdash; la deciden los vecinos.</li>
+<li>Trece metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
+informe de cumplimiento cada 31 de marzo.</li>
+<li>Lo que depende de la Legislatura lo reclamamos y decimos que es un reclamo.</li>
+</ol>
+<div class="pull"><div class="plabel">Las mismas reglas para los dos</div><p>Auditamos un plan de gobierno para escribir &eacute;ste. El nuestro queda escrito, con
+las mismas reglas.</p></div>
+<div class="hairline"></div>
+<div class="note">
+<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Este cap&iacute;tulo no introduce datos nuevos.
+Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
+1, la auditor&iacute;a del plan vigente del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
+presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
+cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5.</p>
+<p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los
+360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los l&iacute;mites de
+localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 32 de 35</span></div></div></body></html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div>
+<h1>Anexo &middot; El articulado</h1>
+<div class="stand">Los cinco art&iacute;culos que hacen falta para que todo el cap&iacute;tulo 4 exista.
+Escritos, para que el Concejo tenga un texto y no una idea.</div>
+
+<div class="callout a">
+<div class="clabel">Borrador para revisi&oacute;n de asesor&iacute;a letrada</div>
+<p>Esto es un borrador de trabajo, no un proyecto presentado. Antes de ingresar al Concejo necesita
+revisi&oacute;n de un abogado municipalista: la redacci&oacute;n definitiva, los considerandos y la
+concordancia con el Digesto de San Isidro no est&aacute;n resueltos ac&aacute;.
+<b>Se publica igual porque un programa que promete una ordenanza y no muestra su texto est&aacute;
+pidiendo que le crean, que es exactamente lo que este documento dice no hacer.</b></p>
+</div>
+
+<h2>Art&iacute;culo 1 &mdash; Partida de obra vecinal</h2>
+<p>Cr&eacute;ase la Partida de Obra Vecinal, integrada por un porcentaje del cr&eacute;dito
+presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la siguiente escala anual:
+doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta
+y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La
+progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue
+ejecutado y rendido en su totalidad.</p>
+
+<h2>Art&iacute;culo 2 &mdash; Distribuci&oacute;n por zona</h2>
+<p>La Partida se distribuye entre las seis zonas del Partido en dos mitades iguales. La primera, en
+proporci&oacute;n directa a la poblaci&oacute;n en viviendas particulares de cada zona seg&uacute;n el
+&uacute;ltimo Censo Nacional. La segunda, en proporci&oacute;n al &Iacute;ndice de Necesidad, definido
+como el promedio simple de la participaci&oacute;n de cada zona en el total partidario de: hogares con
+necesidades b&aacute;sicas insatisfechas; hogares sin desag&uuml;e a red cloacal; hogares sin gas de red;
+y hogares en condiciones de hacinamiento. Los cuatro indicadores se computan en cantidad de hogares y no
+en porcentajes sobre la zona.</p>
+
+<h2>Art&iacute;culo 3 &mdash; Priorizaci&oacute;n y respuesta obligatoria</h2>
+<p>Cada comisi&oacute;n zonal definir&aacute;, en asamblea abierta a todo residente de la zona mayor de
+diecis&eacute;is (16) a&ntilde;os, con un voto por persona y n&oacute;mina de asistentes publicada, el
+destino de la partida correspondiente a su zona. El Departamento Ejecutivo deber&aacute;
+<b>responder por escrito, en forma fundada y dentro de los treinta (30) d&iacute;as corridos</b>, a cada
+priorizaci&oacute;n recibida, y publicar la respuesta. El silencio no suple la respuesta.</p>
+
+<h2>Art&iacute;culo 4 &mdash; Informaci&oacute;n presupuestaria por zona</h2>
+<p>El Departamento Ejecutivo remitir&aacute; a cada comisi&oacute;n zonal, con periodicidad trimestral, la
+ejecuci&oacute;n presupuestaria correspondiente a su zona, y la publicar&aacute; en el portal municipal.
+La imputaci&oacute;n con referencia territorial deber&aacute; estar operativa antes de la
+finalizaci&oacute;n del mandato.</p>
+
+<h2>Art&iacute;culo 5 &mdash; Afectaci&oacute;n del recurso</h2>
+<p>La Partida de Obra Vecinal se constituye con recursos afectados en los t&eacute;rminos del
+art&iacute;culo 119 del Decreto-Ley 6769/58, no pudiendo ser reasignada a otro destino dentro del
+ejercicio. Los saldos no ejecutados de una zona se acumular&aacute;n a la partida de esa misma zona en el
+ejercicio siguiente.</p>
+
+<div class="hairline"></div>
+<h2>Lo que este articulado deliberadamente no dice</h2>
+<div class="cols">
+<p><b>No declara vinculante el voto vecinal.</b> La Constituci&oacute;n provincial no lo permite y el veto
+de Pinamar de diciembre de 2025 lo confirm&oacute;. Lo que se vuelve jur&iacute;dicamente obligatorio es
+la partida y la respuesta, no el proyecto votado. <span class="sg">De ah&iacute; depende que esta
+ordenanza sobreviva a un veto.</span></p>
+<p><b>No crea un &oacute;rgano nuevo.</b> No hay junta, comit&eacute; ni consejo. Las comisiones zonales
+son las asociaciones vecinales que ya existen, reconocidas por la propia Ordenanza 6045.</p>
+<p><b>No regula la ejecuci&oacute;n de la obra.</b> No hace falta: los art&iacute;culos 60 y 132 de la Ley
+Org&aacute;nica ya establecen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el municipio, y
+con qu&eacute; requisito de adhesi&oacute;n.</p>
+<p><b>Y no deroga nada.</b> La derogaci&oacute;n de los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045 va
+en un proyecto separado, que es el primero que entra al Concejo. Son dos discusiones distintas y
+conviene que se voten por separado.</p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 34 de 35</span></div></div></body></html>

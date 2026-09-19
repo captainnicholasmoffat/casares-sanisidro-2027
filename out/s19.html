@@ -1,0 +1,934 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=""><figcaption>Escuela de n&aacute;utica en el bajo. Ilustraci&oacute;n.</figcaption></figure>
+<h1><span class="n">5</span>Qu&eacute; hacemos en cada &aacute;rea</h1>
+<div class="stand">Cada &aacute;rea lleva una de cuatro etiquetas &mdash;fondos nuevos, reasignaci&oacute;n, gesti&oacute;n o gratis&mdash; que dice de d&oacute;nde sale lo que propone. Un programa que promete fondos nuevos en todo es un programa que no ley&oacute; el presupuesto: el margen tiene un techo y est&aacute; declarado en el cap&iacute;tulo 3.</div>
+
+<h2><span class="n">5.1</span>C&oacute;mo leer este cap&iacute;tulo</h2>
+<div class="cols">
+<p>Un intendente gobierna todo: salud, seguridad, educaci&oacute;n, transporte, ambiente, obras,
+comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacute;amos.</p>
+<p>Pero no todas las propuestas cuestan lo mismo, y <span class="sg">decimos cu&aacute;l cuesta
+qu&eacute;</span>. Cada secci&oacute;n est&aacute; marcada con una de estas cuatro etiquetas.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;37</div><div class="extitle">Las cuatro etiquetas, y qu&eacute; significa cada una</div></div>
+<table>
+<colgroup><col style="width:130pt"><col></colgroup>
+<tr class="hd"><th>Etiqueta</th><th class="r">Qu&eacute; significa</th></tr>
+<tr><td class="l">Fondos nuevos</td><td class="n">Requiere fondos adicionales. Est&aacute; costeado en el cap&iacute;tulo 3.</td></tr>
+<tr><td class="l">Reasignaci&oacute;n</td><td class="n">Se financia moviendo fondos ya presupuestados, sin aumentar el gasto total. Se declara de d&oacute;nde salen.</td></tr>
+<tr><td class="l">Gesti&oacute;n</td><td class="n">No cuesta dinero. Cambia c&oacute;mo se administra lo que ya se gasta.</td></tr>
+<tr><td class="l">Gratis</td><td class="n">Cuesta cero. Publicar, informar, ordenar.</td></tr>
+</table>
+<div class="pull"><p>Un programa que promete fondos nuevos en todo es un programa que no ley&oacute; el
+presupuesto. El margen tiene un techo y est&aacute; declarado en el cap&iacute;tulo 3: las dos propuestas
+grandes ya ocupan el 41,4% del gasto flexible.</p></div>
+
+<h2><span class="n">5.2</span>D&oacute;nde va hoy cada peso</h2>
+<p class="tight">Antes de proponer, conviene ver el punto de partida. Gasto devengado 2025, por
+funci&oacute;n:</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;38</div><div class="extitle">Las cuatro funciones que discute este cap&iacute;tulo</div></div>
+<table>
+<colgroup><col style="width:200pt"><col><col><col></colgroup>
+<tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado</th><th class="r">%</th><th class="r">Por habitante</th></tr>
+<tr><td class="l">Salud</td><td class="n">78.217 M</td><td class="n">24,1%</td><td class="n">263.106 $</td></tr>
+<tr><td class="l">Urbanismo</td><td class="n">70.310 M</td><td class="n">21,7%</td><td class="n">236.507 $</td></tr>
+<tr><td class="l">Agua potable y alcantarillado</td><td class="n">3.320 M</td><td class="n">1,0%</td><td class="n">11.167 $</td></tr>
+<tr class="hi"><td class="l">Ecolog&iacute;a y medio ambiente</td><td class="n"><b>1.410 M</b></td><td class="n"><b>0,4%</b></td><td class="n"><b>4.743 $</b></td></tr>
+</table>
+<p class="cap"><b>Nota:</b> &laquo;Urbanismo&raquo; y &laquo;Vivienda y urbanismo&raquo; son dos funciones
+distintas del nomenclador del Municipio, no un error de esta tabla. Se conservan con su nombre oficial.</p>
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;39</div><div class="extitle">Ecolog&iacute;a y agua potable juntas no llegan al 1,5% del presupuesto</div><div class="exsub">Gasto por funci&oacute;n, ejercicio 2025. Destacadas, las dos funciones que este programa se&ntilde;ala como desatendidas.</div><div class="chart c80"><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="550.43375pt" height="216.308pt" viewBox="0 0 550.43375 216.308" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:30.269228</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 216.308 
+L 550.43375 216.308 
+L 550.43375 0 
+L 0 0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 107.24375 195.48 
+L 548.99375 195.48 
+L 548.99375 1.44 
+L 107.24375 1.44 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 107.24375 195.48 
+L 107.24375 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="107.24375" y="203.494969" transform="rotate(-0 107.24375 203.494969)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 189.049306 195.48 
+L 189.049306 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="189.049306" y="203.494969" transform="rotate(-0 189.049306 203.494969)">20</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 270.854861 195.48 
+L 270.854861 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="270.854861" y="203.494969" transform="rotate(-0 270.854861 203.494969)">40</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 352.660417 195.48 
+L 352.660417 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="352.660417" y="203.494969" transform="rotate(-0 352.660417 203.494969)">60</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 434.465972 195.48 
+L 434.465972 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="434.465972" y="203.494969" transform="rotate(-0 434.465972 203.494969)">80</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 516.271528 195.48 
+L 516.271528 1.44 
+" clip-path="url(#p700bc5df07)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="516.271528" y="203.494969" transform="rotate(-0 516.271528 203.494969)">100</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 6.2px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="328.11875" y="213.578594" transform="rotate(-0 328.11875 213.578594)">miles de millones de pesos devengados en 2025</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="15.672736" transform="rotate(-0 104.24375 15.672736)">Salud</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="25.166816" transform="rotate(-0 104.24375 25.166816)">Urbanismo</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="34.660896" transform="rotate(-0 104.24375 34.660896)">Transporte</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="44.294975" transform="rotate(-0 104.24375 44.294975)">Dirección superior ejecutiva</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="53.649055" transform="rotate(-0 104.24375 53.649055)">Seguridad interna</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="63.283135" transform="rotate(-0 104.24375 63.283135)">Servicios de la deuda pública</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19"/>
+     <g id="text_14">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="72.777214" transform="rotate(-0 104.24375 72.777214)">Educación y cultura</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20"/>
+     <g id="text_15">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="82.131294" transform="rotate(-0 104.24375 82.131294)">Vivienda y urbanismo</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21"/>
+     <g id="text_16">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="91.765373" transform="rotate(-0 104.24375 91.765373)">Ciencia y técnica</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_22"/>
+     <g id="text_17">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="101.259453" transform="rotate(-0 104.24375 101.259453)">Promoción y asistencia social</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_23"/>
+     <g id="text_18">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="110.613533" transform="rotate(-0 104.24375 110.613533)">Legislativa</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_24"/>
+     <g id="text_19">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="120.107612" transform="rotate(-0 104.24375 120.107612)">Relaciones con la comunidad</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_25"/>
+     <g id="text_20">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="129.601692" transform="rotate(-0 104.24375 129.601692)">Agua potable y alcantarillado</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_26"/>
+     <g id="text_21">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="139.095772" transform="rotate(-0 104.24375 139.095772)">Administración fiscal</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_27"/>
+     <g id="text_22">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="148.589851" transform="rotate(-0 104.24375 148.589851)">Comercio, turismo y otros</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_28"/>
+     <g id="text_23">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="158.223931" transform="rotate(-0 104.24375 158.223931)">Ecología y medio ambiente</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_29"/>
+     <g id="text_24">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="167.578011" transform="rotate(-0 104.24375 167.578011)">Judicial</text>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_30"/>
+     <g id="text_25">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="177.21209" transform="rotate(-0 104.24375 177.21209)">Control de la gestión pública</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_31"/>
+     <g id="text_26">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.24375" y="186.56617" transform="rotate(-0 104.24375 186.56617)">Trabajo</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 107.24375 15.766566 
+L 427.173007 15.766566 
+L 427.173007 10.26 
+L 107.24375 10.26 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 107.24375 25.260646 
+L 394.831181 25.260646 
+L 394.831181 19.75408 
+L 107.24375 19.75408 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 107.24375 34.754726 
+L 255.949889 34.754726 
+L 255.949889 29.248159 
+L 107.24375 29.248159 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 107.24375 44.248805 
+L 240.390472 44.248805 
+L 240.390472 38.742239 
+L 107.24375 38.742239 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 107.24375 53.742885 
+L 239.956903 53.742885 
+L 239.956903 48.236319 
+L 107.24375 48.236319 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 107.24375 63.236964 
+L 168.180708 63.236964 
+L 168.180708 57.730398 
+L 107.24375 57.730398 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 107.24375 72.731044 
+L 164.450375 72.731044 
+L 164.450375 67.224478 
+L 107.24375 67.224478 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 107.24375 82.225124 
+L 157.701417 82.225124 
+L 157.701417 76.718558 
+L 107.24375 76.718558 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 107.24375 91.719203 
+L 140.599965 91.719203 
+L 140.599965 86.212637 
+L 107.24375 86.212637 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 107.24375 101.213283 
+L 131.433653 101.213283 
+L 131.433653 95.706717 
+L 107.24375 95.706717 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 107.24375 110.707363 
+L 125.94041 110.707363 
+L 125.94041 105.200797 
+L 107.24375 105.200797 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 107.24375 120.201442 
+L 123.768472 120.201442 
+L 123.768472 114.694876 
+L 107.24375 114.694876 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 107.24375 129.695522 
+L 120.823472 129.695522 
+L 120.823472 124.188956 
+L 107.24375 124.188956 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 107.24375 139.189602 
+L 116.410063 139.189602 
+L 116.410063 133.683036 
+L 107.24375 133.683036 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 107.24375 148.683681 
+L 116.307806 148.683681 
+L 116.307806 143.177115 
+L 107.24375 143.177115 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 107.24375 158.177761 
+L 113.011042 158.177761 
+L 113.011042 152.671195 
+L 107.24375 152.671195 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 107.24375 167.671841 
+L 110.217382 167.671841 
+L 110.217382 162.165274 
+L 107.24375 162.165274 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 107.24375 177.16592 
+L 108.335854 177.16592 
+L 108.335854 171.659354 
+L 107.24375 171.659354 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 107.24375 186.66 
+L 107.939097 186.66 
+L 107.939097 181.153434 
+L 107.24375 181.153434 
+z
+" clip-path="url(#p700bc5df07)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 107.24375 195.48 
+L 107.24375 1.44 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 107.24375 195.48 
+L 548.99375 195.48 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="433.717451" y="14.889658" transform="rotate(-0 433.717451 14.889658)">78.217 M   24,1%</text>
+   </g>
+   <g id="text_28">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="401.375625" y="24.383738" transform="rotate(-0 401.375625 24.383738)">70.310 M   21,7%</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="262.494333" y="33.877817" transform="rotate(-0 262.494333 33.877817)">36.356 M   11,2%</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="246.934917" y="43.371897" transform="rotate(-0 246.934917 43.371897)">32.552 M   10,0%</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="246.501347" y="52.865977" transform="rotate(-0 246.501347 52.865977)">32.446 M   10,0%</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="174.725153" y="62.360056" transform="rotate(-0 174.725153 62.360056)">14.898 M   4,6%</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="170.994819" y="71.854136" transform="rotate(-0 170.994819 71.854136)">13.986 M   4,3%</text>
+   </g>
+   <g id="text_34">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="164.245861" y="81.348216" transform="rotate(-0 164.245861 81.348216)">12.336 M   3,8%</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="147.14441" y="90.842295" transform="rotate(-0 147.14441 90.842295)">8.155 M   2,5%</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="137.978097" y="100.336375" transform="rotate(-0 137.978097 100.336375)">5.914 M   1,8%</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="132.484854" y="109.830455" transform="rotate(-0 132.484854 109.830455)">4.571 M   1,4%</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="130.312917" y="119.324534" transform="rotate(-0 130.312917 119.324534)">4.040 M   1,2%</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #7c2e23" x="127.367917" y="128.818614" transform="rotate(-0 127.367917 128.818614)">3.320 M   1,0%</text>
+   </g>
+   <g id="text_40">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="122.954507" y="138.312694" transform="rotate(-0 122.954507 138.312694)">2.241 M   0,7%</text>
+   </g>
+   <g id="text_41">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="122.85225" y="147.806773" transform="rotate(-0 122.85225 147.806773)">2.216 M   0,7%</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #7c2e23" x="119.555486" y="157.300853" transform="rotate(-0 119.555486 157.300853)">1.410 M   0,4%</text>
+   </g>
+   <g id="text_43">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="116.761826" y="166.794933" transform="rotate(-0 116.761826 166.794933)">727 M   0,2%</text>
+   </g>
+   <g id="text_44">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="114.880299" y="176.289012" transform="rotate(-0 114.880299 176.289012)">267 M   0,1%</text>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="114.483542" y="185.783092" transform="rotate(-0 114.483542 185.783092)">170 M   0,1%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p700bc5df07">
+   <rect x="107.24375" y="1.44" width="441.75" height="194.04"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> Municipio de San Isidro, ejecuci&oacute;n presupuestaria 2025, informe anual. Gasto devengado.</p></div>
+<div class="cols">
+<p><span class="sg">San Isidro es, sobre todo, un municipio de salud y de obra.</span> Casi la mitad del
+presupuesto son esas dos funciones. Cualquier propuesta seria tiene que partir de ah&iacute;, no de una
+lista de deseos.</p>
+<p><b>Y el gasto se movi&oacute; en una direcci&oacute;n clara.</b> El plan de gobierno del intendente
+declara la Seguridad Ciudadana como Prioridad I. En un a&ntilde;o, la seguridad creci&oacute;
+<b>34,8% en t&eacute;rminos reales</b>: pas&oacute; de 27.156 a 36.605 millones de pesos constantes.
+<span class="sg">No es una acusaci&oacute;n: es su plan, ejecutado.</span></p>
+</div>
+<div class="callout a">
+<div class="clabel">Por qu&eacute; la comparaci&oacute;n interanual tiene s&oacute;lo cuatro filas</div>
+<p><b>En 2025 el Municipio cambi&oacute; su nomenclador de funciones.</b> En 2024 clasific&oacute; el
+gasto en catorce funciones; en 2025, en veinte. Aparecieron siete que antes no exist&iacute;an y
+desaparecieron dos. Eso hace incomparables buena parte de las series 2024&ndash;2025: cuando una
+funci&oacute;n cae, no se puede distinguir un recorte de un desdoblamiento hacia una funci&oacute;n nueva.</p>
+<p>Ese cambio de nomenclador es, en s&iacute; mismo, un hallazgo: cualquier comparaci&oacute;n
+2024&ndash;2025 por funci&oacute;n que circule sin declararlo est&aacute; midiendo dos cosas distintas.</p>
+</div>
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;40</div><div class="extitle">Servicios de la deuda creci&oacute; 36,3% real en un a&ntilde;o; promoci&oacute;n y asistencia social cay&oacute; 32,5%</div><div class="exsub">Variaci&oacute;n real del gasto devengado por funci&oacute;n, en pesos constantes de diciembre de 2025.</div><div class="chart "><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="550.227031pt" height="150.867563pt" viewBox="0 0 550.227031 150.867563" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:32.488781</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 150.867563 
+L 550.227031 150.867563 
+L 550.227031 0 
+L 0 0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 107.037031 140.04 
+L 548.787031 140.04 
+L 548.787031 1.44 
+L 107.037031 1.44 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 135.23384 140.04 
+L 135.23384 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="135.23384" y="148.054969" transform="rotate(-0 135.23384 148.054969)">-40%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 229.223201 140.04 
+L 229.223201 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="229.223201" y="148.054969" transform="rotate(-0 229.223201 148.054969)">-20%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 323.212563 140.04 
+L 323.212563 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="323.212563" y="148.054969" transform="rotate(-0 323.212563 148.054969)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 417.201925 140.04 
+L 417.201925 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="417.201925" y="148.054969" transform="rotate(-0 417.201925 148.054969)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 511.191287 140.04 
+L 511.191287 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="511.191287" y="148.054969" transform="rotate(-0 511.191287 148.054969)">40%</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="14.798194" transform="rotate(-0 104.037031 14.798194)">Servicios de la deuda pública</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="29.343509" transform="rotate(-0 104.037031 29.343509)">Seguridad interna</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="44.168824" transform="rotate(-0 104.037031 44.168824)">Ecología y medio ambiente</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="58.714138" transform="rotate(-0 104.037031 58.714138)">Salud</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="73.399453" transform="rotate(-0 104.037031 73.399453)">Legislativa</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="88.224768" transform="rotate(-0 104.037031 88.224768)">Educación y cultura</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="102.770082" transform="rotate(-0 104.037031 102.770082)">Urbanismo</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="117.595397" transform="rotate(-0 104.037031 117.595397)">Dirección superior ejecutiva</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19"/>
+     <g id="text_14">
+      <text style="font-size: 7px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="104.037031" y="132.280712" transform="rotate(-0 104.037031 132.280712)">Promoción y asistencia social</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 323.212563 16.257483 
+L 493.803255 16.257483 
+L 493.803255 7.74 
+L 323.212563 7.74 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 323.212563 30.942797 
+L 486.754053 30.942797 
+L 486.754053 22.425315 
+L 323.212563 22.425315 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 323.212563 45.628112 
+L 431.770276 45.628112 
+L 431.770276 37.110629 
+L 323.212563 37.110629 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 323.212563 60.313427 
+L 361.748201 60.313427 
+L 361.748201 51.795944 
+L 323.212563 51.795944 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 323.212563 74.998741 
+L 297.365489 74.998741 
+L 297.365489 66.481259 
+L 323.212563 66.481259 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 323.212563 89.684056 
+L 268.698733 89.684056 
+L 268.698733 81.166573 
+L 323.212563 81.166573 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 323.212563 104.369371 
+L 222.173999 104.369371 
+L 222.173999 95.851888 
+L 323.212563 95.851888 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 323.212563 119.054685 
+L 188.337829 119.054685 
+L 188.337829 110.537203 
+L 323.212563 110.537203 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 323.212563 133.74 
+L 170.47985 133.74 
+L 170.47985 125.222517 
+L 323.212563 125.222517 
+z
+" clip-path="url(#pf31c393d42)" style="fill: #7c2e23"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 323.212563 140.04 
+L 323.212563 1.44 
+" clip-path="url(#pf31c393d42)" style="fill: none; stroke: #6e625a; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 107.037031 140.04 
+L 107.037031 1.44 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 107.037031 140.04 
+L 548.787031 140.04 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="499.912563" y="13.985491" transform="rotate(-0 499.912563 13.985491)">+36,3%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="492.863361" y="28.670806" transform="rotate(-0 492.863361 28.670806)">+34,8%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="437.879584" y="43.356121" transform="rotate(-0 437.879584 43.356121)">+23,1%</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="367.85751" y="58.041435" transform="rotate(-0 367.85751 58.041435)">+8,2%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: end; fill: #2a211c" x="291.25618" y="72.72675" transform="rotate(-0 291.25618 72.72675)">-5,5%</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: end; fill: #2a211c" x="262.589425" y="87.412065" transform="rotate(-0 262.589425 87.412065)">-11,6%</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: end; fill: #2a211c" x="216.064691" y="102.097379" transform="rotate(-0 216.064691 102.097379)">-21,5%</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: end; fill: #2a211c" x="182.228521" y="116.782694" transform="rotate(-0 182.228521 116.782694)">-28,7%</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: end; fill: #2a211c" x="164.370542" y="131.468009" transform="rotate(-0 164.370542 131.468009)">-32,5%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf31c393d42">
+   <rect x="107.037031" y="1.44" width="441.75" height="138.6"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la ejecuci&oacute;n presupuestaria trimestral del Municipio, informes anuales 2024 y 2025.</p><p class="cap"><b>Nota:</b> Se excluyen Transporte, Comercio y Agua potable: cambian de contenido entre los dos a&ntilde;os por reclasificaci&oacute;n contable, no porque haya cambiado el gasto.</p></div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 21 de 35</span></div></div></body></html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h3>Ense&ntilde;ar IA sin acceso a IA es ense&ntilde;ar oficios sin herramientas</h3>
+<div class="cols">
+<p><b>El que puede pagar una suscripci&oacute;n aprende y el que no, mira.</b> Eso reproduce adentro del
+aula la desigualdad que el cap&iacute;tulo 1 documenta afuera, y la vuelve peor: el que ya est&aacute;
+atr&aacute;s sale del curso sin haber tocado la herramienta.</p>
+<p><b>El acceso se trata como infraestructura, no como un beneficio.</b>
+<span class="sg">Es tan importante como el agua y como internet</span>: sin eso, lo que se dicta es una
+clase sobre algo, no una formaci&oacute;n en algo.</p>
+<p><b>Dos v&iacute;as, y las dos son baratas.</b> Centros con equipamiento en las sedes vecinales y
+culturales que ya existen, para quien no tiene computadora. Y escritorio remoto en la nube, para que una
+m&aacute;quina vieja alcance: el trabajo ocurre del otro lado y en la casa s&oacute;lo hace falta
+pantalla y conexi&oacute;n.</p>
+<p><b>Se licita por capacidad y costo, y lo eval&uacute;an las universidades del partido.</b> Este
+documento no nombra proveedores: cambian de a&ntilde;o en a&ntilde;o y la propuesta envejecer&iacute;a
+con ellos. La implementaci&oacute;n y el soporte los toman empresas del partido, con el mismo criterio
+de proximidad del resto del programa.</p>
+<p><b>Y hay un paso previo que hay que hacer antes de prometer nada:</b> medir la conectividad en La Cava
+y en Boulogne, que hoy no est&aacute; relevada. <span class="sg">La secci&oacute;n 5.4 lo dice del lado
+de la vivienda y ac&aacute; vale del lado del trabajo</span>: sin ese dato, un plan de acceso es una
+suposici&oacute;n.</p>
+</div>
+
+<div class="callout a">
+<div class="clabel">Lo que la inteligencia artificial le hace al empleo, dicho sin adornos</div>
+<p><b>No desaparecen los puestos: sube la vara de entrada.</b> Saber usar estas herramientas pas&oacute;
+de ventaja a requisito. Lo que se destruye en el medio es lo que no se adapt&oacute;, no la
+ocupaci&oacute;n. Y pasa r&aacute;pido, en a&ntilde;os y no en d&eacute;cadas, que es lo que vuelve
+urgente formar ahora.</p>
+<p><b>La otra mitad es que la demanda crece</b>, porque aparecieron trabajos que antes no cerraban. Un
+municipio desarrollando su propia plataforma era impensable hace cinco a&ntilde;os; una
+verduler&iacute;a con su aplicaci&oacute;n, tambi&eacute;n.</p>
+<p><b>Y el perfil cambi&oacute;, que es lo que le sirve a este programa.</b> Antes programar exig&iacute;a
+una formaci&oacute;n larga que seleccionaba un tipo de persona y la alejaba del negocio. Ahora el cuello
+de botella es entender el problema y explicarlo, no la sintaxis. <span class="sg">Eso abre la puerta a
+quien antes quedaba afuera por el filtro t&eacute;cnico</span>, que es exactamente a quien este programa
+forma.</p>
+<p><b>Por eso el egresado no sale a competir por un puesto de entrada.</b> Sale con la plataforma del
+cap&iacute;tulo 4 en producci&oacute;n, los m&oacute;dulos que construy&oacute; funcionando, las
+auditor&iacute;as hechas y el t&iacute;tulo de la UNSO. <span class="sg">El modelo es aprender
+construyendo</span>, no formarse primero y trabajar despu&eacute;s.</p>
+</div>
+
+<div class="cols">
+<p><b>Por qu&eacute; estas tres y no una lista m&aacute;s larga.</b> Las tres tienen la misma
+propiedad: <span class="sg">se apoyan en algo que ya existe y que hoy no se usa</span>. El Centro de
+Formaci&oacute;n 404 funciona y se puede replicar. La partida de obra ya se ejecuta y puede emplear
+gente del barrio en vez de irse a una contratista. Y la intermediaci&oacute;n no requiere estructura
+nueva: requiere medir y publicar algo que el Municipio ya hace de manera informal.</p>
+<p><b>La segunda es la m&aacute;s grande y no sale de esta partida.</b> Los 28.908 millones del
+cap&iacute;tulo 4, ejecutados por cooperativas de vecinos, son pol&iacute;tica de empleo financiada con
+la partida de obra. Es casi cuatro veces el programa completo de empleo y vivienda, y no le cuesta un
+peso adicional al presupuesto. Por eso el cap&iacute;tulo 4 y este cap&iacute;tulo son la misma
+propuesta mirada desde dos lados.</p>
+<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> Va escrito ac&aacute; y con n&uacute;meros,
+porque un total sin apertura no se puede discutir ni auditar. El cuadro que sigue lo abre, y la
+ejecuci&oacute;n se publica por programa para que el reparto sea discutible cada a&ntilde;o y no quede
+en un anexo.</p>
+<p><b>Y la vivienda es, sobre todo, servicios b&aacute;sicos.</b> Este programa no promete construir
+casas. Promete cloacas, gas de red, desag&uuml;es e iluminaci&oacute;n donde faltan, que es lo que el
+cap&iacute;tulo 1 mide y lo que el art&iacute;culo 132 permite ejecutar a una asociaci&oacute;n vecinal.
+La secci&oacute;n siguiente lo desarrolla.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;42</div><div class="extitle">Los 7.730,9 millones, abiertos</div><div class="exsub">Montos anuales en r&eacute;gimen, en pesos de diciembre de 2025. El reparto es una decisi&oacute;n de este programa, no un c&aacute;lculo: lo que sigue explica con qu&eacute; criterio.</div></div>
+<table>
+<colgroup><col style="width:215pt"><col><col></colgroup>
+<tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
+<tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, formadas y acompa&ntilde;adas hasta el empleo</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Anal&iacute;tica de seguridad, habilitaciones, salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
+<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">&nbsp;</td></tr>
+<tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
+</table>
+<p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones anuales por
+persona; en cuatro a&ntilde;os son 3.711. Los dos n&uacute;meros se redondean desde la misma cifra.
+<span class="tag m">Estimado</span></p>
+<div class="cols">
+<p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
+es que la cloaca y el gas de red ya se financian con la obra vecinal del cap&iacute;tulo 4:
+<span class="sg">sostener vivienda en dos tercios ser&iacute;a pagar dos veces lo mismo</span>. Lo que
+la partida de vivienda cubre es lo que la obra vecinal no alcanza.</p>
+<p><b>Y los tres millones por persona son la propuesta, no un supuesto t&iacute;mido.</b> El resto
+promete miles de egresados porque presupuesta a los docentes con lo que se les paga hoy, y por eso el
+certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor formadas, con
+t&iacute;tulo que sirve afuera del municipio.</span> Con ese n&uacute;mero entran equipamiento, acceso a
+las herramientas, el instructor que acompa&ntilde;a hasta el empleo y la certificaci&oacute;n de la
+UNSO.</p>
+<p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 1</b>, el mismo que
+reparte la partida vecinal: <b>Boulogne 315, B&eacute;ccar 307, Mart&iacute;nez 98, San Isidro 96, Villa
+Adelina 94 y Acassuso 19</b>. Cinco sedes fijas y Acassuso itinerante, porque diecinueve personas al
+a&ntilde;o no justifican un edificio. El redondeo del &iacute;ndice suma una vacante m&aacute;s que las
+928 que el presupuesto compra.</p>
+<p><b>Y es el n&uacute;mero que m&aacute;s mueve todo, as&iacute; que conviene decirlo:</b> si el costo
+por persona resulta menor, se forma a m&aacute;s gente con la misma plata. Lo que no se hace es al
+rev&eacute;s &mdash;bajar el costo para poder anunciar m&aacute;s egresados&mdash;, que es exactamente
+lo que produce certificados que nadie mira.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que dice la evidencia, incluida la parte que nos incomoda</div>
+<p><b>La capacitaci&oacute;n es lo que tiene m&aacute;s probabilidad de funcionar.</b> Las evaluaciones
+de impacto de pol&iacute;ticas activas de empleo muestran efectos positivos para la capacitaci&oacute;n,
+mientras que <b>los subsidios salariales y los programas de empleo y obra p&uacute;blica muestran
+impactos no positivos</b> sobre el empleo o el ingreso posteriores. Por eso la formaci&oacute;n se lleva
+el 60% de la partida de empleo y no al rev&eacute;s.</p>
+<p><b>Y los n&uacute;meros que se anuncian suelen ser el doble de los reales.</b> El Proyecto Joven de
+la Argentina reportaba 40% de mejora en el empleo de sus egresados; medido contra un grupo de control,
+la mejora cay&oacute; al 23%. <span class="sg">Es la raz&oacute;n por la que la meta del cap&iacute;tulo 6
+se mide en personas que consiguieron trabajo y no en cursos dictados.</span></p>
+<p><b>Lo que s&iacute; funciona en la regi&oacute;n combina las dos cosas:</b> capacitaci&oacute;n
+m&aacute;s experiencia laboral real en empresas, con un instructor que vincula al egresado con el
+empleador. Es exactamente este modelo, y es por eso que la intermediaci&oacute;n no es una oficina
+aparte.</p>
+<p><b>Y la parte que nos incomoda, que va igual.</b> Ese mismo hallazgo pone en duda los programas de
+empleo por obra p&uacute;blica, y el cap&iacute;tulo 4 dice que la obra vecinal es pol&iacute;tica de
+empleo. <span class="sg">La diferencia es que ac&aacute; no se crea trabajo para ocupar gente: se hace
+una obra que hace falta igual, y se decide qui&eacute;n la ejecuta.</span> No es el mismo instrumento,
+pero la advertencia queda escrita para que nadie la escriba por nosotros.</p>
+</div>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=""><figcaption>Formaci&oacute;n laboral. Ilustraci&oacute;n.</figcaption></figure>
+
+<h2><span class="n">5.4</span>Vivienda y servicios b&aacute;sicos
+<span class="tag">Fondos nuevos</span> <span class="tag v">Reasignaci&oacute;n</span></h2>
+<div class="cols">
+<p><b>Hoy:</b> Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado,
+3.320 millones, el 1,0%.</p>
+<p><b>El problema, medido:</b> 6.488 hogares sin cloacas. <b>25.165 sin gas de red</b>, de los cuales
+<b>15.168 &mdash;el 60%&mdash; est&aacute;n en Boulogne y B&eacute;ccar</b>. 8.569 con hacinamiento.</p>
+</div>
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;43</div><div class="extitle">25.165 hogares de San Isidro cocinan sin gas de red</div><div class="exsub">Boulogne y B&eacute;ccar concentran 15.168, el 60,3% del total del partido.</div><div class="chart "><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="476.525pt" height="130.538119pt" viewBox="0 0 476.525 130.538119" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:30.339058</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 130.538119 
+L 476.525 130.538119 
+L 476.525 0 
+L 0 0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 33.335 112.32 
+L 475.085 112.32 
+L 475.085 1.44 
+L 33.335 1.44 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="73.638548" y="120.334969" transform="rotate(-0 73.638548 120.334969)">Béccar</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; fill: #6e625a" transform="translate(130.339598 120.334969)">Boulogne</text>
+      <text style="font-size: 6.6px; font-family: 'Inter'; fill: #6e625a" transform="translate(133.040957 127.725525)">Sur Mer</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="218.09571" y="120.334969" transform="rotate(-0 218.09571 120.334969)">Martínez</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="290.32429" y="120.334969" transform="rotate(-0 290.32429 120.334969)">San Isidro</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; fill: #6e625a" transform="translate(355.59709 120.334969)">Villa</text>
+      <text style="font-size: 6.6px; font-family: 'Inter'; fill: #6e625a" transform="translate(350.280481 127.725525)">Adelina</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="434.781452" y="120.334969" transform="rotate(-0 434.781452 120.334969)">Acassuso</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 33.335 112.32 
+L 475.085 112.32 
+" clip-path="url(#p1854fbfebb)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_7">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="30.335" y="114.827484" transform="rotate(-0 30.335 114.827484)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 33.335 89.22 
+L 475.085 89.22 
+" clip-path="url(#p1854fbfebb)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_8">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="30.335" y="91.727484" transform="rotate(-0 30.335 91.727484)">2.000</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 33.335 66.12 
+L 475.085 66.12 
+" clip-path="url(#p1854fbfebb)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="30.335" y="68.627484" transform="rotate(-0 30.335 68.627484)">4.000</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 33.335 43.02 
+L 475.085 43.02 
+" clip-path="url(#p1854fbfebb)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_10">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="30.335" y="45.527484" transform="rotate(-0 30.335 45.527484)">6.000</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 33.335 19.92 
+L 475.085 19.92 
+" clip-path="url(#p1854fbfebb)" style="fill: none; stroke: #d9cdba; stroke-opacity: 0.85; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="30.335" y="22.427484" transform="rotate(-0 30.335 22.427484)">8.000</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 6.2px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="6.151031" y="56.88" transform="rotate(-90 6.151031 56.88)">hogares</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 53.414545 112.32 
+L 93.862551 112.32 
+L 93.862551 17.36745 
+L 53.414545 17.36745 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 125.643126 112.32 
+L 166.091131 112.32 
+L 166.091131 32.08215 
+L 125.643126 32.08215 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 197.871707 112.32 
+L 238.319712 112.32 
+L 238.319712 68.3607 
+L 197.871707 68.3607 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 270.100288 112.32 
+L 310.548293 112.32 
+L 310.548293 75.11745 
+L 270.100288 75.11745 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 342.328869 112.32 
+L 382.776874 112.32 
+L 382.776874 88.8273 
+L 342.328869 88.8273 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 414.557449 112.32 
+L 455.005455 112.32 
+L 455.005455 101.5092 
+L 414.557449 101.5092 
+z
+" clip-path="url(#p1854fbfebb)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 33.335 112.32 
+L 33.335 1.44 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 33.335 112.32 
+L 475.085 112.32 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="73.638548" y="13.791075" transform="rotate(-0 73.638548 13.791075)">8.221</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="145.867129" y="28.505775" transform="rotate(-0 145.867129 28.505775)">6.947</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="218.09571" y="64.784325" transform="rotate(-0 218.09571 64.784325)">3.806</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="290.32429" y="71.541075" transform="rotate(-0 290.32429 71.541075)">3.221</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="362.552871" y="85.250925" transform="rotate(-0 362.552871 85.250925)">2.034</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="434.781452" y="97.932825" transform="rotate(-0 434.781452 97.932825)">936</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1854fbfebb">
+   <rect x="33.335" y="1.44" width="441.75" height="110.88"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.</p><p class="cap"><b>Nota:</b> En cantidad de hogares, no en porcentaje: un porcentaje chico sobre una zona grande sigue siendo mucha gente.</p></div>
+<h3>La cuarta carencia, la que el Censo no mide</h3>
+<div class="cols">
+<p>El Censo 2022 cuenta cloacas, gas, agua y hacinamiento. <span class="sg">No cuenta
+conexi&oacute;n</span>, y en 2026 una casa sin internet est&aacute; tan afuera como una sin gas: sin
+tr&aacute;mite, sin escuela a distancia, sin turno m&eacute;dico y sin la posibilidad de trabajar desde
+casa que la secci&oacute;n 5.3 propone ense&ntilde;ar.</p>
+<p><b>Y es obra, no es un plan tecnol&oacute;gico.</b> Tender una red dentro de un barrio es
+infraestructura, igual que un ca&ntilde;o. Entra en el mismo r&eacute;gimen: es bienes de uso, la puede
+priorizar una comisi&oacute;n vecinal y la puede ejecutar una asociaci&oacute;n bajo el art&iacute;culo
+132. No hace falta una partida nueva ni un programa aparte.</p>
+<p><b>Qu&eacute; no decimos.</b> No sabemos cu&aacute;ntos hogares de San Isidro no tienen conexi&oacute;n
+ni de qu&eacute; calidad, porque ese dato no existe a nivel de radio censal. Tampoco suponemos que el
+problema sea cobertura: en el conurbano norte la red suele pasar por la puerta y lo que falta es otra
+cosa &mdash;el abono, la imposibilidad de contratar sin t&iacute;tulo o sin direcci&oacute;n formal, el
+tendido interno&mdash;. <span class="sg">Prometer sat&eacute;lites donde ya hay fibra ser&iacute;a no
+haber mirado el terreno.</span></p>
+<p><b>Lo que s&iacute; se compromete</b> es medirlo: relevar la conexi&oacute;n por zona junto con el
+primer ciclo de asambleas, publicarlo, y que cada comisi&oacute;n decida si el tendido de su barrio entra
+o no en su partida. Es la misma l&oacute;gica de todo este programa: primero el dato, despu&eacute;s la
+decisi&oacute;n, y que la tome quien vive ah&iacute;.</p>
+</div>
+
+<p><b>Propuesta:</b> el d&eacute;ficit de servicios b&aacute;sicos se ataca con la partida de obra
+p&uacute;blica vecinal del cap&iacute;tulo 4. En las dos zonas con peores indicadores hay
+<b>15.168 hogares sin gas de red y 4.616 sin cloacas</b>: el 60% y el 71% del d&eacute;ficit del partido.
+&Eacute;se es el d&eacute;ficit medido que la partida de obra vecinal puede atacar, y es exactamente el
+tipo de obra que el art&iacute;culo 132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal.</p>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 23 de 35</span></div></div></body></html>

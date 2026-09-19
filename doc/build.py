@@ -3,7 +3,7 @@
 """Arma el PDF. Cada seccion se renderiza a SU PROPIA pagina, con el alto que
 pide su contenido: por eso no hay huerfanos, ni exhibits separados de su
 argumento, ni paginas a medio llenar. Al final se pega la tapa."""
-import base64, pathlib, re, sys
+import base64, os, pathlib, re, sys
 from playwright.sync_api import sync_playwright
 from pypdf import PdfWriter, PdfReader
 
@@ -79,7 +79,9 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
         cover_pdf = None
     pages = []
     with sync_playwright() as pw:
-        br = pw.chromium.launch()
+        # PW_CHROMIUM permite apuntar a un Chromium ya instalado en la maquina
+        _exe = os.environ.get("PW_CHROMIUM")
+        br = pw.chromium.launch(executable_path=_exe) if _exe else pw.chromium.launch()
         pg = br.new_page(viewport={"width": int(PAGE_W_PX), "height": 1200})
         for i, s in enumerate(sections):
             n = i + 2
@@ -99,6 +101,7 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
             h_px = pg.evaluate("document.getElementById('pg').getBoundingClientRect().height")
             # ninguna pagina puede ser mas baja que A4
             MIN_PX = 841.89 * PT
+            nat_pt = h_px / PT
             if h_px < MIN_PX:
                 h_px = MIN_PX
             h_pt = h_px / PT
@@ -114,7 +117,10 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
                     break
                 extra += 6
             pages.append(pdf)
-            print(f"  p{n:>2}  {s['id']:<26} {h_pt:7.1f} pt")
+            aviso = ""
+            if nat_pt < 841.89: aviso = f"  <- rellena desde {nat_pt:.0f}"
+            elif h_pt > 2700:   aviso = "  <- PASA DE 2.700"
+            print(f"  p{n:>2}  {s['id']:<26} {h_pt:7.1f} pt{aviso}")
         br.close()
 
     wr = PdfWriter()

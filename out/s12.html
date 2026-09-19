@@ -1,0 +1,416 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=""><figcaption>Asamblea vecinal. Ilustraci&oacute;n.</figcaption></figure>
+<h1><span class="n">4</span>El mecanismo</h1>
+<div class="stand">En la Provincia de Buenos Aires un &oacute;rgano vecinal no puede tener decisi&oacute;n vinculante, pero la partida s&iacute; puede volverse obligatoria y la ley permite que las asociaciones vecinales ejecuten la obra como parte contratante. Sobre esos dos hechos se apoya el mecanismo: 28.908 millones anuales, uno de cada dos pesos de obra p&uacute;blica.</div>
+
+<h2><span class="n">4.1</span>El l&iacute;mite legal: lo que un intendente bonaerense no puede delegar</h2>
+<p class="lead">Casi toda campa&ntilde;a municipal argentina promete participaci&oacute;n vecinal, y casi
+ninguna explica el mecanismo. Hay una raz&oacute;n, y conviene ponerla primero:
+<span class="sg">en la Provincia de Buenos Aires la forma m&aacute;s obvia de hacerlo no es legal.</span></p>
+<div class="cols">
+<p>La Constituci&oacute;n provincial establece que el municipio tiene <span class="sg">dos</span>
+&oacute;rganos con capacidad de decidir, y s&oacute;lo dos: el Concejo Deliberante y el Departamento
+Ejecutivo (art. 190). El presupuesto lo vota el Concejo (art. 192 inc. 5). Las tasas requieren asamblea
+de concejales y mayores contribuyentes (art. 193 inc. 2). La Ley Org&aacute;nica de las Municipalidades
+agrega que el Concejo sanciona ordenanzas &laquo;con exclusividad&raquo; (art. 24).</p>
+<p>Crear por ordenanza un tercer &oacute;rgano cuyas decisiones <span class="sg">obliguen
+jur&iacute;dicamente</span> al municipio es, en la lectura dominante, delegaci&oacute;n impropia de
+facultades indelegables.</p>
+</div>
+<div class="callout">
+<div class="clabel">El precedente, con n&uacute;mero de decreto</div>
+<p>En 2025 el Concejo Deliberante de Pinamar sancion&oacute; por unanimidad la <b>Ordenanza
+7124/2025</b>, que creaba un presupuesto participativo con votaci&oacute;n vinculante. El intendente la
+vet&oacute; en su totalidad mediante el <b>Decreto 2099/2025, del 17 de diciembre de 2025</b>, con
+fundamento constitucional. Una ordenanza de participaci&oacute;n vinculante estuvo vigente menos de un
+mes, en un municipio de esta misma Provincia, hace ocho meses.</p>
+<p>Verificado en el Sistema de Boletines Oficiales Municipales de la Provincia de Buenos Aires,
+bolet&iacute;n 392&ordm; de Pinamar.</p>
+</div>
+<h3>Lo que s&iacute; es legal, y lleva d&eacute;cadas funcionando</h3>
+<p>El l&iacute;mite es sobre <span class="sg">la fuerza jur&iacute;dica del voto</span>, no sobre
+<span class="sg">el monto</span>. Rosario, Mor&oacute;n y decenas de municipios argentinos
+administran presupuestos participativos desde hace a&ntilde;os sin que ninguno haya sido vetado, porque lo
+que se vuelve jur&iacute;dicamente obligatorio es <span class="sg">la partida</span>, no el proyecto
+votado. Ah&iacute; est&aacute; el margen, y es m&aacute;s grande de lo que se usa.</p>
+
+<h2><span class="n">4.2</span>La deuda que la Provincia tiene con sus municipios</h2>
+<div class="cols">
+<p>Cuando la Provincia de Buenos Aires reform&oacute; su Constituci&oacute;n en 1994, incluy&oacute; el
+<b>art&iacute;culo 211</b>: &laquo;La Ley Org&aacute;nica de las Municipalidades deber&aacute; contemplar
+la posibilidad que los municipios accedan a los institutos de democracia semidirecta&raquo;.</p>
+<p>La Constituci&oacute;n orden&oacute; habilitar refer&eacute;ndum, consulta popular e iniciativa popular
+municipal. <span class="sg">Treinta y dos a&ntilde;os despu&eacute;s, la Legislatura no lo hizo.</span> El
+Decreto-Ley 6769/58 sigue sin contener ninguna de esas palabras.</p>
+</div>
+<div class="cols">
+<p><b>Qu&eacute; son los institutos de democracia semidirecta.</b> Tres: el refer&eacute;ndum, que
+somete una ordenanza al voto; la consulta popular, que somete una decisi&oacute;n antes de tomarla; y la
+iniciativa popular, que permite a un grupo de vecinos presentar un proyecto y obligar al Concejo a
+tratarlo. Las tres existen en la Constituci&oacute;n nacional desde 1994 y en la provincial
+tambi&eacute;n. <span class="sg">Ninguna de las tres existe hoy para un municipio bonaerense.</span></p>
+<p><b>Qu&eacute; hacen otras provincias.</b> Varias reconocen autonom&iacute;a municipal plena, con carta
+org&aacute;nica propia: un municipio dicta su propia norma fundamental y decide ah&iacute; sus mecanismos
+de participaci&oacute;n. Buenos Aires no la reconoce, y sus 135 municipios se rigen por un decreto-ley de
+1958 que ning&uacute;n cuerpo democr&aacute;tico sancion&oacute;.</p>
+<p><b>Por qu&eacute; importa para este programa.</b> Si la Legislatura hubiera cumplido, nada de lo que
+propone el cap&iacute;tulo 4 ser&iacute;a necesario: el voto vecinal ser&iacute;a vinculante y no
+har&iacute;a falta el rodeo de fijar la partida por ordenanza. <span class="sg">Todo el
+dise&ntilde;o de este mecanismo es una forma de trabajar alrededor de una omisi&oacute;n legislativa de
+treinta y dos a&ntilde;os.</span></p>
+<p><b>Y por qu&eacute; se dice ac&aacute; y no se promete.</b> Un intendente no vota en la Legislatura.
+Puede reclamar, puede presentar el reclamo junto a otros municipios, y puede dejarlo escrito en su
+programa para que se lo recuerden. Este documento hace las tres cosas y no simula que puede hacer la
+cuarta.</p>
+</div>
+<div class="pull"><div class="plabel">Un reclamo, no una promesa</div>
+<p>La Constituci&oacute;n de 1994 orden&oacute; habilitar la democracia semidirecta municipal. Treinta y
+dos a&ntilde;os despu&eacute;s sigue sin hacerse, y ning&uacute;n intendente puede arreglarlo solo. Lo que
+sigue es lo que s&iacute; puede hacer solo.</p></div>
+
+<h2><span class="n">4.3</span>Cu&aacute;nto dinero: el n&uacute;mero</h2>
+<div class="cols">
+<p>En 2025 San Isidro ejecut&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>: el
+<b>17,8% de todo su gasto</b>, uno de los cuatro municipios que m&aacute;s invierten de la Provincia. No
+es un municipio sin capacidad de inversi&oacute;n: es lo contrario.</p>
+<p>San Isidro ya gasta el dinero. Invierte en obra p&uacute;blica m&aacute;s que el 96% de los municipios
+bonaerenses, y aun as&iacute; 25.165 hogares cocinan sin gas de red. El problema no es cu&aacute;nto se
+invierte: <span class="sg">es que qui&eacute;n decide d&oacute;nde se invierte no vive donde est&aacute;
+el d&eacute;ficit.</span></p>
+<p>Este mecanismo cambia eso de dos maneras verificables: la f&oacute;rmula manda m&aacute;s dinero por
+habitante a las zonas con peores indicadores, y el art&iacute;culo 132 exige que la obra la pidan por
+escrito el 60% de los beneficiarios. <span class="sg">Ninguna obra se hace donde nadie la pidi&oacute;.</span></p>
+<p><span class="sg">Propuesta: las comisiones vecinales llegan a administrar la mitad de la obra
+p&uacute;blica municipal, en cuatro a&ntilde;os.</span></p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;27</div><div class="extitle">La rampa: del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os</div><div class="exsub">Sobre la obra p&uacute;blica ejecutada en 2025: 57.816 millones. Es reasignaci&oacute;n de qui&eacute;n decide, no gasto nuevo.</div></div>
+<table>
+<colgroup><col style="width:100pt"><col><col><col><col></colgroup>
+<tr class="hd"><th></th><th class="r">% de la obra p&uacute;blica</th><th class="r">Monto anual</th>
+<th class="r">% del gasto total</th><th class="r">Por habitante</th></tr>
+<tr><td class="l">A&ntilde;o 1</td><td class="n">12,5%</td><td class="n">7.227 M</td><td class="n">2,2%</td><td class="n">24.310 $</td></tr>
+<tr><td class="l">A&ntilde;o 2</td><td class="n">25,0%</td><td class="n">14.454 M</td><td class="n">4,5%</td><td class="n">48.620 $</td></tr>
+<tr><td class="l">A&ntilde;o 3</td><td class="n">37,5%</td><td class="n">21.681 M</td><td class="n">6,7%</td><td class="n">72.930 $</td></tr>
+<tr class="hi"><td class="l">A&ntilde;o 4</td><td class="n"><b>50,0%</b></td><td class="n"><b>28.908 M</b></td><td class="n"><b>8,9%</b></td><td class="n"><b>97.241 $</b></td></tr>
+</table>
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;28</div><div class="extitle">En el a&ntilde;o 4, la mitad de la obra p&uacute;blica la deciden las comisiones vecinales</div><div class="chart "><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="472.141875pt" height="124.832pt" viewBox="0 0 472.141875 124.832" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:32.066635</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 124.832 
+L 472.141875 124.832 
+L 472.141875 -0 
+L 0 -0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.951875 104.004 
+L 470.701875 104.004 
+L 470.701875 1.44 
+L 28.951875 1.44 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 28.951875 43.007789 
+L 83.995448 43.007789 
+L 83.995448 24.934837 
+L 28.951875 24.934837 
+z
+" clip-path="url(#pf46547283e)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 83.995448 43.007789 
+L 469.300461 43.007789 
+L 469.300461 24.934837 
+L 83.995448 24.934837 
+z
+" clip-path="url(#pf46547283e)" style="fill: #c9cfbe"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 28.951875 88.190167 
+L 249.126168 88.190167 
+L 249.126168 70.117216 
+L 28.951875 70.117216 
+z
+" clip-path="url(#pf46547283e)" style="fill: #66734c"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 249.126168 88.190167 
+L 469.300461 88.190167 
+L 469.300461 70.117216 
+L 249.126168 70.117216 
+z
+" clip-path="url(#pf46547283e)" style="fill: #c9cfbe"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="28.951875" y="112.018969" transform="rotate(-0 28.951875 112.018969)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="105.115668" y="112.018969" transform="rotate(-0 105.115668 112.018969)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="181.279461" y="112.018969" transform="rotate(-0 181.279461 112.018969)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="257.443254" y="112.018969" transform="rotate(-0 257.443254 112.018969)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="333.607047" y="112.018969" transform="rotate(-0 333.607047 112.018969)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="409.770841" y="112.018969" transform="rotate(-0 409.770841 112.018969)">50</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 6.2px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="249.826875" y="122.102594" transform="rotate(-0 249.826875 122.102594)">miles de millones de pesos de diciembre de 2025</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7"/>
+     <g id="text_8">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="25.951875" y="37.200649" transform="rotate(-0 25.951875 37.200649)">Año 1</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8"/>
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'Inter'; text-anchor: end; fill: #6e625a" x="25.951875" y="82.383028" transform="rotate(-0 25.951875 82.383028)">Año 4</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_7">
+    <path d="M 28.951875 104.004 
+L 470.701875 104.004 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; text-anchor: start; fill: #66734c" x="28.951875" y="20.809707" transform="rotate(-0 28.951875 20.809707)">deciden los vecinos: 7.227 M  ·  12,5%</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #2a211c" transform="translate(240.575017 32.013869)">decide el Ejecutivo</text>
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #2a211c" transform="translate(241.139736 39.681507)">50.589 M  ·  87,5%</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #f7f2eb" transform="translate(101.582178 77.22281)">deciden los vecinos</text>
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #f7f2eb" transform="translate(103.530803 84.837323)">28.908 M  ·  50,0%</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #2a211c" transform="translate(323.140377 77.196248)">decide el Ejecutivo</text>
+    <text style="font-weight: 600; font-size: 6.8px; font-family: 'Inter'; fill: #2a211c" transform="translate(323.705096 84.863885)">28.908 M  ·  50,0%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf46547283e">
+   <rect x="28.951875" y="1.44" width="441.75" height="102.564"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> ejecuci&oacute;n 2025, bienes de uso devengados.</p></div>
+<div class="cols">
+<p>En el cuarto a&ntilde;o son <b>28.908 millones de pesos anuales decididos por los vecinos</b>: casi
+nueve pesos de cada cien que gasta el Municipio, y <span class="sg">uno de cada dos que se invierten en
+obra</span>.</p>
+<p><b>Por qu&eacute; la obra p&uacute;blica y no otra cosa.</b> Porque es la parte flexible del
+presupuesto. El gasto en personal y en servicios est&aacute; comprometido por contratos y convenios; la
+inversi&oacute;n se decide cada a&ntilde;o. Y porque es exactamente el rubro que resuelve lo que el
+cap&iacute;tulo 1 documenta: cloacas, gas de red, desag&uuml;es, veredas, iluminaci&oacute;n.</p>
+<p><b>Por qu&eacute; se empieza chico.</b> La gradualidad de cuatro a&ntilde;os no es prudencia
+ret&oacute;rica: es el tiempo que tardan las comisiones en constituirse, capacitarse y demostrar capacidad
+de gesti&oacute;n.</p>
+<p>Y hay una raz&oacute;n pr&aacute;ctica que pesa m&aacute;s: <span class="sg">si el a&ntilde;o 1 sale
+mal, se cae el modelo entero.</span> Arrancar con un octavo de la obra p&uacute;blica y crecer contra
+capacidad demostrada es lo que permite corregir sin perder este programa.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 14 de 35</span></div></div></body></html>

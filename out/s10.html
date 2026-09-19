@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">3.5</span>De d&oacute;nde salen los fondos</h2>
+<div class="cols">
+<h3 style="margin-top:0">Opci&oacute;n 1 &mdash; Reasignar partidas</h3>
+<p>Sacar 7.225,2 millones de otras partidas del gasto flexible. Fiscalmente neutro. Cuesta
+pol&iacute;ticamente: alguien pierde su partida.</p>
+<h3 style="margin-top:0">Opci&oacute;n 2 &mdash; Actualizar la base de valuaci&oacute;n
+<span class="sg">&larr; la que proponemos</span></h3>
+<p>No cobrar m&aacute;s: <b>cobrar sobre valores que no sean de 2008.</b> La al&iacute;cuota de vivienda
+no se toca y sigue en 12 por mil.</p>
+<h3 style="margin-top:0">Opci&oacute;n 3 &mdash; Endeudamiento</h3>
+<p>Modelada con tres tasas reales alternativas. <span class="sg">No la proponemos, y las razones son
+tres, en este orden.</span></p>
+<p><b>Primera: empleo y vivienda es gasto recurrente, no una obra.</b> Se paga todos los a&ntilde;os, en
+r&eacute;gimen, indefinidamente. Tomar deuda para financiar gasto corriente traslada el costo a la
+gesti&oacute;n siguiente sin dejarle nada a cambio. Para eso se toma deuda para obra, que queda; no para
+un programa, que se consume.</p>
+<p><b>Segunda: hay una fuente m&aacute;s barata ya disponible.</b> Actualizar una base de valuaci&oacute;n
+de 2008 no cuesta intereses y no compromete al pr&oacute;ximo gobierno. Endeudarse para financiar algo
+que se puede financiar corrigiendo una tabla vieja no tiene defensa.</p>
+<p><b>Tercera: el camino ya se tom&oacute;, y con un costo que ahora s&iacute; se conoce.</b> En agosto
+de 2026 el Municipio coloc&oacute; un bono por 30.000 millones. <span class="sg">La secci&oacute;n que
+sigue lo explica, porque cambia el punto de partida de cualquier programa que asuma en 2027.</span></p>
+</div>
+
+<h3>El bono de 30.000 millones lo paga el gobierno que entra</h3>
+<p class="lead">Esto ocurri&oacute; despu&eacute;s del cierre de los datos con que se construy&oacute;
+este cap&iacute;tulo, y lo cambia. Va con el detalle completo porque es la decisi&oacute;n fiscal
+m&aacute;s importante del mandato.</p>
+<div class="cols">
+<p><b>Qu&eacute; se hizo.</b> El 8 de julio de 2026 la Asamblea de Concejales y Mayores Contribuyentes
+autoriz&oacute; el <b>Bono de Infraestructura de San Isidro</b> por hasta 30.000 millones. El 13 de
+agosto se coloc&oacute;: se adjudicaron los 30.000 millones completos, con ofertas por 38.576 millones
+&mdash;1,29 veces el monto&mdash; y cien &oacute;rdenes de compra.</p>
+<p><b>Las condiciones.</b> Plazo de 36 meses. Tasa variable <b>TAMAR m&aacute;s 7%</b>, que al momento
+de la colocaci&oacute;n representaba un <b>30,88% nominal anual</b>. Intereses trimestrales.
+Calificaci&oacute;n BBB+(arg) de FIX SCR. Y una garant&iacute;a que importa:
+<span class="sg">la cesi&oacute;n de los derechos de cobro de la coparticipaci&oacute;n
+provincial</span>.</p>
+<p><b>Y ac&aacute; est&aacute; lo que define todo.</b> El capital se devuelve en ocho cuotas trimestrales
+del 12,5%, y <b>la primera vence en el mes 15</b>. Contado desde agosto de 2026, eso cae en
+<b>noviembre de 2027</b>. El mandato del actual intendente termina en diciembre de ese a&ntilde;o.</p>
+<p><b>De las ocho cuotas de capital, esta gesti&oacute;n paga una. Las otras siete &mdash;el 87,5% del
+capital&mdash; las paga el gobierno que asuma en diciembre de 2027.</b> No es una irregularidad: la
+operaci&oacute;n tiene las tres autorizaciones que exige la ley. Es una decisi&oacute;n, y hay que
+contarla como tal.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que hay que conceder, y es mucho</div>
+<p><b>El destino est&aacute; escrito en la ordenanza y es bueno.</b> Los fondos se destinan
+exclusivamente a infraestructura, integraci&oacute;n sociourbana y regeneraci&oacute;n urbana,
+<b>con prioridad para los barrios populares</b>, y queda prohibido usarlos para gasto corriente. Eso
+lo consigui&oacute; la oposici&oacute;n negociando el art&iacute;culo 3.</p>
+<p><b>Y las obras son las que este programa reclama.</b> Entre ellas, <b>obras hidr&aacute;ulicas en La
+Cava</b> contra un problema hist&oacute;rico de inundaciones, y la formalizaci&oacute;n del acceso a
+agua potable y cloacas. <span class="sg">Es exactamente lo que el cap&iacute;tulo 1 muestra que
+faltaba.</span> Este programa no lo discute: lo celebra.</p>
+<p><b>Lo que s&iacute; discute es qui&eacute;n decidi&oacute; y qui&eacute;n paga.</b> Las obras las
+eligi&oacute; el Departamento Ejecutivo, no las zonas donde se hacen. Y el 87,5% del capital lo abona
+una gesti&oacute;n que todav&iacute;a no se elegi&oacute;, con la coparticipaci&oacute;n cedida como
+garant&iacute;a.</p>
+</div>
+<div class="cols">
+<p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> Al stock consolidado que
+este cap&iacute;tulo model&oacute; hay que sumarle 30.000 millones de capital m&aacute;s sus intereses
+trimestrales. <b>El margen contra el tope del art&iacute;culo 49 bis se reduce</b>, y el modelo fiscal
+que acompa&ntilde;a a este programa lo recalcula con la tasa real y el cronograma real, que ahora son
+p&uacute;blicos.</p>
+<p><b>Y refuerza la opci&oacute;n 2, no la debilita.</b> Con el margen de endeudamiento ya usado por la
+gesti&oacute;n anterior, <span class="sg">actualizar la base de valuaci&oacute;n deja de ser una
+alternativa y pasa a ser la &uacute;nica v&iacute;a disponible</span> para financiar gasto recurrente
+sin comprometer todav&iacute;a m&aacute;s a los que vienen.</p>
+</div>
+<p class="cap"><b>Fuente:</b> Ordenanza Preparatoria N&ordm; 1, expediente 97341-S-2026, aprobada por la
+Asamblea de Concejales y Mayores Contribuyentes el 8 de julio de 2026; condiciones y resultado de la
+colocaci&oacute;n del 13 de agosto de 2026 seg&uacute;n la informaci&oacute;n difundida por el Municipio
+y por el Banco de la Provincia de Buenos Aires, organizador y colocador de la emisi&oacute;n.</p>
+
+<h3>La tabla con la que San Isidro valúa es de 2008</h3>
+<div class="cols">
+<p><b>La Tasa por Alumbrado, Limpieza y Servicios Generales no se calcula sobre la valuaci&oacute;n
+provincial.</b> El Municipio tiene su propia tabla: un puntaje por manzana fijado por la
+<b>Ordenanza 8373, del 6 de agosto de 2008</b>, que la ordenanza impositiva vigente sigue citando.</p>
+<p><b>Esa tabla no se actualiz&oacute;.</b> Comparamos manzana por manzana la versi&oacute;n de 2016
+contra la de 2026: coinciden en el 97%, y las diferencias son errores de escaneo. Lo &uacute;nico que
+cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oacute; de 5,58 a 575,91
+&mdash;ciento tres veces&mdash; sin mover la relaci&oacute;n entre una manzana y otra.</p>
+<p><b>Y ah&iacute; est&aacute; el problema.</b> El multiplicador corrige la inflaci&oacute;n. No corrige
+que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
+<span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
+<p><b>Lo comprobamos contra la fuente oficial.</b> ARBA publica el valor de la tierra manzana por manzana
+para todo el partido. Cruzamos las dos escalas sobre <b>69.258 parcelas</b>, ponderando por superficie.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;22</div><div class="extitle">La tabla municipal ordena bien las zonas, pero achata la diferencia a la mitad</div><div class="exsub">Relaci&oacute;n entre el valor de la tierra de una zona y otra, en la escala municipal de 2008 y en la valuaci&oacute;n provincial. Ponderado por superficie de parcela.</div></div>
+<table>
+<colgroup><col style="width:210pt"><col><col><col></colgroup>
+<tr class="hd"><th>Comparaci&oacute;n</th><th class="r">Tabla municipal</th><th class="r">Valuaci&oacute;n provincial</th><th class="r">Reconocido</th></tr>
+<tr class="hi"><td class="l">Acassuso y Mart&iacute;nez contra Villa Adelina</td><td class="n"><b>2,2&times;</b></td><td class="n"><b>4,1&times;</b></td><td class="n"><b>54%</b></td></tr>
+<tr><td class="l">Acassuso y Mart&iacute;nez contra Boulogne oeste</td><td class="n">2,5&times;</td><td class="n">4,7&times;</td><td class="n">53%</td></tr>
+<tr><td class="l">Las secciones de La Horqueta contra Boulogne oeste</td><td class="n">1,8&times;</td><td class="n">2,9&times;</td><td class="n">62%</td></tr>
+<tr><td class="l">San Isidro centro contra Boulogne</td><td class="n">1,5&times;</td><td class="n">1,6&times;</td><td class="n">94%</td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la Ordenanza Impositiva municipal, anexo de
+valores de tierra, y sobre los valores por macizo publicados por ARBA. Las circunscripciones se cruzaron
+con localidades leyendo 299 decretos municipales que identifican inmuebles por secci&oacute;n y localidad.</p>
+<p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
+escalas usan unidades distintas. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la valuaci&oacute;n
+provincial es de un rev&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
+ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+<div class="cols">
+<p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
+municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
+ellas vale entre 6.400 y 9.200. <span class="sg">Pagan igual y no valen igual.</span></p>
+<p><b>Qu&eacute; cambiar&iacute;a si la escala se actualizara.</b> Acassuso y Mart&iacute;nez
+pasar&iacute;an de cargar el 32% del valor de la tierra al 38%. <b>Villa Adelina bajar&iacute;a del 10% al
+6%.</b> Boulogne, del 14% al 13%. La carga se corre hacia donde est&aacute; el valor, sin que cambie la
+al&iacute;cuota.</p>
+<p><b>Cu&aacute;nto aportar&iacute;a, dicho con honestidad.</b> Si ninguna manzana bajara y las que
+est&aacute;n por debajo del promedio subieran hasta &eacute;l, la parte tierra crecer&iacute;a 12,5%:
+<b>como m&aacute;ximo unos 8.600 millones</b>. <span class="sg">En la pr&aacute;ctica es menos</span>,
+porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos. Los metros
+construidos no son p&uacute;blicos, as&iacute; que <b>no ponemos una cifra exacta y no la metemos en el
+modelo</b>.</p>
+<p><b>Y hay una segunda fuente, chica pero sin defensa.</b> El descuento por buen contribuyente
+&mdash;10% a quien paga el a&ntilde;o entero sin deuda&mdash; <b>no tiene tope de valuaci&oacute;n ni de
+monto</b>. Lo cobra igual el de Acassuso que el de Boulogne. Las exenciones con criterio social
+&mdash;jubilados hasta tres haberes m&iacute;nimos, personas con discapacidad, escasos recursos&mdash;
+<span class="sg">no se tocan</span>.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Por qu&eacute; esto no es subir una tasa</div>
+<p>La al&iacute;cuota de vivienda es <b>12 por mil</b> y sigue igual desde 2016. Este programa no la
+mueve. Lo que propone es que la base sobre la que se aplica deje de ser una tabla de 2008 que ya
+<b>ordena bien las zonas</b> &mdash;su correlaci&oacute;n con la valuaci&oacute;n provincial es de 0,92&mdash;
+pero reconoce poco m&aacute;s de la mitad de la distancia real entre ellas.</p>
+<p><b>Actualizar una base vieja no es un aumento: es una correcci&oacute;n.</b> Y tiene un efecto que este
+programa persigue en todos sus cap&iacute;tulos: la zona con m&aacute;s necesidad paga proporcionalmente
+menos que hoy, y la de mayor valor paga lo que le corresponde.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 12 de 35</span></div></div></body></html>

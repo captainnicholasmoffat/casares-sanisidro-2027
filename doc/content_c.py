@@ -932,7 +932,7 @@ el sistema exista y que lo construya gente del partido.</p>
 <tr><td class="l">Partida por zona fijada por ordenanza, con f&oacute;rmula de necesidad escrita</td><td class="n">Que las comisiones reemplacen al Concejo Deliberante</td></tr>
 <tr><td class="l">Ejecuci&oacute;n directa de obras por asociaciones vecinales, con el 60% de adhesi&oacute;n</td><td class="n">Que toda propuesta vecinal se ejecute autom&aacute;ticamente</td></tr>
 <tr><td class="l">Respuesta escrita y fundada, en plazo, a cada priorizaci&oacute;n</td><td class="n">Consulta popular vinculante: la ley provincial no la habilita</td></tr>
-<tr><td class="l">Informaci&oacute;n presupuestaria trimestral por zona</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
+<tr><td class="l">Ejecuci&oacute;n presupuestaria trimestral por zona, y todo lo dem&aacute;s publicado el d&iacute;a que se genera</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
 <tr><td class="l">Incompatibilidad entre priorizar y ejecutar, con acta de excusaci&oacute;n</td><td class="m">Que una comisi&oacute;n contrate a sus propios integrantes</td></tr>
 <tr><td class="l">Asamblea con espacio de cuidado de ni&ntilde;os y horario fuera del laboral</td><td class="m">Pagar por participar en la comisi&oacute;n vecinal</td></tr>
 <tr><td class="l">Derogar los arts. 8 a 10 de la Ordenanza 6045</td><td class="n">Autonom&iacute;a municipal plena: la Constituci&oacute;n provincial no la reconoce</td></tr>
@@ -2009,7 +2009,9 @@ aplicada a tres &aacute;reas.</p>
 en noviembre de 2025; la adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en
 marzo de 2026. <b>Es una decisi&oacute;n reciente y sin resultados medidos todav&iacute;a</b>: la citamos
 como referencia de d&oacute;nde est&aacute; la vara, no como evidencia de impacto. El costo para San
-Isidro no est&aacute; estimado en este documento y debe presupuestarse antes de comprometerse.</p>
+Isidro est&aacute; estimado en el cap&iacute;tulo 3 &mdash;1.200 millones de inversi&oacute;n inicial,
+junto con la anal&iacute;tica de seguridad&mdash; como estimaci&oacute;n propia a licitar, no como cifra
+cerrada.</p>
 </div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
@@ -2024,8 +2026,8 @@ d&iacute;as.</p>
 <tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Lleva a otra cosa</b></td><td class="m">El &uacute;nico enlace con ese nombre va a ARSI, a declaraciones juradas de tributos de contribuyentes: seguridad e higiene, tasas ambientales.</td></tr>
 <tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="m">Vivir&iacute;an en el portal de datos abiertos, que no responde. No se puede afirmar que falten ni que est&eacute;n.</td></tr>
 <tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="m">Existe y est&aacute; completo hasta subsecretar&iacute;a, con nombre y apellido. Vive en un subdominio de prueba y no hay un solo enlace hacia &eacute;l desde el sitio municipal.</td></tr>
-<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos.</td></tr>
-<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Rendida, no publicada</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba. Pero la Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
+<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos. Y <b>ninguno de los 573 decretos de esta gesti&oacute;n dice el domicilio del adjudicatario</b>, que se public&oacute; hasta 2017 y es el dato que permite saber si el dinero se queda en el partido.</td></tr>
+<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba: eso est&aacute; y este documento lo concede. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
 <tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="m">La vigente es la de 2026, sancionada en diciembre de 2025, con actualizaciones hasta agosto de 2026. Se busc&oacute; y estaba.</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> relevamiento propio del sitio municipal, del portal de datos abiertos y del
@@ -2033,6 +2035,11 @@ Bolet&iacute;n Oficial, con hora y URL asentadas, el 12 de septiembre de 2026.</
 <p class="cap"><b>Nota:</b> la &uacute;ltima fila es la que m&aacute;s importa de todas.
 <b>Se busc&oacute; algo esperando que faltara y estaba publicado y al d&iacute;a.</b> Queda en el cuadro
 por eso.</p>
+<p class="cap"><b>Verificado el 12 de septiembre de 2026.</b> Es el cuadro m&aacute;s perecedero del
+documento: todo lo que dice es el estado de un sitio web en una fecha. <span class="sg">Si ma&ntilde;ana
+reponen el portal ca&iacute;do o corrigen el enlace, el cuadro no queda falso: queda fechado</span>, y
+la diferencia entre las dos cosas es esta l&iacute;nea. Cualquiera puede repetir el relevamiento y
+comparar.</p>
 
 <div class="cols">
 <p><b>El hallazgo no es que no se publique. Es d&oacute;nde queda lo que se publica.</b> El organigrama

@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">5.12</span>Los que tienen que ejecutar todo esto <span class="tag v">Gesti&oacute;n</span></h2>
+<p class="lead">Un programa de gobierno que no dice nada sobre la administraci&oacute;n municipal
+est&aacute; suponiendo que se ejecuta solo. &Eacute;ste no lo supone.</p>
+<div class="cols">
+<p><b>El punto de partida es bueno y conviene decirlo.</b> San Isidro destina a personal el 34,4% de su
+gasto contra una mediana provincial de 50,7%: es el vig&eacute;simo municipio de 106 en contenci&oacute;n
+de la planta. No hay un problema de sobredimensionamiento que resolver.</p>
+<p><b>Este programa no propone reducir la planta.</b> Ni congelarla, ni reemplazarla por contratos, ni
+tercerizar funciones. Las dos propuestas grandes se financian con recursos ya devengados y con
+reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
+personal</span>, y el modelo del cap&iacute;tulo 3 trata ese gasto como r&iacute;gido precisamente porque
+no se toca.</p>
+<p><b>Pero prometer que no se despide a nadie es una promesa defensiva, y no alcanza.</b> Lo que este
+programa propone es otra cosa: <span class="sg">la automatizaci&oacute;n le saca al empleado lo que no
+requiere criterio</span> &mdash;cargar datos, cruzar planillas, contestar cien veces lo mismo&mdash; y
+lo deja para lo que s&iacute;: inspeccionar en territorio, atender a quien necesita una persona del otro
+lado, y resolver lo que se sale del molde.</p>
+<p><b>Y quien mejor sabe qu&eacute; automatizar es el empleado que hace esa tarea todos los
+d&iacute;as.</b> No una consultora: el que la hace. Automatizar esas tareas es, adem&aacute;s, trabajo
+para los centros de formaci&oacute;n y para las empresas del partido, y sale de la partida de
+contrataci&oacute;n que el 5.3 abre.</p>
+<p><b>Conviene decir tambi&eacute;n la parte pol&iacute;tica.</b> El sindicato municipal est&aacute; en
+conflicto. <b>&laquo;Te sacamos lo aburrido y no tocamos tu puesto&raquo; es m&aacute;s defendible que
+&laquo;prometemos no despedir&raquo;</b>, y cambia de lugar al empleado: de obst&aacute;culo del cambio
+a parte del cambio.</p>
+<p><b>Lo que s&iacute; cambia es el trabajo de algunas &aacute;reas.</b> Imputar el gasto con referencia
+territorial, responder por escrito a cada priorizaci&oacute;n zonal y publicar trimestralmente por zona
+son tareas nuevas para las secretar&iacute;as de Hacienda y de Obras. No requieren personal adicional,
+pero requieren decisi&oacute;n y capacitaci&oacute;n, y suponer lo contrario ser&iacute;a el mismo error
+que este documento le se&ntilde;ala al plan vigente.</p>
+<p><b>Y hay un compromiso de transparencia que toca a la propia planta.</b> Enlazar el organigrama desde el sitio oficial y publicar la
+planta de personal y la escala salarial son tres de las siete medidas de los cien d&iacute;as.
+<span class="sg">Es informaci&oacute;n sobre los propios empleados y se publica igual</span>, porque un
+municipio que le pide al vecino que rinda una obra tiene que poder decir qui&eacute;n trabaja en
+&eacute;l y cu&aacute;nto cobra.</p>
+</div>
+
+<h2><span class="n">5.13</span>Lo que este cap&iacute;tulo no promete</h2>
+<p class="tight">La honestidad sobre los l&iacute;mites vale m&aacute;s que una lista larga.</p>
+<ul class="b">
+<li><b>No prometemos duplicar el gasto en salud.</b> Es el 24,1% del presupuesto y no hay margen sin tocar
+el gasto r&iacute;gido.</li>
+<li><b>No prometemos bajar las tasas.</b> El cap&iacute;tulo 3 muestra que el municipio ya est&aacute; en
+d&eacute;ficit y que la recaudaci&oacute;n propia es la variable que decide su futuro.</li>
+<li><b>No prometemos obras que no est&eacute;n en la partida de obra p&uacute;blica.</b> Todo lo que
+proponemos sale del presupuesto que existe.</li>
+<li><b>No prometemos competencias que no son municipales.</b> La educaci&oacute;n obligatoria, la
+polic&iacute;a y la justicia son provinciales. Podemos articular y reclamar; no podemos decidir.</li>
+</ul>
+<p><span class="sg">El techo es real</span>: con las dos propuestas grandes del programa comprometidas,
+queda el 58,6% del gasto flexible. Todo lo dem&aacute;s de este cap&iacute;tulo entra ah&iacute;, o no
+cuesta nada.</p>
+
+<h2><span class="n">5.14</span>Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;</h2>
+<p class="tight">Un intendente gobierna sobre m&aacute;s cosas que las nueve de arriba. Estas quedaron
+afuera, y en cada caso hay una raz&oacute;n que se puede discutir.</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;45</div><div class="extitle">Lo que falta, con su motivo</div></div>
+<table>
+<colgroup><col style="width:150pt"><col style="width:96pt"><col></colgroup>
+<tr class="hd"><th>&Aacute;rea</th><th>Por qu&eacute; no est&aacute;</th><th class="r">D&oacute;nde queda</th></tr>
+<tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las tres prioridades de la reasignaci&oacute;n</td></tr>
+<tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial y de ACUMAR seg&uacute;n la cuenca</td></tr>
+<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">Sin propuesta propia. Es el hueco m&aacute;s grande de este cap&iacute;tulo y lo decimos en vez de taparlo</td></tr>
+<tr><td class="l">Deporte y cultura</td><td>Est&aacute;n en educaci&oacute;n y cultura, 4,3% del presupuesto</td><td class="n">Sin propuesta propia</td></tr>
+<tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa</td></tr>
+<tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
+</table>
+<div class="pull"><div class="plabel">Por qu&eacute; este cuadro existe</div>
+<p>El cap&iacute;tulo 2 le reprocha al plan vigente lo que dej&oacute; afuera de su lista. No
+podr&iacute;amos hacer eso y despu&eacute;s callar lo que dejamos afuera de la nuestra.</p></div>
+
+
+
+<h2><span class="n">5.15</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<ol class="n">
+<li>Cada &aacute;rea lleva una etiqueta que dice de d&oacute;nde sale lo que propone, y s&oacute;lo dos
+propuestas de todo este programa requieren fondos nuevos.</li>
+<li>Salud es el 24,1% del presupuesto y no se sabe d&oacute;nde cae: la primera pol&iacute;tica de salud
+de este programa es producir ese dato.</li>
+<li>Seguridad creci&oacute; 34,8% real en un a&ntilde;o, el equipamiento est&aacute; comprado y no se
+usa el dato que produce: este programa propone patrullaje dirigido a los puntos calientes, anal&iacute;tica
+sobre las c&aacute;maras que ya existen y una oficina de ciberdelito.</li>
+<li>Ambiente es el 0,4% y va al 1,5% por reasignaci&oacute;n; educaci&oacute;n vuelve al nivel real de
+2024 y el Fondo Educativo se publica escuela por escuela.</li>
+<li>Siete medidas de transparencia cuestan cero y se cumplen en cien d&iacute;as. Hoy no hay ninguna
+cumplida.</li>
+</ol>
+<p><b>Todo lo que este cap&iacute;tulo promete est&aacute; costeado en el cap&iacute;tulo 3 y fechado en el
+6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de
+verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
+
+<div class="hairline"></div>
+<div class="note">
+<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> El gasto por funci&oacute;n proviene del estado
+de ejecuci&oacute;n presupuestaria acumulado anual 2025 del Municipio de San Isidro. Las variaciones reales
+entre 2024 y 2025 est&aacute;n calculadas en pesos constantes de diciembre de 2025, deflactadas por IPC.
+Los indicadores territoriales provienen del Censo 2022 (INDEC) a nivel de radio censal. El costeo de las
+propuestas est&aacute; desarrollado en el cap&iacute;tulo 3.</p>
+<p>En 2025 el Municipio clasific&oacute; su gasto en veinte funciones y en 2024 en catorce. S&oacute;lo se
+usan en este cap&iacute;tulo las variaciones interanuales de funciones presentes en ambos ejercicios y cuya
+finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declaradas como no comparables.</p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 29 de 35</span></div></div></body></html>

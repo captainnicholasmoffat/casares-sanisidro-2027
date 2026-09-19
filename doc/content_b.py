@@ -329,8 +329,9 @@ diagn&oacute;sticos opuestos con los mismos datos.</p>
 <tr><td class="l">Rigidez del gasto</td><td class="n"><b>39,0% n&uacute;cleo &middot; 73,1% con contratos</b></td><td class="n">ejecuci&oacute;n por objeto 2025</td></tr>
 <tr><td class="l">Percepci&oacute;n de recursos</td><td class="n"><b>89,32%</b></td><td class="n">35.994 M facturados y no cobrados en 2025</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
-<span class="tag m">Modelado</span></p>
+<p class="cap"><b>Nota:</b> los cuatro salen de la serie publicada, no son supuestos: la nota
+metodol&oacute;gica del cierre del cap&iacute;tulo dice con qu&eacute; datos se calcul&oacute; cada
+uno.</p>
 
 <div class="cols">
 <p><b>Una aclaraci&oacute;n sobre la coparticipaci&oacute;n, porque es la excusa m&aacute;s c&oacute;moda.</b>
@@ -373,7 +374,8 @@ recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce
 """ + ex("g", "Sin cambios vuelve al azul en 2028; cobrando mejor, en 2027. En el adverso, nunca.",
      "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es la misma plata&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
      "ex09.png",
-     "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n."))
+     "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026. La secci&oacute;n 3.5 lo detalla: el capital se paga entre noviembre de 2027 y agosto de 2029, dentro del mandato que estas l&iacute;neas proyectan."))
 
 
 # =====================================================================
@@ -506,6 +508,10 @@ del presupuesto flexible quedan ocupando. Sobre un gasto flexible de 87.326 mill
      "ex10.png",
      "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.",
      "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. Caben, pero no queda lugar para una tercera del mismo tama&ntilde;o.") + """
+<p class="cap"><b>Nota:</b> el 73,1% es la medici&oacute;n del ejercicio 2025. <b>El servicio del bono
+de agosto de 2026 empuja esa proporci&oacute;n hacia arriba en 2028 y 2029</b>, cuando se pagan siete de
+las ocho cuotas de capital: cu&aacute;nto depende de la tasa, que es variable, y por eso no se pone un
+n&uacute;mero ac&aacute;.</p>
 <p>&Eacute;se es el techo, y lo declaramos: no queda lugar para una tercera propuesta de este
 tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 
@@ -664,6 +670,9 @@ menos que hoy, y la de mayor valor paga lo que le corresponde.</p>
 Registro de Endeudamiento Municipal Ley 12.462.</p>
 <p class="cap"><b>Nota:</b> la deuda flotante son obligaciones de corto plazo y oscila mucho entre
 trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones.</p>
+<p class="cap"><b>Nota:</b> <b>el bono de 30.000 millones no est&aacute; en este cuadro</b>, porque se
+coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado al
+stock consolidado de 5.927 millones, lo multiplica por seis.</p>
 <div class="cols">
 <p><b>Y en junio de 2026 aparece algo nuevo.</b> El informe de ese trimestre registra por primera vez un
 pr&eacute;stamo del <b>Banco Provincia por 1.000 millones</b>. En los diez informes anteriores esa
@@ -705,8 +714,9 @@ a&ntilde;os.</p>
 <tr><td class="l">2034</td><td class="n">+20.162</td><td class="n">+22.744</td><td class="n">+2.582</td></tr>
 <tr><td class="l">2037</td><td class="n">+33.943</td><td class="n">+33.943</td><td class="n">+2.908</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
-<span class="tag m">Modelado</span></p>
+<p class="cap"><b>Nota:</b> los cuatro salen de la serie publicada, no son supuestos: la nota
+metodol&oacute;gica del cierre del cap&iacute;tulo dice con qu&eacute; datos se calcul&oacute; cada
+uno.</p>
 <div class="pull"><p>El gasto total sube de 309.236 a 316.461 millones &mdash;este programa se ejecuta
 entero&mdash; y el resultado financiero de 2031 queda 2.289 millones por encima del escenario sin
 programa. No se le saca la partida a nadie. No se sube ninguna tasa.</p></div>

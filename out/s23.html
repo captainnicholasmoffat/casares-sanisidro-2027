@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
+<p class="lead">San Isidro tiene tres hospitales municipales, uno odontol&oacute;gico y una red de centros
+de atenci&oacute;n primaria: una infraestructura que pocos municipios bonaerenses tienen. Y el turno se
+sigue sacando haciendo la cola.</p>
+<div class="cols">
+<p><b>Hoy:</b> 78.217 millones, el 24,1% del presupuesto. Es, de lejos, la funci&oacute;n m&aacute;s
+grande del Municipio. <span class="sg">Ac&aacute; no proponemos fondos nuevos</span>: duplicar un sistema
+de este tama&ntilde;o no entra en el margen fiscal, y el cap&iacute;tulo 3 lo demuestra.</p>
+<p><b>Y hay que empezar reconociendo lo que se hizo</b>, porque es mucho y este programa no lo discute.
+Entre 2025 y 2026 el Municipio renov&oacute; habitaciones y ba&ntilde;os del Hospital Central, atac&oacute;
+las humedades, reacondicion&oacute; ascensores y cocinas en los tres hospitales, y
+<b>recuper&oacute; un montacamillas del Materno Infantil que llevaba a&ntilde;os fuera de
+servicio</b>.</p>
+<p><b>Compr&oacute; equipamiento y abri&oacute; lo que faltaba.</b> Tom&oacute;grafo de coherencia
+&oacute;ptica, desfibriladores, respirador pedi&aacute;trico, monitores para Neonatolog&iacute;a,
+actualizaci&oacute;n del quir&oacute;fano del Materno. Y una <b>primera sala de salud mental</b> en el
+Central, que adem&aacute;s descongestiona la guardia.</p>
+<p><b>Incluso empez&oacute; la digitalizaci&oacute;n.</b> El Materno Infantil pas&oacute; de historias
+cl&iacute;nicas en papel a un sistema digital integrado, con 170 puestos de trabajo nuevos.
+<span class="sg">La pregunta de este programa no es por qu&eacute; no se hace nada: es por qu&eacute; no
+se termina.</span></p>
+</div>
+<div class="cols">
+<p><b>Porque el problema de fondo sigue ah&iacute;, y est&aacute; documentado.</b> En un recorrido por
+los hospitales municipales, m&eacute;dicos de planta y pacientes describieron
+<b>faltantes de reactivos, faltantes de medicamentos, falta de camas de internaci&oacute;n y escasez de
+personal</b>. En el Hospital Central hay <b>tres pisos en desuso</b>, en mal estado, usados como
+dep&oacute;sito.</p>
+<p><span class="sg">&laquo;El hospital podr&iacute;a dar para much&iacute;simo m&aacute;s; parece
+m&aacute;s de lo que es&raquo;</span>, resumi&oacute; uno de los m&eacute;dicos consultados. Eso se
+constat&oacute; cinco meses despu&eacute;s del cambio de gobierno, y los profesionales dijeron que en
+buena parte segu&iacute;a igual. <b>No es de una gesti&oacute;n ni de la otra: es estructural.</b></p>
+<p><b>Y el turno se sigue sacando haciendo la cola.</b> Una vecina de Boulogne lo describi&oacute;
+as&iacute;: llegar a la ventanilla despu&eacute;s de una fila larga y que le digan que se acabaron, que
+vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b></p>
+<p><b>Ah&iacute; est&aacute; la distancia entre comprar un tom&oacute;grafo y que el sistema funcione.</b>
+El equipamiento se inaugura y se fotograf&iacute;a. El turno, el insumo y la cama no.</p>
+</div>
+<div class="callout g">
+<div class="clabel">La soluci&oacute;n ya existe, es gratis, y hay que pedirla</div>
+<p>La Provincia de Buenos Aires tiene en funcionamiento <b>Mi Salud Digital</b>: turno por celular,
+historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y orden integradas
+autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de sesenta
+municipios bonaerenses</b> y el sistema lleva registrados m&aacute;s de 19,5 millones de turnos.</p>
+<p><span class="sg">No hay que construirlo ni pagarlo: hay que adherir y conectar los efectores
+municipales.</span> La Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000
+computadoras, lectoras de DNI e impresoras para eso. <b>Es la propuesta m&aacute;s barata de este
+programa y la que m&aacute;s r&aacute;pido se nota</b>: el d&iacute;a que funcione, nadie pierde una
+ma&ntilde;ana de trabajo para pedir un turno.</p>
+</div>
+<div class="cols">
+<p><b>Teleconsulta para lo que no necesita ir al hospital.</b> Renovar una receta cr&oacute;nica, una
+consulta por fiebre un domingo, un control de seguimiento. En las experiencias argentinas medidas la
+espera es de <b>3 a 6 minutos</b>, la atenci&oacute;n dura entre 6 y 7, y el 86% de las consultas se
+resuelven. <b>Cada teleconsulta libera un turno presencial</b> para quien s&iacute; necesita el
+consultorio.</p>
+<p><b>Arreglar los edificios, que el propio gobierno reconoce.</b> La gesti&oacute;n actual
+identific&oacute; filtraciones y humedades como problema estructural de los hospitales municipales. Eso
+es obra, entra en la partida de obra, y <span class="sg">es exactamente lo que una comisi&oacute;n vecinal
+puede priorizar</span> con el mecanismo del cap&iacute;tulo 4.</p>
+<p><b>Y reci&eacute;n entonces, publicar.</b> Una vez que el turno es digital, el tiempo de espera por
+especialidad y por establecimiento existe como dato sin que nadie lo cargue a mano. Publicarlo deja de ser
+una promesa administrativa y pasa a ser la forma de saber d&oacute;nde falta un m&eacute;dico. Lo mismo
+con la ejecuci&oacute;n por centro y por zona, que hoy no se sabe: con 263.106 pesos por habitante al
+a&ntilde;o en juego, esa es la diferencia entre saber y suponer si el sistema llega a Boulogne.</p>
+<p><b>Qu&eacute; no promete.</b> No promete resolver la crisis salarial de los profesionales, que
+atraviesa a todo el sistema de salud argentino y excede a un municipio. Promete lo que un intendente
+decide: el sistema de turnos, la teleconsulta, el estado de los edificios y c&oacute;mo se compran los
+insumos.</p>
+</div>
+
+<h3>Y lo que decide si hay gasas: c&oacute;mo se compra</h3>
+<p class="tight">Es la funci&oacute;n m&aacute;s grande del presupuesto municipal &mdash;el 24,1%&mdash; y
+la que menos se puede mirar desde afuera. Tambi&eacute;n es, en todo el mundo, donde se pierde m&aacute;s
+dinero p&uacute;blico.</p>
+<div class="cols">
+<p><b>El dato general es contundente.</b> Entre el <b>40% y el 60%</b> de los casos documentados de
+corrupci&oacute;n en sistemas de salud est&aacute;n vinculados a la compra y el suministro de
+medicamentos e insumos. No es una particularidad argentina: es d&oacute;nde falla el mecanismo en
+cualquier pa&iacute;s.</p>
+<p><b>Y no hace falta que haya delito para que el da&ntilde;o exista.</b> Cuando un hospital no puede
+saber cu&aacute;nto paga otro hospital p&uacute;blico por el mismo producto, es imposible detectar
+sobreprecios. <span class="sg">Basta con que falte la comparaci&oacute;n para que el gasto se vuelva
+estructuralmente ineficiente</span>, sin que nadie robe nada.</p>
+<p><b>Y en San Isidro ya pas&oacute;.</b> En 2024 el Municipio denunci&oacute; penalmente a
+exfuncionarios de Salud y directores de hospitales &mdash;<b>al menos diez personas</b>&mdash; por
+sobrefacturaci&oacute;n en las viandas del Materno Infantil y el Ciudad de Boulogne, con un perjuicio
+estimado en <b>262 millones de pesos s&oacute;lo en 2023</b>. Se rescindi&oacute; el contrato y se dio de
+baja al proveedor del registro municipal.</p>
+<p><span class="sg">Y hubo un segundo hallazgo que casi no se coment&oacute; y que importa m&aacute;s
+ac&aacute;</span>: las dudas se repitieron en la compra de insumos hospitalarios &mdash;guantes
+descartables, entre otros&mdash; al detectar que varios materiales se compraban despu&eacute;s a precios
+m&aacute;s bajos que los facturados en noviembre de 2023. <b>Se descubri&oacute; comparando un precio
+contra otro. Si ese dato hubiera sido p&uacute;blico, se ve&iacute;a mientras pasaba y no dos
+a&ntilde;os despu&eacute;s.</b></p>
+<p><b>Hay un precedente argentino con resultado medido, y es sorprendente.</b> La Secretar&iacute;a de
+Salud de la Ciudad de Buenos Aires empez&oacute; en 1996 a monitorear los precios de compra de sus
+hospitales y a difundirlos entre los propios establecimientos. <b>S&oacute;lo difundir la
+informaci&oacute;n redujo los precios un 13%</b> en el primer a&ntilde;o.</p>
+<p><span class="sg">No hizo falta un organismo nuevo, ni una ley, ni una auditor&iacute;a.</span>
+Alcanz&oacute; con que cada hospital pudiera ver lo que pagaba el de al lado. Eso es exactamente lo que
+San Isidro no tiene y podr&iacute;a tener el primer mes.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Cuatro medidas, y la cuarta es la que hace que las otras tres sirvan</div>
+<p><b>1 &middot; Precio unitario p&uacute;blico.</b> Cada compra de insumos y medicamentos se publica con
+producto, cantidad, <b>precio unitario</b> y proveedor. No el total del expediente: el precio por unidad,
+que es lo &uacute;nico comparable. Es el mismo principio que el cap&iacute;tulo 1 aplica a los decretos
+de adjudicaci&oacute;n.</p>
+<p><b>2 &middot; Stock a la vista, el mismo d&iacute;a.</b> Qu&eacute; insumo b&aacute;sico hay y
+cu&aacute;l falta, por establecimiento. <span class="sg">Si en un hospital faltan gasas, eso tiene que
+poder verse desde afuera hoy</span>, no enterarse por un paciente. Y el dato ya existe: todo hospital
+lleva su stock.</p>
+<p><b>3 &middot; El control lo hace quien usa el hospital.</b> La comisi&oacute;n vecinal de cada zona ve
+lo que se compr&oacute; y lo que se ejecut&oacute; en los efectores de su territorio, con la
+obligaci&oacute;n de respuesta fundada del cap&iacute;tulo 4. <b>El que espera el turno es el que mejor
+sabe si el insumo lleg&oacute;.</b></p>
+<p><b>4 &middot; Y la comparaci&oacute;n la hace el sistema, no el vecino.</b> El caso de los guantes se
+descubri&oacute; comparando un precio contra otro, dos a&ntilde;os despu&eacute;s. Publicar el precio
+unitario sirve s&oacute;lo si alguien compara, y nadie tiene tiempo de comparar miles de compras.
+<span class="sg">El asistente del cap&iacute;tulo 4 compara solo</span>: contra las compras anteriores
+del mismo establecimiento, contra los otros dos hospitales y contra los municipios que publiquen, y
+avisa cuando algo se sale del rango.</p>
+</div>
+<div class="cols">
+<p><b>Se&ntilde;ala anomal&iacute;as, no acusa.</b> Dice &laquo;este precio est&aacute; 40% por encima
+de la compra anterior&raquo; y muestra los dos documentos. Qui&eacute;n explica es el funcionario y
+qui&eacute;n decide si hay delito es un juez: <span class="sg">el sistema no imputa a nadie, acorta el
+tiempo entre que algo pasa y que se ve</span>.</p>
+<p><b>Y la guardia, en n&uacute;mero.</b> Ocupaci&oacute;n en tiempo real: &laquo;catorce personas
+esperando, demora estimada cuarenta minutos&raquo;, para que quien tiene que ir elija a cu&aacute;l.
+<b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
+historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
+</div>
+<div class="cols">
+<p><b>Por qu&eacute; esto no es &laquo;m&aacute;s transparencia&raquo;.</b> Publicar un precio unitario
+no es un gesto de apertura: <span class="sg">es el mecanismo que hace que el precio baje</span>, probado
+en hospitales p&uacute;blicos argentinos. La diferencia entre publicar el total de una licitaci&oacute;n y
+publicar el precio por gasa es la diferencia entre no poder comparar y poder.</p>
+<p><b>Y este programa no acusa a nadie.</b> No afirmamos que en San Isidro se compre mal ni caro: no lo
+sabemos, y no lo sabemos <b>porque el dato no se publica</b>. Eso es precisamente el problema. Un sistema
+que no se puede auditar desde afuera falla igual con funcionarios honestos.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 25 de 35</span></div></div></body></html>

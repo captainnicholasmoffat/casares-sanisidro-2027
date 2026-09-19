@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">5.7</span>Seguridad <span class="tag v">Reasignaci&oacute;n</span></h2>
+<p class="lead">Esta secci&oacute;n no propone comprar lo que ya se compr&oacute;. Propone usarlo, que es
+lo que hoy no se hace y lo que la evidencia dice que m&aacute;s baja el delito.</p>
+<div class="cols">
+<p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, y la funci&oacute;n que m&aacute;s creci&oacute;
+de todas: <b>+34,8% real en un a&ntilde;o</b>. Es la Prioridad I declarada del plan vigente y se
+ejecut&oacute;.</p>
+<p><b>Qu&eacute; puede y qu&eacute; no puede un intendente.</b> La polic&iacute;a es provincial. La
+estad&iacute;stica criminal es provincial. La investigaci&oacute;n penal es provincial.
+<span class="sg">Un intendente bonaerense no dirige la fuerza que patrulla su distrito</span>, y
+cualquier programa que insin&uacute;e lo contrario promete algo que no puede cumplir.</p>
+<p><b>Lo que s&iacute; es municipal, y no es poco:</b> la patrulla municipal, las c&aacute;maras y el
+centro de monitoreo, el 911 municipal, la iluminaci&oacute;n. Ah&iacute; el intendente decide todo, y
+ah&iacute; se gastaron esos 32.446 millones.</p>
+<p><span class="sg">No proponemos recortar un peso ni comprar un fierro m&aacute;s.</span> El equipamiento
+est&aacute; comprado: c&aacute;maras HD en reemplazo del 100% de las anal&oacute;gicas, un anillo digital
+con lectoras de patente, m&aacute;s m&oacute;viles y m&aacute;s motos. Lo que falta no es hardware.</p>
+</div>
+
+<h3>1. Patrullar donde el delito ocurre, no repartido parejo</h3>
+<div class="cols">
+<p><b>Es la estrategia con m&aacute;s evidencia de toda la investigaci&oacute;n policial.</b> Un
+metaan&aacute;lisis de la Campbell Collaboration revis&oacute; 65 estudios &mdash;ensayos aleatorizados
+y cuasiexperimentales&mdash;: cerca del <b>80% report&oacute; reducciones significativas del delito</b>.
+En Dallas, el delito violento cay&oacute; <b>11% en los puntos tratados</b> durante el primer a&ntilde;o,
+sin desplazamiento hacia las zonas vecinas.</p>
+<p><b>Y el delito se concentra donde uno no lo esperar&iacute;a de concentrado</b>: unos pocos lugares
+chicos generan la mitad de todos los hechos. <span class="sg">Es la misma l&oacute;gica que el
+cap&iacute;tulo 1 aplica al d&eacute;ficit de infraestructura</span>, que no est&aacute; repartido sino
+concentrado en nueve radios censales.</p>
+<p><b>No es mano dura.</b> Un estudio de 2025 encontr&oacute; que en las zonas tratadas con enfoque
+disuasivo los agentes no iniciaron m&aacute;s detenciones ni m&aacute;s controles que en las zonas de
+control. Se reduce el delito sin endurecer el trato.</p>
+<p><b>Y cuesta poco.</b> En un experimento controlado, el efecto se obtuvo con un promedio de
+<b>35,5 minutos de patrullaje por turno</b> en el punto caliente. No es m&aacute;s patrulla: es la misma
+patrulla, en otro lado y a otra hora.</p>
+</div>
+<div class="callout a">
+<div class="clabel">El paso cero, y es el que falta</div>
+<p>Nada de esto funciona sin un dato georreferenciado de incidentes, y <b>en San Isidro no existe en
+ninguna forma p&uacute;blica</b>. El portal de datos abiertos est&aacute; ca&iacute;do y, cuando
+funcionaba, nunca tuvo un dataset de seguridad. El Mapa Digital municipal figura &laquo;en
+construcci&oacute;n&raquo;. Las estad&iacute;sticas salen como nota de prensa mensual y agregadas a todo
+el partido: en agosto de 2026, <b>240 detenidos y 27.457 personas identificadas</b>, sin una sola
+desagregaci&oacute;n por zona y sin archivo descargable.</p>
+<p><b>Y no es que otros lo hagan y San Isidro no.</b> Tigre tiene un portal de datos abiertos con
+219 conjuntos publicados, y sobre seguridad s&oacute;lo ofrece ubicaciones de bomberos, comisar&iacute;as
+e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
+Isidro. <span class="sg">Ning&uacute;n municipio del conurbano norte publica hoy el dato que esta
+propuesta necesita</span>, lo que la vuelve la primera y tambi&eacute;n la m&aacute;s exigente.</p>
+<p>Por eso el primer compromiso de esta secci&oacute;n no es patrullar distinto: es
+<b>construir y publicar el mapa de incidentes municipales</b>. Sin eso, cualquier promesa de patrullaje
+inteligente es una frase.</p>
+</div>
+
+<h3>2. Software sobre las c&aacute;maras que ya se compraron: tres usos, y se cuentan por separado</h3>
+<p class="tight">San Isidro compr&oacute; el anillo de c&aacute;maras y no tiene la capa que lo
+aprovecha. <span class="sg">El fierro est&aacute;: falta el software.</span> Lo que sigue son tres cosas
+distintas, y mezclarlas es lo que vuelve imposible discutirlas.</p>
+<div class="cols">
+<p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
+patrullaje m&aacute;s cercano. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
+sistema reconoce lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo.</p>
+<p><b>2 &middot; Reconstrucci&oacute;n inmediata despu&eacute;s de un hecho denunciado.</b> El sistema
+busca qui&eacute;n estuvo y hacia d&oacute;nde fue, y orienta a la polic&iacute;a en el momento y no
+tres d&iacute;as despu&eacute;s. La polic&iacute;a ya hace exactamente esto a mano, mirando horas de
+video: <b>que el sistema lo haga en minutos es eficiencia, no una facultad nueva.</b></p>
+<p><b>3 &middot; Seguimiento sostenido de una persona en el tiempo: s&oacute;lo con orden judicial</b>,
+y con registro p&uacute;blico de cu&aacute;ntas &oacute;rdenes se recibieron y cu&aacute;ntas se
+cumplieron. Es el &uacute;nico de los tres que mira a una persona y no a un hecho, y por eso es el
+&uacute;nico que necesita un juez.</p>
+<p><b>Y dos cosas que este programa no escribe, a prop&oacute;sito.</b> No propone un registro municipal
+de personas armado por el Municipio sin intervenci&oacute;n judicial, ni reconocimiento facial masivo en
+la v&iacute;a p&uacute;blica. <span class="sg">Es una decisi&oacute;n, no un olvido</span>, y queda dicha
+para que se pueda exigir.</p>
+<p><b>Por qu&eacute; entra como reasignaci&oacute;n y no como fondos nuevos.</b> Porque es software sobre
+infraestructura amortizada. Comparado con el costo de instalar el anillo de c&aacute;maras, la capa de
+an&aacute;lisis es una fracci&oacute;n, y sale de donde el cap&iacute;tulo 3 lo especifica: del programa
+de mantenimiento y embellecimiento.</p>
+<p><b>Hay d&oacute;nde mirarlo funcionando.</b> Dentro del Centro de Operaciones de Tigre funciona un
+Laboratorio de An&aacute;lisis de Im&aacute;genes Criminol&oacute;gicas que trabaja con inteligencia
+artificial sobre el video que ya se graba.</p>
+</div>
+
+<h3>3. Una oficina de ciberdelito, unificada con la capa de anal&iacute;tica</h3>
+<div class="cols">
+<p><b>Es probablemente el delito que m&aacute;s vecinos sufren y el &uacute;nico del que el Municipio no
+se ocupa.</b> Estafas virtuales, robo de identidad, grooming, extorsiones por redes.</p>
+<p>Tigre tiene <b>CiberCOT</b>, una oficina que recibe y asiste al vecino que sufri&oacute; un delito
+cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
+San Isidro no tiene nada equivalente.</p>
+<p><b>Va unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
+mostrador de denuncias sin nadie que pueda hacer nada con ellas.
+<span class="sg">Unificada con la anal&iacute;tica y con la seguridad de los sistemas municipales, tiene
+estructura, personal t&eacute;cnico y trabajo todo el a&ntilde;o</span>, y ese personal es el mismo que
+forma el cap&iacute;tulo 5.3.</p>
+<p><b>Incluye asistencia a quien sufre una campa&ntilde;a de hostigamiento:</b> orientaci&oacute;n legal,
+ayuda para documentar lo que est&aacute; pasando, canal con las plataformas y derivaci&oacute;n a
+fiscal&iacute;a. Hoy eso lo hace cada uno como puede, y el que no sabe c&oacute;mo, no lo hace.</p>
+<p><b>Y detecci&oacute;n de campa&ntilde;as coordinadas, que es prueba y no censura.</b> Mostrar que
+cincuenta cuentas creadas la misma semana publican lo mismo es un hecho verificable que sirve en un
+expediente. <span class="sg">La oficina no tiene facultad de moderar contenido</span>: no da de baja
+nada, no pide que se baje nada y no decide qu&eacute; se puede decir.</p>
+<p><b>Y es competencia municipal sin discusi&oacute;n.</b> Asistir, orientar, capacitar y derivar no
+requiere facultades policiales. Es exactamente lo que un municipio puede hacer solo, que es el criterio
+con el que est&aacute; escrito todo este programa.</p>
+<p><b>La capacitaci&oacute;n es la mitad del trabajo.</b> La mayor&iacute;a de estas estafas se previenen
+sabiendo reconocerlas, y eso se ense&ntilde;a. Articula con la formaci&oacute;n del cap&iacute;tulo 5.3 y
+con las comisiones vecinales del 4.</p>
+</div>
+
+<h3>4. La constancia de que no consta</h3>
+<p class="tight">Hoy arruinar un nombre tarda una tarde y limpiarlo tarda meses. Esto no corrige esa
+asimetr&iacute;a entera, pero corrige la parte que un municipio puede corregir.</p>
+<div class="cols">
+<p><b>Qu&eacute; es, exactamente.</b> Si a alguien lo acusan p&uacute;blicamente de un delito y no hay
+causa, no hay imputaci&oacute;n y no hay condena, el Municipio certifica exactamente eso: que en los
+registros consultados, al d&iacute;a de la fecha, <b>no consta</b>.
+<span class="sg">Es una afirmaci&oacute;n sobre el registro, no sobre el hecho.</span></p>
+<p><b>Y no es una figura nueva.</b> Es lo mismo que un certificado de antecedentes, que ya existe y que
+nadie considera un dictamen sobre la inocencia de nadie. <b>No es un verificador de noticias y no
+dictamina qu&eacute; es verdad:</b> un municipio no tiene por qu&eacute; decidir eso y este programa no
+se lo atribuye.</p>
+<p><b>Las condiciones, todas necesarias.</b> La pide el afectado y s&oacute;lo el afectado: el Municipio
+no sale de oficio. Se resuelve <b>en horas y no en meses</b>, y para eso est&aacute; el asistente del
+cap&iacute;tulo 4. Va con f&oacute;rmula fija &mdash;qu&eacute; registros se consultaron, con qu&eacute;
+fecha, qu&eacute; consta y qu&eacute; no&mdash;, sin adjetivos y sin conclusi&oacute;n.</p>
+<p><b>Y s&oacute;lo sobre hechos con registro p&uacute;blico:</b> causas, condenas, habilitaciones,
+sanciones. Queda publicada en la aplicaci&oacute;n con su fecha, para que el afectado la muestre y
+cualquiera la verifique.</p>
+</div>
+<div class="pull"><p>La constancia no impide denunciar: impide condenar sin juicio. El que acusa tiene un
+camino, y es el judicial.</p></div>
+
+<h3>5. Registro obligatorio en los actos de autoridad</h3>
+<div class="cols">
+<p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
+fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
+labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
+Fuera de ella, no.</p>
+<p><b>No es vigilancia del trabajador: es registro del acto de autoridad</b>, que es p&uacute;blico por
+naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial, y protege a los dos lados:
+<span class="sg">al vecino del abuso y al inspector honesto de la acusaci&oacute;n falsa</span>.</p>
+<p><b>Y tiene una consecuencia escrita:</b> sin registro encendido, el acta no vale. Sin eso la regla es
+una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
+cumplirla.</p>
+<p><b>Del otro lado, el vecino graba desde la aplicaci&oacute;n</b>, y ese registro tiene el mismo valor
+en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
+</div>
+
+<h3>6. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
+<div class="cols">
+<p><b>Todo lo anterior se compra.</b> Anal&iacute;tica, desarrollo, monitoreo, soporte. Hoy eso se le
+paga a proveedores de afuera y el dinero se va del partido, igual que la obra p&uacute;blica antes del
+cap&iacute;tulo 4.</p>
+<p><span class="sg">Se contrata a empresas de San Isidro</span>, con el mismo criterio de
+proximidad que el art&iacute;culo 132 aplica a la obra. Y el Centro de Formaci&oacute;n Laboral N&ordm;
+404 forma a la gente que ocupa esos puestos, con el eje en inteligencia artificial y servicios digitales
+que describe la secci&oacute;n 5.3.</p>
+<p><b>Ah&iacute; seguridad deja de ser un cap&iacute;tulo aparte.</b> Es la misma propuesta del resto del
+programa: decisi&oacute;n cerca, trabajo local, y el dinero que se queda donde se gasta.</p>
+<p><b>Y no hay que inventar el control: hay que reponerlo.</b> Revisamos los 573 decretos de
+adjudicaci&oacute;n de la gesti&oacute;n actual publicados en el Bolet&iacute;n: dicen qui&eacute;n
+gan&oacute;, con CUIT, y cu&aacute;nto. <span class="sg">Ninguno dice d&oacute;nde tiene su domicilio el
+adjudicatario.</span> Cero de 573.</p>
+<p><b>Y ac&aacute; est&aacute; la primera objeci&oacute;n, que conviene contestar antes de que la
+hagan:</b> qu&eacute; pasa si nadie ac&aacute; puede hacerlo. Si la respuesta es contratar afuera, la
+regla es decorativa. <span class="sg">La respuesta de este programa es que la capacidad se
+fomenta.</span> El Municipio detecta al licitar qu&eacute; capacidad falta, el Centro de
+Formaci&oacute;n forma en eso, la aplicaci&oacute;n muestra qui&eacute;n est&aacute; disponible y las
+universidades del partido acompa&ntilde;an la constituci&oacute;n de la empresa o de la cooperativa.</p>
+<p><b>Con dos l&iacute;mites escritos.</b> El Municipio <b>no es due&ntilde;o ni socio</b> de ninguna de
+esas empresas: si lo fuera se rompe la incompatibilidad del art&iacute;culo 44 de la Ley Org&aacute;nica.
+Y la contrataci&oacute;n sigue siendo competitiva: <span class="sg">se fomenta que existan oferentes
+locales, no que haya uno solo con el contrato asegurado</span>. Sin ese segundo l&iacute;mite, en tres
+a&ntilde;os tenemos otro caso como el de la recolecci&oacute;n.</p>
+<p><b>Pero se public&oacute; durante quince a&ntilde;os.</b> Entre 2002 y 2017 el domicilio figuraba en
+una proporci&oacute;n que lleg&oacute; al 82% de los decretos. Se dej&oacute; de publicar en 2018, bajo
+la gesti&oacute;n anterior, y desde 2023 no aparece nunca. <b>No es un dato que nunca existi&oacute;: es
+una capacidad que el Municipio ten&iacute;a y perdi&oacute;</b>, igual que la cobranza del 93,51% que el
+cap&iacute;tulo 3 propone recuperar.</p>
+</div>
+
+<h3>7. Y publicar lo que se hace</h3>
+<ol class="n">
+<li><b>Publicar los datos que el Municipio efectivamente produce</b> &mdash;patrullaje,
+c&aacute;maras operativas, tiempos de respuesta del 911&mdash;, <b>continuos y no cada tres meses</b>,
+porque el sistema los genera ya cargados; y
+<span class="sg">gestionar ante la Provincia el acceso al dato delictual desagregado por zona</span>. Lo
+primero depende de un intendente, lo segundo no, y lo decimos.</li>
+<li><b>Que cada comisi&oacute;n vecinal reciba el dato de su zona</b> y pueda pedir explicaci&oacute;n
+fundada, con el mecanismo del cap&iacute;tulo 4.</li>
+</ol>
+<div class="pull"><div class="plabel">Un presupuesto no es una pol&iacute;tica</div>
+<p>Gastar un tercio m&aacute;s en seguridad sin publicar si funciona no es una pol&iacute;tica: es un
+presupuesto.</p></div>
+<div class="note">
+<p><b>Sobre la evidencia citada.</b> El metaan&aacute;lisis de 65 estudios es de la Campbell
+Collaboration, actualizado por Braga y otros; la evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del
+plan municipal con diferencias en diferencias; el dato de los 35,5 minutos por turno proviene de un
+experimento de campo controlado. Son estudios internacionales sobre fuerzas policiales, no sobre patrullas
+municipales argentinas: <b>la l&oacute;gica de concentraci&oacute;n es transferible, la magnitud del
+efecto no est&aacute; demostrada para este caso.</b></p>
+<p>Los datos de Tigre provienen de comunicaciones del propio Municipio de Tigre y no de una
+verificaci&oacute;n independiente, del mismo modo que las metas del plan vigente de San Isidro provienen
+del propio Municipio de San Isidro.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 26 de 35</span></div></div></body></html>

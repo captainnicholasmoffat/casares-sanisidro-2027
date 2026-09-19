@@ -25,21 +25,20 @@ C4A, C4A2 = split_at(C.C4A, '<h2><span class="n">4.4</span>', "cap4a2",
 # el capitulo 4 entra en siete paginas: la aplicacion (4.11) es seccion
 # propia y se lleva una entera.
 _c4 = C.C4B
-C4B,    _c4 = split_at(_c4, '<h3>Qui&eacute;n controla: nadie nuevo</h3>', "cap4bb", "")
-C4B_B,  _c4 = split_at(_c4, '<h3>Para lo que excede al barrio: un panel sorteado</h3>', "cap4bb2", "")
-C4B_B2, _c4 = split_at(_c4, '<h2><span class="n">4.7</span>', "cap4b2", "")
-C4B2,   _c4 = split_at(_c4, '<h2><span class="n">4.9</span>', "cap4bc", "")
-C4B_C,  _c4 = split_at(_c4, '<h2><span class="n">4.11</span>', "cap4bd", "")
-C4B_D, C4B_E = split_at(_c4, '<h2><span class="n">4.12</span>', "cap4be", "")
+C4B,    _c4 = split_at(_c4, '<h3>Lo que una comisi&oacute;n zonal no decide</h3>', "cap4bb", "")
+C4B_B,  _c4 = split_at(_c4, '<h2><span class="n">4.7</span>', "cap4bb2", "")
+C4B_B2, _c4 = split_at(_c4, '<h2><span class="n">4.9</span>', "cap4b2", "")
+C4B2,  C4B_C = split_at(_c4, '<h2><span class="n">4.12</span>', "cap4bc", "")
 C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C3B_A, C3B_B = split_at(B.C3B, '<h2><span class="n">3.5</span>', "cap3b2",
                         H_CONT.format(n=3, t="Los fondos"))
-C3B_B, C3B_C = split_at(C3B_B, '<h3>La tabla con la que San Isidro val', "cap3b3", "")
+C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
 C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.4</span>', "cap2b",
                      H_CONT.format(n=2, t="La gesti&oacute;n, medida"))
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
+C5A2, C5A3 = split_at(C5A2, '<h3>Ense&ntilde;ar IA sin acceso', "cap5a3", "")
 C6, C62_SRC = split_at(C.C6,  '<h2><span class="n">6.3</span>', "cap6b",
                      H_CONT.format(n=6, t="Contra qu&eacute; queremos que nos midan"))
 
@@ -49,12 +48,13 @@ C5B_B, C5B_C = split_at(C5B_B_SRC, '<h2><span class="n">5.7</span>', "cap5bc",
                         H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.12</span>', "cap5b3",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
+C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
                         H_CONT.format(n=6, t="Contra qu&eacute; queremos que nos midan"))
 
 SECTIONS = [A.INDICE, S.SINTESIS, A.INTRO, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
-            C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C, C4B_D, C4B_E,
-            C5A, C5A2, C5B, C5B_B, C5B_C, C5B2, C5B3, C6, C6B_A, C6B_B, E.CIERRE, O.ORDENANZA, D.GLOSARIO]
+            C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
+            C5A, C5A2, C5A3, C5B, C5B_B, C5B_C, C5B2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, O.ORDENANZA, D.GLOSARIO]
 
 # pagina 1 = tapa; el indice arranca en la 2
 A.PAGES.update({k: i + 3 for i, k in enumerate(

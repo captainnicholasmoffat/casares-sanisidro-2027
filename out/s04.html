@@ -1,0 +1,1625 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">1.2</span>El municipio invierte m&aacute;s que casi todos. Y no llega.</h2>
+<div class="cols">
+<p>Esto no es un municipio pobre ni mal administrado. Los n&uacute;meros lo desmienten, y conviene
+establecerlo antes de cualquier cr&iacute;tica.</p>
+<p>Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro est&aacute; en el
+<b>puesto 4 en inversi&oacute;n en obra p&uacute;blica</b>, con el 17,8% de su gasto contra una mediana
+provincial de 5,4%; y en el <b>puesto 20 en menor peso de la planta de personal</b>, con 34,4% contra
+50,7%.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;5</div><div class="extitle">San Isidro contra sus vecinos y contra la mediana de la Provincia</div><div class="exsub">Ejecuci&oacute;n 2025, gasto devengado.</div></div>
+<table>
+<colgroup><col style="width:150pt"><col><col><col></colgroup>
+<tr class="hd"><th>Municipio</th><th class="r">Gasto devengado total 2025 (M$)</th>
+<th class="r">Personal %</th><th class="r">Obra p&uacute;blica %</th></tr>
+<tr class="hi"><td class="l">San Isidro</td><td class="n">324.304</td><td class="n"><b>34,4</b></td><td class="n"><b>17,8</b></td></tr>
+<tr><td class="l">Vicente L&oacute;pez</td><td class="n">318.824</td><td class="n">49,0</td><td class="n">7,4</td></tr>
+<tr><td class="l">Tigre</td><td class="n">400.156</td><td class="n">30,4</td><td class="n">11,4</td></tr>
+<tr><td class="l">San Fernando</td><td class="n">148.932</td><td class="n">33,8</td><td class="n">6,9</td></tr>
+<tr><td class="l">San Mart&iacute;n</td><td class="n">276.003</td><td class="n">54,5</td><td class="n">1,5</td></tr>
+<tr><td class="m">Mediana provincial</td><td class="n m">&mdash;</td><td class="n m">50,7</td><td class="n m">5,4</td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA. San Isidro validado contra la
+ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
+
+<p>San Isidro invierte en obra p&uacute;blica m&aacute;s del triple que el municipio bonaerense
+t&iacute;pico. <b>Y el 32,1% de los hogares de Boulogne y B&eacute;ccar sigue sin gas de red.</b></p>
+
+<h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
+<p class="tight">Decir cu&aacute;nto se invierte no alcanza. El clasificador por finalidad y funci&oacute;n
+abre el destino, y ah&iacute; aparece lo que el total esconde.</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;6</div><div class="extitle">Alumbrado p&uacute;blico recibe el triple que el agua y las cloacas</div><div class="exsub">Gasto devengado 2025 dentro de la finalidad Servicios Sociales. Urbanismo abierto en sus cinco subfunciones.</div></div>
+<table>
+<colgroup><col style="width:230pt"><col><col></colgroup>
+<tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado 2025</th><th class="r">Veces lo que recibe agua y cloaca</th></tr>
+<tr><td class="l">Recolecci&oacute;n de residuos, barrido y limpieza</td><td class="n">49.270 M</td><td class="n">14,8&times;</td></tr>
+<tr class="hi"><td class="l">Alumbrado p&uacute;blico</td><td class="n"><b>10.313 M</b></td><td class="n"><b>3,1&times;</b></td></tr>
+<tr><td class="l">Otros servicios urbanos</td><td class="n">5.829 M</td><td class="n">1,8&times;</td></tr>
+<tr><td class="l">Planeamiento y desarrollo urbano</td><td class="n">4.054 M</td><td class="n">1,2&times;</td></tr>
+<tr><td class="l">Deporte y recreaci&oacute;n</td><td class="n">3.813 M</td><td class="n">1,1&times;</td></tr>
+<tr><td class="l">Cementerios</td><td class="n">845 M</td><td class="n">0,3&times;</td></tr>
+<tr class="hi"><td class="l">Agua potable y alcantarillado</td><td class="n"><b>3.320 M</b></td><td class="n"><b>&mdash;</b></td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Finalidad
+y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y 3.8.</p>
+<p class="cap"><b>Nota:</b> son gastos por destino, no por objeto: dentro de cada funci&oacute;n hay
+sueldos, contratos de servicio y obra. Los 49.270 millones de residuos son sobre todo el contrato de
+recolecci&oacute;n, que es un servicio diario y no una inversi&oacute;n; por eso la comparaci&oacute;n
+que sostiene este cuadro es la del alumbrado, que s&iacute; es infraestructura urbana como el agua y la
+cloaca.</p>
+<div class="cols">
+<p><b>Tres a uno, entre dos cosas comparables.</b> Iluminar la calle y llevar agua y sacar la cloaca de
+adentro de la casa son las dos infraestructura urbana, las dos se deciden cada a&ntilde;o, y las dos salen
+del mismo presupuesto. Una recibe 10.313 millones y la otra 3.320.</p>
+<p><b>Y es coherente con el plan.</b> &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la Prioridad II
+declarada; el agua y la cloaca no figuran en ninguna de las tres. <span class="sg">El presupuesto no
+contradice al plan: lo cumple.</span></p>
+<p><b>Por eso el problema no se arregla gastando m&aacute;s.</b> San Isidro ya gasta: es el cuarto de 106
+en inversi&oacute;n. Lo que hay que cambiar es qui&eacute;n decide el destino, y por eso el
+cap&iacute;tulo 4 propone lo que propone.</p>
+<p><b>Lo que este cuadro no dice.</b> No dice que el alumbrado o la recolecci&oacute;n sobren: la basura
+hay que juntarla todos los d&iacute;as y la calle oscura es un problema real.
+<span class="sg">Dice que entre dos obras posibles, se eligi&oacute; sistem&aacute;ticamente la que se
+ve.</span></p>
+</div>
+<h3>Y la mitad del dinero de la obra se iba del partido</h3>
+<div class="cols">
+<p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
+domicilio de la empresa a la que se le adjudica cada obra. Revisamos 3.670 decretos de
+adjudicaci&oacute;n entre 2002 y 2017, que son los que todav&iacute;a lo traen.</p>
+<p><b>El 50,5% de los adjudicatarios ten&iacute;a domicilio en San Isidro y el 49,5% ven&iacute;a de
+afuera.</b> Y la proporci&oacute;n local ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: en 2017 hab&iacute;a
+bajado al 39%.</p>
+<p><b>Y no sabemos cu&aacute;l es hoy: ese desconocimiento es el hallazgo.</b> La proporci&oacute;n
+50,5/49,5 corresponde al per&iacute;odo 2002&ndash;2017, el &uacute;ltimo con domicilio publicado.</p>
+<p><b>Desde 2018 no se puede saber, y el corte es anterior a esta gesti&oacute;n.</b> Entre 2011 y 2017
+el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
+bajo la gesti&oacute;n anterior, y la actual no la retom&oacute;.</b> De los 573 decretos de
+adjudicaci&oacute;n publicados desde diciembre de 2023, <span class="sg">ninguno dice d&oacute;nde
+est&aacute; el que cobra</span>.</p>
+<p><b>Por qu&eacute; importa para este programa.</b> Casi la mitad del dinero de la obra p&uacute;blica
+sal&iacute;a del partido en la &uacute;ltima medici&oacute;n disponible, y hoy no hay medici&oacute;n.
+Es el argumento del cap&iacute;tulo 4 en una cifra: cuando ejecuta una asociaci&oacute;n vecinal, el
+trabajo y el dinero se quedan donde est&aacute; la obra.</p>
+</div>
+
+
+<div class="cols">
+<p><b>Y lo que s&iacute; se puede contar es en cu&aacute;ntas manos queda.</b> Tomando s&oacute;lo los
+decretos donde el texto nombra a cada empresa con su importe &mdash;407 decretos, 116.343 millones de
+pesos corrientes, 236 adjudicatarios&mdash;, <b>los diez primeros se llevan el 54,5% y los veinticinco
+primeros el 78,6%</b>.</p>
+<p><b>Y cuatro de esos diez entraron con una sola adjudicaci&oacute;n.</b> La mayor de todas, un contrato
+de seguridad y vigilancia, representa por s&iacute; sola el <b>11,6% de todo lo adjudicado</b> en dos
+a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&mdash; compromete 20.916
+millones en un solo acto.</p>
+<p><b>No hay nada irregular en eso y no lo insinuamos.</b> Una obra vial grande se licita grande. Lo que
+el dato muestra es la escala de la decisi&oacute;n: <span class="sg">un solo acto del Ejecutivo puede
+comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
+<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos al peso
+cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
+ninguno de los 573 decretos.</b></p>
+<p><b>Dos salvedades, porque la cifra es fuerte.</b> Los montos son pesos corrientes de cada a&ntilde;o y
+no se comparan entre s&iacute;. Y la concentraci&oacute;n usa s&oacute;lo los 407 decretos donde el
+articulado nombra a cada empresa con su importe: sumar los 144 que informan un total sin desagregar la
+bajar&iacute;a al 42,1%, <span class="sg">de modo que el 54,5% es el dato firme y no el m&aacute;s alto
+posible</span>.</p>
+</div>
+
+
+<div class="ex"><div class="exlabel">GR&Aacute;FICO&nbsp;7</div><div class="extitle">San Isidro gasta menos en sueldos y mucho m&aacute;s en obra que la mediana bonaerense</div><div class="exsub">Cada punto es un municipio, ordenados por valor. Ejecuci&oacute;n 2025, gasto devengado.</div><div class="chart "><svg preserveAspectRatio="xMidYMid meet" xmlns:xlink="http://www.w3.org/1999/xlink" width="449.865141pt" height="149.532456pt" viewBox="0 0 449.865141 149.532456" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-15T09:05:30.007589</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 149.532456 
+L 449.865141 149.532456 
+L 449.865141 0 
+L 0 0 
+z
+" style="fill: #f5f0e8"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 6.675141 54.76444 
+L 448.425141 54.76444 
+L 448.425141 23.910875 
+L 6.675141 23.910875 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="6.675141" y="62.779409" transform="rotate(-0 6.675141 62.779409)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="68.029307" y="62.779409" transform="rotate(-0 68.029307 62.779409)">10%</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="129.383474" y="62.779409" transform="rotate(-0 129.383474 62.779409)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="190.737641" y="62.779409" transform="rotate(-0 190.737641 62.779409)">30%</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="252.091807" y="62.779409" transform="rotate(-0 252.091807 62.779409)">40%</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="313.445974" y="62.779409" transform="rotate(-0 313.445974 62.779409)">50%</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="374.800141" y="62.779409" transform="rotate(-0 374.800141 62.779409)">60%</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="436.154307" y="62.779409" transform="rotate(-0 436.154307 62.779409)">70%</text>
+     </g>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 6.3px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="227.550141" y="70.939018" transform="rotate(-0 227.550141 70.939018)">de 106 municipios, San Isidro es el 20º que menos gasta en sueldos</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_9">
+    <path d="M 94.574801 50.797553 
+L 94.574801 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 119.204818 50.797553 
+L 119.204818 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 125.075184 50.797553 
+L 125.075184 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 134.628028 50.797553 
+L 134.628028 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 172.994629 50.797553 
+L 172.994629 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 173.954208 50.797553 
+L 173.954208 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 174.662849 50.797553 
+L 174.662849 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 178.456377 50.797553 
+L 178.456377 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 181.75355 50.797553 
+L 181.75355 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 182.764053 50.797553 
+L 182.764053 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 193.323105 50.797553 
+L 193.323105 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 193.743995 50.797553 
+L 193.743995 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 199.232125 50.797553 
+L 199.232125 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 207.665869 50.797553 
+L 207.665869 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 213.702505 50.797553 
+L 213.702505 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 213.838098 50.797553 
+L 213.838098 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_25">
+    <path d="M 214.035658 50.797553 
+L 214.035658 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_26">
+    <path d="M 216.354232 50.797553 
+L 216.354232 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_27">
+    <path d="M 216.777576 50.797553 
+L 216.777576 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 217.789306 50.797553 
+L 217.789306 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 227.189992 50.797553 
+L 227.189992 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_30">
+    <path d="M 228.444684 50.797553 
+L 228.444684 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_31">
+    <path d="M 230.199414 50.797553 
+L 230.199414 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_32">
+    <path d="M 233.739549 50.797553 
+L 233.739549 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_33">
+    <path d="M 234.575806 50.797553 
+L 234.575806 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_34">
+    <path d="M 235.337825 50.797553 
+L 235.337825 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_35">
+    <path d="M 240.845589 50.797553 
+L 240.845589 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_36">
+    <path d="M 242.43957 50.797553 
+L 242.43957 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_37">
+    <path d="M 246.89695 50.797553 
+L 246.89695 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_38">
+    <path d="M 247.306796 50.797553 
+L 247.306796 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_39">
+    <path d="M 250.097183 50.797553 
+L 250.097183 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_40">
+    <path d="M 256.235668 50.797553 
+L 256.235668 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_41">
+    <path d="M 266.094669 50.797553 
+L 266.094669 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_42">
+    <path d="M 266.668944 50.797553 
+L 266.668944 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_43">
+    <path d="M 270.095574 50.797553 
+L 270.095574 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_44">
+    <path d="M 270.337923 50.797553 
+L 270.337923 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_45">
+    <path d="M 274.39466 50.797553 
+L 274.39466 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_46">
+    <path d="M 275.438908 50.797553 
+L 275.438908 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_47">
+    <path d="M 276.545124 50.797553 
+L 276.545124 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_48">
+    <path d="M 280.965078 50.797553 
+L 280.965078 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_49">
+    <path d="M 287.829382 50.797553 
+L 287.829382 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_50">
+    <path d="M 292.492912 50.797553 
+L 292.492912 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_51">
+    <path d="M 292.676975 50.797553 
+L 292.676975 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_52">
+    <path d="M 293.784418 50.797553 
+L 293.784418 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_53">
+    <path d="M 296.063111 50.797553 
+L 296.063111 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_54">
+    <path d="M 298.85534 50.797553 
+L 298.85534 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_55">
+    <path d="M 300.629702 50.797553 
+L 300.629702 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_56">
+    <path d="M 301.027891 50.797553 
+L 301.027891 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_57">
+    <path d="M 301.202136 50.797553 
+L 301.202136 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_58">
+    <path d="M 307.232024 50.797553 
+L 307.232024 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_59">
+    <path d="M 308.34008 50.797553 
+L 308.34008 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_60">
+    <path d="M 310.642702 50.797553 
+L 310.642702 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_61">
+    <path d="M 317.319876 50.797553 
+L 317.319876 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_62">
+    <path d="M 318.685006 50.797553 
+L 318.685006 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_63">
+    <path d="M 319.338428 50.797553 
+L 319.338428 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_64">
+    <path d="M 320.35568 50.797553 
+L 320.35568 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_65">
+    <path d="M 320.375927 50.797553 
+L 320.375927 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_66">
+    <path d="M 320.648953 50.797553 
+L 320.648953 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_67">
+    <path d="M 323.216625 50.797553 
+L 323.216625 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_68">
+    <path d="M 323.854708 50.797553 
+L 323.854708 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_69">
+    <path d="M 329.531809 50.797553 
+L 329.531809 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_70">
+    <path d="M 329.69133 50.797553 
+L 329.69133 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_71">
+    <path d="M 333.10569 50.797553 
+L 333.10569 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_72">
+    <path d="M 333.174406 50.797553 
+L 333.174406 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_73">
+    <path d="M 333.494675 50.797553 
+L 333.494675 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_74">
+    <path d="M 334.045022 50.797553 
+L 334.045022 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_75">
+    <path d="M 334.688014 50.797553 
+L 334.688014 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_76">
+    <path d="M 336.118179 50.797553 
+L 336.118179 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_77">
+    <path d="M 337.15261 50.797553 
+L 337.15261 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_78">
+    <path d="M 338.566824 50.797553 
+L 338.566824 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_79">
+    <path d="M 338.904272 50.797553 
+L 338.904272 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_80">
+    <path d="M 340.262653 50.797553 
+L 340.262653 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_81">
+    <path d="M 340.782936 50.797553 
+L 340.782936 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_82">
+    <path d="M 340.798275 50.797553 
+L 340.798275 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_83">
+    <path d="M 342.461586 50.797553 
+L 342.461586 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_84">
+    <path d="M 343.068379 50.797553 
+L 343.068379 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_85">
+    <path d="M 344.01262 50.797553 
+L 344.01262 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_86">
+    <path d="M 346.061235 50.797553 
+L 346.061235 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_87">
+    <path d="M 346.671709 50.797553 
+L 346.671709 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_88">
+    <path d="M 347.601839 50.797553 
+L 347.601839 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_89">
+    <path d="M 350.95423 50.797553 
+L 350.95423 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_90">
+    <path d="M 352.558028 50.797553 
+L 352.558028 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_91">
+    <path d="M 359.321098 50.797553 
+L 359.321098 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_92">
+    <path d="M 359.629096 50.797553 
+L 359.629096 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_93">
+    <path d="M 368.335252 50.797553 
+L 368.335252 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_94">
+    <path d="M 368.853081 50.797553 
+L 368.853081 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_95">
+    <path d="M 369.903465 50.797553 
+L 369.903465 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_96">
+    <path d="M 377.246331 50.797553 
+L 377.246331 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_97">
+    <path d="M 378.368499 50.797553 
+L 378.368499 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_98">
+    <path d="M 380.153905 50.797553 
+L 380.153905 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_99">
+    <path d="M 381.983486 50.797553 
+L 381.983486 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_100">
+    <path d="M 382.419715 50.797553 
+L 382.419715 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_101">
+    <path d="M 384.05603 50.797553 
+L 384.05603 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_102">
+    <path d="M 384.743197 50.797553 
+L 384.743197 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_103">
+    <path d="M 384.928486 50.797553 
+L 384.928486 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_104">
+    <path d="M 387.836674 50.797553 
+L 387.836674 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_105">
+    <path d="M 390.536257 50.797553 
+L 390.536257 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_106">
+    <path d="M 402.431603 50.797553 
+L 402.431603 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_107">
+    <path d="M 403.999816 50.797553 
+L 403.999816 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_108">
+    <path d="M 405.530602 50.797553 
+L 405.530602 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_109">
+    <path d="M 407.456509 50.797553 
+L 407.456509 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_110">
+    <path d="M 408.567633 50.797553 
+L 408.567633 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_111">
+    <path d="M 428.959304 50.797553 
+L 428.959304 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_112">
+    <path d="M 430.255718 50.797553 
+L 430.255718 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_113">
+    <path d="M 448.636812 50.797553 
+L 448.636812 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_114">
+    <path d="M 448.749704 50.797553 
+L 448.749704 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 6.675141 54.76444 
+L 448.425141 54.76444 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_115">
+    <path d="M 318.002748 53.001379 
+L 318.002748 34.48924 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke-dasharray: 2.16,1.8; stroke-dashoffset: 0; stroke: #2a211c; stroke-width: 0.9"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 6.4px; font-family: 'Inter'; text-anchor: start; fill: #6e625a" x="6.675141" y="13.323805" transform="rotate(-0 6.675141 13.323805)">gastos en personal sobre gasto devengado</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="6.675141" y="6.910875" transform="rotate(-0 6.675141 6.910875)">Peso del personal   </text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.4px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="318.002748" y="31.835945" transform="rotate(-0 318.002748 31.835945)">mediana  50,7%</text>
+   </g>
+   <g id="line2d_116">
+    <path d="M 217.789306 50.797553 
+L 217.789306 41.982249 
+" clip-path="url(#p64031efa17)" style="fill: none; stroke: #7c2e23; stroke-width: 2.2"/>
+   </g>
+   <g id="PathCollection_1">
+    <path d="M 217.789306 43.982249 
+C 218.319712 43.982249 218.828466 43.771516 219.20352 43.396462 
+C 219.578574 43.021409 219.789306 42.512655 219.789306 41.982249 
+C 219.789306 41.451843 219.578574 40.943089 219.20352 40.568035 
+C 218.828466 40.192982 218.319712 39.982249 217.789306 39.982249 
+C 217.2589 39.982249 216.750147 40.192982 216.375093 40.568035 
+C 216.000039 40.943089 215.789306 41.451843 215.789306 41.982249 
+C 215.789306 42.512655 216.000039 43.021409 216.375093 43.396462 
+C 216.750147 43.771516 217.2589 43.982249 217.789306 43.982249 
+z
+" clip-path="url(#p64031efa17)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 217.789306 30.441101 
+Q 217.789306 35.212813 217.789306 39.984526 
+" style="fill: none; stroke: #7c2e23; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: middle; fill: #7c2e23" x="217.789306" y="25.982249" transform="rotate(-0 217.789306 25.982249)">San Isidro  34,4%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 6.675141 130.355675 
+L 448.425141 130.355675 
+L 448.425141 99.50211 
+L 6.675141 99.50211 
+z
+" style="fill: #f5f0e8"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_9">
+     <g id="line2d_117"/>
+     <g id="text_14">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="6.675141" y="138.370644" transform="rotate(-0 6.675141 138.370644)">0%</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_118"/>
+     <g id="text_15">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="91.627064" y="138.370644" transform="rotate(-0 91.627064 138.370644)">5%</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_119"/>
+     <g id="text_16">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="176.578987" y="138.370644" transform="rotate(-0 176.578987 138.370644)">10%</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_120"/>
+     <g id="text_17">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="261.53091" y="138.370644" transform="rotate(-0 261.53091 138.370644)">15%</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_121"/>
+     <g id="text_18">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="346.482833" y="138.370644" transform="rotate(-0 346.482833 138.370644)">20%</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_122"/>
+     <g id="text_19">
+      <text style="font-size: 6.6px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="431.434756" y="138.370644" transform="rotate(-0 431.434756 138.370644)">25%</text>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 6.3px; font-family: 'Inter'; text-anchor: middle; fill: #6e625a" x="227.550141" y="146.782253" transform="rotate(-0 227.550141 146.782253)">de 106 municipios, San Isidro es el 4º que más invierte en obra</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4"/>
+   <g id="line2d_123">
+    <path d="M 10.825892 126.388788 
+L 10.825892 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_124">
+    <path d="M 14.060861 126.388788 
+L 14.060861 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_125">
+    <path d="M 17.180295 126.388788 
+L 17.180295 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_126">
+    <path d="M 18.928606 126.388788 
+L 18.928606 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_127">
+    <path d="M 19.365259 126.388788 
+L 19.365259 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_128">
+    <path d="M 19.701669 126.388788 
+L 19.701669 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_129">
+    <path d="M 26.203889 126.388788 
+L 26.203889 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_130">
+    <path d="M 26.720396 126.388788 
+L 26.720396 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_131">
+    <path d="M 27.687149 126.388788 
+L 27.687149 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_132">
+    <path d="M 27.778897 126.388788 
+L 27.778897 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_133">
+    <path d="M 28.954632 126.388788 
+L 28.954632 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_134">
+    <path d="M 29.403178 126.388788 
+L 29.403178 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_135">
+    <path d="M 31.545666 126.388788 
+L 31.545666 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_136">
+    <path d="M 31.958532 126.388788 
+L 31.958532 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_137">
+    <path d="M 34.86049 126.388788 
+L 34.86049 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_138">
+    <path d="M 37.123609 126.388788 
+L 37.123609 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_139">
+    <path d="M 39.067309 126.388788 
+L 39.067309 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_140">
+    <path d="M 48.592119 126.388788 
+L 48.592119 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_141">
+    <path d="M 48.981198 126.388788 
+L 48.981198 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_142">
+    <path d="M 50.399895 126.388788 
+L 50.399895 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_143">
+    <path d="M 51.269803 126.388788 
+L 51.269803 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_144">
+    <path d="M 51.980001 126.388788 
+L 51.980001 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_145">
+    <path d="M 52.008885 126.388788 
+L 52.008885 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_146">
+    <path d="M 52.753064 126.388788 
+L 52.753064 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_147">
+    <path d="M 54.124188 126.388788 
+L 54.124188 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_148">
+    <path d="M 54.316179 126.388788 
+L 54.316179 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_149">
+    <path d="M 55.017882 126.388788 
+L 55.017882 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_150">
+    <path d="M 55.289728 126.388788 
+L 55.289728 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_151">
+    <path d="M 57.675178 126.388788 
+L 57.675178 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_152">
+    <path d="M 58.381978 126.388788 
+L 58.381978 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_153">
+    <path d="M 60.320581 126.388788 
+L 60.320581 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_154">
+    <path d="M 60.641699 126.388788 
+L 60.641699 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_155">
+    <path d="M 61.77156 126.388788 
+L 61.77156 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_156">
+    <path d="M 62.452874 126.388788 
+L 62.452874 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_157">
+    <path d="M 62.736614 126.388788 
+L 62.736614 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_158">
+    <path d="M 63.786619 126.388788 
+L 63.786619 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_159">
+    <path d="M 65.616484 126.388788 
+L 65.616484 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_160">
+    <path d="M 66.797316 126.388788 
+L 66.797316 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_161">
+    <path d="M 72.745649 126.388788 
+L 72.745649 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_162">
+    <path d="M 73.472838 126.388788 
+L 73.472838 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_163">
+    <path d="M 74.361435 126.388788 
+L 74.361435 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_164">
+    <path d="M 75.294207 126.388788 
+L 75.294207 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_165">
+    <path d="M 76.648341 126.388788 
+L 76.648341 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_166">
+    <path d="M 77.275286 126.388788 
+L 77.275286 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_167">
+    <path d="M 78.316796 126.388788 
+L 78.316796 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_168">
+    <path d="M 80.739625 126.388788 
+L 80.739625 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_169">
+    <path d="M 81.877981 126.388788 
+L 81.877981 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_170">
+    <path d="M 84.382364 126.388788 
+L 84.382364 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_171">
+    <path d="M 85.021202 126.388788 
+L 85.021202 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_172">
+    <path d="M 87.155194 126.388788 
+L 87.155194 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_173">
+    <path d="M 90.92706 126.388788 
+L 90.92706 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_174">
+    <path d="M 95.912039 126.388788 
+L 95.912039 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_175">
+    <path d="M 98.824191 126.388788 
+L 98.824191 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_176">
+    <path d="M 99.371281 126.388788 
+L 99.371281 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_177">
+    <path d="M 99.510602 126.388788 
+L 99.510602 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_178">
+    <path d="M 104.340969 126.388788 
+L 104.340969 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_179">
+    <path d="M 104.40893 126.388788 
+L 104.40893 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_180">
+    <path d="M 105.793646 126.388788 
+L 105.793646 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_181">
+    <path d="M 108.415263 126.388788 
+L 108.415263 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_182">
+    <path d="M 111.361395 126.388788 
+L 111.361395 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_183">
+    <path d="M 116.959727 126.388788 
+L 116.959727 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_184">
+    <path d="M 119.453916 126.388788 
+L 119.453916 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_185">
+    <path d="M 120.845428 126.388788 
+L 120.845428 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_186">
+    <path d="M 121.754414 126.388788 
+L 121.754414 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_187">
+    <path d="M 123.3685 126.388788 
+L 123.3685 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_188">
+    <path d="M 124.357341 126.388788 
+L 124.357341 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_189">
+    <path d="M 127.46828 126.388788 
+L 127.46828 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_190">
+    <path d="M 128.621927 126.388788 
+L 128.621927 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_191">
+    <path d="M 129.338921 126.388788 
+L 129.338921 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_192">
+    <path d="M 131.218058 126.388788 
+L 131.218058 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_193">
+    <path d="M 131.309806 126.388788 
+L 131.309806 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_194">
+    <path d="M 132.366608 126.388788 
+L 132.366608 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_195">
+    <path d="M 134.439435 126.388788 
+L 134.439435 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_196">
+    <path d="M 135.358615 126.388788 
+L 135.358615 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_197">
+    <path d="M 137.164693 126.388788 
+L 137.164693 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_198">
+    <path d="M 139.737037 126.388788 
+L 139.737037 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_199">
+    <path d="M 140.046262 126.388788 
+L 140.046262 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_200">
+    <path d="M 141.597484 126.388788 
+L 141.597484 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_201">
+    <path d="M 142.097001 126.388788 
+L 142.097001 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_202">
+    <path d="M 152.456039 126.388788 
+L 152.456039 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_203">
+    <path d="M 166.90806 126.388788 
+L 166.90806 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_204">
+    <path d="M 167.171411 126.388788 
+L 167.171411 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_205">
+    <path d="M 167.439859 126.388788 
+L 167.439859 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_206">
+    <path d="M 169.125305 126.388788 
+L 169.125305 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_207">
+    <path d="M 173.488436 126.388788 
+L 173.488436 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_208">
+    <path d="M 175.552768 126.388788 
+L 175.552768 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_209">
+    <path d="M 179.253273 126.388788 
+L 179.253273 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_210">
+    <path d="M 180.169055 126.388788 
+L 180.169055 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_211">
+    <path d="M 180.74333 126.388788 
+L 180.74333 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_212">
+    <path d="M 187.079044 126.388788 
+L 187.079044 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_213">
+    <path d="M 188.356721 126.388788 
+L 188.356721 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_214">
+    <path d="M 191.68174 126.388788 
+L 191.68174 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_215">
+    <path d="M 196.54099 126.388788 
+L 196.54099 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_216">
+    <path d="M 196.958953 126.388788 
+L 196.958953 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_217">
+    <path d="M 200.171835 126.388788 
+L 200.171835 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_218">
+    <path d="M 220.070973 126.388788 
+L 220.070973 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_219">
+    <path d="M 221.841371 126.388788 
+L 221.841371 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_220">
+    <path d="M 226.646252 126.388788 
+L 226.646252 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_221">
+    <path d="M 227.952813 126.388788 
+L 227.952813 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_222">
+    <path d="M 260.80542 126.388788 
+L 260.80542 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_223">
+    <path d="M 263.036258 126.388788 
+L 263.036258 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_224">
+    <path d="M 305.432365 126.388788 
+L 305.432365 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_225">
+    <path d="M 309.57462 126.388788 
+L 309.57462 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_226">
+    <path d="M 385.355134 126.388788 
+L 385.355134 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_227">
+    <path d="M 404.273927 126.388788 
+L 404.273927 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_228">
+    <path d="M 410.978333 126.388788 
+L 410.978333 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #66734c; stroke-opacity: 0.55; stroke-width: 0.7"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 6.675141 130.355675 
+L 448.425141 130.355675 
+" style="fill: none; stroke: #d9cdba; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_229">
+    <path d="M 99.097736 128.592614 
+L 99.097736 110.080475 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke-dasharray: 2.16,1.8; stroke-dashoffset: 0; stroke: #2a211c; stroke-width: 0.9"/>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.4px; font-family: 'Inter'; text-anchor: start; fill: #6e625a" x="6.675141" y="88.91504" transform="rotate(-0 6.675141 88.91504)">bienes de uso sobre gasto devengado</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 600; font-size: 7.2px; font-family: 'Inter'; text-anchor: start; fill: #2a211c" x="6.675141" y="82.50211" transform="rotate(-0 6.675141 82.50211)">Peso de la obra pública   </text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 6.4px; font-family: 'Inter'; text-anchor: middle; fill: #2a211c" x="99.097736" y="107.427179" transform="rotate(-0 99.097736 107.427179)">mediana  5,4%</text>
+   </g>
+   <g id="line2d_230">
+    <path d="M 309.57462 126.388788 
+L 309.57462 117.573484 
+" clip-path="url(#p10be9e4c09)" style="fill: none; stroke: #7c2e23; stroke-width: 2.2"/>
+   </g>
+   <g id="PathCollection_2">
+    <path d="M 309.57462 119.573484 
+C 310.105027 119.573484 310.61378 119.362751 310.988834 118.987697 
+C 311.363888 118.612643 311.57462 118.10389 311.57462 117.573484 
+C 311.57462 117.043077 311.363888 116.534324 310.988834 116.15927 
+C 310.61378 115.784216 310.105027 115.573484 309.57462 115.573484 
+C 309.044214 115.573484 308.535461 115.784216 308.160407 116.15927 
+C 307.785353 116.534324 307.57462 117.043077 307.57462 117.573484 
+C 307.57462 118.10389 307.785353 118.612643 308.160407 118.987697 
+C 308.535461 119.362751 309.044214 119.573484 309.57462 119.573484 
+z
+" clip-path="url(#p10be9e4c09)" style="fill: #7c2e23"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 309.57462 106.032336 
+Q 309.57462 110.804048 309.57462 115.575761 
+" style="fill: none; stroke: #7c2e23; stroke-width: 0.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 600; font-size: 7px; font-family: 'Inter'; text-anchor: middle; fill: #7c2e23" x="309.57462" y="101.573484" transform="rotate(-0 309.57462 101.573484)">San Isidro  17,8%</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p64031efa17">
+   <rect x="6.675141" y="23.910875" width="441.75" height="30.853565"/>
+  </clipPath>
+  <clipPath id="p10be9e4c09">
+   <rect x="6.675141" y="99.50211" width="441.75" height="30.853565"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA (la-verdadera-pba.pages.dev), capturado el 3 de septiembre de 2026.</p><p class="cap"><b>Nota:</b> Son 106 de los 135 municipios: los otros 29 no est&aacute;n en la planilla. No se estim&oacute; ninguno.</p></div>
+<div class="pull q"><div class="plabel">No es cu&aacute;nto se gasta, es en qu&eacute;</div><p>El problema no es cu&aacute;nto se gasta. Es en qu&eacute;.</p></div>
+
+<h2><span class="n">1.3</span>D&oacute;nde no va el dinero</h2>
+<p class="tight">Ejecuci&oacute;n presupuestaria 2025, sobre un gasto devengado total de 324.304 millones
+de pesos:</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;8</div><div class="extitle">Las dos partidas que este programa se propone cambiar</div></div>
+<table>
+<colgroup><col style="width:200pt"><col><col><col></colgroup>
+<tr class="hd"><th>Programa</th><th class="r">Devengado</th><th class="r">% del gasto total</th>
+<th class="r">Por habitante</th></tr>
+<tr><td class="l">Apoyo y Promoci&oacute;n al Empleo</td><td class="n">170 M$</td><td class="n"><b>0,05%</b></td><td class="n"><b>572 $/a&ntilde;o</b></td></tr>
+<tr><td class="l">Infraestructura Habitacional</td><td class="n">335 M$</td><td class="n"><b>0,10%</b></td><td class="n"><b>1.127 $/a&ntilde;o</b></td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> Estado de Situaci&oacute;n Econ&oacute;mico-Financiera 2025, gastos por
+programa.</p>
+<div class="cols">
+<p>Quinientos setenta y dos pesos por habitante por a&ntilde;o. Eso es toda la pol&iacute;tica de empleo
+del Municipio de San Isidro.</p>
+<p>Mil ciento veintisiete pesos por habitante por a&ntilde;o en infraestructura habitacional, en un
+distrito con 25.165 hogares sin gas de red y 6.488 sin cloacas.</p>
+</div>
+<div class="pull"><p>Cinco cent&eacute;simas de uno por ciento. Una d&eacute;cima de uno por ciento.</p></div>
+<h3>Y adem&aacute;s no se gast&oacute; ni siquiera eso</h3>
+<p class="tight">El informe oficial no muestra una cifra por partida sino varias: el cr&eacute;dito
+vigente, lo que se deveng&oacute; contra &eacute;l y lo que se pag&oacute;. La comparaci&oacute;n entre
+la primera y la segunda dice cu&aacute;nto de lo disponible se us&oacute;.</p>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;9</div><div class="extitle">Donde el Municipio prioriza ejecuta casi todo; donde no, deja cr&eacute;dito sin usar</div><div class="exsub">Ejercicio 2025, en millones de pesos. La &uacute;ltima columna es devengado sobre cr&eacute;dito vigente.</div></div>
+<table>
+<colgroup><col style="width:168pt"><col><col><col><col style="width:74pt"></colgroup>
+<tr class="hd"><th>Partida</th><th class="r">Cr&eacute;dito vigente</th><th class="r">Devengado</th><th class="r">Pagado</th><th class="r">Ejecutado</th></tr>
+<tr><td class="l">Gastos en personal</td><td class="n">112.162</td><td class="n">111.590</td><td class="n">111.589</td><td class="n">99,5%</td></tr>
+<tr><td class="l">Bienes de uso &mdash; la obra p&uacute;blica</td><td class="n">58.335</td><td class="n">57.816</td><td class="n">56.983</td><td class="n">99,1%</td></tr>
+<tr><td class="l">Infraestructura Habitacional</td><td class="n">362,7</td><td class="n">335,4</td><td class="n">335,4</td><td class="n">92,5%</td></tr>
+<tr class="hi"><td class="l">Apoyo y Promoci&oacute;n al Empleo</td><td class="n">195,1</td><td class="n"><b>170,3</b></td><td class="n"><b>131,3</b></td><td class="n"><b>87,3%</b></td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Situaci&oacute;n
+Econ&oacute;mico-Financiera 2025. Las dos primeras filas salen del cuadro de gastos por objeto; las dos
+&uacute;ltimas, del de gastos por programa, partidas 1.1.1.01.08.003 y 1.1.1.01.10.003.</p>
+<p class="cap"><b>Nota:</b> cada columna sale de la anterior y no se suman entre s&iacute;. El
+cr&eacute;dito vigente es el presupuesto despu&eacute;s de las modificaciones del a&ntilde;o; devengado es
+lo que se comprometi&oacute; a gastar; pagado, lo que sali&oacute; de la caja.</p>
+<div class="cols">
+<p><b>La comparaci&oacute;n entre las cuatro filas es todo el cap&iacute;tulo en un cuadro.</b> Los
+sueldos se ejecutan al 99,5% y la obra p&uacute;blica al 99,1%: cuando el Municipio decide gastar, gasta.
+<span class="sg">La partida de empleo se ejecut&oacute; al 87,3%</span>, la m&aacute;s baja de las cuatro.</p>
+<p><b>En n&uacute;meros absolutos es poco y por eso importa.</b> Quedaron 24,8 millones de cr&eacute;dito
+sin usar sobre una partida que ya era el 0,05% del presupuesto. No es una cifra que mueva las cuentas del
+Municipio: es una se&ntilde;al de d&oacute;nde est&aacute; puesta la atenci&oacute;n.</p>
+<p><b>Y de lo que s&iacute; se deveng&oacute;, se pag&oacute; el 77%.</b> Vivienda, en cambio,
+pag&oacute; el cien por ciento de lo devengado. Ah&iacute; tambi&eacute;n empleo queda &uacute;ltimo.</p>
+<p><b>Esto mide la ejecuci&oacute;n del presupuesto, no la calidad del servicio.</b> Que una partida se
+devengue casi entera prueba que el dinero se comprometi&oacute;, no que la obra se hizo ni que
+lleg&oacute; a todos por igual. <span class="sg">El cap&iacute;tulo 2 separa las dos cosas</span>, y ah&iacute;
+la respuesta es distinta.</p>
+<p><b>Lo que s&iacute; se sigue de estas cifras</b> es que el Municipio ejecuta lo que decide ejecutar.
+Los sueldos y la obra p&uacute;blica se devengan casi al cien por ciento. <b>El empleo no, y es la
+&uacute;nica de las cuatro que queda por debajo del 90%.</b></p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 6 de 35</span></div></div></body></html>

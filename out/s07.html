@@ -1,0 +1,283 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div><h2><span class="n">2.4</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
+<p>El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente, se
+compromete en su meta III.4.c a publicar un &iacute;ndice de transparencia activa, y en la III.4.b fija un
+objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
+<div class="callout">
+<div class="clabel">Lo que se busc&oacute; y no estaba</div>
+<p>El <b>Portal de Datos Abiertos devuelve error 504</b> y no responde. El enlace a las
+<b>declaraciones juradas de funcionarios lleva a declaraciones juradas de contribuyentes</b>, que es otra
+cosa. La <b>planta de personal y la escala salarial</b> no se pudieron verificar, porque vivir&iacute;an
+en ese mismo portal ca&iacute;do. Y la &uacute;ltima <b>rendici&oacute;n de cuentas con estados
+contables</b> publicada en la web es la de 2022.</p>
+</div>
+<div class="callout a">
+<div class="clabel">Un caso que resume el problema: la propia flota</div>
+<p>El Municipio publica el tama&ntilde;o de su patrulla y las cifras no coinciden entre s&iacute;. En
+marzo de 2025 comunic&oacute; <b>120 m&oacute;viles y 46 motos</b>. En octubre de 2025,
+<b>154 m&oacute;viles, 46 motos y 331 agentes</b>. Su p&aacute;gina de seguridad, consultada en
+septiembre de 2026, dice <b>130 patrullas, 39 motos y 300 oficiales</b>.</p>
+<p>Once meses despu&eacute;s del anuncio hay veinticuatro m&oacute;viles menos, siete motos menos y
+treinta y un agentes menos, sin una l&iacute;nea que lo explique. <span class="sg">No afirmamos que la
+flota se haya reducido: afirmamos que las tres cifras publicadas por el mismo Municipio no cierran entre
+ellas</span>, y que no hay ning&uacute;n registro auditable que permita saber cu&aacute;l es la
+correcta.</p>
+</div>
+<div class="cols">
+<p>Conviene ser exacto sobre qu&eacute; significa esto. El Municipio <span class="sg">publica en tiempo y
+forma</span> sus estados de ejecuci&oacute;n presupuestaria trimestrales, su situaci&oacute;n
+econ&oacute;mico-financiera y su stock de deuda: este programa est&aacute; construido con esos documentos,
+y no existir&iacute;a sin ellos.</p>
+<p>Lo que falta es otra cosa, y es m&aacute;s sutil:
+<span class="sg">casi todo est&aacute; publicado en alg&uacute;n lado, y casi nada est&aacute; donde un
+vecino lo buscar&iacute;a.</span> El organigrama vive en un subdominio de prueba sin un solo enlace que
+lleve a &eacute;l. Las adjudicaciones est&aacute;n en el Bolet&iacute;n y no en la ficha de la
+licitaci&oacute;n. Los estados contables de varios ejercicios no est&aacute;n, aunque el Tribunal de
+Cuentas los haya aprobado. Se publica lo que se mide en los rankings de transparencia fiscal, y lo
+dem&aacute;s queda donde nadie lo encuentra.</p>
+</div>
+
+<h2><span class="n">2.5</span>El hallazgo central: el plan no menciona a la gente</h2>
+<div class="cols">
+<p>&Eacute;sta no es una cr&iacute;tica de gesti&oacute;n. Es una cr&iacute;tica de prioridades, y
+est&aacute; sostenida por el propio documento del intendente.</p>
+<p>&laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; define tres prioridades &mdash;Seguridad
+Ciudadana, Espacio P&uacute;blico y Ambiente, Innovaci&oacute;n&mdash;, <span class="sg">diecinueve
+objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>. Es un documento serio,
+detallado y verificable.</p>
+<p>Auditar el cumplimiento de esas 77 metas ser&iacute;a un ejercicio menor. La pregunta relevante no es
+si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la lista.</span></p>
+<p>El 0,05% del presupuesto en empleo y el 0,10% en vivienda &mdash;las cifras del cap&iacute;tulo 1&mdash;
+no son un incumplimiento. <span class="sg">Son el cumplimiento exacto de un plan donde esas palabras no
+figuran.</span></p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;13</div><div class="extitle">Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea</div><div class="exsub">A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa. Las celdas vac&iacute;as no las pusimos nosotros.</div></div>
+<table>
+<colgroup><col style="width:104pt"><col><col></colgroup>
+<tr class="hd"><th>&Aacute;rea</th><th>Plan vigente 2024&ndash;2025</th><th>Este programa</th></tr>
+<tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Mapa de incidentes por zona y patrullaje dirigido a los puntos calientes, que es lo que m&aacute;s baja el delito seg&uacute;n la evidencia; <b>anal&iacute;tica con inteligencia artificial sobre las c&aacute;maras ya instaladas</b>; y una oficina de ciberdelito, que hoy no existe</td></tr>
+<tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">Reasignar en vez de demoler: lo que est&aacute; construido y funcionando se licita a otro concesionario que pague canon y emplee gente del partido, en vez de tirarse abajo</td></tr>
+<tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Licitar la recolecci&oacute;n de residuos &mdash;49.270 millones al a&ntilde;o que nunca se compitieron&mdash; y llevar la funci&oacute;n ambiental de 0,4% a 1,5% del presupuesto</td></tr>
+<tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">El mantenimiento vial entra en la partida que deciden las comisiones vecinales</td></tr>
+<tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema de inteligencia artificial que lee la solicitud contra la norma y responde en d&iacute;as y no en meses: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo. Y un asistente que conteste preguntas habladas, sin formulario</td></tr>
+<tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">Que un vecino pueda ver en qu&eacute; se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio: hoy ninguno de los 573 decretos lo dice, y hasta 2017 s&iacute;</td></tr>
+<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el presupuesto de empleo, de 505,7 a 7.730,9 millones, para llevar el centro de formaci&oacute;n laboral que ya funciona en B&eacute;ccar a las seis localidades, con eje en inform&aacute;tica e inteligencia artificial</td></tr>
+<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar, con la partida de obra vecinal</td></tr>
+<tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Turno desde el celular y teleconsulta, adhiriendo al sistema provincial que ya funciona en m&aacute;s de sesenta municipios y es gratis; publicar el precio unitario de cada insumo que se compra y el stock de cada hospital; y arreglar las filtraciones que el propio gobierno reconoce</td></tr>
+<tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Centros de apoyo escolar gratuitos en los barrios donde los chicos se quedan atr&aacute;s, en edificios municipales que ya existen; y devolver a educaci&oacute;n los 2.059 millones que perdi&oacute; en 2025</td></tr>
+<tr class="hd"><td class="l">Qui&eacute;n decide la obra</td><td class="m">El Departamento Ejecutivo, sobre el 100%</td><td class="m">Los vecinos, sobre la mitad, al cuarto a&ntilde;o</td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, documento firmado
+por el intendente Ram&oacute;n Lan&uacute;s: tres prioridades, diecinueve objetivos y setenta y siete metas
+numeradas, contadas una por una.</p>
+<p class="cap"><b>Nota:</b> las 77 metas est&aacute;n agrupadas por tema, no recortadas: las cuatro
+primeras filas cubren las tres prioridades completas del plan vigente. Las celdas vac&iacute;as de la
+columna del medio son &aacute;reas donde ese plan no fija ninguna meta.</p>
+
+<p><b>Contamos las palabras del plan vigente, y el resultado no admite matiz.</b> Sobre sus 3.137
+palabras, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni una vez</span>. Tampoco vivienda,
+ni empleo, ni pobreza, ni cloaca, ni agua.</p>
+<p><b>&laquo;Hospital&raquo; y &laquo;escolar&raquo; aparecen una vez cada una, y en la misma meta</b>: la
+que se propone adecuar la demarcaci&oacute;n horizontal y la se&ntilde;alizaci&oacute;n vertical en
+diecis&eacute;is entornos escolares y quince entornos hospitalarios. <b>El plan nombra a los hospitales
+y a las escuelas s&oacute;lo para pintar el cruce de su esquina.</b></p>
+<p><b>Y los diecinueve objetivos, le&iacute;dos uno por uno, hablan de c&aacute;maras, patrulleros,
+barrido, arbolado, residuos, tr&aacute;mites y ciberseguridad.</b> Ninguno de los diecinueve habla de una
+persona.</p>
+<p>Lo que s&iacute; se le reconoce es que el plan es coherente consigo mismo: gasta donde dijo que iba a
+gastar, y el cap&iacute;tulo 1 lo mide. <span class="sg">Eso es exactamente lo que vuelve grave el
+resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y la gente no est&aacute; en ella.</p>
+
+<div class="callout">
+<div class="clabel">El plan est&aacute; vencido</div>
+<p>Cubre 2024&ndash;2025. Estamos en septiembre de 2026 y no hay sucesor publicado.
+<b>El Municipio de San Isidro no tiene hoy un plan de gobierno vigente y publicado.</b></p>
+</div>
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=""><figcaption>Una parada en Mart&iacute;nez. Ilustraci&oacute;n.</figcaption></figure>
+
+<h2><span class="n">2.6</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<ol class="n">
+<li>Su plan de gobierno no menciona la palabra <b>salud</b> ni una sola vez en 3.137 palabras, y tampoco
+vivienda, empleo, pobreza, cloaca ni agua. Nombra hospitales y escuelas s&oacute;lo para se&ntilde;alizar
+sus esquinas.</li>
+<li>Su cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o, y dej&oacute; de percibir 14.115
+millones que &eacute;l mismo habr&iacute;a cobrado en 2024.</li>
+<li>Ram&oacute;n Lan&uacute;s administra bien las <b>cuentas</b>: cuarto de 106 en inversi&oacute;n y
+vig&eacute;simo en contenci&oacute;n de la planta. <b>El servicio es otra cosa</b>, y el propio Municipio
+lo admiti&oacute;: setenta reclamos diarios de arbolado y una &laquo;deuda hist&oacute;rica&raquo; en algo
+que, dijo el intendente, <b>nunca se hizo</b>.</li>
+<li>Publica lo que se mide en los rankings de transparencia fiscal, y lo dem&aacute;s &mdash;organigrama,
+adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El portal de datos abiertos
+est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra cosa.</li>
+</ol>
+<div class="pull"><div class="plabel">Qu&eacute; se le critica, exactamente</div><p>La cr&iacute;tica es doble, y las dos mitades est&aacute;n probadas ac&aacute;.
+<b>Lo que se propuso lo cumpli&oacute; a medias</b>: ejecuta el presupuesto casi entero y el servicio no
+llega, y eso no lo decimos nosotros &mdash;lo dijo el intendente cuando llam&oacute; al arbolado una deuda
+hist&oacute;rica en algo que nunca se hizo&mdash;. <b>Y lo que no se propuso es casi todo lo que le importa
+a un vecino</b>: sobre 3.137 palabras, su plan no dice salud ni una vez.</p></div>
+<p>Nada de esto se puede corregir sin saber si hay con qu&eacute;. El cap&iacute;tulo siguiente lo mide.</p>
+<div class="hairline"></div>
+<div class="note">
+<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Todas las cifras provienen de documentos
+publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
+situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas
+2024&ndash;2025&raquo;&mdash; y de los informes de ejecuci&oacute;n RAFAM de los 106 municipios
+bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota
+metodol&oacute;gica del cap&iacute;tulo 1.</p>
+<p>El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
+cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
+cap&iacute;tulo 5 enumera.</p>
+</div>
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 9 de 35</span></div></div></body></html>

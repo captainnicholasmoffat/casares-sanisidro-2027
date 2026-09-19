@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div>
+<h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
+<div class="stand">Trece metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
+
+<h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
+<p class="tight">Tres cosas, y ninguna requiere fondos nuevos ni permiso de nadie.</p>
+<div class="cols">
+<h3 style="margin-top:0">1. Derogar los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045/1984</h3>
+<p>Es el primer proyecto de ordenanza que este gobierno env&iacute;a al Concejo Deliberante. Esos tres
+art&iacute;culos facultan hoy al Departamento Ejecutivo a intervenir, hacer caducar la autorizaci&oacute;n
+y <span class="sg">disolver</span> una asociaci&oacute;n vecinal, sin plazo de defensa ni recurso.
+<b>Plazo: la primera sesi&oacute;n ordinaria del Concejo Deliberante.</b> Se comprueba con el acta de esa
+sesi&oacute;n y con el expediente de ingreso.</p>
+<h3 style="margin-top:0">2. Las siete medidas de transparencia</h3>
+<p>Costo cero. Son las del cap&iacute;tulo 5, y su estado actual es verificable hoy por cualquiera que
+abra el portal municipal. <b>Plazo: cien d&iacute;as. Las siete.</b> Se comprueba con el propio portal del
+Municipio.</p>
+</div>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;46</div><div class="extitle">Las siete, y qu&eacute; hay que hacer con cada una</div><div class="exsub">Estado verificado en el sitio y en el Bolet&iacute;n Oficial del Municipio el 12 de septiembre de 2026.</div></div>
+<table>
+<colgroup><col style="width:190pt"><col style="width:110pt"><col></colgroup>
+<tr class="hd"><th>Medida</th><th>Estado hoy</th><th class="r">Qu&eacute; hay que hacer</th></tr>
+<tr class="hi"><td class="l">Portal de Datos Abiertos</td><td><b>Ca&iacute;do</b></td><td class="n">Reponerlo, o publicar sus datasets por otra v&iacute;a</td></tr>
+<tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Enlace incorrecto</b></td><td class="n">Corregir el enlace y publicar las que exige la Ley 15.000</td></tr>
+<tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="n">Publicarlas donde se puedan ver, no en el portal ca&iacute;do</td></tr>
+<tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="n">Traerlo al sitio oficial y enlazarlo desde el men&uacute;</td></tr>
+<tr><td class="l">Adjudicaciones de licitaciones</td><td><b>Publicado, enterrado</b></td><td class="n">Mostrar el adjudicatario y el monto en la ficha de cada licitaci&oacute;n</td></tr>
+<tr><td class="l">Rendici&oacute;n de cuentas</td><td><b>Rendida, no publicada</b></td><td class="n">Publicar los estados contables, no s&oacute;lo la ordenanza que aprueba el expediente</td></tr>
+<tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="n">Nada. Sostenerla</td></tr>
+</table>
+<p class="cap"><b>Nota:</b> seis de las siete son trabajo de cien d&iacute;as y ninguna cuesta un peso.
+La s&eacute;ptima ya est&aacute; hecha y queda en el cuadro para que se vea que se busc&oacute;.</p>
+<div class="cols">
+<p>La del Portal de Datos Abiertos se compromete como <span class="sg">reponerlo o publicar sus datasets
+por otra v&iacute;a</span>: hoy devuelve error 504 y no sabemos si es un servidor ca&iacute;do o un sistema
+discontinuado. Lo que se promete es que los datos est&eacute;n, no resucitar un software que no
+conocemos.</p>
+<p>Es la parte m&aacute;s f&aacute;cil de cumplir de todo este programa. Por eso es tambi&eacute;n la que
+mejor mide si esto es en serio: <b>un gobierno que a los cien d&iacute;as no consigui&oacute; que su propio organigrama se pueda
+encontrar no va a redistribuir la obra p&uacute;blica.</b></p>
+</div>
+<h3>3. La ordenanza que crea la partida vecinal</h3>
+<p class="tight">El proyecto que fija, por ordenanza del Concejo Deliberante:</p>
+<ul class="b">
+<li><b>el monto anual</b> de la partida de cada zona y su rampa de cuatro a&ntilde;os;</li>
+<li><b>la f&oacute;rmula de distribuci&oacute;n</b> &mdash;50% por poblaci&oacute;n, 50% por &iacute;ndice
+de necesidad&mdash; escrita en el texto, para que no dependa del intendente de turno;</li>
+<li><b>la obligaci&oacute;n del Departamento Ejecutivo de responder por escrito, con fundamentos y en
+plazo</b>, a cada priorizaci&oacute;n zonal;</li>
+<li><b>la entrega trimestral</b> de la ejecuci&oacute;n presupuestaria desagregada por zona a cada
+comisi&oacute;n.</li>
+</ul>
+<p><b>Plazo: cien d&iacute;as.</b> Se comprueba con el expediente y, despu&eacute;s, con el Bolet&iacute;n
+Oficial Municipal. Lo que se vuelve jur&iacute;dicamente obligatorio es la partida, no el proyecto votado:
+&eacute;sa es la raz&oacute;n por la que esto sobrevive a un veto.</p>
+
+<h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
+<div class="ex"><div class="exlabel">CUADRO&nbsp;47</div><div class="extitle">El compromiso central del programa, con su calendario</div><div class="exsub">Sobre la ejecuci&oacute;n 2025, en pesos de diciembre de 2025.</div></div>
+<table>
+<colgroup><col style="width:100pt"><col><col><col><col></colgroup>
+<tr class="hd"><th></th><th class="r">% de la obra p&uacute;blica</th><th class="r">Monto anual</th>
+<th class="r">% del gasto total</th><th class="r">Por habitante</th></tr>
+<tr><td class="l">A&ntilde;o 1</td><td class="n">12,5%</td><td class="n">7.227 M</td><td class="n">2,2%</td><td class="n">24.310 $</td></tr>
+<tr><td class="l">A&ntilde;o 2</td><td class="n">25,0%</td><td class="n">14.454 M</td><td class="n">4,5%</td><td class="n">48.620 $</td></tr>
+<tr><td class="l">A&ntilde;o 3</td><td class="n">37,5%</td><td class="n">21.681 M</td><td class="n">6,7%</td><td class="n">72.930 $</td></tr>
+<tr class="hi"><td class="l">A&ntilde;o 4</td><td class="n"><b>50,0%</b></td><td class="n"><b>28.908 M</b></td><td class="n"><b>8,9%</b></td><td class="n"><b>97.241 $</b></td></tr>
+</table>
+<p>Cada escal&oacute;n es verificable contra la ejecuci&oacute;n presupuestaria del ejercicio
+correspondiente.</p>
+<div class="cols">
+<p><b>Por qu&eacute; esta forma y no otra.</b> La rampa no es gradual por prudencia ret&oacute;rica:
+cada escal&oacute;n tiene que ganarse con lo que el anterior demostr&oacute;. El a&ntilde;o 1 prueba que
+seis comisiones pueden constituirse, priorizar y rendir. El 2, que pueden ejecutar obra por contrataci&oacute;n
+directa sin observaciones del Tribunal de Cuentas. El 3, que pueden sostenerlo con el padr&oacute;n
+renovado. Reci&eacute;n el 4 llega a la mitad.</p>
+<p><b>Qu&eacute; pasa si un escal&oacute;n no se cumple.</b> No se saltea y no se compensa al a&ntilde;o
+siguiente. La rampa se congela en el escal&oacute;n alcanzado y el informe del 31 de marzo dice por
+qu&eacute;. <span class="sg">Una rampa que avanza aunque el a&ntilde;o anterior haya fallado no es una
+rampa: es un calendario.</span></p>
+<p><b>Por qu&eacute; empezar en 12,5% y no en 5% ni en 25%.</b> En 5% la partida de una zona chica
+ser&iacute;a demasiado poco para una obra real, y el mecanismo se probar&iacute;a con nada. En 25% un
+fracaso del primer a&ntilde;o comprometer&iacute;a un cuarto de la obra p&uacute;blica del partido. Un
+octavo es el punto donde la prueba es significativa y el error es reparable.</p>
+<p><b>Y por qu&eacute; termina en 50% y no en 100%.</b> Porque la otra mitad es obra que excede a una
+zona: troncales, plantas, obras que sirven a varias localidades a la vez. Esa decisi&oacute;n sigue
+siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 30 de 35</span></div></div></body></html>

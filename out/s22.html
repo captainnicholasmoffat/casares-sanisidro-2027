@@ -1,0 +1,329 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* =============================================================
+   Sistema visual — tomado del CSS del brief de Extra Time.
+   Ancho de pagina fijo (660pt); el alto lo decide el contenido.
+   ============================================================= */
+:root{
+  --ground:#F5F0E8; --panel:#EFE7DA; --sand:#EAE0CF; --white:#FCFAF6;
+  --ink:#2A211C;   --taupe:#6E625A; --oxblood:#7C2E23; --coral:#DB6B4B;
+  --sage:#5F7057;  --sage-deep:#66734C; --amber:#B4863A;
+  --rule:#C6AE8E;  --hair:#D9CDBA;
+  --pill-sage:#E4EADF; --pill-amber:#F2E7D4; --pill-coral:#F6E1D8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--ground)}
+body{font-family:'Spectral',Georgia,serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+
+.page{position:relative;width:660pt;background:var(--ground);padding:0 45pt 30pt;overflow:hidden;min-height:841.89pt;display:flex;flex-direction:column}
+
+/* ---------- encabezado y pie ---------- */
+.runhead{margin-top:40.5pt;font-family:'Inter',sans-serif;font-weight:600;font-size:6.75pt;
+ line-height:6.75pt;color:var(--amber);letter-spacing:1.35pt;text-transform:uppercase}
+.runfoot{margin-top:28.1pt;padding-top:7pt;border-top:.75pt solid rgba(40,34,22,.14);
+ font-family:'Inter',sans-serif;font-weight:400;font-size:6.4pt;line-height:1;
+ color:var(--taupe);letter-spacing:.25pt;display:flex;justify-content:space-between;margin-top:auto}
+
+/* ---------- titulos ---------- */
+h1{margin-top:24.6pt;font-family:'Spectral',serif;font-weight:700;font-size:16.5pt;
+ line-height:19.47pt;color:var(--oxblood);letter-spacing:-.065pt}
+h1 .n{color:var(--coral);margin-right:7pt}
+h1 .hsp{font-weight:400;font-size:12pt;color:var(--ink);letter-spacing:0}
+.stand{margin-top:4.35pt;font-family:'Spectral',serif;font-style:italic;font-weight:500;
+ font-size:10.875pt;line-height:15pt;color:var(--sage);max-width:416.25pt}
+h2{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.2;color:var(--oxblood);letter-spacing:.21pt}
+h2 .n{color:var(--coral);margin-right:5pt}
+h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2pt;
+ line-height:1.18;color:var(--oxblood);letter-spacing:.21pt}
+.cols>h3{margin-top:12pt;font-size:10.6pt}
+/* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
+.cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
+ break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
+.cols>p{widows:2;orphans:2}
+.callout+h3,.note+h3{margin-top:15.2pt}
+
+/* ---------- texto ---------- */
+p{font-size:9.7pt;line-height:1.44;margin-top:7.1pt;text-align:justify;
+ hyphens:auto;-webkit-hyphens:auto}
+p.lead{margin-top:10.44pt;font-size:10.05pt;line-height:15.375pt}
+b,strong{font-family:'Spectral',serif;font-weight:700;color:var(--oxblood)}
+.sg{font-weight:600;color:var(--sage)}
+i,em{font-style:italic}
+.cols{margin-top:10.58pt;column-count:2;column-gap:20pt}
+.cols>p{margin-top:0;margin-bottom:7pt;font-size:9.7pt;line-height:1.44}
+.cols>h3:first-child,.cols>h2:first-child{margin-top:0}
+.tight{margin-top:3.5pt}
+
+/* ---------- listas ---------- */
+ul.b{margin-top:8pt;list-style:none}
+ul.b>li{position:relative;padding-left:16pt;font-size:9.7pt;line-height:1.44;margin-top:6.2pt;
+ text-align:justify;hyphens:auto}
+ul.b>li:before{content:"\00B7";position:absolute;left:4pt;top:-.5pt;color:var(--coral);
+ font-family:'Inter',sans-serif;font-weight:700;font-size:11pt}
+ol.n{margin-top:8pt;list-style:none;counter-reset:it}
+ol.n>li{position:relative;padding-left:21pt;font-size:9.7pt;line-height:1.44;margin-top:7pt;
+ text-align:justify;hyphens:auto;counter-increment:it}
+ol.n>li:before{content:counter(it);position:absolute;left:2pt;top:0;
+ font-family:'Spectral',serif;font-weight:700;font-size:9.7pt;color:var(--amber)}
+
+/* ---------- exhibits ---------- */
+.ex{margin-top:15.7pt}
+.exlabel{font-family:'Inter',sans-serif;font-weight:400;font-size:6.75pt;line-height:6.75pt;
+ color:var(--amber);letter-spacing:1.15pt;text-transform:uppercase}
+.extitle{margin-top:3.4pt;font-family:'Spectral',serif;font-weight:600;font-size:11.25pt;
+ line-height:13.5pt;color:var(--oxblood)}
+.exsub{margin-top:3.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.chart{margin-top:8.7pt}
+.chart img{display:block;width:100%;height:auto}
+.chart svg{display:block;width:100%;height:auto}
+.chart svg text{font-family:'Inter',sans-serif}
+.chart.c80 img{width:80%;margin:0 auto}
+.cap{margin-top:4.85pt;font-family:'Spectral',serif;font-style:italic;font-size:7.9pt;
+ line-height:1.38;color:var(--taupe);text-align:left}
+.cap b{font-style:normal;font-weight:600;color:var(--ink);font-family:'Spectral',serif}
+.cap+.cap{margin-top:2.6pt}
+
+/* ---------- tablas ---------- */
+table{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+th{background:var(--sand);color:var(--oxblood);font-family:'Inter',sans-serif;font-size:6.4pt;
+ font-weight:600;letter-spacing:.9pt;text-transform:uppercase;text-align:left;
+ padding:5.5pt 6pt 0;height:17.25pt;line-height:1.15;vertical-align:top}
+th.r{text-align:right}
+td{font-family:'Spectral',serif;font-size:8.6pt;line-height:1.3275;padding:5pt 6pt 4.91pt;
+ border-bottom:.75pt solid var(--hair);vertical-align:top}
+td.l{font-weight:600;color:var(--oxblood)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.m{font-style:italic;color:var(--taupe)}
+tr:last-child td{border-bottom:.75pt solid rgba(40,34,22,.34)}
+tr.hi td{background:rgba(102,115,76,.10)}
+tr.hd td{background:var(--sand)}
+
+.chk{display:inline-block;width:7.2pt;height:7.2pt;border:.75pt solid var(--ink);
+ vertical-align:-.3pt}
+td.c{text-align:center;padding-top:6.2pt}
+
+/* ---------- cajas ---------- */
+.callout{margin-top:12pt;background:var(--panel);padding:10.75pt 12pt 11pt;
+ border-left:2.25pt solid var(--oxblood)}
+.callout.g{border-left-color:var(--sage)}
+.callout.a{border-left-color:var(--amber)}
+.clabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;color:var(--sage);
+ letter-spacing:.765pt;text-transform:uppercase;line-height:9pt}
+.callout.a .clabel{color:var(--amber)}
+.callout p{margin-top:6.3pt;font-size:9pt;line-height:1.4;text-align:left}
+
+/* frase destacada, con filete a la izquierda */
+.pull{margin-top:12pt;padding-left:11pt;border-left:2.25pt solid var(--coral)}
+.pull .plabel{font-family:'Inter',sans-serif;font-weight:600;font-size:6.375pt;
+ color:var(--amber);letter-spacing:.765pt;text-transform:uppercase;line-height:9pt;
+ margin-bottom:4.4pt}
+.pull p{margin:0;font-family:'Spectral',serif;font-weight:600;font-size:10.4pt;
+ line-height:14.6pt;color:var(--oxblood);text-align:left}
+.pull.q p{font-weight:500;font-style:italic;color:var(--ink)}
+
+/* ---------- figuras ---------- */
+figure{margin-top:13pt}
+figure img{display:block;width:100%;height:232pt;object-fit:cover;object-position:center 52%}
+figure.tall img{height:300pt}
+figure.band img{height:170pt}
+figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.35;color:var(--taupe)}
+.duo{margin-top:13pt;display:flex;gap:12pt}
+.duo figure{margin-top:0;flex:1 1 0}
+.duo figure img{height:196pt}
+
+/* ---------- varios ---------- */
+.tag{margin-left:2.25pt;font-family:'Inter',sans-serif;font-style:normal;font-weight:600;
+ font-size:5.6pt;letter-spacing:.4pt;padding:1pt 2.75pt 1.2pt;vertical-align:1.6pt;
+ color:var(--amber);background:var(--pill-amber);text-transform:uppercase}
+.tag.v{color:var(--sage);background:var(--pill-sage)}
+.tag.m{color:var(--oxblood);background:var(--pill-coral)}
+.hairline{margin-top:16pt;height:.75pt;background:rgba(40,34,22,.0706)}
+.note{margin-top:9pt;column-count:2;column-gap:20pt}
+.note p{margin:0 0 6pt;font-family:'Spectral',serif;font-style:italic;font-size:7.5pt;
+ line-height:1.4;color:var(--taupe);text-align:left}
+.note p b{font-style:normal;font-weight:600;color:var(--ink)}
+.kv{margin-top:7.25pt;width:570pt;border-collapse:collapse;table-layout:fixed}
+.kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
+.kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
+ letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+</style></head><body><div class="page" id="pg"><div class="runhead">PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO</div>
+<h2><span class="n">5.5</span>Ambiente <span class="tag v">Reasignaci&oacute;n</span></h2>
+<div class="cols">
+<p><b>Hoy:</b> 1.410 millones, el 0,4% del presupuesto. Cuatro mil setecientos pesos por habitante por
+a&ntilde;o. Y &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la <span class="sg">Prioridad II</span>
+declarada en el plan del intendente.</p>
+<p><b>Propuesta:</b> llevar la funci&oacute;n ambiental al 1,5% del presupuesto &mdash;unos 4.865
+millones&mdash; reasignando dentro de Servicios Econ&oacute;micos y Urbanismo, sin fondos nuevos.
+Prioridades: arbolado, gesti&oacute;n de residuos y saneamiento de las cuencas del Bajo.</p>
+
+<p><b>Por qu&eacute; 1,5% y no otra cifra.</b> Es lo que hace falta para que la funci&oacute;n deje de
+ser residual, y es lo que entra sin tocar el gasto r&iacute;gido: 3.455 millones adicionales, el 4,0%
+del margen flexible. Dentro del 58,6% que queda libre despu&eacute;s de las dos propuestas grandes.</p>
+<p><b>De d&oacute;nde salen.</b> De Servicios Econ&oacute;micos y de Urbanismo, que son las
+finalidades a las que la funci&oacute;n ambiental pertenece. No de salud, no de seguridad y no de
+educaci&oacute;n: mover fondos entre finalidades distintas es lo que vuelve incomparables las series, y
+este programa acaba de dedicar un cap&iacute;tulo a ese problema.</p>
+<p><b>El dato que falta, y que este programa asume.</b> Ambiente creci&oacute; 23,1% real entre 2024 y
+2025 &mdash;es la tercera funci&oacute;n que m&aacute;s creci&oacute;&mdash; y aun as&iacute; es el 0,4%.
+<span class="sg">Crecer un cuarto sobre casi nada sigue siendo casi nada</span>, y es exactamente el
+tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
+<p><b>Qu&eacute; no promete.</b> No promete resolver el saneamiento de las cuencas del Bajo, que excede
+al Municipio y compromete a la Provincia y a ACUMAR seg&uacute;n la cuenca. Promete la parte municipal
+y dice cu&aacute;l es.</p>
+<p><b>Y hay un antecedente que conviene tener a la vista.</b> En junio de 2025 el Concejo
+sancion&oacute; la Ordenanza 9395, de <b>Paisaje Protegido Municipal</b>, y el Departamento Ejecutivo la
+vet&oacute; por decreto. <span class="sg">Vetar es una facultad legal del intendente y no lo discutimos
+como irregularidad</span>: lo tra&iacute;mos porque muestra d&oacute;nde termina lo que el Concejo puede
+decidir solo en materia ambiental, y por qu&eacute; este programa insiste en que las cosas que importan
+queden atadas a una partida afectada y no a la voluntad de quien gobierne. El cap&iacute;tulo 4 vuelve
+sobre esto.</p>
+
+</div>
+<div class="pull"><p>Cuatro pesos de cada mil. Esa es la distancia entre lo que el plan dice y lo que el
+presupuesto hace.</p></div>
+
+<h3>La partida m&aacute;s grande del Municipio corre sobre una licitaci&oacute;n desierta</h3>
+<div class="cols">
+<p><b>Recolecci&oacute;n de residuos, barrido y limpieza son 49.270 millones al a&ntilde;o</b>: la
+subfunci&oacute;n m&aacute;s cara del presupuesto municipal, m&aacute;s que toda la obra p&uacute;blica
+de un a&ntilde;o entero. Revisamos los 15.464 actos del Bolet&iacute;n de esta gesti&oacute;n y
+<span class="sg">no hay una sola adjudicaci&oacute;n del servicio troncal</span>.</p>
+<p><b>Sigue corriendo sobre la Licitaci&oacute;n P&uacute;blica 17/2008.</b> Esa licitaci&oacute;n
+<b>el propio Municipio la declar&oacute; desierta</b> por decreto en febrero de 2009. En mayo de ese
+a&ntilde;o entr&oacute; una uni&oacute;n transitoria de empresas por un contrato de locaci&oacute;n de
+seis meses, sin licitaci&oacute;n. <b>Nunca se volvi&oacute; a licitar.</b></p>
+<p><b>Y el expediente sigue vivo.</b> El 5229/2008 acumula alcances numerados hasta el 68 en 2024 y 2025,
+y en paralelo corre un segundo expediente abierto en 2023. Lo que se firma cada a&ntilde;o son
+redeterminaciones de precios.</p>
+<p><span class="sg">El Municipio paga hace diecisiete a&ntilde;os actualizaciones de precio de una
+licitaci&oacute;n que &eacute;l mismo declar&oacute; desierta</span>, sobre un contrato de seis meses que
+venci&oacute; en 2009. No es una irregularidad de esta gesti&oacute;n ni de la anterior: atraviesa a las
+dos, y a las tres que hubo antes.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Qu&eacute; propone este programa</div>
+<p><b>Licitar la recolecci&oacute;n.</b> Con pliego p&uacute;blico, plazo cierto, indicadores de servicio
+medibles por zona y penalidades por incumplimiento. Es el contrato m&aacute;s grande que firma el
+Municipio y el &uacute;nico que nunca se compiti&oacute;.</p>
+<p>No afirmamos que se haya pagado de m&aacute;s: <b>no se puede saber, porque no hubo con qu&eacute;
+comparar en diecisiete a&ntilde;os.</b> Ese es exactamente el problema, y es el mismo argumento del
+precio unitario en salud: sin comparaci&oacute;n no hay control posible, con funcionarios honestos o sin
+ellos.</p>
+</div>
+
+
+<h3>El urbanismo no pasa por el Concejo</h3>
+<div class="cols">
+<p><b>Un hallazgo propio, y sale de contar.</b> Revisamos los 15.464 actos administrativos publicados en
+el Bolet&iacute;n Oficial entre febrero de 2024 y septiembre de 2026. <span class="sg">La expresi&oacute;n
+&laquo;convenio urban&iacute;stico&raquo; no aparece ni una sola vez.</span></p>
+<p><b>Lo que s&iacute; aparece son decretos individuales:</b> 95 decretos de materia urban&iacute;stica
+&mdash;permisos de localizaci&oacute;n, factibilidades y afines&mdash; de los cuales 73 identifican un
+inmueble concreto. Y una sola ordenanza que toca el C&oacute;digo de Ordenamiento Urbano en todo el
+per&iacute;odo.</p>
+<p><b>Y no caen parejo.</b> De los 73 decretos con inmueble identificado, <b>Mart&iacute;nez concentra el
+28,8%, San Isidro ciudad el 27,4% y Boulogne el 19,2%</b>. <span class="sg">Tres localidades explican
+tres de cada cuatro decisiones urban&iacute;sticas del per&iacute;odo</span>, mientras Villa Adelina
+re&uacute;ne tres en dos a&ntilde;os y medio. El desarrollo tambi&eacute;n tiene mapa.</p>
+<p><b>Eso significa que el desarrollo urbano se decide caso por caso, por decreto del Ejecutivo</b>, y no
+por una norma que el Concejo discuta y vote. Cada permiso es legal; lo que no existe es la instancia donde
+se discuta el conjunto.</p>
+<p><b>Y explica el reclamo vecinal.</b> Cuando los vecinos objetan la construcci&oacute;n en altura y
+hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aacute;mbito donde plantearlo,
+porque estas decisiones no pasan por el cuerpo deliberativo.</b> Este programa no propone frenar la
+construcci&oacute;n: propone que el criterio se discuta y se vote, y que los permisos individuales se
+publiquen con su localidad.</p>
+</div>
+
+<h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
+<p class="lead">Ambiente y espacio p&uacute;blico son la Prioridad II declarada, y donde m&aacute;s se
+ejecut&oacute;. Por eso conviene mirar c&oacute;mo se decidi&oacute;, que es una discusi&oacute;n
+distinta de cu&aacute;nto se gast&oacute;.</p>
+<div class="cols">
+<p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
+Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y en julio Barisidro, en el 1602. Los dos
+funcionaban desde 1996 con permiso precario y gratuito sobre terreno p&uacute;blico, sin pagar canon, y
+el decreto original prev&eacute;a revocarlo. <span class="sg">Revocar ese permiso estuvo bien y este
+programa no lo discute</span>: nadie deber&iacute;a usar treinta a&ntilde;os gratis un predio que es de
+todos.</p>
+<p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran 9.775 metros cuadrados
+construidos frente al r&iacute;o, con locales en actividad que empleaban gente y tra&iacute;an
+p&uacute;blico al Bajo. <span class="sg">Revocar el permiso y adjudic&aacute;rselo a otro que pague es una
+cosa; demolerlo es otra.</span> Lo primero convierte un activo que no rend&iacute;a nada en uno que rinde.
+Lo segundo lo borra.</p>
+<p><b>Y no hubo llamado, no hubo pliego, no hubo concurso.</b> Un predio en el punto de mayor valor de la
+costa no carece de interesados dispuestos a pagar un canon: carece de un procedimiento que los
+convoque.</p>
+<p><b>Y el orden de los pasos fue el inverso al que este programa propone.</b> El plan de
+participaci&oacute;n ciudadana, con recorridas y escucha de vecinos, se anunci&oacute; entre julio y
+septiembre de 2025 &mdash;cuando Catalejo ya estaba demolido y Barisidro entregado&mdash;.
+<span class="sg">Se consult&oacute; a los vecinos sobre un espacio que ya se hab&iacute;a
+vaciado.</span></p>
+<p><b>Y hubo una p&eacute;rdida que nadie cont&oacute;.</b> Esos locales empleaban gente y tra&iacute;an
+p&uacute;blico al Bajo sin que el Municipio pusiera un peso. El cap&iacute;tulo 1 muestra que toda la
+pol&iacute;tica municipal de empleo son 170 millones al a&ntilde;o. <b>Acceso p&uacute;blico y actividad
+no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Qu&eacute; propone este programa para las hect&aacute;reas que faltan</div>
+<p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de acceso
+restringido. Ese objetivo es correcto y este programa lo sostiene. Lo que cambia es c&oacute;mo se decide
+qu&eacute; se hace con cada una.</p>
+<p><b>La regla es reasignar, no demoler.</b> Un permiso vencido o revocado se licita: entra otro
+concesionario que paga canon, el edificio sigue en pie y los puestos de trabajo no se pierden. El
+Municipio pasa de no cobrar nada a cobrar, sin destruir nada.
+<span class="sg">Demoler es la &uacute;ltima opci&oacute;n, no la primera</span>, y exige fundamentar por
+escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
+<p><b>Eso es lo que no se hizo en la costa.</b> No se discute que el permiso se revocara: se discute que
+hubiera 9.775 metros cuadrados construidos y funcionando, con gente empleada, y que la respuesta fuera una
+topadora en vez de un pliego.</p>
+<p><b>Y ac&aacute; el mecanismo del cap&iacute;tulo 4 no alcanza, y conviene decirlo.</b> La costa no es
+de una zona: es de los 297.282 habitantes del partido. Una comisi&oacute;n zonal decidiendo sobre la
+ribera decidir&iacute;a por gente que no la vot&oacute;, y al mismo tiempo alguien de Villa Adelina que
+va al r&iacute;o los domingos no tendr&iacute;a voz. <span class="sg">La partida vecinal est&aacute;
+pensada para obra de barrio &mdash;cloacas, gas, veredas&mdash;, no para bienes de alcance
+distrital.</span></p>
+<p><b>La secci&oacute;n 4.6 lo resuelve</b>: la comisi&oacute;n zonal decide lo que sirve
+principalmente a su zona, y ninguna parcela de alcance distrital se contrata ni se demuele antes de que
+exista un procedimiento de consulta que alcance a todo el partido. <b>Y donde haya uso comercial, que se licite
+con canon, con pliego p&uacute;blico y con exigencia de empleo local</b>, en vez de regalarse por treinta
+a&ntilde;os o demolerse sin preguntar. Lo que hoy no paga nada deber&iacute;a pagar; lo que puede generar
+trabajo deber&iacute;a generarlo.</p>
+</div>
+<h3>El que usa el parque est&aacute; ah&iacute; todos los d&iacute;as</h3>
+<p class="tight">El cap&iacute;tulo 4 resolvi&oacute; qui&eacute;n decide qu&eacute; obra se hace. Falta
+qui&eacute;n cuida el espacio verde el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la
+plaza est&aacute; ah&iacute; siempre y se entera antes que cualquier sistema.</p>
+<div class="cols">
+<p><b>Asociaciones de parque, reconocidas por ordenanza</b>, con el marco de la 6045 extendido al espacio
+verde. No es un &oacute;rgano nuevo: es la misma figura de asociaci&oacute;n vecinal que el
+cap&iacute;tulo 4 usa, aplicada a un espacio concreto y no a una zona entera.</p>
+<p><b>Tres facultades, y ninguna m&aacute;s.</b> Aviso previo obligatorio de cualquier obra en su
+espacio, con plazo para opinar <b>antes</b> de que se firme el contrato. Objeci&oacute;n por escrito,
+con respuesta fundada del Ejecutivo. Y <span class="sg">firma en la recepci&oacute;n de la obra: sin esa
+firma no se paga</span>, que es el momento en que la recepci&oacute;n libera el pago final.</p>
+<p><b>Con plazo y silencio positivo.</b> Si la asociaci&oacute;n no dice nada dentro del plazo, se da por
+conforme. No es un veto: cualquier disconformidad no puede paralizar una obra, o el mecanismo termina
+sirviendo para frenar y no para cuidar. Y se aplica s&oacute;lo al espacio verde que esa
+asociaci&oacute;n usa.</p>
+<p><b>Qu&eacute; corrige.</b> Se cementa lo que estaba verde, y pasa porque la obra se decide arriba y
+nadie con inter&eacute;s en ese parque tiene c&oacute;mo frenarla a tiempo. <span class="sg">No hace
+falta suponer una intenci&oacute;n para explicarlo</span>: alcanza con que no exista nadie con facultad
+de objetar antes de la firma. Esto crea a ese alguien.</p>
+</div>
+
+<div class="note">
+<p><b>Sobre este caso.</b> Las fechas, las direcciones y la condici&oacute;n de permiso precario y
+gratuito surgen de la cobertura period&iacute;stica de junio y julio de 2025 y de los comunicados del
+propio Municipio. La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro&raquo;
+circul&oacute; ocho meses antes de la demolici&oacute;n. <b>Este programa no atribuye motivos a esa
+decisi&oacute;n</b>: se&ntilde;ala dos hechos verificables &mdash;que no hubo concurso previo y que la
+consulta lleg&oacute; despu&eacute;s&mdash; y propone el orden inverso para lo que falta.</p>
+</div>
+
+<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span><span>P&aacute;gina 24 de 35</span></div></div></body></html>
