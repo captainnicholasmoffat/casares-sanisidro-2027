@@ -613,6 +613,15 @@ Ya no hay que decir "no tenemos propuesta": hay datos y hay hallazgos.
 - Partido: 295.978 habitantes. Hasta 14 años: 51.388 (17,4%). De 65 y
   más: 52.769 (17,8%). Mujeres: 156.763 (53,0%).
 - SAN ISIDRO YA TIENE MÁS VIEJOS QUE CHICOS y el documento no lo dice.
+- Y ES EL PARTIDO MÁS ENVEJECIDO DE SU REGIÓN: 17,8% de mayores de 65
+  contra 11,7% en los 24 partidos del GBA y 12,1% en toda la
+  provincia. La serie se duplicó en cuarenta años: 8,9% en 1980, 10,8%
+  en 1991, 14,0% en 2001, 14,9% en 2010, 17,8% en 2022. Fuente: INDEC,
+  Censo 2022, Cuadro 7.2.
+- Y no hay residencia, hogar ni atención domiciliaria municipal: sólo
+  Puerto Libre, que es recreativo y comedor. Los 35 "centros de
+  tercera edad" son mayoritariamente de la sociedad civil, no sedes
+  municipales.
 - Los mapas están invertidos: Béccar 21,0% de menores de 14 y Boulogne
   18,7%; Martínez 22,4% de mayores de 65 y Acassuso 22,5%. Los centros
   de infancia van donde están los chicos y los de vejez donde están
@@ -623,23 +632,58 @@ Ver el Informe 04 para el detalle de las cinco áreas, las fuentes y lo
 que quedó sin encontrar.
 
 
-## 82 · CULTURA — PROPUESTA PROPIA
-Hoy la cultura está enterrada dentro de "Educación y cultura" sin
-propuesta. "Deporte y recreación" recibe 3.813 M, más que agua y
-cloacas: hay presupuesto, lo que no hay es lugares donde pasen cosas.
-Planteo de Cap'n Nick: hoy para hacer un evento está el hipódromo y es
-carísimo, así que la entrada es inaccesible. Tiene que haber lugares
-donde salir un viernes. No se puede velar sólo por el vecino que se
-acuesta a las nueve.
-Propuesta: categoría habilitante intermedia para espacios chicos —bares
-con música, salas de menos de 200— para que el costo de habilitar no
-haga la entrada inaccesible. Y el criterio de que quien decide dónde
-puede haber música es el barrio, no un reclamo aislado.
-Esto le da sentido a lo del Catalejo: hoy el documento lo trata como
-pérdida de empleo y de capital; faltaba lo que realmente se perdió, un
-lugar donde la gente iba.
-PENDIENTE: informe de Chrome sobre qué exige hoy habilitar un espacio
-con música y cuántos eventos se autorizaron.
+## 82 · CULTURA · REESCRITA CON EL INFORME 04
+El hallazgo no es que falten lugares: es POR QUÉ faltan.
+
+**EL RÉGIMEN DE MÚSICA EN VIVO ES DE 1970 Y SIGUE PUBLICADO COMO
+VIGENTE EN EL DIGESTO.**
+- Decreto 725/1970, art. 7: prohíbe "el acceso al local y permanencia
+  en él, de mujeres solas". ESO ESTÁ HOY EN EL DIGESTO MUNICIPAL.
+  No hace falta agregar nada sobre por qué hay que reescribirlo.
+- Decreto 718/1970, art. 5: no se autoriza música en locales que
+  formen parte de predios con viviendas. En un partido donde casi todo
+  tiene viviendas al lado, eso cierra la puerta solo.
+- Dto. 718/1970 art. 3: el sonido no puede trascender "bajo ningún
+  concepto". Art. 6: horario 16:00 a 04:00.
+- Dto. 725/1970 art. 16: superficie mínima 24 m2 con pista mayor a un
+  quinto del local.
+- Ordenanza 8216/2006: cierre obligatorio de 00:00 a 07:00 salvo
+  Permiso de Funcionamiento Nocturno, que exige salón mayor a 50 m2 y
+  que NO autoriza por sí mismo emitir música.
+
+**NO HAY CATEGORÍA PARA ESPACIOS CHICOS.** La Ordenanza 9377/2024 y su
+Decreto 534/2025 tienen los rubros "Café concert - Música y canto" y
+"Centro cultural", los dos con LICENCIA e inspección previa, SIN
+umbral de aforo ni régimen simplificado.
+
+**Y LA PROVINCIA YA TIENE LA SOLUCIÓN: LA LEY 15.302 (2021)**, que
+regula salas de teatro independiente, centros culturales y espacios
+culturales alternativos, con tope de 300 asistentes y 500 m2. INVITA A
+LOS MUNICIPIOS A ADHERIR. SAN ISIDRO NO ADHIRIÓ.
+CABA tiene su equivalente, la Ley 6.063.
+LA PROPUESTA ES ADHERIR. No hay que inventar un régimen: hay que
+adoptar el que la Provincia ya sancionó.
+(OJO: la ley porteña es la 6.063, NO la "14.318". Ese número no existe
+para este tema.)
+
+**LA CULTURA MUNICIPAL TAMPOCO ES GRATUITA.** Las cinco Casas de
+Cultura cobran cursos a 26.000 y 32.000 pesos por mes.
+
+**EL PRESUPUESTO.** Cultura devengó 1.360,4 M en 2025: el 0,42% del
+gasto. Deporte y Recreación devengó 3.813,3 M, 2,8 veces más. Y
+cultura y turismo comparten el mismo crédito, sin desagregar.
+
+**DOS HALLAZGOS DE TRANSPARENCIA que van al capítulo 5:**
+1. Sólo está publicado el presupuesto 2024 (Ordenanza 9325). NO están
+   el de 2025 ni el de 2026.
+2. En el II trimestre de 2026 la ejecución por finalidad DEJÓ DE
+   DISCRIMINAR 3.4.5 Cultura: sólo aparece 3.4 Educación y Cultura.
+   Un dato que se publicaba dejó de publicarse.
+
+**ANTES DE CITAR los decretos de 1970 como derecho aplicable**, decir
+que siguen publicados en el Digesto y que su vigencia formal habría
+que confirmarla. El hallazgo es que están ahí.
+
 
 ## 83 · SACAR LAS SECCIONES QUE SE EXPLICAN A SÍ MISMAS
 Al menos cuatro: "Por qué este capítulo existe", "Cómo se escribió este
