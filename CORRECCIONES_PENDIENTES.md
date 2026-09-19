@@ -146,12 +146,17 @@ validez oficial. Sin eso el egresado tiene experiencia y no puede
 probarla, y queda atado al Municipio como empleador. Con título, el
 municipio es la cuna y no el techo: si se van, funcionó.
 
-**Financiamiento.** El desarrollo sale de Ciencia y Técnica, que ya
-tiene 8.205 millones al año. Estimación: 447,6 M anuales — 14 personas
-(6 desarrollo, 3 datos e IA, 2 seguridad, 2 producto, 1 coordinación),
-más infraestructura y auditoría externa. ATENCIÓN: ese número quedó
-chico cuando la aplicación creció a sistema de información completo.
-Hay que redimensionarlo y avisarle a Cap'n Nick antes de fijarlo.
+**Financiamiento. DECIDIDO.** El desarrollo sale de Ciencia y Técnica,
+que ya tiene 8.205 millones al año.
+Monto: 1.273 M anuales, equipo de 39 personas escalado por módulo. Es
+el 15,5% de Ciencia y Técnica.
+Va declarado como ESTIMACIÓN PROPIA, a presupuestar y licitar antes de
+comprometerse, igual que las otras estimaciones del capítulo 3.
+Escribir el equipo abierto por función, de dónde sale la plata, y la
+aclaración de que se licita.
+Y una comparación que hay que poner para que la cifra no asuste:
+1.273 M es menos del 9% de lo que cuesta un año de "mantenimiento y
+embellecimiento" (14.770,8 M).
 
 ## 60 · CONVOCATORIA DE EXPERTOS PONDERADA
 Cuando se convoquen expertos o se pidan estudios, se convoca a
@@ -198,21 +203,42 @@ Releer el 4.12 entero: se escribió cuando el capítulo 3 decía otra cosa.
 El 5.3 forma gente y no dice dónde trabaja después. Falta la línea que
 diga que los desarrollos del propio Municipio son la primera salida
 laboral, con cupo.
-Y los 7.730,9 millones no tienen apertura. Propuesta calculada, sujeta
-a aprobación:
-- Empleo 60% (4.638,5 M) y vivienda 40% (3.092,4 M), invirtiendo el
-  33,7/66,3 actual, porque la cloaca ya se financia con la obra
-  vecinal y sostener vivienda en dos tercios sería pagar dos veces.
-- Dentro de empleo: formación 1.948,2 M, intermediación 603,0 M,
-  contratación de desarrollos 2.087,3 M. La contratación es la pata
-  más grande a propósito: es la que emplea.
-- A 1 M por persona formada y acompañada: 1.948 personas al año, el
-  1,02% de la población de 15 a 64. En cuatro años, 7.793 personas.
-- Cupos por índice de necesidad: Boulogne 662, Béccar 644, Martínez
-  205, San Isidro 201, Villa Adelina 197, Acassuso 39. Cinco sedes
-  fijas y Acassuso itinerante.
-El 1 M por persona es supuesto propio y es el número que más mueve
-todo. El 60/40 es decisión, no cálculo.
+
+**APERTURA DECIDIDA de los 7.730,9 M:**
+- Empleo 60% = 4.638,5 M · Vivienda 40% = 3.092,4 M
+  (invierte el 33,7/66,3 actual: la cloaca ya se financia con la obra
+  vecinal y sostener vivienda en dos tercios sería pagar dos veces)
+- Dentro de empleo: formación 60% = 2.783,1 M · contratación 40% =
+  1.855,4 M. La intermediación se absorbe dentro de formación: el
+  instructor que vincula al egresado con el empleador es parte del
+  programa formativo, no una oficina aparte.
+- COSTO POR PERSONA: 3 MILLONES al año. Decisión de Cap'n Nick, y es
+  la propuesta, no un supuesto.
+- Resultado: 928 personas al año, 3.711 en cuatro años.
+- Cupos por índice de necesidad: Boulogne 315, Béccar 307, Martínez 98,
+  San Isidro 96, Villa Adelina 94, Acassuso 19. Cinco sedes fijas y
+  Acassuso itinerante.
+
+**EL ARGUMENTO, que es de Cap'n Nick y va escrito:** el resto promete
+miles de egresados porque presupuesta a los docentes con lo que se les
+paga hoy, y por eso el certificado no vale nada. Acá son menos
+personas, mejor formadas, con título que sirve afuera del municipio.
+
+**Respaldo con evidencia, ya verificado:** las evaluaciones de impacto
+muestran que la capacitación tiene mayor probabilidad de efectos
+positivos, mientras que los subsidios salariales y los programas de
+empleo y obra pública muestran impactos no positivos en empleo o
+ingresos posteriores. Y el Proyecto Joven de Argentina reportaba 40%
+de mejora en empleo; medido contra un grupo de control, cayó a 23%.
+Los programas con mejor evidencia en la región combinan capacitación
+con experiencia laboral real en empresas, con un instructor que
+vincula al egresado con el empleador — que es exactamente este modelo.
+
+**OJO CON LA DOBLE CONTABILIDAD:** los 1.273 M de la plataforma salen
+de Ciencia y Técnica. La contratación de 1.855,4 M paga los OTROS
+desarrollos (analítica de seguridad, habilitaciones, salud,
+automatización de la planta). No contar la plataforma dos veces.
+
 
 ## 65 · ACCESO A IA COMO INFRAESTRUCTURA PÚBLICA
 Enseñar IA sin acceso a IA es enseñar oficios sin herramientas. El que
@@ -541,8 +567,7 @@ los cambia:
 5. **La 84 al final**, cuando todo lo demás esté cerrado.
 
 ## LO QUE FALTA DECIDIR A CAP'N NICK
-- El presupuesto del desarrollo de la aplicación, o aprobar la
-  estimación redimensionada.
-- Si aprueba la apertura 60/40 y el supuesto de 1 M por persona
-  formada de la corrección 64.
-- Confirmar si presidió la comisión que creó la UNSO.
+- Confirmar si presidió la comisión que creó la UNSO (corrección 60).
+  Es la única pendiente. Las otras dos ya se decidieron: el
+  presupuesto de la plataforma (1.273 M) y la apertura de empleo
+  (60/40 y 3 M por persona).
