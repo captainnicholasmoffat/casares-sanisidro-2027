@@ -835,7 +835,7 @@ antes de firmar un alquiler.</p>
 no un algoritmo.</p>
 <p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
 suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el domicilio del
-adjudicatario, el tiempo de respuesta de los reclamos y las trece metas del cap&iacute;tulo 6.</p>
+adjudicatario, el tiempo de respuesta de los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Publicar en un sistema donde el dato entra el
@@ -2080,7 +2080,7 @@ tendencia.</p>
 <p><b>Y todo vive en la aplicaci&oacute;n, no en un PDF suelto.</b> Las siete medidas de este cuadro, la
 ejecuci&oacute;n por zona, el precio unitario de los insumos, el stock, el empleo conseguido por
 intermediaci&oacute;n, los datos de seguridad, el domicilio del adjudicatario, el tiempo de respuesta de
-los reclamos y las trece metas del cap&iacute;tulo 6.</p>
+los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 <p><b>La raz&oacute;n no es de comodidad.</b> Publicar en un PDF que nadie abre se puede simular: se sube
 tarde, se sube incompleto y nadie se entera. <span class="sg">Publicar en un sistema donde el dato entra
 cuando se genera y cualquiera lo consulta, no.</span> Es la diferencia entre cumplir y parecer que se
@@ -2138,8 +2138,8 @@ conflicto. <b>&laquo;Te sacamos lo aburrido y no tocamos tu puesto&raquo; es m&a
 &laquo;prometemos no despedir&raquo;</b>, y cambia de lugar al empleado: de obst&aacute;culo del cambio
 a parte del cambio.</p>
 <p><b>Lo que s&iacute; cambia es el trabajo de algunas &aacute;reas.</b> Imputar el gasto con referencia
-territorial, responder por escrito a cada priorizaci&oacute;n zonal y publicar trimestralmente por zona
-son tareas nuevas para las secretar&iacute;as de Hacienda y de Obras. No requieren personal adicional,
+territorial, responder por escrito a cada priorizaci&oacute;n zonal y sostener la publicaci&oacute;n
+continua por zona son tareas nuevas para las secretar&iacute;as de Hacienda y de Obras. No requieren personal adicional,
 pero requieren decisi&oacute;n y capacitaci&oacute;n, y suponer lo contrario ser&iacute;a el mismo error
 que este documento le se&ntilde;ala al plan vigente.</p>
 <p><b>Y hay un compromiso de transparencia que toca a la propia planta.</b> Enlazar el organigrama desde el sitio oficial y publicar la
@@ -2222,7 +2222,7 @@ finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declarad
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
-<div class="stand">Trece metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
+<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="tight">Tres cosas, y ninguna requiere fondos nuevos ni permiso de nadie.</p>
@@ -2270,8 +2270,9 @@ encontrar no va a redistribuir la obra p&uacute;blica.</b></p>
 de necesidad&mdash; escrita en el texto, para que no dependa del intendente de turno;</li>
 <li><b>la obligaci&oacute;n del Departamento Ejecutivo de responder por escrito, con fundamentos y en
 plazo</b>, a cada priorizaci&oacute;n zonal;</li>
-<li><b>la entrega trimestral</b> de la ejecuci&oacute;n presupuestaria desagregada por zona a cada
-comisi&oacute;n.</li>
+<li><b>la entrega de la ejecuci&oacute;n presupuestaria desagregada por zona</b> a cada
+comisi&oacute;n: trimestral, porque depende del cierre contable, y con el devengado del mes a la vista
+marcado como provisorio. Todo lo dem&aacute;s se publica el d&iacute;a que se genera.</li>
 </ul>
 <p><b>Plazo: cien d&iacute;as.</b> Se comprueba con el expediente y, despu&eacute;s, con el Bolet&iacute;n
 Oficial Municipal. Lo que se vuelve jur&iacute;dicamente obligatorio es la partida, no el proyecto votado:
@@ -2313,7 +2314,7 @@ siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
 <p class="tight">Un programa sin metas medibles no se puede auditar. &Eacute;stas s&iacute;, y ninguna
 depende de un dato que haya que creernos.</p>
-""" + exhead("c", "Trece metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
+""" + exhead("c", "Catorce metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
 <tr class="hd"><th>Meta</th><th class="r">L&iacute;nea de base</th><th class="r">Fuente de verificaci&oacute;n</th></tr>
@@ -2324,12 +2325,13 @@ depende de un dato que haya que creernos.</p>
 <tr><td class="l">50% de la obra p&uacute;blica decidida por comisiones vecinales</td><td class="n"><b>0%</b></td><td class="n">Ordenanza y ejecuci&oacute;n presupuestaria</td></tr>
 <tr><td class="l">Las siete medidas de transparencia, resueltas</td><td class="n"><b>1 de 7</b> (septiembre de 2026)</td><td class="n">El propio portal municipal y el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">Publicar la ejecuci&oacute;n presupuestaria desagregada por zona antes del fin del mandato</td><td class="n">No existe en ning&uacute;n municipio del conurbano norte</td><td class="n">El propio portal municipal</td></tr>
-<tr><td class="l">Publicar trimestralmente cu&aacute;ntas personas consiguieron empleo por intermediaci&oacute;n municipal</td><td class="n">No existe el dato. El primer informe establece la l&iacute;nea de base</td><td class="n">Informe trimestral de inserci&oacute;n laboral</td></tr>
+<tr><td class="l">Publicar cu&aacute;ntas personas consiguieron empleo por intermediaci&oacute;n municipal, el d&iacute;a que se registra y no cada tres meses</td><td class="n">No existe el dato. El primer registro establece la l&iacute;nea de base</td><td class="n">La propia aplicaci&oacute;n, con el hist&oacute;rico a la vista</td></tr>
+<tr class="hi"><td class="l">La aplicaci&oacute;n en producci&oacute;n, con la partida vecinal, el asistente, las asambleas transcriptas y la publicaci&oacute;n continua de datos</td><td class="n">No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error</td><td class="n">La propia aplicaci&oacute;n, p&uacute;blica y consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Adherir los tres hospitales y los centros de atenci&oacute;n primaria al sistema provincial de turno digital y teleconsulta</td><td class="n">Cero efectores adheridos: el turno municipal es presencial</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Publicar el precio unitario de cada compra de insumos y medicamentos de los tres hospitales</td><td class="n">Cero. Hoy se publica el total del expediente, no el precio por unidad</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Licitar el servicio de recolecci&oacute;n de residuos con pliego p&uacute;blico y plazo cierto</td><td class="n">Corre sin licitaci&oacute;n desde 2009, sobre una licitaci&oacute;n declarada desierta</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
-<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas, con el eje puesto en inteligencia artificial y servicios digitales</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. La matr&iacute;cula no se publica y el primer informe la fija</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas, con el eje puesto en inteligencia artificial y servicios digitales, y formar 928 personas por a&ntilde;o</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. La matr&iacute;cula no se publica y el primer informe la fija</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 </table>
 <div class="cols">
 <p>Las trece se miden con documentos que el Municipio ya publica, o que este programa se compromete a
@@ -2348,8 +2350,8 @@ patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos ha
 ninguno.</b></p>
 <p>Sin ese n&uacute;mero, la meta no se puede verificar: cualquier flota actual cumple o incumple
 seg&uacute;n el punto de partida que uno elija. <span class="sg">No es un reproche a esa meta en
-particular, es la raz&oacute;n por la que las nueve de este cuadro llevan su l&iacute;nea de base
-escrita al lado.</span></p>
+particular, es la raz&oacute;n por la que las catorce de este cuadro llevan su l&iacute;nea de
+base escrita al lado.</span></p>
 </div>
 <div class="callout g">
 <div class="clabel">Sobre la l&iacute;nea de base</div>
@@ -2374,14 +2376,16 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Primeras asambleas de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: el modelo del Centro 404 de B&eacute;ccar se extiende a las seis zonas, con la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada</td></tr>
-<tr><td class="l">Mes 6</td><td>Arranca la intermediaci&oacute;n laboral municipal; el primer informe trimestral fija la l&iacute;nea de base, que hoy no existe</td><td class="n">Informe trimestral de inserci&oacute;n</td></tr>
-<tr><td class="l">Mes 9</td><td>Primera rendici&oacute;n trimestral por zona</td><td class="n">Publicaci&oacute;n trimestral</td></tr>
+<tr><td class="l">Mes 6</td><td>Arranca la intermediaci&oacute;n laboral municipal; el primer registro fija la l&iacute;nea de base, que hoy no existe</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico a la vista</td></tr>
+<tr class="hi"><td class="l">Meses 6&ndash;9</td><td>Primera versi&oacute;n de la aplicaci&oacute;n: partida vecinal, seguimiento de obra y asistente sobre lo ya publicado</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Mes 9</td><td>Primera rendici&oacute;n por zona, y desde ah&iacute; continua: la adjudicaci&oacute;n se publica el d&iacute;a que se firma</td><td class="n">La aplicaci&oacute;n. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 ejecutado: 7.227 M, el 12,5% de la obra p&uacute;blica</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
 <tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025 y se publica el Fondo Educativo obra por obra</td><td class="n">Ejecuci&oacute;n del Fondo, publicada</td></tr>
 <tr><td class="l">Mes 15</td><td>Primer <i>Informe de cumplimiento del programa de gobierno</i>, 31 de marzo</td><td class="n">El informe, con una fila por meta</td></tr>
-<tr><td class="l">Meses 12&ndash;18</td><td>Salud: publicaci&oacute;n de la ejecuci&oacute;n por establecimiento y por zona, y del reporte trimestral de espera y cobertura</td><td class="n">El propio portal municipal</td></tr>
-<tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: publicaci&oacute;n trimestral de patrullaje, c&aacute;maras y tiempos de respuesta del 911 municipal</td><td class="n">El propio portal municipal</td></tr>
+<tr><td class="l">Meses 12&ndash;18</td><td>Salud en la aplicaci&oacute;n: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica andando</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, publicados de manera continua</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa e inspecci&oacute;n grabada, y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2: 14.454 M, el 25%. Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
 <tr><td class="l">Meses 24&ndash;30</td><td>Percepci&oacute;n de recursos corrientes al 92%</td><td class="n">Estado de ejecuci&oacute;n acumulado anual</td></tr>
 <tr><td class="l">Mes 36</td><td>A&ntilde;o 3: 21.681 M, el 37,5%. Funci&oacute;n ambiental al 1,5%</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
@@ -2436,17 +2440,24 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <td>El menos grave de los tres fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio; se declara.</td></tr>
+<tr class="hi"><td class="l">La aplicaci&oacute;n no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>
+<td>Es la pieza de la que cuelga el resto: sin ella el vecino vota sobre documentos que no puede leer, y el mecanismo se apaga como se apag&oacute; en Reikiavik y en Wa&#322;brzych. <b>Mitigaci&oacute;n:</b> se entrega por partes y la primera versi&oacute;n es la m&aacute;s chica &mdash;partida vecinal, seguimiento de obra y asistente sobre lo que ya est&aacute; publicado&mdash;, de modo que el primer ciclo de asambleas no dependa del sistema completo. Y el monto sale de una partida que ya existe (4.11), no de fondos nuevos.</td></tr>
+<tr><td class="l">El asistente contesta mal</td>
+<td>Una respuesta equivocada sobre en qu&eacute; se gast&oacute; una partida vale menos que no tener asistente, porque se propaga. <b>Mitigaci&oacute;n:</b> responde s&oacute;lo sobre lo publicado y <b>siempre muestra el documento del que sali&oacute;</b>, as&iacute; que la respuesta se puede verificar en el mismo lugar donde se lee; y si el dato no existe, lo dice. La auditor&iacute;a la hacen las universidades del partido (4.11). <b>Lo que no se promete es que nunca se equivoque.</b></td></tr>
+<tr><td class="l">Queda afuera el que no tiene tel&eacute;fono o conexi&oacute;n</td>
+<td>Un mecanismo que vive en una aplicaci&oacute;n puede excluir exactamente a quien este programa quiere incluir. <b>Mitigaci&oacute;n:</b> la asamblea sigue siendo presencial y el voto se emite ah&iacute;; la aplicaci&oacute;n informa, no reemplaza. Los centros con equipamiento del 5.3 y la mesa de ayuda del equipo (4.11) existen por esta raz&oacute;n. <b>Y el relevamiento de conectividad del 5.4 es el que dice cu&aacute;n grande es el problema, porque hoy no se sabe.</b></td></tr>
 <tr><td class="l">El dato territorial resulta m&aacute;s caro de construir de lo previsto</td>
 <td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.5) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las otras siete medidas de transparencia no dependen de &eacute;l.</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> tres de los nueve no tienen mitigaci&oacute;n propia y est&aacute; dicho en la
-fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
+<p class="cap"><b>Nota:</b> tres de los doce no tienen mitigaci&oacute;n propia y est&aacute; dicho en
+la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
 
 <h2><span class="n">6.7</span>C&oacute;mo se audita todo esto</h2>
-<p class="tight">Cuatro condiciones que nos imponemos, y que hacen auditable el resto.</p>
+<p class="tight">Cinco condiciones que nos imponemos, y que hacen auditable el resto. La quinta cambia
+la naturaleza de las otras cuatro.</p>
 <ol class="n">
 <li><b>Las cifras de este documento son p&uacute;blicas y reproducibles.</b> El modelo fiscal, las series
-2010&ndash;2025, la zonificaci&oacute;n censal y los veinte gr&aacute;ficos se publican en un repositorio abierto al
+2010&ndash;2025, la zonificaci&oacute;n censal y los diecinueve gr&aacute;ficos se publican en un repositorio abierto al
 presentarse este programa, con las pruebas de validaci&oacute;n que los verifican. Cualquiera puede
 correrlos.</li>
 <li><b>Los l&iacute;mites est&aacute;n declarados donde aparecen.</b> Los datos de los otros 105 municipios
@@ -2463,9 +2474,25 @@ por el mismo filtro.</li>
 de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el valor
 alcanzado. Fecha fija y formato fijo, a prop&oacute;sito: &laquo;se publica&raquo; no se puede incumplir;
 un documento con nombre que no aparece el 31 de marzo, s&iacute;.</li>
+<li><b>Y la auditor&iacute;a deja de ser un acto anual.</b> Hasta ac&aacute;, auditar significaba esperar
+un informe y compararlo con otro. Con el sistema del cap&iacute;tulo 4 <span class="sg">el dato entra el
+d&iacute;a que se genera y cualquiera lo consulta cuando quiera</span>: la adjudicaci&oacute;n el
+d&iacute;a que se firma, el avance de obra el d&iacute;a que se carga, el precio unitario el d&iacute;a
+que se compra. El informe del 31 de marzo sigue existiendo, pero <b>deja de ser la &uacute;nica ventana
+y pasa a ser un resumen de algo que ya estaba a la vista</b>. Un informe se puede maquillar una vez al
+a&ntilde;o; un registro que se llena solo, no.</li>
 </ol>
+<div class="callout a">
+<div class="clabel">Lo que esto le exige al propio programa</div>
+<p><b>Publicar en tiempo real es una exigencia contra uno mismo, no contra el anterior.</b> Un dato que
+entra el d&iacute;a que se genera no se puede ordenar antes de mostrarlo, y deja a la vista los meses en
+que una zona no ejecut&oacute;, las obras que se atrasaron y las respuestas que salieron tarde.</p>
+<p><span class="sg">Se escribe ac&aacute; sabiendo eso.</span> Un gobierno que publica s&oacute;lo el
+resumen anual elige qu&eacute; se ve; uno que publica el registro, no. Es la diferencia entre rendir
+cuentas y contarlas.</p>
+</div>
 
-<h2><span class="n">6.8</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">6.8</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
@@ -2473,8 +2500,10 @@ hoy permiten disolver una asociaci&oacute;n vecinal.</li>
 ordenanza de la partida vecinal.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
-<li>Trece metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
+<li>Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
 informe de cumplimiento cada 31 de marzo.</li>
+<li>Y la aplicaci&oacute;n cambia qu&eacute; quiere decir rendir cuentas: el dato entra el d&iacute;a que
+se genera y queda a la vista, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>
 <li>Lo que depende de la Legislatura lo reclamamos y decimos que es un reclamo.</li>
 </ol>
 <div class="pull"><div class="plabel">Las mismas reglas para los dos</div><p>Auditamos un plan de gobierno para escribir &eacute;ste. El nuestro queda escrito, con

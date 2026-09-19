@@ -126,7 +126,7 @@ _IDX = [
  ("g", "Anexo &middot; El articulado", None),
  ("i", "Los cinco art&iacute;culos, redactados", "ordenanza"),
  ("g", "Glosario", None),
- ("i", "Catorce palabras, explicadas", "glosario"),
+ ("i", "Dieciocho palabras, explicadas", "glosario"),
 ]
 
 def _indice():
@@ -199,7 +199,7 @@ cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tri
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los veinte gr&aacute;ficos son p&uacute;blicos y
+<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
 verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
@@ -258,7 +258,7 @@ mismo tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 <div class="cols">
 <p>Este documento audita un plan de gobierno contra sus propias metas publicadas. Ese ejercicio
 s&oacute;lo es leg&iacute;timo si quien lo hace acepta que se lo hagan.</p>
-<p>Por eso el cap&iacute;tulo 6 fija trece metas
+<p>Por eso el cap&iacute;tulo 6 fija catorce metas
 verificables, con su l&iacute;nea de base calculada hoy y
 la fuente p&uacute;blica con la que se comprueba cada una. Est&aacute;n escritas antes de gobernar, y no
 se van a mover despu&eacute;s.</p>
