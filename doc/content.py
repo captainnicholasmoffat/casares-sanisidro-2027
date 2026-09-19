@@ -46,7 +46,7 @@ C5B, C5B_B_SRC = split_at(C5B_SRC, '<h2><span class="n">5.6</span>', "cap5bb",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B_B, C5B_C = split_at(C5B_B_SRC, '<h2><span class="n">5.7</span>', "cap5bc",
                         H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
-C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.12</span>', "cap5b3",
+C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.13</span>', "cap5b3",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",

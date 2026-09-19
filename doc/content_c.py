@@ -849,7 +849,7 @@ antes de firmar un alquiler.</p>
 no un algoritmo.</p>
 <p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
 suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el domicilio del
-adjudicatario, el tiempo de respuesta de los reclamos y las diecis&eacute;is metas del cap&iacute;tulo 6.</p>
+adjudicatario, el tiempo de respuesta de los reclamos y las quince metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Publicar en un sistema donde el dato entra el
@@ -2093,47 +2093,63 @@ mismas seis zonas de la partida vecinal, y por la misma raz&oacute;n: donde falt
 trabajo, y las dos cosas se deciden en el mismo mapa.</p>
 </div>
 
-<h3>Cultura: hay presupuesto, lo que no hay son lugares donde pasen cosas</h3>
+<h3>Cultura: el problema no es que falten lugares, es la norma de 1970 que sigue publicada</h3>
 <div class="cols">
-<p><b>Cultura comparte partida con turismo y devenga 1.360 millones al a&ntilde;o: el 0,42% del gasto
-municipal.</b> Al lado, &laquo;Deporte y recreaci&oacute;n&raquo; recibe 3.813 millones,
-<span class="sg">m&aacute;s que agua potable y alcantarillado</span>. No es que falte plata: falta
-d&oacute;nde.</p>
-<p><b>El problema es de habilitaci&oacute;n, no de subsidio.</b> Para que un bar tenga m&uacute;sica en
-vivo hoy hacen falta, adem&aacute;s de la habilitaci&oacute;n comercial, un permiso de
-&laquo;M&uacute;sica y Canto&raquo; que viene de un decreto de <b>1970</b> &mdash;local cerrado, el
-sonido no puede trascender, prohibido si el predio tiene viviendas&mdash; y, para abrir de madrugada, un
-permiso de funcionamiento nocturno aparte que <b>por s&iacute; solo no autoriza a emitir
-m&uacute;sica</b>.</p>
-<p><b>Y no existe una categor&iacute;a intermedia.</b> El cuadro de usos tiene los rubros
-&laquo;caf&eacute; concert&raquo; y &laquo;centro cultural&raquo;, pero <span class="sg">sin umbral de
-aforo ni r&eacute;gimen simplificado propio</span>: lo que no entra ah&iacute; cae en el r&eacute;gimen
-de local de expansi&oacute;n nocturna, pensado para una discoteca. Una sala de ciento cincuenta personas
-tiene que cumplir con lo mismo que un boliche.</p>
+<p><b>Cultura devenga 1.360,4 millones al a&ntilde;o: el 0,42% del gasto municipal</b>, y comparte
+cr&eacute;dito con turismo sin desagregar. Al lado, Deporte y Recreaci&oacute;n devenga 3.813,3
+millones, <span class="sg">2,8 veces m&aacute;s</span>, y m&aacute;s que agua potable y alcantarillado.
+No es que falte plata: falta d&oacute;nde.</p>
+<p><b>Y ac&aacute; est&aacute; el hallazgo, que no es de presupuesto.</b> El r&eacute;gimen que regula
+la m&uacute;sica en vivo en San Isidro es de <b>1970</b> y sigue publicado en el Digesto municipal.
+<span class="sg">Lo que sigue no es una interpretaci&oacute;n: es lo que est&aacute; escrito
+ah&iacute;.</span></p>
+</div>
+<div class="callout a">
+<div class="clabel">Lo que dice hoy el Digesto de San Isidro</div>
+<p><b>El Decreto 725/1970, en su art&iacute;culo 7, proh&iacute;be &laquo;el acceso al local y
+permanencia en &eacute;l, de mujeres solas&raquo;.</b> No hace falta agregar nada sobre por qu&eacute;
+hay que reescribir ese r&eacute;gimen.</p>
+<p><b>Y el Decreto 718/1970 cierra la puerta por otro lado.</b> Su art&iacute;culo 5 no autoriza
+m&uacute;sica en locales que formen parte de predios con viviendas &mdash;en un partido donde casi todo
+tiene una vivienda al lado, eso alcanza&mdash;; su art&iacute;culo 3 exige que el sonido no trascienda
+&laquo;bajo ning&uacute;n concepto&raquo;; y su art&iacute;culo 6 fija el horario entre las cuatro de la
+tarde y las cuatro de la ma&ntilde;ana.</p>
+<p><b>La Ordenanza 8216/2006 agrega el cierre obligatorio entre las doce y las siete</b>, salvo con un
+Permiso de Funcionamiento Nocturno que exige un sal&oacute;n de m&aacute;s de cincuenta metros cuadrados
+y que, por s&iacute; solo, <b>no autoriza a emitir m&uacute;sica</b>.</p>
+<p><span class="sg">Antes de discutir el contenido conviene declarar el l&iacute;mite:</span> estos
+decretos <b>siguen publicados en el Digesto como vigentes</b>, y su vigencia formal habr&iacute;a que
+confirmarla contra las normas posteriores. <b>El hallazgo es que est&aacute;n ah&iacute;</b>, y que
+nadie los revis&oacute; en cincuenta y seis a&ntilde;os.</p>
+</div>
+<div class="cols">
+<p><b>Y no hay categor&iacute;a para espacios chicos.</b> El marco de habilitaciones de 2024 y su decreto
+reglamentario tienen los rubros &laquo;caf&eacute; concert&raquo; y &laquo;centro cultural&raquo;, los
+dos con licencia e inspecci&oacute;n previa y <span class="sg">sin umbral de aforo ni r&eacute;gimen
+simplificado</span>. Una sala de ciento cincuenta personas cumple con lo mismo que un boliche.</p>
 <p><b>Ah&iacute; est&aacute; el costo que nadie ve.</b> Habilitar sale tanto que el &uacute;nico lugar
 donde conviene hacer un evento es uno grande y caro, y entonces la entrada es inaccesible.
 <b>No se puede velar s&oacute;lo por el vecino que se acuesta a las nueve.</b></p>
-<p><b>Lo que propone este programa son dos cosas y ninguna cuesta un peso.</b> Primero, una
-<b>categor&iacute;a habilitante intermedia para espacios chicos</b> &mdash;bares con m&uacute;sica,
-salas de menos de doscientas personas&mdash;, con exigencias de seguridad proporcionales al aforo. La
-Provincia sancion&oacute; en 2021 una ley de espacios culturales independientes y
-<span class="sg">no se encontr&oacute; ordenanza de San Isidro que adhiera</span>: adherir es el camino
-m&aacute;s corto.</p>
-<p><b>Segundo, que qui&eacute;n decide d&oacute;nde puede haber m&uacute;sica sea el barrio y no un
-reclamo aislado.</b> Es la misma l&oacute;gica del cap&iacute;tulo 4: la comisi&oacute;n de la zona
-opina sobre los horarios y las cuadras, y esa opini&oacute;n queda escrita. Hoy un solo reclamo alcanza
-para clausurar, y nadie discute nunca el criterio.</p>
+<p><b>La propuesta es adherir, no inventar.</b> La Provincia sancion&oacute; en 2021 la <b>Ley
+15.302</b>, que regula salas de teatro independiente, centros culturales y espacios culturales
+alternativos con un tope de <b>300 asistentes y 500 metros cuadrados</b>, e invita expresamente a los
+municipios a adherir. <span class="sg">San Isidro no adhiri&oacute;.</span> Adherir por ordenanza es el
+camino m&aacute;s corto y no exige escribir un r&eacute;gimen nuevo.</p>
+<p><b>Y que qui&eacute;n decide d&oacute;nde puede haber m&uacute;sica sea el barrio</b>, no un reclamo
+aislado. Es la misma l&oacute;gica del cap&iacute;tulo 4: la comisi&oacute;n de la zona opina sobre
+horarios y cuadras y esa opini&oacute;n queda escrita. Hoy un solo reclamo alcanza para clausurar y el
+criterio no se discute nunca.</p>
+<p><b>Y la cultura municipal tampoco es gratuita.</b> Las cinco Casas de Cultura cobran sus cursos entre
+<b>26.000 y 32.000 pesos por mes</b>. No se propone que dejen de cobrar &mdash;eso cuesta y hay que
+costearlo&mdash;: se se&ntilde;ala que la oferta p&uacute;blica de cultura tiene un precio de entrada, y
+que conviene saberlo antes de decir que existe.</p>
 </div>
-<div class="callout a">
+<div class="callout g">
 <div class="clabel">Lo que se perdi&oacute; en la costa, contado entero</div>
 <p>La secci&oacute;n 5.5 cuenta la demolici&oacute;n de los locales de la costa como p&eacute;rdida de
 empleo y de capital construido. <b>Faltaba lo m&aacute;s obvio: era un lugar donde la gente iba.</b> En
-un partido donde hacer un evento cuesta lo que cuesta, cerrar dos lugares que funcionaban no es s&oacute;lo
-un problema econ&oacute;mico.</p>
-<p><span class="sg">Y hay un dato que conviene vigilar.</span> En el segundo trimestre de 2026 el estado
-de gastos por finalidad y funci&oacute;n <b>ya no discrimina la funci&oacute;n Cultura</b>: aparece
-agregada dentro de Educaci&oacute;n y Cultura. Una partida que deja de publicarse por separado es una
-partida que deja de poder discutirse.</p>
+un partido donde habilitar un espacio con m&uacute;sica se rige por un decreto de 1970, cerrar dos
+lugares que funcionaban no es s&oacute;lo un problema econ&oacute;mico.</p>
 </div>
 
 <h3>A qui&eacute;n se le pregunta cuando hace falta un estudio</h3>
@@ -2294,6 +2310,26 @@ datos hasta el segundo trimestre de 2026. Este documento no existir&iacute;a sin
 <p>Reponer un portal, enlazar lo que ya existe y corregir un enlace roto no le cuesta un peso a nadie. Es
 la parte m&aacute;s f&aacute;cil de cumplir de todo este programa, y es la que hoy no est&aacute;
 hecha.</p></div>
+<h3>Dos cosas m&aacute;s que aparecieron al buscar otra, y son del mismo tipo</h3>
+<div class="cols">
+<p><b>El &uacute;ltimo presupuesto publicado es el de 2024.</b> No se encontraron el de 2025 ni el de
+2026. Y el que est&aacute; publicado trae s&oacute;lo el c&aacute;lculo de recursos por rubro y los
+gastos por objeto: <span class="sg">no abre por finalidad ni por programa</span>, que es la apertura con
+la que se puede discutir en qu&eacute; se va a gastar.</p>
+<p><b>Conviene conceder lo que s&iacute; est&aacute;:</b> la <b>ejecuci&oacute;n</b> s&iacute; se publica
+abierta por programa y por finalidad, y es de donde sale buena parte de este documento. Lo que falta es
+el presupuesto, que es el momento en que la decisi&oacute;n todav&iacute;a se puede cambiar.
+<b>Publicar la ejecuci&oacute;n y no el presupuesto es mostrar el gasto cuando ya se hizo.</b></p>
+<p><b>Y un dato que se publicaba dej&oacute; de publicarse.</b> Hasta 2025 la ejecuci&oacute;n por
+finalidad y funci&oacute;n discriminaba la funci&oacute;n Cultura. En el segundo trimestre de 2026
+<b>ya no aparece</b>: queda agregada dentro de Educaci&oacute;n y Cultura.</p>
+<p><span class="sg">Una partida que deja de publicarse por separado es una partida que deja de poder
+discutirse</span>, y es el mismo movimiento que el cap&iacute;tulo 2 le se&ntilde;ala al plan vigente
+cuando cambia un clasificador y vuelve incomparables las series. <b>Las dos se corrigen con el mismo
+esfuerzo y el mismo costo que las siete de arriba:</b> subir un archivo que ya existe y no borrar una
+columna.</p>
+</div>
+
 <h3>Cu&aacute;ndo se publica cada cosa, y por qu&eacute; casi todo es el mismo d&iacute;a</h3>
 <p class="tight">Lo trimestral qued&oacute; de cuando publicar significaba que un empleado armara un
 informe cada tres meses. Con el sistema del cap&iacute;tulo 4, <span class="sg">el dato existe el
@@ -2311,7 +2347,7 @@ tendencia.</p>
 <p><b>Y todo vive en la aplicaci&oacute;n, no en un PDF suelto.</b> Las siete medidas de este cuadro, la
 ejecuci&oacute;n por zona, el precio unitario de los insumos, el stock, el empleo conseguido por
 intermediaci&oacute;n, los datos de seguridad, el domicilio del adjudicatario, el tiempo de respuesta de
-los reclamos y las diecis&eacute;is metas del cap&iacute;tulo 6.</p>
+los reclamos y las quince metas del cap&iacute;tulo 6.</p>
 <p><b>La raz&oacute;n no es de comodidad.</b> Publicar en un PDF que nadie abre se puede simular: se sube
 tarde, se sube incompleto y nadie se entera. <span class="sg">Publicar en un sistema donde el dato entra
 cuando se genera y cualquiera lo consulta, no.</span> Es la diferencia entre cumplir y parecer que se
@@ -2394,6 +2430,13 @@ fuimos a buscar qu&eacute; hay. Lo que apareci&oacute; alcanza para escribir la 
 <p><b>Empecemos por el dato que este documento no dec&iacute;a en ninguna parte:</b> San Isidro
 <span class="sg">ya tiene m&aacute;s viejos que chicos</span>. Hasta 14 a&ntilde;os hay 51.388 personas,
 el 17,4%; de 65 y m&aacute;s hay 52.769, el 17,8%. No es una proyecci&oacute;n: es el Censo 2022.</p>
+<p><b>Y no es un matiz: es el partido m&aacute;s envejecido de su regi&oacute;n.</b> Ese 17,8% se
+compara con el <b>11,7% de los veinticuatro partidos del Gran Buenos Aires</b> y el 12,1% de toda la
+provincia. <span class="sg">San Isidro tiene una vez y media la proporci&oacute;n de personas mayores de
+su entorno</span>, y ninguna pol&iacute;tica municipal est&aacute; escrita alrededor de eso.</p>
+<p><b>Y viene pasando hace cuarenta a&ntilde;os, a la vista de todos.</b> Era el 8,9% en 1980, el 10,8%
+en 1991, el 14,0% en 2001, el 14,9% en 2010 y el 17,8% en 2022. <b>Se duplic&oacute;.</b> No es un
+cambio que sorprenda a nadie: es un cambio que nadie atendi&oacute;.</p>
 <p><b>Y los dos mapas est&aacute;n invertidos.</b> Los chicos se concentran en B&eacute;ccar, con el
 21,0% de menores de 14, y en Boulogne, con el 18,7%. Los mayores, en Acassuso con el 22,5% y en
 Mart&iacute;nez con el 22,4%. <b>No se puede hacer la misma pol&iacute;tica en todo el partido:</b> los
@@ -2402,6 +2445,22 @@ mayores. Es el mismo criterio territorial del cap&iacute;tulo 1, aplicado a la e
 carencia.</p>
 <p><b>Y hay 1.810 chicos en hogares con necesidades b&aacute;sicas insatisfechas</b>, de los cuales el
 76% vive en Boulogne y B&eacute;ccar. Es el mismo mapa de la cloaca y del gas de red.</p>
+</div>
+<h3>Y para el partido m&aacute;s envejecido de la regi&oacute;n no hay una sola cama</h3>
+<div class="cols">
+<p><b>No hay residencia, no hay hogar y no hay atenci&oacute;n domiciliaria municipal.</b> Lo que hay
+es Puerto Libre, que es recreativo y comedor: est&aacute; bien que exista y no reemplaza a ninguna de
+las tres cosas.</p>
+<p><b>Y los treinta y cinco &laquo;centros de tercera edad&raquo; que se cuentan son, en su
+mayor&iacute;a, de la sociedad civil</b>, no sedes municipales. <span class="sg">Articular con ellos es
+correcto; contarlos como estructura propia no lo es.</span></p>
+<p><b>La m&aacute;s barata de las tres es la que falta primero.</b> La atenci&oacute;n domiciliaria
+&mdash;que alguien vaya a la casa de quien ya no puede salir&mdash; no exige un edificio, exige
+personal formado y una agenda. Es exactamente el tipo de trabajo para el que el 5.3 forma gente, y entra
+en la partida de empleo.</p>
+<p><b>Una residencia no se promete ac&aacute;.</b> Es obra con personal permanente y no est&aacute;
+costeada en este programa. <span class="sg">Queda dicho que hoy no hay ninguna</span>, que es el primer
+paso para discutirlo.</p>
 </div>
 <h3>G&eacute;nero es el &aacute;rea con menos estructura de todo el Municipio</h3>
 <div class="cols">
@@ -2454,7 +2513,10 @@ es obra, y una comisi&oacute;n la puede priorizar.</p>
 <p><b>3 &middot; Los dos mapas, cada uno donde corresponde.</b> Infancia en B&eacute;ccar y Boulogne;
 personas mayores en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido y
 los n&uacute;meros dicen que no deber&iacute;a serlo.</p>
-<p><b>4 &middot; Publicar los certificados de discapacidad emitidos por la junta municipal, por
+<p><b>4 &middot; Atenci&oacute;n domiciliaria para personas mayores</b>, que hoy no existe y es lo
+&uacute;nico de las tres que no pide un edificio. Se dota con gente formada en el 5.3 y se mide en
+personas atendidas, no en centros abiertos.</p>
+<p><b>5 &middot; Publicar los certificados de discapacidad emitidos por la junta municipal, por
 zona</b>, y una p&aacute;gina institucional que diga qu&eacute; hay y d&oacute;nde, con una
 l&iacute;nea de atenci&oacute;n que no sea un tel&eacute;fono de guardia.</p>
 <p><b>Y lo que no se promete:</b> un refugio para v&iacute;ctimas de violencia de g&eacute;nero es una
@@ -2543,7 +2605,7 @@ finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declarad
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
-<div class="stand">Diecis&eacute;is metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
+<div class="stand">Quince metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="tight">Tres cosas, y ninguna requiere fondos nuevos ni permiso de nadie.</p>
@@ -2635,7 +2697,7 @@ siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
 <p class="tight">Un programa sin metas medibles no se puede auditar. &Eacute;stas s&iacute;, y ninguna
 depende de un dato que haya que creernos.</p>
-""" + exhead("c", "Diecis&eacute;is metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
+""" + exhead("c", "Quince metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
 <tr class="hd"><th>Meta</th><th class="r">L&iacute;nea de base</th><th class="r">Fuente de verificaci&oacute;n</th></tr>
@@ -2646,7 +2708,6 @@ depende de un dato que haya que creernos.</p>
 <tr><td class="l">50% de la obra p&uacute;blica decidida por comisiones vecinales</td><td class="n"><b>0%</b></td><td class="n">Ordenanza y ejecuci&oacute;n presupuestaria</td></tr>
 <tr><td class="l">Las siete medidas de transparencia, resueltas</td><td class="n"><b>1 de 7</b> (septiembre de 2026)</td><td class="n">El propio portal municipal y el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">Publicar la ejecuci&oacute;n presupuestaria desagregada por zona antes del fin del mandato</td><td class="n">No existe en ning&uacute;n municipio del conurbano norte</td><td class="n">El propio portal municipal</td></tr>
-<tr><td class="l">Publicar cu&aacute;ntas personas consiguieron empleo por intermediaci&oacute;n municipal, el d&iacute;a que se registra y no cada tres meses</td><td class="n">No existe el dato. El primer registro establece la l&iacute;nea de base</td><td class="n">La propia aplicaci&oacute;n, con el hist&oacute;rico a la vista</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n en producci&oacute;n, con la partida vecinal, el asistente, las asambleas transcriptas y la publicaci&oacute;n continua de datos</td><td class="n">No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error</td><td class="n">La propia aplicaci&oacute;n, p&uacute;blica y consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Publicar el precio unitario de cada compra de insumos y medicamentos de los tres hospitales</td><td class="n">Cero. Hoy se publica el total del expediente, no el precio por unidad</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
@@ -2654,7 +2715,7 @@ depende de un dato que haya que creernos.</p>
 <tr class="hi"><td class="l">Ordenanza que regule el sistema de c&aacute;maras: usos permitidos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de cada acceso</td><td class="n">Cero. Operan unas 2.646 c&aacute;maras con anal&iacute;tica y no se encontr&oacute; norma municipal que las regule</td><td class="n">Bolet&iacute;n Oficial municipal y el registro de accesos publicado</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
-<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas, con el eje puesto en inteligencia artificial y servicios digitales, y formar 928 personas por a&ntilde;o</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. La matr&iacute;cula no se publica y el primer informe la fija</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas, formar 928 personas por a&ntilde;o y publicar cu&aacute;ntas consiguieron empleo, el d&iacute;a que se registra</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 </table>
 <div class="cols">
 <p>Las trece se miden con documentos que el Municipio ya publica, o que este programa se compromete a
@@ -2673,7 +2734,7 @@ patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos ha
 ninguno.</b></p>
 <p>Sin ese n&uacute;mero, la meta no se puede verificar: cualquier flota actual cumple o incumple
 seg&uacute;n el punto de partida que uno elija. <span class="sg">No es un reproche a esa meta en
-particular, es la raz&oacute;n por la que las diecis&eacute;is de este cuadro llevan su l&iacute;nea de
+particular, es la raz&oacute;n por la que las quince de este cuadro llevan su l&iacute;nea de
 base escrita al lado.</span></p>
 </div>
 <div class="callout g">
@@ -2694,7 +2755,7 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
 <tr class="hi"><td class="l">Mes 1</td><td>Entra al Concejo el proyecto que deroga los arts. 8, 9 y 10 de la Ordenanza 6045</td><td class="n">Acta de la sesi&oacute;n y expediente de ingreso</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Se publican las siete medidas de transparencia</td><td class="n">El propio portal municipal</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Se publican las siete medidas de transparencia, m&aacute;s el presupuesto de cada ejercicio abierto por programa y la funci&oacute;n Cultura otra vez desagregada</td><td class="n">El propio portal municipal</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Entra la ordenanza que regula el sistema de c&aacute;maras: usos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de accesos. No cuesta un peso y el sistema ya opera</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Entra la ordenanza de la partida vecinal: monto, rampa, f&oacute;rmula, obligaci&oacute;n de respuesta y entrega trimestral</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
@@ -2824,7 +2885,7 @@ hoy permiten disolver una asociaci&oacute;n vecinal.</li>
 ordenanza de la partida vecinal.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
-<li>Diecis&eacute;is metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
+<li>Quince metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
 informe de cumplimiento cada 31 de marzo.</li>
 <li>Y la aplicaci&oacute;n cambia qu&eacute; quiere decir rendir cuentas: el dato entra el d&iacute;a que
 se genera y queda a la vista, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>
