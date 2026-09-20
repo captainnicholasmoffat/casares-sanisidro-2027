@@ -196,7 +196,7 @@ y a las escuelas s&oacute;lo para pintar el cruce de su esquina.</b></p>
 <p><b>Y los diecinueve objetivos, le&iacute;dos uno por uno, hablan de c&aacute;maras, patrulleros,
 barrido, arbolado, residuos, tr&aacute;mites y ciberseguridad.</b> Ninguno de los diecinueve habla de una
 persona.</p>
-<p>El gasto sigue al plan con exactitud: se gasta donde el plan dijo que se iba a gastar, y el
+<p>El gasto reparte seg&uacute;n esa lista: va donde el plan dijo que iba a ir, y el
 cap&iacute;tulo 1 lo mide. <span class="sg">Eso es exactamente lo que vuelve grave el
 resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y la gente no est&aacute; en ella.</p>
 
@@ -659,10 +659,13 @@ callarlo ser&iacute;a elegir el dato que conviene.</p>
 </div>
 
 <div class="callout g">
-<div class="clabel">Esto no es aumentar ninguna tasa, y conviene decirlo con todas las letras</div>
+<div class="clabel">Y la cobranza, que no es de d&oacute;nde sale el dinero</div>
+<p><b>Recuperar la cobranza es una meta de gesti&oacute;n, no la fuente de financiamiento de este
+programa.</b> El programa se paga actualizando la base de valuaci&oacute;n de 2008. Lo que la cobranza
+agrega es margen: <span class="sg">si se recupera, sobra; si no, el programa entra igual.</span></p>
 <p>Cobrar el 92% de lo facturado no cambia lo que paga nadie. <b>Cambia cu&aacute;ntos pagan.</b> La tasa
 por servicios generales, la de seguridad e higiene y las dem&aacute;s quedan como est&aacute;n: este
-programa no propone crear un tributo, ni subir una al&iacute;cuota, ni revaluar una partida.</p>
+programa no propone crear un tributo ni subir una al&iacute;cuota.</p>
 <p>Los 35.994 millones que quedaron sin cobrar en 2025 son deuda ya devengada: obligaciones que el propio
 Municipio liquid&oacute; y que alguien no pag&oacute;. Ir a buscarlas no le cuesta un peso a quien
 pag&oacute; en t&eacute;rmino. <span class="sg">Le cuesta exactamente a quien no pag&oacute;</span>, que
@@ -672,25 +675,25 @@ alcanz&oacute; en 2024, con la misma ordenanza fiscal, el mismo padr&oacute;n y 
 gesti&oacute;n. No hay que inventar una capacidad: hay que recuperar una que exist&iacute;a hace dos
 a&ntilde;os.</p>
 </div>
-""" + exhead("c", "Pagar este programa cobrando mejor deja al Municipio mejor que no hacerlo",
-             "Millones de pesos constantes de diciembre de 2025.") + """
+""" + exhead("c", "El programa entra aunque la cobranza no mejore, y si mejora sobra margen",
+             "Millones de pesos constantes de diciembre de 2025. El programa se financia con la base de valuaci&oacute;n; esta columna muestra qu&eacute; pasa si adem&aacute;s se recupera la cobranza.") + """
 <table>
 <colgroup><col style="width:90pt"><col><col><col></colgroup>
 <tr class="hd"><th>A&ntilde;o</th><th class="r">Base, sin programa</th>
-<th class="r">Con programa, financiado por percepci&oacute;n</th><th class="r">Diferencia</th></tr>
+<th class="r">Con programa y con la cobranza recuperada</th><th class="r">Diferencia</th></tr>
 <tr><td class="l">2028</td><td class="n">+3.166</td><td class="n"><b>+3.166</b></td><td class="n">+1.521</td></tr>
 <tr class="hi"><td class="l">2031</td><td class="n"><b>+12.664</b></td><td class="n"><b>+12.664</b></td><td class="n"><b>+2.289</b></td></tr>
 <tr><td class="l">2034</td><td class="n">+20.162</td><td class="n">+22.744</td><td class="n">+2.582</td></tr>
 <tr><td class="l">2037</td><td class="n">+33.943</td><td class="n">+33.943</td><td class="n">+2.908</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> los cuatro salen de la serie publicada, no son supuestos: la nota
-metodol&oacute;gica del cierre del cap&iacute;tulo dice con qu&eacute; datos se calcul&oacute; cada
-uno.</p>
+<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
+<span class="tag m">Modelado</span></p>
 <div class="pull"><p>El gasto total sube de 309.236 a 316.461 millones &mdash;este programa se ejecuta
-entero&mdash; y el resultado financiero de 2031 queda 2.289 millones por encima del escenario sin
-programa. No se le saca la partida a nadie. No se sube ninguna tasa.</p></div>
-""" + ex("g", "Este programa se ejecuta entero y el resultado mejora",
-     "El &aacute;rea sombreada es la diferencia: 2.289 millones a favor en 2031 y 2.908 en 2037.",
+entero&mdash; sin que el resultado financiero empeore. Y si adem&aacute;s la cobranza vuelve a donde
+estaba en 2024, 2031 cierra 2.289 millones por encima. <b>El programa no necesita ese margen: lo tiene
+de reserva.</b></p></div>
+""" + ex("g", "El programa se ejecuta entero y el resultado fiscal no empeora",
+     "El &aacute;rea sombreada es el margen que aparece si la cobranza vuelve al nivel de 2024: 2.289 millones en 2031 y 2.908 en 2037. El programa no depende de que eso ocurra.",
      "ex11.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.") + """
 

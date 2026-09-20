@@ -265,7 +265,7 @@ conviene que se voten por separado.</p>
 </div>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
-<p class="tight">De las quince metas del cap&iacute;tulo 6, <b>nueve tienen su art&iacute;culo
+<p class="tight">De las catorce metas del cap&iacute;tulo 6, <b>ocho tienen su art&iacute;culo
 ac&aacute;</b>. Las otras seis no lo necesitan, y conviene decir cu&aacute;les son para que no se las
 busque.</p>
 <div class="note">
@@ -277,11 +277,11 @@ atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este pr
 <p><b>Una depende de administrar, no de normar:</b> llevar la percepci&oacute;n de recursos corrientes
 al 92%. No hace falta una ordenanza para cobrar lo que ya est&aacute; devengado, y decir lo contrario
 ser&iacute;a esconder una decisi&oacute;n de gesti&oacute;n detr&aacute;s de un proyecto.</p>
-<p><b>Y la sexta se resuelve adhiriendo:</b> el turno m&eacute;dico en l&iacute;nea depende de conectar
-los efectores al sistema provincial, no de una norma local.</p>
-<p><span class="sg">De las seis, lo que s&iacute; queda normado es la obligaci&oacute;n de
-publicar</span> &mdash;la espera por especialidad, el precio unitario, el stock, la inserci&oacute;n
-laboral&mdash;, que est&aacute; en el art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por
-ordenanza es el monto; lo que s&iacute; se puede es que el resultado se vea.</p>
+<p><b>Y la sexta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
+plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
+<p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
+la espera por especialidad, el precio unitario, el stock y la inserci&oacute;n laboral entran en el
+art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
+se puede es que el resultado se vea.</p>
 </div>
 """)

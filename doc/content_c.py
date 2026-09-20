@@ -848,7 +848,7 @@ antes de firmar un alquiler.</p>
 no un algoritmo.</p>
 <p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
 suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el domicilio del
-adjudicatario, el tiempo de respuesta de los reclamos y las quince metas del cap&iacute;tulo 6.</p>
+adjudicatario, el tiempo de respuesta de los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Publicar en un sistema donde el dato entra el
@@ -2252,8 +2252,9 @@ cerrada.</p>
 </div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
-<p class="tight">Ninguna de estas medidas cuesta un peso. Todas se cumplen en los primeros cien
-d&iacute;as.</p>
+<p class="tight">Lo que sigue no es una propuesta: es el estado en que est&aacute; hoy la
+informaci&oacute;n que el Municipio ya public&oacute; alguna vez. <span class="sg">Arreglarlo no cuesta
+un peso y no figura entre las metas de este programa</span>: se hace, no se anuncia.</p>
 """ + exhead("c", "Lo que est&aacute; publicado, lo que est&aacute; escondido y lo que no est&aacute;",
              "Relevamiento propio del sitio y del Bolet&iacute;n Oficial del Municipio, hecho el 12 de septiembre de 2026. Cada fila dice qu&eacute; se vio y d&oacute;nde.") + """
 <table>
@@ -2297,10 +2298,10 @@ de cinco enlaces. <span class="sg">Queda asentado porque el cuadro tiene que pod
 para dar por saldado lo que falta.</p>
 </div>
 
-<div class="pull"><div class="plabel">Costo cero, plazo cien d&iacute;as</div>
-<p>Reponer un portal, enlazar lo que ya existe y corregir un enlace roto no le cuesta un peso a nadie. Es
-la parte m&aacute;s f&aacute;cil de cumplir de todo este programa, y es la que hoy no est&aacute;
-hecha.</p></div>
+<div class="pull"><div class="plabel">Por qu&eacute; esto no es una meta</div>
+<p>Reponer un portal ca&iacute;do y corregir un enlace roto es mantenimiento, no pol&iacute;tica. Queda
+ac&aacute; como diagn&oacute;stico de c&oacute;mo se administra la informaci&oacute;n hoy, y no en el
+cap&iacute;tulo 6, donde van las cosas que un vecino tiene que poder notar.</p></div>
 <h3>Dos cosas m&aacute;s que aparecieron al buscar otra, y son del mismo tipo</h3>
 <div class="cols">
 <p><b>El &uacute;ltimo presupuesto publicado es el de 2024.</b> No se encontraron el de 2025 ni el de
@@ -2337,7 +2338,7 @@ tendencia.</p>
 <p><b>Y todo vive en la aplicaci&oacute;n, no en un PDF suelto.</b> Las siete medidas de este cuadro, la
 ejecuci&oacute;n por zona, el precio unitario de los insumos, el stock, el empleo conseguido por
 intermediaci&oacute;n, los datos de seguridad, el domicilio del adjudicatario, el tiempo de respuesta de
-los reclamos y las quince metas del cap&iacute;tulo 6.</p>
+los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 <p><b>La raz&oacute;n no es de comodidad.</b> Publicar en un PDF que nadie abre se puede simular: se sube
 tarde, se sube incompleto y nadie se entera. <span class="sg">Publicar en un sistema donde el dato entra
 cuando se genera y cualquiera lo consulta, no.</span> Es la diferencia entre cumplir y parecer que se
@@ -2407,7 +2408,8 @@ continua por zona son tareas nuevas para las secretar&iacute;as de Hacienda y de
 pero requieren decisi&oacute;n y capacitaci&oacute;n, y suponer lo contrario ser&iacute;a el mismo error
 que este documento le se&ntilde;ala al plan vigente.</p>
 <p><b>Y hay un compromiso de transparencia que toca a la propia planta.</b> Enlazar el organigrama desde el sitio oficial y publicar la
-planta de personal y la escala salarial son tres de las siete medidas de los cien d&iacute;as.
+planta de personal y la escala salarial est&aacute;n entre lo que el cap&iacute;tulo 5 encontr&oacute;
+sin publicar.
 <span class="sg">Es informaci&oacute;n sobre los propios empleados y se publica igual</span>, porque un
 municipio que le pide al vecino que rinda una obra tiene que poder decir qui&eacute;n trabaja en
 &eacute;l y cu&aacute;nto cobra.</p>
@@ -2595,61 +2597,60 @@ finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declarad
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
-<div class="stand">Quince metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
+<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
-<p class="tight">Tres cosas, y ninguna requiere fondos nuevos ni permiso de nadie.</p>
+<p class="lead">Diecis&eacute;is compromisos, y ninguno es publicar un dato ni acomodar una
+p&aacute;gina. <span class="sg">Cada uno es un acto de gobierno o algo que un vecino puede ver que
+arranc&oacute;.</span></p>
 <div class="cols">
-<h3 style="margin-top:0">1. Derogar los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045/1984</h3>
-<p>Es el primer proyecto de ordenanza que este gobierno env&iacute;a al Concejo Deliberante. Esos tres
-art&iacute;culos facultan hoy al Departamento Ejecutivo a intervenir, hacer caducar la autorizaci&oacute;n
-y <span class="sg">disolver</span> una asociaci&oacute;n vecinal, sin plazo de defensa ni recurso.
-<b>Plazo: la primera sesi&oacute;n ordinaria del Concejo Deliberante.</b> Se comprueba con el acta de esa
-sesi&oacute;n y con el expediente de ingreso.</p>
-<h3 style="margin-top:0">2. Las siete medidas de transparencia</h3>
-<p>Costo cero. Son las del cap&iacute;tulo 5, y su estado actual es verificable hoy por cualquiera que
-abra el portal municipal. <b>Plazo: cien d&iacute;as. Las siete.</b> Se comprueba con el propio portal del
-Municipio.</p>
+<p><b>El plazo no es una cifra redonda: es una fecha.</b> El mandato empieza el 10 de diciembre, de modo
+que los cien d&iacute;as caen a fines de marzo. <b>Y ah&iacute; es cuando estos mecanismos convocan.</b>
+Villa Gobernador G&aacute;lvez fija por ordenanza su primera ronda de asambleas en la primera quincena
+de marzo; en la Ciudad de Buenos Aires el ciclo tiene al menos cuatro asambleas por barrio y la primera
+es informativa y de relevamiento.</p>
+<p><b>Por eso el primer ciclo entra en los cien d&iacute;as y no despu&eacute;s.</b> Si la primera
+asamblea se corre a mitad de a&ntilde;o, la priorizaci&oacute;n llega tarde para el ejercicio en curso y
+el a&ntilde;o 1 de la rampa se pierde entero.</p>
 </div>
-""" + exhead("c", "Las siete, y qu&eacute; hay que hacer con cada una",
-             "Estado verificado en el sitio y en el Bolet&iacute;n Oficial del Municipio el 12 de septiembre de 2026.") + """
+""" + exhead("c", "Los diecis&eacute;is, con qu&eacute; documento se comprueba cada uno",
+             "Plazo: cien d&iacute;as desde el 10 de diciembre, es decir fines de marzo. Ninguno requiere fondos nuevos.") + """
 <table>
-<colgroup><col style="width:190pt"><col style="width:110pt"><col></colgroup>
-<tr class="hd"><th>Medida</th><th>Estado hoy</th><th class="r">Qu&eacute; hay que hacer</th></tr>
-<tr class="hi"><td class="l">Portal de Datos Abiertos</td><td><b>Ca&iacute;do</b></td><td class="n">Reponerlo, o publicar sus datasets por otra v&iacute;a</td></tr>
-<tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Enlace incorrecto</b></td><td class="n">Corregir el enlace y publicar las que exige la Ley 15.000</td></tr>
-<tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="n">Publicarlas donde se puedan ver, no en el portal ca&iacute;do</td></tr>
-<tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="n">Traerlo al sitio oficial y enlazarlo desde el men&uacute;</td></tr>
-<tr><td class="l">Adjudicaciones de licitaciones</td><td><b>Publicado, enterrado</b></td><td class="n">Mostrar el adjudicatario y el monto en la ficha de cada licitaci&oacute;n</td></tr>
-<tr><td class="l">Rendici&oacute;n de cuentas</td><td><b>Rendida, no publicada</b></td><td class="n">Publicar los estados contables, no s&oacute;lo la ordenanza que aprueba el expediente</td></tr>
-<tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="n">Nada. Sostenerla</td></tr>
+<colgroup><col style="width:250pt"><col></colgroup>
+<tr class="hd"><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
+<tr class="hd"><td class="l" colspan="2">Al Concejo Deliberante, en la primera sesi&oacute;n ordinaria</td></tr>
+<tr class="hi"><td class="l">1 &middot; La ordenanza de la partida vecinal, con la f&oacute;rmula de reparto escrita en el texto</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
+<tr><td class="l">2 &middot; La ordenanza que regula las c&aacute;maras: usos, conservaci&oacute;n y registro de accesos. Hoy operan unas 2.646 con anal&iacute;tica y ninguna norma local</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">3 &middot; La ordenanza que actualiza la base de valuaci&oacute;n de 2008, sin tocar la al&iacute;cuota</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">4 &middot; La ordenanza que crea partida propia para g&eacute;nero y para discapacidad</td><td class="n">Expediente y estructura program&aacute;tica del presupuesto</td></tr>
+<tr class="hi"><td class="l">5 &middot; La derogaci&oacute;n de los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
+<tr><td class="l">6 &middot; El reconocimiento de las primeras asociaciones de parque, con sus tres facultades</td><td class="n">Ordenanza y registro publicado</td></tr>
+<tr><td class="l">7 &middot; La adhesi&oacute;n a la Ley provincial 15.302 de espacios culturales</td><td class="n">Ordenanza de adhesi&oacute;n</td></tr>
+<tr><td class="l">8 &middot; El pliego de la recolecci&oacute;n de residuos &mdash;frecuencias, horarios, zonas y penalidades&mdash;, para aprobarse antes del llamado</td><td class="n">Expediente del pliego</td></tr>
+<tr class="hd"><td class="l" colspan="2">Lo que no depende del Concejo</td></tr>
+<tr class="hi"><td class="l">9 &middot; Turno m&eacute;dico en l&iacute;nea en los primeros efectores, sobre la plataforma municipal que ya da turnos para otros tr&aacute;mites, y pedida la adhesi&oacute;n al sistema provincial</td><td class="n">La propia plataforma, y el expediente del pedido</td></tr>
+<tr><td class="l">10 &middot; El precio unitario de cada compra de insumos de los tres hospitales, comparable contra la compra anterior</td><td class="n">Bolet&iacute;n Oficial y la aplicaci&oacute;n</td></tr>
+<tr><td class="l">11 &middot; Patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, y el pedido formal a la Provincia por el dato delictual por zona</td><td class="n">La aplicaci&oacute;n, y el expediente del pedido</td></tr>
+<tr><td class="l">12 &middot; Cada respuesta del Ejecutivo a un pedido de informes del Concejo, con el pedido que la origina. Hoy ese circuito entero transcurre fuera de toda fuente p&uacute;blica</td><td class="n">La aplicaci&oacute;n</td></tr>
+<tr class="hd"><td class="l" colspan="2">Lo que arranca y se ve</td></tr>
+<tr class="hi"><td class="l">13 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y n&oacute;mina de asistentes publicadas</td></tr>
+<tr class="hi"><td class="l">14 &middot; La primera cohorte inscripta en las seis sedes de formaci&oacute;n que sostiene el Municipio</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">15 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
+<tr class="hi"><td class="l">16 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n andando: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> seis de las siete son trabajo de cien d&iacute;as y ninguna cuesta un peso.
-La s&eacute;ptima queda en el cuadro porque el relevamiento la incluy&oacute;.</p>
-<div class="cols">
-<p>La del Portal de Datos Abiertos se compromete como <span class="sg">reponerlo o publicar sus datasets
-por otra v&iacute;a</span>: hoy devuelve error 504 y no sabemos si es un servidor ca&iacute;do o un sistema
-discontinuado. Lo que se promete es que los datos est&eacute;n, no resucitar un software que no
-conocemos.</p>
-<p>Es la parte m&aacute;s f&aacute;cil de cumplir de todo este programa. Por eso es tambi&eacute;n la que
-mejor mide si esto es en serio: <b>un gobierno que a los cien d&iacute;as no consigui&oacute; que su propio organigrama se pueda
-encontrar no va a redistribuir la obra p&uacute;blica.</b></p>
+<p class="cap"><b>Nota:</b> los seis primeros van juntos a la primera sesi&oacute;n porque son el
+andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los
+art&iacute;culos 8 a 10 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
+que no.</p>
+<div class="callout a">
+<div class="clabel">Y lo que no va a los cien d&iacute;as, dicho ahora</div>
+<p><b>La aplicaci&oacute;n completa no entra.</b> La auditor&iacute;a de compras, el mercado laboral y
+la transmisi&oacute;n de asambleas necesitan integraciones con sistemas que no controlamos.
+<span class="sg">Prometerla entera a cien d&iacute;as ser&iacute;a mentir</span>; por eso van dos
+m&oacute;dulos y se dice cu&aacute;les.</p>
+<p><b>Y la constancia de que no consta tampoco.</b> Necesita el asistente conectado a registros
+judiciales, que no dependen del Municipio.</p>
 </div>
-<h3>3. La ordenanza que crea la partida vecinal</h3>
-<p class="tight">El proyecto que fija, por ordenanza del Concejo Deliberante:</p>
-<ul class="b">
-<li><b>el monto anual</b> de la partida de cada zona y su rampa de cuatro a&ntilde;os;</li>
-<li><b>la f&oacute;rmula de distribuci&oacute;n</b> &mdash;50% por poblaci&oacute;n, 50% por &iacute;ndice
-de necesidad&mdash; escrita en el texto, para que no dependa del intendente de turno;</li>
-<li><b>la obligaci&oacute;n del Departamento Ejecutivo de responder por escrito, con fundamentos y en
-plazo</b>, a cada priorizaci&oacute;n zonal;</li>
-<li><b>la entrega de la ejecuci&oacute;n presupuestaria desagregada por zona</b> a cada
-comisi&oacute;n: trimestral, porque depende del cierre contable, y con el devengado del mes a la vista
-marcado como provisorio. Todo lo dem&aacute;s se publica el d&iacute;a que se genera.</li>
-</ul>
-<p><b>Plazo: cien d&iacute;as.</b> Se comprueba con el expediente y, despu&eacute;s, con el Bolet&iacute;n
-Oficial Municipal. Lo que se vuelve jur&iacute;dicamente obligatorio es la partida, no el proyecto votado:
-&eacute;sa es la raz&oacute;n por la que esto sobrevive a un veto.</p>
 
 <h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
 """ + exhead("c", "El compromiso central del programa, con su calendario",
@@ -2687,7 +2688,7 @@ siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
 <p class="tight">Un programa sin metas medibles no se puede auditar. &Eacute;stas s&iacute;, y ninguna
 depende de un dato que haya que creernos.</p>
-""" + exhead("c", "Quince metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
+""" + exhead("c", "Catorce metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
 <tr class="hd"><th>Meta</th><th class="r">L&iacute;nea de base</th><th class="r">Fuente de verificaci&oacute;n</th></tr>
@@ -2696,16 +2697,15 @@ depende de un dato que haya que creernos.</p>
 <tr><td class="l">Llevar la percepci&oacute;n de recursos corrientes al 92%</td><td class="n"><b>89,32%</b> (2025)</td><td class="n">Estado de ejecuci&oacute;n acumulado anual</td></tr>
 <tr><td class="l">Llevar la funci&oacute;n ambiental al 1,5% del presupuesto</td><td class="n"><b>0,4%</b> (2025)</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">50% de la obra p&uacute;blica decidida por comisiones vecinales</td><td class="n"><b>0%</b></td><td class="n">Ordenanza y ejecuci&oacute;n presupuestaria</td></tr>
-<tr><td class="l">Las siete medidas de transparencia, resueltas</td><td class="n"><b>1 de 7</b> (septiembre de 2026)</td><td class="n">El propio portal municipal y el Bolet&iacute;n Oficial</td></tr>
-<tr><td class="l">Publicar la ejecuci&oacute;n presupuestaria desagregada por zona antes del fin del mandato</td><td class="n">No existe en ning&uacute;n municipio del conurbano norte</td><td class="n">El propio portal municipal</td></tr>
+<tr><td class="l">Imputar el gasto municipal con referencia territorial, de modo que exista el dato de cu&aacute;nto se gast&oacute; en cada zona</td><td class="n">El dato no existe: ning&uacute;n municipio del conurbano norte lo produce</td><td class="n">La ejecuci&oacute;n por zona, publicada en la aplicaci&oacute;n</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n en producci&oacute;n, con la partida vecinal, el asistente, las asambleas transcriptas y la publicaci&oacute;n continua de datos</td><td class="n">No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error</td><td class="n">La propia aplicaci&oacute;n, p&uacute;blica y consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
-<tr class="hi"><td class="l">Publicar el precio unitario de cada compra de insumos y medicamentos de los tres hospitales</td><td class="n">Cero. Hoy se publica el total del expediente, no el precio por unidad</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
+<tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico y las alertas a la vista</td></tr>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Ordenanza que regule el sistema de c&aacute;maras: usos permitidos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de cada acceso</td><td class="n">Cero. Operan unas 2.646 c&aacute;maras con anal&iacute;tica y no se encontr&oacute; norma municipal que las regule</td><td class="n">Bolet&iacute;n Oficial municipal y el registro de accesos publicado</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
-<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas, formar 928 personas por a&ntilde;o y publicar cu&aacute;ntas consiguieron empleo, el d&iacute;a que se registra</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas y que 928 personas por a&ntilde;o terminen la formaci&oacute;n con acompa&ntilde;amiento hasta el empleo</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 </table>
 <div class="cols">
 <p>Las trece se miden con documentos que el Municipio ya publica, o que este programa se compromete a
@@ -2724,7 +2724,7 @@ patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos ha
 ninguno.</b></p>
 <p>Sin ese n&uacute;mero, la meta no se puede verificar: cualquier flota actual cumple o incumple
 seg&uacute;n el punto de partida que uno elija. <span class="sg">No es un reproche a esa meta en
-particular, es la raz&oacute;n por la que las quince de este cuadro llevan su l&iacute;nea de
+particular, es la raz&oacute;n por la que las catorce de este cuadro llevan su l&iacute;nea de
 base escrita al lado.</span></p>
 </div>
 <div class="callout g">
@@ -2744,12 +2744,12 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <table>
 <colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
-<tr class="hi"><td class="l">Mes 1</td><td>Entra al Concejo el proyecto que deroga los arts. 8, 9 y 10 de la Ordenanza 6045</td><td class="n">Acta de la sesi&oacute;n y expediente de ingreso</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Se publican las siete medidas de transparencia, m&aacute;s el presupuesto de cada ejercicio abierto por programa y la funci&oacute;n Cultura otra vez desagregada</td><td class="n">El propio portal municipal</td></tr>
+<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las ocho ordenanzas del 6.1: partida vecinal, c&aacute;maras, base de valuaci&oacute;n, partidas propias, derogaci&oacute;n de los arts. 8 a 10, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">La aplicaci&oacute;n y los expedientes</td></tr>
+<tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico andando</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Entra la ordenanza que regula el sistema de c&aacute;maras: usos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de accesos. No cuesta un peso y el sistema ya opera</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
-<tr class="hi"><td class="l">Mes 3</td><td>Entra la ordenanza de la partida vecinal: monto, rampa, f&oacute;rmula, obligaci&oacute;n de respuesta y entrega trimestral</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
-<tr><td class="l">Meses 6&ndash;9</td><td>Primeras asambleas de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
+<tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: el modelo del Centro 404 de B&eacute;ccar se extiende a las seis zonas, con la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada</td></tr>
 <tr><td class="l">Mes 6</td><td>Arranca la intermediaci&oacute;n laboral municipal; el primer registro fija la l&iacute;nea de base, que hoy no existe</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico a la vista</td></tr>
 <tr class="hi"><td class="l">Meses 6&ndash;9</td><td>Primera versi&oacute;n de la aplicaci&oacute;n: partida vecinal, seguimiento de obra y asistente sobre lo ya publicado</td><td class="n">La propia aplicaci&oacute;n</td></tr>
@@ -2866,11 +2866,13 @@ cuentas y contarlas.</p>
 <ol class="n">
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
-<li>A los cien d&iacute;as est&aacute;n publicadas las siete medidas de transparencia y presentada la
-ordenanza de la partida vecinal.</li>
+<li>A los cien d&iacute;as hay diecis&eacute;is compromisos cumplidos, y ninguno es publicar un dato:
+ocho ordenanzas en el Concejo, cuatro actos que no dependen de &eacute;l, y cuatro cosas que arrancaron
+&mdash;la primera ronda de asambleas, la primera cohorte de formaci&oacute;n, el primer centro de apoyo
+escolar y dos m&oacute;dulos de la aplicaci&oacute;n&mdash;.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
-<li>Quince metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
+<li>Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
 informe de cumplimiento cada 31 de marzo.</li>
 <li>Y la aplicaci&oacute;n cambia qu&eacute; quiere decir rendir cuentas: el dato entra el d&iacute;a que
 se genera y queda a la vista, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>

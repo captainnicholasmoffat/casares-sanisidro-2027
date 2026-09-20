@@ -26,9 +26,10 @@ presupuesto: se explica por c&oacute;mo se reparte.</b> <i>(Cap&iacute;tulos 1 y
 el 46,8% de la poblaci&oacute;n y concentran el 60% de los hogares sin gas de red y el 71% de los que no
 tienen cloaca. No es una minor&iacute;a que se pueda postergar. <i>(Cap&iacute;tulo 1)</i></li>
 
-<li><b>El gasto sigue al plan, con exactitud aritm&eacute;tica.</b> El 0,05% del presupuesto va a empleo
-y el 0,10% a vivienda: 572 y 1.127 pesos por habitante por a&ntilde;o, en un distrito con 25.165 hogares
-que cocinan con garrafa. <i>(Cap&iacute;tulo 1)</i></li>
+<li><b>El dinero va a lo que se ve, no a lo que falta.</b> Alumbrado p&uacute;blico recibe 10.313
+millones y agua y cloaca 3.320. El 0,05% del presupuesto va a empleo y el 0,10% a vivienda: 572 y 1.127
+pesos por habitante por a&ntilde;o, en un distrito con 25.165 hogares que cocinan con garrafa.
+<i>(Cap&iacute;tulo 1)</i></li>
 
 <li><b>Hay con qu&eacute;, y no hay que pedirle permiso a nadie.</b> El Municipio se financia en un 75%
 con recursos propios. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o &mdash;el 8,3%
@@ -45,25 +46,27 @@ repartidas en diez bloques; hacen falta trece votos y ning&uacute;n bloque tiene
 Por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable: no reforma la Ley Org&aacute;nica, no
 pide facultades nuevas y no compite con el Concejo. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Quince metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, con la fuente
+<li><b>Catorce metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, con la fuente
 p&uacute;blica que comprueba cada una, y un informe de cumplimiento cada 31 de marzo. Auditamos un plan
 de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.
 <i>(Cap&iacute;tulo 6)</i></li>
 </ol>
 
 <p>Este programa, en una l&iacute;nea: <b>que decida sobre la obra p&uacute;blica quien vive donde falta la
-obra p&uacute;blica, y que el empleo y la vivienda dejen de ser el 0,15% del presupuesto</b>, financiado
-con lo que el Municipio ya factura y hoy no cobra.</p>
+obra p&uacute;blica, y que el empleo y la vivienda dejen de ser el 0,15% del presupuesto</b>,
+financiado actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</p>
 
 <div class="callout a">
 <div class="clabel">Por d&oacute;nde empieza, y qu&eacute; se puede comprobar a los cien d&iacute;as</div>
-<p>Tres cosas, y ninguna exige fondos nuevos ni depende de la Provincia. En la primera sesi&oacute;n
-ordinaria entra el proyecto que deroga los art&iacute;culos que hoy permiten al intendente disolver una
-asociaci&oacute;n vecinal. A los cien d&iacute;as est&aacute;n publicadas las siete medidas de
-transparencia &mdash;hoy no hay ninguna cumplida&mdash; y presentada la ordenanza que crea la partida
-vecinal, con la f&oacute;rmula escrita en el texto.</p>
-<p><b>Un gobierno que a los cien d&iacute;as no consigui&oacute; que su propio organigrama se pueda
-encontrar no va a redistribuir la obra p&uacute;blica.</b> Por eso lo m&aacute;s f&aacute;cil de cumplir va primero: es lo que mide si esto
-es en serio.</p>
+<p>Diecis&eacute;is compromisos, ninguno de fondos nuevos y <b>ninguno de publicar un dato</b>. En la
+primera sesi&oacute;n ordinaria entran ocho ordenanzas: la de la partida vecinal con su f&oacute;rmula
+escrita, la que regula las 2.646 c&aacute;maras que hoy operan sin norma, la que actualiza la base de
+valuaci&oacute;n de 2008, y la que deroga los art&iacute;culos que hoy permiten al intendente disolver
+una asociaci&oacute;n vecinal.</p>
+<p>Y a fines de marzo ya <b>arranc&oacute; la primera ronda de asambleas en las seis zonas</b>, est&aacute;
+inscripta la primera cohorte de formaci&oacute;n, abri&oacute; el primer centro de apoyo escolar
+&mdash;hoy hay cero&mdash; y andan los dos primeros m&oacute;dulos de la aplicaci&oacute;n.
+<span class="sg">El cap&iacute;tulo 6 los lista los diecis&eacute;is, con el documento que comprueba
+cada uno.</span></p>
 </div>
 """)

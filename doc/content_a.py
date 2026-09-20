@@ -250,7 +250,7 @@ mismo tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 <div class="cols">
 <p>Este documento audita un plan de gobierno contra sus propias metas publicadas. Ese ejercicio
 s&oacute;lo es leg&iacute;timo si quien lo hace acepta que se lo hagan.</p>
-<p>Por eso el cap&iacute;tulo 6 fija quince metas
+<p>Por eso el cap&iacute;tulo 6 fija catorce metas
 verificables, con su l&iacute;nea de base calculada hoy y
 la fuente p&uacute;blica con la que se comprueba cada una. Est&aacute;n escritas antes de gobernar, y no
 se van a mover despu&eacute;s.</p>
@@ -523,8 +523,8 @@ crecen. Seguridad interna subi&oacute; 34,8% real en un a&ntilde;o y fue la func
 creci&oacute; de todas. Lo que no figura en el plan es lo que no crece, no se ejecuta entero, o
 directamente no aparece en el presupuesto.</p>
 <p><b>Por eso el 0,05% no es un descuido.</b> Un descuido se corrige cuando alguien lo nota. Esto lleva
-dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto lo cumple con exactitud
-todos los a&ntilde;os. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
+dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto reparte todos los
+a&ntilde;os seg&uacute;n esa lista. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
 manera.</span></p>
 <p><b>Y explica lo que el cuadro anterior muestra.</b> Una partida que no est&aacute; entre las
 prioridades no s&oacute;lo nace chica: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
