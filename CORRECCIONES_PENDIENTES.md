@@ -11,17 +11,19 @@ sin volver a preguntar.
 
 ## REGLAS GENERALES QUE ATRAVIESAN TODO
 
+Todas las reglas de abajo son instrucciones de Cap'n Nick. Ninguna
+otra vale: si una regla no está acá o no la dio él, no existe.
+
+**Este documento muestra NUESTRA propuesta y por qué es mejor.** No
+evalua a la gestion actual, no le reconoce aciertos y no refuta
+acusaciones ajenas.
+
 **Nada se afirma sin fuente.** Si un dato no se puede verificar, se
 escribe que no se pudo y eso es en sí mismo un hallazgo. No se atribuyen
 motivos ni se insinúa corrupción sin expediente: se muestran los hechos
 y el lector concluye.
 
-**Concede antes de acusar.** El documento reconoce lo que la gestión
-actual hizo bien, y por eso lo demás es creíble.
 
-**Distinguir administrar las cuentas de prestar el servicio.** Las
-cuentas están bien administradas; el servicio no. Las dos cosas están
-probadas y no se mezclan.
 
 **Estilo.** Nada de secciones que se expliquen a sí mismas. Sin
 "por qué este capítulo existe". Declarar el límite de un dato sí es
