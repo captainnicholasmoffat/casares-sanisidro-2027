@@ -154,8 +154,8 @@ dem&aacute;s queda donde nadie lo encuentra.</p>
 est&aacute; sostenida por el propio documento del intendente.</p>
 <p>&laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; define tres prioridades &mdash;Seguridad
 Ciudadana, Espacio P&uacute;blico y Ambiente, Innovaci&oacute;n&mdash;, <span class="sg">diecinueve
-objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>. Es un documento serio,
-detallado y verificable.</p>
+objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>, y en ninguno de los
+tres niveles aparece una persona.</p>
 <p>Auditar el cumplimiento de esas 77 metas ser&iacute;a un ejercicio menor. La pregunta relevante no es
 si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la lista.</span></p>
 <p>El 0,05% del presupuesto en empleo y el 0,10% en vivienda &mdash;las cifras del cap&iacute;tulo 1&mdash;
@@ -257,7 +257,7 @@ a&ntilde;os, construido sobre diecis&eacute;is a&ntilde;os de ejecuci&oacute;n p
 <p><span class="sg">El modelo se puede auditar.</span> Su a&ntilde;o cero reproduce la ejecuci&oacute;n
 2025 del Municipio de San Isidro exactamente: un resultado financiero de &minus;6.051 millones de pesos.
 No es una aproximaci&oacute;n. Es la cifra que figura en el estado oficial.</p>
-<p>Conviene decir de entrada que este d&eacute;ficit no es una novedad de la gesti&oacute;n actual: en
+<p>Y el d&eacute;ficit es estructural, no de un a&ntilde;o: en
 2010 el Municipio cerr&oacute; con un d&eacute;ficit equivalente al 2,9% de sus ingresos, contra el 2,0%
 de 2025.</p>
 <p>Todo est&aacute; en pesos constantes de diciembre de 2025. <span class="sg">No hay supuesto de

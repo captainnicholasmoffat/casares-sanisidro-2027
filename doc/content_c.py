@@ -1527,9 +1527,9 @@ no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Qu&eacute; propone este programa para las hect&aacute;reas que faltan</div>
-<p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de acceso
-restringido. Ese objetivo es correcto y este programa lo sostiene. Lo que cambia es c&oacute;mo se decide
-qu&eacute; se hace con cada una.</p>
+<p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de
+acceso restringido. Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
+decide qu&eacute; se hace con cada una.</p>
 <p><b>La regla es reasignar, no demoler.</b> Un permiso vencido o revocado se licita: entra otro
 concesionario que paga canon, el edificio sigue en pie y los puestos de trabajo no se pierden. El
 Municipio pasa de no cobrar nada a cobrar, sin destruir nada.

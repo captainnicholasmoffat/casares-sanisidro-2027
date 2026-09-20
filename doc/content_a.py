@@ -55,6 +55,7 @@ _IDX = [
  ("i", "Siete puntos y por d&oacute;nde empieza", "sintesis"),
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
+ ("i", "Por qu&eacute; el dinero va a lo que se ve", "introduccion"),
  ("i", "C&oacute;mo est&aacute; construido", "introduccion"),
  ("i", "Qu&eacute; promete, y qu&eacute; no", "introduccion"),
  ("i", "Las catorce metas, y de d&oacute;nde salen las fechas", "introduccion"),
@@ -164,8 +165,7 @@ INTRO = dict(id="introduccion", runhead=RH, html="""
 el intendente de San Isidro escribe que las prioridades que siguen no fueron fijadas por su equipo:
 que surgen de haber escuchado los principales problemas y necesidades de los vecinos.</p>
 <p>El documento define entonces tres prioridades &mdash;Seguridad Ciudadana, Espacio P&uacute;blico y
-Ambiente, Innovaci&oacute;n&mdash;, diecinueve objetivos y setenta y siete metas numeradas. Es un plan
-serio, detallado y verificable.</p>
+Ambiente, Innovaci&oacute;n&mdash;, diecinueve objetivos y setenta y siete metas numeradas.</p>
 <p>Y hay <b>seis palabras que no est&aacute;n en ninguna parte de ese plan</b>. No es una
 impresi&oacute;n de lectura: el documento tiene trece p&aacute;ginas, est&aacute; publicado y se puede
 buscar dentro.</p>
@@ -180,8 +180,30 @@ pregunta que lo origina: <b>&iquest;a qui&eacute;n se escuch&oacute;, y c&oacute
 distrito con 25.165 hogares sin gas de red el empleo y la vivienda no aparecieran nunca?</b></p>
 <p>No es una pregunta ret&oacute;rica. El presupuesto municipal la contesta con precisi&oacute;n: el
 0,05% en empleo no es un descuido administrativo, es la consecuencia aritm&eacute;tica de un plan donde
-el empleo no figura. <span class="sg">El gasto sigue al plan.</span> Lo que sigue es un programa de
-gobierno construido alrededor de esa omisi&oacute;n.</p>
+el empleo no figura. <span class="sg">El gasto sigue al plan.</span> Y el plan tiene una
+l&oacute;gica, que conviene nombrar antes de proponer nada.</p>
+</div>
+
+<h2>Por qu&eacute; el dinero va a lo que se ve</h2>
+<p class="lead">Hay dos maneras de gobernar pensando en la pr&oacute;xima elecci&oacute;n, y ninguna de
+las dos es gobernar.</p>
+<div class="cols">
+<p><b>La primera es administrar para la foto.</b> Se elige la obra que se ve, la que se termina adentro
+del mandato, la que se inaugura con cinta. No hace falta que nadie decida de mala fe: alcanza con que el
+criterio sea &eacute;se. <span class="sg">Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o y
+agua y alcantarillado 3.320.</span> Una cloaca no se inaugura con cinta.</p>
+<p><b>La segunda es repartir.</b> Es la de los gobiernos populistas: se sostiene un voto entregando, y
+el que entrega necesita que el otro siga necesitando. <b>Este programa no reparte un peso.</b> Los
+7.730,9 millones de empleo y vivienda pagan formaci&oacute;n, contrataci&oacute;n e infraestructura, y
+ninguno es una transferencia a una persona.</p>
+<p><b>Hay una tercera, y es la de este programa: administrar para que crezca.</b> Que San Isidro funcione
+mejor cuando termine el mandato que cuando empez&oacute;: menos hogares sin cloaca y sin gas de red,
+m&aacute;s gente con trabajo, y un Municipio que sabe d&oacute;nde gast&oacute; cada peso. Ninguna de las
+tres da una foto el d&iacute;a que se hace.</p>
+<p><b>Con una condici&oacute;n, que es la que define todo lo dem&aacute;s: que ese crecimiento sea de
+todos.</b> No se llega ah&iacute; repartiendo lo que ya se gast&oacute;, sino poniendo la obra donde
+falta. Por eso el cap&iacute;tulo 4 no pide un peso nuevo: mueve <span class="sg">qui&eacute;n
+decide</span> sobre la mitad de la obra p&uacute;blica que el Municipio ya hace.</p>
 </div>
 
 <h2>C&oacute;mo est&aacute; construido</h2>
@@ -218,10 +240,9 @@ que la Ley Org&aacute;nica de las Municipalidades habilita desde 1976 y que otro
 usa.</li>
 <li><b>Multiplicar por quince el gasto en empleo y vivienda</b>, financiado actualizando una base de
 valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota ni tomar deuda.</li>
-<li><b>Hacer encontrable lo que hoy est&aacute; publicado, y publicar lo que falta</b>: reponer el portal
-de datos abiertos ca&iacute;do, enlazar el organigrama, mostrar el adjudicatario en la ficha de cada
-licitaci&oacute;n, y corregir el enlace de las declaraciones juradas, que hoy lleva a declaraciones de
-contribuyentes.</li>
+<li><b>Publicar el dato el d&iacute;a que se genera</b>: la adjudicaci&oacute;n el d&iacute;a que se
+firma, el avance de cada obra el d&iacute;a que se carga y el precio unitario de cada compra el
+d&iacute;a que se compra, en un sistema que cualquiera puede consultar.</li>
 </ul>
 <p class="tight" style="margin-top:11pt">Lo que no depende de un intendente, y por eso no se promete:</p>
 <ul class="b">
