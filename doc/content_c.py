@@ -374,7 +374,7 @@ interviene la administraci&oacute;n de una partida, no se disuelve una organizac
 pagar&iacute;a el propio programa.</p>
 <p>El <b>Tribunal de Cuentas de la Provincia</b> ya audita este gasto, porque sigue siendo gasto
 municipal: la partida es municipal, la obra es municipal y la rendici&oacute;n entra en la
-rendici&oacute;n de cuentas del Municipio. No es algo que este programa conceda ni pueda evitar.</p>
+rendici&oacute;n de cuentas del Municipio. No es una facultad que este programa otorgue ni pueda quitar.</p>
 <p>Lo que s&iacute; agrega, porque hoy no existe, es una <b>rendici&oacute;n p&uacute;blica por
 zona</b>: qu&eacute; obra se prioriz&oacute;, qu&eacute; se contrat&oacute;, a qui&eacute;n, por
 cu&aacute;nto y en qu&eacute; estado est&aacute;. <span class="sg">Continua, no cada tres meses</span>:
@@ -612,8 +612,7 @@ administrativa.</p>
 <div class="cols">
 <p><b>Entre junio y agosto de 2025 el Departamento Ejecutivo vet&oacute; cuatro ordenanzas</b>
 &mdash;la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405&mdash; y observ&oacute; parcialmente
-otras dos. Todas en un lapso de once semanas. <span class="sg">Vetar es una facultad legal y este
-programa no la discute.</span></p>
+otras dos. Todas en un lapso de once semanas.</p>
 <p><b>Lo que interesa es el fundamento, porque est&aacute; escrito.</b> Al vetar la Ordenanza 9399, el
 Ejecutivo sostuvo que las decisiones t&eacute;cnicas y discrecionales son exclusivas suyas y que el
 Departamento Deliberativo no puede invadir esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>.
@@ -1360,8 +1359,7 @@ al Municipio y compromete a la Provincia y a ACUMAR seg&uacute;n la cuenca. Prom
 y dice cu&aacute;l es.</p>
 <p><b>Y hay un antecedente que conviene tener a la vista.</b> En junio de 2025 el Concejo
 sancion&oacute; la Ordenanza 9395, de <b>Paisaje Protegido Municipal</b>, y el Departamento Ejecutivo la
-vet&oacute; por decreto. <span class="sg">Vetar es una facultad legal del intendente y no lo discutimos
-como irregularidad</span>: lo tra&iacute;mos porque muestra d&oacute;nde termina lo que el Concejo puede
+vet&oacute; por decreto. <span class="sg">Lo tra&iacute;mos porque muestra d&oacute;nde termina lo que el Concejo puede
 decidir solo en materia ambiental, y por qu&eacute; este programa insiste en que las cosas que importan
 queden atadas a una partida afectada y no a la voluntad de quien gobierne. El cap&iacute;tulo 4 vuelve
 sobre esto.</p>
@@ -1507,9 +1505,9 @@ distinta de cu&aacute;nto se gast&oacute;.</p>
 <p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
 Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y en julio Barisidro, en el 1602. Los dos
 funcionaban desde 1996 con permiso precario y gratuito sobre terreno p&uacute;blico, sin pagar canon, y
-el decreto original prev&eacute;a revocarlo. <span class="sg">Revocar ese permiso estuvo bien y este
-programa no lo discute</span>: nadie deber&iacute;a usar treinta a&ntilde;os gratis un predio que es de
-todos.</p>
+el decreto original prev&eacute;a revocarlo. <span class="sg">Nadie deber&iacute;a usar treinta
+a&ntilde;os gratis un predio que es de todos</span>, y este programa no propone que vuelvan a ese
+r&eacute;gimen.</p>
 <p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran 9.775 metros cuadrados
 construidos frente al r&iacute;o, con locales en actividad que empleaban gente y tra&iacute;an
 p&uacute;blico al Bajo. <span class="sg">Revocar el permiso y adjudic&aacute;rselo a otro que pague es una
@@ -1593,19 +1591,10 @@ sigue sacando haciendo la cola.</p>
 <p><b>Hoy:</b> 78.217 millones, el 24,1% del presupuesto. Es, de lejos, la funci&oacute;n m&aacute;s
 grande del Municipio. <span class="sg">Ac&aacute; no proponemos fondos nuevos</span>: duplicar un sistema
 de este tama&ntilde;o no entra en el margen fiscal, y el cap&iacute;tulo 3 lo demuestra.</p>
-<p><b>Y hay que empezar reconociendo lo que se hizo</b>, porque es mucho y este programa no lo discute.
-Entre 2025 y 2026 el Municipio renov&oacute; habitaciones y ba&ntilde;os del Hospital Central, atac&oacute;
-las humedades, reacondicion&oacute; ascensores y cocinas en los tres hospitales, y
-<b>recuper&oacute; un montacamillas del Materno Infantil que llevaba a&ntilde;os fuera de
-servicio</b>.</p>
-<p><b>Compr&oacute; equipamiento y abri&oacute; lo que faltaba.</b> Tom&oacute;grafo de coherencia
-&oacute;ptica, desfibriladores, respirador pedi&aacute;trico, monitores para Neonatolog&iacute;a,
-actualizaci&oacute;n del quir&oacute;fano del Materno. Y una <b>primera sala de salud mental</b> en el
-Central, que adem&aacute;s descongestiona la guardia.</p>
-<p><b>Incluso empez&oacute; la digitalizaci&oacute;n.</b> El Materno Infantil pas&oacute; de historias
-cl&iacute;nicas en papel a un sistema digital integrado, con 170 puestos de trabajo nuevos.
-<span class="sg">La pregunta de este programa no es por qu&eacute; no se hace nada: es por qu&eacute; no
-se termina.</span></p>
+<p><b>Y hay un dato de partida que importa para lo que sigue.</b> El Materno Infantil pas&oacute; de
+historias cl&iacute;nicas en papel a un sistema digital interno; el Central no.
+<span class="sg">La digitalizaci&oacute;n de este Municipio avanza por establecimiento y por
+&aacute;rea</span>, y eso explica buena parte de lo que esta secci&oacute;n encuentra.</p>
 </div>
 <div class="cols">
 <p><b>Porque el problema de fondo sigue ah&iacute;, y est&aacute; documentado.</b> En un recorrido por
@@ -1616,7 +1605,8 @@ dep&oacute;sito.</p>
 <p><span class="sg">&laquo;El hospital podr&iacute;a dar para much&iacute;simo m&aacute;s; parece
 m&aacute;s de lo que es&raquo;</span>, resumi&oacute; uno de los m&eacute;dicos consultados. Eso se
 constat&oacute; cinco meses despu&eacute;s del cambio de gobierno, y los profesionales dijeron que en
-buena parte segu&iacute;a igual. <b>No es de una gesti&oacute;n ni de la otra: es estructural.</b></p>
+buena parte segu&iacute;a igual. <b>Es un problema estructural y por eso una compra no lo
+resuelve.</b></p>
 <p><b>Y el turno se sigue sacando haciendo la cola.</b> Una vecina de Boulogne lo describi&oacute;
 as&iacute;: llegar a la ventanilla despu&eacute;s de una fila larga y que le digan que se acabaron, que
 vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b></p>
@@ -2175,16 +2165,16 @@ p&uacute;blico no es una declaraci&oacute;n: es coherencia con algo que ya hizo.
 </div>
 
 <h2><span class="n">5.9</span>Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p class="lead">Esta es la &uacute;nica &aacute;rea donde el plan vigente ya hizo la mitad del trabajo. Por
-eso la propuesta no es empezar de cero: es terminar lo que est&aacute; a mitad de camino, y hacerlo de
-modo que el gasto vuelva al partido.</p>
+<p class="lead">Un tr&aacute;mite digitalizado sigue siendo un formulario que hay que saber completar.
+Lo que este programa propone no es digitalizar m&aacute;s formularios: es que el sistema
+<span class="sg">conteste</span>, y que el gasto de construirlo vuelva al partido.</p>
 <div class="cols">
 <p><b>Hoy:</b> el plan vigente se propuso digitalizar el 30% de los tr&aacute;mites municipales, firma
 digital en el 100% de los puestos ejecutivos y un nuevo centro de atenci&oacute;n telef&oacute;nica.
-<span class="sg">Es una base real y este programa la reconoce como tal.</span></p>
-<p><b>Lo que falta es lo que m&aacute;s pesa.</b> Un tr&aacute;mite digitalizado sigue siendo un
-formulario que hay que saber completar. Quien abre un local, amplia una casa o pide una habilitaci&oacute;n
-no necesita un PDF en l&iacute;nea: necesita una respuesta.</p>
+Son metas de volumen: cu&aacute;ntos tr&aacute;mites, cu&aacute;ntos puestos.</p>
+<p><b>Y lo que falta es lo que m&aacute;s pesa.</b> Quien abre un local, ampl&iacute;a una casa o pide
+una habilitaci&oacute;n <b>no necesita un PDF en l&iacute;nea: necesita una respuesta</b>. Ninguna de
+esas metas mide si la obtuvo.</p>
 </div>
 <div class="callout a">
 <div class="clabel">La vara la puso Miami, y despu&eacute;s la compr&oacute;</div>
@@ -2274,7 +2264,7 @@ d&iacute;as.</p>
 <tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="m">Vivir&iacute;an en el portal de datos abiertos, que no responde. No se puede afirmar que falten ni que est&eacute;n.</td></tr>
 <tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="m">Existe y est&aacute; completo hasta subsecretar&iacute;a, con nombre y apellido. Vive en un subdominio de prueba y no hay un solo enlace hacia &eacute;l desde el sitio municipal.</td></tr>
 <tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos. Y <b>ninguno de los 573 decretos de esta gesti&oacute;n dice el domicilio del adjudicatario</b>, que se public&oacute; hasta 2017 y es el dato que permite saber si el dinero se queda en el partido.</td></tr>
-<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba: eso est&aacute; y este documento lo concede. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
+<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
 <tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="m">La vigente es la de 2026, sancionada en diciembre de 2025, con actualizaciones hasta agosto de 2026. Se busc&oacute; y estaba.</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> relevamiento propio del sitio municipal, del portal de datos abiertos y del
@@ -2301,9 +2291,10 @@ sobre el vecino es el mismo, y se arregla con el mismo esfuerzo que cuesta arreg
 cosas desde cero. Es reponer el portal ca&iacute;do, enlazar lo que ya existe desde donde la gente lo
 busca, corregir un enlace que lleva al lugar equivocado, y completar lo que est&aacute; a medias.
 <span class="sg">Sigue costando cero y sigue siendo verificable a los cien d&iacute;as.</span></p>
-<p><b>Y donde encontramos que s&iacute; se publica, lo decimos.</b> La ordenanza fiscal est&aacute; al
-d&iacute;a. La secci&oacute;n de transparencia fiscal funciona, con cinco de cinco enlaces operativos y
-datos hasta el segundo trimestre de 2026. Este documento no existir&iacute;a sin eso.</p>
+<p><b>Y el relevamiento se hizo fila por fila, con lo que estaba y lo que no.</b> La ordenanza fiscal
+apareci&oacute; publicada y al d&iacute;a, y la secci&oacute;n de transparencia fiscal responde con cinco
+de cinco enlaces. <span class="sg">Queda asentado porque el cuadro tiene que poder repetirse</span>, no
+para dar por saldado lo que falta.</p>
 </div>
 
 <div class="pull"><div class="plabel">Costo cero, plazo cien d&iacute;as</div>
@@ -2316,9 +2307,8 @@ hecha.</p></div>
 2026. Y el que est&aacute; publicado trae s&oacute;lo el c&aacute;lculo de recursos por rubro y los
 gastos por objeto: <span class="sg">no abre por finalidad ni por programa</span>, que es la apertura con
 la que se puede discutir en qu&eacute; se va a gastar.</p>
-<p><b>Conviene conceder lo que s&iacute; est&aacute;:</b> la <b>ejecuci&oacute;n</b> s&iacute; se publica
-abierta por programa y por finalidad, y es de donde sale buena parte de este documento. Lo que falta es
-el presupuesto, que es el momento en que la decisi&oacute;n todav&iacute;a se puede cambiar.
+<p><b>La ejecuci&oacute;n s&iacute; se publica abierta</b>, por programa y por finalidad. Lo que falta
+es el presupuesto, que es el momento en que la decisi&oacute;n todav&iacute;a se puede cambiar.
 <b>Publicar la ejecuci&oacute;n y no el presupuesto es mostrar el gasto cuando ya se hizo.</b></p>
 <p><b>Y un dato que se publicaba dej&oacute; de publicarse.</b> Hasta 2025 la ejecuci&oacute;n por
 finalidad y funci&oacute;n discriminaba la funci&oacute;n Cultura. En el segundo trimestre de 2026
@@ -2389,9 +2379,10 @@ comercial de un barrio es infraestructura del barrio.</p>
 <p class="lead">Un programa de gobierno que no dice nada sobre la administraci&oacute;n municipal
 est&aacute; suponiendo que se ejecuta solo. &Eacute;ste no lo supone.</p>
 <div class="cols">
-<p><b>El punto de partida es bueno y conviene decirlo.</b> San Isidro destina a personal el 34,4% de su
-gasto contra una mediana provincial de 50,7%: es el vig&eacute;simo municipio de 106 en contenci&oacute;n
-de la planta. No hay un problema de sobredimensionamiento que resolver.</p>
+<p><b>El dato de partida.</b> San Isidro destina a personal el 34,4% de su gasto contra una mediana
+provincial de 50,7%: es el vig&eacute;simo municipio de 106 en contenci&oacute;n de la planta.
+<span class="sg">La planta no es el problema que este programa viene a resolver</span>, y por eso
+ninguna de sus propuestas sale de ah&iacute;.</p>
 <p><b>Este programa no propone reducir la planta.</b> Ni congelarla, ni reemplazarla por contratos, ni
 tercerizar funciones. Las dos propuestas grandes se financian con recursos ya devengados y con
 reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
@@ -2449,8 +2440,7 @@ carencia.</p>
 <h3>Y para el partido m&aacute;s envejecido de la regi&oacute;n no hay una sola cama</h3>
 <div class="cols">
 <p><b>No hay residencia, no hay hogar y no hay atenci&oacute;n domiciliaria municipal.</b> Lo que hay
-es Puerto Libre, que es recreativo y comedor: est&aacute; bien que exista y no reemplaza a ninguna de
-las tres cosas.</p>
+es Puerto Libre, que es recreativo y comedor, y no reemplaza a ninguna de las tres cosas.</p>
 <p><b>Y los treinta y cinco &laquo;centros de tercera edad&raquo; que se cuentan son, en su
 mayor&iacute;a, de la sociedad civil</b>, no sedes municipales. <span class="sg">Articular con ellos es
 correcto; contarlos como estructura propia no lo es.</span></p>
@@ -2635,7 +2625,7 @@ Municipio.</p>
 <tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="n">Nada. Sostenerla</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> seis de las siete son trabajo de cien d&iacute;as y ninguna cuesta un peso.
-La s&eacute;ptima ya est&aacute; hecha y queda en el cuadro para que se vea que se busc&oacute;.</p>
+La s&eacute;ptima queda en el cuadro porque el relevamiento la incluy&oacute;.</p>
 <div class="cols">
 <p>La del Portal de Datos Abiertos se compromete como <span class="sg">reponerlo o publicar sus datasets
 por otra v&iacute;a</span>: hoy devuelve error 504 y no sabemos si es un servidor ca&iacute;do o un sistema
@@ -2838,8 +2828,8 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
 
 <h2><span class="n">6.7</span>C&oacute;mo se audita todo esto</h2>
-<p class="tight">Cinco condiciones que nos imponemos, y que hacen auditable el resto. La quinta cambia
-la naturaleza de las otras cuatro.</p>
+<p class="tight">Cuatro condiciones que nos imponemos, y que hacen auditable el resto. La cuarta cambia
+la naturaleza de las otras tres.</p>
 <ol class="n">
 <li><b>Las cifras de este documento son p&uacute;blicas y reproducibles.</b> El modelo fiscal, las series
 2010&ndash;2025, la zonificaci&oacute;n censal y los diecinueve gr&aacute;ficos se publican en un repositorio abierto al
@@ -2850,11 +2840,6 @@ vienen de un procesador de terceros y no fueron validados uno por uno; el cambio
 funciones de 2025 hace incomparables buena parte de las series 2024&ndash;2025; el costo de financiamiento
 del Municipio no tiene dato p&uacute;blico. Las tres cosas est&aacute;n escritas en el cap&iacute;tulo que
 las usa, no en una nota al final.</li>
-<li><b>Cuatro hip&oacute;tesis contra la gesti&oacute;n actual se cayeron al contrastarlas, y est&aacute;n
-publicadas.</b> Que Lan&uacute;s administra mal las cuentas, que la Provincia castiga a San Isidro, que el
-d&eacute;ficit es nuevo y que esta gesti&oacute;n destruy&oacute; el presupuesto: las cuatro son falsas y
-el cap&iacute;tulo 2 explica por qu&eacute;. Publicarlas es la garant&iacute;a de que el resto pas&oacute;
-por el mismo filtro.</li>
 <li><b>La rendici&oacute;n tiene nombre y fecha.</b> Se publica un <b>Informe de cumplimiento del programa
 de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el valor
 alcanzado. Fecha fija y formato fijo, a prop&oacute;sito: &laquo;se publica&raquo; no se puede incumplir;

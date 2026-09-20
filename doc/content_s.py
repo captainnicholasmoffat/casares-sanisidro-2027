@@ -17,10 +17,10 @@ siete metas numeradas, y ninguna sobre empleo, vivienda, salud o educaci&oacute;
 incumplimiento: es el cumplimiento exacto de un plan donde esas palabras no figuran.
 <i>(Cap&iacute;tulo 2)</i></li>
 
-<li><b>Y sin embargo no es un municipio pobre ni mal administrado.</b> De 106 municipios bonaerenses,
-San Isidro es el que m&aacute;s invierte en obra p&uacute;blica despu&eacute;s de otros tres, y est&aacute;
-entre los veinte que menos gastan en sueldos. Las cr&iacute;ticas que cab&iacute;a esperar contra la gesti&oacute;n actual no resisten los datos, y este documento las descarta antes de hacer las suyas.
-<i>(Cap&iacute;tulos 1 y 2)</i></li>
+<li><b>Y no es un problema de plata.</b> De 106 municipios bonaerenses, San Isidro es el que
+m&aacute;s invierte en obra p&uacute;blica despu&eacute;s de otros tres, y est&aacute; entre los veinte
+que menos gastan en sueldos. <b>El d&eacute;ficit de servicios no se explica por el tama&ntilde;o del
+presupuesto: se explica por c&oacute;mo se reparte.</b> <i>(Cap&iacute;tulos 1 y 2)</i></li>
 
 <li><b>La mitad del partido vive donde est&aacute; el problema.</b> Boulogne Sur Mer y B&eacute;ccar son
 el 46,8% de la poblaci&oacute;n y concentran el 60% de los hogares sin gas de red y el 71% de los que no

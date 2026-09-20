@@ -7,7 +7,7 @@ from content_a import RH, ex, exhead, fig, duo
 C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
     "La barranca sobre el r&iacute;o. Ilustraci&oacute;n.") + """
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
-<div class="stand">Cuatro de las cr&iacute;ticas que cab&iacute;a esperar contra la gesti&oacute;n actual no resisten los datos, y este cap&iacute;tulo las descarta una por una. Lo que s&iacute; se puede probar es que la cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o. No lo criticamos por hacer mal lo que se propuso, sino por lo que no se propuso.</div>
+<div class="stand">El plan de gobierno vigente tiene setenta y siete metas numeradas y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este cap&iacute;tulo lo audita contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
 <div class="note">
 <p><b>La regla de este cap&iacute;tulo.</b> No se usa ninguna fuente que la propia Municipalidad no haya
@@ -19,39 +19,7 @@ sospechemos. No hay una sola afirmaci&oacute;n ac&aacute; que dependa de informa
 pueda acceder cualquier vecino esta misma tarde.</p>
 </div>
 
-<h2><span class="n">2.1</span>Cuatro acusaciones que no se sostienen</h2>
-<div class="cols">
-<h3 style="margin-top:0">&laquo;Lan&uacute;s administra mal las cuentas del municipio&raquo; &mdash; FALSO</h3>
-<p>Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro est&aacute; en el
-<b>puesto 20 en menor peso de la planta de personal</b> (34,4% contra una mediana provincial de 50,7%) y
-en el <b>puesto 4 en inversi&oacute;n en obra p&uacute;blica</b> (17,8% contra 5,4%). En t&eacute;rminos
-de gesti&oacute;n fiscal convencional est&aacute; entre los mejores de la Provincia, y decirlo de otro
-modo se desarma con la misma fuente que usamos nosotros.</p>
-<p><span class="sg">Pero administrar bien las cuentas y prestar bien los servicios son dos cosas
-distintas</span>, y esta secci&oacute;n concede s&oacute;lo la primera. La segunda se trata en 2.3, y
-ah&iacute; la respuesta es otra.</p>
-<h3>&laquo;La Provincia castiga a San Isidro por no ser peronista&raquo; &mdash; FALSO</h3>
-<p>La participaci&oacute;n de San Isidro en las transferencias provinciales cay&oacute; 8,5% entre 2021 y
-2025. Pero al descomponerla fondo por fondo, <span class="sg">los fondos discrecionales no se movieron un
-solo punto b&aacute;sico en cinco a&ntilde;os</span>: programas sociales e inclusi&oacute;n social se
-mantuvieron en 1,599%, todos los a&ntilde;os, hasta el cuarto decimal. La ca&iacute;da completa
-est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es una f&oacute;rmula. Nadie
-decide. Nadie castiga.</p>
-<h3>&laquo;El d&eacute;ficit es culpa de esta gesti&oacute;n&raquo; &mdash; FALSO</h3>
-<p>San Isidro cerr&oacute; 2025 con un d&eacute;ficit equivalente al 2,0% de sus ingresos. En 2010
-cerr&oacute; con uno del 2,9%. No hay novedad.</p>
-<h3>&laquo;Esta gesti&oacute;n destruy&oacute; el presupuesto municipal&raquo; &mdash; FALSO</h3>
-<p>La cifra depende enteramente del a&ntilde;o que se tome como base: medido desde el m&aacute;ximo de
-2017 el gasto real cay&oacute; 24,4%, y medido desde 2010 est&aacute; 13,1% arriba. Las dos salen de la
-misma serie. <span class="sg">Y en cualquiera de las dos lecturas, los peores a&ntilde;os son anteriores
-a esta gesti&oacute;n</span>: 2019 (&minus;9,1%), 2020 (&minus;10,4%) y 2021 (&minus;1,7%), todos previos
-a diciembre de 2023. Descompuesto: gesti&oacute;n anterior 2017&rarr;2022, <b>&minus;17,2%</b>;
-gesti&oacute;n actual 2022&rarr;2025, <b>&minus;8,8%</b>.</p>
-</div>
-<div class="pull q"><p>Lo que el dato sostiene no es que Lan&uacute;s haya destruido nada, sino que en
-quince a&ntilde;os ninguna gesti&oacute;n ampli&oacute; la capacidad de hacer del Municipio.</p></div>
-
-<h2><span class="n">2.2</span>Ejecutar el presupuesto no es prestar el servicio</h2>
+<h2><span class="n">2.1</span>Ejecutar el presupuesto no es prestar el servicio</h2>
 <p class="lead">Que una partida se devengue al 99% prueba que el dinero se gast&oacute;. No prueba que la
 obra se hizo, ni que se hizo a tiempo, ni que lleg&oacute; a todos por igual. Es la misma distinci&oacute;n
 entre devengado y percibido del cap&iacute;tulo 3, aplicada a la gesti&oacute;n.</p>
@@ -84,15 +52,15 @@ municipales&raquo;</b>, sino la avenida M&aacute;rquez/Rol&oacute;n.</p>
 reparti&oacute; sus servicios usando como l&iacute;mite la misma l&iacute;nea que separa a las
 localidades del oeste y el norte de las de la costa sur.</span> El cap&iacute;tulo 1 lo prueba con datos
 censales; ac&aacute; est&aacute; dicho por quien lo hac&iacute;a.</p>
-<p><b>Que la gesti&oacute;n actual haya cambiado ese criterio es un acierto y este programa lo reconoce.</b>
-Lo que muestra es que la desigualdad territorial no era s&oacute;lo de inversi&oacute;n: tambi&eacute;n
-era de servicio, y estaba institucionalizada en el modo de repartir las cuadrillas.</p>
+<p><b>Lo que eso muestra es que la desigualdad territorial no era s&oacute;lo de
+inversi&oacute;n:</b> tambi&eacute;n era de servicio, y estaba institucionalizada en el modo de repartir
+las cuadrillas.</p>
 </div>
 <div class="cols">
-<p><b>Qu&eacute; se sigue de esto, y qu&eacute; no.</b> No se sigue que el Municipio est&eacute; mal
-administrado en t&eacute;rminos fiscales: 2.2 acaba de mostrar lo contrario con datos comparados.
-<span class="sg">Se sigue que la ejecuci&oacute;n presupuestaria no mide calidad de servicio</span>, y
-que el &uacute;nico indicador que el Municipio publica sobre s&iacute; mismo es el primero.</p>
+<p><b>Qu&eacute; se sigue de esto.</b> <span class="sg">Que la ejecuci&oacute;n presupuestaria no mide
+calidad de servicio</span>, y que el &uacute;nico indicador que el Municipio publica sobre s&iacute;
+mismo es el primero. Setenta reclamos diarios por arbolado conviven con una partida ejecutada casi
+entera, y las dos cosas son ciertas a la vez.</p>
 <p><b>Y se sigue algo que este programa propone corregir.</b> Hoy no existe forma p&uacute;blica de saber
 cu&aacute;nto tarda el Municipio en responder un reclamo, ni si tarda lo mismo en Acassuso que en
 Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y no se publica.
@@ -100,7 +68,7 @@ Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y 
 programa se compromete a hacer</b>, y es la prueba m&aacute;s simple de si el servicio llega parejo.</p>
 </div>
 
-<h2><span class="n">2.3</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
+<h2><span class="n">2.2</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
 <div class="cols">
 <p>&Eacute;sta es la cr&iacute;tica que sobrevive, y es la m&aacute;s concreta de todas porque no depende
 de ninguna interpretaci&oacute;n.</p>
@@ -142,7 +110,7 @@ preciso: en 2025 la percepci&oacute;n cay&oacute; a 89,3% desde 93,5% el a&ntild
 vuelve a valores de 2024, fue un a&ntilde;o at&iacute;pico. Si no, es un problema de gesti&oacute;n.</p>
 </div>
 
-<h2><span class="n">2.4</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
+<h2><span class="n">2.3</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
 <p>El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente, se
 compromete en su meta III.4.c a publicar un &iacute;ndice de transparencia activa, y en la III.4.b fija un
 objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
@@ -180,7 +148,7 @@ Cuentas los haya aprobado. Se publica lo que se mide en los rankings de transpar
 dem&aacute;s queda donde nadie lo encuentra.</p>
 </div>
 
-<h2><span class="n">2.5</span>El hallazgo central: el plan no menciona a la gente</h2>
+<h2><span class="n">2.4</span>El hallazgo central: el plan no menciona a la gente</h2>
 <div class="cols">
 <p>&Eacute;sta no es una cr&iacute;tica de gesti&oacute;n. Es una cr&iacute;tica de prioridades, y
 est&aacute; sostenida por el propio documento del intendente.</p>
@@ -228,8 +196,8 @@ y a las escuelas s&oacute;lo para pintar el cruce de su esquina.</b></p>
 <p><b>Y los diecinueve objetivos, le&iacute;dos uno por uno, hablan de c&aacute;maras, patrulleros,
 barrido, arbolado, residuos, tr&aacute;mites y ciberseguridad.</b> Ninguno de los diecinueve habla de una
 persona.</p>
-<p>Lo que s&iacute; se le reconoce es que el plan es coherente consigo mismo: gasta donde dijo que iba a
-gastar, y el cap&iacute;tulo 1 lo mide. <span class="sg">Eso es exactamente lo que vuelve grave el
+<p>El gasto sigue al plan con exactitud: se gasta donde el plan dijo que se iba a gastar, y el
+cap&iacute;tulo 1 lo mide. <span class="sg">Eso es exactamente lo que vuelve grave el
 resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y la gente no est&aacute; en ella.</p>
 
 <div class="callout">
@@ -239,17 +207,17 @@ resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
 
-<h2><span class="n">2.6</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">2.5</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
 <ol class="n">
 <li>Su plan de gobierno no menciona la palabra <b>salud</b> ni una sola vez en 3.137 palabras, y tampoco
 vivienda, empleo, pobreza, cloaca ni agua. Nombra hospitales y escuelas s&oacute;lo para se&ntilde;alizar
 sus esquinas.</li>
 <li>Su cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o, y dej&oacute; de percibir 14.115
 millones que &eacute;l mismo habr&iacute;a cobrado en 2024.</li>
-<li>Ram&oacute;n Lan&uacute;s administra bien las <b>cuentas</b>: cuarto de 106 en inversi&oacute;n y
-vig&eacute;simo en contenci&oacute;n de la planta. <b>El servicio es otra cosa</b>, y el propio Municipio
-lo admiti&oacute;: setenta reclamos diarios de arbolado y una &laquo;deuda hist&oacute;rica&raquo; en algo
-que, dijo el intendente, <b>nunca se hizo</b>.</li>
+<li>Ejecutar el presupuesto no es prestar el servicio: el Municipio es cuarto de 106 en inversi&oacute;n
+en obra p&uacute;blica y aun as&iacute; registr&oacute; <b>setenta reclamos diarios de arbolado</b> y
+reconoci&oacute; una &laquo;deuda hist&oacute;rica&raquo; en algo que, dijo el intendente, <b>nunca se
+hizo</b>.</li>
 <li>Publica lo que se mide en los rankings de transparencia fiscal, y lo dem&aacute;s &mdash;organigrama,
 adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El portal de datos abiertos
 est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra cosa.</li>
@@ -337,7 +305,9 @@ uno.</p>
 <p><b>Una aclaraci&oacute;n sobre la coparticipaci&oacute;n, porque es la excusa m&aacute;s c&oacute;moda.</b>
 San Isidro pierde participaci&oacute;n en las transferencias provinciales &mdash;de 1,938% en 2021 a
 1,773% en 2025&mdash;, y <span class="sg">no es castigo pol&iacute;tico</span>: lo verificamos fondo por
-fondo y los discrecionales no se movieron un solo punto b&aacute;sico en cinco a&ntilde;os. La
+fondo y los discrecionales no se movieron un solo punto b&aacute;sico en cinco a&ntilde;os
+&mdash;programas sociales e inclusi&oacute;n social se mantuvieron en <b>1,599% todos los a&ntilde;os,
+hasta el cuarto decimal</b>&mdash;. La
 ca&iacute;da entera est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es una
 f&oacute;rmula. Nadie decide y nadie castiga.</p>
 <p><b>Es un viento en contra estructural, y el modelo lo carga.</b> Pero no es d&oacute;nde se juega el
@@ -445,9 +415,9 @@ trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
 <tr class="hd"><th>Programa</th><th class="r">Vigente 2025</th><th>Para dimensionarlo</th></tr>
-<tr class="hi"><td class="l">Mantenimiento y embellecimiento del Municipio</td><td class="n"><b>14.770,8 M</b></td><td class="m">El cuarto programa del presupuesto. <b>Setenta y cinco veces</b> lo que se gasta en empleo</td></tr>
+<tr class="hi"><td class="l">Mantenimiento y embellecimiento del Municipio</td><td class="n"><b>14.770,8 M</b></td><td class="m">El cuarto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Siete veces</b> lo que se destina a infraestructura habitacional</td></tr>
-<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m">S&oacute;lo la parte que excede la reparaci&oacute;n de la deuda que el propio intendente reconoci&oacute;</td></tr>
+<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m"><b>M&aacute;s del doble</b> de lo que recibe agua potable y alcantarillado, que son 3.320 M</td></tr>
 <tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.906 M</td><td class="m">El 32% de esos tres programas sumados</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
@@ -456,10 +426,10 @@ ejercicio 2025, acumulado anual.</p>
 <p><b>Con el 32% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
 mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg">Lo que est&aacute;
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
-<p><b>Y el arbolado se toca con cuidado, por una raz&oacute;n que este programa concede.</b> El propio
-intendente reconoci&oacute; que el cuidado del arbolado era &laquo;una deuda hist&oacute;rica&raquo; en
-algo que &laquo;no se hizo nunca&raquo;. <b>Reparar esa deuda no es embellecer: es prestar un servicio que
-faltaba.</b> Esa parte no se reasigna.</p>
+<p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
+falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
+agrega sobre lo que ya funciona, espera. <span class="sg">El criterio es el mismo para las tres
+partidas y no hace excepciones.</span></p>
 <p><b>Por qu&eacute; estos tres y no otros.</b> Porque el cap&iacute;tulo 1 ya lo demostr&oacute; con el
 presupuesto: <b>alumbrado 10.313 millones contra agua y alcantarillado 3.320.</b> Tres a uno entre dos
 cosas comparables, las dos infraestructura urbana, las dos decididas cada a&ntilde;o. El Municipio elige
@@ -561,20 +531,19 @@ capital&mdash; las paga el gobierno que asuma en diciembre de 2027.</b> No es un
 operaci&oacute;n tiene las tres autorizaciones que exige la ley. Es una decisi&oacute;n, y hay que
 contarla como tal.</p>
 </div>
-<div class="callout g">
-<div class="clabel">Lo que hay que conceder, y es mucho</div>
-<p><b>El destino est&aacute; escrito en la ordenanza y es bueno.</b> Los fondos se destinan
-exclusivamente a infraestructura, integraci&oacute;n sociourbana y regeneraci&oacute;n urbana,
-<b>con prioridad para los barrios populares</b>, y queda prohibido usarlos para gasto corriente. Eso
-lo consigui&oacute; la oposici&oacute;n negociando el art&iacute;culo 3.</p>
-<p><b>Y las obras son las que este programa reclama.</b> Entre ellas, <b>obras hidr&aacute;ulicas en La
-Cava</b> contra un problema hist&oacute;rico de inundaciones, y la formalizaci&oacute;n del acceso a
-agua potable y cloacas. <span class="sg">Es exactamente lo que el cap&iacute;tulo 1 muestra que
-faltaba.</span> Este programa no lo discute: lo celebra.</p>
-<p><b>Lo que s&iacute; discute es qui&eacute;n decidi&oacute; y qui&eacute;n paga.</b> Las obras las
-eligi&oacute; el Departamento Ejecutivo, no las zonas donde se hacen. Y el 87,5% del capital lo abona
-una gesti&oacute;n que todav&iacute;a no se elegi&oacute;, con la coparticipaci&oacute;n cedida como
-garant&iacute;a.</p>
+<div class="callout">
+<div class="clabel">Qui&eacute;n decidi&oacute; y qui&eacute;n paga</div>
+<p><b>El destino est&aacute; acotado por la ordenanza:</b> infraestructura, integraci&oacute;n
+sociourbana y regeneraci&oacute;n urbana, con prioridad para los barrios populares, y prohibido para
+gasto corriente. <span class="sg">Ese l&iacute;mite no estaba en el proyecto original: lo
+incorpor&oacute; la oposici&oacute;n negociando el art&iacute;culo 3.</span></p>
+<p><b>Las obras las eligi&oacute; el Departamento Ejecutivo</b>, no las zonas donde se hacen. Entre
+ellas hay obras hidr&aacute;ulicas en La Cava y formalizaci&oacute;n del acceso a agua y cloacas:
+<b>exactamente el tipo de decisi&oacute;n que el cap&iacute;tulo 4 propone que deje de tomarse desde
+arriba</b>.</p>
+<p><b>Y el 87,5% del capital lo abona una gesti&oacute;n que todav&iacute;a no se elegi&oacute;</b>, con
+la coparticipaci&oacute;n cedida como garant&iacute;a. Treinta mil millones comprometidos por cuatro
+a&ntilde;os de mandato ajeno.</p>
 </div>
 <div class="cols">
 <p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> Al stock consolidado que

@@ -34,7 +34,7 @@ C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
 C3B_A, C3B_B = split_at(B.C3B, '<h2><span class="n">3.5</span>', "cap3b2",
                         H_CONT.format(n=3, t="Los fondos"))
 C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
-C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.4</span>', "cap2b",
+C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.3</span>', "cap2b",
                      H_CONT.format(n=2, t="La gesti&oacute;n, medida"))
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))

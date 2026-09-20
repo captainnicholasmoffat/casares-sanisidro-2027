@@ -56,7 +56,6 @@ _IDX = [
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
  ("i", "C&oacute;mo est&aacute; construido", "introduccion"),
- ("i", "Lo que este documento concede antes de criticar", "introduccion"),
  ("i", "Qu&eacute; promete, y qu&eacute; no", "introduccion"),
  ("i", "Contra qu&eacute; pide que lo midan", "introduccion"),
  ("g", "1 &middot; Diagn&oacute;stico", None),
@@ -67,12 +66,11 @@ _IDX = [
  ("i", "1.5 &nbsp;San Isidro se financia solo. Eso cambia todo.", "cap1b"),
  ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap1b"),
  ("g", "2 &middot; La gesti&oacute;n, medida", None),
- ("i", "2.1 &nbsp;Cuatro acusaciones que no se sostienen", "cap2"),
- ("i", "2.2 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
- ("i", "2.3 &nbsp;Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;", "cap2"),
- ("i", "2.4 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
- ("i", "2.5 &nbsp;El hallazgo central: el plan no menciona a la gente", "cap2b"),
- ("i", "2.6 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
+ ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
+ ("i", "2.2 &nbsp;Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;", "cap2"),
+ ("i", "2.3 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
+ ("i", "2.4 &nbsp;El hallazgo central: el plan no menciona a la gente", "cap2b"),
+ ("i", "2.5 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que gobiernan el futuro fiscal", "cap3a"),
@@ -219,14 +217,6 @@ el costo de financiamiento municipal, raz&oacute;n por la cual este programa no 
 <p>Un programa de gobierno que pide que le crean no se puede auditar. &Eacute;ste pide que le revisen
 las cuentas.</p></div>
 
-<h2>Lo que este documento concede antes de criticar</h2>
-<p>Cuatro de las cr&iacute;ticas que cab&iacute;a esperar contra la gesti&oacute;n actual no resistieron
-los datos: que administra mal las cuentas del municipio, que la Provincia lo castiga por razones pol&iacute;ticas,
-que el d&eacute;ficit es obra suya y que destruy&oacute; el presupuesto municipal.
-<span class="sg">Las cuatro son falsas.</span> Est&aacute;n publicadas, con su desarrollo y su fuente,
-en el cap&iacute;tulo 2. Publicarlas no es un gesto: es la &uacute;nica garant&iacute;a de que lo que
-s&iacute; se afirma pas&oacute; por el mismo filtro.</p>
-
 <h2>Qu&eacute; promete, y qu&eacute; no</h2>
 <p class="tight">Lo que un intendente de San Isidro puede hacer solo:</p>
 <ul class="b">
@@ -333,8 +323,8 @@ red y el 71% de los que no tienen cloaca.</p></div>
 
 <h2><span class="n">1.2</span>El municipio invierte m&aacute;s que casi todos. Y no llega.</h2>
 <div class="cols">
-<p>Esto no es un municipio pobre ni mal administrado. Los n&uacute;meros lo desmienten, y conviene
-establecerlo antes de cualquier cr&iacute;tica.</p>
+<p>San Isidro no gasta poco, y el tama&ntilde;o del presupuesto no explica nada de lo que la
+secci&oacute;n anterior mide.</p>
 <p>Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro est&aacute; en el
 <b>puesto 4 en inversi&oacute;n en obra p&uacute;blica</b>, con el 17,8% de su gasto contra una mediana
 provincial de 5,4%; y en el <b>puesto 20 en menor peso de la planta de personal</b>, con 34,4% contra
@@ -358,6 +348,17 @@ ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
 
 <p>San Isidro invierte en obra p&uacute;blica m&aacute;s del triple que el municipio bonaerense
 t&iacute;pico. <b>Y el 32,1% de los hogares de Boulogne y B&eacute;ccar sigue sin gas de red.</b></p>
+<div class="cols">
+<p><b>Y esa proporci&oacute;n alta se aplica sobre un total que viene cayendo.</b> Medido desde su
+m&aacute;ximo de 2017, <b>el gasto real del Municipio cay&oacute; 24,4%</b>; medido desde 2010
+est&aacute; 13,1% por encima. <span class="sg">Las dos cifras salen de la misma serie y el resultado
+depende enteramente del a&ntilde;o que se tome como base</span>, as&iacute; que van las dos.</p>
+<p><b>La ca&iacute;da atraviesa el per&iacute;odo entero.</b> Entre 2017 y 2022 el gasto real
+cay&oacute; 17,2%, y entre 2022 y 2025 otro 8,8%. Los a&ntilde;os peores fueron 2019, 2020 y 2021, con
+&minus;9,1%, &minus;10,4% y &minus;1,7%. <b>En quince a&ntilde;os ninguna gesti&oacute;n ampli&oacute; la
+capacidad de hacer del Municipio</b>, y &eacute;sa es la restricci&oacute;n real sobre la que hay que
+trabajar.</p>
+</div>
 
 <h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
 <p class="tight">Decir cu&aacute;nto se invierte no alcanza. El clasificador por finalidad y funci&oacute;n
@@ -386,7 +387,7 @@ cloaca.</p>
 <p><b>Tres a uno, entre dos cosas comparables.</b> Iluminar la calle y llevar agua y sacar la cloaca de
 adentro de la casa son las dos infraestructura urbana, las dos se deciden cada a&ntilde;o, y las dos salen
 del mismo presupuesto. Una recibe 10.313 millones y la otra 3.320.</p>
-<p><b>Y es coherente con el plan.</b> &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la Prioridad II
+<p><b>Y el reparto sigue al plan.</b> &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la Prioridad II
 declarada; el agua y la cloaca no figuran en ninguna de las tres. <span class="sg">El presupuesto no
 contradice al plan: lo cumple.</span></p>
 <p><b>Por eso el problema no se arregla gastando m&aacute;s.</b> San Isidro ya gasta: es el cuarto de 106
@@ -428,8 +429,7 @@ primeros el 78,6%</b>.</p>
 de seguridad y vigilancia, representa por s&iacute; sola el <b>11,6% de todo lo adjudicado</b> en dos
 a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&mdash; compromete 20.916
 millones en un solo acto.</p>
-<p><b>No hay nada irregular en eso y no lo insinuamos.</b> Una obra vial grande se licita grande. Lo que
-el dato muestra es la escala de la decisi&oacute;n: <span class="sg">un solo acto del Ejecutivo puede
+<p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
 comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
 <p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos al peso
 cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
@@ -529,10 +529,9 @@ manera.</span></p>
 <p><b>Y explica lo que el cuadro anterior muestra.</b> Una partida que no est&aacute; entre las
 prioridades no s&oacute;lo nace chica: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
 empleo contra el 99,1% de la obra p&uacute;blica no es una casualidad contable.</p>
-<p><b>Lo que sigue, entonces, no es un reproche de gesti&oacute;n.</b> El cap&iacute;tulo 2 audita ese
-plan contra sus propias metas y concede lo que hay que conceder. Lo que este programa discute no es
-c&oacute;mo se administra San Isidro, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
-lista</span>.</p>
+<p><b>Lo que sigue audita ese plan contra sus propias metas.</b> Lo que este programa discute no es la
+aritm&eacute;tica del presupuesto, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
+lista</span> y qu&eacute; se sigue de esa omisi&oacute;n.</p>
 </div>
 
 <h2><span class="n">1.5</span>San Isidro se financia solo. Eso cambia todo.</h2>

@@ -8,10 +8,11 @@ CIERRE = dict(id="cierre", runhead=RH, html="""
 <p>Este documento empez&oacute; con una pregunta sobre el plan de otro: a qui&eacute;n se
 escuch&oacute;, y c&oacute;mo, para que en un distrito con 25.165 hogares sin gas de red el empleo y la
 vivienda no aparecieran nunca.</p>
-<p>La respuesta result&oacute; ser menos escandalosa y m&aacute;s dif&iacute;cil de lo que
-esper&aacute;bamos. No hay mala administraci&oacute;n: hay un municipio que gasta bien y decide lejos.
-No hay castigo de la Provincia: hay una f&oacute;rmula que nadie mira. No hay un d&eacute;ficit nuevo:
-hay una d&eacute;cada de gasto real que cae y ninguna gesti&oacute;n que lo haya revertido.</p>
+<p>La respuesta result&oacute; m&aacute;s dif&iacute;cil de lo que esper&aacute;bamos, porque no
+est&aacute; en el tama&ntilde;o del presupuesto. Hay un municipio que invierte m&aacute;s que casi todos
+y <span class="sg">decide lejos de donde falta</span>. Hay una f&oacute;rmula de coparticipaci&oacute;n
+que nadie mira. Y hay una d&eacute;cada de gasto real que cae sin que ninguna gesti&oacute;n lo haya
+revertido.</p>
 <p>Lo que s&iacute; cambi&oacute; mientras se escrib&iacute;a este documento es el punto de partida. En
 agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones, y siete de sus ocho cuotas de
 capital las paga el gobierno que asuma en diciembre de 2027. <span class="sg">Est&aacute; escrito ac&aacute;
