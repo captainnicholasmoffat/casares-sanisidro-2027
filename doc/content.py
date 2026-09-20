@@ -40,7 +40,7 @@ C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5A2, C5A3 = split_at(C5A2, '<h3>Ense&ntilde;ar IA sin acceso', "cap5a3", "")
 C6, C62_SRC = split_at(C.C6,  '<h2><span class="n">6.3</span>', "cap6b",
-                     H_CONT.format(n=6, t="Contra qu&eacute; queremos que nos midan"))
+                     H_CONT.format(n=6, t="El plan, con fechas"))
 
 C5B, C5B_B_SRC = split_at(C5B_SRC, '<h2><span class="n">5.6</span>', "cap5bb",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
@@ -50,7 +50,7 @@ C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.13</span>', "cap5b3",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
-                        H_CONT.format(n=6, t="Contra qu&eacute; queremos que nos midan"))
+                        H_CONT.format(n=6, t="El plan, con fechas"))
 
 # el anexo articulado entra en dos paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,

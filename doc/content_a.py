@@ -57,7 +57,7 @@ _IDX = [
  ("i", "La pregunta", "introduccion"),
  ("i", "C&oacute;mo est&aacute; construido", "introduccion"),
  ("i", "Qu&eacute; promete, y qu&eacute; no", "introduccion"),
- ("i", "Contra qu&eacute; pide que lo midan", "introduccion"),
+ ("i", "Las catorce metas, y de d&oacute;nde salen las fechas", "introduccion"),
  ("g", "1 &middot; Diagn&oacute;stico", None),
  ("i", "1.1 &nbsp;Dos partidos dentro del mismo partido", "cap1a"),
  ("i", "1.2 &nbsp;El municipio invierte m&aacute;s que casi todos. Y no llega.", "cap1a2"),
@@ -111,15 +111,14 @@ _IDX = [
  ("i", "5.14 &nbsp;Lo que este cap&iacute;tulo no promete", "cap5b3"),
  ("i", "5.15 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
  ("i", "5.16 &nbsp;Lo que dice este cap&iacute;tulo, en siete l&iacute;neas", "cap5b3"),
- ("g", "6 &middot; Contra qu&eacute; queremos que nos midan", None),
+ ("g", "6 &middot; El plan, con fechas", None),
  ("i", "6.1 &nbsp;Los primeros cien d&iacute;as", "cap6"),
  ("i", "6.2 &nbsp;La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o", "cap6"),
  ("i", "6.3 &nbsp;Las metas verificables del mandato", "cap6b"),
  ("i", "6.4 &nbsp;El calendario del mandato, mes por mes", "cap6b"),
  ("i", "6.5 &nbsp;Qu&eacute; no prometemos, y de qui&eacute;n depende", "cap6b"),
  ("i", "6.6 &nbsp;Qu&eacute; puede salir mal", "cap6c"),
- ("i", "6.7 &nbsp;C&oacute;mo se audita todo esto", "cap6c"),
- ("i", "6.8 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap6c"),
+ ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
@@ -157,7 +156,7 @@ INDICE = dict(id="indice", runhead=RH, html=_indice())
 # =====================================================================
 INTRO = dict(id="introduccion", runhead=RH, html="""
 <h1>Introducci&oacute;n</h1>
-<div class="stand">El plan de gobierno vigente tiene tres prioridades, diecinueve objetivos y setenta y siete metas numeradas, y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este programa nace de esa omisi&oacute;n, est&aacute; construido con documentos p&uacute;blicos y pide que lo midan contra sus propias metas.</div>
+<div class="stand">El plan de gobierno vigente tiene tres prioridades, diecinueve objetivos y setenta y siete metas numeradas, y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este programa nace de esa omisi&oacute;n, est&aacute; construido con documentos p&uacute;blicos y pone en su lugar catorce metas con fecha.</div>
 
 <h2>La pregunta</h2>
 <div class="cols">
@@ -213,10 +212,6 @@ incomparable buena parte de las series interanuales. Y no existe informaci&oacut
 el costo de financiamiento municipal, raz&oacute;n por la cual este programa no propone endeudarse.</p>
 </div>
 
-<div class="pull"><div class="plabel">Por qu&eacute; este documento se puede auditar</div>
-<p>Un programa de gobierno que pide que le crean no se puede auditar. &Eacute;ste pide que le revisen
-las cuentas.</p></div>
-
 <h2>Qu&eacute; promete, y qu&eacute; no</h2>
 <p class="tight">Lo que un intendente de San Isidro puede hacer solo:</p>
 <ul class="b">
@@ -246,14 +241,15 @@ incumplido desde 1994. Este programa lo reclama, y dice que es un reclamo.</li>
 41,4% del presupuesto que el Municipio puede reasignar libremente, y no queda lugar para una tercera del
 mismo tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 
-<h2>Contra qu&eacute; pide que lo midan</h2>
+<h2>Las catorce metas, y de d&oacute;nde salen las fechas</h2>
 <div class="cols">
-<p>Este documento audita un plan de gobierno contra sus propias metas publicadas. Ese ejercicio
-s&oacute;lo es leg&iacute;timo si quien lo hace acepta que se lo hagan.</p>
-<p>Por eso el cap&iacute;tulo 6 fija catorce metas
-verificables, con su l&iacute;nea de base calculada hoy y
-la fuente p&uacute;blica con la que se comprueba cada una. Est&aacute;n escritas antes de gobernar, y no
-se van a mover despu&eacute;s.</p>
+<p>El cap&iacute;tulo 6 es el plan de gobierno: catorce metas con su l&iacute;nea de base calculada hoy,
+el calendario mes por mes de los cuatro a&ntilde;os, y los diecis&eacute;is compromisos que se cumplen
+en los primeros cien d&iacute;as.</p>
+<p>Las fechas no son una intenci&oacute;n. Salen del modelo fiscal que acompa&ntilde;a a este programa
+&mdash;proyecta el flujo de caja del Municipio hasta 2037 y su a&ntilde;o cero reproduce la
+ejecuci&oacute;n 2025 con diferencia cero&mdash;, y cada meta lleva al lado la fuente p&uacute;blica con
+la que se comprueba.</p>
 </div>
 <p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
 candidato a intendente de San Isidro.</p>

@@ -20,9 +20,9 @@ porque la gesti&oacute;n que entre lo va a encontrar el primer d&iacute;a</span>
 dice cu&aacute;nto cuesta lo suyo tiene que decir tambi&eacute;n qu&eacute; hereda.</p>
 <p>Lo que s&iacute; hay es una omisi&oacute;n escrita, firmada y publicada, y un presupuesto que la
 cumple con exactitud. Contra eso no alcanza con prometer m&aacute;s: hay que cambiar
-<span class="sg">qui&eacute;n decide</span>, y escribir de antemano contra qu&eacute; se comprueba.</p>
+<span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo.</p>
 <p>Por eso este programa promete poco y lo promete con fecha. Media obra p&uacute;blica decidida por los
-vecinos en cuatro a&ntilde;os. El gasto en empleo y vivienda por quince. Siete publicaciones en cien
+vecinos en cuatro a&ntilde;os. El gasto en empleo y vivienda por quince. Diecis&eacute;is compromisos en cien
 d&iacute;as. Catorce metas con l&iacute;nea de base fijada hoy y un informe cada 31 de marzo. Y una lista,
 igual de larga, de lo que no prometemos y por qu&eacute;.</p>
 <p>Y una pieza que no estaba en la primera versi&oacute;n de este documento y termin&oacute; sosteniendo

@@ -2596,8 +2596,8 @@ finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declarad
 # CAPITULO 6
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
-<h1><span class="n">6</span>Contra qu&eacute; queremos que nos midan</h1>
-<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
+<h1><span class="n">6</span>El plan, con fechas</h1>
+<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, es decir a
@@ -2690,8 +2690,10 @@ siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo
 </div>
 
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
-<p class="tight">Un programa sin metas medibles no se puede auditar. &Eacute;stas s&iacute;, y ninguna
-depende de un dato que haya que creernos.</p>
+<p class="tight">Catorce metas, cada una con el n&uacute;mero de hoy al lado y la fuente p&uacute;blica
+que la comprueba. <b>Y la rendici&oacute;n tiene nombre y fecha:</b> un <b>Informe de cumplimiento del
+programa de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el
+valor alcanzado. Ninguna depende de un dato que haya que creernos.</p>
 """ + exhead("c", "Catorce metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
@@ -2721,7 +2723,7 @@ personas consiguieron trabajo por su intervenci&oacute;n. Esa ausencia es, en s&
 diagn&oacute;stico del cap&iacute;tulo 1.</p>
 </div>
 <div class="callout a">
-<div class="clabel">Por qu&eacute; una meta sin l&iacute;nea de base no se puede auditar</div>
+<div class="clabel">La meta del plan vigente que no se puede verificar</div>
 <p>El plan vigente fija, entre sus 77 metas, un <b>&laquo;incremento del 40% de veh&iacute;culos
 patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos hab&iacute;a en diciembre de
 2023 en la web municipal, en el Bolet&iacute;n Oficial y en el presupuesto publicado. <b>No figura en
@@ -2798,7 +2800,7 @@ como si lo fuera.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
-<p class="tight">Un programa que audita a otro tiene que decir contra qu&eacute; se puede caer el propio.
+<p class="tight">Doce cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.
 Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay, se dice que no hay.</p>
 """ + exhead("c", "El registro de riesgos, con su estado y lo que lo reduce") + """
 <table>
@@ -2832,42 +2834,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <p class="cap"><b>Nota:</b> tres de los doce no tienen mitigaci&oacute;n propia y est&aacute; dicho en
 la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
 
-<h2><span class="n">6.7</span>C&oacute;mo se audita todo esto</h2>
-<p class="tight">Cuatro condiciones que nos imponemos, y que hacen auditable el resto. La cuarta cambia
-la naturaleza de las otras tres.</p>
-<ol class="n">
-<li><b>Las cifras de este documento son p&uacute;blicas y reproducibles.</b> El modelo fiscal, las series
-2010&ndash;2025, la zonificaci&oacute;n censal y los diecinueve gr&aacute;ficos se publican en un repositorio abierto al
-presentarse este programa, con las pruebas de validaci&oacute;n que los verifican. Cualquiera puede
-correrlos.</li>
-<li><b>Los l&iacute;mites est&aacute;n declarados donde aparecen.</b> Los datos de los otros 105 municipios
-vienen de un procesador de terceros y no fueron validados uno por uno; el cambio de nomenclador de
-funciones de 2025 hace incomparables buena parte de las series 2024&ndash;2025; el costo de financiamiento
-del Municipio no tiene dato p&uacute;blico. Las tres cosas est&aacute;n escritas en el cap&iacute;tulo que
-las usa, no en una nota al final.</li>
-<li><b>La rendici&oacute;n tiene nombre y fecha.</b> Se publica un <b>Informe de cumplimiento del programa
-de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el valor
-alcanzado. Fecha fija y formato fijo, a prop&oacute;sito: &laquo;se publica&raquo; no se puede incumplir;
-un documento con nombre que no aparece el 31 de marzo, s&iacute;.</li>
-<li><b>Y la auditor&iacute;a deja de ser un acto anual.</b> Hasta ac&aacute;, auditar significaba esperar
-un informe y compararlo con otro. Con el sistema del cap&iacute;tulo 4 <span class="sg">el dato entra el
-d&iacute;a que se genera y cualquiera lo consulta cuando quiera</span>: la adjudicaci&oacute;n el
-d&iacute;a que se firma, el avance de obra el d&iacute;a que se carga, el precio unitario el d&iacute;a
-que se compra. El informe del 31 de marzo sigue existiendo, pero <b>deja de ser la &uacute;nica ventana
-y pasa a ser un resumen de algo que ya estaba a la vista</b>. Un informe se puede maquillar una vez al
-a&ntilde;o; un registro que se llena solo, no.</li>
-</ol>
-<div class="callout a">
-<div class="clabel">Lo que esto le exige al propio programa</div>
-<p><b>Publicar en tiempo real es una exigencia contra uno mismo, no contra el anterior.</b> Un dato que
-entra el d&iacute;a que se genera no se puede ordenar antes de mostrarlo, y deja a la vista los meses en
-que una zona no ejecut&oacute;, las obras que se atrasaron y las respuestas que salieron tarde.</p>
-<p><span class="sg">Se escribe ac&aacute; sabiendo eso.</span> Un gobierno que publica s&oacute;lo el
-resumen anual elige qu&eacute; se ve; uno que publica el registro, no. Es la diferencia entre rendir
-cuentas y contarlas.</p>
-</div>
-
-<h2><span class="n">6.8</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
+<h2><span class="n">6.7</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
@@ -2880,12 +2847,11 @@ que ya existen y la inspecci&oacute;n municipal transmitida en vivo&mdash;.</li>
 anuales&mdash; la deciden los vecinos.</li>
 <li>Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
 informe de cumplimiento cada 31 de marzo.</li>
-<li>Y la aplicaci&oacute;n cambia qu&eacute; quiere decir rendir cuentas: el dato entra el d&iacute;a que
-se genera y queda a la vista, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>
+<li>Y la aplicaci&oacute;n publica el dato el d&iacute;a que se genera &mdash;la adjudicaci&oacute;n el
+d&iacute;a que se firma, el avance de obra el d&iacute;a que se carga, el precio unitario el d&iacute;a
+que se compra&mdash;, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>
 <li>Lo que depende de la Legislatura lo reclamamos y decimos que es un reclamo.</li>
 </ol>
-<div class="pull"><div class="plabel">Las mismas reglas para los dos</div><p>Auditamos un plan de gobierno para escribir &eacute;ste. El nuestro queda escrito, con
-las mismas reglas.</p></div>
 <div class="hairline"></div>
 <div class="note">
 <p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Este cap&iacute;tulo no introduce datos nuevos.
