@@ -10,13 +10,13 @@ C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
 <div class="stand">El plan de gobierno vigente tiene setenta y siete metas numeradas y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este cap&iacute;tulo lo audita contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
 <div class="note">
-<p><b>La regla de este cap&iacute;tulo.</b> No se usa ninguna fuente que la propia Municipalidad no haya
-publicado. Ni trascendidos, ni versiones, ni notas period&iacute;sticas, ni informes de terceros salvo
-para la comparaci&oacute;n con los otros 105 municipios, cuyo origen y l&iacute;mite se declaran en el
-cap&iacute;tulo 1.</p>
-<p><b>Y su costo, que aceptamos.</b> Todo lo que el Municipio no publica queda fuera, aunque lo
-sospechemos. No hay una sola afirmaci&oacute;n ac&aacute; que dependa de informaci&oacute;n a la que no
-pueda acceder cualquier vecino esta misma tarde.</p>
+<p><b>De d&oacute;nde sale todo lo que sigue.</b> De documentos que public&oacute; la propia
+Municipalidad. Ni trascendidos, ni versiones, ni notas period&iacute;sticas, ni informes de terceros
+salvo para la comparaci&oacute;n con los otros 105 municipios, cuyo origen y l&iacute;mite se declaran en
+el cap&iacute;tulo 1.</p>
+<p><b>Y lo que eso deja afuera.</b> Todo lo que el Municipio no publica, aunque lo sospechemos. Este
+cap&iacute;tulo no lo trata, y por eso no hay ac&aacute; ninguna acusaci&oacute;n sobre lo que no
+consta.</p>
 </div>
 
 <h2><span class="n">2.1</span>Ejecutar el presupuesto no es prestar el servicio</h2>
@@ -281,7 +281,7 @@ Econ&oacute;mico-Financiera 2025, cuenta Ahorro-Inversi&oacute;n-Financiamiento.
 <p><b>La cifra correcta es &minus;6.051 millones.</b> Es exactamente el tipo de error que produce
 diagn&oacute;sticos opuestos con los mismos datos.</p>
 """ + ex("g", "El d&eacute;ficit de 2025 no viene del gasto corriente: viene de la obra",
-     "Despu\u00e9s de pagar todo el funcionamiento diario del Municipio sobraron 51.781 millones. La obra p\u00fablica de ese a\u00f1o cost\u00f3 57.832. La franja rayada es la diferencia: el d\u00e9ficit.",
+     "Despu\u00e9s de pagar todo el funcionamiento diario del Municipio sobraron 51.781 millones. El gasto de capital de ese a\u00f1o fue 57.832 \u2014de los que 57.816 son obra p\u00fablica\u2014. La franja rayada es la diferencia: el d\u00e9ficit.",
      "ex08.png",
      "Municipio de San Isidro, Estado de Situaci&oacute;n Econ&oacute;mico-Financiera 2025.",
      "los 51.781 millones son el ahorro corriente (301.155 percibidos menos 251.404 de gasto corriente = 49.751) m&aacute;s 2.030 de recursos de capital. Los ingresos van por lo percibido y los gastos por lo devengado: es la convenci&oacute;n de la cuenta Ahorro-Inversi&oacute;n, no una elecci&oacute;n nuestra.") + """
@@ -591,7 +591,7 @@ valores de tierra, y sobre los valores por macizo publicados por ARBA. Las circu
 con localidades leyendo 299 decretos municipales que identifican inmuebles por secci&oacute;n y localidad.</p>
 <p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
 escalas usan unidades distintas. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la valuaci&oacute;n
-provincial es de un rev&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
+provincial es de un prevalun reval&uacute;o de 2016uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
 ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
 <div class="cols">
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje

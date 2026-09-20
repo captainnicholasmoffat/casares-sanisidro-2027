@@ -52,7 +52,7 @@ def duo(a, b, cap):
 # =====================================================================
 _IDX = [
  ("g", "Este programa, en una p&aacute;gina", None),
- ("i", "Ocho puntos y por d&oacute;nde empieza", "sintesis"),
+ ("i", "Siete puntos y por d&oacute;nde empieza", "sintesis"),
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
  ("i", "C&oacute;mo est&aacute; construido", "introduccion"),
@@ -78,7 +78,7 @@ _IDX = [
  ("i", "3.4 &nbsp;Cu&aacute;nto cuesta este programa", "cap3b"),
  ("i", "3.5 &nbsp;De d&oacute;nde salen los fondos", "cap3b2"),
  ("i", "3.6 &nbsp;Qu&eacute; habr&iacute;a que vigilar", "cap3b3"),
- ("i", "3.7 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap3b3"),
+ ("i", "3.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap3b3"),
  ("g", "4 &middot; El mecanismo", None),
  ("i", "4.1 &nbsp;El l&iacute;mite legal: lo que un intendente no puede delegar", "cap4a"),
  ("i", "4.2 &nbsp;La deuda que la Provincia tiene con sus municipios", "cap4a"),
@@ -122,8 +122,8 @@ _IDX = [
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
- ("i", "La partida vecinal, el sistema de informaci&oacute;n y la base de valuaci&oacute;n", "ordenanza"),
- ("i", "Las siete ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
+ ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
+ ("i", "Las cinco ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
  ("g", "Glosario", None),
  ("i", "Dieciocho palabras, explicadas", "glosario"),
 ]
@@ -166,14 +166,9 @@ que surgen de haber escuchado los principales problemas y necesidades de los vec
 <p>El documento define entonces tres prioridades &mdash;Seguridad Ciudadana, Espacio P&uacute;blico y
 Ambiente, Innovaci&oacute;n&mdash;, diecinueve objetivos y setenta y siete metas numeradas. Es un plan
 serio, detallado y verificable.</p>
-<p>La p&aacute;gina anterior resume ad&oacute;nde lleva esa omisi&oacute;n. Ac&aacute; interesa otra cosa:
-<span class="sg">c&oacute;mo se comprueba</span>. Las seis palabras que faltan no son una impresi&oacute;n
-de lectura. El documento tiene trece p&aacute;ginas, est&aacute; publicado y se puede buscar dentro:
-empleo, vivienda, salud y pobreza no aparecen ni una vez.</p>
-<p>Esa clase de verificaci&oacute;n &mdash;abrir el documento del otro y contar&mdash; es el m&eacute;todo
-de todo lo que sigue. No hay en estas p&aacute;ginas una sola afirmaci&oacute;n sobre la gesti&oacute;n
-actual que no se pueda comprobar del mismo modo, con documentos que public&oacute; el propio
-Municipio.</p>
+<p>Y hay <b>seis palabras que no est&aacute;n en ninguna parte de ese plan</b>. No es una
+impresi&oacute;n de lectura: el documento tiene trece p&aacute;ginas, est&aacute; publicado y se puede
+buscar dentro.</p>
 </div>
 
 <div class="pull"><p>Las palabras empleo, vivienda, salud, educaci&oacute;n, pobreza y desarrollo

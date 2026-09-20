@@ -12,8 +12,8 @@ discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dic
 <p>Esto es un borrador de trabajo, no un proyecto presentado. Antes de ingresar al Concejo necesita
 revisi&oacute;n de un abogado municipalista: la redacci&oacute;n definitiva, los considerandos y la
 concordancia con el Digesto de San Isidro no est&aacute;n resueltos ac&aacute;.
-<b>Se publica igual porque un programa que promete una ordenanza y no muestra su texto est&aacute;
-pidiendo que le crean, que es exactamente lo que este documento dice no hacer.</b></p>
+<b>Se publica igual porque una ordenanza que no tiene texto no se puede discutir: sin el texto, el
+Concejo no tiene qu&eacute; votar y el vecino no tiene qu&eacute; leer.</b></p>
 </div>
 
 <h2>I &middot; Ordenanza de la Partida de Obra Vecinal</h2>

@@ -594,7 +594,7 @@ cosas que <span class="sg">le sacan discrecionalidad al intendente, no al Concej
 art&iacute;culos que hoy permiten al Ejecutivo disolver una asociaci&oacute;n vecinal no le cuesta un peso
 a nadie ni le quita nada a ning&uacute;n bloque. Es la prueba de si hay acuerdo, y llega en la primera
 sesi&oacute;n.</p>
-<p><b>Qu&eacute; pasa si no hay acuerdo.</b> La rampa del cap&iacute;tulo 4 no arranca, y este programa lo
+<p><b>Qu&eacute; pasa si no hay acuerdo.</b> La rampa no arranca, y este programa lo
 dir&aacute; con esas palabras en el informe del 31 de marzo, con el expediente y su estado. No hay plan
 alternativo por decreto: <span class="sg">un mecanismo que dependiera de un decreto no
 sobrevivir&iacute;a al intendente siguiente</span>, que es justamente lo que se busca evitar.</p>
@@ -1039,9 +1039,8 @@ qu&eacute;</span>. Cada secci&oacute;n est&aacute; marcada con una de estas cuat
 <tr><td class="l">Gesti&oacute;n</td><td class="n">No cuesta dinero. Cambia c&oacute;mo se administra lo que ya se gasta.</td></tr>
 <tr><td class="l">Gratis</td><td class="n">Cuesta cero. Publicar, informar, ordenar.</td></tr>
 </table>
-<div class="pull"><p>Un programa que promete fondos nuevos en todo es un programa que no ley&oacute; el
-presupuesto. El margen tiene un techo y est&aacute; declarado en el cap&iacute;tulo 3: las dos propuestas
-grandes ya ocupan el 41,4% del gasto flexible.</p></div>
+<div class="pull"><p>Las dos propuestas grandes ya ocupan el 41,4% del gasto flexible. Lo que sigue
+entra en el 58,6% restante, o no cuesta nada.</p></div>
 
 <h2><span class="n">5.2</span>D&oacute;nde va hoy cada peso</h2>
 <p class="tight">Antes de proponer, conviene ver el punto de partida. Gasto devengado 2025, por
@@ -1865,7 +1864,7 @@ cumplieron. Es el &uacute;nico de los tres que mira a una persona y no a un hech
 <p><b>4 &middot; Y la c&aacute;mara apuntando tambi&eacute;n al Municipio.</b> La inspecci&oacute;n
 municipal se transmite en vivo y cualquiera puede verla: que la inspecci&oacute;n fue real, que pas&oacute;
 donde dice que pas&oacute; y que no hubo coima. <span class="sg">El mismo instrumento que mira al vecino
-mira al inspector</span>, y est&aacute; desarrollado en la secci&oacute;n 5 de este cap&iacute;tulo.</p>
+mira al inspector</span>, y m&aacute;s abajo en esta misma secci&oacute;n est&aacute; desarrollado.</p>
 <p><b>Y una precisi&oacute;n de competencia que conviene no saltear.</b> La seguridad p&uacute;blica es
 competencia exclusiva de la Provincia por la Ley 12.154: <span class="sg">el Municipio opera
 c&aacute;maras como colaborador, no como fuerza de seguridad</span>. Cuanto m&aacute;s se aleje la
@@ -1943,8 +1942,8 @@ camino, y es el judicial.</p></div>
 
 <h3>5. La inspecci&oacute;n municipal, transmitida en vivo</h3>
 <div class="cols">
-<p><b>Es la cuarta capacidad de la secci&oacute;n 2, aplicada a los agentes del propio
-Municipio.</b> El inspector transmite en vivo mientras inspecciona, y cualquiera puede abrir la
+<p><b>Es la cuarta de las capacidades de c&aacute;mara de esta secci&oacute;n, aplicada a los agentes
+del propio Municipio.</b> El inspector transmite en vivo mientras inspecciona, y cualquiera puede abrir la
 aplicaci&oacute;n y ver que la inspecci&oacute;n fue real, que pas&oacute; donde dice que pas&oacute; y
 que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute;
 transmitiendo.</span></p>
@@ -2219,9 +2218,10 @@ pregunta si puede poner ah&iacute; lo que tiene en la cabeza. El sistema cruza z
 y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
 puede cambiar de idea sin perder dinero.</p>
 <p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
-momento discrecional que sobra.</b> Por eso va grabada, con acta y fotos publicadas, y el comerciante
-puede objetar por escrito y recibir respuesta fundada. <span class="sg">No en vivo</span>: adentro de un
-local hay clientes y documentaci&oacute;n. Grabada y publicada despu&eacute;s.</p>
+momento discrecional que sobra.</b> Por eso se transmite en vivo, como toda inspecci&oacute;n municipal
+(5.7), y el comerciante puede objetar por escrito y recibir respuesta fundada.
+<span class="sg">Adentro de un local hay clientes y documentaci&oacute;n</span>, y por eso la
+reglamentaci&oacute;n define c&oacute;mo se resguarda a quien no es parte del acto.</p>
 <p><b>Programada, no aleatoria.</b> El sistema la agenda y el comerciante sabe cu&aacute;ndo va el
 inspector. Y el asistente compara inspecciones del mismo rubro y marca las que se apartan del
 patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los insumos.</p>
@@ -2416,11 +2416,11 @@ municipio que le pide al vecino que rinda una obra tiene que poder decir qui&eac
 </div>
 
 <h2><span class="n">5.13</span>Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad <span class="tag v">Gesti&oacute;n</span></h2>
-<p class="lead">Este cap&iacute;tulo dec&iacute;a antes que ac&aacute; no ten&iacute;a propuesta y lo
-llamaba su hueco m&aacute;s grande. Para un programa de gobierno eso es indefendible, as&iacute; que
-fuimos a buscar qu&eacute; hay. Lo que apareci&oacute; alcanza para escribir la propuesta.</p>
+<p class="lead">Cuatro &aacute;reas que comparten un solo programa presupuestario, dentro de la
+funci&oacute;n que m&aacute;s cay&oacute; en 2025. Al abrirlas una por una aparecieron cuatro problemas
+distintos, y cada uno necesita una cosa distinta.</p>
 <div class="cols">
-<p><b>Empecemos por el dato que este documento no dec&iacute;a en ninguna parte:</b> San Isidro
+<p><b>Empecemos por el dato que ordena todo lo dem&aacute;s:</b> San Isidro
 <span class="sg">ya tiene m&aacute;s viejos que chicos</span>. Hasta 14 a&ntilde;os hay 51.388 personas,
 el 17,4%; de 65 y m&aacute;s hay 52.769, el 17,8%. No es una proyecci&oacute;n: es el Censo 2022.</p>
 <p><b>Y no es un matiz: es el partido m&aacute;s envejecido de su regi&oacute;n.</b> Ese 17,8% se
@@ -2541,7 +2541,7 @@ afuera, y en cada caso hay una raz&oacute;n que se puede discutir.</p>
 <tr class="hd"><th>&Aacute;rea</th><th>Por qu&eacute; no est&aacute;</th><th class="r">D&oacute;nde queda</th></tr>
 <tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las tres prioridades de la reasignaci&oacute;n</td></tr>
 <tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial y de ACUMAR seg&uacute;n la cuenca</td></tr>
-<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13. Era el hueco m&aacute;s grande de este cap&iacute;tulo y ahora tiene secci&oacute;n propia</td></tr>
+<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: cuatro &aacute;reas con una sola partida compartida, y una propuesta para cada una</td></tr>
 <tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema es el r&eacute;gimen de habilitaci&oacute;n, no el subsidio</td></tr>
 <tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin propuesta propia. No se propone recortarlo: se se&ntilde;ala la comparaci&oacute;n</td></tr>
 <tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa</td></tr>
@@ -2571,8 +2571,8 @@ licit&oacute; dos veces y nunca se adjudic&oacute;: corre sobre un contrato de s
 prorrogado sin fecha de cierre.</li>
 <li>Ambiente es el 0,4% y va al 1,5% por reasignaci&oacute;n; educaci&oacute;n vuelve al nivel real de
 2024 y el Fondo Educativo se publica escuela por escuela.</li>
-<li>Siete medidas de transparencia cuestan cero y se cumplen en cien d&iacute;as. Hoy no hay ninguna
-cumplida.</li>
+<li>Siete cosas que el Municipio ya public&oacute; alguna vez est&aacute;n hoy ca&iacute;das,
+escondidas o incompletas, y reponerlas cuesta cero. Por eso son mantenimiento y no una meta.</li>
 </ol>
 <p><b>Todo lo que este cap&iacute;tulo promete est&aacute; costeado en el cap&iacute;tulo 3 y fechado en el
 6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de
@@ -2829,7 +2829,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <tr><td class="l">Queda afuera el que no tiene tel&eacute;fono o conexi&oacute;n</td>
 <td>Un mecanismo que vive en una aplicaci&oacute;n puede excluir exactamente a quien este programa quiere incluir. <b>Mitigaci&oacute;n:</b> la asamblea sigue siendo presencial y el voto se emite ah&iacute;; la aplicaci&oacute;n informa, no reemplaza. Los centros con equipamiento del 5.3 y la mesa de ayuda del equipo (4.11) existen por esta raz&oacute;n. <b>Y el relevamiento de conectividad del 5.4 es el que dice cu&aacute;n grande es el problema, porque hoy no se sabe.</b></td></tr>
 <tr><td class="l">El dato territorial resulta m&aacute;s caro de construir de lo previsto</td>
-<td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.5) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las otras siete medidas de transparencia no dependen de &eacute;l.</td></tr>
+<td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.5) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las siete filas del relevamiento de transparencia no dependen de &eacute;l.</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> tres de los doce no tienen mitigaci&oacute;n propia y est&aacute; dicho en
 la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>
