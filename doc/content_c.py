@@ -111,7 +111,7 @@ obra</span>.</p>
 presupuesto. El gasto en personal y en servicios est&aacute; comprometido por contratos y convenios; la
 inversi&oacute;n se decide cada a&ntilde;o. Y porque es exactamente el rubro que resuelve lo que el
 cap&iacute;tulo 1 documenta: cloacas, gas de red, desag&uuml;es, veredas, iluminaci&oacute;n.</p>
-<p><b>Por qu&eacute; se empieza chico.</b> La gradualidad de cuatro a&ntilde;os no es prudencia
+<p><b>Por qu&eacute; se empieza en escala reducida.</b> La gradualidad de cuatro a&ntilde;os no es prudencia
 ret&oacute;rica: es el tiempo que tardan las comisiones en constituirse, capacitarse y demostrar capacidad
 de gesti&oacute;n.</p>
 <p>Y hay una raz&oacute;n pr&aacute;ctica que pesa m&aacute;s: <span class="sg">si el a&ntilde;o 1 sale
@@ -225,7 +225,7 @@ reciben, y reciben m&aacute;s de lo que reciben hoy: hoy ning&uacute;n barrio de
 Acassuso a 74.832 en Boulogne Sur Mer. Es una consecuencia de haber respetado el territorio, no un
 descuido: son las seis localidades reales del partido, con los l&iacute;mites que tienen.</p>
 <p><span class="sg">El tama&ntilde;o desigual no desequilibra el reparto</span>, porque la f&oacute;rmula
-pondera necesidad contada. Acassuso, la m&aacute;s chica y la de menor NBI, recibe 827 millones: alcanzan
+pondera necesidad contada. Acassuso, la m&aacute;s peque&ntilde;a y la de menor NBI, recibe 827 millones: alcanzan
 de sobra para las 102 conexiones de cloaca y las 936 de gas que le faltan.</p>
 </div>
 """)
@@ -389,7 +389,7 @@ qui&eacute;n controla sino qui&eacute;n puede ver.</p>
 <p class="tight">La capa 2 permite que la asociaci&oacute;n vecinal ejecute la obra que la comisi&oacute;n
 prioriz&oacute;. Eso abre un problema que hay que cerrar en la ordenanza, no despu&eacute;s.</p>
 <div class="cols">
-<p><b>La literatura sobre conflictos de inter&eacute;s lo dice sin vueltas:</b> cuanto mayor es la
+<p><b>La literatura sobre conflictos de inter&eacute;s es expl&iacute;cita:</b> cuanto mayor es la
 participaci&oacute;n de alguien en la ejecuci&oacute;n del presupuesto, mayor es la probabilidad de que
 se perciba un conflicto de inter&eacute;s. <span class="sg">Y basta con que se perciba para que el
 mecanismo pierda legitimidad</span>, aunque no haya delito.</p>
@@ -442,7 +442,7 @@ es sortear.</p>
 quienes aceptan, se selecciona un panel estratificado por localidad, edad, g&eacute;nero y nivel
 educativo, de modo que refleje al partido en miniatura. El panel escucha a t&eacute;cnicos, delibera
 durante varias sesiones y produce una recomendaci&oacute;n fundada.</p>
-<p><b>Funciona en lugares m&aacute;s chicos que San Isidro.</b> Ostbelgien, la regi&oacute;n
+<p><b>Funciona en lugares m&aacute;s peque&ntilde;os que San Isidro.</b> Ostbelgien, la regi&oacute;n
 german&oacute;fona de B&eacute;lgica, tiene 77.000 habitantes &mdash;<span class="sg">cuatro veces menos
 que este partido</span>&mdash; y desde 2019 sostiene el primer Consejo Ciudadano permanente del mundo,
 con un cuerpo sorteado que fija la agenda y otro que elabora las recomendaciones. Lisboa y Par&iacute;s
@@ -518,7 +518,7 @@ participaci&oacute;n en s&iacute;: es el dise&ntilde;o.</b></p>
 <div class="callout a">
 <div class="clabel">Lo que sale mal en estos sistemas, y c&oacute;mo lo enfrenta este dise&ntilde;o</div>
 <p><b>Se apagan.</b> Es el modo de falla m&aacute;s com&uacute;n. En Reikiavik la participaci&oacute;n
-cay&oacute; de 8,1% a 7,3% entre 2012 y 2015; en Walbrzych, Polonia, con el sistema andando desde
+cay&oacute; de 8,1% a 7,3% entre 2012 y 2015; en Walbrzych, Polonia, con el sistema en funcionamiento desde
 2013, bajan a&ntilde;o a a&ntilde;o las propuestas presentadas y los votos.
 <b>Un panel sorteado no depende de que la gente se entere y vaya</b>: se invita, se convoca y se paga.</p>
 <p><b>Los capturan grupos organizados.</b> En Cambridge, Massachusetts, la cr&iacute;tica es que el
@@ -728,7 +728,7 @@ las dos flechas de la izquierda de cada circuito.</p>
 llevan el 54,5% de lo contratado. Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
 hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
 <p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, la
-plata entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;que era la mitad de
+dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;que era la mitad de
 los adjudicatarios en la &uacute;ltima medici&oacute;n disponible&mdash;.</p>
 <p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: quien se
 form&oacute; en el Centro de Formaci&oacute;n Laboral consigue trabajo en la obra de su propia zona.
@@ -925,11 +925,11 @@ son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida qu
 <p><b>Y conviene la comparaci&oacute;n, para que la cifra no asuste.</b> 1.273 millones es
 <span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;. El sistema que publica todo lo que
-este programa promete sale menos de la doceava parte de lo que sale embellecer.</p>
+este programa promete cuesta menos de la doceava parte de lo que cuesta embellecer.</p>
 <p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de las otras
 &aacute;reas &mdash;anal&iacute;tica de seguridad, habilitaciones, salud, automatizaci&oacute;n de
 tareas de la planta&mdash; los paga la partida de contrataci&oacute;n del cap&iacute;tulo 5, que es otra
-plata y otro destino.</p>
+fondos y otro destino.</p>
 <p><b>Y se licita.</b> El monto se presupuesta y se licita antes de comprometerse, igual que las otras
 estimaciones del cap&iacute;tulo 3. Lo que queda comprometido ac&aacute; no es el n&uacute;mero: es que
 el sistema exista y que lo construya gente del partido.</p>
@@ -1147,7 +1147,7 @@ convenios de traspaso de sus CFL; ac&aacute; alcanza con acompa&ntilde;ar lo que
 <div class="cols">
 <p><b>El 4.0 de 2015 era f&aacute;brica. El de hoy es software.</b> Cuando se acu&ntilde;&oacute; la
 expresi&oacute;n, industria 4.0 significaba sensores, automatizaci&oacute;n y manufactura. Formar en eso
-hoy es formar para una demanda que se achica.</p>
+hoy es formar para una demanda que se contrae.</p>
 <p><b>Y el propio centro ya empez&oacute; a girar.</b> Lanz&oacute; quince cursos de inform&aacute;tica
 bajo el paraguas de la econom&iacute;a del conocimiento, tiene un &aacute;rea de inform&aacute;tica con un
 curso de programador, y firm&oacute; un convenio de colaboraci&oacute;n t&eacute;cnica y
@@ -1260,7 +1260,7 @@ Adelina 94 y Acassuso 19</b>. Cinco sedes fijas y Acassuso itinerante, porque di
 a&ntilde;o no justifican un edificio. El redondeo del &iacute;ndice suma una vacante m&aacute;s que las
 928 que el presupuesto compra.</p>
 <p><b>Y es el n&uacute;mero que m&aacute;s mueve todo, as&iacute; que conviene decirlo:</b> si el costo
-por persona resulta menor, se forma a m&aacute;s gente con la misma plata. Lo que no se hace es al
+por persona resulta menor, se forma a m&aacute;s gente con el mismo dinero. Lo que no se hace es al
 rev&eacute;s &mdash;bajar el costo para poder anunciar m&aacute;s egresados&mdash;, que es exactamente
 lo que produce certificados que nadie mira.</p>
 </div>
@@ -1299,7 +1299,7 @@ pero la advertencia queda escrita para que nadie la escriba por nosotros.</p>
      "Boulogne y B&eacute;ccar concentran 15.168, el 60,3% del total del partido.",
      "ex19.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.",
-     "En cantidad de hogares, no en porcentaje: un porcentaje chico sobre una zona grande sigue siendo mucha gente.") + """
+     "En cantidad de hogares, no en porcentaje: un porcentaje bajo sobre una zona grande sigue siendo mucha gente.") + """
 <h3>La cuarta carencia, la que el Censo no mide</h3>
 <div class="cols">
 <p>El Censo 2022 cuenta cloacas, gas, agua y hacinamiento. <span class="sg">No cuenta
@@ -1613,7 +1613,7 @@ vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b
 <p><b>Ah&iacute; est&aacute; la distancia entre comprar un tom&oacute;grafo y que el sistema funcione.</b>
 El equipamiento se inaugura y se fotograf&iacute;a. El turno, el insumo y la cama no.</p>
 </div>
-<h3>El Municipio ya tiene turnos digitales andando. No los us&oacute; para los hospitales</h3>
+<h3>El Municipio ya tiene turnos digitales en funcionamiento. No los us&oacute; para los hospitales</h3>
 <div class="cols">
 <p><b>El dato es este, y no necesita adjetivos.</b> <span class="sg">No hay turno m&eacute;dico en
 l&iacute;nea en ning&uacute;n efector de salud humana del partido.</span> Ni en los tres hospitales, ni
@@ -1812,7 +1812,7 @@ y cuasiexperimentales&mdash;: cerca del <b>80% report&oacute; reducciones signif
 En Dallas, el delito violento cay&oacute; <b>11% en los puntos tratados</b> durante el primer a&ntilde;o,
 sin desplazamiento hacia las zonas vecinas.</p>
 <p><b>Y el delito se concentra donde uno no lo esperar&iacute;a de concentrado</b>: unos pocos lugares
-chicos generan la mitad de todos los hechos. <span class="sg">Es la misma l&oacute;gica que el
+peque&ntilde;os generan la mitad de todos los hechos. <span class="sg">Es la misma l&oacute;gica que el
 cap&iacute;tulo 1 aplica al d&eacute;ficit de infraestructura</span>, que no est&aacute; repartido sino
 concentrado en nueve radios censales.</p>
 <p><b>No es mano dura.</b> Un estudio de 2025 encontr&oacute; que en las zonas tratadas con enfoque
@@ -2034,7 +2034,7 @@ infraestructura escolar y formaci&oacute;n laboral.</p>
 </div>
 <h3>Lo que un intendente s&iacute; puede hacer en educaci&oacute;n</h3>
 <p class="tight">No puede cambiar el contenido de las clases ni nombrar docentes: eso es provincial.
-Puede hacer todo lo que pasa fuera del aula, y ah&iacute; hay bastante.</p>
+Puede hacer todo lo que pasa fuera del aula, y ese margen es amplio.</p>
 <div class="cols">
 <p><b>1 &middot; Apoyo escolar donde los chicos se est&aacute;n quedando atr&aacute;s.</b> Es la
 pol&iacute;tica educativa municipal por excelencia y funciona en todo el pa&iacute;s: la capital de
@@ -2088,7 +2088,7 @@ trabajo, y las dos cosas se deciden en el mismo mapa.</p>
 <p><b>Cultura devenga 1.360,4 millones al a&ntilde;o: el 0,42% del gasto municipal</b>, y comparte
 cr&eacute;dito con turismo sin desagregar. Al lado, Deporte y Recreaci&oacute;n devenga 3.813,3
 millones, <span class="sg">2,8 veces m&aacute;s</span>, y m&aacute;s que agua potable y alcantarillado.
-No es que falte plata: falta d&oacute;nde.</p>
+No es que falten fondos: falta d&oacute;nde.</p>
 <p><b>Y ac&aacute; est&aacute; el hallazgo, que no es de presupuesto.</b> El r&eacute;gimen que regula
 la m&uacute;sica en vivo en San Isidro es de <b>1970</b> y sigue publicado en el Digesto municipal.
 <span class="sg">Lo que sigue no es una interpretaci&oacute;n: es lo que est&aacute; escrito
@@ -2113,11 +2113,11 @@ confirmarla contra las normas posteriores. <b>El hallazgo es que est&aacute;n ah
 nadie los revis&oacute; en cincuenta y seis a&ntilde;os.</p>
 </div>
 <div class="cols">
-<p><b>Y no hay categor&iacute;a para espacios chicos.</b> El marco de habilitaciones de 2024 y su decreto
+<p><b>Y no hay categor&iacute;a para espacios peque&ntilde;os.</b> El marco de habilitaciones de 2024 y su decreto
 reglamentario tienen los rubros &laquo;caf&eacute; concert&raquo; y &laquo;centro cultural&raquo;, los
 dos con licencia e inspecci&oacute;n previa y <span class="sg">sin umbral de aforo ni r&eacute;gimen
 simplificado</span>. Una sala de ciento cincuenta personas cumple con lo mismo que un boliche.</p>
-<p><b>Ah&iacute; est&aacute; el costo que nadie ve.</b> Habilitar sale tanto que el &uacute;nico lugar
+<p><b>Ah&iacute; est&aacute; el costo que nadie ve.</b> Habilitar cuesta tanto que el &uacute;nico lugar
 donde conviene hacer un evento es uno grande y caro, y entonces la entrada es inaccesible.
 <b>No se puede velar s&oacute;lo por el vecino que se acuesta a las nueve.</b></p>
 <p><b>La propuesta es adherir, no inventar.</b> La Provincia sancion&oacute; en 2021 la <b>Ley
@@ -2217,7 +2217,7 @@ discrecionalidad</span>, porque la respuesta depende de a qui&eacute;n le pregun
 <p><b>Consulta previa, desde la c&aacute;mara del tel&eacute;fono.</b> El vecino apunta al local y
 pregunta si puede poner ah&iacute; lo que tiene en la cabeza. El sistema cruza zonificaci&oacute;n, rubro
 y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
-puede cambiar de idea sin perder plata.</p>
+puede cambiar de idea sin perder dinero.</p>
 <p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
 momento discrecional que sobra.</b> Por eso va grabada, con acta y fotos publicadas, y el comerciante
 puede objetar por escrito y recibir respuesta fundada. <span class="sg">No en vivo</span>: adentro de un
@@ -2480,7 +2480,7 @@ municipal.</b> Es <b>menos</b> que el programa de abordaje de las adicciones, y
 <p><b>Y ac&aacute; va la contra-evidencia, porque corresponde.</b> A diferencia de g&eacute;nero,
 discapacidad s&iacute; tiene infraestructura visible: dos sedes, dispositivos propios y una junta
 evaluadora municipal que emite los certificados del partido. <b>El problema no es que no exista: es que
-no tiene plata.</b></p>
+no tiene fondos.</b></p>
 </div>
 <h3>Lo que el Municipio tiene y nadie m&aacute;s tiene</h3>
 <div class="cols">
@@ -2600,9 +2600,10 @@ C6 = dict(id="cap6", runhead=RH, html="""
 <div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
-<p class="lead">Diecis&eacute;is compromisos, y ninguno es publicar un dato ni acomodar una
-p&aacute;gina. <span class="sg">Cada uno es un acto de gobierno o algo que un vecino puede ver que
-arranc&oacute;.</span></p>
+<p class="lead">A fines de marzo ya arranc&oacute; la primera ronda de asambleas en las seis zonas,
+abri&oacute; el primer centro de apoyo escolar y hay ocho ordenanzas en el Concejo.
+<span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que un
+vecino puede ver que empez&oacute;.</span></p>
 <div class="cols">
 <p><b>El plazo no es una cifra redonda: es una fecha.</b> El mandato empieza el 10 de diciembre, de modo
 que los cien d&iacute;as caen a fines de marzo. <b>Y ah&iacute; es cuando estos mecanismos convocan.</b>
@@ -2636,7 +2637,7 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 <tr class="hi"><td class="l">13 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y n&oacute;mina de asistentes publicadas</td></tr>
 <tr class="hi"><td class="l">14 &middot; La primera cohorte inscripta en las seis sedes de formaci&oacute;n que sostiene el Municipio</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
 <tr class="hi"><td class="l">15 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
-<tr class="hi"><td class="l">16 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n andando: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">16 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n en funcionamiento: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> los seis primeros van juntos a la primera sesi&oacute;n porque son el
 andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los
@@ -2676,7 +2677,7 @@ renovado. Reci&eacute;n el 4 llega a la mitad.</p>
 siguiente. La rampa se congela en el escal&oacute;n alcanzado y el informe del 31 de marzo dice por
 qu&eacute;. <span class="sg">Una rampa que avanza aunque el a&ntilde;o anterior haya fallado no es una
 rampa: es un calendario.</span></p>
-<p><b>Por qu&eacute; empezar en 12,5% y no en 5% ni en 25%.</b> En 5% la partida de una zona chica
+<p><b>Por qu&eacute; empezar en 12,5% y no en 5% ni en 25%.</b> En 5% la partida de una zona peque&ntilde;a
 ser&iacute;a demasiado poco para una obra real, y el mecanismo se probar&iacute;a con nada. En 25% un
 fracaso del primer a&ntilde;o comprometer&iacute;a un cuarto de la obra p&uacute;blica del partido. Un
 octavo es el punto donde la prueba es significativa y el error es reparable.</p>
@@ -2746,7 +2747,7 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
 <tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las ocho ordenanzas del 6.1: partida vecinal, c&aacute;maras, base de valuaci&oacute;n, partidas propias, derogaci&oacute;n de los arts. 8 a 10, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">La aplicaci&oacute;n y los expedientes</td></tr>
-<tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico andando</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Entra la ordenanza que regula el sistema de c&aacute;maras: usos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de accesos. No cuesta un peso y el sistema ya opera</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
@@ -2758,7 +2759,7 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025 y se publica el Fondo Educativo obra por obra</td><td class="n">Ejecuci&oacute;n del Fondo, publicada</td></tr>
 <tr><td class="l">Mes 15</td><td>Primer <i>Informe de cumplimiento del programa de gobierno</i>, 31 de marzo</td><td class="n">El informe, con una fila por meta</td></tr>
-<tr><td class="l">Meses 12&ndash;18</td><td>Salud en la aplicaci&oacute;n: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica andando</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 12&ndash;18</td><td>Salud en la aplicaci&oacute;n: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, publicados de manera continua</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa e inspecci&oacute;n grabada, y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2: 14.454 M, el 25%. Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
@@ -2816,7 +2817,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio; se declara.</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>
-<td>Es la pieza de la que cuelga el resto: sin ella el vecino vota sobre documentos que no puede leer, y el mecanismo se apaga como se apag&oacute; en Reikiavik y en Wa&#322;brzych. <b>Mitigaci&oacute;n:</b> se entrega por partes y la primera versi&oacute;n es la m&aacute;s chica &mdash;partida vecinal, seguimiento de obra y asistente sobre lo que ya est&aacute; publicado&mdash;, de modo que el primer ciclo de asambleas no dependa del sistema completo. Y el monto sale de una partida que ya existe (4.11), no de fondos nuevos.</td></tr>
+<td>Es la pieza de la que cuelga el resto: sin ella el vecino vota sobre documentos que no puede leer, y el mecanismo se apaga como se apag&oacute; en Reikiavik y en Wa&#322;brzych. <b>Mitigaci&oacute;n:</b> se entrega por partes y la primera versi&oacute;n es la m&iacute;nima &mdash;partida vecinal, seguimiento de obra y asistente sobre lo que ya est&aacute; publicado&mdash;, de modo que el primer ciclo de asambleas no dependa del sistema completo. Y el monto sale de una partida que ya existe (4.11), no de fondos nuevos.</td></tr>
 <tr><td class="l">El asistente contesta mal</td>
 <td>Una respuesta equivocada sobre en qu&eacute; se gast&oacute; una partida vale menos que no tener asistente, porque se propaga. <b>Mitigaci&oacute;n:</b> responde s&oacute;lo sobre lo publicado y <b>siempre muestra el documento del que sali&oacute;</b>, as&iacute; que la respuesta se puede verificar en el mismo lugar donde se lee; y si el dato no existe, lo dice. La auditor&iacute;a la hacen las universidades del partido (4.11). <b>Lo que no se promete es que nunca se equivoque.</b></td></tr>
 <tr><td class="l">Queda afuera el que no tiene tel&eacute;fono o conexi&oacute;n</td>

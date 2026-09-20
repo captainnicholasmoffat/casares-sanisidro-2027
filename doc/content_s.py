@@ -3,70 +3,71 @@ from content_a import RH, exhead
 
 SINTESIS = dict(id="sintesis", runhead=RH, html="""
 <h1>Este programa, en una p&aacute;gina</h1>
-<div class="stand">San Isidro no necesita m&aacute;s fondos ni permiso de nadie para cambiar lo que este
-documento se&ntilde;ala. Necesita decidir distinto, con lo que ya tiene, y aceptar que lo midan.</div>
+<div class="stand">Que decida sobre la obra p&uacute;blica quien vive donde falta la obra p&uacute;blica.
+San Isidro no necesita m&aacute;s fondos ni permiso de nadie para eso: necesita decidir distinto, con lo
+que ya tiene, y aceptar que lo midan.</div>
 
-<p class="lead">Este programa nace de una sola pregunta, y de una omisi&oacute;n que se puede
-verificar en diez minutos: el plan de gobierno vigente del Municipio de San Isidro no menciona las
-palabras empleo, vivienda, salud, educaci&oacute;n, pobreza ni desarrollo social. Lo que sigue es lo que
-proponemos hacer con esa omisi&oacute;n, y con qu&eacute; fondos.</p>
+<p class="lead">El punto de partida se verifica en diez minutos. El plan de gobierno vigente del
+Municipio tiene setenta y siete metas numeradas y no menciona las palabras empleo, vivienda, salud ni
+educaci&oacute;n. Y hoy el Municipio destina el dinero a lo que se ve antes que a lo que falta:
+<b>alumbrado p&uacute;blico recibe 10.313 millones y agua y cloaca 3.320</b>, mientras 25.165 hogares
+cocinan con garrafa.</p>
 
+<h2>Qu&eacute; proponemos hacer</h2>
 <ol class="n">
-<li><b>El plan vigente no menciona a la gente.</b> Tres prioridades, diecinueve objetivos y setenta y
-siete metas numeradas, y ninguna sobre empleo, vivienda, salud o educaci&oacute;n. No es un
-incumplimiento: es el cumplimiento exacto de un plan donde esas palabras no figuran.
-<i>(Cap&iacute;tulo 2)</i></li>
+<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Son
+28.908 millones al a&ntilde;o, y no son gasto nuevo: es reasignaci&oacute;n de <span class="sg">qui&eacute;n
+decide</span>. Y donde la zona re&uacute;na el 60% de adhesi&oacute;n, su asociaci&oacute;n vecinal
+ejecuta la obra como parte contratante, con un mecanismo que la Ley Org&aacute;nica habilita desde 1976
+y que otro municipio bonaerense ya usa. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Y no es un problema de plata.</b> De 106 municipios bonaerenses, San Isidro es el que
-m&aacute;s invierte en obra p&uacute;blica despu&eacute;s de otros tres, y est&aacute; entre los veinte
-que menos gastan en sueldos. <b>El d&eacute;ficit de servicios no se explica por el tama&ntilde;o del
-presupuesto: se explica por c&oacute;mo se reparte.</b> <i>(Cap&iacute;tulos 1 y 2)</i></li>
+<li><b>Que el reparto lo fije una f&oacute;rmula escrita, y no el intendente de turno.</b> Mitad por
+poblaci&oacute;n y mitad por necesidad contada en hogares. Boulogne Sur Mer y B&eacute;ccar son el 46,8%
+del partido y concentran el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca:
+<b>ah&iacute; es donde la f&oacute;rmula manda el dinero</b>. <i>(Cap&iacute;tulos 1 y 4)</i></li>
 
-<li><b>La mitad del partido vive donde est&aacute; el problema.</b> Boulogne Sur Mer y B&eacute;ccar son
-el 46,8% de la poblaci&oacute;n y concentran el 60% de los hogares sin gas de red y el 71% de los que no
-tienen cloaca. No es una minor&iacute;a que se pueda postergar. <i>(Cap&iacute;tulo 1)</i></li>
+<li><b>Que el empleo y la vivienda dejen de ser el 0,15% del presupuesto.</b> Pasan de 505,7 a 7.730,9
+millones anuales, quince veces lo de hoy. Con eso se forman <b>928 personas por a&ntilde;o</b>, con un
+instructor que las acompa&ntilde;a hasta el empleo y con t&iacute;tulo de validez oficial, para que lo
+aprendido sirva tambi&eacute;n fuera del Municipio. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>El dinero va a lo que se ve, no a lo que falta.</b> Alumbrado p&uacute;blico recibe 10.313
-millones y agua y cloaca 3.320. El 0,05% del presupuesto va a empleo y el 0,10% a vivienda: 572 y 1.127
-pesos por habitante por a&ntilde;o, en un distrito con 25.165 hogares que cocinan con garrafa.
-<i>(Cap&iacute;tulo 1)</i></li>
+<li><b>Que el Municipio tenga un sistema donde el dato entre el d&iacute;a que se genera.</b> No es una
+aplicaci&oacute;n para votar una vez al a&ntilde;o: es el sistema de informaci&oacute;n del Municipio.
+Turno m&eacute;dico, ocupaci&oacute;n de guardias, precio de cada insumo, avance de cada obra, mercado
+laboral, y un asistente que contesta en castellano sobre todo lo publicado y muestra de d&oacute;nde lo
+sac&oacute;. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Hay con qu&eacute;, y no hay que pedirle permiso a nadie.</b> El Municipio se financia en un 75%
-con recursos propios. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o &mdash;el 8,3%
-del gasto que se puede reasignar libremente&mdash; y se financia actualizando una base de
-valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota ni tomar deuda. <i>(Cap&iacute;tulo 3)</i></li>
+<li><b>Que lo que hoy funciona sin norma la tenga.</b> Las 2.646 c&aacute;maras con an&aacute;lisis
+autom&aacute;tico que operan sin una sola ordenanza que las regule; el registro obligatorio en cada acto
+de fiscalizaci&oacute;n, sin el cual el acta no vale; las asociaciones de parque, que firman la
+recepci&oacute;n de la obra en su espacio. <i>(Cap&iacute;tulos 4 y 5)</i></li>
 
-<li><b>La mitad de la obra p&uacute;blica la deciden los vecinos, en cuatro a&ntilde;os.</b> 28.908
-millones anuales, que no son gasto nuevo sino reasignaci&oacute;n de qui&eacute;n decide. Y las
-asociaciones vecinales ejecutan esas obras como parte contratante, con un mecanismo que la Ley
-Org&aacute;nica habilita desde 1976 y que otro municipio bonaerense ya usa. <i>(Cap&iacute;tulo 4)</i></li>
+<li><b>Que g&eacute;nero y discapacidad tengan partida propia.</b> Hoy g&eacute;nero no tiene programa
+presupuestario y discapacidad devenga el 0,020% del gasto municipal. No se puede auditar lo que no tiene
+partida. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Nada de esto se aprueba solo, y lo decimos.</b> El Concejo Deliberante tiene veinticuatro bancas
-repartidas en diez bloques; hacen falta trece votos y ning&uacute;n bloque tiene m&aacute;s de cuatro.
-Por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable: no reforma la Ley Org&aacute;nica, no
-pide facultades nuevas y no compite con el Concejo. <i>(Cap&iacute;tulo 4)</i></li>
+<li><b>Y que todo esto se pague sin subir una tasa ni tomar deuda.</b> Cuesta 7.225,2 millones de fondos
+nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash; y sale
+de actualizar una base de valuaci&oacute;n que es de 2008. <span class="sg">La al&iacute;cuota no se
+toca.</span> <i>(Cap&iacute;tulo 3)</i></li>
 
-<li><b>Catorce metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, con la fuente
-p&uacute;blica que comprueba cada una, y un informe de cumplimiento cada 31 de marzo. Auditamos un plan
-de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.
-<i>(Cap&iacute;tulo 6)</i></li>
+<li><b>Catorce metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, con la
+fuente p&uacute;blica que comprueba cada una y un informe de cumplimiento cada 31 de marzo.
+<b>Y nada de esto se aprueba solo:</b> el Concejo tiene veinticuatro bancas en diez bloques y hacen
+falta trece votos, por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable y no pide
+facultades nuevas para el intendente. <i>(Cap&iacute;tulos 4 y 6)</i></li>
 </ol>
-
-<p>Este programa, en una l&iacute;nea: <b>que decida sobre la obra p&uacute;blica quien vive donde falta la
-obra p&uacute;blica, y que el empleo y la vivienda dejen de ser el 0,15% del presupuesto</b>,
-financiado actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</p>
 
 <div class="callout a">
 <div class="clabel">Por d&oacute;nde empieza, y qu&eacute; se puede comprobar a los cien d&iacute;as</div>
-<p>Diecis&eacute;is compromisos, ninguno de fondos nuevos y <b>ninguno de publicar un dato</b>. En la
-primera sesi&oacute;n ordinaria entran ocho ordenanzas: la de la partida vecinal con su f&oacute;rmula
-escrita, la que regula las 2.646 c&aacute;maras que hoy operan sin norma, la que actualiza la base de
-valuaci&oacute;n de 2008, y la que deroga los art&iacute;culos que hoy permiten al intendente disolver
-una asociaci&oacute;n vecinal.</p>
-<p>Y a fines de marzo ya <b>arranc&oacute; la primera ronda de asambleas en las seis zonas</b>, est&aacute;
-inscripta la primera cohorte de formaci&oacute;n, abri&oacute; el primer centro de apoyo escolar
-&mdash;hoy hay cero&mdash; y andan los dos primeros m&oacute;dulos de la aplicaci&oacute;n.
-<span class="sg">El cap&iacute;tulo 6 los lista los diecis&eacute;is, con el documento que comprueba
-cada uno.</span></p>
+<p>A fines de marzo ya <b>arranc&oacute; la primera ronda de asambleas en las seis zonas</b>,
+abri&oacute; el primer centro de apoyo escolar &mdash;hoy hay cero&mdash;, est&aacute; inscripta la
+primera cohorte de formaci&oacute;n y funcionan los dos primeros m&oacute;dulos de la
+aplicaci&oacute;n.</p>
+<p>Y hay <b>ocho ordenanzas en el Concejo</b>, ingresadas en la primera sesi&oacute;n ordinaria: la de la
+partida vecinal con su f&oacute;rmula escrita, la que regula las c&aacute;maras, la que actualiza la base
+de valuaci&oacute;n y la que deroga los art&iacute;culos que hoy permiten al intendente disolver una
+asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is compromisos y el
+cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
 </div>
 """)

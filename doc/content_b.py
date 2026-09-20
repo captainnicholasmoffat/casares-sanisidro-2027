@@ -168,7 +168,7 @@ figuran.</span></p>
 <colgroup><col style="width:104pt"><col><col></colgroup>
 <tr class="hd"><th>&Aacute;rea</th><th>Plan vigente 2024&ndash;2025</th><th>Este programa</th></tr>
 <tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Mapa de incidentes por zona y patrullaje dirigido a los puntos calientes, que es lo que m&aacute;s baja el delito seg&uacute;n la evidencia; <b>la ordenanza que hoy no existe</b> para las 2.646 c&aacute;maras con anal&iacute;tica que ya operan &mdash;usos, plazo de conservaci&oacute;n y registro de accesos&mdash;; y una oficina de ciberdelito</td></tr>
-<tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">Reasignar en vez de demoler: lo que est&aacute; construido y funcionando se licita a otro concesionario que pague canon y emplee gente del partido, en vez de tirarse abajo</td></tr>
+<tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">Reasignar en vez de demoler: lo que est&aacute; construido y funcionando se licita a otro concesionario que pague canon y emplee gente del partido, en vez de demolerse</td></tr>
 <tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Adjudicar por fin la recolecci&oacute;n &mdash;49.270 millones al a&ntilde;o, licitados dos veces y nunca adjudicados&mdash; con el pliego discutido antes; llevar la funci&oacute;n ambiental de 0,4% a 1,5%; y medir el ruido, que hoy no tiene ordenanza</td></tr>
 <tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">El mantenimiento vial entra en la partida que deciden las comisiones vecinales</td></tr>
 <tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema de inteligencia artificial que lee la solicitud contra la norma y responde en d&iacute;as y no en meses: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo. Y un asistente que conteste preguntas habladas, sin formulario</td></tr>
@@ -310,7 +310,7 @@ fondo y los discrecionales no se movieron un solo punto b&aacute;sico en cinco a
 hasta el cuarto decimal</b>&mdash;. La
 ca&iacute;da entera est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es una
 f&oacute;rmula. Nadie decide y nadie castiga.</p>
-<p><b>Es un viento en contra estructural, y el modelo lo carga.</b> Pero no es d&oacute;nde se juega el
+<p><b>Es un viento en contra estructural, y el modelo lo carga.</b> Pero no es ah&iacute; donde se define el
 resultado, y eso conviene decirlo antes de que alguien proponga ir a reclamar a La Plata.</p>
 </div>
 <div class="callout g">
@@ -342,7 +342,7 @@ leyendo mal.</p>
 recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce a&ntilde;os.</p>
 </div>
 """ + ex("g", "Sin cambios vuelve al azul en 2028; cobrando mejor, en 2027. En el adverso, nunca.",
-     "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es la misma plata&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
+     "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es el mismo dinero&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
      "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026. La secci&oacute;n 3.5 lo detalla: el capital se paga entre noviembre de 2027 y agosto de 2029, dentro del mandato que estas l&iacute;neas proyectan."))
@@ -607,7 +607,7 @@ est&aacute;n por debajo del promedio subieran hasta &eacute;l, la parte tierra c
 porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos. Los metros
 construidos no son p&uacute;blicos, as&iacute; que <b>no ponemos una cifra exacta y no la metemos en el
 modelo</b>.</p>
-<p><b>Y hay una segunda fuente, chica pero sin defensa.</b> El descuento por buen contribuyente
+<p><b>Y hay una segunda fuente, reducida pero sin defensa.</b> El descuento por buen contribuyente
 &mdash;10% a quien paga el a&ntilde;o entero sin deuda&mdash; <b>no tiene tope de valuaci&oacute;n ni de
 monto</b>. Lo cobra igual el de Acassuso que el de Boulogne. Las exenciones con criterio social
 &mdash;jubilados hasta tres haberes m&iacute;nimos, personas con discapacidad, escasos recursos&mdash;

@@ -431,8 +431,8 @@ a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&m
 millones en un solo acto.</p>
 <p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
 comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
-<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos al peso
-cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
+<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos con
+exactitud cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
 ninguno de los 573 decretos.</b></p>
 <p><b>Dos salvedades, porque la cifra es fuerte.</b> Los montos son pesos corrientes de cada a&ntilde;o y
 no se comparan entre s&iacute;. Y la concentraci&oacute;n usa s&oacute;lo los 407 decretos donde el
@@ -527,7 +527,7 @@ dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto repa
 a&ntilde;os seg&uacute;n esa lista. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
 manera.</span></p>
 <p><b>Y explica lo que el cuadro anterior muestra.</b> Una partida que no est&aacute; entre las
-prioridades no s&oacute;lo nace chica: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
+prioridades no s&oacute;lo nace peque&ntilde;a: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
 empleo contra el 99,1% de la obra p&uacute;blica no es una casualidad contable.</p>
 <p><b>Lo que sigue audita ese plan contra sus propias metas.</b> Lo que este programa discute no es la
 aritm&eacute;tica del presupuesto, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
