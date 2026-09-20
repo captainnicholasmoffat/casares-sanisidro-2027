@@ -1835,70 +1835,60 @@ desagregaci&oacute;n por zona y sin archivo descargable.</p>
 e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
 Isidro. <span class="sg">Ning&uacute;n municipio del conurbano norte publica hoy el dato que esta
 propuesta necesita</span>, lo que la vuelve la primera y tambi&eacute;n la m&aacute;s exigente.</p>
-<p>Por eso el primer compromiso de esta secci&oacute;n no es patrullar distinto: es
-<b>construir y publicar el mapa de incidentes municipales</b>. Sin eso, cualquier promesa de patrullaje
-inteligente es una frase.</p>
+<p>Por eso el patrullaje dirigido empieza por <b>construir el mapa de incidentes municipales</b>, que
+hoy no existe. Sin saber d&oacute;nde pasan las cosas, mandar el patrullero a donde m&aacute;s hace
+falta es una frase.</p>
 </div>
 
-<h3>2. La anal&iacute;tica ya est&aacute; operando. Lo que falta es la ordenanza que la regule</h3>
+<h3>2. Las c&aacute;maras ya est&aacute;n. Lo que falta es que hagan cuatro cosas</h3>
 <p class="tight">Este programa iba a proponer software sobre las c&aacute;maras. Al buscarlo
 apareci&oacute; que ya est&aacute;: San Isidro complet&oacute; el recambio de su sistema y opera
 <b>alrededor de 2.646 c&aacute;maras de alta definici&oacute;n con inteligencia artificial</b> y alertas
 en tiempo real, sobre fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal. La
-inversi&oacute;n anunciada es de <b>15.000 millones</b>.</p>
-<div class="cols">
-<p><b>Y no hay ninguna ordenanza local que lo regule.</b> Se busc&oacute; en el Digesto y en el
-Bolet&iacute;n Oficial: <span class="sg">no se encontr&oacute; norma municipal que regule el Centro de
-Operaciones, el plazo de conservaci&oacute;n de las im&aacute;genes, qui&eacute;n accede ni con
-qu&eacute; registro</span>. Tampoco existe una ley provincial de videovigilancia: la Provincia no la
-tiene, a diferencia de otras nueve.</p>
-<p><b>Ese es el hallazgo, y encaja con todo el argumento de este documento.</b> Un sistema de 2.646
-c&aacute;maras con anal&iacute;tica operando sin marco legal local es una facultad sin norma escrita, y una
-facultad sin norma escrita se usa como quiera el que gobierne. <b>No se propone comprar nada: se propone
-la ordenanza que hoy no existe.</b></p>
-<p><b>Qu&eacute; fija esa ordenanza.</b> Los tres usos que siguen y nada m&aacute;s que esos tres; el
-plazo de conservaci&oacute;n de las im&aacute;genes; qui&eacute;n puede acceder y con qu&eacute;
-registro de cada acceso; y la publicaci&oacute;n peri&oacute;dica de cu&aacute;ntos pedidos se
-recibieron y cu&aacute;ntos se cumplieron. Hay reglamentos municipales bonaerenses de los que
-copiar &mdash;General Pueyrred&oacute;n tiene uno desde 2019, con tiempo m&aacute;ximo de fijaci&oacute;n
-de c&aacute;mara y plazo de conservaci&oacute;n escritos&mdash;.</p>
-<p><b>Y una precisi&oacute;n de competencia que conviene no saltear.</b> La seguridad p&uacute;blica es
-competencia exclusiva de la Provincia por la Ley 12.154: <span class="sg">el Municipio opera
-c&aacute;maras como colaborador, no como fuerza de seguridad</span>. Cuanto m&aacute;s se aleje la
-anal&iacute;tica de detectar hechos y m&aacute;s se acerque a identificar personas, m&aacute;s
-d&eacute;bil es su cobertura legal. De ah&iacute; el orden de los tres usos.</p>
-</div>
-<p class="tight">Los tres son cosas distintas, y mezclarlas es lo que vuelve imposible discutirlas.</p>
+inversi&oacute;n anunciada es de <b>15.000 millones</b>. <span class="sg">No se propone comprar nada: se
+propone usar lo comprado para cuatro cosas concretas.</span></p>
 <div class="cols">
 <p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
 patrullaje m&aacute;s cercano. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
-sistema reconoce lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo.</p>
-<p><b>2 &middot; Reconstrucci&oacute;n inmediata despu&eacute;s de un hecho denunciado.</b> El sistema
-busca qui&eacute;n estuvo y hacia d&oacute;nde fue, y orienta a la polic&iacute;a en el momento y no
-tres d&iacute;as despu&eacute;s. La polic&iacute;a ya hace exactamente esto a mano, mirando horas de
-video: <b>que el sistema lo haga en minutos es eficiencia, no una facultad nueva.</b></p>
+sistema reconoce lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo. Un robo detectado
+mientras ocurre y avisado al m&oacute;vil que est&aacute; a tres cuadras es la diferencia entre un
+patrullero que llega y uno que toma la denuncia.</p>
+<p><b>2 &middot; Reconstrucci&oacute;n del recorrido despu&eacute;s de un hecho denunciado.</b> El
+sistema busca en las c&aacute;maras qui&eacute;n estuvo y hacia d&oacute;nde fue, y orienta a la
+polic&iacute;a en el momento y no tres d&iacute;as despu&eacute;s. <b>La polic&iacute;a ya hace
+exactamente esto a mano, mirando horas de video:</b> que el sistema lo haga en minutos es eficiencia, no
+una facultad nueva.</p>
 <p><b>3 &middot; Seguimiento sostenido de una persona en el tiempo: s&oacute;lo con orden judicial</b>,
 y con registro p&uacute;blico de cu&aacute;ntas &oacute;rdenes se recibieron y cu&aacute;ntas se
 cumplieron. Es el &uacute;nico de los tres que mira a una persona y no a un hecho, y por eso es el
 &uacute;nico que necesita un juez.</p>
-<p><b>Y dos cosas que este programa no escribe, a prop&oacute;sito.</b> No propone un registro municipal
-de personas armado por el Municipio sin intervenci&oacute;n judicial, ni reconocimiento facial masivo en
-la v&iacute;a p&uacute;blica. <span class="sg">Es una decisi&oacute;n, no un olvido</span>, y queda dicha
-para que se pueda exigir.</p>
+<p><b>4 &middot; Y la c&aacute;mara apuntando tambi&eacute;n al Municipio.</b> La inspecci&oacute;n
+municipal se transmite en vivo y cualquiera puede verla: que la inspecci&oacute;n fue real, que pas&oacute;
+donde dice que pas&oacute; y que no hubo coima. <span class="sg">El mismo instrumento que mira al vecino
+mira al inspector</span>, y est&aacute; desarrollado en la secci&oacute;n 5 de este cap&iacute;tulo.</p>
+<p><b>Y una precisi&oacute;n de competencia que conviene no saltear.</b> La seguridad p&uacute;blica es
+competencia exclusiva de la Provincia por la Ley 12.154: <span class="sg">el Municipio opera
+c&aacute;maras como colaborador, no como fuerza de seguridad</span>. Cuanto m&aacute;s se aleje la
+anal&iacute;tica de detectar hechos y m&aacute;s se acerque a identificar personas, m&aacute;s
+d&eacute;bil es su cobertura legal. De ah&iacute; el orden de los cuatro usos.</p>
+<p><b>Y dos cosas que este programa no hace, a prop&oacute;sito.</b> No arma un registro municipal de
+personas sin intervenci&oacute;n judicial, ni reconocimiento facial masivo en la v&iacute;a
+p&uacute;blica. <span class="sg">Es una decisi&oacute;n, no un olvido</span>, y queda dicha para que se
+pueda exigir.</p>
 <p><b>Y hay un precedente concreto detr&aacute;s de esa decisi&oacute;n.</b> El sistema de
 reconocimiento facial de la Ciudad de Buenos Aires fue declarado <b>parcialmente inconstitucional en
 septiembre de 2022</b>, despu&eacute;s de que se comprobara que se hab&iacute;a consultado por m&aacute;s
 de quince mil personas ajenas al universo autorizado. La Ciudad al menos ten&iacute;a una ley que lo
-creaba: <span class="sg">un municipio bonaerense no tiene ni eso</span>, y le sumar&iacute;a un problema
-de competencia al de falta de norma previa.</p>
+creaba: <span class="sg">un municipio bonaerense no tiene ni eso</span>, y a un caso as&iacute; le
+sumar&iacute;a el problema de competencia de la Ley 12.154.</p>
 <p><b>Entregar im&aacute;genes a la fiscal&iacute;a s&iacute; tiene base legal firme.</b> El
 art&iacute;culo 265 bis del C&oacute;digo Procesal Penal bonaerense, incorporado por la Ley 14.172 de
 2010, habilita al fiscal a requerir las filmaciones de un sistema de monitoreo, en soporte original y
 sin editar. <b>Por causa individualizada y con pedido escrito</b>: no cubre el acceso libre en vivo de
 la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
 <p><b>Por qu&eacute; entra como gesti&oacute;n y no como fondos nuevos.</b> Porque las c&aacute;maras y
-la anal&iacute;tica ya se pagaron. Lo que cuesta redactar una ordenanza y publicar un registro de
-accesos es cero.</p>
+la anal&iacute;tica ya se pagaron. Lo que cuesta configurar el sistema para estos cuatro usos y publicar
+el registro de &oacute;rdenes judiciales es cero.</p>
 </div>
 
 <h3>3. Una oficina de ciberdelito, unificada con la capa de anal&iacute;tica</h3>
@@ -1951,20 +1941,30 @@ cualquiera la verifique.</p>
 <div class="pull"><p>La constancia no impide denunciar: impide condenar sin juicio. El que acusa tiene un
 camino, y es el judicial.</p></div>
 
-<h3>5. Registro obligatorio en los actos de autoridad</h3>
+<h3>5. La inspecci&oacute;n municipal, transmitida en vivo</h3>
 <div class="cols">
+<p><b>Es la cuarta capacidad de la secci&oacute;n 2, aplicada a los agentes del propio
+Municipio.</b> El inspector transmite en vivo mientras inspecciona, y cualquiera puede abrir la
+aplicaci&oacute;n y ver que la inspecci&oacute;n fue real, que pas&oacute; donde dice que pas&oacute; y
+que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute;
+transmitiendo.</span></p>
 <p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
 fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
 labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
 Fuera de ella, no.</p>
-<p><b>No es vigilancia del trabajador: es registro del acto de autoridad</b>, que es p&uacute;blico por
-naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial, y protege a los dos lados:
-<span class="sg">al vecino del abuso y al inspector honesto de la acusaci&oacute;n falsa</span>.</p>
-<p><b>Y tiene una consecuencia escrita:</b> sin registro encendido, el acta no vale. Sin eso la regla es
+<p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
+naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial llevada un paso m&aacute;s,
+y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
+acusaci&oacute;n falsa</span>.</p>
+<p><b>Y tiene una consecuencia escrita:</b> sin transmisi&oacute;n, el acta no vale. Sin eso la regla es
 una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
 cumplirla.</p>
 <p><b>Del otro lado, el vecino graba desde la aplicaci&oacute;n</b>, y ese registro tiene el mismo valor
 en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
+<p><b>Lo que la reglamentaci&oacute;n tiene que resolver, y se dice ahora.</b> Una transmisi&oacute;n
+p&uacute;blica desde un comercio o una vivienda alcanza a terceros que no son parte del acto.
+<span class="sg">El l&iacute;mite es el acto, no el lugar</span>: la reglamentaci&oacute;n define el
+resguardo de esos datos y el archivo queda con fecha, domicilio y agente interviniente.</p>
 </div>
 
 <h3>6. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
@@ -2600,16 +2600,17 @@ C6 = dict(id="cap6", runhead=RH, html="""
 <div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Auditamos un plan de gobierno para escribir &eacute;ste; el nuestro queda escrito con las mismas reglas.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
-<p class="lead">A fines de marzo ya arranc&oacute; la primera ronda de asambleas en las seis zonas,
-abri&oacute; el primer centro de apoyo escolar y hay ocho ordenanzas en el Concejo.
-<span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que un
-vecino puede ver que empez&oacute;.</span></p>
+<p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, es decir a
+fines de marzo de 2028, un vecino de San Isidro ya fue convocado a la primera asamblea de su zona,
+puede anotar a su hijo en el primer centro de apoyo escolar y encuentra seis ordenanzas ingresadas en el
+Concejo. <span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que
+se puede ver que empez&oacute;.</span></p>
 <div class="cols">
-<p><b>El plazo no es una cifra redonda: es una fecha.</b> El mandato empieza el 10 de diciembre, de modo
-que los cien d&iacute;as caen a fines de marzo. <b>Y ah&iacute; es cuando estos mecanismos convocan.</b>
+<p><b>El plazo no es una cifra redonda: es la fecha en que estos mecanismos convocan.</b>
 Villa Gobernador G&aacute;lvez fija por ordenanza su primera ronda de asambleas en la primera quincena
 de marzo; en la Ciudad de Buenos Aires el ciclo tiene al menos cuatro asambleas por barrio y la primera
-es informativa y de relevamiento.</p>
+es informativa y de relevamiento. <span class="sg">Los cien d&iacute;as caen justo ah&iacute;</span>, y
+no es casualidad: es el calendario con el que funcionan.</p>
 <p><b>Por eso el primer ciclo entra en los cien d&iacute;as y no despu&eacute;s.</b> Si la primera
 asamblea se corre a mitad de a&ntilde;o, la priorizaci&oacute;n llega tarde para el ejercicio en curso y
 el a&ntilde;o 1 de la rampa se pierde entero.</p>
@@ -2621,28 +2622,30 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 <tr class="hd"><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
 <tr class="hd"><td class="l" colspan="2">Al Concejo Deliberante, en la primera sesi&oacute;n ordinaria</td></tr>
 <tr class="hi"><td class="l">1 &middot; La ordenanza de la partida vecinal, con la f&oacute;rmula de reparto escrita en el texto</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
-<tr><td class="l">2 &middot; La ordenanza que regula las c&aacute;maras: usos, conservaci&oacute;n y registro de accesos. Hoy operan unas 2.646 con anal&iacute;tica y ninguna norma local</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
+<tr class="hi"><td class="l">2 &middot; La derogaci&oacute;n de los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
 <tr><td class="l">3 &middot; La ordenanza que actualiza la base de valuaci&oacute;n de 2008, sin tocar la al&iacute;cuota</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
-<tr><td class="l">4 &middot; La ordenanza que crea partida propia para g&eacute;nero y para discapacidad</td><td class="n">Expediente y estructura program&aacute;tica del presupuesto</td></tr>
-<tr class="hi"><td class="l">5 &middot; La derogaci&oacute;n de los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
-<tr><td class="l">6 &middot; El reconocimiento de las primeras asociaciones de parque, con sus tres facultades</td><td class="n">Ordenanza y registro publicado</td></tr>
-<tr><td class="l">7 &middot; La adhesi&oacute;n a la Ley provincial 15.302 de espacios culturales</td><td class="n">Ordenanza de adhesi&oacute;n</td></tr>
-<tr><td class="l">8 &middot; El pliego de la recolecci&oacute;n de residuos &mdash;frecuencias, horarios, zonas y penalidades&mdash;, para aprobarse antes del llamado</td><td class="n">Expediente del pliego</td></tr>
+<tr><td class="l">4 &middot; El reconocimiento de las primeras asociaciones de parque, con sus tres facultades</td><td class="n">Ordenanza y registro publicado</td></tr>
+<tr><td class="l">5 &middot; La adhesi&oacute;n a la Ley provincial 15.302 de espacios culturales</td><td class="n">Ordenanza de adhesi&oacute;n</td></tr>
+<tr><td class="l">6 &middot; El pliego de la recolecci&oacute;n de residuos &mdash;frecuencias, horarios, zonas y penalidades&mdash;, para aprobarse antes del llamado</td><td class="n">Expediente del pliego</td></tr>
 <tr class="hd"><td class="l" colspan="2">Lo que no depende del Concejo</td></tr>
-<tr class="hi"><td class="l">9 &middot; Turno m&eacute;dico en l&iacute;nea en los primeros efectores, sobre la plataforma municipal que ya da turnos para otros tr&aacute;mites, y pedida la adhesi&oacute;n al sistema provincial</td><td class="n">La propia plataforma, y el expediente del pedido</td></tr>
-<tr><td class="l">10 &middot; El precio unitario de cada compra de insumos de los tres hospitales, comparable contra la compra anterior</td><td class="n">Bolet&iacute;n Oficial y la aplicaci&oacute;n</td></tr>
-<tr><td class="l">11 &middot; Patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, y el pedido formal a la Provincia por el dato delictual por zona</td><td class="n">La aplicaci&oacute;n, y el expediente del pedido</td></tr>
-<tr><td class="l">12 &middot; Cada respuesta del Ejecutivo a un pedido de informes del Concejo, con el pedido que la origina. Hoy ese circuito entero transcurre fuera de toda fuente p&uacute;blica</td><td class="n">La aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">7 &middot; Turno m&eacute;dico en l&iacute;nea en los primeros efectores, sobre la plataforma municipal que ya da turnos para otros tr&aacute;mites, y pedida la adhesi&oacute;n al sistema provincial</td><td class="n">La propia plataforma, y el expediente del pedido</td></tr>
+<tr><td class="l">8 &middot; El precio unitario de cada compra de insumos de los tres hospitales, comparable contra la compra anterior</td><td class="n">Bolet&iacute;n Oficial y la aplicaci&oacute;n</td></tr>
+<tr><td class="l">9 &middot; Patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, y el pedido formal a la Provincia por el dato delictual por zona</td><td class="n">La aplicaci&oacute;n, y el expediente del pedido</td></tr>
+<tr><td class="l">10 &middot; Cada respuesta del Ejecutivo a un pedido de informes del Concejo, con el pedido que la origina. Hoy ese circuito entero transcurre fuera de toda fuente p&uacute;blica</td><td class="n">La aplicaci&oacute;n</td></tr>
 <tr class="hd"><td class="l" colspan="2">Lo que arranca y se ve</td></tr>
-<tr class="hi"><td class="l">13 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y n&oacute;mina de asistentes publicadas</td></tr>
-<tr class="hi"><td class="l">14 &middot; La primera cohorte inscripta en las seis sedes de formaci&oacute;n que sostiene el Municipio</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
-<tr class="hi"><td class="l">15 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
-<tr class="hi"><td class="l">16 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n en funcionamiento: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">11 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y n&oacute;mina de asistentes publicadas</td></tr>
+<tr class="hi"><td class="l">12 &middot; La primera cohorte inscripta en las seis sedes de formaci&oacute;n que sostiene el Municipio</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
+<tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n en funcionamiento: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">15 &middot; La detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano</td><td class="n">Decreto de puesta en servicio y el tiempo de respuesta publicado en la aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">16 &middot; La inspecci&oacute;n municipal transmitida en vivo, para que cualquiera pueda ver que la inspecci&oacute;n fue real. Empieza por decreto sobre los inspectores municipales</td><td class="n">La transmisi&oacute;n, abierta en la aplicaci&oacute;n</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> los seis primeros van juntos a la primera sesi&oacute;n porque son el
+<p class="cap"><b>Nota:</b> los dos primeros van juntos a la primera sesi&oacute;n porque son el
 andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los
 art&iacute;culos 8 a 10 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
-que no.</p>
+que no. Los compromisos 15 y 16 empiezan por decreto: son usos de equipo que el Municipio ya
+compr&oacute; y de personal que ya dirige. <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
+transmisi&oacute;n va despu&eacute;s</b>, y est&aacute; escrita en el anexo.</p>
 <div class="callout a">
 <div class="clabel">Y lo que no va a los cien d&iacute;as, dicho ahora</div>
 <p><b>La aplicaci&oacute;n completa no entra.</b> La auditor&iacute;a de compras, el mercado laboral y
@@ -2703,13 +2706,13 @@ depende de un dato que haya que creernos.</p>
 <tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico y las alertas a la vista</td></tr>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
-<tr class="hi"><td class="l">Ordenanza que regule el sistema de c&aacute;maras: usos permitidos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de cada acceso</td><td class="n">Cero. Operan unas 2.646 c&aacute;maras con anal&iacute;tica y no se encontr&oacute; norma municipal que las regule</td><td class="n">Bolet&iacute;n Oficial municipal y el registro de accesos publicado</td></tr>
+<tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, con el registro de &oacute;rdenes judiciales publicado</td><td class="n">Ninguno de los dos usos opera hoy. Las 2.646 c&aacute;maras con anal&iacute;tica se usan para monitoreo y las alertas no se publican</td><td class="n">El tiempo de respuesta al aviso y el registro de &oacute;rdenes, en la aplicaci&oacute;n</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 <tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas y que 928 personas por a&ntilde;o terminen la formaci&oacute;n con acompa&ntilde;amiento hasta el empleo</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 </table>
 <div class="cols">
-<p>Las trece se miden con documentos que el Municipio ya publica, o que este programa se compromete a
+<p>Las catorce se miden con documentos que el Municipio ya publica, o que este programa se compromete a
 publicar. <span class="sg">Ninguna requiere una encuesta, un relevamiento propio ni un dato que s&oacute;lo
 nosotros tengamos.</span></p>
 <p>La de intermediaci&oacute;n laboral merece una aclaraci&oacute;n, porque su l&iacute;nea de base es cero
@@ -2745,10 +2748,11 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <table>
 <colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
-<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las ocho ordenanzas del 6.1: partida vecinal, c&aacute;maras, base de valuaci&oacute;n, partidas propias, derogaci&oacute;n de los arts. 8 a 10, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
+<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">La aplicaci&oacute;n y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Entra la ordenanza que regula el sistema de c&aacute;maras: usos, plazo de conservaci&oacute;n, qui&eacute;n accede y registro de accesos. No cuesta un peso y el sistema ya opera</td><td class="n">Expediente y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano; y la inspecci&oacute;n municipal transmitida en vivo. Ninguna de las dos cuesta un peso: el equipo ya se compr&oacute;</td><td class="n">Decretos de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 4&ndash;6</td><td>Entran las tres ordenanzas restantes del anexo: partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, y ruido vehicular</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: el modelo del Centro 404 de B&eacute;ccar se extiende a las seis zonas, con la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada</td></tr>
@@ -2868,9 +2872,10 @@ cuentas y contarlas.</p>
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
 <li>A los cien d&iacute;as hay diecis&eacute;is compromisos cumplidos, y ninguno es publicar un dato:
-ocho ordenanzas en el Concejo, cuatro actos que no dependen de &eacute;l, y cuatro cosas que arrancaron
+seis ordenanzas en el Concejo, cuatro actos que no dependen de &eacute;l, y seis cosas que arrancaron
 &mdash;la primera ronda de asambleas, la primera cohorte de formaci&oacute;n, el primer centro de apoyo
-escolar y dos m&oacute;dulos de la aplicaci&oacute;n&mdash;.</li>
+escolar, dos m&oacute;dulos de la aplicaci&oacute;n, la detecci&oacute;n en vivo sobre las c&aacute;maras
+que ya existen y la inspecci&oacute;n municipal transmitida en vivo&mdash;.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
 <li>Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un

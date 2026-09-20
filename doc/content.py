@@ -54,7 +54,7 @@ C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
 
 # el anexo articulado entra en dos paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,
-                        '<h2>IV &middot; Ordenanza del sistema municipal de videovigilancia</h2>',
+                        '<h2>V &middot; Ordenanza de asociaciones de parque</h2>',
                         "ordenanza2", "")
 
 SECTIONS = [A.INDICE, S.SINTESIS, A.INTRO, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,

@@ -4,7 +4,7 @@ from content_a import RH
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
 <div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una
-ordenanza central &mdash;la de la partida vecinal&mdash; y nueve cortas. Se votan por separado porque son
+ordenanza central &mdash;la de la partida vecinal&mdash; y ocho cortas. Se votan por separado porque son
 discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
 
 <div class="callout a">
@@ -124,54 +124,29 @@ personas con discapacidad y personas de escasos recursos.</p>
 <p class="tight">La tabla actualizada y la metodolog&iacute;a con que se construy&oacute; se publican
 &iacute;ntegras, manzana por manzana, junto con la tabla que reemplazan.</p>
 
-<h2>IV &middot; Ordenanza del sistema municipal de videovigilancia</h2>
-
-<h3>Art&iacute;culo 1 &mdash; Usos permitidos</h3>
-<p class="tight">El sistema municipal de c&aacute;maras y su capa de an&aacute;lisis podr&aacute;n
-emplearse &uacute;nicamente para: a) la detecci&oacute;n de hechos violentos en curso y el aviso al
-patrullaje; b) la reconstrucci&oacute;n de un hecho denunciado, a requerimiento fundado; c) el
-seguimiento sostenido de una persona determinada, <b>exclusivamente con orden judicial</b>. Toda otra
-finalidad requiere ordenanza que la habilite.</p>
-
-<h3>Art&iacute;culo 2 &mdash; Prohibiciones</h3>
-<p class="tight">Quedan prohibidos el reconocimiento facial masivo en la v&iacute;a p&uacute;blica
-y la constituci&oacute;n por el Municipio de registros de personas a partir de las im&aacute;genes, sin
-orden judicial.</p>
-
-<h3>Art&iacute;culo 3 &mdash; Conservaci&oacute;n</h3>
-<p class="tight">Las im&aacute;genes se conservan por el plazo que fije la reglamentaci&oacute;n, que
-<b>no podr&aacute; exceder el necesario para las finalidades del art&iacute;culo 1</b>, y se suprimen
-vencido ese plazo. El plazo vigente se publica.</p>
-
-<h3>Art&iacute;culo 4 &mdash; Acceso y registro</h3>
-<p class="tight">La reglamentaci&oacute;n determina qui&eacute;nes acceden al sistema y con qu&eacute;
-alcance. <b>Cada acceso y cada entrega de im&aacute;genes se asienta en un registro</b>, con fecha,
-agente requirente y causa. Se publica peri&oacute;dicamente la cantidad de requerimientos recibidos, de
-&oacute;rdenes judiciales cumplidas y de entregas efectuadas.</p>
-
-<h3>Art&iacute;culo 5 &mdash; Entrega al Ministerio P&uacute;blico</h3>
-<p class="tight">La entrega de filmaciones al Ministerio P&uacute;blico Fiscal se rige por el
-art&iacute;culo 265 bis del C&oacute;digo Procesal Penal de la Provincia: procede por causa
-individualizada y requerimiento escrito, en soporte original sin editar o copia certificada. <b>No se
-habilita el acceso en vivo ni la entrega masiva sin causa.</b></p>
-
-<h2>V &middot; Ordenanza de registro de los actos de fiscalizaci&oacute;n</h2>
+<h2>IV &middot; Ordenanza de transmisi&oacute;n de los actos de fiscalizaci&oacute;n</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Alcance</h3>
 <p class="tight">Todo agente municipal con facultad de fiscalizaci&oacute;n o autoridad &mdash;quien
-pueda labrar acta, clausurar, multar o demorar a una persona&mdash; deber&aacute; registrar en audio y
-video el acto <b>mientras lo ejerce</b>, y &uacute;nicamente mientras lo ejerce. El registro no alcanza
-a la actividad del agente fuera de esa funci&oacute;n.</p>
+pueda labrar acta, clausurar, multar o demorar a una persona&mdash; deber&aacute; transmitir en vivo, en
+audio y video, el acto <b>mientras lo ejerce</b>, y &uacute;nicamente mientras lo ejerce. La
+transmisi&oacute;n no alcanza a la actividad del agente fuera de esa funci&oacute;n.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Consecuencia</h3>
-<p class="tight"><b>El acta labrada sin registro encendido carece de validez.</b></p>
+<h3>Art&iacute;culo 2 &mdash; Publicidad</h3>
+<p class="tight">La transmisi&oacute;n es <b>p&uacute;blica y accesible desde la aplicaci&oacute;n
+municipal mientras dura el acto</b>, y queda archivada con su fecha, el domicilio del acto y el agente
+interviniente. La reglamentaci&oacute;n determina el resguardo de los datos personales de terceros que
+aparezcan sin ser parte del acto.</p>
 
-<h3>Art&iacute;culo 3 &mdash; Registro del vecino</h3>
+<h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
+<p class="tight"><b>El acta labrada sin transmisi&oacute;n carece de validez.</b></p>
+
+<h3>Art&iacute;culo 4 &mdash; Registro del vecino</h3>
 <p class="tight">La persona alcanzada por el acto podr&aacute; registrarlo por sus propios medios,
 incluida la aplicaci&oacute;n municipal, y ese registro tendr&aacute; en el expediente el mismo valor
 que el del agente.</p>
 
-<h2>VI &middot; Ordenanza de asociaciones de parque</h2>
+<h2>V &middot; Ordenanza de asociaciones de parque</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Reconocimiento</h3>
 <p class="tight">Recon&oacute;cese como asociaci&oacute;n de parque a la entidad de vecinos que acredite
@@ -191,7 +166,7 @@ obra prosigue. <b>La objeci&oacute;n no suspende por s&iacute; la ejecuci&oacute
 <p class="tight">La asociaci&oacute;n suscribe el acta de recepci&oacute;n de la obra ejecutada en su
 espacio. La recepci&oacute;n sin esa firma no habilita el pago final.</p>
 
-<h2>VII &middot; Ordenanza de partidas propias</h2>
+<h2>VI &middot; Ordenanza de partidas propias</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
 <p class="tight">Cr&eacute;anse, en la estructura program&aacute;tica del presupuesto municipal,
@@ -203,7 +178,7 @@ separados del programa que hoy comparten con ni&ntilde;ez, juventud y personas m
 periodicidad que la del resto del presupuesto. Esta ordenanza no fija monto: fija que el monto exista
 por separado y pueda verse.</p>
 
-<h2>VIII &middot; Adhesi&oacute;n a la Ley provincial 15.302</h2>
+<h2>VII &middot; Adhesi&oacute;n a la Ley provincial 15.302</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Adhesi&oacute;n</h3>
 <p class="tight">Adhi&eacute;rese el Partido de San Isidro a la <b>Ley provincial 15.302</b>, de salas de
@@ -216,7 +191,7 @@ topes que ella fija de <b>trescientos (300) asistentes y quinientos (500) metros
 exigencias de seguridad proporcionales al aforo. La comisi&oacute;n zonal es o&iacute;da sobre horarios
 y localizaci&oacute;n.</p>
 
-<h2>IX &middot; Ordenanza de ruido vehicular</h2>
+<h2>VIII &middot; Ordenanza de ruido vehicular</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Competencia y medici&oacute;n</h3>
 <p class="tight">En ejercicio de la facultad del art&iacute;culo 27 inciso 17 del Decreto-Ley 6769/58,
@@ -231,7 +206,7 @@ metrol&oacute;gica aplicable. Hasta entonces la medici&oacute;n tiene fines de d
 publicaci&oacute;n. Rige en todos los casos el derecho de descargo ante la Justicia de Faltas
 Municipal.</p>
 
-<h2>X &middot; Ordenanza del pliego de higiene urbana</h2>
+<h2>IX &middot; Ordenanza del pliego de higiene urbana</h2>
 
 <h3>Art&iacute;culo &uacute;nico</h3>
 <p class="tight">El pliego de bases y condiciones de la licitaci&oacute;n del servicio de higiene urbana
@@ -253,9 +228,9 @@ comisiones zonales son las asociaciones vecinales que ya existen, reconocidas po
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> No hace falta: los art&iacute;culos 60 y 132 de la
 Ley Org&aacute;nica ya establecen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el
 municipio, y con qu&eacute; requisito de adhesi&oacute;n.</p>
-<p><b>No fija montos que el programa no haya costeado</b>, ni plazos de conservaci&oacute;n de
-im&aacute;genes, ni presupuestos de &aacute;rea. Donde el cuerpo del documento no fij&oacute; un
-n&uacute;mero, el articulado manda fijarlo y publicarlo, que no es lo mismo.</p>
+<p><b>No fija montos que el programa no haya costeado</b>, ni presupuestos de &aacute;rea, ni plazos
+que el cuerpo del documento no haya justificado. Donde el documento no fij&oacute; un n&uacute;mero, el
+articulado manda fijarlo y publicarlo, que no es lo mismo.</p>
 <p><b>No toca lo que no es municipal.</b> Quedan fuera el recorrido de las l&iacute;neas de colectivo,
 que autoriza la Provincia; la estad&iacute;stica criminal; y todo lo que exija reformar la Ley
 Org&aacute;nica, que este programa reclama y no promete.</p>
@@ -265,8 +240,8 @@ conviene que se voten por separado.</p>
 </div>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
-<p class="tight">De las catorce metas del cap&iacute;tulo 6, <b>ocho tienen su art&iacute;culo
-ac&aacute;</b>. Las otras seis no lo necesitan, y conviene decir cu&aacute;les son para que no se las
+<p class="tight">De las catorce metas del cap&iacute;tulo 6, <b>siete tienen su art&iacute;culo
+ac&aacute;</b>. Las otras siete no lo necesitan, y conviene decir cu&aacute;les son para que no se las
 busque.</p>
 <div class="note">
 <p><b>Cuatro se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
@@ -277,9 +252,14 @@ atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este pr
 <p><b>Una depende de administrar, no de normar:</b> llevar la percepci&oacute;n de recursos corrientes
 al 92%. No hace falta una ordenanza para cobrar lo que ya est&aacute; devengado, y decir lo contrario
 ser&iacute;a esconder una decisi&oacute;n de gesti&oacute;n detr&aacute;s de un proyecto.</p>
-<p><b>Y la sexta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
+<p><b>La sexta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
-<p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
+<p><b>Y la s&eacute;ptima se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
+vivo y la reconstrucci&oacute;n de recorrido son configuraci&oacute;n del sistema de c&aacute;maras que
+el Municipio ya tiene, no una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
+usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
+se ordena por decreto.</p>
+<p><span class="sg">De las siete, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
 la espera por especialidad, el precio unitario, el stock y la inserci&oacute;n laboral entran en el
 art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
 se puede es que el resultado se vea.</p>

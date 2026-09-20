@@ -4,14 +4,15 @@ from content_a import RH, exhead
 SINTESIS = dict(id="sintesis", runhead=RH, html="""
 <h1>Este programa, en una p&aacute;gina</h1>
 <div class="stand">Que decida sobre la obra p&uacute;blica quien vive donde falta la obra p&uacute;blica.
-San Isidro no necesita m&aacute;s fondos ni permiso de nadie para eso: necesita decidir distinto, con lo
-que ya tiene, y aceptar que lo midan.</div>
+San Isidro no necesita m&aacute;s fondos ni permiso de nadie para eso: le alcanza con decidir distinto,
+con el dinero que ya tiene.</div>
 
-<p class="lead">El punto de partida se verifica en diez minutos. El plan de gobierno vigente del
-Municipio tiene setenta y siete metas numeradas y no menciona las palabras empleo, vivienda, salud ni
-educaci&oacute;n. Y hoy el Municipio destina el dinero a lo que se ve antes que a lo que falta:
-<b>alumbrado p&uacute;blico recibe 10.313 millones y agua y cloaca 3.320</b>, mientras 25.165 hogares
-cocinan con garrafa.</p>
+<p class="lead">En San Isidro hay <b>25.165 hogares que cocinan con garrafa</b> y 6.488 que no tienen
+cloaca. La mayor&iacute;a est&aacute; en Boulogne y en B&eacute;ccar: seis de cada diez sin gas, siete
+de cada diez sin cloaca. Mientras tanto, hoy el Municipio destina el dinero a lo que se ve antes que a
+lo que falta &mdash;<b>alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o y agua y cloaca
+3.320</b>&mdash;, y el plan de gobierno vigente tiene setenta y siete metas numeradas donde no aparecen
+las palabras empleo, vivienda, salud ni educaci&oacute;n.</p>
 
 <h2>Qu&eacute; proponemos hacer</h2>
 <ol class="n">
@@ -37,14 +38,11 @@ Turno m&eacute;dico, ocupaci&oacute;n de guardias, precio de cada insumo, avance
 laboral, y un asistente que contesta en castellano sobre todo lo publicado y muestra de d&oacute;nde lo
 sac&oacute;. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que lo que hoy funciona sin norma la tenga.</b> Las 2.646 c&aacute;maras con an&aacute;lisis
-autom&aacute;tico que operan sin una sola ordenanza que las regule; el registro obligatorio en cada acto
-de fiscalizaci&oacute;n, sin el cual el acta no vale; las asociaciones de parque, que firman la
-recepci&oacute;n de la obra en su espacio. <i>(Cap&iacute;tulos 4 y 5)</i></li>
-
-<li><b>Que g&eacute;nero y discapacidad tengan partida propia.</b> Hoy g&eacute;nero no tiene programa
-presupuestario y discapacidad devenga el 0,020% del gasto municipal. No se puede auditar lo que no tiene
-partida. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que las c&aacute;maras que el Municipio ya compr&oacute; sirvan para algo m&aacute;s que mirar.</b>
+Detecci&oacute;n en vivo de hechos violentos con aviso al m&oacute;vil m&aacute;s cercano;
+reconstrucci&oacute;n del recorrido despu&eacute;s de un robo, que hoy la polic&iacute;a hace a mano
+mirando horas de video; y la inspecci&oacute;n municipal transmitida en vivo, para que cualquiera vea
+que la inspecci&oacute;n fue real y que no hubo coima. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Y que todo esto se pague sin subir una tasa ni tomar deuda.</b> Cuesta 7.225,2 millones de fondos
 nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash; y sale
@@ -60,14 +58,15 @@ facultades nuevas para el intendente. <i>(Cap&iacute;tulos 4 y 6)</i></li>
 
 <div class="callout a">
 <div class="clabel">Por d&oacute;nde empieza, y qu&eacute; se puede comprobar a los cien d&iacute;as</div>
-<p>A fines de marzo ya <b>arranc&oacute; la primera ronda de asambleas en las seis zonas</b>,
-abri&oacute; el primer centro de apoyo escolar &mdash;hoy hay cero&mdash;, est&aacute; inscripta la
-primera cohorte de formaci&oacute;n y funcionan los dos primeros m&oacute;dulos de la
-aplicaci&oacute;n.</p>
-<p>Y hay <b>ocho ordenanzas en el Concejo</b>, ingresadas en la primera sesi&oacute;n ordinaria: la de la
-partida vecinal con su f&oacute;rmula escrita, la que regula las c&aacute;maras, la que actualiza la base
-de valuaci&oacute;n y la que deroga los art&iacute;culos que hoy permiten al intendente disolver una
-asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is compromisos y el
-cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
+<p>El mandato empieza el <b>10 de diciembre de 2027</b>. Cien d&iacute;as despu&eacute;s, a fines de
+marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona &mdash;la reuni&oacute;n
+abierta donde se decide qu&eacute; obra se hace con el dinero de esa zona&mdash;, puede anotar a su hijo
+en el primer centro de apoyo escolar &mdash;hoy no hay ninguno&mdash;, y encuentra la primera cohorte de
+formaci&oacute;n inscripta y dos m&oacute;dulos de la aplicaci&oacute;n funcionando.</p>
+<p>Y hay <b>seis ordenanzas en el Concejo</b>, ingresadas en la primera sesi&oacute;n ordinaria: la de
+la partida vecinal con su f&oacute;rmula escrita, la que actualiza la base de valuaci&oacute;n de 2008 y
+la que deroga los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal,
+entre otras. <span class="sg">Son diecis&eacute;is compromisos y el cap&iacute;tulo 6 los lista con el
+documento que comprueba cada uno.</span></p>
 </div>
 """)
