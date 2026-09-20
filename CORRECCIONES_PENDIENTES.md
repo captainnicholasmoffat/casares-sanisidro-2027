@@ -727,3 +727,80 @@ los cambia:
   Es la única pendiente. Las otras dos ya se decidieron: el
   presupuesto de la plataforma (1.273 M) y la apertura de empleo
   (60/40 y 3 M por persona).
+
+
+---
+
+# CORRECCIONES 86 A 88 · INSTRUCCIONES DE CAP N NICK DEL 20/09
+
+## REGLA NUEVA, DICTADA POR CAP N NICK
+Ninguna meta ni compromiso puede ser publicar un dato, poner un enlace
+o acomodar una pagina web. Toda meta tiene que ser algo que un vecino
+note. Publicar es el medio, nunca el logro.
+
+## 86 · SACAR "EXACTITUD ARITMETICA"
+En la sintesis de la pagina 3 y donde aparezca en el capitulo 1.
+Razon: "el gasto sigue el plan con exactitud aritmetica" es un elogio
+disfrazado de dato. Suena a que ejecutan con precision.
+Lo que hay que decir en su lugar, que ya esta en el capitulo 1: el
+dinero va a lo que se ve y no a lo que falta. Alumbrado 10.313
+millones contra agua y cloaca 3.320.
+
+## 87 · RESTO DEL ARGUMENTO DE COBRANZA EN LA SINTESIS
+La linea de la pagina 3 todavia dice "financiado con lo que el
+Municipio ya factura y hoy no cobra". Eso se reemplazo hace tiempo.
+Va: "financiado actualizando una base de valuacion que es de 2008, sin
+tocar la alicuota".
+Y barrido completo: buscar "ya factura", "no cobra", "cobrar mejor",
+"percepcion" usado como fuente de financiamiento. Tiene que dar cero
+fuera del capitulo 3, donde el dato de percepcion sigue siendo valido
+como diagnostico pero NO como financiamiento.
+
+## 88 · LOS PRIMEROS CIEN DIAS, REHECHOS
+Hoy los cien dias son tres cosas y dos son publicar datos. Sale todo
+eso, incluida la frase "un gobierno que a los cien dias no consiguio
+que su propio organigrama se pueda encontrar no va a redistribuir la
+obra publica".
+
+EL PLAZO, FUNDADO: el mandato arranca el 10 de diciembre, asi que los
+cien dias caen a fines de marzo. Eso coincide con cuando otros
+municipios convocan su primera ronda de asambleas: Villa Gobernador
+Galvez la fija por ordenanza en la primera quincena de marzo. En CABA
+el ciclo tiene al menos cuatro asambleas por barrio y la primera es
+informativa y de relevamiento de necesidades.
+
+LAS DIECISEIS QUE VAN. Todas salen de propuestas que ya estan en el
+documento. Ninguna es publicar por publicar: cada una es un acto de
+gobierno o algo que arranca.
+
+AL CONCEJO, primera sesion ordinaria:
+ 1. Ordenanza de la partida vecinal, con la formula escrita
+ 2. Ordenanza de videovigilancia (2.646 camaras operando sin norma)
+ 3. Ordenanza de la base de valuacion (Ordenanza 8373, de 2008)
+ 4. Ordenanza de partidas propias de genero y discapacidad
+ 5. Derogacion de los articulos que permiten disolver una asociacion
+    vecinal
+ 6. Reconocimiento de las primeras asociaciones de parque
+
+ACTOS ADMINISTRATIVOS, no dependen del Concejo:
+ 7. Adherir a la Ley provincial 15.302 de espacios culturales
+ 8. Adherir al sistema provincial de turno digital
+ 9. Llamar a licitacion la recoleccion de residuos
+10. Publicar el precio unitario de cada compra de insumos de los tres
+    hospitales
+11. Publicar el mapa del delito por zona
+12. Publicar las comunicaciones del Concejo y sus respuestas
+
+LO QUE ARRANCA Y SE VE:
+13. Primera ronda de asambleas en las seis zonas
+14. Primera cohorte del centro de formacion inscripta en las seis zonas
+15. Primer centro de apoyo escolar abierto (hoy son cero)
+16. Dos modulos de la aplicacion andando: el asistente de consulta
+    sobre lo ya publicado, y el turno medico
+
+LO QUE NO VA A CIEN DIAS Y HAY QUE DECIRLO:
+- La aplicacion completa. Auditoria de compras, mercado laboral y
+  streaming necesitan integraciones. Prometerla entera seria mentir.
+- La constancia de que no consta: necesita el asistente conectado a
+  registros judiciales.
+Escribir por que no van, en una linea cada una.
