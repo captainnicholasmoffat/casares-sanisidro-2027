@@ -908,12 +908,16 @@ apoyo escolar"; "género no tiene partida propia"; "el Municipio no
 financia hoy el CFL 404"; y el cuadro de transparencia, que ya declara
 "relevamiento propio" y "verificado el 12 de septiembre de 2026".
 
-## LO QUE FALTA DECIDIR A CAP'N NICK
-**El portal de empleo municipal.** En el cronograma del capítulo 6, la
-fila del mes 6 dice: *"Arranca la intermediación laboral municipal; el
-primer registro fija la línea de base, que hoy no existe"*. El "hoy no
-existe" se refiere al registro, no al portal, pero leído rápido insinúa
-que no hay intermediación laboral municipal. Como el portal existe desde
-noviembre de 2025 y tiene avisos reales, **no se tocó y se pregunta**:
-¿se reescribe la fila para que quede claro que lo que no existe es el
-registro de inserción, o se saca la frase entera?
+## LA DECISIÓN QUE TOMÓ CAP'N NICK · la fila del mes 6
+Ni nombrar el portal de la gestión actual —contradice la regla 85, el
+documento no le reconoce nada— ni sacar la frase, que pierde el
+argumento. La fila precisa qué es lo que falta, y lo que falta no es la
+intermediación: es el registro. Queda así:
+
+> Arranca el **registro público de inserción laboral**: cuántas personas
+> consiguieron empleo, publicado el día que se registra. Hoy ese número
+> aparece suelto en alguna gacetilla, no en un registro continuo que se
+> pueda consultar.
+
+No se nombra ningún portal municipal. La fila habla de lo que nosotros
+ponemos en marcha y de lo que hoy no está.
