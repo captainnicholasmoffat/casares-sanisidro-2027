@@ -1494,7 +1494,25 @@ hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aac
 porque estas decisiones no pasan por el cuerpo deliberativo.</b> Este programa no propone frenar la
 construcci&oacute;n: propone que el criterio se discuta y se vote, y que los permisos individuales se
 publiquen con su localidad.</p>
+<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veintiun d&iacute;as.</b>
+La reforma del C&oacute;digo de Ordenamiento Urbano se vot&oacute; el <b>6 de mayo de 2026</b>. Vecinos
+de Villa Adelina, Boulogne, B&eacute;ccar y La Horqueta denuncian que <b>se aprob&oacute; en menos de
+veintiun d&iacute;as h&aacute;biles, sin audiencia p&uacute;blica y sin los estudios de impacto ambiental
+previos</b>, y que las comisiones se reunieron sin ellos.
+<span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
+instancia de participaci&oacute;n</span>: lo que este programa propone es la instancia, no el tr&aacute;mite.</p>
+<p><b>Y hay un caso donde el &uacute;nico &aacute;mbito que funcion&oacute; fue un juzgado.</b> En
+Boulogne, la asamblea vecinal que reclama un parque p&uacute;blico en el predio lindero al ex Arsenal
+consigui&oacute; en <b>agosto de 2025 una medida cautelar</b> que orden&oacute; suspender la
+construcci&oacute;n de un barrio cerrado, ratificada en septiembre.
+<b>Cuando un juez tiene que frenar una obra porque no hubo d&oacute;nde discutirla, el problema no es el
+juez: es que falta el &aacute;mbito.</b> Boulogne es la localidad m&aacute;s poblada del partido y la que
+menos espacio verde tiene.</p>
 </div>
+<p class="cap"><b>Fuente:</b> el conteo de decretos es relevamiento propio del Bolet&iacute;n Oficial
+Municipal, febrero de 2024 a septiembre de 2026. Las objeciones al C&oacute;digo de Ordenamiento Urbano y
+la medida cautelar de Boulogne son de la cobertura de prensa local, con la fecha y la localidad de cada
+dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
 <p class="lead">Ambiente y espacio p&uacute;blico son la Prioridad II declarada, y donde m&aacute;s se
@@ -1573,13 +1591,23 @@ falta suponer una intenci&oacute;n para explicarlo</span>: alcanza con que no ex
 de objetar antes de la firma. Esto crea a ese alguien.</p>
 </div>
 
+<div class="pull"><div class="plabel">Y hab&iacute;a 1.037 firmas pidiendo lo contrario</div>
+<p>La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro en la costa
+sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b> y junt&oacute;
+<b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025 y Barisidro en septiembre.
+<span class="sg">No es que nadie haya dicho nada: es que no hab&iacute;a d&oacute;nde decirlo con
+efecto.</span> Una firma junta en una plataforma no obliga a nadie, y por eso este programa propone el
+&aacute;mbito donde ese mismo reclamo se plantee antes de la firma del decreto y tenga respuesta
+escrita.</p></div>
 <div class="note">
 <p><b>Sobre este caso.</b> Las fechas, las direcciones y la condici&oacute;n de permiso precario y
 gratuito surgen de la cobertura period&iacute;stica de junio y julio de 2025 y de los comunicados del
-propio Municipio. La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro&raquo;
-circul&oacute; ocho meses antes de la demolici&oacute;n. <b>Este programa no atribuye motivos a esa
-decisi&oacute;n</b>: se&ntilde;ala dos hechos verificables &mdash;que no hubo concurso previo y que la
-consulta lleg&oacute; despu&eacute;s&mdash; y propone el orden inverso para lo que falta.</p>
+propio Municipio. El conteo de firmas y la fecha de apertura son de la propia petici&oacute;n, p&uacute;blica
+y consultable. <b>Este programa no atribuye motivos a esa decisi&oacute;n</b>: se&ntilde;ala dos hechos
+verificables &mdash;que no hubo concurso previo y que la consulta lleg&oacute; despu&eacute;s&mdash; y
+propone el orden inverso para lo que falta.</p>
+<p><b>Fuente:</b> petici&oacute;n en Change.org, relevada el 21 de septiembre de 2026, y el relevamiento
+de reclamos vecinales de <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 </div>
 
 <h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
@@ -1609,9 +1637,21 @@ resuelve.</b></p>
 <p><b>Y el turno se sigue sacando haciendo la cola.</b> Una vecina de Boulogne lo describi&oacute;
 as&iacute;: llegar a la ventanilla despu&eacute;s de una fila larga y que le digan que se acabaron, que
 vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b></p>
+<p><b>Y la cola tiene tama&ntilde;o medido.</b> En la ventanilla de turnos del Hospital Central se
+contaron <b>37 personas</b> esperando, con esperas de m&aacute;s de una hora. Una paciente hab&iacute;a
+pedido turno de endocrinolog&iacute;a <b>en enero y se lo dieron para junio: cinco meses</b>. Otra hizo la
+fila para laboratorio y, al llegar a la ventanilla, le dijeron que <b>no hab&iacute;a reactivos</b>.
+<span class="sg">Las tres cosas est&aacute;n documentadas en junio de 2024, y nadie las volvi&oacute; a
+medir desde entonces</span>: no hay relevamiento independiente posterior que diga c&oacute;mo est&aacute;
+el turno hoy, y eso es parte del problema.</p>
 <p><b>Ah&iacute; est&aacute; la distancia entre comprar un tom&oacute;grafo y que el sistema funcione.</b>
 El equipamiento se inaugura y se fotograf&iacute;a. El turno, el insumo y la cama no.</p>
 </div>
+<p class="cap"><b>Fuente:</b> el recorrido por los hospitales municipales, la fila de 37 personas, el
+turno de endocrinolog&iacute;a de cinco meses y la falta de reactivos son de la cobertura
+period&iacute;stica del <b>3 de junio de 2024</b>. <b>No se encontr&oacute; ning&uacute;n relevamiento
+independiente posterior</b>, de modo que el dato describe junio de 2024 y no necesariamente hoy. El
+detalle, con cada cita y su fecha, en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 <h3>El Municipio ya tiene turnos digitales en funcionamiento. No los us&oacute; para los hospitales</h3>
 <div class="cols">
 <p><b>El dato es este, y no necesita adjetivos.</b> <span class="sg">No hay turno m&eacute;dico en
@@ -1917,9 +1957,9 @@ del repositorio. <b>Verificado el 21 de septiembre de 2026.</b></p>
 
 <h3>3. Estafas virtuales, grooming y robo de identidad: una oficina de ciberdelito</h3>
 <div class="cols">
-<p><b>Es probablemente el delito que m&aacute;s vecinos sufren, y el que menos aparece en lo que el
-Municipio publica sobre seguridad.</b> Estafas virtuales, robo de identidad, grooming, extorsiones por
-redes.</p>
+<p><b>Estafas virtuales, robo de identidad, grooming y extorsiones por redes: es lo que menos aparece
+en lo que el Municipio publica sobre seguridad.</b> Ni en las estad&iacute;sticas mensuales, ni en el
+plan vigente, ni entre los canales de reclamo.</p>
 <p>Tigre tiene <b>CiberCOT</b>, una oficina que recibe y asiste al vecino que sufri&oacute; un delito
 cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
 <b>En San Isidro no se encontr&oacute; nada equivalente publicado</b>: ni oficina, ni canal, ni
@@ -2746,10 +2786,11 @@ valor alcanzado. Ninguna depende de un dato que haya que creernos.</p>
 <p>Las catorce se miden con documentos que el Municipio ya publica, o que este programa se compromete a
 publicar. <span class="sg">Ninguna requiere una encuesta, un relevamiento propio ni un dato que s&oacute;lo
 nosotros tengamos.</span></p>
-<p>La de intermediaci&oacute;n laboral merece una aclaraci&oacute;n, porque su l&iacute;nea de base es cero
-por una raz&oacute;n. Hoy el Municipio no publica &mdash;y probablemente no mide&mdash; cu&aacute;ntas
-personas consiguieron trabajo por su intervenci&oacute;n. Esa ausencia es, en s&iacute; misma, parte del
-diagn&oacute;stico del cap&iacute;tulo 1.</p>
+<p>La de inserci&oacute;n laboral merece una aclaraci&oacute;n, porque su l&iacute;nea de base es cero
+por una raz&oacute;n. <b>Ese n&uacute;mero aparece suelto en alguna comunicaci&oacute;n, no en un
+registro continuo que se pueda consultar</b>: no hay serie, no hay fecha de corte y no hay forma de
+comparar un a&ntilde;o contra otro. <span class="sg">Lo que este programa fija como l&iacute;nea de base
+no es el n&uacute;mero: es que exista el registro.</span></p>
 </div>
 <div class="callout a">
 <div class="clabel">La meta del plan vigente que no se puede verificar</div>

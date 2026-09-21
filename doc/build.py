@@ -63,10 +63,55 @@ def inline_svgs(html):
             html = html.replace(tag, svg)
     return html
 
+# ---------------------------------------------------------------------------
+# LAS FUENTES VAN EMBEBIDAS, NO SE PIDEN A GOOGLE.
+# Chromium no puede traer fonts.googleapis.com a traves del proxy (rechaza el
+# certificado) y cae en silencio a Liberation. Por eso las TTF viven en
+# doc/_fonts/ y entran como @font-face con data URI. El CSS de fuentes se
+# escribe UNA vez en out/fonts.css y cada pagina lo referencia: si se inyectara
+# en cada HTML serian 36 copias de 4 MB.
+# ---------------------------------------------------------------------------
+FONTDIR = HERE / "_fonts"
+SPECTRAL = [
+    (400, "normal", "Spectral-Regular.ttf"),
+    (500, "normal", "Spectral-Medium.ttf"),
+    (600, "normal", "Spectral-SemiBold.ttf"),
+    (700, "normal", "Spectral-Bold.ttf"),
+    (400, "italic", "Spectral-Italic.ttf"),
+    (500, "italic", "Spectral-MediumItalic.ttf"),
+    (600, "italic", "Spectral-SemiBoldItalic.ttf"),
+    (700, "italic", "Spectral-BoldItalic.ttf"),
+]
+# Inter va en instancias estaticas, no como fuente variable: Chromium carga la
+# variable en pantalla pero NO la embebe al exportar el PDF, y ahi sustituye sin
+# avisar. Las cuatro salen de Inter-var.ttf con doc/fetch_fonts.py.
+INTER = [
+    (400, "Inter-Regular.ttf"),
+    (500, "Inter-Medium.ttf"),
+    (600, "Inter-SemiBold.ttf"),
+    (700, "Inter-Bold.ttf"),
+]
+
+def _face(fam, weight, style, fn, fmt="truetype"):
+    p = FONTDIR / fn
+    if not p.exists():
+        sys.exit(f"  !! falta la fuente {p}. Sin ella el PDF sale en Liberation.\n"
+                 f"     Corre: python3 doc/fetch_fonts.py")
+    u = "data:font/ttf;base64," + base64.b64encode(p.read_bytes()).decode()
+    return (f"@font-face{{font-family:'{fam}';font-style:{style};font-weight:{weight};"
+            f"src:url({u}) format('{fmt}');font-display:block}}")
+
+def write_font_css():
+    faces = [_face("Spectral", w, st, fn) for w, st, fn in SPECTRAL]
+    faces += [_face("Inter", w, "normal", fn) for w, fn in INTER]
+    f = OUT / "fonts.css"
+    f.write_text("\n".join(faces), encoding="utf-8")
+    print(f"  fuentes embebidas: {len(faces)} caras -> {f.name} "
+          f"({f.stat().st_size/1e6:.1f} MB)")
+    return f
+
 SHELL = """<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <style>%(css)s</style></head><body>%(body)s</body></html>"""
 
 
@@ -77,6 +122,7 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
     if cover_pdf and not pathlib.Path(cover_pdf).exists():
         print(f"  !! falta la tapa {cover_pdf}: se arma sin ella")
         cover_pdf = None
+    write_font_css()
     pages = []
     with sync_playwright() as pw:
         # PW_CHROMIUM permite apuntar a un Chromium ya instalado en la maquina
@@ -137,7 +183,34 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
               f" pixel transparente (el alto de pagina no cambia):")
         for m in sorted(_missing): print("     -", m)
     print("\n->", dest, f"{dest.stat().st_size/1e6:.1f} MB", f"| {total} paginas")
+    check_fonts(dest)
     return dest
+
+
+def check_fonts(pdf):
+    """Aborta si el PDF salio con fuentes sustituidas. Paso obligatorio: cuando
+    Chromium no consigue Spectral e Inter cae a Liberation sin avisar, y el
+    documento no es presentable."""
+    nombres = set()
+    for pg in PdfReader(str(pdf)).pages:
+        res = pg.get("/Resources")
+        if not res: continue
+        fuentes = res.get_object().get("/Font")
+        if not fuentes: continue
+        for f in fuentes.get_object().values():
+            bf = f.get_object().get("/BaseFont")
+            if bf: nombres.add(str(bf).lstrip("/").split("+")[-1])
+    usadas = sorted(nombres)
+    malas = [n for n in usadas if "Liberation" in n or "DejaVu" in n]
+    print(f"\n  fuentes del PDF ({len(usadas)}):")
+    for n in usadas: print("     -", n)
+    if malas:
+        sys.exit(f"\n  !! FUENTES SUSTITUIDAS: {', '.join(malas)}."
+                 f" El PDF no es presentable. Revisa doc/_fonts/ y fonts.css.")
+    if not any(n.startswith("Spectral") for n in usadas) or \
+       not any(n.startswith("Inter") for n in usadas):
+        sys.exit("\n  !! faltan Spectral o Inter en el PDF.")
+    print("  OK: sin sustituciones.")
 
 
 if __name__ == "__main__":

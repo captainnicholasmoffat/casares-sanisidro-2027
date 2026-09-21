@@ -921,3 +921,94 @@ intermediación: es el registro. Queda así:
 
 No se nombra ningún portal municipal. La fila habla de lo que nosotros
 ponemos en marcha y de lo que hoy no está.
+
+---
+
+# CUATRO ARREGLOS DEL 21/09, SOBRE LA ENTREGA ANTERIOR
+## Estado: aplicados.
+
+## 1 · LAS FUENTES, ARREGLADO DE RAÍZ Y VERSIONADO
+El PDF salía en LiberationSans y LiberationSerif. La causa: el armado
+pedía las fuentes a `fonts.googleapis.com` y Chromium no puede traerlas
+a través del proxy —rechaza el certificado— así que caía a Liberation
+**sin avisar**. El arreglo se había hecho a mano en una sesión anterior
+y nunca quedó en el repo; por eso volvió.
+
+Ahora está persistido y no se puede perder:
+- Las TTF viven en **`doc/_fonts/`**, versionadas, con sus licencias OFL.
+  Spectral en ocho caras y Inter en cuatro.
+- `doc/build.py` las inyecta como `@font-face` con data URI, en un
+  `out/fonts.css` que se escribe una vez y cada página referencia. Ya no
+  hay ningún pedido a Google.
+- **Inter va en instancias estáticas, no como fuente variable.** Chromium
+  carga la variable en pantalla pero **no la embebe al exportar el PDF**:
+  ése era el motivo de que Spectral entrara y Inter no. Las cuatro se
+  derivan de `Inter-var.ttf` con `doc/fetch_fonts.py`.
+- `build.py` ahora **aborta** si el PDF sale con fuentes sustituidas:
+  lee la tabla de fuentes del PDF, corta si aparece Liberation o DejaVu,
+  y corta también si falta Spectral o Inter. No se puede volver a
+  entregar un PDF sustituido sin que el armado lo diga.
+
+Verificado en la entrega: **diez variantes, cero Liberation.**
+Inter-Bold, Inter-Regular, Inter-SemiBold, Spectral-Bold,
+Spectral-BoldItalic, Spectral-Italic, Spectral-MediumItalic,
+Spectral-Regular, Spectral-SemiBold y Spectral-SemiBoldItalic.
+
+Para reponer o actualizar las fuentes: `python3 doc/fetch_fonts.py`.
+
+## 2 · LOS TRES HALLAZGOS QUE FALTABAN
+- **Las 1.037 firmas.** Van en el 5.5, en el caso de la costa, como
+  recuadro propio: la petición se abrió el 28/10/2024, juntó 1.037 firmas
+  verificadas, y Catalejo se demolió en junio de 2025 y Barisidro en
+  septiembre. El argumento no es que nadie dijo nada: es que no había
+  dónde decirlo con efecto.
+- **La cautelar de Boulogne y el COU.** Van en el 5.5, en "El urbanismo
+  no pasa por el Concejo". La reforma del Código de Ordenamiento Urbano
+  se votó el 6 de mayo de 2026 y los vecinos de cuatro localidades
+  denuncian que se aprobó en menos de veintiún días hábiles, sin
+  audiencia pública y sin los estudios de impacto ambiental previos. Y en
+  agosto de 2025 la asamblea de Boulogne consiguió una medida cautelar
+  que suspendió la construcción de un barrio cerrado. Cuando un juez
+  tiene que frenar una obra porque no hubo dónde discutirla, el problema
+  es que falta el ámbito.
+- **Las filas en salud.** Van en el 5.6: 37 personas contadas en la
+  ventanilla del Hospital Central, un turno de endocrinología pedido en
+  enero y dado para junio, y una fila de laboratorio que terminó en "no
+  hay reactivos". **Con la salvedad obligatoria escrita en el cuerpo y
+  repetida en la fuente al pie: está documentado al 3 de junio de 2024 y
+  no se encontró ningún relevamiento independiente posterior.**
+
+Los tres llevan su fuente al pie, apuntando a
+`informes/05_que_dicen_los_vecinos.md`.
+
+## 3 · LA ESPECULACIÓN QUE SOBREVIVÍA
+El párrafo de intermediación laboral del capítulo 6 decía "Hoy el
+Municipio no publica —y probablemente no mide— cuántas personas
+consiguieron trabajo por su intervención". Sale entero. Ahora dice lo
+mismo que la fila del mes 6: ese número aparece suelto en alguna
+comunicación, no en un registro continuo que se pueda consultar; no hay
+serie, no hay fecha de corte y no hay forma de comparar un año contra
+otro. Lo que se fija como línea de base no es el número: es que exista el
+registro. No se nombra ningún portal.
+
+Barrido de los siete archivos buscando "probablemente", "seguramente",
+"es de suponer", "suponemos", "presumiblemente", "aparentemente", "todo
+indica", "da la impresión" y "pareciera". Quedaba una sola más:
+"Es probablemente el delito que más vecinos sufren", sobre el
+ciberdelito. Es un superlativo sin fuente, así que sale: el punto ahora
+abre por lo verificable —que es lo que menos aparece en lo que el
+Municipio publica sobre seguridad, ni en las estadísticas mensuales, ni
+en el plan vigente, ni entre los canales de reclamo—. Los otros dos
+"suponemos" que quedan son declaraciones de lo que este programa **no**
+supone, y se quedan.
+
+## 4 · LO QUE CAMBIÓ EL DOCUMENTO DE TAMAÑO
+Con las fuentes reales el texto ocupa más, y con los tres hallazgos
+nuevos dos páginas pasaron de 2.700 pt. Se partieron:
+- El 5.5 va en dos páginas, cortando antes de "El espacio público: quién
+  decide qué se hace con él".
+- El 5.8 y el 5.9 dejan de compartir página.
+
+El documento pasa de 36 a 38 páginas. Índice y numeración rehechos y
+verificados uno por uno: ninguna entrada apunta mal. Y el índice decía
+"Siete puntos" de la página 3, que ya eran ocho desde la corrección 102.

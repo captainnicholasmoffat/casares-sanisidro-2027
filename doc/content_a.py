@@ -52,7 +52,7 @@ def duo(a, b, cap):
 # =====================================================================
 _IDX = [
  ("g", "Este programa, en una p&aacute;gina", None),
- ("i", "Siete puntos y por d&oacute;nde empieza", "sintesis"),
+ ("i", "Ocho puntos y por d&oacute;nde empieza", "sintesis"),
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
  ("i", "Por qu&eacute; el dinero va a lo que se ve", "introduccion"),
@@ -104,7 +104,7 @@ _IDX = [
  ("i", "5.6 &nbsp;Salud", "cap5bb"),
  ("i", "5.7 &nbsp;Seguridad", "cap5bc"),
  ("i", "5.8 &nbsp;Educaci&oacute;n y cultura", "cap5b2"),
- ("i", "5.9 &nbsp;Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos", "cap5b2"),
+ ("i", "5.9 &nbsp;Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos", "cap5b2a2"),
  ("i", "5.10 &nbsp;Transparencia", "cap5b2b"),
  ("i", "5.11 &nbsp;Transporte y comercio", "cap5b2b"),
  ("i", "5.12 &nbsp;Los que tienen que ejecutar todo esto", "cap5b2b"),
