@@ -851,8 +851,8 @@ suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por
 adjudicatario, el tiempo de respuesta de los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
-<p>Publicar en un PDF que nadie abre se puede simular. Publicar en un sistema donde el dato entra el
-d&iacute;a que se genera y cualquiera lo consulta, no.</p></div>
+<p>Publicar en un PDF que nadie abre se puede simular. Un sistema donde la adjudicaci&oacute;n
+aparece el d&iacute;a que se firma, y cualquiera la consulta, no.</p></div>
 
 <h3>Las reglas del asistente, que son las que lo vuelven confiable</h3>
 <div class="cols">
@@ -1667,10 +1667,16 @@ decide: el sistema de turnos, la teleconsulta, el estado de los edificios y c&oa
 insumos.</p>
 </div>
 
-<h3>La inteligencia artificial en salud no hay que proponerla: hay que auditarla</h3>
+<h3>La inteligencia artificial en salud ya fue anunciada. Lo que falta es auditarla</h3>
 <p class="tight">Este programa iba a proponer IA aplicada al diagn&oacute;stico por im&aacute;genes. Al
-buscarlo apareci&oacute; que <b>ya est&aacute;</b>, desde hace tres a&ntilde;os, y eso cambia la
-pregunta entera.</p>
+buscarlo apareci&oacute; que <b>ya fue anunciada</b>, y eso cambia la pregunta entera.</p>
+<div class="pull"><div class="plabel">La fecha importa, y es la mitad del argumento</div>
+<p>El anuncio es de <b>abril de 2023</b>. Lo que se anunci&oacute; con esa etiqueta es <i>triage</i>
+sobre im&aacute;genes: software que marca si una placa se aparta de lo esperado.
+<span class="sg">No es lo que este programa propone, y no es lo que hoy se entiende por inteligencia
+artificial.</span> Lo mismo vale para las c&aacute;maras: lo que se anuncia como inteligencia artificial
+es anal&iacute;tica de video, una tecnolog&iacute;a de hace a&ntilde;os. En los dos casos la palabra
+lleg&oacute; antes que la capacidad.</p></div>
 <div class="cols">
 <p><b>Lo dice el propio Municipio.</b> En abril de 2023 anunci&oacute; ser &laquo;el primer municipio en
 sumar inteligencia artificial en salud&raquo;, en los tres hospitales. Seg&uacute;n la cobertura
@@ -1785,8 +1791,9 @@ que no se puede auditar desde afuera falla igual con funcionarios honestos.</p>
 </div>
 
 <h2><span class="n">5.7</span>Seguridad <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p class="lead">Esta secci&oacute;n no propone comprar lo que ya se compr&oacute;. Propone usarlo, que es
-lo que hoy no se hace y lo que la evidencia dice que m&aacute;s baja el delito.</p>
+<p class="lead">Esta secci&oacute;n no propone comprar lo que ya se compr&oacute;: propone usarlo, y
+publicar si sirve. <span class="sg">El Municipio anuncia inteligencia artificial; lo que falta es que
+funcione y que alguien pueda comprobarlo.</span></p>
 <div class="cols">
 <p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, y la funci&oacute;n que m&aacute;s creci&oacute;
 de todas: <b>+34,8% real en un a&ntilde;o</b>. Es la Prioridad I declarada del plan vigente y se
@@ -1824,11 +1831,16 @@ patrulla, en otro lado y a otra hora.</p>
 <div class="callout a">
 <div class="clabel">El paso cero, y es el que falta</div>
 <p>Nada de esto funciona sin un dato georreferenciado de incidentes, y <b>en San Isidro no existe en
-ninguna forma p&uacute;blica</b>. El portal de datos abiertos est&aacute; ca&iacute;do y, cuando
-funcionaba, nunca tuvo un dataset de seguridad. El Mapa Digital municipal figura &laquo;en
-construcci&oacute;n&raquo;. Las estad&iacute;sticas salen como nota de prensa mensual y agregadas a todo
-el partido: en agosto de 2026, <b>240 detenidos y 27.457 personas identificadas</b>, sin una sola
-desagregaci&oacute;n por zona y sin archivo descargable.</p>
+ninguna forma p&uacute;blica</b>. El portal de datos abiertos <b>no responde</b> &mdash;el archivo de
+la Wayback Machine lo registra con 62 conjuntos de datos hasta el 16 de junio de 2026, y ninguno era de
+seguridad&mdash; y el Mapa Digital municipal figura &laquo;en construcci&oacute;n&raquo;. Las
+estad&iacute;sticas salen como nota de prensa mensual y agregadas a todo el partido: en agosto de 2026
+el Municipio comunic&oacute; <b>240 detenidos y 27.457 personas identificadas</b>, sin una sola
+desagregaci&oacute;n por zona y sin archivo descargable. <span class="sg">Son las cifras que el
+Municipio elige publicar de s&iacute; mismo</span>, y no incluyen delitos esclarecidos ni tiempos de
+respuesta.</p>
+<p class="cap"><b>Verificado el 20 de septiembre de 2026</b>, sobre el sitio municipal y el archivo de
+la Wayback Machine.</p>
 <p><b>Y no es que otros lo hagan y San Isidro no.</b> Tigre tiene un portal de datos abiertos con
 219 conjuntos publicados, y sobre seguridad s&oacute;lo ofrece ubicaciones de bomberos, comisar&iacute;as
 e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
@@ -1839,13 +1851,26 @@ hoy no existe. Sin saber d&oacute;nde pasan las cosas, mandar el patrullero a do
 falta es una frase.</p>
 </div>
 
-<h3>2. Las c&aacute;maras ya est&aacute;n. Lo que falta es que hagan cuatro cosas</h3>
+<h3>2. Las c&aacute;maras ya est&aacute;n compradas. Lo que falta es que hagan tres cosas</h3>
 <p class="tight">Este programa iba a proponer software sobre las c&aacute;maras. Al buscarlo
-apareci&oacute; que ya est&aacute;: San Isidro complet&oacute; el recambio de su sistema y opera
-<b>alrededor de 2.646 c&aacute;maras de alta definici&oacute;n con inteligencia artificial</b> y alertas
-en tiempo real, sobre fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal. La
-inversi&oacute;n anunciada es de <b>15.000 millones</b>. <span class="sg">No se propone comprar nada: se
-propone usar lo comprado para cuatro cosas concretas.</span></p>
+apareci&oacute; que el equipamiento ya se compr&oacute;, y que de su funcionamiento no se sabe nada:
+<span class="sg">todo lo que se conoce del sistema lo dice el propio Municipio</span>.</p>
+<div class="cols">
+<p><b>Lo que el Municipio anuncia.</b> Que complet&oacute; el recambio de su sistema y opera alrededor de
+<b>2.646 c&aacute;maras de alta definici&oacute;n</b> con anal&iacute;tica de video y alertas en tiempo
+real, sobre fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal, por una
+inversi&oacute;n anunciada de <b>15.000 millones</b>.</p>
+<p><b>Y lo que no se puede verificar, que es todo lo dem&aacute;s.</b> Las cifras que el propio Municipio
+public&oacute; entre 2025 y 2026 van de 500 a 1.000, a 2.100 y a 2.646 seg&uacute;n la fecha del
+anuncio. <b>Esa anal&iacute;tica nunca tuvo una auditor&iacute;a externa</b>, y el Municipio no publica
+delitos esclarecidos, tiempo de respuesta del m&oacute;vil ni cu&aacute;ntas de sus alertas terminaron en
+una detenci&oacute;n. <span class="sg">Lo &uacute;nico verificable es lo que el vecino recibe, y hasta
+hoy es el anuncio</span>: en el relevamiento de testimonios vecinales de este programa no aparece un solo
+caso en que una c&aacute;mara municipal haya resuelto un robo.</p>
+<p><span class="sg">Por eso no se propone comprar nada: se propone usar lo comprado para tres cosas
+concretas, y publicar si funcionan.</span> La primera meta sobre c&aacute;maras no es instalar una
+m&aacute;s: es que exista un n&uacute;mero auditado de qu&eacute; hace el sistema.</p>
+</div>
 <div class="cols">
 <p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
 patrullaje m&aacute;s cercano. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
@@ -1854,22 +1879,16 @@ mientras ocurre y avisado al m&oacute;vil que est&aacute; a tres cuadras es la d
 patrullero que llega y uno que toma la denuncia.</p>
 <p><b>2 &middot; Reconstrucci&oacute;n del recorrido despu&eacute;s de un hecho denunciado.</b> El
 sistema busca en las c&aacute;maras qui&eacute;n estuvo y hacia d&oacute;nde fue, y orienta a la
-polic&iacute;a en el momento y no tres d&iacute;as despu&eacute;s. <b>La polic&iacute;a ya hace
-exactamente esto a mano, mirando horas de video:</b> que el sistema lo haga en minutos es eficiencia, no
-una facultad nueva.</p>
+polic&iacute;a en el momento y no tres d&iacute;as despu&eacute;s.</p>
 <p><b>3 &middot; Seguimiento sostenido de una persona en el tiempo: s&oacute;lo con orden judicial</b>,
 y con registro p&uacute;blico de cu&aacute;ntas &oacute;rdenes se recibieron y cu&aacute;ntas se
 cumplieron. Es el &uacute;nico de los tres que mira a una persona y no a un hecho, y por eso es el
 &uacute;nico que necesita un juez.</p>
-<p><b>4 &middot; Y la c&aacute;mara apuntando tambi&eacute;n al Municipio.</b> La inspecci&oacute;n
-municipal se transmite en vivo y cualquiera puede verla: que la inspecci&oacute;n fue real, que pas&oacute;
-donde dice que pas&oacute; y que no hubo coima. <span class="sg">El mismo instrumento que mira al vecino
-mira al inspector</span>, y m&aacute;s abajo en esta misma secci&oacute;n est&aacute; desarrollado.</p>
 <p><b>Y una precisi&oacute;n de competencia que conviene no saltear.</b> La seguridad p&uacute;blica es
 competencia exclusiva de la Provincia por la Ley 12.154: <span class="sg">el Municipio opera
 c&aacute;maras como colaborador, no como fuerza de seguridad</span>. Cuanto m&aacute;s se aleje la
 anal&iacute;tica de detectar hechos y m&aacute;s se acerque a identificar personas, m&aacute;s
-d&eacute;bil es su cobertura legal. De ah&iacute; el orden de los cuatro usos.</p>
+d&eacute;bil es su cobertura legal. De ah&iacute; el orden de los tres usos.</p>
 <p><b>Y dos cosas que este programa no hace, a prop&oacute;sito.</b> No arma un registro municipal de
 personas sin intervenci&oacute;n judicial, ni reconocimiento facial masivo en la v&iacute;a
 p&uacute;blica. <span class="sg">Es una decisi&oacute;n, no un olvido</span>, y queda dicha para que se
@@ -1890,13 +1909,21 @@ la anal&iacute;tica ya se pagaron. Lo que cuesta configurar el sistema para esto
 el registro de &oacute;rdenes judiciales es cero.</p>
 </div>
 
-<h3>3. Una oficina de ciberdelito, unificada con la capa de anal&iacute;tica</h3>
+<p class="cap"><b>Fuente:</b> las cifras de c&aacute;maras e inversi&oacute;n son comunicaciones
+del propio Municipio entre 2025 y 2026, y as&iacute; se las trata. El relevamiento de testimonios
+vecinales &mdash;Reddit, peticiones, rese&ntilde;as de las aplicaciones municipales y prensa local, con
+la fecha y la localidad de cada dato&mdash; est&aacute; en <b>informes/05_que_dicen_los_vecinos.md</b>
+del repositorio. <b>Verificado el 21 de septiembre de 2026.</b></p>
+
+<h3>3. Estafas virtuales, grooming y robo de identidad: una oficina de ciberdelito</h3>
 <div class="cols">
-<p><b>Es probablemente el delito que m&aacute;s vecinos sufren y el &uacute;nico del que el Municipio no
-se ocupa.</b> Estafas virtuales, robo de identidad, grooming, extorsiones por redes.</p>
+<p><b>Es probablemente el delito que m&aacute;s vecinos sufren, y el que menos aparece en lo que el
+Municipio publica sobre seguridad.</b> Estafas virtuales, robo de identidad, grooming, extorsiones por
+redes.</p>
 <p>Tigre tiene <b>CiberCOT</b>, una oficina que recibe y asiste al vecino que sufri&oacute; un delito
 cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
-San Isidro no tiene nada equivalente.</p>
+<b>En San Isidro no se encontr&oacute; nada equivalente publicado</b>: ni oficina, ni canal, ni
+menci&oacute;n en el sitio municipal ni en el plan vigente, al 20 de septiembre de 2026.</p>
 <p><b>Va unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
 mostrador de denuncias sin nadie que pueda hacer nada con ellas.
 <span class="sg">Unificada con la anal&iacute;tica y con la seguridad de los sistemas municipales, tiene
@@ -1940,33 +1967,7 @@ cualquiera la verifique.</p>
 <div class="pull"><p>La constancia no impide denunciar: impide condenar sin juicio. El que acusa tiene un
 camino, y es el judicial.</p></div>
 
-<h3>5. La inspecci&oacute;n municipal, transmitida en vivo</h3>
-<div class="cols">
-<p><b>Es la cuarta de las capacidades de c&aacute;mara de esta secci&oacute;n, aplicada a los agentes
-del propio Municipio.</b> El inspector transmite en vivo mientras inspecciona, y cualquiera puede abrir la
-aplicaci&oacute;n y ver que la inspecci&oacute;n fue real, que pas&oacute; donde dice que pas&oacute; y
-que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute;
-transmitiendo.</span></p>
-<p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
-fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
-labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
-Fuera de ella, no.</p>
-<p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
-naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial llevada un paso m&aacute;s,
-y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
-acusaci&oacute;n falsa</span>.</p>
-<p><b>Y tiene una consecuencia escrita:</b> sin transmisi&oacute;n, el acta no vale. Sin eso la regla es
-una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
-cumplirla.</p>
-<p><b>Del otro lado, el vecino graba desde la aplicaci&oacute;n</b>, y ese registro tiene el mismo valor
-en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
-<p><b>Lo que la reglamentaci&oacute;n tiene que resolver, y se dice ahora.</b> Una transmisi&oacute;n
-p&uacute;blica desde un comercio o una vivienda alcanza a terceros que no son parte del acto.
-<span class="sg">El l&iacute;mite es el acto, no el lugar</span>: la reglamentaci&oacute;n define el
-resguardo de esos datos y el archivo queda con fecha, domicilio y agente interviniente.</p>
-</div>
-
-<h3>6. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
+<h3>5. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
 <div class="cols">
 <p><b>Todo lo anterior se compra.</b> Anal&iacute;tica, desarrollo, monitoreo, soporte. Hoy eso se le
 paga a proveedores de afuera y el dinero se va del partido, igual que la obra p&uacute;blica antes del
@@ -1999,7 +2000,7 @@ una capacidad que el Municipio ten&iacute;a y perdi&oacute;</b>, igual que la co
 cap&iacute;tulo 3 propone recuperar.</p>
 </div>
 
-<h3>7. Y publicar lo que se hace</h3>
+<h3>6. Y publicar lo que se hace</h3>
 <ol class="n">
 <li><b>Publicar los datos que el Municipio efectivamente produce</b> &mdash;patrullaje,
 c&aacute;maras operativas, tiempos de respuesta del 911&mdash;, <b>continuos y no cada tres meses</b>,
@@ -2249,6 +2250,34 @@ como referencia de d&oacute;nde est&aacute; la vara, no como evidencia de impact
 Isidro est&aacute; estimado en el cap&iacute;tulo 3 &mdash;1.200 millones de inversi&oacute;n inicial,
 junto con la anal&iacute;tica de seguridad&mdash; como estimaci&oacute;n propia a licitar, no como cifra
 cerrada.</p>
+</div>
+
+<h3>La coima en la inspecci&oacute;n: el acto de autoridad, transmitido en vivo</h3>
+<p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto
+donde el tr&aacute;mite se compra: <span class="sg">el momento en que un agente con facultad de
+clausurar entra a un local</span>.</p>
+<div class="cols">
+<p><b>La propuesta es que ese acto se transmita.</b> El inspector transmite en vivo mientras inspecciona,
+y cualquiera puede abrir la aplicaci&oacute;n y ver que la inspecci&oacute;n fue real, que pas&oacute;
+donde dice que pas&oacute; y que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute;
+transmitiendo.</span></p>
+<p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
+fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
+labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
+Fuera de ella, no.</p>
+<p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
+naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial llevada un paso m&aacute;s,
+y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
+acusaci&oacute;n falsa</span>.</p>
+<p><b>Y tiene una consecuencia escrita:</b> sin transmisi&oacute;n, el acta no vale. Sin eso la regla es
+una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
+cumplirla.</p>
+<p><b>Del otro lado, el vecino graba desde la aplicaci&oacute;n</b>, y ese registro tiene el mismo valor
+en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
+<p><b>Lo que la reglamentaci&oacute;n tiene que resolver, y se dice ahora.</b> Una transmisi&oacute;n
+p&uacute;blica desde un comercio o una vivienda alcanza a terceros que no son parte del acto.
+<span class="sg">El l&iacute;mite es el acto, no el lugar</span>: la reglamentaci&oacute;n define el
+resguardo de esos datos y el archivo queda con fecha, domicilio y agente interviniente.</p>
 </div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
@@ -2753,7 +2782,8 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">La aplicaci&oacute;n y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano; y la inspecci&oacute;n municipal transmitida en vivo. Ninguna de las dos cuesta un peso: el equipo ya se compr&oacute;</td><td class="n">Decretos de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No cuesta un peso: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se pueda ver que la inspecci&oacute;n fue real y que no hubo coima. Tampoco cuesta un peso</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las tres ordenanzas restantes del anexo: partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, y ruido vehicular</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>

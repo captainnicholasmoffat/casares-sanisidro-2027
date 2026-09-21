@@ -96,7 +96,7 @@ Nadie explicó el cambio, y ninguna fuente independiente midió cuál de los dos
 
 Es el área con la evidencia más dura del informe, y viene de una fuente que nadie había mirado: **las reseñas públicas y fechadas de la propia aplicación de reclamos del Municipio.** La metodología completa está en la sección 7.
 
-**El número central: 49 reseñas posteriores al 10/12/2023, promedio 1,84 sobre 5, con 39 de una o dos estrellas y 8 de cuatro o cinco.**
+**El número central: en Google Play, 49 reseñas posteriores al 10/12/2023, promedio 1,84 sobre 5, con 39 de una o dos estrellas y 8 de cuatro o cinco.** (En App Store, otras cinco del mismo período promedian 1,60.)
 
 | Qué se dice | Ubicación confirmada | Fecha | ¿Patrón o caso? | Fuente | URL |
 | --- | --- | --- | --- | --- | --- |

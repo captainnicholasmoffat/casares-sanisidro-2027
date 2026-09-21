@@ -121,6 +121,9 @@ objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
 cosa. La <b>planta de personal y la escala salarial</b> no se pudieron verificar, porque vivir&iacute;an
 en ese mismo portal ca&iacute;do. Y la &uacute;ltima <b>rendici&oacute;n de cuentas con estados
 contables</b> publicada en la web es la de 2022.</p>
+<p class="cap"><b>Verificado el 20 de septiembre de 2026.</b> El portal exist&iacute;a y funcionaba: el
+archivo de la Wayback Machine lo registra con <b>62 conjuntos de datos hasta el 16 de junio de 2026</b>.
+No es que nunca se haya hecho; dej&oacute; de responder.</p>
 </div>
 <div class="callout a">
 <div class="clabel">Un caso que resume el problema: la propia flota</div>

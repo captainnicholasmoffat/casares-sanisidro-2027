@@ -804,3 +804,116 @@ LO QUE NO VA A CIEN DIAS Y HAY QUE DECIRLO:
 - La constancia de que no consta: necesita el asistente conectado a
   registros judiciales.
 Escribir por que no van, en una linea cada una.
+
+---
+
+# CORRECCIONES 100 A 105 · INSTRUCCIONES DE CAP N NICK DEL 21/09
+## Estado: aplicadas. Queda UNA decisión pendiente, al final.
+
+## PASO 0 · LA INVESTIGACIÓN, EN EL REPO
+Subida a `informes/05_que_dicen_los_vecinos.md` con las cinco tablas por
+área, URL y fecha en cada fila, el filtro que pasó cada dato, lo
+descartado por ubicación y por fecha, y las fuentes que no respondieron.
+Los datos crudos de las reseñas, en `informes/05_resenas_app_reclamos.csv`:
+184 filas con fecha, puntaje, tienda, aplicación y texto, sin nombres de
+usuarios, con una columna `gestion` cortada el 10/12/2023 para que
+cualquiera rehaga los conteos.
+
+## 100 · LA APERTURA DE LOS 7.730,9 MILLONES · página 3, punto 3
+El punto ahora abre la cifra antes de dar las 928: 60% a empleo y 40% a
+vivienda y servicios básicos; dentro de empleo, 60% forma y 40% contrata
+los desarrollos donde esa gente después trabaja. Las 928 salen de los
+2.783,1 millones de la parte que forma. Y queda dicho que la formación
+laboral está dentro de empleo y no dentro de educación.
+
+## 101 · LA APLICACIÓN, POR LO QUE EL VECINO PREGUNTA · página 3, punto 4
+Salieron "el dato entra el día que se genera" y "no es una aplicación
+para votar una vez al año". El punto ahora se cuenta con las cinco
+preguntas del cliente, engancha con la asamblea del capítulo 4 —antes de
+votar, el vecino pregunta y llega sabiendo— y cierra con el hallazgo de
+reclamos: la aplicación de hoy está en 1,84 sobre 5, la nuestra es la
+respuesta a eso, con su fuente al pie de la página.
+La misma jerga salió del pull quote del 4.11, que decía lo mismo sin
+explicarlo. Donde la frase está explicada —"la adjudicación el día que se
+firma"— se queda: ahí no es jerga.
+
+## 102 · SEPARAR SEGURIDAD DE INSPECCIONES
+En la página 3 son dos puntos distintos: el 5 es detección de hechos
+violentos y reconstrucción de recorrido; el 6 es la inspección
+transmitida, y dice de frente que resuelve otro problema —la corrupción
+en el trámite, no el delito en la calle—.
+Salió "hoy la policía lo hace a mano mirando horas de video", en la
+página 3 y en el capítulo 5. No se reemplazó por nada.
+
+## 103 · TEMAS AGRUPADOS POR HERRAMIENTA
+Tres pasajes más, separados igual:
+1. El capítulo 5 listaba cuatro usos de las cámaras y el cuarto era la
+   inspección transmitida. Ahora son tres usos de seguridad, y la
+   inspección se mudó entera al 5.9 —digitalización y trámite—, con
+   título por el tema: "La coima en la inspección: el acto de autoridad,
+   transmitido en vivo". Los puntos 6 y 7 del 5.7 pasaron a ser 5 y 6.
+2. El cronograma del capítulo 6 tenía una sola fila con la detección en
+   vivo y la inspección transmitida juntas, porque las dos van por
+   decreto. Ahora son dos filas: una de seguridad y otra de trámite.
+3. El título "Una oficina de ciberdelito, unificada con la capa de
+   analítica" lideraba con la herramienta. Ahora lidera con el tema:
+   "Estafas virtuales, grooming y robo de identidad: una oficina de
+   ciberdelito". El argumento de unificarla con la analítica se queda en
+   el cuerpo, que es donde va.
+
+## 104 · LA IA COMO EJE CENTRAL
+No se sacó ninguna propuesta de seguridad ni de salud. Cambió el encuadre:
+- Página 3: recuadro propio, antes de los ocho puntos. El Municipio ya
+  compró el equipamiento y lo anunció todo; lo que el vecino recibe hasta
+  hoy es el anuncio. La IA es el eje de la administración y no un
+  capítulo suelto, con el mismo nivel de desarrollo y la misma obsesión
+  que los laboratorios que la construyen. Ellos anuncian; nosotros la
+  hacemos funcionar. Es la tesis de la introducción aplicada a la
+  tecnología: administrar para la foto contra administrar para que
+  funcione.
+- Entrada del 5.7: "propone usarlo, y publicar si sirve. El Municipio
+  anuncia inteligencia artificial; lo que falta es que funcione y que
+  alguien pueda comprobarlo."
+- 5.6, salud: recuadro que fecha la etiqueta. El anuncio es de abril de
+  2023 y lo que se anunció es triage sobre imágenes. Lo mismo vale para
+  las cámaras: lo que se anuncia como IA es analítica de video. En los
+  dos casos la palabra llegó antes que la capacidad.
+- En ningún lado se afirma qué hace hoy el sistema de cámaras ni el de
+  salud. Se afirma lo verificado: que lo anunciado no se traduce en nada
+  que el vecino pueda ver o usar, y que la analítica de las cámaras nunca
+  tuvo auditoría externa.
+
+## 105 · AFIRMACIONES SIN FUENTE SOBRE EL MUNICIPIO DE HOY
+Barrido completo de los siete archivos de contenido. Lo que se encontró
+y qué se hizo con cada una:
+
+| Afirmación | Dónde | Qué fuente tenía | Qué se hizo |
+| --- | --- | --- | --- |
+| "opera alrededor de 2.646 cámaras de alta definición con inteligencia artificial y alertas en tiempo real" | 5.7, punto 2 | Sólo gacetilla municipal | Reescrita. Ahora se atribuye ("lo que el Municipio anuncia"), y se agrega que sus propias cifras van de 500 a 1.000, 2.100 y 2.646 según la fecha del anuncio, que la analítica nunca tuvo auditoría externa y que no publica delitos esclarecidos, tiempo de respuesta ni cuántas alertas terminaron en detención |
+| "La policía ya hace exactamente esto a mano, mirando horas de video" | 5.7 y página 3 | Ninguna | SALE en los dos lados, sin reemplazo |
+| "el único [delito] del que el Municipio no se ocupa" | 5.7, punto 3 | Ninguna | Pasa a "el que menos aparece en lo que el Municipio publica sobre seguridad" |
+| "San Isidro no tiene nada equivalente" (CiberCOT de Tigre) | 5.7, punto 3 | Ninguna | Pasa a "no se encontró nada equivalente publicado: ni oficina, ni canal, ni mención en el sitio municipal ni en el plan vigente, al 20/09/2026" |
+| "El portal de datos abiertos está caído y, cuando funcionaba, nunca tuvo un dataset de seguridad" | 5.7 y 2.3 | Observación propia, sin fecha | Fechada al 20/09/2026 y respaldada con el archivo de la Wayback Machine: 62 conjuntos de datos hasta el 16/06/2026. Se agrega que el portal existía y funcionaba: dejó de responder |
+| "240 detenidos y 27.457 personas identificadas" | 5.7 | Nota de prensa municipal | Atribuida: "el Municipio comunicó", más la aclaración de que son las cifras que elige publicar de sí mismo y no incluyen delitos esclarecidos ni tiempos de respuesta |
+| "la IA en salud ya está, desde hace tres años" | 5.6 | Anuncio municipal de abril de 2023 | Retitulada "ya fue anunciada". Se agrega el recuadro que fecha la etiqueta y dice qué es lo que se anunció |
+
+**Revisadas y que se quedan como están, porque ya tenían fuente o ya
+estaban acotadas:** las tres cifras contradictorias de la flota (las tres
+con fecha y origen); "Buscamos cuántos había en diciembre de 2023… No
+figura en ninguno"; "Hoy el Municipio no publica —y probablemente no
+mide— cuántas personas consiguieron trabajo por su intervención" (el
+"probablemente" ya acota); "no se encontró una ordenanza de ruidos";
+"San Isidro no adhirió a la Ley 15.302"; "cero centros municipales de
+apoyo escolar"; "género no tiene partida propia"; "el Municipio no
+financia hoy el CFL 404"; y el cuadro de transparencia, que ya declara
+"relevamiento propio" y "verificado el 12 de septiembre de 2026".
+
+## LO QUE FALTA DECIDIR A CAP'N NICK
+**El portal de empleo municipal.** En el cronograma del capítulo 6, la
+fila del mes 6 dice: *"Arranca la intermediación laboral municipal; el
+primer registro fija la línea de base, que hoy no existe"*. El "hoy no
+existe" se refiere al registro, no al portal, pero leído rápido insinúa
+que no hay intermediación laboral municipal. Como el portal existe desde
+noviembre de 2025 y tiene avisos reales, **no se tocó y se pregunta**:
+¿se reescribe la fila para que quede claro que lo que no existe es el
+registro de inserción, o se saca la frase entera?
