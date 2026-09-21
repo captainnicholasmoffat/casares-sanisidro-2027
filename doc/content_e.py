@@ -13,22 +13,21 @@ y <span class="sg">decide lejos de donde falta</span>. Hay una f&oacute;rmula de
 que nadie mira. Y hay una d&eacute;cada de gasto real que cae sin que ninguna gesti&oacute;n lo haya
 revertido.</p>
 <p>Lo que s&iacute; cambi&oacute; mientras se escrib&iacute;a este documento es el punto de partida. En
-agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones, y siete de sus ocho cuotas de
-capital las paga el gobierno que asuma en diciembre de 2027. <span class="sg">Est&aacute; escrito ac&aacute;
-porque la gesti&oacute;n que entre lo va a encontrar el primer d&iacute;a</span>, y porque un programa que
-dice cu&aacute;nto cuesta lo suyo tiene que decir tambi&eacute;n qu&eacute; hereda.</p>
-<p>Lo que s&iacute; hay es una omisi&oacute;n escrita, firmada y publicada, y un presupuesto que la
-cumple con exactitud. Contra eso no alcanza con prometer m&aacute;s: hay que cambiar
+agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones, y <span class="sg">siete de sus
+ocho cuotas de capital las paga el gobierno que asuma en diciembre de 2027</span>.</p>
+<p>Lo que s&iacute; hay es una omisi&oacute;n escrita, firmada y publicada, y un presupuesto que le da
+la raz&oacute;n. Contra eso no alcanza con prometer m&aacute;s: hay que cambiar
 <span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo.</p>
 <p>Por eso este programa promete poco y lo promete con fecha. Media obra p&uacute;blica decidida por los
 vecinos en cuatro a&ntilde;os. El gasto en empleo y vivienda por quince. Diecis&eacute;is compromisos en cien
-d&iacute;as. Catorce metas con l&iacute;nea de base fijada hoy y un informe cada 31 de marzo. Y una lista,
-igual de larga, de lo que no prometemos y por qu&eacute;.</p>
-<p>Y una pieza que sostiene a todas las dem&aacute;s: <b>el sistema donde todo esto se publica el
-d&iacute;a que ocurre</b>. Porque decidir bien exige
-leer, y nadie tiene las horas. <span class="sg">Lo que nadie puede leer no controla nada</span>, y un
-mecanismo de decisi&oacute;n vecinal sin eso se apaga solo, como se apag&oacute; en todas partes donde
-se intent&oacute; sin resolverlo.</p>
+d&iacute;as. Catorce metas con l&iacute;nea de base fijada hoy. Y una lista, igual de larga, de lo que
+no prometemos y por qu&eacute;.</p>
+<p>Y una pieza que sostiene a todas las dem&aacute;s: <b>una inteligencia artificial nativa del
+Municipio</b>, que para cada vecino es como tener a disposici&oacute;n a alguien que sabe todo del
+Municipio. Porque decidir bien exige leer, y nadie tiene las horas.
+<span class="sg">Lo que nadie puede leer no controla nada</span>, y un mecanismo de decisi&oacute;n
+vecinal sin eso se apaga solo, como se apag&oacute; en todas partes donde se intent&oacute; sin
+resolverlo.</p>
 </div>
 <div class="pull"><div class="plabel">Por d&oacute;nde empieza</div>
 <p>El 10 de diciembre de 2027 asume el intendente. A fines de marzo de 2028 la primera asamblea de cada

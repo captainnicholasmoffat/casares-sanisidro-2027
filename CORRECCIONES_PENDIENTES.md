@@ -1012,3 +1012,165 @@ nuevos dos páginas pasaron de 2.700 pt. Se partieron:
 El documento pasa de 36 a 38 páginas. Índice y numeración rehechos y
 verificados uno por uno: ninguna entrada apunta mal. Y el índice decía
 "Siete puntos" de la página 3, que ya eran ocho desde la corrección 102.
+
+---
+
+# CORRECCIONES 106 A 114 · INSTRUCCIONES DE CAP N NICK DEL 21/09
+## Estado: aplicadas. Una consulta abierta al final.
+
+**Regla de la tanda:** el documento habla de lo que ofrecemos. Nada de
+rendición de cuentas sobre nosotros, nada de justificar el propio
+método, nada de hablar del sistema de ellos en la página de nuestra
+propuesta.
+
+## 106 · FUERA LA IA COMO BANDERA
+Sale entero el recuadro "La inteligencia artificial, en el centro y no
+en un capítulo" de la página 3. Y la entrada del 5.7, que con la 104
+decía "El Municipio anuncia inteligencia artificial; lo que falta es que
+funcione", vuelve a hablar sólo de la propuesta: "no propone comprar lo
+que ya se compró; propone usarlo y publicar si sirve".
+
+Barrido de las dieciséis menciones de IA del documento. **Se quedan**
+las que no son bandera: el eje de la formación del CFL 404 (es el
+contenido del curso), el equipo de datos del capítulo 4, y el
+diagnóstico del 5.6 que fecha la etiqueta de abril de 2023. **Y se
+queda la presentación del producto de la 112**, que es otra cosa.
+
+## 107 · EL PUNTO DE SEGURIDAD DE LA PÁGINA 3
+Sale "El equipo ya está comprado y pagado; su analítica nunca tuvo una
+auditoría externa". Entra la meta: un hecho violento detectado mientras
+ocurre con aviso al móvil que está a tres cuadras, y después de un robo
+denunciado el sistema reconstruye el recorrido y le dice a la policía
+dónde está, para que vaya directo. **Lo que se gana es tiempo: horas en
+vez de días.** Las dos menciones de auditoría externa del capítulo 5 se
+quedan: ahí son diagnóstico.
+
+## 108 · PÁGINA 3 Y SEIS RESTOS
+**Página 3.** Ningún punto arranca con "Y que" ni con "Y donde": se
+arreglaron el 1, el 6 y el 7. Y la inspección es específica: inspecciones
+**de comercios**, transmitidas en vivo, los vecinos las ven desde la
+aplicación, y el comerciante inspeccionado también graba, con el mismo
+valor en el expediente.
+
+**Los seis restos.**
+1. Cierre: "un presupuesto que la cumple con exactitud" → "un
+   presupuesto que le da la razón". Y el último "con exactitud" del
+   capítulo 1 pasa a "exactamente": el barrido tenía que dar cero.
+2. Resumen del capítulo 6: sale "la aplicación publica el dato el día
+   que se genera", alineado con la 112. También sale la misma jerga de
+   la fila de promesas del 4.12.
+3. Resumen del capítulo 6: la línea de los cien días se reescribió en
+   positivo, empezando por lo que ocurre —la primera ronda de asambleas,
+   la primera cohorte, el primer centro de apoyo, la detección en vivo y
+   las inspecciones transmitidas— y recién después el conteo.
+4. **El informe de cumplimiento sale de los cinco lugares donde estaba**:
+   la página 3, la bajada del capítulo 6, el 6.3, el resumen del
+   capítulo 6 y el cierre; más la fila del mes 15 del cronograma. Y del
+   mismo tipo salen "Ninguna depende de un dato que haya que creernos",
+   "Ninguna requiere una encuesta, un relevamiento propio ni un dato que
+   sólo nosotros tengamos" y "No es un reproche a esa meta en particular".
+5. Meta de las cámaras: la línea de base pasa a lo verificado —"no hay
+   registro público de que ninguno de los dos usos opere, y las alertas
+   no se publican"—.
+6. Cierre: sale "un programa que dice cuánto cuesta lo suyo tiene que
+   decir también qué hereda" y el "Está escrito acá porque…". El dato
+   del bono de 30.000 millones se queda, y queda más fuerte.
+
+## 109 Y 110 · EL PÁRRAFO DE LA TESIS
+Sale "Con una condición, que es la que define todo lo demás…". En su
+lugar, la idea del cliente sin agregados: **"Somos un partido que
+gestiona. Que administra para que el partido crezca, y ese crecimiento
+económico es de todos."** Y la lista del final del mandato queda en
+tres: menos hogares sin cloaca y sin gas de red, más gente formada y con
+trabajo, y los vecinos decidiendo en qué se gasta la obra de su barrio.
+Sale "un municipio que sabe dónde gastó cada peso".
+
+## 111 · "CÓMO ESTÁ CONSTRUIDO", AL FINAL
+Sale de la introducción y pasa a ser una página propia, **Nota de
+método**, entre el cierre y el anexo. Va entera, con el recuadro de los
+límites. La introducción queda con la pregunta, la tesis, lo que promete
+y las catorce metas. Índice y numeración rehechos.
+
+## 112 · LA INTELIGENCIA ARTIFICIAL NATIVA DEL MUNICIPIO
+En la lista de la página 4, "Publicar el dato el día que se genera" sale
+y entra el producto entero: **una inteligencia artificial nativa del
+Municipio, que reemplaza lo que sería una aplicación.** Primero la
+imagen: para cada vecino es como tener a disposición a alguien que sabe
+todo del Municipio. Después, en una línea, lo que hace: el turno médico
+y el estado de la guardia, buscar trabajo con el currículum, la obra de
+su cuadra y cuánto se gastó en su zona, prepararse para la asamblea, ver
+las inspecciones. Y publicar los datos queda como **una de sus
+funciones**, no como el titular. La misma definición se replicó en el
+resumen del capítulo 6 y en el cierre.
+
+## 113 · LA ENTRADA DEL 1.2
+Reescrita en el orden pedido: primero qué prueba —no falta dinero, falta
+decidir distinto adónde va—, después el dato —cuarto de 106 municipios,
+17,8% contra una mediana de 5,4%, más del triple que el municipio
+típico— y al final el enganche con la tesis: si invierte tanto y hay
+6.488 hogares sin cloaca, es porque el dinero va a lo que se ve;
+alumbrado 10.313 millones contra agua y cloaca 3.320.
+
+**El dato de la planta de personal sale del 1.2**, y con él **la columna
+"Personal %" del cuadro**, que es el mismo dato y se leía igual como
+elogio de eficiencia.
+
+## 114 · LA OBRA PÚBLICA Y EL EMPLEO LOCAL
+**EL DATO ERA OTRO. Lo verifiqué contra `09_domicilios_historicos.csv`
+antes de escribirlo, y había dos errores.**
+
+El archivo tiene 3.670 decretos de adjudicación del Boletín Oficial, de
+1999 a 2021, con una fila por acto y una columna `es_san_isidro`.
+
+1. **Es proporción de ACTOS, no de dinero.** Una fila es un acto de
+   adjudicación. El título "Y la mitad del dinero de la obra se iba del
+   partido" estaba mal y se corrigió: **"La mitad de la obra se
+   adjudicaba a empresas de afuera del partido"**. También se corrigió
+   la etiqueta del diagrama de los dos circuitos, que decía "la mitad
+   del dinero salía del partido", y la frase del capítulo 4.
+2. **El 50,5% / 49,5% no correspondía al período que el documento
+   declaraba.** Ese par sale del archivo completo (1999–2021). Para
+   2002–2017, que es el período que el texto dice, sobre los **3.054
+   actos con domicilio publicado** da **49,6% San Isidro y 50,4% de
+   afuera**. Se usó el número del período declarado.
+3. **El 39% de 2017 es correcto:** 39,4% sobre 289 actos clasificados. Y
+   la caída año a año también: 53,1% en 2013, 46,5% en 2015, 39,4% en
+   2017. Se escribió con esos tres puntos.
+4. **La proporción por monto NO se calculó, a propósito.** `monto_max`
+   está en pesos corrientes de cada año, sin deflactar: sumar veinte
+   años da 26,3% para 2002–2017 y 80,6% para el archivo completo. No
+   significan nada. Está dicho en el cuerpo: "es proporción de actos, no
+   de dinero (…) la proporción por monto no se calcula acá".
+
+**El argumento de fondo, agregado en el 1.3 y en el 5.3.**
+- Lo que hace hoy el Municipio en empleo es **intermediar**: un portal
+  donde empresas privadas publican vacantes, ferias por barrio y ayuda a
+  los comercios que abren a conseguir personal. **Según el Municipio**,
+  131 empresas y alrededor de 600 puestos, casi la mitad en
+  gastronomía, oficios y ventas. Está descripto y atribuido, sin elogio.
+- **No se encontró ninguna cláusula que ate el gasto propio del
+  Municipio al empleo local**, ni en pliegos ni en normativa publicada.
+  La obra va a empresas cuyo domicilio no se publica desde 2018.
+- Lo nuestro: usar el presupuesto del propio Municipio para que la obra
+  y los servicios que paga los hagan empresas y cooperativas del
+  partido, con gente formada acá, en lo que paga mejor. No reemplaza la
+  intermediación: le agrega el único empleo sobre el que un intendente
+  decide de verdad.
+
+## TAMBIÉN
+"veintiun" → "veintiún".
+
+## EL DOCUMENTO
+De 38 a 39 páginas, por la Nota de método. Ninguna pasa de 2.700 pt.
+Fuentes: diez variantes, cero Liberation, verificado por el propio
+armado. Índice verificado entrada por entrada: ninguna apunta mal. Los
+68 exhibits siguen siendo los mismos.
+
+## CONSULTA ABIERTA
+**Cómo se llama el producto en la página 3.** El punto 4 de la página 3
+sigue diciendo "una aplicación que responde en castellano", porque así
+lo pidió la 101 y así lo diría un vecino. La página 4, con la 112, lo
+define como "una inteligencia artificial nativa del Municipio, que
+reemplaza lo que sería una aplicación". Las dos cosas conviven, pero la
+página 3 se lee antes. ¿Se deja así, o la página 3 usa también la
+definición de la 112?

@@ -56,7 +56,6 @@ _IDX = [
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
  ("i", "Por qu&eacute; el dinero va a lo que se ve", "introduccion"),
- ("i", "C&oacute;mo est&aacute; construido", "introduccion"),
  ("i", "Qu&eacute; promete, y qu&eacute; no", "introduccion"),
  ("i", "Las catorce metas, y de d&oacute;nde salen las fechas", "introduccion"),
  ("g", "1 &middot; Diagn&oacute;stico", None),
@@ -122,6 +121,8 @@ _IDX = [
  ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
+ ("g", "Nota de m&eacute;todo", None),
+ ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("g", "Anexo &middot; El articulado", None),
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
  ("i", "Las cinco ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
@@ -196,37 +197,14 @@ agua y alcantarillado 3.320.</span> Una cloaca no se inaugura con cinta.</p>
 el que entrega necesita que el otro siga necesitando. <b>Este programa no reparte un peso.</b> Los
 7.730,9 millones de empleo y vivienda pagan formaci&oacute;n, contrataci&oacute;n e infraestructura, y
 ninguno es una transferencia a una persona.</p>
-<p><b>Hay una tercera, y es la de este programa: administrar para que crezca.</b> Que San Isidro funcione
-mejor cuando termine el mandato que cuando empez&oacute;: menos hogares sin cloaca y sin gas de red,
-m&aacute;s gente con trabajo, y un Municipio que sabe d&oacute;nde gast&oacute; cada peso. Ninguna de las
-tres da una foto el d&iacute;a que se hace.</p>
-<p><b>Con una condici&oacute;n, que es la que define todo lo dem&aacute;s: que ese crecimiento sea de
-todos.</b> No se llega ah&iacute; repartiendo lo que ya se gast&oacute;, sino poniendo la obra donde
-falta. Por eso el cap&iacute;tulo 4 no pide un peso nuevo: mueve <span class="sg">qui&eacute;n
-decide</span> sobre la mitad de la obra p&uacute;blica que el Municipio ya hace.</p>
-</div>
-
-<h2>C&oacute;mo est&aacute; construido</h2>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico, y est&aacute;
-indicada la fuente donde aparece.</p>
-<div class="cols">
-<p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
-cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
-Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
-a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
-diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
-reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
-verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
-</div>
-
-<div class="callout a">
-<div class="clabel">Los l&iacute;mites, declarados donde se usan y no en una nota al final</div>
-<p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
-uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
-publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
-incomparable buena parte de las series interanuales. Y no existe informaci&oacute;n p&uacute;blica sobre
-el costo de financiamiento municipal, raz&oacute;n por la cual este programa no propone endeudarse.</p>
+<p><b>Hay una tercera, y es la de este programa: administrar para que crezca.</b> Que San Isidro
+funcione mejor cuando termine el mandato que cuando empez&oacute;: <b>menos hogares sin cloaca y sin gas
+de red</b>, <b>m&aacute;s gente formada y con trabajo</b>, y <b>los vecinos decidiendo en qu&eacute; se
+gasta la obra de su barrio</b>. Ninguna de las tres da una foto el d&iacute;a que se hace.</p>
+<p><b>Somos un partido que gestiona.</b> Que administra para que el partido crezca, y
+<span class="sg">ese crecimiento econ&oacute;mico es de todos</span>. Por eso el cap&iacute;tulo 4 no pide
+un peso nuevo: mueve <span class="sg">qui&eacute;n decide</span> sobre la mitad de la obra p&uacute;blica
+que el Municipio ya hace.</p>
 </div>
 
 <h2>Qu&eacute; promete, y qu&eacute; no</h2>
@@ -240,9 +218,13 @@ que la Ley Org&aacute;nica de las Municipalidades habilita desde 1976 y que otro
 usa.</li>
 <li><b>Multiplicar por quince el gasto en empleo y vivienda</b>, financiado actualizando una base de
 valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota ni tomar deuda.</li>
-<li><b>Publicar el dato el d&iacute;a que se genera</b>: la adjudicaci&oacute;n el d&iacute;a que se
-firma, el avance de cada obra el d&iacute;a que se carga y el precio unitario de cada compra el
-d&iacute;a que se compra, en un sistema que cualquiera puede consultar.</li>
+<li><b>Una inteligencia artificial nativa del Municipio</b>, que reemplaza lo que ser&iacute;a una
+aplicaci&oacute;n. <span class="sg">Para cada vecino es como tener a disposici&oacute;n a alguien que
+sabe todo del Municipio.</span> Le saca el turno m&eacute;dico y le dice c&oacute;mo viene la guardia, le
+busca trabajo con su curr&iacute;culum, le muestra la obra de su cuadra y cu&aacute;nto se gast&oacute;
+en su zona, lo prepara para la asamblea y le abre las inspecciones. Publicar los datos del Municipio
+&mdash;la adjudicaci&oacute;n, el avance de obra, el precio de cada compra&mdash; es una de sus
+funciones.</li>
 </ul>
 <p class="tight" style="margin-top:11pt">Lo que no depende de un intendente, y por eso no se promete:</p>
 <ul class="b">
@@ -335,25 +317,28 @@ red y el 71% de los que no tienen cloaca.</p></div>
 
 <h2><span class="n">1.2</span>El municipio invierte m&aacute;s que casi todos. Y no llega.</h2>
 <div class="cols">
-<p>San Isidro no gasta poco, y el tama&ntilde;o del presupuesto no explica nada de lo que la
-secci&oacute;n anterior mide.</p>
-<p>Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro est&aacute; en el
-<b>puesto 4 en inversi&oacute;n en obra p&uacute;blica</b>, con el 17,8% de su gasto contra una mediana
-provincial de 5,4%; y en el <b>puesto 20 en menor peso de la planta de personal</b>, con 34,4% contra
-50,7%.</p>
+<p><b>Lo que esta secci&oacute;n prueba es una sola cosa:</b> no falta dinero.
+<span class="sg">Falta decidir distinto ad&oacute;nde va.</span></p>
+<p><b>El dato.</b> Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro
+est&aacute; <b>cuarto en inversi&oacute;n en obra p&uacute;blica</b>: destina el <b>17,8%</b> de su gasto,
+contra una mediana provincial de <b>5,4%</b>. Invierte m&aacute;s del triple que el municipio
+bonaerense t&iacute;pico.</p>
+<p><b>Y ah&iacute; est&aacute; la pregunta.</b> Si invierte tanto y todav&iacute;a hay 6.488 hogares sin
+cloaca, no es porque no haya con qu&eacute;: es porque <span class="sg">el dinero va a lo que se
+ve</span>. Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o; agua y cloaca, 3.320.</p>
 </div>
 """ + exhead("c", "San Isidro contra sus vecinos y contra la mediana de la Provincia",
              "Ejecuci&oacute;n 2025, gasto devengado.") + """
 <table>
-<colgroup><col style="width:150pt"><col><col><col></colgroup>
+<colgroup><col style="width:190pt"><col><col></colgroup>
 <tr class="hd"><th>Municipio</th><th class="r">Gasto devengado total 2025 (M$)</th>
-<th class="r">Personal %</th><th class="r">Obra p&uacute;blica %</th></tr>
-<tr class="hi"><td class="l">San Isidro</td><td class="n">324.304</td><td class="n"><b>34,4</b></td><td class="n"><b>17,8</b></td></tr>
-<tr><td class="l">Vicente L&oacute;pez</td><td class="n">318.824</td><td class="n">49,0</td><td class="n">7,4</td></tr>
-<tr><td class="l">Tigre</td><td class="n">400.156</td><td class="n">30,4</td><td class="n">11,4</td></tr>
-<tr><td class="l">San Fernando</td><td class="n">148.932</td><td class="n">33,8</td><td class="n">6,9</td></tr>
-<tr><td class="l">San Mart&iacute;n</td><td class="n">276.003</td><td class="n">54,5</td><td class="n">1,5</td></tr>
-<tr><td class="m">Mediana provincial</td><td class="n m">&mdash;</td><td class="n m">50,7</td><td class="n m">5,4</td></tr>
+<th class="r">Obra p&uacute;blica %</th></tr>
+<tr class="hi"><td class="l">San Isidro</td><td class="n">324.304</td><td class="n"><b>17,8</b></td></tr>
+<tr><td class="l">Vicente L&oacute;pez</td><td class="n">318.824</td><td class="n">7,4</td></tr>
+<tr><td class="l">Tigre</td><td class="n">400.156</td><td class="n">11,4</td></tr>
+<tr><td class="l">San Fernando</td><td class="n">148.932</td><td class="n">6,9</td></tr>
+<tr><td class="l">San Mart&iacute;n</td><td class="n">276.003</td><td class="n">1,5</td></tr>
+<tr><td class="m">Mediana provincial</td><td class="n m">&mdash;</td><td class="n m">5,4</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA. San Isidro validado contra la
 ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
@@ -410,25 +395,30 @@ hay que juntarla todos los d&iacute;as y la calle oscura es un problema real.
 <span class="sg">Dice que entre dos obras posibles, se eligi&oacute; sistem&aacute;ticamente la que se
 ve.</span></p>
 </div>
-<h3>Y la mitad del dinero de la obra se iba del partido</h3>
+<h3>La mitad de la obra se adjudicaba a empresas de afuera del partido</h3>
 <div class="cols">
 <p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
-domicilio de la empresa a la que se le adjudica cada obra. Revisamos 3.670 decretos de
-adjudicaci&oacute;n entre 2002 y 2017, que son los que todav&iacute;a lo traen.</p>
-<p><b>El 50,5% de los adjudicatarios ten&iacute;a domicilio en San Isidro y el 49,5% ven&iacute;a de
-afuera.</b> Y la proporci&oacute;n local ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: en 2017 hab&iacute;a
-bajado al 39%.</p>
-<p><b>Y no sabemos cu&aacute;l es hoy: ese desconocimiento es el hallazgo.</b> La proporci&oacute;n
-50,5/49,5 corresponde al per&iacute;odo 2002&ndash;2017, el &uacute;ltimo con domicilio publicado.</p>
+domicilio de la empresa a la que se le adjudica cada obra. Revisamos <b>3.670 decretos de
+adjudicaci&oacute;n</b> del Bolet&iacute;n Oficial municipal, que son los que todav&iacute;a lo traen.</p>
+<p><b>Entre 2002 y 2017, de los 3.054 actos de adjudicaci&oacute;n con domicilio publicado, el 49,6% fue
+a empresas con domicilio en San Isidro y el 50,4% a empresas de afuera.</b> Y la proporci&oacute;n local
+ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: 53,1% en 2013, 46,5% en 2015, <b>39,4% en 2017</b>.</p>
+<p><b>Es proporci&oacute;n de actos, no de dinero.</b> Los montos del Bolet&iacute;n est&aacute;n en
+pesos corrientes de cada a&ntilde;o y no se pueden sumar a lo largo de quince a&ntilde;os, as&iacute; que
+la proporci&oacute;n por monto no se calcula ac&aacute;.
+<span class="sg">Y no sabemos cu&aacute;l es hoy: ese desconocimiento es el hallazgo.</span></p>
 <p><b>Desde 2018 no se puede saber, y el corte es anterior a esta gesti&oacute;n.</b> Entre 2011 y 2017
 el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
 bajo la gesti&oacute;n anterior, y la actual no la retom&oacute;.</b> De los 573 decretos de
 adjudicaci&oacute;n publicados desde diciembre de 2023, <span class="sg">ninguno dice d&oacute;nde
 est&aacute; el que cobra</span>.</p>
-<p><b>Por qu&eacute; importa para este programa.</b> Casi la mitad del dinero de la obra p&uacute;blica
-sal&iacute;a del partido en la &uacute;ltima medici&oacute;n disponible, y hoy no hay medici&oacute;n.
-Es el argumento del cap&iacute;tulo 4 en una cifra: cuando ejecuta una asociaci&oacute;n vecinal, el
-trabajo y el dinero se quedan donde est&aacute; la obra.</p>
+<p><b>Por qu&eacute; importa para este programa.</b> La obra p&uacute;blica es el gasto propio
+m&aacute;s grande que el Municipio decide, y deber&iacute;a generar empleo en el partido.
+<b>No se encontr&oacute; ninguna cl&aacute;usula que ate ese gasto al empleo local</b>: ni en los pliegos
+publicados, ni en el C&oacute;digo de Habilitaciones, ni en el plan vigente. La mitad de los actos iba
+afuera en la &uacute;ltima medici&oacute;n disponible, y desde 2018 ni siquiera hay medici&oacute;n.
+<span class="sg">Es el argumento del cap&iacute;tulo 4 en una cifra</span>: cuando ejecuta una
+asociaci&oacute;n vecinal, el trabajo y el dinero se quedan donde est&aacute; la obra.</p>
 </div>
 
 
@@ -443,8 +433,8 @@ a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&m
 millones en un solo acto.</p>
 <p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
 comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
-<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos con
-exactitud cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
+<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos
+exactamente cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
 ninguno de los 573 decretos.</b></p>
 <p><b>Dos salvedades, porque la cifra es fuerte.</b> Los montos son pesos corrientes de cada a&ntilde;o y
 no se comparan entre s&iacute;. Y la concentraci&oacute;n usa s&oacute;lo los 407 decretos donde el
@@ -606,5 +596,35 @@ de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de e
 Municipio y coinciden en las siete categor&iacute;as del gasto por objeto. Las de los otros municipios no
 fueron validadas individualmente: se usan para calcular la mediana provincial y la posici&oacute;n relativa
 de San Isidro.</p>
+</div>
+""")
+
+
+# =====================================================================
+# NOTA DE METODO - va al final, antes del anexo
+# =====================================================================
+METODO = dict(id="metodo", runhead=RH, html="""
+<h1>Nota de m&eacute;todo</h1>
+<div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
+<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico, y est&aacute;
+indicada la fuente donde aparece.</p>
+<div class="cols">
+<p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
+cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
+Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
+a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
+diferencia cero.</p>
+<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
+reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
+verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
+</div>
+
+<div class="callout a">
+<div class="clabel">Los l&iacute;mites, declarados donde se usan y no en una nota al final</div>
+<p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
+uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
+publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
+incomparable buena parte de las series interanuales. Y no existe informaci&oacute;n p&uacute;blica sobre
+el costo de financiamiento municipal, raz&oacute;n por la cual este programa no propone endeudarse.</p>
 </div>
 """)

@@ -14,21 +14,11 @@ lo que falta &mdash;<b>alumbrado p&uacute;blico recibe 10.313 millones al a&ntil
 3.320</b>&mdash;, y el plan de gobierno vigente tiene setenta y siete metas numeradas donde no aparecen
 las palabras empleo, vivienda, salud ni educaci&oacute;n.</p>
 
-<div class="pull"><div class="plabel">La inteligencia artificial, en el centro y no en un cap&iacute;tulo</div>
-<p>El Municipio ya compr&oacute; el equipamiento &mdash;c&aacute;maras, fibra &oacute;ptica, un programa
-de datos&mdash; y lo anunci&oacute; todo. Lo que el vecino recibe hasta hoy es el anuncio. Este programa
-trata la inteligencia artificial como <span class="sg">el eje de la administraci&oacute;n y no como un
-cap&iacute;tulo suelto</span>, con el mismo nivel de desarrollo y la misma obsesi&oacute;n que tienen los
-laboratorios que la construyen. Ellos anuncian inteligencia artificial; nosotros la hacemos funcionar.
-Es la tesis de este programa aplicada a la tecnolog&iacute;a: <b>administrar para la foto contra
-administrar para que funcione</b>. Y la forma de mostrar que funciona es que le cambie la vida a
-alguien.</p></div>
-
 <h2>Qu&eacute; proponemos hacer</h2>
 <ol class="n">
 <li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Son
 28.908 millones al a&ntilde;o, y no son gasto nuevo: es reasignaci&oacute;n de <span class="sg">qui&eacute;n
-decide</span>. Y donde la zona re&uacute;na el 60% de adhesi&oacute;n, su asociaci&oacute;n vecinal
+decide</span>. Donde la zona re&uacute;na el 60% de adhesi&oacute;n, su asociaci&oacute;n vecinal
 ejecuta la obra como parte contratante, con un mecanismo que la Ley Org&aacute;nica habilita desde 1976
 y que otro municipio bonaerense ya usa. <i>(Cap&iacute;tulo 4)</i></li>
 
@@ -57,26 +47,28 @@ vecino le pregunta a la aplicaci&oacute;n y llega sabiendo. <span class="sg">La 
 reclamos que el Municipio tiene hoy est&aacute; puntuada 1,84 sobre 5 por sus propios usuarios. La
 nuestra es la respuesta a eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que las c&aacute;maras que el Municipio ya compr&oacute; detecten y avisen, y no s&oacute;lo
-graben.</b> Detecci&oacute;n en vivo de hechos violentos con alerta autom&aacute;tica al m&oacute;vil
-m&aacute;s cercano, y reconstrucci&oacute;n del recorrido despu&eacute;s de un robo denunciado.
-<span class="sg">Es an&aacute;lisis de hechos, no de personas</span>: ni reconocimiento facial masivo ni
-registro municipal de personas sin orden judicial. El equipo ya est&aacute; comprado y pagado; su
-anal&iacute;tica nunca tuvo una auditor&iacute;a externa. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Un hecho violento
+detectado mientras ocurre, con aviso autom&aacute;tico al m&oacute;vil que est&aacute; a tres cuadras. Y
+despu&eacute;s de un robo denunciado, <b>el sistema reconstruye el recorrido de quien lo cometi&oacute; y
+le dice a la polic&iacute;a d&oacute;nde est&aacute;</b>, para que vaya directo a buscarlo.
+<span class="sg">Lo que se gana es tiempo</span>: horas en vez de d&iacute;as, y un patrullero que llega
+en vez de uno que toma la denuncia. Es an&aacute;lisis de hechos y no de personas: ni reconocimiento
+facial masivo ni registro municipal de personas sin orden judicial. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Y que la inspecci&oacute;n municipal se transmita en vivo.</b> Que cualquiera pueda ver que la
-inspecci&oacute;n fue real, que pas&oacute; donde dice que pas&oacute; y que no hubo coima. Es la misma
-c&aacute;mara, apuntando al Municipio en vez de al vecino, y resuelve otro problema: no el delito en la
-calle, sino <span class="sg">la corrupci&oacute;n en el tr&aacute;mite</span>. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que las inspecciones de comercios se transmitan en vivo.</b> El inspector transmite mientras
+inspecciona y los vecinos lo ven desde la aplicaci&oacute;n: que la inspecci&oacute;n fue real, que
+pas&oacute; donde dice que pas&oacute; y qu&eacute; pas&oacute; adentro. <b>Y el comerciante
+inspeccionado tambi&eacute;n graba</b>, con el mismo valor en el expediente. Esto no resuelve el delito
+en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.
+<i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Y que todo esto se pague sin subir una tasa ni tomar deuda.</b> Cuesta 7.225,2 millones de fondos
+<li><b>Que todo esto se pague sin subir una tasa ni tomar deuda.</b> Cuesta 7.225,2 millones de fondos
 nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash; y sale
 de actualizar una base de valuaci&oacute;n que es de 2008. <span class="sg">La al&iacute;cuota no se
 toca.</span> <i>(Cap&iacute;tulo 3)</i></li>
 
-<li><b>Catorce metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, con la
-fuente p&uacute;blica que comprueba cada una y un informe de cumplimiento cada 31 de marzo.
-<b>Y nada de esto se aprueba solo:</b> el Concejo tiene veinticuatro bancas en diez bloques y hacen
+<li><b>Catorce metas, con su l&iacute;nea de base fijada hoy.</b> Escritas antes de gobernar, cada una
+con la fuente p&uacute;blica que la comprueba. <b>Y nada de esto se aprueba solo:</b> el Concejo tiene veinticuatro bancas en diez bloques y hacen
 falta trece votos, por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable y no pide
 facultades nuevas para el intendente. <i>(Cap&iacute;tulos 4 y 6)</i></li>
 </ol>

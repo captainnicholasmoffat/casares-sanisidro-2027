@@ -694,8 +694,8 @@ repartir culpas despu&eacute;s.</p>
 </g>
 <path d="M330 120 L390 78" stroke="#7C2E23" stroke-width="1.4" stroke-dasharray="5 3"/>
 <path d="M396 74 L382 74 L387 84 Z" fill="#7C2E23"/>
-<text x="200" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">la mitad del dinero</text>
-<text x="200" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">sal&iacute;a del partido</text>
+<text x="200" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">la mitad de la obra</text>
+<text x="200" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">se adjudicaba afuera</text>
 <line x1="415" y1="46" x2="415" y2="356" stroke="#C6AE8E" stroke-width="1"/>
 <text x="630" y="24" text-anchor="middle" font-size="10.5" font-weight="600" font-family="Inter" fill="#5F7057" letter-spacing="1.4">ESTE PROGRAMA &middot; EL CIRCUITO RETIENE</text>
 <circle cx="630" cy="200" r="118" fill="none" stroke="#DB6B4B" stroke-width="1.4" stroke-dasharray="4 4"/>
@@ -728,8 +728,9 @@ las dos flechas de la izquierda de cada circuito.</p>
 llevan el 54,5% de lo contratado. Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
 hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
 <p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, la
-dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;que era la mitad de
-los adjudicatarios en la &uacute;ltima medici&oacute;n disponible&mdash;.</p>
+dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;la mitad de los
+actos de adjudicaci&oacute;n con domicilio publicado, en la &uacute;ltima medici&oacute;n
+disponible&mdash;.</p>
 <p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: quien se
 form&oacute; en el Centro de Formaci&oacute;n Laboral consigue trabajo en la obra de su propia zona.
 <b>Sin ejecuci&oacute;n vecinal, la formaci&oacute;n entrena gente para que la emplee otro
@@ -945,7 +946,7 @@ el sistema exista y que lo construya gente del partido.</p>
 <tr><td class="l">Partida por zona fijada por ordenanza, con f&oacute;rmula de necesidad escrita</td><td class="n">Que las comisiones reemplacen al Concejo Deliberante</td></tr>
 <tr><td class="l">Ejecuci&oacute;n directa de obras por asociaciones vecinales, con el 60% de adhesi&oacute;n</td><td class="n">Que toda propuesta vecinal se ejecute autom&aacute;ticamente</td></tr>
 <tr><td class="l">Respuesta escrita y fundada, en plazo, a cada priorizaci&oacute;n</td><td class="n">Consulta popular vinculante: la ley provincial no la habilita</td></tr>
-<tr><td class="l">Ejecuci&oacute;n presupuestaria trimestral por zona, y todo lo dem&aacute;s publicado el d&iacute;a que se genera</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
+<tr><td class="l">Ejecuci&oacute;n presupuestaria trimestral por zona; la adjudicaci&oacute;n el d&iacute;a que se firma y el avance de obra el d&iacute;a que se carga</td><td class="n">Reformar la Ley Org&aacute;nica: es competencia de la Legislatura</td></tr>
 <tr><td class="l">Incompatibilidad entre priorizar y ejecutar, con acta de excusaci&oacute;n</td><td class="m">Que una comisi&oacute;n contrate a sus propios integrantes</td></tr>
 <tr><td class="l">Asamblea con espacio de cuidado de ni&ntilde;os y horario fuera del laboral</td><td class="m">Pagar por participar en la comisi&oacute;n vecinal</td></tr>
 <tr><td class="l">Derogar los arts. 8 a 10 de la Ordenanza 6045</td><td class="n">Autonom&iacute;a municipal plena: la Constituci&oacute;n provincial no la reconoce</td></tr>
@@ -1097,6 +1098,25 @@ trabajo.</p>
 r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. De eso,
 <b>7.225,2 millones son fondos nuevos</b>; el resto ya se gasta.</p>
 </div>
+<div class="cols">
+<p><b>Y conviene decir qu&eacute; hace hoy el Municipio con esos 170 millones, porque define
+d&oacute;nde est&aacute; la diferencia.</b> Lo que hace es <span class="sg">intermediar</span>: un portal
+donde empresas privadas publican vacantes, ferias de empleo por barrio, y ayuda a los comercios que
+abren a conseguir personal. Seg&uacute;n el Municipio, <b>131 empresas y alrededor de 600 puestos</b>,
+casi la mitad en gastronom&iacute;a, oficios y ventas.</p>
+<p><b>Es hacer de bolsa de trabajo para terceros.</b> El empleo lo crea y lo paga otro; el Municipio
+acerca las partes. <b>No se encontr&oacute; ninguna cl&aacute;usula
+que ate el gasto propio del Municipio al empleo local</b>: la obra p&uacute;blica va a empresas cuyo
+domicilio no se publica desde 2018.</p>
+<p><b>Lo que este programa agrega es lo otro.</b> Usar el presupuesto del propio Municipio &mdash;la obra
+y los servicios que ya paga&mdash; para que los hagan <span class="sg">empresas y cooperativas del
+partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reemplaza la intermediaci&oacute;n:
+le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, que es el que financia
+&eacute;l.</p>
+</div>
+<p class="cap"><b>Fuente:</b> las 131 empresas y los 600 puestos son cifras comunicadas por el propio
+Municipio, y as&iacute; se las trata. La ausencia de cl&aacute;usulas de empleo local es relevamiento
+propio de pliegos y normativa publicada, al 21 de septiembre de 2026.</p>
 """ + ex("g", "Empleo y vivienda son 5 de cada 3.100 pesos que gasta el Municipio",
      "Las dos partidas juntas suman el 0,16% del presupuesto ejecutado en 2025.",
      "ex18.png",
@@ -1494,10 +1514,10 @@ hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aac
 porque estas decisiones no pasan por el cuerpo deliberativo.</b> Este programa no propone frenar la
 construcci&oacute;n: propone que el criterio se discuta y se vote, y que los permisos individuales se
 publiquen con su localidad.</p>
-<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veintiun d&iacute;as.</b>
+<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veinti&uacute;n d&iacute;as.</b>
 La reforma del C&oacute;digo de Ordenamiento Urbano se vot&oacute; el <b>6 de mayo de 2026</b>. Vecinos
 de Villa Adelina, Boulogne, B&eacute;ccar y La Horqueta denuncian que <b>se aprob&oacute; en menos de
-veintiun d&iacute;as h&aacute;biles, sin audiencia p&uacute;blica y sin los estudios de impacto ambiental
+veinti&uacute;n d&iacute;as h&aacute;biles, sin audiencia p&uacute;blica y sin los estudios de impacto ambiental
 previos</b>, y que las comisiones se reunieron sin ellos.
 <span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
 instancia de participaci&oacute;n</span>: lo que este programa propone es la instancia, no el tr&aacute;mite.</p>
@@ -1831,9 +1851,9 @@ que no se puede auditar desde afuera falla igual con funcionarios honestos.</p>
 </div>
 
 <h2><span class="n">5.7</span>Seguridad <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p class="lead">Esta secci&oacute;n no propone comprar lo que ya se compr&oacute;: propone usarlo, y
-publicar si sirve. <span class="sg">El Municipio anuncia inteligencia artificial; lo que falta es que
-funcione y que alguien pueda comprobarlo.</span></p>
+<p class="lead">Esta secci&oacute;n no propone comprar lo que ya se compr&oacute;. Propone usarlo
+&mdash;que es lo que hoy no se hace y lo que la evidencia dice que m&aacute;s baja el delito&mdash; y
+<span class="sg">publicar si sirve</span>.</p>
 <div class="cols">
 <p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, y la funci&oacute;n que m&aacute;s creci&oacute;
 de todas: <b>+34,8% real en un a&ntilde;o</b>. Es la Prioridad I declarada del plan vigente y se
@@ -2666,7 +2686,7 @@ finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declarad
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>El plan, con fechas</h1>
-<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un informe de cumplimiento cada 31 de marzo. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
+<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, es decir a
@@ -2760,9 +2780,7 @@ siendo del Ejecutivo y del Concejo, y este programa no propone que deje de serlo
 
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
 <p class="tight">Catorce metas, cada una con el n&uacute;mero de hoy al lado y la fuente p&uacute;blica
-que la comprueba. <b>Y la rendici&oacute;n tiene nombre y fecha:</b> un <b>Informe de cumplimiento del
-programa de gobierno, cada 31 de marzo</b>, con una fila por meta, la l&iacute;nea de base original y el
-valor alcanzado. Ninguna depende de un dato que haya que creernos.</p>
+que la comprueba.</p>
 """ + exhead("c", "Catorce metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
@@ -2777,15 +2795,14 @@ valor alcanzado. Ninguna depende de un dato que haya que creernos.</p>
 <tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico y las alertas a la vista</td></tr>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
-<tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, con el registro de &oacute;rdenes judiciales publicado</td><td class="n">Ninguno de los dos usos opera hoy. Las 2.646 c&aacute;maras con anal&iacute;tica se usan para monitoreo y las alertas no se publican</td><td class="n">El tiempo de respuesta al aviso y el registro de &oacute;rdenes, en la aplicaci&oacute;n</td></tr>
+<tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, con el registro de &oacute;rdenes judiciales publicado</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">El tiempo de respuesta al aviso y el registro de &oacute;rdenes, en la aplicaci&oacute;n</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 <tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas y que 928 personas por a&ntilde;o terminen la formaci&oacute;n con acompa&ntilde;amiento hasta el empleo</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula publicada por sede</td></tr>
 </table>
 <div class="cols">
 <p>Las catorce se miden con documentos que el Municipio ya publica, o que este programa se compromete a
-publicar. <span class="sg">Ninguna requiere una encuesta, un relevamiento propio ni un dato que s&oacute;lo
-nosotros tengamos.</span></p>
+publicar.</p>
 <p>La de inserci&oacute;n laboral merece una aclaraci&oacute;n, porque su l&iacute;nea de base es cero
 por una raz&oacute;n. <b>Ese n&uacute;mero aparece suelto en alguna comunicaci&oacute;n, no en un
 registro continuo que se pueda consultar</b>: no hay serie, no hay fecha de corte y no hay forma de
@@ -2799,9 +2816,8 @@ patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos ha
 2023 en la web municipal, en el Bolet&iacute;n Oficial y en el presupuesto publicado. <b>No figura en
 ninguno.</b></p>
 <p>Sin ese n&uacute;mero, la meta no se puede verificar: cualquier flota actual cumple o incumple
-seg&uacute;n el punto de partida que uno elija. <span class="sg">No es un reproche a esa meta en
-particular, es la raz&oacute;n por la que las catorce de este cuadro llevan su l&iacute;nea de
-base escrita al lado.</span></p>
+seg&uacute;n el punto de partida que uno elija. <span class="sg">Por eso las catorce metas de este
+cuadro llevan su l&iacute;nea de base escrita al lado.</span></p>
 </div>
 <div class="callout g">
 <div class="clabel">Sobre la l&iacute;nea de base</div>
@@ -2835,7 +2851,6 @@ s&oacute;lo se le pone fecha y se dice con qu&eacute; documento se comprueba cad
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 ejecutado: 7.227 M, el 12,5% de la obra p&uacute;blica</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
 <tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025 y se publica el Fondo Educativo obra por obra</td><td class="n">Ejecuci&oacute;n del Fondo, publicada</td></tr>
-<tr><td class="l">Mes 15</td><td>Primer <i>Informe de cumplimiento del programa de gobierno</i>, 31 de marzo</td><td class="n">El informe, con una fila por meta</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la aplicaci&oacute;n: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, publicados de manera continua</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa e inspecci&oacute;n grabada, y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
@@ -2909,18 +2924,17 @@ la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de 
 <ol class="n">
 <li>En la primera sesi&oacute;n ordinaria del Concejo entra el proyecto que deroga los art&iacute;culos que
 hoy permiten disolver una asociaci&oacute;n vecinal.</li>
-<li>A los cien d&iacute;as hay diecis&eacute;is compromisos cumplidos, y ninguno es publicar un dato:
-seis ordenanzas en el Concejo, cuatro actos que no dependen de &eacute;l, y seis cosas que arrancaron
-&mdash;la primera ronda de asambleas, la primera cohorte de formaci&oacute;n, el primer centro de apoyo
-escolar, dos m&oacute;dulos de la aplicaci&oacute;n, la detecci&oacute;n en vivo sobre las c&aacute;maras
-que ya existen y la inspecci&oacute;n municipal transmitida en vivo&mdash;.</li>
+<li>A los cien d&iacute;as la primera ronda de asambleas ya se hizo en las seis zonas, la primera
+cohorte de formaci&oacute;n est&aacute; inscripta, el primer centro de apoyo escolar abri&oacute;, la
+detecci&oacute;n en vivo opera sobre las c&aacute;maras que ya existen y las inspecciones de comercios se
+transmiten. Son diecis&eacute;is compromisos: seis ordenanzas en el Concejo, cuatro actos que no dependen
+de &eacute;l y seis cosas que arrancaron.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
-<li>Catorce metas con l&iacute;nea de base fijada hoy, fuente de verificaci&oacute;n p&uacute;blica y un
-informe de cumplimiento cada 31 de marzo.</li>
-<li>Y la aplicaci&oacute;n publica el dato el d&iacute;a que se genera &mdash;la adjudicaci&oacute;n el
-d&iacute;a que se firma, el avance de obra el d&iacute;a que se carga, el precio unitario el d&iacute;a
-que se compra&mdash;, as&iacute; que el informe anual deja de ser la &uacute;nica ventana.</li>
+<li>Catorce metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica.</li>
+<li>Y una inteligencia artificial nativa del Municipio, que para cada vecino es como tener a
+disposici&oacute;n a alguien que sabe todo del Municipio: el turno, la guardia, el trabajo, la obra de su
+cuadra y lo que se gast&oacute; en su zona.</li>
 <li>Lo que depende de la Legislatura lo reclamamos y decimos que es un reclamo.</li>
 </ol>
 <div class="hairline"></div>
