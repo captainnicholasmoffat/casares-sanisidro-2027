@@ -19,6 +19,7 @@ PAGE_W_PX = PAGE_W_PT * PT     # 880
 
 _cache = {}
 _missing = set()
+_viudas = []          # pedazos de parrafo de una sola linea arriba o abajo de columna
 # 1x1 transparente: si la ilustracion no esta en el paquete el <img> igual
 # ocupa el alto que le fija design.css, asi que la pagina mide lo mismo.
 BLANK = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAA"
@@ -110,6 +111,30 @@ def write_font_css():
           f"({f.stat().st_size/1e6:.1f} MB)")
     return f
 
+# Chromium no implementa widows/orphans dentro de columnas, asi que la regla de
+# design.css es break-inside. Esto lo comprueba mirando las cajas dibujadas: si un
+# parrafo se parte entre columnas y de un lado queda una sola linea, avisa.
+JS_VIUDAS = """() => {
+  const malos = [];
+  document.querySelectorAll('.cols').forEach(cols => {
+    cols.querySelectorAll(':scope > p, :scope > ul, :scope > ol, :scope > h3').forEach(el => {
+      const rects = [...el.getClientRects()];
+      if (rects.length < 2) return;
+      const bandas = {};
+      rects.forEach(r => { const k = Math.round(r.left / 10) * 10;
+                           (bandas[k] = bandas[k] || []).push(r); });
+      const claves = Object.keys(bandas);
+      if (claves.length < 2) return;
+      const lh = parseFloat(getComputedStyle(el).lineHeight) || 14;
+      claves.forEach(k => {
+        const alto = bandas[k].reduce((s, r) => s + r.height, 0);
+        if (alto < lh * 1.6) malos.push(el.textContent.trim().slice(0, 80));
+      });
+    });
+  });
+  return malos;
+}"""
+
 SHELL = """<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
 <link rel="stylesheet" href="fonts.css">
 <style>%(css)s</style></head><body>%(body)s</body></html>"""
@@ -124,6 +149,7 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
         cover_pdf = None
     write_font_css()
     pages = []
+    _viudas.clear()
     with sync_playwright() as pw:
         # PW_CHROMIUM permite apuntar a un Chromium ya instalado en la maquina
         _exe = os.environ.get("PW_CHROMIUM")
@@ -144,6 +170,8 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
             try: pg.evaluate("document.fonts.ready")
             except Exception: pass
             pg.wait_for_timeout(250)
+            for t in pg.evaluate(JS_VIUDAS):
+                _viudas.append((n, t))
             h_px = pg.evaluate("document.getElementById('pg').getBoundingClientRect().height")
             # ninguna pagina puede ser mas baja que A4
             MIN_PX = 841.89 * PT
@@ -184,6 +212,11 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
         for m in sorted(_missing): print("     -", m)
     print("\n->", dest, f"{dest.stat().st_size/1e6:.1f} MB", f"| {total} paginas")
     check_fonts(dest)
+    if _viudas:
+        print(f"\n  !! {len(_viudas)} viudas o huerfanas en columna:")
+        for n, t in _viudas: print(f"     p{n:>2}  &laquo;{t}&raquo;".replace("&laquo;","\u00ab").replace("&raquo;","\u00bb"))
+    else:
+        print("  OK: ninguna viuda ni huerfana en columna.")
     return dest
 
 

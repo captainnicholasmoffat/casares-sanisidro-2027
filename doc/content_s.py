@@ -36,16 +36,17 @@ t&iacute;tulo de validez oficial, para que lo aprendido sirva tambi&eacute;n fue
 <span class="sg">La formaci&oacute;n laboral est&aacute; ac&aacute;, dentro de empleo, y no dentro de
 educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que el vecino le pueda preguntar al Municipio, y que el Municipio le conteste.</b> Una
-aplicaci&oacute;n que responde en castellano y muestra de d&oacute;nde sac&oacute; cada dato:
+<li><b>Que el vecino le pueda preguntar al Municipio, y que el Municipio le conteste.</b> <b>Una
+inteligencia artificial nativa del Municipio</b>, que reemplaza lo que ser&iacute;a una
+aplicaci&oacute;n: responde en castellano y muestra de d&oacute;nde sac&oacute; cada dato.
 <i>mostrame esta obra, de qui&eacute;n es, de qu&eacute; se trata y c&oacute;mo la est&aacute;n
 administrando</i>; <i>&iquest;c&oacute;mo saco turno en el hospital m&aacute;s cercano?</i>;
 <i>&iquest;c&oacute;mo viene la guardia, puedo ir ahora o est&aacute; llena?</i>; <i>estoy buscando
 trabajo, este es mi curr&iacute;culum, ayudame</i>; <i>&iquest;cu&aacute;nto se gast&oacute; en mi zona
 este a&ntilde;o?</i> Y engancha con el cap&iacute;tulo 4: antes de votar en la asamblea de su zona, el
-vecino le pregunta a la aplicaci&oacute;n y llega sabiendo. <span class="sg">La aplicaci&oacute;n de
-reclamos que el Municipio tiene hoy est&aacute; puntuada 1,84 sobre 5 por sus propios usuarios. La
-nuestra es la respuesta a eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
+vecino le pregunta y llega sabiendo. <span class="sg">La aplicaci&oacute;n de reclamos que el Municipio
+tiene hoy est&aacute; puntuada 1,84 sobre 5 por sus propios usuarios. Lo nuestro es la respuesta a
+eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
 <li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Un hecho violento
 detectado mientras ocurre, con aviso autom&aacute;tico al m&oacute;vil que est&aacute; a tres cuadras. Y

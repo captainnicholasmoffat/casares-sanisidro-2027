@@ -49,8 +49,9 @@ la posibilidad que los municipios accedan a los institutos de democracia semidir
 municipal. <span class="sg">Treinta y dos a&ntilde;os despu&eacute;s, la Legislatura no lo hizo.</span> El
 Decreto-Ley 6769/58 sigue sin contener ninguna de esas palabras.</p>
 </div>
+<h3>Qu&eacute; son los institutos de democracia semidirecta</h3>
 <div class="cols">
-<p><b>Qu&eacute; son los institutos de democracia semidirecta.</b> Tres: el refer&eacute;ndum, que
+<p>Tres: el refer&eacute;ndum, que
 somete una ordenanza al voto; la consulta popular, que somete una decisi&oacute;n antes de tomarla; y la
 iniciativa popular, que permite a un grupo de vecinos presentar un proyecto y obligar al Concejo a
 tratarlo. Las tres existen en la Constituci&oacute;n nacional desde 1994 y en la provincial
@@ -79,10 +80,8 @@ sigue es lo que s&iacute; puede hacer solo.</p></div>
 <p>En 2025 San Isidro ejecut&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>: el
 <b>17,8% de todo su gasto</b>, uno de los cuatro municipios que m&aacute;s invierten de la Provincia. No
 es un municipio sin capacidad de inversi&oacute;n: es lo contrario.</p>
-<p>San Isidro ya gasta el dinero. Invierte en obra p&uacute;blica m&aacute;s que el 96% de los municipios
-bonaerenses, y aun as&iacute; 25.165 hogares cocinan sin gas de red. El problema no es cu&aacute;nto se
-invierte: <span class="sg">es que qui&eacute;n decide d&oacute;nde se invierte no vive donde est&aacute;
-el d&eacute;ficit.</span></p>
+<p><span class="sg">Qui&eacute;n decide d&oacute;nde se invierte ese dinero no vive donde est&aacute; el
+d&eacute;ficit.</span> Ese es el problema que este cap&iacute;tulo resuelve.</p>
 <p>Este mecanismo cambia eso de dos maneras verificables: la f&oacute;rmula manda m&aacute;s dinero por
 habitante a las zonas con peores indicadores, y el art&iacute;culo 132 exige que la obra la pidan por
 escrito el 60% de los beneficiarios. <span class="sg">Ninguna obra se hace donde nadie la pidi&oacute;.</span></p>
@@ -1098,9 +1097,9 @@ trabajo.</p>
 r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. De eso,
 <b>7.225,2 millones son fondos nuevos</b>; el resto ya se gasta.</p>
 </div>
+<h3>Qu&eacute; hace hoy el Municipio con esos 170 millones</h3>
 <div class="cols">
-<p><b>Y conviene decir qu&eacute; hace hoy el Municipio con esos 170 millones, porque define
-d&oacute;nde est&aacute; la diferencia.</b> Lo que hace es <span class="sg">intermediar</span>: un portal
+<p>Lo que hace es <span class="sg">intermediar</span>: un portal
 donde empresas privadas publican vacantes, ferias de empleo por barrio, y ayuda a los comercios que
 abren a conseguir personal. Seg&uacute;n el Municipio, <b>131 empresas y alrededor de 600 puestos</b>,
 casi la mitad en gastronom&iacute;a, oficios y ventas.</p>
@@ -1384,8 +1383,6 @@ queden atadas a una partida afectada y no a la voluntad de quien gobierne. El ca
 sobre esto.</p>
 
 </div>
-<div class="pull"><p>Cuatro pesos de cada mil. Esa es la distancia entre lo que el plan dice y lo que el
-presupuesto hace.</p></div>
 
 <h3>Se intent&oacute; licitar dos veces, las dos fracasaron, y el contrato de seis meses va por el
 a&ntilde;o diecisiete</h3>
@@ -1643,6 +1640,7 @@ historias cl&iacute;nicas en papel a un sistema digital interno; el Central no.
 <span class="sg">La digitalizaci&oacute;n de este Municipio avanza por establecimiento y por
 &aacute;rea</span>, y eso explica buena parte de lo que esta secci&oacute;n encuentra.</p>
 </div>
+<h3>Lo que encontr&oacute; un recorrido por los hospitales</h3>
 <div class="cols">
 <p><b>Porque el problema de fondo sigue ah&iacute;, y est&aacute; documentado.</b> En un recorrido por
 los hospitales municipales, m&eacute;dicos de planta y pacientes describieron
@@ -1840,6 +1838,7 @@ esperando, demora estimada cuarenta minutos&raquo;, para que quien tiene que ir 
 <b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
 historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
 </div>
+<h3>Publicar el precio es lo que hace que el precio baje</h3>
 <div class="cols">
 <p><b>Por qu&eacute; esto no es &laquo;m&aacute;s transparencia&raquo;.</b> Publicar un precio unitario
 no es un gesto de apertura: <span class="sg">es el mecanismo que hace que el precio baje</span>, probado
@@ -1931,6 +1930,7 @@ caso en que una c&aacute;mara municipal haya resuelto un robo.</p>
 concretas, y publicar si funcionan.</span> La primera meta sobre c&aacute;maras no es instalar una
 m&aacute;s: es que exista un n&uacute;mero auditado de qu&eacute; hace el sistema.</p>
 </div>
+<h3>Los tres usos, en orden</h3>
 <div class="cols">
 <p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
 patrullaje m&aacute;s cercano. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
@@ -2070,7 +2070,7 @@ primero depende de un intendente, lo segundo no, y lo decimos.</li>
 <li><b>Que cada comisi&oacute;n vecinal reciba el dato de su zona</b> y pueda pedir explicaci&oacute;n
 fundada, con el mecanismo del cap&iacute;tulo 4.</li>
 </ol>
-<div class="pull"><div class="plabel">Un presupuesto no es una pol&iacute;tica</div>
+<div class="pull"><div class="plabel">Lo que falta no es dinero, es la medici&oacute;n</div>
 <p>Gastar un tercio m&aacute;s en seguridad sin publicar si funciona no es una pol&iacute;tica: es un
 presupuesto.</p></div>
 <div class="note">
@@ -2185,7 +2185,7 @@ donde conviene hacer un evento es uno grande y caro, y entonces la entrada es in
 alternativos con un tope de <b>300 asistentes y 500 metros cuadrados</b>, e invita expresamente a los
 municipios a adherir. <span class="sg">San Isidro no adhiri&oacute;.</span> Adherir por ordenanza es el
 camino m&aacute;s corto y no exige escribir un r&eacute;gimen nuevo.</p>
-<p><b>Y que qui&eacute;n decide d&oacute;nde puede haber m&uacute;sica sea el barrio</b>, no un reclamo
+<p><b>Que qui&eacute;n decide d&oacute;nde puede haber m&uacute;sica sea el barrio</b>, no un reclamo
 aislado. Es la misma l&oacute;gica del cap&iacute;tulo 4: la comisi&oacute;n de la zona opina sobre
 horarios y cuadras y esa opini&oacute;n queda escrita. Hoy un solo reclamo alcanza para clausurar y el
 criterio no se discute nunca.</p>
@@ -2412,8 +2412,9 @@ columna.</p>
 
 <h3>Cu&aacute;ndo se publica cada cosa, y por qu&eacute; casi todo es el mismo d&iacute;a</h3>
 <p class="tight">Lo trimestral qued&oacute; de cuando publicar significaba que un empleado armara un
-informe cada tres meses. Con el sistema del cap&iacute;tulo 4, <span class="sg">el dato existe el
-d&iacute;a que se genera</span> y publicarlo no es una tarea aparte: es el mismo registro.</p>
+informe cada tres meses. Con el sistema del cap&iacute;tulo 4, <span class="sg">la adjudicaci&oacute;n
+queda cargada el d&iacute;a que se firma</span>, y mostrarla no es una tarea aparte: es el mismo
+registro.</p>
 <div class="cols">
 <p><b>Continuo, el mismo d&iacute;a.</b> Reclamos y tiempo de respuesta. Stock hospitalario.
 Ocupaci&oacute;n de guardias. Avance de cada obra priorizada. Adjudicaciones, a medida que se firman y

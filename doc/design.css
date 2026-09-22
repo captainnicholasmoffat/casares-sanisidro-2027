@@ -38,7 +38,14 @@ h3{margin-top:16.5pt;font-family:'Spectral',serif;font-weight:600;font-size:11.2
 /* un titulo nunca se separa de lo que sigue ni queda solo al pie de columna */
 .cols>h2,.cols>h3,.cols>h4{break-after:avoid;-webkit-column-break-after:avoid;
  break-inside:avoid;-webkit-column-break-inside:avoid;widows:3;orphans:3}
-.cols>p{widows:2;orphans:2}
+/* Chromium NO implementa widows/orphans dentro de columnas: la regla existia y
+   no hacia nada, y por eso quedaban lineas sueltas arriba y abajo de columna.
+   Lo que si respeta es break-inside, asi que el parrafo no se parte: o entra
+   entero en la columna o pasa entero a la siguiente. Los parrafos de este
+   documento son de dos o tres oraciones, asi que el costo en equilibrio de
+   columnas es minimo y no puede haber viuda ni huerfana. */
+.cols>p,.cols>ul,.cols>ol{break-inside:avoid;-webkit-column-break-inside:avoid;
+ page-break-inside:avoid}
 .callout+h3,.note+h3{margin-top:15.2pt}
 
 /* ---------- texto ---------- */

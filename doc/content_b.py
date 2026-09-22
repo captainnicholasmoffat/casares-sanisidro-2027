@@ -7,7 +7,7 @@ from content_a import RH, ex, exhead, fig, duo
 C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
     "La barranca sobre el r&iacute;o. Ilustraci&oacute;n.") + """
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
-<div class="stand">El plan de gobierno vigente tiene setenta y siete metas numeradas y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este cap&iacute;tulo lo audita contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
+<div class="stand">Este cap&iacute;tulo audita el plan de gobierno vigente contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
 <div class="note">
 <p><b>De d&oacute;nde sale todo lo que sigue.</b> De documentos que public&oacute; la propia
@@ -161,9 +161,7 @@ objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</spa
 tres niveles aparece una persona.</p>
 <p>Auditar el cumplimiento de esas 77 metas ser&iacute;a un ejercicio menor. La pregunta relevante no es
 si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la lista.</span></p>
-<p>El 0,05% del presupuesto en empleo y el 0,10% en vivienda &mdash;las cifras del cap&iacute;tulo 1&mdash;
-no son un incumplimiento. <span class="sg">Son el cumplimiento exacto de un plan donde esas palabras no
-figuran.</span></p>
+<p>Lo que el cap&iacute;tulo 1 mide en pesos, este cap&iacute;tulo lo busca en el texto del plan.</p>
 </div>
 """ + exhead("c", "Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea",
              "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa. Las celdas vac&iacute;as no las pusimos nosotros.") + """
@@ -212,9 +210,8 @@ resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y
 
 <h2><span class="n">2.5</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
 <ol class="n">
-<li>Su plan de gobierno no menciona la palabra <b>salud</b> ni una sola vez en 3.137 palabras, y tampoco
-vivienda, empleo, pobreza, cloaca ni agua. Nombra hospitales y escuelas s&oacute;lo para se&ntilde;alizar
-sus esquinas.</li>
+<li>En las 3.137 palabras de su plan de gobierno, hospitales y escuelas aparecen s&oacute;lo para
+se&ntilde;alizar sus esquinas.</li>
 <li>Su cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o, y dej&oacute; de percibir 14.115
 millones que &eacute;l mismo habr&iacute;a cobrado en 2024.</li>
 <li>Ejecutar el presupuesto no es prestar el servicio: el Municipio es cuarto de 106 en inversi&oacute;n
@@ -433,15 +430,14 @@ construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;
 falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
 agrega sobre lo que ya funciona, espera. <span class="sg">El criterio es el mismo para las tres
 partidas y no hace excepciones.</span></p>
-<p><b>Por qu&eacute; estos tres y no otros.</b> Porque el cap&iacute;tulo 1 ya lo demostr&oacute; con el
-presupuesto: <b>alumbrado 10.313 millones contra agua y alcantarillado 3.320.</b> Tres a uno entre dos
-cosas comparables, las dos infraestructura urbana, las dos decididas cada a&ntilde;o. El Municipio elige
-sistem&aacute;ticamente lo que se ve, y ah&iacute; es donde hay margen.</p>
+<p><b>Por qu&eacute; estos tres y no otros.</b> Porque son los tres programas donde el cap&iacute;tulo 1
+encontr&oacute; el margen, y porque los tres crecieron por encima del resto del presupuesto.</p>
 <p><b>Y esto tiene un costo pol&iacute;tico que no escondemos.</b> Hay personas trabajando en esos
 programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
 secci&oacute;n 4.13 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
 </div>
+<h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
 <p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.906 de
 reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,

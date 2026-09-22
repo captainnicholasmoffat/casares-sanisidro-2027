@@ -173,16 +173,15 @@ buscar dentro.</p>
 </div>
 
 <div class="pull"><p>Las palabras empleo, vivienda, salud, educaci&oacute;n, pobreza y desarrollo
-social no aparecen en ninguna parte de &eacute;l.</p></div>
+social no aparecen en ninguna parte del programa actual de gobierno.</p></div>
 
 <div class="cols">
 <p style="margin-top:0">De ah&iacute; sale la pregunta que este programa se hace, y es la &uacute;nica
 pregunta que lo origina: <b>&iquest;a qui&eacute;n se escuch&oacute;, y c&oacute;mo, para que en un
 distrito con 25.165 hogares sin gas de red el empleo y la vivienda no aparecieran nunca?</b></p>
-<p>No es una pregunta ret&oacute;rica. El presupuesto municipal la contesta con precisi&oacute;n: el
-0,05% en empleo no es un descuido administrativo, es la consecuencia aritm&eacute;tica de un plan donde
-el empleo no figura. <span class="sg">El gasto sigue al plan.</span> Y el plan tiene una
-l&oacute;gica, que conviene nombrar antes de proponer nada.</p>
+<p>No es una pregunta ret&oacute;rica. El presupuesto municipal la contesta con precisi&oacute;n:
+<span class="sg">el empleo recibe el 0,05%</span>. Y eso responde a una l&oacute;gica, que conviene
+nombrar antes de proponer nada.</p>
 </div>
 
 <h2>Por qu&eacute; el dinero va a lo que se ve</h2>
@@ -201,7 +200,7 @@ ninguno es una transferencia a una persona.</p>
 funcione mejor cuando termine el mandato que cuando empez&oacute;: <b>menos hogares sin cloaca y sin gas
 de red</b>, <b>m&aacute;s gente formada y con trabajo</b>, y <b>los vecinos decidiendo en qu&eacute; se
 gasta la obra de su barrio</b>. Ninguna de las tres da una foto el d&iacute;a que se hace.</p>
-<p><b>Somos un partido que gestiona.</b> Que administra para que el partido crezca, y
+<p><b>Somos una propuesta de gobierno que gestiona.</b> Que administra para que el partido crezca, y
 <span class="sg">ese crecimiento econ&oacute;mico es de todos</span>. Por eso el cap&iacute;tulo 4 no pide
 un peso nuevo: mueve <span class="sg">qui&eacute;n decide</span> sobre la mitad de la obra p&uacute;blica
 que el Municipio ya hace.</p>
@@ -218,6 +217,10 @@ que la Ley Org&aacute;nica de las Municipalidades habilita desde 1976 y que otro
 usa.</li>
 <li><b>Multiplicar por quince el gasto en empleo y vivienda</b>, financiado actualizando una base de
 valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota ni tomar deuda.</li>
+<li><b>Formar a la gente del partido en lo que mejor paga hoy</b> &mdash;inteligencia artificial y
+tecnolog&iacute;a&mdash;, con t&iacute;tulo de la universidad nacional del partido, y que su primer
+trabajo sea construir la inteligencia artificial del propio Municipio. Y <b>un centro de apoyo escolar
+en cada localidad</b>, donde hoy no hay ninguno.</li>
 <li><b>Una inteligencia artificial nativa del Municipio</b>, que reemplaza lo que ser&iacute;a una
 aplicaci&oacute;n. <span class="sg">Para cada vecino es como tener a disposici&oacute;n a alguien que
 sabe todo del Municipio.</span> Le saca el turno m&eacute;dico y le dice c&oacute;mo viene la guardia, le
@@ -311,7 +314,6 @@ alguien en la casa haya terminado la universidad.</p>
 46,8% del partido.</b></p>
 <div class="pull"><p>Casi la mitad de San Isidro vive donde est&aacute; el 60% de los hogares sin gas de
 red y el 71% de los que no tienen cloaca.</p></div>
-<div class="pull q"><div class="plabel">La mitad del partido</div><p>No es una minor&iacute;a a la que se pueda postergar. Es la mitad del partido.</p></div>
 """ + duo("f_boulogne", "f_martinez",
           "Boulogne Sur Mer y Mart&iacute;nez. La misma distancia al r&iacute;o, la misma tasa municipal. Ilustraci&oacute;n.") + """
 
@@ -343,8 +345,7 @@ ve</span>. Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o; agua y
 <p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA. San Isidro validado contra la
 ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
 
-<p>San Isidro invierte en obra p&uacute;blica m&aacute;s del triple que el municipio bonaerense
-t&iacute;pico. <b>Y el 32,1% de los hogares de Boulogne y B&eacute;ccar sigue sin gas de red.</b></p>
+<p><b>Y el 32,1% de los hogares de Boulogne y B&eacute;ccar sigue sin gas de red.</b></p>
 <div class="cols">
 <p><b>Y esa proporci&oacute;n alta se aplica sobre un total que viene cayendo.</b> Medido desde su
 m&aacute;ximo de 2017, <b>el gasto real del Municipio cay&oacute; 24,4%</b>; medido desde 2010
@@ -383,13 +384,11 @@ cloaca.</p>
 <div class="cols">
 <p><b>Tres a uno, entre dos cosas comparables.</b> Iluminar la calle y llevar agua y sacar la cloaca de
 adentro de la casa son las dos infraestructura urbana, las dos se deciden cada a&ntilde;o, y las dos salen
-del mismo presupuesto. Una recibe 10.313 millones y la otra 3.320.</p>
+del mismo presupuesto.</p>
 <p><b>Y el reparto sigue al plan.</b> &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la Prioridad II
-declarada; el agua y la cloaca no figuran en ninguna de las tres. <span class="sg">El presupuesto no
-contradice al plan: lo cumple.</span></p>
-<p><b>Por eso el problema no se arregla gastando m&aacute;s.</b> San Isidro ya gasta: es el cuarto de 106
-en inversi&oacute;n. Lo que hay que cambiar es qui&eacute;n decide el destino, y por eso el
-cap&iacute;tulo 4 propone lo que propone.</p>
+declarada; el agua y la cloaca no figuran en ninguna de las tres. Lo que hay que cambiar es
+<span class="sg">qui&eacute;n decide el destino</span>, y por eso el cap&iacute;tulo 4 propone lo que
+propone.</p>
 <p><b>Lo que este cuadro no dice.</b> No dice que el alumbrado o la recolecci&oacute;n sobren: la basura
 hay que juntarla todos los d&iacute;as y la calle oscura es un problema real.
 <span class="sg">Dice que entre dos obras posibles, se eligi&oacute; sistem&aacute;ticamente la que se
@@ -421,9 +420,9 @@ afuera en la &uacute;ltima medici&oacute;n disponible, y desde 2018 ni siquiera 
 asociaci&oacute;n vecinal, el trabajo y el dinero se quedan donde est&aacute; la obra.</p>
 </div>
 
-
+<h3>En cu&aacute;ntas manos queda la obra</h3>
 <div class="cols">
-<p><b>Y lo que s&iacute; se puede contar es en cu&aacute;ntas manos queda.</b> Tomando s&oacute;lo los
+<p><b>Lo que s&iacute; se puede contar es en cu&aacute;ntas manos queda.</b> Tomando s&oacute;lo los
 decretos donde el texto nombra a cada empresa con su importe &mdash;407 decretos, 116.343 millones de
 pesos corrientes, 236 adjudicatarios&mdash;, <b>los diez primeros se llevan el 54,5% y los veinticinco
 primeros el 78,6%</b>.</p>
@@ -444,13 +443,11 @@ posible</span>.</p>
 </div>
 
 
-""" + ex("g", "San Isidro gasta menos en sueldos y mucho m&aacute;s en obra que la mediana bonaerense",
-     "Cada punto es un municipio, ordenados por valor. Ejecuci&oacute;n 2025, gasto devengado.",
+""" + ex("g", "San Isidro invierte en obra cuatro veces m&aacute;s que el municipio bonaerense t&iacute;pico",
+     "Cada marca es un municipio, ordenados por valor. Ejecuci&oacute;n 2025, gasto devengado.",
      "ex04.png",
      "RAFAM 2025, v&iacute;a La Verdadera PBA (la-verdadera-pba.pages.dev), capturado el 3 de septiembre de 2026.",
      "Son 106 de los 135 municipios: los otros 29 no est&aacute;n en la planilla. No se estim&oacute; ninguno.") + """
-<div class="pull q"><div class="plabel">No es cu&aacute;nto se gasta, es en qu&eacute;</div><p>El problema no es cu&aacute;nto se gasta. Es en qu&eacute;.</p></div>
-
 <h2><span class="n">1.3</span>D&oacute;nde no va el dinero</h2>
 <p class="tight">Ejecuci&oacute;n presupuestaria 2025, sobre un gasto devengado total de 324.304 millones
 de pesos:</p>
@@ -469,44 +466,6 @@ programa.</p>
 del Municipio de San Isidro.</p>
 <p>Mil ciento veintisiete pesos por habitante por a&ntilde;o en infraestructura habitacional, en un
 distrito con 25.165 hogares sin gas de red y 6.488 sin cloacas.</p>
-</div>
-<div class="pull"><p>Cinco cent&eacute;simas de uno por ciento. Una d&eacute;cima de uno por ciento.</p></div>
-<h3>Y adem&aacute;s no se gast&oacute; ni siquiera eso</h3>
-<p class="tight">El informe oficial no muestra una cifra por partida sino varias: el cr&eacute;dito
-vigente, lo que se deveng&oacute; contra &eacute;l y lo que se pag&oacute;. La comparaci&oacute;n entre
-la primera y la segunda dice cu&aacute;nto de lo disponible se us&oacute;.</p>
-""" + exhead("c", "Donde el Municipio prioriza ejecuta casi todo; donde no, deja cr&eacute;dito sin usar",
-             "Ejercicio 2025, en millones de pesos. La &uacute;ltima columna es devengado sobre cr&eacute;dito vigente.") + """
-<table>
-<colgroup><col style="width:168pt"><col><col><col><col style="width:74pt"></colgroup>
-<tr class="hd"><th>Partida</th><th class="r">Cr&eacute;dito vigente</th><th class="r">Devengado</th><th class="r">Pagado</th><th class="r">Ejecutado</th></tr>
-<tr><td class="l">Gastos en personal</td><td class="n">112.162</td><td class="n">111.590</td><td class="n">111.589</td><td class="n">99,5%</td></tr>
-<tr><td class="l">Bienes de uso &mdash; la obra p&uacute;blica</td><td class="n">58.335</td><td class="n">57.816</td><td class="n">56.983</td><td class="n">99,1%</td></tr>
-<tr><td class="l">Infraestructura Habitacional</td><td class="n">362,7</td><td class="n">335,4</td><td class="n">335,4</td><td class="n">92,5%</td></tr>
-<tr class="hi"><td class="l">Apoyo y Promoci&oacute;n al Empleo</td><td class="n">195,1</td><td class="n"><b>170,3</b></td><td class="n"><b>131,3</b></td><td class="n"><b>87,3%</b></td></tr>
-</table>
-<p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Situaci&oacute;n
-Econ&oacute;mico-Financiera 2025. Las dos primeras filas salen del cuadro de gastos por objeto; las dos
-&uacute;ltimas, del de gastos por programa, partidas 1.1.1.01.08.003 y 1.1.1.01.10.003.</p>
-<p class="cap"><b>Nota:</b> cada columna sale de la anterior y no se suman entre s&iacute;. El
-cr&eacute;dito vigente es el presupuesto despu&eacute;s de las modificaciones del a&ntilde;o; devengado es
-lo que se comprometi&oacute; a gastar; pagado, lo que sali&oacute; de la caja.</p>
-<div class="cols">
-<p><b>La comparaci&oacute;n entre las cuatro filas es todo el cap&iacute;tulo en un cuadro.</b> Los
-sueldos se ejecutan al 99,5% y la obra p&uacute;blica al 99,1%: cuando el Municipio decide gastar, gasta.
-<span class="sg">La partida de empleo se ejecut&oacute; al 87,3%</span>, la m&aacute;s baja de las cuatro.</p>
-<p><b>En n&uacute;meros absolutos es poco y por eso importa.</b> Quedaron 24,8 millones de cr&eacute;dito
-sin usar sobre una partida que ya era el 0,05% del presupuesto. No es una cifra que mueva las cuentas del
-Municipio: es una se&ntilde;al de d&oacute;nde est&aacute; puesta la atenci&oacute;n.</p>
-<p><b>Y de lo que s&iacute; se deveng&oacute;, se pag&oacute; el 77%.</b> Vivienda, en cambio,
-pag&oacute; el cien por ciento de lo devengado. Ah&iacute; tambi&eacute;n empleo queda &uacute;ltimo.</p>
-<p><b>Esto mide la ejecuci&oacute;n del presupuesto, no la calidad del servicio.</b> Que una partida se
-devengue casi entera prueba que el dinero se comprometi&oacute;, no que la obra se hizo ni que
-lleg&oacute; a todos por igual. <span class="sg">El cap&iacute;tulo 2 separa las dos cosas</span>, y ah&iacute;
-la respuesta es distinta.</p>
-<p><b>Lo que s&iacute; se sigue de estas cifras</b> es que el Municipio ejecuta lo que decide ejecutar.
-Los sueldos y la obra p&uacute;blica se devengan casi al cien por ciento. <b>El empleo no, y es la
-&uacute;nica de las cuatro que queda por debajo del 90%.</b></p>
 </div>
 """)
 
@@ -528,9 +487,6 @@ directamente no aparece en el presupuesto.</p>
 dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto reparte todos los
 a&ntilde;os seg&uacute;n esa lista. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
 manera.</span></p>
-<p><b>Y explica lo que el cuadro anterior muestra.</b> Una partida que no est&aacute; entre las
-prioridades no s&oacute;lo nace peque&ntilde;a: adem&aacute;s se ejecuta peor, porque nadie la empuja. El 87,3% de
-empleo contra el 99,1% de la obra p&uacute;blica no es una casualidad contable.</p>
 <p><b>Lo que sigue audita ese plan contra sus propias metas.</b> Lo que este programa discute no es la
 aritm&eacute;tica del presupuesto, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
 lista</span> y qu&eacute; se sigue de esa omisi&oacute;n.</p>

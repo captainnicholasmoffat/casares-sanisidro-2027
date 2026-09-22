@@ -21,8 +21,10 @@ SAGE="#5F7057"; SAGED="#66734C"; AMBER="#B4863A"; HAIR="#D9CDBA"; SAND="#EAE0CF"
 PALE="#C9CFBE"; PALEOX="#C89A8F"
 
 W = 570/72.0                      # ancho de columna, en pulgadas
-BR = pathlib.Path(__file__).parent.parent / "br" / \
-     "casares-sanisidro-2027-claude-rediseno-paleta-extratime" / "data"
+_RAIZ = pathlib.Path(__file__).parent.parent
+BR = _RAIZ / "br" / "casares-sanisidro-2027-claude-rediseno-paleta-extratime" / "data"
+if not BR.exists():                      # el directorio de trabajo de otra rama ya no esta
+    BR = _RAIZ / "data"
 
 def _csv(nombre):
     """Lee un csv del repo salteando las lineas de comentario."""
@@ -462,26 +464,23 @@ def g_transparencia():
         ax.plot([0,1],[y-0.012]*2, color=HAIR, lw=.6, transform=ax.transAxes, clip_on=False)
     save(fig,"g_transparencia")
 
-# --- 18. peso del personal y de la obra contra los 106 ----------------------
+# --- 18. peso de la obra publica contra los 106 -----------------------------
 def g_dots():
     """Los 106 municipios, cada uno una marca sobre el eje. Se ve de un vistazo
     donde esta el grueso, donde la mediana y donde San Isidro.
-    Datos: RAFAM 2025, data/rafam_2025_municipios.csv."""
+    Datos: RAFAM 2025, data/rafam_2025_municipios.csv.
+    El panel del peso del personal salio con la correccion 119: se leia como
+    elogio de eficiencia, que no es lo que este capitulo dice."""
     import csv
     lineas = [l for l in open(BR/"rafam_2025_municipios.csv") if not l.startswith("#")]
     muni = list(csv.DictReader(lineas))
-    per = sorted(float(m["pct_personal"]) for m in muni)
     obr = sorted(float(m["pct_obra"]) for m in muni)
-    MED_P, MED_O = 50.7427, 5.4397
+    MED_O = 5.4397
     si = next(m for m in muni if m["municipio"].strip().lower().startswith("san isidro"))
-    SI_P, SI_O = float(si["pct_personal"]), float(si["pct_obra"])
+    SI_O = float(si["pct_obra"])
 
-    fig, (a1, a2) = plt.subplots(2, 1, figsize=(W, 1.92),
-                                 gridspec_kw=dict(hspace=1.45))
+    fig, a2 = plt.subplots(1, 1, figsize=(W, 1.05))
     paneles = [
-        (a1, per, MED_P, SI_P, int(si["puesto_personal"]), 72,
-         "Peso del personal", "gastos en personal sobre gasto devengado",
-         "de 106 municipios, San Isidro es el 20º que menos gasta en sueldos"),
         (a2, obr, MED_O, SI_O, int(si["puesto_obra"]), 26,
          "Peso de la obra pública", "bienes de uso sobre gasto devengado",
          "de 106 municipios, San Isidro es el 4º que más invierte en obra"),

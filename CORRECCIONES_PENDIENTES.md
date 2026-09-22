@@ -1174,3 +1174,161 @@ define como "una inteligencia artificial nativa del Municipio, que
 reemplaza lo que sería una aplicación". Las dos cosas conviven, pero la
 página 3 se lee antes. ¿Se deja así, o la página 3 usa también la
 definición de la 112?
+
+---
+
+# CORRECCIONES 115 A 123 · INSTRUCCIONES DE CAP N NICK DEL 22/09
+## Estado: aplicadas.
+
+## LA PREGUNTA DE LA PÁGINA 3
+Resuelta: la página 3 también presenta el producto como **una inteligencia
+artificial nativa del Municipio, que reemplaza lo que sería una
+aplicación**. Las cinco preguntas del vecino quedaron intactas; sólo
+cambió cómo se nombra, y el cierre del punto pasó de "la nuestra" a "lo
+nuestro" para que concuerde.
+
+## LOS DOS RESTOS
+- Cultura: "Y que quién decide dónde puede haber música sea el barrio" →
+  "Que quién decide dónde puede haber música sea el barrio".
+- 5.10: "el dato existe el día que se genera" → "la adjudicación queda
+  cargada el día que se firma, y mostrarla no es una tarea aparte".
+
+## 115 · EL DESTACADO DE LA PÁGINA 4
+Con el texto exacto del cliente: "…no aparecen en ninguna parte del
+programa actual de gobierno."
+
+## 116 · LA TESIS
+"Somos una propuesta de gobierno que gestiona."
+
+## 117 · LA PROPUESTA EDUCATIVA
+Punto nuevo en "Qué promete, y qué no", **entre el de empleo y el de la
+inteligencia artificial**, para que la lista se lea como cadena: el
+dinero, la formación, y lo que esa gente construye.
+
+## 118 · BLOQUES APILADOS SIN TÍTULO
+El barrido encontró **siete**, no uno. Cada uno lleva ahora un título
+entre medio:
+1. Capítulo 1, la obra y sus adjudicatarios → **"En cuántas manos queda
+   la obra"** (el que pediste).
+2. Capítulo 3, el total del compromiso → "Cuánto suma todo, y cuánto
+   queda libre".
+3. Capítulo 4, la democracia semidirecta → "Qué son los institutos de
+   democracia semidirecta".
+4. 5.3, lo que hace hoy el Municipio en empleo → "Qué hace hoy el
+   Municipio con esos 170 millones".
+5. 5.6, el estado de los hospitales → "Lo que encontró un recorrido por
+   los hospitales".
+6. 5.6, el precio unitario → "Publicar el precio es lo que hace que el
+   precio baje".
+7. 5.7, los usos de las cámaras → "Los tres usos, en orden".
+
+Donde el título repetía el arranque del párrafo, se sacó el arranque.
+**Verificado: cero bloques de columnas apilados sin título, cuadro,
+recuadro o gráfico en medio.**
+
+## 119 · EL GRÁFICO DE LOS SUELDOS
+El panel del peso del personal salió del gráfico, no sólo del texto. Se
+rehizo `g_dots` en `doc/charts.py` —queda un solo panel, el de obra
+pública— y se regeneró el SVG. El título pasa a **"San Isidro invierte
+en obra cuatro veces más que el municipio bonaerense típico"**, sin
+mencionar sueldos.
+
+De paso: `charts.py` apuntaba a un directorio de trabajo de otra rama que
+ya no existe, así que **no se podía correr**. Ahora cae a `data/` del
+repo y vuelve a funcionar.
+
+## 120 · VIUDAS Y HUÉRFANAS
+La causa: **Chromium no implementa `widows`/`orphans` dentro de
+columnas**. La regla estaba escrita y no hacía nada. Se reemplazó por
+`break-inside: avoid` sobre los párrafos y listas de `.cols`: el párrafo
+no se parte, o entra entero en la columna o pasa entero a la siguiente.
+Los párrafos del documento son de dos o tres oraciones, así que el costo
+en equilibrio de columnas es mínimo.
+
+**Y se verifica mirando, no confiando en el CSS.** `build.py` mide ahora
+las cajas que Chromium dibujó en cada página: si un párrafo se parte
+entre columnas y de un lado queda una sola línea, lo dice. Las 38 páginas
+con columnas dan **cero**.
+
+## 121 · DESTACADOS DE RELLENO
+Se revisaron los **62** destacados y recuadros del documento. Salen tres:
+- "Cinco centésimas de uno por ciento. Una décima de uno por ciento."
+- "No es cuánto se gasta, es en qué" (rótulo y texto eran la misma frase).
+- "La mitad del partido / No es una minoría a la que se pueda postergar.
+  Es la mitad del partido." — rótulo y texto iguales, y encima repetía la
+  frase inmediatamente anterior.
+- "Cuatro pesos de cada mil. Esa es la distancia entre lo que el plan
+  dice y lo que el presupuesto hace." — mismo caso que las centésimas.
+
+Y uno se relabeló en vez de salir: "Un presupuesto no es una política"
+pasa a "Lo que falta no es dinero, es la medición", porque el rótulo
+repetía su propio texto pero el texto agregaba la condición.
+
+**Uno queda y lo dejo anotado para que decidas:** el recuadro "Por qué
+este cuadro existe" del 5.15. No repite nada, pero justifica que la
+sección exista, que es lo que la corrección 83 manda sacar.
+
+## 122 · FUERA EL 87,3%
+Sale entero: el subtítulo "Y además no se gastó ni siquiera eso", el
+cuadro con su fuente y su nota, y los cinco párrafos que lo comentaban.
+Y el párrafo del 1.4. El barrido de "87,3", "24,8 millones", "se pagó el
+77", "ejecuta peor" y "nadie la empuja" da **cero**.
+
+La numeración de cuadros y gráficos es automática, así que se corrió
+sola: **50 exhibits, del 1 al 50, sin saltos**, verificado sobre el PDF.
+No había referencias cruzadas por número.
+
+## 123 · LA MISMA IDEA, 45 VECES
+Conté **50** apariciones en 16 secciones. Quedan **38**, y ninguna es una
+repetición en prosa fuera de los tres lugares permitidos. El desglose:
+
+**Los tres lugares donde se dice (26):**
+- Página 3 (4).
+- Introducción (6): la bajada, el destacado de las seis palabras, el
+  0,05% y el contraste alumbrado/cloaca una vez.
+- Capítulo 1 (16): de las 16, **ocho están dentro de cuadros** —las filas
+  de alumbrado y de agua y cloaca, y la fila del 0,05%—. En prosa el
+  contraste se dice **una sola vez**, en la entrada del 1.2.
+
+**Fuera de esos tres lugares, 12 apariciones, y ninguna es la idea
+repetida:**
+- Índice (2): son títulos de sección.
+- Capítulo 2 (2): el título del 2.4 y "qué quedó afuera de la lista", que
+  son el asunto propio del capítulo.
+- Capítulo 3 (2): "decidir distinto con el dinero que ya existe", que
+  describe la operación, y una celda de cuadro con los 3.320 M como
+  escala.
+- Capítulo 4 (1): "quién decide dónde se invierte", que es la tesis
+  propia del capítulo 4.
+- Capítulo 5 (5): los números de partida de cada propuesta —los 170
+  millones de empleo, los 335 de vivienda, los 3.320 de agua y cloaca—,
+  que son la excepción que marcaste, más dos usos de las mismas palabras
+  en otro sentido (el ruido de los vehículos, la partida de género).
+
+**Lo que salió, por lugar:**
+- Introducción: "es la consecuencia aritmética de un plan donde el empleo
+  no figura. El gasto sigue al plan."
+- Capítulo 1: "El presupuesto no contradice al plan: lo cumple" y "Por
+  eso el problema no se arregla gastando más. San Isidro ya gasta: es el
+  cuarto de 106 en inversión"; el contraste repetido en el 1.3; y el pie
+  del cuadro 5, que repetía palabra por palabra la entrada del 1.2.
+- Capítulo 2: la bajada del capítulo, que ahora va directo a lo que el
+  capítulo hace; el re-comentario de las cifras del capítulo 1 en el 2.4,
+  reemplazado por media línea; y la enumeración de las seis palabras en
+  el resumen del 2.5.
+- Capítulo 3: "Porque el capítulo 1 ya lo demostró con el presupuesto:
+  alumbrado 10.313 contra 3.320… el Municipio elige sistemáticamente lo
+  que se ve", reemplazado por media línea.
+- Capítulo 4: "San Isidro ya gasta el dinero. Invierte en obra pública
+  más que el 96%… El problema no es cuánto se invierte", que deja sólo la
+  tesis propia del capítulo.
+
+## TAMBIÉN
+"veintiun" → "veintiún", hecho en la tanda anterior y verificado.
+
+## EL DOCUMENTO
+39 páginas, ninguna pasa de 2.700 pt. Diez variantes de fuente, cero
+Liberation. Pies de página correctos en las 38 que lo llevan. Índice
+verificado entrada por entrada: ninguna apunta mal. 50 exhibits, del 1 al
+50, sin saltos. Cero viudas y huérfanas, medidas sobre las cajas
+dibujadas.
