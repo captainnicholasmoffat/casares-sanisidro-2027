@@ -1423,3 +1423,165 @@ de Boulogne y el Paseo del Aguila quedaron "aptos para ser vendidos".
 El informe va a informes/06_mdf_y_tierra_publica.md.
 Si aparece norma que habilite vender tierra publica de la costa, es un
 hallazgo de primer orden y entra al capitulo 5.
+
+
+---
+---
+
+# CORRECCIONES 124 A 129 · APLICADAS
+Rama `claude/fervent-bardeen-r5vfbl`. Del informe 06 y del 07 no se aplicó nada, como se pidió.
+
+## 124 · TRES COSAS CHICAS
+- Gráfico 7: el rótulo "Peso de la obra pública" ya no se pisa con su bajada. Verificado mirando la
+  página 6 del PDF, no el código.
+- Gráfico 7: el título dice "más del triple" (17,8 contra 5,4).
+- 1.4: fuera "consecuencia aritmética" y "El gasto sigue al plan".
+- Fuera el recuadro "Por qué este cuadro existe" (era el 5.15, hoy 5.14).
+
+## 125 Y 126 · LA APERTURA
+- **Página 3, "Introducción":** los 25.165 hogares con garrafa y los 6.488 sin cloaca, y dónde están;
+  "La pregunta", con la cita del prólogo del plan; el destacado de las seis palabras; y "Por qué el
+  dinero va a lo que se ve", entera.
+- **El destacado tenía un error:** "educación" sí aparece una vez en el plan. Quedaron las seis que no
+  aparecen: empleo, vivienda, salud, pobreza, agua y cloaca (decidido por Nick).
+- **Página 4, "Qué proponemos hacer":** ocho puntos en cadena —la mitad de la obra la deciden los
+  vecinos; se contrata en el partido; para eso se forma a la gente acá, con título de la universidad
+  nacional y un centro de apoyo escolar por localidad; esa gente construye la inteligencia artificial
+  del Municipio; esa herramienta le permite al vecino informarse y decidir—, y después cámaras,
+  inspecciones y financiamiento. Los cien días al pie, sin recuadro. No dice "el ciclo cierra".
+- **La línea rescatada**, adentro del punto 1: "Y el dinero de cada zona queda atado por ordenanza:
+  la Constitución provincial no deja que el voto de una asamblea sea vinculante, pero sí permite fijar
+  la partida, y eso es lo que este programa hace."
+- Salieron sin reubicarse "Qué promete, y qué no", la repetición de las catorce metas y "Lo que no
+  depende de un intendente".
+
+## 127 · ALUMBRADO CONTRA CLOACA
+- Se dice dos veces: en la tesis de la página 3 (10.313 contra 3.320) y en el cuadro 6 del 1.2.
+- Cuadro 6 sin la columna "veces lo que recibe agua y cloaca", y con la nota: "El agrupamiento es el
+  del clasificador provincial (RAFAM), no una elección de este programa."
+- **Verificado contra el estado de ejecución 2025 por finalidad y función:** Urbanismo (3.9) tiene
+  cinco subfunciones —3.9.1 Planeamiento, 3.9.2 Alumbrado, 3.9.3 Recolección, 3.9.4 Cementerios y
+  3.9.9 Otros servicios urbanos— y suman 70.311 M, lo mismo que la función. **No falta ninguna.**
+  Deporte y recreación es la subfunción 3.4.6, adentro de Educación y cultura: no es Urbanismo, y
+  salió del cuadro (decidido por Nick). El cuadro quedó con seis filas.
+
+## 128 · "EL DINERO VA A LO QUE SE VE", UNA VEZ
+Dicho una sola vez en el capítulo 1, en la entrada del 1.2, con el dato. El 1.3, el 1.4 y el 1.6 ya no
+lo repiten. El 1.4 quedó con la evidencia: las tres prioridades del plan, seguridad +34,8% y
+promoción social −32,5%.
+
+## 129 · LA REPETICIÓN, EN TODO EL DOCUMENTO
+Además de la regla de la tanda, Nick decidió el 23/09:
+- **Frases de método y de justificación:** salen del texto corrido. Quedan las notas de fuente de
+  cuadros y gráficos y las notas metodológicas al final de cada capítulo. Donde la frase tenía un dato
+  necesario (la base de 42,1% de la concentración, los 3.670 decretos, las 69.258 parcelas, el corte de
+  la deuda al 31/12/2025, el Bajo contado en la zona San Isidro, las fuentes del panel sorteado y de la
+  evidencia de seguridad), el dato pasó a la nota del capítulo.
+- **"Lo que no prometemos":** queda sólo el cuadro del 6.5. Salieron las secciones 4.12 y 5.14, el
+  recuadro "Un reclamo, no una promesa" del 4.2, la línea del resumen del capítulo 6 (que pasa a cinco
+  líneas) y la del cierre, el recuadro del 6.1 sobre lo que no va a los cien días, y los "qué no
+  promete" sueltos de 5.5, 5.6, 5.9, 5.11, 5.13 y 6.6. Se renumeró:
+  4.13 → 4.12, 4.14 → 4.13, 5.15 → 5.14, 5.16 → 5.15. Índice y referencias cruzadas corregidos.
+- **"El informe del 31 de marzo":** salió de 4.7, 6.2 y 6.6.
+- **5.12:** salió el dato de personal (34,4% contra 50,7%, vigésimo de 106).
+- **Ambiente:** 3.455 M y no 3.567 M. La cuenta queda a la vista en el cuadro 18: 1,5% del gasto 2025
+  (4.865 M) menos los 1.410 M de hoy. El total reasignado pasa de 7.906 a 7.794 M (8,9% del flexible)
+  en los cuadros 18 y 19 y en el 3.4, y "el 32% de los tres programas" pasa a 31%. El 3.567 no
+  aparecía en ningún otro lado. El Excel `MODELO_FISCAL_SAN_ISIDRO` no está en el repositorio ni en el
+  Drive: no se pudo ver qué valor usa.
+
+**Las siete ideas, contadas antes y después** (cada número o frase cuenta una vez; mismo método que la
+123, sobre el texto del PDF):
+
+| Idea | Antes | Después |
+|---|---|---|
+| 25.165 sin gas y 6.488 sin cloaca | 65 en 15 páginas | 51 en 14 |
+| La partida vecinal | 38 en 19 | 35 en 18 |
+| La base de valuación de 2008 | 35 en 12 | 32 en 11 |
+| El domicilio del adjudicatario | 23 en 9 | 13 en 6 |
+| Los 7.730,9 millones y las 928 personas | 19 en 8 | 18 en 7 |
+| El bono de 30.000 millones | 24 en 6 | 22 en 6 |
+| "El plan no menciona" | 17 en 8 | 10 en 5 |
+
+**Dónde quedan:**
+- **25.165 y 6.488:** se explican en la página 3 (8) y en el 1.1 (8), los dos lugares pedidos. El
+  resumen del 1.6 (2). En el resto se nombran en media línea: 1.2 (2), 3.4 (4), 5.4 (8, con el
+  gráfico de gas por zona, que ya no repite el 60,3%). Lo demás son indicadores de la fórmula del 4.4
+  (9), la nota del capítulo 4 (2), el radio de Boulogne del 5.8 (1), la meta, la nota del capítulo 6,
+  el anexo y el glosario (5), y el cuadro 12 (1). Una es un falso positivo: "126.488 M" en el gráfico
+  de rigidez.
+- **La partida vecinal:** es la propuesta central y aparece nombrada, nunca reexplicada: síntesis,
+  capítulo 4, metas, calendario, anexo, glosario e índice, más las referencias del 3.4 y del capítulo 5.
+- **La base de 2008:** se explica sólo en el capítulo 3 (18). Afuera, media línea: síntesis (3), 4.12
+  (1), cien días y calendario (3), bajada del cierre (2), anexo (2), índice (1). Dos son falsos
+  positivos: la licitación de residuos de 2008.
+- **El domicilio:** sólo en su sección del capítulo 1 (6) y en la nota de ese capítulo (1). Afuera, la
+  propuesta del cuadro 12 (1) y el anexo (1). Salió del cuadro de transparencia del 5.10. Cuatro son
+  falsos positivos: "contrata afuera" y "una empresa de afuera" en el circuito del 4.8, y el
+  "domicilio del acto" de la inspección, en el 5.9 y en el anexo.
+- **Los 7.730,9 y las 928:** todos en lugares previstos: la tesis de la página 3 (entera, como se
+  pidió), la síntesis, el costeo del 3.4, el 5.3, metas, calendario y anexo.
+- **El bono:** se explica en el 3.5 (8). El resto: las notas de cuatro gráficos y cuadros que dicen
+  por qué el bono no está en ellos (6), el 3.6 y el resumen del 3.7 (5), el cierre (2) y el glosario
+  (1).
+- **"El plan no menciona":** dos lugares, la introducción (2) y el 2.4 (5). Fuera de los capítulos 5
+  y 6. Además, el título del 2.4 en el índice (1), el cierre que retoma la pregunta en una línea (1) y
+  un falso positivo en el 5.5 ("ninguno menciona el ruido").
+
+**Además, releyendo de corrido**, salieron repeticiones que no estaban en el mapa: el 60% en la bajada
+del capítulo 1; el 32,1% del 1.2; la salvedad de la coparticipación del 1.5 (queda en el 3.2); "no son
+supuestos" tres veces en el capítulo 3; el 41,4% y "no queda lugar para una tercera" tres veces en el
+3.4; el costo de la maquinaria del 3.4, que repetía el 4.6 y el 4.9; la fórmula del índice tres veces
+en el 4.4; el 60% de adhesión y la capacidad instalada dos veces en el 4.8; la oficina disuelta dos
+veces en el 4.10; "horario, sede y cuidado de niños" cuatro veces; la estimación del cuadro 34 tres
+veces; "no comprar, usar lo comprado" cuatro veces en el 5.7; la competencia provincial tres veces en
+el 5.7 y otras tres en el 5.8; el 2.059 y el Fondo Educativo dos veces en el 5.8; el turno "haciendo la
+cola" dos veces en el 5.6; los guantes y el triage dos veces en el 5.6; el resguardo de terceros dos
+veces en el 5.9; los 9.775 m² tres veces en el 5.5; "Queda dicho que hoy no hay ninguna" dos veces en
+el 5.13.
+
+## TAMBIÉN, CORREGIDO Y VERIFICADO
+- 4.6: decía "el capítulo 3 muestra que San Isidro facturó 9,1% más y cobró 2,3% más". Ningún capítulo
+  lo muestra. Las cifras son correctas para los ingresos no tributarios (rubro 1.2) y así quedó dicho.
+- 5.3: decía que el equipamiento "entra por reasignación y no pide fondos nuevos", contra su propia
+  etiqueta y el cuadro de los 7.730,9. Salió esa cláusula.
+- 3.4: la referencia a "la sección 4.13" pasa a 4.12.
+- Cuadro 19, "siete veces": está bien. Compara crédito vigente con crédito vigente (2.688,8 contra 362,7
+  de infraestructura habitacional). No se tocó.
+- Erratas: "superában", "boletínes", "prevéa", "los fondos … deja", "capítulo 5.3".
+- La nota de método decía que los límites se declaran "donde se usan y no en una nota al final". Ya no
+  es así: el recuadro pasa a llamarse "Los límites".
+
+## PARA DECIDIR, CON LA PROPUESTA
+1. 3.4: "Juntos ocupan el 8,9% del gasto flexible, y queda el 91,1% libre" está mal. Con las dos
+   propuestas grandes, todo junto ocupa el 50,3% y queda libre el 49,7%. Sin tocar hasta que se decida.
+2. 3.4: "los tres crecieron por encima del resto del presupuesto" no se puede verificar: en 2024 esos
+   tres programas no existían con esos nombres. Propuesta: sacarlo.
+3. La analítica de seguridad tiene tres costos distintos: 1.200 M de reasignación (cuadro 18), parte de
+   los 1.855,4 M de contratación (cuadro de los 7.730,9) y "no cuesta un peso" (calendario).
+4. 6.6, riesgo de la cobranza: dice que si no se recupera el programa se financia reasignando. El 3.5
+   dice que se paga con la base de valuación y la cobranza es margen. Propuesta: "si no se recupera, el
+   programa entra igual; lo que se pierde es margen".
+5. Barisidro: el 5.5 dice que se demolió en julio y el recuadro de las firmas, en septiembre. El
+   informe 05 dice septiembre; el 04, que estaba programada para julio.
+6. Educación: el 5.8 dice que cayó 11,5% y el gráfico del 5.2, 11,6%. Depende del deflactor.
+7. 1.2: "un solo acto puede comprometer una octava parte de todo lo que el Municipio contrata en un
+   mandato". El dato es 11,6% de lo adjudicado en dos años y medio. Propuesta: "más de la décima parte
+   de todo lo adjudicado en dos años y medio".
+8. Nota de método: "no existe información pública sobre el costo de financiamiento municipal, razón por
+   la cual este programa no propone endeudarse". El 3.5 da otras tres razones y el costo del bono se
+   conoce. Propuesta: sacar esa oración.
+9. 4.1: el veto de Pinamar fue "hace ocho meses"; hoy son nueve. Propuesta: poner la fecha.
+10. Cierre: el párrafo del bono quedó entre "La respuesta no está en el tamaño del presupuesto" y
+    "Lo que sí hay es una omisión escrita", que es la respuesta. Propuesta: moverlo después.
+11. 2.4: "en ninguno de los tres niveles aparece una persona". El plan dice dos veces "las personas"
+    ("la experiencia de movilidad de las personas").
+12. El cierre retoma en una línea la pregunta de la introducción. Es la tercera vez que aparece "el
+    empleo y la vivienda no aparecieran nunca". ¿Queda?
+
+## EL DOCUMENTO
+39 páginas; la más alta mide 2.232 pt y ninguna pasa de 2.700. Nueve variantes de fuente, cero
+Liberation: Inter-Bold dejó de usarse porque sólo la usaban las viñetas del 5.14, que salió. Pies de
+página correctos en las 38 que lo llevan. Índice verificado entrada por entrada. 49 exhibits, del 1
+al 49, sin saltos: el cuadro de "Qué prometemos y qué no" salió con el 4.12. Diecinueve gráficos, como
+dice la nota de método. Cero viudas y huérfanas.
