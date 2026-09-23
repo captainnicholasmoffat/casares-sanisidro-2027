@@ -1332,3 +1332,94 @@ Liberation. Pies de página correctos en las 38 que lo llevan. Índice
 verificado entrada por entrada: ninguna apunta mal. 50 exhibits, del 1 al
 50, sin saltos. Cero viudas y huérfanas, medidas sobre las cajas
 dibujadas.
+
+
+---
+---
+
+# CORRECCIONES 124 A 126 · PENDIENTES DE APLICAR
+Instrucciones de Cap'n Nick del 23/09.
+
+## REGLA QUE GOBIERNA ESTA TANDA
+Ninguna frase que explique el metodo, que aclare que no podemos hacer,
+o que justifique al documento. El texto dice que proponemos y listo.
+
+## 124 · TRES COSAS CHICAS
+- GRAFICO 7: al sacar el panel de personal, el rotulo "Peso de la obra
+  publica" quedo superpuesto sobre su propia bajada. Se ve en el PDF.
+- GRAFICO 7, EL TITULO TIENE UN NUMERO MAL: dice "cuatro veces mas que
+  el municipio bonaerense tipico". Es 17,8 contra 5,4 = mas del triple.
+  El "cuatro" viene del puesto 4 de 106. Corregir a "mas del triple",
+  que es lo que dice el texto al lado.
+- EN EL 1.4 quedaron "consecuencia aritmetica" y "El gasto sigue al
+  plan", que la 123 mandaba sacar. Salen.
+- Y el recuadro "Por que este cuadro existe" del 5.15 SALE: regla 83,
+  si hay que justificar que algo exista, sobra.
+
+## 125 y 126 · LA APERTURA, REHECHA · ES LA GRANDE
+EL PROBLEMA: la pagina 3 dice que proponemos y la 4 lo vuelve a decir
+mas flaco. "Que promete, y que no" es una version peor de la lista de
+la pagina 3. Las catorce metas se repiten y ya estan enteras en el
+capitulo 6. Lo unico nuevo de la pagina 4 es la tesis.
+
+PAGINA 3 — EL DIAGNOSTICO Y LA TESIS
+1. Los 25.165 hogares que cocinan con garrafa y los 6.488 sin cloaca,
+   y donde estan. Como ya esta hoy.
+2. El destacado de las seis palabras que no aparecen en el programa
+   actual de gobierno (texto de la 115, ya aplicado).
+3. "Por que el dinero va a lo que se ve", ENTERA, traida de la pagina
+   4: administrar para la foto, repartir, y la tercera que somos
+   nosotros. Ahi queda dicho que tipo de administracion seriamos, que
+   es lo que hoy falta en la pagina 3.
+
+PAGINA 4 — QUE PROPONEMOS HACER
+4. La lista que hoy esta en la pagina 3, ORDENADA COMO CADENA para que
+   la sinergia se vea sin explicarla:
+   - los vecinos deciden la mitad de la obra publica
+   - el Municipio contrata esa obra y esos servicios en el partido
+   - para eso se forma a la gente aca, en lo que mejor paga:
+     inteligencia artificial y tecnologia, con titulo de la universidad
+     nacional del partido, y un centro de apoyo escolar en cada
+     localidad
+   - esa gente construye la inteligencia artificial nativa del
+     Municipio
+   - y esa herramienta es la que le permite al vecino informarse y
+     decidir
+   El ciclo cierra donde empezo. NO escribir "el ciclo cierra donde
+   empezo": que se vea solo por el orden.
+   Los puntos de seguridad, inspeccion de comercios y financiamiento se
+   mantienen donde mejor encajen en la lista.
+5. LOS CIEN DIAS AL PIE de esa lista, no como bloque aparte. Los
+   dieciseis compromisos como estan hoy.
+
+LO QUE SALE, Y NO SE REUBICA EN NINGUN LADO:
+- La seccion "Que promete, y que no" como tal.
+- La repeticion de las catorce metas: ya estan completas en el cap. 6.
+- "Lo que no depende de un intendente, y por eso no se promete",
+  entera, con sus dos puntos.
+
+LA UNICA COSA QUE SE RESCATA DE AHI, Y COMO PROPUESTA, NO COMO
+ACLARACION: que la asamblea vecinal no puede ser juridicamente
+vinculante por la Constitucion provincial, PERO QUE LA PARTIDA SI SE
+PUEDE ATAR POR ORDENANZA, y eso es lo que este programa hace.
+Una linea, adentro del punto de la obra vecinal. Que suene a solucion.
+NO como advertencia, NO como limite, NO como aclaracion.
+
+DESPUES DE ESTO, EL CAPITULO 1 ARRANCA ENSEGUIDA.
+
+## VERIFICACION DE ESTA TANDA
+Lo de siempre: paginas, fuentes, numeracion, indice, exhibits sin
+huecos, viudas.
+Indice y mapa de paginas actualizados: la introduccion cambia de
+tamano.
+Leer las paginas 3 y 4 de corrido: si algo se dice dos veces, esta mal.
+Si alguna frase explica el metodo en vez de proponer algo, esta mal.
+
+## INVESTIGACION EN CURSO, NO APLICAR HASTA QUE VUELVA
+Despachada al worker de Code el 23/09: que propone el MDF (Movimiento
+Derecho al Futuro, Marcos Cianni, concejal Manuela Schuppisser) en el
+Concejo, y sobre todo la denuncia de agosto de 2025 de que el Arsenal
+de Boulogne y el Paseo del Aguila quedaron "aptos para ser vendidos".
+El informe va a informes/06_mdf_y_tierra_publica.md.
+Si aparece norma que habilite vender tierra publica de la costa, es un
+hallazgo de primer orden y entra al capitulo 5.
