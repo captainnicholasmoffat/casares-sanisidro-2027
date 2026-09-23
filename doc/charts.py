@@ -504,11 +504,16 @@ def g_dots():
                     xytext=(0, 16), textcoords="offset points", ha="center",
                     fontsize=7, color=OX, fontweight="semibold", zorder=7,
                     arrowprops=dict(arrowstyle="-", color=OX, lw=.6, shrinkA=1, shrinkB=2))
-        ax.set_title(tit + "   ", fontsize=7.2, color=INK, loc="left", pad=17,
-                     fontweight="semibold")
-        ax.text(0, 1.30, sub, transform=ax.transAxes, fontsize=6.4, color=TAUPE,
-                va="bottom")
-        ax.set_xlim(0, xmax); ax.set_ylim(-.18, 1.22)
+        # rotulo y bajada con distancia fija en puntos sobre el borde del eje:
+        # con un solo panel, el pad del titulo y la bajada en fraccion del eje
+        # caian en la misma linea (correccion 124)
+        ax.annotate(tit, (0, 1), xycoords="axes fraction", xytext=(0, 13),
+                    textcoords="offset points", va="bottom", fontsize=7.2,
+                    color=INK, fontweight="semibold")
+        ax.annotate(sub, (0, 1), xycoords="axes fraction", xytext=(0, 3),
+                    textcoords="offset points", va="bottom", fontsize=6.4,
+                    color=TAUPE)
+        ax.set_xlim(0, xmax); ax.set_ylim(-.18, 1.05)
         ax.xaxis.set_major_formatter(FuncFormatter(lambda v, p: f"{v:.0f}%"))
         ax.set_xlabel(pie, fontsize=6.3, labelpad=2)
     save(fig, "g_dots")

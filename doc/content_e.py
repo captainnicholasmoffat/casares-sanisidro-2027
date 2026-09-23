@@ -6,8 +6,7 @@ CIERRE = dict(id="cierre", runhead=RH, html="""
 <div class="stand">Media obra p&uacute;blica decidida por los vecinos en cuatro a&ntilde;os, y el gasto en empleo y vivienda multiplicado por quince, financiado actualizando una base de valuaci&oacute;n que es de 2008. Sin subir la al&iacute;cuota, sin tomar deuda y sin pedirle permiso a la Provincia.</div>
 <div class="cols">
 <p>Este documento empez&oacute; con una pregunta sobre el plan de otro: a qui&eacute;n se
-escuch&oacute;, y c&oacute;mo, para que en un distrito con 25.165 hogares sin gas de red el empleo y la
-vivienda no aparecieran nunca.</p>
+escuch&oacute;, y c&oacute;mo, para que el empleo y la vivienda no aparecieran nunca.</p>
 <p>La respuesta no est&aacute; en el tama&ntilde;o del presupuesto. Hay un municipio que invierte m&aacute;s que casi todos
 y <span class="sg">decide lejos de donde falta</span>. Hay una f&oacute;rmula de coparticipaci&oacute;n
 que nadie mira. Y hay una d&eacute;cada de gasto real que cae sin que ninguna gesti&oacute;n lo haya
@@ -18,9 +17,8 @@ ocho cuotas de capital las paga el gobierno que asuma en diciembre de 2027</span
 <p>Lo que s&iacute; hay es una omisi&oacute;n escrita, firmada y publicada, y un presupuesto que le da
 la raz&oacute;n. Contra eso no alcanza con prometer m&aacute;s: hay que cambiar
 <span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo.</p>
-<p>Por eso este programa promete poco y lo promete con fecha. Media obra p&uacute;blica decidida por los
-vecinos en cuatro a&ntilde;os. El gasto en empleo y vivienda por quince. Diecis&eacute;is compromisos en cien
-d&iacute;as. Catorce metas con l&iacute;nea de base fijada hoy. Y una lista, igual de larga, de lo que
+<p>Por eso este programa promete poco y lo promete con fecha: diecis&eacute;is compromisos en cien
+d&iacute;as y catorce metas con l&iacute;nea de base fijada hoy. Y una lista, igual de larga, de lo que
 no prometemos y por qu&eacute;.</p>
 <p>Y una pieza que sostiene a todas las dem&aacute;s: <b>una inteligencia artificial nativa del
 Municipio</b>, que para cada vecino es como tener a disposici&oacute;n a alguien que sabe todo del

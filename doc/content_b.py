@@ -35,8 +35,7 @@ disponible de que el servicio no se prestaba, y viene de quien gobierna.</p>
 <p><b>Los reclamos tienen direcci&oacute;n.</b> Vecinos del Bajo Boulogne y de Villa Adelina vienen
 objetando limpieza y poda; una vecina de Olazabal al 2100 resumi&oacute; as&iacute; el temporal:
 <i>&laquo;estuvimos meses para que la gente de la municipalidad recoja el desastre que dej&oacute; la
-tormenta&raquo;</i>. <span class="sg">Son las mismas dos localidades que el cap&iacute;tulo 1 identifica
-como las peor servidas</span>, y por eso el dato importa.</p>
+tormenta&raquo;</i>.</p>
 <p><b>Y hay condenas judiciales.</b> Un juzgado contencioso administrativo de San Isidro conden&oacute; al
 Municipio a pagar 1.935.000 pesos m&aacute;s intereses por la ca&iacute;da de un &aacute;rbol sobre un
 autom&oacute;vil <b>sin que hubiera tormenta</b>, por falta de mantenimiento. La C&aacute;mara de San
@@ -161,7 +160,6 @@ objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</spa
 tres niveles aparece una persona.</p>
 <p>Auditar el cumplimiento de esas 77 metas ser&iacute;a un ejercicio menor. La pregunta relevante no es
 si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la lista.</span></p>
-<p>Lo que el cap&iacute;tulo 1 mide en pesos, este cap&iacute;tulo lo busca en el texto del plan.</p>
 </div>
 """ + exhead("c", "Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea",
              "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa. Las celdas vac&iacute;as no las pusimos nosotros.") + """
@@ -173,8 +171,8 @@ si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la 
 <tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Adjudicar por fin la recolecci&oacute;n &mdash;49.270 millones al a&ntilde;o, licitados dos veces y nunca adjudicados&mdash; con el pliego discutido antes; llevar la funci&oacute;n ambiental de 0,4% a 1,5%; y medir el ruido, que hoy no tiene ordenanza</td></tr>
 <tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">El mantenimiento vial entra en la partida que deciden las comisiones vecinales</td></tr>
 <tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema de inteligencia artificial que lee la solicitud contra la norma y responde en d&iacute;as y no en meses: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo. Y un asistente que conteste preguntas habladas, sin formulario</td></tr>
-<tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">Que un vecino pueda ver en qu&eacute; se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio: hoy ninguno de los 573 decretos lo dice, y hasta 2017 s&iacute;</td></tr>
-<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el presupuesto de empleo, de 505,7 a 7.730,9 millones, para llevar el centro de formaci&oacute;n laboral que ya funciona en B&eacute;ccar a las seis localidades, con eje en inform&aacute;tica e inteligencia artificial</td></tr>
+<tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">Que un vecino pueda ver en qu&eacute; se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio</td></tr>
+<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y llevar el centro de formaci&oacute;n laboral que ya funciona en B&eacute;ccar a las seis localidades, con eje en inform&aacute;tica e inteligencia artificial</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar, con la partida de obra vecinal</td></tr>
 <tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Turno en l&iacute;nea, que hoy no existe en ning&uacute;n efector de salud humana aunque el Municipio ya lo use para castrar mascotas, adhiriendo al sistema provincial que es gratis; publicar el precio unitario de cada insumo que se compra y el stock de cada hospital; y arreglar las filtraciones que el propio gobierno reconoce</td></tr>
 <tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Centros de apoyo escolar gratuitos en los barrios donde los chicos se quedan atr&aacute;s, en edificios municipales que ya existen; y devolver a educaci&oacute;n los 2.059 millones que perdi&oacute; en 2025</td></tr>
@@ -197,9 +195,6 @@ y a las escuelas s&oacute;lo para pintar el cruce de su esquina.</b></p>
 <p><b>Y los diecinueve objetivos, le&iacute;dos uno por uno, hablan de c&aacute;maras, patrulleros,
 barrido, arbolado, residuos, tr&aacute;mites y ciberseguridad.</b> Ninguno de los diecinueve habla de una
 persona.</p>
-<p>El gasto reparte seg&uacute;n esa lista: va donde el plan dijo que iba a ir, y el
-cap&iacute;tulo 1 lo mide. <span class="sg">Eso es exactamente lo que vuelve grave el
-resto</span>: no hay un error de ejecuci&oacute;n que corregir. Hay una lista, y la gente no est&aacute; en ella.</p>
 
 <div class="callout">
 <div class="clabel">El plan est&aacute; vencido</div>
@@ -222,11 +217,6 @@ hizo</b>.</li>
 adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El portal de datos abiertos
 est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra cosa.</li>
 </ol>
-<div class="pull"><div class="plabel">Qu&eacute; se le critica, exactamente</div><p>La cr&iacute;tica es doble, y las dos mitades est&aacute;n probadas ac&aacute;.
-<b>Lo que se propuso lo cumpli&oacute; a medias</b>: ejecuta el presupuesto casi entero y el servicio no
-llega, y eso no lo decimos nosotros &mdash;lo dijo el intendente cuando llam&oacute; al arbolado una deuda
-hist&oacute;rica en algo que nunca se hizo&mdash;. <b>Y lo que no se propuso es casi todo lo que le importa
-a un vecino</b>: sobre 3.137 palabras, su plan no dice salud ni una vez.</p></div>
 <p>Nada de esto se puede corregir sin saber si hay con qu&eacute;. El cap&iacute;tulo siguiente lo mide.</p>
 <div class="hairline"></div>
 <div class="note">
@@ -345,7 +335,7 @@ recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce
      "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es el mismo dinero&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026. La secci&oacute;n 3.5 lo detalla: el capital se paga entre noviembre de 2027 y agosto de 2029, dentro del mandato que estas l&iacute;neas proyectan."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla."))
 
 
 # =====================================================================
@@ -389,11 +379,11 @@ financian moviendo partidas dentro del gasto flexible.</p>
 <table>
 <colgroup><col style="width:180pt"><col><col></colgroup>
 <tr class="hd"><th>Propuesta</th><th class="r">Monto anual</th><th>De d&oacute;nde sale</th></tr>
-<tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.567 M</td><td class="m">Embellecimiento e infraestructura deportiva. Es el 4,1% del gasto flexible</td></tr>
+<tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">1,5% del gasto 2025 (4.865 M) menos los 1.410 M de hoy. Sale de embellecimiento e infraestructura deportiva. Es el 4,0% del gasto flexible</td></tr>
 <tr><td class="l">Educaci&oacute;n, recomposici&oacute;n al nivel real de 2024</td><td class="n">2.059 M</td><td class="m">Embellecimiento, no de adentro de educaci&oacute;n. Es el 2,4% del gasto flexible</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">Estimaci&oacute;n propia a presupuestar. Es el 1,2%</td></tr>
 <tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">Inversi&oacute;n inicial, estimaci&oacute;n propia a licitar. Es el 1,4%</td></tr>
-<tr class="hi"><td class="l">Total reasignado</td><td class="n"><b>7.906 M</b></td><td class="m"><b>El 9,1% del gasto flexible</b></td></tr>
+<tr class="hi"><td class="l">Total reasignado</td><td class="n"><b>7.794 M</b></td><td class="m"><b>El 8,9% del gasto flexible</b></td></tr>
 </table>
 <p class="cap"><b>Nota:</b> las dos &uacute;ltimas filas son estimaciones del equipo de este programa, no
 cifras oficiales, y deben presupuestarse o licitarse antes de comprometerse. Las dos primeras salen de la
@@ -417,21 +407,21 @@ trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya
 <tr class="hd"><th>Programa</th><th class="r">Vigente 2025</th><th>Para dimensionarlo</th></tr>
 <tr class="hi"><td class="l">Mantenimiento y embellecimiento del Municipio</td><td class="n"><b>14.770,8 M</b></td><td class="m">El cuarto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Siete veces</b> lo que se destina a infraestructura habitacional</td></tr>
-<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m"><b>M&aacute;s del doble</b> de lo que recibe agua potable y alcantarillado, que son 3.320 M</td></tr>
-<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.906 M</td><td class="m">El 32% de esos tres programas sumados</td></tr>
+<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m">&mdash;</td></tr>
+<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.794 M</td><td class="m">El 31% de esos tres programas sumados</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
 ejercicio 2025, acumulado anual.</p>
 <div class="cols">
-<p><b>Con el 32% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
+<p><b>Con el 31% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
 mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg">Lo que est&aacute;
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
 falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
 agrega sobre lo que ya funciona, espera. <span class="sg">El criterio es el mismo para las tres
 partidas y no hace excepciones.</span></p>
-<p><b>Por qu&eacute; estos tres y no otros.</b> Porque son los tres programas donde el cap&iacute;tulo 1
-encontr&oacute; el margen, y porque los tres crecieron por encima del resto del presupuesto.</p>
+<p><b>Por qu&eacute; estos tres y no otros.</b> Porque los tres crecieron por encima del resto del
+presupuesto.</p>
 <p><b>Y esto tiene un costo pol&iacute;tico que no escondemos.</b> Hay personas trabajando en esos
 programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
@@ -439,9 +429,9 @@ secci&oacute;n 4.13 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.906 de
+<p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.794 de
 reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,
-decidir distinto con el dinero que ya existe. <span class="sg">Juntos ocupan el 9,1% del gasto flexible, y queda el 90,9%
+decidir distinto con el dinero que ya existe. <span class="sg">Juntos ocupan el 8,9% del gasto flexible, y queda el 91,1%
 libre.</span></p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
@@ -478,9 +468,8 @@ del presupuesto flexible quedan ocupando. Sobre un gasto flexible de 87.326 mill
      "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.",
      "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. Caben, pero no queda lugar para una tercera del mismo tama&ntilde;o.") + """
 <p class="cap"><b>Nota:</b> el 73,1% es la medici&oacute;n del ejercicio 2025. <b>El servicio del bono
-de agosto de 2026 empuja esa proporci&oacute;n hacia arriba en 2028 y 2029</b>, cuando se pagan siete de
-las ocho cuotas de capital: cu&aacute;nto depende de la tasa, que es variable, y por eso no se pone un
-n&uacute;mero ac&aacute;.</p>
+de agosto de 2026 empuja esa proporci&oacute;n hacia arriba en 2028 y 2029</b>: cu&aacute;nto depende de
+la tasa, que es variable, y por eso no se pone un n&uacute;mero ac&aacute;.</p>
 <p>&Eacute;se es el techo, y lo declaramos: no queda lugar para una tercera propuesta de este
 tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 
@@ -504,14 +493,12 @@ un programa, que se consume.</p>
 de 2008 no cuesta intereses y no compromete al pr&oacute;ximo gobierno. Endeudarse para financiar algo
 que se puede financiar corrigiendo una tabla vieja no tiene defensa.</p>
 <p><b>Tercera: el camino ya se tom&oacute;, y con un costo que ahora s&iacute; se conoce.</b> En agosto
-de 2026 el Municipio coloc&oacute; un bono por 30.000 millones. <span class="sg">La secci&oacute;n que
-sigue lo explica, porque cambia el punto de partida de cualquier programa que asuma en 2027.</span></p>
+de 2026 el Municipio coloc&oacute; un bono por 30.000 millones.</p>
 </div>
 
 <h3>El bono de 30.000 millones lo paga el gobierno que entra</h3>
 <p class="lead">Esto ocurri&oacute; despu&eacute;s del cierre de los datos con que se construy&oacute;
-este cap&iacute;tulo, y lo cambia. Va con el detalle completo porque es la decisi&oacute;n fiscal
-m&aacute;s importante del mandato.</p>
+este cap&iacute;tulo, y lo cambia.</p>
 <div class="cols">
 <p><b>Qu&eacute; se hizo.</b> El 8 de julio de 2026 la Asamblea de Concejales y Mayores Contribuyentes
 autoriz&oacute; el <b>Bono de Infraestructura de San Isidro</b> por hasta 30.000 millones. El 13 de
@@ -540,16 +527,11 @@ incorpor&oacute; la oposici&oacute;n negociando el art&iacute;culo 3.</span></p>
 ellas hay obras hidr&aacute;ulicas en La Cava y formalizaci&oacute;n del acceso a agua y cloacas:
 <b>exactamente el tipo de decisi&oacute;n que el cap&iacute;tulo 4 propone que deje de tomarse desde
 arriba</b>.</p>
-<p><b>Y el 87,5% del capital lo abona una gesti&oacute;n que todav&iacute;a no se elegi&oacute;</b>, con
-la coparticipaci&oacute;n cedida como garant&iacute;a. Treinta mil millones comprometidos por cuatro
-a&ntilde;os de mandato ajeno.</p>
 </div>
 <div class="cols">
 <p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> Al stock consolidado que
 este cap&iacute;tulo model&oacute; hay que sumarle 30.000 millones de capital m&aacute;s sus intereses
-trimestrales. <b>El margen contra el tope del art&iacute;culo 49 bis se reduce</b>, y el modelo fiscal
-que acompa&ntilde;a a este programa lo recalcula con la tasa real y el cronograma real, que ahora son
-p&uacute;blicos.</p>
+trimestrales. <b>El margen contra el tope del art&iacute;culo 49 bis se reduce.</b></p>
 <p><b>Y refuerza la opci&oacute;n 2, no la debilita.</b> Con el margen de endeudamiento ya usado por la
 gesti&oacute;n anterior, <span class="sg">actualizar la base de valuaci&oacute;n deja de ser una
 alternativa y pasa a ser la &uacute;nica v&iacute;a disponible</span> para financiar gasto recurrente
@@ -590,7 +572,7 @@ valores de tierra, y sobre los valores por macizo publicados por ARBA. Las circu
 con localidades leyendo 299 decretos municipales que identifican inmuebles por secci&oacute;n y localidad.</p>
 <p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
 escalas usan unidades distintas. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la valuaci&oacute;n
-provincial es de un prevalun reval&uacute;o de 2016uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
+provincial es de un reval&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
 ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
 <div class="cols">
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
@@ -705,11 +687,8 @@ tres puntos &mdash;bajar del 89,32% al 86,32%&mdash; dejan el resultado de 2031 
 cero: &minus;305 millones. Es el riesgo m&aacute;s concreto, porque ya se est&aacute; materializando.</li>
 <li><b>Que la coparticipaci&oacute;n se acelere.</b> El menos grave de los tres primeros, y el
 &uacute;nico de ellos que no depende del Municipio.</li>
-<li><b>Y la tasa del bono, que es la m&aacute;s concreta de las cuatro.</b> El capital de los 30.000
-millones se devuelve en <b>ocho cuotas trimestrales de 3.750 millones, de noviembre de 2027 a agosto de
-2029</b>: entero dentro del mandato, y con el grueso en los dos primeros a&ntilde;os. La tasa es
-<b>variable, TAMAR m&aacute;s 7%</b>, de modo que el servicio lo fija el mercado mayorista y no una
-decisi&oacute;n municipal.</li>
+<li><b>Y la tasa del bono, que es la m&aacute;s concreta de las cuatro.</b> Es <b>variable, TAMAR
+m&aacute;s 7%</b>, y el capital se paga casi entero en 2028 y 2029.</li>
 </ol>
 """ + ex("g", "Lo que manda es cu&aacute;nto crecen los recursos propios",
      "Efecto sobre el resultado financiero de 2031 de mover cada variable, con las otras dos en su valor del escenario base. Base: 12.664 millones.",

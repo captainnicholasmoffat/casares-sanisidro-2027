@@ -77,11 +77,9 @@ sigue es lo que s&iacute; puede hacer solo.</p></div>
 
 <h2><span class="n">4.3</span>Cu&aacute;nto dinero: el n&uacute;mero</h2>
 <div class="cols">
-<p>En 2025 San Isidro ejecut&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>: el
-<b>17,8% de todo su gasto</b>, uno de los cuatro municipios que m&aacute;s invierten de la Provincia. No
-es un municipio sin capacidad de inversi&oacute;n: es lo contrario.</p>
-<p><span class="sg">Qui&eacute;n decide d&oacute;nde se invierte ese dinero no vive donde est&aacute; el
-d&eacute;ficit.</span> Ese es el problema que este cap&iacute;tulo resuelve.</p>
+<p>En 2025 San Isidro ejecut&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>, y
+<span class="sg">quien decide d&oacute;nde se invierte ese dinero no vive donde est&aacute; el
+d&eacute;ficit.</span></p>
 <p>Este mecanismo cambia eso de dos maneras verificables: la f&oacute;rmula manda m&aacute;s dinero por
 habitante a las zonas con peores indicadores, y el art&iacute;culo 132 exige que la obra la pidan por
 escrito el 60% de los beneficiarios. <span class="sg">Ninguna obra se hace donde nadie la pidi&oacute;.</span></p>
@@ -110,12 +108,6 @@ obra</span>.</p>
 presupuesto. El gasto en personal y en servicios est&aacute; comprometido por contratos y convenios; la
 inversi&oacute;n se decide cada a&ntilde;o. Y porque es exactamente el rubro que resuelve lo que el
 cap&iacute;tulo 1 documenta: cloacas, gas de red, desag&uuml;es, veredas, iluminaci&oacute;n.</p>
-<p><b>Por qu&eacute; se empieza en escala reducida.</b> La gradualidad de cuatro a&ntilde;os no es prudencia
-ret&oacute;rica: es el tiempo que tardan las comisiones en constituirse, capacitarse y demostrar capacidad
-de gesti&oacute;n.</p>
-<p>Y hay una raz&oacute;n pr&aacute;ctica que pesa m&aacute;s: <span class="sg">si el a&ntilde;o 1 sale
-mal, se cae el modelo entero.</span> Arrancar con un octavo de la obra p&uacute;blica y crecer contra
-capacidad demostrada es lo que permite corregir sin perder este programa.</p>
 </div>
 
 <h2><span class="n">4.4</span>C&oacute;mo se reparte: por poblaci&oacute;n y por necesidad contada</h2>
@@ -214,9 +206,7 @@ agregado por zona sobre los 360 radios censales del partido.</p>
      "Los nueve radios se identifican por c&oacute;digo y fracci&oacute;n censal, nunca por nombre de barrio: los barrios no tienen geometr&iacute;a oficial.") + """
 <div class="cols">
 <p>B&eacute;ccar recibe <b>1,71 veces por habitante</b> lo que recibe Mart&iacute;nez. Boulogne, 1,58
-veces. <span class="sg">Y ac&aacute; el diagn&oacute;stico y el mecanismo miden lo mismo</span>: Boulogne
-Sur Mer y B&eacute;ccar son el 46,8% de la poblaci&oacute;n del partido y concentran el 67% de la
-necesidad que esta f&oacute;rmula mide.</p>
+veces.</p>
 <p><span class="sg">Esto se dice en voz alta, no se esconde.</span> La f&oacute;rmula corrige, y va escrita
 en la ordenanza para que no dependa del intendente de turno. Mart&iacute;nez y Acassuso tambi&eacute;n
 reciben, y reciben m&aacute;s de lo que reciben hoy: hoy ning&uacute;n barrio decide nada.</p>
@@ -245,12 +235,7 @@ fundamentos y en plazo</span>, a cada priorizaci&oacute;n.</p>
 <p>Jur&iacute;dicamente es consultivo, y por eso sobrevive a un veto. Pol&iacute;ticamente, un intendente
 que ignore por escrito lo que vot&oacute; su barrio paga el costo en la elecci&oacute;n siguiente. La
 obligaci&oacute;n de respuesta fundada convierte el silencio administrativo en un acto p&uacute;blico.
-Esta capa es lo que hacen Porto Alegre, Rosario y Mor&oacute;n, y hace d&eacute;cadas. Lo
-relevante para este programa no es cu&aacute;nto reparten sino <span class="sg">que ninguno fue
-vetado</span>: todos funcionan con voto consultivo y partida fijada, que es la distinci&oacute;n que la
-Constituci&oacute;n provincial obliga a respetar y que el veto de Pinamar confirm&oacute; por la
-negativa. La forma legal est&aacute; probada; lo que no est&aacute; probado es hacerlo con la mitad de la
-obra p&uacute;blica, y este programa lo dice.</p>
+Esta capa es lo que hacen Porto Alegre, Rosario y Mor&oacute;n, y hace d&eacute;cadas.</p>
 <h3 style="margin-top:0">Capa 2 &mdash; Los vecinos ejecutan</h3>
 <p>Y ac&aacute; se agrega lo que ellos no tienen. La Ley Org&aacute;nica de las Municipalidades,
 <b>art&iacute;culo 60</b>, establece c&oacute;mo se realiza la obra p&uacute;blica municipal:
@@ -282,9 +267,7 @@ expresamente la acreditaci&oacute;n de la adhesi&oacute;n de los vecinos benefic
 
 <h2><span class="n">4.6</span>C&oacute;mo se constituye una comisi&oacute;n, y c&oacute;mo rinde</h2>
 <p class="lead">Un mecanismo que administra 28.908 millones de pesos al a&ntilde;o tiene que decir
-qui&eacute;n lo integra, c&oacute;mo se vota, cu&aacute;nto dura y qu&eacute; pasa cuando falla. Esta
-secci&oacute;n lo dice. Es la parte que m&aacute;s se va a discutir, y por eso est&aacute; escrita antes
-y no despu&eacute;s.</p>
+qui&eacute;n lo integra, c&oacute;mo se vota, cu&aacute;nto dura y qu&eacute; pasa cuando falla.</p>
 <div class="cols">
 <h3 style="margin-top:0">No se crean comisiones nuevas: se reconoce a las que ya existen</h3>
 <p>San Isidro ya tiene asociaciones vecinales y sociedades de fomento. La ordenanza las reconoce como la
@@ -516,9 +499,7 @@ participaci&oacute;n en s&iacute;: es el dise&ntilde;o.</b></p>
 </div>
 <div class="callout a">
 <div class="clabel">Lo que sale mal en estos sistemas, y c&oacute;mo lo enfrenta este dise&ntilde;o</div>
-<p><b>Se apagan.</b> Es el modo de falla m&aacute;s com&uacute;n. En Reikiavik la participaci&oacute;n
-cay&oacute; de 8,1% a 7,3% entre 2012 y 2015; en Walbrzych, Polonia, con el sistema en funcionamiento desde
-2013, bajan a&ntilde;o a a&ntilde;o las propuestas presentadas y los votos.
+<p><b>Se apagan.</b> Es el modo de falla m&aacute;s com&uacute;n.
 <b>Un panel sorteado no depende de que la gente se entere y vaya</b>: se invita, se convoca y se paga.</p>
 <p><b>Los capturan grupos organizados.</b> En Cambridge, Massachusetts, la cr&iacute;tica es que el
 presupuesto participativo se volvi&oacute; un buen lugar para que los grupos de inter&eacute;s financien
@@ -655,10 +636,8 @@ cooperativa contrata gente del lugar y compra donde puede. Segundo, el control e
 recibe la obra conoce a quien la hizo y lo cruza en la calle. Tercero, la capacidad queda instalada: una
 asociaci&oacute;n que ejecut&oacute; una obra puede ejecutar la siguiente, y eso no se pierde cuando
 cambia el intendente.</p>
-<p><b>Y hay una consecuencia que el cap&iacute;tulo 1 vuelve ineludible.</b> En un distrito donde la
-pol&iacute;tica de empleo municipal son 170 millones &mdash;572 pesos por habitante por a&ntilde;o&mdash;
-una obra ejecutada por vecinos es pol&iacute;tica de empleo real, financiada con la partida de obra y no
-con la de empleo. <span class="sg">Los 28.908 millones del a&ntilde;o 4 son casi cuatro veces este programa
+<p><b>Y hay una consecuencia en el empleo.</b> Una obra ejecutada por vecinos es pol&iacute;tica de
+empleo real, financiada con la partida de obra y no con la de empleo. <span class="sg">Los 28.908 millones del a&ntilde;o 4 son casi cuatro veces este programa
 completo de empleo y vivienda</span>, y no le cuestan un peso adicional al presupuesto.</p>
 <p><b>El costo de esta capa es que exige m&aacute;s.</b> La primera no pide nada al vecino salvo ir a una
 asamblea; la segunda le pide constituirse, reunir el 60% por escrito, contratar, rendir y responder. Por
@@ -693,8 +672,8 @@ repartir culpas despu&eacute;s.</p>
 </g>
 <path d="M330 120 L390 78" stroke="#7C2E23" stroke-width="1.4" stroke-dasharray="5 3"/>
 <path d="M396 74 L382 74 L387 84 Z" fill="#7C2E23"/>
-<text x="200" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">la mitad de la obra</text>
-<text x="200" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">se adjudicaba afuera</text>
+<text x="200" y="196" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">cada vuelta</text>
+<text x="200" y="212" text-anchor="middle" font-size="11.5" font-family="Spectral" font-style="italic" fill="#6E625A">deja menos</text>
 <line x1="415" y1="46" x2="415" y2="356" stroke="#C6AE8E" stroke-width="1"/>
 <text x="630" y="24" text-anchor="middle" font-size="10.5" font-weight="600" font-family="Inter" fill="#5F7057" letter-spacing="1.4">ESTE PROGRAMA &middot; EL CIRCUITO RETIENE</text>
 <circle cx="630" cy="200" r="118" fill="none" stroke="#DB6B4B" stroke-width="1.4" stroke-dasharray="4 4"/>
@@ -723,19 +702,16 @@ repartir culpas despu&eacute;s.</p>
 Un &aacute;rbol m&aacute;s en una plaza que ya ten&iacute;a &aacute;rboles, no. Esa es la diferencia entre
 las dos flechas de la izquierda de cada circuito.</p>
 <div class="cols">
-<p><b>Decide el barrio.</b> Hoy la obra la decide el Ejecutivo, y los diez primeros adjudicatarios se
-llevan el 54,5% de lo contratado. Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
+<p><b>Decide el barrio.</b> Hoy la obra la decide el Ejecutivo. Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
 hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
-<p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, la
-dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera &mdash;la mitad de los
-actos de adjudicaci&oacute;n con domicilio publicado, en la &uacute;ltima medici&oacute;n
-disponible&mdash;.</p>
+<p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, el
+dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera.</p>
 <p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: quien se
 form&oacute; en el Centro de Formaci&oacute;n Laboral consigue trabajo en la obra de su propia zona.
 <b>Sin ejecuci&oacute;n vecinal, la formaci&oacute;n entrena gente para que la emplee otro
 distrito.</b></p>
 <p><b>Gasta y recauda donde vive.</b> Ese salario se consume en el partido, y esa actividad es base
-imponible. El cap&iacute;tulo 3 muestra que los recursos propios son el 75% de lo que el Municipio gasta:
+imponible. El cap&iacute;tulo 1 muestra que los recursos propios son el 75% de lo que el Municipio gasta:
 <span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, sin subir una sola
 tasa.</span></p>
 </div>
@@ -800,8 +776,7 @@ que la ordenanza de la partida vecinal lo repone, con el padr&oacute;n publicado
 <h2><span class="n">4.11</span>La aplicaci&oacute;n: el sistema de informaci&oacute;n del Municipio</h2>
 <p class="lead">Todo lo que propone este cap&iacute;tulo produce informaci&oacute;n: actas, obras
 priorizadas, decretos de adjudicaci&oacute;n, ejecuci&oacute;n, respuestas fundadas. Nadie tiene las
-horas para leerla, y <span class="sg">lo que nadie lee no controla nada</span>. Esta secci&oacute;n es
-la que hace viable todo lo anterior, y por eso est&aacute; numerada y no al pie.</p>
+horas para leerla, y <span class="sg">lo que nadie lee no controla nada</span>.</p>
 <div class="cols">
 <p><b>Es el l&iacute;mite hist&oacute;rico de todos estos mecanismos, y explica por qu&eacute; se
 apagan.</b> Reikiavik cay&oacute; del 8,1% al 7,3% de participaci&oacute;n en tres a&ntilde;os;
@@ -836,10 +811,8 @@ que buscarla en este PDF.</p>
 s&oacute;lo en la semana de la asamblea, y es el enganche con el cap&iacute;tulo 5.</p>
 <p><b>Turnos de hospitales y centros de salud</b>, integrados al sistema provincial Mi Salud Digital, y
 tambi&eacute;n de la veterinaria municipal.</p>
-<p><b>Ocupaci&oacute;n de guardias en tiempo real, como n&uacute;mero y no como imagen:</b>
-&laquo;catorce personas esperando, demora estimada cuarenta minutos&raquo;, para que la gente elija a
-cu&aacute;l ir. No se transmite el interior de un hospital: hay pacientes e historias cl&iacute;nicas a
-la vista.</p>
+<p><b>Ocupaci&oacute;n de guardias en tiempo real</b>, como n&uacute;mero y no como imagen, para que
+la gente elija a cu&aacute;l ir.</p>
 <p><b>Auditor&iacute;a de compras:</b> precio unitario, stock y comparaci&oacute;n autom&aacute;tica
 contra las compras anteriores, contra los otros dos hospitales y contra los municipios que publiquen.</p>
 <p><b>Habilitaciones comerciales</b>, con consulta previa desde la c&aacute;mara del tel&eacute;fono
@@ -847,8 +820,8 @@ antes de firmar un alquiler.</p>
 <p><b>Canal de denuncias</b>, revisado por el comit&eacute; de vigilancia de vecinos, que son personas y
 no un algoritmo.</p>
 <p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
-suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el domicilio del
-adjudicatario, el tiempo de respuesta de los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
+suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el tiempo de respuesta de los
+reclamos y las catorce metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Un sistema donde la adjudicaci&oacute;n
@@ -924,11 +897,10 @@ un presupuesto aprobado. <span class="tag m">Estimado</span></p>
 son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
 <p><b>Y conviene la comparaci&oacute;n, para que la cifra no asuste.</b> 1.273 millones es
 <span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
-&mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;. El sistema que publica todo lo que
-este programa promete cuesta menos de la doceava parte de lo que cuesta embellecer.</p>
+&mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;.</p>
 <p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de las otras
 &aacute;reas &mdash;anal&iacute;tica de seguridad, habilitaciones, salud, automatizaci&oacute;n de
-tareas de la planta&mdash; los paga la partida de contrataci&oacute;n del cap&iacute;tulo 5, que es otra
+tareas de la planta&mdash; los paga la partida de contrataci&oacute;n del cap&iacute;tulo 5, que son otros
 fondos y otro destino.</p>
 <p><b>Y se licita.</b> El monto se presupuesta y se licita antes de comprometerse, igual que las otras
 estimaciones del cap&iacute;tulo 3. Lo que queda comprometido ac&aacute; no es el n&uacute;mero: es que
@@ -969,12 +941,9 @@ asamblea. Es una p&eacute;rdida real de discrecionalidad y no tiene sentido nega
 60% y ejecute directamente, hay una contratista que no factura eso. No es la mitad del mercado
 &mdash;s&oacute;lo ocurre donde la zona quiera y pueda&mdash; pero es trabajo que cambia de manos, y hay
 que decirlo antes de que lo diga otro.</p>
-<p><b>Y a quien la tabla de valuaci&oacute;n de 2008 le viene cobrando de menos.</b> El
-cap&iacute;tulo 3 muestra que la escala municipal reconoce poco m&aacute;s de la mitad de la distancia
-real entre una zona y otra, y que hay <b>768 manzanas con el mismo puntaje</b> que no valen lo mismo.
-Actualizar esa tabla no mueve la al&iacute;cuota y no toca a quien ya paga lo que corresponde:
+<p><b>Y a quien la tabla de valuaci&oacute;n de 2008 le viene cobrando de menos.</b> Actualizarla
 <span class="sg">le cuesta exactamente a quien viene pagando por debajo de lo que vale su
-manzana</span>, y es lo que financia todo lo dem&aacute;s.</p>
+manzana</span>.</p>
 </div>
 
 <h2><span class="n">4.14</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
@@ -1061,15 +1030,9 @@ distintas del nomenclador del Municipio, no un error de esta tabla. Se conservan
      "ex16.png",
      "Municipio de San Isidro, ejecuci&oacute;n presupuestaria 2025, informe anual. Gasto devengado.",
      cls="c80") + """
-<div class="cols">
 <p><span class="sg">San Isidro es, sobre todo, un municipio de salud y de obra.</span> Casi la mitad del
 presupuesto son esas dos funciones. Cualquier propuesta seria tiene que partir de ah&iacute;, no de una
 lista de deseos.</p>
-<p><b>Y el gasto se movi&oacute; en una direcci&oacute;n clara.</b> El plan de gobierno del intendente
-declara la Seguridad Ciudadana como Prioridad I. En un a&ntilde;o, la seguridad creci&oacute;
-<b>34,8% en t&eacute;rminos reales</b>: pas&oacute; de 27.156 a 36.605 millones de pesos constantes.
-<span class="sg">No es una acusaci&oacute;n: es su plan, ejecutado.</span></p>
-</div>
 <div class="callout a">
 <div class="clabel">Por qu&eacute; la comparaci&oacute;n interanual tiene s&oacute;lo cuatro filas</div>
 <p><b>En 2025 el Municipio cambi&oacute; su nomenclador de funciones.</b> En 2024 clasific&oacute; el
@@ -1105,8 +1068,7 @@ abren a conseguir personal. Seg&uacute;n el Municipio, <b>131 empresas y alreded
 casi la mitad en gastronom&iacute;a, oficios y ventas.</p>
 <p><b>Es hacer de bolsa de trabajo para terceros.</b> El empleo lo crea y lo paga otro; el Municipio
 acerca las partes. <b>No se encontr&oacute; ninguna cl&aacute;usula
-que ate el gasto propio del Municipio al empleo local</b>: la obra p&uacute;blica va a empresas cuyo
-domicilio no se publica desde 2018.</p>
+que ate el gasto propio del Municipio al empleo local.</b></p>
 <p><b>Lo que este programa agrega es lo otro.</b> Usar el presupuesto del propio Municipio &mdash;la obra
 y los servicios que ya paga&mdash; para que los hagan <span class="sg">empresas y cooperativas del
 partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reemplaza la intermediaci&oacute;n:
@@ -1126,8 +1088,7 @@ Laboral N&ordm; 404 Barrio La Cava</b> funciona en Intendente Neyer 1457, B&eacu
 m&aacute;s de veinte a&ntilde;os, y desde ah&iacute; se impulsa el proyecto <b>La Cava 4.0</b>. Este
 programa lo acompa&ntilde;a con recursos municipales y lleva el modelo a las seis zonas.</li>
 <li><b>La obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4,
-ejecutados por cooperativas de vecinos, emplean gente del barrio. Es empleo financiado con la partida de
-obra, no con la de empleo.</li>
+ejecutados por cooperativas de vecinos, emplean gente del barrio.</li>
 <li><b>Intermediaci&oacute;n laboral, dentro del programa formativo y no en una oficina aparte.</b> El
 instructor que vincula al egresado con el empleador es parte de la formaci&oacute;n: es la pieza que
 distingue a los programas que funcionan de los que entregan un certificado y sueltan a la persona. Con
@@ -1228,20 +1189,8 @@ construyendo</span>, no formarse primero y trabajar despu&eacute;s.</p>
 </div>
 
 <div class="cols">
-<p><b>Por qu&eacute; estas tres y no una lista m&aacute;s larga.</b> Las tres tienen la misma
-propiedad: <span class="sg">se apoyan en algo que ya existe y que hoy no se usa</span>. El Centro de
-Formaci&oacute;n 404 funciona y se puede replicar. La partida de obra ya se ejecuta y puede emplear
-gente del barrio en vez de irse a una contratista. Y la intermediaci&oacute;n no requiere estructura
-nueva: requiere medir y publicar algo que el Municipio ya hace de manera informal.</p>
-<p><b>La segunda es la m&aacute;s grande y no sale de esta partida.</b> Los 28.908 millones del
-cap&iacute;tulo 4, ejecutados por cooperativas de vecinos, son pol&iacute;tica de empleo financiada con
-la partida de obra. Es casi cuatro veces el programa completo de empleo y vivienda, y no le cuesta un
-peso adicional al presupuesto. Por eso el cap&iacute;tulo 4 y este cap&iacute;tulo son la misma
-propuesta mirada desde dos lados.</p>
-<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> Va escrito ac&aacute; y con n&uacute;meros,
-porque un total sin apertura no se puede discutir ni auditar. El cuadro que sigue lo abre, y la
-ejecuci&oacute;n se publica por programa para que el reparto sea discutible cada a&ntilde;o y no quede
-en un anexo.</p>
+<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El cuadro que sigue lo abre, y la
+ejecuci&oacute;n se publica por programa.</p>
 <p><b>Y la vivienda es, sobre todo, servicios b&aacute;sicos.</b> Este programa no promete construir
 casas. Promete cloacas, gas de red, desag&uuml;es e iluminaci&oacute;n donde faltan, que es lo que el
 cap&iacute;tulo 1 mide y lo que el art&iacute;culo 132 permite ejecutar a una asociaci&oacute;n vecinal.
@@ -1272,7 +1221,7 @@ certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor 
 t&iacute;tulo que sirve afuera del municipio.</span> Con ese n&uacute;mero entran equipamiento, acceso a
 las herramientas, el instructor que acompa&ntilde;a hasta el empleo y la certificaci&oacute;n de la
 UNSO.</p>
-<p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 1</b>, el mismo que
+<p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 4</b>, el mismo que
 reparte la partida vecinal: <b>Boulogne 315, B&eacute;ccar 307, Mart&iacute;nez 98, San Isidro 96, Villa
 Adelina 94 y Acassuso 19</b>. Cinco sedes fijas y Acassuso itinerante, porque diecinueve personas al
 a&ntilde;o no justifican un edificio. El redondeo del &iacute;ndice suma una vacante m&aacute;s que las
@@ -1310,8 +1259,8 @@ pero la advertencia queda escrita para que nadie la escriba por nosotros.</p>
 <div class="cols">
 <p><b>Hoy:</b> Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado,
 3.320 millones, el 1,0%.</p>
-<p><b>El problema, medido:</b> 6.488 hogares sin cloacas. <b>25.165 sin gas de red</b>, de los cuales
-<b>15.168 &mdash;el 60%&mdash; est&aacute;n en Boulogne y B&eacute;ccar</b>. 8.569 con hacinamiento.</p>
+<p><b>El problema, medido:</b> 6.488 hogares sin cloacas, <b>25.165 sin gas de red</b> y 8.569 con
+hacinamiento.</p>
 </div>
 """ + ex("g", "25.165 hogares de San Isidro cocinan sin gas de red",
      "Boulogne y B&eacute;ccar concentran 15.168, el 60,3% del total del partido.",
@@ -1341,10 +1290,8 @@ decisi&oacute;n, y que la tome quien vive ah&iacute;.</p>
 </div>
 
 <p><b>Propuesta:</b> el d&eacute;ficit de servicios b&aacute;sicos se ataca con la partida de obra
-p&uacute;blica vecinal del cap&iacute;tulo 4. En las dos zonas con peores indicadores hay
-<b>15.168 hogares sin gas de red y 4.616 sin cloacas</b>: el 60% y el 71% del d&eacute;ficit del partido.
-&Eacute;se es el d&eacute;ficit medido que la partida de obra vecinal puede atacar, y es exactamente el
-tipo de obra que el art&iacute;culo 132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal.</p>
+p&uacute;blica vecinal del cap&iacute;tulo 4, que es exactamente el tipo de obra que el art&iacute;culo
+132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal.</p>
 """)
 
 
@@ -1355,8 +1302,7 @@ C5B = dict(id="cap5b", runhead=RH, html="""
 <h2><span class="n">5.5</span>Ambiente <span class="tag v">Reasignaci&oacute;n</span></h2>
 <div class="cols">
 <p><b>Hoy:</b> 1.410 millones, el 0,4% del presupuesto. Cuatro mil setecientos pesos por habitante por
-a&ntilde;o. Y &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la <span class="sg">Prioridad II</span>
-declarada en el plan del intendente.</p>
+a&ntilde;o.</p>
 <p><b>Propuesta:</b> llevar la funci&oacute;n ambiental al 1,5% del presupuesto &mdash;unos 4.865
 millones&mdash; reasignando dentro de Servicios Econ&oacute;micos y Urbanismo, sin fondos nuevos.
 Prioridades: arbolado, gesti&oacute;n de residuos y saneamiento de las cuencas del Bajo.</p>
@@ -1366,8 +1312,7 @@ ser residual, y es lo que entra sin tocar el gasto r&iacute;gido: 3.455 millones
 del margen flexible. Dentro del 58,6% que queda libre despu&eacute;s de las dos propuestas grandes.</p>
 <p><b>De d&oacute;nde salen.</b> De Servicios Econ&oacute;micos y de Urbanismo, que son las
 finalidades a las que la funci&oacute;n ambiental pertenece. No de salud, no de seguridad y no de
-educaci&oacute;n: mover fondos entre finalidades distintas es lo que vuelve incomparables las series, y
-este programa acaba de dedicar un cap&iacute;tulo a ese problema.</p>
+educaci&oacute;n: mover fondos entre finalidades distintas es lo que vuelve incomparables las series.</p>
 <p><b>El dato que falta, y que este programa asume.</b> Ambiente creci&oacute; 23,1% real entre 2024 y
 2025 &mdash;es la tercera funci&oacute;n que m&aacute;s creci&oacute;&mdash; y aun as&iacute; es el 0,4%.
 <span class="sg">Crecer un cuarto sobre casi nada sigue siendo casi nada</span>, y es exactamente el
@@ -1375,12 +1320,6 @@ tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
 <p><b>Qu&eacute; no promete.</b> No promete resolver el saneamiento de las cuencas del Bajo, que excede
 al Municipio y compromete a la Provincia y a ACUMAR seg&uacute;n la cuenca. Promete la parte municipal
 y dice cu&aacute;l es.</p>
-<p><b>Y hay un antecedente que conviene tener a la vista.</b> En junio de 2025 el Concejo
-sancion&oacute; la Ordenanza 9395, de <b>Paisaje Protegido Municipal</b>, y el Departamento Ejecutivo la
-vet&oacute; por decreto. <span class="sg">Lo tra&iacute;mos porque muestra d&oacute;nde termina lo que el Concejo puede
-decidir solo en materia ambiental, y por qu&eacute; este programa insiste en que las cosas que importan
-queden atadas a una partida afectada y no a la voluntad de quien gobierne. El cap&iacute;tulo 4 vuelve
-sobre esto.</p>
 
 </div>
 
@@ -1532,9 +1471,6 @@ la medida cautelar de Boulogne son de la cobertura de prensa local, con la fecha
 dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
-<p class="lead">Ambiente y espacio p&uacute;blico son la Prioridad II declarada, y donde m&aacute;s se
-ejecut&oacute;. Por eso conviene mirar c&oacute;mo se decidi&oacute;, que es una discusi&oacute;n
-distinta de cu&aacute;nto se gast&oacute;.</p>
 <div class="cols">
 <p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
 Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y en julio Barisidro, en el 1602. Los dos
@@ -1573,14 +1509,8 @@ escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
 <p><b>Eso es lo que no se hizo en la costa.</b> No se discute que el permiso se revocara: se discute que
 hubiera 9.775 metros cuadrados construidos y funcionando, con gente empleada, y que la respuesta fuera una
 topadora en vez de un pliego.</p>
-<p><b>Y ac&aacute; el mecanismo del cap&iacute;tulo 4 no alcanza, y conviene decirlo.</b> La costa no es
-de una zona: es de los 297.282 habitantes del partido. Una comisi&oacute;n zonal decidiendo sobre la
-ribera decidir&iacute;a por gente que no la vot&oacute;, y al mismo tiempo alguien de Villa Adelina que
-va al r&iacute;o los domingos no tendr&iacute;a voz. <span class="sg">La partida vecinal est&aacute;
-pensada para obra de barrio &mdash;cloacas, gas, veredas&mdash;, no para bienes de alcance
-distrital.</span></p>
-<p><b>La secci&oacute;n 4.6 lo resuelve</b>: la comisi&oacute;n zonal decide lo que sirve
-principalmente a su zona, y ninguna parcela de alcance distrital se contrata ni se demuele antes de que
+<p><b>La costa no es de una zona, y la secci&oacute;n 4.6 ya fija la regla</b>: la comisi&oacute;n
+zonal decide lo que sirve principalmente a su zona, y ninguna parcela de alcance distrital se contrata ni se demuele antes de que
 exista un procedimiento de consulta que alcance a todo el partido. <b>Y donde haya uso comercial, que se licite
 con canon, con pliego p&uacute;blico y con exigencia de empleo local</b>, en vez de regalarse por treinta
 a&ntilde;os o demolerse sin preguntar. Lo que hoy no paga nada deber&iacute;a pagar; lo que puede generar
@@ -1829,10 +1759,8 @@ del mismo establecimiento, contra los otros dos hospitales y contra los municipi
 avisa cuando algo se sale del rango.</p>
 </div>
 <div class="cols">
-<p><b>Se&ntilde;ala anomal&iacute;as, no acusa.</b> Dice &laquo;este precio est&aacute; 40% por encima
-de la compra anterior&raquo; y muestra los dos documentos. Qui&eacute;n explica es el funcionario y
-qui&eacute;n decide si hay delito es un juez: <span class="sg">el sistema no imputa a nadie, acorta el
-tiempo entre que algo pasa y que se ve</span>.</p>
+<p><b>Se&ntilde;ala anomal&iacute;as, no acusa</b>, con las reglas del asistente del 4.11:
+<span class="sg">el sistema no imputa a nadie, acorta el tiempo entre que algo pasa y que se ve</span>.</p>
 <p><b>Y la guardia, en n&uacute;mero.</b> Ocupaci&oacute;n en tiempo real: &laquo;catorce personas
 esperando, demora estimada cuarenta minutos&raquo;, para que quien tiene que ir elija a cu&aacute;l.
 <b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
@@ -1854,9 +1782,8 @@ que no se puede auditar desde afuera falla igual con funcionarios honestos.</p>
 &mdash;que es lo que hoy no se hace y lo que la evidencia dice que m&aacute;s baja el delito&mdash; y
 <span class="sg">publicar si sirve</span>.</p>
 <div class="cols">
-<p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, y la funci&oacute;n que m&aacute;s creci&oacute;
-de todas: <b>+34,8% real en un a&ntilde;o</b>. Es la Prioridad I declarada del plan vigente y se
-ejecut&oacute;.</p>
+<p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, despu&eacute;s de crecer <b>34,8% real en un
+a&ntilde;o</b>.</p>
 <p><b>Qu&eacute; puede y qu&eacute; no puede un intendente.</b> La polic&iacute;a es provincial. La
 estad&iacute;stica criminal es provincial. La investigaci&oacute;n penal es provincial.
 <span class="sg">Un intendente bonaerense no dirige la fuerza que patrulla su distrito</span>, y
@@ -1878,7 +1805,7 @@ En Dallas, el delito violento cay&oacute; <b>11% en los puntos tratados</b> dura
 sin desplazamiento hacia las zonas vecinas.</p>
 <p><b>Y el delito se concentra donde uno no lo esperar&iacute;a de concentrado</b>: unos pocos lugares
 peque&ntilde;os generan la mitad de todos los hechos. <span class="sg">Es la misma l&oacute;gica que el
-cap&iacute;tulo 1 aplica al d&eacute;ficit de infraestructura</span>, que no est&aacute; repartido sino
+cap&iacute;tulo 4 aplica al d&eacute;ficit de infraestructura</span>, que no est&aacute; repartido sino
 concentrado en nueve radios censales.</p>
 <p><b>No es mano dura.</b> Un estudio de 2025 encontr&oacute; que en las zonas tratadas con enfoque
 disuasivo los agentes no iniciaron m&aacute;s detenciones ni m&aacute;s controles que en las zonas de
@@ -1890,9 +1817,8 @@ patrulla, en otro lado y a otra hora.</p>
 <div class="callout a">
 <div class="clabel">El paso cero, y es el que falta</div>
 <p>Nada de esto funciona sin un dato georreferenciado de incidentes, y <b>en San Isidro no existe en
-ninguna forma p&uacute;blica</b>. El portal de datos abiertos <b>no responde</b> &mdash;el archivo de
-la Wayback Machine lo registra con 62 conjuntos de datos hasta el 16 de junio de 2026, y ninguno era de
-seguridad&mdash; y el Mapa Digital municipal figura &laquo;en construcci&oacute;n&raquo;. Las
+ninguna forma p&uacute;blica</b>. El portal de datos abiertos <b>no responde</b> &mdash;y en el archivo de
+la Wayback Machine ninguno de sus conjuntos de datos era de seguridad&mdash; y el Mapa Digital municipal figura &laquo;en construcci&oacute;n&raquo;. Las
 estad&iacute;sticas salen como nota de prensa mensual y agregadas a todo el partido: en agosto de 2026
 el Municipio comunic&oacute; <b>240 detenidos y 27.457 personas identificadas</b>, sin una sola
 desagregaci&oacute;n por zona y sin archivo descargable. <span class="sg">Son las cifras que el
@@ -1965,7 +1891,7 @@ art&iacute;culo 265 bis del C&oacute;digo Procesal Penal bonaerense, incorporado
 sin editar. <b>Por causa individualizada y con pedido escrito</b>: no cubre el acceso libre en vivo de
 la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
 <p><b>Por qu&eacute; entra como gesti&oacute;n y no como fondos nuevos.</b> Porque las c&aacute;maras y
-la anal&iacute;tica ya se pagaron. Lo que cuesta configurar el sistema para estos cuatro usos y publicar
+la anal&iacute;tica ya se pagaron. Lo que cuesta configurar el sistema para estos tres usos y publicar
 el registro de &oacute;rdenes judiciales es cero.</p>
 </div>
 
@@ -2029,19 +1955,11 @@ camino, y es el judicial.</p></div>
 
 <h3>5. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
 <div class="cols">
-<p><b>Todo lo anterior se compra.</b> Anal&iacute;tica, desarrollo, monitoreo, soporte. Hoy eso se le
-paga a proveedores de afuera y el dinero se va del partido, igual que la obra p&uacute;blica antes del
-cap&iacute;tulo 4.</p>
+<p><b>Todo lo anterior se compra.</b> Anal&iacute;tica, desarrollo, monitoreo, soporte.</p>
 <p><span class="sg">Se contrata a empresas de San Isidro</span>, con el mismo criterio de
 proximidad que el art&iacute;culo 132 aplica a la obra. Y el Centro de Formaci&oacute;n Laboral N&ordm;
 404 forma a la gente que ocupa esos puestos, con el eje en inteligencia artificial y servicios digitales
 que describe la secci&oacute;n 5.3.</p>
-<p><b>Ah&iacute; seguridad deja de ser un cap&iacute;tulo aparte.</b> Es la misma propuesta del resto del
-programa: decisi&oacute;n cerca, trabajo local, y el dinero que se queda donde se gasta.</p>
-<p><b>Y no hay que inventar el control: hay que reponerlo.</b> Revisamos los 573 decretos de
-adjudicaci&oacute;n de la gesti&oacute;n actual publicados en el Bolet&iacute;n: dicen qui&eacute;n
-gan&oacute;, con CUIT, y cu&aacute;nto. <span class="sg">Ninguno dice d&oacute;nde tiene su domicilio el
-adjudicatario.</span> Cero de 573.</p>
 <p><b>Y ac&aacute; est&aacute; la primera objeci&oacute;n, que conviene contestar antes de que la
 hagan:</b> qu&eacute; pasa si nadie ac&aacute; puede hacerlo. Si la respuesta es contratar afuera, la
 regla es decorativa. <span class="sg">La respuesta de este programa es que la capacidad se
@@ -2053,11 +1971,6 @@ esas empresas: si lo fuera se rompe la incompatibilidad del art&iacute;culo 44 d
 Y la contrataci&oacute;n sigue siendo competitiva: <span class="sg">se fomenta que existan oferentes
 locales, no que haya uno solo con el contrato asegurado</span>. Sin ese segundo l&iacute;mite, en tres
 a&ntilde;os tenemos otro caso como el de la recolecci&oacute;n.</p>
-<p><b>Pero se public&oacute; durante quince a&ntilde;os.</b> Entre 2002 y 2017 el domicilio figuraba en
-una proporci&oacute;n que lleg&oacute; al 82% de los decretos. Se dej&oacute; de publicar en 2018, bajo
-la gesti&oacute;n anterior, y desde 2023 no aparece nunca. <b>No es un dato que nunca existi&oacute;: es
-una capacidad que el Municipio ten&iacute;a y perdi&oacute;</b>, igual que la cobranza del 93,51% que el
-cap&iacute;tulo 3 propone recuperar.</p>
 </div>
 
 <h3>6. Y publicar lo que se hace</h3>
@@ -2102,8 +2015,8 @@ Catamarca sostiene <b>46 centros de apoyo escolar</b> en centros vecinales, parr
 barriales, gratuitos, para primaria y secundaria. San Juan tiene un programa equivalente que alcanza a
 m&aacute;s de 800 chicos.</p>
 <p><b>Y San Isidro ya tiene d&oacute;nde ponerlos.</b> Los polideportivos, los centros de la tercera
-edad, las sedes barriales. <span class="sg">El &iacute;ndice de necesidad del cap&iacute;tulo 1 dice
-d&oacute;nde: Boulogne y B&eacute;ccar concentran el 67% de la necesidad del partido.</span> No hay que
+edad, las sedes barriales. <span class="sg">El &iacute;ndice de necesidad del cap&iacute;tulo 4 dice
+d&oacute;nde.</span> No hay que
 construir un edificio: hay que abrir los que est&aacute;n cerrados a la tarde y pagar docentes.</p>
 <p><b>2 &middot; Que el apoyo escolar detecte lo que la escuela no ve.</b> En los programas que
 funcionan, el centro de apoyo es adem&aacute;s el lugar donde se detectan situaciones de riesgo &mdash;un
@@ -2127,9 +2040,8 @@ escuelas que peor est&aacute;n.</li>
 </ol>
 <div class="cols">
 <p><b>Por qu&eacute; una ca&iacute;da del 11,5% importa m&aacute;s de lo que parece.</b> Son 2.059
-millones de pesos constantes que la funci&oacute;n educativa dej&oacute; de tener en un solo a&ntilde;o,
-y fue la segunda mayor ca&iacute;da real de todas las funciones despu&eacute;s de promoci&oacute;n y
-asistencia social. En un a&ntilde;o en que seguridad creci&oacute; 34,8%.</p>
+millones de pesos constantes que la funci&oacute;n educativa dej&oacute; de tener en un solo
+a&ntilde;o.</p>
 <p><b>El Fondo Educativo es el caso m&aacute;s claro de todo el documento.</b> Son 3.931 millones con
 destino espec&iacute;fico, afectados por ley: no se pueden usar para otra cosa. Aun as&iacute;, hoy no
 hay forma p&uacute;blica de saber en qu&eacute; escuela se gast&oacute; cada peso.
@@ -2147,7 +2059,7 @@ trabajo, y las dos cosas se deciden en el mismo mapa.</p>
 <div class="cols">
 <p><b>Cultura devenga 1.360,4 millones al a&ntilde;o: el 0,42% del gasto municipal</b>, y comparte
 cr&eacute;dito con turismo sin desagregar. Al lado, Deporte y Recreaci&oacute;n devenga 3.813,3
-millones, <span class="sg">2,8 veces m&aacute;s</span>, y m&aacute;s que agua potable y alcantarillado.
+millones, <span class="sg">2,8 veces m&aacute;s</span>.
 No es que falten fondos: falta d&oacute;nde.</p>
 <p><b>Y ac&aacute; est&aacute; el hallazgo, que no es de presupuesto.</b> El r&eacute;gimen que regula
 la m&uacute;sica en vivo en San Isidro es de <b>1970</b> y sigue publicado en el Digesto municipal.
@@ -2206,8 +2118,8 @@ lugares que funcionaban no es s&oacute;lo un problema econ&oacute;mico.</p>
 <div class="cols">
 <p><b>La regla es simple y se escribe ahora, antes de que haga falta.</b> Cuando el Municipio convoque
 expertos o encargue un estudio, convoca a <span class="sg">instituciones con sede en el partido</span>,
-y la composici&oacute;n se pondera por el &iacute;ndice de necesidad del cap&iacute;tulo 1: el mismo
-&iacute;ndice que reparte la partida vecinal. Hoy esa ponderaci&oacute;n da dos tercios de instituciones
+y la composici&oacute;n se pondera por el &iacute;ndice de necesidad del cap&iacute;tulo 4, el que
+reparte la partida vecinal. Hoy esa ponderaci&oacute;n da dos tercios de instituciones
 p&uacute;blicas.</p>
 <p><b>El criterio, dicho de frente.</b> En el radio 067562205 de Boulogne, el 13,7% de los hogares
 tiene necesidades b&aacute;sicas insatisfechas y el <b>95,8% cocina sin gas de red</b>.
@@ -2258,9 +2170,7 @@ obra particular.</p>
 lo presentado y la norma escrita, que es la parte lenta y repetitiva. <b>No reemplaza la
 inspecci&oacute;n ni la decisi&oacute;n sobre lo que requiere criterio</b>, y no lo vamos a prometer: la
 mitad de los proyectos que fracasan son los que prometieron reemplazar el juicio humano.</p>
-<p><b>Y una decisi&oacute;n que hay que decir de frente.</b> Este programa
-<span class="sg">no reduce un solo puesto de la planta municipal</span>, y la secci&oacute;n 5.12 lo
-desarrolla. Quien hoy atiende ventanilla pasa a hacer lo que hoy no se hace: seguimiento de expedientes
+<p><b>Y quien hoy atiende ventanilla pasa a hacer lo que hoy no se hace:</b> seguimiento de expedientes
 demorados, inspecci&oacute;n en territorio y atenci&oacute;n presencial a quien la necesita.
 <b>El sistema absorbe el volumen, no el empleo.</b></p>
 <p><b>Y el que atiende que atienda en castellano.</b> Un asistente conversacional sobre el mismo sistema
@@ -2279,8 +2189,8 @@ pregunta si puede poner ah&iacute; lo que tiene en la cabeza. El sistema cruza z
 y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
 puede cambiar de idea sin perder dinero.</p>
 <p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
-momento discrecional que sobra.</b> Por eso se transmite en vivo, como toda inspecci&oacute;n municipal
-(5.7), y el comerciante puede objetar por escrito y recibir respuesta fundada.
+momento discrecional que sobra.</b> Por eso se transmite en vivo, como toda inspecci&oacute;n municipal,
+y el comerciante puede objetar por escrito y recibir respuesta fundada.
 <span class="sg">Adentro de un local hay clientes y documentaci&oacute;n</span>, y por eso la
 reglamentaci&oacute;n define c&oacute;mo se resguarda a quien no es parte del acto.</p>
 <p><b>Programada, no aleatoria.</b> El sistema la agenda y el comerciante sabe cu&aacute;ndo va el
@@ -2288,20 +2198,6 @@ inspector. Y el asistente compara inspecciones del mismo rubro y marca las que s
 patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los insumos.</p>
 </div>
 
-<div class="callout g">
-<div class="clabel">C&oacute;mo entra en el ciclo del cap&iacute;tulo 4</div>
-<p>El Municipio contrata el desarrollo y el mantenimiento <b>a empresas con domicilio en San
-Isidro</b>, con el mismo criterio de proximidad del art&iacute;culo 132. Los puestos que esas empresas
-necesitan &mdash;desarrollo, datos, soporte&mdash; los ocupa gente formada en el Centro de
-Formaci&oacute;n Laboral con el eje en inteligencia artificial que describe el 5.3. Esa gente cobra y
-gasta en el partido.</p>
-<p>Y del otro lado del circuito: <b>un tr&aacute;mite que tarda d&iacute;as en vez de meses abarata abrir
-un local</b>, lo que genera actividad, empleo privado y m&aacute;s base imponible. Esa
-recaudaci&oacute;n propia es la que el cap&iacute;tulo 3 usa para financiar el resto del programa.</p>
-<p><span class="sg">El gasto municipal deja de ser gasto y pasa a ser motor.</span> Es una rama del
-circuito que el cap&iacute;tulo 4 grafica completo: no hay tres propuestas distintas, hay una sola
-aplicada a tres &aacute;reas.</p>
-</div>
 <div class="note">
 <p><b>Sobre lo citado.</b> La propuesta de Bezos se formul&oacute; en el America Business Forum de Miami
 en noviembre de 2025; la adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en
@@ -2353,7 +2249,7 @@ un peso y no figura entre las metas de este programa</span>: se hace, no se anun
 <tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Lleva a otra cosa</b></td><td class="m">El &uacute;nico enlace con ese nombre va a ARSI, a declaraciones juradas de tributos de contribuyentes: seguridad e higiene, tasas ambientales.</td></tr>
 <tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="m">Vivir&iacute;an en el portal de datos abiertos, que no responde. No se puede afirmar que falten ni que est&eacute;n.</td></tr>
 <tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="m">Existe y est&aacute; completo hasta subsecretar&iacute;a, con nombre y apellido. Vive en un subdominio de prueba y no hay un solo enlace hacia &eacute;l desde el sitio municipal.</td></tr>
-<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos. Y <b>ninguno de los 573 decretos de esta gesti&oacute;n dice el domicilio del adjudicatario</b>, que se public&oacute; hasta 2017 y es el dato que permite saber si el dinero se queda en el partido.</td></tr>
+<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos. Y ninguno trae el domicilio del adjudicatario.</td></tr>
 <tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
 <tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="m">La vigente es la de 2026, sancionada en diciembre de 2025, con actualizaciones hasta agosto de 2026. Se busc&oacute; y estaba.</td></tr>
 </table>
@@ -2381,17 +2277,9 @@ sobre el vecino es el mismo, y se arregla con el mismo esfuerzo que cuesta arreg
 cosas desde cero. Es reponer el portal ca&iacute;do, enlazar lo que ya existe desde donde la gente lo
 busca, corregir un enlace que lleva al lugar equivocado, y completar lo que est&aacute; a medias.
 <span class="sg">Sigue costando cero y sigue siendo verificable a los cien d&iacute;as.</span></p>
-<p><b>Y el relevamiento se hizo fila por fila, con lo que estaba y lo que no.</b> La ordenanza fiscal
-apareci&oacute; publicada y al d&iacute;a, y la secci&oacute;n de transparencia fiscal responde con cinco
-de cinco enlaces. <span class="sg">Queda asentado porque el cuadro tiene que poder repetirse</span>, no
-para dar por saldado lo que falta.</p>
 </div>
 
-<div class="pull"><div class="plabel">Por qu&eacute; esto no es una meta</div>
-<p>Reponer un portal ca&iacute;do y corregir un enlace roto es mantenimiento, no pol&iacute;tica. Queda
-ac&aacute; como diagn&oacute;stico de c&oacute;mo se administra la informaci&oacute;n hoy, y no en el
-cap&iacute;tulo 6, donde van las cosas que un vecino tiene que poder notar.</p></div>
-<h3>Dos cosas m&aacute;s que aparecieron al buscar otra, y son del mismo tipo</h3>
+<h3>Una cosa m&aacute;s que apareci&oacute; al buscar otra</h3>
 <div class="cols">
 <p><b>El &uacute;ltimo presupuesto publicado es el de 2024.</b> No se encontraron el de 2025 ni el de
 2026. Y el que est&aacute; publicado trae s&oacute;lo el c&aacute;lculo de recursos por rubro y los
@@ -2400,14 +2288,7 @@ la que se puede discutir en qu&eacute; se va a gastar.</p>
 <p><b>La ejecuci&oacute;n s&iacute; se publica abierta</b>, por programa y por finalidad. Lo que falta
 es el presupuesto, que es el momento en que la decisi&oacute;n todav&iacute;a se puede cambiar.
 <b>Publicar la ejecuci&oacute;n y no el presupuesto es mostrar el gasto cuando ya se hizo.</b></p>
-<p><b>Y un dato que se publicaba dej&oacute; de publicarse.</b> Hasta 2025 la ejecuci&oacute;n por
-finalidad y funci&oacute;n discriminaba la funci&oacute;n Cultura. En el segundo trimestre de 2026
-<b>ya no aparece</b>: queda agregada dentro de Educaci&oacute;n y Cultura.</p>
-<p><span class="sg">Una partida que deja de publicarse por separado es una partida que deja de poder
-discutirse</span>, y es el mismo movimiento que el cap&iacute;tulo 2 le se&ntilde;ala al plan vigente
-cuando cambia un clasificador y vuelve incomparables las series. <b>Las dos se corrigen con el mismo
-esfuerzo y el mismo costo que las siete de arriba:</b> subir un archivo que ya existe y no borrar una
-columna.</p>
+
 </div>
 
 <h3>Cu&aacute;ndo se publica cada cosa, y por qu&eacute; casi todo es el mismo d&iacute;a</h3>
@@ -2425,14 +2306,6 @@ presupuestaria, y se dice por qu&eacute;: antes del cierre las cifras cambian y 
 que despu&eacute;s se corrige es peor que no publicarlo. <span class="sg">Igual se muestra el devengado
 del mes, marcado como provisorio</span>, para que nadie tenga que esperar tres meses para ver una
 tendencia.</p>
-<p><b>Y todo vive en la aplicaci&oacute;n, no en un PDF suelto.</b> Las siete medidas de este cuadro, la
-ejecuci&oacute;n por zona, el precio unitario de los insumos, el stock, el empleo conseguido por
-intermediaci&oacute;n, los datos de seguridad, el domicilio del adjudicatario, el tiempo de respuesta de
-los reclamos y las catorce metas del cap&iacute;tulo 6.</p>
-<p><b>La raz&oacute;n no es de comodidad.</b> Publicar en un PDF que nadie abre se puede simular: se sube
-tarde, se sube incompleto y nadie se entera. <span class="sg">Publicar en un sistema donde el dato entra
-cuando se genera y cualquiera lo consulta, no.</span> Es la diferencia entre cumplir y parecer que se
-cumple, y es verificable desde afuera.</p>
 </div>
 
 <p>La octava &mdash;publicar la ejecuci&oacute;n presupuestaria desagregada por zona&mdash;
@@ -2495,10 +2368,9 @@ a parte del cambio.</p>
 <p><b>Lo que s&iacute; cambia es el trabajo de algunas &aacute;reas.</b> Imputar el gasto con referencia
 territorial, responder por escrito a cada priorizaci&oacute;n zonal y sostener la publicaci&oacute;n
 continua por zona son tareas nuevas para las secretar&iacute;as de Hacienda y de Obras. No requieren personal adicional,
-pero requieren decisi&oacute;n y capacitaci&oacute;n, y suponer lo contrario ser&iacute;a el mismo error
-que este documento le se&ntilde;ala al plan vigente.</p>
+pero requieren decisi&oacute;n y capacitaci&oacute;n.</p>
 <p><b>Y hay un compromiso de transparencia que toca a la propia planta.</b> Enlazar el organigrama desde el sitio oficial y publicar la
-planta de personal y la escala salarial est&aacute;n entre lo que el cap&iacute;tulo 5 encontr&oacute;
+planta de personal y la escala salarial est&aacute;n entre lo que el 5.10 encontr&oacute;
 sin publicar.
 <span class="sg">Es informaci&oacute;n sobre los propios empleados y se publica igual</span>, porque un
 municipio que le pide al vecino que rinda una obra tiene que poder decir qui&eacute;n trabaja en
@@ -2589,7 +2461,7 @@ este documento no lo usa.</p>
 <p><b>1 &middot; Partida propia para g&eacute;nero y para discapacidad</b>, separadas del programa que
 hoy comparten con otros tres colectivos. No es dinero nuevo: es abrir la ejecuci&oacute;n para que se
 pueda ver y discutir cada a&ntilde;o, que es lo que este programa pide en todas las &aacute;reas.</p>
-<p><b>2 &middot; Sedes donde est&aacute; la gente.</b> El &iacute;ndice de necesidad del cap&iacute;tulo 1
+<p><b>2 &middot; Sedes donde est&aacute; la gente.</b> El &iacute;ndice de necesidad del cap&iacute;tulo 4
 dice d&oacute;nde, y la partida vecinal del cap&iacute;tulo 4 puede financiar el local: una sede barrial
 es obra, y una comisi&oacute;n la puede priorizar.</p>
 <p><b>3 &middot; Los dos mapas, cada uno donde corresponde.</b> Infancia en B&eacute;ccar y Boulogne;
@@ -2637,11 +2509,6 @@ afuera, y en cada caso hay una raz&oacute;n que se puede discutir.</p>
 <tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa</td></tr>
 <tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
 </table>
-<div class="pull"><div class="plabel">Por qu&eacute; este cuadro existe</div>
-<p>El cap&iacute;tulo 2 le reprocha al plan vigente lo que dej&oacute; afuera de su lista. No
-podr&iacute;amos hacer eso y despu&eacute;s callar lo que dejamos afuera de la nuestra.</p></div>
-
-
 
 <h2><span class="n">5.16</span>Lo que dice este cap&iacute;tulo, en siete l&iacute;neas</h2>
 <ol class="n">
@@ -2650,10 +2517,10 @@ propuestas de todo este programa requieren fondos nuevos.</li>
 <li>Salud es el 24,1% del presupuesto y <b>no hay turno en l&iacute;nea en un solo efector de salud
 humana</b>, mientras el turno para castrar una mascota se saca por internet con la misma plataforma
 municipal. No falta tecnolog&iacute;a: falta prioridad.</li>
-<li>La inteligencia artificial en im&aacute;genes ya funciona en los tres hospitales desde 2023, sin
+<li>La inteligencia artificial en im&aacute;genes se anunci&oacute; en los tres hospitales en 2023, sin
 proveedor conocido ni resultados publicados. Ac&aacute; no hay que proponerla: hay que auditarla.</li>
-<li>Seguridad creci&oacute; 34,8% real en un a&ntilde;o y ya opera con unas <b>2.646 c&aacute;maras con
-anal&iacute;tica y ninguna ordenanza que las regule</b>: lo que este programa propone no es comprar
+<li>Seguridad creci&oacute; 34,8% real en un a&ntilde;o, y el Municipio anuncia unas <b>2.646
+c&aacute;maras con anal&iacute;tica que ninguna ordenanza regula</b>: lo que este programa propone no es comprar
 nada, es la norma que falta, m&aacute;s patrullaje dirigido a los puntos calientes y una oficina de
 ciberdelito.</li>
 <li>El servicio de recolecci&oacute;n, la subfunci&oacute;n m&aacute;s cara del presupuesto, se
@@ -2810,16 +2677,6 @@ registro continuo que se pueda consultar</b>: no hay serie, no hay fecha de cort
 comparar un a&ntilde;o contra otro. <span class="sg">Lo que este programa fija como l&iacute;nea de base
 no es el n&uacute;mero: es que exista el registro.</span></p>
 </div>
-<div class="callout a">
-<div class="clabel">La meta del plan vigente que no se puede verificar</div>
-<p>El plan vigente fija, entre sus 77 metas, un <b>&laquo;incremento del 40% de veh&iacute;culos
-patrullando respecto de diciembre de 2023&raquo;</b>. Buscamos cu&aacute;ntos hab&iacute;a en diciembre de
-2023 en la web municipal, en el Bolet&iacute;n Oficial y en el presupuesto publicado. <b>No figura en
-ninguno.</b></p>
-<p>Sin ese n&uacute;mero, la meta no se puede verificar: cualquier flota actual cumple o incumple
-seg&uacute;n el punto de partida que uno elija. <span class="sg">Por eso las catorce metas de este
-cuadro llevan su l&iacute;nea de base escrita al lado.</span></p>
-</div>
 <div class="callout g">
 <div class="clabel">Sobre la l&iacute;nea de base</div>
 <p>Todas las l&iacute;neas de base de este cuadro est&aacute;n calculadas y documentadas en los
@@ -2880,10 +2737,6 @@ ve nada: el primer a&ntilde;o se construye la capacidad, y la rampa empieza baja
 <tr><td class="l">Publicar el mapa del delito por zona</td><td class="n">La estad&iacute;stica criminal es provincial. Publicamos lo que el Municipio produce y gestionamos el resto.</td></tr>
 <tr><td class="l">Una tercera reasignaci&oacute;n del tama&ntilde;o de las dos grandes</td><td class="n">El techo es el 41,4% del gasto flexible y est&aacute; declarado en el cap&iacute;tulo 3.</td></tr>
 </table>
-<p>El art&iacute;culo 211 de la Constituci&oacute;n provincial orden&oacute;, en 1994, habilitar la
-democracia semidirecta municipal. <b>Treinta y dos a&ntilde;os despu&eacute;s la Legislatura no lo
-hizo.</b> Ese reclamo es de este programa. No es una promesa de gesti&oacute;n, y no lo vamos a presentar
-como si lo fuera.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
@@ -2904,7 +2757,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <tr class="hi"><td class="l">La percepci&oacute;n no se recupera</td>
 <td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, este programa se financia por la opci&oacute;n 1 del 3.5 &mdash;reasignar partidas&mdash;, que es fiscalmente neutra y cuesta pol&iacute;ticamente. No hay una tercera v&iacute;a y no la vamos a inventar.</td></tr>
 <tr><td class="l">Los recursos propios crecen menos de 1% real</td>
-<td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.7). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
+<td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
 <td>El menos grave de los tres fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
@@ -2916,7 +2769,7 @@ Cada mitigaci&oacute;n sale de algo que este documento ya propone; donde no hay,
 <tr><td class="l">Queda afuera el que no tiene tel&eacute;fono o conexi&oacute;n</td>
 <td>Un mecanismo que vive en una aplicaci&oacute;n puede excluir exactamente a quien este programa quiere incluir. <b>Mitigaci&oacute;n:</b> la asamblea sigue siendo presencial y el voto se emite ah&iacute;; la aplicaci&oacute;n informa, no reemplaza. Los centros con equipamiento del 5.3 y la mesa de ayuda del equipo (4.11) existen por esta raz&oacute;n. <b>Y el relevamiento de conectividad del 5.4 es el que dice cu&aacute;n grande es el problema, porque hoy no se sabe.</b></td></tr>
 <tr><td class="l">El dato territorial resulta m&aacute;s caro de construir de lo previsto</td>
-<td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.5) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las siete filas del relevamiento de transparencia no dependen de &eacute;l.</td></tr>
+<td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.4) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las siete filas del relevamiento de transparencia no dependen de &eacute;l.</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> tres de los doce no tienen mitigaci&oacute;n propia y est&aacute; dicho en
 la fila. Un registro de riesgos donde todo tiene respuesta no es un registro de riesgos.</p>

@@ -51,20 +51,18 @@ def duo(a, b, cap):
 # INDICE
 # =====================================================================
 _IDX = [
- ("g", "Este programa, en una p&aacute;gina", None),
- ("i", "Ocho puntos y por d&oacute;nde empieza", "sintesis"),
  ("g", "Introducci&oacute;n", None),
  ("i", "La pregunta", "introduccion"),
  ("i", "Por qu&eacute; el dinero va a lo que se ve", "introduccion"),
- ("i", "Qu&eacute; promete, y qu&eacute; no", "introduccion"),
- ("i", "Las catorce metas, y de d&oacute;nde salen las fechas", "introduccion"),
+ ("g", "Qu&eacute; proponemos hacer", None),
+ ("i", "Ocho puntos, y los primeros cien d&iacute;as", "sintesis"),
  ("g", "1 &middot; Diagn&oacute;stico", None),
  ("i", "1.1 &nbsp;Dos partidos dentro del mismo partido", "cap1a"),
  ("i", "1.2 &nbsp;El municipio invierte m&aacute;s que casi todos. Y no llega.", "cap1a2"),
  ("i", "1.3 &nbsp;D&oacute;nde no va el dinero", "cap1a2"),
  ("i", "1.4 &nbsp;Por qu&eacute; pasa esto: est&aacute; escrito", "cap1b"),
  ("i", "1.5 &nbsp;San Isidro se financia solo. Eso cambia todo.", "cap1b"),
- ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap1b"),
+ ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap1b"),
  ("g", "2 &middot; La gesti&oacute;n, medida", None),
  ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;", "cap2"),
@@ -158,31 +156,17 @@ INDICE = dict(id="indice", runhead=RH, html=_indice())
 # =====================================================================
 INTRO = dict(id="introduccion", runhead=RH, html="""
 <h1>Introducci&oacute;n</h1>
-<div class="stand">El plan de gobierno vigente tiene tres prioridades, diecinueve objetivos y setenta y siete metas numeradas, y no menciona empleo, vivienda, salud ni educaci&oacute;n. Este programa nace de esa omisi&oacute;n, est&aacute; construido con documentos p&uacute;blicos y pone en su lugar catorce metas con fecha.</div>
+<p class="lead">En San Isidro hay <b>25.165 hogares que cocinan con garrafa</b> y 6.488 que no tienen
+cloaca. La mayor&iacute;a est&aacute; en Boulogne y en B&eacute;ccar: seis de cada diez sin gas, siete
+de cada diez sin cloaca.</p>
 
 <h2>La pregunta</h2>
-<div class="cols">
-<p>En el pr&oacute;logo de su plan de gobierno &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;,
-el intendente de San Isidro escribe que las prioridades que siguen no fueron fijadas por su equipo:
-que surgen de haber escuchado los principales problemas y necesidades de los vecinos.</p>
-<p>El documento define entonces tres prioridades &mdash;Seguridad Ciudadana, Espacio P&uacute;blico y
-Ambiente, Innovaci&oacute;n&mdash;, diecinueve objetivos y setenta y siete metas numeradas.</p>
-<p>Y hay <b>seis palabras que no est&aacute;n en ninguna parte de ese plan</b>. No es una
-impresi&oacute;n de lectura: el documento tiene trece p&aacute;ginas, est&aacute; publicado y se puede
-buscar dentro.</p>
-</div>
-
-<div class="pull"><p>Las palabras empleo, vivienda, salud, educaci&oacute;n, pobreza y desarrollo
-social no aparecen en ninguna parte del programa actual de gobierno.</p></div>
-
-<div class="cols">
-<p style="margin-top:0">De ah&iacute; sale la pregunta que este programa se hace, y es la &uacute;nica
-pregunta que lo origina: <b>&iquest;a qui&eacute;n se escuch&oacute;, y c&oacute;mo, para que en un
-distrito con 25.165 hogares sin gas de red el empleo y la vivienda no aparecieran nunca?</b></p>
-<p>No es una pregunta ret&oacute;rica. El presupuesto municipal la contesta con precisi&oacute;n:
-<span class="sg">el empleo recibe el 0,05%</span>. Y eso responde a una l&oacute;gica, que conviene
-nombrar antes de proponer nada.</p>
-</div>
+<p>En el pr&oacute;logo de su plan de gobierno, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;,
+el intendente escribe: &laquo;Estas prioridades de gesti&oacute;n no las fijamos nosotros, sino que
+responden a haber escuchado sus principales problemas y necesidades&raquo;. <b>&iquest;A qui&eacute;n se
+escuch&oacute;, y c&oacute;mo, para que el empleo y la vivienda no aparecieran nunca?</b></p>
+<div class="pull"><p>Las palabras empleo, vivienda, salud, pobreza, agua y cloaca no aparecen en ninguna
+parte del programa actual de gobierno.</p></div>
 
 <h2>Por qu&eacute; el dinero va a lo que se ve</h2>
 <p class="lead">Hay dos maneras de gobernar pensando en la pr&oacute;xima elecci&oacute;n, y ninguna de
@@ -205,53 +189,6 @@ gasta la obra de su barrio</b>. Ninguna de las tres da una foto el d&iacute;a qu
 un peso nuevo: mueve <span class="sg">qui&eacute;n decide</span> sobre la mitad de la obra p&uacute;blica
 que el Municipio ya hace.</p>
 </div>
-
-<h2>Qu&eacute; promete, y qu&eacute; no</h2>
-<p class="tight">Lo que un intendente de San Isidro puede hacer solo:</p>
-<ul class="b">
-<li><b>Que la mitad de la obra p&uacute;blica municipal la decidan los vecinos</b>, en cuatro a&ntilde;os,
-con la partida de cada zona fijada por ordenanza y repartida seg&uacute;n una f&oacute;rmula que da
-m&aacute;s a las zonas con peores indicadores.</li>
-<li><b>Que las asociaciones vecinales ejecuten esas obras</b>, como parte contratante, con el mecanismo
-que la Ley Org&aacute;nica de las Municipalidades habilita desde 1976 y que otro municipio bonaerense ya
-usa.</li>
-<li><b>Multiplicar por quince el gasto en empleo y vivienda</b>, financiado actualizando una base de
-valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota ni tomar deuda.</li>
-<li><b>Formar a la gente del partido en lo que mejor paga hoy</b> &mdash;inteligencia artificial y
-tecnolog&iacute;a&mdash;, con t&iacute;tulo de la universidad nacional del partido, y que su primer
-trabajo sea construir la inteligencia artificial del propio Municipio. Y <b>un centro de apoyo escolar
-en cada localidad</b>, donde hoy no hay ninguno.</li>
-<li><b>Una inteligencia artificial nativa del Municipio</b>, que reemplaza lo que ser&iacute;a una
-aplicaci&oacute;n. <span class="sg">Para cada vecino es como tener a disposici&oacute;n a alguien que
-sabe todo del Municipio.</span> Le saca el turno m&eacute;dico y le dice c&oacute;mo viene la guardia, le
-busca trabajo con su curr&iacute;culum, le muestra la obra de su cuadra y cu&aacute;nto se gast&oacute;
-en su zona, lo prepara para la asamblea y le abre las inspecciones. Publicar los datos del Municipio
-&mdash;la adjudicaci&oacute;n, el avance de obra, el precio de cada compra&mdash; es una de sus
-funciones.</li>
-</ul>
-<p class="tight" style="margin-top:11pt">Lo que no depende de un intendente, y por eso no se promete:</p>
-<ul class="b">
-<li><b>Que el voto vecinal sea jur&iacute;dicamente vinculante.</b> La Constituci&oacute;n provincial no
-lo permite, y una ordenanza que lo intent&oacute; fue vetada en Pinamar en diciembre de 2025. Lo que
-s&iacute; puede volverse obligatorio es la partida.</li>
-<li><b>Reformar la Ley Org&aacute;nica de las Municipalidades o habilitar la consulta popular
-municipal.</b> Es competencia de la Legislatura provincial, que tiene ese mandato constitucional
-incumplido desde 1994. Este programa lo reclama, y dice que es un reclamo.</li>
-</ul>
-<p>El l&iacute;mite fiscal tambi&eacute;n est&aacute; declarado: las dos propuestas grandes ocupan el
-41,4% del presupuesto que el Municipio puede reasignar libremente, y no queda lugar para una tercera del
-mismo tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
-
-<h2>Las catorce metas, y de d&oacute;nde salen las fechas</h2>
-<div class="cols">
-<p>El cap&iacute;tulo 6 es el plan de gobierno: catorce metas con su l&iacute;nea de base calculada hoy,
-el calendario mes por mes de los cuatro a&ntilde;os, y los diecis&eacute;is compromisos que se cumplen
-en los primeros cien d&iacute;as.</p>
-<p>Las fechas no son una intenci&oacute;n. Salen del modelo fiscal que acompa&ntilde;a a este programa
-&mdash;proyecta el flujo de caja del Municipio hasta 2037 y su a&ntilde;o cero reproduce la
-ejecuci&oacute;n 2025 con diferencia cero&mdash;, y cada meta lleva al lado la fuente p&uacute;blica con
-la que se comprueba.</p>
-</div>
 <p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
 candidato a intendente de San Isidro.</p>
 """ + fig("f_costanera", "La costanera de San Isidro. Ilustraci&oacute;n."))
@@ -263,7 +200,7 @@ candidato a intendente de San Isidro.</p>
 C1A = dict(id="cap1a", runhead=RH, html=fig("f_catedral",
     "El casco hist&oacute;rico. Ilustraci&oacute;n.") + """
 <h1><span class="n">1</span>Diagn&oacute;stico</h1>
-<div class="stand">San Isidro invierte en obra p&uacute;blica m&aacute;s que el 96% de los municipios bonaerenses y destina el 0,05% de su presupuesto a empleo. Casi la mitad de su poblaci&oacute;n vive donde est&aacute; el 60% de los hogares sin gas de red. No es un error de gesti&oacute;n: es lo que produce un plan donde esas palabras no aparecen.</div>
+<div class="stand">San Isidro invierte en obra p&uacute;blica m&aacute;s que el 96% de los municipios bonaerenses y destina el 0,05% de su presupuesto a empleo.</div>
 
 <h2><span class="n">1.1</span>Dos partidos dentro del mismo partido</h2>
 <div class="cols">
@@ -312,22 +249,20 @@ alguien en la casa haya terminado la universidad.</p>
 <h3>El dato que resume todo</h3>
 <p class="tight">En Boulogne Sur Mer y B&eacute;ccar viven <b>138.551 personas en 47.193 hogares: el
 46,8% del partido.</b></p>
-<div class="pull"><p>Casi la mitad de San Isidro vive donde est&aacute; el 60% de los hogares sin gas de
-red y el 71% de los que no tienen cloaca.</p></div>
+<div class="pull"><p>Casi la mitad de San Isidro vive donde est&aacute; el 60% de los 25.165 hogares sin
+gas de red y el 71% de los 6.488 que no tienen cloaca.</p></div>
 """ + duo("f_boulogne", "f_martinez",
           "Boulogne Sur Mer y Mart&iacute;nez. La misma distancia al r&iacute;o, la misma tasa municipal. Ilustraci&oacute;n.") + """
 
 <h2><span class="n">1.2</span>El municipio invierte m&aacute;s que casi todos. Y no llega.</h2>
 <div class="cols">
-<p><b>Lo que esta secci&oacute;n prueba es una sola cosa:</b> no falta dinero.
-<span class="sg">Falta decidir distinto ad&oacute;nde va.</span></p>
 <p><b>El dato.</b> Sobre 106 municipios bonaerenses con datos de ejecuci&oacute;n 2025, San Isidro
 est&aacute; <b>cuarto en inversi&oacute;n en obra p&uacute;blica</b>: destina el <b>17,8%</b> de su gasto,
 contra una mediana provincial de <b>5,4%</b>. Invierte m&aacute;s del triple que el municipio
 bonaerense t&iacute;pico.</p>
 <p><b>Y ah&iacute; est&aacute; la pregunta.</b> Si invierte tanto y todav&iacute;a hay 6.488 hogares sin
 cloaca, no es porque no haya con qu&eacute;: es porque <span class="sg">el dinero va a lo que se
-ve</span>. Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o; agua y cloaca, 3.320.</p>
+ve</span>.</p>
 </div>
 """ + exhead("c", "San Isidro contra sus vecinos y contra la mediana de la Provincia",
              "Ejecuci&oacute;n 2025, gasto devengado.") + """
@@ -345,7 +280,6 @@ ve</span>. Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o; agua y
 <p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA. San Isidro validado contra la
 ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
 
-<p><b>Y el 32,1% de los hogares de Boulogne y B&eacute;ccar sigue sin gas de red.</b></p>
 <div class="cols">
 <p><b>Y esa proporci&oacute;n alta se aplica sobre un total que viene cayendo.</b> Medido desde su
 m&aacute;ximo de 2017, <b>el gasto real del Municipio cay&oacute; 24,4%</b>; medido desde 2010
@@ -359,41 +293,24 @@ trabajar.</p>
 </div>
 
 <h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
-<p class="tight">Decir cu&aacute;nto se invierte no alcanza. El clasificador por finalidad y funci&oacute;n
-abre el destino, y ah&iacute; aparece lo que el total esconde.</p>
 """ + exhead("c", "Alumbrado p&uacute;blico recibe el triple que el agua y las cloacas",
              "Gasto devengado 2025 dentro de la finalidad Servicios Sociales. Urbanismo abierto en sus cinco subfunciones.") + """
 <table>
-<colgroup><col style="width:230pt"><col><col></colgroup>
-<tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado 2025</th><th class="r">Veces lo que recibe agua y cloaca</th></tr>
-<tr><td class="l">Recolecci&oacute;n de residuos, barrido y limpieza</td><td class="n">49.270 M</td><td class="n">14,8&times;</td></tr>
-<tr class="hi"><td class="l">Alumbrado p&uacute;blico</td><td class="n"><b>10.313 M</b></td><td class="n"><b>3,1&times;</b></td></tr>
-<tr><td class="l">Otros servicios urbanos</td><td class="n">5.829 M</td><td class="n">1,8&times;</td></tr>
-<tr><td class="l">Planeamiento y desarrollo urbano</td><td class="n">4.054 M</td><td class="n">1,2&times;</td></tr>
-<tr><td class="l">Deporte y recreaci&oacute;n</td><td class="n">3.813 M</td><td class="n">1,1&times;</td></tr>
-<tr><td class="l">Cementerios</td><td class="n">845 M</td><td class="n">0,3&times;</td></tr>
-<tr class="hi"><td class="l">Agua potable y alcantarillado</td><td class="n"><b>3.320 M</b></td><td class="n"><b>&mdash;</b></td></tr>
+<colgroup><col style="width:300pt"><col></colgroup>
+<tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado 2025</th></tr>
+<tr><td class="l">Recolecci&oacute;n de residuos, barrido y limpieza</td><td class="n">49.270 M</td></tr>
+<tr class="hi"><td class="l">Alumbrado p&uacute;blico</td><td class="n"><b>10.313 M</b></td></tr>
+<tr><td class="l">Otros servicios urbanos</td><td class="n">5.829 M</td></tr>
+<tr><td class="l">Planeamiento y desarrollo urbano</td><td class="n">4.054 M</td></tr>
+<tr><td class="l">Cementerios</td><td class="n">845 M</td></tr>
+<tr class="hi"><td class="l">Agua potable y alcantarillado</td><td class="n"><b>3.320 M</b></td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Finalidad
-y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y 3.8.</p>
+y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y funci&oacute;n 3.8.</p>
 <p class="cap"><b>Nota:</b> son gastos por destino, no por objeto: dentro de cada funci&oacute;n hay
 sueldos, contratos de servicio y obra. Los 49.270 millones de residuos son sobre todo el contrato de
-recolecci&oacute;n, que es un servicio diario y no una inversi&oacute;n; por eso la comparaci&oacute;n
-que sostiene este cuadro es la del alumbrado, que s&iacute; es infraestructura urbana como el agua y la
-cloaca.</p>
-<div class="cols">
-<p><b>Tres a uno, entre dos cosas comparables.</b> Iluminar la calle y llevar agua y sacar la cloaca de
-adentro de la casa son las dos infraestructura urbana, las dos se deciden cada a&ntilde;o, y las dos salen
-del mismo presupuesto.</p>
-<p><b>Y el reparto sigue al plan.</b> &laquo;Espacio P&uacute;blico y Ambiente&raquo; es la Prioridad II
-declarada; el agua y la cloaca no figuran en ninguna de las tres. Lo que hay que cambiar es
-<span class="sg">qui&eacute;n decide el destino</span>, y por eso el cap&iacute;tulo 4 propone lo que
-propone.</p>
-<p><b>Lo que este cuadro no dice.</b> No dice que el alumbrado o la recolecci&oacute;n sobren: la basura
-hay que juntarla todos los d&iacute;as y la calle oscura es un problema real.
-<span class="sg">Dice que entre dos obras posibles, se eligi&oacute; sistem&aacute;ticamente la que se
-ve.</span></p>
-</div>
+recolecci&oacute;n, que es un servicio diario y no una inversi&oacute;n. El agrupamiento es el del
+clasificador provincial (RAFAM), no una elecci&oacute;n de este programa.</p>
 <h3>La mitad de la obra se adjudicaba a empresas de afuera del partido</h3>
 <div class="cols">
 <p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
@@ -404,20 +321,12 @@ a empresas con domicilio en San Isidro y el 50,4% a empresas de afuera.</b> Y la
 ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: 53,1% en 2013, 46,5% en 2015, <b>39,4% en 2017</b>.</p>
 <p><b>Es proporci&oacute;n de actos, no de dinero.</b> Los montos del Bolet&iacute;n est&aacute;n en
 pesos corrientes de cada a&ntilde;o y no se pueden sumar a lo largo de quince a&ntilde;os, as&iacute; que
-la proporci&oacute;n por monto no se calcula ac&aacute;.
-<span class="sg">Y no sabemos cu&aacute;l es hoy: ese desconocimiento es el hallazgo.</span></p>
+la proporci&oacute;n por monto no se calcula ac&aacute;.</p>
 <p><b>Desde 2018 no se puede saber, y el corte es anterior a esta gesti&oacute;n.</b> Entre 2011 y 2017
 el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
 bajo la gesti&oacute;n anterior, y la actual no la retom&oacute;.</b> De los 573 decretos de
 adjudicaci&oacute;n publicados desde diciembre de 2023, <span class="sg">ninguno dice d&oacute;nde
 est&aacute; el que cobra</span>.</p>
-<p><b>Por qu&eacute; importa para este programa.</b> La obra p&uacute;blica es el gasto propio
-m&aacute;s grande que el Municipio decide, y deber&iacute;a generar empleo en el partido.
-<b>No se encontr&oacute; ninguna cl&aacute;usula que ate ese gasto al empleo local</b>: ni en los pliegos
-publicados, ni en el C&oacute;digo de Habilitaciones, ni en el plan vigente. La mitad de los actos iba
-afuera en la &uacute;ltima medici&oacute;n disponible, y desde 2018 ni siquiera hay medici&oacute;n.
-<span class="sg">Es el argumento del cap&iacute;tulo 4 en una cifra</span>: cuando ejecuta una
-asociaci&oacute;n vecinal, el trabajo y el dinero se quedan donde est&aacute; la obra.</p>
 </div>
 
 <h3>En cu&aacute;ntas manos queda la obra</h3>
@@ -432,9 +341,6 @@ a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&m
 millones en un solo acto.</p>
 <p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
 comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
-<p><b>Y ah&iacute; est&aacute; el contraste que ordena este cap&iacute;tulo.</b> Sabemos
-exactamente cu&aacute;nto cobr&oacute; cada adjudicatario, con su CUIT. <b>No sabemos d&oacute;nde tiene su domicilio
-ninguno de los 573 decretos.</b></p>
 <p><b>Dos salvedades, porque la cifra es fuerte.</b> Los montos son pesos corrientes de cada a&ntilde;o y
 no se comparan entre s&iacute;. Y la concentraci&oacute;n usa s&oacute;lo los 407 decretos donde el
 articulado nombra a cada empresa con su importe: sumar los 144 que informan un total sin desagregar la
@@ -443,7 +349,7 @@ posible</span>.</p>
 </div>
 
 
-""" + ex("g", "San Isidro invierte en obra cuatro veces m&aacute;s que el municipio bonaerense t&iacute;pico",
+""" + ex("g", "San Isidro invierte en obra m&aacute;s del triple que el municipio bonaerense t&iacute;pico",
      "Cada marca es un municipio, ordenados por valor. Ejecuci&oacute;n 2025, gasto devengado.",
      "ex04.png",
      "RAFAM 2025, v&iacute;a La Verdadera PBA (la-verdadera-pba.pages.dev), capturado el 3 de septiembre de 2026.",
@@ -464,8 +370,7 @@ programa.</p>
 <div class="cols">
 <p>Quinientos setenta y dos pesos por habitante por a&ntilde;o. Eso es toda la pol&iacute;tica de empleo
 del Municipio de San Isidro.</p>
-<p>Mil ciento veintisiete pesos por habitante por a&ntilde;o en infraestructura habitacional, en un
-distrito con 25.165 hogares sin gas de red y 6.488 sin cloacas.</p>
+<p>Mil ciento veintisiete pesos por habitante por a&ntilde;o en infraestructura habitacional.</p>
 </div>
 """)
 
@@ -475,21 +380,12 @@ distrito con 25.165 hogares sin gas de red y 6.488 sin cloacas.</p>
 # =====================================================================
 C1B = dict(id="cap1b", runhead=RH, html="""
 <h2><span class="n">1.4</span>Por qu&eacute; pasa esto: est&aacute; escrito</h2>
-<p class="lead">Las cifras de las tres secciones anteriores no son un accidente administrativo. Son la
-consecuencia aritm&eacute;tica de un plan de gobierno publicado y firmado, y eso se puede demostrar.</p>
 <div class="cols">
-<p><b>El gasto sigue al plan, y se verifica en las dos direcciones.</b> Las tres prioridades declaradas
-&mdash;seguridad, espacio p&uacute;blico y ambiente, innovaci&oacute;n&mdash; son exactamente las que
-crecen. Seguridad interna subi&oacute; 34,8% real en un a&ntilde;o y fue la funci&oacute;n que m&aacute;s
-creci&oacute; de todas. Lo que no figura en el plan es lo que no crece, no se ejecuta entero, o
-directamente no aparece en el presupuesto.</p>
-<p><b>Por eso el 0,05% no es un descuido.</b> Un descuido se corrige cuando alguien lo nota. Esto lleva
-dos a&ntilde;os, est&aacute; escrito, firmado y publicado, y el presupuesto reparte todos los
-a&ntilde;os seg&uacute;n esa lista. <span class="sg">No hay nada que corregir: hay algo que decidir de otra
-manera.</span></p>
-<p><b>Lo que sigue audita ese plan contra sus propias metas.</b> Lo que este programa discute no es la
-aritm&eacute;tica del presupuesto, sino <span class="sg">qu&eacute; qued&oacute; afuera de la
-lista</span> y qu&eacute; se sigue de esa omisi&oacute;n.</p>
+<p>El plan de gobierno vigente, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, fija tres
+prioridades: Seguridad Ciudadana, Espacio P&uacute;blico y Ambiente, e Innovaci&oacute;n.</p>
+<p>Seguridad interna, la primera, subi&oacute; <b>34,8% real en un a&ntilde;o</b>: ninguna otra
+funci&oacute;n creci&oacute; tanto, salvo los servicios de la deuda. Promoci&oacute;n y asistencia social,
+que no figura entre las tres, <b>cay&oacute; 32,5%</b>.</p>
 </div>
 
 <h2><span class="n">1.5</span>San Isidro se financia solo. Eso cambia todo.</h2>
@@ -509,26 +405,21 @@ puede financiarse sin pedirle permiso a nadie.</p>
 <div class="pull"><p>La Provincia financia aproximadamente el 25% de San Isidro. El municipio recauda el
 75% restante.</p></div>
 <p>Hay una salvedad, y es estructural: la participaci&oacute;n de San Isidro en las transferencias
-provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%. No es castigo pol&iacute;tico
-&mdash;toda la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es
-una f&oacute;rmula&mdash;, pero se compone a&ntilde;o a a&ntilde;o y cualquier proyecci&oacute;n honesta a
-diez a&ntilde;os tiene que cargarlo. <b>El cap&iacute;tulo 3 lo descompone fondo por fondo y lo incorpora
-al modelo.</b></p>
+provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%, y se compone a&ntilde;o a
+a&ntilde;o. <b>El cap&iacute;tulo 3 lo descompone fondo por fondo y lo incorpora al modelo.</b></p>
 """ + ex("g", "Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta",
      "Participaci&oacute;n de cada municipio en el total transferido por la Provincia a los 135 municipios. A&ntilde;os completos.",
      "ex06.png",
      "Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires, transferencias a municipios 2021&ndash;2025.",
      "2026 va con seis meses y queda fuera del gr&aacute;fico. San Isidro cae a 1,6811% y Tigre sube a 1,8370%.") + """
 
-<h2><span class="n">1.6</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">1.6</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
 <ol class="n">
 <li>San Isidro es un municipio rico que invierte m&aacute;s en obra p&uacute;blica que el 96% de los
 municipios bonaerenses.</li>
 <li>Casi la mitad de su poblaci&oacute;n &mdash;el 46,8%, en Boulogne Sur Mer y B&eacute;ccar&mdash; vive
 donde est&aacute; el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.</li>
 <li>El municipio destina el 0,05% de su presupuesto a empleo y el 0,10% a vivienda.</li>
-<li>No es un error de gesti&oacute;n: es exactamente lo que produce un plan de gobierno donde esas
-palabras no aparecen.</li>
 <li>San Isidro tiene los fondos y la autonom&iacute;a para cambiarlo. Lo que falta es que decida quien vive
 donde est&aacute; el problema.</li>
 </ol>
@@ -543,9 +434,7 @@ Hogares y Viviendas 2022 (INDEC), a nivel de radio censal. Los importes est&aacu
 constantes de diciembre de 2025 salvo indicaci&oacute;n expresa.</p>
 <p>Las seis zonas de 1.1 son los l&iacute;mites de las localidades del partido seg&uacute;n OpenStreetMap,
 proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su
-punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles. Las
-poblaciones por zona son muy desiguales &mdash;de 11.035 a 74.832 habitantes&mdash; porque son las
-localidades reales y no zonas construidas para quedar parejas.</p>
+punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles.</p>
 <p>Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de
 ejecuci&oacute;n RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales
 de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de ejecuci&oacute;n del propio
