@@ -1594,7 +1594,7 @@ Rama: claude/cool-hopper-3hdk58. El trabajo de claude/fervent-bardeen-r5vfbl se 
    libre el 49,7%". Los otros cuatro "8,9%" no se tocaron.
 2. 3.4: salió "Por qué estos tres y no otros. Porque los tres crecieron por encima del resto".
 3. Cámaras, un solo costo: 1.200 M del cuadro 18. Salieron "No cuesta un peso" y "Tampoco cuesta un
-   peso" (calendario del 6.4), y la analítica de seguridad de los 1.855,4 M (cuadro 40 y 4.11). El 5.10
+   peso" (calendario del 6.4), y la analítica de seguridad de los 1.855,4 M (cuadro 40 y 4.11). El 5.15
    y el calendario dicen "no hace falta comprar cámaras nuevas".
 4. 6.6: "si no se recupera, el programa entra igual, porque se paga actualizando la base de valuación
    (3.5); lo que se pierde es margen". Igual que el recuadro de la cobranza del 3.5.
