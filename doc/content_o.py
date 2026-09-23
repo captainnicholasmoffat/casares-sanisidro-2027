@@ -11,9 +11,7 @@ discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dic
 <div class="clabel">Borrador para revisi&oacute;n de asesor&iacute;a letrada</div>
 <p>Esto es un borrador de trabajo, no un proyecto presentado. Antes de ingresar al Concejo necesita
 revisi&oacute;n de un abogado municipalista: la redacci&oacute;n definitiva, los considerandos y la
-concordancia con el Digesto de San Isidro no est&aacute;n resueltos ac&aacute;.
-<b>Se publica igual porque una ordenanza que no tiene texto no se puede discutir: sin el texto, el
-Concejo no tiene qu&eacute; votar y el vecino no tiene qu&eacute; leer.</b></p>
+concordancia con el Digesto de San Isidro no est&aacute;n resueltos ac&aacute;.</p>
 </div>
 
 <h2>I &middot; Ordenanza de la Partida de Obra Vecinal</h2>
@@ -241,8 +239,7 @@ conviene que se voten por separado.</p>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
 <p class="tight">De las catorce metas del cap&iacute;tulo 6, <b>siete tienen su art&iacute;culo
-ac&aacute;</b>. Las otras siete no lo necesitan, y conviene decir cu&aacute;les son para que no se las
-busque.</p>
+ac&aacute;</b>. Las otras siete no lo necesitan.</p>
 <div class="note">
 <p><b>Cuatro se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
 conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; abrir un
@@ -250,8 +247,7 @@ centro de apoyo escolar en cada localidad; y extender el centro de formaci&oacut
 zonas formando 928 personas por a&ntilde;o. <b>Una ordenanza que fijara esos montos de una vez
 atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone.</p>
 <p><b>Una depende de administrar, no de normar:</b> llevar la percepci&oacute;n de recursos corrientes
-al 92%. No hace falta una ordenanza para cobrar lo que ya est&aacute; devengado, y decir lo contrario
-ser&iacute;a esconder una decisi&oacute;n de gesti&oacute;n detr&aacute;s de un proyecto.</p>
+al 92%. No hace falta una ordenanza para cobrar lo que ya est&aacute; devengado.</p>
 <p><b>La sexta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
 <p><b>Y la s&eacute;ptima se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en

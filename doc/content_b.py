@@ -9,16 +9,6 @@ C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
 <div class="stand">Este cap&iacute;tulo audita el plan de gobierno vigente contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
-<div class="note">
-<p><b>De d&oacute;nde sale todo lo que sigue.</b> De documentos que public&oacute; la propia
-Municipalidad. Ni trascendidos, ni versiones, ni notas period&iacute;sticas, ni informes de terceros
-salvo para la comparaci&oacute;n con los otros 105 municipios, cuyo origen y l&iacute;mite se declaran en
-el cap&iacute;tulo 1.</p>
-<p><b>Y lo que eso deja afuera.</b> Todo lo que el Municipio no publica, aunque lo sospechemos. Este
-cap&iacute;tulo no lo trata, y por eso no hay ac&aacute; ninguna acusaci&oacute;n sobre lo que no
-consta.</p>
-</div>
-
 <h2><span class="n">2.1</span>Ejecutar el presupuesto no es prestar el servicio</h2>
 <p class="lead">Que una partida se devengue al 99% prueba que el dinero se gast&oacute;. No prueba que la
 obra se hizo, ni que se hizo a tiempo, ni que lleg&oacute; a todos por igual. Es la misma distinci&oacute;n
@@ -26,8 +16,7 @@ entre devengado y percibido del cap&iacute;tulo 3, aplicada a la gesti&oacute;n.
 <div class="cols">
 <p><b>El propio Municipio pone la cifra.</b> Al lanzar su Plan Integral de Arbolado en 2024
 inform&oacute; que ese a&ntilde;o se registraban <b>setenta reclamos por d&iacute;a</b> s&oacute;lo por
-arbolado. No es una cifra de la oposici&oacute;n: es la que el Ejecutivo public&oacute; para justificar
-el plan.</p>
+arbolado.</p>
 <p><b>Y el intendente lo dijo con todas las letras.</b> En ese mismo anuncio calific&oacute; el cuidado
 del arbolado como <b>&laquo;una deuda hist&oacute;rica del municipio con sus vecinos&raquo;</b> y
 agreg&oacute;: <b>&laquo;algo que no se hizo nunca&raquo;</b>. Es el reconocimiento m&aacute;s claro
@@ -69,10 +58,7 @@ programa se compromete a hacer</b>, y es la prueba m&aacute;s simple de si el se
 
 <h2><span class="n">2.2</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
 <div class="cols">
-<p>&Eacute;sta es la cr&iacute;tica que sobrevive, y es la m&aacute;s concreta de todas porque no depende
-de ninguna interpretaci&oacute;n.</p>
-<p>El Municipio publica cu&aacute;nto factura y cu&aacute;nto cobra. Estos son sus propios estados de
-ejecuci&oacute;n acumulados anuales.</p>
+<p>El Municipio publica cu&aacute;nto factura y cu&aacute;nto cobra.</p>
 </div>
 """ + exhead("c", "En un a&ntilde;o, la percepci&oacute;n cay&oacute; 4,19 puntos",
              "Recursos corrientes, rubro 1 de la ejecuci&oacute;n presupuestaria.") + """
@@ -100,14 +86,6 @@ habr&iacute;a recaudado <b>14.115 millones de pesos m&aacute;s</b>. Para dimensi
 <b>83 veces</b> lo que San Isidro gast&oacute; ese a&ntilde;o en su programa de Apoyo y Promoci&oacute;n
 al Empleo, y <b>42 veces</b> lo que gast&oacute; en Infraestructura Habitacional.</p>
 </div>
-<div class="callout a">
-<div class="clabel">El l&iacute;mite de este dato</div>
-<p>Un a&ntilde;o no es una tendencia. Los datos trimestrales de 2026 no son comparables con los
-acumulados anuales, porque el devengamiento y la percepci&oacute;n caen en trimestres distintos.
-<b>El dato anual de 2026 no existir&aacute; hasta principios de 2027.</b> Lo que se puede afirmar hoy es
-preciso: en 2025 la percepci&oacute;n cay&oacute; a 89,3% desde 93,5% el a&ntilde;o anterior. Si 2026
-vuelve a valores de 2024, fue un a&ntilde;o at&iacute;pico. Si no, es un problema de gesti&oacute;n.</p>
-</div>
 
 <h2><span class="n">2.3</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
 <p>El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente, se
@@ -131,18 +109,12 @@ marzo de 2025 comunic&oacute; <b>120 m&oacute;viles y 46 motos</b>. En octubre d
 <b>154 m&oacute;viles, 46 motos y 331 agentes</b>. Su p&aacute;gina de seguridad, consultada en
 septiembre de 2026, dice <b>130 patrullas, 39 motos y 300 oficiales</b>.</p>
 <p>Once meses despu&eacute;s del anuncio hay veinticuatro m&oacute;viles menos, siete motos menos y
-treinta y un agentes menos, sin una l&iacute;nea que lo explique. <span class="sg">No afirmamos que la
-flota se haya reducido: afirmamos que las tres cifras publicadas por el mismo Municipio no cierran entre
-ellas</span>, y que no hay ning&uacute;n registro auditable que permita saber cu&aacute;l es la
-correcta.</p>
+treinta y un agentes menos, sin una l&iacute;nea que lo explique. <span class="sg">Las tres cifras,
+publicadas por el mismo Municipio, no cierran entre ellas</span>, y no hay ning&uacute;n registro
+auditable que permita saber cu&aacute;l es la correcta.</p>
 </div>
 <div class="cols">
-<p>Conviene ser exacto sobre qu&eacute; significa esto. El Municipio <span class="sg">publica en tiempo y
-forma</span> sus estados de ejecuci&oacute;n presupuestaria trimestrales, su situaci&oacute;n
-econ&oacute;mico-financiera y su stock de deuda: este programa est&aacute; construido con esos documentos,
-y no existir&iacute;a sin ellos.</p>
-<p>Lo que falta es otra cosa, y es m&aacute;s sutil:
-<span class="sg">casi todo est&aacute; publicado en alg&uacute;n lado, y casi nada est&aacute; donde un
+<p><span class="sg">Casi todo est&aacute; publicado en alg&uacute;n lado, y casi nada est&aacute; donde un
 vecino lo buscar&iacute;a.</span> El organigrama vive en un subdominio de prueba sin un solo enlace que
 lleve a &eacute;l. Las adjudicaciones est&aacute;n en el Bolet&iacute;n y no en la ficha de la
 licitaci&oacute;n. Los estados contables de varios ejercicios no est&aacute;n, aunque el Tribunal de
@@ -152,17 +124,13 @@ dem&aacute;s queda donde nadie lo encuentra.</p>
 
 <h2><span class="n">2.4</span>El hallazgo central: el plan no menciona a la gente</h2>
 <div class="cols">
-<p>&Eacute;sta no es una cr&iacute;tica de gesti&oacute;n. Es una cr&iacute;tica de prioridades, y
-est&aacute; sostenida por el propio documento del intendente.</p>
 <p>&laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; define tres prioridades &mdash;Seguridad
 Ciudadana, Espacio P&uacute;blico y Ambiente, Innovaci&oacute;n&mdash;, <span class="sg">diecinueve
 objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>, y en ninguno de los
 tres niveles aparece una persona.</p>
-<p>Auditar el cumplimiento de esas 77 metas ser&iacute;a un ejercicio menor. La pregunta relevante no es
-si las cumpli&oacute;: <span class="sg">es qu&eacute; qued&oacute; afuera de la lista.</span></p>
 </div>
 """ + exhead("c", "Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea",
-             "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa. Las celdas vac&iacute;as no las pusimos nosotros.") + """
+             "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa.") + """
 <table>
 <colgroup><col style="width:104pt"><col><col></colgroup>
 <tr class="hd"><th>&Aacute;rea</th><th>Plan vigente 2024&ndash;2025</th><th>Este programa</th></tr>
@@ -185,8 +153,8 @@ numeradas, contadas una por una.</p>
 primeras filas cubren las tres prioridades completas del plan vigente. Las celdas vac&iacute;as de la
 columna del medio son &aacute;reas donde ese plan no fija ninguna meta.</p>
 
-<p><b>Contamos las palabras del plan vigente, y el resultado no admite matiz.</b> Sobre sus 3.137
-palabras, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni una vez</span>. Tampoco vivienda,
+<p>En las 3.137 palabras del plan vigente, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni
+una vez</span>. Tampoco vivienda,
 ni empleo, ni pobreza, ni cloaca, ni agua.</p>
 <p><b>&laquo;Hospital&raquo; y &laquo;escolar&raquo; aparecen una vez cada una, y en la misma meta</b>: la
 que se propone adecuar la demarcaci&oacute;n horizontal y la se&ntilde;alizaci&oacute;n vertical en
@@ -241,19 +209,8 @@ C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
 <h1><span class="n">3</span>Los fondos</h1>
 <div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028, y en 2027 si se cobra mejor. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</div>
 
-<div class="cols">
-<p>Las cuentas de este cap&iacute;tulo salen de un modelo de flujo de caja municipal a cuatro y a diez
-a&ntilde;os, construido sobre diecis&eacute;is a&ntilde;os de ejecuci&oacute;n presupuestaria real.</p>
-<p><span class="sg">El modelo se puede auditar.</span> Su a&ntilde;o cero reproduce la ejecuci&oacute;n
-2025 del Municipio de San Isidro exactamente: un resultado financiero de &minus;6.051 millones de pesos.
-No es una aproximaci&oacute;n. Es la cifra que figura en el estado oficial.</p>
-<p>Y el d&eacute;ficit es estructural, no de un a&ntilde;o: en
-2010 el Municipio cerr&oacute; con un d&eacute;ficit equivalente al 2,9% de sus ingresos, contra el 2,0%
-de 2025.</p>
-<p>Todo est&aacute; en pesos constantes de diciembre de 2025. <span class="sg">No hay supuesto de
-inflaci&oacute;n</span>: proyectar precios a diez a&ntilde;os en la Argentina es indefendible, y no hace
-falta para responder ninguna de las preguntas que este cap&iacute;tulo contesta.</p>
-</div>
+<p>El d&eacute;ficit es estructural, no de un a&ntilde;o: en 2010 el Municipio cerr&oacute; con un
+d&eacute;ficit equivalente al 2,9% de sus ingresos, contra el 2,0% de 2025.</p>
 
 <h2><span class="n">3.1</span>La trampa contable que casi nos hace decir lo contrario</h2>
 <p>El Estado de Ahorro-Inversi&oacute;n-Financiamiento &mdash;el formato oficial de la contabilidad
@@ -277,7 +234,6 @@ diagn&oacute;sticos opuestos con los mismos datos.</p>
      "los 51.781 millones son el ahorro corriente (301.155 percibidos menos 251.404 de gasto corriente = 49.751) m&aacute;s 2.030 de recursos de capital. Los ingresos van por lo percibido y los gastos por lo devengado: es la convenci&oacute;n de la cuenta Ahorro-Inversi&oacute;n, no una elecci&oacute;n nuestra.") + """
 
 <h2><span class="n">3.2</span>Los cuatro n&uacute;meros que gobiernan el futuro fiscal de San Isidro</h2>
-<p class="tight">Ninguno es un supuesto. Los cuatro salen de la serie hist&oacute;rica.</p>
 """ + exhead("c", "Los cuatro par&aacute;metros, y de d&oacute;nde sale cada uno") + """
 <table>
 <colgroup><col style="width:180pt"><col style="width:150pt"><col></colgroup>
@@ -287,21 +243,16 @@ diagn&oacute;sticos opuestos con los mismos datos.</p>
 <tr><td class="l">Rigidez del gasto</td><td class="n"><b>39,0% n&uacute;cleo &middot; 73,1% con contratos</b></td><td class="n">ejecuci&oacute;n por objeto 2025</td></tr>
 <tr><td class="l">Percepci&oacute;n de recursos</td><td class="n"><b>89,32%</b></td><td class="n">35.994 M facturados y no cobrados en 2025</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> los cuatro salen de la serie publicada, no son supuestos: la nota
-metodol&oacute;gica del cierre del cap&iacute;tulo dice con qu&eacute; datos se calcul&oacute; cada
-uno.</p>
 
 <div class="cols">
-<p><b>Una aclaraci&oacute;n sobre la coparticipaci&oacute;n, porque es la excusa m&aacute;s c&oacute;moda.</b>
-San Isidro pierde participaci&oacute;n en las transferencias provinciales &mdash;de 1,938% en 2021 a
-1,773% en 2025&mdash;, y <span class="sg">no es castigo pol&iacute;tico</span>: lo verificamos fondo por
-fondo y los discrecionales no se movieron un solo punto b&aacute;sico en cinco a&ntilde;os
+<p>San Isidro pierde participaci&oacute;n en las transferencias provinciales &mdash;de 1,938% en 2021 a
+1,773% en 2025&mdash;, y <span class="sg">no es castigo pol&iacute;tico</span>: los fondos discrecionales no se movieron un solo punto b&aacute;sico en cinco a&ntilde;os
 &mdash;programas sociales e inclusi&oacute;n social se mantuvieron en <b>1,599% todos los a&ntilde;os,
 hasta el cuarto decimal</b>&mdash;. La
 ca&iacute;da entera est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559, que es una
 f&oacute;rmula. Nadie decide y nadie castiga.</p>
 <p><b>Es un viento en contra estructural, y el modelo lo carga.</b> Pero no es ah&iacute; donde se define el
-resultado, y eso conviene decirlo antes de que alguien proponga ir a reclamar a La Plata.</p>
+resultado.</p>
 </div>
 <div class="callout g">
 <div class="clabel">La sorpresa: lo que manda no es la Provincia</div>
@@ -314,22 +265,11 @@ en reclamar en La Plata.</p>
 </div>
 
 <h2><span class="n">3.3</span>C&oacute;mo quedan las cuentas si nadie cambia nada</h2>
-<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado. Es
-deliberadamente conservadora: congela el gasto real en el nivel de 2025 durante doce a&ntilde;os. El
-modelo detallado que acompa&ntilde;a a este programa, con el gasto reconstruido por objeto, arroja cifras
-m&aacute;s altas. <b>Se publica la m&aacute;s baja de las dos.</b>
+<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
 <span class="tag m">Modelado</span></p>
 <div class="cols">
 <p>El d&eacute;ficit se cierra solo hacia 2028 <span class="sg">si los par&aacute;metros hist&oacute;ricos
 se mantienen</span>, y en 2027 si se cobra mejor. El escenario adverso nunca sale del rojo.</p>
-<p><span class="sg">Ese super&aacute;vit no es una predicci&oacute;n de que va a sobrar dinero. Es la
-medida del margen disponible.</span> Quien lea el cuadro como promesa de excedentes lo est&aacute;
-leyendo mal.</p>
-</div>
-<div class="callout a">
-<div class="clabel">La advertencia sobre este cuadro</div>
-<p>El escenario base supone que el gasto real se mantiene constante, lo que implica cero
-recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce a&ntilde;os.</p>
 </div>
 """ + ex("g", "Sin cambios vuelve al azul en 2028; cobrando mejor, en 2027. En el adverso, nunca.",
      "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es el mismo dinero&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
@@ -343,8 +283,7 @@ recomposici&oacute;n salarial y cero ampliaci&oacute;n de servicios durante doce
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Son dos propuestas grandes y cuestan de manera distinta. Conviene separarlas antes de
-sumarlas, porque sumarlas da una cifra falsa.</p>
+<p class="lead">Son dos propuestas grandes y cuestan de manera distinta.</p>
 <div class="cols">
 <h3 style="margin-top:0">Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
 <p>Hoy el Municipio gasta <b>505,7 millones al a&ntilde;o</b> entre Apoyo y Promoci&oacute;n al Empleo
@@ -371,7 +310,7 @@ es <span class="sg">qui&eacute;n decide en qu&eacute; se gasta</span>.</p>
 <tr><td class="l">Obra p&uacute;blica vecinal</td><td class="n">28.908 M</td><td class="n">reasignaci&oacute;n, no gasto nuevo</td></tr>
 </table>
 <div class="pull"><p>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o. No 36.133.</p></div>
-<p class="tight">Y hay una tercera categor&iacute;a que conviene declarar, porque no es cero: el
+<p class="tight">Y hay una tercera categor&iacute;a: el
 cap&iacute;tulo 5 propone cuatro cosas m&aacute;s que no son fondos nuevos pero tampoco son gratis. Se
 financian moviendo partidas dentro del gasto flexible.</p>
 """ + exhead("c", "Lo que se financia reasignando, y de d&oacute;nde sale",
@@ -390,18 +329,15 @@ cifras oficiales, y deben presupuestarse o licitarse antes de comprometerse. Las
 ejecuci&oacute;n 2025 publicada.</p>
 
 <h3>De d&oacute;nde sale, con nombre</h3>
-<p class="lead">Decir &laquo;del gasto flexible&raquo; no alcanza: el gasto flexible est&aacute;
-financiando cosas que hoy se hacen. Si algo entra, algo sale, y este programa dice qu&eacute;.</p>
+<p class="lead">El gasto flexible est&aacute; financiando cosas que hoy se hacen: si algo entra, algo
+sale.</p>
 <div class="cols">
-<p><b>El Municipio publica su ejecuci&oacute;n abierta en treinta y seis programas</b>, con nombre y
-monto. Eso permite ser espec&iacute;fico, y no hay excusa para no serlo.</p>
-<p><b>El criterio no es el tama&ntilde;o del programa ni una sospecha sobre nadie.</b> Es uno solo:
-<span class="sg">si la obra cambia c&oacute;mo vive una familia todos los d&iacute;as, no se toca; si
+<p><b>El criterio es uno solo:</b> <span class="sg">si la obra cambia c&oacute;mo vive una familia todos los d&iacute;as, no se toca; si
 mejora lo que ya funcionaba, espera.</span> Una cloaca, el gas de red o una conexi&oacute;n que permita
 trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya funcionaba, no.</p>
 </div>
 """ + exhead("c", "Los tres programas de donde sale la reasignaci&oacute;n",
-             "Cr&eacute;dito vigente 2025. El Municipio publica esta apertura: son sus propios nombres de programa, no categor&iacute;as nuestras.") + """
+             "Cr&eacute;dito vigente 2025.") + """
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
 <tr class="hd"><th>Programa</th><th class="r">Vigente 2025</th><th>Para dimensionarlo</th></tr>
@@ -418,14 +354,13 @@ mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg"
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
 falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
-agrega sobre lo que ya funciona, espera. <span class="sg">El criterio es el mismo para las tres
-partidas y no hace excepciones.</span></p>
+agrega sobre lo que ya funciona, espera.</p>
 <p><b>Por qu&eacute; estos tres y no otros.</b> Porque los tres crecieron por encima del resto del
 presupuesto.</p>
-<p><b>Y esto tiene un costo pol&iacute;tico que no escondemos.</b> Hay personas trabajando en esos
+<p><b>Y esto tiene un costo pol&iacute;tico.</b> Hay personas trabajando en esos
 programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
-secci&oacute;n 4.13 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
+secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
@@ -436,41 +371,25 @@ libre.</span></p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
-<p>Un programa serio dice tambi&eacute;n cu&aacute;nto cuesta su propia maquinaria.
-<span class="sg">Este cuesta poco, y conviene explicar por qu&eacute;.</span></p>
 <p><b>Las comisiones vecinales no se pagan</b>: son asociaciones que ya existen y sus miembros no cobran.
-No se crea una oficina de control, porque el Tribunal de Cuentas ya audita este gasto, ni un &oacute;rgano
-nuevo de ning&uacute;n tipo.</p>
-<p><b>Pero hay dos cosas que s&iacute; cuestan y conviene ponerlas.</b> La primera es lo que hace que a
-la asamblea pueda ir alguien que trabaja: <b>espacio de cuidado de ni&ntilde;os, horario fuera del
-laboral y sede en el propio barrio</b>. Es poco dinero y cambia qui&eacute;n participa; el
-cap&iacute;tulo 4 explica por qu&eacute;.</p>
-<p><b>La segunda es el panel sorteado</b> que el cap&iacute;tulo 4 propone para los bienes de alcance
-distrital, como la costa. Ese s&iacute; lleva honorario, porque si no s&oacute;lo va quien puede perder
-un d&iacute;a de trabajo. El monto se fija por referencia a la escala salarial
-municipal vigente, no por fuera de ella. <span class="sg">No est&aacute; presupuestado ac&aacute; porque
-este programa no crea ese panel: define c&oacute;mo deber&iacute;a funcionar si se crea.</span></p>
-<p>Lo que s&iacute; cuesta es <b>imputar el gasto con referencia territorial</b>, que es lo que permite
-publicar la ejecuci&oacute;n por zona. No es una compra: es un cambio en c&oacute;mo se registra, dentro
-del sistema contable que el Municipio ya opera. Por eso el cap&iacute;tulo 6 lo compromete como meta del
-mandato y no de los cien d&iacute;as.</p>
-<p><span class="sg">Y conviene decir el l&iacute;mite de esta afirmaci&oacute;n</span>: no est&aacute;
-costeada. No existe dato p&uacute;blico del costo de una modificaci&oacute;n de esa naturaleza en el
-sistema municipal, y este programa no inventa uno. Lo que s&iacute; se afirma es que no requiere personal
-nuevo ni estructura nueva, y que entra dentro del 58,6% del gasto flexible que queda libre.</p>
+No se crea una oficina de control ni un &oacute;rgano nuevo de ning&uacute;n tipo.</p>
+<p><b>Cuestan tres cosas.</b> El espacio de cuidado de ni&ntilde;os en cada asamblea, que es poco dinero y
+cambia qui&eacute;n participa. El honorario del panel sorteado que el cap&iacute;tulo 4 propone para los
+bienes de alcance distrital, como la costa, que se presupuesta cuando el panel se cree. Y <b>imputar el
+gasto con referencia territorial</b>, que es lo que permite publicar la ejecuci&oacute;n por zona: no
+requiere personal nuevo ni estructura nueva, y entra dentro del 58,6% del gasto flexible que queda
+libre.</p>
 </div>
-<p>Los 36.133 millones son la suma de las dos propuestas y sirven para una sola cosa: medir cu&aacute;nto
-del presupuesto flexible quedan ocupando. Sobre un gasto flexible de 87.326 millones,
-<b>las dos juntas ocupan el 41,4%</b> &mdash;una como gasto nuevo, la otra como reasignaci&oacute;n&mdash;.</p>
+<p>Sobre un gasto flexible de 87.326 millones, <b>las dos propuestas grandes juntas &mdash;36.133
+millones&mdash; ocupan el 41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
 """ + ex("g", "El 73,1% del presupuesto no se puede tocar dentro del ejercicio",
      "Composici&oacute;n del gasto 2025 por rigidez, y qu&eacute; parte del margen flexible se llevan las dos propuestas del programa.",
      "ex10.png",
-     "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.",
-     "Las dos propuestas juntas se llevan el 41,4% del gasto flexible. Caben, pero no queda lugar para una tercera del mismo tama&ntilde;o.") + """
+     "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.") + """
 <p class="cap"><b>Nota:</b> el 73,1% es la medici&oacute;n del ejercicio 2025. <b>El servicio del bono
 de agosto de 2026 empuja esa proporci&oacute;n hacia arriba en 2028 y 2029</b>: cu&aacute;nto depende de
 la tasa, que es variable, y por eso no se pone un n&uacute;mero ac&aacute;.</p>
-<p>&Eacute;se es el techo, y lo declaramos: no queda lugar para una tercera propuesta de este
+<p>&Eacute;se es el techo: no queda lugar para una tercera propuesta de este
 tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 
 <h2><span class="n">3.5</span>De d&oacute;nde salen los fondos</h2>
@@ -483,8 +402,7 @@ pol&iacute;ticamente: alguien pierde su partida.</p>
 <p>No cobrar m&aacute;s: <b>cobrar sobre valores que no sean de 2008.</b> La al&iacute;cuota de vivienda
 no se toca y sigue en 12 por mil.</p>
 <h3 style="margin-top:0">Opci&oacute;n 3 &mdash; Endeudamiento</h3>
-<p>Modelada con tres tasas reales alternativas. <span class="sg">No la proponemos, y las razones son
-tres, en este orden.</span></p>
+<p><span class="sg">No la proponemos, y las razones son tres, en este orden.</span></p>
 <p><b>Primera: empleo y vivienda es gasto recurrente, no una obra.</b> Se paga todos los a&ntilde;os, en
 r&eacute;gimen, indefinidamente. Tomar deuda para financiar gasto corriente traslada el costo a la
 gesti&oacute;n siguiente sin dejarle nada a cambio. Para eso se toma deuda para obra, que queda; no para
@@ -497,8 +415,6 @@ de 2026 el Municipio coloc&oacute; un bono por 30.000 millones.</p>
 </div>
 
 <h3>El bono de 30.000 millones lo paga el gobierno que entra</h3>
-<p class="lead">Esto ocurri&oacute; despu&eacute;s del cierre de los datos con que se construy&oacute;
-este cap&iacute;tulo, y lo cambia.</p>
 <div class="cols">
 <p><b>Qu&eacute; se hizo.</b> El 8 de julio de 2026 la Asamblea de Concejales y Mayores Contribuyentes
 autoriz&oacute; el <b>Bono de Infraestructura de San Isidro</b> por hasta 30.000 millones. El 13 de
@@ -514,8 +430,7 @@ del 12,5%, y <b>la primera vence en el mes 15</b>. Contado desde agosto de 2026,
 <b>noviembre de 2027</b>. El mandato del actual intendente termina en diciembre de ese a&ntilde;o.</p>
 <p><b>De las ocho cuotas de capital, esta gesti&oacute;n paga una. Las otras siete &mdash;el 87,5% del
 capital&mdash; las paga el gobierno que asuma en diciembre de 2027.</b> No es una irregularidad: la
-operaci&oacute;n tiene las tres autorizaciones que exige la ley. Es una decisi&oacute;n, y hay que
-contarla como tal.</p>
+operaci&oacute;n tiene las tres autorizaciones que exige la ley.</p>
 </div>
 <div class="callout">
 <div class="clabel">Qui&eacute;n decidi&oacute; y qui&eacute;n paga</div>
@@ -547,15 +462,13 @@ y por el Banco de la Provincia de Buenos Aires, organizador y colocador de la em
 <p><b>La Tasa por Alumbrado, Limpieza y Servicios Generales no se calcula sobre la valuaci&oacute;n
 provincial.</b> El Municipio tiene su propia tabla: un puntaje por manzana fijado por la
 <b>Ordenanza 8373, del 6 de agosto de 2008</b>, que la ordenanza impositiva vigente sigue citando.</p>
-<p><b>Esa tabla no se actualiz&oacute;.</b> Comparamos manzana por manzana la versi&oacute;n de 2016
-contra la de 2026: coinciden en el 97%, y las diferencias son errores de escaneo. Lo &uacute;nico que
+<p><b>Esa tabla no se actualiz&oacute;.</b> La versi&oacute;n de 2016 y la de 2026 coinciden manzana por
+manzana en el 97%, y las diferencias son errores de escaneo. Lo &uacute;nico que
 cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oacute; de 5,58 a 575,91
 &mdash;ciento tres veces&mdash; sin mover la relaci&oacute;n entre una manzana y otra.</p>
 <p><b>Y ah&iacute; est&aacute; el problema.</b> El multiplicador corrige la inflaci&oacute;n. No corrige
 que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
 <span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
-<p><b>Lo comprobamos contra la fuente oficial.</b> ARBA publica el valor de la tierra manzana por manzana
-para todo el partido. Cruzamos las dos escalas sobre <b>69.258 parcelas</b>, ponderando por superficie.</p>
 </div>
 """ + exhead("c", "La tabla municipal ordena bien las zonas, pero achata la diferencia a la mitad",
              "Relaci&oacute;n entre el valor de la tierra de una zona y otra, en la escala municipal de 2008 y en la valuaci&oacute;n provincial. Ponderado por superficie de parcela.") + """
@@ -582,12 +495,10 @@ ellas vale entre 6.400 y 9.200. <span class="sg">Pagan igual y no valen igual.</
 pasar&iacute;an de cargar el 32% del valor de la tierra al 38%. <b>Villa Adelina bajar&iacute;a del 10% al
 6%.</b> Boulogne, del 14% al 13%. La carga se corre hacia donde est&aacute; el valor, sin que cambie la
 al&iacute;cuota.</p>
-<p><b>Cu&aacute;nto aportar&iacute;a, dicho con honestidad.</b> Si ninguna manzana bajara y las que
+<p><b>Cu&aacute;nto aportar&iacute;a.</b> Si ninguna manzana bajara y las que
 est&aacute;n por debajo del promedio subieran hasta &eacute;l, la parte tierra crecer&iacute;a 12,5%:
 <b>como m&aacute;ximo unos 8.600 millones</b>. <span class="sg">En la pr&aacute;ctica es menos</span>,
-porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos. Los metros
-construidos no son p&uacute;blicos, as&iacute; que <b>no ponemos una cifra exacta y no la metemos en el
-modelo</b>.</p>
+porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos.</p>
 <p><b>Y hay una segunda fuente, reducida pero sin defensa.</b> El descuento por buen contribuyente
 &mdash;10% a quien paga el a&ntilde;o entero sin deuda&mdash; <b>no tiene tope de valuaci&oacute;n ni de
 monto</b>. Lo cobra igual el de Acassuso que el de Boulogne. Las exenciones con criterio social
@@ -633,10 +544,6 @@ deuda p&uacute;blica&raquo; fue la funci&oacute;n que m&aacute;s creci&oacute; e
 <p><span class="sg">Este programa no agrega un peso a ese stock.</span> El modelo del cap&iacute;tulo 3
 lleva la deuda a cero hacia 2029 por amortizaci&oacute;n y no toma deuda nueva en ning&uacute;n
 a&ntilde;o de la proyecci&oacute;n.</p>
-<p><b>Y declaramos la fecha de corte.</b> El modelo est&aacute; construido con el stock al 31 de
-diciembre de 2025 &mdash;8.960 millones, que es la cifra del informe oficial de ese trimestre&mdash;. El
-informe de junio de 2026 es posterior al modelo y no est&aacute; incorporado: lo mostramos igual porque
-callarlo ser&iacute;a elegir el dato que conviene.</p>
 </div>
 
 <div class="callout g">
@@ -727,5 +634,11 @@ Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series f
 a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
 se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario proyectados. El modelo,
 los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
+<p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
+ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con el stock al 31 de diciembre de
+2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
+2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
+cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie; como los metros construidos no son
+p&uacute;blicos, el aporte de actualizar la base no entra en el modelo con una cifra exacta.</p>
 </div>
 """)

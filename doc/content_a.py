@@ -89,9 +89,8 @@ _IDX = [
  ("i", "4.9 &nbsp;Las otras dos facultades", "cap4b2"),
  ("i", "4.10 &nbsp;El primer acto de gobierno: derogar tres art&iacute;culos", "cap4b2"),
  ("i", "4.11 &nbsp;La aplicaci&oacute;n: el sistema de informaci&oacute;n del Municipio", "cap4b2"),
- ("i", "4.12 &nbsp;Qu&eacute; prometemos y qu&eacute; no", "cap4bc"),
- ("i", "4.13 &nbsp;A qui&eacute;n le molesta esto", "cap4bc"),
- ("i", "4.14 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap4bc"),
+ ("i", "4.12 &nbsp;A qui&eacute;n le molesta esto", "cap4bc"),
+ ("i", "4.13 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap4bc"),
  ("g", "5 &middot; Qu&eacute; hacemos en cada &aacute;rea", None),
  ("i", "5.1 &nbsp;C&oacute;mo leer este cap&iacute;tulo", "cap5a"),
  ("i", "5.2 &nbsp;D&oacute;nde va hoy cada peso", "cap5a"),
@@ -106,9 +105,8 @@ _IDX = [
  ("i", "5.11 &nbsp;Transporte y comercio", "cap5b2b"),
  ("i", "5.12 &nbsp;Los que tienen que ejecutar todo esto", "cap5b2b"),
  ("i", "5.13 &nbsp;Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad", "cap5b3"),
- ("i", "5.14 &nbsp;Lo que este cap&iacute;tulo no promete", "cap5b3"),
- ("i", "5.15 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
- ("i", "5.16 &nbsp;Lo que dice este cap&iacute;tulo, en siete l&iacute;neas", "cap5b3"),
+ ("i", "5.14 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
+ ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en siete l&iacute;neas", "cap5b3"),
  ("g", "6 &middot; El plan, con fechas", None),
  ("i", "6.1 &nbsp;Los primeros cien d&iacute;as", "cap6"),
  ("i", "6.2 &nbsp;La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o", "cap6"),
@@ -116,7 +114,7 @@ _IDX = [
  ("i", "6.4 &nbsp;El calendario del mandato, mes por mes", "cap6b"),
  ("i", "6.5 &nbsp;Qu&eacute; no prometemos, y de qui&eacute;n depende", "cap6b"),
  ("i", "6.6 &nbsp;Qu&eacute; puede salir mal", "cap6c"),
- ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap6c"),
+ ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Nota de m&eacute;todo", None),
@@ -283,8 +281,7 @@ ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
 <div class="cols">
 <p><b>Y esa proporci&oacute;n alta se aplica sobre un total que viene cayendo.</b> Medido desde su
 m&aacute;ximo de 2017, <b>el gasto real del Municipio cay&oacute; 24,4%</b>; medido desde 2010
-est&aacute; 13,1% por encima. <span class="sg">Las dos cifras salen de la misma serie y el resultado
-depende enteramente del a&ntilde;o que se tome como base</span>, as&iacute; que van las dos.</p>
+est&aacute; 13,1% por encima.</p>
 <p><b>La ca&iacute;da atraviesa el per&iacute;odo entero.</b> Entre 2017 y 2022 el gasto real
 cay&oacute; 17,2%, y entre 2022 y 2025 otro 8,8%. Los a&ntilde;os peores fueron 2019, 2020 y 2021, con
 &minus;9,1%, &minus;10,4% y &minus;1,7%. <b>En quince a&ntilde;os ninguna gesti&oacute;n ampli&oacute; la
@@ -314,16 +311,11 @@ clasificador provincial (RAFAM), no una elecci&oacute;n de este programa.</p>
 <h3>La mitad de la obra se adjudicaba a empresas de afuera del partido</h3>
 <div class="cols">
 <p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
-domicilio de la empresa a la que se le adjudica cada obra. Revisamos <b>3.670 decretos de
-adjudicaci&oacute;n</b> del Bolet&iacute;n Oficial municipal, que son los que todav&iacute;a lo traen.</p>
+domicilio de la empresa a la que se le adjudica cada obra.</p>
 <p><b>Entre 2002 y 2017, de los 3.054 actos de adjudicaci&oacute;n con domicilio publicado, el 49,6% fue
 a empresas con domicilio en San Isidro y el 50,4% a empresas de afuera.</b> Y la proporci&oacute;n local
 ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: 53,1% en 2013, 46,5% en 2015, <b>39,4% en 2017</b>.</p>
-<p><b>Es proporci&oacute;n de actos, no de dinero.</b> Los montos del Bolet&iacute;n est&aacute;n en
-pesos corrientes de cada a&ntilde;o y no se pueden sumar a lo largo de quince a&ntilde;os, as&iacute; que
-la proporci&oacute;n por monto no se calcula ac&aacute;.</p>
-<p><b>Desde 2018 no se puede saber, y el corte es anterior a esta gesti&oacute;n.</b> Entre 2011 y 2017
-el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
+<p>Entre 2011 y 2017 el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
 bajo la gesti&oacute;n anterior, y la actual no la retom&oacute;.</b> De los 573 decretos de
 adjudicaci&oacute;n publicados desde diciembre de 2023, <span class="sg">ninguno dice d&oacute;nde
 est&aacute; el que cobra</span>.</p>
@@ -331,9 +323,8 @@ est&aacute; el que cobra</span>.</p>
 
 <h3>En cu&aacute;ntas manos queda la obra</h3>
 <div class="cols">
-<p><b>Lo que s&iacute; se puede contar es en cu&aacute;ntas manos queda.</b> Tomando s&oacute;lo los
-decretos donde el texto nombra a cada empresa con su importe &mdash;407 decretos, 116.343 millones de
-pesos corrientes, 236 adjudicatarios&mdash;, <b>los diez primeros se llevan el 54,5% y los veinticinco
+<p>En los 407 decretos que nombran a cada empresa con su importe &mdash;116.343 millones de pesos
+corrientes, 236 adjudicatarios&mdash;, <b>los diez primeros se llevan el 54,5% y los veinticinco
 primeros el 78,6%</b>.</p>
 <p><b>Y cuatro de esos diez entraron con una sola adjudicaci&oacute;n.</b> La mayor de todas, un contrato
 de seguridad y vigilancia, representa por s&iacute; sola el <b>11,6% de todo lo adjudicado</b> en dos
@@ -341,11 +332,6 @@ a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&m
 millones en un solo acto.</p>
 <p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
 comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
-<p><b>Dos salvedades, porque la cifra es fuerte.</b> Los montos son pesos corrientes de cada a&ntilde;o y
-no se comparan entre s&iacute;. Y la concentraci&oacute;n usa s&oacute;lo los 407 decretos donde el
-articulado nombra a cada empresa con su importe: sumar los 144 que informan un total sin desagregar la
-bajar&iacute;a al 42,1%, <span class="sg">de modo que el 54,5% es el dato firme y no el m&aacute;s alto
-posible</span>.</p>
 </div>
 
 
@@ -435,6 +421,10 @@ constantes de diciembre de 2025 salvo indicaci&oacute;n expresa.</p>
 <p>Las seis zonas de 1.1 son los l&iacute;mites de las localidades del partido seg&uacute;n OpenStreetMap,
 proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su
 punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles.</p>
+<p>El domicilio de los adjudicatarios sale de 3.670 decretos de adjudicaci&oacute;n del Bolet&iacute;n
+Oficial municipal. La proporci&oacute;n es de actos y no de montos, porque los importes est&aacute;n en
+pesos corrientes de cada a&ntilde;o. La concentraci&oacute;n usa los 407 decretos que nombran a cada
+empresa con su importe; sumando los 144 que informan s&oacute;lo un total, baja al 42,1%.</p>
 <p>Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de
 ejecuci&oacute;n RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales
 de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de ejecuci&oacute;n del propio
@@ -465,7 +455,7 @@ verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o en
 </div>
 
 <div class="callout a">
-<div class="clabel">Los l&iacute;mites, declarados donde se usan y no en una nota al final</div>
+<div class="clabel">Los l&iacute;mites</div>
 <p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
 uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
 publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve

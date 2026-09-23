@@ -18,8 +18,7 @@ ocho cuotas de capital las paga el gobierno que asuma en diciembre de 2027</span
 la raz&oacute;n. Contra eso no alcanza con prometer m&aacute;s: hay que cambiar
 <span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo.</p>
 <p>Por eso este programa promete poco y lo promete con fecha: diecis&eacute;is compromisos en cien
-d&iacute;as y catorce metas con l&iacute;nea de base fijada hoy. Y una lista, igual de larga, de lo que
-no prometemos y por qu&eacute;.</p>
+d&iacute;as y catorce metas con l&iacute;nea de base fijada hoy.</p>
 <p>Y una pieza que sostiene a todas las dem&aacute;s: <b>una inteligencia artificial nativa del
 Municipio</b>, que para cada vecino es como tener a disposici&oacute;n a alguien que sabe todo del
 Municipio. Porque decidir bien exige leer, y nadie tiene las horas.
