@@ -1585,3 +1585,63 @@ Liberation: Inter-Bold dejó de usarse porque sólo la usaban las viñetas del 5
 página correctos en las 38 que lo llevan. Índice verificado entrada por entrada. 49 exhibits, del 1
 al 49, sin saltos: el cuadro de "Qué prometemos y qué no" salió con el 4.12. Diecinueve gráficos, como
 dice la nota de método. Cero viudas y huérfanas.
+
+# LAS DOCE DECISIONES · APLICADAS
+
+Rama: claude/cool-hopper-3hdk58. El trabajo de claude/fervent-bardeen-r5vfbl se trajo sin conflictos.
+
+1. 3.4: dice "Con las dos propuestas grandes, todo junto ocupa el 50,3% del gasto flexible y queda
+   libre el 49,7%". Los otros cuatro "8,9%" no se tocaron.
+2. 3.4: salió "Por qué estos tres y no otros. Porque los tres crecieron por encima del resto".
+3. Cámaras, un solo costo: 1.200 M del cuadro 18. Salieron "No cuesta un peso" y "Tampoco cuesta un
+   peso" (calendario del 6.4), y la analítica de seguridad de los 1.855,4 M (cuadro 40 y 4.11). El 5.10
+   y el calendario dicen "no hace falta comprar cámaras nuevas".
+4. 6.6: "si no se recupera, el programa entra igual, porque se paga actualizando la base de valuación
+   (3.5); lo que se pierde es margen". Igual que el recuadro de la cobranza del 3.5.
+5. Barisidro: el informe 04 (nota de De San Isidro) tiene la demolición programada para julio; el
+   informe 05 (petición en Change.org, relevada el 21/09/2026) la tiene ejecutada en septiembre. El 5.5
+   dice las dos cosas y la fuente del recuadro de las firmas nombra la de septiembre.
+6. Educación: 11,6% en el texto (5.8) y en el gráfico. Deflactor anual de data/deflactor.csv:
+   17.842,9 M en 2024 contra 15.779,0 M en 2025, −11,57%.
+7. 1.2: "un solo acto del Ejecutivo puede comprometer más de la décima parte de lo adjudicado en dos
+   años y medio". Sale del 11,6% del contrato de seguridad y vigilancia.
+8. Nota de método: salió la oración del costo de financiamiento.
+9. 4.1: salió "hace ocho meses". La fecha exacta del veto, 17 de diciembre de 2025, ya está en la
+   frase anterior (Decreto 2099/2025; verificado en marco-legal-comisiones-vecinales-pba.md).
+10. Cierre: el párrafo del bono pasó al final, antes de "Por dónde empieza", y empieza "Y mientras se
+    escribía este documento cambió el punto de partida".
+11. 2.4, verificado contra el PDF del plan (13 páginas, 19 objetivos, 77 metas contadas una por una):
+    "empleo", "vivienda" y "salud" aparecen cero veces; "personas", dos ("la experiencia de movilidad de
+    las personas"); "vecino/s/vecinales", dieciocho. En las metas los vecinos aparecen para sumarse a
+    "Ojos en Alerta" (20.000 adherentes), reunirse con el secretario de Seguridad (5 reuniones
+    mensuales), usar los espacios públicos, y hacer trámites y reclamos. Título nuevo: "El hallazgo
+    central: el plan no nombra el empleo, la vivienda ni la salud" (también en el índice). El párrafo de
+    apertura dice cómo aparecen los vecinos; salió "Ninguno de los diecinueve habla de una persona"; la
+    lista de temas de los objetivos suma alumbrado y tránsito.
+12. Cierre (respuesta de Nick: va la primera): queda la pregunta en una línea, una línea de respuesta
+    ("La respuesta no está en el tamaño del presupuesto: hay que cambiar quién decide, y decir con qué
+    dinero y para cuándo") y sigue "Por eso este programa promete poco…". Salieron los dos párrafos que
+    volvían a argumentar.
+
+Cuadro 6: seis renglones (las cinco subfunciones de Urbanismo y Agua potable y alcantarillado), sin
+Deporte y recreación. Copete: "Gasto devengado 2025 dentro de la finalidad Servicios Sociales:
+Urbanismo abierto en sus cinco subfunciones, y la función Agua potable y alcantarillado."
+
+## PARA DECIDIR
+1. Habilitaciones está pagada dos veces: en los 1.200 M del cuadro 18 y en los 1.855,4 M del cuadro 40.
+   Propuesta: sacarla de los 1.855,4 M, como las cámaras.
+2. Educación: con el deflactor del 11,6%, la pérdida es 2.063,9 M; el 2.059 del texto no sale de ningún
+   método (con los coeficientes del CSV da 2.058,4). Propuesta: 2.064 en 5.8, cuadro 12 y cuadro 18, y
+   el total reasignado de 7.794 a 7.799 (cuadros 18 y 19 y 3.4). Los porcentajes no cambian. El Excel
+   también.
+3. 3.4: "entra dentro del 58,6% del gasto flexible que queda libre", después del 49,7%. Propuesta:
+   49,7%. El 58,6% del cuadro 18 y del 5.1 está bien: es lo que queda antes de reasignar.
+
+## ENCONTRADO, SIN TOCAR
+- 3.5, cuadro de la cobranza: en 2028, 2031 y 2037 la columna "con programa y con la cobranza
+  recuperada" repite la cifra "sin programa", pero la diferencia no es cero. Sólo 2034 cuadra.
+
+## EL DOCUMENTO
+39 páginas; la más alta mide 2.232 pt. 49 exhibits del 1 al 49 sin saltos (30 cuadros, 19 gráficos).
+Nueve variantes de fuente, sin sustituciones. Pies correctos. Índice con el título nuevo del 2.4. Cero
+viudas y huérfanas.

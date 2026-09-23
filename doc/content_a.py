@@ -67,7 +67,7 @@ _IDX = [
  ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;", "cap2"),
  ("i", "2.3 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
- ("i", "2.4 &nbsp;El hallazgo central: el plan no menciona a la gente", "cap2b"),
+ ("i", "2.4 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
  ("i", "2.5 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
@@ -291,7 +291,7 @@ trabajar.</p>
 
 <h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
 """ + exhead("c", "Alumbrado p&uacute;blico recibe el triple que el agua y las cloacas",
-             "Gasto devengado 2025 dentro de la finalidad Servicios Sociales. Urbanismo abierto en sus cinco subfunciones.") + """
+             "Gasto devengado 2025 dentro de la finalidad Servicios Sociales: Urbanismo abierto en sus cinco subfunciones, y la funci&oacute;n Agua potable y alcantarillado.") + """
 <table>
 <colgroup><col style="width:300pt"><col></colgroup>
 <tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado 2025</th></tr>
@@ -331,7 +331,7 @@ de seguridad y vigilancia, representa por s&iacute; sola el <b>11,6% de todo lo 
 a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&mdash; compromete 20.916
 millones en un solo acto.</p>
 <p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
-comprometer una octava parte de todo lo que el Municipio contrata en un mandato.</span></p>
+comprometer m&aacute;s de la d&eacute;cima parte de lo adjudicado en dos a&ntilde;os y medio.</span></p>
 </div>
 
 
@@ -459,7 +459,6 @@ verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o en
 <p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
 uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
 publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
-incomparable buena parte de las series interanuales. Y no existe informaci&oacute;n p&uacute;blica sobre
-el costo de financiamiento municipal, raz&oacute;n por la cual este programa no propone endeudarse.</p>
+incomparable buena parte de las series interanuales.</p>
 </div>
 """)

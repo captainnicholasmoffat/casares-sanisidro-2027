@@ -122,12 +122,13 @@ Cuentas los haya aprobado. Se publica lo que se mide en los rankings de transpar
 dem&aacute;s queda donde nadie lo encuentra.</p>
 </div>
 
-<h2><span class="n">2.4</span>El hallazgo central: el plan no menciona a la gente</h2>
+<h2><span class="n">2.4</span>El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud</h2>
 <div class="cols">
 <p>&laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; define tres prioridades &mdash;Seguridad
 Ciudadana, Espacio P&uacute;blico y Ambiente, Innovaci&oacute;n&mdash;, <span class="sg">diecinueve
-objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>, y en ninguno de los
-tres niveles aparece una persona.</p>
+objetivos, setenta y siete metas numeradas y un anexo formal de indicadores</span>. Los vecinos
+aparecen en las metas para sumarse a &laquo;Ojos en Alerta&raquo;, reunirse con el secretario de
+Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.</p>
 </div>
 """ + exhead("c", "Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea",
              "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa.") + """
@@ -161,8 +162,7 @@ que se propone adecuar la demarcaci&oacute;n horizontal y la se&ntilde;alizaci&o
 diecis&eacute;is entornos escolares y quince entornos hospitalarios. <b>El plan nombra a los hospitales
 y a las escuelas s&oacute;lo para pintar el cruce de su esquina.</b></p>
 <p><b>Y los diecinueve objetivos, le&iacute;dos uno por uno, hablan de c&aacute;maras, patrulleros,
-barrido, arbolado, residuos, tr&aacute;mites y ciberseguridad.</b> Ninguno de los diecinueve habla de una
-persona.</p>
+barrido, arbolado, alumbrado, residuos, tr&aacute;nsito, tr&aacute;mites y ciberseguridad.</b></p>
 
 <div class="callout">
 <div class="clabel">El plan est&aacute; vencido</div>
@@ -355,8 +355,6 @@ construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
 falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
 agrega sobre lo que ya funciona, espera.</p>
-<p><b>Por qu&eacute; estos tres y no otros.</b> Porque los tres crecieron por encima del resto del
-presupuesto.</p>
 <p><b>Y esto tiene un costo pol&iacute;tico.</b> Hay personas trabajando en esos
 programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
@@ -366,8 +364,8 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 <div class="cols">
 <p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.794 de
 reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,
-decidir distinto con el dinero que ya existe. <span class="sg">Juntos ocupan el 8,9% del gasto flexible, y queda el 91,1%
-libre.</span></p>
+decidir distinto con el dinero que ya existe. <span class="sg">Con las dos propuestas grandes, todo junto ocupa el 50,3% del
+gasto flexible y queda libre el 49,7%.</span></p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">

@@ -29,7 +29,7 @@ facultades indelegables.</p>
 7124/2025</b>, que creaba un presupuesto participativo con votaci&oacute;n vinculante. El intendente la
 vet&oacute; en su totalidad mediante el <b>Decreto 2099/2025, del 17 de diciembre de 2025</b>, con
 fundamento constitucional. Una ordenanza de participaci&oacute;n vinculante estuvo vigente menos de un
-mes, en un municipio de esta misma Provincia, hace ocho meses.</p>
+mes en un municipio de esta misma Provincia.</p>
 </div>
 <h3>Lo que s&iacute; es legal, y lleva d&eacute;cadas funcionando</h3>
 <p>El l&iacute;mite es sobre <span class="sg">la fuerza jur&iacute;dica del voto</span>, no sobre
@@ -818,9 +818,9 @@ son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida qu
 <span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;.</p>
 <p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de las otras
-&aacute;reas &mdash;anal&iacute;tica de seguridad, habilitaciones, salud, automatizaci&oacute;n de
-tareas de la planta&mdash; los paga la partida de contrataci&oacute;n del cap&iacute;tulo 5, que son otros
-fondos y otro destino.</p>
+&aacute;reas &mdash;habilitaciones, salud, automatizaci&oacute;n de tareas de la planta&mdash; los paga la
+partida de contrataci&oacute;n del cap&iacute;tulo 5, y la anal&iacute;tica de seguridad sale de la
+reasignaci&oacute;n del cap&iacute;tulo 3: son otros fondos y otro destino.</p>
 <p><b>Y se licita.</b> Lo que queda comprometido no es el n&uacute;mero: es que el sistema exista y que lo
 construya gente del partido.</p>
 </div>
@@ -1094,7 +1094,7 @@ La secci&oacute;n siguiente lo desarrolla.</p>
 <tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
 <tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
 <tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, formadas y acompa&ntilde;adas hasta el empleo</td></tr>
-<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Anal&iacute;tica de seguridad, habilitaciones, salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Habilitaciones, salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">&nbsp;</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
@@ -1342,7 +1342,8 @@ dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
 <div class="cols">
 <p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
-Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y en julio Barisidro, en el 1602. Los dos
+Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601. Barisidro, en el 1602, ten&iacute;a la demolici&oacute;n
+programada para julio y cay&oacute; en septiembre. Los dos
 funcionaban desde 1996 con permiso precario y gratuito sobre terreno p&uacute;blico, sin pagar canon, y
 el decreto original preve&iacute;a revocarlo. <span class="sg">Nadie deber&iacute;a usar treinta
 a&ntilde;os gratis un predio que es de todos.</span></p>
@@ -1408,8 +1409,8 @@ efecto.</span> Una firma junta en una plataforma no obliga a nadie, y por eso es
 escrita.</p></div>
 <p class="cap"><b>Fuente:</b> las fechas, las direcciones y la condici&oacute;n de permiso precario y
 gratuito, de la cobertura period&iacute;stica de junio y julio de 2025 y de los comunicados del propio
-Municipio; el conteo de firmas y la fecha de apertura, de la petici&oacute;n en Change.org, relevada el 21
-de septiembre de 2026. El relevamiento de reclamos vecinales est&aacute; en
+Municipio; el conteo de firmas, la fecha de apertura y la demolici&oacute;n de Barisidro en septiembre, de
+la petici&oacute;n en Change.org, relevada el 21 de septiembre de 2026. El relevamiento de reclamos vecinales est&aacute; en
 <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 
 <h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
@@ -1803,7 +1804,7 @@ presupuesto.</p></div>
 
 <h2><span class="n">5.8</span>Educaci&oacute;n y cultura <span class="tag v">Reasignaci&oacute;n</span></h2>
 <div class="cols">
-<p><b>Hoy:</b> 13.986 millones, el 4,3%. Cay&oacute; <b>11,5% real</b> entre 2024 y 2025.</p>
+<p><b>Hoy:</b> 13.986 millones, el 4,3%. Cay&oacute; <b>11,6% real</b> entre 2024 y 2025.</p>
 <p>La educaci&oacute;n obligatoria es competencia provincial, no municipal. Pero el Municipio administra
 el Fondo de Financiamiento Educativo &mdash;3.931 millones devengados en 2025&mdash; y sostiene
 infraestructura escolar y formaci&oacute;n laboral.</p>
@@ -2238,7 +2239,7 @@ municipal. No falta tecnolog&iacute;a: falta prioridad.</li>
 proveedor conocido ni resultados publicados. Ac&aacute; no hay que proponerla: hay que auditarla.</li>
 <li>Seguridad creci&oacute; 34,8% real en un a&ntilde;o, y el Municipio anuncia unas <b>2.646
 c&aacute;maras con anal&iacute;tica que ninguna ordenanza regula</b>: lo que este programa propone no es comprar
-nada, es la norma que falta, m&aacute;s patrullaje dirigido a los puntos calientes y una oficina de
+c&aacute;maras nuevas, es la norma que falta, m&aacute;s patrullaje dirigido a los puntos calientes y una oficina de
 ciberdelito.</li>
 <li>El servicio de recolecci&oacute;n, la subfunci&oacute;n m&aacute;s cara del presupuesto, se
 licit&oacute; dos veces y nunca se adjudic&oacute;: corre sobre un contrato de seis meses de 2009
@@ -2398,8 +2399,8 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">La aplicaci&oacute;n y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; primera cohorte de formaci&oacute;n inscripta; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por sede y la propia aplicaci&oacute;n</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No cuesta un peso: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se pueda ver que la inspecci&oacute;n fue real y que no hubo coima. Tampoco cuesta un peso</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se pueda ver que la inspecci&oacute;n fue real y que no hubo coima</td><td class="n">Decreto de puesta en servicio y la propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las tres ordenanzas restantes del anexo: partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, y ruido vehicular</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n publicado y actas de asamblea</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Respuestas publicadas, con fecha</td></tr>
@@ -2453,7 +2454,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 <tr><td class="l">Captura de una comisi&oacute;n</td>
 <td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> un voto por persona, asamblea abierta con lista de asistentes publicada, rendici&oacute;n p&uacute;blica continua en la aplicaci&oacute;n, y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
 <tr class="hi"><td class="l">La percepci&oacute;n no se recupera</td>
-<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, este programa se financia por la opci&oacute;n 1 del 3.5 &mdash;reasignar partidas&mdash;, que es fiscalmente neutra y cuesta pol&iacute;ticamente.</td></tr>
+<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, el programa entra igual, porque se paga actualizando la base de valuaci&oacute;n (3.5); lo que se pierde es margen.</td></tr>
 <tr><td class="l">Los recursos propios crecen menos de 1% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
