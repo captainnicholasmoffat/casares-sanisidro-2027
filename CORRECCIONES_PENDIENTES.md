@@ -1726,3 +1726,9 @@ Ciencia y Técnica (1.026,7 / 8.205 = 12,51%) y el 7% de mantenimiento y embelle
 Verificado en el PDF: ningún 1.273, ningún 15,5% (el único 15,59% es de la tabla del censo), ningún
 "menos del 9%", ningún "Treinta y nueve". 39 páginas, 49 exhibits sin saltos, fuentes, pies, viudas y
 huérfanas bien.
+
+# REGLA DE ENTREGA (desde el 24/09/2026)
+Después de cada compilación, el PDF se commitea a la rama claude/cool-hopper-3hdk58 en
+salida/PROGRAMA_SAN_ISIDRO_2027.pdf, siempre con ese nombre, pisando el anterior. El historial de git
+guarda las versiones previas. El .gitignore no excluye PDF. El armado no genera un HTML único (arma
+uno por página en doc/out/, que está ignorado), así que no se sube HTML.
