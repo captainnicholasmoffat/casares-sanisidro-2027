@@ -562,7 +562,7 @@ gesti&oacute;n. No hay que inventar una capacidad: hay que recuperar una que exi
 a&ntilde;os.</p>
 </div>
 """ + exhead("c", "El programa entra aunque la cobranza no mejore, y si mejora sobra margen",
-             "Millones de pesos constantes de diciembre de 2025. El programa se financia con la base de valuaci&oacute;n; esta columna muestra qu&eacute; pasa si adem&aacute;s se recupera la cobranza.") + """
+             "Millones de pesos constantes de diciembre de 2025. La columna del programa lo muestra pagado s&oacute;lo con la cobranza recuperada al 92%: aun as&iacute; sobra margen.") + """
 <table>
 <colgroup><col style="width:90pt"><col><col><col></colgroup>
 <tr class="hd"><th>A&ntilde;o</th><th class="r">Base, sin programa</th>
@@ -575,11 +575,11 @@ a&ntilde;os.</p>
 <p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
 <span class="tag m">Modelado</span></p>
 <div class="pull"><p>El gasto total sube de 309.236 a 316.461 millones &mdash;este programa se ejecuta
-entero&mdash; sin que el resultado financiero empeore. Y si adem&aacute;s la cobranza vuelve a donde
-estaba en 2024, 2031 cierra 2.289 millones por encima. <b>El programa no necesita ese margen: lo tiene
+entero&mdash; sin que el resultado financiero empeore. Y aunque se pagara s&oacute;lo con la
+cobranza al 92%, 2031 cerrar&iacute;a 2.289 millones por encima. <b>El programa no necesita ese margen: lo tiene
 de reserva.</b></p></div>
 """ + ex("g", "El programa se ejecuta entero y el resultado fiscal no empeora",
-     "El &aacute;rea sombreada es el margen que aparece si la cobranza vuelve al nivel de 2024: 2.289 millones en 2031 y 2.908 en 2037. El programa no depende de que eso ocurra.",
+     "El &aacute;rea sombreada es el margen que queda si el programa se paga s&oacute;lo con la cobranza al 92%: 2.289 millones en 2031 y 2.908 en 2037. El programa no depende de que eso ocurra.",
      "ex11.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.") + """
 

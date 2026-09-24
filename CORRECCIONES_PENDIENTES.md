@@ -1687,3 +1687,18 @@ viudas y huérfanas.
 ## EL DOCUMENTO
 39 páginas; la más alta mide 2.232 pt. 49 exhibits del 1 al 49 sin saltos. Fuentes sin sustituciones.
 Pies correctos. Cero viudas y huérfanas.
+
+# LAS DOS ÚLTIMAS
+
+2. Cuadro de la cobranza (3.5), aplicado. Copete: "La columna del programa lo muestra pagado sólo con
+   la cobranza recuperada al 92%: aun así sobra margen." Pull: "Y aunque se pagara sólo con la cobranza
+   al 92%, 2031 cerraría 2.289 millones por encima" (salió el "además", que decía otra cosa que el
+   copete). Pie del gráfico: "el margen que queda si el programa se paga sólo con la cobranza al 92%".
+   Revisado el resto: la meta del 6.3, el calendario, el riesgo del 6.6, el anexo y el glosario ya
+   dicen 92% o dan el 93,51% como dato de 2024. El único "nivel de 2024" que queda es el de educación
+   (5.8), que es otra cosa y está bien.
+1. Equipo de la plataforma: EN ESPERA. El desglose del 1.273 M (costo por perfil, infraestructura y
+   auditoría) no está en el repo ni en el Drive; el registro sólo dice "equipo de 39 personas escalado
+   por módulo". No se recalcula a ojo. Cuando llegue el número se aplica todo junto: sale la fila
+   "Salud y habilitaciones", 33 personas, el monto nuevo en el total del cuadro y en el 4.11 (tres
+   veces), el 15,5% de Ciencia y Técnica, el "menos del 9%" y la media línea de los módulos.
