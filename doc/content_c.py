@@ -817,10 +817,10 @@ son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida qu
 <p><b>Para dimensionarlo:</b> 1.273 millones es
 <span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;.</p>
-<p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de las otras
-&aacute;reas &mdash;habilitaciones, salud, automatizaci&oacute;n de tareas de la planta&mdash; los paga la
-partida de contrataci&oacute;n del cap&iacute;tulo 5, y la anal&iacute;tica de seguridad sale de la
-reasignaci&oacute;n del cap&iacute;tulo 3: son otros fondos y otro destino.</p>
+<p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de salud y de
+automatizaci&oacute;n de tareas de la planta los paga la partida de contrataci&oacute;n del cap&iacute;tulo
+5, y habilitaciones y anal&iacute;tica de seguridad salen de la reasignaci&oacute;n del cap&iacute;tulo 3:
+son otros fondos y otro destino.</p>
 <p><b>Y se licita.</b> Lo que queda comprometido no es el n&uacute;mero: es que el sistema exista y que lo
 construya gente del partido.</p>
 </div>
@@ -1094,7 +1094,7 @@ La secci&oacute;n siguiente lo desarrolla.</p>
 <tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
 <tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
 <tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, formadas y acompa&ntilde;adas hasta el empleo</td></tr>
-<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Habilitaciones, salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">&nbsp;</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
@@ -1831,7 +1831,7 @@ y de salud del Municipio, que ya existen. <b>Es articulaci&oacute;n, no estructu
 <h3>Y lo que hay que arreglar del dinero</h3>
 <ol class="n">
 <li><b>Revertir la ca&iacute;da real</b>, devolviendo la funci&oacute;n educativa al nivel de 2024. Son
-<b>2.059 millones</b> de pesos constantes, que no salen de adentro de educaci&oacute;n, que
+<b>2.064 millones</b> de pesos constantes, que no salen de adentro de educaci&oacute;n, que
 ser&iacute;a circular, sino del programa de mantenimiento y embellecimiento, que el
 cap&iacute;tulo 3 identifica con nombre. Es el <b>2,4% de los 87.326 millones</b> reasignables.</li>
 <li><b>Publicar la ejecuci&oacute;n del Fondo Educativo obra por obra y escuela por escuela.</b> Es dinero

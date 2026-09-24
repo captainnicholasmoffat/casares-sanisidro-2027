@@ -144,7 +144,7 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 <tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y llevar el centro de formaci&oacute;n laboral que ya funciona en B&eacute;ccar a las seis localidades, con eje en inform&aacute;tica e inteligencia artificial</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar, con la partida de obra vecinal</td></tr>
 <tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Turno en l&iacute;nea, que hoy no existe en ning&uacute;n efector de salud humana aunque el Municipio ya lo use para castrar mascotas, adhiriendo al sistema provincial que es gratis; publicar el precio unitario de cada insumo que se compra y el stock de cada hospital; y arreglar las filtraciones que el propio gobierno reconoce</td></tr>
-<tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Centros de apoyo escolar gratuitos en los barrios donde los chicos se quedan atr&aacute;s, en edificios municipales que ya existen; y devolver a educaci&oacute;n los 2.059 millones que perdi&oacute; en 2025</td></tr>
+<tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Centros de apoyo escolar gratuitos en los barrios donde los chicos se quedan atr&aacute;s, en edificios municipales que ya existen; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
 <tr class="hd"><td class="l">Qui&eacute;n decide la obra</td><td class="m">El Departamento Ejecutivo, sobre el 100%</td><td class="m">Los vecinos, sobre la mitad, al cuarto a&ntilde;o</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, documento firmado
@@ -256,9 +256,9 @@ resultado.</p>
 </div>
 <div class="callout g">
 <div class="clabel">La sorpresa: lo que manda no es la Provincia</div>
-<p>Si la coparticipaci&oacute;n cayera 3,5% anual en vez de 2,196%, el resultado de 2031 pasa de +12.664
+<p>Si la coparticipaci&oacute;n cayera 3,5% anual en vez de 2,196%, el resultado de 2031 pasa de +10.375
 a +5.514 millones. Duele. Pero si los recursos propios crecieran 0,95% en vez de 1,95%, el resultado de
-2031 pasa de +12.664 a <b>&minus;2.946 millones</b>: se da vuelta el mandato entero.</p>
+2031 pasa de +10.375 a <b>&minus;2.946 millones</b>: se da vuelta el mandato entero.</p>
 <p><b>Un punto de recaudaci&oacute;n propia vale m&aacute;s que un punto de coparticipaci&oacute;n.</b>
 Eso define d&oacute;nde tiene que poner la energ&iacute;a un intendente: en administrar bien lo propio, no
 en reclamar en La Plata.</p>
@@ -314,15 +314,15 @@ es <span class="sg">qui&eacute;n decide en qu&eacute; se gasta</span>.</p>
 cap&iacute;tulo 5 propone cuatro cosas m&aacute;s que no son fondos nuevos pero tampoco son gratis. Se
 financian moviendo partidas dentro del gasto flexible.</p>
 """ + exhead("c", "Lo que se financia reasignando, y de d&oacute;nde sale",
-             "Montos anuales en r&eacute;gimen. Ninguno agrega gasto al total: todos salen del 58,6% flexible que queda libre.") + """
+             "Montos anuales en r&eacute;gimen. Ninguno agrega gasto al total: todos salen del 58,6% flexible que dejan libre las dos propuestas grandes.") + """
 <table>
 <colgroup><col style="width:180pt"><col><col></colgroup>
 <tr class="hd"><th>Propuesta</th><th class="r">Monto anual</th><th>De d&oacute;nde sale</th></tr>
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">1,5% del gasto 2025 (4.865 M) menos los 1.410 M de hoy. Sale de embellecimiento e infraestructura deportiva. Es el 4,0% del gasto flexible</td></tr>
-<tr><td class="l">Educaci&oacute;n, recomposici&oacute;n al nivel real de 2024</td><td class="n">2.059 M</td><td class="m">Embellecimiento, no de adentro de educaci&oacute;n. Es el 2,4% del gasto flexible</td></tr>
+<tr><td class="l">Educaci&oacute;n, recomposici&oacute;n al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">Embellecimiento, no de adentro de educaci&oacute;n. Es el 2,4% del gasto flexible</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">Estimaci&oacute;n propia a presupuestar. Es el 1,2%</td></tr>
 <tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">Inversi&oacute;n inicial, estimaci&oacute;n propia a licitar. Es el 1,4%</td></tr>
-<tr class="hi"><td class="l">Total reasignado</td><td class="n"><b>7.794 M</b></td><td class="m"><b>El 8,9% del gasto flexible</b></td></tr>
+<tr class="hi"><td class="l">Total reasignado</td><td class="n"><b>7.799 M</b></td><td class="m"><b>El 8,9% del gasto flexible</b></td></tr>
 </table>
 <p class="cap"><b>Nota:</b> las dos &uacute;ltimas filas son estimaciones del equipo de este programa, no
 cifras oficiales, y deben presupuestarse o licitarse antes de comprometerse. Las dos primeras salen de la
@@ -344,7 +344,7 @@ trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya
 <tr class="hi"><td class="l">Mantenimiento y embellecimiento del Municipio</td><td class="n"><b>14.770,8 M</b></td><td class="m">El cuarto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Siete veces</b> lo que se destina a infraestructura habitacional</td></tr>
 <tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m">&mdash;</td></tr>
-<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.794 M</td><td class="m">El 31% de esos tres programas sumados</td></tr>
+<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.799 M</td><td class="m">El 31% de esos tres programas sumados</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
 ejercicio 2025, acumulado anual.</p>
@@ -362,7 +362,7 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.794 de
+<p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.799 de
 reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,
 decidir distinto con el dinero que ya existe. <span class="sg">Con las dos propuestas grandes, todo junto ocupa el 50,3% del
 gasto flexible y queda libre el 49,7%.</span></p>
@@ -375,8 +375,8 @@ No se crea una oficina de control ni un &oacute;rgano nuevo de ning&uacute;n tip
 cambia qui&eacute;n participa. El honorario del panel sorteado que el cap&iacute;tulo 4 propone para los
 bienes de alcance distrital, como la costa, que se presupuesta cuando el panel se cree. Y <b>imputar el
 gasto con referencia territorial</b>, que es lo que permite publicar la ejecuci&oacute;n por zona: no
-requiere personal nuevo ni estructura nueva, y entra dentro del 58,6% del gasto flexible que queda
-libre.</p>
+requiere personal nuevo ni estructura nueva, y entra dentro del 49,7% del gasto flexible que queda
+libre con todo sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>las dos propuestas grandes juntas &mdash;36.133
 millones&mdash; ocupan el 41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
@@ -567,10 +567,10 @@ a&ntilde;os.</p>
 <colgroup><col style="width:90pt"><col><col><col></colgroup>
 <tr class="hd"><th>A&ntilde;o</th><th class="r">Base, sin programa</th>
 <th class="r">Con programa y con la cobranza recuperada</th><th class="r">Diferencia</th></tr>
-<tr><td class="l">2028</td><td class="n">+3.166</td><td class="n"><b>+3.166</b></td><td class="n">+1.521</td></tr>
-<tr class="hi"><td class="l">2031</td><td class="n"><b>+12.664</b></td><td class="n"><b>+12.664</b></td><td class="n"><b>+2.289</b></td></tr>
+<tr><td class="l">2028</td><td class="n">+1.645</td><td class="n"><b>+3.166</b></td><td class="n">+1.521</td></tr>
+<tr class="hi"><td class="l">2031</td><td class="n"><b>+10.375</b></td><td class="n"><b>+12.664</b></td><td class="n"><b>+2.289</b></td></tr>
 <tr><td class="l">2034</td><td class="n">+20.162</td><td class="n">+22.744</td><td class="n">+2.582</td></tr>
-<tr><td class="l">2037</td><td class="n">+33.943</td><td class="n">+33.943</td><td class="n">+2.908</td></tr>
+<tr><td class="l">2037</td><td class="n">+31.035</td><td class="n">+33.943</td><td class="n">+2.908</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
 <span class="tag m">Modelado</span></p>
@@ -596,7 +596,7 @@ cero: &minus;305 millones. Es el riesgo m&aacute;s concreto, porque ya se est&aa
 m&aacute;s 7%</b>, y el capital se paga casi entero en 2028 y 2029.</li>
 </ol>
 """ + ex("g", "Lo que manda es cu&aacute;nto crecen los recursos propios",
-     "Efecto sobre el resultado financiero de 2031 de mover cada variable, con las otras dos en su valor del escenario base. Base: 12.664 millones.",
+     "Efecto sobre el resultado financiero de 2031 de mover cada variable, con las otras dos en su valor del escenario base. Base: 10.375 millones.",
      "ex12.png",
      "an&aacute;lisis de sensibilidad del modelo de flujo de caja.",
      "el bono no aparece en las barras porque para 2031 ya est&aacute; amortizado. Pesa en 2028 y 2029, los dos primeros a&ntilde;os del mandato, y no se proyecta ac&aacute;: el modelo est&aacute; en pesos constantes y TAMAR es una tasa nominal, as&iacute; que su costo real depende de la inflaci&oacute;n y ese dato no existe.") + """

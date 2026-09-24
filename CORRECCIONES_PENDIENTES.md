@@ -1645,3 +1645,45 @@ Urbanismo abierto en sus cinco subfunciones, y la función Agua potable y alcant
 39 páginas; la más alta mide 2.232 pt. 49 exhibits del 1 al 49 sin saltos (30 cuadros, 19 gráficos).
 Nueve variantes de fuente, sin sustituciones. Pies correctos. Índice con el título nuevo del 2.4. Cero
 viudas y huérfanas.
+
+# LAS TRES, Y EL CUADRO DEL 3.5 · APLICADAS
+
+1. Habilitaciones: salió de los 1.855,4 M. El cuadro 40 paga "Salud y automatización de tareas de la
+   planta"; el 4.11 dice que salud y automatización los paga la contratación del capítulo 5, y que
+   habilitaciones y analítica de seguridad salen de la reasignación del capítulo 3 (1.200 M).
+   Cuadro 18 contra cuadro 40, fila por fila: no hay otra propuesta contada dos veces. Ambiente,
+   educación y apoyo escolar no aparecen en el 40; formación, contratación y vivienda no aparecen en
+   el 18.
+2. Educación: 2.064 en el 5.8, el cuadro 12 y el cuadro 18. Total reasignado 7.799 en el cuadro 18, el
+   19 y el 3.4. Filas: 3.455 + 2.064 + 1.080 + 1.200 = 7.799. Porcentajes sin cambio: 2,4%, 8,9%, 31%,
+   50,3% y 49,7%. En el documento no queda ningún 7.794, 7.906 ni 2.059.
+   Modelo fiscal: el Excel MODELO_FISCAL_SAN_ISIDRO no está en el repo ni en el Drive; la hoja
+   Programas no se pudo leer. El modelo del repo (03_scripts/modelo.py) no tiene educación ni ambiente.
+3. 3.4: "entra dentro del 49,7% del gasto flexible que queda libre con todo sumado". El copete del
+   cuadro 18 dice ahora "todos salen del 58,6% flexible que dejan libre las dos propuestas grandes".
+   Los dos están en la página 11. El 58,6% del 5.1 queda como estaba.
+4. Cuadro de la cobranza (3.5): el error estaba en la columna "Base, sin programa", no en la de
+   cobranza. Corregida desde data/modelo_flujo_caja.csv, escenario base: 2028 +1.645, 2031 +10.375,
+   2037 +31.035. Verificado fila por fila contra el escenario reformista_percepcion: +3.166, +12.664,
+   +22.744 y +33.943; diferencias +1.521, +2.289, +2.582 y +2.908. Todas cuadran.
+   El mismo error estaba en otros dos lugares y se corrigió: la sorpresa del 3.2 ("pasa de +12.664",
+   dos veces) y el copete del gráfico de sensibilidad ("Base: 12.664"). La base de 2031 es 10.375:
+   data/sensibilidad.csv da −2.946 con recursos propios al 0,95% y +5.514 con coparticipación al −3,5%,
+   y las barras del gráfico son esas diferencias contra 10.375.
+
+## PARA DECIDIR
+1. 4.11: el equipo de la plataforma (39 personas, 1.273 M) tiene una fila "Salud y habilitaciones", 6
+   personas, que construye turnos, guardias y consulta previa. Salud ya se paga en el cuadro 40 y
+   habilitaciones en el 18.
+2. 3.5, cuadro de la cobranza: el copete dice que el programa se paga con la base de valuación y que la
+   columna suma la cobranza "además". En el modelo, esa columna es el programa pagado sólo con la
+   cobranza al 92%, sin la base de valuación. El pull y el pie del gráfico dicen "vuelve al nivel de
+   2024", pero en 2024 la percepción fue 93,51%.
+
+## ENCONTRADO, SIN TOCAR
+- data/RESUMEN_MODELO.md está desactualizado contra data/modelo_flujo_caja.csv (dice +3.177 y +12.678
+  donde el CSV da +3.166 y +12.664). No está en el documento.
+
+## EL DOCUMENTO
+39 páginas; la más alta mide 2.232 pt. 49 exhibits del 1 al 49 sin saltos. Fuentes sin sustituciones.
+Pies correctos. Cero viudas y huérfanas.
