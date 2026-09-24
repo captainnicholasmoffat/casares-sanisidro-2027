@@ -9,8 +9,8 @@ explicar&iacute;a a un vecino. Si alguna no se entiende, el problema es del docu
 <colgroup><col style="width:158pt"><col></colgroup>
 <tr class="hd"><th>Palabra</th><th>Qu&eacute; quiere decir</th></tr>
 <tr><td class="l">Devengado</td><td>Lo que el Municipio se comprometi&oacute; a cobrar o a pagar, haya entrado el dinero o no. Es la factura, no el pago.</td></tr>
-<tr><td class="l">Percibido</td><td>Lo que efectivamente entr&oacute; a la caja. La diferencia entre devengado y percibido es lo que se factur&oacute; y no se cobr&oacute;.</td></tr>
-<tr><td class="l">Percepci&oacute;n</td><td>Qu&eacute; porcentaje de lo facturado termin&oacute; cobr&aacute;ndose. En 2024 fue el 93,51%; en 2025, el 89,32%.</td></tr>
+<tr><td class="l">Percibido</td><td>Lo que efectivamente entr&oacute; a la caja. La diferencia con lo devengado no es s&oacute;lo deuda: incluye los descuentos y las exenciones que el Municipio aplica sobre lo ya facturado.</td></tr>
+<tr><td class="l">Percepci&oacute;n</td><td>Qu&eacute; porcentaje de lo devengado termin&oacute; entrando a la caja.</td></tr>
 <tr><td class="l">Gasto r&iacute;gido</td><td>Lo que no se puede dejar de pagar dentro del a&ntilde;o: sueldos, deuda y contratos ya firmados. En San Isidro es el 73,1%.</td></tr>
 <tr><td class="l">Gasto flexible</td><td>Lo que queda y s&iacute; se puede decidir cada a&ntilde;o: 87.326 millones, el 26,9%. De ah&iacute; sale todo lo que este programa propone.</td></tr>
 <tr><td class="l">Ahorro corriente</td><td>Lo que sobra despu&eacute;s de pagar el funcionamiento diario, antes de invertir en obra.</td></tr>

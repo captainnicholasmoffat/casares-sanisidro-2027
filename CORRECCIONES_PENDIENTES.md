@@ -1800,3 +1800,70 @@ contribuyente del 3.5, riesgo "La percepción no se recupera" del 6.6, y el 5.8.
 gráficos). Nueve variantes de fuente, sin sustituciones. Pies correctos. Índice con las entradas nuevas.
 Cero viudas y huérfanas. Las 40 páginas miradas una por una: ninguna columna izquierda termina antes que
 la derecha.
+
+# 138 · LA COBRANZA NO FINANCIA NADA · APLICADA (EL MODELO, SIN TOCAR)
+
+Respuestas de Nick del 24/09 a las seis preguntas, y la fuente de septiembre. Los informes 09 a 14 no
+existen más (se borró el contenedor): no se piden.
+
+## LO QUE SE VERIFICÓ ANTES DE ESCRIBIR
+- Ordenanza Fiscal 2025 (Ord. 9379, INLEG-2024-00046169-SI-DELE, Boletín del 26/12/2024), leída en el
+  PDF escaneado: art. 51, descuento DE HASTA EL 10% a quien no tiene deuda y paga la tasa anual por
+  adelantado antes del último día hábil de febrero; además, una primera fecha "con un descuento por pago
+  anticipado" SIN porcentaje (lo fija la Autoridad de Aplicación) y un 5% en la cuota 6 para quien paga
+  en término. Por eso el documento dice "hasta el 10%": el 10% + 10% o 20% no figura en la ordenanza. La
+  Impositiva 2025 (Ord. 9380) no trae porcentaje de descuento.
+- Art. 58 inc. 3: los jubilados con ingresos de hasta tres jubilaciones mínimas "podrán ser eximidos
+  hasta en un 100%" (única vivienda, lote hasta 500 m², construido hasta 200 m²).
+- Art. 143: exentas de patente las motos de hasta 150cc. Y los vehículos de MÁS DE VEINTE AÑOS: la
+  ordenanza dice 20, no 10. El "de 20 a 10 años" de la fuente no se escribió.
+- Régimen de regularización: Decreto 1438/2024 (octubre de 2024), quita de recargos e intereses de hasta
+  70% al contado según la fecha de adhesión (70, 60 o 50%) y planes de hasta 24 cuotas. No coincide con
+  "50% al contado en multas e intereses", y corre entre noviembre de 2024 y enero de 2025: no se escribió.
+- La mora del 20,17% y 1,84 millones es de deudas de las personas con bancos y otros prestamistas
+  (relevamiento del defensor del Pueblo adjunto, Walter Martello, datos a septiembre de 2026; El Día,
+  20/09/2026), no de tasas municipales. Así quedó escrito.
+
+## LO QUE CAMBIÓ
+1. 2.2 salió entero: título, cuadro de la percepción, gráfico "es mora" y los 14.115 M. El capítulo 2
+   queda en 2.1 a 2.4, "en tres líneas", y su entrada ya no nombra la cobranza. Índice renumerado.
+2. El dato 93,51% / 89,32% queda UNA vez, en el 3.2, al lado del cuadro de los cuatro parámetros, con
+   la explicación en un recuadro: el Municipio decidió cobrar menos y lo anunció; el descuento se
+   aplica al pagar lo ya facturado; una parte sí es deuda (la mora provincial); esos 35.994 M no son
+   plata disponible y el programa no se paga con ellos. La fila del cuadro dice "facturados y no
+   percibidos". El glosario ya no repite las cifras.
+3. Salieron del 3.5 el recuadro de la cobranza, el cuadro del programa pagado con la cobranza al 92%,
+   el pull de "309.236 a 316.461" y el gráfico asociado. El gráfico de escenarios ya no tiene la línea
+   "cobrando mejor" (doc/charts.py, g_escenarios) y su nota dice que el modelo se está actualizando
+   para correr el programa pagado con la base de valuación.
+4. Salieron "y en 2027 si se cobra mejor" (entrada del capítulo 3 y 3.3), "y un año antes si se cobra
+   mejor" y "y el resultado fiscal mejora" (3.7): las dos salían del escenario de la cobranza.
+5. 3.6: el riesgo de la percepción queda como sensibilidad del modelo, sin repetir la caída ni "ya se
+   está materializando".
+6. 3.5, el tope al descuento del buen contribuyente, reescrito: ponerle tope de valuación, no
+   eliminarlo; la misma lógica que la base; no se tocan las exenciones a jubilados, discapacidad y motos.
+7. 3.5, la salvedad de Boulogne completo (1,8 contra 2,4, por La Horqueta) y la base del cálculo
+   (69.258 parcelas, 3.881 ha, 94,5% de la tabla), en las notas del cuadro de la tabla municipal.
+8. 4.6: salió el recuadro "Lo que esto tiene que ver con la cobranza".
+9. 5.8: salió la mención a Casares (comentada en doc/content_c.py para reponerla); la UNSO se queda.
+10. 6: trece metas (sin la del 92%), once riesgos (sin "La percepción no se recupera"), sin la fila del
+    calendario "Meses 24–30". Actualizado en la entrada del 6, el 6.3, el cuadro, el 6.7, el 4.11, el
+    cierre y el anexo (siete con artículo, seis sin). "Los tres fiscales" del 6.6 pasa a "los dos".
+11. Nota de método, notas de cada capítulo y fuentes del texto: una sola página, la última (2.009 pt).
+    "Diecisiete gráficos".
+12. Capítulo 1: "lo adjudicado" en vez de "la obra" en los dos subtítulos y el texto; sin las 41
+    designaciones de inspector: 3.013 actos, 49,8% / 50,2%, 52,6% en 2013, 46,6% en 2015, 40,4% en
+    2017, y la exclusión explicada en la nota del capítulo 1. El "62% al 82%" no se pudo recalcular (los
+    totales por año no están en el repo) y quedó como estaba.
+
+## EL MODELO, SIN TOCAR (03_scripts y data/)
+El escenario reformista_percepcion sigue en el modelo y en data/*.csv, y los CSV no reproducen con el
+script actual (percepción y sensibilidad). La etiqueta "Percepción de recursos: 89,32%, −14 M" del
+gráfico de sensibilidad es ese desfase. Espera la decisión de Nick.
+
+## EL DOCUMENTO
+39 páginas. 45 exhibits del 1 al 45 sin saltos (28 cuadros, 17 gráficos). Nueve variantes de fuente,
+sin sustituciones. Pies e índice bien. Cero viudas; 118 bloques de columnas con la izquierda llena.
+Barrido: ningún "cobrando mejor", "14.115", "volver a cobrar", "dejó de cobrar", "92%", "Casares",
+"catorce metas" ni "doce cosas". "Mora" queda sólo en la explicación del 3.2 y su fuente. "Nivel de
+2024" queda sólo en educación, que es otra cosa.

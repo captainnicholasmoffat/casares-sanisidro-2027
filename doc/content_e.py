@@ -10,7 +10,7 @@ escuch&oacute;, y c&oacute;mo, para que el empleo y la vivienda no aparecieran n
 <p>La respuesta no est&aacute; en el tama&ntilde;o del presupuesto: hay que cambiar
 <span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo.</p>
 <p>Por eso este programa promete poco y lo promete con fecha: diecis&eacute;is compromisos en cien
-d&iacute;as y catorce metas con l&iacute;nea de base fijada hoy.</p>
+d&iacute;as y trece metas con l&iacute;nea de base fijada hoy.</p>
 <p>Y una pieza que sostiene a todas las dem&aacute;s: <b>una inteligencia artificial nativa del
 Municipio</b>, que para cada vecino es como tener a disposici&oacute;n a alguien que sabe todo del
 Municipio. Porque decidir bien exige leer, y nadie tiene las horas.

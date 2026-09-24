@@ -3,15 +3,19 @@ from content_a import RH
 
 # Correccion 133: las fuentes que colgaban de un parrafo salen de la pagina y
 # vienen aca. Las de cuadros y graficos se quedan pegadas a su exhibit.
-FUENTES = dict(id="fuentes", runhead=RH, html="""
-<h1>Anexo &middot; Las fuentes</h1>
-<div class="stand">Cada cuadro y cada gr&aacute;fico lleva su fuente debajo. Las de lo que afirma el
-texto est&aacute;n ac&aacute;, en el orden en que aparecen.</div>
+# Correccion 138 (respuesta 6): van en la misma pagina que la nota de metodo y
+# las notas de cada capitulo, al final del documento.
+FUENTES_HTML = """
+<div class="hairline"></div>
+<h2>Las fuentes de lo que afirma el texto</h2>
+<p class="tight">Cada cuadro y cada gr&aacute;fico lleva su fuente debajo. &Eacute;stas son las de lo que
+afirma el texto, en el orden en que aparecen.</p>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>
 <tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>
 <tr><td class="l">Qu&eacute; proponemos hacer, punto 5 &middot; el 1,84 de la aplicaci&oacute;n de reclamos</td><td>El 1,84: las 49 rese&ntilde;as posteriores al 10 de diciembre de 2023 de la aplicaci&oacute;n municipal de reclamos &laquo;San Isidro Digital&raquo; en Google Play, 39 de ellas de una o dos estrellas; en App Store, otras cinco del mismo per&iacute;odo promedian 1,60. Relevamiento propio del 21 de septiembre de 2026. Los datos crudos, con la fecha y el puntaje de cada rese&ntilde;a y sin nombres de usuarios, est&aacute;n en el repositorio, en <b>informes/05_resenas_app_reclamos.csv</b>, y la metodolog&iacute;a en <b>informes/05_que_dicen_los_vecinos.md</b>. Con la gesti&oacute;n anterior la misma aplicaci&oacute;n promediaba 2,22: no es un problema nuevo, es uno que no se resolvi&oacute; y se agrav&oacute;.</td></tr>
-<tr><td class="l">2.3 &middot; lo que se busc&oacute; y no estaba</td><td>Verificado el 20 de septiembre de 2026, sobre el sitio municipal y el archivo de la Wayback Machine.</td></tr>
+<tr><td class="l">2.2 &middot; lo que se busc&oacute; y no estaba</td><td>Verificado el 20 de septiembre de 2026, sobre el sitio municipal y el archivo de la Wayback Machine.</td></tr>
+<tr><td class="l">3.2 &middot; por qu&eacute; baj&oacute; la percepci&oacute;n</td><td>Ordenanza Fiscal 2025 (Ordenanza 9379), publicada en el Bolet&iacute;n Oficial municipal el 26 de diciembre de 2024: art&iacute;culo 51, el descuento de hasta el 10% a quien paga la tasa del a&ntilde;o por adelantado y sin deuda; art&iacute;culo 58, inciso 3, la exenci&oacute;n a los jubilados que cobran hasta tres haberes m&iacute;nimos; art&iacute;culo 143, la exenci&oacute;n de patente a las motos de hasta 150cc. Las m&aacute;s de 400 tasas eliminadas o simplificadas, anunciadas por el Municipio en noviembre de 2024 y aprobadas por el Concejo el 11 de diciembre de 2024, seg&uacute;n &Aacute;mbito y Zona Norte Hoy. La mora de los bonaerenses, del relevamiento del defensor del Pueblo adjunto de la Provincia, Walter Martello, con datos a septiembre de 2026, seg&uacute;n El D&iacute;a del 20 de septiembre de 2026.</td></tr>
 <tr><td class="l">3.5 &middot; el bono de 30.000 millones</td><td>Ordenanza Preparatoria N&ordm; 1, expediente 97341-S-2026, aprobada por la Asamblea de Concejales y Mayores Contribuyentes el 8 de julio de 2026; condiciones y resultado de la colocaci&oacute;n del 13 de agosto de 2026 seg&uacute;n la informaci&oacute;n difundida por el Municipio y por el Banco de la Provincia de Buenos Aires, organizador y colocador de la emisi&oacute;n.</td></tr>
 <tr><td class="l">5.3 &middot; qu&eacute; hace hoy el Municipio con el empleo</td><td>Las 131 empresas y los 600 puestos son cifras comunicadas por el propio Municipio, y as&iacute; se las trata. La ausencia de cl&aacute;usulas de empleo local es relevamiento propio de pliegos y normativa publicada, al 21 de septiembre de 2026.</td></tr>
 <tr><td class="l">5.5 &middot; el urbanismo que no pasa por el Concejo</td><td>El conteo de decretos es relevamiento propio del Bolet&iacute;n Oficial Municipal, febrero de 2024 a septiembre de 2026. Las objeciones al C&oacute;digo de Ordenamiento Urbano y la medida cautelar de Boulogne son de la cobertura de prensa local, con la fecha y la localidad de cada dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</td></tr>
@@ -20,4 +24,4 @@ texto est&aacute;n ac&aacute;, en el orden en que aparecen.</div>
 <tr><td class="l">5.7 &middot; el mapa de incidentes que no existe</td><td>Verificado el 20 de septiembre de 2026, sobre el sitio municipal y el archivo de la Wayback Machine.</td></tr>
 <tr><td class="l">5.7 &middot; las c&aacute;maras</td><td>Las cifras de c&aacute;maras e inversi&oacute;n son comunicaciones del propio Municipio entre 2025 y 2026, y as&iacute; se las trata. El relevamiento de testimonios vecinales &mdash;Reddit, peticiones, rese&ntilde;as de las aplicaciones municipales y prensa local, con la fecha y la localidad de cada dato&mdash; est&aacute; en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio. <b>Verificado el 21 de septiembre de 2026.</b></td></tr>
 </table>
-""")
+"""

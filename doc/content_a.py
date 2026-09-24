@@ -65,10 +65,9 @@ _IDX = [
  ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap1b"),
  ("g", "2 &middot; La gesti&oacute;n, medida", None),
  ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
- ("i", "2.2 &nbsp;Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;", "cap2"),
- ("i", "2.3 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
- ("i", "2.4 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
- ("i", "2.5 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
+ ("i", "2.2 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
+ ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
+ ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en tres l&iacute;neas", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que gobiernan el futuro fiscal", "cap3a"),
@@ -117,16 +116,15 @@ _IDX = [
  ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
- ("g", "Nota de m&eacute;todo", None),
- ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
- ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
- ("g", "Anexo &middot; Las fuentes", None),
- ("i", "De d&oacute;nde sale lo que afirma el texto", "fuentes"),
  ("g", "Anexo &middot; El articulado", None),
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
  ("i", "Las cinco ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
  ("g", "Glosario", None),
  ("i", "Dieciocho palabras, explicadas", "glosario"),
+ ("g", "Nota de m&eacute;todo", None),
+ ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
+ ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
+ ("i", "Las fuentes de lo que afirma el texto", "metodo"),
 ]
 
 def _indice():
@@ -314,20 +312,20 @@ y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y funci&oacute;n 3.
 sueldos, contratos de servicio y obra. Los 49.270 millones de residuos son sobre todo el contrato de
 recolecci&oacute;n, que es un servicio diario y no una inversi&oacute;n. El agrupamiento es el del
 clasificador provincial (RAFAM), no una elecci&oacute;n de este programa.</p>
-<h3>La mitad de la obra se adjudicaba a empresas de afuera del partido</h3>
+<h3>La mitad de lo adjudicado iba a empresas de afuera del partido</h3>
 <div class="cols">
 <p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
-domicilio de la empresa a la que se le adjudica cada obra.</p>
-<p><b>Entre 2002 y 2017, de los 3.054 actos de adjudicaci&oacute;n con domicilio publicado, el 49,6% fue
-a empresas con domicilio en San Isidro y el 50,4% a empresas de afuera.</b> Y la proporci&oacute;n local
-ven&iacute;a cayendo a&ntilde;o a a&ntilde;o: 53,1% en 2013, 46,5% en 2015, <b>39,4% en 2017</b>.</p>
+domicilio de la empresa a la que le adjudica una obra, un servicio o una compra.</p>
+<p><b>Entre 2002 y 2017, de los 3.013 actos de adjudicaci&oacute;n con domicilio publicado, el 49,8% fue
+a empresas con domicilio en San Isidro y el 50,2% a empresas de afuera.</b> Y la proporci&oacute;n local
+ven&iacute;a cayendo: 52,6% en 2013, 46,6% en 2015, <b>40,4% en 2017</b>.</p>
 <p>Entre 2011 y 2017 el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
 bajo la gesti&oacute;n anterior, y la actual no la retom&oacute;.</b> De los 573 decretos de
 adjudicaci&oacute;n publicados desde diciembre de 2023, <span class="sg">ninguno dice d&oacute;nde
 est&aacute; el que cobra</span>.</p>
 </div>
 
-<h3>En cu&aacute;ntas manos queda la obra</h3>
+<h3>En cu&aacute;ntas manos queda lo adjudicado</h3>
 <div class="cols">
 <p>En los 407 decretos que nombran a cada empresa con su importe &mdash;116.343 millones de pesos
 corrientes, 236 adjudicatarios&mdash;, <b>los diez primeros se llevan el 54,5% y los veinticinco
@@ -413,21 +411,22 @@ donde est&aacute; el problema.</li>
 
 
 # =====================================================================
-# NOTA DE METODO - va al final, antes del anexo
+# NOTA DE METODO - va al final del documento, con las notas de cada capitulo
+# y las fuentes del texto (content_f.py)
 # =====================================================================
 METODO = dict(id="metodo", runhead=RH, html="""
 <h1>Nota de m&eacute;todo</h1>
 <div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
 <p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada
-cuadro y de cada gr&aacute;fico va debajo de &eacute;l; la de lo que afirma el texto, en el anexo de
-fuentes.</p>
+cuadro y de cada gr&aacute;fico va debajo de &eacute;l; la de lo que afirma el texto, al final de esta
+nota.</p>
 <div class="cols">
 <p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
 cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
+<p><span class="sg">El modelo, los datos, las series y los diecisiete gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
 verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
@@ -452,9 +451,10 @@ constantes de diciembre de 2025 salvo indicaci&oacute;n expresa.</p>
 <p>Las seis zonas de 1.1 son los l&iacute;mites de las localidades del partido seg&uacute;n OpenStreetMap,
 proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su
 punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles.</p>
-<p>El domicilio de los adjudicatarios sale de 3.670 decretos de adjudicaci&oacute;n del Bolet&iacute;n
-Oficial municipal. La proporci&oacute;n es de actos y no de montos, porque los importes est&aacute;n en
-pesos corrientes de cada a&ntilde;o. La concentraci&oacute;n usa los 407 decretos que nombran a cada
+<p>El domicilio de los adjudicatarios sale de 3.670 decretos del Bolet&iacute;n Oficial municipal que
+lo publican. La proporci&oacute;n de 2002 a 2017 excluye 41 designaciones de inspector t&eacute;cnico,
+porque no son adjudicaciones a terceros: el domicilio que publican es el del inspector. Es de actos y
+no de montos, porque los importes est&aacute;n en pesos corrientes de cada a&ntilde;o. La concentraci&oacute;n usa los 407 decretos que nombran a cada
 empresa con su importe; sumando los 144 que informan s&oacute;lo un total, baja al 42,1%.</p>
 <p>Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de
 ejecuci&oacute;n RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales

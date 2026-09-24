@@ -7,7 +7,7 @@ from content_a import RH, ex, exhead, fig, duo
 C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
     "La barranca sobre el r&iacute;o. Ilustraci&oacute;n.") + """
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
-<div class="stand">Este cap&iacute;tulo audita el plan de gobierno vigente contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega, la cobranza que se deterior&oacute; 4,19 puntos en un a&ntilde;o y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
+<div class="stand">Este cap&iacute;tulo audita el plan de gobierno vigente contra sus propias metas, con sus propios documentos, y muestra qu&eacute; queda afuera de ellas: el servicio que no llega y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
 <h2><span class="n">2.1</span>Ejecutar el presupuesto no es prestar el servicio</h2>
 <p class="lead">Que una partida se devengue al 99% prueba que el dinero se gast&oacute;. No prueba que la
@@ -56,38 +56,7 @@ Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y 
 programa se compromete a hacer</b>, y es la prueba m&aacute;s simple de si el servicio llega parejo.</p>
 </div>
 
-<h2><span class="n">2.2</span>Lo que s&iacute; se puede probar: la cobranza se deterior&oacute;</h2>
-<div class="cols">
-<p>El Municipio publica cu&aacute;nto factura y cu&aacute;nto cobra.</p>
-</div>
-""" + exhead("c", "En un a&ntilde;o, la percepci&oacute;n cay&oacute; 4,19 puntos",
-             "Recursos corrientes, rubro 1 de la ejecuci&oacute;n presupuestaria.") + """
-<table>
-<colgroup><col style="width:80pt"><col><col><col><col></colgroup>
-<tr class="hd"><th>A&ntilde;o</th><th class="r">Devengado</th><th class="r">Percibido</th>
-<th class="r">Percepci&oacute;n</th><th class="r">Facturado y no cobrado</th></tr>
-<tr><td class="l">2024</td><td class="n">229.946 M</td><td class="n">215.023 M</td><td class="n"><b>93,51%</b></td><td class="n">14.922 M</td></tr>
-<tr class="hi"><td class="l">2025</td><td class="n">337.149 M</td><td class="n">301.155 M</td><td class="n"><b>89,32%</b></td><td class="n"><b>35.994 M</b></td></tr>
-</table>
-<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la ejecuci&oacute;n presupuestaria
-trimestral del Municipio de San Isidro, informes anuales 2024 y 2025.</p>
-<p class="cap"><b>Nota:</b> no incluye recursos de capital: el rubro 2.1 se cobra entero y sumarlo infla
-la tasa de percepci&oacute;n del a&ntilde;o en que el Municipio vende un activo.</p>
-""" + ex("g", "En 2025 quedaron 35.994 millones sin cobrar de lo ya facturado",
-     "Recursos corrientes devengados contra percibidos. La franja punteada es mora: dinero que el Municipio tiene derecho a cobrar y no entr&oacute;.",
-     "ex07.png",
-     "elaboraci&oacute;n propia sobre la ejecuci&oacute;n presupuestaria trimestral del Municipio de San Isidro, informes anuales 2024 y 2025.") + """
-<div class="cols">
-<h3 style="margin-top:0">Cu&aacute;nto vale eso</h3>
-<p>Los dos a&ntilde;os corresponden a la misma gesti&oacute;n. No hay cambio de administraci&oacute;n, ni
-de sistema tributario, ni de ordenanza fiscal que explique el salto.</p>
-<p>Si en 2025 el Municipio hubiera cobrado con la eficacia que &eacute;l mismo tuvo en 2024,
-habr&iacute;a recaudado <b>14.115 millones de pesos m&aacute;s</b>. Para dimensionarlo: son
-<b>83 veces</b> lo que San Isidro gast&oacute; ese a&ntilde;o en su programa de Apoyo y Promoci&oacute;n
-al Empleo, y <b>42 veces</b> lo que gast&oacute; en Infraestructura Habitacional.</p>
-</div>
-
-<h2><span class="n">2.3</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
+<h2><span class="n">2.2</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
 <p>El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente, se
 compromete en su meta III.4.c a publicar un &iacute;ndice de transparencia activa, y en la III.4.b fija un
 objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
@@ -122,7 +91,7 @@ Cuentas los haya aprobado. Se publica lo que se mide en los rankings de transpar
 dem&aacute;s queda donde nadie lo encuentra.</p>
 </div>
 
-<h2><span class="n">2.4</span>El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud</h2>
+<h2><span class="n">2.3</span>El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud</h2>
 <div class="cols">
 <p>&laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; define tres prioridades &mdash;Seguridad
 Ciudadana, Espacio P&uacute;blico y Ambiente, Innovaci&oacute;n&mdash;, <span class="sg">diecinueve
@@ -171,12 +140,10 @@ barrido, arbolado, alumbrado, residuos, tr&aacute;nsito, tr&aacute;mites y ciber
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
 
-<h2><span class="n">2.5</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">2.4</span>Lo que dice este cap&iacute;tulo, en tres l&iacute;neas</h2>
 <ol class="n">
 <li>En las 3.137 palabras de su plan de gobierno, hospitales y escuelas aparecen s&oacute;lo para
 se&ntilde;alizar sus esquinas.</li>
-<li>Su cobranza se deterior&oacute; 4,19 puntos en un a&ntilde;o, y dej&oacute; de percibir 14.115
-millones que &eacute;l mismo habr&iacute;a cobrado en 2024.</li>
 <li>Ejecutar el presupuesto no es prestar el servicio: el Municipio es cuarto de 106 en inversi&oacute;n
 en obra p&uacute;blica y aun as&iacute; registr&oacute; <b>setenta reclamos diarios de arbolado</b> y
 reconoci&oacute; una &laquo;deuda hist&oacute;rica&raquo; en algo que, dijo el intendente, <b>nunca se
@@ -195,7 +162,7 @@ est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra c
 C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
     "Bajada a la costa. Ilustraci&oacute;n.") + """
 <h1><span class="n">3</span>Los fondos</h1>
-<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028, y en 2027 si se cobra mejor. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</div>
+<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</div>
 
 <p>El d&eacute;ficit es estructural, no de un a&ntilde;o: en 2010 el Municipio cerr&oacute; con un
 d&eacute;ficit equivalente al 2,9% de sus ingresos, contra el 2,0% de 2025.</p>
@@ -229,8 +196,20 @@ diagn&oacute;sticos opuestos con los mismos datos.</p>
 <tr><td class="l">Crecimiento real de recursos propios</td><td class="n"><b>+1,95% anual</b></td><td class="n">recursos de origen municipal, 2010&ndash;2025</td></tr>
 <tr><td class="l">Ca&iacute;da del coeficiente de coparticipaci&oacute;n</td><td class="n"><b>&minus;2,196% anual</b></td><td class="n">1,9378% (2021) &rarr; 1,7731% (2025)</td></tr>
 <tr><td class="l">Rigidez del gasto</td><td class="n"><b>39,0% n&uacute;cleo &middot; 73,1% con contratos</b></td><td class="n">ejecuci&oacute;n por objeto 2025</td></tr>
-<tr><td class="l">Percepci&oacute;n de recursos</td><td class="n"><b>89,32%</b></td><td class="n">35.994 M facturados y no cobrados en 2025</td></tr>
+<tr><td class="l">Percepci&oacute;n de recursos</td><td class="n"><b>89,32%</b></td><td class="n">35.994 M facturados y no percibidos en 2025</td></tr>
 </table>
+<div class="callout a">
+<div class="clabel">La percepci&oacute;n baj&oacute; porque el Municipio decidi&oacute; cobrar menos</div>
+<p>El 89,32% de 2025 est&aacute; por debajo del 93,51% de 2024, y la diferencia <b>en buena parte no es
+mora: es descuento</b>. El Municipio decidi&oacute; cobrar menos, y lo anunci&oacute;: elimin&oacute; o
+simplific&oacute; m&aacute;s de 400 tasas, y la Ordenanza Fiscal 2025 da un descuento de hasta el 10% a
+quien paga la tasa del a&ntilde;o por adelantado y sin deuda, permite eximir de ella a los jubilados que
+cobran hasta tres haberes m&iacute;nimos y exime de la patente a las motos de hasta 150cc. El descuento se
+aplica al pagar lo ya facturado, as&iacute; que el percibido baja por dise&ntilde;o.</p>
+<p>Una parte s&iacute; es deuda, y no es culpa de nadie: la mora de los bonaerenses con bancos y otros
+prestamistas es del 20,17%, con 1,84 millones de personas en mora. <span class="sg">Esos 35.994 millones
+no son plata disponible, y este programa no se paga con ellos.</span></p>
+</div>
 
 <div class="cols">
 <p>San Isidro pierde participaci&oacute;n en las transferencias provinciales &mdash;de 1,938% en 2021 a
@@ -257,13 +236,13 @@ en reclamar en La Plata.</p>
 <span class="tag m">Modelado</span></p>
 <div class="cols">
 <p>El d&eacute;ficit se cierra solo hacia 2028 <span class="sg">si los par&aacute;metros hist&oacute;ricos
-se mantienen</span>, y en 2027 si se cobra mejor. El escenario adverso nunca sale del rojo.</p>
+se mantienen</span>. El escenario adverso nunca sale del rojo.</p>
 </div>
-""" + ex("g", "Sin cambios vuelve al azul en 2028; cobrando mejor, en 2027. En el adverso, nunca.",
-     "Resultado financiero proyectado. La reasignaci&oacute;n no mueve el resultado &mdash;es el mismo dinero&mdash;, as&iacute; que la l&iacute;nea de la propuesta refleja s&oacute;lo el efecto de cobrar mejor.",
+""" + ex("g", "Sin cambios vuelve al azul en 2028. En el adverso, nunca.",
+     "Resultado financiero proyectado, sin cambios de pol&iacute;tica y en el escenario adverso.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. Tampoco corre todav&iacute;a el programa pagado con la base de valuaci&oacute;n: el modelo se est&aacute; actualizando para incluirlo."))
 
 
 # =====================================================================
@@ -465,10 +444,16 @@ que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otr
 <p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la Ordenanza Impositiva municipal, anexo de
 valores de tierra, y sobre los valores por macizo publicados por ARBA. Las circunscripciones se cruzaron
 con localidades leyendo 299 decretos municipales que identifican inmuebles por secci&oacute;n y localidad.</p>
+<p class="cap"><b>Salvedad:</b> contra Boulogne completo la brecha no se sostiene: ah&iacute; es 1,8
+veces en la tabla municipal contra 2,4 en la provincial, porque esa circunscripci&oacute;n incluye secciones
+caras, como La Horqueta, que compensan al oeste. Por eso la comparaci&oacute;n se hace contra Boulogne
+oeste, las secciones VI-A a VI-D. Y el centro de San Isidro contra Boulogne da casi lo mismo en las dos
+escalas.</p>
 <p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
-escalas usan unidades distintas. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la valuaci&oacute;n
-provincial es de un reval&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se compara es c&oacute;mo
-ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+escalas usan unidades distintas. Cruza 69.258 parcelas &mdash;3.881 hect&aacute;reas&mdash; de la
+valuaci&oacute;n provincial con el 94,5% de la tabla municipal. Es s&oacute;lo tierra, sin
+construcci&oacute;n. Y la valuaci&oacute;n provincial es de un reval&uacute;o de 2016: <b>no es el mercado
+de hoy</b>. Lo que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
 <div class="cols">
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
@@ -481,11 +466,13 @@ al&iacute;cuota.</p>
 est&aacute;n por debajo del promedio subieran hasta &eacute;l, la parte tierra crecer&iacute;a 12,5%:
 <b>como m&aacute;ximo unos 8.600 millones</b>. <span class="sg">En la pr&aacute;ctica es menos</span>,
 porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos.</p>
-<p><b>Y hay una segunda fuente, reducida pero sin defensa.</b> El descuento por buen contribuyente
-&mdash;10% a quien paga el a&ntilde;o entero sin deuda&mdash; <b>no tiene tope de valuaci&oacute;n ni de
-monto</b>. Lo cobra igual el de Acassuso que el de Boulogne. Las exenciones con criterio social
-&mdash;jubilados hasta tres haberes m&iacute;nimos, personas con discapacidad, escasos recursos&mdash;
-<span class="sg">no se tocan</span>.</p>
+<p><b>Y una segunda fuente, m&aacute;s chica: un tope al descuento del buen contribuyente.</b> Hoy es de
+hasta el 10% para quien paga el a&ntilde;o por adelantado y sin deuda, y <b>no tiene tope de
+valuaci&oacute;n</b>: lo recibe igual una casa de Acassuso que una de Boulogne. La propuesta es ponerle un
+tope de valuaci&oacute;n, no eliminarlo. <span class="sg">Es la misma l&oacute;gica que la de la base: las
+dos piden m&aacute;s a las propiedades de mayor valor y no tocan a nadie m&aacute;s.</span> Las exenciones
+a los jubilados que cobran hasta tres haberes m&iacute;nimos, a las personas con discapacidad y a las motos
+de hasta 150cc no se tocan: van a quien las necesita.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Por qu&eacute; esto no es subir una tasa</div>
@@ -528,52 +515,12 @@ lleva la deuda a cero hacia 2029 por amortizaci&oacute;n y no toma deuda nueva e
 a&ntilde;o de la proyecci&oacute;n.</p>
 </div>
 
-<div class="callout g">
-<div class="clabel">Y la cobranza, que no es de d&oacute;nde sale el dinero</div>
-<p><b>Recuperar la cobranza es una meta de gesti&oacute;n, no la fuente de financiamiento de este
-programa.</b> El programa se paga actualizando la base de valuaci&oacute;n de 2008. Lo que la cobranza
-agrega es margen: <span class="sg">si se recupera, sobra; si no, el programa entra igual.</span></p>
-<p>Cobrar el 92% de lo facturado no cambia lo que paga nadie. <b>Cambia cu&aacute;ntos pagan.</b> La tasa
-por servicios generales, la de seguridad e higiene y las dem&aacute;s quedan como est&aacute;n: este
-programa no propone crear un tributo ni subir una al&iacute;cuota.</p>
-<p>Los 35.994 millones que quedaron sin cobrar en 2025 son deuda ya devengada: obligaciones que el propio
-Municipio liquid&oacute; y que alguien no pag&oacute;. Ir a buscarlas no le cuesta un peso a quien
-pag&oacute; en t&eacute;rmino. <span class="sg">Le cuesta exactamente a quien no pag&oacute;</span>, que
-es hoy quien se beneficia de que la cobranza se haya deteriorado.</p>
-<p>Y no es un objetivo ambicioso. El 92% est&aacute; por debajo del 93,51% que el propio Municipio
-alcanz&oacute; en 2024, con la misma ordenanza fiscal, el mismo padr&oacute;n y la misma
-gesti&oacute;n. No hay que inventar una capacidad: hay que recuperar una que exist&iacute;a en
-2024.</p>
-</div>
-""" + exhead("c", "El programa entra aunque la cobranza no mejore, y si mejora sobra margen",
-             "Millones de pesos constantes de diciembre de 2025. La columna del programa lo muestra pagado s&oacute;lo con la cobranza recuperada al 92%: aun as&iacute; sobra margen.") + """
-<table>
-<colgroup><col style="width:90pt"><col><col><col></colgroup>
-<tr class="hd"><th>A&ntilde;o</th><th class="r">Base, sin programa</th>
-<th class="r">Con programa y con la cobranza recuperada</th><th class="r">Diferencia</th></tr>
-<tr><td class="l">2028</td><td class="n">+1.645</td><td class="n"><b>+3.166</b></td><td class="n">+1.521</td></tr>
-<tr class="hi"><td class="l">2031</td><td class="n"><b>+10.375</b></td><td class="n"><b>+12.664</b></td><td class="n"><b>+2.289</b></td></tr>
-<tr><td class="l">2034</td><td class="n">+20.162</td><td class="n">+22.744</td><td class="n">+2.582</td></tr>
-<tr><td class="l">2037</td><td class="n">+31.035</td><td class="n">+33.943</td><td class="n">+2.908</td></tr>
-</table>
-<p class="cap"><b>Nota:</b> proyecci&oacute;n del modelo de flujo de caja, no dato observado.
-<span class="tag m">Modelado</span></p>
-<div class="pull"><p>El gasto total sube de 309.236 a 316.461 millones &mdash;este programa se ejecuta
-entero&mdash; sin que el resultado financiero empeore. Y aunque se pagara s&oacute;lo con la
-cobranza al 92%, 2031 cerrar&iacute;a 2.289 millones por encima. <b>El programa no necesita ese margen: lo tiene
-de reserva.</b></p></div>
-""" + ex("g", "El programa se ejecuta entero y el resultado fiscal no empeora",
-     "El &aacute;rea sombreada es el margen que queda si el programa se paga s&oacute;lo con la cobranza al 92%: 2.289 millones en 2031 y 2.908 en 2037. El programa no depende de que eso ocurra.",
-     "ex11.png",
-     "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.") + """
-
 <h2><span class="n">3.6</span>Qu&eacute; habr&iacute;a que vigilar</h2>
 <ol class="n">
 <li><b>Que la recaudaci&oacute;n propia crezca menos de 1% real anual.</b> Es el punto de quiebre: por
 debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
-<li><b>Que la percepci&oacute;n siga cayendo.</b> Ya cay&oacute; 4,19 puntos entre 2024 y 2025. Otros
-tres puntos &mdash;bajar del 89,32% al 86,32%&mdash; dejan el resultado de 2031 pr&aacute;cticamente en
-cero: &minus;305 millones. Es el riesgo m&aacute;s concreto, porque ya se est&aacute; materializando.</li>
+<li><b>Que la percepci&oacute;n baje.</b> Tres puntos menos dejan el resultado de 2031
+pr&aacute;cticamente en cero: &minus;305 millones.</li>
 <li><b>Que la coparticipaci&oacute;n se acelere.</b> El menos grave de los tres primeros, y el
 &uacute;nico de ellos que no depende del Municipio.</li>
 <li><b>Y la tasa del bono, que es la m&aacute;s concreta de las cuatro.</b> Es <b>variable, TAMAR
@@ -592,12 +539,11 @@ queda fuera del control del Municipio.</p></div>
 <h2><span class="n">3.7</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
 <ol class="n">
 <li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que el modelo corrige solo hacia
-2028 si nada empeora, y un a&ntilde;o antes si se cobra mejor.</li>
+2028 si nada empeora.</li>
 <li>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o: el 8,3% del gasto que el
 Municipio puede reasignar libremente. La obra vecinal del cap&iacute;tulo 4 no suma a esa cifra, porque es
 reasignaci&oacute;n.</li>
-<li>Se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota, y el
-resultado fiscal mejora.</li>
+<li>Se financia actualizando una base de valuaci&oacute;n que es de 2008, sin tocar la al&iacute;cuota.</li>
 <li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a TAMAR m&aacute;s 7%.
 De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
 de 2027.</li>

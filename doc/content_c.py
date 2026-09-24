@@ -264,18 +264,6 @@ convocatoria cay&oacute; edici&oacute;n tras edici&oacute;n.</p>
 participa ning&uacute;n dirigente pol&iacute;tico en ejercicio. Ni del oficialismo ni de la
 oposici&oacute;n. La comisi&oacute;n es de vecinos.</p>
 </div>
-<div class="callout g">
-<div class="clabel">Lo que esto tiene que ver con la cobranza del cap&iacute;tulo 3</div>
-<p>Hay un efecto documentado: <b>participar en la decisi&oacute;n
-presupuestaria mejora el cumplimiento tributario m&aacute;s que las sanciones</b>. En Ibanda, Uganda, el
-cumplimiento de las obligaciones tributarias <b>se multiplic&oacute; por diecis&eacute;is</b> despu&eacute;s
-del programa piloto de presupuesto participativo, al punto de que el gobierno provincial lo exigi&oacute;
-como requisito para girar fondos a las &aacute;reas locales.</p>
-<p>En 2025 los ingresos no tributarios del Municipio se facturaron 9,1% m&aacute;s que en 2024, en
-t&eacute;rminos reales, y se cobraron 2,3% m&aacute;s. <span class="sg">La distancia entre lo que se factura y lo que se paga no
-se cierra s&oacute;lo con intimaciones</span>: se cierra cuando el vecino sabe en qu&eacute; se gasta su
-tasa porque lo decidi&oacute; &eacute;l.</p>
-</div>
 
 
 <div class="cols">
@@ -741,7 +729,7 @@ antes de firmar un alquiler.</p>
 no un algoritmo.</p>
 <p><b>Y toda la publicaci&oacute;n de datos que este programa promete vive ac&aacute;</b>, no en un PDF
 suelto en un portal. Las siete medidas de transparencia, la ejecuci&oacute;n por zona, el tiempo de respuesta de los
-reclamos y las catorce metas del cap&iacute;tulo 6.</p>
+reclamos y las trece metas del cap&iacute;tulo 6.</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Un sistema donde la adjudicaci&oacute;n
@@ -1862,10 +1850,6 @@ desde afuera.</p>
 <p><b>Las instituciones con sede en el partido son dos:</b> la <b>Universidad Nacional de San Isidro</b>,
 p&uacute;blica y nacional, y la <b>Universidad de San Isidro &laquo;Dr. Pl&aacute;cido Mar&iacute;n&raquo;</b>,
 privada, en Avenida Libertador 17115, B&eacute;ccar.</p>
-<p><b>Y hay una trayectoria que viene con esto.</b> Jos&eacute; Luis Casares presidi&oacute; la
-comisi&oacute;n que cre&oacute; la UNSO, constituida en marzo de 2007 en el Teatro del Viejo Concejo de
-San Isidro y convocada por la CGT Regional Zona Norte. <span class="sg">Ponderar a favor de lo
-p&uacute;blico no es una declaraci&oacute;n: es coherencia con algo que ya hizo.</span></p>
 </div>
 
 <h2><span class="n">5.9</span>Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos <span class="tag v">Reasignaci&oacute;n</span></h2>
@@ -2214,7 +2198,7 @@ verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>El plan, con fechas</h1>
-<div class="stand">Catorce metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
+<div class="stand">Trece metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy permiten disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, es decir a
@@ -2296,15 +2280,14 @@ siendo del Ejecutivo y del Concejo.</p>
 </div>
 
 <h2><span class="n">6.3</span>Las metas verificables del mandato</h2>
-<p class="tight">Catorce metas, cada una con el n&uacute;mero de hoy al lado y la fuente p&uacute;blica
+<p class="tight">Trece metas, cada una con el n&uacute;mero de hoy al lado y la fuente p&uacute;blica
 que la comprueba.</p>
-""" + exhead("c", "Catorce metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
+""" + exhead("c", "Trece metas, con su l&iacute;nea de base fijada hoy y su fuente de verificaci&oacute;n") + """
 <table>
 <colgroup><col><col style="width:135pt"><col style="width:120pt"></colgroup>
 <tr class="hd"><th>Meta</th><th class="r">L&iacute;nea de base</th><th class="r">Fuente de verificaci&oacute;n</th></tr>
 <tr><td class="l">Reducir a la mitad los hogares sin cloacas en Boulogne y B&eacute;ccar</td><td class="n"><b>4.616 hogares</b> (Censo 2022)</td><td class="n">Registro de conexiones y pr&oacute;ximo censo</td></tr>
 <tr><td class="l">Llevar el gasto conjunto en empleo y vivienda a 7.730,9 M anuales</td><td class="n"><b>505,7 M</b> (2025)</td><td class="n">Ejecuci&oacute;n presupuestaria por programa</td></tr>
-<tr><td class="l">Llevar la percepci&oacute;n de recursos corrientes al 92%</td><td class="n"><b>89,32%</b> (2025)</td><td class="n">Estado de ejecuci&oacute;n acumulado anual</td></tr>
 <tr><td class="l">Llevar la funci&oacute;n ambiental al 1,5% del presupuesto</td><td class="n"><b>0,4%</b> (2025)</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">50% de la obra p&uacute;blica decidida por comisiones vecinales</td><td class="n"><b>0%</b></td><td class="n">Ordenanza y ejecuci&oacute;n presupuestaria</td></tr>
 <tr><td class="l">Imputar el gasto municipal con referencia territorial, de modo que exista el dato de cu&aacute;nto se gast&oacute; en cada zona</td><td class="n">El dato no existe: ning&uacute;n municipio del conurbano norte lo produce</td><td class="n">La ejecuci&oacute;n por zona, publicada en la aplicaci&oacute;n</td></tr>
@@ -2344,7 +2327,6 @@ que la comprueba.</p>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, publicados de manera continua</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa e inspecci&oacute;n grabada, y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2: 14.454 M, el 25%. Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
-<tr><td class="l">Meses 24&ndash;30</td><td>Percepci&oacute;n de recursos corrientes al 92%</td><td class="n">Estado de ejecuci&oacute;n acumulado anual</td></tr>
 <tr><td class="l">Mes 36</td><td>A&ntilde;o 3: 21.681 M, el 37,5%. Funci&oacute;n ambiental al 1,5%</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Meses 36&ndash;42</td><td>Ejecuci&oacute;n presupuestaria desagregada por zona, publicada</td><td class="n">El propio portal municipal</td></tr>
 <tr class="hi"><td class="l">Mes 48</td><td>A&ntilde;o 4: 28.908 M, el 50% de la obra p&uacute;blica decidida por los vecinos. Cloacas en Boulogne y B&eacute;ccar reducidas a la mitad</td><td class="n">Ejecuci&oacute;n y registro de conexiones</td></tr>
@@ -2369,7 +2351,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
-<p class="tight">Doce cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
+<p class="tight">Once cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
 """ + exhead("c", "El registro de riesgos, con su estado y lo que lo reduce") + """
 <table>
 <colgroup><col style="width:150pt"><col></colgroup>
@@ -2382,12 +2364,10 @@ vecinos antes del primer ciclo de asambleas.</p>
 <td>Es el a&ntilde;o en que el modelo se prueba y el que decide si contin&uacute;a. <b>Mitigaci&oacute;n:</b> la rampa empieza en 12,5% justamente para que un fracaso cueste un octavo y no la mitad; se interviene y se vuelve a constituir, con la partida retenida en la propia zona (4.6).</td></tr>
 <tr><td class="l">Captura de una comisi&oacute;n</td>
 <td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> un voto por persona, asamblea abierta con lista de asistentes publicada, rendici&oacute;n p&uacute;blica continua en la aplicaci&oacute;n, y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
-<tr class="hi"><td class="l">La percepci&oacute;n no se recupera</td>
-<td>Es el riesgo m&aacute;s concreto porque ya se est&aacute; materializando: cay&oacute; 4,19 puntos en un a&ntilde;o, y tres puntos m&aacute;s dejan el resultado de 2031 en cero. <b>Sin mitigaci&oacute;n propia:</b> si no se recupera, el programa entra igual, porque se paga actualizando la base de valuaci&oacute;n (3.5); lo que se pierde es margen.</td></tr>
 <tr><td class="l">Los recursos propios crecen menos de 1% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
-<td>El menos grave de los tres fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
+<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio.</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>
@@ -2411,9 +2391,18 @@ transmiten. Son diecis&eacute;is compromisos: seis ordenanzas en el Concejo, cua
 de &eacute;l y seis cosas que arrancaron.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>
-<li>Catorce metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica.</li>
+<li>Trece metas con l&iacute;nea de base fijada hoy y fuente de verificaci&oacute;n p&uacute;blica.</li>
 <li>Y una inteligencia artificial nativa del Municipio, que para cada vecino es como tener a
 disposici&oacute;n a alguien que sabe todo del Municipio: el turno, la guardia, el trabajo, la obra de su
 cuadra y lo que se gast&oacute; en su zona.</li>
 </ol>
 """)
+
+# Correccion 138 (respuesta 5): en el 5.8 sale la mencion a Casares hasta que
+# el candidato lea y apruebe el documento; la UNSO se queda. Para reponerla, al
+# final de las columnas de "A quien se le pregunta cuando hace falta un
+# estudio", despues del parrafo de las dos instituciones, va:
+# <p><b>Y hay una trayectoria que viene con esto.</b> Jos&eacute; Luis Casares presidi&oacute; la
+# comisi&oacute;n que cre&oacute; la UNSO, constituida en marzo de 2007 en el Teatro del Viejo Concejo de
+# San Isidro y convocada por la CGT Regional Zona Norte. <span class="sg">Ponderar a favor de lo
+# p&uacute;blico no es una declaraci&oacute;n: es coherencia con algo que ya hizo.</span></p>

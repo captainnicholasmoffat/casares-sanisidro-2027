@@ -217,8 +217,9 @@ def g_escenarios():
     M = _modelo()
     yrs = sorted(M["base"])
     fig, ax = plt.subplots(figsize=(W,2.5)); frame(ax)
-    for esc, col, rot, nud in [("reformista_percepcion", INK, "Con la propuesta,\ncobrando mejor", 1.8),
-                               ("base", SAGED, "Sin cambios", -2.8), ("adverso", OX, "Adverso", 0)]:
+    # Correccion 138: sale la linea "con la propuesta, cobrando mejor"
+    # (escenario reformista_percepcion). La cobranza no financia el programa.
+    for esc, col, rot, nud in [("base", SAGED, "Sin cambios", 0), ("adverso", OX, "Adverso", 0)]:
         if esc not in M: continue
         ys = [M[esc][a]/1000 for a in yrs]
         ax.plot(yrs, ys, color=col, lw=1.6)
@@ -226,10 +227,6 @@ def g_escenarios():
                 fontweight="semibold", va="center")
     ax.axhline(0, color=TAUPE, lw=.7)
     cero = next((a for a in yrs if M["base"][a] >= 0), None)
-    cerop = next((a for a in yrs if M.get("reformista_percepcion",{}).get(a,-1) >= 0), None)
-    if cerop and cerop != cero:
-        ax.annotate(f"con la propuesta\ncruza en {cerop}", (cerop,0), textcoords="offset points",
-                    xytext=(-2,14), ha="center", fontsize=6.6, color=INK, fontweight="semibold")
     if cero:
         ax.annotate(f"sin cambios\ncruza en {cero}", (cero,0), textcoords="offset points",
                     xytext=(6,-22), ha="center", fontsize=6.6, color=TAUPE)

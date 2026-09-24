@@ -238,24 +238,22 @@ conviene que se voten por separado.</p>
 </div>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
-<p class="tight">De las catorce metas del cap&iacute;tulo 6, <b>siete tienen su art&iacute;culo
-ac&aacute;</b>. Las otras siete no lo necesitan.</p>
+<p class="tight">De las trece metas del cap&iacute;tulo 6, <b>siete tienen su art&iacute;culo
+ac&aacute;</b>. Las otras seis no lo necesitan.</p>
 <div class="note">
 <p><b>Cuatro se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
 conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; abrir un
 centro de apoyo escolar en cada localidad; y extender el centro de formaci&oacute;n laboral a las seis
 zonas formando 928 personas por a&ntilde;o. <b>Una ordenanza que fijara esos montos de una vez
 atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone.</p>
-<p><b>Una depende de administrar, no de normar:</b> llevar la percepci&oacute;n de recursos corrientes
-al 92%. No hace falta una ordenanza para cobrar lo que ya est&aacute; devengado.</p>
-<p><b>La sexta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
+<p><b>La quinta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
-<p><b>Y la s&eacute;ptima se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
+<p><b>Y la sexta se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
 vivo y la reconstrucci&oacute;n de recorrido son configuraci&oacute;n del sistema de c&aacute;maras que
 el Municipio ya tiene, no una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
 se ordena por decreto.</p>
-<p><span class="sg">De las siete, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
+<p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
 la espera por especialidad, el precio unitario, el stock y la inserci&oacute;n laboral entran en el
 art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
 se puede es que el resultado se vea.</p>

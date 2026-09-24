@@ -35,7 +35,7 @@ C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
 C3B_A, C3B_B = split_at(B.C3B, '<h2><span class="n">3.5</span>', "cap3b2",
                         H_CONT.format(n=3, t="Los fondos"))
 C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
-C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.3</span>', "cap2b",
+C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.2</span>', "cap2b",
                      H_CONT.format(n=2, t="La gesti&oacute;n, medida"))
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
@@ -58,6 +58,11 @@ C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
 
+# nota de metodo, notas de cada capitulo y fuentes del texto: una sola pagina,
+# la ultima del documento (correccion 138, respuesta 6)
+METODO = dict(A.METODO)
+METODO["html"] = A.METODO["html"] + F.FUENTES_HTML
+
 # el anexo articulado entra en dos paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,
                         '<h2>V &middot; Ordenanza de asociaciones de parque</h2>',
@@ -65,7 +70,7 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, A.METODO, F.FUENTES, ORD_A, ORD_B, D.GLOSARIO]
+            C5A, C5A2, C5A3, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, D.GLOSARIO, METODO]
 
 # pagina 1 = tapa; el indice arranca en la 2
 A.PAGES.update({k: i + 3 for i, k in enumerate(
