@@ -558,8 +558,8 @@ pag&oacute; en t&eacute;rmino. <span class="sg">Le cuesta exactamente a quien no
 es hoy quien se beneficia de que la cobranza se haya deteriorado.</p>
 <p>Y no es un objetivo ambicioso. El 92% est&aacute; por debajo del 93,51% que el propio Municipio
 alcanz&oacute; en 2024, con la misma ordenanza fiscal, el mismo padr&oacute;n y la misma
-gesti&oacute;n. No hay que inventar una capacidad: hay que recuperar una que exist&iacute;a hace dos
-a&ntilde;os.</p>
+gesti&oacute;n. No hay que inventar una capacidad: hay que recuperar una que exist&iacute;a en
+2024.</p>
 </div>
 """ + exhead("c", "El programa entra aunque la cobranza no mejore, y si mejora sobra margen",
              "Millones de pesos constantes de diciembre de 2025. La columna del programa lo muestra pagado s&oacute;lo con la cobranza recuperada al 92%: aun as&iacute; sobra margen.") + """

@@ -1702,3 +1702,27 @@ Pies correctos. Cero viudas y huérfanas.
    por módulo". No se recalcula a ojo. Cuando llegue el número se aplica todo junto: sale la fila
    "Salud y habilitaciones", 33 personas, el monto nuevo en el total del cuadro y en el 4.11 (tres
    veces), el 15,5% de Ciencia y Técnica, el "menos del 9%" y la media línea de los módulos.
+
+# EL DESGLOSE DE LA PLATAFORMA · 33 PERSONAS, 1.026,7 M · APLICADO
+
+Método de Nick: sueldo mensual por perfil × 13, más 18% de infraestructura y licencias y 10% de
+auditoría externa, en pesos de diciembre de 2025. Cuentas rehechas: 33 personas; equipo 802,1 M;
+infraestructura 144,4 M; auditoría 80,2 M; total 1.026,7 M (802,1 × 1,28 = 1.026,69). El 12,5% de
+Ciencia y Técnica (1.026,7 / 8.205 = 12,51%) y el 7% de mantenimiento y embellecimiento
+(1.026,7 / 14.770,8 = 6,95%).
+
+1. Salió la fila "Salud y habilitaciones" del cuadro del 4.11.
+2. El cuadro se llama "Treinta y tres personas, abiertas por función" y tiene el desglose entero:
+   ocho filas con personas, sueldo mensual y costo anual, y los renglones de equipo, infraestructura,
+   auditoría y total. Nota: sueldo por trece (doce meses y aguinaldo), 18% y 10%; sueldos de referencia
+   de escala municipal, a presupuestar y licitar antes de comprometerse.
+3. El 4.11 dice 1.026,7 millones tres veces, 12,5% de Ciencia y Técnica y "el 7%" de mantenimiento y
+   embellecimiento.
+4. Media línea en "No se cuenta dos veces": los módulos de salud y de habilitaciones se construyen con
+   el presupuesto de su área y se integran a la misma plataforma; el vecino ve una sola cosa, el
+   presupuesto está en tres lugares y cada uno se paga una vez.
+5. Recuadro de la cobranza (3.5): "una que existía hace dos años" pasa a "una que existía en 2024".
+
+Verificado en el PDF: ningún 1.273, ningún 15,5% (el único 15,59% es de la tabla del censo), ningún
+"menos del 9%", ningún "Treinta y nueve". 39 páginas, 49 exhibits sin saltos, fuentes, pies, viudas y
+huérfanas bien.

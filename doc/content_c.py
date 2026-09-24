@@ -793,34 +793,39 @@ empleo, es planta encubierta.</p>
 </div>
 
 <h3>Cu&aacute;nto cuesta y de d&oacute;nde sale</h3>
-""" + exhead("c", "Treinta y nueve personas, abiertas por funci&oacute;n",
-             "Equipo en r&eacute;gimen.") + """
+""" + exhead("c", "Treinta y tres personas, abiertas por funci&oacute;n",
+             "Equipo en r&eacute;gimen, en pesos de diciembre de 2025.") + """
 <table>
-<colgroup><col style="width:250pt"><col><col></colgroup>
-<tr class="hd"><th>Funci&oacute;n</th><th class="r">Personas</th><th>Qu&eacute; construye</th></tr>
-<tr><td class="l">Desarrollo de producto</td><td class="n">10</td><td class="m">Partida vecinal, seguimiento de obra, publicaci&oacute;n de datos</td></tr>
-<tr><td class="l">Datos e inteligencia artificial</td><td class="n">7</td><td class="m">El asistente, la auditor&iacute;a de compras y la detecci&oacute;n de anomal&iacute;as</td></tr>
-<tr><td class="l">Salud y habilitaciones</td><td class="n">6</td><td class="m">Turnos, ocupaci&oacute;n de guardias, consulta previa, integraci&oacute;n con los sistemas provinciales</td></tr>
-<tr><td class="l">Video y transcripci&oacute;n</td><td class="n">3</td><td class="m">Transmisi&oacute;n de asambleas, transcripci&oacute;n y buscador</td></tr>
-<tr><td class="l">Mercado laboral</td><td class="n">3</td><td class="m">La bolsa de trabajo p&uacute;blica y privada</td></tr>
-<tr><td class="l">Seguridad de la aplicaci&oacute;n</td><td class="n">3</td><td class="m">Lo que despu&eacute;s auditan las universidades del partido</td></tr>
-<tr><td class="l">Producto y dise&ntilde;o</td><td class="n">3</td><td class="m">Que se entienda: es la mitad del problema</td></tr>
-<tr><td class="l">Soporte y mesa de ayuda</td><td class="n">3</td><td class="m">Atiende a quien no puede solo, que es de quien depende que esto no excluya</td></tr>
-<tr><td class="l">Coordinaci&oacute;n</td><td class="n">1</td><td class="m">&mdash;</td></tr>
-<tr class="hi"><td class="l">Total</td><td class="n"><b>39</b></td><td class="m"><b>1.273 M anuales, con infraestructura y auditor&iacute;a externa</b></td></tr>
+<colgroup><col style="width:150pt"><col style="width:48pt"><col style="width:64pt"><col style="width:64pt"><col></colgroup>
+<tr class="hd"><th>Funci&oacute;n</th><th class="r">Personas</th><th class="r">Sueldo mensual</th><th class="r">Por a&ntilde;o</th><th>Qu&eacute; construye</th></tr>
+<tr><td class="l">Desarrollo de producto</td><td class="n">10</td><td class="n">1,8 M</td><td class="n">234,0 M</td><td class="m">Partida vecinal, seguimiento de obra, publicaci&oacute;n de datos</td></tr>
+<tr><td class="l">Datos e inteligencia artificial</td><td class="n">7</td><td class="n">2,2 M</td><td class="n">200,2 M</td><td class="m">El asistente, la auditor&iacute;a de compras y la detecci&oacute;n de anomal&iacute;as</td></tr>
+<tr><td class="l">Video y transcripci&oacute;n</td><td class="n">3</td><td class="n">1,8 M</td><td class="n">70,2 M</td><td class="m">Transmisi&oacute;n de asambleas, transcripci&oacute;n y buscador</td></tr>
+<tr><td class="l">Mercado laboral</td><td class="n">3</td><td class="n">1,8 M</td><td class="n">70,2 M</td><td class="m">La bolsa de trabajo p&uacute;blica y privada</td></tr>
+<tr><td class="l">Seguridad de la aplicaci&oacute;n</td><td class="n">3</td><td class="n">2,0 M</td><td class="n">78,0 M</td><td class="m">Lo que despu&eacute;s auditan las universidades del partido</td></tr>
+<tr><td class="l">Producto y dise&ntilde;o</td><td class="n">3</td><td class="n">1,5 M</td><td class="n">58,5 M</td><td class="m">Que se entienda: es la mitad del problema</td></tr>
+<tr><td class="l">Soporte y mesa de ayuda</td><td class="n">3</td><td class="n">1,5 M</td><td class="n">58,5 M</td><td class="m">Atiende a quien no puede solo, que es de quien depende que esto no excluya</td></tr>
+<tr><td class="l">Coordinaci&oacute;n</td><td class="n">1</td><td class="n">2,5 M</td><td class="n">32,5 M</td><td class="m">&mdash;</td></tr>
+<tr class="hd"><td class="l">Equipo</td><td class="n">33</td><td class="n"></td><td class="n">802,1 M</td><td class="m">Sueldo mensual por trece</td></tr>
+<tr><td class="l">Infraestructura y licencias</td><td class="n"></td><td class="n"></td><td class="n">144,4 M</td><td class="m">El 18% del costo del equipo</td></tr>
+<tr><td class="l">Auditor&iacute;a externa</td><td class="n"></td><td class="n"></td><td class="n">80,2 M</td><td class="m">El 10% del costo del equipo</td></tr>
+<tr class="hi"><td class="l">Total</td><td class="n"><b>33</b></td><td class="n"></td><td class="n"><b>1.026,7 M</b></td><td class="m"><b>Por a&ntilde;o</b></td></tr>
 </table>
-<p class="cap"><b>Nota:</b> es una estimaci&oacute;n del equipo de este programa, no una cifra oficial ni
-un presupuesto aprobado. <span class="tag m">Estimado</span></p>
+<p class="cap"><b>Nota:</b> sueldo mensual por perfil por trece &mdash;doce meses y aguinaldo&mdash;, m&aacute;s
+18% de infraestructura y licencias y 10% de auditor&iacute;a externa. Son sueldos de referencia de escala
+municipal, a presupuestar y licitar antes de comprometerse. <span class="tag m">Estimado</span></p>
 <div class="cols">
-<p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.205 millones al a&ntilde;o.</b> Los 1.273 millones
-son el <b>15,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
-<p><b>Para dimensionarlo:</b> 1.273 millones es
-<span class="sg">menos del 9% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
+<p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.205 millones al a&ntilde;o.</b> Los 1.026,7 millones
+son el <b>12,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
+<p><b>Para dimensionarlo:</b> 1.026,7 millones es
+<span class="sg">el 7% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;.</p>
-<p><b>No se cuenta dos veces.</b> Estos 1.273 millones pagan la plataforma. Los desarrollos de salud y de
-automatizaci&oacute;n de tareas de la planta los paga la partida de contrataci&oacute;n del cap&iacute;tulo
-5, y habilitaciones y anal&iacute;tica de seguridad salen de la reasignaci&oacute;n del cap&iacute;tulo 3:
-son otros fondos y otro destino.</p>
+<p><b>No se cuenta dos veces.</b> Estos 1.026,7 millones pagan la plataforma. Los m&oacute;dulos de salud y
+de habilitaciones se construyen con el presupuesto de su &aacute;rea y se integran a la misma plataforma:
+salud, con la partida de contrataci&oacute;n del cap&iacute;tulo 5, igual que la automatizaci&oacute;n de
+tareas de la planta; habilitaciones, con la reasignaci&oacute;n del cap&iacute;tulo 3, igual que la
+anal&iacute;tica de seguridad. <span class="sg">El vecino ve una sola cosa; el presupuesto est&aacute; en
+tres lugares y cada uno se paga una vez.</span></p>
 <p><b>Y se licita.</b> Lo que queda comprometido no es el n&uacute;mero: es que el sistema exista y que lo
 construya gente del partido.</p>
 </div>
