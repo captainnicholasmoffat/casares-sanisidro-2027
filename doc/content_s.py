@@ -82,13 +82,4 @@ la que actualiza la base de valuaci&oacute;n y la que deroga los art&iacute;culo
 intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is
 compromisos y el cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
 
-<p class="cap"><b>Fuente del 1,84:</b> las 49 rese&ntilde;as posteriores al 10 de diciembre de 2023 de
-la aplicaci&oacute;n municipal de reclamos &laquo;San Isidro Digital&raquo; en Google Play, 39 de ellas
-de una o dos estrellas; en App Store, otras cinco del mismo per&iacute;odo promedian 1,60. Relevamiento
-propio del 21 de septiembre de 2026. Los datos crudos, con la fecha y el puntaje de cada rese&ntilde;a y
-sin nombres de usuarios, est&aacute;n en el repositorio, en
-<b>informes/05_resenas_app_reclamos.csv</b>, y la metodolog&iacute;a en
-<b>informes/05_que_dicen_los_vecinos.md</b>. <span class="sg">Con la gesti&oacute;n anterior la misma
-aplicaci&oacute;n promediaba 2,22: no es un problema nuevo, es uno que no se resolvi&oacute; y se
-agrav&oacute;.</span></p>
 """)

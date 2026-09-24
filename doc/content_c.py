@@ -870,34 +870,6 @@ firma a ciegas, que es exactamente por lo que estos sistemas se apagan en todas 
 <p><b>Este mecanismo decide la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice
 qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
 """ + fig("f_mesa", "Trabajo sobre el mapa del partido. Ilustraci&oacute;n.") + """
-<div class="hairline"></div>
-<div class="note">
-<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Los art&iacute;culos 60, 132 y 119 de la Ley
-Org&aacute;nica de las Municipalidades fueron verificados contra tres fuentes oficiales independientes: la
-copia de la LOM del Ministerio del Interior de la Naci&oacute;n, el digesto del Concejo Deliberante de La
-Plata y el digesto del Municipio de Tigre. El art&iacute;culo 211 de la Constituci&oacute;n provincial fue
-verificado contra el texto constitucional oficial. El Decreto 2099/2025 de Pinamar fue verificado contra
-el Sistema de Boletines Oficiales Municipales de la Provincia. La Ordenanza 6045/1984 de San Isidro fue
-verificada contra el Digesto municipal; su &uacute;nica modificaci&oacute;n posterior es la Ordenanza
-7164/1993, que no altera los art&iacute;culos 5, 8, 9 ni 10.</p>
-<p>Las cifras de obra p&uacute;blica y su distribuci&oacute;n por zona surgen de la ejecuci&oacute;n
-presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio censal. El reparto se calcula
-sobre 295.978 habitantes, la poblaci&oacute;n en viviendas particulares del Censo 2022. Las 1.304 personas
-restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden
-asignarse a una zona.</p>
-<p>El d&eacute;ficit de la franja costera baja se cuenta en la zona San Isidro: tres radios contiguos de la
-fracci&oacute;n 02 &mdash;los terminados en 03, 04 y 05&mdash; tienen entre 4,3% y 11,8% de hogares con NBI
-y entre 24,8% y 63,1% sin gas de red, sobre una zona cuyo promedio es 1,83% y 16,64%. En Acassuso no hay
-bols&oacute;n de pobreza: sus diecis&eacute;is radios tienen NBI de 0,0% a 2,4%, el 19,48% sin gas de red
-est&aacute; repartido parejo, y el &uacute;nico radio con d&eacute;ficit de cloaca relevante &mdash;el
-067560403, con 17,4% sobre 316 hogares&mdash; tiene 0,6% de NBI.</p>
-<p>Los antecedentes del panel sorteado &mdash;Ostbelgien, Winterthur, Darebin, Melbourne, Bolonia,
-Barcelona, Par&iacute;s, Se&uacute;l, Reikiavik, Nueva York, Chicago, C&oacute;rdoba y la Ciudad de Buenos
-Aires&mdash; son experiencias en curso o documentadas; el argumento sobre pregunta acotada y captura
-proviene de la literatura acad&eacute;mica sobre sorteo y control popular. Ninguno es transferible sin
-adaptaci&oacute;n: Barcelona y Par&iacute;s no tienen las restricciones de la Ley Org&aacute;nica
-bonaerense, y la Ciudad de Buenos Aires tiene comunas con autoridades electas que San Isidro no tiene.</p>
-</div>
 """)
 
 
@@ -978,9 +950,6 @@ partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reempla
 le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, que es el que financia
 &eacute;l.</p>
 </div>
-<p class="cap"><b>Fuente:</b> las 131 empresas y los 600 puestos son cifras comunicadas por el propio
-Municipio, y as&iacute; se las trata. La ausencia de cl&aacute;usulas de empleo local es relevamiento
-propio de pliegos y normativa publicada, al 21 de septiembre de 2026.</p>
 """ + ex("g", "Empleo y vivienda son 5 de cada 3.100 pesos que gasta el Municipio",
      "Las dos partidas juntas suman el 0,16% del presupuesto ejecutado en 2025.",
      "ex18.png",
@@ -1339,10 +1308,6 @@ construcci&oacute;n de un barrio cerrado, ratificada en septiembre.
 juez: es que falta el &aacute;mbito.</b> Boulogne es la localidad m&aacute;s poblada del partido y la que
 menos espacio verde tiene.</p>
 </div>
-<p class="cap"><b>Fuente:</b> el conteo de decretos es relevamiento propio del Bolet&iacute;n Oficial
-Municipal, febrero de 2024 a septiembre de 2026. Las objeciones al C&oacute;digo de Ordenamiento Urbano y
-la medida cautelar de Boulogne son de la cobertura de prensa local, con la fecha y la localidad de cada
-dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
 <div class="cols">
@@ -1412,11 +1377,6 @@ sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b> y junt&oacut
 efecto.</span> Una firma junta en una plataforma no obliga a nadie, y por eso este programa propone el
 &aacute;mbito donde ese mismo reclamo se plantee antes de la firma del decreto y tenga respuesta
 escrita.</p></div>
-<p class="cap"><b>Fuente:</b> las fechas, las direcciones y la condici&oacute;n de permiso precario y
-gratuito, de la cobertura period&iacute;stica de junio y julio de 2025 y de los comunicados del propio
-Municipio; el conteo de firmas, la fecha de apertura y la demolici&oacute;n de Barisidro en septiembre, de
-la petici&oacute;n en Change.org, relevada el 21 de septiembre de 2026. El relevamiento de reclamos vecinales est&aacute; en
-<b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 
 <h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
 <p class="lead">San Isidro tiene tres hospitales municipales, uno odontol&oacute;gico y una red de centros
@@ -1453,11 +1413,6 @@ medir desde entonces</span>, y eso es parte del problema.</p>
 <p><b>Ah&iacute; est&aacute; la distancia entre comprar un tom&oacute;grafo y que el sistema funcione.</b>
 El equipamiento se inaugura y se fotograf&iacute;a. El turno, el insumo y la cama no.</p>
 </div>
-<p class="cap"><b>Fuente:</b> el recorrido por los hospitales municipales, la fila de 37 personas, el
-turno de endocrinolog&iacute;a de cinco meses y la falta de reactivos son de la cobertura
-period&iacute;stica del <b>3 de junio de 2024</b>. <b>No se encontr&oacute; ning&uacute;n relevamiento
-independiente posterior</b>, de modo que el dato describe junio de 2024 y no necesariamente hoy. El
-detalle, con cada cita y su fecha, en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</p>
 <h3>El Municipio ya tiene turnos digitales en funcionamiento. No los us&oacute; para los hospitales</h3>
 <div class="cols">
 <p><span class="sg">No hay turno m&eacute;dico en
@@ -1657,8 +1612,6 @@ el Municipio comunic&oacute; <b>240 detenidos y 27.457 personas identificadas</b
 desagregaci&oacute;n por zona y sin archivo descargable. <span class="sg">Son las cifras que el
 Municipio elige publicar de s&iacute; mismo</span>, y no incluyen delitos esclarecidos ni tiempos de
 respuesta.</p>
-<p class="cap"><b>Verificado el 20 de septiembre de 2026</b>, sobre el sitio municipal y el archivo de
-la Wayback Machine.</p>
 <p><b>Y no es que otros lo hagan y San Isidro no.</b> Tigre tiene un portal de datos abiertos con
 219 conjuntos publicados, y sobre seguridad s&oacute;lo ofrece ubicaciones de bomberos, comisar&iacute;as
 e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
@@ -1719,11 +1672,6 @@ sin editar. <b>Por causa individualizada y con pedido escrito</b>: no cubre el a
 la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
 </div>
 
-<p class="cap"><b>Fuente:</b> las cifras de c&aacute;maras e inversi&oacute;n son comunicaciones
-del propio Municipio entre 2025 y 2026, y as&iacute; se las trata. El relevamiento de testimonios
-vecinales &mdash;Reddit, peticiones, rese&ntilde;as de las aplicaciones municipales y prensa local, con
-la fecha y la localidad de cada dato&mdash; est&aacute; en <b>informes/05_que_dicen_los_vecinos.md</b>
-del repositorio. <b>Verificado el 21 de septiembre de 2026.</b></p>
 
 <h3>3. Estafas virtuales, grooming y robo de identidad: una oficina de ciberdelito</h3>
 <div class="cols">
@@ -2258,30 +2206,6 @@ escondidas o incompletas, y reponerlas cuesta cero. Por eso son mantenimiento y 
 6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de
 verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
 
-<div class="hairline"></div>
-<div class="note">
-<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> El gasto por funci&oacute;n proviene del estado
-de ejecuci&oacute;n presupuestaria acumulado anual 2025 del Municipio de San Isidro. Las variaciones reales
-entre 2024 y 2025 est&aacute;n calculadas en pesos constantes de diciembre de 2025, deflactadas por IPC.
-Los indicadores territoriales provienen del Censo 2022 (INDEC) a nivel de radio censal. El costeo de las
-propuestas est&aacute; desarrollado en el cap&iacute;tulo 3.</p>
-<p>En 2025 el Municipio clasific&oacute; su gasto en veinte funciones y en 2024 en catorce. S&oacute;lo se
-usan en este cap&iacute;tulo las variaciones interanuales de funciones presentes en ambos ejercicios y cuya
-finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declaradas como no comparables.</p>
-<p>La historia de la recolecci&oacute;n se reconstruy&oacute; leyendo el texto de los boletines de 2009 a
-2024: la plataforma vieja del Bolet&iacute;n Oficial, que publica hasta marzo de 2024, s&oacute;lo indexa
-el t&iacute;tulo del bolet&iacute;n y no el texto de los decretos. Seis boletines no se pudieron abrir por
-archivo da&ntilde;ado o enlace roto.</p>
-<p>La evidencia de seguridad es internacional: el metaan&aacute;lisis de 65 estudios es de la Campbell
-Collaboration, actualizado por Braga y otros; la evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del
-plan municipal con diferencias en diferencias; los 35,5 minutos por turno provienen de un experimento de
-campo controlado. Son estudios sobre fuerzas policiales, no sobre patrullas municipales argentinas: la
-l&oacute;gica de concentraci&oacute;n es transferible, la magnitud del efecto no est&aacute; demostrada
-para este caso. Los datos de Tigre son comunicaciones del propio Municipio de Tigre.</p>
-<p>La propuesta de Bezos se formul&oacute; en el America Business Forum de Miami en noviembre de 2025, y la
-adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en marzo de 2026: es una
-referencia de d&oacute;nde est&aacute; la vara, sin resultados medidos todav&iacute;a.</p>
-</div>
 """)
 
 
@@ -2492,15 +2416,4 @@ anuales&mdash; la deciden los vecinos.</li>
 disposici&oacute;n a alguien que sabe todo del Municipio: el turno, la guardia, el trabajo, la obra de su
 cuadra y lo que se gast&oacute; en su zona.</li>
 </ol>
-<div class="hairline"></div>
-<div class="note">
-<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Este cap&iacute;tulo no introduce datos nuevos.
-Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
-1, la auditor&iacute;a del plan vigente del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
-presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
-cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5.</p>
-<p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los
-360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los l&iacute;mites de
-localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
-</div>
 """)

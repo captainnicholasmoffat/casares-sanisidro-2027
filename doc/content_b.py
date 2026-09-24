@@ -98,9 +98,9 @@ objetivo de tiempo de permanencia en el Portal de Datos Abiertos municipal.</p>
 cosa. La <b>planta de personal y la escala salarial</b> no se pudieron verificar, porque vivir&iacute;an
 en ese mismo portal ca&iacute;do. Y la &uacute;ltima <b>rendici&oacute;n de cuentas con estados
 contables</b> publicada en la web es la de 2022.</p>
-<p class="cap"><b>Verificado el 20 de septiembre de 2026.</b> El portal exist&iacute;a y funcionaba: el
-archivo de la Wayback Machine lo registra con <b>62 conjuntos de datos hasta el 16 de junio de 2026</b>.
-No es que nunca se haya hecho; dej&oacute; de responder.</p>
+<p>El portal exist&iacute;a y funcionaba: el archivo de la Wayback Machine lo registra con
+<b>62 conjuntos de datos hasta el 16 de junio de 2026</b>. No es que nunca se haya hecho; dej&oacute; de
+responder.</p>
 </div>
 <div class="callout a">
 <div class="clabel">Un caso que resume el problema: la propia flota</div>
@@ -186,18 +186,6 @@ adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El port
 est&aacute; ca&iacute;do y el enlace de las declaraciones juradas lleva a otra cosa.</li>
 </ol>
 <p>Nada de esto se puede corregir sin saber si hay con qu&eacute;. El cap&iacute;tulo siguiente lo mide.</p>
-<div class="hairline"></div>
-<div class="note">
-<p><b>Nota sobre las fuentes de este cap&iacute;tulo.</b> Todas las cifras provienen de documentos
-publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
-situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas
-2024&ndash;2025&raquo;&mdash; y de los informes de ejecuci&oacute;n RAFAM de los 106 municipios
-bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota
-metodol&oacute;gica del cap&iacute;tulo 1.</p>
-<p>El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
-cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
-cap&iacute;tulo 5 enumera.</p>
-</div>
 """)
 
 
@@ -450,10 +438,6 @@ gesti&oacute;n anterior, <span class="sg">actualizar la base de valuaci&oacute;n
 alternativa y pasa a ser la &uacute;nica v&iacute;a disponible</span> para financiar gasto recurrente
 sin comprometer todav&iacute;a m&aacute;s a los que vienen.</p>
 </div>
-<p class="cap"><b>Fuente:</b> Ordenanza Preparatoria N&ordm; 1, expediente 97341-S-2026, aprobada por la
-Asamblea de Concejales y Mayores Contribuyentes el 8 de julio de 2026; condiciones y resultado de la
-colocaci&oacute;n del 13 de agosto de 2026 seg&uacute;n la informaci&oacute;n difundida por el Municipio
-y por el Banco de la Provincia de Buenos Aires, organizador y colocador de la emisi&oacute;n.</p>
 
 <h3>La tabla con la que San Isidro valúa es de 2008</h3>
 <div class="cols">
@@ -621,22 +605,4 @@ de 2027.</li>
 cobra San Isidro. Lo &uacute;nico relevante que queda fuera de su alcance es la tasa de ese bono.</li>
 </ol>
 """ + fig("f_plaza", "Plaza de barrio, un s&aacute;bado. Ilustraci&oacute;n.") + """
-<div class="hairline"></div>
-<div class="note">
-<p><b>Nota metodol&oacute;gica.</b> El modelo est&aacute; construido sobre la ejecuci&oacute;n
-presupuestaria 2010&ndash;2026 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
-Estado de Situaci&oacute;n Econ&oacute;mico-Financiera municipal y las planillas de transferencias de la
-Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series fueron deflactadas por IPC
-(INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>
-<p>Los cuatro par&aacute;metros fueron calculados desde la serie hist&oacute;rica, no supuestos. El
-a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
-se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario proyectados. El modelo,
-los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
-<p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
-ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con el stock al 31 de diciembre de
-2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
-2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
-cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie; como los metros construidos no son
-p&uacute;blicos, el aporte de actualizar la base no entra en el modelo con una cifra exacta.</p>
-</div>
 """)

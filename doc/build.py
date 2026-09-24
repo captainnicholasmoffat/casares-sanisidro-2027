@@ -20,6 +20,8 @@ PAGE_W_PX = PAGE_W_PT * PT     # 880
 _cache = {}
 _missing = set()
 _viudas = []          # pedazos de parrafo de una sola linea arriba o abajo de columna
+_colfill = [0]        # bloques de dos columnas con la izquierda llena primero
+_colfill_avisos = []  # bloques que no se pudieron llenar asi y quedaron como estaban
 # 1x1 transparente: si la ilustracion no esta en el paquete el <img> igual
 # ocupa el alto que le fija design.css, asi que la pagina mide lo mismo.
 BLANK = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAA"
@@ -111,12 +113,107 @@ def write_font_css():
           f"({f.stat().st_size/1e6:.1f} MB)")
     return f
 
+# ---------------------------------------------------------------------------
+# LA COLUMNA IZQUIERDA SE LLENA PRIMERO (correccion 134).
+# Con column-fill:balance y break-inside:avoid, Chromium equilibra las dos
+# columnas moviendo parrafos enteros, y la izquierda puede terminar antes que la
+# derecha: queda un hueco en el medio del bloque. En castellano se lee de
+# izquierda a derecha, asi que el hueco tiene que quedar al final de la derecha.
+# column-fill:auto llena la primera columna antes de pasar a la segunda, pero
+# solo funciona si el bloque tiene alto definido. Esto calcula ese alto bloque
+# por bloque: mide el texto en una sola columna, busca el corte mas bajo posible
+# en el que la segunda columna entra entera, y fija el alto justo ahi. El corte
+# puede caer entre dos parrafos o adentro de uno, pero nunca deja menos de dos
+# lineas de cada lado (sin viudas ni huerfanas) ni separa un subtitulo de lo que
+# sigue. Despues comprueba lo dibujado; si algo no cierra, el bloque vuelve a
+# como estaba y se avisa.
+# ---------------------------------------------------------------------------
+JS_COLFILL = """() => {
+  const avisos = [];
+  let hechos = 0;
+  document.querySelectorAll('.cols, .note').forEach(c => {
+    const kids = [...c.children].filter(e => getComputedStyle(e).display !== 'none');
+    if (!kids.length) return;
+    const cs = getComputedStyle(c);
+    const gap = parseFloat(cs.columnGap) || 0;
+    const colW = (c.clientWidth - gap) / 2;
+    const guard = {cc: c.style.columnCount, w: c.style.width};
+    // 1) medir en una sola columna, del ancho de una columna
+    c.style.columnCount = '1';
+    c.style.width = colW + 'px';
+    const top0 = kids[0].getBoundingClientRect().top;
+    const u = kids.map(el => {
+      const r = el.getBoundingClientRect();
+      const st = getComputedStyle(el);
+      const lh = parseFloat(st.lineHeight);
+      const heading = /^H[1-6]$/.test(el.tagName);
+      let n = 0;
+      if (!heading && el.tagName === 'P' && lh > 0) {
+        const k = Math.round(r.height / lh);
+        if (Math.abs(k * lh - r.height) < 1.2) n = k;   // lineas regulares
+      }
+      return {el, top: r.top - top0, bottom: r.bottom - top0, heading, n, lh,
+              mt: parseFloat(st.marginTop) || 0, mb: parseFloat(st.marginBottom) || 0};
+    });
+    c.style.columnCount = guard.cc;
+    c.style.width = guard.w;
+    const T = u[u.length - 1].bottom;
+    // 2) cortes posibles. y = donde termina la columna 1; y2 = donde empieza lo
+    //    que pasa a la 2 (con su margen, por las dudas de que no se trunque)
+    const cortes = [];
+    u.forEach((a, i) => {
+      if (i < u.length - 1 && !a.heading)
+        cortes.push({y: a.bottom, y2: u[i + 1].top - u[i + 1].mt, parte: null});
+      for (let j = 2; j <= a.n - 2; j++) {
+        const y = a.top + j * a.lh;
+        cortes.push({y, y2: y, parte: a.el});
+      }
+    });
+    const validos = cortes.filter(k => T - k.y2 <= k.y + 0.01).sort((p, q) => p.y - q.y);
+    // sin corte posible (un solo parrafo de menos de cuatro lineas): todo en la
+    // columna 1, que es lo mismo que hacia el equilibrado
+    const k = validos.length ? validos[0] : {y: T, y2: T, parte: null};
+    const mbLast = u[u.length - 1].mb;
+    const prev = {cf: c.style.columnFill, h: c.style.height, pb: c.style.paddingBottom,
+                  bi: k.parte ? k.parte.style.breakInside : null};
+    c.style.columnFill = 'auto';
+    c.style.paddingBottom = mbLast + 'px';
+    c.style.height = (k.y + 0.75 + mbLast) + 'px';
+    if (k.parte) k.parte.style.breakInside = 'auto';
+    // 3) comprobar lo dibujado
+    const cr = c.getBoundingClientRect();
+    const x2 = cr.left + colW + gap / 2;          // divisoria entre columnas
+    const xFuera = cr.left + 2 * colW + gap + 2;  // una tercera columna seria perdida
+    let b1 = 0, b2 = 0, fuera = false, lineaSola = false;
+    kids.forEach(el => {
+      const rs = [...el.getClientRects()].filter(r => r.height > 0.5);
+      rs.forEach(r => {
+        if (r.right > xFuera) fuera = true;
+        if (r.left < x2) b1 = Math.max(b1, r.bottom - cr.top); else b2 = Math.max(b2, r.bottom - cr.top);
+      });
+      if (rs.length > 1) {
+        const lh = parseFloat(getComputedStyle(el).lineHeight) || 14;
+        rs.forEach(r => { if (r.height < lh * 1.6) lineaSola = true; });
+      }
+    });
+    const lleno = Math.abs(b1 - (k.y + 0.75)) <= 1.5 || !validos.length;
+    if (fuera || lineaSola || b2 > b1 + 0.5 || !lleno) {
+      c.style.columnFill = prev.cf; c.style.height = prev.h; c.style.paddingBottom = prev.pb;
+      if (k.parte) k.parte.style.breakInside = prev.bi;
+      avisos.push((fuera ? 'tercera columna' : lineaSola ? 'linea sola' :
+                   b2 > b1 + 0.5 ? 'derecha mas larga' : 'izquierda sin llenar') + ': ' +
+                  kids[0].textContent.trim().slice(0, 60));
+    } else hechos++;
+  });
+  return {hechos, avisos};
+}"""
+
 # Chromium no implementa widows/orphans dentro de columnas, asi que la regla de
 # design.css es break-inside. Esto lo comprueba mirando las cajas dibujadas: si un
 # parrafo se parte entre columnas y de un lado queda una sola linea, avisa.
 JS_VIUDAS = """() => {
   const malos = [];
-  document.querySelectorAll('.cols').forEach(cols => {
+  document.querySelectorAll('.cols, .note').forEach(cols => {
     cols.querySelectorAll(':scope > p, :scope > ul, :scope > ol, :scope > h3').forEach(el => {
       const rects = [...el.getClientRects()];
       if (rects.length < 2) return;
@@ -150,6 +247,8 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
     write_font_css()
     pages = []
     _viudas.clear()
+    _colfill[0] = 0
+    _colfill_avisos.clear()
     with sync_playwright() as pw:
         # PW_CHROMIUM permite apuntar a un Chromium ya instalado en la maquina
         _exe = os.environ.get("PW_CHROMIUM")
@@ -170,6 +269,10 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
             try: pg.evaluate("document.fonts.ready")
             except Exception: pass
             pg.wait_for_timeout(250)
+            cf = pg.evaluate(JS_COLFILL)
+            _colfill[0] += cf["hechos"]
+            for t in cf["avisos"]:
+                _colfill_avisos.append((n, t))
             for t in pg.evaluate(JS_VIUDAS):
                 _viudas.append((n, t))
             h_px = pg.evaluate("document.getElementById('pg').getBoundingClientRect().height")
@@ -217,6 +320,10 @@ def build(sections, doc_title, cover_pdf=None, out_name="documento.pdf"):
         for n, t in _viudas: print(f"     p{n:>2}  &laquo;{t}&raquo;".replace("&laquo;","\u00ab").replace("&raquo;","\u00bb"))
     else:
         print("  OK: ninguna viuda ni huerfana en columna.")
+    print(f"  columnas: {_colfill[0]} bloques con la izquierda llena primero")
+    if _colfill_avisos:
+        print(f"  !! {len(_colfill_avisos)} bloques quedaron equilibrados como antes:")
+        for n, t in _colfill_avisos: print(f"     p{n:>2}  {t}")
     return dest
 
 

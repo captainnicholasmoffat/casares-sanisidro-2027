@@ -4,6 +4,7 @@ import content_b as B
 import content_c as C
 import content_d as D
 import content_e as E
+import content_f as F
 import content_o as O
 import content_s as S
 
@@ -64,7 +65,7 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, A.METODO, ORD_A, ORD_B, D.GLOSARIO]
+            C5A, C5A2, C5A3, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, A.METODO, F.FUENTES, ORD_A, ORD_B, D.GLOSARIO]
 
 # pagina 1 = tapa; el indice arranca en la 2
 A.PAGES.update({k: i + 3 for i, k in enumerate(

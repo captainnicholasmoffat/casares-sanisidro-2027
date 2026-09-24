@@ -24,6 +24,8 @@ ocho cuotas de capital las paga el gobierno que asuma en diciembre de 2027</span
 <div class="pull"><div class="plabel">Por d&oacute;nde empieza</div>
 <p>El 10 de diciembre de 2027 asume el intendente. A fines de marzo de 2028 la primera asamblea de cada
 zona ya fue convocada.</p></div>
-<p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
-candidato a intendente de San Isidro.</p>
 """ + fig("f_calle", "San Isidro, a primera hora. Ilustraci&oacute;n."))
+# Correccion 132: la firma de Casares sale hasta que el candidato apruebe el
+# documento. Para reponerla, despues del pull de "Por donde empieza" va:
+# <p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
+# candidato a intendente de San Isidro.</p>

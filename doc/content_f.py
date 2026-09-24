@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+from content_a import RH
+
+# Correccion 133: las fuentes que colgaban de un parrafo salen de la pagina y
+# vienen aca. Las de cuadros y graficos se quedan pegadas a su exhibit.
+FUENTES = dict(id="fuentes", runhead=RH, html="""
+<h1>Anexo &middot; Las fuentes</h1>
+<div class="stand">Cada cuadro y cada gr&aacute;fico lleva su fuente debajo. Las de lo que afirma el
+texto est&aacute;n ac&aacute;, en el orden en que aparecen.</div>
+<table>
+<colgroup><col style="width:158pt"><col></colgroup>
+<tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>
+<tr><td class="l">Qu&eacute; proponemos hacer, punto 5 &middot; el 1,84 de la aplicaci&oacute;n de reclamos</td><td>El 1,84: las 49 rese&ntilde;as posteriores al 10 de diciembre de 2023 de la aplicaci&oacute;n municipal de reclamos &laquo;San Isidro Digital&raquo; en Google Play, 39 de ellas de una o dos estrellas; en App Store, otras cinco del mismo per&iacute;odo promedian 1,60. Relevamiento propio del 21 de septiembre de 2026. Los datos crudos, con la fecha y el puntaje de cada rese&ntilde;a y sin nombres de usuarios, est&aacute;n en el repositorio, en <b>informes/05_resenas_app_reclamos.csv</b>, y la metodolog&iacute;a en <b>informes/05_que_dicen_los_vecinos.md</b>. Con la gesti&oacute;n anterior la misma aplicaci&oacute;n promediaba 2,22: no es un problema nuevo, es uno que no se resolvi&oacute; y se agrav&oacute;.</td></tr>
+<tr><td class="l">2.3 &middot; lo que se busc&oacute; y no estaba</td><td>Verificado el 20 de septiembre de 2026, sobre el sitio municipal y el archivo de la Wayback Machine.</td></tr>
+<tr><td class="l">3.5 &middot; el bono de 30.000 millones</td><td>Ordenanza Preparatoria N&ordm; 1, expediente 97341-S-2026, aprobada por la Asamblea de Concejales y Mayores Contribuyentes el 8 de julio de 2026; condiciones y resultado de la colocaci&oacute;n del 13 de agosto de 2026 seg&uacute;n la informaci&oacute;n difundida por el Municipio y por el Banco de la Provincia de Buenos Aires, organizador y colocador de la emisi&oacute;n.</td></tr>
+<tr><td class="l">5.3 &middot; qu&eacute; hace hoy el Municipio con el empleo</td><td>Las 131 empresas y los 600 puestos son cifras comunicadas por el propio Municipio, y as&iacute; se las trata. La ausencia de cl&aacute;usulas de empleo local es relevamiento propio de pliegos y normativa publicada, al 21 de septiembre de 2026.</td></tr>
+<tr><td class="l">5.5 &middot; el urbanismo que no pasa por el Concejo</td><td>El conteo de decretos es relevamiento propio del Bolet&iacute;n Oficial Municipal, febrero de 2024 a septiembre de 2026. Las objeciones al C&oacute;digo de Ordenamiento Urbano y la medida cautelar de Boulogne son de la cobertura de prensa local, con la fecha y la localidad de cada dato en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</td></tr>
+<tr><td class="l">5.5 &middot; Catalejo y Barisidro</td><td>Las fechas, las direcciones y la condici&oacute;n de permiso precario y gratuito, de la cobertura period&iacute;stica de junio y julio de 2025 y de los comunicados del propio Municipio; el conteo de firmas, la fecha de apertura y la demolici&oacute;n de Barisidro en septiembre, de la petici&oacute;n en Change.org, relevada el 21 de septiembre de 2026. El relevamiento de reclamos vecinales est&aacute; en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</td></tr>
+<tr><td class="l">5.6 &middot; el recorrido por los hospitales</td><td>El recorrido por los hospitales municipales, la fila de 37 personas, el turno de endocrinolog&iacute;a de cinco meses y la falta de reactivos son de la cobertura period&iacute;stica del <b>3 de junio de 2024</b>. <b>No se encontr&oacute; ning&uacute;n relevamiento independiente posterior</b>, de modo que el dato describe junio de 2024 y no necesariamente hoy. El detalle, con cada cita y su fecha, en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio.</td></tr>
+<tr><td class="l">5.7 &middot; el mapa de incidentes que no existe</td><td>Verificado el 20 de septiembre de 2026, sobre el sitio municipal y el archivo de la Wayback Machine.</td></tr>
+<tr><td class="l">5.7 &middot; las c&aacute;maras</td><td>Las cifras de c&aacute;maras e inversi&oacute;n son comunicaciones del propio Municipio entre 2025 y 2026, y as&iacute; se las trata. El relevamiento de testimonios vecinales &mdash;Reddit, peticiones, rese&ntilde;as de las aplicaciones municipales y prensa local, con la fecha y la localidad de cada dato&mdash; est&aacute; en <b>informes/05_que_dicen_los_vecinos.md</b> del repositorio. <b>Verificado el 21 de septiembre de 2026.</b></td></tr>
+</table>
+""")

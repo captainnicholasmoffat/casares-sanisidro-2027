@@ -119,6 +119,9 @@ _IDX = [
  ("i", "Para cerrar", "cierre"),
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
+ ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
+ ("g", "Anexo &middot; Las fuentes", None),
+ ("i", "De d&oacute;nde sale lo que afirma el texto", "fuentes"),
  ("g", "Anexo &middot; El articulado", None),
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
  ("i", "Las cinco ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
@@ -184,12 +187,15 @@ de red</b>, <b>m&aacute;s gente formada y con trabajo</b>, y <b>los vecinos deci
 gasta la obra de su barrio</b>. Ninguna de las tres da una foto el d&iacute;a que se hace.</p>
 <p><b>Somos una propuesta de gobierno que gestiona.</b> Que administra para que el partido crezca, y
 <span class="sg">ese crecimiento econ&oacute;mico es de todos</span>. Por eso el cap&iacute;tulo 4 no pide
-un peso nuevo: mueve <span class="sg">qui&eacute;n decide</span> sobre la mitad de la obra p&uacute;blica
-que el Municipio ya hace.</p>
+un peso nuevo. La mitad de la obra p&uacute;blica que el Municipio ya hace pasa a
+<span class="sg">decidirla el barrio</span>.</p>
 </div>
-<p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
-candidato a intendente de San Isidro.</p>
 """ + fig("f_costanera", "La costanera de San Isidro. Ilustraci&oacute;n."))
+# Correccion 132: la firma de Casares (nombre y cargo) sale hasta que el
+# candidato lea y apruebe el documento. Para reponerla, despues del </div> de
+# las columnas va:
+# <p style="margin-top:14pt;font-style:italic;color:var(--taupe);font-size:9pt">Jos&eacute; Luis Casares,
+# candidato a intendente de San Isidro.</p>
 
 
 # =====================================================================
@@ -330,8 +336,6 @@ primeros el 78,6%</b>.</p>
 de seguridad y vigilancia, representa por s&iacute; sola el <b>11,6% de todo lo adjudicado</b> en dos
 a&ntilde;os y medio. Otro decreto &mdash;red vial y aceras, septiembre de 2024&mdash; compromete 20.916
 millones en un solo acto.</p>
-<p><b>Lo que el dato muestra es la escala de la decisi&oacute;n:</b> <span class="sg">un solo acto del Ejecutivo puede
-comprometer m&aacute;s de la d&eacute;cima parte de lo adjudicado en dos a&ntilde;os y medio.</span></p>
 </div>
 
 
@@ -353,11 +357,6 @@ de pesos:</p>
 </table>
 <p class="cap"><b>Fuente:</b> Estado de Situaci&oacute;n Econ&oacute;mico-Financiera 2025, gastos por
 programa.</p>
-<div class="cols">
-<p>Quinientos setenta y dos pesos por habitante por a&ntilde;o. Eso es toda la pol&iacute;tica de empleo
-del Municipio de San Isidro.</p>
-<p>Mil ciento veintisiete pesos por habitante por a&ntilde;o en infraestructura habitacional.</p>
-</div>
 """)
 
 
@@ -410,9 +409,41 @@ donde est&aacute; el 60% de los hogares sin gas de red y el 71% de los que no ti
 donde est&aacute; el problema.</li>
 </ol>
 <p><b>Los cap&iacute;tulos siguientes proponen ese mecanismo.</b></p>
+""")
+
+
+# =====================================================================
+# NOTA DE METODO - va al final, antes del anexo
+# =====================================================================
+METODO = dict(id="metodo", runhead=RH, html="""
+<h1>Nota de m&eacute;todo</h1>
+<div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
+<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada
+cuadro y de cada gr&aacute;fico va debajo de &eacute;l; la de lo que afirma el texto, en el anexo de
+fuentes.</p>
+<div class="cols">
+<p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
+cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
+Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
+a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
+diferencia cero.</p>
+<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
+reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
+verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
+</div>
+
+<div class="callout a">
+<div class="clabel">Los l&iacute;mites</div>
+<p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
+uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
+publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
+incomparable buena parte de las series interanuales.</p>
+</div>
+
 <div class="hairline"></div>
+<h2>Cap&iacute;tulo 1 &middot; Diagn&oacute;stico</h2>
 <div class="note">
-<p><b>Nota metodol&oacute;gica.</b> Las series fiscales provienen de los informes de ejecuci&oacute;n
+<p>Las series fiscales provienen de los informes de ejecuci&oacute;n
 presupuestaria y rendiciones de cuentas publicados por la Municipalidad de San Isidro, de los fallos del
 Honorable Tribunal de Cuentas de la Provincia de Buenos Aires y del sistema SIMCo provincial, validadas de
 forma cruzada entre s&iacute;. Los datos territoriales provienen del Censo Nacional de Poblaci&oacute;n,
@@ -432,33 +463,96 @@ Municipio y coinciden en las siete categor&iacute;as del gasto por objeto. Las d
 fueron validadas individualmente: se usan para calcular la mediana provincial y la posici&oacute;n relativa
 de San Isidro.</p>
 </div>
-""")
-
-
-# =====================================================================
-# NOTA DE METODO - va al final, antes del anexo
-# =====================================================================
-METODO = dict(id="metodo", runhead=RH, html="""
-<h1>Nota de m&eacute;todo</h1>
-<div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico, y est&aacute;
-indicada la fuente donde aparece.</p>
-<div class="cols">
-<p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
-cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
-Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
-a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
-diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los diecinueve gr&aacute;ficos son p&uacute;blicos y
-reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
-verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
+<h2>Cap&iacute;tulo 2 &middot; La gesti&oacute;n, medida</h2>
+<div class="note">
+<p>Todas las cifras provienen de documentos
+publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
+situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas
+2024&ndash;2025&raquo;&mdash; y de los informes de ejecuci&oacute;n RAFAM de los 106 municipios
+bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota del cap&iacute;tulo 1.</p>
+<p>El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
+cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
+cap&iacute;tulo 5 enumera.</p>
 </div>
-
-<div class="callout a">
-<div class="clabel">Los l&iacute;mites</div>
-<p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
-uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
-publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
-incomparable buena parte de las series interanuales.</p>
+<h2>Cap&iacute;tulo 3 &middot; Los fondos</h2>
+<div class="note">
+<p>El modelo est&aacute; construido sobre la ejecuci&oacute;n
+presupuestaria 2010&ndash;2026 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
+Estado de Situaci&oacute;n Econ&oacute;mico-Financiera municipal y las planillas de transferencias de la
+Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series fueron deflactadas por IPC
+(INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>
+<p>Los cuatro par&aacute;metros fueron calculados desde la serie hist&oacute;rica, no supuestos. El
+a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
+se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario proyectados. El modelo,
+los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
+<p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
+ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con el stock al 31 de diciembre de
+2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
+2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
+cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie; como los metros construidos no son
+p&uacute;blicos, el aporte de actualizar la base no entra en el modelo con una cifra exacta.</p>
+</div>
+<h2>Cap&iacute;tulo 4 &middot; El mecanismo</h2>
+<div class="note">
+<p>Los art&iacute;culos 60, 132 y 119 de la Ley
+Org&aacute;nica de las Municipalidades fueron verificados contra tres fuentes oficiales independientes: la
+copia de la LOM del Ministerio del Interior de la Naci&oacute;n, el digesto del Concejo Deliberante de La
+Plata y el digesto del Municipio de Tigre. El art&iacute;culo 211 de la Constituci&oacute;n provincial fue
+verificado contra el texto constitucional oficial. El Decreto 2099/2025 de Pinamar fue verificado contra
+el Sistema de Boletines Oficiales Municipales de la Provincia. La Ordenanza 6045/1984 de San Isidro fue
+verificada contra el Digesto municipal; su &uacute;nica modificaci&oacute;n posterior es la Ordenanza
+7164/1993, que no altera los art&iacute;culos 5, 8, 9 ni 10.</p>
+<p>Las cifras de obra p&uacute;blica y su distribuci&oacute;n por zona surgen de la ejecuci&oacute;n
+presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio censal. El reparto se calcula
+sobre 295.978 habitantes, la poblaci&oacute;n en viviendas particulares del Censo 2022. Las 1.304 personas
+restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden
+asignarse a una zona.</p>
+<p>El d&eacute;ficit de la franja costera baja se cuenta en la zona San Isidro: tres radios contiguos de la
+fracci&oacute;n 02 &mdash;los terminados en 03, 04 y 05&mdash; tienen entre 4,3% y 11,8% de hogares con NBI
+y entre 24,8% y 63,1% sin gas de red, sobre una zona cuyo promedio es 1,83% y 16,64%. En Acassuso no hay
+bols&oacute;n de pobreza: sus diecis&eacute;is radios tienen NBI de 0,0% a 2,4%, el 19,48% sin gas de red
+est&aacute; repartido parejo, y el &uacute;nico radio con d&eacute;ficit de cloaca relevante &mdash;el
+067560403, con 17,4% sobre 316 hogares&mdash; tiene 0,6% de NBI.</p>
+<p>Los antecedentes del panel sorteado &mdash;Ostbelgien, Winterthur, Darebin, Melbourne, Bolonia,
+Barcelona, Par&iacute;s, Se&uacute;l, Reikiavik, Nueva York, Chicago, C&oacute;rdoba y la Ciudad de Buenos
+Aires&mdash; son experiencias en curso o documentadas; el argumento sobre pregunta acotada y captura
+proviene de la literatura acad&eacute;mica sobre sorteo y control popular. Ninguno es transferible sin
+adaptaci&oacute;n: Barcelona y Par&iacute;s no tienen las restricciones de la Ley Org&aacute;nica
+bonaerense, y la Ciudad de Buenos Aires tiene comunas con autoridades electas que San Isidro no tiene.</p>
+</div>
+<h2>Cap&iacute;tulo 5 &middot; Qu&eacute; hacemos en cada &aacute;rea</h2>
+<div class="note">
+<p>El gasto por funci&oacute;n proviene del estado
+de ejecuci&oacute;n presupuestaria acumulado anual 2025 del Municipio de San Isidro. Las variaciones reales
+entre 2024 y 2025 est&aacute;n calculadas en pesos constantes de diciembre de 2025, deflactadas por IPC.
+Los indicadores territoriales provienen del Censo 2022 (INDEC) a nivel de radio censal. El costeo de las
+propuestas est&aacute; desarrollado en el cap&iacute;tulo 3.</p>
+<p>En 2025 el Municipio clasific&oacute; su gasto en veinte funciones y en 2024 en catorce. S&oacute;lo se
+usan en este cap&iacute;tulo las variaciones interanuales de funciones presentes en ambos ejercicios y cuya
+finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declaradas como no comparables.</p>
+<p>La historia de la recolecci&oacute;n se reconstruy&oacute; leyendo el texto de los boletines de 2009 a
+2024: la plataforma vieja del Bolet&iacute;n Oficial, que publica hasta marzo de 2024, s&oacute;lo indexa
+el t&iacute;tulo del bolet&iacute;n y no el texto de los decretos. Seis boletines no se pudieron abrir por
+archivo da&ntilde;ado o enlace roto.</p>
+<p>La evidencia de seguridad es internacional: el metaan&aacute;lisis de 65 estudios es de la Campbell
+Collaboration, actualizado por Braga y otros; la evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del
+plan municipal con diferencias en diferencias; los 35,5 minutos por turno provienen de un experimento de
+campo controlado. Son estudios sobre fuerzas policiales, no sobre patrullas municipales argentinas: la
+l&oacute;gica de concentraci&oacute;n es transferible, la magnitud del efecto no est&aacute; demostrada
+para este caso. Los datos de Tigre son comunicaciones del propio Municipio de Tigre.</p>
+<p>La propuesta de Bezos se formul&oacute; en el America Business Forum de Miami en noviembre de 2025, y la
+adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en marzo de 2026: es una
+referencia de d&oacute;nde est&aacute; la vara, sin resultados medidos todav&iacute;a.</p>
+</div>
+<h2>Cap&iacute;tulo 6 &middot; El plan, con fechas</h2>
+<div class="note">
+<p>Este cap&iacute;tulo no introduce datos nuevos.
+Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
+1, la auditor&iacute;a del plan vigente del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
+presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
+cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5.</p>
+<p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los
+360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los l&iacute;mites de
+localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
 </div>
 """)

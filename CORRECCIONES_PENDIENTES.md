@@ -1732,3 +1732,71 @@ Después de cada compilación, el PDF se commitea a la rama claude/cool-hopper-3
 salida/PROGRAMA_SAN_ISIDRO_2027.pdf, siempre con ese nombre, pisando el anterior. El historial de git
 guarda las versiones previas. El .gitignore no excluye PDF. El armado no genera un HTML único (arma
 uno por página en doc/out/, que está ignorado), así que no se sube HTML.
+
+# CORRECCIONES 131 A 138 · INSTRUCCIONES DE CAP N NICK DEL 24/09
+
+## 131 · "MUEVE QUIÉN DECIDE", SIN SUJETO · APLICADA
+Página 3: "Por eso el capítulo 4 no pide un peso nuevo. La mitad de la obra pública que el Municipio ya
+hace pasa a decidirla el barrio."
+
+## 132 · LA FIRMA DE CASARES FUERA · APLICADA, CON UNA PREGUNTA
+Salieron nombre y cargo de la página 3 y del cierre. En la página 3 no había foto de él: la imagen es la
+ilustración de la costanera, y se quedó. Tapa, pies y metadatos del PDF: sin su nombre.
+PARA REPONER CUANDO ÉL APRUEBE: el texto exacto está comentado en doc/content_a.py (después de INTRO) y
+en doc/content_e.py (después de CIERRE).
+PREGUNTADO, SIN TOCAR: el 5.8 lo nombra ("José Luis Casares presidió la comisión que creó la UNSO").
+No es firma.
+
+## 133 · LAS FUENTES DE PROSA, AL ANEXO · APLICADA
+Nueve fuentes colgaban de un párrafo o de un recuadro de texto y pasaron a una página nueva, "Anexo ·
+Las fuentes" (después de la nota de método): el 1,84 de la síntesis, la verificación del 2.3, el bono
+(3.5), el empleo (5.3), los decretos de urbanismo y Catalejo y Barisidro (5.5), los hospitales (5.6), el
+mapa de incidentes y las cámaras (5.7). Las de cuadros y gráficos siguen pegadas a su exhibit.
+En el 2.3 salió sólo la línea de verificación: lo que dice del portal (62 conjuntos hasta el 16 de junio
+de 2026) quedó en el recuadro como párrafo.
+La nota de método decía "está indicada la fuente donde aparece"; ahora dice que la de cada cuadro y
+gráfico va debajo de él y la del texto, en el anexo de fuentes.
+
+## 134 · EL HUECO VA AL FINAL DE LA DERECHA · APLICADA
+doc/build.py, JS_COLFILL: cada bloque de dos columnas (.cols y .note) pasa a column-fill:auto con el
+alto calculado para que la izquierda se llene primero. Un párrafo puede partirse entre columnas, pero
+siempre con dos líneas o más de cada lado, y un subtítulo nunca queda al pie. Si lo dibujado no cierra,
+el bloque vuelve a como estaba y el armado lo avisa. 120 bloques, ningún aviso.
+Tres bloques de un solo párrafo corto (1 a 3 líneas) quedan enteros en la izquierda: partirlos dejaría
+una línea sola. El chequeo de viudas ahora mira también las notas.
+
+## 135 · "UN SOLO ACTO DEL EJECUTIVO" · APLICADA
+Los dos contratos más grandes salieron de licitación pública: DECRE-2025-398 (LP 69/2024, seguridad y
+vigilancia, Grupo Maipú) y DECRE-2024-1258 (LP 38/2024, red vial y aceras, tres zonas: 7.161,6 + 6.659,0 +
+7.095,6 = 20.916 M). Verificado en el Boletín (rama claude/exciting-mccarthy-7qinll, 02_clean/boletin y
+05_research/boletin/ADENDA.md). La frase salió.
+Resto del capítulo 1: ninguna otra afirmación supone un procedimiento.
+ENCONTRADO, SIN TOCAR: (1) "En cuántas manos queda la obra" y "cada obra" del 1.2 hablan de obra, pero
+los 407 decretos incluyen servicios y compras (vigilancia, arbolado, medicamentos). (2) De los 3.054 actos
+con domicilio de 2002-2017, 41 son designaciones de inspector técnico con el domicilio del inspector;
+sin ellos el 49,6% da 49,8% y el 39,4% de 2017 da 40,4%.
+
+## 136 · RELLENO DEL 1.3 · APLICADA
+Salieron "Quinientos setenta y dos pesos…" y "Mil ciento veintisiete pesos…".
+
+## 137 · LAS NOTAS DE CAPÍTULO, AL FINAL · APLICADA
+Las seis notas de cierre de capítulo pasaron a la página de la nota de método, una por capítulo con su
+título ("Capítulo 1 · Diagnóstico", etc.). El texto no cambió; salió el rótulo "Nota metodológica" o
+"Nota sobre las fuentes de este capítulo", que ahora es el título, y la del capítulo 2 remite a "la nota
+del capítulo 1". Índice: "Las notas de cada capítulo" y "Anexo · Las fuentes".
+
+## 138 · LA COBRANZA NO FINANCIA NADA · EN ESPERA
+Investigado y reportado. El modelo (03_scripts/modelo.py) no tiene escenario pagado con la base de
+valuación: el único escenario del programa con financiamiento propio es reformista_percepcion (cobranza
+al 92%). De ahí salen el cuadro 23, el gráfico 24, la línea "cobrando mejor" del gráfico 16 y el
+"309.236 a 316.461". Los CSV del repo no reproducen con el script actual en ese escenario ni en la
+sensibilidad (el −305 M del 3.6 da −292 M; la barra "89,32% −14 M" del tornado es ese desfase).
+Esperando: los informes 09 a 14 (no están en el repo), la fuente de la investigación de septiembre, y
+cinco respuestas: título y "14.115" del 2.2, recuadro de la cobranza del 4.6, descuento del buen
+contribuyente del 3.5, riesgo "La percepción no se recupera" del 6.6, y el 5.8.
+
+## EL DOCUMENTO
+40 páginas (el anexo de fuentes es una página nueva). 49 exhibits del 1 al 49 sin saltos (30 cuadros, 19
+gráficos). Nueve variantes de fuente, sin sustituciones. Pies correctos. Índice con las entradas nuevas.
+Cero viudas y huérfanas. Las 40 páginas miradas una por una: ninguna columna izquierda termina antes que
+la derecha.
