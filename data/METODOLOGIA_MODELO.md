@@ -175,8 +175,13 @@ subir una sola tasa.
 |---|---|---|---|---|
 | **base** | +1,95% anual | −2,196% anual | no | — |
 | **adverso** | −0,05% anual (2 puntos menos) | −3,5% anual | no | — |
-| **reformista** | +1,95% anual | −2,196% anual | sí, 2,5% del gasto en 4 años | reasignación |
+| **reformista** | +1,95% anual | −2,196% anual | sí, 2,5% del gasto en 4 años, desde 2028 | reasignación |
 | **reformista_valuacion** | +1,95% anual | −2,196% anual | sí, el mismo | con la base de valuación actualizada |
+
+**El programa empieza en 2028** (`ANIO_INICIO_PROGRAMA`): el gobierno asume el 10 de
+diciembre de 2027 y 2028 es su primer ejercicio completo. En 2026 y 2027 el gasto en
+empleo y vivienda sigue en los 505,7 millones de 2025 y la base de valuación no cambia.
+La rampa es 25% en 2028, 50% en 2029, 75% en 2030 y 100% desde 2031.
 
 Resultado financiero, en millones de pesos de diciembre de 2025:
 
@@ -185,7 +190,7 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 | base | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
 | adverso | −6.051 | −13.637 | −20.484 | −26.668 | −32.257 |
 | reformista | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_valuacion** | −6.051 | **+3.395** | +10.375 | +20.162 | +31.035 |
+| **reformista_valuacion** | −6.051 | **+1.815** | +10.375 | +20.162 | +31.035 |
 
 > **Que `reformista` dé idéntico a `base` NO es un error de copiado.** El
 > programa se financia **íntegramente por reasignación dentro del gasto
@@ -198,14 +203,15 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 actualizada** (septiembre de 2026, informe 09). La escala de ARBA se fija un 10,9%
 por encima de la que dejaría la recaudación igual, y ninguna boleta sube más de 25%
 por año por esa actualización. Lo cobrado, al 89,32% de percepción, sale de
-`data/valuacion_rendimiento_por_anio.csv`: 1.976 millones el año 1, 5.858 el 2,
-7.168 el 3 y 7.225,2 desde el 4, en pesos constantes y sin crecimiento propio.
+`data/valuacion_rendimiento_por_anio.csv`: 1.976 millones el año 1 (2028), 5.858
+el 2, 7.168 el 3 y 7.225,2 desde el 4 (2031), en pesos constantes y sin crecimiento
+propio.
 Si el mínimo de la tasa frena las subas de lotes que hoy están debajo del piso, es
 hasta 44,5 millones menos por año (columna `cobrado_si_el_minimo_frena_subas`); el
 modelo corre la columna `cobrado`.
 El gasto total sube lo que cuesta el programa. En régimen el resultado es el
-mismo que el base; en los años 1 a 3 queda arriba, porque con el tope se cobra
-más de lo que pide la rampa (+170, +2.245 y +1.750 millones).
+mismo que el base; en los años 1 a 3 (2028 a 2030) queda arriba, porque con el tope
+se cobra más de lo que pide la rampa (+170, +2.245 y +1.750 millones).
 
 Reemplaza al escenario `reformista_percepcion`, que pagaba el programa cobrando
 mejor: el documento ya no propone financiarlo con la cobranza.
@@ -230,7 +236,9 @@ toca personal, deuda ni contratos de servicios.
 ### De dónde sale la plata: las tres opciones, sin elegir
 
 En `data/financiamiento_opciones.csv`, cuantificadas contra el mismo costo.
-En régimen (2029 en adelante), para el objetivo del 2,5%:
+En régimen (2031 en adelante), para el objetivo del 2,5%. Para el crédito, el efecto
+es el del sexto año del programa (2033), y sigue bajando a medida que entra el
+servicio de la deuda:
 
 | Opción | Aporte anual | Cubre | Efecto en el resultado financiero |
 |---|---:|---:|---:|

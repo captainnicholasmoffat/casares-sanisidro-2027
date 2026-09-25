@@ -35,6 +35,17 @@ ANIO_BASE = 2025
 FIN_MANDATO = 2031          # 2028-2031
 FIN_LARGO = 2037            # diez anios desde 2028
 
+# El programa empieza en el primer ejercicio completo del mandato. El gobierno
+# asume el 10 de diciembre de 2027: el anio 1 del programa es 2028. Antes de
+# eso el programa sigue como en 2025 (505,7 millones) y la base de valuacion
+# no cambia.
+ANIO_INICIO_PROGRAMA = 2028
+
+
+def anio_del_programa(anio):
+    """1 en 2028, 2 en 2029... y 0 antes de que empiece el programa."""
+    return max(0, anio - ANIO_INICIO_PROGRAMA + 1)
+
 # Parte de las transferencias provinciales que se mueve con el coeficiente de
 # coparticipacion. El resto son fondos especificos que no dependen de el.
 # Calculado en 2025: 82,4%.
@@ -311,10 +322,11 @@ def proyectar(b, esc, hasta=FIN_LARGO):
             filas.append(fila)
             continue
 
+        k = anio_del_programa(anio)
         mun = _pot(b["ing_origen_municipal"], esc.g_propios, n)
-        if esc.financiamiento == "valuacion" and esc.rendimiento_valuacion:
+        if esc.financiamiento == "valuacion" and esc.rendimiento_valuacion and k >= 1:
             ultimo = max(esc.rendimiento_valuacion)
-            mun += esc.rendimiento_valuacion[min(n, ultimo)]
+            mun += esc.rendimiento_valuacion[min(k, ultimo)]
         factor_prov = (SHARE_COPARTICIPABLE * (1 + esc.d_copa) ** n
                        + (1 - SHARE_COPARTICIPABLE))
         prov = b["ing_origen_provincial"] * factor_prov
@@ -341,7 +353,7 @@ def proyectar(b, esc, hasta=FIN_LARGO):
         prog = prog_base
         reasignacion = D0
         if esc.objetivo_programa is not None:
-            paso = Decimal(min(n, esc.anios_rampa)) / Decimal(esc.anios_rampa)
+            paso = Decimal(min(k, esc.anios_rampa)) / Decimal(esc.anios_rampa)
             objetivo = (g_ctes + g_cap) * esc.objetivo_programa
             prog = prog_base + (objetivo - prog_base) * paso
             reasignacion = prog - prog_base
@@ -445,7 +457,7 @@ def opciones_financiamiento(b, filas_reformista):
     No se elige ninguna: se cuantifican las tres contra el mismo costo.
     """
     costo = {f["anio"]: Decimal(str(f["reasignacion_necesaria"]))
-             for f in filas_reformista if f["anio"] > ANIO_BASE}
+             for f in filas_reformista if f["anio"] >= ANIO_INICIO_PROGRAMA}
     costo_regimen = max(costo.values())
     filas = []
 
@@ -475,8 +487,8 @@ def opciones_financiamiento(b, filas_reformista):
     for objetivo in (Decimal("92"), Decimal("95"), Decimal("97")):
         extra = perc["devengado"] * (objetivo - base_pct) / 100
         for anio, c in sorted(costo.items()):
-            n = anio - ANIO_BASE
-            paso = Decimal(min(n, ANIOS_RAMPA)) / Decimal(ANIOS_RAMPA)
+            k = anio_del_programa(anio)
+            paso = Decimal(min(k, ANIOS_RAMPA)) / Decimal(ANIOS_RAMPA)
             aporte = extra * paso
             filas.append({
                 "opcion": "ii_percepcion_%s" % objetivo.quantize(Decimal("1")),
@@ -497,8 +509,8 @@ def opciones_financiamiento(b, filas_reformista):
     # tope de 25% anual, contra la rampa del programa.
     rend = rendimiento_valuacion()
     for anio, c in sorted(costo.items()):
-        n = anio - ANIO_BASE
-        aporte = rend[min(n, max(rend))]
+        k = anio_del_programa(anio)
+        aporte = rend[min(k, max(rend))]
         filas.append({
             "opcion": "iv_base_de_valuacion", "anio": anio,
             "aporte": _q(aporte),
@@ -506,7 +518,7 @@ def opciones_financiamiento(b, filas_reformista):
             "cubre_pct": _q(100 * aporte / c) if c else D0,
             "detalle": ("escala de ARBA 10,9%% por encima de la neutral, tope de "
                         "25%% de suba anual por boleta, cobrado al 89,32%%: %s "
-                        "en el anio %d del programa" % (_q(aporte), min(n, max(rend)))),
+                        "en el anio %d del programa" % (_q(aporte), k)),
             "efecto_en_resultado_financiero": _q(aporte),
             "supuesto": "parte tierra de la tasa; ver informes/09_escenario_b_valuacion.md",
         })
@@ -518,8 +530,8 @@ def opciones_financiamiento(b, filas_reformista):
         saldo = D0
         cuotas = []
         for anio in sorted(costo):
-            n = anio - ANIO_BASE
-            paso = Decimal(min(n, ANIOS_RAMPA)) / Decimal(ANIOS_RAMPA)
+            k = anio_del_programa(anio)
+            paso = Decimal(min(k, ANIOS_RAMPA)) / Decimal(ANIOS_RAMPA)
             toma = costo_regimen * paso
             interes = saldo * tasa
             amort = sum(c for (a0, c) in cuotas

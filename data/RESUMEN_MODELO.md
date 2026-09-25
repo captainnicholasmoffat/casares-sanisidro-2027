@@ -51,16 +51,19 @@ programa entero con 25% de sobra**; al 95% aporta 19.150 millones y al 97%,
 no hay ningún dato en el repo sobre a qué tasa se financia el Municipio, el
 modelo corre tres tasas reales (0%, 5% y 10%) y en todas el aporte neto al
 resultado cae rápido a medida que entra el servicio de la deuda —de 7.225
-millones de crédito tomado, el efecto neto en régimen queda entre 2.529 y 723
-millones según la tasa—.
+millones de crédito tomado, el efecto neto en 2033, el sexto año del programa, queda
+entre 2.529 y 723 millones según la tasa, y sigue bajando—.
 
 ## Las dos formas de pagarlo, modeladas
+
+El programa empieza en 2028, el primer ejercicio completo del mandato (el gobierno
+asume el 10 de diciembre de 2027).
 
 | | 2028 | 2031 | 2034 | 2037 |
 |---|---:|---:|---:|---:|
 | base, sin programa | +1.645 | +10.375 | +20.162 | +31.035 |
 | **reformista** (reasignación) | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_valuacion** (base de valuación actualizada) | **+3.395** | +10.375 | +20.162 | +31.035 |
+| **reformista_valuacion** (base de valuación actualizada) | **+1.815** | +10.375 | +20.162 | +31.035 |
 
 Millones de pesos de dic-2025.
 
@@ -72,7 +75,7 @@ su composición.
 tasa actualizada: escala de ARBA 10,9% por encima de la neutral y tope de 25% de
 suba anual por boleta (informe 09). Cobra 7.225,2 millones por año desde el cuarto (7.180,7 si el mínimo
 frena todas las subas de lotes chicos; el modelo corre el 7.225,2)
-y más de lo que pide la rampa en los tres primeros; en régimen el resultado es el
+y más de lo que pide la rampa en los tres primeros (2028 a 2030); en régimen el resultado es el
 del base. Reemplaza al escenario que pagaba el programa cobrando mejor.
 
 ## La obra pública vecinal ya está contemplada

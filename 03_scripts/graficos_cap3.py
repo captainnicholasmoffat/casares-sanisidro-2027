@@ -98,11 +98,22 @@ def ex09():
     E.etiqueta_serie(ax, xs[-1], ya[-1], "Base", E.TINTA, dx=6, dy=-7)
     E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\npagado con la base", E.RIO,
                      dx=6, dy=8)
-    medio = len(xs) // 2
-    ax.annotate("el programa se ejecuta entero\nY el resultado mejora",
-                (xs[medio], (ya[medio] + yb[medio]) / 2), xytext=(0, 0),
-                textcoords="offset points", ha="center", va="center",
+    # La diferencia esta en los anios en que el programa sube: ahi la base
+    # cobra mas de lo que pide la rampa. El rotulo va sobre el anio de mayor
+    # diferencia, y el subtitulo sale de los datos.
+    difs = [(x, v2 - v1) for x, v1, v2 in zip(xs, ya, yb)]
+    con_dif = [(x, d) for x, d in difs if abs(d) >= 1]
+    pico = max(con_dif, key=lambda p: p[1])[0] if con_dif else xs[len(xs) // 2]
+    i = xs.index(pico)
+    ax.annotate("el programa se ejecuta entero\ny el resultado no empeora",
+                (pico, max(ya[i], yb[i])), xytext=(0, 16),
+                textcoords="offset points", ha="center", va="bottom",
                 fontsize=6.6, color=E.RIO, weight="bold")
+    iguales = [x for x, d in difs if x > pico and abs(d) < 1]
+    subtitulo = ("El área sombreada es lo que la base cobra de más mientras el "
+                 "programa sube: " + ", ".join(E.numero(d) for _, d in con_dif)
+                 + " millones en " + ", ".join(str(x) for x, _ in con_dif)
+                 + (". Desde %d, el resultado es el mismo." % iguales[0] if iguales else "."))
     # Arranca un poco antes de 2025 para que el primer rotulo del eje x no
     # caiga encima del ultimo numero del eje y.
     ax.set_xlim(2024.4, 2040)
@@ -112,9 +123,8 @@ def ex09():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 09",
-              "Pagar el programa con la base de valuacion deja el resultado igual o mejor",
-              "El area sombreada es la diferencia: 2.303 millones a favor en "
-              "2031 y 2.924 en 2037.",
+              "Pagar el programa con la base de valuación deja el resultado igual o mejor",
+              subtitulo,
         FUENTE_MODELO)
     return E.guardar(fig, "EXHIBIT_09_base_vs_reformista",
                      dict(left=0.135, right=0.775, top=top, bottom=bottom))
