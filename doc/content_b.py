@@ -520,7 +520,7 @@ a&ntilde;o de la proyecci&oacute;n.</p>
 <li><b>Que la recaudaci&oacute;n propia crezca menos de 1% real anual.</b> Es el punto de quiebre: por
 debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
 <li><b>Que la percepci&oacute;n baje.</b> Tres puntos menos dejan el resultado de 2031
-pr&aacute;cticamente en cero: &minus;305 millones.</li>
+pr&aacute;cticamente en cero: &minus;292 millones.</li>
 <li><b>Que la coparticipaci&oacute;n se acelere.</b> El menos grave de los tres primeros, y el
 &uacute;nico de ellos que no depende del Municipio.</li>
 <li><b>Y la tasa del bono, que es la m&aacute;s concreta de las cuatro.</b> Es <b>variable, TAMAR

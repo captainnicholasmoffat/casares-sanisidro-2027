@@ -285,16 +285,16 @@ def g_reformista():
 # --- 10. tornado de sensibilidad --------------------------------------------
 def g_tornado():
     rows=[("Recursos propios: 2,95% anual",13990),("Recursos propios: 0,95% anual",-13321),
-          ("Percepción de recursos: 86,32%",-10680),("Percepción de recursos: 92,32%",10652),
+          ("Percepción de recursos: 86,32%",-10667),("Percepción de recursos: 92,32%",10667),
           ("Coparticipación: −3,5% anual",-4861),("Coparticipación: −1,5% anual",2731),
-          ("Coparticipación: −2,5% anual",-1163),("Percepción de recursos: 89,32%",-14)]
+          ("Coparticipación: −2,5% anual",-1163),("Percepción de recursos: 89,32%",0)]
     fig, ax = plt.subplots(figsize=(W,2.3)); frame(ax, grid="x")
     y=range(len(rows))[::-1]
     for yy,(lbl,v) in zip(y,rows):
         ax.barh(yy, v/1000, .52, color=(SAGED if v>0 else OX), edgecolor="none")
-        ax.text(v/1000 + (1.1 if v>0 else -1.1), yy,
-                ("+" if v>0 else "\u2212")+nb(abs(v))+" M",
-                ha="left" if v>0 else "right", va="center",
+        ax.text(v/1000 + (1.1 if v>0 else -1.1 if v<0 else 0.4), yy,
+                ("+" if v>0 else "\u2212" if v<0 else "")+nb(abs(v))+" M",
+                ha="right" if v<0 else "left", va="center",
                 fontsize=6.8, color=INK, fontweight="semibold")
     ax.set_yticks(list(y)); ax.set_yticklabels([r[0] for r in rows], fontsize=7)
     ax.axvline(0, color=TAUPE, lw=.7)
