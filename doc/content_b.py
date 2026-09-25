@@ -364,8 +364,8 @@ tama&ntilde;o sin tocar el gasto r&iacute;gido.</p>
 pol&iacute;ticamente: alguien pierde su partida.</p>
 <h3 style="margin-top:0">Opci&oacute;n 2 &mdash; Actualizar la base de valuaci&oacute;n
 <span class="sg">&larr; la que proponemos</span></h3>
-<p>No cobrar m&aacute;s: <b>cobrar sobre valores que no sean de 2008.</b> La al&iacute;cuota de vivienda
-no se toca y sigue en 12 por mil.</p>
+<p><b>Cobrar sobre valores que no sean de 2008.</b> La al&iacute;cuota de vivienda no se toca y sigue
+en 12 por mil.</p>
 <h3 style="margin-top:0">Opci&oacute;n 3 &mdash; Endeudamiento</h3>
 <p><span class="sg">No la proponemos, y las razones son tres, en este orden.</span></p>
 <p><b>Primera: empleo y vivienda es gasto recurrente, no una obra.</b> Se paga todos los a&ntilde;os, en
@@ -458,31 +458,41 @@ de hoy</b>. Lo que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nt
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
 ellas vale entre 6.400 y 9.200. <span class="sg">Pagan igual y no valen igual.</span></p>
-<p><b>Qu&eacute; cambiar&iacute;a si la escala se actualizara.</b> Acassuso y Mart&iacute;nez
-pasar&iacute;an de cargar el 32% del valor de la tierra al 38%. <b>Villa Adelina bajar&iacute;a del 10% al
-6%.</b> Boulogne, del 14% al 13%. La carga se corre hacia donde est&aacute; el valor, sin que cambie la
-al&iacute;cuota.</p>
-<p><b>Cu&aacute;nto aportar&iacute;a.</b> Si ninguna manzana bajara y las que
-est&aacute;n por debajo del promedio subieran hasta &eacute;l, la parte tierra crecer&iacute;a 12,5%:
-<b>como m&aacute;ximo unos 8.600 millones</b>. <span class="sg">En la pr&aacute;ctica es menos</span>,
-porque la tasa tambi&eacute;n cobra construcci&oacute;n, hay exenciones y hay m&iacute;nimos.</p>
+<p><b>Qu&eacute; cambia si la escala se actualiza.</b> La tabla nueva sigue la escala de ARBA, y la
+carga de la tierra se corre hacia donde est&aacute; el valor. Acassuso pasa de pagar el 41,0% de la parte
+tierra al 47,4%, y Mart&iacute;nez del 13,9% al 14,9%. <b>Boulogne baja del 8,9% al 6,5%, Villa Adelina
+del 13,1% al 10,4% y B&eacute;ccar del 8,9% al 7,3%.</b> San Isidro, del 14,3% al 13,4%.</p>
+<p><b>Cu&aacute;nto aporta.</b> El nivel de la tabla nueva se fija para que la parte tierra emita
+<b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. Con la percepci&oacute;n
+de hoy &mdash;89,32%&mdash; eso es <b>7.225,2 millones cobrados</b>: lo que el programa necesita.</p>
+<p><b>Con un tope: ninguna boleta sube m&aacute;s de 25% por a&ntilde;o.</b> Es por encima de la
+actualizaci&oacute;n anual del multiplicador, que es pareja para todos. La que tiene que subir m&aacute;s
+llega por escalones, y todas llegan en cuatro a&ntilde;os; las bajas se aplican completas desde el primer
+a&ntilde;o. Con el tope se cobran 1.976 millones el primer a&ntilde;o, 5.858 el segundo, 7.168 el
+tercero y 7.225,2 desde el cuarto: <span class="sg">cada a&ntilde;o, m&aacute;s de lo que pide la rampa
+del programa</span>.</p>
+<p><b>Qui&eacute;n paga m&aacute;s y qui&eacute;n menos.</b> <b>Bajan 34.998 parcelas y suben
+33.619.</b> Boulogne paga 18,1% menos por la tierra, Villa Adelina 11,8% menos y B&eacute;ccar 8,3%
+menos. San Isidro paga 3,8% m&aacute;s, Mart&iacute;nez 19,1% y Acassuso 28,2%. <span class="sg">Los
+barrios con m&aacute;s hogares sin cloaca y sin gas pagan menos, y reciben m&aacute;s obra.</span></p>
 <p><b>Y una segunda fuente, m&aacute;s chica: un tope al descuento del buen contribuyente.</b> Hoy es de
 hasta el 10% para quien paga el a&ntilde;o por adelantado y sin deuda, y <b>no tiene tope de
 valuaci&oacute;n</b>: lo recibe igual una casa de Acassuso que una de Boulogne. La propuesta es ponerle un
 tope de valuaci&oacute;n, no eliminarlo. <span class="sg">Es la misma l&oacute;gica que la de la base: las
-dos piden m&aacute;s a las propiedades de mayor valor y no tocan a nadie m&aacute;s.</span> Las exenciones
+dos piden m&aacute;s a las propiedades de mayor valor.</span> Las exenciones
 a los jubilados que cobran hasta tres haberes m&iacute;nimos, a las personas con discapacidad y a las motos
 de hasta 150cc no se tocan: van a quien las necesita.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Por qu&eacute; esto no es subir una tasa</div>
-<p>La al&iacute;cuota de vivienda es <b>12 por mil</b> y sigue igual desde 2016. Este programa no la
-mueve. Lo que propone es que la base sobre la que se aplica deje de ser una tabla de 2008 que ya
-<b>ordena bien las zonas</b> &mdash;su correlaci&oacute;n con la valuaci&oacute;n provincial es de 0,92&mdash;
-pero reconoce poco m&aacute;s de la mitad de la distancia real entre ellas.</p>
-<p><b>Actualizar una base vieja no es un aumento: es una correcci&oacute;n.</b> Y tiene un efecto que este
-programa persigue en todos sus cap&iacute;tulos: la zona con m&aacute;s necesidad paga proporcionalmente
-menos que hoy, y la de mayor valor paga lo que le corresponde.</p>
+<div class="clabel">Lo que sube, y lo que no</div>
+<p><b>La al&iacute;cuota no se toca: sigue en 12 por mil desde 2016.</b> Lo que cambia es la base, una
+tabla de 2008 que <b>ordena bien las zonas</b> &mdash;su correlaci&oacute;n con la valuaci&oacute;n
+provincial, secci&oacute;n por secci&oacute;n, es de 0,92&mdash; pero reconoce poco m&aacute;s de la mitad
+de la distancia real entre ellas.</p>
+<p><b>Bajan m&aacute;s parcelas de las que suben.</b> Lo que sube es lo que pagan las propiedades que la
+tabla de 2008 tiene subvaluadas. <b>Y el total que se emite por la tierra sube 10,9%.</b> <span
+class="sg">La zona con m&aacute;s necesidad paga menos que hoy, y la de mayor valor paga lo que le
+corresponde.</span></p>
 </div>
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>

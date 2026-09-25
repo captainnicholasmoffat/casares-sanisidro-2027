@@ -53,6 +53,13 @@ OBJETIVO_MAX = Decimal("0.03")
 # se factura.
 PERCEPCION_OBJETIVO = Decimal("92")
 
+# Lo que cobra, anio por anio del programa, la actualizacion de la base de
+# valuacion de la tasa (escenario B: escala de ARBA 10,9% por encima de la
+# neutral, tope de 25% de suba anual por boleta). Lo calcula
+# 03_scripts/escenario_b_valuacion.py; aca se usa en pesos constantes, sin
+# crecimiento propio: es el supuesto conservador.
+RENDIMIENTO_VALUACION_CSV = "data/valuacion_rendimiento_por_anio.csv"
+
 # Capitulo 4: las comisiones vecinales manejan el 50% de la obra publica en el
 # anio 4. Sobre los bienes de uso devengados de 2025 son 28.908 millones. Es
 # REASIGNACION DENTRO de bienes de uso, no gasto nuevo: no cambia ninguna linea
@@ -255,7 +262,8 @@ class Escenario:
     def __init__(self, nombre, g_propios, d_copa, percepcion_objetivo=None,
                  g_gasto_corriente=Decimal("0"), g_gasto_capital=Decimal("0"),
                  objetivo_programa=None, anios_rampa=ANIOS_RAMPA,
-                 financiamiento="reasignacion", descripcion=""):
+                 financiamiento="reasignacion", rendimiento_valuacion=None,
+                 descripcion=""):
         self.nombre = nombre
         self.g_propios = g_propios
         self.d_copa = d_copa
@@ -269,7 +277,11 @@ class Escenario:
         #                 por eso el resultado financiero es igual al del base.
         #   percepcion    se paga cobrando mejor. El gasto total SI sube, pero
         #                 los ingresos suben mas, asi que el resultado mejora.
+        #   valuacion     se paga con lo que cobra la base de valuacion
+        #                 actualizada. El gasto total sube y los recursos de
+        #                 origen municipal suben lo que rinde la base.
         self.financiamiento = financiamiento
+        self.rendimiento_valuacion = rendimiento_valuacion or {}
         self.descripcion = descripcion
 
 
@@ -300,6 +312,9 @@ def proyectar(b, esc, hasta=FIN_LARGO):
             continue
 
         mun = _pot(b["ing_origen_municipal"], esc.g_propios, n)
+        if esc.financiamiento == "valuacion" and esc.rendimiento_valuacion:
+            ultimo = max(esc.rendimiento_valuacion)
+            mun += esc.rendimiento_valuacion[min(n, ultimo)]
         factor_prov = (SHARE_COPARTICIPABLE * (1 + esc.d_copa) ** n
                        + (1 - SHARE_COPARTICIPABLE))
         prov = b["ing_origen_provincial"] * factor_prov
@@ -399,15 +414,23 @@ def escenarios(par):
                               "llevado al 2,5% del gasto en 4 anios, "
                               "financiado por reasignacion dentro del gasto "
                               "flexible"),
-        Escenario("reformista_percepcion", g, d,
+        Escenario("reformista_valuacion", g, d,
                   objetivo_programa=OBJETIVO_MEDIO,
-                  percepcion_objetivo=PERCEPCION_OBJETIVO / 100,
-                  financiamiento="percepcion",
-                  descripcion="el mismo programa, pero pagado cobrando mejor: "
-                              "la percepcion de recursos corrientes sube de "
-                              "89,32%% a %s%% en 4 anios. No se le saca plata "
-                              "a ninguna partida" % PERCEPCION_OBJETIVO),
+                  financiamiento="valuacion",
+                  rendimiento_valuacion=rendimiento_valuacion(),
+                  descripcion="el mismo programa, pagado con la actualizacion "
+                              "de la base de valuacion de la tasa: escala de "
+                              "ARBA 10,9% por encima de la neutral y tope de "
+                              "25% de suba anual por boleta. Cobra 7.225,2 "
+                              "millones por anio desde el cuarto"),
     ]
+
+
+def rendimiento_valuacion():
+    """Lo cobrado por la base de valuacion actualizada, por anio del
+    programa (1, 2, 3...), en pesos constantes de diciembre de 2025."""
+    return {int(r["anio_del_programa"]): Decimal(r["cobrado"])
+            for r in _leer(RENDIMIENTO_VALUACION_CSV)}
 
 
 # --------------------------------------------------------------------------
@@ -469,6 +492,25 @@ def opciones_financiamiento(b, filas_reformista):
                             "del programa" % ANIOS_RAMPA,
             })
 
+    # --- iv) base de valuacion ---
+    # La que propone el documento: lo que cobra la base actualizada con el
+    # tope de 25% anual, contra la rampa del programa.
+    rend = rendimiento_valuacion()
+    for anio, c in sorted(costo.items()):
+        n = anio - ANIO_BASE
+        aporte = rend[min(n, max(rend))]
+        filas.append({
+            "opcion": "iv_base_de_valuacion", "anio": anio,
+            "aporte": _q(aporte),
+            "costo_del_programa": _q(c),
+            "cubre_pct": _q(100 * aporte / c) if c else D0,
+            "detalle": ("escala de ARBA 10,9%% por encima de la neutral, tope de "
+                        "25%% de suba anual por boleta, cobrado al 89,32%%: %s "
+                        "en el anio %d del programa" % (_q(aporte), min(n, max(rend)))),
+            "efecto_en_resultado_financiero": _q(aporte),
+            "supuesto": "parte tierra de la tasa; ver informes/09_escenario_b_valuacion.md",
+        })
+
     # --- iii) endeudamiento ---
     # Se toma credito por el costo del programa en regimen y se carga su
     # servicio en los anios siguientes.
@@ -502,8 +544,9 @@ def opciones_financiamiento(b, filas_reformista):
 
     ruta = os.path.join(DATA, "financiamiento_opciones.csv")
     with open(ruta, "w", encoding="utf-8", newline="") as f:
-        f.write("# Las tres formas de pagar el programa de empleo y vivienda,\n")
-        f.write("# cuantificadas por separado. NO se elige ninguna.\n")
+        f.write("# Las formas de pagar el programa de empleo y vivienda,\n")
+        f.write("# cuantificadas por separado. El documento propone la iv,\n")
+        f.write("# la base de valuacion.\n")
         w = csv.DictWriter(f, fieldnames=[
             "opcion", "anio", "aporte", "costo_del_programa", "cubre_pct",
             "efecto_en_resultado_financiero", "detalle", "supuesto"])
@@ -602,9 +645,11 @@ def main():
         f.write("# solo en las columnas gasto_programa_empleo_vivienda y\n")
         f.write("# reasignacion_necesaria.\n")
         f.write("#\n")
-        f.write("# El escenario reformista_percepcion es el MISMO programa pagado\n")
-        f.write("# cobrando mejor (percepcion de 89,32%% a 92%% en 4 anios). Ese SI\n")
-        f.write("# mueve el resultado financiero, y hacia arriba.\n")
+        f.write("# El escenario reformista_valuacion es el MISMO programa pagado\n")
+        f.write("# con la base de valuacion actualizada (escala de ARBA 10,9%% por\n")
+        f.write("# encima de la neutral, tope de 25%% anual por boleta). En regimen\n")
+        f.write("# da el mismo resultado que el base; en los anios 1 a 3 queda\n")
+        f.write("# arriba, porque con el tope se cobra mas de lo que pide la rampa.\n")
         w = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
         w.writeheader()
         for x in todas:

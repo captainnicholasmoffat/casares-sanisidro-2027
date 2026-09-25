@@ -67,10 +67,11 @@ inspeccionado tambi&eacute;n graba</b>, con el mismo valor en el expediente. Est
 en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.
 <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que todo esto se pague sin subir una tasa ni tomar deuda.</b> Cuesta 7.225,2 millones de fondos
-nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash; y sale
-de actualizar una base de valuaci&oacute;n que es de 2008. <span class="sg">La al&iacute;cuota no se
-toca.</span> <i>(Cap&iacute;tulo 3)</i></li>
+<li><b>Que todo esto se pague sin tocar la al&iacute;cuota ni tomar deuda.</b> Cuesta 7.225,2 millones
+de fondos nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash;
+y sale de actualizar una base de valuaci&oacute;n que es de 2008. <span class="sg">Bajan m&aacute;s parcelas
+de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y el total que
+se emite por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
 
 <p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. A fines de

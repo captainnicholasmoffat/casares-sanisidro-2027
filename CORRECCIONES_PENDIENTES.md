@@ -1880,3 +1880,49 @@ Arreglos, ya en el documento (commit 232ea92):
 
 Escenario B: informes/09_escenario_b_valuacion.md, con el script 03_scripts/escenario_b_valuacion.py
 y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el documento.
+
+# LAS CUATRO DECISIONES DEL ESCENARIO B · APLICADAS
+
+## LO QUE SE CALCULÓ (03_scripts/escenario_b_valuacion.py, informe 09)
+- Escala de ARBA subida 10,88% sobre la neutral: la parte tierra emite 8.089,1 M más por año (+10,9%);
+  con la percepción de 89,32% se cobran 7.225,2 M.
+- Con esa escala bajan 34.998 parcelas y suben 33.619 (de 68.644 que cruzan). Los 35.472 / 33.156 del
+  pedido eran con la suba de 9,7%; se escribió lo que da con 10,9%.
+- Tope: 25% de suba anual por boleta, por encima de la actualización del multiplicador; las bajas van
+  completas el primer año. Es el tope entero más bajo que cubre la rampa del programa todos los años
+  (con 24% el año 1 no alcanza). Cobrado por año: 1.976 / 5.858 / 7.168 / 7.225,2 M; desde el cuarto,
+  7.225,2 M. Todas las parcelas llegan en cuatro años (quedan 15.884, 2.892 y 215 con tope en los tres
+  primeros). No hace falta escalar el programa.
+- Salvedad: 789 M de las bajas quedan bajo la tasa mínima de $234.000 (Boulogne 387, Villa Adelina
+  261, Béccar 97).
+
+## EL MODELO (03_scripts/modelo.py)
+- reformista_percepcion sale; entra reformista_valuacion, que suma cada año lo cobrado de
+  data/valuacion_rendimiento_por_anio.csv. Resultado: +3.395 M en 2028 y el del base desde 2029.
+- Nueva opción iv_base_de_valuacion en data/financiamiento_opciones.csv. Regenerados
+  data/modelo_flujo_caja.csv y data/financiamiento_opciones.csv; base, adverso, reformista y la
+  sensibilidad no cambian. Tests OK. METODOLOGIA_MODELO.md, RESUMEN_MODELO.md, graficos_cap3.py y
+  doc/charts.py (tornado y g_reformista) actualizados.
+
+## EL DOCUMENTO
+1. 3.5: la opción 2 dice que la alícuota de vivienda sigue en 12 por mil. Nuevos párrafos: qué cambia
+   por localidad (Acassuso 41,0→47,4; Martínez 13,9→14,9; San Isidro 14,3→13,4; Béccar 8,9→7,3; Villa
+   Adelina 13,1→10,4; Boulogne 8,9→6,5), cuánto aporta (8.089 M emitidos, 7.225,2 M cobrados), el tope
+   de 25% y quién paga más y quién menos (bajan 34.998, suben 33.619; Boulogne −18,1%, Villa Adelina
+   −11,8%, Béccar −8,3%, San Isidro +3,8%, Martínez +19,1%, Acassuso +28,2%).
+2. Los porcentajes 32→38, 10→6 y 14→13 (eran circunscripciones III, V y VI) salen; van las localidades
+   del cuadro 1 del informe 09.
+3. El 8.600 sale; van los 8.089 M emitidos y los 7.225,2 M cobrados. Nota en las fuentes del texto:
+   parte tierra, 69.258 parcelas, los metros construidos no son públicos.
+4. "Esto no es subir una tasa" pasa a "Lo que sube, y lo que no": la alícuota no se toca (12 por mil
+   desde 2016); bajan más parcelas de las que suben; sube lo que pagan las propiedades que la tabla de
+   2008 tiene subvaluadas; el total emitido por la tierra sube 10,9%.
+5. Barrido: síntesis ("sin tocar la alícuota ni tomar deuda"), capítulo 5 ("con las mismas
+   alícuotas"), 6 (la ordenanza de la base, con el tope de 25%), anexo III (artículo 1 con el nivel de
+   10,9% y nuevo artículo 3, Tope; Publicidad pasa a 4). Ningún "8.600", "sin subir una", "nadie paga
+   más" ni "no es un aumento" en el PDF.
+6. Sin tocar: el cuadro de los ratios de la tabla municipal del 3.5 (sus filas son circunscripciones
+   y secciones con nombres de localidad). Espera la decisión de Nick.
+
+## EL PDF
+39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.

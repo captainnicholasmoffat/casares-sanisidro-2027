@@ -110,7 +110,9 @@ publica</b>.</p>
 <p class="tight">Actual&iacute;zase la tabla de valores de tierra por manzana que rige el c&aacute;lculo
 de la Tasa por Alumbrado, Limpieza y Servicios Generales, fijada por la <b>Ordenanza 8373 del 6 de
 agosto de 2008</b>, de modo que la relaci&oacute;n entre zonas refleje la que surge de la
-valuaci&oacute;n fiscal provincial vigente.</p>
+valuaci&oacute;n fiscal provincial vigente. El nivel de la tabla nueva se fija para que la emisi&oacute;n
+total de la parte tierra de la tasa sea un diez coma nueve por ciento (10,9%) mayor que la de la tabla que
+reemplaza.</p>
 
 <h3>Art&iacute;culo 2 &mdash; L&iacute;mites</h3>
 <p class="tight"><b>No se modifica la al&iacute;cuota</b>, que se mantiene en doce por mil (12&permil;)
@@ -118,7 +120,13 @@ para vivienda, ni se crea tributo alguno. <b>No se modifican las exenciones de c
 social</b> vigentes, comprendidas las de personas jubiladas con haber de hasta tres m&iacute;nimos,
 personas con discapacidad y personas de escasos recursos.</p>
 
-<h3>Art&iacute;culo 3 &mdash; Publicidad</h3>
+<h3>Art&iacute;culo 3 &mdash; Tope</h3>
+<p class="tight">El aumento anual de la tasa de cada partida que resulte de esta actualizaci&oacute;n no
+podr&aacute; superar el <b>veinticinco por ciento (25%)</b>, por encima de la actualizaci&oacute;n general
+del multiplicador. La diferencia se aplica en los ejercicios siguientes, con el mismo tope, hasta alcanzar
+el valor que corresponde. <b>Las reducciones se aplican completas en el primer ejercicio.</b></p>
+
+<h3>Art&iacute;culo 4 &mdash; Publicidad</h3>
 <p class="tight">La tabla actualizada y la metodolog&iacute;a con que se construy&oacute; se publican
 &iacute;ntegras, manzana por manzana, junto con la tabla que reemplazan.</p>
 

@@ -38,11 +38,12 @@ menos de un peso de cada diez de los que el Municipio sí puede reasignar.**
 
 ## De dónde sale la plata
 
-Hay tres caminos y ninguno está elegido acá; los tres están cuantificados en
-`data/financiamiento_opciones.csv`. **Reasignar** desde el gasto flexible cubre
+Hay cuatro caminos, cuantificados en `data/financiamiento_opciones.csv`. **El
+documento eligió el cuarto: actualizar la base de valuación de la tasa** (escala de
+ARBA 10,9% por encima de la neutral, tope de 25% de suba anual por boleta), que
+cobra 7.225,2 millones por año desde el cuarto (informe 09). Los otros tres: **Reasignar** desde el gasto flexible cubre
 el 100% del costo y no cambia el resultado financiero: cambia la composición del
-gasto, no su nivel. **Cobrar mejor** es el camino más potente y el que no le saca
-nada a nadie: en 2025 quedaron **35.994 millones sin cobrar** —se devengaron
+gasto, no su nivel. **Cobrar mejor** es una meta de gestión, no la fuente del programa: en 2025 quedaron **35.994 millones sin cobrar** —se devengaron
 337.149 y se percibieron 301.155, una percepción del 89,3%—, así que subir la
 cobranza apenas tres puntos, al 92%, aporta 9.036 millones y **ya cubre el
 programa entero con 25% de sobra**; al 95% aporta 19.150 millones y al 97%,
@@ -55,30 +56,23 @@ millones según la tasa—.
 
 ## Las dos formas de pagarlo, modeladas
 
-El modelo corre las dos y **no elige**:
-
 | | 2028 | 2031 | 2034 | 2037 |
 |---|---:|---:|---:|---:|
 | base, sin programa | +1.645 | +10.375 | +20.162 | +31.035 |
 | **reformista** (reasignación) | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_percepcion** (cobrando mejor) | **+3.177** | **+12.678** | **+22.759** | **+33.959** |
+| **reformista_valuacion** (base de valuación actualizada) | **+3.395** | +10.375 | +20.162 | +31.035 |
 
 Millones de pesos de dic-2025.
 
 Que `reformista` dé **idéntico** al base no es un error: el programa se financia
 reasignando dentro del gasto flexible, así que el gasto total no cambia — cambia
-su composición. Difiere del base sólo en las columnas
-`gasto_programa_empleo_vivienda` y `reasignacion_necesaria`.
+su composición.
 
-`reformista_percepcion` es el mismo programa pagado subiendo la cobranza de
-89,32% a 92% en cuatro años. Ahí el gasto total sí sube, pero los ingresos suben
-más: el resultado financiero termina **por encima del escenario base**, +12.678
-contra +10.375 millones en 2031. Es la versión políticamente más fuerte: **no le
-sacamos plata a nadie, cobramos lo que ya facturamos.**
-
-La conclusión práctica: **la combinación de reasignación y mejora de cobranza
-financia el programa completo sin tomar un peso de deuda y sin subir una sola
-alícuota**, y deja además margen para mejorar el resultado del ejercicio.
+`reformista_valuacion` es el mismo programa pagado con la base de valuación de la
+tasa actualizada: escala de ARBA 10,9% por encima de la neutral y tope de 25% de
+suba anual por boleta (informe 09). Cobra 7.225,2 millones por año desde el cuarto
+y más de lo que pide la rampa en los tres primeros; en régimen el resultado es el
+del base. Reemplaza al escenario que pagaba el programa cobrando mejor.
 
 ## La obra pública vecinal ya está contemplada
 

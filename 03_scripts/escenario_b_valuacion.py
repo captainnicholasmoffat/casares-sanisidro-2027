@@ -36,6 +36,7 @@ import csv
 import glob
 import gzip
 import json
+import math
 import os
 import re
 import statistics
@@ -53,6 +54,9 @@ MULTIPLICADOR_2026 = 575.9141      # Impositiva 2026, art. 1
 ALICUOTA = 0.012                   # vivienda, 12 por mil
 MINIMO_2026 = 234000               # tasa minima anual 2026, categorias 2, 3, 4, 5, 10 y 12
 FONDOS_NUEVOS = 7225.2e6           # lo que el programa necesita por anio, en pesos de dic-2025
+PERCEPCION = 0.8932                # percepcion de recursos corrientes 2025 (data/parametros_modelo.csv)
+TOPE_ANUAL = 0.25                  # ninguna boleta sube mas de 25% por anio por esta actualizacion
+ANIOS_RAMPA = 4                    # el programa llega a su costo pleno en cuatro anios
 
 ZONAS = ["Acassuso", "Martinez", "San Isidro", "Beccar", "Villa Adelina", "Boulogne Sur Mer"]
 
@@ -214,7 +218,7 @@ def sensibilidades(ps, iust_m, vub, L0):
 
 
 def efecto_minimo(ps):
-    """Parte de las bajas y subas de B (+ fondos nuevos) que queda por debajo
+    """Parte de las bajas y subas del escenario B adoptado que queda por debajo
     de la tasa minima 2026, mirando solo la tierra. Si la parte construida es
     chica, esa parcela ya paga el minimo y esa baja no le llega."""
     out = {}
@@ -223,12 +227,34 @@ def efecto_minimo(ps):
         out[z] = {
             "parcelas": len(zs),
             "tierra_hoy_bajo_el_minimo": sum(1 for p in zs if p["t0"] < MINIMO_2026),
-            "baja_B_bajo_el_minimo_M": round(sum(max(0, min(p["t0"], MINIMO_2026) - p["tbs"])
-                                                 for p in zs if p["tbs"] < p["t0"] and p["tbs"] < MINIMO_2026) / 1e6, 1),
-            "suba_B_bajo_el_minimo_M": round(sum(max(0, min(p["tbs"], MINIMO_2026) - p["t0"])
-                                                 for p in zs if p["tbs"] > p["t0"] and p["t0"] < MINIMO_2026) / 1e6, 1),
+            "baja_B_bajo_el_minimo_M": round(sum(max(0, min(p["t0"], MINIMO_2026) - p["tbc"])
+                                                 for p in zs if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026) / 1e6, 1),
+            "suba_B_bajo_el_minimo_M": round(sum(max(0, min(p["tbc"], MINIMO_2026) - p["t0"])
+                                                 for p in zs if p["tbc"] > p["t0"] and p["t0"] < MINIMO_2026) / 1e6, 1),
         }
     return out
+
+
+def camino_con_tope(ps, tope, anios=6):
+    """Lo que rinde el escenario B adoptado cada anio con un tope de suba
+    anual por boleta. Las bajas entran completas el primer anio."""
+    filas = []
+    for k in range(1, anios + 1):
+        emision = 0.0
+        topeadas = 0
+        for p in ps:
+            if p["tbc"] >= p["t0"]:
+                techo = p["t0"] * (1 + tope) ** k
+                emision += min(p["tbc"], techo) - p["t0"]
+                topeadas += p["tbc"] > techo
+            else:
+                emision += p["tbc"] - p["t0"]
+        filas.append({"anio_del_programa": k,
+                      "emision_extra": round(emision),
+                      "cobrado": round(PERCEPCION * emision),
+                      "necesidad_de_la_rampa": round(FONDOS_NUEVOS * min(k, ANIOS_RAMPA) / ANIOS_RAMPA),
+                      "parcelas_todavia_con_tope": topeadas})
+    return filas
 
 
 def main():
@@ -279,6 +305,28 @@ def main():
     s = 1 + FONDOS_NUEVOS / L0
     for p in cruzadas:
         p["tbs"] = s * p["tb0"]
+    # Escenario B adoptado: la escala sube lo justo para COBRAR los fondos
+    # nuevos con la percepcion de hoy, y cada boleta sube como mucho un 25%
+    # por anio hasta llegar. Las bajas se aplican el primer anio.
+    sc = 1 + FONDOS_NUEVOS / PERCEPCION / L0
+    for p in cruzadas:
+        p["tbc"] = sc * p["tb0"]
+        if p["tbc"] > p["t0"]:
+            p["anios"] = max(1, math.ceil(math.log(p["tbc"] / p["t0"]) / math.log(1 + TOPE_ANUAL) - 1e-9))
+        else:
+            p["anios"] = 1
+    rendimiento = camino_con_tope(cruzadas, TOPE_ANUAL)
+    tope_minimo = next(round(100 * c) for c in [x / 100 for x in range(10, 61)]
+                       if all(r["cobrado"] >= r["necesidad_de_la_rampa"] - 1
+                              for r in camino_con_tope(cruzadas, c)[:ANIOS_RAMPA]))
+    with open(os.path.join(DATA, "valuacion_rendimiento_por_anio.csv"), "w", newline="", encoding="utf-8") as f:
+        f.write("# Escenario B adoptado: escala de ARBA subida %.2f%% (para cobrar 7.225,2 M con la\n" % (100 * (sc - 1)))
+        f.write("# percepcion de %.2f%%) y tope de %d%% de suba anual por boleta. Parte tierra, pesos de\n"
+                % (100 * PERCEPCION, round(100 * TOPE_ANUAL)))
+        f.write("# diciembre de 2025. Lo lee 03_scripts/modelo.py.\n")
+        w = csv.DictWriter(f, fieldnames=list(rendimiento[0].keys()))
+        w.writeheader()
+        w.writerows(rendimiento)
 
     resumen = {
         "parcelas": total, "superficie_ha": sup_total / 1e4,
@@ -294,6 +342,20 @@ def main():
         "Bs_suben": sum(p["tbs"] - p["t0"] for p in cruzadas if p["tbs"] > p["t0"]),
         "Bs_bajan": sum(p["tbs"] - p["t0"] for p in cruzadas if p["tbs"] < p["t0"]),
         "parcelas_varios_iust": sum(1 for p in cruzadas if p["varios_iust"]),
+        "adoptado": {
+            "suba_pareja_pct": round(100 * (sc - 1), 2),
+            "emision_extra_M": round(sum(p["tbc"] - p["t0"] for p in cruzadas) / 1e6, 1),
+            "cobrado_M": round(PERCEPCION * sum(p["tbc"] - p["t0"] for p in cruzadas) / 1e6, 1),
+            "parcelas_suben": sum(1 for p in cruzadas if p["tbc"] > p["t0"] * 1.0005),
+            "parcelas_bajan": sum(1 for p in cruzadas if p["tbc"] < p["t0"] * 0.9995),
+            "parcelas_que_duplican": sum(1 for p in cruzadas if p["tbc"] >= 2 * p["t0"]),
+            "suba_maxima_pct": round(100 * max(p["tbc"] / p["t0"] - 1 for p in cruzadas), 1),
+            "tope_anual_pct": round(100 * TOPE_ANUAL),
+            "tope_minimo_que_cubre_la_rampa_pct": tope_minimo,
+            "parcelas_por_anios_para_llegar": {str(k): sum(1 for p in cruzadas if p["tbc"] > p["t0"] * 1.0005 and p["anios"] == k)
+                                               for k in range(1, 7)},
+            "rendimiento_por_anio": rendimiento,
+        },
     }
 
     # Por localidad
@@ -307,7 +369,7 @@ def main():
                 "superficie_ha": round(sum(p["superficie"] for p in ps) / 1e4, 1),
                 "tierra_hoy_M": round(t0 / 1e6, 1),
                 "carga_hoy_pct": round(100 * t0 / L0, 1)}
-        for esc, campo in (("B0", "tb0"), ("Bs", "tbs"), ("A", "ta")):
+        for esc, campo in (("B0", "tb0"), ("Bs", "tbs"), ("Bc", "tbc"), ("A", "ta")):
             t = sum(p[campo] for p in ps)
             suben = [p for p in ps if p[campo] > p["t0"] * 1.0005]
             bajan = [p for p in ps if p[campo] < p["t0"] * 0.9995]
@@ -337,11 +399,12 @@ def main():
     with open(os.path.join(DATA, "valuacion_parcelas.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["cca", "partida", "localidad", "superficie_m2", "iust", "vub",
-                    "tierra_hoy", "tierra_B_igual_recaudacion", "tierra_B_mas_7225M", "tierra_A", "lon", "lat"])
+                    "tierra_hoy", "tierra_B_igual_recaudacion", "tierra_B_mas_7225M", "tierra_A",
+                    "tierra_B_adoptado", "anios_para_llegar", "lon", "lat"])
         for p in cruzadas:
             w.writerow([p["cca"], p["partida"], p["zona"], round(p["superficie"], 2), round(p["iust"], 2),
                         round(p["vub"], 2), round(p["t0"]), round(p["tb0"]), round(p["tbs"]), round(p["ta"]),
-                        p["lon"], p["lat"]])
+                        round(p["tbc"]), p["anios"], p["lon"], p["lat"]])
     return resumen, filas
 
 

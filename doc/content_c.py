@@ -623,8 +623,8 @@ form&oacute; en el Centro de Formaci&oacute;n Laboral consigue trabajo en la obr
 distrito.</b></p>
 <p><b>Gasta y recauda donde vive.</b> Ese salario se consume en el partido, y esa actividad es base
 imponible. El cap&iacute;tulo 1 muestra que los recursos propios son el 75% de lo que el Municipio gasta:
-<span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, sin subir una sola
-tasa.</span></p>
+<span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, con las mismas
+al&iacute;cuotas.</span></p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que hace que el ciclo no se apague</div>
@@ -2223,7 +2223,7 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 <tr class="hd"><td class="l" colspan="2">Al Concejo Deliberante, en la primera sesi&oacute;n ordinaria</td></tr>
 <tr class="hi"><td class="l">1 &middot; La ordenanza de la partida vecinal, con la f&oacute;rmula de reparto escrita en el texto</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
 <tr class="hi"><td class="l">2 &middot; La derogaci&oacute;n de los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
-<tr><td class="l">3 &middot; La ordenanza que actualiza la base de valuaci&oacute;n de 2008, sin tocar la al&iacute;cuota</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">3 &middot; La ordenanza que actualiza la base de valuaci&oacute;n de 2008, sin tocar la al&iacute;cuota y con un tope de suba de 25% por a&ntilde;o</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">4 &middot; El reconocimiento de las primeras asociaciones de parque, con sus tres facultades</td><td class="n">Ordenanza y registro publicado</td></tr>
 <tr><td class="l">5 &middot; La adhesi&oacute;n a la Ley provincial 15.302 de espacios culturales</td><td class="n">Ordenanza de adhesi&oacute;n</td></tr>
 <tr><td class="l">6 &middot; El pliego de la recolecci&oacute;n de residuos &mdash;frecuencias, horarios, zonas y penalidades&mdash;, para aprobarse antes del llamado</td><td class="n">Expediente del pliego</td></tr>

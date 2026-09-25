@@ -28,9 +28,9 @@ def ex08():
     por = _modelo()
     series = [("base", "Base", E.RIO),
               ("adverso", "Adverso", E.BARRANCA),
-              ("reformista_percepcion", "Reformista, cobrando mejor", E.TINTA)]
+              ("reformista_valuacion", "Reformista, pagado con la base", E.TINTA)]
     # Base y reformista terminan a menos de un cuerpo de distancia.
-    separacion = {"base": -6, "reformista_percepcion": 6, "adverso": 0}
+    separacion = {"base": -6, "reformista_valuacion": 6, "adverso": 0}
     fig, ax = E.figura(3.5)
     ax.axhline(0, color=E.TINTA, linewidth=0.9, zorder=4)
     cruces = []
@@ -83,9 +83,9 @@ def ex08():
 
 
 def ex09():
-    """Base contra reformista por percepción, con el area entre medio."""
+    """Base contra reformista pagado con la base de valuacion, con el area entre medio."""
     por = _modelo()
-    a, b = por["base"], por["reformista_percepcion"]
+    a, b = por["base"], por["reformista_valuacion"]
     xs = [int(r["anio"]) for r in a]
     ya = [float(r["resultado_financiero"]) / 1e6 for r in a]
     yb = [float(r["resultado_financiero"]) / 1e6 for r in b]
@@ -96,7 +96,7 @@ def ex09():
     ax.plot(xs, ya, color=E.TINTA, linewidth=1.4, zorder=3)
     ax.plot(xs, yb, color=E.RIO, linewidth=2.0, zorder=3)
     E.etiqueta_serie(ax, xs[-1], ya[-1], "Base", E.TINTA, dx=6, dy=-7)
-    E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\ncobrando mejor", E.RIO,
+    E.etiqueta_serie(ax, xs[-1], yb[-1], "Reformista\npagado con la base", E.RIO,
                      dx=6, dy=8)
     medio = len(xs) // 2
     ax.annotate("el programa se ejecuta entero\nY el resultado mejora",
@@ -112,7 +112,7 @@ def ex09():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 09",
-              "Pagar el programa cobrando mejor deja al Municipio mejor que no hacerlo",
+              "Pagar el programa con la base de valuacion deja el resultado igual o mejor",
               "El area sombreada es la diferencia: 2.303 millones a favor en "
               "2031 y 2.924 en 2037.",
         FUENTE_MODELO)

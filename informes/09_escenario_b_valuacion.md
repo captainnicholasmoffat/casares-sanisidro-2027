@@ -2,7 +2,78 @@
 
 25 de septiembre de 2026. Rama `claude/cool-hopper-3hdk58`. Todo sale de
 `03_scripts/escenario_b_valuacion.py`, con los datos crudos guardados en el repo.
-**Este informe no toca el documento.**
+
+## Lo decidido: escenario B, con suba pareja de 10,9% y un tope de 25% por año
+
+El programa necesita **cobrar** 7.225,2 millones. Con la percepción de hoy, del 89,32%, eso
+exige **emitir 8.089,1 millones más por la parte tierra**. La escala de ARBA se fija entonces un
+**10,9%** por encima del nivel que dejaría la recaudación igual (10,88% exacto).
+
+**Quién paga más y quién menos (en régimen):**
+
+| Localidad | Tierra hoy (M) | Con B (M) | Diferencia (M) | % | Parcelas que suben | Parcelas que bajan | Suba mediana de las que suben | Duplican o más |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Acassuso | 30.506,6 | 39.105,4 | +8.598,8 | +28,2% | 12.819 | 3.369 | +24,2% | 66 |
+| Martínez | 10.322,9 | 12.292,9 | +1.970,1 | +19,1% | 10.440 | 1.029 | +20,6% | 37 |
+| San Isidro | 10.624,7 | 11.031,4 | +406,7 | +3,8% | 4.998 | 3.745 | +25,1% | 44 |
+| Béccar | 6.596,7 | 6.047,5 | −549,1 | −8,3% | 1.836 | 5.715 | +23,5% | 0 |
+| Villa Adelina | 9.733,7 | 8.586,2 | −1.147,5 | −11,8% | 2.315 | 10.329 | +22,2% | 0 |
+| Boulogne | 6.583,0 | 5.393,2 | −1.189,8 | −18,1% | 1.211 | 10.811 | +34,5% | 0 |
+| **Todo el partido** | 74.367,6 | 82.456,7 | **+8.089,1** | **+10,9%** | **33.619** | **34.998** | +23,5% | 147 |
+
+**Bajan más parcelas de las que suben: 34.998 contra 33.619.** Las otras 27 quedan igual.
+
+**El tope.** Ninguna boleta sube por esta actualización más de **25% por año**, por encima de la
+actualización anual del multiplicador, que es pareja para todos. Las que tienen que subir más llegan
+por escalones. **Las bajas se aplican completas desde el primer año.** La suba más grande es de
++122,8%, y con el tope llega en cuatro años.
+
+| Año del programa | Se emite (M) | Se cobra al 89,32% (M) | Lo que pide la rampa del programa (M) | Parcelas todavía topeadas |
+|---:|---:|---:|---:|---:|
+| 1 | 2.212,5 | 1.976,2 | 1.806,3 | 15.884 |
+| 2 | 6.558,2 | 5.857,8 | 3.612,6 | 2.892 |
+| 3 | 8.025,6 | 7.168,5 | 5.418,9 | 215 |
+| 4 en adelante | 8.089,1 | **7.225,2** | 7.225,2 | 0 |
+
+**Por qué 25%.** Es el tope más bajo que, cada año, cobra al menos lo que pide la rampa del
+programa (25%, 50%, 75% y 100% de 7.225,2 millones). Con 24% el primer año se cobran 1.753 millones y
+la rampa pide 1.806. Con 25%, **el rendimiento final queda en pie: 7.225,2 millones cobrados por año
+desde el cuarto**, y no hace falta achicar el programa.
+
+**Cuántos años tarda cada parcela en llegar:**
+
+| Localidad | Llegan el año 1 | En 2 años | En 3 años | En 4 años |
+|---|---:|---:|---:|---:|
+| Acassuso | 6.518 | 5.128 | 1.039 | 134 |
+| Martínez | 5.899 | 3.766 | 738 | 37 |
+| San Isidro | 2.465 | 2.052 | 437 | 44 |
+| Béccar | 954 | 676 | 206 | 0 |
+| Villa Adelina | 1.404 | 890 | 21 | 0 |
+| Boulogne | 495 | 480 | 236 | 0 |
+
+**La boleta típica, parte tierra, pesos por año** (mediana de cada grupo, antes y después):
+
+| Localidad | Parcela mediana hoy | Las que suben | Las que bajan |
+|---|---:|---:|---:|
+| Acassuso | 733.530 | 779.889 → 1.028.809 | 571.648 → 466.559 |
+| Martínez | 562.090 | 554.423 → 704.888 | 654.828 → 601.176 |
+| San Isidro | 586.484 | 696.039 → 875.260 | 498.983 → 403.901 |
+| Béccar | 385.784 | 616.264 → 744.495 | 348.322 → 259.494 |
+| Villa Adelina | 408.740 | 756.390 → 884.160 | 385.955 → 233.527 |
+| Boulogne | 289.271 | 403.024 → 561.912 | 283.527 → 185.950 |
+
+**El mínimo, con este escenario.** De las bajas, 789 millones de emisión caen por debajo del mínimo
+de $234.000: 387 en Boulogne, 261 en Villa Adelina y 97 en Béccar. Si esas casas tienen poca
+superficie construida, siguen pagando el mínimo: el Municipio deja de cobrar menos y el neto sube
+hasta unos 8.000 millones emitidos. Esa parte de la baja no les llega a esos vecinos.
+
+Todo esto está en `data/valuacion_escenarios_localidad.csv` (columnas `Bc_`), en
+`data/valuacion_rendimiento_por_anio.csv`, que lee el modelo fiscal, y en `data/valuacion_resumen.json`
+(bloque `adoptado`).
+
+---
+
+Lo que sigue es el informe original: las alternativas antes de la decisión.
 
 ## La respuesta
 

@@ -176,7 +176,7 @@ subir una sola tasa.
 | **base** | +1,95% anual | −2,196% anual | no | — |
 | **adverso** | −0,05% anual (2 puntos menos) | −3,5% anual | no | — |
 | **reformista** | +1,95% anual | −2,196% anual | sí, 2,5% del gasto en 4 años | reasignación |
-| **reformista_percepcion** | +1,95% anual | −2,196% anual | sí, el mismo | cobrando mejor |
+| **reformista_valuacion** | +1,95% anual | −2,196% anual | sí, el mismo | con la base de valuación actualizada |
 
 Resultado financiero, en millones de pesos de diciembre de 2025:
 
@@ -185,7 +185,7 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 | base | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
 | adverso | −6.051 | −13.637 | −20.484 | −26.668 | −32.257 |
 | reformista | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_percepcion** | −6.051 | **+3.177** | **+12.678** | **+22.759** | **+33.959** |
+| **reformista_valuacion** | −6.051 | **+3.395** | +10.375 | +20.162 | +31.035 |
 
 > **Que `reformista` dé idéntico a `base` NO es un error de copiado.** El
 > programa se financia **íntegramente por reasignación dentro del gasto
@@ -194,24 +194,18 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 > `gasto_programa_empleo_vivienda` y `reasignacion_necesaria`. La advertencia
 > está también arriba del propio CSV, porque el archivo viaja solo.
 
-**`reformista_percepcion` es el mismo programa pagado de otra manera**: la
-percepción de recursos corrientes sube de 89,32% a 92% en cuatro años. Ahí el
-gasto total **sí** sube (309.236 → 316.461 millones), pero los ingresos suben más,
-y el resultado financiero queda **por encima del escenario base**: +12.678 contra
-+10.375 millones en 2031. No se le saca plata a ninguna partida: se cobra lo que
-ya se facturó.
+**`reformista_valuacion` es el mismo programa pagado con la base de valuación
+actualizada** (septiembre de 2026, informe 09). La escala de ARBA se fija un 10,9%
+por encima de la que dejaría la recaudación igual, y ninguna boleta sube más de 25%
+por año por esa actualización. Lo cobrado, al 89,32% de percepción, sale de
+`data/valuacion_rendimiento_por_anio.csv`: 1.976 millones el año 1, 5.858 el 2,
+7.168 el 3 y 7.225,2 desde el 4, en pesos constantes y sin crecimiento propio.
+El gasto total sube lo que cuesta el programa. En régimen el resultado es el
+mismo que el base; en los años 1 a 3 queda arriba, porque con el tope se cobra
+más de lo que pide la rampa (+170, +2.245 y +1.750 millones).
 
-### Cuál conviene, en una línea
-
-| | Reasignación | Cobrando mejor |
-|---|---|---|
-| Resultado financiero | igual que el base | **mejor que el base** |
-| A quién le saca plata | a otras partidas del gasto flexible | a nadie |
-| Qué requiere | decidir qué se recorta | mejorar la cobranza 2,7 puntos |
-| Riesgo | conflicto por cada partida tocada | que la cobranza no mejore |
-
-Las dos están modeladas para que la elección se haga con números y no con
-intuición. El modelo no elige.
+Reemplaza al escenario `reformista_percepcion`, que pagaba el programa cobrando
+mejor: el documento ya no propone financiarlo con la cobranza.
 
 ## 4. El programa: empleo y vivienda
 

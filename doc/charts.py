@@ -263,16 +263,16 @@ def g_rigidez():
 
 # --- 9. base vs reformista ---------------------------------------------------
 def g_reformista():
-    """Base contra reformista cobrando mejor, de data/modelo_flujo_caja.csv."""
+    """Base contra el programa pagado con la base de valuacion, de data/modelo_flujo_caja.csv."""
     M = _modelo()
     yrs = sorted(M["base"])
     base = [M["base"][a]/1000 for a in yrs]
-    ref  = [M["reformista_percepcion"][a]/1000 for a in yrs]
+    ref  = [M["reformista_valuacion"][a]/1000 for a in yrs]
     fig, ax = plt.subplots(figsize=(W,2.5)); frame(ax)
     ax.fill_between(yrs, base, ref, color=SAGED, alpha=.16, linewidth=0)
     ax.plot(yrs, ref, color=SAGED, lw=1.8)
     ax.plot(yrs, base, color=INK, lw=1.5)
-    ax.text(yrs[-1]+.20, ref[-1], " Con la propuesta,\n cobrando mejor", fontsize=7.4,
+    ax.text(yrs[-1]+.20, ref[-1], " Con la propuesta,\n pagada con la base", fontsize=7.4,
             color=SAGED, fontweight="semibold", va="center")
     ax.text(yrs[-1]+.20, base[-1]-2.4, " Sin cambios", fontsize=7.4, color=INK,
             fontweight="semibold", va="center")
