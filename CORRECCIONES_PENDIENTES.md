@@ -1984,7 +1984,7 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
   lotes chicos, y el cálculo es sobre la parte tierra. "Con un tope": si el mínimo frena subas, los
   años 1 a 3 son hasta 44,5 M menos y sigue alcanzando (1.946 / 5.815 / 7.124 contra 1.806 / 3.613 /
   5.419). Sale "Desde el cuarto, 7.225,2".
-- Nota del gráfico de escenarios del 3.2: decía que el modelo todavía no corría el programa pagado
+- Nota del gráfico de escenarios del 3.2 (sin años de calendario): decía que el modelo todavía no corría el programa pagado
   con la base; ya lo corre (commit c75edc6). Corregida.
 - No se escala el programa. Fuentes del texto, informe 09, RESUMEN_MODELO y METODOLOGIA_MODELO con el
   rango. Script: columna cobrado_si_el_minimo_frena_subas en data/valuacion_rendimiento_por_anio.csv

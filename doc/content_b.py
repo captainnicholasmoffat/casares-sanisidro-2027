@@ -242,7 +242,7 @@ se mantienen</span>. El escenario adverso nunca sale del rojo.</p>
      "Resultado financiero proyectado, sin cambios de pol&iacute;tica y en el escenario adverso.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la base de valuaci&oacute;n ya est&aacute; en el modelo: lo que la base cobra de m&aacute;s en los primeros a&ntilde;os mejora el resultado hasta 2028, y desde 2029 el resultado es el de sin cambios, porque lo que cobra se gasta; si el m&iacute;nimo frena subas de lotes chicos, hasta 44,5 millones menos por a&ntilde;o."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la base de valuaci&oacute;n ya est&aacute; en el modelo: lo que la base cobra de m&aacute;s en los tres primeros a&ntilde;os del programa mejora el resultado, y despu&eacute;s el resultado es el de sin cambios, porque lo que cobra se gasta; si el m&iacute;nimo frena subas de lotes chicos, hasta 44,5 millones menos por a&ntilde;o."))
 
 
 # =====================================================================
