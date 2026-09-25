@@ -1990,3 +1990,34 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
   rango. Script: columna cobrado_si_el_minimo_frena_subas en data/valuacion_rendimiento_por_anio.csv
   (el modelo sigue leyendo "cobrado"; tests OK).
 - PDF: 39 páginas, 45 exhibits sin saltos, fuentes sin sustituciones, cero viudas, pies bien.
+
+# LAS TRES COSAS DEL 3.5 · APLICADAS
+
+## 1 · LA SEGUNDA FUENTE SIN CIFRA · SALE DEL 3.5
+- No se puede calcular: la Ordenanza Fiscal da "hasta el 10%" (el porcentaje real lo fija el
+  Ejecutivo) y ni la Impositiva ni los padrones de ARBA dicen quién paga el año por adelantado.
+- Sale el párrafo "Y una segunda fuente, más chica..." del 3.5. Queda en el anexo III como
+  facultad, sin llamarla fuente: nuevo artículo 5, "Descuento por pago anual" (el Ejecutivo puede
+  fijar un tope de valuación por encima del cual no se aplica; por debajo, sigue como está).
+  Publicidad pasa a artículo 6.
+
+## 2 · "LA DE MAYOR VALOR PAGA LO QUE LE CORRESPONDE" · SALE
+- El recuadro "Lo que sube, y lo que no" cierra con "La zona con más necesidad paga menos que hoy."
+
+## 3 · LA FECHA DEL MODELO · CORREGIDA (commit 2b592a0)
+- 03_scripts/modelo.py: ANIO_INICIO_PROGRAMA = 2028. La rampa (25/50/75/100%) y lo que cobra la
+  base de valuación se cuentan desde 2028; en 2026 y 2027 el programa sigue en 505,7 M.
+- Cambia sólo el modelo: reformista_valuacion queda +170, +2.245 y +1.750 M sobre el base en
+  2028-2030 (antes 2026-2028) e igual desde 2031. Base, adverso, reformista, sensibilidad y el
+  resultado de 2031 no cambian. Las opciones de financiamiento arrancan en 2028 (el crédito da
+  +2.529 / +1.626 / +723 M en el sexto año del programa, ahora 2033).
+- El 49 bis no lo calcula el modelo: el documento sólo dice que el margen se reduce por el bono.
+- El documento no se mueve: el PDF con el modelo nuevo dio texto, imágenes y trazos idénticos al
+  anterior.
+- Regenerados: data/modelo_flujo_caja.csv, data/financiamiento_opciones.csv, 06_charts EXHIBIT_08
+  y 09 (el subtítulo del 09 ahora sale de los datos; decía 2.303 y 2.924 M, del escenario viejo de
+  la cobranza), assets/svg/g_reformista.svg (no está en el PDF). RESUMEN_MODELO y
+  METODOLOGIA_MODELO actualizados.
+
+## EL PDF
+39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.

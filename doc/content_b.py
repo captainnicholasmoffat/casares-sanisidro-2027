@@ -491,13 +491,6 @@ mirando s&oacute;lo la tierra, <b>789 millones de rebaja no llegar&iacute;an</b>
 Villa Adelina y 97 en B&eacute;ccar. <span class="sg">Por eso la ordenanza lo ajusta: la baja de la tabla
 nueva se aplica aunque la boleta quede debajo del m&iacute;nimo.</span> Contra el plan no cuesta nada: lo
 que se cobra ya cuenta esas bajas completas.</p>
-<p><b>Y una segunda fuente, m&aacute;s chica: un tope al descuento del buen contribuyente.</b> Hoy es de
-hasta el 10% para quien paga el a&ntilde;o por adelantado y sin deuda, y <b>no tiene tope de
-valuaci&oacute;n</b>: lo recibe igual una casa de Acassuso que una de Boulogne. La propuesta es ponerle un
-tope de valuaci&oacute;n, no eliminarlo. <span class="sg">Es la misma l&oacute;gica que la de la base: las
-dos piden m&aacute;s a las propiedades de mayor valor.</span> Las exenciones
-a los jubilados que cobran hasta tres haberes m&iacute;nimos, a las personas con discapacidad y a las motos
-de hasta 150cc no se tocan: van a quien las necesita.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que sube, y lo que no</div>
@@ -507,8 +500,7 @@ valuaci&oacute;n provincial&mdash; pero achata la distancia entre ellas: para es
 Acassuso vale poco m&aacute;s del doble que la de Boulogne; para la provincia, m&aacute;s del triple.</p>
 <p><b>Bajan m&aacute;s parcelas de las que suben.</b> Lo que sube es lo que pagan las propiedades que la
 tabla de 2008 tiene subvaluadas. <b>Y el total que se emite por la tierra sube 10,9%.</b> <span
-class="sg">La zona con m&aacute;s necesidad paga menos que hoy, y la de mayor valor paga lo que le
-corresponde.</span></p>
+class="sg">La zona con m&aacute;s necesidad paga menos que hoy.</span></p>
 </div>
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>

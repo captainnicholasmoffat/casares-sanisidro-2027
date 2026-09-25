@@ -132,7 +132,12 @@ aunque la tasa resultante quede por debajo de la tasa m&iacute;nima anual</b> qu
 Impositiva: para esa partida, el m&iacute;nimo se reduce en el mismo monto que la baja. Rige tambi&eacute;n
 para cada unidad funcional de los inmuebles en propiedad horizontal.</p>
 
-<h3>Art&iacute;culo 5 &mdash; Publicidad</h3>
+<h3>Art&iacute;culo 5 &mdash; Descuento por pago anual</h3>
+<p class="tight">Fac&uacute;ltase al Departamento Ejecutivo a fijar un tope de valuaci&oacute;n por encima
+del cual no se aplica el descuento por pago anual anticipado que prev&eacute; la Ordenanza Fiscal. Por
+debajo de ese tope, el descuento se mantiene como est&aacute;.</p>
+
+<h3>Art&iacute;culo 6 &mdash; Publicidad</h3>
 <p class="tight">La tabla actualizada y la metodolog&iacute;a con que se construy&oacute; se publican
 &iacute;ntegras, manzana por manzana, junto con la tabla que reemplazan.</p>
 
