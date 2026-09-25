@@ -200,6 +200,9 @@ por encima de la que dejaría la recaudación igual, y ninguna boleta sube más 
 por año por esa actualización. Lo cobrado, al 89,32% de percepción, sale de
 `data/valuacion_rendimiento_por_anio.csv`: 1.976 millones el año 1, 5.858 el 2,
 7.168 el 3 y 7.225,2 desde el 4, en pesos constantes y sin crecimiento propio.
+Si el mínimo de la tasa frena las subas de lotes que hoy están debajo del piso, es
+hasta 44,5 millones menos por año (columna `cobrado_si_el_minimo_frena_subas`); el
+modelo corre la columna `cobrado`.
 El gasto total sube lo que cuesta el programa. En régimen el resultado es el
 mismo que el base; en los años 1 a 3 queda arriba, porque con el tope se cobra
 más de lo que pide la rampa (+170, +2.245 y +1.750 millones).

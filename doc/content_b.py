@@ -242,7 +242,7 @@ se mantienen</span>. El escenario adverso nunca sale del rojo.</p>
      "Resultado financiero proyectado, sin cambios de pol&iacute;tica y en el escenario adverso.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. Tampoco corre todav&iacute;a el programa pagado con la base de valuaci&oacute;n: el modelo se est&aacute; actualizando para incluirlo."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la base de valuaci&oacute;n ya est&aacute; en el modelo: lo que la base cobra de m&aacute;s en los primeros a&ntilde;os mejora el resultado hasta 2028, y desde 2029 el resultado es el de sin cambios, porque lo que cobra se gasta; si el m&iacute;nimo frena subas de lotes chicos, hasta 44,5 millones menos por a&ntilde;o."))
 
 
 # =====================================================================
@@ -472,22 +472,25 @@ tierra al 47,4%, y Mart&iacute;nez del 13,9% al 14,9%. <b>Boulogne baja del 8,9%
 del 13,1% al 10,4% y B&eacute;ccar del 8,9% al 7,3%.</b> San Isidro, del 14,3% al 13,4%.</p>
 <p><b>Cu&aacute;nto aporta.</b> El nivel de la tabla nueva se fija para que la parte tierra emita
 <b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. Con la percepci&oacute;n
-de hoy &mdash;89,32%&mdash; eso es <b>7.225,2 millones cobrados</b>: lo que el programa necesita.</p>
+de hoy &mdash;89,32%&mdash; se cobran <b>entre 7.180,7 y 7.225,2 millones</b>, seg&uacute;n cu&aacute;ntas
+subas frene el m&iacute;nimo en lotes chicos: lo que el programa necesita, o un 0,6% menos. <b>El
+c&aacute;lculo es sobre la parte tierra</b>: los metros construidos no son p&uacute;blicos.</p>
 <p><b>Con un tope.</b> Ninguna boleta sube m&aacute;s de 25% por a&ntilde;o, as&iacute; que la
 actualizaci&oacute;n se completa en cuatro ejercicios; las bajas no esperan, van desde el primero. <span
 class="sg">Y aun as&iacute; alcanza cada a&ntilde;o:</span> el primero se cobran 1.976 millones y el
-programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Desde el cuarto,
-7.225,2.</p>
+programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Si el
+m&iacute;nimo frena subas, esos tres a&ntilde;os son hasta 44,5 millones menos, y sigue alcanzando.</p>
 <p><b>Qui&eacute;n paga m&aacute;s y qui&eacute;n menos.</b> <b>Bajan 34.998 parcelas y suben
 33.619.</b> Boulogne paga 18,1% menos por la tierra, Villa Adelina 11,8% menos y B&eacute;ccar 8,3%
 menos. San Isidro paga 3,8% m&aacute;s, Mart&iacute;nez 19,1% y Acassuso 28,2%. <span class="sg">Los
 barrios con m&aacute;s hogares sin cloaca y sin gas pagan menos, y reciben m&aacute;s obra.</span></p>
-<p><b>Una parte de la baja puede no llegar.</b> La tasa tiene un piso: $234.000 por a&ntilde;o para una
-vivienda, aunque la cuenta d&eacute; menos. Mirando s&oacute;lo la tierra de cada lote, <b>789 millones de
-las bajas quedan debajo de ese piso</b>: 387 en Boulogne, 261 en Villa Adelina y 97 en B&eacute;ccar,
-justo donde la actualizaci&oacute;n quiere aliviar. Cu&aacute;nto se pierde de verdad depende de lo
-construido en cada lote y, en los edificios, de cada departamento, que paga su propio m&iacute;nimo: no son
-datos p&uacute;blicos.</p>
+<p><b>El m&iacute;nimo tambi&eacute;n se ajusta.</b> La tasa tiene un piso: $234.000 por a&ntilde;o para
+una vivienda, aunque la cuenta d&eacute; menos. Ese piso se fij&oacute; con la tabla vieja, y con la nueva
+cobrar&iacute;a de m&aacute;s justamente a las parcelas m&aacute;s chicas de las zonas con menos servicios:
+mirando s&oacute;lo la tierra, <b>789 millones de rebaja no llegar&iacute;an</b>, 387 en Boulogne, 261 en
+Villa Adelina y 97 en B&eacute;ccar. <span class="sg">Por eso la ordenanza lo ajusta: la baja de la tabla
+nueva se aplica aunque la boleta quede debajo del m&iacute;nimo.</span> Contra el plan no cuesta nada: lo
+que se cobra ya cuenta esas bajas completas.</p>
 <p><b>Y una segunda fuente, m&aacute;s chica: un tope al descuento del buen contribuyente.</b> Hoy es de
 hasta el 10% para quien paga el a&ntilde;o por adelantado y sin deuda, y <b>no tiene tope de
 valuaci&oacute;n</b>: lo recibe igual una casa de Acassuso que una de Boulogne. La propuesta es ponerle un

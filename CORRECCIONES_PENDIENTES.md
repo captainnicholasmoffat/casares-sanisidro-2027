@@ -1968,3 +1968,25 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
 
 ## EL PDF
 39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.
+
+# EL MÍNIMO DE $234.000 · APLICADA
+
+- 3.5: el párrafo "Una parte de la baja puede no llegar" pasa a "El mínimo también se ajusta", con el
+  argumento: el piso se fijó con la tabla vieja y con la nueva cobraría de más a las parcelas más
+  chicas de las zonas con menos servicios; 789 M de rebaja no llegarían (Boulogne 387, Villa Adelina
+  261, Béccar 97); por eso la ordenanza lo ajusta; contra el plan no cuesta nada. Verificado: las
+  16.097 parcelas con baja frenada tienen 226 m² de mediana contra 298 del partido, y el 94% de los
+  789 M está en esas tres localidades.
+- Anexo III: nuevo artículo 4, Mínimo (la baja se aplica completa aunque quede debajo del mínimo;
+  para esa partida el mínimo se reduce en el mismo monto; rige para cada unidad funcional en
+  propiedad horizontal). Publicidad pasa a artículo 5.
+- 3.5, "Cuánto aporta": se cobran entre 7.180,7 y 7.225,2 M según cuántas subas frene el mínimo en
+  lotes chicos, y el cálculo es sobre la parte tierra. "Con un tope": si el mínimo frena subas, los
+  años 1 a 3 son hasta 44,5 M menos y sigue alcanzando (1.946 / 5.815 / 7.124 contra 1.806 / 3.613 /
+  5.419). Sale "Desde el cuarto, 7.225,2".
+- Nota del gráfico de escenarios del 3.2: decía que el modelo todavía no corría el programa pagado
+  con la base; ya lo corre (commit c75edc6). Corregida.
+- No se escala el programa. Fuentes del texto, informe 09, RESUMEN_MODELO y METODOLOGIA_MODELO con el
+  rango. Script: columna cobrado_si_el_minimo_frena_subas en data/valuacion_rendimiento_por_anio.csv
+  (el modelo sigue leyendo "cobrado"; tests OK).
+- PDF: 39 páginas, 45 exhibits sin saltos, fuentes sin sustituciones, cero viudas, pies bien.

@@ -293,7 +293,10 @@ def efecto_minimo_propuesta(ps):
                   for p in ps if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026)
     tapada = sum(max(0, min(p["tbc"], MINIMO_2026) - p["t0"])
                  for p in ps if p["tbc"] > p["t0"] and p["t0"] < MINIMO_2026)
-    return {"parcelas_con_baja_frenada": sum(1 for p in ps if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026),
+    frenadas = [p for p in ps if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026]
+    return {"parcelas_con_baja_frenada": len(frenadas),
+            "superficie_mediana_con_baja_frenada_m2": round(statistics.median(p["superficie"] for p in frenadas), 1),
+            "superficie_mediana_del_partido_m2": round(statistics.median(p["superficie"] for p in ps), 1),
             "baja_frenada_emitido_M": round(frenada / 1e6, 1),
             "baja_frenada_cobrado_M": round(PERCEPCION * frenada / 1e6, 1),
             "costo_contra_el_plan_M": 0.0,
@@ -309,19 +312,23 @@ def camino_con_tope(ps, tope, anios=6):
     filas = []
     for k in range(1, anios + 1):
         emision = 0.0
+        tapada = 0.0      # suba de lotes que hoy estan bajo el minimo: si su boleta es solo tierra, no se cobra
         topeadas = 0
         for p in ps:
             if p["tbc"] >= p["t0"]:
                 techo = p["t0"] * (1 + tope) ** k
                 emision += min(p["tbc"], techo) - p["t0"]
                 topeadas += p["tbc"] > techo
+                if p["t0"] < MINIMO_2026:
+                    tapada += max(0, min(p["tbc"], techo, MINIMO_2026) - p["t0"])
             else:
                 emision += p["tbc"] - p["t0"]
         filas.append({"anio_del_programa": k,
                       "emision_extra": round(emision),
                       "cobrado": round(PERCEPCION * emision),
                       "necesidad_de_la_rampa": round(FONDOS_NUEVOS * min(k, ANIOS_RAMPA) / ANIOS_RAMPA),
-                      "parcelas_todavia_con_tope": topeadas})
+                      "parcelas_todavia_con_tope": topeadas,
+                      "cobrado_si_el_minimo_frena_subas": round(PERCEPCION * (emision - tapada))})
     return filas
 
 

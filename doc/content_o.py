@@ -126,7 +126,13 @@ podr&aacute; superar el <b>veinticinco por ciento (25%)</b>, por encima de la ac
 del multiplicador. La diferencia se aplica en los ejercicios siguientes, con el mismo tope, hasta alcanzar
 el valor que corresponde. <b>Las reducciones se aplican completas en el primer ejercicio.</b></p>
 
-<h3>Art&iacute;culo 4 &mdash; Publicidad</h3>
+<h3>Art&iacute;culo 4 &mdash; M&iacute;nimo</h3>
+<p class="tight">Cuando esta actualizaci&oacute;n baje la tasa de una partida, <b>la baja se aplica completa
+aunque la tasa resultante quede por debajo de la tasa m&iacute;nima anual</b> que fija la Ordenanza
+Impositiva: para esa partida, el m&iacute;nimo se reduce en el mismo monto que la baja. Rige tambi&eacute;n
+para cada unidad funcional de los inmuebles en propiedad horizontal.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Publicidad</h3>
 <p class="tight">La tabla actualizada y la metodolog&iacute;a con que se construy&oacute; se publican
 &iacute;ntegras, manzana por manzana, junto con la tabla que reemplazan.</p>
 

@@ -41,7 +41,7 @@ menos de un peso de cada diez de los que el Municipio sí puede reasignar.**
 Hay cuatro caminos, cuantificados en `data/financiamiento_opciones.csv`. **El
 documento eligió el cuarto: actualizar la base de valuación de la tasa** (escala de
 ARBA 10,9% por encima de la neutral, tope de 25% de suba anual por boleta), que
-cobra 7.225,2 millones por año desde el cuarto (informe 09). Los otros tres: **Reasignar** desde el gasto flexible cubre
+cobra 7.225,2 millones por año desde el cuarto, o hasta 44,5 menos si el mínimo frena subas de lotes chicos (informe 09). Los otros tres: **Reasignar** desde el gasto flexible cubre
 el 100% del costo y no cambia el resultado financiero: cambia la composición del
 gasto, no su nivel. **Cobrar mejor** es una meta de gestión, no la fuente del programa: en 2025 quedaron **35.994 millones sin cobrar** —se devengaron
 337.149 y se percibieron 301.155, una percepción del 89,3%—, así que subir la
@@ -70,7 +70,8 @@ su composición.
 
 `reformista_valuacion` es el mismo programa pagado con la base de valuación de la
 tasa actualizada: escala de ARBA 10,9% por encima de la neutral y tope de 25% de
-suba anual por boleta (informe 09). Cobra 7.225,2 millones por año desde el cuarto
+suba anual por boleta (informe 09). Cobra 7.225,2 millones por año desde el cuarto (7.180,7 si el mínimo
+frena todas las subas de lotes chicos; el modelo corre el 7.225,2)
 y más de lo que pide la rampa en los tres primeros; en régimen el resultado es el
 del base. Reemplaza al escenario que pagaba el programa cobrando mejor.
 

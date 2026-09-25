@@ -70,13 +70,26 @@ están debajo del piso. Mirado sólo con la tierra, el neto emitido queda entre 
 (8.089 − 50 y 8.089 + 789). Es un cálculo parcela por parcela: no ve lo construido ni los
 departamentos, y en los edificios cada unidad funcional paga su propio mínimo (Impositiva 2026, art. 1).
 
-**Qué se puede proponer, y cuánto cuesta.** Que la baja que produce la tabla nueva se aplique aunque la
-boleta quede debajo del mínimo. **Contra el plan no cuesta nada**: los 8.089 millones emitidos y los
+**Lo decidido sobre el mínimo (25/09): se ajusta.** La baja que produce la tabla nueva se aplica
+aunque la boleta quede debajo del mínimo (anexo III, artículo 4). El mínimo se fijó con la tabla vieja, y
+con la nueva cobraría de más a las parcelas más chicas de las zonas con menos servicios: las 16.097
+parcelas cuya baja frenaría tienen 226 m² de mediana, contra 298 del partido, y el 94% de esos 789
+millones está en Boulogne, Villa Adelina y Béccar. **Contra el plan no cuesta nada**: los 8.089 millones emitidos y los
 7.225,2 cobrados ya cuentan esas bajas completas. Contra aplicar la tabla con el mínimo como está, el
 Municipio resigna hasta 789 millones emitidos por año, 705 cobrados, que no estaban en el plan. Lo único
 que queda es la suba tapada por el mínimo: hasta 49,8 millones emitidos, 44,5 cobrados, con lo que lo
 cobrado podría quedar en 7.180,7 millones, un 0,6% debajo de 7.225,2. Está en `data/valuacion_resumen.json`
-(bloque `minimo_propuesta`).
+(bloque `minimo_propuesta`). **No se escala el programa** (25/09): el documento declara el rango,
+entre 7.180,7 y 7.225,2 millones cobrados, y que el cálculo es sobre la parte tierra.
+
+| Año del programa | Cobrado (M) | Si el mínimo frena todas las subas de lotes chicos (M) | Lo que pide la rampa (M) |
+|---:|---:|---:|---:|
+| 1 | 1.976,2 | 1.946,4 | 1.806,3 |
+| 2 | 5.857,8 | 5.814,7 | 3.612,6 |
+| 3 | 7.168,5 | 7.124,0 | 5.418,9 |
+| 4 en adelante | 7.225,2 | 7.180,7 | 7.225,2 |
+
+Columna `cobrado_si_el_minimo_frena_subas` de `data/valuacion_rendimiento_por_anio.csv`.
 
 Todo esto está en `data/valuacion_escenarios_localidad.csv` (columnas `Bc_`), en
 `data/valuacion_rendimiento_por_anio.csv`, que lee el modelo fiscal, y en `data/valuacion_resumen.json`
