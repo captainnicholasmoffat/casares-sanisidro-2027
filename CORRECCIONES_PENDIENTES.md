@@ -2021,3 +2021,19 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
 
 ## EL PDF
 39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.
+
+# Y DOS COSAS MÁS · APLICADAS
+
+- El recuadro del 3.5 queda como está: "La zona con más necesidad paga menos que hoy."
+- 3.6, al final: "El programa no está entre los riesgos", dos líneas y cuadro 22. Pagado con la base, el
+  resultado queda arriba del de sin cambios en 2028, 2029 y 2030 (+170, +2.245 y +1.750 M) y es el
+  mismo desde 2031. Con la fila del piso: si el mínimo frena todas las subas de lotes chicos, +140,
+  +2.202 y +1.705, y −44,5 desde 2031.
+- Comparación verificada: escenario "base" (sin cambios) contra "reformista_valuacion", con los mismos
+  parámetros (recursos propios +1,95% real anual, coparticipación −2,196% anual). Sólo cambian los
+  ingresos de origen municipal (lo que cobra la base) y el gasto del programa; las demás columnas
+  del modelo son iguales año por año.
+- Regla nueva: cuando Nick pide aviso previo, se avisa antes de aplicar aunque el resultado no cambie
+  nada.
+- PDF: 39 páginas, 46 exhibits del 1 al 46 sin saltos (29 cuadros, 17 gráficos). Fuentes sin
+  sustituciones, cero viudas, pies bien.

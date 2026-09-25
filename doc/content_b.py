@@ -554,6 +554,28 @@ m&aacute;s mueven el resultado: en eso el futuro fiscal de San Isidro se decide 
 <b>El servicio del bono no</b>: lo fija la tasa mayorista, y es la primera variable fiscal relevante que
 queda fuera del control del Municipio.</p></div>
 
+<h3>El programa no est&aacute; entre los riesgos</h3>
+<p class="lead">Pagado con la base, el programa deja el resultado <b>arriba del de sin cambios en 2028,
+2029 y 2030</b>: en esos a&ntilde;os la base cobra m&aacute;s de lo que el programa gasta. <span
+class="sg">No s&oacute;lo no empeora las cuentas: mientras sube, las deja mejor que no hacer nada.</span></p>
+""" + exhead("c", "Con el programa pagado con la base, el resultado queda arriba del de sin cambios",
+             "Resultado financiero proyectado, en millones de pesos de diciembre de 2025.") + """
+<table>
+<colgroup><col style="width:210pt"><col><col><col><col></colgroup>
+<tr class="hd"><th></th><th class="r">2028</th><th class="r">2029</th><th class="r">2030</th><th class="r">2031</th></tr>
+<tr><td class="l">Sin cambios</td><td class="n">1.645</td><td class="n">4.439</td><td class="n">7.349</td><td class="n">10.375</td></tr>
+<tr><td class="l">Con el programa, pagado con la base</td><td class="n">1.815</td><td class="n">6.684</td><td class="n">9.098</td><td class="n">10.375</td></tr>
+<tr class="hi"><td class="l">Diferencia</td><td class="n"><b>+170</b></td><td class="n"><b>+2.245</b></td><td class="n"><b>+1.750</b></td><td class="n"><b>0</b></td></tr>
+<tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">+140</td><td class="n">+2.202</td><td class="n">+1.705</td><td class="n">&minus;44,5</td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> modelo de flujo de caja, escenarios sin cambios y con el programa pagado con la
+base de valuaci&oacute;n; lo que cobra la base, del informe 09.</p>
+<p class="cap"><b>Nota:</b> los dos escenarios tienen los mismos supuestos de recaudaci&oacute;n propia y de
+coparticipaci&oacute;n: lo &uacute;nico que cambia es el programa y lo que cobra la base. El programa empieza
+en 2028, el primer ejercicio completo del mandato. Desde 2031 lo cobrado y lo gastado se igualan. La
+&uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de lotes chicos (3.5). Las
+diferencias se calculan sin redondear.</p>
+
 <h2><span class="n">3.7</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
 <ol class="n">
 <li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que el modelo corrige solo hacia
