@@ -431,29 +431,37 @@ cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oac
 que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
 <span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
 </div>
-""" + exhead("c", "La tabla municipal ordena bien las zonas, pero achata la diferencia a la mitad",
-             "Relaci&oacute;n entre el valor de la tierra de una zona y otra, en la escala municipal de 2008 y en la valuaci&oacute;n provincial. Ponderado por superficie de parcela.") + """
+""" + exhead("c", "La tabla municipal ordena bien las localidades, pero achata la distancia entre ellas",
+             "Valor de la tierra de cada localidad, en veces el de Boulogne Sur Mer, en la escala municipal de 2008 y en la valuaci&oacute;n provincial. Promedio ponderado por superficie de parcela.") + """
 <table>
 <colgroup><col style="width:210pt"><col><col><col></colgroup>
-<tr class="hd"><th>Comparaci&oacute;n</th><th class="r">Tabla municipal</th><th class="r">Valuaci&oacute;n provincial</th><th class="r">Reconocido</th></tr>
-<tr class="hi"><td class="l">Acassuso y Mart&iacute;nez contra Villa Adelina</td><td class="n"><b>2,2&times;</b></td><td class="n"><b>4,1&times;</b></td><td class="n"><b>54%</b></td></tr>
-<tr><td class="l">Acassuso y Mart&iacute;nez contra Boulogne oeste</td><td class="n">2,5&times;</td><td class="n">4,7&times;</td><td class="n">53%</td></tr>
-<tr><td class="l">Las secciones de La Horqueta contra Boulogne oeste</td><td class="n">1,8&times;</td><td class="n">2,9&times;</td><td class="n">62%</td></tr>
-<tr><td class="l">San Isidro centro contra Boulogne</td><td class="n">1,5&times;</td><td class="n">1,6&times;</td><td class="n">94%</td></tr>
+<tr class="hd"><th>Localidad</th><th class="r">Tabla municipal</th><th class="r">Valuaci&oacute;n provincial</th><th class="r">Reconocido</th></tr>
+<tr class="hi"><td class="l">Acassuso</td><td class="n"><b>2,09&times;</b></td><td class="n"><b>3,27&times;</b></td><td class="n"><b>64%</b></td></tr>
+<tr><td class="l">Mart&iacute;nez</td><td class="n">1,98&times;</td><td class="n">2,88&times;</td><td class="n">69%</td></tr>
+<tr><td class="l">San Isidro</td><td class="n">1,80&times;</td><td class="n">2,28&times;</td><td class="n">79%</td></tr>
+<tr><td class="l">B&eacute;ccar</td><td class="n">1,46&times;</td><td class="n">1,63&times;</td><td class="n">89%</td></tr>
+<tr><td class="l">Villa Adelina</td><td class="n">1,32&times;</td><td class="n">1,42&times;</td><td class="n">93%</td></tr>
+<tr><td class="l">Boulogne Sur Mer, la base</td><td class="n">1&times;</td><td class="n">1&times;</td><td class="n">&mdash;</td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la Ordenanza Impositiva municipal, anexo de
-valores de tierra, y sobre los valores por macizo publicados por ARBA. Las circunscripciones se cruzaron
-con localidades leyendo 299 decretos municipales que identifican inmuebles por secci&oacute;n y localidad.</p>
-<p class="cap"><b>Salvedad:</b> contra Boulogne completo la brecha no se sostiene: ah&iacute; es 1,8
-veces en la tabla municipal contra 2,4 en la provincial, porque esa circunscripci&oacute;n incluye secciones
-caras, como La Horqueta, que compensan al oeste. Por eso la comparaci&oacute;n se hace contra Boulogne
-oeste, las secciones VI-A a VI-D. Y el centro de San Isidro contra Boulogne da casi lo mismo en las dos
-escalas.</p>
+<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la tabla de la Ordenanza 8373, publicada en la
+Ordenanza Impositiva 2016, y sobre los valores por macizo de ARBA (Decreto 790/16), con las parcelas del
+geoservicio de ARBA. &laquo;Reconocido&raquo; es la tabla municipal dividida por la valuaci&oacute;n
+provincial, con los valores sin redondear. Detalle en el informe 09.</p>
+<p class="cap"><b>De qu&eacute; unidad catastral sale cada localidad:</b> las localidades son las seis
+zonas del cap&iacute;tulo 4, armadas con radios censales, y sus l&iacute;mites no siguen el catastro: cada
+parcela va a la localidad donde cae. El grueso de cada una, por circunscripci&oacute;n y secci&oacute;n:
+Acassuso, III-A a III-C, III-F, III-G, IV-D, IV-E, VI-G, VI-I y VII-D a VII-H; Mart&iacute;nez, III-D,
+III-E, III-H, III-J y IV-A a IV-C; San Isidro, I-A, I-B, II-A a II-C, VII-B y VII-C; B&eacute;ccar, VII-A
+y VIII-A a VIII-E; Villa Adelina, V-A, V-B, V-D, V-F, V-G, VI-E y VI-J; Boulogne Sur Mer, V-C, V-E, VI-A
+a VI-D, VI-F y VI-H. El 13% de las parcelas cae en una secci&oacute;n donde la mayor&iacute;a es de otra
+localidad; con las secciones enteras, Acassuso da 1,94 contra 2,99 veces Boulogne Sur Mer. La lista parcela
+por parcela est&aacute; en data/valuacion_parcelas.csv y el cruce por secci&oacute;n, en
+data/valuacion_secciones_localidad.csv.</p>
 <p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
-escalas usan unidades distintas. Cruza 69.258 parcelas &mdash;3.881 hect&aacute;reas&mdash; de la
-valuaci&oacute;n provincial con el 94,5% de la tabla municipal. Es s&oacute;lo tierra, sin
-construcci&oacute;n. Y la valuaci&oacute;n provincial es de un reval&uacute;o de 2016: <b>no es el mercado
-de hoy</b>. Lo que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+escalas usan unidades distintas. Cruzan con la tabla municipal 68.644 de las 69.258 parcelas de la
+valuaci&oacute;n provincial, el 99,1%. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la
+valuaci&oacute;n provincial es de un reval&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se
+compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
 <div class="cols">
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
@@ -465,16 +473,21 @@ del 13,1% al 10,4% y B&eacute;ccar del 8,9% al 7,3%.</b> San Isidro, del 14,3% a
 <p><b>Cu&aacute;nto aporta.</b> El nivel de la tabla nueva se fija para que la parte tierra emita
 <b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. Con la percepci&oacute;n
 de hoy &mdash;89,32%&mdash; eso es <b>7.225,2 millones cobrados</b>: lo que el programa necesita.</p>
-<p><b>Con un tope: ninguna boleta sube m&aacute;s de 25% por a&ntilde;o.</b> Es por encima de la
-actualizaci&oacute;n anual del multiplicador, que es pareja para todos. La que tiene que subir m&aacute;s
-llega por escalones, y todas llegan en cuatro a&ntilde;os; las bajas se aplican completas desde el primer
-a&ntilde;o. Con el tope se cobran 1.976 millones el primer a&ntilde;o, 5.858 el segundo, 7.168 el
-tercero y 7.225,2 desde el cuarto: <span class="sg">cada a&ntilde;o, m&aacute;s de lo que pide la rampa
-del programa</span>.</p>
+<p><b>Con un tope.</b> Ninguna boleta sube m&aacute;s de 25% por a&ntilde;o, as&iacute; que la
+actualizaci&oacute;n se completa en cuatro ejercicios; las bajas no esperan, van desde el primero. <span
+class="sg">Y aun as&iacute; alcanza cada a&ntilde;o:</span> el primero se cobran 1.976 millones y el
+programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Desde el cuarto,
+7.225,2.</p>
 <p><b>Qui&eacute;n paga m&aacute;s y qui&eacute;n menos.</b> <b>Bajan 34.998 parcelas y suben
 33.619.</b> Boulogne paga 18,1% menos por la tierra, Villa Adelina 11,8% menos y B&eacute;ccar 8,3%
 menos. San Isidro paga 3,8% m&aacute;s, Mart&iacute;nez 19,1% y Acassuso 28,2%. <span class="sg">Los
 barrios con m&aacute;s hogares sin cloaca y sin gas pagan menos, y reciben m&aacute;s obra.</span></p>
+<p><b>Una parte de la baja puede no llegar.</b> La tasa tiene un piso: $234.000 por a&ntilde;o para una
+vivienda, aunque la cuenta d&eacute; menos. Mirando s&oacute;lo la tierra de cada lote, <b>789 millones de
+las bajas quedan debajo de ese piso</b>: 387 en Boulogne, 261 en Villa Adelina y 97 en B&eacute;ccar,
+justo donde la actualizaci&oacute;n quiere aliviar. Cu&aacute;nto se pierde de verdad depende de lo
+construido en cada lote y, en los edificios, de cada departamento, que paga su propio m&iacute;nimo: no son
+datos p&uacute;blicos.</p>
 <p><b>Y una segunda fuente, m&aacute;s chica: un tope al descuento del buen contribuyente.</b> Hoy es de
 hasta el 10% para quien paga el a&ntilde;o por adelantado y sin deuda, y <b>no tiene tope de
 valuaci&oacute;n</b>: lo recibe igual una casa de Acassuso que una de Boulogne. La propuesta es ponerle un
@@ -486,9 +499,9 @@ de hasta 150cc no se tocan: van a quien las necesita.</p>
 <div class="callout g">
 <div class="clabel">Lo que sube, y lo que no</div>
 <p><b>La al&iacute;cuota no se toca: sigue en 12 por mil desde 2016.</b> Lo que cambia es la base, una
-tabla de 2008 que <b>ordena bien las zonas</b> &mdash;su correlaci&oacute;n con la valuaci&oacute;n
-provincial, secci&oacute;n por secci&oacute;n, es de 0,92&mdash; pero reconoce poco m&aacute;s de la mitad
-de la distancia real entre ellas.</p>
+tabla de 2008 que <b>ordena bien las localidades</b> &mdash;las seis quedan en el mismo orden que en la
+valuaci&oacute;n provincial&mdash; pero achata la distancia entre ellas: para esa tabla, la tierra de
+Acassuso vale poco m&aacute;s del doble que la de Boulogne; para la provincia, m&aacute;s del triple.</p>
 <p><b>Bajan m&aacute;s parcelas de las que suben.</b> Lo que sube es lo que pagan las propiedades que la
 tabla de 2008 tiene subvaluadas. <b>Y el total que se emite por la tierra sube 10,9%.</b> <span
 class="sg">La zona con m&aacute;s necesidad paga menos que hoy, y la de mayor valor paga lo que le

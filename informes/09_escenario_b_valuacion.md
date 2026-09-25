@@ -63,13 +63,55 @@ desde el cuarto**, y no hace falta achicar el programa.
 | Boulogne | 289.271 | 403.024 → 561.912 | 283.527 → 185.950 |
 
 **El mínimo, con este escenario.** De las bajas, 789 millones de emisión caen por debajo del mínimo
-de $234.000: 387 en Boulogne, 261 en Villa Adelina y 97 en Béccar. Si esas casas tienen poca
-superficie construida, siguen pagando el mínimo: el Municipio deja de cobrar menos y el neto sube
-hasta unos 8.000 millones emitidos. Esa parte de la baja no les llega a esos vecinos.
+de $234.000 (vivienda, Impositiva 2026): 387 en Boulogne, 261 en Villa Adelina y 97 en Béccar, en
+16.097 parcelas. Si esas casas tienen poca superficie construida, siguen pagando el mínimo y esa parte
+de la baja no les llega. Del otro lado, el mínimo tapa hasta 49,8 millones de subas de lotes que hoy
+están debajo del piso. Mirado sólo con la tierra, el neto emitido queda entre 8.039 y 8.878 millones
+(8.089 − 50 y 8.089 + 789). Es un cálculo parcela por parcela: no ve lo construido ni los
+departamentos, y en los edificios cada unidad funcional paga su propio mínimo (Impositiva 2026, art. 1).
+
+**Qué se puede proponer, y cuánto cuesta.** Que la baja que produce la tabla nueva se aplique aunque la
+boleta quede debajo del mínimo. **Contra el plan no cuesta nada**: los 8.089 millones emitidos y los
+7.225,2 cobrados ya cuentan esas bajas completas. Contra aplicar la tabla con el mínimo como está, el
+Municipio resigna hasta 789 millones emitidos por año, 705 cobrados, que no estaban en el plan. Lo único
+que queda es la suba tapada por el mínimo: hasta 49,8 millones emitidos, 44,5 cobrados, con lo que lo
+cobrado podría quedar en 7.180,7 millones, un 0,6% debajo de 7.225,2. Está en `data/valuacion_resumen.json`
+(bloque `minimo_propuesta`).
 
 Todo esto está en `data/valuacion_escenarios_localidad.csv` (columnas `Bc_`), en
 `data/valuacion_rendimiento_por_anio.csv`, que lee el modelo fiscal, y en `data/valuacion_resumen.json`
 (bloque `adoptado`).
+
+## El cuadro de la tabla municipal, por localidad (3.5)
+
+Valor de la tierra de cada localidad en veces el de Boulogne Sur Mer, promedio ponderado por superficie
+de parcela, con las mismas 68.644 parcelas. «Reconocido» es la tabla municipal dividida por la valuación
+provincial.
+
+| Localidad | IUST por m² | VUB por m² | Tabla municipal | Valuación provincial | Reconocido |
+|---|---:|---:|---:|---:|---:|
+| Acassuso | 352,5 | 9.067,1 | 2,09× | 3,27× | 64% |
+| Martínez | 333,9 | 7.978,5 | 1,98× | 2,88× | 69% |
+| San Isidro | 303,4 | 6.321,0 | 1,80× | 2,28× | 79% |
+| Béccar | 245,9 | 4.522,7 | 1,46× | 1,63× | 89% |
+| Villa Adelina | 223,3 | 3.952,4 | 1,32× | 1,42× | 93% |
+| Boulogne Sur Mer | 168,8 | 2.774,8 | 1× | 1× | — |
+
+- Las seis quedan en el mismo orden en las dos escalas.
+- Por localidad la tabla municipal reconoce más que por circunscripción: Acassuso contra Boulogne da 64%;
+  el cuadro anterior, armado con circunscripciones (la III contra la V y contra VI-A a VI-D), daba 54% y
+  53%. Se escribe el de localidad, que es la unidad de la que habla el documento.
+- Las localidades son las seis zonas del capítulo 4 (`data/zonas_propuestas_sanisidro.geojson`), armadas
+  con radios censales; sus límites no siguen el catastro. Cada parcela va a la zona donde cae su punto
+  interior. El cruce sección por sección está en `data/valuacion_secciones_localidad.csv`: 9.116
+  parcelas (13,3%) caen en una sección cuya mayoría es de otra localidad.
+- Con cada sección entera asignada a su localidad mayoritaria, el cuadro cambia poco: Acassuso 1,94× contra
+  2,99× (65%), Martínez 72%, San Isidro 82%, Béccar 87%, Villa Adelina 99%.
+- La correlación entre las dos escalas, sección por sección (50 secciones), es 0,916.
+
+Sale de `ratios_por_localidad()` y `secciones_por_localidad()` en el script, y está en
+`data/valuacion_ratios_localidad.csv`.
+
 
 ---
 

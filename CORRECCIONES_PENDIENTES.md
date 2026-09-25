@@ -1926,3 +1926,45 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
 
 ## EL PDF
 39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.
+
+# EL CUADRO DE RATIOS DEL 3.5, POR LOCALIDAD · Y DOS COSAS MÁS · APLICADAS
+
+## EL CUADRO (03_scripts/escenario_b_valuacion.py, informe 09)
+- Rehecho con las seis localidades del informe 09 (las zonas del capítulo 4), contra Boulogne Sur
+  Mer: Acassuso 2,09× contra 3,27× (64%), Martínez 1,98× / 2,88× (69%), San Isidro 1,80× / 2,28×
+  (79%), Béccar 1,46× / 1,63× (89%), Villa Adelina 1,32× / 1,42× (93%). Promedio ponderado por
+  superficie, 68.644 parcelas. El cuadro anterior, por circunscripción, daba 54% y 53%: por
+  localidad queda más flojo y se escribió igual.
+- Título: "La tabla municipal ordena bien las localidades, pero achata la distancia entre ellas"
+  ("a la mitad" ya no se sostiene). Salieron la salvedad de Boulogne oeste y La Horqueta y los 299
+  decretos.
+- Pie nuevo, de qué unidad catastral sale cada localidad: las localidades son zonas armadas con
+  radios censales y no siguen el catastro; se lista el grueso de cada una por sección; el 13% de las
+  parcelas cae en una sección cuya mayoría es de otra localidad; con secciones enteras Acassuso da
+  1,94× contra 2,99× (65%). Archivos: data/valuacion_parcelas.csv y
+  data/valuacion_secciones_localidad.csv (nuevo), data/valuacion_ratios_localidad.csv (nuevo).
+- Recuadro "Lo que sube, y lo que no": en vez de la correlación por sección (0,92; sigue dando
+  0,916) y "poco más de la mitad", dice que las seis localidades quedan en el mismo orden en las dos
+  escalas y que para la tabla de 2008 Acassuso vale poco más del doble que Boulogne; para la
+  provincia, más del triple.
+
+## EL MÍNIMO
+- 3.5, párrafo nuevo "Una parte de la baja puede no llegar": piso de $234.000 (Impositiva 2026,
+  vivienda); con la tierra sola, 789 M de las bajas quedan debajo (Boulogne 387, Villa Adelina 261,
+  Béccar 97); depende de lo construido y, en edificios, cada departamento paga su propio mínimo.
+- Fuentes del texto (3.5): cómo se mira el mínimo y la rampa del programa.
+- Informe 09: la propuesta y su costo (bloque minimo_propuesta del resumen). Que la baja se aplique
+  aunque la boleta quede debajo del mínimo: contra el plan cuesta 0; contra dejar el mínimo como
+  está, el Municipio resigna hasta 789 M emitidos, 705 cobrados. El mínimo también tapa hasta 49,8 M
+  de subas: lo cobrado podría quedar en 7.180,7 M (−0,6%). Corregida una frase vieja del informe
+  ("hasta unos 8.000 millones", que era del escenario de 9,7%): el neto emitido queda entre 8.039 y
+  8.878 M.
+- La propuesta NO está en el documento: espera la decisión de Nick.
+
+## EL TOPE
+- 3.5: "Ninguna boleta sube más de 25% por año, así que la actualización se completa en cuatro
+  ejercicios; las bajas no esperan." Y año por año: 1.976 contra 1.806, 5.858 contra 3.613, 7.168
+  contra 5.419; desde el cuarto, 7.225,2.
+
+## EL PDF
+39 páginas. 45 exhibits del 1 al 45 sin saltos. Fuentes sin sustituciones, cero viudas, pies bien.

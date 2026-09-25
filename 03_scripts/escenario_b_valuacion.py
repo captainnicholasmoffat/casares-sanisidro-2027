@@ -235,6 +235,74 @@ def efecto_minimo(ps):
     return out
 
 
+ROMANOS = {"01": "I", "02": "II", "03": "III", "04": "IV", "05": "V", "06": "VI", "07": "VII", "08": "VIII"}
+
+
+def seccion(p):
+    """Circunscripcion y seccion catastral de la parcela, como III-A."""
+    return ROMANOS.get(p["cca"][3:5], p["cca"][3:5]) + "-" + p["cca"][5:7].lstrip("0")
+
+
+def ratios_por_localidad(ps, base="Boulogne Sur Mer", agrupar=None):
+    """Valor de la tierra de cada localidad, en veces el de la base, en la
+    tabla municipal (IUST) y en la valuacion provincial (VUB). Promedio
+    ponderado por superficie de parcela. 'Reconocido' es el cociente de los
+    dos: que parte de la relacion provincial reconoce la tabla municipal."""
+    agrupar = agrupar or (lambda p: p["zona"])
+    s, si, sv = defaultdict(float), defaultdict(float), defaultdict(float)
+    for p in ps:
+        z = agrupar(p)
+        s[z] += p["superficie"]
+        si[z] += p["superficie"] * p["iust"]
+        sv[z] += p["superficie"] * p["vub"]
+    mun = {z: si[z] / s[z] for z in s}
+    prov = {z: sv[z] / s[z] for z in s}
+    filas = []
+    for z in ZONAS:
+        rm, rp = mun[z] / mun[base], prov[z] / prov[base]
+        filas.append({"localidad": z, "iust_por_m2": round(mun[z], 1), "vub_por_m2": round(prov[z], 1),
+                      "veces_la_base_tabla_municipal": round(rm, 3),
+                      "veces_la_base_valuacion_provincial": round(rp, 3),
+                      "reconocido_pct": round(100 * rm / rp, 1)})
+    return filas
+
+
+def secciones_por_localidad(ps):
+    """Cuantas parcelas de cada seccion catastral caen en cada localidad."""
+    n = defaultdict(lambda: defaultdict(int))
+    for p in ps:
+        n[seccion(p)][p["zona"]] += 1
+    orden = lambda sec: (list(ROMANOS.values()).index(sec.split("-")[0]), sec.split("-")[1])
+    filas = []
+    for sec in sorted(n, key=orden):
+        fila = {"seccion": sec, "parcelas": sum(n[sec].values()),
+                "localidad_mayoritaria": max(n[sec], key=n[sec].get)}
+        fila.update({z: n[sec].get(z, 0) for z in ZONAS})
+        filas.append(fila)
+    return filas
+
+
+def efecto_minimo_propuesta(ps):
+    """Si la baja que produce la tabla nueva se aplica aunque la boleta quede
+    por debajo del minimo: contra el plan (que ya cuenta las bajas completas)
+    no cuesta nada; contra dejar el minimo como esta, el Municipio resigna la
+    parte de la baja que el minimo frenaria. Del otro lado, el minimo tapa la
+    parte de las subas de lotes que hoy estan bajo el piso. Solo tierra, parcela
+    por parcela."""
+    frenada = sum(max(0, min(p["t0"], MINIMO_2026) - p["tbc"])
+                  for p in ps if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026)
+    tapada = sum(max(0, min(p["tbc"], MINIMO_2026) - p["t0"])
+                 for p in ps if p["tbc"] > p["t0"] and p["t0"] < MINIMO_2026)
+    return {"parcelas_con_baja_frenada": sum(1 for p in ps if p["tbc"] < p["t0"] and p["tbc"] < MINIMO_2026),
+            "baja_frenada_emitido_M": round(frenada / 1e6, 1),
+            "baja_frenada_cobrado_M": round(PERCEPCION * frenada / 1e6, 1),
+            "costo_contra_el_plan_M": 0.0,
+            "suba_tapada_emitido_M": round(tapada / 1e6, 1),
+            "suba_tapada_cobrado_M": round(PERCEPCION * tapada / 1e6, 1),
+            "cobrado_con_la_propuesta_y_la_suba_tapada_M": round((PERCEPCION * sum(p["tbc"] - p["t0"] for p in ps)
+                                                                  - PERCEPCION * tapada) / 1e6, 1)}
+
+
 def camino_con_tope(ps, tope, anios=6):
     """Lo que rinde el escenario B adoptado cada anio con un tope de suba
     anual por boleta. Las bajas entran completas el primer anio."""
@@ -391,6 +459,23 @@ def main():
         w.writerows(filas)
     resumen["sensibilidad"] = sensibilidades(cruzadas, iust_m, vub, L0)
     resumen["minimo"] = efecto_minimo(cruzadas)
+    resumen["minimo_propuesta"] = efecto_minimo_propuesta(cruzadas)
+
+    # El cuadro de la tabla municipal, por localidad (3.5), y de que secciones
+    # catastrales sale cada localidad.
+    ratios = ratios_por_localidad(cruzadas)
+    mayoria = {f["seccion"]: f["localidad_mayoritaria"] for f in secciones_por_localidad(cruzadas)}
+    resumen["ratios_con_secciones_enteras"] = ratios_por_localidad(cruzadas, agrupar=lambda p: mayoria[seccion(p)])
+    resumen["parcelas_en_seccion_de_otra_localidad"] = sum(1 for p in cruzadas if mayoria[seccion(p)] != p["zona"])
+    with open(os.path.join(DATA, "valuacion_ratios_localidad.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(ratios[0].keys()))
+        w.writeheader()
+        w.writerows(ratios)
+    with open(os.path.join(DATA, "valuacion_secciones_localidad.csv"), "w", newline="", encoding="utf-8") as f:
+        filas_sec = secciones_por_localidad(cruzadas)
+        w = csv.DictWriter(f, fieldnames=list(filas_sec[0].keys()))
+        w.writeheader()
+        w.writerows(filas_sec)
     ids = {id(p) for p in cruzadas}
     resumen["sin_cruzar_por_localidad"] = {z: sum(1 for p in parcelas if p["zona"] == z and id(p) not in ids)
                                            for z in ZONAS}
