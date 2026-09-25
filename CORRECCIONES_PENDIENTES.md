@@ -1867,3 +1867,16 @@ sin sustituciones. Pies e índice bien. Cero viudas; 118 bloques de columnas con
 Barrido: ningún "cobrando mejor", "14.115", "volver a cobrar", "dejó de cobrar", "92%", "Casares",
 "catorce metas" ni "doce cosas". "Mora" queda sólo en la explicación del 3.2 y su fuente. "Nivel de
 2024" queda sólo en educación, que es otra cosa.
+
+# ESCENARIO B DE LA BASE DE VALUACIÓN · Y DOS ARREGLOS DEL MODELO
+
+Arreglos, ya en el documento (commit 232ea92):
+- 3.6: "−305 millones" pasa a "−292 millones". Es lo que da hoy 03_scripts/modelo.py; el csv
+  anterior se había generado con la percepción sin redondear (89,3240% en vez de 89,32%).
+- Gráfico de sensibilidad: "Percepción 89,32%" pasa a 0 M (es la base). Las barras de 86,32% y
+  92,32% quedan en −10.667 y +10.667. data/sensibilidad.csv regenerado con el modelo.
+- Queda sin regenerar data/modelo_flujo_caja.csv: con el modelo actual el escenario
+  reformista_percepcion sube unos 14 M por año, pero el documento ya no lo usa (corrección 138).
+
+Escenario B: informes/09_escenario_b_valuacion.md, con el script 03_scripts/escenario_b_valuacion.py
+y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el documento.
