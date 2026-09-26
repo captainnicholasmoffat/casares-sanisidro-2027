@@ -74,7 +74,7 @@ def ex08():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 08",
-              "Sin cambios, San Isidro vuelve al azul en 2028. En el adverso, nunca",
+              "Sin cambios, el resultado vuelve a ser positivo en 2028. En el adverso, nunca",
               "Resultado financiero proyectado. El escenario reformista por "
               "reasignación coincide con el base y no se dibuja aparte.",
         FUENTE_MODELO)

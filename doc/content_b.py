@@ -104,16 +104,16 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 <table>
 <colgroup><col style="width:104pt"><col><col></colgroup>
 <tr class="hd"><th>&Aacute;rea</th><th>Plan vigente 2024&ndash;2025</th><th>Este programa</th></tr>
-<tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Mapa de incidentes por zona y patrullaje dirigido a los puntos calientes, que es lo que m&aacute;s baja el delito seg&uacute;n la evidencia; detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido sobre las 2.646 c&aacute;maras que ya operan; la inspecci&oacute;n municipal transmitida en vivo; y una oficina de ciberdelito</td></tr>
-<tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">Reasignar en vez de demoler: lo que est&aacute; construido y funcionando se licita a otro concesionario que pague canon y emplee gente del partido, en vez de demolerse</td></tr>
-<tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Adjudicar por fin la recolecci&oacute;n &mdash;49.270 millones al a&ntilde;o, licitados dos veces y nunca adjudicados&mdash; con el pliego discutido antes; llevar la funci&oacute;n ambiental de 0,4% a 1,5%; y medir el ruido, que hoy no tiene ordenanza</td></tr>
+<tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Patrullaje dirigido a donde ocurre el delito, empezando por el mapa de incidentes municipales que hoy no existe; sobre las c&aacute;maras que ya hay, primero un n&uacute;mero auditado de qu&eacute; hacen, y despu&eacute;s detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n del recorrido de un hecho denunciado, sin reconocimiento facial masivo; y una oficina de ciberdelito</td></tr>
+<tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">No rehacer lo que ya funciona mientras haya urgencias: la poda que falta y el &aacute;rbol ca&iacute;do se reponen, la plaza que ya funcionaba espera. Y asociaciones de parque reconocidas por ordenanza, que cuidan cada espacio verde: aviso previo de cualquier obra, objeci&oacute;n con respuesta fundada y firma en la recepci&oacute;n</td></tr>
+<tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Licitar la recolecci&oacute;n con el pliego discutido antes. El servicio funciona y se paga &mdash;con barrido y limpieza son 49.270 millones al a&ntilde;o&mdash;, pero desde 2009 corre sobre un contrato directo de seis meses que se sigue prorrogando: las dos licitaciones que se llamaron no terminaron en adjudicaci&oacute;n. Llevar la funci&oacute;n ambiental de 0,4% a 1,5%; y la ordenanza de ruido que hoy no existe, con medici&oacute;n publicada</td></tr>
 <tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">El mantenimiento vial entra en la partida que deciden las comisiones vecinales</td></tr>
-<tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema de inteligencia artificial que lee la solicitud contra la norma y responde en d&iacute;as y no en meses: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo. Y un asistente que conteste preguntas habladas, sin formulario</td></tr>
-<tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">Que un vecino pueda ver en qu&eacute; se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio</td></tr>
-<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y llevar el centro de formaci&oacute;n laboral que ya funciona en B&eacute;ccar a las seis localidades, con eje en inform&aacute;tica e inteligencia artificial</td></tr>
-<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar, con la partida de obra vecinal</td></tr>
-<tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Turno en l&iacute;nea, que hoy no existe en ning&uacute;n efector de salud humana aunque el Municipio ya lo use para castrar mascotas, adhiriendo al sistema provincial que es gratis; publicar el precio unitario de cada insumo que se compra y el stock de cada hospital; y arreglar las filtraciones que el propio gobierno reconoce</td></tr>
-<tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Centros de apoyo escolar gratuitos en los barrios donde los chicos se quedan atr&aacute;s, en edificios municipales que ya existen; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
+<tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema que lee la solicitud contra la norma y contesta tres cosas: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo, empezando por la habilitaci&oacute;n comercial. Y un asistente que contesta en castellano qu&eacute; hace falta para abrir un negocio, antes de firmar el alquiler</td></tr>
+<tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">Una inteligencia artificial nativa del Municipio a la que cualquier vecino le pregunta en castellano, y que muestra de d&oacute;nde saca cada dato: la obra de su cuadra y qui&eacute;n la hace, cu&aacute;nto se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio, el precio de cada compra de insumos de los hospitales comparado, y las inspecciones transmitidas en vivo</td></tr>
+<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y llevar el modelo del centro de formaci&oacute;n laboral de La Cava, en B&eacute;ccar, a las seis zonas, con eje en inteligencia artificial aplicada, datos y servicios digitales</td></tr>
+<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar y atacar la falta de gas de red, con la partida de obra vecinal y, donde no alcance, con la de vivienda del programa; y medir por zona la conexi&oacute;n a internet, que hoy nadie mide</td></tr>
+<tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Desde la inteligencia artificial nativa: el turno m&eacute;dico en l&iacute;nea, que hoy no existe en ning&uacute;n efector de salud humana, sobre la plataforma municipal que ya da turnos para otros tr&aacute;mites y con la adhesi&oacute;n al sistema provincial pedida; y c&oacute;mo est&aacute; cada guardia en tiempo real, para elegir a cu&aacute;l ir antes de salir de casa. Adem&aacute;s, el precio unitario de cada insumo y el stock de cada hospital, publicados y comparados</td></tr>
+<tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Un centro de apoyo escolar gratuito en cada localidad, donde los chicos se est&aacute;n quedando atr&aacute;s, en edificios que ya existen y hoy cierran a la tarde; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
 <tr class="hd"><td class="l">Qui&eacute;n decide la obra</td><td class="m">El Departamento Ejecutivo, sobre el 100%</td><td class="m">Los vecinos, sobre la mitad, al cuarto a&ntilde;o</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, documento firmado
@@ -135,7 +135,7 @@ barrido, arbolado, alumbrado, residuos, tr&aacute;nsito, tr&aacute;mites y ciber
 
 <div class="callout">
 <div class="clabel">El plan est&aacute; vencido</div>
-<p>Cubre 2024&ndash;2025. Estamos en septiembre de 2026 y no hay sucesor publicado.
+<p>Cubre 2024&ndash;2025. A septiembre de 2026 no hab&iacute;a sucesor publicado.
 <b>El Municipio de San Isidro no tiene hoy un plan de gobierno vigente y publicado.</b></p>
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
@@ -208,7 +208,7 @@ cobran hasta tres haberes m&iacute;nimos y exime de la patente a las motos de ha
 aplica al pagar lo ya facturado, as&iacute; que el percibido baja por dise&ntilde;o.</p>
 <p>Una parte s&iacute; es deuda, y no es culpa de nadie: la mora de los bonaerenses con bancos y otros
 prestamistas es del 20,17%, con 1,84 millones de personas en mora. <span class="sg">Esos 35.994 millones
-no son plata disponible, y este programa no se paga con ellos.</span></p>
+no son dinero disponible, y este programa no se paga con ellos.</span></p>
 </div>
 
 <div class="cols">
@@ -236,9 +236,12 @@ en reclamar en La Plata.</p>
 <span class="tag m">Modelado</span></p>
 <div class="cols">
 <p>El d&eacute;ficit se cierra solo hacia 2028 <span class="sg">si los par&aacute;metros hist&oacute;ricos
-se mantienen</span>. El escenario adverso nunca sale del rojo.</p>
+se mantienen</span>: ese a&ntilde;o el resultado vuelve a ser positivo. <b>El escenario adverso</b> supone
+que los recursos propios crecen dos puntos menos por a&ntilde;o &mdash;dejan de crecer&mdash; y que la
+coparticipaci&oacute;n cae 3,5% por a&ntilde;o en vez de 2,2%; todo lo dem&aacute;s queda igual. Ah&iacute;
+el resultado no vuelve a ser positivo en ning&uacute;n a&ntilde;o.</p>
 </div>
-""" + ex("g", "Sin cambios vuelve al azul en 2028. En el adverso, nunca.",
+""" + ex("g", "Sin cambios, el resultado vuelve a ser positivo en 2028. En el escenario adverso, nunca.",
      "Resultado financiero proyectado, sin cambios de pol&iacute;tica y en el escenario adverso.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
@@ -250,16 +253,37 @@ se mantienen</span>. El escenario adverso nunca sale del rojo.</p>
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Son dos propuestas grandes y cuestan de manera distinta.</p>
+<p class="lead">Estas son las siete partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
+""" + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
+             "Montos anuales en r&eacute;gimen.") + """
+<table>
+<colgroup><col style="width:150pt"><col style="width:74pt"><col style="width:88pt"><col></colgroup>
+<tr class="hd"><th>Parte del programa</th><th class="r">Cu&aacute;nto cuesta</th><th>&iquest;Es dinero nuevo?</th><th>De qu&eacute; partida sale</th></tr>
+<tr class="hi"><td class="l">Empleo y vivienda</td><td class="n"><b>7.730,9 M</b></td><td class="m"><b>S&iacute;: 7.225,2 M.</b> Los otros 505,7 M ya se gastan</td><td class="m">La base de valuaci&oacute;n actualizada (3.5). Los 505,7 M, de Apoyo y Promoci&oacute;n al Empleo e Infraestructura Habitacional</td></tr>
+<tr><td class="l">Obra p&uacute;blica vecinal, la mitad de la obra al cuarto a&ntilde;o</td><td class="n">28.908 M</td><td class="m">No</td><td class="m">Bienes de uso: los 57.816 M de obra p&uacute;blica que ya se ejecutan</td></tr>
+<tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
+<tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
+<tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
+<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">No. Es inversi&oacute;n inicial</td><td class="m">Los mismos tres programas</td></tr>
+<tr><td class="l">Plataforma de inteligencia artificial (4.11)</td><td class="n">1.026,7 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.205 M al a&ntilde;o</td></tr>
+</table>
+<p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
+dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
+<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones y la plataforma son estimaciones del equipo de este
+programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
+de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <div class="cols">
-<h3 style="margin-top:0">Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
+<p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s
+grandes, y son los dos extremos: <span class="sg">una necesita 7.225 millones nuevos y la otra
+ninguno</span>.</p>
+<h3>Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
 <p>Hoy el Municipio gasta <b>505,7 millones al a&ntilde;o</b> entre Apoyo y Promoci&oacute;n al Empleo
 (170 M) e Infraestructura Habitacional (335 M).</p>
 <p>Este programa lleva ese gasto conjunto a <b>7.730,9 millones anuales en r&eacute;gimen</b> &mdash;el
 2,5% del gasto total proyectado&mdash;, que son <span class="sg">quince veces</span> lo que se gasta hoy.
 De esos 7.730,9 millones, 505,7 ya se gastan. <b>Los fondos nuevos que hay que financiar son 7.225,2
 millones.</b></p>
-<h3 style="margin-top:0">Obra p&uacute;blica vecinal: esto no son fondos nuevos</h3>
+<h3>Obra p&uacute;blica vecinal: esto no son fondos nuevos</h3>
 <p>Los <b>28.908 millones</b> del cap&iacute;tulo 4 no son gasto nuevo. San Isidro ya ejecuta 57.816
 millones de obra p&uacute;blica por a&ntilde;o; la propuesta reasigna la mitad de eso
 <span class="sg">dentro del mismo rubro de bienes de uso</span>. No hay un peso m&aacute;s de gasto ni un
@@ -268,32 +292,6 @@ peso m&aacute;s de ingreso.</p>
 d&eacute;ficit ni el super&aacute;vit de ning&uacute;n a&ntilde;o del modelo. Lo &uacute;nico que cambia
 es <span class="sg">qui&eacute;n decide en qu&eacute; se gasta</span>.</p>
 </div>
-""" + exhead("c", "La suma que no hay que hacer") + """
-<table>
-<colgroup><col style="width:215pt"><col><col></colgroup>
-<tr class="hd"><th>Concepto</th><th class="r">Monto anual en r&eacute;gimen</th><th class="r">Qu&eacute; tipo de gasto es</th></tr>
-<tr><td class="l">Empleo y vivienda, programa completo</td><td class="n">7.730,9 M</td><td class="n">de los cuales 505,7 M ya se gastan hoy</td></tr>
-<tr class="hi"><td class="l">Empleo y vivienda, fondos nuevos</td><td class="n"><b>7.225,2 M</b></td><td class="n">hay que financiarla</td></tr>
-<tr><td class="l">Obra p&uacute;blica vecinal</td><td class="n">28.908 M</td><td class="n">reasignaci&oacute;n, no gasto nuevo</td></tr>
-</table>
-<div class="pull"><p>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o. No 36.133.</p></div>
-<p class="tight">Y hay una tercera categor&iacute;a: el
-cap&iacute;tulo 5 propone cuatro cosas m&aacute;s que no son fondos nuevos pero tampoco son gratis. Se
-financian moviendo partidas dentro del gasto flexible.</p>
-""" + exhead("c", "Lo que se financia reasignando, y de d&oacute;nde sale",
-             "Montos anuales en r&eacute;gimen. Ninguno agrega gasto al total: todos salen del 58,6% flexible que dejan libre las dos propuestas grandes.") + """
-<table>
-<colgroup><col style="width:180pt"><col><col></colgroup>
-<tr class="hd"><th>Propuesta</th><th class="r">Monto anual</th><th>De d&oacute;nde sale</th></tr>
-<tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">1,5% del gasto 2025 (4.865 M) menos los 1.410 M de hoy. Sale de embellecimiento e infraestructura deportiva. Es el 4,0% del gasto flexible</td></tr>
-<tr><td class="l">Educaci&oacute;n, recomposici&oacute;n al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">Embellecimiento, no de adentro de educaci&oacute;n. Es el 2,4% del gasto flexible</td></tr>
-<tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">Estimaci&oacute;n propia a presupuestar. Es el 1,2%</td></tr>
-<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">Inversi&oacute;n inicial, estimaci&oacute;n propia a licitar. Es el 1,4%</td></tr>
-<tr class="hi"><td class="l">Total reasignado</td><td class="n"><b>7.799 M</b></td><td class="m"><b>El 8,9% del gasto flexible</b></td></tr>
-</table>
-<p class="cap"><b>Nota:</b> las dos &uacute;ltimas filas son estimaciones del equipo de este programa, no
-cifras oficiales, y deben presupuestarse o licitarse antes de comprometerse. Las dos primeras salen de la
-ejecuci&oacute;n 2025 publicada.</p>
 
 <h3>De d&oacute;nde sale, con nombre</h3>
 <p class="lead">El gasto flexible est&aacute; financiando cosas que hoy se hacen: si algo entra, algo
@@ -329,10 +327,11 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>Sumando todo, el compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.799 de
-reasignaci&oacute;n.</b> Los primeros exigen actualizar la base de valuaci&oacute;n; los segundos,
-decidir distinto con el dinero que ya existe. <span class="sg">Con las dos propuestas grandes, todo junto ocupa el 50,3% del
-gasto flexible y queda libre el 49,7%.</span></p>
+<p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.799 de reasignaci&oacute;n del gasto
+flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y habilitaciones&mdash;. Los primeros exigen
+actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 50,3% del gasto flexible y queda
+libre el 49,7%.</span> La plataforma se paga dentro de Ciencia y T&eacute;cnica (4.11).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -345,10 +344,10 @@ gasto con referencia territorial</b>, que es lo que permite publicar la ejecuci&
 requiere personal nuevo ni estructura nueva, y entra dentro del 49,7% del gasto flexible que queda
 libre con todo sumado.</p>
 </div>
-<p>Sobre un gasto flexible de 87.326 millones, <b>las dos propuestas grandes juntas &mdash;36.133
-millones&mdash; ocupan el 41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
+<p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
+41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
 """ + ex("g", "El 73,1% del presupuesto no se puede tocar dentro del ejercicio",
-     "Composici&oacute;n del gasto 2025 por rigidez, y qu&eacute; parte del margen flexible se llevan las dos propuestas del programa.",
+     "Composici&oacute;n del gasto 2025 por rigidez, y qu&eacute; parte del margen flexible se llevan las dos partes m&aacute;s grandes del programa.",
      "ex10.png",
      "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.") + """
 <p class="cap"><b>Nota:</b> el 73,1% es la medici&oacute;n del ejercicio 2025. <b>El servicio del bono
@@ -409,7 +408,7 @@ ellas hay obras hidr&aacute;ulicas en La Cava y formalizaci&oacute;n del acceso 
 arriba</b>.</p>
 </div>
 <div class="cols">
-<p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> Al stock consolidado que
+<p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> A la deuda consolidada que
 este cap&iacute;tulo model&oacute; hay que sumarle 30.000 millones de capital m&aacute;s sus intereses
 trimestrales. <b>El margen contra el tope del art&iacute;culo 49 bis se reduce.</b></p>
 <p><b>Y refuerza la opci&oacute;n 2, no la debilita.</b> Con el margen de endeudamiento ya usado por la
@@ -504,7 +503,7 @@ class="sg">La zona con m&aacute;s necesidad paga menos que hoy.</span></p>
 </div>
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>
-""" + exhead("c", "El stock de deuda se cuadruplic&oacute; en dos a&ntilde;os y medio",
+""" + exhead("c", "La deuda se cuadruplic&oacute; en dos a&ntilde;os y medio",
              "Saldo al cierre de cada trimestre, seg&uacute;n el Registro de Endeudamiento Municipal de la Ley 12.462 que publica el propio Municipio.") + """
 <table>
 <colgroup><col style="width:130pt"><col><col><col></colgroup>
@@ -519,8 +518,8 @@ Registro de Endeudamiento Municipal Ley 12.462.</p>
 <p class="cap"><b>Nota:</b> la deuda flotante son obligaciones de corto plazo y oscila mucho entre
 trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones.</p>
 <p class="cap"><b>Nota:</b> <b>el bono de 30.000 millones no est&aacute; en este cuadro</b>, porque se
-coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado al
-stock consolidado de 5.927 millones, lo multiplica por seis.</p>
+coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado a
+la deuda consolidada de 5.927 millones, la multiplica por seis.</p>
 <div class="cols">
 <p><b>Y en junio de 2026 aparece algo nuevo.</b> El informe de ese trimestre registra por primera vez un
 pr&eacute;stamo del <b>Banco Provincia por 1.000 millones</b>. En los diez informes anteriores esa
@@ -528,7 +527,7 @@ l&iacute;nea est&aacute; en cero. Es endeudamiento bancario tomado por la gesti&
 <p><b>Eso explica un dato que el cap&iacute;tulo 5 muestra y no explicaba.</b> &laquo;Servicios de la
 deuda p&uacute;blica&raquo; fue la funci&oacute;n que m&aacute;s creci&oacute; entre 2024 y 2025:
 <b>+36,3% real</b>. No era una anomal&iacute;a contable.</p>
-<p><span class="sg">Este programa no agrega un peso a ese stock.</span> El modelo del cap&iacute;tulo 3
+<p><span class="sg">Este programa no agrega un peso a esa deuda.</span> El modelo del cap&iacute;tulo 3
 lleva la deuda a cero hacia 2029 por amortizaci&oacute;n y no toma deuda nueva en ning&uacute;n
 a&ntilde;o de la proyecci&oacute;n.</p>
 </div>

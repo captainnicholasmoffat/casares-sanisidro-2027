@@ -144,7 +144,9 @@ def _indice():
       .irow .ilead{flex:1 1 auto;border-bottom:.75pt dotted var(--rule);margin:0 6pt}
       .irow .ipg{font-family:'Spectral',serif;font-size:8.6pt;color:var(--taupe)}
     </style>"""
-    return style + '<h1>&Iacute;ndice</h1>' + "".join(rows)
+    corte = ('<div class="stand">Los datos est&aacute;n actualizados al 20 de septiembre de 2026. '
+             'Donde el texto dice &laquo;hoy&raquo;, se refiere a esa fecha.</div>')
+    return style + '<h1>&Iacute;ndice</h1>' + corte + "".join(rows)
 
 
 INDICE = dict(id="indice", runhead=RH, html=_indice())
@@ -421,6 +423,10 @@ METODO = dict(id="metodo", runhead=RH, html="""
 cuadro y de cada gr&aacute;fico va debajo de &eacute;l; la de lo que afirma el texto, al final de esta
 nota.</p>
 <div class="cols">
+<p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026, y donde el texto
+dice &laquo;hoy&raquo; se refiere a esa fecha. Hay tres excepciones: el modelo fiscal est&aacute; cerrado al 31
+de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; y la
+valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026.</p>
 <p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
 cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
@@ -486,11 +492,16 @@ a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. 
 se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario proyectados. El modelo,
 los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
 <p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
-ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con el stock al 31 de diciembre de
+ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con su saldo al 31 de diciembre de
 2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
 2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
-cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie; como los metros construidos no son
-p&uacute;blicos, el aporte de actualizar la base no entra en el modelo con una cifra exacta.</p>
+cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie. Como los metros construidos no son
+p&uacute;blicos, el aporte de actualizar la base entra en el modelo calculado sobre la parte tierra.</p>
+<p>El escenario adverso resta dos puntos al crecimiento real de los recursos propios &mdash;de +1,95% a
+&minus;0,05% por a&ntilde;o&mdash; y lleva la ca&iacute;da de la coparticipaci&oacute;n de 2,196% a 3,5% por
+a&ntilde;o. Todo lo dem&aacute;s es igual al escenario sin cambios: el gasto real, la percepci&oacute;n y la
+deuda. Con eso el resultado es negativo en todos los a&ntilde;os de la proyecci&oacute;n: &minus;20.484 millones
+en 2031 y &minus;32.257 en 2037.</p>
 </div>
 <h2>Cap&iacute;tulo 4 &middot; El mecanismo</h2>
 <div class="note">

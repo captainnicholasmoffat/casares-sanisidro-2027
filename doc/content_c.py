@@ -883,7 +883,7 @@ comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacut
 <tr><td class="l">Gesti&oacute;n</td><td class="n">No cuesta dinero. Cambia c&oacute;mo se administra lo que ya se gasta.</td></tr>
 <tr><td class="l">Gratis</td><td class="n">Cuesta cero. Publicar, informar, ordenar.</td></tr>
 </table>
-<div class="pull"><p>Las dos propuestas grandes ya ocupan el 41,4% del gasto flexible. Lo que sigue
+<div class="pull"><p>Las dos propuestas m&aacute;s grandes ya ocupan el 41,4% del gasto flexible. Lo que sigue
 entra en el 58,6% restante, o no cuesta nada.</p></div>
 
 <h2><span class="n">5.2</span>D&oacute;nde va hoy cada peso</h2>
@@ -2030,7 +2030,7 @@ comercial de un barrio es infraestructura del barrio.</p>
 <h2><span class="n">5.12</span>Los que tienen que ejecutar todo esto <span class="tag v">Gesti&oacute;n</span></h2>
 <div class="cols">
 <p><b>Este programa no propone reducir la planta.</b> Ni congelarla, ni reemplazarla por contratos, ni
-tercerizar funciones. Las dos propuestas grandes se financian con recursos ya devengados y con
+tercerizar funciones. Las dos propuestas m&aacute;s grandes se financian con recursos ya devengados y con
 reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
 personal</span>, y el modelo del cap&iacute;tulo 3 trata ese gasto como r&iacute;gido precisamente porque
 no se toca.</p>

@@ -29,6 +29,18 @@ y el lector concluye.
 "por qué este capítulo existe". Declarar el límite de un dato sí es
 información y se queda.
 
+**"Dinero", nunca "plata".** Para el dinero se escribe "dinero". No se
+tocan La Plata, el Río de la Plata ni "plataforma". Volvió a entrar una vez
+al reescribir la cobranza (corrección 143).
+
+**Barrido obligatorio de cada entrega.** Antes de subir el PDF: "plata"
+(sin La Plata, Río de la Plata ni plataforma), "azul", "rojo" y cualquier
+otra metáfora de colores para el resultado fiscal.
+
+**Aviso previo.** Cuando Nick pide que se le avise antes de aplicar algo,
+se avisa antes aunque el resultado no cambie nada: quien decide si algo es
+inocuo es quien lo pidió.
+
 **Formato Extra Time.** Dos niveles de título, h1 de capítulo y h2 de
 sección a 11,2pt Spectral. No hay tercer nivel con otro tamaño. Sin
 filete entre columnas. Las fuentes van pegadas debajo de su cuadro,
@@ -2037,3 +2049,43 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
   nada.
 - PDF: 39 páginas, 46 exhibits del 1 al 46 sin saltos (29 cuadros, 17 gráficos). Fuentes sin
   sustituciones, cero viudas, pies bien.
+
+# CORRECCIONES 139 A 149
+
+## APLICADAS (no mueven cifras)
+- 139-142 · Cuadro "Acción contra acción" (2.3): las nueve filas de "Este programa" reescritas contra
+  su capítulo (cotejo fila por fila de 5.3 a 5.11, 4.x y 6.x). Ambiente: no rehacer lo que funciona y
+  asociaciones de parque; sale el Catalejo y "reasignar en vez de demoler". Recolección: el servicio
+  funciona y se paga; lo que nunca se adjudicó es la licitación (contrato directo de seis meses de
+  2009, prorrogado). Transparencia: la inteligencia artificial nativa (obra de la cuadra y quién la
+  hace, gasto por zona, licitaciones con domicilio, precio de los insumos de los hospitales
+  comparado, inspecciones transmitidas, preguntas en castellano). Salud: turno sobre la plataforma
+  municipal con la adhesión provincial pedida, y la guardia en tiempo real. Seguridad sin "2.646
+  cámaras que ya operan" como hecho, sin "por zona" y sin la inspección (es del 5.9). Digitalización
+  sin "en días" ni "preguntas habladas". Empleo: el modelo del CFL 404 a las seis zonas. Vivienda: con
+  gas y conexión. Educación: un centro por localidad.
+- 143 · "plata" → "dinero" en el 3.2. Regla escrita en las reglas generales, con el barrido obligatorio.
+- 144 · Gráfico 14 y 3.3 sin "azul" ni "rojo"; el escenario adverso definido al lado del gráfico y
+  calculado en la nota de método (−0,05% de recursos propios, −3,5% de coparticipación; −20.484 M en
+  2031 y −32.257 en 2037). "Stock" de deuda → "deuda" en el texto (la fuente conserva el nombre del
+  informe). Repo: título del EXHIBIT 08 sin "azul".
+- 145 · Cuadros 15 y 16 fundidos en uno ("Todo el programa: cuánto cuesta y de dónde sale"), con la
+  plataforma. Salen "La suma que no hay que hacer", "No 36.133", "son dos propuestas grandes" y
+  "tercera categoría". Apoyo escolar y habilitaciones: de los tres programas del cuadro siguiente
+  (el documento ya decía que los 7.799 M salen de ahí). "Dos propuestas grandes" → "dos más grandes"
+  en 5.1 y 5.12; sale el 36.133 del texto del gráfico de rigidez.
+- 147 · Fecha de corte en el índice y en la nota de método (20/09/2026, con tres excepciones).
+- 148 · "A septiembre de 2026 no había sucesor publicado."
+- Nota de método del capítulo 3: decía que el aporte de la base no entraba en el modelo; ya entra.
+
+## ESPERAN A NICK (mueven cifras)
+- 146 · 14.770,8 y 7.408,7 son el crédito VIGENTE del estado anual 2025, no el devengado.
+  Devengado: 14.654,8 y 7.406,2. Mueve también: "31%" → 32% (dos lugares), "el cuarto programa" →
+  el quinto (Conservación, señalamiento y pavimentación devenga 30.014,6), y "siete veces" → ocho
+  (deportiva 2.688,8 / habitacional 335,4). No se mueven: "ochenta y seis veces" (86,05) y el 7%
+  de la plataforma (7,006%).
+- 149 · El estado oficial por programa suma 324.304 (Total General). 324.133,9 es el total del
+  estado por finalidad y función, que deja afuera 170,1 M de activos financieros. Propuesta: queda
+  324.304 y una línea en la nota de método. No se mueve nada.
+- Nota de método: "treinta y nueve años-escenario" → cincuenta y dos (4 escenarios × 13 años).
+- 6.6: "el escenario adverso lo lleva al doble" → de 2,2% a 3,5% anual (es 1,6 veces).
