@@ -2111,3 +2111,14 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
    teléfono, inspección agendada por el sistema y comparada con las del mismo rubro, mercado laboral).
 8. "Dónde se hace cada estudio" no está en la fila de salud (no se había puesto).
 PDF: 39 páginas, 45 exhibits del 1 al 45 sin saltos, fuentes sin sustituciones, cero viudas, pies bien.
+
+# LA FORMACIÓN EN EL CALENDARIO · APLICADA
+
+- Cien días: la inscripción a la formación laboral abierta en las seis zonas y la primera cohorte
+  arrancando en los espacios que ya existen. Así en el 6.1 (compromiso 12, verificación por zona),
+  el 6.4 (mes 3), el cierre del 6.7 y la síntesis.
+- Meses 6 a 12 (6.4): las cinco sedes fijas y la itinerante de Acassuso funcionando, con el modelo
+  del Centro 404.
+- Meta del 6.3 y anexo: el modelo del CFL 404 a las seis zonas, cinco sedes fijas y una itinerante en
+  Acassuso, 928 personas por año. El 5.3 ya lo decía.
+- PDF: 39 páginas, 45 exhibits sin saltos, fuentes sin sustituciones, cero viudas, pies bien.

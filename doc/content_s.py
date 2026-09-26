@@ -76,8 +76,9 @@ se emite por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 
 <p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. A fines de
 marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona, puede anotar a su hijo
-en el primer centro de apoyo escolar, y encuentra la primera cohorte de formaci&oacute;n inscripta y dos
-m&oacute;dulos de la aplicaci&oacute;n funcionando. Y hay <b>seis ordenanzas en el Concejo</b>,
+en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
+en su zona, con la primera cohorte ya arrancando en los espacios que existen, y dos m&oacute;dulos de la
+aplicaci&oacute;n funcionando. Y hay <b>seis ordenanzas en el Concejo</b>,
 ingresadas en la primera sesi&oacute;n ordinaria: la de la partida vecinal con su f&oacute;rmula escrita,
 la que actualiza la base de valuaci&oacute;n y la que deroga los art&iacute;culos que hoy permiten al
 intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is
