@@ -262,8 +262,8 @@ ac&aacute;</b>. Las otras seis no lo necesitan.</p>
 <div class="note">
 <p><b>Cuatro se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
 conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; abrir un
-centro de apoyo escolar en cada localidad; y extender el centro de formaci&oacute;n laboral a las seis
-zonas formando 928 personas por a&ntilde;o. <b>Una ordenanza que fijara esos montos de una vez
+centro de apoyo escolar en cada localidad; y extender el modelo del centro de formaci&oacute;n laboral a
+las seis zonas formando 928 personas por a&ntilde;o. <b>Una ordenanza que fijara esos montos de una vez
 atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone.</p>
 <p><b>La quinta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>

@@ -2089,3 +2089,25 @@ y los datos crudos de ARBA y ARSI en 01_raw/arba y 01_raw/arsi. No toca el docum
   324.304 y una línea en la nota de método. No se mueve nada.
 - Nota de método: "treinta y nueve años-escenario" → cincuenta y dos (4 escenarios × 13 años).
 - 6.6: "el escenario adverso lo lleva al doble" → de 2,2% a 3,5% anual (es 1,6 veces).
+
+# LAS OCHO DECISIONES · APLICADAS
+
+1. 146 · Al devengado: 14.654,8 (dos lugares) y 7.406,2; "32%" en los dos lugares; "el quinto
+   programa" (dos lugares); "ocho veces". El cuadro de los tres programas dice "Devengado 2025" y
+   nombra "Mantenimiento y embellecimiento" en forma corta (el nombre completo va la primera vez, en
+   el cuadro del programa).
+2. 149 · Queda 324.304. Línea en la nota de método (capítulo 1): el estado por finalidad y función
+   suma 324.133,9 porque deja afuera 170,1 M de activos financieros (verificado contra
+   2025_iv_gastos_por_fyf.pdf: 324.133,86).
+3. Nota de método: "cincuenta y dos años-escenario del modelo" (4 escenarios × 13 años, lo que
+   verifica test_modelo).
+4. 6.6: "el escenario adverso la lleva de 2,2% a 3,5% anual".
+5. Turnos: 4.11, recuadro del 5.6 y verificación de la meta del 6.3 alineados: sobre la plataforma
+   municipal que ya da turnos, con la adhesión a Mi Salud Digital pedida; "No hay constancia de que
+   San Isidro haya adherido."
+6. 6.1: "La primera cohorte de formación laboral inscripta en las seis zonas". Anexo: "extender el
+   modelo del centro de formación laboral".
+7. 6.4, meses 18-24: sale "inspección grabada"; queda lo nuevo de esa etapa (consulta previa desde el
+   teléfono, inspección agendada por el sistema y comparada con las del mismo rubro, mercado laboral).
+8. "Dónde se hace cada estudio" no está en la fila de salud (no se había puesto).
+PDF: 39 páginas, 45 exhibits del 1 al 45 sin saltos, fuentes sin sustituciones, cero viudas, pies bien.

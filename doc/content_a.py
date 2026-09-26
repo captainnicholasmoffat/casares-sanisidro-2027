@@ -468,6 +468,9 @@ de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de e
 Municipio y coinciden en las siete categor&iacute;as del gasto por objeto. Las de los otros municipios no
 fueron validadas individualmente: se usan para calcular la mediana provincial y la posici&oacute;n relativa
 de San Isidro.</p>
+<p>El gasto devengado total de 2025, 324.304 millones, es el del estado de ejecuci&oacute;n del Municipio
+por objeto y por programa, y el que publica RAFAM. El estado por finalidad y funci&oacute;n suma 324.133,9
+millones porque deja afuera 170,1 millones de activos financieros.</p>
 </div>
 <h2>Cap&iacute;tulo 2 &middot; La gesti&oacute;n, medida</h2>
 <div class="note">
@@ -489,7 +492,7 @@ Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series f
 (INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>
 <p>Los cuatro par&aacute;metros fueron calculados desde la serie hist&oacute;rica, no supuestos. El
 a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
-se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario proyectados. El modelo,
+se verifican autom&aacute;ticamente en los cincuenta y dos a&ntilde;os-escenario del modelo. El modelo,
 los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
 <p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
 ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con su saldo al 31 de diciembre de

@@ -717,8 +717,8 @@ transmisi&oacute;n. Buscar una palabra en la asamblea de hace dos a&ntilde;os ti
 que buscarla en este PDF.</p>
 <p><b>Mercado laboral, p&uacute;blico y privado.</b> Es lo que sostiene el uso todo el a&ntilde;o y no
 s&oacute;lo en la semana de la asamblea, y es el enganche con el cap&iacute;tulo 5.</p>
-<p><b>Turnos de hospitales y centros de salud</b>, integrados al sistema provincial Mi Salud Digital, y
-tambi&eacute;n de la veterinaria municipal.</p>
+<p><b>Turnos de hospitales y centros de salud</b>, sobre la plataforma municipal que ya da los de la
+veterinaria, con la adhesi&oacute;n al sistema provincial Mi Salud Digital pedida.</p>
 <p><b>Ocupaci&oacute;n de guardias en tiempo real</b>, como n&uacute;mero y no como imagen, para que
 la gente elija a cu&aacute;l ir.</p>
 <p><b>Auditor&iacute;a de compras:</b> precio unitario, stock y comparaci&oacute;n autom&aacute;tica
@@ -807,7 +807,7 @@ municipal, a presupuestar y licitar antes de comprometerse. <span class="tag m">
 son el <b>12,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
 <p><b>Para dimensionarlo:</b> 1.026,7 millones es
 <span class="sg">el 7% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
-&mdash;14.770,8 millones, el cuarto programa del presupuesto&mdash;.</p>
+&mdash;14.654,8 millones, el quinto programa del presupuesto&mdash;.</p>
 <p><b>No se cuenta dos veces.</b> Estos 1.026,7 millones pagan la plataforma. Los m&oacute;dulos de salud y
 de habilitaciones se construyen con el presupuesto de su &aacute;rea y se integran a la misma plataforma:
 salud, con la partida de contrataci&oacute;n del cap&iacute;tulo 5, igual que la automatizaci&oacute;n de
@@ -1423,16 +1423,17 @@ no incluye salud: ofrece licencias de conducir, aviso de obra y copia de plano.
 </div>
 
 <div class="callout g">
-<div class="clabel">La soluci&oacute;n ya existe, es gratis, y hay que pedirla</div>
-<p>La Provincia de Buenos Aires tiene en funcionamiento <b>Mi Salud Digital</b>: turno por celular,
-historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y orden integradas
-autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de sesenta
-municipios bonaerenses</b> y el sistema lleva registrados m&aacute;s de 19,5 millones de turnos.</p>
-<p><span class="sg">No hay que construirlo ni pagarlo: hay que adherir y conectar los efectores
-municipales.</span> La Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000
-computadoras, lectoras de DNI e impresoras para eso. <b>Es la propuesta m&aacute;s barata de este
-programa y la que m&aacute;s r&aacute;pido se nota</b>: el d&iacute;a que funcione, nadie pierde una
-ma&ntilde;ana de trabajo para pedir un turno.</p>
+<div class="clabel">La plataforma ya existe, y la adhesi&oacute;n se pide</div>
+<p><span class="sg">El turno m&eacute;dico en l&iacute;nea se monta sobre la plataforma municipal que ya
+da turnos para otros tr&aacute;mites: no hay que construirla ni pagarla.</span> <b>Es la propuesta
+m&aacute;s barata de este programa y la que m&aacute;s r&aacute;pido se nota</b>: el d&iacute;a que
+funcione, nadie pierde una ma&ntilde;ana de trabajo para pedir un turno.</p>
+<p>En paralelo se pide la adhesi&oacute;n a <b>Mi Salud Digital</b>, el sistema de la Provincia de Buenos
+Aires: turno por celular, historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y
+orden integradas autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de
+sesenta municipios bonaerenses</b>, el sistema lleva registrados m&aacute;s de 19,5 millones de turnos y la
+Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000 computadoras, lectoras de DNI e
+impresoras para conectarse. No hay constancia de que San Isidro haya adherido.</p>
 </div>
 <div class="cols">
 <p><b>Teleconsulta para lo que no necesita ir al hospital.</b> Renovar una receta cr&oacute;nica, una
@@ -2234,7 +2235,7 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 <tr><td class="l">10 &middot; Cada respuesta del Ejecutivo a un pedido de informes del Concejo, con el pedido que la origina. Hoy ese circuito entero transcurre fuera de toda fuente p&uacute;blica</td><td class="n">La aplicaci&oacute;n</td></tr>
 <tr class="hd"><td class="l" colspan="2">Lo que arranca y se ve</td></tr>
 <tr class="hi"><td class="l">11 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y n&oacute;mina de asistentes publicadas</td></tr>
-<tr class="hi"><td class="l">12 &middot; La primera cohorte inscripta en las seis sedes de formaci&oacute;n que sostiene el Municipio</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
+<tr class="hi"><td class="l">12 &middot; La primera cohorte de formaci&oacute;n laboral inscripta en las seis zonas</td><td class="n">Matr&iacute;cula publicada por sede</td></tr>
 <tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la aplicaci&oacute;n en funcionamiento: el asistente de consulta sobre lo ya publicado, y el turno m&eacute;dico</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr class="hi"><td class="l">15 &middot; La detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano</td><td class="n">Decreto de puesta en servicio y el tiempo de respuesta publicado en la aplicaci&oacute;n</td></tr>
@@ -2292,7 +2293,7 @@ que la comprueba.</p>
 <tr><td class="l">50% de la obra p&uacute;blica decidida por comisiones vecinales</td><td class="n"><b>0%</b></td><td class="n">Ordenanza y ejecuci&oacute;n presupuestaria</td></tr>
 <tr><td class="l">Imputar el gasto municipal con referencia territorial, de modo que exista el dato de cu&aacute;nto se gast&oacute; en cada zona</td><td class="n">El dato no existe: ning&uacute;n municipio del conurbano norte lo produce</td><td class="n">La ejecuci&oacute;n por zona, publicada en la aplicaci&oacute;n</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n en producci&oacute;n, con la partida vecinal, el asistente, las asambleas transcriptas y la publicaci&oacute;n continua de datos</td><td class="n">No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error</td><td class="n">La propia aplicaci&oacute;n, p&uacute;blica y consultable por cualquiera</td></tr>
-<tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">El propio sistema provincial, consultable por cualquiera</td></tr>
+<tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno municipal en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">La propia plataforma, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">La aplicaci&oacute;n, con el hist&oacute;rico y las alertas a la vista</td></tr>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, con el registro de &oacute;rdenes judiciales publicado</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">El tiempo de respuesta al aviso y el registro de &oacute;rdenes, en la aplicaci&oacute;n</td></tr>
@@ -2325,7 +2326,7 @@ que la comprueba.</p>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025 y se publica el Fondo Educativo obra por obra</td><td class="n">Ejecuci&oacute;n del Fondo, publicada</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la aplicaci&oacute;n: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: patrullaje, c&aacute;maras operativas y tiempos de respuesta del 911 municipal, publicados de manera continua</td><td class="n">La propia aplicaci&oacute;n</td></tr>
-<tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa e inspecci&oacute;n grabada, y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
+<tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa desde el tel&eacute;fono, y la inspecci&oacute;n agendada por el sistema y comparada con las del mismo rubro; y mercado laboral en la aplicaci&oacute;n</td><td class="n">La propia aplicaci&oacute;n</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2: 14.454 M, el 25%. Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
 <tr><td class="l">Mes 36</td><td>A&ntilde;o 3: 21.681 M, el 37,5%. Funci&oacute;n ambiental al 1,5%</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Meses 36&ndash;42</td><td>Ejecuci&oacute;n presupuestaria desagregada por zona, publicada</td><td class="n">El propio portal municipal</td></tr>
@@ -2367,7 +2368,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 <tr><td class="l">Los recursos propios crecen menos de 1% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
-<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya lo carga, y el escenario adverso lo lleva al doble.</td></tr>
+<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y el escenario adverso la lleva de 2,2% a 3,5% anual.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio.</td></tr>
 <tr class="hi"><td class="l">La aplicaci&oacute;n no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>

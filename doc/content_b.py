@@ -302,19 +302,19 @@ mejora lo que ya funcionaba, espera.</span> Una cloaca, el gas de red o una cone
 trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya funcionaba, no.</p>
 </div>
 """ + exhead("c", "Los tres programas de donde sale la reasignaci&oacute;n",
-             "Cr&eacute;dito vigente 2025.") + """
+             "Devengado 2025.") + """
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
-<tr class="hd"><th>Programa</th><th class="r">Vigente 2025</th><th>Para dimensionarlo</th></tr>
-<tr class="hi"><td class="l">Mantenimiento y embellecimiento del Municipio</td><td class="n"><b>14.770,8 M</b></td><td class="m">El cuarto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
-<tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Siete veces</b> lo que se destina a infraestructura habitacional</td></tr>
-<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.408,7 M</td><td class="m">&mdash;</td></tr>
-<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.799 M</td><td class="m">El 31% de esos tres programas sumados</td></tr>
+<tr class="hd"><th>Programa</th><th class="r">Devengado 2025</th><th>Para dimensionarlo</th></tr>
+<tr class="hi"><td class="l">Mantenimiento y embellecimiento</td><td class="n"><b>14.654,8 M</b></td><td class="m">El quinto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
+<tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Ocho veces</b> lo que se destina a infraestructura habitacional</td></tr>
+<tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.406,2 M</td><td class="m">&mdash;</td></tr>
+<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.799 M</td><td class="m">El 32% de esos tres programas sumados</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
 ejercicio 2025, acumulado anual.</p>
 <div class="cols">
-<p><b>Con el 31% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
+<p><b>Con el 32% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
 mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg">Lo que est&aacute;
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
