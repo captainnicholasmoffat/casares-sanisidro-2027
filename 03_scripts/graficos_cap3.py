@@ -27,10 +27,9 @@ def ex08():
     """Los tres escenarios, con el cruce por cero marcado."""
     por = _modelo()
     series = [("base", "Base", E.RIO),
-              ("adverso", "Adverso", E.BARRANCA),
               ("reformista_valuacion", "Reformista, pagado con la base", E.TINTA)]
     # Base y reformista terminan a menos de un cuerpo de distancia.
-    separacion = {"base": -6, "reformista_valuacion": 6, "adverso": 0}
+    separacion = {"base": -6, "reformista_valuacion": 6}
     fig, ax = E.figura(3.5)
     ax.axhline(0, color=E.TINTA, linewidth=0.9, zorder=4)
     cruces = []
@@ -74,7 +73,7 @@ def ex08():
     E.limpiar(ax)
     top, bottom = E.marco(
         fig, "EXHIBIT 08",
-              "Sin cambios, el resultado vuelve a ser positivo en 2028. En el adverso, nunca",
+              "Si nada cambia, el Municipio vuelve a ingresar más de lo que gasta en 2028",
               "Resultado financiero proyectado. El escenario reformista por "
               "reasignación coincide con el base y no se dibuja aparte.",
         FUENTE_MODELO)

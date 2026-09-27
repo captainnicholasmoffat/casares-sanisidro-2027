@@ -219,7 +219,8 @@ def g_escenarios():
     fig, ax = plt.subplots(figsize=(W,2.5)); frame(ax)
     # Correccion 138: sale la linea "con la propuesta, cobrando mejor"
     # (escenario reformista_percepcion). La cobranza no financia el programa.
-    for esc, col, rot, nud in [("base", SAGED, "Sin cambios", 0), ("adverso", OX, "Adverso", 0)]:
+    # Correccion 154: sale el escenario adverso; queda la proyeccion sin cambios.
+    for esc, col, rot, nud in [("base", SAGED, "Si nada cambia", 0)]:
         if esc not in M: continue
         ys = [M[esc][a]/1000 for a in yrs]
         ax.plot(yrs, ys, color=col, lw=1.6)
@@ -228,10 +229,10 @@ def g_escenarios():
     ax.axhline(0, color=TAUPE, lw=.7)
     cero = next((a for a in yrs if M["base"][a] >= 0), None)
     if cero:
-        ax.annotate(f"sin cambios\ncruza en {cero}", (cero,0), textcoords="offset points",
-                    xytext=(6,-22), ha="center", fontsize=6.6, color=TAUPE)
+        ax.annotate(f"desde {cero}, ingresa\nm\u00e1s de lo que gasta", (cero,0), textcoords="offset points",
+                    xytext=(10,-24), ha="left", fontsize=6.6, color=TAUPE)
     ax.set_xticks(range(min(yrs), max(yrs)+1, 2)); ax.set_xlim(min(yrs), max(yrs)+4.6)
-    ax.set_ylabel("resultado financiero, miles de millones dic-2025", fontsize=6.2)
+    ax.set_ylabel("ingresos menos gastos, miles de millones dic-2025", fontsize=6.2)
     ax.yaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
     save(fig,"g_escenarios")
 

@@ -18,9 +18,9 @@ preliminares de 2026 se acelera. Con el gasto real quieto, la primera fuerza gan
 y el resultado vuelve a positivo hacia 2028. Pero el margen es fino y depende
 enteramente del crecimiento propio: **si los recursos propios crecen un punto
 menos por año, el mandato termina en rojo** (−2.946 millones en 2031 en vez de
-+10.375). En el escenario adverso —dos puntos menos de crecimiento propio y una
-coparticipación que cae al 3,5% anual— el déficit llega a **−20.484 millones en
-2031 y −32.257 en 2037**, y ahí ya no alcanza con administrar.
++10.375). Si la coparticipación cae 3,5% por año en vez de 2,2%, el resultado de
+2031 baja a **+5.514 millones** (`data/sensibilidad.csv`: cada variable se mueve
+por separado).
 
 ## Qué cuesta el programa
 

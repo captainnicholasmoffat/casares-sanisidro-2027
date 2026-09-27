@@ -3,8 +3,8 @@ from content_a import RH
 
 GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <h1>Glosario</h1>
-<div class="stand">Dieciocho palabras que este documento usa todo el tiempo, explicadas como se las
-explicar&iacute;a a un vecino. Si alguna no se entiende, el problema es del documento.</div>
+<div class="stand">Dieciocho palabras t&eacute;cnicas que aparecen seguido, explicadas como se las
+explicar&iacute;a a un vecino.</div>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>
 <tr class="hd"><th>Palabra</th><th>Qu&eacute; quiere decir</th></tr>
@@ -27,6 +27,4 @@ explicar&iacute;a a un vecino. Si alguna no se entiende, el problema es del docu
 <tr><td class="l">Ordenanza</td><td>La ley municipal. La vota el Concejo Deliberante y el intendente la promulga o la veta.</td></tr>
 <tr><td class="l">Ley Org&aacute;nica de las Municipalidades</td><td>El Decreto-Ley 6769/58, que fija qu&eacute; puede y qu&eacute; no puede hacer un municipio bonaerense. Es de 1958 y sigue vigente.</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> las cifras de este glosario son las mismas de los cap&iacute;tulos 1 a 3 y se
-repiten ac&aacute; s&oacute;lo para dar escala.</p>
 """)

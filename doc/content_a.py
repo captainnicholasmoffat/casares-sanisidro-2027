@@ -15,9 +15,18 @@ def exn():
     _n[0] += 1
     return _n[0]
 
-def ex(kind, title, sub=None, img=None, src=None, note=None, cls=""):
+# referencias a exhibits por clave: el texto escribe [[n:clave]] y el armado
+# pone el numero que le toco al exhibit, asi una renumeracion no rompe nada
+_REFS = {}
+
+def resolver_refs(html):
+    import re
+    return re.sub(r"\[\[n:([a-z0-9_]+)\]\]", lambda m: str(_REFS[m.group(1)]), html)
+
+def ex(kind, title, sub=None, img=None, src=None, note=None, cls="", key=None):
     """Bloque de exhibit: etiqueta numerada, titulo-conclusion, grafico y fuente."""
     k = exn()
+    if key: _REFS[key] = k
     lbl = "GR&Aacute;FICO" if kind == "g" else "CUADRO"
     h = [f'<div class="ex"><div class="exlabel">{lbl}&nbsp;{k}</div>',
          f'<div class="extitle">{title}</div>']
@@ -28,8 +37,9 @@ def ex(kind, title, sub=None, img=None, src=None, note=None, cls=""):
     h.append('</div>')
     return "".join(h)
 
-def exhead(kind, title, sub=None):
+def exhead(kind, title, sub=None, key=None):
     k = exn()
+    if key: _REFS[key] = k
     lbl = "GR&Aacute;FICO" if kind == "g" else "CUADRO"
     s = f'<div class="exsub">{sub}</div>' if sub else ""
     return (f'<div class="ex"><div class="exlabel">{lbl}&nbsp;{k}</div>'
@@ -67,7 +77,7 @@ _IDX = [
  ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
  ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
- ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en tres l&iacute;neas", "cap2b"),
+ ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que gobiernan el futuro fiscal", "cap3a"),
@@ -77,17 +87,17 @@ _IDX = [
  ("i", "3.6 &nbsp;Qu&eacute; habr&iacute;a que vigilar", "cap3b3"),
  ("i", "3.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap3b3"),
  ("g", "4 &middot; El mecanismo", None),
- ("i", "4.1 &nbsp;El l&iacute;mite legal: lo que un intendente no puede delegar", "cap4a"),
+ ("i", "4.1 &nbsp;El l&iacute;mite legal: lo que un intendente bonaerense no puede delegar", "cap4a"),
  ("i", "4.2 &nbsp;La deuda que la Provincia tiene con sus municipios", "cap4a"),
  ("i", "4.3 &nbsp;Cu&aacute;nto dinero: el n&uacute;mero", "cap4a"),
  ("i", "4.4 &nbsp;C&oacute;mo se reparte: por poblaci&oacute;n y por necesidad contada", "cap4a2"),
  ("i", "4.5 &nbsp;Qui&eacute;n decide y qui&eacute;n ejecuta: dos capas", "cap4b"),
- ("i", "4.6 &nbsp;C&oacute;mo se constituye una comisi&oacute;n, y c&oacute;mo rinde", "cap4b"),
+ ("i", "4.6 &nbsp;C&oacute;mo se constituye una comisi&oacute;n, y c&oacute;mo responde", "cap4b"),
  ("i", "4.7 &nbsp;El Concejo Deliberante: diez bloques y ninguna mayor&iacute;a", "cap4bb2"),
  ("i", "4.8 &nbsp;Por qu&eacute; las dos capas juntas cambian todo", "cap4bb2"),
  ("i", "4.9 &nbsp;Las otras dos facultades", "cap4b2"),
  ("i", "4.10 &nbsp;El primer acto de gobierno: derogar tres art&iacute;culos", "cap4b2"),
- ("i", "4.11 &nbsp;La aplicaci&oacute;n: el sistema de informaci&oacute;n del Municipio", "cap4b2"),
+ ("i", "4.11 &nbsp;La inteligencia artificial del Municipio", "cap4b2"),
  ("i", "4.12 &nbsp;A qui&eacute;n le molesta esto", "cap4bc"),
  ("i", "4.13 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap4bc"),
  ("g", "5 &middot; Qu&eacute; hacemos en cada &aacute;rea", None),
@@ -242,12 +252,12 @@ alguien en la casa haya terminado la universidad.</p>
         "ex01.png",
         "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7; l&iacute;mites de localidad de OpenStreetMap.",
         "OpenStreetMap no es fuente oficial. Cada radio censal va a la localidad que contiene su punto representativo; los 360 caen dentro de exactamente una.")
-+ ex("g", "Boulogne y B&eacute;ccar concentran el 67% de la carencia del partido",
-     "Cuatro indicadores por zona, ordenadas de peor a mejor por NBI. El NBI del partido es 3,16%.",
++ ex("g", "Boulogne y B&eacute;ccar re&uacute;nen dos tercios de las carencias del partido",
+     "Porcentaje de hogares de cada zona con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados. En todo el partido, el 3,16% tiene NBI.",
      "ex02.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.")
-+ ex("g", "El mismo orden, dado vuelta: donde falta todo, tampoco hay t&iacute;tulo universitario",
-     "Poblaci&oacute;n con universidad completa o m&aacute;s, por zona. Mismo orden que el gr&aacute;fico anterior.",
++ ex("g", "Donde m&aacute;s faltan servicios, menos gente termin&oacute; la universidad: 9% en Boulogne, 32% en Acassuso",
+     "Poblaci&oacute;n con universidad completa o m&aacute;s, por zona, de la de m&aacute;s hogares con necesidades b&aacute;sicas insatisfechas a la de menos.",
      "ex03.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.") + """
 <h3>El dato que resume todo</h3>
@@ -268,8 +278,8 @@ bonaerense t&iacute;pico.</p>
 cloaca, no es porque no haya con qu&eacute;: es porque <span class="sg">el dinero va a lo que se
 ve</span>.</p>
 </div>
-""" + exhead("c", "San Isidro contra sus vecinos y contra la mediana de la Provincia",
-             "Ejecuci&oacute;n 2025, gasto devengado.") + """
+""" + exhead("c", "San Isidro pone en obra p&uacute;blica el 17,8% de su gasto: m&aacute;s que los municipios de al lado",
+             "Gasto de 2025 y parte que fue a obra p&uacute;blica, en San Isidro, en los cuatro municipios que lo rodean y en el municipio bonaerense t&iacute;pico.") + """
 <table>
 <colgroup><col style="width:190pt"><col><col></colgroup>
 <tr class="hd"><th>Municipio</th><th class="r">Gasto devengado total 2025 (M$)</th>
@@ -279,7 +289,7 @@ ve</span>.</p>
 <tr><td class="l">Tigre</td><td class="n">400.156</td><td class="n">11,4</td></tr>
 <tr><td class="l">San Fernando</td><td class="n">148.932</td><td class="n">6,9</td></tr>
 <tr><td class="l">San Mart&iacute;n</td><td class="n">276.003</td><td class="n">1,5</td></tr>
-<tr><td class="m">Mediana provincial</td><td class="n m">&mdash;</td><td class="n m">5,4</td></tr>
+<tr><td class="m">Municipio bonaerense t&iacute;pico (mediana)</td><td class="n m">&mdash;</td><td class="n m">5,4</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> RAFAM 2025, v&iacute;a La Verdadera PBA. San Isidro validado contra la
 ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
@@ -297,7 +307,7 @@ trabajar.</p>
 
 <h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
 """ + exhead("c", "Alumbrado p&uacute;blico recibe el triple que el agua y las cloacas",
-             "Gasto devengado 2025 dentro de la finalidad Servicios Sociales: Urbanismo abierto en sus cinco subfunciones, y la funci&oacute;n Agua potable y alcantarillado.") + """
+             "Lo que gast&oacute; el Municipio en 2025 en cada servicio urbano, y en agua y cloacas.") + """
 <table>
 <colgroup><col style="width:300pt"><col></colgroup>
 <tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado 2025</th></tr>
@@ -313,12 +323,11 @@ y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y funci&oacute;n 3.
 <p class="cap"><b>Nota:</b> son gastos por destino, no por objeto: dentro de cada funci&oacute;n hay
 sueldos, contratos de servicio y obra. Los 49.270 millones de residuos son sobre todo el contrato de
 recolecci&oacute;n, que es un servicio diario y no una inversi&oacute;n. El agrupamiento es el del
-clasificador provincial (RAFAM), no una elecci&oacute;n de este programa.</p>
+clasificador provincial (RAFAM).</p>
 <h3>La mitad de lo adjudicado iba a empresas de afuera del partido</h3>
 <div class="cols">
 <p>Hay un dato que el Municipio public&oacute; durante quince a&ntilde;os y hoy ya no publica: el
-domicilio de la empresa a la que le adjudica una obra, un servicio o una compra.</p>
-<p><b>Entre 2002 y 2017, de los 3.013 actos de adjudicaci&oacute;n con domicilio publicado, el 49,8% fue
+domicilio de la empresa a la que le adjudica una obra, un servicio o una compra. <b>Entre 2002 y 2017, de los 3.013 actos de adjudicaci&oacute;n con domicilio publicado, el 49,8% fue
 a empresas con domicilio en San Isidro y el 50,2% a empresas de afuera.</b> Y la proporci&oacute;n local
 ven&iacute;a cayendo: 52,6% en 2013, 46,6% en 2015, <b>40,4% en 2017</b>.</p>
 <p>Entre 2011 y 2017 el domicilio figuraba en el 62% al 82% de los actos. <b>La pr&aacute;ctica se abandon&oacute; en 2018,
@@ -340,14 +349,15 @@ millones en un solo acto.</p>
 
 
 """ + ex("g", "San Isidro invierte en obra m&aacute;s del triple que el municipio bonaerense t&iacute;pico",
-     "Cada marca es un municipio, ordenados por valor. Ejecuci&oacute;n 2025, gasto devengado.",
+     "Parte del gasto de 2025 que cada municipio bonaerense destin&oacute; a obra p&uacute;blica. Cada marca es un municipio.",
      "ex04.png",
      "RAFAM 2025, v&iacute;a La Verdadera PBA (la-verdadera-pba.pages.dev), capturado el 3 de septiembre de 2026.",
      "Son 106 de los 135 municipios: los otros 29 no est&aacute;n en la planilla. No se estim&oacute; ninguno.") + """
 <h2><span class="n">1.3</span>D&oacute;nde no va el dinero</h2>
 <p class="tight">Ejecuci&oacute;n presupuestaria 2025, sobre un gasto devengado total de 324.304 millones
 de pesos:</p>
-""" + exhead("c", "Las dos partidas que este programa se propone cambiar") + """
+""" + exhead("c", "Empleo y vivienda: 0,05% y 0,10% del gasto del Municipio",
+             "Lo que se gast&oacute; en 2025 en los dos programas, en total y por habitante.", key="dos_partidas") + """
 <table>
 <colgroup><col style="width:200pt"><col><col><col></colgroup>
 <tr class="hd"><th>Programa</th><th class="r">Devengado</th><th class="r">% del gasto total</th>
@@ -365,13 +375,11 @@ programa.</p>
 # =====================================================================
 C1B = dict(id="cap1b", runhead=RH, html="""
 <h2><span class="n">1.4</span>Por qu&eacute; pasa esto: est&aacute; escrito</h2>
-<div class="cols">
 <p>El plan de gobierno vigente, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, fija tres
-prioridades: Seguridad Ciudadana, Espacio P&uacute;blico y Ambiente, e Innovaci&oacute;n.</p>
-<p>Seguridad interna, la primera, subi&oacute; <b>34,8% real en un a&ntilde;o</b>: ninguna otra
-funci&oacute;n creci&oacute; tanto, salvo los servicios de la deuda. Promoci&oacute;n y asistencia social,
-que no figura entre las tres, <b>cay&oacute; 32,5%</b>.</p>
-</div>
+prioridades: Seguridad Ciudadana, Espacio P&uacute;blico y Ambiente, e Innovaci&oacute;n. Seguridad
+interna, la primera, subi&oacute; <b>34,8% real en un a&ntilde;o</b>: ninguna otra funci&oacute;n
+creci&oacute; tanto, salvo los servicios de la deuda. Promoci&oacute;n y asistencia social, que no figura
+entre las tres, <b>cay&oacute; 32,5%</b>.</p>
 
 <h2><span class="n">1.5</span>San Isidro se financia solo. Eso cambia todo.</h2>
 <div class="cols">
@@ -392,8 +400,8 @@ puede financiarse sin pedirle permiso a nadie.</p>
 <p>Hay una salvedad, y es estructural: la participaci&oacute;n de San Isidro en las transferencias
 provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%, y se compone a&ntilde;o a
 a&ntilde;o. <b>El cap&iacute;tulo 3 lo descompone fondo por fondo y lo incorpora al modelo.</b></p>
-""" + ex("g", "Tigre pasa a San Isidro en 2025: el reparto provincial se dio vuelta",
-     "Participaci&oacute;n de cada municipio en el total transferido por la Provincia a los 135 municipios. A&ntilde;os completos.",
+""" + ex("g", "Desde 2025 Tigre recibe de la Provincia una parte mayor que San Isidro",
+     "Qu&eacute; parte de lo que la Provincia reparte entre sus 135 municipios le toca a cada uno, a&ntilde;o por a&ntilde;o.",
      "ex06.png",
      "Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires, transferencias a municipios 2021&ndash;2025.",
      "2026 va con seis meses y queda fuera del gr&aacute;fico. San Isidro cae a 1,6811% y Tigre sube a 1,8370%.") + """
@@ -405,10 +413,10 @@ municipios bonaerenses.</li>
 <li>Casi la mitad de su poblaci&oacute;n &mdash;el 46,8%, en Boulogne Sur Mer y B&eacute;ccar&mdash; vive
 donde est&aacute; el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.</li>
 <li>El municipio destina el 0,05% de su presupuesto a empleo y el 0,10% a vivienda.</li>
-<li>San Isidro tiene los fondos y la autonom&iacute;a para cambiarlo. Lo que falta es que decida quien vive
+<li>San Isidro tiene los fondos y la autonom&iacute;a para cambiar ese reparto. Lo que falta es que decida quien vive
 donde est&aacute; el problema.</li>
 </ol>
-<p><b>Los cap&iacute;tulos siguientes proponen ese mecanismo.</b></p>
+<p><b>Los cap&iacute;tulos siguientes proponen c&oacute;mo: que los vecinos de cada zona decidan la mitad de la obra p&uacute;blica.</b></p>
 """)
 
 
@@ -432,9 +440,8 @@ cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tri
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los diecisiete gr&aacute;ficos son p&uacute;blicos y
-reproducibles.</span> Se publican en un repositorio abierto al presentarse este programa, con las pruebas autom&aacute;ticas que los
-verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
+<p><span class="sg">El modelo, los datos, las series y los diecis&eacute;is gr&aacute;ficos son p&uacute;blicos y
+reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
 
 <div class="callout a">
@@ -478,8 +485,7 @@ millones porque deja afuera 170,1 millones de activos financieros.</p>
 publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
 situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas
 2024&ndash;2025&raquo;&mdash; y de los informes de ejecuci&oacute;n RAFAM de los 106 municipios
-bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota del cap&iacute;tulo 1.</p>
-<p>El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
+bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota del cap&iacute;tulo 1. El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
 cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
 cap&iacute;tulo 5 enumera.</p>
 </div>
@@ -492,19 +498,14 @@ Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series f
 (INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>
 <p>Los cuatro par&aacute;metros fueron calculados desde la serie hist&oacute;rica, no supuestos. El
 a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
-se verifican autom&aacute;ticamente en los cincuenta y dos a&ntilde;os-escenario del modelo. El modelo,
+se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario del modelo. El modelo,
 los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
 <p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
 ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con su saldo al 31 de diciembre de
 2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
 2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
 cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie. Como los metros construidos no son
-p&uacute;blicos, el aporte de actualizar la base entra en el modelo calculado sobre la parte tierra.</p>
-<p>El escenario adverso resta dos puntos al crecimiento real de los recursos propios &mdash;de +1,95% a
-&minus;0,05% por a&ntilde;o&mdash; y lleva la ca&iacute;da de la coparticipaci&oacute;n de 2,196% a 3,5% por
-a&ntilde;o. Todo lo dem&aacute;s es igual al escenario sin cambios: el gasto real, la percepci&oacute;n y la
-deuda. Con eso el resultado es negativo en todos los a&ntilde;os de la proyecci&oacute;n: &minus;20.484 millones
-en 2031 y &minus;32.257 en 2037.</p>
+p&uacute;blicos, el aporte de actualizar la tabla de valuaci&oacute;n entra en el modelo calculado sobre la parte tierra.</p>
 </div>
 <h2>Cap&iacute;tulo 4 &middot; El mecanismo</h2>
 <div class="note">

@@ -2122,3 +2122,52 @@ PDF: 39 páginas, 45 exhibits del 1 al 45 sin saltos, fuentes sin sustituciones,
 - Meta del 6.3 y anexo: el modelo del CFL 404 a las seis zonas, cinco sedes fijas y una itinerante en
   Acassuso, 928 personas por año. El 5.3 ya lo decía.
 - PDF: 39 páginas, 45 exhibits sin saltos, fuentes sin sustituciones, cero viudas, pies bien.
+
+# CORRECCIONES 150 A 172
+
+## PARTE A · APLICADA EN LAS 39 PÁGINAS
+
+- A1 (150) · Lo que nosotros prometemos informar se escribe desde el vecino: «cualquier vecino le
+  pregunta a la inteligencia artificial del Municipio … y tiene la respuesta», con la condición a la
+  vista (contesta sólo lo que el Municipio registró; el dato se registra el día que pasa). Quedan lo
+  que el Municipio hace hoy, la publicación legal (Boletín, ordenanzas) y las fuentes. Los dos
+  ejemplos: 2.1 (tiempo de respuesta a reclamos) y 6.4 mes 9 (sin «rendición», la adjudicación queda
+  registrada el día que se firma). «publicar» y derivados: 183 → 95 en el texto fuente; los 95 que
+  quedan son del Municipio de hoy, legales, fuentes o de terceros. «rendición/rendir» nuestros: 13 →
+  0 (quedan 5, todos rendición de cuentas del Municipio). Páginas 2, 8, 9, 11, 16, 18, 19, 21 a 24,
+  26 a 28, 30 a 34, 36, 37 y 39.
+- A2 (166) · «la aplicación» → «la inteligencia artificial del Municipio»: 33 → 3 (los 3 que quedan
+  son la aplicación de reclamos de hoy, 1,84/5). «nativa»: 5 → 0. El anexo usa el nombre legal,
+  Sistema de Información Municipal (pregunta abierta).
+- A3 (151) · 52 puntos de resumen reescritos para que se entiendan solos: síntesis 7, 1.6 2, 2.4 3,
+  3.6 4, 3.7 5, 4.13 5, 5.15 7, 6.7 4, cuadro 10 7 filas, cuadro 39 4 filas, entradas de los
+  capítulos 3, 4 y 6 y del cierre.
+- A4 (157) · 8: p13 con el texto dado; 3.5 «ahora sí se conoce»; «las siete medidas» (4.6 y 4.11);
+  recuadro del 5.8; 5.10 «cambia de forma»; 5.15 «mantenimiento y no una meta»; cierre «mientras se
+  escribía».
+- A5 (158) · 34 exhibits con título o subtítulo nuevo (y filas con «la base», «sin cambios»,
+  «devengado contra devengado»). Sin cambio: cuadros 1, 10, 19, 28, 41 (título dado por Nick) y 42,
+  gráficos 2 y 36; el cuadro 30 espera C3.
+- A6 (160) · Cuadro 13: la rigidez cita el gráfico 17. Calendario: los años de la rampa citan el
+  cuadro de la rampa. Los demás duplicados esperan decisión.
+- A7 (171) · 20 cadenas unidas: 1.2, 1.4, 2.3, 3.4, 4.3, 4.4, 4.6, 4.7, 4.11 (diez párrafos → cuatro),
+  5.3 (dos, p23), 5.4, 5.6 (tres), 5.7 (dos), 5.8 (dos), cierre, nota de método.
+- A8 (159, 162) · 11 títulos sacados de adentro de columnas (p11, p12, p16) y 8 bloques cortos a una
+  columna (p7, p11, p15, p18, p21, p23, p26, p28). Mirado página por página las 39; el control
+  automático da cero títulos en columna y cero columnas cortas.
+- A9 · 13 frases de método o autorreferencia fuera; «plata» 0, azul/rojo 0, nombre del candidato 0,
+  «informe de cumplimiento» 0.
+
+## PARTE B · APLICADA (B1 a B12; B5 parcial)
+
+- B5: salen el cuadro de la rampa del 6.2 (igual al 22) y el gráfico de las dos partidas (igual al
+  8). Esperan decisión por dato que se pierde: cuadro 1, cuadro 24, cuadro 25 sólo índice, gráfico
+  de gas.
+- PDF: 39 páginas, 43 exhibits del 1 al 43 sin saltos, referencias resueltas, fuentes sin
+  sustituciones, cero viudas, índice igual a los títulos.
+
+## ESPERAN A NICK
+
+- C1 a C4 (mueven cifras).
+- 3.5 por localidad: el informe 09 usó un mapa de zonas viejo, no las localidades de los capítulos 1
+  y 4. Los totales no cambian; cambian cuadro 18, pie, reparto de la carga y el mínimo por localidad.

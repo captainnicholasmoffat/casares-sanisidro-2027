@@ -417,9 +417,6 @@ def escenarios(par):
     return [
         Escenario("base", g, d,
                   descripcion="parametros historicos, sin cambios de politica"),
-        Escenario("adverso", g - Decimal("0.02"), Decimal("-0.035"),
-                  descripcion="recursos propios crecen 2 puntos menos y la "
-                              "coparticipacion cae 3,5% anual en vez de 2,2%"),
         Escenario("reformista", g, d, objetivo_programa=OBJETIVO_MEDIO,
                   financiamiento="reasignacion",
                   descripcion="base mas el programa de empleo y vivienda "

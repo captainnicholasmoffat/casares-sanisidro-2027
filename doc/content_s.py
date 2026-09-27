@@ -10,18 +10,18 @@ SINTESIS = dict(id="sintesis", runhead=RH, html="""
 <div class="stand">Que decida sobre la obra p&uacute;blica quien vive donde falta la obra p&uacute;blica.</div>
 
 <ol class="n">
-<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Son
-28.908 millones al a&ntilde;o. El reparto entre zonas lo fija una f&oacute;rmula escrita, mitad por poblaci&oacute;n y
+<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Al cuarto a&ntilde;o son
+28.908 millones por a&ntilde;o. El reparto entre zonas lo fija una f&oacute;rmula escrita, mitad por poblaci&oacute;n y
 mitad por necesidad contada en hogares, y no el intendente de turno: el dinero va sobre todo a Boulogne
-Sur Mer y B&eacute;ccar. Donde la zona re&uacute;na el 60% de adhesi&oacute;n, su asociaci&oacute;n vecinal
-ejecuta la obra como parte contratante, con un mecanismo que la Ley Org&aacute;nica habilita desde 1976 y
-que otro municipio bonaerense ya usa. <b>Y el dinero de cada zona queda atado por ordenanza</b>: la
-Constituci&oacute;n provincial no deja que el voto de una asamblea sea vinculante, pero s&iacute; permite
-fijar la partida, y eso es lo que este programa hace. <i>(Cap&iacute;tulo 4)</i></li>
+Sur Mer y B&eacute;ccar. Donde el 60% de los vecinos beneficiados lo pida por escrito, la
+asociaci&oacute;n vecinal de la zona hace la obra ella misma, contratada directamente por el Municipio: la ley
+provincial de municipios lo permite desde 1976 y Pilar ya lo hace. <b>Y el dinero de cada zona queda
+reservado por ordenanza</b>: la Constituci&oacute;n provincial no deja que el voto de una asamblea obligue al
+Municipio, pero s&iacute; permite reservar ese dinero, y eso es lo que este programa hace. <i>(Cap&iacute;tulo 4)</i></li>
 
 <li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y
-cooperativas de San Isidro, con el mismo criterio de proximidad que el art&iacute;culo 132 de la Ley
-Org&aacute;nica aplica a la obra vecinal. Y si ac&aacute; nadie puede hacerlo, <span class="sg">la
+cooperativas de San Isidro, igual que la ley provincial ya permite contratar sin licitaci&oacute;n a las
+cooperativas y asociaciones de vecinos para la obra de su propio barrio. Y si ac&aacute; nadie puede hacerlo, <span class="sg">la
 capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las
 universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa.
 <i>(Cap&iacute;tulo 5)</i></li>
@@ -31,18 +31,19 @@ tecnolog&iacute;a</b>, con t&iacute;tulo de la universidad nacional del partido,
 sirva tambi&eacute;n fuera del Municipio. Y <b>un centro de apoyo escolar en cada localidad</b>, donde hoy
 no hay ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
-empleo, <b>60% forma</b> y <b>40% contrata los desarrollos donde esa gente despu&eacute;s trabaja</b>. De la
+empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
+administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la
 parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, con un
-instructor que las acompa&ntilde;a hasta el empleo. <span class="sg">La formaci&oacute;n laboral est&aacute;
-ac&aacute;, dentro de empleo, y no dentro de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
+instructor que las acompa&ntilde;a hasta el empleo. <span class="sg">La formaci&oacute;n laboral se
+paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que esa gente construya la inteligencia artificial nativa del Municipio</b>, que reemplaza lo que
-ser&iacute;a una aplicaci&oacute;n. La hacen docentes y t&eacute;cnicos del partido con los egresados de
-la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Sale de Ciencia y
-T&eacute;cnica, que ya tiene 8.205 millones al a&ntilde;o: no son fondos nuevos.
+<li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: un asistente propio
+al que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con los egresados de
+la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Se paga con la partida
+de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.205 millones al a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que esa herramienta le permita al vecino informarse y decidir.</b> Responde en castellano y muestra
+<li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Responde en castellano y muestra
 de d&oacute;nde sac&oacute; cada dato: <i>mostrame esta obra, de qui&eacute;n es, de qu&eacute; se trata
 y c&oacute;mo la est&aacute;n administrando</i>; <i>&iquest;c&oacute;mo saco turno en el hospital
 m&aacute;s cercano?</i>; <i>&iquest;c&oacute;mo viene la guardia, puedo ir ahora o est&aacute;
@@ -61,26 +62,29 @@ en vez de uno que toma la denuncia. Es an&aacute;lisis de hechos y no de persona
 facial masivo ni registro municipal de personas sin orden judicial. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que las inspecciones de comercios se transmitan en vivo.</b> El inspector transmite mientras
-inspecciona y los vecinos lo ven desde la aplicaci&oacute;n: que la inspecci&oacute;n fue real, que
-pas&oacute; donde dice que pas&oacute; y qu&eacute; pas&oacute; adentro. <b>Y el comerciante
+inspecciona, para que se vea que la inspecci&oacute;n es real, y la transmisi&oacute;n queda grabada tal
+cual se hizo, para que cualquier vecino la vea despu&eacute;s: que pas&oacute; donde dice que pas&oacute;
+y qu&eacute; pas&oacute; adentro. <b>Y el comerciante
 inspeccionado tambi&eacute;n graba</b>, con el mismo valor en el expediente. Esto no resuelve el delito
 en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.
 <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que todo esto se pague sin tocar la al&iacute;cuota ni tomar deuda.</b> Cuesta 7.225,2 millones
+<li><b>Que todo esto se pague sin subir el porcentaje de la tasa de servicios generales ni tomar deuda.</b> Cuesta 7.225,2 millones
 de fondos nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash;
-y sale de actualizar una base de valuaci&oacute;n que es de 2008. <span class="sg">Bajan m&aacute;s parcelas
-de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y el total que
-se emite por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
+y sale de actualizar la tabla de 2008 con la que el Municipio calcula cu&aacute;nto vale la tierra para cobrar
+esa tasa. <span class="sg">Bajan m&aacute;s parcelas
+de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y lo que el
+Municipio factura en total por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
 
 <p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. A fines de
 marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona, puede anotar a su hijo
 en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
-en su zona, con la primera cohorte ya arrancando en los espacios que existen, y dos m&oacute;dulos de la
-aplicaci&oacute;n funcionando. Y hay <b>seis ordenanzas en el Concejo</b>,
-ingresadas en la primera sesi&oacute;n ordinaria: la de la partida vecinal con su f&oacute;rmula escrita,
-la que actualiza la base de valuaci&oacute;n y la que deroga los art&iacute;culos que hoy permiten al
+en su zona, con la primera cohorte ya arrancando en los espacios que existen, y ya funcionan dos
+m&oacute;dulos de la inteligencia artificial del Municipio: la consulta y el turno m&eacute;dico por internet. Y hay
+<b>seis ordenanzas en el Concejo</b>, ingresadas en la primera sesi&oacute;n ordinaria: la que reserva el dinero
+de obra de cada zona, con la f&oacute;rmula de reparto escrita; la que actualiza la tabla de 2008 con la que se
+cobra la tasa; y la que deroga los art&iacute;culos que hoy permiten al
 intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is
 compromisos y el cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
 

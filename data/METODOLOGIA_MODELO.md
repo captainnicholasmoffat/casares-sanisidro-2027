@@ -174,7 +174,6 @@ subir una sola tasa.
 | Escenario | Recursos propios | Coparticipación | Programa | Cómo se paga |
 |---|---|---|---|---|
 | **base** | +1,95% anual | −2,196% anual | no | — |
-| **adverso** | −0,05% anual (2 puntos menos) | −3,5% anual | no | — |
 | **reformista** | +1,95% anual | −2,196% anual | sí, 2,5% del gasto en 4 años, desde 2028 | reasignación |
 | **reformista_valuacion** | +1,95% anual | −2,196% anual | sí, el mismo | con la base de valuación actualizada |
 
@@ -188,7 +187,6 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 | Escenario | 2025 | 2028 | 2031 | 2034 | 2037 |
 |---|---:|---:|---:|---:|---:|
 | base | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
-| adverso | −6.051 | −13.637 | −20.484 | −26.668 | −32.257 |
 | reformista | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
 | **reformista_valuacion** | −6.051 | **+1.815** | +10.375 | +20.162 | +31.035 |
 

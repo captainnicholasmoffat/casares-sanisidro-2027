@@ -22,7 +22,7 @@ presupuestario del rubro Bienes de Uso del Departamento Ejecutivo, conforme la s
 doce coma cinco por ciento (12,5%) el primer ejercicio; veinticinco por ciento (25%) el segundo; treinta
 y siete coma cinco por ciento (37,5%) el tercero; cincuenta por ciento (50%) el cuarto y siguientes. La
 progresi&oacute;n no avanzar&aacute; al escal&oacute;n siguiente si el inmediato anterior no fue
-ejecutado y rendido en su totalidad.</p>
+ejecutado y justificado en su totalidad.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Distribuci&oacute;n por zona</h3>
 <p class="tight">La Partida se distribuye entre las seis zonas del Partido en dos mitades iguales. La
@@ -37,13 +37,12 @@ computan en cantidad de hogares y no en porcentajes sobre la zona.</p>
 <p class="tight">La asamblea de zona es abierta y vota con <b>un voto por persona</b>. Tiene derecho a
 voto toda persona mayor de diecis&eacute;is (16) a&ntilde;os que resida en la zona, y toda persona que
 desarrolle en ella su actividad principal, comercial o comunitaria, acredit&aacute;ndola. No se vota por
-hogar, por unidad funcional ni por padr&oacute;n de asociados. La n&oacute;mina de asistentes se publica.</p>
+hogar, por unidad funcional ni por padr&oacute;n de asociados. Toda persona puede consultar la n&oacute;mina de asistentes.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Priorizaci&oacute;n y respuesta obligatoria</h3>
 <p class="tight">Cada comisi&oacute;n zonal definir&aacute; en asamblea el destino de la partida
 correspondiente a su zona. El Departamento Ejecutivo deber&aacute; <b>responder por escrito, en forma
-fundada y dentro de los treinta (30) d&iacute;as corridos</b>, a cada priorizaci&oacute;n recibida, y
-publicar la respuesta. El silencio no suple la respuesta.</p>
+fundada y dentro de los treinta (30) d&iacute;as corridos</b>, a cada priorizaci&oacute;n recibida; toda persona puede consultar la respuesta desde el d&iacute;a en que se emite. El silencio no suple la respuesta.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Inalterabilidad del destino</h3>
 <p class="tight">Priorizada una obra y respondida en los t&eacute;rminos del art&iacute;culo 4, el
@@ -62,7 +61,7 @@ la ejecuci&oacute;n</b>, quienes integrar&aacute;n el comit&eacute; de vigilanci
 suscribir&aacute;n su acta de recepci&oacute;n.</p>
 
 <h3>Art&iacute;culo 8 &mdash; Intervenci&oacute;n de una comisi&oacute;n</h3>
-<p class="tight">Ante rendici&oacute;n observada, obra no ejecutada o asamblea no convocada, el
+<p class="tight">Ante gastos observados, obra no ejecutada o asamblea no convocada, el
 Departamento Ejecutivo podr&aacute; intervenir la comisi&oacute;n <b>por causa fundada y escrita</b> y
 convocar a nueva asamblea dentro del plazo que fije la reglamentaci&oacute;n. Durante la
 intervenci&oacute;n la partida de esa zona se ejecuta por administraci&oacute;n <b>en esa misma zona</b>
@@ -73,36 +72,34 @@ importa disoluci&oacute;n de la asociaci&oacute;n vecinal.</p>
 <p class="tight">La Partida se constituye con recursos afectados en los t&eacute;rminos del
 art&iacute;culo 119 del Decreto-Ley 6769/58, no pudiendo ser reasignada a otro destino dentro del
 ejercicio. Los saldos no ejecutados de una zona se acumular&aacute;n a la partida de esa misma zona en el
-ejercicio siguiente. El Departamento Ejecutivo publicar&aacute; la ejecuci&oacute;n presupuestaria
-correspondiente a cada zona <b>con periodicidad trimestral, por depender del cierre contable</b>,
-exhibiendo el devengado del mes en curso con car&aacute;cter provisorio. La imputaci&oacute;n con
+ejercicio siguiente. Toda persona podr&aacute; consultar la ejecuci&oacute;n presupuestaria de cada zona,
+actualizada <b>cada trimestre, por depender del cierre contable</b>, con el devengado del mes en curso
+con car&aacute;cter provisorio. La imputaci&oacute;n con
 referencia territorial deber&aacute; estar operativa antes de la finalizaci&oacute;n del mandato.</p>
 
 <h2>II &middot; Ordenanza del Sistema de Informaci&oacute;n Municipal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
 <p class="tight">Cr&eacute;ase el Sistema de Informaci&oacute;n Municipal, de acceso p&uacute;blico y
-gratuito, en el que se publica la informaci&oacute;n que esta y las dem&aacute;s ordenanzas ponen a
-cargo del Departamento Ejecutivo. La publicaci&oacute;n en el Sistema no sustituye la del Bolet&iacute;n
+gratuito, al que toda persona puede consultar sobre la informaci&oacute;n que esta y las dem&aacute;s ordenanzas
+ponen a cargo del Departamento Ejecutivo. Estar en el Sistema no sustituye la publicaci&oacute;n en el Bolet&iacute;n
 Oficial donde &eacute;sta sea exigible.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Qu&eacute; publica y cu&aacute;ndo</h3>
-<p class="tight">El dato se publica <b>el d&iacute;a en que se genera</b>. Se publican de ese modo, como
-m&iacute;nimo: las priorizaciones zonales y las respuestas del art&iacute;culo 4 de la Ordenanza I; los
+<h3>Art&iacute;culo 2 &mdash; Qu&eacute; se puede consultar, y desde cu&aacute;ndo</h3>
+<p class="tight">El dato se registra <b>el d&iacute;a en que se genera</b> y desde ese d&iacute;a puede consultarse. Quedan comprendidos, como m&iacute;nimo: las priorizaciones zonales y las respuestas del art&iacute;culo 4 de la Ordenanza I; los
 decretos de adjudicaci&oacute;n, con oferentes, adjudicatario, monto y <b>domicilio del
 adjudicatario</b>; el estado de avance de cada obra priorizada; los reclamos y su tiempo de respuesta;
 el precio unitario y el stock de los insumos y medicamentos de cada efector de salud; la ocupaci&oacute;n
 de las guardias; los datos de patrullaje, c&aacute;maras operativas y tiempos de respuesta del servicio
 municipal de emergencias; y las personas que consiguieron empleo por intermediaci&oacute;n municipal.
-<b>&Uacute;nicamente la ejecuci&oacute;n presupuestaria se publica con periodicidad trimestral</b>, por
+<b>&Uacute;nicamente la ejecuci&oacute;n presupuestaria se actualiza cada trimestre</b>, por
 depender del cierre contable.</p>
 
 <h3>Art&iacute;culo 3 &mdash; L&iacute;mites</h3>
-<p class="tight">No se publican datos que permitan identificar a un paciente ni imagen del interior de
+<p class="tight">El Sistema no muestra datos que permitan identificar a un paciente ni im&aacute;genes del interior de
 un establecimiento de salud. El asistente de consulta que el Sistema provea responder&aacute;
-&uacute;nicamente sobre informaci&oacute;n publicada, indicando el documento de origen, <b>y no
-ejercer&aacute; funci&oacute;n alguna de moderaci&oacute;n, filtro o selecci&oacute;n de lo que se
-publica</b>.</p>
+&uacute;nicamente sobre informaci&oacute;n registrada en el Sistema, indicando el documento de origen, <b>y no
+ejercer&aacute; funci&oacute;n alguna de moderaci&oacute;n, filtro o selecci&oacute;n de la informaci&oacute;n</b>.</p>
 
 <h2>III &middot; Ordenanza de actualizaci&oacute;n de la base de valuaci&oacute;n</h2>
 
@@ -137,9 +134,10 @@ para cada unidad funcional de los inmuebles en propiedad horizontal.</p>
 del cual no se aplica el descuento por pago anual anticipado que prev&eacute; la Ordenanza Fiscal. Por
 debajo de ese tope, el descuento se mantiene como est&aacute;.</p>
 
-<h3>Art&iacute;culo 6 &mdash; Publicidad</h3>
-<p class="tight">La tabla actualizada y la metodolog&iacute;a con que se construy&oacute; se publican
-&iacute;ntegras, manzana por manzana, junto con la tabla que reemplazan.</p>
+<h3>Art&iacute;culo 6 &mdash; Consulta</h3>
+<p class="tight">Toda persona puede consultar en el Sistema de Informaci&oacute;n Municipal, manzana por
+manzana, la tabla actualizada, la que reemplaza y la metodolog&iacute;a con que se construy&oacute;, sin perjuicio de
+su publicaci&oacute;n en el Bolet&iacute;n Oficial.</p>
 
 <h2>IV &middot; Ordenanza de transmisi&oacute;n de los actos de fiscalizaci&oacute;n</h2>
 
@@ -150,9 +148,10 @@ audio y video, el acto <b>mientras lo ejerce</b>, y &uacute;nicamente mientras l
 transmisi&oacute;n no alcanza a la actividad del agente fuera de esa funci&oacute;n.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Publicidad</h3>
-<p class="tight">La transmisi&oacute;n es <b>p&uacute;blica y accesible desde la aplicaci&oacute;n
-municipal mientras dura el acto</b>, y queda archivada con su fecha, el domicilio del acto y el agente
-interviniente. La reglamentaci&oacute;n determina el resguardo de los datos personales de terceros que
+<p class="tight">La transmisi&oacute;n es <b>p&uacute;blica mientras dura el acto, para que se vea que es
+real, y queda grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s</b>,
+con su fecha, el domicilio del acto y el agente interviniente. Las dos se consultan a trav&eacute;s de la
+inteligencia artificial del Municipio. La reglamentaci&oacute;n determina el resguardo de los datos personales de terceros que
 aparezcan sin ser parte del acto.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
@@ -160,7 +159,7 @@ aparezcan sin ser parte del acto.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Registro del vecino</h3>
 <p class="tight">La persona alcanzada por el acto podr&aacute; registrarlo por sus propios medios,
-incluida la aplicaci&oacute;n municipal, y ese registro tendr&aacute; en el expediente el mismo valor
+incluido el Sistema de Informaci&oacute;n Municipal, y ese registro tendr&aacute; en el expediente el mismo valor
 que el del agente.</p>
 
 <h2>V &middot; Ordenanza de asociaciones de parque</h2>
@@ -190,8 +189,8 @@ espacio. La recepci&oacute;n sin esa firma no habilita el pago final.</p>
 <b>un programa propio de pol&iacute;ticas de g&eacute;nero y un programa propio de discapacidad</b>,
 separados del programa que hoy comparten con ni&ntilde;ez, juventud y personas mayores.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Ejecuci&oacute;n publicada</h3>
-<p class="tight">La ejecuci&oacute;n de ambos programas se publica con la misma apertura y la misma
+<h3>Art&iacute;culo 2 &mdash; Ejecuci&oacute;n a la vista</h3>
+<p class="tight">La ejecuci&oacute;n de ambos programas puede consultarse con la misma apertura y la misma
 periodicidad que la del resto del presupuesto. Esta ordenanza no fija monto: fija que el monto exista
 por separado y pueda verse.</p>
 
@@ -213,14 +212,12 @@ y localizaci&oacute;n.</p>
 <h3>Art&iacute;culo 1 &mdash; Competencia y medici&oacute;n</h3>
 <p class="tight">En ejercicio de la facultad del art&iacute;culo 27 inciso 17 del Decreto-Ley 6769/58,
 el Municipio medir&aacute; la emisi&oacute;n sonora de veh&iacute;culos en circulaci&oacute;n conforme
-los l&iacute;mites y m&eacute;todos del Anexo 1 del Decreto 779/95, reglamentario de la Ley 24.449, y
-publicar&aacute; las mediciones.</p>
+los l&iacute;mites y m&eacute;todos del Anexo 1 del Decreto 779/95, reglamentario de la Ley 24.449, y toda persona podr&aacute; consultar las mediciones.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Sanci&oacute;n</h3>
 <p class="tight">La constataci&oacute;n por medios autom&aacute;ticos habilita a labrar acta
 &uacute;nicamente cuando el instrumento se encuentre <b>homologado</b> conforme la normativa
-metrol&oacute;gica aplicable. Hasta entonces la medici&oacute;n tiene fines de diagn&oacute;stico y
-publicaci&oacute;n. Rige en todos los casos el derecho de descargo ante la Justicia de Faltas
+metrol&oacute;gica aplicable. Hasta entonces la medici&oacute;n tiene fines de diagn&oacute;stico y de informaci&oacute;n al vecino. Rige en todos los casos el derecho de descargo ante la Justicia de Faltas
 Municipal.</p>
 
 <h2>IX &middot; Ordenanza del pliego de higiene urbana</h2>
@@ -245,9 +242,8 @@ comisiones zonales son las asociaciones vecinales que ya existen, reconocidas po
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> No hace falta: los art&iacute;culos 60 y 132 de la
 Ley Org&aacute;nica ya establecen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el
 municipio, y con qu&eacute; requisito de adhesi&oacute;n.</p>
-<p><b>No fija montos que el programa no haya costeado</b>, ni presupuestos de &aacute;rea, ni plazos
-que el cuerpo del documento no haya justificado. Donde el documento no fij&oacute; un n&uacute;mero, el
-articulado manda fijarlo y publicarlo, que no es lo mismo.</p>
+<p><b>No fija montos que el programa no haya costeado</b>, ni presupuestos de &aacute;rea, ni plazos sin
+fundamento. Donde no hay un n&uacute;mero, el articulado manda fijarlo y publicarlo, que no es lo mismo.</p>
 <p><b>No toca lo que no es municipal.</b> Quedan fuera el recorrido de las l&iacute;neas de colectivo,
 que autoriza la Provincia; la estad&iacute;stica criminal; y todo lo que exija reformar la Ley
 Org&aacute;nica, que este programa reclama y no promete.</p>
