@@ -2171,3 +2171,35 @@ PDF: 39 páginas, 45 exhibits del 1 al 45 sin saltos, fuentes sin sustituciones,
 - C1 a C4 (mueven cifras).
 - 3.5 por localidad: el informe 09 usó un mapa de zonas viejo, no las localidades de los capítulos 1
   y 4. Los totales no cambian; cambian cuadro 18, pie, reparto de la carga y el mínimo por localidad.
+
+# RESPUESTAS 150-172 Y CORRECCIONES 173 A 175 · APLICADAS
+
+## 3.5 POR LOCALIDAD
+- Cuadro del 3.5 (ahora 17), pie y tres párrafos con las localidades de los capítulos 1 y 4: Acassuso 83%,
+  la localidad de San Isidro 75%, Villa Adelina 144%. Béccar paga lo mismo; Villa Adelina −33,8%, Boulogne
+  −4,5%; la localidad de San Isidro +28%. Mínimo: 410, 241 y 124. «Casi el triple». «San Isidro» como
+  localidad dice «la localidad de San Isidro» en el cuadro y en todo el 3.5.
+
+## EMPLEO (173 A 175)
+- Artículo 12 de la Ley 26.427: los pasantes trabajan sólo en proyectos nuevos (automatizar, relevar lo que
+  no existe, construir la plataforma y los dispositivos). La operación diaria (90 puestos) la sostienen 90
+  juniors y la planta reasignada. Municipio: 337 pasantes (tope legal 556 = 7% de 7.946 cargos del F6 de la
+  Ordenanza 9422); empresas contratadas: 591. El 447 bajó a 337.
+- Formación de dos años, pasantía de 12 meses (240.000 $, 20 h, 6,5 h por día, de día, ART y salud,
+  convenio de pasantías). Cada área paga los suyos: 3,17 M por pasante y por año.
+- Tutor: el profesor que vota el alumno (docente guía). Partida de incentivo docente en el convenio con el
+  CFL, que el centro paga; el artículo 10 prohíbe un cargo rentado en el Municipio, no esto (verificado en el
+  texto de la ley). Supervisores: 1 cada 10 pasantes (35 en el Municipio, 60 en empresas).
+- Reglas de la 168 intactas (prioridad del egresado sin panel, panel para traer gente de afuera, tutor votado
+  con incentivo y tope) y se suma la cuarta: 75% de personal del partido con un año de residencia, con fuentes
+  y riesgo. Ordenanza X en el anexo, que entra en los meses 4 a 6.
+- Pirámide: 928 pasantes → 105 juniors que rotan (70 por año) → 13 semi-seniors → 9 seniors; 180 a 230 por
+  año al segundo escalón. Dos cuadros nuevos en el 5.3 (31 y 32); el 5.3 pasa a cuatro páginas.
+- Plataforma con cargas (16,8% + ART 3,275%): 49 personas, 1.585,5 M; con dispositivos 1.676,6 M = 20,6% de
+  Ciencia y Técnica. Los 6 pasantes de soporte pasan a construir; el soporte por zona es planta reasignada.
+- 3.4: fila nueva, pasantías y primer empleo en las áreas, 1.733,2 M del presupuesto de cada área; gasto
+  flexible ocupado 52,3%, libre 47,7%.
+- Calendario: mes 15, la primera cohorte empieza la pasantía; mes 27, egresan los primeros 277. En el mandato
+  egresan 771 (277 y 494); la tercera cohorte, 711, egresa en el mes 51.
+- PDF: 40 páginas, 40 exhibits del 1 al 40 sin saltos, referencias resueltas, fuentes sin sustituciones,
+  cero viudas, cero títulos en columna.

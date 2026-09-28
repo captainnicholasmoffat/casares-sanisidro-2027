@@ -128,7 +128,7 @@ _IDX = [
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
- ("i", "Las cinco ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
+ ("i", "Las seis ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
  ("g", "Glosario", None),
  ("i", "Dieciocho palabras, explicadas", "glosario"),
  ("g", "Nota de m&eacute;todo", None),

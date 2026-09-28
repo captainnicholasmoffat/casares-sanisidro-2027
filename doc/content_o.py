@@ -235,6 +235,41 @@ penalidades&mdash; ser&aacute; <b>aprobado por ordenanza con anterioridad al lla
 vecinal registrado en el Sistema de Informaci&oacute;n Municipal es prueba admisible a los fines de las
 penalidades.</p>
 
+<h2>X &middot; Ordenanza de empleo local</h2>
+
+<h3>Art&iacute;culo 1 &mdash; M&iacute;nimo de personal del partido</h3>
+<p class="tight">En todo contrato que celebre el Municipio &mdash;obra, servicios y desarrollos&mdash; y en la obra que
+ejecuten las asociaciones vecinales con fondos municipales, <b>al menos el 75% del personal que trabaje en
+el contrato tendr&aacute; domicilio en el partido con una antig&uuml;edad m&iacute;nima de un a&ntilde;o</b>, acreditada con el
+documento nacional de identidad. Dentro de ese m&iacute;nimo tienen prioridad los egresados de la formaci&oacute;n laboral
+del Municipio.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Excepciones y consulta</h3>
+<p class="tight">Quien quiera incorporar m&aacute;s personal de fuera del partido del que permite el art&iacute;culo 1
+deber&aacute; demostrar ante un panel t&eacute;cnico, que se integra para cada caso seg&uacute;n fije la reglamentaci&oacute;n, que en
+el partido no hay personas con la capacidad requerida. Esta condici&oacute;n integra cada pliego antes del llamado, y el
+personal de cada contrato, con cu&aacute;ntos viven en el partido, se consulta en el Sistema de Informaci&oacute;n
+Municipal.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Primer empleo en el Municipio</h3>
+<p class="tight">En los puestos del Municipio de los equipos de datos y del Sistema de Informaci&oacute;n Municipal,
+los egresados tienen prioridad y su capacidad la avala su tutor, sin panel. Para contratar a alguien de
+afuera en lugar de un egresado hay que demostrar ante el panel t&eacute;cnico que ning&uacute;n egresado tiene la
+capacidad requerida.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Pasant&iacute;as</h3>
+<p class="tight">El Municipio firma con cada instituci&oacute;n formadora el convenio de pasant&iacute;as de la Ley
+26.427. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. Cada
+&aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus
+pasantes.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Partida de incentivo docente</h3>
+<p class="tight">El convenio con el centro de formaci&oacute;n incluye una <b>partida de incentivo docente</b>, a
+cargo del Municipio, que el centro paga al profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. Cada
+alumno vota a su tutor entre sus profesores, y cada profesor tiene un tope de tutorados. El monto se fija en
+el convenio, que se consulta en el Sistema de Informaci&oacute;n Municipal. El tutor no puede tener cargo rentado
+en el Municipio, conforme al art&iacute;culo 10 de la Ley 26.427.</p>
+
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>
 <div class="cols">
@@ -259,23 +294,23 @@ conviene que se voten por separado.</p>
 </div>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
-<p class="tight">De las trece metas del cap&iacute;tulo 6, <b>siete tienen su art&iacute;culo
-ac&aacute;</b>. Las otras seis no lo necesitan.</p>
+<p class="tight">De las trece metas del cap&iacute;tulo 6, <b>ocho tienen su art&iacute;culo
+ac&aacute;</b>. Las otras cinco no lo necesitan.</p>
 <div class="note">
-<p><b>Cuatro se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
-conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; abrir un
-centro de apoyo escolar en cada localidad; y extender el modelo del centro de formaci&oacute;n laboral a
-las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, formando 928 personas por
-a&ntilde;o. <b>Una ordenanza que fijara esos montos de una vez
-atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone.</p>
-<p><b>La quinta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
+<p><b>Tres se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
+conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; y abrir un
+centro de apoyo escolar en cada localidad. <b>Una ordenanza que fijara esos montos de una vez
+atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone. La formaci&oacute;n
+laboral tiene sus reglas en la Ordenanza X &mdash;pasant&iacute;as, incentivo docente y empleo local&mdash;, pero cu&aacute;ntas
+personas forma por a&ntilde;o tambi&eacute;n lo fija el presupuesto.</p>
+<p><b>La cuarta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
-<p><b>Y la sexta se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
+<p><b>Y la quinta se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
 vivo y la reconstrucci&oacute;n de recorrido son configuraci&oacute;n del sistema de c&aacute;maras que
 el Municipio ya tiene, no una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
 se ordena por decreto.</p>
-<p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
+<p><span class="sg">De las cinco, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
 la espera por especialidad, el precio unitario, el stock y la inserci&oacute;n laboral entran en el
 art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
 se puede es que el resultado se vea.</p>

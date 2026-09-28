@@ -113,7 +113,7 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 <tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">Arreglar calles y veredas entra en el dinero de obra que decide cada zona</td></tr>
 <tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema que lee la solicitud contra la norma y contesta tres cosas: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo, empezando por la habilitaci&oacute;n comercial. Y un asistente que contesta en castellano qu&eacute; hace falta para abrir un negocio, antes de firmar el alquiler</td></tr>
 <tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">La inteligencia artificial del Municipio, a la que cualquier vecino le pregunta en castellano, y que muestra de d&oacute;nde saca cada dato: la obra de su cuadra y qui&eacute;n la hace, cu&aacute;nto se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio, el precio de cada compra de insumos de los hospitales, comparado con las anteriores y con los otros hospitales, y las inspecciones, que se transmiten en vivo para que se vea que son reales y quedan grabadas para verlas despu&eacute;s</td></tr>
-<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y abrir en las seis zonas centros como el de formaci&oacute;n laboral de La Cava, en B&eacute;ccar, que forman en inteligencia artificial, datos y servicios digitales y acompa&ntilde;an a cada egresado hasta que consigue trabajo</td></tr>
+<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y abrir en las seis zonas centros como el de formaci&oacute;n laboral de La Cava, en B&eacute;ccar, que forman en dos a&ntilde;os &mdash;el segundo, trabajando como pasante&mdash; en inteligencia artificial, datos y servicios digitales, y acompa&ntilde;an a cada egresado hasta que consigue trabajo</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar y atacar la falta de gas de red, con el dinero de obra que deciden los vecinos y, donde no alcance, con el de vivienda; y medir por zona la conexi&oacute;n a internet, que hoy nadie mide</td></tr>
 <tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Desde la inteligencia artificial del Municipio: sacar turno m&eacute;dico por internet &mdash;hoy no se puede en ning&uacute;n hospital ni centro de salud municipal&mdash;, con la plataforma con la que el Municipio ya da otros turnos, y pedida la entrada al sistema provincial Mi Salud Digital; y ver en tiempo real c&oacute;mo est&aacute; cada guardia, para elegir a cu&aacute;l ir antes de salir de casa. Adem&aacute;s, cualquier vecino puede preguntar cu&aacute;nto pag&oacute; cada hospital por cada insumo, comparado con los otros, y qu&eacute; stock tiene</td></tr>
 <tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Un centro de apoyo escolar gratuito en cada localidad, donde los chicos se est&aacute;n quedando atr&aacute;s, en edificios que ya existen y hoy cierran a la tarde; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
@@ -261,7 +261,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Estas son las siete partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
+<p class="lead">Estas son las ocho partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
 """ + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
              "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.") + """
 <table>
@@ -273,11 +273,12 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
 <tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">No. Es inversi&oacute;n inicial</td><td class="m">Los mismos tres programas</td></tr>
-<tr><td class="l">Plataforma de inteligencia artificial (4.11)</td><td class="n">1.026,7 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
+<tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">1.676,6 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
+<tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">1.733,2 M</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno y comunicaci&oacute;n</td></tr>
 </table>
 <p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
 dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
-<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones y la plataforma son estimaciones del equipo de este
+<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma y las pasant&iacute;as son estimaciones del equipo de este
 programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
 de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s
@@ -335,10 +336,11 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
 <p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.799 de reasignaci&oacute;n del gasto
-flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y habilitaciones&mdash;. Los primeros exigen
+flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y habilitaciones&mdash;, y las &aacute;reas mueven 1.733,2 dentro de su
+propio presupuesto para pasantes y juniors. Los primeros exigen
 actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
-class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 50,3% del gasto flexible y queda
-libre el 49,7%.</span> La plataforma se paga dentro de Ciencia y T&eacute;cnica (4.11).</p>
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,3% del gasto flexible y queda
+libre el 47,7%.</span> La plataforma se paga dentro de Ciencia y T&eacute;cnica (4.11).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -351,7 +353,7 @@ obras que ejecuta la propia comisi&oacute;n &mdash;cuentas, seguro y justificaci
 el honorario del panel sorteado que el cap&iacute;tulo 4 propone para los bienes de alcance distrital, como la
 costa, sale de reasignaci&oacute;n: <b>3,1 millones por panel</b>. Y <b>imputar el gasto con referencia
 territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona, no requiere
-personal nuevo ni estructura nueva, y entra dentro del 49,7% del gasto flexible que queda libre con todo
+personal nuevo ni estructura nueva, y entra dentro del 47,7% del gasto flexible que queda libre con todo
 sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
@@ -440,30 +442,30 @@ cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oac
 que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
 <span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
 </div>
-""" + exhead("c", "La tabla de 2008 con la que se cobra la tasa ordena bien las localidades, pero achica la distancia entre ellas",
-             "Valor de la tierra de cada localidad, en veces el de Boulogne Sur Mer, en la escala municipal de 2008 y en la valuaci&oacute;n provincial. Promedio ponderado por superficie de parcela.") + """
+""" + exhead("c", "La tabla de 2008 le cobra de menos a la localidad de San Isidro, a Mart&iacute;nez y a Acassuso, y de m&aacute;s a Villa Adelina",
+             "Valor de la tierra de cada localidad, en veces el de Boulogne Sur Mer, seg&uacute;n la tabla municipal de 2008 y seg&uacute;n la valuaci&oacute;n provincial. Promedio ponderado por superficie de parcela.") + """
 <table>
 <colgroup><col style="width:210pt"><col><col><col></colgroup>
 <tr class="hd"><th>Localidad</th><th class="r">Tabla municipal</th><th class="r">Valuaci&oacute;n provincial</th><th class="r">Reconocido</th></tr>
-<tr class="hi"><td class="l">Acassuso</td><td class="n"><b>2,09&times;</b></td><td class="n"><b>3,27&times;</b></td><td class="n"><b>64%</b></td></tr>
-<tr><td class="l">Mart&iacute;nez</td><td class="n">1,98&times;</td><td class="n">2,88&times;</td><td class="n">69%</td></tr>
-<tr><td class="l">San Isidro</td><td class="n">1,80&times;</td><td class="n">2,28&times;</td><td class="n">79%</td></tr>
-<tr><td class="l">B&eacute;ccar</td><td class="n">1,46&times;</td><td class="n">1,63&times;</td><td class="n">89%</td></tr>
-<tr><td class="l">Villa Adelina</td><td class="n">1,32&times;</td><td class="n">1,42&times;</td><td class="n">93%</td></tr>
+<tr><td class="l">Acassuso</td><td class="n">2,32&times;</td><td class="n">2,80&times;</td><td class="n">83%</td></tr>
+<tr><td class="l">Mart&iacute;nez</td><td class="n">1,75&times;</td><td class="n">2,16&times;</td><td class="n">81%</td></tr>
+<tr class="hi"><td class="l">Localidad de San Isidro</td><td class="n"><b>1,61&times;</b></td><td class="n"><b>2,16&times;</b></td><td class="n"><b>75%</b></td></tr>
+<tr><td class="l">B&eacute;ccar</td><td class="n">1,21&times;</td><td class="n">1,27&times;</td><td class="n">95%</td></tr>
 <tr><td class="l">Boulogne Sur Mer, la referencia</td><td class="n">1&times;</td><td class="n">1&times;</td><td class="n">&mdash;</td></tr>
+<tr class="hi"><td class="l">Villa Adelina</td><td class="n"><b>0,96&times;</b></td><td class="n"><b>0,67&times;</b></td><td class="n"><b>144%</b></td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la tabla de la Ordenanza 8373, publicada en la
 Ordenanza Impositiva 2016, y sobre los valores por macizo de ARBA (Decreto 790/16), con las parcelas del
 geoservicio de ARBA. &laquo;Reconocido&raquo; es la tabla municipal dividida por la valuaci&oacute;n
-provincial, con los valores sin redondear. Detalle en el informe 09.</p>
-<p class="cap"><b>De qu&eacute; unidad catastral sale cada localidad:</b> las localidades son las seis
-zonas del cap&iacute;tulo 4, armadas con radios censales, y sus l&iacute;mites no siguen el catastro: cada
-parcela va a la localidad donde cae. El grueso de cada una, por circunscripci&oacute;n y secci&oacute;n:
-Acassuso, III-A a III-C, III-F, III-G, IV-D, IV-E, VI-G, VI-I y VII-D a VII-H; Mart&iacute;nez, III-D,
-III-E, III-H, III-J y IV-A a IV-C; San Isidro, I-A, I-B, II-A a II-C, VII-B y VII-C; B&eacute;ccar, VII-A
-y VIII-A a VIII-E; Villa Adelina, V-A, V-B, V-D, V-F, V-G, VI-E y VI-J; Boulogne Sur Mer, V-C, V-E, VI-A
-a VI-D, VI-F y VI-H. El 13% de las parcelas cae en una secci&oacute;n donde la mayor&iacute;a es de otra
-localidad; con las secciones enteras, Acassuso da 1,94 contra 2,99 veces Boulogne Sur Mer. La lista parcela
+provincial, con los valores sin redondear: debajo de 100%, la tabla cobra de menos; arriba, de m&aacute;s. Detalle
+en el informe 09.</p>
+<p class="cap"><b>De qu&eacute; unidad catastral sale cada localidad:</b> las localidades son las de
+los cap&iacute;tulos 1 y 4, armadas con radios censales, y sus l&iacute;mites no siguen el catastro: cada parcela va a
+la localidad donde cae. El grueso de cada una, por circunscripci&oacute;n y secci&oacute;n: Acassuso, III-A y III-C;
+Mart&iacute;nez, III-B, III-D a III-J y IV-A a IV-D; la localidad de San Isidro, I-A, I-B, II-A a II-C, III-K, IV-E, VII-C, VII-D
+y VII-H; B&eacute;ccar, VII-A, VII-B, VII-E a VII-G y VIII-A a VIII-E; Villa Adelina, V-B, V-D, V-F y V-G; Boulogne
+Sur Mer, V-A, V-C, V-E y VI-A a VI-J. El 2,9% de las parcelas cae en una secci&oacute;n donde la mayor&iacute;a es de
+otra localidad; con las secciones enteras, Acassuso da 2,37 contra 2,94 veces Boulogne Sur Mer. La lista parcela
 por parcela est&aacute; en data/valuacion_parcelas.csv y el cruce por secci&oacute;n, en
 data/valuacion_secciones_localidad.csv.</p>
 <p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
@@ -476,9 +478,10 @@ compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
 ellas vale entre 6.400 y 9.200. <span class="sg">Pagan igual y no valen igual.</span></p>
 <p><b>Qu&eacute; cambia si la escala se actualiza.</b> La tabla nueva sigue la escala de ARBA, y la
-carga de la tierra se corre hacia donde est&aacute; el valor. Acassuso pasa de pagar el 41,0% de la parte
-tierra al 47,4%, y Mart&iacute;nez del 13,9% al 14,9%. <b>Boulogne baja del 8,9% al 6,5%, Villa Adelina
-del 13,1% al 10,4% y B&eacute;ccar del 8,9% al 7,3%.</b> San Isidro, del 14,3% al 13,4%.</p>
+carga de la tierra se corre hacia donde est&aacute; el valor. La localidad de San Isidro pasa de pagar el 28,7% de la parte
+tierra al 33,2%, Mart&iacute;nez del 25,7% al 27,3% y Acassuso del 7,3% al 7,6%. <b>Villa Adelina baja del 6,3%
+al 3,8% y Boulogne del 16,8% al 14,5%.</b> B&eacute;ccar pasa del 15,1% al 13,6% porque el total sube y ella paga
+lo mismo.</p>
 <p><b>Cu&aacute;nto aporta.</b> El nivel de la tabla nueva se fija para que la parte tierra emita
 <b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. Con la percepci&oacute;n
 de hoy &mdash;89,32%&mdash; se cobran <b>entre 7.180,7 y 7.225,2 millones</b>, seg&uacute;n cu&aacute;ntas
@@ -490,14 +493,15 @@ class="sg">Y aun as&iacute; alcanza cada a&ntilde;o:</span> el primero se cobran
 programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Si el
 m&iacute;nimo frena subas, esos tres a&ntilde;os son hasta 44,5 millones menos, y sigue alcanzando.</p>
 <p><b>Qui&eacute;n paga m&aacute;s y qui&eacute;n menos.</b> <b>Bajan 34.998 parcelas y suben
-33.619.</b> Boulogne paga 18,1% menos por la tierra, Villa Adelina 11,8% menos y B&eacute;ccar 8,3%
-menos. San Isidro paga 3,8% m&aacute;s, Mart&iacute;nez 19,1% y Acassuso 28,2%. <span class="sg">Los
-barrios con m&aacute;s hogares sin cloaca y sin gas pagan menos, y reciben m&aacute;s obra.</span></p>
+33.619.</b> Villa Adelina paga 33,8% menos por la tierra y Boulogne 4,5% menos; B&eacute;ccar paga lo mismo que
+hoy. Quien m&aacute;s sube es la localidad de San Isidro, el centro del partido: 28%. Mart&iacute;nez sube 17,8% y
+Acassuso 15,6%. <span class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos; B&eacute;ccar queda igual; y
+las dos son las que m&aacute;s obra reciben por habitante.</span></p>
 <p><b>El m&iacute;nimo tambi&eacute;n se ajusta.</b> La tasa tiene un piso: $234.000 por a&ntilde;o para
 una vivienda, aunque la cuenta d&eacute; menos. Ese piso se fij&oacute; con la tabla vieja, y con la nueva
 cobrar&iacute;a de m&aacute;s justamente a las parcelas m&aacute;s chicas de las zonas con menos servicios:
-mirando s&oacute;lo la tierra, <b>789 millones de rebaja no llegar&iacute;an</b>, 387 en Boulogne, 261 en
-Villa Adelina y 97 en B&eacute;ccar. <span class="sg">Por eso la ordenanza lo ajusta: la baja de la tabla
+mirando s&oacute;lo la tierra, <b>789 millones de rebaja no llegar&iacute;an</b>, 410 en Boulogne, 241 en
+Villa Adelina y 124 en B&eacute;ccar. <span class="sg">Por eso la ordenanza lo ajusta: la baja de la tabla
 nueva se aplica aunque la boleta quede debajo del m&iacute;nimo.</span> Contra el plan no cuesta nada: lo
 que se cobra ya cuenta esas bajas completas.</p>
 </div>
@@ -505,11 +509,13 @@ que se cobra ya cuenta esas bajas completas.</p>
 <div class="clabel">Lo que sube, y lo que no</div>
 <p><b>La al&iacute;cuota no se toca: sigue en 12 por mil desde 2016.</b> Lo que cambia es la tabla de 2008 con la que se calcula,
 que <b>ordena bien las localidades</b> &mdash;las seis quedan en el mismo orden que en la
-valuaci&oacute;n provincial&mdash; pero achata la distancia entre ellas: para esa tabla, la tierra de
-Acassuso vale poco m&aacute;s del doble que la de Boulogne; para la provincia, m&aacute;s del triple.</p>
+valuaci&oacute;n provincial&mdash; pero achata en parte la distancia entre ellas: para esa tabla, la tierra de
+Acassuso vale poco m&aacute;s del doble que la de Boulogne; para la provincia, casi el triple. <b>Y a Villa
+Adelina le cobra de m&aacute;s:</b> la pone casi a la par de Boulogne, cuando para la provincia vale un tercio
+menos. La actualizaci&oacute;n corrige las dos cosas.</p>
 <p><b>Bajan m&aacute;s parcelas de las que suben.</b> Lo que sube es lo que pagan las propiedades que la
 tabla de 2008 tiene subvaluadas. <b>Y el total que se emite por la tierra sube 10,9%.</b> <span
-class="sg">La zona con m&aacute;s necesidad paga menos que hoy.</span></p>
+class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eacute;ccar, lo mismo.</span></p>
 </div>
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>

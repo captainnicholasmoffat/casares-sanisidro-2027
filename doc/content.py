@@ -40,6 +40,8 @@ C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.2</span>', "cap2b",
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5A2, C5A3 = split_at(C5A2, '<h3>Ense&ntilde;ar IA sin acceso', "cap5a3", "")
+# correcciones 173-175: la pasantia y la piramide agrandan el 5.3, que pasa a cuatro paginas
+C5A3, C5A4 = split_at(C5A3, '<h3>La pir&aacute;mide: del pasante al empleo</h3>', "cap5a4", "")
 C6, C62_SRC = split_at(C.C6,  '<h2><span class="n">6.3</span>', "cap6b",
                      H_CONT.format(n=6, t="El plan, con fechas"))
 
@@ -70,7 +72,7 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, D.GLOSARIO, METODO]
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, D.GLOSARIO, METODO]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

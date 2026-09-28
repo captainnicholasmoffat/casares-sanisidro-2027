@@ -33,12 +33,13 @@ no hay ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, qui
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
 empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
 administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la
-parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, con un
-instructor que las acompa&ntilde;a hasta el empleo. <span class="sg">La formaci&oacute;n laboral se
+parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, formadas en dos
+a&ntilde;os &mdash;el primero cursan y el segundo trabajan como pasantes&mdash;, con un tutor que las acompa&ntilde;a hasta el empleo:
+uno de sus profesores, votado por cada alumno. <span class="sg">La formaci&oacute;n laboral se
 paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: un asistente propio
-al que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con los egresados de
+al que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con pasantes y egresados de
 la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Se paga con la partida
 de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones al a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>
