@@ -3,6 +3,14 @@
 25 de septiembre de 2026. Rama `claude/cool-hopper-3hdk58`. Todo sale de
 `03_scripts/escenario_b_valuacion.py`, con los datos crudos guardados en el repo.
 
+**28 de septiembre: todas las tablas por localidad están rehechas.** La primera versión asignó cada
+parcela a las zonas que había construido `zonas.py` (semillas y crecimiento por población), que no son las
+localidades del documento. Ahora las localidades son las de los capítulos 1 y 4: los 360 radios censales
+asignados a su localidad de OpenStreetMap (`data/zonas_asignacion_radios.csv`), disueltos en
+`data/zonas_propuestas_sanisidro.geojson`, que se regeneró con `03_scripts/zonas_osm_geojson.py`. **Los
+totales del partido no cambian**: 8.089,1 millones emitidos, 7.225,2 cobrados, 34.998 parcelas que bajan y
+33.619 que suben, los 789 millones del mínimo y el camino con tope año por año.
+
 ## Lo decidido: escenario B, con suba pareja de 10,9% y un tope de 25% por año
 
 El programa necesita **cobrar** 7.225,2 millones. Con la percepción de hoy, del 89,32%, eso
@@ -13,12 +21,12 @@ exige **emitir 8.089,1 millones más por la parte tierra**. La escala de ARBA se
 
 | Localidad | Tierra hoy (M) | Con B (M) | Diferencia (M) | % | Parcelas que suben | Parcelas que bajan | Suba mediana de las que suben | Duplican o más |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Acassuso | 30.506,6 | 39.105,4 | +8.598,8 | +28,2% | 12.819 | 3.369 | +24,2% | 66 |
-| Martínez | 10.322,9 | 12.292,9 | +1.970,1 | +19,1% | 10.440 | 1.029 | +20,6% | 37 |
-| San Isidro | 10.624,7 | 11.031,4 | +406,7 | +3,8% | 4.998 | 3.745 | +25,1% | 44 |
-| Béccar | 6.596,7 | 6.047,5 | −549,1 | −8,3% | 1.836 | 5.715 | +23,5% | 0 |
-| Villa Adelina | 9.733,7 | 8.586,2 | −1.147,5 | −11,8% | 2.315 | 10.329 | +22,2% | 0 |
-| Boulogne | 6.583,0 | 5.393,2 | −1.189,8 | −18,1% | 1.211 | 10.811 | +34,5% | 0 |
+| Acassuso | 5.433,1 | 6.283,0 | +849,9 | +15,6% | 2.253 | 511 | +20,5% | 40 |
+| Martínez | 19.081,1 | 22.485,1 | +3.404,0 | +17,8% | 15.863 | 2.785 | +22,5% | 62 |
+| San Isidro | 21.380,3 | 27.363,9 | +5.983,5 | +28,0% | 6.843 | 3.945 | +26,3% | 1 |
+| Béccar | 11.246,9 | 11.252,4 | +5,5 | 0,0% | 4.426 | 6.400 | +24,9% | 44 |
+| Villa Adelina | 4.711,1 | 3.118,5 | −1.592,6 | −33,8% | 307 | 9.047 | +14,4% | 0 |
+| Boulogne | 12.515,0 | 11.953,8 | −561,2 | −4,5% | 3.927 | 12.310 | +23,2% | 0 |
 | **Todo el partido** | 74.367,6 | 82.456,7 | **+8.089,1** | **+10,9%** | **33.619** | **34.998** | +23,5% | 147 |
 
 **Bajan más parcelas de las que suben: 34.998 contra 33.619.** Las otras 27 quedan igual.
@@ -44,26 +52,26 @@ desde el cuarto**, y no hace falta achicar el programa.
 
 | Localidad | Llegan el año 1 | En 2 años | En 3 años | En 4 años |
 |---|---:|---:|---:|---:|
-| Acassuso | 6.518 | 5.128 | 1.039 | 134 |
-| Martínez | 5.899 | 3.766 | 738 | 37 |
-| San Isidro | 2.465 | 2.052 | 437 | 44 |
-| Béccar | 954 | 676 | 206 | 0 |
-| Villa Adelina | 1.404 | 890 | 21 | 0 |
-| Boulogne | 495 | 480 | 236 | 0 |
+| Acassuso | 1.288 | 742 | 183 | 40 |
+| Martínez | 8.660 | 5.632 | 1.443 | 128 |
+| San Isidro | 3.147 | 3.396 | 297 | 3 |
+| Béccar | 2.247 | 1.661 | 474 | 44 |
+| Villa Adelina | 218 | 89 | 0 | 0 |
+| Boulogne | 2.175 | 1.472 | 280 | 0 |
 
 **La boleta típica, parte tierra, pesos por año** (mediana de cada grupo, antes y después):
 
 | Localidad | Parcela mediana hoy | Las que suben | Las que bajan |
 |---|---:|---:|---:|
-| Acassuso | 733.530 | 779.889 → 1.028.809 | 571.648 → 466.559 |
-| Martínez | 562.090 | 554.423 → 704.888 | 654.828 → 601.176 |
-| San Isidro | 586.484 | 696.039 → 875.260 | 498.983 → 403.901 |
-| Béccar | 385.784 | 616.264 → 744.495 | 348.322 → 259.494 |
-| Villa Adelina | 408.740 | 756.390 → 884.160 | 385.955 → 233.527 |
-| Boulogne | 289.271 | 403.024 → 561.912 | 283.527 → 185.950 |
+| Acassuso | 1.245.118 | 1.296.619 → 1.607.053 | 594.520 → 368.876 |
+| Martínez | 593.566 | 595.428 → 764.908 | 582.761 → 487.744 |
+| San Isidro | 670.641 | 777.733 → 994.387 | 517.328 → 418.246 |
+| Béccar | 437.506 | 616.566 → 751.387 | 358.397 → 264.306 |
+| Villa Adelina | 384.771 | 460.959 → 494.639 | 382.414 → 228.295 |
+| Boulogne | 335.066 | 660.530 → 815.667 | 302.497 → 195.510 |
 
 **El mínimo, con este escenario.** De las bajas, 789 millones de emisión caen por debajo del mínimo
-de $234.000 (vivienda, Impositiva 2026): 387 en Boulogne, 261 en Villa Adelina y 97 en Béccar, en
+de $234.000 (vivienda, Impositiva 2026): 410 en Boulogne, 241 en Villa Adelina y 124 en Béccar, en
 16.097 parcelas. Si esas casas tienen poca superficie construida, siguen pagando el mínimo y esa parte
 de la baja no les llega. Del otro lado, el mínimo tapa hasta 49,8 millones de subas de lotes que hoy
 están debajo del piso. Mirado sólo con la tierra, el neto emitido queda entre 8.039 y 8.878 millones
@@ -73,7 +81,7 @@ departamentos, y en los edificios cada unidad funcional paga su propio mínimo (
 **Lo decidido sobre el mínimo (25/09): se ajusta.** La baja que produce la tabla nueva se aplica
 aunque la boleta quede debajo del mínimo (anexo III, artículo 4). El mínimo se fijó con la tabla vieja, y
 con la nueva cobraría de más a las parcelas más chicas de las zonas con menos servicios: las 16.097
-parcelas cuya baja frenaría tienen 226 m² de mediana, contra 298 del partido, y el 94% de esos 789
+parcelas cuya baja frenaría tienen 226 m² de mediana, contra 298 del partido, y el 98% de esos 789
 millones está en Boulogne, Villa Adelina y Béccar. **Contra el plan no cuesta nada**: los 8.089 millones emitidos y los
 7.225,2 cobrados ya cuentan esas bajas completas. Contra aplicar la tabla con el mínimo como está, el
 Municipio resigna hasta 789 millones emitidos por año, 705 cobrados, que no estaban en el plan. Lo único
@@ -103,23 +111,26 @@ provincial.
 
 | Localidad | IUST por m² | VUB por m² | Tabla municipal | Valuación provincial | Reconocido |
 |---|---:|---:|---:|---:|---:|
-| Acassuso | 352,5 | 9.067,1 | 2,09× | 3,27× | 64% |
-| Martínez | 333,9 | 7.978,5 | 1,98× | 2,88× | 69% |
-| San Isidro | 303,4 | 6.321,0 | 1,80× | 2,28× | 79% |
-| Béccar | 245,9 | 4.522,7 | 1,46× | 1,63× | 89% |
-| Villa Adelina | 223,3 | 3.952,4 | 1,32× | 1,42× | 93% |
-| Boulogne Sur Mer | 168,8 | 2.774,8 | 1× | 1× | — |
+| Acassuso | 470,3 | 10.912,3 | 2,31× | 2,80× | 83% |
+| Martínez | 356,3 | 8.423,7 | 1,75× | 2,16× | 81% |
+| San Isidro | 327,8 | 8.418,0 | 1,61× | 2,16× | 75% |
+| Béccar | 245,6 | 4.930,3 | 1,21× | 1,27× | 95% |
+| Boulogne Sur Mer | 203,1 | 3.892,7 | 1× | 1× | — |
+| Villa Adelina | 195,1 | 2.591,8 | 0,96× | 0,67× | 144% |
 
-- Las seis quedan en el mismo orden en las dos escalas.
-- Por localidad la tabla municipal reconoce más que por circunscripción: Acassuso contra Boulogne da 64%;
-  el cuadro anterior, armado con circunscripciones (la III contra la V y contra VI-A a VI-D), daba 54% y
-  53%. Se escribe el de localidad, que es la unidad de la que habla el documento.
-- Las localidades son las seis zonas del capítulo 4 (`data/zonas_propuestas_sanisidro.geojson`), armadas
-  con radios censales; sus límites no siguen el catastro. Cada parcela va a la zona donde cae su punto
-  interior. El cruce sección por sección está en `data/valuacion_secciones_localidad.csv`: 9.116
-  parcelas (13,3%) caen en una sección cuya mayoría es de otra localidad.
-- Con cada sección entera asignada a su localidad mayoritaria, el cuadro cambia poco: Acassuso 1,94× contra
-  2,99× (65%), Martínez 72%, San Isidro 82%, Béccar 87%, Villa Adelina 99%.
+- Las seis quedan en el mismo orden en las dos escalas: Acassuso, Martínez, San Isidro, Béccar,
+  Boulogne y Villa Adelina.
+- La tabla municipal achata la distancia entre las localidades de valor alto y Boulogne, pero menos de lo
+  que decía la primera versión: Acassuso reconoce el 83%, no el 64%.
+- Villa Adelina es el caso contrario: la tabla vieja la pone casi a la par de Boulogne
+  (0,96×) y la valuación provincial, un tercio por debajo
+  (0,67×): la tabla le cobra de más, el 144% de lo que le toca.
+- Las localidades son las de los capítulos 1 y 4, armadas con radios censales; sus límites no siguen el
+  catastro. Cada parcela va a la localidad donde cae su punto interior. El cruce sección por sección está
+  en `data/valuacion_secciones_localidad.csv`: 2.012 parcelas
+  (2,9%) caen en una sección cuya mayoría es de otra localidad.
+- Con cada sección entera asignada a su localidad mayoritaria, el cuadro casi no cambia: Acassuso
+  2,37× contra 2,94× (80%), Martínez 80%, San Isidro 74%, Béccar 95%, Villa Adelina 145%.
 - La correlación entre las dos escalas, sección por sección (50 secciones), es 0,916.
 
 Sale de `ratios_por_localidad()` y `secciones_por_localidad()` en el script, y está en
@@ -134,17 +145,17 @@ Lo que sigue es el informe original: las alternativas antes de la decisión.
 
 1. **B, tal como lo cuenta hoy el documento, recauda cero.** La carga se corre de unas zonas a otras
    y el total queda igual, por definición. Lo que mueve son **9.402 millones**: los pagan de más
-   Acassuso y Martínez y los pagan de menos San Isidro, Béccar, Villa Adelina y Boulogne.
+   San Isidro, Martínez y Acassuso, y los pagan de menos Villa Adelina, Boulogne y Béccar.
 2. **Para juntar los 7.225,2 millones con la escala de ARBA, hay que subir el nivel de toda la
    escala un 9,7%.** Un 10,9% si se quiere *cobrar* esa cifra con la percepción actual, del 89,32%.
-   Con esa suba alcanza. Y aun así **Boulogne paga 18,9% menos por tierra, Villa Adelina 12,7% menos
-   y Béccar 9,3% menos**. San Isidro sube 2,7%, Martínez 17,8% y Acassuso 26,8%.
+   Con esa suba alcanza. Y aun así **Villa Adelina paga 34,5% menos por tierra, Boulogne 5,5% menos
+   y Béccar 1,0% menos**. San Isidro sube 26,6%, Martínez 16,6% y Acassuso 14,4%.
 3. **A (nadie baja, las subvaluadas suben hasta el promedio) junta 9.402 millones**: sobran 2.177.
-   Pero Boulogne, Villa Adelina y Béccar también suben: 2,8%, 5,0% y 6,0%.
+   Pero Boulogne, Villa Adelina y Béccar también suben: 6,0%, 0,2% y 8,2%.
 4. **El mínimo de la tasa recorta la baja de B.** En 2026 el mínimo de vivienda es de $234.000 por
-   año, y un tercio de las parcelas de Boulogne ya paga por tierra menos que eso. Unos 400 de los
-   1.246 millones de baja de Boulogne no le llegarían a nadie si esas casas tienen poca superficie
-   construida. Lo que el Municipio deja de cobrar sería menor, y el neto de B, mayor.
+   año, y un cuarto de las parcelas de Boulogne (26,3%) ya paga por tierra menos que eso. Unos
+   424 millones de las bajas de Boulogne no le llegarían a nadie si esas casas tienen poca
+   superficie construida. Lo que el Municipio deja de cobrar sería menor, y el neto de B, mayor.
 5. **Los porcentajes que hoy cita el documento (32→38%, 10→6% y 14→13%) no son de las
    localidades.** Son de las circunscripciones III, V y VI. Con las seis localidades del documento,
    las cifras son otras (tabla 1).
@@ -190,7 +201,7 @@ millones. Son **emisión**, lo que se factura. Lo cobrado depende de la percepci
 | IUST por manzana (Ordenanza 8373) | `01_raw/arsi/ORDENANZA_IMPOSITIVA_2016.pdf`, páginas 7 a 34 | ARSI, `https://arsi.gob.ar/pdf/ordenanzas/ORDENANZA_IMPOSITIVA_2016.pdf`. Es la última versión publicada con texto; la de 2026 es un escaneo |
 | Página 28 de esa tabla, que es una imagen | `data/valuacion_iust_2016_pagina28_transcripta.csv` | Transcripta a mano: 142 filas de las secciones 7B, 7C y el comienzo de 7D. La continuidad se verificó: la página 27 termina en 7B-0001 y la 29 empieza en 7D-0010 |
 | Multiplicador, alícuotas y mínimos 2026 | `01_raw/arsi/Ordenanza_Impositiva_2026-Nro_9415-2025_paginas_1-3.pdf` | ARSI, Ordenanza 9415. Multiplicador 575,9141; vivienda 12‰, comercio 16‰, industria 20‰, baldío 26‰; mínimo anual $234.000 para las categorías 2, 3, 4, 5, 10 y 12 |
-| Las seis localidades | `data/zonas_propuestas_sanisidro.geojson` | Las mismas del resto del documento |
+| Las seis localidades | `data/zonas_propuestas_sanisidro.geojson` | Las de los capítulos 1 y 4: radios censales del INDEC asignados a su localidad de OpenStreetMap (`data/zonas_asignacion_radios.csv`); el archivo se regeneró el 28/09 con `03_scripts/zonas_osm_geojson.py` |
 
 ## Método
 
@@ -205,9 +216,9 @@ millones. Son **emisión**, lo que se factura. Lo cobrado depende de la percepci
    cae afuera, por borde o costa, va a la localidad más cercana.
 5. **Cobertura.** Cruzan **68.644 de 69.258 parcelas (99,1%)** y 3.789 de 3.881 hectáreas
    (97,6%). Quedan afuera 614:
-   - 404 en San Isidro, casi todas de la sección 8A, donde ARBA no publica valor para varias
-     manzanas.
-   - 146 en Villa Adelina y 64 en el resto.
+   - 394 en Béccar, casi todas de la sección VIII-A, donde ARBA no publica valor para
+     varias manzanas.
+   - 162 en Boulogne, sobre todo de las secciones VI-E y VI-F, y 58 en el resto.
 
 ## Validación contra el documento
 
@@ -223,9 +234,10 @@ Con la página 28 incorporada, esos números quedan en 30,7→36,4%, 9,6→6,1%,
 **A = 12,6%, 9.402 millones**. El documento dice "unos 8.600": es el mismo 12,5% sobre una base
 más chica, sin las secciones 7B y 7C.
 
-**El documento llama "Acassuso y Martínez" a la circunscripción III, "Villa Adelina" a la V y
-"Boulogne" a la VI, y no coinciden.** La III es 65% Acassuso y 35% Martínez. La V es 68% Villa
-Adelina y 32% Boulogne. La VI es 56% Boulogne y 36% Villa Adelina.
+**El documento llamaba "Acassuso y Martínez" a la circunscripción III, "Villa Adelina" a la V y
+"Boulogne" a la VI.** Con las localidades de los capítulos 1 y 4, la VI coincide con Boulogne (100% de
+sus parcelas); la III es sobre todo Martínez (83%, y 16% Acassuso); la V es dos tercios Villa Adelina y un
+tercio Boulogne.
 
 ## Resultados por localidad
 
@@ -233,12 +245,12 @@ Adelina y 32% Boulogne. La VI es 56% Boulogne y 36% Villa Adelina.
 
 | Localidad | Parcelas | Tierra hoy (M) | Carga hoy | Carga con escala ARBA |
 |---|---:|---:|---:|---:|
-| Acassuso | 16.204 | 30.506,6 | 41,0% | 47,4% |
-| Martínez | 11.469 | 10.322,9 | 13,9% | 14,9% |
-| San Isidro | 8.743 | 10.624,7 | 14,3% | 13,4% |
-| Béccar | 7.562 | 6.596,7 | 8,9% | 7,3% |
-| Villa Adelina | 12.644 | 9.733,7 | 13,1% | 10,4% |
-| Boulogne | 12.022 | 6.583,0 | 8,9% | 6,5% |
+| Acassuso | 2.764 | 5.433,1 | 7,3% | 7,6% |
+| Martínez | 18.648 | 19.081,1 | 25,7% | 27,3% |
+| San Isidro | 10.788 | 21.380,3 | 28,7% | 33,2% |
+| Béccar | 10.853 | 11.246,9 | 15,1% | 13,6% |
+| Villa Adelina | 9.354 | 4.711,1 | 6,3% | 3,8% |
+| Boulogne | 16.237 | 12.515,0 | 16,8% | 14,5% |
 | **Todo el partido** | 68.644 | 74.367,6 | 100,0% | 100,0% |
 
 **Tabla 2 · Cuánto sube o baja cada localidad, parte tierra, millones por año**
@@ -246,12 +258,12 @@ Adelina y 32% Boulogne. La VI es 56% Boulogne y 36% Villa Adelina.
 | Localidad | B a igual recaudación | | B con la escala 9,7% más alta | | A: nadie baja | |
 |---|---:|---:|---:|---:|---:|---:|
 | | millones | % | millones | % | millones | % |
-| Acassuso | +4.762,5 | +15,6% | +8.189,1 | +26,8% | +6.326,3 | +20,7% |
-| Martínez | +764,1 | +7,4% | +1.841,3 | +17,8% | +1.156,3 | +11,2% |
-| San Isidro | −675,5 | −6,4% | +291,1 | +2,7% | +851,6 | +8,0% |
-| Béccar | −1.142,4 | −17,3% | −612,5 | −9,3% | +393,0 | +6,0% |
-| Villa Adelina | −1.989,9 | −20,4% | −1.237,5 | −12,7% | +487,6 | +5,0% |
-| Boulogne | −1.718,9 | −26,1% | −1.246,3 | −18,9% | +187,2 | +2,8% |
+| Acassuso | +233,6 | +4,3% | +784,1 | +14,4% | +556,1 | +10,2% |
+| Martínez | +1.198,2 | +6,3% | +3.168,4 | +16,6% | +2.121,5 | +11,1% |
+| San Isidro | +3.299,1 | +15,4% | +5.696,8 | +26,6% | +5.043,0 | +23,6% |
+| Béccar | −1.098,4 | −9,8% | −112,4 | −1,0% | +923,6 | +8,2% |
+| Villa Adelina | −1.898,5 | −40,3% | −1.625,3 | −34,5% | +9,3 | +0,2% |
+| Boulogne | −1.733,9 | −13,9% | −686,5 | −5,5% | +748,3 | +6,0% |
 | **Todo el partido** | 0,0 | 0,0% | **+7.225,2** | +9,7% | **+9.401,9** | +12,6% |
 
 En B con la escala subida, las subas suman 14.453,7 millones y las bajas 7.228,5; el neto es
@@ -261,18 +273,18 @@ En B con la escala subida, las subas suman 14.453,7 millones y las bajas 7.228,5
 
 | Localidad | B igual recaudación: suben / bajan | B + 9,7%: suben / bajan | Suba mediana de las que suben (B + 9,7%) | Parcelas que duplican la parte tierra (B + 9,7%) | A: suben | Suba mediana (A) |
 |---|---:|---:|---:|---:|---:|---:|
-| Acassuso | 11.017 / 5.187 | 12.780 / 3.424 | +22,9% | 66 | 11.017 | +15,4% |
-| Martínez | 8.669 / 2.800 | 10.235 / 1.230 | +20,5% | 37 | 8.669 | +14,0% |
-| San Isidro | 4.088 / 4.655 | 4.909 / 3.834 | +24,0% | 44 | 4.088 | +15,9% |
-| Béccar | 1.399 / 6.163 | 1.735 / 5.827 | +24,3% | 0 | 1.399 | +18,9% |
-| Villa Adelina | 1.994 / 10.650 | 2.303 / 10.329 | +20,9% | 0 | 1.994 | +11,1% |
-| Boulogne | 987 / 11.035 | 1.194 / 10.828 | +33,1% | 0 | 987 | +25,6% |
+| Acassuso | 1.568 / 1.196 | 2.253 / 511 | +19,2% | 40 | 1.568 | +20,8% |
+| Martínez | 13.449 / 5.199 | 15.619 / 3.025 | +21,3% | 62 | 13.449 | +14,0% |
+| San Isidro | 5.997 / 4.791 | 6.801 / 3.987 | +25,1% | 1 | 5.997 | +16,2% |
+| Béccar | 3.576 / 7.277 | 4.278 / 6.575 | +24,1% | 44 | 3.576 | +15,5% |
+| Villa Adelina | 224 / 9.130 | 295 / 9.047 | +13,2% | 0 | 224 | +10,2% |
+| Boulogne | 3.340 / 12.897 | 3.910 / 12.327 | +21,9% | 0 | 3.340 | +14,0% |
 | **Todo el partido** | 28.154 / 40.490 | 33.156 / 35.472 | +22,4% | 147 | 28.154 | +15,2% |
 
 **Cuánta gente.** La unidad es la parcela, es decir, el lote. Un edificio es una sola parcela
 aunque tenga cien departamentos, y todos se mueven en la misma dirección. Para dar escala, el Censo
-2022 cuenta estos hogares: Acassuso 20.795, Martínez 17.032, San Isidro 17.466, Béccar 17.632,
-Villa Adelina 19.067 y Boulogne 18.567.
+2022 cuenta estos hogares: Acassuso 4.805, Martínez 26.155, San Isidro 19.358, Béccar 22.055,
+Villa Adelina 13.048 y Boulogne 25.138.
 
 ## La boleta típica
 
@@ -281,21 +293,21 @@ antes y después.
 
 | Localidad | Parcela mediana hoy | Las que suben: antes → después | Las que bajan: antes → después | En A, las que suben: antes → después |
 |---|---:|---:|---:|---:|
-| Acassuso | 733.530 | 779.671 → 1.017.520 | 572.062 → 465.074 | 749.702 → 914.514 |
-| Martínez | 562.090 | 559.258 → 705.462 | 594.868 → 553.914 | 595.884 → 698.050 |
-| San Isidro | 586.484 | 694.362 → 867.772 | 500.754 → 403.907 | 725.010 → 857.582 |
-| Béccar | 385.784 | 598.974 → 724.919 | 351.973 → 259.970 | 549.754 → 643.079 |
-| Villa Adelina | 408.740 | 758.032 → 885.383 | 385.955 → 231.081 | 787.363 → 864.691 |
-| Boulogne | 289.271 | 399.330 → 559.036 | 283.772 → 184.160 | 382.199 → 486.335 |
+| Acassuso | 1.245.118 | 1.296.619 → 1.590.215 | 594.520 → 365.011 | 1.332.220 → 1.547.888 |
+| Martínez | 593.566 | 597.087 → 762.923 | 567.368 → 480.043 | 609.900 → 729.602 |
+| San Isidro | 670.641 | 775.846 → 981.649 | 520.479 → 416.415 | 794.495 → 939.705 |
+| Béccar | 437.506 | 611.037 → 742.272 | 362.743 → 265.033 | 629.152 → 729.246 |
+| Villa Adelina | 384.771 | 460.959 → 489.457 | 382.414 → 225.903 | 408.185 → 421.179 |
+| Boulogne | 335.066 | 665.236 → 809.704 | 302.877 → 193.527 | 656.425 → 743.320 |
 
-- **Duplicar.** En B con la escala subida, **147 parcelas duplican o más su parte tierra**: 66 en
-  Acassuso, 44 en San Isidro y 37 en Martínez. La mayor suba es de +120%. En A, 40 parcelas llegan
+- **Duplicar.** En B con la escala subida, **147 parcelas duplican o más su parte tierra**: 62 en
+  Martínez, 44 en Béccar, 40 en Acassuso y 1 en San Isidro. La mayor suba es de +120%. En A, 40 parcelas llegan
   a duplicar, con un máximo de +101%. La mediana de las subas es +22,4% en B y +15,2% en A.
 - **La boleta entera sube menos.** Estos porcentajes son de la parte tierra. La boleta suma además
   la construcción, que no cambia, así que en pesos la suba es la misma, pero como porcentaje de la
   boleta total es menor.
 - **Boulogne y Villa Adelina.** La parcela mediana que baja queda por tierra debajo del mínimo:
-  184.160 y 231.081 contra 234.000. Esa parte de la baja sólo le llega a quien tiene construcción
+  193.527 y 225.903 contra 234.000. Esa parte de la baja sólo le llega a quien tiene construcción
   suficiente para estar por encima del mínimo.
 
 ## Lo que queda afuera, y cuánto puede mover
@@ -304,13 +316,13 @@ antes y después.
 
 | Localidad | Parcelas | Pagan hoy por tierra menos que el mínimo | Baja de B que cae debajo del mínimo (M) |
 |---|---:|---:|---:|
-| Acassuso | 16.204 | 291 (1,8%) | 12,0 |
-| Martínez | 11.469 | 296 (2,6%) | 0,2 |
-| San Isidro | 8.743 | 374 (4,3%) | 34,5 |
-| Béccar | 7.562 | 1.255 (16,6%) | 101,1 |
-| Villa Adelina | 12.644 | 1.232 (9,7%) | 270,4 |
-| Boulogne | 12.022 | 4.031 (33,5%) | 399,2 |
-| **Todo el partido** | 68.644 | 7.479 (10,9%) | 817,4 |
+| Acassuso | 2.764 | 41 (1,5%) | 5,7 |
+| Martínez | 18.648 | 425 (2,3%) | 1,0 |
+| San Isidro | 10.788 | 288 (2,7%) | 8,3 |
+| Béccar | 10.853 | 1.413 (13,0%) | 128,9 |
+| Villa Adelina | 9.354 | 1.036 (11,1%) | 249,7 |
+| Boulogne | 16.237 | 4.275 (26,3%) | 423,9 |
+| **Todo el partido** | 68.644 | 7.478 (10,9%) | 817,4 |
 
 - **Mínimos.** Hasta 817 millones de las bajas de B podrían no ocurrir, porque esas parcelas
   seguirían pagando el mínimo. El neto de B quedaría entonces **entre 7.225 y unos 8.000 millones**.
@@ -340,13 +352,14 @@ antes y después.
 
 | Variante | Tierra hoy (M) | A (M) | A (%) | Suba pareja para B + 7.225,2 M | Acassuso | Martínez | San Isidro | Béccar | Villa Adelina | Boulogne |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Base: IUST promedio de la manzana, CMS = 1 | 74.367,6 | 9.401,9 | 12,6% | 9,7% | +26,8% | +17,8% | +2,7% | −9,3% | −12,7% | −18,9% |
-| IUST mínimo de la manzana | 68.845,4 | 8.377,5 | 12,2% | 10,5% | +28,1% | +14,6% | +3,4% | −3,5% | −11,5% | −19,9% |
-| IUST máximo de la manzana | 80.264,2 | 12.373,9 | 15,4% | 9,0% | +25,9% | +21,2% | +2,4% | −15,2% | −14,0% | −17,9% |
-| CMS con lote mínimo de 300 m² | 61.601,8 | 7.681,2 | 12,5% | 11,7% | +28,6% | +21,8% | +6,9% | −6,5% | −12,0% | −18,1% |
-| CMS con lote mínimo de 600 m² | 63.431,3 | 7.863,7 | 12,4% | 11,4% | +28,0% | +21,4% | +6,8% | −6,6% | −12,2% | −18,3% |
+| Base: IUST promedio de la manzana, CMS = 1 | 74.367,6 | 9.401,9 | 12,6% | 9,7% | +14,4% | +16,6% | +26,6% | −1,0% | −34,5% | −5,5% |
+| IUST mínimo de la manzana | 68.845,4 | 8.377,5 | 12,2% | 10,5% | +15,3% | +16,2% | +27,1% | +3,3% | −36,9% | −4,1% |
+| IUST máximo de la manzana | 80.264,2 | 12.373,9 | 15,4% | 9,0% | +14,0% | +17,4% | +26,7% | −5,9% | −31,9% | −6,9% |
+| CMS con lote mínimo de 300 m² | 61.601,8 | 7.681,2 | 12,5% | 11,7% | +17,9% | +20,4% | +27,9% | +2,2% | −33,2% | −4,0% |
+| CMS con lote mínimo de 600 m² | 63.431,3 | 7.863,7 | 12,4% | 11,4% | +17,6% | +20,0% | +27,3% | +2,1% | −33,5% | −4,2% |
 
-En todas las variantes, Boulogne, Villa Adelina y Béccar bajan con B, y Acassuso y Martínez suben.
+En todas las variantes Villa Adelina y Boulogne bajan con B, y San Isidro, Martínez y Acassuso suben.
+Béccar queda cerca de cero: entre −5,9% y +3,3%.
 
 ## Código y cómo reproducirlo
 

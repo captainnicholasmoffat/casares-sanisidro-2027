@@ -40,7 +40,7 @@ paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iac
 <li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: un asistente propio
 al que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con los egresados de
 la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Se paga con la partida
-de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.205 millones al a&ntilde;o: no son fondos nuevos.
+de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones al a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>
 
 <li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Responde en castellano y muestra

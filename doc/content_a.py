@@ -177,7 +177,7 @@ el intendente escribe: &laquo;Estas prioridades de gesti&oacute;n no las fijamos
 responden a haber escuchado sus principales problemas y necesidades&raquo;. <b>&iquest;A qui&eacute;n se
 escuch&oacute;, y c&oacute;mo, para que el empleo y la vivienda no aparecieran nunca?</b></p>
 <div class="pull"><p>Las palabras empleo, vivienda, salud, pobreza, agua y cloaca no aparecen en ninguna
-parte del programa actual de gobierno.</p></div>
+parte del plan de gobierno 2024&ndash;2025.</p></div>
 
 <h2>Por qu&eacute; el dinero va a lo que se ve</h2>
 <p class="lead">Hay dos maneras de gobernar pensando en la pr&oacute;xima elecci&oacute;n, y ninguna de
@@ -223,25 +223,6 @@ municipio gast&oacute; en 2025 el equivalente a <b>1.090.897 pesos por habitante
 <p>No es poco dinero. Y sin embargo el partido est&aacute; partido en dos, y la l&iacute;nea es
 geogr&aacute;fica: las localidades del oeste y del norte contra las de la costa sur.</p>
 </div>
-""" + exhead("c", "Seis localidades, dos realidades: el oeste y el norte contra la costa sur",
-             "Los cuatro primeros indicadores est&aacute;n medidos sobre hogares; el &uacute;ltimo, sobre poblaci&oacute;n.") + """
-<table>
-<colgroup><col style="width:126pt"><col><col><col><col><col><col></colgroup>
-<tr class="hd"><th>Zona</th><th class="r">Poblaci&oacute;n</th><th class="r">NBI</th>
-<th class="r">Sin cloaca</th><th class="r">Sin gas de red</th><th class="r">Hacinamiento</th>
-<th class="r">Universitario</th></tr>
-<tr class="hi"><td class="l">Boulogne Sur Mer</td><td class="n">74.832</td><td class="n"><b>5,09%</b></td><td class="n">9,16%</td><td class="n">27,64%</td><td class="n">12,42%</td><td class="n">9,00%</td></tr>
-<tr class="hi"><td class="l">B&eacute;ccar</td><td class="n">63.719</td><td class="n"><b>4,93%</b></td><td class="n">10,59%</td><td class="n">37,27%</td><td class="n">12,67%</td><td class="n">12,85%</td></tr>
-<tr><td class="l">Villa Adelina</td><td class="n">35.542</td><td class="n">2,73%</td><td class="n">5,54%</td><td class="n">15,59%</td><td class="n">7,28%</td><td class="n">9,32%</td></tr>
-<tr><td class="l">San Isidro</td><td class="n">45.872</td><td class="n">1,83%</td><td class="n">2,97%</td><td class="n">16,64%</td><td class="n">4,18%</td><td class="n">25,25%</td></tr>
-<tr><td class="l">Mart&iacute;nez</td><td class="n">64.978</td><td class="n">1,43%</td><td class="n">1,81%</td><td class="n">14,55%</td><td class="n">2,96%</td><td class="n">24,39%</td></tr>
-<tr><td class="l">Acassuso</td><td class="n">11.035</td><td class="n">0,94%</td><td class="n">2,12%</td><td class="n">19,48%</td><td class="n">2,50%</td><td class="n">32,28%</td></tr>
-</table>
-<p class="cap"><b>Fuente:</b> INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022,
-procesado con Redatam 7.</p>
-<p class="cap"><b>Nota:</b> los l&iacute;mites de localidad son de OpenStreetMap, que no es fuente
-oficial, proyectados sobre los radios censales del INDEC.</p>
-
 <p>Un hogar de Boulogne o B&eacute;ccar tiene <span class="sg">tres veces y media m&aacute;s
 probabilidad</span> de tener necesidades b&aacute;sicas insatisfechas que uno de Mart&iacute;nez.
 <span class="sg">Cinco veces y media</span> de no tener cloacas. <span class="sg">Cuatro veces</span> de
@@ -253,7 +234,7 @@ alguien en la casa haya terminado la universidad.</p>
         "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7; l&iacute;mites de localidad de OpenStreetMap.",
         "OpenStreetMap no es fuente oficial. Cada radio censal va a la localidad que contiene su punto representativo; los 360 caen dentro de exactamente una.")
 + ex("g", "Boulogne y B&eacute;ccar re&uacute;nen dos tercios de las carencias del partido",
-     "Porcentaje de hogares de cada zona con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados. En todo el partido, el 3,16% tiene NBI.",
+     "Porcentaje de hogares de cada zona con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados, y debajo de cada zona cu&aacute;ntos habitantes tiene. En todo el partido, el 3,16% de los hogares tiene NBI.",
      "ex02.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.")
 + ex("g", "Donde m&aacute;s faltan servicios, menos gente termin&oacute; la universidad: 9% en Boulogne, 32% en Acassuso",
@@ -375,7 +356,7 @@ programa.</p>
 # =====================================================================
 C1B = dict(id="cap1b", runhead=RH, html="""
 <h2><span class="n">1.4</span>Por qu&eacute; pasa esto: est&aacute; escrito</h2>
-<p>El plan de gobierno vigente, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, fija tres
+<p>El plan de gobierno 2024&ndash;2025 &mdash;&laquo;Prioridades Estrat&eacute;gicas&raquo;&mdash; fija tres
 prioridades: Seguridad Ciudadana, Espacio P&uacute;blico y Ambiente, e Innovaci&oacute;n. Seguridad
 interna, la primera, subi&oacute; <b>34,8% real en un a&ntilde;o</b>: ninguna otra funci&oacute;n
 creci&oacute; tanto, salvo los servicios de la deuda. Promoci&oacute;n y asistencia social, que no figura
@@ -440,7 +421,7 @@ cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tri
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
-<p><span class="sg">El modelo, los datos, las series y los diecis&eacute;is gr&aacute;ficos son p&uacute;blicos y
+<p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
 
@@ -522,6 +503,15 @@ presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio cens
 sobre 295.978 habitantes, la poblaci&oacute;n en viviendas particulares del Censo 2022. Las 1.304 personas
 restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden
 asignarse a una zona.</p>
+<p>El 1,5% que paga el funcionamiento de las comisiones sale de estos supuestos, sobre el sueldo de la
+categor&iacute;a de ingreso municipal &mdash;categor&iacute;a 6, 35 horas: 432.624 pesos por mes en la Ordenanza 9422 de
+presupuesto 2026, 420.507 en pesos de diciembre de 2025&mdash;. Cuatro asambleas por zona y por a&ntilde;o, 24 en
+total, como el ciclo m&iacute;nimo de la Ciudad de Buenos Aires, con dos cuidadoras cuatro horas cada una: medio
+mill&oacute;n por a&ntilde;o. Una obra promedio de 100 millones, que da 289 obras el a&ntilde;o 4, con tres vecinos por obra que
+cobran un cuarto de ese sueldo cada uno: 91 millones. Y un 3% de administraci&oacute;n sobre lo que ejecutan las
+propias comisiones, si ejecutan un cuarto de la partida: 217 millones. Suman 308 millones, el 1,1%; con
+obras promedio de 50 millones son 400, el 1,4%, y el 1,5% alcanza en los dos casos. El panel sorteado: 40
+personas, cuatro sesiones y un d&iacute;a de ese sueldo por sesi&oacute;n.</p>
 <p>El d&eacute;ficit de la franja costera baja se cuenta en la zona San Isidro: tres radios contiguos de la
 fracci&oacute;n 02 &mdash;los terminados en 03, 04 y 05&mdash; tienen entre 4,3% y 11,8% de hogares con NBI
 y entre 24,8% y 63,1% sin gas de red, sobre una zona cuyo promedio es 1,83% y 16,64%. En Acassuso no hay
@@ -563,7 +553,7 @@ referencia de d&oacute;nde est&aacute; la vara, sin resultados medidos todav&iac
 <div class="note">
 <p>Este cap&iacute;tulo no introduce datos nuevos.
 Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
-1, la auditor&iacute;a del plan vigente del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
+1, la auditor&iacute;a del plan de gobierno 2024&ndash;2025 del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
 presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
 cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5.</p>
 <p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los

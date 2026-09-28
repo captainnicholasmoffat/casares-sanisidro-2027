@@ -77,10 +77,16 @@ actualizada <b>cada trimestre, por depender del cierre contable</b>, con el deve
 con car&aacute;cter provisorio. La imputaci&oacute;n con
 referencia territorial deber&aacute; estar operativa antes de la finalizaci&oacute;n del mandato.</p>
 
+<h3>Art&iacute;culo 10 &mdash; Funcionamiento de las comisiones</h3>
+<p class="tight">Af&eacute;ctase el <b>uno coma cinco por ciento (1,5%)</b> de la partida de cada zona al
+funcionamiento de su comisi&oacute;n: el cuidado infantil durante las asambleas; un honorario por obra para cada
+uno de los tres vecinos que suscriben la recepci&oacute;n, fijado como fracci&oacute;n del salario de la categor&iacute;a de
+ingreso de la escala municipal vigente; y la administraci&oacute;n de las obras que ejecute la asociaci&oacute;n
+vecinal, comprendidos sus registros contables, seguros y la justificaci&oacute;n del gasto.</p>
 <h2>II &middot; Ordenanza del Sistema de Informaci&oacute;n Municipal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
-<p class="tight">Cr&eacute;ase el Sistema de Informaci&oacute;n Municipal, de acceso p&uacute;blico y
+<p class="tight">Cr&eacute;ase el Sistema de Informaci&oacute;n Municipal &mdash;la inteligencia artificial del Municipio&mdash;, de acceso p&uacute;blico y
 gratuito, al que toda persona puede consultar sobre la informaci&oacute;n que esta y las dem&aacute;s ordenanzas
 ponen a cargo del Departamento Ejecutivo. Estar en el Sistema no sustituye la publicaci&oacute;n en el Bolet&iacute;n
 Oficial donde &eacute;sta sea exigible.</p>

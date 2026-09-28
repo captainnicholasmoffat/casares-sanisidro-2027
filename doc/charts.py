@@ -70,16 +70,22 @@ ZONAS = ["Boulogne\nSur Mer","Béccar","Villa\nAdelina","San Isidro","Martínez"
 def g_indicadores():
     nbi=[5.09,4.93,2.73,1.83,1.43,0.94]; clo=[9.16,10.59,5.54,2.97,1.81,2.12]
     gas=[27.64,37.27,15.59,16.64,14.55,19.48]; hac=[12.42,12.67,7.28,4.18,2.96,2.50]
-    fig, ax = plt.subplots(figsize=(W,2.25)); frame(ax)
+    pob=[74832,63719,35542,45872,64978,11035]
+    fig, ax = plt.subplots(figsize=(W,2.55)); frame(ax)
     x=range(6); w=.20
     series=[("% hogares con NBI",nbi,SAGE),("% sin cloaca",clo,OX),
             ("% sin gas de red",gas,AMBER),("% con hacinamiento",hac,PALE)]
     for i,(lbl,v,c) in enumerate(series):
-        ax.bar([j+(i-1.5)*w for j in x], v, w, label=lbl, color=c, edgecolor="none")
-    ax.set_xticks(list(x)); ax.set_xticklabels(ZONAS)
+        xs=[j+(i-1.5)*w for j in x]
+        ax.bar(xs, v, w, label=lbl, color=c, edgecolor="none")
+        for xx,val in zip(xs,v):
+            ax.text(xx, val+.6, f"{val:.2f}".replace(".",","), ha="center", va="bottom",
+                    fontsize=4.9, color=INK, rotation=90)
+    ax.set_xticks(list(x))
+    ax.set_xticklabels([f"{z}\n{nb(p)} hab." for z,p in zip(ZONAS,pob)], fontsize=6.3)
     ax.yaxis.set_major_formatter(FuncFormatter(lambda v,p:f"{v:.0f}%"))
-    ax.set_ylim(0,40)
-    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(.5,1.14), handlelength=.9,
+    ax.set_ylim(0,46)
+    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(.5,1.12), handlelength=.9,
               handleheight=.9, columnspacing=1.4, borderpad=0)
     save(fig,"g_indicadores")
 
@@ -335,12 +341,15 @@ def g_obra():
 def g_reparto():
     z=["Béccar","Boulogne\nSur Mer","Villa\nAdelina","San Isidro","Acassuso","Martínez"]
     v=[123782,114508,89987,81297,74962,72285]
+    monto=[7887,8569,3198,3729,827,4697]
     col=[OX,OX,SAGED,SAGED,SAGED,SAGED]
     fig, ax = plt.subplots(figsize=(W,2.0)); frame(ax)
     b=ax.bar(z,[x/1000 for x in v], .56, color=col, edgecolor="none")
-    for r,val in zip(b,v):
+    for r,val,m in zip(b,v,monto):
         ax.text(r.get_x()+r.get_width()/2, val/1000+2.5, nb(val),
                 ha="center", va="bottom", fontsize=7.2, color=INK, fontweight="semibold")
+        ax.text(r.get_x()+r.get_width()/2, val/1000-5, f"{nb(m)} M\nal año",
+                ha="center", va="top", fontsize=6.2, color=GROUND, linespacing=1.15)
     ax.set_ylabel("miles de pesos de dic-2025 por habitante", fontsize=6.2)
     ax.yaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
     ax.set_ylim(0,142)
@@ -357,15 +366,22 @@ FUNC=[("Salud",78217,24.1),("Urbanismo",70310,21.7),("Transporte",36356,11.2),
  ("Ecología y medio ambiente",1410,0.4),("Judicial",727,0.2),
  ("Control de la gestión pública",267,0.1),("Trabajo",170,0.1)]
 def g_funcion():
+    # por habitante: devengado exacto 2025 sobre 297.282 habitantes (Censo 2022)
+    PH={"Salud":263107,"Urbanismo":236510,"Transporte":122296,"Dirección superior ejecutiva":109498,
+        "Seguridad interna":109142,"Servicios de la deuda pública":50114,"Educación y cultura":47047,
+        "Vivienda y urbanismo":41495,"Ciencia y técnica":27432,"Promoción y asistencia social":19895,
+        "Legislativa":15376,"Relaciones con la comunidad":13590,"Agua potable y alcantarillado":11168,
+        "Administración fiscal":7539,"Comercio, turismo y otros":7454,"Ecología y medio ambiente":4743,
+        "Judicial":2444,"Control de la gestión pública":899,"Trabajo":573}
     fig, ax = plt.subplots(figsize=(W,3.5)); frame(ax, grid="x")
     y=range(len(FUNC))[::-1]
     for yy,(lbl,v,p) in zip(y,FUNC):
         c = OX if lbl in ("Agua potable y alcantarillado","Ecología y medio ambiente") else SAGED
         ax.barh(yy, v/1000, .58, color=c, edgecolor="none")
-        ax.text(v/1000+1.6, yy, f"{nb(v)} M   " + pc(p), ha="left",
-                va="center", fontsize=6.8, color=(OX if c==OX else INK), fontweight="semibold")
+        ax.text(v/1000+1.6, yy, f"{nb(v)} M · " + pc(p) + f" · {nb(PH[lbl])} $ por habitante", ha="left",
+                va="center", fontsize=6.6, color=(OX if c==OX else INK), fontweight="semibold")
     ax.set_yticks(list(y)); ax.set_yticklabels([f[0] for f in FUNC], fontsize=7)
-    ax.set_xlim(0,108)
+    ax.set_xlim(0,128); ax.set_xticks([0,20,40,60,80])
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
     ax.set_xlabel("miles de millones de pesos devengados en 2025", fontsize=6.2)
     save(fig,"g_funcion")

@@ -87,9 +87,6 @@ p&uacute;blica municipal, en cuatro a&ntilde;os.</span></p>
 <tr><td class="l">A&ntilde;o 3</td><td class="n">37,5%</td><td class="n">21.681 M</td><td class="n">6,7%</td><td class="n">72.930 $</td></tr>
 <tr class="hi"><td class="l">A&ntilde;o 4</td><td class="n"><b>50,0%</b></td><td class="n"><b>28.908 M</b></td><td class="n"><b>8,9%</b></td><td class="n"><b>97.241 $</b></td></tr>
 </table>
-""" + ex("g", "En el cuarto a&ntilde;o de gobierno, los vecinos deciden la mitad de la obra p&uacute;blica",
-     None, "ex13.png",
-     "ejecuci&oacute;n 2025, bienes de uso devengados.") + """
 <div class="cols">
 <p>En el cuarto a&ntilde;o son <b>28.908 millones de pesos anuales decididos por los vecinos</b>: casi
 nueve pesos de cada cien que gasta el Municipio, y <span class="sg">uno de cada dos que se invierten en
@@ -120,25 +117,9 @@ m&aacute;s bajo del partido, 0,94%, y sin embargo <b>el 19,48% de sus hogares no
 <p><span class="sg">El d&eacute;ficit de infraestructura no sigue al de ingresos.</span> Miden cuatro
 cosas porque hay cuatro cosas que faltan, y no siempre faltan juntas.</p>
 </div>
-""" + exhead("c", "Cu&aacute;nto recibe cada zona en el cuarto a&ntilde;o: B&eacute;ccar y Boulogne, m&aacute;s por habitante",
-             "Reparto de los 28.908 millones: mitad seg&uacute;n la poblaci&oacute;n y mitad seg&uacute;n cu&aacute;ntos hogares tienen carencias.") + """
-<table>
-<colgroup><col style="width:140pt"><col><col><col><col></colgroup>
-<tr class="hd"><th>Zona</th><th class="r">Poblaci&oacute;n</th><th class="r">Necesidad</th>
-<th class="r">Monto anual</th><th class="r">Por habitante</th></tr>
-<tr class="hi"><td class="l">B&eacute;ccar</td><td class="n">63.719</td><td class="n">33,0%</td><td class="n">7.887 M</td><td class="n"><b>123.782 $</b></td></tr>
-<tr class="hi"><td class="l">Boulogne Sur Mer</td><td class="n">74.832</td><td class="n">34,0%</td><td class="n">8.569 M</td><td class="n"><b>114.508 $</b></td></tr>
-<tr><td class="l">Villa Adelina</td><td class="n">35.542</td><td class="n">10,1%</td><td class="n">3.198 M</td><td class="n">89.987 $</td></tr>
-<tr><td class="l">San Isidro</td><td class="n">45.872</td><td class="n">10,3%</td><td class="n">3.729 M</td><td class="n">81.297 $</td></tr>
-<tr><td class="l">Acassuso</td><td class="n">11.035</td><td class="n">2,0%</td><td class="n">827 M</td><td class="n">74.962 $</td></tr>
-<tr><td class="l">Mart&iacute;nez</td><td class="n">64.978</td><td class="n">10,5%</td><td class="n">4.697 M</td><td class="n">72.285 $</td></tr>
-</table>
-<p class="cap"><b>Nota:</b> los l&iacute;mites de localidad son de OpenStreetMap, que no es fuente
-oficial, proyectados sobre los radios censales del INDEC.</p>
-
 <h3>La f&oacute;rmula, abierta</h3>
 """ + exhead("c", "Hogares con cada carencia, zona por zona, y la parte de la necesidad del partido que le toca a cada una",
-             "Hogares con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados; entre par&eacute;ntesis, qu&eacute; parte del total del partido son. La &uacute;ltima columna promedia esas cuatro partes: con ella se reparte la mitad del dinero.") + """
+             "Hogares con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados; entre par&eacute;ntesis, qu&eacute; parte del total del partido son. La &uacute;ltima columna promedia esas cuatro partes: con ella se reparte la mitad del dinero.", key="indicadores") + """
 <table>
 <colgroup><col style="width:118pt"><col><col><col><col><col style="width:64pt"></colgroup>
 <tr class="hd"><th>Zona</th><th class="r">Con NBI</th><th class="r">Sin cloaca</th><th class="r">Sin gas de red</th><th class="r">Hacinamiento</th><th class="r">&Iacute;ndice</th></tr>
@@ -156,14 +137,14 @@ agregado por zona sobre los 360 radios censales del partido.</p>
 32,7% de todos los hogares sin gas de red del partido. El promedio de sus cuatro participaciones da
 33,0%, y eso es lo que pesa en la mitad del reparto que no va por poblaci&oacute;n.</p>
 """ + ex("g", "El dinero de obra que deciden los vecinos llega 71% m&aacute;s por habitante a B&eacute;ccar que a Mart&iacute;nez",
-     "Reparto de los 28.908 millones del cuarto a&ntilde;o: mitad por poblaci&oacute;n y mitad seg&uacute;n cu&aacute;ntos hogares tienen carencias.",
+     "Reparto de los 28.908 millones del cuarto a&ntilde;o: mitad por poblaci&oacute;n y mitad seg&uacute;n cu&aacute;ntos hogares tienen carencias. Adentro de cada barra, el monto anual de la zona.",
      "ex14.png",
      "c&aacute;lculo propio sobre la ejecuci&oacute;n 2025 y los indicadores censales por zona.")
 + ex("g", "Las carencias no est&aacute;n repartidas: se concentran en nueve radios censales pegados, en B&eacute;ccar",
      "El partido en sus 360 radios censales, las zonas de unas 300 viviendas con que trabaja el Censo. El contorno grueso marca los nueve radios de la fracci&oacute;n 32, la de m&aacute;s hogares con necesidades b&aacute;sicas insatisfechas del partido.",
      "ex15.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.",
-     "Los nueve radios se identifican por c&oacute;digo y fracci&oacute;n censal, nunca por nombre de barrio: los barrios no tienen geometr&iacute;a oficial.") + """
+     "Los radios se identifican por c&oacute;digo y fracci&oacute;n censal, porque los barrios no tienen geometr&iacute;a oficial; cuando un conjunto de radios coincide con un barrio conocido, se lo nombra, como La Cava en el 5.3.") + """
 <div class="cols">
 <p>B&eacute;ccar recibe <b>1,71 veces por habitante</b> lo que recibe Mart&iacute;nez. Boulogne, 1,58
 veces.</p>
@@ -320,7 +301,13 @@ econ&oacute;mico en ella, ni ser proveedor. Si lo tiene, se excusa y queda asent
 <p><b>Y dos cuerpos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de
 Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con funciones definidas por ley. El
 que hace la obra no es el que la controla. Ac&aacute; vale lo mismo: la asamblea que prioriza elige
-adem&aacute;s <b>tres vecinos que no ejecutan y que firman la recepci&oacute;n de la obra</b>.</p>
+adem&aacute;s <b>tres vecinos que no ejecutan y que firman la recepci&oacute;n de la obra</b>. Cobran un honorario por
+obra con la misma escala que el panel sorteado: un cuarto del sueldo de la categor&iacute;a de ingreso municipal
+cada uno.</p>
+<p><b>Lo que cuesta que esto funcione sale de la propia partida.</b> Un 1,5% fijo de la partida de cada
+zona paga el cuidado de chicos en cada asamblea, el honorario de los tres vecinos que firman la recepci&oacute;n y
+la administraci&oacute;n de las obras que ejecuta la comisi&oacute;n: cuentas, seguro y justificaci&oacute;n de cada peso. Son
+433,6 millones el a&ntilde;o 4 y 108,4 millones el a&ntilde;o 1.</p>
 <p><b>Un candado m&aacute;s, contra la falla m&aacute;s com&uacute;n.</b> En Bariloche las juntas
 vecinales denunciaron que el gobierno destin&oacute; el dinero del presupuesto participativo a obras
 viales por decisi&oacute;n propia, sin acuerdo de los vecinos. <span class="sg">La partida afectada del
@@ -396,7 +383,9 @@ representatividad del panel.</p>
 experiencias extranjeras: <span class="sg">se fija por referencia a la escala salarial municipal
 vigente</span>, como una fracci&oacute;n del salario de la categor&iacute;a inicial por sesi&oacute;n.
 Un municipio tiene jerarqu&iacute;as y paralelismos, y un honorario por fuera de esa escala abre un
-conflicto con la planta que el mecanismo no resistir&iacute;a.</p>
+conflicto con la planta que el mecanismo no resistir&iacute;a. Con cuarenta personas y cuatro sesiones, a un d&iacute;a
+de sueldo de la categor&iacute;a de ingreso por sesi&oacute;n, <b>un panel cuesta 3,1 millones</b>, que salen de
+reasignaci&oacute;n.</p>
 <p><b>Eso pone un techo bajo:</b> puede no alcanzar para compensar un d&iacute;a de trabajo perdido, y
 por eso el honorario es un complemento de las medidas de m&aacute;s arriba, no la soluci&oacute;n.</p>
 </div>
@@ -792,8 +781,8 @@ empleo, es planta encubierta.</p>
 18% de infraestructura y licencias y 10% de auditor&iacute;a externa. Son sueldos de referencia de escala
 municipal, a presupuestar y licitar antes de comprometerse. <span class="tag m">Estimado</span></p>
 <div class="cols">
-<p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.205 millones al a&ntilde;o.</b> Los 1.026,7 millones
-son el <b>12,5%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
+<p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones al a&ntilde;o.</b> Los 1.026,7 millones
+son el <b>12,6%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
 <p><b>Para dimensionarlo:</b> 1.026,7 millones es
 <span class="sg">el 7% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.654,8 millones, el quinto programa del presupuesto&mdash;.</p>
@@ -874,22 +863,11 @@ comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacut
 entra en el 58,6% restante, o no cuesta nada.</p></div>
 
 <h2><span class="n">5.2</span>D&oacute;nde va hoy cada peso</h2>
-<p class="tight">Gasto devengado 2025, por funci&oacute;n:</p>
-""" + exhead("c", "Salud y urbanismo se llevan casi la mitad del gasto; ambiente, el 0,4%") + """
-<table>
-<colgroup><col style="width:200pt"><col><col><col></colgroup>
-<tr class="hd"><th>Funci&oacute;n</th><th class="r">Devengado</th><th class="r">%</th><th class="r">Por habitante</th></tr>
-<tr><td class="l">Salud</td><td class="n">78.217 M</td><td class="n">24,1%</td><td class="n">263.106 $</td></tr>
-<tr><td class="l">Urbanismo</td><td class="n">70.310 M</td><td class="n">21,7%</td><td class="n">236.507 $</td></tr>
-<tr><td class="l">Agua potable y alcantarillado</td><td class="n">3.320 M</td><td class="n">1,0%</td><td class="n">11.167 $</td></tr>
-<tr class="hi"><td class="l">Ecolog&iacute;a y medio ambiente</td><td class="n"><b>1.410 M</b></td><td class="n"><b>0,4%</b></td><td class="n"><b>4.743 $</b></td></tr>
-</table>
-<p class="cap"><b>Nota:</b> &laquo;Urbanismo&raquo; y &laquo;Vivienda y urbanismo&raquo; son dos funciones
-distintas del presupuesto municipal, con sus nombres oficiales.</p>
 """ + ex("g", "Ecolog&iacute;a y agua potable juntas no llegan al 1,5% del presupuesto",
-     "Parte del gasto de 2025 que fue a cada &aacute;rea del presupuesto. Destacadas, ambiente y agua y cloacas.",
+     "Parte del gasto de 2025 que fue a cada &aacute;rea del presupuesto, y cu&aacute;nto es por habitante. Destacadas, ambiente y agua y cloacas.",
      "ex16.png",
-     "Municipio de San Isidro, ejecuci&oacute;n presupuestaria 2025, informe anual. Gasto devengado.",
+     "Municipio de San Isidro, ejecuci&oacute;n presupuestaria 2025, informe anual. Gasto devengado; por habitante, sobre los 297.282 del Censo 2022.",
+     "&laquo;Urbanismo&raquo; y &laquo;Vivienda y urbanismo&raquo; son dos funciones distintas del presupuesto municipal, con sus nombres oficiales.",
      cls="c80") + """
 <p><span class="sg">San Isidro es, sobre todo, un municipio de salud y de obra.</span> Casi la mitad del
 presupuesto son esas dos funciones.</p>
@@ -954,7 +932,7 @@ pol&iacute;tica.</span></li>
 <div class="callout g">
 <div class="clabel">La Cava 4.0, y por qu&eacute; el diagn&oacute;stico y la propuesta caen en la misma cuadra</div>
 <p>El cap&iacute;tulo 4 se&ntilde;ala un conglomerado de nueve radios censales dentro de la fracci&oacute;n
-32, en B&eacute;ccar: 8.749 habitantes y el peor NBI del partido. <b>Ese conglomerado es el barrio La Cava.</b> Su punto
+32, en B&eacute;ccar: 8.749 habitantes y el peor NBI del partido. <b>Ese conglomerado coincide con el barrio La Cava.</b> Su punto
 central, seg&uacute;n OpenStreetMap, queda a 136 metros del centro del pol&iacute;gono que dibuja el
 mapa, sobre una superficie de 0,28 km&sup2;.</p>
 <p>No hace falta inferirlo: <b>el centro se llama Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio
@@ -963,12 +941,16 @@ secundario t&eacute;cnico, formaci&oacute;n profesional y educaci&oacute;n super
 universidades y organizaciones del barrio, bajo la idea de que la actividad tecnol&oacute;gica sea el
 rasgo identitario del lugar. <span class="sg">El punto que el diagn&oacute;stico marca como el m&aacute;s
 cr&iacute;tico del distrito es exactamente donde ya hay algo funcionando.</span></p>
-<p><b>De qui&eacute;n depende.</b> El CFL 404 no es municipal: depende del Instituto Provincial de Formaci&oacute;n Laboral del Ministerio
-de Trabajo bonaerense y de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que es qui&eacute;n
-emite los certificados. El Municipio no lo financia hoy.
-<span class="sg">Este programa le pone recursos municipales y replica el modelo donde hoy no hay
-nada.</span> Otros municipios bonaerenses firmaron
-convenios de traspaso de sus CFL; ac&aacute; alcanza con acompa&ntilde;ar lo que ya existe.</p>
+<p><b>De qui&eacute;n depende.</b> El CFL 404 no es municipal: tiene convenio con la CGT Regional Zona Norte y
+depende del Instituto Provincial de Formaci&oacute;n Laboral del Ministerio de Trabajo bonaerense; los cargos
+docentes los paga la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que es quien emite los certificados. El
+Municipio no lo financia hoy. <span class="sg">Este programa le pone recursos municipales y replica el
+modelo donde hoy no hay nada</span>, con la regla con que la Provincia abre centros nuevos: <b>el Municipio
+firma como entidad conveniante de las sedes nuevas y pone edificio, permisos, seguro y equipamiento; la
+Provincia paga los cargos docentes</b>, y el curso es gratis. Si no los da, la formaci&oacute;n se dicta igual por
+matr&iacute;cula indirecta: la paga el Municipio y el centro la certifica. <b>Los tres millones por persona son el
+costo si paga todo el Municipio; si la Provincia paga los cargos docentes, con el mismo dinero se forma a
+m&aacute;s gente.</b></p>
 </div>
 
 <h3>Qu&eacute; se ense&ntilde;a, y por qu&eacute; cambia</h3>
@@ -1101,11 +1083,7 @@ una obra que hace falta igual, y se decide qui&eacute;n la ejecuta.</span></p>
 <span class="tag">Fondos nuevos</span> <span class="tag v">Reasignaci&oacute;n</span></h2>
 <p><b>Hoy:</b> Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado,
 3.320 millones, el 1,0%. <b>El problema, medido:</b> 6.488 hogares sin cloacas, <b>25.165 sin gas de
-red</b> y 8.569 con hacinamiento.</p>
-""" + ex("g", "25.165 hogares de San Isidro cocinan sin gas de red",
-     "Hogares sin gas de red, por zona.",
-     "ex19.png",
-     "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.") + """
+red</b> y 8.569 con hacinamiento, zona por zona en el cuadro [[n:indicadores]].</p>
 <h3>La cuarta carencia, la que el Censo no mide</h3>
 <div class="cols">
 <p>El Censo 2022 cuenta cloacas, gas, agua y hacinamiento. <span class="sg">No cuenta
@@ -1643,11 +1621,11 @@ la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
 <div class="cols">
 <p><b>Estafas virtuales, robo de identidad, grooming y extorsiones por redes: es lo que menos aparece
 en lo que el Municipio publica sobre seguridad.</b> Ni en las estad&iacute;sticas mensuales, ni en el
-plan vigente, ni entre los canales de reclamo.</p>
+plan de gobierno 2024&ndash;2025, ni entre los canales de reclamo.</p>
 <p>Tigre tiene <b>CiberCOT</b>, una oficina que recibe y asiste al vecino que sufri&oacute; un delito
 cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
 <b>En San Isidro no se encontr&oacute; nada equivalente publicado</b>: ni oficina, ni canal, ni
-menci&oacute;n en el sitio municipal ni en el plan vigente, al 20 de septiembre de 2026.</p>
+menci&oacute;n en el sitio municipal ni en el plan de gobierno 2024&ndash;2025, al 20 de septiembre de 2026.</p>
 <p><b>Va unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
 mostrador de denuncias sin nadie que pueda hacer nada con ellas.
 <span class="sg">Unificada con la anal&iacute;tica y con la seguridad de los sistemas municipales, tiene
@@ -1831,7 +1809,7 @@ privada, en Avenida Libertador 17115, B&eacute;ccar.</p>
 Lo que este programa propone no es digitalizar m&aacute;s formularios: es que el sistema
 <span class="sg">conteste</span>, y que el gasto de construirlo vuelva al partido.</p>
 <div class="cols">
-<p><b>Hoy:</b> el plan vigente se propuso digitalizar el 30% de los tr&aacute;mites municipales, firma
+<p><b>Hoy:</b> el plan de gobierno 2024&ndash;2025 se propuso digitalizar el 30% de los tr&aacute;mites municipales, firma
 digital en el 100% de los puestos ejecutivos y un nuevo centro de atenci&oacute;n telef&oacute;nica.
 Son metas de volumen: cu&aacute;ntos tr&aacute;mites, cu&aacute;ntos puestos.</p>
 <p><b>Y lo que falta es lo que m&aacute;s pesa.</b> Quien abre un local, ampl&iacute;a una casa o pide

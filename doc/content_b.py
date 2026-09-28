@@ -7,7 +7,7 @@ from content_a import RH, ex, exhead, fig, duo
 C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
     "La barranca sobre el r&iacute;o. Ilustraci&oacute;n.") + """
 <h1><span class="n">2</span>La gesti&oacute;n, medida</h1>
-<div class="stand">El plan de gobierno vigente, medido contra sus propias metas y con sus propios documentos, deja afuera el servicio que no llega y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
+<div class="stand">El plan de gobierno 2024&ndash;2025, medido contra sus propias metas y con sus propios documentos, deja afuera el servicio que no llega y lo que se prometi&oacute; publicar y no est&aacute; publicado.</div>
 
 <h2><span class="n">2.1</span>Ejecutar el presupuesto no es prestar el servicio</h2>
 <p class="lead">Que una partida se devengue al 99% prueba que el dinero se gast&oacute;. No prueba que la
@@ -102,11 +102,11 @@ aparecen en las metas para sumarse a &laquo;Ojos en Alerta&raquo;, reunirse con 
 Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.</p>
 </div>
 """ + exhead("c", "Acci&oacute;n contra acci&oacute;n: qu&eacute; hace cada plan en cada &aacute;rea",
-             "A la izquierda, las 77 metas del plan vigente agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa.",
+             "A la izquierda, las 77 metas del plan de gobierno 2024&ndash;2025 agrupadas por tema, con sus propias cifras. A la derecha, lo que propone este programa.",
              key="accion") + """
 <table>
 <colgroup><col style="width:104pt"><col><col></colgroup>
-<tr class="hd"><th>&Aacute;rea</th><th>Plan vigente 2024&ndash;2025</th><th>Este programa</th></tr>
+<tr class="hd"><th>&Aacute;rea</th><th>Plan de gobierno 2024&ndash;2025</th><th>Este programa</th></tr>
 <tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Patrullaje dirigido a donde ocurre el delito, empezando por el mapa de incidentes municipales que hoy no existe; sobre las c&aacute;maras que ya hay, primero un n&uacute;mero auditado de qu&eacute; hacen, y despu&eacute;s detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n del recorrido de un hecho denunciado, sin reconocimiento facial masivo; y una oficina de ciberdelito</td></tr>
 <tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">No rehacer lo que ya funciona mientras haya urgencias: la poda que falta y el &aacute;rbol ca&iacute;do se reponen, la plaza que ya funcionaba espera. Y asociaciones de parque reconocidas por ordenanza, que cuidan cada espacio verde: aviso previo de cualquier obra, objeci&oacute;n con respuesta fundada, y sin su firma la obra no se da por terminada ni se paga</td></tr>
 <tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Licitar la recolecci&oacute;n con las condiciones del contrato &mdash;frecuencias, horarios, zonas y penalidades&mdash; aprobadas por el Concejo antes del llamado. El servicio funciona y se paga &mdash;con barrido y limpieza son 49.270 millones al a&ntilde;o&mdash;, pero desde 2009 corre sobre un contrato directo de seis meses que se sigue prorrogando: las dos licitaciones que se llamaron no terminaron en adjudicaci&oacute;n. Llevar el gasto en ambiente del 0,4% al 1,5% del presupuesto; y controlar el ruido de motos y colectivos con sensores y, cuando el equipo est&eacute; homologado, multa autom&aacute;tica</td></tr>
@@ -123,10 +123,10 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 por el intendente Ram&oacute;n Lan&uacute;s: tres prioridades, diecinueve objetivos y setenta y siete metas
 numeradas, contadas una por una.</p>
 <p class="cap"><b>Nota:</b> las 77 metas est&aacute;n agrupadas por tema, no recortadas: las cuatro
-primeras filas cubren las tres prioridades completas del plan vigente. Las celdas vac&iacute;as de la
+primeras filas cubren las tres prioridades completas del plan de gobierno 2024&ndash;2025. Las celdas vac&iacute;as de la
 columna del medio son &aacute;reas donde ese plan no fija ninguna meta.</p>
 
-<p>En las 3.137 palabras del plan vigente, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni
+<p>En las 3.137 palabras del plan de gobierno 2024&ndash;2025, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni
 una vez</span>. Tampoco vivienda,
 ni empleo, ni pobreza, ni cloaca, ni agua.</p>
 <p><b>&laquo;Hospital&raquo; y &laquo;escolar&raquo; aparecen una vez cada una, y en la misma meta</b>: la
@@ -146,9 +146,9 @@ barrido, arbolado, alumbrado, residuos, tr&aacute;nsito, tr&aacute;mites y ciber
 <ol class="n">
 <li>En las 3.137 palabras del plan de gobierno del intendente, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, hospitales y escuelas aparecen s&oacute;lo para
 se&ntilde;alizar sus esquinas.</li>
-<li>&Aacute;rea por &aacute;rea, donde el plan vigente propone algo, este programa propone otra cosa, y
-est&aacute;n lado a lado en el cuadro [[n:accion]]. En empleo, vivienda, salud y educaci&oacute;n el plan
-vigente no propone nada.</li>
+<li>&Aacute;rea por &aacute;rea, donde el plan de gobierno 2024&ndash;2025 propone algo, este programa propone otra cosa, y
+est&aacute;n lado a lado en el cuadro [[n:accion]]. En empleo, vivienda, salud y educaci&oacute;n ese plan
+no propone nada.</li>
 <li>Ejecutar el presupuesto no es prestar el servicio: el Municipio es el cuarto de 106 municipios
 bonaerenses que m&aacute;s invierte en obra p&uacute;blica, y aun as&iacute; registr&oacute; <b>setenta reclamos diarios de
 arbolado</b>, y el intendente calific&oacute; el cuidado del arbolado como &laquo;una deuda hist&oacute;rica&raquo;, <b>&laquo;algo que no
@@ -273,7 +273,7 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
 <tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">No. Es inversi&oacute;n inicial</td><td class="m">Los mismos tres programas</td></tr>
-<tr><td class="l">Plataforma de inteligencia artificial (4.11)</td><td class="n">1.026,7 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.205 M al a&ntilde;o</td></tr>
+<tr><td class="l">Plataforma de inteligencia artificial (4.11)</td><td class="n">1.026,7 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
 </table>
 <p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
 dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
@@ -344,12 +344,15 @@ libre el 49,7%.</span> La plataforma se paga dentro de Ciencia y T&eacute;cnica 
 <div class="cols">
 <p><b>Las comisiones vecinales no se pagan</b>: son asociaciones que ya existen y sus miembros no cobran.
 No se crea una oficina de control ni un &oacute;rgano nuevo de ning&uacute;n tipo.</p>
-<p><b>Cuestan tres cosas.</b> El espacio de cuidado de ni&ntilde;os en cada asamblea, que es poco dinero y
-cambia qui&eacute;n participa. El honorario del panel sorteado que el cap&iacute;tulo 4 propone para los
-bienes de alcance distrital, como la costa, que se presupuesta cuando el panel se cree. Y <b>imputar el
-gasto con referencia territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona: no
-requiere personal nuevo ni estructura nueva, y entra dentro del 49,7% del gasto flexible que queda
-libre con todo sumado.</p>
+<p><b>Cuestan cuatro cosas.</b> Tres las paga un <b>1,5% fijo de la partida vecinal</b> &mdash;433,6
+millones el a&ntilde;o 4 y 108,4 el a&ntilde;o 1&mdash;: el cuidado de chicos en cada asamblea, que cambia qui&eacute;n
+participa; un honorario por obra para los tres vecinos que firman la recepci&oacute;n; y la administraci&oacute;n de las
+obras que ejecuta la propia comisi&oacute;n &mdash;cuentas, seguro y justificaci&oacute;n de cada peso&mdash;. La cuarta,
+el honorario del panel sorteado que el cap&iacute;tulo 4 propone para los bienes de alcance distrital, como la
+costa, sale de reasignaci&oacute;n: <b>3,1 millones por panel</b>. Y <b>imputar el gasto con referencia
+territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona, no requiere
+personal nuevo ni estructura nueva, y entra dentro del 49,7% del gasto flexible que queda libre con todo
+sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
 41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
@@ -528,11 +531,12 @@ trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.
 coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado a
 la deuda consolidada de 5.927 millones, la multiplica por seis.</p>
 <div class="cols">
+<p><b>La deuda consolidada pas&oacute; de 1.408 a 4.984 millones entre el primer trimestre de 2024 y el cierre de
+2025. Eso explica por qu&eacute; los servicios de la deuda fueron la funci&oacute;n que m&aacute;s creci&oacute; entre 2024 y 2025:
++36,3% real.</b></p>
 <p><b>Y en junio de 2026 aparece algo nuevo.</b> El informe de ese trimestre registra por primera vez un
 pr&eacute;stamo del <b>Banco Provincia por 1.000 millones</b>. En los diez informes anteriores esa
 l&iacute;nea est&aacute; en cero. Es endeudamiento bancario tomado por la gesti&oacute;n actual.</p>
-<p><b>Eso explica por qu&eacute; los servicios de la deuda fueron la funci&oacute;n que m&aacute;s
-creci&oacute; entre 2024 y 2025: +36,3% real.</b></p>
 <p><span class="sg">Este programa no agrega un peso a esa deuda.</span> El modelo del cap&iacute;tulo 3
 lleva la deuda a cero hacia 2029 por amortizaci&oacute;n y no toma deuda nueva en ning&uacute;n
 a&ntilde;o de la proyecci&oacute;n.</p>

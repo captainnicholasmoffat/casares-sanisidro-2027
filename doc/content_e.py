@@ -5,7 +5,7 @@ CIERRE = dict(id="cierre", runhead=RH, html="""
 <h1>Para cerrar</h1>
 <div class="stand">La mitad de la obra p&uacute;blica decidida por los vecinos en cuatro a&ntilde;os, y el gasto en empleo y vivienda multiplicado por quince, pagado actualizando la tabla de 2008 con la que se cobra la tasa. Sin subir el porcentaje de la tasa, sin tomar deuda y sin pedirle permiso a la Provincia.</div>
 <div class="cols">
-<p>La pregunta del principio era sobre el plan del gobierno actual: a qui&eacute;n se escuch&oacute;, y c&oacute;mo,
+<p>La pregunta del principio era sobre el plan de gobierno 2024&ndash;2025: a qui&eacute;n se escuch&oacute;, y c&oacute;mo,
 para que el empleo y la vivienda no aparecieran nunca. La respuesta no est&aacute; en el tama&ntilde;o del presupuesto:
 hay que cambiar <span class="sg">qui&eacute;n decide</span>, y decir con qu&eacute; dinero y para cu&aacute;ndo. Por eso este
 programa promete poco y lo promete con fecha: diecis&eacute;is compromisos en cien d&iacute;as y trece metas con el
