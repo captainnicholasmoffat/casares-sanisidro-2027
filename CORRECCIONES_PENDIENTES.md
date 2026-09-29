@@ -2403,3 +2403,37 @@ discapacidad, cupos 315/316, cien días = 19 de marzo, base del 46,8%, 1.2 (año
 - 5.4 y cuadro 33: si la obra vecinal paga cloaca y gas, no queda dicho qué paga la partida de vivienda.
 - Cuadro 27: las filas no suman exacto por redondeo (1.285,1 contra 1.285,0; 1.676,5 contra 1.676,6).
 - Metas 7, 9 y 12 sin fila en el calendario (6.4).
+
+# LAS 24 DECISIONES Y LAS CORRECCIONES 180 A 185 · APLICADAS (29/09)
+Rama claude/cool-hopper-3hdk58.
+
+## EL MODELO
+- Los 2.030 M de recursos de capital son todos municipales (rubro 2.1): modelo.py los resta enteros de lo
+  municipal. El resultado BAJA 69 M en 2028 (+1.576) y 139 M en 2031 (+10.236); con el programa, +1.746 y
+  +10.236. Sensibilidad: −3.044 / +5.342 / −426; punto de quiebre 1,18%. Excel igual al repo, controles en cero.
+- Cuadro 27, suma exacta de sus filas: equipo 1.285,1; plataforma 1.585,6; con dispositivos 1.676,6.
+
+## LAS 24
+1 origen del dinero (hecho). 3 cuadro 10: +29.943 (el +14.875 sólo estaba en data/METODOLOGIA_MODELO.md).
+4 los años: déficit 2010–2015, 2017, 2019, 2020 y 2025; superávit 2016, 2021, 2022 y 2024 (27.154); 2018 y 2023
+sin resultado publicado (SEF, rendiciones, ARSI y fallos del Tribunal de Cuentas). 5 1,2%. 6 la deuda consolidada
+casi se duplicó descontada la inflación (2.660 a 5.072 M de dic. 2025). 7 "75% de los recursos" no da (68,6%):
+Provincia 25% del gasto, lo propio 64% del gasto. 8 1.2 con la serie comparable: +49,6% de 2010 a 2017, −21,4%
+de 2022 a 2024. 9 "no reparte un peso sin trabajo a cambio: la única beca paga una práctica". 10 sesión
+extraordinaria de diciembre con la asamblea (Const. art. 193 inc. 2; LOM arts. 29, 68 inc. 5 y 98; la tabla de
+2008 y la impositiva 2026 se sancionaron así); riesgo en el 6.6: si sale en marzo, el año 1 cobra 1.437 M en
+vez de 1.976 contra 1.806; 2028 cierra +1.207 (sin programa, +1.576). 11 incompatibilidad personal y recepción
+fuera de la asociación que ejecuta. 12 voto digital con identidad verificada (Ordenanza I art. 3 y cuadro de
+riesgos). 13 30 días en el art. 8. 14 art. 11, registro de asociaciones. 15 canal de denuncias a la Comisión de
+Obras y Servicios Públicos del Concejo; no hay Defensoría municipal. 16 meta 13 con 250 a 300 empleos pagos.
+18 presupuestos 2025 y 2026 publicados (escaneados, sin texto). 19 fuera los cien días del 5.10. 21 discapacidad
+tiene programa propio (65,9 M): la ordenanza VI queda para género. 22 cupos 315, 307, 98, 96, 94, 18 = 928 (resto
+mayor). 23 19 de marzo de 2028. 24 base del 46,8%: 295.978 personas en viviendas particulares.
+
+## 180 A 185
+180 la tecnicatura abre la formación; un año común y cuatro orientaciones con LinkedIn 2026 (la experiencia de
+3,7 años es MEDIANA, no promedio). 181 CFL 404: hoy y lo que proponemos. 182 barrido de las 40 páginas: 13 cambios
+en capítulos 1–3 y cierre, 44 en el 4, 54 en el 5 y el 6, 3 en el glosario. 183 las prácticas y pasantías que ya
+existen (Barceló, UCA, UBA, Favaloro, 15 pasantes pagos en las fiscalías, 2016, UNSO 2021). 184 cuadro hoy y lo
+que proponemos, con fuentes; el reglamento de pasantías de la UNSO está en marcha desde 2025 (el número de
+resolución no está publicado). 185 la línea que encadena los cuadros del empleo.
