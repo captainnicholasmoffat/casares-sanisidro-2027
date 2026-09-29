@@ -2388,3 +2388,17 @@ cuadro 18, el 75%, becas y "no reparte un peso", Mes 1 y la tabla nueva en 2028,
 plazo del art. 8, registro de asociaciones, canal de denuncias, meta 13 y empleo, equipos de dispositivos, 5.10
 (presupuestos 2025 y 2026 sí están), verificación a los cien días, atención domiciliaria, programas de género y
 discapacidad, cupos 315/316, cien días = 19 de marzo, base del 46,8%, 1.2 (años peores y "quince años").
+
+## ENCONTRADO, SIN TOCAR (dato o decisión pendiente)
+- 5.3: entre los meses 15 y 27 la planta reasignada ya supervisa pasantes: no queda claro quién sostiene los 90
+  puestos de operación hasta que egresan los juniors.
+- 6.2 dice que un escalón incumplido "no se compensa", y el art. 9 de la Ordenanza I arrastra los saldos de la zona.
+- Ordenanza V: la firma de recepción no tiene plazo ni silencio positivo; sin firma no hay pago final.
+- Ordenanza II, art. 2: faltan la espera por especialidad, la matrícula por sede y las órdenes judiciales que las
+  metas mandan preguntar.
+- Cuadro 40: los riesgos fiscales de la percepción y de la tasa del bono (3.6) no tienen fila.
+- 6.1: los antecedentes de Villa Gobernador Gálvez y de la Ciudad no tienen fila de fuente.
+- Anexo: la detección en vivo es "configuración" de las cámaras, y el 5.9 pone 1.200 M de analítica "a licitar".
+- 5.4 y cuadro 33: si la obra vecinal paga cloaca y gas, no queda dicho qué paga la partida de vivienda.
+- Cuadro 27: las filas no suman exacto por redondeo (1.285,1 contra 1.285,0; 1.676,5 contra 1.676,6).
+- Metas 7, 9 y 12 sin fila en el calendario (6.4).
