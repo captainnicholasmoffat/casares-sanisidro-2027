@@ -35,8 +35,10 @@ computan en cantidad de hogares y no en porcentajes sobre la zona.</p>
 <h3>Art&iacute;culo 3 &mdash; Qui&eacute;n vota</h3>
 <p class="tight">La asamblea de zona es abierta y vota con <b>un voto por persona</b>. Tiene derecho a
 voto toda persona mayor de diecis&eacute;is (16) a&ntilde;os que resida en la zona, y toda persona que
-desarrolle en ella su actividad principal, comercial o comunitaria, acredit&aacute;ndola. No se vota por
-hogar, por unidad funcional ni por padr&oacute;n de asociados. Toda persona puede consultar la n&oacute;mina de asistentes.</p>
+desarrolle en ella su actividad principal, comercial o comunitaria, acredit&aacute;ndola. Se vota en la
+asamblea o en forma digital, con identidad verificada, en el Sistema de Informaci&oacute;n Municipal, y
+nadie vota dos veces. No se vota por hogar, por unidad funcional ni por padr&oacute;n de asociados. Toda
+persona puede consultar la n&oacute;mina de asistentes y de votantes.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Priorizaci&oacute;n y respuesta obligatoria</h3>
 <p class="tight">Cada comisi&oacute;n zonal definir&aacute; en asamblea el destino de la partida
@@ -49,20 +51,20 @@ Departamento Ejecutivo <b>no podr&aacute; sustituirla por otra</b> ni reimputar 
 destino distinto sin convocar nuevamente a la asamblea de esa zona.</p>
 
 <h3>Art&iacute;culo 6 &mdash; Incompatibilidad entre priorizar y ejecutar</h3>
-<p class="tight">Quien integre la comisi&oacute;n que prioriza una obra no podr&aacute; formar parte de
-la asociaci&oacute;n que la ejecute, ni tener inter&eacute;s econ&oacute;mico en ella, ni ser su
-proveedor. Configurada la incompatibilidad, deber&aacute; excusarse, y la excusaci&oacute;n se asentar&aacute;
+<p class="tight">Quien integre la comisi&oacute;n que prioriza una obra no podr&aacute; cobrar por ella
+ni ser su proveedor, ni tener en ella inter&eacute;s econ&oacute;mico, por s&iacute; o por interp&oacute;sita
+persona. Configurada la incompatibilidad, deber&aacute; excusarse, y la excusaci&oacute;n se asentar&aacute;
 en el acta de la asamblea.</p>
 
 <h3>Art&iacute;culo 7 &mdash; Comit&eacute; de vigilancia y recepci&oacute;n de obra</h3>
 <p class="tight">La misma asamblea que prioriza elegir&aacute; <b>tres (3) vecinos que no participen de
-la ejecuci&oacute;n</b>, quienes integrar&aacute;n el comit&eacute; de vigilancia de esa obra y
+la ejecuci&oacute;n ni integren la asociaci&oacute;n que la ejecute</b>, quienes integrar&aacute;n el comit&eacute; de vigilancia de esa obra y
 suscribir&aacute;n su acta de recepci&oacute;n.</p>
 
 <h3>Art&iacute;culo 8 &mdash; Intervenci&oacute;n de una comisi&oacute;n</h3>
 <p class="tight">Ante gastos observados, obra no ejecutada o asamblea no convocada, el
 Departamento Ejecutivo podr&aacute; intervenir la comisi&oacute;n <b>por causa fundada y escrita</b> y
-convocar a nueva asamblea dentro del plazo que fije la reglamentaci&oacute;n. Durante la
+convocar a nueva asamblea dentro de los treinta (30) d&iacute;as corridos. Durante la
 intervenci&oacute;n la partida de esa zona se ejecuta por administraci&oacute;n <b>en esa misma zona</b>
 y no se redistribuye. La intervenci&oacute;n alcanza a la administraci&oacute;n de la partida y no
 importa disoluci&oacute;n de la asociaci&oacute;n vecinal.</p>
@@ -82,6 +84,11 @@ funcionamiento de su comisi&oacute;n: el cuidado infantil durante las asambleas;
 uno de los tres vecinos que suscriben la recepci&oacute;n, fijado como fracci&oacute;n del salario de la categor&iacute;a de
 ingreso de la escala municipal vigente; y la administraci&oacute;n de las obras que ejecute la asociaci&oacute;n
 vecinal, comprendidos sus registros contables, seguros y la justificaci&oacute;n del gasto.</p>
+
+<h3>Art&iacute;culo 11 &mdash; Registro de asociaciones vecinales</h3>
+<p class="tight">El Departamento Ejecutivo repondr&aacute; y mantendr&aacute; al d&iacute;a el registro de las
+asociaciones vecinales de la Ordenanza 6045, con su zona, sus autoridades y su domicilio. Toda persona
+puede consultarlo en el Sistema de Informaci&oacute;n Municipal.</p>
 <h2>II &middot; Ordenanza del Sistema de Informaci&oacute;n Municipal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
@@ -187,15 +194,15 @@ obra prosigue. <b>La objeci&oacute;n no suspende por s&iacute; la ejecuci&oacute
 <p class="tight">La asociaci&oacute;n suscribe el acta de recepci&oacute;n de la obra ejecutada en su
 espacio. La recepci&oacute;n sin esa firma no habilita el pago final.</p>
 
-<h2>VI &middot; Ordenanza de partidas propias</h2>
+<h2>VI &middot; Ordenanza de la partida propia de g&eacute;nero</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
-<p class="tight">Cr&eacute;anse, en la estructura program&aacute;tica del presupuesto municipal,
-<b>un programa propio de pol&iacute;ticas de g&eacute;nero y un programa propio de discapacidad</b>,
-separados del programa que hoy comparten con ni&ntilde;ez, juventud y personas mayores.</p>
+<p class="tight">Cr&eacute;ase, en la estructura program&aacute;tica del presupuesto municipal,
+<b>un programa propio de pol&iacute;ticas de g&eacute;nero</b>, separado del programa que hoy comparte con
+ni&ntilde;ez, juventud y personas mayores.</p>
 
 <h3>Art&iacute;culo 2 &mdash; Ejecuci&oacute;n a la vista</h3>
-<p class="tight">La ejecuci&oacute;n de ambos programas puede consultarse con la misma apertura y la misma
+<p class="tight">La ejecuci&oacute;n del programa puede consultarse con la misma apertura y la misma
 periodicidad que la del resto del presupuesto. Esta ordenanza no fija monto: fija que el monto exista
 por separado y pueda verse.</p>
 

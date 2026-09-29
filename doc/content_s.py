@@ -74,7 +74,7 @@ de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene s
 Municipio factura en total por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
 
-<p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. A fines de
+<p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. El 19 de
 marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona, puede anotar a su hijo
 en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
 en su zona, con la primera cohorte ya arrancando en los espacios que existen, y ya funcionan dos

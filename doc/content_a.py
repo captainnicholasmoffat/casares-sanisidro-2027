@@ -188,9 +188,9 @@ del mandato, la que se inaugura con cinta. No hace falta que nadie decida de mal
 criterio sea &eacute;se. <span class="sg">Alumbrado p&uacute;blico recibe 10.313 millones al a&ntilde;o y
 agua y alcantarillado 3.320.</span> Una cloaca no se inaugura con cinta.</p>
 <p><b>La segunda es repartir.</b> Es la de los gobiernos populistas: se sostiene un voto entregando, y
-el que entrega necesita que el otro siga necesitando. <b>Este programa no reparte un peso.</b> Los
-7.730,9 millones de empleo y vivienda pagan formaci&oacute;n, contrataci&oacute;n e infraestructura, y
-ninguno es una transferencia a una persona.</p>
+el que entrega necesita que el otro siga necesitando. <b>Este programa no reparte un peso sin trabajo a cambio: la
+&uacute;nica beca paga una pr&aacute;ctica.</b> Los 7.730,9 millones de empleo y vivienda pagan formaci&oacute;n,
+contrataci&oacute;n e infraestructura.</p>
 <p><b>Hay una tercera, y es la de este programa: administrar para que crezca.</b> Que San Isidro
 funcione mejor cuando termine el mandato que cuando empez&oacute;: <b>menos hogares sin cloaca y sin gas
 de red</b>, <b>m&aacute;s gente formada y con trabajo</b>, y <b>los vecinos decidiendo en qu&eacute; se
@@ -242,6 +242,9 @@ vivir en condiciones de hacinamiento. Y <span class="sg">menos de la mitad de ge
 <h3>El dato que resume todo</h3>
 <p class="tight">En Boulogne Sur Mer y B&eacute;ccar viven <b>138.551 personas en 47.193 hogares: el
 46,8% del partido.</b></p>
+<p class="cap"><b>Nota:</b> el 46,8% es sobre las 295.978 personas que viven en viviendas particulares,
+la base de todos los datos por zona; las otras 1.304 viven en viviendas colectivas. Sobre los 297.282
+habitantes, es el 46,6%.</p>
 <div class="pull"><p>Casi la mitad de San Isidro vive donde est&aacute; el 60% de los 25.165 hogares sin
 gas de red y el 71% de los 6.488 que no tienen cloaca.</p></div>
 """ + duo("f_boulogne", "f_martinez",
@@ -277,11 +280,11 @@ ejecuci&oacute;n del propio Municipio; los otros 105, no.</p>
 <p><b>Y esa proporci&oacute;n alta se aplica sobre un total que viene cayendo.</b> Medido desde su
 m&aacute;ximo de 2017, <b>el gasto real del Municipio cay&oacute; 24,4%</b>; medido desde 2010
 est&aacute; 13,1% por encima.</p>
-<p><b>La ca&iacute;da atraviesa el per&iacute;odo entero.</b> Entre 2017 y 2022 el gasto real
-cay&oacute; 17,2%, y entre 2022 y 2025 otro 8,8%. Los a&ntilde;os peores fueron 2019, 2020 y 2021, con
-&minus;9,1%, &minus;10,4% y &minus;1,7%. <b>En quince a&ntilde;os ninguna gesti&oacute;n ampli&oacute; la
-capacidad de hacer del Municipio</b>, y &eacute;sa es la restricci&oacute;n real sobre la que hay que
-trabajar.</p>
+<p><b>La ca&iacute;da empez&oacute; despu&eacute;s de 2017.</b> Entre 2010 y 2017 el gasto real
+subi&oacute; 49,6%. Desde ah&iacute;, entre 2017 y 2022 cay&oacute; 17,2%, y entre 2022 y 2025 otro 8,8%. El
+peor tramo fue de 2022 a 2024, con &minus;21,4%; 2025 recuper&oacute; una parte, +16,0%. <b>Desde 2017
+ninguna gesti&oacute;n volvi&oacute; a ese nivel</b>, y &eacute;sa es la restricci&oacute;n real sobre la que
+hay que trabajar.</p>
 </div>
 
 <h3>En qu&eacute; se invierte: la pregunta que falta hacer</h3>
@@ -374,8 +377,8 @@ depende de La Plata.</span> La mayor parte del presupuesto se define localmente,
 del Concejo Deliberante y se puede reasignar por decisi&oacute;n local. Todo lo que este programa propone
 puede financiarse sin pedirle permiso a nadie.</p>
 </div>
-<div class="pull"><p>La Provincia financia aproximadamente el 25% de San Isidro. El municipio recauda el
-75% restante.</p></div>
+<div class="pull"><p>La Provincia paga el 25% del gasto de San Isidro. Lo que recauda el propio Municipio
+paga el 64%.</p></div>
 <p>Hay una salvedad, y es estructural: la participaci&oacute;n de San Isidro en las transferencias
 provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%, y se compone a&ntilde;o a
 a&ntilde;o. <b>El cap&iacute;tulo 3 muestra que la ca&iacute;da est&aacute; entera en el coeficiente autom&aacute;tico y la incorpora al modelo.</b></p>

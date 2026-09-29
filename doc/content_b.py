@@ -170,8 +170,9 @@ C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
 <h1><span class="n">3</span>Los fondos</h1>
 <div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se paga actualizando la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra.</div>
 
-<p>El d&eacute;ficit es estructural, no de un a&ntilde;o: en 2010 el Municipio cerr&oacute; con un
-d&eacute;ficit equivalente al 2,9% de sus ingresos, contra el 2,0% de 2025.</p>
+<p>De los a&ntilde;os con cuentas publicadas, el Municipio cerr&oacute; en d&eacute;ficit de 2010 a 2015, en
+2017, 2019, 2020 y 2025, y con super&aacute;vit en 2016, 2021, 2022 y 2024: el de 2024 fue de 27.154
+millones. De 2018 y 2023 no hay cuentas publicadas.</p>
 
 <h2><span class="n">3.1</span>La trampa contable que casi nos hace decir lo contrario</h2>
 <p>El Estado de Ahorro-Inversi&oacute;n-Financiamiento &mdash;el formato oficial de la contabilidad
@@ -182,7 +183,7 @@ devengado</span>. Esa asimetr&iacute;a no es un detalle t&eacute;cnico:</p>
 <table>
 <colgroup><col><col style="width:190pt"></colgroup>
 <tr class="hd"><th>Criterio</th><th class="r">Resultado 2025</th></tr>
-<tr><td class="l">Ingresos facturados contra gastos</td><td class="n">+14.875 M (super&aacute;vit)</td></tr>
+<tr><td class="l">Ingresos facturados contra gastos</td><td class="n">+29.943 M (super&aacute;vit)</td></tr>
 <tr class="hi"><td class="l">Ingresos cobrados contra gastos (la cuenta oficial)</td><td class="n"><b>&minus;6.051 M (d&eacute;ficit)</b></td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Situaci&oacute;n
@@ -231,9 +232,9 @@ resultado.</p>
 </div>
 <div class="callout g">
 <div class="clabel">La sorpresa: lo que manda no es la Provincia</div>
-<p>Si la coparticipaci&oacute;n cayera 3,5% anual en vez de 2,196%, el resultado de 2031 pasa de +10.375
-a +5.514 millones. Duele. Pero si los recursos propios crecieran 0,95% en vez de 1,95%, el resultado de
-2031 pasa de +10.375 a <b>&minus;2.946 millones</b>: se da vuelta el mandato entero.</p>
+<p>Si la coparticipaci&oacute;n cayera 3,5% anual en vez de 2,196%, el resultado de 2031 pasa de +10.236
+a +5.342 millones. Duele. Pero si los recursos propios crecieran 0,95% en vez de 1,95%, el resultado de
+2031 pasa de +10.236 a <b>&minus;3.044 millones</b>: se da vuelta el mandato entero.</p>
 <p><b>Un punto de recaudaci&oacute;n propia vale m&aacute;s que un punto de coparticipaci&oacute;n.</b>
 Eso define d&oacute;nde tiene que poner la energ&iacute;a un intendente: en administrar bien lo propio, no
 en reclamar en La Plata.</p>
@@ -517,7 +518,7 @@ class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eac
 </div>
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>
-""" + exhead("c", "La deuda se cuadruplic&oacute; en dos a&ntilde;os y medio",
+""" + exhead("c", "La deuda consolidada casi se duplic&oacute; en dos a&ntilde;os y medio, descontada la inflaci&oacute;n",
              "Saldo al cierre de cada trimestre, seg&uacute;n el Registro de Endeudamiento Municipal de la Ley 12.462 que publica el propio Municipio.") + """
 <table>
 <colgroup><col style="width:130pt"><col><col><col></colgroup>
@@ -530,7 +531,8 @@ class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eac
 <p class="cap"><b>Fuente:</b> informes trimestrales de stock de deuda del Municipio de San Isidro,
 Registro de Endeudamiento Municipal Ley 12.462.</p>
 <p class="cap"><b>Nota:</b> la deuda flotante son obligaciones de corto plazo y oscila mucho entre
-trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones.</p>
+trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones; descontada la
+inflaci&oacute;n, de 2.660 a 5.072 millones de pesos de diciembre de 2025: casi el doble.</p>
 <p class="cap"><b>Nota:</b> <b>el bono de 30.000 millones no est&aacute; en este cuadro</b>, porque se
 coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado a
 la deuda consolidada de 5.927 millones, la multiplica por seis.</p>
@@ -547,17 +549,17 @@ a&ntilde;o de la proyecci&oacute;n.</p>
 
 <h2><span class="n">3.6</span>Qu&eacute; habr&iacute;a que vigilar</h2>
 <ol class="n">
-<li><b>Que la recaudaci&oacute;n propia crezca menos de 1% por a&ntilde;o por encima de la inflaci&oacute;n.</b> Es el punto de quiebre: por
+<li><b>Que la recaudaci&oacute;n propia crezca menos de 1,2% por a&ntilde;o por encima de la inflaci&oacute;n.</b> Es el punto de quiebre: por
 debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
 <li><b>Que el Municipio cobre una parte menor de lo que factura</b>, que hoy es el 89,32%. Tres puntos menos dejan las cuentas de 2031
-pr&aacute;cticamente en cero: &minus;292 millones.</li>
+pr&aacute;cticamente en cero: &minus;426 millones.</li>
 <li><b>Que lo que la Provincia le gira a San Isidro por coparticipaci&oacute;n caiga m&aacute;s r&aacute;pido.</b> El menos grave de los tres primeros, y el
 &uacute;nico de ellos que no depende del Municipio.</li>
 <li><b>Y la tasa del bono de 30.000 millones de 2026, que es la m&aacute;s concreta de las cuatro.</b> Es
 <b>variable</b> &mdash;la tasa de referencia de los bancos, TAMAR, m&aacute;s 7 puntos&mdash;, y el capital se paga casi entero en 2028 y 2029.</li>
 </ol>
 """ + ex("g", "Lo que m&aacute;s mueve las cuentas de 2031 es cu&aacute;nto crece lo que recauda el propio Municipio",
-     "Cu&aacute;nto cambia el super&aacute;vit proyectado para 2031 &mdash;10.375 millones si nada cambia&mdash; al mover una de las tres cifras clave y dejar las otras dos como est&aacute;n.",
+     "Cu&aacute;nto cambia el super&aacute;vit proyectado para 2031 &mdash;10.236 millones si nada cambia&mdash; al mover una de las tres cifras clave y dejar las otras dos como est&aacute;n.",
      "ex12.png",
      "an&aacute;lisis de sensibilidad del modelo de flujo de caja.",
      "el bono no aparece en las barras porque para 2031 ya est&aacute; amortizado. Pesa en 2028 y 2029, los dos primeros a&ntilde;os del mandato, y no se proyecta ac&aacute;: el modelo est&aacute; en pesos constantes y TAMAR es una tasa nominal, as&iacute; que su costo real depende de la inflaci&oacute;n y ese dato no existe.") + """
@@ -576,8 +578,8 @@ class="sg">No s&oacute;lo no empeora las cuentas: mientras sube, las deja mejor 
 <table>
 <colgroup><col style="width:210pt"><col><col><col><col></colgroup>
 <tr class="hd"><th></th><th class="r">2028</th><th class="r">2029</th><th class="r">2030</th><th class="r">2031</th></tr>
-<tr><td class="l">Si nada cambia</td><td class="n">1.645</td><td class="n">4.439</td><td class="n">7.349</td><td class="n">10.375</td></tr>
-<tr><td class="l">Con el programa, pagado con la tabla nueva</td><td class="n">1.815</td><td class="n">6.684</td><td class="n">9.098</td><td class="n">10.375</td></tr>
+<tr><td class="l">Si nada cambia</td><td class="n">1.576</td><td class="n">4.347</td><td class="n">7.233</td><td class="n">10.236</td></tr>
+<tr><td class="l">Con el programa, pagado con la tabla nueva</td><td class="n">1.746</td><td class="n">6.592</td><td class="n">8.983</td><td class="n">10.236</td></tr>
 <tr class="hi"><td class="l">Diferencia</td><td class="n"><b>+170</b></td><td class="n"><b>+2.245</b></td><td class="n"><b>+1.750</b></td><td class="n"><b>0</b></td></tr>
 <tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">+140</td><td class="n">+2.202</td><td class="n">+1.705</td><td class="n">&minus;44,5</td></tr>
 </table>

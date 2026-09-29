@@ -218,7 +218,8 @@ carga como riesgo.</b></p>
 <span class="sg">la obra la usan las personas, no las casas</span>. La cloaca de una cuadra sirve igual
 a los nueve que viven en una casa que al que vive solo, y el inquilino la usa tanto como el
 propietario.</p>
-<p>Se vota en asamblea abierta, y cualquiera puede saber qui&eacute;n fue. La edad de 16 es la misma con la
+<p>Se vota en asamblea abierta o en forma digital, con identidad verificada, y cualquiera puede saber
+qui&eacute;n fue. La edad de 16 es la misma con la
 que se vota en la Provincia. <span class="sg">Y vota tambi&eacute;n quien desarrolla en la zona su
 actividad principal</span>, comercial o comunitaria, acredit&aacute;ndolo.</p>
 </div>
@@ -231,7 +232,7 @@ nombra y es la m&aacute;s barata de resolver: una asamblea con espacio de cuidad
 cuesta poco y cambia qui&eacute;n puede ir.</p>
 <p><b>Horario y lugar tambi&eacute;n deciden qui&eacute;n participa.</b> Las asambleas se convocan fuera
 del horario laboral, en el propio barrio y no en el centro administrativo, y se complementan con votaci&oacute;n
-digital para quien no puede asistir. Ninguna de las tres cosas cuesta dinero.</p>
+digital, con identidad verificada, para quien no puede asistir. Ninguna de las tres cosas cuesta dinero.</p>
 <p><b>Comunicar el resultado es parte del mecanismo, no cortes&iacute;a.</b> Que el vecino pueda saber qu&eacute; se decidi&oacute;, qu&eacute; se hizo y qu&eacute; falta no cambia la participaci&oacute;n de este
 a&ntilde;o: <span class="sg">cambia la del a&ntilde;o siguiente</span>. Donde no se comunic&oacute;, la
 convocatoria cay&oacute; edici&oacute;n tras edici&oacute;n.</p>
@@ -254,7 +255,7 @@ de recursos del art&iacute;culo 119.</p>
 <h3>Si una comisi&oacute;n falla, se interviene y se vuelve a constituir</h3>
 <div class="cols">
 <p>Ante gastos sin justificar, obra sin ejecutar o asamblea sin convocar, el Departamento Ejecutivo
-interviene la comisi&oacute;n y convoca a nueva asamblea en un plazo fijo escrito en la ordenanza. La
+interviene la comisi&oacute;n y convoca a nueva asamblea en treinta d&iacute;as, un plazo escrito en la ordenanza. La
 partida de esa zona queda en el Ejecutivo <span class="sg">y se ejecuta en esa misma zona</span>, no se
 reparte entre las dem&aacute;s.</p>
 <p>Eso &uacute;ltimo importa. Reasignar la partida a las otras zonas castigar&iacute;a al barrio por lo
@@ -290,13 +291,14 @@ prioriz&oacute;. Eso abre un problema que hay que cerrar en la ordenanza, no des
 participaci&oacute;n de alguien en la ejecuci&oacute;n del presupuesto, mayor es la probabilidad de que
 se perciba un conflicto de inter&eacute;s. <span class="sg">Y basta con que se perciba para que el
 mecanismo pierda legitimidad</span>, aunque no haya delito.</p>
-<p><b>La regla, entonces, es de incompatibilidad.</b> Quien integra la comisi&oacute;n que prioriza
-<b>no puede formar parte de la asociaci&oacute;n que ejecuta esa obra</b>, ni tener inter&eacute;s
-econ&oacute;mico en ella, ni ser proveedor. Si lo tiene, se excusa y queda asentado en el acta.</p>
+<p><b>La regla, entonces, es de incompatibilidad, y es personal.</b> Quien integra la comisi&oacute;n
+que prioriza <b>no cobra ni provee en la obra que prioriz&oacute;</b>, ni tiene inter&eacute;s
+econ&oacute;mico en ella. Si lo tiene, se excusa y queda asentado en el acta.</p>
 <p><b>Y dos cuerpos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de
 Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con funciones definidas por ley. El
 que hace la obra no es el que la controla. Ac&aacute; vale lo mismo: la asamblea que prioriza elige
-adem&aacute;s <b>tres vecinos que no ejecutan y que firman la recepci&oacute;n de la obra</b>. Cobran un honorario por obra con la misma referencia que el panel sorteado, el sueldo de la categor&iacute;a de ingreso municipal: un cuarto de ese sueldo cada uno.</p>
+adem&aacute;s <b>tres vecinos que no ejecutan, que no son de la asociaci&oacute;n que ejecuta y que
+firman la recepci&oacute;n de la obra</b>. Cobran un honorario por obra con la misma referencia que el panel sorteado, el sueldo de la categor&iacute;a de ingreso municipal: un cuarto de ese sueldo cada uno.</p>
 <p><b>Lo que cuesta que esto funcione sale de la propia partida.</b> Un 1,5% fijo de la partida de cada
 zona paga el cuidado de chicos en cada asamblea, el honorario de los tres vecinos que firman la recepci&oacute;n y
 la administraci&oacute;n de las obras que ejecuta la comisi&oacute;n: cuentas, seguro y justificaci&oacute;n de cada peso. Son
@@ -597,7 +599,7 @@ dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera.</
 <p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: la obra que ejecuta la asociaci&oacute;n, como todo contrato del Municipio, toma al menos el 75% de su gente del partido, con los egresados primero (Ordenanza X).
 <b>Sin ejecuci&oacute;n vecinal, ese trabajo lo hace gente de otro distrito.</b></p>
 <p><b>Gasta y recauda donde vive.</b> Ese salario se consume en el partido, y esa actividad es base
-imponible. El cap&iacute;tulo 1 muestra que los recursos propios son el 75% de lo que el Municipio gasta:
+imponible. El cap&iacute;tulo 1 muestra que los recursos propios pagan el 64% de lo que el Municipio gasta:
 <span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, con las mismas
 al&iacute;cuotas.</span></p>
 </div>
@@ -1122,9 +1124,9 @@ las herramientas, los profesores &mdash;uno de ellos, el tutor que acompa&ntilde
 incentivo docente y las materias y el t&iacute;tulo de la UNSO.</p>
 <p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 4</b>, el mismo que
 reparte la partida vecinal: <b>Boulogne 315, B&eacute;ccar 307, Mart&iacute;nez 98, San Isidro 96, Villa
-Adelina 94 y Acassuso 19</b>. Cinco sedes fijas y Acassuso itinerante, porque diecinueve personas al
-a&ntilde;o no justifican un edificio. El redondeo del &iacute;ndice suma una vacante m&aacute;s que las
-928 que el presupuesto compra.</p>
+Adelina 94 y Acassuso 18</b>. Cinco sedes fijas y Acassuso itinerante, porque dieciocho personas al
+a&ntilde;o no justifican un edificio. Suman exacto las 928 que el presupuesto compra: las fracciones se
+asignan por el resto mayor.</p>
 <p><b>Y es el n&uacute;mero que m&aacute;s mueve todo:</b> si el costo
 por persona resulta menor, se forma a m&aacute;s gente con el mismo dinero. Lo que no se hace es al
 rev&eacute;s &mdash;bajar el costo para poder anunciar m&aacute;s egresados&mdash;, que es exactamente
@@ -2003,19 +2005,17 @@ de voluntad. Pero el efecto sobre el vecino es el mismo, y arreglarlo cuesta poc
 <p><b>Por eso el compromiso no es crear nada desde cero:</b> es poner en orden lo que ya existe
 &mdash;reponer el portal ca&iacute;do, enlazar lo que est&aacute; escondido, corregir el enlace equivocado y completar
 lo que est&aacute; a medias&mdash; para que la inteligencia artificial del Municipio lo pueda contestar.
-<span class="sg">No cuesta nada y se puede verificar a los cien d&iacute;as.</span></p>
+<span class="sg">No cuesta nada.</span></p>
 </div>
 
-<h3>El presupuesto que no se publica</h3>
+<h3>El presupuesto: publicado, y escaneado</h3>
 <div class="cols">
-<p><b>El &uacute;ltimo presupuesto publicado es el de 2024.</b> No se encontraron el de 2025 ni el de
-2026. Y el que est&aacute; publicado trae s&oacute;lo el c&aacute;lculo de recursos por rubro y los
-gastos por objeto: <span class="sg">no abre por finalidad ni por programa</span>, que es la apertura con
-la que se puede discutir en qu&eacute; se va a gastar.</p>
-<p><b>La ejecuci&oacute;n s&iacute; se publica abierta</b>, por programa y por finalidad. Lo que falta
-es el presupuesto, que es el momento en que la decisi&oacute;n todav&iacute;a se puede cambiar.
-<b>Publicar la ejecuci&oacute;n y no el presupuesto es mostrar el gasto cuando ya se hizo.</b></p>
-
+<p><b>Los presupuestos de 2025 y de 2026 est&aacute;n publicados</b>, con la ordenanza completa, y este
+programa los usa: los cargos de cada &aacute;rea salen del de 2026, que abre por programa y trae la
+descripci&oacute;n de cada uno.</p>
+<p><b>Pero son 492 y 416 p&aacute;ginas de imagen, sin texto:</b> no se puede buscar una palabra
+adentro. <span class="sg">Est&aacute;n publicados y no se pueden preguntar</span>, que es el mismo
+problema de todo este cuadro.</p>
 </div>
 
 <h3>Desde cu&aacute;ndo se puede preguntar cada cosa, y por qu&eacute; casi siempre es el mismo d&iacute;a</h3>
@@ -2084,8 +2084,8 @@ trabaja en &eacute;l y cu&aacute;nto cobra.</p>
 </div>
 
 <h2><span class="n">5.13</span>Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad <span class="tag v">Gesti&oacute;n</span></h2>
-<p class="lead">Cuatro &aacute;reas que comparten un solo programa presupuestario, dentro de la
-funci&oacute;n que m&aacute;s cay&oacute; en 2025. Al abrirlas una por una aparecieron cuatro problemas
+<p class="lead">Cuatro &aacute;reas dentro de la funci&oacute;n que m&aacute;s cay&oacute; en 2025: tres
+comparten un solo programa presupuestario y discapacidad tiene uno propio, el m&aacute;s chico. Al abrirlas una por una aparecieron cuatro problemas
 distintos, y cada uno necesita una cosa distinta.</p>
 <div class="cols">
 <p><b>Empecemos por el dato que ordena todo lo dem&aacute;s:</b> San Isidro
@@ -2156,9 +2156,10 @@ Que cualquiera pueda preguntarlo por zona no cuesta un peso, y nadie m&aacute;s 
 </div>
 <div class="callout g">
 <div class="clabel">La propuesta, sin fondos nuevos</div>
-<p><b>1 &middot; Partida propia para g&eacute;nero y para discapacidad</b>, separadas del programa que
-hoy comparten con otros tres colectivos. No es dinero nuevo: es abrir la ejecuci&oacute;n para que se
-pueda ver y discutir cada a&ntilde;o.</p>
+<p><b>1 &middot; Partida propia para g&eacute;nero</b>, separada del programa que hoy comparte con
+ni&ntilde;ez, juventud y personas mayores. Discapacidad ya tiene la suya, con 65,9 millones en 2025: lo que
+le falta no es una partida. No es dinero nuevo: es abrir la ejecuci&oacute;n para que se pueda ver y
+discutir cada a&ntilde;o.</p>
 <p><b>2 &middot; Sedes donde est&aacute; la gente.</b> El &iacute;ndice de necesidad del cap&iacute;tulo 4
 dice d&oacute;nde, y la partida vecinal del cap&iacute;tulo 4 puede financiar el local: una sede barrial
 es obra, y una comisi&oacute;n la puede priorizar.</p>
@@ -2181,7 +2182,7 @@ afuera.</p>
 <tr class="hd"><th>&Aacute;rea</th><th>Por qu&eacute; no est&aacute;</th><th class="r">D&oacute;nde queda</th></tr>
 <tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las tres prioridades de la reasignaci&oacute;n</td></tr>
 <tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial</td></tr>
-<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: cuatro &aacute;reas con una sola partida compartida, y una propuesta para cada una</td></tr>
+<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: tres &aacute;reas con una partida compartida, discapacidad con una propia y chica, y una propuesta para cada una</td></tr>
 <tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema es el r&eacute;gimen de habilitaci&oacute;n, no el subsidio</td></tr>
 <tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin propuesta propia. Cede parte de la construcci&oacute;n de infraestructura deportiva (cuadro 15); se se&ntilde;ala la comparaci&oacute;n</td></tr>
 <tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa</td></tr>
@@ -2225,8 +2226,8 @@ C6 = dict(id="cap6", runhead=RH, html="""
 <div class="stand">Trece metas, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con el que se va a poder comprobar. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
-<p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, es decir a
-fines de marzo de 2028, un vecino de San Isidro ya fue convocado a la primera asamblea de su zona,
+<p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, el 19 de
+marzo de 2028, un vecino de San Isidro ya fue convocado a la primera asamblea de su zona,
 puede anotar a su hijo en el primer centro de apoyo escolar y encuentra seis ordenanzas ingresadas en el
 Concejo. <span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que
 se puede ver que empez&oacute;.</span></p>
@@ -2240,7 +2241,7 @@ asamblea se corre a mitad de a&ntilde;o, la priorizaci&oacute;n llega tarde para
 el a&ntilde;o 1 de la rampa se pierde entero.</p>
 </div>
 """ + exhead("c", "Diecis&eacute;is compromisos para los primeros cien d&iacute;as, y el documento que prueba cada uno",
-             "Plazo: fines de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.") + """
+             "Plazo: 19 de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.") + """
 <table>
 <colgroup><col style="width:250pt"><col></colgroup>
 <tr class="hd"><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
@@ -2308,9 +2309,9 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico y las alertas</td></tr>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, y que cualquiera pueda preguntar cu&aacute;ntas &oacute;rdenes judiciales se recibieron y cu&aacute;ntas se cumplieron</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y &oacute;rdenes</td></tr>
-<tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
+<tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero, separada del programa que hoy comparte</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad s&iacute;, y deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, con una tecnicatura de dos a&ntilde;os de la UNSO, el segundo como pasante &mdash;seis meses en el Municipio y seis en una empresa del partido&mdash;; y que desde el mes 27 egrese una cohorte cada seis meses con un a&ntilde;o de trabajo real: 1.286 en el mandato y 928 por a&ntilde;o en r&eacute;gimen</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y convenios de pasant&iacute;as; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, con una tecnicatura de dos a&ntilde;os de la UNSO, el segundo como pasante &mdash;seis meses en el Municipio y seis en una empresa del partido&mdash;; y que desde el mes 27 egrese una cohorte cada seis meses con un a&ntilde;o de trabajo real: 1.286 en el mandato y 928 por a&ntilde;o en r&eacute;gimen; y 250 a 300 egresados con empleo pago por a&ntilde;o</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y convenios de pasant&iacute;as; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio; el empleo, al registro de inserci&oacute;n laboral</td></tr>
 </table>
 
 
@@ -2325,7 +2326,7 @@ que la comprueba.</p>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio, y se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se vea que fue real y que no hubo coima, y grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s</td><td class="n">Decreto de puesta en servicio, y la transmisi&oacute;n y su grabaci&oacute;n, abiertas para cualquier vecino</td></tr>
-<tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, la partida propia de g&eacute;nero, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Cada respuesta, con su fecha: se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el segundo ingreso en el mes 9 y el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>
@@ -2382,10 +2383,10 @@ vecinos antes del primer ciclo de asambleas.</p>
 <td>Es el a&ntilde;o en que el modelo se prueba y el que decide si contin&uacute;a. <b>Mitigaci&oacute;n:</b> la rampa empieza en 12,5% justamente para que un fracaso cueste un octavo y no la mitad; se interviene y se vuelve a constituir, con la partida retenida en la propia zona (4.6).</td></tr>
 <tr><td class="l">Captura de una comisi&oacute;n</td>
 <td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> un voto por persona; asamblea abierta, y cualquiera puede saber qui&eacute;n fue; cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; contrat&oacute; su comisi&oacute;n, a qui&eacute;n y por cu&aacute;nto; y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
-<tr><td class="l">Los recursos propios crecen menos de 1% real</td>
+<tr><td class="l">Los recursos propios crecen menos de 1,2% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
-<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y la sensibilidad del 3.6 la mide: si cae 3,5% por a&ntilde;o, el resultado de 2031 baja de +10.375 a +5.514 millones.</td></tr>
+<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y la sensibilidad del 3.6 la mide: si cae 3,5% por a&ntilde;o, el resultado de 2031 baja de +10.236 a +5.342 millones.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio.</td></tr>
 <tr class="hi"><td class="l">La inteligencia artificial del Municipio no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>
@@ -2393,7 +2394,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 <tr><td class="l">El asistente contesta mal</td>
 <td>Una respuesta equivocada sobre en qu&eacute; se gast&oacute; una partida vale menos que no tener asistente, porque se propaga. <b>Mitigaci&oacute;n:</b> responde s&oacute;lo sobre lo que el Municipio registr&oacute; y <b>siempre muestra el documento del que sali&oacute;</b>, as&iacute; que la respuesta se puede verificar en el mismo lugar donde se lee; y si el dato no existe, lo dice. La seguridad la auditan las universidades del partido (4.11), y hay una auditor&iacute;a externa (cuadro 27).</td></tr>
 <tr><td class="l">Queda afuera el que no tiene tel&eacute;fono o conexi&oacute;n</td>
-<td>Un mecanismo que vive en la inteligencia artificial del Municipio puede excluir exactamente a quien este programa quiere incluir. <b>Mitigaci&oacute;n:</b> la asamblea sigue siendo presencial y el voto se emite ah&iacute;; la inteligencia artificial del Municipio informa, no reemplaza. Los centros con equipamiento del 5.3 y la mesa de ayuda del equipo (4.11) existen por esta raz&oacute;n. <b>Y el relevamiento de conectividad del 5.4 es el que dice cu&aacute;n grande es el problema, porque hoy no se sabe.</b></td></tr>
+<td>Un mecanismo que vive en la inteligencia artificial del Municipio puede excluir exactamente a quien este programa quiere incluir. <b>Mitigaci&oacute;n:</b> la asamblea sigue siendo presencial y se vota ah&iacute;; el voto digital, con identidad verificada, se suma para quien no puede ir, y no reemplaza a la asamblea. Los centros con equipamiento del 5.3 y la mesa de ayuda del equipo (4.11) existen por esta raz&oacute;n. <b>Y el relevamiento de conectividad del 5.4 es el que dice cu&aacute;n grande es el problema, porque hoy no se sabe.</b></td></tr>
 <tr><td class="l">El dato territorial resulta m&aacute;s caro de construir de lo previsto</td>
 <td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.4) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las siete filas del relevamiento de transparencia no dependen de &eacute;l.</td></tr>
 </table>

@@ -19,7 +19,7 @@ resolverlo.</p>
 ocho cuotas de capital las paga el gobierno que asuma en diciembre de 2027</span>.</p>
 </div>
 <div class="pull"><div class="plabel">Por d&oacute;nde empieza</div>
-<p>El 10 de diciembre de 2027 asume el intendente. A fines de marzo de 2028 la primera asamblea de cada
+<p>El 10 de diciembre de 2027 asume el intendente. El 19 de marzo de 2028, a los cien d&iacute;as, la primera asamblea de cada
 zona ya fue convocada.</p></div>
 """ + fig("f_calle", "San Isidro, a primera hora. Ilustraci&oacute;n."))
 # Correccion 132: la firma de Casares sale hasta que el candidato apruebe el
