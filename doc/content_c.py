@@ -696,8 +696,9 @@ real</b>, como n&uacute;mero y no como imagen, para que la gente elija a cu&aacu
 firmar un alquiler.</p>
 <p>Para controlar: <b>auditor&iacute;a de compras</b> &mdash;precio unitario, stock y comparaci&oacute;n
 autom&aacute;tica contra las compras anteriores, contra los otros dos hospitales y contra los municipios
-que publiquen&mdash; y un <b>canal de denuncias</b>, revisado por el comit&eacute; de vigilancia de
-vecinos, que son personas y no un algoritmo.</p>
+que publiquen&mdash; y un <b>canal de denuncias</b> que revisa la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del
+Concejo Deliberante &mdash;personas, no un algoritmo&mdash;, con cada denuncia y su respuesta consultables en la
+inteligencia artificial del Municipio. No se crea ning&uacute;n &oacute;rgano nuevo.</p>
 <p><b>Y todo lo que este programa promete que el vecino va a poder saber se pregunta ac&aacute;</b>, no se
 busca en un PDF suelto en un portal: lo que el 5.10 encontr&oacute; ca&iacute;do o escondido, la
 ejecuci&oacute;n por zona, el tiempo de respuesta de los reclamos y las trece metas del cap&iacute;tulo 6.</p>
@@ -2425,7 +2426,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 <tr class="hi"><td class="l">El Concejo no acompa&ntilde;a <span class="tag m">Cr&iacute;tico</span></td>
 <td>Hacen falta trece votos y diez bloques se reparten veinticuatro bancas: nada se aprueba sin cuatro bloques de acuerdo. <b>Mitigaci&oacute;n:</b> el mecanismo est&aacute; dise&ntilde;ado para ser votable &mdash;no reforma la LOM, no pide facultades nuevas, no compite con el Concejo&mdash; y el primer proyecto, derogar los arts. 8 a 10, no le cuesta nada a ning&uacute;n bloque. Si aun as&iacute; no hay acuerdo, la rampa no arranca.</td></tr>
 <tr><td class="l">La tabla nueva no sale en diciembre</td>
-<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde el mes 4. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que el a&ntilde;o 1 cobra 1.437 millones en vez de 1.976, contra 1.806 que necesita el programa: 2028 cierra 369 millones peor que sin el programa, y aun as&iacute; con super&aacute;vit, +1.207. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la ordenanza va primera en la convocatoria de diciembre, como fue en 2025 la impositiva, y la lista de mayores contribuyentes de 2027 sigue vigente hasta el 30 de abril (Ley Org&aacute;nica, art. 94).</td></tr>
+<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde el mes 4. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que el a&ntilde;o 1 cobra 1.437 millones en vez de 1.976, contra 1.806 que necesita el programa: 2028 cierra 369 millones peor que sin el programa, y aun as&iacute; con super&aacute;vit, +1.207. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la preparatoria va primera en la convocatoria de diciembre, para que la asamblea se re&uacute;na antes de fin de a&ntilde;o con los ocho d&iacute;as de citaci&oacute;n que pide la Ley Org&aacute;nica (art. 98) y con su integraci&oacute;n adecuada al Concejo nuevo, como pide el Tribunal de Cuentas. La de 2025 se reuni&oacute; el 17 de diciembre.</td></tr>
 <tr><td class="l">Zonas sin asociaci&oacute;n vecinal en condiciones de ejecutar</td>
 <td>El art&iacute;culo 132 exige una asociaci&oacute;n como parte contratante; si no la hay, la zona no puede ejecutar. <b>Mitigaci&oacute;n:</b> el Municipio convoca y acompa&ntilde;a la constituci&oacute;n (4.6), y mientras tanto la partida de esa zona se ejecuta por administraci&oacute;n, en esa zona. La priorizaci&oacute;n vecinal funciona igual: lo que se demora es la ejecuci&oacute;n directa.</td></tr>
 <tr><td class="l">La tecnicatura no tiene validez nacional a tiempo</td>

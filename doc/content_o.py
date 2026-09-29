@@ -114,6 +114,9 @@ un establecimiento de salud. El asistente de consulta que el Sistema provea resp
 ejercer&aacute; funci&oacute;n alguna de moderaci&oacute;n, filtro o selecci&oacute;n de la informaci&oacute;n</b>.</p>
 
 <h2>III &middot; Ordenanza de actualizaci&oacute;n de la base de valuaci&oacute;n</h2>
+<p class="tight"><i>Como sube lo que se emite, la sanciona la asamblea de concejales y mayores contribuyentes
+(Constituci&oacute;n provincial, art. 193, inc. 2) sobre una ordenanza preparatoria del Concejo. As&iacute; se
+sancion&oacute; la tabla de 2008.</i></p>
 
 <h3>Art&iacute;culo 1 &mdash; Actualizaci&oacute;n</h3>
 <p class="tight">Actual&iacute;zase la tabla de valores de tierra por manzana que rige el c&aacute;lculo
