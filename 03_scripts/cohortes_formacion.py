@@ -20,6 +20,11 @@ Supuestos, todos del documento:
   una empresa del partido, una contratista o una startup del semillero.
 - Correccion 178: dos ingresos por anio, en los meses 3 y 9 de cada anio; en
   cada uno entra la mitad de la cohorte anual.
+- Decision de Nick (29/09): los dos primeros anios la formacion usa toda la
+  partida de empleo (no hay egresados que contratar todavia); desde el tercero
+  vuelve el 60/40. Asi entran 462 y 824 en vez de 277 y 494, y egresan 1.286 en
+  el mandato. Es el esquema "decidido"; "anual" y "semestral" quedan para
+  comparar.
 El mandato son 48 meses.
 
 Uso: python3 03_scripts/cohortes_formacion.py [--csv data/cohortes_formacion.csv]
@@ -53,11 +58,20 @@ def cohorte_anual(k):
     return programa * PARTE_FORMACION / COSTO_PERSONA
 
 
+def cohorte_decidida(k):
+    """Anios 1 y 2: toda la partida de empleo va a formacion. Desde el 3, 60/40."""
+    if k > 2:
+        return cohorte_anual(k)
+    paso = Decimal(min(k, ANIOS_RAMPA)) / Decimal(ANIOS_RAMPA)
+    empleo = (BASE + NUEVO * paso) * Decimal("0.6")
+    return empleo / COSTO_PERSONA
+
+
 def ingresos(esquema, anios=8):
     """Lista de (mes de ingreso, personas)."""
     out = []
     for k in range(1, anios + 1):
-        anual = entero(cohorte_anual(k))
+        anual = entero(cohorte_decidida(k) if esquema == "decidido" else cohorte_anual(k))
         m0 = 12 * (k - 1) + MES_PRIMER_INGRESO
         if esquema == "anual":
             out.append((m0, anual))
@@ -102,7 +116,7 @@ def main():
         v = cohorte_anual(k)
         print(f"  anio {k}: {v:.2f} -> {entero(v)}")
 
-    for esquema in ("anual", "semestral"):
+    for esquema in ("anual", "semestral", "decidido"):
         ings = ingresos(esquema)
         eg_mandato = sum(n for m0, n in ings if m0 + DURACION <= MANDATO)
         print(f"\nEsquema {esquema}:")
@@ -113,8 +127,9 @@ def main():
         en_curso = sum(n for m0, n in ings if m0 <= MANDATO < m0 + DURACION)
         print(f"  al terminar el mandato siguen en formacion o pasantia: {en_curso}")
 
-    ings = ingresos("semestral", anios=10)
-    print("\nSemestral, pasantia partida: quienes estan en cada tramo, por mes")
+    ings = ingresos("decidido", anios=10)
+    print("\nDecidido (dos ingresos, pasantia partida, formacion con toda la partida de "
+          "empleo los anios 1 y 2): quienes estan en cada tramo, por mes")
     print("  mes  cursan  Municipio  empresas  egresados")
     filas = []
     max_mun_mandato = max_emp_mandato = 0
@@ -143,7 +158,8 @@ def main():
 
     if a.csv:
         with open(a.csv, "w", newline="", encoding="utf-8") as f:
-            f.write("# Formacion laboral con dos ingresos por anio y la pasantia partida\n")
+            f.write("# Formacion laboral: dos ingresos por anio, pasantia partida y formacion con toda la\n")
+            f.write("# partida de empleo en los anios 1 y 2 (esquema decidido el 29/09/2026).\n")
             f.write("# (6 meses en el Municipio y 6 en empresas). Generado por\n")
             f.write("# 03_scripts/cohortes_formacion.py. Mes 1 = primer mes del mandato.\n")
             w = csv.DictWriter(f, fieldnames=list(filas[0].keys()))

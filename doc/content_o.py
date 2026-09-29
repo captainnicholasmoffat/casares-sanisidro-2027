@@ -235,7 +235,7 @@ penalidades&mdash; ser&aacute; <b>aprobado por ordenanza con anterioridad al lla
 vecinal registrado en el Sistema de Informaci&oacute;n Municipal es prueba admisible a los fines de las
 penalidades.</p>
 
-<h2>X &middot; Ordenanza de empleo local</h2>
+<h2>X &middot; Ordenanza de empleo local y del semillero de empresas</h2>
 
 <h3>Art&iacute;culo 1 &mdash; M&iacute;nimo de personal del partido</h3>
 <p class="tight">En todo contrato que celebre el Municipio &mdash;obra, servicios y desarrollos&mdash; y en la obra que
@@ -258,10 +258,7 @@ afuera en lugar de un egresado hay que demostrar ante el panel t&eacute;cnico qu
 capacidad requerida.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Pasant&iacute;as</h3>
-<p class="tight">El Municipio firma con cada instituci&oacute;n formadora el convenio de pasant&iacute;as de la Ley
-26.427. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. Cada
-&aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus
-pasantes.</p>
+<p class="tight">El Municipio firma con la Universidad Nacional Ra&uacute;l Scalabrini Ortiz un convenio para dictar en las sedes de formaci&oacute;n una tecnicatura universitaria de dos a&ntilde;os, y con ella el convenio de pasant&iacute;as de la Ley 26.427. La pasant&iacute;a dura doce meses en dos tramos de seis: el primero en el Municipio y el segundo en una empresa del partido o una contratista del Municipio. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. El tope del 7% de la planta se cuenta sobre los pasantes en curso. Cada &aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus pasantes; en el segundo tramo, la empresa.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Partida de incentivo docente</h3>
 <p class="tight">El convenio con el centro de formaci&oacute;n incluye una <b>partida de incentivo docente</b>, a
@@ -269,6 +266,18 @@ cargo del Municipio, que el centro paga al profesor cuyos tutorados m&aacute;s s
 alumno vota a su tutor entre sus profesores, y cada profesor tiene un tope de tutorados. El monto se fija en
 el convenio, que se consulta en el Sistema de Informaci&oacute;n Municipal. El tutor no puede tener cargo rentado
 en el Municipio, conforme al art&iacute;culo 10 de la Ley 26.427.</p>
+
+<h3>Art&iacute;culo 6 &mdash; Beca de pr&aacute;ctica</h3>
+<p class="tight">Quien no consiga lugar para el segundo tramo de la pasant&iacute;a, o no pueda inscribirse en la universidad por no tener el secundario completo siendo menor de veinticinco a&ntilde;os, hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante con una <b>beca municipal igual a la asignaci&oacute;n est&iacute;mulo del pasante</b>. El Municipio acompa&ntilde;a la terminalidad del secundario por el Plan FinEs.</p>
+
+<h3>Art&iacute;culo 7 &mdash; Subcontrataci&oacute;n</h3>
+<p class="tight">En toda licitaci&oacute;n p&uacute;blica, el adjudicatario subcontrata <b>al menos el 20% del valor del contrato con peque&ntilde;as y medianas empresas con domicilio en el partido</b>, y dentro de ese porcentaje, <b>al menos el 5% del valor del contrato con empresas del partido de menos de cinco a&ntilde;os</b>, con prioridad para las del semillero municipal. La condici&oacute;n integra el pliego antes del llamado. Quien no encuentre en el partido qui&eacute;n pueda hacerlo lo justifica ante el panel t&eacute;cnico del art&iacute;culo 2.</p>
+
+<h3>Art&iacute;culo 8 &mdash; Pago a quince d&iacute;as</h3>
+<p class="tight">El pliego fija, para todos los oferentes, el pago a quince d&iacute;as de la factura conformada. La parte subcontratada conforme al art&iacute;culo 7 se paga directamente a la subcontratada, por cesi&oacute;n del cr&eacute;dito registrada en el Municipio. El pliego puede prever un anticipo, contra p&oacute;liza de cauci&oacute;n por el total adelantado.</p>
+
+<h3>Art&iacute;culo 9 &mdash; Semillero de empresas y pr&eacute;stamo que multiplica</h3>
+<p class="tight">Cr&eacute;ase el semillero municipal de empresas: un a&ntilde;o de incubaci&oacute;n en las sedes de formaci&oacute;n, con mentores y asistencia para constituir la sociedad, inscribirse y facturar. El Municipio presta a tasa cero a cada empresa del semillero <b>un peso por cada peso de capital privado, nacional o provincial</b> que reciba, hasta el costo anual de un junior de la plataforma, y el pr&eacute;stamo se devuelve con la facturaci&oacute;n. El Municipio no participa del capital de ninguna empresa.</p>
 
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>
@@ -301,7 +310,7 @@ ac&aacute;</b>. Las otras cinco no lo necesitan.</p>
 conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; y abrir un
 centro de apoyo escolar en cada localidad. <b>Una ordenanza que fijara esos montos de una vez
 atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone. La formaci&oacute;n
-laboral tiene sus reglas en la Ordenanza X &mdash;pasant&iacute;as, incentivo docente y empleo local&mdash;, pero cu&aacute;ntas
+laboral tiene sus reglas en la Ordenanza X &mdash;pasant&iacute;as, incentivo docente, becas, empleo local, subcontrataci&oacute;n y semillero&mdash;, pero cu&aacute;ntas
 personas forma por a&ntilde;o tambi&eacute;n lo fija el presupuesto.</p>
 <p><b>La cuarta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>

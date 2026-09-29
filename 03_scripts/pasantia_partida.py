@@ -106,6 +106,17 @@ def main():
     print(f"lo que pagan las empresas por los segundos seis meses: {q(COSTO_PASANTE * PASANTES_A_LA_VEZ)} M "
           f"por anio (hoy, por 591: {q(COSTO_PASANTE * 591)} M)")
 
+    # Decisiones del 29/09: la beca de practica y el modulo de salud de los anios
+    # 1 y 2 salen del gasto flexible libre.
+    beca = D(PASANTES_A_LA_VEZ) * D("0.24") * 12          # peor caso: nadie en empresas
+    salud_max = (D("505.7") + D("7225.2") / 2) * D("0.6") * D("0.4")  # contratacion del anio 2
+    occ_beca = occ + beca / FLEXIBLE * 100
+    occ_todo = occ_beca + salud_max / FLEXIBLE * 100
+    print(f"\nbeca de practica, peor caso (464 a la vez, 240.000 $ por mes): {q(beca)} M por anio")
+    print(f"libre con la beca: {q(100 - occ_beca)}%")
+    print(f"modulo de salud de los anios 1 y 2, como maximo la contratacion del anio 2: {q(salud_max)} M")
+    print(f"libre con las dos cosas: {q(100 - occ_todo)}%")
+
 
 if __name__ == "__main__":
     main()

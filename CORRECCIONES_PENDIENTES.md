@@ -2276,3 +2276,54 @@ Todo lo que sigue mueve cifras: espera el visto bueno de Nick. El documento no s
 Síntesis punto 3; 5.3 (lista 1, "El segundo año", "Dónde", planta reasignada, cuadros 31 y 32 y su nota); 3.4
 (cuadro 14 y "Cuánto suma todo"); 6.3 (meta de formación); 6.4 (meses 3, 9, 15, 21 y 27); cuadro 36 (compromiso
 12, si corresponde); anexo, Ordenanza X art. 4 (y artículos nuevos del semillero); fuentes del 5.3.
+
+# 176 A 178, LA UNSO Y EL SEMILLERO · APLICADAS (29/09)
+Decisiones de Nick en dos dispatches del 29/09. Rama claude/cool-hopper-3hdk58 (trae lo de lucid-knuth).
+
+## LA FORMACIÓN CON LA UNSO
+- Verificado antes de escribir: la Ley 26.427 incluye a la formación profesional (art. 1); la Provincia la excluye
+  (Res. DGCyE 5356/24, art. 5) y la reglamentación le da a la Provincia esa llave (Res. Conj., art. 13). Sirve ser
+  alumno regular de una tecnicatura universitaria con validez nacional; una diplomatura no. La UNSO no tiene hoy
+  tecnicatura de IA ni datos (20 carreras); su reglamento de equivalencias no reconoce cursos de FP; regular = PIEU y
+  2 materias por año; ingreso con secundario o mayores de 25 por el art. 7 de la LES.
+- 5.3: la formación es una tecnicatura de la UNSO en IA aplicada y datos, dictada en las sedes: la práctica la da
+  el CFL con docentes de la Provincia; la UNSO dicta sus materias, designa al docente guía y firma las pasantías.
+  "Una carrera de verdad". Precedentes: UNICEN en Rauch, Olavarría, Necochea y Las Flores; UTN en Chivilcoy,
+  Escobar y Zárate; Rauch, Necochea y Chivilcoy la pagan con fondos propios (verificado; los otros cuatro, convenio
+  o espacio municipal). Se paga dentro de los 3 M por persona.
+- En paralelo, el pedido a la Provincia para que habilite la pasantía en la FP. Sin secundario y menor de 25:
+  práctica con beca de 240.000 $ y secundario por el Plan FinEs.
+- 6.6: fila nueva, "La tecnicatura no tiene validez nacional a tiempo" (si no llega antes del mes 15, práctica con
+  beca). "Doce cosas". 6.4: fila de los meses 1 a 3 con el convenio y los dos pedidos. 4.11: el título lo da la UNSO.
+
+## 176
+- "Todos tienen lugar" (art. 2: no se puede obligar). Dos tramos de seis meses, cada uno con su convenio y acuerdo.
+- El tope se cuenta sobre los pasantes en curso, igual que los tutores. 464 a la vez; 467 lugares en proyectos.
+- Cuadro 31 con cinco filas nuevas (13 equipos). Cuadro 32: 464 y 464; supervisores 48 y 47. Planta reasignada 77.
+- La segunda mitad en empresas del partido o contratistas, con la Cámara de Comercio y Servicios del Partido de San
+  Isidro (estatuto: Cámara del Comercio e Industria de San Isidro) y las de Boulogne y Béccar; 4.640 a 6.629
+  empleados son del 5% al 7% de los 93.071 puestos privados. El semillero no aparece como anfitrión de pasantes.
+- Si no hay lugar: 92 del Municipio, otros organismos (Concejo, 29), práctica con beca. Peor caso 1.336,3 M.
+- 3.4: 2.135,3 M de las áreas, fila del semillero (121,0 M, Ciencia y Técnica, 22,0%), "nueve partes"; 52,8% ocupado
+  y 47,2% libre; con la beca en el peor caso y el módulo de salud de los años 1 y 2 (como máximo 988,4 M), libre 44,6%.
+
+## 178
+- Dos ingresos por año; la formación usa toda la partida de empleo en los años 1 y 2 (462 y 824), el tercero vuelve
+  el 60/40 (711). Entran 231, 231, 412, 412, 355, 356, 464 y 464; egresan 1.286 en el mandato (meses 27, 33, 39, 45).
+- Ningún compromiso de los cien días se atrasa: ninguno usa la partida de contratación. El módulo de salud de los
+  meses 12 a 18 sale esos dos años del gasto flexible libre (decisión de Nick: no de Ciencia y Técnica).
+- Síntesis, 5.3, cuadro 33 (464 cada seis meses y la nota de los años 1 y 2), meta del 6.3 (1.286) y 6.4 (meses 9,
+  15, 21, 27 y 45).
+
+## 177 · EL SEMILLERO
+- 5.3: sección nueva. 20 empresas por año, 16 en el mandato; 20% de cada licitación a pymes del partido y, dentro, 5%
+  del valor del contrato a empresas de menos de cinco años (15.635,6 y 3.908,9 M); pago a 15 días en el pliego para
+  todos y pago directo a la subcontratada; anticipo con caución; préstamo 1 a 1 por ordenanza; 121 M de Ciencia y
+  Técnica. Anexo, Ordenanza X: artículos 6 (beca), 7 (subcontratación), 8 (pago a quince días) y 9 (semillero y
+  préstamo). Síntesis punto 2. Fuentes: fila nueva del 5.3.
+- informes/10_semillero.md actualizado con lo decidido.
+
+## EL PDF
+40 páginas, 40 exhibits del 1 al 40 sin saltos, referencias resueltas, fuentes sin sustituciones, cero viudas,
+ninguna página pasa de 2.700 pt. Barrido: "plata" 0 (sólo La Plata y Mar del Plata), "azul" 0, "rojo" 0.
+Scripts: 03_scripts/cohortes_formacion.py (esquema decidido) y 03_scripts/pasantia_partida.py (44,6% libre).

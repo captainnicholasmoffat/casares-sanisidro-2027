@@ -2,11 +2,24 @@
 
 Corrección 177. 29 de septiembre de 2026. Rama `claude/lucid-knuth-emp85i`, sobre la entrega `395672c`.
 
-**Estado: propuesta para decidir. Nada de esto está en el documento todavía.** Los montos van en millones
-de pesos de diciembre de 2025, como el resto del programa, salvo donde se aclara otra cosa. Todas las
-fuentes se consultaron el 29/09/2026; las citas van en su idioma original.
+**Estado: decidido por Nick el 29/09/2026 y aplicado en el documento (5.3, 3.4, 6.4 y anexo, Ordenanza X).**
+Los montos van en millones de pesos de diciembre de 2025, como el resto del programa, salvo donde se aclara otra
+cosa. Todas las fuentes se consultaron el 29/09/2026; las citas van en su idioma original.
 
-## Lo que hay que decidir
+## Lo decidido
+
+- **Subcontratación en dos niveles:** el 20% del valor de cada licitación para pymes del partido, de cualquier
+  antigüedad; dentro de ese 20%, el 5% del valor del contrato reservado para empresas del partido de menos de cinco
+  años, las del semillero primero. Sobre los contratos grandes de hoy (recolección y obra por contratista, 78.178 M),
+  son 15.635,6 M para pymes y 3.908,9 M para empresas nuevas. Reemplaza al 3% de la propuesta original (sección 4).
+- **Pago a 15 días en el pliego, para todos los oferentes,** y la parte subcontratada se paga directo a la empresa chica,
+  por cesión del crédito (sección 5).
+- **El semillero sale de Ciencia y Técnica,** que queda ocupada en 22,0%, y el fondo que multiplica es un préstamo
+  municipal, un peso por cada peso de capital privado, nacional o provincial, aprobado por ordenanza (sección 6).
+- **No se promete que el semillero tome pasantes:** una empresa necesita al menos un empleado por tiempo indeterminado
+  y el cupo es uno cada diez empleados. La segunda mitad de la pasantía la cubren las empresas del partido.
+
+## La propuesta original, para decidir
 
 | Qué | Propuesta | Por qué ese número |
 |---|---|---|
@@ -105,7 +118,9 @@ fuentes se consultaron el 29/09/2026; las citas van en su idioma original.
 
 ## 4. El porcentaje de subcontratación
 
-**Propuesta:** en todo contrato de licitación pública (más de 140.565.928 $, montos vigentes desde el
+**Lo decidido:** 20% del valor de cada licitación para pymes del partido, y dentro de eso 5% del valor del contrato para empresas del partido de menos de cinco años, con las del semillero primero. Los precedentes del 20% son Francia (R2213-5, desde 2025) y, más alto, la propia Provincia (30% de pymes en su obra pública, Ley 6021, art. 9 ter). El 5% cubre de sobra el primer cliente de las empresas del semillero: 3.908,9 M por año sobre los contratos grandes de hoy.
+
+**La propuesta original, que se reemplazó:** en todo contrato de licitación pública (más de 140.565.928 $, montos vigentes desde el
 01/06/2026), el 3% se subcontrata a empresas con domicilio en el partido y menos de cinco años de vida, y dentro
 de ese 3% las del semillero van primero. El Municipio le paga directamente a la subcontratada y a 15 días. Si
 en el partido no hay quién pueda hacerlo, se justifica ante el panel, con el mismo mecanismo del 75% de empleo

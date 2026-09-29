@@ -22,20 +22,17 @@ Municipio, pero s&iacute; permite reservar ese dinero, y eso es lo que este prog
 <li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y
 cooperativas de San Isidro, igual que la ley provincial ya permite contratar sin licitaci&oacute;n a las
 cooperativas y asociaciones de vecinos para la obra de su propio barrio. Y si ac&aacute; nadie puede hacerlo, <span class="sg">la
-capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las
-universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa.
+capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa, que entra al semillero del Municipio con su primer cliente: <b>cada licitaci&oacute;n grande subcontrata el 20% a pymes del partido, y el 5% del contrato a empresas de menos de cinco a&ntilde;os</b>, que cobran a quince d&iacute;as.
 <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
-tecnolog&iacute;a</b>, con t&iacute;tulo de la universidad nacional del partido, para que lo aprendido
+tecnolog&iacute;a</b>, con una tecnicatura de la universidad nacional del partido, para que lo aprendido
 sirva tambi&eacute;n fuera del Municipio. Y <b>un centro de apoyo escolar en cada localidad</b>, donde hoy
 no hay ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
 empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
 administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la
-parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, formadas en dos
-a&ntilde;os &mdash;el primero cursan y el segundo trabajan como pasantes&mdash;, con un tutor que las acompa&ntilde;a hasta el empleo:
-uno de sus profesores, votado por cada alumno. <span class="sg">La formaci&oacute;n laboral se
+parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, que entran de a 464 cada seis meses y se forman en dos a&ntilde;os: el primero cursan, y el segundo trabajan como pasantes, seis meses en el Municipio y seis en una empresa del partido, con un tutor que las acompa&ntilde;a hasta el empleo: uno de sus profesores, votado por cada alumno. En el mandato egresan 1.286. <span class="sg">La formaci&oacute;n laboral se
 paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: un asistente propio

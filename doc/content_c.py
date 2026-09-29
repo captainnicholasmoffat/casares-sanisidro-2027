@@ -748,8 +748,7 @@ auditor&iacute;a es a su vez trabajo</span>.</p>
 
 <h3>El t&iacute;tulo, que es lo que hace que el egresado no quede atado</h3>
 <div class="cols">
-<p><b>Las universidades del partido certifican, con la UNSO a la cabeza</b> por ser nacional y tener
-sede en San Isidro. Los t&iacute;tulos tienen validez oficial.</p>
+<p><b>El t&iacute;tulo lo da la UNSO</b>, la universidad nacional con sede en San Isidro: una tecnicatura universitaria de dos a&ntilde;os, con la validez nacional que reconoce el Ministerio de Educaci&oacute;n (5.3).</p>
 <p><b>Sin eso, el egresado tiene experiencia y no puede probarla</b>, y queda atado al Municipio como
 &uacute;nico empleador que sabe lo que sabe hacer. Con t&iacute;tulo, lo que aprendi&oacute; construyendo
 la plataforma vale en cualquier empresa del pa&iacute;s.</p>
@@ -790,7 +789,7 @@ hace planta reasignada, que ya cobra su sueldo. Son sueldos de referencia, a pre
 comprometerse. <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>Sale de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones al a&ntilde;o.</b> Con los dispositivos son
-1.676,6 millones, el <b>20,6%</b> de esa partida. No hay fondos nuevos y no hay una partida que crear.</p>
+1.676,6 millones, el <b>20,6%</b> de esa partida, y con el semillero de empresas del 5.3, el 22,0%. No hay fondos nuevos y no hay una partida que crear.</p>
 <p><b>Para dimensionarlo:</b> la plataforma, 1.585,5 millones, es
 <span class="sg">el 11% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.654,8 millones, el quinto programa del presupuesto&mdash;.</p>
@@ -916,10 +915,7 @@ le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, qu
 <li><b>Formaci&oacute;n laboral orientada a la demanda real.</b> El <b>Centro de Formaci&oacute;n
 Laboral N&ordm; 404 Barrio La Cava</b> funciona en Intendente Neyer 1457, B&eacute;ccar, desde hace
 m&aacute;s de veinte a&ntilde;os, y desde ah&iacute; se impulsa el proyecto <b>La Cava 4.0</b>. Este
-programa lo acompa&ntilde;a con recursos municipales y lleva el modelo a las seis zonas. <b>La formaci&oacute;n dura
-dos a&ntilde;os:</b> el primero es cursada y el segundo, una pasant&iacute;a de doce meses en proyectos reales. El t&iacute;tulo se
-entrega al terminar el segundo, as&iacute; que el pasante sigue siendo estudiante todo ese a&ntilde;o, que es lo que exige la
-Ley 26.427.</li>
+programa lo acompa&ntilde;a con recursos municipales y lleva el modelo a las seis zonas. <b>La formaci&oacute;n dura dos a&ntilde;os y abre inscripci&oacute;n cada seis meses:</b> el primero es cursada y el segundo, dos pasant&iacute;as de seis meses en proyectos reales, la primera en el Municipio y la segunda en una empresa del partido. <b>Es una tecnicatura universitaria de la UNSO en inteligencia artificial aplicada y datos</b>, dictada en las sedes: la pr&aacute;ctica la da el centro de formaci&oacute;n, con docentes que paga la Provincia, y la UNSO dicta sus materias, con docentes que designa ella, y firma las pasant&iacute;as. Es una carrera de verdad, con materias que se aprueban cada a&ntilde;o, y el t&iacute;tulo se entrega al terminar el segundo: el pasante sigue siendo estudiante regular todo ese a&ntilde;o, que es lo que exige la Ley 26.427.</li>
 <li><b>La obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4,
 ejecutados por cooperativas de vecinos, emplean gente del barrio.</li>
 <li><b>Intermediaci&oacute;n laboral, dentro del programa formativo y no en una oficina aparte.</b> El tutor que vincula al egresado con el empleador es parte de la formaci&oacute;n: es la pieza que
@@ -1039,25 +1035,14 @@ construyendo</span>, no formarse primero y trabajar despu&eacute;s.</p>
 
 <h3>El segundo a&ntilde;o: la pasant&iacute;a</h3>
 <div class="cols">
-<p><b>Todos la hacen.</b> Los 928 alumnos de cada a&ntilde;o hacen el segundo como pasantes, con las condiciones
-de la Ley 26.427: <b>240.000 $ por mes</b> &mdash;el sueldo de la categor&iacute;a de ingreso municipal, proporcional
-a veinte horas&mdash;, <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>, durante doce meses, con ART y
-cobertura de salud. Todo eso va en el <b>convenio de pasant&iacute;as</b> que la ley exige entre el centro de
-formaci&oacute;n y el Municipio. <b>Cada &aacute;rea paga a los pasantes que trabajan para ella</b>, de su propio
-presupuesto: salud los de salud, seguridad los de seguridad.</p>
+<p><b>Todos tienen lugar.</b> La ley no permite obligar a nadie a hacer una pasant&iacute;a (art&iacute;culo 2), as&iacute; que lo que el programa garantiza es el lugar: cada uno de los 928 alumnos del a&ntilde;o puede hacer el segundo como pasante, con las condiciones de la Ley 26.427: <b>240.000 $ por mes</b> &mdash;el sueldo de la categor&iacute;a de ingreso municipal, proporcional a veinte horas&mdash;, <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>, durante doce meses en <b>dos tramos de seis</b>, con ART y cobertura de salud. La ley admite pasant&iacute;as de dos a doce meses (art&iacute;culo 13), y cada tramo lleva su convenio y su acuerdo individual, que firma la UNSO. <b>El primer tramo lo paga el &aacute;rea del Municipio</b> para la que trabaja el pasante, de su propio presupuesto; <b>el segundo, la empresa</b>.</p><p><b>Por qu&eacute; con la UNSO.</b> La Ley 26.427 incluye a la formaci&oacute;n profesional (art&iacute;culo 1), pero en la Provincia la excluye una resoluci&oacute;n, la 5356/24 de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que s&oacute;lo le da pr&aacute;cticas que no se pagan. Como estudiantes de una carrera universitaria, la ley cubre a los alumnos sin depender de esa resoluci&oacute;n. <b>En paralelo, el Municipio le pide a la Provincia que habilite la pasant&iacute;a en la formaci&oacute;n profesional</b>: la ley lo permite, y su reglamentaci&oacute;n le da a la Provincia esa llave (art&iacute;culo 13 de la Resoluci&oacute;n Conjunta 825/2009 y 338/2009). No es una idea nueva: <b>Rauch, Olavarr&iacute;a, Necochea y Las Flores tienen una tecnicatura de la UNICEN por convenio con el municipio, y Chivilcoy, Escobar y Z&aacute;rate, una de la UTN en espacios municipales</b>; Rauch, Necochea y Chivilcoy la pagan con fondos propios. El Municipio paga la de la UNSO dentro de los 3 millones por persona.</p><p><b>Quien no termin&oacute; el secundario.</b> La universidad pide el secundario completo, o m&aacute;s de 25 a&ntilde;os y aprobar sus evaluaciones de ingreso. Quien no lo tiene y es menor de 25 hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante, con una <b>beca municipal igual a la asignaci&oacute;n del pasante, 240.000 $ por mes</b>, y termina el secundario por el Plan FinEs mientras cursa.</p>
 <p><b>Los pasantes trabajan s&oacute;lo en proyectos nuevos:</b> construir, automatizar, relevar datos que hoy
 no existen. <b>Nunca hacen tareas de la planta ni cubren vacantes</b>: la ley lo proh&iacute;be (art&iacute;culo 12),
 y si pasara, la pasant&iacute;a se convertir&iacute;a en empleo por tiempo indeterminado (art&iacute;culo 19). <span
 class="sg">La pasant&iacute;a es formativa, no estructural</span>: si un a&ntilde;o no hubiera pasantes, el Municipio
 funcionar&iacute;a igual. La operaci&oacute;n de todos los d&iacute;as la sostienen los juniors y la planta reasignada.</p>
-<p><b>D&oacute;nde.</b> En el Municipio entran como m&aacute;ximo 556 pasantes a la vez: el 7% de los 7.946 cargos del
-presupuesto 2026, que es el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. Los
-proyectos de las &aacute;reas, la plataforma y los dispositivos ocupan <b>337</b> (cuadro [[n:proyectos]]).
-<b>Los otros 591 hacen la pasant&iacute;a en las empresas que trabajan para el Municipio</b>, con la misma regla y
-pagados por ellas. Las empresas tambi&eacute;n tienen tope: uno cada diez empleados, o el 7% si tienen m&aacute;s de
-doscientos.</p>
-<p><b>Un tutor y un supervisor.</b> El tutor es uno solo: el profesor que el alumno vota, el &laquo;docente
-gu&iacute;a&raquo; de la ley, que lo acompa&ntilde;a y lo vincula con el empleo. <b>Su incentivo lo paga el Municipio, a la
+<p><b>D&oacute;nde.</b> En el Municipio entran como m&aacute;ximo 556 pasantes: el 7% de los 7.946 cargos del presupuesto 2026, que es el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. El tope se cuenta sobre los pasantes en curso, igual que los tutores, que tienen que estar presentes todo el horario. Con seis meses cada uno, <b>hay 464 a la vez</b>, y los proyectos de las &aacute;reas, la plataforma y los dispositivos tienen lugar para 467 (cuadro [[n:proyectos]]). <b>La segunda mitad es en una empresa del partido o una contratista del Municipio</b>, con la misma regla y pagada por ella, por un convenio marco con la C&aacute;mara de Comercio y Servicios del Partido de San Isidro &mdash;en su estatuto, C&aacute;mara del Comercio e Industria de San Isidro&mdash; y con las c&aacute;maras de Boulogne y de B&eacute;ccar. Las empresas tambi&eacute;n tienen tope: uno cada diez empleados, o el 7% si tienen m&aacute;s de doscientos. Para 464 a la vez hacen falta empresas con entre 4.640 y 6.629 empleados: <b>del 5% al 7% de los 93.071 puestos privados registrados del partido</b>.</p><p><b>Si a alguien no le toca lugar en la segunda mitad.</b> Primero, los 92 lugares que el tope todav&iacute;a deja en el Municipio; despu&eacute;s, otros organismos p&uacute;blicos del partido, cada uno con su propio 7% &mdash;el Concejo Deliberante tiene 416 cargos: 29 lugares&mdash;; y si a&uacute;n falta, la pr&aacute;ctica en proyectos del centro de formaci&oacute;n, que no tiene tope. La pr&aacute;ctica no se paga, as&iacute; que el Municipio da la misma beca de 240.000 $ por mes. <b>El peor caso, que ninguna empresa tome a nadie, cuesta 1.336,3 millones por a&ntilde;o</b>, y sale del gasto flexible que queda libre (3.4).</p>
+<p><b>Un tutor y un supervisor.</b> El tutor es uno solo: el profesor que el alumno vota, que la UNSO designa como &laquo;docente gu&iacute;a&raquo; de la ley y que lo acompa&ntilde;a y lo vincula con el empleo. <b>Su incentivo lo paga el Municipio, a la
 vista:</b> el convenio con el centro de formaci&oacute;n lleva una <b>partida de incentivo docente</b>, y el
 centro se la paga al profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. El dinero es del
 Municipio; el centro s&oacute;lo lo transfiere. No es un cargo en el Municipio, que es lo que el art&iacute;culo 10 de
@@ -1065,15 +1050,14 @@ la ley le proh&iacute;be al docente gu&iacute;a. En el lugar de trabajo, adem&aa
 pasantes, presente todo el horario</b>: en las &aacute;reas, planta reasignada; en la plataforma, sus
 seniors.</p>
 <p><b>La planta que se reasigna no pierde nada.</b> Cuando la automatizaci&oacute;n libera tareas, nadie se va:
-el empleado estudia para el rol nuevo, conserva su sueldo y ocupa un puesto de la pir&aacute;mide. Son 64: 32
-supervisores, 26 que sostienen la operaci&oacute;n de noche y los fines de semana, y 6 que atienden en cada zona
+el empleado estudia para el rol nuevo, conserva su sueldo y ocupa un puesto de la pir&aacute;mide. Son 77: 45 supervisores, 26 que sostienen la operaci&oacute;n de noche y los fines de semana, y 6 que atienden en cada zona
 a quien no puede usar solo la inteligencia artificial del Municipio. No cobran como pasantes. <span
 class="sg">Es un programa de reconversi&oacute;n, no de recorte</span>, y baja el costo nuevo, porque esos puestos
 ya se pagan. Hasta que egresan los primeros juniors, en el mes 27, la operaci&oacute;n la sostiene la planta
 reasignada.</p>
 </div>
 """ + exhead("c", "Los pasantes, en proyectos nuevos; la operaci&oacute;n de todos los d&iacute;as, en manos de juniors",
-             "&Aacute;rea por &aacute;rea, en r&eacute;gimen: cu&aacute;ntos pasantes hay, qu&eacute; construyen o relevan, y cu&aacute;ntos juniors sostienen la operaci&oacute;n.",
+             "&Aacute;rea por &aacute;rea, en r&eacute;gimen: cu&aacute;ntos lugares hay para pasantes, qu&eacute; construyen o relevan, y cu&aacute;ntos juniors sostienen la operaci&oacute;n.",
              key="proyectos") + """
 <table>
 <colgroup><col style="width:84pt"><col style="width:46pt"><col><col style="width:128pt"></colgroup>
@@ -1084,13 +1068,16 @@ reasignada.</p>
 <tr><td class="l">Obra</td><td class="n">30</td><td class="m">Uno de automatizaci&oacute;n, y dos que relevan casa por casa los hogares sin cloaca y sin gas, el estado de las 3.250 manzanas y la obra de los &uacute;ltimos a&ntilde;os, zona por zona</td><td class="m">17: el seguimiento de las obras en curso y de las manzanas</td></tr>
 <tr><td class="l">Habilitaciones</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, y uno que releva qu&eacute; rubro se puede habilitar en cada una de las 69.258 parcelas, y las inspecciones por rubro</td><td class="m">4: tr&aacute;mites, consulta previa e inspecciones</td></tr>
 <tr><td class="l">Comunicaci&oacute;n</td><td class="n">10</td><td class="m">Uno que carga lo que el 5.10 encontr&oacute; ca&iacute;do o escondido, con su documento de origen</td><td class="m">7: reclamos hasta cerrarlos, asambleas y respuestas</td></tr>
+<tr><td class="l">Hacienda y recaudaci&oacute;n</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, y uno que carga cada gasto con su zona, para que cualquier vecino sepa cu&aacute;nto se gast&oacute; en la suya</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Ambiente y espacio p&uacute;blico</td><td class="n">30</td><td class="m">Dos de automatizaci&oacute;n &mdash;la programaci&oacute;n del barrido y de la poda, y los reclamos hasta cerrarlos&mdash; y uno que mide el servicio de recolecci&oacute;n zona por zona</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Movilidad</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, las licencias de conducir, y uno que mide el ruido con sensores donde est&aacute; el problema</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Desarrollo social y personas mayores</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, y uno que releva hogar por hogar a los mayores que ya no pueden salir, para la atenci&oacute;n domiciliaria</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Gobierno, legal y t&eacute;cnica, gabinete y cultura</td><td class="n">40</td><td class="m">El padr&oacute;n de asociaciones vecinales, el digesto de ordenanzas y decretos, la planta y la escala salarial consultables, y los espacios culturales y lo que traba su habilitaci&oacute;n</td><td class="m">&mdash;</td></tr>
 <tr><td class="l">Plataforma y dispositivos</td><td class="n">17</td><td class="m">Construyen los m&oacute;dulos de la inteligencia artificial del Municipio e instalan los equipos</td><td class="m">15, con los seniors</td></tr>
-<tr class="hi"><td class="l">Municipio</td><td class="n"><b>337</b></td><td class="m">El tope de la ley es 556</td><td class="m"><b>105</b></td></tr>
-<tr><td class="l">Empresas contratadas</td><td class="n">591</td><td class="m">La misma regla: proyectos, no puestos</td><td class="m">&mdash;</td></tr>
+<tr class="hi"><td class="l">Municipio</td><td class="n"><b>467</b></td><td class="m">El tope de la ley es 556; a la vez hay 464</td><td class="m"><b>105</b></td></tr>
+<tr><td class="l">Empresas del partido</td><td class="n">464</td><td class="m">La segunda mitad, con la misma regla: proyectos, no puestos</td><td class="m">&mdash;</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada
-200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta; y uno
-de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
+<p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta &mdash;en ambiente, dos, porque 593 de sus 966 cargos son de barrido&mdash;; y uno de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
 horas, cada uno con un junior. <span class="tag m">Estimado</span></p>
 
 <h3>La pir&aacute;mide: del pasante al empleo</h3>
@@ -1111,18 +1098,16 @@ a&ntilde;o. <span class="sg">As&iacute;, los de las &aacute;reas cuestan 720 mil
 <table>
 <colgroup><col style="width:88pt"><col style="width:52pt"><col><col style="width:100pt"><col style="width:84pt"></colgroup>
 <tr class="hd"><th>Escal&oacute;n</th><th class="r">Cu&aacute;ntos</th><th>D&oacute;nde</th><th>Qui&eacute;n paga</th><th>Suben por a&ntilde;o</th></tr>
-<tr><td class="l">Pasante, en el segundo a&ntilde;o</td><td class="n">928</td><td class="m">337 en el Municipio y 591 en las empresas contratadas</td><td class="m">Cada &aacute;rea o la empresa</td><td class="m">250 a 300 pasan a un empleo pago</td></tr>
+<tr><td class="l">Pasante, en el segundo a&ntilde;o</td><td class="n">928</td><td class="m">464 a la vez en el Municipio, los primeros seis meses, y 464 en empresas del partido, los segundos</td><td class="m">El &aacute;rea los primeros seis meses; la empresa, los segundos</td><td class="m">250 a 300 pasan a un empleo pago</td></tr>
 <tr><td class="l">Junior, el primer escal&oacute;n</td><td class="n">105</td><td class="m">90 en la operaci&oacute;n de las &aacute;reas, 13 en la plataforma y 2 en dispositivos, por uno o dos a&ntilde;os</td><td class="m">Cada &aacute;rea, a escala municipal; la plataforma, a sueldo de mercado</td><td class="m">Entran 70</td></tr>
 <tr><td class="l">Semi-senior</td><td class="n">13</td><td class="m">Plataforma y dispositivos</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 4 desde junior</td></tr>
 <tr><td class="l">Senior</td><td class="n">9</td><td class="m">Plataforma</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 2 desde semi-senior</td></tr>
-<tr><td class="l">Supervisor</td><td class="n">95</td><td class="m">35 en el Municipio &mdash;planta reasignada y los seniors de la plataforma&mdash; y 60 en las empresas</td><td class="m">Ya se pagan</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Supervisor</td><td class="n">95</td><td class="m">48 en el Municipio &mdash;planta reasignada y los seniors de la plataforma&mdash; y 47 en las empresas</td><td class="m">Ya se pagan</td><td class="m">&mdash;</td></tr>
 <tr class="hi"><td class="l">Segundo escal&oacute;n</td><td class="n">180 a 230</td><td class="m">Empresas contratadas: obra, servicios, desarrollos y obra vecinal</td><td class="m">Cada empresa</td><td class="m">Por a&ntilde;o, m&aacute;s los juniors que dejan el Municipio</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> un junior queda un a&ntilde;o y medio en promedio; un semi-senior, tres; un senior,
-cuatro. En el mandato las cohortes crecen con la rampa de la formaci&oacute;n: 277, 494 y 711 pasantes, y las
-empresas toman los que no entran en el Municipio desde la segunda. <span class="tag m">Estimado</span></p>
-<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de
-empleo, 2.783,1 millones van a formaci&oacute;n, con la intermediaci&oacute;n adentro, y 1.855,4 a
+cuatro. En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segundo, 355 y 356 el tercero y 464 y 464 el cuarto; cada uno pasa seis meses por el Municipio y seis por las empresas. Egresan 1.286 en el mandato. <span class="tag m">Estimado</span></p>
+<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de empleo, en r&eacute;gimen, 2.783,1 millones van a formaci&oacute;n, con la intermediaci&oacute;n adentro, y 1.855,4 a
 contratar desarrollos. A vivienda van 3.092,4 millones, y la vivienda es sobre todo agua, cloaca y gas de
 red donde faltan, que es lo que el cap&iacute;tulo 1 mide y lo que el art&iacute;culo 132 permite ejecutar
 a una asociaci&oacute;n vecinal.</p>
@@ -1132,13 +1117,13 @@ a una asociaci&oacute;n vecinal.</p>
 <colgroup><col style="width:215pt"><col><col></colgroup>
 <tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
 <tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
-<tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, dos a&ntilde;os cada una: cursada y pasant&iacute;a</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, 464 cada seis meses, dos a&ntilde;os cada una: cursada y pasant&iacute;a</td></tr>
 <tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">&nbsp;</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por
-persona, que pagan los dos a&ntilde;os de formaci&oacute;n; la pasant&iacute;a la paga quien la recibe.
+persona, que pagan los dos a&ntilde;os de formaci&oacute;n; la pasant&iacute;a la paga quien la recibe. Los dos primeros a&ntilde;os la formaci&oacute;n usa toda la partida de empleo, porque todav&iacute;a no hay egresados que contratar: entran 462 y 824 en vez de 277 y 494, y egresan 1.286 en el mandato. El tercer a&ntilde;o vuelve este reparto. El m&oacute;dulo de salud de los meses 12 a 18, que se pagaba con la contrataci&oacute;n de desarrollos, sale esos dos a&ntilde;os del gasto flexible libre.
 <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
@@ -1150,7 +1135,7 @@ promete miles de egresados porque presupuesta a los docentes con lo que se les p
 certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor formadas, con
 t&iacute;tulo que sirve afuera del municipio.</span> Con ese n&uacute;mero entran equipamiento, acceso a
 las herramientas, los profesores &mdash;uno de ellos, el tutor que acompa&ntilde;a hasta el empleo&mdash;, la partida de
-incentivo docente y la certificaci&oacute;n de la UNSO.</p>
+incentivo docente y las materias y el t&iacute;tulo de la UNSO.</p>
 <p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 4</b>, el mismo que
 reparte la partida vecinal: <b>Boulogne 315, B&eacute;ccar 307, Mart&iacute;nez 98, San Isidro 96, Villa
 Adelina 94 y Acassuso 19</b>. Cinco sedes fijas y Acassuso itinerante, porque diecinueve personas al
@@ -1180,6 +1165,13 @@ aparte.</p>
 empleo por obra p&uacute;blica, y el cap&iacute;tulo 4 dice que la obra vecinal es pol&iacute;tica de
 empleo. <span class="sg">La diferencia es que ac&aacute; no se crea trabajo para ocupar gente: se hace
 una obra que hace falta igual, y se decide qui&eacute;n la ejecuta.</span></p>
+</div>
+<h3>El semillero de empresas</h3>
+<div class="cols">
+<p><b>Para el egresado que no queda contratado.</b> Entra en equipo, con un proyecto, en una de las dos convocatorias del a&ntilde;o, despu&eacute;s de cada egreso: <b>veinte empresas por a&ntilde;o</b>, diez por convocatoria y de tres egresados en promedio, y diecis&eacute;is en el mandato. Tiene un a&ntilde;o de incubaci&oacute;n: lugar de trabajo en las sedes; mentores, que son los tutores y los empresarios del partido del convenio con las c&aacute;maras; y una ventanilla del Municipio que resuelve lo que traba al principio: constituir la sociedad, inscribirse y facturar. Las que crecen contratan a los egresados que vienen. <span class="sg">El semillero no arranca con un subsidio sino con un contrato.</span></p>
+<p><b>El primer cliente, por pliego.</b> <b>El 20% de cada licitaci&oacute;n se subcontrata a pymes del partido</b>, de cualquier antig&uuml;edad, y <b>dentro de ese 20%, el 5% del valor del contrato se reserva para empresas del partido de menos de cinco a&ntilde;os</b>, con las del semillero primero. Sobre los contratos grandes de hoy, la recolecci&oacute;n y la obra por contratista, son 15.635,6 millones para pymes y 3.908,9 para empresas nuevas. La cl&aacute;usula nombra una categor&iacute;a, nunca empresas, y quien no encuentre qui&eacute;n lo haga lo justifica ante el panel, como en el 75%. Francia pide 20% a las pymes en sus grandes contratos desde 2025, y la Provincia exige 30% de pymes en su propia obra p&uacute;blica desde 2000 (Ley 6021, art&iacute;culo 9 ter).</p>
+<p><b>El capital de trabajo.</b> Lo que mata a la empresa chica que le vende al Estado es que el Estado paga tarde: en la Uni&oacute;n Europea, la morosidad explica una de cada cuatro quiebras de pymes. <b>El pago a quince d&iacute;as va en el pliego, para todos los oferentes</b>, y la parte subcontratada el Municipio se la paga directo a la empresa chica, por cesi&oacute;n del cr&eacute;dito, como lo admite el Tribunal de Cuentas bonaerense. Cuando Estados Unidos baj&oacute; el plazo de treinta a quince d&iacute;as, las empresas chicas que le vend&iacute;an aumentaron su empleo. Y el pliego puede dar un anticipo al firmar, con p&oacute;liza de cauci&oacute;n por el total.</p>
+<p><b>Y un fondo que multiplica.</b> El Municipio presta un peso por cada peso de capital privado, nacional o provincial que entre, hasta el costo de un a&ntilde;o de un junior, 23,4 millones por empresa, y se devuelve con lo que la empresa factura. Va por ordenanza, porque el Municipio no puede ser due&ntilde;o ni socio de esas empresas (5.7) y el fondo nacional de la Ley 27.349 se disolvi&oacute; en 2024. Es lo que hizo Israel con Yozma en 1993: el Estado pon&iacute;a s&oacute;lo si entraba dinero privado. <b>El semillero cuesta 121 millones por a&ntilde;o y sale de Ciencia y T&eacute;cnica</b>, que con la plataforma queda ocupada en 22,0%.</p>
 </div>
 """ + fig("f_taller", "Formaci&oacute;n laboral. Ilustraci&oacute;n.") + """
 
@@ -2346,7 +2338,7 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, y que cualquiera pueda preguntar cu&aacute;ntas &oacute;rdenes judiciales se recibieron y cu&aacute;ntas se cumplieron</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y &oacute;rdenes</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero y para discapacidad, separadas del programa que hoy comparten</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, con dos a&ntilde;os de formaci&oacute;n, el segundo como pasante; y que desde el mes 27 egrese cada a&ntilde;o una cohorte con un a&ntilde;o de trabajo real: 771 en el mandato y 928 por a&ntilde;o en r&eacute;gimen</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y convenios de pasant&iacute;as; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, con una tecnicatura de dos a&ntilde;os de la UNSO, el segundo como pasante &mdash;seis meses en el Municipio y seis en una empresa del partido&mdash;; y que desde el mes 27 egrese una cohorte cada seis meses con un a&ntilde;o de trabajo real: 1.286 en el mandato y 928 por a&ntilde;o en r&eacute;gimen</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y convenios de pasant&iacute;as; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
 </table>
 
 
@@ -2358,12 +2350,13 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la primera sesi&oacute;n ordinaria, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio; y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio, y se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se vea que fue real y que no hubo coima, y grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s</td><td class="n">Decreto de puesta en servicio, y la transmisi&oacute;n y su grabaci&oacute;n, abiertas para cualquier vecino</td></tr>
-<tr><td class="l">Meses 4&ndash;6</td><td>Entran las cuatro ordenanzas restantes del anexo: partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular y empleo local</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 4&ndash;6</td><td>Entran las cuatro ordenanzas restantes del anexo: partidas propias de g&eacute;nero y discapacidad, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Cada respuesta, con su fecha: se le pregunta a la inteligencia artificial del municipio</td></tr>
-<tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>
+<tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el segundo ingreso en el mes 9 y el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Mes 6</td><td>Arranca el <b>registro de inserci&oacute;n laboral</b>: cualquier vecino le pregunta a la inteligencia artificial del Municipio cu&aacute;ntas personas consiguieron empleo, con el dato cargado el d&iacute;a que pasa. Hoy ese n&uacute;mero aparece suelto en alguna gacetilla, no en un registro continuo que se pueda consultar</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico</td></tr>
 <tr class="hi"><td class="l">Meses 6&ndash;9</td><td>Primera versi&oacute;n de la inteligencia artificial del Municipio: partida vecinal, seguimiento de obra y consulta sobre lo que el Municipio ya registr&oacute;</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 9</td><td>Cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; se hizo en su zona, y tiene la respuesta; desde ah&iacute;, al d&iacute;a: la adjudicaci&oacute;n queda registrada el d&iacute;a que se firma</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
@@ -2372,12 +2365,14 @@ que la comprueba.</p>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la inteligencia artificial del Municipio: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: cualquier vecino pregunta por el patrullaje, las c&aacute;maras que funcionan y el tiempo de respuesta del 911 municipal, con el dato del d&iacute;a</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">Mes 15</td><td>La primera cohorte termina la cursada y empieza la pasant&iacute;a de doce meses, en proyectos de las &aacute;reas del Municipio y de las empresas que trabajan para &eacute;l, con el convenio de pasant&iacute;as firmado</td><td class="n">Los convenios y cada acuerdo individual: se le preguntan a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">Mes 15</td><td>La primera cohorte termina la cursada y empieza su primera pasant&iacute;a, seis meses en proyectos de las &aacute;reas del Municipio, con la tecnicatura reconocida y el convenio de pasant&iacute;as de la UNSO firmado</td><td class="n">Los convenios y cada acuerdo individual: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa desde el tel&eacute;fono, y la inspecci&oacute;n agendada por el sistema y comparada con las del mismo rubro; y mercado laboral en la inteligencia artificial del Municipio</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">Mes 21</td><td>La primera cohorte pasa a su segunda pasant&iacute;a, en empresas del partido, con el convenio marco con las c&aacute;maras; la segunda entra al Municipio</td><td class="n">Cada acuerdo individual, con su empresa: se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2 de la rampa (cuadro [[n:rampa]]). Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
-<tr class="hi"><td class="l">Mes 27</td><td>Egresan los primeros 277, con t&iacute;tulo y un a&ntilde;o de trabajo real. Desde ah&iacute; egresa una cohorte por a&ntilde;o</td><td class="n">Registro de inserci&oacute;n laboral: cu&aacute;ntos consiguieron empleo y d&oacute;nde</td></tr>
+<tr class="hi"><td class="l">Mes 27</td><td>Egresan los primeros 231, con el t&iacute;tulo de la UNSO y un a&ntilde;o de trabajo real; desde ah&iacute; egresa una cohorte cada seis meses. Primera convocatoria del semillero de empresas</td><td class="n">Registro de inserci&oacute;n laboral: cu&aacute;ntos consiguieron empleo y d&oacute;nde; y cada empresa del semillero, con sus contratos</td></tr>
 <tr><td class="l">Mes 36</td><td>A&ntilde;o 3 de la rampa (cuadro [[n:rampa]]). Funci&oacute;n ambiental al 1,5%</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Meses 36&ndash;42</td><td>Cualquier vecino pregunta cu&aacute;nto se gast&oacute; en su zona, con la ejecuci&oacute;n presupuestaria desagregada por zona</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">Mes 45</td><td>Egresa la cuarta cohorte: 1.286 egresados en el mandato</td><td class="n">Registro de inserci&oacute;n laboral</td></tr>
 <tr class="hi"><td class="l">Mes 48</td><td>A&ntilde;o 4: la mitad de la obra p&uacute;blica la deciden los vecinos (cuadro [[n:rampa]]). Cloacas en Boulogne y B&eacute;ccar reducidas a la mitad</td><td class="n">Ejecuci&oacute;n y registro de conexiones</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> los meses 4 a 12 son los de constituci&oacute;n, y no hay obra decidida por
@@ -2400,8 +2395,8 @@ vecinos antes del primer ciclo de asambleas.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
-<p class="tight">Once cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
-""" + exhead("c", "Once cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
+<p class="tight">Doce cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
+""" + exhead("c", "Doce cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
 <table>
 <colgroup><col style="width:150pt"><col></colgroup>
 <tr class="hd"><th>Riesgo</th><th>D&oacute;nde est&aacute; parado y qu&eacute; lo reduce</th></tr>
@@ -2409,6 +2404,8 @@ vecinos antes del primer ciclo de asambleas.</p>
 <td>Hacen falta trece votos y diez bloques se reparten veinticuatro bancas: nada se aprueba sin cuatro bloques de acuerdo. <b>Mitigaci&oacute;n:</b> el mecanismo est&aacute; dise&ntilde;ado para ser votable &mdash;no reforma la LOM, no pide facultades nuevas, no compite con el Concejo&mdash; y el primer proyecto, derogar los arts. 8 a 10, no le cuesta nada a ning&uacute;n bloque. Si aun as&iacute; no hay acuerdo, la rampa no arranca.</td></tr>
 <tr><td class="l">Zonas sin asociaci&oacute;n vecinal en condiciones de ejecutar</td>
 <td>El art&iacute;culo 132 exige una asociaci&oacute;n como parte contratante; si no la hay, la zona no puede ejecutar. <b>Mitigaci&oacute;n:</b> el Municipio convoca y acompa&ntilde;a la constituci&oacute;n (4.6), y mientras tanto la partida de esa zona se ejecuta por administraci&oacute;n, en esa zona. La priorizaci&oacute;n vecinal funciona igual: lo que se demora es la ejecuci&oacute;n directa.</td></tr>
+<tr><td class="l">La tecnicatura no tiene validez nacional a tiempo</td>
+<td>La UNSO no tiene hoy una tecnicatura de inteligencia artificial y datos, y la validez nacional la da el Ministerio de Educaci&oacute;n. <b>Mitigaci&oacute;n:</b> el convenio y el pedido van en los primeros tres meses; si la validez nacional no llega antes del mes 15, la primera cohorte hace la pr&aacute;ctica con la beca municipal de 240.000 $ por mes. En paralelo, el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional.</td></tr>
 <tr><td class="l">Una comisi&oacute;n falla en el a&ntilde;o 1</td>
 <td>Es el a&ntilde;o en que el modelo se prueba y el que decide si contin&uacute;a. <b>Mitigaci&oacute;n:</b> la rampa empieza en 12,5% justamente para que un fracaso cueste un octavo y no la mitad; se interviene y se vuelve a constituir, con la partida retenida en la propia zona (4.6).</td></tr>
 <tr><td class="l">Captura de una comisi&oacute;n</td>
