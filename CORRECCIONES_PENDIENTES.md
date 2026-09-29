@@ -2203,3 +2203,76 @@ PDF: 39 páginas, 45 exhibits del 1 al 45 sin saltos, fuentes sin sustituciones,
   egresan 771 (277 y 494); la tercera cohorte, 711, egresa en el mes 51.
 - PDF: 40 páginas, 40 exhibits del 1 al 40 sin saltos, referencias resueltas, fuentes sin sustituciones,
   cero viudas, cero títulos en columna.
+
+# CORRECCIONES 176 A 178 · CIFRAS PARA DECIDIR (NO APLICADAS)
+Dispatch del 29/09. Reemplaza cualquier dispatch anterior de la 176. Rama claude/lucid-knuth-emp85i, sobre 395672c.
+Todo lo que sigue mueve cifras: espera el visto bueno de Nick. El documento no se tocó.
+
+## 178 · DOS INGRESOS POR AÑO
+- Con dos ingresos egresan **771 en el mandato, igual que con uno**: lo que entra desde el mes 27 egresa desde el
+  mes 51. Entran 138 y 139 (meses 3 y 9), 247 y 247 (15 y 21), 355 y 356 (27 y 33), 464 y 464 (39 y 45); egresan
+  en los meses 27, 33, 39 y 45. Al terminar el mandato hay 1.639 cursando o de pasantes. Script:
+  03_scripts/cohortes_formacion.py; mes por mes en data/cohortes_formacion.csv.
+- Sin los dos ingresos la 176 no entra: con uno, el Municipio tendría 928 pasantes a la vez seis meses (tope 556).
+- Opción para subir los egresados del mandato: que la formación tome todo lo de empleo los dos primeros años
+  (la contratación de desarrollos espera): 462 y 824 → 1.286. Toca el 60/40 del 5.3.
+- Sedes y docentes: en régimen cursan 928 a la vez con uno o con dos ingresos, así que alcanzan las mismas; cada
+  sede tiene dos grupos en distinta etapa, y Acassuso (9 o 10 por semestre) se junta con la itinerante.
+- No hay regla de la DGCyE que fije dos ingresos por año: los cursos tienen fecha de inicio propia, y los CFL 404
+  y 405 de San Isidro ya abren cursos en agosto, septiembre, octubre y noviembre de 2026 (buscador del IPFL). Un
+  curso de doce meses que empieza en agosto cruza el ciclo lectivo y pide autorización de la Dirección de FP.
+- El cuadro 35 ("Los temas que este programa no trata") no tiene egresados: preguntar a Nick si era el 32
+  (pirámide: 277, 494 y 711) o el 36 (cien días).
+
+## 176 · LA PASANTÍA PARTIDA
+- Dos pasantías seguidas con anfitriones distintos: la Ley 26.427 no lo prohíbe; cada tramo de seis meses está
+  entre el mínimo de dos y el máximo de doce (art. 13), con su convenio y su acuerdo individual. Verificado en
+  Infoleg (ley: id 148599; reglamentación: id 159284).
+- Tope: la Res. Conj. 825/2009 y 338/2009, art. 14, dice "número de pasantes", no "a la vez". La lectura "a la
+  vez" se sostiene porque el tope se mide contra el plantel y los tutores, que deben estar presentes todo el
+  horario, pero no está escrita.
+- Tres problemas nuevos para Nick: (1) la pasantía es "sin carácter obligatorio" (art. 2), y el 5.3 dice "Todos
+  la hacen"; (2) en la Provincia, la DGCyE sólo prevé prácticas profesionalizantes para la FP (Res. 5356/24): el
+  convenio de pasantías con el CFL hay que armarlo; (3) una empresa necesita al menos un empleado por tiempo
+  indeterminado para tener pasantes, y con menos de diez el cupo puede ser cero (arts. 2 y 14).
+- F6 del presupuesto 2026, leído página por página: 7.946 cargos del Ejecutivo en 21 jurisdicciones (tope 556)
+  y 416 del Concejo aparte (su propio 7%: 29). Copia en data/f6_cargos_2026.csv.
+- Los 127: trece equipos nuevos en proyectos que el documento ya propone (130 lugares; 467 para 464 pasantes):
+  hacienda y recaudación 20 (gasto con zona, meta del 6.3), ambiente y espacio público 30 (servicio de recolección
+  medido por zona), movilidad 20 (ruido con sensores), desarrollo social y personas mayores 20 (mayores que no
+  pueden salir, hogar por hogar), gobierno 10 (padrón de asociaciones), legal y técnica 10 (digesto), jefatura de
+  gabinete 10 (planta y escala salarial consultables), cultura 10 (espacios culturales y su habilitación). Son 8
+  de automatización y 5 de relevamiento. La regla del cuadro (uno de automatización cada 200 cargos y uno de
+  relevamiento por área) daba lugar, en las áreas que el cuadro no cubría (3.115 cargos), para 14 de automatización
+  más los de relevamiento: se tomaron trece, sin deportes (el documento no tiene propuesta ahí) y con dos y no
+  cinco en ambiente, donde 593 cargos son de barrido.
+- Capacidad afuera: 93.071 puestos privados registrados en San Isidro, diciembre de 2025 (OEDE, "Empleo y
+  remuneraciones por departamento", T1, fila 06756; chequeado en el archivo). 4.640 y 6.629 son el 5,0% y el 7,1%.
+  Con la escala legal, el partido admite entre 7.554 y 8.651 pasantes a la vez: los 464 son el 5,4% a 6,1%.
+- Si no hay lugar en la segunda mitad: primero el margen del Municipio (92 en régimen, 200 en el mandato, porque
+  a la vez hay como mucho 356); después otros organismos públicos del partido, cada uno con su 7% (el Concejo, 29);
+  y el resto, práctica profesionalizante en el semillero o en proyectos del centro, sin tope (CFE 115/10; Res.
+  5356/24 incluye SAS, cooperativas y asociaciones civiles como anfitriones), pero sin pago: decidir si el
+  Municipio da una beca igual a la asignación.
+- Costos (03_scripts/pasantia_partida.py): en las áreas hay 447 pasantes a la vez (hoy 320); la fila del 3.4 pasa
+  de 1.733,2 a 2.135,3 M (+402,1); gasto flexible ocupado 52,8% y libre 47,2%. Supervisores de planta reasignada,
+  de 32 a 45 (planta reasignada de 64 a 77); en el Municipio 48 con los seniors de la plataforma, en empresas 47.
+  Las empresas pagan 1.469,1 M por año (antes 1.871,3). La plataforma sigue con sus 17 en Ciencia y Técnica.
+- Cámara: el estatuto dice "Cámara del Comercio e Industria de San Isidro"; desde 2024 se presenta como "Cámara
+  de Comercio y Servicios del Partido de San Isidro" (Belgrano 262). Hay además cámaras en Boulogne (Industria,
+  Comercio y Profesionales) y Béccar (Comercio), y una de Industria del partido sin actividad verificada.
+
+## 177 · EL SEMILLERO
+- Informe completo en informes/10_semillero.md.
+- 20 empresas por año en régimen y 16 en el mandato; 121 M por año de Ciencia y Técnica (de 20,6% a 22,0% de la
+  partida); 3% de cada licitación pública a empresas del partido de menos de cinco años, las del semillero primero,
+  con pago directo y a 15 días.
+- El pago a 15 días y el anticipo se pueden si el pliego los fija para todos los oferentes; no se puede pagar
+  antes sólo a las del semillero (HTC 32941, 5714, 29715, 38206; RAFAM art. 100).
+- El FONDCE de la Ley 27.349 se disolvió (Decreto 1048/2024): el fondo que multiplica es un préstamo municipal
+  1 a 1 con capital privado, nacional o provincial, con ordenanza (el Municipio no puede comprar acciones de una SAS).
+
+## LUGARES DEL DOCUMENTO QUE CAMBIAN SI NICK APRUEBA
+Síntesis punto 3; 5.3 (lista 1, "El segundo año", "Dónde", planta reasignada, cuadros 31 y 32 y su nota); 3.4
+(cuadro 14 y "Cuánto suma todo"); 6.3 (meta de formación); 6.4 (meses 3, 9, 15, 21 y 27); cuadro 36 (compromiso
+12, si corresponde); anexo, Ordenanza X art. 4 (y artículos nuevos del semillero); fuentes del 5.3.
