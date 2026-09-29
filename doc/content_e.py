@@ -3,7 +3,7 @@ from content_a import RH, fig
 
 CIERRE = dict(id="cierre", runhead=RH, html="""
 <h1>Para cerrar</h1>
-<div class="stand">La mitad de la obra p&uacute;blica decidida por los vecinos en cuatro a&ntilde;os, y el gasto en empleo y vivienda multiplicado por quince, pagado actualizando la tabla de 2008 con la que se cobra la tasa. Sin subir el porcentaje de la tasa, sin tomar deuda y sin pedirle permiso a la Provincia.</div>
+<div class="stand">La propuesta: la mitad de la obra p&uacute;blica decidida por los vecinos en cuatro a&ntilde;os, y el gasto en empleo y vivienda multiplicado por quince, pagado actualizando la tabla de 2008 con la que se cobra la tasa. Sin subir el porcentaje de la tasa, sin tomar deuda y sin pedirle permiso a la Provincia.</div>
 <div class="cols">
 <p>La pregunta del principio era sobre el plan de gobierno 2024&ndash;2025: a qui&eacute;n se escuch&oacute;, y c&oacute;mo,
 para que el empleo y la vivienda no aparecieran nunca. La respuesta no est&aacute; en el tama&ntilde;o del presupuesto:

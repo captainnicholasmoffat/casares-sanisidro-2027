@@ -374,8 +374,8 @@ depende hoy menos de la Provincia que hace quince a&ntilde;os, y no por decisi&o
 aritm&eacute;tica.</p>
 <p>Esto tiene una consecuencia pol&iacute;tica directa: <span class="sg">un intendente de San Isidro no
 depende de La Plata.</span> La mayor parte del presupuesto se define localmente, se aprueba por ordenanza
-del Concejo Deliberante y se puede reasignar por decisi&oacute;n local. Todo lo que este programa propone
-puede financiarse sin pedirle permiso a nadie.</p>
+del Concejo Deliberante y se puede reasignar por decisi&oacute;n local.</p>
+<p>Todo lo que este programa propone puede financiarse sin pedirle permiso a nadie.</p>
 </div>
 <div class="pull"><p>La Provincia paga el 25% del gasto de San Isidro. Lo que recauda el propio Municipio
 paga el 64%.</p></div>

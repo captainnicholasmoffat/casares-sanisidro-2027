@@ -51,8 +51,8 @@ mismo es el primero. Setenta reclamos diarios por arbolado conviven con una part
 entera, y las dos cosas son ciertas a la vez.</p>
 <p><b>Y se sigue algo que este programa propone corregir.</b> Hoy no existe forma p&uacute;blica de saber
 cu&aacute;nto tarda el Municipio en responder un reclamo, ni si tarda lo mismo en Acassuso que en
-Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y no se publica.
-<b>Este programa se compromete a que cualquier vecino le pregunte a la inteligencia artificial del
+Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y no se publica.</p>
+<p><b>Este programa se compromete a que cualquier vecino le pregunte a la inteligencia artificial del
 Municipio cu&aacute;nto tardan en resolver un reclamo en su zona, y tenga la respuesta</b>: es la prueba m&aacute;s
 simple de si el servicio llega parejo. Para eso cada reclamo se registra con su zona, el d&iacute;a que entra y
 el d&iacute;a que se resuelve.</p>
@@ -109,11 +109,11 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 <tr class="hd"><th>&Aacute;rea</th><th>Plan de gobierno 2024&ndash;2025</th><th>Este programa</th></tr>
 <tr><td class="l">Seguridad</td><td class="m">Reemplazo del 100% de c&aacute;maras anal&oacute;gicas por HD, anillo digital con 150 c&aacute;maras LPR, +40% de patrulleros y +100% de motos, Ojos en Alerta con 20.000 adherentes</td><td class="m">Patrullaje dirigido a donde ocurre el delito, empezando por el mapa de incidentes municipales que hoy no existe; sobre las c&aacute;maras que ya hay, primero un n&uacute;mero auditado de qu&eacute; hacen, y despu&eacute;s detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n del recorrido de un hecho denunciado, sin reconocimiento facial masivo; y una oficina de ciberdelito</td></tr>
 <tr><td class="l">Espacio p&uacute;blico y arbolado</td><td class="m">50.000 m&sup2; de espacio p&uacute;blico intervenidos, 10.000 &aacute;rboles nuevos, 15.000 podas, 60 luminarias nuevas y 300 puntos m&aacute;s</td><td class="m">No rehacer lo que ya funciona mientras haya urgencias: la poda que falta y el &aacute;rbol ca&iacute;do se reponen, la plaza que ya funcionaba espera. Y asociaciones de parque reconocidas por ordenanza, que cuidan cada espacio verde: aviso previo de cualquier obra, objeci&oacute;n con respuesta fundada, y sin su firma la obra no se da por terminada ni se paga</td></tr>
-<tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Licitar la recolecci&oacute;n con las condiciones del contrato &mdash;frecuencias, horarios, zonas y penalidades&mdash; aprobadas por el Concejo antes del llamado. El servicio funciona y se paga &mdash;con barrido y limpieza son 49.270 millones al a&ntilde;o&mdash;, pero desde 2009 corre sobre un contrato directo de seis meses que se sigue prorrogando: las dos licitaciones que se llamaron no terminaron en adjudicaci&oacute;n. Llevar el gasto en ambiente del 0,4% al 1,5% del presupuesto; y controlar el ruido de motos y colectivos con sensores y, cuando el equipo est&eacute; homologado, multa autom&aacute;tica</td></tr>
+<tr><td class="l">Residuos y ambiente</td><td class="m">Gestionar el 20% de los reciclables, mapear grandes generadores, un punto de acopio en cada localidad</td><td class="m">Hoy la recolecci&oacute;n funciona y se paga &mdash;con barrido y limpieza son 49.270 millones al a&ntilde;o&mdash;, pero desde 2009 corre sobre un contrato directo de seis meses que se sigue prorrogando: las dos licitaciones que se llamaron no terminaron en adjudicaci&oacute;n.<br>Proponemos licitarla con las condiciones del contrato &mdash;frecuencias, horarios, zonas y penalidades&mdash; aprobadas por el Concejo antes del llamado; llevar el gasto en ambiente del 0,4% al 1,5% del presupuesto; y controlar el ruido de motos y colectivos con sensores y, cuando el equipo est&eacute; homologado, multa autom&aacute;tica</td></tr>
 <tr><td class="l">Tr&aacute;nsito, veredas y calzadas</td><td class="m">App para digitalizar multas, se&ntilde;alizaci&oacute;n en 16 entornos escolares y 15 hospitalarios, etapa 1 de veredas en B&eacute;ccar</td><td class="m">Arreglar calles y veredas entra en el dinero de obra que decide cada zona</td></tr>
 <tr><td class="l">Digitalizaci&oacute;n y atenci&oacute;n</td><td class="m">30% de los tr&aacute;mites municipales digitalizados, firma digital en el 100% de los puestos ejecutivos, nuevo call center</td><td class="m">Un sistema que lee la solicitud contra la norma y contesta tres cosas: s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo, empezando por la habilitaci&oacute;n comercial. Y un asistente que contesta en castellano qu&eacute; hace falta para abrir un negocio, antes de firmar el alquiler</td></tr>
 <tr><td class="l">Transparencia</td><td class="m">&Iacute;ndice de transparencia activa, dashboard por secretar&iacute;a, tiempo de permanencia en el Portal de Datos Abiertos superior a 30 segundos</td><td class="m">La inteligencia artificial del Municipio, a la que cualquier vecino le pregunta en castellano, y que muestra de d&oacute;nde saca cada dato: la obra de su cuadra y qui&eacute;n la hace, cu&aacute;nto se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio, el precio de cada compra de insumos de los hospitales, comparado con las anteriores y con los otros hospitales, y las inspecciones, que se transmiten en vivo para que se vea que son reales y quedan grabadas para verlas despu&eacute;s</td></tr>
-<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y abrir en las seis zonas centros como el de formaci&oacute;n laboral de La Cava, en B&eacute;ccar, que forman en dos a&ntilde;os &mdash;el segundo, trabajando como pasante&mdash; en inteligencia artificial, datos y servicios digitales, y acompa&ntilde;an a cada egresado hasta que consigue trabajo</td></tr>
+<tr class="hi"><td class="l">Empleo</td><td class="m"><b>&mdash;</b></td><td class="m">Multiplicar por quince el gasto en empleo y vivienda, y abrir en las seis zonas centros como el de formaci&oacute;n laboral de La Cava, en B&eacute;ccar, que formen en dos a&ntilde;os &mdash;el segundo, trabajando como pasante&mdash; en inteligencia artificial, datos y servicios digitales, y acompa&ntilde;en a cada egresado hasta que consiga trabajo</td></tr>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos</td><td class="m"><b>&mdash;</b></td><td class="m">Reducir a la mitad los hogares sin cloaca en Boulogne y B&eacute;ccar y atacar la falta de gas de red, con el dinero de obra que deciden los vecinos y, donde no alcance, con el de vivienda; y medir por zona la conexi&oacute;n a internet, que hoy nadie mide</td></tr>
 <tr class="hi"><td class="l">Salud</td><td class="m"><b>&mdash;</b></td><td class="m">Desde la inteligencia artificial del Municipio: sacar turno m&eacute;dico por internet &mdash;hoy no se puede en ning&uacute;n hospital ni centro de salud municipal&mdash;, con la plataforma con la que el Municipio ya da otros turnos, y pedida la entrada al sistema provincial Mi Salud Digital; y ver en tiempo real c&oacute;mo est&aacute; cada guardia, para elegir a cu&aacute;l ir antes de salir de casa. Adem&aacute;s, cualquier vecino puede preguntar cu&aacute;nto pag&oacute; cada hospital por cada insumo, comparado con los otros, y qu&eacute; stock tiene</td></tr>
 <tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Un centro de apoyo escolar gratuito en cada localidad, donde los chicos se est&aacute;n quedando atr&aacute;s, en edificios que ya existen y hoy cierran a la tarde; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
@@ -168,7 +168,7 @@ contribuyentes.</li>
 C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
     "Bajada a la costa. Ilustraci&oacute;n.") + """
 <h1><span class="n">3</span>Los fondos</h1>
-<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028. Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se paga actualizando la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra.</div>
+<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028.<br>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se paga actualizando la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra.</div>
 
 <p>De los a&ntilde;os con cuentas publicadas, el Municipio cerr&oacute; en d&eacute;ficit de 2010 a 2015, en
 2017, 2019, 2020 y 2025, y con super&aacute;vit en 2016, 2021, 2022 y 2024: el de 2024 fue de 27.154
@@ -289,7 +289,8 @@ ninguno</span>.</p>
 <h3>Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
 <div class="cols">
 <p>Hoy el Municipio gasta <b>505,7 millones al a&ntilde;o</b> entre Apoyo y Promoci&oacute;n al Empleo
-(170 M) e Infraestructura Habitacional (335 M). Este programa lleva ese gasto conjunto a <b>7.730,9
+(170 M) e Infraestructura Habitacional (335 M).</p>
+<p>Este programa lleva ese gasto conjunto a <b>7.730,9
 millones anuales en r&eacute;gimen</b> &mdash;el 2,5% del gasto total proyectado&mdash;, que son
 <span class="sg">quince veces</span> lo que se gasta hoy. De esos 7.730,9 millones, 505,7 ya se gastan.
 <b>Los fondos nuevos que hay que financiar son 7.225,2 millones.</b></p>
@@ -332,7 +333,8 @@ construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;
 falta &mdash;la poda que no se hizo, el &aacute;rbol que se cay&oacute;&mdash; no se toca; lo que se
 agrega sobre lo que ya funciona, espera.</p>
 <p><b>Y esto tiene un costo pol&iacute;tico.</b> Hay personas trabajando en esos
-programas y proveedores contratados. Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
+programas y proveedores contratados.</p>
+<p>Ninguno pierde su empleo &mdash;el cap&iacute;tulo 5 se compromete a
 no reducir la planta&mdash;, pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La
 secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
 </div>
@@ -361,7 +363,7 @@ sumado.</p>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
 41,4%</b>: una como gasto nuevo, la otra como reasignaci&oacute;n.</p>
 """ + ex("g", "El 73,1% del presupuesto no se puede mover dentro del a&ntilde;o",
-     "Gasto de 2025: lo que no se puede dejar de pagar en el a&ntilde;o (sueldos, deuda, contratos firmados) y lo que se decide cada a&ntilde;o, y cu&aacute;nto de eso usan empleo y vivienda y la obra que deciden los vecinos.",
+     "Gasto de 2025: lo que no se puede dejar de pagar en el a&ntilde;o (sueldos, deuda, contratos firmados) y lo que se decide cada a&ntilde;o, y cu&aacute;nto de eso usan, con este programa, empleo y vivienda y la obra que deciden los vecinos.",
      "ex10.png",
      "ejecuci&oacute;n de gastos por objeto 2025 y modelo de flujo de caja.", key="rigidez") + """
 <p class="cap"><b>Nota:</b> el 73,1% es la medici&oacute;n del ejercicio 2025. <b>El servicio del bono
@@ -477,7 +479,7 @@ compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
 ellas vale entre 6.400 y 9.200. <span class="sg">Pagan igual y no valen igual.</span></p>
-<p><b>Qu&eacute; cambia si la escala se actualiza.</b> La tabla nueva sigue la escala de ARBA, y la
+<p><b>Qu&eacute; cambia si la escala se actualiza.</b> La tabla nueva que proponemos sigue la escala de ARBA, y la
 carga de la tierra se corre hacia donde est&aacute; el valor. La localidad de San Isidro pasa de pagar el 28,7% de la parte
 tierra al 33,2%, Mart&iacute;nez del 25,7% al 27,3% y Acassuso del 7,3% al 7,6%. <b>Villa Adelina baja del 6,3%
 al 3,8% y Boulogne del 16,8% al 14,5%.</b> B&eacute;ccar pasa del 15,1% al 13,6% porque el total sube y ella paga
@@ -506,18 +508,21 @@ las dos son las que m&aacute;s obra reciben por habitante.</span></p>
 una vivienda, aunque la cuenta d&eacute; menos. Ese piso se fij&oacute; con la tabla vieja, y con la nueva
 cobrar&iacute;a de m&aacute;s justamente a las parcelas m&aacute;s chicas de las zonas con menos servicios:
 mirando s&oacute;lo la tierra, <b>789 millones de rebaja no llegar&iacute;an</b>, 410 en Boulogne, 241 en
-Villa Adelina y 124 en B&eacute;ccar. <span class="sg">Por eso la ordenanza lo ajusta: la baja de la tabla
+Villa Adelina y 124 en B&eacute;ccar.</p>
+<p><span class="sg">Por eso proponemos que la ordenanza lo ajuste: la baja de la tabla
 nueva se aplica aunque la boleta quede debajo del m&iacute;nimo.</span> Contra el plan no cuesta nada: lo
 que se cobra ya cuenta esas bajas completas.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que sube, y lo que no</div>
-<p><b>La al&iacute;cuota no se toca: sigue en 12 por mil desde 2016.</b> Lo que cambia es la tabla de 2008 con la que se calcula,
-que <b>ordena bien las localidades</b> &mdash;las seis quedan en el mismo orden que en la
+<p>La tabla de 2008 con la que se calcula la tasa
+<b>ordena bien las localidades</b> &mdash;las seis quedan en el mismo orden que en la
 valuaci&oacute;n provincial&mdash; pero achata en parte la distancia entre ellas: para esa tabla, la tierra de
 Acassuso vale poco m&aacute;s del doble que la de Boulogne; para la provincia, casi el triple. <b>Y a Villa
 Adelina le cobra de m&aacute;s:</b> la pone casi a la par de Boulogne, cuando para la provincia vale un tercio
-menos. La actualizaci&oacute;n corrige las dos cosas.</p>
+menos.</p>
+<p><b>Proponemos no tocar la al&iacute;cuota, que sigue en 12 por mil desde 2016.</b> Lo que cambia es esa tabla,
+y la actualizaci&oacute;n corrige las dos cosas.</p>
 <p><b>Bajan m&aacute;s parcelas de las que suben.</b> Lo que sube es lo que pagan las propiedades que la
 tabla de 2008 tiene subvaluadas. <b>Y el total que se emite por la tierra sube 10,9%.</b> <span
 class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eacute;ccar, lo mismo.</span></p>
@@ -604,7 +609,7 @@ Provincia siguen como en los &uacute;ltimos a&ntilde;os, se cierra solo en 2028.
 <li>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o: el 8,3% del gasto que el
 Municipio puede reasignar libremente. La obra que deciden los vecinos no suma a esa cifra: sale de la
 obra p&uacute;blica que el Municipio ya paga.</li>
-<li>Se paga actualizando la tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra, sin subir el porcentaje que se cobra.</li>
+<li>Proponemos pagarlo actualizando la tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra, sin subir el porcentaje que se cobra.</li>
 <li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a tasa variable: la tasa de referencia de los bancos, TAMAR, m&aacute;s 7 puntos.
 De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
 de 2027.</li>
