@@ -27,7 +27,8 @@ capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se f
 
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
 tecnolog&iacute;a</b>, con una tecnicatura de la universidad nacional del partido, para que lo aprendido
-sirva tambi&eacute;n fuera del Municipio. Y <b>un centro de apoyo escolar en cada localidad</b>, donde hoy
+sirva tambi&eacute;n fuera del Municipio: un a&ntilde;o com&uacute;n y cuatro orientaciones, hacia los puestos
+que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>, donde hoy
 no hay ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
 empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
@@ -79,7 +80,7 @@ marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona
 en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
 en su zona, con la primera cohorte ya arrancando en los espacios que existen, y ya funcionan dos
 m&oacute;dulos de la inteligencia artificial del Municipio: la consulta y el turno m&eacute;dico por internet. Y hay
-<b>seis ordenanzas en el Concejo</b>, ingresadas en la primera sesi&oacute;n ordinaria: la que reserva el dinero
+<b>seis ordenanzas en el Concejo</b>, ingresadas en la sesi&oacute;n extraordinaria de diciembre: la que reserva el dinero
 de obra de cada zona, con la f&oacute;rmula de reparto escrita; la que actualiza la tabla de 2008 con la que se
 cobra la tasa; y la que deroga los art&iacute;culos que hoy permiten al
 intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is

@@ -312,7 +312,8 @@ sale.</p>
 mejora lo que ya funcionaba, espera.</span> Una cloaca, el gas de red o una conexi&oacute;n que permita
 trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya funcionaba, no.</p>
 """ + exhead("c", "Tres programas ceden el 32% de su gasto: 7.799 millones",
-             "Lo que gastaron en 2025 los programas de los que salen ambiente, educaci&oacute;n, apoyo escolar y habilitaciones.") + """
+             "Lo que gastaron en 2025 los programas de los que salen ambiente, educaci&oacute;n, apoyo escolar y habilitaciones.",
+             key="ceden") + """
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
 <tr class="hd"><th>Programa</th><th class="r">Devengado 2025</th><th>Para dimensionarlo</th></tr>
@@ -491,6 +492,11 @@ actualizaci&oacute;n se completa en cuatro ejercicios; las bajas no esperan, van
 class="sg">Y aun as&iacute; alcanza cada a&ntilde;o:</span> el primero se cobran 1.976 millones y el
 programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Si el
 m&iacute;nimo frena subas, esos tres a&ntilde;os son hasta 44,5 millones menos, y sigue alcanzando.</p>
+<p><b>Cobra desde enero de 2028.</b> La ordenanza entra en la sesi&oacute;n extraordinaria que el
+intendente convoca en diciembre de 2027 (Ley Org&aacute;nica, art. 68, inc. 5), y la sanciona la asamblea
+de concejales y mayores contribuyentes que exige la Constituci&oacute;n provincial (art. 193, inc. 2).
+As&iacute; se sancion&oacute; la Ordenanza Impositiva 2026, el 17 de diciembre de 2025. Si no sale en
+diciembre, el 6.6 dice qu&eacute; pasa.</p>
 <p><b>Qui&eacute;n paga m&aacute;s y qui&eacute;n menos.</b> <b>Bajan 34.998 parcelas y suben
 33.619.</b> Villa Adelina paga 33,8% menos por la tierra y Boulogne 4,5% menos; B&eacute;ccar paga lo mismo que
 hoy. Quien m&aacute;s sube es la localidad de San Isidro, el centro del partido: 28%. Mart&iacute;nez sube 17,8% y

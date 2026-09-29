@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Correccion 179: actualiza MODELO_FISCAL_SAN_ISIDRO_2028_2035.xlsx sin rehacerlo,
+"""Correcciones 179 y 180: actualiza MODELO_FISCAL_SAN_ISIDRO_2028_2035.xlsx sin rehacerlo,
 para que de los mismos numeros que el modelo del repo y que el documento.
+180: recursos corrientes por origen exactos (los de capital son todos municipales), suma exacta del
+cuadro 27, el anio 1 si la tabla nueva cobra desde abril (6.6) y los cupos por zona por el resto mayor.
 
 Uso: python3 03_scripts/actualizar_excel_179.py ORIGEN DESTINO [--habilitaciones=anual|inicial]
 ORIGEN es el Excel tal como llego (commit 8358497, salida/). Lee los datos de data/.
@@ -303,13 +305,14 @@ s_row(109, "Origen provincial · de libre disponibilidad", sef_org("ORIGEN PROVI
 s_row(110, "Origen provincial · afectados", sef_org("ORIGEN PROVINCIAL-AFECTADOS"))
 s_row(111, "Origen nacional · afectados", sef_org("ORIGEN NACIONAL-AFECTADOS"))
 s_row(112, "Otros orígenes · de libre disponibilidad", sef_org("OTROS ORIGENES-DE LIBRE DISPONIBILIDAD"))
-s_row(113, "Parte corriente del total de recursos", formula="=(C7+C9+C10+C11)/(C7+C9+C10+C11+C12)", fmt="0.0000%",
-      note="El Estado abre por origen el total de los recursos, no los corrientes: el modelo del repo reparte los "
-           "corrientes con esta proporción en cada origen (03_scripts/modelo.py)")
-s_row(114, "Origen municipal · corrientes, como en el modelo", formula="=(C107+C108)*C113")
-s_row(115, "Origen provincial · corrientes", formula="=(C109+C110)*C113")
-s_row(116, "Origen nacional · corrientes", formula="=C111*C113")
-s_row(117, "Otros orígenes · corrientes", formula="=C112*C113")
+s_row(113, "Control: lo municipal por origen menos no tributarios, rentas y recursos de capital", 
+      formula="=(C107+C108)-(C9+C10+C12)",
+      note="Tiene que dar cero: los recursos de capital (rubro 2.1) son todos de origen municipal")
+s_row(114, "Origen municipal · corrientes, como en el modelo", formula="=C107+C108-C12",
+      note="Los recursos de capital se restan enteros de lo municipal, como en 03_scripts/modelo.py (corrección 180)")
+s_row(115, "Origen provincial · corrientes", formula="=C109+C110")
+s_row(116, "Origen nacional · corrientes", formula="=C111")
+s_row(117, "Otros orígenes · corrientes", formula="=C112")
 s_row(118, "Parte de lo provincial que se mueve con la coparticipación", 0.824, fmt=FMT_PCT1,
       note="Calculada en 2025 en el modelo del repo. El resto son fondos específicos que no dependen del coeficiente")
 
@@ -371,8 +374,9 @@ s_row(157, "Tope de pasantes a la vez en el Municipio: 7% de los cargos", 556, f
 s_header(159, "P · CIENCIA Y TÉCNICA: PLATAFORMA, DISPOSITIVOS Y SEMILLERO (4.11 y 5.3)")
 s_row(160, "Ciencia y Técnica · devengado 2025", formula="=C199",
       note="Función 3.5 (bloque S): los 8.155 M del documento")
-s_row(161, "Plataforma: 49 personas con cargas, infraestructura y auditoría", 1585500000,
-      note="Cuadro 27: equipo 1.285,0 M, infraestructura y licencias 193,2 M, auditoría externa 107,3 M. ESTIMACIÓN PROPIA")
+s_row(161, "Plataforma: 49 personas con cargas, infraestructura y auditoría", 1585600000,
+      note="Cuadro 27, suma exacta de sus filas: equipo 1.285,1 M, infraestructura y licencias 193,2 M, "
+           "auditoría externa 107,3 M. Con los dispositivos, 1.676,6 M. ESTIMACIÓN PROPIA")
 s_row(162, "Dispositivos", 91000000, note="Cuadro 27")
 s_row(163, "Semillero de empresas", 121000000,
       note="5.3 e informe 10: 117,1 M del fondo que presta uno a uno (hasta cinco empresas por año, 23,4 M cada una) y 3,9 M para constituirlas")
@@ -448,7 +452,21 @@ s_row(212, "Construcción de infraestructura deportiva (programa 35)", sef_prog(
 s_row(213, "Mantenimiento y reposición del arbolado público (programa 23)", sef_prog("ARBOLADO"))
 s_row(214, "Lo que ceden: la reasignación sobre los tres", formula="=C176/SUM(C211:C213)", fmt=FMT_PCT0,
       note="El 32% del cuadro 15")
-for rr in range(106, 215):
+_r12 = [r for r in _leer("ejecucion_recursos.csv") if r["anio"] == "2025" and r["rubro_codigo"] == "1.2"]
+_q1 = float([r for r in _r12 if r["periodo_tipo"] == "trimestre" and r["trimestre"] == "I"][0]["percibido_const_dic2025"])
+_an = float([r for r in _r12 if r["periodo_tipo"] == "acumulado_anual"][0]["percibido_const_dic2025"])
+s_header(216, "U · SI LA TABLA NUEVA NO SALE EN DICIEMBRE Y COBRA DESDE ABRIL (6.6)")
+s_row(217, "Parte de lo cobrado en el año que entra de abril a diciembre", round(1 - _q1 / _an, 6), fmt=FMT_PCT1,
+      note="2025: el primer trimestre trajo el 27,3% de lo cobrado en el año por tasas y derechos (rubro 1.2), "
+           "en pesos constantes (data/ejecucion_recursos.csv)")
+s_row(218, "Año 1: lo que cobra la tabla nueva si cobra desde abril", formula="=C134*C217",
+      note="1.437 M en vez de 1.976 M")
+s_row(219, "Año 1: lo que suma el programa al gasto", formula="='Resumen anual'!C53", note="1.806 M")
+s_row(220, "Año 1: lo que cobra menos lo que suma el programa", formula="=C218-C219", note="−369 M")
+s_row(221, "Resultado 2028 con el programa, si la tabla cobra desde abril", formula="='Resumen anual'!C33-(C134-C218)",
+      note="+1.207 M: peor que sin el programa (+1.576 M), y con superávit. Desde 2029 no cambia nada")
+s_row(222, "Resultado 2028 si nada cambia, para comparar", formula="='Resumen anual'!C68")
+for rr in range(106, 223):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -641,6 +659,29 @@ for m in MESES:
     V[f"{X}12"] = f"={X}10*Supuestos!$C$185"
     V[f"{X}12"].number_format = FMT_M
     V[f"{X}12"].font = font(9)
+
+for rr in range(27, 38):
+    clear_row(V, rr, 2, 8)
+put(V, "B27", "CUPOS DE FORMACIÓN POR ZONA · EXACTOS A 928 POR EL RESTO MAYOR (5.3)", font(9, True), fill=F_SEC)
+put(V, "B28", "Cupos por año, en régimen", font(9))
+put(V, "C28", 928, font(9, color=BLUE), FMT_N)
+put(V, "D28", "Lo que compran los 2.783,1 M de formación a 3 M por persona", font(8, italic=True, color=GRAY))
+for cc, t in zip("BCDEFG", ("ZONA", "ÍNDICE", "CUOTA", "ENTERA", "RESTO", "CUPOS")):
+    put(V, f"{cc}29", t, font(8, True, color="FFFFFFFF"), fill=F_HDR, align="center")
+for i in range(6):
+    rr, zz = 30 + i, 16 + i
+    put(V, f"B{rr}", f"=B{zz}", font(9, color=GREEN))
+    put(V, f"C{rr}", f"=D{zz}", font(9, color=GREEN), "0.000000")
+    put(V, f"D{rr}", f"=$C$28*C{rr}", font(9), "0.000")
+    put(V, f"E{rr}", f"=INT(D{rr})", font(9), FMT_N)
+    put(V, f"F{rr}", f"=D{rr}-E{rr}", font(9), "0.000")
+    put(V, f"G{rr}", f"=E{rr}+IF(RANK(F{rr},$F$30:$F$35,0)<=$C$28-SUM($E$30:$E$35),1,0)", font(9, True), FMT_N)
+put(V, "B36", "TOTAL", font(9, True), fill=F_TOT)
+for cc in "CDEG":
+    put(V, f"{cc}36", f"=SUM({cc}30:{cc}35)", font(9, True), FMT_N if cc in "EG" else "0.000", fill=F_TOT)
+put(V, "B37", "Cada zona recibe la parte entera de su cuota; las vacantes que faltan para 928 van a los restos "
+    "mayores. Da Boulogne 315, Béccar 307, Martínez 98, San Isidro 96, Villa Adelina 94 y Acassuso 18.",
+    font(8, italic=True, color=GRAY))
 
 # ======================================================================
 # DEUDA: la del 31/12/2025 llega a cero en 2029; el bono, en cuotas trimestrales
@@ -1038,16 +1079,18 @@ metas = [
      "tiene, y que cualquiera pueda preguntar cuántas órdenes judiciales se recibieron y cuántas se cumplieron",
      "No hay registro público de que ninguno de los dos usos opere", NP, NP,
      "Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y órdenes"),
-    ("Partida presupuestaria propia para género y para discapacidad, separadas del programa que hoy comparten",
-     "Género no tiene partida propia; discapacidad devengó 65,9 M en 2025", NP, NP, "Estado de ejecución por programa"),
+    ("Partida presupuestaria propia para género, separada del programa que hoy comparte",
+     "Género no tiene partida propia; discapacidad sí, y devengó 65,9 M en 2025", NP, NP, "Estado de ejecución por programa"),
     ("Un centro de apoyo escolar gratuito en cada una de las seis localidades", "Cero centros municipales",
      "=SUM(Programas!AM12:AX12)/Supuestos!$C$55", "=SUM(Programas!CI12:CT12)/Supuestos!$C$55",
      "Ejecución por programa; la matrícula por sede se le pregunta a la inteligencia artificial del Municipio"),
     ("La tecnicatura de dos años de la UNSO en las seis zonas, el segundo como pasante —seis meses en el Municipio "
      "y seis en una empresa del partido—: desde el mes 27 egresa una cohorte cada seis meses; 1.286 en el mandato "
-     "y 928 por año en régimen. En el año 4, egresados acumulados; en el 8, egresados del año",
+     "y 928 por año en régimen; y 250 a 300 egresados con empleo pago por año. En el año 4, egresados acumulados; "
+     "en el 8, egresados del año",
      "Una sede, la del Barrio La Cava", "=Programas!AX38", "=SUM(Programas!CI37:CT37)",
-     "Ejecución por programa y convenios de pasantías; la matrícula por sede se le pregunta a la inteligencia artificial del Municipio"),
+     "Ejecución por programa y convenios de pasantías; la matrícula por sede se le pregunta a la inteligencia "
+     "artificial del Municipio; el empleo, al registro de inserción laboral"),
 ]
 FMTS = {1: FMT_M, 2: FMT_PCT1, 3: FMT_PCT1, 11: "0", 12: FMT_N}
 for i, (meta, base, a4, a8, fuente) in enumerate(metas):
