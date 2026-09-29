@@ -882,8 +882,8 @@ presupuesto son esas dos funciones.</p>
 Control de la gesti&oacute;n p&uacute;blica. El clasificador oficial de San Isidro ordena su propio
 presupuesto de mayor a menor y termina en el trabajo.</p>
 <p><b>Hoy:</b> 170 millones en Apoyo y Promoci&oacute;n al Empleo, el 0,05% del presupuesto (cuadro
-[[n:dos_partidas]]).
-<b>Propuesta:</b> llevar el gasto conjunto en empleo y vivienda a <b>7.730,9 millones anuales en
+[[n:dos_partidas]]).</p>
+<p><b>Propuesta:</b> llevar el gasto conjunto en empleo y vivienda a <b>7.730,9 millones anuales en
 r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. De eso,
 <b>7.225,2 millones son fondos nuevos</b>; el resto ya se gasta.</p>
 </div>
@@ -902,36 +902,36 @@ partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reempla
 le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, que es el que financia
 &eacute;l.</p>
 </div>
-""" + exhead("c", "Hoy hay talleres de empleo y pr&aacute;cticas de Medicina y Veterinaria; proponemos una pasant&iacute;a paga para 928 por a&ntilde;o",
+""" + exhead("c", "Hoy hay talleres de empleo, pr&aacute;cticas de Medicina y Veterinaria y 15 pasantes en las fiscal&iacute;as; proponemos una pasant&iacute;a paga para 928 por a&ntilde;o",
              "Lo que el Municipio hace hoy en primer empleo, pasant&iacute;as y pr&aacute;cticas, y lo que propone este programa.",
              key="hoy_propuesta") + """
 <table>
 <colgroup><col style="width:70pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th></th><th>Hoy</th><th>Lo que proponemos</th></tr>
-<tr><td class="l">Qu&eacute; hay</td><td class="m">Mi Primer Empleo: talleres de curr&iacute;culum y contacto con empresas, y el portal de empleo. Pr&aacute;cticas de Medicina en hospitales y centros de salud (Barcel&oacute;, UCA y, de 2026 a 2028, Favaloro) y de Veterinaria en Zoonosis (UBA). La UNSO tiene pasant&iacute;as pagas con pymes, sin convenio vigente con el Municipio: el de 2021 no tiene movimientos desde 2022</td><td class="m">Una tecnicatura de la UNSO con pasant&iacute;a paga para todos</td></tr>
-<tr><td class="l">Escala</td><td class="m">El portal: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas no publican cupo</td><td class="m">928 por a&ntilde;o, con lugar garantizado</td></tr>
-<tr><td class="l">Pago</td><td class="m">Las pr&aacute;cticas de Barcel&oacute; y de Veterinaria, ninguno; los convenios de Favaloro y de la UCA no est&aacute;n publicados</td><td class="m">240.000 $ por mes, con ART y salud</td></tr>
-<tr><td class="l">Qu&eacute; hacen</td><td class="m">Rotaciones cl&iacute;nicas de Medicina; pr&aacute;ctica supervisada en Zoonosis, hasta dos meses</td><td class="m">Proyectos de inteligencia artificial que el Municipio necesita</td></tr>
+<tr><td class="l">Qu&eacute; hay</td><td class="m">Mi Primer Empleo: talleres de curr&iacute;culum y contacto con empresas, y el portal de empleo. Pr&aacute;cticas de Medicina en hospitales y centros de salud (Barcel&oacute;, UCA y, de 2026 a 2028, Favaloro) y de Veterinaria en Zoonosis (UBA). 15 pasantes que paga el Municipio en las fiscal&iacute;as, por un convenio de 2003 con el Ministerio P&uacute;blico. La UNSO tiene pasant&iacute;as pagas con pymes, sin convenio vigente con el Municipio: el de 2021 no tiene movimientos desde 2022</td><td class="m">Una tecnicatura de la UNSO con pasant&iacute;a paga para todos</td></tr>
+<tr><td class="l">Escala</td><td class="m">El portal: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas no publican cupo; las fiscal&iacute;as, 15 lugares</td><td class="m">928 por a&ntilde;o, con lugar garantizado</td></tr>
+<tr><td class="l">Pago</td><td class="m">Las fiscal&iacute;as, 747.500 $ por mes desde marzo de 2026. Las pr&aacute;cticas de Barcel&oacute; y de Veterinaria, ninguno; los convenios de Favaloro y de la UCA no est&aacute;n publicados</td><td class="m">240.000 $ por mes, con ART y salud</td></tr>
+<tr><td class="l">Qu&eacute; hacen</td><td class="m">Rotaciones cl&iacute;nicas de Medicina; pr&aacute;ctica supervisada en Zoonosis, hasta dos meses; en las fiscal&iacute;as, tareas del Ministerio P&uacute;blico</td><td class="m">Proyectos de inteligencia artificial que el Municipio necesita</td></tr>
 <tr><td class="l">Despu&eacute;s</td><td class="m">M&aacute;s de 300 vecinos con trabajo por el portal, seg&uacute;n una gacetilla; no hay un registro que se pueda consultar</td><td class="m">Pasant&iacute;a, junior en el Municipio, empresa del partido o semillero</td></tr>
 <tr><td class="l">El Municipio</td><td class="m">Acerca candidatos y empresas</td><td class="m">Forma, da el primer empleo y es cliente</td></tr>
 <tr><td class="l">Las empresas</td><td class="m">Publican avisos. D&oacute;nde est&aacute;n las que cobran del Municipio no se publica: la pr&aacute;ctica se abandon&oacute; en 2018 (1.2)</td><td class="m">Cl&aacute;usula de empleo local del 75% y el 20% de cada licitaci&oacute;n para pymes del partido</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Mi Primer Empleo, sanisidro.gob.ar; Bolet&iacute;n Oficial Municipal, decretos 374/2025
-(Barcel&oacute;), 498/2026 (UCA) y 775/2026 (UBA); nota del Municipio del 3 de septiembre de 2026, reproducida por
+(Barcel&oacute;), 498/2026 (UCA), 775/2026 (UBA) y 298/2026 (fiscal&iacute;as); nota del Municipio del 3 de septiembre de 2026, reproducida por
 InfoBAN (Favaloro); Zona Norte Visi&oacute;n, 16 de junio de 2025 (UNSO) y 11 de agosto de 2026 (portal).</p>
 <ol class="n">
 <li><b>Formaci&oacute;n laboral orientada a la demanda real.</b> <b>Proponemos una tecnicatura
 universitaria de dos a&ntilde;os en inteligencia artificial aplicada y datos</b>, de la UNSO, dictada en
 sedes de las seis zonas. Nace en el <b>Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio La
 Cava</b>, de B&eacute;ccar, donde ya funciona <b>La Cava 4.0</b>. <b>Abre inscripci&oacute;n cada seis meses:</b> el primer a&ntilde;o es cursada y el segundo, dos pasant&iacute;as de seis meses en proyectos reales, la primera en el Municipio y la segunda en una empresa del partido. La pr&aacute;ctica la da el centro de formaci&oacute;n, con docentes que paga la Provincia, y la UNSO dicta sus materias, con docentes que designa ella, y firma las pasant&iacute;as. Es una carrera de verdad, con materias que se aprueban cada a&ntilde;o, y el t&iacute;tulo se entrega al terminar el segundo: el pasante sigue siendo estudiante regular todo ese a&ntilde;o, que es lo que exige la Ley 26.427.</li>
-<li><b>La obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4,
+<li><b>Proponemos la obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4,
 ejecutados por cooperativas de vecinos, emplean gente del barrio.</li>
-<li><b>Intermediaci&oacute;n laboral, dentro del programa formativo y no en una oficina aparte.</b> El tutor que vincula al egresado con el empleador es parte de la formaci&oacute;n: es la pieza que
+<li><b>Proponemos la intermediaci&oacute;n laboral dentro del programa formativo y no en una oficina aparte.</b> El tutor que vincula al egresado con el empleador es parte de la formaci&oacute;n: es la pieza que
 distingue a los programas que funcionan de los que entregan un certificado y sueltan a la persona. El
 tutor es uno de sus profesores, el que mejor lo conoce, y por eso es quien lo vincula con el empleador; ese
 papel, junto con el sueldo, es lo que atrae a gente capaz a ense&ntilde;ar. Con un seguimiento de inserci&oacute;n que cualquier vecino puede consultar, porque hoy ese dato aparece suelto en una
 gacetilla y no en un registro.</li>
-<li><b>Y el Municipio es el primer escal&oacute;n: el primer empleo del egresado, con prioridad.</b> La
+<li><b>Y proponemos que el Municipio sea el primer escal&oacute;n: el primer empleo del egresado, con prioridad.</b> La
 plataforma del cap&iacute;tulo 4, la operaci&oacute;n de cada &aacute;rea, la anal&iacute;tica de seguridad, el sistema de
 habilitaciones, los turnos de salud: todo eso lo hacen equipos que se contratan ac&aacute;, con tres
 reglas. <b>Los egresados tienen prioridad para ocupar la mayor cantidad posible de esos puestos</b>, y su
@@ -987,11 +987,12 @@ hoy es formar para una demanda que se contrae.</p>
 bajo el paraguas de la econom&iacute;a del conocimiento, tiene un &aacute;rea de inform&aacute;tica con un
 curso de programador, y firm&oacute; un convenio de colaboraci&oacute;n t&eacute;cnica y
 acad&eacute;mica con la <b>Facultad de Ingenier&iacute;a de la UBA</b>.
-<span class="sg">El programa acompa&ntilde;a con presupuesto algo que la instituci&oacute;n ya
+</p>
+<p><span class="sg">Proponemos acompa&ntilde;ar con presupuesto algo que la instituci&oacute;n ya
 decidi&oacute; sola.</span></p>
 <p><b>La decisi&oacute;n no es ideol&oacute;gica, es de mercado.</b> Ense&ntilde;ar un oficio para el que
 no hay empleador no es formaci&oacute;n laboral: es ocupar el tiempo de alguien que necesita trabajar.
-El eje pasa a ser <span class="sg">inteligencia artificial aplicada, datos y servicios digitales</span>,
+Proponemos que el eje pase a ser <span class="sg">inteligencia artificial aplicada, datos y servicios digitales</span>,
 que es donde hay demanda ahora.</p>
 <p><b>Y cuesta much&iacute;simo menos.</b> Un taller de fabricaci&oacute;n necesita m&aacute;quinas,
 espacio, seguridad y mantenimiento. Esto necesita equipos livianos y conexi&oacute;n. Con lo que sale una
@@ -1028,7 +1029,7 @@ class="sg">los nuestros entran como juniors, y la pasant&iacute;a achica la dist
 cuyas contrataciones m&aacute;s crecieron en Estados Unidos entre 2023 y julio de 2025.</p>
 <h3>Ense&ntilde;ar IA sin acceso a IA es ense&ntilde;ar oficios sin herramientas</h3>
 <div class="cols">
-<p><b>El Municipio da acceso gratuito a inteligencia artificial de nivel profesional</b> &mdash;la misma
+<p><b>Proponemos que el Municipio d&eacute; acceso gratuito a inteligencia artificial de nivel profesional</b> &mdash;la misma
 que usan las empresas&mdash; a todos los alumnos y docentes del programa, y a los vecinos en los centros
 de acceso. Porque el que puede pagar una suscripci&oacute;n aprende y el que no, mira: eso reproduce adentro
 del aula la desigualdad que el cap&iacute;tulo 1 documenta afuera, y la vuelve peor, porque el que ya
@@ -1069,15 +1070,15 @@ construyendo</span>, no formarse primero y trabajar despu&eacute;s.</p>
 
 <h3>El segundo a&ntilde;o: la pasant&iacute;a</h3>
 <div class="cols">
-<p><b>Todos tienen lugar.</b> La ley no permite obligar a nadie a hacer una pasant&iacute;a (art&iacute;culo 2), as&iacute; que lo que el programa garantiza es el lugar: cada uno de los 928 alumnos del a&ntilde;o puede hacer el segundo como pasante, con las condiciones de la Ley 26.427: <b>240.000 $ por mes</b> &mdash;el sueldo de la categor&iacute;a de ingreso municipal, proporcional a veinte horas&mdash;, <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>, durante doce meses en <b>dos tramos de seis</b>, con ART y cobertura de salud. La ley admite pasant&iacute;as de dos a doce meses (art&iacute;culo 13), y cada tramo lleva su convenio y su acuerdo individual, que firma la UNSO. <b>El primer tramo lo paga el &aacute;rea del Municipio</b> para la que trabaja el pasante, de su propio presupuesto; <b>el segundo, la empresa</b>.</p><p><b>Por qu&eacute; con la UNSO.</b> La Ley 26.427 incluye a la formaci&oacute;n profesional (art&iacute;culo 1), pero en la Provincia la excluye una resoluci&oacute;n, la 5356/24 de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que s&oacute;lo le da pr&aacute;cticas que no se pagan. Como estudiantes de una carrera universitaria, la ley cubre a los alumnos sin depender de esa resoluci&oacute;n,
+<p><b>Proponemos que todos tengan lugar.</b> La ley no permite obligar a nadie a hacer una pasant&iacute;a (art&iacute;culo 2), as&iacute; que lo que el programa garantiza es el lugar: cada uno de los 928 alumnos del a&ntilde;o puede hacer el segundo como pasante, con las condiciones de la Ley 26.427: <b>240.000 $ por mes</b> &mdash;el sueldo de la categor&iacute;a de ingreso municipal, proporcional a veinte horas&mdash;, <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>, durante doce meses en <b>dos tramos de seis</b>, con ART y cobertura de salud. La ley admite pasant&iacute;as de dos a doce meses (art&iacute;culo 13), y cada tramo lleva su convenio y su acuerdo individual, que firma la UNSO. <b>El primer tramo lo paga el &aacute;rea del Municipio</b> para la que trabaja el pasante, de su propio presupuesto; <b>el segundo, la empresa</b>.</p><p><b>Por qu&eacute; con la UNSO.</b> La Ley 26.427 incluye a la formaci&oacute;n profesional (art&iacute;culo 1), pero en la Provincia la excluye una resoluci&oacute;n, la 5356/24 de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que s&oacute;lo le da pr&aacute;cticas que no se pagan. Como estudiantes de una carrera universitaria, la ley cubre a los alumnos sin depender de esa resoluci&oacute;n,
 y <b>la UNSO ya tiene su reglamento de pasant&iacute;as en marcha desde 2025</b>, con pasant&iacute;as pagas en pymes del
-partido: el programa se apoya en &eacute;l. <b>En paralelo, el Municipio le pide a la Provincia que habilite la pasant&iacute;a en la formaci&oacute;n profesional</b>: la ley lo permite, y su reglamentaci&oacute;n le da a la Provincia esa llave (art&iacute;culo 13 de la Resoluci&oacute;n Conjunta 825/2009 y 338/2009). No es una idea nueva: <b>Rauch, Olavarr&iacute;a, Necochea y Las Flores tienen una tecnicatura de la UNICEN por convenio con el municipio, y Chivilcoy, Escobar y Z&aacute;rate, una de la UTN en espacios municipales</b>; Rauch, Necochea y Chivilcoy la pagan con fondos propios. El Municipio paga la de la UNSO dentro de los 3 millones por persona.</p><p><b>Quien no termin&oacute; el secundario.</b> La universidad pide el secundario completo, o m&aacute;s de 25 a&ntilde;os y aprobar sus evaluaciones de ingreso. Quien no lo tiene y es menor de 25 hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante, con una <b>beca municipal igual a la asignaci&oacute;n del pasante, 240.000 $ por mes</b>, y termina el secundario por el Plan FinEs mientras cursa.</p>
+partido: el programa se apoya en &eacute;l.</p><p><b>Proponemos, en paralelo, que el Municipio le pida a la Provincia que habilite la pasant&iacute;a en la formaci&oacute;n profesional</b>: la ley lo permite, y su reglamentaci&oacute;n le da a la Provincia esa llave (art&iacute;culo 13 de la Resoluci&oacute;n Conjunta 825/2009 y 338/2009). No es una idea nueva: <b>Rauch, Olavarr&iacute;a, Necochea y Las Flores tienen una tecnicatura de la UNICEN por convenio con el municipio, y Chivilcoy, Escobar y Z&aacute;rate, una de la UTN en espacios municipales</b>; Rauch, Necochea y Chivilcoy la pagan con fondos propios. El Municipio paga la de la UNSO dentro de los 3 millones por persona.</p><p><b>Quien no termin&oacute; el secundario.</b> La universidad pide el secundario completo, o m&aacute;s de 25 a&ntilde;os y aprobar sus evaluaciones de ingreso. Quien no lo tiene y es menor de 25 hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante, con una <b>beca municipal igual a la asignaci&oacute;n del pasante, 240.000 $ por mes</b>, y termina el secundario por el Plan FinEs mientras cursa.</p>
 <p><b>Los pasantes trabajan s&oacute;lo en proyectos nuevos:</b> construir, automatizar, relevar datos que hoy
 no existen. <b>Nunca hacen tareas de la planta ni cubren vacantes</b>: la ley lo proh&iacute;be (art&iacute;culo 12),
 y si pasara, la pasant&iacute;a se convertir&iacute;a en empleo por tiempo indeterminado (art&iacute;culo 19). <span
 class="sg">La pasant&iacute;a es formativa, no estructural</span>: si un a&ntilde;o no hubiera pasantes, el Municipio
 funcionar&iacute;a igual. La operaci&oacute;n de todos los d&iacute;as la sostienen los juniors y la planta reasignada.</p>
-<p><b>D&oacute;nde.</b> En el Municipio entran como m&aacute;ximo 556 pasantes: el 7% de los 7.946 cargos del presupuesto 2026, que es el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. El tope se cuenta sobre los pasantes en curso, igual que los supervisores, uno cada diez pasantes, que tienen que estar presentes todo el horario. Con seis meses cada uno, <b>hay 464 a la vez</b>, y los proyectos de las &aacute;reas, la plataforma y los dispositivos tienen lugar para 467 (cuadro [[n:proyectos]]). <b>La segunda mitad es en una empresa del partido o una contratista del Municipio</b>, con la misma regla y pagada por ella, por un convenio marco con la C&aacute;mara de Comercio y Servicios del Partido de San Isidro &mdash;en su estatuto, C&aacute;mara del Comercio e Industria de San Isidro&mdash; y con las c&aacute;maras de Boulogne y de B&eacute;ccar. Las empresas tambi&eacute;n tienen tope: uno cada diez empleados, o el 7% si tienen m&aacute;s de doscientos. Para 464 a la vez hacen falta empresas con entre 4.640 y 6.629 empleados: <b>del 5% al 7% de los 93.071 puestos privados registrados del partido</b>.</p><p><b>Si a alguien no le toca lugar en la segunda mitad.</b> Primero, los 92 lugares que el tope todav&iacute;a deja en el Municipio; despu&eacute;s, otros organismos p&uacute;blicos del partido, cada uno con su propio 7% &mdash;el Concejo Deliberante tiene 416 cargos: 29 lugares&mdash;; y si a&uacute;n falta, la pr&aacute;ctica en proyectos del centro de formaci&oacute;n, que no tiene tope. La pr&aacute;ctica no se paga, as&iacute; que el Municipio da la misma beca de 240.000 $ por mes. <b>El peor caso, que ninguna empresa tome a nadie, cuesta 1.336,3 millones por a&ntilde;o</b>, y sale del gasto flexible que queda libre (3.4).</p>
+<p><b>D&oacute;nde.</b> En el Municipio entran como m&aacute;ximo 556 pasantes: el 7% de los 7.946 cargos del presupuesto 2026, que es el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. El tope se cuenta sobre los pasantes en curso, igual que los supervisores, uno cada diez pasantes, que tienen que estar presentes todo el horario. Con seis meses cada uno, <b>hay 464 a la vez</b>, y los proyectos de las &aacute;reas, la plataforma y los dispositivos tienen lugar para 467 (cuadro [[n:proyectos]]). <b>La segunda mitad es en una empresa del partido o una contratista del Municipio</b>, con la misma regla y pagada por ella, por un convenio marco con la C&aacute;mara de Comercio y Servicios del Partido de San Isidro &mdash;en su estatuto, C&aacute;mara del Comercio e Industria de San Isidro&mdash; y con las c&aacute;maras de Boulogne y de B&eacute;ccar. Las empresas tambi&eacute;n tienen tope: uno cada diez empleados, o el 7% si tienen m&aacute;s de doscientos. Para 464 a la vez hacen falta empresas con entre 4.640 y 6.629 empleados: <b>del 5% al 7% de los 93.071 puestos privados registrados del partido</b>.</p><p><b>Si a alguien no le toca lugar en la segunda mitad.</b> Primero, hasta 92 lugares que el tope todav&iacute;a deja en el Municipio; despu&eacute;s, otros organismos p&uacute;blicos del partido, cada uno con su propio 7% &mdash;el Concejo Deliberante tiene 416 cargos: 29 lugares&mdash;; y si a&uacute;n falta, la pr&aacute;ctica en proyectos del centro de formaci&oacute;n, que no tiene tope. La pr&aacute;ctica no se paga, as&iacute; que el Municipio da la misma beca de 240.000 $ por mes. <b>El peor caso, que ninguna empresa tome a nadie, cuesta 1.336,3 millones por a&ntilde;o</b>, y sale del gasto flexible que queda libre (3.4).</p>
 <p><b>Un tutor y un supervisor.</b> El tutor es uno solo: el profesor que el alumno vota, que la UNSO designa como &laquo;docente gu&iacute;a&raquo; de la ley y que lo acompa&ntilde;a y lo vincula con el empleo. <b>Su incentivo lo paga el Municipio, a la
 vista:</b> los convenios con el centro de formaci&oacute;n y con la UNSO llevan una <b>partida de incentivo docente</b>, y cada instituci&oacute;n se la paga a su profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. El dinero es del Municipio; la instituci&oacute;n s&oacute;lo lo transfiere. No es un cargo en el Municipio, que es lo que el art&iacute;culo 10 de
 la ley le proh&iacute;be al docente gu&iacute;a. En el lugar de trabajo, adem&aacute;s, hay <b>un supervisor cada diez
@@ -1163,7 +1164,7 @@ persona, que pagan los dos a&ntilde;os de formaci&oacute;n; la pasant&iacute;a l
 <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
-es que la cloaca y el gas de red ya se financian con la obra vecinal del cap&iacute;tulo 4:
+es que la cloaca y el gas de red ya se financian con la obra vecinal que propone el cap&iacute;tulo 4:
 <span class="sg">sostener vivienda en dos tercios ser&iacute;a pagar dos veces lo mismo</span>. Lo que
 la partida de vivienda cubre es lo que la obra vecinal no alcanza.</p>
 <p><b>Los tres millones por persona son la propuesta.</b> El resto
@@ -1202,7 +1203,7 @@ empleo por obra p&uacute;blica, y el cap&iacute;tulo 4 dice que la obra vecinal 
 empleo. <span class="sg">La diferencia es que ac&aacute; no se crea trabajo para ocupar gente: se hace
 una obra que hace falta igual, y se decide qui&eacute;n la ejecuta.</span></p>
 </div>
-<h3>El semillero de empresas</h3>
+<h3>Proponemos un semillero de empresas</h3>
 <div class="cols">
 <p><b>Para el egresado que no queda contratado.</b> Entra en equipo, con un proyecto, en una de las dos convocatorias del a&ntilde;o, despu&eacute;s de cada egreso: <b>veinte empresas por a&ntilde;o</b> en r&eacute;gimen, diez por convocatoria y de tres egresados en promedio; en el mandato, diecis&eacute;is. Tiene un a&ntilde;o de incubaci&oacute;n: lugar de trabajo en las sedes; mentores, que son los tutores y los empresarios del partido del convenio con las c&aacute;maras; y una ventanilla del Municipio que resuelve lo que traba al principio: constituir la sociedad, inscribirse y facturar. Las que crecen contratan a los egresados que vienen. <span class="sg">El semillero no arranca con un subsidio sino con un contrato.</span></p>
 <p><b>El primer cliente, por pliego.</b> <b>El 20% de cada licitaci&oacute;n se subcontrata a pymes del partido</b>, de cualquier antig&uuml;edad, y <b>dentro de ese 20%, el 5% del valor del contrato se reserva para empresas del partido de menos de cinco a&ntilde;os</b>, con las del semillero primero. Sobre los contratos m&aacute;s grandes &mdash;la recolecci&oacute;n y la mitad de la obra que sigue por contratista en el cuarto a&ntilde;o&mdash;, son 15.635,6 millones para pymes y 3.908,9 para empresas nuevas. La cl&aacute;usula nombra una categor&iacute;a, nunca empresas, y quien no encuentre qui&eacute;n lo haga lo justifica ante el panel, como en el 75%. Francia pide 20% a las pymes en sus grandes contratos desde 2025, y la Provincia exige 30% de pymes en su propia obra p&uacute;blica desde 2000 (Ley 6021, art&iacute;culo 9 ter).</p>
@@ -1375,14 +1376,14 @@ por una norma que el Concejo discuta y vote. Cada permiso es legal; lo que no ex
 se discuta el conjunto.</p>
 <p><b>Y explica el reclamo vecinal.</b> Cuando los vecinos objetan la construcci&oacute;n en altura y
 hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aacute;mbito donde plantearlo,
-porque estas decisiones no pasan por el cuerpo deliberativo.</b> Este programa propone que el criterio
+porque estas decisiones no pasan por el cuerpo deliberativo.</b></p><p>Este programa propone que el criterio
 se discuta y se vote, y que cualquier vecino pueda preguntar qu&eacute; permisos se dieron en su localidad.</p>
 <p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en menos de veinti&uacute;n d&iacute;as h&aacute;biles.</b>
 La reforma del C&oacute;digo de Ordenamiento Urbano se vot&oacute; el <b>6 de mayo de 2026</b>. Vecinos
 de Villa Adelina, Boulogne, B&eacute;ccar y La Horqueta denuncian que <b>se aprob&oacute; en menos de
 veinti&uacute;n d&iacute;as h&aacute;biles, sin audiencia p&uacute;blica y sin los estudios de impacto ambiental
-previos</b>, y que las comisiones se reunieron sin ellos.
-<span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
+previos</b>, y que las comisiones se reunieron sin ellos.</p>
+<p><span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
 instancia de participaci&oacute;n</span>: lo que este programa propone es la instancia, no el tr&aacute;mite.</p>
 <p><b>Y hay un caso donde el &uacute;nico &aacute;mbito que funcion&oacute; fue un juzgado.</b> En
 Boulogne, la asamblea vecinal que reclama un parque p&uacute;blico en el predio lindero al ex Arsenal
@@ -1416,13 +1417,13 @@ septiembre de 2025 &mdash;cuando Catalejo ya estaba demolido y Barisidro entrega
 vaciado.</span></p>
 <p><b>Y hubo una p&eacute;rdida que nadie cont&oacute;:</b> esos locales no le costaban un peso al
 Municipio. El cap&iacute;tulo 1 muestra que toda la
-pol&iacute;tica municipal de empleo son 170 millones al a&ntilde;o. <b>Acceso p&uacute;blico y actividad
+partida municipal de empleo son 170 millones al a&ntilde;o. <b>Acceso p&uacute;blico y actividad
 no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Qu&eacute; propone este programa para las hect&aacute;reas que faltan</div>
 <p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de
-acceso restringido. Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
+acceso restringido.</p><p>Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
 decide qu&eacute; se hace con cada una.</p>
 <p><b>La regla es reasignar, no demoler.</b> Un permiso vencido o revocado se licita, con pliego
 p&uacute;blico y exigencia de empleo local: entra otro concesionario que paga canon, el edificio sigue en pie y los puestos de trabajo no se pierden. El
@@ -1437,7 +1438,7 @@ trabajo deber&iacute;a generarlo.</p>
 qui&eacute;n cuida el espacio verde el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la
 plaza est&aacute; ah&iacute; siempre y se entera antes que cualquier sistema.</p>
 <div class="cols">
-<p><b>Asociaciones de parque, reconocidas por ordenanza</b>, con el marco de la 6045 extendido al espacio
+<p><b>Proponemos asociaciones de parque, reconocidas por ordenanza</b>, con el marco de la 6045 extendido al espacio
 verde. No es un &oacute;rgano nuevo: es la misma figura de asociaci&oacute;n vecinal que el
 cap&iacute;tulo 4 usa, aplicada a un espacio concreto y no a una zona entera.</p>
 <p><b>Tres facultades, y ninguna m&aacute;s.</b> Aviso previo obligatorio de cualquier obra en su
@@ -1450,7 +1451,7 @@ sirviendo para frenar y no para cuidar. Y se aplica s&oacute;lo al espacio verde
 asociaci&oacute;n usa.</p>
 <p><b>Qu&eacute; corrige.</b> Se cementa lo que estaba verde, y pasa porque la obra se decide arriba y
 nadie con inter&eacute;s en ese parque tiene c&oacute;mo frenarla a tiempo: no existe nadie con facultad
-de objetar antes de la firma. <span class="sg">Esto crea a ese alguien.</span></p>
+de objetar antes de la firma.</p><p><span class="sg">Lo que proponemos crea a ese alguien.</span></p>
 </div>
 
 <div class="pull"><div class="plabel">Y hab&iacute;a 1.037 firmas pidiendo lo contrario</div>
@@ -1458,7 +1459,7 @@ de objetar antes de la firma. <span class="sg">Esto crea a ese alguien.</span></
 sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b> y junt&oacute;
 <b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025 y Barisidro en septiembre.
 <span class="sg">No es que nadie haya dicho nada: es que no hab&iacute;a d&oacute;nde decirlo con
-efecto.</span> Una firma junta en una plataforma no obliga a nadie, y por eso este programa propone el
+efecto.</span> Una firma junta en una plataforma no obliga a nadie.</p><p>Por eso este programa propone el
 &aacute;mbito donde ese mismo reclamo se plantee antes de la firma del decreto y tenga respuesta
 escrita.</p></div>
 
@@ -1514,26 +1515,27 @@ no incluye salud: ofrece licencias de conducir, aviso de obra y copia de plano.
 </div>
 
 <div class="callout g">
-<div class="clabel">La plataforma ya existe, y la adhesi&oacute;n se pide</div>
-<p><span class="sg">El turno m&eacute;dico en l&iacute;nea se monta sobre la plataforma municipal que ya
+<div class="clabel">La plataforma ya existe, y proponemos pedir la adhesi&oacute;n</div>
+<p><span class="sg">Proponemos montar el turno m&eacute;dico en l&iacute;nea sobre la plataforma municipal que ya
 da turnos para otros tr&aacute;mites: no hay que construirla ni pagarla.</span> <b>Es la propuesta
 m&aacute;s barata de este programa y la que m&aacute;s r&aacute;pido se nota</b>: el d&iacute;a que
 funcione, nadie pierde una ma&ntilde;ana de trabajo para pedir un turno.</p>
-<p>En paralelo se pide la adhesi&oacute;n a <b>Mi Salud Digital</b>, el sistema de la Provincia de Buenos
+<p><b>Mi Salud Digital</b> es el sistema de la Provincia de Buenos
 Aires: turno por celular, historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y
 orden integradas autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de
 sesenta municipios bonaerenses</b>, el sistema lleva registrados m&aacute;s de 19,5 millones de turnos y la
 Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000 computadoras, lectoras de DNI e
 impresoras para conectarse. No hay constancia de que San Isidro haya adherido.</p>
+<p>Proponemos pedir la adhesi&oacute;n, en paralelo.</p>
 </div>
 <div class="cols">
-<p><b>Teleconsulta para lo que no necesita ir al hospital.</b> Renovar una receta cr&oacute;nica, una
+<p><b>Proponemos teleconsulta para lo que no necesita ir al hospital.</b> Renovar una receta cr&oacute;nica, una
 consulta por fiebre un domingo, un control de seguimiento. En las experiencias argentinas medidas la
 espera es de <b>3 a 6 minutos</b>, la atenci&oacute;n dura entre 6 y 7, y el 86% de las consultas se
 resuelven. <b>Cada teleconsulta libera un turno presencial</b> para quien s&iacute; necesita el
 consultorio.</p>
 <p><b>Arreglar los edificios, que el propio gobierno reconoce.</b> La gesti&oacute;n actual
-identific&oacute; filtraciones y humedades como problema estructural de los hospitales municipales. Eso es obra y entra en la partida de obra: <span class="sg">la de los centros de atenci&oacute;n primaria la prioriza la comisi&oacute;n de cada zona</span> con el mecanismo del cap&iacute;tulo 4, y la de los hospitales, que sirven a todo el partido, va por la mitad que decide el Ejecutivo (6.2).</p>
+identific&oacute; filtraciones y humedades como problema estructural de los hospitales municipales.</p><p>Proponemos tratarlo como obra, en la partida de obra: <span class="sg">la de los centros de atenci&oacute;n primaria la prioriza la comisi&oacute;n de cada zona</span> con el mecanismo del cap&iacute;tulo 4, y la de los hospitales, que sirven a todo el partido, va por la mitad que decide el Ejecutivo (6.2).</p>
 <p><b>Y reci&eacute;n entonces, que el vecino pregunte.</b> Una vez que el turno es digital, el tiempo de espera por
 especialidad y por establecimiento existe como dato sin que nadie lo cargue a mano. Que cualquier vecino pueda preguntar cu&aacute;nto se espera un turno en cada hospital deja de ser una promesa administrativa y pasa a ser la forma de saber d&oacute;nde falta un m&eacute;dico. Lo mismo
 con la ejecuci&oacute;n por centro y por zona, que hoy no se sabe: con 263.106 pesos por habitante al
@@ -1570,7 +1572,7 @@ argentina de resultados medidos en un municipio</b>, y hoy nadie los vio.</p>
 que usa la herramienta responde por su criterio; pero <b>el hospital y el Municipio responden como
 due&ntilde;o y guardi&aacute;n de la cosa</b> cuando el da&ntilde;o viene de un defecto del sistema.
 Quien es responsable tiene que poder decir qu&eacute; contrat&oacute;.</p>
-<p><b>Los egresados del programa desarrollan sobre los sistemas del Municipio y las universidades del
+<p><b>La propuesta: los egresados del programa desarrollan sobre los sistemas del Municipio y las universidades del
 partido validan</b>, con el mismo esquema del cap&iacute;tulo 4. Y hay antecedentes p&uacute;blicos
 argentinos para mirar: RETINAR, del CONICET y la Universidad del Centro, es el mejor caso nacional, y el
 Hospital San Bernardo de Salta fue el primer hospital p&uacute;blico argentino con IA en
@@ -1618,7 +1620,7 @@ Alcanz&oacute; con que cada hospital pudiera ver lo que pagaba el de al lado. Es
 San Isidro no tiene y podr&iacute;a tener el primer mes.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Cuatro medidas, y la cuarta es la que hace que las otras tres sirvan</div>
+<div class="clabel">Proponemos cuatro medidas, y la cuarta es la que hace que las otras tres sirvan</div>
 <p><b>1 &middot; Precio unitario a la vista.</b> De cada compra de insumos y medicamentos, cualquier vecino puede preguntar producto, cantidad, <b>precio unitario</b> y proveedor, desde el d&iacute;a en que se compra. No el total del expediente: el precio por unidad,
 que es lo &uacute;nico comparable. Es el mismo principio que el cap&iacute;tulo 1 aplica a los decretos
 de adjudicaci&oacute;n.</p>
@@ -1638,7 +1640,7 @@ avisa cuando algo se sale del rango.</p>
 <div class="cols">
 <p><b>Se&ntilde;ala anomal&iacute;as, no acusa</b>, con las reglas del asistente del 4.11:
 <span class="sg">el sistema no imputa a nadie, acorta el tiempo entre que algo pasa y que se ve</span>.</p>
-<p><b>Y la guardia, en n&uacute;mero.</b> Ocupaci&oacute;n en tiempo real: &laquo;catorce personas
+<p><b>Y proponemos la guardia en n&uacute;mero.</b> Ocupaci&oacute;n en tiempo real: &laquo;catorce personas
 esperando, demora estimada cuarenta minutos&raquo;, para que quien tiene que ir elija a cu&aacute;l.
 <b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
 historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
@@ -1690,7 +1692,7 @@ respuesta.</p>
 e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
 Isidro. <span class="sg">Ning&uacute;n municipio del conurbano norte publica hoy el dato que esta
 propuesta necesita</span>, lo que la vuelve la primera y tambi&eacute;n la m&aacute;s exigente.</p>
-<p>Por eso el patrullaje dirigido empieza por <b>construir el mapa de incidentes municipales</b>, que
+<p>Por eso proponemos que el patrullaje dirigido empiece por <b>construir el mapa de incidentes municipales</b>, que
 hoy no existe. Sin saber d&oacute;nde pasan las cosas, mandar el patrullero a donde m&aacute;s hace
 falta es una frase.</p>
 </div>
@@ -1755,7 +1757,7 @@ plan de gobierno 2024&ndash;2025, ni entre los canales de reclamo.</p>
 cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
 <b>En San Isidro no se encontr&oacute; nada equivalente publicado</b>: ni oficina, ni canal, ni
 menci&oacute;n en el sitio municipal ni en el plan de gobierno 2024&ndash;2025, al 20 de septiembre de 2026.</p>
-<p><b>Va unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
+<p><b>Proponemos una oficina unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
 mostrador de denuncias sin nadie que pueda hacer nada con ellas.
 <span class="sg">Unificada con la anal&iacute;tica y con la seguridad de los sistemas municipales, tiene
 estructura, personal t&eacute;cnico y trabajo todo el a&ntilde;o</span>, y ese personal es el mismo que
@@ -1775,10 +1777,10 @@ con las comisiones vecinales del cap&iacute;tulo 4.</p>
 </div>
 
 <h3>4. La constancia de que no consta</h3>
-<p class="tight">Hoy arruinar un nombre tarda una tarde y limpiarlo tarda meses. Esto corrige la parte
-que un municipio puede corregir.</p>
+<p class="tight">Hoy arruinar un nombre tarda una tarde y limpiarlo tarda meses.</p>
+<p class="tight">Proponemos corregir la parte que un municipio puede corregir.</p>
 <div class="cols">
-<p><b>Qu&eacute; es, exactamente.</b> Si a alguien lo acusan p&uacute;blicamente de un delito y no hay
+<p><b>Qu&eacute; proponemos, exactamente.</b> Si a alguien lo acusan p&uacute;blicamente de un delito y no hay
 causa, no hay imputaci&oacute;n y no hay condena, el Municipio certifica exactamente eso: que en los
 registros consultados, al d&iacute;a de la fecha, <b>no consta</b>.
 <span class="sg">Es una afirmaci&oacute;n sobre el registro, no sobre el hecho.</span></p>
@@ -1828,17 +1830,18 @@ presupuesto.</p></div>
 <p><b>Hoy:</b> 13.986 millones, el 4,3%. Cay&oacute; <b>11,6% real</b> entre 2024 y 2025. La
 educaci&oacute;n obligatoria es competencia provincial, no municipal. Pero el Municipio administra el Fondo
 de Financiamiento Educativo &mdash;3.931 millones devengados en 2025&mdash; y sostiene infraestructura
-escolar y formaci&oacute;n laboral.</p>
+escolar y talleres de empleo.</p>
 <h3>Lo que un intendente s&iacute; puede hacer en educaci&oacute;n</h3>
 <p class="tight">Puede hacer todo lo que pasa fuera del aula, y ese margen es amplio.</p>
 <div class="cols">
-<p><b>1 &middot; Apoyo escolar donde los chicos se est&aacute;n quedando atr&aacute;s.</b> Es la
+<p><b>1 &middot; Proponemos apoyo escolar donde los chicos se est&aacute;n quedando atr&aacute;s.</b> Es la
 pol&iacute;tica educativa municipal por excelencia y funciona en todo el pa&iacute;s: la capital de
 Catamarca sostiene <b>46 centros de apoyo escolar</b> en centros vecinales, parroquias y organizaciones
 barriales, gratuitos, para primaria y secundaria. San Juan tiene un programa equivalente que alcanza a
 m&aacute;s de 800 chicos.</p>
 <p><b>Y San Isidro ya tiene d&oacute;nde ponerlos.</b> Los polideportivos, los centros de la tercera
-edad, las sedes barriales. <span class="sg">El &iacute;ndice de necesidad del cap&iacute;tulo 4 dice
+edad, las sedes barriales.</p>
+<p>Proponemos que <span class="sg">el &iacute;ndice de necesidad del cap&iacute;tulo 4 diga
 d&oacute;nde.</span> No hay que
 construir un edificio: hay que abrir los que est&aacute;n cerrados a la tarde y pagar docentes.</p>
 <p><b>2 &middot; Que el apoyo escolar detecte lo que la escuela no ve.</b> En los programas que
@@ -1846,7 +1849,7 @@ funcionan, el centro de apoyo es adem&aacute;s el lugar donde se detectan situac
 chico que dej&oacute; de venir, una familia que no llega&mdash; y se derivan a las &aacute;reas sociales
 y de salud del Municipio, que ya existen. <b>Es articulaci&oacute;n, no estructura nueva.</b></p>
 <p><b>3 &middot; Y el modelo del CFL 404, que la secci&oacute;n 5.3 lleva a las seis zonas:</b>
-<span class="sg">el puente entre la escuela y el trabajo que hoy no existe</span>.</p>
+<span class="sg">el puente entre la escuela y el trabajo que hoy no existe a esa escala</span>.</p>
 </div>
 <h3>Y lo que hay que arreglar del dinero</h3>
 <ol class="n">
@@ -1915,7 +1918,7 @@ lugares que funcionaban no es s&oacute;lo un problema econ&oacute;mico.</p>
 
 <h3>A qui&eacute;n se le pregunta cuando hace falta un estudio</h3>
 <div class="cols">
-<p><b>La regla es simple.</b> Cuando el Municipio convoque
+<p><b>La regla que proponemos es simple.</b> Cuando el Municipio convoque
 expertos o encargue un estudio, convoca a <span class="sg">instituciones con sede en el partido</span>,
 y la composici&oacute;n se pondera por el &iacute;ndice de necesidad del cap&iacute;tulo 4, el que
 reparte la partida vecinal. Hoy esa ponderaci&oacute;n da dos tercios de instituciones
@@ -1978,12 +1981,12 @@ ma&ntilde;ana de trabajo en una cola.</p>
 reci&eacute;n arranca se pierde antes: en averiguar si el rubro est&aacute; permitido en esa cuadra, si
 necesita obra, cu&aacute;nto tarda y cu&aacute;nto sale. <span class="sg">Ah&iacute; empieza la
 discrecionalidad</span>, porque la respuesta depende de a qui&eacute;n le preguntes.</p>
-<p><b>Consulta previa, desde la c&aacute;mara del tel&eacute;fono.</b> El vecino apunta al local y
+<p><b>Proponemos consulta previa, desde la c&aacute;mara del tel&eacute;fono.</b> El vecino apunta al local y
 pregunta si puede poner ah&iacute; lo que tiene en la cabeza. El sistema cruza zonificaci&oacute;n, rubro
 y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
 puede cambiar de idea sin perder dinero.</p>
 <p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
-momento discrecional que sobra.</b> Por eso, como toda inspecci&oacute;n municipal, se transmite en vivo
+momento discrecional que sobra.</b> Por eso, como proponemos para toda inspecci&oacute;n municipal, se transmite en vivo
 para que se vea que es real y queda grabada tal cual se transmiti&oacute; para que cualquier vecino la vea
 despu&eacute;s; y el comerciante puede objetar por escrito y recibir respuesta fundada.</p>
 <p><b>Programada, no aleatoria.</b> El sistema la agenda y el comerciante sabe cu&aacute;ndo va el
@@ -2024,7 +2027,7 @@ resguardo de esos datos y el archivo queda con fecha, domicilio y agente intervi
 </div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
-<p class="tight"><b>Nada de lo que sigue se publica para que el vecino lo vaya a buscar: se lo pregunta a
+<p class="tight"><b>Proponemos que nada de lo que sigue se publique para que el vecino lo vaya a buscar: se lo pregunta a
 la inteligencia artificial del Municipio, y le contesta.</b> Es el argumento del cap&iacute;tulo 4: lo que
 hay que leer no se lee, y lo que nadie lee no controla nada. Antes hay que poner en orden lo que el
 Municipio ya public&oacute; alguna vez, y eso <span class="sg">no cuesta un peso</span>: se hace, no se
@@ -2070,7 +2073,7 @@ problema de todo este cuadro.</p>
 
 <h3>Desde cu&aacute;ndo se puede preguntar cada cosa, y por qu&eacute; casi siempre es el mismo d&iacute;a</h3>
 <p class="tight">Lo trimestral qued&oacute; de cuando publicar significaba que un empleado armara un
-informe cada tres meses. Con el sistema del cap&iacute;tulo 4, <span class="sg">la adjudicaci&oacute;n
+informe cada tres meses.</p><p class="tight">Proponemos que sea el mismo d&iacute;a: con el sistema del cap&iacute;tulo 4, <span class="sg">la adjudicaci&oacute;n
 queda cargada el d&iacute;a que se firma</span>, y mostrarla no es una tarea aparte: es el mismo
 registro.</p>
 <div class="cols">
@@ -2095,9 +2098,10 @@ municipal.</p>
 <p>Este programa propone lo mismo que en todo el resto: que el mantenimiento vial entre en la
 priorizaci&oacute;n vecinal. Una calle sin asfaltar es obra p&uacute;blica de bienes de uso, igual que
 una cloaca, y entra en la partida del cap&iacute;tulo 4 sin necesidad de una l&iacute;nea nueva.</p>
-<p><b>Y donde decide la Provincia, se pide, y cualquier vecino puede preguntar qu&eacute; contest&oacute;.</b> La l&iacute;nea 437, que
+<p>La l&iacute;nea 437, que
 circula por calles internas del Bajo, es de <b>jurisdicci&oacute;n provincial</b>: el recorrido lo
 autoriza la Provincia, no el Municipio. En 2026 San Isidro propuso y la Provincia aprob&oacute;.</p>
+<p><b>Proponemos que, donde decide la Provincia, se pida, y que cualquier vecino pueda preguntar qu&eacute; contest&oacute;.</b></p>
 <p><b>Comercio:</b> 2.216 millones, el 0,7%, junto con turismo y otros servicios. San Isidro tiene
 centros comerciales a cielo abierto en las seis localidades y el Municipio los habilita, los inspecciona
 y les cobra la tasa de seguridad e higiene.</p>
@@ -2150,7 +2154,7 @@ en 1991, el 14,0% en 2001, el 14,9% en 2010 y el 17,8% en 2022. <b>Se duplic&oac
 cambio que sorprenda a nadie: es un cambio que nadie atendi&oacute;.</p>
 <p><b>Y los dos mapas est&aacute;n invertidos.</b> Los chicos se concentran en B&eacute;ccar, con el
 21,0% de menores de 14, y en Boulogne, con el 18,7%. Los mayores, en Acassuso con el 22,5% y en
-Mart&iacute;nez con el 22,4%. <b>No se puede hacer la misma pol&iacute;tica en todo el partido:</b> los
+Mart&iacute;nez con el 22,4%. <b>No se puede hacer la misma pol&iacute;tica en todo el partido.</b></p><p><b>La propuesta:</b> los
 centros de infancia van donde est&aacute;n los chicos y los de personas mayores donde est&aacute;n los
 mayores. Es el mismo criterio territorial del cap&iacute;tulo 1, aplicado a la edad en vez de a la
 carencia.</p>
@@ -2202,7 +2206,7 @@ no tiene fondos.</b></p>
 nacional publica por regi&oacute;n y por provincia, y el Censo 2022 <b>no incluy&oacute; m&oacute;dulo de
 discapacidad</b>. <span class="sg">El &uacute;nico lugar donde ese dato existe materialmente es el
 propio Municipio</span>, porque la junta evaluadora es municipal y emite los certificados del partido.
-Que cualquiera pueda preguntarlo por zona no cuesta un peso, y nadie m&aacute;s tiene ese dato.</p>
+</p><p>Proponemos que cualquiera pueda preguntarlo por zona: no cuesta un peso, y nadie m&aacute;s tiene ese dato.</p>
 </div>
 <div class="callout g">
 <div class="clabel">La propuesta, sin fondos nuevos</div>
@@ -2255,7 +2259,7 @@ donde se concentra el delito y una oficina de ciberdelito.</li>
 <li>La recolecci&oacute;n de residuos, con barrido y limpieza, es el servicio m&aacute;s caro que paga el
 Municipio &mdash;49.270 millones al a&ntilde;o&mdash;, y se licit&oacute; dos veces y nunca se adjudic&oacute;: corre sobre un contrato de seis meses de 2009
 prorrogado sin fecha de cierre.</li>
-<li>El gasto en ambiente pasa del 0,4% al 1,5% del presupuesto, con fondos que se sacan de otros
+<li>Proponemos que el gasto en ambiente pase del 0,4% al 1,5% del presupuesto, con fondos que se sacan de otros
 programas; educaci&oacute;n recupera lo que perdi&oacute; contra la inflaci&oacute;n en 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, escuela por escuela.</li>
 <li>De las siete cosas que se buscaron en el sitio del Municipio, seis &mdash;el portal de datos
 abiertos, las declaraciones juradas de los funcionarios, la planta de personal, el organigrama, las
@@ -2273,7 +2277,7 @@ verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
 # =====================================================================
 C6 = dict(id="cap6", runhead=RH, html="""
 <h1><span class="n">6</span>El plan, con fechas</h1>
-<div class="stand">Trece metas, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con el que se va a poder comprobar. En la primera sesi&oacute;n del Concejo entra el proyecto que deroga los art&iacute;culos que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
+<div class="stand">Trece metas, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con el que se va a poder comprobar. En la primera sesi&oacute;n del Concejo, la extraordinaria de diciembre de 2027, entra el proyecto que deroga los art&iacute;culos que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal. Y el calendario dice qu&eacute; pasa cada mes de los cuatro a&ntilde;os.</div>
 
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, el 19 de
