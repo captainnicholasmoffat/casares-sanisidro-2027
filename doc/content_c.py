@@ -775,7 +775,7 @@ empleo, es planta encubierta.</p>
 <tr><td class="l">Infraestructura y licencias</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">193,2 M</td></tr>
 <tr><td class="l">Auditor&iacute;a externa</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">107,3 M</td></tr>
 <tr class="hi"><td class="l"><b>Plataforma</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.585,6 M</b></td></tr>
-<tr><td class="l">Dispositivos: sensores, centros de acceso, transmisi&oacute;n de inspecciones, guardias</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
+<tr><td class="l">Dispositivos: instalar sensores, centros de acceso, transmisi&oacute;n de inspecciones y guardias; los equipos, en cada &aacute;rea (3.4)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
 <tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.676,6 M</b></td></tr>
 </table>
 <p class="cap"><b>Nota:</b> sueldos brutos de mercado &mdash;mediana de la encuesta de Sysarmy 2026.1: senior 3,40 M
@@ -2001,7 +2001,8 @@ patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los 
 </div>
 
 <p><b>Cu&aacute;nto cuesta.</b> El cap&iacute;tulo 3 lo estima en 1.200 millones de inversi&oacute;n
-inicial, junto con la anal&iacute;tica de seguridad, a licitar.</p>
+inicial, junto con la anal&iacute;tica de seguridad y las ochenta c&aacute;maras corporales de los inspectores, y 264
+millones por a&ntilde;o de mantenimiento, a licitar.</p>
 
 <h3>La coima en la inspecci&oacute;n: el acto de autoridad, transmitido en vivo</h3>
 <p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto
@@ -2174,10 +2175,12 @@ es Puerto Libre, que es recreativo y comedor, y no reemplaza a ninguna de las tr
 <p><b>Y los treinta y cinco &laquo;centros de tercera edad&raquo; que se cuentan son, en su
 mayor&iacute;a, de la sociedad civil</b>, no sedes municipales. <span class="sg">Articular con ellos es
 correcto; contarlos como estructura propia no lo es.</span></p>
-<p><b>La m&aacute;s barata de las tres es la que falta primero.</b> La atenci&oacute;n domiciliaria
+<p><b>La m&aacute;s barata de las tres es la que falta primero, y la proponemos.</b> La atenci&oacute;n domiciliaria
 &mdash;que alguien vaya a la casa de quien ya no puede salir&mdash; no exige un edificio, exige
-personal formado y una agenda. Es exactamente el tipo de trabajo para el que el 5.3 forma gente, y entra
-en la partida de empleo.</p>
+personal formado y una agenda. La dar&iacute;an cuidadores formados en el curso de operador de cuidados de adultos
+mayores que el CFL 404 ya dicta &mdash;380 horas, gratuito, no la tecnicatura&mdash;, y los pagar&iacute;a Desarrollo
+Social: <b>una primera etapa de cien cuidadores atiende a unas 240 personas, cuatro horas por d&iacute;a cada una, y
+cuesta 667,8 millones por a&ntilde;o</b> con cargas. El relevamiento del 5.3 dice cu&aacute;ntos m&aacute;s hacen falta.</p>
 </div>
 <h3>G&eacute;nero es el &aacute;rea con menos estructura de todo el Municipio</h3>
 <div class="cols">
@@ -2227,8 +2230,8 @@ es obra, y una comisi&oacute;n la puede priorizar.</p>
 personas mayores en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido y
 los n&uacute;meros dicen que no deber&iacute;a serlo.</p>
 <p><b>4 &middot; Atenci&oacute;n domiciliaria para personas mayores</b>, que hoy no existe y es lo
-&uacute;nico de las tres que no pide un edificio. Se dota con gente formada en el 5.3 y se mide en
-personas atendidas, no en centros abiertos.</p>
+&uacute;nico de las tres que no pide un edificio. Se dota con cuidadores formados en el CFL 404 y pagados por
+Desarrollo Social, y se mide en personas atendidas, no en centros abiertos.</p>
 <p><b>5 &middot; Que cualquiera pueda preguntar cu&aacute;ntos certificados de discapacidad emiti&oacute; la junta municipal en su zona</b>, y una p&aacute;gina institucional que diga qu&eacute; hay y d&oacute;nde, con una
 l&iacute;nea de atenci&oacute;n que no sea un tel&eacute;fono de guardia.</p>
 </div>
@@ -2327,7 +2330,7 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 </table>
 <p class="cap"><b>Nota:</b> los dos primeros van juntos a esa sesi&oacute;n porque son el
 andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
-que no. Los compromisos 15 y 16 empiezan por decreto, con personal que el Municipio ya dirige: el 15 usa las c&aacute;maras que ya compr&oacute;; el 16, los equipos de transmisi&oacute;n de los dispositivos (4.11). <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
+que no. Los compromisos 15 y 16 empiezan por decreto, con personal que el Municipio ya dirige: el 15 usa las c&aacute;maras que ya compr&oacute;; el 16, las c&aacute;maras corporales que compra habilitaciones (3.4). <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
 transmisi&oacute;n va despu&eacute;s</b>, y est&aacute; escrita en el anexo.</p>
 
 <h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>

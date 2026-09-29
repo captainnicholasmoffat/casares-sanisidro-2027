@@ -262,7 +262,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Estas son las nueve partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
+<p class="lead">Estas son las diez partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
 """ + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
              "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.") + """
 <table>
@@ -273,16 +273,30 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
-<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M</td><td class="m">No. Es inversi&oacute;n inicial</td><td class="m">Los mismos tres programas</td></tr>
+<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M una vez y 264 M por a&ntilde;o</td><td class="m">No. Inversi&oacute;n en los a&ntilde;os 1 y 2, y mantenimiento del 22%</td><td class="m">Los mismos tres programas</td></tr>
 <tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">1.676,6 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
 <tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">2.135,3 M</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno, comunicaci&oacute;n, hacienda, ambiente, movilidad, desarrollo social, legal y t&eacute;cnica, gabinete y cultura</td></tr>
 <tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
+<tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
 </table>
 <p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
 dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
-<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as y el semillero son estimaciones del equipo de este
+<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores y los equipos son estimaciones del equipo de este
 programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
 de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
+<p class="cap"><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis
+estaciones de monitoreo de ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso,
+137,1 M una vez y 39,5 M por a&ntilde;o de conexi&oacute;n; habilitaciones, ochenta c&aacute;maras corporales para
+transmitir las inspecciones, 168,7 M de sus 1.200 M y 3,8 M por a&ntilde;o de licencia; salud, trece pantallas de
+ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las personas que los instalan
+(cuadro [[n:equipo]]).</p>
+<p class="cap"><b>Fuente de los equipos, el mantenimiento y los cuidadores:</b> compras p&uacute;blicas de la Ciudad
+(estaci&oacute;n de ruido, diciembre de 2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre
+de 2025; c&aacute;mara corporal 4G, enero de 2026; televisor, escritorio y silla, 2026), llevadas a diciembre de 2025
+con el IPC. Mantenimiento: el soporte anual de software de lista es el 22% de la licencia (Oracle, 2026).
+Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y cuidado de personas, diciembre de 2025 (Comisi&oacute;n
+Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con las cargas del cuadro [[n:equipo]] y trece
+sueldos.</p>
 <p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s
 grandes, y son los dos extremos: <span class="sg">una necesita 7.225 millones nuevos y la otra
 ninguno</span>.</p>
@@ -312,7 +326,7 @@ sale.</p>
 <p><b>El criterio es uno solo:</b> <span class="sg">si la obra cambia c&oacute;mo vive una familia todos los d&iacute;as, no se toca; si
 mejora lo que ya funcionaba, espera.</span> Una cloaca, el gas de red o una conexi&oacute;n que permita
 trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya funcionaba, no.</p>
-""" + exhead("c", "Tres programas ceden el 32% de su gasto: 7.799 millones",
+""" + exhead("c", "Proponemos que tres programas cedan el 28% de su gasto: 6.863 millones por a&ntilde;o, y 1.200 una vez",
              "Lo que gastaron en 2025 los programas de los que salen ambiente, educaci&oacute;n, apoyo escolar y habilitaciones.",
              key="ceden") + """
 <table>
@@ -321,12 +335,12 @@ trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya
 <tr class="hi"><td class="l">Mantenimiento y embellecimiento</td><td class="n"><b>14.654,8 M</b></td><td class="m">El quinto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Ocho veces</b> lo que se destina a infraestructura habitacional</td></tr>
 <tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.406,2 M</td><td class="m">&mdash;</td></tr>
-<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">7.799 M</td><td class="m">El 32% de esos tres programas sumados</td></tr>
+<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">6.863 M por a&ntilde;o</td><td class="m">El 28% de esos tres programas sumados. Y 1.200 M una vez, los a&ntilde;os 1 y 2</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
 ejercicio 2025, acumulado anual.</p>
 <div class="cols">
-<p><b>Con el 32% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
+<p><b>Con el 28% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
 mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg">Lo que est&aacute;
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
@@ -340,11 +354,12 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 7.799 de reasignaci&oacute;n del gasto
-flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y habilitaciones&mdash;, y las &aacute;reas mueven 2.135,3 dentro de su
-propio presupuesto para pasantes y juniors. Los primeros exigen
+<p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 6.863 de reasignaci&oacute;n del gasto
+flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
+una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors, y Desarrollo
+Social, 667,8 para los cuidadores. Los primeros exigen
 actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
-class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,8% del gasto flexible y queda libre el 47,2%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,6%</b>. La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,4% del gasto flexible y queda libre el 47,6%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,9%</b>. La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -357,7 +372,7 @@ obras que ejecuta la propia comisi&oacute;n &mdash;cuentas, seguro y justificaci
 el honorario del panel sorteado que el cap&iacute;tulo 4 propone para los bienes de alcance distrital, como la
 costa, sale de reasignaci&oacute;n: <b>3,1 millones por panel</b>. Y <b>imputar el gasto con referencia
 territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona, no requiere
-personal nuevo ni estructura nueva, y entra dentro del 44,6% del gasto flexible que queda libre con todo
+personal nuevo ni estructura nueva, y entra dentro del 44,9% del gasto flexible que queda libre con todo
 sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
