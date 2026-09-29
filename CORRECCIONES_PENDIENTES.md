@@ -2437,3 +2437,20 @@ en capítulos 1–3 y cierre, 44 en el 4, 54 en el 5 y el 6, 3 en el glosario. 1
 existen (Barceló, UCA, UBA, Favaloro, 15 pasantes pagos en las fiscalías, 2016, UNSO 2021). 184 cuadro hoy y lo
 que proponemos, con fuentes; el reglamento de pasantías de la UNSO está en marcha desde 2025 (el número de
 resolución no está publicado). 185 la línea que encadena los cuadros del empleo.
+
+## 2, 17 Y 20 (con la investigación de costos)
+2 1.200 M una vez (720 el año 1, 480 el año 2) y mantenimiento del 22% sobre lo invertido (158,4 el año 2 y 264
+desde el 3; soporte anual de software de lista, Oracle 2026). La reasignación en régimen pasa de 7.799 a 6.863 M,
+el 28% de los tres programas. Gasto flexible: ocupado 52,4%, libre 47,6%, 44,9% con beca y salud.
+17 equipos en la línea de cada área (pesos de dic. 2025, compras públicas): seis estaciones de ruido 313,5 M;
+sesenta puestos de acceso 137,1 M y 39,5 M/año de fibra; ochenta cámaras corporales 168,7 M (dentro de los 1.200)
+y 3,8 M/año de licencia; trece pantallas de guardia 8,3 M. Cantidades: supuesto propio (una estación y un centro
+por zona; 80 cámaras para unos 75 inspectores en calle; una pantalla por efector).
+20 cien cuidadores (curso de operador de cuidados de adultos mayores del CFL 404, 380 h, gratuito), pagados por
+Desarrollo Social: 427.806,54 $/mes (CNTCP Res. 3/2025), con cargas y trece sueldos, 667,8 M por año; atienden
+a unas 240 personas, cuatro horas por día. Cien es supuesto propio: el relevamiento del 5.3 dice cuántos más.
+
+## ENTREGA
+PDF: 40 páginas, 42 cuadros y gráficos del 1 al 42, índice verificado (52 entradas), sin "plata" fuera de La
+Plata, Río de la Plata y Mar del Plata, sin azul ni rojo, fuentes sin sustituciones, sin viudas; la página más
+alta, 2.693,6 pt. Excel: 13.348 fórmulas, cero errores; controles contra la ejecución 2025 y el repo en cero.
