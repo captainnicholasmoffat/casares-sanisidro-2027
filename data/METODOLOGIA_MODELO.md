@@ -42,7 +42,7 @@ Situación Económico-Financiera 2025, parseado por `03_scripts/parse_sef.py`:
 
 **Ojo con la asimetría:** los ingresos van por lo **percibido** y los gastos por
 lo **devengado**. No es un descuido: es la convención del formato oficial.
-Comparar devengado contra devengado da +14.875 millones de superávit, que no es
+Comparar devengado contra devengado da +29.943 millones de superávit, que no es
 el resultado financiero de nada. Esta distinción es la diferencia entre decir que
 San Isidro cerró 2025 con déficit o con superávit.
 
@@ -141,10 +141,10 @@ sensibilidad.
 
 | Componente | 2025 | Regla | Por qué |
 |---|---:|---|---|
-| Origen municipal | 206.577 | +1,95% anual real | la tasa histórica |
-| Origen provincial | 87.107 | 82,4% cae −2,196% anual; 17,6% constante | el coeficiente |
+| Origen municipal | 205.939 | +1,95% anual real | la tasa histórica; los recursos de capital, que son municipales, van aparte |
+| Origen provincial | 87.694 | 82,4% cae −2,196% anual; 17,6% constante | el coeficiente |
 | Origen nacional | 190 | constante real | es el 0,06% |
-| Otros orígenes | 7.281 | constante real | es el 2,4% |
+| Otros orígenes | 7.332 | constante real | es el 2,4% |
 | Recursos de capital | 2.030 | constante real | es el 0,67% |
 | Gastos corrientes | 251.404 | constante real | "sin cambios de política" |
 | Gastos de capital | 57.832 | constante real | ídem |
@@ -188,9 +188,9 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 
 | Escenario | 2025 | 2028 | 2031 | 2034 | 2037 |
 |---|---:|---:|---:|---:|---:|
-| base | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
-| reformista | −6.051 | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_valuacion** | −6.051 | **+1.815** | +10.375 | +20.162 | +31.035 |
+| base | −6.051 | +1.576 | +10.236 | +19.953 | +30.756 |
+| reformista | −6.051 | +1.576 | +10.236 | +19.953 | +30.756 |
+| **reformista_valuacion** | −6.051 | **+1.746** | +10.236 | +19.953 | +30.756 |
 
 > **Que `reformista` dé idéntico a `base` NO es un error de copiado.** El
 > programa se financia **íntegramente por reasignación dentro del gasto
@@ -291,19 +291,19 @@ valor del escenario base. Resultado financiero en millones de pesos dic-2025:
 
 | Dimensión | Variante | 2031 | 2037 |
 |---|---|---:|---:|
-| Recursos propios | +0,95% anual | −2.946 | +1.980 |
-| | **+1,95% anual (base)** | **+10.375** | **+31.035** |
-| | +2,95% anual | +24.365 | +63.401 |
-| Coparticipación | −1,5% anual | +13.105 | +35.919 |
-| | **−2,196% anual (base)** | **+10.375** | **+31.035** |
-| | −2,5% anual | +9.212 | +29.019 |
-| | −3,5% anual | +5.514 | +22.855 |
-| Percepción | 86,32% (−3 puntos) | −292 | +19.675 |
-| | **89,32% (base)** | **+10.375** | **+31.035** |
-| | 92,32% (+3 puntos) | +21.041 | +42.396 |
+| Recursos propios | +0,95% anual | −3.044 | +1.790 |
+| | **+1,95% anual (base)** | **+10.236** | **+30.756** |
+| | +2,95% anual | +24.183 | +63.022 |
+| Coparticipación | −1,5% anual | +12.985 | +35.673 |
+| | **−2,196% anual (base)** | **+10.236** | **+30.756** |
+| | −2,5% anual | +9.066 | +28.726 |
+| | −3,5% anual | +5.342 | +22.520 |
+| Percepción | 86,32% (−3 puntos) | −426 | +19.405 |
+| | **89,32% (base)** | **+10.236** | **+30.756** |
+| | 92,32% (+3 puntos) | +20.898 | +42.107 |
 
 **Lo que manda es el crecimiento de los recursos propios.** Un punto menos por
-año da vuelta el resultado del mandato: de +10.375 a −2.946 millones en 2031. La
+año da vuelta el resultado del mandato: de +10.236 a −3.044 millones en 2031. La
 coparticipación mueve menos porque afecta al 29% de los ingresos, no al 68%. Y
 tres puntos de cobranza valen casi lo mismo que un punto de crecimiento.
 

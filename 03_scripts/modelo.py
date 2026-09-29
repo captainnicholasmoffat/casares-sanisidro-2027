@@ -124,14 +124,28 @@ def baseline():
 
     ing_ctes = aif("ingresos_corrientes")
     rec_cap = aif("recursos_de_capital")
-    total_rec = ing_ctes + rec_cap
 
-    # El SEF abre el origen del total de recursos, no de los corrientes por
-    # separado. Se prorratea con la misma estructura. Los recursos de capital
-    # son el 0,67% del total, asi que la eleccion no mueve el resultado.
-    bloques = {}
-    for k, v in origen.items():
-        bloques[k] = _q(v * ing_ctes / total_rec)
+    # El SEF abre por origen el total de los recursos, no los corrientes. Los
+    # recursos de capital de 2025 (rubro 2.1, venta de activos) son de origen
+    # municipal: lo municipal es exactamente no tributarios + rentas + capital
+    # de la ejecucion por rubro. Asi que los corrientes de origen municipal son
+    # el total municipal menos el capital, y los demas origenes son enteros
+    # corrientes. (Antes se prorrateaba el capital entre todos los origenes, y
+    # eso le sumaba 637,5 millones a los corrientes municipales, que crecen, y
+    # se los restaba a los provinciales, que caen: el resultado quedaba 69
+    # millones mas alto en 2028 y 139 mas alto en 2031.)
+    rubros = {r["rubro_codigo"]: Decimal(r["percibido"] or 0)
+              for r in _leer("data/ejecucion_recursos.csv")
+              if int(r["anio"]) == ANIO_BASE and r["periodo_tipo"] == "acumulado_anual"}
+    municipal_por_rubro = rubros["1.2"] + rubros["1.6"] + rubros["2.1"]
+    if municipal_por_rubro != origen.get("ORIGEN MUNICIPAL", D0):
+        raise ValueError("el origen municipal del SEF no coincide con los rubros")
+    if rec_cap != rubros["2.1"]:
+        raise ValueError("los recursos de capital no son el rubro 2.1")
+    bloques = dict(origen)
+    bloques["ORIGEN MUNICIPAL"] = origen["ORIGEN MUNICIPAL"] - rec_cap
+    if sum(bloques.values()) != ing_ctes:
+        raise ValueError("los origenes no suman los ingresos corrientes")
 
     deuda = deuda_inicial()
     perc = P.percepcion(ANIO_BASE)

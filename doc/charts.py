@@ -13,6 +13,13 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
 
+# La Inter del repo (doc/_fonts), para que las medidas del texto sean las de la
+# pagina aunque la maquina no la tenga instalada.
+from matplotlib import font_manager as _fm
+for _f in sorted((pathlib.Path(__file__).parent / "_fonts").glob("*.ttf")):
+    if "-var" not in _f.name:
+        _fm.fontManager.addfont(str(_f))
+
 OUT = pathlib.Path(__file__).parent.parent / "assets" / "svg"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -291,10 +298,19 @@ def g_reformista():
 
 # --- 10. tornado de sensibilidad --------------------------------------------
 def g_tornado():
-    rows=[("Recursos propios: 2,95% anual",13990),("Recursos propios: 0,95% anual",-13321),
-          ("Percepción de recursos: 86,32%",-10667),("Percepción de recursos: 92,32%",10667),
-          ("Coparticipación: −3,5% anual",-4861),("Coparticipación: −1,5% anual",2731),
-          ("Coparticipación: −2,5% anual",-1163),("Percepción de recursos: 89,32%",0)]
+    """Efecto sobre 2031, de data/sensibilidad.csv (cada variable sola)."""
+    s = {(r["dimension"], r["variante"]): float(r["resultado_financiero"]) / 1e6
+         for r in _csv("sensibilidad.csv") if r["anio"] == "2031"}
+    base = s[("recursos_propios", "1.95% anual")]
+    d = lambda k, v: round(s[(k, v)] - base)
+    rows=[("Recursos propios: 2,95% anual",d("recursos_propios","2.95% anual")),
+          ("Recursos propios: 0,95% anual",d("recursos_propios","0.95% anual")),
+          ("Percepción de recursos: 86,32%",d("percepcion","86.32%")),
+          ("Percepción de recursos: 92,32%",d("percepcion","92.32%")),
+          ("Coparticipación: −3,5% anual",d("coparticipacion","-3.5% anual")),
+          ("Coparticipación: −1,5% anual",d("coparticipacion","-1.5% anual")),
+          ("Coparticipación: −2,5% anual",d("coparticipacion","-2.5% anual")),
+          ("Percepción de recursos: 89,32%",0)]
     fig, ax = plt.subplots(figsize=(W,2.3)); frame(ax, grid="x")
     y=range(len(rows))[::-1]
     for yy,(lbl,v) in zip(y,rows):

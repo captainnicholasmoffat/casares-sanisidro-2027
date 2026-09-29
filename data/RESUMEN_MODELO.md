@@ -17,9 +17,9 @@ peso: la participación de San Isidro en el reparto a los 135 municipios cayó d
 preliminares de 2026 se acelera. Con el gasto real quieto, la primera fuerza gana
 y el resultado vuelve a positivo hacia 2028. Pero el margen es fino y depende
 enteramente del crecimiento propio: **si los recursos propios crecen un punto
-menos por año, el mandato termina en rojo** (−2.946 millones en 2031 en vez de
-+10.375). Si la coparticipación cae 3,5% por año en vez de 2,2%, el resultado de
-2031 baja a **+5.514 millones** (`data/sensibilidad.csv`: cada variable se mueve
+menos por año, el mandato termina en rojo** (−3.044 millones en 2031 en vez de
++10.236). Si la coparticipación cae 3,5% por año en vez de 2,2%, el resultado de
+2031 baja a **+5.342 millones** (`data/sensibilidad.csv`: cada variable se mueve
 por separado).
 
 ## Qué cuesta el programa
@@ -61,9 +61,9 @@ asume el 10 de diciembre de 2027).
 
 | | 2028 | 2031 | 2034 | 2037 |
 |---|---:|---:|---:|---:|
-| base, sin programa | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista** (reasignación) | +1.645 | +10.375 | +20.162 | +31.035 |
-| **reformista_valuacion** (base de valuación actualizada) | **+1.815** | +10.375 | +20.162 | +31.035 |
+| base, sin programa | +1.576 | +10.236 | +19.953 | +30.756 |
+| **reformista** (reasignación) | +1.576 | +10.236 | +19.953 | +30.756 |
+| **reformista_valuacion** (base de valuación actualizada) | **+1.746** | +10.236 | +19.953 | +30.756 |
 
 Millones de pesos de dic-2025.
 
