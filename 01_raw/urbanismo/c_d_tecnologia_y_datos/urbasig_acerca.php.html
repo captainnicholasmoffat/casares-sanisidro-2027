@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+
+<html lang="es" dir="ltr">
+
+<head data-locale="es" data-preferred-editor="id" data-location="{&quot;minlon&quot;:-73.58297,&quot;minlat&quot;:-55.061314,&quot;maxlon&quot;:-53.591835,&quot;maxlat&quot;:-21.781277}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+
+
+    <!--<script src="./js/urb_app.js"></script>
+    <script src="./js/es.js"></script>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" media="screen" href="css/screen-ltr.css?v=1.0.1.2">
+    <link rel="stylesheet" media="print" href="css/print-ltr.css?v=1.0.0.2">
+    <link rel="stylesheet" media="screen, print" href="css/leaflet-all.css?v=1.0.0.2">
+
+    <link rel="shortcut icon" href="assets/favicon_5.ico" type="image/vnd.microsoft.icon" />
+    <link rel="manifest" href="assets/manifest.json">
+
+    <link href="https://urbasig.gob.gba.gob.ar/" rel="canonical">
+
+    <meta name="description" content="Sitio para consultar la información de urBAsig.">
+    <meta property="og:site_name" content="urBAsig">
+    <meta property="og:title" content="urBAsig">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://urbasig.gob.gba.gob.ar/">
+    <meta property="og:description" content="urBasig es un mapa creado para consultar informacion referente Zonificaciones, Áreas, zonas y espacios por decretos y leyes, etc ">
+    
+    <script defer src="js/main.js"></script>
+    <script src="js/emitter.js"></script>
+    <style>
+        .aa {
+            background-image: url(assets/acerca_bg1.png);
+            background-size: cover;
+        }
+        .bb {
+            border-radius: 0px 0px 20px 0px;
+            background-color: rgb(211,212,213);
+        }
+        .about {
+            
+            background-color: white;
+        } 
+        .header-urba {
+            /*
+            border-radius: 20px 00px 0px 0px;
+            background-color: hsl(186, 100%, 39%);
+            */
+            background-image: url(assets/acerca_bg2.png);
+            background-size: cover;
+        }
+        .header-urba p {
+            margin-top: 2%;
+        }
+       
+
+        .icon-headersvg {
+            width: 100px;
+            padding-top: 8px;
+
+            float: left;
+            vertical-align: middle;
+        }
+        .layers-info {
+            list-style: none;
+        }
+        .layer-title {
+            font-size: large;
+            font-weight: bold;
+            color: rgb(128,128,128);
+        }
+
+        .hidraulica {
+            color: var(--hidraulica);
+        }
+        .bosques {
+            color: var(--bosques);
+        }
+        .infra {
+            color: var(--infraestructura);
+        }
+        .urba-header {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+
+    </style>
+
+    <title>urBAsig</title>
+</head>
+
+<body class="site site-about">
+    <header class="closed">
+        <h1>
+            <a href="https://urbasig.mgob.gba.gob.ar/" class="geolink">
+                <picture>
+                    <source width="100%" srcset="https://urbasig.mgob.gba.gob.ar/assets/urbasig-logo.svg" type="image/svg+xml">
+                    <img alt="Logo urBAsig" class="logo" src="https://urbasig.mgob.gba.gob.ar/assets/logo_urbasig.png">
+                </picture>
+            </a>
+        </h1>
+        <a href="https://urbasig.mgob.gba.gob.ar//#" id="menu-icon"></a>
+        <nav class="primary">
+            <div class="search_forms">
+                <form method="" action="" class="search_form px-1 py-2">
+                    <div class="form-row mx-0">
+                        <div class="col">
+                            <div class="input-group flex-nowrap">
+                                <div class="query_wrapper position-relative flex-grow-1">
+                                    <a class="describe_location position-absolute" title="Define la ubicación actual por medio del motor de búsqueda" href="https://urbasig.mgob.gba.gob.ar//#">¿Dónde está esto?</a>
+                                    <input type="text" name="queryN" id="queryN" placeholder="Buscar" autocomplete="on" class="form-control form-control-sm">
+                                </div>
+                                <div class="input-group-append">
+                                    <input type="button" name="commit" value="Ir" class=" btn_ir btn btn-sm btn-primary">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto">
+                            <a class="btn btn-sm btn-primary switch_link" title="Encontrar indicaciones entre dos puntos" href="https://urbasig.mgob.gba.gob.ar//directions"><img width="20" height="20" src="assets/directions.png"></a>
+                        </div>
+
+                    </div>
+                </form>
+
+                <form method="" action="" class="directions_form pb-3">
+                    <div class="clearfix px-3 py-3"><span class="icon close"></span></div>
+
+                    <div class="form-row m-1">
+                        <div class="col-1">
+                            <img class="routing_marker mx-auto d-block" data-type="from" draggable="true" src="https://urbasig.mgob.gba.gob.ar/assets/marker-green.png">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="route_from" id="route_from" placeholder="Desde" autocomplete="on" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-row m-1">
+                        <div class="col-1">
+                            <img class="routing_marker mx-auto d-block" data-type="to" draggable="true" src="https://urbasig.mgob.gba.gob.ar/assets/marker-red.png">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="route_to" id="route_to" placeholder="Hacia" autocomplete="on" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    <div class="form-row m-1">
+                        <div class="col offset-1">
+                            <select class="routing_engines form-control form-control-sm" name="routing_engines"><option value="0">A pie (GraphHopper)</option><option value="1">A pie (OSRM)</option><option value="2">Automóvil (GraphHopper)</option><option value="3">Automóvil (OSRM)</option><option value="4">Bicicleta (GraphHopper)</option><option value="5">Bicicleta (OSRM)</option></select>
+                        </div>
+                        
+                        <div class="col-auto">
+                            <input type="button"  name="commit" value="Ir" class=" btn_ir routing_go btn btn-sm btn-primary">
+                        </div>
+                    </div>
+                    <div class="form-row m-1">
+                        <div class="col offset-1">
+                            <a class="reverse_directions">Indicaciones inversas</a>
+                        </div>
+                    </div>
+
+                    <div class="loader_copy">
+                        <div class="loader"><img src="https://urbasig.mgob.gba.gob.ar/assets/searching.gif"></div>
+                    </div>
+                </form>
+            </div>
+
+
+            
+        </nav>
+
+        <nav class="secondary">
+            <ul class="mx-1 px-0">
+                <li class="compact-hide nav-item ">
+                    <a class="nav-link" href="https://urbasig.mgob.gba.gob.ar/ordenanzas/index.php">R.U.U.P.B.A.</a>
+                </li>
+                <li class="compact-hide nav-item ">
+                    <a class="nav-link" href="https://urbasig.mgob.gba.gob.ar/rpuc/index.php">R.P.U.C.</a>
+                </li>
+                <li class="compact-hide nav-item ">
+                    <a class="nav-link" href="https://urbasig.mgob.gba.gob.ar/ayuda.php">Ayuda</a>
+                </li>
+                <li class="compact-hide nav-item ">
+                    <a class="nav-link" href="https://urbasig.mgob.gba.gob.ar/acerca.php">Acerca de</a>
+                </li>
+
+                <li id="compact-secondary-nav" class="dropdown nav-item">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="https://urbasig.mgob.gba.gob.ar/#">Más</a>
+                    <ul class="dropdown-menu">
+                        <li class=""><a class="dropdown-item" href="https://urbasig.mgob.gba.gob.ar/ordenanzas/index.html">Ordenanzas</a></li>
+                        <li class=""><a class="dropdown-item" href="https://urbasig.mgob.gba.gob.ar/rpuc/index.html">RPUC</a></li>
+                        <li class=""><a class="dropdown-item" href="https://urbasig.mgob.gba.gob.ar/ayuda.php">Ayuda</a></li>
+                        <li class=""><a class="dropdown-item" href="https://urbasig.mgob.gba.gob.ar/acerca.php">Acerca de</a></li>
+                    </ul>
+                </li>
+                <li><img class="logo-gba" alt="Logo GBA" src="https://urbasig.mgob.gba.gob.ar/assets/logo_gba.png"></li>
+            </ul>
+                 
+
+          
+        </nav>
+    </header>
+
+    <div id="content">
+        <div class="content-body about">
+            <div class="content-inner">
+                <div lang="es" dir="ltr">
+                    <div id=#color >
+                        <div class="container-lg attr">                            
+                            <div class="row">
+                                <div class="col-sm-12" style="background-color:white">
+                                </div>                                
+                                <div class="header-urba">
+                                    <p class="text-white text-center fs-5">&nbsp;&nbsp;&nbsp;<b>Dirección Provincial de Ordenamiento Urbano y Territorial</b>&nbsp;&nbsp;
+                                    <picture>
+                                        <source width="16%" srcset="https://urbasig.mgob.gba.gob.ar/assets/urbasig-logo.svg" type="image/svg+xml">
+                                        <img alt="Logo urBAsig" class="logo" src="https://urbasig.mgob.gba.gob.ar/assets/logo_urbasig.png">
+                                    </picture>
+                                    </p>
+                                </div>
+                                
+                                <div class="col-sm-3 px-0"><img class="urba-header" src="./assets/urba_acerca.png"></div>
+                                <div class="col-sm-9 px-5 py-2  aa">
+                                    <p class="text-white fs-6"><b>urBAsig</b> es el sitio de la Dirección Provincial de Ordenamiento Urbano y
+                                    Territorial dependiente de la Subsecretaría de Territorio y Desarrollo
+                                    Sustentable del Ministerio de Gobierno. Usted aquí puede consultar la
+                                    información relacionada con el ordenamiento territorial de la Provincia de
+                                    Buenos Aires, en el marco del DL 8912/77, Art. 7° del Dec. 1727/02 y normas
+                                    complementarias.<br>
+                                    <b>urBAsig</b> está constituido por el visualizador de mapas, el Registro Único
+                                    Urbanístico de la Provincia de Buenos Aires (R.U.U.P.B.A.) y el Registro
+                                    Provincial de Urbanizaciones Cerradas (R.P.U.C.)</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="w-100 px-5 py-4 bb">
+                                    <p class="fs-6">Este visualizador fue desarrollado por el Departamento de Sistemas de Información Geográfica, dependiente de
+                                    la DPOUyT. Por medio de este sitio usted podrá consultar la información del visualizador de mapas y en el caso
+                                    de disponer de un SIG de escritorio es posible incorporarlo a sus proyectos SIG a través de los servicios WMS.
+                                    Además podrá consultar los decretos y las ordenanza convalidadas de los 135 municipios de la PBA en los mas
+                                    de 40 años de vigencia del DL 8912/77 y la documentación de las Urbanizaciones Cerradas incorporadas al
+                                    Registro Provincial.</p>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="bg-white  py-4">
+                        <div class="section">
+                            <div><img src="./assets/icon-header.svg" class="icon-headersvg"></div>                            
+                            <div class="fs-2">&nbsp;Información disponible</div>
+                            <p class="fs-6">Las capas refieren a las misiones y funciones de la Dirección Provincial. La información, en constante actualización que aquí se publica, se pone a disposición y consulta de la sociedad, y es una herramienta de uso en la gestión pública que agiliza los tiempos.</p>  
+                            <ul style="list-style-type: none;">
+                            <li><span class="fs-6"><i>WMS</i>: http://urbasig.gob.gba.gob.ar/geoserver/urbasig/wms? </span></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    </div>
+
+
+                    <div class="bg-white px-3 py-2">
+                        <div><img src="./assets/icon2-header.svg" class="icon-headersvg"></div>                            
+                        <div class="fs-3"><a data-bs-toggle="collapse" href="#collapseExample">&nbsp;Visualización de capas de Información &darr;</a></div>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <ul class="layers-info">
+                                    <li><span class="layer-title">Zonificación</span></li>
+                                    <span>Zonificación según usos del suelo de cada partido (unidad geográfica, polígono. Información, indicadores urbanísticos).<br> Fuente: Dirección Provincial de Ordenamiento Urbano y Territorial. Subsec. de Población,
+                                    Territorio y Desarrollo Sustentable. Ministerio de Gobierno.</span><br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br>
+                                    <br>
+                                    <li><span class="layer-title">Áreas - Decreto Ley 8912/77 Art. 5°</span></li>
+                                    áreas urbanas, Complementarias y Rurales, según las clasifica el Art 6° del Dto Ley 8912/77. <br> Fuente: Dirección Provincial de Ordenamiento Urbano y Territorial. Subsec. de Población, Territorio y Desarrollo
+                                    Sustentable. Ministerio de Gobierno.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+                                    <li><span class="layer-title">Zonas y Espacios - Decreto Ley 8912/77 Art. 7°</span></li>
+                                    Zonas y Espacios según las clasifica el Art 7° del Decreto Ley 8912/77.<br> Fuente: Dirección Provincial de Ordenamiento Urbano y Territorial. Subsec. de Población, Territorio y Desarrollo Sustentable. Ministerio
+                                    de Gobierno.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+
+                                    <li><span class="layer-title">Registro Provincial de Urbanizaciones Cerradas</span></li>
+                                    Art. 7° del Decreto 1727/02 y normas complementarias.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+                                    
+
+                                    <li><span class="layer-title">Etapas del Proceso de Planeamiento Decreto Ley 8912/77</span> </li>Etapas del proceso de Planeamiento en que se encuentra cada uno de los partidos de la Provincia de Buenos Aires. Partidos que solamente
+                                        tienen una delimitación de áreas, aquellos que ya poseen zonificación, aquellos que avanzaron hacia un plan de ordenamiento urbano, ya sea para todo el partido o solamente para la cabecera y también aquellos
+                                        que están afectados al Decreto 3202 que refiere los Códigos de Ordenamiento Urbano de los Municipios de la costa en relación a la protección de los recursos naturales y del ambiente.<br> Fuente: Dirección
+                                        Provincial de Ordenamiento Urbano y Territorial. Subsec. de Población, Territorio y Desarrollo Sustentable. Ministerio de Gobierno.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+
+                                    
+                                    <li><span class="layer-title">Decreto 3202</span></li>
+                                    Ordenamiento Territorial de la franja marítima de la Provincia de Buenos Aires comprendidos entre Punta Rasa y Punta Alta. Debido a encontramos ambientes frágiles, explotación del recurso. Los principios rectores, básicos y objetivos denominados presupuestos
+                                    mínimos, con la finalidad de establecer una regulación liminar que permita ordenar el accionar de las Municipalidades en cuanto al ordenamiento urbano de su competencia y de la Provincia en lo concerniente a
+                                    los alcances de la Ley N° 12.227, Decreto Ley N° 8912/77, Ley de Medio ambiente, Ley de Forestación y otras que resulten de aplicación.<br> Fuente: Dirección Provincial
+                                    de Ordenamiento Urbano y Territorial. Subsec. de Población, Territorio y Desarrollo Sustentable. Ministerio de Gobierno.<br>
+
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+
+                                    <li><span class="layer-title">Municipalidades</span></li>
+                                    Información de los partidos de la Provincia de Buenos Aires. Intendente, partido político, dirección de la municipalidad, total de población y página web. <br> Fuente: Dirección Provincial de Ordenamiento Urbano
+                                    y Territorial. Subsec. de Población, Territorio y Desarrollo Sustentable. Ministerio de Gobierno.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+
+                                    <li><span class="layer-title">Cuencas Hidrográficas</span></li>
+                                    Límites de las cuencas hidrográficas de la Provincia de Buenos Aires.<br> 
+                                    <b>Fuente:</b> Autoridad del Agua (ADA). Dirección Provincial de Hidráulica. Ministerio de Infraestructura y Servicios Públicos.
+                                    <br><br>
+
+                                    <li><span class="layer-title">Cartografía de Base</span></li>
+                                    OpenStreetMap<br>
+                                    ArgenMap<br>
+                                    ESRI Satelital
+                                </ul>
+                                <br>
+                                <br>
+                                <div class="fs-5"><b>Capas complementarias</b></div>
+                                <br>
+                                <ul class="layers-info">
+                                    <li><span class="layer-title bosques">Bosques Nativos Ley 14.888</span></li>
+                                    <b>Fuente:</b> Dirección de Bosque de la Dirección Provincial de  Ordenamiento Ambiental de Territorio y Bienes Comunes. Subsecretaría de Político Ambiental- Ministerio de Ambiente.
+                                    <br><br>
+                                    <li><span class="layer-title bosques" >Áreas Naturales Protegidas</span></li>
+                                    Reservas Naturales, Monumentos Naturales, Refugios de Vida Silvestre de la Provincia de Buenos Aires.<br>
+                                    <b>Fuente:</b> Dirección de Áreas Naturales Protegidas | Dirección Provincial de Recursos Naturales y Ordenamiento Ambiental del Territorio Argentino  - Subsecretaría de Planificación Ambiental y Desarrollo Sustentable.
+                                    <br><br>
+                                    <li><span class="layer-title bosques">Cuencas Hidrográficas</span></li>
+                                    Límites de las cuencas hidrográficas de la Provincia de Buenos Aires.<br>
+                                    <b>Fuente:</b> Autoridad del Agua (ADA). Dirección Provincial de Hidráulica. Ministerio de Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title hidraulica">IGN_mde21</span></li>                                    
+                                    <b>Fuente:</b> Dirección Provincial de Saneamiento y Obras Hidráulicas. Ministerio de Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title hidraulica">Cartas IGN 1:50.000</span></li>                                    
+                                    <b>Fuente:</b> Dirección Provincial de Saneamiento y Obras Hidráulicas. Ministerio de Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title hidraulica">Hidrografía</span></li>                                    
+                                    <b>Fuente:</b> Dirección Provincial de Saneamiento y Obras Hidráulicas. Ministerio de Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title infra">Área Servicio de Agua</span></li>
+                                    Área de cobertura de la red de Agua Potable.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Agua y Cloacas. Subsecretaría de Asuntos Hídricos. Ministerio Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title infra">Área Servicio de Cloacas</span></li>
+                                    Áreas  de cobertura del Servicio de Cloacas.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Agua y Cloacas. Subsecretaría de Asuntos Hídricos. Ministerio Infraestructura y Servicios Públicos.
+                                    <br><br>
+                                    <li><span class="layer-title infra">Barrios RPPVAP con Regularización</span></li>
+                                    Barrios inscriptos en RPPVAP con alguna intervención en Regularización Dominal.<br>
+                                    <b>Fuente:</b> Registro Público Provincial de Villa y Asentamientos Precarios. Subsecretaría de Hábitat de la Comunidad- Ministerio de Desarrollo de la Comunidad.
+                                    <br><br>
+                                    <li><span class="layer-title infra">Villas y Asentamientos</span></li>
+                                    Barrios inscriptos en Registro Público Provincial de Villa y Asentamientos Precarios.<br>
+                                    <b>Fuente:</b> Registro Público Provincial de Villa y Asentamientos Precarios. Subsecretaría Social de Tierras. Ministerio de Desarrollo de la Comunidad. Subsecretaría de Integración Socio Urbana.
+                                </ul>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div><img src="./assets/icon2-header.svg" class="icon-headersvg"></div>                            
+                        <div class="fs-3"><a data-bs-toggle="collapse" href="#collapseRPUC">&nbsp;Registro de Ordenanzas (R.U.U.P.B.A.) y Registro de Urbanizaciones Cerradas (RPUC) &darr;</a></div>
+                        <div class="collapse" id="collapseRPUC">
+                            <div class="card card-body">
+                                <ul class="layers-info">
+                                    <li><span class="layer-title">Registro Único Urbanístico de la Provincia de Buenos Aires (R.U.U.P.B.A.) Según Decreto Provincial  N° 1636/08</span></li>
+                                    Se inscriben todas las Ordenanzas correspondientes a las distintas etapas de Ordenamiento Territorial a que refiere el Art.83 del Decreto Ley 8912/77 y 
+                                    a toda otra que requiera convalidación en el ámbito provincial en relación a urbanizaciones, subdivisiones y fraccionamientos.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br><br>
+                                    <li><span class="layer-title">Registro Provincial de Urbanizaciones Cerradas (R.P.U.C.) Art. 7° del Decreto 1727/02 y normas complementarias</span></li>
+                                    Obtenida la Convalidación Técnica Final, los Emprendimientos Urbanísticos se inscriben en el (R.P.U.C.) como condición previa indispensable para la comercialización de
+                                    las unidades funcionales del Emprendimiento. Art.7° Decreto 1727/02 y Decreto 1069/13.<br>
+                                    <b>Fuente:</b> Dirección Provincial de Ordenamiento Urbano y Territorial. Subsecretaría de Territorio y Desarrollo Sustentable. Ministerio de Gobierno.
+                                    <br>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div> 
+
+                    <br><br>
+                        <div class="section" id="open-data">
+                        <div><img src="./assets/icon-header.svg" class="icon-headersvg"></div>                            
+                            <div class="fs-2">&nbsp;Datos abiertos</div>
+                            <p class="fs-6"><b>urBAsig</b> apunta a <i>democratizar la información y las técnicas informáticas</i>, ofreciéndola en diversos formatos digitales, compartiendo con estándares, sin restricciones de derechos de autor, y cumpliendo con los principios de disponibilidad, accesibilidad, reutilización, redistribución.
+                            <p class="fs-6">El acceso a la información georreferenciada producida por este Organismo, sirve a los procesos de planificación, de apoyo a los tomadores de decisiones y desarrollo de una planificación integral de la Provincia. </p>
+                            <p class="fs-6">La información puesta a disposición se publica siguiendo procedimientos de producción y control de calidad.  <b>urBAsig</b> se encuentra en proceso de actualización constante, conforme a las demandas de la Dirección Provincial.</p>
+                        </div>
+                        <br><br>
+
+                        <div class="section" id="equipo-tecnico">
+                        <div><img src="./assets/icon-header.svg" class="icon-headersvg"></div>                            
+                            <div class="fs-2">&nbsp;Equipo técnico</div>
+                            <p class="fs-6">El equipo se compone de profesionales GIS, urbanistas, técnicos y administrativos que hacen posible la accesibilidad de la información. La <i>Dirección de Informática y Tecnologias de la Información del Ministerio de Gobierno</i> brinda la asistencia tecnológica para su publicación.</p>
+                            </p>    
+                            <p class="fs-6">Desde el año 2020 nos encontramos adheridos a <a href="https://www.idera.gob.ar/" target="_blank">IDERA</a></p>
+                            <a href="https://www.idera.gob.ar/" target="_blank"><img src="./assets/idera-logo.jpg" style="width:30%"></a>
+                        </div>
+                        <br><br>
+
+                        <div class="section" id="legal">
+                            <div><img src="./assets/icon-header.svg" class="icon-headersvg"></div>                            
+                            <div class="fs-2">&nbsp;Tecnología</div>
+                            <p>Para el desarrollo de urBAsig se utilizó exclusivamente, software libre. Está basado en:
+                                <br>
+                                <br>
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="https://www.ubuntu.com/" target="_blank"><img src="./assets/ubuntu-logo.png" width="65%" alt="ubuntu" ></a>
+                                        </div>
+                                        <div class="col">
+                                        <a href="http://tomcat.apache.org/" target="_blank"><img src="./assets/apache tomcat.jpg" width="95%" alt="apache tomcat"></a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="http://www.php.net/" target="_blank" ><img src="./assets/php.jpg" width="85%" alt="php"></a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="http://geoserver.org/" target="_blank"><img src="./assets/geoserver-logo.png" width="105%" alt="geoserver"></a>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <a href="http://openlayers.org/" target="_blank">
+                                                <img src="./assets/openlayers.jpg" width="115%" alt="openlayers"></a>
+                                        </div>
+                                        <div class="col">
+                                            <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">
+                                                <img src="./assets/js.png" width="65%" alt="javascript"></a>
+                                        </div>
+                                        <div class="col">
+                                        <a href="http://www.postgresql.org/" target="_blank">
+                                            <img src="./assets/pngwing.com.png" width="85%" alt="postgressql"></a>
+                                        </div>
+                                        <div class="col">
+                                        <a href="http://www.qgis.org/" target="_blank">
+                                            <img src="./assets/QGIS_logo,_2017.svg.png" width="85%" alt="quantumgis"></a>
+                                        </div>
+                                    </div>
+                                </div>    
+                        </div>
+                        <br><br>
+                        <div class="section" id="partners">                        
+                            <div><img src="./assets/icon-header.svg" class="icon-headersvg"></div>                            
+                            <div class="fs-2">&nbsp;Coordinación</div>
+                            <p>Para contactarse con el coordinador del grupo <a href="mailto:urbasig.gba@gmail.com">urbasig.gba@gmail.com</a></p>
+                            <br>
+                            <div class="card card-body">
+                                <div class="fs-6 text-center">El organismo no se hará responsable por el uso indebido que hagan los usuarios del contenido de su página</div>
+                            </div>
+                            <br>
+                            <div class="card card-body">
+                                <div class="fs-6 text-center">
+                                        <b>Dirección Provincial de Ordenamiento Urbano y Territorial</b><br>
+                                        Departamento de Sistemas de Información Geográfica<br>
+                                        Calle 7 N°1267, e/58 y 58 Piso 12  La Plata<br>
+                                        Tel.  221-429 5185<br>
+                                        221-429 5077
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
