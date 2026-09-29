@@ -130,8 +130,10 @@ Sobre el devengado por objeto de 2025:
 ### d) Percepción de recursos corrientes: **89,32%**
 
 De 337.149 millones devengados en 2025 se percibieron 301.155. Quedaron
-**35.994 millones sin cobrar**. Es una palanca de financiamiento que no requiere
-subir una sola tasa.
+**35.994 millones sin cobrar**. No son dinero disponible: buena parte es el
+descuento que el propio Municipio decidió dar, y el programa no se paga con
+ellos (3.2 del documento). En el modelo, la percepción es una variable de la
+sensibilidad.
 
 ---
 
@@ -231,7 +233,7 @@ año** en régimen. Las dos puntas del rango pedido: al 2% son 5.680 millones; a
 Ese costo equivale al **8,3% del gasto flexible** de 2025 (87.326 millones). No
 toca personal, deuda ni contratos de servicios.
 
-### De dónde sale la plata: las tres opciones, sin elegir
+### De dónde sale el dinero: las cuatro opciones; el documento propone la cuarta
 
 En `data/financiamiento_opciones.csv`, cuantificadas contra el mismo costo.
 En régimen (2031 en adelante), para el objetivo del 2,5%. Para el crédito, el efecto
@@ -247,6 +249,7 @@ servicio de la deuda:
 | **iii. Crédito, 0% real** | 7.225 mill. | 100% | +2.529 mill. |
 | **iii. Crédito, 5% real** | 7.225 mill. | 100% | +1.626 mill. |
 | **iii. Crédito, 10% real** | 7.225 mill. | 100% | +723 mill. |
+| **iv. Base de valuación (la del documento)** | 7.225 mill. | 100% | +7.225 mill. |
 
 La opción (i) sale del gasto flexible: bienes de consumo, bienes de uso,
 transferencias. Cuáles exactamente es una decisión política, y el detalle por
@@ -274,9 +277,10 @@ millones del programa de empleo y vivienda **salen los dos del mismo bolsillo**
 —el gasto flexible de 87.326 millones—. Juntos son el **41,4%** de ese margen.
 Caben, pero no dejan lugar para una tercera reasignación del mismo tamaño.
 
-La opción (ii) sola alcanza y sobra: subir la cobranza tres puntos —de 89,3% a
-92,3%— ya cubre el programa entero. Es la más barata políticamente y la que no
-requiere sacarle nada a nadie.
+El documento propone la (iv): actualizar la base de valuación de la tasa, con
+tope de 25% de suba anual por boleta. Cobra más de lo que pide la rampa los tres
+primeros años y lo mismo desde el cuarto. La (ii), cobrar mejor, queda como meta
+de gestión y no como fuente del programa.
 
 ---
 

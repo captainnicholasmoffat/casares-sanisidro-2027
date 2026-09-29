@@ -104,7 +104,7 @@ _IDX = [
  ("i", "5.1 &nbsp;C&oacute;mo leer este cap&iacute;tulo", "cap5a"),
  ("i", "5.2 &nbsp;D&oacute;nde va hoy cada peso", "cap5a"),
  ("i", "5.3 &nbsp;Empleo", "cap5a2"),
- ("i", "5.4 &nbsp;Vivienda y servicios b&aacute;sicos", "cap5a3"),
+ ("i", "5.4 &nbsp;Vivienda y servicios b&aacute;sicos", "cap5a4"),
  ("i", "5.5 &nbsp;Ambiente", "cap5b"),
  ("i", "5.6 &nbsp;Salud", "cap5bb"),
  ("i", "5.7 &nbsp;Seguridad", "cap5bc"),
@@ -130,7 +130,7 @@ _IDX = [
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
  ("i", "Las seis ordenanzas restantes, y las metas que no llevan ninguna", "ordenanza2"),
  ("g", "Glosario", None),
- ("i", "Dieciocho palabras, explicadas", "glosario"),
+ ("i", "Veintitr&eacute;s palabras, explicadas", "glosario"),
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
@@ -167,7 +167,7 @@ INDICE = dict(id="indice", runhead=RH, html=_indice())
 # =====================================================================
 INTRO = dict(id="introduccion", runhead=RH, html="""
 <h1>Introducci&oacute;n</h1>
-<p class="lead">En San Isidro hay <b>25.165 hogares que cocinan con garrafa</b> y 6.488 que no tienen
+<p class="lead">En San Isidro hay <b>25.165 hogares sin gas de red</b> y 6.488 que no tienen
 cloaca. La mayor&iacute;a est&aacute; en Boulogne y en B&eacute;ccar: seis de cada diez sin gas, siete
 de cada diez sin cloaca.</p>
 
@@ -218,16 +218,14 @@ C1A = dict(id="cap1a", runhead=RH, html=fig("f_catedral",
 
 <h2><span class="n">1.1</span>Dos partidos dentro del mismo partido</h2>
 <div class="cols">
-<p>San Isidro tiene 297.282 habitantes y 110.559 hogares (Censo 2022). Repartidos entre esos hogares, el
-municipio gast&oacute; en 2025 el equivalente a <b>1.090.897 pesos por habitante</b>.</p>
+<p>San Isidro tiene 297.282 habitantes y 110.559 hogares (Censo 2022). El municipio gast&oacute; en 2025 el equivalente a <b>1.090.897 pesos por habitante</b>.</p>
 <p>No es poco dinero. Y sin embargo el partido est&aacute; partido en dos, y la l&iacute;nea es
 geogr&aacute;fica: las localidades del oeste y del norte contra las de la costa sur.</p>
 </div>
 <p>Un hogar de Boulogne o B&eacute;ccar tiene <span class="sg">tres veces y media m&aacute;s
 probabilidad</span> de tener necesidades b&aacute;sicas insatisfechas que uno de Mart&iacute;nez.
 <span class="sg">Cinco veces y media</span> de no tener cloacas. <span class="sg">Cuatro veces</span> de
-vivir en condiciones de hacinamiento. Y <span class="sg">menos de la mitad de probabilidad</span> de que
-alguien en la casa haya terminado la universidad.</p>
+vivir en condiciones de hacinamiento. Y <span class="sg">menos de la mitad de gente</span> con la universidad terminada.</p>
 """ + ex("g", "El partido se parte en dos: el oeste y el norte contra la costa sur",
         "Coloreadas por porcentaje de hogares con necesidades b&aacute;sicas insatisfechas. El partido entero promedia 3,16%.",
         "ex01.png",
@@ -366,7 +364,7 @@ entre las tres, <b>cay&oacute; 32,5%</b>.</p>
 <div class="cols">
 <p>En 2025 el Municipio recibi&oacute; 82.268 millones de pesos de la Provincia de Buenos Aires, contra
 324.304 millones de gasto devengado total.</p>
-<p><b>Y esa proporci&oacute;n viene creciendo.</b> Desde 2010 los recursos de origen municipal
+<p><b>Y la parte que el Municipio se paga solo viene creciendo.</b> Desde 2010 los recursos de origen municipal
 aumentaron <b>33,6% en t&eacute;rminos reales</b> &mdash;el 1,95% anual que el cap&iacute;tulo 3 usa como
 par&aacute;metro del modelo&mdash;, mientras las transferencias provinciales ca&iacute;an. San Isidro
 depende hoy menos de la Provincia que hace quince a&ntilde;os, y no por decisi&oacute;n de nadie: por
@@ -380,7 +378,7 @@ puede financiarse sin pedirle permiso a nadie.</p>
 75% restante.</p></div>
 <p>Hay una salvedad, y es estructural: la participaci&oacute;n de San Isidro en las transferencias
 provinciales cay&oacute; de 1,938% en 2021 a 1,773% en 2025, un 8,5%, y se compone a&ntilde;o a
-a&ntilde;o. <b>El cap&iacute;tulo 3 lo descompone fondo por fondo y lo incorpora al modelo.</b></p>
+a&ntilde;o. <b>El cap&iacute;tulo 3 muestra que la ca&iacute;da est&aacute; entera en el coeficiente autom&aacute;tico y la incorpora al modelo.</b></p>
 """ + ex("g", "Desde 2025 Tigre recibe de la Provincia una parte mayor que San Isidro",
      "Qu&eacute; parte de lo que la Provincia reparte entre sus 135 municipios le toca a cada uno, a&ntilde;o por a&ntilde;o.",
      "ex06.png",
@@ -408,14 +406,11 @@ donde est&aacute; el problema.</li>
 METODO = dict(id="metodo", runhead=RH, html="""
 <h1>Nota de m&eacute;todo</h1>
 <div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada
-cuadro y de cada gr&aacute;fico va debajo de &eacute;l; la de lo que afirma el texto, al final de esta
+<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, al final de esta
 nota.</p>
 <div class="cols">
 <p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026, y donde el texto
-dice &laquo;hoy&raquo; se refiere a esa fecha. Hay tres excepciones: el modelo fiscal est&aacute; cerrado al 31
-de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; y la
-valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026.</p>
+dice &laquo;hoy&raquo; se refiere a esa fecha. Hay cuatro excepciones: el modelo fiscal est&aacute; cerrado al 31 de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; la valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026; y lo que la lista de fuentes fecha despu&eacute;s del corte lleva su fecha al lado.</p>
 <p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
 cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
@@ -472,8 +467,7 @@ cap&iacute;tulo 5 enumera.</p>
 </div>
 <h2>Cap&iacute;tulo 3 &middot; Los fondos</h2>
 <div class="note">
-<p>El modelo est&aacute; construido sobre la ejecuci&oacute;n
-presupuestaria 2010&ndash;2026 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
+<p>El modelo est&aacute; construido sobre la ejecuci&oacute;n presupuestaria 2010&ndash;2025 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
 Estado de Situaci&oacute;n Econ&oacute;mico-Financiera municipal y las planillas de transferencias de la
 Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series fueron deflactadas por IPC
 (INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>

@@ -56,6 +56,10 @@ SHARE_COPARTICIPABLE = Decimal("0.824")
 # las dos puntas.
 OBJETIVO_MIN = Decimal("0.02")
 OBJETIVO_MEDIO = Decimal("0.025")
+
+# Reparto del programa entre empleo (gasto corriente) y vivienda (gasto de
+# capital): 60% y 40%, el del cuadro 33 del 5.3.
+PARTE_EMPLEO = Decimal("0.60")
 OBJETIVO_MAX = Decimal("0.03")
 
 # Meta de percepcion del escenario que se financia cobrando mejor. En 2025 la
@@ -363,15 +367,15 @@ def proyectar(b, esc, hasta=FIN_LARGO):
                 # resultado financiero que el base.
                 pass
             else:
-                # Se paga cobrando mejor: el gasto total SUBE. Los ingresos
-                # suben mas, por la mejora de percepcion ya aplicada arriba.
-                # Empleo es gasto corriente y vivienda es gasto de capital, asi
-                # que el incremento se reparte con la misma proporcion que
-                # tienen hoy las dos partidas.
-                parte_corriente = (b["gasto_empleo"] / prog_base
-                                   if prog_base else Decimal("0.5"))
-                g_ctes += reasignacion * parte_corriente
-                g_cap += reasignacion * (1 - parte_corriente)
+                # Se paga con fondos nuevos (la base de valuacion, sumada
+                # arriba a los recursos municipales): el gasto total SUBE.
+                # Empleo es gasto corriente y vivienda es gasto de capital, y
+                # el programa se reparte 60% y 40% (5.3, cuadro 33): lo que
+                # suma cada uno es su parte del total menos lo que ya se
+                # gastaba en 2025. Antes de que arranque, queda como en 2025.
+                if k >= 1:
+                    g_ctes += prog * PARTE_EMPLEO - b["gasto_empleo"]
+                    g_cap += prog * (1 - PARTE_EMPLEO) - b["gasto_vivienda"]
 
         g_totales = g_ctes + g_cap
         resultado = ing_totales - g_totales

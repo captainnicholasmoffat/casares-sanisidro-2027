@@ -22,7 +22,7 @@ Municipio, pero s&iacute; permite reservar ese dinero, y eso es lo que este prog
 <li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y
 cooperativas de San Isidro, igual que la ley provincial ya permite contratar sin licitaci&oacute;n a las
 cooperativas y asociaciones de vecinos para la obra de su propio barrio. Y si ac&aacute; nadie puede hacerlo, <span class="sg">la
-capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa, que entra al semillero del Municipio con su primer cliente: <b>cada licitaci&oacute;n grande subcontrata el 20% a pymes del partido, y el 5% del contrato a empresas de menos de cinco a&ntilde;os</b>, que cobran a quince d&iacute;as.
+capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa, que entra al semillero del Municipio con su primer cliente: <b>cada licitaci&oacute;n p&uacute;blica subcontrata el 20% a pymes del partido y, dentro de ese 20%, el 5% del contrato a empresas de menos de cinco a&ntilde;os</b>; y todos cobran a quince d&iacute;as.
 <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
@@ -53,8 +53,7 @@ respuesta a eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
 <li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Un hecho violento
 detectado mientras ocurre, con aviso autom&aacute;tico al m&oacute;vil que est&aacute; a tres cuadras. Y
-despu&eacute;s de un robo denunciado, <b>el sistema reconstruye el recorrido de quien lo cometi&oacute; y
-le dice a la polic&iacute;a d&oacute;nde est&aacute;</b>, para que vaya directo a buscarlo.
+despu&eacute;s de un robo denunciado, <b>el sistema reconstruye hacia d&oacute;nde fue quien lo cometi&oacute; y orienta a la polic&iacute;a en el momento</b>, para que vaya directo a buscarlo.
 <span class="sg">Lo que se gana es tiempo</span>: horas en vez de d&iacute;as, y un patrullero que llega
 en vez de uno que toma la denuncia. Es an&aacute;lisis de hechos y no de personas: ni reconocimiento
 facial masivo ni registro municipal de personas sin orden judicial. <i>(Cap&iacute;tulo 5)</i></li>

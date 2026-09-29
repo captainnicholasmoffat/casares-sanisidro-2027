@@ -3,7 +3,7 @@ from content_a import RH
 
 GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <h1>Glosario</h1>
-<div class="stand">Dieciocho palabras t&eacute;cnicas que aparecen seguido, explicadas como se las
+<div class="stand">Veintitr&eacute;s palabras t&eacute;cnicas que aparecen seguido, explicadas como se las
 explicar&iacute;a a un vecino.</div>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>
@@ -12,7 +12,7 @@ explicar&iacute;a a un vecino.</div>
 <tr><td class="l">Percibido</td><td>Lo que efectivamente entr&oacute; a la caja. La diferencia con lo devengado no es s&oacute;lo deuda: incluye los descuentos y las exenciones que el Municipio aplica sobre lo ya facturado.</td></tr>
 <tr><td class="l">Percepci&oacute;n</td><td>Qu&eacute; porcentaje de lo devengado termin&oacute; entrando a la caja.</td></tr>
 <tr><td class="l">Gasto r&iacute;gido</td><td>Lo que no se puede dejar de pagar dentro del a&ntilde;o: sueldos, deuda y contratos ya firmados. En San Isidro es el 73,1%.</td></tr>
-<tr><td class="l">Gasto flexible</td><td>Lo que queda y s&iacute; se puede decidir cada a&ntilde;o: 87.326 millones, el 26,9%. De ah&iacute; sale todo lo que este programa propone.</td></tr>
+<tr><td class="l">Gasto flexible</td><td>Lo que queda y s&iacute; se puede decidir cada a&ntilde;o: 87.326 millones, el 26,9%. De ah&iacute; sale todo lo que este programa propone, salvo los 7.225,2 millones nuevos, que paga la base de valuaci&oacute;n.</td></tr>
 <tr><td class="l">Ahorro corriente</td><td>Lo que sobra despu&eacute;s de pagar el funcionamiento diario, antes de invertir en obra.</td></tr>
 <tr><td class="l">Resultado financiero</td><td>Lo que queda al final del a&ntilde;o, despu&eacute;s de todo, incluida la obra. En 2025 fue &minus;6.051 millones.</td></tr>
 <tr><td class="l">Bienes de uso</td><td>El nombre contable de la obra p&uacute;blica y el equipamiento: lo que queda despu&eacute;s de gastarlo.</td></tr>
@@ -24,6 +24,11 @@ explicar&iacute;a a un vecino.</div>
 <tr><td class="l">Silencio positivo</td><td>Cuando la ley dice que no contestar equivale a estar de acuerdo. Se usa ac&aacute; para las asociaciones de parque: si no objetan dentro del plazo, la obra sigue. Evita que una sola objeci&oacute;n paralice todo.</td></tr>
 <tr><td class="l">Radio censal</td><td>La unidad m&aacute;s peque&ntilde;a que publica el Censo: unas 300 viviendas. San Isidro tiene 360. Es la lupa con la que est&aacute; hecho el cap&iacute;tulo 1.</td></tr>
 <tr><td class="l">Fracci&oacute;n censal</td><td>Un grupo de radios. San Isidro tiene 35. La fracci&oacute;n 32, en B&eacute;ccar, es la de peor NBI del partido.</td></tr>
+<tr><td class="l">Tecnicatura</td><td>Una carrera universitaria corta. La de este programa la dicta la UNSO en las sedes: dos a&ntilde;os, el primero de cursada y el segundo de pasant&iacute;as, y el t&iacute;tulo lo entrega la universidad.</td></tr>
+<tr><td class="l">Pasant&iacute;a</td><td>Trabajo formativo de un estudiante en proyectos reales, con convenio, asignaci&oacute;n, horario limitado, ART y cobertura de salud, seg&uacute;n la Ley 26.427. Ac&aacute; son dos de seis meses: una en el Municipio y otra en una empresa del partido. No es obligatoria: lo que se garantiza es el lugar.</td></tr>
+<tr><td class="l">Tutor</td><td>Uno de los profesores del alumno, votado por el propio alumno, que lo acompa&ntilde;a hasta el empleo. La UNSO lo designa docente gu&iacute;a, como pide la ley. Es uno solo.</td></tr>
+<tr><td class="l">Supervisor</td><td>Quien acompa&ntilde;a a los pasantes en el lugar de trabajo: uno cada diez, presente todo el horario. En las &aacute;reas es planta reasignada; en la plataforma, sus seniors; en las empresas, gente de la empresa. La reglamentaci&oacute;n de la ley lo llama tutor.</td></tr>
+<tr><td class="l">Semillero</td><td>El programa que ayuda al egresado que no queda contratado a armar su empresa: un a&ntilde;o de incubaci&oacute;n, el primer cliente por pliego y un pr&eacute;stamo de uno a uno con el capital que entre de otro lado.</td></tr>
 <tr><td class="l">Ordenanza</td><td>La ley municipal. La vota el Concejo Deliberante y el intendente la promulga o la veta.</td></tr>
 <tr><td class="l">Ley Org&aacute;nica de las Municipalidades</td><td>El Decreto-Ley 6769/58, que fija qu&eacute; puede y qu&eacute; no puede hacer un municipio bonaerense. Es de 1958 y sigue vigente.</td></tr>
 </table>

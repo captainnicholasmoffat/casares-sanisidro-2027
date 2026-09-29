@@ -379,8 +379,7 @@ en 12 por mil.</p>
 <h3>Opci&oacute;n 3 &mdash; Endeudamiento</h3>
 <p><span class="sg">No la proponemos, y las razones son tres, en este orden.</span></p>
 <div class="cols">
-<p><b>Primera: empleo y vivienda es gasto recurrente, no una obra.</b> Se paga todos los a&ntilde;os, en
-r&eacute;gimen, indefinidamente. Tomar deuda para financiar gasto corriente traslada el costo a la
+<p><b>Primera: empleo y vivienda no es una obra que se hace una vez.</b> Se paga todos los a&ntilde;os, en r&eacute;gimen, indefinidamente. Tomar deuda para financiar gasto corriente traslada el costo a la
 gesti&oacute;n siguiente sin dejarle nada a cambio. Para eso se toma deuda para obra, que queda; no para
 un programa, que se consume.</p>
 <p><b>Segunda: hay una fuente m&aacute;s barata ya disponible.</b> Actualizar una base de valuaci&oacute;n
@@ -422,7 +421,7 @@ arriba</b>.</p>
 <div class="cols">
 <p><b>Qu&eacute; significa para las cuentas del pr&oacute;ximo mandato.</b> A la deuda consolidada que
 este cap&iacute;tulo model&oacute; hay que sumarle 30.000 millones de capital m&aacute;s sus intereses
-trimestrales. <b>El margen contra el tope del art&iacute;culo 49 bis se reduce.</b></p>
+trimestrales. <b>El margen contra el tope de la Constituci&oacute;n provincial &mdash;los servicios de la deuda no pueden pasar del 25% de los recursos ordinarios (art&iacute;culo 193, inciso 3)&mdash; se reduce.</b></p>
 <p><b>Y refuerza la opci&oacute;n 2, no la debilita.</b> Con el margen de endeudamiento ya usado por la
 gesti&oacute;n anterior, <span class="sg">actualizar la base de valuaci&oacute;n deja de ser una
 alternativa y pasa a ser la &uacute;nica v&iacute;a disponible</span> para financiar gasto recurrente
@@ -438,8 +437,7 @@ provincial.</b> El Municipio tiene su propia tabla: un puntaje por manzana fijad
 manzana en el 97%, y las diferencias son errores de escaneo. Lo &uacute;nico que
 cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oacute; de 5,58 a 575,91
 &mdash;ciento tres veces&mdash; sin mover la relaci&oacute;n entre una manzana y otra.</p>
-<p><b>Y ah&iacute; est&aacute; el problema.</b> El multiplicador corrige la inflaci&oacute;n. No corrige
-que en diecisiete a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
+<p><b>Y ah&iacute; est&aacute; el problema.</b> El multiplicador corrige la inflaci&oacute;n. No corrige que en dieciocho a&ntilde;os unas zonas se valorizaron mucho m&aacute;s que otras.
 <span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
 </div>
 """ + exhead("c", "La tabla de 2008 le cobra de menos a la localidad de San Isidro, a Mart&iacute;nez y a Acassuso, y de m&aacute;s a Villa Adelina",
@@ -541,8 +539,7 @@ la deuda consolidada de 5.927 millones, la multiplica por seis.</p>
 2025. Eso explica por qu&eacute; los servicios de la deuda fueron la funci&oacute;n que m&aacute;s creci&oacute; entre 2024 y 2025:
 +36,3% real.</b></p>
 <p><b>Y en junio de 2026 aparece algo nuevo.</b> El informe de ese trimestre registra por primera vez un
-pr&eacute;stamo del <b>Banco Provincia por 1.000 millones</b>. En los diez informes anteriores esa
-l&iacute;nea est&aacute; en cero. Es endeudamiento bancario tomado por la gesti&oacute;n actual.</p>
+pr&eacute;stamo del <b>Banco Provincia por 1.000 millones</b>. En los nueve trimestres anteriores esa l&iacute;nea est&aacute; en cero. Es endeudamiento bancario tomado por la gesti&oacute;n actual.</p>
 <p><span class="sg">Este programa no agrega un peso a esa deuda.</span> El modelo del cap&iacute;tulo 3
 lleva la deuda a cero hacia 2029 por amortizaci&oacute;n y no toma deuda nueva en ning&uacute;n
 a&ntilde;o de la proyecci&oacute;n.</p>
@@ -566,8 +563,7 @@ pr&aacute;cticamente en cero: &minus;292 millones.</li>
      "el bono no aparece en las barras porque para 2031 ya est&aacute; amortizado. Pesa en 2028 y 2029, los dos primeros a&ntilde;os del mandato, y no se proyecta ac&aacute;: el modelo est&aacute; en pesos constantes y TAMAR es una tasa nominal, as&iacute; que su costo real depende de la inflaci&oacute;n y ese dato no existe.") + """
 <div class="pull"><div class="plabel">D&oacute;nde se decide el futuro fiscal</div><p>Los dos primeros dependen enteramente de la administraci&oacute;n municipal, y son los que
 m&aacute;s mueven el resultado: en eso el futuro fiscal de San Isidro se decide en San Isidro.
-<b>El servicio del bono no</b>: lo fija la tasa mayorista, y es la primera variable fiscal relevante que
-queda fuera del control del Municipio.</p></div>
+<b>El servicio del bono no</b>: lo fija la tasa mayorista, y es, con la coparticipaci&oacute;n, la variable fiscal relevante que queda fuera del control del Municipio.</p></div>
 
 <h3>El programa no est&aacute; entre los riesgos</h3>
 <p class="lead">Pagado con la actualizaci&oacute;n de la tabla de 2008, el programa deja las cuentas del
@@ -605,8 +601,7 @@ obra p&uacute;blica que el Municipio ya paga.</li>
 De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
 de 2027.</li>
 <li>Lo que m&aacute;s decide si las cuentas cierran no es la Provincia: es cu&aacute;nto crece lo que recauda San
-Isidro y qu&eacute; parte de lo que factura llega a cobrar. Lo &uacute;nico importante fuera de su alcance es la tasa
-variable del bono de 2026.</li>
+Isidro y qu&eacute; parte de lo que factura llega a cobrar. Fuera de su alcance quedan la coparticipaci&oacute;n, que pesa menos, y la tasa variable del bono de 2026.</li>
 </ol>
 """ + fig("f_plaza", "Plaza de barrio, un s&aacute;bado. Ilustraci&oacute;n.") + """
 """)

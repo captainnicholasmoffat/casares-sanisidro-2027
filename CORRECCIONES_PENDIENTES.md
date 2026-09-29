@@ -2327,3 +2327,64 @@ Decisiones de Nick en dos dispatches del 29/09. Rama claude/cool-hopper-3hdk58 (
 40 páginas, 40 exhibits del 1 al 40 sin saltos, referencias resueltas, fuentes sin sustituciones, cero viudas,
 ninguna página pasa de 2.700 pt. Barrido: "plata" 0 (sólo La Plata y Mar del Plata), "azul" 0, "rojo" 0.
 Scripts: 03_scripts/cohortes_formacion.py (esquema decidido) y 03_scripts/pasantia_partida.py (44,6% libre).
+
+# CORRECCIÓN 179 · COHERENCIA DEL DOCUMENTO Y EL EXCEL CON LOS MISMOS NÚMEROS (29/09)
+Rama claude/cool-hopper-3hdk58. Lectura de las 40 páginas contra el capítulo 5 (tres revisores y verificación
+propia de cada hallazgo contra el fuente y data/).
+
+## EL DOCUMENTO · 68 ARREGLOS SIN DECISIÓN (aplicados)
+- Modelo viejo (14): el egresado "formado en el CFL" que trabaja en la obra (4.8) → cláusula del 75%; el CFL que
+  "forma" la gente (5.7) → la tecnicatura de la UNSO con la práctica en el CFL; "recursos ya devengados" (5.12) →
+  base de valuación; "tutores presentes todo el horario" (5.3 y fuentes) → supervisores; "el centro la certifica"
+  → certifica la práctica, el título es de la UNSO; "curso" → carrera; validez nacional "que reconoce" → "que se le
+  pide" (4.11); salud con la contratación → los años 1 y 2 del gasto flexible libre (4.11); incentivo del tutor por
+  el convenio con el centro → convenios con el centro y con la UNSO (5.3 y Ordenanza X, art. 5); art. 6 de la
+  Ordenanza X separa los dos casos de beca; automatizar es trabajo "de los centros" → de los pasantes y las empresas.
+- Resúmenes (6): síntesis de la subcontratación (licitación pública, el 5% dentro del 20%, todos a quince días) y de
+  la reconstrucción del recorrido (sin "dónde está"); 3.7 y 3.6 con la coparticipación fuera del alcance; el
+  compromiso 12 con el convenio con la UNSO; "se apagan en todas partes".
+- Referencias (9): índice 5.4 → página 24; "artículo 49 bis" → Constitución provincial, art. 193, inc. 3 (verificado
+  en el texto); el 3.2 no "descompone fondo por fondo"; ch. 1 no documenta desagües ni veredas; "criterio de
+  proximidad del art. 132" → Ordenanza X; arts. 8 a 10 "de la Ordenanza 6045"; en los meses 4 a 6 entran cinco
+  ordenanzas (faltaba la II); auditoría de las universidades = seguridad.
+- Contradicciones (30), entre otras: 25.165 hogares "sin gas de red" (con garrafa son 13.277, Censo 2022); la obra la
+  "deciden" y no la "administran" las comisiones; "junta" → una sola comisión; el honorario de recepción no tiene la
+  "misma escala" que el panel; hospitales van por la mitad del Ejecutivo; ACUMAR no es la cuenca de San Isidro;
+  "Ninguno necesita fondos nuevos" salvo la primera cohorte; 15 y 16 no usan el mismo equipo; la IA arranca en el
+  mes 3 (cuadros 38 y 40); "más que toda la obra pública" → casi tanto (49.270 contra 57.816); glosario: el gasto
+  flexible no paga los 7.225,2 M nuevos; nota de método: modelo 2010–2025 y cuatro excepciones de fecha.
+- Cuentas (8): 1.090.897 $ por habitante (no por hogar); dieciocho años de la tabla; nueve trimestres del préstamo;
+  "a los cuatro años"; semillero 20 en régimen y 16 en el mandato; la base de los 15.635,6 M; "nueve cortas".
+- Glosario: tecnicatura, pasantía, tutor, supervisor y semillero. Veintitrés palabras (índice y glosario).
+
+## EL EXCEL (salida/MODELO_FISCAL_SAN_ISIDRO_2028_2035.xlsx)
+Actualizado por 03_scripts/actualizar_excel_179.py sobre el original (commit 8358497). 13 hojas, 13.302 fórmulas, cero
+errores (LibreOffice). Da los mismos números que el repo: resultado de cada año en los dos escenarios y gasto total,
+diferencia cero; cuadro 20 (+170, +2.245, +1.750, 0; +140, +2.202, +1.705, −44,5); sensibilidad del 3.2 y el 3.6
+(−2.946, 24.365, 13.105, 9.212, 5.514, −292, 21.041). El año base reproduce la ejecución 2025 con diferencia cero
+(controles al pie de Resumen anual).
+- Financiamiento: sale la cobranza; entra la base de valuación, escenario B (10,9%, tope 25%, lo cobrado por año,
+  el mínimo con selector y el rango 7.180,7–7.225,2).
+- Supuestos: ejecución 2025 oficial (rubros, objetos, orígenes, cuenta Ahorro-Inversión, funciones, programas);
+  educación 2.064; ambiente 3.455; reasignado 7.799; Ciencia y Técnica 8.155 y 22,0%; plataforma 1.585,5; dispositivos
+  91,0; semillero 121; pasantías 2.135,3 / 1.469,1 (no municipal) / beca 1.336,3 / salud 988,4; gasto flexible 52,8,
+  47,2, 44,6 y 41,4; sistema vecinal 1,5% y panel 3,1 M.
+- Recursos por origen, como el repo. Personal: la estacionalidad sumaba 92,3% (faltaban 7.956 M por año): corregida.
+- Deuda: la del 31/12/2025 llega a cero en 2029, como el repo; el bono en siete cuotas trimestrales, debajo de la
+  línea. La flotante de junio de 2026 (8.231 M) sale del modelo, como en el documento.
+- Programas: 60/40, formación con dos ingresos (231…464) y 1.286 egresados; pasantes contra el tope 556.
+- Escenarios: si nada cambia y con el programa, más la sensibilidad. Metas: las trece del 6.3. Guía reescrita.
+
+## EL MODELO DEL REPO
+- modelo.py repartía el programa 33,7/66,3 entre corriente y capital; el documento dice 60/40: corregido (el resultado
+  no cambia; cambian gasto corriente, de capital y ahorro del escenario reformista_valuacion).
+- METODOLOGIA_MODELO.md recomendaba pagar con la cobranza: alineada con el documento (opción iv).
+- Sin tocar: el repo reparte los recursos de capital entre orígenes en proporción; son todos municipales. Corregirlo
+  sube el resultado 69 M en 2028 y 139 M en 2031, y cambiaría el documento.
+
+## PARA DECIDIR (a Nick, 29/09)
+Lista enviada en el chat: 1.200 M de habilitaciones, cuadro 10, déficit "estructural", punto de quiebre 1,2%,
+cuadro 18, el 75%, becas y "no reparte un peso", Mes 1 y la tabla nueva en 2028, incompatibilidad, voto digital,
+plazo del art. 8, registro de asociaciones, canal de denuncias, meta 13 y empleo, equipos de dispositivos, 5.10
+(presupuestos 2025 y 2026 sí están), verificación a los cien días, atención domiciliaria, programas de género y
+discapacidad, cupos 315/316, cien días = 19 de marzo, base del 46,8%, 1.2 (años peores y "quince años").

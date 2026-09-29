@@ -3,8 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una
-ordenanza central &mdash;la de la partida vecinal&mdash; y ocho cortas. Se votan por separado porque son
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y nueve cortas. Se votan por separado porque son
 discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
 
 <div class="callout a">
@@ -261,14 +260,13 @@ capacidad requerida.</p>
 <p class="tight">El Municipio firma con la Universidad Nacional Ra&uacute;l Scalabrini Ortiz un convenio para dictar en las sedes de formaci&oacute;n una tecnicatura universitaria de dos a&ntilde;os, y con ella el convenio de pasant&iacute;as de la Ley 26.427. La pasant&iacute;a dura doce meses en dos tramos de seis: el primero en el Municipio y el segundo en una empresa del partido o una contratista del Municipio. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. El tope del 7% de la planta se cuenta sobre los pasantes en curso. Cada &aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus pasantes; en el segundo tramo, la empresa.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Partida de incentivo docente</h3>
-<p class="tight">El convenio con el centro de formaci&oacute;n incluye una <b>partida de incentivo docente</b>, a
-cargo del Municipio, que el centro paga al profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. Cada
+<p class="tight">Los convenios con el centro de formaci&oacute;n y con la universidad incluyen una <b>partida de incentivo docente</b>, a cargo del Municipio, que cada instituci&oacute;n paga a su profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. Cada
 alumno vota a su tutor entre sus profesores, y cada profesor tiene un tope de tutorados. El monto se fija en
 el convenio, que se consulta en el Sistema de Informaci&oacute;n Municipal. El tutor no puede tener cargo rentado
 en el Municipio, conforme al art&iacute;culo 10 de la Ley 26.427.</p>
 
 <h3>Art&iacute;culo 6 &mdash; Beca de pr&aacute;ctica</h3>
-<p class="tight">Quien no consiga lugar para el segundo tramo de la pasant&iacute;a, o no pueda inscribirse en la universidad por no tener el secundario completo siendo menor de veinticinco a&ntilde;os, hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante con una <b>beca municipal igual a la asignaci&oacute;n est&iacute;mulo del pasante</b>. El Municipio acompa&ntilde;a la terminalidad del secundario por el Plan FinEs.</p>
+<p class="tight">Quien no consiga lugar para el segundo tramo de la pasant&iacute;a &mdash;en una empresa, en los lugares que el tope deja en el Municipio o en otro organismo p&uacute;blico&mdash; hace esos seis meses como pr&aacute;ctica en proyectos del centro de formaci&oacute;n, con una <b>beca municipal igual a la asignaci&oacute;n est&iacute;mulo del pasante</b>. Quien no pueda inscribirse en la universidad por no tener el secundario completo siendo menor de veinticinco a&ntilde;os hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante, con la misma beca, y el Municipio acompa&ntilde;a la terminalidad del secundario por el Plan FinEs.</p>
 
 <h3>Art&iacute;culo 7 &mdash; Subcontrataci&oacute;n</h3>
 <p class="tight">En toda licitaci&oacute;n p&uacute;blica, el adjudicatario subcontrata <b>al menos el 20% del valor del contrato con peque&ntilde;as y medianas empresas con domicilio en el partido</b>, y dentro de ese porcentaje, <b>al menos el 5% del valor del contrato con empresas del partido de menos de cinco a&ntilde;os</b>, con prioridad para las del semillero municipal. La condici&oacute;n integra el pliego antes del llamado. Quien no encuentre en el partido qui&eacute;n pueda hacerlo lo justifica ante el panel t&eacute;cnico del art&iacute;culo 2.</p>
