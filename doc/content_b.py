@@ -172,7 +172,7 @@ C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
 
 <p>De los a&ntilde;os con cuentas publicadas, el Municipio cerr&oacute; en d&eacute;ficit de 2010 a 2015, en
 2017, 2019, 2020 y 2025, y con super&aacute;vit en 2016, 2021, 2022 y 2024: el de 2024 fue de 27.154
-millones. De 2018 y 2023 no hay cuentas publicadas.</p>
+millones. De 2018 y 2023 no se encontr&oacute; el resultado publicado.</p>
 
 <h2><span class="n">3.1</span>La trampa contable que casi nos hace decir lo contrario</h2>
 <p>El Estado de Ahorro-Inversi&oacute;n-Financiamiento &mdash;el formato oficial de la contabilidad

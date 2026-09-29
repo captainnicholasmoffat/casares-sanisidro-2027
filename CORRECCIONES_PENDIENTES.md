@@ -2380,7 +2380,8 @@ diferencia cero; cuadro 20 (+170, +2.245, +1.750, 0; +140, +2.202, +1.705, −44
   no cambia; cambian gasto corriente, de capital y ahorro del escenario reformista_valuacion).
 - METODOLOGIA_MODELO.md recomendaba pagar con la cobranza: alineada con el documento (opción iv).
 - Sin tocar: el repo reparte los recursos de capital entre orígenes en proporción; son todos municipales. Corregirlo
-  sube el resultado 69 M en 2028 y 139 M en 2031, y cambiaría el documento.
+  cambia el resultado 69 M en 2028 y 139 M en 2031, y cambiaría el documento. [180: el signo estaba mal dicho: lo
+  BAJA, de +1.645 a +1.576 en 2028 y de +10.375 a +10.236 en 2031. Aplicado en la 180.]
 
 ## PARA DECIDIR (a Nick, 29/09)
 Lista enviada en el chat: 1.200 M de habilitaciones, cuadro 10, déficit "estructural", punto de quiebre 1,2%,
