@@ -1,0 +1,3125 @@
+
+ 
+
+AVANCE DEL FRENTE DEL DELTA DEL RÍO 
+PARANÁ 
+
+ANÁLISIS DE LOS PRINCIPALES FACTORES INCIDENTES EN EL PROCESO 
+
+ 
+
+Tesis de grado en Ingeniería Civil 
+ 
+
+Abril de 2022 
+
+ 
+
+ 
+
+ 
+
+Tesista: Julián E. Cortese 
+
+Tutor: Ing. Martín Sabarots Gerbec 
+
+Co tutor: Mg. Ing. Mariano Re  
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+
+
+Julián E. Cortese 
+ 
+
+Resumen 
+
+ En el presente trabajo de tesis de grado de Ingeniería Civil se ha realizado un 
+
+análisis en profundidad de la dinámica del crecimiento del Frente de Avance del río 
+
+Paraná sobre el Río de la Plata. El objetivo perseguido fue aportar una mejor 
+
+comprensión de los fenómenos intervinientes (sedimentación, erosión, marea 
+
+astronómica y meteorológica) a partir de diversos trabajos antecedentes; además, a 
+
+partir de los resultados obtenidos, se llevaron a cabo distintas proyecciones del avance 
+
+del Delta a futuro considerando diferentes escenarios propuestos de cambio climático. 
+
+ Para abordar los objetivos propuestos, en primera instancia se llevó a cabo una 
+
+recolección de fuentes antecedentes, no sólo acerca del Delta propiamente dicho, sino 
+
+también de todos los elementos que componen su sistema hídrico y sedimentológico.  
+
+ Posteriormente, se desarrolló un modelo numérico hidrosedimentológico 
+
+empleando el módulo hidrodinámico del sistema Delft3D con tal de representar 
+
+correctamente la dinámica observada en la zona en estudio. Para ello, se llevaron a 
+
+cabo procesos de calibración y validación de distinta índole. Particularmente, en la 
+
+instancia de desarrollo del modelo sedimentológico, se hicieron dos campañas de toma 
+
+de muestras de sedimentos de lecho en la región con tal de tener información 
+
+actualizada; además, se estudió el avance del Delta empleando tanto cartas náuticas 
+
+como imágenes satelitales.  
+
+ Una vez obtenido un modelo satisfactorio, se realizaron distintos ensayos de 
+
+sensibilidad con tal de determinar qué fenómenos tienen mayor incidencia en el 
+
+crecimiento del Delta (se trabajó con eventos de bajantes, sudestadas y situaciones 
+
+extremas de los ríos Paraná y Bermejo). Para desarrollar estos análisis, se resumió 
+
+estadísticamente información disponible de cada sistema para lograr determinar 
+
+escenarios tipo para cada caso.  
+
+ Por último, teniendo en cuenta los resultados obtenidos de los ensayos de 
+
+sensibilidad se desarrollaron distintos escenarios de cambio climático para la situación 
+
+hídrica de las cuencas de los ríos Paraná y Bermejo y para el aumento del nivel del mar; 
+
+se obtuvo de las simulaciones considerando los mencionados casos distintas 
+
+proyecciones del estado del Frente del Delta del río Paraná para el año 2100, 
+
+estudiándose además los comportamientos del mismo para cada caso. 
+
+ Esta tesis supone un avance en el conocimiento de los fenómenos 
+
+intervinientes en el avance del Frente del Delta, en tanto se han incorporado y 
+
+ensayado nuevos forzantes al modelo numérico desarrollado respecto a los trabajos 
+
+antecedentes. Por último, se aportó información referente a la sedimentología en la 
+
+región y se compararon distintas fuentes de información batimétrica disponible en la 
+
+actualidad.  
+
+2 
+ 
+
+
+
+ 
+
+
+
+Agradecimientos 
+
+ En primer lugar, quiero expresar mi profundo agradecimiento a Martín, por su 
+
+dedicación incansable a la guía de este proyecto y por la constante transmisión de 
+
+conocimiento. También a Mariano, cuya lectura y comentarios aportaron a esta tesis. 
+
+Seguidamente, agradecerle a todo el equipo del PHC; resulta hoy impensable un 
+
+entorno mejor en el que haber desarrollado este trabajo, donde siempre primó un 
+
+ambiente ameno, de ayuda, cooperación e interés. 
+
+  No quiero tampoco dejar de expresar el inefable agradecimiento a mi 
+
+familia, por acompañarme y apoyarme incondicional e ininterrumpidamente en cada 
+
+etapa de la vida: Mamá, Papá, Viole y mis abuelas. Agradecerle también a Lena, por el 
+
+cariño y la paciencia y, naturalmente, a mis amigos, Nacho, Miguel y Fede, por todos 
+
+estos años de camaradería y compañía.  
+
+ 
+
+A todos ellos, ¡muchas gracias! 
+
+ 
+
+ 
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+  
+
+  
+
+ 
+
+ 
+
+ 
+
+2 
+ 
+
+
+
+Índice 
+____________________________________________________ 
+
+Contenido 
+1. Introducción 9 
+
+1.1 Motivación 9 
+
+1.2 Contenido 9 
+
+2. Caracterización geográfica del sistema 11 
+
+2.1 Introducción 11 
+
+2.2 El Río Paraná 11 
+
+2.3 El río Paraguay 14 
+
+2.4 El río Bermejo 14 
+
+2.5 El río Pilcomayo 15 
+
+2.6 El Delta del río Paraná 17 
+
+2.7 Conclusiones del capítulo 17 
+
+3. Antecedentes de estudio del Frente del Delta 19 
+
+3.1 Introducción 19 
+
+3.2 Caracterización sedimentológica en el Frente del Delta 19 
+
+3.3 Análisis histórico cartográfico del Delta del río Paraná 21 
+
+3.4 Modelación del avance del Frente del Delta 23 
+
+3.5 Conclusiones del capítulo 30 
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+
+morfológicos (2007 – 2016). 31 
+
+4.1 Introducción 31 
+
+4.2 Campaña de toma de sedimentos en el Frente de Avance del Delta del río Paraná 
+31 
+
+4.3 Cambios morfológicos según las cartas náuticas (2007-2016) 36 
+
+4.4 Cambios morfológicos registrados en imágenes satelitales (2007-2016) 39 
+
+4.5. Hipótesis sobre la dinámica de sedimentos en las zonas de cambios morfológicos
+
+ 43 
+
+4.6 Conclusiones del capítulo 45 
+
+5. Metodología. 47 
+
+5.1 Introducción. 47 
+
+5.2 Modelo numérico. 47 
+
+5.2.1 Procesos considerados en la modelación: conceptos y ecuaciones. 47 
+
+1 
+ 
+
+
+
+Julián E. Cortese 
+
+5.2.2 Dominio de cálculo y discretización 65 
+
+5.2.3 Batimetría 66 
+
+5.2.4 Condiciones de borde 67 
+
+5.2.5 Forzantes atmosféricos 74 
+
+5.2.6 Condicionante en el lecho 76 
+
+5.2.7 Salinidad 77 
+
+5.3 Calibración hidrodinámica del modelo 79 
+
+5.3.1 Información disponible 80 
+
+5.3.2 Calibración de la marea astronómica 81 
+
+5.3.3 Calibración de la marea meteorológica 85 
+
+5.3.4 Validación hidrodinámica del modelo 92 
+
+5.3.5 Incidencia de los fenómenos atmosféricos en las tensiones de corte 93 
+
+5.3.6 Validación del subdominio B 95 
+
+5.4 Calibración de los procesos sedimentológicos 95 
+
+5.4.1 Introducción 95 
+
+5.4.2 Información, indicadores y criterios 95 
+
+5.4.3 Proceso de calibración 97 
+
+5.4.4. Simulación empleando el conjunto de parámetros propuesto en trabajo 
+
+antecedente. 114 
+
+5.4.5 Sensibilidad a la variación horaria del caudal líquido ingresante 116 
+
+5.4.6 Sensibilidad a la presencia de sedimento de lecho inicial 118 
+
+5.5 Conclusiones del capítulo 121 
+
+6. Sensibilidad del avance del Frente del Delta a factores que inciden en la dinámica 
+
+hidrodinámica de la región. 122 
+
+6.1 Introducción 122 
+
+6.2 Selección de años tipo 122 
+
+6.2.1. Situaciones hidrológicas tipo en el río Paraná 122 
+
+6.2.2 Situaciones hidrológicas tipo en el río Bermejo 124 
+
+6.2.3. Situación meteorológica tipo en el Río de la Plata 126 
+
+6.3 Sensibilidad del crecimiento del Frente de Avance a los distintos forzantes 129 
+
+6.3.1. Sensibilidad a variaciones en el caudal del río Bermejo 130 
+
+6.3.2. Sensibilidades al caudal del río Paraná 133 
+
+2 
+ 
+
+
+
+Índice 
+____________________________________________________ 
+
+6.3.3. Sensibilidades a los eventos meteorológicos del Río de la Plata 137 
+
+6.4 Conclusiones del capítulo 139 
+
+7. Incidencia del cambio climático en el crecimiento futuro del Frente del Delta del 
+
+río Paraná 142 
+
+7.1. Introducción 142 
+
+7.2. Escenario base 142 
+
+7.3. Aumento del nivel medio del mar 147 
+
+7.3.1. Conceptos básicos 147 
+
+7.3.2. Simulaciones considerando escenarios de cambio del NMMG 149 
+
+7.3.3. Resultados obtenidos considerando el aumento del NMM 150 
+
+7.4 Caudal líquido del río Paraná y el cambio climático. 151 
+
+7.4.1 Cambio climático en la Cuenca del río Paraná: precipitaciones y caudal 152 
+
+7.4.2 Efecto del cambio climático en la cuenca del Paraná en el Frente del Delta del 
+
+río Paraná 155 
+
+7.5 El cambio climático y el caudal sólido proveniente del río Bermejo 157 
+
+7.5.1 Definición de escenarios de cambio climático en la cuenca del río Bermejo 
+158 
+
+7.5.2 Efectos del cambio climático en la cuenca del río Bermejo sobre el Frente del 
+
+Delta del río Paraná 159 
+
+7.6 Situación meteorológica, cambio climático y el Delta del río Paraná 161 
+
+7.7 Síntesis del comportamiento del Delta ante los escenarios de cambio climático 
+162 
+
+7.8 Conclusiones del capítulo 162 
+
+8. Conclusiones 164 
+
+Bibliografía 170 
+
+Anexo I: Indicadores estadísticos empleados en la calibración hidrodinámica del 
+
+modelo 174 
+
+Anexo II: Análisis de sensibilidad al factor de aceleración 178 
+
+ 
+
+ 
+
+3 
+ 
+
+
+
+Julián E. Cortese 
+
+Índice de figuras 
+
+Figura 1 Sistema del río Paraná; denominación y principales tributarios. 12 
+
+Figura 2 Presas a lo largo del río Paraná. 13 
+
+Figura 3 Concentración aforada contra progresiva sobre el río Pilcomayo (Brea & 
+
+Spalletti, 2011). 16 
+
+Figura 4 Esquema conceptual del sistema que afecta al Frente del Delta del río Paraná. 
+18 
+
+Figura 5 Cuantificación del crecimiento del Delta del río Paraná a partir del análisis 
+
+cartográfico (Sarubbi, 2007). 22 
+
+Figura 6 Dominios de cálculo empleados; AFD.12 (izq, de Badano y otros (2012).) y 
+
+AFD.07 (der, de Sarubbi (2007)). 23 
+
+Figura 7 Zonificación del área en estudio para la definición de concentraciones 
+
+(Sarubbi, 2007). 24 
+
+Figura 8 Frentes observados y simulados en el período 1900 - 2002 (Sarubbi, 2007). 26 
+
+Figura 9 Comparación de Frente simulado y observado según el modelo desarrollado 
+
+(Badano  et. al, 2012). 27 
+
+Figura 10 Resultados obtenidos para cada uno de los escenarios (Sarubbi, 2007). 28 
+
+Figura 11 Avance del Frente del Delta ante distintos escenarios (Kazimierski, y otros, 
+
+2011). 29 
+
+Figura 12 Esquema conceptual de los trabajos desarrollados sobre el crecimiento del 
+
+Frente del Delta. 30 
+
+Figura 13 Ubicación de los puntos de muestreo de sedimentos del lecho. 32 
+
+Figura 14 Muestra sacada aguas abajo de la desembocadura del río Guazucito. 33 
+
+Figura 15 Análisis granulométrico a las muestras tomadas cerca de la desembocadura 
+
+del río Guazucito. 33 
+
+Figura 16 Análisis granulométrico a las muestras tomadas cerca de la desembocadura 
+
+del río Paraná Miní. 34 
+
+Figura 17 Análisis granulométrico a las muestras tomadas en el río Paraná de las 
+
+Palmas. 35 
+
+Figura 18 Avance del Frente del Delta aguas abajo de la Isla Juncal. 37 
+
+Figura 19 Avance del Frente del Delta alrededor de la Isla Oyarvide. 38 
+
+Figura 20 Avance del Frente del Delta en las cercanías de la costa bonaerense. 39 
+
+Figura 21 Imágenes satelitales tomadas en los años 2006 (izq.) y 2017 (der.) con niveles 
+
+observados en Buenos Aires igual a 10 cm MOP. 40 
+
+Figura 22 Principales cambios morfológicos detectados en las imágenes satelitales. 43 
+
+Figura 23 Sistema de coordenadas empleado tomado del manual del módulo Flow 
+
+(Delft3D). 48 
+
+Figura 24 Nivel residual en el Puerto de Buenos Aires durante el mes de septiembre del 
+
+2005. 60 
+
+4 
+ 
+
+
+
+Índice 
+____________________________________________________ 
+
+Figura 25 Dominios de cálculo y detalle de resolución de región de las islas frente a la 
+
+costa uruguaya. 66 
+
+Figura 26 Batimetría del Frente del Delta del río Paraná (año 2007). 67 
+
+Figura 27 Ubicación de las condiciones de borde fluviales del modelo. 68 
+
+Figura 28 Elementos empleados para conformar las series de caudal sólido en la 
+
+Estación Túnel Subfluvial del río Paraná. 70 
+
+Figura 29 Ajuste de caudal sólido en función del caudal líquido en El Colorado. 71 
+
+Figura 30 Serie de concentraciones generada contra aforos realizados en El Colorado. 72 
+
+Figura 31 Discretización de la frontera sur de cada dominio donde se impondrán como 
+
+forzantes el nivel del agua. 73 
+
+Figura 32 Comparación de vientos observados con los informados por el modelo global 
+
+ERA5 (Toma San Martín, AySA); se incluye módulo (arriba), dirección S-N (medio) y O-E 
+
+(abajo). 76 
+
+Figura 33 Resultados de salinidad obtenidos en campaña oceanográfica en el Río de la 
+
+Plata (Fosatti, 2013). 78 
+
+Figura 34 Concentración superficial media de material suspendido (Moreira, 2016). 79 
+
+Figura 35 Puntos donde se dispone información acerca del nivel de superficie libre 
+
+utilizados para la calibración hidrodinámica. 80 
+
+Figura 36 Ubicación de equipos ADCP. 81 
+
+Figura 37 Fragmento de series modeladas con distintos coeficientes de Manning en 
+
+Buenos Aires. 83 
+
+Figura 38 Compración de series predichas a partir de observaciones y simulación. 84 
+
+Figura 39 Comparación de RMSE relativo de distintos modelos en cuatro puntos 
+
+analizados del Río de la Plata. 85 
+
+Figura 40 Curva de permanencia del viento en diferentes puntos del Río de la Plata. 87 
+
+Figura 41 Series de nivel en Baliza Mitre y Brasileira en el intervalo de calibración. 90 
+
+Figura 42 Series de nivel residual en Baliza Mitre y Brasileira en el intervalo de 
+
+calibración. 91 
+
+Figura 43 Errores de nivel obtenidos en la validación para distintas estaciones. 92 
+
+Figura 44 Comparación de rosas de corriente para el año 2009. 93 
+
+Figura 45 Media de la diferencia entre tensiones de corte obtenidas  con condiciones 
+
+meteorológicas y astronómicas; vista regional (izq.) y local del Frente del Delta (der.). 94 
+
+Figura 46 Comparación de resultados obtenidos empleando los dos dominios definidos.
+
+ 95 
+
+Figura 47 Comparación de curvas de nivel 0 m MOP, 2007 y 2017. 96 
+
+Figura 48 Subdivisión propuesta del Frente de Avance. 97 
+
+Figura 49 Comparación de batimetrías 2007 y 2016 observadas con 2016 simulada 
+
+Sed_0 en Canal Mitre (arriba izq.), Bajos del temor (arriba der.), Islas (abajo, izq.) y 
+
+región norte (abajo, der.). 104 
+
+5 
+ 
+
+
+
+Julián E. Cortese 
+
+Figura 50 Comparación de batimetrías 2007 y 2016 observadas con 2016 simulada 
+
+Sed_7 en Canal Mitre (arriba izq.), Bajos del temor (arriba der.), Islas (abajo, izq.) y 
+
+región norte (abajo, der.). 112 
+
+Figura 51 Mapas de composición alcanzados con Sed_7 (arena (arriba a la izq.), limo 
+
+(arriba a la der.) y arcilla (abajo a la izq.)), comparados con la carta de Laborde (abajo a 
+
+la der.). 113 
+
+Figura 52 Comparación de resultados obtenidos con configuración de trabajo 
+
+antecedente y Sed_7. 115 
+
+Figura 53 Comparación de resultados obtenidos empleando caudal constante y con 
+
+variación horaria. 117 
+
+Figura 54 Comparación curvas de nivel 0 MOP considerando y sin considerar el fondo 
+
+móvil inicial. 119 
+
+Figura 55 Comparación de batimetrías alcanzadas sin fondo móvil (izq.) y con fondo 
+
+móvil (der.). 119 
+
+Figura 56 Análisis exploratorio de los caudales medios diarios del río Paraná (1975 - 
+
+2019). 123 
+
+Figura 57 Caudal medio anual del río Paraná en el Túnel Subfluvial (1975 - 2016). 123 
+
+Figura 58 Análisis exploratorio del caudal medio diario del río Bermejo (1969-2019) 124 
+
+Figura 59 Régimen hidrológico del río Bermejo hallado a partir de datos disponibles 125 
+
+Figura 60 Caudales medios anuales del río Bermejo 125 
+
+Figura 61 Análisis exploratorio del nivel del río en Buenos Aires. 127 
+
+Figura 62 Comparación de Boxplots de niveles registrados en el Puerto de Buenos 
+
+Aires. 128 
+
+Figura 63 Reducción de superficie emergida en función de la reducción de la 
+
+concentración entrante al Río de la Plata. 131 
+
+Figura 64 Comparación de curvas de nivel 0 m MOP obtenidas en los tres escenarios de 
+
+concentración proveniente del río Bermejo. 132 
+
+Figura 65 Comparación de áreas emergidas según los escenarios de condición media y 
+
+crecida del río Paraná 135 
+
+Figura 66 Comparación de áreas emergidas según los escenarios de condición media y 
+
+bajante del río Paraná. 136 
+
+Figura 67 Puntos considerados en la comparación de series de profundidad. 137 
+
+Figura 68 Comparación de series de profundidad en distintos puntos del Frente entre 
+
+ambos escenarios, de puntos 1 a 4 en orden descendiente. 138 
+
+Figura 69 Evolución del ritmo de emergencia de islas en las distintas regiones del 
+
+Frente del Delta. 144 
+
+Figura 70 Proyección del Frente del Delta para el año 2100 sin cambio climático. 146 
+
+Figura 71 Tasas de cambio del NMMG según escenarios de cambio climático moderado 
+
+(izq.) y pesimistas (der.); Adaptado de Church (2013). 149 
+
+6 
+ 
+
+
+
+Índice 
+____________________________________________________ 
+
+Figura 72 Superficie emergida en función del tiempo en el Canal Mitre (arriba izq.), 
+
+Bajos del Temor (abajo izq.), Islas (arriba der.) y región norte (abajo der.) en los 
+
+distintos escenarios propuestos. 150 
+
+Figura 73 Contorno 0 m MOP con distintos escenarios de cambio climático del NMM. 
+151 
+
+Figura 74 Malla del modelo climático global y cuenca del río Paraná con cierre en 
+
+Corrientes. 152 
+
+Figura 75 Ajuste de caudal medio contra precipitación acumulada en Arapongas. 154 
+
+Figura 76 Precipitaciones y caudales proyectados según modelo de cambio climático (a) 
+
+y metodología adoptada (b). 155 
+
+Figura 77 Superficie emergida en función del tiempo en el Canal Mitre (arriba izq.), 
+
+Bajos del Temor (abajo izq.), Islas (arriba der.) y región norte (abajo der.) en los 
+
+distintos escenarios propuestos. 156 
+
+Figura 78 Contorno 0 m MOP con distintos escenarios de cambio climático del caudal 
+
+líquido del río Paraná. 157 
+
+Figura 79 Escenarios de evolución de la generación de sedimentos de la cuenca del río 
+
+Bermejo (adaptado de Kazimierski y otros, 2012) 158 
+
+Figura 80 Superficie emergida en función del tiempo en el Canal Mitre (arriba izq.), 
+
+Bajos del Temor (abajo izq.), Islas (arriba der.) y región norte (abajo der.) en los 
+
+distintos escenarios propuestos. 159 
+
+Figura 81 Contorno 0 m MOP con distintos escenarios de cambio climático de la 
+
+concentración ingresante al estuario. 161 
+
+Figura 82 Resultados obtenidos empleando distintos factores de aceleración (fa) para 
+
+los cambios morfológicos. 179 
+
+Índice de tablas 
+
+Tabla 1 Concentraciones aforadas en el río Pilcomayo (Brea & Spalletti, 2011). 16 
+
+Tabla 2 Resumen estadístico de la granulometría de las muestras de lecho tomadas. 36 
+
+Tabla 3 Composición granulométrica de las muestras tomadas en el Frente del Delta. 36 
+
+Tabla 4 Principales componentes de marea astronómica (Fernández, 2011). 58 
+
+Tabla 5 Comparación de particiones del caudal líquido del río Paraná. 69 
+
+Tabla 6 Indicadores estadísticos de series en distintos puntos del Río de la Plata para 
+
+diferentes coeficientes de Manning. 83 
+
+Tabla 7 Indicadores de tablas de marea calculados con Manning 0,017. 84 
+
+Tabla 8 Indicadores estadísticos obtenidos de las series de nivel. 88 
+
+Tabla 9 Indicadores estadísticos obtenidos de las series de nivel residual. 88 
+
+Tabla 10 Configuraciones de parámetros propuestas para la calibración. 98 
+
+Tabla 11 Caudales y concentraciones empleadas como forzantes en todas las pruebas 
+
+del proceso de calibración. 99 
+
+Tabla 12 Indicadores superficiales de las configuraciones planteadas para la calibración. 
+103 
+
+7 
+ 
+
+
+
+Julián E. Cortese 
+
+Tabla 13 Comparación de resultados de las distintas simulaciones respecto a la Sed_0 
+
+en la región Canal Mitre. 108 
+
+Tabla 14 Comparación de resultados de las distintas simulaciones respecto a la Sed_0 
+
+en la región Bajos del Temor. 109 
+
+Tabla 15 Comparación de resultados de las distintas simulaciones respecto a la Sed_0 
+
+en la región Islas. 110 
+
+Tabla 16 Comparación de resultados de las distintas simulaciones respecto a la Sed_0 
+
+en la región Norte. 111 
+
+Tabla 17 Parámetros de Sed_7 y trabajo antecedente comparados entre sí. 114 
+
+Tabla 18 Simulaciones propuestas para estudiar la sensibilidad del modelo a los 
+
+distintos forzantes empleados. 129 
+
+Tabla 19 Comparación de resultados empleando distintas concentraciones de acuerdo 
+
+a la situación hidrológica del río Bermejo. 130 
+
+Tabla 20 Comparación de resultados empleando distintas concentraciones de acuerdo 
+
+a la situación hidrológica del río Paraná. 133 
+
+Tabla 21 Superficie emergida en el escenario base (2007-2100). 143 
+
+Tabla 22 Variación de concentración de cada fracción de sedimento para sendos 
+
+escenarios planteados. 159 
+
+Tabla 23 Área emergida en el año 2100 como múltiplo de la correspondiente al 2007. 
+163 
+
+ 
+
+ 
+
+8 
+ 
+
+
+
+1. Introducción 
+____________________________________________________ 
+
+1. Introducción 
+
+1.1 Motivación 
+
+ El presente trabajo de tesis surge como una continuación del estudio de la 
+
+dinámica de crecimiento del Frente del Delta del río Paraná llevado a cabo en el 
+
+Programa de Hidráulica Computacional (PHC) en distintos trabajos a partir del año 
+
+2007.  
+
+ La mayor disponibilidad de información y los avances en la capacidad de cálculo 
+
+computacional permiten hoy en día desarrollar distintos análisis que no han sido 
+
+tenidos en cuenta previamente, por lo que se busca lograr profundizar en la 
+
+comprensión de los procesos que rigen la dinámica sedimentológica en el Frente del 
+
+Delta.  
+
+ Se presta especial atención a la realización de análisis de sensibilidad a la 
+
+dinámica de crecimiento del Delta con tal de obtener un conjunto delimitado de 
+
+forzantes relevantes a la hora de describir el comportamiento agregado del Frente.  
+
+ Además, surge el interés de evaluar el comportamiento futuro del Frente del 
+
+Delta de acuerdo a distintos escenarios de cambio climático, temática que también se 
+
+abordará, profundizando respecto a los trabajos antecedentes disponibles.  
+
+1.2 Contenido 
+
+ El trabajo consta de ocho capítulos, incluyendo la presente introducción. A 
+
+continuación, se comenta someramente el contenido de cada uno de los siguientes 
+
+apartados. 
+
+ El segundo capítulo presenta una descripción del sistema geográfico que 
+
+determina el comportamiento del Delta del río Paraná y se determina en qué medida 
+
+cada elemento del mismo incide en la dinámica del Frente. La información recopilada 
+
+surge de una revisión bibliográfica de diversos trabajos y pretende ser un resumen que 
+
+permita comprender los principales elementos que intervienen en el crecimiento del 
+
+Delta.  
+
+ El tercer capítulo describe la metodología que fue empleada en los trabajos 
+
+antecedentes sobre el avance del Frente del Delta del río Paraná a partir de la cual – 
+
+mediante diferencias y similitudes – se planteará la propia metodología a implementar. 
+
+ El cuarto capítulo desarrolla tres análisis diferentes que se llevaron a cabo para 
+
+comprender la dinámica sedimentológica en la región del Frente del Delta del río 
+
+Paraná; dos campañas de muestreo de sedimentos de fondo y dos análisis remotos 
+
+mediante los cuales se analizaron los cambios ocurridos en el Frente en el intervalo 
+
+2007-2016. De los resultados obtenidos de los análisis recién mencionados se obtiene 
+
+información de base valiosa a la hora de desarrollar el módulo sedimentológico del 
+
+9 
+ 
+
+
+
+Julián E. Cortese 
+
+modelo numérico, cuya descripción completa se hará en el quinto capítulo del trabajo, 
+
+donde se trata el software empleado, el modelo hidrosedimentológico desarrollado, 
+
+sus condiciones de borde y forzantes, así como también sus distintos procesos de 
+
+calibración y validación. 
+
+ El sexto capítulo presenta los ensayos de sensibilidad que se realizaron con el 
+
+modelo desarrollado con tal de comprender qué fenómenos tienen mayor y menor 
+
+incidencia en el crecimiento del Delta; para ello, también se explican las 
+
+consideraciones realizadas para la definición de los distintos escenarios.  
+
+ El séptimo capítulo, por su parte, es donde se presentan los escenarios de 
+
+cambio climático con los que se plantearán proyecciones del Delta a futuro, buscando 
+
+comprender qué comportamiento puede ser esperado desde el presente al año 2100. 
+
+Finalmente, el octavo y último capítulo consiste en las conclusiones del presente 
+
+trabajo. 
+
+10 
+ 
+
+
+
+2. Caracterización geográfica del sistema 
+____________________________________________________ 
+
+2. Caracterización geográfica del sistema 
+
+2.1 Introducción 
+
+El Delta del río Paraná consiste en el sistema de cursos e islas que funciona como 
+
+transición entre el río Paraná y el Río de la Plata. El Frente de Avance del Delta se halla 
+
+actualmente frente a la localidad de San Fernando, pero se encuentra en constante 
+
+crecimiento debido a la sedimentación de la carga de material sólido que el río Paraná 
+
+trae consigo desde aguas arriba.  
+
+Comprender las características geográficas de las distintas zonas relevantes del 
+
+sistema hidrológico (como ser tortuosidad de los cursos, ubicación de llanuras 
+
+aluviales, pendientes hidráulicas, composición del lecho, entre otras) colabora al 
+
+análisis del avance del frente en tanto da indicios de la procedencia y características de 
+
+los sedimentos transportados, así como también ayuda a comprender su 
+
+comportamiento. Por ende, en el presente capítulo se exponen las principales 
+
+características de los distintos componentes que componen al sistema del Delta del río 
+
+Paraná, obtenidas a partir de una revisión de la bibliografía existente al respecto. 
+
+2.2 El Río Paraná 
+
+Tiene su naciente en el sur de Brasil, tras la confluencia de los ríos Paranaíba y 
+
+Grande a 1900 metros sobre el nivel del mar. Su cuenca, de aproximadamente 
+
+1.500.000  (Orfeo, 1995), se distribuye entre Brasil, Argentina, Bolivia y Paraguay. 𝑘𝑚2
+
+De acuerdo a los datos de caudal medio diario disponibles en el Sistema Nacional de 
+
+Información Hídrica1 (SNIH) a partir del año 1904 hasta el mes de agosto del año 2021, 
+
+a la altura de la ciudad de Corrientes, el caudal medio ronda los 17.200 , con 𝑚3/𝑠
+
+extremos históricos absolutos cercanos a los 4.000  y 60.000 .  𝑚3/𝑠 𝑚3/𝑠
+
+Debido a su gran extensión longitudinal, se divide al río Paraná en distintos tramos 
+
+(Figura 1). Desde su naciente en Brasil hasta la desembocadura del río Paraguay, 
+
+aproximadamente 35 km aguas arriba de las ciudades Corrientes y Resistencia, se lo 
+
+denomina Alto Paraná. A partir de la confluencia recién mencionada hasta la localidad 
+
+de Diamante se lo llama Paraná Medio, tramo en el cual la orientación predominante 
+
+del río es norte – sur. Aguas abajo de Diamante comienza el Paraná Inferior, tramo en el 
+
+cual se desarrolla el Delta del río Paraná.  
+
+1 https://snih.hidricosargentina.gob.ar/ 
+
+11 
+ 
+
+https://snih.hidricosargentina.gob.ar/
+
+
+Julián E. Cortese 
+
+ 
+
+Figura 1 Sistema del río Paraná; denominación y principales tributarios. 
+
+En la subcuenca del Alto Paraná es donde se encuentran los mayores aportes 
+
+pluviales de la cuenca del río, con la presencia de dos estaciones bien definidas: en los 
+
+meses de verano, de diciembre a abril, se da la estación húmeda, mientras que el resto 
+
+del año las precipitaciones se reducen drásticamente, por lo que se constituye la 
+
+estación seca; el comportamiento de las precipitaciones provoca un comportamiento 
+
+similar en el caudal del tramo inicial del río Paraná (Amsler, y otros, 2020). 
+
+Por otra parte, a lo largo del Alto Paraná, se han construido numerosas centrales 
+
+hidroeléctricas (Figura 2) a lo largo de la segunda mitad del siglo XX, especialmente 
+
+sobre territorio brasilero en la década de 1970 como continuación de la fuerte política 
+
+de desarrollo de la energía hidroeléctrica llevada a cabo por entonces por el gobierno 
+
+de dicho país (Leturcq, 2019). En total son cinco, enunciadas de norte a sur: Ilha 
+
+Solteira, Presa de Jupiá, Embalse de Porto Primavera (todas brasileras), Presa de Itaipú 
+
+(explotada por Brasil y Paraguay) y Presa de Yacyretá (explotada por Argentina y 
+
+Paraguay). La construcción de dichas presas a lo largo del cauce del río tuvo dos 
+
+efectos: en primera instancia, redujo la variabilidad del ciclo hidrológico del Paraná 
+
+debido a la mayor regulación disponible, produciendo principalmente que a partir del 
+
+año 1975 los caudales mínimos registrados resultaran sensiblemente mayores que los 
+
+registrados con anterioridad (Sabarots Gerbec & Borús, 2016); en segundo lugar, la 
+
+presencia de embalses a lo largo del río favorece la sedimentación de la carga 
+
+suspendida proveniente de aguas arriba, por lo que la cantidad de sedimentos 
+
+12 
+ 
+
+
+
+2. Caracterización geográfica del sistema 
+____________________________________________________ 
+
+provenientes de Brasil que se hallan en el río Paraná a lo largo de su trayecto por 
+
+Argentina es acotada (Re, Menéndez, & Amsler, 2009). 
+
+ 
+
+Figura 2 Presas a lo largo del río Paraná. 
+
+El río continúa aguas abajo con dirección NNE-SSO hasta la confluencia con el río 
+
+Iguazú tras las cataratas homónimas. Aguas abajo de dicha confluencia, la dirección del 
+
+cauce se modifica para ser E-O. En este tramo, la pendiente media ronda los 0,08 m/km 
+
+mientras que las velocidades medias en bajante y crecida son de 0,7 m/s y 2,1 m/s 
+
+respectivamente (Orfeo, 1995). 
+
+La desembocadura del río Paraguay modifica sustancialmente las características 
+
+hidrodinámicas, sedimentológicas y morfogenéticas del Paraná. A partir de entonces se 
+
+denomina al tramo como el Paraná Medio, donde la pendiente media adopta un valor 
+
+de 0,036 m/km y las márgenes del río alternan sus alturas conformando 
+
+alternadamente planicies de inundación sobre una y otra margen. La extensión de 
+
+estas planicies además varía sustancialmente a lo largo del curso, adoptando valores de 
+
+13 km frente a Corrientes y en Rosario de 56 km (Amsler, y otros, 2020). Dicha planicie 
+
+de inundación afecta el transporte de sólidos del río, ya que en tiempos de crecidas allí 
+
+se deposita gran cantidad de material fino (Re, Menéndez, & Amsler, 2009) que luego 
+
+tendría incidencia en el avance del Frente del Delta. En términos hidrológicos, la 
+
+cuenca correspondiente al tramo medio del Paraná no aporta sustancialmente al 
+
+caudal total del río, pero se pierde la distinción de estaciones húmeda y seca que sí se 
+
+apreciaba en el Alto Paraná (Amsler, y otros, 2020). 
+
+A la altura de la localidad de Diamante, en la provincia de Entre Ríos, se da la 
+
+transición entre el Paraná Medio y el Inferior, tramo en el cual se desarrolla el Delta, 
+
+que se extiende a lo largo de 320 km hasta su desembocadura en el Río de la Plata. 
+
+Junto con el caudal líquido del río Paraná, a través del Delta discurre una gran cantidad 
+
+de sedimentos en suspensión, lo cual genera su permanente crecimiento sobre las 
+
+13 
+ 
+
+
+
+Julián E. Cortese 
+
+aguas del Río de la Plata con una tasa de crecimiento estimada entre los 70 y 90 m/año  
+
+(Amsler, y otros, 2020). 
+
+2.3 El río Paraguay 
+
+Nace en el estado brasilero de Mato Grosso y desemboca en el Paraná tras recorrer 
+
+2.600 km. Su cuenca abarca una superficie de aproximadamente 1.095.000  𝑘𝑚2
+
+comprendida entre Brasil, Paraguay, Argentina y Bolivia.  
+
+ De acuerdo a los caudales medios diarios disponibles en el SNIH en Puerto 
+
+Bermejo, en la provincia de Chaco, para el período 01/1910 – 08/2021, el caudal medio 
+
+ronda los 3.900 . Su ciclo hidrológico está caracterizado por crecidas en 𝑚3/𝑠
+otoño-invierno y bajantes en primavera-verano (Orfeo, 1995). 
+
+Aguas arriba de la desembocadura en el río Paraná, producto de los mayores 
+
+caudales que este último río tiene, se produce un importante remanso hidráulico de 
+
+hasta 340 km de longitud que genera una importante reducción de la velocidad de 
+
+escurrimiento y consecuentemente una disminución de la capacidad de carga del río 
+
+Paraguay (Orfeo, 1995). Esta pérdida de carga y la gran descarga sólida que implica la 
+
+desembocadura del río Bermejo conllevan a que el río Paraguay presente una gran 
+
+movilidad en su tramo final. 
+
+Los principales tributarios del río Paraguay son los ríos Bermejo y Pilcomayo, 
+
+cuyas cuencas se dividen entre el norte de Argentina y el sur de Bolivia. Ambos se 
+
+caracterizan por transportar una gran carga de sólidos, aunque el Pilcomayo presenta 
+
+características morfológicas y sedimentológicas complejas que aún no fueron resueltas 
+
+completamente (Brea & Spalletti, 2011). 
+
+2.4 El río Bermejo 
+
+En términos de aporte sólido, el Bermejo es el río que mayor influencia tiene en el 
+
+avance del frente del Delta del río Paraná (Sarubbi, 2007). Su cuenca, de alrededor de 
+
+133.000  esta distribuida entre el departamento de Tarija, en Bolivia y las  𝑘𝑚2
+
+provincias argentinas de Salta, Jujuy, Chaco y Formosa. 
+
+La cuenca se divide en tres regiones, a saber: la alta cuenca, situada en el NO de 
+
+Argentina y SSE de Bolivia y las cuencas media y baja. En términos de aporte tanto de 
+
+agua como de sólidos, la que mayor peso tiene en el comportamiento agregado del río 
+
+Bermejo es la alta cuenca, mientras que las otras áreas no aportan de manera 
+
+significativa e incluso producen pérdidas por infiltración, evaporación y desbordes en 
+
+los períodos de crecida (Brea et al., 1996). 
+
+La alta cuenca (o cuenca superior) se ubica en las zonas de la puna, la cordillera 
+
+oriental y las sierras subandinas. Esta región del Altiplano se caracteriza principalmente 
+
+por sus pendientes pronunciadas y escasas precipitación y vegetación, lo que genera 
+
+14 
+ 
+
+
+
+2. Caracterización geográfica del sistema 
+____________________________________________________ 
+
+que sea una zona de fácil erosión (Kazimierski et al., 2012).  Además, los cauces corren 
+
+encajonados en barrancas altas, conformados por suelos de estratigrafía 
+
+areno-arcillosa y base de arenisca poco compacta, lo que facilita aún más su erosión 
+
+(Sarubbi, 2007). 
+
+El caudal medio del río Bermejo se acerca a los 400 . A su vez, el río presenta  𝑚3/𝑠
+un breve período de crecidas en los meses estivales derivado de las mayores 
+
+precipitaciones seguido del período de estiaje que se extiende desde abril hasta 
+
+octubre. Con relación a la pendiente del río, la misma vale alrededor del 1% cerca del 
+
+final de la cuenca alta y disminuye hasta el 0,24‰ cerca de la desembocadura en el 
+
+Paraguay (Orfeo, 1995). 
+
+La alta relación entre caudal sólido y caudal líquido del río sumado a bajas 
+
+velocidades, provocan que en el tramo final el cauce presente una elevada movilidad  
+
+(COBINABE, 2010). Esta circunstancia conlleva no sólo a una falta de aforos realizados 
+
+de manera sistemática en la zona, sino que también dificulta algunos abordajes típicos 
+
+como la construcción de curvas caudal vs. altura.  En consecuencia, la mayor cantidad 
+
+de datos disponibles del río Bermejo se encuentran en la estación El Colorado, ubicada 
+
+aproximadamente a 118 km de la desembocadura en el río Paraguay.  
+
+2.5 El río Pilcomayo 
+
+El río Pilcomayo, cuya cuenca abarca cerca de 290.000 distribuidos entre 𝑘𝑚2 
+Argentina, Bolivia y Paraguay es ampliamente conocido por su importante transporte 
+
+de sedimentos. Tiene su naciente en la Cordillera de los Frailes en Bolivia, a una altitud 
+
+de 5.000 m.s.n.m y escurre hacia el este siendo luego parte de la frontera entre 
+
+Argentina y Paraguay para finalmente desembocar en el río Paraguay. 
+
+Precisamente al ingresar a territorio argentino, en la provincia de Formosa, 
+
+producto de la elevada carga de sedimentos que caracteriza al río y de las bajas 
+
+pendientes medias de la zona (alrededor del 0,035%), el cauce pierde capacidad de 
+
+transporte de sólidos produciéndose fenómenos de sedimentación que han segado el 
+
+cauce original, forzando a que el escurrimiento continúe en forma de manto (Spalletti 
+
+& Brea, 2009). 
+
+La baja capacidad de transporte de sólidos del río combinada con las grandes 
+
+cantidades de sedimento en suspensión que llegan desde aguas arriba provoca un 
+
+comportamiento morfológico complejo y cambiante con el tiempo, lo que provoca que 
+
+sea extremadamente difícil implementar sistemas de medición constantes y 
+
+representativos de los parámetros hidráulicos y sedimentológicos del río.  
+
+A pesar de las dificultades mencionadas ha habido trabajos dedicados a recolectar 
+
+información previa concerniente al Río Pilcomayo (Brea & Spalletti, 2011). Se concluye 
+
+de esta fuente que los sólidos transportados en suspensión por el río tienen una 
+
+15 
+ 
+
+
+
+Julián E. Cortese 
+
+importante variación temporal, pero cuya concentración suele tener valores muy 
+
+elevados (Tabla 1). Los valores provienen de aforos realizados en la sección del río 
+
+coincidente con el puente internacional entre Misión La Paz (Argentina) y Pozo Hondo 
+
+(Paraguay).  
+
+ 
+
+Tabla 1 Concentraciones aforadas en el río Pilcomayo (Brea & Spalletti, 2011). 
+
+Producto del escurrimiento a manto ya mencionado, la gran carga de sólidos va 
+
+siendo depositada en las zonas bajas que se anegan durante las crecidas (momentos en 
+
+los que también se dan los mayores caudales sólidos) por lo que la concentración 
+
+decae a medida que el río avanza aguas abajo (Figura 3). Las partículas que quedan 
+
+retenidas en las regiones inundables son especialmente las arenas transportadas por el 
+
+río, mientras que las arcillas y limos permanecen en suspensión. 
+
+ 
+
+Figura 3 Concentración aforada contra progresiva sobre el río Pilcomayo (Brea & Spalletti, 2011). 
+
+Producto de lo mencionado en este apartado, se concluye que el río Pilcomayo, a 
+
+pesar de poseer elevadas concentraciones de sólidos en suspensión en ciertos 
+
+trayectos de su cauce, no representa un tributario de gran peso en cuanto a 
+
+sedimentos al río Paraná (a través del río Paraguay), principalmente por no contar con 
+
+un elevado caudal sólido en las inmediaciones de su desembocadura en el río 
+
+Paraguay, pero también debido a la falta de relevamientos sistemáticos sobre sus 
+
+principales variables hídricas y de transporte de sólidos. 
+
+16 
+ 
+
+
+
+2. Caracterización geográfica del sistema 
+____________________________________________________ 
+
+2.6 El Delta del río Paraná 
+
+El río Paraná desemboca en el Río de la Plata a través de una extensa zona deltaica 
+
+de alrededor de 320 km de extensión con un ancho variable entre 18 km de ancho a la 
+
+altura de Baradero y 60 km en su desembocadura. A lo largo de todo su desarrollo, 
+
+abarca un área de aproximadamente 14.000  (Sarubbi, 2007).    𝑘𝑚2
+
+El Delta es entonces la red hídrica a través de la cual el Paraná desemboca en el Río 
+
+de la Plata. Está compuesto por innumerables canales de diverso tamaño, pero los 
+
+principales son catorce, de norte a sur: río Paranacito, arroyo Martínez, arroyo de La 
+
+Tinta, arroyo Brazo Largo, río Gutiérrez, río Paraná Bravo, río Sauce, río Paraná Guazú, 
+
+arroyo Correntoso, río Barca Grande, río Paraná Miní, río Barquita, río Paraná de las 
+
+Palmas y río Luján (Sarubbi, 2007). 
+
+Dicho delta año a año aumenta su tamaño, extendiéndose sobre el Río de la Plata. 
+
+La magnitud de este avance puede ser vislumbrada al considerar que las islas que 
+
+actualmente se encuentran frente a la costa uruguaya se desarrollaron a lo largo del 
+
+siglo XX.  
+
+La fuente del material sólido que al sedimentar provoca el avance del Frente del 
+
+Delta es la alta cuenca del río Bermejo (Sarubbi, 2007), que, como ya se ha 
+
+mencionado, es una zona con aún mucha capacidad de transformación y aporte, por lo 
+
+que es de esperar que el avance del Frente siga sucediendo aún por mucho tiempo.  
+
+El Delta del Paraná se divide en tres regiones según su cercanía a la desembocadura: 
+
+● Delta superior: Desde la localidad de Diamante, Entre Ríos, donde nace 
+
+el delta, hasta Villa Constitución, Santa Fe. 
+
+● Delta Medio: Desde Villa Constitución hasta Ibicuy, Entre Ríos. 
+
+● Delta inferior (o en formación): Desde Ibicuy hasta la desembocadura. 
+
+Cada una de las regiones señaladas tiene sus propias características según su 
+
+historia y evolución geológica. Esto se traduce en distinta vegetación y en la morfología 
+
+de las islas. Mientras que las islas del Delta Inferior se caracterizan por tener 
+
+albardones a lo largo de su diámetro y el centro deprimido, en el Delta Medio y Delta 
+
+Superior las islas son más bien planas, de sentido paralelo a los cursos de agua 
+
+(Sarubbi, 2007). 
+
+2.7 Conclusiones del capítulo 
+
+En el Capítulo 2 se han presentado los principales componentes del sistema del río 
+
+Paraná que tienen incidencia en el fenómeno de avance del Frente del Delta.  
+
+Se caracterizó la geografía de la cuenca del río Bermejo, principal productor de 
+
+carga sólida del sistema con un efecto directo y primordial sobre el Frente del Delta y 
+
+se analizó la eventual importancia del río Pilcomayo, a pesar de que haya sido 
+
+17 
+ 
+
+
+
+Julián E. Cortese 
+
+desestimado como sistema de importancia. Además, se describió al río Paraná a lo 
+
+largo de toda su traza, haciendo especial énfasis en las características hidrológicas del 
+
+mismo, sin obviar finalmente su Delta, a través del cual desemboca al Río de la Plata, 
+
+motivando el desarrollo del presente capítulo. La Figura 4 esquematiza la totalidad del 
+
+sistema descripto, haciendo énfasis en las principales características de cada 
+
+componente que hace al crecimiento del Frente del Delta del río Paraná. 
+
+ 
+
+Figura 4 Esquema conceptual del sistema que afecta al Frente del Delta del río Paraná. 
+
+En el próximo capítulo, el tercero, se presenta una síntesis de la revisión 
+
+bibliográfica de trabajos antecedentes del estudio del crecimiento del Delta del río 
+
+Paraná llevada a cabo, a partir de la cual se fijaron los objetivos del presente trabajo.   
+
+ 
+
+18 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+3. Antecedentes de estudio del Frente del Delta 
+
+3.1 Introducción 
+
+En los últimos años, el avance del Frente del Delta del río Paraná ha sido objeto de 
+
+estudio de diversos trabajos de investigación. En este capítulo se describirá el estado 
+
+del arte del campo de estudio a través de dos trabajos de investigación el desarrollado 
+
+por A. Sarubbi (2007) junto con el de N. Badano y otros (2012). A su vez, Kazimierski y 
+
+otros (2012) también trataron el crecimiento del Delta incorporando al estudio diversos 
+
+escenarios de cambio climático; la dinámica de crecimiento del Delta ante el 
+
+calentamiento global también fue tratada por Medina y Codignotto (2013).  
+
+Adicionalmente, se ha desarrollado una gran variedad de estudios en los que se 
+
+analizó la comportamiento tanto hidrodinámico como sedimentológico del Río de la 
+
+Plata. Entre ellos, particularmente en este trabajo se recurrió a: M. Fossati (2013), D. 
+
+Moreira (2016), M. Fernández (2011) y P. Santoro (2011). 
+
+En el presente apartado se presentan los análisis y conclusiones principales de los 
+
+trabajos antecedentes en lo referido al estudio del crecimiento del Frente de Avance 
+
+del Delta del río Paraná a modo de resumen del estado del arte al momento de 
+
+desarrollar el trabajo en curso; el trabajo de Sarubbi (2007) será enunciado como 
+
+AFD.07, mientras que el de Badano y otros (2012) como ADF.12. Además, se incorporan 
+
+conceptos que resultan indispensables para el desarrollo del mismo. 
+
+3.2 Caracterización sedimentológica en el Frente del Delta 
+
+El caudal sólido transportado por un río puede discriminarse principalmente en dos 
+
+categorías: 
+
+● Carga de fondo: Se trata de aquellas partículas pertenecientes al propio 
+
+cauce del río que son transportadas por el mismo en contacto con el lecho. 
+
+Las partículas transportadas de esta manera son las más pesadas.  
+
+● Carga en suspensión: Corresponde a las partículas que no están en contacto 
+
+permanente con el lecho, sino que se trasladan en el seno del flujo. Puede 
+
+subdividirse en dos: 
+
+o Carga de material de fondo en suspensión: Partículas que, si bien 
+
+viajan en el seno del flujo, por momentos entran en contacto con el 
+
+lecho. 
+
+o Carga de lavado o foránea: Se trata de aquellos sólidos que se 
+
+desplazan de forma permanente en el seno del flujo. Suele 
+
+comprender a las fracciones arcilla y los limo de los sedimentos 
+
+transportados. 
+
+Considerando la fácil y abundante erosión en la cuenca del río Bermejo y la 
+
+predominancia de dicho río en el caudal sólido del río Paraná, resulta de esperar que la 
+
+19 
+ 
+
+
+
+Julián E. Cortese 
+
+carga en suspensión cumpla un rol preponderante en el avance del Frente del Delta. 
+
+Cuantificaciones de la carga en suspensión total del río Bermejo indican que el caudal 
+
+sólido anual ronda las 100.000.000 de toneladas (Brea, Busquets & Spalletti, 1996), de 
+
+las cuales una fracción llega al río Paraná.  
+
+Tiene importancia analizar qué fracción tendrá inferencia directa en el avance del 
+
+frente. Cuando el río Paraná avanza aguas abajo a través de sus distintos brazos hacia 
+
+su desembocadura en el Río de la Plata en la región deltaica, las secciones de los 
+
+cauces sufren una expansión abrupta, lo que conlleva a una reducción importante de la 
+
+velocidad. Esta baja en la velocidad a su vez genera una pérdida de la capacidad de 
+
+transporte del curso de agua, por lo que los sólidos comienzan a sedimentarse. Es de 
+
+esperar entonces que las partículas más pesadas – arenas gruesas y medianas – sean 
+
+las primeras en sedimentar, no habiendo llegado aún al frente del Delta. Por su parte, 
+
+las arcillas, limos y arenas más finas sí pueden ser transportados con mayor facilidad 
+
+por la corriente del Río de la Plata, salvo en períodos de crecidas en los que el agua 
+
+inunda las islas ya formadas y las mencionadas fracciones se depositan allí.  
+
+Se desprende de este análisis, que las arenas finas y limos gruesos son aquellas 
+
+fracciones que colaboran mayoritariamente en el avance longitudinal del frente como 
+
+tal, mientras que los limos restantes y las arcillas colaboran fundamentalmente al 
+
+crecimiento en cota de las islas a partir de las crecidas (Sarubbi, 2007).   
+
+En síntesis, el avance del Frente del Delta del río Paraná entonces se debe a la 
+
+sedimentación de sólidos transportados por el mismo río. Particularmente, los sólidos 
+
+involucrados en el fenómeno de avance son los correspondientes a la carga de lavado. 
+
+Dicha sedimentación se produce debido al brusco incremento de la sección que el 
+
+cauce presenta al acercarse al Río de la Plata, lo que provoca una reducción en la 
+
+velocidad de la corriente junto con la consecuente pérdida de capacidad de transporte 
+
+de sólidos. 
+
+Un primer abordaje al avance del frente además requiere establecer la procedencia 
+
+de aquellos sedimentos que luego formarán parte del Delta. Partiendo del análisis de 
+
+los tributarios principales que tiene el río Paraná desde su naciente en el sur Brasil 
+
+hasta su desembocadura a través del Delta en el Río de la Plata, se concluyó que el 
+
+tributario que mayor incidencia tiene en términos de caudal sólido activo es el río 
+
+Bermejo, que como se mencionó previamente desemboca al río Paraná a través del río 
+
+Paraguay en el Noreste de Argentina (Sarubbi, 2007; Amsler y otros, 2020).  
+
+El río Paraguay, por su parte, aguas arriba de la desembocadura del río Bermejo 
+
+tiene una concentración de sólidos en suspensión de 89 mg/l, mientras que aguas 
+
+abajo el mismo indicador adopta valor de 576 mg/l. El gran aumento de la 
+
+concentración de sólidos en suspensión antes y después de la desembocadura del río 
+
+20 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+Bermejo indica que por sí sólo el río Paraguay no es una fuente influyente de carga en 
+
+suspensión.  
+
+Por otra parte, el aporte de sólidos proveniente del Alto Paraná está fuertemente 
+
+limitado por la presencia de las presas brasileras construidas a fines del siglo XX a lo 
+
+largo de su cauce (Amsler M. L., 2006). Esta afirmación gana sustento al considerar que 
+
+el gasto sólido en suspensión anual en el Paraná Superior, en la estación de aforo Itatí 
+
+es de 8.005.000 toneladas mientras que aguas abajó, en el Paraná Medio la estación el 
+
+Túnel Subfluvial indica 99.477.00 toneladas anuales (Brea, Spalletti, & Busquets, 1999).  
+
+De lo comentado en los párrafos previos se concluye que, dado que ni el río 
+
+Paraguay ni el Alto Paraná son fuentes importantes de caudal sólido en sí, es entonces 
+
+el río Bermejo aquel que le aporta al río Paraná el gran caudal sólido que transporta 
+
+aguas abajo hasta la región deltaica.  
+
+3.3 Análisis histórico cartográfico del Delta del río Paraná 
+
+Con tal de obtener una primera noción del avance del Frente del Delta, tanto en 
+
+dirección como en magnitud, Sarubbi (2007) recurrió al análisis de cartas náuticas 
+
+realizadas en diferentes años consultando diversos archivos históricos. 
+
+A partir de una selección de las cartas encontradas para un período de 
+
+aproximadamente 400 años, se determinó que son válidas para un análisis comparativo 
+
+aquellas confeccionadas a partir de fines del siglo XVIII debido a la rigurosidad 
+
+empleada en su confección.  
+
+Habiendo digitalizado las cartas seleccionadas en función de la coincidencia de 
+
+ciertos puntos de referencia, Sarubbi (2007) llegó a la determinación de distintas líneas 
+
+envolventes del Frente de Avance del Delta del río Paraná para distintos años (Figura 
+
+5). 
+
+21 
+ 
+
+
+
+Julián E. Cortese 
+
+ 
+
+Figura 5 Cuantificación del crecimiento del Delta del río Paraná a partir del análisis cartográfico (Sarubbi, 2007). 
+
+Del análisis de los resultados obtenidos mediante la definición de estas curvas 
+
+envolventes, se distinguieron dos frentes de avance del Delta, uno asociado al río 
+
+Paraná Guazú y otro al Paraná de las Palmas (Sarubbi, 2007). A la vez, estos frentes 
+
+pueden ser divididos en dos subfrentes, uno al sur y otro al norte de cada río, que 
+
+presentarán distinto comportamiento según su ubicación relativa a las costas uruguaya 
+
+y bonaerense.  
+
+El autor señala que el avance anual de los distintos subfrentes ha ido disminuyendo 
+
+desde fines del siglo XVIII hasta el presente, principalmente por el efecto limitante de la 
+
+costa uruguaya y el desarrollo de las islas del frente en lo que respecta al frente del 
+
+Paraná Guazú y por la gran extensión del propio frente en lo referido al avance debido 
+
+al Paraná de las Palmas. El autor indica que en el presente siglo el subfrente norte del 
+
+Paraná Guazú ha llegado prácticamente a la estacionalidad, mientras que el subfrente 
+
+sur avanza con una tasa media anual de 25 metros. Por su parte, el frente 
+
+correspondiente al Paraná de las Palmas presenta un desplazamiento de 50 y 75 
+
+metros anuales en sus subfrentes sur y norte, respectivamente.  
+
+Por último, se indica que las islas presentes alrededor del subfrente sur del Paraná 
+
+Guazú (nacidas principalmente en el período 1926 – 1969) tienden a unirse entre sí 
+
+conforme crece el delta. Precisamente, la unión entre bancos y el crecimiento en cota 
+
+de estos es el mecanismo mediante el que se formaron y crecieron las islas del Frente 
+
+22 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+que se hallan a la altura de San Fernando actualmente. Este comportamiento es 
+
+consistente con una de las dinámicas de evolución de islas identificadas en la región del 
+
+Paraná Medio (Pereira, 2016), según la cual las islas2 surgen a partir de la unión de 
+
+bancos y la colonización del área emergida por diversas especies de flora.  
+
+3.4 Modelación del avance del Frente del Delta 
+
+En los dos trabajos de modelación numérica del crecimiento del Delta analizados 
+
+en este capítulo, la simulación de dicho fenómeno fue llevada a cabo mediante la 
+
+implementación de modelos matemáticos acoplados para representar los 
+
+comportamientos hidrodinámico y sedimentológico del sistema.  
+
+Ambos análisis contemplan el flujo como bidimensional, asumiendo entonces que 
+
+la velocidad en la dirección vertical es prácticamente constante, por lo que la 
+
+aceleración vertical es despreciable ante la aceleración de la gravedad y adoptando 
+
+entonces una distribución hidrostática de presiones. Partiendo de las ecuaciones 
+
+bidimensionales de Navier – Stokes e implementando esta hipótesis se llega a las 
+
+ecuaciones de aguas superficiales, que son las empleadas para la resolución de la 
+
+hidrodinámica del problema.  
+
+Respecto al dominio de cálculo seleccionado (Figura 6), ambos modelos adoptaron 
+
+el Río de la Plata Superior, que abarca desde el frente del delta (aquella sección del 
+
+mismo que presenta cambios importantes a través del tiempo) hasta la recta de unión 
+
+de las ciudades de La Plata y Colonia.    
+
+ 
+
+Figura 6 Dominios de cálculo empleados; AFD.12 (izq, de Badano y otros (2012).) y AFD.07 (der, de Sarubbi (2007)). 
+
+. 
+
+Los métodos para obtener las soluciones numéricas empleadas en ambos trabajos 
+
+difieren entre sí. Sarubbi (2007) implementa el software HIDROBID II (Menéndez, 1985; 
+
+2 Definiéndose como islas a aquellas “geoformas vegetadas, estables, que no se ajustan con la 
+variabilidad del escurrimiento anual y dividen al flujo hasta el caudal de cauce lleno” (Pereira, 2016). 
+
+23 
+ 
+
+
+
+Julián E. Cortese 
+
+Menéndez 1990) que incorpora para la resolución de las ecuaciones diferenciales en 
+
+derivadas parciales el método de las diferencias finitas, usando una malla de 
+
+discretización de tipo alternada (es decir que las distintas variables a ser calculadas se 
+
+ubican en distintos nodos de cada celda) y resolviéndolas mediante el esquema 
+
+implícito de direcciones alternadas (Menéndez, 1990; Re & Menéndez, 2003).  El hecho 
+
+de que el esquema sea implícito permite que la elección del paso de cálculo temporal 
+
+no esté restringida por problemas de inestabilidad. 
+
+Por su parte, el AFD.12 emplea el método de volúmenes finitos valiéndose para el 
+
+desarrollo del modelo el toolkit OpenFOAM (Fild Operation and Manipulation). Para los 
+
+pasos temporales, se implementó el método PISO (por sus siglas en inglés: Pressure 
+
+Implicit with Splitting Operatoris).  
+
+Respecto a los forzantes del sistema, ambos trabajos adoptan los caudales líquidos 
+
+de los principales cauces que conforman el Delta del río Paraná como caudales medios 
+
+(con la salvedad que AFD.12 incorpora una modulación semidiurna constante a los 
+
+caudales para simular el efecto de la marea en las desembocaduras de los tributarios). 
+
+Respecto a la marea con la que se forzaron ambos modelos, sólo se consideró la 
+
+astronómica impuesta al modelo a lo largo de la condición de borde sur.  
+
+En lo referido a los caudales sólidos, el al AFD.07 se los incorpora a través de 
+
+concentraciones presentes en el Río de la Plata según se trate del área de influencia del 
+
+Paraná de las Palmas o del Paraná Guazú y según la distancia al frente (Figura 7). En 
+
+cambio, el AFD.12 incorpora los caudales sólidos definiendo las concentraciones en las 
+
+desembocaduras de cada uno de los tributarios considerados y permitiendo su 
+
+dispersión a lo largo del estuario mediante ecuaciones de transporte. 
+
+ 
+
+Figura 7 Zonificación del área en estudio para la definición de concentraciones (Sarubbi, 2007). 
+
+24 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+En términos de fenómenos actuantes en el sistema, ambos modelos desprecian el 
+
+efecto que pueda tener la marea meteorológica en la dinámica del Frente de Avance 
+
+del Delta del río Paraná aduciendo que la baja frecuencia de eventos de tormenta 
+
+conlleva a su vez a una baja incidencia en el crecimiento del Delta.  
+
+Respecto al modelo de sedimentación del material transportado por el río, ambos 
+
+emplean el modelo de Krone (Krone, 1962). Mientras que para el fenómeno de 
+
+resuspensión el AFD.12 adopta el modelo de Partheniades (1962), en tanto que el 
+
+AFD.07 desprecia el fenómeno. 
+
+Un aspecto fundamental en el análisis del avance del frente del Delta es el modo en 
+
+que se determina que una celda dada del dominio dejó de constituir un punto del 
+
+curso de agua para ser parte del delta propiamente dicho. El modelo AFD.07 asigna a 
+
+cada celda un volumen de máxima sedimentación, que se irá completando a medida 
+
+que pasan los pasos temporales; una vez depositado un volumen igual al mencionado 
+
+máximo, asume que esa celda pasa a formar parte de una isla. En cambio, en el AFD.12 
+
+se asume que toda celda donde el tirante resulte menor a 20cm puede considerarse 
+
+como seca; de esta manera se evitan posibles inestabilidades en momento de bajamar.  
+
+Ya calibrados y validados los modelos, ambos generan predicciones del frente de 
+
+avance del delta a futuro con condiciones actuales y variándolas a futuro. 
+
+Particularmente, en el trabajo AFD.12 se incorporan resultados obtenidos por 
+
+Kazimierski et al. (2012) quienes, empleando el método Gavrilovic para calcular el 
+
+potencial de erosión de la cuenca del río Bermejo, plantearon distintos escenarios 
+
+posibles.  
+
+Por su parte, el AFD.07 emplea la curva de carga sólida de arena fina en función del 
+
+tiempo calculada en el propio trabajo para armar las distintas proyecciones. Define 
+
+arbitrariamente en qué manera la series de caudales sólidos continuarán desde el 
+
+inicio de la simulación hasta su fin.  
+
+El modelo AFD.07 es validado mediante la simulación del avance del Frente del 
+
+Delta del río Paraná en el intervalo 1900 – 2001. Se observa (Figura 8) que en los 
+
+subfrentes correspondientes al río Paraná de las Palmas el modelo acierta en los 
+
+lugares donde efectivamente hubo avance del frente especialmente para la primera 
+
+mitad del intervalo considerado; luego las discrepancias se tornan mayores. Por su 
+
+parte, los subfrentes asociados al Paraná Guazú también se encuentran bien 
+
+representados a pesar de no haber sido captado prácticamente el desarrollo de las islas 
+
+frente a la costa uruguaya (salvo por el crecimiento de la Isla Oyarvide en dirección 
+
+N-S). Los errores cometidos, de todos modos, pueden ser explicados en gran medida 
+
+por la información batimétrica con la que se contó para el desarrollo del mismo. El 
+
+desarrollo morfológico se da en el modelo siempre a partir de la batimetría del año 
+
+1900, cuyos datos muy probablemente hayan sido relevados con una baja resolución 
+
+25 
+ 
+
+
+
+Julián E. Cortese 
+
+espacial, por lo que a largos intervalos los errores se multiplican. Esta falta de 
+
+resolución de datos probablemente también fomentara en gran medida los errores de 
+
+orientación que se ven en las islas desarrolladas. 
+
+ 
+
+Figura 8 Frentes observados y simulados en el período 1900 - 2002 (Sarubbi, 2007). 
+
+Por su parte, el AFD.12 se validó empleando el intervalo 1994 – 2007. Los 
+
+resultados obtenidos para dicho período (Figura 9) demuestran una correcta 
+
+representación del crecimiento del frente del Delta propiamente dicho junto con una 
+
+buena reproducción de los cambios ocurridos al norte de la Isla Martín García. Por su 
+
+parte, se aprecia que el modelo no logra representar crecimiento alguno al sur de la 
+
+Isla Oyarvide.  
+
+26 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+ 
+
+Figura 9 Comparación de Frente simulado y observado según el modelo desarrollado (Badano  et. al, 2012). 
+
+Como se mencionó previamente, los dos trabajos en cuestión analizan una vez 
+
+definido el modelo numérico las tendencias a futuro del crecimiento del Frente del 
+
+Delta variando distintos parámetros de los forzantes; ambos varían la cantidad de 
+
+sedimentos que llegan al Río de la Plata. Además, con el modelo AFD.12 se estudió la 
+
+variación del comportamiento del Frente ante un incremento del nivel medio del mar.  
+
+El AFD.07 plantea tres escenarios distintos para el caudal sólido (de mínima, media 
+
+y máxima descarga sólida) que son definidos a partir de suponer que, durante el 
+
+período simulado (hasta el año 2116), la descarga mantiene cierto comportamiento 
+
+arbitrario relacionado con la descarga habida en el pasado. Para el escenario de 
+
+mínima, a partir del año 2001 la descarga se mantiene constante en el mínimo valor 
+
+histórico registrado, para el escenario de media a partir del mismo año se repite la 
+
+onda media histórica de descarga y, por último, para el escenario de máxima descarga 
+
+sólida, a partir del 2001 se mantiene la descarga constante con un valor igual al 
+
+máximo local correspondiente a la década de 1980. A partir de estas simulaciones se 
+
+obtienen (Figura 10) tres escenarios de avance del Delta del río Paraná, en donde se 
+
+distingue que la mayor variación de crecimiento se genera entre los escenarios de 
+
+mínima y media descarga sólida, perdiendo incidencia relativa el escenario de máxima 
+
+descarga. 
+
+27 
+ 
+
+
+
+Julián E. Cortese 
+
+ 
+
+Figura 10 Resultados obtenidos para cada uno de los escenarios (Sarubbi, 2007). 
+
+De acuerdo a los resultados obtenidos, tanto en el escenario de media como de 
+
+máxima descarga sólida el Frente del Delta del río Paraná podría encontrarse ante el 
+
+límite norte de la ciudad de Buenos Aires en el año 2116. Los cambios ocurridos en el 
+
+frente correspondiente al río Paraná Guazú son menores, salvo el crecimiento de la Isla 
+
+Oyarvide.  
+
+Por su parte, para el AFD.12 se definió la variación de carga sólida presente en el 
+
+Delta a partir del trabajo de Kazimierski et al (2012) que, mediante el empleo de 
+
+modelos climáticos que permiten incorporar distintas tendencias al modelo de 
+
+Gavrilovic antes mencionado mediante sus forzantes, definen una eventual variación 
+
+de la descarga sólida que traduce en dos escenarios: uno de aumento de caudal de 
+
+sedimentos del río Bermejo caracterizado por un incremento de dicha variable en 
+
+69.000 tn/año, y un segundo escenario, opuesto al primero, que implica una reducción 
+
+de 48.000 tn/año. Para el aumento del nivel medio del mar adoptó un incremento 
+
+anual de 1,7 mm impuesto sobre la frontera sur del dominio. Los resultados obtenidos 
+
+(Figura 11) se condensan en la comparación de cada uno de los escenarios propuestos 
+
+entre ellos.  
+
+28 
+ 
+
+
+
+3. Antecedentes de estudio del Frente del Delta 
+____________________________________________________ 
+
+ 
+
+Figura 11 Avance del Frente del Delta ante distintos escenarios (Kazimierski, y otros, 2011). 
+
+Del análisis en conjunto de los resultados de los dos trabajos presentados, se 
+
+pueden obtener diferentes conclusiones. Por un lado, ambos trabajos muestran una 
+
+fuerte tendencia de crecimiento de las islas vecinas de la isla Martín García junto con 
+
+un importante avance del frente en el subfrente sur del Paraná de las Palmas en 
+
+dirección paralela a la costa bonaerense en el futuro.  
+
+La gran diferencia entre las sensibilidades halladas ante la variación de carga sólida 
+
+entre ambos trabajos es adjudicada a los distintos criterios para plantear los escenarios 
+
+futuros. 
+
+Se concluye además que resulta probable que el frente de avance del Delta del Río 
+
+Paraná alcance por lo menos el partido de Vicente López, ya que entre los escenarios 
+
+de media y máxima carga sólida no se encontró tanta diferencia (Sarubbi, 2007). 
+
+ En lo que respecta a la calidad del ajuste numérico logrado en ambos trabajos, 
+
+se buscará analizar si es factible mejorar los resultados obtenidos mediante la 
+
+incorporación de nuevos forzantes o si, por el contrario, aquellos fenómenos 
+
+sedimentológicos que no fue posible representar hasta el momento no pueden ser 
+
+captados debido a una falta de información batimétrica con suficiente detalle como 
+
+para representar correctamente la dinámica hidrosedimentológica de la zona. 
+
+Independientemente del resultado de tal disyuntiva, se busca también realizar distintos 
+
+análisis de sensibilidad al modelo numérico que se desarrollará para tener a futuro una 
+
+29 
+ 
+
+
+
+Julián E. Cortese 
+
+visión más clara de cuáles son los forzantes que mayor incidencia tienen en el 
+
+crecimiento del Frente de Avance del Delta del río Paraná.  
+
+3.5 Conclusiones del capítulo 
+
+ En el presente capítulo se han comentado las principales características y 
+
+resultados de los modelos desarrollados en dos trabajos antecedentes a la presente 
+
+tesis.   
+
+ Se concluye de la revisión bibliográfica que, de acuerdo al estado del arte 
+
+actual, aún resta por incorporar a la modelación del avance del Frente del Delta del río 
+
+Paraná forzantes con los cual no se ha trabajo, como ser la marea meteorológica, en 
+
+tanto en todos los trabajos antecedentes sólo se ha considerado la astronómica. 
+
+Además, también se propone llevar a cabo estudios de la incidencia que distintas 
+
+características de la modelación pueden tener sobre los resultados observados, como 
+
+ser series horarias de caudal ingresante al estuario, presencia de fondo inicial, 
+
+interacción entre más de una fracción de sedimento, entre otros. Un esquema 
+
+conceptual de las principales características de los trabajos de modelación del Frente 
+
+del Delta desarrollados hasta el momento se presenta en la Figura 12. 
+
+ 
+
+Figura 12 Esquema conceptual de los trabajos desarrollados sobre el crecimiento del Frente del Delta. 
+
+ En el cuarto capítulo se presentarán diversos análisis realizados en la zona de 
+
+estudio con tal de desarrollar una mejor comprensión de los fenómenos presentes y de 
+
+la dinámica sedimentológica. Dicha información será fundamental luego en el armado 
+
+del modelo.  
+
+30 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; 
+
+sedimentos y cambios morfológicos (2007 – 2016). 
+
+4.1 Introducción 
+
+ En el presente apartado se presentan las distintas instancias de análisis llevadas 
+
+a cabo con tal de comprender la dinámica sedimentológica presente en el Frente de 
+
+Avance del Delta del río Paraná.  
+
+ En primer lugar, se describen los resultados obtenidos de la extracción de 
+
+muestras de sedimento de lecho tomadas en dos puntos del Frente del Delta. Esta 
+
+información pretende complementar a la carta de Laborde en lo que respecta a 
+
+distribución espacial de las distintas fracciones de sedimento a lo largo y ancho de la 
+
+región en estudio. Disponer de información al respecto resulta importante para 
+
+analizar la precisión con la que se representan los fenómenos de sedimentación en la 
+
+zona ya que permite no sólo analizar los resultados a través de la emergencia de 
+
+nuevas islas, sino que también da lugar a incorporar la variable composición del lecho.  
+
+ Luego, se exponen dos análisis remotos de los cambios ocurridos en el Frente 
+
+de Avance del Delta del río Paraná. El primero, realizado a partir de la comparación de 
+
+las cartas náuticas H130 publicadas por el SHN en los años 2007 y 2016, mientras que 
+
+el segundo fue hecho en base a imágenes satelitales de la región tomadas en el mismo 
+
+período de tiempo. Ambas secciones pretenden complementarse entre sí en la 
+
+comprensión del crecimiento que la región tuvo en el pasado inmediato y permitir la 
+
+formulación de una hipótesis respecto a la principal dinámica que tienen los 
+
+sedimentos en el Frente.  
+
+ Dicha hipótesis se desarrolla precisamente en el último subapartado; a partir 
+
+del análisis de la morfología observada y de los cambios ocurridos en el intervalo 
+
+estudiado, se desarrolla una hipótesis del comportamiento de los sedimentos en las 
+
+zonas aledañas al Frente; se espera que, a partir de una suposición de dicha dinámica, 
+
+se logre calibrar de manera más general los procesos de sedimentación y erosión en 
+
+estudio, no sólo considerando los resultados finales de cada conjunto de parámetros, 
+
+sino estimando cómo los resultados afectan al comportamiento general del sistema y si 
+
+esa variación es o no coherente con la registrada. 
+
+4.2 Campaña de toma de sedimentos en el Frente de Avance del Delta del río 
+
+Paraná 
+
+Con el fin de obtener una caracterización del lecho de la región del Frente de 
+
+Avance del Delta del río Paraná se llevaron a cabo dos campañas de tomas de muestra 
+
+de sedimentos de fondo en dos regiones bien alejadas entre sí; adicionalmente, se 
+
+tomó una muestra del lecho en el canal del río Paraná de las Palmas (Figura 13). 
+
+Posteriormente, las muestras fueron ensayadas mediante la técnica de difracción láser 
+
+31 
+ 
+
+
+
+Julián E. Cortese 
+
+para obtener una descripción detallada de su granulometría en el Laboratorio de 
+
+sedimentología de la Facultad de Ingeniería y Ciencias Hídricas de la Universidad del 
+
+Litoral.  
+
+Mediante dichos relevamientos y su posterior estudio se espera poder determinar 
+
+las fracciones que mayor sedimentación presentan en las inmediaciones del Frente de 
+
+Avance. Esta información será un pilar fundamental al momento de calibrar los 
+
+parámetros sedimentológicos dado que se contará con una noción del 
+
+comportamiento discriminado de las fracciones en adición al comportamiento 
+
+agregado de las islas que se pueda desprender del análisis de las cartas náuticas y las 
+
+imágenes satelitales.  
+
+ 
+
+Figura 13 Ubicación de los puntos de muestreo de sedimentos del lecho. 
+
+Para la extracción de muestras se empleó en todos los casos una draga de cierre 
+
+mecánico que permite ser llevada aún abierta al lecho del río y cerrarse de manera 
+
+abrupta al soltar un retén que libera un juego de resortes. De esta manera se pueden 
+
+obtener muestras del lecho sin alterar sensiblemente la composición dado que no 
+
+resulta necesario excavar para retirar el material; además, dado que la liberación de los 
+
+resortes se puede hacer a través de una cuerda, es posible retirar sedimentos del lecho 
+
+a cierta profundidad aun estando de pie sobre la embarcación.   
+
+ En la ubicación frente al islote El Matón, ligeramente al sur de la 
+
+desembocadura del río Guazucito, se tomó una muestra inmediatamente sobre el 
+
+faldón de la isla (G_M1) y otra un poco más adentro del curso (G_M2).  
+
+ De las muestras tomadas allí, se destaca la presencia de dos capas de 
+
+sedimento; una primera capa, superior, se componía de material totalmente fino, de 
+
+color gris oscuro y tenía un espesor de aproximadamente 2 cm, mientras que, por 
+
+debajo, se percibía un material no tan homogéneo, de color más claro, donde, si bien 
+
+predominaba el material fino, se podía sentir al tacto material arenoso, especialmente 
+
+en la muestra G_M2. La estratigrafía descrita se desarmó al retirar de la draga la 
+
+muestra, quedando como resultado una muestra de color gris oscuro homogéneo 
+
+(Figura 14) donde predominan las texturas propias del material fino, aunque se percibe 
+
+32 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+la presencia de arenas. Insertas en la muestra se hallan además elementos más bien 
+
+compactos de arcilla, de forma lenticular, que se destacan por su color aún más 
+
+grisáceo que el resto del material.  
+
+ 
+
+Figura 14 Muestra sacada aguas abajo de la desembocadura del río Guazucito.  
+
+ En el análisis granulométrico de sendas muestras (Figura 15) se comprueban las 
+
+diferencias marcadas entre ambas, dado que la muestra G_M2 presenta una sensible 
+
+menor proporción de sedimentos finos, aunque en ambos casos predominan 
+
+fracciones menores que las arenas. Cabe destacar que las diferencias presentes en la 
+
+composición granulométrica de sendas muestras se desarrollan en una pequeña 
+
+diferencia espacial dentro de la zona de muestreo. 
+
+ 
+
+Figura 15 Análisis granulométrico a las muestras tomadas cerca de la desembocadura del río Guazucito. 
+
+Por su parte, las muestras tomadas en la desembocadura del río Paraná Miní 
+
+resultaron relativamente más homogéneas entre sí que las extraídas en la primera 
+
+33 
+ 
+
+
+
+Julián E. Cortese 
+
+ubicación. En este caso no sólo se tomaron muestras en el faldón de la isla, sino que 
+
+también se extrajo material del área de isla ya colonizada por la vegetación y también 
+
+del área relativamente profunda que la rodea (la ecosonda medía 1,5m de profundidad 
+
+al momento de tomar dicha muestra). 
+
+ En el interior de la isla, donde la vegetación es abundante y salvo crecidas 
+
+importantes no parecía llegar el nivel del agua, se realizó una excavación de alrededor 
+
+de 10 cm de profundidad a modo de calicata esperando ver cierta variación de la 
+
+estratigrafía como se había percibido en la desembocadura del Guazucito, pero el 
+
+material resultó ser absolutamente homogéneo a simple vista; además, al tacto, no 
+
+tenía contenido de material arenoso, sino que era un barro de cohesión bastante 
+
+elevada; la muestra correspondiente a la excavación es la denominada M_M4, cuya 
+
+granulometría se muestra en la Figura 16. 
+
+ 
+
+Figura 16 Análisis granulométrico a las muestras tomadas cerca de la desembocadura del río Paraná Miní. 
+
+ En el faldón circundante se tomaron también varias muestras que mostraron 
+
+entre ellas resultados disímiles. Una primera muestra presentó una textura que sería 
+
+compatible con cierta presencia de material arenoso (M_M2), pero a escasos metros 
+
+de donde se extrajo este material, se encontraron formaciones de material altamente 
+
+cohesivo en forma de escalón correspondientes a limos arcillosos (M_M3).  
+
+ La muestra tomada del lecho a 1,5 m de profundidad (M_M4) se corresponde, 
+
+nuevamente, con material mayormente compuesto por arcilla y limos con una escasa 
+
+participación de arenas muy finas. 
+
+ Respecto a la muestra tomada en la zona más profunda del río Paraná de las 
+
+Palmas (Figura 17) indica que allí la graduación resulta prácticamente uniforme y está 
+
+compuesto por arenas puras, siendo el diámetro medio, , 250 . 𝑑
+50
+
+µ𝑚
+
+34 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+
+ 
+
+Figura 17 Análisis granulométrico a las muestras tomadas en el río Paraná de las Palmas. 
+
+ Si bien no se llevó a cabo un muestreo sistemático del lecho circundante de las 
+
+islas que permita comprender con mayor exactitud los fenómenos de sedimentación 
+
+que ocurren en las regiones someras del frente, las muestras tomadas permiten 
+
+concluir que: 
+
+- La composición del lecho varía sensiblemente incluso en pocos metros en las 
+
+inmediaciones de las islas. 
+
+- En la región alta de las islas, las capas superiores están formadas 
+
+principalmente por limos. 
+
+- La presencia de material fino en el Frente es muy importante respecto al 
+
+material arenoso, que se halla pero en proporciones menores, incluso allí 
+
+donde en el lecho predominan las arenas. 
+
+- En las regiones profundas de la zona se destaca la sedimentación de arena con 
+
+muy escasa presencia de limos y arcilla. Si bien la muestra tomada corresponde 
+
+al Paraná de las Palmas, se entiende que el lecho de otros canales de la zona 
+
+debe compartir una similar composición de fondo (como ser por ejemplo el 
+
+Canal Principal).  
+
+Por último, a modo de resumen, las Tablas 2 y 3 presentan un resumen estadístico 
+
+de los resultados obtenidos del estudio granulométrico practicado a las muestras 
+
+tomadas. 
+
+35 
+ 
+
+
+
+Julián E. Cortese 
+
+ 
+
+Tabla 2 Resumen estadístico de la granulometría de las muestras de lecho tomadas. 
+
+ 
+
+Tabla 3 Composición granulométrica de las muestras tomadas en el Frente del Delta. 
+
+4.3 Cambios morfológicos según las cartas náuticas (2007-2016) 
+
+Se efectúo un análisis de los cambios ocurridos en el Frente del Delta del río 
+
+Paraná a partir de la comparación de las cartas náuticas H-130 publicadas por el SHN 
+
+en los años 2007 y 2016.  
+
+Dicho análisis comparativo se realizó no sólo comparando los contornos 
+
+presentados de islas y bancos en sendas publicaciones, lo que determina nuevos 
+
+bancos e islas, sino que también se compararon profundidades informadas con tal de 
+
+determinar regiones del río donde, si bien no hubo cambios en la superficie emergida, 
+
+sí se vio afectada sensiblemente la batimetría. Estas últimas regiones de todos modos 
+
+son delimitadas de manera aproximada, dado que debido a la densidad de muestreo 
+
+de la batimetría provista por las cartas náuticas no fue posible lograr dos archivos 
+
+raster que permitieran obtener mediante su resta un cambio de batimetría coherente.  
+
+ De la superposición de ambas cartas se concluye que los principales cambios 
+
+morfológicos ocurrieron en la región deltaica más cercana a la costa uruguaya. Los 
+
+mismos comienzan a la altura de la desembocadura del Paraná Guazú, aunque al oeste 
+
+de la Isla Juncal se observa erosión en el Canal Principal (Figura 18). A partir de allí, 
+
+sobre el último tramo del Canal Principal, se observan fenómenos tanto de erosión 
+
+como de sedimentación alternados en distancias bastante acotadas. La sedimentación 
+
+en dicha región provoca el avance no sólo del Frente sobre la margen izquierda del 
+
+Paraná Guazú mediante el avance de islas y bancos (de alrededor de 0.58  y 3.8  𝑘𝑚2
+
+ respectivamente), sino que también modifica la geometría de la desembocadura,  𝑘𝑚2
+
+desplazando las aguas profundas contra la margen derecha, acercándola 
+
+36 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+sensiblemente a tierra. En lo referido a la erosión, se concentra en la sección central 
+
+del Canal Principal y en el desplazamiento de la desembocadura del Paraná Guazú. 
+
+Estos cambios son acompañados por la generación de bancos de menor extensión en 
+
+los extremos de aguas abajo de las islas Juncal y Los Tigres del Mar así como también 
+
+de los islotes El Matón; al oeste de los mismos hay erosión en la margen izquierda del 
+
+canal, mientras que sedimenta material sobre margen derecha, como también al sur de 
+
+los islotes. Frente a la costa uruguaya también se aprecian ciertas zonas puntuales de 
+
+sedimentación.  
+
+ 
+
+Figura 18 Avance del Frente del Delta aguas abajo de la Isla Juncal. 
+
+ Aguas debajo de los cambios recién mencionados se concentran las principales 
+
+modificaciones que sufrió el lecho del río a lo largo del período de tiempo 
+
+contemplado. Se observan (Figura 19) fenómenos de sedimentación que consolidan el 
+
+Frente en la desembocadura del Arroyo Correntoso, así como también sucede en la 
+
+periferia de las Isla Lucía. En ambos casos, la sedimentación genera nuevos bancos e 
+
+islas que producen zonas de aguas poco profundas o islas más extensas y compactas 
+
+(en tanto pasan a no tener canales que las atraviesen) que antes.  
+
+ El mayor crecimiento de islas se ubica al sur y sudoeste de las islas Oyarvide y 
+
+Solís. Allí, las islas crecen aproximadamente 10.9 , mientras que los bancos, 16.6  𝑘𝑚2
+
+. Además, se da una sedimentación importante en la región comprendida entre la  𝑘𝑚2
+
+Isla Marín García y las islas Lucía y Oyarvide que afecta a la forma del Canal Buenos 
+
+Aires, dándole el trazado curvo de hoy en día. Dichos fenómenos de sedimentación son 
+
+37 
+ 
+
+
+
+Julián E. Cortese 
+
+acompañados por algunos de erosión relativamente puntuales, como ser la 
+
+profundización del canal Lancha Petrel, que separa las Islas Lucía de la Oyarvide o la 
+
+profundización de regiones del canal que discurre al Norte de aquellas mismas islas. 
+
+ Al oeste de las islas Lucía y Oyarvide el frente avanza con la sedimentación 
+
+progresiva de los terrenos comprendidos entre los ríos Paraná Mini y Barca Grande, 
+
+mientras que entre ambas superficies elevadas del nivel del agua se sedimenta el inicio 
+
+del canal (los primeros 4.6 km) que discurre entre ambas. 
+
+ 
+
+ 
+
+Figura 19 Avance del Frente del Delta alrededor de la Isla Oyarvide. 
+
+   Por su parte, cerca de la costa argentina el frente presenta un comportamiento 
+
+más homogéneo, donde no se encuentran procesos erosivos importantes (Figura 20). 
+
+Principalmente el frente crece en las islas ubicadas al oeste del Canal Emilio Mitre, 
+
+donde también se desarrollan distintos bancos, algunos aún no emergentes. Con 
+
+mayor notoriedad crecen las islas y bancos cercanos a la desembocadura del Canal del 
+
+Este, aunque las islas entre aquel tributario y el San Antonio también crecen de manera 
+
+relativamente uniforme.  
+
+ Al este del Canal Emilio Mitre se presenta el desarrollo de un banco hacia el sur, 
+
+mientras que al este de las islas Nutria, Lucha y Zárate se observan islas en desarrollo 
+
+dentro de los bancos de arena ya existentes al comienzo del período en estudio.  
+
+ 
+
+38 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+
+ 
+
+Figura 20 Avance del Frente del Delta en las cercanías de la costa bonaerense. 
+
+4.4 Cambios morfológicos registrados en imágenes satelitales (2007-2016) 
+
+Una herramienta adicional a las cartas náuticas de la que se dispone al momento 
+
+de determinar cambios en las inmediaciones del Frente de Avance son las imágenes 
+
+satelitales. Las mismas consisten en imágenes tomadas periódicamente sobre cierta 
+
+región a lo largo del tiempo, por lo que es posible comparar distintas imágenes y 
+
+analizar los cambios ocurridos entre una y otra. Además, para el estudio de islas, es 
+
+factible combinar estas imágenes – cuya fecha de captura es conocida – con el nivel del 
+
+agua que hubo en ese momento en cierto punto cercano al lugar estudiado, 
+
+obteniendo así un contorno de las islas que corresponde a cierto nivel del agua. 
+
+Teniendo en cuenta la primera de estas dos aplicaciones es que se desarrolla el 
+
+presente apartado, empleando los productos de los satélites Landsat 7 y Landsat 8. 
+
+Para la comparación del Frente del Delta en el período considerado (2007 – 2016) 
+
+se buscaron imágenes satelitales tomadas entre los años 2006 y 2008 para el estado 
+
+inicial del Frente y entre los años 2015 y 2017 para el final. Se asume entonces que los 
+
+cambios desarrollados a lo largo de 1 año respecto a los momentos inicial y final son 
+
+despreciables respecto al cambio agregado que se espera observar en el transcurso del 
+
+intervalo entero. Para sendos intervalos de tiempo se emplearon imágenes producto 
+
+de los satélites Landsat 7 y 8 (ambos conjuntos de imágenes provistos por el U.S. 
+
+Geological Survey). Se filtraron las imágenes de forma tal de sólo contemplar aquellas 
+
+que hayan sido tomadas con una nubosidad menor al 30% con el objetivo de tener una 
+
+descripción sin interferencias del área de interés.   
+
+39 
+ 
+
+
+
+Julián E. Cortese 
+
+De esta manera se obtuvieron 33 y 37 imágenes satelitales para cada uno de los 
+
+intervalos correspondientes. Cada imagen fue asociada al nivel del agua medido en el 
+
+Puerto de Buenos Aires (o a la estación Palermo en caso de faltante en el punto antes 
+
+mencionado) con el objetivo de poder comparar imágenes que representaran 
+
+condiciones hidrodinámicas del Río de la Plata similares. Si bien se dispone de 
+
+imágenes correspondientes a crecidas importantes en Buenos Aires (momentos en los 
+
+cuales el nivel del río supera los 2 m MOP), una limitación propia de la metodología en 
+
+cuestión es que no se tiene manera de discernir en la imagen satelital cruda la 
+
+vegetación presente sobre las islas, por lo tanto, durante las crecidas no se logra 
+
+apreciar correctamente el avance del agua sobre la tierra, sino que se ve 
+
+constantemente la cubierta vegetal de la isla. Esta limitación conlleva a que no puedan 
+
+compararse las curvas de nivel de mayor altura entre ambos intervalos de tiempo, así 
+
+como tampoco se podrán trazar curvas de nivel para dichas alturas. 
+
+Para la detección de los principales cambios morfológicos ocurridos en el Frente del 
+
+Delta del río Paraná, se tomaron imágenes satelitales correspondientes a un nivel 
+
+observado en Buenos Aires cercano a los 10 cm MOP.  La imagen correspondiente al 
+
+momento inicial de la comparación fue tomada el 21/12/2006 a las 13:34 horas, 
+
+mientras que la correspondiente al final del intervalo, el 18/06/2017 a las 13:44 horas. 
+
+En la Figura 21 se presentan ambas imágenes a fines comparativos.  
+
+ 
+
+Figura 21 Imágenes satelitales tomadas en los años 2006 (izq.) y 2017 (der.) con niveles observados en Buenos Aires 
+igual a 10 cm MOP. 
+
+ Comenzando el análisis en los alrededores de la Isla Juncal y recorriendo la zona 
+
+de interés hacia el Sur, se aprecia que los cambios morfológicos relevantes no suceden 
+
+sino hasta la Isla El Matón, que presenta un importante crecimiento tanto al este (0,52 
+
+) como al sur, longitudinalmente (0,89 ). Sobre la margen opuesta, cercana a la 𝑘𝑚2 𝑘𝑚2
+
+costa argentina del curso, si bien no se observa nueva superficie emergida, sí se 
+
+distingue el desarrollo de una dorsal que bordea al Canal Principal (dado que se aprecia 
+
+40 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+con mayor intensidad en la imagen del año 2017, se asume que la capa de agua que la 
+
+recubre se torna más delgada). En línea con este desarrollo en sentido norte – sur, se 
+
+observa un pequeño crecimiento longitudinal hacia el norte de la Isla Lucía; dicha isla, 
+
+además, se ensancha ligeramente hacia el oeste. La isla sobre la margen derecha del 
+
+Arroyo Correntoso por su parte se consolida tanto al norte como al sur, creciendo en 
+
+total 0,65 .  𝑘𝑚2
+
+En las inmediaciones de la Isla Martín García no se observan cambios, pero aguas 
+
+debajo sí se ve el desarrollo de importantes dorsales que discurren paralelos al Canal 
+
+Buenos Aires, que separa la Isla Oyarvide de la Martín García.  
+
+En las inmediaciones de las Islas Oyarvide y Solís es donde mayor superficie emerge 
+
+en el transcurso del período 2007 – 2016. En primera instancia, se observa un gran 
+
+desarrollo longitudinal de la Isla Solís que bordea al canal que discurre entre ella y las 
+
+islas del Frente; La fracción emergida de esta formación ronda los 4,5  , con una 𝑘𝑚2
+
+longitud máxima de alrededor de 5800 m. Como continuación de esta región emergida, 
+
+se observa alineada a ella una región próxima a emerger e incluso algunas islas 
+
+pequeñas ya sobresalientes del nivel del agua previo al abrupto cambio de dirección 
+
+que este canal presenta frente a la Isla Zárate. Acompañando el importante 
+
+crecimiento recién comentado, las dos islas principales al este de esta nueva formación 
+
+también presentan importantes crecimientos caracterizados por tener forma de V 
+
+invertida.  En cambio, la tercera isla de este grupo, que se encuentra enfrentada a la 
+
+Isla Martín García (I.M.G.), presenta un crecimiento cercano a la forma de C. Además 
+
+de estos crecimientos ya consumados de las islas, al sur de las mismas se observan 
+
+dorsales e islotes cercanos a la emergencia distribuidos de forma tal que favorecen el 
+
+desarrollo de canales entre ellos.  
+
+En las islas cercanas a desembocadura del río Barquita se aprecia un crecimiento 
+
+significativo, especialmente sobre la ubicada a margen izquierda del curso. Además, se 
+
+observa la presencia de dorsales aguas abajo del mismo. Algo similar se da en la 
+
+desembocadura del Paraná Mini, salvo que allí emerge una pequeña isla en vez de 
+
+incrementarse el tamaño de las ya existentes. 
+
+Entre el Paraná Mini y los Bajos del Temor se observa la formación de un área poco 
+
+profunda con forma de embudo que apunta hacia el sur. Sus bordes coinciden con 
+
+cursos de profundidad relativamente altas que facilitan que el agua escurra por ellos. 
+
+Por parte de los Bajos del Temor, la Isla Lucha presenta un crecimiento longitudinal 
+
+relativamente importante, en varios casos presentando la forma de V invertida antes 
+
+comentada en las inmediaciones de la Isla Oyarvide.  
+
+ En lo que respecta a la Isla Zárate, si bien se aprecia nueva superficie emergida 
+
+anexada a la ya existente, se destaca por la extensión superficial el desarrollo de 
+
+41 
+ 
+
+
+
+Julián E. Cortese 
+
+bancos importantes al sur de la isla. A lo largo del contorno del Canal Emilio Mitre, 
+
+sobre su margen derecha, se observa también el desarrollo de una dorsal realmente 
+
+extensa (cuya longitud ronda los 28,5 km) que disminuye su intensidad acercándose 
+
+hacia la costa. 
+
+En las cercanías de las desembocaduras del Canal del Este y el río San Antonio se 
+
+observa un crecimiento relevante no sólo de las islas ya existentes, sino además de 
+
+islas nuevas correspondientes al período en estudio. Las dorsales creadas además en la 
+
+zona se confunden con la propia del Canal Emilio Mitre y provocan el rápido descenso 
+
+de profundidad en la cercanía del Canal del Este y el desvió del curso del San Antonio 
+
+hacia la desembocadura del Río Luján.  
+
+De lo analizado en este apartado y al considerarlo en conjunto con el avance del 
+
+Frente del Delta obtenido del estudio de las cartas náuticas H130 de los años 2007 y 
+
+201, resulta relevante remarcar el importante desarrollo morfológico que hubo sobre 
+
+las márgenes de los canales del Río de la Plata, sólo parcialmente reproducidos por las 
+
+cartas. Se observa en las imágenes satelitales un importante fenómeno de 
+
+sedimentación en los bordes de los canales Principal, Buenos Aires y Emilio Mitre, así 
+
+como también se forman dorsales en el canal que discurre desde el oeste de la Isla 
+
+Lucía hasta la latitud de la Isla Zárate.  
+
+Identificar estos procesos de sedimentación (resumidos los más importantes en la 
+
+Figura 22), aunque sea en forma cualitativa, ayudará a la calibración de las fracciones 
+
+de sedimentos en tanto se sabe de otras regiones además de las propias islas 
+
+emergidas donde se debe sedimentar el aporte sólido de los tributarios.  
+
+42 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+
+  
+
+Figura 22 Principales cambios morfológicos detectados en las imágenes satelitales. 
+
+4.5. Hipótesis sobre la dinámica de sedimentos en las zonas de cambios 
+
+morfológicos 
+
+ El comportamiento morfológico recién descripto parece indicar que hasta la 
+
+latitud de Nueva Palmira las condiciones hidrodinámicas no favorecen el crecimiento ni 
+
+la degradación del Delta del río Paraná frente a la costa uruguaya, sino que se alcanzó 
+
+cierta estabilidad. La falta de sedimentación se debe probablemente de manera 
+
+conjunta a cuán canalizado fluye el río Uruguay y a la baja concentración de 
+
+sedimentos en suspensión que el mismo río trae consigo desde aguas arriba. Por su 
+
+parte, la ausencia de fenómenos erosivos puede estar asociada a que la composición 
+
+43 
+ 
+
+
+
+Julián E. Cortese 
+
+del lecho en dicha región es mayoritariamente arenas (según la carta de Laborde), 
+
+material que no logra ser resuspendido por el curso.  
+
+ Luego, en las cercanías de Nueva Palmira y Carmelo, distintas ramas del río 
+
+Paraná comienzan a afluir con el río Uruguay cargando consigo carga de lavado, como 
+
+son el Gutiérrez, el Paraná Bravo y el Sauce, que ante condiciones hidrodinámicas 
+
+propicias podrá sedimentar. Aguas debajo de la Isla Juncal el incremento de la sección 
+
+transversal del curso acompañado de una baja en la profundidad y un incremento de la 
+
+curvatura del mismo generan condiciones que favorecen el cambio morfológico del 
+
+lecho del río. Estas circunstancias son las que explican en gran medida el gran 
+
+crecimiento superficial que se observa en el Islote El Matón y también del desarrollo 
+
+longitudinal hacia el norte de la Isla Lucía que parecería indicar que a futuro ésta se 
+
+uniría con el Frente del Delta frente al Islote El Matón. 
+
+ Parte del caudal del Canal Principal desborda hacia el oeste por el norte de la 
+
+Isla Lucía, llevando consigo carga de lavado. Este material parecería ser responsable del 
+
+crecimiento de forma longitudinal de la Isla Solís hacia el sudoeste, probablemente en 
+
+colaboración con la descarga de los ríos Barca Grande y Barquita. A su vez, en la 
+
+desembocadura de este último río se presenta un crecimiento relativamente alto de las 
+
+islas sobre sendas márgenes, por lo que se puede presumir que gran parte de su 
+
+material transportado sedimenta en dicha región. En menor medida, también sucede 
+
+una situación semejante en la desembocadura del río Paraná Miní. 
+
+ Los sedimentos que no se depositan en las zonas donde efectivamente se 
+
+reduce la profundidad a lo largo del Canal Principal ni son arrastrados al oeste de la Isla 
+
+Lucía, junto con aquellos que son resuspendidos en las zonas erosionadas, son 
+
+transportados aguas abajo hacia las islas, antes provocando la sedimentación entre la 
+
+Isla Martín García y las Lucía y Oyarvide. Luego, una fracción del total escurre a través 
+
+de los canales que surcan las islas Lucía, Oyarvide y Solís. Este flujo entre las islas 
+
+parecería ser relevante para el crecimiento de las propias islas por permitir a los 
+
+sedimentos provenientes del norte llegar a zonas donde se observa gran avance del 
+
+frente. A su vez, es probable que el sedimento en suspensión proveniente de 
+
+fenómenos de erosión aguas arriba incida en dicho crecimiento dado que aquella zona 
+
+según la carta de Laborde es de fondo arenoso, caracterizado por tener velocidades de 
+
+caída altas respecto a fracciones más finas como los limos y arcillas.  
+
+ Sumado a los fenómenos de transporte mencionados, cabe evaluar la 
+
+posibilidad de que sedimentos resuspendidos en las inmediaciones de las islas en 
+
+momentos de alta velocidad de escurrimiento durante crecidas sean llevados hacia los 
+
+bancos donde luego sedimentarían. Este fenómeno no parece explicar a priori el gran 
+
+crecimiento de las islas en cuestión dado que no se identifican grandes procesos de 
+
+erosión en la zona que pudieran ser fuentes importantes de sedimentos, pero no se 
+
+puede descartar fenómenos transitorios que a lo largo del tiempo mantienen un 
+
+44 
+ 
+
+
+
+4. Análisis in situ y remoto del Frente de Avance del Delta; sedimentos y cambios 
+morfológicos (2007 – 2016) 
+
+____________________________________________________ 
+equilibrio morfológico dinámico; además, la morfología que se presenta en las islas 
+
+Solís y Oyarvide, semejante a una V invertida orientada hacia el sur, parece indicar que 
+
+el desarrollo superficial se da producto de la carga suspendida que sedimenta al 
+
+rebalsar hacia los costados de cada uno de los cursos, donde hay menor profundidad y 
+
+consecuentemente menor velocidad.  
+
+ En las inmediaciones de los Bajos del Temor el crecimiento de las islas también 
+
+parece estar dominado por la sedimentación de la carga en suspensión transportada 
+
+desde aguas arriba por los tributarios al Río de la Plata producida por el descenso 
+
+abrupto de la velocidad de escurrimiento, dado que predominan brazos de mayor 
+
+longitud que se extienden desde los bordes de las islas hacia aguas abajo (semejantes a 
+
+una V invertida orientada hacia el este). En este caso, la totalidad de los sedimentos 
+
+proviene del Paraná de las Palmas. Así mismo, el crecimiento de la Isla Zárate hacia el 
+
+este se da por la desembocadura del canal que discurre entre las islas Zárate y Lucha al 
+
+Río de la Plata. En ambos casos, predominan canales que surcan las principales islas 
+
+que permiten la distribución de carga de lavado.  
+
+ Por su parte, en la región del Frente de Avance del Delta comprendida entre la 
+
+desembocadura del Canal Emilio Mitre y la costa bonaerense, si bien el crecimiento 
+
+también se presenta con su dimensión longitudinal acentuada, también se observa el 
+
+crecimiento del frente en espesor, hacia el sur, de manera medianamente homogénea. 
+
+Esto podría indicar que en esta región los fenómenos de resuspensión de material del 
+
+lecho durante crecidas sí tienen cierta incidencia en el avance del Delta. Si bien no se 
+
+perciben zonas erosionadas en el período en estudio (2007-2016) según las cartas 
+
+náuticas, podría darse un equilibrio dinámico mediante el cual material recientemente 
+
+depositado sea resuspendido durante eventos de cierta intensidad, llevado a zonas 
+
+menos profundas más cercanas a las islas para finalmente sedimentar durante la estoa.  
+
+4.6 Conclusiones del capítulo 
+
+ En el presente capítulo se ha abordado la dinámica de sedimentos del Frente 
+
+del Delta desde diferentes aristas con tal de lograr una mejor comprensión de la 
+
+misma. 
+
+ De las campañas de toma de muestras de sedimento de fondo y el posterior 
+
+análisis de las muestras recolectadas se logró concluir que en las islas del Frente se 
+
+encuentran en proporción predominante los limos, con participación de arcillas y 
+
+arenas en fracciones relativamente similares. En el caso de la región correspondiente al 
+
+corredor de los ríos Uruguay y Guazú se observó que la participación de las arenas es 
+
+mayor al alejarse ligeramente de la isla, mientras que en el Paraná Miní se mantiene 
+
+sostenidamente la predominancia de limos.  
+
+ De los análisis remotos llevados a cabo, se concluyó que las áreas que mayor 
+
+desarrollo presentaron en el intervalo estudiado (2007 – 2016) correspondió a la región 
+
+45 
+ 
+
+
+
+Julián E. Cortese 
+
+de las islas Oyarvide y Solís. Dicho crecimiento se materializa no sólo en la emergencia 
+
+de nuevos bancos e islas, sino también en regiones cercanas a la superficie libre que 
+
+pueden apreciarse en las imágenes satelitales. 
+
+ Adicionalmente, a partir de los análisis remotos se esbozó una hipótesis de 
+
+dinámica de sedimentos en la cercanía del Frente según la cual la sedimentación de los 
+
+sólidos ingresantes al estuario se da principalmente producto de la abrupta caída de 
+
+velocidad del curso, quedando relegado a un segundo papel la resuspensión y 
+
+redistribución de sedimentos previamente sedimentados. 
+
+ En el próximo capítulo se trata el desarrollo del nuevo modelo numérico de la 
+
+región en estudio, incluyendo la descripción de las herramientas empleadas, la 
+
+información disponible y todos aquellos procesos correspondientes al armado de un 
+
+modelo capaz de representar satisfactoriamente la dinámica del Frente de Avance del 
+
+Delta del río Paraná.  
+
+46 
+ 
+
+
+
+5. Metodología 
+____________________________________________________ 
+
+5. Metodología. 
+
+5.1 Introducción. 
+
+En el presente capítulo se describirá en detalle el proceso de armado del modelo 
+
+numérico con el que se busca reproducir la dinámica hidrosedimentológica del Frente 
+
+de Avance del Delta del río Paraná. Se espera lograr una representación más completa 
+
+de los procesos intervinientes en el avance del Frente del Delta mediante la 
+
+incorporación de forzantes no empleados aún en los trabajos realizados con 
+
+anterioridad y poder estipular qué características del modelo tienen mayor incidencia 
+
+en la modelación de los procesos simulados.    
+
+En primera instancia, se desarrollarán las ecuaciones básicas a ser resueltas por el 
+
+esquema numérico, pasando por los fenómenos hidrodinámicos básicos, el transporte 
+
+de sedimento y los modelos particulares de turbulencia implementados.  
+
+En segundo lugar, se presentan conceptos básicos referidos a fenómenos 
+
+indispensables en la comprensión del comportamiento del Río de la Plata como son las 
+
+mareas astronómica y meteorológica; se comenta someramente también acerca de las 
+
+fuentes de información principales de donde se obtendrán las características de los 
+
+distintos forzantes a ser usados en el modelo del Río de la Plata y el Frente del Delta 
+
+del río Paraná, los modelos globales de información.  
+
+En tercer lugar, se desarrollan los procesos de calibración y validación del módulo 
+
+hidrodinámico. Por último, se desarrolla el proceso de calibración de los parámetros 
+
+sedimentológicos del modelo y se efectúan distintas pruebas de sensibilidad sobre el 
+
+modelo terminado para determinar el comportamiento del mismo ante ciertos 
+
+cambios de los forzantes. 
+
+5.2 Modelo numérico.  
+
+5.2.1 Procesos considerados en la modelación: conceptos y ecuaciones. 
+
+5.2.1.1 Ecuaciones hidrodinámicas. 
+
+ El sistema Delft3D resuelve las ecuaciones de Navier Stokes bidimensionales 
+
+para un fluido incompresible, considerando aguas poco profundas y asumiendo una 
+
+distribución hidrostática de presión en la vertical. Cada una de las ecuaciones se 
+
+resuelve mediante la implementación del método de diferencias finitas, variando 
+
+eventualmente los esquemas empleados.  
+
+ Las expresiones matemáticas que se presentan a continuación están definidas 
+
+en coordenadas curvilíneas ortogonales. Se plantean las ecuaciones gobernantes de 
+
+esta manera con tal de poder aplicarlas a mallas también curvilíneas a fin de lograr una 
+
+mejor adaptación de las mismas a los bordes irregulares de los cursos naturales; de lo 
+
+contrario, si se usara un mallado rectangular, evitar errores importantes de 
+
+discretización implicaría necesariamente emplear una resolución menor al caso 
+
+47 
+ 
+
+
+
+Julián E. Cortese 
+
+comparativo de mallas curvas que se adaptan en cierta medida a la morfología del 
+
+curso. 
+
+Respecto al sistema de referencia empleado para la expresión d
