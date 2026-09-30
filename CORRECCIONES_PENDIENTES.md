@@ -2494,3 +2494,21 @@ licitar, como en el 5.9. 8 obra vecinal: las redes en la calle; vivienda: la con
 ## ENTREGA
 PDF: 40 páginas, 42 cuadros y gráficos del 1 al 42, sin "plata" fuera de las excepciones, sin azul ni rojo, fuentes
 sin sustituciones, sin viudas. Excel: 13.348 fórmulas, cero errores; única diferencia con el anterior, Metas C14.
+
+## LOS 15 PASANTES DE LAS FISCALÍAS · INVESTIGADO, SIN TOCAR (a Nick, 30/09)
+Descargas en el scratchpad de la sesión (fiscalias/): decretos 2003-2026, boletines, presupuestos 2025 y 2026.
+- Horas: no se publican. El texto del convenio nunca se transcribió en el Boletín (la Ordenanza 7895 lo cita como
+  "Anexo I a fs. 13/18"). El Ministerio Público atiende de lunes a viernes de 8 a 14 (mpba.gov.ar/turnos).
+- Régimen: "becarios" designados por decreto, uno por uno, por año calendario, a pedido de la Fiscalía General; desde
+  2026 los decretos dicen "pasante". No citan la Ley 26.427, no exigen ser estudiante (el Decreto 298/2026 paga 40% más
+  a los abogados) y no se encontró ART, obra social ni aguinaldo. El presupuesto los carga como becas: partida
+  5.1.3.01 "BECAS FISCALIAS ORD. 7895".
+- Quién paga: el Municipio, con fondos propios (fuente 1.1.0). Presupuesto 2026 (Ordenanza 9422, F.11): 10.971.527 $
+  en Legal y Técnica y 5.176.040 $ en Seguridad: 16,1 M para el año, cuando 15 pasantes a 747.500 $ son 11,2 M por
+  mes. El Ministerio Público no pone dinero.
+- Desde cuándo: Ordenanza 7895 (16/4/2003), Decreto 933/2003 (16/5/2003, registra el convenio del 13/5/2003) y
+  Decreto 1795/2003 (quince becarios). Pago: 18.000 $ hasta octubre de 2022; 35.000 (Decreto 1929/2022); 65.000 desde
+  junio de 2023 (Decreto 1350/2023); 140.000 desde abril de 2024; 202.602 en 2025; 259.946 en enero y febrero de 2026;
+  747.500 desde marzo de 2026 (683.008 $ de diciembre de 2025).
+- Cuántos: al 1 de enero, 10 (2022), 9 (2023), 8 (2024), 9 (2025) y 8 (2026); 15 desde el 22/6/2026.
+- Los 240.000 $ del programa no se tocaron.
