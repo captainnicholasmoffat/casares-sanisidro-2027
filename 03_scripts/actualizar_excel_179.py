@@ -1105,7 +1105,8 @@ metas = [
      "avise cuando se sale del rango", "Hoy se publica el total del expediente, no el precio por unidad", NP, NP,
      "Se le pregunta a la inteligencia artificial del Municipio, con el histórico y las alertas"),
     ("Adjudicar el servicio de recolección de residuos por licitación pública, con el pliego discutido antes del "
-     "llamado", "Dos licitaciones llamadas desde 2008 y ninguna adjudicada", NP, NP, "Boletín Oficial municipal"),
+     "llamado", "Cuatro licitaciones llamadas desde 2004 y ninguna terminó en un contrato; el mismo grupo presta el "
+     "servicio desde 1998", NP, NP, "Boletín Oficial municipal"),
     ("Detección en vivo de hechos violentos y reconstrucción de recorrido sobre las cámaras que el Municipio ya "
      "tiene, y que cualquiera pueda preguntar cuántas órdenes judiciales se recibieron y cuántas se cumplieron",
      "No hay registro público de que ninguno de los dos usos opere", NP, NP,

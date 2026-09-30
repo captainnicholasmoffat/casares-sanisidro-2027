@@ -1271,32 +1271,36 @@ tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
 
 </div>
 
-<h3>Se intent&oacute; licitar dos veces, las dos fracasaron, y el contrato de seis meses va por el
+<h3>Se intent&oacute; licitar cuatro veces, las cuatro fracasaron, y el contrato de seis meses va por el
 a&ntilde;o diecisiete</h3>
 <div class="cols">
 <p><b>Recolecci&oacute;n de residuos, barrido y limpieza son 49.270 millones al a&ntilde;o</b>: la
-subfunci&oacute;n m&aacute;s cara del presupuesto municipal, casi tanto como toda la obra p&uacute;blica de un a&ntilde;o entero. <span class="sg">Ninguna licitaci&oacute;n p&uacute;blica termin&oacute; en
-adjudicaci&oacute;n del servicio troncal desde 2009</span>, y no es por falta de intentos.</p>
-<p><b>El primer intento: la Licitaci&oacute;n P&uacute;blica 17/2008.</b> El propio Municipio la
-<b>declar&oacute; desierta</b> por el Decreto 513 del 24 de febrero de 2009, invocando la crisis
-financiera global. En mayo de ese a&ntilde;o contrat&oacute; por negociaci&oacute;n directa a una
-uni&oacute;n transitoria de empresas que hab&iacute;a sido oferente en esa misma licitaci&oacute;n, por
-<b>seis meses</b>, con un plazo corto &laquo;debido a la prudencia que se debe adoptar por la crisis
-econ&oacute;mica mundial&raquo;.</p>
-<p><b>El segundo: la Licitaci&oacute;n P&uacute;blica 40/2019</b>, llamada por el Decreto 2278 del 26 de
-diciembre de 2019, con un presupuesto oficial de 5.100 millones. Compraron el pliego
-<b>dos oferentes</b>, uno de ellos el prestador vigente. El <b>Decreto 1566 del 13 de noviembre de
-2020</b> desestim&oacute; <b>la totalidad de las ofertas</b> y dej&oacute; sin efecto el llamado, porque
-la mejor oferta econ&oacute;mica superaba las estimaciones del propio Municipio.</p>
-<p><b>Y los seis meses de 2009 siguen corriendo.</b> El <b>Decreto 2293 del 30 de diciembre de 2022</b>
-formaliz&oacute; la pr&oacute;rroga <span class="sg">&laquo;hasta que se resuelva una nueva
-contrataci&oacute;n&raquo;</span>: sin fecha de vencimiento. En ese mismo decreto, la columna
-&laquo;decreto de adjudicaci&oacute;n&raquo; de la fila del servicio troncal <b>est&aacute; en
-blanco</b>, mientras la de servicios complementarios s&iacute; la consigna.</p>
+subfunci&oacute;n m&aacute;s cara del presupuesto municipal, casi tanto como toda la obra p&uacute;blica de un a&ntilde;o entero.
+<b>El mismo grupo de empresas presta el servicio desde el 30 de abril de 1998</b>, por la Licitaci&oacute;n
+P&uacute;blica 12/97 (Decreto 29/2003), y <span class="sg">ninguna de las cuatro licitaciones que se llamaron
+despu&eacute;s termin&oacute; en un contrato</span>.</p>
+<p><b>La 01/2004</b> la fren&oacute; treinta d&iacute;as una medida cautelar de un tribunal laboral, y no se
+encontr&oacute; el acto que la cierra. <b>La 17/2008</b> se adjudic&oacute; en forma provisoria al mismo grupo, y
+siete meses despu&eacute;s el Decreto 513 del 24 de febrero de 2009 derog&oacute; esa adjudicaci&oacute;n y la
+<b>declar&oacute; desierta</b>, invocando la crisis financiera global. En mayo de ese a&ntilde;o el Municipio
+contrat&oacute; directamente a esa uni&oacute;n de empresas por <b>seis meses</b>, con un plazo corto
+&laquo;debido a la prudencia que se debe adoptar por la crisis econ&oacute;mica mundial&raquo;.</p>
+<p><b>La 40/2019</b>, llamada por el Decreto 2278 del 26 de diciembre de 2019 con un presupuesto oficial de
+5.100 millones: compraron el pliego <b>dos empresas</b>, una de ellas el prestador vigente, y el <b>Decreto 1566
+del 13 de noviembre de 2020</b> desestim&oacute; <b>la totalidad de las ofertas</b>, porque la mejor superaba las
+estimaciones del propio Municipio. <b>Y la 41/2022</b>, con un presupuesto anual de 3.600 millones,
+termin&oacute; en diciembre de ese a&ntilde;o con todas las ofertas rechazadas por &laquo;la magnitud de las
+ofertas presentadas&raquo; (Decreto 2214/2022).</p>
+<p><b>Y los seis meses de 2009 siguen corriendo.</b> El contrato se prorrog&oacute; sin interrupci&oacute;n
+&mdash;en 2022, <span class="sg">&laquo;hasta que se resuelva una nueva contrataci&oacute;n&raquo;</span>, sin
+fecha&mdash;, y la &uacute;ltima pr&oacute;rroga, de diciembre de 2025, lo lleva hasta el 31 de diciembre de 2026
+&laquo;o hasta la adjudicaci&oacute;n de los procesos que resulten en su reemplazo&raquo; (DECRE-2025-1507). En el
+Decreto 2293 de 2022, la columna &laquo;decreto de adjudicaci&oacute;n&raquo; de la fila del servicio troncal
+<b>est&aacute; en blanco</b>, mientras la de servicios complementarios s&iacute; la consigna.</p>
 <p><b>Lo que se firma cada a&ntilde;o son redeterminaciones de precio.</b> El expediente 5229/2008
 acumula alcances numerados hasta el 68, y el acto m&aacute;s reciente sobre el troncal es de junio de
-2026. La &uacute;nica licitaci&oacute;n adjudicada a esa uni&oacute;n de empresas en todo el
-per&iacute;odo es la 17/2014, y es por servicios <b>complementarios</b>.</p>
+2026. Las &uacute;nicas licitaciones adjudicadas a esa uni&oacute;n de empresas en todo el per&iacute;odo son de
+servicios <b>complementarios</b>: la 01/2012, de lavado de contenedores y veredas, y la 17/2014.</p>
 <p><b>No es una irregularidad de esta gesti&oacute;n ni de la anterior:</b> atraviesa a las dos y a las
 que hubo antes. Y la administraci&oacute;n llama &laquo;adjudicataria&raquo; a una empresa que sus
 propios papeles describen como contratada directamente tras una licitaci&oacute;n desierta.</p>
@@ -1305,8 +1309,8 @@ propios papeles describen como contratada directamente tras una licitaci&oacute;
 <div class="clabel">Qu&eacute; propone este programa</div>
 <p><b>Licitar la recolecci&oacute;n, con el pliego discutido antes.</b> Plazo cierto, frecuencias,
 horarios, zonas y qu&eacute; se separa, discutidos <b>antes</b> del llamado y no despu&eacute;s. Porque
-los dos intentos anteriores fracasaron y el segundo fracas&oacute; por una raz&oacute;n concreta: las
-ofertas superaban la estimaci&oacute;n municipal. <span class="sg">Cuando dos licitaciones se
+los cuatro intentos anteriores fracasaron, y los dos &uacute;ltimos por la misma raz&oacute;n: las
+ofertas superaban lo que el Municipio estimaba. <span class="sg">Cuando dos licitaciones seguidas se
 caen por el precio, el problema puede estar en c&oacute;mo se arm&oacute; el pliego</span>, y eso es
 exactamente lo que discutirlo antes vendr&iacute;a a resolver.</p>
 <p><b>Indicador de servicio por zona para cada comisi&oacute;n vecinal, y penalidades que se apliquen
@@ -2269,8 +2273,9 @@ unas <b>2.646 c&aacute;maras con anal&iacute;tica que nunca tuvo una auditor&iac
 nuevas: que las que hay detecten hechos violentos y avisen al patrullero m&aacute;s cercano, patrullaje dirigido
 donde se concentra el delito y una oficina de ciberdelito.</li>
 <li>La recolecci&oacute;n de residuos, con barrido y limpieza, es el servicio m&aacute;s caro que paga el
-Municipio &mdash;49.270 millones al a&ntilde;o&mdash;, y se licit&oacute; dos veces y nunca se adjudic&oacute;: corre sobre un contrato de seis meses de 2009
-prorrogado sin fecha de cierre.</li>
+Municipio &mdash;49.270 millones al a&ntilde;o&mdash;: la presta el mismo grupo desde 1998, se licit&oacute; cuatro veces sin
+llegar a un contrato, y corre sobre uno de seis meses de 2009, prorrogado hasta el 31 de diciembre de 2026 o hasta
+que se adjudique su reemplazo.</li>
 <li>Proponemos que el gasto en ambiente pase del 0,4% al 1,5% del presupuesto, con fondos que se sacan de otros
 programas; educaci&oacute;n recupera lo que perdi&oacute; contra la inflaci&oacute;n en 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, escuela por escuela.</li>
 <li>De las siete cosas que se buscaron en el sitio del Municipio, seis &mdash;el portal de datos
@@ -2298,13 +2303,13 @@ puede anotar a su hijo en el primer centro de apoyo escolar y encuentra seis ord
 Concejo. <span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que
 se puede ver que empez&oacute;.</span></p>
 <div class="cols">
-<p><b>El plazo no es una cifra redonda: es la fecha en que estos mecanismos convocan.</b>
-Villa Gobernador G&aacute;lvez fija por ordenanza su primera ronda de asambleas en la primera quincena
-de marzo; en la Ciudad de Buenos Aires el ciclo tiene al menos cuatro asambleas por barrio y la primera
-es informativa y de relevamiento. <span class="sg">Los cien d&iacute;as caen justo ah&iacute;.</span></p>
-<p><b>Por eso el primer ciclo entra en los cien d&iacute;as y no despu&eacute;s.</b> Si la primera
-asamblea se corre a mitad de a&ntilde;o, la priorizaci&oacute;n llega tarde para el ejercicio en curso y
-el a&ntilde;o 1 de la rampa se pierde entero.</p>
+<p><b>El plazo no es una cifra redonda: lo fija el presupuesto.</b> Si la primera asamblea se corre a
+mitad de a&ntilde;o, la priorizaci&oacute;n llega tarde para el ejercicio en curso y el a&ntilde;o 1 de la rampa
+se pierde entero. <span class="sg">Por eso el primer ciclo entra en los cien d&iacute;as y no despu&eacute;s.</span></p>
+<p><b>Y la primera ronda informa; la que prioriza viene despu&eacute;s.</b> As&iacute; abr&iacute;a cada ciclo el
+presupuesto participativo de la Ciudad de Buenos Aires, seg&uacute;n su reglamento de mayo de 2004: un plenario
+en cada barrio para informar a los vecinos y completar el diagn&oacute;stico, y las prioridades se votaban al
+cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es en los meses 6 a 9 (6.4).</p>
 </div>
 """ + exhead("c", "Diecis&eacute;is compromisos para los primeros cien d&iacute;as, y el documento que prueba cada uno",
              "Plazo: 19 de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.") + """
@@ -2328,12 +2333,12 @@ el a&ntilde;o 1 de la rampa se pierde entero.</p>
 <tr class="hi"><td class="l">12 &middot; La inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas, con el convenio con la UNSO firmado, y la primera cohorte arrancando en los espacios que ya existen</td><td class="n">Inscripci&oacute;n y matr&iacute;cula por zona: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cero</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, y el turno m&eacute;dico</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">15 &middot; La detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano</td><td class="n">Decreto de puesta en servicio; el tiempo de respuesta se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">16 &middot; La inspecci&oacute;n municipal transmitida en vivo, para que se vea que es real, y grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s. Empieza por decreto sobre los inspectores municipales</td><td class="n">La transmisi&oacute;n y su grabaci&oacute;n, abiertas para cualquier vecino</td></tr>
+<tr class="hi"><td class="l">15 &middot; La licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
+<tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que es real, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y la licitaci&oacute;n de las ochenta c&aacute;maras corporales, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> los dos primeros van juntos a esa sesi&oacute;n porque son el
 andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
-que no. Los compromisos 15 y 16 empiezan por decreto, con personal que el Municipio ya dirige: el 15 usa las c&aacute;maras que ya compr&oacute;; el 16, las c&aacute;maras corporales que compra habilitaciones (3.4). <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
+que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo, y los dos se licitan: la anal&iacute;tica que corre sobre las c&aacute;maras que el Municipio ya compr&oacute;, y las c&aacute;maras corporales que compra habilitaciones (3.4). A los cien d&iacute;as las dos licitaciones est&aacute;n lanzadas; funcionan en el mes 9. <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
 transmisi&oacute;n va despu&eacute;s</b>, y est&aacute; escrita en el anexo.</p>
 
 <h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
@@ -2374,7 +2379,7 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">La inteligencia artificial del Municipio en producci&oacute;n, con la partida vecinal, las asambleas transcriptas y cada dato cargado el d&iacute;a que ocurre</td><td class="n">No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio: cualquiera puede hacerlo</td></tr>
 <tr class="hi"><td class="l">Turno m&eacute;dico en l&iacute;nea en los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">Cero efectores de salud humana con turno en l&iacute;nea. El &uacute;nico turno de salud en l&iacute;nea es el de castraci&oacute;n de mascotas</td><td class="n">La propia plataforma, consultable por cualquiera</td></tr>
 <tr class="hi"><td class="l">Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y avise cuando se sale del rango</td><td class="n">Hoy no hay con qu&eacute; comparar: se publica el total del expediente, no el precio por unidad</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico y las alertas</td></tr>
-<tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Dos licitaciones llamadas desde 2008 y ninguna adjudicada: la de 2008 se declar&oacute; desierta y la de 2019 se dej&oacute; sin efecto en 2020</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
+<tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Cuatro licitaciones llamadas desde 2004 y ninguna termin&oacute; en un contrato; el mismo grupo presta el servicio desde 1998</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, y que cualquiera pueda preguntar cu&aacute;ntas &oacute;rdenes judiciales se recibieron y cu&aacute;ntas se cumplieron</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y &oacute;rdenes</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero, separada del programa que hoy comparte</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad s&iacute;, y deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
 <tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cero centros municipales de apoyo escolar</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
@@ -2391,16 +2396,20 @@ que la comprueba.</p>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio; y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en seguridad: la detecci&oacute;n en vivo de hechos violentos operando sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;</td><td class="n">Decreto de puesta en servicio, y se le pregunta a la inteligencia artificial del municipio</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>Por decreto, en el tr&aacute;mite: la inspecci&oacute;n municipal transmitida en vivo, para que se vea que fue real y que no hubo coima, y grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s</td><td class="n">Decreto de puesta en servicio, y la transmisi&oacute;n y su grabaci&oacute;n, abiertas para cualquier vecino</td></tr>
+<tr><td class="l">Mes 3</td><td>En seguridad, se lanza la licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;, y lo que se licita es la anal&iacute;tica</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que fue real y que no hubo coima, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y se lanza la licitaci&oacute;n de las ochenta c&aacute;maras corporales</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, la partida propia de g&eacute;nero, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Cada respuesta, con su fecha: se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el segundo ingreso en el mes 9 y el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>
+<tr><td class="l">Mes 6</td><td>Se llama a licitaci&oacute;n la recolecci&oacute;n de residuos, con el pliego ya aprobado por ordenanza</td><td class="n">El llamado, en el Bolet&iacute;n Oficial municipal</td></tr>
 <tr><td class="l">Mes 6</td><td>Arranca el <b>registro de inserci&oacute;n laboral</b>: cualquier vecino le pregunta a la inteligencia artificial del Municipio cu&aacute;ntas personas consiguieron empleo, con el dato cargado el d&iacute;a que pasa. Hoy ese n&uacute;mero aparece suelto en alguna gacetilla, no en un registro continuo que se pueda consultar</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico</td></tr>
 <tr class="hi"><td class="l">Meses 6&ndash;9</td><td>La inteligencia artificial del Municipio suma a la consulta y al turno m&eacute;dico del mes 3 la partida vecinal y el seguimiento de obra</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">Mes 9</td><td>Funciona la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano; y cada inspecci&oacute;n municipal se transmite en vivo y queda grabada, con las c&aacute;maras corporales</td><td class="n">Decreto de puesta en servicio; el tiempo de respuesta se le pregunta a la inteligencia artificial del Municipio, y la transmisi&oacute;n y su grabaci&oacute;n quedan abiertas para cualquier vecino</td></tr>
+<tr><td class="l">Mes 9</td><td>Se adjudica la recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica</td><td class="n">Decreto de adjudicaci&oacute;n, en el Bolet&iacute;n Oficial municipal</td></tr>
 <tr><td class="l">Mes 9</td><td>Cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; se hizo en su zona, y tiene la respuesta; desde ah&iacute;, al d&iacute;a: la adjudicaci&oacute;n queda registrada el d&iacute;a que se firma</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 de la rampa ejecutado (cuadro [[n:rampa]])</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
+<tr><td class="l">Mes 12</td><td>Turno m&eacute;dico en l&iacute;nea en los trece efectores: los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">La propia plataforma, consultable por cualquiera</td></tr>
 <tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la inteligencia artificial del Municipio: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
@@ -2409,6 +2418,7 @@ que la comprueba.</p>
 <tr><td class="l">Meses 18&ndash;24</td><td>Habilitaciones con consulta previa desde el tel&eacute;fono, y la inspecci&oacute;n agendada por el sistema y comparada con las del mismo rubro; y mercado laboral en la inteligencia artificial del Municipio</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 21</td><td>La primera cohorte pasa a su segunda pasant&iacute;a, en empresas del partido, con el convenio marco con las c&aacute;maras; la segunda entra al Municipio</td><td class="n">Cada acuerdo individual, con su empresa: se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 24</td><td>A&ntilde;o 2 de la rampa (cuadro [[n:rampa]]). Empleo y vivienda a mitad de camino de los 7.730,9 M</td><td class="n">Ejecuci&oacute;n por programa</td></tr>
+<tr><td class="l">Mes 25</td><td>Los seis centros de apoyo escolar abiertos, uno por localidad: abren de a dos por a&ntilde;o, los dos primeros en el a&ntilde;o 1</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">Mes 27</td><td>Egresan los primeros 231, con el t&iacute;tulo de la UNSO y un a&ntilde;o de trabajo real; desde ah&iacute; egresa una cohorte cada seis meses. Primera convocatoria del semillero de empresas</td><td class="n">Registro de inserci&oacute;n laboral: cu&aacute;ntos consiguieron empleo y d&oacute;nde; y cada empresa del semillero, con sus contratos</td></tr>
 <tr><td class="l">Mes 36</td><td>A&ntilde;o 3 de la rampa (cuadro [[n:rampa]]). Funci&oacute;n ambiental al 1,5%</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Meses 36&ndash;42</td><td>Cualquier vecino pregunta cu&aacute;nto se gast&oacute; en su zona, con la ejecuci&oacute;n presupuestaria desagregada por zona</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
@@ -2416,7 +2426,10 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Mes 48</td><td>A&ntilde;o 4: la mitad de la obra p&uacute;blica la deciden los vecinos (cuadro [[n:rampa]]). Cloacas en Boulogne y B&eacute;ccar reducidas a la mitad</td><td class="n">Ejecuci&oacute;n y registro de conexiones</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> los meses 4 a 12 son los de constituci&oacute;n, y no hay obra decidida por
-vecinos antes del primer ciclo de asambleas.</p>
+vecinos antes del primer ciclo de asambleas. Lo que se licita se adjudica tres meses despu&eacute;s del llamado
+&mdash;la licitaci&oacute;n de la recolecci&oacute;n de 2008 tard&oacute; dos, del llamado a la adjudicaci&oacute;n provisoria
+(Decretos 1113 y 1566 de 2008)&mdash;, y el pliego de la detecci&oacute;n en vivo y de las c&aacute;maras corporales da
+tres meses para ponerlas en servicio.</p>
 
 <h2><span class="n">6.5</span>Qu&eacute; no prometemos, y de qui&eacute;n depende</h2>
 """ + exhead("c", "Lo que no est&aacute; en nuestras manos, y por qu&eacute;") + """
@@ -2458,7 +2471,7 @@ vecinos antes del primer ciclo de asambleas.</p>
 <td>Hoy cobra el 89,32%, y tres puntos menos dejan las cuentas de 2031 pr&aacute;cticamente en cero: &minus;426
 millones (3.6). Una parte de lo que no se cobra es descuento, que decide el propio Municipio, y otra es mora
 (3.2). <b>Mitigaci&oacute;n:</b> el programa no se paga con la cobranza, as&iacute; que no la necesita; y la
-Ordenanza III le pone tope al descuento por pago anual (anexo).</td></tr>
+Ordenanza III le quita el descuento por pago anual al 10% de las partidas de mayor valuaci&oacute;n (anexo).</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
 <td>El menos grave de los tres que mide la sensibilidad del 3.6 y, con la tasa del bono, uno de los dos que no
 dependen del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y la sensibilidad del 3.6 la mide: si cae 3,5% por a&ntilde;o, el resultado de 2031 baja de +10.236 a +5.342 millones.</td></tr>
@@ -2487,9 +2500,10 @@ programa gasta, as&iacute; que deja las cuentas mejor que no hacer nada justo en
 hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
 <li>A los cien d&iacute;as la primera ronda de asambleas ya se hizo en las seis zonas, la
 inscripci&oacute;n a la formaci&oacute;n laboral est&aacute; abierta en las seis y el primer grupo de
-alumnos arranc&oacute; en los espacios que ya existen, el primer centro de apoyo escolar abri&oacute;, las c&aacute;maras que
-ya existen detectan hechos violentos en vivo y avisan al patrullero m&aacute;s cercano, y las inspecciones de comercios se
-transmiten en vivo y quedan grabadas para que cualquier vecino las vea. Son diecis&eacute;is compromisos: seis ordenanzas en el Concejo, cuatro actos que no dependen
+alumnos arranc&oacute; en los espacios que ya existen, el primer centro de apoyo escolar abri&oacute;, y est&aacute;n
+lanzadas las dos licitaciones para que las c&aacute;maras que ya existen detecten hechos violentos en vivo y avisen al
+patrullero m&aacute;s cercano, y para que las inspecciones de comercios se transmitan en vivo y queden grabadas; las dos
+funcionan en el mes 9. Son diecis&eacute;is compromisos: seis ordenanzas en el Concejo, cuatro actos que no dependen
 de &eacute;l y seis cosas que arrancaron.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>

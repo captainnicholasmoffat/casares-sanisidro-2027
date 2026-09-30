@@ -147,9 +147,10 @@ Impositiva: para esa partida, el m&iacute;nimo se reduce en el mismo monto que l
 para cada unidad funcional de los inmuebles en propiedad horizontal.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Descuento por pago anual</h3>
-<p class="tight">Fac&uacute;ltase al Departamento Ejecutivo a fijar un tope de valuaci&oacute;n por encima
-del cual no se aplica el descuento por pago anual anticipado que prev&eacute; la Ordenanza Fiscal. Por
-debajo de ese tope, el descuento se mantiene como est&aacute;.</p>
+<p class="tight">El descuento por pago anual anticipado que prev&eacute; la Ordenanza Fiscal <b>no se aplica al
+diez por ciento (10%) de las partidas de mayor valuaci&oacute;n</b> del Partido. El Departamento Ejecutivo publica
+cada a&ntilde;o, con la emisi&oacute;n, la valuaci&oacute;n que resulta de aplicar ese porcentaje. Para las dem&aacute;s
+partidas, el descuento se mantiene como est&aacute;.</p>
 
 <h3>Art&iacute;culo 6 &mdash; Consulta</h3>
 <p class="tight">Toda persona puede consultar en el Sistema de Informaci&oacute;n Municipal, manzana por

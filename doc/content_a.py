@@ -532,10 +532,10 @@ propuestas est&aacute; desarrollado en el cap&iacute;tulo 3.</p>
 <p>En 2025 el Municipio clasific&oacute; su gasto en veinte funciones y en 2024 en catorce. S&oacute;lo se
 usan en este cap&iacute;tulo las variaciones interanuales de funciones presentes en ambos ejercicios y cuya
 finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declaradas como no comparables.</p>
-<p>La historia de la recolecci&oacute;n se reconstruy&oacute; leyendo el texto de los boletines de 2009 a
-2024: la plataforma vieja del Bolet&iacute;n Oficial, que publica hasta marzo de 2024, s&oacute;lo indexa
-el t&iacute;tulo del bolet&iacute;n y no el texto de los decretos. Seis boletines no se pudieron abrir por
-archivo da&ntilde;ado o enlace roto.</p>
+<p>La historia de la recolecci&oacute;n se reconstruy&oacute; leyendo el texto de 527 boletines quincenales y 324
+ediciones extra, de 2002 a 2024, y el visor nuevo del Bolet&iacute;n Oficial, de 2024 a 2026: la plataforma vieja,
+que publica hasta marzo de 2024, s&oacute;lo indexa el t&iacute;tulo del bolet&iacute;n y no el texto de los decretos. El
+contrato de 1998 lo cita el Decreto 29/2003.</p>
 <p>La evidencia de seguridad es internacional: el metaan&aacute;lisis de 65 estudios es de la Campbell
 Collaboration, actualizado por Braga y otros; la evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del
 plan municipal con diferencias en diferencias; los 35,5 minutos por turno provienen de un experimento de

@@ -2454,3 +2454,43 @@ a unas 240 personas, cuatro horas por día. Cien es supuesto propio: el relevami
 PDF: 40 páginas, 42 cuadros y gráficos del 1 al 42, índice verificado (52 entradas), sin "plata" fuera de La
 Plata, Río de la Plata y Mar del Plata, sin azul ni rojo, fuentes sin sustituciones, sin viudas; la página más
 alta, 2.693,6 pt. Excel: 13.348 fórmulas, cero errores; controles contra la ejecución 2025 y el repo en cero.
+
+# CIERRE DE LA TANDA · APLICADO (30/09)
+Rama claude/cool-hopper-3hdk58.
+
+## LOS DIEZ HALLAZGOS
+1 5.3: hasta el mes 27 la operación de todos los días la sigue haciendo la planta actual, como hoy; los juniors la
+toman cuando egresan. 2 6.2: el saldo no ejecutado pasa a la partida de esa zona el año siguiente (Ordenanza I, art.
+9). 3 Ordenanza V, art. 4: quince días corridos para firmar u observar la recepción; si no, resuelve la Comisión de
+Obras y Servicios Públicos del Concejo; sin silencio positivo (también en el 5.x de asociaciones de parque). 4
+Ordenanza II, art. 2: la espera por especialidad y por efector, las órdenes judiciales recibidas y cumplidas, y la
+matrícula por sede (y en "Las metas que no llevan ordenanza"). 5 6.6: quince riesgos; nuevos "El Municipio cobra una
+parte menor de lo que factura" (−426 M en 2031) y "La tasa del bono sube" (TAMAR + 7; siete cuotas en 2028 y 2029).
+6 6.1: sin Villa Gobernador Gálvez (la "primera quincena de marzo" es un proyecto de 2012, Exp. 4390/12, no
+sancionado) ni la Ciudad como precedente de fecha; la Ciudad queda, con su reglamento de mayo de 2004, para decir que
+la primera ronda informa y la priorización viene después (fila de fuente nueva). 7 anexo: la detección en vivo es a
+licitar, como en el 5.9. 8 obra vecinal: las redes en la calle; vivienda: la conexión de cada casa (cuadro 33 y 5.4).
+9 resuelto antes. 10 calendario: mes 12, turno en línea en los trece efectores; mes 6, llamado de la recolección; mes
+9, adjudicación; mes 25, los seis centros de apoyo escolar (dos por año, como el Excel).
+
+## LO DEMÁS
+- 6.6, la tabla en marzo: "cobra desde abril"; el año 1 cobra 1.437 M contra 1.806 M y 2028 cierra en +1.207. La
+  preparatoria se aprueba antes del 22 de diciembre (riesgo y mes 1 del calendario).
+- Ordenanza III, art. 5: el 10% de las partidas de mayor valuación no recibe el descuento por pago anual; el
+  Ejecutivo sólo publica la valuación que resulta. Cuánto rinde, como techo: ese 10% paga el 59,7% de la parte tierra
+  con la tabla nueva (49.214 de 82.457 M); si todas pagaran por adelantado con el 10%, 4.921 M por año. Lo real no se
+  puede calcular: no se publica quién paga por adelantado ni el porcentaje que fija el Ejecutivo. No va al documento.
+- Compromisos 15 y 16: a los cien días, las licitaciones lanzadas con fecha de apertura (y el decreto de transmisión
+  firmado); funcionan en el mes 9: llamado en el mes 3, adjudicación en tres meses (la 17/2008 tardó dos: Decretos
+  1113 y 1566 de 2008), tres meses de puesta en servicio en el pliego. El 16 sigue la misma regla que Nick fijó para
+  el 15 porque las cámaras corporales también se licitan.
+- Recolección, con el informe 12: cuatro licitaciones fracasadas (01/2004, 17/2008, 40/2019, 41/2022); el mismo grupo
+  desde el 30/4/1998 (LP 12/97, Decreto 29/2003); el contrato de seis meses de mayo de 2009, prorrogado hasta el
+  31/12/2026 o la adjudicación de su reemplazo (DECRE-2025-1507); "dos empresas compraron el pliego" en la 40/2019;
+  la 17/2008 adjudicada en forma provisoria antes de declararse desierta; la 01/2012 también adjudicada a la UTE. En el
+  5.5, el cuadro del capítulo 2, el 5.15, la meta 9, la nota del capítulo 1 y el Excel (Metas C14).
+- Página 40: crece a 2.761,3 pt, sin acortar nada.
+
+## ENTREGA
+PDF: 40 páginas, 42 cuadros y gráficos del 1 al 42, sin "plata" fuera de las excepciones, sin azul ni rojo, fuentes
+sin sustituciones, sin viudas. Excel: 13.348 fórmulas, cero errores; única diferencia con el anterior, Metas C14.
