@@ -2512,3 +2512,8 @@ Descargas en el scratchpad de la sesión (fiscalias/): decretos 2003-2026, bolet
   747.500 desde marzo de 2026 (683.008 $ de diciembre de 2025).
 - Cuántos: al 1 de enero, 10 (2022), 9 (2023), 8 (2024), 9 (2025) y 8 (2026); 15 desde el 22/6/2026.
 - Los 240.000 $ del programa no se tocaron.
+- Nick (30/09): los 240.000 $ quedan. En la fila "Pago" del cuadro 34 va, con hechos y sin adjetivos: "becas
+  designadas por decreto, fuera del régimen de pasantías, sin horas publicadas ni cobertura encontrada" (y en la fila
+  de fuentes, el Decreto 64/2026 y que ningún decreto encontrado cita la Ley 26.427 ni fija horas).
+- NO VA AL DOCUMENTO: la partida de 16,1 M del presupuesto 2026 contra 11,2 M por mes de gasto. Puede haber una
+  ampliación no publicada (en las modificaciones que se revisaron, Decretos 690 y 712 de 2026, no aparece).
