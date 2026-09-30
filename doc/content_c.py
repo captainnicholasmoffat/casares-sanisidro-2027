@@ -1094,8 +1094,8 @@ seniors.</p>
 el empleado estudia para el rol nuevo, conserva su sueldo y ocupa un puesto de la pir&aacute;mide. Son 77: 45 supervisores, 26 que sostienen la operaci&oacute;n de noche y los fines de semana, y 6 que atienden en cada zona
 a quien no puede usar solo la inteligencia artificial del Municipio. No cobran como pasantes. <span
 class="sg">Es un programa de reconversi&oacute;n, no de recorte</span>, y baja el costo nuevo, porque esos puestos
-ya se pagan. Hasta que egresan los primeros juniors, en el mes 27, la operaci&oacute;n la sostiene la planta
-reasignada.</p>
+ya se pagan. <b>Hasta el mes 27, la operaci&oacute;n de todos los d&iacute;as la sigue haciendo la planta actual,
+como hoy</b>; los juniors la toman cuando egresan.</p>
 </div>
 """ + exhead("c", "Los pasantes, en proyectos nuevos; la operaci&oacute;n de todos los d&iacute;as, en manos de juniors",
              "&Aacute;rea por &aacute;rea, en r&eacute;gimen: cu&aacute;ntos lugares hay para pasantes, qu&eacute; construyen o relevan, y cu&aacute;ntos juniors sostienen la operaci&oacute;n.",
@@ -1151,9 +1151,9 @@ cuatro. En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segund
 de los pasantes y juniors del Municipio (cuadro [[n:proyectos]]), y &eacute;stos son parte de esta
 pir&aacute;mide.</p>
 <p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de empleo, en r&eacute;gimen, 2.783,1 millones van a formaci&oacute;n, con la intermediaci&oacute;n adentro, y 1.855,4 a
-contratar desarrollos. A vivienda van 3.092,4 millones, y la vivienda es sobre todo agua, cloaca y gas de
-red donde faltan, que es lo que el cap&iacute;tulo 1 mide y lo que el art&iacute;culo 132 permite ejecutar
-a una asociaci&oacute;n vecinal.</p>
+contratar desarrollos. A vivienda van 3.092,4 millones. <b>La obra vecinal hace las redes de agua, cloaca y
+gas en la calle; la partida de vivienda, la conexi&oacute;n de cada casa</b> donde falta, que es lo que el
+cap&iacute;tulo 1 mide.</p>
 """ + exhead("c", "Los 7.730,9 millones de empleo y vivienda: 60% para empleo, 40% para vivienda",
              "Monto por a&ntilde;o una vez que el programa funciona completo, en pesos de diciembre de 2025.") + """
 <table>
@@ -1162,7 +1162,7 @@ a una asociaci&oacute;n vecinal.</p>
 <tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
 <tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, 464 cada seis meses, dos a&ntilde;os cada una: cursada y pasant&iacute;a</td></tr>
 <tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
-<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">&nbsp;</td></tr>
+<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">La conexi&oacute;n de cada casa al agua, la cloaca y el gas. Las redes en la calle, la obra vecinal (cap&iacute;tulo 4)</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por
@@ -1170,9 +1170,9 @@ persona, que pagan los dos a&ntilde;os de formaci&oacute;n; la pasant&iacute;a l
 <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
-es que la cloaca y el gas de red ya se financian con la obra vecinal que propone el cap&iacute;tulo 4:
-<span class="sg">sostener vivienda en dos tercios ser&iacute;a pagar dos veces lo mismo</span>. Lo que
-la partida de vivienda cubre es lo que la obra vecinal no alcanza.</p>
+es que las redes de cloaca y gas ya se financian con la obra vecinal que propone el cap&iacute;tulo 4:
+<span class="sg">sostener vivienda en dos tercios ser&iacute;a pagar dos veces lo mismo</span>. La obra
+vecinal hace las redes en la calle; la partida de vivienda, la conexi&oacute;n de cada casa.</p>
 <p><b>Los tres millones por persona son la propuesta.</b> El resto
 promete miles de egresados porque presupuesta a los docentes con lo que se les paga hoy, y por eso el
 certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor formadas, con
@@ -1242,9 +1242,10 @@ o no en su partida. Es la misma l&oacute;gica de todo este programa: primero el 
 decisi&oacute;n, y que la tome quien vive ah&iacute;.</p>
 </div>
 
-<p><b>Propuesta:</b> el d&eacute;ficit de servicios b&aacute;sicos se ataca con la partida de obra
-p&uacute;blica vecinal del cap&iacute;tulo 4, que es exactamente el tipo de obra que el art&iacute;culo
-132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal.</p>
+<p><b>Propuesta:</b> el d&eacute;ficit de servicios b&aacute;sicos se ataca con dos partidas. <b>La obra
+vecinal del cap&iacute;tulo 4 hace las redes en la calle</b>, que es exactamente el tipo de obra que el
+art&iacute;culo 132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal; <b>la partida de vivienda,
+3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa</b>.</p>
 """)
 
 
@@ -1450,8 +1451,10 @@ cap&iacute;tulo 4 usa, aplicada a un espacio concreto y no a una zona entera.</p
 <p><b>Tres facultades, y ninguna m&aacute;s.</b> Aviso previo obligatorio de cualquier obra en su
 espacio, con plazo para opinar <b>antes</b> de que se firme el contrato. Objeci&oacute;n por escrito,
 con respuesta fundada del Ejecutivo. Y <span class="sg">firma en la recepci&oacute;n de la obra: sin esa
-firma no se paga</span>, que es el momento en que la recepci&oacute;n libera el pago final.</p>
-<p><b>Con plazo y silencio positivo.</b> Si la asociaci&oacute;n no dice nada dentro del plazo, se da por
+firma no se paga</span>, que es el momento en que la recepci&oacute;n libera el pago final. Tiene quince
+d&iacute;as para firmar u observar; si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y
+Servicios P&uacute;blicos del Concejo.</p>
+<p><b>Con plazo y silencio positivo para objetar.</b> Si la asociaci&oacute;n no dice nada dentro del plazo, se da por
 conforme. No es un veto: cualquier disconformidad no puede paralizar una obra, o el mecanismo termina
 sirviendo para frenar y no para cuidar. Y se aplica s&oacute;lo al espacio verde que esa
 asociaci&oacute;n usa.</p>
@@ -2343,8 +2346,9 @@ cada escal&oacute;n tiene que ganarse con lo que el anterior demostr&oacute;. El
 seis comisiones pueden constituirse, priorizar y justificar cada peso. El 2, que pueden ejecutar obra por contrataci&oacute;n
 directa sin observaciones del Tribunal de Cuentas. El 3, que pueden sostenerlo con el padr&oacute;n
 renovado. Reci&eacute;n el 4 llega a la mitad.</p>
-<p><b>Qu&eacute; pasa si un escal&oacute;n no se cumple.</b> No se saltea y no se compensa al a&ntilde;o
-siguiente. La rampa se congela en el escal&oacute;n alcanzado. <span class="sg">Una rampa que avanza aunque el a&ntilde;o anterior haya fallado no es una
+<p><b>Qu&eacute; pasa si un escal&oacute;n no se cumple.</b> No se saltea: la rampa se congela en el escal&oacute;n
+alcanzado. Y lo que una zona no ejecut&oacute; no se pierde: el saldo pasa a la partida de esa misma zona el
+a&ntilde;o siguiente, como manda la Ordenanza I (art&iacute;culo 9). <span class="sg">Una rampa que avanza aunque el a&ntilde;o anterior haya fallado no es una
 rampa: es un calendario.</span></p>
 <p><b>Por qu&eacute; empezar en 12,5% y no en 5% ni en 25%.</b> En 5% la partida de una zona peque&ntilde;a
 ser&iacute;a demasiado poco para una obra real, y el mecanismo se probar&iacute;a con nada. En 25% un
@@ -2383,7 +2387,7 @@ que la comprueba.</p>
 <table>
 <colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
-<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la sesi&oacute;n extraordinaria de diciembre, las seis ordenanzas del 6.1, y la asamblea de concejales y mayores contribuyentes sanciona la de la base de valuaci&oacute;n: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
+<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la sesi&oacute;n extraordinaria de diciembre, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana. La preparatoria de la base de valuaci&oacute;n se aprueba antes del 22 de diciembre, y la asamblea de concejales y mayores contribuyentes la sanciona antes de fin de a&ntilde;o</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio; y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
@@ -2431,15 +2435,15 @@ vecinos antes del primer ciclo de asambleas.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
-<p class="tight">Trece cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
-""" + exhead("c", "Trece cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
+<p class="tight">Quince cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
+""" + exhead("c", "Quince cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
 <table>
 <colgroup><col style="width:150pt"><col></colgroup>
 <tr class="hd"><th>Riesgo</th><th>D&oacute;nde est&aacute; parado y qu&eacute; lo reduce</th></tr>
 <tr class="hi"><td class="l">El Concejo no acompa&ntilde;a <span class="tag m">Cr&iacute;tico</span></td>
 <td>Hacen falta trece votos y diez bloques se reparten veinticuatro bancas: nada se aprueba sin cuatro bloques de acuerdo. <b>Mitigaci&oacute;n:</b> el mecanismo est&aacute; dise&ntilde;ado para ser votable &mdash;no reforma la LOM, no pide facultades nuevas, no compite con el Concejo&mdash; y el primer proyecto, derogar los arts. 8 a 10, no le cuesta nada a ning&uacute;n bloque. Si aun as&iacute; no hay acuerdo, la rampa no arranca.</td></tr>
 <tr><td class="l">La tabla nueva no sale en diciembre</td>
-<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde el mes 4. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que el a&ntilde;o 1 cobra 1.437 millones en vez de 1.976, contra 1.806 que necesita el programa: 2028 cierra 369 millones peor que sin el programa, y aun as&iacute; con super&aacute;vit, +1.207. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la preparatoria va primera en la convocatoria de diciembre, para que la asamblea se re&uacute;na antes de fin de a&ntilde;o con los ocho d&iacute;as de citaci&oacute;n que pide la Ley Org&aacute;nica (art. 98) y con su integraci&oacute;n adecuada al Concejo nuevo, como pide el Tribunal de Cuentas. La de 2025 se reuni&oacute; el 17 de diciembre.</td></tr>
+<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde abril. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que <b>el a&ntilde;o 1 cobra 1.437 millones contra 1.806 que necesita el programa, y 2028 cierra en +1.207</b>. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la preparatoria va primera en la convocatoria de diciembre y se aprueba antes del 22, para que la asamblea se re&uacute;na antes de fin de a&ntilde;o con los ocho d&iacute;as de citaci&oacute;n que pide la Ley Org&aacute;nica (art. 98) y con su integraci&oacute;n adecuada al Concejo nuevo, como pide el Tribunal de Cuentas. La de 2025 se reuni&oacute; el 17 de diciembre.</td></tr>
 <tr><td class="l">Zonas sin asociaci&oacute;n vecinal en condiciones de ejecutar</td>
 <td>El art&iacute;culo 132 exige una asociaci&oacute;n como parte contratante; si no la hay, la zona no puede ejecutar. <b>Mitigaci&oacute;n:</b> el Municipio convoca y acompa&ntilde;a la constituci&oacute;n (4.6), y mientras tanto la partida de esa zona se ejecuta por administraci&oacute;n, en esa zona. La priorizaci&oacute;n vecinal funciona igual: lo que se demora es la ejecuci&oacute;n directa.</td></tr>
 <tr><td class="l">La tecnicatura no tiene validez nacional a tiempo</td>
@@ -2450,8 +2454,21 @@ vecinos antes del primer ciclo de asambleas.</p>
 <td>Una partida por zona es un premio y atrae a quien quiera administrarla. <b>Mitigaci&oacute;n:</b> un voto por persona; asamblea abierta, y cualquiera puede saber qui&eacute;n fue; cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; contrat&oacute; su comisi&oacute;n, a qui&eacute;n y por cu&aacute;nto; y el 60% de adhesi&oacute;n por escrito que exige la propia ley para contratar. Ninguna de las cuatro depende de la buena fe de la comisi&oacute;n.</td></tr>
 <tr><td class="l">Los recursos propios crecen menos de 1,2% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
+<tr><td class="l">El Municipio cobra una parte menor de lo que factura</td>
+<td>Hoy cobra el 89,32%, y tres puntos menos dejan las cuentas de 2031 pr&aacute;cticamente en cero: &minus;426
+millones (3.6). Una parte de lo que no se cobra es descuento, que decide el propio Municipio, y otra es mora
+(3.2). <b>Mitigaci&oacute;n:</b> el programa no se paga con la cobranza, as&iacute; que no la necesita; y la
+Ordenanza III le pone tope al descuento por pago anual (anexo).</td></tr>
 <tr><td class="l">La coparticipaci&oacute;n se acelera</td>
-<td>El menos grave de los dos fiscales y el &uacute;nico que no depende del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y la sensibilidad del 3.6 la mide: si cae 3,5% por a&ntilde;o, el resultado de 2031 baja de +10.236 a +5.342 millones.</td></tr>
+<td>El menos grave de los tres que mide la sensibilidad del 3.6 y, con la tasa del bono, uno de los dos que no
+dependen del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom&aacute;tico de la Ley 10.559. <b>Mitigaci&oacute;n:</b> el modelo ya carga la ca&iacute;da, y la sensibilidad del 3.6 la mide: si cae 3,5% por a&ntilde;o, el resultado de 2031 baja de +10.236 a +5.342 millones.</td></tr>
+<tr><td class="l">La tasa del bono sube</td>
+<td>El bono de 30.000 millones de agosto de 2026 paga una tasa variable &mdash;TAMAR, la tasa de referencia de
+los bancos, m&aacute;s 7 puntos&mdash;, y siete de sus ocho cuotas de capital las paga el gobierno que asume en
+diciembre de 2027, las siete en 2028 y 2029 (3.5). El modelo no lo proyecta: est&aacute; en pesos
+constantes y la tasa es nominal. <b>Sin mitigaci&oacute;n del lado de la tasa</b>, que la fija el mercado. Lo
+que s&iacute; hace el programa: no toma deuda, y en 2028 y 2029 la tabla nueva cobra m&aacute;s de lo que el
+programa gasta, as&iacute; que deja las cuentas mejor que no hacer nada justo en los a&ntilde;os del bono (3.6).</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio.</td></tr>
 <tr class="hi"><td class="l">La inteligencia artificial del Municipio no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>

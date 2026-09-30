@@ -102,8 +102,10 @@ Oficial donde &eacute;sta sea exigible.</p>
 decretos de adjudicaci&oacute;n, con oferentes, adjudicatario, monto y <b>domicilio del
 adjudicatario</b>; el estado de avance de cada obra priorizada; los reclamos y su tiempo de respuesta;
 el precio unitario y el stock de los insumos y medicamentos de cada efector de salud; la ocupaci&oacute;n
-de las guardias; los datos de patrullaje, c&aacute;maras operativas y tiempos de respuesta del servicio
-municipal de emergencias; y las personas que consiguieron empleo por intermediaci&oacute;n municipal.
+de las guardias y la espera de un turno por especialidad y por efector; los datos de patrullaje, c&aacute;maras
+operativas y tiempos de respuesta del servicio municipal de emergencias, y cu&aacute;ntas &oacute;rdenes judiciales
+se recibieron y cu&aacute;ntas se cumplieron; la matr&iacute;cula de cada sede de apoyo escolar y de formaci&oacute;n
+laboral; y las personas que consiguieron empleo por intermediaci&oacute;n municipal.
 <b>&Uacute;nicamente la ejecuci&oacute;n presupuestaria se actualiza cada trimestre</b>, por
 depender del cierre contable.</p>
 
@@ -195,7 +197,10 @@ obra prosigue. <b>La objeci&oacute;n no suspende por s&iacute; la ejecuci&oacute
 
 <h3>Art&iacute;culo 4 &mdash; Recepci&oacute;n</h3>
 <p class="tight">La asociaci&oacute;n suscribe el acta de recepci&oacute;n de la obra ejecutada en su
-espacio. La recepci&oacute;n sin esa firma no habilita el pago final.</p>
+espacio, o la observa por escrito, dentro de los <b>quince (15) d&iacute;as corridos</b> de notificada. Sin esa
+firma, la recepci&oacute;n no habilita el pago final. Vencido el plazo sin firma ni observaci&oacute;n, la
+recepci&oacute;n la resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante:
+<b>en la recepci&oacute;n no hay silencio positivo.</b></p>
 
 <h2>VI &middot; Ordenanza de la partida propia de g&eacute;nero</h2>
 
@@ -322,14 +327,15 @@ laboral tiene sus reglas en la Ordenanza X &mdash;pasant&iacute;as, incentivo do
 personas forma por a&ntilde;o tambi&eacute;n lo fija el presupuesto.</p>
 <p><b>La cuarta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
-<p><b>Y la quinta se resuelve operando lo que ya se compr&oacute;:</b> la detecci&oacute;n en
-vivo y la reconstrucci&oacute;n de recorrido son configuraci&oacute;n del sistema de c&aacute;maras que
-el Municipio ya tiene, no una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
+<p><b>Y la quinta se resuelve con lo que ya se compr&oacute; y lo que se licita:</b> la detecci&oacute;n en
+vivo y la reconstrucci&oacute;n de recorrido corren sobre las c&aacute;maras que el Municipio ya tiene, y la
+anal&iacute;tica que las hace funcionar es a licitar, dentro de los 1.200 millones del cap&iacute;tulo 3, como dice
+el 5.9. No es una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
 se ordena por decreto.</p>
 <p><span class="sg">De las cinco, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
-la espera por especialidad, el precio unitario, el stock y la inserci&oacute;n laboral entran en el
-art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
+la espera por especialidad, el precio unitario, el stock, la matr&iacute;cula por sede, las &oacute;rdenes
+judiciales y la inserci&oacute;n laboral entran en el art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
 se puede es que el resultado se vea.</p>
 </div>
 """)
