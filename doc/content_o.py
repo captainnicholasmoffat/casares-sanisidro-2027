@@ -187,14 +187,15 @@ que el del agente.</p>
 uso regular de un espacio verde p&uacute;blico determinado, con el r&eacute;gimen de la Ordenanza
 6045/1984. Sus facultades se ejercen <b>s&oacute;lo respecto de ese espacio</b>.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Aviso previo y objeci&oacute;n</h3>
-<p class="tight">El Departamento Ejecutivo notificar&aacute; a la asociaci&oacute;n toda obra proyectada
-en su espacio <b>antes de suscribir el contrato</b>, con plazo para expedirse. La asociaci&oacute;n
-podr&aacute; objetar por escrito y el Departamento Ejecutivo deber&aacute; responder en forma fundada.</p>
+<h3>Art&iacute;culo 2 &mdash; Dictamen previo</h3>
+<p class="tight"><b>Ninguna obra en el espacio de una asociaci&oacute;n de parque se contrata sin su dictamen
+previo.</b> El Departamento Ejecutivo le remite el proyecto, con su costo y sus planos, antes que a nadie, y la
+asociaci&oacute;n dictamina por escrito dentro de los treinta (30) d&iacute;as corridos; vencido el plazo, quien deba
+decidir la obra decide sin el dictamen. El Departamento Ejecutivo responde en forma fundada a cada observaci&oacute;n.</p>
 
-<h3>Art&iacute;culo 3 &mdash; Silencio positivo</h3>
-<p class="tight">Vencido el plazo sin objeci&oacute;n, se tiene por conforme a la asociaci&oacute;n y la
-obra prosigue. <b>La objeci&oacute;n no suspende por s&iacute; la ejecuci&oacute;n.</b></p>
+<h3>Art&iacute;culo 3 &mdash; Dise&ntilde;o y seguimiento</h3>
+<p class="tight">La asociaci&oacute;n participa del dise&ntilde;o de la recuperaci&oacute;n de su espacio desde el principio,
+y sigue el avance y el costo por metro de cada obra en el Sistema de Informaci&oacute;n Municipal.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Recepci&oacute;n</h3>
 <p class="tight">La asociaci&oacute;n suscribe el acta de recepci&oacute;n de la obra ejecutada en su

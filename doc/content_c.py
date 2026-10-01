@@ -1459,9 +1459,10 @@ programada para julio y cay&oacute; en septiembre. Los dos
 funcionaban desde 1996 con permiso precario y gratuito sobre terreno p&uacute;blico, sin pagar canon, y
 el decreto original preve&iacute;a revocarlo. <span class="sg">Nadie deber&iacute;a usar treinta
 a&ntilde;os gratis un predio que es de todos.</span></p>
-<p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran 9.775 metros cuadrados
-construidos frente al r&iacute;o, con locales en actividad que empleaban gente y tra&iacute;an
-p&uacute;blico al Bajo. <span class="sg">Revocar el permiso y adjudic&aacute;rselo a otro que pague es una
+<p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran dos locales en actividad
+sobre un predio de 9.775 metros cuadrados frente al r&iacute;o &mdash;s&oacute;lo la estructura de Catalejo ten&iacute;a
+m&aacute;s de mil metros cuadrados, seg&uacute;n el Municipio&mdash;, que empleaban gente y tra&iacute;an p&uacute;blico al
+Bajo. <span class="sg">Revocar el permiso y adjudic&aacute;rselo a otro que pague es una
 cosa; demolerlo es otra.</span> Lo primero convierte un activo que no rend&iacute;a nada en uno que rinde.
 Lo segundo lo borra.</p>
 <p><b>Y no hubo llamado, no hubo pliego, no hubo concurso.</b> Un predio en el punto de mayor valor de la
@@ -1513,6 +1514,9 @@ podr&iacute;a limitar la capacidad del Municipio para intervenir y llevar a cabo
 <p><b>Ninguna obra nueva se paga ampliando un contrato de mantenimiento:</b> licitaci&oacute;n propia, cualquiera
 sea el monto. <b>Evaluaci&oacute;n de impacto ambiental obligatoria en toda obra en la costa</b>, incluidos los
 pilotos de arena.</p>
+<p><b>Ning&uacute;n cemento en un parque ni en la costa sin los vecinos:</b> el dictamen de la asociaci&oacute;n de cada
+parque, y la decisi&oacute;n de la comisi&oacute;n de la zona en sus parques o del panel sorteado en la costa (m&aacute;s
+abajo).</p>
 <p><b>Naturaleza donde la evidencia la respalda, sin exagerar.</b> El juncal baja en promedio el 72% la altura de
 las olas chicas, pero no frena la subida del agua en una sudestada, que sigue necesitando albardones y
 bombeo. Y los muros verticales son los que m&aacute;s fallan en una tormenta: un hurac&aacute;n da&ntilde;&oacute; el 76% de los
@@ -1524,25 +1528,28 @@ las dem&aacute;s.</p>
 
 <h3>El que usa el parque est&aacute; ah&iacute; todos los d&iacute;as</h3>
 <p class="tight">El cap&iacute;tulo 4 resolvi&oacute; qui&eacute;n decide qu&eacute; obra se hace. Falta
-qui&eacute;n cuida el espacio verde el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la
+qui&eacute;n cuida cada parque el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la
 plaza est&aacute; ah&iacute; siempre y se entera antes que cualquier sistema.</p>
 <div class="cols">
-<p><b>Proponemos asociaciones de parque, reconocidas por ordenanza</b>, con el marco de la 6045 extendido al espacio
-verde. No es un &oacute;rgano nuevo: es la misma figura de asociaci&oacute;n vecinal que el
-cap&iacute;tulo 4 usa, aplicada a un espacio concreto y no a una zona entera.</p>
-<p><b>Tres facultades, y ninguna m&aacute;s.</b> Aviso previo obligatorio de cualquier obra en su
-espacio, con plazo para opinar <b>antes</b> de que se firme el contrato. Objeci&oacute;n por escrito,
-con respuesta fundada del Ejecutivo. Y <span class="sg">firma en la recepci&oacute;n de la obra: sin esa
-firma no se paga</span>, que es el momento en que la recepci&oacute;n libera el pago final. Tiene quince
-d&iacute;as para firmar u observar; si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y
-Servicios P&uacute;blicos del Concejo.</p>
-<p><b>Con plazo y silencio positivo para objetar.</b> Si la asociaci&oacute;n no dice nada dentro del plazo, se da por
-conforme. No es un veto: cualquier disconformidad no puede paralizar una obra, o el mecanismo termina
-sirviendo para frenar y no para cuidar. Y se aplica s&oacute;lo al espacio verde que esa
-asociaci&oacute;n usa.</p>
+<p><b>Proponemos asociaciones de parque: vecinos organizados que cuidan cada parque</b>, reconocidas por ordenanza
+con el marco de la 6045 extendido al espacio verde. No es un &oacute;rgano nuevo: es la misma figura de
+asociaci&oacute;n vecinal que el cap&iacute;tulo 4 usa, aplicada a un parque y no a una zona entera. <b>En varios
+parques ya existen:</b> el Concejo salud&oacute; en abril de 2026 a la asamblea del Parque del &Aacute;guila, y en 2012
+la Asamblea Bosque Alegre present&oacute; un proyecto con 4.000 adhesiones para proteger el bosque. El programa los
+reconoce y les da poder.</p>
+<p><b>Ninguna obra en un parque sin el dictamen de su asociaci&oacute;n.</b> La asociaci&oacute;n participa del
+dise&ntilde;o de la recuperaci&oacute;n desde el principio; recibe la informaci&oacute;n de cada obra antes que nadie y
+la sigue con la inteligencia artificial del Municipio &mdash;costo por metro y avance&mdash;; y <span
+class="sg">firma la recepci&oacute;n: sin esa firma no se paga</span>. Tiene quince d&iacute;as para firmar u observar;
+si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo.</p>
+<p><b>Y qui&eacute;n decide.</b> La obra en los parques de cada zona la vota la comisi&oacute;n de esa zona; la de la
+costa, que es de todo el partido, la decide el panel sorteado del cap&iacute;tulo 4. En un parque costero, como el
+del &Aacute;guila, las dos cosas: el dictamen de su asociaci&oacute;n y la decisi&oacute;n del panel.</p>
+<p><b>Con plazo.</b> Si la asociaci&oacute;n no dictamina a tiempo, la comisi&oacute;n o el panel deciden igual. No es
+un veto: una disconformidad no puede paralizar una obra, o el mecanismo termina sirviendo para frenar y no
+para cuidar.</p>
 <p><b>Qu&eacute; corrige.</b> Se cementa lo que estaba verde, y pasa porque la obra se decide arriba y
-nadie con inter&eacute;s en ese parque tiene c&oacute;mo frenarla a tiempo: no existe nadie con facultad
-de objetar antes de la firma.</p><p><span class="sg">Lo que proponemos crea a ese alguien.</span></p>
+nadie con inter&eacute;s en ese parque tiene c&oacute;mo intervenir a tiempo.</p><p><span class="sg">Lo que proponemos crea a ese alguien.</span></p>
 </div>
 
 <div class="pull"><div class="plabel">Y hab&iacute;a 1.037 firmas pidiendo lo contrario</div>
@@ -2398,7 +2405,7 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hi"><td class="l">1 &middot; La ordenanza que reserva el dinero de obra que decide cada zona, con la f&oacute;rmula de reparto escrita en el texto</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
 <tr class="hi"><td class="l">2 &middot; La derogaci&oacute;n de los art&iacute;culos que hoy permiten al intendente disolver una asociaci&oacute;n vecinal</td><td class="n">Expediente de ingreso y acta de sesi&oacute;n</td></tr>
 <tr><td class="l">3 &middot; La ordenanza que actualiza la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra y con un tope de suba de 25% por a&ntilde;o, sancionada con la asamblea de concejales y mayores contribuyentes para que cobre desde enero</td><td class="n">Expediente y Bolet&iacute;n Oficial</td></tr>
-<tr><td class="l">4 &middot; El reconocimiento de las primeras asociaciones de parque, con sus tres facultades: aviso previo de cualquier obra en su espacio, objeci&oacute;n por escrito y firma en la recepci&oacute;n</td><td class="n">Ordenanza; el registro se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">4 &middot; El reconocimiento de las primeras asociaciones de parque, empezando por el &Aacute;guila y el Bosque Alegre: dictamen previo de toda obra en su parque, lugar en el dise&ntilde;o, la informaci&oacute;n antes que nadie y la firma en la recepci&oacute;n</td><td class="n">Ordenanza; el registro se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">5 &middot; La adhesi&oacute;n a la Ley provincial 15.302 de espacios culturales</td><td class="n">Ordenanza de adhesi&oacute;n</td></tr>
 <tr><td class="l">6 &middot; El pliego de la recolecci&oacute;n de residuos &mdash;frecuencias, horarios, zonas y penalidades&mdash;, para aprobarse antes del llamado</td><td class="n">Expediente del pliego</td></tr>
 <tr class="hd"><td class="l" colspan="2">Lo que no depende del Concejo</td></tr>
