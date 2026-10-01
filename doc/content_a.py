@@ -134,7 +134,7 @@ _IDX = [
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
- ("i", "Las fuentes de lo que afirma el texto", "metodo"),
+ ("i", "Las fuentes de lo que afirma el texto", "fuentes"),
 ]
 
 def _indice():
@@ -409,8 +409,8 @@ donde est&aacute; el problema.</li>
 METODO = dict(id="metodo", runhead=RH, html="""
 <h1>Nota de m&eacute;todo</h1>
 <div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, al final de esta
-nota.</p>
+<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, en la p&aacute;gina
+que sigue a esta nota.</p>
 <div class="cols">
 <p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026, y donde el texto
 dice &laquo;hoy&raquo; se refiere a esa fecha. Hay cuatro excepciones: el modelo fiscal est&aacute; cerrado al 31 de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; la valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026; y lo que la lista de fuentes fecha despu&eacute;s del corte lleva su fecha al lado.</p>

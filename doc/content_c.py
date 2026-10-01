@@ -1374,6 +1374,11 @@ tener silenciador</span>. No hace falta perseguir a nadie.</p>
 <p>En los 15.464 actos administrativos publicados en el Bolet&iacute;n Oficial entre febrero de 2024 y
 septiembre de 2026, <span class="sg">la expresi&oacute;n &laquo;convenio urban&iacute;stico&raquo; no
 aparece ni una sola vez.</span></p>
+<p><b>Hoy, lo que se da de m&aacute;s se da por decreto.</b> Lo que otorga m&aacute;s de lo que permite la zona
+son factibilidades firmadas por el intendente, con herramientas que el propio C&oacute;digo de Ordenamiento Urbano le
+deja: la urbanizaci&oacute;n especial, con alturas fijadas caso por caso (art&iacute;culo 1.2.1.1); un apartamiento
+de hasta el 10% &laquo;por casos particulares&raquo; (art&iacute;culo 1.1.2.6); y premios por cocheras, por cesiones o
+por demoler usos que la zona no admite. <span class="sg">Nada de eso pasa por el Concejo.</span></p>
 <p><b>Lo que s&iacute; aparece son decretos individuales:</b> 95 decretos de materia urban&iacute;stica
 &mdash;permisos de localizaci&oacute;n, factibilidades y afines&mdash; de los cuales 73 identifican un
 inmueble concreto. Y una sola ordenanza que toca el C&oacute;digo de Ordenamiento Urbano en todo el
@@ -1385,24 +1390,51 @@ re&uacute;ne tres en dos a&ntilde;os y medio. El desarrollo tambi&eacute;n tiene
 <p><b>Eso significa que el desarrollo urbano se decide caso por caso, por decreto del Ejecutivo</b>, y no
 por una norma que el Concejo discuta y vote. Cada permiso es legal; lo que no existe es la instancia donde
 se discuta el conjunto.</p>
+<p><b>Y no siempre se ve qu&eacute; se dio.</b> De cien actos revisados desde diciembre de 2023, catorce dieron
+m&aacute;s que el valor b&aacute;sico de la zona; en los cuatro m&aacute;s grandes de 2026 no se publicaron el factor de
+ocupaci&oacute;n, las alturas ni la cantidad de unidades; y otros tres cambiaron la cesi&oacute;n de una calle por
+dinero: 2.030 millones de pesos de 2025 por 5.890 metros cuadrados. En el mismo per&iacute;odo el Concejo no
+convalid&oacute; ninguna excepci&oacute;n por ordenanza, y el intendente vet&oacute; cuatro ordenanzas del Concejo,
+entre ellas la que proteg&iacute;a un tramo de la ribera.</p>
 <p><b>Y explica el reclamo vecinal.</b> Cuando los vecinos objetan la construcci&oacute;n en altura y
 hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aacute;mbito donde plantearlo,
 porque estas decisiones no pasan por el cuerpo deliberativo.</b></p><p>Este programa propone que el criterio
 se discuta y se vote, y que cualquier vecino pueda preguntar qu&eacute; permisos se dieron en su localidad.</p>
-<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en menos de veinti&uacute;n d&iacute;as h&aacute;biles.</b>
-La reforma del C&oacute;digo de Ordenamiento Urbano se vot&oacute; el <b>6 de mayo de 2026</b>. Vecinos
-de Villa Adelina, Boulogne, B&eacute;ccar y La Horqueta denuncian que <b>se aprob&oacute; en menos de
-veinti&uacute;n d&iacute;as h&aacute;biles, sin audiencia p&uacute;blica y sin los estudios de impacto ambiental
-previos</b>, y que las comisiones se reunieron sin ellos.</p>
+<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veintid&oacute;s d&iacute;as h&aacute;biles.</b>
+La reforma del C&oacute;digo de Ordenamiento Urbano, la Ordenanza 9432, se vot&oacute; el <b>6 de mayo de 2026</b>,
+veintid&oacute;s d&iacute;as h&aacute;biles despu&eacute;s de entrar al Concejo, <b>sin audiencia p&uacute;blica y sin estudio de
+impacto ambiental ni de las redes</b>: el expediente trae un solo estudio t&eacute;cnico, de transporte, hecho con
+&laquo;supuestos est&aacute;ndar de planificaci&oacute;n&raquo;. Ninguna norma municipal ped&iacute;a la audiencia: el
+C&oacute;digo no la nombra ni una vez.</p>
 <p><span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
 instancia de participaci&oacute;n</span>: lo que este programa propone es la instancia, no el tr&aacute;mite.</p>
 <p><b>Y hay un caso donde el &uacute;nico &aacute;mbito que funcion&oacute; fue un juzgado.</b> En
 Boulogne, la asamblea vecinal que reclama un parque p&uacute;blico en el predio lindero al ex Arsenal
-consigui&oacute; en <b>agosto de 2025 una medida cautelar</b> que orden&oacute; suspender la
-construcci&oacute;n de un barrio cerrado, ratificada en septiembre.
+consigui&oacute; en <b>julio de 2025 una medida cautelar</b> que suspendi&oacute; la obra; la C&aacute;mara la
+confirm&oacute; en septiembre, y el 30 de diciembre, despu&eacute;s de una nueva consulta del Municipio, un juzgado la
+levant&oacute;, en una resoluci&oacute;n que figura como no firme.
 <b>Cuando un juez tiene que frenar una obra porque no hubo d&oacute;nde discutirla, el problema no es el
 juez: es que falta el &aacute;mbito.</b> Boulogne es la localidad m&aacute;s poblada del partido y la que
 menos espacio verde tiene.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos para las excepciones</div>
+<p><b>No se trata de prohibir excepciones: se trata de frenar las excepciones que no se justifican.</b>
+Proponemos que ninguna excepci&oacute;n ni cambio de zona salga sin <b>audiencia p&uacute;blica y sin dictamen de la
+comisi&oacute;n vecinal de la zona</b>, los dos previos y obligatorios, con respuesta por escrito a cada
+observaci&oacute;n.</p>
+<p><b>Y que lo que la zona rechace no salga.</b> El voto vecinal no puede obligar al Concejo, que sanciona las
+ordenanzas &laquo;con exclusividad&raquo; (Ley Org&aacute;nica, art&iacute;culo 24). Lo que s&iacute; puede hacer el intendente, y
+proponemos que se comprometa a hacerlo por ordenanza, es no otorgar por decreto lo que la zona rechace y vetar la
+ordenanza de excepci&oacute;n que la zona rechace: el Concejo s&oacute;lo la impone con 16 de sus 24 votos.</p>
+<p><b>Que la valorizaci&oacute;n pague.</b> La Ley provincial 14.449 obliga a cobrar por ordenanza al menos el 10% de lo
+que se valoriza un terreno por una decisi&oacute;n municipal, y San Isidro adhiri&oacute; en 2017 pero no la cobra.
+Proponemos el <b>15%</b>, como La Plata, y que vaya a vivienda y a obra donde falta.</p>
+<p><b>Y la inteligencia artificial del Municipio, del lado del vecino.</b> Registra cada excepci&oacute;n y detecta a
+quienes se repiten; compara lo aprobado con el C&oacute;digo y, con im&aacute;genes, lo construido de m&aacute;s; avisa a los
+vecinos de la zona y les arma el caso: qu&eacute; permite el C&oacute;digo y qu&eacute; se pide de m&aacute;s, los precedentes, el
+impacto en cloacas, agua, tr&aacute;nsito y desag&uuml;es, cu&aacute;nto se valoriza el terreno, el historial de quien lo
+pide y un borrador de intervenci&oacute;n para la audiencia, con las normas citadas. Para cualquier vecino.</p>
 </div>
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
@@ -1444,6 +1476,38 @@ escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
 <p><b>La costa no es de una zona, y la secci&oacute;n 4.6 ya fija la regla.</b> Lo que hoy no paga nada deber&iacute;a pagar; lo que puede generar
 trabajo deber&iacute;a generarlo.</p>
 </div>
+<h3>Cemento o naturaleza: la obra en parques y costa</h3>
+<div class="cols">
+<p><b>Hoy, la obra m&aacute;s visible de la costa no tuvo licitaci&oacute;n propia.</b> El Paseo 33 Orientales se
+pag&oacute; ampliando contratos que ya exist&iacute;an; el de mantenimiento de espacios verdes, al 99% de su monto. El
+Decreto 1077/2025 dice que esos fondos &laquo;fueron aplicados a cubrir los costos de obras de envergadura no previstas
+inicialmente, tales como el Paseo 33 Orientales&raquo;, y ning&uacute;n acto publicado da el monto por obra.</p>
+<p><b>En ese mismo contrato, el mismo cesto de acero cuesta 1.887.875 $ en una zona y 339.743 $ en la otra</b>,
+con precios desde marzo de 2025, y no se public&oacute; el an&aacute;lisis de precios que explique la diferencia. En las
+dos licitaciones propias m&aacute;s grandes, de mobiliario y de juegos, qued&oacute; una sola oferta admisible por
+rengl&oacute;n, y se adjudicaron 8,1% y 8,4% por encima del presupuesto oficial.</p>
+<p><b>No se encontr&oacute; ninguna evaluaci&oacute;n de impacto ambiental de una obra p&uacute;blica en la costa.</b> Y desde
+julio de 2026 avanza una obra de 907 metros entre el Parque del &Aacute;guila y Alvear, en la ribera que
+proteg&iacute;a una ordenanza vetada, sin licitaci&oacute;n, convenio ni monto publicados; seg&uacute;n el Municipio, la
+hace un privado.</p>
+<p><b>Esa ordenanza era la 9395</b>, de mayo de 2025, que proteg&iacute;a los &aacute;rboles y los juncales de ese tramo.
+El intendente la vet&oacute; (Decreto 614/2025) porque &laquo;una protecci&oacute;n excesiva de dicha zona en esta etapa
+podr&iacute;a limitar la capacidad del Municipio para intervenir y llevar a cabo futuras mejoras&raquo;.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos para la obra en parques y costa</div>
+<p><b>Ninguna obra nueva se paga ampliando un contrato de mantenimiento:</b> licitaci&oacute;n propia, cualquiera
+sea el monto. <b>Evaluaci&oacute;n de impacto ambiental obligatoria en toda obra en la costa</b>, incluidos los
+pilotos de arena.</p>
+<p><b>Naturaleza donde la evidencia la respalda, sin exagerar.</b> El juncal baja en promedio el 72% la altura de
+las olas chicas, pero no frena la subida del agua en una sudestada, que sigue necesitando albardones y
+bombeo. Y los muros verticales son los que m&aacute;s fallan en una tormenta: un hurac&aacute;n da&ntilde;&oacute; el 76% de los
+relevados, y en las marismas no se detect&oacute; da&ntilde;o. Con los precios del propio contrato municipal,
+un sendero de tosca cuesta la quinta parte que uno de hormig&oacute;n.</p>
+<p><b>Y la inteligencia artificial del Municipio muestra el costo por metro de cada obra</b>, comparado con el de
+las dem&aacute;s.</p>
+</div>
+
 <h3>El que usa el parque est&aacute; ah&iacute; todos los d&iacute;as</h3>
 <p class="tight">El cap&iacute;tulo 4 resolvi&oacute; qui&eacute;n decide qu&eacute; obra se hace. Falta
 qui&eacute;n cuida el espacio verde el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la

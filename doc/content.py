@@ -60,10 +60,11 @@ C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
 
-# nota de metodo, notas de cada capitulo y fuentes del texto: una sola pagina,
-# la ultima del documento (correccion 138, respuesta 6)
+# nota de metodo y notas de cada capitulo en una pagina; las fuentes del texto, en la
+# siguiente, la ultima del documento (correccion 138, respuesta 6; la 40 pasaba de 2.700 pt)
 METODO = dict(A.METODO)
-METODO["html"] = A.METODO["html"] + F.FUENTES_HTML
+FUENTES = dict(id="fuentes", runhead=A.RH,
+               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1))
 
 # el anexo articulado entra en dos paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,
@@ -72,7 +73,7 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5A4, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, D.GLOSARIO, METODO]
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, D.GLOSARIO, METODO, FUENTES]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:
