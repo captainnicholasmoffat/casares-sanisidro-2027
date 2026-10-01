@@ -1350,23 +1350,37 @@ obliga a las motos a llevar silenciador de escape; lo que falta no es la norma, 
 </div>
 <div class="callout a">
 <div class="clabel">La herramienta, hoy</div>
-<p><b>La medici&oacute;n autom&aacute;tica de ruido con lectura de patente existe, pero casi en ninguna
-parte multa todav&iacute;a.</b> Par&iacute;s la ensaya desde 2022 con un umbral de 85 decibeles y
-<b>a&uacute;n no emite una sola multa</b>: falta la homologaci&oacute;n metrol&oacute;gica del
-instrumento y el Consejo de Estado pidi&oacute; una nueva base legislativa. El Reino Unido hizo su
-prueba en modo simulado, sin sancionar. Barcelona tiene once puntos instalados y tampoco multa.</p>
-<p><b>El &uacute;nico lugar que hoy multa de verdad es Nueva York</b>, con una ley de 2024: doce
-c&aacute;maras emitieron 1.691 actas en 2025 sobre 15.994 eventos capturados &mdash;el 11%&mdash;.
-<span class="sg">No se encontr&oacute; ning&uacute;n caso implementado en la Argentina ni en la
-regi&oacute;n.</span></p>
-<p><b>Por eso el orden que este programa propone es el inverso al del anuncio.</b> Primero la ordenanza
-que hoy no existe y la medici&oacute;n con sensores donde est&aacute; el problema, para saber
-d&oacute;nde y cu&aacute;nto. <b>La sanci&oacute;n autom&aacute;tica reci&eacute;n cuando el
-instrumento est&eacute; homologado</b>, igual que el radar de velocidad: si no, la primera apelaci&oacute;n
-tumba el sistema entero y con &eacute;l la ordenanza.</p>
-<p><b>Lo que se promete</b> es la norma, la medici&oacute;n y que cualquier vecino pueda preguntar qu&eacute; midieron los sensores de su zona. Y
-el efecto buscado no es recaudar: <span class="sg">con dos multas, el ca&ntilde;o de escape vuelve a
-tener silenciador</span>. No hace falta perseguir a nadie.</p>
+<p><b>La medici&oacute;n de ruido con lectura de patente ya multa en tres lugares, y en los tres revisa una persona
+antes.</b> Nueva York la prueba desde 2021 y multa desde 2022: 1.602 actas hasta fines de 2024, y en 2025 doce
+c&aacute;maras emitieron 1.691 sobre 15.994 eventos &mdash;el 11%&mdash;. La multa por escape va de 800 a 2.625
+d&oacute;lares, y el personal mira cada video antes de mandar el aviso. En Kensington y Chelsea, en Londres, hay
+c&aacute;maras desde 2020: entre noviembre de 2021 y octubre de 2024 registraron 1.615 infracciones y aplicaron 577
+multas de 100 libras, decididas despu&eacute;s de revisar los datos a mano. Y Taiw&aacute;n multa desde 2021, con
+m&aacute;s de 300 equipos.</p>
+<p><b>En otros lugares, todav&iacute;a no.</b> Francia la ensaya con un umbral de 85 decibeles y una multa prevista
+de 135 euros, pero ninguna ciudad la aplica: falta homologar el instrumento. El ensayo nacional ingl&eacute;s
+funcion&oacute; sin sancionar, y calcul&oacute; que un sensor se paga solo si registra al menos dos casos genuinos por
+d&iacute;a. En Jap&oacute;n, un prototipo de investigaci&oacute;n con 31 micr&oacute;fonos e inteligencia artificial
+todav&iacute;a no multa, y Barcelona tiene once puntos instalados que tampoco multan. <span class="sg">No se
+encontr&oacute; ning&uacute;n caso en la Argentina ni en la regi&oacute;n.</span></p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: qu&eacute; hace la inteligencia artificial</div>
+<p><b>Distingue un escape adulterado de una sirena o una bocina</b>, y sincroniza el sonido con la c&aacute;mara que
+lee la patente. Ning&uacute;n sistema en uso lo hace solo todav&iacute;a: en Nueva York esa separaci&oacute;n la hacen
+inspectores a mano, y un ensayo de Cornell Tech con sus datos acert&oacute; el 98,5% de los casos que no eran
+infracci&oacute;n y el 71% de los que s&iacute;. <span class="sg">Por eso ac&aacute; tambi&eacute;n decide una
+persona.</span></p>
+<p><b>Arma la prueba y un inspector la valida antes de multar</b>: audio, video, decibeles, patente, hora y lugar.
+La escala es un aviso con d&oacute;nde arreglarlo, despu&eacute;s la multa, y m&aacute;s si reincide. En los
+colectivos, la prueba va a la empresa y a la autoridad de transporte.</p>
+<p><b>Sensores donde se concentran los reclamos, homologados y calibrados como los radares de velocidad.</b>
+Primero la ordenanza que hoy no existe y la medici&oacute;n, para saber d&oacute;nde y cu&aacute;nto; la multa,
+reci&eacute;n con el instrumento homologado: si no, la primera apelaci&oacute;n tumba el sistema entero y con
+&eacute;l la ordenanza.</p>
+<p><b>Lo que se promete</b> es la norma, la medici&oacute;n y que cualquier vecino pueda preguntar qu&eacute; midieron
+los sensores de su zona. Y el efecto buscado no es recaudar: <span class="sg">con dos multas, el ca&ntilde;o de
+escape vuelve a tener silenciador</span>.</p>
 </div>
 
 <h3>El urbanismo no pasa por el Concejo</h3>
