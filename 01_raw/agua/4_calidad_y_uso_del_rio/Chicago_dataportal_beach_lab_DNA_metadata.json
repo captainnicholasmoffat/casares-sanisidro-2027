@@ -1,0 +1,1466 @@
+{
+  "id" : "hmqm-anjq",
+  "name" : "Beach Lab Data - DNA Tests",
+  "assetType" : "filter",
+  "attribution" : "Chicago Park District",
+  "attributionLink" : "http://www.chicagoparkdistrict.com/",
+  "averageRating" : 0,
+  "category" : "Parks & Recreation",
+  "createdAt" : 1502729822,
+  "description" : "The Chicago Park District tests water samples at beaches along Chicago's Lake Michigan lakefront, which it tests for E. coli in order to monitor swimming safety.  Multiple samples may be taken from a beach and samples may be tested by culture, DNA testing, or both.\r\n\r\nWhat do these numbers mean? \r\n\r\nThe modeling prediction numbers forecast real-time Escherichia coli (E. coli) bacteria levels present in the water. The Chicago Park District (CPD) in partnership with the US Geological Survey, has developed statistical prediction models by using weather data pulled from CPD buoys (https://data.cityofchicago.org/d/qmqz-2xku) and weather stations (https://data.cityofchicago.org/d/k7hf-8y75). E. coli is an indicator species for the presence of disease-causing bacteria, viruses, and protozoans that may pose health risks to the public.\r\n\r\nThe culture based testing numbers indicate E. coli levels present in the water. This method requires 18-24 hours of processing to receive results. US Environmental Protection Agency (USEPA) recommends notifying the public when E. coli bacteria levels are above the federal water quality Beach Action Value (BAV), which is 235*CFU. When bacteria levels exceed 235 CFU, a yellow or red flag will be implemented. This standard is used at beaches throughout the Great Lakes region. For more information please refer to the USEPA Recreational Water Quality Criteria.\r\n\r\nThe rapid testing method (qPCR analysis) is a new method that measures levels of pathogenic DNA in beach water. Unlike the culture based test that requires up to 24 hours of processing, the new rapid testing method requires a few hours for results. The Chicago Park District can use results of the rapid test to notify the public when levels exceed UPEPA recommended levels. US Environmental Protection Agency (USEPA) recommends notifying the public when DNA bacteria levels are above the federal water quality Beach Action Value (BAV), which is 1000*CCE. When DNA bacteria levels exceed 1000 CCE, a yellow or red flag will be implemented. For more information please refer to the USEPA Recreational Water Quality Criteria (http://water.epa.gov/scitech/swguidance/standards/criteria/health/recreation).\r\n\r\n* The unit of measurement for Escherichia coli is Colony Forming Units (CFU) per 100 milliliters of water.\r\n*The unit of measuring DNA is Enterococci Calibrator Cell Equivalents (CCE) per 100 milliliters of water.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 1806,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1570831659,
+  "locked" : false,
+  "modifyingViewUid" : "2ivx-z93u",
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 26585768,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1496698849,
+  "publicationGroup" : 10531324,
+  "publicationStage" : "published",
+  "queryString" : "SELECT `dna_test_id`, `dna_sample_timestamp`, `beach`, `dna_sample_1_reading`, `dna_sample_2_reading`, `dna_reading_mean`, `culture_test_id`, `culture_sample_1_timestamp`, `culture_sample_1_reading`, `culture_sample_2_reading`, `culture_reading_mean`, `culture_note`, `culture_sample_interval`, `culture_sample_2_timestamp`, `latitude`, `longitude`, `location` WHERE (`dna_test_id` IS NOT NULL) ORDER BY `dna_sample_timestamp` DESC NULL LAST,`culture_sample_1_timestamp` DESC NULL LAST,`beach` ASC NULL LAST",
+  "rowsUpdatedAt" : 1788801343,
+  "rowsUpdatedBy" : "n9j5-zhen",
+  "tableId" : 14253139,
+  "totalTimesRated" : 0,
+  "viewCount" : 3743,
+  "viewLastModified" : 1738103850,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1502729822,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 948592,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1502729822,
+    "targetAudience" : "public",
+    "workflowId" : 2226,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "vewm-vupz",
+      "displayName" : "Jonathan Levy"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 315667341,
+    "name" : "DNA Test ID",
+    "dataTypeName" : "text",
+    "description" : "Unique ID for a DNA test on one or two water samples taken from the same beach on the same day.",
+    "fieldName" : "dna_test_id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36018316,
+    "width" : 142,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "9992",
+      "null" : "0",
+      "top" : [ {
+        "item" : "69",
+        "count" : "2"
+      }, {
+        "item" : "541",
+        "count" : "2"
+      }, {
+        "item" : "100",
+        "count" : "1"
+      }, {
+        "item" : "10006",
+        "count" : "1"
+      }, {
+        "item" : "1001",
+        "count" : "1"
+      }, {
+        "item" : "1002",
+        "count" : "1"
+      }, {
+        "item" : "10026",
+        "count" : "1"
+      }, {
+        "item" : "10049",
+        "count" : "1"
+      }, {
+        "item" : "10027",
+        "count" : "1"
+      }, {
+        "item" : "1003",
+        "count" : "1"
+      }, {
+        "item" : "1004",
+        "count" : "1"
+      }, {
+        "item" : "10045",
+        "count" : "1"
+      }, {
+        "item" : "10046",
+        "count" : "1"
+      }, {
+        "item" : "10047",
+        "count" : "1"
+      }, {
+        "item" : "10048",
+        "count" : "1"
+      }, {
+        "item" : "10025",
+        "count" : "1"
+      }, {
+        "item" : "1005",
+        "count" : "1"
+      }, {
+        "item" : "10050",
+        "count" : "1"
+      }, {
+        "item" : "10051",
+        "count" : "1"
+      }, {
+        "item" : "10005",
+        "count" : "1"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667342,
+    "name" : "DNA Sample Timestamp",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date and time when the water sample for DNA testing was taken.",
+    "fieldName" : "dna_sample_timestamp",
+    "position" : 2,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 36018317,
+    "width" : 198,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "2026-09-07T11:53:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2017-08-30T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-06-25T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-06-03T12:12:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-06-20T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-06-06T11:37:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-07-19T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-05-28T11:47:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-07-31T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-08-22T12:08:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-07-06T12:29:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-05-30T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-08-17T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-07-02T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-08-01T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-06-28T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-08-12T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-06-28T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-06-04T12:03:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2017-06-29T00:00:00.000",
+        "count" : "20"
+      }, {
+        "item" : "2018-07-24T00:00:00.000",
+        "count" : "20"
+      } ],
+      "smallest" : "0023-06-08T00:00:00.000",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667343,
+    "name" : "Beach",
+    "dataTypeName" : "text",
+    "fieldName" : "beach",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36018308,
+    "width" : 158,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "South Shore",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Rainbow",
+        "count" : "1048"
+      }, {
+        "item" : "South Shore",
+        "count" : "1045"
+      }, {
+        "item" : "Montrose",
+        "count" : "1039"
+      }, {
+        "item" : "Calumet",
+        "count" : "1039"
+      }, {
+        "item" : "63rd Street",
+        "count" : "1030"
+      }, {
+        "item" : "Ohio Street",
+        "count" : "984"
+      }, {
+        "item" : "12th Street",
+        "count" : "984"
+      }, {
+        "item" : "North Avenue",
+        "count" : "979"
+      }, {
+        "item" : "Margaret T Burroughs (31st)",
+        "count" : "976"
+      }, {
+        "item" : "Osterman",
+        "count" : "923"
+      }, {
+        "item" : "Hartigan (Albion)",
+        "count" : "923"
+      }, {
+        "item" : "Leone",
+        "count" : "920"
+      }, {
+        "item" : "Marion Mahony Griffin (Jarvis)",
+        "count" : "919"
+      }, {
+        "item" : "Foster",
+        "count" : "916"
+      }, {
+        "item" : "57th Street",
+        "count" : "915"
+      }, {
+        "item" : "Oak Street",
+        "count" : "903"
+      }, {
+        "item" : "Oakwood",
+        "count" : "895"
+      }, {
+        "item" : "Humboldt",
+        "count" : "570"
+      }, {
+        "item" : "Howard",
+        "count" : "301"
+      }, {
+        "item" : "Rogers",
+        "count" : "285"
+      } ],
+      "smallest" : "12th Street",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : { }
+  }, {
+    "id" : 315667344,
+    "name" : "DNA Sample 1 Reading",
+    "dataTypeName" : "number",
+    "description" : "Enterococci calibrator cell equivalents (CCE) per 100 ml of water",
+    "fieldName" : "dna_sample_1_reading",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018318,
+    "width" : 200,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "329705",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "300"
+      }, {
+        "item" : "4",
+        "count" : "232"
+      }, {
+        "item" : "2",
+        "count" : "227"
+      }, {
+        "item" : "10",
+        "count" : "187"
+      }, {
+        "item" : "1",
+        "count" : "181"
+      }, {
+        "item" : "5",
+        "count" : "177"
+      }, {
+        "item" : "14",
+        "count" : "177"
+      }, {
+        "item" : "6",
+        "count" : "174"
+      }, {
+        "item" : "9",
+        "count" : "169"
+      }, {
+        "item" : "7",
+        "count" : "163"
+      }, {
+        "item" : "8",
+        "count" : "162"
+      }, {
+        "item" : "12",
+        "count" : "161"
+      }, {
+        "item" : "11",
+        "count" : "159"
+      }, {
+        "item" : "13",
+        "count" : "151"
+      }, {
+        "item" : "18",
+        "count" : "149"
+      }, {
+        "item" : "16",
+        "count" : "143"
+      }, {
+        "item" : "15",
+        "count" : "139"
+      }, {
+        "item" : "21",
+        "count" : "135"
+      }, {
+        "item" : "17",
+        "count" : "135"
+      }, {
+        "item" : "25",
+        "count" : "133"
+      } ],
+      "smallest" : "0",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667345,
+    "name" : "DNA Sample 2 Reading",
+    "dataTypeName" : "number",
+    "description" : "Enterococci calibrator cell equivalents (CCE) per 100 ml of water",
+    "fieldName" : "dna_sample_2_reading",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018319,
+    "width" : 200,
+    "cachedContents" : {
+      "non_null" : "6863",
+      "largest" : "114108",
+      "null" : "10731",
+      "top" : [ {
+        "item" : "3",
+        "count" : "89"
+      }, {
+        "item" : "5",
+        "count" : "70"
+      }, {
+        "item" : "11",
+        "count" : "70"
+      }, {
+        "item" : "4",
+        "count" : "69"
+      }, {
+        "item" : "12",
+        "count" : "58"
+      }, {
+        "item" : "13",
+        "count" : "55"
+      }, {
+        "item" : "10",
+        "count" : "54"
+      }, {
+        "item" : "14",
+        "count" : "54"
+      }, {
+        "item" : "8",
+        "count" : "52"
+      }, {
+        "item" : "9",
+        "count" : "51"
+      }, {
+        "item" : "15",
+        "count" : "49"
+      }, {
+        "item" : "6",
+        "count" : "48"
+      }, {
+        "item" : "20",
+        "count" : "48"
+      }, {
+        "item" : "2",
+        "count" : "41"
+      }, {
+        "item" : "7",
+        "count" : "40"
+      }, {
+        "item" : "16",
+        "count" : "40"
+      }, {
+        "item" : "19",
+        "count" : "35"
+      }, {
+        "item" : "18",
+        "count" : "34"
+      }, {
+        "item" : "23",
+        "count" : "34"
+      }, {
+        "item" : "38",
+        "count" : "34"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667346,
+    "name" : "DNA Reading Mean",
+    "dataTypeName" : "number",
+    "description" : "The geometric mean of the DNA Sample 1 Reading and the DNA Sample 2 Reading (if any).",
+    "fieldName" : "dna_reading_mean",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018320,
+    "width" : 177,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "326671",
+      "null" : "0",
+      "top" : [ {
+        "item" : "3",
+        "count" : "230"
+      }, {
+        "item" : "2",
+        "count" : "199"
+      }, {
+        "item" : "1",
+        "count" : "172"
+      }, {
+        "item" : "4",
+        "count" : "167"
+      }, {
+        "item" : "6",
+        "count" : "135"
+      }, {
+        "item" : "10",
+        "count" : "131"
+      }, {
+        "item" : "9",
+        "count" : "126"
+      }, {
+        "item" : "12",
+        "count" : "125"
+      }, {
+        "item" : "5",
+        "count" : "124"
+      }, {
+        "item" : "14",
+        "count" : "123"
+      }, {
+        "item" : "8",
+        "count" : "117"
+      }, {
+        "item" : "18",
+        "count" : "109"
+      }, {
+        "item" : "13",
+        "count" : "105"
+      }, {
+        "item" : "16",
+        "count" : "103"
+      }, {
+        "item" : "11",
+        "count" : "103"
+      }, {
+        "item" : "7",
+        "count" : "103"
+      }, {
+        "item" : "22",
+        "count" : "103"
+      }, {
+        "item" : "21",
+        "count" : "101"
+      }, {
+        "item" : "15",
+        "count" : "100"
+      }, {
+        "item" : "25",
+        "count" : "99"
+      } ],
+      "smallest" : "0",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667347,
+    "name" : "Culture Test ID",
+    "dataTypeName" : "text",
+    "description" : "Unique ID for a culture test on one or two water samples taken from the same beach on the same day.",
+    "fieldName" : "culture_test_id",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36018306,
+    "width" : 165,
+    "cachedContents" : {
+      "non_null" : "629",
+      "largest" : "95883",
+      "null" : "16965",
+      "top" : [ {
+        "item" : "95841",
+        "count" : "1"
+      }, {
+        "item" : "94443",
+        "count" : "1"
+      }, {
+        "item" : "93282",
+        "count" : "1"
+      }, {
+        "item" : "94936",
+        "count" : "1"
+      }, {
+        "item" : "109525",
+        "count" : "1"
+      }, {
+        "item" : "93572",
+        "count" : "1"
+      }, {
+        "item" : "94677",
+        "count" : "1"
+      }, {
+        "item" : "95176",
+        "count" : "1"
+      }, {
+        "item" : "114099",
+        "count" : "1"
+      }, {
+        "item" : "113268",
+        "count" : "1"
+      }, {
+        "item" : "95658",
+        "count" : "1"
+      }, {
+        "item" : "113366",
+        "count" : "1"
+      }, {
+        "item" : "113537",
+        "count" : "1"
+      }, {
+        "item" : "113864",
+        "count" : "1"
+      }, {
+        "item" : "87379",
+        "count" : "1"
+      }, {
+        "item" : "95136",
+        "count" : "1"
+      }, {
+        "item" : "113740",
+        "count" : "1"
+      }, {
+        "item" : "113463",
+        "count" : "1"
+      }, {
+        "item" : "113728",
+        "count" : "1"
+      }, {
+        "item" : "113703",
+        "count" : "1"
+      } ],
+      "smallest" : "107838",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667348,
+    "name" : "Culture Sample 1 Timestamp",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date and time when the first water sample for culture was taken.  Prior to 2016, the time is not available.",
+    "fieldName" : "culture_sample_1_timestamp",
+    "position" : 8,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 36018307,
+    "width" : 227,
+    "cachedContents" : {
+      "non_null" : "629",
+      "largest" : "2016-09-02T08:50:00.000",
+      "null" : "16965",
+      "top" : [ {
+        "item" : "2015-08-20T00:00:00.000",
+        "count" : "6"
+      }, {
+        "item" : "2015-05-28T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-11T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-08-05T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-16T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-23T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-21T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-26T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-14T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-09T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-01T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-16T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-23T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-08-28T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-10T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-19T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-25T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-07-15T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-30T00:00:00.000",
+        "count" : "5"
+      }, {
+        "item" : "2015-06-17T00:00:00.000",
+        "count" : "5"
+      } ],
+      "smallest" : "2015-05-26T00:00:00.000",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667349,
+    "name" : "Culture Sample 1 Reading",
+    "dataTypeName" : "number",
+    "description" : "Colony Forming Units (CFU) per 100 ml of water",
+    "fieldName" : "culture_sample_1_reading",
+    "position" : 9,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018309,
+    "width" : 212,
+    "cachedContents" : {
+      "non_null" : "629",
+      "largest" : "2420",
+      "null" : "16965",
+      "top" : [ {
+        "item" : "2420",
+        "count" : "23"
+      }, {
+        "item" : "36",
+        "count" : "13"
+      }, {
+        "item" : "26",
+        "count" : "9"
+      }, {
+        "item" : "12",
+        "count" : "8"
+      }, {
+        "item" : "11",
+        "count" : "8"
+      }, {
+        "item" : "20",
+        "count" : "7"
+      }, {
+        "item" : "29",
+        "count" : "7"
+      }, {
+        "item" : "411",
+        "count" : "7"
+      }, {
+        "item" : "10",
+        "count" : "7"
+      }, {
+        "item" : "6",
+        "count" : "7"
+      }, {
+        "item" : "15",
+        "count" : "6"
+      }, {
+        "item" : "1",
+        "count" : "6"
+      }, {
+        "item" : "44",
+        "count" : "6"
+      }, {
+        "item" : "13",
+        "count" : "6"
+      }, {
+        "item" : "27",
+        "count" : "6"
+      }, {
+        "item" : "50",
+        "count" : "6"
+      }, {
+        "item" : "365",
+        "count" : "6"
+      }, {
+        "item" : "435",
+        "count" : "6"
+      }, {
+        "item" : "133",
+        "count" : "6"
+      }, {
+        "item" : "37",
+        "count" : "6"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667350,
+    "name" : "Culture Sample 2 Reading",
+    "dataTypeName" : "number",
+    "description" : "Colony Forming Units (CFU) per 100 ml of water",
+    "fieldName" : "culture_sample_2_reading",
+    "position" : 10,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018310,
+    "width" : 212,
+    "cachedContents" : {
+      "non_null" : "628",
+      "largest" : "2420",
+      "null" : "16966",
+      "top" : [ {
+        "item" : "2420",
+        "count" : "16"
+      }, {
+        "item" : "20",
+        "count" : "11"
+      }, {
+        "item" : "10",
+        "count" : "11"
+      }, {
+        "item" : "19",
+        "count" : "11"
+      }, {
+        "item" : "12",
+        "count" : "11"
+      }, {
+        "item" : "91",
+        "count" : "11"
+      }, {
+        "item" : "36",
+        "count" : "10"
+      }, {
+        "item" : "365",
+        "count" : "10"
+      }, {
+        "item" : "17",
+        "count" : "10"
+      }, {
+        "item" : "9",
+        "count" : "9"
+      }, {
+        "item" : "16",
+        "count" : "8"
+      }, {
+        "item" : "43",
+        "count" : "7"
+      }, {
+        "item" : "3",
+        "count" : "6"
+      }, {
+        "item" : "24",
+        "count" : "6"
+      }, {
+        "item" : "55",
+        "count" : "6"
+      }, {
+        "item" : "93",
+        "count" : "6"
+      }, {
+        "item" : "68",
+        "count" : "6"
+      }, {
+        "item" : "34",
+        "count" : "6"
+      }, {
+        "item" : "39",
+        "count" : "6"
+      }, {
+        "item" : "40",
+        "count" : "6"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667352,
+    "name" : "Culture Reading Mean",
+    "dataTypeName" : "number",
+    "description" : "The geometric mean of Culture Sample 1 Reading and Culture Sample 2 Reading (if any).",
+    "fieldName" : "culture_reading_mean",
+    "position" : 11,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018311,
+    "width" : 186,
+    "cachedContents" : {
+      "non_null" : "629",
+      "largest" : "2420",
+      "null" : "16965",
+      "top" : [ {
+        "item" : "2420",
+        "count" : "9"
+      }, {
+        "item" : "1.4142135623730950488",
+        "count" : "4"
+      }, {
+        "item" : "24.49489742783178098197",
+        "count" : "4"
+      }, {
+        "item" : "13.41640786499873817846",
+        "count" : "3"
+      }, {
+        "item" : "30.59411708155670898017",
+        "count" : "3"
+      }, {
+        "item" : "13.85640646055101834822",
+        "count" : "2"
+      }, {
+        "item" : "12",
+        "count" : "2"
+      }, {
+        "item" : "1938.6232228052979763985",
+        "count" : "2"
+      }, {
+        "item" : "8.36660026534075547978",
+        "count" : "2"
+      }, {
+        "item" : "30.98386676965933508143",
+        "count" : "2"
+      }, {
+        "item" : "33.54101966249684544614",
+        "count" : "2"
+      }, {
+        "item" : "22.80350850198275958272",
+        "count" : "2"
+      }, {
+        "item" : "38.1575680566778259661",
+        "count" : "2"
+      }, {
+        "item" : "474.30791686414006134072",
+        "count" : "2"
+      }, {
+        "item" : "8.48528137423857029281",
+        "count" : "2"
+      }, {
+        "item" : "64.99230723708768288368",
+        "count" : "2"
+      }, {
+        "item" : "87.63560920082657815312",
+        "count" : "2"
+      }, {
+        "item" : "2.8284271247461900976",
+        "count" : "2"
+      }, {
+        "item" : "24.26932219902319398106",
+        "count" : "2"
+      }, {
+        "item" : "14.86606874731850552261",
+        "count" : "2"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "precision" : "1",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667353,
+    "name" : "Culture Note",
+    "dataTypeName" : "text",
+    "description" : "Notes on the culture tests.",
+    "fieldName" : "culture_note",
+    "position" : 12,
+    "renderTypeName" : "text",
+    "tableColumnId" : 36018313,
+    "width" : 180,
+    "cachedContents" : {
+      "non_null" : "0",
+      "null" : "17594",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "displayStyle" : "plain",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667354,
+    "name" : "Culture Sample Interval",
+    "dataTypeName" : "number",
+    "description" : "Time in minutes between collection of the two samples for culture testing.",
+    "fieldName" : "culture_sample_interval",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 36018314,
+    "width" : 201,
+    "cachedContents" : {
+      "non_null" : "359",
+      "largest" : "10",
+      "null" : "17235",
+      "top" : [ {
+        "item" : "1",
+        "count" : "194"
+      }, {
+        "item" : "5",
+        "count" : "116"
+      }, {
+        "item" : "2",
+        "count" : "42"
+      }, {
+        "item" : "3",
+        "count" : "4"
+      }, {
+        "item" : "4",
+        "count" : "2"
+      }, {
+        "item" : "10",
+        "count" : "1"
+      } ],
+      "smallest" : "1",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 315667355,
+    "name" : "Culture Sample 2 Timestamp",
+    "dataTypeName" : "calendar_date",
+    "description" : "Date and time when the second water sample for culture was taken.",
+    "fieldName" : "culture_sample_2_timestamp",
+    "position" : 14,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 36018315,
+    "width" : 221,
+    "cachedContents" : {
+      "non_null" : "359",
+      "largest" : "2016-09-02T08:51:00.000",
+      "null" : "17235",
+      "top" : [ {
+        "item" : "2016-07-27T07:10:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2016-05-26T09:31:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2016-07-08T07:10:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2016-06-01T08:05:00.000",
+        "count" : "2"
+      }, {
+        "item" : "2016-07-22T08:40:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-16T07:30:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-10T07:30:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-08-11T08:03:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-07-28T09:21:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-07-30T10:02:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-03T07:15:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-23T06:40:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-23T06:57:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-02T07:10:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-07-15T07:00:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-07-13T07:46:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-08-11T06:20:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-08-11T07:39:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-07-22T08:20:00.000",
+        "count" : "1"
+      }, {
+        "item" : "2016-06-15T07:17:00.000",
+        "count" : "1"
+      } ],
+      "smallest" : "2015-08-20T00:05:00.000",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "view" : "date_time",
+      "align" : "left"
+    }
+  }, {
+    "id" : 315667356,
+    "name" : "Latitude",
+    "dataTypeName" : "number",
+    "fieldName" : "latitude",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 43927277,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "42.0213",
+      "null" : "0",
+      "top" : [ {
+        "item" : "41.758",
+        "count" : "1048"
+      }, {
+        "item" : "41.7689",
+        "count" : "1045"
+      }, {
+        "item" : "41.7142",
+        "count" : "1039"
+      }, {
+        "item" : "41.9655",
+        "count" : "1039"
+      }, {
+        "item" : "41.7827",
+        "count" : "1030"
+      }, {
+        "item" : "41.8935",
+        "count" : "984"
+      }, {
+        "item" : "41.8638",
+        "count" : "984"
+      }, {
+        "item" : "41.9148",
+        "count" : "979"
+      }, {
+        "item" : "41.8393",
+        "count" : "976"
+      }, {
+        "item" : "41.9877",
+        "count" : "923"
+      }, {
+        "item" : "42.0027",
+        "count" : "923"
+      }, {
+        "item" : "42.0131",
+        "count" : "920"
+      }, {
+        "item" : "42.0161",
+        "count" : "919"
+      }, {
+        "item" : "41.9785",
+        "count" : "916"
+      }, {
+        "item" : "41.7911",
+        "count" : "915"
+      }, {
+        "item" : "41.9032",
+        "count" : "903"
+      }, {
+        "item" : "41.8211",
+        "count" : "895"
+      }, {
+        "item" : "41.90643",
+        "count" : "570"
+      }, {
+        "item" : "42.0188",
+        "count" : "301"
+      }, {
+        "item" : "42.0213",
+        "count" : "285"
+      } ],
+      "smallest" : "41.7142",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : { }
+  }, {
+    "id" : 315667357,
+    "name" : "Longitude",
+    "dataTypeName" : "number",
+    "fieldName" : "longitude",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 43927298,
+    "width" : 100,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "largest" : "-87.5299",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-87.551",
+        "count" : "1048"
+      }, {
+        "item" : "-87.5636",
+        "count" : "1045"
+      }, {
+        "item" : "-87.6385",
+        "count" : "1039"
+      }, {
+        "item" : "-87.5299",
+        "count" : "1039"
+      }, {
+        "item" : "-87.5748",
+        "count" : "1030"
+      }, {
+        "item" : "-87.6152",
+        "count" : "984"
+      }, {
+        "item" : "-87.6083",
+        "count" : "984"
+      }, {
+        "item" : "-87.6273",
+        "count" : "979"
+      }, {
+        "item" : "-87.6072",
+        "count" : "976"
+      }, {
+        "item" : "-87.6545",
+        "count" : "923"
+      }, {
+        "item" : "-87.6564",
+        "count" : "923"
+      }, {
+        "item" : "-87.6635",
+        "count" : "920"
+      }, {
+        "item" : "-87.6647",
+        "count" : "919"
+      }, {
+        "item" : "-87.6515",
+        "count" : "916"
+      }, {
+        "item" : "-87.5797",
+        "count" : "915"
+      }, {
+        "item" : "-87.6235",
+        "count" : "903"
+      }, {
+        "item" : "-87.5976",
+        "count" : "895"
+      }, {
+        "item" : "-87.703717",
+        "count" : "570"
+      }, {
+        "item" : "-87.6663",
+        "count" : "301"
+      }, {
+        "item" : "-87.6666",
+        "count" : "285"
+      } ],
+      "smallest" : "-87.703717",
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : { }
+  }, {
+    "id" : 315667358,
+    "name" : "Location",
+    "dataTypeName" : "point",
+    "fieldName" : "location",
+    "position" : 17,
+    "renderTypeName" : "point",
+    "tableColumnId" : 43927305,
+    "width" : 132,
+    "cachedContents" : {
+      "non_null" : "17594",
+      "null" : "0",
+      "top" : [ {
+        "item" : {
+          "coordinates" : [ -87.551, 41.758 ],
+          "type" : "Point"
+        },
+        "count" : "1048"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.5636, 41.7689 ],
+          "type" : "Point"
+        },
+        "count" : "1045"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.5299, 41.7142 ],
+          "type" : "Point"
+        },
+        "count" : "1039"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6385, 41.9655 ],
+          "type" : "Point"
+        },
+        "count" : "1039"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.5748, 41.7827 ],
+          "type" : "Point"
+        },
+        "count" : "1030"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6083, 41.8638 ],
+          "type" : "Point"
+        },
+        "count" : "984"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6152, 41.8935 ],
+          "type" : "Point"
+        },
+        "count" : "984"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6273, 41.9148 ],
+          "type" : "Point"
+        },
+        "count" : "979"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6072, 41.8393 ],
+          "type" : "Point"
+        },
+        "count" : "976"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6545, 41.9877 ],
+          "type" : "Point"
+        },
+        "count" : "923"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6564, 42.0027 ],
+          "type" : "Point"
+        },
+        "count" : "923"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6635, 42.0131 ],
+          "type" : "Point"
+        },
+        "count" : "920"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6647, 42.0161 ],
+          "type" : "Point"
+        },
+        "count" : "919"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6515, 41.9785 ],
+          "type" : "Point"
+        },
+        "count" : "916"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.5797, 41.7911 ],
+          "type" : "Point"
+        },
+        "count" : "915"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6235, 41.9032 ],
+          "type" : "Point"
+        },
+        "count" : "903"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.5976, 41.8211 ],
+          "type" : "Point"
+        },
+        "count" : "895"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.703717, 41.90643 ],
+          "type" : "Point"
+        },
+        "count" : "570"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6663, 42.0188 ],
+          "type" : "Point"
+        },
+        "count" : "301"
+      }, {
+        "item" : {
+          "coordinates" : [ -87.6666, 42.0213 ],
+          "type" : "Point"
+        },
+        "count" : "285"
+      } ],
+      "count" : "17594",
+      "cardinality" : "17594"
+    },
+    "format" : {
+      "view" : "coords",
+      "align" : "left"
+    }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "rdfSubject" : "0",
+    "custom_fields" : {
+      "Metadata" : {
+        "Time Period" : "2006 - current (in season)",
+        "Frequency" : "Daily (in season)",
+        "Data Owner" : "Chicago Park District"
+      }
+    },
+    "rowLabel" : "Water Sample",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "vewm-vupz",
+    "displayName" : "Jonathan Levy",
+    "screenName" : "Jonathan Levy",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "vewm-vupz",
+    "displayName" : "Jonathan Levy",
+    "screenName" : "Jonathan Levy",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "beaches", "parks", "chicago park district", "open spaces", "parks & recreation", "recreation", "water" ],
+  "flags" : [ "calculatedView", "ownerMayBeContacted", "restorable", "restorePossibleForType", "soqlBasedView" ]
+}

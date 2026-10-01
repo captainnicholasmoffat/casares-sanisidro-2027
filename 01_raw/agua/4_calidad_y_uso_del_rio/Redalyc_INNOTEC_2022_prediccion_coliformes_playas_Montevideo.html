@@ -1,0 +1,574 @@
+<!DOCTYPE html><html xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<meta content="width=device-width, initial-scale=1 user-scalable=no" name="viewport">
+<title>Monitoreo de calidad de agua y predicción de coliformes fecales en playas de Montevideo mediante algoritmos de aprendizaje automático</title>
+<meta lang="es" name="keywords" content="bosques aleatorios, datos desbalanceados, contaminación, playas recreativas, salud humana">
+<meta name="Content-Language" content="es">
+<meta name="author" content="Ángel Segura">
+<meta name="author" content="Lía Sampognaro">
+<meta name="author" content="Guzmán López">
+<meta name="author" content="Carolina Crisci">
+<meta name="author" content="Mathías Bourel">
+<meta name="author" content="Victoria Vidal">
+<meta name="author" content="Karina Eirin">
+<meta name="author" content="Claudia Piccini">
+<meta name="author" content="Carla Kruk">
+<meta name="author" content="Gonzalo Perera">
+<meta name="description" lang="es" content="En este trabajo se construyeron modelos de predicción de coliformes fecales (CF) para su aplicación en la gestión de calidad de agua de playas recreativas de...">
+<meta name="description" lang="en" content="We constructed Machine Learning (ML) models to predict faecal coliforms (FC) for water quality aid management in recreational beaches. Historical data base g...">
+<meta name="description" lang="pt" content="Construímos modelos de aprendizado de máquina (AM) para prever a qualidade da água a fim de auxiliar o gerenciamento em praias recreativas e a balneabilidade...">
+<meta content="index,follow" name="robots">
+<meta name="citation_title" content="Monitoreo de calidad de agua y predicción de coliformes fecales en playas de Montevideo mediante algoritmos de aprendizaje automático">
+<meta name="citation_author" content="Ángel Segura">
+<meta name="citation_author" content="Lía Sampognaro">
+<meta name="citation_author" content="Guzmán López">
+<meta name="citation_author" content="Carolina Crisci">
+<meta name="citation_author" content="Mathías Bourel">
+<meta name="citation_author" content="Victoria Vidal">
+<meta name="citation_author" content="Karina Eirin">
+<meta name="citation_author" content="Claudia Piccini">
+<meta name="citation_author" content="Carla Kruk">
+<meta name="citation_author" content="Gonzalo Perera">
+<meta name="citation_publication_date" content="2021">
+<meta name="citation_journal_title" content="INNOTEC">
+<meta name="citation_issue" content="22">
+<meta name="citation_pdf_url" content="https://www.redalyc.org/journal/6061/606166107009/606166107009.pdf">
+<meta name="citation_reference" content="citation_title=Standard methods for the examination of water and wastewater.; citation_author=American Public Health Association; citation_author=American Water Works Association; citation_author=Water Environment Federation; citation_publication_date=2012">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Management; citation_title=Evaluating statistical model performance in water quality prediction; citation_author=Avila R.; citation_author=Horn B.; citation_author=Moriarty E.; citation_author=Hodson R.; citation_author=Moltachanova E.; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Management; citation_title=Evaluating a microbial water quality prediction model for beach management under the revised EU Bathing Water Directive; citation_author=Bedri Z.; citation_author=Corkery A.; citation_author=O&rsquo;Sullivan J.J.; citation_author=Deering L.A.; citation_author=Demeter K.; citation_author=Meijer W.G.,; citation_author=O&rsquo;Hare G.; citation_author=Masterson B.; citation_publication_date=2016">
+<meta name="citation_reference" content="citation_journal_title=Vann; citation_title=Impact of rainfall on bathing water quality&ndash;a case study of Fiskevollbukta, Inner Oslofjord, Norway; citation_author=Bouchalová M; citation_author=Wennberg A.; citation_author=Tryland I.; citation_publication_date=2013">
+<meta name="citation_reference" content="citation_journal_title=Ecological Informatics; citation_title=Consensus methods based on machine learning techniques for marine phytoplankton presence&ndash;absence prediction.; citation_author=Bourel M; citation_author=Crisci C.; citation_author=Martínez A.; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_journal_title=Ecological Indicators; citation_title=Multiclass classification methods in ecology.; citation_author=Bourel M.; citation_author=Segura A.M.; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_journal_title=Machine Learning; citation_title=Random forests; citation_author=Breiman L; citation_publication_date=2001">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Management; citation_title=Partial least squares for efficient models of fecal indicator bacteria on Great Lakes beaches.; citation_author=Brooks W.R; citation_author=Fienen M.N.; citation_author=Corsi S.R.; citation_publication_date=2013">
+<meta name="citation_reference" content="citation_journal_title=Environ. Model. Softw.; citation_title=Predicting recreational water quality advisories: a comparison of statistical methods.; citation_author=Brooks W.; citation_author=Corsi S; citation_author=Fienen M.; citation_author=Carvin R.; citation_publication_date=2016">
+<meta name="citation_reference" content="citation_journal_title=Continental Shelf Research; citation_title=Biomass and composition of the phytoplankton in the Río de la Plata estuary: large scale distribution and relationship with environmental variables during a Spring cruise.; citation_author=Calliari D; citation_author=Gómez M.; citation_author=Gómez N.; citation_publication_date=2005">
+<meta name="citation_reference" content="citation_journal_title=Journal of Artificial Intelligence Research; citation_title=SMOTE: Synthetic Minority Over-sampling Technique.; citation_author=Chawla N.V; citation_author=Bowyer K.W.; citation_author=Hall L.O.; citation_author=Kegelmeyer W.P.; citation_publication_date=2002">
+<meta name="citation_reference" content="citation_journal_title=AMBIOS; citation_title=Recursos acuáticos superficiales de Uruguay: ambientes algunas problemáticas y desafíos para la gestión; citation_author=Conde D.; citation_author=Arocena R.; citation_author=Rodríguez-Gallego L.; citation_publication_date=2002">
+<meta name="citation_reference" content="citation_journal_title=Ecological Modelling; citation_title=Multi-model approach to predict phytoplankton biomass and composition dynamics in a eutrophic shallow lake.; citation_author=Crisci C.; citation_author=Terra R.; citation_author=Pacheco J.P.; citation_author=Ghattas B.; citation_author=Bidegain M.; citation_author=Goyenola G.; citation_author=Lagomarsino J.J.; citation_author=Méndez G.; citation_author=Mazzeo M; citation_publication_date=2007">
+<meta name="citation_reference" content="citation_journal_title=Ecological Modelling; citation_title=Multi-model approach to predict phytoplankton biomass and composition dynamics in a eutrophic shallow lake.; citation_author=Crisci C; citation_author=Terra R.; citation_author=Pacheco J.P.; citation_author=Ghattas B.; citation_author=Bidegain M.; citation_author=Goyenola G.; citation_author=Lagomarsino J.J.; citation_author=Méndez G.; citation_author=Mazzeo M.; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_journal_title=Ecology; citation_title=Random forests for classification in ecology; citation_author=Cutler D.R.; citation_author=Edwards T.C.; citation_author=Beard K.H.; citation_author=Cutler A.; citation_author=Hess K.T; citation_author=Gibson J.; citation_author=Lawler J.J.; citation_publication_date=2007">
+<meta name="citation_reference" content="citation_title=Virtual Beach 3.0.6: user&rsquo;s guide; citation_author=Cyterski M.; citation_author=Brooks W.; citation_author=Galvin M.; citation_author=Wolfe K.; citation_author=Carvin R.; citation_author=Roddick T.; citation_author=Fienen M.; citation_author=Corsi S.; citation_publication_date=2014">
+<meta name="citation_reference" content="citation_journal_title=The Science of the Total Environment; citation_title=Quantitative microbial risk assessment combined with hydrodynamic modelling to estimate the public health risk associated with bathing after rainfall events.; citation_author=Eregno F.E; citation_author=Tryland I; citation_author=Tjomsland T.; citation_author=Myrmel M.; citation_author=Robertson L.; citation_author=Heistad A; citation_publication_date=2016">
+<meta name="citation_reference" content="citation_journal_title=Bulletin of the World Health Organization; citation_title=Health and safety in recreational waters.; citation_author=Giampaoli S.; citation_author=Spica V.R.; citation_publication_date=2014">
+<meta name="citation_reference" content="citation_journal_title=Ocean Yearbook; citation_title=The economic valuation of coastal areas: the case of Uruguay; citation_author=Gorfinkiel D.; citation_publication_date=2006">
+<meta name="citation_reference" content="citation_title=The elements of statistical learning: data mining, inference, and prediction; citation_author=Hastie T.J.; citation_author=Tibshirani R.J.; citation_author=Friedman J.H.; citation_publication_date=2009">
+<meta name="citation_reference" content="citation_journal_title=American Journal of Epidemiology; citation_title=Contact with beach sand among beachgoers and risk of illness; citation_author=Heaney C.D.; citation_author=Sams E.; citation_author=Wing S; citation_author=Marshall S.; citation_author=Brenner, K; citation_author=Dufour A.P.; citation_author=Wade T.J; citation_publication_date=2009">
+<meta name="citation_reference" content="citation_journal_title=Water Research; citation_title=Contact with beach sand among beachgoers and risk of illness; citation_author=He L.; citation_author=He Z; citation_publication_date=2008">
+<meta name="citation_reference" content="citation_title=Montevideo; citation_author=Instituto Nacional de Investigación Agropecuaria; citation_publication_date=2021">
+<meta name="citation_reference" content="citation_title=Programa de monitoreo de agua de playas y costa del departamento de Montevideo. Informe anual 2018-2019; citation_author=Intendencia de Montevideo; citation_publication_date=2019">
+<meta name="citation_reference" content="citation_journal_title=Environmental Monitoring and Assessment; citation_title=Hydrometeorological variables predict fecal indicator bacteria densities in freshwater: data-driven methods for variable selection.; citation_author=Jones R.M.; citation_author=Liu L.; citation_author=Dorevitch S.,; citation_publication_date=2013">
+<meta name="citation_reference" content="citation_title=Calidad de agua y su percepción en playas: La Paloma, Rocha; citation_author=Kruk C.; citation_author=Dobroyan M.; citation_author=Segura A.M.; citation_author=Balado I.; citation_author=Trabal N.; citation_author=Piccini C.; citation_author=Sampognaro L; citation_author=De Leon F.; citation_author=Rodríguez A.; citation_author=Verrastro N.; citation_publication_date=2019">
+<meta name="citation_reference" content="citation_journal_title=Revista Trama; citation_title=Calidad de agua y salud ecosistémica en playas recreativas de la Paloma, Rocha; citation_author=Kruk C; citation_author=Dobroyan M.; citation_author=González L; citation_author=Segura A.M.,; citation_author=Balado I.; citation_author=Trabal N.; citation_author=De León F.; citation_author=Martínez G.; citation_author=Rodríguez A.; citation_author=Piccini C.; citation_author=Chalar G.; citation_author=Verrastro N.; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_journal_title=INNOTEC; citation_title=Herramientas para el monitoreo y sistema de alerta de floraciones de cianobacterias nocivas: Río Uruguay y Río de la Plata; citation_author=Kruk C; citation_author=Piccini C.; citation_author=Segura A; citation_author=Nogueira L.; citation_author=Carballo C.; citation_author=Martínez de la Escalera G.; citation_author=Calliari D; citation_author=Ferrari G; citation_author=Simoens M; citation_author=Cea J.; citation_author=Alcántara I.; citation_author=Vico P.; citation_author=Miguez D.; citation_publication_date=2015">
+<meta name="citation_reference" content="citation_journal_title=Harmful; citation_title=A multilevel trait-based approach to the ecological performance of Microcystis aeruginosa complex from headwaters to the ocean.; citation_author=Kruk, C.; citation_author=Segura A.M.; citation_author=Nogueira L.; citation_author=Alcántara I.; citation_author=Calliari D.; citation_author=Martínez de la Escalera G; citation_author=Carballo C; citation_author=Cabrera C; citation_author=Sarthou F.; citation_author=Scavone P.; citation_author=Piccini C.; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_title=Applied predictive modeling; citation_author=Kuhn M; citation_author=Johnson K.; citation_publication_date=2016">
+<meta name="citation_reference" content="citation_journal_title=Science; citation_title=Depletion, degradation, and recovery potential of estuaries and coastal seas.; citation_author=Lotze H.K.; citation_author=Lenihan H.S.; citation_author=Bourque B.J.; citation_author=Bradbury R.H.; citation_author=Cooke R.G.; citation_author=Kay M.C; citation_author=Kidwell S.M; citation_author=Kirby M.X.; citation_author=Peterson C.H.; citation_author=Jackson J.B.C.; citation_publication_date=2006">
+<meta name="citation_reference" content="citation_title=Domestic wastewater treatment in developing countries [En línea]: Londres: Earthscan.; citation_author=Mara D; citation_publication_date=2013">
+<meta name="citation_reference" content="citation_journal_title=Harmful Algae; citation_title=Dynamics of toxic genotypes of Microcystis aeruginosa complex (MAC) through a wide freshwater to marine environmental gradient; citation_author=Martínez de la Escalera G.; citation_author=Kruk C.; citation_author=Segura A.M.; citation_author=Nogueira L.; citation_author=Alcántara I.; citation_author=Piccini C.; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_title=Meteomanz.com; citation_author=Meteomanz.com, s.d.; citation_publication_date=2021">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environment Quality; citation_title=Development of a nowcasting system using machine learning approaches to predict fecal contamination levels at recreational beaches in Korea.; citation_author=Park Y; citation_author=Kim M.; citation_author=Pachepsky Y.; citation_author=Choi, S.H.; citation_author=Cho J.G; citation_author=Jeon J.; citation_author=Cho, K.H.; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_journal_title=Water Research; citation_title=Indicator bacteria at five swimming beaches&mdash;analysis using random forests; citation_author=Parkhurst D.F.; citation_author=Brenner K.P.; citation_author=Dufour A.P.; citation_author=Wymer L.J.; citation_publication_date=2005">
+<meta name="citation_reference" content="citation_title=R: A language and environment for statistical computing; citation_author=R Core Team; citation_publication_date=2019">
+<meta name="citation_reference" content="citation_journal_title=Science of The Total Environment; citation_title=Routine screening of harmful microorganisms in beach sands: implications to public health.; citation_author=Sabino R; citation_author=Rodrigues R; citation_author=Costa I; citation_author=Carneiro C; citation_author=Cunha M; citation_author=Duarte A.; citation_author=Faria N; citation_author=Ferreira F.C.; citation_author=Gargaté M.J; citation_author=Júlio, C.; citation_author=Martins M.L; citation_author=M.B. Nevers; citation_author=Oleastro M.; citation_author=Solo-Gabriele H.; citation_author=Veríssimo C.; citation_author=Viegas C; citation_author=Whitman R.L.; citation_author=Brandão J.; citation_publication_date=2014">
+<meta name="citation_reference" content="citation_journal_title=Water Research; citation_title=Alternative indicators of fecal pollution: relations with pathogens and conventional indicators, current methodologies for direct pathogen monitoring and future application perspectives.; citation_author=Savichtcheva O; citation_author=Okabe S; citation_publication_date=2006">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Management; citation_title=Implementation of an automated beach water quality nowcast system at ten California oceanic beaches.; citation_author=Searcy R.T.; citation_author=Taggart M.; citation_author=Gold M.; citation_author=Boehm A.B.; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_journal_title=Ecological Indicators; citation_title=Implementation of an automated beach water quality nowcast system at ten California oceanic beaches.; citation_author=Segura A.M.; citation_author=Piccini C.; citation_author=Nogueira L; citation_author=Alcántara I; citation_author=Calliari D.; citation_author=Kruk C; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Management; citation_title=Prototypic automated continuous recreational water quality monitoring of nine Chicago beaches.; citation_author=Shively D.A.; citation_author=Nevers M.B.; citation_author=Breitenbach C.; citation_author=Phanikumar M.S.; citation_author=Przybyla-Kelly K; citation_author=Spoljaric A.M.; citation_author=Whitman R.L.; citation_publication_date=2016">
+<meta name="citation_reference" content="citation_journal_title=Continental Shelf Research; citation_title=Patterns of sea surface temperature variability on seasonal to subannual scales at and offshore the Río de la Plata estuary.; citation_author=Simionato C.G.; citation_author=Clara Tejedor M.L.; citation_author=Campetella C; citation_author=Guerrero R.; citation_author=Moreira D.; citation_publication_date=2010">
+<meta name="citation_reference" content="citation_journal_title=Journal of Environmental Engineering; citation_title=Daily forecasting of Hong Kong beach water quality by multiple linear regression models.; citation_author=Thoe W.; citation_author=Lee J.H.W.; citation_publication_date=2014">
+<meta name="citation_reference" content="citation_title=Virtual beach; citation_author=United States Environmental Protection Agency; citation_publication_date=2019">
+<meta name="citation_reference" content="citation_title=Decreto 253/979; citation_author=Uruguay; citation_publication_date=2009">
+<meta name="citation_reference" content="citation_title=Técnica de filtración por membrana 5053UY.; citation_author=Uruguay; citation_author=Ministerio de Ambiente, Dirección Nacional de Medio Ambiente; citation_publication_date=2017">
+<meta name="citation_reference" content="citation_title=Plan nacional de saneamiento; citation_author=Uruguay; citation_author=Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente; citation_publication_date=2020">
+<meta name="citation_reference" content="citation_title=Resolución S/N del 25 de febrero de 2005; citation_author=Uruguay; citation_publication_date=2005">
+<meta name="citation_reference" content="citation_title=Statistical learning theory; citation_author=Vapnik V.; citation_publication_date=1998">
+<meta name="citation_reference" content="citation_journal_title=Epidemiology; citation_title=High sensitivity of children to swimming-associated gastrointestinal illness: results using a rapid assay of recreational water quality.; citation_author=Wade T.J.; citation_author=Calderon R.L; citation_author=Brenner, K.P.; citation_author=Sams E; citation_author=Beach M.; citation_author=Haugland R.; citation_author=Dufour A.P.; citation_publication_date=2008">
+<meta name="citation_reference" content="citation_title=WHO recommendations on scientific, analytical and epidemiological developments relevant to the parameters for bathing water quality in the Bathing Water Directive; citation_author=WHO; citation_publication_date=2018">
+<meta name="citation_reference" content="citation_title=Predictive modeling at beaches. Volume II: predictive tools for beach notification; citation_author=Zepp R.G; citation_author=Cyterski M.; citation_author=Parmar R.; citation_author=Wolfe K; citation_author=White E.M.; citation_author=Molina M.; citation_publication_date=2010">
+<meta name="citation_reference" content="citation_journal_title=Water Quality, Exposure and Health; citation_title=Modeling fecal coliform bacteria levels at gulf coast beaches.; citation_author=Zhang Z.; citation_author=Deng Z.; citation_author=Rusch K.A; citation_publication_date=2015">
+<link href="../../../css/htmlLigero.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+		    				@font-face {
+							    font-family: OpenSans-Regular; 
+							    src: url('../../../css/fonts/OpenSans-Regular.eot');
+							    src: url('../../../css/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+							         url('../../../css/fonts/OpenSans-Regular.woff') format('woff'),
+							         url('../../../css/fonts/OpenSans-Regular.ttf') format('truetype'),
+							         local('Helvetica');
+							}
+							
+							@font-face {
+							    font-family: titillium-web-bold; 
+							     src: url('../../../css/fonts/titillium-web-bold.eot');
+							    src: url('../../../css/fonts/titillium-web-bold.eot?#iefix') format('embedded-opentype'),
+							         url('../../../css/fonts/titillium-web-bold.woff') format('woff'),
+							         url('../../../css/fonts/titillium-web-bold.ttf') format('truetype');
+							         local('Helvetica');
+							}
+		    			</style>
+<meta name="citation_title" content="Monitoreo de calidad de agua y predicción de coliformes fecales en playas de Montevideo mediante algoritmos de aprendizaje automático">
+<meta name="citation_language" content="es">
+<script type="text/x-mathjax-config">
+					MathJax.Hub.Config({
+			  			MathML: {
+							extensions: ["content-mathml.js"]
+						},
+						MathMenu:{
+							showLocale: false,
+							showMathPlayer: false,
+							showRenderer: false
+						},						
+						menuSettings: {
+						    zoom: "Hover",
+						    zscale: "200%",
+						},
+						MathZoom: {
+							delay: 5000
+						}
+					});
+					MathJax.Hub.Queue(["setRenderer",MathJax.Hub,"SVG"]);
+					MathJax.Hub.Queue(["Rerender",MathJax.Hub]);
+					
+				</script><script src="../../../math/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/javascript">
+	                var _gaq = _gaq || [];
+	                _gaq.push(['_setAccount', 'UA-3153272-1']);
+	                _gaq.push(['_trackPageview']);
+	                         (function() {
+	                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	                                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	                })();
+                </script>
+</head>
+<body>
+<div id="visor-cabecera">
+<div class="herramientas">
+<div style="background-image: url('https://www.redalyc.org/redalyc/media/inc/img/institucion/LaboratorioTecnologicodelUruguay_33597.jpg');" id="logo-r" class="herramienta h-t"></div>
+<div style="background-image: url('https://www.redalyc.org/redalyc/media/inc/img/revista/movil/revista/rva6061.png');" class="redalyc-s"></div>
+</div>
+</div>
+<div id="articulo">
+<div id="front">
+<div id="articulo-categoria">
+<p>Artículos</p>
+</div>
+<div id="articulo-meta">
+<p class="articulo-titulo">Monitoreo de calidad de agua y predicción de coliformes fecales en playas de Montevideo mediante algoritmos de aprendizaje automático</p>
+<p class="articulo-titulo-traduccion">Water quality prediction using machine learning algorithms in recreational beaches from Montevideo, Uruguay</p>
+<p class="articulo-titulo-traduccion">Previsão da qualidade da água usando modelos de aprendizado de máquina em praias recreativas de Montevidéu, Uruguai</p>
+</div>
+<div id="articulo-acerca">
+<div id="ficha-general">
+<div id="autores-articulo">
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-1989-8899"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Ángel</span> <span class="apellidos">Segura</span> <span class="collab"></span><span class="email"> amsegura@fcien.edu.uy</span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-7718-9820"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Lía</span> <span class="apellidos">Sampognaro</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-1343-492X"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Guzmán</span> <span class="apellidos">López</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-3089-8048"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Carolina</span> <span class="apellidos">Crisci</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-7472-7179"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Mathías</span> <span class="apellidos">Bourel</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Instituto de Matemática y Estadística Prof. Rafael Laguardia, Facultad de Ingeniería, Universidad de la República. Montevideo</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-8623-7804"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Victoria</span> <span class="apellidos">Vidal</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-6588-4738"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Karina</span> <span class="apellidos">Eirin</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-2762-1953"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Claudia</span> <span class="apellidos">Piccini</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Instituto de Investigaciones Biológicas Clemente Estable. Ministerio de Educación y Cultura. Montevideo</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0003-0760-1186"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Carla</span> <span class="apellidos">Kruk</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Instituto de Ecología y Ciencias Ambientales (IECA), Facultad de Ciencias, Universidad de la República. Montevideo</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+<div class="autor western">
+<div class="nombre-completo">
+<a href="https://orcid.org/0000-0002-7530-3503"><img style="width:14px; height:14px;" src="https://www.redalyc.org/journal/img/ORCIDLOGO.png"></a>  <span class="nombre">Gonzalo</span> <span class="apellidos">Perera</span> <span class="collab"></span>
+</div>
+<div>
+<span class="institucion">Modelización Estadística de Datos e Inteligencia Artificial (MEDIA), Centro Universitario Regional Este (CURE), Universidad de la República. Rocha, Uruguay. Instituto de Matemática y Estadística Prof. Rafael Laguardia, Facultad de Ingeniería, Universidad de la República. Montevideo</span>, <span class="pais">Uruguay</span>
+</div>
+</div>
+</div>
+<div class="ficha">
+<p class="art-title">Monitoreo de calidad de agua y predicción de coliformes fecales en playas de Montevideo mediante algoritmos de aprendizaje automático</p>
+<p class="numero">
+<span class="journal">INNOTEC</span><span class="issue"><span class="volume"></span>, núm.  22, e555</span><span class="year">, 2021</span>
+</p>
+<p class="publisher">Laboratorio Tecnológico del Uruguay</p>
+</div>
+<div class="creative">
+<div></div>
+<div>
+<a href="https://creativecommons.org/licenses/by-nc/4.0/"><img src="https://www.redalyc.org/journal/img/OPENACCESBYNC.png" id="img-cc"><br>
+</a>Esta obra está bajo una <a href="https://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional.</a>
+</div>
+</div>
+<div id="articulo-product"></div>
+<div class="fechas-h">
+<p class="recepcion">
+<span class="word-black">Recepción: </span> 04 Agosto  2020</p>
+<p class="aprobacion">
+<span class="word-black">Aprobación: </span> 16 Junio  2021</p>
+</div>
+<div class="url-r">
+<p>
+<span class="doi">DOI: </span><a class="doi-value" href="https://doi.org/10.26461/22.07" target="_blank">https://doi.org/10.26461/22.07</a>
+</p>
+</div>
+<div class="financiamientos-r"></div>
+</div>
+<p class="articulo-resumen">
+<span class="resumen negrita">Resumen:
+							                           </span><span class="capital">En este trabajo se construyeron modelos de predicción de coliformes fecales (CF) para su aplicación en la gestión de calidad de agua de playas recreativas de Montevideo. Se analizó la base de datos histórica del monitoreo de CF en playas realizado por el Laboratorio de Calidad Ambiental de la Intendencia de Montevideo (IM), y se generaron modelos basados en Aprendizaje Automático (AA) para predecir excesos (CF &gt; 2.000). Los datos abarcan 10 años de monitoreo en 21 playas de la capital (N=19359, noviembre 2009 a septiembre 2019), y presentan un amplio rango de salinidad y turbidez, con marcadas diferencias entre playas. Los CF presentaron una distribución asimétrica (mínima=4, mediana=250, media=1.047 y máxima=1.280.000) con excesos a la normativa en todas las playas. Las variables registradas<span class="italica"> in situ</span>, meteorológicas y oceanográficas, fueron utilizadas para entrenar modelos de AA. El mejor modelo fue un bosque aleatorio estratificado con un porcentaje de acierto para los excesos del 86%. La predicción de excesos mejoró un 60% respecto al criterio actual de cierre de playas las 24 horas posteriores a precipitaciones. La generación de datos de calidad por parte de la Intendencia de Montevideo, junto con estrategias de modelización inteligente, resultan un insumo relevante para la gestión de playas recreativas.</span>
+</p>
+<p class="articulo-palabras">
+<span class="resumen negrita">Palabras clave: </span>bosques aleatorios, datos desbalanceados, contaminación, playas recreativas, salud humana.
+		                         </p>
+<p class="articulo-resumen-traduccion">
+<span class="resumen negrita">Abstract:
+						                           </span><span class="capital">We constructed Machine Learning (ML) models to predict faecal coliforms (FC) for water quality aid management in recreational beaches. Historical data base generated by the Laboratorio de Calidad Ambiental de la Intendencia de Montevideo (IM) was analyzed and ML models were constructed to predict FC excess (FC &gt; 2.000). Ten years of monitoring 21 recreational beaches (N=19359, November 2009 to September 2019) presented a wide range of salinity and turbidity variability among beaches. FC showed an asymmetric distribution (min=4, median=250, average=1.047 and max=1.280.000) with values exceeding the threshold in all beaches. <span class="italica">In situ</span> registered, meteorological and oceanographic variables were used to train ML models. A stratified Random forests showed the best performance in the evaluated metrics with an overall accuracy of 86% and 60% of improvement in true positive rates with respect to baseline. High quality data generated by governmental institution together with modelling strategies provided a relevant framework to aid in beach and public health management.</span>
+</p>
+<p class="articulo-palabras-traduccion">
+<span class="resumen negrita">Keywords: </span>random forests, unbalanced data, contamination, recreational beach, human health.
+                                </p>
+<p class="articulo-resumen-traduccion">
+<span class="resumen negrita">Resumo:
+						                           </span><span class="capital">Construímos modelos de aprendizado de máquina (AM) para prever a qualidade da água a fim de auxiliar o gerenciamento em praias recreativas e a balneabilidade. A base de dados históricos gerada pelo Laboratório de Calidad Ambiental de la Intendencia de Montevideo foi analisada e modelos de AM foram construídos para prever o excesso de coliformes fecais (CF &gt; 2.000). Dez anos de monitoramento de 21 praias de lazer (N=19359, novembro de 2009 a setembro de 2019) apresentaram uma ampla gama de variabilidade de salinidade e turbidez entre as praias. O CF mostrou uma distribuição assimétrica (min=4, mediana=250, média=1,047 e máx=1.280.000) com valores acima do limiar em todas as praias. Registradas<span class="italica"> in situ</span>, variáveis meteorológicas e oceanográficas foram usadas para treinar modelos de AM. Uma floresta aleatória estratificada mostrou o melhor desempenho nas métricas avaliadas, com uma precisão geral de 86% e 60% de melhoria nas taxas positivas verdadeiras em relação à linha de base. Dados de alta qualidade gerados por instituições governamentais, juntamente com estratégias de modelagem, forneceram uma estrutura relevante para auxiliar na gestão de praias e da saúde pública.</span>
+</p>
+<p class="articulo-palabras-traduccion">
+<span class="resumen negrita">Palavras-chave: </span>floresta aleatória, dados não balanceados, contaminação, praia recreativa, saúde humana.
+                                </p>
+</div>
+</div>
+<div id="articulo-body">
+<p class="negrita seccion">
+<span class="negrita">INTRODUCCIÓN</span>
+</p>
+<p class="sangria">El turismo es una de las actividades con mayor crecimiento en las últimas décadas. En Uruguay, el turismo de sol y playa es un componente importante tanto a nivel social como económico (<a href="#redalyc_606166107009_ref18">Gorfinkiel, 2006</a>). Este uso requiere el control de la calidad de las playas para la prevención de riesgos en la salud de los bañistas. La contaminación por aguas cloacales, indicada por concentraciones elevadas de bacterias (coliformes fecales - CF), es un riesgo importante para la salud ambiental y humana (<a href="#redalyc_606166107009_ref37">Sabino, et al., 2014</a>). Este es un problema actual en Uruguay (<a href="#redalyc_606166107009_ref26">Kruk, et al., 2018</a>) y en la región (<a href="#redalyc_606166107009_ref12">Conde, et al., 2002</a>), sobre el cual es necesario desarrollar medidas de gestión eficientes. Una de las grandes limitaciones para anticipar eventos de contaminación es que la estimación de la concentración de CF mediante métodos estándar requiere de 18 a 24 horas de incubación, lo que impide una predicción en tiempo real de la calidad de un ecosistema. La generación de modelos estadísticos que vinculen características del medio de fácil registro con el nivel de contaminación permite anticiparse a estos eventos y, por lo tanto, cuidar la salud de los bañistas (<a href="#redalyc_606166107009_ref3">Bedri, et al., 2016</a>).</p>
+<p class="sangria">La contaminación de las playas por aguas de origen cloacal es particularmente frecuente en las zonas costeras (<a href="#redalyc_606166107009_ref30">Lotze, et al., 2006</a>; <a href="#redalyc_606166107009_ref31">Mara, 2013</a>), especialmente en aquellas sin saneamiento adecuado, donde está directamente asociada al número de habitantes (<a href="#redalyc_606166107009_ref25">Kruk, et al., 2019</a>). La contaminación puede llegar a la costa no solo a través de la descarga de efluentes sino también desde el subsuelo contaminado (<a href="#redalyc_606166107009_ref17">Giampaoli y Spica, 2014</a>). La recreación en aguas contaminadas incrementa la probabilidad de contraer enfermedades que incluyen una amplia variedad de infecciones gastrointestinales, respiratorias, neurológicas, de la piel, de los oídos, de los ojos y de las heridas (<a href="#redalyc_606166107009_ref37">Sabino, et al., 2014</a>). Los niños, las mujeres embarazadas, los ancianos y las personas con el sistema inmunitario debilitado o comprometido son más susceptibles a contraer estas enfermedades (<a href="#redalyc_606166107009_ref50">Wade, et al., 2008</a>; <a href="#redalyc_606166107009_ref20">Heaney, et al., 2009</a>). Dado que los microorganismos patógenos suelen estar en baja concentración, y su detección y cuantificación resulta laboriosa (<a href="#redalyc_606166107009_ref38">Savichtcheva y Okabe, 2006</a>), se monitorea la calidad bacteriológica a través de la abundancia de microorganismos cultivables indicadores de contaminación fecal (por ejemplo, coliformes, enterococos), cuya concentración se asocia con la probabilidad de desarrollo de una enfermedad específica (<a href="#redalyc_606166107009_ref37">Sabino, et al., 2014</a>; <a href="#redalyc_606166107009_ref51">WHO, 2018</a>). Los protocolos de monitoreo y valores límites permitidos e incluidos en las normativas varían entre países, e incluso dentro de un mismo país, según el cuerpo de agua monitoreado. En Uruguay, los resultados de coliformes fecales se comparan con el criterio establecido en el Decreto 253/79 (<a href="#redalyc_606166107009_ref45">Uruguay, 1979</a>), modificativos posteriores, y la resolución del Ministerio de Vivienda Orden Territorial y Medio Ambiente del 25 de febrero de 2005 (<a href="#redalyc_606166107009_ref48">Uruguay, 2005</a>), clasificando a las playas en la Clase 3. De acuerdo con esta clasificación, no se deberá exceder el límite de 2.000 UFC/100 mL en ninguna de al menos 5 muestras, debiendo estar por debajo de 1.000 UFC/100 mL la media geométrica móvil.</p>
+<p class="sangria">La red de saneamiento de Montevideo en la zona Este está conectada al sistema de alcantarillado pluvial que, luego de un tratamiento de las aguas, descarga a 2 km de la costa, a la altura de Punta Brava, en Punta Carretas (<a href="#redalyc_606166107009_ref47">Uruguay. Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente, 2020</a>). Además, en ciertos puntos de la costa hay estructuras destinadas a disminuir el flujo de la red cuando las precipitaciones son intensas, las cuales durante dichos eventos descargan directamente sobre la costa (<a href="#gf1">Figura 1</a>; <a href="#redalyc_606166107009_ref23">Intendencia de Montevideo, 2019</a>). En la zona Oeste, se está proyectando una red de saneamiento: actualmente, las descargas de efluentes domésticos se dan a través de la napa o de los cursos de agua locales, que están a su vez influidos por las descargas pluviales.</p>
+<p class="sangria">La Intendencia de Montevideo (IM) es la institución encargada de velar por la calidad de agua de las playas capitalinas. Cuenta con un sistema de monitoreo histórico que comprende 23 playas y varios puntos a lo largo de toda la costa de Montevideo. Las playas son muestreadas con una frecuencia de hasta 4 veces por semana en temporada estival. La sugerencia de cerrar playas por excesos se realiza en base a los indicadores de CF de los días previos, o en forma genérica luego de la ocurrencia de precipitaciones en las 24 o 36 horas previas (<a href="#redalyc_606166107009_ref23">Intendencia de Montevideo, 2019</a>). Estas decisiones se basan en información empírica o en la literatura proveniente de otros países, y no existe un modelo estadístico específico que permita aportar predicciones concretas.</p>
+<p class="sangria">Globalmente, se utilizan diversos tipos de algoritmos o criterios para predecir la contaminación mediada por CF en playas. Evitar el baño luego de copiosas lluvias es el criterio más ampliamente utilizado (<a href="#redalyc_606166107009_ref4">Bouchalová, et al., 2013</a>; <a href="#redalyc_606166107009_ref16">Eregno, et al., 2016</a>; <a href="#redalyc_606166107009_ref53">Zhang, et al., 2015</a>), aunque se registran variaciones según el país y entre playas de una misma zona. Por tanto, mejorar la capacidad de predicción con respecto a la clausura por lluvias es relevante para proteger la salud de los bañistas, así como evitar el cierre innecesario de playas. Los modelos más utilizados son las regresiones lineales múltiples (<a href="#redalyc_606166107009_ref43">Thoe y Lee, 2014</a>; <a href="#redalyc_606166107009_ref41">Shively, et al., 2016</a>; <a href="#redalyc_606166107009_ref39">Searcy, et al., 2018</a>), que asumen un modelo determinado de relación lineal entre los CF y un grupo de variables ambientales de fácil registro. También se han incorporado otras técnicas de modelización como redes neuronales (<a href="#redalyc_606166107009_ref21">He y He, 2008</a>; <a href="#redalyc_606166107009_ref53">Zhang, et al., 2015</a>), modelos lineales mixtos (<a href="#redalyc_606166107009_ref24">Jones, et al., 2013</a>), modelos de combinación de árboles, regresiones lineales parciales y logísticas (<a href="#redalyc_606166107009_ref8">Brooks, et al., 2013</a>; <a href="#redalyc_606166107009_ref9">2016</a>). La agencia de protección ambiental de Estados Unidos (EPA, por sus siglas en inglés) provee un programa disponible en línea para estimar los CF mediante regresión múltiple, regresión parcial y combinación de árboles mediante modelos boosting (<a href="#redalyc_606166107009_ref44">United States Environmental Protection Agency, 2019</a>). El desafío de predecir estos fenómenos radica en su fuerte comportamiento no lineal que requiere emplear técnicas y métodos con la flexibilidad suficiente (<a href="#redalyc_606166107009_ref6">Bourel y Segura, 2018</a>). El desarrollo de algoritmos flexibles y capaces de aprender de los datos ha evolucionado en las últimas décadas junto con el poder de cómputo, componiendo una serie de técnicas denominadas de &ldquo;Aprendizaje automático&rdquo; (Machine Learning) que han demostrado una mejor performance en este tipo de problemas (<a href="#redalyc_606166107009_ref2">Avila, et al., 2018</a>; <a href="#redalyc_606166107009_ref34">Park, et al., 2018</a>; <a href="#redalyc_606166107009_ref41">Shively, et al., 2016</a>). Una de las características más sobresalientes de estas aproximaciones es que, en general, se basan en algoritmos y no en un modelo estocástico predeterminado, pueden lidiar con interacciones de alto orden, y están desarrolladas para &ldquo;aprender&rdquo; de los datos que se disponen y generar mejores predicciones ante la generación de nuevos datos (<a href="#redalyc_606166107009_ref6">Bourel y Segura, 2018</a>; <a href="#redalyc_606166107009_ref13">Crisci, et al., 2012</a>). Las redes neurales, los bosques aleatorios (random forest; <a href="#redalyc_606166107009_ref7">Breiman, 2001</a>) y las máquinas de vectores soporte (<a href="#redalyc_606166107009_ref49">Vapnik, 1998</a>) han sido ampliamente utilizados en problemas de predicción de calidad de agua (<a href="#redalyc_606166107009_ref21">He y He, 2008</a>; <a href="#redalyc_606166107009_ref34">Park, et al., 2018</a>; <a href="#redalyc_606166107009_ref35">Parkhurst, et al., 2005</a>; <a href="#redalyc_606166107009_ref53">Zhang, et al., 2015</a>). Estos métodos han sido aplicados con éxito para predecir floraciones de cianobacterias tóxicas en Uruguay (<a href="#redalyc_606166107009_ref54">Crisci, et al., 2017</a>; <a href="#redalyc_606166107009_ref28">Kruk, et al., 2017</a>, <a href="#redalyc_606166107009_ref27">2015</a>; <a href="#redalyc_606166107009_ref32">Martínez de la Escalera, et al., 2017</a>; <a href="#redalyc_606166107009_ref40">Segura, et al., 2017</a>) y floraciones marinas (<a href="#redalyc_606166107009_ref5">Bourel, et al., 2017</a>), pero no en predicción de coliformes fecales en playas recreativas. Además, el fuerte desbalance (90/10) en la relación entre casos negativos (que no exceden el límite de contaminación establecido en la normativa) y positivos (que exceden la normativa) requiere el uso de nuevas técnicas con las que entrenar los algoritmos.</p>
+<p class="sangria">En el presente trabajo se analizó la serie histórica de monitoreo de playas de Montevideo y se aplicó una variedad de modelos predictivos basados en técnicas de aprendizaje automático para: i) describir las principales tendencias y patrones espacio-temporales en la ocurrencia e incidencia de CF en las distintas playas de Montevideo y ii) desarrollar y evaluar la capacidad predictiva de los modelos de predicción de estos eventos. En base a estos resultados, se pretende aportar al desarrollo de un sistema que trasforme la información generada en un producto fácilmente aplicable a la gestión del baño en playas. Se realiza además una introducción básica a los modelos utilizados y al modo de evaluación de la calidad de éstos.</p>
+<p class="negrita seccion">
+<span class="negrita">MATERIALES Y MÉTODOS </span>
+</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Plan de monitoreo de calidad de agua de la IM</span>
+</p>
+<p class="sangria">La serie de datos analizada proviene del programa de monitoreo de agua de playas y costas del departamento de Montevideo, realizado por la Intendencia de Montevideo (Departamento de Desarrollo Ambiental, Servicio de Evaluación de Calidad y Control Ambiental), con el objetivo de controlar la calidad del agua de las playas y prevenir riesgos en la salud de los bañistas (para acceder a la base de datos, se debe solicitar al Servicio de Evaluación de Calidad y Control Ambiental de la IM). Los datos de las posiciones de los muestreos se encuentran en el Informe anual de evaluación de calidad del agua de playas y costas de Montevideo para el período abril 2016 - marzo 2017. Durante el monitoreo, las principales variables medidas <span class="italica">in situ</span> fueron: temperatura del agua, salinidad, turbidez, conductividad, oxígeno disuelto (O2), y presencia de espuma cianobacteriana. Además, se tomaron muestras para su procesamiento en laboratorio, donde se estimó la concentración de clorofila a, feopigmentos, microcistinas totales, nitrógeno total, fósforo total, presencia de espuma y concentración de coliformes termotolerantes fecales. La concentración de coliformes fue estimada siguiendo los procedimientos estandarizados de operación del Laboratorio Ambiental de DINAMA (<a href="#redalyc_606166107009_ref46">Uruguay. Ministerio de Ambiente, Dirección Nacional de Medio Ambiente, 2017</a>), que se basa en la técnica de filtración por membrana de APHA (<a href="#redalyc_606166107009_ref1">American Public Health Association, American Water Works Association y Water Environment Federation, 2012</a>) en el Departamento de Desarrollo Ambiental, Servicio de Evaluación de Calidad y Control Ambiental de la Intendencia de Montevideo.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf1">
+<img width="500px" src="../606166107009_gf2.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf1">Figura 1.</a></span> Mapa del departamento de Montevideo donde se muestran los tipos de saneamiento por zonas: Descarga final independiente (gris), Planta de pretratamiento Punta Carretas, tipo unitario (azul), y planta de pretratamiento Punta Yeguas, tipo separativo (naranja). Además, se indica la ubicación de los puntos de muestreo de playas (puntos negros). Modificado de Plan Nacional de Saneamiento (<a href="#redalyc_606166107009_ref47">Uruguay. Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente, 2020</a>).</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Exploración de datos <span class="italica">in situ</span></span>
+</p>
+<p class="sangria">Se compilaron e integraron las matrices biológicas y ambientales derivadas de los monitoreos de calidad de agua de la IM y las posiciones espaciales de los sitios de muestreo, y se realizaron controles de calidad para depurar inconsistencias (por ejemplo, datos de temperatura menores a 0 y mayores a 40 °C y de salinidad menores a 0 y mayores a 35). La distribución histórica (Número de datos=19359; desde 2009 a 2019) de las principales variables como temperatura, salinidad, turbidez y CF (logaritmo en base 10), en cada una de las 21 playas monitoreadas de Oeste a Este, fue resumida temporal y espacialmente mediante gráficos descriptivos. La correlación de las variables ambientales entre playas fue evaluada mediante el coeficiente de correlación de Spearman (S).</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Bases de datos meteorológicas</span>
+</p>
+<p class="sangria">Se extrajeron series temporales de valores de variables meteorológicas relevantes de bases de datos digitales del INIA (<a href="#redalyc_606166107009_ref22">Instituto Nacional de Investigación Agropecuaria, s.d</a>.) y de Meteomanz.com (<a href="#redalyc_606166107009_ref33">Meteomanz.com, s.d.</a>). Las variables relevadas fueron: precipitación, temperatura del aire, humedad relativa, nubosidad e intensidad y dirección del viento. A partir de la variable precipitación (Pp) se calculó la precipitación acumulada en 1, 2, 3 y hasta 7 días.</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Modelización</span>
+</p>
+<p class="sangria">En este trabajo aplicaremos técnicas de aprendizaje automático supervisadas (<a href="#redalyc_606166107009_ref19">Hastie, et al., 2009</a>). Más precisamente se quiere buscar modelar o predecir una variable de salida o de respuesta <span class="italica">Y</span> en función de variables de entrada o explicativas <span class="italica">X</span>. En este caso, la variable de respuesta <span class="italica">Y</span> es una variable binaria que toma dos valores: 0 o 1. Si la playa excede (E), en este caso <span class="italica">Y  </span>vale 1, o no excede (NE), en este caso <span class="italica">Y</span> vale 0, el umbral máximo definido en la normativa. Si el registro en una playa es mayor a 2000 UFC/100 mL, definimos el estado de la playa como E; mientras que si se registra una concentración menor a 2000 UFC/100 mL, definimos el estado de la playa como NE. De esta forma, tenemos un problema que se conoce como de clasificación. En este contexto, entrenaremos un modelo que nos permitirá predecir si una playa excede (E) o no excede la normativa (NE) sin necesidad de obtener el valor de CF en el laboratorio. En el caso de clasificación desbalanceada, es decir, cuando la relación entre casos de cada clase no mantiene una proporción equitativa, es necesario además introducir técnicas de preparación de los datos que disminuyan el desbalance y mejoren la eficiencia de los algoritmos sobre la clase minoritaria, que es en general la que presenta mayor dificultad en predecir adecuadamente. En nuestro contexto, esta clase minoritaria es E y tiene gran relevancia en términos sanitarios. El tratamiento extensivo de estas técnicas está fuera del objetivo de este trabajo, pero quien tenga interés se puede referir a los trabajos de<a href="#redalyc_606166107009_ref11"> Chawla y otros (2002)</a> y <a href="#redalyc_606166107009_ref29">Kuhn y Johnson (2016)</a>.</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Algoritmos</span>
+</p>
+<p class="sangria">Para clasificar el estado de las playas se emplearon 9 algoritmos en combinación con un tratamiento específico de los datos para manejar el desbalance. Los algoritmos utilizados fueron: análisis lineal discriminante (LDA), máquinas de vectores soporte (SVM), modelos lineales generalizados (GLM), árboles de clasificación y regresión (CART), y dos métodos de combinación de árboles: Adaboost y bosques aleatorios. Sobre este último consideramos tres variantes: con punto de corte variable (RFcf), RF con muestreo estratificado (RFst) y los RF con pesos diferenciales para las clases (Rfcw). Una introducción conceptual y formal a estos modelos se puede encontrar en <a href="#redalyc_606166107009_ref6">Bourel y Segura, 2018</a>. Las variantes de RF han sido desarrolladas por su creador (<a href="#redalyc_606166107009_ref7">Breiman, 2001</a>), y programadas y utilizadas en numerosas aplicaciones en ecología y calidad de agua (<a href="#redalyc_606166107009_ref14">Cutler, et al., 2007</a>; <a href="#redalyc_606166107009_ref27">Kruk, et al., 2015</a>; <a href="#redalyc_606166107009_ref40">Segura, et al., 2017</a>). Todos los modelos y análisis fueron ejecutados en el software estadístico de libre acceso R (<a href="#redalyc_606166107009_ref36">R Core Team, 2020</a>).</p>
+<p class="sangria">Además, se consideró también el modelo propuesto por la EPA-EEUU para calidad bacteriológica del agua &ldquo;Virtual Beach&rdquo;, que está disponible en línea de forma gratuita. Este programa implementa una regresión lineal múltiple y un algoritmo de combinación de árboles (Xgboost) (<a href="#redalyc_606166107009_ref15">Cyterski, et al., 2014</a>; <a href="#redalyc_606166107009_ref52">Zepp, et al., 2010</a>).</p>
+<p class="sangria">En todos los casos, el conjunto de datos L ingresados al modelo tuvieron cuatro posibles pretratamientos, i) el mismo conjunto L de datos originales, ii) un conjunto donde a L se le agrega réplicas de los datos de la clase minoritaria para balancear artificialmente el conjunto (Upsampling) (<a href="#redalyc_606166107009_ref29">Kuhn y Johnson, 2016</a>), iii) un conjunto obtenido a partir de L en el que la clase mayoritaria fue reducida mediante selección aleatoria de casos al número de la clase minoritaria (Downsampling) (<a href="#redalyc_606166107009_ref29">Kuhn y Johnson, 2016</a>), y iv) un conjunto donde se le agrega a L, de manera sintética, observaciones de la clase minoritaria (<a href="#redalyc_606166107009_ref11">Chawla, et al., 2002</a>).</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Estrategia de modelización</span>
+</p>
+<p class="sangria">Para construir y evaluar los modelos, se utilizó una estrategia de partición de los datos en la cual: i) se entrenaron los algoritmos empleando los datos hasta el mes de septiembre de 2017 (no inclusive) y ii) se evaluó la capacidad predictiva con los datos comprendidos entre septiembre de 2017 y septiembre de 2019. Esta partición permite evaluar predicciones reales e incluye un gran número de casos para el entrenamiento y la evaluación, por lo que no conlleva a sesgos creados por la misma. De esta forma se evalúa sobre datos &ldquo;frescos&rdquo; (que no fueron utilizados para entrenar los métodos) la adecuación de los modelos <a href="#redalyc_606166107009_ref13">(Crisci, et al., 2012</a>; <a href="#redalyc_606166107009_ref19">Hastie, et al., 2009</a>).</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Evaluación de modelos</span>
+</p>
+<p class="sangria">Para definir una playa con riesgo de contaminación fecal se tomó como línea de base el registro de precipitaciones en las 24 horas previas. Definimos que la playa presenta un exceso (E) si en las 24 previas se registraron precipitaciones positivas. Utilizaremos este ejemplo para definir la matriz de confusión, e introducir algunas métricas que serán útiles para evaluar el desempeño predictivo del modelo. La matriz de confusión es una tabla, en cuyas celdas se registran los aciertos y los errores de utilizar un determinado criterio de clasificación respecto a lo observado (<a href="#gt1">Tabla 1</a>). De la intersección de los valores observados y predichos se desprende que puede haber dos tipos de aciertos, predecir E cuando la observación es E, los verdaderos positivos (VP), y predecir NE cuando la observación es NE, los verdaderos negativos (VN). Estos aciertos se encuentran repertoriados en la diagonal. En un clasificador ideal, todos los casos deberían estar en la diagonal. Entre los dos tipos de errores es fácil identificar que no tienen la misma importancia, pues predecir que no hay exceso cuando sí lo hubo (falso negativo, FN) implica que los bañistas estuvieron expuestos a condiciones con potenciales efectos sobre su salud. Mientras que predecir un exceso cuando no lo hubo (falso positivo, FP) implica que se cierra la playa sin un motivo aparente.</p>
+<p class="sangria">
+<span class="negrita"><a href="#gt1">Tabla 1</a></span>. Matriz de confusión teórica. En las columnas se agregan los valores observados en la realidad y en las filas los valores predichos.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gt1">
+<img width="500px" src="../606166107009_gt2.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">Una métrica inmediata que se puede calcular a partir de esta tabla es el porcentaje total de aciertos (Acc):</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf2">
+<img width="500px" src="../606166107009_gf3.png" class="image" alt="Ecuación 1"><br>
+<span class="captionS">Ecuación 1</span>
+<br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">Sin embargo, cuando las clases están desbalanceadas, como en el caso de los excesos de CF, es necesario considerar otras métricas. En efecto, si tenemos una muy baja proporción de datos de la clase minoritaria E, por ejemplo 5%, tener un modelo que acierta en un 95% podría ser un modelo que no acierta en ninguna de las observaciones de la clase minoritaria, a pesar de que su desempeño global es muy bueno pero que expone a los bañistas en ese 5% restante de los casos a riesgos para la salud. Una métrica que pondera los aciertos de la clase minoritaria es la Tasa de Verdaderos Positivos (TVP), que divide los aciertos en la clase E sobre el total de Excesos observados:</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf3">
+<img width="500px" src="../606166107009_gf4.png" class="image" alt="Ecuación 2"><br>
+<span class="captionS">Ecuación 2</span>
+<br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">TVP es una métrica importante de maximizar, junto con la Tasa de Verdaderos Negativos (TVN):</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf4">
+<img width="500px" src="../606166107009_gf5.png" class="image" alt="Ecuación 3"><br>
+<span class="captionS">Ecuación 3</span>
+<br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">El mejor modelo será aquel que maximice ambas métricas, pero -como se verá- en general existe un compromiso entre ambas, y en cierto punto, cuando una aumenta, la otra tiende a disminuir.</p>
+<p class="sangria">A los efectos de ilustrar las métricas consideradas anteriormente analizaremos en la <a href="#gt2">Tabla 2</a> un caso hipotético.</p>
+<p class="sangria">
+<span class="negrita">Tabla 2</span>. Ejemplo hipotético de días, estado de las playas observado (Excede -E- y No Excede -NE-) y predicción de la línea de base (lluvias en las 24hs previas, Pp24) y de un modelo predictivo hipotético que llamaremos AA.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gt2">
+<img width="500px" src="../606166107009_gt3.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">La matriz de confusión resultante de aplicar el criterio de Pp24 es la que aparece en la <a href="#gt3">Tabla 3</a>.</p>
+<p class="sangria">
+<span class="negrita"><a href="#gt3">Tabla 3</a>.</span> Matriz de confusión basada en la línea de base (Pp24) de la <a href="#gt2">Tabla 2</a>.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gt3">
+<img width="500px" src="../606166107009_gt4.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">En este caso, observamos que el clasificador acertó a un exceso y en 6 ocasiones que no hubo exceso, pero se cerró la playa en 2 ocasiones donde no era necesario, mientras que en una ocasión no se predijo un exceso cuando lo hubo. El modelo de AA en el caso del ejemplo superó en todas las métricas a la línea de base (P<sub>24</sub>), y por lo tanto es más adecuado para modelar este problema (<a href="#gt4">Tabla 4</a>). Los modelos fueron generados para todo el conjunto de playas y evaluados de forma global y calculando las métricas (Acc, TVP, TVN) para cada playa.</p>
+<p class="sangria">
+<span class="negrita"></span><a href="#gt4"><span class="negrita">Tabla 4</span>.</a> Resumen de las métricas de evaluación de la calidad de predicción al aplicar la línea de base (Pp24) y el modelo de inteligencia artificial (AA) para predecir el ejemplo hipotético del estado de la playa.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gt4">
+<img width="500px" src="../606166107009_gt5.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="negrita seccion">
+<span class="negrita">RESULTADOS</span>
+</p>
+<p class="sangria">Las variables ambientales periódicamente monitoreadas <span class="italica">in situ</span> en las 21 playas analizadas desde noviembre de 2009 hasta septiembre de 2019 tuvieron comportamientos estacionales. La temperatura mostró oscilaciones entre 7.1 y 32.2 °C, y un comportamiento estacional similar para todas las playas (<a href="#gf5">Figura 2</a>). La turbidez (rango 0-1000) y la salinidad (rango 0-35) presentaron fluctuaciones estacionales menos periódicas que la temperatura, con una mayor variabilidad entre playas (<a href="#gf5">Figura 2</a>). Fue notoria la diferencia en la salinidad entre las playas del Este y del Oeste (<a href="#gf6">Figura 3</a>).</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf5">
+<img width="500px" src="../606166107009_gf6.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf5">Figura 2</a></span>. Dinámica temporal de las variables ambientales más relevantes registradas <span class="italica">in situ</span> en el plan de monitoreo de la IM.</p>
+<p class="sangria">Se cuantificó la abundancia de coliformes fecales (CF; UFC/100 mL) en 19359 casos (<a href="#gf10">Tabla S1</a>). Todas las playas presentaron casos con excesos puntuales (CF &gt; 2000 UFC/100 mL) en el transcurso del monitoreo.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf6">
+<img width="500px" src="../606166107009_gf7.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf6">Figura 3</a></span>. Salinidad por playa ordenadas de Oeste a Este. Nótese el incremento de salinidad de valores menores a 5 en el Oeste a valores de 10 en la zona Este (luego de RAM). La línea negra horizontal en cada caja indica la mediana de la distribución, y las cajas los cuantiles 0.25 (borde inferior) y 0.75 (borde superior) de la distribución.</p>
+<p class="sangria">Los CF tuvieron una distribución asimétrica (mínima=4, mediana=250, media=1.047 y máxima=1.280.000; <a href="#gf7">Figura 4</a>) y la proporción de excesos puntuales (CF &gt; 2.000) global fue cercana a 8% con diferencias entre playas (<a href="#gf7">Figura 4</a>). El número de excesos fue variable entre playas (entre 2 y 275), al igual que la proporción de excesos sobre las muestras realizadas, que se ubicó entre 0.45 y 29% (<a href="#gf10">Tabla S1</a>). Las playas con mayores proporciones de excesos fueron Puerto del Buceo (PPB=29%), Santa Catalina (SC=24%), Playa del Cerro (PA=19%), Ramírez (RAM=16%) y Miramar (MIR=13%). Las playas con menor número de excesos se encontraron en general al Oeste, y fueron Punta Espinillo (PE=0.45%), Playa Nacional (PN=0.9%), Punta Yeguas (PY=1.2%) y La Colorada (LC=1.6%).</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf7">
+<img width="500px" src="../606166107009_gf8.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf7">Figura 4</a>.</span> Distribución de los coliformes fecales (logaritmo en base 10) en cada playa en toda la serie de datos de 2009 a 2019. La línea punteada gris representa el valor máximo permitido por la normativa para excesos puntuales en playas recreativas (CF &lt; 2000 UFC/100 mL). La línea negra horizontal en cada caja indica la mediana de la distribución, y las cajas los cuantiles 0.25 (borde inferior) y 0.75 (borde superior) de la distribución. Las playas se encuentran ordenadas de Oeste a Este.</p>
+<p class="subtitulo italica"></p>
+<p class="sangria">
+<span class="negrita">Modelación de la dinámica de coliformes fecales</span>
+</p>
+<p class="sangria">La línea de base, tomando en cuenta la precipitación en las 24 horas previas como criterio para considerar un exceso, presentó un porcentaje total de aciertos del 82%, una tasa de verdaderos positivos (TVP) del 40% y una tasa de verdaderos negativos (TVN) de 85%.</p>
+<p class="sangria">Los modelos que superaron la performance de la línea de base en todas las métricas fueron el bosque aleatorio estratificado (RFst), la máquina de vectores soporte (SVM) con datos balanceados por SMOTE y upsampling (<a href="#gt5">Tabla 5</a>). La combinación de árboles con Adaboost en los datos balanceados con SMOTE no superó la línea de base en el total de aciertos o en la tasa de verdaderos negativos, pero estuvo muy cercana y con la mejor performance en los verdaderos positivos (<a href="#gt5">Tabla 5</a>). El modelo de bosque aleatorio estratificado mostró un desempeño superior, mejorando a sus competidores directos en todas las métricas y a la línea de base (<a href="#gt5">Tabla 5</a>).</p>
+<p class="sangria">
+<span class="negrita"><a href="#gt5">Tabla 5</a>.</span> Métricas para evaluación de los mejores modelos seleccionados para la predicción de excesos puntuales. Los mejores modelos fueron los bosques aleatorios estratificados (RFst) utilizando los datos originales (Originales), las máquinas de vectores soporte (SVM) y Adaboost ambos entrenados sobre una base de datos modificada (Upsampling o SMOTE). Se presenta el porcentaje total de aciertos (Acc%), la tasa de verdaderos positivos (TVP%) y la tasa de verdaderos negativos (TVN%). El tratamiento de los datos y el tipo de modelo utilizado se compara con la línea de base (Pp24). Se presenta además el caso en el cual ningún dato excede el umbral máximo definido en la normativa (Nunca Excede) y el modelo propuesto por la agencia de protección ambiental de Estados Unidos (EPA).</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gt5">
+<img width="500px" src="../606166107009_gt6.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">Las variables más importantes obtenidas a partir de RFst, según el criterio de importancia de variables definido para RF, fueron la playa, la concentración de los coliformes en esa playa en el muestreo previo (lag_cf), la salinidad y la turbidez registradas <span class="italica">in situ</span> y las precipitaciones acumuladas en 24 horas (<a href="#gf8">Figura 5</a>). En las playas con mayor número de excesos (PA, SC, RAM), el modelo presentó una capacidad de predicción de los casos riesgosos para la salud (TVP) de 86, 82 y 76% respectivamente (<a href="#gf9">Figura 6</a>).</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf8">
+<img width="500px" src="../606166107009_gf9.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf8">Figura 5</a>.</span> Importancia de las principales variables medida como la disminución en el índice de Gini, ordenadas de forma decreciente para el modelo de bosques aleatorios estratificados (RFst). Por ejemplo, los lag de coliformes fecales (lag_cf) son más relevantes que el Índice Oceánico del Niño (ONI). No se muestran las variables con importancia relativa menor.</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf9">
+<img width="500px" src="../606166107009_gf10.png" class="image" alt=""><br>
+<span class="caption"></span>
+</div>
+</p>
+<p class="sangria">
+<span class="negrita"><a href="#gf9">Figura 6</a>.</span> Métricas por playa ordenadas de Oeste a Este para el RFst, que fue considerado el mejor modelo. Se muestra además el número de casos totales (N), el número de excesos por playa (E) y el número de veces que la playa presentó valores dentro de la reglamentación (NE).</p>
+<p class="negrita seccion">
+<span class="negrita">DISCUSIÓN</span>
+</p>
+<p class="sangria">En este trabajo se emplearon técnicas de aprendizaje automático para modelar una extensa serie de datos espacio-temporales con dinámicas complejas. Dichos modelos mejoraron la predicción de eventos donde se excedió la normativa de contaminación fecal en playas recreativas con respecto a la línea de base establecida en función de las precipitaciones en las 24 hs previas. Se describieron además los patrones espacio-temporales de variabilidad ambiental en las playas y el gradiente entre las zonas Oeste y Este de Montevideo. Este tipo de modelización aporta herramientas para minimizar el impacto de la contaminación en la salud humana, advirtiendo a las autoridades con antelación la probabilidad de exceso de coliformes fecales en el agua. Los modelos utilizados son flexibles, proveen resultados en tiempo real, y tienen la capacidad de &ldquo;aprender&rdquo; asimilando nueva información, por lo cual pueden ser incorporados en un esquema de gestión y monitoreo de ciudades inteligentes (<a href="#redalyc_606166107009_ref39">Searcy, et al., 2018</a>). Sin embargo, es crucial mejorar el tratamiento de las aguas que se vierten en el estuario del Río de la Plata, pues se registraron valores de concentración de coliformes fecales que exceden la normativa en todas las playas, y en algunos casos con valores órdenes de magnitud por encima de la normativa.</p>
+<p class="sangria">Este trabajo presenta un resumen de la información colectada en más de 10 años de muestreo en las playas de Montevideo. Se evidencian las diferencias en la dinámica entre las Playas al Oeste y al Este de Montevideo, tomando como sitio de corte Punta Brava. Los cambios estacionales en las variables hidrográficas reflejan la dinámica de la zona media del estuario (<a href="#redalyc_606166107009_ref10">Calliari, et al., 2005</a>; <a href="#redalyc_606166107009_ref42">Simionato, et al., 2010</a>), marcando la transición que genera el desplazamiento estacional del frente de turbidez y de salinidad. Es importante destacar que las mediciones son realizadas en una zona somera (prof = 1m), por lo tanto, existen efectos locales que pueden generar variabilidad entre playas (descargas locales, radiación solar, etcétera). Pero en su conjunto, los datos reflejan la dinámica oceanográfica de esta zona relevante del estuario.</p>
+<p class="sangria">La concentración de coliformes fecales fue variable, pero en todas las playas se registraron valores que excedieron el máximo estipulado en la normativa para valores puntuales (2000 UFC/100 mL). Las playas del extremo Oeste, desde Punta Espinillo hasta Punta Yeguas, presentaron en general valores moderados, con una media inferior al promedio general. Santa Catalina y la Playa del Cerro presentaron mayores valores y un alto porcentaje de excesos. La playa Ramírez se sitúa en una posición geográfica intermedia con características diferenciales de orientación y forma de la playa. Al ser una bahía cerrada, propicia la retención de la contaminación que recibe, y se observaron valores de coliformes fecales elevados y un gran porcentaje de excesos. Las playas de la región Este, desde Pocitos a Miramar, presentaron en promedio valores de coliformes fecales intermedios y similares. La playa del Puerto del Buceo representa una excepción con valores muy superiores de coliformes fecales, está localizada dentro de un recinto portuario deportivo y actualmente permanece como no habilitada para baños.</p>
+<p class="sangria">Los mecanismos que explican esta diferencia geográfica en el comportamiento de las concentraciones de coliformes fecales están dados por los tipos y el esquema de la red de saneamiento metropolitano, la densidad poblacional en las microcuencas, y la circulación dentro y entre playas (<a href="#redalyc_606166107009_ref47">Uruguay. Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente, 2020</a>). Las playas del Oeste reciben aportes de fuentes de agua contaminadas de forma directa, pues esa región no posee un esquema de saneamiento centralizado, que está actualmente en desarrollo (<a href="#redalyc_606166107009_ref47">Uruguay. Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente, 2020</a>). Las playas del Este reciben en mayor medida el efecto del transporte del agua contaminada proveniente del colector subacuático y los aportes puntuales generados por la descarga de los aliviaderos (<a href="#gf1">Figura 1</a>). Estos hechos generan una predictibilidad diferencial para las playas sujetas a diferentes sistemas de tratamiento. En la zona Oeste, existe mayor variabilidad en los aportes, que son puntuales y dispersos en el territorio y, por lo tanto, más difíciles de predecir. En la zona Este, se observa una menor variabilidad entre playas, tanto en las condiciones ambientales como en la concentración de los coliformes. El efecto de la descarga centralizada de todos los aportes de la cuenca por el colector, luego del tratamiento, promedia los aportes de las microcuencas (barrios) y el transporte de la circulación oceanográfica a mesoescala (decenas de km) costera termina definiendo el efecto en las playas. Esta variabilidad de mecanismos fue bien capturada por el abordaje de modelización utilizado de AA. En este esquema de modelización es posible agregar nuevas variables, como las descargas de los aliviaderos, o la altura de marea, que podrían mejorar la capacidad predictiva, pues son variables que afectan directamente la carga de contaminación que reciben los cuerpos de agua y que no fueron incorporadas en la presente formulación.</p>
+<p class="sangria">La estrategia de modelización presentada permite avanzar en la capacidad predictiva de los excesos de coliformes fecales. Se alcanzó una mejora del 60% en la tasa de verdaderos positivos (TVP) respecto a la línea de base basada en precipitación. En playas con situaciones de contaminación comprometida (PA, SC, RAM), el modelo presentó un incremento importante en la capacidad de predicción de excesos, aumentando la TVP respecto a la línea de base en un factor de 4 en Playa Nacional y Santa Catalina, y un factor de 2 en Ramírez. De los algoritmos evaluados y las estrategias de tratamiento de los datos se desprende que los bosques aleatorios con muestreo estratificado (RFst) fueron los que presentaron mejor desempeño y superaron en todas las métricas los pronósticos generados por la línea de base. Las máquinas de vectores soporte y Adaboost fueron competitivos cuando las clases fueron balanceadas artificialmente mediante upsampling y SMOTE. Esto es esperable debido a que los algoritmos son &ldquo;voraces&rdquo; en el sentido de maximizar el porcentaje de aciertos, pero no consideran el acierto en las clases particulares (<a href="#redalyc_606166107009_ref7">Breiman, 2001</a>; <a href="#redalyc_606166107009_ref40">Segura, et al., 2017</a>). Esta voracidad es problemática cuando la clase minoritaria tiene una importancia superlativa, pues implica no exponer a los bañistas a niveles excesivos de contaminación. El bosque aleatorio con muestreo estratificado aumentó la capacidad de predicción en todas las métricas y en particular en la clase de Excesos, mejorando con respecto a las técnicas de remuestreo (por ejemplo, downsampling) o de incremento artificial de la clase minoritaria (por ejemplo, SMOTE). Este resultado es relevante, y sugiere que en bases de datos donde la clase mayoritaria presenta casos poco informativos, la estratificación que realiza el algoritmo de RF<sub>st</sub> permite utilizar toda la información disponible, mientras que los algoritmos de downsampling o SMOTE no permiten capturar toda la riqueza de la información, pues los datos se remuestrean con técnicas rígidas, sin aprovechar todo el conjunto de la información. El balanceo de datos para obtener mejores predicciones cuando los problemas son desbalanceados es un área en constante desarrollo y crecimiento (<a href="#redalyc_606166107009_ref29">Kuhn y Johnson, 2016</a>).</p>
+<p class="sangria">El algoritmo RFst presenta gran eficiencia computacional, pues el entrenamiento de un RF<sub>st</sub> con aproximadamente 19000 casos y clase minoritaria de 8% tiene un tiempo de ejecución en un computador portátil con i7 y 16Gb de memoria RAM de unos 5 segundos. La predicción luego de entrenado el modelo con 3000 nuevos casos es instantánea. En este sentido, es más eficiente que los algoritmos que requieren ajustes secuenciales, como Adaboost o aquellos que requieren un tratamiento de datos previo mediante, por ejemplo, upsampling o SMOTE, pues incrementan artificialmente el número de datos y por lo tanto el costo computacional. La eficiencia computacional del RF<sub>st</sub> permite que el algoritmo sea ejecutado sin la necesidad de grandes plataformas de cómputo. Esto es importante en un contexto de aplicación del modelo (por ej. en otras intendencias departamentales) o en oficinas descentralizadas, pues permite su manejo aún en condiciones de escasa capacidad computacional operativa.</p>
+<p class="sangria">Los algoritmos programados en el software &ldquo;Virtual Beach&rdquo; de la agencia de protección ambiental de USA (EPA-EEUU) tuvieron una baja performance, y en el caso del Boosting no fue posible ejecutarlos pues el modelo no convergió dadas las probabilidades iniciales de las clases. Estos resultados resaltan la importancia del desarrollo de algoritmos y modelos que contemplen los aspectos específicos de las bases de datos locales, y que la aplicación de modelos producidos en otros contextos, en general, generan soluciones que no son satisfactorias y no son adecuadas a la realidad local. Esto es aún más crítico en el área ambiental, donde se requiere un equipo de profesionales que posea una visión holística del tema y pueda interactuar entre saberes para desarrollar soluciones integrales. En Uruguay, actualmente existen profesionales altamente capacitados en estas áreas, y a partir de la descentralización de la Universidad de la República en particular, se han desarrollado equipos con una visión interdisciplinaria del ambiente que permiten aventurar un salto en la generación de conocimiento y desarrollo de estas técnicas y sus aplicaciones.</p>
+<p class="sangria">En resumen, el presente trabajo aportó a sintetizar información relevante sobre el estado de las playas. Los algoritmos de aprendizaje automático, entrenados con una excelente base de datos histórica generada por la IM, permiten predecir eventos de contaminación y representan un insumo importante para la gestión de las playas y el cuidado de la salud humana. Incluir estos algoritmos en un esquema de ciudades inteligentes es inmediato. Asimismo, la inteligencia artificial o el conjunto de métodos para hacer &ldquo;ciudades inteligentes&rdquo; requiere que los objetivos de gestión estén integrados y reconozcan el valor de una buena calidad ambiental como forma de disminuir las desigualdades en el acceso a los bienes naturales.</p>
+<p class="negrita seccion">
+<span class="negrita">AGRADECIMIENTOS</span>
+</p>
+<p class="sangria">Al Laboratorio de Calidad Ambiental de la Intendencia de Montevideo, y en especial a Jimena Risso y Bruno D'Alessandro por su apoyo en todo el proyecto y la generación de la base de datos. Se agradece a la ANII por el apoyo al proyecto titulado "Predicción de coliformes fecales en playas capitalinas de interés turístico", (código FSDA_1_2017_1_142164), del Fondo Sectorial de Análisis de Datos de la ANII, cuyos responsables fueron AMS y GP.</p>
+</div>
+<div id="back">
+<p class="negrita seccion">
+<span class="negrita">REFERENCIAS</span>
+</p>
+<p class="bibliografia" id="redalyc_606166107009_ref1">American Public Health Association, American Water Works Association y Water Environment Federation, 2012. <span class="italica">Standard methods for the examination of water and wastewater.</span> 22a ed. Washington: APHA. Standard Method. 9222 E, Approved 2015.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref2">Avila, R., Horn, B., Moriarty, E., Hodson, R. y Moltachanova E., 2018. Evaluating statistical model performance in water quality prediction. En: <span class="italica">Journal of Environmental Management</span>, 206, pp.910&ndash;919. DOI: https://doi.org/10.1016/j.jenvman.2017.11.049</p>
+<p class="bibliografia" id="redalyc_606166107009_ref3">Bedri, Z., Corkery, A., O&rsquo;Sullivan, J.J., Deering, L.A., Demeter, K., Meijer, W.G., O&rsquo;Hare, G. y Masterson, B., 2016. Evaluating a microbial water quality prediction model for beach management under the revised EU Bathing Water Directive. En: <span class="italica">Journal of Environmental Management</span>, 167, pp.49&ndash;58. DOI: 10.1016/j.jenvman.2015.10.046</p>
+<p class="bibliografia" id="redalyc_606166107009_ref4">Bouchalová, M., Wennberg, A. y Tryland, I., 2013. Impact of rainfall on bathing water quality&ndash;a case study of Fiskevollbukta, Inner Oslofjord, Norway. En: <span class="italica">Vann</span>, 4, pp.491&ndash;498.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref5">Bourel, M., Crisci, C. y Martínez, A., 2017. Consensus methods based on machine learning techniques for marine phytoplankton presence&ndash;absence prediction. En: <span class="italica">Ecological Informatics</span>, 42, pp.46&ndash;54. DOI: 10.1016/j.ecoinf.2017.09.004</p>
+<p class="bibliografia" id="redalyc_606166107009_ref6">Bourel, M. y Segura, A.M., 2018. Multiclass classification methods in ecology. En: <span class="italica">Ecological Indicators</span>, 85, pp.1012&ndash;1021. DOI: 10.1016/j.ecolind.2017.11.031</p>
+<p class="bibliografia" id="redalyc_606166107009_ref7">Breiman, L., 2001. Random forests. En:<span class="italica"> Machine Learning</span>, 45(1), pp.5&ndash;32.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref8">Brooks, W.R., Fienen, M.N. y Corsi, S.R., 2013. Partial least squares for efficient models of fecal indicator bacteria on Great Lakes beaches. En: <span class="italica">Journal of Environmental Management</span>, 114, pp.470&ndash;475. DOI: 10.1016/j.jenvman.2012.09.033</p>
+<p class="bibliografia" id="redalyc_606166107009_ref9">Brooks, W., Corsi, S., Fienen, M. y Carvin, R., 2016. Predicting recreational water quality advisories: a comparison of statistical methods. En: <span class="italica">Environ. Model. Softw.</span>, 76, pp.81&ndash;94. DOI: https://doi.org/10.1016/j.envsoft.2015.10.012</p>
+<p class="bibliografia" id="redalyc_606166107009_ref10">Calliari, D., Gómez, M. y Gómez, N., 2005. Biomass and composition of the phytoplankton in the Río de la Plata estuary: large scale distribution and relationship with environmental variables during a Spring cruise. En: <span class="italica">Continental Shelf Research</span>, 25(2), pp.197&ndash;210. DOI: 10.1016/j.csr.2004.09.009</p>
+<p class="bibliografia" id="redalyc_606166107009_ref11">Chawla, N.V., Bowyer, K.W., Hall, L.O. y Kegelmeyer, W.P., 2002. SMOTE: Synthetic Minority Over-sampling Technique. En: <span class="italica">Journal of Artificial Intelligence Research</span>, 16, pp.321&ndash;357. DOI: 10.1613/jair.953</p>
+<p class="bibliografia" id="redalyc_606166107009_ref12">Conde, D., Arocena, R. y Rodríguez-Gallego, L., 2002. Recursos acuáticos superficiales de Uruguay: ambientes algunas problemáticas y desafíos para la gestión. En: <span class="italica">AMBIOS</span>, III(10), pp.5-9 y IV(11), pp.32-33.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref13">Crisci, C., Ghattas, B. y Perera, G., 2012. A review of supervised machine learning algorithms and their applications to ecological data. En: <span class="italica">Ecological Modelling</span>, 240, pp.113&ndash;122. DOI: https://doi.org/10.1016/j.ecolmodel.2012.03.001</p>
+<p class="bibliografia" id="redalyc_606166107009_ref54">Crisci, C., Terra R., Pacheco, J.P., Ghattas, B., Bidegain, M., Goyenola, G., Lagomarsino, J.J., Méndez, G. y Mazzeo, M. 2017. Multi-model approach to predict phytoplankton biomass and composition dynamics in a eutrophic shallow lake. En: <span class="italica">Ecological Modelling</span>, 360, pp.80-93. DOI: https://doi.org/10.1016/j.ecolmodel.2017.06.017</p>
+<p class="bibliografia" id="redalyc_606166107009_ref14">Cutler, D.R., Edwards, T.C., Beard, K.H., Cutler, A., Hess, K.T., Gibson, J. y Lawler, J.J., 2007. Random forests for classification in ecology. En: <span class="italica">Ecology,</span> 88(11), pp.2783&ndash;2792. DOI: 10.1890/07-0539.1</p>
+<p class="bibliografia" id="redalyc_606166107009_ref15">Cyterski, M., Brooks, W., Galvin, M., Wolfe, K., Carvin, R., Roddick, T., Fienen, M. and Corsi, S., 2014. <span class="italica">Virtual Beach 3.0.6: user&rsquo;s guide </span>[En línea]. [s.l.]: USEPA. [Consulta: 9 de junio de 2019]. Disponible en: https://www.epa.gov/sites/default/files/2016-03/documents/vb3_manual_3.0.6.pdf</p>
+<p class="bibliografia" id="redalyc_606166107009_ref16">Eregno, F.E., Tryland, I., Tjomsland, T., Myrmel, M., Robertson, L. y Heistad, A., 2016. Quantitative microbial risk assessment combined with hydrodynamic modelling to estimate the public health risk associated with bathing after rainfall events. En: <span class="italica">The Science of the Total Environment</span>, 548&ndash;549, pp.270&ndash; 279. DOI: 10.1016/j.scitotenv.2016.01.034</p>
+<p class="bibliografia" id="redalyc_606166107009_ref17">Giampaoli, S. y Spica, V.R., 2014. Health and safety in recreational waters. En: <span class="italica">Bulletin of the World Health Organization</span>, 92(2), pp.79&ndash;79. DOI: 10.2471/BLT.13.126391</p>
+<p class="bibliografia" id="redalyc_606166107009_ref18">Gorfinkiel, D., 2006. The economic valuation of coastal areas: the case of Uruguay. En: <span class="italica">Ocean Yearbook</span>, 20(1), pp.411&ndash;434. DOI: https://doi.org/10.1163/22116001-90000115</p>
+<p class="bibliografia" id="redalyc_606166107009_ref19">Hastie, T.J., Tibshirani, R.J. y Friedman, J.H., 2009. <span class="italica">The elements of statistical learning: data mining, inference, and prediction</span>. Nueva York: Springer. (Springer Series in Statistics).</p>
+<p class="bibliografia" id="redalyc_606166107009_ref20">Heaney, C.D., Sams, E., Wing, S., Marshall, S., Brenner, K., Dufour, A.P. y Wade, T.J., 2009. Contact with beach sand among beachgoers and risk of illness. En: <span class="italica">American Journal of Epidemiology</span>, 170(2), pp.164-172. DOI: https://doi.org/10.1093/aje/kwp152</p>
+<p class="bibliografia" id="redalyc_606166107009_ref21">He, L. y He, Z., 2008. Water quality prediction of marine recreational beaches receiving watershed baseflow and stormwater runoff in Southern California, USA. En: <span class="italica">Water Research</span>, 42, pp.2563&ndash;2573. DOI: 10.1016/j.watres.2008.01.002</p>
+<p class="bibliografia" id="redalyc_606166107009_ref22">Instituto Nacional de Investigación Agropecuaria, s.d. Clima [En línea]. <span class="italica">Montevideo</span>: INIA. [Consulta: 13 de mayo de 2021]. Disponible en: http://www.inia.uy/gras/Clima/</p>
+<p class="bibliografia" id="redalyc_606166107009_ref23">Intendencia de Montevideo, 2019. <span class="italica">Programa de monitoreo de agua de playas y costa del departamento de Montevideo. Informe anual 2018-2019 </span>[En línea]. Montevideo: Intendencia de Montevideo. [Consulta: 12 de abril de 2020]. Disponible en: https://montevideo.gub.uy/sites/default/files/biblioteca/informeanualcalidaddeaguadelacosta-2018-2019_0.pdf</p>
+<p class="bibliografia" id="redalyc_606166107009_ref24">Jones, R.M., Liu, L. y Dorevitch, S., 2013. Hydrometeorological variables predict fecal indicator bacteria densities in freshwater: data-driven methods for variable selection. En: <span class="italica">Environmental Monitoring and Assessment</span>, 185(3), pp.2355&ndash;2366. DOI: 10.1007/s10661-012-2716-8</p>
+<p class="bibliografia" id="redalyc_606166107009_ref25">Kruk, C., Dobroyan, M., Segura, A.M., Balado, I., Trabal, N., Piccini, C., Sampognaro, L., De Leon, F., Rodríguez, A., y Verrastro, N. 2019. <span class="italica">Calidad de agua y su percepción en playas: La Paloma, Rocha</span> [En línea]. En: AUGM. II Congreso de Agua, Ambiente y Energía. Montevideo, Uruguay (25-27 de setiembre de 2019). Montevideo: Uruguay. [Consulta: 13 de mayo de 2021]. Disponible en: https://www.fing.edu.uy/imfia/congresos/caae/assets/trabajos/37_Calidad_ de_agua_y_su_percepci%C3%B3n_en_playas__La_Paloma__Rocha.pdf</p>
+<p class="bibliografia" id="redalyc_606166107009_ref26">Kruk, C., Dobroyan, M., González, L., Segura, A.M., Balado, I., Trabal, N., De León, F., Martínez, G., Rodríguez, A., Piccini, C., Chalar, G. y Verrastro, N., 2018.<span class="italica"> Calidad de agua y salud ecosistémica en playas recreativas de la Paloma, Rocha</span> [En línea]. En: <span class="italica">Revista Trama</span>, 9(9), pp.1-10. [Consulta: 13 de mayo de 2021]. Disponible en: http://www.auas.org.uy/trama/index.php/Trama/article/view/179</p>
+<p class="bibliografia" id="redalyc_606166107009_ref27">Kruk, C., Piccini, C., Segura, A., Nogueira, L., Carballo, C., Martínez de la Escalera, G., Calliari, D., Ferrari, G., Simoens, M., Cea, J., Alcántara, I., Vico, P. y Miguez, D., 2015. Herramientas para el monitoreo y sistema de alerta de floraciones de cianobacterias nocivas: Río Uruguay y Río de la Plata. En: <span class="italica">INNOTEC</span>, (10), pp.23&ndash;39. DOI: https://doi.org/10.26461/10.02</p>
+<p class="bibliografia" id="redalyc_606166107009_ref28">Kruk, C., Segura, A.M., Nogueira, L., Alcántara, I., Calliari, D., Martínez de la Escalera, G., Carballo, C., Cabrera, C., Sarthou, F., Scavone, P. y Piccini, C., 2017. A multilevel trait-based approach to the ecological performance of Microcystis aeruginosa complex from headwaters to the ocean. En: <span class="italica">Harmful Algae</span>, 70, pp.23&ndash;36. DOI: 10.1016/j.hal.2017.10.004</p>
+<p class="bibliografia" id="redalyc_606166107009_ref29">Kuhn, M. y Johnson, K., 2016. Applied predictive modeling. 5ta. imp. cor. Nueva York: Springer.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref30">Lotze, H.K., Lenihan, H.S., Bourque, B.J., Bradbury, R.H., Cooke, R.G., Kay, M.C., Kidwell, S.M., Kirby, M.X., Peterson, C.H. y Jackson, J.B.C., 2006. Depletion, degradation, and recovery potential of estuaries and coastal seas. En: <span class="italica">Science</span>, 312, pp.1806-1809. DOI: https://doi.org/10.1126/science.1128035</p>
+<p class="bibliografia" id="redalyc_606166107009_ref31">Mara, D. 2013. <span class="italica">Domestic wastewater treatment in developing countries</span> [En línea]: Londres: Earthscan. [Consulta: 13 de mayo de 2021]. Disponible en: https://www.researchgate.net/publication/287291244_Domestic_Wastewat er_Treatment_in_Developing_Countries#fullTextFileContent</p>
+<p class="bibliografia" id="redalyc_606166107009_ref32">Martínez de la Escalera, G., Kruk, C., Segura, A.M., Nogueira, L., Alcántara, I. y Piccini, C., 2017. Dynamics of toxic genotypes of Microcystis aeruginosa complex (MAC) through a wide freshwater to marine environmental gradient. En: <span class="italica">Harmful</span><span class="italica">Algae</span>, 62, pp.73&ndash;83. DOI: 10.1016/j.hal.2016.11.012</p>
+<p class="bibliografia" id="redalyc_606166107009_ref33">Meteomanz.com, s.d. Meteomanz.com [En línea]. [s.l.]: [s.n.]. [Consulta: 13 de mayo de 2021]. Disponible en: http://meteomanz.com/</p>
+<p class="bibliografia" id="redalyc_606166107009_ref34">Park, Y., Kim, M., Pachepsky, Y., Choi, S.H., Cho J.G., Jeon, J. y Cho, K.H., 2018. Development of a nowcasting system using machine learning approaches to predict fecal contamination levels at recreational beaches in Korea. En: <span class="italica">Journal of Environment Quality</span>, 47(5), pp.1094-1102. DOI: 10.2134/jeq2017.11.0425</p>
+<p class="bibliografia" id="redalyc_606166107009_ref35">Parkhurst, D.F., Brenner, K.P., Dufour, A.P. y Wymer, L.J., 2005. Indicator bacteria at five swimming beaches&mdash;analysis using random forests. En: <span class="italica">Water Research</span>, 39(7), pp.1354&ndash;1360. https://doi.org/10.1016/j.watres.2005.01.001</p>
+<p class="bibliografia" id="redalyc_606166107009_ref36">R Core Team, 2020. <span class="italica">R: A language and environment for statistical computing [En línea]. Viena: R Foundation for Statistical Computing. </span>[Consulta: 30 de marzo de 2021]. Disponible en: http://www.r-project.org/index.html</p>
+<p class="bibliografia" id="redalyc_606166107009_ref37">Sabino, R., Rodrigues, R., Costa, I., Carneiro, C., Cunha, M., Duarte, A., Faria, N., Ferreira, F.C., Gargaté, M.J, Júlio, C., Martins, M.L., Nevers, M.B., Oleastro, M., Solo-Gabriele, H., Veríssimo, C., Viegas, C., Whitman, R.L. y Brandão, J., 2014. Routine screening of harmful microorganisms in beach sands: implications to public health. En: <span class="italica">Science of The Total Environment</span>, 472, pp.1062&ndash;1069. DOI: 10.1016/j.scitotenv.2013.11.091</p>
+<p class="bibliografia" id="redalyc_606166107009_ref38">Savichtcheva, O. y Okabe, S., 2006. Alternative indicators of fecal pollution: relations with pathogens and conventional indicators, current methodologies for direct pathogen monitoring and future application perspectives. En: <span class="italica">Water Research</span>, 40(13), pp.2463&ndash;2476. DOI: 10.1016/j.watres.2006.04.040</p>
+<p class="bibliografia" id="redalyc_606166107009_ref39">Searcy, R.T., Taggart, M., Gold, M. y Boehm, A.B., 2018. Implementation of an automated beach water quality nowcast system at ten California oceanic beaches. En: <span class="italica">Journal of Environmental Management</span>, 223, pp.633&ndash;643. DOI: 10.1016/j.jenvman.2018.06.058</p>
+<p class="bibliografia" id="redalyc_606166107009_ref40">Segura, A.M., Piccini, C., Nogueira, L., Alcántara, I., Calliari, D. y Kruk, C., 2017. Increased sampled volume improves Microcystis aeruginosa complex (MAC) colonies detection and prediction using Random Forests. En: <span class="italica">Ecological Indicators</span>, 79, pp.347&ndash;354. DOI: 10.1016/j.ecolind.2017.04.047</p>
+<p class="bibliografia" id="redalyc_606166107009_ref41">Shively, D.A., Nevers, M.B., Breitenbach, C., Phanikumar, M.S., Przybyla-Kelly, K., Spoljaric, A.M. y Whitman, R.L., 2016. Prototypic automated continuous recreational water quality monitoring of nine Chicago beaches. En: <span class="italica">Journal of Environmental Management</span>, 166, pp.285&ndash;293. DOI: 10.1016/j.jenvman.2015.10.011</p>
+<p class="bibliografia" id="redalyc_606166107009_ref42">Simionato, C.G., Clara Tejedor, M.L., Campetella, C., Guerrero, R. y Moreira, D., 2010. Patterns of sea surface temperature variability on seasonal to subannual scales at and offshore the Río de la Plata estuary. En: <span class="italica">Continental Shelf Research</span>, 30(19), pp.1983&ndash;1997. DOI: 10.1016/j.csr.2010.09.012</p>
+<p class="bibliografia" id="redalyc_606166107009_ref43">Thoe, W. y Lee, J.H.W., 2014. Daily forecasting of Hong Kong beach water quality by multiple linear regression models. En: <span class="italica">Journal of Environmental Engineering</span>, 140(2). DOI: 10.1061/(ASCE)EE.1943-7870.0000800</p>
+<p class="bibliografia" id="redalyc_606166107009_ref44">United States Environmental Protection Agency, 2019. <span class="italica">Virtual beach</span> [En línea]. [s.l.]. USEPA. [Consulta: 28 de junio de 2019]. Disponible en: https://www.epa.gov/ceam/virtual-beach-vb</p>
+<p class="bibliografia" id="redalyc_606166107009_ref45">Uruguay. Decreto 253/979, de 09 de mayo de 2009. Diario Oficial, 31 de mayo de 1979, p.1473.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref46">Uruguay. Ministerio de Ambiente, Dirección Nacional de Medio Ambiente, 2017. <span class="italica">Técnica de filtración por membrana 5053UY. En: Uruguay. Ministerio de Ambiente, Dirección Nacional de Medio Ambiente. Manual de procedimientos analíticos para muestras ambientales</span> [En línea]. Montevideo: DINAMA. [Consulta: 12 de marzo de 2021]. Disponible en: https://www.gub.uy/ministerio-ambiente/politicas-y-gestion/manualprocedimientos- analiticos-para-muestras-ambientales-tercera-edicion-2017</p>
+<p class="bibliografia" id="redalyc_606166107009_ref47">Uruguay. Ministerio de Vivienda Ordenamiento Territorial y Medio Ambiente, 2020. <span class="italica">Plan nacional de saneamiento</span> [En línea]. Montevideo: MVOTMA. [Consulta: 30 de mayo de 2020]. Disponible en: https://www.gub.uy/ministerio-ambiente/politicas-y-gestion/planes/plannacional-saneamiento</p>
+<p class="bibliografia" id="redalyc_606166107009_ref48">Uruguay. <span class="italica">Resolución S/N del 25 de febrero de 2005</span>. Diario Oficial, 2 de marzo de 2005, p.543.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref49">Vapnik, V., 1998. <span class="italica">Statistical learning theory</span>. Nueva York: John Wiley and Sons, Inc.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref50">Wade, T.J., Calderon, R.L., Brenner, K.P., Sams, E., Beach, M., Haugland, R. y Dufour, A.P., 2008. High sensitivity of children to swimming-associated gastrointestinal illness: results using a rapid assay of recreational water quality. En: <span class="italica">Epidemiology</span>, 19(3), pp.375-383. DOI: 10.1097/EDE.0b013e318169cc87</p>
+<p class="bibliografia" id="redalyc_606166107009_ref51">WHO, 2018. WHO recommendations on scientific, analytical and epidemiological developments relevant to the parameters for bathing water quality in the Bathing Water Directive (2006/7/EC). [s.n.]: WHO.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref52">Zepp, R.G., Cyterski, M., Parmar, R., Wolfe, K., White, E.M. y Molina, M., 2010. Predictive modeling at beaches. Volume II: predictive tools for beach notification. Washington: USEPA.</p>
+<p class="bibliografia" id="redalyc_606166107009_ref53">Zhang, Z., Deng, Z. y Rusch, K.A., 2015. Modeling fecal coliform bacteria levels at gulf coast beaches. En: <span class="italica">Water Quality, Exposure and Health</span>, 7(3), pp.255&ndash; 263. DOI: https://doi.org/10.1007/s12403-014-0145-3</p>
+<div class="apendice" id="app1">
+<p class="negrita seccion">
+<span class="negrita">ANEXO</span>
+</p>
+<p class="sangria">
+<a href="#gf10">Tabla S1</a>. Resumen de las principales características de las 21 playas capitalinas analizadas ordenadas de Oeste a Este. CF refiere a densidad de coliformes fecales (UFC/100 mL) y a los estadísticos mínimo (Mín), máximo (Máx), la mediana (Med) y el promedio aritmético (Prom). El número de casos (N) y el número de excesos (E; cuando CF&gt;2000 UFC/100 mL). Las variables ambientales registradas en el agua temperatura (T), tubidez (Turb) y salinidad (S) junto con los estadísticos descriptivos (Ds= desvío estándard).</p>
+<p class="sangria">
+<div class="imagen cuadro" id="gf10">
+<img width="500px" src="../606166107009_gf11.png" class="image" alt=""><br>
+<span class="caption"><span class="attrib">*Nombres de las playas en orden de Oeste a Este (de arriba a abajo en la tabla): Punta Espinillo, La Colorada, Pajas Blancas, Zabala, Punta Yeguas, Santa Catalina, Nacional, Cerro, Ramírez, Pocitos en Barreiro, Pocitos en Av. Brasil, Puerto del Buceo, Buceo, Malvín, Brava, Honda, Ingleses, Verde, Mulata, Carrasco, Miramar. (ver informes con descripción detallada en el Programa de monitoreo de agua de playas y costa del departamento de Montevideo. Informe anual 2018-2019 (<a href="#redalyc_606166107009_ref23">Intendencia deMontevideo, 2019</a>).</span></span>
+</div>
+</p>
+</div>
+</div>
+</div>
+<div id="creditos">
+<span class="creditos-text">HTML generado a partir de XML-JATS4R por</span><span style="background-image: url('https://www.redalyc.org/journal/img/redalyc-378px.png');" class="creditos-logo"></span>
+</div>
+</body>
+</html>

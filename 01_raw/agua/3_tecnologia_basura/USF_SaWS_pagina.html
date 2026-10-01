@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta name="keywords" content="Sargassum SaWS"/>
+  <meta name="description" content="satellite imagery sargassum"/>
+  <title>Optical Oceanography Laboratory &mdash; College of Marine Science &mdash; University of South Florida</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <link rel="shortcut icon" href="/images/favicon.ico"/>
+   <link href="/css/custom/jquery-ui-1.8.10.custom.css" rel="stylesheet" />
+   <link href="/css/site.css?0707" rel="stylesheet" />	
+   <script src="/js/jquery-1.4.4.min.js"></script>
+   <script src="/js/jquery-ui-1.8.10.custom.min.js"></script>
+   <script src="/js/jquery.nestedAccordion.js"></script>
+   <script src="/js/site.js?0707"></script>
+   <!--<script src="/js/VAS.js?0425"></script>-->
+   <script src="/js/images.js"></script>
+   <script src="/js/site_ga.js"></script>
+   <!--
+CSS and Javascript to make clickable_maps work beautifully
+Author: Yuyuan Xie
+Changelog: 
+26.0104 - Animation in the SaWS map
+-->
+<style>
+  /* pure CSS for auto Image slider/flipper */
+  .saws_slider {
+    position: relative;
+    width: 1007px;        /* adjust to your needs */
+    height: 486px;       /* adjust to your needs */
+    overflow: hidden;
+    margin: 2rem auto;
+    /* border-radius: 10px; */
+  }
+  /** flipper needs only slider **/
+  .saws_slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 12s infinite;
+    animation-play-state: running;
+  }
+  .saws_slider:hover img {
+    animation-play-state: paused;
+  }
+  /*** Delay each image so they fade one after another ***/
+  .saws_slider img:nth-child(4) { animation-delay: 0s; }
+  .saws_slider img:nth-child(1) { animation-delay: 3s; }
+  .saws_slider img:nth-child(2) { animation-delay: 6s; }
+  .saws_slider img:nth-child(3) { animation-delay: 9s; }
+  @keyframes fade {
+    0%   { opacity: 0.9; }
+    10%   { opacity: 1; }
+    15%  { opacity: 1; }
+    25%  { opacity: 0.9; }
+    26%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  /** slider needs two classes slider and slides  **/
+  .saws_slides {
+    display: flex;
+    width: 100%;         /* 4 images → 4 * 100% */
+    height: 100%;
+    animation: slide 30s infinite;
+  }
+  .saws_slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 0 100%;      /* each image takes full slider width */
+  }
+  /*** Keyframes: 4 slides → pause on each, then move ***/
+  @keyframes slide {
+    0%   { transform: translateX(-300%); }
+    50%  { transform: translateX(-300%); }
+
+    55%  { transform: translateX(0%); }
+    65%  { transform: translateX(0%); }
+
+    70%  { transform: translateX(-100%); }
+    80%  { transform: translateX(-100%); }
+
+    85%  { transform: translateX(-200%); }
+    95%  { transform: translateX(-200%); }
+
+    100% { transform: translateX(-300%); }
+  }
+</style>
+<script>
+$(function(){
+    /* Start of JS for VAS clickable map */
+    // Dialog Object Creation
+    $('#dialog_1050_FULL').dialog({
+        autoOpen: false,
+        width: 1120,
+        modal: true,
+        buttons: {
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+
+    $('#dialog_1050_NUS').dialog({
+        autoOpen: false,
+        width: 1005,
+        modal: true,
+        buttons: {
+            "Zoom out": function() {
+                $(this).dialog("close");
+                $('#dialog_1050_FULL').dialog("open");
+            },
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+
+    $('#dialog_1050_GOM_CARIB').dialog({
+        autoOpen: false,
+        width: 1025,
+        modal: true,
+        buttons: {
+            "Zoom out": function() {
+                $(this).dialog("close");
+                $('#dialog_1050_FULL').dialog("open");
+            },
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+
+    $('#dialog_1050_CATL').dialog({
+        autoOpen: false,
+        width: 985,
+        modal: true,
+        buttons: {
+            "Zoom out": function() {
+                $(this).dialog("close");
+                $('#dialog_1050_FULL').dialog("open");
+            },
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+
+    $('#dialog_1050_WCS').dialog({
+        autoOpen: false,
+        width: 615,
+        modal: true,
+        buttons: {
+            "Zoom out": function() {
+                $(this).dialog("close");
+                $('#dialog_1050_FULL').dialog("open");
+            },
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+
+    // Event Handler
+    if (window.clickmap=="NUS") {
+        $('#link-to-dialog_1050_VAS').click(function(){
+            $('#dialog_1050_NUS').dialog('open');
+            return false;
+        });
+    }
+    else if (window.clickmap=="GOM_CARIB") {
+        $('#link-to-dialog_1050_VAS').click(function(){
+            $('#dialog_1050_GOM_CARIB').dialog('open');
+            return false;
+        });
+    }
+    else if (window.clickmap=="CATL") {
+        $('#link-to-dialog_1050_VAS').click(function(){
+            $('#dialog_1050_CATL').dialog('open');
+            return false;
+        });
+    }
+    else if (window.clickmap=="WCS") {
+        $('#link-to-dialog_1050_VAS').click(function(){
+            $('#dialog_1050_WCS').dialog('open');
+            return false;
+        });
+    }
+    else {
+        $('#link-to-dialog_1050_VAS').click(function(){
+            $('#dialog_1050_FULL').dialog('open');
+            return false;
+        });
+    }
+
+    // sub Event Handlers
+    $('#link-to-dialog_1050_NUS').click(function(){
+        $('#dialog_1050_FULL').dialog('close');
+        $('#dialog_1050_NUS').dialog('open');
+        return false;
+    });
+
+    $('#link-to-dialog_1050_GOM_CARIB').click(function(){
+        $('#dialog_1050_FULL').dialog('close');
+        $('#dialog_1050_GOM_CARIB').dialog('open');
+        return false;
+    });
+
+    $('#link-to-dialog_1050_CATL').click(function(){
+        $('#dialog_1050_FULL').dialog('close');
+        $('#dialog_1050_CATL').dialog('open');
+        return false;
+    });
+
+    $('#link-to-dialog_1050_WCS').click(function(){
+        $('#dialog_1050_FULL').dialog('close');
+        $('#dialog_1050_WCS').dialog('open');
+        return false;
+    });
+
+    /* End of JS for VAS clickable map */
+
+    /* Start of JS for SFWMD clickable map */
+    // Dialog Object Creation
+    $('#dialog_850_SFWMD').dialog({
+        autoOpen: false,
+        width: 850,
+        modal: true,
+        buttons: {
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+    // Event Handler
+    $('#link-to-dialog_850_SFWMD').click(function(e){
+        $('#dialog_850_SFWMD').dialog('open');
+    });
+    /* End of JS for SFWMD clickable map */
+
+    /* Start of JS for SaWS clickable map */
+    // Dialog Object Creation
+    $('#dialog_1050_SAWS').dialog({
+        autoOpen: false,
+        width: 1050,
+        modal: true,
+        buttons: {
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+    // Event Handler
+    $('#link-to-dialog_1050_SAWS').click(function(){
+        $('#dialog_1050_SAWS').dialog('open');
+    });
+    /* End of JS for SaWS clickable map */
+
+    /* Start of JS for IRIS clickable map */
+    // Dialog Object Creation
+    $('#dialog_1050_IRIS').dialog({
+        autoOpen: false,
+        width: 1050,
+        modal: true,
+        buttons: {
+            "Close": function() {
+                $(this).dialog("close");
+            },
+        }
+    });
+    // Event Handler
+    $('#link-to-dialog_1050_IRIS').click(function(){
+        $('#dialog_1050_IRIS').dialog('open');
+    });
+    /* End of JS for IRIS clickable map */
+
+    // force to refresh underlaying images
+    var timestamp = new Date().getTime();
+    function force_refresh(id) {
+        var map_img = document.getElementById(id);
+        map_img.src = map_img.src + "?t=" + Math.floor(timestamp/1000/300);
+    }
+    const Ids = ['image-VAS-FULL','image-GOM-CARIB','image-NUS','image-CATL','image-WCS','SaWS_Map_Image','SaWS_Map_Image_1week','SaWS_Map_Image_2week','SaWS_Map_Image_3week'];
+    Ids.forEach(force_refresh);
+});
+</script>
+
+
+  <script src="/js/SaWS.js?0707"></script>
+  <script>
+  $(function(){
+    $("#subscribe_link").click(function(){
+        const email = 'cms-ooprocessing@usf.edu';
+        const subject = encodeURIComponent('Subscribe_Sargassum_Bulletin');
+        const body = encodeURIComponent('I would like to subscribe.\n\n[Optional – please provide your name and why you’re interested in Sargassum]');
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    });
+  });
+  </script>
+ </head>
+ <body>
+  <div id="page">
+   <table class="ui-state-default ui-corner-all">
+    <tr>
+     <td id="header" colspan="2" class="ui-widget-content ui-corner-all">   <!-- Set Width to standard -->
+   <div class="ui-corner-all goldBar"></div>
+
+    <div>
+     <!-- USF LOGO & LINK  -->
+     <div class="usfhead" style="height:58px; width:266px; border: 0; float: left;">
+      <a class="usfhead" href="https://www.usf.edu/"><img src="/images/usf-logo500.png" alt="University of South Florida Logo" width="250" height="42"/></a>
+     </div>
+     <!-- HEADER CMS MENU -->
+     <div style="height:inherit; float:none; width:auto; border: 0px; vertical-align:middle; padding-right:5px; text-align: right;" class="main" >
+      <p><a href="https://www.usf.edu/index.asp" class="usfhead">USF Home</a> | <a href="https://www.usf.edu/About-USF/azindex/index.asp" class="usfhead">A-Z Index </a>| <a href="https://directory.acomp.usf.edu/?logo=1" class="usfhead">Directory</a> | <a href="https://my.usf.edu/" class="usfhead">myUSF</a></p>
+      <p><a href="https://www.marine.usf.edu/" class="usfhead">Marine Science Home</a> | <a href="https://www.stpt.usf.edu/" class="usfhead">USF St. Pete</a> | <a href="https://www.usf.edu/" class="usfhead">Search</a></p>
+     </div>
+    </div>
+
+
+    <!-- BOTTOM STRIPES MENU-->
+
+    <div class="ui-corner-all greenBar"></div>
+      </td>
+    </tr>    <tr>
+     <td id="banner" colspan="2" class="ui-widget-header ui-corner-all">      <span style="color: #ffffff; float: left; font-size:250%">Optical Oceanography Laboratory</span>
+	       <span style="color: #ffffff; float: right; font-size:250%">College of Marine Science</span>     </td>
+    </tr>
+    <tr>
+    <td colspan="2" class="ui-state-default ui-corner-all">
+     <div class="pageHeaderBar">
+      <p><span style="float: left; font-size:150%">&nbsp;Satellite-based Sargassum Watch System (SaWS)</span></p>
+     </div>
+     <!-- ui-dialog -->
+    </td>
+    </tr>
+    <tr>
+     <td id="menu" class="ui-widget-content ui-corner-all topoff">
+     <div id="navmenu" class="ui-widget-content ui-corner-all">
+<div class="ui-widget-header ui-corner-all indent5px">Menu</div>
+<ul id="menu_list" class="accordion">
+<li class="ui-corner-all"><a href="/index.html">Home</a></li>
+  <li class="ui-state-default ui-corner-all"><a href="#">People</a>         
+    <ul>                                                                    
+      <li class="ui-state-default ui-corner-all"><a href="#">Faculty</a>    
+        <ul>                                                                
+          <li><a href="https://www.usf.edu/marine-science/faculty/faculty-directory/physical-oceanography/chuanmin-hu.aspx">Chuanmin Hu, Ph.D. <br/>Professor<br/>Optical Oceanography<br/>(727) 553-3987</a></li>
+          <li><a href="https://www.usf.edu/marine-science/faculty/faculty-directory/physical-oceanography/brian-barnes.aspx">Brian Barnes, Ph.D. <br/>Assistant Research Professor<br/>Optical Oceanography<br/>(727) 553-1111</a></li>
+        </ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Staff</a>
+        <ul>
+          <li><a href="/people/jcannizzaro_bio.html">Jennifer Cannizzaro</a></li>
+          <li><a href="/people/denglish_bio.html">David English</a></li>
+	  <li><a href="/people/yxie_bio.html">Yuyuan Xie, Ph.D.</a></li>
+	  <li><a href="/people/mhadjal_bio.html">Madjid Hadjal, Ph.D.</a></li>
+          <li><a href="/people/jiaoj_bio.html">Junnan Jiao, Ph.D.</a></li>
+	  <li><a href="/people/chengxue_bio.html">Cheng Xue, Ph.D.</a></li>
+          <li><a href="/people/yaoyao_bio.html">Yao Yao, Ph.D.</a></li>
+        </ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Visitors</a>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Students</a>
+        <ul>
+          <!--li><a href="/people/chuang_bio.html">Chih-Wei Huang</a></li-->
+          <li><a href="/people/sbunson_bio.html">Samuel Bunson</a></li>
+          <li><a href="/people/cgarrison_bio.html">Charles Garrison</a></li>
+          <li><a href="/people/mlin_bio.html">Melanie Lin</a></li>
+          <li><a href="/people/kmao_bio.html">Keyu Mao</a></li>
+        </ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Past Co-workers</a>
+        <ul>
+          <li><a href="/people/bmurch_bio.html">Brock Murch</a></li>
+          <li><a href="/people/aal-handal_bio.html">Adil Al-Handal, Ph.D.</a></li>
+          <li><a href="/people/schen_bio.html">Shuangling Chen, Ph.D.</a></li>
+          <li><a href="/people/hongtao_bio.html">Hongtao Duan, Ph.D.</a></li>
+          <li><a href="/people/fenglian_bio.html">Lian Feng, Ph.D.</a></li>
+          <li><a href="/people/xhan_bio.html">Xingxing Han, Ph.D.</a></li>
+          <li><a href="/people/rhardy_bio.html">Robert Hardy</a></li>
+          <li><a href="/people/chengfengle.html">Chengfeng Le, Ph.D.</a></li>
+          <li><a href="/people/JasonLi_bio.html">Jason Li, Ph.D.</a></li>
+          <li><a href="/people/YLiu_bio.html">Yongxue Liu, PhD</a></li>
+          <li><a href="/people/jlong_bio.html">Jacqueline Long</a></li>
+          <li><a href="/people/ylu_bio.html">Yingcheng Lu, Ph.D.</a></li>
+          <li><a href="/people/manos_bio.html">Alex Manos</a></li>
+          <li><a href="/people/cmurch_bio.html">Connell Murch</a></li>
+          <li><a href="/people/lqi_bio.html">Lin Qi, Ph.D.</a></li>
+          <li><a href="/people/jingshi_bio.html">Jing Shi, Ph.D.</a></li>
+          <li><a href="/people/ssullivan_bio.html">Sarah Sullivan</a></li>
+          <li><a href="/people/DSun_bio.html">Deyong Sun, Ph.D.</a></li>
+          <li><a href="/people/ssun_bio.html">Shaojie Sun, Ph.D.</a></li>
+          <li><a href="/people/jwolny_bio.html">Jen Wolny</a></li>
+          <li><a href="/people/mwang_bio.html">Mengqiu Wang, Ph.D.</a></li>
+          <li><a href="/people/mxu_bio.html">Min Xu, Ph.D.</a></li>
+          <li><a href="/people/kunyu_bio.html">Kun Yu, Ph.D.</a></li>
+          <li><a href="/people/mzhang_bio.html">Minwei Zhang, Ph.D.</a></li>
+          <li><a href="/people/szhang_bio.html">Shuai Zhang, Ph.D.</a></li>
+          <li><a href="/people/junzhao.html">Jun Zhao, Ph.D.</a></li>
+          <li><a href="/people/luzhang_bio.html">Lu Zhang, Ph.D.</a></li>
+          <li><a href="/people/yzhang_bio.html">Yingjun Zhang, Ph.D.</a></li>
+
+          <li><a href="/people/shall_bio.html">Siarah Hall</a></li>
+          <li><a href="/people/bnemeth_bio.html">Bradley Nemeth</a></li>
+          <li><a href="/people/kthompson_bio.html">Kelsey Thompson</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </li>
+
+  <li class="ui-state-default ui-corner-all"><a href="#">Projects</a>
+    <ul>
+      <li class="ui-state-default ui-corner-all"><a href="/projects/IRIS.html">Integrated Red tide<br/>Information System (IRIS)</a>
+      </li>
+      <li class="ui-state-default ui-corner-all"><a href="/projects/SaWS.html">Sargassum Watch<br/>System (SaWS)</a>
+      </li>
+      <li class="ui-state-default ui-corner-all"><a href="/projects/vbs.html">Virtual Buoy System (VBS)</a>
+      </li>
+      <!--li class="ui-state-default ui-corner-all"><a href="#">Tampa Bay optical<br/>water quality</a>
+        <ul>
+          <li><a href="#">Coming soon</a></li>
+          <li><a href="#">b</a></li>
+          <li><a href="#">c</a></li>
+        </ul>
+      </li-->
+      <li class="ui-state-default ui-corner-all"><a href="#">Water quality versus<br/>seagrass distribution</a>
+        <ul>
+          <li class="ui-state-default ui-corner-all"><a href="#">Steinhatchee River</a>
+           <ul>
+            <li><a href="/projects/vb/BIGBEND/STE/index.html">Steinhatchee Project</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=01">STE Station 01</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=02">STE Station 02</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=03">STE Station 03</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=04">STE Station 04</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=05">STE Station 05</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=06">STE Station 06</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=07">STE Station 07</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=08">STE Station 08</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=09">STE Station 09</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=10">STE Station 10</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=11">STE Station 11</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=12">STE Station 12</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=13">STE Station 13</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=14">STE Station 14</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=15">STE Station 15</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=16">STE Station 16</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=17">STE Station 17</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=18">STE Station 18</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=19">STE Station 19</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=20">STE Station 20</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=21">STE Station 21</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=22">STE Station 22</a></li>
+            <li><a href="/cgi-bin/vb?area=STE&amp;station=23">STE Station 23</a></li>
+	   </ul>
+          </li>
+          <li class="ui-state-default ui-corner-all"><a href="#">Suwannee River Estuary</a>
+           <ul>
+            <li><a href="/projects/vb/BIGBEND/SUW/index.html">Suwannee Project</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=01">SUW Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=02">SUW Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=03">SUW Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=04">SUW Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=05">SUW Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=06">SUW Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=07">SUW Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=08">SUW Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=09">SUW Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=10">SUW Station 10</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=11">SUW Station 11</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=12">SUW Station 12</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=13">SUW Station 13</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=14">SUW Station 14</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=15">SUW Station 15</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=16">SUW Station 16</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=17">SUW Station 17</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=18">SUW Station 18</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=19">SUW Station 19</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=20">SUW Station 20</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=21">SUW Station 21</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=22">SUW Station 22</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=23">SUW Station 23</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=24">SUW Station 24</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=25">SUW Station 25</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=26">SUW Station 26</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=27">SUW Station 27</a></li>
+	    <li><a href="/cgi-bin/vb?area=SUW&amp;station=28">SUW Station 28</a></li>
+	   </ul>
+          </li>
+          <!--li><a href="/projects/wqvsd/2009_Suwannee_River_YSI_6600">2009 Suwannee River<br/>YSI 6600</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <!--li class="ui-state-default ui-corner-all"><a href="#">Blooms and terrestrial<br/>discharge</a>
+        <ul>
+          <li><a href="#">Coming soon</a></li>
+          <li><a href="#">b</a></li>
+          <li><a href="#">c</a></li>
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all"><a href="#">Algorithms</a>
+        <ul>
+          <li><a href="#">Coming soon</a></li>
+          <li><a href="#">b</a></li>
+          <li><a href="#">c</a></li>
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all"><a href="#">Coral reef environments</a>
+        <ul>
+          <li><a href="#">Coming soon</a></li>
+          <li><a href="#">b</a></li>
+          <li><a href="#">c</a></li>
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all"><a href="#">Education and outreach</a>
+        <ul>
+          <li><a href="#">Coming soon</a></li>
+          <li><a href="#">b</a></li>
+          <li><a href="#">c</a></li>
+        </ul>
+      </li-->
+    </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all" id='menu_maps'><a href="#">Clickable Maps</a>
+    <ul>
+      <li class="ui-state-default ui-corner-all"><a id="link-to-dialog_1050_VAS" href="#">All Regions</a></li>
+      <li class="ui-state-default ui-corner-all"><a id="link-to-dialog_1050_SAWS" href="#">Sargassum Watch</a></li>
+      <li class="ui-state-default ui-corner-all"><a id="link-to-dialog_1050_IRIS" href="#">Red Tide Watch</a></li>
+      <li class="ui-state-default ui-corner-all"><a href="https://optics.marine.usf.edu/projects/vbs.html#tabs-3">Virtual Bouy Sites</a></li>
+    </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all" id="menu_VAS"><a href="#">Satellite Data Products</a>
+    <ul>
+      <li class="ui-state-default ui-corner-all" id="menu_VAS_Carib"><a href="#">Caribbean</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=N_ANTILLES&amp;unfold=menu_VAS_Carib">North Antilles</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=S_ANTILLES&amp;unfold=menu_VAS_Carib">South Antilles</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=BELIZE&amp;unfold=menu_VAS_Carib">Belize</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CANCUN&amp;unfold=menu_VAS_Carib">Cancun</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=ECARIB&amp;unfold=menu_VAS_Carib">E. Caribbean</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=JAMAICA&amp;unfold=menu_VAS_Carib">Jamaica</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=NWCUBA&amp;unfold=menu_VAS_Carib">N.W. Cuba</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=PANAMA&amp;unfold=menu_VAS_Carib">Panama</a></li>
+	  <li><a href="/cgi-bin/optics_data?roi=P_RICO&amp;unfold=menu_VAS_Carib">Puerto Rico & USVI</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=YUCATAN&amp;unfold=menu_VAS_Carib">Yucatan</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all" id="menu_VAS_EastAsia"><a href="#">East Asia</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=BOHAI&amp;unfold=menu_VAS_EastAsia">Bohai</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=ECS&amp;unfold=menu_VAS_EastAsia">East China Sea</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=PRE&amp;unfold=menu_VAS_EastAsia">Pearl River Estuary</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=QINGDAO&amp;unfold=menu_VAS_EastAsia">Qingdao</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=TAIHU&amp;unfold=menu_VAS_EastAsia">Taihu</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=TWS&amp;unfold=menu_VAS_EastAsia">Taiwan Strait</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=YS_ECS&amp;unfold=menu_VAS_EastAsia">Yellow Sea &#47;<br/>East China Sea</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=ZHEJIANG&amp;unfold=menu_VAS_EastAsia">Zhejiang</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all" id="menu_VAS_NA"><a href="#">North America</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=BERMUDA&amp;unfold=menu_VAS_NA">Bermuda</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=BIGBEND&amp;unfold=menu_VAS_NA">Big Bend FL</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CAPE_COD&amp;unfold=menu_VAS_NA">Cape Cod Bay</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CBAY&amp;unfold=menu_VAS_NA">Chesapeake Bay</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CWFL&amp;unfold=menu_VAS_NA">C. West Florida</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CORPUS&amp;unfold=menu_VAS_NA">Corpus Christi TX</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=ERIE&amp;unfold=menu_VAS_NA">Lake Erie</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=FLKEYS&amp;unfold=menu_VAS_NA">Florida Keys</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=GALV&amp;unfold=menu_VAS_NA">Galveston</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=GBAY&amp;unfold=menu_VAS_NA">Green Bay</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=GCOOS&amp;unfold=menu_VAS_NA">GCOOS</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=GLAKES&amp;unfold=menu_VAS_NA">Great Lakes</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=LAKE_OKEE&amp;unfold=menu_VAS_NA">Lake Okeechobee</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=MBAY&amp;unfold=menu_VAS_NA">Mobile Bay AL</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=MRIVER&amp;unfold=menu_VAS_NA">Mississippi River</a></li>
+          <!--li><a href="/cgi-bin/optics_data?roi=NAAMES">NAAMES Cruise Track</a></li-->
+          <li><a href="/cgi-bin/optics_data?roi=SAGINAW&amp;unfold=menu_VAS_NA">Saginaw</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=SE_FL&amp;unfold=menu_VAS_NA">SE FL Shelf</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=SECOORA&amp;unfold=menu_VAS_NA">SECOORA</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all" id="menu_VAS_SA"><a href="#">South America</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=PANAMA&amp;unfold=menu_VAS_SA">Panama</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=ECARIB&amp;unfold=menu_VAS_SA">Venezuela (ECARIB)</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=C_ATLANTIC&amp;unfold=menu_VAS_SA">Central Atlantic</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=N_BRAZIL&amp;unfold=menu_VAS_SA">North Brazil</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=S_BRAZIL&amp;unfold=menu_VAS_SA">South Brazil</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+     <li class="ui-state-default ui-corner-all" id="menu_VAS_SP"><a href="#">South Pacific</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=CNMI&amp;unfold=menu_VAS_SP">N. Mariana Islands</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=SAMOA&amp;unfold=menu_VAS_SP">Samoa</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <li class="ui-state-default ui-corner-all" id="menu_VAS_WestAfrica"><a href="#">West Africa</a>
+        <ul>
+          <li><a href="/cgi-bin/optics_data?roi=ANGOLA&amp;unfold=menu_VAS_WestAfrica">Angola</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CAPE_VERDE&amp;unfold=menu_VAS_WestAfrica">Cape Verde</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=CE_ATLANTIC&amp;unfold=menu_VAS_WestAfrica">Central East Atlantic</a></li>
+          <li><a href="/cgi-bin/optics_data?roi=GOG&amp;unfold=menu_VAS_WestAfrica">Gulf of Guinea</a></li>
+          <!--li><a href="#">b</a></li-->
+          <!--li><a href="#">c</a></li-->
+        </ul>
+      </li>
+      <li><a href="/cgi-bin/optics_data?roi=PERSIAN_GULF&amp;unfold=menu_VAS">Persian Gulf</a></li>
+      <li class="ui-state-default ui-corner-all"><a href="#">High Resolution</a>
+       <ul>
+        <li class="ui-state-default ui-corner-all"><a href="#">Landsat 8</a>
+          <ul>
+	    <li><a href="/cgi-bin/ls?roi=GUADELOUPE&amp;current=1">Guadeloupe</a></li>
+            <li><a href="/cgi-bin/ls?roi=MARTINIQUE&amp;current=1">Martinique</a></li>
+          </ul>
+        </li>
+        </li> 
+        <li class="ui-state-default ui-corner-all" id="menu_VAS_S2_Carib"><a href="#">Sentinel-2 Caribbean</a>
+          <ul>
+            <li><a href="/cgi-bin/optics_data?roi=BONAIRE&amp;unfold=menu_VAS_S2_Carib">Bonaire</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=BARBADOS&amp;unfold=menu_VAS_S2_Carib">Barbados</a></li>
+            <li><a href="/cgi-bin/optics_data?landing=hires&amp;roi=P_RICO&amp;unfold=menu_VAS_S2_Carib">Puerto Rico & USVI</a></li>
+          </ul>
+        </li>
+        <li class="ui-state-default ui-corner-all" id="menu_VAS_S2_FL"><a href="#">Sentinel-2 Florida</a>
+          <ul>
+            <li><a href="/cgi-bin/optics_data?roi=C_HARBOR&amp;unfold=menu_VAS_S2_FL">Charlotte Harbor</a></li>
+            <li><a href="/cgi-bin/optics_data?landing=hires&amp;roi=FLKEYS&amp;unfold=menu_VAS_S2_FL">Florida Keys</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=GOLD_CST&amp;unfold=menu_VAS_S2_FL">Gold Coast</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=NIRL&amp;unfold=menu_VAS_S2_FL">Northern Indian River</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=NW_FLBAY&amp;unfold=menu_VAS_S2_FL">Northwest Florida Bay</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=SIRL&amp;unfold=menu_VAS_S2_FL">Southern Indian River</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=TAMPA_BAY&amp;unfold=menu_VAS_S2_FL">Tampa Bay</a></li>
+          </ul>
+        </li>
+        <li class="ui-state-default ui-corner-all" id="menu_VAS_S2_MEX"><a href="#">Sentinel-2 Mexico</a>
+          <ul>
+            <li><a href="/cgi-bin/optics_data?landing=hires&amp;roi=CANCUN&amp;unfold=menu_VAS_S2_MEX">Cancun</a></li>
+         </ul>
+        </li>
+        <li class="ui-state-default ui-corner-all" id="menu_VAS_S2_TX"><a href="#">Sentinel-2 Texas</a>
+          <ul>
+            <li><a href="/cgi-bin/optics_data?roi=NW_GOM&amp;unfold=menu_VAS_S2_TX">Northwest Gulf of America</a></li>
+         </ul>
+        </li>
+        <li class="ui-state-default ui-corner-all" id="menu_VAS_SuperDove"><a href="#">SuperDove</a>
+          <ul>
+            <li><a href="/cgi-bin/optics_data?roi=CRE&amp;unfold=menu_VAS_SuperDove">Caloosahatchee River Estuary</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=CR_S79&amp;unfold=menu_VAS_SuperDove">Caloosahatchee River Lock S-79</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=CR_S78&amp;unfold=menu_VAS_SuperDove">Caloosahatchee River Lock S-78</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=CR_S77&amp;unfold=menu_VAS_SuperDove">Caloosahatchee River Lock S-77</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=SLR_S308&amp;unfold=menu_VAS_SuperDove">St. Lucie River Lock S-308</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=SLR_S80&amp;unfold=menu_VAS_SuperDove">St. Lucie River Lock S-80</a></li>
+            <li><a href="/cgi-bin/optics_data?roi=SLE&amp;unfold=menu_VAS_SuperDove">St. Lucie River Estuary</a></li>
+          </ul>
+        </li> 
+       </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all" id="menu_VBS"><a href="#">Virtual Buoy Products</a>
+    <ul>
+      <li class="ui-state-default ui-corner-all"><a href="#">Big Bend</a>
+        <ul>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_AEB"><a href="#">Apalachee Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=01&amp;unfold=menu_VBS_AEB">AEB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=02&amp;unfold=menu_VBS_AEB">AEB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=03&amp;unfold=menu_VBS_AEB">AEB Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=04&amp;unfold=menu_VBS_AEB">AEB Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=05&amp;unfold=menu_VBS_AEB">AEB Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=06&amp;unfold=menu_VBS_AEB">AEB Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=AEB&amp;station=07&amp;unfold=menu_VBS_AEB">AEB Station 07</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OAE"><a href="#">Offshore Apalachee Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=01&amp;unfold=menu_VBS_OAE">OAE Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=02&amp;unfold=menu_VBS_OAE">OAE Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=03&amp;unfold=menu_VBS_OAE">OAE Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=04&amp;unfold=menu_VBS_OAE">OAE Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=05&amp;unfold=menu_VBS_OAE">OAE Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAE&amp;station=06&amp;unfold=menu_VBS_OAE">OAE Station 06</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_APB"><a href="#">Apalachicola Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=APB&amp;station=01&amp;unfold=menu_VBS_APB">APB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=APB&amp;station=02&amp;unfold=menu_VBS_APB">APB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=APB&amp;station=03&amp;unfold=menu_VBS_APB">APB Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=APB&amp;station=04&amp;unfold=menu_VBS_APB">APB Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=APB&amp;station=05&amp;unfold=menu_VBS_APB">APB Station 05</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OAP"><a href="#">Offshore Apalachicola Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OAP&amp;station=01&amp;unfold=menu_VBS_OAP">OAP Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAP&amp;station=02&amp;unfold=menu_VBS_OAP">OAP Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OAP&amp;station=03&amp;unfold=menu_VBS_OAP">OAP Station 03</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_SGS"><a href="#">Saint George Sound</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=SGS&amp;station=01&amp;unfold=menu_VBS_SGS">SGS Station 01</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OSG"><a href="#">Offshore Saint George Sound</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OSG&amp;station=01&amp;unfold=menu_VBS_OSG">OSG Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSG&amp;station=02&amp;unfold=menu_VBS_OSG">OSG Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSG&amp;station=03&amp;unfold=menu_VBS_OSG">OSG Station 03</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_SJB"><a href="#">Saint Joseph Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=SJB&amp;station=01&amp;unfold=menu_VBS_SJB">SJB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=SJB&amp;station=02&amp;unfold=menu_VBS_SJB">SJB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=SJB&amp;station=03&amp;unfold=menu_VBS_SJB">SJB Station 03</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OSJ"><a href="#">Offshore Saint Joseph Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OSJ&amp;station=01&amp;unfold=menu_VBS_OSJ">OSJ Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSJ&amp;station=02&amp;unfold=menu_VBS_OSJ">OSJ Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSJ&amp;station=03&amp;unfold=menu_VBS_OSJ">OSJ Station 03</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_STE"><a href="#">Steinhatchee River</a>
+	  <ul>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=01&amp;unfold=menu_VBS_STE">STE Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=02&amp;unfold=menu_VBS_STE">STE Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=03&amp;unfold=menu_VBS_STE">STE Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=04&amp;unfold=menu_VBS_STE">STE Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=05&amp;unfold=menu_VBS_STE">STE Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=06&amp;unfold=menu_VBS_STE">STE Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=07&amp;unfold=menu_VBS_STE">STE Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=08&amp;unfold=menu_VBS_STE">STE Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=09&amp;unfold=menu_VBS_STE">STE Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=10&amp;unfold=menu_VBS_STE">STE Station 10</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=11&amp;unfold=menu_VBS_STE">STE Station 11</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=12&amp;unfold=menu_VBS_STE">STE Station 12</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=13&amp;unfold=menu_VBS_STE">STE Station 13</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=14&amp;unfold=menu_VBS_STE">STE Station 14</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=15&amp;unfold=menu_VBS_STE">STE Station 15</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=16&amp;unfold=menu_VBS_STE">STE Station 16</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=17&amp;unfold=menu_VBS_STE">STE Station 17</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=18&amp;unfold=menu_VBS_STE">STE Station 18</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=19&amp;unfold=menu_VBS_STE">STE Station 19</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=20&amp;unfold=menu_VBS_STE">STE Station 20</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=21&amp;unfold=menu_VBS_STE">STE Station 21</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=22&amp;unfold=menu_VBS_STE">STE Station 22</a></li>
+	    <li><a href="/cgi-bin/vb?area=STE&amp;station=23&amp;unfold=menu_VBS_STE">STE Station 23</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_SUW"><a href="#">Suwannee River Estuary</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=01&amp;unfold=menu_VBS_SUW">SUW Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=02&amp;unfold=menu_VBS_SUW">SUW Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=03&amp;unfold=menu_VBS_SUW">SUW Station 03</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=04&amp;unfold=menu_VBS_SUW">SUW Station 04</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=05&amp;unfold=menu_VBS_SUW">SUW Station 05</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=06&amp;unfold=menu_VBS_SUW">SUW Station 06</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=07&amp;unfold=menu_VBS_SUW">SUW Station 07</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=08&amp;unfold=menu_VBS_SUW">SUW Station 08</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=09&amp;unfold=menu_VBS_SUW">SUW Station 09</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=10&amp;unfold=menu_VBS_SUW">SUW Station 10</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=11&amp;unfold=menu_VBS_SUW">SUW Station 11</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=12&amp;unfold=menu_VBS_SUW">SUW Station 12</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=13&amp;unfold=menu_VBS_SUW">SUW Station 13</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=14&amp;unfold=menu_VBS_SUW">SUW Station 14</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=15&amp;unfold=menu_VBS_SUW">SUW Station 15</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=16&amp;unfold=menu_VBS_SUW">SUW Station 16</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=17&amp;unfold=menu_VBS_SUW">SUW Station 17</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=18&amp;unfold=menu_VBS_SUW">SUW Station 18</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=19&amp;unfold=menu_VBS_SUW">SUW Station 19</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=20&amp;unfold=menu_VBS_SUW">SUW Station 20</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=21&amp;unfold=menu_VBS_SUW">SUW Station 21</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=22&amp;unfold=menu_VBS_SUW">SUW Station 22</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=23&amp;unfold=menu_VBS_SUW">SUW Station 23</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=24&amp;unfold=menu_VBS_SUW">SUW Station 24</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=25&amp;unfold=menu_VBS_SUW">SUW Station 25</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=26&amp;unfold=menu_VBS_SUW">SUW Station 26</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=27&amp;unfold=menu_VBS_SUW">SUW Station 27</a></li>
+	  <li><a href="/cgi-bin/vb?area=SUW&amp;station=28&amp;unfold=menu_VBS_SUW">SUW Station 28</a></li>
+	  </ul>
+	 </li>
+        </ul>
+      </li>
+      <!--This is a section of VBS menu. Comments are not displayed in the browser-->
+      <li class="ui-state-default ui-corner-all"><a href="#">Biscayne Bay</a>
+       <ul>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_BS"><a href="#">Barnes Sound</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=BS01&amp;unfold=menu_VBS_BS">BS Station 01</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_CS"><a href="#">Card Sound</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=CS01&amp;unfold=menu_VBS_CS">CS Station 01</a></li>
+	  </ul>
+	</li>
+        <li class="ui-state-default ui-corner-all" id="menu_VBS_NBB"><a href="#">North Bay</a>
+          <ul>
+          <li><a href="/cgi-bin/vb?area=BB&amp;station=NBB01&amp;unfold=menu_VBS_NBB">NBB Station 01</a></li>
+          </ul>
+        </li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_BB"><a href="#">Central and South Bay</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=01&amp;unfold=menu_VBS_BB">BB Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=02&amp;unfold=menu_VBS_BB">BB Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=03&amp;unfold=menu_VBS_BB">BB Station 03</a></li>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=04&amp;unfold=menu_VBS_BB">BB Station 04</a></li>
+	  <li><a href="/cgi-bin/vb?area=BB&amp;station=05&amp;unfold=menu_VBS_BB">BB Station 05</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_OBB"><a href="#">Offshore Biscayne Bay</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=OBB&amp;station=01&amp;unfold=menu_VBS_OBB">OBB Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=OBB&amp;station=02&amp;unfold=menu_VBS_OBB">OBB Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=OBB&amp;station=03&amp;unfold=menu_VBS_OBB">OBB Station 03</a></li>
+          </ul>
+	</li>
+	</ul>
+      </li>	
+      <!--This is a section of VBS menu. Comments are not displayed in the browser-->
+      <li class="ui-state-default ui-corner-all" id="menu_VBS_COD"><a href="#">Cape Cod</a>
+        <ul>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=01&amp;unfold=menu_VBS_COD">COD Station 01</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=02&amp;unfold=menu_VBS_COD">COD Station 02</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=03&amp;unfold=menu_VBS_COD">COD Station 03</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=04&amp;unfold=menu_VBS_COD">COD Station 04</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=05&amp;unfold=menu_VBS_COD">COD Station 05</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=06&amp;unfold=menu_VBS_COD">COD Station 06</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=07&amp;unfold=menu_VBS_COD">COD Station 07</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=08&amp;unfold=menu_VBS_COD">COD Station 08</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=09&amp;unfold=menu_VBS_COD">COD Station 09</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=10&amp;unfold=menu_VBS_COD">COD Station 10</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=11&amp;unfold=menu_VBS_COD">COD Station 11</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=12&amp;unfold=menu_VBS_COD">COD Station 12</a></li>
+	<li><a href="/cgi-bin/vb?area=COD&amp;station=13&amp;unfold=menu_VBS_COD">COD Station 13</a></li>
+	</ul>
+      </li>      
+      <li class="ui-state-default ui-corner-all"><a href="#">Central West Florida</a>
+       <ul>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_CHH"><a href="#">Charlotte Harbor</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=CHH&amp;station=01&amp;unfold=menu_VBS_CHH">CHH Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=CHH&amp;station=02&amp;unfold=menu_VBS_CHH">CHH Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=CHH&amp;station=03&amp;unfold=menu_VBS_CHH">CHH Station 03</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_SBY"><a href="#">Sarasota Bay</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=SBY&amp;station=01&amp;unfold=menu_VBS_SBY">SBY Station 01</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_TBY"><a href="#">Tampa Bay</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=01&amp;unfold=menu_VBS_TBY">TBY Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=02&amp;unfold=menu_VBS_TBY">TBY Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=03&amp;unfold=menu_VBS_TBY">TBY Station 03</a></li>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=04&amp;unfold=menu_VBS_TBY">TBY Station 04</a></li>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=05&amp;unfold=menu_VBS_TBY">TBY Station 05</a></li>
+	  <li><a href="/cgi-bin/vb?area=TBY&amp;station=06&amp;unfold=menu_VBS_TBY">TBY Station 06</a></li>
+	  </ul>
+	</li>
+	<li class="ui-state-default ui-corner-all" id="menu_VBS_WFS"><a href="#">West Florida Shelf</a>
+	  <ul>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=01&amp;unfold=menu_VBS_WFS">WFS Station 01</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=02&amp;unfold=menu_VBS_WFS">WFS Station 02</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=03&amp;unfold=menu_VBS_WFS">WFS Station 03</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=04&amp;unfold=menu_VBS_WFS">WFS Station 04</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=05&amp;unfold=menu_VBS_WFS">WFS Station 05</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=06&amp;unfold=menu_VBS_WFS">WFS Station 06</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=07&amp;unfold=menu_VBS_WFS">WFS Station 07</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=08&amp;unfold=menu_VBS_WFS">WFS Station 08</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=09&amp;unfold=menu_VBS_WFS">WFS Station 09</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=10&amp;unfold=menu_VBS_WFS">WFS Station 10</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=11&amp;unfold=menu_VBS_WFS">WFS Station 11</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=12&amp;unfold=menu_VBS_WFS">WFS Station 12</a></li>
+	  <li><a href="/cgi-bin/vb?area=WFS&amp;station=13&amp;unfold=menu_VBS_WFS">WFS Station 13</a></li>
+	  </ul>
+	</li>
+	</ul>
+      </li>	
+      <li class="ui-state-default ui-corner-all"><a href="#">Florida Keys</a>
+        <ul>
+          <li class="ui-state-default ui-corner-all" id="menu_VBS_FLK"><a href="#">Florida Reef Tract</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=01&amp;unfold=menu_VBS_FLK">FLK Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=02&amp;unfold=menu_VBS_FLK">FLK Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=03&amp;unfold=menu_VBS_FLK">FLK Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=04&amp;unfold=menu_VBS_FLK">FLK Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=05&amp;unfold=menu_VBS_FLK">FLK Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=06&amp;unfold=menu_VBS_FLK">FLK Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=07&amp;unfold=menu_VBS_FLK">FLK Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=08&amp;unfold=menu_VBS_FLK">FLK Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=09&amp;unfold=menu_VBS_FLK">FLK Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=10&amp;unfold=menu_VBS_FLK">FLK Station 10</a></li>
+	    <li><a href="/cgi-bin/vb?area=FLK&amp;station=11&amp;unfold=menu_VBS_FLK">FLK Station 11</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_SFL"><a href="#">Straits of Florida</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=01&amp;unfold=menu_VBS_SFL">SFL Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=02&amp;unfold=menu_VBS_SFL">SFL Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=03&amp;unfold=menu_VBS_SFL">SFL Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=04&amp;unfold=menu_VBS_SFL">SFL Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=05&amp;unfold=menu_VBS_SFL">SFL Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=06&amp;unfold=menu_VBS_SFL">SFL Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=07&amp;unfold=menu_VBS_SFL">SFL Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=08&amp;unfold=menu_VBS_SFL">SFL Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=09&amp;unfold=menu_VBS_SFL">SFL Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=10&amp;unfold=menu_VBS_SFL">SFL Station 10</a></li>
+	    <li><a href="/cgi-bin/vb?area=SFL&amp;station=11&amp;unfold=menu_VBS_SFL">SFL Station 11</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_FBY"><a href="#">Southwest Florida Bight</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=01&amp;unfold=menu_VBS_FBY">FBY Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=02&amp;unfold=menu_VBS_FBY">FBY Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=03&amp;unfold=menu_VBS_FBY">FBY Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=04&amp;unfold=menu_VBS_FBY">FBY Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=05&amp;unfold=menu_VBS_FBY">FBY Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=06&amp;unfold=menu_VBS_FBY">FBY Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=07&amp;unfold=menu_VBS_FBY">FBY Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=08&amp;unfold=menu_VBS_FBY">FBY Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=09&amp;unfold=menu_VBS_FBY">FBY Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=10&amp;unfold=menu_VBS_FBY">FBY Station 10</a></li>
+	    <li><a href="/cgi-bin/vb?area=FBY&amp;station=11&amp;unfold=menu_VBS_FBY">FBY Station 11</a></li>
+	    </ul>
+	  </li>	
+        </ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Great Lakes</a>
+        <ul>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_GLE"><a href="#">Lake Erie</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=GLE&amp;station=01&amp;unfold=menu_VBS_GLE">GLE Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLE&amp;station=02&amp;unfold=menu_VBS_GLE">GLE Station 02</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_GLH"><a href="#">Lake Huron</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=GLH&amp;station=01&amp;unfold=menu_VBS_GLH">GLH Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLH&amp;station=02&amp;unfold=menu_VBS_GLH">GLH Station 02</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_GLM"><a href="#">Lake Michigan</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=01&amp;unfold=menu_VBS_GLM">GLM Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=02&amp;unfold=menu_VBS_GLM">GLM Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=03&amp;unfold=menu_VBS_GLM">GLM Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=04&amp;unfold=menu_VBS_GLM">GLM Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=05&amp;unfold=menu_VBS_GLM">GLM Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=06&amp;unfold=menu_VBS_GLM">GLM Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=07&amp;unfold=menu_VBS_GLM">GLM Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLM&amp;station=08&amp;unfold=menu_VBS_GLM">GLM Station 08</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_GLO"><a href="#">Lake Ontario</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=GLO&amp;station=01&amp;unfold=menu_VBS_GLO">GLO Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=GLO&amp;station=02&amp;unfold=menu_VBS_GLO">GLO Station 02</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_GLS"><a href="#">Lake Superior</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=GLS&amp;station=01&amp;unfold=menu_VBS_GLS">GLS Station 01</a></li>
+	    </ul>
+	  </li>
+	</ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Mobile Bay</a>
+        <ul>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_CWB"><a href="#">Choctawhatchee Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=CWB&amp;station=01&amp;unfold=menu_VBS_CWB">CWB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=CWB&amp;station=02&amp;unfold=menu_VBS_CWB">CWB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=CWB&amp;station=03&amp;unfold=menu_VBS_CWB">CWB Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=CWB&amp;station=04&amp;unfold=menu_VBS_CWB">CWB Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=CWB&amp;station=05&amp;unfold=menu_VBS_CWB">CWB Station 05</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OCW"><a href="#">Offshore Choctawhatchee Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OCW&amp;station=01&amp;unfold=menu_VBS_OCW">OCW Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OCW&amp;station=02&amp;unfold=menu_VBS_OCW">OCW Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OCW&amp;station=03&amp;unfold=menu_VBS_OCW">OCW Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=OCW&amp;station=04&amp;unfold=menu_VBS_OCW">OCW Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=OCW&amp;station=05&amp;unfold=menu_VBS_OCW">OCW Station 05</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_PCB"><a href="#">Pensacola Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PCB&amp;station=01&amp;unfold=menu_VBS_PCB">PCB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PCB&amp;station=02&amp;unfold=menu_VBS_PCB">PCB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=PCB&amp;station=03&amp;unfold=menu_VBS_PCB">PCB Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=PCB&amp;station=04&amp;unfold=menu_VBS_PCB">PCB Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=PCB&amp;station=05&amp;unfold=menu_VBS_PCB">PCB Station 05</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OPC"><a href="#">Offshore Pensacola Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OPC&amp;station=01&amp;unfold=menu_VBS_OPC">OPC Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OPC&amp;station=02&amp;unfold=menu_VBS_OPC">OPC Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OPC&amp;station=03&amp;unfold=menu_VBS_OPC">OPC Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=OPC&amp;station=04&amp;unfold=menu_VBS_OPC">OPC Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=OPC&amp;station=05&amp;unfold=menu_VBS_OPC">OPC Station 05</a></li>
+	    </ul>
+	  </li>	
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_SAB"><a href="#">Saint Andrew Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=01&amp;unfold=menu_VBS_SAB">SAB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=02&amp;unfold=menu_VBS_SAB">SAB Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=03&amp;unfold=menu_VBS_SAB">SAB Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=04&amp;unfold=menu_VBS_SAB">SAB Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=05&amp;unfold=menu_VBS_SAB">SAB Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=SAB&amp;station=06&amp;unfold=menu_VBS_SAB">SAB Station 06</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_OSA"><a href="#">Offshore Saint Andrew Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=01&amp;unfold=menu_VBS_OSA">OSA Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=02&amp;unfold=menu_VBS_OSA">OSA Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=03&amp;unfold=menu_VBS_OSA">OSA Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=04&amp;unfold=menu_VBS_OSA">OSA Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=05&amp;unfold=menu_VBS_OSA">OSA Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=06&amp;unfold=menu_VBS_OSA">OSA Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=OSA&amp;station=07&amp;unfold=menu_VBS_OSA">OSA Station 07</a></li>
+	    </ul>
+	  </li>		  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_PDB"><a href="#">Perdido Bay</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PDB&amp;station=01&amp;unfold=menu_VBS_PDB">PDB Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PDB&amp;station=02&amp;unfold=menu_VBS_PDB">PDB Station 02</a></li>
+	    </ul>
+	  </li>		  
+        </ul>
+      </li>
+
+      <li class="ui-state-default ui-corner-all"><a href="#">Puerto Rico</a>
+        <ul>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_EPR"><a href="#">E. Puerto Rico</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=EPR01&amp;unfold=menu_VBS_EPR">EPR Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=EPR02&amp;unfold=menu_VBS_EPR">EPR Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=EPR03&amp;unfold=menu_VBS_EPR">EPR Station 03</a></li>
+            <!-- more stations in August 2024 -->
+            <li><a href="/cgi-bin/vb?area=PRICO&amp;station=EPR04&amp;unfold=menu_VBS_EPR">EPR Station 04</a></li>
+            <li><a href="/cgi-bin/vb?area=PRICO&amp;station=EPR05&amp;unfold=menu_VBS_EPR">EPR Station 05</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_CUL"><a href="#">Isla De Culebra</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=CUL01&amp;unfold=menu_VBS_CUL">CUL Station 01</a></li>
+	    </ul>
+	  </li>
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_MON"><a href="#">Mona Island</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=MON01&amp;unfold=menu_VBS_MON">MON Station 01</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_VIR"><a href="#">US Virgin Islands</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIR01&amp;unfold=menu_VBS_VIR">VIR Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIR02&amp;unfold=menu_VBS_VIR">VIR Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIR03&amp;unfold=menu_VBS_VIR">VIR Station 03</a></li>
+            <!-- more stations in August 2024 -->
+            <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIR04&amp;unfold=menu_VBS_VIR">VIR Station 04</a></li>
+	    </ul>
+	  </li>	
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_VIE"><a href="#">Vieques</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIE01&amp;unfold=menu_VBS_VIE">VIE Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=VIE02&amp;unfold=menu_VBS_VIE">VIE Station 02</a></li>
+	    </ul>
+	  </li>	  
+	  <li class="ui-state-default ui-corner-all" id="menu_VBS_WPR"><a href="#">W. Puerto Rico</a>
+	    <ul>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR01&amp;unfold=menu_VBS_WPR">WPR Station 01</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR02&amp;unfold=menu_VBS_WPR">WPR Station 02</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR03&amp;unfold=menu_VBS_WPR">WPR Station 03</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR04&amp;unfold=menu_VBS_WPR">WPR Station 04</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR05&amp;unfold=menu_VBS_WPR">WPR Station 05</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR06&amp;unfold=menu_VBS_WPR">WPR Station 06</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR07&amp;unfold=menu_VBS_WPR">WPR Station 07</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR08&amp;unfold=menu_VBS_WPR">WPR Station 08</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR09&amp;unfold=menu_VBS_WPR">WPR Station 09</a></li>
+	    <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR10&amp;unfold=menu_VBS_WPR">WPR Station 10</a></li>
+            <!-- more stations in August 2024 -->
+            <li><a href="/cgi-bin/vb?area=OPRICO&amp;station=WPR11&amp;unfold=menu_VBS_WPR">WPR Station 11</a></li>
+            <li><a href="/cgi-bin/vb?area=PRICO&amp;station=WPR12&amp;unfold=menu_VBS_WPR">WPR Station 12</a></li>
+            <li><a href="/cgi-bin/vb?area=OPRICO&amp;station=WPR13&amp;unfold=menu_VBS_WPR">WPR Station 13</a></li>
+	    </ul>
+	  </li>		   
+        </ul>
+      </li>
+
+
+      <li class="ui-state-default ui-corner-all" id="menu_VBS_PER"><a href="#">North Persian Gulf</a>
+        <ul>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=01&amp;unfold=menu_VBS_PER">PER Station 01</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=02&amp;unfold=menu_VBS_PER">PER Station 02</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=03&amp;unfold=menu_VBS_PER">PER Station 03</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=04&amp;unfold=menu_VBS_PER">PER Station 04</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=05&amp;unfold=menu_VBS_PER">PER Station 05</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=06&amp;unfold=menu_VBS_PER">PER Station 06</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=07&amp;unfold=menu_VBS_PER">PER Station 07</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=08&amp;unfold=menu_VBS_PER">PER Station 08</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=09&amp;unfold=menu_VBS_PER">PER Station 09</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=10&amp;unfold=menu_VBS_PER">PER Station 10</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=11&amp;unfold=menu_VBS_PER">PER Station 11</a></li>
+	 <li><a href="/cgi-bin/vb?area=PER&amp;station=12&amp;unfold=menu_VBS_PER">PER Station 12</a></li>
+	</ul>
+      </li>
+    </ul>
+  </li>
+  <!--li class="ui-state-default ui-corner-all"><a href="#">In Situ Data Products</a>
+     <ul>
+      <li><a href="#">Coming soon</a></li>
+     </ul>
+  <li class="ui-state-default ui-corner-all"><a href="#">Airborne Data Products</a>
+     <ul>
+      <li><a href="#">Coming soon</a></li>
+     </ul>  
+     <ul>
+      <li><a href="/data/airborne/crowslanding/index.html">Crowslanding</a></li>
+     </ul>
+  </li-->
+  
+  <li class="ui-state-default ui-corner-all"><a href="#">Publications</a>
+    <ul>
+      <li class="ui-state-default ui-corner-all"><a href="/references/publications_refereed.html">Refereed</a>
+      </li>
+      <!--li class="ui-state-default ui-corner-all"><a href="#">Others</a>
+	<ul>
+          <li><a href="#">Coming soon</a></li>
+	</ul>
+      </li-->
+    </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all"><a href="#">Events</a>
+        <ul>
+          <li class="ui-state-default ui-corner-all"><a href="#">Deep Water<br/>Horizon Disaster</a>
+           <ul>
+            <li><a href="/events/GOM_rigfire/index_sep.html">September 2010</a></li>
+            <li><a href="/events/GOM_rigfire/index_aug.html">August 2010</a></li>
+            <li><a href="/events/GOM_rigfire/index_jul.html">July 2010</a></li>
+            <li><a href="/events/GOM_rigfire/index_jun.html">June 2010</a></li>
+            <li><a href="/events/GOM_rigfire/index_may.html">May 2010</a></li>
+            <li><a href="/events/GOM_rigfire/index_apr.html">April 2010</a></li>
+           </ul>
+          </li>
+          <li class="ui-state-default ui-corner-all"><a href="#">Qingdao Algae 2008</a>
+           <ul>
+            <li><a href="/events/qingdao_algae/index.html">NDVI algorithm</a></li>
+            <li><a href="/events/qingdao_algae/index_fai.html">FAI algorithm</a></li>
+           </ul>
+          </li>
+        </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all"><a href="#">Links</a>
+        <ul>
+	  <li><a href="http://myfwc.com/research/redtide/events/status/statewide/">FWC - Red Tide Current Status</a></li>
+          <li><a href="http://www.imars.usf.edu/HOME">IMaRS</a></li>
+          <li><a href="http://ocgweb.marine.usf.edu/">Ocean Circulation Group</a></li>
+        </ul>
+  </li>
+  <li class="ui-state-default ui-corner-all"><a href="#">Contact</a>
+        <ul>
+          <li><a href="mailto:huc@usf.edu"><b style="font-style : italic;">Chuanmin Hu</b></a>
+	</li>
+        </ul>
+  </li>
+</ul>
+</div> <!-- end #navmenu -->
+<div id="VAS_clickable_map" style="display: none;">
+  <div id="dialog_1050_VAS"></div>
+  <div id="dialog_1050_FULL" class="center" title="VAS Clickable Map -- FULL">
+    <table class="ui-corner-all">
+      <tr>
+        <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="image-VAS-FULL" src="/images/vas/world_base.png" alt="Clickable map -- Full" usemap="#image-map-VAS-FULL"/>
+          <map id="image-map-VAS-FULL" name="image-map-VAS-FULL">
+          <area id="link-to-dialog_1050_NUS" alt="Northern US" title="Northern US" href="#" coords="264,34,364,88" shape="rect"/>
+          <area id="link-to-dialog_1050_GOM_CARIB" alt="Gulf of Mexico and Caribbean Sea" title="Gulf of Mexico and Caribbean Sea" href="#" coords="245,87,364,160" shape="rect"/>
+          <area id="link-to-dialog_1050_CATL" alt="Central Atlantic" title="Central Atlantic" href="#" coords="363,115,581,256" shape="rect"/>
+          <area id="link-to-dialog_1050_WCS" alt="East Asia" title="East Asia" href="#" coords="875,57,922,118" shape="rect"/>
+          <area alt="Samoa Islands" title="Samoa Islands" href="/cgi-bin/optics_data?roi=SAMOA" coords="25,218,37,229" shape="rect"/>
+          <area alt="Persian Gulf" title="Persian Gulf" href="/cgi-bin/optics_data?roi=PERSIAN_GULF" coords="681,88,710,110" shape="rect"/>
+          <area alt="Northern Mariana Islands" title="Northern Mariana Islands" href="/cgi-bin/optics_data?roi=CNMI" coords="970,131,981,144" shape="rect"/>
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <th class="ui-widget-header ui-corner-all">You will be redirected to a zoom-in map.</th>
+      </tr>
+    </table>
+  </div> <!-- end #dialog_1050_VAS -->
+  <div id="dialog_1050_GOM_CARIB" class="center" title="VAS Clickable Map -- Gulf of Mexico and Caribbean Sea">
+    <table class="ui-corner-all">
+      <tr>
+        <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="image-GOM-CARIB" src="/images/vas/gom_carib_composite.png" alt="Clickable map -- GOM and CARIB" usemap="#image-map-GOM-CARIB"/>
+          <map id="image-map-GOM-CARIB" name="image-map-GOM-CARIB">
+          <!-- over NW_GOM -->
+          <area alt="Corpus Christi and South Padre" title="Corpus Christi and South Padre&amp;click=GOM_CARIB" href="/cgi-bin/optics_data?roi=CORPUS&amp;click=GOM_CARIB" coords="37,83,71,118" shape="rect"/>
+          <area alt="Galveston" title="Galveston" href="/cgi-bin/optics_data?roi=GALV&amp;click=GOM_CARIB" coords="60,52,59,81,70,81,70,100,131,101,132,53" shape="poly"/>
+          <!-- Added on 6/8/2026 -->
+          <area alt="Northwest Gulf of America" title="Northwest Gulf of America" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=NW_GOM&amp;click=GOM_CARIB" coords="23,49,146,146" shape="rect">
+          <!-- Added on 5/6/2026 -->
+          <area alt="Bonaire" title="Bonaire" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=BONAIRE&amp;click=GOM_CARIB" coords="737,457,767,485" shape="rect">
+          <!-- Added on 10/18/2025; Edited on 8/16/2026 -->
+          <area alt="Gold Coast" title="Gold Coast" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=GOLD_CST&amp;click=GOM_CARIB" coords="446,125,466,167" shape="rect"/>
+          <!-- Before 2025 -->
+          <area alt="Northern Indian River" title="Northern Indian River" href="/cgi-bin/optics_data?roi=NIRL&amp;click=GOM_CARIB" coords="434,74,449,101" shape="rect"/> 
+          <area alt="Lake Okeechobee" title="Lake Okeechobee" href="/cgi-bin/optics_data?roi=LAKE_OKEE&amp;click=GOM_CARIB" coords="427,114,443,128" shape="rect"/>
+          <area alt="Tampa Bay" title="Tampa Bay" href="/cgi-bin/optics_data?roi=TAMPA_BAY&amp;click=GOM_CARIB" coords="378,94,400,117" shape="rect"/>
+          <area alt="Charlotte Harbor" title="Charlotte Harbor" href="/cgi-bin/optics_data?roi=C_HARBOR&amp;click=GOM_CARIB" coords="389,120,414,143" shape="rect"/>
+          <area alt="Barbados" title="Barbados" href="/cgi-bin/optics_data?roi=BARBADOS&amp;click=GOM_CARIB" coords="937,443,960,468" shape="rect"/>
+          <area alt="Southern Indian River" title="Southern Indian River" href="/cgi-bin/optics_data?roi=SIRL&amp;click=GOM_CARIB" coords="444,102,465,127" shape="rect"/>
+          <area alt="Martinique" title="Martinique" href="/cgi-bin/ls?roi=MARTINIQUE&amp;current=1" coords="899,407,922,431" shape="rect"/>
+          <area alt="Guadeloupe" title="Guadeloupe" href="/cgi-bin/ls?roi=GUADELOUPE&amp;current=1" coords="890,372,923,395" shape="rect"/>
+          <area alt="Mississippi River" title="Mississippi River" href="/cgi-bin/optics_data?roi=MRIVER&amp;click=GOM_CARIB" coords="191,35,252,95" shape="rect"/>
+          <area alt="Mobile Bay" title="Mobile Bay" href="/cgi-bin/optics_data?roi=MBAY&amp;click=GOM_CARIB" coords="252,26,323,60" shape="rect"/>
+          <area alt="Florida Big Bend" title="Florida Big Bend" href="/cgi-bin/optics_data?roi=BIGBEND&amp;click=GOM_CARIB" coords="323,43,323,96,371,97,370,92,398,91,396,43" shape="poly"/>
+          <area alt="Central West Florida" title="Central West Florida" href="/cgi-bin/optics_data?roi=CWFL&amp;click=GOM_CARIB" coords="370,91,420,143" shape="rect"/>
+          <area alt="Florida Keys" title="Florida Keys" href="/cgi-bin/optics_data?roi=FLKEYS&amp;click=GOM_CARIB" coords="385,145,456,192" shape="rect"/>
+          <area alt="South East Florida Shelf" title="South East Florida Shelf" href="/cgi-bin/optics_data?roi=SE_FL&amp;click=GOM_CARIB" coords="450,107,450,145,458,145,458,158,479,156,478,110" shape="poly"/>
+          <area alt="Northwest Cuba" title="Northwest Cuba" href="/cgi-bin/optics_data?roi=NWCUBA&amp;click=GOM_CARIB" coords="336,180,334,237,432,240,431,193,384,193,385,180" shape="poly"/>
+          <area alt="Cancun" title="Cancun" href="/cgi-bin/optics_data?roi=CANCUN&amp;click=GOM_CARIB" coords="262,239,311,312" shape="rect"/>
+          <area alt="Belize" title="Belize" href="/cgi-bin/optics_data?roi=BELIZE&amp;click=GOM_CARIB" coords="239,312,310,396" shape="rect"/>
+          <area alt="Puerto Rico" title="Puerto Rico" href="/cgi-bin/optics_data?roi=P_RICO&amp;click=GOM_CARIB" coords="741,312,838,347" shape="rect"/>
+          <area alt="North Antilles" title="North Antilles" href="/cgi-bin/optics_data?roi=N_ANTILLES&amp;click=GOM_CARIB" coords="840,313,934,406" shape="rect"/>
+          <area alt="South Antilles" title="South Antilles" href="/cgi-bin/optics_data?roi=S_ANTILLES&amp;click=GOM_CARIB" coords="864,409,959,528" shape="rect"/>
+          <area alt="SECOORA" title="SECOORA" href="/cgi-bin/optics_data?roi=SECOORA&amp;click=GOM_CARIB" coords="167,1,167,23,480,24,478,239,575,240,574,2" shape="poly"/>
+          <area alt="Gulf of Mexico/GCOOS" title="Gulf of Mexico/GCOOS" href="/cgi-bin/optics_data?roi=GCOOS&amp;click=GOM_CARIB" coords="25,25,25,334,216,334,214,239,478,239,478,25" shape="poly"/>
+          <area alt="Yucatan" title="Yucatan" href="/cgi-bin/optics_data?roi=YUCATAN&amp;click=GOM_CARIB" coords="218,242,406,408" shape="rect"/>
+          <area alt="Jamaica" title="Jamaica" href="/cgi-bin/optics_data?roi=JAMAICA&amp;click=GOM_CARIB" coords="406,241,577,412" shape="rect"/>
+          <area alt="Panama" title="Panama" href="/cgi-bin/optics_data?roi=PANAMA&amp;click=GOM_CARIB" coords="358,409,576,588" shape="rect"/>
+          <area alt="Eastern Caribbean" title="Eastern Caribbean" href="/cgi-bin/optics_data?roi=ECARIB&amp;click=GOM_CARIB" coords="575,216,575,529,864,528,862,311,935,311,936,217" shape="poly"/>
+          <area alt="Central Atlantic" title="Central Atlantic" href="/cgi-bin/optics_data?roi=C_ATLANTIC&amp;click=GOM_CARIB" coords="936,240,935,530,865,527,865,611,983,611,983,241" shape="poly"/>
+          <area alt="Bermuda" title="Bermuda" href="/cgi-bin/optics_data?roi=BERMUDA&amp;click=GOM_CARIB" coords="719,0,959,119" shape="rect"/>
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+      </tr>
+    </table>
+  </div> <!-- end #dialog_1050_GOM_CARIB -->
+  <div id="dialog_1050_NUS" class="center" title="VAS Clickable Map -- Northern US">
+    <table class="ui-corner-all">
+      <tr>
+        <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="image-NUS" src="/images/vas/north_us_composite.png" alt="Clickable map -- North US" usemap="#image-map-NUS"/>
+          <map id="image-map-NUS" name="image-map-NUS">
+          <area alt="Green Bay" title="Green Bay" href="/cgi-bin/optics_data?roi=GBAY&amp;click=NUS" coords="121,113,168,154" shape="rect"/>
+          <area alt="Saginaw" title="Saginaw" href="/cgi-bin/optics_data?roi=SAGINAW&amp;click=NUS" coords="238,154,273,182" shape="rect"/>
+          <area alt="Lake Erie" title="Lake Erie" href="/cgi-bin/optics_data?roi=ERIE&amp;click=NUS" coords="251,195,386,252" shape="rect"/>
+          <area alt="Great Lakes" title="Great Lakes" href="/cgi-bin/optics_data?roi=GLAKES&amp;click=NUS" coords="11,29,461,253" shape="rect"/>
+          <area alt="Chesapeake Bay" title="Chesapeake Bay" href="/cgi-bin/optics_data?roi=CBAY&amp;click=NUS" coords="406,279,517,448" shape="rect"/>
+          <area alt="SECOORA" title="SECOORA" href="/cgi-bin/optics_data?roi=SECOORA&amp;click=NUS" coords="13,337,13,531,489,529,489,448,407,447,407,337" shape="poly"/>
+          <area alt="Bermuda" title="Bermuda" href="/cgi-bin/optics_data?roi=BERMUDA&amp;click=NUS" coords="658,364,937,530" shape="rect"/>
+          <area alt="Cape Cod Bay" title="Cape Cod Bay" href="/cgi-bin/optics_data?roi=CAPE_COD&amp;click=NUS" coords="597,204,638,232" shape="rect"/>
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+      </tr>
+    </table>
+  </div> <!-- end #dialog_1050_NUS -->
+  <div id="dialog_1050_CATL" class="center" title="VAS Clickable Map -- Central Atlantic">
+    <table class="ui-corner-all">
+      <tr>
+        <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="image-CATL" src="/images/vas/c_atlantic_composite.png" alt="Clickable map -- Central Atlantic" usemap="#image-map-CATL"/>
+          <map id="image-map-CATL" name="image-map-CATL">
+          <area alt="Cape Verde" title="Cape Verde" href="/cgi-bin/optics_data?roi=CAPE_VERDE&amp;click=CATL" coords="415,67,468,118" shape="rect"/>
+          <area alt="Central Atlantic " title="Central Atlantic " href="/cgi-bin/optics_data?roi=C_ATLANTIC&amp;click=CATL" coords="0,13,260,299" shape="rect"/>
+          <area alt="North Brazil" title="North Brazil" href="/cgi-bin/optics_data?roi=N_BRAZIL&amp;click=CATL" coords="90,299,338,429" shape="rect"/>
+          <area alt="South Brazil" title="South Brazil" href="/cgi-bin/optics_data?roi=S_BRAZIL&amp;click=CATL" coords="168,430,337,623" shape="rect"/>
+          <area alt="Angola" title="Angola" href="/cgi-bin/optics_data?roi=ANGOLA&amp;click=CATL" coords="806,299,936,494" shape="rect"/>
+          <area alt="Gulf of Guinea" title="Gulf of Guinea" href="/cgi-bin/optics_data?roi=GOG&amp;click=CATL" coords="546,207,884,298" shape="rect"/>
+          <area alt="Central East Atlantic" title="Central East Atlantic" href="/cgi-bin/optics_data?roi=CE_ATLANTIC&amp;click=CATL" coords="260,12,259,298,544,297,546,208,601,206,603,13" shape="poly"/>
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+      </tr>
+    </table>
+  </div> <!-- end #dialog_1050_CATL -->
+  <div id="dialog_1050_WCS" class="center" title="VAS Clickable Map -- East Asia">
+    <table class="ui-corner-all">
+      <tr>
+        <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+      </tr>
+      <tr>
+        <td>
+          <img id="image-WCS" src="/images/vas/wcs_composite.png" alt="Clickable map -- East Asia" usemap="#image-map-WCS"/>
+          <map id="image-map-WCS" name="image-map-WCS">
+          <area alt="Taihu Lake" title="Taihu Lake" href="/cgi-bin/optics_data?roi=TAIHU&amp;click=WCS" coords="283,354,315,381" shape="rect"/>
+          <area alt="Bohai Sea" title="Bohai Sea" href="/cgi-bin/optics_data?roi=BOHAI&amp;click=WCS" coords="205,33,204,237,255,238,256,169,529,169,529,237,546,237,543,34" shape="poly"/>
+          <area alt="Qingdao" title="Qingdao" href="/cgi-bin/optics_data?roi=QINGDAO&amp;click=WCS" coords="255,171,390,307" shape="rect"/>
+          <area alt="East China Sea" title="East China Sea" href="/cgi-bin/optics_data?roi=ECS&amp;click=WCS" coords="391,238,391,306,290,306,290,340,407,339,408,509,511,508,511,239" shape="poly"/>
+          <area alt="Zhejiang" title="Zhejiang" href="/cgi-bin/optics_data?roi=ZHEJIANG&amp;click=WCS" coords="272,340,408,543" shape="rect"/>
+          <area alt="Taiwan Strait" title="Taiwan Strait" href="/cgi-bin/optics_data?roi=TWS&amp;click=WCS" coords="204,511,204,680,340,679,340,546,270,545,272,511" shape="poly"/>
+          <area alt="Pearl River Estuary" title="Pearl River Estuary" href="/cgi-bin/optics_data?roi=PRE&amp;click=WCS" coords="35,646,120,714" shape="rect"/>
+          <area alt="Yellow Sea and East China Sea" title="Yellow Sea and East China Sea" href="/cgi-bin/optics_data?roi=YS_ECS&amp;click=WCS" coords="255,171,526,475" shape="rect"/>
+          </map>
+        </td>
+      </tr>
+      <tr>
+        <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+      </tr>
+    </table>
+  </div> <!-- end #dialog_1050_WCS -->
+</div> <!-- end VAS clickable map -->
+<div id="SAWS_clickable_map" style="display: none;">
+     <div id="dialog_1050_SAWS" class="center" title="SaWS Clickable Map">
+	<table class="ui-corner-all">
+	  <tr>
+	    <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+	  </tr>
+	  <tr>
+	    <td> 
+	    
+	    <!--<a href="#L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" name="L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" class="screenshot" rel="/subscription/landsat/GUADELOUPE/2014/L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.400.png" title="L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" onclick="window.open('/subscription/landsat/GUADELOUPE/2014/L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png')">  -->
+              <div class="saws_slider">
+                  <img id="SaWS_Map_Image_3week" src="/projects/SaWS/images/saws_FAD_composite_3week_ago.png" alt="SaWS map -- 3 weeks ago" usemap="#SaWS_areas_map" />
+                  <img id="SaWS_Map_Image_2week" src="/projects/SaWS/images/saws_FAD_composite_2week_ago.png" alt="SaWS map -- 2 weeks ago" usemap="#SaWS_areas_map" />
+                  <img id="SaWS_Map_Image_1week" src="/projects/SaWS/images/saws_FAD_composite_1week_ago.png" alt="SaWS map -- 1 weeks ago" usemap="#SaWS_areas_map" />
+                  <img id="SaWS_Map_Image" src="/projects/SaWS/images/saws_FAD_composite.png" alt="SaWS map" usemap="#SaWS_areas_map" />
+              </div>
+		<map id="SaWS_areas_map" name="SaWS_areas_map">
+  		<area id="Bermuda" alt="Bermuda" title="Bermuda" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=BERMUDA&amp;comp=1" coords="266,20,352,105" shape="rect"/>
+  		<area id="SECOORA" alt="SECOORA" title="SECOORA" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=SECOORA&amp;comp=1" coords="62,10,62,70,179,71,178,150,210,150,213,10" shape="poly"/>
+  		<area id="GCOOS" alt="GCOOS" title="GCOOS" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=GCOOS&amp;comp=1" coords="10,71,10,186,80,187,81,150,177,150,177,72" shape="poly"/>
+  		<area id="Yucatan" alt="Yucatan" title="Yucatan" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=YUCATAN&amp;comp=1" coords="81,151,151,212" shape="rect"/>
+  		<area id="Jamaica" alt="Jamaica" title="Jamaica" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=JAMAICA&amp;comp=1" coords="152,150,212,212" shape="rect"/>
+  		<area id="Panama" alt="Panama" title="Panama" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=PANAMA&amp;comp=1" coords="133,213,213,279" shape="rect"/>
+  		<area id="ECarib" alt="Eastern Caribbean" title="Eastern Caribbean" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=ECARIB&amp;comp=1" coords="213,141,345,256" shape="rect"/>
+  		<area id="C_ATL" alt="Central Atlantic" title="Central Atlantic" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=C_ATLANTIC&amp;comp=1" coords="345,151,346,255,318,253,319,345,538,345,538,151" shape="poly"/>
+  		<area id="CE_ATL" alt="Central East Atlantic" title="Central East Atlantic" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=CE_ATLANTIC&amp;comp=1" coords="539,151,772,343" shape="rect"/>
+ 		<area id="GOG" alt="Gulf of Guinea" title="Gulf of Guinea" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=GOG&amp;comp=1" coords="772,283,961,343" shape="rect"/>
+ 		<area id="NBrazil" alt="Northern Brazil" title="Northern Brazil" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=N_BRAZIL&amp;comp=1" coords="423,346,591,433" shape="rect"/>
+		<area id="Angola" alt="Angola" title="Angola" href="https://optics.marine.usf.edu/cgi-bin/optics_data?roi=ANGOLA&amp;comp=1" coords="908,347,995,476" shape="rect"/>
+		</map>
+	    </td>
+	  </tr>
+	  <tr>
+	   <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+	  </tr>
+	</table>
+     </div>
+</div> <!-- end SaWS clickable map -->
+<div id="IRIS_clickable_map" style="display: none;">
+     <div id="dialog_1050_IRIS" class="center" title="IRIS Clickable Map">
+	<table class="ui-corner-all">
+	  <tr>
+	    <th class="ui-widget-header ui-corner-all">Click On Any Region</th>
+	  </tr>
+	  <tr>
+	    <td> 
+	    
+	    <!--<a href="#L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" name="L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" class="screenshot" rel="/subscription/landsat/GUADELOUPE/2014/L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.400.png" title="L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png" onclick="window.open('/subscription/landsat/GUADELOUPE/2014/L20143201425.30M.GUADELOUPE.L8.L3D_RRC.FAI.png')">  -->
+	    
+	      <img alt="IRIS_areas_map" id="IRIS_Map_Image" src="/projects/IRIS/images/iris.png" width="1003" height="657" usemap="#IRIS_areas_map" />
+		<map id="IRIS_areas_map" name="IRIS_areas_map">
+		<area shape="rect" coords="63,103,248,288" id="MRIVER" alt="Mississippi River Region" title="Mississippi River Region" href="/cgi-bin/optics_data?roi=MRIVER" />
+		<area shape="rect" coords="251,65,476,175" id="MBAY" alt="Mobile Bay Region" title="Mobile Bay Region" href="/cgi-bin/optics_data?roi=MBAY" />
+		<area shape="poly" coords="479,125,478,289,628,290,628,277,702,277,701,125" id="BIGBBEND" alt="Florida Big Bend Region" title="Florida Big Bend Region" href="/cgi-bin/optics_data?roi=BIGBEND" />
+		<area shape="rect" coords="629,278,778,442" id="CWFL" alt="Central West Florida Region" title="Central West Florida Region" href="/cgi-bin/optics_data?roi=CWFL" />
+		<area shape="poly" coords="668,444,869,442,870,479,890,479,890,591,669,592" id="FLKEYS" alt="Florida Keys Region" title="Florida Keys Region" href="/cgi-bin/optics_data?roi=FLKEYS" />
+		<area shape="rect" coords="870,330,964,478" id="SE_FL" alt="South East Florida Region" title="South East Florida Region" href="/cgi-bin/optics_data?roi=SE_FL" />
+		</map>
+	    </td>
+	  </tr>
+	  <tr>
+	   <th class="ui-widget-header ui-corner-all">You will be redirected to the data for that station.</th>
+	  </tr>
+	</table>
+     </div>
+</div> <!-- end IRIS clickable map --> 
+
+     </td>
+     <td colspan="1" class="ui-corner-all topoff">
+
+      <!-- Here is where the data should change -->
+	<div id="tabs">
+	 <ul>
+	  <li><a href="#tabs-7">Bulletins</a></li>
+	  <li><a href="#tabs-1">What is SaWS?</a></li>
+	  <li><a href="#tabs-2">How Sargassum is Monitored</a></li>
+	  <li><a href="#tabs-3">Where the Images are Found</a></li>
+	  <li><a href="#tabs-4">Integration of Ocean Currents</a></li>
+	  <li><a href="#tabs-5">Photo Gallery</a></li>
+	  <li><a href="#tabs-6">Further Readings</a></li>
+	  <li><a href="#faq">FAQ</a></li>
+	 </ul>
+
+	<div id="tabs-1">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <div class="imageContainerRight">
+	      <table class="ui-corner-all">
+		<tr>
+		 <th class="ui-widget-header ui-corner-all">Two Sargassum Species</th>
+		</tr>
+		<tr>
+		  <td>
+		    <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/sargassum.two.species.large.png', 'Weekly Mean TB 03'); return false;"><img alt="Two Sargassum Species" title="Two Sargassum Species" width="630" height="419" src="/projects/SaWS/images/sargassum.two.species.630px.png"/></a>
+		  </td>
+		</tr>
+		<tr>
+		 <th class="ui-widget-header ui-corner-all">Caribbean Sargassum: Sargassum natans (left) and Sargassum fluitans (right).<br/>University of South Mississippi</th>
+		</tr>
+		<tr>
+		 <th class="ui-widget-header ui-corner-all">Beaching Event</th>
+		</tr>
+		<tr>
+		  <td>
+		   <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/Barbados-March-24-2015-Romel_Hall.png', 'Beaching'); return false;"><img alt="Beaching Event 2015" title="Beach Event 2015" width="630" height="435" src="/projects/SaWS/images/Barbados-March-24-2015-Romel_Hall.630px.png"/></a>
+		  </td>
+		  <!--https://www.dailymail.co.uk/news/article-3277720/Stinking-sargassum-seaweed-smells-rotten-eggs-terrorizes-beaches-Caribbean-Florida-Texas-shores-experiencing-piles-kelp-10-feet-high.html-->
+		</tr>
+		<tr>
+		 <th class="ui-widget-header ui-corner-all">Sargassum accumulates along Bathsheba Beach on the east coast of Barbados<br/> (courtesy of Romel Hall/Barbados Today)</th>
+		</tr>
+	      </table>
+	    </div>
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab1_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px; margin-left : 15px;">The Sargassum Watch System (SaWS) is designed to use satellite data and numerical models to detect and track pelagic Saragassum in near-real time.</p>
+	    <p style="margin-top : 2px; margin-left : 15px;"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/Sargassum_at_sea.png'); return false;">Pelagic Sargassum seaweed (Image courtesy of Tracy Villareal)</a> is a brown macroalgae floating on the ocean surface. Comprised primarily of two species, <a title="Opens in a new tab or window" class='inline'  href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/S_natans.jpg'); return false;"><i>S. natans</i> (Image courtesy of Amy Siuda)</a> and <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/S_fluitans.jpg'); return false;"><i>S. fluitans</i> (Image courtesy of Amy Siuda)</a>, it is abundant in the Intra-Americas Sea (IAS), the Atlantic, and along the coasts of British Isles and mainland Europe. In the ocean it serves as an important habitat for many marine animals as it provides food, shade, and shelter (from predators) to fish, shrimp, crabs, and turtles. Sargassum may serve as fertilizers for sand dunes and thus protects shoreline stability. It is also a marine resource for other uses such as biomass for food, fuel, and as a possible source of pharmaceutical materials.</p>
+	    <p style="margin-top : 2px; margin-left : 15px;">However, excessive amounts of Sargassum on beaches in populated areas can cause a lot of problems and they must be physically removed. Sargassum decomposition on beaches smells bad, attracts insects, and causes many environmental problems (e.g., smothering turtle nesting sites, sea turtle mortality, fish kills) and economic problems (e.g., diminished tourism). The beaches along the Texas coast have experienced Sargassum inundation events annually, and since 2001 beaching events have also occurred on many Caribbean shores in nearly every spring and summer. Sargassum beaching events have also been reported in western Africa and northern Brazil. Monitoring Sargassum distribution and abundance in the ocean in a timely fashion is of great importance for studying ocean ecology, helping fishery management, and forecasting Sargassum beaching events. The SaWS is meant to provide such a function through producing and sharing customized satellite imagery in near real-time in a user-friendly way.</p>
+	    <p> You may be interested in these links:</p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('http://www.loopnewsbarbados.com/content/sea-turtles-victims-sargassum-seaweed'); return false;">Sea turtles victims of Sargassum seaweed</a></p>
+    	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('http://www.akumaldiveshop.com/sargassum-the-what-where-and-why-of-this-seaweed'); return false;">Sargassum: The What, Where, and Why of this Seaweed</a></p>    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://oceanexplorer.noaa.gov/facts/sargassum.html'); return false;">Sargassum is a genus of large brown seaweed (a type of algae) that floats in island-like masses</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('http://www.jamaicaobserver.com/news/Gov-t-allocates-initial--5-million-for-removal-of-sargassum_19234892'); return false;">Gov’t allocates initial $5 million for removal of sargassums</a></p>
+  	    <div style="clear:both;"></div>
+	  </div>
+	</div>
+
+	<div id="tabs-2">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab2_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px;color: #006;text-align: center;">The table below shows the four satellite sensors that are currently used in SaWS, with the first three sharing similar characteristics.</p>
+	    <div style="clear:both;"></div>
+	    <div class="ui-corner-all">
+	      <table id="summary">
+		<tr>
+		 <th class="ui-widget-header ui-corner-all">Sensor</th>
+		 <th class="ui-widget-header ui-corner-all">Revisit Frequency</th>
+		 <th class="ui-widget-header ui-corner-all">Spatial Resolution (m)</th>
+		 <th class="ui-widget-header ui-corner-all">Spectral bands for<br/>floating algae (nm)</th>
+		 <th class="ui-widget-header ui-corner-all">Spectral bands for<br/>color index</th>
+		 <th class="ui-widget-header ui-corner-all">Period</th>
+		</tr>
+		<tr>
+		  <td class="product">MODIS/Terra</td>
+		  <td class="norm">Near daily</td>
+		  <td class="norm">1000</td>
+		  <td class="norm">667, 748, 869</td>
+		  <td class="norm">469, 555, 645</td>
+		  <td class="norm">2000 &mdash; present</td>
+		</tr>
+		<tr>
+		  <td class="product">MODIS/Aqua</td>
+		  <td class="norm">Near daily</td>
+		  <td class="norm">1000</td>
+		  <td class="norm">667, 748, 869</td>
+		  <td class="norm">469, 555, 645</td>
+		  <td class="norm">2002 &mdash; present</td>
+		</tr>
+		<tr>
+		  <td class="product">VIIRS</td>
+		  <td class="norm">Daily</td>
+		  <td class="norm">750</td>
+		  <td class="norm">671, 745, 862</td>
+		  <td class="norm">443, 551, 671</td>
+		  <td class="norm">2012 &mdash; present</td>
+		</tr>
+		<tr>
+		  <td class="product">Landsat 8 OLI</td>
+		  <td class="norm">16-day</td>
+		  <td class="norm">30</td>
+		  <td class="norm">655, 865, 1609</td>
+		  <td class="norm">443, 561, 655</td>
+		  <td class="norm">2013 &mdash; present</td>
+		</tr>
+		<tr>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		 <th class="ui-widget-header ui-corner-all"></th>
+		</tr>
+	      </table>
+	    </div>
+	    <p></p>
+	    <p style="margin-top : 2px; margin-left : 15px;">The raw satellite data are provided by the <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://oceancolor.gsfc.nasa.gov/'); return false;">U.S. NASA</a> and <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://glovis.usgs.gov/'); return false;">USGS</a>. These data are downloaded and processed through a <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://opticalengineering.spiedigitallibrary.org/article.aspx?articleid=1787513'); return false;">Virtual Antenna System</a> using both standard and customized algorithms. Of particular importance are the two customized data products, namely the <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://www.sciencedirect.com/science/article/pii/S0034425709001710'); return false;">floating algae index (FAI)</a> to detect floating algae and other materials on the ocean surface, and the <a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://onlinelibrary.wiley.com/doi/10.1029/2010GL045422/full'); return false;">color index (CI)</a> to trace ocean circulation features. Floating algae often appears in images as slicks over the relatively homogeneous background in the FAI imagery, while ocean circulation patterns may be inferred from the various eddy and plume features in CI imagery. Two examples are given below.</p>
+	    <div style="clear:both;"></div>
+	    <div class="imageContainerLeft">
+	      <table class="ui-corner-all">
+		<tr>
+		 <th class="ui-widget-header ui-corner-all" colspan="2">Examples of Satellite Imagery used in SaWS</th>
+		</tr>
+		<tr>
+		  <td>
+		   <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/FAI.png', 'Floating Algae Index'); return false;"><img alt="Floating Algae Index" title="Floating Algae Index" width="600" height="450" src="/projects/SaWS/images/FAI.600px.png"/></a>
+		  </td>
+		  <td>
+		   <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/FAI_2.png', 'Ocean Circulation CI'); return false;"><img alt="Ocean Circulation CI" title="Ocean Circulation CI" width="329" height="450" src="/projects/SaWS/images/FAI_swath.png"/></a>
+		  </td>
+		</tr>
+		<tr>
+		 <th class="ui-widget-header ui-corner-all" colspan="2">Floating Algae Index (left) reveals algae and Color Index (right) shows circulations patterns</th>
+		</tr>
+	      </table>
+	    </div>
+	  </div>
+	</div>
+
+	 <div id="tabs-3">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab3_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px; margin-left : 15px;">SaWS covers the entire Intra-Americas Sea. To facilitate visualization and navigation, the imagery products are divided into different geographic regions, for example Central Atlantic, Eastern Caribbean, Central East Atlantic, Gulf of Mexico, etc. The <a href="#" id="dialog_1050_link" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab.">"SaWS Clickable Map"</a> at top of this paragraph shows the current coverage, where any region can be clicked to open a separate page unique to that region. A user may then select a specific date on the calendar, or use the “animate” function to browse through the image sequence quickly to determine the date of interest. The most useful image type may be the “FA_UNET_DENSITY”, which shows the Sargassum density over the past week. All images can be brought to the user’s Google Earth, together with ocean surface currents as a separate data layer. A screenshot of a typical web interface is presented below.</p>
+	    <p style="margin-top : 2px; margin-left : 15px;">More information can be found in this <a href="#" onclick="window.open('/projects/SaWS/README.pdf','README')"><u>README</u></a> file.</p>
+	      <div class="imageContainerLeft">
+		<table class="ui-corner-all">
+		  <tr>
+		   <th class="ui-widget-header ui-corner-all">Virtual Antenna Web Interface</th>
+		  </tr>
+		  <tr>
+		    <td>
+		     <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/Virtual_Antenna_System.UNET.png', 'Virtual Antenna Web Interface'); return false;"><img alt="Virtual Antenna Web Interface" title="Virtual Antenna Web Interface" width="1000" height="562" src="/projects/SaWS/images/Virtual_Antenna_System.UNET.png"/></a>
+		    </td>
+		  </tr>
+		  <tr>
+		   <th class="ui-widget-header ui-corner-all">The information of each image type can be obtained by clicking on the “Information” link</th>
+		  </tr>
+		</table>
+	      </div>
+	      <div style="clear:both;"></div>
+	  </div>
+	</div>
+	 
+	<div id="tabs-4">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab4_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px; margin-left : 15px;">Under each images icon in the VAS (previous tab) there is a small GE button in the lower right corner. When this is clicked, a KML file is generated for that image. In addition, surface currents from the Hybrid Coordinate Ocean Model (<a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('https://hycom.org/'); return false;">HYCOM &mdash; from the National Ocean Partnership Program (NOPP)</a>) are obtained, updated nightly, and made available via the VAS as a layer within Google Earth. Thus, both the image and surface currents can be displayed in Google Earth with a simple mouse click (see example below), thereby facilitating visualization and navigation. Within Google Earth, once a Sargassum raft is identified with latitude and longitude, current speed and direction (available through a mouse click over the current vector) near the raft can be used to predict the movement of the raft and a possible beaching time, in essence, forming an early warning system.</p>
+	      <div class="imageContainerLeft">
+		<table class="ui-corner-all">
+		  <tr>
+		    <th class="ui-widget-header ui-corner-all">Ocean Currents Vectors Integrated with Satellite Imagery
+
+in Google Earth</th>
+		  </tr>
+		  <tr>
+		    <td>
+		     <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/Satellite_Data_with_Ocean_Currents.png', 'Google Earth Interpretation'); return false;"><img alt="Google Earth Interpretation" title="Google Earth Interpretation" width="1000" height="562" src="/projects/SaWS/images/Satellite_Data_with_Ocean_Currents.1000px.png"/></a>
+		    </td>
+		  </tr>
+		  <tr>
+		   <th class="ui-widget-header ui-corner-all">A KML file is created to provide Google Earth the image and ocean current data for visualization</th>
+		  </tr>
+		</table>
+	      </div>
+	      <div style="clear:both;"></div>
+	  </div>
+	 </div>
+
+	 <div id="tabs-5">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab5_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px; margin-left : 15px;">Sargassum has impacted the Caribbean in so many ways. Here we show a few photographs that reveal the serious nature of the problem.</p>
+	      <div class="container">
+	      
+	      
+		<div class="row">
+		  <div class="left">
+		    <table class="ui-corner-all">
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Capesterre Guadeloupe</th>
+		      </tr>
+		      <tr>
+			<td>
+			<a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/capesterre.png', 'Capesterre'); return false;"><img alt="Capesterre" title="Capesterre" width="630" height="417" src="/projects/SaWS/images/capesterre_630px.png"/></a>
+			</td>
+		      </tr>
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Airborne survey during spring and summer 2015<br/>(photo courtesy of Jean-Philippe Mar&eacute;chal)</th>
+		      </tr>
+		    </table>
+		  </div>
+		  <div class="middle">
+		  <!-- nothing in the middle column width set in site.css-->
+
+		  </div>
+		  <div class="right">
+		    <table class="ui-corner-all">
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Desirade Guadeloupe</th>
+		      </tr>
+		      <tr>
+			<td>
+			<a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/desirade.png', 'Desirade'); return false;"><img alt="Desirade" title="Desirade" width="630" height="417" src="/projects/SaWS/images/desirade_630px.png"/></a>
+			</td>
+		      </tr>
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Airborne survey during spring and summer 2015<br/>(photo courtesy of Jean-Philippe Mar&eacute;chal)</th>
+		      </tr>
+		    </table>
+		  </div>
+		</div> <!-- end of the image row -->
+
+		<div class="row">
+		  <div class="left">
+		    <table class="ui-corner-all">
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Martinique</th>
+		      </tr>
+		      <tr>
+			<td>
+			<a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/martinique_2015a.png', 'martinique_2015a'); return false;"><img alt="martinique_2015a" title="martinique_2015a" width="630" height="420" src="/projects/SaWS/images/martinique_2015a_630px.png"/></a>
+			</td>
+		      </tr>
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all"><i>Sargassum</i> Beaching Event 2015<br/>(photo courtesy of Jean-Philippe Mar&eacute;chal)</th>
+		      </tr>
+		    </table>
+		  </div>
+		  <div class="middle">
+		  <!-- nothing in the middle column width set in site.css-->
+
+		  </div>
+		  <div class="right">
+		    <table class="ui-corner-all">
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Martinique</th>
+		      </tr>
+		      <tr>
+			<td>
+			<a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/desirade.png', 'Desirade'); return false;"><img alt="martinique_2015b" title="martinique_2015b" width="630" height="420" src="/projects/SaWS/images/martinique_2015b_630px.png"/></a>
+			</td>
+		      </tr>
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all"><i>Sargassum</i> Beaching Event 2015<br/>(photo courtesy of Jean-Philippe Mar&eacute;chal)</th>
+		      </tr>
+		    </table>
+		  </div>
+		</div> <!-- end of the image row -->
+
+		<div class="row">
+		  <div class="left">
+		    <table class="ui-corner-all">
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Sailing Vessel Skipping Stone</th>
+		      </tr>
+		      <tr>
+			<td>
+			<img alt="Capesterre" title="Capesterre" width="640" height="480" src="/projects/SaWS/images/Sailing_vessel_Bequia_Grenadines_June-2015.png"/>
+			</td>
+		      </tr>
+		      <tr>
+		      <th class="ui-widget-header ui-corner-all">Stranded boat in a Sargassum bloom off Admiralty Bay, Bequia, Grenadines<br/>June 2015 (Photo credit: Sailing Vessel Skipping Stone)</th>
+		      </tr>
+		    </table>
+		  </div>
+		  <div class="middle">
+		  <!-- nothing in the middle column width set in site.css-->
+		  </div>
+		  <div class="right">
+		  </div>
+		</div> <!-- end of the image row -->
+		
+	      </div> <!--end of the image container -->
+
+
+
+	  <div style="clear:both;"></div>
+	  </div>
+	</div>
+	 	
+
+	 <div id="tabs-6">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab6_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image"></span>&nbsp;SaWS Clickable Map</a></h3>
+	    <p style="margin-top : 2px; margin-left : 15px;">
+	    </p>
+	    <p class="reference" style="color: black;">Brooks MT, Coles VJ, Hood RR, Gower JFR (2018) Factors controlling the seasonal distribution of pelagic <i>Sargassum</i>. Mar Ecol Prog Ser 599:1–18.&nbsp;<a href="https://doi.org/10.3354/meps12646" onclick="window.open(this.href); return false;">https://doi.org/10.3354/meps12646</a></p> 
+	    <p class="reference" style="color: black;">Dierssen, H. M., A. Chlus, and B. Russell (2015). Hyperspectral discrimination of floating mats of seagrass wrack and the macroalgae Sargassum in coastal waters of Greater Florida Bay using airborne remote sensing. Remote Sens. Environ., 167:247-258. <a href="https://doi.org/10.1016/j.rse.2015.01.027" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.rse.2015.01.027</a></p>
+	    <p class="reference" style="color: black;">Feagin, R. A. and A. M. Williams (2010). Sargassum: Erosion and Biodiversity on the Beach, Spatial Sciences Laboratory, Dept. Ecosystem Science &amp; Management, Texas A&amp;M University, pp23.</p>
+	    <p class="reference" style="color: black;">Franks, J., D. R. Johnson, D. S. Ko, G. Sanchez-Rubio, J.R. Hendon, and M. Lay (2011), Unprecedented Influx of pelagic <i>Sargassum</i> along Caribbean island coastlines during summer 2011, Proc. Gulf Caribb. Fish. Inst., 64:6-8. <a href="https://nsgl.gso.uri.edu/flsgp/flsgpw11001/papers/006.pdf" onclick="window.open(this.href); return false;">https://nsgl.gso.uri.edu/flsgp/flsgpw11001/papers/006.pdf</a></p>
+	    <p class="reference" style="color: black;">Godínez-Ortega et al. (2021). A Natural History of Floating <i>Sargassum</i> Species (Sargasso) from Mexico. <a href="https://doi.org/10.5772/intechopen.97230" onclick="window.open(this.href); return false;">https://doi.org/10.5772/intechopen.97230</a></p>
+	    <p class="reference" style="color: black;">Gower, J., C. Hu, G, Borstad, and S. King (2006), Ocean color satellites show extensive lines of floating Sargassum in the Gulf of Mexico, IEEE Trans. Geosci. Remote Sens., 44, 3619–3625. <a href="https://doi.org/10.1109/TGRS.2006.882258" onclick="window.open(this.href); return false;">https://doi.org/10.1109/TGRS.2006.882258</a></p>
+	    <p class="reference" style="color: black;">Gower, J., E. Young, E., and S. King (2013), Satellite images suggest a new <i>Sargassum</i> source region in 2011, Remote Sens. Lett. 4, 764–773. <a href="https://doi.org/10.1080/2150704X.2013.796433" onclick="window.open(this.href); return false;">https://doi.org/10.1080/2150704X.2013.796433</a></p>
+	    <p class="reference" style="color: black;">Hardy, R. F. (2014). Assessment of surface-pelagic drifting communities and behavior of early juvenile sea turtles in the Northern Gulf of Mexico. MS Thesis, University of South Florida, 118pp. <a href="https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=6561&amp;context=etd" onclick="window.open(this.href); return false;">https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=6561&amp;context=etd</a></p>
+	    <p class="reference" style="color: black;">Hu, C (2009), A novel ocean color index to detect floating algae in the global oceans, Remote Sens. Environ., 113, 2118–2129. <a href="https://doi.org/10.1016/j.rse.2009.05.012" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.rse.2009.05.012</a></p>
+	    <p class="reference" style="color: black;">Hu, C., B. B. Barnes, B. Murch, and P. Carlson (2014), Satellite-based virtual buoy system (VBS) to monitor coastal water quality, Optical Engineering, 53, 051402. <a href="https://doi.org/10.1117/1.OE.53.5.051402" onclick="window.open(this.href); return false;">https://doi.org/10.1117/1.OE.53.5.051402</a></p>
+	    <p class="reference" style="color: black;">Hu, C., L. Feng, R.F. Hardy, and E. J. Hochberg (2015), Spectral and spatial requirements of remote measurements of pelagic Sargassum macroalgae, Remote Sens. Environ., 167, 229-246. <a href="https://doi.org/10.1016/j.rse.2015.05.022" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.rse.2015.05.022</a></p>
+	    <p class="reference" style="color: black;">Hu, C., et al. (2016). <i>Sargassum</i> watch warns of incoming seaweed, Eos, 97(22):10-15. <a href="https://doi.org/10.1029/2016EO058355" onclick="window.open(this.href); return false;">https://doi.org/10.1029/2016EO058355</a></p>
+	    <p class="reference" style="color: black;">Hu, C. et al. (2021). On the Atlantic pelagic <i>Sargassum</i>'s role in carbon fixation and sequestration. Science of the Total Environment, 781, 146801. <a href="https://doi.org/10.1016/j.scitotenv.2021.146801" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.scitotenv.2021.146801</a></p>
+	    <p class="reference" style="color: black;">Huffard, C. L., S. von Thun, A. D. Sherman, K. Sealey, and K. L. Smith Jr. (2014). Pelagic <i>Sargassum</i> community change over a 40-year period: temporal and spatial variability. Mar. Bio, 161:2735-2751. <a href="https://doi.org/10.1007/s00227-014-2539-y" onclick="window.open(this.href); return false;">https://doi.org/10.1007/s00227-014-2539-y</a></p>
+	    <p class="reference" style="color: black;">Johns, E. et al. (2020). The establishment of a pelagic <i>Sargassum</i> population in the tropical Atlantic: Biological consequences of a basin-scale long distance dispersal event. Progress in Oceanography, 182:102269. <a href="https://doi.org/10.1016/j.pocean.2020.102269" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.pocean.2020.102269</a></p>
+	    <p class="reference" style="color: black;">Lapointe, B. E., L. E. West, T. T. Sutton, and C. Hu (2014), Ryther revisited: nutrient excretions by fishes enhance productivity of pelagic Sargassum in the western North Atlantic Ocean, J. Exp. Mar. Bio. Ecol. 458:46-56. <a href="https://doi.org/10.1016/j.jembe.2014.05.002" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.jembe.2014.05.002</a></p>
+	    <p class="reference" style="color: black;">Lapointe et al. (2021). Nutrient content and stoichiometry of pelagic <i>Sargassum</i> reflects increasing nitrogen availability in the Atlantic Basin. Nature Communications. 12:3060. <a href="https://doi.org/10.1038/s41467-021-23135-7" onclick="window.open(this.href); return false;">https://doi.org/10.1038/s41467-021-23135-7</a></p>
+	    <p class="reference" style="color: black;">Maurer, A. S., et al.(2021). The Atlantic <i>Sargassum</i> invasion impedes beach access for nesting sea turtles. Climate Change Ecology, 2, 100034. <a href="https://doi.org/10.1016/j.ecochg.2021.100034" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.ecochg.2021.100034</a></p>
+	    <p class="reference" style="color: black;">Milledge, J. J., B. V. Nielsen, and D. Bailey (2015). High-value products from macroalgae: the potential uses of the invasive brown seaweed, Sargassum muticum. Reviews in Environmental Science and Bio/Technology. 15:67-88. <a href="https://doi.org/10.1007/s11157-015-9381-7" onclick="window.open(this.href); return false;">https://doi.org/10.1007/s11157-015-9381-7</a></p>
+	    <p class="reference" style="color: black;">Modestin, E., et al. (2022). Arsenic in Caribbean bivalves in the context of <i>Sargassum</i> beachings: a new risk for seafood consumers. Environ. Monit. Assess. 194, 1–20. <a href="https://doi.org/10.1007/s10661-022-10230-5" onclick="window.open(this.href); return false;">https://doi.org/10.1007/s10661-022-10230-5</a></p>
+	    <p class="reference" style="color: black;">Olguin-Maciel, E., et al. (2022). Environmental impact of <i>Sargassum</i> spp. landings: an evaluation of leachate released from natural decomposition at Mexican Caribbean coast. Environ. Sci. Pollut. Res. 29, 91071–91080. <a href="https://doi.org/10.1007/s11356-022-22123-8" onclick="window.open(this.href); return false;">https://doi.org/10.1007/s11356-022-22123-8</a></p>
+	    <p class="reference" style="color: black;">Parr, A.E. (1939), Quantitative observations on the pelagic <i>Sargassum</i> vegetation of the western North Atlantic, Bull. Bingham Oceanog. Coll., Peabody Museum of Natural History, Yale University, 6(7): 1-94. Oceanography 28(3):8–10</p>
+	    <p class="reference" style="color: black;">Resiere, D., et al. (2021). <i>Sargassum</i> seaweed health menace in the Caribbean: clinical characteristics of a population exposed to hydrogen sulfide during the 2018 massive stranding. Clin. Toxicol. 59, 215–223. <a href="https://doi.org/10.1080/15563650.2020.1789162" onclick="window.open(this.href); return false;">https://doi.org/10.1080/15563650.2020.1789162</a></p>
+	    <p class="reference" style="color: black;">Rodríguez-Martínez et al. (2021). Element concentrations in pelagic <i>Sargassum</i> along the Mexican Caribbean coast in 2018-2019. PeerJ 8:e8667. <a href="https://doi.org/10.7717/peerj.8667" onclick="window.open(this.href); return false;">https://doi.org/10.7717/peerj.8667</a></p>
+	    <p class="reference" style="color: black;">Rodriguez-Martinez et al. (2022). Spatio-temporal variability of pelagic <i>Sargassum</i> landings on the northern Mexican Caribbean. Remote Sensing Applications: Society and Environment. 27, 100767. <a href="https://doi.org/10.1016/j.rsase.2022.100767" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.rsase.2022.100767</a></p>
+	    <p class="reference" style="color: black;">Sargasso Sea Commission (link: <a href="http://www.sargassoseacommission.org/publications-a-news/atlantic-sargassum-belt" onclick="window.open(this.href); return false;">http://www.sargassoseacommission.org/publications-a-news/atlantic-sargassum-belt</a>)</p>  
+	    <p class="reference" style="color: black;">Skliris, N., et al. (2022). Physical drivers of pelagic sargassum bloom interannual variability in the Central West Atlantic over 2010–2020. Ocean Dynamics, 72:383-404. <a href="https://doi.org/10.1007/s10236-022-01511-1" onclick="window.open(this.href); return false;">https://doi.org/10.1007/s10236-022-01511-1</a></p>
+	    <p class="reference" style="color: black;">Smetacek, V., and A. Zingone (2013). Green and golden seaweed tides on the rise, Nature, 504:84-88. <a href="https://doi.org/10.1038/nature12860" onclick="window.open(this.href); return false;">https://doi.org/10.1038/nature12860</a></p>
+	    <p class="reference" style="color: black;">The Journey of the Sargassum forum (link: <a href="https://ambergriscaye.com/forum/ubbthreads.php/topics/557467/the-journey-of-the-sargassum.html" onclick="window.open(this.href); return false;">https://ambergriscaye.com/forum/ubbthreads.php/topics/557467/the-journey-of-the-sargassum.html</a>)</p>
+	    <p class="reference" style="color: black;">Trinanes, J., et al. (2021). Monitoring pelagic <i>Sargassum</i> inundation potential for coastal communities. J. Operational Oceanography, 16(1), 48-59. <a href="https://doi.org/10.1080/1755876X.2021.1902682" onclick="window.open(this.href); return false;">https://doi.org/10.1080/1755876X.2021.1902682</a></p>
+	    <p class="reference" style="color: black;">van Tussenbroek, B.I., et al. (2017). Severe impacts of brown tides caused by <i>Sargassum</i> spp. on near-shore Caribbean seagrass communities. Mar. Pollut. Bull. 122, 272–281. <a href="https://doi.org/10.1016/j.marpolbul.2017.06.057" onclick="window.open(this.href); return false;">https://doi.org/10.1016/j.marpolbul.2017.06.057</a></p>
+	    <p class="reference" style="color: black;">Wang, M., and C. Hu (2016). Mapping and quantifying Sargassum distribution and coverage in the Central West Atlantic using MODIS observations. Remote Sens. Environ., 183:356-367. <a href="http://dx.doi.org/10.1016/j.rse.2016.04.019" onclick="window.open(this.href); return false;">http://dx.doi.org/10.1016/j.rse.2016.04.019</a></p>
+	    <p class="reference" style="color: black;">Wang, M., and C. Hu (2017), Predicting <i>Sargassum</i> blooms in the Caribbean Sea from MODIS observations, Geophys. Res. Lett., 44, 3265–3273. <a href="https://doi.org/10.1002/2017GL072932" onclick="window.open(this.href); return false;">https://doi.org/10.1002/2017GL072932</a></p>
+	    <p class="reference" style="color: black;">Wang, M. et al. (2019) The Great Atlantic <i>Sargassum</i> Belt. Science, 365: 83 – 87. <a href="https://doi.org/10.1126/science.aaw7912" onclick="window.open(this.href); return false;">https://doi.org/10.1126/science.aaw7912</a></p>
+	    <p class="reference" style="color: black;">Webster, R. K., and T. Linton (2013), Development and implementation of Sargassum Early Advisory System (SEAS), Shore and Beach, 81(3): 1 – 6. <a href="http://www.sargassoseacommission.org/storage/Webster_et_linon_2013_1.pdf" onclick="window.open(this.href); return false;">http://www.sargassoseacommission.org/storage/Webster_et_linon_2013_1.pdf</a></p>
+	    <p class="reference" style="color: black;">Witherington B., H. Shigetomo, and R. Hardy (2012), Young sea turtles of the pelagic Sargassum-dominated drift community: habitat use, population density, and threats, Mar Ecol Prog Ser 463: 1-22. <a href="https://doi.org/10.3354/meps09970" onclick="window.open(this.href); return false;"> https://doi.org/10.3354/meps09970 </a></p>
+	    <div style="clear:both;"></div>
+	  </div>
+	 </div>
+	 
+	 <div id="tabs-7">
+	  <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>
+              &nbsp;<a href="#" id="dialog_1050_tab7_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a>
+              &nbsp;&nbsp;
+              <a href='#' id="subscribe_link" title="This button will open the Mail app. In iPhone Safari, long press the button." class="ui-state-default ui-corner-all button-shape"><span class="ui-icon ui-icon-image" style="background-position: -80px -96px;">&nbsp;</span>&nbsp;Subscribe to our Bulletins</a>
+            </h3>
+	    <p style="margin-top : 2px; margin-left : 15px; color:red;">Disclaimer</p>
+	    <p style="margin-top : 2px; margin-left : 15px; color:red;">The information bulletin is meant to provide a general outlook of current bloom condition and future bloom probability for the Caribbean Sea and Gulf of Mexico. By no means should it be used for commercial purpose, or used for predicting bloom conditions for a specific location or beach. The authors of this bulletin, as well as USF and NASA, take no responsibility for improper use or interpretation of the bulletin. Any use of the image, data, or graph from this bulletin page in reports or publications should obtain permission from the USF OOL group.</p>  
+	    <p style="margin-top : 2px; margin-left : 15px;">This page provides links to Sargassum forecast or outlook bulletins (see bottom of this page), which are updated routinely. The bulletins started in early February 2018, and they are meant to give an outlook of Sargassum bloom probability in certain regions in the upcoming months, based on bloom conditions in previous months, and previous years.</p>
+	    <h2 style="text-align:center"><b>Sargassum blooms in the Caribbean Sea</b></h2>
+	    <p style="margin-top : 2px; margin-left : 15px;">Since 2011, large amounts of Sargassum seaweed appeared in the Caribbean Sea every summer except 2013, creating many environmental, ecological and economic problems in many regions. The seaweed originated from the tropical Atlantic, and is believed to be a result of climate variability and other natural and unnatural processes. Based on satellite observations and statistics of historical events, in early February 2018 the Optical Oceanography Lab developed the first 1-page Sargassum outlook bulletin for the Caribbean Sea. Since then, the bulletins have been generated and distributed to subscribers by the last day of the month. These monthly bulletins are also made available at the bottom of this page. Further readings are also available under the Reference page.</p>
+	    <p style="margin-top : 2px; margin-left : 15px;">In August 2026, total Sargassum amount in every region continued to decline; however, total amount in every but the east Atlantic still exceeded the 75 percentiles of historical levels, suggesting that coastal inundation and beaching events in most regions continued in August. Sargassum amount in all regions will continue to decrease in the coming months until possibly November. Further details can be found in the attached bulletin. In addition, we have continued producing high-resolution Sargassum maps for several coastal regions, which are available under “Satellite Data Products => High Resolution => Sentinel-2”.</p>
+	    <!--p style="margin-top : 2px; margin-left : 15px;">If you click on any image below, it will open in a new tab at full resolution. You may click on the Google Earth icon beneath each satellite image to open the image in Google Earth.</p>
+	    <div class="imageContainerLeft">
+		<table class="ui-corner-all">
+		  <tr>
+		   <th class="ui-widget-header ui-corner-all">Caribbean Sargassum Coverage</th>
+		  </tr>
+		  <tr>
+		    <td>
+		     <a href="javascript: void(0)" onclick="window.open('/projects/SaWS/images/Caribbean_Sargassum_Coverage.png', 'Caribbean Sargassum Coverage'); return false;"><img alt="Caribbean Sargassum Coverage" title="Caribbean Sargassum Coverage" width="1000" height="503" src="/projects/SaWS/images/Caribbean_Sargassum_Coverage_1000.png"/></a>
+		    </td>
+		  </tr>
+		  <tr>
+		   <th class="ui-widget-header ui-corner-all">&nbsp;</th>
+		  </tr>
+		</table>
+	      </div-->
+	      <div style="clear:both;"></div>
+	      
+	    <!--table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <a href="#2010.mean.400.png" name="2010.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2010.mean.400.png" onclick="window.open('/projects/SaWS/images/2010.mean.png')"></a>
+	      <img alt="2010" title="2010" src="/projects/SaWS/images/2010.mean.200.png?req=8"/><br/>
+	      <div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2010.mean.400.png" title="Click for Full Image">2010</a><a class="ge" href="/cgi-bin/sarg_ge?file=2010.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div>
+	    </td></tr></table-->
+
+	    <div style="clear:both;"></div>
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2011.mean.400.png" name="2011.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2011.mean.400.png" onclick="window.open('/projects/SaWS/images/2011.mean.png')"-->
+	      <img alt="2011" title="2011" src="/projects/SaWS/images/2011.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2011.mean.400.png" title="Click for Full Image">2011</a><a class="ge" href="/cgi-bin/sarg_ge?file=2011.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2012.mean.400.png" name="2012.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2012.mean.400.png" onclick="window.open('/projects/SaWS/images/2012.mean.png')"-->
+	      <img alt="2012" title="2012" src="/projects/SaWS/images/2012.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2012.mean.400.png" title="Click for Full Image">2012</a><a class="ge" href="/cgi-bin/sarg_ge?file=2012.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2013.mean.400.png" name="2013.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2013.mean.400.png" onclick="window.open('/projects/SaWS/images/2013.mean.png')"-->
+	      <img alt="2013" title="2013" src="/projects/SaWS/images/2013.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2013.mean.400.png" title="Click for Full Image">2013</a><a class="ge" href="/cgi-bin/sarg_ge?file=2013.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2014.mean.400.png" name="2014.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2014.mean.400.png" onclick="window.open('/projects/SaWS/images/2014.mean.png')"-->
+	      <img alt="2014" title="2014" src="/projects/SaWS/images/2014.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2014.mean.400.png" title="Click for Full Image">2014</a><a class="ge" href="/cgi-bin/sarg_ge?file=2014.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2015.mean.400.png" name="2015.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2015.mean.400.png" onclick="window.open('/projects/SaWS/images/2015.mean.png')"-->
+	      <img alt="2015" title="2015" src="/projects/SaWS/images/2015.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2015.mean.400.png" title="Click for Full Image">2015</a><a class="ge" href="/cgi-bin/sarg_ge?file=2015.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2016.mean.400.png" name="2016.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2016.mean.400.png" onclick="window.open('/projects/SaWS/images/2016.mean.png')"-->
+	      <img alt="2016" title="2016" src="/projects/SaWS/images/2016.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2016.mean.400.png" title="Click for Full Image">2016</a><a class="ge" href="/cgi-bin/sarg_ge?file=2016.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2017.mean.400.png" name="2017.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2017.mean.400.png" onclick="window.open('/projects/SaWS/images/2017.mean.png')"-->
+	      <img alt="2017" title="2017" src="/projects/SaWS/images/2017.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2017.mean.400.png" title="Click for Full Image">2017</a><a class="ge" href="/cgi-bin/sarg_ge?file=2017.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2018" title="2018" src="/projects/SaWS/images/2018.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table>
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2019" title="2019" src="/projects/SaWS/images/2019.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->
+	    </td></tr></table> 
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2020" title="2020" src="/projects/SaWS/images/2020.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->	      
+	    </td></tr></table>	   
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2021" title="2021" src="/projects/SaWS/images/2021.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->	      
+	    </td></tr></table>
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2022" title="2022" src="/projects/SaWS/images/2022.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->	      
+	    </td></tr></table>
+            <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <!--a href="#2018.mean.400.png" name="2018.mean.400.png" class="screenshot" rel="/projects/SaWS/images/2018.mean.400.png" onclick="window.open('/projects/SaWS/images/2018.mean.png')"-->
+	      <img alt="2023" title="2023" src="/projects/SaWS/images/2023.mean.200.png?req=8"/><br/>
+	      <!--div class="ui-state-default ui-corner-all">
+		<div class="product_info ui-state-default ui-corner-all"><a href="#2018.mean.400.png" title="Click for Full Image">2018</a><a class="ge" href="/cgi-bin/sarg_ge?file=2018.mean.png" title="Google Earth">GE <img alt="Google Earth" src="/images/gelogoicon.png"/></a></div>
+		<div class="ui-state-default ui-corner-all"></div>
+	      </div-->	      
+	    </td></tr></table> 
+            <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <img alt="2024" title="2024" src="/projects/SaWS/images/2024.mean.200.png?req=8"/><br/>
+	    </td></tr></table> 
+            <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <img alt="2025" title="2025" src="/projects/SaWS/images/2025.mean.200.png?req=8"/><br/>
+	    </td></tr></table> 
+
+
+            <div style="clear:both;"></div>
+	    <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+              <img alt="previous" title="previous" src="/projects/SaWS/images/previous.mean.200.png?req=8"/><br/>
+	    </td></tr></table>
+            <table class="ui-state-default ui-corner-all topoff" style="float: left; padding:2px;"><tr><td style="text-align:center">
+	      <img alt="current" title="current" src="/projects/SaWS/images/current.mean.200.png?req=8"/><br/>
+	    </td></tr></table>
+
+            <div style="clear:both;"></div>
+            <p style="margin-top : 2px; margin-left : 15px;">(Note: we have applied a wider color stretch after January 2025 to better represent the higher biomass observed in recent years.)</p>
+
+	    <div style="clear:both;"></div>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2026_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2026</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2025_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2025</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2024_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2024</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin9_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin8_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin7_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin6_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin5_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin4_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin3_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin2_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2023_bulletin1_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2023</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2022</a></p> 
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2022</a></p>
+            <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2022</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2022</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2022</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2022</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2022_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2022</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2021</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2021</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2021_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2021</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2020</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2020</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2020</a></p>
+    	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2020</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2020</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2020</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2020_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2020</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2019</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2019</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin09_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2019</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin08_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin07_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin06_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin05_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin04_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin03_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin02_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2019_bulletin01_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2019</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin12_USF.pdf'); return false;">Sargassum Outlook Bulletin, December 2018</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin11_USF.pdf'); return false;">Sargassum Outlook Bulletin, November 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin10_USF.pdf'); return false;">Sargassum Outlook Bulletin, October 2018</a></p>	    
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin9_USF.pdf'); return false;">Sargassum Outlook Bulletin, September 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin8_USF.pdf'); return false;">Sargassum Outlook Bulletin, August 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin7_USF.pdf'); return false;">Sargassum Outlook Bulletin, July 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin6_USF.pdf'); return false;">Sargassum Outlook Bulletin, June 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin5_USF.pdf'); return false;">Sargassum Outlook Bulletin, May 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin4_USF.pdf'); return false;">Sargassum Outlook Bulletin, April 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin3_USF.pdf'); return false;">Sargassum Outlook Bulletin, March 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin2_USF.pdf'); return false;">Sargassum Outlook Bulletin, February 2018</a></p>
+	    <p class="reference"><a title="Opens in a new tab or window" class='inline' href="javascript: void(0)" onclick="window.open('/projects/SaWS/pdf/Sargassum_outlook_2018_bulletin1_USF.pdf'); return false;">Sargassum Outlook Bulletin, January 2018</a></p>
+	  </div>
+	</div>
+
+	<div id="faq">
+	 <div class="ui-state-default ui-corner-all text seagrass">
+	    <h3>&nbsp;<a href="#" id="dialog_1050_tab8_link" class="ui-state-default ui-corner-all" title="This button opens a clickable map interface to reach the most current realtime data. It is found at the top of each SaWS tab."><span class="ui-icon ui-icon-image">&nbsp;</span>&nbsp;SaWS Clickable Map</a></h3>
+	    <h2 style="text-align:center"><b>Frequently Asked Questions</b></h2>
+	    <!--<div class="container"><div class="row"><div class="left">
+	    <table class="ui-corner-all"><tbody><tr><td>-->
+	    <p style="margin-top : 2px; margin-left: 2.5em; margin-right: 2.5em;">Because of increased inquiries on <i>Sargassum</i>, the Optical Oceanography Lab at the University of South Florida College of Marine Science prepared the following FAQ page to address common questions in simple language. By no means is it meant to be comprehensive. Interested readers are encouraged to read the references at <a href="https://optics.marine.usf.edu/projects/SaWS.html#tabs-6" onclick="window.open(this.href); return false;">"Further Readings"</a>.</p>
+	  <p id="btn1" class="collapsiblePlusHead">What is <i>Sargassum</i>?</p>
+	  <div id="faq1">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;"><i>Sargassum</i> is a brown macroalgae (seaweed), with hundreds of different species found in different tropical and temperate ocean environments. In the Atlantic Ocean, the two dominant species are <i>Sargassum fluitans</i> and <i>Sargassum natans</i> (Imageset 1), both reproducing vegetatively and living in the surface ocean in their entire life cycle. Because of this, <i>Sargassum</i> in the Atlantic is also called pelagic <i>Sargassum</i>. Each species also has several subtypes. They all float on the ocean surface because they have grape-like air bladders, and the name “Sargassum” may have come from the Spanish name “Sargacinha” which means grape. In the ocean, <i>Sargassum</i> appears in different forms, from small clumps, surface mats, to large rafts and windrows that can be several kilometers long and hundreds of meters wide (Imageset 2). <i>Sargassum</i> can live in both nutrient-poor and nutrient-rich waters but prefer warm (temperature range of 18 – 30&deg;C) and salty (salinity > 24) waters. Depending on the environment, <i>Sargassum</i> can double in 10-50 days. In nutrient-poor waters <i>Sargassum</i> tends to have yellowish colors, and large rafts moving with currents and winds are often called “golden tides.” In nutrient-rich waters their colors often turn brownish, thus the name “brown tides.” </p>
+	    <img alt="Two Sargassum Species" title="Two Sargassum Species" src="/projects/SaWS/images/two_sargassum_species-Amy_Siuda.png" class="centerImg850" />
+	    <div class="centerTextbox850"><p class="centerImgTitle">Imageset 1. The two dominant pelagic <i>Sargassum</i> species in the Atlantic Ocean (photo credit: Amy Siuda).</p></div>
+	    <img alt="Sargassum raft, mat, and clumps" title="Sargassum raft, mat, and clumps" src="/projects/SaWS/images/sargassum_raft_and_clumps.png" class="centerImg850" />
+	    <video class="centerImg850" src="/projects/SaWS/videos/Sargassum_GoM_202206.mov" controls></video>
+	    <div class="centerTextbox850"><p class="centerImgTitle">Imageset 2. Different forms of <i>Sargassum</i> in the ocean. Top left: <i>Sargassum</i> raft in the Gulf of Mexico (photo credit: Tracy Villareal). Top right: <i>Sargassum</i> mat and clumps in the Gulf of Mexico, together with a 1m x 1m quadrate to estimate the size of the mat (photo credit: Sam Bunson and Sarah Sullivan). Bottom: video from a cruise survey in June 2022, eastern Gulf of Mexico (video credit: Sam Bunson and Sarah Sullivan)</p></div>
+	  </div>
+	  <p id="btn2" class="collapsiblePlusHead">Where?</p>
+	  <div id="faq2">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;"><i>Sargassum</i> in the Atlantic was first reported in 1492 by Christopher Columbus during his voyage in the North Atlantic Ocean, which possibly led to the name of Sargasso Sea, the only sea on earth that has no physical boundary. </p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Before 2011, <i>Sargassum</i> was mainly found in the Sargasso Sea and Gulf of Mexico (Imageset 3, top), although small amounts have also been sighted in the Caribbean Sea and off the Brazilian coast. </p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Since 2011, however, although the Sargasso Sea and Gulf of Mexico continued to show abundant <i>Sargassum</i>, most <i>Sargassum</i> was found in a continuous “belt” in the tropical Atlantic extending from the west Africa to the Gulf of Mexico (Imageset 3, bottom). Because of the large scale (about 5,000 miles or 8,000 kilometers long) and high abundance of <i>Sargassum</i>, the belt was termed the Great Atlantic <i>Sargassum</i> Belt. On average, during the peak months, <i>Sargassum</i> density within the belt is about 0.1%, equivalent to 3 metric tons per square kilometer or 3 grams per square meter. </p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Analysis of satellite data along with other data indicates that the GASB may be a new normal in the future. This means that, depending on the time of the year, large quantities of <i>Sargassum</i> can be found in most waters of the Sargasso Sea, Gulf of Mexico, Caribbean Sea, tropical Atlantic, and around the peripheries of the GASB, such as coastal waters off west Africa and Brazilian coast.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Because <i>Sargassum</i> moves with water and because of variable ocean circulation patterns, it is difficult to pinpoint their origins. From the large-scale distributions and from the changes of timings in peak months, it appears that two regions may provide seed populations in their respective seasonal cycles: one in the western Gulf of Mexico, and the other in the tropical Atlantic and Sargasso Sea. </p>
+	    <img class="centerImg850" alt="Sargassum maps before and after 2011" title="Sargassum maps before and after 2011" src="/projects/SaWS/images/sargassum_maps_before_and_after_2011.png" />
+	    <div class="centerTextbox850"><p class="centerImgTitle">Imageset 3. <i>Sargassum</i> maps showing in a typical year before (top) and after (bottom) 2011, which marks the first year of the Great Atlantic <i>Sargassum</i> Belt. The color scale is from 0.00‰ to 0.10‰.</p></div>
+	  </div>
+	  <p id="btn3" class="collapsiblePlusHead">When?</p>
+	  <div id="faq3">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Although <i>Sargassum</i> can be found in most waters of the above regions, the timing can be different. Based on satellite observations, before the GASB era, the Sargasso Sea typically had more <i>Sargassum</i> in the fall and winter months than in other months, and the western Gulf of Mexico typically had more <i>Sargassum</i> in the spring months. In the GASB era (since 2011), because of the transport from the tropical Atlantic, large quantities of <i>Sargassum</i> can also be found in these two regions in summer months as well. Within the GASB, <i>Sargassum</i> typically peaks in June or July, with minimum quantity during the winter months. In some years, however, <i>Sargassum</i> quantity in the GASB, and especially between the Lesser Antilles islands and west Africa, can be very large even during the winter months (e.g., December 2022 – February 2023). This often suggests a major <i>Sargassum</i> year in the following year.</p>
+	  </div>
+	  <p id="btn4" class="collapsiblePlusHead">Why do we have so much <i>Sargassum</i> in recent years? Is it due to climate change or human activities?</p>
+	  <div id="faq4">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">The occurrence of the GASB represents a new normal since 2011. Although the size and location of the GASB remained to be about 5 million square kilometers in the tropical Atlantic during peak months, there appears an increasing trend in <i>Sargassum</i> abundance (or areal density) within the belt. The total amount of <i>Sargassum</i> in the last 6 years (2017 – 2022) actually doubled the amount in the previous 6 years (2011 – 2016). During the peak month of June, the two record-high years are 2018 and 2022. Whether this increasing trend will continue in the future is under research.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">As with any other plants, <i>Sargassum</i> requires enough sun light, nutrients, and an optimal environment (temperature and salinity) to grow. In the tropical Atlantic, all these conditions are met in favor of <i>Sargassum</i> growth. Compared with the “traditional” location of the Sargasso Sea, the tropical Atlantic is warmer, receives more sunlight, and contains more nutrients from multiple sources. Surface waters in open oceans are typically nutrient poor, but coastal and open-ocean upwelling can bring the nutrient-rich bottom waters to the surface to fuel the macroalgae growth. Deposition of the Saharan dust and smoke ashes can bring micronutrients such as iron to the surface ocean. Large river plumes such as those from the Amazon and Congo can also carry a large amount of nutrients (nitrogen and phosphorous) to coastal oceans. Recent increases in fertilizer use and deforestation in the Amazon basin may have contributed more nutrients than in the past.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">One theory supporting the sudden appearance of the GASB in 2011 is that during 2010, stronger-than-usual winds and ocean currents brought large seed populations of <i>Sargassum</i> from the <i>Sargassum</i> Sea to the tropical Atlantic, thus representing a “tipping point” to result in the recurrent GASB in the following years. If this is true, the 2011 GASB is a result of climate variability. Then, both climate variability and human activities contributed to the inter-annual changes of the GASB. The continuous ocean warming in the tropical Atlantic, may be another factor.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">However, the ocean works in a very complex way, and different parts of the ocean are connected through ocean circulations, meaning that changes in one location may actually be due to changes in another. What caused the development of the post-2011 GASB and what contributed to the inter-annual changes are still under active research. </p>	    
+	  </div>
+	  <p id="btn5" class="collapsiblePlusHead">Is <i>Sargassum</i> good or bad?</p>
+	  <div id="faq5">
+	  <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;"><i>Sargassum</i> in the ocean serves as an important habitat for many marine animals including fish, shrimp, crabs, and turtles. Because of this, the U.S. NOAA prohibits harvesting of <i>Sargassum</i> in U.S. waters without authorization. <i>Sargassum</i> may be used as fertilizers for sand dunes and thus protects shoreline stability. It is also a marine resource for other uses such as biomass for food, fuel, and as a possible source of pharmaceutical materials. Additionally, through photosynthesis at the surface and sinking to the ocean floor, <i>Sargassum</i> can fix and sequester carbon, thus reducing carbon dioxide (CO<sub>2</sub>), the primary gas responsible for global warming. There are currently projects being implemented or planned to sink <i>Sargassum</i> (and thereby atmospheric carbon) to the ocean floor as part of the Carbon Dioxide Removal (CDR) effort.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">However, excessive amounts of <i>Sargassum</i> in nearshore environments can cause environmental and economic problems (Imageset 4). Large and thick <i>Sargassum</i> mats on beaches can smother turtle nesting sites. Under Florida and Caribbean sunshine, <i>Sargassum</i> can decompose in 1-2 days, and then emit stinky gases (hydrogen sulfide and ammonia), attract insects and grow bacteria, and thereby pose threats to humans. Large quantity of sinking <i>Sargassum</i> in coastal waters can smother corals and seagrass, among other benthic fauna. Dead <i>Sargassum</i> in coastal waters can produce leachates which deteriorate water quality (Imageset 4) and can consume oxygen to cause a local “dead zone”. Large <i>Sargassum</i> mats in the ocean can bock the waterways for boats and tangle boat propellers. In July 2022, the U.S. Virgin Island and FEMA declared a state of emergency due to <i>Sargassum</i> clogging of two water intakes of a desalination plant.</p>
+	    <img class="centerImg850" alt="Sargassum on beaches and in coastal waters" title="Sargassum on beaches and in coastal waters" src="/projects/SaWS/images/sargassum_on_beach-Lapointe.png" />
+	    <table class="centerImg850"><tr>
+	    <td style="width: 57%;">
+	     <img style="width: 100%;" alt="Sargassum on beaches and in coastal waters" title="Sargassum on beaches and in coastal waters" src="/projects/SaWS/images/sargassum_on_coastal-Brewton.png" />
+	    </td>
+	    <td style="width: 43%;">
+	     <video style="width: 100%;" src="/projects/SaWS/videos/Orange_Beach.mp4" controls></video>
+	    </td>
+	    </tr></table>
+	    <video class="centerImg850" src="/projects/SaWS/videos/sargassum-short1.mp4" controls></video>
+	    <div class="centerTextbox850"><p class="centerImgTitle">Imageset 4. <i>Sargassum</i> on beaches and in coastal waters. Smathers Beach, Key West, Florida, March 5, 2023 (top, photo credit: Brian Lapointe), July 20, 2021 (middle left, the brownish water is due to <i>Sargassum</i> leachate, photo credit: Rachel Brewton). Middle right: Orange Beach, May 25, 2022, Alabama (video credit: Debbie Williams). Bottom: Cayman Islands (video credit: Sandy Hill).</p></div>   
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Large <i>Sargassum</i> inundation events have not only caused environmental problems, but also exerted economic burden to local governmental and management agencies. In 2015, Mexico employed its navy to physically remove <i>Sargassum</i> at sea. In Quintana Roo (along the Mexican Yucatan coast), during the peak months of 2018 and 2019, local hotels removed 1,000 – 10,000 tons of <i>Sargassum</i> per kilometer of beach in 7 beaches. In Florida, the Miami-Dade county alone spends millions of dollars every year to remove <i>Sargassum</i> from beaches. The tourism industry around the Caribbean Sea has particularly suffered from major <i>Sargassum</i> beaching events in the past decade.</p>
+	  </div>
+	  <p id="btn6" class="collapsiblePlusHead">Is <i>Sargassum</i> toxic or dangerous?</p>
+	  <div id="faq6">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Mostly no. Unlike red tides in the Gulf of Mexico, <i>Sargassum</i> itself is not toxic, and people can swim around it. <i>Sargassum</i> on beach is not toxic either unless toxic gases (hydrogen sulfide and ammonia) are released from rotten <i>Sargassum</i>. Even in this case, primarily those with underlying respiratory issues (e.g., asthma) may be affected. Beach goers can simply choose to avoid large quantities of accumulated <i>Sargassum</i>. Small quantities on beaches may be simply ignored.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;"><i>Sargassum</i> might be edible by humans and animals, but there are some reports showing relatively high arsenic levels in <i>Sargassum</i> tissues.</p>
+	  </div>
+	  <p id="btn7" class="collapsiblePlusHead">Which beaches will be impacted the most and when? </p>
+	  <div id="faq7">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Although satellite-based monitoring can provide timely information on the general situation of <i>Sargassum</i> abundance and distribution in a relatively large region, predicting beaching events in future months for individual beaches is difficult or impossible. This is because even though a large quantity of <i>Sargassum</i> is floating near a certain beach, whether beaching events occur depends on winds and tides as well as on regional ocean circulation, most of which are difficult to predict. However, this doesn’t mean one cannot predict the likelihood of potential beaching events for a local region. For example, based on historical data, the west coast of Florida (from the Big Bend region to Naples) is mostly <i>Sargassum</i> free regardless of the <i>Sargassum</i> amount in the Gulf of Mexico. In contrast, once a large quantity of <i>Sargassum</i> is observed along the Loop Current or in the Straits of Florida, beaching events in the oceanside of Florida Keys and along the east coast of Florida are likely to occur in the coming weeks. </p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Based on satellite observations of <i>Sargassum</i> location and its proximity to shore, the NOAA CoastWatch (Atlantic node) has worked with the USF Optical Oceanography Lab to develop statistics-based <i>Sargassum</i> Inundation Reports (SIRs) with weekly updates, which predicts likelihood of beaching events. In the future, high-resolution satellite imagery, in combination with high-resolution ocean circulation models, can be used to form a forecast system to predict possible beaching events for individual beaches. </p>
+	  </div>
+	  <p id="btn8" class="collapsiblePlusHead">How is <i>Sargassum</i> measured?</p>
+	  <div id="faq8">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">In the field, <i>Sargassum</i> can be measured in different ways. Recordings of sightings represent a crude indicator of abundance. Since the 1970s, the Sea Education Association (SEA) conducted systematic surveys of <i>Sargassum</i> in the western Atlantic (including the Caribbean Sea and Gulf of Mexico) several times a year, during which <i>Sargassum</i> abundance was measured using a towed net. A total of 7000 net tows were collected between 1992 and 2015. <i>Sargassum</i> samples are also collected this way or using a dipping net, and then stored and analyzed in the laboratory following community-accepted protocols to determine the tissue contents (particularly nitrogen, phosphorous, iron, carbon, arsenic, among others).</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Since 2006, satellite data has been used to observe and quantify <i>Sargassum</i>. <i>Sargassum</i> has different colors from the background ocean water, and such color changes are quantified in every pixel of satellite images, from which <i>Sargassum</i> biomass in every pixel is estimated. Field measurements are used to validate such satellite-based estimates.</p>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">The advantage of satellites is their synoptic and frequent observations. There are currently several satellites orbiting around the earth, providing daily observations of every location in the ocean. There are also higher-resolution satellites that provide “zoomed in” views for particular locations, but these satellites typically cover smaller areas (particularly around the coasts) and do not provide daily coverage.</p>
+	  </div>
+	  <p id="btn9" class="collapsiblePlusHead">Where can I get the most recent information on <i>Sargassum</i> locations?</p>
+	  <div id="faq9">
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Based on satellite observations, the USF Optical Oceanography Lab has developed and operated a <i>Sargassum</i> Watch System (SaWS) to generate information on <i>Sargassum</i> abundance and location in the tropical Atlantic, Caribbean Sea, and Gulf of Mexico. A user can select a region of interest through a “clickable” map (Imageset 5), and then follow the instructions under “Where the Images are Found”. The SaWS provides daily updates on satellite-observed <i>Sargassum</i> and other ocean variables (e.g., surface temperature, chlorophyll concentration). A user can bring the selected images together with modeled ocean currents to the user’s Google Earth environment to help navigate the images.</p>
+	    <img alt="Screenshot of clickable map" title="Screenshot of clickable map" src="/projects/SaWS/images/clickable_map_example.png" class="centerImg850" />
+	    <div class="centerTextbox850"><p class="centerImgTitle">Imageset 5. Clickable map in the <i>Sargassum</i> Watch System (SaWS, <a href="https://optics.marine.usf.edu/click_saws.html" onclick="window.open(this.href); return false;">https://optics.marine.usf.edu/click_saws.html</a>). A mouse click over a boxed region will launch the Website for that region, from which <i>Sargassum</i> maps can be displayed in a Web browser or in Google Earth.</p></div>
+	    <p style="margin-top : 2px; margin-left: 5em; margin-right: 2.5em;">Based on the SaWS, the USF OOL also generates <i>Sargassum</i> monthly outlook bulletins and distributes the bulletins to subscribers by the end of the month. All past bulletins can be found under the SaWS page <a href="https://optics.marine.usf.edu/projects/SaWS.html#tabs-7" onclick="window.open(this.href); return false;">“Bulletins”</a>. Those interested in subscribing to future bulletins may send a request to Dr. Brian Barnes (bbarnes4@usf.edu).</p>
+	  </div>
+	  <div id="faq10">
+	    <p class="reference">Brooks MT, Coles VJ, Hood RR, Gower JFR (2018) Factors controlling the seasonal distribution of pelagic <i>Sargassum</i>. Mar Ecol Prog Ser 599:1–18.&nbsp;<a href="https://doi.org/10.3354/meps12646">https://doi.org/10.3354/meps12646</a></p>
+	    <p class="reference">Franks, J., D. R. Johnson, D. S. Ko, G. Sanchez-Rubio, J.R. Hendon, and M. Lay (2011), Unprecedented Influx of pelagic <i>Sargassum</i> along Caribbean island coastlines during summer 2011, Proc. Gulf Caribb. Fish. Inst., 64:6-8. <a href="https://nsgl.gso.uri.edu/flsgp/flsgpw11001/papers/006.pdf">https://nsgl.gso.uri.edu/flsgp/flsgpw11001/papers/006.pdf</a></p>
+	    <p class="reference">Godínez-Ortega et al. (2021). A Natural History of Floating <i>Sargassum</i> Species (Sargasso) from Mexico. <a href="https://doi.org/10.5772/intechopen.97230">https://doi.org/10.5772/intechopen.97230</a></p>
+	    <p class="reference">Gower, J., E. Young, E., and S. King (2013), Satellite images suggest a new <i>Sargassum</i> source region in 2011, Remote Sens. Lett. 4, 764–773. <a href="https://doi.org/10.1080/2150704X.2013.796433">https://doi.org/10.1080/2150704X.2013.796433</a></p>
+	    <p class="reference">Hu, C., et al. (2016). <i>Sargassum</i> watch warns of incoming seaweed, Eos, 97(22):10-15. <a href="https://doi.org/10.1029/2016EO058355">https://doi.org/10.1029/2016EO058355</a></p>
+	    <p class="reference">Hu, C. et al. (2021). On the Atlantic pelagic <i>Sargassum</i>'s role in carbon fixation and sequestration. Science of the Total Environment, 781, 146801. <a href="https://doi.org/10.1016/j.scitotenv.2021.146801">https://doi.org/10.1016/j.scitotenv.2021.146801</a></p>
+	    <p class="reference">Huffard, C. L., S. von Thun, A. D. Sherman, K. Sealey, and K. L. Smith Jr. (2014). Pelagic <i>Sargassum</i> community change over a 40-year period: temporal and spatial variability. Mar. Bio, 161:2735-2751. <a href="https://doi.org/10.1007/s00227-014-2539-y">https://doi.org/10.1007/s00227-014-2539-y</a></p>
+	    <p class="reference">Johns, E. et al. (2020). The establishment of a pelagic <i>Sargassum</i> population in the tropical Atlantic: Biological consequences of a basin-scale long distance dispersal event. Progress in Oceanography, 182:102269. <a href="https://doi.org/10.1016/j.pocean.2020.102269">https://doi.org/10.1016/j.pocean.2020.102269</a></p>
+	    <p class="reference">Lapointe et al. (2021). Nutrient content and stoichiometry of pelagic <i>Sargassum</i> reflects increasing nitrogen availability in the Atlantic Basin. Nature Communications. 12:3060. <a href="https://doi.org/10.1038/s41467-021-23135-7">https://doi.org/10.1038/s41467-021-23135-7</a></p>
+	    <p class="reference">Modestin, E., et al. (2022). Arsenic in Caribbean bivalves in the context of <i>Sargassum</i> beachings: a new risk for seafood consumers. Environ. Monit. Assess. 194, 1–20. <a href="https://doi.org/10.1007/s10661-022-10230-5">https://doi.org/10.1007/s10661-022-10230-5</a></p>
+	    <p class="reference">Maurer, A. S., et al.(2021). The Atlantic <i>Sargassum</i> invasion impedes beach access for nesting sea turtles. Climate Change Ecology, 2, 100034. <a href="https://doi.org/10.1016/j.ecochg.2021.100034">https://doi.org/10.1016/j.ecochg.2021.100034</a></p>
+	    <p class="reference">Olguin-Maciel, E., et al. (2022). Environmental impact of <i>Sargassum</i> spp. landings: an evaluation of leachate released from natural decomposition at Mexican Caribbean coast. Environ. Sci. Pollut. Res. 29, 91071–91080. <a href="https://doi.org/10.1007/s11356-022-22123-8">https://doi.org/10.1007/s11356-022-22123-8</a></p>
+	    <p class="reference">Parr, A.E. (1939), Quantitative observations on the pelagic <i>Sargassum</i> vegetation of the western North Atlantic, Bull. Bingham Oceanog. Coll., Peabody Museum of Natural History, Yale University, 6(7): 1-94. Oceanography 28(3):8–10</p>
+	    <p class="reference">Resiere, D., et al. (2021). <i>Sargassum</i> seaweed health menace in the Caribbean: clinical characteristics of a population exposed to hydrogen sulfide during the 2018 massive stranding. Clin. Toxicol. 59, 215–223. <a href="https://doi.org/10.1080/15563650.2020.1789162">https://doi.org/10.1080/15563650.2020.1789162</a></p>
+	    <p class="reference">Rodríguez-Martínez et al. (2021). Element concentrations in pelagic <i>Sargassum</i> along the Mexican Caribbean coast in 2018-2019. PeerJ 8:e8667. <a href="https://doi.org/10.7717/peerj.8667">https://doi.org/10.7717/peerj.8667</a></p>
+	    <p class="reference">Rodriguez-Martinez et al. (2022). Spatio-temporal variability of pelagic <i>Sargassum</i> landings on the northern Mexican Caribbean. Remote Sensing Applications: Society and Environment. 27, 100767. <a href="https://doi.org/10.1016/j.rsase.2022.100767">https://doi.org/10.1016/j.rsase.2022.100767</a></p>
+	    <p class="reference">Skliris, N., et al. (2022). Physical drivers of pelagic sargassum bloom interannual variability in the Central West Atlantic over 2010–2020. Ocean Dynamics, 72:383-404. <a href="https://doi.org/10.1007/s10236-022-01511-1">https://doi.org/10.1007/s10236-022-01511-1</a></p>
+	    <p class="reference">Trinanes, J., et al. (2021). Monitoring pelagic <i>Sargassum</i> inundation potential for coastal communities. J. Operational Oceanography, 16(1), 48-59. <a href="https://doi.org/10.1080/1755876X.2021.1902682">https://doi.org/10.1080/1755876X.2021.1902682</a></p>
+	    <p class="reference">van Tussenbroek, B.I., et al. (2017). Severe impacts of brown tides caused by <i>Sargassum</i> spp. on near-shore Caribbean seagrass communities. Mar. Pollut. Bull. 122, 272–281. <a href="https://doi.org/10.1016/j.marpolbul.2017.06.057">https://doi.org/10.1016/j.marpolbul.2017.06.057</a></p>
+	    <p class="reference">Wang, M., and C. Hu (2017), Predicting <i>Sargassum</i> blooms in the Caribbean Sea from MODIS observations, Geophys. Res. Lett., 44, 3265–3273. <a href="https://doi.org/10.1002/2017GL072932">https://doi.org/10.1002/2017GL072932</a></p>
+	    <p class="reference">Wang, M. et al. (2019) The Great Atlantic <i>Sargassum</i> Belt. Science, 365: 83 – 87. <a href="https://doi.org/10.1126/science.aaw7912">https://doi.org/10.1126/science.aaw7912</a></p>
+	  </div>
+	    <!--</td>
+	    <td style="vertical-align:top">
+	    </td></tr></tbody></table>
+	    </div></div></div>i-->
+	 </div>
+	</div>
+
+
+</div><!-- end of tabs dive -->
+
+
+
+     </td>
+    </tr>
+    <tr>
+     <td id="footer" colspan="2" class="ui-state-default ui-corner-all">
+         <div style="clear: both;"></div>
+  <div style="clear: right;"></div>
+  <div class="ui-corner-all greenBar"></div>
+
+  <div id="SWFPageFooter" class="pageFooter">
+   <!--a style="padding: 2px 0.5em; float: left;" href="http://validator.w3.org/check/referer"><img style="border: 0px none ; width: 88px; height: 31px;" src="/images/valid-xhtml10.png" title="Valid XHTML 1.0 Strict" alt="Valid XHTML 1.0 Strict" height="31" width="88"/>
+   </a--><span style="float: left;">This site is compatible with Firefox, Chrome and Safari and has been validated as HTML 5<br/></span>
+  Address questions and comments to the&nbsp;<a href="mailto:optics_master@marine.usf.edu,cms-ooprocessing@usf.edu"><b style="font-style : italic; color : #015941;">Webmaster</b></a><br/>
+  <span class="urlInfo">Images &amp; Page Design &nbsp; &copy; Optical Oceanography Laboratory</span>
+
+  </div>
+<!-- Finish Page with USF Colors -->
+<!-- Page Maintained by Brock Murch -->
+  <div class="ui-corner-all goldBar"></div>
+
+     </td>
+    </tr>
+   </table>
+  </div> 
+ </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Clear Water | City of Chicago</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<!-- Favicon -->
+		<link rel='icon' href='images/favicon.ico' type='image/x-icon' />
+		
+		<!-- Twitter Summary Cards -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@ChicagoCDO">
+        <meta name="twitter:creator" content="@ChicagoCDO">
+		<meta name="twitter:title" content="Clear Water - Forecasting Beach Water Quality">
+		<meta name="twitter:description" content="A statistical model to forecast when E. coli beaches will be too high at Chicago Park District beaches on Lake Michigan.">
+		<meta name="twitter:image" content="https://chicago.github.io/clear-water/images/social-share-image.jpg" />
+		<meta name="twitter:image:alt" content="Boy in a lake splashing water on his face" />
+
+		<!-- Facebook Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://chicago.github.io/clear-water/images/social-share-image.jpg" />
+		<meta property="og:url" content="https://chicago.github.io/clear-water/" />
+		<meta property="og:title" content="Clear Water - Forecasting Chicago's Beach Water Quality" />
+		<meta property="og:description" content="A statistical model to forecast when E. coli beaches will be too high at Chicago Park District beaches on Lake Michigan." />
+		<meta property="og:locale" content="en_US" />
+
+		<!-- Google Analytics snippet -->
+		<script>
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-29954971-18', 'auto');
+			ga('send', 'pageview');
+		</script>
+		
+	</head>
+	<body class="landing">
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+    		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><span><img src="images/city-seal-inverse.png" alt="City Seal"></span></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="http://chicago.github.io/clear-water/challenge/index.html">Beat the model</a></li>
+											<li><a href="http://cpdbeaches.com">Current beach statuses</a></li>
+											<li><a href="https://data.cityofchicago.org/Parks-Recreation/Beach-Lab-Data/2ivx-z93u">Historical lab results</a></li>
+								<li><a href="https://data.cityofchicago.org/Parks-Recreation/Beach-Swim-Advisories/9n93-6cmv">Historical advisories</a></li>
+								<li><a href="https://data.cityofchicago.org/Parks-Recreation/Beach-E-coli-Predictions/xvsz-3xcj">E. coli prediction data</a></li>
+											<li><a href="https://github.com/Chicago/clear-water">Get the code on <i class="fa fa-github" aria-hidden="true"></i></a></li>
+											<li><a href="http://chicagoparkdistrict.com">Chicago Park District</a></li>
+											<li><a href="https://www.cityofchicago.org">City of Chicago</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Clear Water</h2>
+							<p>Forecasting Chicago's Beach Water Quality</p>
+						</div>
+						<a href="#one" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Water quality advisories issued with <br />
+								3 times more accuracy <br />
+								than previous model</h2>
+								<p>Advisories protect beach visitors from contracting illnesses from waterborne pathogens.</p>
+							</header>
+							<ul class="icons major">
+								<li><a href="https://www.facebook.com/sharer/sharer.php?u=https://chicago.github.io/clear-water"><span class="icon fa-facebook major style1"><span class="label">Facebook share</span></span></a></li>
+								<li><a href="https://twitter.com/share?text=Using data science to predict water quality at @ChicagoParks beaches @ChicagosMayor&url=https://chicago.github.io/clear-water"><span class="icon fa-twitter major style2"><span class="label">Twitter share</span></span></a></li>
+								<li><a href="https://github.com/Chicago/clear-water"><span class="icon fa-code major style3"><span class="label">Get code</span></span></a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style2">
+						<div class="inner">
+							<p>All 26 miles of Chicago's shoreline along Lake Michigan belong to the public. Over twenty public beaches are open to 60 million annual visitors and residents. During the summer months, the cool waters of Lake Michigan provide a respite from the heat.</p>
+         					<p>Most of the time, beach water quality is acceptable. But sometimes, rates of bacteria elevate to a level where swimmers are at risk of contracting an infection and developing flu-like symptoms.</p>
+        					<p>Traditional testing methods do not return results quickly enough to provide realtime water quality notifications, or "beach advisories." Rapid DNA testing methods are available, but are costly when used daily at all beaches. Predictive modeling techniques have been developed, but do not yet provide accurate results reliably.</p>
+        					<p>The City partnered with the Chicago Park District, volunteer data scientists, and students at local universities to build a better predictive model for forecasting beach water quality. In the process, the team developed an innovative new approach to water quality modeling.</p>
+						</div>
+					</section>
+
+					<section id="two-point-five" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/modeling-approach.png" alt="" /></div><div class="content">
+								<h2>Innovative Science</h2>
+								<p>Prior efforts to forecast beach water quality in Chicago and elsewhere have adopted similar approaches. Researchers would collect meteorological data near a swimming site, and then predict contamination levels in the water. However, this methodology can be unreliable and often does not identify days with high <em>E. coli</em> levels.</p>
+								<p>This project developed a new approach that takes advantage of rapid DNA testing and the lessons learned from data exploration. That approach begins by acknowledging that just five beaches contribute to about 56% of poor water quality beach days. These beaches, which are some of the hardest to predict, should be routinely rapid tested due to their volatility. Water quality patterns at the remaining beaches can then be separated into clusters. In the new approach, one beach from each of these clusters would be rapid tested to get an immediate result. The remaining beaches would be predicted by the model.</p>
+								<p>A key feature of the new approach is its cost effectiveness. The increased cost of rapid testing would be offset because only half the beaches would be tested. Yet it performs better and provides more accurate notifications to the public.</p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<div class="image"><img src="images/code-computer.png" alt="" /></div><div class="content">
+								<h2>Collaboration &amp; Open Science</h2>
+								<p>Clear Water is a collaborative, open source project that was developed by the City of Chicago, civic tech volunteers, and graduate students. The City of Chicago adopted approaches from open science to allow "citizen scientists" to contribute to research projects. As a result, the project can also be shared with others and improved by a network of scientists and researchers.</p>
+								<p>Volunteers donated over 1,000 hours to the project. Volunteers at <a href="https://chihacknight.org/projects/2016/05/01/e-coli-predictions.html">Chi Hack Night</a> developed the initial statistical model. Interns from DePaul University's Masters in Predictive Analytics helped evaluate the effectiveness of the statistical model. In addition, students from DePaul's Data Visualization course <a href="http://chicago.github.io/clear-water/challenge/index.html">visualized how the predictive model operates</a>.</p>
+								<p> Clear Water is also made available as an open source project. The code is written in <a href="http://r-project.org/">R</a>, an open source, widely-known programming language for statisticians. There is no need for expensive software licenses to view and run this code. Open sourcing the code also allows for collective advancement. The open source code contains the necessary data to let others test and try to improve upon the current analytic method.</p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<div id="chart"><script src="assets/js/chart.js"></script></div><div class="content">
+								<h2>Evaluating the Effectiveness of the Model</h2>
+								<p>Data from 2006 through 2016 were used to conduct simulations. The 2017 pilot was evaluated with actual results, collected after the model was developed. The model used measurements from Rainbow, Calumet, South Shore, 63rd, and Montrose beaches to predict water quality at the 15 other beaches.</p>
+								<p>By mid-summer 2017, poor water quality conditions were detected 121 times at different beaches. The piloted model, paired with selective rapid testing, would have issued advisories for 69 of those occurances.</p>
+								<p>Typically, the prior model would have issued advisories for only 9 out of 112 occurances by mid-summer. The new approach so far has detected 60 more occurances than the prior model. Further, as more data on rapid testing is accumulated, the new model's performance should perform even better.</p>
+								<p>The new model also has better overall accuracy of predicting poor water quality. In 2017, the piloted model so far has an accuracy rate of 12%, which is 3 times higher than the prior model's accuracy rate of 4% under similar conditions. By performing clustering algorithms to optimize the selection of predictor beaches, simulations consistently show accuracy rates of over 20 percent.</p>
+								<p>This new approach to beach water quality forecasting requires a choice to be made: which beaches are tested and which are predicted. You can try making your own model to see if it can outperform ours.</p>
+								<ul class="actions vertical">
+									<li><a href="http://chicago.github.io/clear-water/challenge/index.html" class="button special fit">Beat the model</a></li>
+								</ul>
+							</div>
+						</section>
+					</section>
+
+				<!-- CTA -->
+					<section id="cta" class="wrapper style4">
+						<div class="inner">
+							<header>
+								<h2>Get the data</h2>
+								<p>The Beach Water Quality data is available on Chicago's Data Portal and is updated daily during the beach season.</p>
+							</header>
+							<ul class="actions vertical">
+								<li><a href="https://data.cityofchicago.org/Parks-Recreation/Beach-Lab-Data/2ivx-z93u" class="button">Beach Lab Data</a></li>
+								<li><a href="https://data.cityofchicago.org/Parks-Recreation/Beach-E-coli-Predictions/xvsz-3xcj" class="button">E. coli Predictions</a></li>
+								<li><a href="https://data.cityofchicago.org/Parks-Recreation/Clear-Water-Map/mf7j-mc8j" class="button">Predictions Map</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://twitter.com/ChicagoCDO" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/Chicago/clear-water" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:datascience@cityofchicago.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy;2017 <a href="https://www.cityofchicago.org">City of Chicago</a></li>
+							<li>Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a></li>
+							<li>Design based on <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>Banner image by <a href="https://unsplash.com/collections/495812/misc/b370b467922d2c7416d08fca4c35fc51?photo=MIUqc2mmdBA">Janko Ferlič</a></li>
+							<li><a href="https://www.cityofchicago.org/city/en/general/disclaimer.html">Disclaimer</a></li>
+							<li><a href="https://www.cityofchicago.org/city/en/general/privacy.html">Privacy Policy</a></li>
+						</ul>
+					</footer>
+			</div>
+	</body>
+</html>
