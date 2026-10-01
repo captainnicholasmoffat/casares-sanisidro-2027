@@ -1346,7 +1346,8 @@ millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibri
 Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 790 a 1.140 millones: <span
 class="sg">entre el 23% y el 33% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
 moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
-muestras y la primera temporada de guardavidas, unos 350 millones&mdash;, moviendo partidas, sin gasto nuevo. El
+muestras y la primera temporada de guardavidas, unos 350 millones&mdash;, con dinero de los programas que
+ceden (cuadro [[n:ceden]]) y no de lo que Ambiente ya gasta: sin gasto nuevo. El
 desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas se fija con el diagn&oacute;stico.</p>
 </div>
 
@@ -1535,19 +1536,11 @@ pide y un borrador de intervenci&oacute;n para la audiencia, con las normas cita
 <div class="cols">
 <p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
 Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601. Barisidro, en el 1602, ten&iacute;a la demolici&oacute;n
-programada para julio y cay&oacute; en septiembre. Los dos
-funcionaban desde 1996 con permiso precario y gratuito sobre terreno p&uacute;blico, sin pagar canon, y
-el decreto original preve&iacute;a revocarlo. <span class="sg">Nadie deber&iacute;a usar treinta
-a&ntilde;os gratis un predio que es de todos.</span></p>
+programada para julio y cay&oacute; en septiembre. Los dos funcionaban desde 1996.</p>
 <p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran dos locales en actividad
 sobre un predio de 9.775 metros cuadrados frente al r&iacute;o &mdash;s&oacute;lo la estructura de Catalejo ten&iacute;a
 m&aacute;s de mil metros cuadrados, seg&uacute;n el Municipio&mdash;, que empleaban gente y tra&iacute;an p&uacute;blico al
-Bajo. <span class="sg">Revocar el permiso y adjudic&aacute;rselo a otro que pague es una
-cosa; demolerlo es otra.</span> Lo primero convierte un activo que no rend&iacute;a nada en uno que rinde.
-Lo segundo lo borra.</p>
-<p><b>Y no hubo llamado, no hubo pliego, no hubo concurso.</b> Un predio en el punto de mayor valor de la
-costa no carece de interesados dispuestos a pagar un canon: carece de un procedimiento que los
-convoque.</p>
+Bajo.</p>
 <p><b>Y el orden de los pasos fue el inverso al que este programa propone.</b> El plan de
 participaci&oacute;n ciudadana, con recorridas y escucha de vecinos, se anunci&oacute; entre julio y
 septiembre de 2025 &mdash;cuando Catalejo ya estaba demolido y Barisidro entregado&mdash;.
@@ -1559,17 +1552,17 @@ partida municipal de empleo son 170 millones al a&ntilde;o. <b>Acceso p&uacute;b
 no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Qu&eacute; propone este programa para las hect&aacute;reas que faltan</div>
+<div class="clabel">Lo que proponemos para la costa que ya funciona</div>
 <p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de
 acceso restringido.</p><p>Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
 decide qu&eacute; se hace con cada una.</p>
-<p><b>La regla es reasignar, no demoler.</b> Un permiso vencido o revocado se licita, con pliego
-p&uacute;blico y exigencia de empleo local: entra otro concesionario que paga canon, el edificio sigue en pie y los puestos de trabajo no se pierden. El
-Municipio pasa de no cobrar nada a cobrar, sin destruir nada.
-<span class="sg">Demoler es la &uacute;ltima opci&oacute;n, no la primera</span>, y exige fundamentar por
-escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
-<p><b>La costa no es de una zona, y la secci&oacute;n 4.6 ya fija la regla.</b> Lo que hoy no paga nada deber&iacute;a pagar; lo que puede generar
-trabajo deber&iacute;a generarlo.</p>
+<p><b>Desde 2026 el Municipio tiene la tenencia de la costa, que sigue siendo de la Provincia</b> (Ordenanza 9430).
+Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b>, paguen un canon al
+Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). <span class="sg">No se
+destruye capital ni empleo que funciona</span>: demoler es la &uacute;ltima opci&oacute;n, no la primera, y exige fundamentar
+por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
+<p><b>El objetivo es una costa linda que traiga gente y trabajo a los comercios toda la semana y todo el
+a&ntilde;o.</b> La costa no es de una zona, y la secci&oacute;n 4.6 ya fija qui&eacute;n la decide.</p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">

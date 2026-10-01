@@ -498,8 +498,8 @@ put(S, "B236", "Cada equipo entra en la línea de su área y dentro de su monto;
     font(8, italic=True, color=GRAY))
 s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 350000000,
       note="5.5 (189): diagnóstico de Perú 22-36 M, piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
-           "desfibrilador y primera temporada de guardavidas 42 M. Se reasigna en 2028 como el resto de ambiente: "
-           "no cambia el gasto total ni el resultado")
+           "desfibrilador y primera temporada de guardavidas 42 M. Sale de los tres programas que ceden (contrapartida, "
+           "Programas fila 16), no de los 1.410 M que Ambiente ya gasta: no cambia el gasto total ni el resultado")
 for rr in range(106, 239):
     S.row_dimensions[rr].height = None
 

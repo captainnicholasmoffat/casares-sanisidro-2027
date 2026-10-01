@@ -2561,3 +2561,23 @@ Fuentes de la verificación en 01_raw/costa/d_verificacion_189_190/ (índices, c
 PDF: 43 páginas, 42 cuadros y gráficos del 1 al 42, ninguna página pasa de 2.700 pt, sin "plata" fuera de las
 excepciones, sin azul, fuentes sin sustituciones, sin viudas. Excel: 13.348 fórmulas, cero errores; cambian Supuestos
 C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y 27 en 2028; el resultado, igual.
+
+## CATALEJO Y BARISIDRO, Y EL ADELANTO DEL AÑO 1 · APLICADO (01/10)
+- Nick, con información de primera mano del ex titular de Catalejo: en 2025 el terreno era de la Provincia y los dos
+  locales le pagaban canon; el Municipio sólo daba la habilitación comercial; la tenencia llegó después de las
+  demoliciones (convenio del 20/03/2026, Ordenanza 9430 del 15/04/2026, Decreto 465/2026).
+- Salió de la página 27: "con permiso precario y gratuito sobre terreno público, sin pagar canon", "el decreto
+  original preveía revocarlo", "Nadie debería usar treinta años gratis un predio que es de todos", "Revocar el permiso
+  y adjudicárselo a otro que pague…" y el párrafo "no hubo llamado, no hubo pliego, no hubo concurso". Del recuadro:
+  "un permiso vencido o revocado se licita… entra otro concesionario que paga canon", "el Municipio pasa de no cobrar
+  nada a cobrar" y "lo que hoy no paga nada debería pagar". En fuentes, "la condición de permiso precario y
+  gratuito"; entra la tenencia (Ordenanza 9430).
+- Entró la propuesta: con la tenencia de 2026 los comercios que funcionan en la costa siguen, pagan canon al
+  Municipio y emplean gente del partido (75%, Ordenanza X); no se destruye capital ni empleo que funciona; una costa
+  linda que traiga gente y trabajo toda la semana y todo el año.
+- PENDIENTE: la parte de 2025 (clausuras, habilitaciones, "Barisidro entregado") se rehace con el informe del worker
+  de investigación; las medidas de tránsito, estacionamiento y actividad en la semana y el invierno, también.
+- No se encontró en otra parte del documento lo del canon ni lo del permiso gratuito.
+- El adelanto del año 1 (350 M) sale de los tres programas que ceden (contrapartida, Programas fila 16): en 2028
+  Ambiente queda en 1.410,1 + 350 M. Ahora lo dicen el texto de la costa (con el cuadro de los programas que ceden) y
+  la nota del Excel (Supuestos E238). Resultado 2028: +1.746 M, igual.
