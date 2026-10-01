@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1024, user-scalable=true">
+		<meta name="description" content="Observatorio Metropolitano">
+		<meta name="author" content="CPAU">
+
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/ico/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/ico/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/ico/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/ico/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/ico/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="/ico/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="/ico/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="/ico/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="/ico/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="/ico/favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="&nbsp;"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="/ico/mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="/ico/mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="/ico/mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="/ico/mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="/ico/mstile-310x310.png" />
+
+		<title>Observatorio Metropolitano</title>
+        
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel='stylesheet' type='text/css'>
+
+		<link media="all" type="text/css" rel="stylesheet" href="https://observatorioamba.org/css/bootstrap.min.css">
+
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link media="all" type="text/css" rel="stylesheet" href="https://observatorioamba.org/css/main.css?v=21122021">
+
+			<link media="all" type="text/css" rel="stylesheet" href="https://observatorioamba.org/css/jquery.fancybox.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://observatorioamba.org/js/vendor/bootstrap.min.js"></script>
+
+		
+		
+		
+<!-- Google tag (gtag.js) Este seria el del observatorio  -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6NRHKZCRS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z6NRHKZCRS');
+</script>
+
+	</head>
+	
+	<body class="clearfix">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-40768989-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+				
+		<div class="container-fluid">
+		
+			<header id="header" class="clearfix">
+	<div class="top">
+		<h1 id="logo">
+			<a class="observatorioLogo" href="https://observatorioamba.org">Observatorio Metropolitano</a>
+			 <div class="cpauLogo"><img src="https://observatorioamba.org/images/ui/cpau_logo.svg" /></div> 
+		</h1>
+
+		<div class="search">
+			<form method="GET" action="https://observatorioamba.org/buscar" accept-charset="UTF-8">
+				<input type="text" name="terms" placeholder="Buscar...">
+				<select name="restrict" id="">
+					<option value="todo">Todo el sitio</option>
+					<option value="pyp">Planes y Proyectos</option>
+					<option value="noticias">Noticias y Agenda</option>
+					<option value="normas">Normas</option>
+					<option value="mapas">Mapas</option>
+				</select>
+				<input type="submit" value="">
+			</form>
+		</div><!-- /.search -->
+	</div>
+	
+	<nav class="navbar">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="menu-item dropdown">
+					<a href="https://observatorioamba.org/el-observatorio/objetivos-y-fundamentos">EL OBSERVATORIO</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://observatorioamba.org/el-observatorio/quienes-somos">Quienes somos</a></li>
+						<li><a href="https://observatorioamba.org/el-observatorio/objetivos-y-fundamentos">Objetivos y fundamentos</a></li>
+						<li><a href="https://observatorioamba.org/el-observatorio/alianzas">Alianzas</a></li>
+						<li><a href="https://observatorioamba.org/el-observatorio/guia">La Guía</a></li>
+																	</ul>
+				</li>
+				<li class="menu-item dropdown">
+					<a href="#">PLANES Y PROYECTOS</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://observatorioamba.org/planes-y-proyectos/rmba">Región Metropolitana de Bs As (RMBA)</a></li>
+						<li><a href="https://observatorioamba.org/planes-y-proyectos/amba">Área Metropolitana de Bs As (AMBA)</a></li>
+						<li><a href="https://observatorioamba.org/planes-y-proyectos/partidos-rmba">Partidos de la RMBA</a></li>
+						<li><a href="https://observatorioamba.org/planes-y-proyectos/caba">Ciudad Autónoma de Buenos Aires (CABA)</a></li>
+						<li><a href="https://observatorioamba.org/planes-y-proyectos/cuencas">Cuencas</a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a href="https://observatorioamba.org/mapeos">MAPEOS</a>
+				</li>
+				<li class="menu-item dropdown">
+					<a href="https://observatorioamba.org/noticias-y-agenda">NOTICIAS / AGENDA</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://observatorioamba.org/noticias-y-agenda?f=noticias">Noticias</a></li>
+						<li><a href="https://observatorioamba.org/noticias-y-agenda?f=agenda">Agenda</a></li>
+						<li><a href="https://observatorioamba.org/noticias-y-agenda">Todo</a></li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					<a href="https://observatorioamba.org/opinion">OPINIÓN</a>
+				</li>
+				<li class="menu-item dropdown">
+					<a href="https://observatorioamba.org/nuestras-publicaciones">PUBLICACIONES</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://observatorioamba.org/nuestras-publicaciones/boletin">Boletines</a></li>
+						<li><a href="https://observatorioamba.org/nuestras-publicaciones/libro">Libros</a></li>
+						<li><a href="https://observatorioamba.org/nuestras-publicaciones/revista">Revistas</a></li>
+						<li><a href="https://observatorioamba.org/nuestras-publicaciones/informe">Informes</a></li>
+						<li><a href="https://observatorioamba.org/nuestras-publicaciones/dossier">Dossier</a></li>
+					</ul>
+				</li>
+
+																																																																																							<li class="menu-item"><a href="https://observatorioamba.org/contacto">Contacto</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav><!-- /.navbar -->
+</header>
+		
+			<div class="main">
+				
+	<header class="page-header noticia">
+		<h3>
+							Noticias - 
+						5/julio/2025
+		</h3>
+		<h2>Avanza el plan de la Nueva Costa de San Isidro: demolieron un mítico bar y otro está en la mira para julio</h2>
+	</header>
+
+	<article class="noticia">
+		<div class="paddingl-72">
+			<div class="noticia-container">
+									<div class="img-col">
+													<div class="zoom-overlay fancybox" href="https://observatorioamba.org/images/noticias/large/noticia_1752671757.jpg">
+								<div class="icon"></div>
+							</div>
+												<img  src="https://observatorioamba.org/images/noticias/cuerpo/noticia_1752671757.jpg" width="250" height="250" alt="Avanza el plan de la Nueva Costa de San Isidro: demolieron un mítico bar y otro está en la mira para julio">
+					</div>
+								<div class="text-col default">
+					<p><b>ZONALES<br>San Isidro</b>. Sociedad·17 de junio de 2025<br>El Municipio recuperó el uso de un terreno público en la calle Roque Sáenz Peña y el río, en el marco de su plan para ampliar el acceso a la ribera a todos los vecinos. El comercio no pagaba canon desde hace años.<br></p><p>
+
+</p><div><div><p>La Comuna de San Isidro demolió un histórico bar en Sáenz Peña y el río y en julio hará lo mismo con otro. El objetivo es liberar la costa opara todos los vecinos.</p></div></div><div><p>En los últimos días, el Municipio de<strong><a target="_blank" rel="nofollow" href="https://zonales.com/san-isidro-seguridad-operativos-44-detenciones/">&nbsp;San Isidro </a></strong>avanzó con <strong>la demolición del histórico Bar Catalejo</strong>, una estructura de más 1.000 metros cuadrados en la calle Roque Sáenz Peña y el río, para realizar la limpieza del predio y recuperar su uso público. <strong>«Donde antes funcionaba un bar privado, ahora se parquizará el terreno para que sea parte de la ‘Nueva Costa’ accesible a los vecinos»</strong>, indicaron desde la comuna que encabeza el intendente Ramón Lanús.</p><div></div><p>La intervención se desarrolla en el marco del Plan Costero para la recuperación y puesta en valor del límite con el río. «<strong>Queremos una costa integrada y accesible</strong>, con espacios públicos para que todos los vecinos de San Isidro, y quienes nos visitan, puedan disfrutarla», sostuvo Lanús.</p><p>«<strong>Hoy en San Isidro, si no sos socio de un club, no tenés bajada pública a la costa</strong>. Nosotros vinimos a cambiar eso. En total vamos a recuperar ocho hectáreas de costa que hoy están ocupadas o cuyo acceso es restringido, para ponerlas en valor y generar un paseo costero», agregó.</p></div>
+
+
+
+El bar Catalejo funcionaba desde 1996 con un permiso provisorio y en los últimos tiempos ni siquiera pagaba un canon a la Comuna para hacer uso del terreno.<p>El sector recuperado en Roque Sáenz es de gran importancia urbana. Allí funcionaba el bar Catalejo desde 1996 <strong>con un permiso precario y gratuito, que no pagaba el canon</strong>&nbsp;por el uso de las instalaciones en un terreno público.</p><h2>San Isidro: demolieron el bar Catalejo y ahora van por Barisidro</h2><p>El decreto original que <strong>habilitó estos espacios contemplaba su uso provisional hasta que la municipalidad definiera su destino final,</strong>&nbsp;así como la posibilidad de revocar dicho uso. Catalejo ya se retiró y fue demolido. Y en julio <strong>sucederá lo mismo con el segundo bar ubicado en ese sector, Barisidro, </strong>que funcionaba en las mismas condiciones y para el cual en los últimos días se decretó la revocación del permiso precario y gratuito.</p><div><div></div></div><p><strong>La calle Roque Sáenz es una conexión vial clave en el municipio.</strong>&nbsp;Atraviesa el centro histórico junto con Del Barco Centenera, es la principal arteria de comunicación entre el Alto y el Bajo de San Isidro. Esta vía se convierte en la avenida Bernabé Márquez, bordeando el Hipódromo de San Isidro, y opera a nivel regional como parte de la Ruta Provincial Nº 4, una arteria fundamental que conecta los municipios del Gran Buenos Aires, abarcando desde el norte y oeste hasta el sur de la Ciudad de Buenos Aires.</p><blockquote><p><a target="_blank" rel="nofollow" href="https://zonales.com/manana-aumento-boleto-colectivos-amba/">Aumenta el boleto de colectivos en el AMBA: de cuánto es la suba y cuáles son las líneas afectadas<br></a></p></blockquote><p>«Venimos de años y años de permisos precarios y manejos informales, donde <strong>se desdibujó el límite de lo privado y lo público, y se perdió una visión de largo plazo</strong>&nbsp;para integrar nuestra ciudad con el Río de la Plata», sostienen desde el municipio San Isidro. Y concluyen: «Este es un paso más para recuperar espacio público para todos los vecinos de San Isidro e impulsar el trabajo, el desarrollo económico y la seguridad de la zona».</p><img width="1024" alt="La Comuna de San Isidro demoli un histrico bar en Senz Pea y el ro y en julio har lo mismo con otro El objetivo es liberar la costa opara todos los vecinos" src="https://zonales.com/wp-content/uploads/2025/06/FotoJet-2025-06-17T124557.409.jpg.webp" height="576">El edificio y el parque del bar Catalejo tenía 1.000 metros que no estaban habilitados para el uso público.<p>El municipio ya había dado su primer paso para revitalizar el frente costero al revocar la autorización para el barrio cerrado frente al río, ubicado en el bajo de Martínez, en la calle Alvear. Eso ocurrió en enero pasado cuando la comuna comenzó con las <strong>tareas de limpieza y remoción de escombros en el predio ubicado en Sebastián Elcano y Alvear</strong>, en plena costa de <strong><a target="_blank" rel="nofollow" href="https://zonales.com/escandalo-club-banade-martinez-pornografia-homofobia/">Martínez</a></strong>, donde <strong>fue suspendida la construcción del barrio privado <strong>Costa Townhouses Al Río.</strong></strong>&nbsp;</p><img width="1024" alt="San Isidro limpieza costa de Martnez" src="https://zonales.com/wp-content/uploads/2025/01/1-14-1024x576.jpg.webp" height="576">El terreno en Martínez donde iban a levantar el barrio privado Costa Townhouses Al Río fue limpiado por la Comuna de San Isidro.<p>El terreno se encontraba abandonado tras <strong>la suspensión del desarrollo inmobiliario por incumplimientos. </strong>Había restos de escombros y basura de las demoliciones realizadas en el lugar que afectaban el acceso público al río, convirtiendo la zona en un espacio peligroso. <strong>Todo fue limpiado.</strong></p><p>Además, meses más tarde se realizó la <strong>puesta en valor del <a target="_blank" rel="nofollow" href="https://zonales.com/costa-san-isidro-paseo-33-orientales-beccar/">Parque 33 Orientales</a></strong>, en el límite del partido con San Fernando, que recuperó y mejoró más de 5.000 m² de espacio público, incluyendo zonas recreativas, áreas de esparcimiento, espacios verdes de calidad, zonas de juegos y la valorización del hito donde partieron los 33 Orientales en su bicentenario.</p><p></p>
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col-md-12">
+											<div class="mas-info">
+							Más Información:<br>
+							<p><a target="_blank" rel="nofollow" href="https://zonales.com/nueva-costa-san-isidro-demolieron-bar-junto-rio/">https://zonales.com/nueva-costa-san-isidro-demolieron-bar-junto-rio/</a><br></p>
+						</div>
+					
+									</div>
+			</div>
+			
+		</div>
+	</article>
+
+			</div>
+		
+		</div>
+		
+		
+	<script src="https://observatorioamba.org/js/main.js?v=01092021"></script>
+
+	<script>
+		tab.init();
+	</script>
+
+		<script src="https://observatorioamba.org/js/vendor/jquery.fancybox.pack.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".fancybox").fancybox({
+				autosize: true,
+				margin: [30,70,30,70],
+				nextClick: true
+			});  
+		})
+	</script>
+</body>
+</html>

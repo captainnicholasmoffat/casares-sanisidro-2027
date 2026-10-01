@@ -1,0 +1,2610 @@
+<!doctype html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.3",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",t=>{this.persisted=t.persisted}),window.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(t){if(document.hidden){t._triggerListener();return}this.triggerEvents.forEach(e=>window.addEventListener(e,t.userEventHandler,{passive:!0})),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(t){t.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))})}_waitForPendingClicks(){return new Promise(t=>{this._isClickPending?this._pendingClickFinished=t:t()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(t,e,r){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(r,event.target.getAttribute(e)),event.target.removeAttribute(e))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{if(e.hasAttribute("src")){let r=new URL(e.src).origin;r!==location.origin&&t.push({src:r,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this._batchInjectResourceHints(t,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _transformScript(t){return new Promise((await this._littleBreath(),navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)?e=>{let r=document.createElement("script");[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),r.setAttribute(e,t.nodeValue))}),t.text&&(r.text=t.text),r.hasAttribute("src")?(r.addEventListener("load",e),r.addEventListener("error",e)):(r.text=t.text,e());try{t.parentNode.replaceChild(r,t)}catch(i){e()}}:async e=>{function r(){t.setAttribute("data-rocket-status","failed"),e()}try{let i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");t.text,i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",function r(){t.setAttribute("data-rocket-status","executed"),e()}),t.addEventListener("error",r),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}catch(s){r()}})}async _loadScriptsFromList(t){let e=t.shift();return e&&e.isConnected?(await this._transformScript(e),this._loadScriptsFromList(t)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(t,e){var r=document.createDocumentFragment();t.forEach(t=>{let i=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(i){let n=document.createElement("link");n.href=i,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),r.appendChild(n),this.trash.push(n)}}),document.head.appendChild(r)}_delayEventListeners(t){let e={};function r(t,r){!function t(r){!e[r]&&(e[r]={originalFunctions:{add:r.addEventListener,remove:r.removeEventListener},eventsToRewrite:[]},r.addEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.add.apply(r,arguments)},r.removeEventListener=function(){arguments[0]=i(arguments[0]),e[r].originalFunctions.remove.apply(r,arguments)});function i(t){return e[r].eventsToRewrite.indexOf(t)>=0?"rocket-"+t:t}}(t),e[t].eventsToRewrite.push(r)}function i(t,e){let r=t[e];Object.defineProperty(t,e,{get:()=>r||function(){},set(i){t["rocket"+e]=r=i}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),i(document,"onreadystatechange"),i(window,"onload"),i(window,"onpageshow")}_delayJQueryReady(t){let e;function r(r){if(r&&r.fn&&!t.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>e.bind(document)(r)),r([])};let i=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){if(this[0]===window){function t(t){return t.split(" ").map(t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=t(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let r=arguments[0][e];delete arguments[0][e],arguments[0][t(e)]=r})}return i.apply(this,arguments),this},t.allJQueries.push(r)}e=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){r(t)}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this._littleBreath();let t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){let t=new Map;document.write=document.writeln=function(e){let r=document.currentScript;r||console.error("WPRocket unable to document.write this: "+e);let i=document.createRange(),n=r.parentElement,s=t.get(r);void 0===s&&(s=r.nextSibling,t.set(r,s));let a=document.createDocumentFragment();i.setStart(a,0),a.appendChild(i.createContextualFragment(e)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}_emptyTrash(){this.trash.forEach(t=>t.remove())}static run(){let t=new RocketLazyLoadScripts;t._addUserInteractionListener(t)}}RocketLazyLoadScripts.run();</script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" hreflang="en" href="https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/" />
+<link rel="alternate" hreflang="x-default" href="https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/" />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.5 (Yoast SEO v28.6) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>CapeFLYER ridership rises 7% with three weekly round trips</title>
+	<meta name="description" content="CapeFLYER ridership rose 7 per cent in 2026 as the Boston-Hyannis train ran one round trip each Friday, Saturday and Sunday, with expanded holiday service." />
+	<link rel="canonical" href="https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="CapeFLYER ridership climbs 7% with three weekly round trips in 2026" />
+	<meta property="og:description" content="CapeFLYER ridership rose 7 per cent in 2026 as the Boston-Hyannis train ran one round trip each Friday, Saturday and Sunday, with expanded holiday service." />
+	<meta property="og:url" content="https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/" />
+	<meta property="og:site_name" content="Railway Supply" />
+	<meta property="article:publisher" content="https://www.facebook.com/RailwaySupplyMagazine" />
+	<meta property="article:published_time" content="2026-09-15T08:14:08+00:00" />
+	<meta property="article:modified_time" content="2026-09-24T16:07:39+00:00" />
+	<meta property="og:image" content="https://www.railway.supply/wp-content/uploads/2026/09/img_5587.webp" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta name="author" content="Oleksandr Batrak" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@RailwaySupply" />
+	<meta name="twitter:site" content="@RailwaySupply" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Oleksandr Batrak" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="5 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"NewsArticle","@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#article","isPartOf":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/"},"author":{"name":"Oleksandr Batrak","@id":"https:\/\/www.railway.supply\/#\/schema\/person\/6b4d78c4db3a137d2dc27c6519223794"},"headline":"CapeFLYER ridership climbs 7% with three weekly round trips in 2026","datePublished":"2026-09-15T08:14:08+00:00","dateModified":"2026-09-24T16:07:39+00:00","mainEntityOfPage":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/"},"wordCount":744,"publisher":{"@id":"https:\/\/www.railway.supply\/#organization"},"image":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#primaryimage"},"thumbnailUrl":"https:\/\/www.railway.supply\/wp-content\/uploads\/2026\/09\/img_5587.webp","keywords":["Passenger rail transportation","Rail transportation in the United States"],"articleSection":["Passenger Rail News","Railway News","US Rail News"],"inLanguage":"en-US","copyrightYear":"2026","copyrightHolder":{"@id":"https:\/\/www.railway.supply\/#organization"}},{"@type":"WebPage","@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/","url":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/","name":"CapeFLYER ridership rises 7% with three weekly round trips","isPartOf":{"@id":"https:\/\/www.railway.supply\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#primaryimage"},"image":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#primaryimage"},"thumbnailUrl":"https:\/\/www.railway.supply\/wp-content\/uploads\/2026\/09\/img_5587.webp","datePublished":"2026-09-15T08:14:08+00:00","dateModified":"2026-09-24T16:07:39+00:00","description":"CapeFLYER ridership rose 7 per cent in 2026 as the Boston-Hyannis train ran one round trip each Friday, Saturday and Sunday, with expanded holiday service.","breadcrumb":{"@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#primaryimage","url":"https:\/\/www.railway.supply\/wp-content\/uploads\/2026\/09\/img_5587.webp","contentUrl":"https:\/\/www.railway.supply\/wp-content\/uploads\/2026\/09\/img_5587.webp","width":1200,"height":675,"caption":"An official image published on 19 May 2026 shows a CapeFLYER train crossing a bridge beside a marina in Wareham. Photo: Keolis Commuter Services"},{"@type":"BreadcrumbList","@id":"https:\/\/www.railway.supply\/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Railway Supply","item":"https:\/\/www.railway.supply\/"},{"@type":"ListItem","position":2,"name":"US Rail News","item":"https:\/\/www.railway.supply\/us-rail-news\/"},{"@type":"ListItem","position":3,"name":"CapeFLYER ridership climbs 7% with three weekly round trips in 2026"}]},{"@type":"WebSite","@id":"https:\/\/www.railway.supply\/#website","url":"https:\/\/www.railway.supply\/","name":"Railway Supply","description":"Railway Supply publishes global railway news and analysis covering passenger and freight transport, rolling stock, infrastructure, technology, safety, logistics and rail markets worldwide.","publisher":{"@id":"https:\/\/www.railway.supply\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.railway.supply\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/www.railway.supply\/#organization","name":"Railway Supply","url":"https:\/\/www.railway.supply\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.railway.supply\/#\/schema\/logo\/image\/","url":"https:\/\/www.railway.supply\/wp-content\/uploads\/2020\/11\/railway-supply.png","contentUrl":"https:\/\/www.railway.supply\/wp-content\/uploads\/2020\/11\/railway-supply.png","width":512,"height":512,"caption":"Railway Supply"},"image":{"@id":"https:\/\/www.railway.supply\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/RailwaySupplyMagazine","https:\/\/x.com\/RailwaySupply","https:\/\/www.linkedin.com\/company\/railway-supply"],"description":"Railway Supply publishes global railway news and analysis covering passenger and freight transport, rolling stock, infrastructure, technology, safety, logistics and rail markets worldwide.","email":"info@railway.supply","telephone":"+380503252563","legalName":"PP PROM-ALLIANCE","numberOfEmployees":{"@type":"QuantitativeValue","minValue":"1","maxValue":"10"},"publishingPrinciples":"https:\/\/www.railway.supply\/railway-supply-editorial-policy\/","ownershipFundingInfo":"https:\/\/www.railway.supply\/railway-supply-ownership-and-funding-policy\/","actionableFeedbackPolicy":"https:\/\/www.railway.supply\/feedback-policy\/","correctionsPolicy":"https:\/\/www.railway.supply\/corrections-policy\/","ethicsPolicy":"https:\/\/www.railway.supply\/ethics-policy\/","diversityPolicy":"https:\/\/www.railway.supply\/diversity-policy\/","diversityStaffingReport":"https:\/\/www.railway.supply\/diversity-staffing-report\/"},{"@type":"Person","@id":"https:\/\/www.railway.supply\/#\/schema\/person\/6b4d78c4db3a137d2dc27c6519223794","name":"Oleksandr Batrak","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/secure.gravatar.com\/avatar\/d16f8250511ed0c71732491ca63fabf60bd52fce134243b9119e2ab95aa00786?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/d16f8250511ed0c71732491ca63fabf60bd52fce134243b9119e2ab95aa00786?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/d16f8250511ed0c71732491ca63fabf60bd52fce134243b9119e2ab95aa00786?s=96&d=mm&r=g","caption":"Oleksandr Batrak"},"description":"Oleksandr Batrak is the founder, publisher and editor-in-chief of Railway Supply, an English-language publication covering the global railway industry. He has led Railway Supply since 2016. He is also the founder, owner and director of PP PROM-ALLIANCE, the company that owns Railway Supply, and heads the UKRAINE: RAILWAY SUPPLY project. His professional experience includes publishing Railway Supply magazines and participating in international railway exhibitions.","sameAs":["https:\/\/www.railway.supply\/","https:\/\/www.linkedin.com\/in\/oleksandr-batrak-558259112"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel="alternate" type="application/rss+xml" title="Railway Supply &raquo; Feed" href="https://www.railway.supply/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='structured-content-frontend-css' href='https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/structured-content/dist/blocks.style.build.css?ver=1790525243' media='all' />
+
+
+<link rel='stylesheet' id='bootstrap-css' href='https://www.railway.supply/bootstrap.min.css?ver=7.1.2' media='all' />
+<link data-minify="1" rel='preload' as='style' href='https://www.railway.supply/wp-content/cache/min/1/slick.css?ver=1790525243' onload="this.onload=null;this.rel='stylesheet'"><link data-minify="1" rel='preload' as='style' href='https://www.railway.supply/wp-content/cache/min/1/slick-theme.css?ver=1790525243' onload="this.onload=null;this.rel='stylesheet'"><link data-minify="1" rel='stylesheet' id='rws-style-css' href='https://www.railway.supply/wp-content/cache/min/1/wp-content/themes/rws/style.css?ver=1790525243' media='all' />
+<link data-minify="1" rel='stylesheet' id='heateor_sss_frontend_css-css' href='https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/sassy-social-share/public/css/sassy-social-share-public.css?ver=1790525243' media='all' />
+<style id="heateor_sss_frontend_css-inline-css">
+.heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span.heateor_sss_svg{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{color:#fff;border-width:0px;border-style:solid;border-color:transparent}.heateor_sss_horizontal_sharing .heateorSssTCBackground{color:#666}.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{border-color:transparent;}.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{color:#fff;border-width:0px;border-style:solid;border-color:transparent;}.heateor_sss_vertical_sharing .heateorSssTCBackground{color:#666;}.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{border-color:transparent;}@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}
+/*# sourceURL=heateor_sss_frontend_css-inline-css */
+</style>
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.railway.supply/wp-content/tablepress-combined.min.css?ver=101' media='all' />
+<script id="wpml-cookie-js-extra">
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":"Thu, 01 Oct 2026 22:38:27 GMT","path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-wp-strategy="defer" defer id="wpml-cookie-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=1790525243"></script>
+<script type="rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://www.railway.supply/jquery-3.4.1.min.js" defer></script>
+<script type="rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://www.railway.supply/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" defer></script>
+<script id="facebook-signal-js-extra">
+var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://www.railway.supply/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"a90e9199d8"};
+//# sourceURL=facebook-signal-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="facebook-signal-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/official-facebook-pixel/js/facebook_signal.js?ver=1790525243" defer></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="rocketlazyloadscript" id="google_gtagjs-js" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-TXX9LH5" async></script>
+<script type="rocketlazyloadscript" id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.railway.supply"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TXX9LH5", {"googlesitekit_post_type":"post","googlesitekit_post_date":"20260915","googlesitekit_post_author":"Oleksandr Batrak"});
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.railway.supply/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.railway.supply/wp-json/wp/v2/posts/188569" /><meta name="generator" content="WPML ver:5.0.1 stt:1,46,55;" />
+<meta name="generator" content="Site Kit by Google 1.188.0" /><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+           var ajaxurl = "https://www.railway.supply/wp-admin/admin-ajax.php";
+         </script>
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+
+<!-- Meta Pixel Code -->
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Meta Pixel Code -->
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>FacebookSignal.init({"held":false,"ajaxUrl":"https:\/\/www.railway.supply\/wp-admin\/admin-ajax.php","releaseAction":"fbpix_release_signals","pixelId":"331383107921144","attribution":{},"capig":"1"});FacebookSignal.initPixel("331383107921144",{},{"agent":"wordpress_0-7.1.2-5.2.2","includeCapiIntegration":true});</script><script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script>
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="rocketlazyloadscript" async crossorigin="anonymous" data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3213865054045100&#038;host=ca-host-pub-2644536267352236"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+<link rel="icon" href="https://www.railway.supply/wp-content/uploads/2020/09/cropped-railway-supply-2-1-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.railway.supply/wp-content/uploads/2020/09/cropped-railway-supply-2-1-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.railway.supply/wp-content/uploads/2020/09/cropped-railway-supply-2-1-300x300.png" />
+<meta name="msapplication-TileImage" content="https://www.railway.supply/wp-content/uploads/2020/09/cropped-railway-supply-2-1-300x300.png" />
+<style id="wp-custom-css">
+.site-description {
+    display: none !important;
+}
+
+body.single-product .btn-contact-us,
+body.single-product #product-modal {
+    display: none !important;
+}
+
+body.single-product .mt-3:has(> .btn-contact-us) {
+    display: none !important;
+}
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	
+	<style>
+div#page, .login-wrapper {
+    min-height: 100vh;
+}
+a{
+    color: #182864;
+}
+:focus {
+    outline: none !important;
+}
+input:focus {
+    outline: none !important;
+}
+@media screen and (min-width: 1366px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+figure {
+    max-width: 100%!important;
+    width: 100%!important;
+}
+.bg-gray {
+    background-color: #f0f0f0!important;
+}
+.bg-navy {
+    background: #182864;
+}
+body.single.single-post {
+    background-color: #f0f0f0!important;
+}
+.bg-white {
+    background: #fff;
+}
+.bg-blue {
+    background: #e8ecfd;
+}
+header {
+    background: #fff;
+}
+header .header-top {
+    background: #182864;
+    color: #fff!important;
+}
+header .header-bottom nav .menu-item a{
+    color: #182864;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+header .header-bottom .container > div {
+    border-bottom: 1px solid #ccc;
+}
+ .site-description {
+    max-width: 390px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    position: relative;
+    padding: 5px;
+     color: #fff;
+}
+ .site-description:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #fff;
+}
+ .logo img.custom-logo {
+     max-height: 70px;
+     padding-right: 10px;
+ }
+#searchform {
+    position: relative;
+}
+#searchform input#s {
+    border-width: 0;
+}
+.search-header-box {
+    position: relative;
+    min-height: 40px;
+}
+ .search-form {
+    position: relative;
+    right: 0;
+    top: 0;
+}
+ .search-field {
+    cursor: pointer;
+    height: 37px;
+    margin: 3px 0;
+    padding: 0 34px 0 0;
+     width: 230px;
+     background-color: #fff;
+     border:  solid #c3c0ab;
+     border-width: 0 0 1px 0; 
+     outline: 0;
+}
+ .search-field:focus {
+    background-color: #fff;
+    cursor: text;
+    outline: 0;
+}
+.search-form .search-submit {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(/wp-content/themes/rws/img/Icon-search.svg);
+    background-position-x: right;
+    background-position-y: 5px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    height: 37px;
+    width: 37px;
+    z-index: 10;
+}
+.search-form .search-submit:hover {
+    cursor: pointer;
+}
+.navbar-toggler-icon img {
+    filter: invert(100%) sepia(100%) saturate(30%) hue-rotate(118deg) brightness(106%) contrast(109%);
+}
+#header_language_list > div {
+    margin: 0 5px;
+}
+#header_language_list .another-lang .current-lang {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#header_language_list .current-lang {
+    font-weight: bold;
+}
+#header_language_list a {
+    color: #fff;
+}
+.menu-item-has-children {
+    position: relative;
+}
+ul.sub-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 20px;
+    background: #fff;
+    z-index: 100;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+ul.sub-menu li {
+    list-style: none;
+}
+.menu-item-has-children:hover > ul.sub-menu {
+    display: block;
+}
+footer {
+    background: #182864;
+}
+footer .subscription {
+    color: #ed9026;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 550px;
+    font-weight: 300;
+    text-align: center;
+}
+button.subscription {
+    background: transparent;
+    padding: 3px 18px;
+    border: 1px solid #ed9026;
+    margin-right: 10px;
+}
+.footer-menu-wrapper {
+    position: relative;
+}
+.footer-menu-wrapper:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+#footer-menu li a {
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+}
+#footer-menu li:first-child a {
+    padding-left: 0;
+}
+#footer-menu li:last-child a {
+    padding-right: 0;
+}
+.footer-socials a {
+    padding: 4px;
+    display: inline-block;
+}
+footer .copyrights {
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+.modal-header {
+    border: none;
+}
+.modal-header img {
+    max-height: 60px;
+}
+p.modal-title {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #182864;
+}
+.mailpoet_submit {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ed9026;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 30px!important;
+    display: block;
+    margin: auto;
+}
+.kama_breadcrumbs, .kama_breadcrumbs a  {
+font-size: 12px;
+    color: #5e5e5e;
+}
+.page-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: #182864;
+    margin-bottom: 0;
+}
+.title.subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    padding-left: 12px;
+    color: #182864;
+}
+.title.subtitle:before {
+    content: '';
+    position: absolute;
+    left: -0;
+    height: 100%;
+    width: 6px;
+    background-color: #ed9026;
+}
+.accent-post-wrapper .title {
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 0;
+}
+.accent-post-wrapper .title:before {
+    content: none;
+}
+ .publish-date {
+    font-size: 13px;
+    line-height: 14px;
+    color: #5e5e5e;
+    margin-bottom: 0;
+    position: relative;
+}
+.accent-post-wrapper .publish-date:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 65%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ed9026;
+    right: 0;
+}
+.tags-list a {
+    font-size: 13px;
+    line-height: 13px;
+    display: inline-block;
+    background: #e8ecfd;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+.post-wrapper .post-image {
+width: 100px;
+}
+.post-wrapper .post-image img {
+    max-width: 100px;
+}
+.post-wrapper .publish-date {
+    font-size: 13px;
+    line-height: 14px;
+    color: #5e5e5e;
+    margin-bottom: 0;
+}
+.post-wrapper .title {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #182864;
+}
+.post-description {
+    font-size: 14px;
+    line-height: 16px;
+    color: #182864;
+}
+.content-post-wrapper {
+    padding: 20px 50px 50px 50px;
+}
+.title {
+    color: #182864;
+    font-weight: bold;
+}
+h1.title {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: bold;
+}
+.wp-caption-text {
+    font-size: 13px;
+    line-height: 14px;
+    color: #5e5e5e;
+    margin: 15px 0 30px;
+}
+blockquote {
+    background: #e8ecfd;
+    padding: 80px;
+    font-size: 22px;
+    color: #182864;
+    position: relative;
+    margin: 30px 0;
+}
+blockquote p {
+    position: relative;
+    margin-bottom: 0;
+}
+blockquote p::before {
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -35px;
+    top: -35px;
+    color: #cbcdda;
+}
+.post-sharing {
+    margin-right: 30px;
+    text-align: center;
+}
+ul.heateor_sss_sharing_ul li {
+    margin: auto!important;
+}
+.post-sharing p {
+    font-size: 13px;
+}
+.sidebar-advertising .banner {
+    margin-bottom: 50px;
+}
+.sidebar-advertising .banner img {
+    max-height: 400px;
+}
+ul.comment-list {
+    list-style: none;
+    padding: 0;
+}
+ul.comment-list li {
+    list-style: none;
+}
+p.comment-autor {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #182864;
+}
+.comment-avatar img {
+    border-radius: 50%;
+}
+.comment-text {
+    color: #182864;
+    max-width: 570px;
+}
+.comment-form, .comment-form .form-group {
+    position: relative;
+}
+.comment-form .form-group label  {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #182864;
+}
+.comment-form .form-control {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+.btn-orange {
+    color: #182864;
+    background-color: #ed9026;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.btn-orange-white {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ed9026;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 30px!important;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 0;
+}
+.btn-orange:hover, .btn-orange-white:hover {
+    text-decoration: none;
+    opacity: 0.9;
+    transition: .3s;
+    color: #fff;
+}
+.button {
+    padding: 10px 30px;
+    border-radius: 0;
+    border: 0;
+}
+.auth-form input#submit {
+    border: none;
+}
+.comment-form .form-group label.leave-comment {
+     font-size: 18px;
+ }
+.comment-form .form-submit {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.error-text {
+    display: none;
+}
+.error .error-text {
+    display: block;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #d0001e;
+}
+.error input, .error textarea {
+    background-color: rgba(208, 0, 30, 0.05)!important;
+    border: 1px solid #d0001e!important;
+}
+.profile-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+    display: block;}
+.profile-icon .login svg {
+    stroke: #ed9026;
+}
+.profile-wrapper {
+    color: #182864;
+}
+.profile-info .title {
+    font-size: 20px;
+}
+.profile-info .subtitle {
+    font-size: 18px;
+}
+.profile-info .info {
+    font-size: 14px;
+}
+.success-message {
+    color: green;
+    position: absolute;
+    line-height: 56px;
+    font-size: 16px;
+    left: 30%;
+}
+.error-message {
+    color: red;
+}
+.profile-info-wrapper .loader-submit {
+    position: absolute;
+}
+.subscribtion-info .title {
+    font-size: 15px;
+}
+/*checkbox*/
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+.checkbox + label {
+    position: relative;
+    padding: 0 0 0 40px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px;
+}
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+.checkbox + label:after {
+    content: '';
+    position: absolute;
+    transition: .2s;
+}
+.checkbox:checked + label:after {
+    top: -4px;
+    left: -2px;
+    width: 27px;
+    height: 24px;
+    background-image: url("/wp-content/themes/rws/img/icons8-checkmark.svg");
+    background-size: cover;
+}
+.auth-wrapper .checkbox:checked + label:after {
+    top: 2px;
+}
+.checkbox + label a{
+    color: #029fd6;
+    text-decoration: underline;
+}
+
+.checkbox:checked + label{
+    font-weight: 700;
+}
+.profile-info-wrapper .mpoet_profile_edit {
+    display: none!important;
+}
+.main-banner .slide, .main-banner,
+#main-promotions-slider, .main-promotions {
+    position: relative;
+}
+.slick-dotted.slick-slider {
+     margin-bottom: 0;
+}
+
+.banner-bg {
+    min-height: 400px;
+    max-height: 500px;
+    background-size: cover!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+}
+
+.banner-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-body .container,
+.banner-body-navigation .container,
+.main-promotions-navigation .container {
+    height: 100%;
+}
+
+.banner-short-info {
+    max-width: 400px;
+    margin-bottom: 130px;
+    color: #000;
+    background: #fff;
+    padding: 40px;
+}
+.banner-short-info h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.main-banner-slide-link {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.banner-body-navigation  {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+
+}
+
+.main-banner .slick-dots {
+    margin-left: 25px;
+    position: relative;
+    width: auto;
+    max-width: 200px;
+    bottom: 50px;
+}
+.main-banner .slick-dots li {
+    height: auto;
+}
+
+.main-banner .slick-dots li button {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0;
+    position: relative;
+    background: #ae0201;
+    margin: 0;
+}
+
+.main-banner .slick-dots li button:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+}
+
+.main-banner .slick-dots li.slick-active button {
+
+    background: #43990e;
+}
+
+.button-blue {
+    font-size: 14px;
+    line-height: 14px;
+    display: inline-block;
+    background: #e8ecfd;
+    padding: 10px 30px;
+    border-radius: 15px;
+    transition: .3s;
+    border: none;
+}
+
+.button-blue:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: .3s;
+}
+p.title.subtitle {
+    margin-bottom: 0;
+}
+
+.main-exhibitions {
+    background: rgb(24,40,100);
+    background: linear-gradient(180deg, rgba(24,40,100,1) 0%, rgba(14,21,51,1) 100%);
+}
+
+.main-exhibitions .title.subtitle {
+    color: #fff;
+}
+.main-exhibitions .title {
+    margin-top: 20px!important;
+}
+.main-exhibitions .title a {
+    color: #fff;
+}
+
+.main-exhibitions .publish-date {
+    display: none;
+}
+
+.main-blogs p.title {
+    margin-bottom: 10px!important;
+}
+
+.years-list .title {
+    font-size: 20px;
+}
+
+.years-list .year {
+    font-size: 50px;
+    line-height: 52px;
+    font-family: 'OpenSans bold';
+    color: #182864;
+}
+
+.years-list p:nth-child(2)  {
+    color: #ed9026;
+}
+
+/* ARCHIVE PAGE*/
+
+.archive-item {
+
+}
+
+.archive-row  .slick-prev, .archive-row  .slick-next {
+    background: #182864;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+button.slick-disabled {
+    opacity: 0.5;
+}
+
+
+.archive-row .slick-next {
+    right: 10px;
+}
+
+.archive-row .slick-prev {
+    left: 10px;
+}
+
+
+.archive-row .slick-next:before,
+.archive-row .slick-prev:before {
+    content: '';
+    background: url(/wp-content/themes/rws/img/arrow-rght.svg);
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    width: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.archive-row .slick-prev:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.archive-item {
+    position: relative;
+}
+
+.archive-row .slick-track {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.archive-item .hover-body {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .55s opacity, .55s visibility;
+}
+
+.archive-item:hover .hover-body {
+    opacity: 1;
+    visibility: visible;
+}
+
+.accent-archive-post-wrapper .publish-date {
+    color: #ed9026;
+    font-size: 18px;
+}
+
+.accent-archive-post-wrapper .title {
+    font-size: 18px;
+}
+
+.technical-literature-item a {
+    padding: 7px 0 7px 60px;
+    position: relative;
+    display: block;
+}
+
+.technical-literature-item a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.technical-literature-item a:before {
+    content: '';
+    background: url(/wp-content/themes/rws/img/folder-icon.png);
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.navigation.pagination {
+    display: block;
+    margin: auto;
+    padding: 30px;
+}
+.nav-links > a, .nav-links > span {
+    margin: 0 10px;
+}
+
+.navigation .page-numbers.current {
+    font-weight: bold;
+}
+
+#contact-page .bg-blue {
+    color: #182864;
+}
+
+.contact-info .btn-orange {
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+input.email {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c3c0ab;
+}
+
+input.orange {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ed9026;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 30px!important;
+    display: block;
+    margin: auto;
+    width: 100%;
+    border: none;
+}
+
+.archive-single-post .publish-date {
+    color: #ed9026;
+    font-size: 16px;
+}
+
+p.need-login {
+    color: #ed9026;
+    font-size: 16px;
+}
+
+.post-author-avatar, .wp-user-avatar {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.post-author-meta {
+    font-size: 13px;
+    line-height: 14px;
+}
+.post-author-meta b {
+    margin-bottom: 7px;
+}
+.post-author-meta .post-author-avatar,
+.main-blogs .post-author-avatar {
+    width: 50px;
+    height: 50px;
+}
+.main-blogs .post-image {
+    display: none;
+}
+/*PRODUCTS*/
+
+.product-category-item a {
+    display: block;
+    transition: .3s;
+}
+
+.product-category-item .image {
+    border: 1px solid #ccc;
+}
+
+.product-category-item a.cat-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+.product-category-item a  img {
+    transition: .3s;
+}
+.product-category-item:hover > img, .product-category-item:hover a {
+    opacity: 0.9;
+    transition: .3s;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.products-filters {
+    font-size: 13px;
+    padding: 10px 20px;
+}
+.products-filters ul {
+    list-style: none;
+    padding: 0;
+}
+.products-filters li {
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    transition: .3s;
+}
+
+.products-filters li:hover {
+    opacity: 0.65;
+    transition: .3s;
+}
+
+.products-filters li:hover a {
+    text-decoration: none;
+}
+
+.products-filters li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+.products-filters li a {
+    display: block;
+    color: #5e5e5e;
+    padding: 7px 0;
+}
+
+.products-filters .children {
+    display: none;
+}
+
+.products-filters  .children.show {
+    display: block;
+}
+.products-filters .title {
+    position: relative;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 5px;
+}
+.products-filters .title .plus-minus {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.products-filters .title .plus-minus:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10px;
+    background: #182864;
+    height: 2px;
+}
+
+.products-filters .title .plus-minus:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 4px;
+    width: 2px;
+    background: #182864;
+    height: 10px;
+}
+
+.products-filters .title.open .plus-minus:before {
+display: none;
+}
+
+.shop-main-description {
+    font-size: 15px;
+    color: #182864;
+}
+
+.product-description .product-category-list a,
+.product-description .product-provider-list a {
+    font-size: 15px;
+}
+
+.product-image {
+    border: 1px solid #ccc;
+}
+
+.product-full-description {
+    font-size: 15px;
+}
+
+.btn-contact-us {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ed9026;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 30px!important;
+    display: block;
+    margin: auto;
+    width: 100%;
+    border: none;
+}
+
+.contact-block p.contacts {
+    font-size: 13px;
+    color: #182864;
+}
+
+.product-provider-another .product-category-item a.cat-name {
+    font-weight: normal;
+}
+
+.product-provider-another .product-category-item .image {
+    border: none;
+}
+
+
+
+.single-flat-wrapper .photo-gallery {
+    max-height: 375px;
+}
+
+.single-flat-wrapper .photo-gallery::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}
+.single-flat-wrapper .photo-gallery::-webkit-scrollbar-thumb {
+    background-color: rgb(123, 123, 123);
+}
+.single-flat-wrapper .photo-gallery div {
+    margin-bottom: 10px;
+}
+.single-flat-wrapper .photo-gallery div:hover {
+    cursor: pointer;
+}
+
+.single-flat-wrapper .photo-gallery img {
+    border: 1px solid transparent;
+    margin-bottom: 0px;
+    height: 60px;
+    width: 60px;
+}
+
+.photo-gallery .slick-current img  {
+    border: 1px solid #ccc;
+}
+.single-flat-wrapper .main-photo  {
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.single-flat-wrapper .main-photo-single {
+    height: 375px;
+	width: 375px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.auth-wrapper {
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c3c0ab;
+}
+
+.auth-form .error-text {
+    margin-bottom: 0;
+}
+
+.auth-form .form-group {
+    margin-bottom: 10px;
+}
+
+.sidebar-login {
+    max-width: 300px;
+}
+.sidebar-login .header-languages {
+    color: #fff;
+}
+
+.auth-form input.btn {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ed9026;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 30px!important;
+    display: block;
+    margin: auto;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.back-to-log {
+    font-weight: bold;
+    color: #182864;
+}
+
+.back-to-log a {
+    color: #ed9026;
+}
+
+.lost-pass a {
+    font-weight: bold;
+    color: #182864;
+}
+
+.login-wrapper > .row {
+    flex-grow: 3;
+    margin: 0;
+}
+
+.verify-email-wrapper {
+    min-height: 100vh;
+}
+.verify-email {
+    max-width: 500px;
+}
+
+.verify-email .title {
+    font-size: 18px;
+}
+
+.verify-email .content {
+    color: #182864;
+}
+
+.loader-submit img {
+    width: 40px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+
+.wp-editor-area {
+    color: #000!important;
+}
+.pagination {
+    margin-top: 20px;
+}
+
+.pag,
+.pagination b {
+    margin: 5px;
+}
+
+.active {
+    color: #fff;
+    background-color: #192a63;
+}
+@media screen and (max-width: 992px) {
+    .input-holder {
+        margin: 5px 12px;
+    }
+    .input-holder label{
+        margin-top: 0.5em;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .post-sharing {
+        max-width: 107px;
+    }
+    .post-body {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .post-sharing {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .content-post-wrapper {
+        padding: 20px;
+    }
+
+    blockquote {
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    blockquote p::before {
+        left: -25px;
+        font-size: 60px;
+    }
+
+    #top-menu li {
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #footer-menu li {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    footer .subscription {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    button.subscription {
+        padding: 1px 15px;
+    }
+
+    .banner-bg {
+        min-height: 180px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo .custom-logo-link {
+        display: block;
+    }
+
+    .logo img.custom-logo {
+        display: block;
+        width: clamp(82px, 28vw, 110px);
+        max-width: none;
+        height: auto;
+        padding-right: 0;
+    }
+
+    .attachment-accent_thumb {
+        width: 100%;
+    }
+
+    .slick-slide img {
+        margin: auto;
+    }
+
+    .archive-item .title {
+        text-align: center;
+    }
+
+    .sidebar-advertising .banner {
+        margin-bottom: 20px;
+    }
+    .banner-short-info {
+        margin-bottom: 50%;
+        transform: translateY(70%);
+        padding: 20px;
+    }
+    .banner-short-info p {
+        display: none;
+    }
+
+    .title.subtitle {
+        font-size: 20px;
+    }
+    .tags-list {
+        display: none;
+    }
+    .years-list .year {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+     .accent-post-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .post-wrapper .post-image {
+        min-width: 100px;
+    }
+    .post-wrapper .post-description {
+        display: none;
+    }
+
+    .main-years-title-wrapper {
+        text-align: center;
+    }
+    .main-years-title-wrapper .title, .main-years-list, .main-years-list p {
+        display: inline-block;
+        margin: 0 2px;
+    }
+    .main-years-title-wrapper a.button-blue {
+        display: block;
+        max-width: 150px;
+        margin: auto;
+    }
+    .accent-post-wrapper .publish-date:after {
+        width: 55%;
+    }
+    .main-exhibitions .title.subtitle {
+        margin-top: 0!important;
+    }
+    .single-flat-wrapper .main-photo-single {
+        height: 375px;
+    }
+    .single-flat-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #footer-menu li:first-child a {
+        padding-left: 10px;
+    }
+
+    #footer-menu li:last-child a {
+        padding-right: 10px;
+    }
+
+    .success-message {
+        left: 10%;
+    }
+
+    .post-bottom-advertising .col-md-6 {
+        margin-bottom: 20px;
+    }
+
+    .post-bottom-advertising .col-md-6:last-child {
+        margin-bottom: 0;
+    }
+}
+.main-blogs {
+    display: none;
+}
+
+/* English navigation. Russian and Ukrainian pages keep the existing
+ * WordPress menu and its original styling. */
+.rws-en-home-nav {
+    width: 100%;
+}
+.rws-en-home-menu,
+.rws-en-home-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.rws-en-home-menu {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.rws-en-home-menu > li {
+    margin: 0;
+    position: relative;
+}
+.rws-en-home-menu > li > a,
+.rws-en-home-menu summary {
+    align-items: center;
+    color: #182864;
+    cursor: pointer;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+    padding: 12px 6px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.rws-en-home-menu summary {
+    list-style: none;
+}
+.rws-en-home-menu summary::-webkit-details-marker {
+    display: none;
+}
+.rws-en-home-menu summary::after {
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    content: '';
+    height: 7px;
+    margin-left: 7px;
+    transform: rotate(45deg) translateY(-2px);
+    width: 7px;
+}
+.rws-en-home-menu a:hover,
+.rws-en-home-menu a:focus,
+.rws-en-home-menu summary:hover,
+.rws-en-home-menu summary:focus {
+    color: #ed9026;
+    outline: none;
+}
+.rws-en-home-submenu {
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    display: none;
+    left: 0;
+    min-width: 260px;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+}
+.rws-en-home-submenu li + li {
+    border-top: 1px solid #e1e1e1;
+}
+.rws-en-home-submenu a {
+    color: #182864;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.rws-en-home-menu-label {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .rws-en-home-menu details:hover > .rws-en-home-submenu,
+    .rws-en-home-menu details[open] > .rws-en-home-submenu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .rws-en-home-nav {
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        margin-top: 8px;
+    }
+    .rws-en-home-menu-label {
+        align-items: center;
+        border-bottom: 3px solid #182864;
+        color: #182864;
+        display: flex;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 12px 16px;
+        text-transform: uppercase;
+    }
+    .rws-en-home-menu-label::before {
+        content: '\2630';
+        font-size: 22px;
+        line-height: 1;
+        margin-right: 10px;
+    }
+    .rws-en-home-menu {
+        align-items: stretch;
+        display: block;
+    }
+    #top-menu.rws-en-home-menu > li {
+        border-bottom: 1px solid #d7d7d7;
+        margin: 0;
+        text-align: left;
+    }
+    .rws-en-home-menu > li > a,
+    .rws-en-home-menu summary {
+        font-size: 17px;
+        justify-content: space-between;
+        min-height: 52px;
+        padding: 14px 18px;
+        white-space: normal;
+    }
+    .rws-en-home-menu summary::after {
+        height: 10px;
+        margin-left: 16px;
+        transform: rotate(-45deg);
+        transition: transform 0.2s ease;
+        width: 10px;
+    }
+    .rws-en-home-menu details[open] > summary::after {
+        transform: rotate(45deg) translateY(-2px);
+    }
+    .rws-en-home-submenu {
+        background: #f3f5fb;
+        box-shadow: none;
+        min-width: 0;
+        position: static;
+        width: 100%;
+    }
+    .rws-en-home-menu details[open] > .rws-en-home-submenu {
+        display: block;
+    }
+    .rws-en-home-submenu a {
+        font-size: 16px;
+        padding: 13px 18px 13px 34px;
+    }
+    .header .header-bottom .rws-en-home-nav a {
+        margin-right: 0;
+    }
+}
+	</style>
+	
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-188569 single-format-standard wp-theme-rws" style="overflow: auto !important;">
+
+<!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=331383107921144&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+
+<div id="page" class="site">
+
+        <header class="header">
+
+        <div class="header-top">
+
+            <div class="container d-flex justify-content-between align-items-center py-0">
+
+                <div class="logo col-auto  p-0">
+                                            <a href="https://www.railway.supply/" class="custom-logo-link" rel="home">
+                            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20415%20213'%3E%3C/svg%3E"
+                                 width="415"
+                                 height="213"
+                                 class="custom-logo"
+                                 alt="Railway Supply" data-lazy-src="https://www.railway.supply/wp-content/uploads/2020/07/rws-logo.png"><noscript><img src="https://www.railway.supply/wp-content/uploads/2020/07/rws-logo.png"
+                                 width="415"
+                                 height="213"
+                                 class="custom-logo"
+                                 alt="Railway Supply"></noscript>
+                        </a>
+                                        </div>
+
+                <div class="col-lg-auto col-md d-lg-block d-md-block d-sm-none d-none site-description ml-2">
+                    Industry publication for railway transport specialists                </div>
+
+               
+                
+                <div class="col-auto ml-auto header-languages pr-lg-0 pr-3">
+    <div id="header_language_list" class="d-flex"><div class="lang"><span class="current-lang">En</span></div><div class="lang"><a class="another-lang" 
+                         href="https://www.railway.supply/ru/" 
+                         aria-label="Ru"><span class="current-lang">Ru</span></a></div><div class="lang"><a class="another-lang" 
+                         href="https://www.railway.supply/uk/" 
+                         aria-label="Ua"><span class="current-lang">Ua</span></a></div></div></div>
+
+                <div class="col-auto profile-icon">
+<!--                    -->
+                    <a aria-label="login" href="https://www.railway.supply/profile/" class="">
+                        <svg class="svg-icon" viewBox="0 0 20 20">
+                            <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <div class="col-auto  d-lg-none d-md-block px-0">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"><img width="30" height="30" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2030%2030'%3E%3C/svg%3E"
+                                                                       alt="" data-lazy-src="/wp-content/themes/rws/img/icon-menu-strips.svg"><noscript><img width="30" height="30" src="/wp-content/themes/rws/img/icon-menu-strips.svg"
+                                                                       alt=""></noscript></span>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="header-bottom pt-2 mt-lg-3 mt-md-0">
+
+            <div class="container ">
+
+                <div class="d-xl-flex d-block justify-content-between align-items-center py-2">
+
+                    <div class="pl-0 col-lg-auto col-md-12 col-sm-12 col-12 d-lg-flex   justify-content-center">
+                        <nav class="navbar navbar-expand-lg p-md-0 p-sm-0 p-0">
+                            <!--                            <a class="navbar-brand" href="#">Верхнее меню</a>-->
+
+                                                            <div class="collapse navbar-collapse rws-en-home-nav" id="navbarNav">
+                                    <div class="rws-en-home-menu-label">Menu</div>
+                                    <ul id="top-menu" class="rws-en-home-menu">
+                                        <li><a href="https://www.railway.supply/news-en/">Latest Railway News</a></li>
+                                        <li>
+                                            <details>
+                                                <summary>Regions</summary>
+                                                <ul class="rws-en-home-submenu">
+                                                    <li><a href="https://www.railway.supply/us-rail-news/">United States</a></li>
+                                                    <li><a href="https://www.railway.supply/canadian-rail-news/">Canada</a></li>
+                                                    <li><a href="https://www.railway.supply/uk-european-rail-news/">UK &amp; Europe</a></li>
+                                                    <li><a href="https://www.railway.supply/asia-pacific-rail-news/">Asia-Pacific</a></li>
+                                                    <li><a href="https://www.railway.supply/middle-east-africa-rail-news/">Middle East &amp; Africa</a></li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details>
+                                                <summary>Industry Sectors</summary>
+                                                <ul class="rws-en-home-submenu">
+                                                    <li><a href="https://www.railway.supply/passenger-rail-news/">Passenger Rail</a></li>
+                                                    <li><a href="https://www.railway.supply/rail-infrastructure-news/">Rail Infrastructure</a></li>
+                                                    <li><a href="https://www.railway.supply/rail-freight-news/">Rail Freight</a></li>
+                                                    <li><a href="https://www.railway.supply/railway-technology-news/">Railway Technology</a></li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li><a href="https://www.railway.supply/exhibitions-en/">Railway Exhibitions</a></li>
+                                        <li><a href="https://www.railway.supply/publications-en/">Publications</a></li>
+                                        <li><a href="https://www.railway.supply/tendery-en/">Tenders</a></li>
+                                        <li><a href="https://www.railway.supply/rws-market/">RWS Market</a></li>
+                                        <li><a href="https://www.railway.supply/advertising/">Advertising</a></li>
+                                        <li><a href="https://www.railway.supply/contacts-en/">Contacts</a></li>
+                                    </ul>
+                                </div>
+                                                    </nav>
+                    </div>
+
+                    <div class="col-lg-auto col-md-12 col-sm-12 col-12 pr-lg-0 ml-auto search-header-box">
+
+                        
+	<form role="search" method="get" class="search-form" id="searchform" action="https://www.railway.supply/" >
+		<input type="text" class="search-field" value="" placeholder=" Search… " name="s" id="s" />
+			
+		<input type="submit" class="search-submit" id="searchsubmit" value="" aria-label="Search…" />
+	</form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="primary" class="site-main bg-gray">
+
+        <div class="container">
+
+            <div class="row mb-lg-5 mb-md-3">
+
+                <div class="col-12 breadcrumbs py-2 mb-lg-3 mb-md-2">
+
+<!-- хлебные крошки YOAST -->
+<p id="breadcrumbs"><span><span><a href="https://www.railway.supply/">Railway Supply</a></span> » <span><a href="https://www.railway.supply/us-rail-news/">US Rail News</a></span> » <span class="breadcrumb_last" aria-current="page">CapeFLYER ridership climbs 7% with three weekly round trips in 2026</span></span></p>	
+<!-- какой-то другой плагин kama breadcrumbs, который болтался в теме 
+					-->
+
+                </div>
+
+                <div class="col-lg-9 d-lg-flex d-md-block">
+
+                    <div class="post-sharing">
+
+                        <div class="bg-white p-3 text-center">
+
+                            <p>
+                                Share                            </p>
+
+                            <div class="heateor_sss_sharing_container heateor_sss_horizontal_sharing" data-heateor-ss-offset="0" data-heateor-sss-href='https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/'><div class="heateor_sss_sharing_ul"><a aria-label="Facebook" class="heateor_sss_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.railway.supply%2Fcapeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026%2F" title="Facebook" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#0765FE;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path fill="#fff" d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16Z"></path></svg></span></a><a aria-label="Linkedin" class="heateor_sss_button_linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.railway.supply%2Fcapeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026%2F" title="Linkedin" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_linkedin" style="background-color:#0077b5;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#fff"></path></svg></span></a><a aria-label="Telegram" class="heateor_sss_button_telegram" href="https://telegram.me/share/url?url=https%3A%2F%2Fwww.railway.supply%2Fcapeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026%2F&text=CapeFLYER%20ridership%20climbs%207%25%20with%20three%20weekly%20round%20trips%20in%202026" title="Telegram" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_telegram" style="background-color:#3da5f1;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path fill="#fff" d="M25.515 6.896L6.027 14.41c-1.33.534-1.322 1.276-.243 1.606l5 1.56 1.72 5.66c.226.625.115.873.77.873.506 0 .73-.235 1.012-.51l2.43-2.363 5.056 3.734c.93.514 1.602.25 1.834-.863l3.32-15.638c.338-1.363-.52-1.98-1.41-1.577z"></path></svg></span></a><a aria-label="X" class="heateor_sss_button_x" href="https://twitter.com/intent/tweet?text=CapeFLYER%20ridership%20climbs%207%25%20with%20three%20weekly%20round%20trips%20in%202026&url=https%3A%2F%2Fwww.railway.supply%2Fcapeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026%2F" title="X" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_x" style="background-color:#2a2a2a;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg width="100%" height="100%" style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#fff" d="M21.751 7h3.067l-6.7 7.658L26 25.078h-6.172l-4.833-6.32-5.531 6.32h-3.07l7.167-8.19L6 7h6.328l4.37 5.777L21.75 7Zm-1.076 16.242h1.7L11.404 8.74H9.58l11.094 14.503Z"></path></svg></span></a></div><div class="heateorSssClear"></div></div>
+                        </div>
+
+                    </div>
+
+                    <div class="post-body bg-white">
+
+                        <div id="post-188569" class="col-12 mb-3  content-post-wrapper">
+
+
+	
+    <h1 class="title mb-4">
+
+        CapeFLYER ridership climbs 7% with three weekly round trips in 2026
+    </h1>
+
+    
+    <div class="post-author-line">
+        By        <a href="https://www.railway.supply/oleksandr-batrak/">
+            Oleksandr Batrak        </a>
+    </div>
+
+    <p class="publish-date mb-4">
+        <time datetime="2026-09-15T11:14:08+03:00">
+            Published September 15, 2026        </time>
+    </p>
+
+    
+
+    <div class="post-content">
+
+
+
+<p>In the United States, CapeFLYER ridership reached a record 16,045 passengers on weekend Boston–Hyannis trains in summer 2026, 7 per cent above the 2025 season.</p>
+<figure id="attachment_188570" aria-describedby="caption-attachment-188570" style="width: 1200px" class="wp-caption aligncenter"><a href="https://www.railway.supply/capeflyer-ridership-climbs-7-with-three-weekly-round-trips-in-2026/img_5587/" rel="attachment wp-att-188570"><img fetchpriority="high" decoding="async" class="size-full wp-image-188570" src="https://www.railway.supply/wp-content/uploads/2026/09/img_5587.webp" alt="CapeFLYER train crossing a bridge beside a marina at sunset in Wareham" width="1200" height="675" srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5587.webp 1200w, https://www.railway.supply/wp-content/uploads/2026/09/img_5587-300x169.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5587-1024x576.webp 1024w, https://www.railway.supply/wp-content/uploads/2026/09/img_5587-768x432.webp 768w" sizes="(max-width: 1200px) 100vw, 1200px" /></a><figcaption id="caption-attachment-188570" class="wp-caption-text">An official image published on 19 May 2026 shows a CapeFLYER train crossing a bridge beside a marina in Wareham. Photo: Keolis Commuter Services</figcaption></figure>
+<p>The seasonal service connects Boston with Hyannis and operates mainly on weekends between Memorial Day and Labor Day, with expanded holiday service.</p>
+<p>The MBTA and the Cape Cod Regional Transit Authority (CCRTA) <a href="https://www.mbta.com/news/2026-09-10/capeflyer-reaches-record-ridership-2026-season">announced the figure</a> on 10 September and described it as a record. Keolis, the MBTA’s Commuter Rail operations and maintenance partner, operates the trains. MassDOT is the fourth member of the service partnership.</p>
+<h2>Service provided one round trip on each operating day</h2>
+<p>The 2026 timetable provided one round trip on Fridays, Saturdays and Sundays after the season opened on 22 May, together with expanded holiday service. The MBTA also specifically confirmed regular service on Friday, 19 June, during a World Cup match at Boston Stadium. The stopping pattern stayed familiar too. Braintree, Brockton, Lakeville, Wareham, Buzzards Bay and Bourne lie between the two terminals, and the MBTA puts the trip at about two hours and forty minutes.</p>
+<h2>Two records counted in different ways</h2>
+<p>Comparison with earlier seasons needs care because the releases use inconsistent measures. In September 2025, the MBTA reported <a href="https://www.mbta.com/news/2025-09-04/capeflyer-reaches-record-ticket-sales-2025-season">more than 10,800 tickets sold</a>, compared with about 9,700 in 2024. The same release also referred to the buyers as passengers and described the result as record ridership. The 2026 announcement instead reported 16,045 passengers carried and a 7 per cent year-on-year increase. It does not provide an exact 2025 passenger total directly comparable with the 2026 figure.</p>
+<div style="max-width: 100%; overflow-x: auto;" tabindex="0" role="region" aria-labelledby="cf-fig-cap">
+<table style="border-collapse: collapse; border-spacing: 0; background: #ffffff; border: 1px solid #000000; width: 100%;">
+<caption id="cf-fig-cap" style="text-align: left; padding: 8px 0;">CapeFLYER season results as announced by the MBTA, 2024 to 2026</caption>
+<thead>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">Season</th>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">Announced figure</th>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">Measure used</th>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">Change stated by the agencies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">2024</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">about 9,700</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">tickets sold</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">quoted in 2025 as the earlier baseline</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">2025</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">over 10,800</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">tickets sold; also described by the MBTA as passenger purchases and ridership</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">highest ticket total at the time; the CCRTA later put ridership growth at 9 per cent</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">2026</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">16,045</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">passengers carried</td>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">7 per cent above the 2025 season</td>
+</tr>
+</tbody>
+</table>
+<p>Ticket totals and passenger totals are different measures, so the 2026 figure cannot be set directly against the 2024 and 2025 ticket counts. Sources: <a href="https://www.mbta.com/news/2025-09-04/capeflyer-reaches-record-ticket-sales-2025-season">MBTA, 4 September 2025</a>; <a href="https://www.mbta.com/news/2026-05-19/capeflyer-train-between-boston-and-cape-cod-resumes-the-summer">MBTA, 19 May 2026</a>; <a href="https://www.mbta.com/news/2026-09-10/capeflyer-reaches-record-ridership-2026-season">MBTA, 10 September 2026</a>.</p><div class="rws-news-inline-ad rws-news-inline-ad--50 my-4 my-lg-5"><ins class="adsbygoogle" style="display:block; text-align:center; min-height:180px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-3213865054045100" data-ad-slot="9351891737"></ins><script type="rocketlazyloadscript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+</div>
+<p>Both counts nevertheless point the same way. CCRTA administrator John Kennedy put the previous season’s ridership growth at 9 per cent, when the operators <a href="https://www.mbta.com/news/2026-05-19/capeflyer-train-between-boston-and-cape-cod-resumes-the-summer">confirmed the 2026 timetable</a> in May. Keolis said at the same point that more than 10,000 tickets had been sold during 2025.</p>
+<h2>Weekend leisure traffic on the Boston network</h2>
+<p>Officials tied the result to travellers avoiding queues at the canal crossings. Kennedy also called the train a fixture of summer on the Cape. Keolis general manager and chief executive John Killeen framed the season as a network-wide trend:</p>
+<blockquote><p>“The Commuter Rail continues to attract more leisure riders than ever before, and we’re looking forward to seeing passengers on weekend trains this fall.”</p></blockquote>
+<p>Fares meanwhile stayed straightforward. A round trip between South Station and Hyannis cost $40 this season. Children aged 11 and under travelled free alongside a paying adult. The consist also included a bike car with cycle racks and a tool kit, along with a café car. The CCRTA adds that its buses carry arriving passengers around the Cape at no charge.</p>
+<div style="max-width: 100%; overflow-x: auto;" tabindex="0" role="region" aria-labelledby="cf-season-cap">
+<table style="border-collapse: collapse; border-spacing: 0; background: #ffffff; border: 1px solid #000000; width: 100%;">
+<caption id="cf-season-cap" style="text-align: left; padding: 8px 0;">CapeFLYER 2026 season: service and fare terms</caption>
+<thead>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">Item</th>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="col">2026 season</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">First day of service</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">Friday, 22 May 2026</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Operating days</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">Fridays, Saturdays and Sundays, with expanded holiday service</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Route</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">Boston South Station to Hyannis, calling at six intermediate stations</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Scheduled journey time</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">2 hours 27 minutes to 2 hours 38 minutes, depending on the day and direction</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Round-trip fare</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">$40 between South Station and Hyannis</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Children aged 11 and under</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">free when accompanied by a paying adult</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Advance sales named by the MBTA</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">mTicket app and South Station</td>
+</tr>
+<tr>
+<th style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top; text-align: left;" scope="row">Onboard</th>
+<td style="border: 1px solid #000000; padding: 10px 12px; vertical-align: top;">bike car with cycle racks and a tool kit; café car</td>
+</tr>
+</tbody>
+</table>
+<p>Terms apply to the 2026 season only. Sources: <a href="https://www.mbta.com/news/2026-05-19/capeflyer-train-between-boston-and-cape-cod-resumes-the-summer">MBTA, 19 May 2026</a>; <a href="https://capeflyer.com/wp-content/uploads/2026/05/CAPEFLYER-TRAIN-SCHEDULES.pdf">CapeFLYER 2026 train schedules</a>.</p>
+</div>
+<h2>Cape Cod Bridges Program clears environmental review</h2>
+<p>Those bridge queues form on two road crossings that are now moving toward replacement. <a href="https://www.mass.gov/info-details/latest-updates-cape-cod-bridges">MassDOT reports</a> a certificate from the Massachusetts Environmental Policy Act Office on the Final Environmental Impact Report in April 2026. The Federal Highway Administration then approved the Final Environmental Impact Statement and issued a Record of Decision in June 2026. Foundation load testing for the future Sagamore Bridge has since begun in Bourne, at four locations north and south of the canal. The programme covers the Sagamore and Bourne road crossings, so the railway route to Hyannis sits outside its scope.</p>
+
+
+
+
+</div> 
+
+
+    <div class="tags-list py-2" style="display: block !important;">
+
+        <a href="https://www.railway.supply/tag/passenger-rail-transportation/" rel="tag">Passenger rail transportation</a> <a href="https://www.railway.supply/tag/rail-transportation-in-the-united-states/" rel="tag">Rail transportation in the United States</a>
+    </div>
+
+</div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    
+<aside id="secondary" class="widget-area">
+
+	
+        <div class="sidebar-advertising text-center d-lg-block d-md-flex d-sm-flex d-none">
+
+			
+               <div class="banner mx-lg-0 mx-md-1 mx-sm-1 mx-1">
+
+    
+            <a href="https://kvsz.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="kryukovsky railway">
+    
+        <img
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20173%20348'%3E%3C/svg%3E"
+            width="173"
+            height="348"
+            alt="kryukovsky railway"
+        data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/01/img_8475.webp" /><noscript><img
+            src="https://www.railway.supply/wp-content/uploads/2026/01/img_8475.webp"
+            width="173"
+            height="348"
+            alt="kryukovsky railway"
+        /></noscript>
+
+            </a>
+    
+</div>
+
+                
+			
+               <div class="banner mx-lg-0 mx-md-1 mx-sm-1 mx-1">
+
+    
+            <a href="https://www.railway.supply/get-a-discount-on-tickets-to-innotrans-2026/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Get a discount on tickets to InnoTrans 2026!">
+    
+        <img
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20173%20348'%3E%3C/svg%3E"
+            width="173"
+            height="348"
+            alt="Get a discount on tickets to InnoTrans 2026!"
+        data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/05/innotrans_banner_1_241x399.webp" /><noscript><img
+            src="https://www.railway.supply/wp-content/uploads/2026/05/innotrans_banner_1_241x399.webp"
+            width="173"
+            height="348"
+            alt="Get a discount on tickets to InnoTrans 2026!"
+        /></noscript>
+
+            </a>
+    
+</div>
+
+                
+			
+               <div class="banner mx-lg-0 mx-md-1 mx-sm-1 mx-1">
+
+    
+            <a href="https://www.railway.supply/innotrans-asia-2027-the-future-of-mobility-in-singapore/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="InnoTrans Asia 2027">
+    
+        <img
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20173%20348'%3E%3C/svg%3E"
+            width="173"
+            height="348"
+            alt="InnoTrans Asia 2027"
+        data-lazy-src="https://www.railway.supply/wp-content/uploads/2025/11/innotrans-asia-2027-en.png" /><noscript><img
+            src="https://www.railway.supply/wp-content/uploads/2025/11/innotrans-asia-2027-en.png"
+            width="173"
+            height="348"
+            alt="InnoTrans Asia 2027"
+        /></noscript>
+
+            </a>
+    
+</div>
+
+                
+			
+							<div class="rws-news-sidebar-ad d-none d-lg-block mt-5 mb-5">
+					<!-- RS News 04 Sidebar After Banners -->
+					<ins class="adsbygoogle"
+						 style="display:block; width:100%; min-height:250px;"
+						 data-ad-client="ca-pub-3213865054045100"
+						 data-ad-slot="4842740432"
+						 data-ad-format="auto"
+						 data-full-width-responsive="true"></ins>
+					<script type="rocketlazyloadscript">
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			
+        </div>
+
+	
+
+</aside>
+
+                </div>
+
+
+            </div>
+
+<!-- Cтарый блок Похожие новости 
+            <div class="row mb-3 mb-lg-5">
+
+                <div class="col-12 mb-3">
+
+                    <p class="title subtitle">
+                        
+            </div>
+-->
+            				<div class="rws-news-related-ad row justify-content-center my-4 my-lg-5">
+					<div class="col-12" style="width:100%; max-width:100%; overflow:hidden;">
+						<!-- RS News 05 Between Related -->
+						<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-3213865054045100"
+							 data-ad-slot="5875303851"
+							 data-ad-format="auto"
+							 data-full-width-responsive="true"></ins>
+						<script type="rocketlazyloadscript">
+							(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+			
+<!-- Новый блок Похожие новости -->
+            <div class="row mb-3 mb-lg-5">
+
+                <div class="col-12 mb-3">
+
+                    <p class="title subtitle">
+                        Similar Passenger Rail News                    </p>
+                </div>
+
+                                        <div class="col-lg-3 col-6">
+
+                            
+<div id="post-189001" class="accent-post-wrapper">
+
+    <a href="https://www.railway.supply/zagreb-split-hybrid-train-debuts-as-prefect-calls-8-hour-trip-unacceptable/"
+       aria-label="Zagreb–Split hybrid train debuts as prefect calls 8-hour trip unacceptable">
+
+        <img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="HŽPP Zagreb–Split hybrid train at Split station with a Zagreb destination display" decoding="async" data-lazy-srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5756-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5756-150x150.webp 150w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/09/img_5756-300x300.webp" /><noscript><img width="300" height="300" src="https://www.railway.supply/wp-content/uploads/2026/09/img_5756-300x300.webp" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="HŽPP Zagreb–Split hybrid train at Split station with a Zagreb destination display" decoding="async" srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5756-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5756-150x150.webp 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+    </a>
+
+    <p class="publish-date py-2">
+        23.09.2026    </p>
+
+    <p class="title my-0">
+        <a href="https://www.railway.supply/zagreb-split-hybrid-train-debuts-as-prefect-calls-8-hour-trip-unacceptable/">
+            Zagreb–Split hybrid train debuts as prefect calls 8-hour trip unacceptable        </a>
+    </p>
+
+    <div class="tags-list py-2">
+            </div>
+
+</div>
+
+
+
+
+                        </div>
+
+                                                <div class="col-lg-3 col-6">
+
+                            
+<div id="post-188993" class="accent-post-wrapper">
+
+    <a href="https://www.railway.supply/new-haven-union-station-gets-24-8-million-overhaul-and-invites-retailers/"
+       aria-label="New Haven Union Station gets $24.8 million overhaul and invites retailers">
+
+        <img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="New Haven Union Station covered in blue scaffolding during exterior renovation work" decoding="async" data-lazy-srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5754-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5754-150x150.webp 150w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/09/img_5754-300x300.webp" /><noscript><img width="300" height="300" src="https://www.railway.supply/wp-content/uploads/2026/09/img_5754-300x300.webp" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="New Haven Union Station covered in blue scaffolding during exterior renovation work" decoding="async" srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5754-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5754-150x150.webp 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+    </a>
+
+    <p class="publish-date py-2">
+        23.09.2026    </p>
+
+    <p class="title my-0">
+        <a href="https://www.railway.supply/new-haven-union-station-gets-24-8-million-overhaul-and-invites-retailers/">
+            New Haven Union Station gets $24.8 million overhaul and invites retailers        </a>
+    </p>
+
+    <div class="tags-list py-2">
+            </div>
+
+</div>
+
+
+
+
+                        </div>
+
+                                                <div class="col-lg-3 col-6">
+
+                            
+<div id="post-188968" class="accent-post-wrapper">
+
+    <a href="https://www.railway.supply/eu-rail-passenger-km-rose-5-8-in-2024-down-from-11-3-a-year-earlier/"
+       aria-label="EU rail passenger-km rose 5.8% in 2024, down from 11.3% a year earlier">
+
+        <img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="Elron passenger train on an electrified railway near Kehra, Estonia" decoding="async" data-lazy-srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5741-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5741-150x150.webp 150w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/09/img_5741-300x300.webp" /><noscript><img width="300" height="300" src="https://www.railway.supply/wp-content/uploads/2026/09/img_5741-300x300.webp" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="Elron passenger train on an electrified railway near Kehra, Estonia" decoding="async" srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5741-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5741-150x150.webp 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+    </a>
+
+    <p class="publish-date py-2">
+        23.09.2026    </p>
+
+    <p class="title my-0">
+        <a href="https://www.railway.supply/eu-rail-passenger-km-rose-5-8-in-2024-down-from-11-3-a-year-earlier/">
+            EU rail passenger-km rose 5.8% in 2024, down from 11.3% a year earlier        </a>
+    </p>
+
+    <div class="tags-list py-2">
+            </div>
+
+</div>
+
+
+
+
+                        </div>
+
+                                                <div class="col-lg-3 col-6">
+
+                            
+<div id="post-188951" class="accent-post-wrapper">
+
+    <a href="https://www.railway.supply/15-minute-s80-trains-due-only-in-2036-as-e511-5m-vienna-upgrade-starts/"
+       aria-label="15-minute S80 trains due only in 2036 as €511.5m Vienna upgrade starts">
+
+        <img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="Peter Hanke, Ulli Sima and Andreas Matthä behind an ÖBB train display at the Verbindungsbahn project launch" decoding="async" data-lazy-srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5725-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5725-150x150.webp 150w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://www.railway.supply/wp-content/uploads/2026/09/img_5725-300x300.webp" /><noscript><img width="300" height="300" src="https://www.railway.supply/wp-content/uploads/2026/09/img_5725-300x300.webp" class="attachment-accent_thumb size-accent_thumb wp-post-image" alt="Peter Hanke, Ulli Sima and Andreas Matthä behind an ÖBB train display at the Verbindungsbahn project launch" decoding="async" srcset="https://www.railway.supply/wp-content/uploads/2026/09/img_5725-300x300.webp 300w, https://www.railway.supply/wp-content/uploads/2026/09/img_5725-150x150.webp 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>
+    </a>
+
+    <p class="publish-date py-2">
+        22.09.2026    </p>
+
+    <p class="title my-0">
+        <a href="https://www.railway.supply/15-minute-s80-trains-due-only-in-2036-as-e511-5m-vienna-upgrade-starts/">
+            15-minute S80 trains due only in 2036 as €511.5m Vienna upgrade starts        </a>
+    </p>
+
+    <div class="tags-list py-2">
+            </div>
+
+</div>
+
+
+
+
+                        </div>
+
+                        
+            </div>
+<!-- Конец блока Похожие новости -->
+
+
+
+            
+        </div>
+
+    </main><!-- #main -->
+
+<style id="rws-new-footer-styles">
+    #rws-new-footer {
+        margin-top: 3rem;
+        padding: 0;
+        background: #182864;
+        color: #fff;
+        text-align: center;
+    }
+
+    #rws-new-footer .rws-new-footer__inner {
+        width: calc(100% - 64px);
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 42px 0 25px;
+    }
+
+    #rws-new-footer .rws-new-footer__columns {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 72px;
+        align-items: start;
+    }
+
+    #rws-new-footer .rws-new-footer__column {
+        min-width: 0;
+        text-align: center;
+    }
+
+    #rws-new-footer .rws-new-footer__heading {
+        margin: 0 0 17px;
+        color: #f7941d;
+        font-size: 14px;
+        line-height: 1.3;
+        font-weight: 600;
+        letter-spacing: .035em;
+        text-transform: uppercase;
+    }
+
+    #rws-new-footer .rws-new-footer__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #rws-new-footer .rws-new-footer__item + .rws-new-footer__item {
+        margin-top: 12px;
+    }
+
+    #rws-new-footer .rws-new-footer__link {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.4;
+        text-decoration: none;
+    }
+
+    #rws-new-footer .rws-new-footer__link:hover,
+    #rws-new-footer .rws-new-footer__link:focus {
+        color: #f7941d;
+        text-decoration: none;
+    }
+
+    #rws-new-footer .rws-new-footer__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 35px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, .24);
+    }
+
+    #rws-new-footer .rws-new-footer__socials {
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+    }
+
+    #rws-new-footer .rws-new-footer__social {
+        display: flex;
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, .68);
+        border-radius: 50%;
+    }
+
+    #rws-new-footer .rws-new-footer__social img {
+        display: block;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+
+    #rws-new-footer .rws-new-footer__copyrights,
+    #rws-new-footer .rws-new-footer__copyrights p,
+    #rws-new-footer .rws-new-footer__copyrights a {
+        color: #fff !important;
+        text-align: center;
+    }
+
+    #rws-new-footer .rws-new-footer__copyrights p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    #rws-new-footer .rws-new-footer__copyrights p + p {
+        margin-top: 4px;
+        color: #d8deee !important;
+    }
+
+    @media (max-width: 991px) {
+        #rws-new-footer .rws-new-footer__columns {
+            column-gap: 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #rws-new-footer {
+            margin-top: 1rem;
+        }
+
+        #rws-new-footer .rws-new-footer__inner {
+            width: calc(100% - 40px);
+            padding: 31px 0 23px;
+        }
+
+        #rws-new-footer .rws-new-footer__columns {
+            grid-template-columns: 1fr;
+            row-gap: 28px;
+        }
+
+        #rws-new-footer .rws-new-footer__heading {
+            margin-bottom: 13px;
+            font-size: 13px;
+        }
+
+        #rws-new-footer .rws-new-footer__item + .rws-new-footer__item {
+            margin-top: 9px;
+        }
+
+        #rws-new-footer .rws-new-footer__link {
+            font-size: 14px;
+        }
+
+        #rws-new-footer .rws-new-footer__bottom {
+            margin-top: 28px;
+            padding-top: 20px;
+        }
+
+        #rws-new-footer .rws-new-footer__copyrights p {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<footer id="rws-new-footer" aria-label="Railway Supply footer">
+    <div class="rws-new-footer__inner">
+        <div class="rws-new-footer__columns">
+            <nav class="rws-new-footer__column" aria-label="Railway Supply">
+                <h2 class="rws-new-footer__heading">Railway Supply</h2>
+                <ul class="rws-new-footer__list">
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/about-us/">About</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/contacts-en/">Contacts</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/advertising/">Advertising</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/partners/">Partners</a></li>
+                </ul>
+            </nav>
+
+            <nav class="rws-new-footer__column" aria-label="Editorial Standards">
+                <h2 class="rws-new-footer__heading">Editorial Standards</h2>
+                <ul class="rws-new-footer__list">
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/railway-supply-editorial-policy/">Editorial Policy</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/railway-supply-ownership-and-funding-policy/">Ownership &amp; Funding</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/corrections-policy/">Corrections Policy</a></li>
+                </ul>
+            </nav>
+
+            <nav class="rws-new-footer__column" aria-label="Legal">
+                <h2 class="rws-new-footer__heading">Legal</h2>
+                <ul class="rws-new-footer__list">
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/privacy-policy/">Privacy Policy</a></li>
+                    <li class="rws-new-footer__item"><a class="rws-new-footer__link" href="https://www.railway.supply/cookie/">Cookie Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="rws-new-footer__bottom">
+                        <div class="rws-new-footer__socials" aria-label="Social media">
+                                    <a class="rws-new-footer__social" aria-label="Facebook" href="https://www.facebook.com/RailwaySupplyMagazine/" target="_blank" rel="nofollow noopener noreferrer">
+                        <img width="18" height="18" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2018%2018'%3E%3C/svg%3E" alt="" data-lazy-src="/wp-content/themes/rws/img/Icon-facebook.svg"><noscript><img width="18" height="18" src="/wp-content/themes/rws/img/Icon-facebook.svg" alt=""></noscript>
+                    </a>
+                
+                                    <a class="rws-new-footer__social" aria-label="LinkedIn" href="https://www.linkedin.com/company/railway-supply" target="_blank" rel="nofollow noopener noreferrer">
+                        <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="/wp-content/themes/rws/img/Icon-linkedin.svg"><noscript><img width="24" height="24" src="/wp-content/themes/rws/img/Icon-linkedin.svg" alt=""></noscript>
+                    </a>
+                
+                                    <a class="rws-new-footer__social" aria-label="X (Twitter)" href="https://twitter.com/RailwaySupply" target="_blank" rel="nofollow noopener noreferrer">
+                        <img width="21" height="21" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2021%2021'%3E%3C/svg%3E" alt="" data-lazy-src="/wp-content/themes/rws/img/Icon-twitter.svg"><noscript><img width="21" height="21" src="/wp-content/themes/rws/img/Icon-twitter.svg" alt=""></noscript>
+                    </a>
+                
+                                    <a class="rws-new-footer__social" aria-label="Instagram" href="https://www.instagram.com/railwaysupply/" target="_blank" rel="nofollow noopener noreferrer">
+                        <img width="22" height="22" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" data-lazy-src="/wp-content/themes/rws/img/Icon-instagram.svg"><noscript><img width="22" height="22" src="/wp-content/themes/rws/img/Icon-instagram.svg" alt=""></noscript>
+                    </a>
+                
+                            </div>
+            
+            <div class="rws-new-footer__copyrights">
+                <p>
+                    Railway Supply is owned and published by                    <a href="https://www.railway.supply/productprovider/pp-prom-alliance/">PP PROM-ALLIANCE</a>.
+                </p>
+                <p>© 2016–2026 Railway Supply. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+
+<!-- Newsletter signup disabled for EN, RU and UA. -->
+
+<div class="modal fade" id="modal-comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <img width="156" height="77" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20156%2077'%3E%3C/svg%3E" class="d-block" data-lazy-src="/wp-content/themes/rws/img/logo.png"><noscript><img width="156" height="77" src="/wp-content/themes/rws/img/logo.png" class="d-block"></noscript>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-header p-0 d-flex flex-column justify-content-center align-items-center">
+
+                <p class="modal-title" id="exampleModalCenterTitle">
+                    Thank you!                </p>
+
+            </div>
+            <div class="modal-body pb-5 text-center">
+
+                Your comment will be published after moderation.
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Meta Pixel Event Code -->
+        <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>window.addEventListener('DOMContentLoaded', function() {
+        (function () {
+            function runPixelCode( response ) {
+                if ( ! response || ! response.data || ! response.data.fb_pxl_code ) {
+                    return;
+                }
+
+                try {
+                    new Function( response.data.fb_pxl_code )();
+                } catch ( e ) {
+                    console && console.warn
+                        && console.warn( 'Meta Pixel response parsing failed. Please check if your pixel is connected.', e );
+                }
+            }
+
+            var radio = window.nfRadio
+                || ( window.Backbone && window.Backbone.Radio );
+            if ( radio && radio.channel ) {
+                radio.channel( 'forms' ).on( 'submit:response', runPixelCode );
+            }
+
+            if ( window.jQuery ) {
+                window.jQuery( document ).on(
+                    'nfFormSubmitResponse',
+                    function ( event, data ) {
+                        if ( data && data.response ) {
+                            runPixelCode( data.response );
+                        }
+                    }
+                );
+            }
+        })();
+        });</script>
+        <!-- End Meta Pixel Event Code -->
+                <!-- Meta Pixel Event Code -->
+        <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>window.addEventListener('DOMContentLoaded', function() {
+        (function ( $ ) {
+            if ( ! $ || typeof document === 'undefined' ) {
+                return;
+            }
+            // WPForms triggers this jQuery event and passes the AJAX response object.
+            $( document ).on( 'wpformsAjaxSubmitSuccess', function ( event, data ) {
+                if ( data && data.data && data.data.fb_pxl_code ) {
+                    try {
+                        new Function( data.data.fb_pxl_code )();
+                    } catch ( e ) {
+                        console && console.warn && console.warn( 'Meta Pixel eval failed', e );
+                    }
+                }
+            } );
+        })( window.jQuery );
+        });</script>
+        <!-- End Meta Pixel Event Code -->
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/rws/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="rocketlazyloadscript">window.wpsc_print_css_uri = 'https://www.railway.supply/wp-content/plugins/structured-content/dist/print.css';</script>    <!-- Meta Pixel Event Code -->
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+        }
+        }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+        <div id="fb-pxl-ajax-code"></div><script type="rocketlazyloadscript" data-minify="1" id="structured-content-frontend-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/structured-content/dist/app.build.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="rws-navigation-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/themes/rws/js/navigation.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="rws-skip-link-focus-fix-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/themes/rws/js/skip-link-focus-fix.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" id="bootstrap-min-js" data-rocket-src="https://www.railway.supply/bootstrap.min.js" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="slick-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/npm/slick-carousel@1.8.1/slick/slick.min.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" id="maskedinput-js" data-rocket-src="https://www.railway.supply/wp-content/themes/rws/js/jquery.maskedinput.min.js" defer></script>
+<script id="main-js-extra">
+var myajax = {"url":"https://www.railway.supply/wp-admin/admin-ajax.php","nonce":"f58f02855d"};
+//# sourceURL=main-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="main-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/themes/rws/js/main.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" id="heateor_sss_sharing_js-js-before">
+function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'https://www.railway.supply/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'https://www.railway.supply/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'https://www.railway.supply/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
+//# sourceURL=heateor_sss_sharing_js-js-before
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="heateor_sss_sharing_js-js" data-rocket-src="https://www.railway.supply/wp-content/cache/min/1/wp-content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=1790525243" defer></script>
+<script type="rocketlazyloadscript" id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":188569,"isSinglePost":true,"hasVimeoEmbed":false};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script type="rocketlazyloadscript" id="googlesitekit-events-provider-content-events-js" data-rocket-src="https://www.railway.supply/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-c7172f3fd0e4d5ad62ef.js" defer></script>
+<script id="wp-consent-api-js-extra">
+var consent_api = {"consent_type":"","waitfor_consent_hook":"","cookie_expiration":"30","cookie_prefix":"wp_consent","services":[]};
+//# sourceURL=wp-consent-api-js-extra
+</script>
+<script type="rocketlazyloadscript" id="wp-consent-api-js" data-rocket-src="https://www.railway.supply/wp-content/plugins/wp-consent-api/assets/js/wp-consent-api.min.js?ver=2.1.0" defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.railway.supply/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><!-- Insight Tag от LinkedIn -->
+<!-- <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+_linkedin_partner_id = "2978673";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2978673&fmt=gif" />
+</noscript>
+ -->
+<script type="rocketlazyloadscript">
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        _linkedin_partner_id = "2978673";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+
+        if (!window.lintrk) {
+            window.lintrk = function(a, b) {
+                window.lintrk.q.push([a, b]);
+            };
+            window.lintrk.q = [];
+        }
+
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        document.body.appendChild(s);
+    }, 1500); // ⏱ после загрузки + пауза
+});
+</script>
+
+<noscript>
+<img
+  src="https://px.ads.linkedin.com/collect/?pid=2978673&fmt=gif"
+  width="1"
+  height="1"
+  alt=""
+  style="position:absolute;left:-9999px;top:-9999px;"
+/>
+</noscript>
+
+</body>
+</html>
+
+<!-- Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com -->
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1790807907 -->

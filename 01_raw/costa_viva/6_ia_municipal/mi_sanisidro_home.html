@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="yVouck6ArxsKxmqN6sFoqJrlNtKGNgxFcuVUZeFE">
+
+    <title>Ingresar · Intranet San Isidro</title>
+
+    <link rel="icon" type="image/png" href="https://mi.sanisidro.gob.ar/img/brand/isotipo-san-isidro.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://mi.sanisidro.gob.ar/css/intranet-v3.css?v=1790175605">
+</head>
+
+<body class="tesi-auth">
+    <main class="tesi-auth__shell">
+        
+        <aside class="tesi-auth__brand">
+            <img src="https://mi.sanisidro.gob.ar/img/brand/mi-san-isidro-blanco.png" alt="Mi San Isidro" class="tesi-auth__logo">
+            <div class="tesi-auth__claim">
+                <span class="tesi-auth__eyebrow">Intranet</span>
+                <h1>El espacio del personal municipal</h1>
+                <p>Recibos de sueldo, fichadas, licencias, trámites de Recursos Humanos y novedades del municipio, en un solo lugar.</p>
+            </div>
+            <span class="tesi-auth__foot">Municipio de San Isidro</span>
+        </aside>
+
+        
+        <section class="tesi-auth__panel">
+            <div class="tesi-auth__card">
+                <img src="https://mi.sanisidro.gob.ar/img/brand/mi-san-isidro-verde.png" alt="Mi San Isidro" class="tesi-auth__logo-mobile">
+                    <header class="tesi-auth__head">
+        <h2>Ingresá a tu cuenta</h2>
+        <p>Usá tu número de legajo y tu contraseña de la intranet.</p>
+    </header>
+
+    <form method="POST" action="https://mi.sanisidro.gob.ar/login" class="tesi-form" novalidate>
+        <input type="hidden" name="_token" value="yVouck6ArxsKxmqN6sFoqJrlNtKGNgxFcuVUZeFE" autocomplete="off">
+        <div class="tesi-field">
+            <label for="legajo">Legajo</label>
+            <input id="legajo" type="text" inputmode="numeric" name="legajo" value=""
+                class="" required autocomplete="username" autofocus>
+                    </div>
+
+        <div class="tesi-field">
+            <label for="password">Contraseña</label>
+            <input id="password" type="password" name="password"
+                class="" required autocomplete="current-password">
+                    </div>
+
+        <button type="submit" class="tesi-btn tesi-btn--primary tesi-btn--block">Ingresar</button>
+    </form>
+
+            <div class="tesi-auth__links">
+            <a href="https://mi.sanisidro.gob.ar/recuperarClave">Primer ingreso</a>
+            <button type="button" class="tesi-link" id="abrirOlvide">Olvidé mi contraseña</button>
+        </div>
+    
+    
+    <dialog id="dialogOlvide" class="tesi-dialog">
+        <h3>¿Olvidaste tu contraseña?</h3>
+        <p>
+            Para blanquear tu clave te pedimos que te acerques de <strong>lunes a viernes de 11 a 14 h</strong>
+            a Recursos Humanos, en <strong>Av. Centenario 77, piso 3</strong>.
+        </p>
+        <p class="tesi-dialog__hint">Una vez blanqueada, entrá por <a href="https://mi.sanisidro.gob.ar/recuperarClave">Primer ingreso</a> para definir la nueva.</p>
+        <form method="dialog">
+            <button class="tesi-btn tesi-btn--primary">Entendido</button>
+        </form>
+    </dialog>
+
+                
+                            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // SweetAlert con la paleta del municipio
+        window.tesiSwal = Swal.mixin({
+            confirmButtonColor: '#205c40',
+            denyButtonColor: '#6b7280',
+            customClass: { popup: 'tesi-swal' }
+        });
+    </script>
+        <script>
+        const dialogOlvide = document.getElementById('dialogOlvide');
+        document.getElementById('abrirOlvide')?.addEventListener('click', () => dialogOlvide.showModal());
+        dialogOlvide?.addEventListener('click', (e) => { if (e.target === dialogOlvide) dialogOlvide.close(); });
+
+            </script>
+</body>
+
+</html>

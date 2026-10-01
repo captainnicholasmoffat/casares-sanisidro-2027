@@ -1,0 +1,152 @@
+import os
+D = '/tmp/claude-0/-home-user-casares-sanisidro-2027/19687d82-9b19-5a6f-8ec4-f8d897955d9f/scratchpad/costa_viva_raw/v6_ia_municipal/'
+F = '2026-10-01'
+M = {
+ # --- Municipio de San Isidro ---
+ 'msi_home.html': ('https://www.sanisidro.gob.ar/', 'Portada del sitio municipal: menú, teléfonos (147, 4512-3333), enlaces a TESI, mi.sanisidro, boletín, transparencia.'),
+ 'msi_innovacion.html': ('https://www.sanisidro.gob.ar/municipio/innovacion', 'Subsecretaría de Innovación: gobierno abierto, Estrategia de Gobernanza de Datos 2025, blockchain, noticias 147 e inventario de datos.'),
+ 'msi_estrategia_gobernanza_datos_2025.pdf': ('https://www.sanisidro.gob.ar/sites/default/files/img/presentacion_-_estrategia_de_gobernanza_de_datos-1.pdf', 'Presentación "Estrategia de Gobernanza de Datos" (City Data Alliance, Bloomberg). 19 págs. Menciona inventario público, IDE, tableros, "cimientos" para IA.'),
+ 'msi_estrategia_gobernanza_datos_2025.txt': ('(texto extraído del PDF anterior)', 'Texto plano del PDF de gobernanza de datos.'),
+ 'msi_inventario_datos_publico_drive.pdf': ('https://drive.google.com/file/d/1MWTe7LBSR8yLCrnp9fAU3fVjHJCdzqjm/view (enlazado en p.7 del PDF de gobernanza; descargado vía drive.google.com/uc?export=download&id=...)', 'Inventario PÚBLICO de datos del Municipio: 42 conjuntos con oficina, formato, datos personales y frecuencia. Imagen, sin texto.'),
+ 'inv_p1.png': ('(render propio de la página 1 del inventario)', 'Imagen de la pág. 1 del inventario público (filas 1-24).'),
+ 'inv_p2.png': ('(render propio de la página 2 del inventario)', 'Imagen de la pág. 2 del inventario público (filas 25-42).'),
+ 'msi_guia_estandarizacion_datos_2024_drive.pdf': ('https://drive.google.com/file/d/1D1Ku687OzGHniFtiqfo61TSJNubyU5AS/view', 'Guía de estandarización, normalización y calidad de datos, Subsecretaría de Innovación, v1.0 jul-2024 (corregida sep-2024). Uso interno.'),
+ 'msi_guia_roles_gobernanza_drive.pdf': ('https://drive.google.com/file/d/1a9DGzd2QEp_6g7jy3IBnPc0uPn_F9VHq/view', 'Guía de roles para la gobernanza de datos (enlazada en p.5 del PDF de gobernanza). No leída en detalle.'),
+ 'msi_nov_inventario_170_bases.html': ('https://www.sanisidro.gob.ar/novedades/crean-un-inventario-digital-de-m%C3%A1s-de-170-bases-de-datos', 'Nota municipal 11-12-2024: inventario de más de 170 conjuntos de datos, 15 variables.'),
+ 'msi_nov_147_24horas.html': ('https://www.sanisidro.gob.ar/novedades/nuevo-sistema-de-atenci%C3%B3n-al-vecino-que-funciona-las-24-horas', 'Nota municipal 22-01-2025: línea 147 las 24 h, >4.500 llamadas mensuales.'),
+ 'msi_nov_call_center.html': ('https://www.sanisidro.gob.ar/novedades/nuevo-call-center-para-atender-mas-vecinos', 'Nota municipal 12-08-2021: call center anterior (4512-3000/3100/3300).'),
+ 'msi_nov_776_canales_municipales.html': ('https://www.sanisidro.gob.ar/novedades/el-776-de-las-comunicaciones-de-seguridad-ya-ingresa-por-canales-municipales', 'Nota municipal 29-09-2026: Ojos en Alerta por WhatsApp, >25.000 adheridos, 77,6% de comunicaciones de seguridad por canales municipales.'),
+ 'msi_nov_isi_nuevo_bot.html': ('https://www.sanisidro.gob.ar/novedades/isi-el-nuevo-bot-del-municipio', 'Nota municipal 27-10-2022: ISI, bot de WhatsApp 11-2312-3300; menciona SIE (app para estacionar) y SI 24.'),
+ 'msi_isibot.html': ('https://www.sanisidro.gob.ar/isibot', 'Página del bot ISI: devuelve 403 "No tiene permiso" el 2026-10-01.'),
+ 'zonales_isi.html': ('https://zonales.com/san-isidro-asistente-virtual-consultas-emergencias-vecinos-whatsapp-isi/', 'Prensa (Zonales) 27-10-2022 sobre ISI.'),
+ 'msi_tramite_san_isidro_digital.html': ('https://www.sanisidro.gob.ar/tramites/san-isidro-digital', 'Página del trámite San Isidro Digital: casi vacía (sólo "reclamos") el 2026-10-01.'),
+ 'msi_tramites_reportes.html': ('https://www.sanisidro.gob.ar/tramites/reportes', 'Página "Reclamos y reportes": sin contenido en HTML estático el 2026-10-01.'),
+ 'gplay_san_isidro_digital.html': ('https://play.google.com/store/apps/details?id=com.munidigital.sanisidro&hl=es_AR&gl=AR', 'Ficha Google Play de San Isidro Digital (descripción, actualización 20-jul-2026, seguridad de datos declarada).'),
+ 'appstore_san_isidro_digital.html': ('https://apps.apple.com/ar/app/id6504581437', 'Ficha App Store de San Isidro Digital (vendedor Municipalidad de San Isidro (AR), versión 3.7.2 31/10/2025, 2,0/5 con 8 calificaciones).'),
+ 'msi_san_isidro_seguro.html': ('https://www.sanisidro.gob.ar/san-isidro-seguro', 'San Isidro Seguro: 2.910 cámaras con IA, 200 lectores de patentes, COM, 4512-3333 (según el Municipio).'),
+ 'msi_sie_san_isidro_estaciona.html': ('https://www.sanisidro.gob.ar/san-isidro-estaciona', 'SIE San Isidro Estaciona: estacionamiento medido por app (SIE/SEM Mobile, UNLP), zonas, horarios y tarifa progresiva.'),
+ 'msi_nov_sie_como_funciona.html': ('https://www.sanisidro.gob.ar/novedades/como-funciona-el-nuevo-sistema-de-estacionamiento-medido', 'Nota municipal 13-08-2021: SIE; promete consultar ocupación de calles; disponible en Telegram y Messenger.'),
+ 'msi_nov_sie_60mil.html': ('https://www.sanisidro.gob.ar/novedades/mas-de-60-mil-personas-ya-se-descargaron-la-app-san-isidro-estaciona', 'Nota municipal 29-09-2021: 60.000 descargas de SIE en 43 días.'),
+ 'msi_transparencia.html': ('https://www.sanisidro.gob.ar/transparencia', 'Página de transparencia: no enlaza a portal de datos abiertos el 2026-10-01.'),
+ 'msi_culturayturismo.html': ('https://www.sanisidro.gob.ar/culturayturismo', 'Portal Cultura y Turismo.'),
+ 'msi_cultura.html': ('https://www.sanisidro.gob.ar/municipio/cultura', 'Subsecretaría de Cultura: actividades en HTML (Verano 2026, cartelera); sin agenda en formato abierto.'),
+ 'msi_turismo.html': ('https://www.sanisidro.gob.ar/municipio/turismo', 'Turismo: centro de información, visitas guiadas, novedades.'),
+ 'msi_rss.xml': ('https://www.sanisidro.gob.ar/rss.xml', 'RSS por defecto de Drupal: ítems viejos (último 24-02-2026); no es agenda de eventos.'),
+ 'msi_content_agenda.html': ('https://www.sanisidro.gob.ar/content/agenda', 'Nodo "AGENDA" (2021) que apunta a /agenda, que devuelve 404 el 2026-10-01.'),
+ 'msi_nov_reserva_vuelve_abrir_2020.html': ('https://www.sanisidro.gob.ar/novedades/la-reserva-ecologica-municipal-ribera-norte-vuelve-abrir-sus-puertas', 'Nota municipal 26-11-2020 sobre reapertura de la Reserva Ribera Norte.'),
+ 'quepasaweb_reserva_horario_verano.html': ('https://www.quepasaweb.com.ar/reserva-natural-ribera-norte-san-isidro-paseo-ribera-norte-horario-verano/', 'Prensa local 19-02-2026: Reserva abre lunes a domingo 9 a 17 h; cerrada con lluvia o crecida; tel. 4512-3125.'),
+ 'msi_nov_guarderia_bicicletas.html': ('https://www.sanisidro.gob.ar/novedades/nueva-guarderia-municipal-de-bicicletas-en-la-estacion-de-san-isidro', 'Nota municipal 22-10-2021: guardería gratuita de 62 bicicletas en estación San Isidro.'),
+ 'msi_prioridades_estrategicas_2024-2025.pdf': ('https://www.sanisidro.gob.ar/sites/default/files/img/prioridades_estrategicas_2024-2025.pdf', 'Prioridades estratégicas 2024-2025 (13 págs.): metas de reclamos por app, indicadores del portal de datos, cámaras, estacionamiento.'),
+ 'msi_prioridades_estrategicas_2024-2025.txt': ('(texto extraído del PDF anterior)', 'Texto plano.'),
+ 'mi_sanisidro_home.html': ('https://mi.sanisidro.gob.ar/', 'Pantalla de ingreso de "Mi San Isidro": intranet del personal municipal (no es para vecinos).'),
+ # --- Agua, río, clima ---
+ 'datosgobar_ckan_monitoreo_calidad_agua.json': ('https://datos.gob.ar/api/3/action/package_show?id=monitoreo-de-calidad-del-agua', 'Metadatos CKAN del dataset CIAM "Monitoreo de calidad del agua" (Subsecretaría de Ambiente; CC BY 4.0; recursos anuales del Río de la Plata).'),
+ 'CIAM_RdP_monitoreo_2025_dt367.csv': ('https://ciam.ambiente.gob.ar/dt_csv.php?dt_id=367', 'CSV red RIIGLO 2025: campañas 8-9/04/2025 y 11-12/11/2025; en San Isidro sólo SI023 Perú con E. coli medida.'),
+ 'shn_home.html': ('https://www.hidro.gob.ar/', 'Portada del Servicio de Hidrografía Naval.'),
+ 'shn_datos_abiertos.html': ('https://www.hidro.gob.ar/DA/DatosAbiertos.asp', 'SHN Datos Abiertos: tablas de marea, alturas horarias, pronóstico de marea y olas, mareógrafos (DATOS + METADATOS).'),
+ 'shn_metadatos_MProno.html': ('https://www.hidro.gob.ar/DA/MProno.asp', 'Metadatos del pronóstico mareológico: 3 veces por día (07, 15, 23 h), validez 12 h; avisos/alertas ante eventos extremos. Formato HTML.'),
+ 'shn_metadatos_MAAHH.html': ('https://www.hidro.gob.ar/DA/MAAHH.asp', 'Metadatos de alturas horarias: actualización horaria. Formato HTML.'),
+ 'shn_pronostico_mareas.html': ('https://www.hidro.gob.ar/oceanografia/pronostico.asp', 'Pronóstico mareológico vigente 30/09/2026 23 h a 01/10/2026 11 h (San Fernando, Buenos Aires, La Plata).'),
+ 'shn_alturas_horarias.html': ('https://www.hidro.gob.ar/oceanografia/AlturasHorarias.asp', 'Alturas horarias de mareógrafos (incluye San Fernando).'),
+ 'shn_alturas_horarias_10dias.csv': ('https://www.hidro.gob.ar/oceanografia/AlturasHorarias.asp?export=csv', 'CSV de 10 días de alturas horarias por mareógrafo.'),
+ 'shn_rss_index.html': ('https://www.hidro.gob.ar/rss/rss.asp', 'Índice de canales RSS y CAP del SHN.'),
+ 'shn_cap_alertas_rio_de_la_plata.xml': ('https://www.hidro.gob.ar/cap/CapRP.asp', 'Feed CAP 1.2 de avisos/alertas de crecida y bajante del Río de la Plata (área La Plata–San Fernando con polígono). Al 01/10/2026: sin alerta vigente.'),
+ 'shn_rss_avisos_alertas_ceses_rdp.xml': ('https://www.hidro.gob.ar/RSS/AACrioplarss.asp', 'RSS de avisos, alertas y ceses del Río de la Plata.'),
+ 'shn_rss_alturas_horarias.xml': ('https://www.hidro.gob.ar/RSS/AHrss.asp', 'RSS de alturas horarias.'),
+ 'shn_rss_pronostico_mareologico.xml': ('https://www.hidro.gob.ar/RSS/PMrss.asp', 'RSS del pronóstico mareológico.'),
+ 'shn_modelos_pronosticos.html': ('https://www.hidro.gob.ar/ModelosPronosticos.asp', 'Página de modelos y pronósticos del SHN.'),
+ 'smn_cap_AR_index.html': ('https://ssl.smn.gob.ar/CAP/AR.php', 'Índice RSS/CAP de alertas del SMN (tormentas, lluvias, viento) con enlaces a XML.'),
+ 'smn_cap_ejemplo_viento_20260929.xml': ('https://ssl.smn.gob.ar/feeds/CAP/xml_generados/CAP_20260929132157_Viento_Llanura_alertas_alertas_1.xml', 'Ejemplo de alerta CAP del SMN (viento, 29/09/2026): área por polígono, sin nombre de partido.'),
+ 'smn_pron5d_20261001.zip': ('https://ssl.smn.gob.ar/dpd/zipopendata.php?dato=pron5d', 'Pronóstico numérico 5 días por estación (incluye Aeroparque), cada 3 h: temperatura, viento (dirección y km/h), precipitación.'),
+ 'smn_tiepre_20261001.zip': ('https://ssl.smn.gob.ar/dpd/zipopendata.php?dato=tiepre', 'Estado del tiempo presente por estación (incluye San Fernando, viento).'),
+ 'smn_datohorario_20260929.txt': ('https://ssl.smn.gob.ar/dpd/descarga_opendata.php?file=observaciones/datohorario20260929.txt', 'Observaciones horarias del 29/09/2026 (Aeroparque, San Fernando Aero, etc.): viento DD/FF.'),
+ 'noaa_awc_metar_SADF_SABE.json': ('https://aviationweather.gov/api/data/metar?ids=SADF,SABE&format=json&hours=3', 'METAR de San Fernando (SADF) y Aeroparque (SABE) vía API pública de NOAA Aviation Weather Center.'),
+ 'openmeteo_sanisidro_viento.json': ('https://api.open-meteo.com/v1/forecast?latitude=-34.46&longitude=-58.50&hourly=wind_speed_10m,wind_direction_10m,wind_gusts_10m&forecast_days=1', 'Pronóstico horario de viento y ráfagas (Open-Meteo) para la costa de San Isidro.'),
+ 'openmeteo_terms.html': ('https://open-meteo.com/en/terms', 'Términos de Open-Meteo: API gratuita sólo uso no comercial, <10.000 llamadas/día, licencia CC BY 4.0; uso comercial requiere plan pago.'),
+ 'ina_alerta_home.html': ('https://alerta.ina.gob.ar/pub/gui', 'Portal de datos del Sistema de Información Hidrológica de la Cuenca del Plata (INA): mapa, WaterML, API a5 con pronósticos.'),
+ # --- Transporte ---
+ 'datosgobar_ckan_search_gtfs.json': ('https://datos.gob.ar/api/3/action/package_search?q=gtfs&rows=50', 'Búsqueda "gtfs" en el catálogo nacional: 0 resultados (2026-10-01).'),
+ 'datostransporte_ckan_search_gtfs.json': ('https://datos.transporte.gob.ar/api/3/action/package_search?q=gtfs&rows=50', 'Búsqueda "gtfs" en el portal de Transporte de la Nación: 0 resultados.'),
+ 'datostransporte_ckan_package_list.json': ('https://datos.transporte.gob.ar/api/3/action/package_list', 'Lista de los 48 datasets del portal de Transporte de la Nación (ninguno GTFS).'),
+ 'api_transporte_caba_home.html': ('https://api-transporte.buenosaires.gob.ar/', 'API Unificada de Transporte (GCBA): requiere registro y tokens.'),
+ 'api_transporte_caba_console.html': ('https://api-transporte.buenosaires.gob.ar/console', 'Consola de la API (aplicación JS; no se leyó contenido).'),
+ 'transitland_feed_buenosaires_trenes.html': ('https://www.transit.land/feeds/f-buenosaires~trenes', 'Transitland: feed GTFS "Trenes Argentinos" publicado por BA Data; versión activa de 2022 con servicio 01/02/2020–30/04/2020; licencia CC BY 2.5.'),
+ 'baData_trenes_gtfs_2020.zip': ('https://cdn.buenosaires.gob.ar/datosabiertos/datasets/transporte-y-obras-publicas/trenes-gtfs/trenes-gtfs.zip', 'GTFS estático de trenes (Last-Modified 10/02/2020): incluye Mitre ramal Tigre y Tren de la Costa; calendario feb–abr 2020.'),
+ 'devto_trenes_sonoros.html': ('https://dev.to/jtorchia/le-di-un-instrumento-a-cada-tren-de-buenos-aires-lo-que-aprendi-del-proyecto-de-ny-y-por-que-aca-34k7', 'Blog de un desarrollador (13/04/2026): dice que la API de Trenes Argentinos exige OAuth2 + convenio con el Ministerio y que no hay GTFS-RT público. Fuente secundaria.'),
+ 'argentina_gob_cuandosubo.html': ('https://www.argentina.gob.ar/aplicaciones/cuandosubo', 'Cuándo SUBO (Nación): colectivos en tiempo real, "más de 100 líneas" de CABA y GBA.'),
+ # --- Estacionamiento: precedentes ---
+ 'SFMTA_sfpark_eval_summary_2014.pdf': ('https://www.sfmta.com/sites/default/files/reports-and-documents/2018/04/sfpark_eval_summary_2014.pdf', 'SFMTA, SFpark Pilot Project Evaluation Summary (jun-2014). Resultados medidos piloto vs control.'),
+ 'SFMTA_sfpark_eval_summary_2014.txt': ('(texto extraído)', 'Texto plano.'),
+ 'arxiv_2602.06517_abs.html': ('https://arxiv.org/abs/2602.06517', 'Resumen: dos investigadores del ILM-CNRS (Francia), "Smart On-Street Parking: Survey of Actual Implementations…", feb-2026.'),
+ 'arxiv_2602.06517_smart_parking_survey.pdf': ('https://arxiv.org/pdf/2602.06517', 'Texto completo del relevamiento de ~25 implementaciones y 10 entrevistas (sensores que fallan, poca medición, apps que desaparecen).'),
+ 'arxiv_2602.06517_smart_parking_survey.txt': ('(texto extraído)', 'Texto plano.'),
+ 'cespi_unlp_SEM_2023.pdf': ('https://www.cespi.unlp.edu.ar/wp-content/uploads/2023/05/SEM.pdf', 'Folleto CeSPI-UNLP del sistema SEM (el que usa SIE): sensores opcionales, mapa de espacio disponible, canales WhatsApp/Telegram.'),
+ 'mdzol_mendoza_camaras_lugar_estacionar.html': ('https://www.mdzol.com/sociedad/mendoza-tendra-un-sistema-saber-si-hay-lugar-estacionar-antes-llegar-n1414621', 'Prensa (MDZ) 24/12/2025: Ciudad de Mendoza prueba una cámara por cuadra para mostrar lugares libres en la app SEM Mendoza (piloto con UNLP).'),
+ 'cordoba_dos_meses_estacionamiento.html': ('https://cordoba.gob.ar/dos-meses-estacionamiento-medido/', 'Municipalidad de Córdoba 28/07/2026: 608.973 activaciones en 2 meses, App SEMM, tableros internos de ocupación.'),
+ # --- Asistentes: precedentes ---
+ 'gcba_boti.html': ('https://buenosaires.gob.ar/gcaba_historico/innovacionytransformaciondigital/boti', 'GCBA: qué hace Boti (incluye "dónde está permitido estacionar" en tiempo real, Ecobici, subte, denuncias con foto).'),
+ 'gcba_boti_26_millones.html': ('https://buenosaires.gob.ar/gcaba_historico/jefaturadegabinete/innovacion/noticias/tramites-denuncias-y-consultas-todo-lo-que-podes-hacer-con', 'GCBA 11/07/2022: 26 millones de conversaciones en el 1er trimestre de 2022.'),
+ 'gcba_boti_cinco_anos.html': ('https://buenosaires.gob.ar/gcaba_historico/noticias/boti-el-asistente-virtual-del-gobierno-porteno-cumplio-cinco-anos', 'GCBA 28/02/2024: Boti 5 años, >500 contenidos, >50 trámites.'),
+ 'gcba_boti_chatgpt_vacaciones.html': ('https://buenosaires.gob.ar/gcaba_historico/noticias/boti-evoluciona-de-la-mano-de-chatgpt-ahora-ofrece-planes-personalizados', 'GCBA 16/07/2024: Boti suma GPT-4o para turismo; requiere "Acepto".'),
+ 'gcba_implementaciones_ia.html': ('https://buenosaires.gob.ar/gcaba_historico/innovacionytransformaciondigital/implementaciones-de-ia', 'GCBA: implementaciones de IA (Boti trámites, turismo con datos del Ente de Turismo, reconocimiento de patentes).'),
+ 'AGCBA_inf_2202_auditoria_chatbot_Boti_2023.pdf': ('https://www.agcba.gov.ar/docs/inf-20230322_2202---CHATBOT-BOTI..pdf', 'Auditoría General de la Ciudad, Proyecto 10.22.04 "Chatbot BOTI", período 2021, aprobado 15/03/2023. Contratos, montos, observaciones.'),
+ 'AGCBA_inf_2202_auditoria_chatbot_Boti_2023.txt': ('(texto extraído)', 'Texto plano.'),
+ 'DerechosDigitales_2024_Boti_study_ENG.pdf': ('https://ia.derechosdigitales.org/wp-content/uploads/2024/11/2024-ARG-BOTI-ENG.pdf', 'ADC / Derechos Digitales (oct-2024), estudio sobre Boti: privacidad, consentimiento, transparencia. CC BY 4.0.'),
+ 'DerechosDigitales_2024_Boti_study_ENG.txt': ('(texto extraído)', 'Texto plano.'),
+ 'themarkup_nyc_mycity_2024-03-29.html': ('https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law', 'The Markup + THE CITY 29/03/2024: el chatbot MyCity de Nueva York aconsejaba incumplir la ley.'),
+ 'themarkup_mycity_shutdown_2026-01-30.html': ('https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law', 'The Markup 30/01/2026 (+ actualización 04/02/2026): la nueva gestión da de baja MyCity; costo ~USD 500.000-600.000.'),
+ 'gdsblog_govuk_chat_findings_2024-01-18.html': ('https://insidegovuk.blog.gov.uk/2024/01/18/the-findings-of-our-first-generative-ai-experiment-gov-uk-chat/', 'GDS (Reino Unido) 18/01/2024: primer experimento GOV.UK Chat (n=157 encuestas; ~70% útil; alucinaciones).'),
+ 'gdsblog_5_things_learned_govuk_chat_2026-03-16.html': ('https://insidegovuk.blog.gov.uk/2026/03/16/5-things-we-learned-testing-gov-uk-chat-an-ai-assistant-for-government/', 'GDS 16/03/2026: dos pilotos públicos, >10.000 usuarios, 26.000 preguntas; 90% de precisión; 88% de respuesta; 10,7 s; 508 intentos de jailbreak bloqueados.'),
+ 'theregister_2021_singapore_askjamie_covid.html': ('https://www.theregister.com/2021/10/06/singapore_chatbot_covid_fail/', 'The Register 06/10/2021: el Ministerio de Salud de Singapur apaga Ask Jamie por respuestas erróneas sobre COVID.'),
+ 'govinsider_askjamie_refresh.html': ('https://govinsider.asia/intl-en/article/is-it-time-to-say-goodbye-to-ask-jamie-inside-govtechs-refresh-of-government-chatbots', 'GovInsider (2023): GovTech migra los chatbots del gobierno a LLM (VICA); Ask Jamie en >70 sitios.'),
+ 'tlme_rta_mahboub_195pct.html': ('https://www.transportandlogisticsme.com/smart-technology-innovation/dubai-rtas-mahboub-chatbot-sees-195-spike-in-usage', 'Prensa 03/06/2020 citando a la RTA de Dubái: chatbot Mahboub, 135.128 chats en mar-abr 2020, 145 servicios.'),
+ 'helsinki_ai_register.html': ('https://ai.hel.fi/en/ai-register/', 'Registro de IA de Helsinki: chatbot de estacionamiento (reglas + datos abiertos), chatbot Urho fuera de uso, otros.'),
+ 'nl_algoritmeregister_gemeente_amsterdam.html': ('https://algoritmes.overheid.nl/nl/organisatie/gm0363/gemeente-amsterdam', 'Registro neerlandés de algoritmos, Municipio de Ámsterdam: chatbot Salesforce Einstein (en uso, con DPIA) y ChatAmsterdam (IA generativa interna).'),
+ 'bcn_premsa_2026-03-10_IA_94M.html': ('https://ajuntament.barcelona.cat/premsa/2026/03/10/lajuntament-invertira-94me-durant-els-propers-tres-anys-per-impulsar-lus-de-la-intelligencia-artificial-al-servei-de-la-ciutadania/', 'Ayuntamiento de Barcelona 10/03/2026: estrategia de IA, 9,4 M€ en 3 años, 37 acciones, asistente HABOT.'),
+ 'bcn_premsa_2026-06-14_HABOT2.html': ('https://ajuntament.barcelona.cat/premsa/2026/06/14/habitatge-renova-el-seu-entorn-virtual-per-facilitar-a-la-ciutadania-lacces-a-la-informacio-els-recursos-i-els-tramits/', 'Ayuntamiento de Barcelona 14/06/2026: HABOT 2.0; primera fase "força satisfactori" (sin métrica).'),
+ 'argentina_gob_tina_asistente_virtual.html': ('https://www.argentina.gob.ar/noticias/se-lanza-tina-la-asistente-virtual-del-estado-nacional', 'Nación 02/11/2022: lanzamiento de Tina (Mi Argentina, WhatsApp), >200 trámites.'),
+ 'cuarto_salta_muni_bot.html': ('https://www.cuarto.com.ar/muni-bot-vecinos-saltenos-podran-simplificar-gestiones-por-whatsapp/', 'Prensa (Cuarto, Salta) 28/09/2026: Muni Bot de la Municipalidad de Salta con IA por WhatsApp desde el 1/10/2026.'),
+ # --- Playas: precedentes de datos ---
+ 'nsw_beachwatch_api_sites_geojson.json': ('https://api.beachwatch.nsw.gov.au/public/sites/geojson', 'API pública de Beachwatch (Nueva Gales del Sur): por playa, pronóstico de contaminación con fecha/hora y último resultado.'),
+ 'mvd_ckan_monitoreo_agua_playas.json': ('https://ckan.montevideo.gub.uy/api/3/action/package_show?id=monitoreo-de-agua-de-playas', 'Metadatos del dataset "Monitoreo de agua de playas" (Intendencia de Montevideo): 2 muestreos semanales en verano; CSV actualizado 30/09/2026; licencia dag-uy.'),
+ 'mvd_noticia_info_tiempo_real_playas.html': ('https://montevideo.gub.uy/noticias/tecnologia/intendencia-brinda-informacion-en-tiempo-real-sobre-playas', 'Intendencia de Montevideo 27/12/2022: plataforma web de playas habilitadas, UV y guardavidas.'),
+ 'fr_baignades_sante_gouv_home.html': ('https://baignades.sante.gouv.fr/baignades/editorial/fr/accueil.html', 'Sitio "Baignades" del Ministerio de Salud de Francia: control mínimo mensual, mapas.'),
+ # --- Costos y normas ---
+ 'meta_whatsapp_pricing_docs.html': ('https://developers.facebook.com/docs/whatsapp/pricing/ (redirige a /documentation/business-messaging/whatsapp/pricing)', 'Meta, precios de WhatsApp Business Platform (actualizado 28/09/2026): por mensaje; desde 01/10/2026 cobra mensajes de servicio, 1.000 gratis por número por mes.'),
+ 'meta_whatsapp_ratecard_USD_2026-10-01.xlsx': ('(enlace CSV/XLSX de fbcdn.net desde la página de precios de Meta)', 'Tarifa en USD vigente desde 01/10/2026. Argentina: marketing 0,0618; utility 0,026; autenticación 0,026; servicio 0,026 por mensaje.'),
+ 'meta_whatsapp_ratecard_USD_2026-07-01.csv': ('(enlace CSV de fbcdn.net desde la página de precios de Meta)', 'Tarifa en USD vigente desde 01/07/2026 (Argentina: 0,0618 / 0,026 / 0,026; servicio n/a).'),
+ 'infoleg_ley26653_accesibilidad_web.html': ('https://servicios.infoleg.gob.ar/infolegInternet/anexos/175000-179999/175694/norma.htm', 'Ley 26.653 (2010) de accesibilidad de la información en páginas web; invita a provincias a adherir.'),
+ # --- herramientas ---
+ 'h2t.py': ('(script propio)', 'Script de conversión HTML a texto usado en esta investigación.'),
+ '_mkfuentes.py': ('(script propio)', 'Script que genera este FUENTES.txt.'),
+}
+rows = []
+for f in sorted(os.listdir(D)):
+    if f == 'FUENTES.txt':
+        continue
+    size = os.path.getsize(D + f)
+    url, que = M.get(f, ('(sin descripción)', '(sin descripción)'))
+    rows.append(f'{f} | {size} | {url} | {F} | {que}')
+leidas = [
+ 'https://data.buenosaires.gob.ar/dataset/api-transporte-publico | leída con WebFetch (curl bloqueado por el WAF) | Aviso: "todos los datasets con Formato API y GTFS, están suspendidos. Se encuentran en revisión y corrección"; recursos Subtes, Trenes, Ecobici, Colectivos, Tránsito; licencia CC-BY-2.5-AR; modificado 17/06/2026.',
+ 'https://datos.sanisidro.gob.ar/ | no responde: TLS SSL_ERROR_SYSCALL por https y timeout de 40 s por http (01/10/2026).',
+ 'https://ide.sanisidro.gob.ar/ y https://mapa.sanisidro.gob.ar/ | sin conexión (01/10/2026); son nombres probados, no URLs publicadas.',
+ 'https://www.sanisidro.gob.ar/agenda | 404 (01/10/2026).',
+ 'https://www.sanisidro.gob.ar/tramites-y-servicios/guarderia-de-bicicletas | 404 (01/10/2026).',
+ 'https://www.smn.gob.ar/descarga-de-datos | 403 de Cloudflare por curl y por WebFetch: no se pudo leer la licencia ni los términos de uso del SMN.',
+ 'https://www.data.gouv.fr/api/1/datasets/?q=eaux+de+baignade | conexión cortada / 503 (01/10/2026).',
+ 'https://datasmart.hks.harvard.edu/news/article/how-smart-city-barcelona-brought-the-internet-of-things-to-life-789 | 403 por curl y WebFetch; el dato sobre Fastprk y apparkB queda sin confirmar.',
+ 'https://www.itskrs.its.dot.gov/2016-b01101 | 403; el dato de ocupación estimada con pagos de parquímetros (~70%) queda sin confirmar.',
+ 'https://www.estacionapp.cl/ | conexión cortada; el dato de >1.000 sensores en Las Condes queda sin confirmar.',
+ 'https://www.rta.ae/... (noticias de Mahboub) | conexión cortada.',
+ 'https://www.trenesargentinos.gob.ar/ | conexión cortada; https://www.argentina.gob.ar/transporte/trenes-argentinos/horarios | 404.',
+ 'https://catalogodatos.gub.uy/api/3/action/package_search?q=playas | 0 resultados (el dataset está en el CKAN de la Intendencia, no en el catálogo nacional).',
+ 'https://ciam.ambiente.gob.ar/ (CSV de años anteriores) | ya guardados por otro equipo en scratchpad/ch/wt/01_raw/costa/c_arena/ (no se duplicaron).',
+]
+with open(D + 'FUENTES.txt', 'w', encoding='utf-8') as fh:
+    fh.write('archivo | bytes | URL | fecha de consulta | qué es\n')
+    fh.write('\n'.join(rows) + '\n\n')
+    fh.write('PÁGINAS LEÍDAS Y NO GUARDADAS (o que fallaron)\n')
+    fh.write('\n'.join(leidas) + '\n')
+print(len(rows))
+print([r for r in rows if '(sin descripción)' in r])

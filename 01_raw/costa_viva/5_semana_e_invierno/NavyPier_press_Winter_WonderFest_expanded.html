@@ -1,0 +1,1496 @@
+
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <!--  <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=ebvcvhgm8qz6krbnsnxxpa" async="true"></script>-->
+
+    <meta charset="UTF-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="HandheldFriendly" content="true" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://navypier.org/wp-content/themes/navypiercore/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://navypier.org/wp-content/themes/navypiercore/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://navypier.org/wp-content/themes/navypiercore/img/favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="https://navypier.org/wp-content/themes/navypiercore/img/favicon/safari-pinned-tab.svg" color="#263c79">
+  <meta name="msapplication-TileColor" content="#263c79">
+  <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-THLCB9N');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FD7BTMC639"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    (function() {
+      if (document.referrer && document.referrer.includes('tixr.com')) {
+        gtag('config', 'G-FD7BTMC639', {
+          page_location: window.location.href,
+          page_path: window.location.pathname + window.location.search,
+          page_title: document.title
+        });
+      }
+
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href*="tixr.com"]');
+        if (!link) return;
+
+        var url = link.href;
+        var target = (link.getAttribute('target') || '').toLowerCase();
+        var isNewTab = target === '_blank';
+        var isModifiedClick = e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button === 1;
+
+        console.log('Tixr click detected:', url);
+
+        if (isNewTab || isModifiedClick) {
+          gtag('event', 'tixr_click', {
+            send_to: 'G-FD7BTMC639',
+            link_url: url,
+            transport_type: 'beacon'
+          });
+          return;
+        }
+
+        e.preventDefault();
+
+        gtag('event', 'tixr_click', {
+          send_to: 'G-FD7BTMC639',
+          link_url: url,
+          transport_type: 'beacon',
+          event_callback: function() {
+            window.location.href = url;
+          }
+        });
+
+        setTimeout(function() {
+          window.location.href = url;
+        }, 400);
+      });
+    })();
+  </script>
+
+
+
+  <style>
+    #hidebloga,
+    #hideblogb {
+      display: none;
+    }
+  </style>
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name="automatic-translator-version" content="2.2.1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season | Navy Pier</title>
+	<meta name="description" content="Navy Pier announces the return of Wintrust Winter WonderFest, Chicago’s favorite indoor holiday celebration, with Wintrust Financial Corporation serving as the event’s new presenting sponsor." />
+	<link rel="canonical" href="https://navypier.org/media-and-pr/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season | Navy Pier" />
+	<meta property="og:description" content="Navy Pier announces the return of Wintrust Winter WonderFest, Chicago’s favorite indoor holiday celebration, with Wintrust Financial Corporation serving as the event’s new presenting sponsor." />
+	<meta property="og:url" content="https://navypier.org/media-and-pr/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season/" />
+	<meta property="og:site_name" content="Navy Pier" />
+	<meta property="article:modified_time" content="2026-09-22T20:15:45+00:00" />
+	<meta property="og:image" content="https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1280" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="3 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/","url":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/","name":"Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season | Navy Pier","isPartOf":{"@id":"https:\/\/navypier.org\/#website"},"primaryImageOfPage":{"@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/#primaryimage"},"image":{"@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/#primaryimage"},"thumbnailUrl":"https:\/\/navypier.org\/wp-content\/uploads\/2025\/11\/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg","datePublished":"2026-07-28T19:31:20+00:00","dateModified":"2026-09-22T20:15:45+00:00","description":"Navy Pier announces the return of Wintrust Winter WonderFest, Chicago’s favorite indoor holiday celebration, with Wintrust Financial Corporation serving as the event’s new presenting sponsor.","breadcrumb":{"@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/#primaryimage","url":"https:\/\/navypier.org\/wp-content\/uploads\/2025\/11\/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg","contentUrl":"https:\/\/navypier.org\/wp-content\/uploads\/2025\/11\/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg","width":1920,"height":1280,"caption":"Families ice skating together at Winter WonderFest on Navy Pier in Chicago"},{"@type":"BreadcrumbList","@id":"https:\/\/navypier.org\/media-and-pr\/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/navypier.org\/"},{"@type":"ListItem","position":2,"name":"Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season"}]},{"@type":"WebSite","@id":"https:\/\/navypier.org\/#website","url":"https:\/\/navypier.org\/","name":"Navy Pier","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/navypier.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Navy Pier &raquo; Feed" href="https://navypier.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Navy Pier &raquo; Comments Feed" href="https://navypier.org/comments/feed/" />
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<link rel="preconnect" href="https://p.typekit.net" crossorigin>
+<link rel="preload" as="style" href="https://use.typekit.net/fzp8ndl.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/fzp8ndl.css"></noscript>
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://navypier.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://navypier.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='megamenu-css' href='https://navypier.org/wp-content/uploads/maxmegamenu/style.css?ver=8834a1' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://navypier.org/wp-includes/css/dashicons.min.css?ver=dd43c9e47e1779919ab31f8bf9e0274b' media='all' />
+<link rel='stylesheet' id='pojo-a11y-css' href='https://navypier.org/wp-content/plugins/pojo-accessibility/modules/legacy/assets/css/style.min.css?ver=1.0.0' media='all' />
+<link rel='stylesheet' id='navypiercore-vendor-styles-css' href='https://navypier.org/wp-content/themes/navypiercore/dist/vendor.min.css?ver=2.7.3.1790268400' media='all' />
+<link rel='stylesheet' id='navypiercore-styles-css' href='https://navypier.org/wp-content/themes/navypiercore/dist/style.min.css?ver=2.7.3.1790268400' media='all' />
+<link rel='stylesheet' id='taxopress-frontend-css-css' href='https://navypier.org/wp-content/plugins/simple-tags/assets/frontend/css/frontend.css?ver=3.54.0' media='all' />
+<script id="jquery-core-js" src="https://navypier.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://navypier.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="taxopress-frontend-js-js" src="https://navypier.org/wp-content/plugins/simple-tags/assets/frontend/js/frontend.js?ver=3.54.0"></script>
+<link rel="https://api.w.org/" href="https://navypier.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://navypier.org/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://navypier.org/?p=16368' />
+<style type="text/css">
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a{ background-color: #ffffff;	color: #263c79;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items.pojo-a11y-links{ border-color: #ffffff;}
+body.pojo-a11y-focusable a:focus{ outline-style: solid !important;	outline-width: 1px !important;	outline-color: #FF0000 !important;}
+#pojo-a11y-toolbar{ top: 300px !important;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay{ background-color: #ffffff;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a, #pojo-a11y-toolbar .pojo-a11y-toolbar-overlay p.pojo-a11y-toolbar-title{ color: #263c79;}
+#pojo-a11y-toolbar .pojo-a11y-toolbar-overlay ul.pojo-a11y-toolbar-items li.pojo-a11y-toolbar-item a.active{ background-color: #263c79;	color: #ffffff;}
+@media (max-width: 767px) { #pojo-a11y-toolbar { top: 35% !important; } }</style><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Navy Pier - ">
+
+  <style>
+    .external-link {
+      svg.external-icon {
+        display: inline-block;
+        width: 11px;
+        margin-left: 5px;
+        margin-top: -4px;
+
+        path {
+          fill: currentColor;
+        }
+      }
+    }
+  </style>
+
+  
+  <style>
+    .ginput_container.ginput_container_consent { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;
+      input[type="checkbox"] { flex: 0 0 13px; margin-right: 10px; }
+      .gform-field-label { flex: 0 0 calc(100% - 23px); }
+    }
+    .page-section .layout-wrap .gform_fields .gfield .ginput_container_consent label { margin: 0 !important; }
+
+
+    .gform_wrapper.gravity-theme .ginput_container_multiselect {
+      .chosen-container-multi {
+        .chosen-choices {
+          font-family: mr-eaves-xl-sans, sans-serif;
+          background-color: transparent;
+          border: 1px solid #45c6eb;
+          border-radius: 2px;
+          color: #263c79;
+          line-height: 1;
+          margin-top: 5px;
+          padding: 12px 28px;
+          font-size: 15px;
+          .search-field {
+            input, input::placeholder { font-family: mr-eaves-xl-sans, sans-serif !important; font-size: 15px !important; color: #838fb0 !important; line-height: 1 !important; }
+          }
+          li.search-choice {
+            border: 1px solid #45c6eb;
+            box-shadow: none;
+            background-image: none;
+            font-family: mr-eaves-xl-sans, sans-serif;
+            font-size: 15px;
+            color: #263c79;
+            background-color: #f1f1f1;
+            a { border: none !important; }
+          }
+        }
+      }
+    }
+
+    .page-section .layout-wrap .gform_fields .gfield select,
+    .page-section .layout-wrap .gform_fields .gfield .chosen-choices {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M308.7 427.3C314.9 433.5 325.1 433.5 331.3 427.3L491.3 267.3C497.5 261.1 497.5 250.9 491.3 244.7C485.1 238.5 474.9 238.5 468.7 244.7L320 393.4L171.3 244.7C165.1 238.5 154.9 238.5 148.7 244.7C142.5 250.9 142.5 261.1 148.7 267.3L308.7 427.3z" style="fill: %23263c79;"/></svg>') !important;
+      background-origin: content-box;
+      background-position: right -1rem center;
+      background-repeat: no-repeat;
+      background-size: 17px 26px !important;
+    }
+  </style>
+
+    <style>
+        .pop-up .container .pop-up-wrap .pop-up-inner-image.no-resized { height: auto !important; }
+    </style>
+
+<link rel='stylesheet' id='gform_basic-css' href='https://navypier.org/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=3.1.2' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://navypier.org/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=3.1.2' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://navypier.org/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=3.1.2' media='all' />
+<link rel='stylesheet' id='auto-translate-css' href='https://navypier.org/wp-content/plugins/auto-translate/public/css/auto-translate-public.min.css?ver=1790261554' media='all' />
+<link rel='stylesheet' id='auto-translate-global-css' href='https://navypier.org/wp-content/plugins/auto-translate/global/css/auto-translate-global.min.css?ver=1790261554' media='all' />
+
+</head>
+
+<body class="wp-singular media-template-default single single-media postid-16368 wp-embed-responsive wp-theme-navypiercore mega-menu-primary mega-menu-event-center ally-default">
+
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THLCB9N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+  <div class="site notification-bar-enabled" id="page">
+
+    <a class="skip-link sr-only sr-only-focusable" href="#skiplink">Skip to content</a>
+
+    
+<div id="unsupported" class="support">
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-12 col-lg-3">
+				<div class="warning">
+					<svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="exclamation-triangle" class="svg-inline--fa fa-exclamation-triangle fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z"></path></svg>
+					<span>Please update your browser.</span>
+				</div>
+			</div>
+			<div class="col-12 col-lg-5">
+				<div class="message">
+					<p>Thank you for visiting our site!  We noticed you are using a browser we no longer support.  To have the best overall experience and avoid issues navigating the site, please click one of the supported browsers to the right to download the latest version for free:</p>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4">
+				<div class="download-links">
+					<div class="chrome browser">
+						<a href="https://www.google.com/chrome/">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="chrome" class="svg-inline--fa fa-chrome fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M131.5 217.5L55.1 100.1c47.6-59.2 119-91.8 192-92.1 42.3-.3 85.5 10.5 124.8 33.2 43.4 25.2 76.4 61.4 97.4 103L264 133.4c-58.1-3.4-113.4 29.3-132.5 84.1zm32.9 38.5c0 46.2 37.4 83.6 83.6 83.6s83.6-37.4 83.6-83.6-37.4-83.6-83.6-83.6-83.6 37.3-83.6 83.6zm314.9-89.2L339.6 174c37.9 44.3 38.5 108.2 6.6 157.2L234.1 503.6c46.5 2.5 94.4-7.7 137.8-32.9 107.4-62 150.9-192 107.4-303.9zM133.7 303.6L40.4 120.1C14.9 159.1 0 205.9 0 256c0 124 90.8 226.7 209.5 244.9l63.7-124.8c-57.6 10.8-113.2-20.8-139.5-72.5z"></path></svg>
+							<span>Google Chrome</span>
+						</a>
+					</div>
+					<div class="firefox browser">
+						<a href="https://www.mozilla.org/en-US/firefox/new/">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="firefox" class="svg-inline--fa fa-firefox fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M503.52,241.48c-.12-1.56-.24-3.12-.24-4.68v-.12l-.36-4.68v-.12a245.86,245.86,0,0,0-7.32-41.15c0-.12,0-.12-.12-.24l-1.08-4c-.12-.24-.12-.48-.24-.6-.36-1.2-.72-2.52-1.08-3.72-.12-.24-.12-.6-.24-.84-.36-1.2-.72-2.4-1.08-3.48-.12-.36-.24-.6-.36-1-.36-1.2-.72-2.28-1.2-3.48l-.36-1.08c-.36-1.08-.84-2.28-1.2-3.36a8.27,8.27,0,0,0-.36-1c-.48-1.08-.84-2.28-1.32-3.36-.12-.24-.24-.6-.36-.84-.48-1.2-1-2.28-1.44-3.48,0-.12-.12-.24-.12-.36-1.56-3.84-3.24-7.68-5-11.4l-.36-.72c-.48-1-.84-1.8-1.32-2.64-.24-.48-.48-1.08-.72-1.56-.36-.84-.84-1.56-1.2-2.4-.36-.6-.6-1.2-1-1.8s-.84-1.44-1.2-2.28c-.36-.6-.72-1.32-1.08-1.92s-.84-1.44-1.2-2.16a18.07,18.07,0,0,0-1.2-2c-.36-.72-.84-1.32-1.2-2s-.84-1.32-1.2-2-.84-1.32-1.2-1.92-.84-1.44-1.32-2.16a15.63,15.63,0,0,0-1.2-1.8L463.2,119a15.63,15.63,0,0,0-1.2-1.8c-.48-.72-1.08-1.56-1.56-2.28-.36-.48-.72-1.08-1.08-1.56l-1.8-2.52c-.36-.48-.6-.84-1-1.32-1-1.32-1.8-2.52-2.76-3.72a248.76,248.76,0,0,0-23.51-26.64A186.82,186.82,0,0,0,412,62.46c-4-3.48-8.16-6.72-12.48-9.84a162.49,162.49,0,0,0-24.6-15.12c-2.4-1.32-4.8-2.52-7.2-3.72a254,254,0,0,0-55.43-19.56c-1.92-.36-3.84-.84-5.64-1.2h-.12c-1-.12-1.8-.36-2.76-.48a236.35,236.35,0,0,0-38-4H255.14a234.62,234.62,0,0,0-45.48,5c-33.59,7.08-63.23,21.24-82.91,39-1.08,1-1.92,1.68-2.4,2.16l-.48.48H124l-.12.12.12-.12a.12.12,0,0,0,.12-.12l-.12.12a.42.42,0,0,1,.24-.12c14.64-8.76,34.92-16,49.44-19.56l5.88-1.44c.36-.12.84-.12,1.2-.24,1.68-.36,3.36-.72,5.16-1.08.24,0,.6-.12.84-.12C250.94,20.94,319.34,40.14,367,85.61a171.49,171.49,0,0,1,26.88,32.76c30.36,49.2,27.48,111.11,3.84,147.59-34.44,53-111.35,71.27-159,24.84a84.19,84.19,0,0,1-25.56-59,74.05,74.05,0,0,1,6.24-31c1.68-3.84,13.08-25.67,18.24-24.59-13.08-2.76-37.55,2.64-54.71,28.19-15.36,22.92-14.52,58.2-5,83.28a132.85,132.85,0,0,1-12.12-39.24c-12.24-82.55,43.31-153,94.31-170.51-27.48-24-96.47-22.31-147.71,15.36-29.88,22-51.23,53.16-62.51,90.36,1.68-20.88,9.6-52.08,25.8-83.88-17.16,8.88-39,37-49.8,62.88-15.6,37.43-21,82.19-16.08,124.79.36,3.24.72,6.36,1.08,9.6,19.92,117.11,122,206.38,244.78,206.38C392.77,503.42,504,392.19,504,255,503.88,250.48,503.76,245.92,503.52,241.48Z"></path></svg>
+							<span>Mozilla Firefox</span>
+						</a>
+					</div>
+					<div class="edge browser">
+						<a href="https://www.microsoft.com/en-us/edge">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="edge" class="svg-inline--fa fa-edge fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M481.92,134.48C440.87,54.18,352.26,8,255.91,8,137.05,8,37.51,91.68,13.47,203.66c26-46.49,86.22-79.14,149.46-79.14,79.27,0,121.09,48.93,122.25,50.18,22,23.8,33,50.39,33,83.1,0,10.4-5.31,25.82-15.11,38.57-1.57,2-6.39,4.84-6.39,11,0,5.06,3.29,9.92,9.14,14,27.86,19.37,80.37,16.81,80.51,16.81A115.39,115.39,0,0,0,444.94,322a118.92,118.92,0,0,0,58.95-102.44C504.39,176.13,488.39,147.26,481.92,134.48ZM212.77,475.67a154.88,154.88,0,0,1-46.64-45c-32.94-47.42-34.24-95.6-20.1-136A155.5,155.5,0,0,1,203,215.75c59-45.2,94.84-5.65,99.06-1a80,80,0,0,0-4.89-10.14c-9.24-15.93-24-36.41-56.56-53.51-33.72-17.69-70.59-18.59-77.64-18.59-38.71,0-77.9,13-107.53,35.69C35.68,183.3,12.77,208.72,8.6,243c-1.08,12.31-2.75,62.8,23,118.27a248,248,0,0,0,248.3,141.61C241.78,496.26,214.05,476.24,212.77,475.67Zm250.72-98.33a7.76,7.76,0,0,0-7.92-.23,181.66,181.66,0,0,1-20.41,9.12,197.54,197.54,0,0,1-69.55,12.52c-91.67,0-171.52-63.06-171.52-144A61.12,61.12,0,0,1,200.61,228,168.72,168.72,0,0,0,161.85,278c-14.92,29.37-33,88.13,13.33,151.66,6.51,8.91,23,30,56,47.67,23.57,12.65,49,19.61,71.7,19.61,35.14,0,115.43-33.44,163-108.87A7.75,7.75,0,0,0,463.49,377.34Z"></path></svg>
+							<span>Microsoft Edge</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+		var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+		var isEdge = !isIE && !!window.StyleMedia;
+		var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+		var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+		var element = document.getElementById("unsupported");
+
+		if ( isIE === true ) {
+			element.classList.add("true");
+		} else {
+			element.classList.add("false");
+		}
+	</script>
+</div>
+
+    
+    
+    
+        <header id="page_navbar" class="blue-header" role="banner">
+      <nav id="main_nav" class="nav-bar navbar-expand-lg navbar-dark sticky-top" aria-labelledby="main_nav_title">
+
+        
+
+                    <div id="notification_bar" class="container-fluid notification-bar inactive" role="region" aria-label="Site notifications">
+
+              <div class="row align-items-center">
+                <ul class="notification-list d-flex flex-wrap w-100" aria-live="polite">
+                                      <li class="col-12 text-center notification-div last-notification">
+                      <div class="svg-container" aria-hidden="true">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.134" height="15.521"
+                                 viewBox="0 0 13.134 15.521" focusable="false">
+                              <g transform="translate(-10.991 -50.739)">
+                                <path d="M12.192,18.9a1.553,1.553,0,0,0,1.545-1.552h-3.09A1.553,1.553,0,0,0,12.192,18.9Zm5.022-4.656V9.972a5.03,5.03,0,0,0-3.863-4.889V4.539a1.159,1.159,0,1,0-2.318,0v.543A5.03,5.03,0,0,0,7.17,9.972V14.24L5.625,15.792v.776H18.759v-.776Z"
+                                      transform="translate(5.366 47.364)" fill="#fff"/>
+                              </g>
+                            </svg>
+                                                  </div>
+
+                      <p>
+                        Save Time and Pre-Purchase Your Parking                                                   <a class="scroll-link"
+                             href="https://www.justpark.com/10054004#accordion_item_1">
+                            HERE                          </a>
+                                              </p>
+                    </li>
+                                  </ul>
+
+                <button id="notif-close" class="notification-close" type="button" aria-label="Dismiss notifications">
+                  <span class="inner-close" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            
+
+        
+          <div class="container-fluid standard-navigation">
+            <div class="row align-items-center justify-content-between">
+              <div id="site_logo" class="col-7 col-lg-2">
+                <p id="main_nav_title" class="sr-only">
+                  Main Navigation                </p>
+                                <div class="navbar-brand">
+                  <a class="navbar-logo" rel="home" href="https://navypier.org/"
+                    title="Navy Pier" itemprop="url">
+                    <svg version="1.1" id="logo_element_navy_pier" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                      viewBox="0 0 956.5 303.4" style="enable-background:new 0 0 956.5 303.4" xml:space="preserve"
+                      role="img">
+                      <g id="logo_element_wheel">
+                        <path id="logo_element_prong_11" class="fill-navy"
+                          d="m106.2 302.8 35-109.5c.2-1-1.1-1.5-1.6-.6L89 296c-.2.4 0 1 .4 1.2l15.6 6.2c.5.1 1.1-.1 1.2-.6" />
+                        <path id="logo_element_prong_10" class="fill-teal"
+                          d="m78.8 247.5 40.8-54.3c.6-.8-.4-1.8-1.2-1.2l-52.8 42.5c-.4.3-.4.9-.1 1.3l12 11.7c.4.4 1 .4 1.3 0" />
+                        <path id="logo_element_accent_10" class="fill-navy"
+                          d="M38.3 258.2 55 274.9c.4.4 1 .3 1.3-.1l9.7-14.3c.2-.3.2-.8-.1-1.1l-12.2-12.2c-.3-.3-.7-.3-1.1-.1l-14.3 9.7c-.3.4-.4 1 0 1.4" />
+                        <path id="logo_element_prong_9" class="fill-navy"
+                          d="m49.1 211.4 81.1-44.3c.9-.5.3-1.9-.7-1.5l-87.7 28.8c-.5.2-.7.7-.5 1.1l6.6 15.5c.2.5.7.7 1.2.4" />
+                        <path id="logo_element_prong_8" class="fill-pink"
+                          d="m36.2 166.3 67.2-9.5c1-.1 1-1.6 0-1.7L36 147.9c-.5-.1-.9.3-.9.9l.2 16.8c-.1.4.3.8.9.7" />
+                        <path id="logo_element_accent_8" class="fill-navy"
+                          d="M0 145.3V169c0 .5.5.9 1 .8l17-3.2c.4-.1.7-.4.7-.8v-17.3c0-.4-.3-.8-.7-.8l-17-3.2c-.6-.2-1 .2-1 .8" />
+                        <path id="logo_element_prong_7" class="fill-navy"
+                          d="m40.6 119.8 88.6 26.1c1 .3 1.5-1.1.6-1.6l-82.3-41.7c-.4-.2-1 0-1.2.4L40 118.6c-.1.6.2 1.1.6 1.2" />
+                        <path id="logo_element_prong_6" class="fill-teal"
+                          d="m63.4 78.8 54.3 40.8c.8.6 1.8-.4 1.2-1.2L76.4 65.6c-.3-.4-.9-.4-1.3-.1l-11.7 12c-.5.4-.4 1 0 1.3" />
+                        <path id="logo_element_accent_6" class="fill-navy"
+                          d="M52.7 38.3 36 55c-.4.4-.3 1 .1 1.3L50.4 66c.3.2.8.2 1.1-.1l12.2-12.2c.3-.3.3-.7.1-1.1l-9.7-14.3c-.4-.3-1-.3-1.4 0" />
+                        <path id="logo_element_prong_5" class="fill-navy"
+                          d="m99.5 49.1 44.3 81.1c.5.9 1.9.3 1.5-.7l-28.8-87.7c-.2-.5-.7-.7-1.1-.5l-15.5 6.6c-.5.2-.7.7-.4 1.2" />
+                        <path id="logo_element_prong_4" class="fill-pink"
+                          d="m144.6 36.2 9.5 67.2c.1 1 1.6 1 1.7 0L163 36c.1-.5-.3-.9-.8-.9l-16.8.2c-.5-.1-.9.4-.8.9" />
+                        <path id="logo_element_accent_4" class="fill-navy"
+                          d="M165.6 0h-23.7c-.5 0-.9.5-.8 1l3.2 17c.1.4.4.7.8.7h17.3c.4 0 .8-.3.8-.7l3.2-17c.1-.5-.3-1-.8-1" />
+                        <path id="logo_element_prong_3" class="fill-navy"
+                          d="M191.1 40.7 165 129.3c-.3 1 1.1 1.5 1.6.6l41.7-82.4c.2-.4 0-1-.4-1.2L192.3 40c-.6-.1-1.1.2-1.2.7" />
+                        <path id="logo_element_prong_2" class="fill-teal"
+                          d="m232.1 63.4-40.8 54.3c-.6.8.4 1.8 1.2 1.2l52.8-42.5c.4-.3.4-.9.1-1.3l-12-11.7c-.4-.4-1-.4-1.3 0" />
+                        <path id="logo_element_accent_2" class="fill-navy"
+                          d="M272.6 52.7 255.9 36c-.4-.4-1-.3-1.3.1l-9.7 14.3c-.2.3-.2.8.1 1.1l12.2 12.2c.3.3.7.3 1.1.1l14.3-9.7c.3-.4.3-1 0-1.4" />
+                        <path id="logo_element_prong_1" class="fill-navy"
+                          d="m294 86-102.2 52.7c-.9.5-.3 1.8.7 1.5l108.8-37.3c.5-.1.7-.7.5-1.1l-6.6-15.4c-.2-.5-.7-.7-1.2-.4" />
+                      </g>
+                      <g id="logo_element_text">
+                        <path id="logo_element_N" class="fill-navy"
+                          d="M235.2 252.4c-2 0-2.7-.1-4.5-2.7l-48.8-75.8v63.6h12.9c1.5 0 2.2.6 2.2 2.1v10.7c0 1.5-.7 2.1-2.2 2.1h-39.4c-1.5 0-2.2-.6-2.2-2.1v-10.6c0-1.5.7-2.1 2.2-2.1h13.5v-68.4h-13.5c-1.5 0-2.2-.6-2.2-2.1v-10.7c0-1.5.7-2.1 2.2-2.1h28.3c2.1 0 3.4.1 5 2.7l46.7 73.2v-61h-13.9c-1.5 0-2.2-.6-2.2-2.1v-10.7c0-1.5.7-2.1 2.2-2.1h40.2c1.4 0 2.1.6 2.1 2.1v10.7c0 1.5-.7 2.1-2.1 2.1h-13.5v81.5c0 1.4-.7 1.8-2 1.8l-11-.1z" />
+                        <path id="logo_element_A" class="fill-navy"
+                          d="M311.9 171h-.8l-13.8 35.7h28.3L311.9 171zm13.3 81.4c-1.5 0-2.2-.6-2.2-2.1v-10.6c0-1.5.7-2.1 2.2-2.1h12.3l-7.4-19.1h-37.2l-7.4 19.1h11.4c1.5 0 2.2.6 2.2 2.1v10.7c0 1.5-.7 2.1-2.2 2.1h-37.2c-1.5 0-2.2-.6-2.2-2.1v-10.7c0-1.5.7-2.1 2.2-2.1h10.7l27.5-68.4h-13.4c-1.8 0-2.5-.7-2.5-2.4v-10.1c0-1.7.8-2.4 2.4-2.4h32.4c2.4 0 4.1.3 5.2 3.1l32.5 80.2h10.4c1.5 0 2.2.6 2.2 2.1v10.7c0 1.5-.7 2.1-2.2 2.1h-39.7v-.1z" />
+                        <path id="logo_element_V" class="fill-navy"
+                          d="M390 253.3c-1.5 0-2.2-.3-2.8-1.5l-32-82.6h-13c-1.5 0-2.2-.6-2.2-2.1v-10.7c0-1.5.7-2.1 2.2-2.1h42.1c1.5 0 2.2.6 2.2 2.1v10.7c0 1.5-.7 2.1-2.2 2.1h-11.9l25.4 69.1h.3l25.9-69.1h-12.9c-1.5 0-2.2-.6-2.2-2.1v-10.7c0-1.5.7-2.1 2.2-2.1h40.7c1.5 0 2.2.6 2.2 2.1v10.7c0 1.5-.7 2.1-2.2 2.1h-12.6L407 251.6c-.6 1.4-1.3 1.7-2.9 1.7H390z" />
+                        <path id="logo_element_Y" class="fill-navy"
+                          d="M462.6 252.4c-1.4 0-2.2-.7-2.2-2.4v-10.1c0-1.7.6-2.4 2.5-2.4h13v-25.1l-30-43.3h-13c-1.5 0-2.2-.8-2.2-2.4v-10.4c0-1.5.7-2.1 2.2-2.1h42.8c1.5 0 2.2.7 2.2 2.4v10.1c0 1.7-.6 2.4-2.4 2.4h-13.2l21.5 32.7 21.6-32.7h-12.3c-1.5 0-2.4-.7-2.4-2.4v-10c0-1.7.7-2.4 2.5-2.4h40.2c1.5 0 2.4.7 2.4 2.4v10.1c0 1.7-.7 2.4-2.5 2.4h-12.6l-29.9 43.3v25.1h13c2 0 2.5.7 2.5 2.4v10.1c0 1.7-.8 2.4-2.2 2.4l-41.5-.1z" />
+                        <path id="logo_element_P" class="fill-navy"
+                          d="M624.7 204.2c6.6 0 10.8-1.1 14-3.2 4.9-3.1 7.3-8.3 7.3-15.4 0-5.9-2.5-10.7-7.1-13.5-3.1-2-7.1-2.8-12.5-2.8h-24.7v34.9h23zm-51 48.2c-1.7 0-2.4-.7-2.4-2.4v-10.1c0-1.7.7-2.4 2.4-2.4h13.2v-68.4h-13.2c-1.7 0-2.4-.7-2.4-2.4v-10c0-1.7.7-2.4 2.4-2.4h53.1c8.5 0 16.3 2 21.7 6 8.3 5.5 12.2 15 12.2 25.2 0 11.1-3.8 20.2-11.5 25.8-5.6 4.8-14 6.9-23.8 6.9h-23.7v19.3H617c1.7 0 2.4.7 2.4 2.4V250c0 1.7-.7 2.4-2.4 2.4h-43.3z" />
+                        <path id="logo_element_I" class="fill-navy"
+                          d="M671 252.4c-1.7 0-2.4-.7-2.4-2.4v-10.1c0-1.7.7-2.4 2.4-2.4h13.2v-68.4H671c-1.7 0-2.4-.7-2.4-2.4v-10c0-1.7.7-2.4 2.4-2.4h41.4c1.5 0 2.2.7 2.2 2.4v10.1c0 1.7-.6 2.4-2.4 2.4H699v68.4h13.2c1.8 0 2.4.7 2.4 2.4v10.1c0 1.7-.7 2.4-2.2 2.4l-41.4-.1z" />
+                        <path id="logo_element_R_1" class="fill-navy"
+                          d="M727.7 252.4c-1.7 0-2.4-.7-2.4-2.4v-10.1c0-1.7.7-2.4 2.4-2.4h13.2v-68.4h-13.2c-1.7 0-2.4-.7-2.4-2.4v-10c0-1.7.7-2.4 2.4-2.4h86.6c1 0 1.7.6 1.7 1.5v30.7c0 1.3-.6 1.7-1.7 1.7H808c-1.3 0-1.7-.8-1.8-1.5l-3.5-17.5h-47v25.2h34.1c1.7 0 2.4.8 2.4 2.2v8.7c0 2-.7 2.5-2.4 2.5h-34.1v29.7h46.8l3.4-18.2c.1-1.3.8-2.1 2.8-2.1h4.9c2 0 2.5.7 2.5 2.4V250c0 1.1-.4 2.4-2.2 2.4h-86.2z" />
+                        <path id="logo_element_R_2" class="fill-navy"
+                          d="M904.4 252.4c-3.2 0-5.3-1.8-7-4.5l-23.7-35c-.6-.7-.7-1.3-.7-2.2v-6.4c0-.8.3-1.4 1.1-1.4h8.3c16 0 23.8-5.5 23.8-17.9 0-11.1-8.3-15.7-19.5-15.7h-26.2v68.4h12.3c1.5 0 2.4.7 2.4 2.4v10.1c0 1.7-.7 2.4-2.5 2.4h-40.2c-1.7 0-2.4-.7-2.4-2.4v-10.1c0-1.7.7-2.4 2.4-2.4h13.2v-68.4h-13.2c-1.7 0-2.4-.7-2.4-2.4v-10.2c0-1.7.7-2.4 2.4-2.4h55.9c24 0 32.7 13.9 32.7 29.6s-9.5 29.2-29.2 29.9h-1.1l13.9 19.8c2.1 2.9 3.6 4.1 7.4 4.1h10.5c1.4 0 2.4.6 2.4 2.2v9.7c0 2.2-1.1 2.9-2.8 2.9h-17.8v-.1z" />
+                        <path id="logo_element_trademark" class="fill-navy"
+                          d="M956.5 166.7c0 7.4-5.8 13.2-13.4 13.2s-13.5-5.8-13.5-13.2 6-13 13.5-13c7.6-.1 13.4 5.7 13.4 13zm-23.4 0c0 5.8 4.2 10.4 10.2 10.4s9.9-4.6 9.9-10.3-4.2-10.4-10-10.4c-5.8-.2-10.1 4.5-10.1 10.3zm8.1 6.7h-3v-13c1.2-.2 2.8-.4 5-.4 2.5 0 3.6.4 4.6 1 .8.5 1.3 1.6 1.3 2.8 0 1.4-1.1 2.5-2.7 3v.1c1.3.4 2 1.4 2.4 3.2.4 2 .7 2.8 1 3.3h-3.3c-.4-.4-.7-1.6-1-3.2-.2-1.4-1.1-2.1-2.7-2.1h-1.4v5.3h-.2zm0-7.4h1.4c1.6 0 3-.5 3-2 0-1.2-.9-2-2.8-2-.8 0-1.3.1-1.6.1v3.9z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+
+              </div>
+
+              <div id="site_menu" class="col-3 col-lg-10">
+
+                                <div class="navigation-toggle-wrap">
+                  <div class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation" role="button">
+                    <div class="inner-nav-toggle">
+                      <span aria-label="Hamburger menu bracket 1" role="img"></span>
+                      <span aria-label="Hamburger menu bracket 2" role="img"></span>
+                      <span aria-label="Hamburger menu bracket 3" role="img"></span>
+                    </div>
+                  </div>
+                </div>
+
+                                <div id="navbarNavDropdown" class="navigation-wrap collapse navbar-collapse justify-content-lg-end">
+
+                                      <div id="mega-menu-wrap-primary" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-1' id='mega-toggle-block-1'><button aria-controls="mega-menu-primary" aria-expanded="false" aria-haspopup="true" aria-label="" class="mega-toggle-animated mega-toggle-animated-slider" type="button">
+                  <span class="mega-toggle-animated-box">
+                    <span class="mega-toggle-animated-inner"></span>
+                  </span>
+                </button></div></div></div><ul id="mega-menu-primary" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="body" data-second-click="go" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1199" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical"><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-18" id="mega-menu-item-18"><a class="mega-menu-link" href="https://navypier.org/eat-drink-and-play/" aria-expanded="false" aria-controls="mega-sub-menu-18">Eat, Drink &#038; Play<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-18'>
+<li class="mega-menu-row" id="mega-menu-18-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-18-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-2" id="mega-menu-item-text-2"><h4 class="mega-block-title">Explore Things To Do at Navy Pier</h4>			<div class="textwidget"><p>From recreation to relaxation &amp; entertainment to education, Navy Pier offers activities &amp; experiences for all.</p>
+<p><a href="/plan-your-visit/buy-tickets/">Buy Tickets</a></p>
+</div>
+		</li><li class="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-5" id="mega-menu-item-media_image-5"><img width="600" height="500" src="https://navypier.org/wp-content/uploads/2022/11/np-navigation-eat.jpg" class="image wp-image-242  attachment-full size-full" alt="np navigation eat" style="max-width: 100%; height: auto;" decoding="async" fetchpriority="high" srcset="https://navypier.org/wp-content/uploads/2022/11/np-navigation-eat.jpg 600w, https://navypier.org/wp-content/uploads/2022/11/np-navigation-eat-300x250.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-18-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-2" id="mega-menu-item-nav_menu-2"><div class="menu-eat-drink-play-container"><ul id="menu-eat-drink-play" class="menu"><li id="menu-item-216" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-216"><a href="https://navypier.org/eat-drink-and-play/">Eat, Drink &#038; Play</a></li>
+<li id="menu-item-4224" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4224"><a href="https://navypier.org/eat-drink-and-play/eat-and-drink/">Eat &#038; Drink</a></li>
+<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://navypier.org/eat-drink-and-play/rides-and-games/">Rides &#038; Games</a></li>
+<li id="menu-item-16575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16575"><a href="https://navypier.org/playthepark/">Play The Park Deal</a></li>
+<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://navypier.org/eat-drink-and-play/shopping/">Shopping</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="https://navypier.org/eat-drink-and-play/fireworks/">Fireworks</a></li>
+<li id="menu-item-16359" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_events menu-item-16359"><a href="https://navypier.org/pier-events/wintrust-winter-wonderfest/">Wintrust Winter WonderFest</a></li>
+<li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://navypier.org/eat-drink-and-play/cultural-attractions/">Cultural Attractions</a></li>
+<li id="menu-item-10236" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10236"><a href="/pier-locations/chicago-shakespeare-theater/">Chicago Shakespeare Theater</a></li>
+<li id="menu-item-10237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10237"><a href="/pier-locations/chicago-childrens-museum/">Chicago Children’s Museum</a></li>
+<li id="menu-item-15494" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_locations menu-item-15494"><a href="https://navypier.org/pier-locations/flyover/">Flyover</a></li>
+<li id="menu-item-15493" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_locations menu-item-15493"><a href="https://navypier.org/pier-locations/the-butterfly-house/">The Butterfly House</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://navypier.org/eat-drink-and-play/cultural-attractions/wellness-way/">Wellness Way</a></li>
+<li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-152"><a href="https://navypier.org/eat-drink-and-play/public-art-and-points-of-interest/">Public Art &#038; Points of Interest</a>
+<ul class="sub-menu">
+	<li id="menu-item-156" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://navypier.org/eat-drink-and-play/public-art-and-points-of-interest/">Public Art &#038; Points of Interest</a></li>
+	<li id="menu-item-15388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15388"><a href="https://navypier.org/route-66/">Route 66 Ceremonial Start</a></li>
+	<li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="https://navypier.org/eat-drink-and-play/public-art-and-points-of-interest/postcards/">Postcards</a></li>
+</ul>
+</li>
+<li id="menu-item-2045" class="external-link menu-item menu-item-type-custom menu-item-object-custom menu-item-2045"><a target="_blank" href="https://sablehotel.com/">Where to Stay</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-19" id="mega-menu-item-19"><a class="mega-menu-link" href="https://navypier.org/cruises-and-tours/" aria-expanded="false" aria-controls="mega-sub-menu-19">Cruises &#038; Tours<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-19'>
+<li class="mega-menu-row" id="mega-menu-19-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-19-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-3" id="mega-menu-item-text-3"><h4 class="mega-block-title">Explore Chicago by Land, Water, or Air</h4>			<div class="textwidget"><p>Whether you’re in town for the day or a life-long resident, tours of Chicago are a great way to get to know the city &amp; learn something.</p>
+<p><a href="/cruises-and-tours/">Find a Tour</a></p>
+</div>
+		</li><li class="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-3" id="mega-menu-item-media_image-3"><img width="600" height="500" src="https://navypier.org/wp-content/uploads/2022/11/np-navigation-cruises.jpg" class="image wp-image-241  attachment-full size-full" alt="np navigation cruises" style="max-width: 100%; height: auto;" decoding="async" srcset="https://navypier.org/wp-content/uploads/2022/11/np-navigation-cruises.jpg 600w, https://navypier.org/wp-content/uploads/2022/11/np-navigation-cruises-300x250.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-19-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-3" id="mega-menu-item-nav_menu-3"><div class="menu-cruises-tours-container"><ul id="menu-cruises-tours" class="menu"><li id="menu-item-215" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="https://navypier.org/cruises-and-tours/">Cruises &#038; Tours</a></li>
+<li id="menu-item-15490" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_locations menu-item-15490"><a href="https://navypier.org/pier-locations/city-cruises/">City Cruises</a></li>
+<li id="menu-item-15978" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_locations menu-item-15978"><a href="https://navypier.org/pier-locations/shoreline-sightseeing-cruises/">Shoreline Sightseeing Cruises</a></li>
+<li id="menu-item-11344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11344"><a href="https://navypier.org/cruises-and-tours/tall-ship-windy/">Tall Ship Windy</a></li>
+<li id="menu-item-11589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11589"><a href="https://navypier.org/cruises-and-tours/big-bus-tours/">Big Bus Tours</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://navypier.org/cruises-and-tours/architecture-and-sightseeing-cruises/">Architecture &#038; Sightseeing Cruises</a></li>
+<li id="menu-item-158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"><a href="https://navypier.org/cruises-and-tours/brunch-lunch-and-dinner-cruises/">Brunch Lunch &#038; Dinner Cruises</a></li>
+<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="https://navypier.org/cruises-and-tours/speedboat-tours-and-extreme-thrill-rides/">Speedboat Tours &#038; Extreme Thrill Rides</a></li>
+<li id="menu-item-160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a href="https://navypier.org/cruises-and-tours/specialty-and-holiday-cruises/">Specialty &#038; Holiday Cruises</a></li>
+<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="https://navypier.org/cruises-and-tours/groups-and-private-charters/">Groups &#038; Private Charters</a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"><a href="https://navypier.org/cruises-and-tours/bicycle-tours/">Bicycle Tours</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-20" id="mega-menu-item-20"><a class="mega-menu-link" href="https://navypier.org/events-and-public-programs/" aria-expanded="false" aria-controls="mega-sub-menu-20">Calendar<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-20'>
+<li class="mega-menu-row" id="mega-menu-20-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-20-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-4" id="mega-menu-item-text-4"><h4 class="mega-block-title">Fun Things To Do in Chicago</h4>			<div class="textwidget"><p>From cultural programming to seasonal celebrations, fireworks &amp; more. Discover fun &amp; free events all year long.</p>
+<p><a href="/pier-events/">Explore Calendar</a></p>
+</div>
+		</li><li class="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-4" id="mega-menu-item-media_image-4"><img width="600" height="500" src="https://navypier.org/wp-content/uploads/2022/11/np-navigation-events.jpg" class="image wp-image-243  attachment-full size-full" alt="np navigation events" style="max-width: 100%; height: auto;" decoding="async" srcset="https://navypier.org/wp-content/uploads/2022/11/np-navigation-events.jpg 600w, https://navypier.org/wp-content/uploads/2022/11/np-navigation-events-300x250.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-20-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-4" id="mega-menu-item-nav_menu-4"><div class="menu-events-public-programs-container"><ul id="menu-events-public-programs" class="menu"><li id="menu-item-15002" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-15002"><a href="https://navypier.org/pier-events/">Events &#038; Public Programs</a></li>
+<li id="menu-item-16358" class="menu-item menu-item-type-post_type menu-item-object-navy_pier_events menu-item-16358"><a href="https://navypier.org/pier-events/wintrust-winter-wonderfest/">Wintrust Winter WonderFest</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-21" id="mega-menu-item-21"><a class="mega-menu-link" href="https://navypier.org/plan-your-visit/" aria-expanded="false" aria-controls="mega-sub-menu-21">Visit<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-21'>
+<li class="mega-menu-row" id="mega-menu-21-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-21-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-5" id="mega-menu-item-text-5"><h4 class="mega-block-title">Experience More Than You Imagine&#8230;</h4>			<div class="textwidget"><p>Plan your visit to Navy Pier! With fun attractions &amp; activities to enjoy all year, there’s always a reason to spend a day at the Pier.</p>
+<p><a href="/plan-your-visit/getting-here-and-parking/parking-and-valet/">Make a Parking Reservation</a></p>
+</div>
+		</li><li class="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-6" id="mega-menu-item-media_image-6"><figure style="width: 1600px" class="wp-caption alignnone"><img width="1600" height="1067" src="https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo.jpg" class="image wp-image-8459  attachment-full size-full" alt="CityCruises Brunch Spring Family Photo" style="max-width: 100%; height: auto;" decoding="async" srcset="https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo.jpg 1600w, https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo-300x200.jpg 300w, https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo-1250x834.jpg 1250w, https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo-768x512.jpg 768w, https://navypier.org/wp-content/uploads/2025/10/citycruises-brunch-spring-family-photo-1536x1024.jpg 1536w" sizes="(max-width: 1600px) 100vw, 1600px" /><figcaption class="wp-caption-text">CityCruises Brunch Spring Family Photo</figcaption></figure></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-21-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-5" id="mega-menu-item-nav_menu-5"><div class="menu-plan-your-visit-container"><ul id="menu-plan-your-visit" class="menu"><li id="menu-item-218" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-218"><a href="https://navypier.org/plan-your-visit/">Plan Your Visit</a></li>
+<li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="https://navypier.org/plan-your-visit/sable-at-navy-pier/">Sable at Navy Pier</a></li>
+<li id="menu-item-192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a href="https://navypier.org/plan-your-visit/hours-and-admission/">Hours &#038; Admission</a></li>
+<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-193"><a href="https://navypier.org/plan-your-visit/buy-tickets/">Buy Tickets</a>
+<ul class="sub-menu">
+	<li id="menu-item-194" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="https://navypier.org/plan-your-visit/buy-tickets/">Buy Tickets</a></li>
+	<li id="menu-item-195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-195"><a href="https://navypier.org/plan-your-visit/buy-tickets/gondola/">VIP Gondola</a></li>
+	<li id="menu-item-196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-196"><a href="https://navypier.org/plan-your-visit/buy-tickets/pier-park/">Pier Park Rides</a></li>
+</ul>
+</li>
+<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197"><a href="https://navypier.org/plan-your-visit/manage-tickets/">Manage Tickets</a></li>
+<li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-198"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/">Getting Here &#038; Parking</a>
+<ul class="sub-menu">
+	<li id="menu-item-199" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-199"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/">Getting Here &#038; Parking</a></li>
+	<li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/bike-share/">Bike Share</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/charge-your-vehicle/">Charge Your Electric Vehicle</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/driving-directions/">Driving Directions</a></li>
+	<li id="menu-item-5943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5943"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/fisherman-discount-pass/">Fisherman Discount Pass</a></li>
+	<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/parking-and-valet/">Parking &#038; Valet</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/public-transportation/">Public Transportation</a></li>
+	<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="https://navypier.org/plan-your-visit/getting-here-and-parking/water-taxi/">Water Taxi</a></li>
+</ul>
+</li>
+<li id="menu-item-11526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11526"><a href="https://navypier.org/plan-your-visit/accessibility/">Accessibility and Accommodations</a></li>
+<li id="menu-item-7780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7780"><a href="https://navypier.org/pierpassport/">Navy Pier Passport</a></li>
+<li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206"><a href="https://navypier.org/plan-your-visit/groups-and-field-trips/">Groups &#038; Field Trips</a></li>
+<li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207"><a href="https://navypier.org/plan-your-visit/guest-services/">Guest Services</a></li>
+<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-208"><a href="https://navypier.org/plan-your-visit/guest-safety/">Guest Safety</a>
+<ul class="sub-menu">
+	<li id="menu-item-209" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="https://navypier.org/plan-your-visit/guest-safety/">Guest Safety</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="https://navypier.org/plan-your-visit/guest-safety/guest-code-of-conduct/">Guest Code of Conduct</a></li>
+</ul>
+</li>
+<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="https://navypier.org/plan-your-visit/faqs/">FAQs</a></li>
+<li id="menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213"><a href="https://navypier.org/plan-your-visit/navy-pier-map/">Navy Pier Map</a></li>
+<li id="menu-item-214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214"><a href="https://navypier.org/plan-your-visit/lost-and-found/">Lost &#038; Found</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-menu-grid mega-align-bottom-left mega-menu-item-22" id="mega-menu-item-22"><a class="mega-menu-link" href="https://navypier.org/support-the-pier/" aria-expanded="false" aria-controls="mega-sub-menu-22">Support<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu" role='presentation' id='mega-sub-menu-22'>
+<li class="mega-menu-row" id="mega-menu-22-0">
+	<ul class="mega-sub-menu" style='--columns:12' role='presentation'>
+<li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-22-0-0">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_text mega-menu-item-text-6" id="mega-menu-item-text-6"><h4 class="mega-block-title">A Not-For-Profit Landmark</h4>			<div class="textwidget"><p>Your donations bring the Pier to life with more than 245 free public programs each year. Support our mission here.</p>
+<p><a href="/support-the-pier/donate-today/">Donate Now</a></p>
+</div>
+		</li><li class="mega-menu-item mega-menu-item-type-widget widget_media_image mega-menu-item-media_image-7" id="mega-menu-item-media_image-7"><img width="600" height="500" src="https://navypier.org/wp-content/uploads/2022/11/np-navigation-support.jpg" class="image wp-image-245  attachment-full size-full" alt="np navigation support" style="max-width: 100%; height: auto;" decoding="async" srcset="https://navypier.org/wp-content/uploads/2022/11/np-navigation-support.jpg 600w, https://navypier.org/wp-content/uploads/2022/11/np-navigation-support-300x250.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></li>		</ul>
+</li><li class="mega-menu-column mega-menu-columns-6-of-12" style="--columns:12; --span:6" id="mega-menu-22-0-1">
+		<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-widget widget_nav_menu mega-menu-item-nav_menu-6" id="mega-menu-item-nav_menu-6"><div class="menu-support-the-pier-container"><ul id="menu-support-the-pier" class="menu"><li id="menu-item-219" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="https://navypier.org/support-the-pier/">Support the Pier</a></li>
+<li id="menu-item-10617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10617"><a href="https://navypier.org/gala/">The ExPIERience Gala</a></li>
+<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="https://navypier.org/support-the-pier/donate-today/">Donate Today</a></li>
+<li id="menu-item-7779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7779"><a href="https://navypier.org/pierpassport/">Navy Pier Passport</a></li>
+<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="https://navypier.org/support-the-pier/faces-of-the-pier/">Faces of the Pier</a></li>
+<li id="menu-item-223" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-223"><a href="https://navypier.org/support-the-pier/mission-and-values/">Mission &#038; Values</a>
+<ul class="sub-menu">
+	<li id="menu-item-224" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-224"><a href="https://navypier.org/support-the-pier/mission-and-values/">Mission &#038; Values</a></li>
+	<li id="menu-item-225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-225"><a href="https://navypier.org/support-the-pier/mission-and-values/centennial-vision/">Centennial Vision</a></li>
+	<li id="menu-item-226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-226"><a href="https://navypier.org/support-the-pier/mission-and-values/our-history/">Discover Our History</a></li>
+	<li id="menu-item-8850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8850"><a href="https://navypier.org/support-the-pier/public-reports/">Public Reports</a></li>
+</ul>
+</li>
+<li id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-227"><a href="https://navypier.org/support-the-pier/leadership/">Leadership</a>
+<ul class="sub-menu">
+	<li id="menu-item-228" class="section-title menu-item menu-item-type-post_type menu-item-object-page menu-item-228"><a href="https://navypier.org/support-the-pier/leadership/">Leadership</a></li>
+	<li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-230"><a href="https://navypier.org/support-the-pier/leadership/board-of-directors/">Board of Directors</a></li>
+	<li id="menu-item-14772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14772"><a href="https://navypier.org/support-the-pier/leadership/associate-board/">Navy Pier’s Associate Board</a></li>
+</ul>
+</li>
+<li id="menu-item-4588" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4588"><a href="/navy-pier-community-rides/">Making a Difference</a>
+<ul class="sub-menu">
+	<li id="menu-item-6829" class="section-title menu-item menu-item-type-custom menu-item-object-custom menu-item-6829"><a href="/navy-pier-community-rides/">Making a Difference</a></li>
+	<li id="menu-item-233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-233"><a href="https://navypier.org/navy-pier-community-rides/">Community Rides</a></li>
+	<li id="menu-item-3707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3707"><a href="https://navypier.org/donation-form/">Request a Donation</a></li>
+	<li id="menu-item-234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-234"><a href="https://navypier.org/support-the-pier/making-a-difference/sustainability/">Sustainability</a></li>
+	<li id="menu-item-14304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14304"><a href="https://navypier.org/small-business-development-initiatives/">Small Business Development Initiatives</a></li>
+	<li id="menu-item-14412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14412"><a href="https://navypier.org/small-business-accelerator-program/">Small Business Accelerator Program</a></li>
+</ul>
+</li>
+<li id="menu-item-235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a href="https://navypier.org/support-the-pier/partner-with-us/">Partner With Us</a></li>
+<li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a href="https://navypier.org/support-the-pier/articles/">Navy Pier Blog</a></li>
+</ul></div></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-11286" id="mega-menu-item-11286"><a class="mega-menu-link" href="https://navypier.org/navy-pier-marina/">Marina</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-11358" id="mega-menu-item-11358"><a class="mega-menu-link" href="https://navypier.org/event-center/">Event Center</a></li><li class="mega-nav-search-icon mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-25 nav-search-icon" id="mega-menu-item-25"><a class="mega-menu-link" href="#">Search</a></li><li class="mega-nav-button-a mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-23 nav-button-a" id="mega-menu-item-23"><a class="mega-menu-link" href="https://navypier.org/plan-your-visit/buy-tickets/">Tickets</a></li><li class="mega-nav-button-c mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-8046 nav-button-c" id="mega-menu-item-8046"><a class="mega-menu-link" href="https://navypier.org/pierpassport/">Pier Passport</a></li><li class="mega-nav-button-b mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-24 nav-button-b" id="mega-menu-item-24"><a class="mega-menu-link" href="https://navypier.org/support-the-pier/donate-today/">Donate</a></li></ul></div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+      </nav>
+
+    </header>
+
+
+        <div id="search_bar" aria-labelledby="search_title">
+      <div id="search_close" class="close-box" tabindex="0">
+        <div class="close-wrapper">
+          <div class="close-wrapper-inner">
+            <span aria-label="Close box bracket 1" role="img"></span>
+            <span aria-label="Close box bracket 2" role="img"></span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p id="search_title" class="sr-only">Search Site</p>
+            
+<form method="get" id="searchform" action="https://navypier.org/" role="search">
+	<label class="sr-only" for="s">Search</label>
+	<div class="input-group">
+		<input class="field form-control" id="s" name="s" type="text" placeholder="Search" value="">
+		<span class="input-group-append">
+			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit" value="">
+			<span class="search-icon arrow-link dark-arrow">
+				<svg class="search-button-svg" role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 57 56" viewBox="0 0 57 56">
+						<path class="circle" d="M-1124-12032.4h1c15.5 0 28 12.5 28 28s-12.5 28-28 28h-1c-15.5 0-28-12.5-28-28s12.5-28 28-28z" transform="translate(1152 12032.408)"/>
+						<path class="circle-stroke" d="M-1124-12031.9h1c15.2 0 27.5 12.3 27.5 27.5s-12.3 27.5-27.5 27.5h-1c-15.2 0-27.5-12.3-27.5-27.5s12.3-27.5 27.5-27.5z" transform="translate(1152 12032.408)"/>
+						<path class="arrow" d="m25.4 36.1 7.6-7.6-7.6-7.6"/></svg>
+			</span>
+		</span>
+	</div>
+</form>
+          </div>
+        </div>
+        <div class="row d-flex d-lg-none">
+          <div class="col-12">
+            <div id="search_close_mobile">
+              <p>Back to Menu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div id="main-body" class="body-content">
+
+	<main id="content" class="page-wrapper" data-page-id="16368">
+
+				
+<section id="navy_pier_event_hero" class="page-section padding-top-none padding-bottom-none background-light np-media-hero" data-section-type="navy-pier-media-hero" data-section-count="1">
+	<article class="np-event-hero">
+		<div class="hero-image">
+			<div class="hero-image-inner">
+				<img width="1920" height="1280" src="https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg" class="attachment-full size-full" alt="Families ice skating together at Winter WonderFest on Navy Pier in Chicago" sizes="100vw" loading="eager" fetchpriority="high" decoding="sync" srcset="https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero.jpg 1920w, https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero-300x200.jpg 300w, https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero-1250x833.jpg 1250w, https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero-768x512.jpg 768w, https://navypier.org/wp-content/uploads/2025/11/winter-wonderfest-ice-skating-navy-pier-chicago-hero-1536x1024.jpg 1536w" />			</div>
+
+			<!-- Mobile interaction buttons -->
+			<div class="mobile-hero-interaction-buttons">
+				<div class="interaction-button share-wrap">
+						<button class="share-toggle" id="share_launch" role="button" aria-pressed="false" tabindex="0">
+	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="share-icon" role="img"><path d="M17.713 15.03a4.01 4.01 0 0 0-2.856 1.195l-5.381-3.137c.098-.348.168-.709.168-1.088 0-.38-.07-.742-.169-1.09l5.378-3.14a4.009 4.009 0 0 0 2.86 1.2c2.217 0 4.022-1.805 4.022-4.024S19.93.923 17.713.923a4.028 4.028 0 0 0-4.024 4.023c0 .38.07.741.17 1.09l-5.38 3.139a4.008 4.008 0 0 0-2.857-1.198 4.028 4.028 0 0 0-4.024 4.022 4.028 4.028 0 0 0 4.024 4.023c1.117 0 2.128-.46 2.858-1.198l5.38 3.135c-.1.35-.17.712-.17 1.094a4.028 4.028 0 0 0 4.023 4.024 4.028 4.028 0 0 0 4.022-4.024 4.027 4.027 0 0 0-4.022-4.022Zm0-12.107c1.115 0 2.022.908 2.022 2.023s-.907 2.023-2.022 2.023c-1.117 0-2.024-.907-2.024-2.023s.907-2.023 2.024-2.023ZM5.622 14.022c-1.116 0-2.024-.907-2.024-2.022s.908-2.023 2.024-2.023c1.115 0 2.022.907 2.022 2.023s-.907 2.022-2.022 2.022Zm12.09 7.055a2.025 2.025 0 0 1-2.023-2.024c0-.367.106-.706.277-1.003.003-.006.008-.01.011-.014.003-.005.003-.011.006-.017.354-.589.993-.988 1.73-.988 1.115 0 2.022.907 2.022 2.022a2.025 2.025 0 0 1-2.022 2.024Z" /></svg>
+	  </button>
+	<div id="share_content" class="share-content inactive">
+	    <div class="share-link facebook-link">
+	      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F" target="_blank" rel="noopener">
+	        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link linkedin-link">
+	      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F" target="_blank" rel="noopener">
+	        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+	          <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link print-link">
+	      <a href="javascript:if(window.print)window.print()">
+	        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="print" class="svg-inline--fa fa-print fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M400 264c-13.25 0-24 10.74-24 24 0 13.25 10.75 24 24 24s24-10.75 24-24c0-13.26-10.75-24-24-24zm32-88V99.88c0-12.73-5.06-24.94-14.06-33.94l-51.88-51.88c-9-9-21.21-14.06-33.94-14.06H110.48C93.64 0 80 14.33 80 32v144c-44.18 0-80 35.82-80 80v128c0 8.84 7.16 16 16 16h64v96c0 8.84 7.16 16 16 16h320c8.84 0 16-7.16 16-16v-96h64c8.84 0 16-7.16 16-16V256c0-44.18-35.82-80-80-80zM128 48h192v48c0 8.84 7.16 16 16 16h48v64H128V48zm256 416H128v-64h256v64zm80-112H48v-96c0-17.64 14.36-32 32-32h352c17.64 0 32 14.36 32 32v96z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link email-link">
+	      <a href="mailto:?subject=Navy%20Pier%3A%20Wintrust%20Winter%20WonderFest%20Returns%20to%20Navy%20Pier%20for%20an%20Expanded%20Holiday%20Season&amp;body=Check%20out%20this%20press%20release%20from%20Navy%20Pier%3A%20https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F">
+	        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link close">
+	      <div id="share_content_close">
+	        <span aria-label="Close box bracket 1" role="img"></span>
+	        <span aria-label="Close box bracket 2" role="img"></span>
+	      </div>
+	    </div>
+	  </div>
+					</div>
+			</div>
+		</div>
+
+		<div class="hero-content">
+			<div class="container-fluid">
+
+				<div class="row align-items-end hero-top-row">
+					<div class="col-12 col-lg-8">
+						<h1>Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season</h1>
+											</div>
+
+					<div class="col-12 col-lg-4 d-flex flex-column align-items-lg-end">
+											</div>
+				</div>
+
+				<!-- Info bar -->
+				<div class="row hero-bottom-row">
+					<div class="col-12">
+						<div class="event-info-bar">
+							<div class="left-info">
+								<div class="button-wrap">
+									<p class="button-alt non-button">Jul. 28, 2026</p>
+								</div>
+								<span class="separator"><span class="line"></span></span>
+								<div class="button-wrap">
+									<a href="https://navypier.org/media-and-pr/" class="button-alt">All Media & PR</a>
+								</div>
+								<span class="separator"><span class="line"></span></span>
+							</div>
+							<div class="right-info">
+								<div class="hero-interaction-buttons">
+									<div class="share-wrap">
+											<button class="share-toggle" id="share_launch" role="button" aria-pressed="false" tabindex="0">
+	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="share-icon" role="img"><path d="M17.713 15.03a4.01 4.01 0 0 0-2.856 1.195l-5.381-3.137c.098-.348.168-.709.168-1.088 0-.38-.07-.742-.169-1.09l5.378-3.14a4.009 4.009 0 0 0 2.86 1.2c2.217 0 4.022-1.805 4.022-4.024S19.93.923 17.713.923a4.028 4.028 0 0 0-4.024 4.023c0 .38.07.741.17 1.09l-5.38 3.139a4.008 4.008 0 0 0-2.857-1.198 4.028 4.028 0 0 0-4.024 4.022 4.028 4.028 0 0 0 4.024 4.023c1.117 0 2.128-.46 2.858-1.198l5.38 3.135c-.1.35-.17.712-.17 1.094a4.028 4.028 0 0 0 4.023 4.024 4.028 4.028 0 0 0 4.022-4.024 4.027 4.027 0 0 0-4.022-4.022Zm0-12.107c1.115 0 2.022.908 2.022 2.023s-.907 2.023-2.022 2.023c-1.117 0-2.024-.907-2.024-2.023s.907-2.023 2.024-2.023ZM5.622 14.022c-1.116 0-2.024-.907-2.024-2.022s.908-2.023 2.024-2.023c1.115 0 2.022.907 2.022 2.023s-.907 2.022-2.022 2.022Zm12.09 7.055a2.025 2.025 0 0 1-2.023-2.024c0-.367.106-.706.277-1.003.003-.006.008-.01.011-.014.003-.005.003-.011.006-.017.354-.589.993-.988 1.73-.988 1.115 0 2.022.907 2.022 2.022a2.025 2.025 0 0 1-2.022 2.024Z" /></svg>
+	  </button>
+	<div id="share_content" class="share-content inactive">
+	    <div class="share-link facebook-link">
+	      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F" target="_blank" rel="noopener">
+	        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link linkedin-link">
+	      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F" target="_blank" rel="noopener">
+	        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+	          <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link print-link">
+	      <a href="javascript:if(window.print)window.print()">
+	        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="print" class="svg-inline--fa fa-print fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M400 264c-13.25 0-24 10.74-24 24 0 13.25 10.75 24 24 24s24-10.75 24-24c0-13.26-10.75-24-24-24zm32-88V99.88c0-12.73-5.06-24.94-14.06-33.94l-51.88-51.88c-9-9-21.21-14.06-33.94-14.06H110.48C93.64 0 80 14.33 80 32v144c-44.18 0-80 35.82-80 80v128c0 8.84 7.16 16 16 16h64v96c0 8.84 7.16 16 16 16h320c8.84 0 16-7.16 16-16v-96h64c8.84 0 16-7.16 16-16V256c0-44.18-35.82-80-80-80zM128 48h192v48c0 8.84 7.16 16 16 16h48v64H128V48zm256 416H128v-64h256v64zm80-112H48v-96c0-17.64 14.36-32 32-32h352c17.64 0 32 14.36 32 32v96z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link email-link">
+	      <a href="mailto:?subject=Navy%20Pier%3A%20Wintrust%20Winter%20WonderFest%20Returns%20to%20Navy%20Pier%20for%20an%20Expanded%20Holiday%20Season&amp;body=Check%20out%20this%20press%20release%20from%20Navy%20Pier%3A%20https%3A%2F%2Fnavypier.org%2Fmedia-and-pr%2Fwintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season%2F">
+	        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	          <path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path>
+	        </svg>
+	      </a>
+	    </div>
+	    <div class="share-link close">
+	      <div id="share_content_close">
+	        <span aria-label="Close box bracket 1" role="img"></span>
+	        <span aria-label="Close box bracket 2" role="img"></span>
+	      </div>
+	    </div>
+	  </div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</article>
+</section>
+
+		<section class="page-section padding-top-default padding-bottom-default background-light background-color-white" data-section-type="city-divider" data-section-count="2">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-10 offset-lg-1">
+						<div class="content-wrap wysiwyg-update">
+
+														
+															<h3 class="h3-style" style="text-align: center;">Wintrust Winter WonderFest Returns to Navy Pier for an Expanded Holiday Season</h3><p style="text-align: center;"><em>Chicago’s favorite indoor winter celebration returns with new presenting sponsor Wintrust, opening Thanksgiving weekend for more festive family fun</em></p><p><strong>CHICAGO (July 28, 2026)</strong> – <a href="https://navypier.org/">Navy Pier</a> announces the return of Wintrust Winter WonderFest, Chicago’s favorite indoor holiday celebration, with <a href="https://www.wintrust.com/">Wintrust Financial Corporation</a> serving as the event’s new presenting sponsor. The expanded holiday tradition will welcome guests from Friday, November 27, 2026 through Sunday, January 3, 2027, offering more days for families and friends to celebrate the season together.</p><p>Wintrust Winter WonderFest will transform Navy Pier’s Festival Hall into a 170,000-square-foot holiday destination filled with festive décor, immersive seasonal displays and family-friendly attractions. Guests can stroll through a sparkling forest filled with ornament-adorned trees, glide across the ice-skating rink, fly high on the Cliffhanger, ride the Arctic Express Train, and more.</p><p>“The holidays are a special time of the year at Navy Pier, when families and friends come together to celebrate, create traditions and make lasting memories,” said Navy Pier President and CEO Marilynn Gardner. “We are thrilled to welcome guests back for an expanded Wintrust Winter WonderFest season and especially proud to embark on this partnership with Wintrust. Together, we’re creating an experience that reflects our shared commitment to bringing people together through accessible, joyful experiences that celebrate the spirit of Chicago.”</p><p>Wintrust Winter WonderFest reflects Wintrust’s ongoing commitment to building strong, local relationships across Illinois and its growing Midwest footprint. As the official bank of Navy Pier, Wintrust continues to invest in partnerships and experiences that strengthen the communities it serves.</p><p>“As a community bank, we’re proud to support experiences that contribute to Chicago’s holiday festivities and create memorable experiences for visitors and residents alike,” Tim Crane, President and Chief Executive Officer of Wintrust. “Everyone deserves the chance to experience the magic of the holidays, and we’re proud to help make that possible through our presenting sponsorship of Wintrust Winter WonderFest at Navy Pier.”</p><p>Tickets for Wintrust Winter WonderFest go on sale Tuesday, July 28. General admission tickets are $27 when purchased at least 24 hours in advance of a visit. Tickets purchased within 24 hours of attendance, or onsite at the door, are $32. As a special limited-time offer, guests who purchase tickets by August 15 can take advantage of early bird pricing, with tickets available for just $13.50.</p><p>Admission includes access to the event and more than 10 indoor attractions, with select rides subject to height requirements. Children age two years old and under are admitted free. Discounted group pricing is available for parties of 20 or more, interested guests can email <a href="mailto:GroupSales@navypier.org">GroupSales@navypier.org</a> for more information. Guests can find daily operating hours, purchase advance tickets and learn more at navypier.org/winterwonderfest.</p><p>Hi-res photos from Navy Pier’s Wintrust Winter WonderFest are available <a href="https://www.dropbox.com/scl/fo/fh48oi15csx0ln7i8dbsn/AP95JYSs81bDKd7ry4Ws-bE?rlkey=x9pqhzyds7kstuv1nvon05zty&amp;st=uhswmp1i&amp;e=1&amp;dl=0">here.</a></p><h3 class="h3-style" style="text-align: left;">About Wintrust</h3><p style="text-align: left;">Wintrust is a financial holding company with approximately $71 billion in assets whose common stock is traded on the NASDAQ Global Select Market. Guided by its “Different Approach, Better Results” philosophy, Wintrust offers the sophisticated resources of a large bank while providing a community banking experience to each customer. Wintrust operates more than 200 retail banking locations through 16 community bank subsidiaries in the greater Chicago, southern Wisconsin, west Michigan, northwest Indiana, and southwest Florida market areas. In addition, Wintrust operates various non-bank business units, providing residential mortgage origination, wealth management, commercial and life insurance premium financing, short-term accounts receivable financing/outsourced administrative services to the temporary staffing services industry, and qualified intermediary services for tax-deferred exchanges. For more information, please visit <a href="http://www.wintrust.com">wintrust.com.</a></p>
+							
+																						<div class="about-section">
+									<h3 style="text-align: left;">About Navy Pier</h3><p>Located on Lake Michigan, Navy Pier is the most visited destination in the Midwest, stretching more than six city blocks and welcoming more than 8 million annual guests. Originally opened in 1916 as a shipping and recreation facility, this Chicago landmark showcases over 50 acres of parks, restaurants, attractions, retail shops, sightseeing and dining cruise boats, exposition facilities, and more. The Pier celebrated its 100th anniversary in 2016 with the unveiling of the Centennial Wheel, Polk Bros Park, and Peoples Energy Welcome Pavilion. Today, Navy Pier continues to usher in its second century with ongoing redevelopment efforts including the 223-room Sable hotel, the all-transient Navy Pier Marina, and thrilling new attractions such as Flyover Chicago. The Pier is proud to present free programming designed to inspire and engage communities across the city and globe, including the #1 Fireworks display in the nation. For more information, visit NavyPier.org.</p>
+
+
+								</div>
+													</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	
+</main>
+
+<footer id="page_footer" class="site-footer">
+  <section class="footer-section section-1 background-color-white background-light">
+    <div class="city-texture">
+      <div class="texture-wrap texture-gray-navy">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 234"
+             style="enable-background:new 0 0 2100 234" xml:space="preserve"><path
+            d="M2100 234v-43h-30.3v16.7h-3v6.8h-23.8v-5.4h-35.7v2.2h-3.4V227l-2.4-6.6h-4.6v-12.9h-3.9v-25h-6.6v-3.4h-5.4v3h-9.5v-1.7h-10.7v23.1h-4.6v4.4h-5.4v3.2h-14.9v-8.5h-3v-7.3h-26.7V221h-7.8v-26h-4.4v-2h-6.8v-2.6H1867v3.2l-7.8 2.2v18h-13.9l-6.3-9.5h-10.5v3.4h-7l-5.8 1.2v1.4h-6.6v10.2h-8.7v4.4h-3.9v-12.1h-11.9v-25.5h-2.4v-3.4l-6.1-3.4-7.8 3.9v-3H1753v7.1h-7.8v-2.7h-5.1v-3.4h-3.9v-2.2h-19.7v3.2h-3.2v3h-3.4v7.5h-3.6v-4.2h-4.8v4.2h-4.2v3.4h-4.4V183h-14.5v-29.4h-5.1v-10.9h-11.7v11.1h-5.6v11.1l-7.8-6.1h-9.5V138l-8.3-7-7.8.8V149h-12.4l-2 8.6V185h-3.2v-18.3l-3.2-5.4h-4.4l-4.4 4.4v7.3h-3v-65.8h-2.2v-6.1l-4.8-3.6-3.6 4.8v5.4h-3v4.2h-12.9v-4.6h-1.4v-6.6l-5.1-4.2-3.2 4.2v3l-2.6-59h-6.1v-4.4h-2.2l-.5-19.6h-.9l-.5 19.6h-5.2l-.4-17.5h-.9l-.4 17.9-3 1.7V46l-4.8 3-5.2 120.7h-16.2v3.4h-2.4v14.5h-5.1V164h-3V90.8h-17.3l-8.3 4.8v61.2h-4.4v3.9h-18.9V205h-6.3v-4.6h-12.4v8h-3.3v-59.7h-5.4v-26.3l-.8-1.2h-1.7v-5.4l-2.2-.8v-3l-2-.8-4.3-6.7h-3.2l-4.2 7.1-1.7.7v3.7l-1.4.3v5.4h-1.5l-.3 1.6v48.5h-2.4V115h-14.9l-6.8 3.6v53.2c0 1.2-19.5 0-19.5 0v-14.5h-9.2v-11.9l-2.2-5.4h-3V78.3h-1.5v25.9h-2.6v-6.6h-6.3v6.3h-2.2v-2.6h-3.4v18.3l-2.4 5.8v37.4h-3.4v3.2h-3.6v-16.8l-4.2-5h-11.8l-6.3 3.2v8.5h-3.4v4.4h-9.7v16.9h-6.1v-9.5l-11.9-2.6h-8.3v-5.4h-4.8v5.4h-.8v-32.8h-1.4l-3-1v-5.6h-10.9v6.1h-3.4l-3 1.4v26.2h-4.6v2.4h-2.4v-15.3h-4.4v-7.8h-7v7.8h-4.6v4.4h-7.3v-12.7H1180l-2.6 8.1v14.9h-7.3v-29.6h-10.9v5.4h-7.8v5.7l-4.6 3.1v17.1l-7.5 1.4v46.1h-3.6l-1.7 6.8h-1.4v-44.7h-4.2V144h-9.7v-5.9l-10.7-3.3h-19.5v16.1l-1 5.1-5.4 5.1-1.7 23.8-2.6 3.4-1.7 20.7v15.5h-5.1V90.1l-2-8.3v-14h-11.7v14.9h-2.4v18.7h-1.7s2-1.7-6.6-4.8c-8.5-3.2-24 4.6-24 4.6V194h-4.2v-15.1l-5.1-7.7v-22.1h-7.5v-22.7h-2.1v-4.5h-3.7v-2.1c-5.6-4.2-17.5-2.1-17.5-2.1v3.8h-2.4v4.2h-2v43.6h-5.8v-4.2l-4.2-5.8h-4.8l-3.2 4.2-3.9-7v-17.8h-31.4v8.5h-1.9v-9.1h-6.7v-82c0-2-2.4-2.2-2.4-2.2H902V59h-8.2c-5.5 0-5.5 5.2-5.5 5.2v74.3h-13.6v27.2h-18.9l-2.4 36.9-5.8-2v-6.1l-1.7-1.7v-15.1h-2.6v-16.3l-14.2-3.2-7.4 3.4H811V159h-4v-10h-43.7v3.5l-4.6-3.5h-9.5v-45.2l-1.4-22.6 1.4-26.2-1.2-43.9-4.2-5.6h-17.5v31.8L729 75h-8.5v64.8l-2-1.2V91.5l-3.9-3.6H712v-2.2l-2.2-.8h-3.6v2.6h-7.8V140h-4.2v3.2h-13.3V156h-1.2v-18l-3.9-20.5v-14.9L663.9 87l-2.2 2.2V42.5l-7.5-5.1h-33v92H618v15.1h-9.2v-43.9l-9.7-3.2h-28.4v11.7h-9.2v25.8h-9.2v25h-7.5v-24.8h-7.2v-6.8c-2.6-4.8-12-5.8-12-5.8h-11.7v6.9H503v5.7h-1.3v26.8H493v42.6h-2.8V178h-13.9v-23.7h-4.8v-62l-3.1-1.4h-4.2V58.4l-4.6-2.6-.7-31.3h-.9l-.7 30.8h-3.1l-.8-34.8h-.9l-.8 34.8h-4.8v34h-2.8v2.2h-6.7v70.2h-23.5v-4.5h-6l-1.3-1.3h-11.4v-1.5h-3.9v-26.7h-5.4v-5.2s-.8-1.1-3.7-1.1-4.3 1.1-4.3 1.1v5.2h-5.7v26.7h-5v1.9h-18.8v8.4h-4.2v3.1H336v16.3h-21.2v14.3h-18.3v13h-.2v-3.6h-8.1v2.5h-8.7V208h-7.3v-30.1l-10.3-1.1h-17.8v20.9h-3.6v-46.3h-18.9v-2.2h-10.3v2.5h-16.8v53.9h-10.1c.1-3.2-2.3-5.9-5.5-6.2H171v1.3h-3.6v6.8h-2.1v-28.9h-2.1v-3.2c-7.4-3.7-20.4-3.5-20.4-3.5v29.7h-7.3v1.4h-7.2v1.5h-1.2v2.5h-12.5v1.9H92v-4.2H68.2v-3.3H37.3v2.2h-4.8v11h-5.4v-11h-9.9v11h-2.6v-1.5h-1.2v2.2L0 216.5V234h2100z"/></svg>
+      </div>
+      <div class="emblem-wrap">
+        <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 98" style="enable-background:new 0 0 128 98"
+             xml:space="preserve"><g>
+            <path class="fill-building"
+                  d="M3.2 97.5h2c.2-2.7.3-5.3.5-7.9 0-.3.5-.6.8-1 .1 0 .2.1.4.1.1.4.3.8.3 1.3.2 1.9.3 3.7.5 5.6 0 .2.2.4.3.7-.1.2-.2.5-.3.8l.9.9H.3c.3-.2.5-.4.8-.7.1 0 .1.1.2.1v-2.7c.6 0 1.1.1 1.7.1v1.8c0 .4.1.6.2.9z"></path>
+            <path class="fill-building"
+                  d="M3.2 97.5c-.1-.3-.2-.5-.2-.8v-1.8c-.6 0-1.1-.1-1.7-.1v2.7c-.1 0-.1-.1-.2-.1-.3.2-.5.4-.8.7H0c.1-.2.1-.4.2-.6.3 0 .5-.1.9-.1 0-2-.1-3.9 0-5.9.1-1.9.2-3.9.4-5.8.6-.2.9-.1 1 .4.1.7.1 1.4.2 2.2.1 1 .2 1.9.2 2.9l.3 4.2v2.1zM12 98c0-.7.1-1.4.1-2.1v-5.5c0-.5 0-1-.8-.9-.1.3-.2.6-.2.8h-.2c-.1-.2-.2-.4-.2-.6-.1-.5-.2-.9-.4-1.4-.3-.8-.2-1.1.7-1.5.1.1.2.2.4.3l.3.3v.8c.5 0 1 .1 1.5.1v-.8c.2-.2.5-.4.7-.7.9.4 1 .6.6 1.5-.2.4-.2.9-.3 1.3-.1.2-.1.5-.2.7h-.2c-.1-.3-.1-.6-.2-.9-.7-.2-.8.3-.8.8v7.7c-.3.1-.5.1-.8.1z"></path>
+            <path class="fill-wheel"
+                  d="m28.9 49.7.3.3-.3-.3zM28.7 49v.4-.4zM29 52.9zM35.5 44.2l.3.6v3.3c0 .5-.1.8-.7.8-.5 0-.7-.2-.7-.7v-6.9c0-.3.1-.6.3-.8.1-.2.4-.3.6-.2.2 0 .4.3.4.4 0 .4-.1.8-.1 1.2-.3 0-.5 0-.8.1-.1.8.2 1.5.7 2.2zM32.1 41.7c-.2-1.1.1-1.7 1-1.5.2.1.6.4.6.6 0 2.4.1 4.9 0 7.3 0 .2-.4.6-.7.6-.3 0-.8-.3-.8-.4 0-1.2 0-2.3.1-3.5.1.3.2.6.4.9.1.3.2.5.3.8.1 0 .2-.1.3-.1.4-1.7-.4-3.1-.6-4.7h-.6zM30.2 45.6v-4.3c0-.2-.1-.4 0-.6.1-.2.4-.4.5-.5.1.2.4.4.4.6v3.8c0 .9-.1 1.7-.1 2.6l-.3-.6c-.1-.4-.3-.7-.5-1zM37 39.5c-.2.7-.4 1.5-.6 2.2-.4-.8-.1-1.9.6-2.2zM59.1 63.3c.3-.1.6-.2.9-.4-.3.1-.6.2-.9.4zM60.9 62.7c.2-.1.4-.1.6-.2-.2 0-.4.1-.6.2zM57.2 63.9c.2-.1.4-.1.7-.2-.2 0-.4.1-.7.2zM37.3 38.8c-.1.2-.1.4-.2.6.1-.2.1-.4.2-.6zM32.2 44v.5-.5zM56.7 64.1v-.2l.1.1s-.1 0-.1.1z"></path>
+            <path class="fill-building"
+                  d="M124.8 97.5h-2c-.2-2.7-.3-5.3-.5-7.9 0-.3-.5-.6-.8-1-.1 0-.2.1-.4.1-.1.4-.3.8-.3 1.2-.2 1.9-.3 3.7-.5 5.6 0 .2-.2.4-.3.7.1.2.2.5.3.8-.3.3-.6.6-.8.9h8.3c-.3-.2-.5-.4-.8-.7-.1 0-.1.1-.2.1v-2.7c-.6 0-1.1.1-1.7.1v1.8c-.1.5-.2.7-.3 1z"></path>
+            <path class="fill-building"
+                  d="M124.8 97.5c.1-.3.2-.5.2-.8v-1.8c.6 0 1.1-.1 1.7-.1v2.7c.1 0 .1-.1.2-.1.3.2.5.4.8.7h.3c-.1-.2-.1-.4-.2-.6-.3 0-.5-.1-.9-.1 0-2 .1-3.9 0-5.9-.1-1.9-.2-3.9-.4-5.8-.6-.2-.9-.1-1 .4-.1.7-.1 1.4-.2 2.2-.1 1-.2 1.9-.2 2.9l-.3 4.2v2.1zM116 98c0-.7-.1-1.4-.1-2.1v-5.5c0-.5 0-1 .8-.9.1.3.2.6.2.8h.2c.1-.2.2-.4.2-.6.1-.5.2-.9.4-1.4.3-.8.2-1.1-.7-1.5-.1.1-.2.2-.4.3l-.3.3v.8c-.5 0-1 .1-1.5.1v-.8c-.2-.2-.5-.4-.7-.7-.9.4-1 .6-.6 1.5.2.4.2.9.3 1.3.1.2.1.5.2.7h.2c.1-.3.1-.6.2-.9.7-.2.8.3.8.8v7.7c.3.1.5.1.8.1z"></path>
+            <path class="fill-wheel"
+                  d="m99.1 49.7-.3.3.3-.3zM99.3 49v.4-.4zM99 52.9zM92.5 44.2l-.3.6v3.3c0 .5.1.8.7.8.5 0 .7-.2.7-.7v-6.9c0-.3-.1-.6-.3-.8-.1-.2-.4-.3-.6-.2-.2 0-.4.3-.4.4 0 .4.1.8.1 1.2.3 0 .5 0 .8.1.1.8-.2 1.5-.7 2.2zM95.9 41.7c.2-1.1-.1-1.7-1-1.5-.2.1-.6.4-.6.6 0 2.4-.1 4.9 0 7.3 0 .2.4.6.7.6.3 0 .8-.3.8-.4 0-1.2 0-2.3-.1-3.5-.1.3-.2.6-.4.9-.1.3-.2.5-.3.8-.1 0-.2-.1-.3-.1-.4-1.7.4-3.1.6-4.7h.6zM97.8 45.6v-4.3c0-.2.1-.4 0-.6-.1-.2-.4-.4-.5-.5-.1.2-.4.4-.4.6v3.8c0 .9.1 1.7.1 2.6l.3-.6c.1-.4.3-.7.5-1zM91 39.5c.2.7.4 1.5.6 2.2.4-.8.1-1.9-.6-2.2zM68.9 63.3c-.3-.1-.6-.2-.9-.4.3.1.6.2.9.4zM67.1 62.7c-.2-.1-.4-.1-.6-.2.2 0 .4.1.6.2zM70.8 63.9c-.2-.1-.4-.1-.7-.2.2 0 .4.1.7.2zM90.7 38.8c.1.2.1.4.2.6-.1-.2-.1-.4-.2-.6zM95.8 44v.5-.5zM71.3 64.1v-.2l-.1.1s.1 0 .1.1z"></path>
+            <path class="fill-wheel"
+                  d="M98.7 29.5c-.4-2.7-1.2-5.3-2.3-7.9-1.6-3.8-3.7-7.2-6.4-10.1.1-.8-.2-1.2-1-1.3-.2-.1-.5-.2-.6-.3-2.2-2.2-4.7-4-7.4-5.5-1.6-.9-3.4-1.6-5.1-2.2-1.4-.5-2.8-1-4.2-1.3-1.4-.3-2.8-.6-4.1-.6C66.3 0 65.1 0 64 0s-2.3 0-3.4.1c-1.4 0-2.8.3-4.1.6-1.5.3-2.9.8-4.3 1.3-1.7.7-3.5 1.3-5.1 2.2-2.7 1.5-5.2 3.3-7.4 5.5-.2.2-.4.3-.6.3-.8.2-1.1.5-1 1.3-2.8 3-4.8 6.4-6.4 10.1-1.1 2.5-1.9 5.2-2.3 7.9-.4 2.7-.4 5.4-.5 8 0 .3.1.5.2.8.6-1.1 1.1-2.2 1.6-3.3.2-.4.3-.9.4-1.3 0-2.2.3-4.4.9-6.5.4-1.4.7-2.7 1.3-4.1.5-1.4 1.2-2.7 1.9-3.9 1.2-1.9 2.6-3.7 4-5.5.2-.2.6-.3.9-.4.1.1.1.2.2.3-.1.2-.1.5-.3.7-2.1 2.3-3.8 4.9-5.1 7.8-1.2 2.5-2 5.1-2.6 7.8-.1.7-.1 1.4-.1 2.2.2-.2.5-.4.7-.7.1.2.2.3.3.5.3.8.6 1.7 1 2.5.6 1.4 1.3 2.7 2 4 .1.2.4.4.6.6-.1-.2-.2-.4-.3-.7.3-.1.4-.1.6-.1h20.1c.8 0 1.4.1 1.5 1 .1.4.4.8.7 1.4C54 45.6 48.5 51 42.8 56.5c-1.2-.4-2.2-2-2.1-3.5v-1.1c0-.6-.2-.7-.9-.6.3.7.6 1.3 0 2.1-.4-.7-.7-1.4-1.1-2.1-.1-.2-.2-.4-.4-.5-.6-.6-.9-1.2-.8-2.1.2-1.2.2-2.4.2-3.7 0-.2-.3-.4-.4-.6l-.1.1v3c-.9-.1-1.1-2-.3-3.1-.1-.1-.3-.2-.5-.4-.1 1-.2 2-.2 3 0 .7 0 1.4.8 1.8.1 0 .1.5 0 .6-.8.4-.6 1.1-.6 1.8 0 1.3 0 1.3 1.1 1.6-.2.2-.3.4-.5.6 0 1 .1 2.1.1 3.1l2.4.3c0 .3 0 .6-.1.8-.7.9-.3 2-.3 3 .1-.1.3-.1.5-.2.1.4.1.8.2 1.2.1.9.4 1.3 1.3 1.2 1-.1 1.7.5 2.4 1 .4.3.9.5 1.2.9.4.4.7.8.9 1.3.2.6.4.9 1.1.8.5 0 1-.1 1.5 0 .2 0 .4.3.6.5.1 0 .3-.1.4-.1 1.1-.5 2.2-1.1 3.3-1.6 1-.4 2-.8 3-1.3-.4-.2-.9-.4-1.3-.5-.8-.2-1-.7-.6-1.4l1.8-4.2 1.8-4.2c.5-1.3 1.1-2.5 1.6-3.8.6-1.4 1.1-2.8 1.7-4.1.6-1.3 1.2-2.7 1.8-4 .1-.2.4-.3.7-.4.1.2.3.4.3.7v18.1c0 .9-.2 1.6-1.1 1.8.6 0 1.2-.3 1.8-.3.6 0 1.2.3 1.8.3-1-.2-1.1-.9-1.1-1.8V42.4c0-.2.2-.4.3-.7.2.1.6.2.7.4.6 1.3 1.2 2.7 1.8 4 .6 1.4 1.1 2.8 1.7 4.1.5 1.3 1.1 2.5 1.6 3.8l1.8 4.2 1.8 4.2c.3.7.2 1.2-.6 1.4-.5.1-.9.4-1.3.5 1 .4 2 .8 3 1.3 1.1.5 2.2 1.1 3.3 1.6.1.1.3.1.4.1.2-.2.4-.4.6-.5.5-.1 1 0 1.5 0 .7.1.9-.2 1.1-.8.1-.5.5-.9.9-1.3.3-.4.8-.6 1.2-.9.7-.5 1.4-1.1 2.4-1 .9.1 1.2-.3 1.3-1.2 0-.4.1-.8.2-1.2.2.1.4.2.5.2 0-1 .3-2-.3-3-.1-.2-.1-.5-.1-.8l2.4-.3c0-1 .1-2.1.1-3.1-.1-.2-.3-.4-.5-.6 1.2-.3 1.2-.3 1.1-1.6 0-.7.2-1.4-.6-1.8-.1 0 0-.5 0-.6.8-.4.8-1.2.8-1.8 0-1-.1-2-.2-3-.2.1-.3.2-.5.4.8 1.2.6 3-.3 3.1v-3l-.1-.1c-.2.2-.4.4-.4.6 0 1.2 0 2.5.2 3.7.1.9-.2 1.5-.8 2.1-.2.1-.3.3-.4.5-.4.7-.7 1.4-1.1 2.1-.6-.8-.4-1.5 0-2.1-.7-.2-.9 0-.9.6V53c.1 1.4-.9 3-2.1 3.5C79.5 51 74 45.6 68.4 40.1c.3-.5.6-.9.7-1.4.2-.9.7-1 1.5-1h20.1c.2 0 .4.1.6.1-.1.3-.2.5-.3.7.2-.2.5-.3.6-.6.7-1.3 1.4-2.7 2-4 .4-.8.7-1.6 1-2.5.1-.1.2-.2.3-.5l.7.7c0-.7 0-1.5-.1-2.2-.5-2.7-1.4-5.3-2.6-7.8-1.3-2.8-3-5.5-5.1-7.8-.2-.2-.2-.5-.3-.7.1-.1.1-.2.2-.3.3.1.7.2.9.4 1.4 1.8 2.7 3.6 4 5.5.8 1.2 1.4 2.6 1.9 3.9.5 1.3.9 2.7 1.3 4.1.6 2.1 1 4.3.9 6.5.1.4.2.9.4 1.3.5 1.1 1.1 2.2 1.6 3.3.1-.3.2-.5.2-.8.1-2.3.1-5-.2-7.5zM64.7 2c5 .3 9.7 1.3 14 3.5 3.2 1.6 6.1 3.6 8.6 6.3-.5.6-.8.5-1.3.1-1.2-1.1-2.5-2.2-3.8-3.2C79.7 6.9 77 5.5 74 4.6c-2.2-.7-4.5-1-6.8-1.5-.8-.2-1.7-.2-2.7-.3.2-.1.2-.4.2-.8zm17.5 9.9c0 .2-.3.3-.5.4-2.3.4-2.7.1-2.9-2.2 0-.1 0-.1.1-.4.3 0 .8-.1 1.1 0 .8.4 1.4 1 2.1 1.5.1.1.2.4.1.7zm-7.6-4.1c0 .2-.3.5-.5.5-.8.1-1.5.1-2.3 0-.2 0-.5-.3-.5-.5-.1-.5 0-1.1 0-1.9 1.2.4 2.2.7 3.1 1.1.2.1.3.6.2.8zM49.2 5.6c4.4-2.2 9.1-3.3 14-3.5 0 .4 0 .6.1 1-.9.1-1.8.1-2.7.3-2.3.4-4.6.8-6.8 1.5-2.9.9-5.7 2.3-8.2 4.1-1.3 1-2.6 2.1-3.8 3.2-.5.4-.8.4-1.3-.1 2.7-2.9 5.5-4.9 8.7-6.5zm7.5 2.2c0 .2-.3.5-.5.5-.8.1-1.5.1-2.3 0-.2 0-.5-.3-.5-.5s.1-.7.2-.8c1-.4 2-.7 3.1-1.1.1.8.1 1.3 0 1.9zm-7.5 2.3c-.3 2.3-.7 2.6-2.9 2.2-.2 0-.4-.2-.5-.4 0-.2 0-.5.2-.7.7-.5 1.4-1.1 2.1-1.5.3-.2.7 0 1.1 0v.4zm-7.7 5.2c.1-.1.3-.2.5-.2.8.1 1.5 1.7 1.2 2.4h-3.1c0-.1-.1-.1-.1-.2.4-.7.9-1.4 1.5-2zm-5.2 8.2c.3-.7.6-1.5 1.1-2.2.2-.4 1.4-.2 2 .2 0 .6-.1 1.2-.1 1.8 0 .5-.2.7-.8.7h-2.1c.1-.2-.1-.4-.1-.5zm-2.1 7.6c.2-1 .5-1.9.7-2.7 1.4-.2 1.8.2 1.6 1.5-.1.4-.1.8-.2 1.3-.6-.1-1.3-.1-2.1-.1zm25.1 2.1c-.3.9-.6 1.8-1 2.7-.1.2-.4.4-.6.4H36.6c-.4 0-.9-.3-1.1-.6-.5-.7-.8-1.5-1.2-2.5h1.4c.8.1 1.1-.3 1.2-1 .1-1.1.2-2.3.3-3.4 0-.7-.5-.8-1.1-1-.4-.1-.7-.1-1.2-.2.2-.7.3-1.3.4-1.8 1.1.1 2.2.1 3.2.1.9 0 1.2-.3 1.2-1.1.1-1.1.1-2.2.2-3.3 0-.5-.2-.8-.7-.9h-1.6c.6-.9 1.1-1.7 1.6-2.5.1 0 .2.1.2.1 0 .1.1.3.1.4.1.8.4 1.1 1.2 1 .6-.1 1.3 0 1.9 0 .7 0 1.1-.3 1.1-1.1v-1.3c.1 0 .1-.1.2-.1l1.8 1.5c1.4 1.4 2.7 2.8 4.1 4.1l4 4c1.8 1.8 3.5 3.6 5.2 5.4.2.4.3.8.3 1.1zM49.1 64.7c-1.1-.7-2.4-1.1-3.4-2.3.5 0 .8-.1 1 0 .8.4 1.6.9 2.3 1.4.4.2.5.5.1.9zm1.9-2.3c-2.6-1.2-5.1-2.7-7.2-4.9 5.5-5.5 10.9-11 16.4-16.4.1.1.2.1.3.2-3.2 7-6.3 14-9.5 21.1zm8.9-31.3c-5-5-10-10-15-15.1-.3-.3-.5-.8-.8-1.1-.4-.4-.8-.7-1.3-1.2l2.1-1.8c.1 0 .2.1.2.1 0 .4.1.8.1 1.1 0 .7.4 1 1.1 1.1h2c.7 0 1.1-.3 1.2-1 .1-1.1.2-2.3.3-3.4 0-.3-.2-.7-.3-1.1 1-.5 2-.9 3.2-1.5.1.7.2 1.2.2 1.8.1 1 .5 1.3 1.4 1.4H56c.8 0 1.3-.4 1.4-1.3.1-.8 0-1.6.1-2.4 0-.8.2-1 1.1-1.1.8-.1 1.6-.2 2.5-.3.2 0 .5 0 .9-.1v1.7c0 1.4.1 1.4 1.4 1.8 0 .1.1.3.1.5V30c0 .9-.7.9-1.2 1.1-.2.1-.5.1-.7.2-.8.6-1.2.4-1.7-.2zM64 39c-1.4-.1-2.6-1.4-2.6-2.8 0-1.3 1.2-2.6 2.6-2.7 1.3.1 2.6 1.3 2.6 2.7 0 1.4-1.2 2.7-2.6 2.8zm14.9 25.7c-.4-.4-.3-.7.1-.9.8-.5 1.5-.9 2.3-1.4.2-.1.5 0 1 0-1 1.2-2.3 1.6-3.4 2.3zm5.3-7.2c-2.1 2.2-4.6 3.6-7.2 4.9-3.2-7.2-6.3-14.1-9.4-21.1.1-.1.2-.1.3-.2 5.3 5.5 10.8 10.9 16.3 16.4zM68.1 31.1c-.5.5-.9.8-1.6.2-.2-.2-.5-.1-.7-.2-.5-.2-1.2-.2-1.2-1.1V9.2c0-.2 0-.3.1-.5 1.3-.4 1.4-.4 1.4-1.8V5.2c.4 0 .7 0 .9.1.8.1 1.6.2 2.5.3.8.1 1 .3 1.1 1.1 0 .8 0 1.6.1 2.4.1.9.5 1.3 1.4 1.3h1.7c1 0 1.3-.4 1.4-1.4 0-.5.1-1.1.2-1.8 1.2.6 2.2 1 3.2 1.5-.1.4-.3.8-.3 1.1.1 1.2.2 2.3.3 3.4.1.7.5 1 1.2 1h2c.7 0 1.1-.3 1.1-1.1 0-.4 0-.8.1-1.1.1 0 .2-.1.2-.1l2.1 1.8c-.5.5-1 .8-1.3 1.2-.3.3-.5.8-.8 1.1L68.1 31.1zm25.1-2.8c.2.9.4 1.8.7 2.7h-2.1c-.1-.5-.1-.9-.2-1.3-.3-1.2.2-1.6 1.6-1.4zm-2.6-7c.4.7.7 1.5 1.1 2.2 0 .1-.1.3-.2.4h-2.1c-.5 0-.7-.2-.8-.7 0-.6-.1-1.1-.1-1.8.7-.4 1.9-.5 2.1-.1zm-2.1-3.1c.1 0 .2-.1.2-.1.5.8 1 1.6 1.6 2.5h-1.6c-.5 0-.8.4-.7.9.1 1.1.1 2.2.2 3.3.1.9.4 1.2 1.2 1.1 1 0 2.1-.1 3.2-.1.1.5.3 1.1.4 1.8-.4.1-.8.1-1.2.2-.5.1-1.1.3-1.1 1 0 1.2.1 2.3.3 3.4.1.7.4 1.1 1.2 1h1.4c-.5 1-.8 1.8-1.2 2.5-.2.3-.7.6-1.1.6H70.2c-.2 0-.5-.2-.6-.4-.4-.9-.7-1.8-1-2.7-.1-.3 0-.7.2-.9 1.7-1.8 3.5-3.6 5.2-5.4l4-4c1.4-1.4 2.7-2.8 4.1-4.1.6-.6 1.2-1 1.8-1.5.1 0 .1.1.2.1v1.3c0 .7.4 1 1.1 1.1h1.9c.8.1 1.2-.3 1.2-1 .1-.3.1-.5.2-.6zm-.4-.9c0 .1-.1.1-.1.2h-3.1c-.4-.7.4-2.3 1.2-2.4.1 0 .4 0 .5.2.5.6 1 1.3 1.5 2z"></path>
+            <path class="fill-building"
+                  d="M64 39c1.4-.1 2.6-1.4 2.6-2.8 0-1.3-1.2-2.6-2.6-2.7-1.3.1-2.6 1.3-2.6 2.7 0 1.4 1.2 2.7 2.6 2.8z"></path>
+            <path class="fill-building"
+                  d="M109.4 78h-6.9c-.7 0-.9-.2-.9-1V59.1c0-.5 0-.9.5-1.2.2-.1.3-.6.2-.9-.1-.2-.4-.4-.7-.4-.6-.1-1.2 0-2 0 .1-1.2.3-2.2.4-3.3 0-.2-.1-.4-.1-.6-.2 0-.4 0-.6.1l-.3-1.5v-1.4l.3-.3c.1-.1.1-.2.2-.3v-.4c-.4-.4-.5-.9-.5-1.4v-7c0-.3.1-.7.3-.9.7-.9.7-.9-.1-1.7-.6-1.1-1.1-2.2-1.6-3.3-.2-.4-.3-.9-.4-1.3-.8-.3-.9-1-1.1-1.7-.2-.2-.5-.4-.7-.7-.1.2-.2.3-.3.5-.3.8-.6 1.7-1 2.5-.6 1.4-1.3 2.7-2 4-.1.2-.4.4-.6.6l-.3.3c.1.2.1.4.2.6l.1.1c.7.3 1 1.4.6 2.2 0 .8-.1 1.7-.1 2.5.1 1 .2 2 .2 3 0 .7 0 1.4-.8 1.8-.1 0-.1.5 0 .6.8.4.6 1.1.6 1.8 0 1.3 0 1.3-1.1 1.6.2.2.3.4.5.6 0 1-.1 2.1-.1 3.1l-2.4.3c0 .3 0 .6.1.8.7.9.3 2 .3 3v2.4c0 .2-.1.5-.1.7v8.3c0 .3-.1.6-.1 1.1-.7-.4-1.3-.8-1.8-1.2l-.1-.1c-.2-.1-.3-.2-.5-.4l-.1-.1c-.6-.4-1.3-.9-1.9-1.3-.1-.1-.2-.1-.2-.2-1.2-.7-2.4-1.4-3.7-2.1-.3-.2-.7-.4-1-.6-.1 0-.3-.1-.4-.1-1.1-.5-2.2-1.1-3.3-1.6-1-.4-2-.8-3-1.3l-1.2-.3c-.1 0-.1 0-.2-.1-.1 0-.3-.1-.4-.1-.2-.1-.4-.1-.7-.2-.4-.1-.8-.2-1.2-.4-.3-.1-.6-.2-.9-.4-.3-.1-.6-.1-.9-.2-.2-.1-.4-.1-.6-.2-.2 0-.5-.1-.7-.1-.6 0-1.2-.3-1.8-.3-.6 0-1.2.3-1.8.3-.2 0-.5.1-.7.1-.2.1-.4.1-.6.2-.3.1-.6.1-.9.2-.3.1-.6.2-.9.4-.4.1-.8.2-1.2.4-.2.1-.4.1-.7.2-.1 0-.3.1-.4.1-.1 0-.1 0-.2.1l-1.2.3c-1 .4-2 .8-3 1.3-1.1.5-2.2 1.1-3.3 1.6-.1.1-.3.1-.4.1-.3.2-.7.4-1 .6-1.2.7-2.4 1.4-3.7 2.1-.1.1-.2.1-.2.2-.6.4-1.3.9-1.9 1.3l-.1.1c-.2.1-.3.2-.5.4l-.1.1c-.6.4-1.1.7-1.8 1.2 0-.5-.1-.8-.1-1.1v-8.3c0-.2-.1-.5-.1-.7v-2.4c0-1-.3-2 .3-3 .1-.2.1-.5.1-.8l-2.4-.3c0-1-.1-2.1-.1-3.1.1-.2.3-.4.5-.6-1.2-.3-1.2-.3-1.1-1.6 0-.7-.2-1.4.6-1.8.1 0 0-.5 0-.6-.8-.4-.8-1.2-.8-1.8 0-1 .1-2 .2-3 0-.8-.1-1.7-.1-2.5-.4-.8 0-1.9.6-2.2l.1-.1c.1-.2.1-.4.2-.6l-.3-.3c-.2-.2-.5-.3-.6-.6-.7-1.3-1.4-2.7-2-4-.4-.8-.7-1.6-1-2.5-.1-.1-.2-.2-.3-.5l-.7.7c-.2.7-.3 1.4-1.1 1.7-.1.4-.2.9-.4 1.3-.5 1.1-1.1 2.2-1.6 3.3-.9.8-.8.8-.1 1.7.2.2.3.6.3.9v7c0 .6-.1 1-.5 1.4v.4c.1.1.1.2.2.3l.3.3c0 .5.1.9 0 1.4 0 .5-.2 1-.3 1.5-.2 0-.4 0-.6-.1-.1.2-.2.4-.1.6.1 1 .2 2.1.4 3.3h-2c-.3 0-.6.2-.7.4-.1.3 0 .7.2.9.5.3.5.8.5 1.2V77c0 .7-.2 1-.9 1h-6.9c-1 0-1.1.1-1.1 1.1V98h24.1c0-1.6.1-3.1.1-4.7 0-.3.1-.7.1-1.1h3.8c0 .3.1.6.1.9v4.1c0 .2.1.5.1.7h8.3c0-1.7-.1-3.4-.1-5.2 0-.2.4-.5.6-.5 1 0 2.1-.1 3.1 0 .3 0 .7.4.7.6v5h11c0-1.7-.1-3.4 0-5 0-.2.4-.6.7-.6 1-.1 2.1-.1 3.1 0 .2 0 .6.3.6.5 0 1.7 0 3.4-.1 5.2H83c0-.2.1-.5.1-.7v-4.1c0-.3.1-.6.1-.9H87c0 .4.1.7.1 1.1 0 1.6.1 3.1.1 4.7h24.1V79.1c-.9-1-1-1.1-1.9-1.1zm-91.4.4c0 .1-.1.2-.1.4 0 .1-.1.2-.1.4v18.5-18.5c0-.1 0-.2.1-.4 0-.2.1-.3.1-.4h.6-.6zm12.8-29.5c-.4 0-.7-.2-.7-.7 0-.9 0-1.7.1-2.6v-4.3c0-.2-.1-.4 0-.6.1-.2.4-.4.5-.5.1.2.4.4.4.6v3.8c0 .9-.1 1.7-.1 2.6 0 .3.1.6.1 1 .2.3.2.7-.3.7zm2.9-.7c0 .2-.4.6-.7.6-.3 0-.8-.3-.8-.4 0-1.2 0-2.3.1-3.5 0-.1-.1-.2-.1-.4V44c0-.8-.1-1.5-.1-2.3-.2-1.1.1-1.7 1-1.5.2.1.6.4.6.6v7.4zm2.1 0c0 .5-.1.8-.7.8-.5 0-.7-.2-.7-.7v-6.9c0-.3.1-.6.3-.8.1-.2.4-.3.6-.2.2 0 .4.3.4.4 0 .4-.1.8-.1 1.2 0 .8-.1 1.6-.1 2.4l.3.6v3.2zm4.4 24.9c.3-.1.5-.3.7-.5-.2.2-.5.4-.7.5zm46.9-.5c.2.3.6.4.9.6l-.9-.6zm5.8-23.7c-.5 0-.7-.3-.7-.8v-3.3c0-.2.2-.4.3-.6 0-.8-.1-1.6-.1-2.4 0-.4-.1-.8-.1-1.2 0-.2.2-.4.4-.4s.5.1.6.2c.2.2.2.5.3.8v6.9c0 .6-.2.8-.7.8zm3-7.2c0 .8-.1 1.5-.1 2.3v.5c0 .1-.1.2-.1.4 0 1.2.1 2.3.1 3.5 0 .2-.5.5-.8.4-.2 0-.7-.4-.7-.6v-7.3c0-.2.3-.6.6-.6.9-.3 1.3.3 1 1.4zm1.3 7.2c-.5 0-.5-.4-.5-.8 0-.3.1-.6.1-1 0-.9-.1-1.7-.1-2.6v-3.8c0-.2.3-.4.4-.6.2.2.4.3.5.5.1.2 0 .4 0 .6v4.3c0 .9 0 1.7.1 2.6.2.6 0 .8-.5.8zM110 78.4h-.6.6z"></path>
+          </g></svg>
+      </div>
+    </div>
+  </section>
+
+
+      <section class="footer-section section-2 background-color-navy background-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 offset-lg-2 text-center">
+            <h3>Let's Stay in Touch</h3>
+            <div class="form-wrap">
+              
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_1' ><div id='gf_1' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+                            <p class='gform_description'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/media-and-pr/wintrust-winter-wonderfest-returns-to-navy-pier-for-an-expanded-holiday-season/#gf_1' data-formid='1' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_1_1" class="gfield gfield--type-email gfield--width-quarter gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_1'><span class='gform-field-label__text'>Email</span><span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_1' id='input_1_1' type='email' value='' class='large'   placeholder='Email *' aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_1_3" class="gfield gfield--type-text gfield--width-quarter field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_3'><span class='gform-field-label__text'>First Name</span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_1_3' type='text' value='' class='large'    placeholder='First Name'  aria-invalid="false"   /></div></div><div id="field_1_4" class="gfield gfield--type-text gfield--width-quarter field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_4'><span class='gform-field-label__text'>Last Name</span></label><div class='ginput_container ginput_container_text'><input name='input_4' id='input_1_4' type='text' value='' class='large'    placeholder='Last Name'  aria-invalid="false"   /></div></div><div id="field_submit_1" class="gfield gfield--type-submit gfield--width-quarter field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  data-field-class="gform_editor_submit_container" data-field-position="inline" ><button type='submit' id='gform_submit_button_1' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' class='gform-button gform-button--white  button gform_image_button'  ><img src='/wp-content/uploads/2022/11/submit-footer-2.svg' alt='Submit'></button></div></div></div>
+        <div class='gform-footer gform_footer top_label'>  
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_1' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_1' id='gform_theme_1' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_1' id='gform_style_settings_1' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='oJQnPpJHt6OgDy5/deTep2jz0hjQ2p72bHbF+5791qQv8SRUhMgS0YIXNTfw4idKP3BCWLQl/ouwv/Ag2tAH9nG8Xb111u5SYtD3CsyYB361FlI=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJ7XCJnZm9ybV9zdWJtaXNzaW9uX21ldGhvZFwiOltcIjc5ZDU4NjlmM2JiYmM5NTY3NmU4MWM2NmI2MTA0YzJlXCIsXCJlNDdjNDQ4MjViYWZiZWRmNzhlMjU4MWQ2NjBiMDY5MVwiXSxcImdmb3JtX3RoZW1lXCI6XCI0ZTQ3YzRlNWVkNjZhOTkwZTZlNDdlMTQ1MDkzNGRkZVwiLFwiZ2Zvcm1fc3R5bGVfc2V0dGluZ3NcIjpcImY5NWM5YjYyN2YxZDlmZjdjNjkwZWMyYTZjMDZhOGY3XCIsXCJmb3JtX2lkXCI6XCJkM2U4ZDMzMDQ3NmU4Y2FhOGU3NTI2YTUxYzVjMTY3OFwiLFwidXJsXCI6XCJmNzFlMzhjNWMyOGI4ZThhMTA2NDc0YWYyNWU1YWVhOVwiLFwic3RhdGVfdGltZXN0YW1wXCI6XCIxYjJlYWY5MmZiMTE1MDExNTA0NDZjODM1OWQxMGJmZlwifSIsIjhkNDI0ZGUzZmRjYzZlMWQzOTNlYTljMWY3ODFkZDI5IiwxNzkwODQ0ODA1XQ==' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>            </div>
+          </div>
+                      <div class="col-12 col-lg-10 offset-lg-1 text-center form-detail">
+              <p style="text-align: center;">By submitting this form, you are consenting to receive marketing emails from: Navy Pier, 600 East Grand Avenue, Chicago, IL, 60611, US, https://navypier.org/. You can revoke your consent to receive emails at any time by using the SafeUnsubscribe® link, found at the bottom of every email. <a href="https://www.constantcontact.com/legal/about-constant-contact" target="_blank" rel="noopener">Emails are serviced by Constant Contact</a>.</p>
+
+
+            </div>
+                  </div>
+
+      </div>
+    </section>
+
+    <section class="footer-section section-2-to-3 background-color-navy-dark background-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 text-center">
+            <div class="button-wrap">
+              <a href="https://www.justpark.com/10054004" target="_blank" class="button external-link footer-parking-reservation-button" role="link">Make a Parking Reservation <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" class="external-icon"><path d="M304 24c0 13.3 10.7 24 24 24H430.1L207 271c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l223-223V184c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24H328c-13.3 0-24 10.7-24 24zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V440c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-section section-3 background-color-navy-dark background-dark">
+      <div class="container">
+
+                  <div class="row">
+            <div class="col-12 text-center">
+              <nav class="footer-menu">
+                <ul>
+                                        <li>
+                        <a href="/contact-us/" target="">
+                          Contact Us                        </a>
+                      </li>
+                                          <li>
+                        <a href="/media-and-pr/" target="">
+                          Media & PR                        </a>
+                      </li>
+                                          <li>
+                        <a href="/careers/" target="">
+                          Careers                        </a>
+                      </li>
+                                          <li>
+                        <a href="/plan-your-visit/faqs/" target="">
+                          FAQs                        </a>
+                      </li>
+                                          <li>
+                        <a href="/plan-your-visit/lost-and-found/" target="">
+                          Lost & Found                        </a>
+                      </li>
+                                          <li>
+                        <a href="/plan-your-visit/guest-safety/guest-code-of-conduct/" target="">
+                          Code of Conduct                        </a>
+                      </li>
+                                          <li>
+                        <a href="/privacy-policy/" target="">
+                          Privacy Policy                        </a>
+                      </li>
+                                          <li>
+                        <a href="/terms-of-use/" target="">
+                          Terms of Use                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://navypier.org/contest-rules/" target="">
+                          Contest Rules                        </a>
+                      </li>
+                                          <li>
+                        <a href="https://navypier.org/support-the-pier/articles/" target="">
+                          Blog                        </a>
+                      </li>
+                                    </ul>
+              </nav>
+            </div>
+          </div>
+        
+                  <div class="row">
+            <div class="col-12 text-center">
+              <div class="footer-logos">
+                <ul>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://reyescocacola.com/" target="_blank" itemprop="url" aria-label="Link to https://reyescocacola.com/">                                              <img src="https://navypier.org/wp-content/uploads/2022/10/np-footer-logo-reyes.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="np footer logo reyes logo" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://www.nm.org/" target="_blank" itemprop="url" aria-label="Link to https://www.nm.org/">                                              <img src="https://navypier.org/wp-content/uploads/2023/07/Northwestern_Medicine_logo.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="Northwestern Medicine logo" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://www.peoplesgasdelivery.com/" target="_blank" itemprop="url" aria-label="Link to https://www.peoplesgasdelivery.com/">                                              <img src="https://navypier.org/wp-content/uploads/2023/08/np-footer-logo-peoples-gas.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://www.polkbrosfdn.org/" target="_blank" itemprop="url" aria-label="Link to https://www.polkbrosfdn.org/">                                              <img src="https://navypier.org/wp-content/uploads/2022/10/np-footer-logo-polk-bros.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="np footer logo polk bros" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://www.wintrust.com/" target="_blank" itemprop="url" aria-label="Link to https://www.wintrust.com/">                                              <img src="https://navypier.org/wp-content/uploads/2026/06/wintrust-footer-logo.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="Wintrust logo used in the Navy Pier website footer" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                      <li itemscope itemtype="https://schema.org/Brand">
+                      <a href="https://rythmdrinks.com/" target="_blank" itemprop="url" aria-label="Link to https://rythmdrinks.com/">                                              <img src="https://navypier.org/wp-content/uploads/2026/08/rythm-full-wordmark-footer-logo.svg" srcset="" sizes="(max-width: ) 100vw, "                          alt="Full RYTHM wordmark logo used in the Navy Pier website footer" class="logo" itemprop="logo" loading="lazy"/>
+                                            </a>                    </li>
+                                  </ul>
+              </div>
+            </div>
+          </div>
+        
+                <div class="row">
+          <div class="col-12 text-center">
+            <p>600 E. Grand Avenue, Chicago, IL 60611</p>
+                          <p><a
+                  href="tel:+18005957437">1-800 595-PIER (7437)</a>
+              </p>
+                      </div>
+        </div>
+
+                  <div class="row">
+            <div class="col-12 col-lg-8 offset-lg-2 text-center">
+              <div class="footer-social-media">
+                <ul>
+                                      <li>
+                      <a href="https://twitter.com/navypier" target="_blank"
+                         aria-label="Navy Pier Twitter Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle class="outer-circle" cx="17" cy="17" r="17"/><path class="icon" d="M22,9.2h2.6l-5.8,6.6,6.8,9h-5.3l-4.2-5.5-4.8,5.5h-2.7l6.2-7.1-6.5-8.5h5.5l3.8,5,4.4-5ZM21,23.2h1.5l-9.5-12.5h-1.6l9.6,12.5Z"/></svg>                      </a>
+                    </li>
+                                      <li>
+                      <a href="https://www.facebook.com/navypierchicago" target="_blank"
+                         aria-label="Navy Pier Facebook Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" class="outer-circle" /><path d="m-993.9-11386 .4-2.8h-2.7v-1.8c-.1-.8.5-1.5 1.3-1.5h1.5v-2.4c-.7-.1-1.5-.2-2.2-.2-1.9-.1-3.6 1.3-3.7 3.2V-11388.7h-2.5v2.8h2.5v6.8h3.1v-6.8h2.3z" class="icon" transform="translate(1014.084 11404)" /></svg>                      </a>
+                    </li>
+                                      <li>
+                      <a href="https://www.instagram.com/navypierchicago/" target="_blank"
+                         aria-label="Navy Pier Instagram Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" class="outer-circle" /><path d="M-1036.2-11390.9c-2.2 0-3.9 1.7-3.9 3.9s1.7 3.9 3.9 3.9 3.9-1.7 3.9-3.9c0-2.1-1.7-3.9-3.9-3.9zm0 6.4c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5c.1 1.4-1.1 2.5-2.5 2.5zm5-6.6c0 .5-.4.9-.9.9s-.9-.4-.9-.9.4-.9.9-.9.9.4.9.9zm2.6 1c0-1.2-.4-2.3-1.2-3.2-.9-.8-2-1.2-3.2-1.2-1.3-.1-5-.1-6.3 0-1.2 0-2.3.4-3.2 1.2-.8.9-1.3 2-1.2 3.2-.1 1.3-.1 5 0 6.3 0 1.2.4 2.3 1.2 3.2.9.8 2 1.2 3.2 1.2 1.3.1 5 .1 6.3 0 1.2 0 2.3-.4 3.2-1.2.8-.9 1.2-2 1.2-3.2.1-1.3.1-5.1 0-6.3zm-1.6 7.6c-.3.7-.8 1.2-1.4 1.4-1.5.3-3 .4-4.5.3-1.5.1-3 0-4.5-.3-.7-.3-1.2-.8-1.4-1.4-.3-1.5-.4-3-.3-4.5-.1-1.5 0-3 .3-4.5.3-.7.8-1.2 1.4-1.4 1.5-.3 3-.4 4.5-.3 1.5-.1 3 0 4.5.3.7.3 1.2.8 1.4 1.4.3 1.5.4 3 .3 4.5.1 1.5 0 3-.3 4.5z" class="icon" transform="translate(1053.167 11404)" /></svg>                      </a>
+                    </li>
+                                      <li>
+                      <a href="https://www.youtube.com/c/navypier" target="_blank"
+                         aria-label="Navy Pier Youtube Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" class="outer-circle" /><path d="M-1106.7-11390.9c-.2-.7-.7-1.2-1.4-1.4-2.1-.2-4.2-.4-6.3-.3-2.1 0-4.2.1-6.3.3-.7.2-1.2.7-1.4 1.4-.2 1.3-.3 2.6-.3 3.9 0 1.3.1 2.6.3 3.9.2.7.7 1.2 1.4 1.4 2.1.2 4.2.4 6.3.3 2.1 0 4.2-.1 6.3-.3.7-.2 1.2-.7 1.4-1.4.2-1.3.3-2.6.3-3.9.1-1.3 0-2.6-.3-3.9zm-9.3 6.3v-4.8l4.2 2.4-4.2 2.4z" class="icon" transform="translate(1131.335 11404)" /></svg>                      </a>
+                    </li>
+                                      <li>
+                      <a href="https://www.linkedin.com/company/navy-pier-inc-/" target="_blank"
+                         aria-label="Navy Pier LinkedIn Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" class="outer-circle"/><path d="M13.0046,24.09177h-3.33405v-10.73427h3.33405v10.73427ZM11.33578,11.89325c-1.06589,0-1.9308-.88286-1.9308-1.94875,0-.51321.20456-1.00129.56704-1.36377.36247-.36247.85415-.56704,1.36376-.56704s1.00129.20456,1.36376.56704c.36247.36247.56704.85415.56704,1.36377,0,1.06589-.86491,1.94875-1.9308,1.94875ZM25.47946,24.09177h-3.32687v-5.22537c0-1.24533-.02512-2.84237-1.73342-2.84237-1.73342,0-1.99899,1.353-1.99899,2.75265v5.3151h-3.33046v-10.73427h3.19767v1.46425h.04665c.44502-.84338,1.53244-1.73342,3.1546-1.73342,3.37352,0,3.99439,2.2215,3.99439,5.10694v5.89649h-.00359Z" class="icon"/></svg>                      </a>
+                    </li>
+                                      <li>
+                      <a href="https://www.tiktok.com/@navypierchicago" target="_blank"
+                         aria-label="Navy Pier TikTok Link">
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="enable-background:new 0 0 34 34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" class="outer-circle"/><path d="M25.3163,15.2896c-1.63391.00371-3.23068-.50503-4.56009-1.45566v6.63589c0,1.22914-.37506,2.42858-1.07689,3.43863-.70184,1.01005-1.69332,1.78244-2.84449,2.2132-1.15116.43076-2.4063.50131-3.59831.19681-1.19201-.3045-2.26148-.96178-3.07101-1.88642-.80953-.92464-1.31084-2.07952-1.44824-3.30123-.1374-1.22172.10769-2.45457.6907-3.53518.58301-1.08061,1.48537-1.95698,2.58455-2.51399,1.09918-.55701,2.33575-.76125,3.55375-.59415v3.33837c-.55701-.17453-1.15488-.17082-1.70818.01485-.5533.18567-1.03605.54216-1.37397,1.01376-.33792.47161-.51988,1.04347-.51617,1.63019.00371.58672.1931,1.15116.53845,1.62277s.83181.82067,1.38882.99891c.55701.17825,1.15488.17825,1.70818-.00371.5533-.18196,1.03976-.53473,1.3814-1.00634.34163-.47161.52731-1.04347.52731-1.62648V7.49512h3.26782c-.00371.27479.02228.5533.07056.82438.11512.60529.34906,1.18458.69441,1.69704.34535.51245.79096.95064,1.30713,1.28485.73897.48646,1.6042.7464,2.488.7464v3.24553l-.00371-.00371Z" class="icon"/></svg>                      </a>
+                    </li>
+                                  </ul>
+              </div>
+            </div>
+          </div>
+        
+        <div class="row copyright">
+          <div class="col-12 text-center">
+            <p>Copyright &copy; 2026 Navy Pier, Inc., Chicago, IL. All Rights Reserved.</p>
+                          <p>Site by <a href="https://freydesigngroup.com/?src=navypier" target="_blank" aria-label="Frey Design Group Website Link" >Frey Design Group</a></p>
+                      </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+</div> 
+<div id="language_select">
+  <div class="language-wrap">
+    <div class="language-trigger">
+      <div class="icon-wrap" role="button" aria-label="Language Toggle" tabindex="1">
+        <p>Translate</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M456 164C467 164 476 172.1 476 184V188H536C547 188 556 196.1 556 208C556 219 547 228 536 228H534L532.4 232.5C523.5 256.1 509.9 279.1 492.7 297.9C493.6 298.4 494.5 298.1 495.4 299.5L514.3 310.8C523.8 316.5 526.8 328.8 521.1 338.3C515.5 347.8 503.2 350.8 493.7 345.1L474.8 333.8C470.4 331.1 465.1 328.3 461.7 325.3C451.2 332.8 439.8 339.3 427.8 344.7L424.1 346.3C414 350.8 402.2 346.2 397.7 336.1C393.2 326 397.8 314.2 407.9 309.7L411.5 308.1C417.9 305.2 424.1 301.1 430 298.3L417.9 286.1C410 278.3 410 265.7 417.9 257.9C425.7 250 438.3 250 446.1 257.9L460.7 272.4L461.3 272.1C473.7 259.9 483.8 244.7 491.1 227.1H384C372.1 227.1 364 219 364 207.1C364 196.1 372.1 187.1 384 187.1H436V183.1C436 172.1 444.1 163.1 456 163.1L456 164zM140.1 276L160 233.2L179 276H140.1zM576 64C611.3 64 640 92.65 640 128V384C640 419.3 611.3 448 576 448H64C28.65 448 0 419.3 0 384V128C0 92.65 28.65 64 64 64H576zM576 112H320V400H576C584.8 400 592 392.8 592 384V128C592 119.2 584.8 112 576 112zM178.3 175.9C175.1 168.7 167.9 164 160 164C152.1 164 144.9 168.7 141.7 175.9L77.72 319.9C73.24 329.1 77.78 341.8 87.88 346.3C97.97 350.8 109.8 346.2 114.3 336.1L123.2 315.1H196.8L205.7 336.1C210.2 346.2 222 350.8 232.1 346.3C242.2 341.8 246.8 329.1 242.3 319.9L178.3 175.9z"/></svg>
+      </div>
+    </div>
+    <div class="language-select">
+      <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<style>
+    .google_translate_element .goog-te-gadget-simple {
+    background-image: linear-gradient(135deg, #000 0, #000 100%);
+    border-radius: 0px !important;
+    border: 1px solid #fff !important;
+    }
+    .google_translate_element .goog-te-menu-value {
+        color: #fff !important;
+            }
+    .google_translate_element{
+        display:none!important;
+    }
+    </style>
+<script>
+window.wpatConfig = {"languages":{"ar":{"lang_name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","lang_name_english":"Arabic","lang_name_native":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","lang_code":"ar","country_code":"sa"},"zh-CN":{"lang_name":"\u7b80\u4f53\u4e2d\u6587","lang_name_english":"Chinese (Simplified)","lang_name_native":"\u7b80\u4f53\u4e2d\u6587","lang_code":"zh-CN","country_code":"cn"},"en":{"lang_name":"English","lang_name_english":"English","lang_name_native":"English","lang_code":"en","country_code":"gb"},"de":{"lang_name":"Deutsch","lang_name_english":"German","lang_name_native":"Deutsch","lang_code":"de","country_code":"de"},"ko":{"lang_name":"\ud55c\uad6d\uc5b4","lang_name_english":"Korean","lang_name_native":"\ud55c\uad6d\uc5b4","lang_code":"ko","country_code":"kr"},"pl":{"lang_name":"Polski","lang_name_english":"Polish","lang_name_native":"Polski","lang_code":"pl","country_code":"pl"},"es":{"lang_name":"Espa\u00f1ol","lang_name_english":"Spanish","lang_name_native":"Espa\u00f1ol","lang_code":"es","country_code":"es"}},"buttonIcon":"dashicons-translation","dropdownBorderThickness":1,"dropdownBorderColor":"#000","dropdownBackgroundColor":"#fff","dropdownHoverColor":"#356177","dropdownFontHoverColor":"#fff","dropdownFontSelectedColor":"#356177","dropdownFontColor":"#000","dropdownFontFamily":"","widgetType":"minimalist","baseLanguage":"en","dropdownShadow":false,"autoDetect":"disabled","hostLanguage":"en","wrapperSelector":"","excludedSelectors":[],"minimalistShadowCss":"","googleMountId":"wpat-google-translate-element","googleScriptUrl":"https:\/\/translate.google.com\/translate_a\/element.js?cb=googleTranslateElementInit","isPreviewMode":false,"telemetry":{"ajaxUrl":"https:\/\/navypier.org\/wp-admin\/admin-ajax.php","nonce":"72c0eb8c57"},"messages":{"loading":"Switching language.","error":"Translation unavailable. Please try again."}};
+var wpatLanguagesCountries = window.wpatConfig.languages;
+var wpatButtonIcon = window.wpatConfig.buttonIcon;
+var wpatDropdownBorderThickness = window.wpatConfig.dropdownBorderThickness;
+var wpatDropdownBorderColor = window.wpatConfig.dropdownBorderColor;
+var wpatDropdownBackgroundColor = window.wpatConfig.dropdownBackgroundColor;
+var wpatDropdownHoverColor = window.wpatConfig.dropdownHoverColor;
+var wpatDropdownFontHoverColor = window.wpatConfig.dropdownFontHoverColor;
+var wpatDropdownFontSelectedColor = window.wpatConfig.dropdownFontSelectedColor;
+var wpatDropdownFontColor = window.wpatConfig.dropdownFontColor;
+var wpatDropdownFontFamily = window.wpatConfig.dropdownFontFamily;
+var wpatWidgetType = window.wpatConfig.widgetType;
+var wpatBaseLanguage = window.wpatConfig.baseLanguage;
+var wpatDropdownShadow = window.wpatConfig.dropdownShadow;
+var wpatAutoDetect = window.wpatConfig.autoDetect;
+var wpatHostLanguage = window.wpatConfig.hostLanguage;
+</script>
+<div id="wpat-google-translate-element" class="google_translate_element wpat-google-translate-root" aria-hidden="true"></div><!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="auto_translate_button_wrapper  auto_detect_disabled">
+    <div class="
+            auto_translate_minimalist
+            notranslate
+			wpat_min_base_style_compact            wpat_min_style_flags            wpat_min_layout_dropdown            wpat_min_txt_display_name			wpat_min_text_divider_none            wpat_invisible
+            wpat_min_txt_underline            "
+     data-wpat-selector-instance="wpat-selector-1917773470"
+     style="
+        --wpat-min-border-color: #f0f0f0;
+        --wpat-min-border-thickness: 1px;
+        --wpat-min-background-color: #fff;
+        --wpat-min-font-color: #000;
+                --wpat-min-hover-color: #fff;
+        --wpat-min-font-hover-color: #000;
+     "
+     translate="no">
+    <script type="application/json" class="wpat_selector_config">{"instanceId":"wpat-selector-1917773470","dropdownId":"wpat-minimalist-dropdown-1599337533","widgetType":"minimalist","baseLanguage":"en","hostLanguage":"en","autoDetect":"disabled","layout":"dropdown","baseStyle":"compact","textDisplay":"name","style":"flags","iconClass":"dashicons-admin-site-alt3","chevronClass":"dashicons-arrow-down-alt2","languages":{"ar":{"lang_code":"ar","lang_name":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","lang_name_native":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","country_code":"sa","display_label":"\u0627\u0644\u0639\u0631\u0628\u064a\u0629","search_text":"ar \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629"},"zh-CN":{"lang_code":"zh-CN","lang_name":"\u7b80\u4f53\u4e2d\u6587","lang_name_native":"\u7b80\u4f53\u4e2d\u6587","country_code":"cn","display_label":"\u7b80\u4f53\u4e2d\u6587","search_text":"zh-CN \u7b80\u4f53\u4e2d\u6587 \u7b80\u4f53\u4e2d\u6587 \u7b80\u4f53\u4e2d\u6587"},"en":{"lang_code":"en","lang_name":"English","lang_name_native":"English","country_code":"gb","display_label":"English","search_text":"en English English English"},"de":{"lang_code":"de","lang_name":"Deutsch","lang_name_native":"Deutsch","country_code":"de","display_label":"Deutsch","search_text":"de Deutsch Deutsch Deutsch"},"ko":{"lang_code":"ko","lang_name":"\ud55c\uad6d\uc5b4","lang_name_native":"\ud55c\uad6d\uc5b4","country_code":"kr","display_label":"\ud55c\uad6d\uc5b4","search_text":"ko \ud55c\uad6d\uc5b4 \ud55c\uad6d\uc5b4 \ud55c\uad6d\uc5b4"},"pl":{"lang_code":"pl","lang_name":"Polski","lang_name_native":"Polski","country_code":"pl","display_label":"Polski","search_text":"pl Polski Polski Polski"},"es":{"lang_code":"es","lang_name":"Espa\u00f1ol","lang_name_native":"Espa\u00f1ol","country_code":"es","display_label":"Espa\u00f1ol","search_text":"es Espa\u00f1ol Espa\u00f1ol Espa\u00f1ol"}},"languageCodes":["ar","zh-CN","en","de","ko","pl","es"],"messages":{"loading":"Switching language.","error":"Translation unavailable. Please try again."}}</script>
+    <button type="button"
+        id="wpat-minimalist-dropdown-1599337533-trigger"
+        class="wpat_lang_item wpat_lang_selected"
+        aria-controls="wpat-minimalist-dropdown-1599337533"
+        aria-expanded="false"
+        aria-haspopup="listbox">
+        <div class="wpat_flag_wrapper">
+            <div class="wpat_flag" data-icon-class="dashicons-admin-site-alt3" data-wpat-flag-emoji=""></div>
+            <div class="wpat_lang_name skiptranslate"></div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate"></div>
+        </div>
+        <span class="dashicons wpat_chevron dashicons-arrow-down-alt2"></span>
+    </button>
+    <span class="wpat_status_message skiptranslate notranslate" aria-live="polite"></span>
+    <div id="wpat-minimalist-dropdown-1599337533" class="wpat_minimalist_dropdown wpat_closed" role="listbox" aria-labelledby="wpat-minimalist-dropdown-1599337533-trigger">
+        <div class="wpat_dropdown_panel">
+        <div class="wpat_popup_search_wrap">
+            <label class="screen-reader-text" for="wpat-minimalist-dropdown-1599337533-search">Search language</label>
+            <span class="dashicons dashicons-search wpat_popup_search_icon" aria-hidden="true"></span>
+            <input id="wpat-minimalist-dropdown-1599337533-search" class="wpat_popup_search_input" type="search" autocomplete="off" aria-controls="wpat-minimalist-dropdown-1599337533" placeholder=" " />
+            <span class="wpat_popup_search_placeholder" aria-hidden="true">Search</span>
+        </div>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-ar" class="wpat_lang_item" data-lang-code="ar" data-lang-name="العربية" data-lang-native="العربية" data-wpat-search="ar العربية العربية العربية" data-wpat-label="العربية" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag sa" data-wpat-flag-emoji="🇸🇦"></div>
+            <div class="wpat_lang_name skiptranslate">العربية</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">ar</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-zh-CN" class="wpat_lang_item" data-lang-code="zh-CN" data-lang-name="简体中文" data-lang-native="简体中文" data-wpat-search="zh-cn 简体中文 简体中文 简体中文" data-wpat-label="简体中文" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag cn" data-wpat-flag-emoji="🇨🇳"></div>
+            <div class="wpat_lang_name skiptranslate">简体中文</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">zh-CN</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-en" class="wpat_lang_item" data-lang-code="en" data-lang-name="english" data-lang-native="english" data-wpat-search="en english english english" data-wpat-label="English" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag gb" data-wpat-flag-emoji="🇬🇧"></div>
+            <div class="wpat_lang_name skiptranslate">English</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">en</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-de" class="wpat_lang_item" data-lang-code="de" data-lang-name="deutsch" data-lang-native="deutsch" data-wpat-search="de deutsch deutsch deutsch" data-wpat-label="Deutsch" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag de" data-wpat-flag-emoji="🇩🇪"></div>
+            <div class="wpat_lang_name skiptranslate">Deutsch</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">de</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-ko" class="wpat_lang_item" data-lang-code="ko" data-lang-name="한국어" data-lang-native="한국어" data-wpat-search="ko 한국어 한국어 한국어" data-wpat-label="한국어" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag kr" data-wpat-flag-emoji="🇰🇷"></div>
+            <div class="wpat_lang_name skiptranslate">한국어</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">ko</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-pl" class="wpat_lang_item" data-lang-code="pl" data-lang-name="polski" data-lang-native="polski" data-wpat-search="pl polski polski polski" data-wpat-label="Polski" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag pl" data-wpat-flag-emoji="🇵🇱"></div>
+            <div class="wpat_lang_name skiptranslate">Polski</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">pl</div>
+        </button>
+                        <button type="button" id="wpat-minimalist-dropdown-1599337533-option-es" class="wpat_lang_item" data-lang-code="es" data-lang-name="español" data-lang-native="español" data-wpat-search="es español español español" data-wpat-label="Español" role="option" aria-selected="false" tabindex="-1">
+            <div class="wpat_flag es" data-wpat-flag-emoji="🇪🇸"></div>
+            <div class="wpat_lang_name skiptranslate">Español</div>
+            <div class="wpat_lang_name_code skiptranslate">&nbsp;-&nbsp;</div>
+            <div class="wpat_lang_code skiptranslate">es</div>
+        </button>
+                </div>
+    </div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  img[src*="arttrk.com/pixel/"] { position: absolute; left: 0; bottom: 0; }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/navypiercore/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="event-favorites-js-extra">
+var eventFavoritesVars = {"ajax_url":"https://navypier.org/wp-admin/admin-ajax.php"};
+var favoritesVars = {"ajax_url":"https://navypier.org/wp-admin/admin-ajax.php"};
+//# sourceURL=event-favorites-js-extra
+</script>
+<script id="event-favorites-js" src="https://navypier.org/wp-content/themes/navypiercore/js/event-favorites.js?ver=2.7.3.1770919749"></script>
+<script id="pojo-a11y-js-extra">
+var PojoA11yOptions = {"focusable":"","remove_link_target":"","add_role_links":"1","enable_save":"1","save_expiration":"12"};
+//# sourceURL=pojo-a11y-js-extra
+</script>
+<script id="pojo-a11y-js" src="https://navypier.org/wp-content/plugins/pojo-accessibility/modules/legacy/assets/js/app.min.js?ver=1.0.0"></script>
+<script id="navypiercore-vendor-scripts-js" src="https://navypier.org/wp-content/themes/navypiercore/dist/vendor.min.js?ver=2.7.3.1790268400"></script>
+<script id="navypiercore-scripts-js" src="https://navypier.org/wp-content/themes/navypiercore/dist/main.min.js?ver=2.7.3.1790268400"></script>
+<script id="hoverIntent-js" src="https://navypier.org/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="megamenu-js" src="https://navypier.org/wp-content/plugins/megamenu/js/maxmegamenu.min.js?ver=3.10.8"></script>
+<script id="wp-dom-ready-js" src="https://navypier.org/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="https://navypier.org/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://navypier.org/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js" src="https://navypier.org/wp-includes/js/dist/a11y.min.js?ver=31c6cec5a4ff7aff483d"></script>
+<script id="gform_json-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=3.1.2"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"wdOffset":0,"helpTextShort":"Press F1 for help","helpText":"Press the arrow keys to navigate by day, PageUp and PageDown to navigate by month, Alt+PageUp and Alt+PageDown to navigate by year, or Escape to cancel.","openOnFocusHelpText":"Press Down arrow to browse the calendar, or Escape to close.","tooltipTxt":"Press Escape to cancel","disabledTxt":"Disabled","markedTxt":"Selected","prevTxt":"Previous","nextTxt":"Next","monthTxt":"Month","yearTxt":"Year","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"days":[{"s":"S","l":"Sunday"},{"s":"M","l":"Monday"},{"s":"T","l":"Tuesday"},{"s":"W","l":"Wednesday"},{"s":"T","l":"Thursday"},{"s":"F","l":"Friday"},{"s":"S","l":"Saturday"}]}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://navypier.org/wp-content/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://navypier.org/wp-content/plugins/gravityforms","number_formats":[],"version_hash":"a8cb915c7f50dfe886ca01e8a4be5f77","countries":{"AF":"Afghanistan","AX":"\u00c5land Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BQ":"Bonaire, Sint Eustatius and Saba","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","CV":"Cabo Verde","KH":"Cambodia","CM":"Cameroon","CA":"Canada","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","CX":"Christmas Island","CC":"Cocos Islands","CO":"Colombia","KM":"Comoros","CD":"Congo, Democratic Republic of the","CG":"Congo","CK":"Cook Islands","CR":"Costa Rica","CI":"C\u00f4te d'Ivoire","HR":"Croatia","CU":"Cuba","CW":"Cura\u00e7ao","CY":"Cyprus","CZ":"Czechia","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","SZ":"Eswatini","ET":"Ethiopia","FK":"Falkland Islands","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GG":"Guernsey","GN":"Guinea","GW":"Guinea-Bissau","GY":"Guyana","HT":"Haiti","HM":"Heard Island and McDonald Islands","VA":"Holy See","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IR":"Iran","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KP":"Korea, Democratic People's Republic of","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People's Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LY":"Libya","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","MO":"Macao","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia","MD":"Moldova","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MK":"North Macedonia","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestine, State of","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"R\u00e9union","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","BL":"Saint Barth\u00e9lemy","SH":"Saint Helena, Ascension and Tristan da Cunha","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","MF":"Saint Martin","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SX":"Sint Maarten","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","SS":"South Sudan","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SE":"Sweden","CH":"Switzerland","SY":"Syria Arab Republic","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, the United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"T\u00fcrkiye","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UY":"Uruguay","UM":"US Minor Outlying Islands","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=3.1.2"></script>
+<script id="gform_placeholder-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=3.1.2"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=69a9db57304a9f86c3d1a0bea5fd2cf9"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=0c901cb641ce64b99c20ea1a4d208cc9"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"a8cb915c7f50dfe886ca01e8a4be5f77"},"ajax":{"ajaxurl":"https://navypier.org/wp-admin/admin-ajax.php","ajax_submission_nonce":"2571c3cb04","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://navypier.org/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"4d9ac5b871"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=e27d9712159624c99129c8c208f022ad"></script>
+<script type='text/javascript'>var gfZeroSpamConfig = {"forms":[{"ajaxUrl":"https:\/\/navypier.org\/wp-admin\/admin-ajax.php","fallbackToken":"MXwxNzkwODQ0ODA1fDE3OTE0NDk2MDV8ODM2NmVjOTcxZDljZTM2NzJiYTk5ZmM5YjE5OTczOTF8MQ.YmM4MTYxODUyYjcxMmRlOWIyOTE3YTlhOWNmYzRjYjVhOWM4OWY5Y2E5OWM5MmMxN2Y0YTQxNmM1MjA4NTEyOQ","formId":1,"timeout":3000}],"debug":false};</script>
+<script id="gf-zero-spam-js" defer='defer' src="https://navypier.org/wp-content/plugins/gravity-forms-zero-spam/dist/js/gf-zero-spam.js?ver=1790261529"></script>
+<script id="auto-translate-js" defer src="https://navypier.org/wp-content/plugins/auto-translate/public/js/auto-translate-public.min.js?ver=1790261554"></script>
+<script id="auto-translate-global-js" defer src="https://navypier.org/wp-content/plugins/auto-translate/global/js/auto-translate-global.min.js?ver=1790261554"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://navypier.org/wp-includes/js/wp-emoji-release.min.js?ver=dd43c9e47e1779919ab31f8bf9e0274b"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://navypier.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+		<a id="pojo-a11y-skip-content" class="pojo-skip-link pojo-skip-content" tabindex="1" accesskey="s" href="#content">Skip to content</a>
+				<nav id="pojo-a11y-toolbar" class="pojo-a11y-toolbar-right" aria-label="Accessibility Toolbar">
+			<div class="pojo-a11y-toolbar-toggle">
+				<a class="pojo-a11y-toolbar-link pojo-a11y-toolbar-toggle-link" href="javascript:void(0);" title="Accessibility Tools" role="button">
+					<span class="pojo-sr-only sr-only">Open toolbar</span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" width="1em">
+						<title>Accessibility Tools</title>
+						<path d="M50 .8c5.7 0 10.4 4.7 10.4 10.4S55.7 21.6 50 21.6s-10.4-4.7-10.4-10.4S44.3.8 50 .8zM92.2 32l-21.9 2.3c-2.6.3-4.6 2.5-4.6 5.2V94c0 2.9-2.3 5.2-5.2 5.2H60c-2.7 0-4.9-2.1-5.2-4.7l-2.2-24.7c-.1-1.5-1.4-2.5-2.8-2.4-1.3.1-2.2 1.1-2.4 2.4l-2.2 24.7c-.2 2.7-2.5 4.7-5.2 4.7h-.5c-2.9 0-5.2-2.3-5.2-5.2V39.4c0-2.7-2-4.9-4.6-5.2L7.8 32c-2.6-.3-4.6-2.5-4.6-5.2v-.5c0-2.6 2.1-4.7 4.7-4.7h.5c19.3 1.8 33.2 2.8 41.7 2.8s22.4-.9 41.7-2.8c2.6-.2 4.9 1.6 5.2 4.3v1c-.1 2.6-2.1 4.8-4.8 5.1z"/>					</svg>
+				</a>
+			</div>
+			<div class="pojo-a11y-toolbar-overlay">
+				<div class="pojo-a11y-toolbar-inner">
+					<p class="pojo-a11y-toolbar-title">Accessibility Tools</p>
+
+					<ul class="pojo-a11y-toolbar-items pojo-a11y-tools">
+																			<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Increase Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Increase Text</span>								</a>
+							</li>
+
+							<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Decrease Text</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Decrease Text</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Grayscale</title><path fill="currentColor" d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z"></path></svg></span><span class="pojo-a11y-toolbar-text">Grayscale</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>High Contrast</title><path fill="currentColor" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path></svg></span><span class="pojo-a11y-toolbar-text">High Contrast</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" tabindex="-1" role="button">
+
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Negative Contrast</title><path fill="currentColor" d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z"></path></svg></span><span class="pojo-a11y-toolbar-text">Negative Contrast</span>								</a>
+							</li>
+						
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Links Underline</title><path fill="currentColor" d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z"></path></svg></span><span class="pojo-a11y-toolbar-text">Links Underline</span>								</a>
+							</li>
+						
+													<li class="pojo-a11y-toolbar-item">
+								<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-readable-font" data-action="readable-font" data-action-group="toggle" tabindex="-1" role="button">
+									<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Readable Font</title><path fill="currentColor" d="M181.25 139.75l-42.5 112.5c24.75 0.25 49.5 1 74.25 1 4.75 0 9.5-0.25 14.25-0.5-13-38-28.25-76.75-46-113zM0 416l0.5-19.75c23.5-7.25 49-2.25 59.5-29.25l59.25-154 70-181h32c1 1.75 2 3.5 2.75 5.25l51.25 120c18.75 44.25 36 89 55 133 11.25 26 20 52.75 32.5 78.25 1.75 4 5.25 11.5 8.75 14.25 8.25 6.5 31.25 8 43 12.5 0.75 4.75 1.5 9.5 1.5 14.25 0 2.25-0.25 4.25-0.25 6.5-31.75 0-63.5-4-95.25-4-32.75 0-65.5 2.75-98.25 3.75 0-6.5 0.25-13 1-19.5l32.75-7c6.75-1.5 20-3.25 20-12.5 0-9-32.25-83.25-36.25-93.5l-112.5-0.5c-6.5 14.5-31.75 80-31.75 89.5 0 19.25 36.75 20 51 22 0.25 4.75 0.25 9.5 0.25 14.5 0 2.25-0.25 4.5-0.5 6.75-29 0-58.25-5-87.25-5-3.5 0-8.5 1.5-12 2-15.75 2.75-31.25 3.5-47 3.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Readable Font</span>								</a>
+							</li>
+																		<li class="pojo-a11y-toolbar-item">
+							<a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" tabindex="-1" role="button">
+								<span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Reset</title><path fill="currentColor" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path></svg></span>
+								<span class="pojo-a11y-toolbar-text">Reset</span>
+							</a>
+						</li>
+					</ul>
+									</div>
+			</div>
+		</nav>
+		<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.addEventListener('click', (e) => {
+      const btn = e.target.closest('[id^="swiper_launch_"]');
+      if (!btn) return;
+
+      // Derive the unique suffix ("6-1", "7-2", etc)
+      const suffix = btn.id.replace('swiper_launch_', '').replace('_', '-');
+      const swiperSelector = `.swiper-three-column-${suffix}`;
+
+      // Grab Swiper instance
+      const swiper = document.querySelector(swiperSelector)?.swiper;
+      if (!swiper) return console.warn('Swiper not found:', swiperSelector);
+
+      // Jump to first slide
+      swiper.slideTo(0);
+
+      // Trigger Fancybox open on the first slide's <a>
+      const firstLink = document.querySelector(`${swiperSelector} .swiper-slide a`);
+      if (firstLink) {
+        firstLink.click();
+      }
+    });
+  });
+</script>
+
+
+<script>
+  function handleMenuBreak() {
+    const menu = document.querySelector('.mega-nav-button-a')?.parentElement;
+    const breakElementClass = 'menu-break';
+    const existingBreak = menu?.querySelector(`.${breakElementClass}`);
+    const triggerWidth = 1499;
+
+    // Remove existing break if present
+    if (existingBreak) {
+      existingBreak.remove();
+    }
+
+    // If window is below threshold, insert break
+    if (window.innerWidth < triggerWidth) {
+      const button = document.querySelector('.mega-nav-button-a');
+      if (button && button.parentElement === menu) {
+        const breakItem = document.createElement('li');
+        breakItem.classList.add(breakElementClass);
+        menu.insertBefore(breakItem, button);
+      }
+    }
+  }
+
+  // Initial run
+  window.addEventListener('DOMContentLoaded', handleMenuBreak);
+  window.addEventListener('resize', handleMenuBreak);
+
+</script>
+
+<script>
+  function handleNavDivider() {
+    const searchIcon = document.querySelector('.mega-nav-search-icon');
+    const existingDivider = document.querySelector('.nav-divider');
+
+    // Only add if screen width is <= 1350 and the divider doesn't already exist
+    if (window.innerWidth <= 1350) {
+      if (searchIcon && !existingDivider) {
+        const divider = document.createElement('div');
+        divider.classList.add('nav-divider');
+        searchIcon.parentNode.insertBefore(divider, searchIcon.nextSibling);
+      }
+    } else {
+      // Remove the divider if screen is wider than 1350
+      if (existingDivider) {
+        existingDivider.remove();
+      }
+    }
+  }
+
+  // Run on load
+  window.addEventListener('DOMContentLoaded', handleNavDivider);
+  // Run on resize
+  window.addEventListener('resize', handleNavDivider);
+
+</script>
+
+<script>
+  (function () {
+    function scrollToAnchor(targetEl, smooth = true) {
+      const header = document.getElementById('page_navbar');
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      const targetPosition =
+        targetEl.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: targetPosition - headerHeight,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+    }
+
+    function handleHash(hash, smooth = true) {
+      if (!hash || hash === '#') return;
+
+      const targetEl = document.querySelector(hash);
+      if (!targetEl) return;
+
+      scrollToAnchor(targetEl, smooth);
+    }
+
+    // Handle clicks on anchor links
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      const hash = link.getAttribute('href');
+      if (hash === '#') return;
+
+      e.preventDefault();
+      handleHash(hash, true);
+
+      // Update URL without default jump
+      history.pushState(null, '', hash);
+    });
+
+    // Handle direct page load with hash
+    window.addEventListener('load', function () {
+      if (!window.location.hash) return;
+
+      // Delay ensures layout + header height are finalized
+      setTimeout(function () {
+        handleHash(window.location.hash, false);
+      }, 50);
+    });
+  })();
+
+</script>
+
+
+</body>
+
+</html>

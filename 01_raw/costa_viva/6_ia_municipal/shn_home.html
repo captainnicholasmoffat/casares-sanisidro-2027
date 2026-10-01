@@ -1,0 +1,1442 @@
+
+
+
+
+        <!DOCTYPE HTML>
+
+        <html lang="ES">
+
+        <head>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SHN - Servicio de Hidrografía Naval</title>
+
+  <meta name="description" content="Servicio de Hidrografia Naval">
+  <meta name="author" content="SHN - Servicio de Hidrografía Naval">
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <!-- Nav and address bar color -->
+  <meta name="theme-color" content="#0072b8">
+  <meta name="msapplication-navbutton-color" content="#0072b8">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0072b8">
+
+  
+  <meta property="og:image" content="/img/jumbotron/ceado.jpg" />
+  <meta property="og:locale" content="es_AR" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="SHN - Servicio de Hidrografía Naval" />
+  <meta name="twitter:description" content="SHN - Servicio de Hidrografía Naval" />
+  <meta name="twitter:image" content="/img/jumbotron/ceado.jpg" />
+
+     
+ 
+
+    <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/encode-fontface.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/poncho.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/documentacion.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/argob/poncho@master/dist/css/icono-arg.css" rel="stylesheet">
+
+
+ <!-- FIN PONCHO -->
+ 
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="/node_modules/html5shiv/html5shiv.js"></script>
+      <script src="/node_modules/respond.js/respond.min.js"></script>
+
+
+  <![endif]-->  
+
+
+
+
+
+            <!-- Bootstrap  -->
+
+
+
+        <link rel="stylesheet" href="dist/css/bootstrap.css">
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="dist/css/poncho.css">
+        <link rel="stylesheet" href="dist/css/argentina.css">
+
+    
+      <!-- font-awesome  -->
+
+  <link rel="stylesheet" href="dist/css/font-awesome.min.css">
+  <link rel="stylesheet" href="dist/css/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="dist/css/droid-serif.css">
+  <link rel="stylesheet" href="dist/css/roboto-fontface.css">
+
+   <link rel="stylesheet" href="dist/css/PROPIOS.css">
+
+   
+ 
+           
+
+     
+
+
+            <!-- FOR IE9 below -->
+            <!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+
+
+            <script src="js/js?sensor=false"></script>
+
+            <script src="js/jquery-1.8.2.js"></script>
+
+            <script src="js/argenmap.jquery.min.js"></script>
+
+
+
+            <script>
+                $(function() {
+                    //El div tiene id="mapa"
+                    $('#mapa').argenmap();
+                    $('#mapa').zoom(16);
+
+                    $('#mapa').centro(-34.651419, -58.371528)
+
+                    $('#mapa').agregarMarcador({
+                        lat: -34.651419,
+                        lng: -58.371528,
+                        contenido: '<h3><img src="shn.png"/>Servicio de Hidrografía Naval</h3><p>Av. Montes de Oca 2124, CP1270ABV</p><p>Ciudad Autónoma de Buenos Aires - Rep. Argentina</p>',
+                        icono: '/ventas/shn.png'
+                    });
+                });
+            </script>
+
+
+
+<style>
+.bordeinferior {border-bottom: 0px;}
+
+.jumbotron .jumbotron_bar{
+background-color: #082b48;
+}
+
+.jumbotron {
+
+height: 400px;
+
+}
+
+
+
+.navbar-default .nav>li>a {
+    color: #236c9b;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    padding-bottom: 20px;
+    padding-top: 22px;
+    text-transform: uppercase;
+}
+
+
+.icono-arg-twitter-pajaro{
+
+font-size: 20px;
+}
+
+
+
+
+.logoshn {
+ float: left;
+width: 14%;
+min-width: 50px;
+margin-top: 3%;
+margin-right: 4%;
+/* border-right: 4px solid #fff;  */
+
+}
+
+
+.jumbotron .jumbotron_body h1, .jumbotron .jumbotron_body .h1 {
+    font-size: 55px;
+    text-shadow: 2px 2px black;
+ /*   margin-top: 5%;  */
+
+ margin-top: 7%;
+
+}
+
+</style>
+
+
+
+
+
+
+<style>
+
+/* TEXTOs EN DESARROLLO   */
+
+
+.top-left {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  top: 8px;
+  right: 16px;
+}
+
+
+.text {
+  background-color: white;
+  color: black;
+  font-size: 3vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 8px;
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 82%;
+
+
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+
+
+.efemerides{
+
+ font-size: .9em;
+
+margin-left:3%;
+
+}
+
+
+.efemerides p {
+
+margin-top: -15px;
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+        </head>
+
+
+
+        <body>
+
+
+            <header>
+
+
+                <!--  INICIO BARRA DE NAVEGACION     -->
+
+
+
+                <a href="#main" class="skipcontenido">
+  Salta al contenido
+</a>
+
+
+           <nav class="navbar navbar-top navbar-default bordeinferior">
+				
+					<div class="container">
+						
+						
+						<div class="navbar-header">
+                        
+ 
+	                        <a class="navbar-brand" href="/" accesskey="1">
+	                            <img alt="Servicio de Hidrografia Naval" src="/assets/images/Logo_shn_RepArg.svg" height="49">
+	                            <h1 class="sr-only"><small>Servicio de Hidrografía Naval</small></h1>
+	                        </a>
+
+
+	                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+	                            <span class="sr-only">Toggle navigation</span>
+	                            <span class="icon-bar"></span>
+	                            <span class="icon-bar"></span>
+	                            <span class="icon-bar"></span>
+	                        </button>
+                    	</div>
+							
+						
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2"  >
+						<ul class="nav navbar-nav navbar-right" >
+
+
+							<li class="dropdown" >
+							<a href="#" aria-expanded="false" accesskey="2" class="dropdown-toggle" data-toggle="dropdown"> productos y servicios <span class="caret"></span></a>
+
+								<ul class="dropdown-menu submenu" role="menu">
+
+		                                <div>
+		                                                             
+		                                    <div>
+<UL class="sinbullets">
+
+		                                        <li><a href="http://geoportal.shn.gob.ar/#/geoportal" target="_blank">Geoportal</a></li>
+		                                        <li><a href="/ServiciosNauticos.asp">Servicios Náuticos</a></li>
+		                                        <li><a href="/ModelosPronosticos.asp">Modelos y Pronósticos</a></li>
+		                                        <li><a href="/Smara/glacio/sglaciologica.asp">Servicios de Hielo</a></li>
+		                                        <li><a href="/Observatorio/Astronomia.asp">Astronomía</a></li>
+		                                        <li><a href="/Observatorio/LaHora.asp">Hora Oficial y Frecuencia Patrón</a></li>
+
+</UL>		                                       
+		                                  </div>
+		                              
+		                                </div>
+
+
+		                                
+		                                <div>
+
+
+		                                
+		                                <div>
+
+
+		                                
+
+		                                
+		                            </ul>
+
+					</li>
+
+
+							
+					<li class="">
+					<a href="/Institucional/Institucional.asp" aria-expanded="false" class="" data-toggle="" accesskey="3"> institucional </a>
+
+
+					</li>
+
+
+ 							<li class="">
+							<a href="/ID/ID.asp" aria-expanded="false" class="" data-toggle="" accesskey="4"> I + D </a>
+								
+							</li>
+
+							<li class="">
+							 <a href="/DA/DatosAbiertos.asp" aria-expanded="false" class="" data-toggle="" accesskey="5"> Datos Abiertos </a>
+
+							</li>
+
+
+						
+
+							<li class="">
+							 <a href="/contactos/contactos.asp" aria-expanded="false" class="" data-toggle="" accesskey="6"> Contactos </a>
+
+							</li>
+
+
+						
+
+							<li class="">
+							 <a href="/ventas/ventas.asp" aria-expanded="false" class="" data-toggle="" accesskey="7"> ventas </a>
+
+							</li>
+
+
+
+							<li class="">
+
+							<a class="fa fa-download" accesskey="8" title="Descargas" aria-hidden="true" href="/download/download.asp"></a>
+
+							</li>
+
+
+
+
+							<li class="">
+
+							<a class="fa fa-search" accesskey="9" title="Buscador" aria-hidden="true" href="/buscador/tbuscador.asp"></a>
+
+							</li>
+
+
+
+
+
+
+
+							<li class="">
+
+							<a class="fa fa-instagram" aria-hidden="true" href="https://www.instagram.com/shn_argentina/?utm_medium=copy_link" title="Seguinos en Instagram"></a>
+
+							</li>
+
+
+
+
+
+
+
+							
+						</ul>
+							
+						</div>
+						
+
+					</div>
+
+
+				
+			</nav>
+
+
+
+
+
+    <script src="/dist/js/jquery.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="popover"]').popover();
+
+      })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--  FIN BARRA DE NAVEGACION     -->
+
+
+
+            </header>
+
+            <div class="loader"></div>
+
+
+            <div id="page">
+
+
+                    
+
+
+
+                    <!--    BARRA DE NAVEGACION     -->
+
+
+    <main role="main">
+
+
+<section class="jumbotron" style="background-image: url('dist/images/JUMBOTRON2024v2.JPG');">
+  <div class="jumbotron_body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 margizq">
+
+ <img class="logoshn" src="dist/images/LogoSHN_azul.png" alt="Logo del SHN">
+
+  
+         <h1>Servicio de Hidrografía Naval</h1> 
+          República Argentina<br>
+
+
+        </div>
+
+ 
+
+
+
+
+
+      </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="bg-gray section-sm">
+  <div class="">
+    <div class="panel-pane pane-atajos">
+      <div class="pane-content">
+        <ul class="nav nav-icons nav-icons-selected">
+
+
+
+          <li class="active">
+            <a href="nautica/RadioavisosNauticos.asp">
+            <i class="icono-arg-comunicacion bg-primary"></i><span>Radioavisos Náuticos</span>
+            </a>
+          </li>
+
+          <li class="active">
+            <a href="oceanografia/AlturasHorarias.asp">
+            <i class="icono-arg-comisiones-cofefup-grafico bg-primary"></i><span>Alturas Horarias de Marea</span>
+            </a>
+          </li>
+
+
+
+
+         <li class="active">
+            <a href="oceanografia/pronostico.asp">
+            <i class="icono-arg-embarcacion bg-primary"></i><span>Pronóstico Mareológico</span>
+            </a>
+          </li>
+
+  
+          <li class="active">
+            <a href="oceanografia/pronolas.asp">
+            <i class="icono-arg-olas bg-primary"></i><span>Pronóstico Olas<br>Río de la Plata</span>
+            </a>
+          </li>
+
+         <li class="active">
+            <a href="smara/GP/BoletinOlasMetVI.asp">
+            <i class="icono-arg-olas bg-primary"></i><span>Pronóstico Olas<br>METAREA VI</span>
+            </a>
+          </li>
+
+
+       <li class="active">
+            <a href="https://horaoficialargentina.ar/home" target="_blank">
+              <i class="icono-arg-reloj bg-primary"></i><span>Hora Oficial Argentina</span>
+
+            </a>
+          </li>
+
+
+
+
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+
+
+
+
+
+
+
+                    <div class="container">
+
+
+
+
+
+
+
+
+
+
+
+<DIV class="row panels-row m-t-2">
+
+            <div class="col-xs-12 col-sm-12 col-md-6">
+
+
+
+
+
+<!--  MODIFICACION   -->
+
+
+
+
+
+<!-- FIN  MODIFICACION   -->
+
+
+</div>
+
+
+
+
+
+   <div class="col-xs-12 col-sm-12 col-md-6">
+
+   
+
+
+
+<!--  MODIFICACION  -->
+
+
+
+
+
+<!-- FIN  MODIFICACION  -->
+
+
+</div>
+
+         </DIV>
+
+
+
+
+<!-- INICIO TSUNAMI -->
+
+
+
+
+<DIV class="row">
+ 
+
+
+
+<!--  MODIFICACION   -->
+
+
+
+
+
+<!-- FIN  TSUNAMI  -->
+
+
+      
+</DIV>
+
+
+
+
+
+
+
+
+
+<br>
+ 
+<!--  *****FIN DE LA  ADVERTENCIA  ******* -->
+
+
+
+ 
+  
+<!--  *****  INICIO DE EFEMERIDES  ******* -->
+ 
+
+
+
+
+
+
+<!-- FIN  MODIFICACION   -->
+
+
+
+ 
+
+
+  
+ 
+ 
+ 
+ 
+
+
+
+<!-- FIN  MODIFICACION  -->
+
+
+
+
+
+
+
+
+    <div class="row panels-row m-t-2">
+
+
+
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a class="panel panel-default" href="nautica/RadioavisosNauticos.asp?op=13">
+                                  <div class="panel-body">
+                                    <div class="media">
+                                      <div class="media-left padding-5">
+                                        <i class="icono-arg-denuncia fa-3x text-arg-palta"></i>
+                                      </div>
+                                      <div class="media-body">
+                                        <h3>Denuncias Náuticas</h3>
+                                        <p class="text-muted">Formularios AIS AtoN, Reportes novedades, Descarga de formularios <br></p>
+                                              
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+
+
+
+
+
+
+                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a class="panel panel-default" href="/download/ZEE.asp">
+                                  <div class="panel-body">
+                                    <div class="media">
+                                      <div class="media-left padding-5">
+                                        <i class="fa fa-download fa-3x text-arg-palta"></i>
+                                      </div>
+                                      <div class="media-body">
+                                        <h3>Límite Exterior de la Zona Económica Exclusiva de la República Argentina</h3>
+                                        <p class="text-muted">Archivos .SHP y .KMZ<br></p>
+                                              
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+
+
+
+
+                              <div class="col-xs-12 col-sm-6 col-md-4">
+                                <a class="panel panel-default" href="https://ceado.shn.gob.ar" target="_blank">
+                                  <div class="panel-body">
+                                    <div style="display: flex; align-items: center; gap: 12px;">
+                                      <img src="/assets/images/ceado_logo_teal.svg" 
+                                          style="height: 80px; width: 80px;" />
+                                      <h3 style="margin: 0;">Centro Argentino de Datos Oceanográficos</h3>
+                                    </div>
+                                  </div>
+                                </a>
+                              </div>
+
+
+
+
+
+
+     <div class="col-xs-12 col-sm-6 col-md-4">
+
+
+
+
+
+
+                                <a class="panel panel-default nopointer" href="#">
+                                  <div class="panel-body">
+                                    <div class="media">
+                                      <div class="media-left padding-5">
+                                        <i class="icono-arg-calendario-2 fa-3x text-arg-palta"></i>
+                                      </div>
+                                      <div class="media-body">
+
+
+                                      <h3>Efemérides</h3>
+
+01/10/1902 - FARO AÑO NUEVO fue librado al servicio<br>
+
+
+ 
+
+                                     </div>
+                                    </div>
+                                  </div>
+                                </a>
+
+ 
+
+
+
+
+
+ 
+                  </div>
+  
+
+<!--  *****  FIN DE EFEMERIDES  ******* -->
+
+
+
+
+
+
+
+   
+  
+
+</div>
+
+
+
+
+<!--  *****    FIN DE 1er GRUPO EFEMERIDES/DENUNCIA  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="panel-pane pane-atajos">
+            <div class="pane-content">
+              <div class="row panels-row">
+
+
+             <div class="col-xs-12 col-sm-12 col-md-4"> 
+
+        <a href="https://geoportal.shn.gob.ar/#/geoportal" target="_blank" class="panel panel-default panel-icon panel-palta panel-border-palta">
+
+   <div class="panel-heading icon-fix"><i class="icono-arg-marcador-ubicacion-1"></i></div>
+
+
+                  <div class="panel-body">
+                    <h3>Geoportal</h3>
+                    <div class="text-muted">
+                      <p>Radioavisos, Alertas, Cartas Electrónicas y Topónimos en un solo lugar</p>
+                    </div>
+                  </div>
+                  </a> </div>
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-4">
+
+<a href="ServiciosNauticos.asp" class="panel panel-default panel-icon panel-palta panel-border-palta">
+
+<div class="panel-heading icon-fix"><i class="icono-arg-servicios"></i></div>
+
+<div class="panel-body">
+  <h3>Servicios Náuticos</h3>
+    <div class="text-muted">
+    <p>Radioavisos, Cartas y Publicaciones Náuticas, Faros Argentinos</p>
+  </div>
+
+  </div>
+</a>
+
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-4">
+
+<a href="ModelosPronosticos.asp" class="panel panel-default panel-icon panel-palta panel-border-palta">
+<div class="panel-heading icon-fix"><i class="icono-arg-satelital"></i></div>
+
+<div class="panel-body">
+                     <h3>Modelos y Pronósticos</h3>
+    <div class="text-muted">
+    <p>Modelos de Pronóstico, Pronóstico mareológico, Pronósticos de Ola</p>
+  </div>
+
+  </div>
+</a>
+
+</div>
+
+ 
+              </div>
+            </div>
+          </div>
+
+    
+
+
+
+
+
+
+
+          <div class="panel-pane pane-atajos">
+            <div class="pane-content">
+              <div class="row panels-row">
+
+
+             <div class="col-xs-12 col-sm-12 col-md-4"> 
+
+        <a href="smara/glacio/sglaciologica.asp" class="panel panel-default panel-icon panel-palta panel-border-palta">
+
+   <div class="panel-heading icon-fix"><i class="icono-arg-glaciar"></i></div>
+
+
+                  <div class="panel-body">
+                    <h3>Servicio de Hielo</h3>
+                    <div class="text-muted">
+                      <p>Cartas de Hielo, Observaciones de Hielo, Manual del Observador de Hielo y Témpanos</p>
+                    </div>
+                  </div>
+                  </a> </div>
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-4">
+
+<a href="observatorio/Astronomia.asp" class="panel panel-default panel-icon panel-palta panel-border-palta">
+
+<div class="panel-heading icon-fix"><i class="icono-arg-satelite"></i></div>
+
+
+
+<div class="panel-body">
+  <h3>Astronomía</h3>
+    <div class="text-muted">
+    <p>Salida y puesta de Sol, Luna, Fases de la luna, Eclipses, Equinoccios y Solsticios, Efemérides</p>
+  </div>
+
+  </div>
+</a>
+
+</div>
+
+
+
+
+
+<div class="col-xs-12 col-sm-12 col-md-4">
+
+<a href="observatorio/LaHora.asp" class="panel panel-default panel-icon panel-palta panel-border-palta">
+
+<div class="panel-heading icon-fix"><i class="icono-arg-reloj"></i></div>
+
+
+
+<div class="panel-body">
+  <h3>Hora Oficial y Frecuencia Patrón</h3>
+    <div class="text-muted">
+    <p>Husos Horarios. Sincronización con la Hora Oficial Argentina</p>
+  </div>
+
+  </div>
+</a>
+
+</div>
+
+
+
+
+
+ 
+              </div>
+            </div>
+          </div>
+
+
+
+
+    
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="row">
+                  <div class="col-md-12">
+                                                            <h2 class="section-title">Guardias (24 horas)</h2>
+
+                    <div class="row row panels-row m-t-2">
+
+                        <div class="col-md-3">
+
+                              <div class="alert alert-info">
+                                <div class="media">
+                                  <div class="media-left padding-5">
+                                    <i class="fa fa-phone fa-fw fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="media-body">
+                                                         <p class="margin-0"><strong>Conmutador</strong></p>
+                                                         <p class="">(0054 11) 4301-0062 / 4301-0064 / 4301-0066 / 4301-0067</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                          </div>
+
+
+                          <div class="col-md-3">
+
+                              <div class="alert alert-info">
+                                <div class="media">
+                                  <div class="media-left padding-5">
+                                    <i class="fa fa-phone fa-fw fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="media-body">
+
+                                                                         <p class="margin-0"><strong>Seguridad Náutica</strong></p>
+                                                                        <p class="">(0054 11) 4301-2249</p>
+                                                                        <p style="font-size: 14px" class="margin-0">snautica@hidro.gov.ar</p>
+
+                                  </div>
+                                </div>
+                              </div>
+
+                          </div>
+
+
+                          <div class="col-md-3">
+
+                              <div class="alert alert-info">
+                                <div class="media">
+                                  <div class="media-left padding-5">
+                                    <i class="fa fa-phone fa-fw fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="media-body">
+ 
+                                                                         <p class="margin-0"><strong>Pronóstico Mareológico</strong></p>
+				         <p class="">(0054 11) 4301-0062 / 4301-0064 / 4301-0066 / 4301-0067</p>
+                                                                        <p class="">Ints.: 4046 y 4109</p>
+                                                                        <p style="font-size: 14px" class="margin-0">pronomarea@hidro.gov.ar</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                          </div>
+
+                          <div class="col-md-3">
+
+                              <div class="alert alert-info">
+                                <div class="media">
+                                  <div class="media-left padding-5">
+                                    <i class="fa fa-phone fa-fw fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="media-body">
+
+                                                                         <p class="margin-0"><strong>Area Costanera</strong></p>
+                                                                        <p class="">(0054 11) 4361-1217</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                          </div>
+                      </div>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+                                                   <!-- INICIO CONEXION Y BUSQUEDA DEL DATO EN NOVEDADES   -->
+
+                                                    <!-- INICIO DE CONEXION -->
+
+
+
+       
+
+
+
+<br>
+
+<h2 class="section-title">Destacados</h2>
+
+<div class="row panels-row m-t-2">
+
+
+
+
+
+
+    
+
+
+ <div class="col-xs-12 col-sm-12 col-md-4">
+
+<a class="panel panel-default" href="Noticias/RENoticias2.asp?idnot=3862">
+
+
+
+                  <div style="background-image:url(/ArchivosUp/Noticias/N20260807a.jpg);" class="panel-heading"></div>
+
+
+
+
+
+
+                  <div class="panel-body">
+                   <span class="text-muted">7/8/2026</span>
+      <h3>Día Mundial de los Faros</h3>
+
+
+
+                   <div class="text-muted">
+                      <p></p>
+                   </div>
+
+
+
+                  </div>
+</a>
+
+</div>
+
+
+
+
+
+
+
+ <div class="col-xs-12 col-sm-12 col-md-4">
+
+<a class="panel panel-default" href="Noticias/RENoticias2.asp?idnot=3861">
+
+
+
+                  <div style="background-image:url(/ArchivosUp/Noticias/19-06 foto I.jpg);" class="panel-heading"></div>
+
+
+
+
+
+
+                  <div class="panel-body">
+                   <span class="text-muted">21/6/2026</span>
+      <h3>Solsticio de invierno 2026</h3>
+
+
+
+                   <div class="text-muted">
+                      <p></p>
+                   </div>
+
+
+
+                  </div>
+</a>
+
+</div>
+
+
+
+
+
+
+
+ <div class="col-xs-12 col-sm-12 col-md-4">
+
+<a class="panel panel-default" href="Noticias/RENoticias2.asp?idnot=3857">
+
+
+
+                  <div style="background-image:url(/ArchivosUp/Noticias/N20260609a.jpg);" class="panel-heading"></div>
+
+
+
+
+
+
+                  <div class="panel-body">
+                   <span class="text-muted">9/6/2026</span>
+      <h3>Servicio de Hidrografía Naval</h3>
+
+
+
+                   <div class="text-muted">
+                      <p></p>
+                   </div>
+
+
+
+                  </div>
+</a>
+
+</div>
+
+
+
+
+
+
+</DIV>
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<br>
+
+
+
+
+
+                                                    <p>&nbsp;</p>
+  
+
+
+       
+     
+
+</div>
+</div>
+</div>
+
+
+
+ 
+
+</section>
+
+
+
+         </div>  
+
+
+</div>
+
+
+
+<br>
+
+ 
+
+
+
+
+                    <section id="fondo-resaltado">
+                        <div class="container hidden-xs">
+                            <div class="col-md-10 col-md-offset-1">
+                                <blockquote class="quote-highlighted">
+                                     <h4 class="section-title quotemark-open">SI CONOCES BIEN TU MAR, MEJOR DEFENDERÁS TU TIERRA</h4>
+                                    <p>
+                            
+                                        <span class="quotemark-open">“</span>147 años cumpliendo la misión de brindar el servicio público de Seguridad Náutica en todo el litoral marítimo argentino y fluvial navegable
+                                        <span class="quotemark-close">”</span>
+                                    </p>
+
+                                </blockquote>
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<section class="modulo-contacto">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+          <h2 class="section-title">Contacto</h2>
+          <div>
+            <h3 class="h5">Servicio de Hidrografía Naval</h3>
+
+<ul class="menu nav">
+    <li class="first leaf"> <strong>Dirección:</strong> Av. Montes de Oca 2124</li>
+    <li class="first leaf"> <strong>Código Postal:</strong> C1270ABV</li>
+    <li class="first leaf"> <strong>Teléfono:</strong> (+54 11) 4301-0062 / 4301-0064 / 4301-0066 / 4301-0067</li>
+    <li class="last leaf"> <strong>Correo electrónico: </strong>shn@hidro.gov.ar</li>
+</ul>
+<br>
+            <h3 class="h5">Redes sociales del área</h3>
+ <div class="social-btn">
+	<ul>
+
+
+
+
+	<li>
+		<a href="https://twitter.com/SHN_Argentina" target="blank" title="Seguinos en Twitter"><span class="maschico icono-arg-twitter-pajaro" aria-hidden="true"></span></a>
+			
+	</li>
+												
+
+	<li>
+		<a href="/rss/rss.asp" target="blank" title="Seguinos en RSS">	<span class="fa fa-rss" aria-hidden="true"></span></a>
+
+	</li>
+
+
+	<li>
+		<a href="https://instagram.com/shn_argentina?utm_medium=copy_link" target="blank" title="Seguinos en Instagram"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+		</li>
+
+
+
+
+	<li>
+
+		<a href="https://www.youtube.com/channel/UCTWs-jNTBiGlqgfsAOGl8jQ" target="blank" title="Seguinos en YouTube"><span class="fa fa-youtube-square" aria-hidden="true"></span></a>
+
+	</li>
+
+
+															
+												
+	</ul>
+		</div>
+
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div>
+ 
+
+
+<iframe class="ccsiframe" title="Mapa con la ubicación del Servicio de Hidrografía Naval" src="/nautica/mapashn_ArgenMap.asp"></iframe>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+ 
+
+
+
+
+                    </section>
+
+
+
+ <footer class="main-footer">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <span class="text-muted small">© Copyright - Todos los Derechos Reservados - Servicio de Hidrografía Naval</span>&nbsp;|&nbsp;
+
+
+<span class="text-muted small"><a href="/sitio/sitio.asp" accesskey="0">Mapa del Sitio</a></span>&nbsp;|&nbsp;<span class="text-muted small"><a href="/accesibilidad/accesibilidad.asp">Accesibilidad Web</a></span>
+
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+
+                   
+
+
+
+                </main>
+
+                
+
+
+
+            </div>
+            <!--/ page-->
+
+
+
+
+
+        </body>
+
+        </html>

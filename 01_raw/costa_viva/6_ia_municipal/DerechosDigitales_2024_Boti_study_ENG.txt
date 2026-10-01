@@ -1,0 +1,1022 @@
+Boti: Study on the Natural Language 
+Processing Chatbot of the 
+Government of the City of 
+Buenos Aires, Argentina
+This report was prepared by the Asociación por los Derechos Civiles (ADC), under the 
+direction of Derechos Digitales, with the support of the International Development 
+Research Centre (IDRC). For more information about this project, visit     
+https://ia.derechosdigitales.org/.
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE 
+GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINA
+This work is available under a Creative Commons Attribution 4.0 International License.https://
+creativecommons.org/licenses/by/4.0/deed.en
+Overall supervision: Jamila Venturini and Juan Carlos Lara
+Coordination and review by Derechos Digitales: Juan Manuel García
+Coordination by ADC: Marianela Milanés
+Research and writing: Eduardo Ferreyra
+Style review: Urgas Traductoras
+Translation into English and Portuguese: Urgas Traductoras
+Design: Alter Studio
+Suggested citation: Ferreyra, E. (2024). Boti: Study on the Natural Language Processing 
+Chatbot of the Government of the City of Buenos Aires. Derechos Digitales.
+October, 2024
+
+2
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+INTRODUCTION
+In recent years, the growing expansion of Artificial Intelligence-based technologies 
+has spurred serious concerns regarding the risks they pose to basic rights, especially 
+privacy and personal data protection. This worry is heightened when governments 
+adopt and depend on these technologies for increasing numbers of applications 
+and purposes, including some that may appear anodyne but can turn out to be 
+problematic, such as modernizing public administration and serving citizens by 
+implementing chatbots. 
+A chatbot can be defined as a computer program designed to interact with users 
+by simulating a human conversation via voice or text prompts, usually over the 
+Internet (Adamopoulou et al., 2020). From the first programs developed in the 1960s 
+to today, chatbots have evolved to be driven by algorithms that enable them to 
+learn from interactions with users to optimize their future responses. Thus, chatbots 
+are characterized by communication that uses conversational natural language 
+processing, which leads to assigning them human features and perceiving them as 
+anthropomorphic (Adamopoulou et al., 2020). While these characteristics are intended 
+to improve user experiences, they may require users to share personal information with 
+the chatbot to do so. This means that, in using chatbots, governments can also collect 
+users’ personal data without their knowledge, thus increasing privacy concerns (Ischen 
+et al., 2020).
+For their part, chatbots can display different attributes. Depending on their domain 
+knowledge, they are called “open domain” (if they can respond on more than one topic) 
+or “closed domain” (if they can only respond on a specific topic). They can also be 
+differentiated by the service offered (interpersonal or intrapersonal, if they exist under 
+the user’s exclusive domain or not), goals (informing, chatting or completing tasks), 
+input processing method and answer generation (rules-based, recovery or generative), 
+human assistance as a component, and the building method (open source or closed 
+platforms) (Adamopoulou et al., 2020). 
+BOTI: STUDY ON THE NATURAL 
+LANGUAGE PROCESSING CHATBOT 
+OF THE GOVERNMENT OF THE CITY OF 
+BUENOS AIRES, ARGENTINA
+3
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+Regardless of the attributes chatbots acquire, as they become increasingly 
+incorporated into diverse areas, it is critical to research and develop measures to 
+guarantee that they respect user data and comply with established security standards 
+(Hasal et al., 2021). Following indications from the United Nations Office of the High 
+Commissioner for Human Rights (UNHCR), generally speaking, government chatbots as 
+an automated technology that collects and processes data pose certain critical risks to 
+privacy and protection of citizens’ personal data. First, there is the danger of misuse or 
+unauthorized access to the data, which can potentially lead to harm for the individuals 
+affected. Second, massive data collection can produce detailed profiles of users 
+without their explicit knowledge, exposing them to possible situations of discrimination 
+or manipulation. Further, the implementation of chatbots must be careful to ensure 
+that the data are used legitimately and in compliance with the highest standards to 
+guarantee protection against abuses and exploitation of sensitive data. Otherwise, 
+there is a risk of perpetuating structural inequalities and disproportionately affecting 
+the most vulnerable populations. 
+This is the context surrounding Boti, the chatbot created by the Government of the 
+City of Buenos Aires (GCBA), capital of Argentina. Boti is a virtual assistant designed 
+to answer questions and provide information to citizens that seeks to facilitate access 
+to public services and improve communication between public administration and the 
+population. In early 2019, Boti was officially launched as part of WhatsApp, the Meta 
+messaging service used by 93.1% of Argentinians (Statista, 2023). 
+By the end of that year, Boti was recognized as the best Business Chatbot in the third 
+edition of the Planeta Chatbot Awards, which pay tribute to the best Spanish-language 
+conversational technology initiatives (Gobierno de la Ciudad de Buenos Aires, 2019). 
+Later, during the COVID-19 pandemic, the chatbot was configured to provide public 
+health information and offer updates on symptoms, infection test results, appointment 
+management and vaccination certificates, among other services. This role led 
+WhatsApp’s director, Will Cathcart, to publicly praise the chatbot and show his pride in 
+collaborating with the Buenos Aires city government (Cathcart, W. [@wcathcart], 2021). 
+In 2022, the City of Buenos Aires General Audit (AGCBA), an external control entity, 
+conducted an exhaustive analysis of systems and processes related to the Boti 
+chatbot, covering the 2021 calendar year. This analysis, published in March 2023, 
+revealed significant achievements, but it also identified critical areas for improvement 
+and highlighted the need for robust information technology (IT) policies for personal 
+data processing and protection, emphasizing the importance of effective information 
+and communications technology governance. In addition, the City of Buenos Aires 
+4
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+Ombudsman, the City’s Personal Data Protection Act oversight body, responded to 
+a citizen complaint in 2022 by undertaking an investigation that exposed significant 
+problems in the access to and transparency of the chatbot’s legal disclaimer, as 
+well as in the protection of sensitive information such as COVID-19 test results. The 
+resolution of this investigation included recommendations for improving the clarity and 
+integrity of the legal disclaimer and ensuring the proper logging of databases in the 
+corresponding registry, highlighting the importance of ethical and secure handling of 
+personal data.
+Boti’s central role in communicating with citizens and providing services, as well as 
+critical issues highlighted by the above-mentioned oversight bodies, demonstrate the 
+need for detailed investigation into this chatbot’s characteristics and operation from a 
+human rights perspective. Along these lines, the current investigation, conducted from 
+January to June 2024, has the goal of probing, analyzing and generating evidence on 
+the Boti chatbot and its implications for privacy and data protection. The study focuses 
+on the following dimensions: sociodemographic and regulatory context, accountability 
+(especially in terms of transparency and external oversight), the role of private agents, 
+and the principles of consent, purpose and security. 
+METHODOLOGY
+The analysis of sociodemographic and regulatory dimensions was based on a broad 
+review of literature and legislation, both local and national. Information gathering 
+on characteristics of the chatbot’s operations, as well as its internal management 
+mechanisms, was based on open sources and a public information access request 
+submitted to the GCBA. The vague nature of most of the answers led to a second 
+request that, as of the study’s conclusion, had not been answered.   
+This study included a series of interviews with various actors who participate in 
+the chatbot’s management, as well as with subject matter reference people: Pedro 
+Alessandri (Assistant Secretary for the GCBA Smart City, with whom a virtual meeting 
+was finally scheduled days before concluding the study and following several 
+postponements by the official), María Julia Giorgelli (Subdirector for Personal Data 
+Protection of the City of Buenos Aires Ombudsman Office), Marcela Pallero (Engineer 
+specialized in Tele-informatics security, society and AI), Sofia Scasserra (Economist and 
+Director of the AI and Society Degree Program of the Universidad Nacional de Tres de 
+Febrero) and Mariano Caputo (Undergraduate degree in Social Communication Sciencies, 
+UBACyT Doctoral candidate and author of several articles on chatbots and AI). 
+5
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+CONTEXT
+Below, the sociodemographic and regulatory context is analyzed to better understand 
+the environment surrounding Boti’s implementation, who its target audience is, and 
+which laws apply to it, directing particular attention to privacy and personal data 
+protection.
+SOCIODEMOGRAPHIC CONTEXT 
+The Autonomous City of Buenos Aires (CABA) has a population of 3,121,707 inhabitants, 
+according to the most recent Census conducted in 2022 by the National Statistics 
+and Census Institute (INDEC). Thus, CABA is one of the most populated jurisdictions in 
+the country, representing 7.4% of the total population. According to the 2023 Global 
+Liveability Index, Buenos Aires was the city offering the best quality of life in Latin 
+America, standing out in the areas of education, culture, health and infrastructure. 
+In terms of Internet access, CABA has witnessed significant growth in recent years. 
+According to the last census, 94% of the city’s inhabitants have Internet access, while 
+in the previous census of 2012, it was 72%. In turn, currently around 80% of the city’s 
+population has a computer or tablet and 90% have cell phones, compared to 81% in 2012.  
+The growth in the latter figures is matched by the evolution of the Boti chatbot and 
+GCBA use statistics. The first GCBA chat was launched in 2012 and managed by a 
+human team that processed an average of 15,000 conversations per month. At this 
+stage, users could submit queries about paperwork, request appointments and submit 
+complaints via both the website and Facebook. In 2014, the first GCBA chat using 
+Artificial Intelligence was introduced, significantly improving the service’s efficiency 
+and immediacy. Around 2015, the average number of daily conversations increased 
+to 2,000, for a total of more than 60,000 per month. On February 23, 2019, the City of 
+Buenos Aires officially launched Boti on WhatsApp, the messaging app most used by 
+Argentinians, and the number of monthly conversations doubled as compared to the 
+prior year. With COVID-19’s arrival in 2020, Boti incorporated new functions to relay 
+relevant public health information, offering updates on symptoms, prevention, test 
+results, appointment scheduling and vaccination certifications, among others. In 2020, 
+the number of conversations per month rose to more than 600,000 and one year later, 
+that figure was multiplied by 10 for a total of over 6 million. All this, in a scenario of 
+initial isolation and later mandatory preventive social distancing that lasted from March 
+2020 to March 2021. During the first quarter of 2022, Boti reached its historic maximum 
+of 26 million interactions per month, becoming the main channel of communication 
+6
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+between the GCBA and its citizens. However, the numbers later fell to between 5 and 2 
+million conversations per month (Gobierno de la Ciudad de Buenos Aires, 2022).
+REGULATORY CONTEXT
+Analysis of regulations and legal decisions shows a broad range of elements that could 
+be relevant to this study in terms of privacy and personal data protection. Furthermore, 
+national and sub-national rulings define a huge regulatory universe that could have 
+implications for other rights. The main legal instruments governing personal data 
+protection in Argentina and in the Autonomous City of Buenos Aires are presented 
+below. Then, the elements selected to guide the investigation, which will be examined 
+in detail in the study’s last section, are introduced. 
+In Argentina, personal data protection is backed by constitutional provisions, principally 
+in Article 43 of the National Constitution. This article establishes the right to personal 
+data protection as part of the right of all people to access information held by the 
+State, as well as to be familiar with it, update it and correct it. In addition, the article 
+guarantees individuals’ right to request the removal or confidentiality of their personal 
+data. The National Constitution also establishes the right to privacy in Article 19, which 
+protects a person’s private life and prohibits any arbitrary interference in their life, 
+family, home, correspondence or communications. This constitutional right provides 
+additional support to personal data protection in Argentina by recognizing the 
+importance of safeguarding individual autonomy. Personal data protection is regulated 
+at the national level mainly via Law 25,326, known as the Personal Data Protection Act 
+(LPDP), enacted in 2000 (Ministerio de Justicia de la Nación, 2000). This law sets forth 
+the basic principles for processing personal data and creates what is known today as 
+the Access to Public Information Agency (AAIP), the oversight authority responsible for 
+enforcement. The LPDP establishes that personal data processing must be done with 
+the data subject’s consent and for specific, legitimate and defined purposes. Likewise, 
+it guarantees the right to access, correction and elimination of the personal data by the 
+data subject. In addition, it creates obligations for those who handle data processing, 
+such as adopting appropriate security measures to protect the information.
+In the City of Buenos Aires, the legal framework for personal data protection is based 
+on the CABA Constitution, which in Article 12 recognizes and guarantees people’s 
+right to intimacy and privacy. This constitutional recognition lays a solid foundation for 
+protecting the personal data of citizens in Buenos Aires, in alignment with international 
+human rights standards. The Personal Data Protection Act No. 1.845, approved in 2005, 
+7
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+is the main law regulating personal data processing in the City of Buenos Aires. This 
+law sets forth the principles and rules that both public and private entities must follow 
+in processing citizens’ personal information. The law’s most relevant aspects include 
+the definition of personal data, data subjects’ rights, the obligations of those who are 
+responsible for data processing, and the security measures that must be implemented 
+to protect information. 
+The instruments presented up to this point offer a large number of elements for 
+extensively analyzing Boti’s implications.  However, in an attempt to keep the study’s 
+parameters manageable, three key international principles of personal data protection, 
+which are reflected in national and sub-national legislation, were selected. These will be 
+addressed in more detail in the last section of this study and are summarized as follows:
+Purpose. This principle establishes that personal data must be gathered for specific, 
+explicit and legitimate purposes, and the data must not be processed in a manner that is 
+incompatible with those purposes. This means that they can only be used for the purposes 
+for which they were collected, and any other use requires the data subject’s consent. It is 
+important that those responsible for data processing clearly inform data subjects of the 
+purpose of the processing and limit use of the data to that specific purpose.
+Consent. The express, informed consent of the data subject is required for processing 
+the data, unless there is an exception provided for by law. The consent must be free, 
+specific, informed and granted unambiguously. Informed consent means that the data 
+subject must be fully informed of who is collecting the data, for what purpose they will 
+be used, what kind of data are collected, how they will be stored and protected, and 
+any other information relevant to processing their personal data. The consent must 
+be specific to each purpose of the processing, and it must be possible to revoke the 
+consent at any time by the data subject.
+Security. This principle establishes the obligation to implement appropriate technical 
+and organizational measures to protect personal data against unauthorized access, 
+alteration, dissemination or accidental or illegal destruction. Data security means 
+protecting the confidentiality, integrity and availability of the personal data, and 
+protection includes the adoption of access controls, data encryption, monitoring of 
+processing activity, personnel training and other measures. Data processing managers 
+must regularly assess the risks to data security and take necessary measures to 
+mitigate those risks and guarantee the protection of personal data.
+8
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+BOTI: CHARACTERISTICS, MANAGEMENT MECHANISMS AND MAIN 
+STAKEHOLDERS
+The Government of the City of Buenos Aires has opted for technological innovation 
+as a central strategy of its administration. Through the Secretariat for Innovation 
+and Digital Transformation, a series of key objectives have been established along 
+these lines, including: a) Identifying, strengthening and managing the development 
+and implementation of new products, processes and services based on emerging 
+technology to facilitate the transformation and modernization of the State in different 
+areas of government; b) Promoting streamlined process design, digitalization and 
+coordination of policies for transforming administrative management within the 
+GCBA, encouraging the adoption of new working methods, the use of digital tools and 
+systems, and process optimization; and c) Participating in the design and coordination 
+of transformation and modernization policies in diverse areas of government and 
+proposing related regulations (Gobierno de la Ciudad de Buenos Aires, 2023).
+One of the most noteworthy milestones for the Secretariat for Innovation and Digital 
+Transformation has been the adoption of the first Artificial Intelligence Plan, known 
+as “Ciudad Futuro” [Future City], in 2021. The objective of this plan is to maximize the 
+benefits that AI can offer the city, consolidating its use in key areas and promoting its 
+development with a focus on people (Gobierno de la Ciudad de Buenos Aires, 2021). 
+The Plan’s biggest challenges, according to GCBA objectives, include establishing 
+conditions for developing AI in the City and leveraging AI use to benefit citizens 
+and urban development. The Plan’s principles include privacy and establish that the 
+collection, use, storage and elimination of personal data must be done in compliance 
+with appropriate governance mechanisms and protocols and ensure the data’s 
+protection and correct use, pursuant to legal frameworks for data protection (Gobierno 
+de la Ciudad de Buenos Aires, 2021). In addition, the document sees a specific 
+challenge in the appropriate handling of data, since AI needs to use personal data 
+to function because the training and operation of its algorithms depend on massive 
+quantities of information. The Plan thus concludes with the statement that it is 
+essential to analyze privacy and security issues given the potential harm that the abuse 
+of these technologies can cause people. In the context of the GCBA 2021 Artificial 
+Intelligence Plan, the Boti chatbot is highlighted as one of most important projects, 
+even though its launch took place in 2019.1 
+1  Gobierno de la Ciudad Autónoma de Buenos Aires. “Plan de Inteligencia Artificial.” https://buenosaires.
+gob.ar/jefaturadegabinete/innovacion/plan-de-inteligencia-artificial (consulted in July 2024)
+9
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+Currently, Boti falls within the purview of the Office of Digital Channels, which also 
+manages the GCBA website, and comes under the Smart City Sub-Secretariat, headed 
+by the information systems engineer Pedro Alessandri, who was recently named to the 
+post and who formerly worked as director of Digital Citizenship. The sub-secretariat, 
+which comes under the Secretariat for Innovation and Digital Transformation, is also in 
+charge of the Office of Digital Citizenship and the Office of Citizen Services Systems.2 
+Boti did not arise spontaneously; rather, its history goes back to 2012, when citizen 
+interaction via a chat exclusively managed by human agents started (Gobierno de la 
+Ciudad de Buenos Aires, 2022). In 2014, the chat incorporated Artificial Intelligence, 
+and the number of citizen interactions grew noticeably, reaching 40,000 conversations 
+with around 300,000 users. The most frequent queries included information on traffic 
+tickets, obtaining copies of birth certificates, drivers license processes and Consumer 
+Defense complaints. In 2015, the monthly conversations rose to 60,000, covering 
+topics such as separating trash and the Ecobici program. During this time, interaction 
+with citizens took place over four channels: e-mail, the 147 hotline, the BA 147 cell 
+phone app and the virtual chat using Artificial Intelligence, with the possibility of 
+being forwarded to human agents. By 2018, the City Government had three different 
+chatbots on its web, Facebook and Telegram platforms. To unite these chatbots into 
+a single official channel, Boti was created in 2019 and rapidly became the main means 
+of consultation, capturing 80% of all communications. In January 2022, Boti reached a 
+historic record of interactions, where “COVID test result” was the most requested topic, 
+and it became the GCBA’s main digital communication channel, along with the website. 
+According to the GCBA report “Boti. El chatbot de la Ciudad” (2022), Boti is different 
+from other chatbots thanks to its open-domain nature, which enables it to use Artificial 
+Intelligence systems to interact with external systems and provide specific answers 
+to queries on more than one topic, which defines it as a conversational bot. Given that 
+WhatsApp is the messaging platform most used in Argentina and that it has end-to-end 
+encryption, making it impossible for third parties to intercept the messages, the City 
+Government chose it as Boti’s communication channel. It was thus transformed into 
+the first government chatbot in the world to do so, as highlighted by the administration 
+itself (Gobierno de la Ciudad, 2022). To start a conversation with the chat, citizens must 
+save the number (+54 9) 11-5050-0147 in their phones and then they can ask all the 
+questions they want. It is also possible to contact the chatbot via the GCBA website and 
+2  Gobierno de la Ciudad Autónoma de Buenos Aires. “Subsecretaría de Ciudad Inteligente.” https://
+buenosaires.gob.ar/secretaria-de-innovacion-y-transformacion-digital/subsecretaria-de-ciudad-
+inteligente (consulted in July 2024)
+10
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+from the WhatsApp web application, with no need to save the contact number. Boti’s 
+functions evolved to offer a broad range of citizen services in areas such as health, urban 
+mobility, aid and support, complaints, information and queries, citizen administrative 
+processes and wellbeing. The chatbot now even offers information linked to the history 
+of its own creation. 
+According to the report “La atención de gobierno en la era digital: El caso Boti en la 
+Ciudad de Buenos Aires” published in 2023 by the Center for Evaluation of Evidence-
+based Policy (CEPE) of the Universidad Torcuato Di Tella, during the pandemic Boti 
+became the main source of official information on symptoms, prevention, COVID-19 
+case data management, test results and, later, information on vaccination plans. 
+The GCBA’s first step for this, according to the report, was to adapt the chat’s main 
+menu to include information on the disease, prevention measures, anti-flu vaccination 
+campaigns, blood donation, programs for the elderly, location of health centers, and 
+cultural, educational and recreational activities to do at home during quarantine. This 
+content was updated as new measures were rolled out. In addition, the digitalization 
+of City Government administrative processes forged ahead, making it possible to 
+check on paperwork using WhatsApp. According to the report, Boti also made it 
+possible to redirect queries to health centers, depending on urgency or severity. In 
+turn, an Artificial Intelligence system called IATos, developed and implemented by 
+the Secretariat for Innovation and Digital Transformation, complemented coronavirus 
+detection efforts using Boti. It worked over a neural network that can classify voice, 
+breathing and coughing sounds, analyzing audio clips of coughing sent by WhatsApp 
+to detect possible COVID cases with an effective prediction rate of 86%. Furthermore, 
+Boti was configured to coordinate testing, delivery of results and certificates, 
+monitoring positive cases and close contacts, and later, managing vaccination 
+appointments and digital certificates. Medical triage, symptom monitoring and testing 
+and vaccination strategies were supported largely by Boti. 
+However, the government faced significant challenges, such as the channel’s collapse 
+when vaccination appointments were activated or in periods of high demand for results, 
+such as during end-of-year festivities. The WhatsApp infrastructure was unprepared for 
+handling such a massive volume of responses in a short time. Boti supported up to 200 
+messages per second, and surpassing this capacity caused the channel’s breakdown, 
+with a long wait time to restore it (Gertner et al., 2023). In early 2022, the chatbot 
+offered more than 70 different administrative processes, and in 2023, another 15 were 
+added. These new processes include the re-printing of driver’s licenses, obtaining 
+license legality certificates, requests for new copies of national identity documents and 
+programming medical appointments in neighborhood health centers in Buenos Aires.
+11
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+BOTI’S TECHNICAL CHARACTERISTICS
+Regarding Boti’s characteristics and attributes, the GCBA in “Boti. El chatbot de la 
+Ciudad” states that it is a generalist bot, in contrast to bots with specific goals. As 
+mentioned above, Boti offers a wide range of answers regarding the City’s services, 
+administrative processes and events, due to its open domain nature. A distinguishing 
+feature is its ability to interact with external systems and offer specific answers on 
+government services and weather conditions, for example. 
+ARTIFICIAL INTELLIGENCE USE
+As previously stated, the first use of Artificial Intelligence in a City chat (chat 147) 
+took place in 2014, with an automated question answering and semantic interpretation 
+system. This system facilitated understanding during information and concern 
+interactions with users. 
+However, with the arrival of Boti in 2019, the process improved and was streamlined 
+through the adoption of a natural-language understanding engine based on Artificial 
+Intelligence and Machine Learning. Thanks to these technologies, Boti can not only 
+conduct predefined actions, it also has the ability to learn and adapt to each user. 
+Although it is not possible to intervene in the internal processes of this Artificial 
+Intelligence engine, the GCBA states that the team works continuously to ensure Boti’s 
+optimal functioning, keeping obstacles and confusion to a minimum (Secretaría de 
+Innovación y Transformación Digital, 2022).
+In terms of natural language processing, the bot operates on four levels: “understood, 
+disambiguation level 1, disambiguation level 2 and not understood” (Secretaría de 
+Innovación y Transformación Digital, 2022. Boti. El chatbot de la Ciudad). The main 
+function of the bot’s artificial intelligence is its message comprehension engine, which 
+works via the Google Speech to Text platform. This platform artificially synthesizes 
+human speech, analyzing diverse aspects of the conversation. To improve this engine, 
+the AI algorithms receive constant training, using each interaction and the data obtained 
+from it as feedback. In this way, Boti can identify if a user is sending a voice message, 
+initially determining the length of the message to establish whether it is a short audio 
+message. If so, it proceeds to analyze the content. However, if the audio is too long, 
+Boti cannot interpret the query and will ask the user to re-send it with a shorter length. 
+In addition to voice processing, the bot can also use Artificial Intelligence for image 
+recognition, using the Microsoft Azure service. This technology facilitates automatic 
+12
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+object detection, such as the identification of poorly parked vehicles. To improve its 
+performance, the bot must be trained through the uploading and labelling of images, 
+which increases its accuracy in terms of pixel and pattern analysis to recognize specific 
+objects in the images (Secretaría de Innovación y Transformación Digital, 2022).
+INTEGRATIONS
+Another crucial element of Boti’s intelligence lies in its integration ability to connect 
+to a diverse range of available web services. These services may be developed both 
+in collaboration with government areas and externally, as long as they are openly 
+available. The purpose of these services is to offer personalized answers based on 
+information provided by the user.
+The connection between the chatbot and web services, as well as obtaining the 
+parameters needed for processing and presenting the final answer to the user, is done 
+through the definition of a conversational flow. In this process, the bot formulates a 
+series of questions for the user in order to collect all necessary information before 
+calling the corresponding service. Once it receives the answer, the bot determines how 
+it will be shown to the user using a series of predetermined messages. For example, 
+a user could ask Boti if it is legal to park in a specific location in the city. To answer 
+this question, the chatbot connects to the georeferenced CABA map using the API for 
+parking rules developed by the transportation team and the Geographic Information 
+Systems Unit. Using this information, Boti verifies the address provided by the user and 
+offers the specific information provided by the map.
+The process of incorporating new services into Boti follows several stages which 
+are undertaken in collaboration between the Secretariat for Innovation and Digital 
+Transformation and the corresponding area. In the survey stage, information is 
+received about the area’s expectations in terms of the bot, along with initial technical 
+details needed for interacting with the relevant systems. These data are used in the 
+Conversational User eXperience (CUX) stage to design the conversational flow, taking 
+into account Boti’s identity and personality attributes. The development stage is next, 
+which means implementing the conversational flow in consideration of its interaction 
+with the defined services. Then, quality control tests are performed to ensure the 
+proper operation of the flow and the integrations. These tests are done by both the 
+internal team and the corresponding area. Finally, the implementation is rolled out with 
+a press release from the area. Any post-implementation modifications are coordinated 
+through the Secretariat for Innovation and Digital Transformation Help Desk. 
+13
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+DATA PROTECTION MECHANISMS
+To ensure security and confirm identity in certain scenarios, such as reporting a 
+poorly parked vehicle, contacting a 147 operator or checking on pending fines, Boti 
+requests the user’s personal data to respond to their request or help them with their 
+paperwork. In these situations, the identity check is performed using the miBA (miba.
+buenosaires.gob.ar) platform, a registration and log-in tool used in all Buenos Aires City 
+Government apps. With a single username registered with miBA, citizens can conduct 
+administrative processes online, request a taxi using the BA Taxi official platform or, in 
+this case, be identified on Boti to receive assistance. 
+Regarding data protection, the GCBA reports that it has established infrastructure 
+to ensure secure access to users’ personal information. According to the Secretariat 
+for Innovation and Digital Transformation (2022), only designated operators for each 
+referral are authorized to access this information in order to resolve the query or 
+requested process. The above information has been supplemented with answers 
+provided on May 8, 2024 by the Government of the City of Buenos Aires to the public 
+information request and in the interview with Pedro Alessandri, Assistant Secretary for 
+the GCBA Smart City, conducted as part of this study. 
+Through the access to information request and interview and in regard to the data 
+collected, the GCBA communicated that Boti enables two kinds of interactions. On the 
+one hand, users can access general information with no need to provide personal data. 
+For example, they can ask about the city’s “Tourism Plans” or cultural events calendar 
+without identifying themselves. On the other hand, to conduct administrative processes 
+or personal tasks, Boti needs to identify the user to address their request specifically. 
+In these cases, the personal data necessary for completing the required action are 
+requested. This process is done following the user’s acceptance of the service use terms 
+and conditions, which, as we will analyze later, could be especially problematic. The 
+data collected could include document type and number, sex and other specific details 
+depending on the task, e.g., real-time location to get information on where to park. It 
+is important to stress that many of Boti’s services refer to the miBA service which can 
+be used as an identification method with no need to provide additional personal data. 
+However, to create an account on the miBA service, the user must provide at least an 
+e-mail address, a personal identification number (Unique Code of Labor Identification, 
+foreign passport or certificate of precarious residence), date of birth, sex, and full name. 
+In terms of communication channels, Boti is available via WhatsApp and webchat 
+on www.buenosaires.gob.ar. On WhatsApp, the user’s phone number is used for 
+14
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+identification, while on the webchat, the conversation is recorded using a generic ID 
+generated by the platform to protect the user’s privacy.
+Regarding security measures adopted, the GCBA indicated in the interview and 
+the access to information request that the logging of data collected by Boti in the 
+Ombudsman Office Center for Personal Data Protection should be emphasized. 
+This agency, appointed by Law No. 1.845, acts as the oversight body responsible 
+for supervising the proper handling of the City’s public-sector personal information 
+databases, ensuring the preservation and confidentiality of citizens’ sensitive data. 
+Further, the GCBA mentioned that strict confidentiality obligations are established for 
+contractors, agents, and employees in relation to any personal data they process, and 
+that they have set up a warehouse for encrypted conversations.
+In technical and organizational aspects, the GCBA states that it takes all necessary 
+measures to ensure the security and confidentiality of the data collected. These 
+measures are based on the stipulations of City of Buenos Aires Law No. 1.845, as 
+well as the General Computer Security Policies provided by the Information Systems 
+Agency (ASInf), supported by specific resolutions. In addition to complying with local 
+laws, the GCBA states that it guarantees compliance with national legislation and all 
+relevant personal data protection regulations. These include the National Personal 
+Data Protection Act No. 25.326 and its statutory provisions, as well as any other 
+law that the competent authorities may establish in the future. As will be seen later, 
+however, these statements turn out to be problematic due to doubts cast regarding full 
+compliance with the principles of purpose, consent and security.
+In both the access to information request and the interview, the question was posed 
+regarding whether the personal data gathered were shared with third parties and 
+if so, for what purpose. In response to this concern, the GCBA reported that Boti is 
+a conversational channel that refers user requests to other areas of government 
+as necessary depending on each area’s competencies, using a distinct protocol 
+for gender-based violence complaints. Information for specific administrative 
+processes is recorded in GCBA process management systems (such as the Digital 
+Processes System (STD), the Remote processes (TAD) platform, or in spaces of 
+the area responsible for handling the process), so that the competent area may 
+address the request. According to the GCBA, all information provided by users is 
+covered and protected by confidentiality agreements and obligations derived from 
+professional secrecy. This duty remains even after the relationship and/or service 
+provision ends. User information can only be provided to third parties if it is required 
+by legal authorities or for any other existing legal requirement, pursuant to the 
+15
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+exceptions stipulated in Article 15 of the Autonomous City of Buenos Aires Data 
+Protection Act No. 1.845. 
+The GCBA affirms that data provided by users is collected solely for the purpose of 
+implementing the features offered by the Boti chatbot. In its response to the access 
+to information request, the GCBA indicated that as established in the terms and 
+conditions (T&C) for using the service: “Data provided by the user shall be stored 
+until the previously established purposes have been fulfilled. After that time, any 
+identifying data gathered shall be separated, leaving only aggregate information in 
+our databases.” In addition, the GCBA states that, in exceptional situations, all the 
+information obtained could be stored for an extended period, depending on “the merit, 
+opportunity and appropriateness deemed by the Administration; [the information] is 
+subject to a legal requirement or obligation; government investigation or related to 
+possible breaches; to avoid damages and harm” (GCBA, 2024). 
+ROLE OF PRIVATE AGENTS
+In 2020, the office of the GCBA Chief of Cabinet charged the Secretariat for 
+Innovation and Digital Transformation, via the Smart City Sub-secretariat, with the 
+task of improving and expanding the services offered by Boti. As a result, formal 
+processes were established, and specifications were drafted. The criteria for their 
+approval are identified by the codes PLIEG-2020-12796736-GCABA-SSCIUI // 
+IF-2020-12730528-GCABA-DGCIUD (Gobierno de la Ciudad Autónoma de Buenos 
+Aires, 2020a). 
+The objective of the technical specifications approved under Resolution No. 1/
+SSCIUI/20 was the procurement of “Service for Assisted conversations of the Chatbot 
+BA asset ecosystem.” The highest-priority requirements included a fixed-bundle 
+conversation service (from 0 to 500,000); an individual excess conversation service 
+(from 500,001 to 900,000); and an excess conversation service via additional fixed 
+package (from 900,001 to 1,400,000). The procurement documents emphasized that the 
+solution should facilitate access to auditing processes, promote actions to improve the 
+quality of citizen services and promote modernization of the GCBA using integration 
+with other solutions. They also specified the need to comply with policies set forth 
+in Resolution No. 177/ASInf/2013 and its supplement No. 239/ASInf/2014, as well as 
+to consider the infrastructure, databases and language specified in the documents 
+(Gobierno de la Ciudad Autónoma de Buenos Aires, 2020c).
+16
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+The Smart City Sub-secretariat has received a variety of technological services, some 
+provided by the Information Systems Agency (ASinf) and others procured externally. 
+The Boti-related services agreed to with external suppliers are described below.
+The first service, documented in Electronic File No. 2020-10004520-GCABA-DGCCYA, 
+refers to the consultancy for assisted conversations of the Chatbot BA assets 
+ecosystem. This direct procurement was done with the Botmaker S.R.L. company for 
+a total of 16,212,240 ARS3 and a 12-month term (Gobierno de la Ciudad Autónoma de 
+Buenos Aires, 2020d). Later, the continuation and extension of the contract for an 
+additional six months was authorized, for a total of 17,112,020.42 ARS (Gobierno de la 
+Ciudad Autónoma de Buenos Aires, 2021). 
+The second service, recorded in Electronic File No. 2020-17981732-GCABA-DGCCYA, 
+addresses the evolutionary maintenance of the Chatbot BA assets ecosystem. This 
+direct procurement, also with Botmaker S.R.L., had a value of 9,047,300.00 ARS and 
+12-month term (Gobierno de la Ciudad Autónoma de Buenos Aires, 2020e). Finally, 
+the third service, documented in Electronic File No. 2021-25211529-GCABA-DGCCYA, 
+refers to the development, corrective maintenance and support of the Chatbot BA 
+assets ecosystem. This direct procurement, once again with Botmaker S.R.L., had a 
+value of 20,399,000 ARS and a 12-month term (Gobierno de la Ciudad Autónoma de 
+Buenos Aires, 2021b), with a later expansion of 20.60% for a total of 4,200,000 ARS 
+(Gobierno de la Ciudad Autónoma de Buenos Aires, 2021c). Then, via Resolution No. 
+5-GCABA-SSCIUI/22, Open Purchase Order No. 2051-0255-OCA21 was expanded by 
+29.32%, which came to a total of 4,200,000 ARS (Gobierno de la Ciudad Autónoma de 
+Buenos Aires, 2022). In terms of the fourth service, documented in Electronic File No. 
+2021-26811106-GCABA-DGCCYA, it was approved and awarded by direct procurement 
+under Resolution No. 29-GCABA-SSCIUI/21 on October 18, 2021. This involves 
+the service of Consultancy for Assisted Conversations of the Chatbot BA assets 
+ecosystem, contracted with Botmaker S.R.L. for the amount of 47,833,377.60 ARS and 
+a 12-month term (Gobierno de la Ciudad Autónoma de Buenos Aires, 2021d) with the 
+signing of Open Purchase Order No. 2051-0254-OCA21 on October 22, 2021 (Gobierno 
+de la Ciudad Autónoma de Buenos Aires, 2021e).
+Botmaker S.R.L. is a company legally incorporated in 2016 (Cuit Online.com, 2024). As 
+seen on its website, the company has offices in Argentina, Brazil, Colombia, the United 
+States and Mexico. It operates in over 35 countries and develops artificial intelligence 
+to offer personalized conversational solutions. Furthermore, the company clarifies that 
+3  All amounts are expressed in Argentinian pesos (ARS).
+17
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+it operates with data protection processes and in compliance with legislation, although 
+it bears mentioning that during this study an attempt was made—unsuccessfully—to 
+schedule an interview with the company’s representatives to learn more.4
+Later, in 2022, the GCBA conducted a minor procurement with the Werden IT SAS 
+company for a Consulting Service for the design, implementation and infrastructure 
+of the “Boti Mundial” chatbot in the amount of 6,000,000 ARS (Electronic File No. 
+2022-33051603-GCABA-ASINF). That same year, the GCBA via Electronic File No. 
+2022-29879819 awarded via public tender a contract in the amount of 91,988,500 ARS 
+to The Black Puma SA. This was for “Consulting Services for the Exploitation of MeC; 
+Bkl; CoD; TyP; Boti Attributes and Updating the Parcel-level Digital Token and CEP 
+Token Development, for the Data Warehouse and Automation of the GCABA Operations 
+Monitoring process” to undertake an appropriate data modeling (logical and physical) 
+structuring process for the governance and management of data as strategic assets 
+of the Government of the Autonomous City of Buenos Aires. The service was procured 
+for the Sub-secretariat of Evidence-based Public Policies which comes under the 
+Secretariat for Innovation and Digital Transformation, for a 12-month term. 
+EXTERNAL MONITORING: AUDITS AND INVESTIGATIONS BY OVERSIGHT 
+AGENCIES
+Up to this point, Boti’s main characteristics have been presented, as according to 
+information provided by the Government of the City of Buenos Aires, both that 
+published in open sources and what was gleaned from the interview and the public 
+information request response. But there are also some points stemming from official 
+information that contribute to identifying a few critical areas for privacy and data 
+protection in the management of this chatbot. The following analyzes aspects related 
+to critiques issued by the City of Buenos Aires General Audit and the City Ombudsman.
+AUDIT REPORT: OBSERVATIONS ON MANAGEMENT MECHANISMS AND 
+EXTERNAL PROCUREMENT
+As mentioned in the introduction, during the second half of 2022, AGCBA conducted 
+an analysis of the systems, processes, services and technologies that ensure the Boti 
+chatbot’s operability. The audited period covers calendar year 2021, and the report was 
+4  For more information, see: https://botmaker.com/es/ (consulted in July 2024)
+18
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+published in March 2023. In an exhaustive assessment covering multiple dimensions 
+of the chatbot’s operation and processing, a thorough study has been undertaken in 
+compliance with governance and management standards outlined in the 2019 COBIT 
+Framework, as well as the regulations and recommendations set forth by ASInf, 
+pursuant to Resolution No. 177/ASInf/13 and its expansions (Auditoría General de la 
+Ciudad de Buenos Aires, 2023). 
+One of the main areas identified for improvement is the need to formalize the 
+administrative procedures associated with the Boti chatbot. The audit states that 
+the absence of a clearly defined administrative structure could have impact on the 
+operational efficiency and transparency of resource management. On this point, it 
+is worth noting that the difficulties in identifying the areas that intervene in Boti’s 
+management within the Secretariat for Innovation and Digital Transformation and their 
+responsibilities are ongoing. Likewise, the audit detected gaps in the documentation 
+related to allocation of financial resources and budget for the platform, raising 
+questions about financial management and associated cost controls. 
+Regarding the management of services and operational agreements, the audit 
+identified shortcomings in the presentation of service-level agreements with ASInf, 
+as well as in the supporting documentation for confidentiality agreements with 
+the chatbot’s external developers, such as Botmaker S.R.L. The audit did recognize 
+the clear commitment to security and service availability via the implementation 
+of continuity and recovery tests, although it emphasized the need for greater 
+transparency and more detailed documentation on this point to ensure the robustness 
+and reliability of the system in contingencies. In conclusion, the AGCBA highlighted 
+that the processing and storage of massive volumes of data in the services provided 
+requires the establishing and constant review of IT policies that ensure the security 
+and protection of the data processed. To reach this goal, the audit states that it is 
+essential to implement effective governance and management of information and 
+communications technologies (Auditoría General de la Ciudad de Buenos Aires, 2023). 
+For his part, during the interview conducted with the GCAB Smart City Assistant 
+Secretary, he stated that the GCAB had implemented the necessary measures for 
+addressing the audit’s observations. However, throughout this investigation, it has been 
+impossible to locate official documentation that shows which measures have been 
+deployed or how the efforts made have been undertaken. 
+19
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+OMBUDSMAN OFFICE INVESTIGATION: OBSERVATIONS ON PERSONAL DATA 
+MANAGEMENT
+In addition, in 2022 the City of Buenos Aires Ombudsman Office, the personal data 
+protection authority in the City of Buenos Aires, conducted an investigation in response 
+to a complaint filed by Ms. Patricia Farías regarding operation of the City’s chatbot. 
+After a detailed analysis of the relevant facts and considerations, it issued a resolution 
+that attempts to address the concerns expressed by citizens and to ensure compliance 
+with data protection regulations in the use of this digital tool (Defensoría del Pueblo de 
+la Ciudad de Buenos Aires, 2022).   
+Ms. Farías expressed her concern about the lack of availability of a legal notice on 
+entering the “Boti” virtual assistant on the Buenos Aires official Government website. 
+Further, she mentioned that, using this chatbot, anyone with knowledge of a third party’s 
+national ID and phone number could obtain sensitive information, such as COVID-19 test 
+results. Following an analysis by the Personal Data Protection Center of the Ombudsman 
+Office, the Office for Digital Channels of the Government of the Autonomous City of 
+Buenos Aires was requested to correct the link to the “Boti” legal notice and provide 
+detailed information on the kind of personal data collected, the purpose, and the security 
+measures adopted, among other relevant aspects. In response to this request, the Office 
+provided information on the corrections made to the legal notice link and listed the 
+available digital communication channels, as well as the security measures implemented 
+in the chatbot. It was emphasized that sensitive data, such as COVID-19 test results, 
+are only accessible via WhatsApp and solely if the query comes from the device whose 
+telephone number matches that registered during the test.
+The Ombudsman Office resolved to request a reformulation of the legal notice to 
+ensure full and clear information on the “Boti” chatbot’s operations. In addition, they 
+urged consideration of the recommendations on use of Artificial Intelligence-based 
+tools and personal data processing in the context of COVID-19, as well as logging 
+all databases containing personal information with the corresponding Registry. The 
+resolution set a deadline of thirty days to complete these actions, pursuant to the 
+legislation in force in the City of Buenos Aires. 
+SOME REFLECTIONS ON BOTI’S TERMS & CONDITIONS
+Although the GCBA states that they have responded to the Ombudsman’s directives, it 
+has not been possible during this investigation to find official documentation providing 
+20
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+proof. In this vein, it is useful to analyze the state of the Terms & Conditions under 
+which Boti is currently managed.
+The Boti legal notice establishes the conditions and terms of use for the chatbot 
+offered by the Government of the Autonomous City of Buenos Aires (Gobierno de la 
+Ciudad de Buenos Aires, n.d.). Emphasis is placed on the chat being a voluntary channel 
+for addressing requests and that data provided by users can be considered personal 
+and/or sensitive data according to the City’s Data Protection Law. Users have the right 
+to correct, update or eliminate their data, but they are warned that eliminating the 
+data means it will be impossible to continue using the service. The Terms & Conditions 
+establish that the GCBA Ombudsman Office is the oversight body for data protection, 
+and options are provided for filing questions or concerns. 
+By continuing to use the chatbot, users grant their consent for the GCBA to access, 
+process and store their data in order to fully implement the service’s features. The 
+document states that the purpose of data collection is to execute the features offered 
+by Boti and to produce statistics for improving the tool. User data, it states, will be stored 
+until the established purpose has been fulfilled, and then the data will be decoupled 
+such that only aggregate information will be preserved. It emphasizes that, under 
+exceptional circumstances, the information could be kept for an extended period at the 
+discretion of the Administration, as mentioned in the preceding section (GCBA, n.d.).
+The legal notice also describes the security and confidentiality measures applied to the 
+data collected, as well as the GCBA’s responsibilities in their processing. It clarifies that 
+the GCBA will not be liable for unlawful interception of user devices by unauthorized 
+third parties affecting the security of the stored information. Finally, it establishes the 
+applicable jurisdiction and law, as well as user acceptance of receiving information 
+related to City services over a range of media (GCBA, n.d.).
+PURPOSE, CONSENT AND SECURITY
+As mentioned, Boti’s implementation by the GCBA raises several concerns in regard 
+to privacy and protection of personal data. In this section, the implications for the 
+principles of purpose, consent and security will be examined.
+21
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+PURPOSE 
+The principle of purpose is one of the fundamental pillars of personal data protection. 
+It establishes that personal data must be gathered for specific, explicit and legitimate 
+purposes, and the data must not later be processed in a manner that is incompatible 
+with those purposes. This standard means that any data collection form, whether 
+physical or digital, must clearly specify the purpose of the collection, among other 
+details. For example, if data are collected for a newsletter subscription service, 
+this must be the sole purpose for which those data are used, unless new consent is 
+obtained for other uses. Likewise, processing managers must ensure that data subjects 
+are informed of the exact purposes of the collection and obtain their explicit consent 
+for those purposes. One of the experts interviewed locally states that the principle of 
+purpose arises from Article 6 of Law No. 1.845 on the quality of personal data and must 
+be strictly complied with by the State as this is found in a core section of the law, such 
+as the general principles. Therefore, any behavior affecting this principle should be 
+considered a violation by the State. Faced with a need to have an efficient government, 
+the expert maintains that the use could be authorized for compatible purposes, but 
+even in these cases, any transfer must be done to the extent permitted and the data 
+may not be used for just any purpose.
+In the context of Boti, it is critical to analyze how this principle is handled. Below, the 
+brief message in this regard appearing in the legal notice is transcribed:
+PURPOSE OF DATA COLLECTION: Data provided by users are collected solely in 
+order to implement the features offered by the Boti chatbot, as follows: to create a 
+channel of communication between the GCABA and users. Likewise, following a data 
+anonymization procedure, the data will be used to generate statistics and metrics 
+with the goal of analyzing and improving the “Boti” chatbot tool. 
+Boti states that it complies with this principle by collecting data solely to facilitate 
+communication and access to government services. However, it is essential that these 
+purposes be clearly communicated to users so that there is no secondary use of the 
+data without the data subjects’ explicit consent. The legal notice attempts to establish 
+the bases for collection, storage and use of users’ personal data. Nevertheless, a 
+careful analysis reveals that the notice contains several important shortcomings in the 
+context of the principle of purpose. These are: 
+a. Lack of specificity in the purpose of data collection. The Boti chatbot legal notice 
+mentions two general purposes: 1) Creating a channel of communication between the 
+22
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+GCBA and users and 2) Generating statistics and metrics following an anonymization 
+process. However, the purposes are too broad and vague. How the data will be used in 
+the context of communication is not detailed, nor is the type of statistics that are to be 
+obtained and their relevance for improving the chatbot explained. It is critical for each 
+data processing purpose to be specified with greater clarity and precision; for example, 
+describing how the personal data will be used for communication (such as follow-up on 
+queries, answers to specific requests, etc.) or explaining the type of statistics that will 
+be generated and how they will directly contribute to improving the service.
+b. Anonymization process and use of anonymized data. The notice mentions the use 
+of anonymized data for statistics and metrics, but it does not provide details on the 
+anonymization process. Anonymization must be clearly explained to assure users that 
+their personal data will not be reused in an identifiable way. A best practice should 
+describe the data anonymization process, including the techniques used and how it will 
+be guaranteed that the data cannot be re-identified.
+CONSENT
+When access to essential services is mediated by technologies requiring consent for 
+the use of personal data, users’ ability to deny that consent without facing negative 
+repercussions is considerably limited. In practice, this can lead to a situation where 
+users feel obligated to accept terms and conditions that they would otherwise reject, 
+thus compromising the freedom of consent.
+The Boti chatbot case is a clear example of this problem, since the legal notice 
+establishes that by continuing to use the chatbot, the user is granting consent. However, 
+for the consent to be truly free, users must have a real option of withholding it without 
+facing negative consequences. In the case of Boti, if using the chatbot is necessary 
+for accessing certain essential services, users can feel they are required to accept the 
+terms, which compromises freedom of consent. To respect the principle, an alternative to 
+using the chatbot should be offered for those who do not wish to grant consent. 
+In addition, the legal notice mentions that the data will be used to fully implement 
+the features offered. These statements are fairly broad and vague, which can 
+make it difficult for users to understand exactly what their data will be used for. 
+It is necessary to clearly specify in detail the exact purposes for which the data 
+will be collected and used, avoiding generic terms. For example, instead of “fully 
+implementing the features offered,” the specific functions involving the use of 
+23
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+personal information should be described. In turn, this benefits compliance with the 
+principle of purpose described above. 
+Explicit consent requires an affirmative action by the data subject. The current 
+formulation of the legal notice may not meet this criterion since it seems to assume 
+consent automatically by continuing to use the service. It is necessary to implement an 
+explicit mechanism for obtaining consent, such as a verification box that users must 
+check to continue using the chatbot. In addition, this consent must be recorded and 
+stored such that it can be audited as necessary.
+Lastly, it is important to consider that digital skills and literacy are not evenly spread 
+among the population. There are segments that still may not have the skills or 
+knowledge needed to fully understand the terms of use and the implications of granting 
+consent. These gaps can further exacerbate the situation, making certain groups more 
+vulnerable to accepting conditions they do not fully understand, so as not to lose access 
+to critical services. Therefore, it is crucial for consent and data use policies to be clear, 
+detailed and accessible to everyone, ensuring true freedom of choice.
+SECURITY
+Some of the experts interviewed indicated that the Argentinian public sector faces 
+multiple challenges in protecting its databases. One of the most critical is the lack 
+of adequate technological  infrastructure, since many government offices operate 
+with obsolete and fragmented systems that not only make efficient information 
+management more difficult, but also leave them vulnerable to security breaches. This 
+defective infrastructure hampers the implementation of robust, up-to-date security 
+measures, exposing sensitive data to potential cyberattacks and unauthorized access. 
+In addition, they mentioned that the absence of personnel trained in cybersecurity 
+aggravates the problem. Although Argentina has highly qualified information 
+security professionals, many of them work in the private sector due to the extremely 
+competitive conditions offered there. This situation significantly reduces the public 
+sector’s ability to respond to security incidents and vulnerabilities. Continuous 
+education and training of personnel in cybersecurity issues is essential for maintaining 
+data integrity and confidentiality; however, these initiatives are insufficient and, in 
+many cases, nonexistent.
+Finally, some of the specialists interviewed also indicated that, while there are laws 
+and regulations for personal data protection, their implementation and oversight are 
+24
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+inconsistent, making it hard to create a culture of data security and privacy in the 
+public sector. It is critical that clear policies be established, together with constant 
+oversight, to ensure the security of databases throughout the public sector.
+The principle of security in personal data protection establishes that organizations 
+must adopt adequate measures to protect personal data against unauthorized access, 
+loss, destruction, damage or improper disclosure. This principle is fundamental to 
+guaranteeing the confidentiality, integrity and availability of personal information. 
+The audit report on Boti provides a detailed perspective on the security practices 
+and measures implemented. Based on that report, several key aspects related to this 
+principle are presented below.
+a. Security responsibility and management. The audit revealed that the hardware 
+manager and the protective software for connections, IP addresses, access 
+points, firewall and VPN are not clearly identified. The lack of clarity in assigning 
+responsibilities may significantly compromise the system’s security. There is no 
+supporting documentation ensuring signed confidentiality agreements and no 
+disclosure of the source code with Boti’s developers. This lack represents a risk of 
+unauthorized access and potential leaks of sensitive data.
+b. Contingency plans and recovery. Although the use of ISO 27001-based 
+continuity tests and the performance of periodic recovery tests are mentioned, the 
+documentation supporting these procedures is not included. The lack of tangible 
+evidence could suggest an improper or incomplete implementation of these critical 
+practices. Boti’s continuity and availability are not guaranteed should unexpected 
+events with the supplier occur, since there are no clear plans or provisions for the 
+chatbot’s transportability, adaptation or eventual migration to other suppliers or to 
+GCBA’s own infrastructure.
+c. Risk management and monitoring. The GCBA does not report whether there is a 
+method for monitoring risks, logging events, or evaluating impacts and their frequency. 
+The lack of these mechanisms hampers an effective, rapid response to security 
+incidents. Policies, processes and specific developments for compiling and analyzing 
+users’ level of satisfaction are not spelled out, which prevents continuous assessment 
+of security and privacy from the users’ perspective.
+d. Security policies and procedures. Although it is mentioned that logs are handled in 
+a section of the audit, the kind of access, methodology used for management and the 
+record backup time threshold are not specified. These details are essential for ensuring 
+25
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+traceability and responsibility in personal data management. No information is provided 
+on the operating systems, technologies and software of the work devices linked to 
+Boti servers. This lack of transparency complicates evaluation of the security of the 
+technological environment as whole.
+BY WAY OF CONCLUSION 
+The implementation of the Boti chatbot by the Government of the City of Buenos Aires 
+raises important challenges in terms of privacy and personal data protection. While 
+the objective of improving access to information and the inclusion of citizens using 
+technological tools is noteworthy, addressing the shortcomings identified is essential 
+to guaranteeing respect for fundamental rights and data integrity. 
+For this, as present above, an exhaustive review of Boti chatbot privacy policies is 
+needed to ensure specificity and transparency in the purpose of data collection, as well 
+as in the processes of anonymization and obtaining consent. It is critical for users to 
+have a real option to choose from if they want to provide their personal data, without 
+feeling coerced by the need to access essential services.
+In addition, it is imperative to improve information security practices, from the clear 
+delegation of responsibilities to the implementation of appropriate contingency 
+and recovery plans. The lack of adequate technological infrastructure and effective 
+supervision are obstacles that must be addressed to adequately protect citizens’ 
+personal data and privacy.
+Finally, a comprehensive approach is needed that combines improvements in personal 
+data protection policies and procedures with investment in technology and staff 
+training. Only with a firm commitment to privacy and information security can citizen 
+trust in the use of public technological tools be promoted. 
+The case of the Boti chatbot, as a government AI-based technological solution that 
+gathers and processes information, reveals an urgent need to assess the potential 
+risks and negative impact on people and societies as an indispensable requirement for 
+its use and development. 
+The framework for conducting these assessments must be international human rights 
+standards, and they must take place throughout the technology’s whole lifecycle, in 
+particular before and during its implementation. All this with the goal of determining 
+26
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+whether an AI system should be installed or not. In other words, if the evaluations 
+detect substantial risks to people’s rights or public safety, or they do not satisfactorily 
+meet applicability conditions, the project should be abandoned or interrupted 
+immediately—at least until the people in charge take the necessary measures to 
+address, handle and/or repair the risks or affectations identified and communicate 
+them to citizens. 
+Human rights risk assessments, especially in privacy and personal data protection, 
+are a vital component in data governance and Artificial Intelligence in the public 
+sector. Another indispensable aspect for this is having an organizational structure 
+that precisely establishes the administrative areas intervening in the development of 
+implementing AI systems, as well as the associated transparency and accountability 
+mechanisms. 
+To close, it is worth highlighting the asymmetry in the balance of power existing 
+between the computing capacity of AI systems and personal data subjects. In 
+other words, while these technologies may possess and process a large volume 
+of information about an individual, the latter often may not even know the system 
+operator. Therefore, there must be an obligation for identification that enables 
+each individual to know at a minimum the intervening governmental areas who are 
+responsible for the AI system in operation. In addition, personal data subjects must be 
+able to exercise the right to oppose their personal data being processed by Artificial 
+Intelligence systems, especially when access to services depends or is conditioned on 
+handing them over. 
+27
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+BIBLIOGRAPHY
+Adamopoulou, Eleni, & Lefteris Moussiades. “An Overview of Chatbot Technology.” 
+In Artificial Intelligence Applications and Innovations, edited by Ilias Maglogiannis, 
+Lazaros Iliadis & Elias Pimenidis, vol. 584. Cham: Springer, 2020. https://doi.
+org/10.1007/978-3-030-49186-4_31.
+Auditoría General de la Ciudad de Buenos Aires. Informe Final de Auditoría. Período 
+2021. Proyecto Nº 10.22.04, CHATBOT Boti. 2023. https://www.agcba.gov.ar/docs/inf-
+20230322_2202---CHATBOT-BOTI.pdf.
+Benegas, Fernando. “Estados ágiles en América Latina: la experiencia de Buenos Aires 
+en el uso de canales digitales con ciudadanos.” Policy Brief #33 CAF. 2022. https://
+scioteca.caf.com/bitstream/handle/123456789/1879/PolicyBriefBoti-20220308.
+pdf?sequence=1&isAllowed=y.
+Cathcart, W. [@wcathcart]. May 2021 https://x.com/wcathcart/
+status/1389654501896777731 (reviewed July 2024).
+Consejo de la Magistratura de la Ciudad Autónoma de Buenos Aires. Constitución de la 
+Ciudad Autónoma de Buenos Aires (2a ed.). Ciudad Autónoma de Buenos Aires: Editorial 
+Jusbaires. 2016. https://www.argentina.gob.ar/sites/default/files/derechoshumanos_
+publicaciones_colecciondebolsillo_01_constitucion_nacion_argentina.pdf
+Defensoría del Pueblo de la Ciudad de Buenos Aires. Resolución N° 2536-222022. 
+https://www.defensoria.org.ar/wp-content/uploads/disposiciones-anteriores/
+Resolucion-2536-22.-Derechos-digitales-y-proteccion-de-datos-personales.pdf
+Gertner, G., Gonzalez Sutil, E., Regatk, D. La atención del gobierno en la era digital. 
+El caso Boti en la Ciudad de Buenos Aires. 2023. https://www.utdt.edu/ver_novedad.
+php?id_novedad=5782&id_item_menu=25201
+Gobierno de la Ciudad Autónoma de Buenos Aires. Boti, el chat del Gobierno porteño, 
+ganador en la Copa Mundial de chatbots. Jefatura de Gabinete. 2019. https://www.
+buenosaires.gob.ar/noticias/boti-ganador-copa-mundial-chatbots (reviewed June 2024).
+—. Resolución N.º 3/2020 Subsecretaría Ciudad Inteligente. May 29, 2020. https://
+documentosboletinoficial.buenosaires.gob.ar/publico/20200603.pdf (reviewed June 2024).
+28
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+—. Resolución MJGGC-SSCIUI-1-20. 2020. https://documentosboletinoficial.buenosaires.
+gob.ar/publico/PE-RES-MJGGC-SSCIUI-1-20-ANX-1.pdf (reviewed June 2024).
+—. Boletín Oficial N° 58612. 2020. https://documentosboletinoficial.buenosaires.gob.ar/
+publico/20200504.pdf (reviewed June 2024).
+—. Boletín Oficial N° 5951. 2020. https://documentosboletinoficial.buenosaires.gob.ar/
+publico/20200908.pdf (reviewed June 2024).
+—. Resolución N.º 28/SSCIUI/21. Boletín Oficial de la Ciudad Autónoma de Buenos Aires. 
+October 15, 2021a. https://boletinoficial.buenosaires.gob.ar/normativaba/norma/581191 
+(reviewed June 2024).
+—. Resolución N.º 18/SSCIUI/21. Boletín Oficial de la Ciudad Autónoma de Buenos Aires. 
+October 20, 2021b. https://boletinoficial.buenosaires.gob.ar/normativaba/norma/561681 
+(reviewed June 2024).
+—. Resolución N.º 41/SSCIUI/21. Boletín Oficial de la Ciudad Autónoma de Buenos Aires. 
+2021c. https://boletinoficial.buenosaires.gob.ar/normativaba/norma/581191 (reviewed 
+June 2024).
+—. Resolución N.º 29/SSCIUI/21. Boletín Oficial de la Ciudad Autónoma de Buenos Aires. 
+2021d. https://boletinoficial.buenosaires.gob.ar/normativaba/norma/572826 (reviewed 
+June 2024).
+—. Servicio de Consultoría para Conversaciones Asistidas del Ecosistema de 
+Activos Chatbot BA. Proceso de compra N° 2051-1410-CDI21. 2021. https://
+www.buenosairescompras.gob.ar/PLIEGO/VistaPreviaPliegoCiudadano.
+aspx?qs=BQoBkoMoEhwENydqsvfBwaceYOaKHHIjNKycJrBY10BJwJ/
+pPWleSwlceUPZKMc2SlUXZ8q8AGaJBYDpkJ0lS1tdjZW3ib/wz07PB75HxGY= 
+(reviewed June 2024).
+—. Ciudad Futuro Plan Estratégico de Inteligencia Artificial. 2021. https://web.archive.
+org/web/20210811182217/https://www.buenosaires.gob.ar/sites/gcaba/files/plan_de_
+inteligencia_artificial_de_la_ciudad.pdf (reviewed July 2024).
+—. Resolución N.º 5/SSCIUI/22. Boletín Oficial de la Ciudad Autónoma de Buenos Aires. 
+2022. https://boletinoficial.buenosaires.gob.ar/normativaba/norma/598284 (reviewed 
+June 2024).
+29
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+—. Boti, el WhatsApp de la Ciudad, superó los 26 millones de conversaciones. 2022. 
+https://buenosaires.gob.ar/jefaturadegabinete/innovacion/noticias/boti-el-chatbot-
+de-la-ciudad-supero-las-26-millones-de#:~:text=Coordinado%20por%20la%20
+Secretar%C3%ADa%20de,el%20mismo%20per%C3%ADodo%20de%202022.
+—. Boti festeja su cuarto aniversario con más de 110 millones 
+de conversaciones. 2023. https://buenosaires.gob.ar/noticias/
+boti-festeja-su-cuarto-aniversario-con-mas-de-110-millones-de-conversaciones.
+—. IF-2023-45656308-GCABA-MHFGC Secretaría de Innovación y Transformación Digital, 
+Descripción de Responsabilidades Primarias. 2023. https://buenosaires.gob.ar/sites/
+default/files/2023-12/IF-2023-45656308-GCABA-MHFGC.pdf (reviewed July 2024).
+—. Aviso Legal -  Términos y Condiciones. n.d. https://storage.googleapis.com/m-infra.
+appspot.com/public/gcba/aviso-legal/aviso_legal_tyc.html (reviewed June 2024).
+—. Servicio de Consultoría para Conversaciones Asistidas del Ecosistema 
+de Activos Chatbot BA. EX-2021-26811106-GCABA-CYA. n.d. https://
+www.buenosairescompras.gob.ar/PLIEGO/VistaPreviaPliegoCiudadano.
+aspx?qs=BQoBkoMoEhwENydqsvfBwaceYOaKHHIjNKycJrBY10BJwJ/
+pPWleSwlceUPZKMc2SlUXZ8q8AGaJBYDpkJ0lS1tdjZW3ib/wz07PB75HxGY= 
+(reviewed June 2024).
+—. Servicio de Diseño, Provisión, Implementación y Mant. del Sistema de Emisión 
+de Licencias de Conducir. EX-2022-01860200--GCABA-DGCCYA. n.d. https://
+www.buenosairescompras.gob.ar/PLIEGO/VistaPreviaPliegoCiudadano.
+aspx?qs=BQoBkoMoEhyb3qSOVd4%7CRhrQYpMsfIC1gjMKhb%7Cyw9jUDeetKjmUEf/
+MXWoF9tIKBOz4FK%7C6KtnbRv (reviewed July 2024).
+Hasal, M., Nowaková, J., Ahmed Saghair, K., Abdulla, H., Snášel, V., Ogiela, L. Chatbots: 
+Security, privacy, data protection, and social aspects. 2021. https://onlinelibrary.wiley.
+com/doi/epdf/10.1002/cpe.6426
+Instituto Nacional de Estadística y Censos. Censo Nacional 2022. 2024. https://censo.
+gob.ar/wp-content/uploads/2023/11/c2022_caba_pob_c7_1.xlsx
+Ischen, C., Araujo, T., Voorveld, H., van Noort, G., Smit, E. Privacy concerns in chatbot 
+interactions. UvA-DARE (Digital Academic Repository). 2020. https://pure.uva.nl/ws/
+files/44537255/Ischen2020_Chapter_PrivacyConcernsInChatbotIntera.pdf
+30
+BOTI: STUDY ON THE NATURAL LANGUAGE PROCESSING CHATBOT OF THE GOVERNMENT OF THE CITY OF BUENOS AIRES, ARGENTINADERECHOS DIGITALES
+Ley de Protección de Datos Personales (Ley A -  N° 1.845). Boletín Oficial, August 3, 2006. 
+https://www.argentina.gob.ar/normativa/provincial/ley-1845-123456789-0abc-defg-
+548-1000xvorpyel/actualizacion (reviewed June 2024).
+Ministerio de Justicia de la Nación. Protección de Datos Personales (Ley N° 25.326). 2000. 
+https://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/texact.htm
+Secretaría de Derechos Humanos y Pluralismo Cultural. Constitución de la Nación 
+Argentina. 2016. https://www.argentina.gob.ar/sites/default/files/derechoshumanos_
+publicaciones_colecciondebolsillo_01_constitucion_nacion_argentina.pdf
+Secretaría de Innovación y Transformación Digital. Boti. El chatbot de la Ciudad. 2022. 
+https://buenosaires.gob.ar/sites/default/files/2023-02/Caso%20Boti.pdf
+Statista. Porcentaje de usuarios en redes sociales seleccionadas en Argentina en 2023. 
+https://es.statista.com/estadisticas/1218938/argentina-porcentaje-de-usuarios-
+por-red-social/#:~:text=Argentina%3A%20porcentaje%20de%20usuarios%20
+por%20red%20social%202023&text=En%202023%2C%20WhatsApp%20se%20
+situ%C3%B3,internet%20interactuando%20en%20la%20plataforma. (reviewed July 2024).
+The Economist Intelligence Unit Limited. The Global Liveability Index 2023. https://www.
+eiu.com/n/campaigns/global-liveability-index-2023/ (reviewed July 2024).
+United Nations Office of the High Commissioner for Human Rights.  A/HRC/48/31: The 
+Right to Privacy in the Digital Age -  Report of the United Nations High Commissioner for 
+Human Rights. 2021. https://www.ohchr.org/en/documents/thematic-reports/ahrc4831-
+right-privacy-digital-age-report-united-nations-high (reviewed July 2).
