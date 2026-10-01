@@ -2517,3 +2517,47 @@ Descargas en el scratchpad de la sesión (fiscalias/): decretos 2003-2026, bolet
   de fuentes, el Decreto 64/2026 y que ningún decreto encontrado cita la Ley 26.427 ni fija horas).
 - NO VA AL DOCUMENTO: la partida de 16,1 M del presupuesto 2026 contra 11,2 M por mes de gasto. Puede haber una
   ampliación no publicada (en las modificaciones que se revisaron, Decretos 690 y 712 de 2026, no aparece).
+
+## 186 A 190 Y ASOCIACIONES DE PARQUE · APLICADO (01/10)
+Fuentes de la verificación en 01_raw/costa/d_verificacion_189_190/ (índices, cálculos y notas).
+- 186 · Ruido: los precedentes verificados (Nueva York, Kensington y Chelsea, Taiwán, Francia, Inglaterra, Japón,
+  Barcelona) y lo que hace la IA (el inspector valida, escala, colectivos, equipos homologados).
+- 187 · Urbanismo (informe 13): lo que se da de más se da por decreto (arts. 1.2.1.1 y 1.1.2.6); 14 de 100 actos; la
+  Ordenanza 9432 en 22 días hábiles; la cautelar de Boulogne (julio de 2025, levantada el 30/12, "no firme"); audiencia
+  y dictamen previos, 15% de la valorización (Ley 14.449) y la IA del lado del vecino. Anexo: Ordenanza XIII.
+- 188 · Cemento o naturaleza (informe 14): 33 Orientales al 99%, el cesto de 1.887.875 y 339.743 $, una oferta por
+  renglón, ninguna EIA costera, Águila–Alvear sin acto, el veto de la 9395. Anexo: Ordenanza XII (licitación propia,
+  EIA, quién decide).
+- Asociaciones de parque (Nick, 01/10): dictamen previo (30 días; vencido, decide quien corresponde), diseño desde el
+  principio, información antes que nadie, seguimiento con la IA y firma en la recepción; la comisión de la zona en sus
+  parques, el panel sorteado en la costa, las dos cosas en un parque costero. Grupos con fuente: asamblea del Parque del
+  Águila (HCD, 01/04/2026) y Asamblea Bosque Alegre (La Nación, 17/04/2012). Catalejo y Barisidro: 9.775 m² de predio.
+- 189 · La costa, primera del 5.5 y en las prioridades. Decisiones de Nick (01/10):
+  - Baño, opción A: habilitado con guardavidas (Ley 14.798) y bandera diaria en los pilotos de arena; en el resto, no
+    habilitado y advertido en cada acceso, con bandera y mapa para kite, windsurf y nado. Reemplaza a la 5304
+    (Ordenanza XI, que la deroga; "Y no deroga nada" pasa a "Y deroga sólo lo que reemplaza"). Montevideo, verificado:
+    allí el baño fuera de las playas habilitadas está prohibido (D.2348); acá se escribió "no se habilita".
+  - Precedentes en el texto y en fuentes: SCBA Brandan (C 111.115) y Amaya (A 71.485), condenas firmes; CSJN Ramos
+    (Fallos 328:2546). El Municipio ya contrata guardavidas (RESFC-2026-717).
+  - Piloto de 100 × 20 m con pie de piedra: 196 M una vez; reponer arena, 4 a 20 M por año; guardavidas, 29 M por
+    temporada y 33 M de bote y desfibrilador. Recurrente: 790 a 1.140 M, 23% a 33% de los 3.455 M.
+  - Año 1: con el pie de piedra y la primera temporada de guardavidas el año 1 da 300 a 350 M (no 210 a 260): se
+    adelantan 350 M de ambiente en 2028 (Excel, Supuestos C238 y Programas fila 10). Es reasignación: el resultado de
+    2028 no cambia (+1.746 M; +1.207 si la tabla cobra desde abril).
+  - Desviador por obra pública; subsidio a las casas sin monto hasta el diagnóstico.
+  - Pacheco: Decreto 2559/2014 (BO 913, p. 41); base de piedra según Clarín (18/09/2014); imágenes 2016-2026 sin pérdida
+    detectable (cálculo propio). El "relleno de los años 70" del Bosque Alegre no tiene fuente: va la cita del Decreto
+    910/2012 ("era un bañado rellenado con residuos domiciliarios", del predio vecino).
+  - "Rojo" aparece sólo como color de la bandera y del mapa, que pidió Nick; ninguno para el resultado fiscal.
+- 190 · Recolección: dos zonas, todos los trabajadores con su antigüedad, presupuesto oficial realista, pago por lo
+  medido, reciclables fuera del contrato, la costa fuera del contrato. Sin nombrar al gremio. La antigüedad acumulada
+  hasta el cambio la paga el Municipio, auditada; desde ahí, cada empresa. Riesgo nuevo en el 6.6 (dieciséis):
+  2.800 a 12.100 M, unos 7.000 en el medio, sujeto al padrón auditado; no es gasto del mandato si los trabajadores
+  siguen; crece unos 650 M por año sin licitar. El modelo no la carga. Ordenanza IX: dos zonas, continuidad y padrón.
+- Página 40 → página 41 de fuentes; 5.5 en tres páginas (costa y recolección; ruido y urbanismo; espacio público y
+  parques); el anexo en tres (la tercera, Ordenanzas XI a XIII). Índice actualizado.
+
+## ENTREGA
+PDF: 43 páginas, 42 cuadros y gráficos del 1 al 42, ninguna página pasa de 2.700 pt, sin "plata" fuera de las
+excepciones, sin azul, fuentes sin sustituciones, sin viudas. Excel: 13.348 fórmulas, cero errores; cambian Supuestos
+C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y 27 en 2028; el resultado, igual.

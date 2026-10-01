@@ -230,7 +230,7 @@ s_row(51, "Ambiente · gasto 2025 (función 4.4)", 1410000000,
       note="5.5: «Hoy: 1.410 millones, el 0,4% del presupuesto». La ejecución da 1.410,1 M (bloque S)")
 s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=FMT_PCT1,
       note="Meta del 6.3. 1,5% de 324.304 M menos 1.410 M: 3.455 M por año (cuadro 14). "
-           "Empieza a moverse en el mes 12 y llega en el mes 36 (6.4)")
+           "Empieza a moverse en el mes 12 y llega en el mes 36 (6.4); el año 1 adelanta lo de la costa (fila 238)")
 s_row(53, "Educación · recomposición anual", 2064000000,
       note="Devolver la función educativa al nivel real de 2024, que cayó 11,6%: 2.064 M (5.8, cuadro 14). Desde el mes 12 (6.4)")
 s_row(54, "Habilitaciones y analítica de seguridad · inversión inicial, una vez", 1200000000,
@@ -496,7 +496,11 @@ s_row(235, "Salud · trece pantallas de ocupación de guardia, una vez", 8318978
 put(S, "B236", "Cada equipo entra en la línea de su área y dentro de su monto; en Ciencia y Técnica quedan las "
     "personas que los instalan (cuadro 27). Precios llevados a diciembre de 2025 con el IPC.",
     font(8, italic=True, color=GRAY))
-for rr in range(106, 237):
+s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 350000000,
+      note="5.5 (189): diagnóstico de Perú 22-36 M, piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
+           "desfibrilador y primera temporada de guardavidas 42 M. Se reasigna en 2028 como el resto de ambiente: "
+           "no cambia el gasto total ni el resultado")
+for rr in range(106, 239):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -604,7 +608,8 @@ for m in MESES:
     P[f"{X}8"] = k
     P[f"{X}8"].font = font(9)
     P[f"{X}8"].number_format = "0"
-    P[f"{X}10"] = f"=(Supuestos!$C$52*Supuestos!$C$127-Supuestos!$C$51)*MIN(MAX(({m}-12)/24,0),1)/12"
+    P[f"{X}10"] = (f"=(Supuestos!$C$52*Supuestos!$C$127-Supuestos!$C$51)*MIN(MAX(({m}-12)/24,0),1)/12"
+                   f"+IF({m}<=12,Supuestos!$C$238/12,0)")
     P[f"{X}11"] = f"=Supuestos!$C$53*IF({m}>=12,1,0)/12"
     if HAB_MODO == "anual":
         P[f"{X}13"] = f"=Supuestos!$C$54*{X}7/12"
@@ -625,8 +630,8 @@ put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con la base de v
     "escolar, habilitaciones y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
     "función de destino y salen de los tres programas que ceden (cuadro 15), así que el gasto total no cambia.",
     font(8, italic=True, color=GRAY))
-put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36; educación se recompone desde el "
-    "mes 12 (6.4). Apoyo escolar abre dos sedes por año y habilitaciones sigue la rampa: son supuestos de este libro.",
+put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36, y en el año 1 adelanta 350 M para "
+    "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año y habilitaciones sigue la rampa: son supuestos de este libro.",
     font(8, italic=True, color=GRAY))
 put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 33)", font(9, True), fill=F_SEC)
 lab2 = {27: "Empleo y vivienda · total del mes",

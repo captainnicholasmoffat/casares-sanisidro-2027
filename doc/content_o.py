@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y nueve cortas. Se votan por separado porque son
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y doce cortas. Se votan por separado porque son
 discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
 
 <div class="callout a">
@@ -244,12 +244,22 @@ Municipal.</p>
 
 <h2>IX &middot; Ordenanza del pliego de higiene urbana</h2>
 
-<h3>Art&iacute;culo &uacute;nico</h3>
+<h3>Art&iacute;culo 1 &mdash; Pliego aprobado antes del llamado</h3>
 <p class="tight">El pliego de bases y condiciones de la licitaci&oacute;n del servicio de higiene urbana
 &mdash;frecuencias, horarios, zonas, fracciones a separar, indicadores de servicio por zona y
 penalidades&mdash; ser&aacute; <b>aprobado por ordenanza con anterioridad al llamado</b>. El reclamo
 vecinal registrado en el Sistema de Informaci&oacute;n Municipal es prueba admisible a los fines de las
 penalidades.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Dos zonas</h3>
+<p class="tight">El servicio se licita en <b>dos zonas, por separado</b>, cada una con su precio, su indicador de
+servicio y sus penalidades.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Continuidad de los trabajadores</h3>
+<p class="tight">El adjudicatario toma a <b>todo el personal operativo del padr&oacute;n anexo al pliego, con su
+antig&uuml;edad y sus derechos</b> (Ley de Contrato de Trabajo, art&iacute;culos 225 y 228). El padr&oacute;n se congela a la fecha
+del llamado, se audita y no puede superar el promedio de los tres meses anteriores. La antig&uuml;edad acumulada hasta
+el traspaso la paga el Municipio, previa auditor&iacute;a, cuando corresponda pagarla; la posterior, el adjudicatario.</p>
 
 <h2>X &middot; Ordenanza de empleo local y del semillero de empresas</h2>
 
@@ -294,16 +304,72 @@ en el Municipio, conforme al art&iacute;culo 10 de la Ley 26.427.</p>
 <h3>Art&iacute;culo 9 &mdash; Semillero de empresas y pr&eacute;stamo que multiplica</h3>
 <p class="tight">Cr&eacute;ase el semillero municipal de empresas: un a&ntilde;o de incubaci&oacute;n en las sedes de formaci&oacute;n, con mentores y asistencia para constituir la sociedad, inscribirse y facturar. El Municipio presta a tasa cero a cada empresa del semillero <b>un peso por cada peso de capital privado, nacional o provincial</b> que reciba, hasta el costo anual de un junior de la plataforma, y el pr&eacute;stamo se devuelve con la facturaci&oacute;n. El Municipio no participa del capital de ninguna empresa.</p>
 
+<h2>XI &middot; Ordenanza de la costa: ba&ntilde;o y calidad del agua</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Tramos habilitados</h3>
+<p class="tight">El Departamento Ejecutivo habilita para ba&ntilde;o los tramos de la costa que tengan, durante la
+temporada, <b>servicio de guardavidas conforme la Ley 14.798</b>: uno cada ochenta (80) metros, con un m&iacute;nimo de
+dos (2), y una embarcaci&oacute;n. Lo hace en coordinaci&oacute;n con la Autoridad del Agua y la Prefectura Naval Argentina.
+Fuera de esos tramos el ba&ntilde;o no est&aacute; habilitado, y cada acceso a la costa lo advierte, con el significado de cada
+bandera y los tel&eacute;fonos de emergencia.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Muestras y bandera diaria</h3>
+<p class="tight">El Municipio toma muestras del agua en cada tramo que se usa, <b>al menos dos (2) veces por
+semana</b>, y las compara con los niveles gu&iacute;a nacionales para recreaci&oacute;n. Cada tramo tiene todos los d&iacute;as su
+bandera sanitaria, que marca el agua como no apta cuando el &uacute;ltimo resultado supera esos niveles, cuando no hay un
+resultado vigente y durante las veinticuatro (24) horas siguientes a una lluvia. Toda persona puede consultar en
+el Sistema de Informaci&oacute;n Municipal, tramo por tramo, la fecha y la hora de cada muestra, el laboratorio, el
+resultado y el valor gu&iacute;a.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Derogaci&oacute;n</h3>
+<p class="tight">Der&oacute;gase la Ordenanza 5304/1978.</p>
+
+<h2>XII &middot; Ordenanza de la obra en parques y costa</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Licitaci&oacute;n propia</h3>
+<p class="tight">Ninguna obra nueva en un parque o en la costa se paga ampliando un contrato de mantenimiento: se
+contrata por <b>licitaci&oacute;n propia</b>, cualquiera sea su monto.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Evaluaci&oacute;n de impacto ambiental</h3>
+<p class="tight">Toda obra en la costa, incluidos los pilotos de arena, tiene <b>evaluaci&oacute;n de impacto ambiental
+antes de contratarse</b>, y toda persona puede consultarla completa en el Sistema de Informaci&oacute;n Municipal.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Qui&eacute;n decide</h3>
+<p class="tight">La obra en un parque se somete a la comisi&oacute;n vecinal de su zona; la obra en la costa, a un panel de
+vecinos sorteado entre quienes viven en el partido y quienes usan la costa, que se integra para cada caso y se
+disuelve con su decisi&oacute;n. En un parque de la costa, a los dos. En todos los casos, con el dictamen de la asociaci&oacute;n
+del parque (Ordenanza V). <b>El Departamento Ejecutivo no contrata la obra que rechacen.</b></p>
+
+<h2>XIII &middot; Ordenanza de excepciones urban&iacute;sticas</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Audiencia y dictamen previos</h3>
+<p class="tight">Ninguna excepci&oacute;n al C&oacute;digo de Ordenamiento Urbano, urbanizaci&oacute;n especial ni cambio de zona se
+otorga sin <b>audiencia p&uacute;blica y dictamen de la comisi&oacute;n vecinal de la zona</b>, los dos previos y obligatorios,
+con respuesta por escrito a cada observaci&oacute;n.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Lo que la zona rechaza</h3>
+<p class="tight">Las facultades de los art&iacute;culos 1.2.1.1 y 1.1.2.6 del C&oacute;digo no se ejercen contra el dictamen de la
+comisi&oacute;n de la zona. El Departamento Ejecutivo no otorga por decreto la excepci&oacute;n que la zona rechace, y observa la
+ordenanza que la otorgue contra ese dictamen (Ley Org&aacute;nica de las Municipalidades, art&iacute;culo 108, inciso 2).</p>
+
+<h3>Art&iacute;culo 3 &mdash; Contribuci&oacute;n por valorizaci&oacute;n</h3>
+<p class="tight">Quien recibe una excepci&oacute;n paga el <b>quince por ciento (15%) de la valorizaci&oacute;n</b> que genera,
+conforme la Ley 14.449, art&iacute;culos 46 y 50, con la aprobaci&oacute;n provincial que pide su reglamentaci&oacute;n. Lo que se cobra
+va a vivienda y a obra en las zonas donde falta.</p>
+
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>
 <div class="cols">
 <p><b>No declara vinculante el voto vecinal.</b> La Constituci&oacute;n provincial no lo permite y el
 veto de Pinamar de diciembre de 2025 lo confirm&oacute;. Lo que se vuelve jur&iacute;dicamente
-obligatorio es la partida y la respuesta, no el proyecto votado. <span class="sg">De ah&iacute; depende
+obligatorio es la partida y la respuesta, no el proyecto votado. Donde el Ejecutivo se obliga a no hacer lo
+que los vecinos rechazan &mdash;la obra en parques y costa, las excepciones urban&iacute;sticas&mdash;, es el Ejecutivo
+el que se limita a s&iacute; mismo: el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
 que esta ordenanza sobreviva a un veto.</span></p>
 <p><b>No crea un &oacute;rgano nuevo.</b> No hay junta, comit&eacute; permanente ni consejo. Las
 comisiones zonales son las asociaciones vecinales que ya existen, reconocidas por la propia Ordenanza
-6045, y el comit&eacute; de vigilancia del art&iacute;culo 7 se elige por obra y se agota con ella.</p>
+6045, y el comit&eacute; de vigilancia del art&iacute;culo 7 se elige por obra y se agota con ella, como el panel de la
+costa de la Ordenanza XII, que se sortea para cada caso y se disuelve con su decisi&oacute;n.</p>
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> No hace falta: los art&iacute;culos 60 y 132 de la
 Ley Org&aacute;nica ya establecen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el
 municipio, y con qu&eacute; requisito de adhesi&oacute;n.</p>
@@ -312,8 +378,10 @@ fundamento. Donde no hay un n&uacute;mero, el articulado manda fijarlo y publica
 <p><b>No toca lo que no es municipal.</b> Quedan fuera el recorrido de las l&iacute;neas de colectivo,
 que autoriza la Provincia; la estad&iacute;stica criminal; y todo lo que exija reformar la Ley
 Org&aacute;nica, que este programa reclama y no promete.</p>
-<p><b>Y no deroga nada.</b> La derogaci&oacute;n de los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045
-va en un proyecto separado, que es el primero que entra al Concejo. Son dos discusiones distintas y
+<p><b>Y deroga s&oacute;lo lo que reemplaza.</b> La Ordenanza XI deroga la 5304 de 1978, que proh&iacute;be el
+ba&ntilde;o en todo el r&iacute;o, porque pone en su lugar el ba&ntilde;o con guardavidas y la bandera de cada d&iacute;a. La
+derogaci&oacute;n de los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045 va en un proyecto separado, que es el primero
+que entra al Concejo. Son dos discusiones distintas y
 conviene que se voten por separado.</p>
 </div>
 

@@ -1,0 +1,123 @@
+FUENTES - Costo de guardavidas Ley 14.798, tramo piloto costa de San Isidro
+Consulta: 2026-09-30 / 2026-10-01. Nada pago, nada en persona, sin contactos. Repo no tocado (solo lectura).
+Marcas: [V] leido en fuente primaria | [P] fuente secundaria seria o precio de lista comercial | [CP] calculo propio (ver calculo_temporada_CP.txt) | [SC] sin confirmar
+Moneda: pesos de diciembre de 2025 (deflactor repo data/deflactor_periodos.csv, base dic-2025=100; USD a $1.447,84).
+
+=====================================================================
+1. NORMAS (jornada, dotacion, equipamiento, aportes)
+=====================================================================
+../normas_AR/PBA_Ley_14798.txt  (https://normas.gba.gob.ar/ar-b/ley/2015/14798/11151)
+  [V] Art. 16: "siendo la jornada laboral de seis (6) horas diarias corridas."
+  [V] Art. 19 a): "Un (1) Guardavidas por cada ochenta (80) metros o fraccion de extension en caso de playas maritimas y fluviales..."
+  [V] Art. 19 e): puestos "agrupandolos de a dos (2) trabajadores"; 19 f): "servicio minimo de 2 (dos) Guardavidas".
+  [V] Art. 22 a) y b): elementos por guardavidas y por puesto (casilla, mastil, banderas, malacate 300 m, botiquin, equipo de comunicacion, prismatico, tablero espinal, collar de Filadelfia, mangrullo).
+  [V] Art. 22 c): "desfibrilador automatico DEA ... tiempo de respuesta maximo de tres (3) minutos de caminata."
+  [V] Art. 22 d): "Por cada balneario o su equivalente hasta dos mil (2.000) metros de costa una (1) embarcacion a motor con equipo de comunicacion."
+  [V] Arts. 27-28: Guardavidas-Timonel (conductor de la embarcacion y acompanante).
+  Nota: la SCBA declaro inconstitucionales arts. laborales (12, 14-18) en casos Pinamar 2021 y Villa Gesell 2025 (ver ../jurisprudencia_AR); el art. 16 integra ese bloque. Ver Ley 27.155.
+../normas_AR/Ley_27155_texto.html  (https://www.argentina.gob.ar/normativa/nacional/ley-27155-248822/texto ; BO 03/07/2015)
+  [V] Art. 8 b): la jornada "no podra exceder la de seis horas diarias cualquiera sea el ambiente acuatico".
+normas/IPS_DL_9650-80.pdf / .txt  (https://www.ips.gba.gob.ar/sites/default/files/documentos/Ley9650.pdf)
+  [V] Art. 4 a) aporte personal 14%; art. 4 c) "contribucion obligatoria a cargo de los empleadores del doce (12) por ciento".
+normas/PBA_Ley_6982_IOMA.html  (https://normas.gba.gob.ar/documentos/xknOgIA0.html)
+  [V] Ley 6982 art. 12 (recursos IOMA). La tasa patronal 4,8% (Decreto 2655/2004) es [P]: solo snippet de busqueda, no lei el decreto.
+
+=====================================================================
+2. SAN ISIDRO (contratacion actual de guardavidas, sueldo)
+=====================================================================
+Repo (solo lectura) 01_raw/sanisidro_transparencia/presupuestos/ordenanza_del_presupuesto_2026_1.pdf
+  (https://www.sanisidro.gob.ar/sites/default/files/img/ordenanza_del_presupuesto_2026_1.pdf) - escaneado sin texto; OCR tesseract + lectura visual en ../../ocr_pres2026/
+  [V] p.4 (folio 953) Art. 6 "Planta Estable": "sueldos basicos expresados en cantidad de modulos"; Cat. 12: 35 HS 579.809 / 40 hs 795.075 / 48 HS 795.075.
+  [V] p.12 (folio 961) Art. 15, bonificaciones: "18) Guardavidas - 50%" sobre sueldo basico.
+  [V] p.170 F6 Subsecretaria de Deportes (Presupuesto 2026, fecha 24/10/2025): "PERSONAL TECNICO - CATEGORIA 12 DE 35 HORAS" 7 cargos $52.782.955/anio.
+  [CP] 52.782.955 / 7 / 13 = 580.033 ~ 579.809 => 1 modulo ~ $1 (13 sueldos con SAC).
+  Nota: el repo (informes/INFORME_03 y NO_PARSEADOS.md) registra que la escala salarial "no se encontro" y que este PDF no se parseo; la escala esta en el art. 6 de esta ordenanza.
+san_isidro/SI_RESFC-2026-717_Designa_guardavidas_Campo1.pdf  (https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IjYxVDNJU1kwbjM2K2JLUXdtRGJIOWc9PSIs... enlace cifrado de Livewire, puede expirar)
+  [V] RESFC-2026-717-SI-SSRH, 12/06/2026: designacion "Planta Temporaria - Personal Mensualizado", Campo Municipal de Deportes N 4, "con categoria 12 (35) y funciones de guardavidas, incluyendose en los alcances del articulo 15, inciso d) apartado 18 - Bonificacion Guardavidas (50%) - de la Ordenanza N 9422".
+san_isidro/SI_RESFC-2026-581_Designa_guardavidas.pdf  (https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6ImNvTEdBbll6bkhud01OVjFsUUtLL1E9PSIs... cifrado)
+  [V] otra designacion de guardavidas mensualizado.
+san_isidro/SI_DECRE-2025-91_Bonificacion_productividad_guardavidas.pdf  (https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1738931081.pdf)
+  [V] 24/01/2025: "Bonificacion por Productividad a los guardavidas de los Campos de Deportes Municipales Nros. 1, 2 y 4 ... Pesos Ochenta y Un Mil ($81.000.-), como adicional a su remuneracion mensual, para el periodo comprendido entre el 1 de enero y el 31 de diciembre de 2025". Art. 4: se actualiza con paritarias.
+san_isidro/SI_DECRE-2024-1685_Bonificacion_productividad_guardavidas.pdf  (https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1732716988.pdf)  [V] idem 2024.
+san_isidro/SI_RESFC-2024-310_Designa_guardavidas_Tercera_Edad.pdf  (https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1714676608.pdf)  [V] guardavidas en Direccion General de Tercera Edad.
+
+=====================================================================
+3. SUELDOS DE REFERENCIA EN OTROS MUNICIPIOS (SIBOM: https://sibom.slyt.gba.gob.ar/bulletins/<id>)
+=====================================================================
+sibom/MdP_Res0436-25_escala_oct2025.html + anexoA/B.pdf  (13989/contents/2317978; anexos download_annex?annex_id=58393/58394)
+  [V] RESOL-2025-436-E-MUNIMDP-SLTH 02/12/2025, escala "vigente a partir del mes octubre 2025", Anexo I "Guardavida de playa: con 42 horas semanales": Guardavidas de Playa I $2.258.042,14 ... XVIII $4.188.668,17; Jefe de Sector I (48 h) $2.882.958,87.
+sibom/MdP_Res0051-26_escala_feb2026.html + anexoA/B.pdf  (14477/contents/2352526; annex 60967/60968)
+  [V] desde 01/02/2026 Guardavidas de Playa I $2.535.343,26.
+sibom/MdP_Dec0105-26_recomposicion.html + anexos  (14323/contents/2339231; annex 60147/60148)  recomposicion salarial ene-2026/ene-2027 (no leida en detalle).
+sibom/GralBelgrano_Dec2291-2024.html  (12328/contents/2190914)
+  [V] Dec. 09/12/2024 (publ. 25/03/2025): "a partir del 8 de Diciembre del ano 2024 ... Guardavidas Profesional - Temporada estival - 42 Hs. Semanales: $ 1.360.000,00"; Coordinador $1.500.000. Pileta municipal y Rio Salado (Balneario Norte).
+sibom/GralBelgrano_Dec1435-2025.html (14350/contents/2343992)
+sibom/Magdalena_Dec1768_2026-01-20.html  (14094/contents/2339727)
+  [V] 9 guardavidas "Personal Temporario Mensualizado durante la Temporada estival 2025/2026 en los Balnearios Municipales", 40 h, segun "Programa de Gestion de Seguridad Acuatica"; temporada 1/12/2025-30/4/2026. Sin montos.
+sibom/Magdalena_Dec1893_2026-03-31.html (14356/contents/2362990) [V] "Mensualizado Guardavidas (40 Hs) 9 cargos". Sin montos.
+sibom/Magdalena_Dec1521_2025-12-17.html (13962/contents/2323023) [V] guardavidas pileta municipal 40 h.
+sibom/Magdalena_Ord4343-25_2025-11-27.html (13891/contents/2315220) [V] Magdalena "cuenta con balneario, laguna, tosqueras y piletas".
+sibom/Quilmes_Dec*.html (1343: 12892/2228210; 2542: 13440/2283481; 2594: 13440/2284585; 2628: 13655/2291497; 3922: 13852/2319438; 0118: 14636/2363114; 0251: 14636/2365310) + Quilmes_Boletin_537_2025-12-19.pdf (https://sibom.slyt.gba.gob.ar/bulletins/13852.pdf)
+  [V] Quilmes publica decretos en extracto: designaciones/garantia salarial de guardavidas sin montos.
+sibom/Chascomus_Dec815-25 (13836/2308104), Dec936-25 (13964/2325859): guardavidas por jornal, laguna 1/11/25-5/4/26. Res52-26 (14594/2372976).
+sibom/MarChiquita_Dec2085-25 (14126/2330397): relevos pagados al jornal "Grupo Ocupacional Guardavidas Categoria IV". Dec0728-26 (14994/2393029).
+sibom/Loberia_Dec1734-25 (13739/2307198): Balneario Arenas Verdes.
+sibom/Villarino_Dec1152-25 (14022/2319564): 40 h, fines de semana 10-20 h, bonificacion 20% riesgo, 2-3 guardavidas por balneario.
+sibom/GralLavalle_Dec05-2026 (14467/2351221): natatorio.
+sibom/ Campana_Dec74-25 (12762/2219752), Daireaux_Dec241-25 (12578/2203416), Salliquelo_Dec246-25 (12743/2216236), Salliquelo_Dec443-25 (13267/2262400), FlorAmeghino_Dec506-25 (14296/2336643), Lujan_Dec1903-26 (14248/2336286), HYrigoyen_Dec429-26 (15313/2412262): hits de "embarcacion/motor" sin precio util.
+sibom/Magdalena_Dec1431-25 (13807/2309722), Dec1849-26 (14356/2362646), Dec637-26 (15318/2411816; seguro del balneario), Ord4407-26 (15603/2431430): no tratan calidad de agua.
+
+=====================================================================
+4. PRENSA (salarios, contexto)
+=====================================================================
+prensa/mi8_guardavidas_privados_acuerdo.html (https://mi8.com.ar/guardavidas-privados-llegaron-a-un-acuerdo-salarial-de-cuanto-es-el-aumento/) [P] nov-2024, guardavidas privados MdP +118% temporada 2024-25.
+prensa/0223_2025-12-18_guardavidas_alerta.html (https://www.0223.com.ar/nota/2025-12-18-20-2-0-guardavidas-se-declararon-en-estado-de-alerta-y-movilizacion-empresarios-se-niegan-a-mejorar-la-propuesta-salarial) [P] conflicto con CEBRA; municipales MdP cerraron paritaria 2026.
+prensa/mi8_comuna_aumentos_municipales_guardavidas.html (https://mi8.com.ar/la-comuna-oficializo-aumentos-salariales-para-municipales-y-guardavidas-de-cuanto-es-la-suba/) [P] jul-2026 +10,4%.
+
+=====================================================================
+5. PRECIOS DE EQUIPAMIENTO (consultados 01/10/2026)
+=====================================================================
+precios/conceptosalud_DEA_nacional.html  (https://www.conceptosalud.com.ar/productos/dea-desfibrilador-automatico-externo-nacional/)
+  [P] "DEA Desfibrilador Automatico Externo Nacional modelo Mod Heart+ResQ NT (valor en USD)" $2.600 (precio tachado $3.500); "Precio sin impuestos $2.148,76". El JSON de la tienda dice "ARS" pero el titulo dice USD (moneda tomada del titulo). Misma pagina: DEA Amoul i3 US$2.500.
+precios/ML_semirrigidos_semirrigido-motor-4-tiempo.html  (https://vehiculos.mercadolibre.com.ar/nautica/semirrigidos/semirrigido-motor-4-tiempo)
+precios/ML_semirrigidos_nuevo_.html  (https://vehiculos.mercadolibre.com.ar/nautica/semirrigidos/nuevo/)
+  [P] precios de publicacion (no de transaccion):
+   "Viking 5,2 Mercury 60 4tiempos Vhf /gps Color /guardamancebo" US$ 20.000 (https://vehiculo.mercadolibre.com.ar/MLA-3073513088-viking-52-mercury-60-4tiempos-vhf-gps-color-guardamancebo-_JM)
+   "Viking 4,9 M Con Mercury 60 Hp 4 Tiempos Ecologico Todo 0km" US$ 17.980 (MLA-1710055819)
+   "Semirrigido Kiel 5 M Con Mercury 60 Hp 4 Tiempos Todo 0km" US$ 18.200 (MLA-3071647542)
+   "Semirrigido Edunor 520 Mts Con Mercury 60 4t Nuevo 2026" US$ 21.900 (MLA-2044526553)
+   "Semirigido Zodiac Pro 470. Yahama 60hp" (usado) US$ 12.800 (MLA-2483814346); "Semirrigido Con Motor 4 Tiempos" (Quilmes, usado) US$ 10.000 (MLA-3982903094)
+   "Trailer Para Semirrigido Hasta 4.70 Metros Homologado" US$ 3.985 (MLA-1818359695)
+   Control en pesos (oct-2026, no deflactable: el CSV llega a jun-2026): "Semirrigido Viking 5,20 Equipado Y Mercury 60 Elpt 4t" $ 28.367.255.
+  [SC] Alquiler de embarcacion por temporada: no se hallo ningun precio publico (solo alquileres turisticos por dia).
+  [SC] Combustible, mantenimiento, seguro, matricula de la embarcacion; elementos del art. 22 a/b; indumentaria art. 21; ART.
+
+=====================================================================
+6. RIO DE LA PLATA: BANO HABILITADO Y CALIDAD DEL AGUA (item 5)
+=====================================================================
+rio_de_la_plata/ensenada_api_seguridad-en-playa-en-marcha.json  (https://www.ensenada.gov.ar/seguridad-en-playa-en-marcha/ ; publ. 17/11/2025)
+  [V] "Comenzo la temporada para los guardavidas municipales. Hasta marzo ... con puestos fijos en cada parador de Punta Lara ... de lunes a viernes de 13 a 20 horas y los sabados, domingos y feriados de 10 a 20 horas."
+rio_de_la_plata/ensenada_api_punta-lara-localidad-companera.json (https://www.ensenada.gov.ar/punta-lara-localidad-companera/ ; 09/12/2025) [V] apertura de temporada, 14 km de costa, operativo con guardavidas.
+rio_de_la_plata/ensenada_api_temporada-2025-26-muerte-cero-en-el-rio.json (https://www.ensenada.gov.ar/temporada-2025-26-muerte-cero-en-el-rio/ ; 01/04/2026) [V] cierre de temporada "muerte cero".
+rio_de_la_plata/laplataya_2025-12-09_ensenada_temporada.html (https://laplataya.com.ar/2025/12/09/ensenada-inauguro-su-temporada-de-verano-con-guardavidas-y-equipamiento-para-punta-lara/) [P]
+rio_de_la_plata/ensenada_temporada_verano_punta_lara.html (17/01/2024), ensenada_punta_lara_limpia.html (23/01/2014): antecedentes.
+  [SC] Ensenada: busqueda en el sitio municipal (API WordPress: "cianobacterias", "calidad del agua", "aptitud") sin ningun informe de calidad bacteriologica de agua de bano.
+rio_de_la_plata/lanoticia1_verano2026_berisso.html (https://www.lanoticia1.com/noticia/verano-2026-en-berisso-con-cuatro-playas-habilitadas-esperan-a-miles-de-visitantes ; 15/01/2026)
+  [P] Berisso: "cuatro playas habilitadas: Isla Paulino, Palo Blanco, La Municipal y La Balandra. 'Todas cuentan con servicio de guardavidas, ambulancias y banos'"; "El final de la avenida 66 no es una playa habilitada ... hay un cano de desague cloacal".
+rio_de_la_plata/magdalenaweb_cianobacterias.html (https://magdalenaweb.com.ar/nota/2559/... ; fecha no visible en el HTML, [SC] ~20/01/2026)
+  [P] "La Municipalidad de Magdalena informo el estado actualizado de los balnearios ... Balneario Magdalena ... nivel amarillo ... Balneario Atalaya presenta nivel verde ... se realizan muestreos semanales en ambos balnearios".
+rio_de_la_plata/0221_cianobacterias_berisso_ensenada.html (https://www.0221.com.ar/provincia/por-la-presencia-cianobacterias-las-playas-berisso-y-ensenada-estan-riesgo-amarillo-n103873 ; 15/01/2025)
+  [P] riesgo amarillo en playas de Ensenada (La Pergola, Mirador, Parador 4, ...) y Berisso (Palo Blanco, Balneario Municipal, La Balandra), via "Programa de Gestion Integral de Cianobacterias".
+rio_de_la_plata/gba_cianobacterias_portal.html (https://www.gba.gob.ar/cianobacterias)
+  [V] "Sistema de Alerta Temprana visualizado en el Cianosemaforo, permite a la poblacion conocer el estado de los cuerpos de agua de uso recreativo".
+rio_de_la_plata/gba_RH_continuan_alertas_0.html (https://gba.gob.ar/recursoshidricos/noticias/contin%C3%BAan_las_alertas_por_cianobacterias_en_la_provincia_de_buenos_aires_0 ; 17/01/2025)
+  [V] "cuenta con la participacion de 47 municipios"; "En el Rio de La Plata varios puntos se encuentran con alerta amarillo (riesgo bajo)"; monitoreo visual con municipios + satelital (Autoridad del Agua).
+rio_de_la_plata/sedici_10915-182436_Suarez2025.html (http://sedici.unlp.edu.ar/handle/10915/182436 ; tesis doctoral UNLP 2025, J. C. Suarez)
+  [V] (resumen) "en la mayoria de las playas los niveles de concentracion de bacterias indicadoras en el agua superaron los limites propuestos segun la Subsecretaria de Recursos Hidricos de la Nacion para el uso de aguas recreacionales"; playas de Bernal a Magdalena.
+rio_de_la_plata/berisso_promocion_cuidados_playas.html: 404 (pagina retirada).
+  [SC] Punta Indio y Quilmes: no encontre fuente primaria 2025-26 (Punta Indio: solo notas turisticas "tres playas activas con servicio de guardavidas", sin fecha confiable).
+
+=====================================================================
+7. CALCULO
+=====================================================================
+calculo_temporada.py / calculo_temporada_CP.txt  [CP] costo de temporada 15/11-31/3 (137 dias) para 160 m y 300 m, en pesos de dic-2025.

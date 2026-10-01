@@ -1259,7 +1259,7 @@ C5B = dict(id="cap5b", runhead=RH, html="""
 a&ntilde;o.</p>
 <p><b>Propuesta:</b> llevar la funci&oacute;n ambiental al 1,5% del presupuesto &mdash;unos 4.865
 millones&mdash; reasignando dentro de Servicios Econ&oacute;micos y Urbanismo, sin fondos nuevos.
-Prioridades: arbolado, gesti&oacute;n de residuos y saneamiento de las cuencas del Bajo.</p>
+Prioridades: la costa &mdash;que deje de entrar cloaca y que vuelva la arena&mdash;, el arbolado, la gesti&oacute;n de residuos y el saneamiento de las cuencas del Bajo.</p>
 
 <p><b>Por qu&eacute; 1,5% y no otra cifra.</b> Es lo que hace falta para que la funci&oacute;n deje de
 ser residual, y es lo que entra sin tocar el gasto r&iacute;gido: 3.455 millones adicionales, el 4,0%
@@ -1270,6 +1270,86 @@ del margen flexible.</p>
 tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
 
 </div>
+<h3>La costa: que deje de entrar cloaca, que est&eacute; limpia y que vuelva la arena</h3>
+<p class="tight">La idea es simple: cortar lo que contamina, limpiar, que vuelva la arena y cuidar a la gente
+inform&aacute;ndola en lugar de prohibirle. <span class="sg">Que la costa sea m&aacute;s linda que antes.</span></p>
+<div class="cols">
+<p><b>Hoy, el peor punto de toda la costa norte es el desag&uuml;e de la calle Per&uacute;.</b> Las 31 muestras tomadas
+entre 2016 y 2025 superan el valor gu&iacute;a para ba&ntilde;arse: la mediana es de 19.000 bacterias <i>E. coli</i> por
+100 mililitros, contra un valor gu&iacute;a de 126. Es un conducto pluvial que empieza en Mazza y Moreno, en Villa
+Adelina, y seg&uacute;n el Municipio trae agua pluvial o servida de partes de San Mart&iacute;n, Vicente L&oacute;pez y San
+Isidro. Se toman de dos a cuatro muestras por a&ntilde;o, y desde noviembre de 2024 s&oacute;lo en Per&uacute;.</p>
+<p><b>La ley ya obliga a AySA</b> a tener un programa para eliminar las conexiones cloacales clandestinas a los
+pluviales (Decreto 805/2025, art&iacute;culo 16). No se encontr&oacute;.</p>
+<p><b>La gente se mete al r&iacute;o todos los d&iacute;as</b>: kite, windsurf, nado. El ba&ntilde;o est&aacute; prohibido desde 1978 por la
+Ordenanza 5304, que obliga al propio Municipio a &laquo;vigilar su cumplimiento estricto&raquo;, y la prohibici&oacute;n no se
+cumple. La limpieza de la costa hoy es con voluntarios: seg&uacute;n el Municipio, 65 jornadas y unas 20 toneladas en
+2025.</p>
+<p><b>Y hubo arena, y todav&iacute;a la hay.</b> La muestran notas y fotos de 1934 y 1937 en San Isidro. Y frente a
+Dulce Mar&iacute;a, en General Pacheco 1545 y el r&iacute;o, en Mart&iacute;nez, hay una playa que <b>el Municipio hizo en 2014</b>
+(Decreto 2559/2014): seg&uacute;n <i>Clar&iacute;n</i>, la arena est&aacute; sobre una base de piedra en canastos de alambre. En las
+im&aacute;genes satelitales de 2016 a 2026 la arena llega al agua y no se ve que el r&iacute;o se la haya llevado.</p>
+</div>
+<div class="callout a">
+<div class="clabel">C&oacute;mo lo hace Montevideo, y qu&eacute; dicen los jueces</div>
+<p><b>Montevideo informa todos los d&iacute;as, dentro de playas habilitadas.</b> Cada una tiene guardavidas en
+temporada, y cuando el agua no est&aacute; apta ponen la bandera sanitaria, roja con una cruz verde: <span
+class="sg">desaconseja el ba&ntilde;o, pero no cierra la playa</span>. Se toman muestras dos o tres veces por semana en
+verano, se recomienda no ba&ntilde;arse hasta 24 horas despu&eacute;s de una lluvia, y el estado de cada playa est&aacute; en un mapa.
+Fuera de las playas habilitadas, ba&ntilde;arse est&aacute; prohibido.</p>
+<p><b>Los jueces castigan al municipio que habilita sin cuidar, y protegen al que avisa claro.</b> La Suprema
+Corte bonaerense dej&oacute; firmes las condenas a General Pueyrredon, por una playa urbana apta para el ba&ntilde;o sin
+guardavidas, y a Villa Gesell, porque no hab&iacute;a bandera roja que advirtiera el peligro, las dos en 2014. La Corte
+Suprema de la Naci&oacute;n rechaz&oacute; en 2005 una demanda contra C&oacute;rdoba: el deber del Estado &laquo;cede cuando las personas se
+exponen voluntariamente&raquo; al riesgo. Y en la Provincia, la playa habilitada como balneario lleva guardavidas: uno
+cada 80 metros, como m&iacute;nimo dos, y un bote (Ley 14.798).</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos para la costa</div>
+<p><b>1 &middot; Cortar la cloaca en el origen, empezando por Per&uacute;.</b> Antes de cualquier obra, en este orden: medir con
+el marcador de ADN humano, unos 5.000 a 15.000 d&oacute;lares de laboratorio; rastrear el origen ca&ntilde;o arriba con unos
+veinte sensores de 500 d&oacute;lares, en los tres partidos de la cuenca; si es la red de AySA, exigirle el arreglo ante
+su ente regulador, con el art&iacute;culo 16 de su marco; si son casas, intimar y subsidiar el arreglo, como Par&iacute;s: el
+Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (Ley 5965). Reci&eacute;n despu&eacute;s, si hace falta,
+un desviador de tiempo seco en la boca, acordado con AySA y pagado como obra p&uacute;blica. <span class="sg">El
+compromiso es el resultado &mdash;que deje de entrar cloaca&mdash;, no una obra que nadie dise&ntilde;&oacute; todav&iacute;a.</span></p>
+<p><b>2 &middot; Frenar la basura.</b> Redes y barreras en las bocas de los desag&uuml;es, vaciadas todos los d&iacute;as, empezando
+por Per&uacute;, como ya ped&iacute;a el Plan de Manejo de la Reserva en 2012; y una cuadrilla municipal de la costa m&aacute;s grande,
+con personal del Municipio reasignado. Robots y barcazas no sirven en una costa abierta como esta.</p>
+<p><b>3 &middot; Informar en lugar de prohibir, como Montevideo.</b> Muestras de agua en cada tramo que se usa, por lo
+menos dos veces por semana, y una bandera sanitaria por tramo, todos los d&iacute;as. <b>El ba&ntilde;o se habilita en los
+pilotos de arena</b>, con los guardavidas que pide la ley &mdash;el Municipio ya los contrata para sus natatorios&mdash; y
+la bandera del d&iacute;a. En el resto del r&iacute;o el ba&ntilde;o no se habilita, y cada acceso lo dice; pero la bandera y el mapa
+del d&iacute;a tambi&eacute;n est&aacute;n para quien hace kite, windsurf o nada. Al vecino que pregunta &laquo;&iquest;d&oacute;nde me meto hoy?&raquo;, la
+inteligencia artificial del Municipio le muestra la costa tramo por tramo en verde, amarillo o rojo; despu&eacute;s de
+una lluvia, rojo por lo menos un d&iacute;a. <span class="sg">Las primeras temporadas el mapa va a estar casi todo en
+rojo, y eso es lo que empuja la limpieza.</span> Este r&eacute;gimen reemplaza a la Ordenanza 5304 (anexo, Ordenanza
+XI).</p>
+<p><b>4 &middot; Recuperar parque por parque, con sus vecinos.</b> Empezando por el Parque del &Aacute;guila y el Bosque Alegre,
+con sus asociaciones desde el dise&ntilde;o (m&aacute;s abajo). El Bosque Alegre es Paisaje Protegido desde 2012, y el decreto
+que lo protegi&oacute; dice que el predio vecino &laquo;era un ba&ntilde;ado rellenado con residuos domiciliarios&raquo;: el plan de
+remediaci&oacute;n que ese mismo decreto pide no se encontr&oacute;. Con naturaleza, no con cemento.</p>
+<p><b>5 &middot; Un plan con los vecinos del r&iacute;o.</b> Un convenio con Vicente L&oacute;pez, San Fernando, Tigre y San Mart&iacute;n,
+por la cuenca de Per&uacute;, como el que San Isidro firm&oacute; con Vicente L&oacute;pez por la calle Paran&aacute; (Ordenanza 8935); un
+comit&eacute; de cuenca de la costa norte en la Autoridad del Agua, que ya cre&oacute; uno para Berazategui, Quilmes y Florencio
+Varela; y AySA en la mesa.</p>
+<p><b>6 &middot; Que vuelva la arena.</b> Tramos piloto con condiciones parecidas a las de Pacheco: lejos de las bocas de
+los desag&uuml;es y donde la costa natural ayude a retenerla, sobre un pie de piedra, como Pacheco, para que funcionen
+desde el primer verano; con bordes de vegetaci&oacute;n natural y una partida anual para reponer arena. <b>Arranca en
+paralelo con el corte de la cloaca, no despu&eacute;s</b>: la arena se ve r&aacute;pido, el agua mejora con el tiempo, y
+mientras tanto la bandera del d&iacute;a dice d&oacute;nde meterse. Como toda obra en la costa, con evaluaci&oacute;n de impacto
+ambiental, la decisi&oacute;n del panel sorteado y, en un parque costero, el dictamen de su asociaci&oacute;n. Si los pilotos
+funcionan, se extienden por la costa.</p>
+<p><b>Cu&aacute;nto cuesta.</b> Un piloto de arena de 100 por 20 metros, con su pie de piedra, 196 millones una vez, con
+los precios del propio contrato municipal, y de 4 a 20 millones por a&ntilde;o para reponer arena; sus guardavidas, 29
+millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Con las redes, la barrera de
+Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 790 a 1.140 millones: <span
+class="sg">entre el 23% y el 33% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
+moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
+muestras y la primera temporada de guardavidas, unos 350 millones&mdash;, moviendo partidas, sin gasto nuevo. El
+desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas se fija con el diagn&oacute;stico.</p>
+</div>
+
 
 <h3>Se intent&oacute; licitar cuatro veces, las cuatro fracasaron, y el contrato de seis meses va por el
 a&ntilde;o diecisiete</h3>
@@ -1306,24 +1386,23 @@ que hubo antes. Y la administraci&oacute;n llama &laquo;adjudicataria&raquo; a u
 propios papeles describen como contratada directamente tras una licitaci&oacute;n desierta.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Qu&eacute; propone este programa</div>
-<p><b>Licitar la recolecci&oacute;n, con el pliego discutido antes.</b> Plazo cierto, frecuencias,
-horarios, zonas y qu&eacute; se separa, discutidos <b>antes</b> del llamado y no despu&eacute;s. Porque
-los cuatro intentos anteriores fracasaron, y los dos &uacute;ltimos por la misma raz&oacute;n: las
-ofertas superaban lo que el Municipio estimaba. <span class="sg">Cuando dos licitaciones seguidas se
-caen por el precio, el problema puede estar en c&oacute;mo se arm&oacute; el pliego</span>, y eso es
-exactamente lo que discutirlo antes vendr&iacute;a a resolver.</p>
-<p><b>Indicador de servicio por zona para cada comisi&oacute;n vecinal, y penalidades que se apliquen
-con el reclamo del vecino como prueba.</b> Un contrato de este tama&ntilde;o sin medici&oacute;n por
-zona no se puede controlar desde afuera.</p>
-<p><b>Las comisiones no ejecutan la recolecci&oacute;n.</b> La obra
-vecinal funciona porque es discreta: se hace, se recibe y se paga. La recolecci&oacute;n es un servicio
-diario que no puede fallar un d&iacute;a, y una zona sin recolecci&oacute;n una semana es un problema
-sanitario. <b>El reciclado y los puntos de acopio s&iacute; pueden ser vecinales desde el d&iacute;a
-uno</b>: las cooperativas ya lo hacen en el conurbano.</p>
-<p><b>En diecisiete a&ntilde;os no hubo con qu&eacute; comparar el precio.</b> Es el mismo argumento
-del precio unitario en salud: sin comparaci&oacute;n no hay control posible, con funcionarios honestos o
-sin ellos.</p>
+<div class="clabel">C&oacute;mo salir: lo que proponemos</div>
+<p><b>Dos zonas, licitadas por separado</b>, para que haya competencia y un segundo precio con el que
+comparar, que desde 1998 no se public&oacute;: es el mismo argumento del precio unitario en salud. Con el pliego
+discutido <b>antes</b> del llamado: frecuencias, horarios, zonas y qu&eacute; se separa.</p>
+<p><b>Todos los trabajadores siguen, con su antig&uuml;edad.</b> El pliego obliga al que gane a quedarse con todo el
+personal del servicio, con su antig&uuml;edad y sus derechos (Ley de Contrato de Trabajo, art&iacute;culos 225 y 228).
+La antig&uuml;edad acumulada hasta el cambio la paga el Municipio, auditada, sobre un padr&oacute;n que se congela al llamado; desde ah&iacute;, cada empresa la pone en su precio. <span class="sg">Esa deuda crece unos 650 millones por cada a&ntilde;o que pasa sin licitar</span> (6.6).</p>
+<p><b>Un presupuesto oficial realista.</b> Las dos &uacute;ltimas licitaciones se cayeron porque las ofertas superaban
+lo que estimaba el Municipio: <span class="sg">el presupuesto oficial se arma con precios de mercado</span>.</p>
+<p><b>Se paga por lo que se mide.</b> GPS en cada cami&oacute;n, sensores en los contenedores y c&aacute;maras: una parte
+del pago depende del resultado, el descuento es autom&aacute;tico y el control no lo hace el que presta el servicio.
+Cualquier vecino le pregunta a la inteligencia artificial del Municipio si pasaron por su cuadra, y cada
+comisi&oacute;n vecinal ve el indicador de su zona.</p>
+<p><b>Lo reciclable y lo compostable, fuera del contrato</b>, con cooperativas del partido, en la medida en que no
+choque con el convenio colectivo del sector. Las comisiones no ejecutan la recolecci&oacute;n: es un servicio diario
+que no puede fallar un d&iacute;a.</p>
+<p><b>Y la costa no va en este contrato:</b> la limpia la cuadrilla municipal de la costa.</p>
 </div>
 
 
@@ -1440,7 +1519,8 @@ observaci&oacute;n.</p>
 <p><b>Y que lo que la zona rechace no salga.</b> El voto vecinal no puede obligar al Concejo, que sanciona las
 ordenanzas &laquo;con exclusividad&raquo; (Ley Org&aacute;nica, art&iacute;culo 24). Lo que s&iacute; puede hacer el intendente, y
 proponemos que se comprometa a hacerlo por ordenanza, es no otorgar por decreto lo que la zona rechace y vetar la
-ordenanza de excepci&oacute;n que la zona rechace: el Concejo s&oacute;lo la impone con 16 de sus 24 votos.</p>
+ordenanza de excepci&oacute;n que la zona rechace: el Concejo s&oacute;lo la impone con 16 de sus 24 votos
+(anexo, Ordenanza XIII).</p>
 <p><b>Que la valorizaci&oacute;n pague.</b> La Ley provincial 14.449 obliga a cobrar por ordenanza al menos el 10% de lo
 que se valoriza un terreno por una decisi&oacute;n municipal, y San Isidro adhiri&oacute; en 2017 pero no la cobra.
 Proponemos el <b>15%</b>, como La Plata, y que vaya a vivienda y a obra donde falta.</p>
@@ -1513,7 +1593,7 @@ podr&iacute;a limitar la capacidad del Municipio para intervenir y llevar a cabo
 <div class="clabel">Lo que proponemos para la obra en parques y costa</div>
 <p><b>Ninguna obra nueva se paga ampliando un contrato de mantenimiento:</b> licitaci&oacute;n propia, cualquiera
 sea el monto. <b>Evaluaci&oacute;n de impacto ambiental obligatoria en toda obra en la costa</b>, incluidos los
-pilotos de arena.</p>
+pilotos de arena (anexo, Ordenanza XII).</p>
 <p><b>Ning&uacute;n cemento en un parque ni en la costa sin los vecinos:</b> el dictamen de la asociaci&oacute;n de cada
 parque, y la decisi&oacute;n de la comisi&oacute;n de la zona en sus parques o del panel sorteado en la costa (m&aacute;s
 abajo).</p>
@@ -2335,12 +2415,12 @@ afuera.</p>
 <table>
 <colgroup><col style="width:150pt"><col style="width:96pt"><col></colgroup>
 <tr class="hd"><th>&Aacute;rea</th><th>Por qu&eacute; no est&aacute;</th><th class="r">D&oacute;nde queda</th></tr>
-<tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las tres prioridades de la reasignaci&oacute;n</td></tr>
+<tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las prioridades de la reasignaci&oacute;n</td></tr>
 <tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial</td></tr>
 <tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: tres &aacute;reas con una partida compartida, discapacidad con una propia y chica, y una propuesta para cada una</td></tr>
 <tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema es el r&eacute;gimen de habilitaci&oacute;n, no el subsidio</td></tr>
 <tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin propuesta propia. Cede parte de la construcci&oacute;n de infraestructura deportiva (cuadro [[n:ceden]]); se se&ntilde;ala la comparaci&oacute;n</td></tr>
-<tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa</td></tr>
+<tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa, salvo c&oacute;mo se otorgan las excepciones (anexo, Ordenanza XIII)</td></tr>
 <tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
 </table>
 
@@ -2362,7 +2442,8 @@ Municipio &mdash;49.270 millones al a&ntilde;o&mdash;: la presta el mismo grupo 
 llegar a un contrato, y corre sobre uno de seis meses de 2009, prorrogado hasta el 31 de diciembre de 2026 o hasta
 que se adjudique su reemplazo.</li>
 <li>Proponemos que el gasto en ambiente pase del 0,4% al 1,5% del presupuesto, con fondos que se sacan de otros
-programas; educaci&oacute;n recupera lo que perdi&oacute; contra la inflaci&oacute;n en 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, escuela por escuela.</li>
+programas, empezando por la costa: que deje de entrar cloaca, que est&eacute; limpia y que vuelva la arena, con bandera
+diaria y ba&ntilde;o con guardavidas en los tramos de arena; educaci&oacute;n recupera lo que perdi&oacute; contra la inflaci&oacute;n en 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, escuela por escuela.</li>
 <li>De las siete cosas que se buscaron en el sitio del Municipio, seis &mdash;el portal de datos
 abiertos, las declaraciones juradas de los funcionarios, la planta de personal, el organigrama, las
 adjudicaciones y los estados contables&mdash; hoy est&aacute;n ca&iacute;das, escondidas, incompletas o no se pueden
@@ -2495,7 +2576,7 @@ que la comprueba.</p>
 <tr><td class="l">Mes 9</td><td>Cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; se hizo en su zona, y tiene la respuesta; desde ah&iacute;, al d&iacute;a: la adjudicaci&oacute;n queda registrada el d&iacute;a que se firma</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 de la rampa ejecutado (cuadro [[n:rampa]])</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
 <tr><td class="l">Mes 12</td><td>Turno m&eacute;dico en l&iacute;nea en los trece efectores: los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">La propia plataforma, consultable por cualquiera</td></tr>
-<tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
+<tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo. Antes, en el a&ntilde;o 1, se adelantan unos 350 millones para empezar la costa: el diagn&oacute;stico de Per&uacute;, las muestras y la bandera de cada tramo, y el primer piloto de arena con sus guardavidas</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la inteligencia artificial del Municipio: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: el patrullaje, las c&aacute;maras que funcionan y el tiempo de respuesta del 911 municipal, que se preguntan desde los cien d&iacute;as, pasan a estar al d&iacute;a</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
@@ -2533,8 +2614,8 @@ tres meses para ponerlas en servicio.</p>
 
 
 <h2><span class="n">6.6</span>Qu&eacute; puede salir mal</h2>
-<p class="tight">Quince cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
-""" + exhead("c", "Quince cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
+<p class="tight">Diecis&eacute;is cosas que pueden hacer fracasar este programa, y qu&eacute; hacemos con cada una.</p>
+""" + exhead("c", "Diecis&eacute;is cosas que pueden salir mal, c&oacute;mo est&aacute;n hoy y qu&eacute; las reduce") + """
 <table>
 <colgroup><col style="width:150pt"><col></colgroup>
 <tr class="hd"><th>Riesgo</th><th>D&oacute;nde est&aacute; parado y qu&eacute; lo reduce</th></tr>
@@ -2567,6 +2648,13 @@ diciembre de 2027, las siete en 2028 y 2029 (3.5). El modelo no lo proyecta: est
 constantes y la tasa es nominal. <b>Sin mitigaci&oacute;n del lado de la tasa</b>, que la fija el mercado. Lo
 que s&iacute; hace el programa: no toma deuda, y en 2028 y 2029 la tabla nueva cobra m&aacute;s de lo que el
 programa gasta, as&iacute; que deja las cuentas mejor que no hacer nada justo en los a&ntilde;os del bono (3.6).</td></tr>
+<tr><td class="l">La antig&uuml;edad de los recolectores</td>
+<td>Al cambiar el contrato, el Municipio paga la antig&uuml;edad acumulada hasta ese d&iacute;a, auditada (5.5): entre 2.800 y
+12.100 millones, unos 7.000 en el medio, sujeto al padr&oacute;n auditado, porque cu&aacute;ntos trabajadores son y cu&aacute;ntos a&ntilde;os
+llevan no son datos p&uacute;blicos. <b>No es gasto del mandato si los trabajadores siguen</b>: no hay despido, y se paga
+s&oacute;lo si lo hay o al terminar el contrato. Por eso el modelo no la carga. <b>Mitigaci&oacute;n:</b> el padr&oacute;n se congela y
+se audita al llamado, y desde el cambio cada empresa pone la antig&uuml;edad nueva en su precio. Cada a&ntilde;o sin licitar,
+esa deuda crece unos 650 millones.</td></tr>
 <tr><td class="l">La Provincia reforma la Ley Org&aacute;nica</td>
 <td>Este programa reclama esa reforma, as&iacute; que ir&iacute;a a favor. <b>Pero tambi&eacute;n es un riesgo:</b> una reforma que tocara el art&iacute;culo 132 cambiar&iacute;a el fundamento de la capa 2. Sin mitigaci&oacute;n posible desde el Municipio.</td></tr>
 <tr class="hi"><td class="l">La inteligencia artificial del Municipio no se construye, o llega tarde <span class="tag m">Cr&iacute;tico</span></td>
