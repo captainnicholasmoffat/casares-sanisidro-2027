@@ -340,6 +340,10 @@ vecinos sorteado entre quienes viven en el partido y quienes usan la costa, que 
 disuelve con su decisi&oacute;n. En un parque de la costa, a los dos. En todos los casos, con el dictamen de la asociaci&oacute;n
 del parque (Ordenanza V). <b>El Departamento Ejecutivo no contrata la obra que rechacen.</b></p>
 
+<h3>Art&iacute;culo 4 &mdash; El canon de la costa</h3>
+<p class="tight">Lo que el Municipio percibe por los permisos y las concesiones en la costa, despu&eacute;s del cuarenta por
+ciento (40%) que corresponde a la Provincia (Decreto-Ley 9533/80, art&iacute;culo 38), <b>se destina a la costa</b>.</p>
+
 <h2>XIII &middot; Ordenanza de excepciones urban&iacute;sticas</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Audiencia y dictamen previos</h3>

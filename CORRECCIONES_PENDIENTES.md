@@ -2581,3 +2581,26 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
 - El adelanto del año 1 (350 M) sale de los tres programas que ceden (contrapartida, Programas fila 16): en 2028
   Ambiente queda en 1.410,1 + 350 M. Ahora lo dicen el texto de la costa (con el cuadro de los programas que ceden) y
   la nota del Excel (Supuestos E238). Resultado 2028: +1.746 M, igual.
+
+## CATALEJO Y BARISIDRO 2024-2025, EL CANON Y LA COSTA TODA LA SEMANA · APLICADO (02/10, informe 17)
+- Página 27, con fechas una al lado de la otra: permiso municipal precario desde 1996 (Decreto 1189/1996), como todos
+  los permisos de uso, y nunca una habilitación definitiva; clausuras de junio y julio de 2024 y el pedido unánime del
+  Concejo (Comunicación 214, 07/08/2024), sin respuesta encontrada; la devolución de Catalejo en diciembre de 2024
+  (Decreto 1778/2024); la revocación de Barisidro en junio de 2025 (Decreto 605/2025); demoliciones en junio y en
+  AGOSTO de 2025 (no septiembre; también en el recuadro de las firmas y en fuentes), sin acto publicado que las
+  autorice; el convenio de marzo de 2026, por diez años. Sale "dos locales en actividad". Los 9.775 m², "según el
+  Municipio".
+- Lo que contaron quienes explotaban los locales, atribuido y sin nombres: el canon a la Provincia, la habilitación
+  quitada y devuelta por pocos días, las obras exigidas antes de cada rehabilitación y un club de la ribera cerca del
+  Águila, sin nombre. (El informe 17 lo marca como no verificado; va atribuido, como pidió Nick.)
+- Canon desde 2026: el 40% a la Provincia por la Ley 15.558 (art. 38 del Decreto-Ley 9533/80) y la cláusula cuarta
+  del convenio; el 60% del Municipio, a la costa. Va también como artículo 4 de la Ordenanza XII.
+- Nueva sección "La costa toda la semana y todo el año": medir; llegar sin auto (300 m de Barrancas a Perú Beach;
+  bicicleteros y bicisendas porque el tren no lleva bicicletas); el tren en tiempo real (la aplicación de Trenes
+  Argentinos ya muestra los horarios en tiempo real; la API de la Ciudad con la posición de los trenes está suspendida;
+  se pide por convenio a Trenes Argentinos, que opera el Tren de la Costa y el Mitre); estacionar sin cobrar, con los
+  lugares libres en tiempo real; motivos en la semana y el invierno; reglas claras para los comercios (con la
+  excepción de un peligro inmediato para el plazo de corrección); la costa en la IA. Sin cobro de estacionamiento.
+  Fuentes del tiempo real en 01_raw/costa/d_verificacion_189_190/tren_tiempo_real/.
+- Sin cifras nuevas: el Excel no cambia. Sin costo calculado todavía: contar autos en los playones, bicicleteros y
+  bicisendas, y más lugar en la Escuela Náutica.

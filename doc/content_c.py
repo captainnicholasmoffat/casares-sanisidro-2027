@@ -1534,13 +1534,24 @@ pide y un borrador de intervenci&oacute;n para la audiencia, con las normas cita
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
 <div class="cols">
-<p><b>El caso m&aacute;s claro es la costa.</b> En junio de 2025 el Municipio demoli&oacute; el bar
-Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601. Barisidro, en el 1602, ten&iacute;a la demolici&oacute;n
-programada para julio y cay&oacute; en septiembre. Los dos funcionaban desde 1996.</p>
-<p><b>Lo discutible es que se destruy&oacute; capital que funcionaba.</b> Eran dos locales en actividad
-sobre un predio de 9.775 metros cuadrados frente al r&iacute;o &mdash;s&oacute;lo la estructura de Catalejo ten&iacute;a
-m&aacute;s de mil metros cuadrados, seg&uacute;n el Municipio&mdash;, que empleaban gente y tra&iacute;an p&uacute;blico al
-Bajo.</p>
+<p><b>El caso m&aacute;s claro es la costa: Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y Barisidro, en el 1602.</b>
+Las fechas, una al lado de la otra.</p>
+<p><b>Desde 1996</b> los dos funcionaban con un permiso municipal precario, como todos los permisos de uso.
+Ninguno tuvo nunca una habilitaci&oacute;n definitiva.</p>
+<p><b>En junio y julio de 2024</b> los dos estuvieron clausurados. El 7 de agosto el Concejo pidi&oacute; por unanimidad
+que se explicaran los motivos; no se encontr&oacute; la respuesta.</p>
+<p><b>En diciembre de 2024</b> Catalejo firm&oacute; la devoluci&oacute;n del predio.</p>
+<p><b>En junio de 2025</b> se demoli&oacute; Catalejo y se revoc&oacute; el permiso de Barisidro; <b>en agosto</b> se demoli&oacute;
+Barisidro. No se encontr&oacute; publicado ning&uacute;n acto que autorice las demoliciones.</p>
+<p><b>En marzo de 2026</b>, despu&eacute;s, el Municipio firm&oacute; con la Provincia el convenio que le da por diez a&ntilde;os la
+tenencia de la costa (Ordenanza 9430).</p>
+<p><b>Lo que contaron quienes explotaban los locales:</b> que le pagaban el canon a la Provincia todos los a&ntilde;os;
+que la habilitaci&oacute;n se les quitaba y se les devolv&iacute;a por pocos d&iacute;as antes de volver a clausurar; que antes de cada
+rehabilitaci&oacute;n se les exig&iacute;an obras, como renovar los ba&ntilde;os; y que hoy le pasa lo mismo a un club de la ribera,
+cerca del Parque del &Aacute;guila.</p>
+<p><b>Lo que se demoli&oacute;</b> estaba frente al r&iacute;o, sobre un predio que seg&uacute;n el Municipio tiene 9.775 metros
+cuadrados, y s&oacute;lo la estructura de Catalejo ten&iacute;a m&aacute;s de mil: dos locales que durante casi treinta a&ntilde;os emplearon
+gente y trajeron p&uacute;blico al Bajo.</p>
 <p><b>Y el orden de los pasos fue el inverso al que este programa propone.</b> El plan de
 participaci&oacute;n ciudadana, con recorridas y escucha de vecinos, se anunci&oacute; entre julio y
 septiembre de 2025 &mdash;cuando Catalejo ya estaba demolido y Barisidro entregado&mdash;.
@@ -1556,13 +1567,51 @@ no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
 <p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de
 acceso restringido.</p><p>Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
 decide qu&eacute; se hace con cada una.</p>
-<p><b>Desde 2026 el Municipio tiene la tenencia de la costa, que sigue siendo de la Provincia</b> (Ordenanza 9430).
-Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b>, paguen un canon al
-Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). <span class="sg">No se
+<p><b>Desde 2026 el Municipio tiene por diez a&ntilde;os la tenencia de la costa, que sigue siendo de la Provincia</b>
+(Ordenanza 9430). Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b>, paguen
+un canon al Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). Por una ley
+provincial de 2025, el 40% de ese canon va a la Provincia; <b>el 60% que queda en el Municipio se destina a la
+costa</b> (anexo, Ordenanza XII). <span class="sg">No se
 destruye capital ni empleo que funciona</span>: demoler es la &uacute;ltima opci&oacute;n, no la primera, y exige fundamentar
 por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
 <p><b>El objetivo es una costa linda que traiga gente y trabajo a los comercios toda la semana y todo el
 a&ntilde;o.</b> La costa no es de una zona, y la secci&oacute;n 4.6 ya fija qui&eacute;n la decide.</p>
+</div>
+<h3>La costa toda la semana y todo el a&ntilde;o</h3>
+<div class="cols">
+<p><b>Hoy no hay ning&uacute;n conteo de tr&aacute;nsito ni de visitantes en la costa</b>: ni de fin de semana, ni de d&iacute;as
+h&aacute;biles, ni por estaci&oacute;n del a&ntilde;o. Y lo que organiza el Municipio cae casi todo en verano y en fines de semana: de
+las 145 actividades de las vacaciones de invierno de 2026, la &uacute;nica en la costa fue la Reserva.</p>
+<p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa a Per&uacute; Beach hay unos 300 metros a
+pie, y de Anchorena a Pacheco y el r&iacute;o, unos 400. Pero el Tren de la Costa no lleva bicicletas. Su operador ya
+muestra en su aplicaci&oacute;n, en tiempo real, cu&aacute;ndo llega cada tren a cada estaci&oacute;n; la Ciudad distribu&iacute;a la posici&oacute;n
+de los trenes en su API de transporte, que hoy est&aacute; suspendida.</p>
+<p><b>Y ya hay cosas en la semana que nadie cuenta</b>: la Escuela N&aacute;utica Municipal, martes, jueves y s&aacute;bados; la
+Reserva, con escuelas de lunes a viernes; Puerto Libre, para adultos mayores. La Reserva lleg&oacute; a recibir 13.500
+alumnos en 1998; en 2018, seg&uacute;n el Municipio, entre 6.000 y 7.000.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: gente en la costa toda la semana y todo el a&ntilde;o</div>
+<p><b>1 &middot; Medir.</b> Contar gente y autos en la costa cuatro veces por a&ntilde;o &mdash;en verano y en invierno, en d&iacute;a
+h&aacute;bil y en fin de semana&mdash;, en los playones y en los accesos, y que cualquiera pueda ver el resultado en la
+inteligencia artificial del Municipio.</p>
+<p><b>2 &middot; Llegar sin auto.</b> Carteles y senderos desde cada estaci&oacute;n del Tren de la Costa hasta el r&iacute;o; y, como el
+tren no lleva bicicletas, bicicleteros en las estaciones y bicisendas hasta la costa.</p>
+<p><b>3 &middot; El tren en tiempo real.</b> La inteligencia artificial del Municipio, conectada con el Tren de la Costa y
+el Mitre, dice d&oacute;nde est&aacute; de verdad cada tren y cu&aacute;nto falta &mdash;no el horario de papel&mdash;, y avisa cuando el
+tren viene a dos estaciones. El dato ya existe: proponemos ped&iacute;rselo por convenio a Trenes Argentinos, que opera
+las dos l&iacute;neas.</p>
+<p><b>4 &middot; Estacionar sin dar vueltas, y sin cobrarlo.</b> La inteligencia artificial dice en tiempo real d&oacute;nde hay
+lugar, contando los autos que entran y salen de cada play&oacute;n de la costa.</p>
+<p><b>5 &middot; Motivos para ir en la semana y en invierno</b>, sobre todo para quien trabaja o estudia cerca: m&aacute;s lugar
+en la Escuela N&aacute;utica, volver a llevar escuelas a la Reserva, actividades con las escuelas y las universidades del
+partido, y una agenda de invierno en la costa. Los eventos solos no alcanzan: en los Docklands de Melbourne, tres
+noches de festival llevaron 100.000 personas y los locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
+<p><b>6 &middot; Reglas claras para los comercios.</b> Ninguna clausura sin motivo escrito; salvo un peligro inmediato,
+con plazo para corregir antes; siempre con derecho a reclamar, y todo consultable en la inteligencia artificial del
+Municipio. <span class="sg">Que a ning&uacute;n comercio le pueda pasar lo de Catalejo y Barisidro.</span></p>
+<p><b>7 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
+estacionar, cu&aacute;ndo llega el tren y qu&eacute; hay hoy. Y cuando no sabe algo, lo dice, con la fecha del &uacute;ltimo dato.</p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
@@ -1628,7 +1677,7 @@ nadie con inter&eacute;s en ese parque tiene c&oacute;mo intervenir a tiempo.</p
 <div class="pull"><div class="plabel">Y hab&iacute;a 1.037 firmas pidiendo lo contrario</div>
 <p>La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro en la costa
 sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b> y junt&oacute;
-<b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025 y Barisidro en septiembre.
+<b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025 y Barisidro en agosto.
 <span class="sg">No es que nadie haya dicho nada: es que no hab&iacute;a d&oacute;nde decirlo con
 efecto.</span> Una firma junta en una plataforma no obliga a nadie.</p><p>Por eso este programa propone el
 &aacute;mbito donde ese mismo reclamo se plantee antes de la firma del decreto y tenga respuesta
