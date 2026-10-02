@@ -2380,6 +2380,27 @@ verificar. <span class="sg">Es informaci&oacute;n sobre los propios empleados y 
 un municipio que le pide al vecino que justifique cada peso de una obra tiene que poder decir qui&eacute;n
 trabaja en &eacute;l y cu&aacute;nto cobra.</p>
 </div>
+<h3>Un Municipio que atiende los siete d&iacute;as</h3>
+<div class="cols">
+<p><b>Hoy ya atienden todos los d&iacute;as</b> los hospitales, las emergencias, la seguridad, los cementerios y los
+campos de deportes, y el 147 contesta las 24 horas desde enero de 2025. Siete de los nueve centros de atenci&oacute;n
+primaria abren el s&aacute;bado a la ma&ntilde;ana.</p>
+<p><b>Las delegaciones, el Juzgado de Faltas y los turnos de salud por tel&eacute;fono atienden de lunes a
+viernes.</b></p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: horarios rotativos optativos</div>
+<p><b>Quien opta trabaja el fin de semana y descansa en la semana.</b> Mismas horas, otros d&iacute;as: sin costo extra
+en sueldos.</p>
+<p><b>Lo que buscamos:</b> un Municipio disponible para el vecino tambi&eacute;n el s&aacute;bado y el domingo; descomprimir
+el tr&aacute;nsito y la gente de los fines de semana; y generar demanda en la semana, en vez de que todo dependa del fin de
+semana: es bueno para la econom&iacute;a de la costa y sus comercios (5.5).</p>
+<p><b>Empieza por tres:</b> las delegaciones el s&aacute;bado a la ma&ntilde;ana, rotando por zona; el Juzgado de Faltas; y los
+turnos de salud por tel&eacute;fono el s&aacute;bado. Y la inteligencia artificial del Municipio atiende todos los d&iacute;as, a toda
+hora.</p>
+<p><span class="sg">C&oacute;rdoba abre por turnos sus centros de atenci&oacute;n a la tarde y los s&aacute;bados desde 2024, y La Plata
+atiende los s&aacute;bados a la ma&ntilde;ana en su centro de tr&aacute;mites.</span></p>
+</div>
 
 <h2><span class="n">5.13</span>Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad <span class="tag v">Gesti&oacute;n</span></h2>
 <p class="lead">Cuatro &aacute;reas dentro de la funci&oacute;n que m&aacute;s cay&oacute; en 2025: tres

@@ -2634,3 +2634,18 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
 - La Escuela Náutica Municipal salió del texto hasta que Nick la confirme (Campo de Deportes N° 9, Subsecretaría de
   Deportes; clases gratuitas de kayak, vela ligera, windsurf y SUP; alumnos: no se publican).
 - PENDIENTE, a Nick antes de escribir: el Municipio de siete días (horarios rotativos optativos).
+
+## UN MUNICIPIO QUE ATIENDE LOS SIETE DÍAS · APLICADO (02/10)
+- 5.12, sección nueva, simple y en positivo: horarios rotativos optativos (quien opta trabaja el fin de semana y
+  descansa en la semana; mismas horas, otros días: sin costo extra en sueldos). Lo que buscamos: el Municipio
+  disponible el sábado y el domingo, descomprimir los fines de semana y generar demanda en la semana (costa y
+  comercios). Empieza por las delegaciones el sábado a la mañana rotando por zona, el Juzgado de Faltas y los turnos
+  de salud por teléfono el sábado; la IA atiende siempre. Córdoba y La Plata en una línea.
+- Verificado: Ley 14.656, arts. 6 c) y 65 (la Sección III, con el +100% del sábado y el domingo, es supletoria; San
+  Isidro tiene convenio propio, Ordenanza 8850/2015, texto ordenado Dec. 1703/2019, arts. 12 a) y 33); Ordenanza 9422,
+  art. 10 (hora extra sólo fuera del horario normal; folio 954 leído). Horarios en el sitio oficial (02/10/2026).
+- Por decisión de Nick NO se escribe el costo de abrir edificios ni el monto por día que el art. 17 de la Ordenanza
+  9422 ya paga en cinco áreas (licencias, Faltas, limpieza de la costa, Cultura, inspectores; folio 964 leído).
+- Fuentes en scratchpad/siete_dias/ (FUENTES.txt, calculo_costo_CP.txt).
+- PENDIENTE, a Nick antes de escribir: Escuela Náutica en todos los parques de la costa (parques aptos, costo por
+  puesto, de Deportes; scratchpad/nautica_parques/).
