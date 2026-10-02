@@ -262,7 +262,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Estas son las diez partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
+<p class="lead">Estas son las once partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
 """ + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
              "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.") + """
 <table>
@@ -278,10 +278,11 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">2.135,3 M</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno, comunicaci&oacute;n, hacienda, ambiente, movilidad, desarrollo social, legal y t&eacute;cnica, gabinete y cultura</td></tr>
 <tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
 <tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
+<tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
 </table>
 <p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
 dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
-<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores y los equipos son estimaciones del equipo de este
+<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica y los equipos son estimaciones del equipo de este
 programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
 de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <p class="cap"><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis
@@ -356,10 +357,11 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 <div class="cols">
 <p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 6.863 de reasignaci&oacute;n del gasto
 flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
-una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors, y Desarrollo
-Social, 667,8 para los cuidadores. Los primeros exigen
+una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors; Desarrollo
+Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica, hasta 395 desde el tercer a&ntilde;o, con una
+inversi&oacute;n de hasta 717 en tres a&ntilde;os, de obras deportivas. Los primeros exigen
 actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
-class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,4% del gasto flexible y queda libre el 47,6%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,9%</b>. La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,9% del gasto flexible y queda libre el 47,1%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,4%</b>. La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -372,7 +374,7 @@ obras que ejecuta la propia comisi&oacute;n &mdash;cuentas, seguro y justificaci
 el honorario del panel sorteado que el cap&iacute;tulo 4 propone para los bienes de alcance distrital, como la
 costa, sale de reasignaci&oacute;n: <b>3,1 millones por panel</b>. Y <b>imputar el gasto con referencia
 territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona, no requiere
-personal nuevo ni estructura nueva, y entra dentro del 44,9% del gasto flexible que queda libre con todo
+personal nuevo ni estructura nueva, y entra dentro del 44,4% del gasto flexible que queda libre con todo
 sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el

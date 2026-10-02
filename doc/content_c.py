@@ -1676,9 +1676,13 @@ profesores formados en rescate.</p>
 tierra, y c&oacute;mo anotarse.</p>
 <p><b>Cu&aacute;nto cuesta.</b> Cada puesto, de 62 a 91 millones una vez &mdash;el m&oacute;dulo, la bajada, que es una
 estimaci&oacute;n, los equipos para un grupo de doce y el bote&mdash; y de 60 a 62 millones por a&ntilde;o, casi todo en
-profesores. Vela y windsurf suman de 22 a 43 millones una vez y de 3 a 6 por a&ntilde;o. Con los seis, de 458 a 717
-millones una vez y de 373 a 395 por a&ntilde;o, con unos 36 profesores nuevos. <span class="sg">Lo paga Deportes: la
-inversi&oacute;n, con obras deportivas, y lo de cada a&ntilde;o, con su propio presupuesto.</span></p>
+profesores. Vela y windsurf suman de 22 a 43 millones una vez y de 3 a 6 por a&ntilde;o. A&ntilde;o por a&ntilde;o, de a dos puestos:</p>
+<p><b>A&ntilde;o 1</b>, el Parque del &Aacute;guila y otro: de 167 a 268 millones de inversi&oacute;n, y de 127 a 136 por a&ntilde;o.</p>
+<p><b>A&ntilde;o 2</b>, dos m&aacute;s: de 145 a 225 millones de inversi&oacute;n, y el gasto sube a entre 250 y 266 por a&ntilde;o.</p>
+<p><b>A&ntilde;o 3</b>, los dos &uacute;ltimos: de 145 a 225 millones de inversi&oacute;n; desde ah&iacute;, con los seis, de 373 a 395 por a&ntilde;o
+y unos 36 profesores nuevos.</p>
+<p><span class="sg">Lo paga Deportes: la inversi&oacute;n, con obras deportivas, y lo de cada a&ntilde;o, con su propio
+presupuesto.</span></p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">

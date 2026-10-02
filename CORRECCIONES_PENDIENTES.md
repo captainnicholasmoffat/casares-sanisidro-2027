@@ -2675,5 +2675,11 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   aplica a cada muestra, que es más exigente. Sídney pide hasta 3 días en estuarios; se dejan 2, como decidió Nick.
 - Para corregir en los informes (no en el documento): el Paseo del Río está en el Bajo de San Isidro, no en Béccar
   (informe 16); la coordenada publicada de SI023 parece caer en el espigón de Pacheco [I].
-- A NICK ANTES DE CERRAR: capítulo 3 (once partes, Deportes hasta 395 M, 52,9% / 47,1% / 44,4%) y el Excel (filas
-  240 y 241). Script listo en scratchpad/aplicar_cap3_nautica.py.
+- CAPÍTULO 3 · APROBADO POR NICK Y APLICADO (02/10), año por año como pidió: año 1 (Águila y otro) 167-268 M de
+  inversión y 127-136 M por año; año 2, 145-225 M y 250-266 M por año; año 3, 145-225 M y desde ahí 373-395 M por año
+  (supuesto: dos de agua abierta el año 1 y uno en cada uno de los siguientes). Cuadro 3.4 con once partes; Deportes
+  hasta 395 M desde el tercer año y la inversión de hasta 717 M en tres años, de obras deportivas; gasto flexible
+  ocupado 52,9%, libre 47,1%, con beca y módulo 44,4%. Excel: Supuestos filas 240-247 y C180 con C240; 13.349
+  fórmulas, 0 errores; el resultado de 2028 no cambia (+1.746 M; +1.207 M si la tabla cobra desde abril).
+- Nick aprobó también: "dolor de garganta", lluvia fuerte de más de 25 mm en 24 horas, el 630 aplicado a cada
+  muestra y los dos días de espera.

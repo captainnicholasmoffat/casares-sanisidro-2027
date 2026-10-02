@@ -409,11 +409,11 @@ s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mit
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
       note="El 41,4% del documento")
-s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177)/C128", fmt=FMT_PCT1,
-      note="Fondos nuevos, reasignación, áreas, cuidadores y obra vecinal: el 52,4% del documento")
-s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,6%")
+s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240)/C128", fmt=FMT_PCT1,
+      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica y obra vecinal: el 52,9% del documento")
+s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,1%")
 s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
-      note="El 44,9%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
+      note="El 44,4%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
 
 s_header(184, "R · EL SISTEMA VECINAL (capítulo 4)")
 s_row(185, "Funcionamiento: parte fija de la partida vecinal", 0.015, fmt=FMT_PCT1,
@@ -500,7 +500,20 @@ s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 350000000,
       note="5.5 (189): diagnóstico de Perú 22-36 M, piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
            "desfibrilador y primera temporada de guardavidas 42 M. Sale de los tres programas que ceden (contrapartida, "
            "Programas fila 16), no de los 1.410 M que Ambiente ya gasta: no cambia el gasto total ni el resultado")
-for rr in range(106, 239):
+s_row(240, "Deportes · Escuela Náutica, seis puestos desde el año 3, por año", 395416610,
+      note="5.5: el tope de 373 a 395 M. Profesores (108 horas por semana por puesto, categoría 991, con aguinaldo y "
+           "cargas), reposición, bote y mantenimiento; vela y windsurf en cuatro. Lo paga Deportes con su propio "
+           "presupuesto: no cambia el gasto total ni el resultado")
+s_row(241, "Deportes · Escuela Náutica, inversión en tres años, de obras deportivas", formula="=C243+C245+C247",
+      note="5.5: el tope de 458 a 717 M: módulo, bajada estimada, equipos y bote; vela y windsurf en cuatro. Sale de "
+           "Construcción de infraestructura deportiva (programa 35): no cambia el gasto total ni el resultado")
+s_row(243, "Escuela Náutica · año 1, dos puestos: inversión", 267777400, note="De 167 a 268 M (el tope)")
+s_row(244, "Escuela Náutica · año 1: por año", 136118870, note="De 127 a 136 M (el tope)")
+s_row(245, "Escuela Náutica · año 2, dos más: inversión", 224637400, note="De 145 a 225 M (el tope)")
+s_row(246, "Escuela Náutica · año 2: por año, cuatro puestos", 265767740, note="De 250 a 266 M (el tope)")
+s_row(247, "Escuela Náutica · año 3, los dos últimos: inversión", 224637400,
+      note="De 145 a 225 M (el tope). Supuesto: dos puestos de agua abierta el año 1 y uno en cada uno de los siguientes")
+for rr in range(106, 248):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -1183,7 +1196,8 @@ guia = [
     ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y el mantenimiento de habilitaciones —6.863 M en "
      "régimen, y la inversión de 1.200 M una vez—, la plataforma y "
      "el semillero —dentro de Ciencia y Técnica, 22,0%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
-     "Desarrollo Social —667,8 M—, la beca de práctica "
+     "Desarrollo Social —667,8 M—, la Escuela Náutica de Deportes —de a dos puestos por año, hasta 395 M por año "
+     "desde el tercero y una inversión de hasta 717 M en tres años, de obras deportivas—, la beca de práctica "
      "y el módulo de salud de los años 1 y 2 —del gasto flexible libre— y el funcionamiento del sistema vecinal —1,5% "
      "de la partida— no cambian el gasto total: mueven lo que el Municipio ya gasta. Lo que pagan las empresas por "
      "los pasantes, 1.469,1 M, no es gasto municipal."),
