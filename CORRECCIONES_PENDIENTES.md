@@ -2649,3 +2649,31 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
 - Fuentes en scratchpad/siete_dias/ (FUENTES.txt, calculo_costo_CP.txt).
 - PENDIENTE, a Nick antes de escribir: Escuela Náutica en todos los parques de la costa (parques aptos, costo por
   puesto, de Deportes; scratchpad/nautica_parques/).
+
+## ESCUELA NÁUTICA EN LOS PARQUES DE LA COSTA Y «NO APTO» · APLICADO EN 5.5 Y ANEXO (02/10); CAPÍTULO 3 · A NICK
+- 5.5, sección nueva: hoy el Municipio enseña náutica en el Campo N° 9 (página de Náutica 2026; convocatoria gratuita
+  2025 reproducida por Salón Náutico Argentino). Los días martes, jueves y sábados son de una nota de 2018: no se
+  escriben como "hoy". Seis puestos de a dos por año: primero el Parque del Águila (después de medir su agua, con el
+  dictamen de su asociación), siguen los de mejor agua. Perú Beach, Reserva, Bosque Alegre e islas, no.
+- Decisiones de Nick: 630 E. coli para lo que no es baño (Ordenanza XI, artículo 3 nuevo; la derogación pasa al 4);
+  el windsurf sigue el valor del baño (OMS 2021, p. 4; Res. 125/2016); clase en tierra si la bandera no deja;
+  inversión de obras deportivas y lo anual del presupuesto de Deportes; muestras dentro de las de la costa; sin
+  opinión legal de guardavidas (bote con conductor habilitado y profesores con rescate evaluado en el concurso).
+- La bajada: ESTIMACIÓN, 2 m por 10 a 25 m al precio del entablonado (5 a 14 M por puesto). Por puesto 62 a 91 M una
+  vez y 60 a 62 M por año; vela y windsurf +22 a 43 M y +3 a 6 M; los seis, 458 a 717 M una vez y 373 a 395 M por año,
+  unos 36 profesores (scratchpad/nautica_parques/calculo/costos_con_bajada_CP.txt).
+- "Así no hay negocios armados ni sobreprecios" se escribió "así el dinero va a las clases y no a intermediarios".
+- Ordenanza XIV, artículo 2: admite el puesto náutico liviano, de madera y desmontable, con su bajada, con el
+  dictamen de la asociación del parque (Ordenanza V).
+- 5.14, fila de Deporte: su propuesta es la Escuela Náutica.
+- «No apto», en castellano llano: EPA 2012 (36 cada 1.000 más que los que no se meten, con 126), OMS 2003 (en general
+  leve; clase D, más de 10%) mantenido en 2021; tragar agua es la vía principal (EPA, CDC); dos días después de una
+  lluvia fuerte (Health NZ, OMS 2021) y lluvia fuerte >25 mm en 24 h (Uruguay, Protocolo v6) en la Ordenanza XI,
+  artículo 2. "Irritación" no se escribe: la OMS dice que la relación con piel y ojos no está probada. Fuentes en
+  scratchpad/agua_explicacion/.
+- Matices que quedan dichos en fuentes: el 630 de Texas es media geométrica para arroyos de poca profundidad; acá se
+  aplica a cada muestra, que es más exigente. Sídney pide hasta 3 días en estuarios; se dejan 2, como decidió Nick.
+- Para corregir en los informes (no en el documento): el Paseo del Río está en el Bajo de San Isidro, no en Béccar
+  (informe 16); la coordenada publicada de SI023 parece caer en el espigón de Pacheco [I].
+- A NICK ANTES DE CERRAR: capítulo 3 (once partes, Deportes hasta 395 M, 52,9% / 47,1% / 44,4%) y el Excel (filas
+  240 y 241). Script listo en scratchpad/aplicar_cap3_nautica.py.
