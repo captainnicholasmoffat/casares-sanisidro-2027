@@ -180,6 +180,13 @@ aparezcan sin ser parte del acto.</p>
 incluido el Sistema de Informaci&oacute;n Municipal, y ese registro tendr&aacute; en el expediente el mismo valor
 que el del agente.</p>
 
+<h3>Art&iacute;culo 5 &mdash; Clausuras</h3>
+<p class="tight">Toda clausura se funda por escrito y, salvo un peligro que obligue a cerrar en el momento, va
+precedida de un plazo para corregir. La clausura inmediata tambi&eacute;n se transmite y se funda. La inteligencia
+artificial del Municipio registra cada clausura con su transmisi&oacute;n, su motivo y la infracci&oacute;n que la sostiene, y
+avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una clausura no se sostiene con una
+infracci&oacute;n constatada. Toda clausura puede reclamarse.</p>
+
 <h2>V &middot; Ordenanza de asociaciones de parque</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Reconocimiento</h3>

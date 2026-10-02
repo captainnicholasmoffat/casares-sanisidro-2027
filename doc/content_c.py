@@ -1601,15 +1601,22 @@ tren no lleva bicicletas, bicicleteros en las estaciones y bicisendas hasta la c
 el Mitre, dice d&oacute;nde est&aacute; de verdad cada tren y cu&aacute;nto falta &mdash;no el horario de papel&mdash;, y avisa cuando el
 tren viene a dos estaciones. El dato ya existe: proponemos ped&iacute;rselo por convenio a Trenes Argentinos, que opera
 las dos l&iacute;neas.</p>
-<p><b>4 &middot; Estacionar sin dar vueltas, y sin cobrarlo.</b> La inteligencia artificial dice en tiempo real d&oacute;nde hay
-lugar, contando los autos que entran y salen de cada play&oacute;n de la costa.</p>
+<p><b>4 &middot; Estacionar sin pagar, nunca.</b> No se cobra estacionamiento en la costa ni se usa la gr&uacute;a para
+recaudar: ser&iacute;a regresivo, porque un cobro igual para todos pesa m&aacute;s en quien menos tiene, y el r&iacute;o es de todos. La
+inteligencia artificial dice en tiempo real d&oacute;nde hay lugar, contando los autos que entran y salen de cada play&oacute;n
+de la costa, y la actividad se va extendiendo por la costa a medida que crece, empezando por algunos parques.</p>
 <p><b>5 &middot; Motivos para ir en la semana y en invierno</b>, sobre todo para quien trabaja o estudia cerca: m&aacute;s lugar
 en la Escuela N&aacute;utica, volver a llevar escuelas a la Reserva, actividades con las escuelas y las universidades del
 partido, y una agenda de invierno en la costa. Los eventos solos no alcanzan: en los Docklands de Melbourne, tres
 noches de festival llevaron 100.000 personas y los locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
-<p><b>6 &middot; Reglas claras para los comercios.</b> Ninguna clausura sin motivo escrito; salvo un peligro inmediato,
-con plazo para corregir antes; siempre con derecho a reclamar, y todo consultable en la inteligencia artificial del
-Municipio. <span class="sg">Que a ning&uacute;n comercio le pueda pasar lo de Catalejo y Barisidro.</span></p>
+<p><b>6 &middot; Clausuras totalmente transparentes.</b> Ninguna clausura sin motivo escrito ni sin plazo para
+corregir antes. Toda inspecci&oacute;n que termine en una clausura se transmite en vivo y queda grabada, como las dem&aacute;s
+inspecciones (anexo, Ordenanza IV): se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro
+real obliga a cerrar en el momento, igual se transmite y se explica. Todo queda en la inteligencia artificial del
+Municipio, que cualquier vecino puede consultar y que audita las clausuras: avisa si a un mismo comercio se lo
+clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar.
+<span class="sg">As&iacute; a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y
+Barisidro.</span></p>
 <p><b>7 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
 estacionar, cu&aacute;ndo llega el tren y qu&eacute; hay hoy. Y cuando no sabe algo, lo dice, con la fecha del &uacute;ltimo dato.</p>
 </div>
