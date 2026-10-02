@@ -353,18 +353,17 @@ Los archivos de esos informes no se tocaron: la regla es agregar sólo archivos 
 
 ---
 
-## Decisiones que necesita el cliente
+## Decisiones tomadas (02/10/2026)
 
-1. **¿Le pedimos a la persona que operaba el local documentos** (boletas de canon, actas de clausura y de levantamiento,
-   intimaciones)? Sin eso, lo que contó no se puede escribir como hecho.
-2. **¿Hacemos pedidos de acceso a la información** (Acta de Entrega del convenio, expedientes de 1996, actas de
-   clausura de 2024, respuesta a la Comunicación 214, conteos de tránsito)? Son gratis, pero son pedidos formales.
-3. **¿El programa propone cobrar estacionamiento en la costa en temporada alta?** Es la medida que hace funcionar el
-   traslado en los precedentes, pero genera rechazo si no protege a vecinos y visitantes de menores ingresos.
-4. **¿Cómo se presenta el 40% del canon para la Provincia?** Lo fijó una ley provincial de diciembre de 2025, no una
-   elección del Municipio.
-5. **¿Corregimos el borrador del programa** (fecha de la demolición de Barisidro, "dos locales en actividad")? Hoy el
-   documento no se toca.
+1. **Documentos de la persona que operaba el local: no se piden.** Lo que contó va en el programa atribuido, sin
+   nombre.
+2. **Pedidos de acceso a la información: no se hacen.**
+3. **Cobro de estacionamiento en la costa: no se propone.** Ver el borrador, punto 3.
+4. **El 40% del canon para la Provincia:** el documento lo presenta como lo fija la ley provincial de 2025; el 60% que
+   queda en el Municipio se destina a la costa.
+5. **El borrador del programa ya se corrigió:** devolución de Catalejo en diciembre de 2024 y demolición de Barisidro en
+   agosto de 2025.
+6. **Los actos que nombran a las sociedades que operaban los locales quedan sólo como enlaces.**
 
 ---
 
@@ -386,17 +385,16 @@ Los archivos de esos informes no se tocaron: la regla es agregar sólo archivos 
 - **Pedir a Trenes Argentinos** más trenes los fines de semana de verano y permitir bicicletas en el Tren de la Costa,
   como en el Mitre. Depende del operador nacional.
 - **Bicicleteros en la costa** los fines de semana y una ciclovía de las estaciones del Mitre a la costa.
-- **Una lanzadera costera de fin de semana** de Martínez a Béccar, que hoy no tienen colectivo cerca del río. *Se paga
-  con el punto 3; depende de la decisión 3.*
 
 ### 3. Ordenar el estacionamiento
 
 - **Un inventario oficial de los playones costeros**, con capacidad y administración.
 - **Carteles en los accesos con los lugares libres de cada playón**, contando entradas y salidas, sin sensores en cada
   plaza.
-- **Cobro en la costa en temporada alta, con lo recaudado afectado por ordenanza** a la lanzadera, la limpieza y el
-  mantenimiento de la costa, como en Santa Monica y Laguna Beach. Con lugares reservados para vecinos y una tarifa que
-  no excluya. *Depende de la decisión 3.*
+- **Sin cobro y sin grúa para recaudar.** Si hacen falta lugares, estacionamientos lejos de la costa, donde haya
+  espacio, por ejemplo cerca de las estaciones. *Decisión del cliente, 02/10/2026.*
+- **Descartado:** cobrar estacionamiento en la costa en temporada alta y la lanzadera que se pagaba con ese cobro. Es
+  regresivo: quien va al río en su mayoría no es gente pudiente. *Decisión del cliente, 02/10/2026.*
 
 ### 4. Que haya motivo para ir en la semana y en invierno
 
