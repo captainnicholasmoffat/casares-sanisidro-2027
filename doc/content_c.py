@@ -1568,7 +1568,8 @@ no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
 acceso restringido.</p><p>Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
 decide qu&eacute; se hace con cada una.</p>
 <p><b>Desde 2026 el Municipio tiene por diez a&ntilde;os la tenencia de la costa, que sigue siendo de la Provincia</b>
-(Ordenanza 9430). Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b>, paguen
+(Ordenanza 9430). Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b> en sus predios, no
+adentro de los parques, paguen
 un canon al Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). Por una ley
 provincial de 2025, el 40% de ese canon va a la Provincia; <b>el 60% que queda en el Municipio se destina a la
 costa</b> (anexo, Ordenanza XII). <span class="sg">No se
@@ -1653,6 +1654,12 @@ relevados, y en las marismas no se detect&oacute; da&ntilde;o. Con los precios d
 un sendero de tosca cuesta la quinta parte que uno de hormig&oacute;n.</p>
 <p><b>Y la inteligencia artificial del Municipio muestra el costo por metro de cada obra</b>, comparado con el de
 las dem&aacute;s.</p>
+<p><b>Los parques no se tocan.</b> Se recuperan con naturaleza, pero nunca se privatizan, nunca se edifican y
+nunca se achican: no pueden convertirse en viviendas ni en edificios, y los comercios de la costa funcionan en sus
+predios, no adentro de los parques (anexo, Ordenanza XIV). Una ordenanza la puede cambiar otra ordenanza; lo que un
+gobierno municipal no puede cambiar es una ley provincial. Ya rige una: el art&iacute;culo 60 del Decreto-Ley 8912 proh&iacute;be
+cambiar el destino de las plazas y los parques y edificarlos. <span class="sg">Y le pedimos a la Legislatura que
+declare protegida la ribera, como ya hizo en 2020 con el Golf de Villa Adelina.</span></p>
 </div>
 
 <h3>El que usa el parque est&aacute; ah&iacute; todos los d&iacute;as</h3>

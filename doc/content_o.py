@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y doce cortas. Se votan por separado porque son
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y trece cortas. Se votan por separado porque son
 discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
 
 <div class="callout a">
@@ -367,6 +367,40 @@ ordenanza que la otorgue contra ese dictamen (Ley Org&aacute;nica de las Municip
 <p class="tight">Quien recibe una excepci&oacute;n paga el <b>quince por ciento (15%) de la valorizaci&oacute;n</b> que genera,
 conforme la Ley 14.449, art&iacute;culos 46 y 50, con la aprobaci&oacute;n provincial que pide su reglamentaci&oacute;n. Lo que se cobra
 va a vivienda y a obra en las zonas donde falta.</p>
+
+<h2>XIV &middot; Ordenanza de los parques y espacios verdes p&uacute;blicos</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Alcance y registro</h3>
+<p class="tight">Esta ordenanza rige para todos los parques, plazas, plazoletas, paseos y dem&aacute;s espacios verdes y
+libres p&uacute;blicos del Partido. El Departamento Ejecutivo los inscribe en un registro con su plano, su superficie y su
+norma de origen, que toda persona puede consultar en el Sistema de Informaci&oacute;n Municipal. En la costa de tenencia
+provincial rige adem&aacute;s el convenio aprobado por la Ordenanza 9430.</p>
+
+<h3>Art&iacute;culo 2 &mdash; No se privatizan ni se edifican</h3>
+<p class="tight">Conforme al art&iacute;culo 60 del Decreto-Ley 8912/77, los espacios verdes p&uacute;blicos <b>no cambian de destino,
+no se venden, no se ceden y no se edifican</b>: no pueden convertirse en viviendas ni en edificios de ning&uacute;n tipo,
+p&uacute;blicos o privados. No se otorgan concesiones ni permisos que los cierren, cobren su acceso o reserven parte de ellos
+para uso exclusivo; los comercios de la costa funcionan en sus propios predios, fuera de los espacios verdes. S&oacute;lo se
+admite lo que sirve al uso p&uacute;blico del propio espacio &mdash;senderos, juegos, sanitarios, iluminaci&oacute;n, bancos y
+puestos de guardavidas&mdash;, sin reducir su superficie absorbente.</p>
+
+<h3>Art&iacute;culo 3 &mdash; No se achican</h3>
+<p class="tight"><b>La superficie de espacios verdes p&uacute;blicos del Partido no disminuye.</b> La &uacute;nica permuta que admite
+el art&iacute;culo 60 del Decreto-Ley 8912/77 se hace por un inmueble de mayor superficie, en el mismo barrio, ya parquizado
+y abierto al p&uacute;blico, con evaluaci&oacute;n de impacto ambiental y audiencia p&uacute;blica previas y el voto de los dos tercios
+del total del Concejo (Ley Org&aacute;nica de las Municipalidades, art&iacute;culo 56).</p>
+
+<h3>Art&iacute;culo 4 &mdash; Se recuperan con naturaleza</h3>
+<p class="tight">Cada espacio verde tiene un plan de manejo que toda persona puede consultar, con especies nativas,
+suelo absorbente y senderos permeables. La Reserva Ribera Norte, el Bosque Alegre y las barrancas protegidas
+conservan su r&eacute;gimen (Ordenanzas 6541/1988, 8461/2009 y 8651), que esta ordenanza s&oacute;lo ampl&iacute;a.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Una ley provincial</h3>
+<p class="tight">Dentro de los ciento ochenta (180) d&iacute;as, el Departamento Ejecutivo pide a la Provincia que declare por
+ley <b>Paisaje Protegido de Inter&eacute;s Provincial a la ribera del Partido y Espacio Verde de Inter&eacute;s Provincial a sus
+parques principales</b> (Ley 12.704), con prohibici&oacute;n expresa de venderlos, edificarlos y achicarlos, y que reconozca
+por ley la Reserva Ribera Norte (Ley 10.907, art&iacute;culo 7). Toda norma que reduzca la protecci&oacute;n de esta ordenanza se
+funda en un estudio t&eacute;cnico y ambiental previo y pasa por audiencia p&uacute;blica.</p>
 
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>

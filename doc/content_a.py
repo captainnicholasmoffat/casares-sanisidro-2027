@@ -129,7 +129,7 @@ _IDX = [
  ("g", "Anexo &middot; El articulado", None),
  ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
  ("i", "Seis ordenanzas m&aacute;s, de los parques al empleo local", "ordenanza2"),
- ("i", "La costa, la obra en parques y costa y las excepciones urban&iacute;sticas; y las metas que no llevan ordenanza", "ordenanza3"),
+ ("i", "La costa, la obra en parques y costa, las excepciones urban&iacute;sticas y los parques; y las metas que no llevan ordenanza", "ordenanza3"),
  ("g", "Glosario", None),
  ("i", "Veintitr&eacute;s palabras, explicadas", "glosario"),
  ("g", "Nota de m&eacute;todo", None),
