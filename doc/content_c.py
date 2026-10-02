@@ -1578,39 +1578,47 @@ por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
 <p><b>El objetivo es una costa linda que traiga gente y trabajo a los comercios toda la semana y todo el
 a&ntilde;o.</b> La costa no es de una zona, y la secci&oacute;n 4.6 ya fija qui&eacute;n la decide.</p>
 </div>
-<h3>La costa toda la semana y todo el a&ntilde;o</h3>
+<h3>La costa toda la semana</h3>
 <div class="cols">
 <p><b>Hoy no hay ning&uacute;n conteo de tr&aacute;nsito ni de visitantes en la costa</b>: ni de fin de semana, ni de d&iacute;as
 h&aacute;biles, ni por estaci&oacute;n del a&ntilde;o. Y lo que organiza el Municipio cae casi todo en verano y en fines de semana: de
 las 145 actividades de las vacaciones de invierno de 2026, la &uacute;nica en la costa fue la Reserva.</p>
 <p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa a Per&uacute; Beach hay unos 300 metros a
-pie, y de Anchorena a Pacheco y el r&iacute;o, unos 400. Pero el Tren de la Costa no lleva bicicletas. Su operador ya
-muestra en su aplicaci&oacute;n, en tiempo real, cu&aacute;ndo llega cada tren a cada estaci&oacute;n; la Ciudad distribu&iacute;a la posici&oacute;n
-de los trenes en su API de transporte, que hoy est&aacute; suspendida.</p>
-<p><b>Y ya hay cosas en la semana que nadie cuenta</b>: la Escuela N&aacute;utica Municipal, martes, jueves y s&aacute;bados; la
-Reserva, con escuelas de lunes a viernes; Puerto Libre, para adultos mayores. La Reserva lleg&oacute; a recibir 13.500
-alumnos en 1998; en 2018, seg&uacute;n el Municipio, entre 6.000 y 7.000.</p>
+pie, y de Anchorena a Pacheco y el r&iacute;o, unos 400. Su operador ya muestra en su aplicaci&oacute;n, en tiempo real, cu&aacute;ndo
+llega cada tren a cada estaci&oacute;n; la Ciudad distribu&iacute;a la posici&oacute;n de los trenes en su API de transporte, que hoy
+est&aacute; suspendida.</p>
+<p><b>Y ya hay cosas en la semana que nadie cuenta</b>: la Reserva, con escuelas de lunes a viernes, y Puerto
+Libre, para adultos mayores. La Reserva lleg&oacute; a recibir 13.500 alumnos en 1998; en 2018, seg&uacute;n el Municipio, entre
+6.000 y 7.000.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Lo que proponemos: gente en la costa toda la semana y todo el a&ntilde;o</div>
-<p><b>1 &middot; Medir.</b> Contar gente y autos en la costa cuatro veces por a&ntilde;o &mdash;en verano y en invierno, en d&iacute;a
-h&aacute;bil y en fin de semana&mdash;, en los playones y en los accesos, y que cualquiera pueda ver el resultado en la
-inteligencia artificial del Municipio.</p>
-<p><b>2 &middot; Llegar sin auto.</b> Carteles y senderos desde cada estaci&oacute;n del Tren de la Costa hasta el r&iacute;o; y, como el
-tren no lleva bicicletas, bicicleteros en las estaciones y bicisendas hasta la costa.</p>
-<p><b>3 &middot; El tren en tiempo real.</b> La inteligencia artificial del Municipio, conectada con el Tren de la Costa y
+<div class="clabel">Lo que proponemos: que la gente vaya tambi&eacute;n en la semana</div>
+<p><b>El foco es la semana.</b> Si la gente va tambi&eacute;n de lunes a jueves, se descomprimen los fines de semana y
+los feriados.</p>
+<p><b>1 &middot; La inteligencia artificial empuja hacia la semana.</b> Si alguien le pregunta por el fin de semana, le
+avisa que va a estar lleno y le muestra qu&eacute; d&iacute;as hay lugar.</p>
+<p><b>2 &middot; Las escuelas del partido, en la costa en horario escolar</b>, con educaci&oacute;n ambiental en la Reserva y en
+los parques.</p>
+<p><b>3 &middot; Ofertas de lunes a jueves.</b> Los comercios de la costa hacen ofertas los d&iacute;as de semana, y la
+inteligencia artificial del Municipio las difunde.</p>
+<p><b>4 &middot; Actividades fijas, no eventos sueltos</b>: clases n&aacute;uticas, de kite, caminatas guiadas, todas las
+semanas el mismo d&iacute;a, que se van extendiendo por la costa a medida que crecen, empezando por algunos parques. Los
+eventos solos no alcanzan: en los Docklands de Melbourne, tres noches de festival llevaron 100.000 personas y los
+locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
+<p><b>5 &middot; Medir cu&aacute;nta gente va cada d&iacute;a, para saber si funciona.</b> Una c&aacute;mara que cuenta en cada acceso de los
+21 playones de la costa: unos 110 a 117 millones una vez y 13 millones por a&ntilde;o, dentro del aumento de ambiente, a
+los que falta sumar el montaje y el programa. Cualquiera ve el resultado en la inteligencia artificial del
+Municipio.</p>
+<p><b>6 &middot; El tren en tiempo real.</b> La inteligencia artificial del Municipio, conectada con el Tren de la Costa y
 el Mitre, dice d&oacute;nde est&aacute; de verdad cada tren y cu&aacute;nto falta &mdash;no el horario de papel&mdash;, y avisa cuando el
 tren viene a dos estaciones. El dato ya existe: proponemos ped&iacute;rselo por convenio a Trenes Argentinos, que opera
-las dos l&iacute;neas.</p>
-<p><b>4 &middot; Estacionar sin pagar, nunca.</b> No se cobra estacionamiento en la costa ni se usa la gr&uacute;a para
-recaudar: ser&iacute;a regresivo, porque un cobro igual para todos pesa m&aacute;s en quien menos tiene, y el r&iacute;o es de todos. La
-inteligencia artificial dice en tiempo real d&oacute;nde hay lugar, contando los autos que entran y salen de cada play&oacute;n
-de la costa, y la actividad se va extendiendo por la costa a medida que crece, empezando por algunos parques.</p>
-<p><b>5 &middot; Motivos para ir en la semana y en invierno</b>, sobre todo para quien trabaja o estudia cerca: m&aacute;s lugar
-en la Escuela N&aacute;utica, volver a llevar escuelas a la Reserva, actividades con las escuelas y las universidades del
-partido, y una agenda de invierno en la costa. Los eventos solos no alcanzan: en los Docklands de Melbourne, tres
-noches de festival llevaron 100.000 personas y los locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
-<p><b>6 &middot; Clausuras totalmente transparentes.</b> Ninguna clausura sin motivo escrito ni sin plazo para
+las dos l&iacute;neas. Y carteles desde cada estaci&oacute;n hasta el r&iacute;o.</p>
+<p><b>7 &middot; Estacionar sin pagar, nunca, y sin construir.</b> No se cobra estacionamiento en la costa ni se usa la
+gr&uacute;a para recaudar: ser&iacute;a regresivo, porque un cobro igual para todos pesa m&aacute;s en quien menos tiene, y el r&iacute;o es de
+todos. Tampoco se construyen playones: no hay lugar. En los d&iacute;as de mucha gente, la inteligencia artificial del
+Municipio orienta el tr&aacute;nsito y dice d&oacute;nde hay lugar; la gente estaciona en los barrios, y a la costa accede la
+cantidad que entre.</p>
+<p><b>8 &middot; Clausuras totalmente transparentes.</b> Ninguna clausura sin motivo escrito ni sin plazo para
 corregir antes. Toda inspecci&oacute;n que termine en una clausura se transmite en vivo y queda grabada, como las dem&aacute;s
 inspecciones (anexo, Ordenanza IV): se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro
 real obliga a cerrar en el momento, igual se transmite y se explica. Todo queda en la inteligencia artificial del
@@ -1618,8 +1626,9 @@ Municipio, que cualquier vecino puede consultar y que audita las clausuras: avis
 clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar.
 <span class="sg">As&iacute; a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y
 Barisidro.</span></p>
-<p><b>7 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
-estacionar, cu&aacute;ndo llega el tren y qu&eacute; hay hoy. Y cuando no sabe algo, lo dice, con la fecha del &uacute;ltimo dato.</p>
+<p><b>9 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
+estacionar, cu&aacute;ndo llega el tren, qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del
+&uacute;ltimo dato.</p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">

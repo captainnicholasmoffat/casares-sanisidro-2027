@@ -2621,3 +2621,16 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   de la costa, en sus predios. Fuentes en 01_raw/costa/d_verificacion_189_190/parques_ley/.
 - A NICK, ANTES DE ESCRIBIR: lugares para estacionar lejos de la costa y costos de conteo de autos, bicicleteros,
   bicisendas y Escuela Náutica (scratchpad/costa_costos/, calculo_CP.txt).
+
+## LA COSTA EN LA SEMANA · APLICADO (02/10)
+- Fuera bicisendas y bicicleteros (y sus costos). Estacionamiento: no se construye nada ni hay convenios; en los días
+  de mucha gente la IA orienta el tránsito y dice dónde hay lugar, la gente estaciona en los barrios y a la costa
+  accede la cantidad que entre. Sin cobro, nunca, y sin grúa para recaudar.
+- El foco es la semana: la IA empuja hacia la semana; las escuelas en horario escolar, con educación ambiental en la
+  Reserva y los parques; ofertas de lunes a jueves; actividades fijas (Melbourne); medir cada día con una cámara por
+  acceso en los 21 playones: 110 a 117 M una vez y 13 M por año, dentro del aumento de ambiente, sin montaje ni
+  programa (fuentes en 01_raw/costa/d_verificacion_189_190/costa_costos/). No se escribió "de lunes a jueves la costa
+  está vacía": no está medido (informe 17).
+- La Escuela Náutica Municipal salió del texto hasta que Nick la confirme (Campo de Deportes N° 9, Subsecretaría de
+  Deportes; clases gratuitas de kayak, vela ligera, windsurf y SUP; alumnos: no se publican).
+- PENDIENTE, a Nick antes de escribir: el Municipio de siete días (horarios rotativos optativos).

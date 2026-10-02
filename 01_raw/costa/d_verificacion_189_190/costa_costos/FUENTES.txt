@@ -1,0 +1,212 @@
+FUENTES - costa_costos (Programa San Isidro 2027: estacionamientos lejos de la costa, conteo de autos, bicis, escuela náutica)
+Consulta: 02/10/2026 (salvo que se indique otra fecha). Nada pago, nada en persona, no se contactó a nadie. El repositorio no se tocó (sólo lectura).
+Marcas: [V] leído en fuente primaria | [P] fuente secundaria o aviso comercial | [CP] cálculo propio (cuentas en calculo/calculo_CP.txt) | [SC] sin confirmar | [I] inferencia
+Montos: pesos de diciembre de 2025 con data/deflactor_periodos.csv del repo (coef_deflactor del mes del precio). Último mes disponible: junio 2026
+(0,85582787); a los precios de avisos de octubre de 2026 se les aplica ese coeficiente. Dólar: $1.447,84 (dato del pedido); los precios en dólares
+se pasan a pesos con ese tipo y no se deflactan.
+Formato: archivo (en esta carpeta) | URL | qué dice | marca
+
+======================================================================================================================
+0. CONTEXTO LEÍDO DEL REPO (no se copió)
+======================================================================================================================
+informes/17_costa_viva.md (B6): 21 playones costeros, ~1.090 autos (OSM); estaciones TdlC y distancias a pie; Mitre a 1,6-2,1 km; TdlC no lleva bicis.
+01_raw/costa_viva/3_transito_hoy/ (estacionamientos_osm_zona_costera.csv, distancias_estaciones_costa.csv, osm/cycle.json, scripts/zonas.py: "zona
+  costera" = parte del partido entre las vías del TdlC y el río).
+01_raw/costa_viva/3_transito_hoy/trenes/ar_trenes_preguntas_frecuentes.txt (https://www.argentina.gob.ar/transporte/trenes-argentinos/institucional/preguntasfrecuentes):
+  "Podés viajar con tu bicicleta en todas las formaciones ... AMBA en el vagón furgón ... a excepción del ramal Victoria - Capilla del Señor, Villa
+  Ballester - Zárate de la línea Mitre y el Tren de la Costa." [V]
+01_raw/costa_viva/6_ia_municipal/msi_nov_guarderia_bicicletas.html: guardería municipal gratuita de 62 bicicletas en la estación San Isidro (22-10-2021). [V, según el Municipio]
+01_raw/costa_viva/5_semana_e_invierno/Rosario_noticias_374814_Escuela_Municipal_Nautica.html (Municipalidad de Rosario, 02-08-2022): "El verano que
+  pasó tuvimos 260 alumnas y alumnos"; martes y jueves 14.30-17.30 chicos, viernes y sábados adultos; staff: coordinador + 4 profesores + apoyo;
+  "sólo se abona 500 pesos por mes y tienen todo: salvavidas, la embarcación, seguro". [V, según la Municipalidad]
+01_raw/agua/4_calidad_y_uso_del_rio/sanisidro_noticia_1512_escuela_nautica_municipal.html (Municipio, publicada 07-03-2018): Campo Nº 9, martes, jueves y
+  sábados; canotaje y vela; desde 13 años. [V]  Salon_Nautico_escuela_nautica_San_Isidro.html (CACEL 19-02-2025, reproduce gacetilla): kayak, vela
+  ligera, windsurf, SUP; gratuita; "Un instructor brinda la clase junto a los equipos"; máx. 2 actividades por semana; sólo vecinos. [P]
+01_raw/costa_viva/5_semana_e_invierno/sanisidro_nautica_2026-10-01.html (https://www.sanisidro.gob.ar/nautica): SUP, windsurf, kitesurf, kayak, vela en laser; inscripción por TESI. [V]
+Scratchpad de otras sesiones (leído): arena_pacheco/precios/gde_1758140813_Dec1077-2025.* (copiado aquí); montevideo/guardavidas/FUENTES.txt y
+  calculo_temporada_CP.txt (cat. 12 35 h = 579.809 módulos, art. 6 Presupuesto 2026; 1 módulo ~ $1 por el F6; IPS 12% [V]; IOMA 4,8% [P]);
+  arena_pacheco/tesi/procurement_rows.json (índice de 1.302 actos de compras del Boletín de San Isidro, feb-2024 a sep-2026).
+
+======================================================================================================================
+1. ESTACIONAMIENTOS LEJOS DE LA COSTA
+======================================================================================================================
+1_estacionamientos/osm/estaciones_entorno_600m.json | Overpass (maps.mail.ru), consulta en este archivo de scripts: amenity=parking, landuse railway/grass/etc.
+  a 600 m de las 8 estaciones, base OSM 2026-10-02T06:35Z | Playones y suelo ferroviario cerca de las estaciones. ODbL, no oficial. [P]
+1_estacionamientos/osm/ferroviario_SanIsidro.json | Overpass, base 2026-10-02T06:43Z | landuse=railway y vías en San Isidro. [P]
+1_estacionamientos/osm/entorno_estaciones_CP.csv | elaboración propia | superficie de cada polígono OSM y estación más cercana. [CP]
+1_estacionamientos/osm/landuse_railway_SanIsidro_CP.csv | elaboración propia | superficie ferroviaria fuera de una franja de 6 m a cada lado de las vías
+  (Barrancas 2.018 m2; Béccar 2.002 m2). [CP]
+1_estacionamientos/osm/nominatim_reverse_candidatos.json | https://nominatim.openstreetmap.org/reverse | direcciones de los playones candidatos. [P]
+1_estacionamientos/osm/contexto_candidatos_mitre.json | Overpass (kumi.systems), base 2026-07-24 | comercios cerca: el playón de Acassuso (Albarellos 899)
+  está junto al supermercado Coto (Albarellos 854). [P]
+1_estacionamientos/osm/osrm_foot_candidatos.json, distancias_a_pie_candidatos_CP.csv | https://routing.openstreetmap.de/routed-foot/table/v1/... |
+  distancia a pie de cada lugar al punto de costa más cercano (destinos D1-D9 del informe 17). [CP]
+1_estacionamientos/arba/ARBA_WFS_parcelas_*_2026-10-02.json | https://geo.arba.gov.ar/geoserver/idera/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=idera:Parcela
+  &outputFormat=application/json&srsName=EPSG:4326&bbox=... (bbox en cada archivo; las de 400 m de San Isidro R, Martínez, Acassuso, San Isidro C y Béccar
+  llegaron al tope de 1.000 parcelas: por eso se bajaron otras de 150 m) | geometría, cca, partida (pda) y superficie de cada parcela. El WFS público NO
+  trae titular. [V la geometría]
+1_estacionamientos/arba/ARBA_wfs_capabilities_idera.xml | https://geo.arba.gov.ar/geoserver/idera/wfs?service=WFS&request=GetCapabilities | capas:
+  Parcela, Manzana, Subparcela, Otro_edificio_gubernamental, etc. Ninguna con dueño. [V]
+1_estacionamientos/arba/superposicion_candidatos_ARBA_CP.csv | elaboración propia | % de cada playón dentro de parcelas: 0% en la franja de Barrancas,
+  el jardín de la estación Barrancas, la franja oeste de Anchorena y los dos playones de la estación San Isidro R (= tierra sin parcelar: calle o vía
+  [I]); el playón de Anchorena junto al río cae 77% en la parcela sin partida de 42.327 m2 = ítem 12 del Anexo I de la Res. MEcon 138/2026
+  (tierra provincial en tenencia del Municipio; ver 01_raw/costa_viva/1_tenencia_y_canon/CALCULO_PROPIO_superficie_15_parcelas_AnexoI.csv); Martínez
+  (Av. Santa Fe 2399) en la partida 097-005363; Acassuso (Coto) en 4 partidas; Béccar: parcelas 097-128239 (1.141 m2) y 097-062091 (3.148 m2) y franja
+  sin parcela. [CP]
+1_estacionamientos/arba/parcelas_sin_partida_cerca_estaciones_CP.csv | elaboración propia con los WFS de ARBA | parcelas sin partida a menos de 400 m de
+  cada estación (74). No sirve como prueba de tierra estatal: muchas son loteos o propiedad horizontal recientes (ej. 15.681 m2 junto a Barrancas, que en la
+  imagen es un conjunto de viviendas). [CP]
+1_estacionamientos/aabe/inmuebles-estado-nacional.csv | https://infra.datos.gob.ar/catalog/otros/dataset/6/distribution/6.1/download/inmuebles-estado-nacional.csv |
+  dataset parcial de la AABE (677 inmuebles, casi todos en CABA): ninguno en San Isidro. [V, como ausencia]
+1_estacionamientos/aabe/BO_AABE_Res109-2021_UNSO_SanIsidroR.html/.txt | https://www.boletinoficial.gob.ar/detalleAviso/primera/247412/20210728 |
+  Res. AABE 109/2021 (16/07/2021, BO 28/07/2021): el Cuadro de Estación San Isidro R es "propiedad del ESTADO NACIONAL, en jurisdicción de la
+  ADMINISTRACIÓN DE INFRAESTRUCTURAS FERROVIARIAS"; se desafecta y se asigna en uso a la Universidad Nacional Raúl Scalabrini Ortiz un sector de
+  5.454,44 m2 cubiertos y 9.069 m2 descubiertos (CIE 0600076167/17/18/19); SOFSE informó permisos de uso vencidos y que "se dejó sin efecto la licitación
+  pública para la concesión y explotación del predio"; art. 4: cualquier obra requiere autorización previa de ADIF. [V]
+1_estacionamientos/aabe/BO_AABE_Res109-2021_Anexo_croquis_IF-2021-61990575.pdf, anexo_croquis_p1.png | POST https://www.boletinoficial.gob.ar/pdf/download_anexo
+  (idAnexo 6386517) | croquis de los sectores asignados (plantas -2,70, +1,25, +4,80, entre Pedro de Mendoza, Lasalle, Ituzaingó y Del Barco Centenera). [V]
+Leída con WebFetch, no guardada | https://zonales.com/san-isidro-construccion-universidad-estacion-tren-costa/ (06/05/2023) | "Además, cuenta con un
+  estacionamiento en el subsuelo, un patio y una fuente"; la UNSO tiene unos 4.000 alumnos y en 2023 cursaba de noche. [P]
+Leída con WebFetch, no guardada | https://zonales.com/universidad-locales-abandonados-estacion-san-isidro-del-tren-costa/ (29/07/2021) | 5.400 m2 cubiertos
+  y más de 9.000 descubiertos, en manos de la AABE. [P]
+1_estacionamientos/prensa/wiki_es_*.wikitext | https://es.wikipedia.org/w/index.php?title=<estación>&action=raw | servicios: Juan Anchorena y San Isidro R
+  tienen "Aparcamiento"; Las Barrancas y Punta Chica no; el TdlC se inauguró el 25/04/1995 con tres centros comerciales (Maipú, Libertador y San Isidro);
+  concesión rescindida en 2013 (Res. 477/2013). [P]
+1_estacionamientos/precios/gde_1758140813_Dec1077-2025.pdf/.txt | https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1758140813.pdf | Decreto 1077/2025,
+  LP 62/2024 espacios verdes, anexos I (Zona 1, Salvatori) y II (Zona 2, La Mantovana; incluye la costa); precios redeterminados "a partir del 1º de marzo
+  de 2025". Usados (P redeterminado, Z1 / Z2): desmonte y nivelación m3 12.430,01 / 69.778,68; compactación m3 7.458,00 / 43.814,48; tosca m3 34.000,75 /
+  50.769,77; granza granito m3 208.137,64 / 162.719,67; base y subbase de tosca con provisión y compactación m3 89.935,75 / 107.628,82; contrapiso H17
+  8-12 cm m2 171.855,98 / 44.245,72; vereda de hormigón armado texturado 13-15 cm m2 66.600,22 / 91.432,08; intertrabado 8 cm m2 46.839,59 / 45.707,03;
+  losetas cribadas m2 78.693,44 / 69.273,86; cordón HºAº ml 88.800,30 / 34.220,37; caño cribado ml 52.782,51 / 17.639,11; caño PVC 110 m 12.383,93 /
+  36.954,96; bolardo de hormigón tipo Durban Triel ud 291.919,41 / 345.808,15; provisión y colocación de cartel ud 298.732,08 / 1.069.090,22.
+  NO hay "bicicletero", "bicisenda", luminarias ni sumideros en este contrato. [V]
+tesi_pdfs/RESFC_2026_1_SI_SECAMEP_0.pdf y _1.pdf (+ .txt) | https://tesi.sanisidro.gob.ar/boletin/pdf/... (enlace cifrado, en tesi_pdfs/urls_tesi_usados.json) |
+  Balance de economías y demasías LP 30/2024 "Veredas y pavimento de hormigón", Zona 1 (Salvatori), precios unitarios de oferta (apertura 03/07/2024,
+  Decreto 657/2024): pavimento de hormigón H38 0,19-0,24 m 65.020,82 $/m2; construcción de calzada de hormigón 95.443,16 $/m2; excavación 26.809,83 $/m3;
+  suelo seleccionado (tosca) 21.691,59 $/m3; preparación de subrasante 1.224,82 $/m2; contrapiso H17 27.389,70 $/m2; vereda estructural H21 con malla
+  13-15 cm 86.741,63 $/m2; sumidero 50x100 con rejillas 810.351,88 $/un; cámara 40x60 con tapa 315.016,88 $/un; caño PVC reforzado 110 mm 14.677,86 $/ml;
+  señalamiento horizontal 42.895,72 $/m2. [V]
+tesi_pdfs/Decreto_Nro_DECRE_2024_657_SI_INTEN.* | https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1719242553.pdf | llamado LP 30/2024, apertura 3/7/2024. [V]
+tesi_pdfs/Decreto_Nro_DECRE_2024_1166_SI_INTEN.* | .../gde_1724957697.pdf | adjudicación LP 30/2024: Z1 Salvatori $637,8 M; Z2 Tecnovías $687,7 M. [V]
+tesi_pdfs/Decreto_Nro_DECRE_2025_405_SI_INTEN.* | .../gde_1745611279.pdf | Alumbrado LP 20/2015, Anexo I "Precios unitarios de materiales para obras de
+  alumbrado público" (valores del Dec. 35/2025, "a septiembre de 2024"): columna acero 8/2,5 m 1.468.741,07; 8/1 m 1.540.538,71; 6/1 m 1.301.512,71;
+  luminaria LED hasta 120 W 1.323.609,95; LED vereda 60 W con brazo 803.209,90; tablero de columna 96.127,31; jabalina 69.697,61; fotocélula 36.600,69;
+  cable subterráneo Sintenax 2x4 31.401,15 $/m. El anexo no dice si el precio incluye el montaje. [V]
+tesi_pdfs/Decreto_Nro_DECRE_2025_484_SI_INTEN.* y _1101_ | .../gde_1747237909.pdf y gde_1758141925.pdf | LP 32/2025 mobiliario (bancos, cestos, bebederos,
+  bolardos): no incluye bicicleteros; adjudicada por renglón sin precios unitarios publicados. [V, como ausencia]
+1_estacionamientos/mapas/*.jpg | mosaicos de Esri World Imagery (https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/z/y/x)
+  con polígonos OSM y parcelas ARBA superpuestos (scripts/mapa.py) | para ver si el terreno está libre: Barrancas (franja usada como estacionamiento y
+  jardín arbolado de la estación), Anchorena (franja oeste angosta), San Isidro R (complejo de la estación), Punta Chica (sin terreno libre junto a la
+  estación), Béccar (terreno de tierra y ripio entre las vías y Av. Centenario), Martínez (playón sobre Av. Santa Fe). [P, interpretación propia de imagen]
+1_estacionamientos/prensa/msi_planointeractivo.html | https://www.sanisidro.gob.ar/urbanismo/planointeractivo | remite a https://gemelodigital.sanisidro.gob.ar/mapa-interactivo/
+  que NO se pudo abrir (certificado que no corresponde al dominio; WebFetch 503). No se pudo ver si el Municipio publica sus inmuebles. [V, como ausencia]
+No se consultó (pago o requiere identificación): Registro de la Propiedad Inmueble (titularidad); ARBA consulta de partidas con CUIT.
+
+======================================================================================================================
+2. CONTAR AUTOS
+======================================================================================================================
+2_conteo/caba_bac_award_extracto_camaras_M2M.csv | extracto de https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ministerio-de-economia-y-finanzas/buenos-aires-compras/award.csv
+  (archivo bajado por otra sesión: scratchpad/award.csv) | (a) proceso 3202-0961-CDI25 "prov, inst. y puesta en marcha de un sistema de videovigilancia en
+  alcaidías", adjudicado a DANAIDE S.A. el 23/09/2025: "CAMARA DE VIDEO PARA SISTEMA DE VIGILANCIA. Modelo: De alta definición", precio unitario 994,24;
+  1.247,48 (750 unidades); 3.690,69 y 4.378,75. El campo de moneda está vacío: se toman como dólares porque 750 cámaras por $935.610 serían imposibles
+  en pesos [I]. (b) proceso 623-0849-LPU25 "Servicio Público Básico de Telefonía Celular" (Telefónica, 2026): "SERVICIO M2M" 71.480 a 85.170 $ por
+  "Unidad", sin período indicado. [V el dato; SC qué período cubre]
+tesi_pdfs/Decreto_Nro_DECRE_2025_164_SI_INTEN.* y _1207_ | .../gde_1739815723.pdf y gde_1760733381.pdf | San Isidro LP 76/2024 cámaras de videovigilancia
+  (EXANET): $4.252,5 M por provisión, instalación, integración al VMS del Centro de Operaciones y 36 meses de mantenimiento; ampliación de $1.011,7 M
+  (23,79%). No publica cantidad ni precio por cámara. [V]
+Leída con WebFetch, no guardada | https://www.wilsonamplifiers.com/teltonika-rut241-industrial-cellular-router/ | router 4G industrial Teltonika RUT241:
+  "Now: $237.00" (dólares, aviso de EE.UU.). [P]
+2_conteo/fscompras_sensor_masa_bicanal.html | https://fscompras.com/producto/sensor-de-masa-para-barreras-bi-canal/ | detector de masa (lazo) bicanal
+  US$ 604,46 + ITBMS (aviso de Panamá). [P]
+Sólo en resultado de buscador (página bloqueada) | https://www.tienda.cronos.com.ar/MLA-854240193-... | detector de masa metálica Cronos $175.527,19. [SC]
+Sólo en resultado de buscador | Milesight EM400-MUD (sensor ultrasónico con modo estacionamiento, LoRaWAN): €124,83-142,30 en tiendas de Alemania y España;
+  US$ 115-160 en Alibaba. [SC]
+Sólo en resultado de buscador (página bloqueada) | https://pixelargps.com/blog/guia-completa-chips-m2m-iot | planes M2M "desde aproximadamente $8.000 por
+  mes" (25 MB). [SC]
+2_conteo/seguridadcentro_*.html | https://www.seguridadcentro.com.ar/hikvision-camaras-ip-parking/43/176/339 | distribuidor Hikvision: cámaras ANPR y de
+  entrada/salida de estacionamiento; precio sólo para usuarios registrados. [V, sin precio]
+2_conteo/sibom_Saladillo_Dec1766-2025_camaras_lectoras.html, _Dec1647-2025_ | https://sibom.slyt.gba.gob.ar/bulletins/14347/contents/2341002 y 14311/contents/2338774 |
+  Saladillo CP 44/2025 cámaras lectoras de matrículas y accesorios: presupuesto oficial $24.210.000, adjudicado a IMPACSEG S.A. por $26.656.308
+  (sep-2025). No publica cuántas cámaras. [V]
+2_conteo/sibom_Lujan_Dec55_LPR.html, _Dec383_LPR.html | https://sibom.slyt.gba.gob.ar/bulletins/12988/contents/2237185 y 13016/contents/2270060 | Luján LPriv
+  01/2025 cámaras LPR con licencia Digifort, montaje e instalación: adjudicada a NETLATIN S.R.L. por $81.051.337,80; el decreto dice "300 chapas" (error
+  evidente); sin precio unitario. [V]
+2_conteo/sibom/sibom_q_*.html | https://sibom.slyt.gba.gob.ar/advanced_search?q[simple_query_string]=... | búsquedas "contador vehicular", "conteo
+  vehicular", "sensores de estacionamiento", "estacionamiento inteligente", "lazo inductivo", "contadores de transito", "lectoras de patentes",
+  "camaras LPR": ninguna compra municipal de contadores de autos con precio unitario. [V, como ausencia]
+01_raw/costa_viva/6_ia_municipal/mdzol_mendoza_camaras_lugar_estacionar.html y 4_movilidad_precedentes/cespi_unlp_pilar_estacionamiento_inteligente.html
+  (repo) | Mendoza: "una cámara por cuadra" en prueba piloto con la UNLP; Pilar: 1.400 dársenas con sensores (CeSPI-UNLP). Ninguno publica costos. [V, como ausencia]
+
+======================================================================================================================
+3. BICICLETEROS Y BICISENDAS
+======================================================================================================================
+3_bicis/precios/sibom_Lobos_Dec362-2022_100_bicicleteros.html | https://sibom.slyt.gba.gob.ar/bulletins/7158/contents/1733258 | Lobos, Decreto 362/2022
+  (18/02/2022): CP 01/2022 "Adquisición de 100 Bicicleteros Monociclos" adjudicado a Bossio Leonardo Andrés por $1.178.900. [V]
+3_bicis/sibom/GralPueyrredon_Dec2390-22_bicicletero.* | https://sibom.slyt.gba.gob.ar/bulletins/7715/contents/1788949 | Gral. Pueyrredon, Decreto 2390/22
+  (17/10/2022): acepta la donación de cinco bicicleteros "valuados en PESOS SESENTA MIL ($60.000)" para la primera red de ciclovías. [V]
+3_bicis/sibom/Lobos_Dec1188-2021_*, Saladillo_Dec929-2021_* | SIBOM | llamados sin precio. [V]
+Sólo en resultado de buscador | listado de MercadoLibre "mobiliario urbano bicicleteros": $39.000 a $132.000 (bloqueado para el agente). [SC]
+3_bicis/osm/osrm_bike_table.json, rutas_bici_estacion_costa.geojson, rutas_bici_estacion_costa_CP.csv | https://routing.openstreetmap.de/routed-bike/... |
+  recorrido en bici de cada estación al punto de costa más cercano y metros que ya tienen ciclovía en OSM (01_raw/costa_viva/3_transito_hoy/osm/cycle.json). [CP]
+3_bicis/msi_nuevo_circuito_aerobico_bajo.html | https://www.sanisidro.gob.ar/novedades/nuevo-circuito-aerobico-en-el-bajo-de-san-isidro (18-03-2021) | bicisenda y
+  ciclovía doble mano en la vereda de Lasalle (Uriburu a 33 Orientales), "unos 560 metros lineales y un ancho de cuatro metros", construida por la
+  empresa del complejo de viviendas de Uriburu y Lasalle como condición de aprobación; Lasalle con prioridad para bicis y 30 km/h. Sin costo. [V, según el Municipio]
+3_bicis/sibom/LaPlata_Dec0832-21_llamado_ciclovias_diagonales.* | https://sibom.slyt.gba.gob.ar/bulletins/5686/contents/1596745 | La Plata, LP 15/2021 "Obra
+  Ciclovías en Diagonales", apertura 31/05/2021. [V]
+3_bicis/sibom/LaPlata_Dec0292-22_ciclovias.* | https://sibom.slyt.gba.gob.ar/bulletins/6998/contents/1715378 | 03/02/2022: "Aprueba ampliación de la Obra:
+  Infraestructura ciclista: ciclovías en diagonales" (sin monto publicado). [V]
+Leída con WebFetch, no guardada | https://www.impulsobaires.com.ar/nota/293787/en-la-plata-inician-importantes-obras-que-renovaran-espacio-publico-con-inversion-de--170-m/
+  (02/09/2021) | "Ciclovías de Diagonal 73 y 74: $43.784.344": separadores viales, delineadores, cartelería, demarcación horizontal y rampas premoldeadas. [P]
+Leída con WebFetch, no guardada | https://www.impulsobaires.com.ar/nota/294789/... (18/10/2021) | Diagonal 73 "entre Plaza Azcuénaga y el Boulevard 82". [P]
+Resultado de buscador | infoblancosobrenegro 85174 y 0221 (oct-2021) | Diagonal 74 desde Plaza Moreno (12 y 50) hasta avenida 72. [P]
+3_bicis/laplata/laplata_diag73_74.json | Overpass (maps.mail.ru), base 2026-10-02T07:07Z | largos: Diag. 74 Plaza Moreno-Av. 72 = 3.548 m; Diag. 73 Plaza
+  Azcuénaga-Bv. 82 = 2.034 a 2.094 m (scripts/laplata_len.py). [CP]
+3_bicis/sibom/LaPlata_Dec0838-23_* | https://sibom.slyt.gba.gob.ar/bulletins/9020/contents/1912948 | LP 34/2023 "Separadores y Divisores para Ciclovías",
+  apertura 06/04/2023, sin montos en el decreto. [V]
+3_bicis/sibom/Castelli_*, GeneralPaz_*, CnelDorrego_*, Mercedes_* y sibom_q_*.html | SIBOM | resto de búsquedas "bicisenda"/"ciclovía": rescisiones,
+  pedidos del Concejo, licitaciones desiertas; ningún costo por km. [V, como ausencia]
+
+======================================================================================================================
+4. ESCUELA NÁUTICA
+======================================================================================================================
+4_nautica/normas/pres2026_p022_folio971.png, pres2026_p023_folio972.png (+ recortes) | repo 01_raw/sanisidro_transparencia/presupuestos/ordenanza_del_presupuesto_2026_1.pdf
+  (https://www.sanisidro.gob.ar/sites/default/files/img/ordenanza_del_presupuesto_2026_1.pdf), imágenes OCR de otra sesión (scratchpad/ocr_pres2026) |
+  Art. 23º A) 3): "El personal perteneciente a las distintas áreas de la Subsecretaría de Deportes ... (profesional: médico, profesor, regente ...)
+  percibirá una remuneración mensual en módulos por hora semanal de trabajo"; tabla D) "Personal de Deportes": 991 Profesor A (0%) 29.806; B (8%) 32.190;
+  C (15%) 34.277; D (25%) 37.258; E (30%) 38.748 módulos. [V] (lo vi en la imagen)
+montevideo/guardavidas/FUENTES.txt (otra sesión) | misma ordenanza, art. 6: cat. 12, 35 h = 579.809 módulos; 1 módulo ~ $1 según el F6. [V] / [CP]
+tesi_pdfs/DECRE_2025_1587_0.pdf/.txt | https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1767040762.pdf | Decreto 1587/2025 (23/12/2025): LP 44/2025 "Seguro
+  de Riesgos del Trabajo" adjudicada a Provincia ART "por una alícuota variable sobre la masa salarial del 3,275%", 24 meses. [V]
+tesi_pdfs/DECRE_2025_810_0.pdf | https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1754604919.pdf | llamado LP 44/2025 (pliego). [V]
+4_nautica/normas/HCDiputadosPBA_Ley6982_IOMA_texto_completo.html | https://intranet.hcdiputados-ba.gov.ar/includes/ley_completa.php?vnroley=6982 | ficha de la
+  Ley 6982: "DECRETO 2655/2004 Establece en 4,8% el aporte de los afiliados directos y del Estado". [V la ficha; P el decreto, no leído]
+IPS 12% patronal: DL 9650/80 art. 4 c), leído por otra sesión (montevideo/guardavidas/normas/IPS_DL_9650-80.txt). [V]
+tesi_pdfs/DECRE_2024_1773_0.pdf/.txt | https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1734369477.pdf | Decreto 1773/2024 (13/12/2024): CP 177/2024
+  "KAYAKS, REMOS Y CHALECOS SALVAVIDAS, para la actividad náutica en el Campo de Deportes Municipal Nº 9", adjudicado a PLANETA LASER S.R.L. (único
+  oferente) por $14.840.000. No dice cantidades. [V]
+4_nautica/precios/nautishop_kayak_rocker.html | https://www.nautishop.com.ar/kayak/rocker/ | kayaks Rocker (fabricación nacional): One $928.935; Wave
+  $1.126.425; Twin $1.166.411; Warrior $1.389.745; Mirage $1.539.692. [P]
+4_nautica/precios/nautishop_palas.html | https://www.nautishop.com.ar/kayak/palas/ | pala doble 2,10-2,30 m $64.605 a $64.703. [P]
+4_nautica/precios/nautishop_standup.html | https://www.nautishop.com.ar/kayak/stand-up/ | SUP inflables Z-Ray: E9 $649.908; E10 $672.516; X0 $745.988;
+  E11 $779.889 (precios con descuento sobre lista de $1,45-1,74 M). [P]
+4_nautica/precios/nauticasanisidro_chaleco_pro_kayak.html | https://www.nauticasanisidro.com.ar/productos/chaleco-salvavidas-pro-kayak/ | chaleco Pro Kayak
+  $71.764; Dingey Aquafloat $99.446; Gill Pro Racer $273.914. [P]
+Sólo en resultado de buscador (mercadoboats.com.ar no resolvió) | Optimist nuevo completo de fabricación nacional "USD 3.550"; rango "USD 3.200 a 4.000". [SC]
+Sólo en resultado de buscador | ILCA (Laser) completo en tiendas de España: €7.760 a €9.700. No se encontró precio argentino. [SC]
+4_nautica/precios/martecna_*.html | https://www.martecna.com.ar/barcos/barcos-optimist/ | fabricante argentino: cascos y repuestos de Optimist, sin precio. [V, sin precio]
+Repo montevideo/guardavidas (otra sesión) | semirrígido 5,2 m + motor 60 HP US$ 20.000 [P]; sólo si el grupo nuevo necesitara una lancha propia.
+4_nautica/rosario/rosario_inscripcion_escuela_nautica_2026-10-02.html | https://www.rosario.gob.ar/inicio/inscripcion-en-escuela-municipal-de-actividades-nauticas |
+  Balneario La Florida; martes y jueves 9-12 (desde 10 años y adolescentes), sábados 9-12 adultos; "Las clases son gratuitas" en corredor seguro; con
+  docentes de la Dirección de Deporte Comunitario y Federado. [V]
+4_nautica/rosario/convivimos_2023_escuela_rio.html | https://convivimos.naranjax.com/actualidad/2023/una-escuela-que-ensena-a-disfrutar-del-rio/ | "Este
+  verano participaron de las actividades más de 200 alumnos, divididos en grupos por edades y niveles"; la escuela depende de la Secretaría de Deporte y
+  Turismo. [P]
+4_nautica/sibom/sibom_q_*.html | SIBOM: "veleros optimist", "adquisicion de kayaks", "tablas stand up paddle", "chalecos salvavidas kayak": sin compras
+  municipales con precio unitario. [V, como ausencia]
+No se encontró: presupuesto o cantidad de instructores de la escuela náutica de San Isidro; presupuesto de la escuela de Rosario.
+
+======================================================================================================================
+SCRIPTS (scripts/) Y CÁLCULOS (calculo/)
+======================================================================================================================
+scripts/ov.py (Overpass con espejos), fetch.py (descarga con reintentos), sibom.py y sibom_get.py (SIBOM), parse_entorno.py, ferro.py, mapa.py,
+contexto_lotes.py, dist_candidatos.py, superposicion_arba.py, parcelas_sin_partida.py, rutas_bici.py, laplata_len.py. calculo/costos_CP.py genera calculo/calculo_CP.txt.
