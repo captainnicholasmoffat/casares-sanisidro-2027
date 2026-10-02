@@ -2604,3 +2604,20 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   Fuentes del tiempo real en 01_raw/costa/d_verificacion_189_190/tren_tiempo_real/.
 - Sin cifras nuevas: el Excel no cambia. Sin costo calculado todavía: contar autos en los playones, bicicleteros y
   bicisendas, y más lugar en la Escuela Náutica.
+
+## CLAUSURAS, ESTACIONAMIENTO Y PARQUES · APLICADO (02/10); COSTOS · A NICK ANTES DE ESCRIBIR
+- Clausuras totalmente transparentes (reemplaza "salvo un peligro inmediato"): motivo escrito y plazo para corregir;
+  toda inspección que termina en clausura se transmite y queda grabada (Ordenanza IV); la IA la registra y la audita
+  (clausuras repetidas, clausuras sin infracción); el peligro real también se transmite y se explica; siempre se
+  puede reclamar. Ordenanza IV, artículo 5 nuevo.
+- Estacionamiento sin cobrar, nunca, y sin grúa para recaudar. "Regresivo" escrito como "un cobro igual para todos pesa
+  más en quien menos tiene": no hay datos de quién va a la costa (informe 17) para decir "en su mayoría no es gente
+  pudiente". La actividad se extiende por la costa empezando por algunos parques.
+- Los parques no se tocan: Ordenanza XIV (artículo 60 del Decreto-Ley 8912, texto Ley 13.127; permuta sólo por más
+  superficie, con dos tercios, artículo 56 de la Ley Orgánica; plan de manejo con nativas; pedido de ley provincial,
+  Ley 12.704, como la Ley 15.190 del Golf de Villa Adelina, y de la Ley 10.907 para Ribera Norte). En el texto: una
+  ordenanza la cambia otra; una ley provincial no la puede cambiar un gobierno municipal. Se admite sólo lo que sirve
+  al uso público del parque (senderos, juegos, sanitarios, iluminación, bancos, puestos de guardavidas). Los comercios
+  de la costa, en sus predios. Fuentes en 01_raw/costa/d_verificacion_189_190/parques_ley/.
+- A NICK, ANTES DE ESCRIBIR: lugares para estacionar lejos de la costa y costos de conteo de autos, bicicleteros,
+  bicisendas y Escuela Náutica (scratchpad/costa_costos/, calculo_CP.txt).
