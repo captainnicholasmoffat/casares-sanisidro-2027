@@ -1290,6 +1290,19 @@ Dulce Mar&iacute;a, en General Pacheco 1545 y el r&iacute;o, en Mart&iacute;nez,
 (Decreto 2559/2014): seg&uacute;n <i>Clar&iacute;n</i>, la arena est&aacute; sobre una base de piedra en canastos de alambre. En las
 im&aacute;genes satelitales de 2016 a 2026 la arena llega al agua y no se ve que el r&iacute;o se la haya llevado.</p>
 </div>
+<div class="callout">
+<div class="clabel">Qu&eacute; quiere decir &laquo;no apto&raquo;</div>
+<p><b>No quiere decir enfermarse grave.</b> Quiere decir que algunas de cada cien personas que se meten ese d&iacute;a
+pueden tener despu&eacute;s un malestar leve, que en general se pasa solo en pocos d&iacute;as: diarrea, v&oacute;mitos, otitis o dolor
+de garganta. Con el agua en el l&iacute;mite de lo apto, seg&uacute;n la EPA de los Estados Unidos, son unas cuatro de cada cien
+m&aacute;s que entre quienes no se metieron; con el agua muy contaminada, seg&uacute;n la Organizaci&oacute;n Mundial de la Salud, m&aacute;s
+de diez de cada cien.</p>
+<p><b>La v&iacute;a principal es tragar agua.</b> El consejo es no tragar y, despu&eacute;s de una lluvia fuerte, esperar dos
+d&iacute;as antes de meterse.</p>
+<p><b>Y hoy las &uacute;nicas muestras son de la boca de Per&uacute;, el peor punto de la costa.</b> Por eso proponemos medir en
+cada tramo antes de concluir nada. <span class="sg">La gente ya usa el r&iacute;o: el programa la cuida
+inform&aacute;ndola.</span></p>
+</div>
 <div class="callout a">
 <div class="clabel">C&oacute;mo lo hace Montevideo, y qu&eacute; dicen los jueces</div>
 <p><b>Montevideo informa todos los d&iacute;as, dentro de playas habilitadas.</b> Cada una tiene guardavidas en
@@ -1322,7 +1335,7 @@ pilotos de arena</b>, con los guardavidas que pide la ley &mdash;el Municipio ya
 la bandera del d&iacute;a. En el resto del r&iacute;o el ba&ntilde;o no se habilita, y cada acceso lo dice; pero la bandera y el mapa
 del d&iacute;a tambi&eacute;n est&aacute;n para quien hace kite, windsurf o nada. Al vecino que pregunta &laquo;&iquest;d&oacute;nde me meto hoy?&raquo;, la
 inteligencia artificial del Municipio le muestra la costa tramo por tramo en verde, amarillo o rojo; despu&eacute;s de
-una lluvia, rojo por lo menos un d&iacute;a. <span class="sg">Las primeras temporadas el mapa va a estar casi todo en
+una lluvia, rojo por lo menos un d&iacute;a, y dos despu&eacute;s de una lluvia fuerte. <span class="sg">Las primeras temporadas el mapa va a estar casi todo en
 rojo, y eso es lo que empuja la limpieza.</span> Este r&eacute;gimen reemplaza a la Ordenanza 5304 (anexo, Ordenanza
 XI).</p>
 <p><b>4 &middot; Recuperar parque por parque, con sus vecinos.</b> Empezando por el Parque del &Aacute;guila y el Bosque Alegre,

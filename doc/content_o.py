@@ -324,7 +324,8 @@ bandera y los tel&eacute;fonos de emergencia.</p>
 <p class="tight">El Municipio toma muestras del agua en cada tramo que se usa, <b>al menos dos (2) veces por
 semana</b>, y las compara con los niveles gu&iacute;a nacionales para recreaci&oacute;n. Cada tramo tiene todos los d&iacute;as su
 bandera sanitaria, que marca el agua como no apta cuando el &uacute;ltimo resultado supera esos niveles, cuando no hay un
-resultado vigente y durante las veinticuatro (24) horas siguientes a una lluvia. Toda persona puede consultar en
+resultado vigente, durante las veinticuatro (24) horas siguientes a una lluvia y durante las cuarenta y ocho (48)
+siguientes a una lluvia fuerte, de m&aacute;s de veinticinco (25) mil&iacute;metros en veinticuatro horas. Toda persona puede consultar en
 el Sistema de Informaci&oacute;n Municipal, tramo por tramo, la fecha y la hora de cada muestra, el laboratorio, el
 resultado y el valor gu&iacute;a.</p>
 
