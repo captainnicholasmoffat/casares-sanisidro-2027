@@ -328,7 +328,14 @@ resultado vigente y durante las veinticuatro (24) horas siguientes a una lluvia.
 el Sistema de Informaci&oacute;n Municipal, tramo por tramo, la fecha y la hora de cada muestra, el laboratorio, el
 resultado y el valor gu&iacute;a.</p>
 
-<h3>Art&iacute;culo 3 &mdash; Derogaci&oacute;n</h3>
+<h3>Art&iacute;culo 3 &mdash; Actividades n&aacute;uticas</h3>
+<p class="tight">Para el kayak, el canotaje, el remo, el stand up paddle y la vela, en los que no hay inmersi&oacute;n, la
+bandera de cada tramo admite la actividad en el agua cuando el &uacute;ltimo resultado no supera <b>seiscientas treinta
+(630) <i>Escherichia coli</i> cada cien (100) mililitros</b>, con las mismas reglas de vigencia y de lluvia del
+art&iacute;culo 2. El windsurf se rige por los niveles gu&iacute;a del ba&ntilde;o. Cuando la bandera no admite la actividad en el agua,
+las clases del Municipio se dan en tierra.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Derogaci&oacute;n</h3>
 <p class="tight">Der&oacute;gase la Ordenanza 5304/1978.</p>
 
 <h2>XII &middot; Ordenanza de la obra en parques y costa</h2>
@@ -381,8 +388,10 @@ provincial rige adem&aacute;s el convenio aprobado por la Ordenanza 9430.</p>
 no se venden, no se ceden y no se edifican</b>: no pueden convertirse en viviendas ni en edificios de ning&uacute;n tipo,
 p&uacute;blicos o privados. No se otorgan concesiones ni permisos que los cierren, cobren su acceso o reserven parte de ellos
 para uso exclusivo; los comercios de la costa funcionan en sus propios predios, fuera de los espacios verdes. S&oacute;lo se
-admite lo que sirve al uso p&uacute;blico del propio espacio &mdash;senderos, juegos, sanitarios, iluminaci&oacute;n, bancos y
-puestos de guardavidas&mdash;, sin reducir su superficie absorbente.</p>
+admite lo que sirve al uso p&uacute;blico del propio espacio &mdash;senderos, juegos, sanitarios, iluminaci&oacute;n, bancos,
+puestos de guardavidas y, en los parques de la costa, el puesto n&aacute;utico del Municipio para sus clases gratuitas,
+liviano, de madera y desmontable, con su bajada al r&iacute;o&mdash;, sin reducir su superficie absorbente. El puesto
+n&aacute;utico se instala con el dictamen de la asociaci&oacute;n del parque (Ordenanza V).</p>
 
 <h3>Art&iacute;culo 3 &mdash; No se achican</h3>
 <p class="tight"><b>La superficie de espacios verdes p&uacute;blicos del Partido no disminuye.</b> La &uacute;nica permuta que admite

@@ -1601,7 +1601,7 @@ avisa que va a estar lleno y le muestra qu&eacute; d&iacute;as hay lugar.</p>
 los parques.</p>
 <p><b>3 &middot; Ofertas de lunes a jueves.</b> Los comercios de la costa hacen ofertas los d&iacute;as de semana, y la
 inteligencia artificial del Municipio las difunde.</p>
-<p><b>4 &middot; Actividades fijas, no eventos sueltos</b>: clases n&aacute;uticas, de kite, caminatas guiadas, todas las
+<p><b>4 &middot; Actividades fijas, no eventos sueltos</b>: clases n&aacute;uticas &mdash;la Escuela N&aacute;utica, m&aacute;s abajo&mdash;, de kite, caminatas guiadas, todas las
 semanas el mismo d&iacute;a, que se van extendiendo por la costa a medida que crecen, empezando por algunos parques. Los
 eventos solos no alcanzan: en los Docklands de Melbourne, tres noches de festival llevaron 100.000 personas y los
 locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
@@ -1629,6 +1629,43 @@ Barisidro.</span></p>
 <p><b>9 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
 estacionar, cu&aacute;ndo llega el tren, qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del
 &uacute;ltimo dato.</p>
+</div>
+<h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>
+<div class="cols">
+<p><b>Hoy el Municipio ya ense&ntilde;a a navegar en el r&iacute;o</b>, en el Campo de Deportes N&deg; 9 del Bajo: kayak, vela,
+windsurf, kitesurf y stand up paddle, con instructores, y en 2025 abri&oacute; la inscripci&oacute;n gratuita para vecinos
+adultos, seg&uacute;n su propia convocatoria. <b>Funciona, y es una sola.</b> Y seg&uacute;n el Municipio, quien no es socio de
+un club no tiene una bajada p&uacute;blica al r&iacute;o.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: la Escuela N&aacute;utica en cada parque de la costa</div>
+<p><b>1 &middot; Un puesto n&aacute;utico en cada parque de la costa con acceso al agua: seis, de a dos por a&ntilde;o.</b> Primero el
+Parque del &Aacute;guila, despu&eacute;s de medir su agua y con el dictamen de su asociaci&oacute;n de parque. Los otros cinco
+&mdash;Roque S&aacute;enz Pe&ntilde;a y el r&iacute;o, el final de Del Barco Centenera, la d&aacute;rsena del Puerto, el Paseo 33 Orientales y
+Pacheco&mdash; siguen, primero los de mejor agua. Per&uacute; Beach no, por la boca del desag&uuml;e; la
+Reserva, el Bosque Alegre y las islas tampoco, porque son &aacute;reas protegidas.</p>
+<p><b>2 &middot; Liviano, natural y desmontable, sin cemento</b>: un m&oacute;dulo de madera para guardar los equipos y una
+bajada de madera al r&iacute;o (anexo, Ordenanza XIV).</p>
+<p><b>3 &middot; Clases gratuitas, sobre todo en la semana</b>: kayak y stand up paddle en los seis; vela y windsurf en
+los cuatro de agua abierta. A la ma&ntilde;ana, las escuelas del partido, en horario escolar; a la tarde y el s&aacute;bado, los
+vecinos.</p>
+<p><b>4 &middot; El agua manda.</b> La clase en el agua se da cuando la bandera del d&iacute;a lo permite, con un valor propio
+para lo que no es ba&ntilde;o: 630 <i>E. coli</i> cada 100 mililitros, el que usa Texas. El windsurf, que el Ministerio de
+Salud pone junto a la nataci&oacute;n, sigue el valor del ba&ntilde;o (anexo, Ordenanza XI). Si la bandera no deja, la clase es en
+tierra: seguridad, armado, nudos. Las muestras de cada puesto entran en las de la costa, que ya paga Ambiente.</p>
+<p><b>5 &middot; Profesores del Municipio, por concurso abierto, uno por uno</b>: se postulan, muestran que son
+profesores y pasan una prueba t&eacute;cnica y de rescate. Trabajan en cuadrillas propias del Municipio: m&aacute;s profesores,
+trabajo nuevo. No se subcontrata a escuelas ni a empresas privadas, y as&iacute; el dinero va a las clases y no a
+intermediarios. Las escuelas privadas siguen con sus clases pagas.</p>
+<p><b>6 &middot; Seguridad</b>: cada puesto tiene un bote de apoyo con un conductor habilitado, como pide la Prefectura, y
+profesores formados en rescate.</p>
+<p><b>7 &middot; La inteligencia artificial del Municipio</b> dice qu&eacute; parque tiene clase hoy, si es en el agua o en
+tierra, y c&oacute;mo anotarse.</p>
+<p><b>Cu&aacute;nto cuesta.</b> Cada puesto, de 62 a 91 millones una vez &mdash;el m&oacute;dulo, la bajada, que es una
+estimaci&oacute;n, los equipos para un grupo de doce y el bote&mdash; y de 60 a 62 millones por a&ntilde;o, casi todo en
+profesores. Vela y windsurf suman de 22 a 43 millones una vez y de 3 a 6 por a&ntilde;o. Con los seis, de 458 a 717
+millones una vez y de 373 a 395 por a&ntilde;o, con unos 36 profesores nuevos. <span class="sg">Lo paga Deportes: la
+inversi&oacute;n, con obras deportivas, y lo de cada a&ntilde;o, con su propio presupuesto.</span></p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
@@ -2505,7 +2542,7 @@ afuera.</p>
 <tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial</td></tr>
 <tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: tres &aacute;reas con una partida compartida, discapacidad con una propia y chica, y una propuesta para cada una</td></tr>
 <tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema es el r&eacute;gimen de habilitaci&oacute;n, no el subsidio</td></tr>
-<tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin propuesta propia. Cede parte de la construcci&oacute;n de infraestructura deportiva (cuadro [[n:ceden]]); se se&ntilde;ala la comparaci&oacute;n</td></tr>
+<tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin secci&oacute;n propia: su propuesta es la Escuela N&aacute;utica en los parques de la costa (5.5), con su propio presupuesto. Cede parte de la construcci&oacute;n de infraestructura deportiva (cuadro [[n:ceden]]); se se&ntilde;ala la comparaci&oacute;n</td></tr>
 <tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa, salvo c&oacute;mo se otorgan las excepciones (anexo, Ordenanza XIII)</td></tr>
 <tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
 </table>
