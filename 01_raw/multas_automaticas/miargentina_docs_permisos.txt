@@ -1,0 +1,141 @@
+ 
+ Permisos 
+ -->
+ -->
+ Toggle navigation 
+ [/mi-argentina-docs/] 
+ -->
+ Mi Argentina
+ [/mi-argentina-docs] Mi Argentina 
+ [/poncho] Poncho 
+ [/iconos] Íconos 
+ Contenidos
+ [/mi-argentina-docs/] Introducción 
+ [/mi-argentina-docs/doc/iniciar-sesion.html] Autenticación 
+ [/mi-argentina-docs/doc/integracion.html] Integración con Mi Argentina 
+ [/mi-argentina-docs/doc/manejo-de-sesiones.html] Manejo de sesiones 
+ [/mi-argentina-docs/doc/permisos.html] Permisos 
+ [/mi-argentina-docs/doc/plataformas.html] Plataformas 
+ [/mi-argentina-docs/doc/pruebas.html] Probar un proceso de inicio de sesión 
+ [/mi-argentina-docs/doc/seguridad.html] Seguridad del inicio de sesión 
+ [/mi-argentina-docs/doc/token.html] Token de Acceso 
+ [/mi-argentina-docs/node_modules/bootstrap/CHANGELOG.html] 
+ [/mi-argentina-docs/node_modules/prismjs/CHANGELOG.html] Prism Changelog 
+ [/mi-argentina-docs/node_modules/argob-poncho/] 
+ [/mi-argentina-docs/node_modules/bootstrap/] Bootstrap 
+ [/mi-argentina-docs/node_modules/jquery/] jQuery 
+ [/mi-argentina-docs/node_modules/prismjs/] Prism 
+ [/mi-argentina-docs/node_modules/prismjs/node_modules/clipboard/node_modules/good-listener/node_modules/delegate/] delegate 
+ [/mi-argentina-docs/node_modules/prismjs/node_modules/clipboard/node_modules/good-listener/] good-listener 
+ [/mi-argentina-docs/node_modules/prismjs/node_modules/clipboard/node_modules/select/] select 
+ [/mi-argentina-docs/node_modules/prismjs/node_modules/clipboard/node_modules/tiny-emitter/] tiny-emitter 
+ [/mi-argentina-docs/node_modules/prismjs/node_modules/clipboard/] clipboard.js 
+ -->
+ [/mi-argentina-docs/] Introducción 
+ [/mi-argentina-docs/doc/integracion.html] Integración con Mi Argentina 
+ [/mi-argentina-docs/doc/plataformas.html] Plataformas 
+ [/mi-argentina-docs/doc/iniciar-sesion.html] Autenticación 
+ [/mi-argentina-docs/doc/permisos.html] Permisos 
+ [/mi-argentina-docs/doc/token.html] Tokens de Acceso 
+ [/mi-argentina-docs/doc/manejo-de-sesiones.html] Manejo de Sesiones 
+ Permisos
+ Los permisos te habilitan para realizar una petición de acceso a la información adicional del usuario.
+ Cuando se invoca la pantalla de inicio de sesión, se especifican los permisos mediante el parámetro scope .
+ Los mismos se definen separados por + o usando espacios. Ejemplo de petición:
+ https://id.argentina.gob.ar/authorize/
+ ?client_id={client-id}
+ &redirect_uri={redirect-uri}
+ &response_type=code
+ &scope=openid+profile+email+optional
+ A continuación se listarán los permisos válidos y la información del usuario que se obtiene por cada uno.
+ Scope: profile 
+ Campo 
+ Descripción 
+ Tipo de dato 
+ name 
+ Nombre y apellido 
+ String 
+ given_name 
+ Nombre 
+ String 
+ family_name 
+ Apellido 
+ String 
+ gender 
+ Género 
+ String ( M o F ) 
+ birthdate 
+ Fecha de nacimiento 
+ Date 
+ Scope: email 
+ Campo 
+ Descripción 
+ Tipo de dato 
+ email 
+ Correo electrónico 
+ String 
+ Scope: optional 
+ Campo 
+ Descripción 
+ Tipo de dato 
+ dni_type 
+ Tipo de documento 
+ String 
+ dni_number 
+ Número de documento 
+ String 
+ nationality 
+ Nacionalidad 
+ Json 
+ country 
+ País 
+ Json 
+ province 
+ Provincia 
+ Json 
+ district 
+ Departamento o Municipalidad 
+ Json 
+ locality 
+ Localidad 
+ Json 
+ street_name 
+ Domicilio 
+ String 
+ street_number 
+ Número de domicilio 
+ String 
+ postal_code 
+ Código postal 
+ String 
+ appartment_number 
+ Número de departamento 
+ String 
+ appartment_floor 
+ Piso de departamento 
+ String 
+ phone_number 
+ Teléfono móvil 
+ String 
+ email_verified 
+ Correo electrónico verificado ( true / false ) 
+ Boolean 
+ cuil 
+ CUIL 
+ String 
+ validation_level 
+ Nivel de validación obtenido 
+ Integer 
+ validation_date 
+ Fecha de la validación obtenida 
+ DateTime 
+ validation_origin 
+ Origen de la validación obtenida 
+ String 
+ do_dni_match_cuil 
+ Verifica si el DNI coincide con el CUIL ( true / false ) 
+ Boolean 
+ terms_and_conditions 
+ Términos y Condiciones 
+ Array 
+
