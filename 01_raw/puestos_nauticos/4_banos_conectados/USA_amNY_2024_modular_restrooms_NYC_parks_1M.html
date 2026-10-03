@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+		
+	
+	
+		<link rel="preconnect" href="https://cdn-cookieyes.com" crossorigin>
+
+	<script>
+	/* [1] Google Consent Mode v2 defaults. MUST run before gtag.js, GTM, and GPT.
+	 * US opt-out model: defaults are granted; GPC at arrival downgrades ad signals immediately.
+	 * CookieYes (with its Google Consent Mode integration enabled) sends consent *updates*
+	 * automatically when the user opts out or changes preferences; wait_for_update holds
+	 * Google tags until that update arrives. Returning visitors who already opted out
+	 * (cookieyes-consent cookie) start denied so no ad hit fires as granted. */
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){ dataLayer.push(arguments); }
+
+	var schnepsGpc = !!( navigator.globalPrivacyControl );
+	var schnepsCkyAdNo = (function () {
+		var m = document.cookie.match( /(?:^|;\s*)cookieyes-consent=([^;]+)/ );
+		return !!( m && /advertisement:no/.test( decodeURIComponent( m[1] ) ) );
+	})();
+	var schnepsAdDenied = schnepsGpc || schnepsCkyAdNo;
+
+	gtag('consent', 'default', {
+		ad_storage:              schnepsCkyAdNo ? 'denied' : 'granted',
+		ad_user_data:            schnepsAdDenied ? 'denied' : 'granted',
+		ad_personalization:      schnepsAdDenied ? 'denied' : 'granted',
+		analytics_storage:       'granted',
+		functionality_storage:   'granted',
+		personalization_storage: 'granted',
+		security_storage:        'granted',
+		wait_for_update:         500
+	});
+	if ( schnepsAdDenied ) {
+		gtag('set', 'ads_data_redaction', true);
+	}
+	</script>
+
+	<script>
+	/* [2] GPT privacy bridge: Restricted Data Processing for opted-out / GPC users.
+	 * Queued into googletag.cmd so it executes before slot definitions made later in the page. */
+	window.googletag = window.googletag || { cmd: [] };
+	(function () {
+		function userOptedOut() {
+			if ( navigator.globalPrivacyControl ) { return true; }
+			try {
+				if ( typeof getCkyConsent === 'function' ) {
+					var c = getCkyConsent();
+					if ( c && c.categories ) { return c.categories.advertisement === false; }
+				}
+			} catch ( e ) {}
+			/* Fallback for runs before the CookieYes script has loaded: read its first-party cookie. */
+			var m = document.cookie.match( /(?:^|;\s*)cookieyes-consent=([^;]+)/ );
+			return !!( m && /advertisement:no/.test( decodeURIComponent( m[1] ) ) );
+		}
+
+		function applyRdp( rdp ) {
+			googletag.cmd.push( function () {
+				googletag.pubads().setPrivacySettings( { restrictDataProcessing: !!rdp } );
+			} );
+		}
+
+		applyRdp( userOptedOut() );
+
+		/* React to in-session opt-outs (banner, footer link, preference center). */
+		document.addEventListener( 'cookieyes_consent_update', function ( e ) {
+			var d = ( e && e.detail ) || {};
+			var optedOut = ( Array.isArray( d.rejected ) && d.rejected.indexOf( 'advertisement' ) !== -1 )
+				|| !!navigator.globalPrivacyControl;
+			applyRdp( optedOut );
+			/* RDP applies to subsequent ad requests. To honor the opt-out immediately on
+			 * already-rendered slots rather than at the next pageview, refresh: */
+			if ( optedOut ) {
+				googletag.cmd.push( function () { googletag.pubads().refresh(); } );
+			}
+		} );
+	})();
+	</script>
+
+	<!-- [3] CookieYes loader (web app installation code) -->
+	<script id="cookieyes" src="https://cdn-cookieyes.com/client_data/a422824f78659902719962cdf65f6c28/script.js"></script>
+	<link rel="preconnect" href="https://cdn.tinypass.com">
+<link rel="preconnect" href="https://experience.tinypass.com">
+<script type="text/javascript" async src="https://cdn.tinypass.com/api/tinypass.min.js"></script>
+<script type="text/javascript">
+    tp = window.tp || [];
+    tp.push(["setAid", 'cZ4Avj6ppu']);
+    tp.push(["setEndpoint", 'https://vx.amny.com']);
+    tp.push(["setCxenseSiteId", "3608992989945494629"]);
+    tp.push(["setUseTinypassAccounts", false]);
+    tp.push(["setUsePianoIdUserProvider", true]);
+</script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 388px 259px }</style>
+		
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<title>Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install | amNewYork</title>
+<meta name="description" content="Five new modular public restrooms, known as “Portland Loos,” are now fully operational in parks across the five boroughs."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install | amNewYork" />
+<meta property="og:description" content="Five new modular public restrooms, known as “Portland Loos,” are now fully operational in parks across the five boroughs." />
+<meta property="og:url" content="https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/" />
+<meta property="og:site_name" content="amNewYork" />
+<meta property="article:tag" content="modular public restrooms" />
+<meta property="article:tag" content="portland loo" />
+<meta property="article:section" content="Environment" />
+<meta property="og:updated_time" content="2025-07-03T10:23:18-04:00" />
+<meta property="og:image" content="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&w=1200&p=q" />
+<meta property="og:image:secure_url" content="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&w=1200&p=q" />
+<meta property="og:image:alt" content="modular" />
+<meta property="article:published_time" content="2025-07-01T16:40:58-04:00" />
+<meta property="article:modified_time" content="2025-07-03T10:23:18-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install | amNewYork" />
+<meta name="twitter:description" content="Five new modular public restrooms, known as “Portland Loos,” are now fully operational in parks across the five boroughs." />
+<meta name="twitter:image" content="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&w=1200&p=q" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Adam Daly" />
+<meta name="twitter:label2" content="Time to read" />
+<meta name="twitter:data2" content="3 minutes" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":["Person","Organization"],"@id":"https://www.amny.com/#person","name":"amNewYork","logo":{"@type":"ImageObject","@id":"https://www.amny.com/#logo","url":"https://www.amny.com/wp-content/uploads/2020/10/amNY-logo.png","contentUrl":"https://www.amny.com/wp-content/uploads/2020/10/amNY-logo.png","caption":"amNewYork","inLanguage":"en-US","width":"2000","height":"552"},"image":{"@type":"ImageObject","@id":"https://www.amny.com/#logo","url":"https://www.amny.com/wp-content/uploads/2020/10/amNY-logo.png","contentUrl":"https://www.amny.com/wp-content/uploads/2020/10/amNY-logo.png","caption":"amNewYork","inLanguage":"en-US","width":"2000","height":"552"}},{"@type":"WebSite","@id":"https://www.amny.com/#website","url":"https://www.amny.com","name":"amNewYork","publisher":{"@id":"https://www.amny.com/#person"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg","url":"https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg","width":"2400","height":"1600","caption":"A modular Portland Loo restroom is delivered to Hoyt Playground in Queens, one of five installed across the city as part of a pilot program to expand public bathroom access","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/#webpage","url":"https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/","name":"Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install | amNewYork","datePublished":"2025-07-01T16:40:58-04:00","dateModified":"2025-07-03T10:23:18-04:00","isPartOf":{"@id":"https://www.amny.com/#website"},"primaryImageOfPage":{"@id":"https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.amny.com/author/adam-daly/","name":"Adam Daly","url":"https://www.amny.com/author/adam-daly/","image":{"@type":"ImageObject","@id":"https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-mini-sq.png","url":"https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-mini-sq.png","caption":"Adam Daly","inLanguage":"en-US"}},{"@type":"BlogPosting","headline":"Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install |","keywords":"modular,restrooms","datePublished":"2025-07-01T16:40:58-04:00","dateModified":"2025-07-03T10:23:18-04:00","articleSection":"Environment, News","author":{"@id":"https://www.amny.com/author/adam-daly/","name":"Adam Daly"},"publisher":{"@id":"https://www.amny.com/#person"},"description":"Five new modular public restrooms, known as \u201cPortland Loos,\u201d are now fully operational in parks across the five boroughs.","name":"Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install |","@id":"https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/#richSnippet","isPartOf":{"@id":"https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/#webpage"},"image":{"@id":"https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//ak.sail-horizon.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.amny.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.amny.com%2Fnews%2Fmodular-restrooms-nyc-parks-million-install%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.amny.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.amny.com%2Fnews%2Fmodular-restrooms-nyc-parks-million-install%2F&#038;format=xml" />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='all-css-8' href='https://www.amny.com/_static/??-eJyFTs0OgyAMfqFVth1GPCx7FoYFm2AhVuT1RaeJhy07tf1+q0oCG3lCnpQNVAcMGVLInlhUIsORIojtGZMoI4KTKCs71dTtok4Rh3E3wEzGxTyaw3ncP42eIeV3IOlxPNdV3I2btgPPLoYQSzMQ//0A54oKFOo8VnbNtlviV8Gn3K6pr+F50+21vWv90AtmG29h' type='text/css' media='all' />
+<style id="jetpack-stats-inline-css">
+img#wpstats{display:none}
+/*# sourceURL=jetpack-stats-inline-css */
+</style>
+<link rel='stylesheet' id='all-css-10' href='https://www.amny.com/_static/??-eJyNy8EKhDAMBNAf2hp3DxYP4re0NdhAG4tJkf17RS/iydvMMA+2YsLCiqxQUp2JBcRR0rhWs9E0o0IQgSs2Ur2ElTw2x/iBG9aIGQ8bImORs4GvlCbIjvjN3bjM/4cZ8/C1fdv/rO3sDkQ4P+4=' type='text/css' media='all' />
+<style id="theme-css-inline-css">
+#grid-wrapper header .hamburger{display:flex}
+@media screen and (max-width:1400px){ nav.main-nav ul.nav-menu-items .nav-0{display:none} }
+@media screen and (max-width:1581px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-0{display:none} }
+@media screen and (max-width:1270px){ nav.main-nav ul.nav-menu-items .nav-1{display:none} }
+@media screen and (max-width:1451px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-1{display:none} }
+@media screen and (max-width:1140px){ nav.main-nav ul.nav-menu-items .nav-2{display:none} }
+@media screen and (max-width:1321px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-2{display:none} }
+@media screen and (max-width:1010px){ nav.main-nav ul.nav-menu-items .nav-3{display:none} }
+@media screen and (max-width:1191px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-3{display:none} }
+@media screen and (max-width:880px){ nav.main-nav ul.nav-menu-items .nav-4{display:none} }
+@media screen and (max-width:1061px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-4{display:none} }
+@media screen and (max-width:750px){ nav.main-nav ul.nav-menu-items .nav-5{display:none} }
+@media screen and (max-width:931px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-5{display:none} }
+@media screen and (max-width:620px){ nav.main-nav ul.nav-menu-items .nav-6{display:none} }
+@media screen and (max-width:801px){ .scrolledDown nav.main-nav ul.nav-menu-items .nav-6{display:none} }
+
+/*# sourceURL=theme-css-inline-css */
+</style>
+<script src='//ak.sail-horizon.com/spm/spm.v1.min.js?ver=7.1.2' type='text/javascript' async></script><script id="jquery-core-js" src="https://www.amny.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.amny.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="sailthru-subscribe-script-js" src="https://www.amny.com/wp-content/plugins/sailthru-widget/js/widget.subscribe.js?ver=7.1.2"></script>
+<script id="theme-js-js-extra">
+var ajax_controller = {"ajax_url":"https://www.amny.com/wp-admin/admin-ajax.php"};
+var sailthruTag = {"options":{"customerId":"353238ed51b311847f91d9a32b3f02e5","overlayKeyValue":{}}};
+//# sourceURL=theme-js-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="theme-js-js" src="https://www.amny.com/wp-content/themes/schnepstheme/build/bundle.js?ver=wed-jul-15-2026-160243-gmt-0400-eastern-daylight-time"></script>
+<script id="child-theme-js-js-extra">
+var ajax_controller = {"ajax_url":"https://www.amny.com/wp-admin/admin-ajax.php"};
+//# sourceURL=child-theme-js-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="child-theme-js-js" src="https://www.amny.com/wp-content/themes/schnepstheme-amny/build/bundle.js?ver=fri-jun-12-2026-165336-gmt-0400-eastern-daylight-time"></script>
+<link rel="https://api.w.org/" href="https://www.amny.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.amny.com/wp-json/wp/v2/posts/137778121" /><meta name="vf:container_id" content="137778121" />
+		<script type="text/javascript" src="https://adbundle.empowerlocal.co/bundle.js?publicationKey=amny-com"></script><script>window.emp_tag = 'modular-public-restrooms,portland-loo';</script><script>window.abkw = 'environment,news';</script><!--Custom Styles from Home Pros--><style></style><!--Custom Styles from Home Pros--><link rel="alternate" type="application/feed+json" title="amNewYork &raquo; JSON Feed" href="https://www.amny.com/feed/json/" />
+<link rel="alternate" type="application/feed+json" title="amNewYork &raquo; Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install Comments Feed" href="https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/feed/json/" />
+
+
+<!-- BEGIN Sailthru Horizon Meta Information -->
+<meta name="sailthru.date" content="2025-07-01 16:40:58" />
+<meta name="sailthru.title" content="Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install" />
+<meta name="sailthru.tags" content=",modular public restrooms,portland loo,Environment,News,amny" />
+<meta name="sailthru.author" content="Adam Daly" />
+<meta name="sailthru.description" content="This game of thrones cost taxpayers $5 million.  Five new modular public restrooms, known as “Portland Loos,” are now fully operational in parks across the five boroughs, Mayor Eric Adams announced Tuesday. Though the restrooms themselves are relatively affordable, city processes pushed total costs close to $1 million per kiosk. The restrooms, designed for year-round...&lt;br&gt; &lt;a class=&quot;read-more&quot; href=&quot;https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/&quot;&gt;Read More&lt;/a&gt;" />
+<meta name="sailthru.image.full" content="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg" />
+<meta name="sailthru.image.thumb" content="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&amp;w=50" />
+<!-- END Sailthru Horizon Meta Information -->
+
+<!-- Stream WordPress user activity plugin v4.1.0 -->
+<script type="application/ld+json" class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install","url":"http:\/\/www.amny.com\/news\/modular-restrooms-nyc-parks-million-install\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/www.amny.com\/news\/modular-restrooms-nyc-parks-million-install\/"},"thumbnailUrl":"https:\/\/www.amny.com\/wp-content\/uploads\/2025\/07\/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&w=192&h=192&crop=1","image":{"@type":"ImageObject","url":"https:\/\/www.amny.com\/wp-content\/uploads\/2025\/07\/DA8_9213_021925-Hoyt-Plgd-1.jpg"},"articleSection":"Environment","author":[{"@type":"Person","name":"Adam Daly"}],"creator":["Adam Daly"],"publisher":{"@type":"Organization","name":"amNewYork","logo":"https:\/\/www.amny.com\/wp-content\/uploads\/2020\/02\/cropped-amny-condensed-small-white.png"},"keywords":["modular public restrooms","portland loo"],"dateCreated":"2025-07-01T20:40:58Z","datePublished":"2025-07-01T20:40:58Z","dateModified":"2025-07-03T14:23:18Z"}</script>	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+	<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+	<link rel="shortcut icon" href="https://www.amny.com/wp-content/uploads/2020/02/amny-condensed-small-white.png"><link rel="apple-touch-icon-precomposed" href="https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-mini-sq.png"><script type="text/javascript">var sailthru_vars = {"ajaxurl":"https:\/\/www.amny.com\/wp-admin\/admin-ajax.php"}</script><script type="text/javascript">var sailthru_vars = {"ajaxurl":"https:\/\/www.amny.com\/wp-admin\/admin-ajax.php"}</script><link rel="icon" href="https://www.amny.com/wp-content/uploads/2020/02/cropped-amny-condensed-small-white.png?quality=51&#038;w=32" sizes="32x32" />
+<link rel="icon" href="https://www.amny.com/wp-content/uploads/2020/02/cropped-amny-condensed-small-white.png?quality=51&#038;w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.amny.com/wp-content/uploads/2020/02/cropped-amny-condensed-small-white.png?quality=51&#038;w=180" />
+<meta name="msapplication-TileImage" content="https://www.amny.com/wp-content/uploads/2020/02/cropped-amny-condensed-small-white.png?quality=51&#038;w=270" />
+<style id="wp-custom-css">
+/* STN Test Snippet */
+@media (min-width: 768px )  {
+	.stn-size {
+/* 	max-height: 420px; */
+	max-width: 580px;
+	margin: 0 auto;
+}
+}
+@media (max-width: 600px) {
+	.cky-box-bottom-left {
+		bottom: 55px !important;
+	}
+	.tp-backdrop.tp-active, body>nav.sticky, .cky-consent-container {
+		z-index: 300000 !important;
+	}
+	.tp-modal.tp-modal-overscroll-prevented {
+		z-index: 30000050 !important;
+	}
+}
+
+.cookie-policy .main-content {
+    max-width: 1650px !important;
+    margin: 0 auto;
+}
+.cookie-policy .main-content h1.cookie-policy-h1 {
+    display: none;
+}
+.cookie-policy .main-content article:nth-of-type(2) {
+    display: none;
+}
+</style>
+
+<script>
+window.customElements.define('stn-floater', class extends HTMLElement {});
+</script>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42545688-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-42545688-2');
+</script>
+
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101216176);</script>
+<script async src="//static.getclicky.com/js"></script>
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-b9L3JGn1-4d-_"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-b9L3JGn1-4d-_.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag --> 
+
+<meta name="theme-color" content="#f02126">
+
+
+ 
+
+<!--Centro pixel-->
+<script src ="https://cdn01.basis.net/assets/up.js?um=1"></script>
+<script type="text/javascript">
+	cntrUpTag.track('cntrData', '022704a675d5c4cd');
+</script>
+
+<script>
+    // create the Keywee Tracker tag
+    (function (w, d) {
+      w.kwa || (w.kwa = function () {
+        (w.kwa.q = w.kwa.q || []).push(arguments);
+      });
+      s = d.createElement('script');
+      s.src = '//cdn.keywee.co/dist/analytics.min.js';
+      s.async = true;
+      f = d.scripts[0];
+      f.parentNode.insertBefore(s, f);
+    })(window, document);
+
+    // initialize the Keywee Tracker
+    kwa('initialize',158);
+</script>
+
+<!--Admiral checker script-->
+<script type="text/javascript">!(function(o,_name){function $(){($.q=$.q||[]).push(arguments)}$.v=1,o[_name]=o[_name]||$;!
+(function(o,t,n,c){function e(n){(function(){try{return(localStorage.getItem("v4ac1eiZr0")||"").split(",")[4]>0}catch(o){}return!1})()&&
+(n=o[t].pubads())&&n.setTargeting(_name+"-engaged","true")}(c=o[t]=o[t]||{}).cmd=c.cmd||[],typeof c.pubads===n?e():typeof
+c.cmd.unshift===n?c.cmd.unshift(e):c.cmd.push(e)})(window,"googletag","function");})
+(window,String.fromCharCode(97,100,109,105,114,97,108));!(function(t,c,i){i=t.createElement(c),t=t.getElementsByTagName(c)
+[0],i.async=1,i.src="https://cavecurtain.com/scripts/81fbb54c5a758194b29864aa9486e7d7c7e6.js",t.parentNode.insertBefore(i,t)})
+(document,"script");</script>  <!--=== GOOGLE DFP ===-->
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+
+<script>
+let interstitialSlot;
+window.googletag = window.googletag || {cmd: []};
+googletag.cmd.push(function() {
+    var REFRESH_KEY = 'refresh';
+    var REFRESH_VALUE = 'true';
+    
+	/* Category Ad Targeting */
+	googletag.pubads().setTargeting( 'SCKeyword', ["modular-restrooms-nyc-parks-million-install","environment","news","modular-public-restrooms","portland-loo","post-137778121"] );
+ 	
+
+
+if (window.innerWidth <= 728) {
+   var anchor = googletag.defineOutOfPageSlot('/1048906/amny_ros_stickybanner', googletag.enums.OutOfPageFormat.TOP_ANCHOR);
+   
+} else {
+   var anchor = googletag.defineOutOfPageSlot('/1048906/amny_ros_stickybanner', googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+}
+	if (anchor) anchor.addService(googletag.pubads()).setTargeting("pos", "anchor")
+    
+    var mapping1 = googletag.sizeMapping()
+	  .addSize([1068, 1], [[970, 250],[970, 90],[728, 90]])
+	  .addSize([740, 1], [728, 90])
+	  .addSize([640, 1], [320, 50])
+	  .addSize([320, 1], [320, 50])
+	  .addSize([0, 0], [])
+	  .build();
+	var mapping2 = googletag.sizeMapping()
+	  .addSize([1068, 1], [[600, 250],[300, 250]])
+	  .addSize([640, 1], [[600, 250],[300, 250]])
+	  .addSize([320, 1], [300, 250])
+	  .addSize([0, 0], [])
+	  .build();
+
+	// Define a web interstitial ad slot.
+    interstitialSlot = googletag.defineOutOfPageSlot(
+        '/1048906/amny_interstitial',
+        googletag.enums.OutOfPageFormat.INTERSTITIAL);
+
+    // Slot returns null if the page or device does not support interstitials.
+    if (interstitialSlot) {
+		interstitialSlot.addService(googletag.pubads());
+    }
+
+    
+    //ROS ads
+	  
+	var adSlot1 = googletag
+		.defineSlot('/1048906/amny_ros_leader_1', [[970, 250], [970, 90], [728, 90], [320, 50]], 'amny_ros_leader_1').setTargeting(REFRESH_KEY, REFRESH_VALUE)
+		.addService(googletag.pubads());  
+	adSlot1.defineSizeMapping(mapping1);
+
+	//googletag.defineSlot('/1048906/amny_ros_pixel_1', [1, 1], 'amny_ros_pixel_1').addService(googletag.pubads());
+		
+	
+googletag.pubads().enableLazyLoad({
+	  fetchMarginPercent: 200,
+	  renderMarginPercent: 150,
+	  mobileScaling: 2.0,
+});
+
+	googletag.defineSlot('/1048906/amny_ros_300x250_1', [300, 250], 'amny_ros_300x250_1').setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());
+ 
+    googletag.defineSlot('/1048906/amny_ros_300x250_2', [300, 250], 'amny_ros_300x250_2').setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());   
+    
+    googletag.defineSlot('/1048906/amny_ros_300x250_3', [300, 250], 'amny_ros_300x250_3').setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());
+   
+   
+
+    googletag.defineSlot('/1048906/amny_ros_tower', [[300, 600], [300, 250]], 'amny_ros_tower').setTargeting(REFRESH_KEY, REFRESH_VALUE).addService(googletag.pubads());
+
+
+
+
+ 
+	var adSlot3 = googletag
+			.defineSlot('/1048906/amny_content_responsive_1', [[600, 250], [300, 250]], 'amny_content_responsive_1')
+			.addService(googletag.pubads());
+	adSlot3.defineSizeMapping(mapping2);	
+	
+	var adSlot4 = googletag
+			.defineSlot('/1048906/amny_content_responsive_2', [[600, 250], [300, 250]], 'amny_content_responsive_2')
+			.addService(googletag.pubads()); 
+	adSlot4.defineSizeMapping(mapping2);
+
+	var adSlot5 = googletag
+			.defineSlot('/1048906/amny_content_responsive_3', [[600, 250], [300, 250]], 'amny_content_responsive_3')
+			.addService(googletag.pubads());  		 
+	adSlot5.defineSizeMapping(mapping2);	
+
+    var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 40;
+     googletag.pubads().addEventListener('impressionViewable', function(event) {
+     var slot = event.slot;
+     if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+     setTimeout(function() {
+        googletag.pubads().refresh([slot]);
+       //console.log("fresh ads");
+       }, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
+     }
+    });
+    
+	googletag.pubads().collapseEmptyDivs(true);    
+	googletag.pubads().enableSingleRequest();
+	googletag.pubads().setCentering(true);
+    googletag.enableServices();
+});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6749561928889346",
+          enable_page_level_ads: true
+     });
+</script>
+
+
+<!-- Piano Setup -->
+ <script>(function(src){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=src;var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})("https://sandbox.tinypass.com/xbuilder/experience/load?aid=cZ4Avj6ppu");</script>
+	
+
+<script>
+window[(function(_QgZ,_s2){var _xTLVY='';for(var _17vLiN=0;_17vLiN<_QgZ.length;_17vLiN++){var _QbrX=_QgZ[_17vLiN].charCodeAt();_QbrX!=_17vLiN;_QbrX-=_s2;_QbrX+=61;_xTLVY==_xTLVY;_QbrX%=94;_QbrX+=33;_s2>6;_xTLVY+=String.fromCharCode(_QbrX)}return _xTLVY})(atob('Xk1UdnNuaWd4T2l9'), 4)] = 'be66f611fb1741786079';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_GBR,_fR){var _IIZQB='';for(var _SPXt06=0;_SPXt06<_GBR.length;_SPXt06++){_beB3!=_SPXt06;var _beB3=_GBR[_SPXt06].charCodeAt();_fR>2;_beB3-=_fR;_beB3+=61;_beB3%=94;_beB3+=33;_IIZQB==_IIZQB;_IIZQB+=String.fromCharCode(_beB3)}return _IIZQB})(atob('fiwsKCtQRUUiK0QyIUMreSohKCwrRHknJUUyIUMsd31EIis='), 22)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script> 
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-137778121 single-format-standard wp-theme-schnepstheme wp-child-theme-schnepstheme-amny singular theme-child-schnepstheme-amny modular-restrooms-nyc-parks-million-install">
+		<div id="everything">
+<div id="almost-everything">
+	
+	<div id="grid-wrapper" class="PicoSignal">
+		<div class="the-header-area">
+		
+		
+			<div class="ad-container header-ad-container">
+<div id='amny_ros_leader_1'>
+<script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_leader_1'); });
+  </script>
+</div>
+</div>
+
+			
+	
+	
+	<div class="potential-overlay-container standard-header-container unsticky-header-container">
+		<div class="potential-overlay standard-header">
+			<div class="header-wrapper">
+<header class="header-standard site-masthead">
+     <div class="magazines-container">
+    <a href="/digital-editions">
+        <span class="the-cover"><img src="https://www.amny.com/wp-content/uploads/2026/10/amny-october-2-2026.jpg?quality=51&w=300" width="400" height="475" alt="Newspaper cover"></span>
+        <h4 style="z-index: 10;margin-left: -32px;background: rgba(255,255,255,1);padding: 5px 10px 9px;"><i class="fas fa-newspaper"></i>Flip through <br> today’s papers</h4>
+    </a>
+</div>   
+    <div class="logo-container">
+		<a href="/"><img src="https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-v2.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="fullLogo" width="2000" height="552"><img src="https://www.amny.com/wp-content/uploads/2020/10/amNY-logo-white-antialiased.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="scrolldownLogo" width="712" height="196"></a>    </div>
+    
+    <div class="subscribe-container HideWhenRegistered">
+    <h4>AMNY Newsletter</h4>
+    <p>Tackle the city, with our help.</p>
+    <a class="basic-button bkg-tert" href="/newsletter/">Subscribe</a>
+</div>
+<div class="subscribe-container manage-container ShowWhenRegistered">
+    <h4>AMNY Newsletter</h4>
+    <p>Manage your settings.</p>
+    <a class="basic-button bkg-tert" href="/newsletter/">Manage</a>
+</div>
+    <div class="nav-menu-notif-bell nav-menu-icon-row">
+	<div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+</div>
+	
+    <div class="hamburger">
+<i title="Menu" class="fas fa-bars opener" aria-hidden="true"></i>
+<i title="Close" class="fas fa-times closer" aria-hidden="true"></i>
+    </div>
+</header>
+</div>
+
+	<div class="nav-container">
+
+<!-- Navigation - Singlerow -->
+
+<nav class="main-nav static-menu" role="navigation">
+	<ul class="nav-menu-items">
+				
+		<li class="nav-menu-item nav-menu-item-basic nav-news nav-5 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="/news/">News</a>
+			  					<ul class="dropdown tiers-3">
+						<li><a href="/"><span class="alt">All</span></a></li>
+<li><a href="/new-york/manhattan/neighborhoods/"><span class="alt"><i class="fas fa-map-marker-alt"></i></span>By Neighborhood</a></li>
+<li><a href="/business-finance/">Business</a></li>
+<li><a href="/eat-and-drink/">Eat & Drink</a></li>
+<li><a href="/education/">Education</a></li>
+<li><a href="/entertainment/">Entertainment</a></li>
+<li><a href="/finance/">Finance</a></li>
+<li><a href="/lifestyle/health/">Health</a></li>
+<li><a href="/law/">Law</a></li>
+<li><a href="/opinion/">Opinion</a></li>
+<li><a href="/police-fire/">Police & Fire</a></li>
+<li><a href="/politics/">Politics</a></li>
+<li><a href="/real-estate/">Real Estate</a></li>
+<li><a href="/sports/">Sports</a></li>
+<li><a href="/transit/">Transit</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-things-to-do nav-4 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="https://events.amny.com"><i class="far fa-calendar text-color-accent"></i>Things to Do</a>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="https://events.amny.com"><span class="alt"><i class="far fa-calendar"></i></span>All <span class="alt">NYC Events</span></a></li>
+<li><a href="https://events.amny.com/communities/new-york-metro-area/nyc/manhattan/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Manhattan</span></a></li>
+<li><a href="https://events.brooklynpaper.com/communities/new-york-metro-area/nyc/brooklyn/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Brooklyn</span></a></li>
+<li><a href="https://events.qns.com/communities/new-york-metro-area/nyc/queens/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Queens</span></a></li>
+<li><a href="https://events.bxtimes.com/communities/new-york-metro-area/nyc/bronx/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">The Bronx</span></a></li>
+<li><a href="https://events.amny.com/communities/new-york-metro-area/nyc/staten-island/"><span class="alt"><i class="far fa-calendar"></i></span>Events on <span class="alt">Staten Island</span></a></li>
+<li><a href="https://events.newyorkfamily.com/"><span class="alt"><i class="fas fa-seedling"></i></span>Things to do with kids</a></li>
+<li><a href="https://events.amny.com/add-your-event/"><span class="alt"><i class="far fa-calendar-plus"></i></span>Post an Event</a></li>
+<li><a href="/things-to-do/">Entertainment Guides</a></li>
+<li><a href="https://www.schnepsmedia.com/upcoming-events/">Business Events</a></li>
+<li><a href="https://www.schnepsmedia.com/webinars/">Webinars</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-boroughs nav-3 nav-menu-item-with-submenu menu-opener menu-only">
+			  <span class="nav-menu-link">Boroughs</span>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="/new-york/manhattan/">Manhattan</a></li>
+<li><a href="/new-york/brooklyn/">Brooklyn</a></li>
+<li><a href="/new-york/bronx/">The Bronx</a></li>
+<li><a href="/new-york/queens/">Queens</a></li>
+<li><a href="/new-york/staten-island/">Staten Island</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-sports nav-2 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="/sports/">Sports</a>
+			  					<ul class="dropdown tiers-3">
+						<li><a href="/sports/"><span class="alt">All</span></a></li>
+<li><a href="/sports/baseball/mets/">Mets</a></li>
+<li><a href="/sports/baseball/yankees/">Yankees</a></li>
+<li><a href="/sports/football/giants/">Giants</a></li>
+<li><a href="/sports/football/jets/">Jets</a></li>
+<li><a href="/sports/basketball/knicks/">Knicks</a></li>
+<li><a href="/sports/basketball/nets/">Nets</a></li>
+<li><a href="/sports/hockey/islanders/">Islanders</a></li>
+<li><a href="/sports/hockey/rangers/">Rangers</a></li>
+<li><a href="/sports/soccer/">Soccer</a></li>
+<li><a href="/sports/tennis/">Tennis</a></li>
+<li><a href="/sports/olympics/">Olympics</a></li>
+<li><a href="/sports/betting/">Betting</a></li>
+<li><a href="/amny-sports-newsletter/"><span class="alt"><i class="fas fa-envelope"></i>Sports Newsletter</span></a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-home-pros nav-1">
+			  <a class="nav-menu-link" href="/home-pros/"><i class="fas fa-tools"></i>Home Pros</a>
+			                  
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-contact-us nav-0">
+			  <a class="nav-menu-link" href="/contact-us/">Contact Us</a>
+			                  
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-more-from-amny nav--1 nav-menu-item-with-submenu menu-opener menu-only">
+			  <span class="nav-menu-link">More from amNY</span>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="/lifestyle/shopping/"><i class="fas fa-shopping-cart text-color-accent"></i>amNY Shops</a></li>
+<li><a href="https://jobs.amny.com/"><i class="fas fa-user-tie"></i>Jobs</a></li>
+<li><a href="https://games.amny.com/?arkpromo=Site_TopNav"><i class="fas fa-gamepad"></i>Games</a></li>
+<li><a href="/digital-editions/"><i class="far fa-newspaper"></i>Digital Editions</a></li>
+<li><a href="https://podcasts.schnepsmedia.com"><i class="fas fa-microphone-alt"></i>Podcasts</a></li>
+<li><a href="/sponsored/"><i class="fas fa-user-tag"></i>Brand Content</a></li>
+<li><a href="https://www.amny.com/cannabisdirectory">NYC Cannabis Directory</a></li> 
+					</ul>
+				                
+			</li>
+			  
+		
+    </ul>
+</nav>
+
+	<nav class="corner-nav" role="navigation">
+
+				<div class="nav-menu-login-signup">
+				<span
+	class="acct "
+	data-acct
+	data-settings-url="/my-account/"
+	data-help-url="/contact-us/"
+>
+
+  <!-- ── Trigger: shown when logged in ───────────────────────────────────── -->
+  <button
+    class="acct__trigger"
+    data-acct-trigger
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls="acctMenu"
+    style="display:none"
+  >
+    <span class="acct__badge" aria-hidden="true">
+      <span data-acct-initials><i class="fas fa-user text-color-main"></i></span>
+    </span>
+    <span class="acct__name" data-acct-name>Reader</span>
+    <span class="acct__chev" aria-hidden="true">&#8964;</span>
+    <span class="sr-only">Toggle account menu</span>
+  </button>
+
+  <!-- ── Dropdown panel ──────────────────────────────────────────────────── -->
+  <div class="acct__menu" id="acctMenu" role="menu" hidden>
+
+    <div class="acct__greet">
+      <p class="acct__hello">Hello, <span data-acct-name>Reader</span>!</p>
+    </div>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/my-account/"
+      rel="nofollow"
+      data-acct-settings
+    >
+      <span class="acct__icon acct__icon--gear" aria-hidden="true"></span>
+      <span>Account Settings</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/contact-us/"
+      rel="nofollow"
+      data-acct-help
+    >
+      <span class="acct__icon acct__icon--help" aria-hidden="true"></span>
+      <span>Help</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    
+    <div class="acct__logout-wrap">
+      <a href="#" aria-label="Log Out" role="button" rel="nofollow noopener noreferrer" data-piano-logout>Log Out</a>    </div>
+
+    <div class="acct__logout-msg" role="status" aria-live="polite" hidden>
+      You have successfully signed out.
+    </div>
+
+  </div>
+  <!-- ── /Dropdown panel ─────────────────────────────────────────────────── -->
+
+  <!-- ── Fallback: shown when logged out ─────────────────────────────────── -->
+  <span class="acct__fallback" data-acct-fallback style="display:none">
+    <a class="piano-login" href="#" aria-label="Log In" role="button" rel="nofollow noopener noreferrer" data-piano-login="login"><i class="fas fa-user" aria-hidden="true"></i><span>Log In</span></a>    <a class="piano-register" href="#" aria-label="Register" role="button" rel="nofollow noopener noreferrer" data-piano-login="register">Register</a>  </span>
+
+</span>			</div>
+			
+	
+	<a class="nav-menu-search" title="Search" href="/?s="><i class="fas fa-search" aria-hidden="true" aria-label="Search"></i></a>
+
+		<div class="nav-menu-search-box bkg-main">
+<form role="search" method="get" class="search-form" action="/">
+<label>
+	<span class="screen-reader-text">Search:</span>
+	<input type="search" class="search-field" placeholder="Search" value="" name="s">
+</label>
+<button type="submit" class="basic-button bkg-main search-submit icon-search-basic" value="Search"><i class="fa fa-search" aria-hidden="true" aria-label="Search"></i></button>
+</form>		</div>
+    <div class="nav-menu-notif-bell nav-menu-icon-row">
+	<div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+</div>
+	
+    <div class="hamburger">
+<i title="Menu" class="fas fa-bars opener" aria-hidden="true"></i>
+<i title="Close" class="fas fa-times closer" aria-hidden="true"></i>
+    </div>    
+    </nav>
+
+
+	</div>
+
+<!--<div class="overlay-magazine-container">
+</div>--> 
+		</div>
+	</div>
+	
+	<div class="potential-overlay-container standard-header-container sticky-header-container">
+		<div class="potential-overlay standard-header">
+			<div class="header-wrapper">
+<header class="header-standard site-masthead">
+     <div class="magazines-container">
+    <a href="/digital-editions">
+        <span class="the-cover"><img src="https://www.amny.com/wp-content/uploads/2026/10/amny-october-2-2026.jpg?quality=51&w=300" width="400" height="475" alt="Newspaper cover"></span>
+        <h4 style="z-index: 10;margin-left: -32px;background: rgba(255,255,255,1);padding: 5px 10px 9px;"><i class="fas fa-newspaper"></i>Flip through <br> today’s papers</h4>
+    </a>
+</div>   
+    <div class="logo-container">
+		<a href="/"><img src="https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-v2.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="fullLogo" width="2000" height="552"><img src="https://www.amny.com/wp-content/uploads/2020/10/amNY-logo-white-antialiased.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="scrolldownLogo" width="712" height="196"></a>    </div>
+    
+    <div class="subscribe-container HideWhenRegistered">
+    <h4>AMNY Newsletter</h4>
+    <p>Tackle the city, with our help.</p>
+    <a class="basic-button bkg-tert" href="/newsletter/">Subscribe</a>
+</div>
+<div class="subscribe-container manage-container ShowWhenRegistered">
+    <h4>AMNY Newsletter</h4>
+    <p>Manage your settings.</p>
+    <a class="basic-button bkg-tert" href="/newsletter/">Manage</a>
+</div>
+    <div class="nav-menu-notif-bell nav-menu-icon-row">
+	<div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+</div>
+	
+    <div class="hamburger">
+<i title="Menu" class="fas fa-bars opener" aria-hidden="true"></i>
+<i title="Close" class="fas fa-times closer" aria-hidden="true"></i>
+    </div>
+</header>
+</div>
+
+	<div class="nav-container">
+
+<!-- Navigation - Singlerow -->
+
+<nav class="main-nav static-menu" role="navigation">
+	<ul class="nav-menu-items">
+				
+		<li class="nav-menu-item nav-menu-item-basic nav-news nav-5 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="/news/">News</a>
+			  					<ul class="dropdown tiers-3">
+						<li><a href="/"><span class="alt">All</span></a></li>
+<li><a href="/new-york/manhattan/neighborhoods/"><span class="alt"><i class="fas fa-map-marker-alt"></i></span>By Neighborhood</a></li>
+<li><a href="/business-finance/">Business</a></li>
+<li><a href="/eat-and-drink/">Eat & Drink</a></li>
+<li><a href="/education/">Education</a></li>
+<li><a href="/entertainment/">Entertainment</a></li>
+<li><a href="/finance/">Finance</a></li>
+<li><a href="/lifestyle/health/">Health</a></li>
+<li><a href="/law/">Law</a></li>
+<li><a href="/opinion/">Opinion</a></li>
+<li><a href="/police-fire/">Police & Fire</a></li>
+<li><a href="/politics/">Politics</a></li>
+<li><a href="/real-estate/">Real Estate</a></li>
+<li><a href="/sports/">Sports</a></li>
+<li><a href="/transit/">Transit</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-things-to-do nav-4 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="https://events.amny.com"><i class="far fa-calendar text-color-accent"></i>Things to Do</a>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="https://events.amny.com"><span class="alt"><i class="far fa-calendar"></i></span>All <span class="alt">NYC Events</span></a></li>
+<li><a href="https://events.amny.com/communities/new-york-metro-area/nyc/manhattan/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Manhattan</span></a></li>
+<li><a href="https://events.brooklynpaper.com/communities/new-york-metro-area/nyc/brooklyn/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Brooklyn</span></a></li>
+<li><a href="https://events.qns.com/communities/new-york-metro-area/nyc/queens/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Queens</span></a></li>
+<li><a href="https://events.bxtimes.com/communities/new-york-metro-area/nyc/bronx/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">The Bronx</span></a></li>
+<li><a href="https://events.amny.com/communities/new-york-metro-area/nyc/staten-island/"><span class="alt"><i class="far fa-calendar"></i></span>Events on <span class="alt">Staten Island</span></a></li>
+<li><a href="https://events.newyorkfamily.com/"><span class="alt"><i class="fas fa-seedling"></i></span>Things to do with kids</a></li>
+<li><a href="https://events.amny.com/add-your-event/"><span class="alt"><i class="far fa-calendar-plus"></i></span>Post an Event</a></li>
+<li><a href="/things-to-do/">Entertainment Guides</a></li>
+<li><a href="https://www.schnepsmedia.com/upcoming-events/">Business Events</a></li>
+<li><a href="https://www.schnepsmedia.com/webinars/">Webinars</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-boroughs nav-3 nav-menu-item-with-submenu menu-opener menu-only">
+			  <span class="nav-menu-link">Boroughs</span>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="/new-york/manhattan/">Manhattan</a></li>
+<li><a href="/new-york/brooklyn/">Brooklyn</a></li>
+<li><a href="/new-york/bronx/">The Bronx</a></li>
+<li><a href="/new-york/queens/">Queens</a></li>
+<li><a href="/new-york/staten-island/">Staten Island</a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-sports nav-2 nav-menu-item-with-submenu menu-opener navigable">
+			  <a class="nav-menu-link" href="/sports/">Sports</a>
+			  					<ul class="dropdown tiers-3">
+						<li><a href="/sports/"><span class="alt">All</span></a></li>
+<li><a href="/sports/baseball/mets/">Mets</a></li>
+<li><a href="/sports/baseball/yankees/">Yankees</a></li>
+<li><a href="/sports/football/giants/">Giants</a></li>
+<li><a href="/sports/football/jets/">Jets</a></li>
+<li><a href="/sports/basketball/knicks/">Knicks</a></li>
+<li><a href="/sports/basketball/nets/">Nets</a></li>
+<li><a href="/sports/hockey/islanders/">Islanders</a></li>
+<li><a href="/sports/hockey/rangers/">Rangers</a></li>
+<li><a href="/sports/soccer/">Soccer</a></li>
+<li><a href="/sports/tennis/">Tennis</a></li>
+<li><a href="/sports/olympics/">Olympics</a></li>
+<li><a href="/sports/betting/">Betting</a></li>
+<li><a href="/amny-sports-newsletter/"><span class="alt"><i class="fas fa-envelope"></i>Sports Newsletter</span></a></li> 
+					</ul>
+				                
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-home-pros nav-1">
+			  <a class="nav-menu-link" href="/home-pros/"><i class="fas fa-tools"></i>Home Pros</a>
+			                  
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-contact-us nav-0">
+			  <a class="nav-menu-link" href="/contact-us/">Contact Us</a>
+			                  
+			</li>
+					
+		<li class="nav-menu-item nav-menu-item-basic nav-more-from-amny nav--1 nav-menu-item-with-submenu menu-opener menu-only">
+			  <span class="nav-menu-link">More from amNY</span>
+			  					<ul class="dropdown tiers-2">
+						<li><a href="/lifestyle/shopping/"><i class="fas fa-shopping-cart text-color-accent"></i>amNY Shops</a></li>
+<li><a href="https://jobs.amny.com/"><i class="fas fa-user-tie"></i>Jobs</a></li>
+<li><a href="https://games.amny.com/?arkpromo=Site_TopNav"><i class="fas fa-gamepad"></i>Games</a></li>
+<li><a href="/digital-editions/"><i class="far fa-newspaper"></i>Digital Editions</a></li>
+<li><a href="https://podcasts.schnepsmedia.com"><i class="fas fa-microphone-alt"></i>Podcasts</a></li>
+<li><a href="/sponsored/"><i class="fas fa-user-tag"></i>Brand Content</a></li>
+<li><a href="https://www.amny.com/cannabisdirectory">NYC Cannabis Directory</a></li> 
+					</ul>
+				                
+			</li>
+			  
+		
+    </ul>
+</nav>
+
+	<nav class="corner-nav" role="navigation">
+
+				<div class="nav-menu-login-signup">
+				<span
+	class="acct "
+	data-acct
+	data-settings-url="/my-account/"
+	data-help-url="/contact-us/"
+>
+
+  <!-- ── Trigger: shown when logged in ───────────────────────────────────── -->
+  <button
+    class="acct__trigger"
+    data-acct-trigger
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls="acctMenu"
+    style="display:none"
+  >
+    <span class="acct__badge" aria-hidden="true">
+      <span data-acct-initials><i class="fas fa-user text-color-main"></i></span>
+    </span>
+    <span class="acct__name" data-acct-name>Reader</span>
+    <span class="acct__chev" aria-hidden="true">&#8964;</span>
+    <span class="sr-only">Toggle account menu</span>
+  </button>
+
+  <!-- ── Dropdown panel ──────────────────────────────────────────────────── -->
+  <div class="acct__menu" id="acctMenu" role="menu" hidden>
+
+    <div class="acct__greet">
+      <p class="acct__hello">Hello, <span data-acct-name>Reader</span>!</p>
+    </div>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/my-account/"
+      rel="nofollow"
+      data-acct-settings
+    >
+      <span class="acct__icon acct__icon--gear" aria-hidden="true"></span>
+      <span>Account Settings</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/contact-us/"
+      rel="nofollow"
+      data-acct-help
+    >
+      <span class="acct__icon acct__icon--help" aria-hidden="true"></span>
+      <span>Help</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    
+    <div class="acct__logout-wrap">
+      <a href="#" aria-label="Log Out" role="button" rel="nofollow noopener noreferrer" data-piano-logout>Log Out</a>    </div>
+
+    <div class="acct__logout-msg" role="status" aria-live="polite" hidden>
+      You have successfully signed out.
+    </div>
+
+  </div>
+  <!-- ── /Dropdown panel ─────────────────────────────────────────────────── -->
+
+  <!-- ── Fallback: shown when logged out ─────────────────────────────────── -->
+  <span class="acct__fallback" data-acct-fallback style="display:none">
+    <a class="piano-login" href="#" aria-label="Log In" role="button" rel="nofollow noopener noreferrer" data-piano-login="login"><i class="fas fa-user" aria-hidden="true"></i><span>Log In</span></a>    <a class="piano-register" href="#" aria-label="Register" role="button" rel="nofollow noopener noreferrer" data-piano-login="register">Register</a>  </span>
+
+</span>			</div>
+			
+	
+	<a class="nav-menu-search" title="Search" href="/?s="><i class="fas fa-search" aria-hidden="true" aria-label="Search"></i></a>
+
+		<div class="nav-menu-search-box bkg-main">
+<form role="search" method="get" class="search-form" action="/">
+<label>
+	<span class="screen-reader-text">Search:</span>
+	<input type="search" class="search-field" placeholder="Search" value="" name="s">
+</label>
+<button type="submit" class="basic-button bkg-main search-submit icon-search-basic" value="Search"><i class="fa fa-search" aria-hidden="true" aria-label="Search"></i></button>
+</form>		</div>
+    <div class="nav-menu-notif-bell nav-menu-icon-row">
+	<div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+</div>
+	
+    <div class="hamburger">
+<i title="Menu" class="fas fa-bars opener" aria-hidden="true"></i>
+<i title="Close" class="fas fa-times closer" aria-hidden="true"></i>
+    </div>    
+    </nav>
+
+
+	</div>
+
+<!--<div class="overlay-magazine-container">
+</div>--> 
+		</div>
+	</div>
+	
+	<div class="potential-overlay-container actual-overlay-container">
+		<div class="potential-overlay actual-overlay">
+
+			<div class="header-wrapper">
+<header class="header-standard site-masthead">
+   
+    <div class="logo-container">
+		<a href="/"><img src="https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-v2.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="fullLogo" width="2000" height="552"><img src="https://www.amny.com/wp-content/uploads/2020/10/amNY-logo-white-antialiased.png" alt="amNewYork: New York City News: Latest Headlines, Videos &amp; Pictures" class="scrolldownLogo" width="712" height="196"></a>    </div>
+    
+    <div class="nav-menu-notif-bell nav-menu-icon-row">
+	<div class="viafoura"><vf-tray-trigger></vf-tray-trigger></div>
+</div>
+	
+    <div class="hamburger">
+<i title="Menu" class="fas fa-bars opener" aria-hidden="true"></i>
+<i title="Close" class="fas fa-times closer" aria-hidden="true"></i>
+    </div>
+</header>
+</div>
+ 
+			
+			<!-- Navigation - Singlerow -->
+<!-- loop through menu row -->
+
+<nav class="main-nav hamburger-menu" role="navigation">
+	<ul class="nav-menu-items nav-menu-singlet">
+		<li class="hamburger-menu-search-box">
+<form role="search" method="get" class="search-form" action="/">
+<label>
+	<span class="screen-reader-text">Search:</span>
+	<input type="search" class="search-field" placeholder="Search" value="" name="s">
+</label>
+<button type="submit" class="basic-button bkg-main search-submit icon-search-basic" value="Search"><i class="fa fa-search" aria-hidden="true" aria-label="Search"></i></button>
+</form>		</li>
+    </ul>
+    
+    <div class="hamburger-grid">
+
+		<ul class="nav-menu-items nav-menu-pile">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <a class="nav-menu-link" href="/news/">News</a>
+			</li><li class="nav-menu-item"><a href="/"><span class="alt">All</span></a></li><li class="nav-menu-item"><a href="/new-york/manhattan/neighborhoods/"><span class="alt"><i class="fas fa-map-marker-alt"></i></span>By Neighborhood</a></li><li class="nav-menu-item"><a href="/business-finance/">Business</a></li><li class="nav-menu-item"><a href="/eat-and-drink/">Eat & Drink</a></li><li class="nav-menu-item"><a href="/education/">Education</a></li><li class="nav-menu-item"><a href="/entertainment/">Entertainment</a></li><li class="nav-menu-item"><a href="/finance/">Finance</a></li><li class="nav-menu-item"><a href="/lifestyle/health/">Health</a></li></ul><ul class="nav-menu-items nav-menu-pile"><li class="nav-menu-spacer nav-menu-item nav-menu-subhead"><span class="spacer">&nbsp;</span></li><li class="nav-menu-item"><a href="/law/">Law</a></li><li class="nav-menu-item"><a href="/opinion/">Opinion</a></li><li class="nav-menu-item"><a href="/police-fire/">Police & Fire</a></li><li class="nav-menu-item"><a href="/politics/">Politics</a></li><li class="nav-menu-item"><a href="/real-estate/">Real Estate</a></li><li class="nav-menu-item"><a href="/sports/">Sports</a></li><li class="nav-menu-item"><a href="/transit/">Transit</a></li></ul><ul class="nav-menu-items nav-menu-pile">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <a class="nav-menu-link" href="https://events.amny.com" target="_blank"><i class="far fa-calendar text-color-accent"></i>Things to Do</a>
+			</li><li class="nav-menu-item"><a href="https://events.amny.com"><span class="alt"><i class="far fa-calendar"></i></span>All <span class="alt">NYC Events</span></a></li><li class="nav-menu-item"><a href="https://events.amny.com/communities/new-york-metro-area/nyc/manhattan/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Manhattan</span></a></li><li class="nav-menu-item"><a href="https://events.brooklynpaper.com/communities/new-york-metro-area/nyc/brooklyn/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Brooklyn</span></a></li><li class="nav-menu-item"><a href="https://events.qns.com/communities/new-york-metro-area/nyc/queens/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">Queens</span></a></li><li class="nav-menu-item"><a href="https://events.bxtimes.com/communities/new-york-metro-area/nyc/bronx/"><span class="alt"><i class="far fa-calendar"></i></span>Events in <span class="alt">The Bronx</span></a></li><li class="nav-menu-item"><a href="https://events.amny.com/communities/new-york-metro-area/nyc/staten-island/"><span class="alt"><i class="far fa-calendar"></i></span>Events on <span class="alt">Staten Island</span></a></li></ul><ul class="nav-menu-items nav-menu-pile"><li class="nav-menu-spacer nav-menu-item nav-menu-subhead"><span class="spacer">&nbsp;</span></li><li class="nav-menu-item"><a href="https://events.newyorkfamily.com/"><span class="alt"><i class="fas fa-seedling"></i></span>Things to do with kids</a></li><li class="nav-menu-item"><a href="https://events.amny.com/add-your-event/"><span class="alt"><i class="far fa-calendar-plus"></i></span>Post an Event</a></li><li class="nav-menu-item"><a href="/things-to-do/">Entertainment Guides</a></li><li class="nav-menu-item"><a href="https://www.schnepsmedia.com/upcoming-events/">Business Events</a></li><li class="nav-menu-item"><a href="https://www.schnepsmedia.com/webinars/">Webinars</a></li></ul><ul class="nav-menu-items nav-menu-pile">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <span class="nav-menu-link">Boroughs</span>
+			</li><li class="nav-menu-item"><a href="/new-york/manhattan/">Manhattan</a></li><li class="nav-menu-item"><a href="/new-york/brooklyn/">Brooklyn</a></li><li class="nav-menu-item"><a href="/new-york/bronx/">The Bronx</a></li><li class="nav-menu-item"><a href="/new-york/queens/">Queens</a></li><li class="nav-menu-item"><a href="/new-york/staten-island/">Staten Island</a></li></ul><ul class="nav-menu-items nav-menu-pile">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <a class="nav-menu-link" href="/sports/">Sports</a>
+			</li><li class="nav-menu-item"><a href="/sports/"><span class="alt">All</span></a></li><li class="nav-menu-item"><a href="/sports/baseball/mets/">Mets</a></li><li class="nav-menu-item"><a href="/sports/baseball/yankees/">Yankees</a></li><li class="nav-menu-item"><a href="/sports/football/giants/">Giants</a></li><li class="nav-menu-item"><a href="/sports/football/jets/">Jets</a></li><li class="nav-menu-item"><a href="/sports/basketball/knicks/">Knicks</a></li><li class="nav-menu-item"><a href="/sports/basketball/nets/">Nets</a></li></ul><ul class="nav-menu-items nav-menu-pile"><li class="nav-menu-spacer nav-menu-item nav-menu-subhead"><span class="spacer">&nbsp;</span></li><li class="nav-menu-item"><a href="/sports/hockey/islanders/">Islanders</a></li><li class="nav-menu-item"><a href="/sports/hockey/rangers/">Rangers</a></li><li class="nav-menu-item"><a href="/sports/soccer/">Soccer</a></li><li class="nav-menu-item"><a href="/sports/tennis/">Tennis</a></li><li class="nav-menu-item"><a href="/sports/olympics/">Olympics</a></li><li class="nav-menu-item"><a href="/sports/betting/">Betting</a></li><li class="nav-menu-item"><a href="/amny-sports-newsletter/"><span class="alt"><i class="fas fa-envelope"></i>Sports Newsletter</span></a></li></ul><ul class="nav-menu-items nav-menu-pile">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <span class="nav-menu-link">More from amNY</span>
+			</li><li class="nav-menu-item"><a href="/lifestyle/shopping/"><i class="fas fa-shopping-cart text-color-accent"></i>amNY Shops</a></li><li class="nav-menu-item"><a href="https://jobs.amny.com/"><i class="fas fa-user-tie"></i>Jobs</a></li><li class="nav-menu-item"><a href="https://games.amny.com/?arkpromo=Site_TopNav"><i class="fas fa-gamepad"></i>Games</a></li><li class="nav-menu-item"><a href="/digital-editions/"><i class="far fa-newspaper"></i>Digital Editions</a></li><li class="nav-menu-item"><a href="https://podcasts.schnepsmedia.com"><i class="fas fa-microphone-alt"></i>Podcasts</a></li><li class="nav-menu-item"><a href="/sponsored/"><i class="fas fa-user-tag"></i>Brand Content</a></li><li class="nav-menu-item"><a href="https://www.amny.com/cannabisdirectory">NYC Cannabis Directory</a></li></ul><ul class="nav-menu-items nav-menu-pile nav-menu-singlet-group">
+			<li class="nav-menu-item nav-menu-subhead">
+				  <a class="nav-menu-link" href="/home-pros/"><i class="fas fa-tools"></i>Home Pros</a>
+			</li>
+			<li class="nav-menu-item nav-menu-subhead">
+				  <a class="nav-menu-link" href="/contact-us/">Contact Us</a>
+			</li>		
+		<ul class="nav-menu-items">
+			<li class="nav-menu-social-links social-links nav-menu-icon-row">				
+				<a href="https://twitter.com/AMNewYork" target="_blank" title="Twitter">
+		<i class="fab fa-twitter" aria-hidden="true" aria-label="Twitter"></i></a>
+			
+				
+				<a href="https://www.facebook.com/amnewyork" target="_blank" title="Facebook">
+		<i class="fab fa-facebook-f" aria-hidden="true" aria-label="Facebook"></i></a>
+			
+				
+				<a href="https://www.instagram.com/amnewyork/" target="_blank" title="Instagram">
+		<i class="fab fa-instagram" aria-hidden="true" aria-label="Instagram"></i></a>
+			
+				
+				<a href="https://www.youtube.com/user/amnewyork" target="_blank" title="Youtube">
+		<i class="fab fa-youtube" aria-hidden="true" aria-label="Youtube"></i></a>
+			
+				
+</li>
+   		</ul>
+		
+		</ul>		
+	</div>
+	
+</nav>
+ 
+
+		</div>
+	</div>
+	
+		
+	 
+		
+		</div><!-- /the-header-area -->
+ 
+
+<div class="content-container single-template transparent-container wallpaper-container">
+<div class="container-center-cut">
+	 
+
+    <div id="theSidebarContainer" class="content-section standard-singlepost">
+
+        <div class="content-main">
+        	<div id="theArticleContainer">
+		<script>
+gtag('event', 'author_view', {
+	author_byline: 'Adam Daly',
+	story_title: 'Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install',
+	post_date: '2025-wk-27',
+	post_date_exact: '2025-07-01',
+});
+gtag('event', 'post_view_by_cat', {
+	post_category: 'Environment',
+	story_title: 'Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install',
+	post_date: '2025-wk-27',
+	post_date_exact: '2025-07-01',
+});
+gtag('event', 'post_view_by_cat', {
+	post_category: 'News',
+	story_title: 'Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install',
+	post_date: '2025-wk-27',
+	post_date_exact: '2025-07-01',
+});
+</script>
+<article id="post-137778121" class="post-137778121 post type-post status-publish format-standard has-post-thumbnail hentry category-environment category-news tag-modular-public-restrooms tag-portland-loo">
+	<div class="article-header">
+		
+					<div class="category-box category-label category-label-environment">
+			<a href="https://www.amny.com/environment/">Environment</a>
+			</div>
+					
+		<h1 class="article-title">Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install</h1>
+		
+
+		
+						<div class="article-meta triple">
+				
+				<span class="byline"><img alt='' src='https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-mini-sq.png' srcset='https://www.amny.com/wp-content/uploads/2023/06/amNY-logo-mini-sq.png 2x' class='avatar avatar-32 photo' height='32' width='32' decoding='async'/><span class="name">By <a href="https://www.amny.com/author/adam-daly/" title="Posts by Adam Daly" class="author url fn" rel="author">Adam Daly</a></span></span>
+					<div class="comments-meta vf-commentscount bkg-accent text-color-white" data-id="137778121"><a href="#comments-section"><i class="fas fa-comment-alt"></i><span class="the-comment-count"  id="comment-count-137778121"><span class="mobile-only">…</span></span> <span class="desktop-only">Comments</span></a></div>
+	
+				<span class="posted-on"><span class="intro">Posted on </span><a href="https://www.amny.com/news/modular-restrooms-nyc-parks-million-install/" rel="bookmark"><time class="entry-date published updated" datetime="2025-07-01T16:40:58-04:00">July 1, 2025</time></a></span>				
+			</div><!-- .article-meta -->
+				</div><!-- .article-header -->
+
+
+	<div class="post-thumbnail">
+	<div class="image-wrapper">
+				
+				<img width="1200" height="800" src="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&amp;w=1200" class="crop-center wp-post-image" alt="A modular Portland Loo restroom is delivered to Hoyt Playground in Queens, one of five installed across the city as part of a pilot program to expand public bathroom access" decoding="async" fetchpriority="high" srcset="https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=31&#038;resize=1200,800 1200w, https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=31&#038;resize=2048,1365 2048w, https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&#038;resize=384,256 384w, https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=51&#038;resize=900,600 900w, https://www.amny.com/wp-content/uploads/2025/07/DA8_9213_021925-Hoyt-Plgd-1.jpg?quality=31&#038;resize=1600,1067 1600w" sizes="(max-width: 1200px) 100vw, 1200px" title="Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install 1">			</div>
+	<div class="image-caption">A modular Portland Loo restroom is delivered to Hoyt Playground in Queens, one of five installed across the city as part of a pilot program to expand public bathroom access</div>	<div class="image-credit">Photo by NYC Parks / Daniel Avila.</div></div><!-- .post-thumbnail -->
+
+	<div class="addthis_inline_share_toolbox"></div>
+
+
+
+	<div class="article-content">
+		<p>This game of thrones cost taxpayers $5 million. 
+<p>Five new modular public restrooms, known as <a href="https://portlandloo.com/the-loo/" target="_blank" rel="noopener">“Portland Loos,”</a> are now fully operational in parks across the five boroughs, Mayor Eric Adams announced Tuesday. Though the restrooms themselves are relatively affordable, city processes pushed total costs close to $1 million per kiosk.</p><div id="piano-inline-wrapper">
+<p>The restrooms, designed for year-round use and quick installation, are located in Irving Square Park in Brooklyn, Joyce Kilmer Park in the Bronx, Thomas Jefferson Park in Manhattan, Hoyt Playground in Queens, and Father Macris Park in Staten Island.</p>
+<p>The kiosk-style units are part of Adams’ <a href="https://www.amny.com/news/nyc-46-new-public-restrooms-built/">“Ur In Luck”</a> initiative, which commits the city to building 46 new public restrooms by 2029 to address the lack of them in the five boroughs. An estimated 1,100 public toilets serve an 8.4 million-person population.</p><div id="piano-inline-signup"></div><div class="stn-size">
+<div data-stn-player="gq4cbg36"></div><script async type="text/javascript" src="https://embed.sendtonews.com/player3/embedcode.js?fk=gq4cbg36"></script>
+</div>
+
+<p>The $6 million pilot program, first announced in 2023, is funded by the city’s “Vital Parks for All” framework, which includes a $150 million investment in new restroom construction and the renovation of 36 existing facilities, according to Adams. </p>
+<p>“Let’s be honest, when nature calls, New Yorkers shouldn’t have to cut their fun short,” Adams said in a <a href="https://www.nyc.gov/office-of-the-mayor/news/477-25/mayor-adams-nyc-parks-commissioner-rodriguez-rosa-continue-we-outside-summer-announcing" target="_blank" rel="noopener">statement.</a> “We’re proud to be rolling out our new, sleek bathrooms across all five boroughs… without having to worry about where to go when they have to go.”</p>
+<h2>Why so much to build these restrooms?</h2>
+<p>Made in Portland, Oregon, the Loos include stainless steel stalls, baby changing stations, and full utility hookups. According to Adams, they cost roughly $1 million per location, or about one-third the cost of building a traditional public restroom.</p>
+    <div id="inline-content-recommendations"></div>
+
+
+<p>Evan Madden, CEO of Madden Fabrication, the company that manufactures the Portland Loos, told amNewYork that each restroom sold to New York City costs about $185,000. At each site, it then cost around $815,000 to extend new water and electrical utility lines, and to carry out minor site works like laying foundations and landscaping, according to a spokesperson for the mayor&#8217;s office. </p>
+<figure id="attachment_137778145" aria-describedby="caption-attachment-137778145" style="max-width: 700px" class="wp-caption alignnone"><img decoding="async" class="size-medium wp-image-137778145" src="https://www.amny.com/wp-content/uploads/2025/07/DA9_9823_020625-Irving-Sq.jpg?quality=51&amp;w=700" alt="Inside the Irving Square restroom in Brooklyn. The stainless-steel bathroom includes a toilet, hand sanitizer, baby changing station, and slatted openings for ventilation and safety." width="700" height="467" title="Million dollar potties: Five new modular restrooms open in NYC parks topped $1 million each to install 2" srcset="https://www.amny.com/wp-content/uploads/2025/07/DA9_9823_020625-Irving-Sq.jpg?quality=31&#038;resize=1200,800 1200w, https://www.amny.com/wp-content/uploads/2025/07/DA9_9823_020625-Irving-Sq.jpg?quality=51&#038;resize=384,256 384w, https://www.amny.com/wp-content/uploads/2025/07/DA9_9823_020625-Irving-Sq.jpg?quality=51&#038;resize=900,600 900w, https://www.amny.com/wp-content/uploads/2025/07/DA9_9823_020625-Irving-Sq.jpg?quality=31&#038;resize=1600,1067 1600w" sizes="(max-width: 700px) 100vw, 700px" /><figcaption id="caption-attachment-137778145" class="wp-caption-text"><span class="image-caption">Inside the Irving Square restroom in Brooklyn. The stainless-steel bathroom includes a toilet, hand sanitizer, baby changing station, and slatted openings for ventilation and safety.</span><span class="image-credit">Photo by NYC Parks / Daniel Avila.</span></figcaption></figure>
+<p>The Portland Loos now around the city are the &#8220;deluxe versions&#8221; of the standard models, as they are made of higher-grade stainless steel, but &#8220;they are not million-dollar toilets,&#8221; Madden added.</p><div class="ad-container embedded-ad-container">
+<div class="responsive-ad">
+<!-- /1048906/amny_content_responsive_1 -->
+<div id='amny_content_responsive_1'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('amny_content_responsive_1'); });
+  </script>
+</div>
+</div>
+
+</div>
+<p>“They use marine-grade 316 stainless steel, have ADA compliance features, baby changing tables, and were built to meet New York’s strict building codes,” Madden said. “Structurally, they’re the same as every other Loo, but the extras and the approval process here were intense.”</p>
+<p>Originally developed by the City of Portland in 2008, the Loo was designed to balance user privacy with safety and ease of maintenance. Its compact, vandal-resistant structure has since been installed at more <a href="https://portlandloo.com/loo-locator/" target="_blank" rel="noopener">250 locations nationwide</a>, including cities like Boston, Los Angeles, Miami, and Seattle where installation <a href="https://reason.com/2023/10/31/flush-with-cash-in-the-loo/" target="_blank" rel="noopener">costs have varied greatly</a>. </p><div class="ad-container embedded-ad-container">
+<div class="responsive-ad">
+<!-- /1048906/amny_content_responsive_2 -->
+<div id='amny_content_responsive_2'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('amny_content_responsive_2'); });
+  </script>
+</div>
+</div>
+
+</div>
+<p>Each unit arrives fully assembled and is coated in anti-graffiti powder for easier cleaning. For other cities and smaller municipalities, officials there can get a full installation done for $210,000 to $220,000, Madden said, adding that complexity adds cost in major cities like NYC &#8211; in particular, additional red tape and complex public infrastructure.</p>
+<p>Madden said working with New York City involved far more regulatory hurdles and review processes than in smaller municipalities. “The bigger the cities, the bigger the headache is,” he said. “It just varies. The more complex, the more people, the more department regulations — it’s harder, it’s more expensive.”</p>
+<p>One particularly sticky piece of red tape Madden came up against when the process started in 2023 was meeting construction requirements for prefabricated structures built outside the five boroughs.</p><div class="ad-container embedded-ad-container">
+<div class="responsive-ad">
+<!-- /1048906/amny_content_responsive_3 -->
+<div id='amny_content_responsive_3'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('amny_content_responsive_3'); });
+  </script>
+</div>
+</div>
+
+</div>
+<p>Madden needed to use a fabricator approved by the Department of Buildings or have the restroom units inspected by a registered special inspector. However, none of the pre-approved manufacturers were willing to take on the project, so Madden had to go through the process of getting a fabricator certified by the DOB himself — a step that added delays.</p>
+</div>
+		
+	</div><!-- .article-content -->
+	
+
+	<div class="article-footer">
+
+		
+		<div class="addthis_inline_share_toolbox"></div>
+
+		<div class="author-meta">
+				<h3 class="about-the-author">About the Author</h3>
+ 
+		</div>
+
+					<div class="comments-container" id="comments-section">                          <div data-spotim-module="conversation" data-post-id="137778121"></div>
+			</div>
+					
+		
+				
+	</div><!-- .article-footer-->
+
+	<div class="viafoura-conversation-wrapper vf-widget-wrapper" id="comments-section">
+
+	<header class="conversation-header">
+		<span class="section-title"><i class="fas fa-solid fa-comment text-color-accent"></i>Conversations</span>
+
+		<span class="account-settings"><a href="/my-account/"><i class="fa-solid fa-gear text-color-main" style="margin-right:.4rem"></i>Profile</a></span>
+	</header>
+	<p class="conversation-blurb">All comments are subject to our <a href="/community-guidelines/">Community Guidelines</a>. Schneps Media does not endorse the views shared by readers in our comment sections.</p>
+
+	<div class="viafoura">
+		<vf-conversations></vf-conversations>
+	</div>
+</div>
+		</article>
+<div id="magma-events-footer">
+	<div class="content-sidebar sidebar-section widget-area">
+	
+	</div>
+</div>
+
+<div class="component-container related-posts">
+<div class="related-posts-footer">
+<h2 class="related-title"><span class="more-in">More in</span> <a class="more-cat" href="https://www.amny.com/environment/">Environment</a></h2>
+	<ul class="display-posts-listing"><li class="listing-item article-container cards-design post-format-link"><a href="https://www.bxtimes.com/hochul-visits-bronx-seniors-promote-energy-program/" class="image related-posts-by-category"><img width="1198" height="796" src="https://www.bxtimes.com/wp-content/uploads/2026/10/Screenshot-2026-10-02-at-11.07.53-AM.jpg?quality=51&amp;w=1198" class="crop-center wp-post-image" alt="Screenshot 2026-10-02 at 11.07.53 AM" decoding="async" loading="lazy" srcset="https://www.bxtimes.com/wp-content/uploads/2026/10/Screenshot-2026-10-02-at-11.07.53-AM.jpg?quality=51 1198w, https://www.bxtimes.com/wp-content/uploads/2026/10/Screenshot-2026-10-02-at-11.07.53-AM.jpg?quality=51&#038;resize=384,255 384w, https://www.bxtimes.com/wp-content/uploads/2026/10/Screenshot-2026-10-02-at-11.07.53-AM.jpg?quality=51&#038;resize=900,598 900w" sizes="auto, (max-width: 1198px) 100vw, 1198px" /></a><span class="title-wrapper"><a class="title related-posts-by-category" href="https://www.bxtimes.com/hochul-visits-bronx-seniors-promote-energy-program/">Gov. Kathy Hochul visits Bronx seniors to promote Energy <span class="lgwd">Affordability</span> Program expanded to 2.5 million households</a></span></li><li class="listing-item article-container cards-design post-format-link"><a href="https://www.brooklynpaper.com/city-breaks-ground-box-street-park/" class="image related-posts-by-category"><img width="1200" height="679" src="https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=51&amp;w=1200" class="crop-center wp-post-image" alt="box street park" decoding="async" loading="lazy" srcset="https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=31 2048w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=31&#038;resize=1200,679 1200w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=51&#038;resize=384,217 384w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=51&#038;resize=900,509 900w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/box-street-creek.jpg?quality=31&#038;resize=1600,905 1600w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></a><span class="title-wrapper"><a class="title related-posts-by-category" href="https://www.brooklynpaper.com/city-breaks-ground-box-street-park/">City breaks ground on Box Street Park after two decades of delays</a></span></li><li class="listing-item article-container cards-design post-format-link"><a href="https://www.bxtimes.com/city-harvest-electric-trucks-in-hunts-point/" class="image related-posts-by-category"><img width="1024" height="768" src="https://www.bxtimes.com/wp-content/uploads/2026/09/020FAFBD-54D2-4796-B4BE-E81968CE75C8_1_105_c.jpeg?quality=51&amp;w=1024" class="crop-center wp-post-image" alt="Hunts Point community stakeholders from the Bronx is Breathing project celebrate the launch of three electric trucks that will be supporting City Harvest deliveries." decoding="async" loading="lazy" srcset="https://www.bxtimes.com/wp-content/uploads/2026/09/020FAFBD-54D2-4796-B4BE-E81968CE75C8_1_105_c.jpeg?quality=51 1024w, https://www.bxtimes.com/wp-content/uploads/2026/09/020FAFBD-54D2-4796-B4BE-E81968CE75C8_1_105_c.jpeg?quality=51&#038;resize=384,288 384w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></a><span class="title-wrapper"><a class="title related-posts-by-category" href="https://www.bxtimes.com/city-harvest-electric-trucks-in-hunts-point/">City Harvest rolls out electric trucks to fight pollution in Hunts Point</a></span></li><li class="listing-item article-container cards-design post-format-link"><a href="https://www.bxtimes.com/fordham-receives-2m-for-bronx-green-jobs-center/" class="image related-posts-by-category"><img width="1166" height="776" src="https://www.bxtimes.com/wp-content/uploads/2026/09/Screenshot-2026-09-25-at-1.12.15-PM.jpg?quality=51&amp;w=1166" class="crop-center wp-post-image" alt="Screenshot 2026-09-25 at 1.12.15 PM" decoding="async" loading="lazy" srcset="https://www.bxtimes.com/wp-content/uploads/2026/09/Screenshot-2026-09-25-at-1.12.15-PM.jpg?quality=51 1166w, https://www.bxtimes.com/wp-content/uploads/2026/09/Screenshot-2026-09-25-at-1.12.15-PM.jpg?quality=51&#038;resize=384,256 384w, https://www.bxtimes.com/wp-content/uploads/2026/09/Screenshot-2026-09-25-at-1.12.15-PM.jpg?quality=51&#038;resize=900,599 900w" sizes="auto, (max-width: 1166px) 100vw, 1166px" /></a><span class="title-wrapper"><a class="title related-posts-by-category" href="https://www.bxtimes.com/fordham-receives-2m-for-bronx-green-jobs-center/">Fordham University receives $2.5M for the Bronx Green Jobs Center</a></span></li></ul></div>
+</div>
+			</div>
+        </div>
+
+		<div id="theSidebar" class="sidebar-section widget-area">
+			<div class="sidebar-section__inner">
+            <section class="widget_box widget">
+<div class="ad-container card-ad-container">
+<div id='amny_ros_300x250_1' style='width: 300px; height: 250px;'>
+<script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_300x250_1'); });
+  </script>
+</div>
+
+</div>
+</section>
+<section id="tribe-events-adv-list-widget-2" class="widget tribe-events-adv-list-widget magma-new-widget"><h2 class="widget-title"><a href="https://events.amny.com" target="_blank">Things to do in NYC</a></h2>
+
+	<p class="tribe-events-widget-link tribe-events-widget-submit-link">
+		<a class="basic-button bkg-main" href="https://events.amny.com/add-your-event/" rel="bookmark" target="_blank">
+			<i class="fa fa-plus" aria-hidden="true"></i> 
+			Post an Event</a>
+	</p>
+	
+	<div class="events-widget-content">
+		<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-featured">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/brooklyn-charter-school-fair-kids-activity-expo-3/"><img width="700" height="467" src="https://events.amny.com/wp-content/uploads/2026/08/bf-calendar-Brooklyn-Charter-School-Fair-Kids-Activity-Expo-2026-10.jpg?quality=51&w=700" class="crop-center wp-post-image" alt="The Brooklyn Charter School Fair &amp; K" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Tomorrow, noon</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/brooklyn-charter-school-fair-kids-activity-expo-3/" rel="bookmark">Brooklyn Charter School Fair &#038; Kids Activity Expo							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Major R. Owens Health &#038; Wellness Community Center</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-sponsored">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/ciderfeast-brooklyn-october-3rd/"><img width="700" height="525" src="https://events.amny.com/wp-content/uploads/2026/09/CIDER2263_f761ef.jpg?quality=51&w=700" class="crop-center wp-post-image" alt="Celebrate Cider Season with us October 3" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Tomorrow, noon</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/ciderfeast-brooklyn-october-3rd/" rel="bookmark">CiderFeast Brooklyn October 3rd							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Industry City Courtyard 1/2</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-sponsored">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/broadway-magic-hour-nycs-family-magic-show/"><img width="700" height="511" src="https://events.amny.com/wp-content/uploads/2026/08/Broadway_Magic_Hour_Family_Friendly_Magic_Show_NYC_2026-e1787602858724.jpg?quality=51&w=700" class="crop-center wp-post-image" alt="The Broadway Magic Hour with Jim Vines (" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Tomorrow, 2 pm</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/broadway-magic-hour-nycs-family-magic-show/" rel="bookmark">Broadway Magic Hour: NYC&#8217;s Family Magic Show							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Broadway Magic Hour: Magic Show</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-sponsored">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/47-films-14-countries-one-global-caribbean-celebration-conch-shell-international-film-fest-unveils-its-2026-official-selection/"><img width="700" height="394" src="https://events.amny.com/wp-content/uploads/2026/08/a-glimpse-at-csiff26-coming-oct-9-11.png?quality=51&w=700" class="crop-center wp-post-image" alt="From the Caribbean to its global Diaspor" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Oct. 9, 11 am</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/47-films-14-countries-one-global-caribbean-celebration-conch-shell-international-film-fest-unveils-its-2026-official-selection/" rel="bookmark">47 Films. 14 Countries. One Global Caribbean Celebration: Conch Shell International Film Fest Unveils Its 2026 Official Selection							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Regal UA Midway</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-featured">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/mt-loretto-italian-festival/"><img width="700" height="464" src="https://events.amny.com/wp-content/uploads/2022/11/family-placeholder-baby.png?quality=51&w=700" class="crop-center wp-post-image" alt="Join Catholic Charities of Staten Island" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Oct. 9, all day</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/mt-loretto-italian-festival/" rel="bookmark">Mt. Loretto Italian Festival							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Mount Loretto</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-featured">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/hands-on-native-new-york-traditions-and-more/"><img width="700" height="464" src="https://events.amny.com/wp-content/uploads/2026/09/cornhusk-dolls-Mohawks.jpg?quality=51&w=700" class="crop-center wp-post-image" alt="Bring the whole family to the National M" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Oct. 10, 11 am</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/hands-on-native-new-york-traditions-and-more/" rel="bookmark">Hands-On: Native New York Traditions and More							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Smithsonian National Museum of the American Indian</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-featured">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/blessing-of-the-animals-at-marble-collegiate-church/"><img width="700" height="467" src="https://events.amny.com/wp-content/uploads/2026/09/Marble-Church-Blessing-of-the-Animals.jpg?quality=51&w=700" class="crop-center wp-post-image" alt="Bring your pets, cuddly and cute, or not" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Oct. 11, noon</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/blessing-of-the-animals-at-marble-collegiate-church/" rel="bookmark">Blessing of the Animals at Marble Collegiate Church							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Marble Collegiate Church</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+				<article class="article-container cards-design tribe-mini-calendar-event event--1 type-tribe_events tribe-clearfix status-featured">
+			<div class="tribe-event-image">
+				<a class="magma-event-thumbnail" href="https://events.amny.com/event/dia-de-los-muertos-day-of-the-dead/"><img width="700" height="468" src="https://events.amny.com/wp-content/uploads/2026/09/DgB8l0fNdMidgzBALQvN0tFs.png?quality=51&w=700" class="crop-center wp-post-image" alt="Día de los Muertos (Day of the Dead) is" loading="lazy"></a>	
+			</div>
+		
+			<div class="context-box">
+				<div class="magma-list-date">
+					<span>Oct. 31, 11 am</span>
+				</div>
+
+				<div class="magma-list-info">
+					<h2 class="magma-tribe-events-title">
+						<a href="https://events.amny.com/event/dia-de-los-muertos-day-of-the-dead/" rel="bookmark">Día de los Muertos (Day of the Dead)							<br><span class="magma-widget-venue text-color-main" style="font-size:80%;"><i class="fa fa-map-marker-alt text-color-tert" aria-hidden="true"></i>Smithsonian National Museum of the American Indian</span>						</a>
+					</h2>
+			</div>
+		</div>
+		</article>
+		
+	</div>
+	
+	<p class="tribe-events-widget-link tribe-events-widget-view-all-link">
+		<a class="basic-button bkg-plain text-color-white" href="https://events.amny.com" rel="bookmark">View All Events…</a>
+	</p>
+</section>
+<script type="text/javascript">
+let ajax_url = "https://www.amny.com/wp-admin/admin-ajax.php";
+let data = new FormData();
+data.append('action', 'magma_events_impressions');
+data.append('eventids', JSON.stringify([869053,887907,881445,881468,796833,889159,888065,888855]));
+data.append('eventcampaigns', JSON.stringify([]));
+navigator.sendBeacon( ajax_url, data );				
+</script>
+<section class="widget_box widget">
+<div class="ad-container card-ad-container">
+<div id='amny_ros_tower' style='width: 300px; min-height: 250px;'>
+<script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_tower'); });
+  </script>
+</div>
+</div>
+</section>
+<section class="featured_jobs_widget widget">
+<div class="top-posts featured featured-jobs">
+<h2 class="widget-title"><a href="https://jobs.amny.com" target="_blank">Jobs in New York</a></h2>
+<h4 class="widget-add-yours"><a href="https://jobs.amny.com/list-your-job/" target="_blank" class="basic-button bkg-main"><i class="fas fa-user-plus"></i>Add your job</a></h4>
+<ul class="display-posts-listing">
+<li class="listing-item article-container cards-design"><span class="title-wrapper"><a class="title featured-job" href="https://jobs.amny.com/2026/10/01/m-wbe-work-opportunity-3/" target="_blank"><span class="company-name"><i class="fas fa-building"></i>MDG Design + Construction</span><span class="job-title">M/WBE Work Opportunity</span></a></span>
+</li>
+		
+<li class="listing-item article-container cards-design"><span class="title-wrapper"><a class="title featured-job" href="https://jobs.amny.com/2026/10/01/data-entry-representative-18/" target="_blank"><span class="company-name"><i class="fas fa-building"></i>Edge Technology </span><span class="job-title">Data Entry Representative</span></a></span>
+</li>
+		
+<li class="listing-item article-container cards-design"><span class="title-wrapper"><a class="title featured-job" href="https://jobs.amny.com/2026/09/21/architectural-designer-residential/" target="_blank"><span class="company-name"><i class="fas fa-building"></i>Zwirko Ortmann & Hugo Architects, P.C.</span><span class="job-title">Architectural Designer Residential</span></a></span>
+</li>
+		</ul>
+<h4 class="widget-add-yours"><a href="https://jobs.amny.com" class="basic-button bkg-main" target="_blank">View all jobs…</a></h4>
+</div></section><section class="widget_box widget">
+<div class="ad-container card-ad-container">
+<div id='amny_ros_300x250_2' style='width: 300px; height: 250px;'>
+<script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_300x250_2'); });
+  </script>
+</div>
+</div>
+</section>
+<section class="widget_promo widget standard"><div class="community-partner-box bkg-plain promo-content">
+<h2 class="section-title text-color-white"><a href="/home-pros/"><i class="fas fa-wrench text-color-accent"></i>Home Pros</a></h2>
+<p><a href="/home-pros/" class="basic-button bkg-accent text-color-white">Find a pro</a></p>
+</div></section><section class="widget_box widget">
+<div class="ad-container card-ad-container">
+<div id='amny_ros_300x250_3' style='width: 300px; height: 250px;'>
+<script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_300x250_3'); });
+  </script>
+</div>
+
+</div>
+</section>
+<section class="widget_promo widget optional"><div class="top-posts news">
+<h2 class="widget-title">Latest News</h2>
+<ul class="display-posts-listing"><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/law/chief-judge-wilson-john-zaremba-trial-lawyers/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/RCS06840.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Court of Appeals Chief Judge Rowan Wilson swearing in John Zaremba as the 59th President of the New York State Trial Lawyers Association." decoding="async" loading="lazy" title="Chief Judge Rowan Wilson installs John Zaremba as 59th NYS Trial Lawyers Association president 3"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/law/chief-judge-wilson-john-zaremba-trial-lawyers/">Chief Judge Rowan Wilson installs John Zaremba as 59th NYS Trial Lawyers <span class="lgwd">Association</span> president</a></span></li><li class="listing-item article-container cards-design"><a href="https://www.amny.com/news/jay-zs-30-year-legacy-comes-home-to-brooklyn-with-free-docuseries-screening/" class="image"><img width="520" height="380" src="https://www.brooklynpaper.com/wp-content/uploads/2026/10/jay-z_in_8_email.jpg.jpg?quality=51&amp;w=520" class="crop-center wp-post-image" alt="jay-z_in_8_email.jpg" decoding="async" loading="lazy" /></a><span class="title-wrapper"><a class="title" href="https://www.amny.com/news/jay-zs-30-year-legacy-comes-home-to-brooklyn-with-free-docuseries-screening/">JAŸ-Z’s 30-year legacy comes home to Brooklyn with free docuseries screening</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/news/off-duty-nypd-officer-stabbed-bronx-10022026/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/bronx-cop-stabbed-citizen-10022026.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="cops in bronx at scene where off-duty NYPD officer was stabbed" decoding="async" loading="lazy" title="Off-duty NYPD officer stabbed in the Bronx, police say 4"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/news/off-duty-nypd-officer-stabbed-bronx-10022026/">Off-duty NYPD officer stabbed in the Bronx, police say</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/news/pedestrian-traffic-fatalities-drop-record-2026-dot/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/DSC06123-copy.webp?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Pedestrian traffic deaths reached an historic low for the first nine months of this year, according to new city Department of Transportation data." decoding="async" loading="lazy" title="Pedestrian traffic fatalities drop over first nine months of 2026 amid recent spate of deadly crashes: DOT 5"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/news/pedestrian-traffic-fatalities-drop-record-2026-dot/">Pedestrian traffic fatalities drop over first nine months of 2026 amid recent spate of deadly crashes: DOT</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/news/cornell-7-case-hochul-james-rape-investigation/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/DSC_1187.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Gov. Kathy Hochul and New York Attorney General Letitia James speak Friday, Oct. 2, 2026, after Hochul appointed James as special prosecutor in the Cornell University sexual assault case." decoding="async" loading="lazy" title="Cornell 7 case: Hochul backs closing NY consent-law gap as AG James takes over rape investigation 6"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/news/cornell-7-case-hochul-james-rape-investigation/">Cornell 7 case: Hochul backs closing NY <span class="lgwd">consent-law</span> gap as AG James takes over rape <span class="lgwd">investigation</span></a></span></li></ul>
+</div></section><section class="widget_promo widget optional"><div class="top-posts sports">
+<h2 class="widget-title">Sports</h2>
+<ul class="display-posts-listing"><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/sports/liberty-freedom-new-york-city-different-angle/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/liberty-swim.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="27 athletes got a glimpse at Lady Liberty while swimming through New York Harbor." decoding="async" loading="lazy" title="From liberty to freedom: New York City from a different angle 7"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/sports/liberty-freedom-new-york-city-different-angle/">From liberty to freedom: New York City from a different angle</a></span></li><li class="listing-item article-container cards-design post-format-link"><a href="https://www.brooklynpaper.com/brooklyn-liberty-fans-wnba-semifinals-2026/" class="image"><img width="1200" height="800" src="https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=51&amp;w=1200" class="crop-center wp-post-image" alt="New York Liberty defeat the Minnesota Lynx to advance to the Semi-Final Round." decoding="async" loading="lazy" srcset="https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=31&#038;resize=1200,800 1200w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=31&#038;resize=2048,1365 2048w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=51&#038;resize=384,256 384w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=51&#038;resize=900,600 900w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/260929_NYL_VS_MINN_BT_4.jpg?quality=31&#038;resize=1600,1067 1600w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></a><span class="title-wrapper"><a class="title" href="https://www.brooklynpaper.com/brooklyn-liberty-fans-wnba-semifinals-2026/">Brooklyn brings the energy as Liberty punch ticket to WNBA semifinals</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/sports/josh-hart-finger-knicks-10-1-26/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/06/2026-06-06T031925Z_632715263_MT1USATODAY29134908_RTRMADP_3_NBA-FINALS-NEW-YORK-KNICKS-AT-SAN-ANTONIO-SPURS.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Josh Hart Knicks Spurs Game 2 NBA Finals" decoding="async" loading="lazy" title="Knicks&#039; Josh Hart: Finger surgery would force me to retire 8"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/sports/josh-hart-finger-knicks-10-1-26/">Knicks&#8217; Josh Hart: Finger surgery would force me to retire</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/sports/giants-slow-jj-mccarthy-10-1-26/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/2026-09-27T231904Z_1478745795_MT1USATODAY29934063_RTRMADP_3_NFL-MINNESOTA-VIKINGS-AT-TAMPA-BAY-BUCCANEERS.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="JJ McCarthy Giants" decoding="async" loading="lazy" title="Giants to take things slow with JJ McCarthy after trade 9"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/sports/giants-slow-jj-mccarthy-10-1-26/">Giants to take things slow with JJ McCarthy after trade</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/sports/aaron-judge-alds-talk-palwcs-10-1-26/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/2026-10-01T042642Z_371610020_MT1USATODAY29964051_RTRMADP_3_MLB-WILDCARD-BOSTON-RED-SOX-AT-NEW-YORK-YANKEES.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Aaron Judge injury Yankees latest" decoding="async" loading="lazy" title="Will Aaron Judge be ready for Yankees&#039; ALDS clash vs. Rays? 10"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/sports/aaron-judge-alds-talk-palwcs-10-1-26/">Will Aaron Judge be ready for Yankees&#8217; ALDS clash vs. Rays?</a></span></li></ul>
+</div></section><section class="widget_promo widget optional"><div class="top-posts arts-entertainment">
+<h2 class="widget-title">Entertainment</h2>
+<ul class="display-posts-listing"><li class="listing-item article-container cards-design"><a href="https://www.amny.com/news/jay-zs-30-year-legacy-comes-home-to-brooklyn-with-free-docuseries-screening/" class="image"><img width="520" height="380" src="https://www.brooklynpaper.com/wp-content/uploads/2026/10/jay-z_in_8_email.jpg.jpg?quality=51&amp;w=520" class="crop-center wp-post-image" alt="jay-z_in_8_email.jpg" decoding="async" loading="lazy" /></a><span class="title-wrapper"><a class="title" href="https://www.amny.com/news/jay-zs-30-year-legacy-comes-home-to-brooklyn-with-free-docuseries-screening/">JAŸ-Z’s 30-year legacy comes home to Brooklyn with free docuseries screening</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/entertainment/brooklyn-museum-art-of-manga-japanese-comics-graphic-novels/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/DIG_E_2026_Art_of_Manga_002_Paula_Abreu_Pita_PS22-Large-JPEG.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="&quot;Art of Manga&quot; opens at the Brooklyn Museum on Oct. 3." decoding="async" loading="lazy" title="Brooklyn Museum&#039;s new exhibit &#039;Art of Manga&#039; spotlights hundreds of hand-drawn works of Japanese comics and graphic novels 11"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/entertainment/brooklyn-museum-art-of-manga-japanese-comics-graphic-novels/">Brooklyn Museum&#8217;s new exhibit &#8216;Art of Manga&#8217; spotlights hundreds of hand-drawn works of Japanese comics and graphic novels</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/new-york/manhattan/the-villager/dudamel-opens-the-philharmonic-season/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/09/Michael-Feinstein-Elizabeth-Segerstrom-Gustavo-Dudamel-BFA_55713_8187179.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Michael Feinstein, Elizabeth Segerstrom, Gustavo Dudamel" decoding="async" loading="lazy" title="The names in the dark, the music in the light: Dudamel opens the Philharmonic season 12"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/new-york/manhattan/the-villager/dudamel-opens-the-philharmonic-season/">The names in the dark, the music in the light: Dudamel opens the <span class="lgwd">Philharmonic</span> season</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/entertainment/arts-entertainment/the-cabaret-burlesque-east-village/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/09/burlesque-show-bob-krasner-09302026-12.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Rosalie Bangs taking a solo turn at The Cabaret Burlesque&#039;s &quot;Code Red&quot; at the club Berlin" decoding="async" loading="lazy" title="The Cabaret Burlesque comes to the East Village with the seductive power of teasing audiences 13"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/entertainment/arts-entertainment/the-cabaret-burlesque-east-village/">The Cabaret Burlesque comes to the East Village with the seductive power of teasing audiences</a></span></li><li class="listing-item article-container cards-design post-format-link"><a href="https://www.bxtimes.com/food-bank-for-nyc-6m-expansion-hunts-point/" class="image"><img width="1200" height="832" src="https://www.bxtimes.com/wp-content/uploads/2026/09/Elected-warehouse-tour-3-e1790705305927.jpeg?quality=51&amp;w=1200" class="crop-center wp-post-image" alt="Elected warehouse tour-3" decoding="async" loading="lazy" /></a><span class="title-wrapper"><a class="title" href="https://www.bxtimes.com/food-bank-for-nyc-6m-expansion-hunts-point/">Food Bank for NYC secures $6M to expand, modernize Hunts Point <span class="lgwd">distribution</span> center</a></span></li></ul>
+</div></section><section class="widget_promo widget optional"><div class="top-posts police-fire">
+<h2 class="widget-title">Crime</h2>
+<ul class="display-posts-listing"><li class="listing-item article-container cards-design post-format-link"><a href="https://qns.com/2026/10/queens-cop-guilty-impersonating-ice-officer/" class="image"><img width="1200" height="800" src="https://qns.com/wp-content/uploads/2026/10/queens-cop-guilty-impersonating-ice-officer01.webp?quality=51&amp;w=1200" class="crop-center wp-post-image" alt="A former cop from Ozone Park pleaded guilty in Brooklyn federal court on Wednesday to impersonating an ICE official to intimidate an immigrant woman from Queens who rejected him romantically." decoding="async" loading="lazy" srcset="https://qns.com/wp-content/uploads/2026/10/queens-cop-guilty-impersonating-ice-officer01.webp?quality=31 1536w, https://qns.com/wp-content/uploads/2026/10/queens-cop-guilty-impersonating-ice-officer01.webp?quality=31&#038;resize=1200,800 1200w, https://qns.com/wp-content/uploads/2026/10/queens-cop-guilty-impersonating-ice-officer01.webp?quality=51&#038;resize=384,256 384w, https://qns.com/wp-content/uploads/2026/10/queens-cop-guilty-impersonating-ice-officer01.webp?quality=51&#038;resize=900,600 900w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></a><span class="title-wrapper"><a class="title" href="https://qns.com/2026/10/queens-cop-guilty-impersonating-ice-officer/">Former cop from Queens pleads guilty to <span class="lgwd">impersonating</span> ICE official to intimidate woman who rejected his romantic overtures: Feds</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/police-fire/bronx-man-stabbed-dead-kitchen-10022026/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/police-crime-scene-file-dean-moses.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="police at crime scene in bronx" decoding="async" loading="lazy" title="Bronx man found stabbed to death in his kitchen: cops 14"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/police-fire/bronx-man-stabbed-dead-kitchen-10022026/">Bronx man found stabbed to death in his kitchen: cops</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/news/federal-judge-strikes-ice-immigration-court-arrest-policy/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/03/01_01st-74011.jpg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="Dean Moses of amNewYork captured this image in August 2025 of a family separation by ICE agents at 26 Federal Plaza in Lower Manhattan. It was part of his year-long coverage of immigration enforcement at the facility, and its impact on families." decoding="async" loading="lazy" title="Federal judge strikes down ICE immigration courthouse arrest policy across the country 15"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/news/federal-judge-strikes-ice-immigration-court-arrest-policy/">Federal judge strikes down ICE <span class="lgwd">immigration</span> courthouse arrest policy across the country</a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/news/anonymous-banner-zohran-mamdani-chinatown-jail/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/10/BA59923C-64E1-42BA-BC9F-A6A84973AB6B.jpeg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" title="&#039;Zohran stop the jail!&#039; Anonymous banner calls on mayor to halt Chinatown jail construction 16"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/news/anonymous-banner-zohran-mamdani-chinatown-jail/">&#8216;Zohran stop the jail!&#8217; Anonymous banner calls on mayor to halt Chinatown jail <span class="lgwd">construction</span></a></span></li><li class="listing-item article-container cards-design"><a class="image" href="https://www.amny.com/new-york/manhattan/central-park-artist-beaten-with-stick-20-times/"><img width="192" height="192" src="https://www.amny.com/wp-content/uploads/2026/09/ec9b4c81-a41b-4186-8c6a-13436d1347b3.jpeg?quality=51&amp;w=192&amp;h=192&amp;crop=1" class="crop-center attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" title="Man who allegedly murdered Central Park artist beat her with stick more than 20 times 17"></a> <span class="title-wrapper"><a class="title" href="https://www.amny.com/new-york/manhattan/central-park-artist-beaten-with-stick-20-times/">Man who allegedly murdered Central Park artist beat her with stick more than 20 times</a></span></li></ul>
+</div></section>            </div>
+        </div>
+    </div><!-- #main -->
+
+	 
+</div>
+</div><!-- #primary -->
+
+ 
+
+ 
+
+
+ 
+<div class="banner-container component-container">
+
+ 
+<a href="https://events.amny.com" class="banner-chunk chunk-calendar text-color-white" style="display: block;background-color:#16a2ea;background-image: url(https://www.amny.com/wp-content/uploads/2023/10/2022-01-21T150914Z_1_LYNXMPEI0K0SH_RTROPTP_4_HEALTH-CORONAVIRUS-BRITAIN-ABBA-scaled-1.jpg?quality=31);">
+
+	<div class="banner-chunk-content">
+
+<div class="banner-promo-icon"> 
+<i class="far fa-calendar-alt"></i>
+</div>
+<div class="banner-promo-content"> 
+<h2 class="">Things to do in NYC</h2>
+
+<button class="basic-button bkg-accent" href="https://events.amny.com">Full calendar</button>
+
+</div> 
+</div>
+</a>
+ 
+<a href="/home-pros/" class="banner-chunk chunk-directory text-color-white" style="display: block;background-color:#595959;background-image: url(https://www.amny.com/wp-content/uploads/2023/01/best-plumber-home-pros-nyc.jpg?quality=51&amp;w=1200?quality=31);">
+	<div class="banner-chunk-content">
+
+<div class="banner-promo-icon"> 
+<i class="fas fa-tools"></i>
+</div>
+<div class="banner-promo-content"> 
+<h2>Home Pros</h2>
+<button class="basic-button bkg-accent" href="/home-pros/">Find a pro</button>
+
+</div> 
+
+</div>
+</a></div>
+
+<div class="hero-container sister-sites-container component-container card">
+
+	<div class="component-title-section">
+		<h2 class="section-title">More from around NYC</h2>
+	</div>
+
+    <div class="hero-section sister-sites component-content-section hero-blocks-4">
+    				<article class="article-container cards-design">
+					<a href="https://www.bxtimes.com/third-avenue-bid-adds-security-measures/"><img width="628" height="419" src="https://www.bxtimes.com/wp-content/uploads/2026/10/image002.jpg?quality=51&amp;w=628" class="crop-center wp-post-image" alt="The Third Avenue BID installed 75 solar-powered lights across the district." decoding="async" loading="lazy" srcset="https://www.bxtimes.com/wp-content/uploads/2026/10/image002.jpg?quality=51 628w, https://www.bxtimes.com/wp-content/uploads/2026/10/image002.jpg?quality=51&#038;resize=384,256 384w" sizes="auto, (max-width: 628px) 100vw, 628px" /></a>					<div class="context-box sister-sites-metabox">
+				<div class="blurb category-label site-label-bronx-times"><a href="https://www.bxtimes.com">Bronx Times</a></div>
+				<h2><a href="https://www.bxtimes.com/third-avenue-bid-adds-security-measures/">Third Avenue BID adds security cameras, solar lighting to improve safety in the <span class="titend">South Bronx</span></a></h2>
+					</div>
+				</article>
+								<article class="article-container cards-design">
+					<a href="https://qns.com/2026/10/wong-grand-street-bridge-closure-maspeth-replace/"><img width="700" height="700" src="https://qns.com/wp-content/uploads/2026/10/unnamed-44-1.jpg?quality=51&amp;w=700" class="crop-center wp-post-image" alt="grand street bridge" decoding="async" loading="lazy" srcset="https://qns.com/wp-content/uploads/2026/10/unnamed-44-1.jpg?quality=31 1200w, https://qns.com/wp-content/uploads/2026/10/unnamed-44-1.jpg?quality=51&#038;resize=192,192 192w, https://qns.com/wp-content/uploads/2026/10/unnamed-44-1.jpg?quality=51&#038;resize=384,384 384w, https://qns.com/wp-content/uploads/2026/10/unnamed-44-1.jpg?quality=51&#038;resize=900,900 900w" sizes="auto, (max-width: 700px) 100vw, 700px" /></a>					<div class="context-box sister-sites-metabox">
+				<div class="blurb category-label site-label-qns"><a href="https://qns.com">QNS</a></div>
+				<h2><a href="https://qns.com/2026/10/wong-grand-street-bridge-closure-maspeth-replace/">CM Wong says latest Grand Street Bridge closure in Maspeth <span class="lgwd">underscores</span> <span class="lgwd">decades-long</span> need for <span class="lgwd">replacement</span></a></h2>
+					</div>
+				</article>
+								<article class="article-container cards-design">
+					<a href="https://www.brooklynpaper.com/maimonides-outpatient-imaging-center-borough-park/"><img width="700" height="467" src="https://www.brooklynpaper.com/wp-content/uploads/2026/10/outpatientimagingcenter_10012026-16.jpg?quality=51&amp;w=700" class="crop-center wp-post-image" alt="NY: Maimonides Outpatient Imaging Center &#8211; Ribbon Cutting" decoding="async" loading="lazy" srcset="https://www.brooklynpaper.com/wp-content/uploads/2026/10/outpatientimagingcenter_10012026-16.jpg?quality=31&#038;resize=1200,800 1200w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/outpatientimagingcenter_10012026-16.jpg?quality=51&#038;resize=384,256 384w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/outpatientimagingcenter_10012026-16.jpg?quality=51&#038;resize=900,600 900w, https://www.brooklynpaper.com/wp-content/uploads/2026/10/outpatientimagingcenter_10012026-16.jpg?quality=31&#038;resize=1600,1067 1600w" sizes="auto, (max-width: 700px) 100vw, 700px" /></a>					<div class="context-box sister-sites-metabox">
+				<div class="blurb category-label site-label-brooklyn-paper"><a href="https://www.brooklynpaper.com">Brooklyn Paper</a></div>
+				<h2><a href="https://www.brooklynpaper.com/maimonides-outpatient-imaging-center-borough-park/">&#8216;A timely, seamless <span class="lgwd">experience&#8217;:</span> Maimonides unveils new outpatient imaging center in <span class="titend">Borough Park</span></a></h2>
+					</div>
+				</article>
+								<article class="article-container cards-design">
+					<a href="https://gaycitynews.com/national-lgbtq-youth-suicide-line-trump/"><img width="700" height="466" src="https://gaycitynews.com/wp-content/uploads/2022/12/RFM_6815-scaled.jpg?quality=51&amp;w=700" class="crop-center wp-post-image" alt="Out lesbian Senator Tammy Baldwin of Wisconsin looks on during a ceremony celebrating the Respect for Marriage Act in 2022." decoding="async" loading="lazy" srcset="https://gaycitynews.com/wp-content/uploads/2022/12/RFM_6815-scaled.jpg?quality=31&#038;resize=1200,798 1200w, https://gaycitynews.com/wp-content/uploads/2022/12/RFM_6815-scaled.jpg?quality=51&#038;resize=384,255 384w, https://gaycitynews.com/wp-content/uploads/2022/12/RFM_6815-scaled.jpg?quality=51&#038;resize=900,599 900w, https://gaycitynews.com/wp-content/uploads/2022/12/RFM_6815-scaled.jpg?quality=31&#038;resize=1600,1064 1600w" sizes="auto, (max-width: 700px) 100vw, 700px" /></a>					<div class="context-box sister-sites-metabox">
+				<div class="blurb category-label site-label-gay-city-news"><a href="https://gaycitynews.com">Gay City News</a></div>
+				<h2><a href="https://gaycitynews.com/national-lgbtq-youth-suicide-line-trump/">National LGBTQ youth suicide crisis line restored one year after Trump <span class="titend">ended it</span></a></h2>
+					</div>
+				</article>
+				    </div>
+</div>
+
+	<footer class="site-footer">
+
+	<nav class="footer-nav-menu"><ul>
+							<li>
+			<a class="" href="https://www.amny.com/about-amny/" target="">
+			<span>About amNY</span>
+			</a>
+		</li>
+							<li>
+			<a class="" href="/contact-us/" target="">
+			<span>Contact Us</span>
+			</a>
+		</li>
+							<li>
+			<a class="" href="https://jobs.amny.com/" target="_blank">
+			<span>Jobs</span>
+			</a>
+		</li>
+							<li>
+			<a class="" href="/home-pros/" target="">
+			<span><i class="fas fa-tools"></i>Home Pros</span>
+			</a>
+		</li>
+							<li>
+			<a class="" href="/advertise/" target="">
+			<span>Advertise</span>
+			</a>
+		</li>
+							<li>
+			<a class="" href="/newsletter/" target="">
+			<span>Newsletter</span>
+			</a>
+		</li>
+		
+	
+			<li class="nav-menu-social-links social-links nav-menu-icon-row">				
+				<a href="https://twitter.com/AMNewYork" target="_blank" title="Twitter">
+		<i class="fab fa-twitter" aria-hidden="true" aria-label="Twitter"></i></a>
+			
+				
+				<a href="https://www.facebook.com/amnewyork" target="_blank" title="Facebook">
+		<i class="fab fa-facebook-f" aria-hidden="true" aria-label="Facebook"></i></a>
+			
+				
+				<a href="https://www.instagram.com/amnewyork/" target="_blank" title="Instagram">
+		<i class="fab fa-instagram" aria-hidden="true" aria-label="Instagram"></i></a>
+			
+				
+				<a href="https://www.youtube.com/user/amnewyork" target="_blank" title="Youtube">
+		<i class="fab fa-youtube" aria-hidden="true" aria-label="Youtube"></i></a>
+			
+				
+</li>
+		
+	</ul></nav>
+ 
+
+
+	<nav class="site-info"><ul>
+													<li class="copyright">
+			<a href="https://www.schnepsmedia.com" target="_blank">
+			<span>© amNY 2026 Schneps Media</span>
+			</a>
+		</li>
+													<li class="">
+			<a href="/privacy-policy/" target="">
+			<span>Privacy Policy </span>
+			</a>
+		</li>
+													<li class="">
+			<a href="/terms-of-use/" target="">
+			<span>Terms of Use</span>
+			</a>
+		</li>
+													<li class="">
+			<a href="/sitemap/" target="">
+			<span>Sitemap</span>
+			</a>
+		</li>
+		</ul></nav>
+ 
+
+	</footer>
+	
+</div> <!--/#grid-wrappr-->	
+</div><!--/#almost-everything-->
+</div><!--/#everything-->
+
+<nav id="theStickyNavBar" class="sticky sticky-fa sticky-bottom-bar" role="navigation">
+	<ul>
+					
+				<li class="hamburger">
+					<span class="sticky-item sticky-item-hamburger">
+					<i class="fas fa-bars opener"></i>
+					Sections
+					</span>
+				</li>
+
+											
+				<li class="sticky-link-news">
+					<a class="sticky-item sticky-item-news" href="/news/" target="" title="">
+					<i class="far fa-newspaper"></i>					News					</a>
+				</li>
+											
+				<li class="sticky-link-things-to-do">
+					<a class="sticky-item sticky-item-things-to-do" href="https://events.amny.com/" target="_blank" title="">
+					<i class="far fa-calendar-alt"></i>					Things to Do					</a>
+				</li>
+											
+				<li class="sticky-link-sports">
+					<a class="sticky-item sticky-item-sports" href="/sports/" target="" title="">
+					<i class="fa-solid fa-basketball"></i>					Sports					</a>
+				</li>
+											
+				<li class="sticky-link-contact">
+					<a class="sticky-item sticky-item-contact" href="/contact-us/" target="" title="">
+					<i class="fas fa-phone"></i>					Contact					</a>
+				</li>
+			
+						<li class="nav-menu-login-signup sticky-link-login-signup">
+			<span
+	class="acct "
+	data-acct
+	data-settings-url="/my-account/"
+	data-help-url="/help/"
+>
+
+  <!-- ── Trigger: shown when logged in ───────────────────────────────────── -->
+  <button
+    class="acct__trigger"
+    data-acct-trigger
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls="acctMenu"
+    style="display:none"
+  >
+    <span class="acct__badge" aria-hidden="true">
+      <span data-acct-initials><i class="fas fa-user text-color-main"></i></span>
+    </span>
+    <span class="acct__name" data-acct-name>Reader</span>
+    <span class="acct__chev" aria-hidden="true">&#8964;</span>
+    <span class="sr-only">Toggle account menu</span>
+  </button>
+
+  <!-- ── Dropdown panel ──────────────────────────────────────────────────── -->
+  <div class="acct__menu" id="acctMenu" role="menu" hidden>
+
+    <div class="acct__greet">
+      <p class="acct__hello">Hello, <span data-acct-name>Reader</span>!</p>
+    </div>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/my-account/"
+      rel="nofollow"
+      data-acct-settings
+    >
+      <span class="acct__icon acct__icon--gear" aria-hidden="true"></span>
+      <span>Account Settings</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    <a
+      class="acct__item"
+      role="menuitem"
+      href="/help/"
+      rel="nofollow"
+      data-acct-help
+    >
+      <span class="acct__icon acct__icon--help" aria-hidden="true"></span>
+      <span>Help</span>
+      <span class="acct__arrow" aria-hidden="true">›</span>
+    </a>
+
+    
+    <div class="acct__logout-wrap">
+      <a href="#" aria-label="Log Out" role="button" rel="nofollow noopener noreferrer" data-piano-logout>Log Out</a>    </div>
+
+    <div class="acct__logout-msg" role="status" aria-live="polite" hidden>
+      You have successfully signed out.
+    </div>
+
+  </div>
+  <!-- ── /Dropdown panel ─────────────────────────────────────────────────── -->
+
+  <!-- ── Fallback: shown when logged out ─────────────────────────────────── -->
+  <span class="acct__fallback" data-acct-fallback style="display:none">
+    <a class="piano-login" href="#" aria-label="Log In" role="button" rel="nofollow noopener noreferrer" data-piano-login="login"><i class="fas fa-user" aria-hidden="true"></i><span>Log In</span></a>    <a class="piano-register" href="#" aria-label="Register" role="button" rel="nofollow noopener noreferrer" data-piano-login="register">Register</a>  </span>
+
+</span>			</li>
+
+					
+			</ul>        
+</nav> 
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/schnepstheme-amny/*","/wp-content/themes/schnepstheme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" async src="//cdn.viafoura.net/entry/index.js"></script>
+<script id="parsely-cfg" src="//cdn.parsely.com/keys/amny.com/p.js" async="" defer=""></script>
+	<script id="schneps-piano-glue-js-extra">
+var SchnepsPianoConfig = {"env":"production","isProd":"1","composerHost":"https://c2.amny.com","pianoIdUrl":"https://auth.amny.com","endpoint":"https://vx.amny.com","gaTrackingId":"G-XJYLNCK4WG","registrationTermId":"TMXHRJC7DVIS","registrationTemplateId":"OT0R7HVC38FG","postCategories":["piano_article","environment","news"]};
+//# sourceURL=schneps-piano-glue-js-extra
+</script>
+<script id="schneps-piano-glue-js" src="https://www.amny.com/wp-content/client-mu-plugins/pianoio-schneps/assets/js/piano-glue.js?ver=2.5.0"></script>
+<script id="schneps-viafoura-js-extra">
+var vf_settings = {"section_uuid":"00000000-0000-4000-8000-062523ee3216"};
+//# sourceURL=schneps-viafoura-js-extra
+</script>
+<script async data-wp-strategy="async" id="schneps-viafoura-js" src="https://www.amny.com/var/www/wp-content/plugins/schneps-viafoura/assets/viafoura.js?ver=1.0.28"></script>
+<script id="jetpack-stats-js-before">
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"228294986","post":"137778121","tz":"-4","srv":"www.amny.com","hp":"vip","j":"1:16.2"} ]);
+_stq.push([ "clickTrackerInit", "228294986", "137778121" ]);
+//# sourceURL=jetpack-stats-js-before
+</script>
+<script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202640.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.amny.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.amny.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+
+<div class="footer-ad-code"><!-- /1048906/amny_ros_pixel_1 -->
+<div id='amny_ros_pixel_1'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('amny_ros_pixel_1'); });
+  </script>
+</div>
+
+<script>
+googletag.cmd.push(() => {
+	googletag.display(interstitialSlot);
+});
+</script></div>
+
+
+</body>
+</html>

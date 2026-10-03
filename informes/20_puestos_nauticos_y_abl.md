@@ -262,3 +262,308 @@ En las parcelas del convenio, dividir por 0,6. [verificado la regla del 40%; el 
 - **Las cuentas del punto 15 dependen de supuestos discutibles** (personal de limpieza, costo de obra, días con foodtrucks). Sirven para el orden de magnitud, no como presupuesto.
 - **Nadie fue a ver los lugares.** Todo lo de terreno sale de mapas y catastro.
 
+
+
+---
+---
+
+# Segunda parte · Baños conectados, foodtrucks al borde, Bosque Alegre y clases al aire libre
+
+Investigación al 03/10/2026.
+
+**Fuentes nuevas, en `01_raw/puestos_nauticos/`:**
+- `3_cloaca_playones_bosque/`;
+- `4_banos_conectados/`;
+- `5_clases_parques/`.
+
+**Decisiones del cliente (03/10/2026):**
+- **Baños: sólo conectados a agua y cloaca.** Los secos y los químicos quedan descartados: «ya se probaron y el olor es imposible».
+- **Foodtrucks: al borde de cada puesto,** en el playón o la calle, nunca adentro del parque.
+- **Bosque Alegre se suma como polo de foodtrucks y movida,** sobre su calle ancha y junto al Centro Municipal de Exposiciones, sin entrar al bosque.
+- **Las clases del programa son gratis.**
+
+*Donde esta segunda parte corrige a la primera, vale lo de esta segunda parte.* En particular, quedan sin efecto las opciones de baño seco y químico de los puntos 14 y 15, y los costos del baño conectado se reemplazan por los de abajo.
+
+---
+
+## Respuestas en una línea
+
+**Cloaca más cercana a cada puesto.** AySA no publica su red calle por calle ni tiene un buscador gratis y anónimo. Las distancias son hasta el lote urbano más cercano, por cuya calle probablemente pasa una colectora. [inferencia y cálculo propio sobre ARBA y OpenStreetMap]
+- **Puerto: 20 a 45 m,** hasta los lotes de Primera Junta y Mitre. En ese radio, el 97,6% de los hogares tiene cloaca. Es el mejor caso y podría ir por gravedad, aunque falta la cota.
+- **33 Orientales: unos 45 m,** hasta las casas de la misma calle. Hoy el Municipio alquila ahí un baño químico por mes (Licitación 19/2026, renglón 22). [verificado el renglón]
+- **Pacheco: 75 a 110 m.** Al lado está Puerto Libre, que es municipal y tiene obra de «ampliación de las instalaciones cloacales» desde el 20/07/2026. No sé si está conectado a la red. [según el Municipio]
+- **Águila: 100 a 145 m.** Si la colectora está del otro lado de las vías del tren, hay que cruzarlas.
+- **Roque Sáenz Peña: 190 a 440 m.** Está del lado del río de la defensa costera; lo más probable es que haga falta bombeo.
+- **Del Barco Centenera y Bosque Alegre: 235 a 455 m.** También del lado del río, con bombeo probable. Hoy el Municipio alquila ahí tres baños químicos por mes: dos en el Centro de Exposiciones y uno en Del Barco Centenera y Pedro de Mendoza. [verificado los renglones]
+- **La colectora más cercana a Sáenz Peña, Centenera y Bosque Alegre podría estar en Martín y Omar.** El Municipio anunció ahí en 2018 «la red de cloacas en ambos lados del pavimento», y no confirmé que se haya hecho. [según el Municipio]
+- **El Código de Ordenamiento Urbano manda conectar** en la zona de la costa (zona EPr): «a red existente o bien planta de tratamiento debidamente autorizada». [verificado, texto ordenado 2022, págs. 212-213]
+- **Lo que hace falta para tener el dato firme:** pedirle a AySA la factibilidad de cada puesto (formulario R-DOR-037) y un relevamiento de cotas. Lo tiene que pedir el Municipio. [verificado el formulario]
+
+**Cuánto cuesta un baño conectado** [verificado los precios oficiales; el resto: cálculo propio]
+- **Cargo de conexión de AySA, agua + cloaca + medidor:** $1,79 M en vereda a $2,76 M en calzada, con el coeficiente K de octubre de 2026. [verificado el reglamento; el K de octubre: probable, prensa citando al ente regulador]
+- **Caño de cloaca por gravedad:** $185.000 a $275.000 por metro. **Caño de agua:** $65.000 a $90.000 por metro. No hay un precio oficial por metro publicado en Argentina; sale de un presupuesto oficial de la Ciudad de Buenos Aires de 2026 y de una obra de la empresa municipal de Mar del Plata de agosto de 2026. [cálculo propio]
+- **Bombeo:** AySA prohíbe desaguar por gravedad un baño que quede por debajo de la vereda (Guía de instalaciones, Res. SOP 641/2023). Una estación chica cuesta entre $15 y $30 M; no encontré ninguna licitación con precio, así que la confianza es baja. [verificado la regla; el costo: cálculo propio]
+- **Módulo de 2 inodoros (uno accesible), de unos 14 m², elevado y con rampa:** entre $41 M (contenedor adaptado) y $97 M (construido en obra). Los baños de la Reserva Ecológica de Buenos Aires se adjudicaron en 2025 a $4,2–5,5 M por m², en pesos de julio de 2026. [verificado la adjudicación; el ajuste: cálculo propio]
+- **Obra total por puesto:** entre $60 M (a 50 m, sin bombeo) y $210 M (a 300 m).
+- **Operación:** entre $1,2 y $2,7 M por mes, con limpieza dos veces por día, insumos, agua y mantenimiento.
+- **Con la obra amortizada en 10 años:** entre $1,7 y $4,3 M por mes por puesto.
+- **Con encargado presente 10 horas por día:** sumar entre $2,8 y $3,6 M por mes por puesto.
+- **Los siete lugares, con la distancia de cada uno** (Puerto y 33 Orientales a 50 m; Águila y Pacheco a 150 m; Sáenz Peña, Centenera y Bosque Alegre a 300 m con bombeo): **obra de $617 M a $1.141 M** y **operación de $9,8 a $16,3 M por mes**, sin encargado. [cálculo propio]
+- **Limpieza:** el convenio de maestranza (CCT 281/96) paga $1.170.283 por mes a jornada completa en septiembre de 2026, lo que cuesta al empleador unos $1,57 M. [verificado la escala; el costo: cálculo propio]
+- **Inundación:** según la Autoridad del Agua, un piso 1 m sobre la cota de inundación es «riesgo medio» y 2 m es «riesgo bajo» (Res. 2222/2019). No encontré la cota oficial de inundación de la costa de San Isidro. [verificado; cota: no encontrado]
+
+**Precedentes de baños conectados en lugares de mucho uso** [verificado salvo indicación]
+- **Funcionan donde hay alguien:**
+  - un encargado (San Francisco paga encargados en todos sus baños);
+  - un horario con cierre de noche (Metz, parques de Buenos Aires);
+  - o un comercio obligado a mantenerlos (16 parques de Buenos Aires, Mendoza y playas públicas de Mar del Plata [probable]).
+- **Fracasan sin presencia ni horario:** Seattle (2008) y los baños antivandálicos de Rosario (2013-14), que terminaron cerrados. [verificado; Rosario: probable]
+- **La conexión puede costar más que el módulo:** en Nueva York, un kiosco de US$185.000 terminó en cerca de US$1 M con la conexión y la obra. [probable]
+- **Vicente López** paga unos $18,7 M por mes por limpiar los módulos sanitarios del Paseo de la Costa y alquilar químicos (Decreto 253/26). No encontré cuántos módulos son. [verificado]
+
+**¿Alcanza el canon de los foodtrucks?** [cálculo propio, 3 foodtrucks 13 días por mes, como en la primera parte]
+- **Con un canon como el de Tigre ($604.050 por mes):** cubre entre el 22% y el 50% de la operación de un baño conectado.
+- **Con uno como el de Mar del Plata ($2,99 M por mes):** cubre la operación. En las parcelas del convenio, donde queda el 60%, cubre entre el 67% y el 100%.
+- **El modelo de la Ciudad de Buenos Aires,** donde el comercio construye y mantiene el baño y paga canon recién después, es el único precedente donde los comercios pagan la obra. [verificado]
+
+**Foodtrucks al borde: playones** [medido sobre imágenes satelitales de enero de 2026; superficies probables, con 15 a 30% de error]
+- **Hay más playones que en OpenStreetMap.** Encontré cinco nuevos:
+  - Roque Sáenz Peña, al oeste de la rotonda: 850 a 1.580 m², pegado al Paisaje Protegido;
+  - Puerto: una explanada de acceso de 850 a 980 m², un lote de ripio de 1.040 a 1.200 m² y una plazoleta de 550 a 690 m²;
+  - Pacheco: ripio de 450 a 535 m².
+- **Los playones ya conocidos:**
+  - Sáenz Peña, 1.500 a 1.870 m²;
+  - Pacheco, unos 1.410 m²;
+  - Águila, 570 a 710 m², más un lote de tierra con unos 360 m² útiles.
+- **33 Orientales no se puede medir:** los árboles tapan la calle, y las dársenas de 2025 no se ven.
+- **Casi ningún playón es «calle»:**
+  - El Código dice que el Parque Municipal de la Ribera incluye las calles que lo limitan, «incluyendo la calzada y ambas aceras» (art. 1.2.4.8). [verificado]
+  - Casi todos los playones están dentro de la parcela del parque.
+  - Sólo la plazoleta del Puerto y el ripio de Pacheco quedan fuera de toda parcela, probablemente en vía pública.
+  - [verificado el texto; el catastro: cálculo propio]
+- **Por eso hay que definir qué es «al borde».** Si un playón pavimentado dentro de la parcela del parque cuenta como «adentro», casi no quedan lugares. [necesita dictamen de un abogado]
+- **Una norma vieja a revisar:** la Ordenanza 5824/1983 dice que en los sectores de Paraná a Güemes (Pacheco y Águila) «No existirán lugares destinados al estacionamiento». No sé si sigue vigente. [verificado el texto; vigencia: sin confirmar]
+
+**Bosque Alegre**
+- **Es «Paisaje Protegido Municipal»:** lo declaró el Decreto 910/2012, lo convalidó la Ordenanza 8651/2012 y entra en el sistema de la Ordenanza 8461/2009. [verificado]
+- **La ley provincial de paisajes protegidos (Ley 12.704) no se aplica:** rige para las áreas «declaradas por ley», y no encontré ninguna ley que lo declare. [verificado el texto; la aplicación: inferencia, necesita dictamen de un abogado]
+- **No encontré reglas para la calle de al lado:** ni zona de amortiguamiento, ni distancias, ni límites de ruido, luz, eventos o vehículos para un Paisaje Protegido. Las prohibiciones de la Ordenanza 8461 (art. 11, incluida la de música «en la periferia inmediata») son para los Parques Naturales, como Ribera Norte, no para los Paisajes Protegidos. [verificado; necesita dictamen de un abogado]
+- **El riesgo principal es una ordenanza de 1983:** la 5824 dice que en «el parque denominado Bosque Alegre» «No se autorizará el servicio gastronómico en sí mismo, sino exclusivamente la venta de bebidas en kioscos». No sé si sigue vigente ni si alcanza a la calle. [verificado el texto; necesita dictamen de un abogado]
+- **La «calle ancha»:**
+  - es, probablemente, la prolongación de Del Barco Centenera hasta el río (Stella Maris en OpenStreetMap);
+  - tiene de 8,5 a 17 m útiles, y su borde coincide con el límite del Paisaje Protegido;
+  - en el catastro no es una calle: está dentro de la parcela provincial del convenio (ítem 1), así que el 40% del canon va a la Provincia.
+  - [probable y cálculo propio]
+- **Lugar para foodtrucks sin entrar al bosque:**
+  - unos 2.270 m² sin vegetación sobre la calle;
+  - dejando libre un carril de 6 m quedan unos 950 m², del orden de 15 a 20 foodtrucks en fila;
+  - a eso se suman unos 1.030 m² del lote de ripio del Centro de Exposiciones.
+  - [cálculo propio]
+- **El Municipio ya hace movida con comida ahí:**
+  - Bocas Abiertas (noviembre de 2022, más de 40.000 personas, y 2023);
+  - un parador musical con food trucks (febrero de 2023);
+  - los «DJ Sunset» de los domingos con food trucks (verano de 2026).
+  - [según el Municipio]
+- **El puesto 3 (final de Del Barco Centenera) y el polo de Bosque Alegre son prácticamente el mismo lugar.** [cálculo propio]
+
+**16 · Clases al aire libre**
+- **a · En los parques del río hay una sola clase gratis del Municipio:** Funcional en «Alvear y el Río» (Bajo San Isidro), lunes y miércoles de 9:15 a 10:15. Queda a unos 770 m del puesto del Águila y a unos 580 m del de Pacheco. [verificado en la grilla municipal; distancias: cálculo propio]
+- **a · En el resto no hay ninguna clase:** Sáenz Peña, Centenera, el Puerto, 33 Orientales, Pacheco, Bosque Alegre y el Centro de Exposiciones. [verificado en la grilla]
+- **a · Cómo funcionan:** son libres, gratis y sin inscripción, con profesores de la Subsecretaría de Deportes. En total hay 11 horarios en 5 lugares, casi todos en Martínez y Villa Adelina. [verificado; según el Municipio, 08/07/2026]
+- **a · Cerca de Sáenz Peña:** el Campo de Deportes N° 6 tiene Mix Dance y Yoga, pero con inscripción. [verificado]
+- **b · No hay ninguna norma de San Isidro sobre instructores privados que cobran en plazas y parques:** ni permiso, ni registro, ni prohibición. Tampoco encontré actas ni clausuras. [no encontrado en el digesto, el Boletín, el Concejo ni la prensa]
+- **b · Lo más parecido:**
+  - la Ordenanza 6700 de 1989, que pide profesor con título y un registro, pero para gimnasios con local;
+  - la Ordenanza 7198 de 1993, que pide autorización y fianza para concurrencia «masiva» con fin comercial en plazas.
+  - [verificado; si alcanzan a una clase al aire libre: necesita dictamen de un abogado]
+- **b · Lo que se podría cobrar hoy a un instructor:** la tasa de ocupación de superficie pública ($246 por m² y por día, art. 17 d.1). Con 50 m² y dos clases por semana son unos $106.600 por mes. [verificado la tasa; que se aplique: inferencia]
+- **b · Un antecedente justo en Alvear y el Río:** un gimnasio privado ocupaba sin permiso un terreno municipal de 1.400 m² y lo devolvió por convenio en 2025 (Decreto 1090/2025). [verificado]
+- **c · Equipar un puesto para clases** (plataforma, bebedero, sombra y luz solar): entre $33 M y $90 M; los seis puestos, entre $196 M y $542 M. Mantenimiento: entre $0,6 M y $6,3 M por año por puesto. [cálculo propio]
+- **c · Bebedero:** San Isidro ya paga $2,02 M por bebedero de hormigón colocado en la zona del río, dentro de su propio contrato de espacios verdes (Licitación Pública 62/2024, Decreto 1077/2025); unos $2,9 M en pesos de julio de 2026. [verificado; ajuste: cálculo propio]
+- **c · Mantenimiento:** ese contrato de espacios verdes vence a fines de enero de 2027, y se podría sumar ahí. [verificado la duración]
+
+---
+
+## Cloaca: detalle por puesto
+
+[inferencia y cálculo propio; hace falta la factibilidad de AySA y un relevamiento de cotas]
+
+| Lugar | Colectora probable | Distancia | Obstáculos | Lado de la defensa costera | ¿Bombeo? | Hoy |
+|---|---|---|---|---|---|---|
+| 4 · Puerto | Lotes de Primera Junta y Mitre | 20–45 m | — | Sobre la dársena | Posible gravedad | Sanitarios anunciados en 2021, sin confirmar |
+| 5 · 33 Orientales | Casas de la misma calle | 45–100 m | — | Fuera del albardón | Posible gravedad | Baño químico alquilado |
+| 6 · Pacheco | Puerto Libre o lotes chicos | 75–110 m | Vías del tren, si se va a los lotes | Fuera del albardón | Sin cota | Baños de Puerto Libre, sólo para socios |
+| 1 · Águila | Parcela con casas del mismo lado o lotes chicos | 100–145 m | Vías del tren, si se va a los lotes | Fuera del tramo documentado | Sin cota | Ninguno |
+| 2 · Sáenz Peña | Martín y Omar (si se hizo) o lotes urbanos | 190–440 m | Campo de Deportes N° 6 en el medio | Del lado del río | Probable | Ninguno fijo |
+| 3 · Centenera y Bosque Alegre | Martín y Omar (si se hizo) o lotes urbanos | 235–455 m | — | Del lado del río | Probable | 3 químicos alquilados |
+
+**Lo que dice el Plan de Manejo de la Reserva Ribera Norte (2012)** [verificado]:
+- Pág. 60: «No se instaló el servicio cloacal por temor a comprometer la eficacia de la defensa costera».
+- Pág. 124: «Dicha red existe en las adyacencias del área y en el predio del vivero».
+- Pág. 26: la defensa costera trajo la «instalación de servicios cloacales en el Bajo».
+
+Si un caño puede cruzar el albardón necesita dictamen técnico de Hidráulica y de la Autoridad del Agua. [inferencia]
+
+## Costos del baño conectado: detalle [cálculo propio]
+
+**Precios oficiales usados** [verificado]:
+- **Reglamento tarifario de AySA** (texto ordenado aprobado por la Res. SOP 9/2024), art. 17. Todos los valores se multiplican por el coeficiente K:
+  - conexión de agua de 13 a 32 mm en vereda: $284,25;
+  - conexión de cloaca en vereda: $445,81;
+  - K de julio de 2026: 2.206,0871 (Res. ERAS 24/2026);
+  - K de octubre de 2026: 2.376,5912 [probable, prensa].
+- **Ciudad de Buenos Aires, sanitarios de la Reserva Ecológica:** adjudicados en $557.832.240 en 2025. Tienen 15 inodoros, 7 mingitorios, 1 baño accesible y 4 duchas.
+- **Ciudad de Buenos Aires, sanitarios del Jardín Botánico:** adjudicados en $319.880.718.
+- **Maestranza, CCT 281/96,** septiembre de 2026: $1.170.283 a jornada completa (acuerdo homologado el 24/09/2026).
+- **Vicente López, limpieza de los módulos del Paseo de la Costa más químicos,** 4 meses: $74.900.000 (Decreto 253/26). El decreto dice otra cifra en letras; se informa la de los números.
+
+**Costo por puesto según la distancia a la cloaca** (en millones de pesos):
+
+| Distancia | Bombeo | Obra total | Operación por mes | Total por mes, con la obra en 10 años |
+|---|---|---|---|---|
+| 50 m | no | 60–119 | 1,2–2,0 | 1,7–3,0 |
+| 50 m | sí | 71–142 | 1,4–2,5 | 2,0–3,7 |
+| 150 m | no | 85–156 | 1,3–2,1 | 2,0–3,4 |
+| 150 m | sí | 86–164 | 1,5–2,6 | 2,2–3,9 |
+| 300 m | no | 123–210 | 1,4–2,3 | 2,4–4,1 |
+| 300 m | sí | 109–197 | 1,6–2,7 | 2,5–4,3 |
+
+**Supuestos:**
+- **Módulo:** entre $45 y $95 M. Conexión de AySA, entre $1,8 y $2,8 M. Proyecto y trámites, entre $1 y $3 M.
+- **Operación:**
+  - limpieza dos veces por día: $0,71 a $0,89 M;
+  - insumos: $0,15 a $0,35 M;
+  - agua y cloaca: $0,13 a $0,37 M;
+  - mantenimiento: 4% de la obra por año.
+- **Con encargado,** sumar entre $2,8 y $3,6 M por mes.
+- **Lo más débil del cálculo es el precio por metro de caño.**
+- **Con bombeo a 300 m la obra sale algo más barata** porque el caño de impulsión cuesta menos que el de gravedad. Pero suma mantenimiento, depende de la luz y puede fallar con la sudestada. [inferencia]
+
+## Playones: detalle
+
+[superficie del polígono / sin vegetación, en m²; medidas sobre imagen satelital del 03/01/2026; probable]
+
+| Lugar | Qué es | m² | Catastro | ¿En OpenStreetMap? |
+|---|---|---|---|---|
+| 1 · Águila | Playón pavimentado | 710 / 573 | 85% parcela del parque (convenio, ítem 13) | Sí |
+| 1 · Águila | Lote de tierra con autos | 1.143 / 356 | 45% parcela del parque | Sí |
+| 2 · Sáenz Peña | Playón de hormigón junto al muelle | 1.874 / 1.500 | Parcela del parque (convenio, ítem 3) | Sí |
+| 2 · Sáenz Peña | Playón al oeste de la rotonda | 1.582 / 852 | Parcela del parque; a 1,4 m del Paisaje Protegido | **No** |
+| Bosque Alegre / 3 | Calle ancha, con 5 m de margen al Paisaje Protegido | 3.594 / 2.117 | 71% parcela del convenio (ítem 1); 21% sin parcelar | La calle sí, el ancho no |
+| Bosque Alegre / 3 | Explanada final junto al río | 1.304 / 410 | Sin parcelar; a 9 m del Paisaje Protegido | **No** |
+| Bosque Alegre | Lote de ripio del Centro de Exposiciones | 1.732 / 1.030 | Parcela del convenio (ítem 1); a 21 m del Paisaje Protegido | **No** |
+| Bosque Alegre | Vuelta de Obligado, últimos 150 m | 3.012 / 1.996 | Parcelas del convenio; a 72–82 m del Paisaje Protegido | La calle sí |
+| 4 · Puerto | Explanada de acceso | 981 / 853 | Parcela del Parque del Puerto | **No** |
+| 4 · Puerto | Lote de ripio con colectivos | 1.195 / 1.040 | Parcela del Parque del Puerto | **No** |
+| 4 · Puerto | Plazoleta al suroeste de la rotonda | 693 / 553 | Fuera de parcelas: probablemente vía pública | **No** |
+| 5 · 33 Orientales | Plaza dura del Paseo | 886 / 298 | Fuera de parcelas; es parte del Paseo | **No** |
+| 6 · Pacheco | Playón del Paseo Público Costero | 1.410 / 963 | 74% parcela del parque (convenio, ítem 12) | Sí |
+| 6 · Pacheco | Ripio al noreste | 535 / 445 | 91% fuera de parcelas: probablemente vía pública | Sólo como camino |
+
+**Sólo dos lugares tienen norma de estacionamiento:**
+- las «dársenas de estacionamiento» de 33 Orientales (Decreto 605/2025);
+- la rotonda y los «nuevos asfaltos» del Puerto (Municipio, 2019).
+
+[verificado]
+
+## Bosque Alegre: textos clave [verificado]
+
+- **Decreto 910/2012, art. 2:** «Declárase Paisaje Protegido al área comprendida entre la Costa del Río de la Plata, la calle Del Barco Centenera, la calle 1, y la margen derecha del Canal de Desagüe…». Siguen 6 coordenadas; con ellas el polígono mide unos 34.906 m² [cálculo propio]. El Municipio dice 4,5 ha.
+- **Un error de número:** el decreto cita la «Ordenanza 8641», que es la de baños para menores en centros comerciales. La que corresponde es la 8461. [verificado / inferencia]
+- **Ordenanza 8461/2009, art. 5:** el Paisaje Protegido abarca paisajes «dignos de ser preservados», incluidas «Zonas aprovechadas por el hombre de manera intensiva para esparcimiento y turismo».
+- **Ordenanza 5824/1983, art. 9:** «Sobre el parque denominado Bosque Alegre, se permitirá la instalación de mesas para usos gastronómicos en zonas prefijadas. No se autorizará el servicio gastronómico en sí mismo, sino exclusivamente la venta de bebidas en kioscos según diseño previamente aprobado por la Municipalidad.»
+- **Ley 12.704, art. 1:** «Las áreas, que deberán ser declaradas por ley…». El art. 7 pide evaluación de impacto ambiental para comercios «en el lugar o en zonas aledañas», pero sólo en las áreas que declara una ley.
+- **Convenio de la costa:**
+  - cláusula 6ª: usos gastronómicos «compatibles con el aprovechamiento del espacio público, libre y gratuito»;
+  - cláusula 7ª: prohíbe lo que limite «la libre circulación y el acceso público».
+
+## 16 · Clases: detalle
+
+**Grilla municipal de clases libres y gratis** [verificado; hojas publicadas por el Municipio en sanisidro.gob.ar, consultadas el 03/10/2026]:
+
+| Clase | Lugar | Días y horario |
+|---|---|---|
+| Funcional | Paseo de las Bicicletas (Unidad Nacional e Italia, Martínez) | Martes y jueves 18:30–20:00; sábado 9:00–10:30 |
+| Funcional | Parque Público de Villa Adelina | Lunes y miércoles 17:30–19:00 |
+| **Funcional** | **Alvear y el Río (Bajo San Isidro)** | **Lunes y miércoles 9:15–10:15** |
+| Running Fit | Paseo de las Bicicletas | Lunes y miércoles 18:00–19:30 |
+| Running Fit | Paseo de los Inmigrantes (Villa Adelina) | Lunes, martes, jueves y viernes 9:30–10:30 |
+| Running Fit | Parque Público de Villa Adelina | Lunes y miércoles 17:30–19:00 |
+| Mix Dance | Paseo de las Bicicletas | Domingo 10:00–11:00 |
+| Mix Dance | Paseo de los Inmigrantes | Lunes y miércoles 9:00–10:00 |
+| Mix Dance | Plaza Belgrano (Villa Adelina) | Martes y jueves 15:00–16:00 |
+| Mix Dance | Parque Público de Villa Adelina | Sábado 16:00–17:00 |
+| Yoga | Paseo de las Bicicletas | Domingo 10:00–11:00 y 11:00–12:00 |
+
+- Yoga: «Los días feriados no hay clases. Se suspende por lluvia.»
+- La página del Municipio abrió desde acá, sin tener que estar en Argentina.
+
+**Costos para equipar un puesto** [verificado los precios; ajuste y cuenta: cálculo propio]:
+
+| Componente | Precio de referencia | Bajo | Alto |
+|---|---|---|---|
+| Plataforma de madera desmontable | Deck de madera plástica, $215.000–236.000 por m² (25 de Mayo, 2023, ajustado); madera dura, $320.500 por m² | 50 m², $10,8 M | 100 m² de madera dura, +30% por hacerla desmontable, $41,7 M |
+| Bebedero | $2,92 M colocado (San Isidro, LP 62/2024), + $99.700 por metro de caño y $18.600 por metro de desagüe | $5,1 M | $12,1 M, con conexión nueva de AySA |
+| Sombra | Pérgola metálica, $554.500 por m² (Ciudad de Buenos Aires, 2025). Sin precio público de velas tensadas | 25 m², $13,9 M | 50 m², $27,7 M |
+| Luz solar | Luminaria de 25–50 W, $1,18–1,66 M, y columna de 4–6 m, $0,31–0,56 M (lista pública, octubre de 2026) | 2 puntos, $3,0 M | 4 puntos, $8,8 M |
+| **Total por puesto** | | **$32,7 M** | **$90,3 M** |
+
+**Robos:** hay robos de luminarias y cables en costaneras y parques: Concordia, en agosto de 2026, desde lanchas durante la crecida; Santa Fe y Rosario. No encontré robos de luminarias solares en sí. [verificado]
+
+---
+
+## Preguntas abiertas (las decide el cliente)
+
+1. **¿Qué cuenta como «al borde»?** Casi todos los playones están dentro de la parcela del parque, y el Código incluye en el parque las calles que lo limitan. Necesita dictamen de un abogado.
+2. **¿Se acepta una estación de bombeo** en Sáenz Peña, Centenera y Bosque Alegre? **¿O una planta de tratamiento compacta?** El Código la admite y no es baño seco ni químico.
+3. **¿Encargado presente en horario de apertura** (unos $3 M más por mes por puesto) **o limpieza dos veces por día?** ¿Se cierra de noche? ¿Uso gratis?
+4. **¿Quién construye y opera el baño?** Puede ser el Municipio, una empresa de limpieza o los comercios, con el modelo de la Ciudad de Buenos Aires.
+5. **Bosque Alegre:**
+   - ¿cuál es la calle ancha, la prolongación de Del Barco Centenera o Vuelta de Obligado?
+   - ¿qué margen se deja con el bosque?
+   - ¿se avanza antes de tener un dictamen sobre la Ordenanza 5824/1983?
+6. **Clases:**
+   - ¿se admiten instructores privados que cobran, y con qué regla?
+   - ¿qué días y horarios tienen las clases municipales en los puestos?
+   - ¿la plataforma es de madera plástica o dura, y se desarma antes de las sudestadas?
+
+---
+
+## Dónde busqué y no encontré (segunda parte)
+
+- **Red y cotas de AySA:**
+  - la red de AySA calle por calle;
+  - la traza del Colector Ribereño;
+  - un buscador de cobertura gratis y anónimo;
+  - las cotas de las colectoras.
+- **Cota de inundación oficial** de la costa de San Isidro.
+- **Precios que no se publican:**
+  - un precio oficial por metro de colectora o impulsión, de 2023 a 2026;
+  - una licitación de una estación de bombeo chica con precio;
+  - un precio público de velas tensadas.
+- **Bosque Alegre:**
+  - plan de manejo;
+  - una ley provincial que lo declare;
+  - la vigencia de la Ordenanza 5824/1983.
+- **Otros datos de San Isidro:**
+  - si se hizo la cloaca de Martín y Omar;
+  - si existen los sanitarios del Parque del Puerto;
+  - cuántas dársenas hay en 33 Orientales;
+  - una norma sobre instructores privados en espacios públicos.
+
+## Método y límites (segunda parte)
+
+- **Lo investigaron tres agentes.** Verifiqué en la fuente:
+  - los renglones de baños químicos de la Licitación 19/2026;
+  - la nota municipal de 2018 sobre Martín y Omar;
+  - los textos de la Ordenanza 5824, la Ley 12.704 y el art. 1.2.4.8 del Código;
+  - los valores del reglamento tarifario de AySA y la regla de bombeo de su Guía;
+  - la adjudicación de la Reserva Ecológica;
+  - la escala de maestranza;
+  - el decreto de Vicente López;
+  - el K de octubre en la prensa;
+  - la grilla de Funcional en Alvear y el Río;
+  - el precio del bebedero en el contrato de espacios verdes de San Isidro.
+- **Las superficies salen de imágenes satelitales,** con un error posible de 15 a 30%. Nadie fue a medir.
+- **Las imágenes satelitales completas no se suben;** sí los recortes marcados (ver `NO_SUBIDOS.txt`).
+- **Los pesos de licitaciones viejas están en pesos de julio de 2026,** el último mes de IPC disponible. Los datos de agosto a octubre van en pesos corrientes.
