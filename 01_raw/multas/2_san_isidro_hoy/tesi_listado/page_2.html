@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín Oficial — San Isidro</title>
+    <link rel="preload" as="style" href="https://tesi.sanisidro.gob.ar/build/assets/app-D6VvlmUB.css" /><link rel="preload" as="style" href="https://tesi.sanisidro.gob.ar/build/assets/app-lev5Q_f0.css" /><link rel="modulepreload" as="script" href="https://tesi.sanisidro.gob.ar/build/assets/app-ua4_PerC.js" /><link rel="modulepreload" as="script" href="https://tesi.sanisidro.gob.ar/build/assets/bootstrap-CF-YLWx2.js" /><link rel="stylesheet" href="https://tesi.sanisidro.gob.ar/build/assets/app-D6VvlmUB.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://tesi.sanisidro.gob.ar/build/assets/app-lev5Q_f0.css" data-navigate-track="reload" /><script type="module" src="https://tesi.sanisidro.gob.ar/build/assets/app-ua4_PerC.js" data-navigate-track="reload"></script>    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+    <style>
+        body { background: transparent; }
+    </style>
+</head>
+<body class="antialiased">
+    <div wire:snapshot="{&quot;data&quot;:{&quot;buscar&quot;:&quot;&quot;,&quot;filtroTipo&quot;:&quot;&quot;,&quot;paginators&quot;:[{&quot;page&quot;:2},{&quot;s&quot;:&quot;arr&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;CL0W9IuWuSiuFqpyKhx5&quot;,&quot;name&quot;:&quot;boletin-publico&quot;,&quot;path&quot;:&quot;boletin&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;es&quot;},&quot;checksum&quot;:&quot;496893f5ba756a9195fb304aa34b0e6caaf57038caa0ac4cab09eefb20125dd0&quot;}" wire:effects="{&quot;url&quot;:{&quot;paginators.page&quot;:{&quot;as&quot;:&quot;page&quot;,&quot;use&quot;:&quot;push&quot;,&quot;alwaysShow&quot;:false,&quot;except&quot;:null}}}" wire:id="CL0W9IuWuSiuFqpyKhx5" class="space-y-5 p-4">
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm px-5 py-4">
+        <div class="flex flex-wrap gap-3">
+            <div class="flex-1 min-w-48">
+                <input
+                    type="text"
+                    wire:model.live.debounce.300ms="buscar"
+                    placeholder="Buscar por número, referencia, descripción..."
+                    class="w-full text-sm border border-gray-300 rounded-xl px-4 py-2
+                           focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+                />
+            </div>
+            <select
+                wire:model.live="filtroTipo"
+                class="text-sm border border-gray-300 rounded-xl px-3 py-2
+                       focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+            >
+                <option value="">Todos los tipos</option>
+                <!--[if BLOCK]><![endif]-->                    <option value="Decreto">Decreto</option>
+                                    <option value="Resolución de firma conjunta">Resolución de firma conjunta</option>
+                                    <option value="Resolución simple">Resolución simple</option>
+                                    <option value="Ordenanza">Ordenanza</option>
+                                    <option value="Disposición">Disposición</option>
+                                    <option value="Edicto">Edicto</option>
+                <!--[if ENDBLOCK]><![endif]-->            </select>
+        </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="border-b border-gray-100 bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-500 text-left">
+                    <th class="px-5 py-3">Boletín</th>
+                    <th class="px-5 py-3">Tipo / Nro</th>
+                    <th class="px-5 py-3">Referencia</th>
+                    <th class="px-5 py-3">Fecha firma</th>
+                    <th class="px-5 py-3">Tags</th>
+                    <th class="px-5 py-3 text-right">PDF</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-50">
+                <!--[if BLOCK]><![endif]-->                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-995-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">RESFC- EX-2026-00112999-   -SI-DDS- Sr. WAMBA BUSTAMANTE, Kevin (Legajo N°  71.438)</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IjRzL1p6MkRqZWp1U215RG1OdG5icUE9PSIsInZhbHVlIjoiOEpwc3RvcTFZRjh4TWtscTYyMis0bXNhVFJtTitlQmJOY242UE5nQzVMR3YxSk05NzU5MjlEdmpodGx4MFZ6NSIsIm1hYyI6ImViZDFmMWU3YWI3OGNjODY4OTU1OGI3ZTljMzBiY2QwYzg5YzI1OWUxMTE1YTVmMDA4NDZjN2YxZTE1YmY2NjQiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-994-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">RESFC- EX-2026-00112910-   -SI-DDS- RAMIREZ, Liliana Elizabeth (Legajo N°  60.171)</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlFSU2NUZGZYN2dYM1I2UTFCSldWZnc9PSIsInZhbHVlIjoiVlBqanlhNlVEL1Vub2tzY3JIQjVLZFBWUURJTzR5SWpLendsRGVwL3RFdjZsUE5RSWpQYTRXOWoxYW9oM2FMNyIsIm1hYyI6IjAxZjVmOTcwZGMzMTBkNmI2YTVkNWRiN2FhNjRjZmU2ZDkyZGNjMmY0ZTkzOGEyYmRlNWY3M2IxNzRiZTA2ODgiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-993-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">RESFC- EX-2026-00125270-   -SI-DDS-  ACUÑA, Gabriela Belén (Legajo N° 73.227)</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkpWd2tiNEw5c2hDb1B3YUlBdDdBcGc9PSIsInZhbHVlIjoiMWQzOXY3ZnFHOVJRaDllL1pONFp0MDZYSUQ5a0hJWXZoVWxZc3ZhbEcrcUQ3dE01NUdzWG1GNEw4UVZhdEdjZCIsIm1hYyI6ImI1MjQ1YmJjODhlZjk2ZGJhZjk3MjIzOTJjNzExODA5ZjUyNTM4YjBlYWJlMGQxMDc3NWM5MWZhMzFiNjM1ZjgiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-992-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">RESFC- EX-2026-00112910-   -SI-DDS- RAMIREZ, Liliana Elizabeth (Legajo N°  60.171)</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6InJmRHBQUEVoVml5dXY2K3luL3RaMVE9PSIsInZhbHVlIjoiOERFdWVaQUNrTWxjMUtGTVZlK2xhZVNnMWhXUDdzcGM2NFFOM3Eybzd1WVJBZFcyREZWdGlDdjlubGxQMThUeCIsIm1hYyI6IjQ5MWViZmI1MWU1MjE3YzNiNzY0YTViNGE1ZmQ4OWU3YjMwZmIyMzcyZGI4ZmFlMzdiMGQ1YmJhZmExZDhkMGYiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-991-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00244590-SI-DDS - RENUNCIA DE BENITEZ GABRIEL - LEG 76.401</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Renuncia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IjhmeEdWTldEYU9PZmVOeFZyeGRZcGc9PSIsInZhbHVlIjoicHNqOUZ2cTFDUzJxS1UzN011VnE3T0dPaXIzQjljeC9ad25sbFNPOW9peWFZOEFzMVpYZDJsdVNhcS85dGpvSCIsIm1hYyI6IjllYzNhZGIwMmM4NzcxYmI1YjlkZDg0MmY1YWFiODgxYTFjYjlkMWQ3MGYwZTkwNmVkYWNmMWVkZTk3OGUwZDkiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-990-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">RESFC- EX-2026-00125270-   -SI-DDS- ACUÑA, Gabriela Belén (Legajo N° 73.227)</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlZwTUdkWWRDSWJsbnhtMk00NkxuWlE9PSIsInZhbHVlIjoiVmFlSEc3NkhNRTBqNHlRbE1laUxBZjRiQTdQeTMyZEVRU3dWYWNxc0hBWVJwSlRoUUhoeFpvN1hMNm0yRXBJQiIsIm1hYyI6IjAyODEzMzg0NDUxZmM3ODNhZTc0ZTkxOThlY2U0ODJlOGRjNTYwZTk0NmQwNjE2MmI1MTExZTJiN2M2NjQ1ZTEiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-989-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00226426-SI-DDS - DESIGNAR Y LIMITAR BERNALES SARA - LEG 77.981</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlhYNk5leFdMMGc3a0ZZSHRsTEFuUFE9PSIsInZhbHVlIjoiNGJBblpmZU1iMVQ2bFIwSytYOFJNaTJyN2xRVlliYlJwRTdtZCtocERCLy85cUxSM1d2U0pHUXUxaUpxb3pWYyIsIm1hYyI6IjcwNzgwNTBiYjJmMTUyYzBhYjNlM2U2Nzk3NmJmM2Y3ZWM5ODRmMWQ0ZGNjYmMxNzdiN2FmZTFmZTZiMGJkNzciLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-988-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00283486-SI-DDS - DESIGNAR GALVAN MAGALI - LEG 76.319 Y OTROS</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkVseU5ReVBHOWM1dXJRUlh3N1pJN3c9PSIsInZhbHVlIjoienVSVlI1MllsVDNCVUlRNVdjK0lyQmNhbE9OcU4rQnVZU3NDT21wN2dkWkcwVHNIYy82ZE5uZFNDa2dFSm43MiIsIm1hYyI6ImNjM2EwMDA1ZDIwZTQ1OWMwNTRhYTk3M2YyZjMyZjQ2YzllZmQ2MGYzY2YwNDcxOTliNDc5NTMwYTJiNzI2ODciLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-987-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00283213-SI-DDS - MODIFICAR RETRIBUCION RIVAS JUDITH - LEG 77.645 Y OTROS</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Modificación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Jornada Laboral
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IjhleURKOFFkZUQ0L2lBK2R3Z1p6OGc9PSIsInZhbHVlIjoibG1MVUYvVWJqQ25IanB3L0ZnMjR5WURWTDFRbWxMQWRMS2dkVEVvbWRPZE9yMndHZUR2SHJscDVNbHhXMEVEayIsIm1hYyI6IjE2NjMwZDg0ZjY5NGVkN2EzNThlNGUwMjU0OTU5NzU3Yjk0NWFlY2M1MWE2MTFhODAwZTYzNGI0YTcxN2QzMDUiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-986-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00271071-SI-DDS - Renuncia de la Sra. MUÑOZ, Mariela Soledad (Legajo N° 56.836).</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Renuncia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlovTVlaZFlidHFYei8weVZtbjF6VVE9PSIsInZhbHVlIjoiK25RVzNtODQ0VzhySDBpU28zdFpCZVVvbGY4SnhzNlJZUkVMMndCc2lVQUZUdmxNYTlGSllQK1lOcitUUk5jMCIsIm1hYyI6Ijg3MDBjN2YwZWRjMmJmOTUyYWNlNGQxZTM2OGMzOTFiODA3YmRkMTFkMzllYzQ4ODU1NzFlN2VlODIxMDBlYjIiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-985-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00281139- SI-DDS - Designar al agente GADEA, Fabricio Miguel Ángel (Legajo Nro. 76.695).</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Imw2UXBOa3EvK1VEZnBrSWx1WmZEcXc9PSIsInZhbHVlIjoiS2hEVzhWYmlUZ0tYcy9GeTBxUVRKMmN6QmdEaHRBTHo0MzlIWGVmL29nVjdwcUpqN1U2Q0FYbVhRYXNOYUhYNyIsIm1hYyI6Ijc2ZTc3NzEyYWY3MjViYzc0MzkxODcxOTJkMzdlODZlMzYxNjJiNmNkZjM1NzM2NzMxMWM5M2E2OGQyYzg4YTciLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-984-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00283395-SI-DDS - MODIFICAR CARGA HORARIA OCHOA JUAN PABLO - LEG 77.572</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Modificación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Funciones
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Ind5c3VCZUlCZ09TdzRvVWRGTElnQUE9PSIsInZhbHVlIjoiNDB4enJtUkQ5ZHhVVjJaU3B0bEZoQXJFMXpWU2JqWVpqTCtQazdkQzN2MVpwejRLV1NHbnNGTmV4a2dUUXY0YSIsIm1hYyI6IjY1YTdlMmE0MTM0YTQxNWRiZDgwNTg0MzkxYjRkMDhiMjMwOWExMDgwM2MyYTdkMGIxOTAwNWUxMjZkZDI0YmMiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-983-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00273849-SI-DDS - Otorgar licencia sin goce de haberes al agente PUCHARELLA, Maximiliano Ramón (Legajo Nro. 57.019).</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            05/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Licencia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlFnaFl1MkIvY1JZWE1KTDVmYjdQaVE9PSIsInZhbHVlIjoia2NaS2Y0eTRuRy83ZFdOMjBIajNYbS9pakVabnNrYVFPdVFmOEEwTlVhVWM1cjUybXhjYlp2MHBlMGhsQWJoTyIsIm1hYyI6IjZiMDFiYTY1MmEyYWIwMjg5ZmFlOTlhMTFhOTZjNDljMTRjMWExYTlkMTM4ODVkZDA3ZWRjYmUwMjlkZjljZGQiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución simple</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RDEF-2026-37-SI-DEFCON</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026- -00028411-SI-DEFCON (EXPTE. Nº 33214/2025) - RIQUELME, ROBUSTIANO MARIO Y OTRO c/ MOTOLANDIA GROUP S.R.L. Y OTRO S/PRESUNTA INFRACCIÓN A LA LEY 24.240 y/o 13.133 </p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Multa
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkRvQy9MKzJuQUV4OFAvN1FBVzJhSHc9PSIsInZhbHVlIjoiT1RqWS8vbWtpTDZ4cmFCSm5VZ0MvWUN3NDVvYWdNaUlCYUFvRHdUNW1ZRWJ4WFRja0xFVkgzT2RVV0RqY3J3cSIsIm1hYyI6IjYwOWRkNzViYzFkZTQ5NzUxZTE2ZTdmYWExMmUxMDMxNmI1YTRiMDFmYzgxZDBmMTY1ZmFiMGNkYmU0YWNlMjQiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución simple</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RDEF-2026-36-SI-DEFCON</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00027325-SI-DEFCON - EXPTE. Nº 33.871/2025 - DIRECCIÓN GENERAL DE DEFENSA DEL CONSUMIDOR c/ AUTOFRANCE S.A.  s/ INCOMPARECENCIA  - ARTÍCULO 48 LEY 13.133</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Multa
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlU3NDNsM2lsT3R2SEpWSGtVR09tZ2c9PSIsInZhbHVlIjoiWldHY1lWUUlhWWR4VUgzZWZ1aTJ2dTczb0xIWCtiVWhmVFdsUW9MY1Jza1g2YUtoTHZQWHFXcjBGZVc2K3hxcCIsIm1hYyI6IjNjMzg3YmQ2MzQ4OWQzNmRhOTU2NDVlMTBiMGY5Y2U1N2JmMmU0NTU1ZjJlYmU2MjE5MTViNzYwZDM5NWE2YjgiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución simple</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RS-2026-8-SI-SECDHD</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Resolución de pago PAASI - AGOSTO 2026</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Beneficiarios
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        PAASI
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6ImlEemtQc0dCWk5RZ0syY3kxSGIyMEE9PSIsInZhbHVlIjoiZG1iQWZkOVZJdENkQnJSakJHNEFvTGx0ZlNudXdBRVU1Z2FlUzJCQ1htMS9WWnZ3dFNsaklJSXBBaTlQVVFTNCIsIm1hYyI6ImFmMDY4MThhYThlYmQyZjU4MTQwNDE1OGFhMTc3ZTk5ZGVmYTNlYWJiZTBiMGIzYmM4NjMwMDU1OGU1NWZjZWUiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-982-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00251824- -SI-DDS - ACEPTAR RENUNCIA - MAYORDOMIA - SSRH - FRIOL RODRIGUEZ, Dolores Sonia - Legajo Nº 75.053.-</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Renuncia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IjFhcndrRHpwL3Zhb1g2YlM2R2JrVmc9PSIsInZhbHVlIjoibW1FTXNyMGt4L1pyclhFeDNuK2V4WUZuQWxONTYvQ05kV2FoRFRDL3NJWTZxdjNjd29NbmhDbkJJY1Yva0hrUSIsIm1hYyI6ImExNDM5ZTJhMzNkZTZkNjQ3YTljODA5MDg1MTIwYTFlZDgzZWMyOWI0YmM1MjQxODEyZDM4ZDA1N2VjZTc3N2MiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-981-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00153218-SI-DDS - Asunto disciplinario del Sr. Axel Leonardo David NIZ, Legajo N° 76.064.</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Sanción
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Imh5Z0FoN1hEUkpMR056YWZ2TTM3YVE9PSIsInZhbHVlIjoiTGpWNGtjSm01YUxvQ0gvVklTd29QbE5RRXV3VS9Ya253aFZoa0U3aHhNWHloN2FPTlRIN1FBZUg3T2VqMDRUNiIsIm1hYyI6ImEwYmMzZGJmNThjMWQ0MTZlMjkzNzQzMjMxMDZmMGQ4OTM2MjQwODU5ZDBkZDRmNmJlM2ZiYzkzN2EwMDhmNzMiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-980-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00278202-SI-DDS - REUBICAR PEDROZO SOLANGE - LEG 75.249</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Reubicación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkdvR21FMTdqQStidkMveUh3MG56M2c9PSIsInZhbHVlIjoib1pxQzJKeE9kK0FOMFNZWllsSjlKc0ZtMjFBSGJaTUZVbDJVWjIvaWdnL0Fad202MjNjUStSZEhiWEVCYU03ViIsIm1hYyI6IjU1YjdjNTZmNzc5YzYxZDI2ZmZiM2YxMmMyYTA0MGM5ZmM5Yjg5YTE2YzAzMmQxOTVlYTEyNTM3MjEzNjRkZDUiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-979-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00269267-SI-DDS - MODIFICAR FUNCIONES MENDOZA JOANA - LEG 59.996</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Modificación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Situación de Revista
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IktWU25QS3JJME1VR0MxN3ROTVRBQlE9PSIsInZhbHVlIjoiYS9OMlVqWlIrNWFNSVR2YUdSVk15ZWNaQmkzSmhUV2w1N3ZKc3RMbXNVQmhyQStrbSs3dmROaWdPZmJLdjF3RyIsIm1hYyI6IjJjOWJhY2JhOTA4Y2NmMWQyZGFmNjkwMTM0MGE1YjMwNGFjYWViOGE5ZjIwYWEwOGY0Mzk0YTNlOGUxMTJjNmQiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-978-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00269974-SI-DDS - RENUNCIA DE RIOS GLORIA - LEG 65.187</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Renuncia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IktPbEQvZkl6WUZGRWtXUFdFUDBnOFE9PSIsInZhbHVlIjoiUHlncFk5a2g5SlJmcVo5aGNRb3ljNTNTNEp2WGRncDc3SFhVZStXaXJVYWVWRURMckFhSFo5M2h4T0VtZjVtbyIsIm1hYyI6ImQyNWZmMTczMjg3YzQ4MzI2YzNlZjc2ODViMGM4Mzc4NGE3N2U3YWNkZjNkMTVhZmE3ZDI4NDNhYWY0M2M1M2UiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-977-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00265512-SI-DDS - Designación de la agente KINTZLER MALENA ANAHI (LEGAJO NRO. 75360) &amp; OTROS.</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            04/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkdLa3N5cFJUcnc3cjg5dFhlbVNPa0E9PSIsInZhbHVlIjoiK3FaY0lURnBqRlhwMTFBU3g2QmVoS0ZVeE4vZ0R6bUhMaVpqVUhtSkdvSWNWdVgxTWpEV05xb1pWZ05UUm85ayIsIm1hYyI6IjBmMGMzMmQ3OTVhNjA0OTI5M2IyNDM0ZTViNThkNDcyZDUyMTFhZTFkYTMzZGMyYWM3NjdmNTFiM2RlYmViMTUiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-115-SI-SECPDU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N° 1275/2024 - Resolución de Aprobación de planos de Conforme a Obra del Inmueble sito en la calle Primera Junta Nº 928, localidad de San Isidro</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Aprobación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Planos
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlN4bEtQWXFPZjBSbW1MQ3F6UU0yMkE9PSIsInZhbHVlIjoiMEtMZTB0NzZvTG82WVFlT2RibC9aa0loRFkzNCtZN3RTS293Zm9yMzBoTVoxUzNRSllwWGh2d1M5QitqMVJXbSIsIm1hYyI6IjQ1NjE4ODJiNTIxYzZiZTlmNjU5OWEzNGQ3OGJmNWM3MDFjZmI2ODRhM2M2OGQ5NDQyN2ZlY2NkYWYyZjQ3NTkiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-903-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00277087-SI-DDS - MODIFICAR RETRIBUCION DE BARRIONUEVO GISELA SOLEDAD - LEG 77.470</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Modificación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Retribución
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkRBcUNGaXFLOWtJckhZTW9wczc4RkE9PSIsInZhbHVlIjoiVzhWZXNjOGozUTFRRXZXS2w3V0VUWHkyTkowVzF5a2QxMkYrdGFjc0hkVXFZUXFrYmQ3L285dTdmVXBFU2t0TiIsIm1hYyI6IjdlMWM3NjExODhlYjk2N2Q0YTUzZmE4MTljZmQ0MmUyNzk3NjFmMTJjZGQwYzE2N2NiNTE0NTFlMTc0ZWViNTgiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-902-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00277055-SI-DDS - MODIFICAR RETRIBUCION DE ESCOBAR ROJAS ZULEYKA -LEG 72.784</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Modificación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Situación de Revista
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkcwMjlyOTFzWDBXb3J2cGk3cnBLV2c9PSIsInZhbHVlIjoiVE5iVjBrcHZRTTNHK0dWWEoyYmFJTVdYejFVUWwyMHVIdUFJZm80bE1GRjlvSWtJWmVZWHZDb3liaXFUZ0lZTiIsIm1hYyI6IjFjNzk2ZjE0MDAwOTBkMjIzMDJjZDIyMzljNjI1NzQ4NGIxMDgwNWIyNjk4OTljOGE1NjExOGYyZjgzNmJmZTYiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-901-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00268417-SI-DDS - LIMITAR DESIGNACION DE PEREYRA ADRIANA PATRICIA -LEG. 78.005</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Limitación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Ikl6RUh4NW1wNC8vSFJTaDBrV1FrblE9PSIsInZhbHVlIjoic1dsOGF0UFhtRTlMTFE3RDZUbUlVeGVWbE5WWFdJb1VXNHJIaDRxOTdBcU5zampYSUl2TUtydE5VMytKUmQxRiIsIm1hYyI6ImNhMDlmOGJiNmMzNmU3YjQ5NGMwYzI1NWYyOTM1N2RkNzk0N2M1OGViNjYwYTFkYjU4OTExOTFhZTUzNTEwYzUiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-900-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00267610-SI-DDS - DESIGNAR RUIZ ALEJANDRA - LEG N° 77.948</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IlRoZ1VmVTljbVJuMkRTTEN4OWxmT3c9PSIsInZhbHVlIjoiaE94M1kvRmtXa0IraExmRXdyTnIwSGVEOHkzSTlDejVhRDF1ZkJJdnBvYVN0MkRYbnVGMDlWYkhBdW9xME02NSIsIm1hYyI6ImQxNzg3N2Q1ZjhkZDM4NjkxMzEyNjZkNGNmZmZkNTdiY2JlYjQzMjhhMzMyOGVhNzE5MTQ5MzM1NTZiYjY2YTciLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-976-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00277015-SI-DDS - DESIGNAR ROMERO CLAUDIO - LEG 76.798</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Ik5YWmZFSnE4R2QwL3JIMFN5enhUNGc9PSIsInZhbHVlIjoia1YzTUcxcG1veGliVzJhRTNxY3hLL3JGYlAwY0NZK3BkQnNjQ21TZEdqcnZaUG5CVDN0ZjRWeW5jK05KQzkwaSIsIm1hYyI6IjA4YmI5MzY4MThlNDhkNDM2ZDFiZDBiM2I1ZTAyYjhjOWViYTQzNjNjM2JkYzgyYTk5ODgxMzFhYzA1NDlkODgiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-975-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00276640-SI-DDS - Designación de la Sra. ROA, Sonia Elizabet (Legajo Nro. 75692) &amp; otros.</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Ilh3aldsejIwZ05DWDlNbHZMbDQ5TXc9PSIsInZhbHVlIjoiL3psREJwd1RTRmh3ZUJ3bmh2UTdFVGt5L2xhNk1CVWpVYXJuWmwrMU44SGdSVWEyelN3cnh3NEVVUCtOTUN3eiIsIm1hYyI6IjY5ZDRjZGMwZjhmMjliZGQwYjMzMzYyZGU0Njg3N2YwMDgxMDdhMDdmMTg3NGI3MjA4YjliMjNkYTI2ODNiNmYiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1239
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/09/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución de firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-974-SI-SSRH</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2026-00269991-SI-DDS - RENUNCIA DE CORONEL CAROLINA - LEG 77.860</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            03/08/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Renuncia
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6Ik90dU01RlVkbEpxVU1ua3VzTnBwVVE9PSIsInZhbHVlIjoiNnB5aVZxN0l6cnc0MGQxQ3BnNEI4MzdoSjVzbGJQVm9ZdFF6UWt3MG10RFI3clI4VlZSY1RSY0tuNTUwL2NIUiIsIm1hYyI6IjI4ZDIxMjdiNGI4ZTA1NTVhODkyMjE1NGNiMWMyMDA1MzI4ZDBjNmU0OWU5YjcwYzMyNmRjMzY3NjRmZDQ2NWEiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->            </tbody>
+        </table>
+
+        <!--[if BLOCK]><![endif]-->            <div class="px-5 py-3 border-t border-gray-100">
+                <div>
+    <!--[if BLOCK]><![endif]-->        <nav role="navigation" aria-label="Pagination Navigation" class="flex items-center justify-between">
+            <div class="flex justify-between flex-1 sm:hidden">
+                <span>
+                    <!--[if BLOCK]><![endif]-->                        <button type="button" wire:click="previousPage('page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" wire:loading.attr="disabled" dusk="previousPage.before" class="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-blue-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
+                            &laquo; Anterior
+                        </button>
+                    <!--[if ENDBLOCK]><![endif]-->                </span>
+
+                <span>
+                    <!--[if BLOCK]><![endif]-->                        <button type="button" wire:click="nextPage('page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" wire:loading.attr="disabled" dusk="nextPage.before" class="relative inline-flex items-center px-4 py-2 ml-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 rounded-md hover:text-gray-500 focus:outline-none focus:ring ring-blue-300 focus:border-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-700 dark:active:bg-gray-700 dark:active:text-gray-300">
+                            Siguiente &raquo;
+                        </button>
+                    <!--[if ENDBLOCK]><![endif]-->                </span>
+            </div>
+
+            <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm text-gray-700 leading-5 dark:text-gray-400">
+                        <span>Mostrando</span>
+                        <span class="font-medium">31</span>
+                        <span>a</span>
+                        <span class="font-medium">60</span>
+                        <span>de</span>
+                        <span class="font-medium">15595</span>
+                        <span>resultados</span>
+                    </p>
+                </div>
+
+                <div>
+                    <span class="relative z-0 inline-flex rtl:flex-row-reverse rounded-md shadow-sm">
+                        <span>
+                            
+                            <!--[if BLOCK]><![endif]-->                                <button type="button" wire:click="previousPage('page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" dusk="previousPage.after" class="relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="&amp;laquo; Anterior">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            <!--[if ENDBLOCK]><![endif]-->                        </span>
+
+                        
+                        <!--[if BLOCK]><![endif]-->                            
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            
+                            <!--[if BLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]-->                                    <span wire:key="paginator-page-page1">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(1, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 1">
+                                                1
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page2">
+                                        <!--[if BLOCK]><![endif]-->                                            <span aria-current="page">
+                                                <span class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 dark:bg-gray-800 dark:border-gray-600">2</span>
+                                            </span>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page3">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(3, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 3">
+                                                3
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page4">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(4, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 4">
+                                                4
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page5">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(5, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 5">
+                                                5
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page6">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(6, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 6">
+                                                6
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page7">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(7, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 7">
+                                                7
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page8">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(8, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 8">
+                                                8
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page9">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(9, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 9">
+                                                9
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page10">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(10, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 10">
+                                                10
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            <!--[if ENDBLOCK]><![endif]-->                                                    
+                            <!--[if BLOCK]><![endif]-->                                <span aria-disabled="true">
+                                    <span class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 cursor-default leading-5 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300">...</span>
+                                </span>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                                    
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            
+                            <!--[if BLOCK]><![endif]-->                                <!--[if BLOCK]><![endif]-->                                    <span wire:key="paginator-page-page519">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(519, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 519">
+                                                519
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                                                    <span wire:key="paginator-page-page520">
+                                        <!--[if BLOCK]><![endif]-->                                            <button type="button" wire:click="gotoPage(520, 'page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium text-gray-700 bg-white border border-gray-300 leading-5 hover:text-gray-500 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-700 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400 dark:hover:text-gray-300 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Go to page 520">
+                                                520
+                                            </button>
+                                        <!--[if ENDBLOCK]><![endif]-->                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            <!--[if ENDBLOCK]><![endif]-->                        <!--[if ENDBLOCK]><![endif]-->
+                        <span>
+                            
+                            <!--[if BLOCK]><![endif]-->                                <button type="button" wire:click="nextPage('page')" x-on:click="   ($el.closest(&#039;body&#039;) || document.querySelector(&#039;body&#039;)).scrollIntoView()" dusk="nextPage.after" class="relative inline-flex items-center px-2 py-2 -ml-px text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-r-md leading-5 hover:text-gray-400 focus:z-10 focus:outline-none focus:border-blue-300 focus:ring ring-blue-300 active:bg-gray-100 active:text-gray-500 transition ease-in-out duration-150 dark:bg-gray-800 dark:border-gray-600 dark:active:bg-gray-700 dark:focus:border-blue-800" aria-label="Siguiente &amp;raquo;">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            <!--[if ENDBLOCK]><![endif]-->                        </span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    <!--[if ENDBLOCK]><![endif]--></div>
+
+            </div>
+        <!--[if ENDBLOCK]><![endif]-->    </div>
+
+</div>
+    <script src="/livewire/livewire.min.js?id=6d832aed"   data-csrf="Z6dikFFb5b5JCEo6TVNLmt2CbLrNS2KzOaCCc0tf" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+</html>

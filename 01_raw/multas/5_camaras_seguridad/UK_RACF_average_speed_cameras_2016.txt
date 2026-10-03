@@ -1,0 +1,2582 @@
+
+=== p.1 ===
+Mobility • Safety • Economy • Environment
+The Effectiveness of 
+Average Speed Cameras 
+in Great Britain 
+Owen, Ursachi and Allsop
+September 2016
+
+=== p.2 ===
+The Royal Automobile Club Foundation for Motoring Ltd is a transport policy and research 
+organisation which explores the economic, mobility, safety and environmental issues 
+relating to roads and their users. The Foundation publishes independent and authoritative 
+research with which it promotes informed debate and advocates policy in the interest of the 
+responsible motorist.
+RAC Foundation 
+89–91 Pall Mall 
+London 
+SW1Y 5HS
+Tel no: 020 7747 3445 
+www.racfoundation.org
+Registered Charity No. 1002705 
+September 2016 © Copyright Royal Automobile Club Foundation for Motoring Ltd
+
+=== p.3 ===
+Mobility • Safety • Economy • Environment
+The Effectiveness of 
+Average Speed Cameras 
+in Great Britain 
+Owen, Ursachi and Allsop
+September 2016
+
+=== p.4 ===
+i
+The Effectiveness of Average Speed Cameras in Great Britain
+About the Authors
+Richard Owen is one of the founding directors of Road Safety Analysis (RSA) and has 
+a strong background in enforcement management having previously held the post of 
+Operations Manager at the Thames Valley Safer Roads Partnership (TVSRP). Richard’s work 
+for TVSRP ranged from national co-ordination and liaison with the Department for Transport, 
+to local oversight of partner budgets and operational delivery. As a director of RSA, Richard 
+has worked on dozens of independent analysis projects covering different road user groups 
+at a national and local level for various clients.
+George Ursachi is a former academic associate professor and has a strong background in 
+market analysis, research, and project management. He joined RSA, in 2015 and has already 
+been involved in a number of important projects. His background in research synthesis has 
+been deployed in preparing updates on a number of topics for the Road Safety Observatory; 
+and his knowledge of advanced statistical techniques has been implemented in independent 
+evaluations of road safety schemes such as ‘Safe Drive Stay Alive’.
+Richard Allsop is Emeritus Professor of Transport Studies at UCL, where he played a 
+senior role in transport research and teaching between 1976 and 2005. Since then he 
+has continued to contribute to research, advisory work and professional development in 
+transport. As part of his continuing commitment to road safety work in Britain and across 
+Europe, through PACTS and ETSC and as an individual, he has been involved in previous 
+research into the effectiveness of safety cameras.
+
+=== p.5 ===
+ii
+www.racfoundation.org
+Disclaimer
+Acknowledgements
+This report has been prepared for the RAC Foundation by Richard Owen (Road Safety 
+Analysis), George Ursachi (Road Safety Analysis) and Richard Allsop (University College 
+London). Any errors or omissions are the authors’ sole responsibility. The report content 
+reflects the views of the authors and not necessarily those of the RAC Foundation.
+The authors would like to thank Jenoptik and 3M for the information supplied regarding the 
+deployment of systems in the UK. The authors would also like to thank the police forces, 
+local authorities, road safety partnerships and national bodies who responded to information 
+requests regarding the average speed cameras in their areas.
+The authors would like to thank other team members at Road Safety Analysis for their support 
+in creating the database and carrying out the collision analysis for this work, notably Andrew 
+Hartley, who devised the technique for matching collisions to camera sites. The authors 
+would also like to thank Dr Anneka Lawson, Research Analyst at the RAC Foundation, for her 
+support and assistance in editing and preparing this report for publication.
+The authors and the RAC Foundation would like to thank the peer reviewers for their helpful 
+comments on drafts of the report.
+
+=== p.6 ===
+iii
+The Effectiveness of Average Speed Cameras in Great Britain
+Contents
+Foreword������������������������������������������������������������������������������������������������������������������������������v
+Executive Summary������������������������������������������������������������������������������������������������������������vii
+Introduction�������������������������������������������������������������������������������������������������������������������������1
+1.1 Why this research has been commissioned�������������������������������������������������������������������1
+1.2 Objectives���������������������������������������������������������������������������������������������������������������������2
+Background�������������������������������������������������������������������������������������������������������������������������3
+2.1 Average speed camera technology��������������������������������������������������������������������������������3
+2.2 Previous analysis�����������������������������������������������������������������������������������������������������������4
+2.3 Context of use���������������������������������������������������������������������������������������������������������������5
+Average Speed Camera database���������������������������������������������������������������������������������������6
+3.1 Data collection���������������������������������������������������������������������������������������������������������������6
+3.2 Average speed camera sites and installation dates��������������������������������������������������������8
+Collision Analysis���������������������������������������������������������������������������������������������������������������10
+4.1 Site boundaries�����������������������������������������������������������������������������������������������������������10
+4.2 Collision matching�������������������������������������������������������������������������������������������������������11
+4.3 Control sites����������������������������������������������������������������������������������������������������������������13
+4.4 Initial analysis���������������������������������������������������������������������������������������������������������������14
+4.5 Generalised linear model���������������������������������������������������������������������������������������������15
+4.6 Site-selection period data��������������������������������������������������������������������������������������������16
+Results������������������������������������������������������������������������������������������������������������������������������18
+5.1 Set 1: All ASC sites installed for collision-reduction reasons�����������������������������������������19
+5.2 Set 2: Comparison of ASC sites installed before and after April 2007��������������������������19
+5.3 Set 3: Comparison of high- and low-speed sites���������������������������������������������������������20
+5.4 Set 4: Sites installed for non-collision-reduction reasons����������������������������������������������21
+5.5 Set 5: Candidate sites�������������������������������������������������������������������������������������������������21
+Discussion�������������������������������������������������������������������������������������������������������������������������22
+6.1 What the results show�������������������������������������������������������������������������������������������������22
+1
+2
+3
+4
+5
+6
+
+=== p.7 ===
+iv
+www.racfoundation.org
+Tables list
+Table B.1: Set 1 parameter estimates for FSC�������������������������������������������������������������������30
+Table B.2: Set 1 parameter estimates for PIC��������������������������������������������������������������������30
+Table B.3: Set 2 parameter estimates for FSC, before April 2007 (A)����������������������������������30
+Table B.4: Set 2 parameter estimates for FSC, after April 2007 (B)�������������������������������������31
+Table B.5: Set 2 parameter estimates for PIC, before April 2007 (A)�����������������������������������31
+Table B.6: Set 2 parameter estimates for PIC, after April 2007 (B)��������������������������������������31
+Table B.7: Set 3 parameter estimates for FSC, low-speed sites�����������������������������������������31
+Table B.8: Set 3 parameter estimates for FSC, high-speed sites����������������������������������������31
+Table B.9: Set 3 parameter estimates for PIC, low-speed sites������������������������������������������32
+Table B.10: Set 3 parameter estimates for PIC, high-speed sites���������������������������������������32
+Table B.11: Parameter estimates for FSC, non- collision-reduction sites����������������������������32
+Table B.12: Parameter estimates for PIC, non-collision-reduction sites������������������������������32
+Table B.13: Parameter estimates for FSC, candidate sites�������������������������������������������������32
+Table B.14: Parameter estimates for PIC, candidate sites��������������������������������������������������33
+6.2 Further research����������������������������������������������������������������������������������������������������������24
+6.3 Conclusions�����������������������������������������������������������������������������������������������������������������24
+References������������������������������������������������������������������������������������������������������������������������25
+Appendix A: Methodology�������������������������������������������������������������������������������������������������27
+Appendix B: Calculations���������������������������������������������������������������������������������������������������30
+Appendix C: Site List���������������������������������������������������������������������������������������������������������34
+Figures list
+Figure 3.1: Installation history for average speed cameras in Great Britain���������������������������8
+Figure 3.2: Significant factors precluding sites from analysis������������������������������������������������9
+Figure 4.1: Sample map demonstrating site and site section boundaries���������������������������11
+Figure 4.2: Sample map demonstrating collision matching�������������������������������������������������12
+
+=== p.8 ===
+v
+The Effectiveness of Average Speed Cameras in Great Britain
+Foreword
+Speed-limit enforcement, in particular the use of camera based prosecution systems, has 
+been a contentious issue for some years. In 2010 the RAC Foundation published a report by 
+Professor Richard Allsop (revised in 2013) which analysed the effectiveness of speed cameras. 
+The report focused on the use of ‘spot’ cameras, the most widely used camera technology at 
+the time, finding that cameras could be a valuable part of the road safety armoury. 
+Technology has now moved on and more authorities are looking to average speed cameras 
+– systems that measure the speed of a vehicle over a stretch of road – to ensure speed limit 
+compliance. It therefore seemed timely to commission a similarly rigorous look at how these 
+systems are performing.
+We had hoped to be able not just to discern whether average speed cameras were proving 
+to be effective in preventing injury accidents, but also to look at the specific circumstances – 
+the nature of the road, the traffic and the road safety risk – that had led to the choice of this 
+technique, assess the wisdom of that choice and start to develop guidance on their future 
+deployment. From the limited number of locations offering a sufficient record of before-and-
+after data it has not yet proven possible to carry out this level of analysis.
+Two things do stand out from this research, however.
+First, there is cause for optimism about the overall collision reduction benefits of average 
+speed cameras. Taking account of overall trends and regression to the mean, permanent 
+average speed camera sites were found to, on average, reduce injury collisions, particularly 
+those of highest severity. 
+Second, we need the right data to be logged and made available by all highway authorities 
+adopting average speed camera technology. This research has established the format 
+of a database that could hold this data, identifying all the different elements needed to 
+conduct a robust assessment. Ideally this database would be held nationally, perhaps by the 
+Department for Transport. 
+We urge highway authorities to make sure that they are capturing the relevant data from 
+their schemes in order that lessons can be learnt, and decisions made about the appropriate 
+level and extent of average speed camera deployment.
+Steve Gooding
+Director, RAC Foundation
+
+=== p.9 ===
+vi
+www.racfoundation.org
+‡ To June 2015
+2000 2001 2002
+2003
+2004 2005 2006 2007
+2008 2009 2010 2011 2012
+2013 2014 2015‡
+0
+2
+4
+6
+8
+10
+12
+14
+Total length of road covered by average speed cameras
+Number of sites installed per year
+409.7km
+142.6km
+55.4km
+8.2km
+Information relating to 51 permanent average speed camera sites, installed 
+between 2000 and June 2015, was collected as part of this study. 
+On average, the permanent average speed camera sites analysed saw reductions 
+in injury collisions, especially those of a higher severity. 
+The number of average speed camera sites are likely to increase as 
+installation costs continue to decrease. 
+Installation costs are declining due to the falling cost of technology 
+and increased competition in the market.
+Fatal and serious collisions fell, by 25-46%  
+while personal injury collisions fell, by 9-22%. 
+25 average speed camera were analysed in detail with 
+294 km of road covered by these sites. 
+Permanent average speed camera sites are estimated to have cost up 
+to £1.5m per mile in 2000 but today cost an average of 
+£100,000 per mile. 
+
+=== p.10 ===
+vii
+The Effectiveness of Average Speed Cameras in Great Britain
+Executive Summary
+The effectiveness of speed enforcement programmes and technologies in Great Britain 
+has long been a subject of significant debate and analysis. The quest to reduce collisions 
+and casualties on the roads has previously been supported by Government and is still a 
+priority for the Transport Department. For all those involved in seeking effective interventions 
+understanding how the deployment of automated enforcement technologies has contributed 
+to reducing collisions is very important. There is a strong evidence base regarding the most 
+common forms of enforcement technology – spot speed cameras and mobile units – but 
+there is little evidence about the impact of average speed cameras (ASCs).
+The measure used throughout this report in considering the effectiveness of ASCs is the 
+change in injury collisions in the post-installation periods. ASC effectiveness may also be 
+considered in terms of changes in compliance with speed limits or long-term changes in 
+offence rates, neither of which are considered within the scope of this study.
+Although the UK’s first permanent ASC system was installed in 2000, the uptake of 
+installations was relatively slow, almost certainly as a result of the initial high costs, sometimes 
+as high as £1.5 million per mile. This research has catalogued the vast majority of permanent 
+ASCs on the roads of Great Britain, and has revealed a significant increase in their deployment 
+over the last few years. There were a total of 51 ASC sites commissioned and installed 
+between 2000 and 2015, with 12 of those installed in 2015 alone. The surge in popularity 
+of these systems is likely to continue as prices tumble, owing to both the falling cost of 
+the technology and increased competition in the market. There may also be a role for ASC 
+systems in replacing ageing fixed-camera infrastructure which is close to the end of its life.
+The research has not only catalogued the location of installations, but also introduced an 
+independent methodology for reviewing site boundaries and the collisions that have taken 
+place within them since 1990. Using the official Department for Transport collision records, it 
+has been possible to create, on a month-by-month basis, the collision history for each site. 
+These outputs have been used to review the effectiveness of ASCs in reducing collisions at 
+the combined sites.
+Previous reviews of evidence have been critical of the lack of independence or scientific 
+methodology in the analysis undertaken. This research has introduced a degree of scientific 
+rigour through the use of two elements: firstly, a large set of similar comparator roads to 
+allow for the wider trend in collision reduction since 1990; and, secondly, a number of 
+candidate sites were identified that act as a pseudo-control, as they were not ultimately 
+progressed with the installation of ASCs. A total of 25 sites were used in the final analysis, 
+which between them had a total measured enforced section length of 294 km.
+An analysis of the effect of temporary systems, such as those at roadworks sites, is not 
+included in this report as there is insufficient information available about the locations and 
+durations of use of such schemes. These temporary schemes are also usually associated 
+
+=== p.11 ===
+viii
+www.racfoundation.org
+with a reduction in speed limit – the reasons behind the exclusion of such schemes are 
+discussed in section 3.2.
+The primary set of results looked at the change in collisions at those ASC sites that were 
+suitable for inclusion within the study. A number of the proposed sites had been removed 
+to obtain this set, because of the presence of previous enforcement equipment, or changes 
+in speed limits which could have affected the results. As well as taking into account trend, 
+the statistical methodology – adapted from previous work for the RAC Foundation by 
+Professor Richard Allsop – also removes the so-called ‘site-selection period’ (SSP) from 
+the pre-installation data. Where the site selection period is known, this achieves the aim of 
+accounting for ‘regression to the mean’, the phenomenon that describes the consequence 
+of unusually high levels of collisions at sites during the identification period.
+The standout result from the analysis shows, after accounting for SSPs and trend, a 36.4% 
+(95% confidence interval: 25-46%) reduction in the mean rate of fatal and serious 
+collisions in the post-installation period. The change in personal injury collisions of 
+all severities was less pronounced, with a 16% (95% confidence interval: 9-22%) 
+reduction. Both results were classified as highly statistically significant according to the 
+analysis, meaning that they almost certainly did not arise by chance or through random 
+variation.
+Further analysis of the cohort of sites split the sample into two parts: one looking at the 
+difference between sites installed before April 2007 and those installed after that date; and 
+a second that divided the sites by speed limit, based on ‘low’ speed limits (40 mph or less), 
+and ‘high’ speed for all others. These results did not show significant differences in the 
+post-installation effect for the subgroups and it is therefore not possible to conclude any 
+difference in the effectiveness of the installations relating to the camera age or the expected 
+traffic speed.
+One other output of the analysis was a measurement of the difference in collisions recorded 
+in the SSP versus all other pre-installation periods. For the major cohort this was estimated to 
+be an increase in fatal and serious collisions of 24.9%, and 16.7% in collisions of all severities. 
+These increases were accounted for (i.e. their effects were removed) in the main results, but 
+the existence of this ‘site selection effect’ is a significant point of interest to those wishing 
+to independently evaluate the impact of other interventions. More specifically, this research 
+indicates that where sites are chosen for treatment due to high collision rates, then it can be 
+expected that a certain proportion of the post-installation collision reduction could reasonably 
+be attributed to this phenomenon. The presence and measurement of site selection effects 
+should be reviewed at other enforcement locations, or even where engineering works have 
+taken place, and is worth further consideration by the road safety profession.
+The small control group of candidate sites exhibited a reduction of only 3% in collisions 
+post-identification. This result did not pass the significance test and so could have occurred 
+by chance.
+During the process of carrying out this research, it became clear that finding out the initial 
+reasons for installation was somewhat difficult, especially in the case of older sites. The 
+
+=== p.12 ===
+ix
+The Effectiveness of Average Speed Cameras in Great Britain
+publication of evidence on websites is patchy, although some (such as that published 
+at A9road.info) are very good. With a study of this nature, there is a high reliance on 
+organisations to have information available in an appropriate format, and to have published 
+or be willing to share that information. Accuracy can always be improved with greater 
+co-operation, but this in no way diminishes the independence of the analysis. With more 
+information and a growing number of sites at which ASCs are installed, it will be possible in 
+the future to delve deeper into the effectiveness of this technology, perhaps answering other 
+questions about deployment and suitability on different types of road. The approach can 
+also be repeated for other camera technologies, with the aim of comparing the performance 
+of different systems.
+In conclusion, the research shows quite clearly that the implementation of ASCs in the 
+locations that have been assessed in this report has had the effect of reducing injury 
+collisions, and especially those of a higher severity. Even taking into account other 
+influencing factors, the reductions are large and statistically significant.
+
+=== p.13 ===
+1
+www.racfoundation.org
+1.	Introduction
+Why this research has been commissioned
+The use of automated speed enforcement technology in the UK has been 
+subject to immense scrutiny and debate for over two decades following the first 
+installation of a Gatso camera on the A316 in London in 1992 (Gibbs, 2012).
+The most comprehensive analysis of the effectiveness of speed cameras in 
+Great Britain was published in 2005 (PA Consulting / UCL, 2005) and showed 
+a 42% reduction in the number of people killed or seriously injured at sites 
+where safety cameras were introduced. This report used data from thousands 
+of camera sites, but these were mostly spot speed cameras: either permanent 
+‘Gatso’-type units, or mobile enforcement – often located in a van or on a 
+motorbike equipped with combined detection and recording systems.
+A review in 2013 (Soole et al., 2013) was critical of the relatively poor levels 
+of scientific rigour associated with the current body of literature, specifically 
+citing that:
+•	
+comparison/control sites have not been employed in any evaluations 
+included in the literature review;
+•	
+confounding factors (e.g. exposure, regression to the mean) are rarely 
+controlled for; and
+•	
+statistical significance testing is, typically, not performed.
+1.1
+
+=== p.14 ===
+2
+The Effectiveness of Average Speed Cameras in Great Britain
+Furthermore, the reports have been carried out largely by manufacturers of equipment or 
+those undertaking the enforcement, and lack independence.
+The RAC Foundation has published reports authored by Professor Richard Allsop looking 
+at the effectiveness of speed cameras (Allsop, 2010) as well as how to analyse the data 
+appropriately (Allsop, 2013). Following feasibility discussions with RSA, the Foundation has 
+commissioned this report with the principal aim of estimating the effectiveness of average 
+speed cameras (ASCs) deployed in Great Britain over the last 15 years.
+The measure used throughout this report in considering the effectiveness of ASCs is the 
+change in injury collisions in the post-installation periods. ASC effectiveness may also be 
+considered in terms of changes in compliance with speed limits or long-term changes in 
+offence rates; neither of which are considered within the scope of this study.
+Objectives
+Three main objectives were set for this study, which would all help to address concerns 
+about previous studies:
+•	
+to assemble available information relating to ASC sites in Great Britain, that may be 
+used to create a national database of ASC sites;
+•	
+to establish a suitably large and appropriate control group of sites to enable an 
+understanding of the difference in collision reduction between potential ASC sites 
+with and without such enforcement; and
+•	
+to establish levels of occurrence of collisions before and after ASC installation (with 
+consideration given to site-selection period, pre-installation and post-installation 
+periods).
+Although creating an independent database does require input from those involved in the 
+installation, management, and maintenance of camera systems in order to determine ASC 
+site locations, all collision matching and analysis has been carried out separately on the basis 
+of data acquired from https://data.gov.uk. The collision results for individual camera sites 
+(stretches of road along which automated camera enforcement is undertaken) may therefore 
+differ from those published locally by police forces, highway authorities, or safety camera 
+partnerships (SCPs). This may arise due to differing definitions of site section boundaries. The 
+definition of site section boundaries used in this analysis is discussed further in Chapter 4.
+1.2
+
+=== p.15 ===
+3
+www.racfoundation.org
+Average speed camera technology
+Average speed camera systems differ from fixed, single-point systems in that 
+they use pairs of cameras to measure vehicles’ average speeds along a clearly 
+defined and accurately measured stretch of road that could be anywhere 
+between a few hundred metres and many miles in length. In the UK the 
+shortest measured site section is 390 metres and the longest 46 kilometres. A 
+traditional spot speed camera1, on the other hand, measures only the speed 
+at a single point on the road, using either radar or inductive loops under the 
+road surface. It has been argued by manufacturers and others that ASCs, 
+by enforcing over a longer stretch of road, will be more effective in achieving 
+compliance with the prevailing speed limit than spot speed cameras.
+ASCs are clearly distinguishable from spot speed cameras, and are usually 
+mounted on gantries or cantilever poles high up to enable the automatic 
+number plate recognition (ANPR) cameras to work effectively. The most visible 
+use of the systems (although not one that falls within the scope of this analysis) 
+is at roadwork schemes with temporary lower speed limits, where they have 
+become a common sight over the last decade. It is argued that the use of 
+1  The term ‘spot speed camera’ is used to describe enforcement equipment that measures a vehicle’s 
+speed at a single point on the road.  The term ‘fixed speed camera’ is also in common use and describes 
+enforcement equipment that is installed at a set location.  As this would encompass ASCs, the term 'spot 
+speed camera' is the most appropriate to differentiate other technology.
+2.1
+2.	Background
+
+=== p.16 ===
+4
+The Effectiveness of Average Speed Cameras in Great Britain
+these systems, rather than spot speed cameras, achieves a greater level of compliance and 
+improved traffic flow where a temporary limit is in place (Scott Wilson, 2008: 42, 44).
+All ASC systems make use of ANPR technology to identify and record vehicles at the start 
+and end of the enforced section with their entry and exit times, which, together with the 
+known distance travelled, is used to calculate an average speed.2 When a vehicle’s average 
+speed exceeds a set threshold, the offence is recorded by the system and may ultimately, 
+following a review by police staff, result in a Notice of Intended Prosecution (NIP) being sent 
+to the registered keeper of the vehicle. All ASC systems are digital and do not require film to 
+be loaded, unlike older spot speed cameras. The early ASC systems required the installation 
+of roadside cabinets with write-once, read-many (WORM) drives to record offence data 
+digitally for transfer to a police office for processing. New devices obviate the need even 
+for a site visit, as they use wireless communications, such as 3G, to transmit offence 
+information in real time.
+The first technology approved for use in the UK was the SPECS™ system, manufactured 
+by Speed Check Services, now part of Jenoptik Traffic Solutions. It received type approval 
+from the Home Office in 1999, and the first cameras went live in Nottingham in 2000 (PR 
+Newswire, 2000). There are now three other manufacturers with approved systems in the 
+UK: 3M, Siemens, and Red Speed International. The overwhelming majority of permanent 
+installations are currently provided by Jenoptik, however, with newer versions of their SPECS 
+system now named VECTOR™.
+Previous analysis
+As mentioned in the introduction, there have been many studies of the effectiveness of 
+automated speed enforcement. A Cochrane Review3 of 28 individual studies in 2010 
+concluded that “speed cameras are a worthwhile intervention for reducing the number of 
+road traffic injuries and deaths” (Cochrane, 2010). The review also concluded: “More studies 
+of a scientifically rigorous and homogenous nature are necessary, to provide the answer to 
+the magnitude of effect.” The studies within the synthesis showed that crashes resulting in 
+fatalities or serious injuries saw reductions of between 11% and 44%.
+UK studies, including those commissioned by Department of Transport (DfT), have often 
+separated out spot speed cameras, such as the aforementioned Gatso camera, and 
+deployment of mobile units which operate on a temporary basis for a few hours at a time. 
+Hitherto, there has not, however, been an independent study into the effectiveness of ASCs 
+on their own.
+Results published by SCPs have claimed reductions in serious collisions or injuries as high 
+as 82% (Speed Check Services, 2009: 1). These simple analyses of before-and-after data 
+have been criticised as misleading by opponents of camera enforcement, who say that they 
+2  ASC sites rely on pairs of cameras registering where a vehicle enters and departs a route over which speed is being 
+measured. Multiple pairs may be used on long routes.
+3  Cochrane Reviews are systematic reviews of primary research in human health care and health policy. They investigate the 
+effects of interventions for prevention, treatment and rehabilitation.
+2.2
+
+=== p.17 ===
+5
+www.racfoundation.org
+do not take into account the background trend in road collision reduction, or the influence of 
+site-selection bias which introduces the ‘regression to the mean’ effect. These matters are 
+discussed in more detail later in this report.
+A summary of research into speed cameras is held on the Road Safety Observatory website 
+(www.roadsafetyobservatory.com). It is an excellent resource for those wishing to discover 
+more about the available evidence on a number of road safety topics, and therefore it is not 
+within the principal objectives of this report to repeat this work.
+Context of use
+There is no legal restriction on where ASCs can be placed, although certain practical criteria 
+need to be met – for example, the presence of an electrical supply, adequate lighting, and a 
+suitable location to place the associated street furniture. Sites should not have many entry 
+and exit points owing to the nature of the systems, which only detect speeds once a vehicle 
+has passed both the points. The operational responsibilities for cameras are often shared 
+between police forces and highway authorities, sometimes working together as a SCP, or 
+more recently as a ‘road safety partnership’.
+These SCPs and road safety partnerships, many of which still exist today, were formed 
+between 2000 and 2007 across most of England and Wales following the national roll-out of 
+a successful pilot scheme by DfT. The financial basis of this roll-out was often referred to as 
+‘netting-off’ or ‘hypothecation’, and was effectively a period of reimbursement of the costs of 
+enforcement and related activities (in accordance with a business case), subject to oversight 
+by Government. A separate system was formed in Scotland and is still in place. Prior to 
+2000, cameras were installed solely by highway authorities at their own expense and with no 
+formal guidelines. These were all spot speed cameras.
+During the time of hypothecation, a local SCP could be established, and – assuming the 
+DfT rules were followed – a proportion of the fine revenue was then recovered to pay for the 
+cost of operations, the remainder staying with the Treasury. These operations would typically 
+include the detection and processing of offences, together with public information activities 
+and – crucially – the installation and maintenance of camera technology.
+This period of hypothecation resulted in a rapid expansion in the number of cameras on 
+UK roads, from 1,672 in 2001 to 4,737 by 2007 (Hansard, 2008). These new cameras 
+required approval under the rules of the scheme introduced in 2001 with the national roll-out 
+of the hypothecation scheme, and the majority were installed at locations where there was 
+a defined collision problem. The precise criteria varied during the period of DfT oversight, 
+but typically there needed to be four fatal or serious collisions per kilometre over a three-
+year period, plus other less-serious collisions, high speeds, evidence of speed being a 
+contributory factor in the causation of collisions, and/or in their severity, and consideration of 
+other methods of intervention such as engineering as an alternative (DfT, 2005).
+2.3
+
+=== p.18 ===
+6
+The Effectiveness of Average Speed Cameras in Great Britain
+Data collection
+In order to carry out an independent analysis of ASCs, that is a review of the 
+collisions data without reference to collision figures provided by manufacturers 
+or operators, it was necessary to collect as much information as possible 
+about the permanent systems currently installed. An analysis of the effect of 
+temporary systems, such as those at roadworks sites, is not included in this 
+report as there is insufficient information available about the locations and 
+durations of use of such schemes. These temporary schemes are also usually 
+associated with a reduction in speed limit – the reasons behind the exclusion 
+of such schemes are discussed in section 3.2. The following information was 
+requested from the four manufacturers:
+•	
+location of individual camera units and poles;
+•	
+installation dates; and
+•	
+current speed limit.
+Only two of the four manufacturers, Jenoptik and 3M, supplied information. 
+Siemens and Red Speed International did not participate, but as the number 
+of sites in which their devices are installed is understood to have been very 
+3.1
+3.	Average Speed 
+Camera database
+
+=== p.19 ===
+7
+www.racfoundation.org
+small until recently, this is likely to affect the study only marginally. The information collected 
+about the extent of ASC deployment has been provided to the Foundation in the form of 
+a spreadsheet and shapefile. This ‘database’ can be kept up to date and used for further 
+research or scrutiny if required.
+It is worth noting at this point the definitions used to describe the equipment and its use:
+Term
+Description
+Camera
+When describing an ASC system, the term refers to the entire unit 
+used to read number plates. There are often several camera pods on 
+a single pole. For a spot-speed system the camera actually means the 
+photographic equipment located within a fixed housing, which can in 
+some systems be moved from housing to housing.
+Dummy
+A dummy camera/housing is one that gives the impression of being able 
+to enforce the speed limit but does not actually contain the required 
+equipment to detect offences. This term could be used to describe a 
+spot-speed housing that has no camera installed, or an ASC pod with no 
+internal detection equipment.
+Pole
+For ASC systems, a cantilever pole is commonly used for the purpose 
+of attaching cameras. Cameras can also be mounted to other street 
+furniture such as gantries.
+Site
+Camera sites are defined more clearly later in the report, but a simple 
+explanation would be that it is the stretch of road over which the presence 
+of enforcement equipment is deemed to have a potential effect.
+Site section
+Stretches of road within the site boundary that are separated into 
+sections for several reasons (see section 4.1)
+Once the location information was received, it was verified using satellite and road images 
+(from Google Street View), and site boundaries were plotted using a digital mapping tool. 
+Local SCPs, highway authorities and police forces were then contacted to confirm that the 
+information was correct, and supplementary questions were asked, including:
+•	
+the initial reason for the installation;
+•	
+whether a collisions analysis was used to justify the site installation, and, if so, what 
+site-selection period collision data was used;
+•	
+whether any previous enforcement was undertaken using spot speed cameras; and
+•	
+whether there was any change in the speed limit at the site before or after installation.
+The majority of those contacted were able to supply some or all of this information, although 
+this provision of information does not necessarily indicate support or endorsement of the 
+research on the part of the authority or police force.
+There are a number of sites within the study that were installed for reasons other than 
+collision reduction. This may seem strange given the focus on using cameras to reduce 
+collisions, but moderating vehicle speeds can provide benefits such as traffic smoothing 
+
+=== p.20 ===
+8
+The Effectiveness of Average Speed Cameras in Great Britain
+(one purpose being to reduce emissions in air quality management areas); reducing vehicle 
+noise; and reducing likely damage to sensitive road structures because vehicles are travelling 
+at lower speeds.
+Average speed camera sites and installation dates
+There were a total of 51 ASC sites commissioned and installed between 2000 and 2015, with 
+a total length of 410 km according to the site boundary rules developed for this study (see 
+section 4.1). The date associated with each site is usually the date of operation, not the date 
+the first offence was detected or the date that works started. It is therefore possible that some 
+of the infrastructure could have been at the roadside prior to the official operating date.
+Figure 3.1: Installation history for average speed cameras in Great Britain
+Source: Authors’ own
+The number of permanent ASC systems has grown fairly slowly (see Figure 3.1), certainly 
+compared to the aforementioned very large increase in spot speed cameras between 2000 
+and 2007. The distance covered by the systems leapt significantly in 2014 when the A9 site 
+from Dunblane to Inverness was installed (A9 Safety Group, undated), although 2015 saw 
+the largest ever number of individual sites put in place, with 12 new locations entering the 
+database. The surge in popularity of these systems is likely to continue as the cost of the 
+technology falls and there is increased competition in the market.
+There are a large number of factors within the road environment that could influence 
+changes in collision occurrences. Factors such as changes to signing or road markings, 
+3.2
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+0
+2
+4
+6
+8
+10
+12
+14
+2000 2001 2002 2003 2004 2005
+Total length
+Sites
+2006 2007 2008 2009 2010 2011 2012 2013 2014 2015
+Number of sites installed per year
+Total length of road covered by average speed cameras (km)
+Installation year
+
+=== p.21 ===
+9
+www.racfoundation.org
+resurfacing, changes to maintenance of roadsides and street furniture, and changes to 
+street lighting can all have an impact on collision occurrences, but information relating to 
+these factors is generally difficult to collect, and therefore the impact of such factors cannot 
+be individually considered in modelling.
+Instead, these factors can be considered in this analysis by the inclusion of ‘comparison’ 
+lengths of road, to allow for trend and systematic changes in collision occurrences. Inclusion 
+of these comparison roads is important in accounting for the general downward trend in the 
+number of recorded injury collisions, with a 29% fall between 2005 and 2015 (RSA, using 
+MAST Online (data extracted 1 August 2016)). Factors such as improved vehicle design, 
+better trauma care, road engineering, road user education and enforcement all contribute to 
+this decrease in collisions and casualties, as well as in the severity of injuries sustained.
+Two factors were identified that are likely to have had a significant impact on collision 
+occurrences at ASC sites, but separately determining the impact of these factors from 
+that of the ASC system itself was not possible, and these ASC sites were excluded from 
+further analysis. The factors resulting in exclusion were changes in speed limit in the period 
+immediately before, or after, the installation of an ASC system; and the presence of previous 
+enforcement – spot speed cameras or mobile cameras with accompanying warning signs. 
+An example of the presence of previous enforcement is that on the A14 section between 
+Huntingdon and Girton, which was previously covered by a number of spot speed cameras.
+Information provided by authorities relating to these factors led to the exclusion of 17 ASC 
+sites from further analysis. Figure 3.2 presents the total enforcement lengths of excluded 
+ASC sites in relation to all identified sites.
+Figure 3.2: Significant factors precluding sites from analysis
+308.1 km
+15.5 km
+43.4 km
+42.7 km
+No significant influencing factors identified
+Change in speed limit
+Previous enforcement
+Change in speed limit and 
+previous enforcement
+Source: Authors’ own
+
+=== p.22 ===
+10
+The Effectiveness of Average Speed Cameras in Great Britain
+Site boundaries
+Organisations and individuals wishing to monitor changes in collisions along a 
+stretch of road first of all have to define the site boundaries. Rather than relying 
+on local information, as definitions may differ from one SCP to another, the site 
+boundaries are defined here in a standardised manner based on the expert 
+knowledge of the authors.
+The width of a site extended 50 to 150 metres either side of the centre of the 
+roadway section being considered, varying depending on the type of road 
+(number of traffic lanes etc.), to ensure that mapping captured all collisions 
+occurring on the road section.
+The length of the site was defined as the distance between the first camera 
+and the second camera, plus an additional calculated distance before the first 
+camera and after the second camera. This calculated distance was dependent 
+on the speed limit on the road section and was calculated as the distance 
+travelled in a 15-second interval at this speed limit – so for 30 mph roads, the 
+site boundary ends 201 metres past the last camera and starts 201 metres 
+before the first camera.
+Sites were split into sections where there was a change along the road in either 
+speed limit or road type (i.e. dual to single carriageway). It was also decided 
+that sites would be split into separate sections at significant intersections such 
+as roundabouts and traffic lights, as shown in Figure 4.1.
+4.1
+4.	Collision Analysis
+
+=== p.23 ===
+11
+www.racfoundation.org
+If there was a change in speed limit or road type, or presence of an intersection then the 15 
+seconds travel rule was ignored and the site was deemed to stop at that point.
+For some sites there turned out to be a single site section, while for others there were 
+up to eight sections – stretches of road belonging to the same site often but only slightly 
+separated, nevertheless sometimes totalling up to several kilometres.
+Figure 4.1: Sample map demonstrating site and site section boundaries
+© OpenStreetMap contributors 
+Source: Authors’ own
+Collision matching
+Collision data from 1990 to 2014 together with provisional 2015 data (January to June) 
+obtained from DfT was plotted in the geographic information system program QGIS, using 
+the co-ordinates in STATS19 data, the national database of police-reported injury road 
+collisions in Great Britain. Collisions were then matched to a site in QGIS by location and 
+by road number. Road number matching was carried out so that collisions on bridges and 
+4.2
+
+=== p.24 ===
+12
+The Effectiveness of Average Speed Cameras in Great Britain
+tunnels of crossing roads were not erroneously included; collisions on nearby roads with 
+inaccurate co-ordinates were also thereby excluded. This was especially important given the 
+wide buffers used at some sites.
+Figure 4.2 shows collisions in a site on the A38 that are colour coded by whether the road 
+number recorded in STATS19 matches the road number of the site: green if it matches, blue 
+if it does not and is therefore excluded. It shows that there are a number of collisions on the 
+adjacent M6 Toll road which were not on the A38 and are therefore excluded from the analysis.
+Figure 4.2: Sample map demonstrating collision matching
+© OpenStreetMap contributors 
+Source: Authors' own, adapted from STATS19 data
+Collision’s STATS19-recorded 
+road number matches site’s road
+Collision’s STATS19-recorded  
+road number differs from site’s road
+Key
+
+=== p.25 ===
+13
+www.racfoundation.org
+Control sites
+The aforementioned review of literature (Soole et al., 2013) mentioned the lack of reference 
+to controls or comparison sites, which is where the second objective of this research has 
+relevance:
+To establish a suitably large and appropriate control group of sites to enable an 
+understanding of the difference in collision reduction between potential ASC sites with and 
+without such enforcement.
+This report looks at two different ways of providing a ‘control’ for the ASC sites, using 
+information sourced about collisions on roads that were not subject to ASC enforcement.
+4.3.1 Candidate sites
+As part of the initial data gathering exercise, information was provided which indicated that 
+some sites were initially considered for treatment with ASCs by several SCPs, but at which 
+the treatment was subsequently not implemented because of the high costs of installation 
+in relation to the budget available. They will have been identified as a result of a collision 
+analysis by local road safety organisations. These sites are not a true control in the statistical 
+sense, and to avoid confusion are thus referred to as ‘candidate sites’ in this report. They 
+are reviewed separately within the results.
+A total of seven sites with nine sections were identified, covering 24.89 km, all but one of 
+which were in police force areas where no permanent ASCs had been introduced on other 
+roads. It is highly likely that there are more sites of this nature, but without a more exhaustive 
+survey of authorities it would not be possible to increase the sample size. At the request of the 
+data provider, the precise location of these individual sites is not exposed in the research.
+4.3.2 Comparison roads
+The second way of comparing changes in collision numbers is by looking at collisions on other 
+roads in the same area. As mentioned previously, the number of collisions on most types of 
+road have dropped substantially since 2000 when the first ASC was installed, and this general 
+trend needs to be taken into account. This was achieved by obtaining collision statistics 
+for similar roads in the same authority area for the same periods as the data used from the 
+camera sites. The data from the ASC sites was excluded from these comparison roads.
+The definition of ‘similar road’ used in the report is one which fits a simple match of road 
+classification, for example ‘A‑roads’. This is not a perfect selection methodology and, if 
+suitable data was made available (as well as more time), a better set of comparison roads 
+could be selected using information about traffic flows, number of lanes per carriageway, 
+speed limit, junction density, or any other potential classification measure.
+Nevertheless, the sample size is very large, with the comparison roads measuring a total of 
+60 times the length of the ASC sites included in the study.
+4.3
+
+=== p.26 ===
+14
+The Effectiveness of Average Speed Cameras in Great Britain
+Initial analysis
+Traditionally, local analyses have focused on determining the change in collision rates from 
+before to after installation of the cameras – indeed, this was something encouraged during 
+the period of DfT oversight. Whilst this does have its place for some types of collision-
+reduction intervention – high friction road surfaces, for example (Simpson, 2005) – it does 
+not take account of selection bias (where sites with abnormally high numbers of collisions 
+were chosen in the first place), or the general trend of collision reduction as a result of 
+external influences. A basic before-and-after analysis of ASC sites produces these findings, 
+but without modelling fully, all or most of these reductions could well be due to site-selection 
+bias and/or the general trend. Sections 4.5 and 4.6 of this report outline the methodology 
+used later on to allow for these sources of apparent reduction.
+Figure 4.3: Simple before-and-after analysis methodology
+36-month ‘before’ period
+1-month  
+installation period
+36-month ‘after’ period
+Source: Authors’ own
+Figure 4.3 illustrates a typical approach to a before-and-after analysis. It excludes the 
+calendar month of installation and then looks at collision numbers in the two 36-month 
+periods pre- and post-installation. Collisions are all classified as a ‘personal injury collision’ 
+(PIC), where at least one person in or on any vehicle, or a pedestrian, was injured; and 
+potentially as a ‘fatal or serious collision’ (FSC), which excludes collisions where only ‘slight’ 
+injuries were sustained.
+A simple analysis using this typical methodology was undertaken for the sites in the 
+database. Some sites were removed, namely those that do not have three years of post-
+collision data or those excluded because of significant influencing factors (see section 3.2). 
+This narrowed down the length of road suitable, which then stood at 116.85 km, a great 
+reduction from the total of over 406 km within the total dataset. This is largely due to the 
+high proportion of ASC installations that have taken place over the last three years. A full list 
+of all sites included within the different parts of this report is included in Appendix C.
+Table 4.1: Simple analysis results of collisions at ASC sites
+PIC before
+PIC after
+% change
+FSC before
+FSC after
+% change
+526
+392
+−25%
+146
+73
+−50%
+Source: Authors' own
+The results in Table 4.1 appear to be impressive, showing large reductions in both PICs and 
+FSCs. However, for all of the reasons mentioned earlier in this section, they should not be 
+taken as the final result and will be referred to at the end of the report in the discussion.
+4.4
+
+=== p.27 ===
+15
+www.racfoundation.org
+Generalised linear model
+The principal analysis within this report uses a statistical model adopted by Professor 
+Richard Allsop, in a form adapted from that used in the 2013 study of spot speed camera 
+data for the RAC Foundation (Allsop, 2013). That report covers the technical details of 
+the model, some of which are repeated here in Appendix A. The basis of the model is a 
+regression, a statistical method for modelling the relationship between a dependent variable 
+(in this case the number of collisions at a site) and one or more independent, explanatory 
+variables. In this case the independent variables are the dummy variables to indicate the 
+presence or absence of operational ASCs and to indicate the declared site-selection period 
+(SSP); and the number of collisions on comparison roads, which is used to enable the 
+number of collisions at a site to be adjusted for trend and other general changes in collision 
+occurrence on relevant roads in the area in which the site lies.
+The model uses monthly data for each site section, together with corresponding data for 
+comparison roads, from January 1990. The data was sourced from the official closed DfT 
+STATS19 dataset – any local alterations to the collision records, including additions or 
+deletions, will therefore not have been taken into account. This approach takes all of the 
+available datapoints for all camera sites in the study over the last 25 years, although the 
+sample has been restricted to sites installed before the end of 2014. Each site will therefore 
+have some post-installation data, which will vary from eight months to almost 15 years. 
+Unlike the simple before-versus-after analysis, the full post-installation dataset is used in 
+this model.
+Rather than use annual data, as was done in a number of previous studies, this model 
+makes use of the monthly information, which was only possible because of the independent 
+matching of collisions. As mentioned in section 4.3.2, it also incorporates the trend data for 
+similar comparison roads in an authority area.
+The final consideration is the effect of regression to the mean (RTM). In road safety, 
+regression to the mean is the explanation for the situation where a road has a high number 
+of crashes in a particular period (in this case three years, a period not long enough for the 
+figures to ‘average out’), but because of the random factors involved in the causes of those 
+crashes, it is more likely than not that there will be fewer at the same site in subsequent 
+years, irrespective of whether there has been road safety treatment. Put simply, by 
+deliberately choosing a site with an unusually high level of crashes in the first place, one is 
+predisposing the results in subsequent years to show a drop in collisions at that site.
+In order to allow for RTM, the model analyses and excludes any identified SSPs when 
+comparing the collision numbers at sites post-installation with the numbers in all pre-camera 
+periods. The pre-camera period at each site includes the implementation period between 
+site selection and the camera becoming operational.
+4.5
+
+=== p.28 ===
+16
+The Effectiveness of Average Speed Cameras in Great Britain
+Figure 4.4: Various periods use for analysis within the model
+Site pre-site selection period
+Comparison pre-site selection period
+Site selection period
+Comparison selection period
+Site implementation period
+Comparison implementation period
+Site post-installation period
+Comparison post-installation period
+Month made operational
+Comparison 1
+ASC 1
+ASC 2
+Comparison 2
+ASC 3
+Comparison 3
+Jan – Mar 2004
+Apr – Jun 2004
+Jul – Sep 2004
+Oct – Dec 2004
+Apr – Jun 2005
+Jul – Sep 2005
+Oct – Dec 2005
+Jan – Mar 2005
+Apr – Jun 2006
+Jul – Sep 2006
+Oct – Dec 2006
+Jan – Mar 2006
+Apr – Jun 2007
+Jul – Sep 2007
+Oct – Dec 2007
+Jan – Mar 2007
+Apr – Jun 2008
+Jul – Sep 2008
+Oct – Dec 2008
+Jan – Mar 2008
+Apr – Jun 2009
+Jul – Sep 2009
+Oct – Dec 2009
+Jan – Mar 2009
+Apr – Jun 2010
+Jul – Sep 2010
+Oct – Dec 2010
+Jan – Mar 2010
+Apr – Jun 2011
+Jul – Sep 2011
+Oct – Dec 2011
+Jan – Mar 2011
+Apr – Jun 2012
+Jul – Sep 2012
+Oct – Dec 2012
+Jan  – Mar 2012
+Apr – Jun 2013
+Jul – Sep 2013
+Oct – Dec 2013
+Jan  – Mar 2013
+Apr – Jun 2014
+Jan  – Mar 2014
+Source: Authors' own
+Figure 4.4 shows the relationship between the different periods for three fictitious sites, 
+including the corresponding periods for the respective comparison roads.
+In the example the three sites all have different installation dates with varying SSPs and 
+pre-installation period durations. The comparison data is matched to these periods for each 
+individual site month by month (the diagram shows months grouped together into quarters 
+for simplicity). There is a one-month installation period shown in black, which is excluded 
+from the analysis.
+Site-selection period data
+The Site Selection Period (SSP) is defined here as the collision analysis period used to 
+identify the site for treatment with a speed enforcement intervention. During the period 
+of DfT oversight this period would be recorded and submitted as a part of the annual 
+‘operational case’. As stated in the previous section this period of time is used in the model 
+to allow for the effect of regression to the mean (RTM), the phenomenon that describes 
+collision levels returning to ‘normal’ following a period of untypically high levels. This 
+phenomenon is likely to happen at sites that have been selected for high collision rates 
+according to some site-selection criterion.
+Information about SSPs is not commonly available on the websites of organisations operating 
+the ASCs. The questionnaire sent to all operators was useful in obtaining information 
+about the presence of an SSP, and sometimes where a site was not installed for collision-
+reduction reasons. In a few cases the original collision analysis that led to the site being 
+selected was included on a website, an excellent example being the A9road.info website 
+produced by Transport Scotland. There were still significant holes in the data, however, and 
+two approaches to estimating the SSP were used for sites where no explanation was put 
+4.6
+
+=== p.29 ===
+17
+www.racfoundation.org
+forward. The first method was applied to sites that were installed during the period of DfT 
+oversight, the period of hypothecation. During this time ‘handbooks’ were issued to SCPs, 
+explaining how camera sites should be selected and what collision data was required. These 
+handbooks were used by partnerships to put forward formal operational cases for approval, 
+setting out proposed enforcement activity at existing sites and all proposed new sites. A 
+sample timeline for this process might be as follows:
+•	
+October 2005:	 Operational case submitted, including collision data from the 
+previous three years
+•	
+April 2006:	
+Operational case approved
+•	
+March 2007:	
+Latest date by which the camera site could be installed
+In the example above, the SSP would usually be expected to be 2002–4, as data 
+from 2005 would have been incomplete at the time of submission. By using the date of 
+installation, the earliest possible operational case date was calculated together with the 
+associated analysis period.
+For sites that were installed post-DfT oversight, the SSP and implementation periods 
+have been estimated using averages from all other sites. This was not carried out for sites 
+installed for non-collision-reduction reasons – these were removed from the sample for 
+possible separate analysis.
+The average length of the SSP in the model is three years and one month, with the average 
+implementation period being just over two years. A total of 14 sites where cameras 
+were installed for collision-reduction reasons have recorded SSPs, and SSPs have been 
+estimated for a further 11 such sites.
+
+=== p.30 ===
+18
+The Effectiveness of Average Speed Cameras in Great Britain
+The results of the generalised linear modelling are presented in the five sets of 
+analyses as follows:
+Set 1:	 All ASC sites installed for collision-reduction reasons
+Set 2:	 Comparison of ASC sites installed before and after April 2007
+Set 3:	 Comparison of high and low-speed sites
+Set 4:	 Sites installed for non-collision-reduction reasons
+Set 5:	 Candidate sites
+Each set was then reviewed with respect to the changes in PICs and FSCs 
+between months where enforcement was present and months where it was 
+not, excluding the SSP. This calculation is referred to as the installation effect. 
+A further analysis of the SSP versus the other pre-installation months is also 
+undertaken to review the site-selection effect.
+The sites comprising each of these sets are listed in Appendix C. The full statistical 
+outputs, including 95% confidence intervals, are also given in Appendix B. Collision 
+data for individual months on a site-by-site basis does not form a part of this report.
+5.	Results
+
+=== p.31 ===
+19
+www.racfoundation.org
+Set 1: All ASC sites installed for collision-reduction reasons
+This application of the model selects all ASC sites from the database with the following 
+exceptions:
+•	
+sites installed from 2015 onwards;
+•	
+sites with a prior history of speed camera enforcement;
+•	
+sites where the speed limit was changed during the study period;
+•	
+sites that were decommissioned after a period of operation (e.g. Northamptonshire); and
+•	
+sites that were installed for non-collision-reduction reasons.
+The total number of sites in the sample was 25, which had between them a total measured 
+enforced section length of 294 km. This measurement does not cover the entire length 
+of the signed route but only the sections covered by visible enforcement equipment. 
+Comparison roads sampled covered 13,160 km in total. Results were provided both for 
+FSCs, i.e. those where at least one casualty was killed or seriously injured, and for all PICs.
+5.1.1 Installation effect
+A 36.4% (95% confidence interval: 25-46%) reduction in the mean rate of FSCs was estimated 
+in the post-installation period. The change in PICs was lower, with a 16% (95% confidence 
+interval: 9-22%) reduction; both results classified as highly statistically significant according to the 
+model. These results allow in part for any RTM through the removal of SSP data from the 
+pre-installation period. They also take into account the ‘trend’ data from the comparison sites.
+5.1.2 Site-selection period effect
+The other effect estimated in the model is the level of collisions in the SSP relative to the level 
+in the rest of the pre-installation period. The results here show an increase in FSCs of 24.9%, 
+and 16.7% for PICs. This supports the view that the SSP typically exhibits higher-than-normal 
+collision numbers; again, both results were highly significant when tested in the model.
+It should be borne in mind that the SSP effect has already been taken into account for in the 
+installation effect analysis.
+Set 2: Comparison of ASC sites installed before and after 
+April 2007
+As previously mentioned, April 2007 saw a change in the funding regime and level of control 
+from DfT in managing site selection and approval. Although guidelines remained, there 
+was no longer any requirement to follow these rules – operating authorities were from then 
+on able to site ASCs wherever they chose, to address quantified or perceived road safety 
+problems, or other issues such as air quality.
+This analysis takes the sites from Set 1 and splits them into two subsets:
+•	
+installation pre-April 2007 (10 sites, 62.91 km total length);
+•	
+installation post-April 2007 (15 sites, 231.36 km total length).
+5.1
+5.2
+
+=== p.32 ===
+20
+The Effectiveness of Average Speed Cameras in Great Britain
+5.2.1 Installation effect
+For the cameras installed before April 2007, the camera installation effect is estimated to be 
+a 36% reduction in FSCs per month. For the cameras installed after April 2007, this effect is 
+estimated to be a 43.3% reduction in FSCs per month. Both results passed the significance 
+test used in the model. It is worth noting, however, that the difference between these two 
+estimates is less than two thirds of its standard error (see Appendix B) and could therefore 
+well arise from random variation. It cannot therefore be said with any certainty that there was 
+a true difference in the installation effect between the two subsets.
+For PICs, the difference between the estimated ASC installation effects for cameras installed 
+before and after April 2007 is somewhat greater than the difference for FSCs, with estimated 
+reductions of 20.1% before and 8.7% after that date. The reduction of 20.1% is statistically 
+highly significant, but the reduction of 8.7% is in itself significant only at the 20% level and 
+quite likely to be the result of random variation. The difference between the two reductions is 
+significant at almost the 10% level, giving a slight indication that the reduction was greater in 
+the earlier period
+5.2.2 Site-selection period effect
+There is an interesting difference between site-selection effects for cameras installed in the 
+two periods. For cameras installed before April 2007, this effect is estimated to cause an 
+increase of only 8% in FSCs per month compared to other pre-installation months, and the 
+test of significance shows that this could very well have arisen from random variation. For 
+sites installed after April 2007 the effect is much larger, showing an increase of 37.4% (which 
+is also statistically highly significant). The estimated SSP effect for PICs in cameras installed 
+before April 2007 is similar to that for FSCs, but the effect for cameras installed after April 
+2007 is smaller than for FSCs, at 21.7% (compared with 37.4%). As with the FSC figures, 
+the pre-April 2007 finding is not statistically significant.
+Set 3: Comparison of high- and low-speed sites
+The final analysis of the sites from Set 1 splits them into two groups based on the speed 
+limits being enforced. Sites with 20 mph, 30 mph and 40 mph limits are classed as ‘low 
+speed’, with the remainder as ‘high speed’.
+5.3.1 Installation effect
+For FSCs the ASC installation effects at low- and high-speed sites were estimated reductions 
+of 42.2% and 32.3% respectively, both being highly significant. The difference in the two 
+results in itself was not significant, and could well have arisen from random variation. The 
+PIC installation effect at low-speed sites was strong, with a 25% reduction at a high level of 
+significance. The results for high-speed sites was lower at 7.9%, but this was statistically 
+significant only at the 20% level and thus may have arisen through random variation.
+5.3
+
+=== p.33 ===
+21
+www.racfoundation.org
+5.3.2 Site-selection period effect
+For the low-speed sites both the FSC and PIC results were statistically insignificant. The 
+estimated increase of 9% (for FSCs) and 5% (for PICs) compared to the rest of the pre-
+installation months could therefore have happened through chance. The results at high-
+speed sites were significant, and display increases of 30.2% for FSCs and 21.8% for PICs in 
+the SSP compared to other pre-installation periods.
+Set 4: Sites installed for non-collision-reduction reasons
+There were two sites in the database that were known to have been installed for non-
+collision-reduction reasons – both of these were installed to reduce speeds in order to 
+protect structures such as bridges and tunnels. With this in mind, the SSPs were set to zero, 
+as it was known that these sites were not selected for reasons related to collisions in any 
+specific time period.
+5.4.1 Installation effect
+The estimated FSC reduction of 20% was not statistically significant because of the wide 
+difference between reductions at the two sites, although the 24.2% PIC reduction was highly 
+significant when tested in the model. However, comparison of the 95% confidence intervals 
+for these two estimated reductions with those for the corresponding reductions for the sites 
+in Set 1 provides no evidence that the reductions in collisions at these two sites differ from 
+the reductions at the other 25 ASC sites that were selected based on a high collision record.
+Set 5: Candidate sites
+The final objective of the research was to identify a suitably large and appropriate control 
+group of potential ASC sites to understand the difference in collision reduction between ASC 
+sites with and without this form of enforcement. During the scoping part of the project, six 
+sites were identified as being originally selected for ASC deployment but not subsequently 
+progressed. Although the number of sites is fairly small, an analysis of these non-progressed 
+sites was undertaken using a modified model and using data from a set of comparator 
+roads in the same way as the ASC sites.
+The only effect estimated is that of the decision not to proceed with an ASC installation. 
+No information is available on whether an alternative intervention was introduced after the 
+decision was made.
+5.5.1 Effect
+Both FSC and PIC results showed an estimated 3% reduction in collisions after the decision 
+compared with before, relative to the numbers on the comparison roads. The significance 
+test shows that this reduction could very well have arisen by chance. Therefore, these sites 
+show no evidence of a counterpart reduction in collisions to that found at the ASC sites.
+5.4
+5.5
+
+=== p.34 ===
+22
+The Effectiveness of Average Speed Cameras in Great Britain
+What the results show
+The report’s results can be split into two sections, the setting up and 
+population of the database, followed by the analysis of the collision data.
+6.1.1 The database
+The first objective of the study was to establish a list of the installed average 
+speed camera (ASC) sites around Great Britain. This was largely a success, 
+as was the establishment of a set of additional information about the sites, 
+including information about site-selection periods (SSPs). There are a small 
+number of sites missing, because either the manufacturers or the suppliers 
+did not take part in the study. More information about SSPs would have been 
+helpful, and several methods had to be employed to calculate the periods and 
+the effect of regression to the mean may well not have been fully accounted for. 
+Nevertheless, the amount of information was enough to allow a robust analysis 
+of ASC sites installed for collision-reduction reasons.
+The database already contains information about sites installed in 2015, 
+and it is clear, following conversations with those involved in the report, that 
+this expansion in permanent ASC sites is continuing in 2016. Repeating 
+this analysis with new sites, or if and when more data about reasons for site 
+selection or SSP is obtained, would be a relatively simple task now that a 
+consistent methodology has been designed.
+6.1
+6.	Discussion
+
+=== p.35 ===
+23
+www.racfoundation.org
+Furthermore, this methodology can also be applied to other speed camera technologies, or 
+perhaps other interventions where a specific period of time was used to carry out a collision 
+analysis that led to the selection of sites for treatment.
+6.1.2 The results
+After deriving the methodology for data collection and collision analysis, a simple before-
+and-after collision analysis was undertaken, very similar to the analyses carried out by local 
+analysts in police forces, safety camera partnerships, and highway authorities. Although the 
+sample size was reduced compared to the main body of the work, the results here showed 
+reductions in fatal or serious collisions (FSCs) of 50% and personal injury collisions (PICs) 
+of 25%. These very high reductions do not, of course, take into account other influencing 
+factors, something completed later in the main body of results.
+Set 1, which looked at all ASC sites installed for collision-reduction reasons, showed that 
+collision reductions were significant at 36.4% for FSCs and 16% for PICs. This gives an 
+indication of the typical combined effect of site-selection bias, together with the overall 
+collision-reduction trend during the period of operation. This notable difference should act as 
+a warning to those seeking to review the benefits of similar interventions: the true impact on 
+road safety may be considerably lower than the initial results show.
+However, it is also worth mentioning that the results given here are robust, benefiting as they 
+do from an independent approach together with fairly complex statistical analysis. It may not 
+be possible to repeat this methodology at a local level, owing to the lack of a suitably large 
+sample size.
+Turning to other analysis sets, no statistically significant difference in the impact of FSCs 
+emerged between sites with high and with low speed limits, whereas there was an impact 
+on PICs at lower-speed sites.
+The other analyses – those of sites installed pre- and post- April 2007, and for non-collision-
+reduction reasons – did not yield significant results in terms of difference from the combined 
+cohort.
+The analysis excluded sites where no information could be obtained for the SSP. For those 
+where information was obtained, an increase in the rate of reported collisions was observed 
+during the SSP, suggesting the presence on bias in site selection. The existence of this ‘site 
+selection effect’ is a significant point of interest to those wishing to independently evaluate 
+the impact of other interventions. More specifically, this research indicates that where sites 
+are chosen for treatment due to high collision rates, then it can be expected that a certain 
+proportion of the post-installation collision reduction could reasonably be attributed to this 
+phenomenon. The presence and measurement of site selection effects should be reviewed 
+at other enforcement locations, or even where engineering works have taken place, and is 
+worth further consideration by the road safety profession.
+The review of candidate sites – those used as a pseudo-control group – was encouraging, 
+as it identified a reduction of only 3% in collisions, a reduction that could have arisen through 
+chance.
+
+=== p.36 ===
+24
+The Effectiveness of Average Speed Cameras in Great Britain
+Further research
+It is a common outcome for analytical reports to bemoan the lack of data, and it is true that 
+there is always something that could be made better with more data and higher-quality 
+information. In this case several areas for future development have been identified, as follows.
+6.2.1 Control sites
+Obtaining information about sites that could be used as a suitable control proved difficult. 
+Only a handful were identified, and these were largely from a different area from any of the 
+ASC sites. A much closer dialogue with enforcement agencies responsible for identifying, 
+installing, and enforcing sites may have yielded more data.
+Questions would in any case still remain about maintaining a ‘clean’ control environment. 
+The influence of other factors – such as road surface treatments, junction realignments, 
+maintenance regimes or even other forms of speed management – could have played a part 
+in influencing the results. This can equally be the case for the comparator roads used in the 
+study too.
+6.2.2 Comparator roads
+The use of ‘similar’ roads in this study permits the influence of background trend in the 
+overall collision data to be allowed for. The selection of these roads was reasonably broad, 
+relying on the simple method of road classification (A-roads etc.). An improved model would 
+select these roads based on traffic flows, the number of lanes per carriageway, speed limit, 
+junction density, and potentially other features.
+6.2.3 Comparison with other interventions
+Previous analysis by the RAC Foundation (Allsop, 2013) using a similar methodology 
+revealed similar FSC and PIC reductions at sites in Warwickshire (a fall of 38% in FSCs, 
+25% in PICs). It would be possible for a new analysis to be undertaken, assuming reliable 
+information about site selection and commissioning were available, of spot speed camera 
+sites, enabling the difference in installation effect between the two technologies to be 
+determined. A similar analysis could also be carried out for mobile enforcement sites.
+Conclusions
+The results show that ASC systems are effective in reducing collisions, especially those of a 
+high severity. Even after allowing for the effects of trend and regression to the mean, highly 
+significant reductions are noted. There is no evidence for the existence of any optimum 
+speed limit that leads to the installations achieving greater collision reduction – they appear 
+to be as suitable for deployment in higher speed limits as in lower ones.
+During the process of writing this report it has become clear that the number of systems 
+installed recently, or planned for installation soon, is increasing very rapidly. Understanding 
+the cost:benefit ratio of these systems would seem to be a sensible next step for authorities 
+and organisations wishing to consider their use.
+6.2
+6.3
+
+=== p.37 ===
+25
+www.racfoundation.org
+References
+A9 Safety Group (undated). Dunblane to Perth. Retrieved 25 July 2016 from http://a9road.
+info/route-information/dunblane-to-perth/
+Allsop, R. (2010). The Effectiveness of Speed Cameras: A review of evidence. Retrieved 
+25 July 2016 from www.racfoundation.org/assets/rac_foundation/content/downloadables/
+efficacy_of_speed_cameras_allsop_181110.pdf
+Allsop, R. (2013). Guidance on Use of Speed Camera Transparency Data: Updated 
+November 2013. Retrieved 22 July 2016 from www.racfoundation.org/assets/rac_
+foundation/content/downloadables/speed_camera_data_revised-allsop-nov2013.pdf
+Cochrane (2010). Do Speed Cameras Reduce Road Traffic Crashes, Injuries and Deaths? 
+Retrieved 25 July 2016 from www.cochrane.org/CD004607/INJ_do-speed-cameras-
+reduce-road-traffic-crashes-injuries-and-deaths
+DfT (Department for Transport) (2005). Handbook of Rules and Guidance for the National 
+Safety Camera Programme for England and Wales for 2005/06. Retrieved 25 July 2016 
+from http://webarchive.nationalarchives.gov.uk/+/http:/www.dft.gov.uk/pgr/roadsafety/
+speedmanagement/nscp/bookofrulesandguidancefo4581.pdf
+Gibbs, N. (2012). Speed cameras: 20 years on. The Daily Telegraph, 22 May. Retrieved 
+25 July 2016 from www.telegraph.co.uk/motoring/road-safety/9272478/Speed-cameras-
+20-years-on.html
+Hansard: House of Commons (2008). Written Answers. 6 May 2008, c736W. Retrieved 
+25 July 2016 from www.publications.parliament.uk/pa/cm200708/cmhansrd/cm080506/
+text/80506w0005.htm#08050625000551
+RSA (Road Safety Analysis). MAST Online. Data retrieved 1 August 2016 from http://www.
+roadsafetyanalysis.org/mast-online/
+PR Newswire (2000). New generation of SPECS speed cameras goes live in Nottingham 
+today. Press release, 28 July. Retrieved 25 July 2016 from www.prnewswire.co.uk/
+news-releases/new-generation-of-specs-speed-cameras-goes-live-in-nottingham-
+today-156095915.html
+Scott Wilson (2008). Speed Camera Technology at Roadworks. Retrieved 25 July 2016 from 
+http://tna.europarchive.org/20120703124527/http://www.highways.gov.uk/knowledge_
+compendium/assets/documents/Portfolio/Safety%20Camera%20Technologies%20at%20
+Roadworks%20-%201258.pdf
+Simpson, C. (2005). Performance of High Skid Resistant Surfaces. Retrieved 25 July 2016 
+from http://saferroadsconference.com/wp-content/uploads/2016/05/Cassandra-
+Simpson_32_V1_2008131.pdf
+
+=== p.38 ===
+26
+The Effectiveness of Average Speed Cameras in Great Britain
+Soole, D. W., Watson, B. C. & Fleiter, J. J. (2013). Effects of Average Speed Enforcement on 
+Speed Compliance and Crashes: A review of the literature. Accident Analysis & Prevention, 
+54: 46–56.
+Speed Check Services (2009). SPECS3: Network enforcement. Retrieved 25 July 2016 from 
+www.speedcheck.co.uk/SPECS3_overview.pdf
+PA Consulting / UCL (2005). The National Safety Camera Programme: Four-year evaluation 
+report. London: PA Consulting.
+University of Windsor (2016). What is SPSS? Retrieved 25 July 2016 from https://www.
+uwindsor.ca/its/sites/uwindsor.ca.its/files/What%20is%20SPSS.pdf
+
+=== p.39 ===
+27
+www.racfoundation.org
+Appendix A: 
+Methodology
+Adapted from Guidance on Use of Speed Camera Transparency Data, Richard Allsop, 
+University College London, first issued June 2013, Updated November 2013
+Note: the equation used in modelling was stated incorrectly in Allsop’s 2013 report and this 
+error has been corrected here; the error was one of description only, and did not affect the 
+calculations reported either in that report or this.
+The data was analysed by means of the widely used technique known as generalised linear 
+modelling, or GLM, applied first to the natural logarithm (logarithm to the base e, where  
+e ≈ 2.718) of the ratio:
+Number of PICs at a given site in a given month 
+Number of PICs on comparison roads in the same month
+This was done with the aim of estimating how the ratio was affected multiplicatively by:
+•	
+(A1.1) whether that month was one of the months from which the numbers of 
+collisions or casualties may have been taken into account in deciding where to 
+establish the camera; and
+•	
+(A1.2) whether the camera was established and might therefore have been in 
+operation throughout that month;
+whilst having regard to the general level of occurrence of PICs at that site and the random 
+variation in the number of PICs at the site in a month.
+These multiplicative relations are expressed as additive ones by taking natural logarithms to 
+give Equation (A1.3) as follows:
+A.1 Equation A1.3
+lnμny = lnPny + cn + ubny + vcny
+is used to estimate single values of effects (A1.1) and (A1.2) across all cameras where:
+the cameras are coded with a Unique Site ID n
+μny = estimated mean of the Poisson distribution of the number of PICs at site n in 
+month y
+Pny = number of PICs on comparison roads for site n in month y
+cn = fitted indicator of general level of collisions at site n
+bny = 1 if month y was one from which the numbers of collisions or casualties may 
+have been taken into account in deciding where to establish site n and 0 if not
+
+=== p.40 ===
+28
+The Effectiveness of Average Speed Cameras in Great Britain
+u = fitted indicator across all N sites of the general level of collisions at the sites in 
+months from which the numbers of collisions or casualties may have been taken 
+into account in deciding where to establish the site relative to the level in other 
+months before the site was established
+cny = 1 if site n was established throughout month y and 0 if not
+v = fitted indicator across all N sites of the general level of collisions at the sites in 
+months throughout which sites might have been in operation relative to the level 
+in months before sites were established other than the months from which the 
+numbers of collisions or casualties may have been taken into account in deciding 
+where to establish the sites.
+The range of values of y is from 0 in January 1990 to 300 in December 2014 (a period of 25 
+full years, 300 months) for every site.
+The values of the fitted indicators are calculated by the software so that they approximately 
+maximise the likelihood of the recorded numbers of PICs having occurred at each site and in 
+each month if all influences upon these numbers were represented by Equation (A1.3).
+Similarly, the method is used for fatal or serious collisions (FSCs), with numbers of PICs 
+replaced by numbers of FSCs throughout.
+The primary results are the estimates of u and v and their standard error for the two kinds 
+of collision. 100exp(v) is the estimated collision rate per month at the set of sites after 
+installation as a percentage of the collision rate before installation, so that 80 would indicate 
+a 20% reduction. This estimate allows for trend and any bias by selection and associated 
+regression to the mean resulting from untypically high numbers of collisions in the SSPs.
+In the notation used by the model-fitting software, the fitted model provides estimates for the 
+two variables analysed, as follows:
+Exp(B) for Post-installation represents exp(v), the common estimate of the 
+multiplier by which the number of collisions per month after installation of cameras 
+is higher or lower than the average number before (excluding the SSP), and
+Exp(B) for SSP represents exp(u), the common estimate of the multiplier by which 
+the number of collisions per month during the SSP is higher or lower than the 
+average number before installation but excluding the SSP.
+A.2 Candidate Sites
+For this analysis, the equation is modified by omitting the term connected to SSP. The 
+interpretation of the other terms remains similar, except that there are no months from which 
+the numbers of collisions or casualties may have been taken into account in deciding where 
+to establish the sites.
+
+=== p.41 ===
+29
+www.racfoundation.org
+A.3 Equation (A1.4)
+lnμny = lnPny + cn + vcny
+where:
+the cameras are coded with a Unique Site ID, n
+μny = estimated mean of the Poisson distribution of the number of PICs at site n in 
+month y
+Pny = number of PICs on comparison roads for site n in month y
+cn = fitted indicator of general level of collisions at site n
+cny = 1 if month y is a month after the decision for site n was made and 0 if 
+month y is a month before the decision for site n was made
+v = fitted indicator across all n sites of the general level of collisions at the sites 
+in months after the decision was made relative to the level in months before the 
+decision was made.
+The range of values of y is from 0 in January 1990 to 300 in December 2014 for every site.
+The values of the fitted indicators are calculated by the software so that they approximately 
+maximise the likelihood of the recorded numbers of PICs having occurred at each site and in 
+each month if all influences upon these numbers were represented by Equation (A1.4).
+Similarly, the method is used for FSCs, with numbers of PICs replaced by numbers of FSCs 
+throughout.
+The fitted model provides estimate for the Post-decision variable analysed, as follow:
+Exp(B) for Post-decision represents exp(v), the common estimate of the multiplier by which 
+the number of collisions per month after the decision not to have an installation of cameras 
+is higher or lower than the average number before.
+
+=== p.42 ===
+30
+The Effectiveness of Average Speed Cameras in Great Britain
+Appendix B: 
+Calculations
+Note: the tables below are adapted from the output from the statistics software, Predictive 
+Analytics Software the new name for SPSS statistical analysis software (University of 
+Windsor, 2016). In terms of effect, the most important column is the one headed Exp(B), 
+which contains the common estimators across all sites in the set of multipliers for the two 
+variables (rows) in the model, site-selection period (SSP) and Post-installation. Values under 
+1 represent decreases and values above 1 represent increases relative to the pre-installation 
+periods that fall outside of the SSP.
+Table B.1: Set 1 parameter estimates for FSC
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.452
+.0803
+31.715
+1
+<.001
+.636
+.543
+.745
+SSP
+.222
+.0650
+11.654
+1
+<.001
+1.249
+1.099
+1.418
+Table B.2: Set 1 parameter estimates for PIC
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.175
+.0384
+20.630
+1
+<.001
+.840
+.779
+.906
+SSP
+.154
+.0391
+15.536
+1
+<.001
+1.167
+1.081
+1.260
+Table B.3: Set 2 parameter estimates for FSC, before April 2007 (A)
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.447
+.0935
+22.846
+1
+<.001
+.640
+.533
+.768
+SSP
+.077
+.1066
+.517
+1
+.472
+1.080
+.876
+1.331
+
+=== p.43 ===
+31
+www.racfoundation.org
+Table B.4: Set 2 parameter estimates for FSC, after April 2007 (B)
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.567
+.1676
+11.441
+1
+<.001
+.567
+.408
+.788
+SSP
+.318
+.0816
+15.160
+1
+<.001
+1.374
+1.171
+1.613
+Table B.5: Set 2 parameter estimates for PIC, before April 2007 (A)
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.225
+.0470
+22.865
+1
+<.001
+.799
+.729
+.876
+SSP
+.084
+.0624
+1.793
+1
+.181
+1.087
+.962
+1.229
+Table B.6: Set 2 parameter estimates for PIC, after April 2007 (B)
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.091
+.0688
+1.732
+1
+.188
+.913
+.798
+1.045
+SSP
+.196
+.0502
+15.259
+1
+<.001
+1.217
+1.103
+1.342
+Table B.7: Set 3 parameter estimates for FSC, low-speed sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.549
+.1207
+20.686
+1
+<.001
+.578
+.456
+.732
+SSP
+.086
+.1330
+.422
+1
+.516
+1.090
+.840
+1.415
+Table B.8: Set 3 parameter estimates for FSC, high-speed sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.390
+.1079
+13.090
+1
+<.001
+.677
+.548
+.836
+SSP
+.264
+.0744
+12.612
+1
+<.001
+1.302
+1.126
+1.507
+
+=== p.44 ===
+32
+The Effectiveness of Average Speed Cameras in Great Britain
+Table B.9: Set 3 parameter estimates for PIC, low-speed sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.288
+.0545
+27.873
+1
+<.001
+.750
+.674
+.835
+SSP
+.049
+.0705
+.477
+1
+.490
+1.050
+.914
+1.206
+Table B.10: Set 3 parameter estimates for PIC, high-speed sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.071
+.0541
+1.742
+1
+.187
+.931
+.837
+1.035
+SSP
+.197
+.0470
+17.553
+1
+<.001
+1.218
+1.110
+1.335
+Table B.11: Parameter estimates for FSC, non- collision-reduction sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.223
+.2555
+.761
+1
+.383
+.800
+.485
+1.320
+Table B.12: Parameter estimates for PIC, non-collision-reduction sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+installation
+−.277
+.0887
+9.761
+1
+.002
+.758
+.637
+.902
+Table B.13: Parameter estimates for FSC, candidate sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+decision
+−.030
+.1643
+.033
+1
+.855
+.970
+.703
+1.339
+
+=== p.45 ===
+33
+www.racfoundation.org
+Table B.14: Parameter estimates for PIC, candidate sites
+Parameter
+B
+Std. 
+error
+Test of significance
+Exp(B)
+95% confidence interval
+Wald chi-
+square
+df
+p
+Lower
+Upper
+Post-
+decision
+−.030
+.0827
+.132
+1
+.717
+.970
+.825
+1.141
+
+=== p.46 ===
+34
+The Effectiveness of Average Speed Cameras in Great Britain
+Appendix C: Site List
+Site ID Site name
+Installation 
+date
+Site 
+section 
+length
+Speed 
+limit
+Site selection 
+period start
+Site selection 
+period end
+Suitability 
+restriction
+Analysis sets
+SSP
+Simple
+Set 1
+Set 2a
+Set 2b
+Set 3a
+Set 3b
+Set 4
+CA1
+A14 Huntingdon 
+to Girton, 
+Cambridgeshire 
+HA
+Mar-07
+ 11.48 
+70
+01/01/2002
+31/12/2004
+Spot cameras
+Supplied
+CA2
+B1096 Ramsey 
+Forty Foot, 
+Cambridgeshire 
+Jul-10
+ 6.27 
+50
+01/01/2003
+31/12/2005
+Changed limit
+Estimated
+CA3
+A14 Girton to 
+Fen Ditton, 
+Cambridgeshire  
+HA
+Mar-11
+ 6.87 
+70
+08/11/2005
+07/02/2009
+Calculated
+Yes
+Yes
+Yes
+Yes
+CA4
+A1139 Fletton 
+Parkway, 
+Cambridgeshire
+Jul-15
+ 1.54 
+60
+Follow-up
+CH1
+A537 Cat and 
+Fiddle, Cheshire
+Apr-10
+ 15.54 
+50
+01/01/2001
+31/12/2006
+Changed limit | 
+mobile cameras
+Supplied
+CU1
+A66 Bass Lake, 
+Cumbria
+Jan-10
+ 2.80 
+60
+Mobile cameras
+None
+ES1
+A127 Arterial 
+Road, Essex 
+Jan-09
+ 8.55 
+50/70
+01/01/2003
+31/12/2005
+Changed limit
+Supplied
+ES2
+A130 Canvey Way, 
+Essex
+Apr-09
+ 3.98 
+50
+01/03/2005
+29/02/2008
+Changed limit
+Supplied
+ES3
+Marine Parade, 
+Southend, Essex
+Mar-12
+ 0.73 
+20
+01/12/2008
+30/11/2011
+Changed limit
+Supplied
+ES4
+A120 Pelhams 
+Corner, Essex
+Feb-15
+ 2.95 
+50
+01/08/2011
+31/07/2014
+Changed limit
+Supplied
+ES5
+A13 Aveley to 
+Thurrock
+Feb-15
+ 5.65 
+40/50
+Changed limit
+Follow-up
+ES6
+A12 Kelvedon 
+Bypass, Essex
+Mar-15
+ 7.20 
+70
+01/01/2012
+31/12/2014
+Supplied
+HU1
+A16 Peaks 
+Parkway
+Jul-13
+ 1.92 
+40
+01/01/2008
+31/12/2012
+Changed limit 
+(Increased)
+Supplied
+LI1
+A15 
+Metheringham, 
+Lincs
+Jun-15
+ 4.09 
+Follow-up
+
+=== p.47 ===
+35
+www.racfoundation.org
+Site ID Site name
+Installation 
+date
+Site 
+section 
+length
+Speed 
+limit
+Site selection 
+period start
+Site selection 
+period end
+Suitability 
+restriction
+Analysis sets
+SSP
+Simple
+Set 1
+Set 2a
+Set 2b
+Set 3a
+Set 3b
+Set 4
+LI2
+A52 Ropsley, 
+Lincolnshire
+Dec-09
+ 8.72 
+60
+01/01/2004
+31/12/2008
+Supplied
+Yes
+Yes
+Yes
+Yes
+LO1
+Blackwall Tunnel, 
+London
+Jul-09
+ 2.48 
+20
+Not casualty 
+reduction
+None
+Yes
+LO2
+Dartford Free-Flow
+Jun-15
+ 5.76 
+50
+Not casualty 
+reduction
+Follow-up
+Yes
+LO3
+Rotherhithe 
+Tunnel, London
+Jun-09
+ 2.00 
+20
+09/02/2004
+11/05/2007
+Calculated
+Yes
+Yes
+Yes
+Yes
+Yes
+LO4
+Tower Bridge, City 
+of London
+Sep-03
+ 0.67 
+20
+N/A
+N/A
+Not casualty 
+reduction
+None
+ME1
+A228 Isle of Grain, 
+Kent
+Nov-07
+ 7.31 
+40
+01/08/2002
+31/07/2005
+Speed limit 
+lowered during 
+site selection 
+period (Nov 2003)
+Supplied
+NO1
+A6514 Ring Road,  
+Nottingham
+Aug-00
+ 6.37 
+40
+01/01/1997
+31/12/1999
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO10
+B6004 
+Oxclose Lane,  
+Nottinghamshire
+Apr-08
+ 0.99 
+40
+10/12/2002
+11/03/2006
+Calculated
+Yes
+Yes
+Yes
+Yes
+NO11
+A611 Annesley, 
+Nottinghamshire
+Nov-09
+ 1.07 
+30
+01/01/2003
+01/01/2005
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO12
+A631 Beckingham 
+Bypass, 
+Nottinghamshire
+Nov-09
+ 1.03 
+50
+01/01/2005
+01/01/2007
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO13
+A60 London 
+Road, Nottingham
+Sep-10
+ 0.39 
+30
+01/01/2004
+31/12/2006
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO14
+A60 Mansfield 
+Road, Nottingham
+Sep-10
+ 1.06 
+30
+01/01/2004
+31/12/2006
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO15
+A614 Old 
+Rufford Road, 
+Nottinghamshire
+Jan-12
+ 19.09 
+50
+01/01/2007
+01/01/2009
+Supplied
+Yes
+Yes
+Yes
+Yes
+
+=== p.48 ===
+36
+The Effectiveness of Average Speed Cameras in Great Britain
+Site ID Site name
+Installation 
+date
+Site 
+section 
+length
+Speed 
+limit
+Site selection 
+period start
+Site selection 
+period end
+Suitability 
+restriction
+Analysis sets
+SSP
+Simple
+Set 1
+Set 2a
+Set 2b
+Set 3a
+Set 3b
+Set 4
+NO16
+A6097 Epperstone 
+Bypass, 
+Nottingham
+Apr-13
+ 10.37 
+50
+01/01/2009
+01/01/2011
+Supplied
+Yes
+Yes
+Yes
+NO17
+A6097 (A614 
+East Bridgford), 
+Nottingham
+Feb-14
+ 3.07 
+40
+01/01/2010
+01/01/2012
+Supplied
+Yes
+Yes
+Yes
+NO18
+A60 Chuckney Hill, 
+Nottinghamshire
+Mar-14
+ 2.01 
+50
+01/01/2009
+01/01/2011
+Supplied
+Yes
+Yes
+Yes
+NO19
+A38 Alfreton Road 
+to Sherwood, 
+Nottinghamshire
+Feb-15
+ 4.15 
+50
+Follow-up
+NO2
+A610 Bobbers 
+Mill, Nottingham
+Sep-00
+ 1.80 
+30
+01/01/1997
+31/12/1999
+Supplied
+Yes
+Yes
+Yes
+Yes
+NO20
+Bells Lane, 
+Nottingham
+May-15
+ 0.66 
+30
+01/01/2009
+31/12/2013
+Supplied
+NO21
+Winchester Street, 
+Nottingham
+May-15
+ 0.59 
+30
+01/01/2009
+31/12/2013
+Supplied
+NO22
+South Church 
+Drive, Nottingham
+Nov-15
+ 2.44 
+30
+Follow-up
+NO3
+A46 Fosse Road,  
+Nottinghamshire 
+HA
+Dec-04
+ 1.45 
+40
+01/01/2000
+31/12/2002
+Estimated
+Yes
+Yes
+Yes
+Yes
+NO6
+A46 Cotgrave, 
+Nottinghamshire 
+HA
+Jan-06
+ -   
+60
+01/01/2001
+31/12/2003
+Removed
+Estimated
+Yes
+NO7
+A52 Bingham,  
+Nottinghamshire 
+HA
+Jan-06
+ 3.85 
+60
+01/01/2001
+31/12/2003
+Estimated
+Yes
+Yes
+Yes
+Yes
+NO4
+A631 Gringley 
+on the Hill, 
+Nottinghamshire
+Jan-05
+ 3.18 
+50
+01/01/2000
+31/12/2002
+Estimated
+Yes
+Yes
+Yes
+Yes
+
+=== p.49 ===
+37
+www.racfoundation.org
+Site ID Site name
+Installation 
+date
+Site 
+section 
+length
+Speed 
+limit
+Site selection 
+period start
+Site selection 
+period end
+Suitability 
+restriction
+Analysis sets
+SSP
+Simple
+Set 1
+Set 2a
+Set 2b
+Set 3a
+Set 3b
+Set 4
+NO5
+A631 Scaftworth,  
+Nottinghamshire
+Mar-05
+ 2.38 
+50
+01/01/2000
+31/12/2002
+Estimated
+Yes
+Yes
+Yes
+Yes
+NO8
+A52 Radcliffe 
+Road,  
+Nottinghamshire
+Jan-06
+ 3.23 
+70
+01/01/2001
+31/12/2003
+Estimated
+Yes
+Yes
+Yes
+Yes
+NO9
+A52 Saxondale,  
+Nottinghamshire
+Jan-06
+ 1.05 
+60
+01/01/2001
+31/12/2003
+Estimated
+Yes
+Yes
+Yes
+Yes
+SC1
+A77 Ayr to 
+Stranraer, 
+Transport Scotland 
+Jul-05
+ 28.66 
+50/60
+01/01/2001
+31/12/2003
+Estimated
+Yes
+Yes
+Yes
+Yes
+SC2
+A9 Dunblane 
+to Inverness, 
+Transport Scotland
+Oct-14
+ 158.60 
+60/70
+01/01/2007
+31/12/2011
+Supplied
+Yes
+Yes
+Yes
+ST1
+A38 Shenstone 
+to Bassetts Pole, 
+Staffordshire
+Jun-10
+ 5.37 
+60
+01/07/2005
+30/06/2008
+Changed limit
+Supplied
+ST2
+A515 Duffield 
+Lane, Staffordshire
+Jun-15
+ 5.51 
+50
+01/07/2009
+30/06/2012
+Mobile cameras
+Supplied
+ST3
+A519 
+Woodseaves, 
+Staffordshire
+Jun-15
+ 1.09 
+30
+01/07/2009
+30/06/2012
+Mobile cameras
+Supplied
+SY1
+A61 Sheffield to 
+A616 (T) South 
+Yorkshire HA
+Nov-12
+ 6.67 
+50
+Follow-up
+SY2
+A616 
+Stocksbridge, 
+South Yorkshire 
+HA
+Dec-02
+ 10.93 
+60
+01/01/1998
+31/12/2000
+Estimated
+Yes
+Yes
+Yes
+Yes
+WA1
+A465 Head of the 
+Valleys, Wales
+May-12
+ 12.73 
+60
+01/04/2008
+31/03/2011
+Supplied
+Yes
+Yes
+Yes
+Yes
+WA2
+M4 J40-41a Port 
+Talbot HA
+Oct-14
+ 3.37 
+50
+01/04/2009
+31/03/2012
+Supplied
+Yes
+Yes
+Yes
+
+=== p.50 ===
+Mobility • Safety • Economy • Environment
+The Royal Automobile Club Foundation for Motoring Ltd is a transport policy 
+and research organisation which explores the economic, mobility, safety and 
+environmental issues relating to roads and their users. The Foundation publishes 
+independent and authoritative research with which it promotes informed debate  
+and advocates policy in the interest of the responsible motorist.
+RAC Foundation 
+89–91 Pall Mall 
+London 
+SW1Y 5HS
+Tel no: 020 7747 3445 
+www.racfoundation.org
+Registered Charity No. 1002705 
+September 2016 © Copyright Royal Automobile Club Foundation for Motoring Ltd
+Designed and printed by 
+The Javelin Partnership Ltd 
+Tel: 0118 907 3494
+Produced on paper from a managed 
+sustainable source which is FSC certified 
+as containing 50% recycled waste.
+Main proofreader: 
+Beneficial Proofreading Services 
+Tel: 07979 763116

@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1"><link rel="icon" type="image/png" href="/images/scba-ico.ico" />
+
+ 
+    <script type="text/javascript" src="Scripts/jquery-1.6.4.js"></script>
+    <script src="Scripts/jquery.validate.js" type="text/javascript"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta http-equiv="Last-Modified" content="0" /><meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Pragma" content="no-cache" /><link href="Styles/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/estilo.css?v=202503181404" rel="stylesheet" type="text/css" />
+    <link href="Styles/scba.css?v=202503181404" rel="stylesheet" type="text/css" />
+
+    <script src="Scripts/jquery-ui-1.8.12.custom.min.js" type="text/javascript"></script>
+    <link href="cupertino/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript" src="Scripts/jquery.hoverIntent.minified.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.dcmegamenu.1.3.3.js"></script>
+    <script src="Scripts/jquery.highlight-4.js" type="text/javascript"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&amp;display=swap" rel="stylesheet" />
+    
+    <!-- Bootstrap Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet" /><title>
+	SCBA - JUBA
+</title>
+    </head>
+<body class="">
+    <header>
+        <div name="divtope" id="divtope" style="position: absolute; background-color: #f1f1f1; top: 0px; left: 0px; text-align: center; width: 100%;">
+        </div>
+
+        
+        <script>
+            if (/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                document.write("<div style=\"width:100%; text-align:center; \"><img style=\"width: 100%; margin: auto; \" src=\"https://links.scba.gov.ar/frisojubabgmovil\"/></div>");
+            }
+            else {
+                document.write("<div style=\"width:100%; text-align:center; \"><img style=\"width: 100%; margin: auto; \" src=\"https://links.scba.gov.ar/frisojubabg\"/></div>");
+            }
+        </script>
+        
+
+        
+
+
+
+        <div class="nav-custom text-center">
+            <a id="fonograma-mev-link" href="#" role="button" aria-label="Seleccione para ir a la página principal. Búsqueda rápida.">
+                <img id="fonograma-mev" class="desktop" src="/ImagesMenu/JUBA-fonograma.svg">
+            </a>
+
+
+            <div id="home-link">
+                <a target="_new" role="button" aria-label="Se abrirá una nueva pestaña del sitio SCBA.GOV.AR" href="http://www.scba.gov.ar/portada/default2014.asp">
+                    <b>scba.gov.ar</b>
+                    <img src="/ImagesMenu/arrow-external-link.svg" />
+                </a>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <div class="">
+
+        <tr>
+            <td>
+                
+    <form method="post" action="./VerTextoCompleto.aspx?idFallo=136386" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIwODQ4NTUyOQ9kFgJmD2QWAgIBD2QWAgIBD2QWAgIED2QWAmYPZBYGAgcPZBYaAgEPDxYCHgRUZXh0BRpDT05URU5DSU9TTyBBRE1JTklTVFJBVElWQWRkAgMPDxYCHwAFFFNlbnRlbmNpYSBEZWZpbml0aXZhZGQCBQ8PFgIfAAU3U1VQUkVNQSBDT1JURSBERSBKVVNUSUNJQSBERSBMQSBQUk9WSU5DSUEgKDxiPlNDQkE8L2I+KWRkAgcPDxYCHwAFCEEgNzM3NDAgZGQCCQ8PFgIfAAUJMTAvOC8yMDE2ZGQCCw8PFgIfAAUKUlNELTE3NS0xNmRkAg4PDxYCHwAFdERlbCBDYW1wbywgUmljYXJkbyBjLyBNdW5pY2lwYWxpZGFkIGRlIEdlbmVyYWwgTWFkYXJpYWdhIHMvIEFtcGFyby4gUmVjdXJzbyBleHRyYW9yZGluYXJpbyBkZSBpbmFwbGljYWJpbGlkYWQgZGUgbGV5ZGQCEA8PFgIfAAUiTmVncmktZGUgTMOhenphcmktS29nYW4tUGV0dGlnaWFuaWRkAhIPDxYCHwAFV0NBTUFSQSBERSBBUEVMQUNJT04gRU4gTE8gQ09OVEVOQ0lPU08gQURNSU5JU1RSQVRJVk8gLSBNQVIgREVMIFBMQVRBICg8Yj5DQTAwMDAgTVA8L2I+KWRkAhQPDxYCHwBlZGQCFg8PFgIfAGVkZAIYDw8WAh8AZWRkAhoPDxYCHwAFCFDDumJsaWNvZGQCDQ8WAh8ABfOXATxodG1sPjxwPkEgQyBVIEUgUiBEIE88L3A+DQoNCjxwPiZuYnNwO0VuIGxhIGNpdWRhZCBkZSBMYSBQbGF0YSwgYSAxMCBkZSBhZ29zdG8gZGUgMjAxNiwgaGFiaSZlYWN1dGU7bmRvc2UgZXN0YWJsZWNpZG8sIGRlIGNvbmZvcm1pZGFkIGNvbiBsbyBkaXNwdWVzdG8gZW4gZWwgQWN1ZXJkbyAyMDc4LCBxdWUgZGViZXImYWFjdXRlOyBvYnNlcnZhcnNlIGVsIHNpZ3VpZW50ZSBvcmRlbiBkZSB2b3RhY2kmb2FjdXRlO246IGRvY3RvcmVzIE5lZ3JpLCBkZSBMJmFhY3V0ZTt6emFyaSwgS29nYW4sIFBldHRpZ2lhbmksIHNlIHJlJnVhY3V0ZTtuZW4gbG9zIHNlJm50aWxkZTtvcmVzIGp1ZWNlcyBkZSBsYSBTdXByZW1hIENvcnRlIGRlIEp1c3RpY2lhIGVuIGFjdWVyZG8gb3JkaW5hcmlvIHBhcmEgcHJvbnVuY2lhciBzZW50ZW5jaWEgZGVmaW5pdGl2YSBlbiBsYSBjYXVzYSBBLiA3My43NDAsICZxdW90O0RlbCBDYW1wbyBSaWNhcmRvIGNvbnRyYSBNdW5pY2lwYWxpZGFkIGRlIEdlbmVyYWwgTWFkYXJpYWdhLiBBbXBhcm8uIFJlY3Vyc28gZXh0cmFvcmRpbmFyaW8gZGUgaW5hcGxpY2FiaWxpZGFkIGRlIGxleSZxdW90Oy48L3A+DQoNCjxwPkEgTiBUIEUgQyBFIEQgRSBOIFQgRSBTPC9wPg0KDQo8cD5MYSBDJmFhY3V0ZTttYXJhIGRlIEFwZWxhY2kmb2FjdXRlO24gZW4gbG8gQ29udGVuY2lvc28gQWRtaW5pc3RyYXRpdm8gY29uIGFzaWVudG8gZW4gbGEgY2l1ZGFkIGRlIE1hciBkZWwgUGxhdGEgLSBlbiBsbyBxdWUgYXF1JmlhY3V0ZTsgaW50ZXJlc2EtIGRlc2VzdGltJm9hY3V0ZTsgZWwgcmVjdXJzbyBkZSBhcGVsYWNpJm9hY3V0ZTtuIGludGVycHVlc3RvIHBvciBsYSBhcG9kZXJhZGEgZGUgbGEgUHJvdmluY2lhIGRlIEJ1ZW5vcyBBaXJlcyB5IGNvbmZpcm0mb2FjdXRlOyBlbCBwcm9udW5jaWFtaWVudG8gZGUgcHJpbWVyYSBpbnN0YW5jaWEgZW4gY3VhbnRvIGRlY2xhciZvYWN1dGU7IGxhIGluY29uc3RpdHVjaW9uYWxpZGFkIGRlbCBhcnQuIDEwIGluYy4gMyZvcmRtOyBkZWwgQW5leG8gSUkgZGVsIGRlY3JldG8gNTMyLzIwMDkgcmVnbGFtZW50YXJpbyBkZSBsYSBsZXkgMTMuOTI3IChmcy4gMjE2LzIyNyB2dGEuKS48L3A+DQoNCjxwPkNvbnRyYSBkaWNobyBwcm9udW5jaWFtaWVudG8gbGEgY2l0YWRhIGNvZGVtYW5kYWRhIGludGVycHVzbyByZWN1cnNvIGV4dHJhb3JkaW5hcmlvIGRlIGluYXBsaWNhYmlsaWRhZCBkZSBsZXkgbyBkb2N0cmluYSBsZWdhbCAoZnMuIDI0Ni8yNTApLjwvcD4NCg0KPHA+RGljdGFkYSBsYSBwcm92aWRlbmNpYSBkZSBhdXRvcyAoZnMuIDI3MiksIGFncmVnYWRhIGxhIG1lbW9yaWEgZGUgbGEgcGFydGUgYWN0b3JhIChmcy4gMjc2LzI3OCkgeSBlbmNvbnRyJmFhY3V0ZTtuZG9zZSBsYSBjYXVzYSBlbiBlc3RhZG8gZGUgcHJvbnVuY2lhciBzZW50ZW5jaWEsIGVzdGEgU3VwcmVtYSBDb3J0ZSByZXNvbHZpJm9hY3V0ZTsgcGxhbnRlYXIgeSB2b3RhciBsYSBzaWd1aWVudGU8L3A+DQoNCjxwPiZuYnNwO0MgVSBFIFMgVCBJICZPYWN1dGU7IE48L3A+DQoNCjxwPiZpcXVlc3Q7RXMgZnVuZGFkbyBlbCByZWN1cnNvIGV4dHJhb3JkaW5hcmlvIGRlIGluYXBsaWNhYmlsaWRhZCBkZSBsZXkgbyBkb2N0cmluYSBsZWdhbCBpbnRlcnB1ZXN0bz88L3A+DQoNCjxwPlYgTyBUIEEgQyBJICZPYWN1dGU7IE48L3A+DQoNCjxwPkEgbGEgY3Vlc3RpJm9hY3V0ZTtuIHBsYW50ZWFkYSwgZWwgc2UmbnRpbGRlO29yIEp1ZXogZG9jdG9yIE5lZ3JpIGRpam86PC9wPg0KDQo8cD5JLiBFbCB0aXR1bGFyIGRlbCBKdXpnYWRvIGRlIEdhcmFudCZpYWN1dGU7YXMgTiZvcmRtOyAzIGRlbCBEZXBhcnRhbWVudG8gSnVkaWNpYWwgZGUgRG9sb3JlcywgZGVjbGFyJm9hY3V0ZTsgbGEgaW5jb25zdGl0dWNpb25hbGlkYWQgZGVsIGFydC4gMTAgaW5jLiAzIGRlbCBBbmV4byBJSSBkZWwgZGVjcmV0byA1MzIvMjAwOSByZWdsYW1lbnRhcmlvIGRlIGxhIGxleSAxMy45MjcsIGUgaGl6byBsdWdhciBhIGxhIGFjY2kmb2FjdXRlO24gZGUgYW1wYXJvIHByb21vdmlkYSBwb3IgZWwgc2UmbnRpbGRlO29yIFJpY2FyZG8gZGVsIENhbXBvLiBFbiBjb25zZWN1ZW5jaWEsIG9yZGVuJm9hY3V0ZTsgYSBsYSBNdW5pY2lwYWxpZGFkIGRlIEdlbmVyYWwgTWFkYXJpYWdhIHkgYSBsYSBEaXJlY2NpJm9hY3V0ZTtuIGRlIFNlZ3VyaWRhZCBWaWFsIGRlIGxhIFByb3ZpbmNpYSBkZSBCdWVub3MgQWlyZXMsIGEgcXVlIGRlIG1hbmVyYSBzaW5jcm9uaXphZGEsIHJlYW51ZGVuIGVsIHRyJmFhY3V0ZTttaXRlIGluaWNpYWRvIHBvciBsYSBwYXJ0ZSBhY3RvcmEgLWRlIHJlbm92YWNpJm9hY3V0ZTtuIGRlIHN1IGxpY2VuY2lhIGRlIGNvbmR1Y2lyLSwgcGVybWl0aWVuZG8gc3UgY29udGludWlkYWQgaGFzdGEgc3UgZGViaWRhIGN1bG1pbmFjaSZvYWN1dGU7biBvYnZpYW5kbyBsYSBkZXVkYSBxdWUgcmVnaXN0cmEgYSBmYXZvciBkZWwgRmlzY28gZGUgbGEgUHJvdmluY2lhIGRlIEJ1ZW5vcyBBaXJlcyBlbiBjb25jZXB0byBkZSBtdWx0YXMgcG9yIGluZnJhY2Npb25lcyBkZSB0ciZhYWN1dGU7bnNpdG8gKGZzLiAxNzIvMTg4KS48L3A+DQoNCjxwPlBhcmEgYXMmaWFjdXRlOyBkZWNpZGlyLCBlbCBtYWdpc3RyYWRvIGludGVydmluaWVudGUgY29uc2lkZXImb2FjdXRlOyBsb3MgcHJpbmNpcGlvcyBjb25zdGl0dWNpb25hbGVzIGRlIHBybyBob21pbmUgeSBkZSByYXpvbmFiaWxpZGFkLiBFbnRlbmRpJm9hY3V0ZTsgcXVlIGVsIGFydC4gMTAgaW5jLiAzIGRlbCBBbmV4byBJSSBUaXR1bG8gSSBTaXN0ZW1hIFByb3ZpbmNpYWwgZGUgTGljZW5jaWFzIGRlIENvbmR1Y2lyLCBkZWwgZGVjcmV0byByZWdsYW1lbnRhcmlvIDUzMi8yMDA5LCBubyBwZXJtaXRlIGRpc3Rpbmd1aXIgZW50cmUgcXVpZW5lcyByZXN1bHRlbiBidWVub3MgY29uZHVjdG9yZXMgeSBsb3MgcXVlIG5vIGxvIHNvbi4gQ29uc2lkZXImb2FjdXRlOyBxdWUgZWwgc2lzdGVtYSBkZSBsYXMgZm90b211bHRhcyBlcyB2aW9sYXRvcmlvIGRlbCBhcnQuIDE4IGRlIGxhIENvbnN0aXR1Y2kmb2FjdXRlO24gbmFjaW9uYWwgcXVlIGVzdGFibGVjZSBsYSByZXNwb25zYWJpbGlkYWQgc3ViamV0aXZhIGRlbCBwcm9waWV0YXJpbyBkZWwgYXV0b20mb2FjdXRlO3ZpbCBwYXJhIGFzZWd1cmFyIHN1IHBhZ28uPC9wPg0KDQo8cD4mbmJzcDtTb3N0dXZvIHF1ZSBlbCBwcmVjZXB0byBsZWdhbCBlbiBjdWVzdGkmb2FjdXRlO24gZXMgaW5jb25zdGl0dWNpb25hbCBjb24gYmFzZSBlbiBsb3MgYXJ0cy4gMSwgMTQsIDE0IGJpcywgMTYsIDE3LCAxOCwgMTksIDI4LCAzMywgNzUgaW5jLiAyIGRlIGxhIENvbnN0aXR1Y2kmb2FjdXRlO24gbmFjaW9uYWwgeSA1LCA2IHkgMjkgZGUgbGEgQy5BLkQuSC4gRWxsbywgYWwgc2VyIGltcG9zaWJsZSBleHRyYWVyIGRlIGVzYSBub3JtYSBvdHJhIGludGVycHJldGFjaSZvYWN1dGU7biByYWNpb25hbCBxdWUgbm8gc2VhIGxhIGRlbCAmdWFjdXRlO25pY28gZmluIHJlY2F1ZGF0b3JpbyBjb2FjdGl2byBxdWUgbXVlc3RyYSBzdSBsZXRyYSBleHByZXNhLCBwb3Igc29icmUgZWwgc2FjcmlmaWNpbyBkZSBsb3MgcHJpbmNpcGlvcyBtJmFhY3V0ZTt4aW1vcyBkZSByYXpvbmFiaWxpZGFkLCBsZWdhbGlkYWQsIGlndWFsZGFkLCBwcm8gaG9taW5lLCB5IGRlcmVjaG9zIGNvbnN0aXR1Y2lvbmFsZXMgZGUgdHJhbnNpdGFyIGxpYnJlbWVudGUgeSB0cmFiYWphciwgY29udGFuZG8gZWwgRXN0YWRvIHByb3ZpbmNpYWwgY29uIGxhcyBkaXN0aW50YXMgaGVycmFtaWVudGFzIGxlZ2FsZXMgeSByZWN1cnNvcyBodW1hbm9zIHBhcmEgcGVyc2VndWlyIGVsIGNvYnJvIGRlIGRldWRhcyBwb3IgbGFzIHYmaWFjdXRlO2FzIGxlZ2FsZXMgcGVydGluZW50ZSAoZWouIGFwcmVtaW8pLjwvcD4NCg0KPHA+SUkuIEEgc3UgdHVybm8sIGxhIEMmYWFjdXRlO21hcmEgZGUgQXBlbGFjaSZvYWN1dGU7biBlbiBsbyBDb250ZW5jaW9zbyBBZG1pbmlzdHJhdGl2byBjb24gYXNpZW50byBlbiBNYXIgZGVsIFBsYXRhIGRlc2VzdGltJm9hY3V0ZTsgZWwgcmVjdXJzbyBkZSBhcGVsYWNpJm9hY3V0ZTtuIGludGVycHVlc3RvIHBvciBlbCBhcG9kZXJhZG8gZGUgbGEgUHJvdmluY2lhIGRlIEJ1ZW5vcyBBaXJlcyB5IGNvbmZpcm0mb2FjdXRlOyBlbCBwcm9udW5jaWFtaWVudG8gZGUgcHJpbWVyYSBpbnN0YW5jaWEgKGZzLiAyMTYvMjI3IHZ0YS4pLjwvcD4NCg0KPHA+UGFyYSBhcyZpYWN1dGU7IHJlc29sdmVyLCBsYSBhbHphZGEgY29uc2lkZXImb2FjdXRlOyBxdWUgbGEgZGVjbGFyYWNpJm9hY3V0ZTtuIGRlIGluY29uc3RpdHVjaW9uYWxpZGFkIG5vIGRldmllbmUgYXByZXN1cmFkYSwgdG9kYSB2ZXogcXVlIGVsIGp1ZXogZGUgcHJpbWVyYSBpbnN0YW5jaWEgc2UgZXhwaWRpJm9hY3V0ZTsgc29icmUgdGFsIHBsYW50ZW8gZW4gb3BvcnR1bmlkYWQgZGVsIGRpY3RhZG8gZGUgbGEgc2VudGVuY2lhLjwvcD4NCg0KPHA+Jm5ic3A7RGVzdGFjJm9hY3V0ZTssIHRhbCBjb21vIGxvIGFmaXJtYXJhIGxhIGRlY2lzaSZvYWN1dGU7biBkZWwgbWFnaXN0cmFkbyBpbnRlcnZpbmllbnRlLCBxdWUgZWwgYXJ0LiAxMCBpbmMuIDMgZGVsIEFuZXhvIElJIGRlbCBkZWNyZXRvIDUzMi8yMDA5IHJlZ2xhbWVudGFyaW8gZGUgbGEgbGV5IDEzLjkyNyAmc2h5O2Jham8gbGEgYXBhcmVudGUgc3VwcmVtYWMmaWFjdXRlO2EgZGVsIHZhbG9yIHNlZ3VyaWRhZCB2aWFsLSBvc3RlbnRhIHVuYSBmaW5hbGlkYWQgbmV0YW1lbnRlIHJlY2F1ZGF0b3JpYSBxdWUgbG8gdG9ybmEgaXJyYXpvbmFibGUgYSBsYSBsdXogZGVsIGFydC4gMjggZGUgbGEgQ29uc3RpdHVjaSZvYWN1dGU7biBuYWNpb25hbC48L3A+DQoNCjxwPkV4cHJlcyZvYWN1dGU7IHF1ZSBlbCByZXF1aXNpdG8gZGUgY29udGVuaWRvIHBhdHJpbW9uaWFsIGltcHVlc3RvIHBvciBsYSBub3JtYSByZWdsYW1lbnRhcmlhIC1jYW5jZWxhY2kmb2FjdXRlO24gZGUgbGFzIG11bHRhcyBwb3IgaW5mcmFjY2lvbmVzIHByZXZpbyBhIGxhIHJlbm92YWNpJm9hY3V0ZTtuIGRlIGxhIGxpY2VuY2lhIGRlIGNvbmR1Y2lyLSwgbm8gZ3VhcmRhIGFkZWN1YWRhIHJlbGFjaSZvYWN1dGU7biBjb24gZWwgdmFsb3IgbWVuY2lvbmFkbyBxdWUgZW5hcmJvbGEsIGVuIGxhIG1lZGlkYSBxdWUgYW1iYXMgY3Vlc3Rpb25lcyB0cmFuc2l0YW4gcG9yIGFuZGFyaXZlbGVzIHBhcmFsZWxvcyBlbnRyZSBsb3MgcXVlIG5vIHJlc3VsdGEgcG9zaWJsZSByZWNvbm9jZXIgcHVudG8gZGUgY29uZXhpJm9hY3V0ZTtuLiBFbnRlbmRpJm9hY3V0ZTsgcXVlIHNlIHZlcmlmaWNhIHVuYSBkZXNwcm9wb3JjaSZvYWN1dGU7biBlbnRyZSBtZWRpb3MgeSBmaW5lcy48L3A+DQoNCjxwPlB1bnR1YWxpeiZvYWN1dGU7IHF1ZSBlbCBjdW1wbGltaWVudG8gY29uIGVsIHBhZ28gZGUgbGFzIG11bHRhcyBwb3IgbGFzIGluZnJhY2Npb25lcyBjb21ldGlkYXMgcG9yIHF1aWVuIG5vIGhhIG9icmFkbyBjb24gaW1wcnVkZW5jaWEgZW4gbGEgY29uZHVjY2kmb2FjdXRlO24gZGUgdW4gdmVoJmlhY3V0ZTtjdWxvLCBubyBsbyB0b3JuYSBwb3IgcyZpYWN1dGU7IHNvbG8gZW4gdW4ganVpY2lvc28gbyBoJmFhY3V0ZTtiaWwgY29uZHVjdG9yIHksIG11Y2hvIG1lbm9zLCBnYXJhbnRpemEgdW4gaW5jcmVtZW50byBlbiBsYSBzZWd1cmlkYWQgdmlhbC48L3A+DQoNCjxwPlNvc3R1dm8gcXVlIGVsIEVzdGFkbyBjdWVudGEgY29uIGxvcyBtZWNhbmlzbW9zIGxlZ2FsZXMgbmVjZXNhcmlvcyBwYXJhIGV4aWdpciwgcGVyc2VndWlyIHkgcGVyY2liaXIgZWwgaW1wb3J0ZSBkZSBsYXMgbXVsdGFzIHBvciBpbmZyYWNjaW9uZXMgZGUgdHImYWFjdXRlO25zaXRvIG1lZGlhbnRlIGxhIHByb21vY2kmb2FjdXRlO24gZGUgbGFzIGFjY2lvbmVzIGp1ZGljaWFsZXMgZW5kZXJlemFkYXMgYSB0YWwgZmluYWxpZGFkIHF1ZSwgcmVzcGV0YW5kbyBsYSBnYXJhbnQmaWFjdXRlO2EgZGVsIGRlYmlkbyBwcm9jZXNvLCBsZSBwZXJtaXRlbiBlbiBmb3JtYSByJmFhY3V0ZTtwaWRhIHkgZXhwZWRpdGEgcHJvY3VyYXIgZWwgY29icm8gZGUgbGFzIGFjcmVlbmNpYXMgb3JpZ2luYWRhcyBlbiBsYXMgZmFsdGFzIGEgbGFzIG5vcm1hcyBkZSB0ciZhYWN1dGU7bnNpdG8gbWVkaWFudGUgZWwgcHJvY2VzbyBkZSBhcHJlbWlvLjwvcD4NCg0KPHA+QSZudGlsZGU7YWRlIHF1ZSB0YW1wb2NvIGVzIGp1c3RpZmljYXRpdm8gcGFyYSByZXNndWFyZGFyIGxhIHJlZmVyaWRhIHNlZ3VyaWRhZCBxdWUgbGEgJnVhY3V0ZTtuaWNhIGFsdGVybmF0aXZhIGVzIGxhIGFwbGljYWNpJm9hY3V0ZTtuIGRlIHVuYSBzYW5jaSZvYWN1dGU7biBwYXRyaW1vbmlhbCBwdWVzIGVsIEVzdGFkbyBzZSBlbmN1ZW50cmEgY29tcGVsaWRvIGEgaW1wbGVtZW50YXIgbWVjYW5pc21vcyBhcHRvcyBwYXJhIG1pdGlnYXIgbGEgYWx0YSBzaW5pZXN0cmFsaWRhZCB2aWFsLjwvcD4NCg0KPHA+SUlJLiBNZWRpYW50ZSBlbCByZWN1cnNvIGV4dHJhb3JkaW5hcmlvIGRlIGluYXBsaWNhYmlsaWRhZCBkZSBsZXkgaW50ZXJwdWVzdG8sIGxhIGFwb2RlcmFkYSBkZSBGaXNjYWwmaWFjdXRlO2EgZGUgRXN0YWRvLCBkZW51bmNpYSB2aW9sYWNpJm9hY3V0ZTtuIGRlIGxvcyBhcnRzLiA1LCAxNywgMTggeSAzMSBkZSBsYSBDb25zdGl0dWNpJm9hY3V0ZTtuIG5hY2lvbmFsIHkgbGEgZG9jdHJpbmEgbGVnYWwgZGUgbGEgQ29ydGUgU3VwcmVtYSBkZSBKdXN0aWNpYSBkZSBsYSBOYWNpJm9hY3V0ZTtuIHkgU3VwcmVtYSBDb3J0ZSBkZSBKdXN0aWNpYSBkZSBsYSBQcm92aW5jaWEgZGUgQnVlbm9zIEFpcmVzIHJlZmVyaWRhcyBhIGxvcyByZXF1aXNpdG9zIGRlIHByb2NlZGVuY2lhIHBhcmEgZGVjbGFyYXIgaW5jb25zdGl0dWNpb25hbCB1biBwcmVjZXB0byBsZWdhbC4gVGFtYmkmZWFjdXRlO24gYWxlZ2EgYWJzdXJkbyAoZnMuIDI0Ni8yNTApLjwvcD4NCg0KPHA+QWR1Y2UgcXVlIGxhIGRlY2lzaSZvYWN1dGU7biBkZSBsYSBDJmFhY3V0ZTttYXJhIGVzIGFyYml0cmFyaWEgYWwgZWZlY3R1YXIgdW5hIGludGVycHJldGFjaSZvYWN1dGU7biBwYXJjaWFsIGUgaW5jb25ncnVlbnRlIGNvbiBsYSBub3JtYXRpdmEgYXBsaWNhYmxlLiBEZXN0YWNhIHF1ZSBlbCBkZWNyZXRvIHJlZ2xhbWVudGFyaW8gNTMyLzIwMDkgZGUgbGEgbGV5IDEzLjkyNyBlcyBjb21wbGVtZW50YXJpbyBkZSBvdHJvcyBtZWNhbmlzbW9zICZ1YWN1dGU7dGlsZXMgcGFyYSBsb2dyYXIgc3VzIGZpbmVzIHRhbGVzIGNvbW8gZWwgaW5mb3JtYXRpdm8sIGVkdWNhdGl2bywgaW5jZW50aXZvIGVudHJlIG90cm9zIHkgcXVlIGVzIHAmdWFjdXRlO2JsaWNvIHkgbm90b3JpbyBsYSByZWR1Y2NpJm9hY3V0ZTtuIGRlIGFjY2lkZW50ZXMgZW4gcnV0YXMgcHJvdmluY2lhbGVzIGRlc2RlIHN1IGltcGxlbWVudGFjaSZvYWN1dGU7bi48L3A+DQoNCjxwPiZuYnNwO0V4cHJlc2EgcXVlIGVsIHBhZ28gZGUgdW5hIG11bHRhIG5vIGNvbnZpZXJ0ZSBhbCBpbmZyYWN0b3IgZW4gaCZhYWN1dGU7YmlsIGNvbmR1Y3RvciwgYXVucXVlIGN1bXBsaW1lbnRhIHN1IG9iamV0aXZvIGRpc3Vhc2l2bywgcmF6Jm9hY3V0ZTtuIHBvciBsYSBjdWFsIG5vIHJlc3VsdGEgaXJyYXpvbmFibGUgZW4gbG9zIHQmZWFjdXRlO3JtaW5vcyBkZWwgYXJ0LiAyOCBkZSBsYSBDb25zdGl0dWNpJm9hY3V0ZTtuIG5hY2lvbmFsLjwvcD4NCg0KPHA+RXNib3phIHF1ZSBsYSBkZWNsYXJhY2kmb2FjdXRlO24gZGUgaW5jb25zdGl0dWNpb25hbGlkYWQgZXMgdW5hIGZ1bmNpJm9hY3V0ZTtuIGRlbGljYWRhIHkgZGViZSBzZXIgZGVjcmV0YWRhIHVsdGltYSByYXRpbyBjdWFuZG8gbm8gZXhpc3RhIG90cm8gbWVkaW8gcGFyYSBzYWx2YWd1YXJkYXIgdW4gZGVyZWNobyBvIGdhcmFudCZpYWN1dGU7YSBnYXJhbnRpemFkbyBwb3IgbGEgQ29uc3RpdHVjaSZvYWN1dGU7biwgY2lyY3Vuc3RhbmNpYSBxdWUgbm8gc2UgZGEgZW4gYXV0b3MuPC9wPg0KDQo8cD5EZXN0YWNhIHF1ZSBsYSBDb3J0ZSBTdXByZW1hIGRlIEp1c3RpY2lhIGRlIGxhIE5hY2kmb2FjdXRlO24gaGEgZGljaG8gcXVlIGRlYmUgZXhpc3RpciB1biBjYXNvIGNvbmNyZXRvIG8gY2F1c2EgeSBzZSBleGlnZSBwcm9iYW56YSBkZSBsYSBpbmNvbnN0aXR1Y2lvbmFsaWRhZC4gQWR1Y2UgcXVlIGVsIHBsYW50ZW8gZGUgaW5jb25zdGl0dWNpb25hbGlkYWQgY29uZmlybWFkbyBwb3IgbGEgYWx6YWRhIG5vIGN1bXBsZSBjb24gbG9zIGV4dHJlbW9zIGImYWFjdXRlO3NpY29zIHBhcmEgc2VyIHRlbmlkbyBwb3IgdGFsLCBsaW1pdCZhYWN1dGU7bmRvc2UgYSBtYW5pZmVzdGFyIHF1ZSBsYSBub3JtYXRpdmEgdHJhJmlhY3V0ZTtkYSBhIGFuJmFhY3V0ZTtsaXNpcyB2aW9sYSBlbCB0ZXh0byBkZSBsYSBDb25zdGl0dWNpJm9hY3V0ZTtuIG5hY2lvbmFsLCBwb3IgY3VhbnRvIHByb2hpYmlyJmlhY3V0ZTthbiBsb3MgZGVyZWNob3MgZGUgdHJhbnNpdGFyIGxpYnJlbWVudGUgeSB0cmFiYWphciwgYW5hbGl6YW5kbyBkZSBtYW5lcmEgc2VzZ2FkYSBsb3MgdmFsb3JlcyBqdXImaWFjdXRlO2RpY29zIHByb3RlZ2lkb3MgcG9yIGxhIGxlZ2lzbGFjaSZvYWN1dGU7bi48L3A+DQoNCjxwPlNlJm50aWxkZTthbGEgcXVlIG5vIGFsY2FuemEgY29uIGxhIGFzZXJjaSZvYWN1dGU7biBkZSBxdWUgbGEgbm9ybWEgaW1wdWduYWRhIHB1ZWRlIGNhdXNhciBhZ3JhdmlvIGNvbnN0aXR1Y2lvbmFsLCBzaW5vIHF1ZSBkZWJlIGFmaXJtYXJzZSB5IHByb2JhcnNlIHF1ZSBlbGxvIG9jdXJyZSBlbiBlbCBjYXNvLiBJbnZvY2EgZG9jdHJpbmEgbGVnYWwgZGUgbGEgQ29ydGUgU3VwcmVtYSBkZSBKdXN0aWNpYSBkZSBsYSBOYWNpJm9hY3V0ZTtuIHkgZGUgbGEgU3VwcmVtYSBDb3J0ZSBwcm92aW5jaWFsICh2ZXIgcmVsYXRvIGEgZnMuIDI0OCB2dGEuLzI0OSB2dGEuKS48L3A+DQoNCjxwPkFzZXZlcmEgcXVlIGVsIGRlY3JldG8gcmVnbGFtZW50YXJpbyA1MzIvMDkgZXMgYWp1c3RhZG8gYWwgcGxleG8gY29uc3RpdHVjaW9uYWwgeSBsYSBpbmNvbnN0aXR1Y2lvbmFsaWRhZCBkZWNyZXRhZGEgcG9yIGxhIGFsemFkYSBubyBjdW1wbGUgY29uIGxvcyBleHRyZW1vcyBiJmFhY3V0ZTtzaWNvcyBwYXJhIHNlciB0ZW5pZG8gcG9yIHRhbCwgeWEgcXVlIGRlYmkmb2FjdXRlOyBhZmlybWFyc2UgeSBwcm9iYXJzZSBxdWUgZWxsbyBvY3VycmUgZW4gZWwgY2Fzby48L3A+DQoNCjxwPkZpbmFsbWVudGUsIHB1bnR1YWxpemEgcXVlIGxhIEMmYWFjdXRlO21hcmEgcGFzJm9hY3V0ZTsgcG9yIGFsdG8gcXVlIGVsIGFjdG9yIHBvc2VlIHZlaW50aSZ1YWN1dGU7biBtdWx0YXMgcG9yIGV4Y2VzbyBkZSB2ZWxvY2lkYWQgZGVzY29ub2NpZW5kbyBlbCB2YWxvciBqdXImaWFjdXRlO2RpY28gcHJvdGVnaWRvIHF1ZSBlcyBsYSBzZWd1cmlkYWQgdmlhbC48L3A+DQoNCjxwPkVudGllbmRlIHF1ZSBsYXMgZGlzcG9zaWNpb25lcyBpbXB1Z25hZGFzIG5vIHZpb2xhbiBuaW5nJnVhY3V0ZTtuIGRlcmVjaG8gcHJvdGVnaWRvIHBvciBsYSBDb25zdGl0dWNpJm9hY3V0ZTtuIG5hY2lvbmFsLCBzaW5vIHF1ZSBwcmV0ZW5kZW4gY29uY2llbnRpemFyIGEgbG9zIGhhYml0YW50ZXMgZGUgbGEgbmVjZXNpZGFkIGRlIGNvbmR1Y2lyIHVuIHZlaCZpYWN1dGU7Y3VsbyBkZSBtYW5lcmEgcmVzcG9uc2FibGUgeSBkaXN1YWRpciBhIGxvcyBpbmZyYWN0b3JlcyBlbiBzdSBhY3RpdHVkLjwvcD4NCg0KPHA+RGVzdGFjYSBxdWUgaW1wb25lciB1bmEgc2FuY2kmb2FjdXRlO24gcGF0cmltb25pYWwgLWEgY29udHJhcmlvIGRlIGxvIHNvc3RlbmlkbyBwb3IgbGEgYWx6YWRhLSBubyBwZXJzaWd1ZSBuaW5nJnVhY3V0ZTtuIGZpbiByZWNhdWRhdG9yaW8gc2lubyBxdWUgcmVzdWx0YSBzZXIgdW5hIGFsdGVybmF0aXZhIGVmaWNheiBwYXJhIHRyYXRhciBkZSBtb2RpZmljYXIgZWwgYWN0dWFyIGRlbCBpbmZyYWN0b3IuPC9wPg0KDQo8cD5JVi4gRWwgcmVjdXJzbyBubyBwdWVkZSBwcm9zcGVyYXIgYXRlbnRvIGEgcXVlIGhhIHNpZG8gaW5zdWZpY2llbnRlbWVudGUgZnVuZGFkbyAoYXJ0LiAyNzkgZGVsIEMuUC5DLkMuKS48L3A+DQoNCjxwPiZuYnNwOzEuIEVsIGRldGVuaWRvIGFuJmFhY3V0ZTtsaXNpcyBkZWwgY29udGVuaWRvIGRlIGxhIGltcHVnbmFjaSZvYWN1dGU7biBkZWR1Y2lkYSBwZXJtaXRlIGNvbmNsdWlyIGVuIHN1IGluc3VmaWNpZW5jaWEsIGRhZGEgbGEgZGVmaWNpZW50ZSB0JmVhY3V0ZTtjbmljYSByZWN1cnNpdmEgZW1wbGVhZGEgZW4gc3UgcG9zdHVsYWNpJm9hY3V0ZTtuLiBFbGxvIHJlc3VsdGEgZW4gcHVudG8gYSBkb3MgY3Vlc3Rpb25lcyBjZW50cmFsZXMgcXVlIGF0YSZudGlsZGU7ZW4gYSBlc2EgdCZlYWN1dGU7Y25pY2EsIHNpIHNlIGNvbmZyb250YW4gZWwgcmVjdXJzbyBkZWR1Y2lkbyBjb24gbGFzIG5vcm1hcyBxdWUgZXN0YWJsZWNlbiBsb3MgcmVjYXVkb3MgcXVlICZlYWN1dGU7c3RvcyBkZWJlbiBjdW1wbGlyIChhcnQuIDI3OSB5IGNvbmNzLiwgQy5QLkMuQy4pIGVuIG9yZGVuIGEgdW5hIGZ1bmRhbWVudGFjaSZvYWN1dGU7biBwcmVjaXNhIHkgY2xhcmEgZGUgbG9zIGFncmF2aW9zIGV4cHVlc3RvcywgY29tbyBhcyZpYWN1dGU7IHRhbWJpJmVhY3V0ZTtuIGxhIGRlIHN1IHBvc3RlcmlvciBleHBsaWNhY2kmb2FjdXRlO24uIExhIGxlY3R1cmEgZGVsIGVzY3JpdG8gZGUgaW50ZXJwb3NpY2kmb2FjdXRlO24gZGVsIHJlbWVkaW8gZXh0cmFvcmRpbmFyaW8gcGVybWl0ZSBhZHZlcnRpciwgZW4gZXN0ZSBjYXNvLCBxdWUgbG9zIGFyZ3VtZW50b3MgcXVlIGxvIHN1c3RlbnRhbiBubyBlc3QmYWFjdXRlO24gZGVzYXJyb2xsYWRvcyBjb24gbGEgY2xhcmlkYWQgcXVlIGV4aWdlIHVuYSBwaWV6YSBkZSBlc2EgbmF0dXJhbGV6YSB5IHRhbXBvY28gY3VtcGxlbiBsb3MgZXh0cmVtb3MgZGUgcmlnb3IgZXhpZ2lkb3MgcG9yIGxhIGp1cmlzcHJ1ZGVuY2lhIGRlICZlYWN1dGU7c3RhIFN1cHJlbWEgQ29ydGUgcGFyYSBjb252YWxpZGFyIHN1IHN1ZmljaWVuY2lhLjwvcD4NCg0KPHA+RWwgYXJ0LiAyNzksIGVuIHN1IHNlZ3VuZGEgcGFydGUsIGRlbCBDJm9hY3V0ZTtkaWdvIFByb2Nlc2FsIENpdmlsIHkgQ29tZXJjaWFsLCBkaXNwb25lIHF1ZSBlbCBlc2NyaXRvIHBvciBlbCBxdWUgc2UgZGVkdXpjYSBlbCByZWN1cnNvIGV4dHJhb3JkaW5hcmlvIGRlIGluYXBsaWNhYmlsaWRhZCBkZSBsZXkgJnF1b3Q7ZGViZXImYWFjdXRlOyBjb250ZW5lciwgZW4gdCZlYWN1dGU7cm1pbm9zIGNsYXJvcyB5IGNvbmNyZXRvcywgbGEgbWVuY2kmb2FjdXRlO24gZGUgbGEgbGV5IG8gZGUgbGEgZG9jdHJpbmEgbGVnYWwgcXVlIHNlIHJlcHV0ZSB2aW9sYWRhIG8gZXJyJm9hY3V0ZTtuZWFtZW50ZSBhcGxpY2FkYSBlbiBsYSBzZW50ZW5jaWEsIHkgZW4gZm9ybWEgZXNwZWMmaWFjdXRlO2ZpY2EsIGluZGljYXIgaWd1YWxtZW50ZSBlbiBxdSZlYWN1dGU7IGNvbnNpc3RlIGxhIHZpb2xhY2kmb2FjdXRlO24gbyBlbCBlcnJvciZxdW90Oy48L3A+DQoNCjxwPlNvYnJlIGVsbG8gZXN0YSBTdXByZW1hIENvcnRlIGRpam8gcXVlLCBwYXJhIHF1ZSBlbCBlc2NyaXRvIGNvbiBxdWUgc2UgaW50ZXJwb25lIHkgZnVuZGEgZWwgcmVjdXJzbyBkZSBpbmFwbGljYWJpbGlkYWQgZGUgbGV5IGN1bXBsYSBjb24gbGEgbWlzaSZvYWN1dGU7biBxdWUgbGUgYXNpZ25hIGVsIGFydC4gMjc5IGRlbCBDJm9hY3V0ZTtkaWdvIFByb2Nlc2FsIENpdmlsIHkgQ29tZXJjaWFsLCBlcyBkZWNpciwgZGVtb3N0cmFyIGxhIGV4aXN0ZW5jaWEgZGUgdmlvbGFjaSZvYWN1dGU7biBvIGVycm9yIGVuIGxhIGFwbGljYWNpJm9hY3V0ZTtuIGRlIGxhIGxleSwgbG9zIGFyZ3VtZW50b3MgcXVlIGVuICZlYWN1dGU7bCBzZSBmb3JtdWxlbiBkZWJlbiByZWZlcmlyc2UgZGlyZWN0YSB5IGNvbmNyZXRhbWVudGUgYSBsb3MgY29uY2VwdG9zIHF1ZSBlc3RydWN0dXJhbiBsYSBjb25zdHJ1Y2NpJm9hY3V0ZTtuIGp1ciZpYWN1dGU7ZGljYSBlbiBxdWUgc2UgYXNpZW50YSBsYSBzZW50ZW5jaWEgKEFjLiA3OS41MTMsIHNlbnQuIGRlbCAyMy1YSUktMjAwMjsgQWMuIDgwLjc2Mywgc2VudC4gZGVsIDItSVYtMjAwMzsgZW50cmUgbXVjaGFzIG90cmFzKS48L3A+DQoNCjxwPkNvbW8gcXVlZCZvYWN1dGU7IHZpc3RvLCBlbGxvIG5vIG9jdXJyZSBlbiBlc3RlIHN1cHVlc3RvIHB1ZXMgbm8gc2UgYXRhY2FuIGxvcyBmdW5kYW1lbnRvcyBleHB1ZXN0b3MgcG9yIGxhIGFsemFkYSBlbiBjdWFudG8gYSBsYSBkZXNwcm9wb3JjaW9uYWxpZGFkIGVudHJlIGxvcyBtZWRpb3MgZW1wbGVhZG9zIC1wYWdvIGRlIGxhIG11bHRhLSB5IGxvcyBmaW5lcyBhIGFsY2FuemFyICZzaHk7c2VndXJpZGFkIHZpYWwtIHkgbGEgZXhpc3RlbmNpYSBkZSBtZWRpb3MganVkaWNpYWxlcyBpZCZvYWN1dGU7bmVvcyBhIGZpbiBkZSBvYnRlbmVyIGVsIGNvYnJvIGRlIGxhIHNhbmNpJm9hY3V0ZTtuIHBlY3VuaWFyaWEgaW1wdWVzdGEgY29tbyBlcyBlbCBwcm9jZXNvIGRlIGFwcmVtaW8uPC9wPg0KDQo8cD5Qb3IgZWwgY29udHJhcmlvLCBlbCByZWN1cnJlbnRlIHBhcmEganVzdGlmaWNhciBsYSByYXpvbmFiaWxpZGFkIGRlIGxhIG1lZGlkYSBkaXNwdWVzdGEgcG9yIGVsIHByZWNlcHRvIGxlZ2FsIGVuIGN1ZXN0aSZvYWN1dGU7biBlc2JvemEgZ2VuJmVhY3V0ZTtyaWNhbWVudGUgZWwgb2JqZXRpdm8gZGlzdWFzaXZvIHF1ZSBwZXJzaWd1ZSBoYWNpYSBsb3MgaW5mcmFjdG9yZXMuPC9wPg0KDQo8cD5NYXMgbm8gYWNyZWRpdGEgY29uIGNsYXJpZGFkIGxhIHByb3BvcmNpb25hbGlkYWQgZW50cmUgYXF1JmVhY3V0ZTtsbGEgeSBsb3MgZmluZXMgYSByZXNndWFyZGFyIHkgdGFtcG9jbyBkZW11ZXN0cmEgbGEgaW1wb3NpYmlsaWRhZCBkZSB1dGlsaXphciBsYXMgdiZpYWN1dGU7YXMgbGVnYWxlcyBwYXJhIG9idGVuZXIgZWwgY29icm8gZGUgbGFzIG11bHRhcyBkZXJpdmFkYXMgZGUgaW5mcmFjY2lvbmVzIGRlIHRyJmFhY3V0ZTtuc2l0by48L3A+DQoNCjxwPjIuIEFzaW1pc21vLCBlbCBpbXB1Z25hbnRlIG5vIGluZGl2aWR1YWxpemEgbGEgZG9jdHJpbmEgbGVnYWwgZGUgZXN0YSBTdXByZW1hIENvcnRlIGRlIEp1c3RpY2lhIHF1ZSBhZHVjZSBlcnImb2FjdXRlO25lYW1lbnRlIGFwbGljYWRhLiBDb25jcmV0YW1lbnRlLCBzZSByZWZpZXJlIGEgYXF1JmVhY3V0ZTtsbGEgZGVyaXZhZGEgZGUgbGEganVyaXNwcnVkZW5jaWEgZGUgbGEgQ29ydGUgU3VwcmVtYSBkZSBKdXN0aWNpYSBkZSBsYSBOYWNpJm9hY3V0ZTtuIHBhcmEgZnVuZGFyIHN1IGFzZXJ0byBkZSBxdWUgbGEgZGVjbGFyYWNpJm9hY3V0ZTtuIGRlIGluY29uc3RpdHVjaW9uYWxpZGFkIGVzIGxhICZ1YWN1dGU7bHRpbWEgcmF0aW8gZGVsIG9yZGVuYW1pZW50byBqdXImaWFjdXRlO2RpY28uPC9wPg0KDQo8cD5Fc3RlIFRyaWJ1bmFsIHRpZW5lIGRpY2hvIHF1ZSBsYSBpbnZvY2FjaSZvYWN1dGU7biBkZSBwcmVjZWRlbnRlcyBkZSBvdHJvcyAmb2FjdXRlO3JnYW5vcyBqdWRpY2lhbGVzIG5vIHJlc3VsdGEgZWZpY2F6IHBhcmEgZnVuZGFtZW50YXIgZWwgcmVjdXJzbyBkZSBpbmFwbGljYWJpbGlkYWQgZGUgbGV5IHBvcnF1ZSBubyBjb25zdGl0dXllbiBsYSBkb2N0cmluYSBsZWdhbCBhIGxhIHF1ZSBhbHVkZSBlbCBhcnQuIDI3OSBkZWwgQyZvYWN1dGU7ZGlnbyBQcm9jZXNhbCBDaXZpbCB5IENvbWVyY2lhbCAoY29uZi4gY2F1c2FzIEMuIDEwMS4yMzYsIHNlbnQuIGRlbCAyOS1JVi0yMDA5LCBDLiAxMTMuMjA4LCBzZW50LiBkZWwgMjctVkktMjAxMiwgQS4gNzIuMTU3LCBzZW50LiBkZWwgNi1YSS0yMDEzKSwgYXVucXVlIHNlIHRyYXRlIGRlIGxvcyBmYWxsb3MgZGUgbGEgQ29ydGUgU3VwcmVtYSBkZSBsYSBOYWNpJm9hY3V0ZTtuLjwvcD4NCg0KPHA+UG9yIG90cmEgcGFydGUsIGxhIHJlZmVyZW5jaWEgaGVjaGEgYSBmcy4gMjQ5IGRlbCBlc2NyaXRvIHJlY3Vyc2l2bywgY2l0YW5kbyBwcmVjZWRlbnRlcyBkZSBlc3RhIFN1cHJlbWEgQ29ydGUgZW4gY3VhbnRvIGFsdWRlbiBhIGxvcyBleHRyZW1vcyBleGlnaWJsZXMgcGFyYSBsYSBkZWNsYXJhY2kmb2FjdXRlO24gZGUgaW5jb25zdGl0dWNpb25hbGlkYWQgZGUgdW5hIG5vcm1hIC1xdWUgbGEgcmVjdXJyZW50ZSBjb25zaWRlcmEgcXVlIG5vIHNlIGhhbGxhbiBjb25maWd1cmFkb3MgZW4gZWwgY2FzbyBzdWIgZXhhbWluZS0gdGFtcG9jbyByZXN1bHRhIHN1ZmljaWVudGUgYSBsb3MgZmluZXMgcHJldGVuZGlkb3MgcG9yIGVsIGNvZGVtYW5kYWRvLjwvcD4NCg0KPHA+RXMgZG9jdHJpbmEgcmVpdGVyYWRhIGRlIGVzdGUgVHJpYnVuYWwgcXVlIHJlc3VsdGEgaW5hcHJvcGlhZGEgbGEgY2l0YSBkZSBkb2N0cmluYSBsZWdhbCBjdWFuZG8gZGlmaWVyZW4gbGFzIGNvbmRpY2lvbmVzIGYmYWFjdXRlO2N0aWNhcyB5IGp1ciZpYWN1dGU7ZGljYXMgZGUgbGEgY2F1c2EgY29uIGxhcyBkZWwgcHJlY2VkZW50ZSBpbnZvY2FkbyAoY29uZi4gY2F1c2FzIEFjLiA3Ni43NzcsIHNlbnQuIGRlbCAyOC1JSUktMjAwMTsgQWMuIDc2Ljg4OCwgc2VudC4gZGVsIDE5LUlJLTIwMDI7IEFjLiA4NC42MTcsIHNlbnQuIGRlbCA1LVYtMjAwNDsgQS4gNjguODA4LCAmcXVvdDtNYWlkYW5hJnF1b3Q7IHkgQS4gNjguODE3LCAmcXVvdDtCZXJzYW5pIExlZGVzbWEmcXVvdDssIGFtYmFzIHNlbnRzLiBkZWwgMjAtVkktMjAwNzsgZW50cmUgbXVjaGFzIG90cmFzKS48L3A+DQoNCjxwPiZuYnNwOzMuIElndWFsIHN1ZXJ0ZSBoYSBkZSBjb3JyZXIgbGEgZGVudW5jaWEgZGUgYWJzdXJkbywgZWwgY3VhbCBzZSBjb25maWd1cmEgbWVkaWFudGUgdW4gZXJyb3IgcGFsbWFyaW8sIGdyYXZlIHkgbWFuaWZpZXN0byBxdWUgY29uZHVjZSBhIGNvbmNsdXNpb25lcyBjb250cmFkaWN0b3JpYXMsIGluY29uY2lsaWFibGVzIGUgaW5jb25ncnVlbnRlcyBjb24gbGFzIGNvbnN0YW5jaWFzIG9iamV0aXZhcyBkZSBsYSBjYXVzYSAoY29uZi4gQS4gNjkuMDc2LCAmcXVvdDtNLiwgTC5MJnF1b3Q7LCBzZW50LiBkZWwgMjktVkktMjAxMTsgQS4gNzIuNDQyLCBzZW50LiBkZWwgNi1YSS0yMDEyOyBDLiAxMTYuMjA1LCBzZW50LiBkZWwgMTEtSVgtMjAxMzsgQS4gNzEuMzUxLCAmcXVvdDtMYXRvcnJlJnF1b3Q7LCBzZW50LiBkZWwgMjUtSUktMjAxNSksIGxvIHF1ZSwgZW4gZWwgY2FzbyBubyBzZSBhY3JlZGl0Jm9hY3V0ZTsgZWwgZGVzdiZpYWN1dGU7byBsJm9hY3V0ZTtnaWNvIGVuIGxhIGRlY2lzaSZvYWN1dGU7biBkZSBsYSBhbHphZGEuPC9wPg0KDQo8cD5MYSBwaWV6YSByZWN1cnNpdmEgc2UgbGltaXRhIGEgZW51bWVyYXIgbG9zIHByZWNlcHRvcyBzdXB1ZXN0YW1lbnRlIGluZnJpbmdpZG9zIHBvciBsYSBzZW50ZW5jaWEgaW1wdWduYWRhIC1hcnRzLiA1LCAxNywgMTggeSAzMSBkZSBsYSBDb25zdGl0dWNpJm9hY3V0ZTtuIG5hY2lvbmFsLSwgc2luIHNpcXVpZXJhIGludGVudGFyIGV4cGxpY2FyIHBvciBxdSZlYWN1dGU7IHkgZGUgcXUmZWFjdXRlOyBtb2RvIHNlIHByb2R1am8gZXNhIHZ1bG5lcmFjaSZvYWN1dGU7biwgbmkgZXhwcmVzYXIgY3UmYWFjdXRlO2wgZXMgbGEgdmluY3VsYWNpJm9hY3V0ZTtuIHF1ZSBhcXUmZWFjdXRlO2xsb3MgdGllbmVuIGNvbiBlbCBhZ3JhdmlvIGV4cHJlc2Fkby48L3A+DQoNCjxwPkVzdGEgQ29ydGUgdGllbmUgZGljaG8gcXVlIGxhIGNpdGEgZ2VuJmVhY3V0ZTtyaWNhIGRlIHF1ZSBzZSBoYWJyJmlhY3V0ZTthbiBxdWVicmFudGFkbyBwcmVjZXB0b3MgY29uc3RpdHVjaW9uYWxlcyB5IGxlZ2FsZXMgbm8gdGllbmUgZWZpY2FjaWEgc2kgbm8gc2UgZXhwcmVzYSBjbGFyYW1lbnRlIGRlIHF1JmVhY3V0ZTsgbWFuZXJhIGVsIHRyaWJ1bmFsIGluY3Vycmkmb2FjdXRlOyBlbiB0YWxlcyBzdXB1ZXN0YXMgdmlvbGFjaW9uZXMgKGNvbmYuIGRvY3QuIEFjLiA5NC4zMTYsIHNlbnQuIGRlbCAyMS1WSS0yMDA2OyBBLiA3MS4xNTksIHNlbnQuIGRlbCAyOC1WSUlJLTIwMTM7IEEuIDcyLjM1OCwgc2VudC4gZGVsIDI0LUlYLTIwMTQpLjwvcD4NCg0KPHA+NC4gVGFtcG9jbyBtZXJlY2UgYWNvZ2lkYSBlbCBwbGFudGVvIGZvcm11bGFkbyBwb3IgZWwgcmVjdXJyZW50ZSBlbiByZWxhY2kmb2FjdXRlO24gYSBxdWUgZWwgcGFnbyBkZSBsYXMgbXVsdGFzIHByZXZpbyBhIGxhIHJlbm92YWNpJm9hY3V0ZTtuIGRlIGxhIGxpY2VuY2lhIGRlIGNvbmR1Y2lyIHRpZW5kZSBhIHByb3RlZ2VyIGxhIHNlZ3VyaWRhZCB2aWFsLjwvcD4NCg0KPHA+RXMgcG9yIGVsbG8sIHF1ZSBhbCBpZ3VhbCBxdWUgZW4gZWwgYWdyYXZpbyBhbnRlY2VkZW50ZSwgcmVzdWx0YW4gYXBsaWNhYmxlcyBhbCBwcmVzZW50ZSBjYXNvLCBwcmVjZWRlbnRlcyBkZSBlc3RhIENvcnRlIHF1ZSBleHByZXNhbiBxdWUgZXMgaW5zdWZpY2llbnRlIGVsIHJlY3Vyc28gZGUgaW5hcGxpY2FiaWxpZGFkIGRlIGxleSBxdWUgbm8gY3Vlc3Rpb25hIHVuIGZ1bmRhbWVudG8gZXNlbmNpYWwgeSBjb24gYXV0b25vbSZpYWN1dGU7YSBiYXN0YW50ZSBwYXJhIGRhciBzdXN0ZW50byBhbCBwcm9udW5jaWFtaWVudG8gaW1wdWduYWRvLjwvcD4NCg0KPHA+QXMmaWFjdXRlOyBudWV2YW1lbnRlIGxhIHF1ZWpvc2EgLWVmZWN0dWFuZG8gYWxlZ2FjaW9uZXMgZ2VuJmVhY3V0ZTtyaWNhcyBlIGhpcG90JmVhY3V0ZTt0aWNhcy0gbm8gcmViYXRlIGxvcyBhcmd1bWVudG9zIGV4cGxpY2l0YWRvcyBwb3IgbGEgYWx6YWRhLCBwb3IgbG8gcXVlIGRlamEgaW5jJm9hY3V0ZTtsdW1lcyBsbyByZWZlcmlkbyBhIHF1ZSBlbCBwYWdvIGRlIGxhcyBtdWx0YXMgcG9yIGxhcyBpbmZyYWNjaW9uZXMgY29tZXRpZGFzIHBvciBxdWllbiBoYSBvYnJhZG8gY29uIGltcHJ1ZGVuY2lhIGVuIGxhIGNvbmR1Y2NpJm9hY3V0ZTtuIGRlIHVuIHZlaCZpYWN1dGU7Y3VsbyBubyBsbyB0b3JuYSBwb3IgcyZpYWN1dGU7IHNvbG8gZW4gdW4ganVpY2lvc28gbyBoJmFhY3V0ZTtiaWwgY29uZHVjdG9yIHkgcXVlIGVzIG9ibGlnYWNpJm9hY3V0ZTtuIGRlIGxhIHBhcnRlIGRlbWFuZGFkYSBhZG9wdGFyIG1lZGlvcyBjb25kdWNlbnRlcyB5IHJhem9uYWJsZXMgcXVlIG1lam9yIHNlcnZpciZpYWN1dGU7YW4gcGFyYSBhc2VndXJhciBsYSBwcmV2ZW5jaSZvYWN1dGU7biBkZSBsYSBhY2NpZGVudGFsaWRhZCB5IGdhcmFudGl6YXIgbGEgc2VndXJpZGFkIGRlIGxhcyBwZXJzb25hcyBxdWUgaW50ZXJhY3QmdWFjdXRlO2FuIGVuIGxhIGNhZGVuYSB2ZWhpY3VsYXIuPC9wPg0KDQo8cD5FbiB2JmlhY3V0ZTthIGV4dHJhb3JkaW5hcmlhLCBsYSByJmVhY3V0ZTtwbGljYSBjb25jcmV0YSwgZGlyZWN0YSB5IGVmaWNheiBkZSBsb3MgZnVuZGFtZW50b3MgZXNlbmNpYWxlcyBkZWwgZmFsbG8gY29tcG9ydGEgdW4gcmVxdWlzaXRvIGRlIGluZWx1ZGlibGUgY3VtcGxpbWllbnRvIHBhcmEgZWwgaW1wdWduYW50ZS4gVmEgZGUgc3V5bywgZW50b25jZXMsIHF1ZSBsYSBpbnN1ZmljaWVuY2lhIHJlY3Vyc2l2YSBkZWphIGluYyZvYWN1dGU7bHVtZSBsYSBkZWNpc2kmb2FjdXRlO24gY29udHJvdmVydGlkYTsgZCZlYWN1dGU7ZmljaXQgcXVlLCBlbnRyZSBvdHJvcyBmYWN0b3JlcywgcmVzdWx0YSBkZSBsYSBmYWx0YSBkZSBjdWVzdGlvbmFtaWVudG8gaWQmb2FjdXRlO25lbyBkZSBsb3MgY29uY2VwdG9zIG8gZnVuZGFtZW50b3Mgc29icmUgbG9zIHF1ZSAtYWwgbWFyZ2VuIGRlIHN1IGFjaWVydG8gbyBlcnJvci0gc2UgYXNpZW50YSBlbCBmYWxsbyBkZWwgdHJpYnVuYWwgaW5mZXJpb3IgKGRvY3QuIEFjLiA3My40NDcsIHNlbnQuIGRlbCAzLVYtMjAwMDsgQWMuIDcyLjIwNCwgc2VudC4gZGVsIDIwLVZJLTIwMDE7IEFjLiA4MS45NjUsIHNlbnQuIGRlbCAxOS1JSUktMjAwMyB5IEFjLiA5OC4yNjAsICZxdW90O0wuLCBSLkguJnF1b3Q7LCBzZW50LiBkZWwgMTItVklJLTIwMDYpLjwvcD4NCg0KPHA+Jm5ic3A7Vi4gUG9yIGxhcyByYXpvbmVzIGV4cHVlc3RhcywgZnJlbnRlIGFsIGluY3VtcGxpbWllbnRvIGRlIGxhcyBjYXJnYXMgdCZlYWN1dGU7Y25pY2FzIGVzdGFibGVjaWRhcyBwb3IgZWwgYXJ0LiAyNzkgZGVsIEMmb2FjdXRlO2RpZ28gcHJvY2VzYWwsIGNvbnNpZGVybyBxdWUgZWwgcmVjdXJzbyBleHRyYW9yZGluYXJpbyBkZSBpbmFwbGljYWJpbGlkYWQgZGUgbGV5IGRlYmUgc2VyIHJlY2hhemFkbyAoYXJ0LiAyODksIEMuUC5DLkMuKS48L3A+DQoNCjxwPkNvc3RhcyBhbCByZWN1cnJlbnRlIHZlbmNpZG8gKGFydHMuIDY4IHkgMjg5IGluIGZpbmUgZGVsIEMuUC5DLkMuKS48L3A+DQoNCjxwPlZvdG8gcG9yIGxhIG5lZ2F0aXZhLjwvcD4NCg0KPHA+TG9zIHNlJm50aWxkZTtvcmVzIGp1ZWNlcyBkb2N0b3JlcyBkZSBMJmFhY3V0ZTt6emFyaSwgS29nYW4geSBQZXR0aWdpYW5pLCBwb3IgbG9zIG1pc21vcyBmdW5kYW1lbnRvcyBkZWwgc2UmbnRpbGRlO29yIEp1ZXogZG9jdG9yIE5lZ3JpLCB2b3Rhcm9uIGVuIGlndWFsIHNlbnRpZG8uPC9wPg0KDQo8cD5Db24gbG8gcXVlIHRlcm1pbiZvYWN1dGU7IGVsIGFjdWVyZG8sIGRpY3QmYWFjdXRlO25kb3NlIGxhIHNpZ3VpZW50ZTwvcD4NCg0KPHA+UyBFIE4gVCBFIE4gQyBJIEE8L3A+DQoNCjxwPlBvciBsb3MgZnVuZGFtZW50b3MgZXhwdWVzdG9zIGVuIGVsIGFjdWVyZG8gcXVlIGFudGVjZWRlIHNlIHJlY2hhemEgZWwgcmVjdXJzbyBleHRyYW9yZGluYXJpbyBkZSBpbmFwbGljYWJpbGlkYWQgZGUgbGV5IGludGVycHVlc3RvIChhcnRzLiAyNzkgeSAyODksIEMuUC5DLkMuKS48L3A+DQoNCjxwPkNvbiBjb3N0YXMgYSBsYSBwYXJ0ZSBkZW1hbmRhZGEgcG9yIHJlc3VsdGFyIHZlbmNpZGEgKGFydHMuIDY4IHkgMjg5IGluIGZpbmUsIEMuUC5DLkMuKS48L3A+DQoNCjxwPlJlZyZpYWN1dGU7c3RyZXNlLCBub3RpZiZpYWN1dGU7cXVlc2UgeSBkZXZ1JmVhY3V0ZTtsdmFzZS48L3A+DQoNCjxwPiZuYnNwOzwvcD4NCg0KPHA+Jm5ic3A7PC9wPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPiZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyBISUxEQSBLT0dBTjwvcD4NCg0KPHA+Jm5ic3A7PC9wPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPiZuYnNwOzwvcD4NCg0KPHA+Jm5ic3A7Jm5ic3A7Jm5ic3A7Jm5ic3A7IEhFQ1RPUiBORUdSSSZuYnNwOyBFRFVBUkRPIEpVTElPIFBFVFRJR0lBTkk8L3A+DQoNCjxwPiZuYnNwOzwvcD4NCg0KPHA+Jm5ic3A7PC9wPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPiZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyBFRFVBUkRPIE5FU1RPUiBERSBMQVpaQVJJPC9wPg0KDQo8cD4mbmJzcDs8L3A+DQoNCjxwPiZuYnNwOzwvcD4NCg0KPHA+Jm5ic3A7PC9wPg0KDQo8cD4mbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsmbmJzcDsgSlVBTiBKT1NFIE1BUlRJQVJFTkE8L3A+DQoNCjxwPiZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyZuYnNwOyBTZWNyZXRhcmlvPC9wPg0KPC9odG1sPmQCEA8PFgIeB1Zpc2libGVoZGRk+46GAqSfkube31F60wfDRxUC5EFW82kK3Bd2d0vrVMo=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=oG-P1g6dHbvwR742sy0seSuJedEovev4oWEcjQAlGCl-NuOHD24yYrNnOZpH-V_0Beq06zHZQLWEkGga3hmNJEdsnvNocxkzv0ThnKNqt981&amp;t=639190725332169432" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=t4IQH_MuqrifSCHxEdKddWyAUrGU3otmBxoKZ-FskX_ZDb2wwuoOandzzbvezit10LjW3Z5wi3uHXVFBMLhhMMchPd-F8Dds_6oS35E6JjrGiyYCFndVTyzuUV4ecut3698Y_vt82i_8_8W5jhsUbivjFl7kZndqO9iFMCXxTPsjC21rq3-i04AAa3px9i9h0&amp;t=ffffffffbec1863d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=rbvrBsRmkhLIh4SIw9FU4PEAi_-Jgi1hkn-RA_c3msdhflswoS-JN0YHwTg-3FnBCBBdKPN_TB6KeFiMZmPnHP-fGhFXePKpLNXhiG22TIUXEQyeULZ0tgnsgGSN_44LJPE68UozEwcCL1bWa7xveGJGOF0_ajplHC-feUSdBQuJNFfBZHtmvzwkJ2Cv2O2-0&amp;t=ffffffffbec1863d" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8F3ECC95" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAXgfa+sAcq+ppWih1ZJB1yGBej87qzc7KV/A/qBwptecYAN3lS7hDUrAWvA815GWwJlwp4rJFQvQqTa4u0A554BdCPPkYrk/6ukSQ1+si5e/FLivno5/jZ2fFofjTumPHs3da7vTVC4bqK0XgODzki6" />
+</div>
+ 
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$cphMainContent$ScriptManager1', 'form1', ['tctl00$cphMainContent$UpdatePanelRepeaterGeneral','cphMainContent_UpdatePanelRepeaterGeneral'], [], ['ctl00$cphMainContent$lnkDescargar','cphMainContent_lnkDescargar'], 90, 'ctl00');
+//]]>
+</script>
+
+    
+
+    <script src="Scripts/ValidarFuncionesGenerales.js" type="text/javascript"></script>
+
+    <div class="contenido">
+
+    <table class="fondoTabla">
+        <tr>
+            <td class="encabezado" tabindex="0" role="heading" aria-level="1">
+                VISUALIZACION DEL TEXTO COMPLETO
+            </td>
+        </tr>
+    </table>
+    <br />
+           <div id="cphMainContent_UpdatePanelRepeaterGeneral">
+	
+    
+    <table class="fondaTabla">
+        <tr>
+            <td class="separacionParaLink">
+                <p>
+                    <a onclick="javascript:return false;" id="cphMainContent_lnkDatosFallo" Role="button" href="javascript:__doPostBack(&#39;ctl00$cphMainContent$lnkDatosFallo&#39;,&#39;&#39;)"></a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="hidden" name="ctl00$cphMainContent$CollapsiblePanelExtender1_ClientState" id="cphMainContent_CollapsiblePanelExtender1_ClientState" />
+            </td>
+        </tr>
+    </table>
+    <div id="cphMainContent_PanelDatosFallo">
+		
+        <table class="fondoTabla">
+            <tr>
+                <td class="titportada" colspan="2">
+                    <p tabindex="0" role="heading" aria-level="2">
+                        DATOS DEL FALLO</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Materia:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblMateria">CONTENCIOSO ADMINISTRATIVA</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Tipo de Fallo:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblTipoDeFallo">Sentencia Definitiva</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Tribunal Emisor:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblTribunalEmisor">SUPREMA CORTE DE JUSTICIA DE LA PROVINCIA (<b>SCBA</b>)</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Causa:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblCausa">A 73740 </span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Fecha:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblFecha">10/8/2016</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Nro Registro Interno:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblNroregistroInterno">RSD-175-16</span></p>
+                </td>
+            </tr>
+           
+                        <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Carátula Pública:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblCaratulaPublica">Del Campo, Ricardo c/ Municipalidad de General Madariaga s/ Amparo. Recurso extraordinario de inaplicabilidad de ley</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Magistrados Votantes:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0"> 
+                        <span id="lblmagistradosVotantes">Negri-de Lázzari-Kogan-Pettigiani</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Tribunal Origen:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblTribunalOrigen">CAMARA DE APELACION EN LO CONTENCIOSO ADMINISTRATIVO - MAR DEL PLATA (<b>CA0000 MP</b>)</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>NNF:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblNNF"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Observación:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblObservacionFallo"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Sentencias Anuladas:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblSentenciasAnuladas"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Alcance:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0"> 
+                        <span id="lblAlcance">Público</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Iniciales:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblIniciales"></span></p>
+                </td>
+            </tr>
+                        <tr>
+                <td class="DescripInformativo">
+                    <p tabindex="0">
+                        <b>Observaciones:</b>
+                    </p>
+                </td>
+                <td class="DescripInformativoDerecha">
+                    <p tabindex="0">
+                        <span id="lblObservacion"></span></p>
+                </td>
+            </tr>
+        </table>
+    
+	</div>
+    <table>
+      <tr>
+            <td class="separacionParaLink" colspan="2">
+                <div class="center-sum">
+                    <a onclick="javascript:window.print(); return false;" id="cphMainContent_lnkImpr" class="btnd  btn-primaryd center-block boton300 letrablanca title pull-left" Role="button" href="javascript:__doPostBack(&#39;ctl00$cphMainContent$lnkImpr&#39;,&#39;&#39;)" style="margin:20px; left:-4px;"> <span class="fa fa-print"></span> Imprimir</a>
+                    
+                    <a id="cphMainContent_lnkDescargar" class="btnd  btn-primaryd center-block boton300 letrablanca title pull-left" Role="button" href="javascript:__doPostBack(&#39;ctl00$cphMainContent$lnkDescargar&#39;,&#39;&#39;)" style="margin:20px; left:-4px;"><span class="fa fa-download"></span> Descargar</a>
+                  </div>  
+            </td>
+        </tr>
+        <tr>
+            <td class="titportada" colspan="2">
+                <p tabindex="0" role="heading" aria-level="2">
+                    TEXTO COMPLETO</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <p tabindex="0"> <html><p>A C U E R D O</p>
+
+<p>&nbsp;En la ciudad de La Plata, a 10 de agosto de 2016, habi&eacute;ndose establecido, de conformidad con lo dispuesto en el Acuerdo 2078, que deber&aacute; observarse el siguiente orden de votaci&oacute;n: doctores Negri, de L&aacute;zzari, Kogan, Pettigiani, se re&uacute;nen los se&ntilde;ores jueces de la Suprema Corte de Justicia en acuerdo ordinario para pronunciar sentencia definitiva en la causa A. 73.740, &quot;Del Campo Ricardo contra Municipalidad de General Madariaga. Amparo. Recurso extraordinario de inaplicabilidad de ley&quot;.</p>
+
+<p>A N T E C E D E N T E S</p>
+
+<p>La C&aacute;mara de Apelaci&oacute;n en lo Contencioso Administrativo con asiento en la ciudad de Mar del Plata - en lo que aqu&iacute; interesa- desestim&oacute; el recurso de apelaci&oacute;n interpuesto por la apoderada de la Provincia de Buenos Aires y confirm&oacute; el pronunciamiento de primera instancia en cuanto declar&oacute; la inconstitucionalidad del art. 10 inc. 3&ordm; del Anexo II del decreto 532/2009 reglamentario de la ley 13.927 (fs. 216/227 vta.).</p>
+
+<p>Contra dicho pronunciamiento la citada codemandada interpuso recurso extraordinario de inaplicabilidad de ley o doctrina legal (fs. 246/250).</p>
+
+<p>Dictada la providencia de autos (fs. 272), agregada la memoria de la parte actora (fs. 276/278) y encontr&aacute;ndose la causa en estado de pronunciar sentencia, esta Suprema Corte resolvi&oacute; plantear y votar la siguiente</p>
+
+<p>&nbsp;C U E S T I &Oacute; N</p>
+
+<p>&iquest;Es fundado el recurso extraordinario de inaplicabilidad de ley o doctrina legal interpuesto?</p>
+
+<p>V O T A C I &Oacute; N</p>
+
+<p>A la cuesti&oacute;n planteada, el se&ntilde;or Juez doctor Negri dijo:</p>
+
+<p>I. El titular del Juzgado de Garant&iacute;as N&ordm; 3 del Departamento Judicial de Dolores, declar&oacute; la inconstitucionalidad del art. 10 inc. 3 del Anexo II del decreto 532/2009 reglamentario de la ley 13.927, e hizo lugar a la acci&oacute;n de amparo promovida por el se&ntilde;or Ricardo del Campo. En consecuencia, orden&oacute; a la Municipalidad de General Madariaga y a la Direcci&oacute;n de Seguridad Vial de la Provincia de Buenos Aires, a que de manera sincronizada, reanuden el tr&aacute;mite iniciado por la parte actora -de renovaci&oacute;n de su licencia de conducir-, permitiendo su continuidad hasta su debida culminaci&oacute;n obviando la deuda que registra a favor del Fisco de la Provincia de Buenos Aires en concepto de multas por infracciones de tr&aacute;nsito (fs. 172/188).</p>
+
+<p>Para as&iacute; decidir, el magistrado interviniente consider&oacute; los principios constitucionales de pro homine y de razonabilidad. Entendi&oacute; que el art. 10 inc. 3 del Anexo II Titulo I Sistema Provincial de Licencias de Conducir, del decreto reglamentario 532/2009, no permite distinguir entre quienes resulten buenos conductores y los que no lo son. Consider&oacute; que el sistema de las fotomultas es violatorio del art. 18 de la Constituci&oacute;n nacional que establece la responsabilidad subjetiva del propietario del autom&oacute;vil para asegurar su pago.</p>
+
+<p>&nbsp;Sostuvo que el precepto legal en cuesti&oacute;n es inconstitucional con base en los arts. 1, 14, 14 bis, 16, 17, 18, 19, 28, 33, 75 inc. 2 de la Constituci&oacute;n nacional y 5, 6 y 29 de la C.A.D.H. Ello, al ser imposible extraer de esa norma otra interpretaci&oacute;n racional que no sea la del &uacute;nico fin recaudatorio coactivo que muestra su letra expresa, por sobre el sacrificio de los principios m&aacute;ximos de razonabilidad, legalidad, igualdad, pro homine, y derechos constitucionales de transitar libremente y trabajar, contando el Estado provincial con las distintas herramientas legales y recursos humanos para perseguir el cobro de deudas por las v&iacute;as legales pertinente (ej. apremio).</p>
+
+<p>II. A su turno, la C&aacute;mara de Apelaci&oacute;n en lo Contencioso Administrativo con asiento en Mar del Plata desestim&oacute; el recurso de apelaci&oacute;n interpuesto por el apoderado de la Provincia de Buenos Aires y confirm&oacute; el pronunciamiento de primera instancia (fs. 216/227 vta.).</p>
+
+<p>Para as&iacute; resolver, la alzada consider&oacute; que la declaraci&oacute;n de inconstitucionalidad no deviene apresurada, toda vez que el juez de primera instancia se expidi&oacute; sobre tal planteo en oportunidad del dictado de la sentencia.</p>
+
+<p>&nbsp;Destac&oacute;, tal como lo afirmara la decisi&oacute;n del magistrado interviniente, que el art. 10 inc. 3 del Anexo II del decreto 532/2009 reglamentario de la ley 13.927 &shy;bajo la aparente supremac&iacute;a del valor seguridad vial- ostenta una finalidad netamente recaudatoria que lo torna irrazonable a la luz del art. 28 de la Constituci&oacute;n nacional.</p>
+
+<p>Expres&oacute; que el requisito de contenido patrimonial impuesto por la norma reglamentaria -cancelaci&oacute;n de las multas por infracciones previo a la renovaci&oacute;n de la licencia de conducir-, no guarda adecuada relaci&oacute;n con el valor mencionado que enarbola, en la medida que ambas cuestiones transitan por andariveles paralelos entre los que no resulta posible reconocer punto de conexi&oacute;n. Entendi&oacute; que se verifica una desproporci&oacute;n entre medios y fines.</p>
+
+<p>Puntualiz&oacute; que el cumplimiento con el pago de las multas por las infracciones cometidas por quien no ha obrado con imprudencia en la conducci&oacute;n de un veh&iacute;culo, no lo torna por s&iacute; solo en un juicioso o h&aacute;bil conductor y, mucho menos, garantiza un incremento en la seguridad vial.</p>
+
+<p>Sostuvo que el Estado cuenta con los mecanismos legales necesarios para exigir, perseguir y percibir el importe de las multas por infracciones de tr&aacute;nsito mediante la promoci&oacute;n de las acciones judiciales enderezadas a tal finalidad que, respetando la garant&iacute;a del debido proceso, le permiten en forma r&aacute;pida y expedita procurar el cobro de las acreencias originadas en las faltas a las normas de tr&aacute;nsito mediante el proceso de apremio.</p>
+
+<p>A&ntilde;ade que tampoco es justificativo para resguardar la referida seguridad que la &uacute;nica alternativa es la aplicaci&oacute;n de una sanci&oacute;n patrimonial pues el Estado se encuentra compelido a implementar mecanismos aptos para mitigar la alta siniestralidad vial.</p>
+
+<p>III. Mediante el recurso extraordinario de inaplicabilidad de ley interpuesto, la apoderada de Fiscal&iacute;a de Estado, denuncia violaci&oacute;n de los arts. 5, 17, 18 y 31 de la Constituci&oacute;n nacional y la doctrina legal de la Corte Suprema de Justicia de la Naci&oacute;n y Suprema Corte de Justicia de la Provincia de Buenos Aires referidas a los requisitos de procedencia para declarar inconstitucional un precepto legal. Tambi&eacute;n alega absurdo (fs. 246/250).</p>
+
+<p>Aduce que la decisi&oacute;n de la C&aacute;mara es arbitraria al efectuar una interpretaci&oacute;n parcial e incongruente con la normativa aplicable. Destaca que el decreto reglamentario 532/2009 de la ley 13.927 es complementario de otros mecanismos &uacute;tiles para lograr sus fines tales como el informativo, educativo, incentivo entre otros y que es p&uacute;blico y notorio la reducci&oacute;n de accidentes en rutas provinciales desde su implementaci&oacute;n.</p>
+
+<p>&nbsp;Expresa que el pago de una multa no convierte al infractor en h&aacute;bil conductor, aunque cumplimenta su objetivo disuasivo, raz&oacute;n por la cual no resulta irrazonable en los t&eacute;rminos del art. 28 de la Constituci&oacute;n nacional.</p>
+
+<p>Esboza que la declaraci&oacute;n de inconstitucionalidad es una funci&oacute;n delicada y debe ser decretada ultima ratio cuando no exista otro medio para salvaguardar un derecho o garant&iacute;a garantizado por la Constituci&oacute;n, circunstancia que no se da en autos.</p>
+
+<p>Destaca que la Corte Suprema de Justicia de la Naci&oacute;n ha dicho que debe existir un caso concreto o causa y se exige probanza de la inconstitucionalidad. Aduce que el planteo de inconstitucionalidad confirmado por la alzada no cumple con los extremos b&aacute;sicos para ser tenido por tal, limit&aacute;ndose a manifestar que la normativa tra&iacute;da a an&aacute;lisis viola el texto de la Constituci&oacute;n nacional, por cuanto prohibir&iacute;an los derechos de transitar libremente y trabajar, analizando de manera sesgada los valores jur&iacute;dicos protegidos por la legislaci&oacute;n.</p>
+
+<p>Se&ntilde;ala que no alcanza con la aserci&oacute;n de que la norma impugnada puede causar agravio constitucional, sino que debe afirmarse y probarse que ello ocurre en el caso. Invoca doctrina legal de la Corte Suprema de Justicia de la Naci&oacute;n y de la Suprema Corte provincial (ver relato a fs. 248 vta./249 vta.).</p>
+
+<p>Asevera que el decreto reglamentario 532/09 es ajustado al plexo constitucional y la inconstitucionalidad decretada por la alzada no cumple con los extremos b&aacute;sicos para ser tenido por tal, ya que debi&oacute; afirmarse y probarse que ello ocurre en el caso.</p>
+
+<p>Finalmente, puntualiza que la C&aacute;mara pas&oacute; por alto que el actor posee veinti&uacute;n multas por exceso de velocidad desconociendo el valor jur&iacute;dico protegido que es la seguridad vial.</p>
+
+<p>Entiende que las disposiciones impugnadas no violan ning&uacute;n derecho protegido por la Constituci&oacute;n nacional, sino que pretenden concientizar a los habitantes de la necesidad de conducir un veh&iacute;culo de manera responsable y disuadir a los infractores en su actitud.</p>
+
+<p>Destaca que imponer una sanci&oacute;n patrimonial -a contrario de lo sostenido por la alzada- no persigue ning&uacute;n fin recaudatorio sino que resulta ser una alternativa eficaz para tratar de modificar el actuar del infractor.</p>
+
+<p>IV. El recurso no puede prosperar atento a que ha sido insuficientemente fundado (art. 279 del C.P.C.C.).</p>
+
+<p>&nbsp;1. El detenido an&aacute;lisis del contenido de la impugnaci&oacute;n deducida permite concluir en su insuficiencia, dada la deficiente t&eacute;cnica recursiva empleada en su postulaci&oacute;n. Ello resulta en punto a dos cuestiones centrales que ata&ntilde;en a esa t&eacute;cnica, si se confrontan el recurso deducido con las normas que establecen los recaudos que &eacute;stos deben cumplir (art. 279 y concs., C.P.C.C.) en orden a una fundamentaci&oacute;n precisa y clara de los agravios expuestos, como as&iacute; tambi&eacute;n la de su posterior explicaci&oacute;n. La lectura del escrito de interposici&oacute;n del remedio extraordinario permite advertir, en este caso, que los argumentos que lo sustentan no est&aacute;n desarrollados con la claridad que exige una pieza de esa naturaleza y tampoco cumplen los extremos de rigor exigidos por la jurisprudencia de &eacute;sta Suprema Corte para convalidar su suficiencia.</p>
+
+<p>El art. 279, en su segunda parte, del C&oacute;digo Procesal Civil y Comercial, dispone que el escrito por el que se deduzca el recurso extraordinario de inaplicabilidad de ley &quot;deber&aacute; contener, en t&eacute;rminos claros y concretos, la menci&oacute;n de la ley o de la doctrina legal que se repute violada o err&oacute;neamente aplicada en la sentencia, y en forma espec&iacute;fica, indicar igualmente en qu&eacute; consiste la violaci&oacute;n o el error&quot;.</p>
+
+<p>Sobre ello esta Suprema Corte dijo que, para que el escrito con que se interpone y funda el recurso de inaplicabilidad de ley cumpla con la misi&oacute;n que le asigna el art. 279 del C&oacute;digo Procesal Civil y Comercial, es decir, demostrar la existencia de violaci&oacute;n o error en la aplicaci&oacute;n de la ley, los argumentos que en &eacute;l se formulen deben referirse directa y concretamente a los conceptos que estructuran la construcci&oacute;n jur&iacute;dica en que se asienta la sentencia (Ac. 79.513, sent. del 23-XII-2002; Ac. 80.763, sent. del 2-IV-2003; entre muchas otras).</p>
+
+<p>Como qued&oacute; visto, ello no ocurre en este supuesto pues no se atacan los fundamentos expuestos por la alzada en cuanto a la desproporcionalidad entre los medios empleados -pago de la multa- y los fines a alcanzar &shy;seguridad vial- y la existencia de medios judiciales id&oacute;neos a fin de obtener el cobro de la sanci&oacute;n pecuniaria impuesta como es el proceso de apremio.</p>
+
+<p>Por el contrario, el recurrente para justificar la razonabilidad de la medida dispuesta por el precepto legal en cuesti&oacute;n esboza gen&eacute;ricamente el objetivo disuasivo que persigue hacia los infractores.</p>
+
+<p>Mas no acredita con claridad la proporcionalidad entre aqu&eacute;lla y los fines a resguardar y tampoco demuestra la imposibilidad de utilizar las v&iacute;as legales para obtener el cobro de las multas derivadas de infracciones de tr&aacute;nsito.</p>
+
+<p>2. Asimismo, el impugnante no individualiza la doctrina legal de esta Suprema Corte de Justicia que aduce err&oacute;neamente aplicada. Concretamente, se refiere a aqu&eacute;lla derivada de la jurisprudencia de la Corte Suprema de Justicia de la Naci&oacute;n para fundar su aserto de que la declaraci&oacute;n de inconstitucionalidad es la &uacute;ltima ratio del ordenamiento jur&iacute;dico.</p>
+
+<p>Este Tribunal tiene dicho que la invocaci&oacute;n de precedentes de otros &oacute;rganos judiciales no resulta eficaz para fundamentar el recurso de inaplicabilidad de ley porque no constituyen la doctrina legal a la que alude el art. 279 del C&oacute;digo Procesal Civil y Comercial (conf. causas C. 101.236, sent. del 29-IV-2009, C. 113.208, sent. del 27-VI-2012, A. 72.157, sent. del 6-XI-2013), aunque se trate de los fallos de la Corte Suprema de la Naci&oacute;n.</p>
+
+<p>Por otra parte, la referencia hecha a fs. 249 del escrito recursivo, citando precedentes de esta Suprema Corte en cuanto aluden a los extremos exigibles para la declaraci&oacute;n de inconstitucionalidad de una norma -que la recurrente considera que no se hallan configurados en el caso sub examine- tampoco resulta suficiente a los fines pretendidos por el codemandado.</p>
+
+<p>Es doctrina reiterada de este Tribunal que resulta inapropiada la cita de doctrina legal cuando difieren las condiciones f&aacute;cticas y jur&iacute;dicas de la causa con las del precedente invocado (conf. causas Ac. 76.777, sent. del 28-III-2001; Ac. 76.888, sent. del 19-II-2002; Ac. 84.617, sent. del 5-V-2004; A. 68.808, &quot;Maidana&quot; y A. 68.817, &quot;Bersani Ledesma&quot;, ambas sents. del 20-VI-2007; entre muchas otras).</p>
+
+<p>&nbsp;3. Igual suerte ha de correr la denuncia de absurdo, el cual se configura mediante un error palmario, grave y manifiesto que conduce a conclusiones contradictorias, inconciliables e incongruentes con las constancias objetivas de la causa (conf. A. 69.076, &quot;M., L.L&quot;, sent. del 29-VI-2011; A. 72.442, sent. del 6-XI-2012; C. 116.205, sent. del 11-IX-2013; A. 71.351, &quot;Latorre&quot;, sent. del 25-II-2015), lo que, en el caso no se acredit&oacute; el desv&iacute;o l&oacute;gico en la decisi&oacute;n de la alzada.</p>
+
+<p>La pieza recursiva se limita a enumerar los preceptos supuestamente infringidos por la sentencia impugnada -arts. 5, 17, 18 y 31 de la Constituci&oacute;n nacional-, sin siquiera intentar explicar por qu&eacute; y de qu&eacute; modo se produjo esa vulneraci&oacute;n, ni expresar cu&aacute;l es la vinculaci&oacute;n que aqu&eacute;llos tienen con el agravio expresado.</p>
+
+<p>Esta Corte tiene dicho que la cita gen&eacute;rica de que se habr&iacute;an quebrantado preceptos constitucionales y legales no tiene eficacia si no se expresa claramente de qu&eacute; manera el tribunal incurri&oacute; en tales supuestas violaciones (conf. doct. Ac. 94.316, sent. del 21-VI-2006; A. 71.159, sent. del 28-VIII-2013; A. 72.358, sent. del 24-IX-2014).</p>
+
+<p>4. Tampoco merece acogida el planteo formulado por el recurrente en relaci&oacute;n a que el pago de las multas previo a la renovaci&oacute;n de la licencia de conducir tiende a proteger la seguridad vial.</p>
+
+<p>Es por ello, que al igual que en el agravio antecedente, resultan aplicables al presente caso, precedentes de esta Corte que expresan que es insuficiente el recurso de inaplicabilidad de ley que no cuestiona un fundamento esencial y con autonom&iacute;a bastante para dar sustento al pronunciamiento impugnado.</p>
+
+<p>As&iacute; nuevamente la quejosa -efectuando alegaciones gen&eacute;ricas e hipot&eacute;ticas- no rebate los argumentos explicitados por la alzada, por lo que deja inc&oacute;lumes lo referido a que el pago de las multas por las infracciones cometidas por quien ha obrado con imprudencia en la conducci&oacute;n de un veh&iacute;culo no lo torna por s&iacute; solo en un juicioso o h&aacute;bil conductor y que es obligaci&oacute;n de la parte demandada adoptar medios conducentes y razonables que mejor servir&iacute;an para asegurar la prevenci&oacute;n de la accidentalidad y garantizar la seguridad de las personas que interact&uacute;an en la cadena vehicular.</p>
+
+<p>En v&iacute;a extraordinaria, la r&eacute;plica concreta, directa y eficaz de los fundamentos esenciales del fallo comporta un requisito de ineludible cumplimiento para el impugnante. Va de suyo, entonces, que la insuficiencia recursiva deja inc&oacute;lume la decisi&oacute;n controvertida; d&eacute;ficit que, entre otros factores, resulta de la falta de cuestionamiento id&oacute;neo de los conceptos o fundamentos sobre los que -al margen de su acierto o error- se asienta el fallo del tribunal inferior (doct. Ac. 73.447, sent. del 3-V-2000; Ac. 72.204, sent. del 20-VI-2001; Ac. 81.965, sent. del 19-III-2003 y Ac. 98.260, &quot;L., R.H.&quot;, sent. del 12-VII-2006).</p>
+
+<p>&nbsp;V. Por las razones expuestas, frente al incumplimiento de las cargas t&eacute;cnicas establecidas por el art. 279 del C&oacute;digo procesal, considero que el recurso extraordinario de inaplicabilidad de ley debe ser rechazado (art. 289, C.P.C.C.).</p>
+
+<p>Costas al recurrente vencido (arts. 68 y 289 in fine del C.P.C.C.).</p>
+
+<p>Voto por la negativa.</p>
+
+<p>Los se&ntilde;ores jueces doctores de L&aacute;zzari, Kogan y Pettigiani, por los mismos fundamentos del se&ntilde;or Juez doctor Negri, votaron en igual sentido.</p>
+
+<p>Con lo que termin&oacute; el acuerdo, dict&aacute;ndose la siguiente</p>
+
+<p>S E N T E N C I A</p>
+
+<p>Por los fundamentos expuestos en el acuerdo que antecede se rechaza el recurso extraordinario de inaplicabilidad de ley interpuesto (arts. 279 y 289, C.P.C.C.).</p>
+
+<p>Con costas a la parte demandada por resultar vencida (arts. 68 y 289 in fine, C.P.C.C.).</p>
+
+<p>Reg&iacute;strese, notif&iacute;quese y devu&eacute;lvase.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; HILDA KOGAN</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; HECTOR NEGRI&nbsp; EDUARDO JULIO PETTIGIANI</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; EDUARDO NESTOR DE LAZZARI</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JUAN JOSE MARTIARENA</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secretario</p>
+</html></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="lineaazul" style="height: 2px;">
+            </td>
+        </tr>
+      
+    </table>
+    <br />
+
+ <script type="text/javascript">
+           Sys.WebForms.PageRequestManager.getInstance().add_endRequest(mostrarAlert);
+</script>
+
+</div>
+
+
+</div>
+
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.CollapsiblePanelBehavior, {"ClientStateFieldID":"cphMainContent_CollapsiblePanelExtender1_ClientState","CollapseControlID":"cphMainContent_lnkDatosFallo","Collapsed":true,"CollapsedSize":0,"CollapsedText":"Datos del Fallo","ExpandControlID":"cphMainContent_lnkDatosFallo","ExpandedText":"Ocultar Datos del Fallo","TextLabelID":"cphMainContent_lnkDatosFallo","id":"cphMainContent_CollapsiblePanelExtender1"}, null, null, $get("cphMainContent_PanelDatosFallo"));
+});
+//]]>
+</script>
+</form>
+      
+
+            </td>
+        </tr>
+
+        
+    </div>
+
+    <footer>
+        <div class="marco">
+            <img alt="" id="scba-escudo" src="/images/escudo-PJBA-blanco.png" />
+
+            <!-- 
+            <div id="links">
+                <img alt="" id="scba-escudo" src="/images/SCBA-fonograma-claro.svg" />
+            </div> -->
+
+
+            <div id="telefonos">
+                <h5 tabindex="0" role="heading">Centro de Atención al Usuario</h5>
+                <a aria-label="Teléfono: 0810-444-7222." class="catu" href="tel:+54-0810-444-7222">0810-444-7222</a>
+
+                <a aria-label="Escriba un mensaje por WhatsApp al número +54 221 4377116." class="whatsapp" href="tel:+54-221-4377116">
+                    WhatsApp: +54 221 4377116
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7TBT4T4D4G"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7TBT4T4D4G');
+</script>
+</html>

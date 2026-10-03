@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es-AR" prefix="og: https://ogp.me/ns#" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head><meta charset="UTF-8" /><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	
+<!-- Optimización para motores de búsqueda de Rank Math - https://rankmath.com/ -->
+<title>SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS</title>
+<meta name="description" content="El Municipio de San Isidro prorrogó la suspensión del sistema de fotomultas por un plazo de hasta 180 días hábiles, mientras continúa el proceso de revisión"/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" id="rb-preload-gfonts" href="https://fonts.googleapis.com/css?family=Open+Sans:700,300%7COxygen:400,700%7CEncode+Sans+Condensed:400,500,600,700,800&amp;display=swap" crossorigin><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700,300%7COxygen:400,700%7CEncode+Sans+Condensed:400,500,600,700,800&amp;display=swap"></noscript><link rel="canonical" href="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" />
+<meta property="og:description" content="El Municipio de San Isidro prorrogó la suspensión del sistema de fotomultas por un plazo de hasta 180 días hábiles, mientras continúa el proceso de revisión" />
+<meta property="og:url" content="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" />
+<meta property="og:site_name" content="Criterio Online" />
+<meta property="article:publisher" content="https://www.facebook.com/DiarioCriterioOnline" />
+<meta property="article:author" content="https://www.facebook.com/DiarioCriterioOnline/" />
+<meta property="article:section" content="Política Economia" />
+<meta property="og:updated_time" content="2026-01-27T10:48:11-03:00" />
+<meta property="og:image" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg" />
+<meta property="og:image:secure_url" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="403" />
+<meta property="og:image:alt" content="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2026-01-27T07:40:39-03:00" />
+<meta property="article:modified_time" content="2026-01-27T10:48:11-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" />
+<meta name="twitter:description" content="El Municipio de San Isidro prorrogó la suspensión del sistema de fotomultas por un plazo de hasta 180 días hábiles, mientras continúa el proceso de revisión" />
+<meta name="twitter:site" content="@CriterioOnline" />
+<meta name="twitter:creator" content="@CriterioOnline" />
+<meta name="twitter:image" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg" />
+<meta name="twitter:label1" content="Escrito por" />
+<meta name="twitter:data1" content="criterio online" />
+<meta name="twitter:label2" content="Tiempo de lectura" />
+<meta name="twitter:data2" content="1 minuto" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.criterioonline.com/#organization","name":"Criterio Online","url":"https://www.criterioonline.com","sameAs":["https://www.facebook.com/DiarioCriterioOnline","https://twitter.com/CriterioOnline","https://www.youtube.com/criterioonline","https://www.youtube.com/user/criterioonline","https://www.threads.com/@criterioonline","https://www.instagram.com/criterioonline/"],"foundingDate":"2009-01-01"},{"@type":"WebSite","@id":"https://www.criterioonline.com/#website","url":"https://www.criterioonline.com","name":"Criterio Online","publisher":{"@id":"https://www.criterioonline.com/#organization"},"inLanguage":"es-AR"},{"@type":"ImageObject","@id":"https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg","url":"https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg","width":"800","height":"403","inLanguage":"es-AR"},{"@type":"BreadcrumbList","@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#breadcrumb","itemListElement":[{"@type":"ListItem","position":"1","item":{"@id":"https://www.criterioonline.com"}},{"@type":"ListItem","position":"2","item":{"@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/","name":"SAN ISIDRO: EL MUNICIPIO PRORROG\u00d3 LA SUSPENSI\u00d3N DEL SISTEMA DE FOTOMULTAS"}}]},{"@type":"WebPage","@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#webpage","url":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/","name":"SAN ISIDRO: EL MUNICIPIO PRORROG\u00d3 LA SUSPENSI\u00d3N DEL SISTEMA DE FOTOMULTAS","datePublished":"2026-01-27T07:40:39-03:00","dateModified":"2026-01-27T10:48:11-03:00","isPartOf":{"@id":"https://www.criterioonline.com/#website"},"primaryImageOfPage":{"@id":"https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg"},"inLanguage":"es-AR","breadcrumb":{"@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#breadcrumb"}},{"@type":"Person","@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#author","name":"criterio online","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/b7e9f64568ee57aa5c9c46f408c977a21c37d9a5736694256b40fa583433650a?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/b7e9f64568ee57aa5c9c46f408c977a21c37d9a5736694256b40fa583433650a?s=96&amp;d=mm&amp;r=g","caption":"criterio online","inLanguage":"es-AR"},"sameAs":["https://criterioonline.com/","https://www.facebook.com/DiarioCriterioOnline/"],"worksFor":{"@id":"https://www.criterioonline.com/#organization"}},{"@type":"BlogPosting","headline":"SAN ISIDRO: EL MUNICIPIO PRORROG\u00d3 LA SUSPENSI\u00d3N DEL SISTEMA DE FOTOMULTAS","datePublished":"2026-01-27T07:40:39-03:00","dateModified":"2026-01-27T10:48:11-03:00","author":{"@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#author","name":"criterio online"},"publisher":{"@id":"https://www.criterioonline.com/#organization"},"description":"El Municipio de San Isidro prorrog\u00f3 la suspensi\u00f3n del sistema de fotomultas por un plazo de hasta 180 d\u00edas h\u00e1biles, mientras contin\u00faa el proceso de revisi\u00f3n","name":"SAN ISIDRO: EL MUNICIPIO PRORROG\u00d3 LA SUSPENSI\u00d3N DEL SISTEMA DE FOTOMULTAS","@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#richSnippet","isPartOf":{"@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#webpage"},"image":{"@id":"https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg"},"inLanguage":"es-AR","mainEntityOfPage":{"@id":"https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/#webpage"}}]}</script>
+<!-- /Plugin Rank Math WordPress SEO -->
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Criterio Online &raquo; Feed" href="https://www.criterioonline.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Criterio Online &raquo; RSS de los comentarios" href="https://www.criterioonline.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.criterioonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.criterioonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F&#038;format=xml" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "legalName": "Criterio Online",
+    "url": "https://www.criterioonline.com/",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dolores",
+        "addressLocality": "Buenos Aires, Argentina",
+        "postalCode": "7100"
+    },
+    "email": "criterioonline@gmail.com",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "2245474071",
+        "contactType": "customer service"
+    },
+    "logo": "https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png",
+    "sameAs": [
+        "https://www.facebook.com/DiarioCriterioOnline",
+        "https://x.com/CriterioOnline",
+        "https://www.youtube.com/criterioonline",
+        "https://news.google.com/publications/CAAqLggKIihDQklTR0FnTWFoUUtFbU55YVhSbGNtbHZiMjVzYVc1bExtTnZiU2dBUAE?ceid=AR:es-419&oc=3",
+        "https://www.instagram.com/criterioonline/",
+        "https://www.threads.com/@criterioonline"
+    ]
+}</script>
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.criterioonline.com/wp-includes/css/dist/block-library/style.min.css?ver=7.1.2' media='all' />
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link data-minify="1" rel='stylesheet' id='foxiz-elements-css' href='https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/foxiz-core/lib/foxiz-elements/public/style.css?ver=1790871402' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:where(.wp-block-gallery.is-layout-flex){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}:where(.wp-block-gallery.is-layout-grid){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}
+:where(.wp-block-latest-posts.is-layout-flex){gap: 1.25em;}:where(.wp-block-latest-posts.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='cf7-dropfiles-css' href='https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7-drop-files/frontend/css/cf7-dropfiles.css?ver=1790871402' media='all' />
+
+<link data-minify="1" rel='stylesheet' id='foxiz-main-css' href='https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/css/main.css?ver=1790871403' media='all' />
+<style id="foxiz-main-inline-css">
+:root {--menu-family:Open Sans;--menu-transform:uppercase;--menu-fsize:18px;--submenu-family:Open Sans;}:root {--g-color :#1e73be;--g-color-90 :#1e73bee6;--indicator-bg-from :#357ebf;--indicator-bg-to :#2194ce;}.is-hd-1, .is-hd-2, .is-hd-3 {--nav-height :100px;}[data-theme="dark"].is-hd-4 {--nav-bg: #191c20;--nav-bg-from: #191c20;--nav-bg-to: #191c20;--nav-bg-glass: #191c2011;--nav-bg-glass-from: #191c2011;--nav-bg-glass-to: #191c2011;}[data-theme="dark"].is-hd-5, [data-theme="dark"].is-hd-5:not(.sticky-on) {--nav-bg: #191c20;--nav-bg-from: #191c20;--nav-bg-to: #191c20;--nav-bg-glass: #191c2011;--nav-bg-glass-from: #191c2011;--nav-bg-glass-to: #191c2011;}:root {--topad-spacing :15px;--hyperlink-line-color :var(--g-color);--mbnav-height :55px;--single-category-fsize :13px;--s-content-width : 760px;--max-width-wo-sb : 840px;--s10-feat-ratio :45%;--s11-feat-ratio :45%;--login-popup-w : 350px;--menu-item-spacing : 13px;--m-icon-spacing : 3px;}.mobile-menu > li > a  { font-family:Open Sans;font-weight:700;text-transform:uppercase;font-size:20px;}.mobile-menu .sub-menu a, .logged-mobile-menu a { font-family:Open Sans;font-weight:300;font-size:18px;}.search-header:before { background-repeat : no-repeat;background-size : cover;background-attachment : scroll;background-position : center center;}[data-theme="dark"] .search-header:before { background-repeat : no-repeat;background-size : cover;background-attachment : scroll;background-position : center center;}.footer-has-bg { background-color : #88888812;}.copyright-menu a { font-size:20px; }#amp-mobile-version-switcher { display: none; }.search-icon-svg, .rbi-search.wnav-icon { font-size: 30px;}.header-social-list { font-size: 22px;}@media (max-width: 767px) { .search-icon-svg, .rbi-search.wnav-icon { font-size: 25.5px;}.header-social-list { font-size: 18.7px;} }
+/*# sourceURL=foxiz-main-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='foxiz-print-css' href='https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/css/print.css?ver=1790871403' media='all' />
+<link rel='stylesheet' id='foxiz-style-css' href='https://www.criterioonline.com/wp-content/themes/criterioonline/style.css?ver=2.7.7' media='all' />
+<script type="rocketlazyloadscript" id="jquery-core-js" data-rocket-src="https://www.criterioonline.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" defer></script>
+<script type="rocketlazyloadscript" id="jquery-migrate-js" data-rocket-src="https://www.criterioonline.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" defer></script>
+<script id="cf7-dropfiles-js-extra">
+var cf7_dropfiles = {"url_plugin":"https://www.criterioonline.com/wp-content/plugins/contact-form-7-drop-files/","ajax_url":"https://www.criterioonline.com/wp-admin/admin-ajax.php","text_content_limit":"Error: POST Content-Length limit","text_remove":"Remove","text_abort":"Abort","text_maximum":"You can only upload a maximum of"};
+//# sourceURL=cf7-dropfiles-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="cf7-dropfiles-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7-drop-files/frontend/js/dropfiles-cf7.js?ver=1789056502" defer></script>
+
+<!-- Fragmento de código de la etiqueta de Google (gtag.js) agregado por Site Kit -->
+<!-- Fragmento de código de Google Analytics agregado por Site Kit -->
+<script type="rocketlazyloadscript" id="google_gtagjs-js" data-rocket-src="https://www.googletagmanager.com/gtag/js?id=GT-KTTDT7K" async></script>
+<script type="rocketlazyloadscript" id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.criterioonline.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-KTTDT7K");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="preload" href="https://www.criterioonline.com/wp-content/themes/criterioonline/assets/fonts/icons.woff2?ver=2.5.0" as="font" type="font/woff2" crossorigin="anonymous"> <link rel="https://api.w.org/" href="https://www.criterioonline.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.criterioonline.com/wp-json/wp/v2/posts/302757" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.criterioonline.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.2" />
+<link rel='shortlink' href='https://www.criterioonline.com/?p=302757' />
+<meta name="generator" content="Site Kit by Google 1.188.0" /><meta name="onesignal-plugin" content="wordpress-3.9.4">
+  <script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/sdks/web/v16/OneSignalSDK.page.js?ver=1789056502" defer></script>
+  <script type="rocketlazyloadscript">
+          window.OneSignalDeferred = window.OneSignalDeferred || [];
+          OneSignalDeferred.push(async function(OneSignal) {
+            await OneSignal.init({
+              appId: "63240e48-cac4-41f5-811c-710360cafb86",
+              serviceWorkerOverrideForTypical: true,
+              path: "https://www.criterioonline.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/",
+              serviceWorkerParam: { scope: "\/wp-content\/plugins\/onesignal-free-web-push-notifications\/sdk_files\/push\/onesignal\/" },
+              serviceWorkerPath: "OneSignalSDKWorker.js",
+            });
+          });
+
+          // Unregister the legacy OneSignal service worker to prevent scope conflicts
+          if (navigator.serviceWorker) {
+            navigator.serviceWorker.getRegistrations().then((registrations) => {
+              // Iterate through all registered service workers
+              registrations.forEach((registration) => {
+                // Check the script URL to identify the specific service worker
+                if (registration.active && registration.active.scriptURL.includes('OneSignalSDKWorker.js.php')) {
+                  // Unregister the service worker
+                  registration.unregister().then((success) => {
+                    if (success) {
+                      console.log('OneSignalSW: Successfully unregistered:', registration.active.scriptURL);
+                    } else {
+                      console.log('OneSignalSW: Failed to unregister:', registration.active.scriptURL);
+                    }
+                  });
+                }
+              });
+            }).catch((error) => {
+              console.error('Error fetching service worker registrations:', error);
+            });
+        }
+        </script>
+<meta name="generator" content="Elementor 4.3.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.criterioonline.com/#website",
+    "url": "https://www.criterioonline.com/",
+    "name": "Criterio Online",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.criterioonline.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}</script>
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://www.criterioonline.com/wp-content/uploads/2021/11/cropped-logo-col-png-ok-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.criterioonline.com/wp-content/uploads/2021/11/cropped-logo-col-png-ok-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.criterioonline.com/wp-content/uploads/2021/11/cropped-logo-col-png-ok-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.criterioonline.com/wp-content/uploads/2021/11/cropped-logo-col-png-ok-270x270.png" />
+<script type="rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8915223716446523"
+     crossorigin="anonymous"></script><style id="wp-custom-css">
+.grecaptcha-badge { 
+visibility: hidden; 
+}
+</style>
+
+    <!-- START - Open Graph and Twitter Card Tags 3.5.2 -->
+     <!-- Facebook Open Graph -->
+      <meta property="og:locale" content="es_LA"/>
+      <meta property="og:site_name" content="Criterio Online"/>
+      <meta property="og:title" content="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS"/>
+      <meta property="og:url" content="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/"/>
+      <meta property="og:type" content="article"/>
+      <meta property="og:description" content="El Municipio de San Isidro prorrogó la suspensión del sistema de fotomultas por un plazo de hasta 180 días hábiles, mientras continúa el proceso de revisión integral de su funcionamiento, tecnología y marco normativo, con el objetivo de garantizar un esquema transparente y orientado a la seguridad v"/>
+      <meta property="og:image" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg"/>
+      <meta property="og:image:url" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg"/>
+      <meta property="og:image:secure_url" content="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg"/>
+      <meta property="og:image:width" content="800"/>
+  <meta property="og:image:height" content="403"/>
+  <meta property="article:published_time" content="2026-01-27T07:40:39-03:00"/>
+      <meta property="article:modified_time" content="2026-01-27T10:48:11-03:00" />
+      <meta property="og:updated_time" content="2026-01-27T10:48:11-03:00" />
+      <meta property="article:section" content="Política Economia"/>
+      <meta property="article:section" content="Portada"/>
+      <meta property="fb:admins" content="1625523198,1516967779"/>
+     <!-- Google+ / Schema.org -->
+     <!-- Twitter Cards -->
+      <meta name="twitter:title" content="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS"/>
+      <meta name="twitter:description" content="​"/>
+      <meta name="twitter:card" content="summary_large_image"/>
+     <!-- SEO -->
+      <link rel="canonical" href="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/"/>
+     <!-- Misc. tags -->
+     <!-- is_singular -->
+    <!-- END - Open Graph and Twitter Card Tags 3.5.2 -->
+        
+    <noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+<body data-rsssl=1 class="wp-singular post-template-default single single-post postid-302757 single-format-standard wp-embed-responsive wp-theme-criterioonline personalized-all elementor-default elementor-kit-261470 menu-ani-1 hover-ani-1 btn-ani-1 btn-transform-1 is-rm-1 lmeta-dot loader-4 dark-sw-1 mtax-1 toc-smooth is-hd-1 is-standard-1 is-backtop none-m-backtop  is-mstick is-smart-sticky" data-theme="default">
+<div class="site-outer">
+			<header id="site-header" class="header-wrap rb-section header-set-1 header-1 header-wrapper style-shadow">
+					<div class="reading-indicator"><span id="reading-progress"></span></div>
+					<div id="navbar-outer" class="navbar-outer">
+				<div id="sticky-holder" class="sticky-holder">
+					<div class="navbar-wrap">
+						<div class="rb-container edge-padding">
+							<div class="navbar-inner">
+								<div class="navbar-left">
+											<div class="logo-wrap is-image-logo site-branding">
+			<a href="https://www.criterioonline.com/" class="logo" title="Criterio Online">
+				<img fetchpriority="high" class="logo-default" data-mode="default" height="228" width="228" src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png" alt="Criterio Online" decoding="async" loading="eager" fetchpriority="high"><img fetchpriority="high" class="logo-dark" data-mode="dark" height="228" width="228" src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png" alt="Criterio Online" decoding="async" loading="eager" fetchpriority="high">			</a>
+		</div>
+				<nav id="site-navigation" class="main-menu-wrap" aria-label="main menu"><ul id="menu-menu-principal" class="main-menu rb-menu large-menu" itemscope itemtype="https://www.schema.org/SiteNavigationElement"><li id="menu-item-135529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135529"><a href="https://criterioonline.com/"><span>Últimas Noticias</span></a></li>
+<li id="menu-item-135531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135531"><a href="#"><span>Local</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-135532" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135532"><a href="https://www.criterioonline.com/dolores/"><span>Dolores</span></a></li>
+	<li id="menu-item-135498" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135498"><a href="https://www.criterioonline.com/dolores/destacado/"><span>Destacado</span></a></li>
+	<li id="menu-item-135516" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135516"><a href="https://www.criterioonline.com/dolores/sociales/"><span>Sociales</span></a></li>
+	<li id="menu-item-135494" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135494"><a href="https://www.criterioonline.com/dolores/avisos/"><span>Avisos</span></a></li>
+	<li id="menu-item-135511" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135511"><a href="https://www.criterioonline.com/necrologicas/"><span>Necrológicas</span></a></li>
+</ul>
+</li>
+<li id="menu-item-135523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135523"><a href="#"><span>Ciudades</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-135499" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135499"><a href="https://www.criterioonline.com/dolores/"><span>Dolores</span></a></li>
+	<li id="menu-item-135495" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135495"><a href="https://www.criterioonline.com/castelli/"><span>Castelli</span></a></li>
+	<li id="menu-item-135519" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135519"><a href="https://www.criterioonline.com/tordillo/"><span>Tordillo</span></a></li>
+	<li id="menu-item-135508" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135508"><a href="https://www.criterioonline.com/la-costa/"><span>La Costa</span></a></li>
+	<li id="menu-item-135509" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135509"><a href="https://www.criterioonline.com/maipu/"><span>Maipu</span></a></li>
+	<li id="menu-item-135503" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135503"><a href="https://www.criterioonline.com/guido/"><span>General Guido</span></a></li>
+	<li id="menu-item-135504" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135504"><a href="https://www.criterioonline.com/lavalle/"><span>General Lavalle</span></a></li>
+	<li id="menu-item-135510" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135510"><a href="https://www.criterioonline.com/mar-del-plata/"><span>Mar del Plata</span></a></li>
+	<li id="menu-item-137878" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-137878"><a href="https://www.criterioonline.com/lezama/"><span>Lezama</span></a></li>
+	<li id="menu-item-263725" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263725"><a href="https://www.criterioonline.com/ayacucho/"><span>Ayacucho</span></a></li>
+	<li id="menu-item-135515" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135515"><a href="https://www.criterioonline.com/regional/"><span>Regional</span></a></li>
+</ul>
+</li>
+<li id="menu-item-135512" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-135512"><a href="https://www.criterioonline.com/politica-economia/"><span>Política Economia</span></a></li>
+<li id="menu-item-135517" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135517"><a href="https://www.criterioonline.com/sociedad/"><span>Sociedad</span></a></li>
+<li id="menu-item-135530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135530"><a title="Más secciones" href="#"><span>☰</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-135497" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135497"><a href="https://www.criterioonline.com/deportes/"><span>Deportes</span></a></li>
+	<li id="menu-item-135500" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135500"><a href="https://www.criterioonline.com/espectaculos/"><span>Espectaculos</span></a></li>
+	<li id="menu-item-135496" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135496"><a href="https://www.criterioonline.com/ciencia-salud/"><span>Ciencia &#8211; Salud</span></a></li>
+	<li id="menu-item-135502" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135502"><a href="https://www.criterioonline.com/gastronomia/"><span>Gastronomía</span></a></li>
+	<li id="menu-item-135507" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135507"><a href="https://www.criterioonline.com/internacionales/"><span>Internacionales</span></a></li>
+	<li id="menu-item-296124" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-296124"><a href="https://www.criterioonline.com/interes-general/"><span>Interés General</span></a></li>
+	<li id="menu-item-135518" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135518"><a href="https://www.criterioonline.com/tecnologia/"><span>Tecnología</span></a></li>
+	<li id="menu-item-263829" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263829"><a href="https://www.criterioonline.com/curiosidades/"><span>Curiosidades</span></a></li>
+	<li id="menu-item-135514" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135514"><a href="https://www.criterioonline.com/reflexiones/"><span>Reflexiones</span></a></li>
+	<li id="menu-item-265866" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-265866"><a href="https://www.criterioonline.com/encuestas/"><span>Encuestas</span></a></li>
+	<li id="menu-item-234175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-234175"><a href="https://www.criterioonline.com/politica-de-privacidad/"><span>Política de Privacidad</span></a></li>
+	<li id="menu-item-135533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135533"><a href="https://www.criterioonline.com/enviar-noticia/"><span>ENVÍA TU NOTICIA</span></a></li>
+	<li id="menu-item-135534" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135534"><a href="https://www.criterioonline.com/contacto-2/"><span>Contacto</span></a></li>
+</ul>
+</li>
+</ul></nav>
+										</div>
+								<div class="navbar-right">
+												<div class="header-social-list wnav-holder"><a class="social-link-facebook" aria-label="Facebook" data-title="Facebook" href="https://www.facebook.com/DiarioCriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-facebook" aria-hidden="true"></i></a><a class="social-link-twitter" aria-label="X" data-title="X" href="https://x.com/CriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-twitter" aria-hidden="true"></i></a><a class="social-link-youtube" aria-label="YouTube" data-title="YouTube" href="https://www.youtube.com/criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-youtube" aria-hidden="true"></i></a><a class="social-link-google-news" aria-label="Google News" data-title="Google News" href="https://news.google.com/publications/CAAqLggKIihDQklTR0FnTWFoUUtFbU55YVhSbGNtbHZiMjVzYVc1bExtTnZiU2dBUAE?ceid=AR:es-419&#038;oc=3" target="_blank" rel="noopener nofollow"><i class="rbi rbi-gnews" aria-hidden="true"></i></a><a class="social-link-instagram" aria-label="Instagram" data-title="Instagram" href="https://www.instagram.com/criterioonline/" target="_blank" rel="noopener nofollow"><i class="rbi rbi-instagram" aria-hidden="true"></i></a><a class="social-link-threads" aria-label="Threads" data-title="Threads" href="https://www.threads.com/@criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-threads" aria-hidden="true"></i></a></div>
+					<div class="wnav-holder header-dropdown-outer">
+			<div class="dropdown-trigger notification-icon notification-trigger">
+			<span class="notification-icon-inner" data-title="Notificationes">
+				<span class="notification-icon-holder">
+									<i class="rbi rbi-notification wnav-icon" aria-hidden="true"></i>
+								<span class="notification-info"></span>
+				</span>
+			</span>
+			</div>
+			<div class="header-dropdown notification-dropdown">
+				<div class="notification-popup">
+					<div class="notification-header">
+						<span class="h4">Notificationes</span>
+													<a class="notification-url meta-text" href="https://www.criterioonline.com/destacado/">Mostrar más								<i class="rbi rbi-cright" aria-hidden="true"></i></a>
+											</div>
+					<div class="notification-content">
+						<div class="scroll-holder">
+							<div class="rb-notification ecat-l-dot is-feat-right" data-interval="15"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div class="wnav-holder w-header-search header-dropdown-outer">
+			<a href="#" role="button" data-title="Buscar" class="icon-holder header-element search-btn search-trigger" aria-label="Search">
+				<i class="rbi rbi-search wnav-icon" aria-hidden="true"></i>							</a>
+							<div class="header-dropdown">
+					<div class="header-search-form is-icon-layout">
+						<form method="get" action="https://www.criterioonline.com/" class="rb-search-form"  data-search="post" data-limit="0" data-follow="0" data-tax="category" data-dsource="0"  data-ptype=""><div class="search-form-inner"><span class="search-icon"><i class="rbi rbi-search" aria-hidden="true"></i></span><span class="search-text"><input type="text" class="field" placeholder="Buscar Titulares, Noticias..." value="" name="s"/></span><span class="rb-search-submit"><input type="submit" value="Buscar"/><i class="rbi rbi-cright" aria-hidden="true"></i></span></div></form>					</div>
+				</div>
+					</div>
+				<div class="wnav-holder font-resizer">
+			<a href="#" role="button" class="font-resizer-trigger" data-title="Font Resizer"><span class="screen-reader-text">Font Resizer</span><strong>Aa</strong></a>
+		</div>
+										</div>
+							</div>
+						</div>
+					</div>
+							<div id="header-mobile" class="header-mobile mh-style-shadow">
+			<div class="header-mobile-wrap">
+						<div class="mbnav mbnav-center edge-padding">
+			<div class="navbar-left">
+						<div class="mobile-toggle-wrap">
+							<a href="#" class="mobile-menu-trigger" role="button" rel="nofollow" aria-label="Open mobile menu">		<span class="burger-icon"><span></span><span></span><span></span></span>
+		</a>
+					</div>
+				<div class="wnav-holder font-resizer">
+			<a href="#" role="button" class="font-resizer-trigger" data-title="Font Resizer"><span class="screen-reader-text">Font Resizer</span><strong>Aa</strong></a>
+		</div>
+					</div>
+			<div class="navbar-center">
+						<div class="mobile-logo-wrap is-image-logo site-branding">
+			<a href="https://www.criterioonline.com/" title="Criterio Online">
+				<img fetchpriority="high" class="logo-default" data-mode="default" height="512" width="512" src="https://www.criterioonline.com/wp-content/uploads/2021/11/cropped-logo-col-png-ok.png" alt="Criterio Online" decoding="async" loading="eager" fetchpriority="high"><img fetchpriority="high" class="logo-dark" data-mode="dark" height="228" width="228" src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png" alt="Criterio Online" decoding="async" loading="eager" fetchpriority="high">			</a>
+		</div>
+					</div>
+			<div class="navbar-right">
+							<a role="button" href="#" class="mobile-menu-trigger mobile-search-icon" aria-label="search"><i class="rbi rbi-search wnav-icon" aria-hidden="true"></i></a>
+						</div>
+		</div>
+					</div>
+					<div class="mobile-collapse">
+			<div class="collapse-holder">
+				<div class="collapse-inner">
+											<div class="mobile-search-form edge-padding">		<div class="header-search-form is-form-layout">
+							<span class="h5">Buscar</span>
+				<form method="get" action="https://www.criterioonline.com/" class="rb-search-form"  data-search="post" data-limit="0" data-follow="0" data-tax="category" data-dsource="0"  data-ptype=""><div class="search-form-inner"><span class="search-icon"><i class="rbi rbi-search" aria-hidden="true"></i></span><span class="search-text"><input type="text" class="field" placeholder="Buscar Titulares, Noticias..." value="" name="s"/></span><span class="rb-search-submit"><input type="submit" value="Buscar"/><i class="rbi rbi-cright" aria-hidden="true"></i></span></div></form>		</div>
+		</div>
+										<nav class="mobile-menu-wrap edge-padding">
+						<ul id="mobile-menu" class="mobile-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135529"><a href="https://criterioonline.com/"><span>Últimas Noticias</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135531"><a href="#"><span>Local</span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135532"><a href="https://www.criterioonline.com/dolores/"><span>Dolores</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135498"><a href="https://www.criterioonline.com/dolores/destacado/"><span>Destacado</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135516"><a href="https://www.criterioonline.com/dolores/sociales/"><span>Sociales</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135494"><a href="https://www.criterioonline.com/dolores/avisos/"><span>Avisos</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135511"><a href="https://www.criterioonline.com/necrologicas/"><span>Necrológicas</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135523"><a href="#"><span>Ciudades</span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135499"><a href="https://www.criterioonline.com/dolores/"><span>Dolores</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135495"><a href="https://www.criterioonline.com/castelli/"><span>Castelli</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135519"><a href="https://www.criterioonline.com/tordillo/"><span>Tordillo</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135508"><a href="https://www.criterioonline.com/la-costa/"><span>La Costa</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135509"><a href="https://www.criterioonline.com/maipu/"><span>Maipu</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135503"><a href="https://www.criterioonline.com/guido/"><span>General Guido</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135504"><a href="https://www.criterioonline.com/lavalle/"><span>General Lavalle</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135510"><a href="https://www.criterioonline.com/mar-del-plata/"><span>Mar del Plata</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-137878"><a href="https://www.criterioonline.com/lezama/"><span>Lezama</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263725"><a href="https://www.criterioonline.com/ayacucho/"><span>Ayacucho</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135515"><a href="https://www.criterioonline.com/regional/"><span>Regional</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-135512"><a href="https://www.criterioonline.com/politica-economia/"><span>Política Economia</span></a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135517"><a href="https://www.criterioonline.com/sociedad/"><span>Sociedad</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-135530"><a href="#" title="Más secciones"><span>☰</span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135497"><a href="https://www.criterioonline.com/deportes/"><span>Deportes</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135500"><a href="https://www.criterioonline.com/espectaculos/"><span>Espectaculos</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135496"><a href="https://www.criterioonline.com/ciencia-salud/"><span>Ciencia &#8211; Salud</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135502"><a href="https://www.criterioonline.com/gastronomia/"><span>Gastronomía</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135507"><a href="https://www.criterioonline.com/internacionales/"><span>Internacionales</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-296124"><a href="https://www.criterioonline.com/interes-general/"><span>Interés General</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135518"><a href="https://www.criterioonline.com/tecnologia/"><span>Tecnología</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-263829"><a href="https://www.criterioonline.com/curiosidades/"><span>Curiosidades</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-135514"><a href="https://www.criterioonline.com/reflexiones/"><span>Reflexiones</span></a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-265866"><a href="https://www.criterioonline.com/encuestas/"><span>Encuestas</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-234175"><a rel="privacy-policy" href="https://www.criterioonline.com/politica-de-privacidad/"><span>Política de Privacidad</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135533"><a href="https://www.criterioonline.com/enviar-noticia/"><span>ENVÍA TU NOTICIA</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135534"><a href="https://www.criterioonline.com/contacto-2/"><span>Contacto</span></a></li>
+</ul>
+</li>
+</ul>					</nav>
+										<div class="collapse-sections">
+													<div class="mobile-socials">
+								<span class="mobile-social-title h6">Síganos</span>
+								<a class="social-link-facebook" aria-label="Facebook" data-title="Facebook" href="https://www.facebook.com/DiarioCriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-facebook" aria-hidden="true"></i></a><a class="social-link-twitter" aria-label="X" data-title="X" href="https://x.com/CriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-twitter" aria-hidden="true"></i></a><a class="social-link-youtube" aria-label="YouTube" data-title="YouTube" href="https://www.youtube.com/criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-youtube" aria-hidden="true"></i></a><a class="social-link-google-news" aria-label="Google News" data-title="Google News" href="https://news.google.com/publications/CAAqLggKIihDQklTR0FnTWFoUUtFbU55YVhSbGNtbHZiMjVzYVc1bExtTnZiU2dBUAE?ceid=AR:es-419&#038;oc=3" target="_blank" rel="noopener nofollow"><i class="rbi rbi-gnews" aria-hidden="true"></i></a><a class="social-link-instagram" aria-label="Instagram" data-title="Instagram" href="https://www.instagram.com/criterioonline/" target="_blank" rel="noopener nofollow"><i class="rbi rbi-instagram" aria-hidden="true"></i></a><a class="social-link-threads" aria-label="Threads" data-title="Threads" href="https://www.threads.com/@criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-threads" aria-hidden="true"></i></a>							</div>
+											</div>
+									</div>
+			</div>
+		</div>
+				</div>
+						</div>
+			</div>
+					</header>
+			<main class="site-wrap">
+		<div class="single-standard-1 is-sidebar-right ">
+			<div class="rb-s-container edge-padding">
+				<article id="post-302757" class="post-302757 post type-post status-publish format-standard has-post-thumbnail category-politica-economia category-portada">				<header class="single-header">
+					<div class="s-cats ecat-border custom-size"><div class="p-categories"><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div></div>		<h1 class="s-title fw-headline">SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS</h1>
+				<div class="single-meta yes-0 is-meta-author-text">
+							<div class="smeta-in">
+										<div class="smeta-sec">
+												<div class="p-meta">
+							<div class="meta-inner is-meta">	<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-01-27T07:40:39-03:00">Publicado 27 enero, 2026</time>
+		</div>
+		</div>
+						</div>
+					</div>
+				</div>
+								<div class="smeta-extra">
+						<div class="t-shared-sec tooltips-n is-color">
+			<div class="t-shared-header is-meta">
+				<i class="rbi rbi-share" aria-hidden="true"></i><span class="share-label">Compartir</span>
+			</div>
+			<div class="effect-fadeout">			<a class="share-action share-trigger icon-facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" data-title="Facebook" rel="nofollow noopener"><i class="rbi rbi-facebook" aria-hidden="true"></i>
+							</a>
+						<a class="share-action share-trigger icon-twitter" aria-label="Share on X" href="https://twitter.com/intent/tweet?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS&amp;url=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F&amp;via=CriterioOnline" data-title="X" rel="nofollow noopener">
+				<i class="rbi rbi-twitter" aria-hidden="true"></i></a>
+						<a class="share-action icon-whatsapp is-web" aria-label="Share on Whatsapp" href="https://web.whatsapp.com/send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+							</a>
+			<a class="share-action icon-whatsapp is-mobile" aria-label="Share on Whatsapp" href="whatsapp://send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+							</a>
+						<a class="share-action icon-copy copy-trigger" aria-label="Copy Link" href="#" rel="nofollow" role="button" data-copied="Copiado!" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-copy="Copiar Link"><i class="rbi rbi-link-o" aria-hidden="true"></i>
+							</a>
+						<a class="share-action native-share-trigger more-icon" aria-label="More" href="#" rel="nofollow" role="button" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-ptitle="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" data-title="Más" ><i class="rbi rbi-more" aria-hidden="true"></i></a>
+			</div>
+		</div>
+							</div>
+					</div>
+						</header>
+				<div class="grid-container">
+					<div class="s-ct">
+												<div class="s-feat-outer">
+									<div class="s-feat">			<div class="featured-lightbox-trigger" data-source="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg" data-caption="" data-attribution="">
+				<img fetchpriority="high" width="800" height="403" src="https://www.criterioonline.com/wp-content/uploads/2026/01/controles-reansito-c.jpg" class="attachment-foxiz_crop_o1 size-foxiz_crop_o1 wp-post-image" alt="" loading="eager" fetchpriority="high" decoding="async" />			</div>
+			</div>
+								</div>
+								<div class="s-ct-wrap has-lsl">
+			<div class="s-ct-inner">
+						<div class="l-shared-sec-outer show-mobile">
+			<div class="l-shared-sec">
+				<div class="l-shared-header meta-text">
+					<i class="rbi rbi-share" aria-hidden="true"></i><span class="share-label">Compartir</span>
+				</div>
+				<div class="l-shared-items effect-fadeout is-color">
+								<a class="share-action share-trigger icon-facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" data-title="Facebook" data-gravity=w  rel="nofollow noopener"><i class="rbi rbi-facebook" aria-hidden="true"></i>
+							</a>
+						<a class="share-action share-trigger icon-twitter" aria-label="Share on X" href="https://twitter.com/intent/tweet?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS&amp;url=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F&amp;via=CriterioOnline" data-title="X" data-gravity=w  rel="nofollow noopener">
+				<i class="rbi rbi-twitter" aria-hidden="true"></i></a>
+						<a class="share-action icon-whatsapp is-web" aria-label="Share on Whatsapp" href="https://web.whatsapp.com/send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" data-gravity=w  rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+							</a>
+			<a class="share-action icon-whatsapp is-mobile" aria-label="Share on Whatsapp" href="whatsapp://send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" data-gravity=w  rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+							</a>
+						<a class="share-action icon-copy copy-trigger" aria-label="Copy Link" href="#" rel="nofollow" role="button" data-copied="Copiado!" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-copy="Copiar Link" data-gravity=w ><i class="rbi rbi-link-o" aria-hidden="true"></i>
+							</a>
+						<a class="share-action native-share-trigger more-icon" aria-label="More" href="#" rel="nofollow" role="button" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-ptitle="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" data-title="Más"  data-gravity=w ><i class="rbi rbi-more" aria-hidden="true"></i></a>
+							</div>
+			</div>
+		</div>
+						<div class="e-ct-outer">
+								<div class="entry-top">
+				<div id="media_image-7" class="widget entry-widget clearfix widget_media_image"><img width="625" height="521" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20625%20521'%3E%3C/svg%3E" class="image wp-image-308241  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/09/3-banner-300x250px-1.jpg" /><noscript><img width="625" height="521" src="https://www.criterioonline.com/wp-content/uploads/2026/09/3-banner-300x250px-1.jpg" class="image wp-image-308241  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" /></noscript></div>			</div>
+					<div class="entry-content rbct clearfix is-highlight-shares"><p style="text-align: justify;">El Municipio de San Isidro prorrogó la suspensión del sistema de fotomultas por un plazo de hasta 180 días hábiles, mientras continúa el proceso de revisión integral de su funcionamiento, tecnología y marco normativo, con el objetivo de garantizar un esquema transparente y orientado a la seguridad vial.</p>
+<p style="text-align: justify;">La medida fue comunicada por el intendente Ramón Lanús a través de una carta dirigida a los vecinos, en la que explicó que la decisión de suspender el sistema, tomada originalmente en abril de 2025, respondió a la necesidad de analizar en profundidad los convenios vigentes y el modo en que se aplicaban las fotomultas en el distrito.</p>
+<p style="text-align: justify;">
+Según detalló el jefe comunal, la revisión sigue en marcha y abarca distintos aspectos del sistema: la tecnología utilizada, la ubicación de las cámaras, los circuitos de gestión y cobro de infracciones, y la normativa que respalda todo el proceso. Además, el Municipio analiza experiencias de otras ciudades con el objetivo de incorporar buenas prácticas y adaptarlas a la realidad local.</p>
+<p style="text-align: justify;">En el mensaje, Lanús remarcó que la seguridad vial debe estar enfocada en cuidar a las personas y ordenar el tránsito, y no en un fin recaudatorio ni en beneficiar a terceros. En ese sentido, señaló que las fotomultas pueden ser una herramienta válida cuando se aplican de manera adecuada y en los lugares donde efectivamente contribuyen a prevenir accidentes.</p>
+<p style="text-align: justify;">Mientras dure la suspensión del sistema, el Municipio continúa reforzando las políticas de seguridad vial en todo San Isidro mediante operativos de tránsito, la incorporación de nueva señalización y reductores de velocidad, controles más exigentes para la obtención de licencias de conducir y acciones de educación vial en escuelas, además de capacitaciones para conductores.</p>
+<p style="text-align: justify;">Desde el gobierno local indicaron que el objetivo final es implementar un sistema claro, eficaz y transparente, que mejore la convivencia vial y brinde mayor seguridad a vecinos y vecinas del distrito.</p>
+<p>&nbsp;</p>
+</div>
+					<div class="entry-bottom">
+				<div id="media_image-8" class="widget entry-widget clearfix widget_media_image"><img width="625" height="1250" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20625%201250'%3E%3C/svg%3E" class="image wp-image-308242  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/09/3-banner-web-300x600px.jpg" /><noscript><img width="625" height="1250" src="https://www.criterioonline.com/wp-content/uploads/2026/09/3-banner-web-300x600px.jpg" class="image wp-image-308242  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" /></noscript></div>			</div>
+							</div>
+			</div>
+					<div class="e-shared-sec entry-sec">
+			<div class="e-shared-header h4">
+				<i class="rbi rbi-share" aria-hidden="true"></i><span>Compartir este artículo</span>
+			</div>
+			<div class="rbbsl tooltips-n effect-fadeout is-bg">
+							<a class="share-action share-trigger icon-facebook" aria-label="Share on Facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" data-title="Facebook" rel="nofollow noopener"><i class="rbi rbi-facebook" aria-hidden="true"></i>
+			<span>Facebook</span>				</a>
+						<a class="share-action share-trigger icon-twitter" aria-label="Share on X" href="https://twitter.com/intent/tweet?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS&amp;url=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F&amp;via=CriterioOnline" data-title="X" rel="nofollow noopener">
+				<i class="rbi rbi-twitter" aria-hidden="true"></i></a>
+						<a class="share-action icon-whatsapp is-web" aria-label="Share on Whatsapp" href="https://web.whatsapp.com/send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+			<span>WhatsApp</span>				</a>
+			<a class="share-action icon-whatsapp is-mobile" aria-label="Share on Whatsapp" href="whatsapp://send?text=SAN+ISIDRO%3A+EL+MUNICIPIO+PRORROG%C3%93+LA+SUSPENSI%C3%93N+DEL+SISTEMA+DE+FOTOMULTAS &#9758; https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas%2F" target="_blank" data-title="WhatsApp" rel="nofollow noopener"><i class="rbi rbi-whatsapp" aria-hidden="true"></i>
+			<span>WhatsApp</span>				</a>
+						<a class="share-action icon-copy copy-trigger" aria-label="Copy Link" href="#" rel="nofollow" role="button" data-copied="Copiado!" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-copy="Copiar Link"><i class="rbi rbi-link-o" aria-hidden="true"></i>
+			<span>Copiar Link</span>				</a>
+						<a class="share-action native-share-trigger more-icon" aria-label="More" href="#" rel="nofollow" role="button" data-link="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas/" data-ptitle="SAN ISIDRO: EL MUNICIPIO PRORROGÓ LA SUSPENSIÓN DEL SISTEMA DE FOTOMULTAS" data-title="Más" ><i class="rbi rbi-more" aria-hidden="true"></i></a>
+						</div>
+		</div>
+				</div>
+							</div>
+								<div class="sidebar-wrap single-sidebar">
+				<div class="sidebar-inner clearfix">
+					<div id="search-4" class="widget rb-section w-sidebar clearfix widget_search"><form role="search" method="get" class="search-form wp-block-search" action="https://www.criterioonline.com/">
+	<div class="search-form-icon">
+	<i class="rbi rbi-search" aria-hidden="true"></i>	</div>
+	<label class="search-form-input">
+		<span class="screen-reader-text">Buscar por:</span>
+		<input type="search" class="search-field"
+				placeholder="Buscar Titulares, Noticias..."
+				value=""
+				name="s">
+			</label>
+	<div class="search-form-submit">
+		<input type="submit" value="Buscar">
+	</div>
+</form>
+</div><div id="media_image-2" class="widget rb-section w-sidebar clearfix widget_media_image"><a href="https://www.edeaweb.com.ar/robo-de-energia/"><img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="image wp-image-305564  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/05/EDEA_BANNER_FRAUDE_MEDIOS_300X300.gif" /><noscript><img width="300" height="300" src="https://www.criterioonline.com/wp-content/uploads/2026/05/EDEA_BANNER_FRAUDE_MEDIOS_300X300.gif" class="image wp-image-305564  attachment-full size-full" alt="" style="max-width: 100%; height: auto;" decoding="async" /></noscript></a></div><div id="media_image-4" class="widget rb-section w-sidebar clearfix widget_media_image"><figure style="width: 300px" class="wp-caption alignnone"><a href="https://ifex.org/es/"><img width="300" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20150'%3E%3C/svg%3E" class="image wp-image-296980  attachment-full size-full" alt="ifex" style="max-width: 100%; height: auto;" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2025/06/ifex-co.png" /><noscript><img width="300" height="150" src="https://www.criterioonline.com/wp-content/uploads/2025/06/ifex-co.png" class="image wp-image-296980  attachment-full size-full" alt="ifex" style="max-width: 100%; height: auto;" decoding="async" loading="lazy" /></noscript></a><figcaption class="wp-caption-text">Promoviendo y defendiendo la libertad de expresión como un derecho humano fundamental. </figcaption></figure></div><div id="media_image-6" class="widget rb-section w-sidebar clearfix widget_media_image"><a href="https://estudioburlando.com/"><img width="343" height="400" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20343%20400'%3E%3C/svg%3E" class="image wp-image-299875  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2025/09/Banner-estudio-burlando-10_page-0001-343x400.jpg" /><noscript><img width="343" height="400" src="https://www.criterioonline.com/wp-content/uploads/2025/09/Banner-estudio-burlando-10_page-0001-343x400.jpg" class="image wp-image-299875  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" decoding="async" loading="lazy" /></noscript></a></div><div id="custom_html-2" class="widget_text widget rb-section w-sidebar clearfix widget_custom_html"><div class="block-h widget-heading heading-layout-1"><div class="heading-inner"><h4 class="heading-title"><span>Farmacia de Turno en Dolores</span></h4></div></div><div class="textwidget custom-html-widget"><iframe src="https://criterioonline.com/ft/?mode=widget&theme=light" width="100%" height="140" scrolling="no" style="border:1px solid #e2e8f0; border-radius: 16px; overflow:hidden;" title="Farmacia de Turno - Dolores"></iframe></div></div><div id="media_image-3" class="widget rb-section w-sidebar clearfix widget_media_image"><figure style="width: 300px" class="wp-caption alignnone"><a href="https://www.facebook.com/castelli.crece"><img class="image " src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20250'%3E%3C/svg%3E" alt="Castelli Ciudad - Intendente Fransico Echarren" width="300" height="250" decoding="async" data-lazy-src="https://criterioonline.com/banners/castelli.png" /><noscript><img class="image " src="https://criterioonline.com/banners/castelli.png" alt="Castelli Ciudad - Intendente Fransico Echarren" width="300" height="250" decoding="async" loading="lazy" /></noscript></a><figcaption class="wp-caption-text">Castelli Ciudad - Intendente Fransico Echarren</figcaption></figure></div>				</div>
+			</div>
+							</div>
+				</article>			<div class="sfoter-sec single-related">
+				<div class="block-h heading-layout-16"><div class="heading-inner"><h3 class="heading-title"><span> También podría interesarte</span></h3></div></div><div id="uuid_r302757" class="block-wrap block-small block-grid block-grid-small-1 rb-columns rb-col-4 is-gap-10 ecat-bg-1 meta-s-default"><div class="block-inner">		<div class="p-wrap p-grid p-grid-small-1" data-pid="308934">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/trabajar-juntos-por-la-provincia/" title="¡TRABAJAR JUNTOS POR LA PROVINCIA!">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/Echarren-Achaval-Gaston-GranadosJuan-Pablo-Garcia-3-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/Echarren-Achaval-Gaston-GranadosJuan-Pablo-Garcia-3-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-14" href="https://www.criterioonline.com/castelli/" rel="category">Castelli</a><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/trabajar-juntos-por-la-provincia/" rel="bookmark">
+		¡TRABAJAR JUNTOS POR LA PROVINCIA!		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T21:27:55-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308932">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/bullrich-llamo-a-construir-reglas-estables-y-advirtio-que-la-politica-debe-ser-evaluada-por-sus-acciones/" title="Bullrich llamó a construir reglas estables y advirtió que la política debe ser evaluada por sus acciones">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/Bullrich-P-Idea-26-mdp-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/Bullrich-P-Idea-26-mdp-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/bullrich-llamo-a-construir-reglas-estables-y-advirtio-que-la-politica-debe-ser-evaluada-por-sus-acciones/" rel="bookmark">
+		Bullrich llamó a construir reglas estables y advirtió que la política debe ser evaluada por sus acciones		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T21:15:16-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308908">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/christa-pike-la-mujer-condenada-a-muerte-en-tennessee-sobrevivio-a-dos-inyecciones-letales/" title="Christa Pike, la mujer condenada a muerte en Tennessee, sobrevivió a dos inyecciones letales">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/Pike-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/Pike-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-12" href="https://www.criterioonline.com/internacionales/" rel="category">Internacionales</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/christa-pike-la-mujer-condenada-a-muerte-en-tennessee-sobrevivio-a-dos-inyecciones-letales/" rel="bookmark">
+		Christa Pike, la mujer condenada a muerte en Tennessee, sobrevivió a dos inyecciones letales		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T12:48:04-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308907">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/gustavo-pulti-reclamamos-a-milei-un-cambio-drastico-en-la-politica-turistica/" title="Gustavo Pulti: “Reclamamos a Milei un cambio drástico en la política turística”">
+			<img width="330" height="173" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20173'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2018/07/PULTI-G.jpg" /><noscript><img width="330" height="173" src="https://www.criterioonline.com/wp-content/uploads/2018/07/PULTI-G.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-49" href="https://www.criterioonline.com/mar-del-plata/" rel="category">Mar del Plata</a><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/gustavo-pulti-reclamamos-a-milei-un-cambio-drastico-en-la-politica-turistica/" rel="bookmark">
+		Gustavo Pulti: “Reclamamos a Milei un cambio drástico en la política turística”		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T12:40:53-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308923">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/flores-tradicion-y-musica-tres-fiestas-para-disfrutar-en-distintos-puntos-de-la-provincia/" title="FLORES, TRADICIÓN Y MÚSICA:  FIESTAS PARA DISFRUTAR EN DISTINTOS PUNTOS DE LA PROVINCIA">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/BRAGADO-FIESTA-PROVINCIAL-DEL-CABALLO-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/BRAGADO-FIESTA-PROVINCIAL-DEL-CABALLO-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a><a class="p-category category-id-6" href="https://www.criterioonline.com/sociedad/" rel="category">Sociedad</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/flores-tradicion-y-musica-tres-fiestas-para-disfrutar-en-distintos-puntos-de-la-provincia/" rel="bookmark">
+		FLORES, TRADICIÓN Y MÚSICA:  FIESTAS PARA DISFRUTAR EN DISTINTOS PUNTOS DE LA PROVINCIA		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T10:56:15-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308937">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/la-corte-salio-a-aclarar-su-fallo-y-afirmo-que-la-controversia-sobre-la-ley-de-tierras-todavia-no-ha-sido-resuelta/" title="La Corte salió a aclarar su fallo y afirmó que la controversia sobre la Ley de Tierras todavía &#8220;no ha sido resuelta&#8221;">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/09/Corte-Suprema-de-Justicia-2026-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/09/Corte-Suprema-de-Justicia-2026-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/la-corte-salio-a-aclarar-su-fallo-y-afirmo-que-la-controversia-sobre-la-ley-de-tierras-todavia-no-ha-sido-resuelta/" rel="bookmark">
+		La Corte salió a aclarar su fallo y afirmó que la controversia sobre la Ley de Tierras todavía &#8220;no ha sido resuelta&#8221;		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T10:30:11-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308920">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/con-alto-acatamiento-los-docentes-pararon-contra-la-violencia-escolar/" title="Con alto acatamiento, los docentes pararon contra la violencia escolar">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2017/03/aula865.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2017/03/aula865.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/con-alto-acatamiento-los-docentes-pararon-contra-la-violencia-escolar/" rel="bookmark">
+		Con alto acatamiento, los docentes pararon contra la violencia escolar		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T09:42:07-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308914">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/manana-210-comienza-el-motoasado-en-madariaga-con-el-gran-show-de-la-bersuit-vergarabat/" title="Mañana 2|10 comienza el Motoasado en Madariaga con el gran show de La Bersuit Vergarabat">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/motoasado.--330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/motoasado.--330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a><a class="p-category category-id-6" href="https://www.criterioonline.com/sociedad/" rel="category">Sociedad</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/manana-210-comienza-el-motoasado-en-madariaga-con-el-gran-show-de-la-bersuit-vergarabat/" rel="bookmark">
+		Mañana 2|10 comienza el Motoasado en Madariaga con el gran show de La Bersuit Vergarabat		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T06:40:23-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308918">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/10/general-madariaga-se-prepara-para-una-nueva-edicion-del-concurso-de-asadores/" title="General Madariaga se prepara para una nueva edición del Concurso de Asadores">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/10/asadores-MADARIAGA5-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/10/asadores-MADARIAGA5-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a><a class="p-category category-id-6" href="https://www.criterioonline.com/sociedad/" rel="category">Sociedad</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/10/general-madariaga-se-prepara-para-una-nueva-edicion-del-concurso-de-asadores/" rel="bookmark">
+		General Madariaga se prepara para una nueva edición del Concurso de Asadores		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-10-01T06:07:24-03:00">1 octubre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308898">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/09/hospitales-moviles-banos-quimicos-y-policias-como-sera-el-operativo-de-peregrinacion-a-lujan/" title="Hospitales móviles, baños químicos y policías: cómo será el operativo de peregrinación a Luján">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/09/peregrinacion-L54-330x220.png" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/09/peregrinacion-L54-330x220.png" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a><a class="p-category category-id-6" href="https://www.criterioonline.com/sociedad/" rel="category">Sociedad</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/09/hospitales-moviles-banos-quimicos-y-policias-como-sera-el-operativo-de-peregrinacion-a-lujan/" rel="bookmark">
+		Hospitales móviles, baños químicos y policías: cómo será el operativo de peregrinación a Luján		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-09-30T18:34:22-03:00">30 septiembre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308900">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/09/docentes-bonaerenses-paran-este-jueves-para-reclamar-seguridad-en-las-aulas/" title="Docentes bonaerenses paran este jueves para reclamar seguridad en las aulas">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2024/03/parp-aulas-vacias-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2024/03/parp-aulas-vacias-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a><a class="p-category category-id-6" href="https://www.criterioonline.com/sociedad/" rel="category">Sociedad</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/09/docentes-bonaerenses-paran-este-jueves-para-reclamar-seguridad-en-las-aulas/" rel="bookmark">
+		Docentes bonaerenses paran este jueves para reclamar seguridad en las aulas		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-09-30T17:37:10-03:00">30 septiembre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+				<div class="p-wrap p-grid p-grid-small-1" data-pid="308896">
+					<div class="feat-holder">
+						<div class="p-featured">
+					<a class="p-flink" href="https://www.criterioonline.com/2026/09/en-un-clima-muy-caliente-con-forcejos-e-insultos-casi-se-levanta-el-plenario-sobre-el-proyecto-de-malvinas/" title="En un clima muy caliente, con forcejos e insultos, casi se levanta el plenario sobre el proyecto de Malvinas">
+			<img width="330" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20330%20220'%3E%3C/svg%3E" class="featured-img wp-post-image" alt="" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2026/09/Juan-Grabois-Gerardo-Huesen-330x220.jpg" /><noscript><img width="330" height="220" src="https://www.criterioonline.com/wp-content/uploads/2026/09/Juan-Grabois-Gerardo-Huesen-330x220.jpg" class="featured-img wp-post-image" alt="" loading="lazy" decoding="async" /></noscript>		</a>
+				</div>
+		<div class="p-categories light-scheme p-top mobile-hide"><a class="p-category category-id-8" href="https://www.criterioonline.com/politica-economia/" rel="category">Política Economia</a><a class="p-category category-id-22" href="https://www.criterioonline.com/portada/" rel="category">Portada</a></div>				</div>
+					<div class="p-content">
+			<h4 class="entry-title">		<a class="p-url" href="https://www.criterioonline.com/2026/09/en-un-clima-muy-caliente-con-forcejos-e-insultos-casi-se-levanta-el-plenario-sobre-el-proyecto-de-malvinas/" rel="bookmark">
+		En un clima muy caliente, con forcejos e insultos, casi se levanta el plenario sobre el proyecto de Malvinas		</a>
+		</h4>			<div class="p-meta">
+				<div class="meta-inner is-meta">
+						<div class="meta-el meta-date">
+		<i class="rbi rbi-clock" aria-hidden="true"></i>		<time
+		class="date published"		datetime="2026-09-30T17:21:09-03:00">30 septiembre, 2026</time>
+		</div>
+						</div>
+							</div>
+					</div>
+				</div>
+		</div>		<div class="pagination-wrap pagination-loadmore">
+			<a href="#" rel="nofollow" role="button" class="loadmore-trigger" aria-label="Mostrar más"><span>Mostrar más</span><i class="rb-loader" aria-hidden="true"></i></a>
+		</div>
+		</div>			</div>
+						</div>
+		</div>
+		</main>
+			<aside class="rb-section fw-widget top-footer edge-padding">
+				<div class="top-footer-inner">
+					<div id="text-57" class="widget w-fw-footer rb-section clearfix widget_text">			<div class="textwidget"><div class="contact-info-icons" style="text-align: center; font-family: Arial, sans-serif; max-width: 100%; margin: 0 auto;">
+<h3 style="margin-bottom: 5px; color: #333; font-size: 1.2em;">CRITERIOONLINE.COM</h3>
+<p style="margin-top: 0; margin-bottom: 15px; color: #666; font-size: 0.9em;">20 años en linea</p>
+<div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; flex-wrap: nowrap;">
+<p><a style="text-decoration: none;" title="Contáctanos por WhatsApp" href="https://wa.me/5492245474071" target="_blank" rel="noopener noreferrer"><br />
+<img decoding="async" style="width: 32px; height: 32px; display: block;" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="WhatsApp" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2025/06/whatsapp-co.png" /><noscript><img decoding="async" style="width: 32px; height: 32px; display: block;" src="https://www.criterioonline.com/wp-content/uploads/2025/06/whatsapp-co.png" alt="WhatsApp" /></noscript><br />
+</a></p>
+<p><a style="text-decoration: none;" title="Visita nuestro sitio web" href="https://www.criterioonline.com" target="_blank" rel="noopener noreferrer"><br />
+<img decoding="async" style="width: 32px; height: 32px; display: block;" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Sitio Web" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2025/06/sitio-co.png" /><noscript><img decoding="async" style="width: 32px; height: 32px; display: block;" src="https://www.criterioonline.com/wp-content/uploads/2025/06/sitio-co.png" alt="Sitio Web" /></noscript><br />
+</a></p>
+<p><a style="text-decoration: none;" title="Envíanos un correo electrónico" href="mailto:criterioonline@gmail.com"><br />
+<img decoding="async" style="width: 32px; height: 32px; display: block;" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="Correo Electrónico" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2025/06/correo-col.png" /><noscript><img decoding="async" style="width: 32px; height: 32px; display: block;" src="https://www.criterioonline.com/wp-content/uploads/2025/06/correo-col.png" alt="Correo Electrónico" /></noscript><br />
+</a></p>
+</div>
+<p style="font-size: 0.8em; color: #888; margin-top: 5px;">Dolores, Buenos Aires &#8211; Argentina</p>
+</div>
+</div>
+		</div>				</div>
+			</aside>
+					<footer class="footer-wrap rb-section top-border">
+			<div class="footer-inner footer-has-bg">		<div class="footer-copyright footer-bottom-centered">
+			<div class="rb-container edge-padding">
+							<div class="bottom-footer-section">
+									<a class="footer-logo" href="https://www.criterioonline.com/" title="Criterio Online">
+						<img class="logo-default" data-mode="default" height="228" width="228" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20228%20228'%3E%3C/svg%3E" alt="Criterio Online" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png"><noscript><img class="logo-default" data-mode="default" height="228" width="228" src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png" alt="Criterio Online" decoding="async" loading="lazy"></noscript><img class="logo-dark" data-mode="dark" height="228" width="228" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20228%20228'%3E%3C/svg%3E" alt="Criterio Online" decoding="async" data-lazy-src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png"><noscript><img class="logo-dark" data-mode="dark" height="228" width="228" src="https://www.criterioonline.com/wp-content/uploads/2017/07/LOGO-COL-2017-.png" alt="Criterio Online" decoding="async" loading="lazy"></noscript>					</a>
+										<div class="footer-social-list">
+						<span class="footer-social-list-title h6">Síganos</span>
+						<a class="social-link-facebook" aria-label="Facebook" data-title="Facebook" href="https://www.facebook.com/DiarioCriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-facebook" aria-hidden="true"></i></a><a class="social-link-twitter" aria-label="X" data-title="X" href="https://x.com/CriterioOnline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-twitter" aria-hidden="true"></i></a><a class="social-link-youtube" aria-label="YouTube" data-title="YouTube" href="https://www.youtube.com/criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-youtube" aria-hidden="true"></i></a><a class="social-link-google-news" aria-label="Google News" data-title="Google News" href="https://news.google.com/publications/CAAqLggKIihDQklTR0FnTWFoUUtFbU55YVhSbGNtbHZiMjVzYVc1bExtTnZiU2dBUAE?ceid=AR:es-419&#038;oc=3" target="_blank" rel="noopener nofollow"><i class="rbi rbi-gnews" aria-hidden="true"></i></a><a class="social-link-instagram" aria-label="Instagram" data-title="Instagram" href="https://www.instagram.com/criterioonline/" target="_blank" rel="noopener nofollow"><i class="rbi rbi-instagram" aria-hidden="true"></i></a><a class="social-link-threads" aria-label="Threads" data-title="Threads" href="https://www.threads.com/@criterioonline" target="_blank" rel="noopener nofollow"><i class="rbi rbi-threads" aria-hidden="true"></i></a>					</div>
+							</div>
+						<div class="copyright-inner">
+				<div class="copyright">Criterio Online © 2026</div>			</div>
+						</div>
+		</div>
+		</div>			</footer>
+		</div>
+		<script type="rocketlazyloadscript">
+			(function () {
+				const yesStorage = () => {
+					let storage;
+					try {
+						storage = window['localStorage'];
+						storage.setItem('__rbStorageSet', 'x');
+						storage.removeItem('__rbStorageSet');
+						return true;
+					} catch {
+						return false;
+					}
+				};
+				
+								const readingSize = yesStorage() ? sessionStorage.getItem('rubyResizerStep') || '' : '1';
+				if (readingSize) {
+					const body = document.querySelector('body');
+					switch (readingSize) {
+						case '2':
+							body.classList.add('medium-entry-size');
+							break;
+						case '3':
+							body.classList.add('big-entry-size');
+							break;
+					}
+				}
+			})();
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/criterioonline/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script type="text/template" id="bookmark-toggle-template">
+			<i class="rbi rbi-bookmark" aria-hidden="true" data-title="Save it"></i>
+			<i class="bookmarked-icon rbi rbi-bookmark-fill" aria-hidden="true" data-title="Undo Save"></i>
+		</script>
+		<script type="text/template" id="bookmark-ask-login-template">
+			<a class="login-toggle"
+			 role="button"			rel="nofollow" data-title="Sign In to Save" href="https://www.criterioonline.com/coldol07/?redirect_to=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas"><i class="rbi rbi-bookmark" aria-hidden="true"></i></a>
+		</script>
+		<script type="text/template" id="follow-ask-login-template">
+			<a class="login-toggle"
+			 role="button"			rel="nofollow" data-title="Sign In to Follow" href="https://www.criterioonline.com/coldol07/?redirect_to=https%3A%2F%2Fwww.criterioonline.com%2F2026%2F01%2Fsan-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas"><i class="follow-icon rbi rbi-plus" data-title="Sign In to Follow" aria-hidden="true"></i></a>
+		</script>
+		<script type="text/template" id="follow-toggle-template">
+			<i class="follow-icon rbi rbi-plus" data-title="Seguir"></i>
+			<i class="followed-icon rbi rbi-bookmark-fill" data-title="Unfollow"></i>
+		</script>
+					<aside id="bookmark-notification" class="bookmark-notification"></aside>
+			<script type="text/template" id="bookmark-notification-template">
+				<div class="bookmark-notification-inner {{classes}}">
+					<div class="bookmark-featured">{{image}}</div>
+					<div class="bookmark-inner">
+						<span class="bookmark-title h5">{{title}}</span><span class="bookmark-desc">{{description}}</span>
+					</div>
+				</div>
+			</script>
+			<script type="text/template" id="follow-notification-template">
+				<div class="follow-info bookmark-notification-inner {{classes}}">
+					<span class="follow-desc"><span>{{description}}</span><strong>{{name}}</strong></span>
+				</div>
+			</script>
+						<script type="rocketlazyloadscript">
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+					<div id="rb-user-popup-form" class="rb-user-popup-form mfp-animation mfp-hide">
+			<div class="logo-popup-outer">
+				<div class="logo-popup">
+					<div class="login-popup-header">
+													<span class="logo-popup-heading h3">Welcome Back!</span>
+														<p class="logo-popup-description is-meta">Sign in to your account</p>
+											</div>
+					<div class="user-login-form">
+						<form name="popup-form" id="popup-form" action="https://www.criterioonline.com/coldol07/" method="post"><div class="login-username">
+				<div class="rb-login-label">Username or Email Address</div>
+				<input type="text" name="log" required="required" autocomplete="username" class="input" value="" />
+				</div><div class="login-password">
+				<div class="rb-login-label">Password</div>
+				<div class="is-relative">
+				<input type="password" name="pwd" required="required" autocomplete="current-password" spellcheck="false" class="input" value="" />
+				<span class="rb-password-toggle"><i class="rbi rbi-show"></i></span></div>
+				</div><div class="remember-wrap"><p class="login-remember"><label class="rb-login-label"><input name="rememberme" type="checkbox" id="rememberme" value="forever" /> Remember me</label></p><a class="lostpassw-link" href="https://www.criterioonline.com/coldol07/?action=lostpassword">Lost your password?</a></div><p class="login-submit">
+				<input type="submit" name="wp-submit" class="button button-primary" value="Log In" />
+				<input type="hidden" name="redirect_to" value="https://www.criterioonline.com/2026/01/san-isidro-el-municipio-prorrogo-la-suspension-del-sistema-de-fotomultas" />
+			</p></form>						<div class="login-form-footer">
+													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script id="foxiz-core-js-extra">
+var foxizCoreParams = {"ajaxurl":"https://www.criterioonline.com/wp-admin/admin-ajax.php","darkModeID":"RubyDarkMode","yesPersonalized":"1","cookieDomain":"criterioonline.com","cookiePath":"/"};
+//# sourceURL=foxiz-core-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="foxiz-core-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/foxiz-core/assets/core.js?ver=1789056502" defer></script>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/poll/encuesta-de-prueba/|/poll/test/|/poll/en-las-proximas-elecciones-en-maipu-a-quien-votarias-para-intendente/|/en-las-proximas-elecciones-en-dolores-a-quien-votarias-para-intendente/|/poll/en-las-proximas-elecciones-en-dolores-a-quien-votarias-para-intendente/|/2023/05/09/en-las-proximas-elecciones-en-maipu-a-quien-votarias-para-intendente/|/poll/milei-encuesta-gobierno/|/2026/09/stec-las-soluciones-de-equipamiento-comercial-disponibles-que-puede-incorporar-hoy-tu-negocio/|/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.criterioonline.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script type="rocketlazyloadscript" id="google-recaptcha-js" data-rocket-src="https://www.google.com/recaptcha/api.js?render=6Lf06hkhAAAAAEFRZGx5BEkNXRZYsBFYrzufVcoT&#038;ver=3.0"></script>
+<script type="rocketlazyloadscript" id="wp-polyfill-js" data-rocket-src="https://www.criterioonline.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script type="rocketlazyloadscript" id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6Lf06hkhAAAAAEFRZGx5BEkNXRZYsBFYrzufVcoT",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="wpcf7-recaptcha-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=1789056502" defer></script>
+<script type="rocketlazyloadscript" id="googlesitekit-events-provider-contact-form-7-js" data-rocket-src="https://www.criterioonline.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-fac2a8013ba5ba355cd0.js" defer></script>
+<script type="rocketlazyloadscript" id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":302757,"isSinglePost":true,"hasVimeoEmbed":false};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script type="rocketlazyloadscript" id="googlesitekit-events-provider-content-events-js" data-rocket-src="https://www.criterioonline.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-c7172f3fd0e4d5ad62ef.js" defer></script>
+<script id="lvc-tracker-js-extra">
+var lightvcData = {"postId":"302757","ajaxUrl":"https://www.criterioonline.com/wp-json/lightvc/v1/count","scrollThreshold":"50","timeWindow":"1800","fastMode":"1","excludeBots":"1"};
+//# sourceURL=lvc-tracker-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="lvc-tracker-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/plugins/light-views-counter/public/js/lvc-tracker.js?ver=1789056503" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="rb-viewport-observer-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/js/viewport-observer.js?ver=1789056502" defer></script>
+<script type="rocketlazyloadscript" id="rbswiper-js" data-rocket-src="https://www.criterioonline.com/wp-content/themes/criterioonline/assets/js/rbswiper.min.js?ver=6.8.4" defer></script>
+<script type="rocketlazyloadscript" id="jquery-magnific-popup-js" data-rocket-src="https://www.criterioonline.com/wp-content/themes/criterioonline/assets/js/jquery.mp.min.js?ver=1.1.0" defer></script>
+<script type="rocketlazyloadscript" id="rb-tipsy-js" data-rocket-src="https://www.criterioonline.com/wp-content/themes/criterioonline/assets/js/jquery.tipsy.min.js?ver=1.0" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="highlight-share-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/js/highlight-share.js?ver=1789056502" defer></script>
+<script type="rocketlazyloadscript" id="jquery-uitotop-js" data-rocket-src="https://www.criterioonline.com/wp-content/themes/criterioonline/assets/js/jquery.ui.totop.min.js?ver=v1.2" defer></script>
+<script type="rocketlazyloadscript" data-minify="1" id="foxiz-personalize-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/js/personalized.js?ver=1789056502" defer></script>
+<script id="foxiz-global-js-extra">
+var foxizParams = {"sliderSpeed":"5000","sliderEffect":"slide","sliderFMode":"1","crwLoadNext":"1","twitterName":"CriterioOnline","highlightShares":"1","highlightShareFacebook":"1","highlightShareTwitter":"1","singleLoadNextLimit":"20","liveInterval":"600"};
+var uuid_r302757 = {"uuid":"uuid_r302757","name":"grid_small_1","pagination":"load_more","unique":"1","entry_category":"bg-1","hide_category":"mobile","entry_meta":["date"],"review":"replace","review_meta":"-1","sponsor_meta":"1","entry_format":"bottom","excerpt":"1","post_not_in":"302757","paged":"1","page_max":"4198","content_source":"related","related_id":"302757","posts_per_page":"12"};
+//# sourceURL=foxiz-global-js-extra
+</script>
+<script type="rocketlazyloadscript" data-minify="1" id="foxiz-global-js" data-rocket-src="https://www.criterioonline.com/wp-content/cache/min/1/wp-content/themes/criterioonline/assets/js/global.js?ver=1789056502" defer></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.criterioonline.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.2"}}
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.criterioonline.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.criterioonline.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1790950741 -->

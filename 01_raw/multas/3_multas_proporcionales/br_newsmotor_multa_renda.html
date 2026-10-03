@@ -1,0 +1,1182 @@
+	<!DOCTYPE html>
+		<!--[if IE 8]>
+	<html class="ie ie8" lang="pt-BR"> <![endif]-->
+	<!--[if IE 9]>
+	<html class="ie ie9" lang="pt-BR"> <![endif]-->
+	<!--[if gt IE 9]><!-->
+<html lang="pt-BR"> <!--<![endif]-->
+	<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.5",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseout","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),await this.T(),await this.F(),await this.j(),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise(t=>setTimeout(t,500-Date.now()+this.lastTouchEnd)),this.I(),this.H(),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))},{isRocket:!0})}o(){window.addEventListener("pageshow",t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0},{isRocket:!0}),window.addEventListener("pagehide",()=>{this.onFirstUserAction=null},{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",function i(o){o.changedTouches[0]&&t.changedTouches[0]&&Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}),"INPUT"===o.target.tagName&&"text"===o.target.type||(o.target.dispatchEvent(new TouchEvent("touchend",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new MouseEvent("mouseover",{target:o.target,bubbles:!0})),o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1,clientX:o.changedTouches[0].clientX,clientY:o.changedTouches[0].clientY})),event.preventDefault()))},{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,t.composedPath&&t.composedPath()[0].getRootNode()instanceof ShadowRoot&&(t.rocketTarget=t.composedPath()[0]),this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach(t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.addEventListener("visibilitychange",this.userEventHandler,{isRocket:!0})}U(){this.userEvents.forEach(t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})),document.removeEventListener("visibilitychange",this.userEventHandler,{isRocket:!0}),this.savedUserEvents.forEach(t=>{(t.rocketTarget||t.target).dispatchEvent(new window[t.constructor.name](t.type,t))})}m(){const t="return false",e=Array.from(this.attributeEvents,t=>"data-rocket-"+t),i="["+this.attributeEvents.join("],[")+"]",o="[data-rocket-"+this.attributeEvents.join("],[data-rocket-")+"]",s=(e,i,o)=>{o&&o!==t&&(e.setAttribute("data-rocket-"+i,o),e["rocket"+i]=new Function("event",o),e.setAttribute(i,t))};new MutationObserver(t=>{for(const n of t)"attributes"===n.type&&(n.attributeName.startsWith("data-rocket-")||this.everythingLoaded?n.attributeName.startsWith("data-rocket-")&&this.everythingLoaded&&this.N(n.target,n.attributeName.substring(12)):s(n.target,n.attributeName,n.target.getAttribute(n.attributeName))),"childList"===n.type&&n.addedNodes.forEach(t=>{if(t.nodeType===Node.ELEMENT_NODE)if(this.everythingLoaded)for(const i of[t,...t.querySelectorAll(o)])for(const t of i.getAttributeNames())e.includes(t)&&this.N(i,t.substring(12));else for(const e of[t,...t.querySelectorAll(i)])for(const t of e.getAttributeNames())this.attributeEvents.includes(t)&&s(e,t,e.getAttribute(t))})}).observe(document,{subtree:!0,childList:!0,attributeFilter:[...this.attributeEvents,...e]})}I(){this.attributeEvents.forEach(t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach(e=>{this.N(e,t)})})}N(t,e){const i=t.getAttribute("data-rocket-"+e);i&&(t.setAttribute(e,i),t.removeAttribute("data-rocket-"+e))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):(t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o}),"mouseenter"!==e&&"mouseleave"!==e||t.originalAddEventListener.call(this,e,t.savedUserEvents.push,o))},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}J(t,e){this.savedEventListeners=this.savedEventListeners.filter(i=>{let o=i.type,s=i.target||window;return e!==o||t!==s||(this.B(o,s)&&(i.type="rocket-"+o),this.$(i),!1)})}H(){EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener,this.savedEventListeners.forEach(t=>this.$(t))}$(t){t.remove?this.originalRemoveEventListener.call(t.target,t.type,t.func,t.options):this.originalAddEventListener.call(t.target,t.type,t.func,t.options)}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map(t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e})),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,()=>{e[t].forEach(t=>t())},{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout(()=>i.bind(document)(o)):i.bind(document)(o)}return"function"==typeof i&&(t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s)),this},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise(t=>{this.userActionTriggered?t():this.onFirstUserAction=t})}async L(){return new Promise(t=>{document.addEventListener("DOMContentLoaded",()=>{this.realDomReadyFired=!0,t()},{isRocket:!0})})}async j(){return this.realWindowLoadedFired?Promise.resolve():new Promise(t=>{window.addEventListener("load",t,{isRocket:!0})})}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver(t=>{for(const e of t)e.addedNodes.forEach(t=>{"SCRIPT"!==t.tagName||!t.src||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise(e=>{const i=()=>{const i=this.pendingScripts.findIndex(e=>e.script===t);i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)})})})}),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async F(){await this.X(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.F()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach(t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)})}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach(e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}}),t=[...new Map(t.map(t=>[JSON.stringify(t),t])).values()],this.Y(t,"preconnect")}async G(t){if(await this.K(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise(e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach(t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))}),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",()=>{i.setAttribute("data-rocket-status","failed-network"),e()},{isRocket:!0}),setTimeout(()=>{i.isConnected||e()},1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.G(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())},{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}});t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.G(e),this.C(t)):Promise.resolve()}O(){this.Y([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}Y(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach(t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}}),document.head.appendChild(o)}W(){this.trash.forEach(t=>t.remove())}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(document,"DOMContentLoaded"),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.K(),this.J(window,"DOMContentLoaded"),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.K(),this.J(document,"readystatechange"),document.dispatchEvent(new Event("rocket-readystatechange")),await this.K(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.K(),this.J(window,"load"),window.dispatchEvent(new Event("rocket-load")),await this.K(),window.rocketonload&&window.rocketonload(),await this.K(),this.allJQueries.forEach(t=>t(window).trigger("rocket-jquery-load")),await this.K(),this.J(window,"pageshow");const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.K(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async K(){Date.now()-this.lastBreath>45&&(await this.X(),this.lastBreath=Date.now())}async X(){return document.hidden?new Promise(t=>setTimeout(t)):new Promise(t=>requestAnimationFrame(t))}B(t,e=window){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();
+</script>
+				
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="pingback" href="https://newsmotor.com.br/xmlrpc.php"/>
+
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.2 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona</title>
+<link data-rocket-preload as="style" href="https://fonts.googleapis.com/css?family=Archivo%3A400%2C700%2C600%2C500%7CRajdhani%3A700%2C600&#038;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css?family=Archivo%3A400%2C700%2C600%2C500%7CRajdhani%3A700%2C600&#038;display=swap" media="print" onload="this.media=&#039;all&#039;" rel="stylesheet">
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo%3A400%2C700%2C600%2C500%7CRajdhani%3A700%2C600&#038;display=swap"></noscript>
+	<meta name="description" content="Projeto de lei propõe multas de trânsito proporcionais à renda do infrator, buscando maior justiça nas punições." />
+	<link rel="canonical" href="https://newsmotor.com.br/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona" />
+	<meta property="og:description" content="Projeto de lei propõe multas de trânsito proporcionais à renda do infrator, buscando maior justiça nas punições." />
+	<meta property="og:url" content="https://newsmotor.com.br/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona/" />
+	<meta property="og:site_name" content="News MOTOR" />
+	<meta property="og:image" content="https://newsmotor.com.br/wp-content/uploads/2026/04/multa-de-transito.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="800" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Renato Soares" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Escrito por" />
+	<meta name="twitter:data1" content="Renato Soares" />
+	<meta name="twitter:label2" content="Est. tempo de leitura" />
+	<meta name="twitter:data2" content="3 minutos" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#article","isPartOf":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/"},"author":{"name":"Renato Soares","@id":"https:\/\/newsmotor.com.br\/#\/schema\/person\/d834958b70b91f203181434d2f39e6f9"},"headline":"Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona","mainEntityOfPage":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/"},"wordCount":678,"commentCount":0,"image":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#primaryimage"},"thumbnailUrl":"https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/04\/multa-de-transito.jpg","keywords":["multas de trânsito","Projeto de Lei","renda"],"articleSection":["Notícias"],"inLanguage":"pt-BR","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#respond"]}]},{"@type":"WebPage","@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/","url":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/","name":"Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona","isPartOf":{"@id":"https:\/\/newsmotor.com.br\/#website"},"primaryImageOfPage":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#primaryimage"},"image":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#primaryimage"},"thumbnailUrl":"https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/04\/multa-de-transito.jpg","author":{"@id":"https:\/\/newsmotor.com.br\/#\/schema\/person\/d834958b70b91f203181434d2f39e6f9"},"description":"Projeto de lei propõe multas de trânsito proporcionais à renda do infrator, buscando maior justiça nas punições.","breadcrumb":{"@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/"]}]},{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#primaryimage","url":"https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/04\/multa-de-transito.jpg","contentUrl":"https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/04\/multa-de-transito.jpg","width":1920,"height":800},{"@type":"BreadcrumbList","@id":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https:\/\/newsmotor.com.br\/"},{"@type":"ListItem","position":2,"name":"Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona"}]},{"@type":"WebSite","@id":"https:\/\/newsmotor.com.br\/#website","url":"https:\/\/newsmotor.com.br\/","name":"News MOTOR","description":"O melhor site de notícias automobilisticas","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/newsmotor.com.br\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"},{"@type":"Person","@id":"https:\/\/newsmotor.com.br\/#\/schema\/person\/d834958b70b91f203181434d2f39e6f9","name":"Renato Soares","image":{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https:\/\/secure.gravatar.com\/avatar\/0740f5bb7a6d7727344ffb8fcff6a1eb88a43c8e11fa25b9740d437b4521dc40?s=96&d=mm&r=g","url":"https:\/\/secure.gravatar.com\/avatar\/0740f5bb7a6d7727344ffb8fcff6a1eb88a43c8e11fa25b9740d437b4521dc40?s=96&d=mm&r=g","contentUrl":"https:\/\/secure.gravatar.com\/avatar\/0740f5bb7a6d7727344ffb8fcff6a1eb88a43c8e11fa25b9740d437b4521dc40?s=96&d=mm&r=g","caption":"Renato Soares"},"description":"Formado em Publicidade e Propaganda pela UFG, deu seus primeiros passos como redator júnior na agência experimental Inova. Dos estágios, atuou como assessor de comunicação na Assembleia Legislativa de Goiás e produtor de conteúdo na empresa VS3 Digital.","url":"https:\/\/newsmotor.com.br\/author\/renatosoares\/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Feed para News MOTOR &raquo;" href="https://newsmotor.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para News MOTOR &raquo;" href="https://newsmotor.com.br/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para News MOTOR &raquo; Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona" href="https://newsmotor.com.br/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://newsmotor.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnewsmotor.com.br%2Fmais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://newsmotor.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnewsmotor.com.br%2Fmais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='publisher-child-css' href='https://newsmotor.com.br/wp-content/themes/publisher-child/style.css?ver=1.0.0' type='text/css' media='all' />
+
+<script type="text/javascript" src="https://newsmotor.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://newsmotor.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://newsmotor.com.br/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://newsmotor.com.br/wp-json/wp/v2/posts/43826" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://newsmotor.com.br/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel='shortlink' href='https://newsmotor.com.br/?p=43826' />
+<script type="text/rocketlazyloadscript" data-minify="1" async data-rocket-src="https://newsmotor.com.br/wp-content/cache/min/1/tag/js/gpt.js?ver=1786561500"></script>
+<script type="text/rocketlazyloadscript">
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/128806736/newsmotor-300x250', [300, 250], 'div-gpt-ad-1631795137494-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script><meta property="fb:app_id" content="404870521076862"><!-- Google Tag Manager -->
+<script type="text/rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJV7RBDH');</script>
+<!-- End Google Tag Manager -->
+<script type="text/rocketlazyloadscript" async data-rocket-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5093303690767088"
+     crossorigin="anonymous"></script>
+     
+<!-- taboola -->
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u, i) {
+    if (!document.getElementById(i)){
+      e.async = 1;
+      e.src = u;
+      e.id = i;
+      f.parentNode.insertBefore(e, f);
+    }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/vs3digital-newsmotor/loader.js',
+  'tb_loader_script');
+  if(window.performance && typeof window.performance.mark == 'function')
+    {window.performance.mark('tbl_ic');}
+</script>
+<!-- fim taboola --> 
+
+<!-- megapulse -->
+<script  src="https://dash.megapulse.app/assets/js/megapulse.js" data-site="16" data-public-key="BGMxEPsIOQbh-usUrwSbIlYqhm5yaIf4_L4zz0rRHcGVtm9445y1T87F9gDdxcLqv1sAjANidN_3aY_Eq2UVsAo" ></script>
+<!-- megapulse -->			<link rel="shortcut icon" href="https://newsmotor.com.br/wp-content/uploads/2021/11/favicon-newsmotor.jpg"><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "@id": "#organization",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://newsmotor.com.br/wp-content/uploads/2023/08/news-motor-logobranco.png"
+    },
+    "url": "https://newsmotor.com.br/",
+    "name": "News MOTOR",
+    "description": "O melhor site de not\u00edcias automobilisticas"
+}</script>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "WebSite",
+    "name": "News MOTOR",
+    "alternateName": "O melhor site de not\u00edcias automobilisticas",
+    "url": "https://newsmotor.com.br/"
+}</script>
+<script type="application/ld+json">{
+    "@context": "http://schema.org/",
+    "@type": "BlogPosting",
+    "headline": "Mais rico, mais caro? Nova lei quer cobrar multa de tr\u00e2nsito conforme sua renda; veja como funciona",
+    "description": "Projeto de lei prop\u00f5e multas de tr\u00e2nsito proporcionais \u00e0 renda do infrator, buscando maior justi\u00e7a nas puni\u00e7\u00f5es.",
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "author": {
+        "@type": "Person",
+        "@id": "#person-RenatoSoares",
+        "name": "Renato Soares"
+    },
+    "image": "https://newsmotor.com.br/wp-content/uploads/2026/04/multa-de-transito.jpg",
+    "interactionStatistic": [
+        {
+            "@type": "InteractionCounter",
+            "interactionType": "http://schema.org/CommentAction",
+            "userInteractionCount": 0
+        }
+    ],
+    "publisher": {
+        "@id": "#organization"
+    },
+    "mainEntityOfPage": "https://newsmotor.com.br/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona/"
+}</script>
+<link data-minify="1" rel='stylesheet' id='bf-minifed-css-1' href='https://newsmotor.com.br/wp-content/cache/min/1/wp-content/bs-booster-cache/9dec9b6f1d1e758baa250af6754e1dd7.css?ver=1786561500' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='7.11.0-1790872889' href='https://newsmotor.com.br/wp-content/cache/min/1/wp-content/bs-booster-cache/1a044e90fc9ae7198c0ec1a280d8d389.css?ver=1790872889' type='text/css' media='all' />
+
+<!-- BetterFramework Head Inline CSS -->
+<style>
+.site-header.header-style-1, .site-header.header-style-2, .site-header.header-style-3, .site-header.header-style-4, .site-header.header-style-5.full-width, .site-header.header-style-5.boxed>.content-wrap>.container, .site-header.header-style-5 .bs-pinning-wrapper.bspw-header-style-5>.bs-pinning-block, .site-header.header-style-6.full-width, .site-header.header-style-6.boxed>.content-wrap>.container, .site-header.header-style-6 .bs-pinning-wrapper.bspw-header-style-6>.bs-pinning-block, .site-header.header-style-7, .site-header.header-style-8.full-width, .site-header.header-style-8.boxed>.content-wrap>.container, .site-header.header-style-8 .bs-pinning-wrapper.bspw-header-style-8>.bs-pinning-block {background-color: #000000;}
+.banner-ads-conteudo { width: 336px; height:300px; }
+@media(min-width: 800px) { 
+.banner-ads-conteudo { width: 100%; height: 300px; } 
+}
+#ads-top-1{text-align: center;}
+.ads_conteudo_top {
+    width: 300px;
+    height: 250px;
+  }
+  @media (min-width: 350px) {
+    .ads_conteudo_top {
+      width: 100%;
+      height: 280px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 500px) {
+    .ads_conteudo_top {
+      width: 100%;
+      height: 280px;
+    }t
+  }
+  .ads_conteudo_top2 {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    margin: auto;
+  }
+  .entry-terms.post-tags a, .entry-terms.source a, .entry-terms.via a {
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 0px;
+    font-weight: 100;
+    font-size: 14px;
+}
+.entry-terms.post-tags .terms-label, .entry-terms.source .terms-label, .entry-terms.via .terms-label {
+    display: none;
+}
+.post-share .post-share-btn-group {
+    float: left;
+    display: none;
+}
+.post-meta.single-post-meta .post-author-name {max-width: 170px;}
+.single-container>.post-author .post-author-bio {font-size: 16px;}
+#ads-home{
+    
+    background: #f2f2f2;
+    padding: 20px 0px 0px 0px;
+    margin: 0px 0px 20px 0px  
+}
+.section-heading.sh-t1 > .h-text, .section-heading.sh-t1 .main-link:first-child:last-child .h-text {
+    color: #e03800 !important;
+    font-weight: bold !important;
+    font-size: 26px !important;
+}
+.section-heading.sh-t1 .h-text {background: #f2f2f2;}
+
+
+/* CSS DOS LINKS DESTAQUES DENTRO DO CONTEUDO */
+
+#megapulse-destaque-box{
+    height: 338px;
+    width: 100%;
+}
+.toolkit-card-primary {
+    position: relative;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.5px 0.5px 0.5px 12px;
+    border-color: #606060;
+    border-left-color: var(--vertical-color, #606060);
+}
+.toolkit-card-primary__body {
+    padding: 1px 10px 1px 10px;
+}
+.toolkit-card-primary__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    color: var(--vertical-color, #333);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: left;
+}
+.toolkit-list {
+    list-style: none;
+    overflow-y: auto;
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.toolkit-card-secondary {
+    flex-shrink: 0;
+    max-width: calc((100% - (30px * 2))/3);
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.toolkit-card-secondary__image {
+    border-radius: 5px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 126px;
+    object-fit: cover;
+    height: 116px !important;
+}
+.toolkit-card-secondary__hat {
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.36;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    font-weight: 100;
+}
+
+.toolkit-card-secondary__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+.toolkit-ultimo{
+    display: none;
+}
+@media (max-width: 768px){
+    .toolkit-card-secondary {
+        max-width: 221px;
+    }
+    .toolkit-card-secondary__image {
+        margin-bottom: 6px;
+    }
+    .toolkit-card-secondary__title {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+    .toolkit-ultimo{
+        display: block;
+    }
+
+    #megapulse-destaque-box {
+        height: 260px;
+    }
+}
+/* terminou css blocos */
+
+.section-heading .h-text { font-size: 26px;}
+.rh-cover { z-index: 99999999;}
+body{overflow-x: hidden;}
+
+.site-header.header-style-5 .main-menu.menu, .site-header.header-style-6 .main-menu.menu, .site-header.header-style-8 .main-menu.menu{display:none;}
+.site-header.header-style-5 .site-branding {
+
+   float: none;
+    margin: auto;
+}
+.entry-terms.post-tags a, .entry-terms.source a, .entry-terms.via a{text-transform: uppercase;}
+site-header.header-style-1, .site-header.header-style-2, .site-header.header-style-3, .site-header.header-style-4, .site-header.header-style-5.full-width, .site-header.header-style-5.boxed>.content-wrap>.container, .site-header.header-style-5 .bs-pinning-wrapper.bspw-header-style-5>.bs-pinning-block, .site-header.header-style-6.full-width, .site-header.header-style-6.boxed>.content-wrap>.container, .site-header.header-style-6 .bs-pinning-wrapper.bspw-header-style-6>.bs-pinning-block, .site-header.header-style-7, .site-header.header-style-8.full-width, .site-header.header-style-8.boxed>.content-wrap>.container, .site-header.header-style-8 .bs-pinning-wrapper.bspw-header-style-8>.bs-pinning-block {
+    background-color: #EB6230;
+}
+.topbar {
+    height: auto !important;
+    padding: 4px;
+}
+.rh-header.light .rh-container {
+    background: #EB6230;
+    border-bottom: 1px solid #EB6230;
+}
+.rh-header .logo-container.rh-img-logo
+{
+    text-align: center;
+    margin-right: 54px;
+}
+.listing-modern-grid.slider-overlay-simple .listing-mg-item .content-container {
+   
+    border-bottom: 8px solid #EB6230;
+}
+.home-destaque div article {border-radius: 0px 0px 5px 5px;}
+
+
+
+/* CSS DOS LINKS DESTAQUES DENTRO DO CONTEUDO */
+
+#megapulse-destaque-box{
+    height: 338px;
+    width: 100%;
+}
+.toolkit-card-primary {
+    position: relative;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.5px 0.5px 0.5px 12px;
+    border-color: #606060;
+    border-left-color: var(--vertical-color, #606060);
+}
+.toolkit-card-primary__body {
+    padding: 1px 10px 1px 10px;
+}
+.toolkit-card-primary__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    color: var(--vertical-color, #333);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: left;
+}
+.toolkit-list {
+    list-style: none;
+    overflow-y: auto;
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.toolkit-card-secondary {
+    flex-shrink: 0;
+    max-width: calc((100% - (30px * 2))/3);
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.toolkit-card-secondary__image {
+    border-radius: 5px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 126px;
+    object-fit: cover;
+    height: 116px !important;
+}
+.toolkit-card-secondary__hat {
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.36;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    font-weight: 100;
+}
+
+.toolkit-card-secondary__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+.toolkit-ultimo{
+    display: none;
+}
+@media (max-width: 768px){
+    .toolkit-card-secondary {
+        max-width: 221px;
+    }
+    .toolkit-card-secondary__image {
+        margin-bottom: 6px;
+    }
+    .toolkit-card-secondary__title {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+    .toolkit-ultimo{
+        display: block;
+    }
+
+    #megapulse-destaque-box {
+        height: 260px;
+    }
+}
+/* terminou css blocos DESTQUE LINKS */
+.listing-mg-10-item .content-container, .listing-mg-10-item .title {
+    min-height: 63px;
+}
+#ads-home
+{
+background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAK0lEQVQImT3JwQkAMAzDQNPsv1+yi43yCPQnTupu2wCgX8CrKkkzk0Rn9xczyijaHqaA3QAAAABJRU5ErkJggg==) 50%;
+}
+.oficina-home .item-inner
+{
+    BORDER: 1PX SOLID #d1d1d1;
+    PADDING: 15PX;
+    BORDER-RADIUS: 5PX;
+    BACKGROUND: #fafafa;
+}
+.oficina-home .item-inner .featured-type-featured-image a
+{
+   BORDER-RADIUS: 5PX; 
+}
+.listing-mg-3-item .item-content {
+    border-radius: 5px;
+}
+.listing-item-classic-1 .featured .img-holder {
+    border-radius: 5px;
+}
+/* responsive monitor */ @media(min-width: 1200px){.listing-item-text-1 .item-inner {
+    padding-bottom: 0px;
+    border-bottom: none;
+    border-bottom-color: none; 
+}
+.cursos-menu
+{
+       border-left: 1px solid #e7e0e0;
+       padding-left: 15px;
+       margin-left: -15px;
+} 
+.cursos-menu a
+{
+       font-weight: bold !important;
+       font-size: 16px !important;
+} 
+.financas-menu
+{
+       border-left: 1px solid #e7e0e0;
+       padding-left: 15px;
+} 
+.financas-menu a
+{
+       font-weight: bold !important;
+       font-size: 16px !important;
+       color: #379730 !important;
+}
+.filmes-menu
+{
+       border-left: 1px solid #e7e0e0;
+       padding-left: 15px;
+} 
+.filmes-menu a
+{
+       font-weight: bold !important;
+       font-size: 16px !important;
+       color: #f4524d !important;
+}}
+/* responsive phone */ @media(max-width: 767px){.bs-irp .listing .listing-item:last-child {padding-bottom: 20px !important;}
+.listing-item-blog-1 .featured, .listing-item-blog-5 .featured, .listing-item-blog-1 .featured .img-holder, .listing-item-blog-5 .featured .img-holder{
+    width: 100%;
+}
+.listing-item-blog-1 .featured .img-holder, .listing-item-blog-5 .featured .img-holder {
+    width: 100%;
+    margin: 0;
+}}
+
+</style>
+<!-- /BetterFramework Head Inline CSS-->
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	<meta name="generator" content="WP Rocket 3.23.1.1" data-wpr-features="wpr_delay_js wpr_defer_js wpr_minify_js wpr_minify_css wpr_preload_links wpr_desktop" /></head>
+
+<body class="wp-singular post-template-default single single-post postid-43826 single-format-standard wp-theme-publisher wp-child-theme-publisher-child bs-theme bs-publisher bs-publisher-games-watch active-light-box ltr close-rh page-layout-2-col page-layout-2-col-right full-width active-sticky-sidebar main-menu-out-full-width single-prim-cat-1 single-cat-1  wpb-js-composer js-comp-ver-6.7.0 vc_responsive bs-ll-a" dir="ltr">
+<div data-rocket-location-hash="16dd2048ab33a463c6e04e28b57161c1" class="off-canvas-overlay"></div>
+<div data-rocket-location-hash="0160187f34515e4eaf599cea1582aa3a" class="off-canvas-container right skin-white">
+	<div data-rocket-location-hash="df8a9d0618894db0ee2b22be48a375cf" class="off-canvas-inner">
+		<span class="canvas-close"><i></i></span>
+					<div data-rocket-location-hash="9b2aaccbcdb8c4a41a266ab778778810" class="off-canvas-search">
+				<form role="search" method="get" action="https://newsmotor.com.br">
+					<input type="text" name="s" value=""
+					       placeholder="Pesquisa...">
+					<i class="fa fa-search"></i>
+				</form>
+			</div>
+						<nav class="off-canvas-menu">
+				<ul class="menu bsm-pure clearfix">
+					<li id="menu-item-2147" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-term-1 better-anim-fade menu-item-2147"><a href="https://newsmotor.com.br/noticias/">Notícias</a></li>
+<li id="menu-item-4983" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-850 better-anim-fade menu-item-4983"><a href="https://newsmotor.com.br/noticias/carros/">Carros</a></li>
+<li id="menu-item-4984" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-849 better-anim-fade menu-item-4984"><a href="https://newsmotor.com.br/noticias/motos/">Motos</a></li>
+<li id="menu-item-4985" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-851 better-anim-fade menu-item-4985"><a href="https://newsmotor.com.br/noticias/oficina/">Oficina</a></li>
+<li id="menu-item-2145" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-167 better-anim-fade menu-item-2145"><a href="https://newsmotor.com.br/artigos/">Artigos</a></li>
+<li id="menu-item-2146" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-182 better-anim-fade menu-item-2146"><a href="https://newsmotor.com.br/artigos/lista-top/">Top+</a></li>
+				</ul>
+			</nav>
+						<div data-rocket-location-hash="d387ee29213d62cecfbe5fcd16f31bcd" class="off_canvas_footer">
+				<div class="off_canvas_footer-info entry-content">
+									</div>
+			</div>
+				</div>
+</div>
+	<header data-rocket-location-hash="df3195d830a575c4ec2e2ef4a6efda18" id="header" class="site-header header-style-5 full-width" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+				<div data-rocket-location-hash="cc6d40b3c8ce0916ce83b8ddc6d0d49a" class="content-wrap">
+			<div data-rocket-location-hash="e6eb6fcccd8ab4e0754c54f80a5d14c0" class="container">
+				<div class="header-inner clearfix">
+					<div id="site-branding" class="site-branding">
+	<p  id="site-title" class="logo h1 img-logo">
+	<a href="https://newsmotor.com.br/" itemprop="url" rel="home">
+					<img id="site-logo" src="https://newsmotor.com.br/wp-content/uploads/2023/08/news-motor-logobranco.png"
+			     alt="News MOTOR"  />
+
+			<span class="site-title">News MOTOR - O melhor site de notícias automobilisticas</span>
+				</a>
+</p>
+</div><!-- .site-branding -->
+<nav id="menu-main" class="menu main-menu-container  show-off-canvas menu-actions-btn-width-1" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+			<div class="menu-action-buttons width-1">
+							<div class="off-canvas-menu-icon-container off-icon-right">
+					<div class="off-canvas-menu-icon">
+						<div class="off-canvas-menu-icon-el"></div>
+					</div>
+				</div>
+						</div>
+			<ul id="main-navigation" class="main-menu menu bsm-pure clearfix">
+			</ul><!-- #main-navigation -->
+</nav><!-- .main-menu-container -->
+				</div>
+			</div>
+		</div>
+	</header><!-- .header -->
+	<div data-rocket-location-hash="cc426bcc91f6716aeadc671615d766d6" class="rh-header clearfix light deferred-block-exclude">
+		<div data-rocket-location-hash="6a81f367dfbcd304f6c582879ae0c04a" class="rh-container clearfix">
+
+			<div data-rocket-location-hash="a9403aeb0f62412a2da4e6af55aa9844" class="menu-container close">
+				<span class="menu-handler"><span class="lines"></span></span>
+			</div><!-- .menu-container -->
+
+			<div data-rocket-location-hash="14d645325773f08409fcb65e3e33f731" class="logo-container rh-img-logo">
+				<a href="https://newsmotor.com.br/" itemprop="url" rel="home">
+											<img src="https://newsmotor.com.br/wp-content/uploads/2023/08/news-motor-logobranco.png"
+						     alt="News MOTOR"  />				</a>
+			</div><!-- .logo-container -->
+		</div><!-- .rh-container -->
+	</div><!-- .rh-header -->
+		<div data-rocket-location-hash="7d360693ac95f937f32137dd71995208" class="main-wrap content-main-wrap">
+		<div data-rocket-location-hash="9cc2c362e7590e9dc84c6a338f971730" class="content-wrap">
+		<main data-rocket-location-hash="dd6f3b9b0d0691c34bc19fc57670607f" id="content" class="content-container">
+
+		<div class="container container layout-1-col layout-no-sidebar post-template-13">
+			<div class="row main-section">
+				<div class="col-sm-10 col-sm-push-1 content-column">
+					<div class="single-container">
+						<article id="post-43826" class="post-43826 post type-post status-publish format-standard has-post-thumbnail  category-noticias tag-multas-de-transito tag-projeto-de-lei tag-renda single-post-content ">
+														<div class="post-header post-tp-13-header">
+								<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>									<h1 class="single-post-title">
+										<span class="post-title" itemprop="headline">Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona</span></h1>
+									<h2 class="post-subtitle">Projeto de lei propõe multas de trânsito proporcionais à renda do infrator, buscando maior justiça nas punições.</h2>									<div class="post-meta-wrap clearfix">
+										<div class="post-meta single-post-meta">
+			<a href="https://newsmotor.com.br/author/renatosoares/"
+		   title="Artigos de autor"
+		   class="post-author-a post-author-avatar">
+			<span class="post-author-name">Por <b>Renato Soares</b></span>		</a>
+		    
+                                                   
+			<span class="time"><time class="post-published updated"    datetime="2026-08-18T10:28:03-03:00"    >Em <b>18/08/2026 - 10:28</b></time></span>
+			</div>
+									</div>
+																	<div class="single-featured">
+																	</div>
+										<div class="post-share single-post-share top-share clearfix style-13">
+			<div class="post-share-btn-group">
+							</div>
+						<div class="share-handler-wrap bs-pretty-tabs-initialized">
+				<span class="share-handler post-share-btn rank-default">
+					<i class="bf-icon  fa fa-share-alt"></i>						<b class="text">Compartilhar</b>
+										</span>
+				<span class="social-item facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnewsmotor.com.br%2Fmais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona%2F" target="_blank" rel="nofollow noreferrer" class="bs-button-el" onclick="window.open(this.href, 'share-facebook','left=50,top=50,width=600,height=320,toolbar=0'); return false;"><span class="icon"><i class="bf-icon fa fa-facebook"></i></span></a></span><span class="social-item twitter"><a href="https://twitter.com/share?text=Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona&url=https%3A%2F%2Fnewsmotor.com.br%2Fmais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona%2F" target="_blank" rel="nofollow noreferrer" class="bs-button-el" onclick="window.open(this.href, 'share-twitter','left=50,top=50,width=600,height=320,toolbar=0'); return false;"><span class="icon"><i class="bf-icon fa fa-twitter"></i></span></a></span><span class="social-item whatsapp"><a href="whatsapp://send?text=Mais rico, mais caro? Nova lei quer cobrar multa de trânsito conforme sua renda; veja como funciona %0A%0A https%3A%2F%2Fnewsmotor.com.br%2Fmais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona%2F" target="_blank" rel="nofollow noreferrer" class="bs-button-el" onclick="window.open(this.href, 'share-whatsapp','left=50,top=50,width=600,height=320,toolbar=0'); return false;"><span class="icon"><i class="bf-icon fa fa-whatsapp"></i></span></a></span><span class="social-item email"><a href="/cdn-cgi/l/email-protection#83bcf0f6e1e9e6e0f7becee2eaf0a3f1eae0ecafa3eee2eaf0a3e0e2f1ecbca3cdecf5e2a3efe6eaa3f2f6e6f1a3e0ece1f1e2f1a3eef6eff7e2a3e7e6a3f7f14021edf0eaf7eca3e0ecede5ecf1eee6a3f0f6e2a3f1e6ede7e2b8a3f5e6e9e2a3e0eceeeca3e5f6ede0eaecede2a5e1ece7fabeebf7f7f3f0a6b0c2a6b1c5a6b1c5ede6f4f0eeecf7ecf1ade0eceeade1f1a6b1c5eee2eaf0aef1eae0ecaeeee2eaf0aee0e2f1ecaeedecf5e2aeefe6eaaef2f6e6f1aee0ece1f1e2f1aeeef6eff7e2aee7e6aef7f1e2edf0eaf7ecaee0ecede5ecf1eee6aef0f6e2aef1e6ede7e2aef5e6e9e2aee0eceeecaee5f6ede0eaecede2a6b1c5" target="_blank" rel="nofollow noreferrer" class="bs-button-el" onclick="window.open(this.href, 'share-email','left=50,top=50,width=600,height=320,toolbar=0'); return false;"><span class="icon"><i class="bf-icon fa fa-envelope-open"></i></span></a></span></div>		</div>
+									</div>
+														<div class="entry-content clearfix single-post-content">
+								<div class="igjtbqxswl igjtbqxswl-post-top igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-516809696" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div><p>A discussão sobre justiça no trânsito acaba de ganhar um novo capítulo no Brasil, e pode impactar diretamente milhões de <a href="https://newsmotor.com.br/motoristas-estao-correndo-atras-parceria-entre-localiza-e-uber-promete-economia-de-ate-r-13-mil/" target="_blank" rel="nofollow"><b>motoristas</b></a>. Um projeto em análise na Câmara dos Deputados propõe uma mudança significativa: tornar a multa de trânsito proporcional à renda do infrator.</p>
+ <p> A ideia, que já é realidade em alguns países da Europa, busca corrigir uma distorção histórica no sistema atual, onde ricos e pobres pagam o mesmo valor por infrações idênticas.</p>
+<div class="bs-irp center bs-irp-thumbnail-1-full">
+
+	<div class="bs-irp-heading">
+		<span class="h-text heading-typo">Matérias relacionadas</span>
+	</div>
+
+			<div class="bs-pagination-wrapper main-term-none none ">
+			<div class="listing listing-thumbnail listing-tb-1 clearfix columns-2">
+		<div class="post-44901 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-1 main-term-1">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="Por que o Brasil ainda não produz baterias de carros elétricos?" data-src="https://newsmotor.com.br/wp-content/uploads/2026/10/brasil-bateria-de-litio-2-86x64.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/10\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;brasil-bateria-de-litio-2-86x64.png&quot;,&quot;210&quot;:&quot;brasil-bateria-de-litio-2-210x136.png&quot;,&quot;1672&quot;:&quot;brasil-bateria-de-litio-2.png&quot;}}"						class="img-holder" href="https://newsmotor.com.br/por-que-o-brasil-ainda-nao-produz-baterias-de-carros-eletricos/"></a>
+							</div>
+		<p class="title">		<a href="https://newsmotor.com.br/por-que-o-brasil-ainda-nao-produz-baterias-de-carros-eletricos/" class="post-url post-title">
+			Por que o Brasil ainda não produz baterias de carros&hellip;		</a>
+		</p>	</div>
+	</div >
+	<div class="post-44895 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-1 main-term-1">
+	<div class="item-inner clearfix">
+					<div class="featured featured-type-featured-image">
+				<a  title="A Lei Seca mudou? Veja o que acontece com quem dirige alcoolizado em 2026" data-src="https://newsmotor.com.br/wp-content/uploads/2026/09/lei-seca-2-86x64.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;lei-seca-2-86x64.png&quot;,&quot;210&quot;:&quot;lei-seca-2-210x136.png&quot;,&quot;1672&quot;:&quot;lei-seca-2.png&quot;}}"						class="img-holder" href="https://newsmotor.com.br/a-lei-seca-mudou-veja-o-que-acontece-com-quem-dirige-alcoolizado-em-2026/"></a>
+							</div>
+		<p class="title">		<a href="https://newsmotor.com.br/a-lei-seca-mudou-veja-o-que-acontece-com-quem-dirige-alcoolizado-em-2026/" class="post-url post-title">
+			A Lei Seca mudou? Veja o que acontece com quem dirige&hellip;		</a>
+		</p>	</div>
+	</div >
+	</div>
+	
+	</div></div> <p>Mas afinal, o que pode mudar na prática? E como isso afeta o bolso e o comportamento dos condutores? Entenda os principais pontos da proposta e os possíveis impactos dessa transformação.</p>
+<div class="igjtbqxswl igjtbqxswl-post-inline igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-1196265491" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div> <h2>Multa proporcional à renda: o que diz o projeto?</h2>
+ <p><img style="margin: auto"  data-src="https://newsmotor.com.br/wp-content/uploads/2026/04/multa-carro-internet.jpg"></p>
+<div class="igjtbqxswl igjtbqxswl-post-inline igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-530651117" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div> <p><i>Foto: Shutterstock</i></p>
+ <p>Apresentado pelo deputado Kim Kataguiri, o projeto de lei sugere que o valor das multas de trânsito no Brasil deixe de ser fixo e passe a considerar a capacidade financeira do motorista.</p>
+ <p>Hoje, o sistema funciona de forma padronizada:</p>
+ <ul>
+<li><b>Infrações leves:</b> R$ 88,38;</li>
+<li><b>Infrações médias:</b> R$ 130,16;</li>
+<li><b>Infrações graves:</b> R$ 195,23;</li>
+<li><b>Infrações gravíssimas:</b> R$ 293,47.</li>
+</ul>
+<div class="igjtbqxswl igjtbqxswl-post-inline igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-526645039" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div> <p>Independentemente da renda do condutor, esses valores são os mesmos, o que, segundo especialistas, reduz o efeito educativo das penalidades, especialmente entre motoristas de maior poder aquisitivo. A proposta, portanto, segue o princípio da equidade, onde a punição tem impacto proporcional para todos.</p>
+ <h2>Modelo já adotado em outros países</h2>
+ <p>A ideia de multas proporcionais à renda não é inédita. Países europeus, como Finlândia e Suíça, já utilizam esse sistema com resultados considerados positivos.</p>
+ <p>Nesses locais, o valor da penalidade pode variar drasticamente dependendo da renda do infrator. Em alguns casos, multas de trânsito chegam a valores altíssimos para motoristas milionários, justamente para garantir que a punição tenha efeito real e não seja ignorada. Esse modelo reforça um conceito importante: a multa deve educar, não apenas punir.</p>
+<div class="igjtbqxswl igjtbqxswl-post-inline igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-1391514961" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div> <h2>Radares visíveis: mais transparência na fiscalização</h2>
+ <p><img style="margin: auto"  data-src="https://newsmotor.com.br/wp-content/uploads/2026/04/radar-velocidade1.jpg"></p>
+ <p><i>Radar de velocidade (Foto: Divulgação)</i></p>
+ <p>Outro ponto relevante do projeto trata da fiscalização eletrônica de <a href="https://newsmotor.com.br/nao-se-fala-mais-acidente-de-transito-entenda-por-que-agora-agora-e-sinistro-de-transito/" target="_blank"><b>trânsito</b></a>. A proposta determina que radares e dispositivos de controle de velocidade devem ser claramente visíveis e devidamente sinalizados.</p>
+ <p>Caso contrário:</p>
+ <ul>
+<li>A autuação poderá ser considerada inválida;</li>
+<li>Penalidades aplicadas poderão ser anuladas.</li>
+</ul>
+ <p>Segundo o autor, o objetivo é acabar com a chamada “indústria da multa” e reforçar o caráter preventivo e educativo da fiscalização. A lógica é simples: quando o motorista sabe que está sendo monitorado, tende a reduzir a velocidade de forma consciente, e não apenas reagir após ser penalizado.</p>
+ <h2>Impactos para motoristas e para o sistema de trânsito</h2>
+ <p>Se aprovado, o projeto pode promover uma mudança profunda na forma como as infrações de trânsito são tratadas no Brasil.</p>
+ <p>Entre os principais impactos esperados estão:</p>
+ <ul>
+<li>Maior justiça social, com penalidades proporcionais à realidade econômica;</li>
+<li>Aumento do efeito educativo das multas;</li>
+<li>Redução de abusos na fiscalização eletrônica;</li>
+<li>Mudança no comportamento dos condutores, especialmente em relação à <a href="https://newsmotor.com.br/polemica-no-transito-radar-de-velocidade-media-pode-ser-ilegal/" target="_blank"><b>velocidade</b></a>.</li>
+</ul>
+ <p>Por outro lado, especialistas apontam desafios, como a necessidade de acesso a dados confiáveis de renda e a complexidade na aplicação prática da medida.</p>
+ <h2>Um novo caminho para um trânsito mais justo?</h2>
+ <p>A proposta de <b>multa proporcional à renda</b> levanta um debate importante sobre igualdade e eficiência no trânsito brasileiro. Ao alinhar o valor das penalidades à condição econômica do motorista, o projeto busca tornar o sistema mais justo, transparente e educativo.</p>
+ <p>Ainda em fase de análise nas comissões da Câmara, a medida pode representar um divisor de águas na legislação de trânsito. Caso avance, o Brasil poderá seguir o exemplo de países que já adotam esse modelo com sucesso, e dar um passo importante rumo a um trânsito mais equilibrado e consciente.</p> <div class="igjtbqxswl igjtbqxswl-post-bottom igjtbqxswl-float-center igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-1733-15603918" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="1733" data-type="custom_code"><div class="ads-conteudo-responsivo">
+<ins class="adsbygoogle banner-ads-conteudo"
+     style="display:inline-block"
+     data-ad-client="ca-pub-5093303690767088"
+     data-ad-slot="5711302812"></ins>
+<script type="text/rocketlazyloadscript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></div>							</div>
+								<div class="entry-terms post-tags clearfix ">
+		<span class="terms-label"><i class="fa fa-tags"></i></span>
+		<a href="https://newsmotor.com.br/multas-de-transito/" rel="tag">multas de trânsito</a><a href="https://newsmotor.com.br/projeto-de-lei/" rel="tag">Projeto de Lei</a><a href="https://newsmotor.com.br/renda/" rel="tag">renda</a>	</div>
+						</article>
+						<div class="igjtbqxswl igjtbqxswl-post-before-author igjtbqxswl-pubadban igjtbqxswl-show-desktop igjtbqxswl-show-tablet-portrait igjtbqxswl-show-tablet-landscape igjtbqxswl-show-phone igjtbqxswl-loc-post_before_author_box igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"></div><section class="post-author clearfix">
+		<a href="https://newsmotor.com.br/author/renatosoares/"
+	   title="Artigos de autor">
+		<span class="post-author-avatar" itemprop="image"><img alt=''  data-src='https://secure.gravatar.com/avatar/0740f5bb7a6d7727344ffb8fcff6a1eb88a43c8e11fa25b9740d437b4521dc40?s=80&d=mm&r=g' class='avatar avatar-80 photo avatar-default' height='80' width='80' /></span>
+	</a>
+
+	<div class="author-title heading-typo">
+		<a class="post-author-url" href="https://newsmotor.com.br/author/renatosoares/"><span class="post-author-name">Renato Soares</span></a>
+
+		
+			</div>
+
+	<div class="author-links">
+				<ul class="author-social-icons">
+							<li class="social-item linkedin">
+					<a href="https://www.linkedin.com/in/renato-soares-510848123/"
+					   target="_blank"
+					   rel="nofollow noreferrer"><i class="fa fa-linkedin"></i></a>
+				</li>
+						</ul>
+			</div>
+
+	<div class="post-author-bio" itemprop="description">
+		<p>Formado em Publicidade e Propaganda pela UFG, deu seus primeiros passos como redator júnior na agência experimental Inova. Dos estágios, atuou como assessor de comunicação na Assembleia Legislativa de Goiás e produtor de conteúdo na empresa VS3 Digital.</p>
+	</div>
+
+</section>
+					</div>
+					<div class="post-related">
+
+	<div class="section-heading sh-t5 sh-s1 ">
+
+					<span class="h-text related-posts-heading">você pode gostar também</span>
+		
+	</div>
+
+	
+					<div class="bs-pagination-wrapper main-term-none  ">
+			<div class="listing listing-thumbnail listing-tb-2 clearfix  scolumns-3 simple-grid">
+	<div  class="post-44890 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Multa de R$ 17,5 mil: passageiro é suspenso por 6 meses após urinar em área de serviço do avião" data-src="https://newsmotor.com.br/wp-content/uploads/2026/09/passageiro-suspensao-anac-2-210x136.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;passageiro-suspensao-anac-2-86x64.png&quot;,&quot;210&quot;:&quot;passageiro-suspensao-anac-2-210x136.png&quot;,&quot;279&quot;:&quot;passageiro-suspensao-anac-2-279x220.png&quot;,&quot;357&quot;:&quot;passageiro-suspensao-anac-2-357x210.png&quot;,&quot;750&quot;:&quot;passageiro-suspensao-anac-2-750x430.png&quot;,&quot;1448&quot;:&quot;passageiro-suspensao-anac-2.png&quot;}}"					class="img-holder" href="https://newsmotor.com.br/multa-de-r-175-mil-passageiro-e-suspenso-por-6-meses-apos-urinar-em-area-de-servico-do-aviao/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/multa-de-r-175-mil-passageiro-e-suspenso-por-6-meses-apos-urinar-em-area-de-servico-do-aviao/" title="Multa de R$ 17,5 mil: passageiro é suspenso por 6 meses após urinar em área de serviço do avião">
+			<span class="post-title">
+				Multa de R$ 17,5 mil: passageiro é suspenso por 6 meses após urinar em área de&hellip;			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-44879 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Esqueceu o triângulo? Veja quando isso pode render multa de R$ 195,23" data-src="https://newsmotor.com.br/wp-content/uploads/2026/09/triangulo-na-pista-2-210x136.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;triangulo-na-pista-2-86x64.png&quot;,&quot;210&quot;:&quot;triangulo-na-pista-2-210x136.png&quot;,&quot;279&quot;:&quot;triangulo-na-pista-2-279x220.png&quot;,&quot;357&quot;:&quot;triangulo-na-pista-2-357x210.png&quot;,&quot;750&quot;:&quot;triangulo-na-pista-2-750x430.png&quot;,&quot;1536&quot;:&quot;triangulo-na-pista-2.png&quot;}}"					class="img-holder" href="https://newsmotor.com.br/esqueceu-o-triangulo-veja-quando-isso-pode-render-multa-de-r-19523/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/esqueceu-o-triangulo-veja-quando-isso-pode-render-multa-de-r-19523/" title="Esqueceu o triângulo? Veja quando isso pode render multa de R$ 195,23">
+			<span class="post-title">
+				Esqueceu o triângulo? Veja quando isso pode render multa de R$ 195,23			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-44851 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Tem 60 anos ou mais? Veja como tirar a credencial de estacionamento sem sair de casa" data-src="https://newsmotor.com.br/wp-content/uploads/2024/07/cartao-de-estacionamento-idoso-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2024\/07\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;cartao-de-estacionamento-idoso-86x64.jpg&quot;,&quot;210&quot;:&quot;cartao-de-estacionamento-idoso-210x136.jpg&quot;,&quot;279&quot;:&quot;cartao-de-estacionamento-idoso-279x220.jpg&quot;,&quot;357&quot;:&quot;cartao-de-estacionamento-idoso-357x210.jpg&quot;,&quot;750&quot;:&quot;cartao-de-estacionamento-idoso-750x430.jpg&quot;,&quot;1200&quot;:&quot;cartao-de-estacionamento-idoso.jpg&quot;}}"					class="img-holder" href="https://newsmotor.com.br/tem-60-anos-ou-mais-veja-como-tirar-a-credencial-de-estacionamento-sem-sair-de-casa/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/tem-60-anos-ou-mais-veja-como-tirar-a-credencial-de-estacionamento-sem-sair-de-casa/" title="Tem 60 anos ou mais? Veja como tirar a credencial de estacionamento sem sair de casa">
+			<span class="post-title">
+				Tem 60 anos ou mais? Veja como tirar a credencial de estacionamento sem sair de casa			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-44835 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Motoristas fazem para ganhar tempo, mas essa manobra na estrada pode terminar em tragédia" data-src="https://newsmotor.com.br/wp-content/uploads/2026/09/ultrapassagem-5-210x136.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2026\/09\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;ultrapassagem-5-86x64.png&quot;,&quot;210&quot;:&quot;ultrapassagem-5-210x136.png&quot;,&quot;279&quot;:&quot;ultrapassagem-5-279x220.png&quot;,&quot;357&quot;:&quot;ultrapassagem-5-357x210.png&quot;,&quot;750&quot;:&quot;ultrapassagem-5-750x430.png&quot;,&quot;1704&quot;:&quot;ultrapassagem-5.png&quot;}}"					class="img-holder" href="https://newsmotor.com.br/motoristas-fazem-para-ganhar-tempo-mas-essa-manobra-na-estrada-pode-terminar-em-tragedia/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/motoristas-fazem-para-ganhar-tempo-mas-essa-manobra-na-estrada-pode-terminar-em-tragedia/" title="Motoristas fazem para ganhar tempo, mas essa manobra na estrada pode terminar em tragédia">
+			<span class="post-title">
+				Motoristas fazem para ganhar tempo, mas essa manobra na estrada pode terminar em&hellip;			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-44831 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Por que os postos de combustível pedem o CPF ao abastecer?" data-src="https://newsmotor.com.br/wp-content/uploads/2025/07/pagamento-posto-de-combustivel-210x136.jpg" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2025\/07\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;pagamento-posto-de-combustivel-86x64.jpg&quot;,&quot;210&quot;:&quot;pagamento-posto-de-combustivel-210x136.jpg&quot;,&quot;279&quot;:&quot;pagamento-posto-de-combustivel-279x220.jpg&quot;,&quot;357&quot;:&quot;pagamento-posto-de-combustivel-357x210.jpg&quot;,&quot;750&quot;:&quot;pagamento-posto-de-combustivel-750x430.jpg&quot;,&quot;2121&quot;:&quot;pagamento-posto-de-combustivel.jpg&quot;}}"					class="img-holder" href="https://newsmotor.com.br/por-que-os-postos-de-combustivel-pedem-o-cpf-ao-abastecer/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/por-que-os-postos-de-combustivel-pedem-o-cpf-ao-abastecer/" title="Por que os postos de combustível pedem o CPF ao abastecer?">
+			<span class="post-title">
+				Por que os postos de combustível pedem o CPF ao abastecer?			</span>
+	</a>
+	</p></div>
+</div >
+<div  class="post-44809 type-post format-standard has-post-thumbnail   listing-item listing-item-thumbnail listing-item-tb-2 main-term-1">
+<div class="item-inner clearfix">
+			<div class="featured featured-type-featured-image">
+			<div class="term-badges floated"><span class="term-badge term-1"><a href="https://newsmotor.com.br/noticias/">Notícias</a></span></div>			<a  title="Duvidou da gasolina? Veja se o posto de combustível é obrigado a testar a qualidade do produto" data-src="https://newsmotor.com.br/wp-content/uploads/2024/10/gasolina-com-dipirona-210x136.png" data-bs-srcset="{&quot;baseurl&quot;:&quot;https:\/\/newsmotor.com.br\/wp-content\/uploads\/2024\/10\/&quot;,&quot;sizes&quot;:{&quot;86&quot;:&quot;gasolina-com-dipirona-86x64.png&quot;,&quot;210&quot;:&quot;gasolina-com-dipirona-210x136.png&quot;,&quot;279&quot;:&quot;gasolina-com-dipirona-279x220.png&quot;,&quot;357&quot;:&quot;gasolina-com-dipirona-357x210.png&quot;,&quot;750&quot;:&quot;gasolina-com-dipirona-750x430.png&quot;,&quot;1300&quot;:&quot;gasolina-com-dipirona.png&quot;}}"					class="img-holder" href="https://newsmotor.com.br/duvidou-da-gasolina-veja-se-o-posto-de-combustivel-e-obrigado-a-testar-a-qualidade-do-produto/"></a>
+					</div>
+	<p class="title">	<a class="post-url" href="https://newsmotor.com.br/duvidou-da-gasolina-veja-se-o-posto-de-combustivel-e-obrigado-a-testar-a-qualidade-do-produto/" title="Duvidou da gasolina? Veja se o posto de combustível é obrigado a testar a qualidade do produto">
+			<span class="post-title">
+				Duvidou da gasolina? Veja se o posto de combustível é obrigado a testar a qualidade&hellip;			</span>
+	</a>
+	</p></div>
+</div >
+	</div>
+	
+	</div></div>
+<div class="igjtbqxswl igjtbqxswl-after-related igjtbqxswl-pubadban igjtbqxswl-show-desktop igjtbqxswl-show-tablet-portrait igjtbqxswl-show-tablet-landscape igjtbqxswl-show-phone igjtbqxswl-loc-post_after_related igjtbqxswl-align-center igjtbqxswl-column-1 igjtbqxswl-clearfix no-bg-box-model"><div id="igjtbqxswl-8323-1760932219" class="igjtbqxswl-container igjtbqxswl-type-custom_code " itemscope="" itemtype="https://schema.org/WPAdBlock" data-adid="8323" data-type="custom_code"><div id="taboola-below-article-thumbnails"></div>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'alternating-thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script></div></div>				</div><!-- .content-column -->
+
+			</div><!-- .main-section -->
+		</div><!-- .layout-2-col -->
+
+	</main><!-- main -->
+	</div><!-- .content-wrap -->
+	<footer data-rocket-location-hash="775565cfbbe6d573477834c18029deb1" id="site-footer" class="site-footer full-width">
+				<div data-rocket-location-hash="acf4d79c3e35971ea892d89e70d6e5c9" class="copy-footer">
+			<div class="content-wrap">
+				<div class="container">
+						<div class="row">
+		<div class="col-lg-12">
+			<div id="menu-footer" class="menu footer-menu-wrapper" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+				<nav class="footer-menu-container">
+					<ul id="footer-navigation" class="footer-menu menu clearfix">
+						<li id="menu-item-1089" class="menu-item menu-item-type-custom menu-item-object-custom better-anim-fade menu-item-1089"><a href="https://newsmotor.com.br/politica-de-privacidade/">Política de Privacidade</a></li>
+<li id="menu-item-2797" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-2797"><a href="https://newsmotor.com.br/termos-e-condicoes/">Termos e Condições</a></li>
+<li id="menu-item-2796" class="menu-item menu-item-type-post_type menu-item-object-page better-anim-fade menu-item-2796"><a href="https://newsmotor.com.br/expediente/">Expediente</a></li>
+<li id="menu-item-1090" class="menu-item menu-item-type-custom menu-item-object-custom better-anim-fade menu-item-1090"><a href="https://newsmotor.com.br/contato/">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+					<div class="row footer-copy-row">
+						<div class="copy-1 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							© 2026 - News MOTOR. Todos os direitos reservados, a cópia total ou parcial é proibida sem prévia permissão.						</div>
+						<div class="copy-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							Grupo <strong>VS3 Digital LTDA</strong><br>
+22.140.212/0001-07						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- .footer -->
+		</div><!-- .main-wrap -->
+		
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/publisher-child/*","/wp-content/themes/publisher/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div data-rocket-location-hash="f0b30135ddbeaf715106b0dcfa6e543c" id="fb-root"></div>
+		<script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+			(function () {
+
+    function appendFbScript() {
+        var js, id = 'facebook-jssdk',
+            fjs = document.getElementsByTagName('script')[0];
+
+        if (document.getElementById(id)) return;
+        js = document.createElement('script');
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=404870521076862&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '404870521076862',
+                xfbml: true,
+                version: 'v2.0'
+            });
+            FB.Event.subscribe('comment.create', function (comment_data) {
+                console.log(comment_data);
+                update_comments_count();
+            });
+            FB.Event.subscribe('comment.remove', function (comment_data) {
+                update_comments_count();
+            });
+
+            function update_comments_count(comment_data, comment_action) {
+                jQuery.ajax({
+                        type: 'GET',
+                        dataType: 'json',
+                        url: 'https://newsmotor.com.br/wp-admin/admin-ajax.php',
+                        data: {
+                            action: 'clear_better_facebook_comments',
+                            post_id: '43826'
+                        },
+                        success: function (data) {
+                            // todo sync comments count here! data have the counts
+                        },
+                        error: function (i, b) {
+                            // todo
+                        }
+                    }
+                )
+            };
+        };
+
+        appendFbScript();
+    }
+
+    appendFbScript();
+
+})();
+		});</script>
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJV7RBDH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google tag (gtag.js) -->
+<script type="text/rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-QSWQ1MJS3S"></script>
+<script type="text/rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QSWQ1MJS3S');
+</script>
+
+
+<!-- taboola -->
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
+<!-- fim taboola -->
+			<style type="text/css" media="print">
+
+				* {
+					display: none !important;
+				}
+
+				body, html {
+					display: block !important;
+				}
+
+				#cpp-print-disabled {
+					top: 0;
+					left: 0;
+					color: #111;
+					width: 100%;
+					height: 100%;
+					min-height: 400px;
+					z-index: 9999;
+					position: fixed;
+					font-size: 30px;
+					text-align: center;
+					background: #fcfcfc;
+
+					padding-top: 200px;
+
+					display: block !important;
+				}
+			</style>
+
+			<div data-rocket-location-hash="13ad58c437a826b3fc4ca56a9a233add" id="cpp-print-disabled" style="display: none;">
+				You cannot print contents of this website.			</div>
+
+			<script type="text/javascript" id="publisher-theme-pagination-js-extra">
+/* <![CDATA[ */
+var bs_pagination_loc = {"loading":"\u003Cdiv class=\"bs-loading\"\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E"};
+//# sourceURL=publisher-theme-pagination-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="content-protector-pack-js-extra">
+/* <![CDATA[ */
+var cpp_loc = {"opt-3":["message","Iframe requests are blocked.",""]};
+//# sourceURL=content-protector-pack-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="publisher-js-extra">
+/* <![CDATA[ */
+var publisher_theme_global_loc = {"page":{"boxed":"full-width"},"header":{"style":"style-5","boxed":"out-full-width"},"ajax_url":"https://newsmotor.com.br/wp-admin/admin-ajax.php","loading":"\u003Cdiv class=\"bs-loading\"\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003Cdiv\u003E\u003C/div\u003E\u003C/div\u003E","translations":{"tabs_all":"Todos","tabs_more":"Mais","lightbox_expand":"Expandir imagem","lightbox_close":"Fechar"},"lightbox":{"not_classes":""},"main_menu":{"more_menu":"enable"},"top_menu":{"more_menu":"enable"},"skyscraper":{"sticky_gap":30,"sticky":true,"position":""},"share":{"more":false},"refresh_googletagads":"1","get_locale":"pt-BR","notification":{"subscribe_msg":"By clicking the subscribe button you will never miss the new articles!","subscribed_msg":"You're subscribed to notifications","subscribe_btn":"Subscribe","subscribed_btn":"Unsubscribe"}};
+var publisher_theme_ajax_search_loc = {"ajax_url":"https://newsmotor.com.br/wp-admin/admin-ajax.php","previewMarkup":"\u003Cdiv class=\"ajax-search-results-wrapper ajax-search-no-product\"\u003E\n\t\u003Cdiv class=\"ajax-search-results\"\u003E\n\t\t\u003Cdiv class=\"ajax-ajax-posts-list\"\u003E\n\t\t\t\u003Cdiv class=\"ajax-posts-column\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003EMat\u00e9rias\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"posts\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\u003C/div\u003E\n\t\t\u003Cdiv class=\"ajax-taxonomy-list\"\u003E\n\t\t\t\u003Cdiv class=\"ajax-categories-columns\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003ECategorias\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"categories\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\t\u003Cdiv class=\"ajax-tags-columns\"\u003E\n\t\t\t\t\u003Cdiv class=\"clean-title heading-typo\"\u003E\n\t\t\t\t\t\u003Cspan\u003EAssuntos\u003C/span\u003E\n\t\t\t\t\u003C/div\u003E\n\t\t\t\t\u003Cdiv class=\"posts-lists\" data-section-name=\"tags\"\u003E\u003C/div\u003E\n\t\t\t\u003C/div\u003E\n\t\t\u003C/div\u003E\n\t\u003C/div\u003E\n\u003C/div\u003E\n","full_width":"0"};
+//# sourceURL=publisher-js-extra
+/* ]]> */
+</script>
+		<div class="rh-cover noscroll gr-2 no-login-icon" >
+			<span class="rh-close"></span>
+			<div data-rocket-location-hash="aca92536c498a6102adb0e9fdcc5dcff" class="rh-panel rh-pm">
+				<div data-rocket-location-hash="56df0559a4e595f4b449410769daf47c" class="rh-p-h">
+									</div>
+
+				<div data-rocket-location-hash="7a9b471dc15a254e8692ee6a7b981ec3" class="rh-p-b">
+										<div class="rh-c-m clearfix"><ul id="resp-navigation" class="resp-menu menu clearfix"><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-term-1 better-anim-fade menu-item-2147"><a href="https://newsmotor.com.br/noticias/">Notícias</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-850 better-anim-fade menu-item-4983"><a href="https://newsmotor.com.br/noticias/carros/">Carros</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-849 better-anim-fade menu-item-4984"><a href="https://newsmotor.com.br/noticias/motos/">Motos</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-851 better-anim-fade menu-item-4985"><a href="https://newsmotor.com.br/noticias/oficina/">Oficina</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-167 better-anim-fade menu-item-2145"><a href="https://newsmotor.com.br/artigos/">Artigos</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-term-182 better-anim-fade menu-item-2146"><a href="https://newsmotor.com.br/artigos/lista-top/">Top+</a></li>
+</ul></div>
+
+											<form role="search" method="get" class="search-form" action="https://newsmotor.com.br">
+							<input type="search" class="search-field"
+							       placeholder="Pesquisa..."
+							       value="" name="s"
+							       title="Procurar por:"
+							       autocomplete="off">
+							<input type="submit" class="search-submit" value="">
+						</form>
+										</div>
+			</div>
+					</div>
+		<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://newsmotor.com.br","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://newsmotor.com.br/wp-includes/js/comment-reply.min.js?ver=6.9" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://newsmotor.com.br/wp-content/plugins/better-adsmanager/js/advertising.min.js?ver=1.21.0" id="better-advertising-js" data-rocket-defer defer></script>
+<script type="text/rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" async="async" data-rocket-src="https://newsmotor.com.br/wp-content/cache/min/1/wp-content/bs-booster-cache/46b5738e2f05897cffb068a777cba126.js?ver=1786561500" id="bs-booster-js"></script>
+
+<script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+var igjtbqxswl=function(t){"use strict";return{init:function(){0==igjtbqxswl.ads_state()&&igjtbqxswl.blocked_ads_fallback()},ads_state:function(){return void 0!==window.better_ads_adblock},blocked_ads_fallback:function(){var a=[];t(".igjtbqxswl-container").each(function(){if("image"==t(this).data("type"))return 0;a.push({element_id:t(this).attr("id"),ad_id:t(this).data("adid")})}),a.length<1||jQuery.ajax({url:'https://newsmotor.com.br/wp-admin/admin-ajax.php',type:"POST",data:{action:"better_ads_manager_blocked_fallback",ads:a},success:function(a){var e=JSON.parse(a);t.each(e.ads,function(a,e){t("#"+e.element_id).html(e.code)})}})}}}(jQuery);jQuery(document).ready(function(){igjtbqxswl.init()});
+
+});</script>
+
+<!-- BetterFramework Footer Inline JS -->
+<script type="text/rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+ var disqus_shortname = 'newsmotor';
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+		//<script>
+
+		(function(){
+		var disqus_shortname = 'newsmotor';
+
+
+		function beforeLoad(e,$wrapper, $this) {
+
+             var $prevEl = jQuery('#disqus_thread');
+
+             if($prevEl.length === 0) {
+                 return;
+             }
+
+            $prevEl.removeAttr('id');
+
+            $prevEl.addClass('disqus_thread_prev');
+		}
+
+		function appendDisqusScript(e,$wrapper, res) {
+
+		if( typeof DISQUS === 'object' && DISQUS.reset ) {
+
+        var info = res && res.info ? res.info : {};
+
+
+		jQuery(".disqus_thread_prev").each(function(){
+
+		    var $prevEl = jQuery(this),
+		        $respond = $prevEl.closest('.comments-template'),
+		     $link = $respond.parent().find('.ajaxified-comments-container');
+
+            $link.show();
+			$link.children().show();
+
+			$respond.remove();
+
+		});
+
+		DISQUS.reset({
+		reload: true,
+		config: function () {
+		this.page.identifier = info.post_id;
+		this.page.url = info.permalink;
+		this.page.title = info.title;
+		}
+		});
+
+
+
+		} else {
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		}
+
+		};
+
+		        appendDisqusScript();
+		
+		})();
+		
+
+});</script>
+<!-- /BetterFramework Footer Inline JS-->
+
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/newsmotor.com.br\/wp-admin\/admin-ajax.php","nonce":"0456dfa45e","url":"https:\/\/newsmotor.com.br\/mais-rico-mais-caro-nova-lei-quer-cobrar-multa-de-transito-conforme-sua-renda-veja-como-funciona","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='https://newsmotor.com.br/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1790873586 -->

@@ -1,0 +1,898 @@
+{
+  "id" : "hhkd-xvj4",
+  "name" : "Speed Camera Violations",
+  "assetType" : "dataset",
+  "attribution" : "City of Chicago",
+  "attributionLink" : "http://www.cityofchicago.org",
+  "averageRating" : 0,
+  "category" : "Transportation",
+  "createdAt" : 1407458008,
+  "description" : "This dataset reflects the daily volume of violations that have occurred in Children's Safety Zones for each camera. The data reflects violations that occurred from July 1, 2014 until present, minus the most recent 14 days. This data may change due to occasional time lags between the capturing of a potential violation and the processing and determination of a violation. The most recent 14 days are not shown due to revised data being submitted to the City of Chicago. The reported violations are those that have been collected by the camera and radar system and reviewed by two separate City contractors. In some instances, due to the inability the registered owner of the offending vehicle, the violation may not be issued as a citation. However, this dataset contains all violations regardless of whether a citation was issued, which provides an accurate view into the Automated Speed Enforcement Program violations taking place in Children's Safety Zones. More information on the Safety Zone Program can be found here: http://www.cityofchicago.org/city/en/depts/cdot/supp_info/children_s_safetyzoneporgramautomaticspeedenforcement.html. The corresponding dataset for red light camera violations is https://data.cityofchicago.org/id/spqx-js37.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 14496,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "indexUpdatedAt" : 1555928473,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 24980332,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1480461404,
+  "publicationGroup" : 1676261,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1790935575,
+  "rowsUpdatedBy" : "n9j5-zhen",
+  "tableId" : 13926705,
+  "totalTimesRated" : 0,
+  "viewCount" : 57161,
+  "viewLastModified" : 1790935479,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1480461404,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 947366,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1480461404,
+    "targetAudience" : "public",
+    "workflowId" : 2226,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "scy9-9wg4",
+      "displayName" : "cocadmin"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 279481847,
+    "name" : "ADDRESS",
+    "dataTypeName" : "text",
+    "description" : "Address of the location of the speed enforcement camera(s). There may be more than one camera at each address.",
+    "fieldName" : "address",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 21270995,
+    "width" : 184,
+    "cachedContents" : {
+      "largest" : "9618 S EWING AVE",
+      "non_null" : "481786",
+      "null" : "0",
+      "top" : [ {
+        "item" : "6226 W IRVING PARK RD",
+        "count" : "4417"
+      }, {
+        "item" : "2900 W OGDEN",
+        "count" : "4409"
+      }, {
+        "item" : "1315 W GARFIELD BLVD",
+        "count" : "4408"
+      }, {
+        "item" : "2912 W ROOSEVELT",
+        "count" : "4405"
+      }, {
+        "item" : "6909 S KEDZIE",
+        "count" : "4405"
+      }, {
+        "item" : "115 N OGDEN",
+        "count" : "4400"
+      }, {
+        "item" : "445 W 127TH",
+        "count" : "4397"
+      }, {
+        "item" : "5471 W HIGGINS",
+        "count" : "4392"
+      }, {
+        "item" : "9618 S EWING AVE",
+        "count" : "4392"
+      }, {
+        "item" : "6818 S KEDZIE",
+        "count" : "4389"
+      }, {
+        "item" : "3646 W MADISON",
+        "count" : "4388"
+      }, {
+        "item" : "2080 W PERSHING",
+        "count" : "4387"
+      }, {
+        "item" : "2917 W ROOSEVELT",
+        "count" : "4387"
+      }, {
+        "item" : "62 E 95TH",
+        "count" : "4384"
+      }, {
+        "item" : "6523 N WESTERN",
+        "count" : "4383"
+      }, {
+        "item" : "1901 E 75TH ST",
+        "count" : "4378"
+      }, {
+        "item" : "5330 S COTTAGE GROVE",
+        "count" : "4378"
+      }, {
+        "item" : "1334 W GARFIELD BLVD",
+        "count" : "4370"
+      }, {
+        "item" : "515 S CENTRAL AVE",
+        "count" : "4364"
+      }, {
+        "item" : "536 E MORGAN DR",
+        "count" : "4362"
+      } ],
+      "smallest" : "10318 S INDIANAPOLIS",
+      "not_null" : "206749",
+      "count" : "481786",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "align" : "left",
+      "aggregate" : "count"
+    }
+  }, {
+    "id" : 279481848,
+    "name" : "CAMERA ID",
+    "dataTypeName" : "text",
+    "description" : "A unique ID associated with the physical camera at each location. There may be more than one camera at a physical address.",
+    "fieldName" : "camera_id",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 21489181,
+    "width" : 156,
+    "cachedContents" : {
+      "largest" : "CHIF257",
+      "non_null" : "481781",
+      "null" : "5",
+      "top" : [ {
+        "item" : "CHI083",
+        "count" : "4417"
+      }, {
+        "item" : "CHI021",
+        "count" : "4409"
+      }, {
+        "item" : "CHI121",
+        "count" : "4407"
+      }, {
+        "item" : "CHI020",
+        "count" : "4405"
+      }, {
+        "item" : "CHI014",
+        "count" : "4405"
+      }, {
+        "item" : "CHI077",
+        "count" : "4400"
+      }, {
+        "item" : "CHI045",
+        "count" : "4397"
+      }, {
+        "item" : "CHI142",
+        "count" : "4392"
+      }, {
+        "item" : "CHI102",
+        "count" : "4392"
+      }, {
+        "item" : "CHI018",
+        "count" : "4389"
+      }, {
+        "item" : "CHI009",
+        "count" : "4388"
+      }, {
+        "item" : "CHI005",
+        "count" : "4387"
+      }, {
+        "item" : "CHI019",
+        "count" : "4387"
+      }, {
+        "item" : "CHI036",
+        "count" : "4384"
+      }, {
+        "item" : "CHI051",
+        "count" : "4383"
+      }, {
+        "item" : "CHI013",
+        "count" : "4378"
+      }, {
+        "item" : "CHI138",
+        "count" : "4378"
+      }, {
+        "item" : "CHI119",
+        "count" : "4370"
+      }, {
+        "item" : "CHI057",
+        "count" : "4364"
+      }, {
+        "item" : "CHI029",
+        "count" : "4362"
+      } ],
+      "smallest" : "CHI003",
+      "not_null" : "206749",
+      "count" : "481786",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "align" : "left"
+    }
+  }, {
+    "id" : 279481849,
+    "name" : "VIOLATION DATE",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date of when the violations occurred. NOTE: The citation may be issued on a different date.",
+    "fieldName" : "violation_date",
+    "position" : 3,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 21270996,
+    "width" : 191,
+    "cachedContents" : {
+      "largest" : "2026-08-24T00:00:00.000",
+      "non_null" : "481786",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2026-02-25T00:00:00.000",
+        "count" : "204"
+      }, {
+        "item" : "2026-02-18T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2026-05-07T00:00:00.000",
+        "count" : "202"
+      }, {
+        "item" : "2026-04-30T00:00:00.000",
+        "count" : "201"
+      }, {
+        "item" : "2026-05-04T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2025-12-17T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-04-21T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-04-17T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-03-03T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-04-13T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-02-19T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2025-12-15T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-02-24T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-05-12T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-04-24T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-05-13T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-04-15T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-05-06T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2025-12-18T00:00:00.000",
+        "count" : "199"
+      }, {
+        "item" : "2026-05-05T00:00:00.000",
+        "count" : "199"
+      } ],
+      "smallest" : "2014-07-01T00:00:00.000",
+      "not_null" : "206749",
+      "count" : "481786",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "view" : "date",
+      "align" : "left"
+    }
+  }, {
+    "id" : 279481850,
+    "name" : "VIOLATIONS",
+    "dataTypeName" : "number",
+    "description" : "Number of violations for each camera on a particular day.",
+    "fieldName" : "violations",
+    "position" : 4,
+    "renderTypeName" : "number",
+    "tableColumnId" : 21270997,
+    "width" : 159,
+    "cachedContents" : {
+      "largest" : "1888.0",
+      "non_null" : "481786",
+      "average" : "28.30694747698621",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1.0",
+        "count" : "17693"
+      }, {
+        "item" : "2.0",
+        "count" : "17043"
+      }, {
+        "item" : "3.0",
+        "count" : "15766"
+      }, {
+        "item" : "4.0",
+        "count" : "15185"
+      }, {
+        "item" : "5.0",
+        "count" : "14211"
+      }, {
+        "item" : "6.0",
+        "count" : "13510"
+      }, {
+        "item" : "7.0",
+        "count" : "12876"
+      }, {
+        "item" : "8.0",
+        "count" : "12260"
+      }, {
+        "item" : "9.0",
+        "count" : "11454"
+      }, {
+        "item" : "10.0",
+        "count" : "11151"
+      }, {
+        "item" : "11.0",
+        "count" : "10418"
+      }, {
+        "item" : "12.0",
+        "count" : "9945"
+      }, {
+        "item" : "13.0",
+        "count" : "9225"
+      }, {
+        "item" : "14.0",
+        "count" : "8823"
+      }, {
+        "item" : "15.0",
+        "count" : "8390"
+      }, {
+        "item" : "16.0",
+        "count" : "8150"
+      }, {
+        "item" : "17.0",
+        "count" : "7714"
+      }, {
+        "item" : "18.0",
+        "count" : "7389"
+      }, {
+        "item" : "19.0",
+        "count" : "7238"
+      }, {
+        "item" : "20.0",
+        "count" : "6934"
+      } ],
+      "smallest" : "1.0",
+      "not_null" : "206749",
+      "count" : "481786",
+      "sum" : "5159847",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right",
+      "aggregate" : "sum"
+    }
+  }, {
+    "id" : 279481851,
+    "name" : "X COORDINATE",
+    "dataTypeName" : "number",
+    "description" : "The X Coordinate, measured in feet, of the location of the camera. Geocoded using Illinois State Plane East (ESRI:102671).",
+    "fieldName" : "x_coordinate",
+    "position" : 5,
+    "renderTypeName" : "number",
+    "tableColumnId" : 21626758,
+    "width" : 174,
+    "cachedContents" : {
+      "largest" : "1203645.3681409038",
+      "non_null" : "481786",
+      "average" : "1159656.688461853",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1133995.1699662597",
+        "count" : "4417"
+      }, {
+        "item" : "1157135.9195352602",
+        "count" : "4409"
+      }, {
+        "item" : "1168444.5300116285",
+        "count" : "4408"
+      }, {
+        "item" : "1156276.1751945594",
+        "count" : "4405"
+      }, {
+        "item" : "1157040.2126622703",
+        "count" : "4405"
+      }, {
+        "item" : "1166484.9018621587",
+        "count" : "4400"
+      }, {
+        "item" : "1175468.4458517502",
+        "count" : "4397"
+      }, {
+        "item" : "1202074.8768194832",
+        "count" : "4392"
+      }, {
+        "item" : "1139071.5296383528",
+        "count" : "4392"
+      }, {
+        "item" : "1156183.4762995045",
+        "count" : "4389"
+      }, {
+        "item" : "1151844.874455434",
+        "count" : "4388"
+      }, {
+        "item" : "1163048.1432631495",
+        "count" : "4387"
+      }, {
+        "item" : "1156991.6184733405",
+        "count" : "4387"
+      }, {
+        "item" : "1178615.953706069",
+        "count" : "4384"
+      }, {
+        "item" : "1159169.4522778771",
+        "count" : "4383"
+      }, {
+        "item" : "1190192.1101504266",
+        "count" : "4378"
+      }, {
+        "item" : "1182452.7250045135",
+        "count" : "4378"
+      }, {
+        "item" : "1168211.288538347",
+        "count" : "4370"
+      }, {
+        "item" : "1139183.475728337",
+        "count" : "4364"
+      }, {
+        "item" : "1139042.6593379958",
+        "count" : "4362"
+      } ],
+      "smallest" : "1121638.4975817117",
+      "not_null" : "198893",
+      "count" : "481786",
+      "sum" : "203324926501.393633891",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 279481852,
+    "name" : "Y COORDINATE",
+    "dataTypeName" : "number",
+    "description" : "The Y Coordinate, measured in feet, of the location of the camera. Geocoded using Illinois State Plane East (ESRI:102671).",
+    "fieldName" : "y_coordinate",
+    "position" : 6,
+    "renderTypeName" : "number",
+    "tableColumnId" : 21626759,
+    "width" : 180,
+    "cachedContents" : {
+      "largest" : "1947791.179257443",
+      "non_null" : "481786",
+      "average" : "1893457.232491370",
+      "null" : "0",
+      "top" : [ {
+        "item" : "1925971.2691506299",
+        "count" : "4417"
+      }, {
+        "item" : "1892361.6758987948",
+        "count" : "4409"
+      }, {
+        "item" : "1868118.434807671",
+        "count" : "4408"
+      }, {
+        "item" : "1894612.1281345985",
+        "count" : "4405"
+      }, {
+        "item" : "1858582.8941840022",
+        "count" : "4405"
+      }, {
+        "item" : "1900735.4865260937",
+        "count" : "4400"
+      }, {
+        "item" : "1820629.2285667122",
+        "count" : "4397"
+      }, {
+        "item" : "1841844.5766773936",
+        "count" : "4392"
+      }, {
+        "item" : "1931897.9375159435",
+        "count" : "4392"
+      }, {
+        "item" : "1859144.9939852983",
+        "count" : "4389"
+      }, {
+        "item" : "1899804.7533293061",
+        "count" : "4388"
+      }, {
+        "item" : "1894531.1384102742",
+        "count" : "4387"
+      }, {
+        "item" : "1878842.8506016694",
+        "count" : "4387"
+      }, {
+        "item" : "1842047.6219797",
+        "count" : "4384"
+      }, {
+        "item" : "1943341.864661525",
+        "count" : "4383"
+      }, {
+        "item" : "1869711.7935493758",
+        "count" : "4378"
+      }, {
+        "item" : "1855579.5231392845",
+        "count" : "4378"
+      }, {
+        "item" : "1868328.4656470816",
+        "count" : "4370"
+      }, {
+        "item" : "1896944.5811843819",
+        "count" : "4364"
+      }, {
+        "item" : "1868164.7664347866",
+        "count" : "4362"
+      } ],
+      "smallest" : "1820629.2285667122",
+      "not_null" : "198893",
+      "count" : "481786",
+      "sum" : "331983643487.176959995",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "true",
+      "align" : "right"
+    }
+  }, {
+    "id" : 279481853,
+    "name" : "LATITUDE",
+    "dataTypeName" : "number",
+    "description" : "The latitude of the physical location of the camera(s) based on the ADDRESS column. Geocoded using the WGS84.",
+    "fieldName" : "latitude",
+    "position" : 7,
+    "renderTypeName" : "number",
+    "tableColumnId" : 21418665,
+    "width" : 139,
+    "cachedContents" : {
+      "largest" : "42.01231615844323",
+      "non_null" : "481786",
+      "average" : "41.86334801818322",
+      "null" : "0",
+      "top" : [ {
+        "item" : "41.95307482555687",
+        "count" : "4417"
+      }, {
+        "item" : "41.86040786445197",
+        "count" : "4409"
+      }, {
+        "item" : "41.793645091444645",
+        "count" : "4408"
+      }, {
+        "item" : "41.76773186901884",
+        "count" : "4405"
+      }, {
+        "item" : "41.86658528313424",
+        "count" : "4405"
+      }, {
+        "item" : "41.883191521391076",
+        "count" : "4400"
+      }, {
+        "item" : "41.663174059325534",
+        "count" : "4397"
+      }, {
+        "item" : "41.72075680558273",
+        "count" : "4392"
+      }, {
+        "item" : "41.96924714863934",
+        "count" : "4392"
+      }, {
+        "item" : "41.769276221338444",
+        "count" : "4389"
+      }, {
+        "item" : "41.88093818643283",
+        "count" : "4388"
+      }, {
+        "item" : "41.866364024167034",
+        "count" : "4387"
+      }, {
+        "item" : "41.823188824691925",
+        "count" : "4387"
+      }, {
+        "item" : "41.72187849819265",
+        "count" : "4384"
+      }, {
+        "item" : "42.00025951144952",
+        "count" : "4383"
+      }, {
+        "item" : "41.758740770124234",
+        "count" : "4378"
+      }, {
+        "item" : "41.79770388561477",
+        "count" : "4378"
+      }, {
+        "item" : "41.79422646635146",
+        "count" : "4370"
+      }, {
+        "item" : "41.873329240103914",
+        "count" : "4364"
+      }, {
+        "item" : "41.793492645896656",
+        "count" : "4362"
+      } ],
+      "smallest" : "41.663174059325534",
+      "not_null" : "198893",
+      "count" : "481786",
+      "sum" : "7339984.534724101",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 279481854,
+    "name" : "LONGITUDE",
+    "dataTypeName" : "number",
+    "description" : "The longitude of the physical location of the camera(s) based on the ADDRESS column. Geocoded using the WGS84.",
+    "fieldName" : "longitude",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 21418664,
+    "width" : 152,
+    "cachedContents" : {
+      "largest" : "-87.52984826112849",
+      "non_null" : "481786",
+      "average" : "-87.68943167322758",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-87.78282553773761",
+        "count" : "4417"
+      }, {
+        "item" : "-87.69867209877323",
+        "count" : "4409"
+      }, {
+        "item" : "-87.6578607639445",
+        "count" : "4408"
+      }, {
+        "item" : "-87.69896237494204",
+        "count" : "4405"
+      }, {
+        "item" : "-87.70273790708362",
+        "count" : "4405"
+      }, {
+        "item" : "-87.66411469955516",
+        "count" : "4400"
+      }, {
+        "item" : "-87.63352045241697",
+        "count" : "4397"
+      }, {
+        "item" : "-87.53543678735923",
+        "count" : "4392"
+      }, {
+        "item" : "-87.76401945149458",
+        "count" : "4392"
+      }, {
+        "item" : "-87.70306259506",
+        "count" : "4389"
+      }, {
+        "item" : "-87.71789844857646",
+        "count" : "4388"
+      }, {
+        "item" : "-87.67734879498818",
+        "count" : "4387"
+      }, {
+        "item" : "-87.69914296647906",
+        "count" : "4387"
+      }, {
+        "item" : "-87.62135432849777",
+        "count" : "4384"
+      }, {
+        "item" : "-87.68980290863908",
+        "count" : "4383"
+      }, {
+        "item" : "-87.60644477865196",
+        "count" : "4378"
+      }, {
+        "item" : "-87.57851859043261",
+        "count" : "4378"
+      }, {
+        "item" : "-87.65870999891658",
+        "count" : "4370"
+      }, {
+        "item" : "-87.76446041521123",
+        "count" : "4364"
+      }, {
+        "item" : "-87.76426726425451",
+        "count" : "4362"
+      } ],
+      "smallest" : "-87.82831694409394",
+      "not_null" : "198893",
+      "count" : "481786",
+      "sum" : "-15374763.434130338",
+      "cardinality" : "481786"
+    },
+    "format" : {
+      "precisionStyle" : "standard",
+      "noCommas" : "false",
+      "align" : "right"
+    }
+  }, {
+    "id" : 279481855,
+    "name" : "LOCATION",
+    "dataTypeName" : "location",
+    "description" : "The coordinates of the camera(s) based on the LATITUDE and LONGITUDE columns.  Geocoded using the WGS84.",
+    "fieldName" : "location",
+    "position" : 9,
+    "renderTypeName" : "location",
+    "tableColumnId" : 21418666,
+    "width" : 281,
+    "format" : {
+      "view" : "coords",
+      "align" : "left"
+    }
+  }, {
+    "id" : 203645200,
+    "name" : "Historical Wards 2003-2015",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_awaf_s7ux",
+    "position" : 14,
+    "renderTypeName" : "number",
+    "tableColumnId" : 27781758,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_awaf-s7ux",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 203645201,
+    "name" : "Zip Codes",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_6mkv_f3dw",
+    "position" : 15,
+    "renderTypeName" : "number",
+    "tableColumnId" : 27781759,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_6mkv-f3dw",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 203645202,
+    "name" : "Community Areas",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_vrxf_vc4k",
+    "position" : 16,
+    "renderTypeName" : "number",
+    "tableColumnId" : 27781760,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_vrxf-vc4k",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 203645203,
+    "name" : "Census Tracts",
+    "dataTypeName" : "number",
+    "fieldName" : ":@computed_region_bdys_3d7i",
+    "position" : 17,
+    "renderTypeName" : "number",
+    "tableColumnId" : 27781761,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_bdys-3d7i",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  }, {
+    "id" : 203645204,
+    "name" : "Wards",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : ":@computed_region_43wa_7qmu",
+    "position" : 18,
+    "renderTypeName" : "number",
+    "tableColumnId" : 28229236,
+    "computationStrategy" : {
+      "source_columns" : [ "location" ],
+      "type" : "georegion_match_on_point",
+      "parameters" : {
+        "region" : "_43wa-7qmu",
+        "primary_key" : "_feature_id"
+      }
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "rdfSubject" : "0",
+    "custom_fields" : {
+      "Metadata" : {
+        "Time Period" : "Starting July 1, 2014",
+        "Changes and Other Historical Information Useful to Understanding This Dataset" : "https://www.google.com/search?q=site:data.cityofchicago.org/stories+\"Related+dataset+ID+s\"+\"hhkd-xvj4\"",
+        "Frequency" : "Daily",
+        "Data Owner" : "Transportation"
+      }
+    },
+    "rowLabel" : "Speed Camera Violation",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "scy9-9wg4",
+    "displayName" : "cocadmin",
+    "profileImageUrlLarge" : "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName" : "cocadmin",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "scy9-9wg4",
+    "displayName" : "cocadmin",
+    "profileImageUrlLarge" : "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName" : "cocadmin",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "traffic", "public safety", "transportation" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}
