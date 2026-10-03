@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	
+	
+            
+                        <link rel="shortcut icon" type="image/x-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg">
+            <link rel="apple-touch-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg"/>
+        
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.tshandbok.no/xmlrpc.php" />
+
+	<title>Trafikksikkerhetshåndboken | 8.2 Automatisk trafikkontroll (ATK)</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Trafikksikkerhetshåndboken &raquo; strøm" href="https://www.tshandbok.no/feed/" />
+		<!-- This site uses the Google Analytics by ExactMetrics plugin v10.3.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-V51KWCT49C"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var em_version = '10.3.0';
+				var em_track_user = true;
+				var em_no_track_reason = '';
+								var ExactMetricsDefaultLocations = {"page_location":"https:\/\/www.tshandbok.no\/del-2\/8-kontroll-og-sanksjoner\/doc735\/"};
+								if ( typeof ExactMetricsPrivacyGuardFilter === 'function' ) {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsPrivacyGuardFilter( ExactMetricsExcludeQuery ) : ExactMetricsPrivacyGuardFilter( ExactMetricsDefaultLocations );
+				} else {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsExcludeQuery : ExactMetricsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-V51KWCT49C',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.ExactMetricsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (em_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = exactmetrics_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof ExactMetricsDualTracker.trackers[hookName] !== 'undefined') {
+								ExactMetricsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dNDMyYj': true,
+											});
+					if ( ExactMetricsLocations.page_location ) {
+						__gtagTracker('set', ExactMetricsLocations);
+					}
+										__gtagTracker('config', 'G-V51KWCT49C', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.tshandbok.no\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.10"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='wpmf-bakery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/vc_style.css?ver=6.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmf-bakery-display-gallery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/display-gallery/style-display-gallery.css?ver=6.1.3' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.tshandbok.no/wp-includes/css/dist/block-library/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.tshandbok.no/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css' href='https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css' href='https://www.tshandbok.no/wp-content/uploads/maxmegamenu/style.css?ver=a5cb64' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.tshandbok.no/wp-includes/css/dashicons.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://www.tshandbok.no/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-default-style-css' href='https://www.tshandbok.no/wp-content/themes/bridge/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_awesome-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_elegant-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/elegant-icons/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-linea_icons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/linea-icons/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-dripicons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/dripicons/dripicons.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-kiko-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/kiko/kiko-all.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-stylesheet-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/stylesheet.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='bridge-stylesheet-inline-css' type='text/css'>
+   .postid-23046.disabled_footer_top .footer_top_holder, .postid-23046.disabled_footer_bottom .footer_bottom_holder { display: none;}
+
+
+</style>
+<link rel='stylesheet' id='bridge-print-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/print.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/responsive.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic_responsive.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.tshandbok.no/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-handle-google-fonts-css' href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-core-dashboard-style-css' href='https://www.tshandbok.no/wp-content/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='https://www.tshandbok.no/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=6.8.10' type='text/css' media='screen' />
+<link rel='stylesheet' id='childstyle-css' href='https://www.tshandbok.no/wp-content/themes/bridge-child/style.css?ver=1592316526' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery.min.js?ver=3.7.1&#039; defer onload=&#039;" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1&#039; defer onload=&#039;" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.tshandbok.no/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.tshandbok.no/wp-json/wp/v2/posts/23046" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.tshandbok.no/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.10" />
+<link rel="canonical" href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc735/" />
+<link rel='shortlink' href='https://www.tshandbok.no/?p=23046' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F8-kontroll-og-sanksjoner%2Fdoc735%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F8-kontroll-og-sanksjoner%2Fdoc735%2F&#038;format=xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#eeeeee">            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-23046 single-format-standard wp-theme-bridge wp-child-theme-bridge-child bridge-core-2.1.4 mega-menu-top-navigation  qode-title-hidden qode-content-sidebar-responsive qode-child-theme-ver-1.0.0 qode-theme-ver-19.3 qode-theme-bridge disabled_footer_top qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive" itemscope itemtype="http://schema.org/WebPage">
+
+
+
+
+<div class="wrapper">
+			<div class="frise"><a href="/"><img src="/wp-content/uploads/2020/06/frise-tsh-enkel.jpg"   alt="heading-frise" /></a>
+			
+			
+		</div>
+	<div class="wrapper_inner">
+
+    
+		<!-- Google Analytics start -->
+				<!-- Google Analytics end -->
+
+		
+	<header class=" scroll_header_top_area  fixed scrolled_not_transparent with_border header_style_on_scroll page_header">
+	<div class="header_inner clearfix">
+		<form role="search" action="https://www.tshandbok.no/" class="qode_search_form_3" method="get">
+	    <div class="container">
+        <div class="container_inner clearfix">
+							                <div class="form_holder_outer">
+                    <div class="form_holder">
+
+                        <input type="text" placeholder="Search" name="s" class="qode_search_field" autocomplete="off" />
+                        <div class="qode_search_close">
+                            <a href="#">
+								<i class="qode_icon_font_awesome fa fa-times " ></i>                            </a>
+                        </div>
+                    </div>
+                </div>
+								        </div>
+    </div>
+</form>		<div class="header_top_bottom_holder">
+			
+			<div class="header_bottom clearfix" style=' background-color:rgba(255, 255, 255, 1);' >
+								<div class="container">
+					<div class="container_inner clearfix">
+																				<div class="header_inner_left">
+																	<div class="mobile_menu_button">
+		<span>
+			<i class="qode_icon_font_awesome fa fa-bars " ></i>		</span>
+	</div>
+								
+<div class="logo_wrapper" >
+	<div class="q_logo">
+		<a itemprop="url" href="https://www.tshandbok.no/" >
+      
+      
+       <img itemprop="image" class="normal" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"> 			 <img itemprop="image" class="light" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="dark" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="sticky" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="mobile" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 					</a>
+	</div>
+	</div>															</div>
+															<div class="header_inner_right">
+									<div class="side_menu_button_wrapper right">
+																														<div class="side_menu_button">
+												<a class="search_button search_covers_header normal" href="javascript:void(0)">S&oslash;k
+		<i class="qode_icon_font_awesome fa fa-search " ></i>	</a>
+	<div class="printfriendly pf-button  pf-alignright">
+                    <a href="#" rel="nofollow" onclick="window.print(); return false;" title="Printer Friendly, PDF & Email">
+                    <span id="printfriendly-text2" class="pf-button-text">Utskrift</span>
+                    </a>
+                </div>																							
+										</div>
+									</div>
+								</div>
+							
+							
+							<nav class="main_menu drop_down center">
+								<div id="mega-menu-wrap-top-navigation" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-top-navigation" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="body" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1000" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-hover-intent-timeout="300" data-hover-intent-interval="100"><html><body><li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-172015" id="mega-menu-item-172015"><a class="mega-menu-link" href="/" tabindex="0">Forside</a></li><li class="mega-dw_content_menu mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-megamenu mega-menu-item-172033 dw_content_menu" id="mega-menu-item-172033"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/" aria-expanded="false" tabindex="0">Innhold<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172677" style="--columns:6; --span:1" id="mega-menu-item-172677"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/bakgrunn-og-leseveiledning/"><div class="dw_mm_icon"><i class="fa fas fa-car"></i></div>Bakgrunn og leseveiledning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172678" style="--columns:6; --span:1" id="mega-menu-item-172678"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/1-vegutforming-og-vegutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/road.svg" alt="road.svg"></div>1: Vegutforming og vegutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172679" style="--columns:6; --span:1" id="mega-menu-item-172679"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/2-vegvedlikehold/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/digging.svg" alt="digging.svg"></div>2: Drift og vedlikehold av veger</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172680" style="--columns:6; --span:1" id="mega-menu-item-172680"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/3-trafikkregulering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/traffic-light.svg" alt="traffic-light.svg"></div>3: Trafikkregulering</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172681" style="--columns:6; --span:1" id="mega-menu-item-172681"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/4-kjoeretoeyteknikk-og-personlig-verneutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-crash.svg" alt="car-crash.svg"></div>4: Kjøretøyteknikk og personlig verneutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172682" style="--columns:6; --span:1" id="mega-menu-item-172682"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/5-kjoeretoeykontroll-og-verkstedgodkjenning/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-mechanic.svg" alt="car-mechanic.svg"></div>5: Kjøretøykontroll og verkstedgodkjenning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-clear mega-menu-item-172683" style="--columns:6; --span:1" id="mega-menu-item-172683"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/6-krav-til-foerere-foereropplaering-og-yrkeskjoering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/address-card.svg" alt="address-card.svg"></div>6: Krav til førere, føreropplæring og yrkeskjøring</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172684" style="--columns:6; --span:1" id="mega-menu-item-172684"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/7-trafikkopplaering-og-informasjon/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/user-cog.svg" alt="user-cog.svg"></div>7: Trafikkopplæring og informasjon</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-current-post-ancestor mega-current-menu-parent mega-current-post-parent mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172685" style="--columns:6; --span:1" id="mega-menu-item-172685"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/8-kontroll-og-sanksjoner/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/hand-paper.svg" alt="hand-paper.svg"></div>8: Kontroll og sanksjoner</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172686" style="--columns:6; --span:1" id="mega-menu-item-172686"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/9-foerstehjelp-og-medisinsk-behandling/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/medkit.svg" alt="medkit.svg"></div>9: Førstehjelp og medisinsk behandling</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172687" style="--columns:6; --span:1" id="mega-menu-item-172687"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/10-overordnede-virkemidler/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/book-open.svg" alt="book-open.svg"></div>10: Overordnede virkemidler</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172688" style="--columns:6; --span:1" id="mega-menu-item-172688"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/11-definisjoner-og-ordforklaringer/"><div class="dw_mm_icon"><i class="fa far fa-bookmark"></i></div>11: Definisjoner og ordforklaringer</a></li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-post mega-align-bottom-left mega-menu-flyout mega-menu-item-172659" id="mega-menu-item-172659"><a class="mega-menu-link" href="https://www.tshandbok.no/info/trafikksikkerhetshaandboken/" tabindex="0">Om ts-håndboken</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-172674" id="mega-menu-item-172674"><a class="mega-menu-link" href="https://www.tshandbok.no/kontakt/" tabindex="0">Kontakt</a></li></body></html></ul></div>							</nav>
+																																		</div>
+					</div>
+									</div>
+			</div>
+		</div>
+</header>	<a id="back_to_top" href="#">
+        <span class="fa-stack">
+            <i class="qode_icon_font_awesome fa fa-arrow-up " ></i>        </span>
+	</a>
+	
+	
+    
+    	
+    
+    <div class="content content_top_margin">
+        <div class="content_inner  ">
+    <!-- before title -->
+	<!-- this is title -->
+									
+									
+										<div class="breadcrumb" > <div class="breadcrumbs"><div itemprop="breadcrumb" class="breadcrumbs_inner"><a href="https://www.tshandbok.no/">Home</a><span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/">Beskrivelser av trafikksikkerhetstiltak og virkninger</a> <span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/8-kontroll-og-sanksjoner/">8: Kontroll og sanksjoner</a> <span class="delimiter">&nbsp;>&nbsp;</span><span class="current">8.2 Automatisk trafikkontroll (ATK)</span></div></div></div>
+									<!-- this is end of title --><!-- after title -->	
+										<div class="container">
+														<div class="container_inner default_template_holder" >
+																
+							<div class="two_columns_75_25 background_color_sidebar grid2 clearfix">
+								<div class="column1">
+											
+									<div class="column_inner">
+										<div class="blog_single blog_holder">
+											
+		<article id="post-23046" class="post-23046 post type-post status-publish format-standard has-post-thumbnail hentry category-8-kontroll-og-sanksjoner">
+			<div class="post_content_holder">
+				
+				<div class="post_text">
+					<div class="post_text_inner">
+						<h1 itemprop="name" class="entry_title"><!-- LS <span itemprop="dateCreated" class="date entry_date updated">13 jul<meta itemprop="interactionCount" content="UserComments: 0"/></span> -->8.2 Automatisk trafikkontroll (ATK)</h1>
+						
+							<div class="post_author">
+						<!-- LS 	23046								
+								
+								av									<a itemprop="author" class="post_author_link" href="https://www.tshandbok.no/author/mrleif/">MrLeif</a>
+								-->
+								
+								<div class='pd_authors'><div class='authorline'> Revisjon 2023: Rune Elvik, TØI og Alena Høye, TØI</div></div>								
+							</div>
+						
+						<div class="post_info">
+						<!-- LS
+								<span class="time">Publisert den 12:29h</span>
+								i					
+					 <a href="https://www.tshandbok.no/innhold/del-2/8-kontroll-og-sanksjoner/" rel="category tag">8: Kontroll og sanksjoner</a> 
+						
+															<span class="dots"><i class="fa fa-square"></i></span><a itemprop="url" class="post_comments" href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc735/#respond" target="_self">0 Kommentarer</a>
+								
+								-->
+							                                                        
+						</div>
+					
+												
+						<div class="post_image">
+						
+	                        <img width="2000" height="1500" src="https://www.tshandbok.no/wp-content/uploads/2020/08/82.jpg" class="attachment-full size-full wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.tshandbok.no/wp-content/uploads/2020/08/82.jpg 2000w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-300x225.jpg 300w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-1024x768.jpg 1024w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-768x576.jpg 768w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-1536x1152.jpg 1536w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-150x113.jpg 150w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-250x188.jpg 250w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-500x375.jpg 500w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-650x488.jpg 650w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-800x600.jpg 800w, https://www.tshandbok.no/wp-content/uploads/2020/08/82-700x525.jpg 700w" sizes="(max-width: 2000px) 100vw, 2000px" />	                        <div class="bildetekst">
+	                         Foto: Shutterstock	                         </div>
+						</div>
+										
+						
+						<div class="ingress">
+<p><strong>Automatisk trafikkontroll (ATK) omfatter i Norge fartskontroll utført enten som punkt-ATK (fartsovertredelser registreres automatisk i et bestemt punkt på vegen) eller streknings-ATK (gjennomsnittsfarten måles over en viss strekning). Punkt-ATK ble tatt i bruk i 1988 og streknings-ATK i 2009. Punkt-ATK reduserer dødsulykker med 47 prosent og øvrige personskadeulykker med 19 prosent. Streknings-ATK reduserer ulykker med alvorlige personskader med 41 prosent og øvrige personskadeulykker med 20 prosent. Det ville trolig vært samfunnsøkonomisk lønnsomt å øke bruken av både punkt-ATK og streknings-ATK betydelig i Norge. De virkninger som er funnet av tiltakene i norske undersøkelser, er lagt til grunn for de samfunnsøkonomiske analysene.</strong></p>
+</div>
+<h2>Problem og formål</h2>
+<div class="subchapter"></div>
+<p>Å kjøre over fartsgrensen er antakelig det mest vanlige trafikklovbrudd blant bilførere. Rundt regnet 40 prosent av all trafikk avvikles med en fart over fartsgrensen (Statens vegvesen, 2022). Et fåtall av fartsovertredelsene blir oppdaget. Figur 8.2.1 viser oppdagelsesrisikoen ved fartsovertredelser i perioden 2006-2018.</p>
+<p><img decoding="async" class="alignnone wp-image-173659" src="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko.png" alt="" width="624" height="424" srcset="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko.png 690w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko-300x204.png 300w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko-150x102.png 150w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko-250x170.png 250w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko-500x340.png 500w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-821-oppdagelsesrisiko-650x442.png 650w" sizes="(max-width: 624px) 100vw, 624px" /></p>
+<p><em>Figur 8.2.1: Oppdagelsesrisiko ved fartsovertredelser. Reaksjoner per million kilometer kjørt over fartsgrensen.</em></p>
+<p>Figuren omfatter alle reaksjoner mot fartsovertredelser, både gitt av politiet og som følge av automatisk trafikkontroll (ATK). Det var i perioden 2006-2018 en nedgang i reaksjoner gitt ved ATK og en økning i reaksjoner gitt av politiet.</p>
+<p>For å illustrere hva tallene betyr, kan vi tenke oss en fører som kjører 13.000 kilometer i året. Føreren kjører alltid over fartsgrensen. Dersom vi legger oppdagelsesrisikoen i 2018 til grunn, kan denne føreren statistisk sett regne med å kjøre i litt mer enn 8,6 år før han eller hun blir tatt for en fartsovertredelse.</p>
+<p>Høy fart bidrar både til å øke ulykkesrisikoen og til å forverre skadene ved en ulykke. I perioden 2012-2021 ble fart godt over fartsgrensen eller høy fart etter forholdene vurdert som en medvirkende faktor til 33 prosent av dødsulykkene (Ringen 2022). Automatisk fartskontroll har som formål å redusere fartsovertredelser og dermed antall (alvorlige) ulykker på veger med høyt fartsnivå.</p>
+<h2>Beskrivelse av tiltaket</h2>
+<p>Med automatisk trafikkontroll (ATK) menes generelt at lovbrudd i trafikken observeres og registreres, og at kjøretøyet/føreren identifiseres på en automatisert måte, dvs. uten at politimannskaper er fysisk til stede. Identifiseringen skjer ved fotografi av kjøretøy og fører. I Norge fotograferes kjøretøy og fører forfra og ATK omfatter kun fartskontroll (ikke for eksempel rødlyskontroll). Med <strong>punkt-ATK</strong> menes at det er montert én fotoboks per kjøreretning som måler farten ved fotoboksen. Punkt-ATK ble for første gang brukt i større omfang i 1989 i Victoria, Australia (Belin et al., 2010). Med <strong>streknings-ATK</strong> menes at det er montert to fotobokser og at gjennomsnittsfarten mellom de to fotoboksene måles ut fra tiden det tar å kjøre fra den første til den andre fotoboksen. Fotoboksene er som regel godt synlige og strekninger med ATK skal (i Norge og andre land) varsles med skilt.</p>
+<p>I Norge ble punkt-ATK for første gang introdusert på E18 gjennom Telemark i juni 1988 (Glad &amp; Østvik, 1991). I 2022 var 295 ATK-punkter i drift i Norge. Streknings-ATK var innført på 31 strekninger med en samlet lengde på 177,4 kilometer. Mange av strekningene ligger i tunnel. I Norge er det kun føreren som kan holdes ansvarlig for eventuelle fartsovertredelser. I noen andre land kan bileieren holdes ansvarlig hvis føreren ikke kan identifiseres.</p>
+<p>Kriterier for å installere ATK i Norge er utviklet av Statens vegvesen og politiet (2021). For å installere ATK må det være registrert personskadeulykker på strekningen i løpet av de siste 6 år. Det må forekomme fartsovertredelser på strekningen og av disse må 20 prosent eller flere overskride fartsgrensen med 10 prosent eller mer. For streknings-ATK er det også et krav om at strekningen må være lengre enn 3 kilometer og at hele strekningen har samme fartsgrense.</p>
+<h2>Virkning på ulykkene</h2>
+<div class="subchapter">
+<p>Virkninger av punkt- og streknings-ATK på ulykkene er undersøkt i flere land. Resultatene som legges fram her bygger på følgende undersøkelser:</p>
+<table style="width: 100%;" width="643">
+<tbody>
+<tr>
+<td style="width: 55.2632%;" width="359"><strong><u>Punkt-ATK</u></strong></td>
+<td style="width: 51.548%;" width="283"><strong><u>Streknings-ATK</u></strong></td>
+</tr>
+<tr>
+<td style="width: 55.2632%;" width="359">Oei &amp; Polak, 1992 (Nederland)<br />
+Department for Transport, 1997 (Storbritannia)<br />
+Elvik, 1997 (Norge)<br />
+Tay, 2000 (New Zealand)<br />
+Hess, 2004 (Storbritannia)<br />
+Mountain, Hirst &amp; Maher, 2004 (Storbritannia)<br />
+Australian Road Research Board, 2005 (Australia)<br />
+Pérez et al., 2007 (Spania)<br />
+Shin et al., 2009 (USA)<br />
+Larsson &amp; Brüde, 2010 (Sverige)<br />
+Novoa et al., 2010 (Spania)<br />
+Li et al., 2013 (Storbritannia)<br />
+Newstead &amp; Cameron, 2013 (Australia)<br />
+Skubic et al., 2013 (USA)<br />
+DePauw et al., 2014 (Belgia)<br />
+Høye, 2015A (Norge)<br />
+Li &amp; Graham, 2016 (Storbritannnia)<br />
+Newstead et al., 2017 (Australia)<br />
+Tang, 2017 (Storbritannia)<br />
+Li et al., 2020 (Storbritannia)<br />
+Almoshaogeh et al., 2021 (Saudi Arabia)<br />
+Factor et al., 2023 (Israel)</td>
+<td style="width: 51.548%;" width="283">Stefan &amp; Winkelbauer, 2005 (Østerrike)<br />
+Brassøe et al., 2011 (Storbritannia)<br />
+Broughton et al., 2012 (Skottland)<br />
+Montella et al., 2013 (Italia)<br />
+Korthof, 2014 (Nederland)<br />
+Høye, 2015B (Norge)<br />
+Montella et al., 2015 (Italia)<br />
+Owen et al., 2016 (Storbritannia)<br />
+Newstead et al., 2017 (Australia)<br />
+La Torre et al., 2019 (Italia)</td>
+</tr>
+</tbody>
+</table>
+<p>På grunnlag av disse undersøkelsene oppgir tabell 8.2.1 beste anslag på virkningen på ulykker og usikkerhet i virkning.</p>
+<p><em>Tabell 8.2.1: Virkning på ulykkene av punkt-ATK. Prosent endring av antall ulykker (usikkerhet i virkning i parentes).</em></p>
+<table style="width: 100%;">
+<tbody>
+<tr>
+<td class="lineunder" style="width: 38.2166%; background-color: #61cfbc;" width="235"><strong> </strong></td>
+<td class="lineunder" style="width: 40.7643%; background-color: #61cfbc;" width="251"><strong>Ulykkens alvorlighetsgrad</strong></td>
+<td class="lineunder" style="width: 40.5996%; background-color: #61cfbc;" width="119"><strong>Prosent endring av antall ulykker</strong></td>
+</tr>
+<tr>
+<td style="width: 38.2166%;" width="235"><strong>Punkt-ATK</strong></td>
+<td style="width: 40.7643%;" width="251">Dødsulykker</td>
+<td style="width: 40.5996%;" width="119"><strong>-47</strong> (-63; -23)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 38.2166%;" width="235"></td>
+<td class="lineunder" style="width: 40.7643%;" width="251">Alle ulykker</td>
+<td class="lineunder" style="width: 40.5996%;" width="119"><strong>-19 </strong>(-23; -15)</td>
+</tr>
+<tr>
+<td style="width: 38.2166%;" width="235"><strong>Streknings-ATK</strong></td>
+<td style="width: 40.7643%;" width="251">Ulykke med drepte / hardt skadde</td>
+<td style="width: 40.5996%;" width="119"><strong>-41 </strong>(-55; -22)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 38.2166%;" width="235"></td>
+<td class="lineunder" style="width: 40.7643%;" width="251">Alle ulykker</td>
+<td class="lineunder" style="width: 40.5996%;" width="119"><strong>-20 </strong>(-26; -13)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Punkt-ATK: </strong>I gjennomsnitt reduseres antall dødsulykker med 47 prosent. For øvrige ulykker er det funnet en reduksjon på 19 prosent. Resultatene er basert på alle studiene, uansett metode. Det er ingen systematiske forskjeller mellom studier som har og som ikke har kontrollert for regresjonseffekter.</p>
+<p>Virkningen av punkt-ATK ble undersøkt i ulike avstander fra fotoboksene. Studier som har oppgitt virkninger i ulike avstander, viser at virkningen av punkt-ATK er størst i nærheten av fotoboksen, og at den avtar med økende avstand fra fotoboksen. De fleste studiene har undersøkt virkninger i en avstand på omtrent 0,5-1,0 km fra fotoboksene (i begge retninger). En norsk undersøkelse fant størst virkning på ulykkene på en strekning fra 100 meter før fotoboksen til 1 kilometer etter (Høye 2015A).</p>
+<p><strong>Streknings-ATK:</strong> Streknings-ATK reduserer ulykker med drepte eller hardt skadde med 41 prosent. Det totale antall ulykker reduseres med 20 prosent. Studier som ikke har kontrollert for regresjonseffekter, har gjennomgående funnet langt større virkninger enn studier som har kontrollert for regresjonseffekter. Studiene uten kontroll for regresjonseffekter er utelatt fra beregningene i tabell 8.2.2, da ulykkesreduksjonene kan være overestimert i slike studier.</p>
+<h4>Virkninger på fart: Punkt-ATK</h4>
+<p>Det er funnet flere studier som har undersøkt virkningen av punkt-ATK på fart, både ved fotoboksen og i ulike avstander før og etter fotoboksen:</p>
+<p style="padding-left: 40px;">Ali et al., 1997 (Kuwait)<br />
+Keenan, 2002 (Storbritannia)<br />
+Ragnøy et al., 2002 (Norge)<br />
+Andersson &amp; Larsson, 2005 (Sverige)<br />
+Mountain et al., 2004 (Storbritannia)<br />
+ARRB, 2005 (Australia)<br />
+Retting et al., 2008 (USA)<br />
+Shin et al., 2009 (USA)<br />
+Vägverket, 2009 (Sverige)<br />
+Hels et al., 2010 (Danmark)<br />
+Brassøe et al., 2011 (Storbritannia)</p>
+<p>Basert på disse studiene viser figur 8.2.2 den gjennomsnittlige reduksjonen av gjennomsnittsfarten som ble funnet i ulike avstander fra fotobokser for punkt-ATK. Oversikten tyder på at farts­reduksjonen, som forventet, er størst rett ved fotoboksen og at den avtar forholdsvis mye på de første 500 m etter fotoboksen. Rett ved fotoboksen ble det i de fleste studiene funnet fartsreduksjoner på mellom 6 og 15%. I studiene til Keenan (2002) og Ragnøy (2002) viste fartsmålinger at de fleste bremser ned 50-100 m før fotoboksen og akselererer 100-200 m etterpå. At farten ser ut til å være redusert i en avstand på 2 km eller lenger etter fotoboksen skyldes to resultater fra Sverige hvor fartsmålingene ble gjort på strekninger med flere fotobokser. I de fleste studiene var virkningen redusert til omtrent null mellom 500 og 2000 m nedstrøms for fotoboksen</p>
+<p>Ingen av resultatene tyder på at farten øker i større avstand fra fotoboksen, noe som man kunne forvente hvis førere kompenserer for fartsreduksjonen ved fotoboksen (Shin et al., 2009). Den norske studien (Ragnøy, 2002) viste at farten også er redusert på en strekning på omtrent 3,4 km lengde etter fotoboksen, men i mindre grad enn rett ved fotoboksen.</p>
+<p>Andelen som kjører over fartsgrensen, er i gjennomsnitt redusert med 63 prosent. Det er stor variasjon i andelene som kjørte over fartsgrensen før ATK ble installert. Nedgangen av denne andelen er større jo flere som kjørte over fartsgrensen før ATK ble installert. Den gjennomsnittlige andelen som kjører over fartsgrensen er 19 prosent med ATK og 52 prosent uten ATK. I studien til ARRB (2005) var reduksjonen uendret ett og to år etter at ATK ble installert. Vägverket (2009) viste at personbiler reduserer gjennomsnittsfarten noe mer enn tunge kjøretøy.</p>
+<p><img decoding="async" class="alignnone wp-image-173660" src="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart.png" alt="" width="785" height="487" srcset="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart.png 766w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-300x186.png 300w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-150x93.png 150w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-250x155.png 250w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-500x310.png 500w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-650x403.png 650w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-822-patk-fart-700x434.png 700w" sizes="(max-width: 785px) 100vw, 785px" /></p>
+<p><em>Figur 8.2.2: Virkning av punkt-ATK på fart og personskadeulykker (PSU) i ulike avstander fra fotoboks.</em></p>
+<p>Figur 8.2.2 viser i tillegg virkningen på antall personskadeulykker (PSU) som ble funnet i de empiriske studiene som er oppsummert i tabell 8.2.1. Alt i alt stemmer resultatene forholdsvis godt overens. Punkt-ATK har en større virkning på antall ulykker enn virkningen på gjennomsnittsfarten isolert sett tilsier. Forklaringen på dette er at de høyeste fartene, som innebærer høyest ulykkesrisiko, reduseres mest (Elvik 2019).</p>
+<h4>Virkninger på fart: Streknings-ATK</h4>
+<p>I en evaluering av streknings-ATK på to strekninger i Norge hvor det ikke tidligere var punkt-AKT ble det funnet en gjennomsnittlig fartsreduksjon på 11 prosent (Ragnøy, 2011). Denne reduksjonen er omtrent like stor som den gjennomsnittlige virkningen som ble funnet for punkt-ATK rett ved fotoboksene.</p>
+<p>En nyere norsk undersøkelse (Høye 2015B) fant en gjennomsnittlig fartsreduksjon på 6 prosent. Reduksjonen varierte mellom 3 prosent og 12 prosent på ulike strekninger.</p>
+<p>Soole et al. (2013) har oppsummert resultater fra en rekke studier hvor den prosentvise reduksjonen av gjennomsnittsfarten er på mellom 8 prosent og 28 prosent. Både gjennomsnittsfarten og 85-persentilen for fart ble som regel redusert til omtrent ved eller litt under fartsgrensen. Andelen som kjører over fartsgrensen ble redusert til under 1 prosent i de fleste studiene. Den prosentvise reduksjonen av andelen som kjører over fartsgrensen varierer mellom studiene (trolig avhengig av andelen før streknings-ATK ble installert), mange har funnet reduksjoner på omtrent 90 prosent. Brassøe et al. (2011) fant en reduksjon av gjennomsnittsfarten på strekninger med streknings-ATK på i gjennomsnitt 7,5 prosent.</p>
+<h4>Kombinert automatisk farts- og rødlyskontroll</h4>
+<p>Virkninger av kombinert automatisk farts- og rødlyskontroll be undersøkt i de følgende studiene:</p>
+<p style="padding-left: 40px;">Brimson &amp; Anderson, 2002 (Australia)<br />
+Nuyts, 2006 (Nederland)<br />
+Budd et al., 2011 (Australia)<br />
+DePauw et al., 2013 (Belgia)<br />
+Vanlaar et al., 2014 (Canada)</p>
+<p>Resultatene er oppsummert i tabell 8.2.2. Resultatene tyder på at det totale antall ulykker, især alvorlige ulykker og antall sidekollisjoner kan være redusert, selv om de fleste resultatene ikke er statistisk signifikante. Én studie har sammenlignet virkningen på det totale antall ulykker og på ulykker som involverer minst ett kjøretøy fra en av armene inn i krysset som er utstyrt med kamera. Denne studien fant en stor og signifikant reduksjon av antall ulykker kjøretøy fra en av armene inn i krysset som er utstyrt med kamera (-47%), mens virkningen på det totale antall ulykker er mindre og ikke statistisk signifikant. De øvrige studiene har ikke spesifisert om alle ulykker i kryss inngår i analysen eller om alle armene inn i kryss er utstyrt med kamera. Antall ulykker med påkjøring bakfra ser ut til å øke, noe som også ble observert i studer av rødlyskontroll (uten fartskontroll). Det foreligger for lite informasjon for å vurdere hvorvidt resultatene kan være påvirket av regresjonseffekter eller publikasjonsskjevhet.</p>
+<p class="tab-fig-tekst"><em>Tabell 8.2.2: Virkning av kombinert automatisk farts- og rødlyskontroll på ulykker. Prosent endring av antall ulykker.</em></p>
+<table style="width: 100%;">
+<tbody>
+<tr class="lineFatOver">
+<td style="background-color: #96e3db; width: 51.1146%;">
+<p class="tabelltekst"><strong> </strong></p>
+</td>
+<td class="lineunderRight" style="background-color: #96e3db; width: 53.6624%;" colspan="3">
+<p class="tabelltekst"><strong>Prosent endring av antall ulykker</strong></p>
+</td>
+</tr>
+<tr class="lineunder">
+<td style="background-color: #96e3db; width: 51.1146%;">
+<p class="tabelltekst"><strong>Ulykkestyper</strong></p>
+</td>
+<td style="background-color: #96e3db; width: 26.9108%;">
+<p class="tabelltekst"><strong>Ulykkens<br />
+alvorlighetsgrad</strong></p>
+</td>
+<td class="textCenter" style="background-color: #96e3db; width: 7.64331%;">
+<p class="tabelltekst"><strong>Beste</strong><br />
+<strong>anslag</strong></p>
+</td>
+<td class="textCenter" style="background-color: #96e3db; width: 19.1083%;">
+<p class="tabelltekst"><strong>Usikkerhet<br />
+i virkning</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Alle</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Personskade / uspesifisert</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>-9</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-22; +5)</p>
+</td>
+</tr>
+<tr>
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Alle</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Drept eller alvorlig skadd</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>-14</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-27; +1)</p>
+</td>
+</tr>
+<tr>
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Ulykker med kjøretøy på arm i kryss med kamera</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Personskade / uspesifisert</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>-47</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-56; -36)</p>
+</td>
+</tr>
+<tr>
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Sidekollisjoner</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Personskade / uspesifisert</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>-23</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-44; +6)</p>
+</td>
+</tr>
+<tr>
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Sidekollisjoner</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Drept eller alvorlig skadd</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>-32</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-43; -18)</p>
+</td>
+</tr>
+<tr class="lineFatUnder">
+<td style="width: 51.1146%;">
+<p class="tabelltekst">Påkjøring bakfra</p>
+</td>
+<td style="width: 26.9108%;">
+<p class="tabelltekst">Personskade / uspesifisert</p>
+</td>
+<td class="textCenter" style="width: 7.64331%;">
+<p class="tabelltekst"><strong>+21</strong></p>
+</td>
+<td class="textCenter" style="width: 19.1083%;">
+<p class="tabelltekst">(-14; +70)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Virkning på framkommelighet</h2>
+<div class="subchapter">
+<p>Både punkt- og streknings-ATK reduserer gjennomsnittsfarten. Som regel kjører de aller fleste under eller omtrent ved fartsgrensen på strekninger med ATK. Som regel medfører derfor ATK økte reisetider. I tett trafikk eller kø og på strekninger med flaskehalser kan streknings-ATK i noen tilfeller bedre fremkommeligheten ved å redusere fartsforskjeller mellom kjøretøyene og nedbremsing og akselerering (Speed Check Services, 2010; sitert etter Soole et al., 2013). En slik effekt kan man imidlertid ikke alltid observere (Cascetta et al., 2011).</p>
+<p>Virkningen på fart er avhengig av hvor mange som kjørte over fartsgrensen før installeringen av ATK; jo flere som kjørte over fartsgrensen desto større er fartsreduksjonen. To studier som har sammenlignet virkningen på fart mellom tett- og spredtbygd strøk (Gains et al., 2005; Cameron &amp; Delaney, 2006) viste at virkningen er større i tett- enn i spredtbygd strøk.</p>
+<p>Virkningene av både punkt-ATK og streknings-ATK på fartsfordelingen er vanligvis (Vadeby og Forsman 2017) som vist på figur 8.2.2 (Elvik 2019). De høyeste fartene reduseres mest og virkningen på gjennomsnittsfarten er mindre. Siden de høyeste fartene vanligvis er over fartsgrensen, blir framkommeligheten for trafikk som holder en lovlig fart lite påvirket. I nyttekostnadsanalysene som presenteres i avsnitt 7 er det derfor ikke tatt med noen virkning på lovlig fart. Reduksjonen av ulovlig fart er ikke regnet som noe tidstap i nyttekostnadsanalysen.</p>
+</div>
+<div class="subchapter">
+<p><img loading="lazy" decoding="async" class="alignnone wp-image-173661" src="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution.png" alt="" width="614" height="426" srcset="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution.png 529w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution-300x208.png 300w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution-150x104.png 150w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution-250x173.png 250w, https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-82-2023-figur-823-speed-distrubution-500x347.png 500w" sizes="auto, (max-width: 614px) 100vw, 614px" /></p>
+<p><em>Figur 8.2.3: Virkninger av automatisk fartskontroll på fartsfordelingen.</em></p>
+</div>
+<h2>Virkning på miljøforhold</h2>
+<p>Både punkt- og streknings-ATK kan redusere drivstofforbruket og støy i den grad tiltakene reduserer antallet kjøretøy som kjører med høy fart. Punkt-ATK ser imidlertid ut til å føre til at en del førere bremser rett før fotoboksen og akselererer rett etter fotoboksen (kengurukjøring; Winnet, 1994; Amundsen, 1996; Ragnøy, 2002; Keenan, 2002). En slik kjørestil medfører en økning av både støy, drivstofforbruk og utslipp.</p>
+<p>Streknings-ATK medfører i mindre grad nedbremsing og akselerering enn punkt-ATK (Ragnøy, 2011) og kan således ha mer fordelaktige miljømessige virkninger enn punkt-ATK. En studie av streknings-ATK i Italia viste imidlertid ved flaskehalser at utslipp øker, selv om gjennomsnittsfarten var redusert, på grunn av økt fartsvariasjon ved flaskehalser (Cascetta et al., 2011).</p>
+<div class="subchapter"></div>
+<h2>Kostnader</h2>
+<div class="subchapter">
+<p>I 2022 regnet Statens vegvesen (Elvik &amp; Høye, 2022) med en investeringskostnad på 1,5 mill. kr. per ATK-punkt. Ved streknings-ATK må det settes opp minst to punkter.  Årlig driftskostnad per ATK-punkt er anslått til 145.000 kroner. I tillegg kommer kostnader til innkreving av bøter eller forenklede forelegg som utstedes ved fartsovertredelser som registreres på hvert ATK-punkt.</p>
+</div>
+<h2>Nytte-kostnadsvurderinger</h2>
+<div class="subchapter">
+<p>Det er utført en nyttekostnadsanalyse av å øke antall ATK-punkter med 25, 50 og 100 prosent (Elvik &amp; Høye, 2022). Det var i 2022 295 ATK-punkter i Norge. I analysen ble investeringskostnaden omregnet til en annuitet ved å forutsette 10 års avskrivningstid og en årlig rente på 4 prosent.</p>
+<p>Ved 25 prosent økning av antall ATK-punkter ble årlig nytte beregnet til 21,4 mill. kr. og årlig kostnad til 13,6 mill. kr. Ved 50 prosent økning av antall ATK-punkter ble nytten beregnet til 36,4 mill. kr. og kostnadene til 28,3 mill. kr. Ved 100 prosent økning av antall ATK-punkter ble nytten beregnet til 61,7 mill. kr. og kostnadene til 56,7 mill. kr. Nytten er følgelig større enn kostnadene selv om antall ATK-punkter fordobles.</p>
+<p>En optimal bruk av punkt-ATK tilsier at antall punkter økes så lenge grensenytten av dette er større enn grensekostnadene. Dette er klart tilfellet for en økning på 25 prosent. Ved økningen fra 25 til 50 prosent flere ATK-punkter er grensenytten 14,9 mill. kr. (36,4 – 21,4) og grensekostnaden 13,6 mill. kr. (28,3 – 13,6). Det er følgelig optimalt å øke antall ATK-punkter med 50 prosent. Ved en videre økning fra 50 prosent til 100 prosent er grensenytten 25,3 mill. kr. og grensekostnadene 27,3 mill. kr. Det er følgelig ikke optimalt å øke antall ATK-punkter med 100 prosent. Videre beregninger viser at grensenytten ved å øke antall ATK-punkter med 75 prosent er høyere enn grensekostnadene ved dette.</p>
+<p>Det er også utført en nyttekostnadsanalyse av å øke trafikkarbeidet som foregår på strekninger med streknings-ATK til det 2,5 dobbelte av dagens trafikkarbeid på strekninger med streknings-ATK, det 5-dobbelte av dagens trafikkarbeid, og det 10-dobbelte av dagens trafikkarbeid på strekninger med streknings-ATK. Dagens trafikkarbeid på strekninger med streknings-ATK er 307 mill. kjøretøykilometer per år, som tilsvarer omlag 0,6 prosent av alt trafikkarbeid på offentlig veg i Norge.</p>
+<p>Ved en 2,5 dobling vil trafikkarbeidet på veger med streknings-ATK øke med 767,7 mill. kjøretøykilometer. Dette gir en nedgang i antall drepte eller hardt skadde som tilsvarer en samfunnsøkonomisk nytte på 66,1 mill. kr. Kostnadene ved å innføre og drive streknings-ATK er beregnet til 36,9 mill. kr. Ved 5-dobling av trafikkarbeidet med streknings-ATK ble nytten beregnet til 132,2 mill. kr., kostnadene til 94,1 mill. kr. Ved 10-dobling av trafikkarbeidet med streknings-ATK ble nytten beregnet til 264,3 mill. kr., kostnadene til,230,0 mill. kr.</p>
+<p>Grensenytten ved å gå fra 2,5-dobling til 5-dobling er 66,1 mill. kr., grensekostnadene 57,2 mill. kr. Å gå fra 5-dobling til 10-dobling gir en grensenytte på 132,2 mill. kr. og en grensekostnad på 135,9 mill. kr. Grensekostnaden er litt større enn grensenytten ved en 10-dobling av trafikkarbeidet som er underlagt streknings-ATK. Nytten omfatter imidlertid kun reduksjon av drepte eller hardt skadde, ikke lettere skadde. En eventuell nytte i form av mindre drivstofforbruk ved jevnere og lavere fart er heller ikke tatt med. Sannsynligvis er det derfor samfunnsøkonomisk lønnsomt å 10-doble trafikkarbeidet på veger som har streknings-ATK.</p>
+</div>
+<h2>Formelt ansvar og saksgang</h2>
+<div class="subchapter">
+<h3>Initiativ til tiltaket</h3>
+<p>Statens vegvesen tar initiativ til installering av ATK. Plasseringen avgjøres i det enkelte tilfellet i nært samarbeid med det stedlige politi. Kriterier for bruk av tiltaket er omtalt i avsnitt 2, beskrivelse av tiltaket.</p>
+<h3>Formelle krav og saksgang</h3>
+<p>Statens vegvesen og politiet har utarbeidet kriterier (2021) som bør være oppfylt før installering av ATK. Kriteriene inkluderer tall for samlede og forventede skadekostnader, målt gjennomsnittsfart og forventet trafikksikkerhetsgevinst. For streknings-ATK er det etablert tilleggskriterier, som gjelder strekningens lengde (minst 3 km) og at hele strekningen har samme fartsgrense.</p>
+<h3>Ansvar for gjennomføring av tiltaket</h3>
+<p>Det er Vegdirektoratet ved regionvegkontorene som står for den daglige drift og vedlikehold, mens det er politi- og justismyndighetene som vurderer straffereaksjoner på grunnlag av det fotomaterialet som blir samlet inn. Politiet avgjør omfanget av overvåkningen og tidspunkt for kontrollene. Hvilke kameraer som skal flyttes eller slås av og på avgjøres av politiet, og utføres av Statens vegvesen. Politiet avgjør også hvilke førere som skal bøtelegges.</p>
+<p>ATK har en innebygget sikkerhetsmargin, slik at bagatellmessige fartsovertredelser på 1-5 km/t ikke fotograferes.</p>
+</div>
+<h2>Referanser</h2>
+<div class="subchapter">
+<p>Ali, S. Y., Al-Saleh, O., &amp; Koushki, P. A. (1997). Effectiveness of automated speed-monitoring cameras in Kuwait. Transportation Research Record, 1595, 20-26.</p>
+<p>Almoshaogeh, M., Abdulrehman, R., Haider, H., Alharbi, F., Jamal, A., Alarifi, S. &amp; Shafiquzzaman, M. (2021). Traffic accident risk assessment framework for Qassim, Saudi Arabia: Evaluating the impact of speed cameras. Applied Sciences, 11, 6682.</p>
+<p>Amundsen, F.H. (1996). Kjørefart ved ATK-punkter. Notat fra Statens vegvesen/ Vegdirektoratet (TAN) av 1996-11-05.</p>
+<p>Andersson, G., &amp; Larsson, J. (2005). Automatic speed cameras in Sweden 2002-2003. VTI notat 10A-2004. Linköping: VTI.</p>
+<p>Australian Road Research Board. (2005). Evaluation of the fixed digital speed camera program in NSW. Report RC2416. ARRB Consulting.</p>
+<p>Belin, M.-Å., Tillgren, P., Vedung, E., Cameron, M., &amp; Tingvall, C. (2010). Speed cameras in Sweden and Victoria, Australia &#8211; a case study. Accident Analysis &amp; Prevention, 42(6), 2165-2170.</p>
+<p>Brassøe, B., Johansen, J. W., Madsen, J. C. O., &amp; Lahrmann, H. (2011). Sikkerhedsmæssig effekt af strækningshastighedskontrol i Storbritannien. Trafikdage på Aalborg Universitet</p>
+<p>Brimson, T., &amp; Anderson, R. (2002). Fixed red light and speed cameras in canberra: Evaluating a new digital technology. Road Safety Research, Policing and Education Conference, Adelaide, South Australia.</p>
+<p>Broughton, P. S., Hutchings, C., Stone, D., &amp; Walker, L. (2012). Effectiveness of average speed cameras on the reduction of road casualties: Analysis of the A77 in Scotland. In: Driver Behaviour and Training Volume V, Dorn, L. (Ed.): Ashgate Publishing: Aldershot.</p>
+<p>Budd, L., Scully, J., &amp; Newstead, S. (2011). Evaluation of the crash effects of Victorias fixed digital speed and red-light cameras. Report No. 307. MONASH University, Accident Research Centre. Victoria, Australia.</p>
+<p>Cascetta, E., Punzo, V., &amp; Montanino, M. (2011). Effects of automated section speed enforcement system on traffic flow at freeway bottlenecks Transportation Research Record, 2260, 83-93.</p>
+<p>Cameron, M. H., Delaney, A. (2006). Development of strategies for best practice in speed enforcement in West5ern Australia. Final Report. Report 270. Melbourne, Monash University Accident Research Centre.</p>
+<p>DePauw, E., Daniels, S., Brijs, T., Hermans, E., &amp; Wets, G. (2013). The effect of combined speed and red light cameras on safety. Transportation Research Board 92nd Annual Meeting, Washington, DC.</p>
+<p>DePauw, E., Daniels, S., Brijs, T., Hermans, E., &amp; Wets, G. (2014). An evaluation of the traffic safety effect of fixed speed cameras. Safety Science, 62, 168-174.</p>
+<p>Department for Transport (1997). West London speed camera demonstration project. Department for Transport.</p>
+<p>Elvik R. (1997). Effects of accidents of automatic speed enforcement in Norway. Transportation Research Record, 1997, 1597: 1-19.</p>
+<p>Elvik, R. (2019). A comprehensive and unified framework for analysing the effects on injuries of measures influencing speed. Accident Analysis and Prevention, 125, 63-69</p>
+<p>Elvik, R., Høye, A. K. (2022). Tiltak som kan redusere antall drepte eller hardt skadde i trafikken: virkninger og kostnader. Arbeidsdokument 51909. Oslo, Transportøkonomisk institutt.</p>
+<p>Factor, R., Haviv, N., Keren, G. (2023). Enforcement and behavior: the effects of suspending enforcement through automatic speed cameras. Journal of Experimental Criminology, 19, 743-759.</p>
+<p>Gains, A., Nordstrom, M., Heydecker, B. (2005). The national safety camera programme. Four-year evaluation report. PA consulting group.</p>
+<p>Glad A. &amp; Østvik, E. (1991). Automatisk trafikkontroll i Telemark. Effekter på kjørefart og ulykker. Oslo, Transportøkonomisk institutt (TØI-rapport nr 0087/91).</p>
+<p>Hels, T., Kristensen, N. B., Carstensen, G., Bernhoft, I. M., &amp; Hakamies-Blomqvist, L. (2010). Automatisk hastighedskontrol: Vurdering af trafiksikkerhed og samfundsøkonomi. Rapport 4. Lyngby, DK: DTU Institut for Transport.Hess, S. (2004). Analysis of the effects of speed limit enforcement cameras: Differentiation by road type and catchment area. Transportation Research Record, 1865(1), 28-34.</p>
+<p>Hess, S. (2004).  Analysis of the effects of speed limit enforcement cameras. Differentiation by road type and catchment area. Transportation Research Record, 1865, 28-34.</p>
+<p>Høye, A. (2015A). Safety effects of fixed speed cameras – an empirical Bayes evaluation.             Accident Analysis and Prevention, 82, 263-269.</p>
+<p>Høye, A. (2015B). Safety effects of section control – an empirical Bayes evaluation. Accident Analysis and Prevention, 74, 169-178.</p>
+<p>Keenan, D. (2002). Speed cameras: The true effect on behaviour. Traffic Engineering &amp; Control, 43(4), 154-161.</p>
+<p>Korthof, E. W. (2014). Effects of section control on traffic safety at Dutch motorways. Masters Thesis. Delft University of Technology.</p>
+<p>Larsson, J., &amp; Brüde, U. (2010). Trafiksäkerhetseffekt av hastighetskameror etablerade 2006. Analys av personskador 2007–2008. VTI Rapport 696.</p>
+<p>La Torre, F., Meocci, M., Nocentini, A. (2019). Safety effects of automated section speed control on the Italian motorway network. Journal of Safety Research, 69, 115-123.</p>
+<p>Li, H.,  Graham, D. J. (2016). Heterogeneous treatment effects of speed cameras on road safety. Accident Analysis and Prevention, 97, 153-161.</p>
+<p>Li, H., Graham, D. J., &amp; Majumdar, A. (2013). The impacts of speed cameras on road accidents: An application of propensity score matching methods. Accident Analysis &amp; Prevention, 60, 148-157.</p>
+<p>Li, H., Zhu, M., Graham, D. J. &amp; Zhang, Y. (2020). Are multiple speed cameras more effective than a single one? Causal analysis of the safety impacts of multiple speed cameras. Accident Analysis and Prevention, 139, 105488.</p>
+<p>Montella, A., Imbriani, L. L., Marzano, V., Mauriello, F. (2015). Effects on speed and safety of point-to-point speed enforcement systems : evaluation of the urban motorway A56 Tangenziale di Napoli. Accident Analysis and Prevention, 75, 164-178.</p>
+<p>Montella, A., Persaud, B., D&#8217;Apuzzo, M., &amp; Imbriani, L. L. (2013). Safety evaluation of automated section speed enforcement system. Transportation Research Record (2281), 16-25.</p>
+<p>Mountain, L. J., Hirst, W. M., &amp; Maher, M. J. (2004). Costing lives or saving lives: A detailed evaluation of the impact of speed cameras. Traffic, Engineering and Control, 45(8), 280-287.</p>
+<p>Newstead, S., Budd, L., Cameron, M. H. (2017). Evaluation of the Queensland camera detected offence program 2013-2015. Final report. Melbourne, Monash University Accident Research Centre.</p>
+<p>Newstead, S., Cameron, M. H. (2013). Crash effects of the Queensland camera detected offence program. Proceedings of the 2013-Australasian Road Safety Research, Policing and Education Conference, August 28-30, Brisbane, Queensland.</p>
+<p>Novoa, A. M., Pérez, K., Santamariña-Rubio, E., Marí-Dell&#8217;Olmo, M., &amp; Tobías, A. (2010). Effectiveness of speed enforcement through fixed speed cameras: A time series study. Injury Prevention, 16(1), 12-16.</p>
+<p>Nuyts, E. (2006). Effectiviteit van onbemande camera&#8217;s. Report RA-2004-46. Diepenbeek, Belgium, Steunpunt Verkeersveiligheid.</p>
+<p>Oei, H.L. &amp; Polak, P.H. (1992). Effect van automatische waarschuwing en toe¬zicht op snelheid en ongevallen. Resultaten van een evaluatie-onder¬zoek in vier provincies. SWOV, Leidschendam (Rapport No. 92-23).</p>
+<p>Owen, R., Ursachi, G., Allsop, R. (2016). The effectiveness of average speed cameras in Great Britain. Royal Automobile Club Foundation for Motoring.</p>
+<p>Pérez, K., Mari-Dell&#8217;Olmo, M., Tobias, A., &amp; Borrell, C. (2007). Reducing road traffic injuries: Effectiveness of speed cameras in an urban setting. American Journal of Public Health, 97(9), 1632-1637.</p>
+<p>Ragnøy, A. (2011). Streknings-ATK. VD Rapport nr. 1. Statens vegvesen, Vegdirektoratet.</p>
+<p>Ragnøy, A., Christensen, P., &amp; Elvik, R. (2002). Skadegradstetthet &#8211; SGT. Et nytt mål på hvor farlig en vegstrekning er. TØI-Rapport 618/2002. Oslo: Transportøkonomisk institutt.</p>
+<p>Retting, R. A., Farmer, C. M., &amp; McCartt, A. T. (2008). Evaluation of automated speed enforcement in Montgomery county, Maryland. Traffic Injury Prevention, 9(5), 440-445.</p>
+<p>Rijkswaterstaat_Directie_Zuid-Holland. (2003). Evaluatie 80 km/uur-maatregel a13 overschie &#8211; doorstroming en verkeersveiligheid. Rijkswaterstaat Directie Zuid-Holland, Afdeling VIV.</p>
+<p>Ringen, S. (2021). Dybdeanalyser av dødsulykker I vegtrafikken 2021. Statens vegvesens rapporter 847. Oslo, Statens vegvesen.</p>
+<p>Shin, K., Washington, S. P., &amp; van Schalkwyk, I. (2009). Evaluation of the Scottsdale loop 101 automated speed enforcement demonstration program. Accident Analysis &amp; Prevention, 41(3), 393-403.</p>
+<p>Skubic, J., Johnson, S. B., Salvino, C., Vanhoy, S., &amp; Hu, C. (2013). Do speed cameras reduce collisions? Annals of Advances in Automotive Medicine, 57, 365.</p>
+<p>Soole, D. W., Watson, B. C., &amp; Fleiter, J. J. (2013). Effects of average speed enforcement on speed compliance and crashes: A review of the literature. Accident Analysis &amp; Prevention, 54(0), 46-56.</p>
+<p>Speed Check Services (2010). Average Speed Enforcement Solutions: Safer, Smoother, Greener, Fairer. Speed Check Services, London.</p>
+<p>Statens vegvesen (2022). Trafikksikkerhetsutviklingen 2021. Oppfølging av Nasjonal tiltaksplan for trafikksikkerhet på veg 2018-2021. Oslo, Statens vegvesen, Vegdirektoratet.</p>
+<p>Statens Vegvesen &amp; Politiet (2021). Retningslinjer for valg av steder og strekninger for automatisk trafikkontroll (ATK). Revisjon 5, April 2021. Statens vegvesen, Vegdirektoratet &amp; Politiet, Politidirektoratet.</p>
+<p>Stefan, C., &amp; Winkelbauer, M. (2005). Section control &#8211; automatic speed enforcement in the Kaisermühlen tunnel (Vienna, a22 motorway). Rosebud WP4 Case Report. Wien: Kuratorium für Verkehrssicherheit.</p>
+<p>Tang, C. K. (2017). Do speed cameras save lives? SERC discussion paper 221. London, London School of Economics.</p>
+<p>Tay, R. (2000). Do speed cameras improve road safety? Paper presented at the Traffic and transportation studies: international conference on traffic and transportation studies. Beijing, China.</p>
+<p>Vadeby, A., Forsman, Å. (2017) Changes in speed distribution: Applying aggregated safety effect models to individual vehicle speeds. Accident Analysis and Prevention, 103, 20-28.</p>
+<p>Vanlaar, W., Robertson, R., &amp; Marcoux, K. (2014). An evaluation of Winnipeg&#8217;s photo enforcement safety program: Results of time series analyses and an intersection camera experiment. Accident Analysis &amp; Prevention, 62, 238-247.</p>
+<p>Vägverket. (2009). Effekter på hastighet och trafiksäkerhet med automatisk trafiksäkerhetskontroll. Publikation 2009:9. Stockholm: Vägverket.</p>
+<p>Winnet, M. (1994). A review of speed camera operations in the UK. University of Warwick, 1994 (22nd PTRC Summer Annual Meeting, Traffic Management and Road Safety, Proceedings of Seminar J, pp 265-276).</p>
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		
+	    	</article>										</div>
+										
+										<br/><br/> 
+									</div>
+								</div>	
+								<div class="column2"> 
+										<div class="column_inner">
+		<aside class="sidebar">
+							
+			<div class="widget widget_text">			<div class="textwidget"><h5>Andre relevante tiltak</h5><!-- her --><ul class="same_cat"><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc730/">8.1 Stasjonære og mobile fartskontroller</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc735/">8.2 Automatisk trafikkontroll (ATK)</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc734/">8.3 Bilbeltekontroller</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc731/">8.4 Atferdskontroll ved patruljering</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc736/">8.5 Automatisk kontroll av rødlyskjøring</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/8-6-lovregulering-av-promillekjoring/">8.6 Lovregulering av promillekjøring</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc733/">8.7 Promillekontroller</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/88-restriksjoner-for-promilledoemte-foerere/">8.8 Sanksjoner og restriksjoner for promillekjøring</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/89-behandling-av-promilledoemte-foerere/">8.9 Behandling og opplæring for problemførere</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/8-kontroll-og-sanksjoner/doc739/">8.10 Prikkbelastningsordninger</a>  </li></ul>
+</div>
+		</div>
+			</div>		</aside>
+	</div>
+								</div>
+							</div>
+											</div>
+                                 </div>
+	
+
+
+		
+	</div>
+</div>
+
+
+
+	<footer >
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+            			<div class="footer_top">
+								<div class="container">
+					<div class="container_inner">
+																	<div class="three_columns clearfix">
+								<div class="column1 footer_col1">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column2 footer_col2">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column3 footer_col3">
+									<div class="column_inner">
+																			</div>
+								</div>
+							</div>
+															</div>
+				</div>
+							</div>
+					</div>
+							<div class="footer_bottom_holder">
+                								<div class="container">
+					<div class="container_inner">
+										<div class="three_columns footer_bottom_columns clearfix">
+					<div class="column1 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Ansvarlig utgiver</h5>			<div class="textwidget"><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172692" role="img" src="/wp-content/uploads/2020/06/toi-logo-byline-nor.svg" alt="" width="271" height="30" /></p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column2 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Redaktører:</h5>			<div class="textwidget"><p>Alena Høye (TØI)<br />
+Rune Elvik (TØI)</p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column3 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Finansieringspartnere</h5>			<div class="textwidget"><p><a href="http://www.regjeringen.no/nb/dep/sd.html?id=791"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172057" src="https://www.tshandbok.no/wp-content/uploads/2019/04/sd-col.png" alt="" width="136" height="44" /><br />
+</a><a href="https://www.vegvesen.no"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-160689" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160689.png" alt="" width="110" height="57" /></a></p>
+</div>
+									</div>
+						</div>
+					</div>
+				</div>
+									</div>
+			</div>
+						</div>
+				</div>
+	</footer>
+		
+</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bridge-child\/*","\/wp-content\/themes\/bridge\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+     <script type="text/javascript" id="pf_script">
+                      var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfImagesSize = 'full-size';
+          var pfImageDisplayStyle = 'right';
+          var pfEncodeImages = '0';
+          var pfShowHiddenContent  = '0';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+
+            var pfCustomCSS = "/wp-content/themes/bridge-child/css/printfriendly.css";
+          var pfPlatform = 'WordPress';
+
+        (function($){
+            $(document).ready(function(){
+                if($('.pf-button-content').length === 0){
+                    $('style#pf-excerpt-styles').remove();
+                }
+            });
+        })(jQuery);
+        </script>
+      <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            
+            <link rel='stylesheet' id='font-awesome-css' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=6.8.10' type='text/css' media='all' />
+<script type="text/javascript" id="toc-front-js-extra">
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","smooth_scroll_offset":"50"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1&#039; defer onload=&#039;" id="toc-front-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.prettyPhoto.js?ver=6.8.10&#039; defer onload=&#039;" id="prettyphoto-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.flexslider-min.js?ver=6.8.10&#039; defer onload=&#039;" id="flexslider-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.fullPage.min.js?ver=6.8.10&#039; defer onload=&#039;" id="one_page_scroll-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.mousewheel.min.js?ver=6.8.10&#039; defer onload=&#039;" id="mousewheel-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.touchSwipe.min.js?ver=6.8.10&#039; defer onload=&#039;" id="touchSwipe-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.isotope.min.js?ver=6.8.10&#039; defer onload=&#039;" id="isotope-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.stretch.js?ver=6.8.10&#039; defer onload=&#039;" id="stretch-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/default.js?ver=6.8.10&#039; defer onload=&#039;" id="default-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/custom.js?ver=1591615404&#039; defer onload=&#039;" id="ttk_custom-js"></script>
+</body>
+</html>	

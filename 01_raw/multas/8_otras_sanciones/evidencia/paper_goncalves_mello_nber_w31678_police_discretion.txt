@@ -1,0 +1,4419 @@
+NBER WORKING PAPER SERIES
+POLICE DISCRETION AND PUBLIC SAFETY
+Felipe M. Gonçalves
+Steven Mello
+Working Paper 31678
+http://www.nber.org/papers/w31678
+NATIONAL BUREAU OF ECONOMIC RESEARCH
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+September 2023
+We are grateful to Leila Agha, David Arnold, Eric Chyn, Will Dobbie, Ben Hansen, Peter Hull, 
+Elisa Jacome, Louis Kaplow, Ilyana Kuziemko, Emily Leslie, Adriana Lleras-Muney, Erzo 
+Luttmer, Alex Mas, Michael Mueller-Smith, Emily Nix, Sam Norris, Rodrigo Pinto, Bruce 
+Sacerdote, Yotam Shem-Tov, Chris Snyder, Doug Staiger, Megan Stevenson, and Emily 
+Weisburst, as well as seminar participants at Princeton, UCLA, Dartmouth, Case Western, UBC, 
+Claremont McKenna, SDSU, Duke, Brown, Michigan, FRBNY, the SEA Annual Meeting, and 
+NBER Summer Institute for helpful comments. We thank Jeffrey Bissainthe, Kiara Guzzo, 
+Wilton Johnson, Timothy Kutta, Stacy Lehmann, Brenda Paige, and especially Beth Allman for 
+assistance with acquiring the data from various Florida agencies. Jacklyn Pi provided excellent 
+research assistance. The Princeton Industrial Relations Section provided generous financial 
+support. Any errors are our own. The views expressed herein are those of the authors and do not 
+necessarily reflect the views of the National Bureau of Economic Research.
+NBER working papers are circulated for discussion and comment purposes. They have not been 
+peer-reviewed or been subject to the review by the NBER Board of Directors that accompanies 
+official NBER publications.
+© 2023 by Felipe M. Gonçalves and Steven Mello. All rights reserved. Short sections of text, not 
+to exceed two paragraphs, may be quoted without explicit permission provided that full credit, 
+including © notice, is given to the source.
+Police Discretion and Public Safety
+Felipe M. Gonçalves and Steven Mello
+NBER Working Paper No. 31678
+September 2023
+JEL No. D73,J45,K42
+ABSTRACT
+We study the implications of police discretion for public safety. Highway patrol officers exercise 
+discretion over fines by deviating from statutory fine rules. Relying on variation across officers in 
+this discretionary behavior, we find that harsher sanctions reduce future traffic offending and 
+crash involvement. We then show that officer discretion over sanctions decreases public safety by 
+comparing observed reoffending rates with those in a counterfactual without discretion, estimated 
+using an identification at infinity approach. About half the safety cost of discretion is due to 
+officer decisions which result in harsh sanctions for motorists who are least deterred by them. We 
+provide evidence that this officer behavior is attributable to a preference for allocating harsh fines 
+to motorists with higher recidivism risk, who are also the least responsive to harsher sanctions.
+Felipe M. Gonçalves
+Department of Economics
+University of California, Los Angeles
+8283 Bunche Hall
+Los Angeles, CA 90095
+and NBER
+fgoncalves@econ.ucla.edu
+Steven Mello
+Department of Economics
+Dartmouth College
+6106 Rockefeller Hall
+Hanover, NH 03755
+and NBER
+steve.mello@dartmouth.edu
+1
+Introduction
+Ensuring public safety is a central function of the state. To that end, policy regimes specify
+sanctions for socially undesirable behaviors (Becker, 1968). However, beyond the set of oﬃ-
+cial policies, the state also relies on bureaucrats tasked with allocating sanctions in practice.
+As in much of the public sector, these actors typically wield signiﬁcant discretion (Lip-
+sky 1980; Wilson 1989). For example, patrolling police oﬃcers can overlook minor crimes,
+prosecutors can reduce criminal charges, and judges can issue a wide range of sentences.
+Permitting this type of discretion can have important beneﬁts if agents internalize the goals
+of the state and can eﬀectively discern the allocation of sanctions that maximizes public
+safety (e.g., Banﬁeld 1975; Kang & Silveira 2021). On the other hand, these decision-makers
+may have poor information, attend to alternative objectives such as personal gain, or hold
+competing notions of the optimal allocation when making decisions (e.g., Prendergast 2007).
+A critical question raised by the pervasive discretion practiced by criminal justice agents,
+then, is the extent to which that discretion improves public safety. We study this question in
+the context of traﬃc enforcement, focusing on highway patrol oﬃcers who exercise discretion
+over speeding sanctions by deviating from statutory ﬁne rules. To start, we document that
+these discretionary choices have important implications for public safety: harsher ﬁnes reduce
+a motorist’s future traﬃc oﬀending and likelihood of future crash involvement. Next, we show
+that oﬃcer discretion reduces public safety by estimating reoﬀending rates in a counterfactual
+scenario without discretion. We ﬁnd that oﬃcer choices of whom to sanction harshly play
+an important role in explaining the net safety costs of discretion. In particular, eliminating
+discretion results in harsh ﬁnes for motorists who typically see lenience when oﬃcers use
+their discretion, and deterrence eﬀects are particularly large in the subsample. We conclude
+by exploring potential explanations for this oﬃcer behavior, including oﬃcer preferences and
+imperfect information.
+Speeding enforcement is a high stakes setting in terms of public safety. In 2020, there
+were nearly twice as many traﬃc fatalities (∼39,000) as homicides (∼22,000) in the United
+States.
+Economic costs associated with motor vehicle accidents have been estimated at
+nearly $250 billion per year, higher than annual costs of crime victimization (Blincoe et al.
+2015; Chalﬁn 2016). Standard estimates suggest that at least one third of fatal crashes
+are caused by speeding and existing studies have found strong associations between average
+driving speeds and traﬃc fatalities (NHTSA 2014; Ashenfelter & Greenstone 2004).
+While speeding sanctions are statutorily based only on a driver’s speed relative to the
+posted limit, oﬃcers can manipulate ﬁnes by writing down a slower speed than was observed
+on the actual citation, resulting in a discounted ﬁne (Anbarci & Lee 2014; Goncalves &
+Mello 2021). In Florida, the setting of our study, nearly one third of all speeding citations
+1
+are issued for exactly nine miles per hour (MPH) over the limit, just below a $75 increase
+in the statutory ﬁne amount. Less than one percent are issued for either eight or ten MPH.
+Oﬃcers patrolling the same beat-shifts vary considerably in the degree of bunching in their
+charged speed distributions, highlighting that oﬃcer discretion, rather than driver behavior,
+explains the bunching in cited speeds (Goncalves & Mello, 2021).
+Our empirical approach leverages this variation across oﬃcers in the propensity to bunch
+motorists below ﬁne increases.
+We use an instrumental variables (IV) framework where
+the treatment and outcome of interest are whether a driver receives a harsh (versus dis-
+counted) ﬁne and whether a cited driver commits a new traﬃc oﬀense in the following year.
+Our instrument is the citing oﬃcer’s propensity not to bunch other drivers, which we call
+stringency. Our design mirrors a growing literature leveraging randomly assigned judges for
+identiﬁcation (e.g., Kling 2006; Maestas et al. 2013; Dahl et al. 2014; Dobbie & Song 2015,
+Mueller-Smith 2015), with the caveat that, in our setting, citing oﬃcers are not randomly
+assigned to drivers. An important concern for our approach, then, is whether an oﬃcer’s
+bunching propensity is correlated with the characteristics of her sample of cited drivers. We
+show that, conditional on beat-shift ﬁxed eﬀects, stringency is uncorrelated with an oﬃcer’s
+ticketing frequency, driver characteristics that predict reoﬀending, and past traﬃc oﬀending.
+First, we use this IV framework to study the deterrence eﬀects of sanctions. We estimate
+the local average treatment eﬀect (LATE) of harsher ﬁnes on the future driving behavior of
+cited drivers, instrumenting harsh ﬁnes with oﬃcer stringency. We ﬁnd that a 125 dollar
+increase in ﬁne amounts reduces the likelihood of any new traﬃc oﬀense in the following year
+by 1.6 percentage points (󰂃= −0.07). We document a stronger eﬀect on speeding oﬀenses
+(󰂃= −0.13) and a statistically signiﬁcant, but less precise, eﬀect on the likelihood that a
+driver is involved in a traﬃc accident in the next year (󰂃= −0.04).
+In this setting, motorists receiving harsh and lenient ﬁnes face identical sanctions for
+future oﬀenses. Hence, the ex-post response we document represents a speciﬁc deterrence
+eﬀect, or the impact of the experience of punishment on oﬀending (Nagin, 2013).
+Our
+ﬁne elasticity estimates advance a literature focused on isolating speciﬁc deterrence eﬀects
+(Gehrsitz 2017; Hansen 2015, Dusek & Traxler 2021, Finlay et al. 2022) and the broader
+literature on the deterrence eﬀects of traﬃc enforcement eﬀorts (e.g., Makowsky & Stratmann
+2011; DeAngelo & Hansen 2014; Luca 2014; Traxler et al. 2018). Our ability to measure
+individual-level impacts on crash involvement, an outcome clearly associated with social costs
+and not subject to enforcement-based measurement, also adds to the literature on speciﬁc
+deterrence.
+Next, we quantify the overall contribution of oﬃcer discretion to public safety by esti-
+mating the reoﬀending rate in a counterfactual scenario without oﬃcer discretion. Because
+the speciﬁc type of discretion we study takes the form of oﬃcers departing from ﬁne rules by
+2
+reducing charges, our aim is to estimate the reoﬀending rate if all cited drivers were instead
+issued harsh ﬁnes. The empirical challenge we face is that this counterfactual is not identiﬁed
+by the LATE when treatment eﬀects are heterogeneous, especially if oﬃcers strategically use
+their discretion. For example, suppose that oﬃcers allocate harsh ﬁnes to maximize public
+safety. In this case, the motorists currently facing harsh ﬁnes should be the most responsive
+to those harsh ﬁnes in terms of driving behavior, and the safety gains associated with issuing
+harsh ﬁnes to those currently not receiving them could be much smaller than suggested by
+the LATE. Note that this is a pervasive issue in the program evaluation literature, where ex-
+trapolating beyond the LATE is an important step in assessing the eﬀects of counterfactual
+policy changes (e.g., Heckman & Vytlacil 2007, Cornelissen et al. 2016, Brinch et al. 2017).
+Hence, our desired counterfactual requires a dedicated estimate of the average treat-
+ment eﬀect on the untreated (ATU). While this parameter can be recovered from estimates
+of marginal treatment eﬀects (e.g., Bjorklund & Moﬃtt 1987; Heckman & Vytlacil 2007;
+Mogstad & Torgovitsky 2018), identiﬁcation of the MTE requires a strict monotonicity
+assumption, which implies that all oﬃcers share a common ranking of motorists when allo-
+cating harsh sanctions. Instead, we estimate the ATU using a novel two-step procedure that
+does not require any monotonicity assumptions. We ﬁrst extend our IV framework using
+an identiﬁcation at inﬁnity approach (e.g., Heckman 1990; Hull 2020; Arnold et al. 2022).
+Speciﬁcally, examining the reoﬀending rates of motorists cited by oﬃcers who always and
+never issue harsh ﬁnes identiﬁes the average treated and untreated potential outcomes. We
+use parametric extrapolation techniques as in Arnold et al. (2022), but our setting is unique
+in that we actually observe oﬃcers in the tails of the stringency distribution. As such, our
+extrapolation-based estimates of the average treated and untreated potential outcomes are
+insensitive to functional form assumptions. We then combine these estimates of average
+potential outcomes with observed reoﬀending rates in the data in the data to estimate the
+average treatment eﬀect (ATE), average treatment eﬀect on the treated (ATT), and average
+treatment eﬀect on the untreated (ATU).
+Our approach indeed reveals important diﬀerences between the LATE and the ATU. We
+ﬁnd that motorists who currently face lenient ﬁnes exhibit treatment eﬀects which are 40
+percent larger (more negative) than the estimated LATE. Our estimated ATU implies that
+the overall reoﬀending rate would decline by 2.2 percent in a counterfactual scenario without
+oﬃcer discretion. To put this number in perspective, we estimate that switching all drivers
+from lenient to harsh ﬁnes would reduce the reoﬀending rate by 3.4 percent. Eliminating
+discretion thus achieves over sixty percent of the feasible deterrence on this margin.
+The safety gains from removing oﬃcer discretion can be decomposed into two channels.
+The ﬁrst, which we call the average component, is the safety gains associated with increasing
+the likelihood of harsh ﬁnes for the average motorist. The second, which we call the sorting
+3
+component, is the relative safety gain from issuing harsh ﬁnes to the speciﬁc subgroup of
+motorists who typically face lenience when oﬃcers exercise discretion. The second component
+captures diﬀerences in treatment eﬀects for the average motorist (ATE) and the subset of
+motorists whose treatment status is changed without discretion (ATU). We ﬁnd that each
+channel explains about half of the overall safety gains from eliminating oﬃcer discretion.
+In other words, increasing the harshness rate for the average driver improves safety, and
+allocating harsh ﬁnes to motorists who typically receive lenience when oﬃcers use discretion
+further reduces the reoﬀending rate, because these motorists are especially responsive to
+harsh ﬁnes. Note that this is exactly the opposite of what would be expected under safety
+maximization by oﬃcers, which would predict the smallest treatment eﬀects for the motorists
+typically issued lenient ﬁnes.
+We ﬁnd similar patterns when considering alternative measures of safety. Examining a
+motorist’s number of new traﬃc oﬀenses in the following two years, those issued lenient ﬁnes
+represent over 80 percent of the feasible deterrence. In terms of future crash involvement,
+untreated motorists comprise nearly all the feasible deterrence. For this group of drivers,
+we estimate that each additional dollar in ﬁnes issued from counterfactually imposing harsh
+sanctions yields a public safety gain of nearly two dollars in the form of lower social costs
+attributable to traﬃc accidents.
+Finally, we consider potential explanations for the oﬃcer behavior we document. Along
+with the reverse selection on gains discussed above, we ﬁnd striking positive selection on
+levels: if issued a lenient ﬁne, the motorists who face harsh sanctions would reoﬀend about 15
+percent more often than motorists who receive lenience. We ﬁnd that both reverse selection
+on gains and selection on levels persist when examining patterns within motorist covariates
+or focusing only on ﬁrst-time oﬀenders and cannot be explained by oﬃcer decisions based
+on the underlying stopped speed. We also ﬁnd similar selection patterns when examining
+experienced oﬃcers.
+Hence, the available evidence is consistent with the view that the
+current allocation of ﬁnes reﬂects the goals of oﬃcers. In particular, these patterns align
+well with an intuitive notion of fairness, with oﬃcers allocating harsh ﬁnes to the “worst”
+drivers in terms of recidivism risk. These motorists are the least deterred by harsh ﬁnes, and
+hence eliminating these “sorting” decisions by oﬃcers has important public safety beneﬁts.
+Our central contribution is to a large literature on the implications of bureaucratic dis-
+cretion for state eﬀectiveness (e.g., Prendergast 2007; Ash & MacLeod 2015; Best et al.
+2017; Bandiera et al. 2021) and to a rapidly growing literature on the role of discretion in
+the criminal justice system (e.g., Weisburst 2017; Ba et al. 2021; Chalﬁn & Goncalves 2021;
+Goncalves & Mello 2021; Abrams et al. 2021; Feigenberg & Miller 2022; Norris 2022; An-
+gelova et al. 2023). We quantify the net eﬀect of oﬃcer discretion over sanctions on public
+safety and show that a misalignment between the deterrence objectives of the state and the
+4
+discretionary behavior of police oﬃcers has important implications for road safety.
+Our ﬁndings on this dimension also speak to a largely theoretical literature on fairness-
+eﬃciency tradeoﬀs in the design of legal institutions (e.g, Polinsky & Shavell 2000; Kaplow &
+Shavell 2006; O’Flaherty & Sethi 2019; Moore 2019) by documenting the empirical relevance
+of a tradeoﬀbetween eﬃciency and other potential law enforcement objectives, such as the
+targeting of sanctions to the “worst” oﬀenders. Importantly, we do not take a ﬁrm stand
+on the overall welfare implications of this oﬃcer behavior, as this behavior could reﬂect a
+legitimate law enforcement goal or the desired allocation of the state.
+We also contribute to a broad literature on the allocation choices of economic agents. A
+common practice in this literature is to examine selection patterns in settings where eﬃcient
+allocations should exhibit selection on gains (e.g., Carneiro et al. 2011; Abaluck et al. 2016;
+Van Dijk 2019; Chandra & Staiger 2020). Several such studies have nonetheless found sorting
+based on levels, such as parents choosing school districts for their children (Abdulkadiroglu
+et al., 2020) and hospitals opting into a Medicare reform (Einav et al., 2022). We document
+similar behavior in a new setting, law enforcement, and we do so using a novel method that
+can characterize selection patterns under minimal assumptions.
+Our paper proceeds as follows. Section 2 describes our data and setting. We lay out
+our empirical framework in section 3 and estimate the causal eﬀect of sanctions in section
+4. Section 5 quantiﬁes and decomposes the net contribution of oﬃcer discretion to public
+safety and section 6 considers potential explanations for the oﬃcer behavior we ﬁnd. Section
+7 concludes.
+2
+Data and setting
+2.1
+Data sources
+The Florida Clerks and Comptrollers provided administrative records of the universe of
+traﬃc citations issued in Florida for the years 2005–2018 from Florida’s Uniform Traﬃc
+Citation (UTC) database. These records include the date and county of the citation as
+well as information on the cited violation. When the violation is speeding, this information
+includes the charged speed and posted speed limit (e.g., 74 MPH in a 65 MPH zone). The
+UTC data also include all information provided on a stopped motorist’s driver license (DL):
+name, date of birth, address, race, gender, as well as DL state and number.
+Using the
+driver license number, we are able to link drivers across citations and construct our primary
+measures of past and future traﬃc oﬀending.
+We augment the motorist information in the UTC data with four auxiliary data sources.
+First, we match drivers on zip code of residence to estimated per-capita income at the zip
+code level from the IRS Statistics of Income ﬁles. Second, we construct estimated vehicle
+5
+values based on a database of online vehicle resale values. Third, we recode a motorist’s race
+as Hispanic if, based on census records, their surname is associated with Hispanic status for
+more than 80 percent of individuals.1 Finally, we link drivers on full name and date of birth
+to prison spell records from the Florida Department of Corrections to construct a measure
+of prior incarceration.
+In the citations data, the ticketing oﬃcer is identiﬁed by name. We construct a consistent
+oﬃcer identiﬁer by linking the oﬃcer name with data on Florida Highway Patrol (FHP)
+employment spells provided by the Florida Department of Law Enforcement. We focus on
+tickets issued by the FHP both because we can more consistently the citing oﬃcer and
+because speeding enforcement is a central duty of the FHP. However, we measure past and
+future oﬀending using all citations, not just the FHP-issued citations in our focal sample.
+We also obtained administrative crash reports covering the universe of automobile ac-
+cidents known to police over the period 2006–2018 from the Florida Department of Trans-
+portation (FDOT). These data are collected during a police response or investigation and
+include the date and county of the incident and include the DL numbers of involved drivers,
+which we use to link drivers with the citations data.
+The Florida Clerks and Comptrollers provided records from the Traﬃc Citation Account-
+ing Transition System (TCATS) database, which includes information on the traﬃc court
+disposition associated with about 80 percent of the citations in our sample. We use these
+records to construct a measure of whether a citation was contested in traﬃc court and, based
+on the disposition, to construct measures of accrued, rather than statutory, sanctions. For
+additional details, see appendix D.
+2.2
+Sample construction
+To construct our sample of focal citations, we ﬁrst restrict attention to tickets written by the
+Florida Highway Patrol over 2007–2016 where the citing oﬃcer is identiﬁed.2 We further re-
+strict the sample to include tickets where speeding is the only violation, no crash is indicated,
+and the charged speed is between nine and twenty-nine miles per hour over the posted speed
+limit. We choose twenty-nine as our upper limit because (i) the available evidence suggests
+that motorists are still bunched with positive probability when their true speed is as high
+1As discussed in Goncalves & Mello (2021), there are clear inconsistencies in the recording of
+Hispanic status in the UTC data. Oﬃcers frequently write down race = H (for Hispanic). But
+in Miami-Dade county, where the population is over 60 percent Hispanic, less than one percent of
+citations are coded as being issued to a Hispanic motorist.
+2We focus on 2007–2016 so that we can measure other oﬀending (including crash activity) for
+least one full year prior and one full year after the focal citation. Over this period, the ticketing
+oﬃcer is identiﬁable for 85 percent of FHP-issued speeding tickets.
+6
+as twenty-nine MPH over the limit (see ﬁgure 1) and (ii) thirty MPH over the limit is the
+threshold for criminal speeding.
+We also restrict to drivers with a valid Florida driver license number, so that we can
+reliably measure past and future oﬀending, and require that oﬃcers have at least ﬁfty cita-
+tions meeting the above criteria to compute our instrument. Ultimately, our focal sample
+is comprised of 1,693,457 speeding citations issued by 1,960 FHP oﬃcers. There are 1.4M
+unique drivers in the sample. Table 1 presents summary statistics.
+Again, reoﬀending and past oﬀending are measured using all citations issued in the state
+rather than just the citations that comprise our sample of focal FHP tickets. Worth noting
+here is the fact that our main outcome measure will capture whether a motorist is caught
+and ticketed for a new traﬃc oﬀense, which itself could be subject to oﬃcer discretion. If
+anything, we expect that oﬃcer discretion at the recidivism stage will bias our speciﬁc deter-
+rence eﬀect estimates towards zero. We compare reoﬀending rates for individuals (randomly)
+receiving harsh and lenient ﬁnes and ﬁnd that those receiving harsh ﬁnes diﬀerentially re-
+duce their oﬀending rates. If oﬃcers are more likely to let drivers with less severe oﬀending
+histories oﬀwith formal or informal warnings, that would bias our estimates towards zero
+by deﬂating the reoﬀending rates of those who are issued lenient sanctions.
+2.3
+Florida highway patrol
+State-level patrols are the primary enforcers of traﬃc laws on interstates and many highways,
+especially those in unincorporated areas. On patrol, oﬃcers are given an assigned zone over
+which they can combine roving patrol and parked observation patrol. Florida Highway Patrol
+(FHP) oﬃcers are divided into one of nine assigned troops, almost all of which patrol six to
+eight counties each. Oﬃcer assignments operate on eight-hour shifts and cover an assignment
+region that roughly corresponds to a county, though the size of a “beat” can vary based on
+an area’s population density. In practice, we use counties to proxy for assignment regions.
+The FHP is comprised of approximately 1,500 full-time oﬃcers. Speeding enforcement is
+a primary duty of FHP oﬃcers and the FHP collectively issues between 150,000 and 200,000
+speeding citations each year. Other responsibilities include enforcing a wide array of other
+traﬃc laws, investigating crashes, and responding to and assisting with highway emergencies.
+The FHP oﬃcer handbook reads “Members should take the enforcement action they deem
+necessary to ensure the safety of the motoring public, reduce the number and severity of
+traﬃc crashes, and reduce the number of criminal acts committed on highways of this state,”
+highlighting that oﬃcers are explicitly given discretion over enforcement decisions.
+In Florida, speeding sanctions are based on an oﬀender’s speed relative to the posted
+speed limit. Speeding 1-5 MPH over the limit carries a statutory warning but no sanctions,
+7
+while speeding 30 or more MPH over the limit is a misdemeanor oﬀense requiring the oﬀender
+to appear in court. Between 6 and 29 MPH over the limit, the statutory ﬁne is a step function,
+plotted as a red dotted line in ﬁgure 1.
+Speeding oﬀenses are also associated with “points” on an oﬀender’s driver license (DL).
+Point assessments are also based on speed; speeding 6-15 MPH over the limit is associated
+with 3 points while speeding 16+ MPH over the limit is associated with 4 points. Points
+are used by car insurers to adjust premiums and oﬀenders that collect a suﬃcient number of
+points (12 points in 12 months; 18 points in 18 months; 24 points in 36 months) have their
+license suspended for 30 days (6 months; 1 year).
+After a citation has been issued, a driver can either submit payment to the county clerk
+or request a court date to contest the ticket. If the ticket goes to court, a judge or hearing
+oﬃcer typically decides either to uphold the original charge, reduce the charge, or dismiss
+the citation. At the time of payment, a subset of drivers can elect to attend an optional
+traﬃc school, completion of which combined with on-time payment will remove the citation
+from a driver’s record and prevent the accrual of the associated DL points.
+2.4
+Discretion over sanctions
+Panel (a) of ﬁgure 1 shows the speeding ﬁne schedule in Florida and a histogram of charged
+speeds on FHP-issued speeding citations. Over one third of all citations are issued for exactly
+9 MPH over the posted limit, just below a $75 increase in the associated ﬁne. Less than
+one percent of all citations are issued for eight or ten MPH over the limit. The dramatic
+bunching in the speed distribution suggests systematic manipulation by oﬃcers. Speciﬁcally,
+the distribution implies the practice of speed discounting, where oﬃcers observe drivers
+traveling at higher speeds but write down nine MPH on the citation as a form of lenience
+(Anbarci & Lee 2014; Goncalves & Mello 2021). An oﬃcer’s decision whether to bunch a
+driver, resulting in either a discounted or full ﬁne, is the focus of our study.
+We rely on several pieces of evidence to demonstrate that bunching in the speed distri-
+bution is generated by the behavior of oﬃcers rather than drivers (e.g., Traxler et al. 2018).
+First, following Goncalves & Mello (2021), ﬁgure 1 shows that all bunching is attributable
+to a subset of lenient oﬃcers.3 About 25 percent of oﬃcers, whom we term the non-lenient
+oﬃcers, almost never write tickets for nine MPH. In appendix A, we further document the
+variation across oﬃcers in bunching propensity, show that an oﬃcer’s bunching propensity
+3See appendix D-2 for details on the classiﬁcation of oﬃcers as lenient versus non-lenient, which
+is based on the manipulation test from Frandsen (2017). To ensure that the pattern in ﬁgure 1
+is not mechanical and to avoid the reﬂection problem in IV estimates, we randomly partition an
+oﬃcer’s stops into two groups, classify each oﬃcer × partition as lenient versus not, and then use
+the oﬃcer’s classiﬁcation in the other partition.
+8
+is strongly correlated across space and time, and ﬁnd that the identity of the stopping oﬃcer
+is signiﬁcantly more predictive of a bunched ticket than locations or motorist characteristics.
+A natural question here is why do oﬃcers bunch drivers? First, we note that ﬁne revenue
+is routed to the county government where the citation was issued. Hence, neither the oﬃcers
+themselves, nor the FHP or state government, have any ﬁnancial stake in ﬁne amounts.
+Oﬃcers may have a promotion incentive to write a certain number of tickets, as the number
+of tickets they write appears on their performance evaluations.
+We believe these set of
+institutional factors contribute to an environment in which oﬃcers are encouraged to write
+tickets but also have the freedom to write reduced charges, which is ideal for our research
+design (Goncalves & Mello, 2021).
+Based on the available evidence, our view is that distaste for traﬃc court best explains
+oﬃcer lenience in this context.
+After receiving a traﬃc ticket, the cited driver has the
+option to contest the citation in traﬃc court, with the citing oﬃcer expected to attend the
+associated court hearing. Using the same identiﬁcation strategy that we exploit to assess the
+causal eﬀect of sanctions on oﬀending, we ﬁnd that a 125 dollar increase in ﬁne (causally)
+increases the likelihood that a driver contests a ticket in court by about 40 percent (see table
+2). Hence, distaste for appearing in traﬃc court generates an incentive to bunch drivers and
+heterogeneity in distaste for traﬃc court could explain the observed variation in lenience
+across oﬃcers.
+3
+Empirical framework
+Our empirical approach leverages the variation across oﬃcers in the propensity to bunch
+drivers within an instrumental variables framework. The outcome of interest, Yi, is whether
+cited driver i commits a new traﬃc oﬀense in the following year. The treatment of interest
+is whether driver i receives a harsh ﬁne (as opposed to a lenient one), which we denote by
+Di = 1[speedi ≥10]. The instrument, which we call oﬃcer stringency, is computed as:
+Zij = 1 −
+󰀣
+1
+Nj −1
+󰁛
+k∕=i
+1[speedkj = 9]
+󰀤
+≡stringency
+where i indexes motorists and j indexes oﬃcers. In words, Di is an indicator for whether a
+motorist is not bunched at 9 MPH over and Zij is the fraction of oﬃcer j’s citations issued
+to all other drivers that are for speeds of 10 MPH or more over the limit; or in other words,
+the fraction of citations that are not bunched at 9 MPH.
+To adjust for diﬀerential exposure of oﬃcers to groups of motorists based on patrol
+shift assignments, we condition on detailed beat-shift ﬁxed eﬀects, denoted by ψs, in all
+our analyses. These beat-shift eﬀects are at the level of the county × 1[highway] × year
+9
+× month × 1[weekend] × shift. A county is approximately a patrol area for each oﬃcer.
+Oﬃcers rotates shift (day of week and time of day) monthly.
+Our empirical framework requires that the stringency instrument satisfy the local average
+treatment eﬀect (LATE) assumptions of Imbens & Angrist (1994):
+1. Relevance. D(Z) is a nontrivial function of Z.
+2. Exogeneity. {Yi1, Yi0, Di(Z)} ⊥Z | ψ
+3. Exclusion. Yi(D, Z) = Yi(D)
+4. Monotonicity. ∀w, j ∈J, either Di(w) ≥Di(h) ∀i or Di(w) ≤Di(h) ∀i
+where J denotes the set of oﬃcers and {Yi1, Yi0} are the potential outcomes of driver i when
+sanctioned harshly (D = 1) and leniently (D = 0).
+The relevance assumption requires a statistical relationship between stringency and harsh
+ﬁnes, which is empirically testable. Panel (c) of ﬁgure 2 plots the probability of harsh ﬁnes
+against oﬃcer stringency, conditional on beat-shift ﬁxed eﬀects, laid over a histogram of
+stringency, net of beat-shift eﬀects. The ﬁgure documents a linear and statistically precise
+relationship, with an estimated ﬁrst stage coeﬃcient of ˆβ = 0.944 (se = 0.006) and associated
+F ≈22, 000. In ﬁgure A-3, we show the ﬁrst stage estimates for other sanction measures. In
+terms of ﬁne amounts, shown in panel (a), the estimated ﬁrst stage is ˆβ = $122. We further
+discuss the exogeneity, exclusion, and monotonicity assumptions in turn below.
+Exogeneity. Existing studies using examiner designs (e.g., Kling 2006, Dobbie & Song
+2015, Maestas et al. 2013, Bhuller et al. 2020) have appealed to the institutional quasi-
+random assignment of examiners (e.g., bail judges) to satisfy the exogeneity assumption.
+Citing oﬃcers in our setting are, of course, not randomly assigned to drivers.
+Instead,
+oﬃcers can select their own samples by choosing (i) whom to pull over versus whom to let
+pass and (ii) whom to cite versus whom to issue a formal or informal warning. We cannot
+observe formal or informal warnings in our data and cannot observe the full population of
+drivers passing by an oﬃcer during a given shift.
+An especially salient threat to our empirical design would be a correlation between strin-
+gency on the citing margin (whom to cite versus not) and the charging margin (whom to
+bunch versus not). To help illustrate this point, suppose there were two oﬃcers, j ∈{a, b},
+with a an oﬃcer who bunches most drivers and b an oﬃcer who bunches fewer drivers. Sup-
+pose that a is also very lenient on the citing margin; that is, she lets most motorists pass
+with no citation, while b is very stringent on the ticketing margin, citing most drivers. If a
+restricts her sample by only citing “worse” drivers, then E(Yi0 | j = a) > E(Yi0 | j = b),
+violating exogeneity.
+10
+There are two testable implications of the hypothesis that lenience on the intensive (bunch
+versus not) and extensive (ticket versus not) margins are correlated. First, our instrument
+Z should be correlated with an oﬃcer’s citation frequency. Holding constant the supply of
+oﬀenders, oﬃcers with higher ticketing thresholds should have “missing” tickets relative to
+oﬃcers with lower ticketing thresholds. Second, Z should be correlated with driver charac-
+teristics that predict reoﬀending. We test both these predictions in ﬁgure 2. Panel (a) plots
+the relationship between oﬃcer stringency and an oﬃcer’s average monthly citations, both
+adjusted for beat-shift ﬁxed eﬀects. For both all citations and speeding citations, regres-
+sion coeﬃcients are quantitatively small and statistically indistinguishable from zero. Panel
+(b) illustrates that there is no relationship between stringency and either past oﬀending or
+predicted reoﬀending based on driver covariates.4
+Hence, the evidence suggests that exogeneity violations generated by sample selection are
+unlikely. Nonetheless, we take sample selection concerns seriously and subject our treatment
+eﬀect estimates to a series of associated robustness checks, described further in section 4.
+Exclusion. The exclusion restriction requires that oﬃcer stringency aﬀects future of-
+fending only through sanctions. Note that our strategy allows other (non-sanction) oﬃcer
+behaviors to aﬀect drivers as long as those behaviors are uncorrelated with our stringency
+measure (Frandsen et al., 2019). On the other hand, features of the oﬃcer-driver interaction
+other than the sanction that cause a driver to change behavior would violate exclusion if
+those features are correlated with stringency.
+Another plausible source of exclusion violations is downstream involvement in the traﬃc
+court system. As previously mentioned, stringency increases the likelihood that a driver
+contests a ticket in court and might inﬂuence traﬃc school elections. If anything about the
+court experience changes driver behavior, that could be considered an exclusion violation.
+However, whether traﬃc court involvement constitutes a violation of exclusion or simply a
+mechanism for the ﬁne’s impact is subject to interpretation. When viewed from the oﬃcer’s
+perspective, downstream events that are (i) caused by harsher sanctions and (ii) reduce
+reoﬀending still could be interpreted as a causal eﬀect of sanctions themselves.5
+Finally, the choice to bunch a driver indirectly aﬀects the statutory “points” a driver
+4Appendix table A-2 shows the relationship between all driver characteristics and recidivism,
+charged ﬁnes, and oﬃcer stringency. Driver covariates have substantial joint predictive power over
+reoﬀending (F = 1734) and reduced charges (F = 29), but considerably less power to predict
+oﬃcer stringency (F = 2.7). While our test rejects the null hypothesis of no statistical relationship
+between observables and oﬃcer stringency, a joint F = 2.7 is remarkable small in a setting without
+institutional random assignment and N ≈1.7M.
+5Moreover, the evidence is largely inconsistent with the court system playing an important role
+in generating the treatment eﬀects. As shown in ﬁgure B-4, treatment eﬀects are very similar for
+local and non-local drivers. Because drivers need to travel to the citation county to attend court,
+local drivers are more likely to contest citations.
+11
+receives on their license, as discussed in section 2.3. Appendix ﬁgure A-3 illustrates that
+oﬃcer stringency slightly aﬀects statutory points (βFS = 0.7). However, drivers can mitigate
+their point exposure through the court system, and we ﬁnd that, taking into account those
+downstream behaviors, there is almost no relationship between stringency and points, again
+shown in ﬁgure A-3. Hence, the burden of accrued license points cannot explain the eﬀects
+we observe.
+Monotonicity. Monotonicity violations are a natural concern in our setting given evi-
+dence of racial bias in oﬃcer leniency decisions (e.g., Goncalves & Mello 2021). Importantly,
+Frandsen et al. (2019) show that 2SLS estimates in examiner designs recover the appropriate
+local average treatment eﬀect under a weaker average monotonicity condition, which requires
+only that counterfactual reassignment to a more stringent oﬃcer increases the probability of
+harsh sanctions in expectation. In table A-3, we provide evidence for average monotonicity
+by showing that the ﬁrst stage is statistically strong and similar in magnitude across motorist
+subsamples.6
+To assess the overall impact of discretion, we estimate a set of treatment eﬀect parameters
+beyond the LATE. Our method for recovering these parameters, described in section 5, does
+not rely on a monotonicity assumption.
+4
+Deterrence eﬀects
+Given our interest in the safety implications of discretion, characterizing the average causal
+eﬀect of sanctions on motorist behavior is an important ﬁrst step in our analysis.
+Our
+approach follows directly from the empirical framework discussed above. We estimate the
+regression Yijs = βDij +ψs+uijs by two-stage least squares, instrumenting for Di with oﬃcer
+stringency Zij. Given the assumptions discussed in section 3, our deterrence IV estimate
+will recover a local average treatment eﬀect (LATE), which is a positive weighted average of
+treatment eﬀects for individuals whose treatment status is shifted by the instrument (Imbens
+& Angrist, 1994).
+Note that our stringency instrument solves an important identiﬁcation challenge arising
+from the nonrandom assignment of punishments. Not only do statutory sanctions increase
+with oﬀense severity, as shown in ﬁgure 1, but oﬃcers further manipulate ﬁnes, as discussed
+in section 2.4. Naive OLS estimates, presented in table B-1, illustrate both dimensions of
+the identiﬁcation challenge well. A regression of one-year reoﬀending on the charged ﬁne
+(in $100’s) and beat-shift ﬁxed eﬀects gives ˆβ = 0.043 (se = 0.002), suggesting that harsher
+ﬁnes increase reoﬀending. Adding oﬃcer ﬁxed eﬀects increases the estimate to ˆβ = 0.055
+(se = 0.002), highlighting the nonrandom sorting of motorists into sanctions by oﬃcers.
+6See appendix B-1 for additional discussion of monotonicity concerns.
+12
+4.1
+Results
+In ﬁgure 3, we show the dynamic relationship between oﬃcer stringency and traﬃc oﬀending.
+Speciﬁcally, we plot estimated coeﬃcients (and conﬁdence bands) from regressions of the
+form:
+Yijsτ = βτZij + ψs + uijs
+where Yijsτ is an indicator for whether driver i receives a traﬃc citation in quarter τ, which
+are quarters relative to the focal FHP citation. In the ﬁgure, τ = 0 corresponds to the
+exact date of the focal FHP citation and τ = k corresponds to k quarters before or after
+the focal citation. The ﬁgure illustrates that the stringency of the citing oﬃcer at τ = 0 has
+no ability to predict oﬀending over the previous eight quarters but predicts a stark decline
+oﬀending immediately after the focal citation. Impacts persist over the ﬁrst four quarters
+and fade out thereafter. Over the year following the focal citation, the reduced form estimate
+is ˆβ = −0.017 (se = 0.005).
+Table 2 presents 2SLS estimates for the full set of one-year oﬀending outcomes.7 Column
+1 reports the lenient oﬃcer mean of the outcome, while columns 2 and 3 report IV estimates
+excluding and including controls for driver characteristics. To help interpret magnitudes,
+column 4 reports the implied ﬁne elasticity, which is computed by regressing the outcome on
+the (continuous) ﬁne amount, driver controls, and beat-shift ﬁxed eﬀects, instrumenting the
+ﬁne amount with stringency, and then scaling the IV estimate by the ratio of the average
+ﬁne and average reoﬀending rates.
+We ﬁnd that harsh ﬁnes reduce the likelihood of a new traﬃc oﬀense in the following year
+by about 1.6 percentage points (󰂃= −0.07). The majority of this eﬀect is attributable to
+reductions in speeding oﬀenses; a harsh ﬁne reduces the likelihood of a new speeding oﬀense
+in the next year by about 1.4 percentage points. The 2SLS estimate is precisely estimated,
+with a 95 conﬁdence interval of (−0.017, −0.012). Our point estimate for speeding oﬀenses
+represents an 8.5 percent decline relative to the lenient oﬃcer mean and implies a ﬁne
+elasticity of −0.13. In other words, our estimate implies that a doubling of the ﬁne amount
+would reduce the likelihood of speeding recidivism by 13 percent.
+Estimated impacts of harsh ﬁnes on non-speeding oﬀenses are also statistically signiﬁcant
+but less pronounced (󰂃= −0.06). The ﬁnding that speeding sanctions reduce other traﬃc
+oﬀenses is consistent with Gehrsitz (2017), who ﬁnds speciﬁc deterrence eﬀects of short-term
+license suspensions imposed on speeders in Germany on all forms of traﬃc oﬀending.
+Consistent with reductions in traﬃc oﬀending implying a true behavioral response on
+7In the appendix, we present graphical versions of the reduced form estimates (ﬁgure B-1),
+dynamic versions of the reduced form for other outcomes (ﬁgure B-2), and the full set of ﬁrst stage
+and reduced form estimates with and without controls (table B-2).
+13
+the part of drivers, we also ﬁnd that harsh ﬁnes reduces the likelihood of crash involvement
+over the following year by between 0.2 and 0.3 percentage points (󰂃= −0.04). While less
+precisely estimated than the eﬀects on traﬃc oﬀenses, the IV estimates for crash involvement
+are statistically signiﬁcant at the 10 percent level.
+Finally, following our discussion in section 2.4, the last row of table 2 reports IV estimates
+of the impact of harsh ﬁnes on the likelihood that a driver contests a ticket in court. Relative
+to a lenient oﬃcer mean of 0.26, we ﬁnd that a harsh ﬁne increases the likelihood of a
+contested citation by about 11 percentage points, or about 42 percent, consistent with our
+hypothesis that court aversion motivates oﬃcer lenience.
+4.2
+Robustness
+In the appendix, we present results from a battery of robustness checks. Table B-3 shows that
+estimated deterrence impacts are robust to alternative methods for computing the stringency
+instrument.
+Figure B-3 illustrates that our ﬁndings cannot be explained by diﬀerential
+selection of motorists across oﬃcers. We also show that results are similar when further
+interacting our beat-shift eﬀects with stretch-of-road ﬁxed eﬀects, constructed by mapping
+the subset of geocoded tickets (N = 244, 858) to Florida roads. In section B-1, we discuss
+additional robustness tests to address concerns about monotonicity.
+4.3
+Interpretation
+As highlighted in section 2, motorists issued harsh and lenient ﬁnes face the same sanctions
+for future oﬀenses. Hence, our estimates capture a pure speciﬁc deterrence eﬀect (e.g., Nagin
+2013), or a behavioral responses to the experience of punishment, rather than the eﬀects of
+statutorily higher sanctions for future oﬀenses.
+In ﬁgure B-4, we show that treatment eﬀects are similar for local residents and out-of-
+county drivers, suggesting a minimal role for the traﬃc court system in explaining treatment
+eﬀects, since drivers need to travel to the citation county to attend traﬃc court. Figure B-4
+also illustrates that oﬀending responses are nearly identical for motorists with higher and
+lower incomes, proxied by the zip code of residence, which runs counter to a ﬁnancial distress
+mechanism based on Mello (2021).
+A mechanism that seems particularly consistent with the dynamic patterns in ﬁgure 3
+is drivers updating their beliefs about sanctions (Dusek & Traxler, 2021). In ﬁgure B-5,
+we show that oﬀending responses are stronger in the county of the focal ticket and larger
+for motorists that have been exposed to stringent oﬃcers in the past, both of which are
+consistent with a learning hypothesis.
+14
+5
+The impact of discretion
+Having shown that oﬃcer’s discretionary choices of sanctions matter for public safety by
+estimating the local average treatment eﬀect of harsher ﬁnes on reoﬀending, we now examine
+the overall implications of oﬃcer discretion over sanctions for public safety. Our approach is
+to compare the observed reoﬀending rates with reoﬀending rates in a counterfactual scenario
+without oﬃcer discretion. In other words, our aim is to identify reoﬀending rates were all
+motorists issued harsh ﬁnes. This counterfactual reoﬀending rate is identiﬁed by an estimate
+of the average treatment eﬀect for motorists currently issued lenient ﬁnes.
+Our strategy for estimating average treatment eﬀects for treated and untreated motorists
+again exploits across-oﬃcer variation in stringency and proceeds in two steps. First, we
+rely on an identiﬁcation at inﬁnity approach to identify the average treated and untreated
+potential outcomes for the entire sample of cited motorists.
+Second, we combine these
+estimates with the observed reoﬀending outcomes for treated and untreated motorists to
+identify average treatment eﬀects on the treated (ATT) and untreated (ATU).
+5.1
+Estimating treated and untreated potential outcomes
+To build intuition for our ﬁrst step, consider a supremely stringent oﬃcer j who always
+issues harsh ﬁnes, Zij = 1.
+Motorists cited by such an oﬃcer always receive the harsh
+ﬁne, Dij = 1.
+Hence, the observed reoﬀending rates for motorists stopped by oﬃcer j
+represent the average treated potential outcomes for that subset of motorists, E(Yi|J = j) =
+E(Yi1|J = j). Assuming that oﬃcers are as-good-as-randomly assigned, the average treated
+potential outcomes for this group of motorists are the same as those for the entire sample
+of motorists, E(Yi1|J = j) = E(Yi1). By the same logic, the outcomes of motorists stopped
+by a supremely lenient oﬃcer with Zij = 0 can identify E(Yi0). This reasoning follows Hull
+(2020) and Arnold et al. (2022) and is in the spirit of identiﬁcation at inﬁnity in selection
+models (e.g., Chamberlain 1986; Heckman 1990; Andrews & Schafgans 1998).
+In terms of implementing this idea in practice, we face two relevant issues. First, although
+our data indeed include supremely stringent and lenient oﬃcers who always and never issue
+harsh ﬁnes (as shown in panel a of ﬁgure A-1), our sample size is greatly reduced when
+focusing only on these extreme oﬃcers. In particular, only 1,245 citations, or 0.07 percent
+of our sample, are issued by supremely lenient oﬃcers. Hence, as our baseline approach,
+we follow Arnold et al. (2022) and rely on extrapolation from the data away from the tails,
+described further below.
+The second practical issue is that as-good-as-random assignment of oﬃcers holds only
+within beat-shifts, ψs, and hence, only within-ψ variation should be used for extrapolation.
+Our baseline approach is to simply include these ﬁxed eﬀects in our extrapolation regressions.
+15
+In other words, we estimate regressions of the form:
+E(Yi|Zij, ψs) = αψs + f(Zij) + uijs
+(1)
+and then compute the conditional expectation at the values Zij = 0 and Zij = 1 at the
+average value of the beat-shift eﬀects, E(Yi0) = ˆα ¯ψi + f(0) and E(Yi1) = ˆα ¯ψi + f(1). Below,
+we consider various functional forms for f(·), including polynomials, splines, and a fully non-
+parametric speciﬁcation that relies only on the (ψ-adjusted) average outcomes for oﬃcers
+with Zij < 0.01 and Z > 0.99 to estimate E(Yi0) and E(Yi1).
+Including the beat-shift ﬁxed eﬀects in this way requires an auxiliary linearity assump-
+tion, discussed in detail in Arnold et al. (2022).
+As robustness, we consider alternative
+approaches to adjusting our extrapolation estimates for diﬀerences across beat-shifts. First,
+we estimate the above regression separately by troop, and then aggregate up the troop-level
+estimates. We also estimate a version of the extrapolation based on the within-locations
+approach of Feigenberg & Miller (2022), described further in section E-1. Both approaches
+directly address the concern that our estimates of E(Yi0) and E(Yi1) are identiﬁed oﬀoﬃcers
+patrolling diﬀerent beats by relying only on comparisons between oﬃcers patrolling the same
+locations to estimate both.
+5.2
+Recovering treatment eﬀect parameters
+After identifying average potential outcomes, our second step notes that the potential out-
+comes of treated and untreated groups must average to the sample-wide average potential
+outcomes. For the average treated outcome,
+E(Yi1) = pE(Yi1|Di = 1) + (1 −p)E(Yi1|Di = 0)
+= pE(Yi|Di = 1) + (1 −p)E(Yi1|Di = 0)
+We estimate the left-hand side via extrapolation in the ﬁrst step. The ﬁrst term on the
+right-hand side can be estimated directly from the data. Rearranging gives an expression for
+the ﬁnal term, the treated outcome for untreated motorists, E(Yi1|Di = 0) =
+1
+1−pE(Yi1) −
+p
+1−pE(Yi|Di = 1). Combined with the observed outcomes for untreated motorists, we can
+identify the average treatment eﬀect on the untreated:
+ATU =E(Yi1|Di = 0) −E(Yi0|Di = 0)
+=
+1
+1 −pE(Yi1) −
+p
+1 −pE(Yi|Di = 1) −E(Yi|Di = 0)
+=
+1
+1 −p[E(Yi1) −E(Yi)]
+(2)
+16
+where the last equation uses the identity pE(Yi|Di = 1) + (1 −p)E(Yi|Di = 0) = E(Yi).
+The ﬁnal equation provides useful intuition for how we identify the ATU. Once we have
+estimated the average treated potential outcome, the diﬀerence between that value and
+the observed average reoﬀending outcome E(Yi) reﬂects the diﬀerence in outcomes due to
+individuals who have not been treated, and the division by (1 −p) scales this diﬀerence for
+the share of individuals who are untreated.
+By the same logic, we can identify the untreated potential outcome for treated drivers
+from the relationship E(Yi0|Di = 1) = 1
+pE(Yi0)−1−p
+p E(Yi|Di = 0), which gives us the average
+treatment eﬀect on the treated,
+ATT =E(Yi1|Di = 1) −E(Yi0|Di = 1)
+=E(Yi|Di = 1) −1
+pE(Yi0) + 1 −p
+p
+E(Yi|Di = 0)
+=1
+p[E(Yi) −E(Yi0)]
+(3)
+Again, the ﬁnal equation makes clear how the ATT is identiﬁed. The diﬀerence between
+the average reoﬀending rate and the untreated potential outcome reﬂects the diﬀerence in
+outcomes due to individuals who have been treated, and the division by p scales this diﬀerence
+for the share of individuals who are treated.
+To compute standard errors, we rely on a Bayesian bootstrap (Rubin, 1981), clustering at
+the oﬃcer-level and bootstrapping the entire procedure (both steps). The Bayesian bootstrap
+is a special case of the standard bootstrap procedure, where instead of resampling with
+replacement, random weights are drawn in each iteration. This procedure has the advantage
+of preserving support of the stringency instrument and the beat-shift ﬁxed eﬀects in each
+iteration.
+Notice that, while our procedure for recovering treatment eﬀect parameters of interest
+continues to rely on the assumptions of oﬃcer instrument relevance, exogeneity, and exclu-
+sion discussed in section 3, our approach does not require making a monotonicity assumption
+about the treatment behavior of oﬃcers. In that sense, our estimation of the ATE, ATT, and
+ATU requires fewer assumptions than were needed to recover the LATE above. Implemen-
+tation of the extrapolation procedure for estimating the sample average potential outcomes
+requires specifying a functional form for the conditional expectation function, E(Y |Z, ψ),
+but our setting permits nonparametric speciﬁcations, and none of the conclusions we discuss
+below are sensitive to functional form assumptions.
+17
+5.3
+Extrapolation results
+Panel (a) of ﬁgure 4 illustrates our extrapolation-based estimation of the sample average
+potential outcomes.
+The ﬁgure plots the probability of reoﬀending on the vertical axis
+against oﬃcer stringency on the horizontal axis. We show both a nonparametric binscatter,
+adjusted for beat-shift eﬀects using the method of Cattaneo et al. (2021), as well as the
+ﬁtted line from an estimate of equation 1. We begin with a simple quadratic speciﬁcation,
+which ﬁts the data quite well, especially in the tails of the stringency distribution, and
+discuss sensitivity to functional form assumptions below. The value of the quadratic ﬁt at
+Z = 0 and Z = 1 provide estimates of the average potential outcomes, E(Yi0) = 0.355 and
+E(Yi1) = 0.343, as well as an estimate of the average treatment eﬀect, −0.012.
+In panel (b) of ﬁgure 4, we present our estimates of the ATT and ATU, which are
+obtained by combining our extrapolation estimates of E(Yi0) and E(Yi1) with treatment-
+speciﬁc observed outcomes, as described above. The vertical axis plots, for each group of
+motorists, the untreated potential outcome, E(Yi0), which we refer to as the “reoﬀending
+rate,” as well each group’s treatment eﬀect, E(Yi1−Yi0). Although treated motorists reoﬀend
+at the highest rates, E(Yi0|Di = 1) = 0.371, they exhibit small and statistically insigniﬁcant
+treatment eﬀects, E(Yi1 −Yi0|Di = 1) = −0.006 (se = 0.007). On the other hand, untreated
+motorists reoﬀend signiﬁcantly less often, E(Yi0|Di = 0) = 0.325 and exhibit sizable and
+statistically signiﬁcant treatment eﬀects, E(Yi1 −Yi0|Di = 0) = −0.023 (se = 0.009). To
+summarize, we ﬁnd positive selection on levels and reverse selection on gains: relative to
+untreated motorists, treated individuals reoﬀend more often but are less responsive to harsh
+ﬁnes.
+Notice that the treatment eﬀect for currently untreated motorists is about twice as large
+(more negative) as the ATE and forty percent larger than the LATE estimate from section 4,
+highlighting the importance of our approach for assessing the overall impacts of discretion.
+Relative to the untreated (potential) reoﬀending levels, untreated motorists reduce their
+reoﬀending by 7.1 percent when issued harsh ﬁnes, whereas the comparable ﬁgures for the
+average motorist and treated motorists are 3.4 percent and 1.6 percent, respectively.
+Given the speciﬁc feature of our setting, where oﬃcers deviate from ﬁne rules by giving
+breaks to a subset of motorists, the ATU identiﬁes the impact of removing oﬃcer discretion
+over sanctions. Currently, the probability of a harsh ﬁne is p = E(Di) = 0.657 and the
+reoﬀending rate is E(Yi) = 0.351. Without discretion, the probability of a harsh ﬁne would
+become one and the reoﬀending rate would decline by (1−p)·ATU = 0.78 percentage points,
+or about 2.2 percent. In a typical year in our data (N = 172, 000 citations), this corresponds
+to about 4,000 additional traﬃc oﬀenses attributable to oﬃcer discretion. Note that these
+are additional oﬀenses due to just one margin of discretion in one police department. We
+18
+discuss some alternative interpretations of this magnitude below.
+5.4
+Decomposing safety gains
+Conceptually, we can think of safety gains from eliminating discretion as working through
+two distinct channels.
+The removal of discretion increases the share of harsh ﬁnes from
+p = 0.657 to p = 1, which we would expect to reduce reoﬀending based on our analyses in
+section 4, but also changes which drivers face harsh ﬁnes. A simple decomposition based
+on estimated treatment eﬀect parameters can shed light on the quantitative importance of
+these two channels.
+Speciﬁcally, the net safety gain from eliminating discretion is given by:
+∆Y
+= (1 −p) · ATU
+= (1 −p) · ATE
+󰁿
+󰁾󰁽
+󰂀
+average
++ (1 −p) · (ATU −ATE)
+󰁿
+󰁾󰁽
+󰂀
+sorting
+The ﬁrst term captures the safety gains from increasing the likelihood that the average
+motorist faces harsh ﬁnes, which we call the average component. The second term captures
+additional safety gains (or losses) attributable to the diﬀerences in treatment eﬀects for the
+average motorist and currently untreated motorists, which we call the sorting component.
+The sorting component equals zero if the ATT and ATU are equal. This would be the case
+with homogeneous treatment eﬀects or if, for example, oﬃcers randomized motorists into
+sanctions. With selection on gains, the average and sorting components are opposite-signed.
+The realized safety gain from eliminating discretion is less than would be predicted by the
+ATE only, because the newly punished motorists are less-responsive than the average driver.
+With reverse selection on gains, the two components work in the same direction. There is a
+safety beneﬁt from increasing harshness for the average driver, and then an additional safety
+beneﬁt from reallocating ﬁnes to a particularly responsive group of motorists.
+As mentioned above, we ﬁnd reverse selection on gains, with treatment eﬀects larger
+among the currently untreated motorists. Our estimates indicate that eliminating discre-
+tion would reduce the recidivism rate by 0.78 percentage points. The decline explained by
+increasing ﬁne harshness for the average driver is given by (1 −p)·ATE = 0.41 percentage
+points (53 percent of the total), while the decline explained by the reallocation of ﬁnes is
+given by (1 −p)·(ATU−ATE) = 0.37 percent points (47 percent of the total). Hence, we
+ﬁnd that each channel is equally important in explaining reduced reoﬀending rates without
+discretion.
+This is an especially important point that warrants further discussion. Our decomposition
+reveals that oﬃcer discretion is actually more harmful to public safety than it might otherwise
+19
+be, speciﬁcally because of which motorists are currently sorted into harsh sanctions. A useful
+way to see this point is to note that the total feasible deterrence in this setting is given by
+the ATE = −0.012, which is the per-person decline in reoﬀending induced by harsh ﬁnes if
+every driver were issued a harsh ﬁne. Currently, oﬃcers achieve just p · ATT = −0.004 in
+deterrence, or only about one third of the total feasible deterrence.
+We can also note that, based on the ATT and ATU, safety improvements are feasible
+even holding the share of harsh ﬁnes constant at the current rate. Speciﬁcally, consider
+a counterfactual reallocation of harsh ﬁnes which holds constant the share of harsh ﬁnes
+at p = 0.657 but reallocates harsh ﬁnes to all currently untreated motorists. Under this
+reallocation, currently untreated motorists would comprise 52 percent of the treated sample,
+with the remainder a random sample of the currently treated motorists.
+The achieved
+deterrence in this reallocation is p · (0.52 · ATU + 0.48 · ATT) = −0.0098, or 83 percent
+of the feasible deterrence. If oﬃcers had instead sorted motorists in this way, the safety
+gain from eliminating discretion would amount to just a 0.22 percentage point decline in the
+reoﬀending rate.
+5.5
+Robustness
+Table 3 explores the robustness of our extrapolation-based estimates. In panel (a), we present
+results based on polynomial versions of equation 1, with the ﬁrst row corresponding to our
+baseline quadratic speciﬁcation. In panel (b), we show estimates based on non-parametric
+speciﬁcations, which take the ψ-adjusted average reoﬀending rate for oﬃcers in the left
+and right tails of the stringency distribution as our estimates of E(Yi0) and E(Yi1), using
+diﬀerent bandwidths to deﬁne these “extreme” oﬃcers. In panel (c), we replicate our baseline
+quadratic speciﬁcation, replacing our measure of oﬃcer stringency with a propensity score,
+estimated by regressing harsh ﬁnes on stringency and beat-shift eﬀects and constructing
+predicted values.8
+The key parameter for computing our no-discretion counterfactual, the average treatment
+eﬀect on the untreated (ATU), is shown in column 7.
+Our baseline estimate is −0.023
+(se = 0.009) and the estimates from the various speciﬁcations range from −0.015 (se = 0.008)
+to −0.28 (se = 0.009). Importantly, the estimate from our most ﬂexible speciﬁcation, which
+8See appendix ﬁgure C-2 for a graphical depiction of extrapolation-based estimates of E(Yi0)
+and E(Yi1) under various functional form assumptions. An important takeaway from ﬁgure C-
+2 is that our estimate of E(Yi1) is completely insensitive functional form assumptions because
+we observe many oﬃcers who treat all motorists harshly. Many fewer oﬃcers treat all motorists
+leniently and, accordingly, our estimates of E(Yi0) vary more across speciﬁcations (although nearly
+all estimates are within the 95 percent conﬁdence interval of our baseline quadratic estimate). This
+fact, combined with equations 2 and 3, explains why our estimates of the ATU are much more
+consistent across speciﬁcations than our estimates of the ATT.
+20
+uses the ψ-adjusted average outcomes for oﬃcers with Z < 0.01 and Z > 0.99 and is shown
+in the third row of panel (c), is nearly identical to our baseline estimate (ATU = −0.024;
+se = 0.009).
+Table 3 also illustrates the robustness of the broader selection patterns discussed above.
+In particular, column (8) summarizes the degree of reverse selection on gains by reporting the
+ATT−ATU diﬀerence, our estimates of which range from 0.009 to 0.029 and are statistically
+signiﬁcant in some, but not all, speciﬁcations. In our most ﬂexible speciﬁcation, the asso-
+ciated p-value is 0.106, just outside of conventional signiﬁcance levels. Note that in section
+5.7 below, we brieﬂy discuss estimates of this diﬀerence based on an alternative marginal
+treatment eﬀects approach, which requires additional assumptions but delivers meaningful
+precision gains.
+Column 4 summarizes the degree of positive selection on levels across speciﬁcations by
+reporting the diﬀerence in untreated reoﬀending rates for treated and untreated motorists
+These estimates are quite consistent across approaches, ranging from 0.032 to 0.046, and are
+statistically signiﬁcant at conventional levels in all speciﬁcations.
+In panel (d) of table 3, we report estimates from variations of our baseline quadratic
+speciﬁcation which use alternative approaches for adjusting for beat-shift eﬀects. In the ﬁrst
+(second) row, we estimate our baseline quadratic speciﬁcation, including beat-shift eﬀects,
+separately for troops (counties), and then aggregate up the estimates, weighting by sample
+shares. In the third row, we replicate the within-locations approach of Feigenberg & Miller
+(2022), described in detail in appendix E-1. In all three speciﬁcations, we obtain similar
+estimates for the ATU and observe comparable degrees of selection on levels and reverse
+selection on gains.
+5.6
+Other oﬀending outcomes
+In table 4, we present extrapolation-based estimates from our baseline quadratic speciﬁcation
+for other safety outcomes of interest. Focusing ﬁrst on panel (a), the second row shows that
+patterns are similar when we focus only on reoﬀenses for speeding, a subset of our baseline
+outcome. While reoﬀending rates for speeding alone are slightly lower, the treatment eﬀect
+on speeding recidivism for untreated motorists is actually even larger than the ATU in our
+baseline estimate when rescaled by the untreated reoﬀending rate. In the third row, we again
+ﬁnd similar patterns for crash involvement. When issued lenient ﬁnes, motorists treated
+harshly are involved in a crash with probability 0.081, whereas motorists receiving lenient
+ﬁnes are involved in a crash with probability 0.77 (diﬀerence = 0.004; se = 0.002). The
+treatment eﬀect on treated drivers is a small and statistically insigniﬁcant 0.001 (se = 0.002).
+For untreated drivers, the eﬀect is −0.005 (se = 0.003), which is marginally signiﬁcant
+21
+but represents a sizable decline, about 6.5 percent, relative to their overall rate of crash
+involvement.9
+Crash involvement has two key strengths as an outcome measure. First, as highlighted
+in section 4, this measure does not depend on police enforcement activity, so there is no
+concern that the outcome is sensitive to reporting. And second, car crashes carries direct
+social costs. A large literature has sought to identify the monetary cost from various forms
+of injury, using data from labor markets and other settings (see Viscusi & Aldy 2003 for
+an extensive review). We use the value of a statistical injury (VSI) to get a sense of the
+monetary beneﬁt of these abated car accidents.
+We borrow a recent VSI estimate from
+Guardado & Ziebarth (2019) of $45,000, and multiplying this estimate with our ATU gives
+$225. To put this dollar value in perspective, giving a harsh ticket to the average untreated
+driver would increase their ﬁne by approximately $125. So each additional dollar in ﬁnes
+issued to this group yields over one dollar and eighty cents in social value from reduced car
+accidents.
+In panel (b) of table 4, we replace these binary outcome measures with counts of each
+type of incident for each driver over the two years following the focal FHP citation. In all
+cases, selection patterns are similar when using counts instead of binary outcomes. Focusing
+on the ﬁrst row, columns 2–4 illustrate that selection on levels is comparable when using this
+alternative notion of reoﬀending: when issued lenient ﬁnes, treated motorists commit 0.24
+(se = 0.038) more traﬃc oﬀenses over the following two years than untreated motorists. As
+a percentage of the recidivism rate for untreated motorists (22 percent), this diﬀerence is
+slightly larger than the diﬀerence in our baseline speciﬁcation (14 percent).
+Columns 6–8 illustrate that reverse selection on gains is signiﬁcantly more pronounced
+when examining the number of future traﬃc oﬀenses. Here, the ATT is nearly identical to
+that when using the binary measure (ﬁrst row), but the ATU is four times larger. Repeating
+our baseline counterfactual calculation, we ﬁnd that eliminating discretion would result in
+(1 −p) · ATU = 0.095 fewer oﬀenses per cited motorist in the following two years. Based
+on the average number of traﬃc citations annually in our sample, this amounts to about
+16,000 fewer expected traﬃc oﬀenses over the next two years when removing discretion for
+all tickets in a single year.
+5.7
+Comparison with marginal treatment eﬀects
+An alternative approach to identifying treatment eﬀect parameters beyond the LATE is to
+utilize the marginal treatment eﬀects framework (Bjorklund & Moﬃtt, 1987; Heckman &
+9In the appendix, ﬁgure C-5 graphically depicts the extrapolations underlying these estimates
+and and table C-1 reports the corresponding estimates when using local means to estimate E(Yi0)
+and E(Yi0) instead of the quadratic speciﬁcation.
+22
+Vytlacil, 2007). In our setting, this approach supposes that selection into treatment can be
+modeled as a threshold crossing rule, D = 1[µD(Z) > UD], which depends on characteristics
+Z, including both X and our stringency instrument, and unobservable UD. Each individual
+has a ﬁxed value of UD, their resistance to treatment. The higher one’s value of UD, the
+greater their realization of µ(Z) must be for that individual to take up treatment. Without
+loss of generality, we can assume UD has a uniform distribution, so that µD(Z) reﬂects the
+probability of treatment at Z (i.e., the propensity score).
+The marginal treatment eﬀect is deﬁned as MTE(u) = E(Y1−Y0|UD = u), the treatment
+eﬀect for individuals who are induced into treatment at propensity score u. In this framework,
+the ATU is deﬁned as a weighted average of MTE’s, ATU =
+󰁕1
+0 MTE(u)hUT(u)du, where
+the weights, hUT(u) = Pr(µD(Z)≤uD)
+E(1−µD(Z)) , reﬂect the probability that an individual at resistance to
+treatment u has a suﬃciently low propensity score to avoid treatment. The ATT is deﬁned
+analogously, with weight hTT = Pr(µD(Z)>uD)
+E(µD(Z))
+, and the ATE is deﬁned with a uniform weight
+across MTE’s.
+The key assumption of the marginal treatment eﬀects approach is that treatment is
+characterized by the threshold crossing rule: individuals have a ﬁxed resistance to treatment
+UD, and their propensity score µD(Z) depends only on observables and the instrument but
+is otherwise invariant across individuals. This rule implies the strict monotonicity of Imbens
+& Angrist (1994), since all individuals who take up treatment at a given value of µD(Z)
+would also take up treatment at greater values (Vytlacil, 2002). However, a strength of
+the marginal treatment eﬀects approach is that, with assumptions on the functional form
+for MTE(u), various treatment eﬀects can be identiﬁed beyond LATE without necessarily
+having full support of the instrument (Mogstad et al., 2018; Mogstad & Torgovitsky, 2018).
+In appendix ﬁgure C-9, we present estimated MTE curves for the eﬀect of ﬁnes on
+reoﬀending. We show both polynomial parametric speciﬁcations for the marginal treatment
+eﬀect, MTE = 󰁓K
+k=0 θkvk, as well as a non-parametric speciﬁcation.10 In all cases, we ﬁnd
+a pattern of reverse selection on gains, consistent with our extrapolation estimates: drivers
+with higher levels of resistance to treatment (i.e., a lower likelihood of facing harsh ﬁnes)
+exhibit more negative treatment eﬀects.
+In appendix table C-4, we use these MTE curves to construct estimates of the ATE,
+ATT, and ATU, based on the formulas above.
+The estimates are remarkably similar to
+the extrapolation-based estimates.
+In particular, the ATU estimates range from −0.023
+to −0.027, aligning with our extrapolation estimate of −0.023. While the MTE approach
+10We estimate the MTE as follows: we ﬁrst estimate a ﬁrst-stage regression of D on X, Z, and
+beat-shift ﬁxed eﬀects W, and then construct an estimated propensity score ˆp for each driver. We
+then estimate a conditional expectation of Y on X, W, and a polynomial in ˆp. The derivative of
+the polynomial in ˆp is the marginal treatment eﬀect (Carneiro et al., 2011). We calculate standard
+errors using the oﬃcer-level bootstrap procedure described in Section 5.2.
+23
+requires a potentially strong assumption of strict monotonicity, our results oﬀer reassurance
+that this approach provides reasonable estimates for a wide range of important treatment
+eﬀects.
+Moreover, table C-4 highlights a consequential beneﬁt of imposing the additional assump-
+tions required for the MTE approach: statistical precision. While ATU estimates based on
+extrapolation and MTE approaches are remarkably similar, standard errors are about half
+as large for the MTE-based estimates. These precision beneﬁts are even more pronounced
+when examining our summary measure of reverse selection on gains (the ATT−ATU diﬀer-
+ence). While the p-values associated with this parameter hover between 0.1 and 0.2 in some
+extrapolation speciﬁcations (see table 3), this diﬀerence is statistically signiﬁcant at the one
+percent level in all MTE speciﬁcations.
+5.8
+General deterrence eﬀects
+Our analysis of counterfactual reoﬀending rates without oﬃcer discretion focuses only on
+the speciﬁc deterrence eﬀects of changing sanctions for cited motorists, holding that sample
+of cited motorists constant. An important caveat associated with our calculations, then, is
+that eliminating discretion may also have eﬀects on oﬀending through a general deterrence
+channel. Speciﬁcally, eliminating oﬃcer lenience would increase the expected ﬁne associated
+with speeding, which may deter potential speeders.
+General deterrence eﬀects associated with eliminating oﬃcer lenience should, if anything,
+increase public safety, further increasing the net social beneﬁt of eliminating discretion that
+we discuss above. Unfortunately, our data and setting do not permit credible identiﬁcation of
+general deterrence eﬀects associated with changing ﬁne amounts. Moreover, as discussed in
+section 5.4, our ﬁndings imply that safety gains are feasible even holding general deterrence
+eﬀects constant.
+Importantly, the literature on criminal deterrence suggests that general deterrence eﬀects
+associated with modest increases in ﬁne amounts may be negligible. While a large litera-
+ture has documented that potential oﬀenders are deterred by increases in the probability
+of apprehension (e.g., Makowsky & Stratmann 2011, Mello 2019), evidence on the deter-
+rence eﬀects of changes in sanctions is considerably more mixed (Chalﬁn & McCrary, 2017).
+Even dramatic and highly salient changes in sanctions, such as the increased probability of
+carceral punishment at the age of majority or changes in capital punishment regimes have
+been shown to have minimal general deterrence eﬀects (e.g., Lee & McCrary 2017; Chalﬁn
+& McCrary 2017).
+24
+6
+Understanding oﬃcer behavior
+Our analyses above yield the clear takeaway that current oﬃcer behavior generates reverse
+selection on gains: motorists who currently face harsh ﬁnes are less responsive to those harsh
+sanctions than those who currently receive lenient ﬁnes. We also ﬁnd stark selection on
+levels: treated motorists reoﬀend at much higher rates than untreated motorists when issued
+lenient ﬁnes. In this section, we consider potential explanations for this oﬃcer behavior.
+Importantly, our central conclusion that oﬃcer discretion over sanctions harms public safety
+does not depend on the underlying reasons for this oﬃcer behavior. However, the potential for
+alternative policy tools, other than the altogether removal of trooper discretion, to improve
+safety could depend on the rationale underlying oﬃcer decisions.
+6.1
+Driver characteristics
+One possibility is that the selection patterns we observe are driven by oﬃcers making sanction
+decisions based on salient driver characteristics, such as oﬀending history or race, that are
+incidentally positively correlated with reoﬀending levels and negatively correlated with de-
+terrability. Evidence that oﬃcers consider driver characteristics when making discretionary
+sanction choices can be seen easily in column 2 of table A-2, which illustrates that our full
+set of driver covariates are jointly predictive of a harsh charge (F = 28.8) after conditioning
+on beat-shift eﬀects. Hence, a natural question is to what extent decisions based on driver
+observables can explain the patterns of selection on levels and reverse selection on gains that
+we document.
+Figure 5 explores this question.
+We split motorists into 32 cells based on gender ×
+race × 1[age ≥35] × 1[any citation in the past year] and, within each cell, compute the
+average reoﬀending level E(Yi0) and average treatment eﬀect E(Yi1 −Yi0) using a quadratic
+extrapolation.
+We then explore the relationship between these estimated group-speciﬁc
+parameters and the group-speciﬁc harshness rate (the rate at which motorists with those
+characteristics face harsh ﬁnes). As shown in panels (a) and (b), the types of motorists
+who are punished harshly more often also exhibit signiﬁcantly higher reoﬀending rates and
+slightly less negative treatment eﬀects. These patterns are consistent with our main ﬁndings
+and suggest that easily observable motorist characteristics can explain at least some share
+of the positive selection on levels and reverse selection on gains that we observe.
+However, panel (c) of ﬁgure 5 also presents extrapolation-based estimates which are
+computed within these 32 covariate cells, with our baseline estimates also shown for com-
+parison. The ﬁgure clearly illustrates that selection on levels and reverse selection on gains
+persist in these within-covariate speciﬁcations, although both are attenuated slightly, con-
+sistent with the discussion above. In our baseline speciﬁcation, the diﬀerence in E(Yi0) for
+25
+treated and untreated motorists is 0.046, while the corresponding within-covariate diﬀerence
+is 0.033. Moving from our baseline speciﬁcation to a within-covariate speciﬁcation reduces
+the ATT−ATU diﬀerence from 0.016 to 0.1. Hence, oﬃcer sanction decisions based on driver
+characteristics can only explain about 30-35 percent of the overall selection patterns.11
+Considering that oﬀending history is likely an especially salient characteristic for oﬃ-
+cers when making their sanction decisions, ﬁgure 6 further explores heterogeneity based on
+driving history. Speciﬁcally, we compute extrapolation-based estimates of average potential
+outcomes and treatment eﬀects for motorists with and without at least one traﬃc citation
+in the past two years (because we can observe at least two years of driving history for every
+motorist in our sample). Panel (a) plots the group-speciﬁc quadratic extrapolations and
+panel (b) plots the associated group-speciﬁc untreated oﬀending levels and treatment eﬀects
+by treatment status.
+Note that, in both panels, we adjust the level of the axes, but keep the scale the same,
+because those with prior oﬀenses reoﬀend at signiﬁcantly higher rates. Despite these diﬀer-
+ences in the level of oﬀending, however, we ﬁnd strikingly similar selection patterns across
+groups.12 Interestingly, this ﬁgure suggests that even among motorists without prior oﬀenses,
+oﬃcer treatment decisions select motorists with a higher likelihood of reoﬀending but who
+are less deterrable.
+6.2
+The importance of stopped speed
+Another possible explanation for the observed selection patterns is that oﬃcers may punish
+drivers based primarily on oﬀense severity, or, in this case, the true rather than manipulated
+speed.. If driving speed were positively correlated with the likelihood of reoﬀending but
+negatively correlated with treatment eﬀects, punishments based on speed could explain the
+selection patterns that we document.
+While we can observe the true stopped speed of drivers who are given the harsh ﬁne, this
+information is not directly observed for drivers given the lenient ﬁne. However, we can adapt
+our extrapolation approach to estimate the average stopped speed of these drivers (which
+we explain in more detail in appendix E-2). While the average driver issued a harsh ﬁne is
+stopped and ticketed for a speed of 19.1 MPH over the limit, we estimate that drivers given
+11Appendix ﬁgures C-7 and C-8 probe the robustness of panels (a) and (b) of 5. See appendix
+ﬁgure C-3 for graphical depictions of the within-cell extrapolations underlying the treatment eﬀect
+estimates in panel (c) of ﬁgure 5.
+12In section 4.3, we discuss suggestive evidence that driver learning can partly explain the de-
+terrence eﬀects of harsh ﬁnes. However, ﬁgure 6 rules out that the observed selection patterns can
+be explained solely by a learning story, whereby untreated motorists are more responsive because
+of less information from prior citations. Reverse selection on gains persists even among motorists
+with the same citation history and thus similar access to information about speeding ﬁnes.
+26
+a lenient ﬁne were stopped on average at 18.2 MPH over. We interpret this diﬀerence as
+evidence that, at least to some extent, oﬃcers exhibit retributivist preferences (e.g., Kaplow
+& Shavell 2006). In other words, oﬃcers prefer to issue harsher sanctions to more serious
+oﬀenders.
+How important is this preference for punishment based on “guilt” to the overall selection
+patterns we document? To answer this question, we ﬁrst simulate a simple counterfactual
+under the assumption that, within each county, oﬃcers consider only stopped speed when
+issuing harsh sanctions, holding constant average harshness. Under this counterfactual, the
+average stopped speed for harshly and leniently treated drivers would be 21.5 and 14.8 MPH
+over, respectively, a much more pronounced diﬀerence than we empirically observe. Hence,
+speed alone can only partially explain how oﬃcers set punishment levels.
+Next, we ask whether decisions based on oﬀense severity can explain the fact that harshly
+treated drivers reoﬀend at higher rates. To do so, we use the supremely stringent oﬃcers to
+identify the reoﬀending rates of drivers at diﬀerent speeds. We then estimate the distribution
+of stopped speeds for leniently treated drivers, using a variation of our baseline extrapolation
+approach. We ﬁnd that while harshly treated drivers have a predicted reoﬀending rate of
+0.362 based on their stopped speeds, this ﬁgure is 0.355 for leniently treated drivers. This
+gap is only about 15 percent of the estimated true diﬀerence in reoﬀending, shown in table 3.
+Overall, these estimates suggest that, while stopped speed is an important factor in oﬃcer’s
+punishment decisions, it can only explain a small portion of the overall selection patterns.
+6.3
+Information
+Another potential explanation for the patterns we document is that oﬃcers attempt to
+allocate harsh sanctions to more deterrable motorists but have poor information about how
+to achieve that goal. Under this hypothesis, we might expect selection patterns to change as
+oﬃcers acquire more information, and we present a simple test of this hypothesis in panels
+(a) and (b) of appendix ﬁgure C-6. We split oﬃcers based on experience as of January 2007,
+the start of our sample (oﬃcers who begin after 2007 are included in the low experience
+group), and estimate the ATE, ATT, and ATU for more and less experienced oﬃcers using
+our extrapolation-based approach. Although the ﬁgure suggests slightly weaker selection on
+levels among more experienced oﬃcers, the extent of reverse selection on gains is, if anything,
+more extreme among oﬃcers with at least ﬁve years of experience. We should note, however,
+that oﬃcers are not explicitly provided information on the reoﬀending outcomes associated
+with their citations, so this test yields only suggestive evidence at best.
+On the other hand, oﬃcers receive explicit feedback on whether their citations are con-
+tested in court and, as discussed in section 2.4, we posit a distaste for traﬃc court as a
+27
+central motivation for issuing lenient citations. Hence, a natural question is whether oﬃcers
+seem to allocate sanctions strategically to minimize their time in traﬃc court. Panels (c)
+and (d) of ﬁgure C-6 replicates the analysis in panel (a) and (b), replacing the outcome with
+whether the citation was contested in court. Note that harsh ﬁnes increase the likelihood
+that a citation is contested, hence the treatment eﬀects go in the opposite direction of those
+in panel (b). This ﬁgure shows minimal evidence of selection on gains in either direction and
+no evidence of diﬀerential selection on gains by oﬃcer experience.
+6.4
+Discussion
+Above, we show that that selection patterns cannot be explained away by oﬃcers making
+sanction decisions based on salient observables or guilt. We also ﬁnd suggestive evidence
+against the hypothesis that oﬃcers allocate sanctions to maximize other objectives or that
+oﬃcers strive for safety maximization but act on poor information. This leaves two potential
+explanations for the allocation of hash ﬁnes that we observe.
+First, oﬃcers may allocate harsh ﬁnes based on unobservable characteristics which are
+(incidentally) positively correlated with the likelihood of recidivism and negatively correlated
+with deterrability. For example, troopers likely issue harsh sanctions to motorists who behave
+confrontationally during the traﬃc stop. If these motorists tend to reoﬀend at higher rates
+and are undeterred by harsh ﬁnes, this would explain the selection patterns we ﬁnd. Or
+alternatively, oﬃcers may explicitly prioritize issuing harsh sanctions to the oﬀenders they
+perceive as having the highest risk of recidivism. These two explanations are observationally
+equivalent from the perspective of the econometrician and thus cannot be distinguished. But
+in either case, the current allocation of sanctions, which results in harsh ﬁnes for high-risk
+but undeterred motorists, likely reﬂects the desired allocation of oﬃcers.
+On one hand, we might conclude that a mismatch between the deterrence objectives of
+the state and the goals of the police is an important reason why oﬃcer discretion harms
+public safety. On the other hand, we should acknowledge that the goal of allocating harsh
+sanctions to the highest-risk oﬀenders may be a legitimate law enforcement goal or may, in
+fact, reﬂect the preferences of the state. In particular, this objective accords well with an
+intuitive notion of fairness: the “worst” drivers “deserve” the most severe punishments.
+To the extent that the state values this notion of fairness, a key takeaway from our
+empirical analyses is the existence of a tradeoﬀbetween fairness and eﬃciency. Because
+the subgroup of motorists with the highest recidivism risk are the least responsive to harsh
+ﬁnes, oﬃcers face a tradeoﬀbetween achieving fairness and maximizing safety when sorting
+some, but not all, motorists into harsh sanctions. While the literature has discussed the
+potential importance of this tradeoﬀfor the design of legal and criminal justice institutions
+28
+from a theoretical perspective (e.g., Kaplow & Shavell 2006), we are the ﬁrst to document
+its empirical relevance.
+7
+Conclusion
+In this paper, we study the public safety implications of police discretion over sanctions for
+speeding oﬀenses. First, relying on variation across oﬃcers in the propensity to issue harsh
+ﬁnes, we show that sanctions decisions have important deterrence eﬀects. Comparing mo-
+torists cited in the same beat-shifts by oﬃcers of varying stringency, we ﬁnd that higher ﬁnes
+reduce the likelihood of a new traﬃc oﬀense, a new speeding oﬀense, and crash involvement
+in the following year.
+We then assess the overall contribution of discretion to public safety by comparing ob-
+served reoﬀending rates to those in a counterfactual scenario without oﬃcer discretion. This
+counterfactual is identiﬁed by the average treatment eﬀect for motorists currently issued
+lenient ﬁnes (i.e., the average treatment eﬀect on the untreated or ATU), which may diﬀer
+from the local average treatment eﬀect recovered by our 2SLS estimates. We rely on a novel,
+two-step approach to estimate the ATU which leverages identiﬁcation at inﬁnity (e.g., Hull
+2020) and, importantly, does not require an instrument monotonicity assumption.
+Based on our estimated ATU, eliminating oﬃcer discretion would reduce the reoﬀending
+rate by about two percent. We show that about half of this safety improvement can be
+attributed to increasing ﬁne harshness for the average driver, while the other half can be
+attributed to changing which motorists receive harsh ﬁnes. The importance of the second
+channel stems from the fact that current oﬃcer decisions generate reverse selection on gains:
+the average treatment eﬀect for motorists that currently receive lenient ﬁnes are nearly four
+times larger than those for motorists currently issued harsh ﬁnes. A back-of-the-envelope
+calculation suggests that every $125 in ﬁnes issued to the population of currently untreated
+motorists results in $225 in social welfare gains from reduced auto accidents.
+We conclude by discussing some potential explanations for the oﬃcer behavior we doc-
+ument. To accompany the reverse selection on gains we ﬁnd, we also show stark, positive
+selection on levels: motorists facing harsh ﬁnes reoﬀend at signiﬁcantly higher rates than
+those facing lenient ﬁnes. These selection patterns (both levels and gains) persist within
+driver covariates, cannot be explained by motorist “guilt,” and are present among expe-
+rienced oﬃcers. Though not deﬁnitive, the preponderance of evidence aligns well with the
+view that the current allocation reﬂects the goals of oﬃcers. Speciﬁcally, oﬃcers target harsh
+sanctions to motorists with high recidivism risk, which accords with an intuitive notion of
+fairness.
+These motorists are also the least deterrable, and hence the “undoing” of this
+sorting when removing discretion gives rise to meaningful safety gains.
+29
+References
+Abaluck, J., Agha, L., Kabrhel, C., Raja, A., & Venkatesh, A. (2016). The determinants
+of productivity in medial testing: Intensity and allocation of care. American Economic
+Review, 106(2), 3730–64.
+Abdulkadiroglu, A., Pathak, P., & Schellenberg, J. (2020). Do parents value school eﬀec-
+tiveness? American Economic Review, 110(5), 1502–1539.
+Abrams, D., Goonetilleke, P., & Fang, H. (2021). Do cops know who to stop? assessing
+optimizing models of police behavior wih a natural experiment. Unpublished manuscript.
+Anbarci, N. & Lee, J. (2014). Detecting racial bias in speed discounting: Evidence from
+speeding tickets in Boston. International Review of Law and Economics, 38, 11–24.
+Andrews, D. W. & Schafgans, M. M. (1998). Semiparametric estimation of the intercept of
+a sample selection model. The Review of Economic Studies, 65(3), 497–517.
+Angelova, V., Dobbie, W., & Yang, C. (2023). Algorithmic recommendations and human
+discretion. Unpublished manuscript.
+Arnold, D., Dobbie, W., & Hull, P. (2022). Measuring racial discrimination in bail decisions.
+American Economic Review, 112(9), 2992–3038.
+Ash, E. & MacLeod, W. B. (2015).
+Intrinsic motivation in public service: Theory and
+evidence from state supreme courts. The Journal of Law and Economics, 58(4), 863–913.
+Ashenfelter, O. & Greenstone, M. (2004). Using mandated speed limits to measure the value
+of a statistical life. Journal of Political Economy, 112(S1), S226–S267.
+Ba, B., Knox, D., Mummolo, J., & Rivera, R. (2021). Diversity in policing: The role of oﬃcer
+race and gender in police-civilian interactions in Chicago. Science, 371(6530), 696–702.
+Bandiera, O., Best, M. C., Khan, A. Q., & Prat, A. (2021). The allocation of authority in
+organizations: A ﬁeld experiment with bureaucrats. The Quarterly Journal of Economics,
+136(4), 2195–2242.
+Banﬁeld, E. (1975). Corruption as a feature of governmental organization. Journal of Law
+and Economics, 18(3), 587–605.
+Becker, G. S. (1968). Crime and punishment: An economic approach. Journal of Political
+Economy, 76(2), 169–217.
+Best, M. C., Hjort, J., & Szakonyi, D. (2017). Individuals and organizations as sources of
+state eﬀectiveness. Technical report, National Bureau of Economic Research.
+Bhuller, M., Dahl, G., Loken, K., & Mogstad, M. (2020). Incarceration, recidivism, and
+employment. Journal of Political Economy, 128(4), 1269–1324.
+30
+Bjorklund, A. & Moﬃtt, R. (1987).
+The estimation of wage gains and welfare gains in
+self-selection models. Review of Economics and Statistics, 69(1), 42–49.
+Blincoe, L., Miller, T., Zaloshnja, E., & Lawrence, B. (2015). The economic and societal
+impact of motor vehicle crashes, 2010. National Highway Safety Administration Technical
+Report.
+Brinch, C. N., Mogstad, M., & Wiswall, M. (2017). Beyond late with a discrete instrument.
+Journal of Political Economy, 125(4), 985–1039.
+Carneiro, P., Heckman, J. J., & Vytlacil, E. J. (2011).
+Estimating marginal returns to
+education. American Economic Review, 101(6), 2754–81.
+Cattaneo, M., Crump, R., Farrell, M., & Feng, Y. (2021).
+On Binscatter.
+Unpublished
+Manuscript.
+Chalﬁn, A. (2016). The economic cost of crime. The Encyclopedia of Crime and Punishment.
+Chalﬁn, A. & Goncalves, F. (2021). The professional motivations of police oﬃcers. Unpub-
+lished manuscript.
+Chalﬁn, A. & McCrary, J. (2017). Criminal deterrence: A review of the literature. Journal
+of Economic Literature, 55(1), 5–48.
+Chamberlain, G. (1986). Asymptotic eﬃciency in semi-parametric models with censoring.
+journal of Econometrics, 32(2), 189–218.
+Chandra, A. & Staiger, D. (2020). Identifying sources of ineﬃciency in healthcare. Quarterly
+Journal of Economics, 135(2), 785–843.
+Cornelissen, T., Dustmann, C., Raute, A., & Sch¨onberg, U. (2016).
+From late to mte:
+Alternative methods for the evaluation of policy interventions. Labour Economics, 41,
+47–60.
+Dahl, G., Kostol, A., & Mogstad, M. (2014). Family welfare cultures. Quarterly Journal of
+Economics, 129(4), 1711–1752.
+DeAngelo, G. & Hansen, B. (2014). Life and death in the fast lane: Police enforcement and
+traﬃc fatalities. American Economic Journal: Economic Policy, 6(2), 231–257.
+Dobbie, W., Goldin, J., & Yang, C. (2018). The eﬀects of pretrial detention on convic-
+tion, future crime, and employment: Evidence from randomly assigned judges. American
+Economic Review, 108(2), 201–40.
+Dobbie, W. & Song, J. (2015). Debt relief and debtor outcomes: Measuring the eﬀects of
+consumer bankruptcy protection. The American Economic Review, 105(3), 1272–1311.
+Dusek, L. & Traxler, C. (2021). Learning from law enforcement. Journal of the European
+Economic Association, forthcoming.
+31
+Einav, L., Finkelstein, A., Ji, Y., & Mahoney, N. (2022). Voluntary regulation: Evidence
+from medicare payment reform. Quarterly Journal of Economics, 137(1), 565–618.
+Feigenberg, B. & Miller, C. (2022). Would eliminating racial disparities in motor vehicle
+searches have eﬃciency costs? Quarterly Journal of Economics, 137(1), 49–113.
+Finlay, K., Gross, M., Luh, E., & Mueller-Smith, M. (2022). The impact of ﬁnancial sanc-
+tions in the us justice system: Regression discontinuity evidence from michigans driver
+responsibility program. Unpublished manuscript.
+Frandsen, B., Lefgren, L., & Leslie, E. (2019). Judging judge ﬁxed eﬀects. NBER Working
+Paper 25528.
+Frandsen, B. R. (2017). Party bias in union representation elections: Testing for manip-
+ulation in the regression discontinuity design when the running variable is discrete. In
+Regression Discontinuity Designs: Theory and Applications (pp. 281–315). Emerald Pub-
+lishing Limited.
+Gehrsitz, M. (2017). Speeding, punishment, and recidivism: Evidence from a regression
+discontinuity design. The Journal of Law and Economics, 60(3), 497–528.
+Goncalves, F. & Mello, S. (2021). A few bad apples? racial bias in policing. American
+Economic Review, 111(5), 1406–1441.
+Guardado, J. R. & Ziebarth, N. R. (2019). Worker investments in safety, workplace accidents,
+and compensating wage diﬀerentials. International Economic Review, 60(1), 133–155.
+Hansen, B. (2015). Punishment and deterrence: Evidence from drunk driving. American
+Economic Review, 105(4), 1581–1617.
+Heckman, J. (1979).
+Sample selection bias as speciﬁcation error.
+Econometrica, 71(1),
+53–161.
+Heckman, J. (1990). Varieties of selection bias. The American Economic Review, 80(2),
+313–318.
+Heckman, J. J. & Vytlacil, E. J. (2007). Chapter 71 econometric evaluation of social pro-
+grams, part ii: Using the marginal treatment eﬀect to organize alternative econometric
+estimators to evaluate social programs, and to forecast their eﬀects in new environments.
+volume 6 of Handbook of Econometrics (pp. 4875–5143). Elsevier.
+Hull, P. (2020). Estimating hospital quality with quasi-experimental data.
+Imbens, G. W. & Angrist, J. D. (1994).
+Identiﬁcation and estimation of local average
+treatment eﬀects. Econometrica, 62(2), 467–475.
+Kang, K. & Silveira, B. S. (2021).
+Understanding disparities in punishment: Regulator
+preferences and expertise. Journal of Political Economy, 129(10), 2947–2992.
+Kaplow, L. & Shavell, S. (2006). Fairness versus welfare. Harvard University Press.
+32
+Kling, J. R. (2006). Incarceration length, employment, and earnings. The American economic
+review, 96(3), 863–876.
+Lee, D. & McCrary, J. (2017). The deterrence eﬀec of prison: Dynamic theory and evidence.
+Advances in Econometrics, 38(3).
+Lipsky, M. (1980). Street-level bureaucracy: dilemmas of the individual in public services.
+Luca, D. (2014). Do traﬃc tickets reduce motor vehicle accidents? Evidence from a natural
+experiment. Journal of Policy Analysis and Management, 34(1), 85–106.
+Maestas, N., Mullen, K., & Strand, A. (2013). Does disability insurance disourage work? us-
+ing examiner assignment to estimate causal eﬀects of ssdi receipt. The American Economic
+Review, 103(5), 1797–1829.
+Makowsky, M. & Stratmann, T. (2011). More tickets, fewer accidents: How cash-strapped
+towns make for safer roads. The Journal of Law and Economics, 54(4), 863–888.
+Mello, S. (2019). More cops, less crime. Journal of Public Economics, 172, 174–200.
+Mello, S. (2021). Fines and ﬁnancial wellbeing. Working paper.
+Mogstad, M., Santos, A., & Torgovitsky, A. (2018). Using instrumental variables for inference
+about policy relevant treatment parameters. Econometrica, 86(5), 1589–1619.
+Mogstad, M. & Torgovitsky, A. (2018). Identiﬁcation and extrapolation of causal eﬀects
+with instrumental variables. Annual Review of Economics, 10, 577–613.
+Moore, M. S. (2019). The moral worth of retribution. In Retribution (pp. 337–388). Rout-
+ledge.
+Morris, C. (1983). Parametric empirical bayes inference: Theory and applications. Journal
+of the American Statistical Association, 78(381), 47–55.
+Mueller-Smith, M. (2015). The criminal and labor market impacts of incarceration. Unpub-
+lished working paper, 18.
+Nagin, D. (2013). Deterrence: A review of the evidence by a criminologist for economists.
+Annual Review of Economics, 5, 83–105.
+NHTSA (2014). Traﬃc safety facts: 2012 data. National Highway Safety Administration
+Technical Report.
+Norris, S. (2022). Examiner inconsistency: Evidence from refugee decisions. Unpublished
+manuscript.
+O’Flaherty, B. & Sethi, R. (2019). Shadows of doubt: Stereotypes, crime, and the pursuit of
+justice. Harvard University Press.
+Polinsky, A. M. & Shavell, S. (2000). The fairness of sanctions: Some implications for optimal
+enforcement policy. American Law and Economics Review, 2(2), 223–237.
+33
+Prendergast, C. (2007). The motivation and bias of bureaucrats. American Economic Review,
+97(1), 180–196.
+Rubin, D. (1981). The Bayesian bootstrap. The Annals of Statistics, 9(1), 130–134.
+Traxler, C., Westermeier, F., & Wohlschlegel, A. (2018). Bunching on the Autobahn? Speed-
+ing responses to a notched penalty scheme. Journal of Public Economics, 157, 78–94.
+Van Dijk, W. (2019). The socioeconomic consequences of housing assistance. Unpublished
+manuscript.
+Viscusi, W. K. & Aldy, J. E. (2003). The value of a statistical life: a critical review of market
+estimates throughout the world. Journal of risk and uncertainty, 27, 5–76.
+Vytlacil, E. (2002). Independence, monotonicity, and latent index models: An equivalence
+result. Econometrica, 70(1), 331–341.
+Weisburst, E. (2017). Whose help is on the way? the importance of individual police oﬃcers
+in law enforcement outcomes. Unpublished manuscript.
+Wilson, J. (1989). Bureaucracy: What government agencies do and why they do it.
+34
+Table 1: Summary Statistics
+By Fines
+(1)
+(2)
+(3)
+All
+Discounted
+Harsh
+Panel A: Demographics
+Female
+0.384
+0.415
+0.368
+Age
+36.47
+36.98
+36.20
+Age Missing
+0.0002
+0.0002
+0.0002
+Race = White
+0.474
+0.525
+0.448
+Race = Black
+0.154
+0.157
+0.152
+Race = Hispanic
+0.187
+0.144
+0.209
+Race = Other
+0.041
+0.034
+0.044
+Race = Unknown
+0.144
+0.140
+0.147
+Panel B: Socioeconomic Status
+Zip Income
+57962
+56459
+58745
+Zip Income Missing
+0.101
+0.107
+0.097
+Vehicle Value
+17807
+17297
+18073
+Vehicle Info Missing
+0.143
+0.139
+0.145
+Panel C: Oﬀending History
+Prior Prison Spell
+0.009
+0.009
+0.009
+Citation Past Year
+0.350
+0.317
+0.368
+Speeding Past Year
+0.179
+0.158
+0.189
+Other Past Year
+0.253
+0.226
+0.268
+Crash Past Year
+0.071
+0.067
+0.074
+Panel D: Oﬀense Characteristics
+MPH Over Posted
+15.62
+9.00
+19.06
+Fine Amount
+207.70
+123.00
+251.79
+Contest in Court
+0.289
+0.222
+0.323
+Observations
+1,693,457
+579,760
+1,113,697
+Notes: This table reports means for the analysis sample. See table A-1 for oﬃcer characteristics.
+35
+Figure 1: Fine Schedule and Charged Speed Distribution
+0
+100
+200
+300
+400
+Fine Amount
+0
+.1
+.2
+.3
+.4
+.5
+Fraction of Citations
+0
+5
+10
+15
+20
+25
+30
+MPH Over Posted
+Lenient Ofﬁcers
+Stringent Ofﬁcers
+Notes: This ﬁgure plots the distribution of charged speeds on FHP-issued speeding citations in
+Florida. Dashed red line shows the ﬁne schedule (right axis). Solid line and circles shows the
+aggregate distribution. Dashed lines with hollow diamonds and triangles plot the distribution for
+lenient and stringent oﬃcers, respectively, using the method described in section D.
+36
+Figure 2: Instrument Validity
+(a) Ticketing Frequency
+β = -0.218 (0.663)
+β = 0.235 (0.316)
+10
+20
+30
+40
+50
+60
+Adjusted Monthly Citations
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+All Citations
+Speeding Citations
+(b) Predicted and Past Oﬀending
+β = -0.00157 (0.0023)
+β = -0.00003 (0.0042)
+.34
+.345
+.35
+.355
+.36
+.365
+Pr(Offense)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Predicted Reoffending
+Offense Past Year
+(c) First stage estimate
+β = 0.944 (0.006)
+F =  21966
+0
+.05
+.1
+.15
+Fraction of Citations
+-.75
+-.5
+-.25
+0
+.25
+.5
+.75
+Pr(Harsh Fine)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Nonparametric Fit
+99% CI
+Notes: Panel (a) reports the relationship between oﬃcer stringency, residualized of beat-shift eﬀects,
+and an oﬃcer’s average monthly number of citations, adjusted for beat-shift eﬀects. Blue circles
+report the relationship for all citations and green diamonds report the relationship for only speeding
+citations. Panel (b) reports the relationship between oﬃcer stringency, residualized of beat-shift
+eﬀects, and predicted reoﬀending based on covariates and past oﬀending, both residualized of beat-
+shift eﬀects. Predicted reoﬀending is computed in opposite sample partitions using only tickets
+issued by non-bunching oﬃcers (see section D-3 for further details). Panel (c) shows the ﬁrst stage
+relationship between stringency and the probability of a harsh ﬁne, both residualized of beat-shit
+ﬁxed eﬀects (left axis).
+Local binscatter means are denoted by blue circles and the green line
+shows a non-parametric ﬁt, with a 99 percent conﬁdence interval indicated by the shaded region.
+Figure also illustrates a histogram of the oﬃcer stringency instrument, residualized of beat-shit
+ﬁxed eﬀects (right axis). Figure reports the linear ﬁrst stage estimate and associated F-statistic.
+37
+Figure 3: Reduced Form Over Time
+1-year effect:
+βRF = -0.0167 (0.0053)
+μ = 0.3471
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+Stringency Effect
+-8
+-4
+0
+4
+8
+Quarter Around FHP Citation
+RF Estimate
+95% CI
+Notes: This ﬁgure reports coeﬃcients on oﬃcer stringency from regressions where the outcome of
+interest is an indicator for whether the driver received a traﬃc citation in each quarter relative to
+the date of their focal FHP citation. τ = 0 denotes the exact date of the focal FHP citation (one day
+only, where all motorists receive a citation so the eﬀect of stringency is zero by construction). Re-
+gressions also include beat-shift ﬁxed eﬀects. Shaded region denotes 95 percent conﬁdence intervals,
+constructed from standard errors clustered at the oﬃcer-level. Identical ﬁgures for other outcomes
+are shown in ﬁgure B-2. Figure reports the reduced form coeﬃcient for one-year reoﬀending as well
+as the mean one-year reoﬀending rate for lenient oﬃcers.
+38
+Table 2: Eﬀect of Harsh Fines, LATE Estimates
+IV Estimates
+(1)
+(2)
+(3)
+(4)
+Lenient Mean
+βIV
+βIV
+󰂃
+Any Violation
+0.347
+-0.0177
+-0.0159
+-0.069
+(0.0017)
+(0.0016)
+(0.007)
+Speeding Violation
+0.170
+-0.0146
+-0.0144
+-0.127
+(0.0013)
+(0.0013)
+(0.012)
+Other Violation
+0.256
+-0.0119
+-0.0097
+-0.057
+(0.0016)
+(0.0015)
+(0.009)
+Crash Involvement
+0.080
+-0.0029
+-0.0021
+-0.040
+(0.0010)
+(0.0010)
+(0.018)
+Contest in Court
+0.262
+0.1125
+0.1093
+0.626
+(0.0014)
+(0.0014)
+(0.008)
+Controls
+No
+Yes
+Yes
+Beat-Shift FE
+Yes
+Yes
+Yes
+Observations
+1693457
+1693457
+1693457
+Notes:
+This table reports 2SLS estimates of the impact of receiving a harsh ﬁne on one-year
+reoﬀending. Standard errors clustered at the oﬃcer -level are in parentheses. First stage estimates
+are β = 0.944 (0.006) without controls and β = 0.943 (0.006) with controls. See table B-2 for the
+full set of ﬁrst stage and reduced form estimates with and without controls. Implied elasticities
+are computed as ˆβIV ×
+¯
+fine/¯y, where ˆβIV is estimated using the statutory ﬁne as the treatment
+variable and the means are the lenient oﬃcer means.
+39
+Figure 4: Extrapolation and treatment eﬀect estimates
+(a) Extrapolation Estimates
+Extrapolation Estimates:
+E(Y0) = 0.355 (0.004)
+E(Y1) = 0.343 (0.002)
+.33
+.34
+.35
+.36
+.37
+.38
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Local Mean
+Quadratic Fit
+(b) Treatment Eﬀects
+Treated:
+E(Y0) = 0.371 (0.006)
+ATT = -0.006 (0.007)
+Unreated:
+E(Y0) = 0.325 (0.003)
+ATU = -0.023 (0.009)
+.28
+.3
+.32
+.34
+.36
+.38
+Pr(Reoffend)
+All Motorists
+Treated
+Untreated
+Untreated Level
+Treatment Effect
+Notes: Panel (a) plots the relationship between oﬃcer stringency and driver reoﬀending, adjusted
+for beat-shift eﬀects. Circles illustrate a binscatter, adjusted for beat-shift eﬀects using the method
+of Cattaneo et al. (2021) and solid line denotes the quadratic ﬁt. Solid circles indicate the implied
+estimates of the sample average potential outcomes, E(Yi0) and E(Yi1), with associated 95 con-
+ﬁdence intervals. Panel (b) illustrates estimated of the untreated reoﬀending levels, E(Yi0), and
+treatment eﬀects, E(Yi1 −Yi0), for all motorists, harshly treaed motorists and untreated (leniently
+treated) motorists, constructed from the extrapolation estimates in panel (a).
+40
+Table 3: Robustness of extrapolation estimates
+Y0
+Y1 −Y0
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+All
+D = 1
+D = 0
+Diﬀ
+All
+D = 1
+D = 0
+Diﬀ
+(ATE)
+(ATT)
+(ATU)
+Panel A: Polynomials
+q = 2
+0.355
+0.371
+0.325
+0.046
+-0.012
+-0.006
+-0.023
+0.016
+(0.004)
+(0.006)
+(0.003)
+(0.007)
+(0.005)
+(0.007)
+(0.009)
+(0.012)
+q = 3
+0.350
+0.363
+0.325
+0.038
+-0.006
+0.001
+-0.019
+0.021
+(0.006)
+(0.009)
+(0.003)
+(0.009)
+(0.008)
+(0.009)
+(0.010)
+(0.012)
+q = 4
+0.346
+0.357
+0.325
+0.032
+-0.002
+0.008
+-0.021
+0.029
+(0.007)
+(0.011)
+(0.003)
+(0.011)
+(0.008)
+(0.012)
+(0.010)
+(0.016)
+q = 8
+0.351
+0.364
+0.325
+0.039
+-0.008
+0.001
+-0.024
+0.025
+(0.013)
+(0.019)
+(0.003)
+(0.019)
+(0.014)
+(0.019)
+(0.012)
+(0.023)
+Panel B: Local means
+bw = 0.1
+0.355
+0.370
+0.325
+0.045
+-0.009
+-0.006
+-0.015
+0.009
+(0.003)
+(0.005)
+(0.003)
+(0.005)
+(0.004)
+(0.006)
+(0.008)
+(0.010)
+bw = 0.05
+0.355
+0.371
+0.325
+0.046
+-0.011
+-0.006
+-0.019
+0.013
+(0.005)
+(0.007)
+(0.003)
+(0.007)
+(0.006)
+(0.008)
+(0.009)
+(0.012)
+bw = 0.01
+0.353
+0.367
+0.325
+0.042
+-0.010
+-0.003
+-0.024
+0.021
+(0.006)
+(0.009)
+(0.003)
+(0.009)
+(0.007)
+(0.010)
+(0.009)
+(0.013)
+Panel C: Polyomials in propensity score
+q = 2
+0.355
+0.370
+0.325
+0.045
+-0.013
+-0.005
+-0.028
+0.022
+(0.004)
+(0.006)
+(0.003)
+(0.006)
+(0.006)
+(0.007)
+(0.009)
+(0.011)
+Panel D: Within-locations
+Troops
+0.358
+0.375
+0.330
+0.045
+-0.011
+-0.010
+-0.022
+0.012
+(0.006)
+(0.008)
+(0.003)
+(0.009)
+(0.006)
+(0.009)
+(0.010)
+(0.014)
+Counties
+0.366
+0.382
+0.333
+0.049
+-0.019
+-0.016
+-0.028
+0.012
+(0.009)
+(0.010)
+(0.003)
+(0.010)
+(0.009)
+(0.011)
+(0.024)
+(0.028)
+FM (2022)
+0.355
+0.371
+0.326
+0.045
+-0.012
+-0.004
+-0.026
+0.021
+(0.006)
+(0.007)
+(0.003)
+(0.007)
+(0.006)
+(0.007)
+(0.008)
+(0.009)
+Notes: This table reports estimated untreated reoﬀending levels E(Yi0) and treatment eﬀects E(Yi1 −Yi0) for all motorists,
+treated motorists, and untreated motorists, using diﬀerent speciﬁcations for obtaining extrapolated estimates of E(Yi0) and
+E(Yi1). In panel (a), we show estimates from estimating equation 1 with diﬀerent polynomials in Z. In panel (b), we estimate
+equation Z using a piecewise linear speciﬁcation with rule-of-thumb bandwidth = 0.2. In panel (c), we show estimates that use
+the beat-shift adjusted average Y for oﬃcers in the tails of the stringency distribution, with bw denoting the bandwidth used
+to deﬁne the tails. In panel (d), we present estimates from polynomial speciﬁcations of 1 that replace Z with the estimated
+propensity score. Graphical analogues for the underlying extrapolation estimates are shown in ﬁgure C-2.
+41
+Table 4: Extrapolation estimates for other outcomes
+Y0
+Y1 −Y0
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+All
+D = 1
+D = 0
+Diﬀ
+All
+D = 1
+D = 0
+Diﬀ
+(ATE)
+(ATT)
+(ATU)
+Panel A: Any oﬀense in following year
+Any Oﬀense
+0.355
+0.371
+0.325
+0.046
+-0.012
+-0.006
+-0.023
+0.016
+(0.004)
+(0.006)
+(0.003)
+(0.007)
+(0.005)
+(0.007)
+(0.009)
+(0.012)
+Speeding
+0.179
+0.188
+0.161
+0.028
+-0.013
+-0.011
+-0.015
+0.004
+(0.003)
+(0.004)
+(0.002)
+(0.004)
+(0.004)
+(0.005)
+(0.005)
+(0.007)
+Crash
+0.080
+0.081
+0.077
+0.004
+-0.001
+0.001
+-0.005
+0.006
+(0.001)
+(0.002)
+(0.001)
+(0.002)
+(0.002)
+(0.002)
+(0.003)
+(0.004)
+Panel B: Number of oﬀenses in following two years
+Any Oﬀense
+1.278
+1.361
+1.118
+0.243
+-0.035
+-0.005
+-0.095
+0.090
+(0.025)
+(0.036)
+(0.016)
+(0.038)
+(0.027)
+(0.039)
+(0.046)
+(0.066)
+Speeding
+0.399
+0.421
+0.355
+0.067
+-0.025
+-0.020
+-0.035
+0.015
+(0.007)
+(0.011)
+(0.004)
+(0.011)
+(0.008)
+(0.011)
+(0.013)
+(0.018)
+Crash
+0.157
+0.160
+0.151
+0.009
+0.001
+0.004
+-0.005
+0.009
+(0.002)
+(0.004)
+(0.002)
+(0.004)
+(0.003)
+(0.004)
+(0.005)
+(0.007)
+Notes:
+This table reports estimated untreated reoﬀending levels E(Yi0) and treatment eﬀects
+E(Yi1 −Yi0) for all motorists, treated motorists, and untreated motorists, based on quadratic
+extrapolations using equation 1. In panel (a), we show estimates for binary outcomes indicating
+whether a motorist commits any new traﬃc oﬀense, a new speeding oﬀense, and is involved in an
+auto accident in the following year (the ﬁrst row of panel (a) is identical to the ﬁrst row of table
+3). In panel (b), we replace the outcomes with counts of the number of oﬀenses over the following
+two years. See appendix ﬁgure C-5 for graphical depictions of the underlying extrapolations and
+appendix table C-1 for estimates which alternatively use a local mean estimator for E(Yi0) and
+E(Yi1).
+42
+Figure 5: Reoﬀending levels and treatment eﬀects by motorist characteristics
+(a) E(Yi0|X)
+β  = 4.244 (0.258)
+.1
+.2
+.3
+.4
+.5
+.6
+.7
+E(Y0)
+.6
+.64
+.68
+.72
+Harshness Rate
+(b) E(Yi1 −Yi0|X)
+β  = 0.082 (0.068)
+-.05
+-.025
+0
+.025
+ATE
+.6
+.64
+.68
+.72
+Harshness Rate
+(c) Levels and gains within covariates
+Treated:
+E(Y0) = 0.370 (0.005)
+ATT = -0.012 (0.005)
+Unreated:
+E(Y0) = 0.337 (0.003)
+ATU = -0.022 (0.006)
+.28
+.3
+.32
+.34
+.36
+.38
+Pr(Reoffend)
+All Motorists
+Treated
+Untreated
+Baseline
+Within Covariates
+Notes: This ﬁgure explores selection patterns between and within motorist covariates. We divide
+motorists into 32 covariate cells at the level of gender × race × 1[age≥35] × 1[past oﬀense]
+and estimate a quadratic extrapolation within each cell. Panel (a) plots the estimated E(Yi0) in
+each cell against the cell-level harshness rate (the share of motorists in that cell that face harsh
+ﬁnes, adjusted for beat-shift ﬁxed eﬀects). Panel (b) plots the estimated cell-level treatment eﬀect,
+E(Yi1 −Yi0) against the same cell-level harshness rate. Both panels report an estimated linear
+slope and associated bootstrapped standard error. Panel (c) replicates panel (b) of ﬁgure 4 and
+then additionally shows estimated reoﬀending levels and treatment eﬀects which are estimated
+within covariate cells, obtained by estimating parameters via extrapolation for each group and
+then aggregating up, weighting each group by its sample share. See appendix ﬁgure C-3 for a
+graphical depiction of the within-group extrapolations underlying the treatment eﬀect estimates in
+panel (c).
+43
+Figure 6: Extrapolation estimates by oﬀending history
+(a) Extrapolation estimates
+.4
+.425
+.45
+.475
+.5
+.2
+.225
+.25
+.275
+.3
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+No Past Offense (Left Axis)
+Any Past Offense (Right Axis)
+(b) Treatment eﬀect estimates
+.35
+.4
+.45
+.5
+.15
+.2
+.25
+.3
+Pr(Reoffend)
+All Motorists
+Treated
+Untreated
+No Past Offense (Left Axis)
+Any Past Offense (Right Axis)
+Notes: Same as ﬁgure 4 except estimates are shown separately for motorists with (51.3 percent)
+and without (48.7 percent) at least one traﬃc citation in the past two years. As described in the
+text, we use a two-year lookback period because two years of pre-stop data are available for all
+citations in our main sample. Note that the estimates for motorists with and without past oﬀenses
+are shown using diﬀerent axes for ease of exposition (because reoﬀending rates are much higher
+for those with past oﬀenses). The estimates illustrated in panel (b) are also reported in appendix
+table C-2, and alternative versions of these estimates using a local mean estimator for E(Yi1) and
+E(Yi0) are presented in appendix table C-3.
+44
+FOR ONLINE PUBLICATION: APPENDICES
+A
+Stringency Instrument
+A-1
+Evidence that bunching represents oﬃcer behavior
+Here we discuss additional evidence that the bunching in the distribution of charge speeds
+presented in ﬁgure 1 is the result of discretionary behavior by oﬃcers. Figure 1 shows that
+about 25 percent of oﬃcers almost never write tickets for exactly nine MPH over the limit.
+Moving beyond a binary split of oﬃcers, ﬁgure A-1 illustrates signiﬁcant variation across
+oﬃcers in the propensity to bunch drivers. Panel (a) demonstrates full support across oﬃcers
+in bunching propensity, while panel (b) shows that this variation persists after netting out
+location and time ﬁxed eﬀects. Such variation is inconsistent with bunching due to driver
+behavior; if drivers systematically bunch below ﬁne increases, then oﬃcers patrolling the
+same beat-shift should exhibit a similar degree of bunching.
+However, this across-oﬃcer variation could alternatively be due to noise or estimation
+error. To conﬁrm that the across-oﬃcer variation in bunching propensity is “true” variation
+(in a statistical sense), we estimate the following regression:
+1[bunchijs] = γXi + ψs + αj + uijs
+where i indexes citations, j indexes oﬃcers, and s indexes beat-shifts; Xi is a vector of driver
+covariates, ψs is a beat-shift ﬁxed eﬀect, and αj is an oﬃcer ﬁxed eﬀect.13 This regression
+has an R2 = 0.55, with 0.32 (58 percent) attributable to the oﬃcer eﬀects, 0.22 (41 percent)
+attributable to the beat-shift eﬀects, and less than one percent attributable to the driver X’s.
+In other words, the identity of the citing oﬃcer is signiﬁcantly more predictive of a bunched
+citation than the beat-shift of the stop or the full set of driver characteristics. Moreover,
+there is signiﬁcant variation in the estimated ˆαj’s (σ2 = 0.076). Applying Empirical Bayes
+shrinkage (Morris, 1983) to adjust for estimation error has minimal impact on the dispersion
+of the estimated oﬃcer eﬀects (σ2 = 0.71). See panel (c) of ﬁgure A-1 for further details.
+Finally, we show in ﬁgure A-2 that an oﬃcer’s bunching propensity is highly correlated
+across space and time. First, we randomly partition an oﬃcer’s citations into two location
+(county) groups and regress an oﬃcer’s bunching propensity, adjusted for beat-shift ﬁxed
+eﬀects, in one set of locations on the same oﬃcer’s adjusted bunching propensity in the
+other set of locations. This regression yields ˆβ = 0.68 (se = 0.02). Next, we split an oﬃcer’s
+citations in half temporally and perform the same exercise, which gives ˆβ = 0.85 (se = 0.01).
+13The ψ’s are the same ﬁxed eﬀects we use in our main analysis, described in section 3. They
+are at the level of county × 1[highway] × year × month × 1[weekend] × shift.
+45
+Figure A-1: Across-Oﬃcer Distribution of Bunching Propensity
+(a) Raw Bunching Propensity
+0
+.1
+.2
+.3
+Fraction of Ofﬁcers
+0
+.2
+.4
+.6
+.8
+1
+Bunching Propensity (Raw)
+(b) Adjusted Bunching Propensity
+0
+.02
+.04
+.06
+.08
+.1
+Fraction of Ofﬁcers
+-.5
+0
+.5
+Bunching Propensity (Residualized)
+(c) Estimated Oﬃcer Eﬀects
+Raw: σ2 = 0.076
+EB: σ2 = 0.071
+0
+.5
+1
+1.5
+2
+2.5
+Density
+-1
+-.5
+0
+.5
+1
+Estimated Ofﬁcer Effect
+Raw Effects
+Empirical Bayes
+Notes: Panel (a) plots the oﬃcer-level distribution of the share of tickets bunched. Panel (b) plots
+the oﬃcer-level distribution of bunching propensity, residualized of beat-shift ﬁxed eﬀects. Panel
+(c) reports estimated oﬃcer eﬀects from a regression of 1[bunchijs] on oﬃcer ﬁxed eﬀects, beat-
+shift ﬁxed eﬀects, and the full set of driver covariates, as described in section 2.4. The solid blue
+illustrates the distribution of raw oﬃcer eﬀects and the dashed green line illustrates the distribution
+of eﬀects after applying Empirical Bayes shrinkage (Morris, 1983).
+46
+Figure A-2: Within-Oﬃcer Correlation in Bunching Propensity
+(a) Locations
+Unweighted: β = 0.679 (0.022)
+Weighted: β = 0.737 (0.031)
+-1
+-.5
+0
+.5
+1
+Second Partition
+-1
+-.5
+0
+.5
+1
+First Partition
+(b) Time Periods
+Unweighted: β = 0.849 (0.013)
+Weighted: β = 0.883 (0.020)
+-1
+-.5
+0
+.5
+1
+Second Partition
+-1
+-.5
+0
+.5
+1
+First Partition
+Notes: Each circle corresponds to an oﬃcer. Dashed red line is the 45-degree line. This ﬁgure splits
+each oﬃcer’s sample of citations into two groups and illustrates the correlation in (residualized)
+bunching propensity across groups. In panel (a), the groups are constructed as location partitions,
+with each partition comprised of half of an oﬃcer’s patrol locations. In panel (b), the groups are
+constructed as time partitions, with the x and y-axes corresponding to the oﬃcer’s ﬁrst and second
+half of tickets over time, respectively. Each ﬁgure reports the raw linear regression coeﬃcient as
+well as the linear regression coeﬃcient when weighting by the total number of citations. Another
+way to note the stability over time in an oﬃcer’s bunching propensity is to regress 1[bunchijs] on
+beat-shift ﬁxed eﬀects, oﬃcer ﬁxed eﬀects, and a quadratic in oﬃcer experience (in months). The
+p-value on each experience term is > 0.45 and the joint test p-value = 0.7855. In other words, after
+conditioning on oﬃcer identity, there is no experience proﬁle in the likelihood of a bunched ticket.
+47
+Table A-1: Relationship between Lenience and Oﬃcer Characteristics
+Binary
+Continuous
+(1)
+(2)
+(3)
+(4)
+(5)
+Mean
+Lenient
+Raw
+Adjusted
+Weighted
+Female
+0.0893
+-0.0704
+-0.0508
+-0.0356
+-0.00340
+(0.0366)
+(0.0266)
+(0.0161)
+(0.00388)
+Race = Black
+0.143
+-0.0916
+-0.0289
+-0.00799
+0.00550
+(0.0297)
+(0.0231)
+(0.0142)
+(0.00291)
+Race = Hispanic
+0.169
+-0.0933
+-0.0771
+0.0117
+0.00921
+(0.0693)
+(0.0564)
+(0.0359)
+(0.00707)
+Race = Other
+0.191
+-0.0120
+-0.0193
+-0.0186
+-0.00135
+(0.0655)
+(0.0544)
+(0.0350)
+(0.00724)
+Age
+34.06
+-0.0203
+-0.0236
+0.00982
+0.00741
+(0.0561)
+(0.0478)
+(0.0288)
+(0.00631)
+Experience
+7.09
+-0.117
+-0.0778
+-0.0345
+-0.000936
+(0.0388)
+(0.0324)
+(0.0214)
+(0.00616)
+Any College
+0.319
+-0.00798
+-0.0114
+-0.00229
+0.00490
+(0.0213)
+(0.0171)
+(0.0108)
+(0.00279)
+Mean
+—
+0.753
+0.353
+0.005
+0.006
+Oﬃcers
+1960
+1960
+1960
+1960
+1958
+Notes: Robust standard errors in parentheses. Age and experience are in years/10 and are com-
+puted as of January 2007. Raw lenience is the fraction of an oﬃcer’s tickets that are bunched and
+adjusted lenience is the fraction of an oﬃcer’s tickets that are bunched, residualized of location-time
+ﬁxed eﬀects. In column 4, the regression is weighted by one over the variance of adjusted lenience.
+Regressions also included quadratic terms in age and experience, which are are statistically insignif-
+icant in all cases.
+48
+Table A-2: Randomization Test
+(1)
+(2)
+(3)
+(4)
+Reoﬀend
+Harsh Fine
+Stringency
+1[Stringent]
+Female
+-0.0645
+-0.0233
+-0.00119
+-0.00161
+(0.000840)
+(0.00173)
+(0.000928)
+(0.00130)
+Age
+-0.00631
+-0.00229
+0.000280
+0.000540
+(0.000151)
+(0.000273)
+(0.000172)
+(0.000257)
+Age Squared
+0.0000190
+0.0000151
+-0.00000303
+-0.00000586
+(0.00000168)
+(0.00000268)
+(0.00000166)
+(0.00000259)
+Race = Black
+0.0710
+0.0202
+-0.000326
+-0.00407
+(0.00127)
+(0.00270)
+(0.00176)
+(0.00242)
+Race = Hispanic
+0.0324
+0.0345
+0.00633
+-0.000643
+(0.00117)
+(0.00290)
+(0.00212)
+(0.00295)
+Race = Other
+0.000888
+0.0348
+0.00581
+-0.00101
+(0.00202)
+(0.00274)
+(0.00176)
+(0.00250)
+Race = Unknown
+0.0120
+0.00505
+0.00377
+-0.00131
+(0.00299)
+(0.00550)
+(0.00266)
+(0.00374)
+Prior Prison Spell
+0.139
+0.0107
+-0.00315
+-0.000259
+(0.00393)
+(0.00359)
+(0.00207)
+(0.00275)
+County Resident
+0.00583
+-0.0186
+-0.00586
+0.00310
+(0.00127)
+(0.00309)
+(0.00265)
+(0.00441)
+Log Zip Income
+-0.0161
+0.0103
+0.00486
+0.00180
+(0.000992)
+(0.00211)
+(0.00164)
+(0.00194)
+Log Vehicle Price
+-0.00846
+0.0199
+0.00487
+0.00159
+(0.000992)
+(0.00160)
+(0.00122)
+(0.00191)
+Speeding Past Year
+0.127
+0.0247
+0.000948
+-0.000595
+(0.00103)
+(0.00157)
+(0.000653)
+(0.00110)
+Other Past Year
+0.154
+0.0149
+-0.000758
+-0.00201
+(0.00103)
+(0.00115)
+(0.000727)
+(0.00118)
+Crash Past Year
+0.0393
+0.00736
+0.000990
+-0.000721
+(0.00148)
+(0.00132)
+(0.000769)
+(0.00113)
+Mean
+.351
+.658
+.658
+.763
+F-Stat
+5883.84
+28.8
+2.7
+.92
+F-test
+<.0001
+<.0001
+.0002
+.5484
+Beat-Shift FE
+Yes
+Yes
+Yes
+Yes
+Oﬃcers
+1960
+1960
+1960
+1960
+Observations
+1693457
+1693457
+1693457
+1693457
+Notes: Standard errors clustered at the oﬃcer-level in parentheses. Regressions also include indi-
+cators for missing age (<1%), missing zip code income (≈10%), and missing vehicle information
+(≈14%); joint signiﬁcance tests include these variables.
+49
+Table A-3: First Stage Estimates Across Subsamples
+Subgroup
+(1)
+(2)
+= 1
+= 0
+Female
+0.970
+0.928
+(0.007)
+(0.007)
+Age > 30
+0.957
+0.927
+(0.007)
+(0.007)
+Race = White
+0.954
+0.934
+(0.008)
+(0.007)
+Race = Black
+0.922
+0.948
+(0.010)
+(0.006)
+Race = Hispanic
+0.923
+0.948
+(0.008)
+(0.007)
+Race = Other
+0.916
+0.945
+(0.015)
+(0.006)
+Race = Unknown
+0.964
+0.941
+(0.016)
+(0.007)
+County Resident
+0.972
+0.925
+(0.007)
+(0.007)
+Zip Income > $50,000
+0.946
+0.942
+(0.007)
+(0.007)
+Vehicle > $20,000
+0.916
+0.953
+(0.009)
+(0.006)
+Citation Past Year
+0.913
+0.961
+(0.007)
+(0.007)
+Notes: This table reports ﬁrst stage estimates for subsamples. Each coeﬃcient is from a separate
+regression of 1[harsh] on the stringency instrument and beat-shift ﬁxed eﬀects using only the
+denoted subgroup of drivers, where the subgroups are the groups for which the denoted indicator
+variable = 1 (column 1) and = 0 (column 2).
+Standard errors clustered at the oﬃcer-level in
+parentheses. For reference, the ﬁrst stage estimate in the full sample is β = 0.944 (0.006).
+50
+Figure A-3: First Stage Estimates, Sanction Measures
+(a) Statutory Fine Amount
+β = 1.223 (0.012)
+F =  10282
+0
+.05
+.1
+.15
+Fraction of Citations
+-.75
+-.5
+-.25
+0
+.25
+.5
+.75
+Pr(Harsh Fine)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Nonparametric Fit
+95% CI
+(b) Paid Fine Amount
+β = 0.958 (0.014)
+F =   4591
+0
+.05
+.1
+.15
+Fraction of Citations
+-.75
+-.5
+-.25
+0
+.25
+.5
+.75
+Pr(Harsh Fine)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Nonparametric Fit
+95% CI
+(c) Statutory DL Points
+β = 0.715 (0.014)
+F =   2611
+0
+.05
+.1
+.15
+Fraction of Citations
+-.75
+-.5
+-.25
+0
+.25
+.5
+.75
+Pr(Harsh Fine)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Nonparametric Fit
+95% CI
+(d) Accrued DL Points
+β = -0.036 (0.016)
+F =      5
+0
+.05
+.1
+.15
+Fraction of Citations
+-.75
+-.5
+-.25
+0
+.25
+.5
+.75
+Pr(Harsh Fine)
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Nonparametric Fit
+95% CI
+Notes: Each panel shows an identical to panel (c) of ﬁgure 2 but replaces the outcome variable with
+a diﬀerent sanctions measure. In panel (a), the outcome is the statutory ﬁne based on the charged
+speed. In panel (b), the outcome is the eﬀective ﬁne amount, taking into account the ex-post court
+outcomes of oﬀenders. In panel (c), the outcome is statutory driver license points based on the
+points schedule. In panel (d), the outcome is accrued DL points, taking into account the ex-post
+court outcomes of oﬀenders. See appendix section D-1 for details on the computation of eﬀective
+sanction measures (paid ﬁnes and accrued points).
+51
+B
+Deterrence eﬀects
+Table B-1: Naive OLS Estimates
+(1)
+(2)
+(3)
+(4)
+Reoﬀend
+Reoﬀend
+Reoﬀend
+Reoﬀend
+Fine ($100s)
+0.0426
+0.0548
+0.0228
+0.0286
+(0.00241)
+(0.00178)
+(0.00160)
+(0.00127)
+Mean
+0.325
+0.325
+0.325
+0.325
+Controls
+No
+No
+Yes
+Yes
+Oﬃcer FE
+No
+Yes
+No
+Yes
+Beat-Shift FE
+Yes
+Yes
+Yes
+Yes
+Observations
+1693457
+1693457
+1693457
+1693457
+Notes:
+Standard errors clustered at the oﬃcer-level in parentheses.
+Dependent variable is an
+indicator for a new traﬃc oﬀense in the next year. The reported mean is the mean for drivers cited
+at 9 MPH over the limit.
+52
+Figure B-1: Reduced Form Estimates
+(a) Any Violation
+βRF = -0.0167 (0.0053)
+μ = 0.347
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+(b) Speeding Violation
+βRF = -0.0138 (0.0034)
+μ = 0.170
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+(c) Crash Involvement
+βRF = -0.0027 (0.0014)
+μ = 0.080
+-.004
+-.002
+0
+.002
+.004
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+(d) Contested Citation
+βRF = 0.1062 (0.0063)
+μ = 0.262
+-.075
+-.05
+-.025
+0
+.025
+.05
+.075
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+Notes: Same as ﬁgure A-3 except for reduced form outcomes.
+53
+Figure B-2: Dynamic Reduced Form Estimates
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+Reduced Form Estimate
+-8
+-4
+0
+4
+8
+Quarter Around FHP Citation
+Any Violation
+Speeding Violation
+Crash
+Notes: Same as ﬁgure 3 using any moving violation in a given quarter (blue circles), any speeding
+violation in a given quarter (green diamonds), and any crash involvement in a given quarter (purple
+x’s) as the outcome variable. Shaded regions denote 95 percent conﬁdence intervals obtained from
+standard errors clustered at the oﬃcer-level.
+54
+Table B-2: First Stage and Reduced Form Estimates
+(1)
+(2)
+(3)
+Lenient Mean
+β
+β
+Panel A: First Stage
+Harsh Fine
+0.5573
+0.9441
+0.9432
+(0.0064)
+(0.0064)
+Fine Amount
+194.308
+122.340
+122.210
+(1.206)
+(1.190)
+Fine Amount (Paid)
+167.187
+95.819
+96.066
+(1.414)
+(1.406)
+DL Points
+3.416
+0.7152
+0.7142
+(0.0140)
+(0.0138)
+DL Points (Accrued)
+1.684
+-0.0362
+-0.0273
+(0.0164)
+(0.0154)
+Panel B: Reduced Form
+Any Violation
+0.3471
+-0.0167
+-0.0150
+(0.0053)
+(0.0034)
+Speeding Violation
+0.1702
+-0.0138
+-0.0136
+(0.0034)
+(0.0025)
+Other Violation
+0.2563
+-0.0112
+-0.0092
+(0.0045)
+(0.0028)
+Moving Violation
+0.2801
+-0.0135
+-0.0128
+(0.0047)
+(0.0031)
+Non-Moving Violation
+0.1602
+-0.0117
+-0.0097
+(0.0035)
+(0.0022)
+Crash Involvement
+0.0799
+-0.0027
+-0.0020
+(0.0014)
+(0.0011)
+Contest in Court
+0.2620
+0.1062
+0.1031
+(0.0063)
+(0.0060)
+Controls
+No
+Yes
+Beat-Shift FE
+Yes
+Yes
+Oﬃcers
+1960
+1960
+Observations
+1693457
+1693457
+Notes: Standard errors clustered at the oﬃcer-level in parentheses. This table reports ﬁrst stage
+and reduced form regression estimates with and without covariates.
+Each coeﬃcient is from a
+separate regression of the denoted outcome on the stringency instrument and beat-shift eﬀects,
+with (column 2) and without (column 3) controls
+55
+Figure B-3: Robustness, Sample Selection
+(a) Trimming Oﬃcers
+-.025
+-.02
+-.015
+-.01
+-.005
+0
+.005
+.01
+0
+5
+10
+15
+20
+25
+Percentile of Ofﬁcers Trimmed
+IV Estimate
+95% CI
+(b) Selection Correction
+βIV = -0.0177 (0.0018)
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+(c) GPS FE
+βIV = -0.0140 (0.0069)
+-.015
+-.01
+-.005
+0
+.005
+.01
+.015
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Local Mean
+Linear Fit
+Nonparametric Fit
+95% CI
+Notes: For comparison, our main IV estimate is βIV = −0.0177 (0.0017). Panel (a) shows the
+sensitivity of our IV estimate to trimming oﬃcers with the most selected samples. Panel (b) plots
+the reduced form and reports the IV estimate using a Heckman (1979) selection correction based on
+oﬃcer ticketing frequency. Panel (c) plots the reduced form and reports the IV estimate using GPS
+road segment ﬁxed eﬀects for the subset of citations including GPS coordinates (N = 244, 858).
+56
+Table B-3: Robustness, Alternative Instruments
+F-Stat
+(1)
+(2)
+(3)
+(4)
+Instrument
+N
+Balance
+FS
+βIV
+Leave-out
+1693457
+2.702
+21966
+-0.0159
+0.0016
+Leave-Out (Residualized)
+1693457
+2.691
+25278
+-0.0191
+0.0016
+Leave-County-Out
+1500479
+1.475
+626
+-0.0176
+0.0024
+Binary
+1693457
+0.921
+289
+-0.0268
+0.0039
+Oﬃcer Dummies
+1693404
+2.778
+323
+-0.0183
+0.0016
+Within Demographics
+Race
+1689414
+5.111
+24453
+-0.0168
+0.0016
+Race × Gender × Age
+1651212
+4.579
+21505
+-0.0176
+0.0016
+Race × Gender × Age × History
+1587971
+5.175
+18469
+-0.0182
+0.0017
+Race × Gender × Age × History × Income
+1471826
+3.884
+14912
+-0.0189
+0.0017
+Notes: This table shows how results vary under diﬀerent computations of the stringency instrument.
+Columns 2 and 3 report F-statistics associated with a joint balance test and the ﬁrst stage; column
+4 reports the IV estimate for one-year speeding recidivism. Row 1 reports results corresponding
+to the main instrument. In row 2, the instrument is the leave-out-mean after residualizing out
+beat-shift eﬀects (e.g., Dobbie et al. 2018). Row 3 computes the instrument as the leave-county-
+out mean.
+Row 4 uses a binary instrument and row 5 uses the full set of oﬃcer dummies as
+instruments. Rows 6-9 show results when the instrument is computed as the leave-out mean within
+demographic cells, deﬁned according to four race groups (white, Black, Hispanic, other/unknown),
+gender, 1[age≥35], 1[any citation in past year] and 1[zip code income ≥$50,000]. Regressions
+using the by-group instrument also include ﬁxed eﬀects at the relevant demographic cell-level.
+57
+Figure B-4: IV Estimate Heterogeneity by Driver Characteristics
+Lenient Mean
+IV Estimate
+Citation Past Year
+Zip Income > 50K
+County Resident
+Race = White
+Age > 30
+Female
+Citation Past Year
+Zip Income > 50K
+County Resident
+Race = White
+Age > 30
+Female
+.2
+.3
+.4
+.5
+= 1
+= 0
+Notes: This ﬁgures shows heterogeneity in IV estimates for one-year recidivism by driver charac-
+teristics. Each characteristic is denoted as a binary category; the x’s plot lenient means for the
+category = 1 subgroup and the o’s plot lenient means for the category = 0 subgroup. Arrows point-
+ing away from the means indicate the IV estimate, and shaded region around the arrow denotes
+the 95 percent conﬁdence interval. Vertical dashed line denotes the lenient oﬃcer mean recidivism
+rate for the full sample.
+58
+Figure B-5: Evidence of Driver Learning
+(a) Exposure to Stringent Oﬃcers
+Exposed: βIV = -0.016 (0.009)
+Unexposed: βIV = -0.021 (0.005)
+Δ = 0.005 (0.009)
+-.02
+-.01
+0
+.01
+.02
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Exposure
+No Exposure
+(b) Reoﬀense Locations
+Same: βIV = -0.019 (0.001)
+Other: βIV = -0.003 (0.002)
+Δ = -0.016 (0.002)
+-.015
+-.0075
+0
+.0075
+.015
+-.5
+-.25
+0
+.25
+.5
+Ofﬁcer Stringency
+Same County
+Other County
+Notes: Panel (a) illustrates reduced form relationships and reports IV estimates for motorists
+with and without past exposure to stringent (non-bunching) oﬃcers. To mitigate selection issues
+resulting from the fact that past exposure to stringency reduces the likelihood a driver reappears
+in the data, we focus on exposure at least one year in the past because treatment eﬀects fade out
+after one year (see ﬁgure 3) . Speciﬁcally, we take the subset of drivers with an FHP-issued citation
+at least one year prior and compare treatment eﬀects for those with and without past tickets issued
+by stringent oﬃcers. In panel (b), we report treatment eﬀects of harsh ﬁnes on the likelihood that
+drivers reoﬀend in the same county they were ticketed and in diﬀerent counties from the one they
+were ticketed in. Both panels report the estimated diﬀerence (and associated standard error) in
+treatment eﬀects.
+59
+B-1
+Additional robustness: monotonicity
+In addition to the result that average monotonicity is suﬃcient for 2SLS estimates in ex-
+aminer designs, Frandsen et al. (2019) also provide a test for the joint assumptions of strict
+monotonicity and exclusion. We were unable to use their code due to computing constraints,
+but here we provide an ad-hoc version of their test. Speciﬁcally, our version replicates the
+“ﬁt” component of their test by ﬂexibly ﬁtting reoﬀending rates to the stringency instrument
+(conditional on beat-shift eﬀects), computing residuals, and then testing the ability of oﬃcer
+eﬀects to explain the residuals. We focus only on the “ﬁt” component of the test at the
+suggestion of the authors, who note that the “slope” component is unpowered with many
+judges (as there are in our setting, N = 1, 960).
+Because we do not account for estimation error in the construction of the residuals, our
+ad-hoc version of the test yields a p-value which is biased towards zero. In other words,
+we will over-reject the joint null hypothesis of monotonicity and exclusion. Hence, while
+qualitatively useful, our version of the test is somewhat challenging to interpret. We depict
+the results of this Frandsen et al. (2019) test graphically below. The joint test statistic,
+which summarizes the ability of oﬃcer ﬁxed eﬀects to explain the residuals, is F = 2.3. On
+the one hand, this test statistic is reassuringly small; on the other hand, the (biased) p-value
+suggests that deviations from exclusion and strict monotonicity could be a salient concern
+for our empirical results.
+The above ﬁgure also notes that the outcome of this test hinges on a relatively small share
+of oﬃcers. Speciﬁcally, if we drop the top 12 percent of oﬃcers in terms of their associated
+t-statistics in the second stage regression of the residuals on the oﬃcer ﬁxed eﬀects, the joint
+F-statistic falls to F = 1.03, with a biased-downward p = 0.172. To that end, in table B-4
+below, we replicate our main speciﬁc deterrence estimate using only the subsample of oﬃcers
+passing the Frandsen et al. (2019) test, ﬁnding similar 2SLS estimates.
+In table B-4, we also show 2SLS estimates which recompute oﬃcer stringency within 32
+motorist covariate cells in column 2 (same as row 8 of table B-3), which estimate eﬀects
+separately for 16 oﬃcer covariate cells (gender × 1[white] × 1[any college] × 1[experienced])
+and then aggregates up, weighting by sample shares in column 3, and a combined version of
+columns 2 and 3 in column 4. The speciﬁcation in column 4 only requires monotonicity to
+hold within each combination of motorist and oﬃcer characteristics.
+60
+Figure B-6: Fit Test from Frandsen et al. (2019)
+Full Sample:
+F = 2.288 (p < 0.001)
+Drop 12% of Ofﬁcers:
+F = 1.032 (p = 0.172)
+-.2
+-.1
+0
+.1
+.2
+Pr(Reoffend)
+-.7
+-.35
+0
+.35
+.7
+Ofﬁcer Stringency
+Notes: This ﬁgure illustrates results of the joint test of monotonicity and exclusion from Frandsen
+et al. (2019). Each circle (or square) represents an oﬃcer (N = 1, 960) and plots the oﬃcer’s average
+stringency and reoﬀending rates, residualized of covariates and beat-shift ﬁxed eﬀects. Green line
+denotes a non-parametric ﬁt and the ﬁgure reports the results of computing residuals from the
+non-parametric ﬁt, regressing the residuals on oﬃcer dummies, and performing a joint signiﬁcance
+test.
+61
+Table B-4: Monotonicity robustness for IV estimates
+(1)
+(2)
+(3)
+(4)
+Baseline
+Driver Cells
+Oﬃcer Cells
+Both
+Full Sample
+-0.0177
+-0.0183
+-0.0164
+-0.0179
+(0.0056)
+(0.0038)
+(0.0038)
+(0.0037)
+FLL Oﬃcers
+-0.0152
+-0.0164
+-0.0152
+-0.0166
+(0.0037)
+(0.0026)
+(0.0025)
+(0.0025)
+Notes: This table reports 2SLS estimates. The outcome variable is any new traﬃc oﬀense in the
+following year. In column 1, we use our baseline leave-out stringency measure. In column 2, we
+use a stringency measure which is computed separately for each of 32 motorist covariate cells. In
+column 3, we estimate a 2SLS coeﬃcient separately for each of 16 oﬃcer cells and then compute
+the weighted average of the coeﬃcients, weighting by sample shares. In column 4, we repeat the
+exercise in column 3 using the cell-speciﬁc stringency instrument from column 2. In the second
+row, we drop the 12 percent of oﬃcers indicated in table B-6 (N oﬃcers = 1, 725, N = 1, 314, 635).
+In columns 3 and 4, we compute standard errors using a Bayesian bootstrap, clustered at the
+oﬃcer-level.
+62
+C
+Extrapolation estimates
+Figure C-1: Common Support of Oﬃcer Stringency Instrument
+Pr(D | p=1) = 0.995
+Pr(D | p=0) = 0.021
+0
+.1
+.2
+.3
+.4
+Fraction of Sample
+0
+.2
+.4
+.6
+.8
+1
+Propensity Score
+Treated
+Untreated
+Notes: Figure plots the distribution of propensity scores for the treated (66%) and untreated (34%)
+subsets of sample, where treatment is deﬁned as 1[harsh]. Following the text, the propensity score
+is estimated from a linear regression of 1[harsh] on oﬃcer stringency and beat-shift ﬁxed eﬀects.
+63
+Figure C-2: Extrapolation under diﬀerent functional forms
+.33
+.34
+.35
+.36
+.37
+.38
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Quartic
+Tail Mean: 10%
+8th Order
+Tail Mean: 5%
+Piecewise Linear
+Tail Mean: 1%
+Notes: This ﬁgure illustrates extrapolation estimates of the sample E(Yi0) and E(Yi1) under diﬀer-
+ent functional forms. Gray circles illustrates a binscatter and green solid line shows the quadratic
+ﬁt (both are the same as ﬁgure 4). Orange dotted line presents a quartic ﬁt, maroon dashed line
+shows an 8th order polynomial, and purple long-dashed line shows a piecewise linear ﬁt based on a
+bin width of 0.2. Gold triangles, maroon diamons, and pink squares show the beat-shift adjusted
+averages for oﬃcers with Z < 0.1 and Z > 0.9, Z < 0.05 and Z > 0.95, and Z < 0.01 and Z > 0.99,
+respectively.
+64
+Figure C-3: Within-group extrapolation estimates
+(a) By driver covariates
+.33
+.34
+.35
+.36
+.37
+.38
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Add Cov: Binscatter
+Add Controls: Quadratic Fit
+Separate by Cov: Binscatter
+Separate by Cov: Quadratic Fit
+(b) By stop locations
+.33
+.34
+.35
+.36
+.37
+.38
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Troops: Binscatter
+Troops: Quartic Fit
+FM: Binscatter
+FM: Quartic Fit
+FM: Quantiles
+(c) Treatment eﬀects
+.28
+.3
+.32
+.34
+.36
+.38
+Pr(Reoffend)
+All Motorists
+Treated
+Untreated
+Baseline
+Within Covariates
+Within Troops
+Within Locations
+Notes:
+In both panels, gray dots and green solid line represent our baseline binscatter
+and baseline quadratic ﬁt, as in ﬁgure 4.
+Panel (a) illustrates extrapolation estimates ad-
+justed for driver covariates, parameterized as 32 categories (gender × race × 1[age ≥35] ×
+1[any citation in the past year]). Red circles and dashed line show the binscatter and quadratic ﬁt
+when also conditioning on these cell ﬁxed eﬀects, while the purple diamonds and dashed line show
+the binscatter and quadratic ﬁt when estimating separately for each driver group and then aggre-
+gating up, weighting by sample shares. Panel (b) illustrates extrapolation estimates constructed
+within-locations. Red circle and dashed line show the binscatter and quadratic ﬁt when estimating
+separately by troop and then aggregating up, weighting by sample shares. Purple dots and dashed
+line show the binscatter and quadratic ﬁt when using the within-locations approach of Feigenberg
+& Miller (2022), described in appendix E-1. Orange squares illustrate the binscatter corresponding
+to the within-location quantiles approach of Feigenberg & Miller (2022). Panel (c) replicates panel
+(b) of ﬁgure 4, illustrating treatment eﬀects based on the within-group extrapolations depicted in
+panels (a) and (b).
+65
+Figure C-4: Extrapolation via local linear regression, Arnold et al. (2022) approach
+Extrapolation Estimates:
+E(Y0) = 0.363 (0.013)
+E(Y1) = 0.342 (0.007)
+ATT = -0.018 (0.019)
+ATU = -0.025 (0.019)
+.1
+.2
+.3
+.4
+.5
+.6
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Ofﬁcer Estimate
+Binscatter
+Nonparametric ﬁt
+Notes: This ﬁgure illustrates extrapolated estimates of E(Yi0) and E(Yi1), as well as reports the
+associated ATT and ATU estimates, when using the local linear regression approach to extrapola-
+tion from Arnold et al. (2022). Speciﬁcally, for outcome Y =1[one year reoﬀending], we estimate the
+regression Yijs = αj + ψs + uijs and construct oﬃcer-level estimates θY
+j = ˆαj + E( ˆψs).
+We then do
+the same procedure, replacing the outcome with D = 1[harsh ﬁne] to get oﬃcer level estimates θD
+j .
+The ﬁgure plots the estimated θY
+j ’s (vertical axis) against the estimated θD
+j ’s (horizontal axis) in
+the small gray dots. We then ﬁt the θY
+j ’s to the θD
+j ’s using a local linear regression with a guassian
+kernel and rule-of-thumb bandwidth = 0.1, weighting by each oﬃcer’s number of stops, and use
+the ﬁtted values at θD
+j = 0 and θD
+j = 1 as our estimates of E(Yi0) and E(Yi1). For inference, we
+use a bootstrap clustered at the oﬃcer-level.
+66
+Figure C-5: Extrapolation estimates for other outcomes
+(a) Any oﬀense
+.34
+.35
+.36
+.37
+.38
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+(b) Any speeding oﬀense
+.165
+.17
+.175
+.18
+.185
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+(c) Any crash
+.076
+.078
+.08
+.082
+.084
+.086
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+(d) Number oﬀenses
+1.2
+1.25
+1.3
+1.35
+1.4
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+(e) Number speeding
+.37
+.38
+.39
+.4
+.41
+.42
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+(f) Number crashes
+.15
+.155
+.16
+.165
+.17
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Binscatter
+Quadratic Fit
+Tail Mean: 5%
+Notes: This ﬁgure graphically depicts the extrapolation estimates underlying tables 4 and C-1.
+Each panel is the same as panel (a) of ﬁgure 4 for a diﬀerent outcome. In panels (a)-c(c), the
+outcome is whether a motorist reoﬀends in the following year. In panels (d)-(f), the outcome is
+the number of oﬀenses in the following two years. Red diamonds depict the 5 percent tail mean
+estimates of E(Yi0) and E(Yi1) used to construct the estimates reported in table C-1.
+67
+Table C-1: Extrapolation estimates for other outcomes
+(using 5 percent tail mean estimates)
+Y0
+Y1 −Y0
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+All
+D = 1
+D = 0
+Diﬀ
+All
+D = 1
+D = 0
+Diﬀ
+(ATE)
+(ATT)
+(ATU)
+Panel A: Any oﬀense in following year
+Any Oﬀense
+0.353
+0.367
+0.325
+0.042
+-0.010
+-0.003
+-0.024
+0.021
+(0.006)
+(0.009)
+(0.003)
+(0.009)
+(0.007)
+(0.010)
+(0.009)
+(0.013)
+Speeding
+0.179
+0.188
+0.161
+0.027
+-0.013
+-0.011
+-0.017
+0.006
+(0.004)
+(0.006)
+(0.002)
+(0.006)
+(0.005)
+(0.007)
+(0.005)
+(0.008)
+Crash
+0.078
+0.078
+0.077
+0.001
+0.001
+0.004
+-0.005
+0.009
+(0.002)
+(0.003)
+(0.001)
+(0.003)
+(0.002)
+(0.003)
+(0.003)
+(0.004)
+Panel B: Number of oﬀenses in following two years
+Any Oﬀense
+1.275
+1.357
+1.118
+0.239
+-0.037
+-0.000
+-0.107
+0.107
+(0.027)
+(0.040)
+(0.016)
+(0.044)
+(0.031)
+(0.043)
+(0.051)
+(0.072)
+Speeding
+0.395
+0.416
+0.355
+0.061
+-0.023
+-0.014
+-0.039
+0.024
+(0.008)
+(0.013)
+(0.004)
+(0.014)
+(0.010)
+(0.014)
+(0.014)
+(0.021)
+Crash
+0.155
+0.157
+0.151
+0.006
+0.003
+0.007
+-0.005
+0.012
+(0.003)
+(0.005)
+(0.002)
+(0.005)
+(0.004)
+(0.005)
+(0.005)
+(0.008)
+Notes: Same as table 4 except that we use the beat-adjusted average outcomes for oﬃcers with
+Z < 0.05 and Z > 0.95 as our estimates of E(Yi0) and E(Yi1) instead of our baseline quadratic
+extrapolation speciﬁcation of equation 1.
+68
+Figure C-6: Extrapolation estimates by oﬃcer experience
+(a) Extrapolation: reoﬀending
+.33
+.34
+.35
+.36
+.37
+.38
+Pr(Reoffend)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Low Experience
+High Experience
+(b) Treatment eﬀects: reoﬀending
+.28
+.3
+.32
+.34
+.36
+.38
+Pr(Reoffend)
+All Motorists
+Treated
+Untreated
+Low Experience
+High Experience
+(c) Extrapolation: contest in court
+.2
+.25
+.3
+.35
+Pr(Contest)
+0
+.2
+.4
+.6
+.8
+1
+Ofﬁcer Stringency
+Low Experience
+High Experience
+(d) Treatment eﬀects: contest in court
+.1
+.2
+.3
+.4
+.5
+Pr(Contest)
+All Motorists
+Treated
+Untreated
+Low Experience
+High Experience
+Notes: Same as ﬁgure 4 except estimates are shown separately for oﬃcers with at least ﬁve years
+experience as FHP patrol oﬃcers as of January 1, 2007 (the start of our sample). In panels (a) and
+(b), the outcome of interest is whether a motorist commits a new traﬃc oﬀense in the following year
+and in panels (c) and (d), the outcome of interest is whether a motorist contests a citation in traﬃc
+court. Treatment eﬀect estimates shown in panels (b) and (d) are constructed from the quadratic
+extrapolations of E(Yi0) and E(Yi1) shown in panels (a) and (c). The estimates illustrated in panels
+(b) and (c) are also reported in appendix table C-2, and alternative versions of these estimates using
+a local mean estimator for E(Yi1) and E(Yi0) are presented in appendix table C-3.
+69
+Table C-2: Extrapolation estimates by subgroup
+Y0
+Y1 −Y0
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+All
+D = 1
+D = 0
+Diﬀ
+All
+D = 1
+D = 0
+Diﬀ
+(ATE)
+(ATT)
+(ATU)
+Panel A: By motorist oﬀense history (prior two years)
+No oﬀense
+0.246
+0.258
+0.225
+0.033
+-0.018
+-0.013
+-0.026
+0.013
+(0.004)
+(0.006)
+(0.002)
+(0.006)
+(0.005)
+(0.006)
+(0.007)
+(0.010)
+Any oﬀense
+0.463
+0.476
+0.435
+0.041
+-0.010
+-0.007
+-0.018
+0.011
+(0.004)
+(0.006)
+(0.003)
+(0.006)
+(0.005)
+(0.007)
+(0.008)
+(0.011)
+Panel B: By oﬃcer experience
+Low
+0.355
+0.375
+0.319
+0.055
+-0.017
+-0.012
+-0.024
+0.012
+(0.005)
+(0.008)
+(0.004)
+(0.008)
+(0.006)
+(0.009)
+(0.011)
+(0.016)
+High
+0.358
+0.370
+0.333
+0.037
+-0.008
+-0.002
+-0.019
+0.017
+(0.006)
+(0.009)
+(0.005)
+(0.010)
+(0.007)
+(0.010)
+(0.012)
+(0.017)
+Panel B: By oﬃcer experience (Y = Pr(contest))
+Low
+0.235
+0.243
+0.221
+0.023
+0.096
+0.090
+0.106
+-0.015
+(0.006)
+(0.011)
+(0.013)
+(0.022)
+(0.006)
+(0.018)
+(0.031)
+(0.047)
+High
+0.210
+0.204
+0.223
+-0.019
+0.110
+0.107
+0.115
+-0.008
+(0.008)
+(0.015)
+(0.014)
+(0.025)
+(0.009)
+(0.021)
+(0.033)
+(0.051)
+Notes:
+This table reports estimated untreated reoﬀending levels E(Yi0) and treatment eﬀects
+E(Yi1 −Yi0) for all motorists, treated motorists, and untreated motorists, using diﬀerent speciﬁca-
+tions for obtaining extrapolated estimates of E(Yi0) and E(Yi1). In panel (a), we show estimates
+from estimating equation 1 with diﬀerent polynomials in Z. In panel (b), we estimate equation
+Z using a piecewise linear speciﬁcation with rule-of-thumb bandwidth = 0.2.
+In panel (c), we
+show estimates that use the beat-shift adjusted average Y for oﬃcers in the tails of the stringency
+distribution, with bw denoting the bandwidth used to deﬁne the tails. In panel (d), we present
+estimates from polynomial speciﬁcations of 1 that replace Z with the estimated propensity score.
+Graphical analogues for the underlying extrapolation estimates are shown in ﬁgure C-2.
+70
+Table C-3: Extrapolation estimates by subgroup
+(using 5 percent tail mean estimates)
+Y0
+Y1 −Y0
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+All
+D = 1
+D = 0
+Diﬀ
+All
+D = 1
+D = 0
+Diﬀ
+(ATE)
+(ATT)
+(ATU)
+Panel A: By motorist oﬀense history (prior two years)
+No oﬀense
+0.247
+0.260
+0.225
+0.035
+-0.020
+-0.015
+-0.029
+0.014
+(0.005)
+(0.008)
+(0.002)
+(0.008)
+(0.006)
+(0.008)
+(0.007)
+(0.010)
+Any oﬀense
+0.458
+0.468
+0.435
+0.032
+-0.004
+0.002
+-0.017
+0.019
+(0.007)
+(0.009)
+(0.003)
+(0.009)
+(0.007)
+(0.010)
+(0.008)
+(0.013)
+Panel B: By oﬃcer experience
+Low
+0.347
+0.363
+0.319
+0.043
+-0.009
+-0.000
+-0.024
+0.023
+(0.006)
+(0.010)
+(0.004)
+(0.010)
+(0.008)
+(0.010)
+(0.013)
+(0.016)
+High
+0.361
+0.374
+0.333
+0.042
+-0.011
+-0.007
+-0.020
+0.013
+(0.009)
+(0.013)
+(0.005)
+(0.014)
+(0.010)
+(0.014)
+(0.013)
+(0.020)
+Panel B: By oﬃcer experience (Y = Pr(contest))
+Low
+0.242
+0.254
+0.221
+0.033
+0.087
+0.080
+0.101
+-0.021
+(0.007)
+(0.013)
+(0.013)
+(0.023)
+(0.008)
+(0.019)
+(0.031)
+(0.047)
+High
+0.218
+0.215
+0.223
+-0.008
+0.102
+0.096
+0.115
+-0.019
+(0.008)
+(0.015)
+(0.014)
+(0.026)
+(0.010)
+(0.022)
+(0.033)
+(0.052)
+Notes: Same as table C-2 except that we use the beat-adjusted average outcomes for oﬃcers with
+Z < 0.05 and Z > 0.95 as our estimates of E(Yi0) and E(Yi1) instead of our baseline quadratic
+extrapolation speciﬁcation of equation 1.
+71
+Figure C-7: Reoﬀending levels and treatment eﬀects by motorist characteristics
+(Alternative estimates)
+(a) Lenient oﬃcer mean
+β  = 4.240 (0.266)
+.1
+.2
+.3
+.4
+.5
+.6
+.7
+E(Y0)
+.6
+.64
+.68
+.72
+Harshness Rate
+(b) LATE
+β  = 0.101 (0.063)
+-.05
+-.025
+0
+.025
+LATE
+.6
+.64
+.68
+.72
+Harshness Rate
+Notes: Same as ﬁgure 5 except that the untreated reoﬀending rate, reported in panel (a) is estimated
+by taking the average reoﬀending rate for lenient (bunching) oﬃcers; in panel (b), we show the
+group-speciﬁc LATE, estimated by 2SLS, rather than the extrapolation-based ATE estimate.
+72
+Figure C-8: Reoﬀending levels and treatment eﬀects by motorist characteristics
+(Partition-based estimates)
+(a) Within oﬃcers: E(Y0)
+β  = 4.268 (0.257)
+.1
+.2
+.3
+.4
+.5
+.6
+.7
+E(Y0)
+.6
+.64
+.68
+.72
+Harshness Rate
+(b) Within oﬃcers: ATE
+β  = 0.060 (0.070)
+-.05
+-.025
+0
+.025
+ATE
+.6
+.64
+.68
+.72
+Harshness Rate
+(c) Across oﬃcers: E(Y 0)
+β  = 4.268 (0.265)
+.1
+.2
+.3
+.4
+.5
+.6
+.7
+E(Y0)
+.6
+.64
+.68
+.72
+Harshness Rate
+(d) Across oﬃcers: ATE
+β  = 0.060 (0.066)
+-.05
+-.025
+0
+.025
+ATE
+.6
+.64
+.68
+.72
+Harshness Rate
+Notes: Same as ﬁgure 5 except that the harshness rate (horizontal axis) and the reoﬀending rate
+or treatment eﬀect are estimated in separate partitions of the data. In panels (a) and (b), we
+construct partitions within oﬃcer and estimate the harshness rate, as well as E(Yi0) and E(Yi1) in
+each partition, and show correlations across partitions. In panels (c) and (d), we instead construct
+partitions across oﬃcers. Each ﬁgure shows the cross-partition correlations for one partition with
+blue circles and the other with green diamonds. Each ﬁgure reports the average of the linear slope
+in each partition and the boostrapped standard error.
+73
+Figure C-9: Marginal treatment eﬀect estimates
+-.15
+-.1
+-.05
+0
+.05
+.1
+.15
+Marginal Treatment Effect
+0
+.2
+.4
+.6
+.8
+1
+Resistance to Treatment
+Linear
+Quadratic
+Cubic
+Quartic
+Quintic
+Non-parametric
+Notes: Marginal treatment eﬀect estimates of impact of harsh ﬁne on any reoﬀending in following
+year, as described in Section 5.7.
+Legend reports the order of polynomial used for the MTE
+speciﬁcation. The non-parametric speciﬁcation estimates the MTE separately across bins of the
+propensity score via the binscatter approach.
+74
+Table C-4: Treatment eﬀect estimates based on
+marginal treatment eﬀect (MTE) curves
+Average
+Treated
+Untreated
+MTE Speciﬁcation
+(ATE)
+(ATT)
+(ATU)
+Diﬀ
+Linear
+-0.013
+-0.005
+-0.027
+0.021
+( 0.004)
+( 0.004)
+( 0.004)
+( 0.004)
+Quadratic
+-0.007
+0.001
+-0.023
+0.024
+( 0.004)
+( 0.005)
+( 0.004)
+( 0.004)
+Cubic
+-0.006
+0.005
+-0.026
+0.031
+( 0.004)
+( 0.005)
+( 0.004)
+( 0.005)
+Quartic
+-0.007
+0.004
+-0.026
+0.030
+( 0.004)
+( 0.005)
+( 0.004)
+( 0.005)
+Quintic
+-0.007
+0.003
+-0.026
+0.029
+( 0.004)
+( 0.005)
+( 0.004)
+( 0.005)
+Non-Parametric
+-0.008
+0.002
+-0.027
+0.029
+( 0.004)
+( 0.005)
+( 0.005)
+( 0.005)
+Notes: Estimates of the Average Treatment Eﬀect (ATE), Treatment Eﬀect on the Treated (ATT),
+and Treatment Eﬀect on the Untreated (ATU), based on the MTE curves presented in Figure
+C-9. ATE is deﬁned as E(Y1 −Y0) and is estimated by summing equally across a uniform grid
+of MTE estimates from resistance to treatment points u = 0.01, 0.02, ..., 0.99.
+ATT is deﬁned
+as E(Y1 −Y0|UD < µD(Z)) and is estimated by summing across the same grid of points and
+weighting by Pr(u < ˆp), the probability of having a propensity score greater than that resistance
+to treatment. ATU is deﬁned as E(Y1 −Y0|UD ≥µD(Z)) and is estimated by the same summation
+but with weights Pr(u ≥ˆp).
+75
+D
+Data Appendix
+D-1
+Traﬃc courts data
+Traﬃc court dispositions associated with the citations from the TCATS database were also
+shared by the Florida Clerk of Courts. Citations were matched to disposition information
+using county codes and alphanumeric citation identiﬁers (which are unique within counties).
+Some citations have no associated disposition in the TCATS database, while others have
+multiple associated entries. Disposition verdicts can take on the following values:
+1 = guilty; 2 = not guilty; 3 = dismissed; 4 = paid ﬁne or civil penalty; 6 = estreated
+or forfeited bond; 7 = adjudication withheld (criminal); 8 = nolle prosequi; 9 = adjudged
+delinquent (juvenile); A = adjudication withheld by judge; B = other; C=adjudication with-
+held by clerk (school election); D = adjudication withheld by clerk (plea nolo and proof of
+compliance); E = set aside or vacated by court.
+In practice, the verdicts 1, 3, 4, A, and C account for the vast majority of citations. More-
+over, as conﬁrmed in a phone conversation with Beth Allman at the Florida Clerk of Courts
+on July 24, 2018, several of the violation codes are diﬃcult to interpret. In particular, it is
+very diﬃcult in practice to infer the precise outcome of tickets with disposition codes 1, 3,
+A, or those with multiple dispositions in the TCATS database.
+To construct an approximate measure of court contesting, we use any disposition not
+equal to 4 or C, which both imply that the individual paid their ﬁne without contest, as an
+indicator that the driver contested a citation. To construct measures of eﬀective sanctions,
+termed paid ﬁnes and accrued points in ﬁgure A-3, we adjust the statutory sanctions as
+follows:
+• Replace ﬁne = ﬁne/2 if verdict = A
+• Replace ﬁne = 0 if verdict = 3
+• Replace points = 0 if verdict ∈{3,A,C}
+Note that our measure of paid ﬁnes is likely conservative as it ignores court fees. Drivers
+contesting their tickets in court face a $75 court fee in addition to their ﬁne (the court fee can
+also be waived during the court process). See Goncalves & Mello (2021) and Mello (2021)
+for further discussion of the issues associated with working with the TCATS data.
+D-2
+Binary stringency measure
+To identify oﬃcers who do not bunch, we use the Frandsen (2017) test for manipulation.
+In our setting, this test implies that, under the null hypothesis of no manipulation, the
+conditional probability of being found at the bunching speed is in a range around one third,
+Pr(X = 9|x ∈[8, 10]) ∈[(1 −k)/(3 −k), (1 + k)/(3 + k)] where k is a restriction on the
+second ﬁnite diﬀerence, ∆(2)Pr(S = 9) ≡Pr(S = 8) −2Pr(S = 9) + Pr(S = 10), such
+that |∆(2)Pr(S = 9)| ≤k(Pr(S = 9) −Pr(S = 10)). Intuitively, if the distribution of
+76
+ticketed speeds is unmanipulated, the share of tickets at 9 MPH among those between 8 and
+10 MPH should be approximately one-third, where the deviation k is due to curvature in
+the distribution of speeds. We calculate k by assuming the distribution Pr(S) is Poisson
+and estimating the mean parameter λ using the empirical mean of ticketed speeds. We say
+that an oﬃcer is stringent (non-bunching) if we fail to reject that Pr(S = 9|S ∈[8, 10]) ≤
+(1 + k)/(3 + k) at the 99 percent conﬁdence level.
+To avoid the reﬂection problem, we randomly partition an oﬃcer’s stops into two halves
+and compute the binary measure separately for each half of the sample. We then use the
+oﬃcer’s binary measure in the other half as our binary stringency measure.
+D-3
+Predicted recidivism
+At a few points in our analysis, we rely on a predicted reoﬀending measure based on covariates
+(e.g., ﬁgure 2).
+An important concern in constructing this measure is the possibility of
+contamination from treatment eﬀects (e.g., if certain covariates are highly correlated with
+receiving harsh ﬁnes, the predicted recidivism for these covariate groups will be too low
+because of the treatment eﬀect of harsh ﬁnes on future oﬀending).
+To circumvent this
+concern, we construct our predicted recidivism index as follows. First, we randomly partition
+each oﬃcer’s stop into halves. Each oﬃcer × partition is coded as lenient or nonlenient using
+the Frandsen (2017) described above. In each partition, we regress 1[any new traﬃc oﬀense]
+on driver covariates using only stops made by non-lenient (non-bunching) oﬃcers. We then
+use the coeﬃcients from this regression to construct our ˆY measure in the other partition.
+77
+E
+Technical Appendix
+E-1
+Within-locations approach from Feigenberg & Miller (2022)
+Let j index oﬃcers, ℓindex counties, and τ index time categories, deﬁned as shift ×
+1[weekend]. Let t index time, deﬁned as calendar year × month. We construct an adjusted
+stringency measure for each oﬃcer × location by estimating the regression:
+Dijℓτ = φjℓτ + γXijℓτ + δτ + uijℓτ
+where the φ’s are ﬁxed eﬀects for each oﬃcer × location × shift category and D = 1[harsh
+ﬁne]. We estimate this regression separately for each location. We then aggregate to the
+oﬃcer × location level as follows:
+˜Djℓ=
+󰁛
+τ
+󰀓
+ˆφjℓτ + E[ˆγXijℓτ + ˆδ|ℓ, τ]
+󰀔
+P(τ|ℓ)
+We then repeat the exact same procedure, replacing D with Y = 1[reoﬀend] to obtain an
+adjusted probability of reoﬀending for each oﬃcer × location, ˜Yjℓ.
+Following Feigenberg & Miller (2022), we document the relationship between ˜Yjℓand
+˜Djℓin two ways. First, we show a simple binscatter, conditional on location ﬁxed eﬀects
+and weighting each oﬃcer × location by number of stops via the binsreg command. We
+also estimate a linear slope corresponding to this approach by regressing ˜Yjℓon ˜Djℓand
+location ﬁxed eﬀects, weighting by the number of stops. Second, we construct location-
+speciﬁc quantiles of each and plot the relationship between quantiles.
+In ﬁgure C-3, we show a version of our extrapolation based on this Feigenberg & Miller
+(2022) approach. Speciﬁcally, we ﬁt the relationship between ˜Yjℓand ˜Djℓusing a quadratic,
+conditioning on location ﬁxed eﬀects, and use the ﬁtted values at ˜D = 0 and ˜D = 1 as our
+estimates of E(Yi0) and E(Yi1). As shown in ﬁgure C-3, this quadratic approximates both
+the binscatter and the quantiles estimates quite well.
+E-2
+Calculating stopped speed for lenient tickets
+We will use a version of the extrapolation approach to identify the stopped speed of drivers
+who are given a lenient ticket (D = 0). Denoting stopped speed by S∗
+i and ticketed speed
+by Si, we know by design that Si(D = 1) = S∗
+i and Si(D = 0) = 9.
+We ﬁrst estimate a version of Equation 1, where stopped speed is on the left-hand side:
+E(Si|Wi, Zij) = αWi+f(Zij). The extrapolation for the treated outcome gives us the average
+stopped speed, ˆα ¯Wi + f(1) = E(Si1) = E(S∗
+i ). Next, we know that the stopped speeds of
+harshly and leniently ticketed drivers have to weight to the average, E(S∗
+i ) = pE(S∗
+i |D =
+1) + (1 −p)E(S∗
+i |D = 0) = pE(Si|D = 1) + (1 −p)E(S∗
+i |D = 0). Rearranging gives us the
+stopped speed of leniently ticketed drivers, E(S∗
+i |D = 0) =
+1
+1−pE(S∗
+i ) −
+p
+1−pE(S∗
+i |D = 1).
+Next, we want to understand whether the observed positive selection on levels can be
+explained by oﬃcers’ preference for punishing drivers stopped at faster speeds. In other
+words, if we let E(Y1|S∗
+i ) be the expected oﬀending of a driver (when treated harshly)
+78
+stopped at speed S∗, what are E(E(Y1|S∗
+i )|Di) for Di = 0 and 1 and how does the diﬀerence
+compare with the true diﬀerence E(Y1i|Di) for Di = 0 and 1?
+There are two steps to this estimation.
+First, we need to estimate E(Y1i|S∗
+i ), which
+is the predicted reoﬀending rate for drivers stopped at a given speed. We can do this by
+examining supremely stringent oﬃcers, so that S = S∗for practically all drivers. So we
+estimate E(Y1i|S∗
+i ) = E(Yi|Zi ≈1).
+The second step is to identify the distribution of stopped speeds separately by treatment
+status, Pr(S∗= s|Di). This distribution is directly observed for drivers treated harshly, and
+we can directly calculate E(E(Y1i|S∗
+i )|Di = 1) by taking the average of E(Y1i|S∗
+i ) over those
+drivers.
+For drivers with Di = 0, we need to estimate the distribution of stopped speeds. For
+each speed s, we run a version of our extrapolation where equation 1 is estimated with the
+left-hand side replaced with an indicator for whether the driver is ticketed at Si = s. The
+extrapolation from the most stringent oﬃcers gives us an estimate of Pr(S∗= s), the overall
+probability a driver is stopped at this speed. We can then infer the frequency of this speed
+for the leniently treated drivers from Pr(S∗= s|Di = 0) =
+1
+1−pPr(S∗= s) +
+p
+1−pPr(S∗=
+s|Di = 1).
+Our estimate for the predicted reoﬀending rate for leniently treated drivers is then
+E(E(Y1i|S∗
+i )|Di = 0) = 󰁓
+s Pr(S∗= s|Di = 0)E(Y1i|S∗
+i ).
+79

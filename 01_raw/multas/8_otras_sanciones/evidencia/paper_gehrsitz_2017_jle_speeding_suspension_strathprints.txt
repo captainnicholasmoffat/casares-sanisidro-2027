@@ -1,0 +1,1809 @@
+Speeding, Punishment, and Recidivism
+Evidence from a Regression Discontinuity Design ∗
+Markus Gehrsitz†
+August 18, 2017
+Abstract
+This paper estimates the eﬀects of temporary driver’s license suspensions on driving
+behavior. A little known rule in the German traﬃc penalty catalogue maintains that
+drivers who commit a series of speeding transgressions within 365 days should have
+their license suspended for one month. My regression discontinuity design exploits the
+quasi-random assignment of license suspensions caused by the 365-days cut-oﬀand
+shows that 1-month license suspensions lower the probability of recidivating within a
+year by 20 percent. This is largely a speciﬁc deterrence eﬀect driven by the punishment
+itself and not by incapacitation, information asymmetries, or the threat of stiﬀer future
+penalties.
+JEL codes: I12, K42, R41
+Keywords: Crime, Speeding, Deterrence, Regression Discontinuity
+∗I thank Dirk Hillebrandt, Michael Winkler, and the German Federal Motor Transport Authority (KBA) for granting me
+on-site access to the main data source for this article.
+I beneﬁted from the helpful comments and suggestions of Michael
+Grossman and David Jaeger. I thank Marco Caliendo, Dan Hamermesh, Ted Joyce, Christian Traxler, Tanya Wilson, and
+seminar participants at the University of Bristol, the City University of New York Graduate Center, Drexel University, the
+University of Luxembourg, the University of Potsdam, and the University of Stirling for useful comments.
+I acknowledge
+support by the CUNY DSR Grant Program.
+†Institute of Labor Economics (IZA) and University of Strathclyde, Department of Economics, 199 Catherdral Street,
+Glasgow G4 0QU, UK; e-mail: markus.gehrsitz@strath.ac.uk;
+1
+1
+Introduction
+Worldwide, more than 1.2 million people die every year in traﬃc accidents (WHO,
+2013). In 2010, traﬃc injuries in the US claimed the lives of 45,342 Americans and caused
+medical and work loss costs of more than $100 billion. Motor vehicle crashes are the leading
+cause of death for those aged 15 to 35 (CDC, 2015). Numerous laws and regulations, such
+as mandatory seatbelt use, speed limits, and blood alcohol concentration (BAC) limits, have
+been enacted in order to promote road safety. Most developed countries have an elaborate
+penalty catalogue in place that aims to punish and deter traﬃc oﬀenders. Temporary license
+suspensions are a crucial component of these penalty catalogues. This measure not only
+incapacitates traﬃc oﬀenders by taking them oﬀthe streets for a short period of time. It is
+also supposed to provide a “shot across the bows” by prompting oﬀenders, who temporarily
+experience the inconveniences of life without a driver’s license, to change their ways and
+drive more responsibly once they get their license back.
+Yet, little is known about the eﬀectiveness of temporary license suspensions. Economic
+theory provides a number of channels through which they may or may not aﬀect driving
+behaviour. Gary Becker’s (1968) model of the “rational criminal” predicts that temporary
+license suspensions should only have long-run eﬀects if they aﬀect the degree of future penal-
+ties and thus change the underlying cost-beneﬁt trade-oﬀs. The behavioral approach to the
+economics of crime (Jolls et al., 1998, among others) oﬀers other channels through which
+temporary license suspensions might aﬀect future behaviour even if they are one-oﬀpun-
+ishments. For instance, oﬀenders might be backward-looking or might update their beliefs
+about the actual cost of punishments and the probability that an oﬀense is detected.
+Ultimately, determining the eﬀectiveness and the mechanisms through which penalties
+aﬀect criminal behaviour is, therefore, an empirical issue. As Levitt and Miles (2007) point
+out, the main challenge for empiricists is to distinguish causation from correlation. A naive
+comparison of the recidivism behavior of oﬀenders who were punished for their criminal acts
+with those who were not, cannot shed much light on the question of how eﬀective penalties
+are in deterring future crimes. After all, these penalties are not randomly assigned. People
+who get punished because they committed a crime might be intrinsically prone to commit-
+2
+ting crimes. Comparing their rates of recidivism to those of law abiding citizens is thus
+an apples to oranges comparison. Traﬃc transgressions are no exception to this problem.
+As shown below, a “naive” OLS regression yields a positive eﬀect of license suspension on
+recidivism even when conditioning on age, sex, and state ﬁxed eﬀects.
+The goal of this study is to overcome these challenges in answering a seemingly simple
+question. For that purpose, I exploit a rule in the German penalty catalogue for traﬃc
+violations which leads to a quasi-random suspension of some individuals’ driver’s licenses.
+This rule maintains that a person who commits two major speeding violations within 365
+days, should have her license revoked for one month. This gives rise to a fuzzy regression
+discontinuity design where those to the left of the 365-day cutoﬀare likely to have their
+license revoked while those to the right of the cutoﬀretain theirs. The rule appears to be
+complex enough to prevent sorting to the right of the threshold. At the same time, the
+rule is very much enforced by the traﬃc authorities. Using rich administrative data, I ﬁnd
+that a loss of license for one month reduces the probability of recidivating within a year
+by about 20 percent. The nature of the institutional framework also allows me to pinpoint
+the mechanism through which the penalty operates and to disentangle the eﬀect of license
+suspensions from confounding punishments such as money ﬁnes and demerit points.
+2
+Background and Institutional Framework
+Endogeneity issues in the relationship between punishment and criminal activity have
+been recognized since at least the late 1990s (Levitt, 1996). Ever since, economists have come
+up with various strategies to exploit sources of exogenous variation in order to isolate causal
+eﬀects of punishment on recidivism. Kessler and Levitt (1999) exploit sentence enhance-
+ments that are exogenously induced by California’s Proposition 8 to evaluate the eﬀect of
+harsher sentences on crime. They ﬁnd that harsher punishments reduce crime substantially.
+Helland and Tabarrok (2007) utilize idiosyncrasies in the same state’s three strike policy to
+isolate a large and signiﬁcant deterrence eﬀect of the policy. Lee and McCrary (2017) use
+the fact that juvenile criminals tend to be sentenced as adults once they turn eighteen, and
+3
+ﬁnd only small deterrence eﬀects of more severe penalties.
+Drago et al. (2009) and Barbarino and Mastrobuoni (2014) analyze sentence reductions
+for certain parts of the Italian prison population due to a collective clemency bill. Their re-
+sults suggest that a reduction in prison sentences actually reduced recidivism. Di Tella and
+Schargrodsky (2013) use Argentinian judges’ ideological diﬀerences as an instrument in eval-
+uating the eﬀectiveness of electronic monitoring compared to incarceration. They ﬁnd that
+this more lenient treatment reduces recidivism. Green and Winik (2010), Snodgrass et al.
+(2011) and Aizer and Doyle (2015) exploit the random assignment of criminals to judges with
+diﬀerent incarceration tendencies (an identiﬁcation strategy pioneered by Kling (2006)) and
+ﬁnd that juvenile imprisonment increases recidivism probabilities and has adverse eﬀects on
+human capital accumulation.
+It is surprising how little research has been devoted to natural experiments in the area
+of traﬃc violations. After all, traﬃc fatalities are an enormous social problem. By way of
+comparison, more than ten times as many people died in vehicle crashes in Germany than
+were murdered in 2015. What is more, previous estimates regarding the eﬀectiveness of
+punishments for property or violent crimes are unlikely to apply to traﬃc oﬀenses which
+tend to unintentionally lead to damages and casualties. One reason for a lack of research in
+this area, is that the eﬀects of incapacitation, of the mere threat of punishments, and of the
+punishment itself are hard to disentangle. Moreover, punishment usually consist of a mix
+of penalties. For example, the best study to date on the eﬀect of penalties on road safety
+by Hansen (2015) is only able to isolate the combined reduced form eﬀect of money ﬁnes,
+increases in insurance premia, license suspensions, home releases, and jail time in response
+to committing a driving under the inﬂuence (DUI) oﬀense.1
+My study therefore signiﬁcantly advances the literature: rich administrative data en-
+able me to estimate not only reduced form eﬀects, but to also obtain a local average treatment
+eﬀect. In other words, this is the ﬁrst study to assess the eﬀect of a punishment for traﬃc
+oﬀenses on recidivism, as opposed to the eﬀect of being assigned to punishment. Moreover,
+the nature of my natural experiment allows me to distinguish the eﬀect of a 1-month driver’s
+1Studies by DeAngelo and Hansen (2014), de Figueiredo (2015) and Traxler et al. (2017) are the only
+other papers that I am aware of to ﬁnd plausibly causal eﬀects of penalties and/or enforcement on road
+safety.
+4
+license suspension from the confounding eﬀects of other “treatments”, such as money ﬁnes
+and demerit points which are usually also part of a penalty mix. Finally, the institutional
+setting allows me to credibly isolate the speciﬁc deterrence eﬀect of the punishment from
+the general deterrence impact and the eﬀect of incapacitation.
+My source of exogenous variation stems from an idiosyncrasy in the German traﬃc
+penalty catalogue. This catalogue generally provides for three diﬀerent types of penalties:
+money ﬁnes, (demerit) points entered into one’s central traﬃc registry account, and license
+suspensions. The degree of the penalty is determined by the seriousness of the oﬀense.2
+Small transgressions are ﬁned with small ﬁnancial penalties. For more severe transgressions,
+points in the central traﬃc registry are added. Points received for diﬀerent transgressions
+and diﬀerent types of transgressions accumulate. If a person does not commit a transgres-
+sion for two years, all points are erased. If a person does commit a transgression within two
+years, however, new points are added to the existing stock and the two year expungement
+period starts afresh. An oﬀender permanently loses her license once her stock of points rises
+to 18. Finally, for severe transgressions, temporary license suspensions are handed out on
+top of points and money ﬁnes. For instance, a person speeding 45 km/h over the limit will
+have her license suspended for 1 month. The penalty catalogue also distinguishes between
+oﬀenses that took place on highways and oﬀenses that took place in built-up areas, for ex-
+ample residential neighborhoods. Fines diﬀer in severity for diﬀerent types of transgressions
+ranging from aggravated DUIs to driving without appropriate snow chains.
+The road traﬃc law (BKatV), which constitutes the legal basis for the penalty cata-
+logue, has multiple additional provisions. One additional provision is for “persistent delin-
+quencies.” It maintains that “a temporary license suspension [of usually 1 month] shall
+ordinarily be handed out if the operator of a motor vehicle commits a speeding transgression
+of at least 26 km/h within 1 year after another speeding transgression of at least 26km/h
+has been committed and the corresponding penalty has obtained legal force” (§4 Abs. 2 Satz
+2 BKatV; own translation). This provision will henceforth be referred to as the “365-day
+rule.” For instance, a person who within a few months is caught twice exceeding the speed
+2Table A1 in the Appendix provides an excerpt from the penalty catalogue, speciﬁcally for speeding
+oﬀenses.
+5
+limit on a highway by 28 km/h falls under the 365-day rule and will have her license tem-
+porarily revoked even though, according to the penalty catalogue, she should on aggregate
+only be ﬁned e160 and receive 6 demerit points (see Table A1). Note that the wording of
+the provision is tricky. If you read the above text carefully, you will notice that the period,
+in which an oﬀender is at risk of falling under the 365-day rule, only begins after the penalty
+for the ﬁrst transgression “has obtained legal force.” The diﬀerence between the date of the
+transgression and the date on which the associated penalty obtains legal force might seem
+minor at ﬁrst yet the median diﬀerence between those two dates is 66 days. In other words,
+the day count which determines whether an oﬀender has her license suspended due to the
+365-day rule does not start immediately after committing the ﬁrst transgression but with a
+substantial time lag. This wrinkle in the law is a big source of confusion among oﬀenders and
+- as we will see in Section 4 - prevents sorting to the right of the 365-day threshold. Fortu-
+nately, both the date of a transgressions and the date on which the corresponding penalties
+obtain legal force are recorded in the data, so I can properly ascertain which oﬀenders fall
+under the rule.
+The 365-day rule provides a cutoﬀthat can be exploited in a regression discontinuity
+setting. For instance, this rule requires that a person who commits her second transgression
+within 365 days after the penalty for the initial transgression has obtained legal force, should
+have her licenses suspended for one month. A person who commits her second transgression
+on day 366 should keep her license. By comparing the recidivism behavior of these two groups
+of people, who should be very similar except for the degree of the penalty they receive, I
+can obtain an unbiased estimate of the eﬀect of a 1-month driver’s license suspension. My
+identiﬁcation strategy rests on two assumptions that need to be met to guarantee internally
+valid estimates. First, drivers by and large must not be aware of this regulation or, at the
+very least, they should not gear their driving behavior accordingly. Data and statistical tests
+(McCrary, 2008) presented in Section 4 will support this assumption and will show that sort-
+ing to either side of the 365-day cutoﬀis not common, most likely because the wording of
+the provision is not straightforward. Second, traﬃc authorities must enforce this regulation.
+It is apparent from the above quote that the authorities only “shall ordinarily” hand out
+licenses suspension and thus have considerable wiggle room. But, Section 4 will also show
+6
+that the authorities to a great degree adhere to this rule, thus creating a discontinuity in the
+assignment of drivers to license suspensions.
+3
+Data
+The source of data for this study is the German central traﬃc registry (“Verkehrszen-
+tralregister” or VZR). The VZR is administered and maintained by the Federal Motor Trans-
+port Authority (“Kraftfahrt-Bundesamt” or KBA). The VZR contains an account with a
+unique ID for every traﬃc oﬀender who has committed a transgression that was sanctioned
+with at least one demerit point. Oﬀenses are usually ﬁrst recorded by local traﬃc author-
+ities. These local agencies (or in some instances the courts) then transmit information on
+the date and type of transgression as well as the corresponding penalty to the KBA. The
+transmissions also contain information about the date on which a penalty obtains legal force.
+The VZR is an active registry. Persons who do not commit a traﬃc transgression for
+two years not only get their points total set to zero, but are erased entirely from the data
+base. If someone commits a transgression after her account has been erased due to this
+2-year expungement period, she starts with a clean slate. That is, she receives a new ID and
+cannot be linked to former VZR entries. The point system was reformed on 1 May 2014. On
+this occasion, a dataset containing the VZR population as of 30 April 2014 was created. The
+KBA made an anonymized version of this excerpt available for on-site analysis. The data
+set contains more than 10.5 million entries pertaining to about 6.3 million distinct oﬀenders.
+Obviously not all observations in this dataset can be used for this study. For one, a
+suﬃciently large follow-up period is required since my main outcome of interest is recidivism.
+More importantly, this study isolates exogeneous variation in the severity of punishment to
+assess the eﬀect of license suspensions on recidivism. That is, only oﬀenders who have a
+chance to be aﬀected by the 365-day rule should be used for analysis. The following steps
+describe the selection process that identiﬁes observations that become part of my “experi-
+ment.”
+First, it should be noted that the 365-day rule only applies to speeding transgressions of
+7
+26km/h or more. More precisely, a 1-month license suspension may be imposed on speeders
+whose oﬀense by itself would not have resulted in a license suspensions. There are two cases
+that qualify for this rule: speeding 26-40 km/h above the limit on highways and speeding
+26-30 km/h above the limit in built-up areas. Second, the rule can only aﬀect persons who
+have previously committed another speeding transgression of 26km/h or more. Throughout
+this article, I refer to the earlier of these two transgressions as the “original transgression”
+and to the second transgression as the “treatment transgression.” When I refer to the time
+diﬀerence between the treatment and the original transgression, I am referring to the number
+of days that have passed between the date on which the penalty for the original transgression
+obtained legal force and the date of the treatment transgression. In other words, through-
+out this paper, I account for the wrinkle in the law that delays the start of the day count.
+Only persons who have both an original transgression and a treatment transgression (that is
+two speeding oﬀenses of 26km/h or more) can enter the ﬁnal “discontinuity sample”. I also
+require the time diﬀerence between both transgressions to be no more than 545 days and at
+least 186 days. In essence, this puts a 180-day window around the 365-day threshold that
+determines whether a 1-month driver’s license suspension is issued. I assess the robustness
+of my results to diﬀerent time windows around the cutoﬀin Section 5.
+The outcome of interest is recidivism, namely the probability of committing yet an-
+other (third) oﬀense. This requires a suﬃciently large post-treatment time window. This
+time window has to be even larger since it can take a few months for transgressions to show
+up in the data. For example, oﬀenders may appeal against prescribed penalties in court.
+Transmission to the KBA and recording information into the VZR also takes some time. On
+average, it takes about two months from the date of the actual oﬀense until it shows up in
+the data base, after 5 months more than 99% of incidents actually show up in the data. My
+observational period ends on 30 April 2014. Accounting for an at-most 5 month delay and in
+order to evaluate a 12 months recidivism window, only oﬀenders who have committed their
+treatment transgression before 1 December 2012 can be used in this analysis.
+Another complication arises from the 2-year expungement period. Individuals who do
+not commit a traﬃc transgression for two years are erased from the data set. By inversion,
+individuals who still are in the data base must have committed an oﬀense in the past two
+8
+years. That is, individuals who committed an oﬀense before 1 May 2012 must necessarily
+have committed another oﬀense subsequently. For these individuals there will thus be no
+variation in the outcome. As a result, individuals whose treatment transgression predates
+May 1 2012 also need to be excluded from the discontinuity sample. The appendix, in partic-
+ular Figure A1, provides additional information regarding the generation of my ﬁnal sample.
+Once these restrictions have been imposed, a “discontinuity sample” emerges. It con-
+sists of 31,400 persons. Each person has a treatment transgression that occurred between
+1 May 2012 and 30 November 2012; each person also has a original transgression for which
+the date on which the corresponding penalty has obtained legal force predates the date of
+the treatment transgression by at least 186 days and at most 545 days. For about half the
+sample, 365 days or less passed between these two points in time. Borrowing terminology
+from the potential outcome framework (Angrist et al., 1996), these observations constitute
+the “treatment group”. Members of this group fall under the 365-day-rule and should have
+their licenses suspended for 1 month. The remainder of the discontinuity sample constitute
+the “control group”. Members of this group have committed similar transgressions but due
+to the timing of their oﬀenses mostly retain their driver’s license. Persons in both treatment
+and control group may or may not recidivate, that is may or may not have committed a
+(third) major traﬃc transgression after their treatment transgressions.
+If the descriptive statistics of Table 1 are any indication, it appears as if license sus-
+pensions have an eﬀect. Rates of recidivism are 24.4% and 26.5% for the treatment and
+control group, respectively. These diﬀerences are statistically signiﬁcant at the 1% level (see
+row 10 and columns (1) and (2) of Table 1). The diﬀerence actually tends to increase the
+more I limit the sample to observations with treatment transgressions closer to the 365-day
+threshold. On the other hand, demographic factors that are reported with the data are quite
+balanced across treatment and control group, indicating a quasi-random separation of the
+sample. For instance, the average age in the treatment sample is 42.66 years, in the control
+sample it is 43.02. The null hypothesis that there is no diﬀerence in means cannot be rejected
+at the 1% level. The means for all other covariates are also very similar, and formal t-tests
+for diﬀerences in means fail to reject the null in the vast majority of instances.
+I also distinguish between speeding-speciﬁc recidivism and general recidivism. The two
+9
+bottom rows of Table 1 provide the corresponding means and standard deviations. Since
+1-month license suspensions are quasi-randomly assigned due to a speeding incidence, one
+might hypothesize that speeding recidivism is particularly deterred. This turns out to not
+be the case, in fact speeding-speciﬁc recidivism is just as much aﬀected as overall recidivism
+(for example DUIs, speeding, running a red light, and so on). All results for speeding-speciﬁc
+recidivism are therefore relegated to the appendix of this paper.
+4
+Methods
+The goal of this study is to exploit the exogeneous variation in penalties induced by
+the 365-day rule. The rule maintains that a 1-month license suspension shall be levied on
+oﬀenders who - accounting for the wrinkle in the law that delays the start of the day count
+- commit two major speeding transgressions within 365 days, but not on those who commit
+two such transgressions within 366 days or more. This will allow for the identiﬁcation of
+the causal eﬀect of a temporary license suspension on the probability of reoﬀending. My
+identiﬁcation strategy will only be valid if the 365-day rule is actually applied and results in
+a discontinuity in the assignment to treatment. Figure 1 illustrates that this is indeed the
+case. The x-axis shows the running variable, the number of days that have passed between
+the date on which the penalty for the original transgression has obtained legal force and
+the date of the treatment transgression. For each bin, I calculate the fraction of oﬀenders
+within that bin who have had their license suspended for 1 month. The position of each
+point relative to the y-axis yields information about these fractions.
+If the 365-day rule was strictly applied, everybody to the left of the red vertical line
+should have her license suspended for 1 month in addition to the prescribed money and point
+penalties. Everybody to the right or on the line should keep their license and merely suﬀer
+the prescribed money and point penalties. Such a “sharp” separation into treatment and
+control group is not present in this case. There is, however, a big drop in the probability of
+having one’s license temporary revoked at day 366. To the left of the cutoﬀaround three
+quarters of oﬀenders lose their license for 1 month and to the right of the cutoﬀa mere 1.7
+10
+percent of oﬀenders are hit with a 1-month license suspension. In other words, there is a huge
+drop in the probability of having one’s license suspended due to the treatment transgression
+once 365 days have passed since the penalty for the original transgression obtained legal force.
+Likely reasons for receiving the treatment on the “wrong” side of the cutoﬀare involvement
+in an accident or repeat oﬀending in terms of non-speeding transgressions.3 The reasons
+for imperfect compliance on the left hand side are numerous. In instances very close to the
+cutoﬀ, judges may be sympathetic to appeals and choose to not invoke the 365-day rule. The
+same might be true in cases of hardship, for example for elderly or disabled drivers who have
+no other means of transportation than their vehicles. Similarly, oﬀenders from rural areas,
+commuters who are dependent on their car, or professional truck drivers might be able to
+keep their licenses. In general, any penalty notice can be appealed in court and judges may
+override a suspension if the oﬀender shows remorse or accepts a higher monetary and/or
+point penalty in lieu of the temporary license suspension. Note that this kind of selection
+is not a threat to my identiﬁcation strategy. Rather it illustrates the local interpretation of
+any regression discontinuity coeﬃcient.4
+By and large, traﬃc authorities follow the 365-day rule which induces a big drop in the
+probability of having one’s license temporarily suspended at the expected threshold. The
+suspension is also indeed for exactly one month. In the data, there were only 6 instances
+in which a 2 months suspension was imposed and 1 case in which a 3 months suspension
+was imposed due to aggravating circumstances. These observations were dropped from the
+data. Figure 2 plots the recidivism outcome of interest against the number of days that
+have passed between the date on which the penalty for the original transgression obtained
+legal force and the date of the treatment transgression. The running variable is aggregated
+into 3-day bins. The size of each circle indicates the number of observations in each bin.
+The position of each circle, relative to the y-axis, indicates the fraction of oﬀenders within
+a bin who recidivated within 12 months. The recidivism period is extended to 13 months
+for those who actually have had their license suspended for 1 month in order to account for
+3It is noticeable that cases in which exactly 366 days have passed between the original transgression and
+the treatment transgressions have their licenses suspended more frequently than most other cases to the
+right of the cutoﬀ. The reason is that 2012 was a leap year which has led to confusion among the local traﬃc
+authorities as to whether these cases should fall under the 365-day rule.
+4This issue will be further discussed in Section 7.
+11
+incapacitation eﬀects as drivers without a license naturally have less of an opportunity to
+re-oﬀend.5
+In Figure 2 there is clearly a discontinuity at the 366-day cutoﬀ. This jump yields a
+ﬁrst rough estimate of the reduced form (intent-to-treat) eﬀect. The graph suggests that
+oﬀenders who are assigned to treatment (license suspensions) are three to four percentage
+points less likely to recidivate than oﬀenders who are not assigned to treatment. Note that
+the lowess lines in both ﬁgures are merely superimposed to better visualize the pattern in
+the data but may very well suﬀer from boundary bias close to the 365-day cutoﬀ. In order to
+obtain a visual estimate of the size of the treatment eﬀect it is more important to focus on
+the position of the cloud of points, especially around the cutoﬀ, than to study the position
+of the lowess lines at the boundary.6
+Figures 1 and 2 make a compelling case that a) the 365-day rule invokes a quasi-random
+assignment of license suspensions and b) this assignment indeed has an eﬀect on future
+recidivism behavior. However, the internal validity of any coeﬃcient obtained through this
+setup would be in jeopardy if oﬀenders were very much aware of the 365-day cutoﬀand
+geared their driving behavior accordingly. Fortunately, there is little indication that this is
+the case. First, anecdotal evidence suggests that the vast majority of drivers is not even
+aware of this rule. There is a vast amount of online forums in which repeat oﬀenders who
+fall under the 365-day rule express their shock about their license suspensions. Second, the
+wrinkle in the provision that starts the day count only after the penalty for the original
+transgression has obtained legal force, makes it hard for oﬀenders to keep track of whether
+they are still at risk of falling under the 365-day rule. That is, if they were aware of the
+exact wording of the law to begin with.
+Data back up this claim.
+If at least some drivers were aware of the 365-day rule
+and all its wrinkles, and were able to keep track of the exact day count, one would expect
+“bunching” on the right-hand side of the 365-day cutoﬀ. Drivers would drive more carefully
+than usual until the 365-day rule no longer applied to them. This would result in a spike
+5It should also be noted that the treated group have to deposit their license for one month at the local
+traﬃc authority within 4 months of the date on which the punishment takes legal eﬀect, but I do not observe
+the exact dates on which they turn in their license.
+6Figure A2 in the Appendix repeats this analysis for speeding-speciﬁc recidivism. The relative magnitude
+of the jump is very similar.
+12
+of traﬃc transgressions on days 366-400. Yet Figure 3 gives little indication that this is
+indeed the case. The frequency of treatment transgressions (in 3-day bins) is very evenly
+distributed with around 100 transgressions per day on each side of the cutoﬀ. Most notably,
+there is no spike in treatment transgressions from oﬀenders whose penalties for their original
+transgression obtained legal force just a bit more than 365 days ago. One might be mildly
+concerned about the small drop in the transgression frequency on days 360-362. Yet, the
+frequency rebounds to above-average levels on days 363-365. Drops in frequency of even
+greater magnitude can also be observed elsewhere in the distribution. This visual analysis is
+consistent with McCrary’s (2008) more explicit density test for manipulation at the cutoﬀ.
+The test implies a log diﬀerence in height of -.021 with a standard error of 0.033. In other
+words, the null hypothesis that there is no manipulation at the cutoﬀcannot be rejected at
+any reasonable level of signiﬁcance. Frandsen (2017) has pointed out that McCrary’s (2008)
+density test might be inconsistent for discrete running variables, such as the day count in
+this application. He has developed a test with preferable ﬁnite sample properties for such a
+scenario. Frandsen’s (2017) test yields a p-value of 0.224, thus conﬁrming that manipulation
+at the cutoﬀis unlikely. By and large, there is no indication of any bunching or any increase
+in frequency just to the right of the cutoﬀ.
+A related threat to the internal validity of the design is diﬀerential sorting of oﬀenders
+to either side of the cutoﬀ. For instance, more experienced or habitual oﬀenders might be
+more knowledgeable about the penalty catalogue and the 365-day provision and might sort
+to the right of the cutoﬀ. The data, however, give little indication that this is indeed the
+case. Figure 4 plots the average number of prior oﬀenses in 3-day bins against the running
+variable. There is no indication for either a jump or drop around the 365-day threshold.7
+Overall, there is no indication of any sorting behavior. This suggests that the 365-day
+rule is obscure enough to lead to a random separation of oﬀenders into a treatment and
+control group, yet it is enforced to such a degree that the take-up among those who are
+assigned to treatment is substantially higher than among those not assigned to a 1-month
+driver’s license suspension. This gives rise to a fuzzy regression discontinuity (RD) design
+7Figures A4a and A4b in the Appendix also fail to detect a break for average age - another good proxy
+for driving experience - or the percentage of female drivers in each 3-day bin.
+13
+which is implemented as a 2SLS instrumental variable regression. When picking a functional
+form, we want to be sure that what at ﬁrst glance certainly looks like a jump in recidivism
+rates at the 366-day cutoﬀis not just a non-linearity in the data. A visual inspection of
+a graph that plots the outcome of interest against the running variable (such as Figure 2)
+provides a useful guide for picking the correct functional form. The graph reveals no obvious
+non-linearities. Not least for eﬃciency reasons, a linear functional form therefore seems to
+be appropriate. Nonetheless, I will also consider speciﬁcations using second and third order
+polynomials of the running variable and interactions of these polynomials with the treatment
+dummy. Gelman and Imbens (2014) show that polynomials of even higher order do more
+harm than good and even the cubic version of the model might be too much. It is still useful
+as a robustness check.
+An alternative is a nonparametric approach, for example local linear regression. Lee
+and Card (2008), however, argue that with a discrete running variable, such a nonparametric
+approach is not advisable. My running variable, the number of days between the original
+and the treatment transgression, is discrete but takes on many distinct values which should
+mitigate concerns about the nonparametric approach. Nonetheless, this method is only used
+as a robustness check. Section 5 will show that it leads to results that are strikingly similar
+to those of the least ﬂexible parametric speciﬁcation. Lee and Lemieux (2010) also suggest
+that the standard errors should be clustered on the distinct values of a discrete running
+variable which is done throughout the paper. The second stage regression in my 2SLS model
+is modeled as follows:
+Reci = β0 + β1Xi + (β2X2
+i + β3X3
+i ) + γ0 ˆDi + γ1 ˆDiXi(+γ2 ˆDiX2
+i + γ3 ˆDiX3
+i ) + ϵi
+(1)
+where Xi is the running variable, that is the number of days that have passed between the
+date on which the penalty for the original transgression obtained legal force and the date of
+the treatment transgression of oﬀender i. As is best practice in an RD setting (Lee, 2008),
+the running variable is centered around the cutoﬀ. Di is a dummy indicating whether, due to
+the treatment transgression, oﬀender i had her license suspended for 1 month. This dummy
+is instrumented for (see below) thus the hat-superscript in equation (1). Reci is a dummy
+14
+equal to one if oﬀender i recidivates and commits a (third) oﬀense within 12 months after
+the treatment transgression.8 γ0 is the coeﬃcient of interest and yields the treatment eﬀect
+of a 1-month license suspension on the probability of recidivating within a year. In order to
+assess more ﬂexible functional forms, the polynomials and interaction terms in parentheses
+can be added to the model. Since assignment to treatment is fuzzy, a ﬁrst stage regression,
+yielding the predicted values ˆDi, is necessary:
+Di = δ0 + δ1Xi + (δ2X2
+i + δ3X3
+i ) + π0Ti + π1TiXi(+π2TiX2
+i + π3TiX3
+i ) + ηi
+(2)
+where Ti = 1(Xi < 366). In other words, Ti indicates assignment to treatment and Di
+indicates whether the treatment was in fact taken up. Of course, in the speciﬁcations using
+higher order polynomials, the ﬁrst stage is constructed such that the model is exactly iden-
+tiﬁed and { Di, DiXi, DiX2
+i , DiX3
+i } are instrumented for by { Ti, TiXi, TiX2
+i , TiX3
+i }.
+All models are also run with a vector of covariates included in the regression. Controls
+are oﬀender i’s age, sex, her number of prior oﬀenses, and regional dummies for her place
+of residence. This provides an additional check on the internal validity of my estimates.
+The covariates are balanced across treatment and control group so that the point estimates
+should not be aﬀected by the inclusion of control variables. We will see in the next section
+that this is indeed the case.
+5
+Results
+The reduced form results of Table 2 yield the intent-to-treat (ITT) eﬀect, that is the
+eﬀect of assignment to treatment. Oﬀenders who committed their treatment transgression
+within 365 days after the penalty for the original transgression had obtained legal force, are
+about three percentage points less likely to recidivate within 12 months than oﬀenders who
+do not fall under the 365-day rule. This ﬁnding is robust to the inclusion of covariates.
+8As mentioned above, the evaluated recidivism period is extended to 13 months for those who actually
+receive the treatment in order to account for incapacitation eﬀects as drivers without a license naturally have
+less of an opportunity to reoﬀend.
+15
+Changes to the functional form also have no eﬀect on the point estimates, but result in
+small losses of precision. The average rate of recidivism is 25.4 percent, so these coeﬃcients
+translate into a decrease in the rate of recidivism of about 12 percent. This result is also
+consistent with a visual analysis of Figure 2 which illustrates the ITT and would suggest an
+eﬀect size of a similar magnitude.9
+Second stage instrumental variable estimates for the eﬀect of a 1-month license sus-
+pension on the probability of recidivating within 12 months are reported in Table 3. The
+linear model without any controls suggests that a 1-month license suspension reduces the
+probability of committing a major traﬃc transgression within the next year by 5 percentage
+points. Adding covariate controls does not alter this point estimate substantially. A model
+containing an additional quadratic term of the running variable and its interaction with
+the suspension indicator comes to virtually the same result. The coeﬃcient is -.052 with a
+standard error of .021, and it is also robust to the inclusion of covariates. A cubic model
+yields similar results with a coeﬃcient of -.057 and a standard error of .024. Given a mean
+recidivism rate of 25.4 percent, these coeﬃcients translate into reductions in recidivating
+behavior by 19 to 22 percent.
+Columns (3) through (10) assess the robustness of my results to picking an ever smaller
+time window around the 365-day cutoﬀ. For instance, column (3) focuses on oﬀenders who
+committed their treatment transgression between 276 and 455 days after the penalties for
+their original transgressions had obtained legal force. In essence, this creates a 90-day window
+to both sides of the 365-day cutoﬀ. It is comforting to see that the point estimates remain
+very stable. If we further zoom in on the cutoﬀ, the point estimates continue to hover around
+-.05. Not surprisingly, the standard errors inﬂate substantially as would be expected since
+the sample size shrinks with an ever closer window around the cutoﬀ. Wooldridge (2009)
+also points out that there are more than just eﬃciency costs to limiting the sample to obser-
+vations just around the cutoﬀ. His simulations show that this might substantially bias the
+coeﬃcient of interest. Therefore, the speciﬁcation that uses the full sample (column (2)) is
+9The reduced form results for speeding-speciﬁc recidivism are very similar in magnitude and are available
+from the author upon request.
+16
+the preferred speciﬁcation.10
+The results are also robust to diﬀerent functional forms. Both quadratic and cubic
+speciﬁcations yield point estimates that are very similar to those of the linear speciﬁcation.
+If we discount the ﬁndings from columns (9) and (10) which will likely suﬀer from both
+consistency and eﬃciency issues, the coeﬃcient range stretches from -0.029 to -0.071 and is
+thus hovering around the preferred -.048 estimate yielded by the linear speciﬁcation using
+covariates and the full discontinuity sample.11 The second stage results are also strikingly
+diﬀerent from what a “naive” OLS regression would imply. Appendix Table A3 shows that
+such an analysis would suggest a positive relationship between punishment and recidivism
+even after accounting for observable driver characteristics such as age, sex and state ﬁxed-
+eﬀects. In other words, the diﬀerence between correlations yielded by a naive OLS model
+and the plausibly causal eﬀects of a regression discontinuity design turns out to be very
+substantial and illustrates the value added by design-based studies.
+Finally, I also experiment with nonparametric local linear regression which assigns
+more weight to observations close to the threshold and sidesteps functional form issues.
+However, these advantages come at the cost of a loss of precision and should be viewed
+with some scrutiny when applied to a discrete running variable as in this study (Lee and
+Card, 2008). It is nonetheless comforting that Table 4 demonstrates that a nonparametric
+approach suggests that a 1-month license suspension reduces recidivism by 4.6 percentage
+points, an estimate that is virtually identical to the one yielded of my preferred parametric
+speciﬁcation in column (2) of Table 3. This result is robust to diﬀerent bandwidth selections.
+In fact, the two most popular algorithms by Imbens and Kalyanaraman (2012) and Calonico
+et al. (2014) respectively yield identical point estimates with diﬀerences in the number of
+observations used explaining diﬀerences in precision.12
+10The results for speeding-speciﬁc recidivism are presented in Table A2 of the Appendix. They are similar
+in magnitude but - not surprisingly - less precise and therefore not quite as robust to changes in speciﬁcation.
+11I also conducted a Chi-Squared (Wald) version of the formal speciﬁcation test suggested by Lee and
+Lemieux (2010). For this test, a set of dummies for 3-day bins of the running variable is added to the 2SLS
+regression. The p-values for a test for joint signiﬁcance of these variables are reported below each coeﬃcient
+in Table 3 and suggest that a linear version should be preferred not least for eﬃciency reasons.
+12Appendix Figure A6a further tests for sensitivity with respect to bandwidth choice by plotting point
+estimates and 95% conﬁdence intervals over a wide range of possible bandwidths. The point estimates all
+hover around -.05 and most of them are statistically signiﬁcant at the 5% level. Similarly the point estimates
+for speeding-speciﬁc recidivism all hover around -.03 (see Figure A6b).
+17
+6
+Mechanisms: Speciﬁc or General Deterrence
+The key ﬁnding of this paper is that temporary driver’s license suspensions substan-
+tially reduce recidivism. Yet, it is important to also pin down the mechanism through which
+punishment works. Criminologists broadly distinguish between speciﬁc and general deter-
+rence. Nagin (2013) deﬁnes general deterrence as the eﬀect of the “threat of punishment
+[that] may discourage criminal acts.” Speciﬁc deterrence, on the other hand, refers to the
+impact of the actual experience of the punishment.
+Moreover, in the context of this paper’s identiﬁcation strategy, simply learning about
+the 365-day rule might be another mechanism that could plausibly drive the results, but
+would limit their external validity. I vary the size of the recidivism time window to shed
+some light on this channel. The 2-year expungement period, the lag between transgression
+date and data entry, and the fact that treated oﬀenders have 4 months to turn in their licenses
+limit the range of recidivism windows that can reasonably be evaluated to 6-15 months. In
+each case, the recidivism window for the treated is extended by an additional month to ac-
+count for incapacitation eﬀects. Figure 5 shows means-adjusted coeﬃcients and conﬁdence
+intervals for recidivism windows ranging from six to ﬁfteen months. All results are obtained
+from a set of linear parametric regressions using covariates. The eﬀect of a 1-month license
+suspension is statistically signiﬁcant, negative, and notably stable over time although the
+point estimates are slightly larger for longer time windows. By and large, Figure 5 indicates
+that a 1-month license suspension reduces both short-run and long-run rates of recidivism
+by about 20 percent. This is not due to a short-run incapacitation eﬀect but rather suggests
+that oﬀenders are permanently deterred from committing traﬃc transgressions.13
+This similarity and the general persistence of the eﬀect indicate that the reduction in
+recidivism is not driven by the fact that the treatment group - as a result of being pun-
+ished under the 365-day rule - simply becomes better informed about the peculiarities of the
+365-day rule. Figure 6 provides additional evidence against this mechanism. The day count
+starts all over again for oﬀenders who had their license suspended due to falling under the
+365-day rule. In other words, these oﬀenders are at risk of falling under the 365-day rule
+13Similarly, Figure A7 suggests an eﬀect range similar to the main results for speeding-speciﬁc recidivism.
+18
+for a second time. At the same time, these oﬀenders should now be acutely aware of the
+speciﬁcs of the rule. If learning about the rule was a major driver of the observed reduction
+in recidivism, one would expect bunching to the right of the 365-day threshold between the
+time at which the penalty for the treatment transgression obtained legal force and the third
+transgression. Yet, this does not appear to be the case. McCrary’s (2008) and Frandsen’s
+(2017) formal tests conﬁrm that there is indeed no evidence for manipulation around the
+cutoﬀ.14
+The case for general deterrence is also unconvincing. A license-suspension under the
+365-day rule is a one-oﬀpunishment and has no legal implications for the stiﬀness of future
+penalties. In other words, the legal status of those just to the right of the cut-oﬀis no
+diﬀerent from the legal status of those to the left. Oﬀenders in both groups have received
+the same penalty in terms of demerit points and money ﬁnes. Oﬀenders in both groups will
+receive identical penalties for future transgressions. Furthermore, the institutional setting
+in which transgressions are recorded and speeding tickets are issued is such that it prevents
+police and traﬃc oﬃcials from giving preferential treatment to “unlucky” oﬀenders who
+happened to land just to the left of the 365-days cut-oﬀand went on to commit another
+traﬃc transgression. When enforcing speed limits, police oﬃcers generally do not pull over
+speeders but instead use sophisticated measuring equipment that records a driver’s speed
+and takes a picture of both the driver and the license plate. This information is then au-
+tomatically transmitted to the responsible authorities, matched to an oﬀender’s ﬁle, and a
+ticket is issued. Put diﬀerently, in the eyes of the law and law enforcement, no distinction
+between the treated and untreated can be made.15
+All signs, therefore, point towards a speciﬁc deterrence eﬀect, in which oﬀenders are
+backward looking and become less likely to recidivate because they experienced the punish-
+ment. Table 5 provides some evidence for this hypothesis. It distinguishes between three
+groups of oﬀenders: the treated who fell under the 365-day rule and indeed had their license
+suspended for 1 month; non-compliers who also fell under the rule but got to keep their
+14The covariates are also balanced around the cutoﬀ, a corresponding tabulation is available from the
+author upon request.
+15Neither are insurance premiums diﬀerentially aﬀected across treatment and control groups as German
+data protection laws prohibit the KBA from transmitting detailed driving history information to insurance
+companies.
+19
+license; and the untreated who committed their second treatment transgression more than
+365 days after the penalty for the original transgression had obtained legal force and hence
+also kept their license. The treated experienced both the punishment and learn about the
+365-day rule.
+The non-compliers, on the other hand do not experience the punishment,
+but since they had to wriggle their way out of the license suspension, they are just as well
+informed about the 365-day rule as the treated. In other words, the statistically signiﬁcant
+diﬀerence in recidivism, shown in the ﬁrst row of Panel A in Table 5 cannot be explained
+by an information advantage. It should, however, be noted that this comparison no longer
+takes place in the realm of a randomized setting, as the non-compliers are a self-selected
+group. Nonetheless, descriptive statistics for treated and non-compliers are reasonably sim-
+ilar. For example, Panel A shows no statistically signiﬁcant diﬀerences in the number of
+prior transgressions in either group. There is, however, a very substantial and statistically
+signiﬁcant diﬀerence in the rate of recidivism which is 23.8 percent for the treated and 26.1
+for non-compliers. In this the non-compliers also very much resemble the untreated who
+exhibit a recidivism rate of 26.4 percent.16
+Panel B presents another piece of evidence in favour of a speciﬁc deterrence mechanism.
+It lists the fractions of diﬀerent types of (third) speeding oﬀenses that were committed by
+each group within 365 days after the penalty for the treatment transgression obtained legal
+force. Remember, that the 365-day rule only applies if speed limits are exceeded by 26-40
+km/h (26-30km/h for built-up areas), but not if the limit is exceeded by less than that. For
+violations of the limit by more than 40km/h, license suspensions are issued regardless of the
+timing of the oﬀense. Hence, if learning about the 365-day rule was driving the results, one
+would expect the treated and non-compliers to less frequently commit transgressions in the
+26-40km/h range than the (presumably ignorant) untreated and to bunch in the 21-25 km/h
+range. Yet, there is no statistically signiﬁcant diﬀerence in the fraction of third oﬀenses in
+the 26-40km/h range across these three groups.
+16Another speciﬁc deterrence mechanism might operate through enhanced penalties for driving without
+license. Such an oﬀense would be ﬂagged in the data and indeed none of the treated oﬀenders in my sample
+are caught engaging in this behavior in their incapacitation month.
+20
+7
+Conclusion
+The impact of punishment on future criminal behavior has always been very hard to
+measure. Heavy penalties are usually only handed out to oﬀenders who have committed
+serious crimes. Their recidivism rates are higher to begin with and the eﬀect of punishment
+cannot easily be distinguished from the eﬀect of unobservable characteristics of these oﬀend-
+ers such as a lower risk aversion or self-control issues. This article has exploited a special
+provision in the German traﬃc law that results in a quasi-random assignment of 1-month
+driver’s license suspensions to some traﬃc oﬀenders but not to others. Using a fuzzy re-
+gression discontinuity design, I ﬁnd that receiving the punishment reduces the probability of
+committing another oﬀense within a year by about 20 percent. This eﬀect is unlikely to be
+explained by information asymmetries or incapacitation. It indicates that traﬃc oﬀenders
+are to some extent backward-looking and react to the punishment itself rather than to the
+mere threat of future punishment. In other words, temporary license suspensions appear
+have a large speciﬁc deterrent eﬀect.
+This, of course, is a “local” eﬀect in two ways. First, it is local in the sense that the es-
+timated eﬀect is best interpreted as the eﬀect on oﬀenders with values of the running variable
+close to the 365-day cutoﬀ. Yet, as the summary statistics in Table 1 show, there are few
+observable diﬀerences between oﬀenders close and further away from the cutoﬀwhich leaves
+some room for generalizations. Second, a fuzzy RD design is implemented using instrumental
+variable analysis. As a result, I obtain a Local Average Treatment Eﬀect (LATE), that is
+the eﬀect for compliers. This is the group of people who only because they fell under the
+365-day rule, had their license suspended for one month but would not have had their license
+suspended otherwise. The 365-day rule by its very nature only applies to repeat oﬀenders
+who have committed two fairly serious speeding oﬀenses. A 1-month license suspension may
+aﬀect other types of oﬀenders, for example ﬁrst-time oﬀenders, in a diﬀerent way. Indeed,
+compared to the population of one-time oﬀenders, my experimental sample is on average
+about 2 years younger and contains about twice the proportion of men.17 The population of
+habitual oﬀenders is, however, clearly the population that is the most interesting to policy
+17A detailed table of summary statistics that compares the observable characteristics of one-time oﬀenders
+and repeat-oﬀenders is available from the author upon request.
+21
+makers so that my results might very well be seen as a case of “sometimes-you-get-what-
+you-want” (Angrist and Pischke, 2008).
+The results of this article also have implications for the economic theory of crime.
+Driver’s license suspensions due to the 365-day rule have no eﬀect on the degree of penalties
+for future transgressions. As a result, they should not have an eﬀect on the cost-beneﬁt
+trade-oﬀthat rational criminals face in Becker’s (1968) framework. Yet, this study provides
+compelling evidence that receiving such a penalty alters future behavior. My ﬁndings are
+thus more indicative of a backward-looking criminal who changes his ways due to a pun-
+ishment he has already received. This ﬁnding is consistent with recent evidence on drunk
+driving (Hansen, 2015) which suggests that bounded rationality might predispose traﬃc of-
+fenders to being responsive to penalties and that much of this response operates through
+the speciﬁc deterrence channel. My study conﬁrms this ﬁnding and shows that ﬁrst-hand
+experience of penalties in general and license suspensions in particular are powerful tools for
+crime prevention. As such, these results are of great interest to policy makers who, as of now,
+have little reliable evidence regarding the eﬀectiveness of penalties. This study suggests that
+taking oﬀenders who were speeding, texting while driving, or drunk driving oﬀthe streets
+for a short period of time not only incapacitates them but has lasting eﬀects on their driving
+behavior.18 As a result, tweaks to penalty catalogues towards a more frequent imposition of
+temporary license suspensions are likely to oﬀer large beneﬁts in terms of avoided crashes,
+fatalities, and medical costs.
+18A back of the envelope calculation suggests that starting to impose 1-month license suspensions for all
+speeding oﬀenses in the 21-40km/h range, would cut the number of oﬀenses by 160,000 through the speciﬁc
+deterrence channel alone.
+22
+References
+Aizer, A. and J. J. Doyle (2015). Juvenile Incarceration, Human Capital, and Future Crime:
+Evidence from Randomly Assigned Judges. The Quarterly Journal of Economics 130(2),
+759–803.
+Angrist, J. D., G. W. Imbens, and D. B. Rubin (1996). Identiﬁcation of Causal Eﬀects
+using Instrumental Variables. Journal of the American Statistical Association 91(434),
+444–455.
+Angrist, J. D. and J.-S. Pischke (2008, December).
+Mostly Harmless Econometrics: An
+Empiricist’s Companion. Princeton University Press.
+Barbarino, A. and G. Mastrobuoni (2014, February). The incapacitation eﬀect of incar-
+ceration: Evidence from several italian collective pardons. American Economic Journal:
+Economic Policy 6(1), 1–37.
+Becker, G. S. (1968). Crime and Punishment: An Economic Approach. Journal of Political
+Economy 76(2), 169–217.
+Calonico, S., M. D. Cattaneo, and R. Titiunik (2014). Robust Nonparametric Conﬁdence
+Intervals for Regression-Discontinuity Designs. Econometrica 82(6), 2295–2326.
+CDC (2015). National Center for Injury Prevention and Control. Web-based Injury Statistics
+Query and Reporting System (WISQARS). Technical report, Centers for Disease Control
+and Prevention.
+de Figueiredo, M. F. (2015).
+Throw away the key or throw away the jail-the eﬀect of
+punishment on recidivism and social cost. Ariz. St. LJ 47, 1017.
+DeAngelo, G. and B. Hansen (2014, May). Life and Death in the Fast Lane: Police En-
+forcement and Traﬃc Fatalities. American Economic Journal: Economic Policy 6(2),
+231–257.
+Di Tella, R. and E. Schargrodsky (2013). Criminal Recidivism after Prison and Electronic
+Monitoring. Journal of Political Economy 121(1), 28–73.
+23
+Drago, F., R. Galbiati, and P. Vertova (2009). The Deterrent Eﬀects of Prison: Evidence
+from a Natural Experiment. Journal of Political Economy 117(2), 257–280.
+Frandsen, B. R. (2017). Party bias in union representation elections: Testing for manip-
+ulation in the regression discontinuity design when the running variable is discrete. In
+Regression Discontinuity Designs: Theory and Applications, pp. 281–315. Emerald Pub-
+lishing Limited.
+Gelman, A. and G. Imbens (2014). Why High-order Polynomials Should not be Used in Re-
+gression Discontinuity Designs. Technical report, National Bureau of Economic Research.
+Green, D. P. and D. Winik (2010). Using random judge assignments to estimate the eﬀects
+of incarceration and probation on recidivism among drug oﬀenders. Criminology 48(2),
+357–387.
+Hansen, B. (2015). Punishment and Deterrence: Evidence from Drunk Driving. American
+Economic Review 105(4), 1581–1617.
+Helland, E. and A. Tabarrok (2007). Does Three Strikes Deter? a Nonparametric Estimation.
+Journal of Human Resources 42(2), 309–330.
+Imbens, G. and K. Kalyanaraman (2012).
+Optimal bandwidth choice for the regression
+discontinuity estimator. The Review of Economic Studies 79(3), 933–959.
+Jolls, C., C. R. Sunstein, and R. Thaler (1998). A Behavioral Approach to Law and Eco-
+nomics. Stanford Law Review, 1471–1550.
+Kessler, D. and S. Levitt (1999, April). Using Sentence Enhancements to Distinguish between
+Deterrence and Incapacitation. Journal of Law and Economics 42(S1), 343–364.
+Kling, J. R. (2006, June). Incarceration Length, Employment, and Earnings. American
+Economic Review 96(3), 863–876.
+Lee, D. S. (2008).
+Randomized Experiments from Non-Random Selection in US House
+Elections. Journal of Econometrics 142(2), 675–697.
+24
+Lee, D. S. and D. Card (2008). Regression Discontinuity Inference with Speciﬁcation Error.
+Journal of Econometrics 142(2), 655–674.
+Lee, D. S. and T. Lemieux (2010). Regression Discontinuity Designs in Economics. Journal
+of Economic Literature 48(2), 281–355.
+Lee, D. S. and J. McCrary (2017). The deterrence eﬀect of prison: Dynamic theory and
+evidence.
+In Regression Discontinuity Designs: Theory and Applications, pp. 73–146.
+Emerald Publishing Limited.
+Levitt, S. D. (1996). The Eﬀect of Prison Population Size on Crime Rates: Evidence from
+Prison Overcrowding Litigation. Quarterly Journal of Economics 111(2), 319 – 351.
+Levitt, S. D. and T. J. Miles (2007). Empirical Study of Criminal Punishment. Handbook of
+Law and Economics 1, 455–495.
+McCrary, J. (2008). Manipulation of the Running Variable in the Regression Discontinuity
+Design: A Density Test. Journal of Econometrics 142(2), 698–714.
+Nagin, D. S. (2013). Deterrence: A review of the evidence by a criminologist for economists.
+Annu. Rev. Econ. 5(1), 83–105.
+Snodgrass, G., A. A. Blokland, A. Haviland, P. Nieuwbeerta, and D. S. Nagin (2011). Does
+the time cause the crime? an examination of the relationship between time served and
+reoﬀending in the netherlands. Criminology 49(4), 1149–1194.
+Traxler, C., F. G. Westermaier, and A. Wohlschlegel (2017).
+Bunching on the auto-
+bahn:speeding responses to a notched penalty scheme. Unpublished manuscript, Hertie
+School of Governance.
+WHO (2013). Global Status Report on Road Safety 2013: Supporting a Decade of Action.
+World Health Organization.
+Wooldridge, J. (2009). Estimating Average Treatment Eﬀects: Regression Discontinuity
+Designs. In BGSE/IZA Course in Microeconometrics.
+25
+Tables and Figures
+Table 1: Summary Statistics
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+(9)
+(10)
+Full Sample
+±90 days
+±60 days
+±30 days
+±10 days
+[186-365]
+[366-545]
+[276-365]
+[366-455]
+[306-365]
+[366-425]
+[336-365]
+[366-395]
+[356-365]
+[366-375]
+Time
+274.46**
+451.69**
+319.54**
+409.44**
+334.80**
+395.02**
+350.42**
+380.59**
+360.43**
+370.53**
+(51.48)
+(52.28)
+(25.84)
+(25.95)
+(17.32)
+(17.19)
+(8.650)
+(8.691)
+(2.964)
+(2.813)
+Age
+42.66
+43.02
+42.88
+42.93
+42.78
+42.85
+42.84
+42.88
+42.85
+42.58
+(13.12)
+(12.93)
+(13.15)
+(12.94)
+(13.15)
+(13.04)
+(13.01)
+(13.33)
+(12.91)
+(13.42)
+Female
+0.162**
+0.148**
+0.167**
+0.144**
+0.167
+0.146
+0.158
+0.148
+0.150
+0.155
+(0.368)
+(0.355)
+(0.373)
+(0.351)
+(0.373)
+(0.353)
+(0.365)
+(0.356)
+(0.358)
+(0.362)
+Priors
+2.014
+2.004
+2.000
+2.018
+1.986
+2.019
+1.995
+1.993
+1.947
+2.003
+(1.224)
+(1.183)
+(1.194)
+(1.207)
+(1.185)
+(1.214)
+(1.208)
+(1.223)
+(1.185)
+(1.225)
+South
+0.227
+0.230
+0.231
+0.235
+0.227
+0.237
+0.217
+0.237
+0.220
+0.241
+(0.419)
+(0.421)
+(0.422)
+(0.424)
+(0.419)
+(0.425)
+(0.413)
+(0.425)
+(0.415)
+(0.428)
+North
+0.208
+0.209
+0.208
+0.207
+0.212
+0.208
+0.222
+0.208
+0.190
+0.212
+(0.406)
+(0.406)
+(0.406)
+(0.405)
+(0.409)
+(0.406)
+(0.415)
+(0.406)
+(0.392)
+(0.409)
+East
+0.179
+0.169
+0.178
+0.166
+0.176
+0.168
+0.170
+0.170
+0.168
+0.170
+(0.383)
+(0.375)
+(0.383)
+(0.372)
+(0.381)
+(0.374)
+(0.376)
+(0.375)
+(0.374)
+(0.376)
+West
+0.366
+0.372
+0.363
+0.371
+0.366
+0.367
+0.370
+0.364
+0.399
+0.364
+(0.482)
+(0.483)
+(0.481)
+(0.483)
+(0.482)
+(0.482)
+(0.483)
+(0.481)
+(0.490)
+(0.481)
+Foreign
+0.0200
+0.0201
+0.0191
+0.0201
+0.0183**
+0.0194**
+0.0217
+0.0209
+0.0230
+0.0132
+(0.140)
+(0.140)
+(0.137)
+(0.140)
+(0.134)
+(0.138)
+(0.146)
+(0.143)
+(0.150)
+(0.114)
+Recidivism
+0.244**
+0.265**
+0.241**
+0.268**
+0.240**
+0.267**
+0.229**
+0.265**
+0.232
+0.255
+(Any)
+(0.430)
+(0.442)
+(0.428)
+(0.443)
+(0.427)
+(0.442)
+(0.420)
+(0.442)
+(0.423)
+(0.437)
+Recidivism
+0.175**
+0.193**
+0.174**
+0.195**
+0.178**
+0.194**
+0.175
+0.195
+0.182
+0.182
+(Speeding)
+(0.380)
+(0.395)
+(0.380)
+(0.396)
+(0.383)
+(0.396)
+(0.381)
+(0.397)
+(0.387)
+(0.388)
+Observations
+16,876
+14,524
+8,321
+7,771
+5,464
+5,310
+2,621
+2,730
+869
+905
+Notes: This is a table of means with standard deviations in parentheses. Columns (1) and (2) show descriptive statistics for the full analysis sample. In
+columns (3) and (4) descriptive statistics are listed for observations which have values in the running variable that fall into a 90 day window on either
+side of the 365-day cutoﬀ. Columns (5) to (10) show means and standard deviations for observations with running variable values that are ever closer
+to the cutoﬀ; **denotes a statistically signiﬁcant diﬀerence in means at the 1% level.
+26
+Table 2: Reduced Form Regression Results
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Mean Rate of Recidivism (Any)
+0.254
+(SD)
+(0.183)
+Below Cutoﬀ
+−0.033∗∗
+−0.031∗∗
+−0.033∗∗
+−0.031∗
+−0.032∗
+−0.032∗
+(0.009)
+(0.009)
+(0.012)
+(0.012)
+(0.014)
+(0.014)
+Observations
+31,400
+31,383
+31,400
+31,383
+31,400
+31,383
+Convariates
+No
+Yes
+No
+Yes
+No
+Yes
+Model
+Linear
+Linear
+Quadratic
+Quadratic
+Cubic
+Cubic
+Notes: +/ ∗/ ∗∗indicate signiﬁcance at the 1%/5%/10%-level.
+Heteroscedasticity robust standard errors in parentheses, clustered by distinct values of the running variable.
+Each column reports coeﬃcients and standard errors from the reduced form OLS regression. Dependent variable is a dummy indicating
+whether a person commits any traﬃc oﬀense within a year of her (second) treatment transgression. “Below Cutoﬀ” is the main
+explanatory variable and is a dummy equal to one if the treatment transgression occurred within 365 days of the day on which the
+penalty for the original transgression had obtained legal force. Such a person is very likely to have her license suspended for 1 month.
+27
+Table 3: Treatment Eﬀects by Speciﬁcation and Time Window - Recidivism (Any)
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+(9)
+(10)
+Full Sample
+±90 days
+±60 days
+±30 days
+±10 days
+Mean Rate of Recidivism
+0.254
+0.254
+0.254
+0.247
+0.244
+(SD)
+(0.183)
+(0.184)
+(0.187)
+(0.186)
+(0.183)
+Linear
+−0.051∗∗
+−0.048∗∗
+−0.050∗∗
+−0.048∗
+−0.059∗∗
+−0.059∗∗
+−0.052+
+−0.053∗
+−0.078
+-0.082
+(0.014)
+(0.014)
+(0.019)
+(0.019)
+(0.021)
+(0.021)
+(0.027)
+(0.026)
+(0.060)
+(0.054)
+p-Value Wald Test:
+0.9159
+0.9169
+0.9859
+0.9785
+0.9417
+0.9377
+0.3196
+0.3725
+0.8379
+0.7889
+Squared
+−0.052∗
+−0.050∗
+−0.071∗∗
+−0.073∗∗
+−0.069∗
+−0.071∗
+−0.055
+−0.052
+−0.092
+-0.084
+(0.021)
+(0.020)
+(0.026)
+(0.025)
+(0.030)
+(0.029)
+(0.052)
+(0.049)
+(0.079)
+(0.075)
+p-Value Wald Test:
+0.9934
+0.9895
+0.9996
+0.9992
+0.9519
+0.9479
+0.3301
+0.3665
+0.8733
+0.8612
+Cubic
+−0.057∗
+−0.057∗
+−0.047
+−0.049
+−0.053
+−0.050
+−0.037
+−0.029
+0.204
+0.265
+(0.024)
+(0.023)
+(0.036)
+(0.034)
+(0.034)
+(0.033)
+(0.085)
+(0.074)
+(0.475)
+(0.603)
+p-Value Wald Test:
+0.9962
+0.9977
+0.9836
+1.000
+0.9854
+0.9879
+0.7882
+0.8149
+0.9865
+0.9998
+Convariates
+No
+Yes
+No
+Yes
+No
+Yes
+No
+Yes
+No
+Yes
+Observations
+31,400
+31,383
+16,092
+16,086
+10,774
+10,769
+5,351
+5,347
+1,774
+1,774
+Notes: +/ ∗/ ∗∗indicate signiﬁcance at the 1%/5%/10%-level.
+Heteroscedasticity robust standard errors in parentheses, clustered by distinct values of the running variable.
+Each column reports coeﬃcients and standard errors from the second stage of a 2SLS instrumental variable regression. The outcome variable is a dummy equal to one if a person
+commits another major traﬃc transgression within 1 year after her treatment transgression. Coeﬃcients are displayed for the main explanatory variable, a dummy indicating a
+1-month license suspension following the treatment transgression. This dummy was instrumented for using a variable for whether the treatment transgression occurred within
+365 days of the day on which the penalty for the original transgression had obtained legal force. In columns (1) and (2), the entire discontinuity sample enters the analysis. In
+columns (3) and (4) only observations with values of the running variable within a 90-day time-window on either side of the 365-day cutoﬀwere used. Columns (5) through (10)
+further limit the sample. If indicated, controls for sex, age, the number of prior oﬀenses and a set of dummies for the region of residence were included.
+The reported p-values correspond to Wald speciﬁcation tests. Small p-values indicate that a model is not appropriate and higher order polynomials of the running variable
+should be added to the regression equation.
+28
+Table 4: Non-Parametric Regression Results
+(1)
+(2)
+1-Month Suspension
+−0.046
+−0.046∗
+(0.029)
+(0.019)
+Observations Used
+13,662
+26,714
+Selection Algorithm
+CCT
+IK
+Bandwidth
+76.44
+152.2
+Notes:
++/ ∗/ ∗∗indicate signiﬁcance at the 1%/5%/10%-level.
+Heteroscedasticity robust standard errors in parentheses,
+clustered by distinct values of the running variable.
+Each column reports coeﬃcients and standard errors from a local linear regression discontinuity (RD) model. A triangular
+Kernel function was used to construct the estimator. Coeﬃcients yield the eﬀect of a one month license suspension following
+the treatment transgression on the probability of committing another major traﬃc transgression within 1 year. Bandwidth was
+selected using algorithms developed by Calonico et al. (2014) (CCT) and Imbens and Kalyanaraman (2012) (IK), respectively.
+29
+Table 5: Descriptive Statistics by Treatment Status
+(1)
+(2)
+(3)
+Panel A: Recidivism Rate and Oﬀender Characteristics
+Treated
+Non-Compliers
+Untreated
+Recidivism (Any)
+0.238
+0.261
+0.264
+Recidivism (Speeding)
+0.170
+0.190
+0.193
+Age
+42.247
+43.765
+43.013
+Female
+0.164
+0.155
+0.149
+Num. Priors
+2.027
+1.977
+1.982
+South
+0.248
+0.169
+0.227
+North
+0.201
+0.226
+0.209
+East
+0.162
+0.225
+0.170
+West
+0.375
+0.344
+0.374
+Foreign
+0.014
+0.036
+0.020
+Observations
+12,268
+4,603
+14,276
+Panel B: (Third) Speeding Oﬀenses within 365 days
+% <26km/h
+0.525
+0.493
+0.500
+% 26-40 km/h
+0.384
+0.402
+0.394
+% 40+ km/h
+0.091
+0.105
+0.105
+Observations
+1,329
+637
+2,259
+Notes: This is a table of means. The treated group consists of oﬀenders who fell
+to the left of the 365-day cutoﬀand consequently had their license suspended for
+1 month. Non-compliers are oﬀenders who fell to the left of the 365-day cutoﬀbut
+were able to retain their license. Untreated are oﬀenders who fell to the right of
+the cutoﬀand consequently got to keep their license. Panel A shows recidivism
+rates and covariate values for each group.
+Panel B shows relative frequency
+of speeding oﬀenses that were committed within 365 days of the penalty for
+the second oﬀense obtaining legal force. The category for 26-40km/h excludes
+speeding oﬀenses in excess of 30 km/h which were committed in built-up areas.
+These oﬀenses are included in the 40+km/h category. Data source is the digital
+German traﬃc registry database as of 30 April 2014.
+30
+0
+.2
+.4
+.6
+.8
+Percentage with 1−Month License Suspension
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Figure 1: Treatment Probability by Time
+31
+.15
+.2
+.25
+.3
+.35
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Recidivism Rate (All Offenses)
+Lowess Line (Time<366)
+Lowess Line (Time>=366)
+Figure 2: Rate of Recidivism by Time
+32
+0
+100
+200
+300
+400
+Frequency
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Figure 3: Distribution of Time until Treatment Transgression
+33
+1.8
+1.9
+2
+2.1
+2.2
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Average # Priors
+Lowess Line (time<366)
+Lowess Line (time>=366)
+Figure 4: Non-Outcome (Number of Prior Oﬀenses) by Time
+34
+−.4
+−.3
+−.2
+−.1
+0
+Means Adjusted Treatment Effect
+6
+8
+10
+12
+14
+16
+Recidivism Period (in Months)
+Figure 5: Treatment Eﬀect by Recidivism Time Window
+35
+0
+5
+10
+Frequency
+200
+300
+400
+500
+600
+Days between Treatment Transgression and Third Transgression
+Figure 6: Distribution of Time until Third Transgression
+36
+Appendix
+Table A1: Excerpt from the German Traﬃc Penalty Catalogue: Speeding Oﬀenses
+Penalization
+Transgression by:
+Highways
+Built-Up Areas
+≤10 km/h
+10e
+15e
+11 - 15 km/h
+20e
+25e
+16 - 20 km/h
+30e
+35e
+21 - 25 km/h
+70e, 1P
+80e, 1P
+26 - 30 km/h
+80e, 3P
+100e, 3P
+31 - 40 km/h
+120e, 3P
+160e, 3P, 1M
+41 - 50 km/h
+160e, 3P, 1M
+200e, 4P, 1M
+51 - 60 km/h
+240e, 4P, 1M
+280e, 4P, 2M
+61 - 70 km/h
+440e, 4P, 2M
+480e, 4P, 3M
+≥71 km/h
+600e, 4P, 3M
+680e, 4P, 3M
+Each cell contains information on the penalization for speed-
+ing oﬀenses. There are three types of penalties: Fines as
+measured in Euros (e), central registry points (P), and tem-
+porary license suspensions in months (M). A person who has
+accumulated 18 points will have her license revoked perma-
+nently. All points are erased if a person remains without a
+traﬃc transgression for 2 years.
+i
+Table A2: Treatment Eﬀects by Speciﬁcation and Time Window - Speeding Recidivism
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+(9)
+(10)
+Full Sample
+±90 days
+±60 days
+±30 days
+±10 days
+Mean Rate of Recidivism
+0.184
+0.185
+0.187
+0.186
+0.183
+(SD)
+(0.387)
+(0.388)
+(0.390)
+(0.389)
+(0.387)
+Linear
+−0.031∗∗
+−0.030∗
+−0.019
+−0.019
+−0.035+
+−0.035∗
+−0.011
+−0.011
+−0.010
+−0.011
+(0.012)
+(0.012)
+(0.017)
+(0.017)
+(0.018)
+(0.018)
+(0.024)
+(0.023)
+(0.041)
+(0.039)
+p-Value Wald-Test:
+0.8774
+0.8470
+0.9799
+0.9646
+0.9551
+0.9514
+0.4606
+0.5001
+0.9505
+0.9473
+Squared
+−0.023
+−0.022
+−0.045∗
+−0.045∗
+−0.006
+−0.006
+0.012
+0.012
+0.019
+0.019
+(0.018)
+(0.018)
+(0.022)
+(0.022)
+(0.026)
+(0.026)
+(0.040)
+(0.040)
+(0.046)
+(0.046)
+p-Value Wald-Test:
+0.9919
+0.9851
+0.9986
+0.9974
+0.9722
+0.9696
+0.4896
+0.5043
+0.9652
+0.9750
+Cubic
+−0.019
+−0.020
+0.019
+0.018
+0.005
+0.008
+0.037
+0.044
+0.052
+0.072
+(0.020)
+(0.019)
+(0.031)
+(0.031)
+(0.029)
+(0.030)
+(0.055)
+(0.049)
+(0.152)
+(0.174)
+p-Value Wald-Test:
+0.9758
+0.9756
+0.9977
+1.000
+0.9993
+0.9993
+0.8224
+0.9218
+0.9578
+0.9544
+Convariates
+No
+Yes
+No
+Yes
+No
+Yes
+No
+Yes
+No
+Yes
+Observations
+31,400
+31,383
+16,092
+16,086
+10,774
+10,769
+5,351
+5,347
+1,774
+1,774
+Notes: +/ ∗/ ∗∗indicate signiﬁcance at the 1%/5%/10%-level.
+Heteroscedasticity robust standard errors in parentheses, clustered by distinct values of the running variable.
+Each column reports coeﬃcients and standard errors from the second stage of a 2SLS instrumental variable regression. The outcome variable is a dummy equal to one if a person
+commits another major speeding oﬀense within 1 year after her treatment transgression. Coeﬃcients are displayed for the main explanatory variable, a dummy indicating a
+1-month license suspension following the treatment transgression. This dummy was instrumented for using a variable for whether the treatment transgression occurred within
+365 days of the day on which the penalty for the original transgression had obtained legal force. In columns (1) and (2), the entire discontinuity sample enters the analysis. In
+columns (3) and (4) only observations with values of the running variable within a 90-day time-window on either side of the 365-day cutoﬀwere used. Columns (5) through (10)
+further limit the sample. If indicated, controls for sex, age, the number of prior oﬀenses and a set of dummies for the region of residence were included.
+The reported p-values correspond to Wald speciﬁcation tests. Small p-values indicate that a model is not appropriate and higher order polynomials of the running variable
+should be added to the regression equation.
+ii
+Table A3: Naive OLS - Eﬀect of License Suspension on Recidivism
+(1)
+(2)
+(3)
+Suspension
+0.010∗∗
+0.002∗
+0.003∗∗
+(0.001)
+(0.001)
+(0.001)
+Female
+−0.074∗∗
+−0.079∗∗
+(0.001)
+(0.001)
+Age
+−0.002∗∗
+−0.002∗∗
+(0.000)
+(0.000)
+Observations
+2,170,728
+2,170,079
+2,170,079
+State Dummies
+No
+No
+Yes
+Notes: +/ ∗/ ∗∗indicate signiﬁcance at the 1%/5%/10%-level. Heteroscedasticity-robust standard errors in parentheses.
+Each column reports coeﬃcients and standard errors from an OLS regression. The estimates in this table are based on the
+population of all of the about 2 million oﬀenders who committed a major traﬃc violation in Germany between May 2012 and
+December 2012, some of which were punished with a temporary license suspension. Dependent variable is a dummy that equals
+one if a person recidivates within 1 year of an initial traﬃc transgression. The suspension variable indicates whether a person’s
+license was temporarily suspended after the initial traﬃc transgression.
+iii
+Appendix Notes on Generation of Analysis Sample: Figure A1 below illus-
+trates which observations can be used for the analysis. The ﬁnal analysis sample is comprised
+of oﬀenders with at least two speeding transgression. One, the so-called “treatment trans-
+gression” must have occurred between 1 May 2012 and 1 December 2012 (dashed frame)
+thus allowing for a suﬃcient follow-up period. Another transgression, the so called “original
+transgression,” must have occurred prior to the treatment transgression and the penalty for
+this original transgression must have obtained legal force between 186 and 545 days before
+the date of the treatment transgression. Persons whose transgressions over time are illus-
+trated by circles are part of the ﬁnal sample. Persons whose transgressions over time are
+illustrated by triangles do not become part of the ﬁnal sample. Only observations who have
+their treatment transgression within the dashed frame (1 May 2012 or later, but before 1
+December 2012) can be used for the analysis.
+Person A at the top of Figure A1 whose transgressions over time are illustrated by
+triangles has a transgression within the framed time period. But this is her original trans-
+gression, not her treatment transgression. Her (second) treatment transgression is outside
+the dashed frame, as indicated by a second triangle. Moreover, this person reoﬀends as there
+is yet another triangle further to the right. I might fail to observe this recidivism event,
+however, since it takes place after 1 December 2013 and thus may not yet show up in the
+data. Person A is therefore excluded from my sample. Person B’s treatment transgression,
+on the other hand, falls into the framed area, giving me a suﬃciently large time-window to
+detect recdivating behavior. In this instance, person B indeed recidivates within 12 months
+which I observe. Person C is similar and will also be included in my sample. The main
+diﬀerence to person B is that person C does not recidivate. Since I allow for a suﬃciently
+large follow-up period, I can be sure that the lack of another oﬀense for this person is not
+due to lagged reporting. Finally, person D and everyone else who has their treatment trans-
+gression prior to 1 May 2012, by virtue of the expungement period, must necessarily have
+recidivated. Otherwise, they would no longer be in the sample. That is, there is no variation
+in the outcome for these observations, leading me to drop person D.
+iv
+Figure A1: Data Selection from the Central Traﬃc Registry
+v
+.1
+.15
+.2
+.25
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Recidivism Rate (Speeding)
+Lowess Line (Time<366)
+Lowess Line (Time>=366)
+Figure A2: Speeding Recidivism by Time
+vi
+(a) Average Age
+41
+42
+43
+44
+45
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Average Age
+Lowess Line (time<366)
+Lowess Line (time>=366)
+(b) Percentage Female
+.1
+.15
+.2
+.25
+200
+300
+400
+500
+600
+Days between Original Transgression and Treatment Transgression
+Percentage Female
+Lowess Line (time<366)
+Lowess Line (time>=366)
+Figure A3: Non-Outcomes by Time
+vii
+(a) Rate of Recidivism (Any)
+−.15
+−.1
+−.05
+0
+.05
+50
+100
+150
+200
+250
+Bandwith
+Coefficient
+Confidence Interval
+(b) Rate of Recidivism (Speeding)
+−.1
+−.05
+0
+.05
+50
+100
+150
+200
+250
+Bandwith
+Coefficient
+Confidence Interval
+Figure A5: Treatment Eﬀect by Bandwidth
+viii
+−.4
+−.3
+−.2
+−.1
+0
+Means Adjusted Treatment Effect
+6
+8
+10
+12
+14
+16
+Recidivism Period (in Months)
+Figure A7: Speeding-Speciﬁc Recidivism by Follow-Up Window
+ix

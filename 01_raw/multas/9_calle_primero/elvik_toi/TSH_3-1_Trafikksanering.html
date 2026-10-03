@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	
+	
+            
+                        <link rel="shortcut icon" type="image/x-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg">
+            <link rel="apple-touch-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg"/>
+        
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.tshandbok.no/xmlrpc.php" />
+
+	<title>Trafikksikkerhetshåndboken | 3.1 Trafikksanering</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Trafikksikkerhetshåndboken &raquo; strøm" href="https://www.tshandbok.no/feed/" />
+		<!-- This site uses the Google Analytics by ExactMetrics plugin v10.3.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-V51KWCT49C"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var em_version = '10.3.0';
+				var em_track_user = true;
+				var em_no_track_reason = '';
+								var ExactMetricsDefaultLocations = {"page_location":"https:\/\/www.tshandbok.no\/del-2\/3-trafikkregulering\/doc650\/"};
+								if ( typeof ExactMetricsPrivacyGuardFilter === 'function' ) {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsPrivacyGuardFilter( ExactMetricsExcludeQuery ) : ExactMetricsPrivacyGuardFilter( ExactMetricsDefaultLocations );
+				} else {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsExcludeQuery : ExactMetricsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-V51KWCT49C',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.ExactMetricsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (em_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = exactmetrics_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof ExactMetricsDualTracker.trackers[hookName] !== 'undefined') {
+								ExactMetricsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dNDMyYj': true,
+											});
+					if ( ExactMetricsLocations.page_location ) {
+						__gtagTracker('set', ExactMetricsLocations);
+					}
+										__gtagTracker('config', 'G-V51KWCT49C', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.tshandbok.no\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.10"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='wpmf-bakery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/vc_style.css?ver=6.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmf-bakery-display-gallery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/display-gallery/style-display-gallery.css?ver=6.1.3' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.tshandbok.no/wp-includes/css/dist/block-library/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.tshandbok.no/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css' href='https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css' href='https://www.tshandbok.no/wp-content/uploads/maxmegamenu/style.css?ver=a5cb64' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.tshandbok.no/wp-includes/css/dashicons.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://www.tshandbok.no/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-default-style-css' href='https://www.tshandbok.no/wp-content/themes/bridge/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_awesome-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_elegant-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/elegant-icons/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-linea_icons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/linea-icons/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-dripicons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/dripicons/dripicons.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-kiko-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/kiko/kiko-all.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-stylesheet-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/stylesheet.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='bridge-stylesheet-inline-css' type='text/css'>
+   .postid-22037.disabled_footer_top .footer_top_holder, .postid-22037.disabled_footer_bottom .footer_bottom_holder { display: none;}
+
+
+</style>
+<link rel='stylesheet' id='bridge-print-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/print.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/responsive.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic_responsive.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.tshandbok.no/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-handle-google-fonts-css' href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-core-dashboard-style-css' href='https://www.tshandbok.no/wp-content/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='https://www.tshandbok.no/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=6.8.10' type='text/css' media='screen' />
+<link rel='stylesheet' id='childstyle-css' href='https://www.tshandbok.no/wp-content/themes/bridge-child/style.css?ver=1592316526' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery.min.js?ver=3.7.1&#039; defer onload=&#039;" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1&#039; defer onload=&#039;" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.tshandbok.no/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.tshandbok.no/wp-json/wp/v2/posts/22037" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.tshandbok.no/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.10" />
+<link rel="canonical" href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc650/" />
+<link rel='shortlink' href='https://www.tshandbok.no/?p=22037' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F3-trafikkregulering%2Fdoc650%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F3-trafikkregulering%2Fdoc650%2F&#038;format=xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#eeeeee">            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-22037 single-format-standard wp-theme-bridge wp-child-theme-bridge-child bridge-core-2.1.4 mega-menu-top-navigation  qode-title-hidden qode-content-sidebar-responsive qode-child-theme-ver-1.0.0 qode-theme-ver-19.3 qode-theme-bridge disabled_footer_top qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive" itemscope itemtype="http://schema.org/WebPage">
+
+
+
+
+<div class="wrapper">
+			<div class="frise"><a href="/"><img src="/wp-content/uploads/2020/06/frise-tsh-enkel.jpg"   alt="heading-frise" /></a>
+			
+			
+		</div>
+	<div class="wrapper_inner">
+
+    
+		<!-- Google Analytics start -->
+				<!-- Google Analytics end -->
+
+		
+	<header class=" scroll_header_top_area  fixed scrolled_not_transparent with_border header_style_on_scroll page_header">
+	<div class="header_inner clearfix">
+		<form role="search" action="https://www.tshandbok.no/" class="qode_search_form_3" method="get">
+	    <div class="container">
+        <div class="container_inner clearfix">
+							                <div class="form_holder_outer">
+                    <div class="form_holder">
+
+                        <input type="text" placeholder="Search" name="s" class="qode_search_field" autocomplete="off" />
+                        <div class="qode_search_close">
+                            <a href="#">
+								<i class="qode_icon_font_awesome fa fa-times " ></i>                            </a>
+                        </div>
+                    </div>
+                </div>
+								        </div>
+    </div>
+</form>		<div class="header_top_bottom_holder">
+			
+			<div class="header_bottom clearfix" style=' background-color:rgba(255, 255, 255, 1);' >
+								<div class="container">
+					<div class="container_inner clearfix">
+																				<div class="header_inner_left">
+																	<div class="mobile_menu_button">
+		<span>
+			<i class="qode_icon_font_awesome fa fa-bars " ></i>		</span>
+	</div>
+								
+<div class="logo_wrapper" >
+	<div class="q_logo">
+		<a itemprop="url" href="https://www.tshandbok.no/" >
+      
+      
+       <img itemprop="image" class="normal" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"> 			 <img itemprop="image" class="light" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="dark" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="sticky" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="mobile" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 					</a>
+	</div>
+	</div>															</div>
+															<div class="header_inner_right">
+									<div class="side_menu_button_wrapper right">
+																														<div class="side_menu_button">
+												<a class="search_button search_covers_header normal" href="javascript:void(0)">S&oslash;k
+		<i class="qode_icon_font_awesome fa fa-search " ></i>	</a>
+	<div class="printfriendly pf-button  pf-alignright">
+                    <a href="#" rel="nofollow" onclick="window.print(); return false;" title="Printer Friendly, PDF & Email">
+                    <span id="printfriendly-text2" class="pf-button-text">Utskrift</span>
+                    </a>
+                </div>																							
+										</div>
+									</div>
+								</div>
+							
+							
+							<nav class="main_menu drop_down center">
+								<div id="mega-menu-wrap-top-navigation" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-top-navigation" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="body" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1000" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-hover-intent-timeout="300" data-hover-intent-interval="100"><html><body><li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-172015" id="mega-menu-item-172015"><a class="mega-menu-link" href="/" tabindex="0">Forside</a></li><li class="mega-dw_content_menu mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-megamenu mega-menu-item-172033 dw_content_menu" id="mega-menu-item-172033"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/" aria-expanded="false" tabindex="0">Innhold<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172677" style="--columns:6; --span:1" id="mega-menu-item-172677"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/bakgrunn-og-leseveiledning/"><div class="dw_mm_icon"><i class="fa fas fa-car"></i></div>Bakgrunn og leseveiledning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172678" style="--columns:6; --span:1" id="mega-menu-item-172678"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/1-vegutforming-og-vegutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/road.svg" alt="road.svg"></div>1: Vegutforming og vegutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172679" style="--columns:6; --span:1" id="mega-menu-item-172679"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/2-vegvedlikehold/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/digging.svg" alt="digging.svg"></div>2: Drift og vedlikehold av veger</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-current-post-ancestor mega-current-menu-parent mega-current-post-parent mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172680" style="--columns:6; --span:1" id="mega-menu-item-172680"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/3-trafikkregulering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/traffic-light.svg" alt="traffic-light.svg"></div>3: Trafikkregulering</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172681" style="--columns:6; --span:1" id="mega-menu-item-172681"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/4-kjoeretoeyteknikk-og-personlig-verneutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-crash.svg" alt="car-crash.svg"></div>4: Kjøretøyteknikk og personlig verneutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172682" style="--columns:6; --span:1" id="mega-menu-item-172682"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/5-kjoeretoeykontroll-og-verkstedgodkjenning/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-mechanic.svg" alt="car-mechanic.svg"></div>5: Kjøretøykontroll og verkstedgodkjenning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-clear mega-menu-item-172683" style="--columns:6; --span:1" id="mega-menu-item-172683"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/6-krav-til-foerere-foereropplaering-og-yrkeskjoering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/address-card.svg" alt="address-card.svg"></div>6: Krav til førere, føreropplæring og yrkeskjøring</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172684" style="--columns:6; --span:1" id="mega-menu-item-172684"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/7-trafikkopplaering-og-informasjon/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/user-cog.svg" alt="user-cog.svg"></div>7: Trafikkopplæring og informasjon</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172685" style="--columns:6; --span:1" id="mega-menu-item-172685"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/8-kontroll-og-sanksjoner/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/hand-paper.svg" alt="hand-paper.svg"></div>8: Kontroll og sanksjoner</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172686" style="--columns:6; --span:1" id="mega-menu-item-172686"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/9-foerstehjelp-og-medisinsk-behandling/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/medkit.svg" alt="medkit.svg"></div>9: Førstehjelp og medisinsk behandling</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172687" style="--columns:6; --span:1" id="mega-menu-item-172687"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/10-overordnede-virkemidler/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/book-open.svg" alt="book-open.svg"></div>10: Overordnede virkemidler</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172688" style="--columns:6; --span:1" id="mega-menu-item-172688"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/11-definisjoner-og-ordforklaringer/"><div class="dw_mm_icon"><i class="fa far fa-bookmark"></i></div>11: Definisjoner og ordforklaringer</a></li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-post mega-align-bottom-left mega-menu-flyout mega-menu-item-172659" id="mega-menu-item-172659"><a class="mega-menu-link" href="https://www.tshandbok.no/info/trafikksikkerhetshaandboken/" tabindex="0">Om ts-håndboken</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-172674" id="mega-menu-item-172674"><a class="mega-menu-link" href="https://www.tshandbok.no/kontakt/" tabindex="0">Kontakt</a></li></body></html></ul></div>							</nav>
+																																		</div>
+					</div>
+									</div>
+			</div>
+		</div>
+</header>	<a id="back_to_top" href="#">
+        <span class="fa-stack">
+            <i class="qode_icon_font_awesome fa fa-arrow-up " ></i>        </span>
+	</a>
+	
+	
+    
+    	
+    
+    <div class="content content_top_margin">
+        <div class="content_inner  ">
+    <!-- before title -->
+	<!-- this is title -->
+									
+									
+										<div class="breadcrumb" > <div class="breadcrumbs"><div itemprop="breadcrumb" class="breadcrumbs_inner"><a href="https://www.tshandbok.no/">Home</a><span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/">Beskrivelser av trafikksikkerhetstiltak og virkninger</a> <span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/3-trafikkregulering/">3: Trafikkregulering</a> <span class="delimiter">&nbsp;>&nbsp;</span><span class="current">3.1 Trafikksanering</span></div></div></div>
+									<!-- this is end of title --><!-- after title -->	
+										<div class="container">
+														<div class="container_inner default_template_holder" >
+																
+							<div class="two_columns_75_25 background_color_sidebar grid2 clearfix">
+								<div class="column1">
+											
+									<div class="column_inner">
+										<div class="blog_single blog_holder">
+											
+		<article id="post-22037" class="post-22037 post type-post status-publish format-standard has-post-thumbnail hentry category-3-trafikkregulering">
+			<div class="post_content_holder">
+				
+				<div class="post_text">
+					<div class="post_text_inner">
+						<h1 itemprop="name" class="entry_title"><!-- LS <span itemprop="dateCreated" class="date entry_date updated">13 jul<meta itemprop="interactionCount" content="UserComments: 0"/></span> -->3.1 Trafikksanering</h1>
+						
+							<div class="post_author">
+						<!-- LS 	22037								
+								
+								av									<a itemprop="author" class="post_author_link" href="https://www.tshandbok.no/author/mrleif/">MrLeif</a>
+								-->
+								
+								<div class='pd_authors'><div class='authorline'> Revisjon 2026: Rune Elvik, TØI og Alena Høye, TØI</div></div>								
+							</div>
+						
+						<div class="post_info">
+						<!-- LS
+								<span class="time">Publisert den 12:29h</span>
+								i					
+					 <a href="https://www.tshandbok.no/innhold/del-2/3-trafikkregulering/" rel="category tag">3: Trafikkregulering</a> 
+						
+															<span class="dots"><i class="fa fa-square"></i></span><a itemprop="url" class="post_comments" href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc650/#respond" target="_self">0 Kommentarer</a>
+								
+								-->
+							                                                        
+						</div>
+					
+												
+						<div class="post_image">
+						
+	                        <img width="2000" height="1333" src="https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31.jpg" class="attachment-full size-full wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31.jpg 2000w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-300x200.jpg 300w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-1024x682.jpg 1024w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-768x512.jpg 768w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-1536x1024.jpg 1536w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-150x100.jpg 150w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-250x167.jpg 250w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-500x333.jpg 500w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-650x433.jpg 650w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh31-700x467.jpg 700w" sizes="(max-width: 2000px) 100vw, 2000px" />	                        <div class="bildetekst">
+	                         Foto: Shutterstock	                         </div>
+						</div>
+										
+						
+						<div class="ingress">
+<p><strong>Trafikksanering er samordnet bruk av veg- og trafikktekniske tiltak i et nærmere avgrenset område med sikte på å redusere trafikkmengde og fart på lokale veger og gater og samle gjennomgangstrafikk til et hovedvegnett som utbedres for å avvikle trafikken sikkert. Mange studier av virkninger av trafikksanering er gamle og resultatene av dem usikre. I gjennomsnitt ser trafikksanering ut til å redusere antall personskadeulykker i det sanerte området med 10-20%, men det er stor variasjon i virkninger. I Norge er trolig trafikk­sanering gjennomført de aller fleste steder der tiltaket er aktuelt. Trafikksanering ser vanligvis ikke ut til å føre til at flere går eller sykler.</strong></p>
+</div>
+<h2>Problem og formål</h2>
+<div class="subchapter">
+<p>Vegnettet i eldre bydeler og tettsteder er ofte bygget for mindre biltrafikk enn det har i dag. Eldre områder er ikke planlagt etter prinsippene om separering og differensiering av veg­nettet (Gunnarsson &amp; Lindström, 1970; Forskargruppen Scaft, 1972), som nå legges til grunn ved planlegging av veger og gater. Når slike områder har gjennom­gangs­trafikk, bidrar dette til økt ulykkes­risikoen og utrygghet og dermed til at det er lite attraktivt å gå eller sykle.</p>
+<p>Tradisjonelt har utbedring av spesielt ulykkesbelastede steder vært et viktig trafikksikkerhetstiltak i byer og tettsteder (Hvoslef 1974; Christensen 1988; Statens vegvesen, 2007). En slik strategi kan ikke alltid løse trafikksikkerhets­problemene i områder med et udifferensiert vegnett. I utpregede boligområder er ulykkene som regel mer tilfeldig fordelt på vegnettet enn på hovedveger slik at det er vanskelig å finne utpregede ulykkesopphopninger (OECD, 1979; Kraay et al., 1984). Samtidig kan risikoen, regnet som ulykker pr million kjøre­tøy­kilometer, være høy. Risikotall for riks- og fylkesveger (Høye, 2016) viser at veger med fartsgrense 30 km/t hadde den høyeste risikoen for personskadeulykker av alle riks- og fylkesveger, med 0,23 personskadeulykker per million kjøretøykilometer. For å bedre sikkerheten må derfor enten trafikk­mengden reduseres, eller ulykkesrisikoen reduseres med tiltak som virker over hele vegnettet.</p>
+<p>Trafikksanering er systematisk bruk av prinsippene om separering og differensiering av vegnettet i utbygde områder. Ved hjelp av trafikkreguleringer skal trafikksanering fjerne gjennomgangstrafikk fra boliggater og samle denne på et overordnet vegnett som utbedres for å kunne avvikle økt trafikk uten at ulykkestallet øker. Et annet mål med trafikksanering er å skape et triveligere bomiljø og gjøre opphold og lek utendørs tryggere.</p>
+<h2>Beskrivelse av tiltaket</h2>
+</div>
+<div class="subchapter">
+<p>Trafikksanering (engelsk: «area-wide traffic calming») er ikke ett konkret tiltak, og det er heller ikke definert som eget tiltak i Statens vegvesens håndbøker, men det er et overordnet utformingsprinsipp for å bedre trafikksikkerhet og miljøforhold med samordnet bruk av trafikkreguleringstiltak i et større, avgrenset område. Vanlige tiltak som inngår i trafikksanering er:</p>
+<ul>
+<li><strong>Gjennomkjøringsforbud</strong> i boliggater/atkomstveger ved hjelp av trafikkskilt, brutt envegsregulering eller fysisk stengning</li>
+<li><strong>Fartsdempende tiltak</strong> på boliggater/atkomstveger, enten i form av nedsatt skiltet fartsgrense (fartsgrensesone 30 km/t er vanlig), eller ved hjelp av fysiske tiltak (humper, innsnevringer), kombinert med trafikkskilt</li>
+<li><strong>Envegsregulering</strong> av boliggater/atkomstveger for å hindre eller vanskeliggjøre gjennomkjøring</li>
+<li><strong>Utbedring av hovedgater</strong>, for eksempel i form av parkeringsforbud, sikring av stoppesteder for buss og trikk, signalregulering av kryss og signalregulering av gangfelt</li>
+<li><strong>Endret parkeringsregulering</strong> i boliggater/atkomstveger, for eksempel i form av reservert parkering for beboere</li>
+</ul>
+<p>Andre tiltak som kan inngå i trafikksanering, er av <strong>kollektivfelt</strong> (kapittel ), <strong>gågater</strong> (kapittel ) og <strong>gatetun</strong> (kapittel ). Disse tiltakene er beskrevet i egne kapitler. I dette kapitlet beskrives virkningen på ulykkene av trafikksanering gjennomført i form av en gatebruksplan for et avgrenset område basert på tiltakene som er listet opp foran.</p>
+<p>Trafikksanering er utført en rekke steder i Norge, blant annet i flere bydeler i Oslo, Bergen, Trondheim og Drammen og i en rekke mindre byer og tettsteder. Det foreligger ingen lands­omfattende oversikt over hvor mange trafikksanerte områder det finnes i Norge. Det er likevel rimelig å anta at tiltaket er gjennomført de fleste steder der det anses som aktuelt.</p>
+<h1>Virkning på ulykkene</h1>
+<p>Det foreligger mange undersøkelser om virkningen på ulykkene av trafikk­sanering. Resultatene som legges fram her bygger på følgende undersøkelser:</p>
+<p style="padding-left: 40px;">Boëthius, Ekelöf, Grunewald, Markstedt &amp; Bernstrup, 1971 (Sverige)<br />
+Muskaug, 1976A (Norge)<br />
+Muskaug, 1976B (Norge)<br />
+Vreugdenhil, 1976 (Australia)<br />
+Oslo Byplankontor, 1978 (Norge)<br />
+Dalby, 1979 (Storbritannia)<br />
+Brownfield, 1980 (Storbritannia)<br />
+Bærum Reguleringsvesen, 1980 (Norge)<br />
+Drammen Byplankontor, 1980 (Norge)<br />
+Fahlman, Norberg, Bylund, 1980 (Sverige)<br />
+Hvoslef, 1980 (Sverige)<br />
+Rauhala, 1980 (Finland)<br />
+Dalby &amp; Ward, 1981 (Storbritannia)<br />
+Haakenaasen, 1981 (Norge)<br />
+Haakenaasen, 1982 (Norge)<br />
+Hart, 1982 (Nederland)<br />
+Engel &amp; Krogsgård-Thomsen, 1983 (Danmark)<br />
+Muskaug, 1983A (Norge)<br />
+Brilon, Kahrmann, Senk, Thiel, Werner, 1985 (Tyskland)<br />
+Stølan, 1988 (Norge)<br />
+Fisher, Van Den Dool &amp; Ho, 1989 (Australia)<br />
+Janssen &amp; Verhoef, 1989 (Nederland)<br />
+Walker, Gardner &amp; McFetridge, 1989 (Storbritannia)<br />
+Walker &amp; McFetridge, 1989 (Storbritannia)<br />
+Ward, Norrie, Sang &amp; Allsop, 1989A,B,C (Storbritannia)<br />
+Brilon &amp; Blanke, 1990a (Tyskland)<br />
+Fairlie &amp; Taylor, 1990 (Australia)<br />
+Chua &amp; Fisher, 1991 (Australia)<br />
+Brilon &amp; Blanke, 1992 (Tyskland)<br />
+Baier m.fl., 1992 (Tyskland)<br />
+Gunnarsson &amp; Hagson, 1992 (Sverige)<br />
+Chick, 1994 (Storbritannia)<br />
+Webster &amp; Mackie, 1996 (Storbritannia)<br />
+Jones, Lyons, John &amp; Palmer, 2005 (Storbritannia)<br />
+Cottrell m.fl., 2006 (USA)<br />
+Underlien Jensen, 2007 (Danmark)<br />
+Webster &amp; Layfield, 2007 (Storbritannia)<br />
+Bunn m.fl., 2010 (meta-analyse av flere studier)<br />
+Ewing, Chen &amp; Chen, 2013 (USA)<br />
+Elvik, 2017 (Norge)<br />
+Damsere-Derry et al., 2019 (Ghana)<br />
+Shi, Atkinson-Palombo &amp; Garrick, 2022 (USA)</p>
+</div>
+<p>Kvaliteten på undersøkelsene varierer. For personskadeulykker og materiellskade­ulykker presenteres her kun resultater av: (1) Før-og-etterundersøkelser med kontroll­områder som er matchet til tiltaksområdene med hensyn til folketall, vegnettets omfang og trafikkmengde, eller (2) Multivariate ulykkesmodeller som bygger på data om trafikk­mengde, vegsystemets kompleksitet, grad av differensiering og grad av separering. For dødsulykker presenteres resultater av alle undersøkelser, uansett metode, siden det kun foreligger få resultater.</p>
+<p>Det antas at virkningene av trafikksanering varierer systematisk. Mer konkret, antas det at trafikksanering har større effekt:</p>
+<ol>
+<li>I nye boligområder som er bygget etter prinsippene om separering og differensiering (i forhold til eldre områder som er trafikksanert)</li>
+<li>På mer alvorlige ulykker</li>
+<li>I lokalgater enn på hovedveger</li>
+<li>Når det er en stor nedgang i trafikkmengden</li>
+<li>Når mange tiltak er gjennomført i området.</li>
+</ol>
+<p>Tabell 3.1.1 oppgir beste anslag på virkninger på ulykkene av trafikksanering. Anslagene på virkninger av å bygge ut nye områder i samsvar med prinsippene for separering og differensiering bygger på Elvik (2017), som analyserte data for 16 bydeler i Oslo.</p>
+<p><em>Tabell 3.1.1. Virkninger av trafikksanering på antall personskadeulykker. Prosent endring av antall ulykker</em></p>
+<table style="width: 100%;" width="464">
+<tbody>
+<tr>
+<td class="lineunder" style="width: 35.0649%; background-color: #79e5ed;" width="170"><strong>Type trafikksanering</strong></td>
+<td class="lineunder" style="width: 28.7879%; background-color: #79e5ed;" width="142"><strong>Område</strong></td>
+<td class="lineunder" style="width: 15.368%; background-color: #79e5ed; text-align: center;" width="68"><strong>Virkning</strong></td>
+<td class="lineunder" style="width: 33.1169%; background-color: #79e5ed; text-align: center;" width="84"><strong>Usikkerhet i virkning</strong></td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 35.0649%;" rowspan="3" width="170"><strong>Nye boligområder bygget etter prinsippene om separering og differensiering (Elvik, 2017)</strong></td>
+<td style="width: 28.7879%;" width="142">Hele området</td>
+<td style="width: 15.368%; text-align: center;" width="68"><strong>-35</strong></td>
+<td style="width: 33.1169%; text-align: center;" width="84">(-48; -17)</td>
+</tr>
+<tr>
+<td style="width: 28.7879%;" width="142">Hovedgater</td>
+<td style="width: 15.368%; text-align: center;" width="68"><strong>-36</strong></td>
+<td style="width: 33.1169%; text-align: center;" width="84">(-52; -15)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 28.7879%;" width="142">Lokale gater</td>
+<td class="lineunder" style="width: 15.368%; text-align: center;" width="68"><strong>-31</strong></td>
+<td class="lineunder" style="width: 33.1169%; text-align: center;" width="84">(-54; +3)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 35.0649%;" rowspan="3" width="170"><strong>Eldre områder der trafikksanering er gjennomført</strong></td>
+<td style="width: 28.7879%;" width="142">Hele området</td>
+<td style="width: 15.368%; text-align: center;" width="68"><strong>-17</strong></td>
+<td style="width: 33.1169%; text-align: center;" width="84">(-34; +6)</td>
+</tr>
+<tr>
+<td style="width: 28.7879%;" width="142">Hovedgater</td>
+<td style="width: 15.368%; text-align: center;" width="68"><strong>-11</strong></td>
+<td style="width: 33.1169%; text-align: center;" width="84">(-22; +1)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 28.7879%;" width="142">Lokale gater</td>
+<td class="lineunder" style="width: 15.368%; text-align: center;" width="68"><strong>-24</strong></td>
+<td class="lineunder" style="width: 33.1169%; text-align: center;" width="84">(-44; +4)</td>
+</tr>
+</tbody>
+</table>
+<div class="subchapter">
+<p>Tabell 3.1.1 viser kun resultater for personskadeulykker da det ikke er funnet systematiske forskjeller mellom ulike skadegrader. Mange av virkningene er usikre og har store konfidensintervaller.</p>
+<p>Det er funnet større ulykkesreduksjoner i nye områder som er bygget etter prinsippene om separering og differensiering enn i eldre trafikksanerte områder.</p>
+<p>I eldre trafikksanerte områder er det funnet større ulykkesreduksjoner i lokale gater enn på hovedveger, men begge virkningene er meget usikre og ingen av dem er statistisk signifikant.</p>
+<p>&nbsp;</p>
+<p><strong>Trafikkmengde og virkning på ulykker: </strong>Figur 3.1.1 viser sammenhengen mellom endring i trafikkmengde og endring i ulykkestall i lokalgater der trafikktall før og etter trafikksanering foreligger. Det er kun en svak tendens til at nedgangen i ulykker er størst der hvor nedgangen i trafikk er størst. Tilfeldig variasjon i ulykkestall ser ut til å spille en stor rolle for resultatene.</p>
+<p><img decoding="async" class="alignnone wp-image-173514" src="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-31-2023-figur-311-1.png" alt="" width="512" height="301" /></p>
+<p><em>Figur 3.1.1: Sammenheng mellom endring av trafikkmengde og endring av ulykkestall i lokalgater der trafikksanering er gjennomført.</em></p>
+<p><strong>Antall tiltak og virkning på ulykker: </strong>Figur 3.1.2 viser sammenhengen mellom antall tiltak per kilometer veg og endring i ulykkestall. Det er en svak tendens til at nedgangen i ulykkestall er større jo flere tiltak som er gjennomført per kilometer veg. Denne tendensen forklares imidlertid i sin helhet av datapunktet lengst til høyre i figuren. Hvis dette datapunktet utelates, er det ingen sammenheng mellom hvor mange tiltak som er gjennomført og hvor stor nedgang det er i ulykkestall.</p>
+<p><img decoding="async" class="alignnone wp-image-173513" src="https://www.tshandbok.no/wp-content/uploads/2003/07/tsh-31-2023-figur-312.png" alt="" width="514" height="312" /></p>
+<p><em>Figur 3.1.2: Sammenheng mellom antall tiltak per kilometer veg og endring i ulykkestall i trafikksanerte områder.</em></p>
+<p>Alt i alt viser resultatene bare delvis et mønster som er i samsvar med det som er beskrevet i punktene 1-5 foran. Dette tyder på at endringene i ulykkestall som er funnet i de empiriske studiene, bare delvis kan tilskrives tiltakene som inngår i trafikksanering, og at de også kan være påvirket av andre faktorer som f.eks. langsiktige trender det ikke er kontrollert for, regresjon mot gjennomsnittet i ulykkestall, eller upålitelige trafikktall.</p>
+<p>Det konkluderes likevel med at det er mer sannsynlig at trafikksanering reduserer antall personskadeulykker med omkring 10-20% enn at de påviste endringer i ulykkestall i sin helhet skyldes andre ting enn trafikksanering. Virkningen gjelder det totale antall ulykker, og kan forklares med endringer i trafikkmengden og eventuelle endringer i risiko.</p>
+<h1>Virkning på framkommelighet</h1>
+<p>Virkningen av trafikksanering på fart og reisetider er undersøkt i en rekke eldre studier i Norge (Muskaug, 1976A, 1976B, 1983B; Haakenaasen, 1981; 1982), Danmark (Fosting &amp; Pape, 1999; Herrstedt, 2004; Nielsen og Lahrmann, 2008) samt i USA, Storbritannia og Tyskland (Svensson, 2001; Webster &amp; Mackie, 2007).</p>
+<p>Trafikksanering fører som regel til redusert fart og økt reisetid i og gjennom trafikksanerte områder. Dette skyldes bl.a.:</p>
+<ul>
+<li>Envegsreguleringer som forlenger enkelte kjøreruter</li>
+<li>Nedsatte fartsgrenser</li>
+<li>Fysiske fartsdempende tiltak</li>
+<li>Færre atkomstmuligheter til trafikksanerte områder.</li>
+</ul>
+<h1>Virkning på miljøforhold</h1>
+<p>Virkninger av trafikksanering på støy og luftforursensning avhenger av hvordan det påvirker trafikkmengden og fart i de trafikksanert og omkringliggende områdene (Øvstedal, 1996).</p>
+<p>Trafikksanering kan redusere antall støyutsatte boliger, både gjennom en reduksjon av trafikken i boliggatene og ved styring av trafikken til gater med færre bosatte. Redusert trafikkmengden i gater med middels trafikk kan føre til vesentlige forbedringer, selv ved nokså små reduksjoner i antall kjøretøyer. Når dette fører til tilsvarende økninger i hovedgater som fra før har stor trafikk, vil støynivået i disse gatene derimot ikke påvirkes vesentlig (Øvstedal, 1996).</p>
+<h1>Kostnader</h1>
+<p>Kostnadene til trafikksanering kan variere mye fra sted til sted. Det er følgelig vanskelig å oppgi gjennomsnittstall, og det foreligger ingen nye tall. I det følgende gjengis eldre kostnadstall.</p>
+<p>På grunnlag av en gjennomgang av flere kilder, anslo Elvik (1996) gjennom­snittskostnaden (budsjettkostnad) til trafikksanering av et område til ca. 2 mill. kr. per område. Årlige vegvedlikeholdskostnader for området kan forventes å øke med ca. 0,1 mill. kr. For trafikk­sanerte områder i Norge der det foreligger opplysninger om kostnadene, har disse variert mellom 0,16 og 5,90 mill. kr. per område. Disse tallene er gamle, dagens kostnader kan være høyere.</p>
+<p>En gjennomgang av 351 danske trafikksaneringsprosjekter viser at anleggskostnadene varierte mellom 5.000 og 33 mill. danske kr. 62 % hadde en kostnad på under 0,5 mill. danske kr., 12 % hadde en kostnad på 0,5-2,0 mill. danske kr. og 7 % hadde en kostnad på over 2 mill. danske kr. For resten av prosjektene var kostnaden ukjent (Herrstedt, 2004).</p>
+<h1>Nyttekostnadsvurderinger</h1>
+<p>I de følgende oppsummeres eldre vurderinger av forholdet mellom nytte og kostnader ved trafikksanering.</p>
+<p>Eldre nytte-kostnadsanalyser av trafikksaneringer i Oslo og Trondheim (Muskaug, 1976A, B) viste at trafikksanering har en nyttekostnadsbrøk på mellom 10 og 30. Analysene inkluderte reduserte ulykkeskostnader og redusert behov for støyskjermingstiltak. Ulemper ved redusert framkommelighet var ikke inkludert.  Beregningene bygger på mye lavere ulykkeskostnader enn dem som brukes i dag og en kalkulasjonsrente på 7 % (i dag er den 4 %).</p>
+<p>Det er utarbeidet et regne-eksempel som bygger på følgende forutsetninger. Det trafikksanerte området er på 1 kvadratkilometer, avgrenset av en hovedveg rundt området med en lengde på 4 km. Boliggater innenfor sonen har en samlet lengde på 8 km. Årsdøgntrafikken er 6.000 på hovedvegen og 600 i boliggatene. Det er 0,15 personskadeulykker per million kjøretøykilometer på hovedvegen, 0,25 personskadeulykker per million kjøretøykilometer på boliggatene. Antall personskadeulykker reduseres med 11 % på hovedvegen og 24 % på boliggatene. 30 % av trafikken i boliggatene forsvinner til hovedvegen og sparer dermed 5 % av kjøretøyenes driftskostnader. Farten på gjenværende trafikk i boliggatene går ned fra 35 til 25 km/t. De eksterne kostnader ved støy forutsettes redusert med 0,1 kr per kjøretøykilometer for den gjenværende trafikken i lokalgatene (Rødseth et al., 2019). Det forutsettes ingen gevinst for folkehelsen gjennom økt fysisk aktivitet.</p>
+<p>En forhindret personskadeulykker verdsettes til 4 millioner kroner (Statens vegvesen, 2021). Dette er noe mer enn gjennomsnittet (3,7 mill. kr.), noe som begrunnes med at alvorlighetsgraden ved ulykkene kan ventes å bli redusert. Tidskostnad per kjøretøytime for lette kjøretøy er 209 kroner. Driftskostnad per kjørt kilometer for lette kjøretøy er 1,65 kroner. Eksterne kostnader ved støy (lette biler) reduseres fra 0,33 til 0,23 kr per kjøretøy­kilometer. Det forutsettes en reduksjon på 4 desibel. Nytten regnes for 40 år med 4 % kalkulasjonsrente per år.</p>
+<p>Sparte ulykkeskostnader er beregnet til 19,8 millioner kroner. Gevinst ved redusert støy er beregnet til 2,4 millioner kroner. Sparte driftskostnader til kjøretøy er beregnet til 0,4 millioner kroner. Økte tidskostnader er beregnet til 58 millioner kroner. Dette er mer enn gevinsten ved færre ulykker, mindre støy og lavere driftskostnader til kjøretøy. Nytten av tiltaket er under disse forutsetningene følgelig negativ.</p>
+<p>Eksemplet tyder på at trafikksanering har størst mulighet til å gi positiv nytte der hvor ulykkesrisikoen er høyere enn gjennomsnittet. Trolig er trafikksanering allerede gjennomført i de fleste områder i Norge der nytten av tiltaket er større enn kostnadene.</p>
+<h1>Formelt ansvar og saksgang</h1>
+<h2>Initiativ til tiltaket</h2>
+<p>Initiativ til trafikksanering kan bli tatt av beboere i områder der mange opplever trafikken som plagsom og forholdene som utrivelige. Initiativ kan også bli tatt av kommunen som ledd i arbeid med gatebruksplaner. Trafikksanering forutsetter omfattende planlegging, der en kartlegger eksisterende problemer for alle berørte grupper, formulerer de mål man vil oppnå med trafikksaneringen, foreslår alternative tiltak og vurderer konsekvensene av tiltakene. Trafikksanering berører mange grupper. De ulike gruppene (beboere, næringsdrivende, besøkende, trafikanter) har ofte ulike ønsker og interesser. En planprosess der de ulike berørte gruppene medvirker, sikrer at deres krav og ønsker kommer til uttrykk og kan bli tatt hensyn til.</p>
+<p>Siden trafikksanering innebærer samordnet bruk av trafikkreguleringstiltak i et større område, må det utarbeides en gatebruksplan hvor vegnettet i det aktuelle området inndeles i hovedveger og lokalveger og hvor det ønskede trafikk­mønster skisseres. Planlegging av trafikksanering er som oftest kommunens ansvar, da de fleste boligveger er kommunale.</p>
+<h2><a name="_Toc116988347"></a>Formelle krav og saksgang</h2>
+<p>Trafikksanering er ikke definert som eget tiltak i Statens vegvesens håndbøker, men de enkelte tiltakene som kan inngå i trafikksanering, er beskrevet i håndbøkene. Følgende av Statens vegvesens håndbøker er de viktigste:</p>
+<ul>
+<li>N100, Veg- og gateutforming</li>
+<li>N300, Trafikkskilt</li>
+<li>R310, Trafikksikkerhetsutstyr</li>
+<li>V723, Analyse av ulykkessteder</li>
+<li>V712, Konsekvensanalyser</li>
+<li>V123, Tilrettelegging for kollektivtransport på veg og gate</li>
+<li>V121, Geometrisk utforming av veg- og gatekryss</li>
+<li>V128, Fartsdempende tiltak</li>
+</ul>
+<p>Riksveg som ombygges til gågate eller gatetun, må omklassifiseres. Gågater eller gatetun blir vanligvis kommunal veg.</p>
+<p>En gatebruksplan for et trafikksaneringsområde kan utformes som en regulerings­plan. Bestemmelsene i plan- og bygningsloven om reguleringsplaner må da følges.</p>
+<h2><a name="_Toc116988348"></a>Ansvar for gjennomføring av tiltaket</h2>
+<p>Ansvaret for gjennomføring av trafikksanering ligger vanligvis hos kommunen, da kommunen er planmyndighet og ofte har vegholderansvaret for flertallet av de veger som inngår i en trafikksaneringsplan.</p>
+<p>Et viktig element i trafikksanering er trafikkskilt. Statens vegvesen, kommunen og politiet som har myndighet til å vedta skiltreguleringer. Dette er detaljerte beskrevet i skiltforskriften.</p>
+<h1>Referanser</h1>
+<p>Agustsson, L (2001). Danish experiences with speed zones/variable speed limits. Proceedings of the Conference Traffic Safety on Three Continents: International Conference in Moscow, Russia, 19-21 September, 2001 (Vti Konferens).</p>
+<p>Baier, R. et al. (1992). Forschungsvorhaben Flächenhafte Verkehrsberuhigung. Folgerungen für die Praxis. Bundesministerium für Raumordnung, Bauwesen und Städtebau, Bundesministerium für Verkehr, Bundesministerium für Umwelt, Naturschutz und Reaktorsicherheit, Bundesministerium für Landeskunde und Raumordnung, Bundesanstalt für Strassenwesen, Umwelt­bundesamt, Bonn.</p>
+<p>Blanke, H. (1993). Geschwindigkeitsverhalten und Verkehrssicherheit bei flachenhafter Verkehrsberuhigung  Ruhr-Universitat Bochum. 1993:335.</p>
+<p>Boëthius, P., Ekelöf, L.J.; Grunewald, R. et al. (1971). Trafiksanering &#8211; försöksverksamhet. Västerås &#8211; Gideonsberg. Meddelande 34. Chalmers Tekniska Högskola, Institutionen för stadsbyggnad, Göteborg.</p>
+<p>Brilon, W. &amp; H. Blanke, H. (1992). Flächenhafte Verkehrsberuhigung: Ergebnisse der Unfall­analysen in 6 Modellstädten. Zeitschrift für Verkehrssicherheit, 38, 102-110.</p>
+<p>Brilon, W. &amp; H. Blanke. (1990). Area-Wide Traffic Calming Measures and Their Effects on Traffic Safety in Residential Areas. Paper presented at the conference Road safety and Traffic Environment in Europe, September 26-28, Gothenburg, Sweden.</p>
+<p>Brilon, W. &amp; Blanke, H. (1990b). Traffic safety effects from traffic calming. VTI Rapport. Vol. 363A, 1990:133-48.</p>
+<p>Brilon, W. &amp; Blanke, H. (1993). Extensive traffic calming: results of the accident analyses in 6 model towns. ITE Compendium of technical papers. Washington DC, 119-23.</p>
+<p>Brilon, W., Kahrmann, B., Senk, W., Thiel, R. &amp; Werner, H. (1985). <em>Flächenhafte </em>Verkehrsberuhigung. Unfallanalyse Berlin-Charlottenburg. Bericht zum Forschungsprojekt 8019/9 der Bundesanstalt für Strassenwesen. Bundesanstalt für Strassenwesen, Bergisch-Gladbach.</p>
+<p>Brown, V. , Moodie, M., Carter, R. (2017). Evidence for associations between traffic calming and safety and active transport or obesity: A scoping review. Journal of Transport and Health, 7, 23-37.</p>
+<p>Brownfield, D. J. (1980). Environmental areas &#8211; Interim report on a before-and-after accident study. Traffic Engineering and Control, 21, 278-282.</p>
+<p>Bunn, F., Collier, T., Frost, C., Ker, K., Steinbach, R. Roberts, I. &amp; Wentz, R. (2010). Area-wide traffic calming for preventing traffic related injuries (review), The Cochrane Collaboration, The Cochrane Library, issue 4, Cochrane Database of Systematic Reviews.</p>
+<p>Bærum Reguleringsvesen. (1980). Trafikksanering. Eiksmarka-Østerås-Voll. Erfarings­rapport. Bærum kommune, Sandvika.</p>
+<p>Chick, C. (1994). An integrated approach to traffic calming, road safety and environmental improvements in the London borough of Hounslow. Proceedings of Seminar J. Paper presented at PTRC Summer Annual Meeting September 12-16, 1994, Warwick.</p>
+<p>Christensen, P. (1988). Utbedringer av ulykkespunkter på riksveger og kommunale veger i perioden 1976-1983. Erfaringsrapport. TØI-rapport 0009. Transportøkonomisk institutt, Oslo.</p>
+<p>Chua C. S. &amp; A. J. Fisher. (1991). Performance Measurements of Local Area Traffic Management: A Case Study. Australian Road Research, 21, 2, 16-34.</p>
+<p>Cottrell, W. D., Kim, N., Martin, P. T. &amp; Perrin, H. J. (2006). Effectiveness of traffic management in Salt Lake City, Utah. Journal of Safety Research, 37, 27-41.</p>
+<p>Dalby, E. &amp; H. Ward. (1981). Application of low-cost road accident countermeasures according to an area-wide strategy. Traffic Engineering and Control, 22, 567-574.</p>
+<p>Dalby, E. (1979). Area-wide measures in urban road safety. A background to current research. TRRL Supplementary Report 517. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Damsere-Derry, J., Ebel, B. E., Mock, C. N., Afukaar, F., Donkor, P., Kalowole, T. O. (2019). Evaluation of the effectiveness of traffic calming measures on vehicle speeds and pedestrian injury severity in Ghana. Traffic Injury Prevention, 20, 336-342.</p>
+<p>Drammen Byplankontor. (1980). Gatebruksplan Åssiden. Etterprøving av gjennom­kjøringsforbudet i Betzy Kjelsbergs vei. Drammen kommune, Drammen.</p>
+<p>Elvik, R. (1996). Enhetskostnader for veg- og trafikktekniske tiltak. Arbeidsdokument TST/0722/96. Transportøkonomisk institutt, Oslo.</p>
+<p>Elvik, R. (1999). Cost-benefit analysis of safety measures for vulnerable and inexperienced road users, TØI-rapport 435, Transportøkonomisk institutt, Oslo.</p>
+<p>Elvik, R. (2001). Area-wide urban traffic calming schemes: a meta-analysis of safety effects, Accident Analysis and Prevention, 33, 327-336.</p>
+<p>Elvik, R. (2017). Can evolutionary theory explain the slow development of knowledge about the level of safety built into roads? Accident Analysis and Prevention, 106, 166-172.</p>
+<p>Elvik, R., Mysen, A. B. &amp; Vaa, T. (1997). Trafikksikkerhetshåndboken. Oslo: Transportøkonomisk insitutt.</p>
+<p>Engel, U. &amp; Krogsgård Thomsen, L. (1989). § 40 gaders sikkerhed. Dansk Vejtidsskrift, 8, 188-190,</p>
+<p>Engel, U. &amp; Thomsen, L. K. (1992). Safety effects of speed reducing measures in Danish residential areas. Accident Analysis and Prevention, 24, 17-28.</p>
+<p>Erke, A. &amp; Elvik, R. (2007). Nyttekostnadsanalyse av skadeforebyggende tiltak, Transportøkonomisk institutt. TØI-rapport 933. Oslo, Transportøkonomisk institutt.</p>
+<p>Ewing, R., Chen, L., Chen, C. (2013). Quasi-experimental study of traffic calming measures in New York City. Transportation Research Record, 2364, 29-35.</p>
+<p>Fahlman, T., H. Norberg &amp; P. Bylund. (1980). Olycksförändring vid trafiksanering. Examensarbete 1980:1. Tekniska Högskolan i Stockholm, Institutionen för trafikplanering, Stockholm.</p>
+<p>Fairlie, R. B. &amp; Taylor, M. A. P. (1990). Evaluating the safety benefits of local area traffic management. Proceedings 15th ARRB Conference, Part 7, 141-166. Australian Road Research Board, Vermont South, Australia.</p>
+<p>Fisher, A. J., D. F. Van den Dool,  &amp; L. K. Ho. (1989). LATM Operational Successful and Financially Affordable: But are the Users Satisfied? Proceddings of 1989 National Transport Conference (62-70), Melbourne, 23-25 May 1989, Preprint of Papers. The Institution of Engineers, Melbourne, Australia.</p>
+<p>Forskargruppen Scaft. (1972). Principer för trafiksanering med hensyn till trafiksäkerhet. Meddelande 55. Chalmers Tekniska Högskola, Institutionen för stadsbyggnad, Göteborg.</p>
+<p>Fosting, V. &amp; Pape M. (1999). Metoder til at forbedre trafiksikkerhed og miljø lokalt – erfaringer fra en række Trafikpuljeprojekter. Trafikdage, Aalborg Universitet.</p>
+<p>Gunnarsson, S. O., Hagson, A. (1992). Visby Innerstad. Bakgrund och effekter av bil­begränsning 1988-91. TFB-rapport 1992:30. Transportforsknings­beredningen, Stockholm.</p>
+<p>Gunnarsson, S. O., Lindström, S. (1970). Vägen till trafiksäkerhet. Stockholm, Rabén &amp; Sjögren.</p>
+<p>Haakenaasen, B. (1981). Virkninger av trafikkløsninger. Trafikksaneringen i Rosenborg/Møllenberg-området i Trondheim. TØI-rapport. Transportøkonomisk institutt, Oslo.</p>
+<p>Haakenaasen, B. (1982). Trafikksanering i Sandefjord sentrum. Tiltak og virkninger. TØI-notat 634. Transportøkonomisk institutt, Oslo.</p>
+<p>Hart, M. (1982). Effects on accidents, eliminating throughtraffic of cars in city areas. In Proceedings (127-134) of Seminar on Short-term and Area-wide Evaluation of Safety Measures, Amsterdam, The Netherlands, April 19-21, 1982. Institute for Road Safety Research SWOV, Leidschendam.</p>
+<p>Herrstedt, L. (2004). Erfaringsopsamling om hastighedsprosjekter i danske kommuner, Dansk Vejtidsskift, 1, 4-6.</p>
+<p>Hvoslef, H. (1974). Trafikksikkerhet i Oslo. Problemstilling, analyse og løsninger. Oslo Veivesen, Oslo.</p>
+<p>Hvoslef, H. (1980). Sikker kryssing av hovedgater &#8211; kransgater. I: Trafikksanering &#8211; aktuelle tiltak, 38-61. (Muskaug, R ed): NVF-rapport 11:1980. Nordisk Vegteknisk Forbund (NVF), Utvalg 52 Trafikksikkerhet, Oslo.</p>
+<p>Janssen, S. T. M. C. &amp; P. J. G. Verhoef. (1989). Demonstratieproject herindeling en herinrichting van stedelijke gebieden (in de gemeenten Rijswijk en Eindhoven): Eindrapport van het ongevallen onderzoek. Een evaluatie van de maatregelen na een periode van vijf jaar. R-89-27. Stichting Wetenschappelijk Onderzoek Verkeersveiligheid SWOV, Leidschendam.</p>
+<p>Janssen,S. (1991). Final results of accident studies in the Dutch demonstration projects of the 1970&#8217;s. Traffic Engineering and Control, 32, 292-298.</p>
+<p>Jensen, S. U. (2007). Trafiksanering – en sikker løsning, Dansk Vejtidsskift, 10, 12-14.</p>
+<p>Jones, S. J., Lyons, R. A., John, A., Palmer, S. R. (2005). Traffic calming policy can reduce inequalities in child pedestrian injuries: database study. Injury Prevention, 11, 152-156.</p>
+<p>Kraay, J. H., M. P. Mathijssen &amp; F. C. M. Wegman. (1984). Towards safer residential areas. Institute for Road Safety Research SWOV, Leidschendam.</p>
+<p>Muskaug, R. (1976A). Gatebruksplanen i Oslo. Erfaringer fra Ruseløkka/Skillebekk (forsøk 1). Oslo kommune, Byplankontoret, Gatebruksplangruppa, Oslo.</p>
+<p>Muskaug, R. (1976B). Gatebruksplanen i Oslo. Erfaringer fra Grünerløkka. Oslo kommune, Byplankontoret, Gatebruksplangruppa, Oslo.</p>
+<p>Muskaug, R. (1983A). Virkninger av gatetun i Oslo og Sandefjord. TØI-rapport. Transportøkonomisk institutt, Oslo.</p>
+<p>Nielsen, P. H. &amp; Lahrmann, H. (2008). Forskønnede centrale bygader – den sikkerhedsmæssige effekt, Trafikdage, Aalborg Universitet.</p>
+<p>OECD Road Research Group. (1979). Traffic Safety in Residential Areas. OECD, Paris.</p>
+<p>Oslo Byplankontor. (1978). Trafikksaneringen i Skøyen/Oppsal området. En vurdering av trafikksituasjonen før/etter trafikkomleggingen og de endringer som har skjedd. Rapport 2/1978. Oslo kommune, Byplankontoret, Oslo.</p>
+<p>Perez, I. (2006). Safety impact of engineering treatments on undivided rural roads. Accident Analysis and Prevention, 38,192-200.</p>
+<p>Rauhala, V. (1980). Vegstengninger &#8211; tungtransportforbud. In: Trafikksanering &#8211; aktuelle tiltak, 62-73. NVF-rapport 11:1980 (Muskaug, R ed). Nordisk Vegteknisk Forbund (NVF), Utvalg 52 Trafikksikkerhet, Oslo.</p>
+<p>Rødseth, K. L. m.fl. (2019). Eksterne skadekostnader ved transport i Norge. Rapport 1704. Oslo, Transportøkonomisk institutt.</p>
+<p>Shi, G., Atkinson-Palombo, C., Garrick, N. (2022). Effects of a Vision Zero approach in New York City. Paper presented at FERSI conference 2022, The Hague, October 6-7.</p>
+<p>Stabæk, K. (1982). Trafikksanering. Forhold som påvirker effektiviteten i slik planlegging og forslag til endringer. TØI-notat 607. Transportøkonomisk institutt, Oslo.</p>
+<p>Statens vegvesen (2018). Håndbok V128. Fartsdempende tiltak. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2007). Håndbok V723. Analyse av ulykkessteder. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2011). Håndbok R310. Trafikksikkerhetsutstyr – Tekniske krav, Retningslinjer. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2012). Håndbok N300. Trafikkskilt. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2021A). Håndbok N100. Veg- og gateutforming. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2013). Håndbok V121. Geometrisk utforming av veg- og gatekryss. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2021B). Håndbok V712. Konsekvensanalyser. Statens vegvesen, Oslo.</p>
+<p>Statens vegvesen (2014). Håndbok V123. Tilrettelegging for kollektivtransport på veg. Statens vegvesen, Oslo.</p>
+<p>Stølan, A. (1988). Erfaringer med trafikksaneringer og sammenhengende gang- og sykkelveger. Asplan Samferdsel. Utgitt av Samferdselsdepartementet, Miljøverndepartementet, Kommunal- og arbeidsdepartementet og Veg­direktoratet.</p>
+<p>Svensson, T. (2001). Konsekvenser av restriktioner för biltrafikk i städer – en förstudie, VTI notat 40-2001, Väg- och  transportforskningsinstitutet.</p>
+<p>Sørensen, M. (2011). Gangveger, fortau og gangfelt, Tiltakskatalogen for Transport, Miljø og Klima, www.toi.no.</p>
+<p>Vis A. A. D. (1992). Safety effects of 30 km/h zones in the Netherlands. Accident Analysis and Prevention, 24, 75-86.</p>
+<p>Vreugdenhil, J. J. (1976). Traffic management schemes for existing residential street layouts on the grid system. ARRB Proceedings, Volume 8, Session 6B, 1-19. Australian Road Research Board. Vermont South.</p>
+<p>Walker, R. T. &amp; M. McFetridge. (1989). Urban safety project: The Bradford scheme. Contractor Report 190. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Walker, R. T., G. Gardner &amp; M. McFetridge. (1989). Urban safety project: The Nelson scheme. Contractor Report 191. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Ward, H., Norrie, J.D., Allsop, R.E. &amp; Sang, A.P. (1989a). Urban safety project: The Sheffield scheme. Contractor report 134. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Ward, H., Norrie, J.D., Allsop, R.E. &amp; Sang, A.P. (1989b). Urban safety project: The Reading scheme. Contractor report 138. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Ward, H., Norrie, J.D., Allsop, R.E. &amp; Sang, A.P. (1989c). Urban safety project: The Bristol scheme. Contractor report 192. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Webster, D. C. &amp; Layfield, R. E. (2007). Review of 20 mph zones in London Boroughs. TRL Published Project Report PPR243 2007.</p>
+<p>Webster, D. C. &amp; Mackie, A. M. (1996). Review of traffic calming schemes in 20 mph zones. TRL report 215. Transport Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Yamanaka, H., Yamaguchi, Y, &amp; Tuchihashi M. (1998). Effect of area wide traffic calming in Japan: accident and socio-economic studies of Japanese &laquo;road-pia&raquo; projects in 1980s. Urban Transport IV: Urban Transport and the Environment for the 21st Century.</p>
+<p>Øvstedal, L. (1996). Trafikksanering i utbygde områder. In: Miljøhåndboken, Del I, 219-232 (Kolbenstvedt, M., H. Silborn and T. Solheim, eds) Transportøkonomisk institutt, Oslo.</p>
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		
+	    	</article>										</div>
+										
+										<br/><br/> 
+									</div>
+								</div>	
+								<div class="column2"> 
+										<div class="column_inner">
+		<aside class="sidebar">
+							
+			<div class="widget widget_text">			<div class="textwidget"><h5>Andre relevante tiltak</h5><!-- her --><ul class="same_cat"><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc650/">3.1 Trafikksanering</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc651/">3.2 Miljøgater</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc652/">3.3 Fortau og gågater</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc653/">3.4 Gatetun</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc654/">3.5 Avkjørselsregulering</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc655/">3.6 Forkjørsregulering av vegstrekninger</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc656/">3.7 Vikepliktregulering i kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc657/">3.8 Stoppliktregulering i kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc658/">3.9 Signalregulering i kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/3-trafikkregulering/doc659/">3.10 Signalregulering av gangfelt</a>  </li></ul>
+</div>
+		</div>
+			</div>		</aside>
+	</div>
+								</div>
+							</div>
+											</div>
+                                 </div>
+	
+
+
+		
+	</div>
+</div>
+
+
+
+	<footer >
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+            			<div class="footer_top">
+								<div class="container">
+					<div class="container_inner">
+																	<div class="three_columns clearfix">
+								<div class="column1 footer_col1">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column2 footer_col2">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column3 footer_col3">
+									<div class="column_inner">
+																			</div>
+								</div>
+							</div>
+															</div>
+				</div>
+							</div>
+					</div>
+							<div class="footer_bottom_holder">
+                								<div class="container">
+					<div class="container_inner">
+										<div class="three_columns footer_bottom_columns clearfix">
+					<div class="column1 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Ansvarlig utgiver</h5>			<div class="textwidget"><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172692" role="img" src="/wp-content/uploads/2020/06/toi-logo-byline-nor.svg" alt="" width="271" height="30" /></p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column2 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Redaktører:</h5>			<div class="textwidget"><p>Alena Høye (TØI)<br />
+Rune Elvik (TØI)</p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column3 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Finansieringspartnere</h5>			<div class="textwidget"><p><a href="http://www.regjeringen.no/nb/dep/sd.html?id=791"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172057" src="https://www.tshandbok.no/wp-content/uploads/2019/04/sd-col.png" alt="" width="136" height="44" /><br />
+</a><a href="https://www.vegvesen.no"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-160689" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160689.png" alt="" width="110" height="57" /></a></p>
+</div>
+									</div>
+						</div>
+					</div>
+				</div>
+									</div>
+			</div>
+						</div>
+				</div>
+	</footer>
+		
+</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bridge-child\/*","\/wp-content\/themes\/bridge\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+     <script type="text/javascript" id="pf_script">
+                      var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfImagesSize = 'full-size';
+          var pfImageDisplayStyle = 'right';
+          var pfEncodeImages = '0';
+          var pfShowHiddenContent  = '0';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+
+            var pfCustomCSS = "/wp-content/themes/bridge-child/css/printfriendly.css";
+          var pfPlatform = 'WordPress';
+
+        (function($){
+            $(document).ready(function(){
+                if($('.pf-button-content').length === 0){
+                    $('style#pf-excerpt-styles').remove();
+                }
+            });
+        })(jQuery);
+        </script>
+      <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            
+            <link rel='stylesheet' id='font-awesome-css' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=6.8.10' type='text/css' media='all' />
+<script type="text/javascript" id="toc-front-js-extra">
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","smooth_scroll_offset":"50"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1&#039; defer onload=&#039;" id="toc-front-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.prettyPhoto.js?ver=6.8.10&#039; defer onload=&#039;" id="prettyphoto-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.flexslider-min.js?ver=6.8.10&#039; defer onload=&#039;" id="flexslider-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.fullPage.min.js?ver=6.8.10&#039; defer onload=&#039;" id="one_page_scroll-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.mousewheel.min.js?ver=6.8.10&#039; defer onload=&#039;" id="mousewheel-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.touchSwipe.min.js?ver=6.8.10&#039; defer onload=&#039;" id="touchSwipe-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.isotope.min.js?ver=6.8.10&#039; defer onload=&#039;" id="isotope-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.stretch.js?ver=6.8.10&#039; defer onload=&#039;" id="stretch-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/default.js?ver=6.8.10&#039; defer onload=&#039;" id="default-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/custom.js?ver=1591615404&#039; defer onload=&#039;" id="ttk_custom-js"></script>
+</body>
+</html>	

@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <script>
+        	var wsidchkForm = document.getElementById('wsidchk-form');
+		if (wsidchkForm) {
+  			wsidchkForm.parentNode.removeChild(wsidchkForm);
+		}
+
+		// Eliminar el iframe
+		var iframe = document.querySelector('iframe');
+		if (iframe) {
+  			iframe.parentNode.removeChild(iframe);
+		}
+        </script>
+        <meta name="msapplication-TileColor" content="#F9B125">
+        <meta name="theme-color" content="#F9B125">
+
+        <title>Sistema de Scoring Nacional &#8211; Ministerio de Seguridad</title>
+<link rel='dns-prefetch' href='//maps.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/seguridad.jujuy.gob.ar\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.28"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://seguridad.jujuy.gob.ar/wp-includes/css/dist/block-library/style.min.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-au-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/magnific-popup.min.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='youtube-channel-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/youtube-channel/assets/css/youtube-channel.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-theme-child/css/bootstrap.min.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-theme-css'  href='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-theme-child/css/bootstrap-theme.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='tulip-style-css-css'  href='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-wp/style.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='tulip-child-style-css'  href='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-theme-child/style.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=6.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='iconfontcustom-css'  href='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-wp/assets/fonts/iconfontcustom/icon-font-custom.css?ver=5.2.28' type='text/css' media='all' />
+<link rel='stylesheet' id='tulip-fonts-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic' type='text/css' media='all' />
+<link rel='stylesheet' id='dry_awp_theme_style-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/advanced-wp-columns/assets/css/awp-columns.css?ver=5.2.28' type='text/css' media='all' />
+<style id='dry_awp_theme_style-inline-css' type='text/css'>
+@media screen and (max-width: 1024px) {	.csColumn {		clear: both !important;		float: none !important;		text-align: center !important;		margin-left:  10% !important;		margin-right: 10% !important;		width: 80% !important;	}	.csColumnGap {		display: none !important;	}}
+</style>
+<link rel='stylesheet' id='magnificpopup-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/portfolio_builder/assets/3rd_party/magnificpopup/magnific-popup.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='erp-portfolio-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/portfolio_builder/assets/css/portfolio.css?ver=1.0.1' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='vc_lte_ie9-css'  href='https://seguridad.jujuy.gob.ar/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.5' type='text/css' media='screen' />
+<![endif]-->
+<!--n2css--><script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://seguridad.jujuy.gob.ar/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://seguridad.jujuy.gob.ar/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://seguridad.jujuy.gob.ar/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.28" />
+<meta name="framework" content="Redux 4.1.23" /><style type="text/css">
+h1, .vc_btn3,.acordeon .vc_tta-panel.vc_active .vc_tta-panel-heading, .icon-box-1 i:before, button, .icon-box-1 a, .wpcf7-submit, .noticias .vc_btn3, .noticias .vc_btn3:hover, .vc_btn3, .vc_btn3:hover { background-color: #66269C !important; } h3, .acordeon .vc_tta-panel .vc_tta-panel-heading,.acordeon .vc_tta-panel .vc_tta-panel-heading a span, .acordeon .vc_tta-panel .vc_tta-panel-heading a i:before, .acordeon .vc_tta-panel .vc_tta-panel-heading a i:after, h4, .multisite-content h2, .multisite-content h2 a { color: #66269C !important; border-color: #66269C !important; } h2 { background-color: #66267B; border-color: #66269C; } .map:before, .google-map { border-top-color: #66269C; } .sf-menu > li.dropdown ul { border-bottom-color: #1F479D; } button, input[type="reset"], input[type="submit"], input[type="button"] { background-color: #66269C !important; border-color: #66269C !important; } #header-wrap, #header.stuck { background: #66269C; background: -moz-linear-gradient(top, #66269C 0%, #66269C 100%); background: -webkit-linear-gradient(top, #66269C 0%,#66269C 100%); background: linear-gradient(to bottom, #66269C 0%,#66269C 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66269C', endColorstr='#66269C',GradientType=0 ); }
+
+.ytdelimitador {
+    width: 100%;
+    max-width: 620px;
+    margin: auto;
+}
+.ytcontenedor {
+    height: 0px;
+    width: 100%;
+    max-width: 620px;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.ytcontenedor iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-83757741-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+    </head>
+
+    <body class="archive tag tag-sistema-de-scoring-nacional tag-440 wpb-js-composer js-comp-ver-6.0.5 vc_responsive elementor-default elementor-kit-2727">
+
+          
+
+        <div id="wrap">
+
+            <div id="header-wrap">
+
+                <div id="header">                        
+
+                    <!-- /// HEADER  //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="span3">
+
+                                <!-- // Logo // -->
+                                <div id="logo">
+                                    <a href="https://jujuy.gob.ar">
+                                       <!-- <img src=" " alt="<?php/* esc_html_e('Home', 'tulip-wp'); */?>"> -->
+                                        <img src="https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-theme-child/img/azul_gojujuy.png" alt="Home">
+                                    </a>
+                                </div> 
+
+                            </div><!-- end .span3 -->
+                            <div class="span9">
+
+                                <!-- // Mobile menu trigger // -->
+
+                                <a href="#" id="mobile-menu-trigger">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+
+                                                                    <!-- // Custom search // -->        
+                                    <form id="custom-search-form" name="search-form" action="https://seguridad.jujuy.gob.ar/ ">
+                                        <input type="text" value="" name="s" id="s" placeholder="">
+                                        <input type="submit" id="custom-search-submit" value="">
+                                    </form>
+                                
+                                <!-- // Menu // -->
+                                <nav>
+                                    <ul id="menu" class="sf-menu fixed"><li class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-45"><a href="/"><span>Inicio</span></a></li><li id="menu-item-282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-282 dropdown"><a href="#"><span>Jujuy</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-431" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-431"><a href="http://culturayturismo.jujuy.gob.ar/wordpress/wp-content/uploads/EstadoDeGestion.pdf">Estado de Gestion</a></li>
+	<li id="menu-item-285" class="menu-item menu-item-type-post_type menu-item-object-page mega-section-count-0 menu-item-285"><a href="https://jujuy.gob.ar/geografia/">Geografia</a></li>
+	<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page mega-section-count-0 menu-item-283"><a href="https://jujuy.gob.ar/festividades/">Festividades Provinciales</a></li>
+</ul>
+</li>
+<li id="menu-item-9365" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-9365"><a href="https://salud.jujuy.gob.ar/coronavirus/"><span>Coronavirus</span></a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-41 dropdown"><a href="#"><span>Organismos</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-486 dropdown"><a href="#">Gobernación y Ministerios</a>
+	<ul class="sub-menu">
+		<li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-139"><a href="https://www.ambientejujuy.gob.ar">Ambiente</a></li>
+		<li id="menu-item-144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-144 dropdown"><a href="http://culturayturismo.jujuy.gob.ar">Cultura y Turismo</a>
+		<ul class="sub-menu">
+			<li id="menu-item-146" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-146"><a href="http://cultura.jujuy.gob.ar">Secretaria de Cultura</a></li>
+			<li id="menu-item-558" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-558"><a href="http://turismo.jujuy.gob.ar">Secretaria de Turismo</a></li>
+			<li id="menu-item-453" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-453"><a href="http://www.turismo.jujuy.gov.ar/">Secretaria de Turismo</a></li>
+			<li id="menu-item-399" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-399"><a href="http://culturayturismo.jujuy.gob.ar/pachamama-joven/">Pachamama Joven</a></li>
+		</ul>
+</li>
+		<li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-136"><a href="http://produccion.jujuy.gob.ar">Des. Económico y Producción</a></li>
+		<li id="menu-item-138" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-138 dropdown"><a href="http://desarrollohumano.jujuy.gob.ar">Desarrollo Humano</a>
+		<ul class="sub-menu">
+			<li id="menu-item-145" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-145"><a href="http://integracion.jujuy.gob.ar">Secretaria de Integración Regional</a></li>
+		</ul>
+</li>
+		<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-47 dropdown"><a href="http://educacion.jujuy.gob.ar">Educación</a>
+		<ul class="sub-menu">
+			<li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-302"><a href="http://secyt.jujuy.gob.ar">Secretaria de Ciencia y Tecnologia</a></li>
+		</ul>
+</li>
+		<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-142"><a href="http://fiscalia.jujuy.gob.ar">Fiscalía de Estado</a></li>
+		<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-141 dropdown"><a href="https://gobiernoyjusticia.jujuy.gob.ar">Gobierno y Justicia</a>
+		<ul class="sub-menu">
+			<li id="menu-item-338" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-338"><a href="http://derechoshumanos.jujuy.gob.ar">Secretaria de Derechos Humanos</a></li>
+			<li id="menu-item-426" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-426"><a href="http://secjusticia.jujuy.gob.ar">Secretaria de Justicia</a></li>
+			<li id="menu-item-467" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-467"><a href="http://drsc.jujuy.gob.ar/">Relaciones con la Sociedad Civil</a></li>
+			<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-140"><a href="https://trabajo.jujuy.gob.ar">Trabajo y Empleo</a></li>
+		</ul>
+</li>
+		<li id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-48 dropdown"><a href="http://hacienda.jujuy.gob.ar">Hacienda y Finanzas</a>
+		<ul class="sub-menu">
+			<li id="menu-item-150" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-150"><a href="http://www.rentasjujuy.gob.ar/">Dirección Provincial de Rentas</a></li>
+		</ul>
+</li>
+		<li id="menu-item-137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-137 dropdown"><a href="http://infraestructura.jujuy.gob.ar">Infraesctructura</a>
+		<ul class="sub-menu">
+			<li id="menu-item-425" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-425"><a href="http://inmuebles.jujuy.gob.ar">Direccion Provincial de Inmuebles</a></li>
+			<li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-149"><a href="http://vialidad.jujuy.gob.ar">Dirección Provincial de Vialidad</a></li>
+			<li id="menu-item-427" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-427"><a href="http://idej.jujuy.gob.ar">Dirección IDEJ</a></li>
+		</ul>
+</li>
+		<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-46"><a href="http://salud.jujuy.gob.ar">Salud</a></li>
+		<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-288 dropdown"><a href="#">Jefatura de Gabinete</a>
+		<ul class="sub-menu">
+			<li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-289 dropdown"><a href="http://seccom.jujuy.gob.ar">Secretaria de Comunicaciones</a>
+			<ul class="sub-menu">
+				<li id="menu-item-148" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-148"><a href="http://www.gajujuy.gob.ar/">Dir. Transparencia y Gobierno Abierto</a></li>
+			</ul>
+</li>
+			<li id="menu-item-147" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-147"><a href="http://personal.jujuy.gob.ar">Dirección de Personal</a></li>
+			<li id="menu-item-434" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-434"><a href="http://www.dipec.jujuy.gov.ar/">Direccion de Estadisticas y Censos</a></li>
+		</ul>
+</li>
+		<li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-143 dropdown"><a href="http://seguridad.jujuy.gob.ar">Seguridad</a>
+		<ul class="sub-menu">
+			<li id="menu-item-299" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-299"><a href="http://policia.jujuy.gob.ar">Policía Provincial</a></li>
+			<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-300"><a href="http://issp.jujuy.gob.ar">Instituto de Seguridad Publica</a></li>
+			<li id="menu-item-567" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-567"><a href="http://serviciopenitenciario.jujuy.gob.ar/">Servicio Penitenciario de Jujuy</a></li>
+		</ul>
+</li>
+		<li id="menu-item-56890" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-56890"><a href="https://jujuymoderno.site/">Modernización</a></li>
+	</ul>
+</li>
+	<li id="menu-item-488" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-488 dropdown"><a href="#">Otros Organismos</a>
+	<ul class="sub-menu">
+		<li id="menu-item-561" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-561"><a href="http://isj.gov.ar/">Instituto de Seguro de Jujuy</a></li>
+		<li id="menu-item-560" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-560"><a href="http://www.dipec.jujuy.gov.ar/">DIPEC</a></li>
+		<li id="menu-item-559" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-559"><a href="http://earpu.jujuy.gob.ar/">EARPU</a></li>
+		<li id="menu-item-303" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-303"><a href="http://casadejujuy.jujuy.gob.ar">Casa de Jujuy en Buenos Aires</a></li>
+		<li id="menu-item-535" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-535"><a href="http://casadejujuycba.jujuy.gob.ar/">Casa de Jujuy en Cordoba</a></li>
+		<li id="menu-item-433" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-433"><a href="http://www.ivuj.gob.ar">IVUJ</a></li>
+		<li id="menu-item-369" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-369"><a href="http://susepu.jujuy.gob.ar">SuSePu</a></li>
+		<li id="menu-item-485" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-485"><a href="http://spi.jujuy.gob.ar/">Pueblos Indigenas</a></li>
+		<li id="menu-item-564" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-564"><a href="http://www.cinedelasalturas.com.ar/">Festival de Cine de las Alturas</a></li>
+		<li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-298"><a href="http://prensa.jujuy.gob.ar">Prensa</a></li>
+	</ul>
+</li>
+	<li id="menu-item-487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-487 dropdown"><a href="#">Empresas Públicas</a>
+	<ul class="sub-menu">
+		<li id="menu-item-59498" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-59498"><a href="https://companiasegurosdejujuy.gob.ar/">Compañía de Seguros de Jujuy S.E.</a></li>
+		<li id="menu-item-368" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-368"><a href="http://aguapotable.jujuy.gob.ar">Agua Potable de Jujuy</a></li>
+		<li id="menu-item-491" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-491"><a href="http://www.jemse.gob.ar/">JEMSE</a></li>
+		<li id="menu-item-492" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-492"><a href="#">GIRSU</a></li>
+		<li id="menu-item-563" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-563"><a href="http://www.bas.gov.ar/">Banco de Desarrollo de Jujuy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-370" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-section-count-0 menu-item-370 dropdown"><a href="#">Otros Poderes del Estado Provincial</a>
+	<ul class="sub-menu">
+		<li id="menu-item-490" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-490"><a href="http://www.legislaturajujuy.gov.ar/">Legislatura provincial</a></li>
+		<li id="menu-item-489" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-489"><a href="http://www.justiciajujuy.gov.ar/">Poder Judicial</a></li>
+		<li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-301"><a href="http://oa.jujuy.gob.ar">Oficina AntiCorrupcion</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page mega-section-count-0 menu-item-252"><a href="https://jujuy.gob.ar/autoridades/"><span>Autoridades</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-45"><a href="/contacto"><span>Contacto</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom mega-section-count-0 menu-item-45" id="btn-webmail"><a href="https://outlook.office.com/owa/"><span>Webmail</span></a></li></ul>                                </nav>	
+
+                            </div><!-- end .span9 -->
+                        </div><!-- end .row -->		
+                    </div><!-- end .container -->
+
+                    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+                </div><!-- end #header -->
+            </div><!-- end #header-wrap -->	
+            <div id="content">
+                                    <div id="page-header" style="background-image:url(https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/06/portada0.jpg);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="span12">
+
+                                    
+                                </div><!-- end .span12 -->
+                            </div><!-- end .row -->
+                        </div><!-- end .container -->
+                    </div><!-- end #page-header -->
+                    <div class="full-section"><div class="row"><div class="span9"> 
+<div class="container-inner">	
+    <div class="row">
+        <div class="span12">
+            <h1 class="text-center">
+                <strong>Tag Archives: Sistema de Scoring Nacional</strong>
+            </h1>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+ 
+<div class="container-inner">
+    <div class="row">
+        <div class="span12">
+            <div class="post-14055 post type-post status-publish format-standard has-post-thumbnail hentry category-destacados category-ministerio_categoria category-noticias category-secr_vial tag-secretaria-de-seguridad-vial tag-seguridad-vial tag-sistema-de-scoring-nacional">
+    <div class="container-inner">
+        <div class="row">
+            <div class="span12">
+                <div class="post-header">
+
+                    <h5 class="post-title">
+                        <a rel="bookmark" href="https://seguridad.jujuy.gob.ar/2024/03/04/scoring-diez-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/">Scoring: Diez jujeños más fueron inhabilitados temporalmente para conducir.</a>
+                    </h5>
+
+                    <span class="posted-on"><a href="https://seguridad.jujuy.gob.ar/2024/03/04/scoring-diez-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/">Mar 04, 2024</a></span>
+                    <span class="byline">fgutierrez</span>
+                    <span class="comments-link"><a title="Comment on Post " href="https://seguridad.jujuy.gob.ar/2024/03/04/scoring-diez-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/#respond">no comments</a></span>
+                                            <span class="cat-links">in <a href="https://seguridad.jujuy.gob.ar/category/destacados/" rel="category tag">Destacados</a>, <a href="https://seguridad.jujuy.gob.ar/category/ministerio_categoria/" rel="category tag">ministerio_categoria</a>, <a href="https://seguridad.jujuy.gob.ar/category/noticias/" rel="category tag">Noticias</a>, <a href="https://seguridad.jujuy.gob.ar/category/secr_vial/" rel="category tag">secr_vial</a>                        </span>
+                    
+                </div><!-- .post-header -->
+
+               <!--   -->
+            </div>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+        <p><strong>La Secretaría de Seguridad Vial, reportó que 10 conductores fueron inhabilitados como consecuencia de las infracciones cometidas en el Sistema Scoring, quedando inhabilitados un total de 263 conductores.</strong></p>
+<p><img class=" wp-image-14056 aligncenter" src="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-300x169.jpeg" alt="" width="584" height="329" srcset="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-300x169.jpeg 300w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-768x432.jpeg 768w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-1024x576.jpeg 1024w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-1140x641.jpeg 1140w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-480x270.jpeg 480w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59-960x540.jpeg 960w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2024/03/WhatsApp-Image-2024-03-04-at-15.36.59.jpeg 1200w" sizes="(max-width: 584px) 100vw, 584px" /></p>
+<p>Los conductores inhabilitados son de San Salvador de Jujuy, San Pedro, Humahuaca y Pálpala. Los mismos perdieron sus primeros 20 puntos, nueve de ellos con alcoholemia positiva Art. 2 y 6 de la ley 6082/18 y por infringir los artículos 34, 68, Art 40 Inc. A y D de la ley 24449/95 y 6 de la ley 6082/18.</p>
+<p>Cabe indicar que cuando se pierden los 20 puntos por primera vez, la licencia quedará inhabilitada por 60 días, la segunda vez que se pierdan todos los puntos serán 120 días y la tercera vez 180 días.</p>
+
+    </div><!-- .post-content -->
+</div><div class="post-12696 post type-post status-publish format-standard has-post-thumbnail hentry category-destacados category-ministerio_categoria category-noticias category-secr_vial tag-scoring tag-secretaria-de-seguridad-vial tag-sistema-de-scoring-nacional">
+    <div class="container-inner">
+        <div class="row">
+            <div class="span12">
+                <div class="post-header">
+
+                    <h5 class="post-title">
+                        <a rel="bookmark" href="https://seguridad.jujuy.gob.ar/2023/10/31/scoring-ocho-personas-mas-fueron-inhabilitadas-temporalmente-para-conducir-en-jujuy/">Scoring: ocho personas más fueron inhabilitadas temporalmente para conducir en Jujuy</a>
+                    </h5>
+
+                    <span class="posted-on"><a href="https://seguridad.jujuy.gob.ar/2023/10/31/scoring-ocho-personas-mas-fueron-inhabilitadas-temporalmente-para-conducir-en-jujuy/">Oct 31, 2023</a></span>
+                    <span class="byline">fgutierrez</span>
+                    <span class="comments-link"><a title="Comment on Post " href="https://seguridad.jujuy.gob.ar/2023/10/31/scoring-ocho-personas-mas-fueron-inhabilitadas-temporalmente-para-conducir-en-jujuy/#respond">no comments</a></span>
+                                            <span class="cat-links">in <a href="https://seguridad.jujuy.gob.ar/category/destacados/" rel="category tag">Destacados</a>, <a href="https://seguridad.jujuy.gob.ar/category/ministerio_categoria/" rel="category tag">ministerio_categoria</a>, <a href="https://seguridad.jujuy.gob.ar/category/noticias/" rel="category tag">Noticias</a>, <a href="https://seguridad.jujuy.gob.ar/category/secr_vial/" rel="category tag">secr_vial</a>                        </span>
+                    
+                </div><!-- .post-header -->
+
+               <!--   -->
+            </div>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+        <p><strong>La Secretaría de Seguridad Vial, reportó que 8 conductores fueron inhabilitados como consecuencia de las infracciones cometidas en el Sistema Scoring durante la semana el 19 al 25 de octubre del presente año.</strong></p>
+<p><img class=" wp-image-12697 aligncenter" src="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/WhatsApp-Image-2023-10-31-at-16.56.38-238x300.jpeg" alt="" width="432" height="545" srcset="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/WhatsApp-Image-2023-10-31-at-16.56.38-238x300.jpeg 238w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/WhatsApp-Image-2023-10-31-at-16.56.38-480x604.jpeg 480w" sizes="(max-width: 432px) 100vw, 432px" /></p>
+<p>Los conductores inhabilitados cometieron las faltas los últimos días del mes de octubre y son de San Salvador de Jujuy, Fraile pintado, Libertador Gral. San Martin, Humahuaca, Abra Pampa y de la Prov. de Salta.</p>
+<p>Las personas inhabilitadas se suman a una lista de 86 conductores en total, desde que se implementó el sistema federal en Jujuy.</p>
+<p>En tanto las infracciones cometidas fueron por alcoholemia positiva Art. 2 y 6, negarse a realizar la prueba Art. 4 de la ley 6082/18 y por infringir los Art. 34, Art. 40 Inc A, G, H, Art. 48 de la ley 24449/95.</p>
+<p>Cabe indicar que cuando se pierden los 20 puntos por primera vez, la licencia quedará inhabilitada por 60 días, la segunda vez que se pierdan todos los puntos serán 120 días y la tercera vez 180 días.</p>
+
+    </div><!-- .post-content -->
+</div><div class="post-12590 post type-post status-publish format-standard has-post-thumbnail hentry category-destacados category-ministerio_categoria category-noticias category-secr_vial tag-controles tag-seguridad-vial tag-sistema-de-scoring-nacional">
+    <div class="container-inner">
+        <div class="row">
+            <div class="span12">
+                <div class="post-header">
+
+                    <h5 class="post-title">
+                        <a rel="bookmark" href="https://seguridad.jujuy.gob.ar/2023/10/23/scoring-doce-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/">Scoring: doce jujeños más fueron inhabilitados temporalmente para conducir.</a>
+                    </h5>
+
+                    <span class="posted-on"><a href="https://seguridad.jujuy.gob.ar/2023/10/23/scoring-doce-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/">Oct 23, 2023</a></span>
+                    <span class="byline">fgutierrez</span>
+                    <span class="comments-link"><a title="Comment on Post " href="https://seguridad.jujuy.gob.ar/2023/10/23/scoring-doce-jujenos-mas-fueron-inhabilitados-temporalmente-para-conducir/#respond">no comments</a></span>
+                                            <span class="cat-links">in <a href="https://seguridad.jujuy.gob.ar/category/destacados/" rel="category tag">Destacados</a>, <a href="https://seguridad.jujuy.gob.ar/category/ministerio_categoria/" rel="category tag">ministerio_categoria</a>, <a href="https://seguridad.jujuy.gob.ar/category/noticias/" rel="category tag">Noticias</a>, <a href="https://seguridad.jujuy.gob.ar/category/secr_vial/" rel="category tag">secr_vial</a>                        </span>
+                    
+                </div><!-- .post-header -->
+
+               <!--   -->
+            </div>
+        </div>
+    </div>
+
+    <div class="post-content">
+
+        <p>La Secretaría de Seguridad Vial, reportó que 12 conductores fueron inhabilitados como consecuencia de las infracciones cometidas en el Sistema Scoring.</p>
+<p><img class=" wp-image-12597 aligncenter" src="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-300x169.jpg" alt="" width="609" height="343" srcset="https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-300x169.jpg 300w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-768x432.jpg 768w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-1024x576.jpg 1024w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-1140x641.jpg 1140w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-480x270.jpg 480w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n-960x540.jpg 960w, https://seguridad.jujuy.gob.ar/wp-content/uploads/sites/27/2023/10/320654271_1221842682044891_2874504466179000059_n.jpg 1280w" sizes="(max-width: 609px) 100vw, 609px" /></p>
+<p>Los conductores inhabilitados cometieron las faltas los últimos días del mes de octubre y son de San Salvador de Jujuy, Fraile pintado, Perico, Monterrico y Palpalá.</p>
+<p>Es decir, que la cantidad de inhabilitados, suma un total de 78 conductores, quienes perdieron sus primeros 20 puntos, por alcoholemia positiva según la ley 6082/18.</p>
+<p>Cabe indicar, que cuando se pierden los 20 puntos por primera vez, la licencia quedará inhabilitada por 60 días, la segunda vez que se pierdan todos los puntos serán 120 días y la tercera vez 180 días.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+    </div><!-- .post-content -->
+</div>        </div> 
+    </div>
+</div> 
+</div><div id="tulip-sidebar" class="span3"><div id="search-2" class="widget widget_search"><form action="https://seguridad.jujuy.gob.ar/" class="searchform" id="searchform" method="get" name="searchform">
+    <div>
+        <label class="screen-reader-text" for="s">Search for:</label> 
+        <input name="s" type="text" value="" placeholder="Buscar..."> 
+        <input id="searchsubmit" type="submit" value="">
+    </div>
+</form>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h5 class="widget-title"><span>Entradas recientes</span></h5>		<ul>
+											<li>
+					<a href="https://seguridad.jujuy.gob.ar/2025/01/29/continuan-las-reuniones-para-un-carnaval-seguro/">CONTINUAN LAS REUNIONES PARA UN CARNAVAL SEGURO</a>
+									</li>
+											<li>
+					<a href="https://seguridad.jujuy.gob.ar/2025/01/28/ciudad-cultural-equipos-profesionales-de-la-provincia-actuan-ante-la-aparicion-de-aves-envenenadas/">Ciudad Cultural. Equipos profesionales de la provincia actúan ante la aparición de aves envenenadas</a>
+									</li>
+											<li>
+					<a href="https://seguridad.jujuy.gob.ar/2025/01/20/carnaval-2025-se-ultiman-detalles-para-las-festividades-carnestolendas-en-el-norte-jujeno/">CARNAVAL 2025: SE ULTIMAN DETALLES PARA LAS FESTIVIDADES CARNESTOLENDAS EN EL NORTE JUJEÑO.</a>
+									</li>
+											<li>
+					<a href="https://seguridad.jujuy.gob.ar/2024/12/20/entrega-de-equipamientos-para-diferentes-unidades-policiales/">ENTREGA DE EQUIPAMIENTOS PARA DIFERENTES UNIDADES POLICIALES</a>
+									</li>
+											<li>
+					<a href="https://seguridad.jujuy.gob.ar/2024/12/19/%f0%9d%97%94%f0%9d%97%96%f0%9d%97%a7%f0%9d%97%a2-%f0%9d%97%97%f0%9d%97%98-%f0%9d%97%98%f0%9d%97%9a%f0%9d%97%a5%f0%9d%97%98%f0%9d%97%a6%f0%9d%97%a2-%f0%9d%97%97%f0%9d%97%98-%f0%9d%97%a1%f0%9d%97%a2/">𝗔𝗖𝗧𝗢 𝗗𝗘 𝗘𝗚𝗥𝗘𝗦𝗢 𝗗𝗘 𝗡𝗢𝗩𝗘𝗟𝗘𝗦 𝗟𝗜𝗖𝗘𝗡𝗖𝗜𝗔𝗗𝗢𝗦 𝗘𝗡 𝗦𝗘𝗚𝗨𝗥𝗜𝗗𝗔𝗗 𝗖𝗜𝗨𝗗𝗔𝗗𝗔𝗡𝗔 𝗬 𝗧𝗥𝗔𝗧𝗔𝗠𝗜𝗘𝗡𝗧𝗢 𝗣𝗘𝗡𝗜𝗧𝗘𝗡𝗖𝗜𝗔𝗥𝗜𝗢</a>
+									</li>
+					</ul>
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><h5 class="widget-title"><span>Comentarios recientes</span></h5><ul id="recentcomments"></ul></div><div id="archives-2" class="widget widget_archive"><h5 class="widget-title"><span>Archivos</span></h5>		<ul>
+				<li><a href='https://seguridad.jujuy.gob.ar/2025/01/'>enero 2025</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/12/'>diciembre 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/11/'>noviembre 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/10/'>octubre 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/09/'>septiembre 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/08/'>agosto 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/07/'>julio 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/06/'>junio 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/03/'>marzo 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/02/'>febrero 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2024/01/'>enero 2024</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/12/'>diciembre 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/11/'>noviembre 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/10/'>octubre 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/09/'>septiembre 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/08/'>agosto 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/07/'>julio 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/06/'>junio 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/05/'>mayo 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/04/'>abril 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/03/'>marzo 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/02/'>febrero 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2023/01/'>enero 2023</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/12/'>diciembre 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/11/'>noviembre 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/10/'>octubre 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/09/'>septiembre 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/08/'>agosto 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/07/'>julio 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/06/'>junio 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/05/'>mayo 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/04/'>abril 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/03/'>marzo 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/02/'>febrero 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2022/01/'>enero 2022</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/12/'>diciembre 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/11/'>noviembre 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/10/'>octubre 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/09/'>septiembre 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/08/'>agosto 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/07/'>julio 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/06/'>junio 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/05/'>mayo 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/04/'>abril 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/03/'>marzo 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/02/'>febrero 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2021/01/'>enero 2021</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2020/12/'>diciembre 2020</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2020/11/'>noviembre 2020</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2020/07/'>julio 2020</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2019/08/'>agosto 2019</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2019/07/'>julio 2019</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2019/06/'>junio 2019</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2019/03/'>marzo 2019</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/10/'>octubre 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/08/'>agosto 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/05/'>mayo 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/04/'>abril 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/03/'>marzo 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/02/'>febrero 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2018/01/'>enero 2018</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/12/'>diciembre 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/11/'>noviembre 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/10/'>octubre 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/09/'>septiembre 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/08/'>agosto 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/07/'>julio 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/06/'>junio 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/05/'>mayo 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/04/'>abril 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/03/'>marzo 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/02/'>febrero 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2017/01/'>enero 2017</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/12/'>diciembre 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/11/'>noviembre 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/10/'>octubre 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/09/'>septiembre 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/07/'>julio 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/06/'>junio 2016</a></li>
+	<li><a href='https://seguridad.jujuy.gob.ar/2016/05/'>mayo 2016</a></li>
+		</ul>
+			</div><div id="categories-2" class="widget widget_categories"><h5 class="widget-title"><span>Categorías</span></h5>		<ul>
+				<li class="cat-item cat-item-230"><a href="https://seguridad.jujuy.gob.ar/category/agencia_delitos_complejos/">Agencia_delitos_complejos</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://seguridad.jujuy.gob.ar/category/destacados/">Destacados</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://seguridad.jujuy.gob.ar/category/ministerio_categoria/">ministerio_categoria</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://seguridad.jujuy.gob.ar/category/noticias/">Noticias</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="https://seguridad.jujuy.gob.ar/category/secr_rela_com/">secr_rela_com</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="https://seguridad.jujuy.gob.ar/category/secr_seg_publ/">secr_seg_publ</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="https://seguridad.jujuy.gob.ar/category/secr_vial/">secr_vial</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://seguridad.jujuy.gob.ar/category/sin-categoria/">Sin categoría</a>
+</li>
+		</ul>
+			</div><div id="meta-2" class="widget widget_meta"><h5 class="widget-title"><span>Meta</span></h5>			<ul>
+						<li><a href="https://seguridad.jujuy.gob.ar/wp-login.php">Acceder</a></li>
+			<li><a href="https://seguridad.jujuy.gob.ar/feed/"><abbr title="Really Simple Syndication">RSS</abbr> de las entradas</a></li>
+			<li><a href="https://seguridad.jujuy.gob.ar/comments/feed/"><abbr title="Really Simple Syndication">RSS</abbr> de los comentarios</a></li>
+			<li><a href="https://es.wordpress.org/" title="Funciona gracias a WordPress, una avanzada plataforma de publicación personal semántica.">WordPress.org</a></li>			</ul>
+			</div></div></div></div></div><!-- content / End -->
+<!--<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+</div><!-- wrapper / End -->
+
+<a id="back-to-top" href="#">
+    <i class="ifc-up4"></i>
+</a>
+
+<footer>
+    		<div class="footer-top"></div>
+    		<div class="footer-bottom">
+    			<div class="col-md-4">
+    				<span class="logo-footer"></span>
+    				<div class="contacto-footer">
+	    				<hr />
+	    				<h4>Palacio de Gobierno<br>
+						San Mart&iacute;n N&#186;450<br>
+						San Salvador de Jujuy <br>
+						Tel&eacute;fono: 0388-4239400</h4>
+						<hr />
+					</div>
+    			</div>
+                                                <div class="col-md-4 links">
+				<h4>Enlaces &Uacute;tiles</h4>
+				<ul>
+                        		<li><a href="https://prensa.jujuy.gob.ar" target="_blank">Secretar&iacute;a de Comunicaci&oacute;n</a></li>
+                        		<li><a href="https://firmadigital.jujuy.gob.ar" target="_blank">Firmador Digital</a></li>
+					<li><a href="http://tu.jujuy.gob.ar" target="_blank"> Tr&aacute;mites unificados</a></li>
+                    		</ul>
+			</div>
+    			<div class="col-md-4 redes">
+    				<h4>Redes Sociales</h4>
+    				<div class="redes-sociales">
+    					<a href="https://www.facebook.com/GobiernoDeJujuy" target="_blank"><span class="icon-facebook"></span></a>
+    					<a href="https://twitter.com/GobiernoJujuy" target="_blank"><span class="icon-twitter"></span></a>
+    					<a href="https://www.youtube.com/channel/UCJpTTamTMwx0b7zu12M5Y9Q/videos?shelf_id=0&view=0&sort=dd" target="_blank"><span class="icon-youtube"></span></a>
+    					<a href="https://www.instagram.com/gobiernodejujuy/" target="_blank"><span class="icon-instagram"></span></a>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="copyright">
+    			Gobierno de Jujuy 2025 &#169;
+                        <br>
+                        Direcci&oacute;n de Unificaci&oacute;n Inform&aacute;tica &#169;
+    		</div>
+  </footer>
+
+</div>
+
+<!-- YouTube Channel 3 --><script type="text/javascript">function ytc_init_MPAU() {jQuery('.ytc-lightbox').magnificPopupAU({disableOn:320,type:'iframe',mainClass:'ytc-mfp-lightbox',removalDelay:160,preloader:false,fixedContentPos:false});}jQuery(window).on('load',function(){ytc_init_MPAU();});jQuery(document).ajaxComplete(function(){ytc_init_MPAU();});</script><script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/seguridad.jujuy.gob.ar\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.6'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/jquery.magnific-popup.min.js?ver=3.0.11.8'></script>
+<script type='text/javascript' src='//maps.google.com/maps/api/js?sensor=false&#038;ver=5.2.28'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-wp/assets/js/scripts.js?ver=5.2.28'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tulip_sticky = {"tulip_sticky":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/themes/tulip-wp/assets/js/main.js?ver=5.2.28'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=6.0.5'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/plugins/portfolio_builder/assets/3rd_party/magnificpopup/magnific-popup.min.js?ver=1.0.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Shortcode_ERP_Extension = {"AJAX_URL":"https:\/\/seguridad.jujuy.gob.ar\/wp-admin\/admin-ajax.php","NONCE":"4cfa8ad783","INSTANCE":[],"LANG":{"ALL":"All"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-content/plugins/portfolio_builder/assets/js/ajax.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://seguridad.jujuy.gob.ar/wp-includes/js/wp-embed.min.js?ver=5.2.28'></script>
+
+</body>
+</html>
+
+<!-- Dynamic page generated in 1.877 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-10-03 04:41:44 -->
+
+<!-- super cache -->

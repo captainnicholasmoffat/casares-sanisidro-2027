@@ -1,0 +1,5462 @@
+
+=== PAGINA 1 ===
+How Do People React to Income-Based Fines?
+Evidence from Speeding Tickets Discontinuities∗
+Martti Kaila
+University of Glasgow
+June 2, 2026
+Abstract
+This paper studies the impact of income-based criminal punishments on crime. In
+Finland, speeding tickets become income-dependent if the driver’s speed exceeds the
+speeding limit by more than 20 km/h, leading to a substantial jump in the size of
+the speeding ticket. Contrary to predictions of a traditional Becker model, individuals
+do not bunch below the fine hike. Instead, the speeding distributions are smooth at
+the cutoff. However, I demonstrate that the size of the realized speeding ticket has
+sizable, but short-lived, impacts on reoffending. I use a regression discontinuity design
+to show that fines that are, on average, 200 euros larger decrease reoffending by 15
+percent in the following six months. The drop in reoffending is driven by high-income
+individuals facing the highest fine at the cutoff. I estimate that a fixed fine hike that
+matches the current deterrence effect would raise the fine increase faced by the bottom
+income quartile by about 300% at the cutoff, relative to the increase they face under the
+current income-based schedule. My empirical results are consistent with an explanation
+that people operate under information frictions. To illustrate this, I construct a Becker
+model with misperception and learning that can explain all the empirical findings.
+∗martti.kaila@glasgow.ac.uk marttikaila.com I am particularly thankful for Kristiina Huttunen, Emily
+Nix, Roope Uusitalo, and Markus J¨antti, who have provided guidance, help, and inspiration for this project.
+I thank Jennifer Doleac, Daniel Hauser, Randi Hjalmarsson, Ramin Izadi, Tuomas Kosonen, Dave Macdon-
+ald, Tuomas Matikka, Teemu Pekkarinen, Tuomas Pekkarinen, Mikko Silliman, Christian Traxler, and Tuuli
+Vanhapelto for helpful comments and discussions. In addition, I thank seminar participants at Aalto Uni-
+versity, Bocconi University, CES IFO Labor Economics Conference, EALE Conference, Helsinki GSE Labor
+and Public Economics Workshop, Criminological Seminar at the University of Helsinki, Vrije Universiteit
+Amsterdam, and University of Glasgow.
+
+=== PAGINA 2 ===
+1
+Introduction
+One of the primary roles of government is to deter people from committing actions that cause
+harm to others. For example, since traffic accidents are the most common unnatural cause
+of death globally (WHO, 2017), governments worldwide use speeding tickets to discourage
+drivers from driving at speeds that pose a danger to others.
+Such sanctions typically
+increase with offense severity, consistent with standard economic theory (Becker, 1968). In
+some countries, fines also scale with offenders’ incomes. Yet little is known about how these
+income-based fines affect behavior across the income distribution.
+This paper studies how income-based fines affect behavior, using high-quality register
+data and a unique context where the magnitude of fines increases with a person’s income.
+Specifically, in Finland, speeding tickets become income-dependent if the driver’s speed
+exceeds the limit by more than 20 km/h. Fines are allowed to increase without an upper
+limit at the cutoff. This policy means that high-income drivers have a substantial incentive
+to slow and bunch below the income-based threshold, since failing to avoid the income-based
+cutoff can be very expensive. For example, in 2019, the police assigned NHL ice hockey
+player Rasmus Ristolainen an income-based speeding ticket equal to approximately 120,000
+euros.1
+The first key result of the paper is that individuals ignore the vast discontinuous jumps
+in the severity of the punishment. This directly contradicts the seminal model of Becker
+(1968), which predicts that people should react to discontinuities in the price of speeding at
+the 20 km/h cutoff by slowing down and bunching just below the income-based fine cutoff.
+Specifically, working with the police in Finland, I obtained detailed police speeding ticket
+data which I link to administrative tax data. Using this data, I find zero excess mass below
+the income-based fine cutoff in the speeding distributions. Surprisingly, even high-income
+drivers fail to bunch below the cutoff, even though they face a considerable incentive to
+avoid the income-based fine.
+The rest of the paper focuses on understanding why people ignore this stark discontinuity
+in punishments and the broader implications of an income-based versus fixed fine system. I
+propose two potential explanations that could attenuate individuals’ reactions to incentives,
+both of which have been previously applied in other non-crime contexts (Chetty, 2012;
+Kleven and Waseem, 2013). First, I examine the possibility of information frictions: drivers
+are unaware of the system’s details, leading to suboptimal speed decisions around the cutoff.
+Second, I consider the possibility of adjustment costs that cause individuals not to react to
+1Finnish and international media frequently cover the Finnish income-based fine system. See, for example,
+articles by The New York Times and The Atlantic.
+1
+
+=== PAGINA 3 ===
+the cutoff. The adjustment costs explanation posits that individuals operate under perfect
+information but neglect the cutoff since optimization is mentally too costly relative to the
+expected punishment.
+Both of these possible frictions can generate smooth speed distributions around the
+discontinuity ex-ante, but the two friction types imply very different predictions on how
+realized fines should affect recidivism ex-post. If individuals react to a realized fine, then
+this reaction suggests imperfect information, with individuals learning from the punishment.
+In contrast, under the adjustment cost story, the experienced fine should not change an
+individual’s behavior since the ticket is just a realization of a rational bet.
+The second main result of the paper is that people do react to the severity of realized
+punishments ex-post. Since the speeding distributions are continuous at the cutoff, I use a
+regression discontinuity design (RDD) to study how larger realized fines, due to the income-
+based system, affect reoffending. According to my RDD estimates, individuals assigned
+larger fines due to the income-based fine system are less likely to commit another traffic
+offense in the short term.
+The impact of larger fines on reoffending peaks around 4-8
+months after the income-based fine. Those assigned, on average, a 200 euro larger fine
+are approximately 2-3 percentage points less likely to commit another traffic crime in the
+following 4-8 months. Compared to the average speeding behavior of the speeders who
+receive a smaller fixed fine, this estimate implies a 15-20 percent reduction in recidivism.
+In addition, reoffenders’ speeding distributions evolve smoothly at the income-based fine
+cutoff. Hence, larger fines trigger an extensive margin response.
+The RDD results lead to two conclusions. First, they suggest that individuals learn
+from punishments, implying that information frictions at least partly cause the smooth
+distribution around the discontinuity. Second, this learning response results in less speeding
+in the short term after fines are realized, but the fine hikes do not provide deterrence ex-ante.
+Importantly, the specific deterrence response is sharply heterogeneous by income. I show
+that high-income individuals receiving larger fines at the income-based cutoff are less likely
+to reoffend in the short term than low-income individuals receiving smaller fines. To do this,
+I study how the RDD estimates differ by income quartiles. The fine jumps by around € 50
+(500) in the bottom (top) income category. For cumulative reoffending over six months, the
+point estimate is close to zero (0.1 pp.) for the bottom quartile, while in the top quartile
+the point estimate of -4.5 pp. is double the main estimate. In addition, the different income
+quartile groups respond similarly to small fixed-fine jumps. This suggests that high-income
+individuals’ stronger reaction to larger fines is mainly because of the larger fines and not
+because low- and high-income drivers differ on some other dimension.
+2
+
+=== PAGINA 4 ===
+Lastly, my RDD results suggest that the impact of the larger fine on recidivism fades
+out over time. The effect of larger fines becomes statistically insignificant 12 months after
+the initial speeding incident. This result suggests that despite the heftier fines leading to a
+substantial short-term learning reaction, drivers may forget in the long run.
+What model could simultaneously explain smooth speeding distributions, reactions to
+realized fines, and possible long-run fade-out in the effect of fines? To rationalize these
+findings, I construct a Becker model with misspecification and learning to capture drivers’
+behavior. The model builds on the idea that if individuals find pricing schemes too complex
+to understand, they may use the so-called ”ironing” heuristic, where people approximate
+marginal prices with average prices (Rees-Jones and Taubinsky, 2019). Drawing from this
+insight, I assume that drivers find the actual penalty function too complex. Therefore, they
+make speeding decisions using a rule of thumb that the speeding ticket increases linearly with
+speed. Based on their speed, drivers may receive a fine. If the fine is larger than predicted,
+they conclude that the relationship between speed and fine is steeper than expected and
+update their beliefs accordingly.
+I show that this Becker model with misperception and learning rationalizes all my em-
+pirical findings. First, the ”ironing” heuristic causes drivers to ignore the fine discontinuity,
+leading to a smooth speeding distribution. Second, due to the jump in the true penalty
+function, drivers may receive larger fines than they expected. This steepens their linearized
+penalty function and reduces speeding in the next period. Furthermore, the larger the true
+discontinuity in the fine, the more significant the driver’s reaction ex-post. Finally, I show
+that when individuals learn with the misspecified model, there are drivers whose beliefs and
+actions do not converge but follow cycles.2 This is consistent with the fade-out over time
+in the impact of receiving a larger-than-expected fine at the discontinuity.
+In the third and final main empirical result, I use my heterogeneous treatment-effect
+estimates to quantify the distributional consequences of replacing income-based fines with
+a fixed fine increase that holds reoffending constant at the 20 km/h cutoff. The implied
+safety-neutral increase is €215. Although the size is close to the average observed increase
+(€204), the fixed fine reallocates penalties sharply across the income distribution. Bottom-
+quartile drivers would face an increase of €215, up from €52 under the current system, while
+top-quartile drivers would see their increase fall from €499 to €215. In levels, the implied
+fixed fine above the cutoff would amount to 40% of monthly net income for bottom-quartile
+drivers, compared with about 25% under the current income-based system.
+This paper provides new evidence on how income-based fines shape deterrence and the
+2An extensive theoretical literature studies learning when an individual’s model is misspecified (See, for
+example, Berk (1966), Bohren and Hauser (2021), Esponda and Pouzo (2016), or Nyarko (1991)).
+3
+
+=== PAGINA 5 ===
+incidence of monetary sanctions across the income distribution. First, I show that income-
+based fines do not generate a deterrence response at the 20 km/h cutoff, despite large
+financial incentives to slow down. This speaks to the literature on general deterrence, which
+examines how the threat of punishment discourages crime in the general public, a central
+question in the economics of crime. Economic theory predicts that harsher punishments
+should deter crime, but the evidence is mixed (Chalfin and McCrary, 2017).
+Lee and
+McCrary (2017) find little behavioral response to the sharp increase in punishment severity
+at age 18. In contrast, Traxler et al. (2018) show clear evidence of bunching below speeding
+fine notches in Germany, where the fine schedule is stable and identical across drivers.
+The contrast between my findings and those of Traxler et al. (2018) underscores the im-
+portance of institutional context. Individuals may react strongly to simple and predictable
+incentives but ignore large ones when the structure is complex or not salient. This dis-
+tinction matters for policy design. If individuals misperceive or fail to understand complex
+sanctioning rules, as my results suggest, then policy effectiveness may depend less on the
+size of penalties and more on their salience and comprehensibility.3
+Second, I show that income-based fines reduce reoffending, with the strongest responses
+among high-income drivers who face the largest fine increases. This finding contributes to
+the literature on specific deterrence effects of punishment, which examines how experiencing
+punishment deters individuals (Gehrsitz, 2017; Hansen, 2015; Finlay et al., 2023; Drago
+et al., 2009).4 My paper is most closely related to Duˇsek and Traxler (2022) and Goncalves
+and Mello (2023).5 Duˇsek and Traxler (2022) find that speeding tickets reduce reoffending
+at an extensive margin (no ticket vs.
+ticket) but not at an intensive margin (low vs.
+high ticket). In contrast, Goncalves and Mello (2023) observe that a speeding ticket hike
+decreases future speeding at the intensive margin. I extend this evidence by showing that the
+behavioral response scales sharply with fine size across income groups. High-income drivers
+are also more likely to speed and reoffend, suggesting that income-based fines concentrate
+behavioral change among individuals with higher baseline risk.
+Combining these results, I quantify the distributional consequences of replacing income-
+based fines with a safety-neutral fixed fine, thereby providing a direct, policy-relevant com-
+parison of the two systems while holding reoffending constant. A safety-neutral fixed fine
+3Prior work highlights the importance of speed limits and enforcement for traffic safety (Bauernschuster
+and Rekers, 2022; DeAngelo and Hansen, 2014; van Benthem, 2015).
+4The term ”specific deterrence” is more common in criminology (Doleac, 2017), while economists typically
+frame such behavior as information updating (Chalfin and McCrary, 2017). Identifying specific deterrence
+effects is difficult, as punishments may influence recidivism through alternative channels, such as peer effects.
+Studies of incarceration often capture multiple mechanisms, making results context-dependent. For example,
+Aizer and Doyle (2015) and Mueller-Smith (2014) find that incarceration increases recidivism, whereas
+Bhuller et al. (2020) and Rose and Shem-Tov (2021) find the opposite.
+5Other notable papers that study learning in the context of crime and law enforcement are by Banerjee
+et al. (2019), Philippe (2022), Rincke and Traxler (2011), Drago et al. (2020), and Lochner (2007).
+4
+
+=== PAGINA 6 ===
+would be substantially more regressive, shifting a larger share of the financial burden to-
+ward low-income drivers, who are more likely to experience financial hardship from fines
+(Mello, 2024). Because a fixed fine would sharply reduce penalties for high-income drivers
+while pushing penalties for low-income drivers further into the range in which fine collection
+rates may decline (Norris and Rose, 2024), moving to a fixed-fine cutoff could also reduce
+government revenue.
+Finally, my paper also relates to the literature studying individuals’ reactions to discon-
+tinuities in the choice sets and the role of optimization frictions (for a review, see Kleven
+(2016)). A common finding is that discontinuities, for example, in tax rates, produce ev-
+ident bunching responses (Bastani and Selin, 2014; Chetty et al., 2011, 2013; Kleven and
+Waseem, 2013; Harju et al., 2019). However, these bunching reactions often translate into
+small elasticities due to optimization frictions. I contribute to this literature by document-
+ing that people may completely ignore substantial price jumps due to information friction
+but learn from price signals. This evidence is consistent with the findings in other contexts
+that people do not use marginal prices in decision-making (Rees-Jones and Taubinsky, 2019;
+Kostøl and Myhre, 2021; Ito, 2014).
+The remainder of the paper is organized as follows. Section 2 provides institutional
+details and describes the data. Section 3 shows the speeding distribution. Section 4 inves-
+tigates whether the size of the speeding ticket impacts recidivism. Section 5 introduces a
+framework that seeks to rationalize my findings. Section 6 uses the heterogeneous treatment-
+effect estimates to quantify the distributional implications of the safety-neutral fixed fine
+across the income distribution. Section 7 concludes.
+2
+Institutional Setting and Data
+2.1
+The Relationship Between Speed, Income, and Speeding Tickets
+Figure 1 gives an illustrative example of the speeding punishment schedule when the speed
+limit is 100 km/h. Other possible speed limits are 20, 30, 40, 50, 60, 70, 80, and 120 km/h,
+and the implications are similar. Given the 100 km/h limit and a 6 km/h grace speed, so
+long as an individual drives at or below 107 km/h, there is no ticket given.
+Two factors determine the size of the speeding ticket in Finland. First, if a speeding
+violation is minor, i.e. only 7-20 km/h above the posted limit, then the individual receives
+a fixed fine equal to € 140-200.
+Second, if an individual’s speeding violation is more than 20 km/h over the limit, the
+day-fine system kicks in, and speeding tickets become income-based. Under the income-
+based fine system, the size of the fine is determined by the product of the offense severity
+5
+
+=== PAGINA 7 ===
+and an individual’s income. Depending on the severity of the excess speeding, the individual
+receives 1-120 fine units called day-fines. In cases of speeding, the higher the observed speed,
+the more severe the offense, and hence the higher the number of day-fines the individual
+receives. The following rule governs the monetary value of a single day-fine
+I = Y −255
+60
+−3 × D,
+(1)
+where I is the monetary value of a single fine, Y is the net monthly income, and D is the
+number of dependents.6
+Finland introduced the income-based fine system in 1921 for two reasons. The first
+motivation was equity. The government wanted to design a fine system that treated every-
+one similarly, regardless of income. Second, the government was concerned that the high
+inflation at the beginning of the 20th century would erode the deterrence effect of the fine
+system. One way to overcome this problem was to link the value of fines to income. The
+name ”day-fine system” originates from the feature that the value of a single day-fine was
+initially set to be equal to the amount of salary a worker would lose if he had to spend one
+day in prison instead of working. (HE, 1920)7
+Figure 1(a) provides a theoretical example of how the size of the fine changes at the
+income-based fine cutoff for different income quartiles.8 The fixed fine amount is identical
+across all income groups and applies for 6-20 km/h above the speed limit. Once the speed
+exceeds the limit by 20 km/h, the income-based fine system takes effect, and the ticket size
+can jump substantially, depending on the driver’s income. For the top income quartile, the
+fine jumps by around 400 euros at the cutoff. In contrast, for the bottom quartile, the fine
+does not change at the cutoff. Although Figure 1(a) illustrates the system using discrete
+income groups, in practice, the income-based fine schedule produces a continuum of discrete
+jumps.
+To illustrate the relative magnitude of fines across income groups, Figure 1(b) relates
+the fine size to an individual’s net monthly income. Before the income-based fine cutoff,
+lower-income individuals pay a larger share of their income as fines. However, after the
+income-based fine threshold, the fine equals around 15-20 percent of net monthly income
+for each income group, except for the lowest income group. In this sense, the income-based
+fine system may be viewed as more equitable, as it imposes fines representing a similar share
+6Net income consists of the sum of all taxable earned income, capital income, employee benefits, pensions,
+and most social benefits. Police always calculate the fine based solely on the driver’s income. The income
+of the driver’s family members does not affect the fine.
+7The day-fine system is used in courts as well.
+8The quartile-specific income stated in the figure is the average net income over the years 2015-2017
+calculated using microdata.
+6
+
+=== PAGINA 8 ===
+Figure 1: Relationship Between Income and the Size of Speeding Ticket
+(a) Theoretical example when the speeding limit is 100 km/h
+Size of the Fine in €: 
+𝑆∙𝑦−255
+60
+−3 ∙𝐷
+(b) Size of the Fine w.r.t. Monthly Net Income
+0
+.05
+.1
+.15
+.2
+.25
+Fine relative to Monthly Income
+106
+108
+110
+112
+114
+116
+118
+120
+122
+124
+126
+128
+130
+Speed Km/h
+1st Income Quartile (1105  Eur)
+2nd Income Quartile (1937 Eur)
+3rd Income Quartile (2505 Eur)
+4th Income Quartile (4062 Eur)
+Notes: Figure Panel a shows the theoretical relationship between the size of the speeding ticket, speed,
+and net income for different income quartile groups when the speeding limit is 100. Figure Panel b relates
+the speeding ticket’s size to the quartile’s average net income. Average net incomes within quartiles are
+calculated using microdata. In the equation on top of the figure, S refers to a number of income-based fine
+units, y to net monthly income, and D to a number of dependents. The example presented in the figure
+assumes that the number of dependents is zero.
+7
+
+=== PAGINA 9 ===
+of income across income groups.
+Individuals just on the right-hand side of the income-based fine cutoff usually receive
+around 10-12 income-based fine units. After the cutoff, the number of income-based fine
+units increases in a stepwise manner. Appendix Table B.1 provides the exact punishment
+schedules that the police use in Finland to punish speeding.
+Two additional aspects of the system are essential to this study. First, the income-based
+ticket cannot be lower than the fixed fine equal to 200 euros.9 Second, the income-based
+speeding ticket schedule does not have an upper limit in euros. This has resulted in some
+extraordinarily large speeding tickets, with some of the largest tickets in the past equalling
+around 100,000-120,000 euros. The current unofficial record holder is professional National
+Hockey League player Rasmus Ristolainen, who was fined € 120,680 in 2019 for speeding.
+2.2
+Speeding surveillance
+Speeding is monitored in two ways in Finland.
+First, the police use fixed surveillance
+stations or automatic traffic surveillance vehicles that measure the speeds of passing cars.
+If the surveillance station observes a speeding car, it takes a picture that the police use
+to assign a fine. Second, traditional police patrols monitor speeding with radar and laser
+speed guns. When a patrol observes a driver that exceeds the speeding limit, they may stop
+the car and issue a notice or fine to the driver. I use only data created by the cameras,
+since their measurements are not affected by decisions such as whom they should stop.10
+Appendix Figure A.3 presents a picture of a typical police speeding surveillance camera.
+After the surveillance machine has taken a picture, it is sent to the Police Traffic Safety
+Center, where an officer identifies the car owner based on the registration number. Next,
+the police adjust the speed downward due to measurement error and then decide, based on
+the adjusted speed, whether to issue a notice or fine to an individual.11. All the numbers
+I report in this paper are adjusted speeds. Finally, if the police assign a fine or notice, the
+owner receives an electronic message and letter at home by post within 30 days from the
+date of the offense. The message notifies the individual of the fine and its size.12
+The police calculate income-based fines using an individual’s income from the most
+recent tax decision. Family members’ incomes do not affect the fine size. If an individual’s
+income has changed, it can be adjusted to reflect more recent information. I do not observe
+9The fine stays constant at the cutoff for a person whose net income is around 1455 euros per month. If
+an individual earns less than this, the fine does not change at the cutoff.
+10For example, Goncalves and Mello (2021) provides evidence that in Florida, U.S officers discriminate
+against minorities by not discounting their speed, which leads to larger fines for minority groups.
+11The correction is 3 km/h if the speed is less than 100 km/h and 3% if the speed is larger than 100 km/h
+12The police always send the ticket to the owner of the car. The owner must request an administrative
+review if the owner was not the driver when the speeding incident occurred.
+8
+
+=== PAGINA 10 ===
+individuals’ monthly earnings at the time of a speeding incident. Instead, I proxy monthly
+earnings using annual net income, which may introduce modest measurement error.
+Frequent speeding or extreme speeding can also lead to a temporary suspension of an
+individual’s driver’s license. Three speeding tickets within a year or at least four tickets
+within two years lead to a driving suspension lasting between 6-18 weeks. However, the
+suspension policy does not change at the income-based fine cutoff, which makes it easier to
+interpret the regression discontinuity design estimates I will estimate and describe. Further,
+police may suspend an individual’s driver’s license for 1-6 months if the individual’s speed
+exceeds the speeding limit of more than 35 km/h.
+2.3
+Data
+Data sources
+My primary data set comes from the National Police Board of Finland
+and includes all the speeding tickets that the police gave between April 2018 and May 2020
+(National Police Board of Finland, 2020).13 The police data contains rich information such
+as the recorded speed, the speeding event’s location, the prevailing speed limit, and whether
+an officer or an automatic camera system measured the speed. The data also include the
+monetary value of fixed fines, the value of a single day-fine, and the number of day-fines
+assigned.
+A key component of the police data is that each speeding ticket in the data includes
+a unique personal identifier, which I use to link the police speeding data to other admin-
+istrative registers. First, I merge the speeding data into Statistics Finland’s crime report
+register, which spans between 2006-2020 (Statistics Finland, 2022a). The crime report data
+contains the same speeding events as the police speeding data, but it does not include in-
+formation about the exact speed. Thus, I cannot use it to plot speeding distributions, but I
+can construct the recidivism outcomes using this data. This approach increases my sample
+size.14
+Further, I merge the speeding data into Statistics Finland’s FOLK data module, which
+contains a full population of Finnish residents between 1987-2019.
+From this data set
+(Statistics Finland, 2022b), I observe individual’s labor market outcomes such as labor
+earnings, income, and employment, and basic demographics like age, municipality of resi-
+dence, marital status, and whether a household owns a car.
+To investigate the impacts on accidents (Statistics Finland, 2023), I use traffic acci-
+dent data from Statistics Finland, which covers police-reported accidents between 1989 -
+13Due to a reform, I do not observe fixed fines after May 2020.
+14With this approach, I can use observations from the beginning of my sample period for which I would
+not observe any pre-outcomes without the crime report data
+9
+
+=== PAGINA 11 ===
+2022. The dataset includes information on the parties involved, the number of injuries, the
+date of the accident, and the municipality in which it occurred. Importantly, it contains
+unique personal identifiers that allow me to link individuals involved in accidents to other
+administrative records.
+I also conduct analysis using traffic data collected by the Finnish Transport Agency using
+automatic traffic monitoring system (TMS) stations (Fintraffic, 2020). There are around 500
+TMS stations scattered around Finland. These TMS stations observe if a vehicle passes the
+station and record information such as time, speed of the vehicle, and vehicle class. Using
+the data collected by TMS, I can plot the speed distribution of all drivers, not just those
+caught speeding by cameras. Unfortunately, TMS data is anonymous. Hence, I cannot
+observe information on the identity of the driver.
+Sample Restrictions The first restriction I impose is that I only focus on speeding
+incidents measured by automatic cameras. I ignore police patrol speeding data because prior
+evidence shows that police officers may manipulate the observed speed, complicating the
+interpretation of possible bunching (Goncalves and Mello, 2023). Second, I omit speeding
+tickets given in areas where the limit is 120 km/h since there are too few observations.
+Finally, I only take individuals whose personal identifier numbers are available in the police
+data and who are at least 18 years old at the time of the speeding ticket.15
+Outcome Variables In the second part of the paper, I study whether the size of the fine
+impacts recidivism. For this analysis, I use police crime report data to follow individuals for
+12 months after the initial speeding ticket and calculate a cumulative reoffending probability
+for each month. I measure reoffending by constructing an indicator variable that takes the
+value one if an individual has committed a new traffic crime in the current month or any
+past months subsequent to the initial speeding ticket.16
+I am able to follow the same
+individuals for five months, but after 6 months my sample starts to decrease. However,
+in the robustness section, I show that my results are insensitive to this limitation. I also
+use crime report data to build variables measuring non-traffic criminal activity. Like the
+primary outcome, the non-traffic crime indicator takes the value of one if an individual
+has committed a non-traffic crime 1-12 months after the initial speeding ticket. Finally, I
+examine whether the magnitude of the fine affects the probability of being involved in a
+traffic accident as a driver within six months of receiving a speeding ticket.
+Background Variables. Finnish register data contain a rich set of background vari-
+ables such as an individual’s gender, education level, age, and employment status. I use
+these variables to check the validity of the setting, as control variables, and to perform
+15Personal identifiers are missing for foreigners who do not live in Finland permanently.
+16Appendix Figure A.17 shows that I obtain similar results if the outcome is just speeding.
+10
+
+=== PAGINA 12 ===
+Figure 2: The Relationship between Income, Probability of Speeding, and Crime Report
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+Notes: The figure presents the relationship between income percentile and the probability that an individual
+appears in police crime report records between January 2018 and May 2020. The sample includes individuals
+from birth cohorts 1953 to 1998. Income percentiles are calculated by comparing each individual’s mean
+income over 2013–2017 with that of others in the same birth cohort. The analysis is restricted to individuals
+residing in households with a car. Blue dots with circles indicate the share of individuals in each percentile
+receiving a speeding ticket between January 2018 and May 2020.
+Red diamonds indicate the share of
+individuals appearing in police crime report records for suspected crimes other than traffic offenses during
+the same period. Small dots and grey squares further decompose the speeding ticket averages into the shares
+attributable to fixed fines (blue) and income-based fines (grey). Appendix Figure A.6 reports the average
+earnings within each percentile. Appendix Figures A.5 and A.7 demonstrate the robustness of the results
+across multiple specifications.
+heterogeneity analysis. The most important variable is the net yearly income, which I use
+to approximate an individual’s net monthly income at the time of the speeding incident.17
+Descriptive Statistics Table 1 provides descriptive statistics of the background vari-
+ables. Column 1 reports the means of all background variables in the sample that I obtain
+after imposing the restrictions described above. Column 2 reports the same statistics but
+in the small window around the income-based fine cutoff. On average, the individuals in
+my sample are more likely to be male, older, and have high net income.18
+To give an idea of how common speeding tickets are and who receives fines, Figure 2
+plots a relationship between crime and income among the Finnish adult population with
+a car.
+The figure reveals two interesting patterns.
+First, speeding is a common crime.
+Around 15 percent of individuals in the median income percentile have received a speeding
+ticket over a two-and-a-half-year follow-up period. By contrast, when the suspected offense
+is not a traffic crime, only around 2 percent of the median-income individuals show up in
+the police crime report data. Second, the association between an individual’s income and
+speeding tickets differs substantially from the relationship between income and non-traffic
+17For those who receive income-based fines, I can calculate their monthly net income from the income-
+based fine. Appendix Figure A.4 illustrates that these two measures are highly correlated.
+18I find that the average net income of individuals who are at least 18 years old is approximately € 2,000
+in 2018.
+11
+
+=== PAGINA 13 ===
+Table 1: Descriptive Statistics and Balance Check
+All
+Window +-3
+RDD
+CCT RDD
+Mean
+Mean
+RDD
+RDD
+(1)
+(2)
+(3)
+(4)
+Traffic offence, months t-1 to t-6
+0.122
+0.134
+0.014
+0.018
+(0.011)
+(0.013)
+Non-Traffic offence, months t-1 to t-6
+0.014
+0.018
+-0.002
+-0.003
+(0.004)
+(0.005)
+Employed
+0.706
+0.708
+0.002
+0.004
+(0.013)
+(0.016)
+Unemployed
+0.032
+0.037
+0.016
+0.019
+(0.006)
+(0.007)
+Outside the Labor Force
+0.262
+0.255
+-0.019
+-0.024
+(0.012)
+(0.015)
+Monthly Net Income
+2,590
+2,572
+-77.374
+-75.269
+(42.134)
+(52.966)
+Primary Education
+0.164
+0.168
+0.003
+0.007
+(0.011)
+(0.013)
+Secondary Education
+0.434
+0.442
+0.002
+0.006
+(0.013)
+(0.016)
+Tertiary Education
+0.402
+0.391
+-0.005
+-0.008
+(0.014)
+(0.018)
+Female
+0.331
+0.298
+-0.002
+-0.001
+(0.011)
+(0.014)
+Age
+47.296
+45.926
+-0.947
+-0.895
+(0.432)
+(0.536)
+N of Children
+0.834
+0.847
+0.062
+0.081
+(0.037)
+(0.046)
+Finnish Speaking
+0.886
+0.884
+0.021
+0.024
+(0.010)
+(0.012)
+Married
+0.501
+0.481
+0.000
+0.006
+(0.014)
+(0.017)
+Urban Municipality
+0.729
+0.716
+0.014
+0.021
+(0.013)
+(0.016)
+Semi-urban Municipality
+0.160
+0.166
+-0.015
+-0.017
+(0.009)
+(0.012)
+Rural municipality
+0.111
+0.118
+-0.002
+-0.007
+(0.010)
+(0.013)
+Capital region
+0.338
+0.307
+-0.003
+0.002
+(0.012)
+(0.016)
+Observations
+338,191
+23,026
+Notes: The table shows the means of predetermined characteristics among individuals in the speeding ticket
+sample and results from balance checks. Column (1) shows the means of background variables in the estimation
+sample. Column (2) presents the means of background variables in the estimation sample after restricting
+individuals within +-3 km/h from the income-based cutoff. Column (3) shows results from the balance check
+where the dependent variable is a predetermined characteristic. The column reports the estimates of β obtained
+using the equation 2. Column (4) reports results from the balance check conducted using the approach of
+Calonico et al. (2014a). I cluster standard errors at the individual level. I omit speed limit zones of 80 km/h
+and 120 km/h. See Section 2.3 for more details on sample construction.
+12
+
+=== PAGINA 14 ===
+crimes. Higher-income individuals are much more likely to receive a speeding ticket than
+lower-income individuals.
+This fact suggests that speeding is likely a luxury crime.
+In
+contrast, there is a strong negative gradient between income and non-traffic crimes.19
+In addition, Figure 2 decomposes the speeding tickets into fixed fines (small blue dots)
+and income-based fines (small grey squares). The decomposition shows that the income
+gradient is much steeper among fixed fines than income-based fines. The disparity in the
+speeding probability by income is consistent with the idea that if individuals are risk-averse,
+fixed fines deter low-income people more than high-income people. Of course, other things
+may contribute to the gap. For example, wealthy individuals may drive more.
+3
+Do People Bunch at the Income-based Fine Cutoffs?
+This section tests whether the income-based fine cutoff deters excessive speeding through
+general deterrence. A simple Becker model, in which individuals compare gains from speed-
+ing against expected punishment, predicts that drivers should react to a jump in the threat
+at the cutoff by bunching. In the model, the cutoff makes speeds above it discontinuously
+more expensive, implying that some drivers should respond by slowing down and bunch-
+ing below the threshold.20 If this prediction holds, we should see excess mass below the
+income-based fine cutoff in the speeding distribution.21
+Speeding Distributions in Traffic Data I begin by plotting the speed distributions
+in the Finnish Transport Infrastructure Agency’s (FTIA) traffic data. The automatic traffic
+monitoring stations scattered around Finland generate the data. These stations measure
+the speed of each passing car. The data allows me to see the total speed distribution, not
+only the speed distributions conditional on a driver going faster than the posted speed limit.
+Figure 3 shows the first key result of the paper. The figure plots total speed distributions
+in the FTIA data. Figure Panel 3(a) plots the raw distributions in different speed limit
+zones. Figure Panel 3(b) pools together all speed limit zones and normalizes the x-axis
+variable as a distance from the income-based fine cutoff. The figures reveal two interesting
+patterns. First, each speed distribution peaks around the speed limit, suggesting that, on
+average, speed limits do strongly shape drivers’ behavior.
+Second, even though the speed distributions peak at the posted speed limits, Figure 3(b)
+shows that speed distributions exhibit no bunching around the points where the police’s
+19Appendix Figures A.5 and A.7 show that the results are robust to multiple alternative ways to construct
+income percentiles.
+20Section 5 presents this result using a formal model.
+21A common phenomenon in various contexts is that people react to discontinuous changes in incentives
+by bunching. Examples of this behavior include studies by Kleven and Waseem (2013), Einav et al. (2019),
+and Best et al. (2019)
+13
+
+=== PAGINA 15 ===
+tolerance level (-14) ends, fixed fines increase (-5), or income-based fines turn on (0). The
+fact that we do not see any mass just below these fine thresholds suggests that drivers do
+not react to fine discontinuities as the simple Becker model would predict.
+However, it is possible that high-income individuals react to fines, but the behavior
+of drivers whose incentives change little at the cutoff masks the bunching by high-income
+individuals. Unfortunately, the FTIA data does not contain information on the driver. To
+overcome this shortcoming, next I move to use the police speeding data, which allows me
+to observe each driver’s income.
+Speeding Distributions in Police Data Figure 4 plots the speeding distributions
+using the police speeding camera data.22 Figure 4(a) shows the distributions at different
+speed limit zones. The figure illustrates that speed distributions evolve strikingly smoothly.
+In other words, drivers do not bunch below the speeding ticket hikes highlighted by vertical
+lines, despite significant incentives to do so.
+In Figure 4(b), I plot the pooled and normalized speeding distributions for the income
+quartile groups, which I define using predetermined income. Light (dark) blue dots show
+the speeding distribution for the top (bottom) income quartile group. We see that even the
+top income quartile’s speeding distribution evolves smoothly at the cutoff, although they
+have the largest incentives to bunch below the threshold. Overall, my findings suggest that
+the discontinuous increase in fines induced by the income-based system does not generate
+general deterrence effects at the cutoff.
+It is worth emphasizing that drivers may face different incentives at traffic monitoring
+stations compared to camera sites, as the former generally lack cameras.
+Nonetheless,
+the probability of enforcement remains positive at the stations due to traditional police
+crackdowns. Thus, while incentives to bunch may be weaker outside camera regions, we
+would expect to see bunching in a frictionless world.
+Figure 4(a) shows that we observe some excess mass at speed 96 km/h when the speed
+limit is 80 km/h.
+However, this spike is unlikely to arise from the driver’s behavioral
+response. The mass point is just after a fixed fine hike, implying that people do not bunch
+to avoid larger fines.
+One explanation for the lack of bunching is that individuals know the locations of police
+surveillance stations and slow down just before cameras to avoid speeding tickets. If this is
+the case, the speeding ticket sample contains individuals who either do not care about the
+cameras or do not know their location. However, the fact that the total speed distributions
+shown by Figure 3 behave continuously everywhere suggests that the smoothness of the
+22The police assign a fine only if the driver’s speed crosses the police’s tolerance level. This means that
+the speed ticket data reveals the speed distribution’s right tail.
+14
+
+=== PAGINA 16 ===
+Figure 3: The Speed Distributions in Traffic Data
+(a) Raw Speed Distributions
+81 km/h
+101 km/h
+121 km/h
+141 km/h
+0
+.02
+.04
+.06
+.08
+Density
+40
+60
+80
+100
+120
+140
+160
+Speed (km/h)
+Limit: 60 km/h 
+Limit: 80 km/h
+Limit: 100 km/h
+Limit: 120 km/h
+(b) Pooled Speed Distribution
+0
+1000000
+2000000
+3000000
+Number of observations
+-30
+-20
+-10
+0
+10
+20
+Distance from the day fine cutoff
+Notes:
+The figure presents the speed ticket distribution in the data created by the Finnish Transport
+Agency’s automatic traffic monitoring stations. Figure panel (a) shows the speed distributions separately in
+different speed limit zones. Figure panel (b) pools all speed distributions together and normalizes the x-axis
+variable as a distance from the income-based fine cutoff.
+15
+
+=== PAGINA 17 ===
+Figure 4: The Speeding Distributions in Police Camera Data
+(a) Speeding Distributions
+51 km/h
+61 km/h
+71 km/h
+81 km/h
+91 km/h
+101 km/h
+0
+10
+20
+30
+40
+Number of observations (thousands)
+40
+60
+80
+100
+120
+140
+Speed (km/h)
+Speed limit 30
+Speed limit 40
+Speed limit 50
+Speed limit 60
+Speed limit 70
+Speed limit 80
+Speed limit 100
+Speed limit 120
+(b) Normalized Distributions for Income Quartile Groups (limit 80 km/h omitted)
+0
+5
+10
+15
+20
+Number of observations (thousands)
+-15
+-10
+-5
+0
+5
+10
+Normalized distance from the income-based fine cutoff (km/h)
+Income Quartile 1
+Income Quartile 2
+Income Quartile 3
+Income Quartile 4
+Notes: The figure presents the speeding ticket distributions in the sample containing speeding tickets assigned
+by cameras between Jan 2018 - May 2020. Figure Panel (a) shows the distributions in different speeding limit
+areas. The x-axis refers to the speed in km/h, and the y-axis to the number of speeding tickets per km/h.
+Vertical dashed lines indicate the points where the average speeding ticket jumps due to the income-based
+fine system. Figure Panel (b) pools all the speeding limit zones except 80 km/h together, normalizes the
+x-axis to measure the distance from the income-based fine cutoff, and plots the speeding distributions for
+different income quartiles. I define income quartiles using an individual’s average net income 1-2 years before
+the speeding incident. The first vertical line highlights the point at which the fine jumps a fixed amount.
+The second vertical line highlights the point at which the income-based fine system kicks in.
+16
+
+=== PAGINA 18 ===
+speeding distributions is not just an artifact of the police camera data.
+To shed additional light on how cameras shape behavior, Appendix Figure A.21 presents
+data from a location equipped with both a traffic monitoring station and a police camera.
+While the speed distribution peaks sharply at the speed limit, it remains smooth around
+the income-based fine cutoff, with no evidence of bunching.23
+Starting from the next section, the rest of the paper tries to understand why people
+ignore the cutoff.
+4
+Does a Larger Speeding Ticket Influence Re-offending?
+The previous section documents that drivers do not behave as a simple Becker model pre-
+dicts. Drivers ignore the discontinuous changes in the price of speeding at the income-based
+fine cutoff ex-ante and do not bunch as this theory would predict. In other words, changes
+in the threat of punishment at the cutoff do not have a general deterrent effect.
+There are two possible explanations for the lack of bunching. First, drivers may fail to
+bunch because of information frictions. In other words, people do not understand how the
+system works, leading to suboptimal decisions. Second, people may operate under perfect
+information but ignore the cutoff because of adjustment costs. To bunch, an individual
+has to consider many things, such as the measurement error of a car’s speedometer, the
+downward correction made by the police, and the exact location of the income-based cutoff.
+Due to the complexity of the problem, individuals may feel that gains from bunching are
+smaller than the adjustment costs, implying that they neglect the cutoff.
+Although both information frictions and adjustment costs can generate smooth speed-
+ing distributions, they make different predictions on how realized speeding tickets should
+affect reoffending. If information frictions characterize an individual’s behavior, then as-
+signed fines should reveal information about the punishment system and affect recidivism.
+However, under adjustment costs, individuals should not react to fines since they already
+operate with perfect information.
+This section examines whether fines can still exert specific deterrence effects when gen-
+eral deterrence effects are absent. Specifically, this section asks whether being assigned a
+larger versus a smaller speeding ticket changes the driver’s behavior ex-post. To answer
+this question, I use a regression discontinuity design to compare individuals just below and
+above the cutoff. The smoothness suggests that drivers do not manipulate whether or not
+they receive a large fine.
+23Traffic monitoring stations generally lack cameras. However, I was able to identify one station that has
+a camera: Station 145, located on Ring Road 1, which runs through Helsinki and Espoo.
+17
+
+=== PAGINA 19 ===
+How individuals react to the size of the fine helps us understand how drivers make
+speeding decisions. Adjustment costs will likely explain the lack of bunching if the assigned
+speeding ticket size does not influence recidivism. However, if larger speeding tickets reduce
+reoffending, then information frictions and learning characterize the individual’s behavior.
+In Section 5, I will present a theoretical framework that rationalizes the empirical findings
+presented in this and the previous section.
+4.1
+Empirical Specification
+I investigate the impact of larger realized fines on recidivism using a sharp regression dis-
+continuity design (RDD). My RDD equation takes the form
+Yil,t = βtZil,0 + f(Sil,0) + f(Sil,0) × Zil,0 + αl,0 + ϵil,t,
+(2)
+where the dependent variable Yil,t measures the cumulative recidivism t months after the
+initial speeding incident. The indicator variable Zil,0 equals 1 if an individual i crossed the
+income-based fine cutoff in the speeding limit region l in period zero (normalized to be the
+time of the speeding incident). The running variable Sil,0 controls the distance from the
+fine cutoff. The interaction term f(Sil,0)×Zil,0 allows the relationship between the outcome
+and the running variable to change at the cutoff. Further, I control for the speed limit fixed
+effects αl,0. The error terms (ϵil,t) are clustered at the individual level. I use triangular
+weights centered at income-based fine cutoffs, and select optimal bandwidth around the
+cutoff using methods of Calonico et al. (2014b).
+The coefficient of interest, βt, captures the specific deterrence effect of larger fines on
+recidivism. Interpreting this estimate as causal requires that the potential outcome evolves
+smoothly at the cutoff. If this identifying assumption holds, individuals at the cutoff are,
+on average, similar but receive speeding tickets of very different magnitudes.
+A threat to identification could be that fixed and income-based fines would differentially
+affect the risk of license suspension or the size of future fines. However, as explained in
+Section 2.1, fixed fines and income-based fines accumulate points similarly. Moreover, the
+type of fine does not influence the size of future fines. Consequently, any discontinuity in
+reoffending at the cutoff can be attributed solely to variation in monetary penalties, rather
+than to differences in license suspension risk or the structure of future fines.24
+Treatment Figure 5(a) clarifies the treatment for those who cross the income-based
+fine cutoff. Black connected dots in the figure reveal that those on the right-hand side of
+the cutoff (treatment group) receive a fine that is, on average, 200 euros larger than the
+24Appendix Figure A.20 shows that about 20% of individuals received a speeding ticket in the previous
+year. Since suspension requires three violations in 12 months, few are at immediate risk of license suspension.
+18
+
+=== PAGINA 20 ===
+Figure 5: Graphical Evidence: Validity of the Setting
+(a) Speeding Distribution and Size of the Fine
+McCrary: -0.001 (0.001) 
+0
+1
+2
+3
+4
+5
+6
+Size of the fines (100 Euros)
+0
+.05
+.1
+.15
+.2
+Density
+-14
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Observations (left)
+Size of the Fine (Right)
+(b) Covariate Balance
+Fixed fine cutoff
+Income-based fine cutoff 
+.05
+.1
+.15
+.2
+Summary Index of Covariates
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Notes: The figure presents how speeding distribution (a), size of the fine (a), and predetermined background
+characteristics (b) evolve at the income-based fine cutoff. The x-axis measures the distance from the income-
+based fine cutoff in km/h. In Figure Panel (a), the left-hand side y-axis refers to the density per km/h,
+and the right-hand side y-axis measures the average size of the speeding ticket. Figure Panel (b) plots a
+summary index of predetermined covariates against normalized speed. The index is equal to the predicted
+values I obtain by regressing the indicator variable, which takes value one if an individual commits another
+traffic offense within six months after the speeding tickets against covariates listed in table 1. I only used
+individuals who received a fixed fine to estimate the model. I use coefficients from this model to construct
+the index for everyone in my sample. The sample constructed as the section 2.3 describes.
+fine for those on the left-hand side of the cutoff (control group). However, the size of the
+fine varies considerably with an individual’s income (see, Appendix Figure A.19).
+Validity of the Setting I perform two types of tests to assess whether the identifying
+assumption is satisfied. First, if people do not manipulate the running variable, the dis-
+tribution of the running variable should be continuous. Figure 5(a) provides evidence that
+this first prediction holds in my setting. Based on the figure, the number of observations
+decreases rapidly with speed, but there is no evidence of excess mass below the cutoff. In
+other words, I do not find evidence that individuals manipulate the speed perfectly.
+Second, if potential outcomes evolve smoothly at the cutoff, individuals just below and
+just above the cutoff should be similar in their observable characteristics on average. To
+determine whether predetermined characteristics evolve smoothly at the cutoff, I investi-
+gate whether a predicted probability of reoffending that I construct using predetermined
+covariates jumps at the cutoff.25 The predicted probability is an index that summarizes all
+background variables succinctly into one variable. I construct the index as follows. First,
+I take individuals who received a fixed fine and regress a dummy variable for reoffending
+on a set of predetermined variables, excluding speed. Then, I use regression coefficients to
+calculate each individual’s predicted probability of reoffending.
+Figure 5(b) illustrates that the index score behaves smoothly at the cutoff, providing
+another piece of evidence supporting the key assumption of RDD. In addition, I study how
+25Rose and Shem-Tov (2021) and Londo˜no-V´elez et al. (2020) conduct similar validity checks.
+19
+
+=== PAGINA 21 ===
+individual variables behave at the cutoff. Columns (3) and (4) of Table 1 show that most
+of the predetermined background variables behave continuously at the income-based fine
+cutoff. Out of 18 variables tested, only three are statistically significant at a 5 percent level,
+which is slightly more than one would expect to show up due to randomness. However,
+these significant variables do not seem to be jointly related to the predicted probability of
+committing traffic crimes, since the summary index of covariates evolves so smoothly in
+Figure 5(b). Furthermore, in the robustness section 4.5, I show that the main estimates
+barely move when I add these background characteristics as controls in the estimation.
+4.2
+The Impact of Speeding Ticket Size on Recidivism
+Descriptive Evidence Figure 6 presents the first evidence of how people respond to larger
+fines that arise from the income-based fine system. The x-axis of the figure measures the
+distance from the income-based cutoff in km/h. The dots plot the probability of committing
+another traffic offense within six months after a speeding ticket. We observe sharp drops in
+the probability of reoffending at the cutoffs where the fines jump discontinuously. The drop
+is large at the income-based fine cutoff, but we also see some action at the fixed fine cutoff.
+Before and after the fine cutoffs, the probability of reoffending evolves smoothly. Under the
+key assumption I stated above, which seems plausible given the evidence, the discontinuous
+jump in the fines causes the observed drops in the probability of reoffending. Next, I use
+an RDD to quantify the size of the drop in reoffending at the income-based fine cutoff.26
+RDD Estimates Figure 7 presents the second key result of the paper.
+The figure
+shows how the larger speeding tickets impact the probability of committing another traffic
+offense in the future. In Figure 7(a), I graph the RDD estimates, i.e. the βts from equation
+2.
+These estimates capture the specific deterrence effect of a larger speeding ticket on
+the cumulative reoffending probability. My main outcome tracks individuals’ cumulative
+reoffending probabilities 1-12 months after a fine.27
+Figure 7(a) shows that the short-term cumulative reoffending probability drops when
+a driver receives a larger fine due to an income-based system. The impact peaks around
+5-9 months after the speeding incident. At this time, drivers who received a larger fine are
+around 2.1-2.9 percentage points less likely to commit another traffic offense than individuals
+who received a fixed fine.28
+26Appendix Figure A.26 shows the descriptive pattern after 3, 6, 9, and 12 months.
+27I can follow the same sample for six months, after which the sample size starts to decrease. I show that
+my results are robust to this limitation in Section 4.5.
+28I exclude the 80 km/h limit zone from my main analysis. Despite the lack of incentives to do so, I
+observe bunching at the speed of 96 km/h when the limit is 80 km/h. One explanation for this excess mass
+point is an error in the data, so I do not use the limit zone in the main analysis. However, Appendix Figure
+A.13 shows that I get similar results when I use all speed zones.
+20
+
+=== PAGINA 22 ===
+Figure 6: Graphical Evidence: Recidivism Within 6 Months
+Fixed fine cutoff
+Income-based fine cutoff 
+.05
+.1
+.15
+.2
+P(Traffic offence in 6 months after fines)
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Notes: The figure presents a recidivism outcome as a function of normalized speed. The x-axis measures
+the distance from the income-based fine cutoff in km/h. The y-axis refers to the probability of committing
+another traffic offense within six months after the initial speeding ticket. Vertical lines highlight the fine
+discontinuity points. The income-based (fixed) fine cutoff locates at 0 (-5). The sample is constructed as
+the section 2.3 describes.
+I also provide suggestive evidence that drivers do not react to larger realized fines by
+bunching below the income-based fine cutoff.
+Appendix Figure A.9 plots the speeding
+distributions for individuals reoffending within a year. The figure shows that individuals
+who received an income-based fine and reoffended do not bunch below the cutoff. These
+results suggest that a larger speeding ticket triggers only an extensive margin response.
+To understand the relative magnitudes of these estimates, Figure 7(b) plots cumulative
+reoffending probabilities in the control group, and Figure 7(c) relates the point estimates
+shown in Figure 7(a) to the reoffending probabilities in the control group. Reoffending is
+common: of those who are just below the income-based fine cutoff, more than 20 percent
+commit another traffic offense within a year. However, larger income-based fines decrease
+recidivism in the short term. Figure 7(c) shows that those who receive an income-based
+fine are around 15-20 percent less likely to commit another traffic offense in the following
+6-8 months than individuals who receive a smaller fixed fine.
+Lastly, Figure 7 provides some suggestive evidence that the decrease in speeding as a
+result of a larger speeding ticket starts to fade out around nine months after the initial
+ticket was assigned. Although the point estimate is still negative twelve months after the
+initial speeding ticket, it is not statistically significant from zero at a 95% confidence level.
+This result suggests that if the target of larger fines is to achieve a permanent reduction in
+speeding, then fines must be assigned frequently to those who speed.29
+29Appendix Figure A.23 replicates Figure 7, extending the follow-up period to 18 months. The point
+21
+
+=== PAGINA 23 ===
+Figure 7: RDD Estimates at the Day Fine cutoff - 80 km/h limit omitted
+(a) RDD Point Estimates
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months Since Speeding Ticket
+95% Confidence Intervals
+RDD Estimate
+(b) The Mean of Outcome in Control Group
+0
+.05
+.1
+.15
+.2
+.25
+Cumulative recidivism probability
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+(c) The Relative Magnitude of Point Estimates
+-.6
+-.5
+-.4
+-.3
+-.2
+-.1
+0
+.1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Notes: Figure panel (a) plots the RDD estimates of βil,t obtained using Equation (2). Estimates plot the
+impact of the higher fine on the cumulative probability of committing a traffic offense in t months after the
+initial fine. The estimates are obtained using conventional local linear regression with a triangular kernel.
+Vertical solid lines are the 95 percent confidence intervals. Standard errors are clustered at the individual
+level. Panel (b) shows the mean of the outcome variable in the control group, and panel (c) relates the point
+estimate shown by the connected dots in panel (a) to reoffending probabilities in the control group. Sample
+construction and data as defined in section 2.3.
+22
+
+=== PAGINA 24 ===
+Table 2: Regression Discontinuity Design Estimates
+Dep. Variable: P(Traffic Offence between time 1 and t)
+Time (t)
+Mean
+RDD
+RDD
+RDD
+BW
+Obs.
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+1
+0.028
+-0.007
+-0.008
+-0.011
+3
+23,026
+(0.005)
+(0.005)
+(0.007)
+2
+0.056
+-0.011
+-0.011
+-0.015
+3
+23,026
+(0.007)
+(0.007)
+(0.009)
+3
+0.078
+-0.017
+-0.018
+-0.022
+3
+23,026
+(0.008)
+(0.008)
+(0.010)
+4
+0.102
+-0.022
+-0.023
+-0.027
+3
+23,026
+(0.009)
+(0.009)
+(0.011)
+5
+0.120
+-0.029
+-0.030
+-0.034
+3
+23,026
+(0.010)
+(0.010)
+(0.011)
+6
+0.137
+-0.021
+-0.022
+-0.025
+4
+31,912
+(0.009)
+(0.009)
+(0.011)
+7
+0.155
+-0.026
+-0.026
+-0.030
+4
+30,627
+(0.010)
+(0.010)
+(0.013)
+8
+0.173
+-0.026
+-0.026
+-0.030
+4
+29,323
+(0.011)
+(0.010)
+(0.013)
+9
+0.192
+-0.028
+-0.030
+-0.033
+4
+27,715
+(0.011)
+(0.011)
+(0.014)
+10
+0.207
+-0.018
+-0.019
+-0.020
+5
+34,908
+(0.011)
+(0.011)
+(0.014)
+11
+0.224
+-0.012
+-0.012
+-0.014
+5
+33,062
+(0.012)
+(0.011)
+(0.015)
+12
+0.242
+-0.011
+-0.012
+-0.013
+5
+30,592
+(0.013)
+(0.013)
+(0.016)
+Controls
+
+CCT Estimator
+
+Notes: The table shows the RDD estimates from the income-based cutoff displayed in
+Figure 7. The analysis omits the limit zone 80 km/h. The outcome is the probability that
+an individual commits another traffic offense 1 to t months after the initial speeding ticket.
+Column (2) shows the mean of the outcome for those just on the left-hand side of the cutoff.
+Column (3) presents the RDD estimates obtained using equation 2. Column (4) shows
+results from a similar analysis but with controls. Column (5) reports biased corrected RDD
+estimates obtained using the robust approach by Calonico et al. (2014b). Column (6) shows
+the bandwidth selected using methods of Calonico et al. (2014b). Column (7) shows the
+number of observations. In columns (3) and (4), standard errors in the parentheses are
+clustered at the individual level. For bias-corrected estimates, the confidence intervals are
+given by the approach of Calonico et al. (2014b). Sample construction and data as defined
+in Section 2.3.
+23
+
+=== PAGINA 25 ===
+The potential fade-out appears even more pronounced in Figure 7(c), which illustrates
+the relative magnitude of the estimates. However, this pattern should be interpreted with
+caution. One possible explanation is that crossing the income-based fine threshold results in
+an immediate reduction in the treatment group’s probability of reoffending compared to the
+control group. Thereafter, both groups accumulate offenses at a similar rate. This implies
+that the RDD estimate could remain stable, although its magnitude declines relative to the
+control group’s mean over time.
+4.3
+Does the Effect Vary by Income?
+The results above indicate that larger speeding tickets, triggered by crossing the income-
+based fine cutoff, lead to a reduction in reoffending. However, average effects may mask
+important variation in the impacts of fines as the fine discontinuity varies substantially with
+income. This raises two key questions: (1) Do high- and low-income drivers exhibit similar
+behavioral responses to their respective fine increases? (2) Does the marginal deterrence
+effect of fines differ by income? These questions are central to evaluating whether income-
+based fines are both equitable and effective.
+I address these questions in two steps. First, I examine the threshold-crossing effects
+by income. Second, I estimate how the marginal effects of fines vary by income using an
+instrumental variable design. I start by splitting my sample into quartiles using individuals’
+annual net income two years before the ticketing year. Then, I estimate the effect separately
+in each quartile group, first using equation 2, and then using the IV approach.
+Jump in the Fine by Income
+Figure 8(a) illustrates how the size of the fine develops
+as a function of speed for different income quartile groups. We see that different income
+quartiles experience very dissimilar speeding ticket hikes at the income-based fine cutoff.
+The fine increases by around 500 euros for the top quartile, whereas the hike equals around
+50 euros for the bottom quartile. For the bottom group (top group), the fixed fine equals
+approximately 20 (4) percent of the net monthly income. In relative terms, the income-based
+fine is similar across all income groups.
+Descriptive Evidence by Income
+Figure 9 plots reoffending probabilities around the
+fine thresholds, disaggregated by income group. Each blue dot represents the share of drivers
+who reoffend within six months of receiving a speeding ticket, plotted against driving speed,
+separately by income quartile. Panel (d) shows a sharp decline in reoffending at the income-
+estimates appear to converge toward zero by the end of the period, although they become increasingly
+imprecise over time.
+24
+
+=== PAGINA 26 ===
+Figure 8: Impact of Fines and Income Quartile
+(a) Average Size of Fine
+0
+2
+4
+6
+8
+10
+Size of the Fines (100 Euros)
+-8
+-6
+-4
+-2
+0
+2
+4
+Normalized distance from the income-based fine cutoff (km/h)
+Monthly Net Income: 1,011.0 Euros  
+Monthly Net Income: 1,951.1 Euros 
+Monthly Net Income: 2,624.6 Euros 
+Monthly Net Income: 4,745.5 Euros 
+(b) RDD Estimates by Income (Income-Based Cutoff)
+-.1
+-.075
+-.05
+-.025
+0
+.025
+.05
+P(Traffic offence in 6 months after the ticket)
+1
+2
+3
+4
+Income Quartile
+(c) RDD Estimates by Income (Fixed Fine Cutoff)
+-.1
+-.075
+-.05
+-.025
+0
+.025
+.05
+P(Traffic offence in 6 months after the ticket)
+1
+2
+3
+4
+Income Quartile
+Notes: Figure Panel (a) shows a jump in the fine’s size at the income-based fine cutoff for different income
+quartiles. The income quartiles are constructed using an individual’s annual net income measured 1-2 years
+before the speeding incident. The legend in the left upper corner shows the approximated monthly income
+obtained by dividing the individual’s annual net income by twelve. The x-axis measures the distance from
+the income-based fine cutoff. Figure Panel (b) reports RDD estimates for different income quartiles at the
+income-based fine cutoff. Figure Panel (c) restricts the sample to a fixed fine cutoff. The outcome is the
+probability that an individual commits another traffic crime within six months after the original speeding
+incident.
+The estimates are obtained using equation 2.
+The shaded bands show 95 percent confidence
+intervals. Standard errors are clustered at the individual level. Sample construction defined in 2.3.
+25
+
+=== PAGINA 27 ===
+based threshold for the top income group, which faces the steepest fine increase. In contrast,
+lower-income groups exhibit a smaller decline in reoffending.
+Figure 9 also clarifies why Figure 6 suggests that only individuals exactly at the cutoff
+react to the fine’s size. Figure 9 shows that the entire reoffending curve to the right of
+the cutoff shifts downward for the top income group. However, the strong heterogeneity by
+income causes the averaged pattern in Figure 6 to suggest that only individuals exactly at
+the cutoff respond to larger fines.30
+Figure 9: Normalized Speed and Reoffending by Income Quartile
+(a) Income Quartile 1
+0
+.05
+.1
+.15
+.2
+P(Traffic offence in 6 months after fines)
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+(b) Income Quartile 2
+0
+.05
+.1
+.15
+.2
+P(Traffic offence in 6 months after fines)
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+(c) Income Quartile 3
+0
+.05
+.1
+.15
+.2
+P(Traffic offence in 6 months after fines)
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+(d) Income Quartile 4
+0
+.05
+.1
+.15
+.2
+P(Traffic offence in 6 months after fines)
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Notes: The figure presents a recidivism outcome as a function of normalized speed for different income
+quartile groups.
+The x-axis measures the distance from the income-based fine cutoff in km/h.
+Income
+quartiles are constructed using the mean disposable income 1-2 years before the speeding incident. The y-
+axis refers to the probability of committing another traffic offense within six months after the initial speeding
+ticket. Vertical lines highlight the fine discontinuity points. The income-based (fixed) fine cutoff locates at
+0 (-5). The sample is constructed as the section 2.3 describes.
+Threshold-crossing Effects by Income
+Figures 8(b) and 8(c) then plot RDD estimates
+for different income quartiles when the outcome is the cumulative reoffending probability
+six months after the initial speeding ticket. Blue diamonds in Figure 8(b) show the RDD
+30A nonlinear relationship between measured speed and reoffending can also explain why the effect in
+Figure 6 appears localized. If this nonlinearity is strong around the cutoff, it may seem that only individuals
+at the threshold are affected, even though the treatment impacts all those above it. Appendix Figure A.24
+illustrates this with two counterfactual scenarios based on the RDD estimates: in Panel (a), the treatment
+effect is constant; in Panel (b), it diminishes with observed speed.
+26
+
+=== PAGINA 28 ===
+estimates for different income quartiles at the income-based fine cutoff. Although the esti-
+mates are relatively imprecise, they suggest that high-income individuals react very strongly
+to their fines. The point estimate is zero for the bottom quartile, after which the estimates
+increase almost linearly. For the top income group, the RDD estimate (-0.045) is double
+the size of the main estimate I presented in the previous section.
+The black dots in the Figure 8(c) present similar RDD estimates as above but use
+variation from the fixed fine cutoff where an individual’s income does not affect the size of
+the fine.31 Even though the estimates are imprecise, the magnitudes are smaller and more
+comparable between groups.
+Together, these estimates suggest that individuals who receive larger fines are less likely
+to recidivate than individuals who receive small fines.
+Because all income groups react
+similarly to fixed fine hikes, the sizable reaction to income-based fines by high-income people
+is due to larger fines and not because they are different on some unobserved dimension that
+impacts speeding behavior and is correlated with income.32
+Instrumental Variable Estimates
+The RDD estimates across income groups are chal-
+lenging to compare as the fine size varies with income. Crossing the threshold increases
+fines by € 50 for low-income drivers and by € 500 for high-income drivers. As a result,
+treatment effects are not directly comparable across groups. To address this, I treat cross-
+ing the income-based cutoff as an instrumental variable for the realized fine amount. This
+approach allows me to estimate the marginal effect of a fine on recidivism.
+In the instrumental variable (IV) analysis, my first stage equation is
+Fil,0 = π0Zil,0 + f(Sil,0) + f(Sil,0) × Zil,0 + αl,0 + ϵil,0,
+(3)
+where Fil,0 stands for the fine size, Sil,0 controls for distance from the income-based
+cutoff, Zil,0 takes value 1 if an individual crosses the income-based cutoff, αl,0 are limit
+fixed effects, and ϵil,0 is the error term. The first stage coefficient π0 identifies the average
+increase in fine size when crossing the income-based cutoff.
+Reduced form regressions are equivalent to the main specification I present in equation
+2. These estimates capture the effect of crossing the income-based cutoff on reoffending.
+IV estimates equal the ratio between the reduced form coefficients and the first stage coef-
+31Appendix Figure A.14 conducts the same analysis as the main Figure 7 but using variation from the
+fixed fine cutoff (15 km/h), where the fine is independent of income. The jump in the fixed fine has a small
+and imprecise effect on reoffending.
+32Appendix Table B.12 examines how the estimates vary with recent income changes. The results suggest
+that individuals with recent positive income growth exhibit a stronger response to the size of the realized
+fine than those with negative income growth. This pattern is consistent with individuals failing to adjust
+their expectations about fine amounts as their income increases prior to being fined.
+27
+
+=== PAGINA 29 ===
+ficients. IV estimates capture how reoffending changes in response to a one-euro increase
+in fines.33
+The IV estimates have a causal interpretation under three assumptions. First, the in-
+strument must be strongly correlated with the treatment.
+Figure 5(a) shows that this
+assumption holds. Second, the instrument must be independent of individuals’ potential
+outcomes. This condition follows from the key RDD assumption that potential outcomes
+evolve smoothly at the cutoff. Figure 5(b) provides supporting evidence that this assump-
+tion is satisfied in my setting. Finally, the exclusion restriction requires that the instrument
+can affect the outcome only through the treatment. This assumption would be violated, for
+example, if crossing the cutoff would trigger extra license suspension points. However, as
+explained in Section 4.1, this is not the case.
+Table 3 reports the results from the instrumental variable (IV) analysis. Column (1)
+reports results for the full sample, while columns (2)–(5) present results by income quartile,
+defined based on predetermined net income. Panels A and B of Table 3 show the first
+stage and reduced form estimates for the full sample and for each income quartile. Panel
+C presents the IV estimates. For ease of interpretation, all IV coefficients are scaled by a
+factor of 100. Column (1) indicates that a € 100 increase in the fine reduces reoffending by
+approximately one percentage point.
+Columns (2)–(5) of Table 3 report IV estimates separately by income quartile. The IV
+estimate for the top income quartile (0.009), reported in column (5), is slightly smaller than
+the full-sample estimate (0.011). In contrast, columns (3) and (4) show the largest marginal
+effects for the two middle-income quartiles, although these estimates are imprecise. This
+pattern also appears in the elasticities reported at the bottom of the table, which I calculate
+as the ratio of the relative change in reoffending to the relative change in fine size.
+In summary, the threshold-crossing effects and IV estimates offer important insights into
+how income-based fines influence reoffending behavior. The reduced form effects indicate
+that high-income individuals, who face the largest fines, reduce reoffending the most. Yet,
+while high-income individuals exhibit the strongest response, the IV estimates suggest that
+the marginal deterrence effects are largest for the middle-income groups, although the es-
+timates are imprecise. Taken together, these findings suggest that income-based fines may
+help reduce income-related disparities in speeding behavior, which I document in Figure
+2. However, because marginal deterrent effects decline with income, fines for high-income
+individuals must be sufficiently large to generate a comparable reduction in reoffending.
+33I estimate the impact of fines on reoffending using the two-stage least squares (2SLS) approach that
+gives the correct standard errors. In my setting, 2SLS estimates will equal the ratio between reduced form
+and first stage coefficients.
+28
+
+=== PAGINA 30 ===
+Table 3: Instrumental Variable Analysis
+Income Quartile
+All
+Q1
+Q2
+Q3
+Q4
+(1)
+(2)
+(3)
+(4)
+(5)
+Panel A: First Stage (Fines)
+204.113
+51.582
+103.299
+187.268
+499.060
+(7.427)
+(1.790)
+(2.850)
+(4.807)
+(28.539)
+Panel B: Reduced Form (Reoffending within 6 months)
+-0.022
+0.001
+-0.024
+-0.028
+-0.045
+(0.009)
+(0.020)
+(0.018)
+(0.016)
+(0.018)
+Panel C: IV (Reoffending within 6 months)
+-0.011
+0.002
+-0.023
+-0.015
+-0.009
+(0.005)
+(0.038)
+(0.018)
+(0.009)
+(0.004)
+Controls
+
+
+
+
+
+Control mean
+0.137
+0.163
+0.132
+0.101
+0.150
+Elasticity
+-0.157
+0.024
+-0.352
+-0.296
+-0.120
+Bandwidth
+4
+4
+4
+4
+4
+Observations
+31,912
+8,418
+7,708
+7,887
+7,899
+Notes: The table reports first stage, reduced form, and instrumental variable (IV) estimates
+for the full sample and by income quartiles. Panel A presents first stage results from equation
+3, where the outcome is the fine amount. Panel B reports reduced form coefficients from
+equation 2, where the outcome is an indicator for committing any traffic offense within six
+months after a speeding ticket. Panel C presents IV estimates using 2SLS with the same
+outcome as in Panel B. Column (1) shows estimates for the full sample. Columns (2)–(5)
+report results by income quartiles, defined using average net income over the two years
+before the speeding incident.
+Elasticities are calculated as the ratio of: (1) the reduced
+form coefficient divided by the mean reoffending rate in the control group, and (2) the first
+stage coefficient divided by the mean fine amount in the control group. IV estimates are
+multiplied by 100 for ease of interpretation.
+All regressions include controls to improve
+statistical precision. Standard errors are clustered at the individual level. See Section 2.3 for
+details on sample construction.
+4.4
+Additional Results
+Appendix Figure A.22 illustrates how RDD results vary by prior speeding history. In the
+Bayesian learning framework, individuals who have received more speeding tickets should
+respond less to new information, as their priors are more precise. To test this, I estimate
+the RDD separately for reoffenders (those who received at least one speeding ticket in the
+preceding four years) and first-time offenders. Contrary to theoretical predictions, Appendix
+Figure A.22(b) shows that reoffenders’ response to the fine hike is approximately three times
+larger than that of first-time offenders.
+However, the results should be interpreted with caution. As Appendix Table B.11 shows,
+reoffenders and first-time offenders differ along several dimensions that may influence their
+responsiveness to fines. Reflecting this, Appendix Figure A.22(c) shows that reoffenders
+in the control group are substantially more likely to reoffend than first-time offenders.
+Nonetheless, these results remain informative, as they suggest that specific deterrence effects
+29
+
+=== PAGINA 31 ===
+are strongest among individuals most likely to engage in behavior that poses risks to others.
+Another important question is whether specific deterrence effects vary with monitoring
+intensity. When enforcement is absent, the fine size should have little impact, as individ-
+uals face a negligible risk of detection. Conversely, when the probability of being caught
+approaches one, most drivers are already deterred, making the fine amount less relevant.
+This reasoning suggests that fines should exert the strongest deterrence effect at interme-
+diate levels of monitoring.
+To test this prediction, I examine how recidivism varies with enforcement intensity in
+individuals’ home municipalities. I proxy enforcement intensity by the number of speeding
+tickets issued per car-owning resident, averaged over 2018–2019. Appendix Figure A.28
+illustrates substantial variation in monitoring intensity across municipalities.34 I then divide
+the sample into tertiles based on this measure.
+Appendix Table B.10 presents estimates of specific deterrence effects by monitoring
+intensity tertiles. Although imprecise, the point estimates are consistent with the hypothesis
+that specific deterrence effects peak when monitoring intensity is intermediate. Columns
+(3)–(4) suggest that fine size has a substantially larger impact on recidivism in intermediate-
+monitoring regions than in either low- or high-monitoring areas. Importantly, Panel A shows
+that this pattern is not driven by differences in fine size across regions.
+Finally, I examine whether the magnitude of the realized fine affects the probability of a
+traffic accident using the RDD approach. My outcome variable is an indicator equal to one
+if an individual was involved in a traffic accident as a driver within six months of receiving
+a fine. Appendix Table B.13 presents the results. I find no evidence that the magnitude of
+the fine affects the probability of an accident. One caveat is that traffic accidents are rare,
+as reflected by the low control group mean in Table B.13. This may limit statistical power
+to detect anything but very large effects.
+4.5
+Robustness and Validity Tests
+This section shows that my results do not arise from arbitrary RDD specification choices.
+First, one concern is that the selected specification approximates the unknown conditional
+expectation function poorly. To alleviate these concerns, Appendix Table B.8 shows that
+I obtain similar results when I use a specification with a second-order polynomial or con-
+duct the analysis using the robust approach proposed by Calonico et al. (2014b). Further,
+Appendix Figure A.18 shows ”honest” Armstrong and Koles´ar (2020) confidence intervals
+that incorporate the potential bias in the estimates.
+34Unfortunately, I do not observe the number of speed cameras directly and must rely on this proxy.
+30
+
+=== PAGINA 32 ===
+Second, Appendix Figure A.10 demonstrates that the point estimates are insensitive
+to the bandwidth choice.
+Although I tie my hands by selecting the optimal estimation
+window using the methods of Calonico et al. (2014b), Appendix Figure A.10 adds additional
+confidence that an arbitrary choice of window does not drive the results.
+I also carry out a set of additional validity checks. First, Appendix Figure A.12 and
+Table 2 demonstrate that the RDD estimates are insensitive to the control variables. Sec-
+ond, Appendix Figure A.11 shows results from a placebo test where I randomly reallocate
+the cutoff to places where fines do not jump and carry out RDD analysis. I do not find
+statistically significant effects using placebo cutoffs.
+Additionally, I test whether the effects potentially differ for the general population not
+included in my RDD sample. Individuals near the cutoff may be less informed about the
+enforcement regime than those driving at lower speeds or those with no prior infractions.
+If so, they may respond more strongly to the fine amount than the broader population.
+To explore this possibility, I reweight the estimation sample to reflect the population of
+car owners who do not receive speeding tickets. I begin with all car owners in the register
+data. Then, using a logit model and an individual’s background characteristics, I estimate
+the probability that an individual does not appear in the speeding sample. Finally, I re-
+estimate the RDD using the predicted probabilities as weights.35 Column 5 of Appendix
+Table B.8 presents the reweighted RDD results. The standard and reweighted estimates
+are nearly identical.
+This suggests that, based on observed background characteristics,
+individuals at the cutoff and in the broader population likely respond similarly to the fine.
+One limitation is that I cannot directly test for avoidance behavior, such as drivers
+altering routes to evade speed cameras.
+A natural test would examine whether drivers
+avoid specific cameras that have previously issued fines for them. Unfortunately, I cannot
+implement this test because my data lack camera-level identifiers. However, the fact that
+my identification strategy exploits intensive-margin variation, where both groups face the
+same surveillance environment and have equal exposure to camera location information,
+mitigates concerns that the results are driven by avoidance.
+Finally, I conduct an analysis where my outcome is the cumulative probability of com-
+mitting a non-traffic crime. Since my main sample contains individuals who rarely commit
+non-traffic crimes, it is unlikely that the size of the speeding ticket would impact non-traffic
+crimes. Indeed, I find that the RDD point estimates are very small and not statistically sig-
+nificant when my outcome is the cumulative probability of non-traffic criminality. Appendix
+Figure A.15 reports these results.
+35Appendix Table B.9 lists the background characteristics used in the regression. Appendix Figure A.27
+shows the predicted probabilities from the model.
+31
+
+=== PAGINA 33 ===
+5
+What Explains the Smooth Distributions and Reactions to
+a Larger Fine?
+So far, I have presented four empirical findings. First, I demonstrate that despite significant
+incentives, individuals do not bunch just below the income-based fine cutoff. Second, my
+findings indicate that realized fine size reduces recidivism in the short term. Third, the
+larger the realized fine, the larger the ex-post reaction by drivers.
+Specifically, higher-
+income drivers who face the largest jumps in assessed fines experience the largest drop in
+recidivism. Fourth, the effect on reoffending fades out over time.
+In this section, I present a simple theoretical framework that seeks to rationalize these
+puzzling results, building on previous models in related literature (Traxler et al., 2018). My
+conceptual framework incorporates two types of optimization frictions that could reconcile
+the main results.36
+First, I demonstrate that adjustment costs may attenuate drivers’
+response to fine hikes and result in little or no bunching below the cutoff, which indicates
+a discontinuous increase in the assessed speeding fine. If adjustment costs are high enough,
+the distribution may be completely smooth. However, under a model with adjustment costs,
+individuals should not react to realized fines. The intuition for this result is that drivers
+already know precisely how the system works, but because it is too costly to monitor speed
+perfectly, they choose not to do so. As a result, a realized fine does not bring any new
+information that could change his/her behavior next period.
+Second, I present a model with information frictions that can generate the observed
+patterns in the data.
+The model builds on the idea that individuals use the so-called
+”ironing heuristic” and approximate marginal prices with average prices if the cognitive cost
+of perceiving complex pricing schemes is considerable (Rees-Jones and Taubinsky, 2019).
+In the model, drivers replace a complex true penalty scheme with a rule of thumb that
+the magnitude of the fine increases linearly with speed. Because of this heuristic, drivers
+ignore the jump in the marginal price of speeding at the cutoff, leading to a smooth speed
+distribution, as I observe in the data. However, when drivers are hit with a fine, they may
+change their behavior in the future. If an individual receives a larger fine than expected
+based on the linear rule, she concludes that the relationship between the size of the ticket
+and speed must be steeper than she expected. She will use this steeper penalty function
+in the next period and drive more slowly. Finally, based on the idea of Nyarko (1991), I
+show that there are drivers whose beliefs about the slope of the penalty function will never
+converge. This may explain the fade-out in effect.
+36These frictions have been explored in related literatures (Chetty et al., 2011; Chetty, 2012; Kostøl and
+Myhre, 2021) to explain attenuated responses to incentive changes.
+32
+
+=== PAGINA 34 ===
+5.1
+A Stylized Model of Speeding with Adjustment Costs
+Individuals choose how fast over the speed limit to go x ∈[0, X]. They value speed via the
+function u(x, θ) = θx−x2 that is strictly concave in x and increasing in type θ. Individuals’
+taste for speed has a continuous and smooth distribution G(θ). With probability p, the
+driver is caught speeding and receives a fine, which is a step function where
+f(x) =
+
+
+
+
+
+
+
+
+
+
+
+
+
+0 if x = 0
+fl if 0 < x ≤xh
+fh if x > xh.
+Finally, optimization frictions ψ make adjusting speed costly.37 Since my empirical part
+focuses on the intensive margin variation, I also ignore the extensive margin in the model.
+Drivers’ optimization problem takes the following form
+max
+x
+EU = u(x, θ) −p(fl + fh · 1[x > xh]) −ψ1[x̸ = x∗].
+The last term of the problem implies that individuals pay an adjustment cost ψ if they
+do not locate at their interior optimum x∗given by the first-order condition.
+Frictionless Model To illustrate the impact of fines and optimization frictions on optimal
+speed, let us first consider the problem without them. First, without fines, drivers locate
+at their interior optimum
+x∗
+such that
+∂u(x, θ)/∂x = 0.
+Thus, speeding distribution x∗(θ) will be smooth due to the smooth type distribution G(θ).
+Next, let us introduce speeding tickets. When fines are imposed, a continuum of indi-
+viduals who value speeding enough such that their interior optimum x∗is higher than the
+fine notch just above xh, will slow down and bunch to the corner solution where speed is
+xc = xh
+such that
+∂u(x, θ)/∂x̸ = 0
+Because of bunching, we should see excess mass at xh. However, some drivers do not react:
+individuals whose interior optimum speed is lower than the speed limit or whose taste for
+speed is high enough remain in their interior optimum.
+Adjustment Costs Finally, adjustment costs may attenuate the driver’s response to fines
+37As demonstrated by Chetty (2012), Kleven and Waseem (2013) and Kostøl and Myhre (2021), optimiza-
+tion frictions may attenuate individuals’ reactions to discontinuous changes in marginal or average prices.
+In my case, the adjustment costs may arise, for example, from the fact that if individuals cannot drive at
+the speed defined by their type, they have to monitor their speed constantly, which decreases utility.
+33
+
+=== PAGINA 35 ===
+Figure 10: Expected Utility, Speed, and Speeding Distribution
+(a) Expected utility and Speed
+EU
+x
+h
+
+Speed
+Low Type
+Medium Type
+High type
+(b) Speeding Distribution
+Number of Observations
+x
+h
+
+Speed
+No Fines
+Fines & Adjustment costs
+Fines & No Adjustment Costs
+and decrease the mass at the corner solution. Under adjustment costs, the driving speed is
+given by
+x =
+
+
+
+
+
+xc,
+if [u(xc, θ) −p · fl] −[u(x∗, θ) −p · (fl + fh)] ≥ψ
+x∗,
+if [u(xc, θ) −p · fl] −[u(x∗, θ) −p · (fl + fh)] < ψ.
+(4)
+The equation 4 demonstrates that only individuals whose gain from reallocating from the
+interior solution to the corner solution is larger than the adjustment cost change their
+behavior. In other words, fewer individuals react to fines when adjustment costs are present,
+implying that we should observe less mass at the fine cutoff compared to a frictionless world.
+Figure 10 illustrates the results stated above. Figure 10(a) shows the expected utility
+function for three different types.
+The dashed (solid) line shows the utility from speed
+without (with) fines. The medium-type individual may increase utility by moving to the
+corner solutions xc at 80 km/h. However, low- and high-type individuals do not have an
+incentive to react to speeding tickets. Low-type’s interior optimum is less than the speed
+limit, whereas the expected punishment does not deter the high-type enough.
+Figure 10(b) demonstrates the impact of speeding tickets on speed distribution. Solid
+blue lines show the distribution without tickets. Black dots illustrate that the notch in
+expected punishment moves some people to the corner solution, creating excess mass just
+below the speeding limit and a hole above it. Finally, the dashed blue line plots the distri-
+bution when adjustment costs impact drivers’ behavior. The mass concentration below the
+cutoff is smaller with the adjustment costs.
+The model predicts that we should see sharp bunching below when frictions do not exist.
+However, adjustment costs attenuate individuals’ responses and bunching. In extreme cases,
+the speed distribution may be smooth if individuals consider the expected punishment small
+compared to adjustment costs.
+34
+
+=== PAGINA 36 ===
+5.2
+A Model with Misspecification and Learning
+Next, I present an alternative version of the model in which individuals make speed decisions
+using a misspecified model and learn from their past choices. Extensive literature shows that
+individuals do not necessarily adjust their behavior to marginal price changes as a simple
+economic theory would suggest. One explanation for the muted responses is that people use
+the ”ironing” heuristic when facing complex non-linear price schedules. If people find the
+mental cost of understanding a non-linear price scheme to be high, they replace the complex
+version with a linear approximation. In the case of speeding, the ”ironing” heuristic could
+arise from the fact that people do not remember the exact details of the system, or they
+are just concentrating on many things while driving. (Rees-Jones and Taubinsky, 2019)
+Motivated by literature suggesting that people respond to average prices, I assume that
+people replace the complex non-linear penalty scheme with linear approximation. They
+start with a prior about the slope of the penalty function that they use to solve for optimal
+speed. Since the misspecified penalty function is linear, they cannot end up with a corner
+solution, ruling out bunching.
+The optimal speed determines the signal the individuals
+receive. After observing the signal, individuals construct a posterior, which works as the
+next period’s prior. Individuals learn myopically, meaning that they do not experiment.
+The optimization problem with misspecification and learning takes the form
+max
+xt EUt = u(xt, θ) −p · ˆft(x),
+where ˆft(x) = βxt + fl1[x > 0] stands for individuals’ perceived penalty function at time t.
+The slope β is an unknown random variable and according to an individual’s prior beliefs
+β ∼N[µβ, τ −1
+β ]. The known constant equals the low fine fl.
+Each period, the individual chooses a speed such that ∂ut(x)/∂x −p · ∂ˆft(x)/∂x = 0. If
+they are caught speeding, they receive a fine that they interpret as a signal. The signal takes
+form st = βf
+t + ηt, η ∼N[µs, τ −1
+s ]. If speed is larger than xh, the individual receives a large
+fine (βh
+t ). Otherwise, βf
+t is βl
+t. After seeing the signal, the individual forms a posterior for
+β using Bayes’ rule. Since the prior and signal are normal random variables, the posterior
+is a weighted average of prior and signal: ˆβ = τβµβ+τss
+τβ+τs
+(Baley and Veldkamp, 2021). The
+relative precision of the prior and signal determines the weights.
+The model with misspecification generates the following results related closely to my
+empirical exercise.
+Proposition 1. Drivers do not bunch below the fine cutoff at time t = 1, generating a
+smooth speeding distribution.
+For a proof, see Appendix Section C.
+35
+
+=== PAGINA 37 ===
+The proposition follows directly from the fact that drivers ignore the discontinuity be-
+cause they use a misspecified model. In other words, all the drivers locate at their interior
+optimum where ∂u(x, θ)/∂x = p · ˆβ, leading to zero excess mass at the fine cutoff.
+Proposition 2. Under the assumptions of the model, a driver with type θ would drive
+slower at time t = 2 if she were located just above the cutoff xh versus below it at time
+t = 1. Furthermore, the size of the reaction increases with the size of the discontinuity.
+For a proof, see Appendix Section C.
+This result means that if a person with type θ drives faster than the cutoff xh, she will
+receive a higher signal compared to a situation in which her speed is lower than xh. As
+a result, the perceived slope of the penalty function is steeper in the next period if the
+individual crosses the threshold. Thus, in the next period, she will slow down. The larger
+the discontinuity, the steeper the updated slope, and the larger the individual’s reaction.
+Proposition 3. There exists a continuum of individuals [θl, θh] whose beliefs and actions
+never converge but oscillate around the speeding ticket discontinuity.
+For a proof, see Appendix Section C.
+Figure 11 illustrates some of the results stated above. Consider an individual at the
+time t who holds a prior represented by a dark blue line in Figure 11(a). Using this prior,
+the individual chooses a speed such that ∂u(x, θ)/∂x = p · ˆβ. Assume that the speed is
+x∗, and hence, she receives a low signal. Let us also suppose that the prior and signal are
+equally precise, implying that the posterior is just an average between the signal and the
+prior. The dashed light blue line represents the posterior in Figure 11(a).
+Next, consider another individual who happens to choose a speed equal to 80+ϵ where
+ϵ is some tiny number. Due to this minimal difference, the second individual receives a
+larger signal, shown by a solid red line. The dashed red line plots the posterior for the
+second individual. Next, individuals choose new speeds using posteriors as their priors.
+The individual who received the higher signal due to discontinuity will drive at a slower
+speed than the individual who received the lower signal.
+Interestingly, if individuals make decisions using a misspecified model and learn from
+their actions, there will be some individuals whose beliefs and actions do not converge but
+follow cycles (Nyarko, 1991). Figures 11(b) and 11(c) illustrate the result and show how
+the individual’s beliefs and speed evolve. The individual starts with the belief that the
+slope of the penalty is low, chooses a speed over 80 km/h, receives a large fine, and forms a
+posterior higher than the prior. The individual chooses a lower speed and receives a lower
+signal in the next period. Over time, individual’s beliefs decrease back to a low starting
+level. However, when the individual again thinks the slope is low, she decides to speed
+again, leading to a new cycle.
+36
+
+=== PAGINA 38 ===
+Figure 11: The Evolution of Speed and Beliefs in the Model with Misspecification and
+Learning
+(a) Prior, Signal, and Posterior
+Fine
+
+x
+h
+Speed
+True Penalty Function 
+Common Prior
+Low signal
+High Signal
+Low Posterior
+High Posterior
+(b) The Evolution of Beliefs
+High Slope
+Low Slope
+
+Beliefs
+Time
+(c) The Evolution of Speed
+High Fine Cutoff
+
+Speed
+Time
+37
+
+=== PAGINA 39 ===
+5.3
+Predictions of the Models
+Table 4 summarizes the predictions from both models.
+Both models can generate the
+zero-bunching result. However, only the model with misspecification and learning predicts
+that a larger speeding ticket (vs.
+smaller) reduces recidivism.
+Furthermore, under the
+misspecification and learning, we may see a fade-out in effect due to cycling beliefs.
+The evidence presented in Section 4.2 supports the story that drivers make decisions
+using a misspecified model, leading to a smooth speeding distribution. In addition to con-
+tinuous speeding distributions, I find that the size of the speeding ticket reduces the prob-
+ability of reoffending, but the effect fades out over time. The model with misspecification
+and learning can explain both of these results.
+Table 4: Predictions from the Models
+Model with:
+Prediction
+Adjustment Costs
+Misspecification
+Bunching
+Possibly
+No
+Reactions to larger fine
+No
+Yes
+Cycle
+No
+Possibly
+The table lists the predictions from the models presented in the Section 5.
+5.4
+Alternative Interpretations
+There are other possible interpretations of the findings, particularly regarding the potential
+fade-out. Specifically, some of the findings are consistent with associative recall or limited
+memory models. Associative recall refers to the tendency to retrieve past experiences that
+resemble the current context when making decisions. In the model by Bordalo et al. (2020),
+individuals make decisions based on price and quality norms shaped by cues and memories
+that combine hedonic and contextual attributes. When facing new decisions, individuals
+give greater weight to memories whose cues closely match the current context.
+In my setting, fixed fine and income-based fine groups face similar contexts, but the
+latter receives a larger fine. This makes the large fine the salient cue, leaving a strong
+memory trace.
+When deciding whether to speed again, that high-cost episode is more
+likely to be recalled, leading to greater deterrence. However, this effect may fade through
+social learning. Each penalty-free trip or encounter with someone who received a modest
+fine reinforces low-penalty signals. Since fixed fines are more common, drivers are likely to
+encounter these cues more frequently, diluting the original memory and reducing deterrence.
+A related interpretation draws on the literature on selective recall. Zimmermann (2020)
+shows that negative and positive feedback shift beliefs in the short term, but only positive
+38
+
+=== PAGINA 40 ===
+feedback has lasting effects. This aligns with models by B´enabou and Tirole (2002; 2004),
+in which individuals selectively forget information that contradicts their self-image. In a
+speeding context, a large income-based fine may conflict with a driver’s belief that they
+are responsible or law-abiding. To preserve that self-image, the driver may suppress the
+memory of the fine, weakening its long-term deterrent effect. In contrast, a lower fixed fine
+may be seen as less threatening and easier to retain.
+While associative or selective recall can explain both the initial response and the fade-
+out, they cannot account for the absence of bunching in the speeding distribution.
+To
+explain that pattern, the model must incorporate misperception. Once misperception is
+introduced, associative recall becomes unnecessary to explain the observed dynamics. In
+that sense, the misperception model offers a more parsimonious explanation for the findings.
+I also provide evidence that the fade-out is unlikely to result from nonlinearities in
+the control group’s behavior or asymmetric exposure to income-based fines. Figure 7(b)
+shows that the control group’s outcome increases linearly over time, leaving no evidence of
+behavioral shifts that could explain convergence. Second, Appendix Figure A.25 shows that
+crossing the income-based fine cutoff does not raise the likelihood of later receiving such a
+fine, ruling out this channel as a driver of the decay.
+6
+Distributional Implications of Income-Based Versus Fixed
+Fines at the Cutoff
+What would be the distributional consequences of moving from an income-based fine in-
+crease to a fixed fine increase that holds constant the aggregate reduction in reoffending
+at the 20 km/h cutoff? To answer this question, this section uses the heterogeneous IV
+estimates from Section 4.3 to quantify the income-invariant fine increase required to match
+the aggregate reduction in reoffending induced by the current income-based discontinuity.
+The implied safety-neutral fixed fine increase is €215. Although this is close to the average
+observed increase (€204), the distributional implications are pronounced: relative to the
+current income-based schedule, the fine increase would be more than 300% larger for the
+bottom income quartile and roughly 50% smaller for the top quartile. Safety-neutral fines
+would also shift reoffending toward higher-income individuals.38
+A Safety-Neutral Fixed Fine
+I calculate the safety-neutral fixed fine increase as follows.
+Let g index income quartiles. Define sg as the share of observations in quartile g at the
+38My exercise takes into account only the changes at the cutoff, which is why it should be thought of as a
+local counterfactual exercise. Further, I assume that the income composition of drivers at the cutoff remains
+unchanged under the counterfactual.
+39
+
+=== PAGINA 41 ===
+threshold, ˆβg as the quartile-specific IV estimate (effect on reoffending per €1), ∆F IB
+g
+as the income-specific discontinuity in fines (first stage), and ∆F flat as the hypothetical
+safety-neutral fixed fine increase.
+The observed threshold-crossing effect on reoffending due to the income-based fine is
+equal to
+∆SIB =
+X
+g
+sg ˆβg ∆F IB
+g
+.
+Under a fixed fine, the corresponding effect would be:
+∆Sflat =
+X
+g
+sg ˆβg ∆F flat = ∆F flat X
+g
+sg ˆβg.
+Equating ∆SIB = ∆Sflat and solving for ∆F flat yields the safety-neutral fixed fine increase
+∆F flat =
+P
+g sg ˆβg ∆F IB
+g
+P
+g sg ˆβg
+.
+(5)
+Figure 12(a) compares the safety-neutral fixed fine increase (red bars) to the observed
+income-based increases (blue bars). Applying equation (5), I find that the safety-neutral
+fixed fine increase would be € 215. This is close to the average observed increase (€ 204,
+Table 3), but its distributional implications differ substantially. Relative to the observed
+schedule, the increase would more than quadruple for the bottom income quartile (€ 52 to
+€ 215) and roughly double for the second quartile (€ 103 to € 215). It would rise modestly
+for the third quartile (€ 187 to € 215; about 15%), and it would fall sharply for the top
+quartile (€ 499 to € 215; about 57%).39
+These changes are sizable relative to income levels. Under the safety-neutral fixed sched-
+ule, the fine for offenses just above the 20 km/h cutoff would be €415 (€200 baseline plus
+a €215 increase). For drivers in the bottom income quartile, this corresponds to roughly
+41% of average monthly net income, compared with 25% under the current income-based
+schedule. For the second quartile, the share would rise from 16% to 21%. By contrast, the
+burden would fall from 15% to 9% for drivers in the top quartile.40
+Although I construct the two systems to produce the same local reduction in reoffending
+at the cutoff, they imply different patterns of behavioral adjustment across income groups.
+Figure 12(b) reports the implied threshold-crossing effects on reoffending by income quartile
+39The fine jump for the bottom quartile is small (about €52), so the treatment contrast for this group
+is modest. This makes it harder to pin down the deterrence effect for the bottom quartile. As sensitivity
+checks, I set the bottom-quartile IV estimate equal to (i) zero and (ii) the second quartile’s IV estimate.
+These exercises imply safety-neutral fixed fines of €207 and €153, respectively. In both cases, the qualitative
+distributional conclusions remain unchanged.
+40Figure 8 presents average monthly net income by income quartile. The average monthly net income is
+€1011 for the first quartile, €1951 for the second quartile, €2642 for the third quartile, and €4745 for the
+fourth quartile.
+40
+
+=== PAGINA 42 ===
+Figure 12: Safety-neutral Fines and Reoffending
+(a) Safety-neutral Fines
+52
+215
+103
+215
+187
+215
+499
+215
+0
+100
+200
+300
+400
+500
+1
+2
+3
+4
+Income Quartile
+Observed income-based fine increase
+Safety-neutral fixed fine increase
+(b) Reoffending Under Safety-neutral Fines
+0.001
+0.005
+-0.024
+-0.050
+-0.028
+-0.032
+-0.045
+-0.019
+-.06
+-.04
+-.02
+0
+.02
+1
+2
+3
+4
+Income Quartile
+Observed threshold-crossing effect under income-based fine
+Predicted threshold-crossing effect under safety-neutral flat fine
+Figure plots the safety-neutral fixed fine increase and its implied effect on reoffending at the income-based
+cutoff. Panel (a) shows the observed income-based fine increase (blue) and the estimated safety-neutral fixed
+fine increase (red) by income quartile. The safety-neutral fixed fine increase is calculated using equation 5.
+By construction, the safety-neutral fixed fine increase yields the same aggregate specific deterrence effect
+as the observed income-based increase. Panel (b) reports the specific deterrence effects by quartile under
+the income-based system (blue bars) and the counterfactual effects implied by the safety-neutral fixed fine
+increase. Counterfactual effects are computed as the product of the fixed fine increase and the quartile-
+specific IV estimate (Table 3).
+under each system. To obtain the counterfactual effects under the fixed-fine schedule, I
+multiply the safety-neutral fixed-fine increase by the quartile-specific IV estimate. Relative
+to the current income-based schedule, the fixed-fine counterfactual reduces reoffending in
+the lower income quartiles and increases it in the top quartile.
+Discussion
+The safety-neutral fixed fine counterfactual illustrates the trade-off between
+income-based and fixed fine systems. Fixed fines have practical advantages, such as ease
+of administration. Moreover, from a classical Beckerian perspective, optimal fines need not
+depend on income unless the harm from the offense varies with income (Becker, 1968).
+However, if policymakers seek to minimize safety risks from speeding through fixed
+fines alone, the implied fine level may impose substantial financial strain on low-income
+households. Mello (2024) finds that a speeding fine of $200 can push especially illiquid low-
+income households to miss bill payments, with persistent downstream consequences such as
+lower credit scores and borrowing limits, weaker employment, and reduced homeownership.
+Although the institutional setting differs, these findings suggest that the €415 fine implied
+by my safety-neutral fixed fine counterfactual — roughly 41% of monthly net income for
+bottom-quartile drivers — could plausibly generate financial distress among low-income
+households.
+The counterfactual exercise also suggests that moving to a safety-neutral fixed-fine sys-
+tem may have revenue implications for governments. Under this counterfactual, fine revenue
+may decline through two channels: high-income drivers would face substantially lower fines
+41
+
+=== PAGINA 43 ===
+than under the current income-based schedule, mechanically reducing revenue per offense
+among those drivers; and the higher burden on low-income drivers may reduce collection
+rates if fines exceed what some drivers can realistically pay (Norris and Rose, 2024). This
+concern is relevant to ongoing debates in the United States, where local governments in-
+creasingly rely on fixed fines and court fees to finance expenditures (ALCPIL, 2020).41
+Finally, the safety-neutral counterfactual highlights how income-based and fixed fines
+differ with respect to the proportionality of punishment when overall safety is held fixed.
+Retributive justice holds that punishment should reflect the wrongfulness of the act. A
+central element of modern retributive theory is the principle of proportionality: identical
+offenses should receive equivalent sanctions. Under the income-based system, the fine equals
+25% of monthly net income for drivers in the bottom income quartile and 15% for those
+in the top quartile.
+Under the safety-neutral fixed fine, these shares are 41% and 9%,
+respectively.42 By this metric, replacing income-based fines with fixed fines would widen the
+gap in effective punishment across income groups, moving further away from proportionality
+and from the equal-burden rationale underlying Finland’s day-fine system.
+7
+Conclusions
+This paper studied drivers’ reactions to discontinuous changes in the criminal sanctions
+created by the Finnish income-based fine system. First, I find that drivers do not bunch
+below the income-based fine cutoff, leading to unexpectedly smooth speeding distributions.
+This result also holds for high-income drivers experiencing the largest jumps in the size of
+the fine. However, I show that especially high-income drivers are less likely to recidivate in
+the short term when they are assigned a larger ticket vs. a smaller one. Finally, I calculate
+that replacing the income-based fine increase with a safety-neutral fixed fine would require
+a fixed fine increase of about €215.
+To reconcile these results, I present a theoretical framework in which individuals make
+decisions and learn using a misspecified model of the penalty schedule. This model ratio-
+nalizes the smooth speeding distributions and the specific deterrence response.
+My results have important implications for the design of criminal sanctions. First, they
+suggest that punishments may have their intended effects only if the penalty schedule is
+sufficiently salient. Second, the counterfactual exercise shows that replacing the income-
+41In Appendix Section C.3, I apply optimal income and commodity taxation theory to derive the optimal
+income-based fine when the government aims to redistribute using fines. I show that the optimal income-
+based fine equals the size of the externality plus the net social value of redistribution, which is divided by
+the semi-elasticity of speeding with respect to fines.
+42Appendix Section C.2 shows that under risk aversion, a fixed fine implies larger utility losses for low-
+income than for high-income drivers.
+42
+
+=== PAGINA 44 ===
+based fine increase with a safety-neutral fixed fine would substantially redistribute the size
+of fines across the income distribution.
+References
+Aizer, A. and Doyle, J., Joseph J. (2015). Juvenile Incarceration, Human Capital, and Future Crime:
+Evidence from Randomly Assigned Judges *. The Quarterly Journal of Economics, 130 (2), 759–803.
+ALCPIL (2020). Fees, fines, and the funding of public services: A curriculum for reform. Contributors:
+Mitali Nagrecha, Anna VanCleave, Stephanie Garlock, Judith Resnik, Lisa Foster, Jeff Selbin.
+Armstrong, T. B. and Koles´ar, M. (2020). Simple and honest confidence intervals in nonparametric
+regression. Quantitative Economics, 11 (1), 1–39.
+Baley, I. and Veldkamp, L. (2021). Bayesian Learning. Working Paper 29338, National Bureau of Eco-
+nomic Research.
+Banerjee, A., Duflo, E., Keniston, D. and Singh, N. (2019). The Efficient Deployment of Police
+Resources: Theory and New Evidence from a Randomized Drunk Driving Crackdown in India. Working
+Paper 26224, National Bureau of Economic Research.
+Bastani, S. and Selin, H. (2014). Bunching and non-bunching at kink points of the swedish tax schedule.
+Journal of Public Economics, 109, 36–49.
+Bauernschuster, S. and Rekers, R. (2022). Speed limit enforcement and road safety. Journal of Public
+Economics, 210, 104663.
+Becker, G. S. (1968). Crime and punishment: An economic approach. Journal of Political Economy, 76 (2),
+169–217.
+B´enabou, R. and Tirole, J. (2002). Self-confidence and personal motivation. The quarterly journal of
+economics, 117 (3), 871–915.
+— and Tirole, J. (2004). Willpower and personal rules. Journal of Political Economy, 112 (4), 848–886.
+Berk, R. H. (1966). Limiting Behavior of Posterior Distributions when the Model is Incorrect. The Annals
+of Mathematical Statistics, 37 (1), 51 – 58.
+Best, M. C., Cloyne, J. S., Ilzetzki, E. and Kleven, H. J. (2019). Estimating the Elasticity of In-
+tertemporal Substitution Using Mortgage Notches. The Review of Economic Studies, 87 (2), 656–690.
+Bhuller, M., Dahl, G. B., Løken, K. V. and Mogstad, M. (2020). Incarceration, recidivism, and
+employment. Journal of Political Economy, 128 (4), 1269–1324.
+Bohren, J. A. and Hauser, D. N. (2021). Learning with heterogeneous misspecified models: Characteri-
+zation and robustness. Econometrica, 89 (6), 3025–3077.
+Bordalo, P., Gennaioli, N. and Shleifer, A. (2020). Memory, attention, and choice*. The Quarterly
+Journal of Economics, 135 (3), 1399–1442.
+Calonico, S., Cattaneo, M. D. and Titiunik, R. (2014a). Robust nonparametric confidence intervals for
+regression-discontinuity designs. Econometrica, 82 (6), 2295–2326.
+—, — and — (2014b). Robust nonparametric confidence intervals for regression-discontinuity designs.
+Econometrica, 82 (6), 2295–2326.
+Chalfin, A. and McCrary, J. (2017). Criminal deterrence: A review of the literature. Journal of Economic
+Literature, 55 (1), 5–48.
+Chetty, R. (2012). Bounds on elasticities with optimization frictions: A synthesis of micro and macro
+evidence on labor supply. Econometrica, 80 (3), 969–1018.
+—, Friedman, J. N., Olsen, T. and Pistaferri, L. (2011). Adjustment Costs, Firm Responses, and Micro
+vs. Macro Labor Supply Elasticities: Evidence from Danish Tax Records *. The Quarterly Journal of
+Economics, 126 (2), 749–804.
+—, — and Saez, E. (2013). Using differences in knowledge across neighborhoods to uncover the impacts of
+the eitc on earnings. American Economic Review, 103 (7), 2683–2721.
+DeAngelo, G. and Hansen, B. (2014). Life and death in the fast lane: Police enforcement and traffic
+fatalities. American Economic Journal: Economic Policy, 6 (2), 231–57.
+Diamond, P. (1975). A many-person ramsey tax rule. Journal of Public Economics, 4 (4), 335–342.
+Doleac, J. (2017). Encouraging Desistance from Crime. Tech. rep.
+Drago, F., Galbiati, R. and Vertova, P. (2009). The deterrent effects of prison: Evidence from a natural
+experiment. Journal of Political Economy, 117 (2), 257–280.
+—, Mengel, F. and Traxler, C. (2020). Compliance behavior in networks: Evidence from a field experi-
+ment. American Economic Journal: Applied Economics, 12 (2), 96–133.
+43
+
+=== PAGINA 45 ===
+Duˇsek, L. and Traxler, C. (2022). Learning from Law Enforcement. Journal of the European Economic
+Association, jvab037.
+Einav, L., Finkelstein, A. and Schrimpf, P. (2019). Reprint of: Bunching at the kink: Implications
+for spending responses to health insurance contracts. Journal of Public Economics, 171, 117–130,
+trans-Atlantic Public Economics Seminar 2016.
+Elminejad, A., Havranek, T. and Irsova, Z. (2025). Relative risk aversion: A meta-analysis. Journal of
+Economic Surveys.
+Esponda, I. and Pouzo, D. (2016). Berk–nash equilibrium: A framework for modeling agents with mis-
+specified models. Econometrica, 84 (3), 1093–1130.
+Finlay, K., Gross, M., Lieberman, C., Luh, E. and Mueller-Smith, M. (2023). The impact of criminal
+financial sanctions: A multi-state analysis of survey and administrative data. Working Paper.
+Fintraffic (2020). Traffic Monitoring System (TMS) Speed Data, 2020.
+Ganong, P. and J¨ager, S. (2018). A permutation test for the regression kink design. Journal of the
+American Statistical Association, 113 (522), 494–504.
+Gehrsitz, M. (2017). Speeding, punishment, and recidivism: Evidence from a regression discontinuity
+design. The Journal of Law and Economics, 60 (3), 497–528.
+Goncalves, F. and Mello, S. (2021). A few bad apples?
+racial bias in policing. American Economic
+Review, 111 (5), 1406–41.
+— and — (2023). Police Discretion and Public Safety. Tech. rep.
+Hansen, B. (2015). Punishment and deterrence: Evidence from drunk driving. American Economic Review,
+105 (4), 1581–1617.
+Harju, J., Matikka, T. and Rauhanen, T. (2019). Compliance costs vs. tax incentives: Why do en-
+trepreneurs respond to size-based regulations? Journal of Public Economics, 173, 139–164.
+HE (1920). Hallituksen esitys 36/1920.
+Ito, K. (2014). Do consumers respond to marginal or average price? evidence from nonlinear electricity
+pricing. American Economic Review, 104 (2), 537–63.
+Kleven, H. J. (2016). Bunching. Annual Review of Economics, 8 (1), 435–464.
+— and Waseem, M. (2013). Using Notches to Uncover Optimization Frictions and Structural Elasticities:
+Theory and Evidence from Pakistan *. The Quarterly Journal of Economics, 128 (2), 669–723.
+Kostøl, A. R. and Myhre, A. S. (2021). Labor supply responses to learning the tax and benefit schedule.
+American Economic Review, 111 (11), 3733–66.
+Lee, D. and McCrary, J. (2017). The deterrence effect of prison: Dynamic theory and evidence. Advances
+in Econometrics, 38, 73–146.
+Lochner, L. (2007). Individual perceptions of the criminal justice system. American Economic Review,
+97 (1), 444–460.
+Londo˜no-V´elez, J., Rodr´ıguez, C. and S´anchez, F. (2020). Upstream and downstream impacts of college
+merit-based financial aid for low-income students: Ser pilo paga in colombia. American Economic
+Journal: Economic Policy, 12 (2), 193–227.
+Mello, S. (2024). Fines and financial wellbeing. The Review of Economic Studies.
+Mueller-Smith, M. (2014). The Criminal and Labor Market Impacts of Incarceration. Working Paper.
+National Police Board of Finland (2020). Speeding Ticket Data, 2018–2020.
+Norris, S. and Rose, E. K. (2024). Laffer’s day in court: The revenue effects of criminal justice fees and
+fines. Journal of Public Economics, 240, 105249.
+Nyarko, Y. (1991). Learning in mis-specified models and the possibility of cycles. Journal of Economic
+Theory, 55 (2), 416–427.
+Our World in Data (2022). Causes of Death.
+Philippe, A. (2022). Learning by doing. How do criminals learn about criminal law? Working Paper.
+Rees-Jones, A. and Taubinsky, D. (2019). Measuring “Schmeduling”. The Review of Economic Studies,
+87 (5), 2399–2438.
+Rincke, J. and Traxler, C. (2011). Enforcement spillovers. The Review of Economics and Statistics,
+93 (4), 1224–1234.
+Rose, E. K. and Shem-Tov, Y. (2021). How does incarceration affect reoffending? estimating the dose-
+response function. Journal of Political Economy, 129 (12), 3302–3356.
+Saez, E. (2001). Using elasticities to derive optimal income tax rates. The review of economic studies, 68 (1),
+205–229.
+44
+
+=== PAGINA 46 ===
+Statistics Finland (2022a). Finnish Police Reports.
+Statistics Finland (2022b). FOLK Basic Data, 1987–2020.
+Statistics Finland (2022c). Statistics on Offences and Coercive Measures.
+Statistics Finland (2023). Road Accident Data, 1989–2022.
+Traxler, C., Westermaier, F. G. and Wohlschlegel, A. (2018). Bunching on the autobahn? speeding
+responses to a ‘notched’ penalty scheme. Journal of Public Economics, 157, 78–94.
+van Benthem, A. (2015). What is the optimal speed limit on freeways? Journal of Public Economics, 124,
+44–62.
+WHO (2017). Managing Speed. Report, World Health Organization.
+Zimmermann, F. (2020). The dynamics of motivated beliefs. American Economic Review, 110 (2), 337–61.
+45
+
+=== PAGINA 47 ===
+Online Appendix
+A
+Figures
+Figure A.1: The Number of Crime Reports in Finland
+0
+.2
+.4
+.6
+.8
+1
+Crime Reports in Millions
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+Non-traffic Crimes
+Traffic Crimes
+Notes: Figure presents the number of crime reports received by Finnish Police. Source: Statistics Finland
+(2022c)
+46
+
+=== PAGINA 48 ===
+Figure A.2: The Most Common Causes of deaths for 15 to 49 year olds globally in 2019
+0
+.5
+1
+1.5
+ Chronic kidney disease
+ Interpersonal violence
+Cirrhosis and oth. chr. liv. dis.
+ Tuberculosis
+ Self-harm
+ Digestive diseases
+ HIV/AIDS
+ Road injuries
+ Neoplasms
+ Cardiovascular diseases
+Annual Number of Deaths in Millions
+Source: Our World in Data
+Notes: Source: Our World in Data (2022)
+Figure A.3: Police Speeding Monitoring Camera
+Notes: Figure shows an automatic speeding camera used by the Finnish police to monitor speeding.
+47
+
+=== PAGINA 49 ===
+Figure A.4: Correlation Between Income Measures
+0
+2000
+4000
+6000
+8000
+Income based on income-based fine
+0
+2000
+4000
+6000
+8000
+Observed income in register data
+Observed
+Theoretical Fine Based on Yearly Income
+Slope: 0.67
+Correlation: 0.61 
+Notes: The figure shows the correlation between income deduced from the size of the income-based fine and
+income obtained from the administrative data.
+Figure A.5: The Relationship between Income, Probability of Speeding, and Crime Report
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+Notes: Figure conducts the same exercise as Figure 2, but does not restrict to households with a car. The
+figure plots the relationship between income percentile and the probability of observing the individual in the
+Police crime report statistics between January 2018 and May 2020. To construct the figure, I take everyone
+in cohorts born between 1998 and 1953. I calculate the income percentile by comparing individuals’ mean
+income over 2015-2017 to those in the same birth cohort. Blue dots with circles show the share of individuals
+receiving a speeding ticket in each percentile between January 2018 and May 2020. Red diamonds show the
+share of individuals in Police crime report data when the suspected crime is not a traffic offense between
+January 2018 and May 2020 for each percentile. Small dots and squares decompose the speeding ticket
+averages into shares that arise from fixed fines (blue dots) and income-based fines (grey squares).
+48
+
+=== PAGINA 50 ===
+Figure A.6: The Relationship Between Mean Income and Income Percentile
+0
+50000
+100000
+150000
+Mean Yearly Income
+0
+20
+40
+60
+80
+100
+Percentile
+Notes: The figure plots the relationship between mean income and income percentile. To construct the
+figure, I take everyone in cohorts born between 1998 and 1953. I calculate the income percentile by comparing
+individuals’ mean income over 2013-2017 to those in the same birth cohort.
+Figure A.7: The Relationship Between Income and Crime with Different Specifications
+(a) Rank relative to all individuals
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+(b) Rank relative to all individuals and a car
+in the household
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+(c) Rank relative to cohorts born between 1998
+and 1953
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+(c
+(d) Rank relative to cohorts born between
+1998 and 1953 with a car in the household
+0
+.1
+.2
+.3
+P(Crime report) between Jan. 2018 - May 2020
+0
+20
+40
+60
+80
+100
+Income Percentile Based on Income between 2013-2017
+All Speeding Tickets
+Fixed Speeding Tickets 
+Income-based Speeding Tickets 
+Not Traffic Crime
+Notes: Figure shows that the relationship between income and crime shown in the Figure 2 is robust to
+different specifications. Panel A measures the rank compared to everyone in cohorts born between 1998 and
+1953 but not within the age cohort, as is done in the main figure. Panel B constructs the percentiles as
+Panel A but restricts to households with a car. Panel C measures the rank compared to everyone in cohorts
+born between 1985 and 1953 but not within the age cohort, as is done in the main figure. Panel D calculates
+the percentiles as Panel C but restricts to households with a car.
+49
+
+=== PAGINA 51 ===
+Figure A.8: Normalized Speed and Cumulative Probability of Accident
+0
+.005
+.01
+.015
+.02
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Notes: The figure presents the probability of being involved in a traffic accident as a function of normalized
+speed. The x-axis measures the distance from the income-based fine cutoff in km/h, and the y-axis shows
+the probability of being in a traffic accident as a driver within six months after the initial speeding ticket.
+Vertical lines indicate the fine discontinuity points. The income-based (fixed) fine cutoff is located at 0 km/h
+(–5 km/h). The sample is constructed as described in Section 2.3.
+50
+
+=== PAGINA 52 ===
+Figure A.9: Speeding Distributions for Reoffenders
+(a) Speeding Distributions for Reoffenders
+0
+.05
+.1
+.15
+.2
+Density
+-15
+-10
+-5
+0
+5
+10
+Normalized distance from the income-based fine cutoff (km/h)
+Income-based fines
+Fixed fines
+(b) Difference in Densities
+-.03
+-.02
+-.01
+0
+.01
+.02
+Difference in the Densities
+-15
+-10
+-5
+0
+5
+10
+Normalized distance from the income-based fine cutoff (km/h)
+Difference in the Densities
+Notes: Figure Panel a shows the speeding distributions for individuals with at least one speeding incident
+in the past 12 months. The distributions are plotted separately for those who received an income-based fine
+or fixed during the past 12 months. Figure panel b plots the difference between the distributions.
+51
+
+=== PAGINA 53 ===
+Figure A.10: RDD Estimates with Different Bandwidths
+-.1
+-.08
+-.06
+-.04
+-.02
+0
+RDD Estimate
++-3
++-4
++-5
++-6
+Size of the Bandwidth
+Conventional RDD 
+Bias corrected RDD
+Notes: The figure shows results from a robustness test in which I test whether the RDD estimates are
+sensitive to bandwidth choice. Black dots show the RDD estimates that are obtained using equation 2.
+Black vertical lines plot the 95 percent confidence intervals obtained using standard errors that are clustered
+at the individual level. The y-axis shows the size of the RDD estimate. The x-axis indicates the width of
+the estimation window. Section 2.3 explains the sample construction.
+Figure A.11: RDD Estimates at the Placebo Cutoffs
+-.04
+-.03
+-.02
+-.01
+0
+.01
+9
+10 
+11
+12
+13
+20
+The Place of (placebo) Cutoff in Km/H
+Placebo cutoff 
+Day Fine Cutoff
+Notes:
+The figure plots RDD estimates I obtain from a permutation test similar to that proposed by
+Ganong and J¨ager (2018). In the test, I place placebo cutoffs at the non-discontinuity points and then
+run the analysis using the equation 2.
+If the setting is valid, we should not observe the impact on the
+outcome since the treatment is the same on both sides of the cutoff. The placebo cutoffs and bandwidths
+are always defined so that the individuals on the right-hand side of the income-based fine cutoff are not
+used in the placebo check. Black diamonds report the results from the placebo check. Red dot reports the
+main estimate. The vertical lines report 95 percent confidence intervals. Standard errors are clustered at
+the individual level. Section 2.3 defines the sample construction.
+52
+
+=== PAGINA 54 ===
+Figure A.12: RDD Estimates at the day fine cutoff with different specifications if the
+limit 80 km/h is omitted
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Conventional RDD without controls
+Conventional RDD with controls
+Bias corrected RDD
+Bias corrected RDD with Controls
+Notes: Figure shows results from a similar analysis as Figure 7, but using different specifications.
+Red
+dots plot the estimates obtained using Equation (2). Diamonds plot the conventional estimates with con-
+trols. Squares report biased corrected RDD estimates obtained using the robust approach by Calonico et al.
+(2014b). Triangles plot the biased corrected RDD estimates with controls. Vertical lines behind the esti-
+mates show the 95 percent confidence intervals. Standard errors are clustered at the individual level in the
+conventional approach. For bias-corrected estimates, the confidence intervals are given by the approach of
+Calonico et al. (2014b). Section 2.3 defines sample construction and data. Limit area 80 km/h is omitted
+Figure A.13: RDD Estimates at the Day fine cutoff if 80 km/h limit area is included
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Conventional RDD without controls
+Conventional RDD with controls
+Bias corrected RDD
+Bias corrected RDD with Controls
+Notes: Figure shows results from a similar analysis as Figures 7 and A.12, but also uses 80 km/h limit area.
+Red dots plot the estimates obtained using Equation (2). Diamonds plot the conventional estimates with
+controls. Squares report biased corrected RDD estimates obtained using the robust approach by Calonico
+et al. (2014b). Triangles plot the biased corrected RDD estimates with controls. Vertical lines behind the
+estimates show the 95 percent confidence intervals. Standard errors are clustered at the individual level in
+the conventional approach. For bias-corrected estimates, the confidence intervals are given by the approach
+of Calonico et al. (2014b). Section 2.3 defines sample construction and data.
+53
+
+=== PAGINA 55 ===
+Figure A.14: RDD Estimates at the 15 km/h cutoff
+(a) limit 80 km/h omitted
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Conventional RDD without controls
+Conventional RDD with controls
+Bias corrected RDD
+Bias corrected RDD with Controls
+(b) limit 80 km/h included
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Conventional RDD without controls
+Conventional RDD with controls
+Bias corrected RDD
+Bias corrected RDD with Controls
+Notes: The figure shows results from a similar analysis as Figures 7 and A.12, but uses variation from the
+fixed fine cutoff (15 km/h) where the hike does not relate to an individual’s income. The figure panel (a)
+plots the RDD when all limit zones except 120 km/h are included. Red dots plot the estimates obtained
+using Equation (2). Diamonds plot the conventional estimates with controls. Squares report biased corrected
+RDD estimates obtained using the robust approach by Calonico et al. (2014b). Triangles plot the biased
+corrected RDD estimates with controls. Vertical lines behind the estimates show the 95 percent confidence
+intervals.
+Standard errors are clustered at the individual level in the conventional approach.
+For bias-
+corrected estimates, the confidence intervals are given by the approach of Calonico et al. (2014b). Section
+2.3 defines sample construction and data. Figure panel (b) conducts the same analysis but drops the 80
+km/h limit zone, where I observe bunching.
+54
+
+=== PAGINA 56 ===
+Figure A.15: The Impact on Traffic and Non-traffic Crime
+-.1
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months Since Fine
+Traffic offences
+Non-traffic offences
+Notes: The figure shows results from a similar analysis as Figure 7, but the primary outcome is cumulative
+non-traffic criminal activity. The figure plots the RDD estimates of β obtained using Equation (2) when all
+limit zones except 80 km/h and 120 km/h are included. I use local linear regression with a triangular kernel.
+Blue diamonds show the results when the outcome is a cumulative probability of committing a non-traffic
+crime. As a comparison, black dots show the results I present in the main figure 7. Vertical lines behind
+the estimates show the 95 percent confidence intervals. Standard errors are clustered at the individual level.
+Sample construction and data as defined in Section 2.3.
+Figure A.16: RDD estimates when restricting to individuals that can be followed for 12
+months
+-.1
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+3
+5
+7
+9
+11
+Months Since Fine
+Main Estimates
+Tickets before July 2019
+Notes: The figure shows results from a robustness check that tests how sensitive my results are to the fact
+that I can not follow all drivers the entire 12 months. Black diamonds plot the main estimates shown in
+Figure 7. Blue dots restrict the sample to drivers I can follow for 12 months. All the estimates are obtained
+using equation 2. I use local linear regression with a triangular kernel. Blue diamonds show the results
+when the outcome is a cumulative probability of committing a non-traffic crime. As a comparison, black
+dots show the results I present in the main figure Figure 7. Vertical lines behind the estimates show the 95
+percent confidence intervals. Standard errors are clustered at the individual level. Sample construction and
+data as defined in Section 2.3.
+55
+
+=== PAGINA 57 ===
+Figure A.17: RDD Estimates when Outcome Is Created Using Only Speeding Incidents
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months Since Fine
+All Traffic offences
+Only Speeding cases
+Notes: Figure shows results from analysis where the outcome is constructed using only speeding incidents.
+Black dots plot the main estimates shown in Figure 7 when the outcome is constructed using all traffic
+offenses. Blue diamonds show the results when I restrict just to speeding violations. All the estimates are
+obtained using equation 2. I use local linear regression with a triangular kernel. Vertical lines behind the
+estimates show 95 percent confidence intervals. Standard errors are clustered at the individual level. Sample
+construction and data as defined in Section 2.3.
+Figure A.18: Standard and Armstrong and Koles´ar (2020) Confidence Intervals
+-.08
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months Since Speeding Ticket
+Armstrong and Kolesar (2020) 95% CI
+Conventional 95% CI
+Notes: Figure plots the main RDD estimates with conventional and Armstrong and Koles´ar (2020) 95
+percent confidence intervals. Red dots plot the RDD estimates I obtain using equation 2. Vertical lines plot
+the conventional 95 percent confidence intervals. The shaded area shows the “honest confidence intervals”
+of Armstrong and Koles´ar (2020). Standard errors are clustered at the individual level. Sample construction
+and data as defined in Section 2.3.
+56
+
+=== PAGINA 58 ===
+Figure A.19: The Relationship Between Income and Fine in Groups ± 1km/h from Day-
+Fine Cutoff
+0
+200
+400
+600
+800
+1000 1200 1400
+Speeding ticket in Euros
+0
+2000
+4000
+6000
+8000
+10000
+Net Monthly Income
+Income-based Fine 
+Fixed Fine
+Income-based Fine
+Fixed Fine
+Notes: The figure illustrates the link between income and the size of the speeding tickets within groups
+below and above the income-based fine cutoff. Black dots show the relationship in the treatment group,
+where speeding tickets vary with income. Blue circles show the same relationship in the treatment group,
+where everyone receives a similar fine. Section 2.3 describes the sample creation.
+57
+
+=== PAGINA 59 ===
+Figure A.20: The Distribution of the Number of Tickets Received Before the Speeding
+Incident at time t
+(a) Tickets received over the 12 months before the ticket at time t
+80.286
+16.275
+2.655
+0.784
+0
+20
+40
+60
+80
+100
+Percent
+0
+1
+2
+≥ 3
+The Number of Tickets Received Over the 12 Months Before the Incident
+(b) Tickets received over the 48 months before the ticket at time t
+52.432
+26.919
+11.809
+8.840
+0
+20
+40
+60
+80
+100
+Percent
+0
+1
+2
+≥ 3
+The Number of Tickets Received Over the 48 Months Before the Incident
+Notes: Figure shows the distribution of the number of tickets an individual has received before the speeding
+incident that takes place at time t. Panel a (b) of the Figure shows the distribution of tickets received by
+individuals over the 12 (48) months before the incident at time t. The dataset is the same as in the main
+RDD analysis. Section 2.3 explains data construction.
+58
+
+=== PAGINA 60 ===
+Figure A.21: Speeding Distributions at the Traffic Monitoring Station 145 with Speeding
+Camera
+(a) Full Distribution
+0
+.02
+.04
+.06
+.08
+Density
+40
+60
+80
+100
+120
+Speed
+(b) Distribution Around the Income-based Fine Cutoff
+0
+.001
+.002
+.003
+.004
+.005
+Density
+-10
+-5
+0
+5
+10
+Normalized Speed
+Notes: The figure shows speed distributions at Traffic Monitoring Station 145, located on Ring Road 1,
+which runs through Helsinki and Espoo. The station also has a police speeding camera. Panel A displays
+the full speed distribution at the station, while Panel B focuses on the distribution around the income-based
+fine cutoff.
+59
+
+=== PAGINA 61 ===
+Figure A.22: Fines, RDD Estimates, and Reoffending Means by Speeding History
+(a) Discontinuities in the Fine
+0
+50
+100
+150
+200
+250
+Discontinuity in the Fine
+
+Reoffenders
+First-time offenders
+
+Fine Discontinuity:
+Reoffenders: 229.859 (13.856)
+First-time offenders: 169.181 (7.753)
+(b) RDD estimates
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimates
+
+Reoffenders
+First-time offenders
+
+RDD Estimates:
+Reoffenders: -0.034 (0.014)
+First-time offenders: -0.011 (0.011)
+(c) Control Means
+0
+.05
+.1
+.15
+.2
+Mean Reoffending within 6 Months
+
+Reoffenders
+First-time offenders
+
+Outcome Mean:
+Reoffenders: 0.178
+First-time offenders: 0.096
+Notes: The figure presents discontinuities in fines, RDD estimates, and control means by speeding history.
+Reoffenders are individuals who have received a speeding ticket during the past four years, while first-time
+offenders have a clean speeding record. Panel (a) plots the discontinuity in the fine amount. Panel (b)
+shows the estimated impact of the higher fine on reoffending within six months of the initial ticket. Panel
+(c) displays the mean outcome in the control group. Vertical solid lines represent 95% confidence intervals.
+Standard errors are clustered at the individual level.
+60
+
+=== PAGINA 62 ===
+Figure A.23: The Impact of Fine Size on Reoffending within 1-18 months.
+(a) The Main Specification
+-.08
+-.06
+-.04
+-.02
+0
+.02
+.04
+RDD Estimate
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 11 12 13 14 15 16 17 18
+Months Since Speeding Ticket
+95% Confidence Intervals
+RDD Estimate
+(b) Robustness to different Specifications
+-.08
+-.06
+-.04
+-.02
+0
+.02
+.04
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 11 12 13 14 15 16 17 18
+Months since speeding ticket
+Conventional RDD without controls
+Conventional RDD with controls
+Bias corrected RDD
+Notes: Figure panel (a) plots the RDD estimates of βt obtained using Equation (2). Estimates plot the
+impact of the higher fine on the cumulative probability of committing a traffic offense in t months after the
+initial fine. The estimates are obtained using conventional local linear regression with a triangular kernel.
+Vertical solid lines are the 95 percent confidence intervals. Standard errors are clustered at the individual
+level. Figure panel (b) shows the robustness to different specifications. Sample construction and data as
+defined in section 2.3.
+61
+
+=== PAGINA 63 ===
+Figure A.24: Counterfactual Exercise
+(a) Constant Treatment Effect
+Fixed fine cutoff
+Income-based fine cutoff 
+.05
+.1
+.15
+.2
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Counterfactual
+True Data
+(b) Treatment Effect Diminishing in Speed
+Fixed fine cutoff
+Income-based fine cutoff 
+.05
+.1
+.15
+.2
+-12
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+Normalized distance from the income-based fine cutoff (km/h)
+Counterfactual
+True Data
+Notes: The Figure presents results from a counterfactual exercise. I generate the unobserved counterfactual
+(triangles) by adding the treatment effect to the mean of the treatment group. Panel (a) assumes that
+the treatment effect equals the RDD estimate after 6 months and is constant. Panel (b) assumes that the
+treatment effect decreases by 20 percent per kilometer per hour as we move to the right from the cutoff.
+The x-axis measures the distance from the income-based fine cutoff in km/h.
+The y-axis refers to the
+probability of committing another traffic offense within six months after the initial speeding ticket. Vertical
+lines highlight the fine discontinuity points. The income-based (fixed) fine cutoff locates at 0 (-5). The
+sample is constructed as the section 2.3 describes.
+62
+
+=== PAGINA 64 ===
+Figure A.25: The Impact of Fine Size on Probability of Receiving another Income-based
+Fine
+(a) RDD estimates
+-.06
+-.04
+-.02
+0
+.02
+RDD Estimate
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months Since Fine
+Conventional RDD
+Bias corrected RDD
+(b) Control mean
+0
+.01
+.02
+.03
+.04
+.05
+Cumulative recidivism probability
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Months since speeding ticket
+Notes: Figure panel (a) plots the RDD estimates of βt obtained using Equation (2). Estimates plot the
+impact of the higher fine on the cumulative probability of receiving an income-based fine in t months after
+the initial fine. The estimates are obtained using conventional local linear regression with a triangular kernel.
+Vertical solid lines are the 95 percent confidence intervals. Standard errors are clustered at the individual
+level. Figure Panel (b) shows the mean of the outcome for the control group.
+63
+
+=== PAGINA 65 ===
+Figure A.26: Graphical Evidence: Recidivism Within 3 ,6 ,9 ,12 Months
+0
+.05
+.1
+.15
+.2
+.25
+-12-10 -8 -6 -4 -2 0
+2
+4
+6
+8
+After 3 months
+0
+.05
+.1
+.15
+.2
+.25
+-12-10 -8 -6 -4 -2 0
+2
+4
+6
+8
+After 6 months
+0
+.05
+.1
+.15
+.2
+.25
+-12-10 -8 -6 -4 -2 0
+2
+4
+6
+8
+After 9 months
+0
+.05
+.1
+.15
+.2
+.25
+-12-10 -8 -6 -4 -2 0
+2
+4
+6
+8
+After 12 months
+Notes: The figure presents a recidivism outcome as a function of normalized speed. The x-axis measures
+the distance from the income-based fine cutoff in km/h. The y-axis refers to the probability of committing
+another traffic offense within 3, 6, 9, and 12 months after the initial speeding ticket. Vertical lines highlight
+the fine discontinuity points. The income-based (fixed) fine cutoff locates at 0 (-5). The sample is constructed
+as the section 2.3 describes.
+64
+
+=== PAGINA 66 ===
+Figure A.27: Distribution of Predicted Probability for Not Being in Speeding Sample
+0
+2
+4
+6
+8
+Density
+0
+.2
+.4
+.6
+.8
+1
+P(Not Speeding)
+All individuals with a car
+Individuals in the Speeding ticket sample
+Individuals in RDD sample
+Notes: The figure shows the distribution of the predicted probability of not being included in the speeding
+sample for the full population of car owners, for individuals in the speeding sample, and for the RDD sample.
+To calculate the predicted probabilities, I use data on all car owners in Finland. Using a logit model and
+the background characteristics listed in Appendix Table B.9, I estimate the predicted probability that an
+individual is not included in the speeding sample.
+Figure A.28: Geographical Variation in Monitoring Intensity
+(0.244,1.811]
+(0.146,0.244]
+(0.091,0.146]
+(0.059,0.091]
+(0.034,0.059]
+(0.020,0.034]
+(0.011,0.020]
+(0.004,0.011]
+(0.000,0.004]
+(0.000,0.000]
+[0.000,0.000]
+No data
+Notes: Figure shows geographical variation in the monitoring intensity. The monitoring intensity is mea-
+sured as the number of speeding tickets assigned by cameras in the municipality divided by the municipality’s
+car-owning population. Red indicates more monitoring whereas blue less monitoring.
+65
+
+=== PAGINA 67 ===
+B
+Tables
+Table B.1: The Punishment Schedule
+Speed Limit
+Violation (km/h)
+Number of
+Income Fines
+Drift
+Fixed Fine
+(1)
+(2)
+(3)
+(4)
+Panel A: Speed limit ≤60 km/h
+-10
+-
+-
+170
+10-15
+-
+-
+170
+16-20
+-
+-
+200
+21-23
+12
+8 - 16
+-
+24-26
+14
+10 - 18
+-
+27-29
+16
+12 - 20
+-
+30-32
+18
+14 - 22
+-
+33-35
+20
+16 - 24
+-
+36-38
+22
+18 - 26
+-
+39-41
+24
+20 - 28
+-
+42-44
+26
+22 - 30
+-
+45-47
+28
+24 - 32
+-
+Panel B: Speed limit > 60 km/h
+-10
+-
+-
+140
+10-15
+-
+-
+140
+16-20
+-
+-
+200
+21-23
+10
+6-14
+-
+24-26
+12
+8-16
+-
+27-29
+14
+10-18
+-
+30-32
+16
+12-20
+-
+33-35
+18
+14-22
+-
+36-38
+20
+16-24
+-
+39-41
+22
+18-26
+-
+42-44
+24
+20-28
+-
+45-47
+26
+22-30
+-
+48-50
+28
+24-32
+-
+Notes: The table shows the punishment schedule Finnish Police used during my study period.
+Column (1) shows the speeding limit violation in km/h. Column (2) presents the recommended
+number of income-based fines police assign for a given violation. Column(3) shows the recom-
+mended range for the number of income-based. Column (4) indicates the size of the possible
+fixed fine in euros.
+66
+
+=== PAGINA 68 ===
+Table B.2: Descriptive Statistics and Balance check when limit zone 80 km/h is included
+All
+Window +-3
+RDD
+CCT RDD
+Mean
+Mean
+RDD
+RDD
+(1)
+(2)
+(3)
+(4)
+Traffic offence, months t-1 to t-6
+0.121
+0.135
+0.007
+0.010
+(0.009)
+(0.011)
+Non-Traffic offence, months t-1 to t-6
+0.014
+0.020
+-0.001
+-0.002
+(0.004)
+(0.005)
+Employed
+0.702
+0.703
+0.002
+0.002
+(0.011)
+(0.014)
+Unemployed
+0.032
+0.037
+0.011
+0.014
+(0.005)
+(0.006)
+Outside the Labor Force
+0.265
+0.260
+-0.016
+-0.019
+(0.011)
+(0.014)
+Monthly Net Income
+2,578.336
+2,579.275
+-23.047
+-3.049
+(41.784)
+(51.460)
+Primary Education
+0.164
+0.168
+0.009
+0.011
+(0.009)
+(0.011)
+Secondary Education
+0.439
+0.444
+-0.013
+-0.017
+(0.012)
+(0.015)
+Tertiary Education
+0.397
+0.389
+0.003
+0.005
+(0.011)
+(0.014)
+Female
+0.328
+0.292
+-0.012
+-0.017
+(0.011)
+(0.013)
+Age
+47.313
+46.053
+-0.758
+-0.572
+(0.387)
+(0.454)
+N of Children
+0.829
+0.839
+0.032
+0.043
+(0.029)
+(0.037)
+Finnish Speaking
+0.893
+0.891
+0.021
+0.024
+(0.008)
+(0.010)
+Married
+0.499
+0.483
+0.008
+0.014
+(0.013)
+(0.015)
+Urban Municipality
+0.719
+0.716
+0.017
+0.023
+(0.012)
+(0.014)
+Semi-urban Municipality
+0.161
+0.163
+-0.017
+-0.021
+(0.008)
+(0.010)
+Rural Municipality
+0.120
+0.121
+-0.001
+-0.005
+(0.009)
+(0.011)
+Capital Region
+0.324
+0.295
+0.008
+0.009
+(0.011)
+(0.014)
+Observations
+504,529
+31,891
+Notes: The table shows the predetermined characteristics of individuals in the speeding ticket sample and results
+from balance checks when a limit zone of 80 km/h is included. Column (1) shows the means of background
+variables in the estimation sample. Column (2) presents the means of background variables in the estimation
+sample after I restrict it to individuals within +-3 km/h from the income-based cutoff. Column 3 shows results
+from the balance check where the dependent variable is a predetermined characteristic. The column reports the
+estimates of β that I obtain using the equation 2. Column 4 reports results from the balance check I conduct
+using the approach of Calonico et al. (2014a). I cluster standard errors at the individual level.
+67
+
+=== PAGINA 69 ===
+Table B.3: Balance check at the 15 Km/H cutoff - all limits included
+Dep. Var
+All
+Window +-3
+Conv. RD
+CCT RDD
+Mean
+Mean
+RDD
+RDD
+(1)
+(2)
+(3)
+(4)
+Traffic offence, months t-1 to t-6
+0.120
+0.123
+0.007
+0.008
+(0.004)
+(0.006)
+Non-Traffic offence, months t-1 to t-6
+0.014
+0.015
+-0.001
+0.000
+(0.002)
+(0.002)
+Employed
+0.702
+0.698
+-0.002
+0.002
+(0.006)
+(0.009)
+Unemployed
+0.032
+0.034
+-0.002
+-0.002
+(0.002)
+(0.003)
+Outside the Labor Force
+0.266
+0.268
+0.004
+0.001
+(0.006)
+(0.008)
+Monthly Net Income
+2,583.490
+2,576.056
+25.851
+39.616
+(22.282)
+(30.629)
+Primary Education
+0.163
+0.162
+-0.004
+-0.006
+(0.005)
+(0.007)
+Secondary Education
+0.438
+0.438
+-0.000
+0.001
+(0.007)
+(0.009)
+Tertiary Education
+0.399
+0.400
+0.004
+0.005
+(0.007)
+(0.009)
+Female
+0.329
+0.313
+-0.002
+0.005
+(0.006)
+(0.009)
+Age
+47.442
+47.106
+0.094
+-0.150
+(0.221)
+(0.297)
+N of Children
+0.828
+0.824
+0.008
+0.026
+(0.017)
+(0.022)
+Finnish Speaking
+0.894
+0.893
+0.007
+0.008
+(0.004)
+(0.006)
+Married
+0.501
+0.500
+0.008
+0.007
+(0.007)
+(0.009)
+Urban Municipality
+0.719
+0.717
+-0.013
+-0.019
+(0.007)
+(0.009)
+Semi-urban Municipality
+0.161
+0.162
+0.008
+0.014
+(0.005)
+(0.007)
+Rural Municipality
+0.120
+0.121
+0.003
+0.004
+(0.005)
+(0.006)
+Capital Region
+0.325
+0.310
+0.004
+0.008
+(0.006)
+(0.009)
+Observations
+483,866
+117,397
+Notes: The table shows the predetermined characteristics of individuals in the speeding ticket sample and results
+from the balance checks from the fixed fine cutoff when all limit zones are included. Column (1) shows the means
+of background variables in the estimation sample. Column (2) presents the means of background variables in the
+estimation sample after I restrict it to individuals within +-3 km/h from the fixed fine cutoff.
+Column 3 shows
+results from the balance check where the dependent variable is a predetermined characteristic. The column reports
+the estimates of β that I obtain using the equation 2. Column 4 reports results from the balance check I conduct
+using the approach of Calonico et al. (2014a). I cluster standard errors at the individual level.
+68
+
+=== PAGINA 70 ===
+Table B.4: Balance check at the 15 Km/H cutoff - limit 80 Km/H omitted
+Dep. Var
+All
+Window +-3
+Conv. RD
+CCT RDD
+Mean
+Mean
+RDD
+RDD
+(1)
+(2)
+(3)
+(4)
+Traffic offence, months t-1 to t-6
+0.121
+0.126
+0.003
+0.004
+(0.006)
+(0.008)
+Non-Traffic offence, months t-1 to t-6
+0.013
+0.014
+-0.002
+-0.002
+(0.002)
+(0.003)
+Employed
+0.706
+0.704
+-0.001
+-0.001
+(0.008)
+(0.010)
+Unemployed
+0.031
+0.034
+-0.004
+-0.005
+(0.003)
+(0.004)
+Outside the Labor Force
+0.262
+0.262
+0.005
+0.006
+(0.007)
+(0.010)
+Monthly Net Income
+2,596.016
+2,580.653
+36.021
+54.022
+(27.778)
+(38.068)
+Primary Education Only
+0.163
+0.163
+-0.004
+-0.008
+(0.006)
+(0.008)
+Secondary Education Only
+0.434
+0.437
+0.011
+0.012
+(0.009)
+(0.012)
+Tertiary Education Only
+0.404
+0.400
+-0.006
+-0.004
+(0.008)
+(0.011)
+Female
+0.332
+0.317
+-0.003
+-0.000
+(0.008)
+(0.011)
+Age
+47.436
+46.940
+0.345
+0.264
+(0.259)
+(0.361)
+N of Children
+0.832
+0.837
+-0.030
+-0.022
+(0.020)
+(0.027)
+Finnish Speaking
+0.887
+0.884
+0.012
+0.017
+(0.005)
+(0.007)
+Married
+0.504
+0.497
+0.006
+0.005
+(0.008)
+(0.011)
+Urban Municipality
+0.730
+0.718
+-0.016
+-0.023
+(0.008)
+(0.010)
+Semi-urban Municipality
+0.160
+0.165
+0.006
+0.010
+(0.006)
+(0.009)
+Rural municipality
+0.111
+0.117
+0.009
+0.008
+(0.006)
+(0.008)
+Capital region
+0.340
+0.324
+0.004
+0.002
+(0.008)
+(0.011)
+Observations
+322,734
+74,315
+Notes: The table shows the predetermined characteristics of individuals in the speeding ticket sample and results
+from the balance checks from the fixed fine cutoff when 80 km/h limit zone is omitted. Column (1) shows the means
+of background variables in the estimation sample. Column (2) presents the means of background variables in the
+estimation sample after I restrict it to individuals within +-3 km/h from the fixed fine cutoff.
+Column 3 shows
+results from the balance check where the dependent variable is a predetermined characteristic. The column reports
+the estimates of β that I obtain using the equation 2. Column 4 reports results from the balance check I conduct
+using the approach of Calonico et al. (2014a). I cluster standard errors at the individual level.
+69
+
+=== PAGINA 71 ===
+Table B.5: The RDD estimates from the Income-based Fine Cutoff
+(Limit 80 km/h Included)
+Dep. variable: P(Traffic offence between time 1 and t )
+Time (t)
+Mean
+RDD
+RDD
+RDD
+BW
+Obs.
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+1
+0.029
+-0.005
+-0.005
+-0.007
+3
+31,891
+(0.005)
+(0.005)
+(0.006)
+2
+0.058
+-0.010
+-0.011
+-0.013
+3
+31,891
+(0.006)
+(0.006)
+(0.008)
+3
+0.081
+-0.017
+-0.018
+-0.021
+3
+31,891
+(0.007)
+(0.007)
+(0.009)
+4
+0.105
+-0.021
+-0.021
+-0.024
+3
+31,891
+(0.008)
+(0.008)
+(0.009)
+5
+0.123
+-0.025
+-0.027
+-0.030
+3
+31,891
+(0.009)
+(0.009)
+(0.010)
+6
+0.140
+-0.019
+-0.020
+-0.022
+4
+49,499
+(0.009)
+(0.009)
+(0.011)
+7
+0.158
+-0.019
+-0.020
+-0.022
+4
+47,672
+(0.009)
+(0.008)
+(0.010)
+8
+0.176
+-0.020
+-0.021
+-0.024
+4
+45,324
+(0.010)
+(0.009)
+(0.012)
+9
+0.195
+-0.025
+-0.027
+-0.030
+3
+26,879
+(0.011)
+(0.011)
+(0.014)
+10
+0.213
+-0.022
+-0.023
+-0.026
+3
+25,110
+(0.012)
+(0.012)
+(0.015)
+11
+0.229
+-0.015
+-0.016
+-0.019
+4
+37,995
+(0.012)
+(0.012)
+(0.015)
+12
+0.248
+-0.017
+-0.019
+-0.021
+4
+35,008
+(0.014)
+(0.013)
+(0.017)
+Notes: The table shows the RDD estimates from the income-based fine cutoff
+when the limit zone of 80 km/h is not omitted. The outcome is the probability
+that an individual commits another traffic offense 1 to t months after the initial
+speeding ticket.
+Column (2) shows the mean of the outcome for those just
+on the left-hand side of the cutoff.
+Column (3) presents the RDD estimates
+obtained using equation 2. Column (4) shows results from a similar analysis
+but with controls. Column (5) reports biased corrected RDD estimates obtained
+using the robust approach by Calonico et al. (2014b). Column (6) shows the
+bandwidth selected using methods of Calonico et al. (2014b). Column (7) shows
+the number of observations.
+In columns (3) and (4), standard errors in the
+parentheses are clustered at the individual level. For bias-corrected estimates,
+the confidence intervals are given by the approach of Calonico et al. (2014b).
+Sample construction and data as defined in Section 2.3.
+70
+
+=== PAGINA 72 ===
+Table B.6: The RDD estimates from the fixed fine cutoff (15 km/h) when
+the limit 80 km/h is omitted
+Dep. variable: P(Traffic offence between time 1 and t)
+Time (t)
+Mean
+RDD
+RDD
+RDD
+BW
+BW Obs.
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+1
+0.025
+0.000
+0.000
+0.001
+3
+74,315
+(0.003)
+(0.003)
+(0.004)
+2
+0.051
+-0.004
+-0.004
+-0.004
+3
+74,315
+(0.004)
+(0.004)
+(0.005)
+3
+0.071
+-0.006
+-0.006
+-0.007
+3
+74,315
+(0.004)
+(0.004)
+(0.006)
+4
+0.092
+-0.006
+-0.006
+-0.008
+3
+74,315
+(0.005)
+(0.005)
+(0.007)
+5
+0.113
+-0.010
+-0.009
+-0.012
+3
+74,315
+(0.005)
+(0.005)
+(0.007)
+6
+0.130
+-0.011
+-0.010
+-0.013
+3
+71,836
+(0.006)
+(0.005)
+(0.008)
+7
+0.146
+-0.008
+-0.008
+-0.010
+3
+68,829
+(0.006)
+(0.006)
+(0.008)
+8
+0.161
+-0.010
+-0.010
+-0.012
+3
+65,789
+(0.006)
+(0.006)
+(0.009)
+9
+0.176
+-0.010
+-0.010
+-0.011
+3
+62,138
+(0.007)
+(0.007)
+(0.009)
+10
+0.192
+-0.005
+-0.005
+-0.007
+3
+57,679
+(0.007)
+(0.007)
+(0.010)
+11
+0.209
+-0.005
+-0.005
+-0.008
+3
+54,635
+(0.008)
+(0.008)
+(0.011)
+12
+0.227
+-0.006
+-0.005
+-0.011
+3
+50,517
+(0.008)
+(0.008)
+(0.012)
+Controls
+
+CCT Estimator
+
+Notes:
+The table shows the main RDD estimates from the fixed fine cutoff when the
+limit zone of 80 km/h is omitted.
+The outcome is the probability that an individual
+commits another traffic offense 1 to t months after the initial speeding ticket. Column
+(2) shows the mean of the outcome for those just on the left-hand side of the cutoff.
+Column (3) presents the RDD estimates obtained using equation 2. Column (4) shows
+results from a similar analysis but with controls.
+Column (5) reports biased corrected
+RDD estimates obtained using the robust approach by Calonico et al. (2014b).Column (6)
+shows the bandwidth selected using methods of Calonico et al. (2014b). Column (7) shows
+the number of observations. In columns (3) and (4), standard errors in the parentheses are
+clustered at the individual level. For bias-corrected estimates, the confidence intervals are
+given by the approach of Calonico et al. (2014b). Sample construction and data as defined
+in Section 2.3.
+71
+
+=== PAGINA 73 ===
+Table B.7: The RDD estimates from the fixed fine cutoff (15 km/h)
+when the limit 80 km/h is included
+Dep. variable: P(Traffic offence between time 1 and t)
+Time (t)
+Mean
+RDD
+RDD
+RDD
+BW
+Obs
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+1
+0.026
+0.000
+0.000
+0.001
+3
+117,397
+(0.002)
+(0.002)
+(0.003)
+2
+0.050
+-0.003
+-0.003
+-0.002
+3
+117,397
+(0.003)
+(0.003)
+(0.004)
+3
+0.072
+-0.003
+-0.003
+-0.004
+3
+117,397
+(0.003)
+(0.003)
+(0.005)
+4
+0.092
+-0.005
+-0.005
+-0.007
+3
+117,397
+(0.004)
+(0.004)
+(0.005)
+5
+0.112
+-0.007
+-0.007
+-0.010
+3
+117,397
+(0.004)
+(0.004)
+(0.006)
+6
+0.130
+-0.008
+-0.009
+-0.010
+3
+113,491
+(0.005)
+(0.004)
+(0.006)
+7
+0.146
+-0.007
+-0.008
+-0.008
+3
+109,060
+(0.005)
+(0.005)
+(0.007)
+8
+0.161
+-0.009
+-0.010
+-0.010
+3
+103,572
+(0.005)
+(0.005)
+(0.007)
+9
+0.177
+-0.012
+-0.012
+-0.013
+3
+98,174
+(0.006)
+(0.005)
+(0.008)
+10
+0.194
+-0.011
+-0.011
+-0.012
+3
+91,795
+(0.006)
+(0.006)
+(0.008)
+11
+0.209
+-0.009
+-0.010
+-0.011
+3
+86,640
+(0.006)
+(0.006)
+(0.009)
+12
+0.228
+-0.010
+-0.010
+-0.012
+3
+79,904
+(0.007)
+(0.007)
+(0.009)
+Controls
+
+CCT Estimator
+
+Notes: The table shows the main RDD estimates from the fixed fine cutoff when the
+limit zone of 80 km/h is not omitted. The outcome is the probability that an individual
+commits another traffic offense 1 to t months after the initial speeding ticket. Column
+(2) shows the mean of the outcome for those just on the left-hand side of the cutoff.
+Column (3) presents the RDD estimates obtained using equation 2. Column (4) shows
+results from a similar analysis but with controls. Column (5) reports biased corrected
+RDD estimates obtained using the robust approach by Calonico et al. (2014b).Column
+(6) shows the bandwidth selected using methods of Calonico et al. (2014b). Column
+(7) shows the number of observations.
+In columns (3) and (4), standard errors in
+the parentheses are clustered at the individual level. For bias-corrected estimates, the
+confidence intervals are given by the approach of Calonico et al. (2014b).
+Sample
+construction and data as defined in Section 2.3.
+72
+
+=== PAGINA 74 ===
+Table B.8: RDD Specification Check
+Dep. Variable
+RDD
+RDD
+CCT
+RDD
+RDD
+(1)
+(2)
+(3)
+(4)
+(5)
+Jump in fines
+200.962
+204.113
+213.353
+211.698
+161.558
+(8.129)
+(7.427)
+(9.814)
+(11.717)
+(4.476)
+P(Reoffending)
+-0.021
+-0.022
+-0.028
+-0.034
+-0.022
+(0.009)
+(0.009)
+(0.012)
+(0.015)
+(0.009)
+Controls
+
+
+
+
+Polynomial
+
+Weighted
+
+Bandwidth
+4
+4
+4
+4
+4
+Mean at the left side
+0.137
+0.137
+0.137
+0.137
+0.137
+Observations
+31,912
+31,912
+31,912
+31,912
+31,912
+Notes: The table shows the RDD estimates with different specifications. In the first row,
+the outcome is the total amount of fines. In the second row, the outcome is the probability
+of reoffending within six months. Column (1) shows the main RDD estimates obtained
+using equation 2. Column (2) presents results when controls are added to the specification.
+Column (3) shows the results obtained using the approach of Calonico et al. (2014b). Col-
+umn (4) shows results when I add a quadratic term to the RDD specification. Column (5)
+reports weighted RDD estimates based on a sample reweighted to match the characteristics
+of car owners who did not receive tickets. Standard errors clustered at the individual level.
+Sample construction and data as defined in Section 2.3
+73
+
+=== PAGINA 75 ===
+Table B.9: Summary Statistics for Car Holders
+(1)
+(2)
+(3)
+(4)
+Full population
+Non-Speeders
+Speeders
+RDD
+Employed
+0.613
+0.605
+0.702
+0.707
+(0.487)
+(0.489)
+(0.457)
+(0.455)
+Unemployed
+0.0226
+0.0228
+0.0324
+0.0372
+(0.149)
+(0.149)
+(0.177)
+(0.189)
+Outside the Labor Force
+0.364
+0.372
+0.265
+0.256
+(0.481)
+(0.483)
+(0.441)
+(0.436)
+Monthly Net Income
+2335.4
+2301.5
+2634.0
+2625.4
+(1388.8)
+(1351.8)
+(1728.7)
+(1749.3)
+Primary Education
+0.185
+0.188
+0.164
+0.169
+(0.388)
+(0.390)
+(0.370)
+(0.375)
+Secondary Education
+0.454
+0.455
+0.439
+0.440
+(0.498)
+(0.498)
+(0.496)
+(0.496)
+Tertiary Education
+0.361
+0.357
+0.397
+0.391
+(0.480)
+(0.479)
+(0.489)
+(0.488)
+Female
+0.378
+0.385
+0.328
+0.299
+(0.485)
+(0.487)
+(0.469)
+(0.458)
+Age
+51.02
+51.23
+47.31
+46.16
+(16.76)
+(16.87)
+(15.70)
+(15.90)
+N of Children
+0.667
+0.654
+0.829
+0.842
+(1.060)
+(1.049)
+(1.183)
+(1.211)
+Finnish Speaking
+0.907
+0.907
+0.893
+0.883
+(0.291)
+(0.290)
+(0.310)
+(0.321)
+Married
+0.496
+0.495
+0.499
+0.485
+(0.500)
+(0.500)
+(0.500)
+(0.500)
+Urban Municipality
+0.665
+0.661
+0.719
+0.714
+(0.472)
+(0.473)
+(0.449)
+(0.452)
+Semi-urban Municipality
+0.181
+0.182
+0.161
+0.166
+(0.385)
+(0.386)
+(0.367)
+(0.372)
+Rural Municipality
+0.155
+0.157
+0.120
+0.120
+(0.362)
+(0.364)
+(0.325)
+(0.325)
+Capital region
+0.253
+0.248
+0.324
+0.307
+(0.435)
+(0.432)
+(0.468)
+(0.461)
+Ticket within 2 years
+0.186
+0.173
+0.322
+0.338
+(0.389)
+(0.378)
+(0.467)
+(0.473)
+N
+5,030,724
+4,610,502
+504,776
+31,912
+Notes: The table reports descriptive statistics for the full population of car owners between 2017-
+2018 (column 1), for individuals who have a car but are not in the speeding ticket sample (column 2),
+for individuals in the speeding sample (column 3), and for individuals in the RDD sample (column
+4).
+74
+
+=== PAGINA 76 ===
+Table B.10: Monitoring Intensity and Recidivism
+Low Monitoring
+Mod. Monitoring
+High Monitoring
+Dep. Variable
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A.
+Jump in fines
+208.177
+210.043
+213.221
+218.010
+182.171
+186.483
+(17.273)
+(16.087)
+(13.564)
+(12.149)
+(9.227)
+(7.835)
+Panel B.
+P(Reoffending)
+-0.005
+-0.006
+-0.046
+-0.046
+-0.015
+-0.017
+(0.015)
+(0.015)
+(0.017)
+(0.017)
+(0.016)
+(0.016)
+Controls
+
+
+
+Mean at the left side
+0.124
+0.124
+0.158
+0.158
+0.130
+0.130
+Observations
+11,428
+11,428
+10,120
+10,120
+10,364
+10,364
+Notes: The table presents the relationship between municipal monitoring intensity and recidivism. The
+monitoring intensity is measured as the number of speeding tickets assigned in a municipality divided by
+the municipality’s car-owning population, averaged over 2018-2019. Individuals in the speeding sample are
+divided into monitoring tertiles based on the intensity in their home municipality: columns 1-2 represent low
+monitoring regions, columns 3-4 moderate monitoring regions, and columns 5-6 high monitoring regions.
+Panel A shows the fine jump at the cutoff. Panel B shows the impact on recidivism 6 months after the
+initial ticket. All estimates are obtained using Equation 2. Standard errors are clustered at the individual
+level. Section 2.3 details the sample construction.
+75
+
+=== PAGINA 77 ===
+Table B.11: Descriptive Statistics by Speeding History
+All
+First-time offenders
+Reoffenders
+(1)
+(2)
+(3)
+Employed
+0.706
+0.677
+0.739
+(0.456)
+(0.468)
+(0.439)
+Unemployed
+0.032
+0.039
+0.024
+(0.177)
+(0.195)
+(0.154)
+Outside the Labor Force
+0.262
+0.284
+0.237
+(0.440)
+(0.451)
+(0.425)
+Monthly Net Income
+2,589.741
+2,389.260
+2,810.723
+(1,657.788)
+(1,477.326)
+(1,810.737)
+Primary Education
+0.164
+0.163
+0.164
+(0.370)
+(0.370)
+(0.370)
+Secondary Education
+0.434
+0.436
+0.432
+(0.496)
+(0.496)
+(0.495)
+Tertiary Education
+0.402
+0.400
+0.404
+(0.490)
+(0.490)
+(0.491)
+Female
+0.331
+0.385
+0.271
+(0.470)
+(0.487)
+(0.444)
+Age
+47.296
+47.482
+47.091
+(15.626)
+(16.260)
+(14.893)
+N of Children
+0.834
+0.803
+0.868
+(1.184)
+(1.154)
+(1.215)
+Finnish Speaking
+0.886
+0.888
+0.885
+(0.318)
+(0.316)
+(0.319)
+Married
+0.501
+0.505
+0.497
+(0.500)
+(0.500)
+(0.500)
+Urban Municipality
+0.729
+0.728
+0.730
+(0.444)
+(0.445)
+(0.444)
+Semi-urban Municipality
+0.160
+0.159
+0.161
+(0.366)
+(0.365)
+(0.368)
+Rural Municipality
+0.111
+0.113
+0.109
+(0.314)
+(0.317)
+(0.312)
+Capital Region
+0.338
+0.320
+0.358
+(0.473)
+(0.467)
+(0.479)
+Observations
+338,191
+177,321
+160,870
+Notes:
+The table reports descriptive statistics for the full sample, reoffenders, and first-time
+offenders. Reoffenders are individuals who received a speeding ticket at some point in the past four
+years, while first-time offenders have a clean speeding history. Standard deviations are reported
+in parentheses.
+76
+
+=== PAGINA 78 ===
+Table B.12: Regression Discontinuity Design Estimates by Income Change
+Income change ≥0
+Income change < 0
+(1)
+(2)
+(3)
+(4)
+Panel A. Impact on Fine
+206.642
+209.528
+183.499
+187.478
+(10.321)
+(9.400)
+(9.401)
+(8.239)
+Panel B. Impact on Recidivism
+-0.027
+-0.028
+-0.002
+-0.001
+(0.011)
+(0.011)
+(0.019)
+(0.018)
+Controls
+
+
+N
+23,685
+23,685
+8,227
+8,227
+Notes: The table reports results by past income growth. Columns (1) - (2) show the RDD estimates for
+the individuals who have experienced weakly positive income growth between periods t −3, 4 and t −1, 2.
+Columns (3) - (4) show the RDD estimates for the individuals who have experienced negative income
+growth between periods t −3, 4 and t −1, 2. Panel A shows the discontinuity in fines at the income-based
+fine cutoff. Panel B presents the effect on reoffending six months after the initial ticket. Columns (2) and
+(4) show the estimates with controls. Section 2 describes the sample construction.
+Table B.13: The Impact of Fine Size on Accidents
+RDD
+RDD
+(1)
+(2)
+0.002
+0.002
+(0.002)
+(0.002)
+Controls
+
+Outcome mean
+0.005
+0.005
+Bandwidth
+4
+4
+Observations
+31,912
+31,912
+Notes: The table reports results from an RDD analysis
+where the outcome is the probability of being involved in
+a traffic accident as a driver within six months of receiving
+a speeding ticket. Estimates are obtained using Equation
+(2). Column (1) reports estimates without controls, and
+Column (2) reports estimates with controls. The sample
+construction is detailed in Section 2.3.
+77
+
+=== PAGINA 79 ===
+C
+Theory Appendix
+C.1
+Proofs for the Model with Misperception
+Proof of Proposition 1
+Proof. Individuals solve
+max
+xt EUt = u(xt, θ) −p · ˆft(x) · xt.
+The first order condition giving the optimal speed x∗is
+∂u(x, θ)/∂x −p · ∂ˆft(x, θ)/∂x = 0
+(6)
+since drivers ignore the discontinuity and use a linear approximation of the penalty
+function. Thus, all individuals locate in their interior optimum where the equation 6 holds.
+Because θ has a continuous distribution, the speed distribution will be continuous, implying
+that there exists zero excess mass at the cutoff xh
+Proof of Proposition 2
+Proof. Individuals solve
+max
+xt EUt = u(xt, θ) −p · ˆft(x) · xt.
+where ˆft(x) = βx + fl1[x > 0]} is individuals’ perceived penalty function at time
+t.
+The slope β is an unknown random variable and according to an individual’s prior
+beliefs β ∼N[µβ, τ −1
+β ]. The known constant equals a low fine fl. When an individual
+is caught, she receives a fine that they interpret as a signal. The signal takes the form
+st = βf
+t + ηt, η ∼N[µs, τ −1
+s ]. If speed is higher than xh, then the individual receives a large
+fine (βh
+t ). Otherwise, βf
+t is βl
+t. The posterior is given by: ˆβ = τβµβ+τss
+τβ+τs
+Proof of Proposition 3
+Proof. The optimization problem may be stated as
+max
+x
+EU = θx −x2
+2 −ˆβ · x.
+Note, I have dropped the time subscript since I am considering the steady state. The
+78
+
+=== PAGINA 80 ===
+true penalty function is
+f(x) =
+
+
+
+
+
+
+
+
+
+0 if x = 0
+fl if 0 < x ≤xh
+fh if x > xh.
+(7)
+If actions converge, they converge to a steady state where two conditions have to hold.
+First order condition:
+θ −x∗−β = 0
+(8)
+Surprise function:
+Γ(x) = f(x∗) −ˆf(x∗) = 0,
+(9)
+where ˆf(x) = βx+fl1[x > 0]. Equation 8 is just a standard first order condition. Equation
+9 implies that in the steady state the fine individual receives has to be equal to the predicted
+one. Otherwise, she will update the penalty function, and hence, the selected speed can
+not be a steady state. In other words, the steady state has to locate in a place where the
+perceived penalty function and the true penalty function cross.
+We can combine equations 8 and 9 to obtain
+θ = x∗+ fh −fl
+x∗
+1[x > xh]
+(10)
+It follows directly from equation 10 and continuity of types that there is a continuum of
+types whose beliefs do not converge, and follow cycles. Note that θl is a type whose optimal
+speed is exactly at xh
+C.2
+Becker Model with Income-Based Fines
+This theoretical section builds partly on Mello (2024) to illustrate how income-based fines
+affect low- and high-income individuals.
+In the model, individuals choose to speed if the expected utility of doing so exceeds that
+of abstaining
+pu(y −f) + (1 −p)(u(y) + s) > u(y)
+(11)
+where f is the fine, p is the detection probability, y is the exogenous income, and s stands
+for the utility arising from speeding. The utility from speeding, s, varies across individuals
+according to a distribution with a cumulative distribution function G.
+The ”taste” for
+speeding is not correlated with income.
+I assume that the utility function satisfies the
+standard properties that ∂u/∂y > 0, ∂2u/∂y < 0.
+By rearranging equation 11, we can derive ”the crime demand function,” which takes
+79
+
+=== PAGINA 81 ===
+the following form:
+s∗(p, y, f) =
+p
+1 −p[u(y) −u(y −f)].
+(12)
+The equation 12 defines the cutoff value s∗, which dictates whether an individual engages
+in speeding. If an individual’s private gain (willingness to pay) si is larger than the cutoff
+value s∗, the individual commits a crime and vice versa.
+The cutoff has the following properties:
+∂s∗/∂f > 0,
+∂s∗/∂p > 0,
+∂s∗/∂y < 0.
+The cutoff increases with fine size and detection probability, meaning speeding becomes
+less likely as either increases.
+Conversely, the cutoff decreases with income due to the
+concavity of the utility function.
+As income rises, the marginal utility of income falls,
+making individuals more willing to risk financial penalties. This property makes higher-
+income individuals more likely to speed even when speeding preferences are distributed
+similarly across the population.
+CRRA utility function
+Next, I will illustrate how an individual’s cutoff value s∗changes
+if there is a discontinuous change in the fine. To do this, I will assume that individuals have
+a constant relative risk aversion (CRRA) utility function of the following form
+u(y) =
+
+
+
+
+
+y1−η
+1 −η
+if η > 0, η̸ = 1,
+ln y
+if η = 1
+where η is the relative risk aversion parameter and is larger than 0 due to risk aversion.
+With the CRRA utility function, the cutoff becomes
+s∗(p, y, f) =
+
+
+
+
+
+
+
+p
+1 −p
+y1−η −(y −f)1−η
+1 −η
+,
+if η > 0, η̸ = 1,
+p
+1 −p
+ ln y −ln(y −f)
+
+,
+if η = 1.
+(13)
+With this structure, I will next illustrate how the cutoff value s∗changes at the income-
+based fine threshold for different income groups and different levels of risk aversion. In
+this exercise, I assume a penalty schedule similar to that in Finland, with the size of the
+income-based fine is determined by equation 1.
+80
+
+=== PAGINA 82 ===
+Changes in s∗at the Income-based fine threshold
+Appendix Figure C.29 illustrates
+how the cutoff value s∗varies with income and risk aversion parameter η at the income-
+based fine threshold. Panel (a) depicts the case of near risk neutrality (η = 0.01), where
+s∗is uniform across income deciles under fixed fines but increases sharply for high-income
+individuals once fines become income-dependent. This suggests that income disparities in
+speeding would emerge only at speeds above the income-based threshold under near risk
+neutrality.
+As risk aversion increases across panels (b)-(d), the relationship between income and
+deterrence changes systematically. At moderate risk aversion (η = 0.5), fixed fines deter
+low-income individuals more strongly than high-income individuals. Yet the substantial
+jump in fine magnitudes at the threshold still creates stronger deterrence for high-income
+individuals in the income-based regime.
+When risk aversion reaches η = 1.1 (panel c),
+income-based fines generate approximately equal deterrence across income groups. At very
+high risk aversion (η = 6, panel d), the cutoff value increases less dramatically for high-
+income individuals than for low-income individuals at the threshold, potentially reversing
+the relative deterrence effects across income groups.
+Furthermore, using s∗, we can consider how large the jump in the fine has to be for
+high-income individuals so that low- and high-income people experience a similar absolute
+change in s∗at the income-based fine threshold. Define the change in s∗for a high-income
+person as a
+∆s∗
+h =
+p
+1 −p
+(y1−η
+h
+−(yh −fhh)1−η) −(y1−η
+h
+−(yh −f)1−η)
+1 −η
+where yh is the income of high-income person, f is the fixed fine, and fhh is the income-
+based fine for high-income person. A fine system that would create a similar jump in the
+s∗at the threshold would satisfy the following condition
+∆s∗
+h −∆s∗
+l = 0
+(14)
+=
+
+(yh −f)1−η −(yh −fhh)1−η
+−
+
+(yl −f)1−η −(yl −flh)1−η
+(15)
+where yl is the income of low-income person and flh is the income-based fine for low-
+income person. From equation 15 we can solve for fhh
+fhh = yh −
+h
+(yh −f)1−η −(yl −f)1−η + (yl −flh)1−ηi
+1
+1−η
+(16)
+81
+
+=== PAGINA 83 ===
+In Appendix Figure C.30, I apply equation 16 to demonstrate how fine magnitudes must
+increase for high-income individuals to produce equivalent absolute changes in s∗across
+income groups. The illustration compares individuals from the 3rd income decile (€ 1594
+monthly income) with those from the top decile (€ 5172 monthly income). For low-income
+individuals, fines increase by approximately € 20 at the cutoff.
+The figure maps the relationship between risk aversion parameters and required fine
+magnitudes for high-income individuals that would generate equivalent discontinuities in s∗
+across income groups. Under minimal risk aversion, where utility is approximately linear
+in income, the fines required for high- and low-income individuals become nearly identical.
+When η = 1, which aligns with average estimates in the empirical literature (Elmine-
+jad et al., 2025), a fine increase of approximately € 80 for high-income individuals would
+generate the same utility loss as a € 20 increase for low-income individuals.
+In contrast, if we assume that the goal of the policy would be to impose similar expected
+utility loss across income groups at the income-based fine threshold, the current Finnish
+system implies a much higher degree of risk aversion.
+The vertical dashed line in Ap-
+pendix Figure C.30 shows that when η = 2.7, the actual € 800 fine increase for high-income
+individuals yields utility effects equivalent to the € 20 increase for low-income individuals.
+Figure C.29: Speeding cutoff, Income-based fines and Risk Aversion
+(a) η = 0.01
+s
+ ∗ 
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+Distance from the Income-based Threshold
+3rd Income Decile (1594 Euros)
+4th Income Decile (1873 Euros)
+5th Income Decile (2085 Euros)
+6th Income Decile (2286 Euros)
+7th Income Decile (2516 Euros)
+8th Income Decile (2815 Euros)
+9th Income Decile (3293 Euros)
+10th Income Decile (5172 Euros)
+(b) η = 0.5
+s
+ ∗ 
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+Distance from the Income-based Threshold
+3rd Income Decile (1594 Euros)
+4th Income Decile (1873 Euros)
+5th Income Decile (2085 Euros)
+6th Income Decile (2286 Euros)
+7th Income Decile (2516 Euros)
+8th Income Decile (2815 Euros)
+9th Income Decile (3293 Euros)
+10th Income Decile (5172 Euros)
+(c) η = 1.1
+s
+ ∗ 
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+Distance from the Income-based Threshold
+3rd Income Decile (1594 Euros)
+4th Income Decile (1873 Euros)
+5th Income Decile (2085 Euros)
+6th Income Decile (2286 Euros)
+7th Income Decile (2516 Euros)
+8th Income Decile (2815 Euros)
+9th Income Decile (3293 Euros)
+10th Income Decile (5172 Euros)
+(d) η = 6
+s
+ ∗ 
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+Distance from the Income-based Threshold
+3rd Income Decile (1594 Euros)
+4th Income Decile (1873 Euros)
+5th Income Decile (2085 Euros)
+6th Income Decile (2286 Euros)
+7th Income Decile (2516 Euros)
+8th Income Decile (2815 Euros)
+9th Income Decile (3293 Euros)
+10th Income Decile (5172 Euros)
+Notes: The figure plots how the expected utility cost of fines changes at the income-based fine threshold
+across different income groups, using equation 13.
+82
+
+=== PAGINA 84 ===
+Figure C.30: Risk Aversion and Size of the Fine for High-income Group
+0
+500
+1000
+1500
+2000
+Fine for the High Income Individual
+0
+1
+2
+3
+4
+η (relative risk aversion parameter)
+Notes:
+The figure uses equation 16 to demonstrate how fine magnitudes must increase for high-income
+individuals to yield equivalent expected utility losses at the income-based fine cutoff, across income groups
+with varying levels of risk aversion. The illustration compares individuals in the third income decile (€ 1,594
+monthly income) to those in the top decile (€ 5172 monthly income).
+For low-income individuals, fines
+increase by approximately € 20 at the threshold. The vertical dashed line indicates the level of risk aversion
+at which the current Finnish income-based fine system produces a similar change in expected utility at the
+income-based fine threshold for low- and high-income groups.
+83
+
+=== PAGINA 85 ===
+C.3
+Optimal Nonlinear Income-based Fines
+This section derives the optimal fine rate following the approach of Saez (2001) and Diamond
+(1975).
+Suppose we have an economy with individuals whose earnings z are determined exoge-
+nously with a cumulative distribution function H(z). The economy’s population is normal-
+ized to one. Individuals spend their income either on speeding s or consumption c. Speeding
+is a binary decision. Individuals have a taste for speeding ϵ drawn from a distribution with
+a cumulative distribution function G. Fines are proportional to income, denoted by τ(z).
+If an individual’s taste for speed exceeds the fine, they will speed and cause society fiscal
+cost e. Further, each individual i has a quasilinear utility function ui(c, s).
+The government chooses a nonlinear income-based fine schedule τ(z) to maximize the
+social welfare function
+SWF =
+Z
+ωiG(ui(ci, si))dH(z)
+subject to
+Z
+τ(zi)dH(z) = R
+in which R is equal to the total revenue, ωi are pareto weights, and G(·) is the social
+welfare function. We can also define for each individual i a welfare weight that is equal to
+gi = G′(ui)ui
+c
+λ
+where λ stands for the multiplier of the government budget constraint.
+Welfare Effects of a Small Fine Change
+Suppose that the government increases the
+fine by dτ for individuals with earnings z∗but does not change the fine in other parts of
+the distribution. Since the change in the fine is small, there are no first-order behavioral
+impacts on utility due to the envelope theorem. However, the fine hike will affect individuals
+in four other ways.
+Consumer utility
+First, there is a mechanical effect on the utility of individuals whose
+income is at z∗and who engage in speeding. This means that the government takes dτ
+from individuals with income z∗and who are speeding s(z∗) and weights this with g(z∗).
+In total, this mechanical utility loss is equal to
+Change in consumer utility dU: −g(z∗)s(z∗)dτ · h(z∗).
+Government revenue
+Second, the hike will have a mechanical impact on the govern-
+ment’s revenue by raising dτ from everyone with incomes at z∗and who engage in speeding.
+This revenue change will be equal to s(z∗)dτ · h(z∗). Third, the fine hike will decrease rev-
+84
+
+=== PAGINA 86 ===
+enue through a behavioral response. This means that some individuals with earnings z∗will
+reduce speeding as speeding gets more expensive, which decreases the government’s revenue
+from fines. Finally, the marginal increase in fines (dτ) will deter speeding ( ∂s
+∂τ ), which will
+decrease the fiscal cost (e) arising from speeding. The total impact on the government’s
+revenue will be
+dR = s(z∗)dτ · h(z∗) −τ(z∗) ∂s
+∂τ dτ · h(z∗) + e∂s
+∂τ dτ · h(z∗)
+Optimal Fine at z∗
+As we consider a small change in fine rate, at the optimum, the
+total change in welfare will be zero dW = dU + dR = 0 which can be written as
+dW = (1 −g(z∗))s(z∗)dτ · h(z∗) −τ(z∗) ∂s
+∂τ dτ · h(z∗) + e∂s
+∂τ dτ · h(z∗) = 0.
+(17)
+We can rearrange 17 to derive a formula for the fine rate
+τ(z∗) =
+e
+|{z}
+Fiscal cost of Externality
++
+Net social value of transfers
+z
+}|
+{
+(1 −g(z∗))s(z∗)
+∂s
+∂τ
+(18)
+The equation 18 reveals three things. First, if the government does not want redistribu-
+tion through fines or there is no income inequality in the economy, the optimal marginal fine
+equals the externality. Second, fines can be higher than the externality if the government
+wants to conduct redistribution using fines. This is captured by the numerator of the second
+term in the equation 18. Finally, behavioral responses to the fines are also important. This
+is captured by the denominator of the last term, which is equal to the semi-elasticity of
+speeding with respect to fines. If demand for speeding is very elastic, meaning the elasticity
+is high, fines are not a very good way to conduct redistribution. In contrast, if demand is
+inelastic, fines are an efficient way to collect and redistribute money.
+85

@@ -1,0 +1,1273 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="048b06b4-29db-473d-a44e-3db2ba2f3a94" type="text/javascript" async></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:url" content="https://www.segurancarodoviaria.pt" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Seguran&#231;a Rodovi&#225;ria | Artigo 176.&#186; – Notifica&#231;&#245;es" />
+    <meta property="og:description" content="A EDIÇÕES SEGURANÇA RODOVIÁRIA, Lda., sociedade comercial por quotas com o número de pessoa coletiva 504 770 292 e sede na Rua José Escada, Edifício K 1, Loja B, 1600-482 Lisboa, é a entidade responsável pela recolha e tratamento dos seus dados pessoais." />
+    <meta property="og:image" content="https://www.segurancarodoviaria.pt/media/1108/logo_small.jpg" />
+    <meta property="fb:app_id" content="823507811347665" />
+
+    
+    <title>Seguran&#231;a Rodovi&#225;ria | Artigo 176.&#186; – Notifica&#231;&#245;es</title>
+
+    <link rel="shortcut icon" type="image/png" href="/Content/images/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/Content/images/icon180x180.png" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Content/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/fontawesome-all.min.css">
+    
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5LQGF6W');</script>
+<!-- End Google Tag Manager -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="/Scripts/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="/Scripts/umd/popper.min.js" type="text/javascript"></script>
+    <script src="/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/scripts/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+    <script src="/Scripts/sweetalert.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/pt_PT/appleid.auth.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).on('click', '.btn-confirm', function (event) {
+            var obj = $(this),
+                title = $(this).data('confirm-title'),
+                action = $(this).data('confirm-action'),
+                sourceFilter = $(this).data('confirm-source'),
+                refreshTargetId = $(this).data('refresh-target-id'),
+                message = $(this).data('confirm-message'),
+                messageSuccess = $(this).data('confirm-message-success'),
+                showSuccessMessage = $(this).data('show-message-success');
+
+            ShowCustomWindow('warning',
+            {
+                isConfirmWindow: true,
+                sourceObject: obj,
+                sourceFilter: sourceFilter,
+                title: title,
+                message: message,
+                action: action,
+                refreshTargetId: refreshTargetId,
+                messageSuccess: messageSuccess,
+                showSuccessMessage: showSuccessMessage
+            });
+        });
+    });
+
+    function ShowCustomWindow(alertType, config) {
+        var config = config || {},
+            isConfirmWindow = config.isConfirmWindow || false,
+            showSuccessMessage = config.showSuccessMessage || null,
+            sourceObject = config.sourceObject || undefined,
+            sourceFilter = config.sourceFilter || '',
+            title = config.title || '',
+            message = config.message || '',
+            messageSuccess = config.messageSuccess || 'Dados actualizados com sucesso',
+            action = config.action || undefined,
+            refreshTargetId = config.refreshTargetId || undefined,
+            dismissTargetId = config.dismissTargetId || undefined,
+            redirectAfterAction = config.redirectAfterAction || undefined;
+
+        var showLoader = isConfirmWindow && action != undefined;
+        showSuccessMessage = (showSuccessMessage == null && config.showSuccessMessage == undefined) ? true : showSuccessMessage;
+
+        swal({
+            title: title,
+            text: message,
+            type: alertType,
+            showCancelButton: isConfirmWindow,
+            confirmButtonClass: isConfirmWindow ? "btn-danger" : "btn-success",
+            confirmButtonText: isConfirmWindow ? 'Sim' : 'OK',
+            cancelButtonText: 'Não',
+            closeOnConfirm: !isConfirmWindow,
+            closeOnCancel: true,
+            showLoaderOnConfirm: showLoader,
+            allowOutsideClick: !isConfirmWindow,
+            html: true
+        },
+        function (isConfirm) {
+            if (isConfirm && isConfirmWindow) {
+                if (action) {
+                    $(document).trigger('confirm.trigger.action.start', [sourceObject, sourceFilter]);
+                    $.post(action, function (data) {
+                        messageSuccess = data.message || messageSuccess;
+                        if (data.redirectUrl)
+                        {
+                            if (showSuccessMessage) {
+                                ShowCustomWindow('success', { message: messageSuccess, redirectAfterAction: data.redirectUrl });
+                            }
+                            else {
+                                window.location = data.redirectUrl;
+                            }
+                        }
+                        else {
+                            $("#" + refreshTargetId).html(null);
+                            $("#" + refreshTargetId).html(data);
+
+                            if (showSuccessMessage) {
+                                ShowCustomWindow('success', { message: messageSuccess });
+                            }
+                        }
+                    })
+                    .fail(function (data) {
+                        var errorMessage = data.message || 'Ocorreu um erro'
+                        ShowCustomWindow('danger', { message: data.message, redirectAfterAction: data.redirectUrl });
+                    })
+                    .always(function (data) {
+                        $(document).trigger('confirm.trigger.action.end', [sourceObject, sourceFilter, data]);
+                    });
+                }
+                else {
+                    $(document).trigger('confirm.trigger.success', [sourceObject, sourceFilter]);
+                    if (showSuccessMessage) {
+                        ShowCustomWindow('success', { message: messageSuccess });
+                    }
+                    else {
+                        swal.close();
+                    }
+                }
+            }
+            else if (isConfirm || (!isConfirm && !isConfirmWindow)) {
+                if (dismissTargetId != null && dismissTargetId != undefined) {
+                    $('#' + dismissTargetId).remove();
+                }
+                if (redirectAfterAction != null && redirectAfterAction != undefined) {
+                    window.location = redirectAfterAction;
+                }
+            }
+        });
+    }
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/plain" data-cookieconsent="statistics" async src="https://www.googletagmanager.com/gtag/js?id=G-90P7MXZ5FY"></script>
+<script type="text/plain" data-cookieconsent="statistics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-90P7MXZ5FY');
+</script>
+
+
+    
+
+    <!-- Seguranca Rodoviária-->
+    <link rel="stylesheet" href="/css/seguranca-rodoviaria-font.css">
+    <link rel="stylesheet" href="/css/seguranca-rodoviaria.min.css?v=111">
+    <link rel="stylesheet" href="/Content/sweetalert.css">
+    <link rel="stylesheet" href="/App_Plugins/Merchello/client/css/merchello.ui.min.css" />
+    <script src="/Scripts/seguranca-rodoviaria.js?v=14"></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '294475595153503');
+fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=294475595153503&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+<body data-current-url="https://www.segurancarodoviaria.pt/codigo-da-estrada/titulo-viii-do-processo/cap%25C3%25ADtulo-ii-processamento/artigo-176o-notificac%25C3%25B5es/">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LQGF6W"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<nav class="navbar sticky-top navbar-expand-md navbar-light menu-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" href="/">
+        <img class="d-md-none d-lg-block" src="/media/1012/logo.jpg" alt="logo">
+        <img class="d-none d-md-block d-lg-none" src="/media/1108/logo_small.jpg" alt="logo_small">
+    </a>
+    <div class="dropdown d-md-none language-dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-item language-drop-button active" data-lang="pt-PT">
+                    <span>
+                        <img class="language-flag-image" src="/Content/images/portugal-flag-small.png" alt="flag portugal" />
+                    </span>
+                    <span>PT</span>
+                </div>
+                    </button>
+        <div class="dropdown-menu language-container dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a href="#" class="dropdown-item language-switch " data-lang="en">
+                    <span>
+                        <img class="language-flag-image" src="/Content/images/united-kingdom-flag-small.png" alt="flag uk" />
+                    </span>
+                    <span>EN</span>
+                </a>
+        </div>
+    </div>
+    <button class="alert-icon d-md-none" type="button">
+        <i class="fas fa-bell"></i>
+    </button>
+    <button class="btn-close d-md-none" type="button" data-toggle="collapse" data-target="#navbarTopMenu">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTopMenu">
+            <div class="pnl-menu-cart">
+                    <div class="dropdown-menu-cart" aria-labelledby="dropdownMenuCarrinho">
+                <div class="cart-empty ">
+                    <a class="dropdown-item dropdown-item-icon-text empty-cart" href="#">
+                        <i class="sr sr-Empty-Cart"></i>
+                        <div>
+                            <p>O teu cesto est&#225; vazio!</p>
+                        </div>
+                    </a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item d-block">
+                            <p class="description text-center pb-3">Precisas de Inspira&#231;&#227;o?</p>
+                            <div class="w-100 text-center">
+                                <a class="btn btn-primary btn-w151" href="/loja-online/" role="button">Obter Ideias</a>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="cart-details d-none">
+                    <div class="basket-nav">
+                    </div>
+                    <div class="dropdown-item d-flex justify-content-between align-items-center">
+                        <a class="btn btn-primary btn-w151" href="/cesto/" role="button">Ver Cesto</a>
+                        <div class="dropdown-menu-cart-total">
+                            <p class="dropdown-menu-cart-total-title">Total</p>
+                            <span class="product-price" data-muilabel="basketprice"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+        <div class="container-fluid container-fluid-menus">
+            <div id="menu-top-first-row" class="row h-50 border-bottom border-left">
+                <div class="col d-flex align-items-center">
+                    <form class="my-2 my-lg-0 flex-grow-1 formSearch" action="#" method="post" data-search-url="/search">
+                        <div class="input-group flex-nowrap input-group-search">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="site-search">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <input type="search" class="form-control searchTextBody" placeholder="Search" aria-label="Search" aria-describedby="site-search">
+                        </div>
+                    </form>
+                </div>
+                <div class="col dropdown-button">
+                        <div class="dropdown d-flex justify-content-center align-items-center">
+        <a class="btn" href="#" role="button" id="dropdownMenuAlertas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bell"></i>
+                <span>Alertas</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-alerts dropdown-menu-center top-arrow" aria-labelledby="dropdownMenuAlertas">
+            <a class="dropdown-item dropdown-item-icon-text empty-alerts" href="#">
+                <p>N&#227;o existem alertas</p>
+            </a>
+            
+        </div>
+    </div>
+
+                </div>
+                <div class="col dropdown-button">
+                            <div class="dropdown d-flex justify-content-center align-items-center">
+            <a class="btn" href="#" role="button" id="accountMenuPerfil" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#accountModal">
+                <i class="fas fa-user"></i>
+                    <span>Login</span>
+            </a>
+        </div>
+
+                </div>
+                <div class="language-container dropdown-button d-flex justify-content-center align-items-center">
+                    <div class="px-2">
+                        <a href="#" class="d-flex language-switch active" data-lang="pt-PT">
+                            <div>
+                                <img class="language-flag-image" src="/Content/images/portugal-flag-small.png" alt="flag portugal" />
+                            </div>
+                            <span>PT</span>
+                        </a>
+                    </div>
+                    <div class="px-2">
+                        <a href="#" class="language-switch " data-lang="en">
+                            <span>
+                                <img class="language-flag-image" src="/Content/images/united-kingdom-flag-small.png" alt="flag uk" />
+                            </span>
+                            <span>EN</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col dropdown-button shopping-cart">
+                        <div class="dropdown d-flex justify-content-center align-items-center">
+            <a class="btn text-white btn-show-cart" href="#" role="button" id="dropdownMenuCarrinho" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart position-relative">
+                    <span class="badge badge-round badge-dark cart-items-count d-none" data-muilabel="basketcount">0</span>
+                </i>
+
+                    <div class="pt-1 pl-3">
+                        <span data-muilabel="basketprice">0,00 €</span>
+                    </div>
+            </a>
+                    <div class="dropdown-menu dropdown-menu-cart dropdown-menu-right top-arrow" aria-labelledby="dropdownMenuCarrinho">
+                <div class="cart-empty ">
+                    <a class="dropdown-item dropdown-item-icon-text empty-cart" href="#">
+                        <i class="sr sr-Empty-Cart"></i>
+                        <div>
+                            <p>O teu cesto est&#225; vazio!</p>
+                        </div>
+                    </a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item d-block">
+                            <p class="description text-center pb-3">Precisas de Inspira&#231;&#227;o?</p>
+                            <div class="w-100 text-center">
+                                <a class="btn btn-primary btn-w151" href="/loja-online/" role="button">Obter Ideias</a>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="cart-details d-none">
+                    <div class="basket-nav">
+                    </div>
+                    <div class="dropdown-item d-flex justify-content-between align-items-center">
+                        <a class="btn btn-primary btn-w151" href="/cesto/" role="button">Ver Cesto</a>
+                        <div class="dropdown-menu-cart-total">
+                            <p class="dropdown-menu-cart-total-title">Total</p>
+                            <span class="product-price" data-muilabel="basketprice"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+                </div>
+            </div>
+            <div id="menu-top-second-row" class="row h-50 border-left">
+                <div class="col-sm-12 d-md-none shopping-cart">
+                    <div class="shopping-cart-show" >
+                        <div>
+                            <i class="fas fa-shopping-cart"></i>
+                            <span></span>Cesto de Compras
+                        </div>
+                        <div>
+                            <span class="product-price" data-muilabel="basketprice"></span>
+                            <span class="badge badge-round badge-dark cart-items-count d-none" data-muilabel="basketcount">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 d-md-none alerts">
+                    <a href="#" role="button">
+                        <i class="fas fa-bell"></i>Alertas
+                    </a>
+                </div>
+                    <div class="col-sm-12 d-md-none profile">
+                        <a href="#" role="button" id="accountMenuPerfil" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#accountModal">
+                            <i class="fas fa-user"></i>Login
+                        </a>
+                    </div>
+                <div class="col-sm-12 col-md">
+                    <ul class="navbar-nav justify-content-between align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/quem-somos/">Quem Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/noticias/">Not&#237;cias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/seguranca-rodoviaria/">Seguran&#231;a Rodovi&#225;ria</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" target="_self" href="/codigo-da-estrada/">C&#243;digo da Estrada</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/ensino-a-distancia/">Ensino &#224; Dist&#226;ncia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/teste-de-codigo/">Teste de C&#243;digo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" target="_self" href="/loja-online/">Loja Online</a>
+                            </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-1 border-left d-none" style="max-width: 70px">
+                        <div class="dropdown d-flex justify-content-center align-items-center">
+        <a class="btn" href="#" role="button" id="dropdownMenuAlertas" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-bell"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-alerts dropdown-menu-right top-arrow" aria-labelledby="dropdownMenuAlertas">
+            <a class="dropdown-item dropdown-item-icon-text empty-alerts" href="#">
+                <p>N&#227;o existem alertas</p>
+            </a>
+            
+        </div>
+    </div>
+
+                </div>
+                <div class="col-sm-12 col-md-1 border-left d-none" style="max-width: 70px">
+                            <div class="dropdown d-flex justify-content-center align-items-center">
+            <a class="btn" href="#" role="button" id="accountMenuPerfil" aria-haspopup="true" aria-expanded="false" data-toggle="modal" data-target="#accountModal">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+
+                </div>
+                <div class="col-sm-12 col-md-1 border-left shopping-cart d-none" style="max-width: 70px">
+                        <div class="dropdown d-flex justify-content-center align-items-center">
+            <a class="btn text-white btn-show-cart" href="#" role="button" id="dropdownMenuCarrinho" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-shopping-cart position-relative">
+                    <span class="badge badge-round badge-dark cart-items-count d-none" data-muilabel="basketcount">0</span>
+                </i>
+
+            </a>
+                    <div class="dropdown-menu dropdown-menu-cart dropdown-menu-right top-arrow" aria-labelledby="dropdownMenuCarrinho">
+                <div class="cart-empty ">
+                    <a class="dropdown-item dropdown-item-icon-text empty-cart" href="#">
+                        <i class="sr sr-Empty-Cart"></i>
+                        <div>
+                            <p>O teu cesto est&#225; vazio!</p>
+                        </div>
+                    </a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item d-block">
+                            <p class="description text-center pb-3">Precisas de Inspira&#231;&#227;o?</p>
+                            <div class="w-100 text-center">
+                                <a class="btn btn-primary btn-w151" href="/loja-online/" role="button">Obter Ideias</a>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="cart-details d-none">
+                    <div class="basket-nav">
+                    </div>
+                    <div class="dropdown-item d-flex justify-content-between align-items-center">
+                        <a class="btn btn-primary btn-w151" href="/cesto/" role="button">Ver Cesto</a>
+                        <div class="dropdown-menu-cart-total">
+                            <p class="dropdown-menu-cart-total-title">Total</p>
+                            <span class="product-price" data-muilabel="basketprice"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+                </div>
+                <div class="col-sm-12 d-md-none search-form">
+                    <form class="flex-grow-1" action="#" method="post">
+                        <div class="input-group flex-nowrap">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="site-search">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                            <input type="search" class="form-control searchTextBody" placeholder="Search" aria-label="Search" aria-describedby="site-search">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="sr sr-right-arrow d-flex align-items-center justify-content-center searchButton"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 d-md-none language-container justify-content-center pb-4 mb-5">
+                    <div class="px-2">
+                        <a href="#" class="language-switch language-mobile active" data-lang="pt-PT">
+                            <span>
+                                <img class="language-flag-image" src="/Content/images/portugal-flag-small.png" alt="flag portugal" />
+                            </span>
+                            <span>PT</span>
+                        </a>
+                    </div>
+                    <div class="px-2">
+                        <a href="#" class="language-switch language-mobile " data-lang="en">
+                            <span>
+                                <img class="language-flag-image" src="/Content/images/united-kingdom-flag-small.png" alt="flag uk" />
+                            </span>
+                            <span>EN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $('#navbarTopMenu').on('show.bs.collapse', function () {
+        $(".navbar-toggler").css("visibility", "hidden");
+        //$(".navbar-toggler").css("display", "none");
+        $(".language-dropdown").css("display", "none");
+        $(".alert-icon").css("display", "none");
+        $(".menu-top > .btn-close").css("display", "block");
+        $("body").css("overflow", "hidden");
+
+        $(".pnl-menu-cart").css("display", "none");
+    });
+
+    $('#navbarTopMenu').on('hidden.bs.collapse', function () {
+        $(".navbar-toggler").css("visibility", "visible");
+        $(".language-dropdown").css("display", "block");
+        //$(".navbar-toggler").css("display", "block");
+        $(".alert-icon").css("display", "block");
+        $(".menu-top > .btn-close").css("display", "none");
+        $("body").css("overflow", "auto");
+
+        $(".container-fluid-menus").css("display", "block");
+    });
+
+    $(".shopping-cart-show").on("click", function () {
+        $(".pnl-menu-cart").css("display", "block");
+        $(".container-fluid-menus").css("display", "none");
+    });
+
+    $(document).on("click", ".language-switch", function (event) {
+        event.preventDefault();
+        console.log("language-switch was clicked");
+        var selectedCulture = $(this).attr('data-lang');
+        var currentCulture = 'pt-PT';
+        var documentType = 'artigo';
+
+        HandleLanguageChange(currentCulture, selectedCulture, documentType);
+    });
+
+    function HandleLanguageChange(currentCulture, selectedCulture, documentType) {
+        selectedCulture = selectedCulture || 'pt-PT';
+        $.ajax({
+            type: "GET",
+            url: '/umbraco/Surface/Language/HandleLanguageChange',
+            data: {
+                currentCulture: currentCulture,
+                selectedCulture: selectedCulture,
+                documentType: documentType
+            },
+            success: function (response) {
+                setCookie("sr-lang", selectedCulture, 7);
+                window.location = response;
+            },
+            error: function (error) {
+                console.error("Something went wrong with the request", error);
+            }
+        });
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    $(document).ready(function () {
+        var siteCulture = 'pt-PT';
+
+        var cookie = getCookie("sr-lang");
+        var currentCulture = 'pt-PT';
+        var documentType = 'artigo';
+
+        if (cookie != currentCulture && cookie != '') {
+            HandleLanguageChange((cookie || siteCulture), (cookie || currentCulture), documentType);
+        }
+        else if (cookie == '') {
+            setCookie("sr-lang", currentCulture, 7);
+        }
+    });
+</script>
+
+
+
+
+
+    <main>
+        
+<div class="page-header information-page artigo d-flex justify-content-center align-items-center">
+            <div class="left-zone laws d-none d-lg-block">
+            <div>
+                        <div class="subtitle">C&#243;digo da Estrada</div>
+                        <div class="d-flex flex-md-column-reverse">
+                                <div class="title mt-4">
+                                    <div>CAP&#205;TULO II</div>
+                                    <u> Processamento</u>
+                                </div>
+                                <div class="title mt-4">
+                                    <div>T&#237;tulo VIII</div>
+                                    <u> Do Processo</u>
+                                </div>
+                        </div>
+            </div>
+        </div>
+
+        <div class="center-zone">
+                        <div class="subtitle d-lg-none text-uppercase">C&#243;digo da Estrada</div>
+                <div class="type">Artigo 176.&#186;</div>
+
+            <div class="title mx-auto"> Notifica&#231;&#245;es</div>
+
+                <div class="text-uppercase d-lg-none">
+                    <div class="d-flex flex-column-reverse">
+                            <div class="categoria">CAP&#205;TULO II - <u> Processamento</u></div>
+                            <div class="categoria">T&#237;tulo VIII - <u> Do Processo</u></div>
+                    </div>
+                </div>
+
+
+            <div class="d-lg-none ">
+                
+                
+                    <button type="button" class="btn btn-outline-gray" onclick="goBack('/');">Voltar</button>
+            </div>
+    </div>
+
+        <div class="right-zone d-none d-lg-block">
+                <button type="button" class="btn btn-outline-gray" onclick="goBack('/');">Voltar</button>
+        </div>
+</div>
+
+
+
+
+ 
+
+<div class="page-content information-page">
+    <div class="container-fluid">
+                    <div class="row">
+                <div class="col">
+                    <p><span>1 - As notificações efetuam-se:</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>a) Por contacto pessoal com o notificando no lugar em que for encontrado;</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>b) Mediante carta registada com aviso de receção expedida para o domicílio ou sede do notificando;</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>c) Mediante carta simples expedida para o domicílio ou sede do notificando.</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>d) Por via eletrónica, para a morada única digital, através do serviço público de notificações eletrónicas.</span></p>
+<p> </p>
+<p>2 - A notificação por contacto pessoal é efetuada, sempre que possível, no ato da autuação ou, em qualquer outro momento, quando o notificando for encontrado pela entidade competente, independentemente do ato procedimental a notificar.</p>
+<p>3 - Na notificação pessoal o arguido pode assinar através de assinatura autógrafa em suporte de papel ou digital, bem como através da leitura de dados biométricos.</p>
+<p>4 - A notificação por via eletrónica é efetuada para a morada única digital das pessoas singulares e coletivas que tenham aderido ao serviço público de notificações eletrónicas, nos termos do disposto no<span> </span>Decreto-Lei n.º 93/2017, de 1 de agosto.</p>
+<p> </p>
+<p><span>5 - Se não for possível, no ato de autuação, proceder nos termos do n.º 2 ou se estiver em causa qualquer outro ato, a notificação pode ser efetuada através de carta registada com aviso de receção, expedida para o domicílio ou sede do notificando.</span><br /><span></span></p>
+<p><span>6 - Se, por qualquer motivo, a carta prevista no número anterior for devolvida à entidade remetente, a notificação é reenviada ao notificando, para o seu domicílio ou sede, através de carta simples.</span><br /><span></span></p>
+<p><span>7 - Nas infrações relativas ao exercício da condução ou às disposições que condicionem a admissão do veículo ao trânsito nas vias públicas, considera-se domicílio do notificando, para efeitos do disposto nos n.os 4 e 5:</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>a) O que consta na base de dados da AT como domicílio fiscal;</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>b) (Revogada.)</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>c) O que conste dos autos de contraordenação, nos casos em que o arguido não seja residente no território nacional;</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>d) Subsidiariamente, o que conste do auto de contraordenação, nos casos em que este tenha sido indicado pelo arguido aquando da notificação pessoal do auto.</span><br /><span></span></p>
+<p> </p>
+<p><span>8 - Para as restantes infrações e para os mesmos efeitos, considera-se domicílio do notificando:</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>a) O que conste no registo organizado pela entidade competente para concessão de autorização, alvará, licença de atividade ou credencial; ou</span><br /><span></span></p>
+<p style="padding-left: 30px;"><span>b) O correspondente ao seu local de trabalho.</span><br /><span></span></p>
+<p> </p>
+<p>9 - As notificações consideram-se efetuadas:</p>
+<p style="padding-left: 30px;">a) Em caso de notificação por carta registada, na data em que for assinado o aviso de receção ou no terceiro dia útil após essa data, quando o aviso for assinado por pessoa diversa do arguido;</p>
+<p style="padding-left: 30px;">b) Em caso de notificação por carta simples, no quinto dia posterior à data da expedição, cominação que deve constar do ato de notificação, devendo ser junta ao processo cópia do ofício da notificação com a indicação da data de expedição e do domicílio para o qual foi enviada;</p>
+<p style="padding-left: 30px;">c) Em caso de notificação por via eletrónica, no quinto dia posterior ao registo de disponibilização daquela no sistema informático de suporte ao serviço público de notificações eletrónicas, conforme disposto no n.º 3 do artigo 8.º do<span> </span>Decreto-Lei n.º 93/2017, de 1 de agosto.</p>
+<p> </p>
+<p>10 - Quando a infração for da responsabilidade do titular do documento de identificação do veículo, a notificação, no ato de autuação, pode fazer-se na pessoa do condutor.</p>
+<p> </p>
+<p><span>11 - Sempre que o notificando se recusar a receber ou a assinar a notificação, o agente certifica a recusa, considerando-se efetuada a notificação.</span></p>
+                </div>
+            </div>
+
+    </div>
+</div>
+    </main>
+
+    <!-- Footer -->
+    <div style="position: fixed; bottom: 16px; right: 16px; z-index: 999; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: white;  width: 60px; height: 60px;">
+        <a href="https://m.me/segurancarodoviaria" target="_blank">
+            <img style="width: 46px; height: 46px;" src="https://www.segurancarodoviaria.pt/media/8619/messengericon.png" alt="">
+        </a>
+    </div>
+    <footer>
+
+<div class="page-footer-links">
+    <div class="container-fluid">
+        <div class="row links">
+            <div class="col-lg col-12">
+                        <div class="footer-links-title d-flex align-items-center">Seguran&#231;a Rodovi&#225;ria</div>
+        <ul class="list-unstyled">
+                <li class="d-flex align-items-center">
+                    <a href="/contactos/" class="">Contactos</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/quem-somos/" class="">Quem Somos</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/noticias/" class="">Not&#237;cias</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/material-promocional/" class="">Material Promocional</a>
+                </li>
+        </ul>
+
+            </div>
+            <div class="col-lg col-12">
+                        <div class="footer-links-title d-flex align-items-center">Ensino</div>
+        <ul class="list-unstyled">
+                <li class="d-flex align-items-center">
+                    <a href="https://www.segurancarodoviaria.pt/ensino-a-distancia/" class="">Ensino &#224; Dist&#226;ncia</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/teste-de-codigo/" class="">Testes de C&#243;digo</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/escolas-de-conducao/" class="">Escolas de Condu&#231;&#227;o</a>
+                </li>
+        </ul>
+
+            </div>
+            <div class="col-lg col-12">
+                        <div class="footer-links-title d-flex align-items-center">Informa&#231;&#227;o</div>
+        <ul class="list-unstyled">
+                <li class="d-flex align-items-center">
+                    <a href="/seguranca-rodoviaria/" class="">Seguran&#231;a Rodovi&#225;ria</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="/codigo-da-estrada/" class="active">C&#243;digo da Estrada 2026</a>
+                </li>
+                <li class="d-flex align-items-center">
+                    <a href="https://www.livroreclamacoes.pt/inicio" class="">Livro de Reclama&#231;&#245;es</a>
+                </li>
+        </ul>
+
+            </div>
+            <div class="col-lg col-12">
+                        <div class="footer-links-title d-flex align-items-center">Loja Online</div>
+        <ul class="list-unstyled">
+                <li class="d-flex align-items-center">
+                    <a href="/loja-online/" class="">Material Did&#225;tico</a>
+                </li>
+        </ul>
+
+            </div>
+            <div class="col-lg col-12">
+                <div class="footer-links-title d-flex align-items-center">Subscrever Newsletter</div>
+<form action="/umbraco/Surface/Newsletter/SubscribeNewsletter" class="form-horizontal" data-ajax="true" data-ajax-method="POST" data-ajax-success="SuccessAddSubscriber(data)" id="formNewsletter" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="xUF5VtCUqLGwm69NItCpIIAHV8zuImX-cUngnq5zZvxizbJis7q0GlZD-_ZnxMp3FUuzPD8Yl8svi83lTLoD6AFcJjZ7f3EmueuHKxEZ1u9Af9vcpEVgleOPW-LHEUQvuVxhb2RCEzFX7_M_z1yT4Qd52XOCOr0t-VbD9oACzFcc_njyzdi1v8GMtx6zko_R0" />                    <div class="input-group newsletter">
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-email" name="email" id="email">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">
+                                <i class="far fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+</form>                <div class="newsletter-message-success text-success d-none">O seu email foi adicionado com sucesso</div>
+                <div class="newsletter-message-error text-danger d-none">Erro na subscri&#231;&#227;o da Newsletter</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="page-footer-menu">
+    <div class="container-fluid">
+        <div class="row no-gutters cofinanced d-flex align-items-center">
+            <div class="col-lg-8 col-12">
+                <nav class="nav d-flex align-items-center">
+                        <a class="nav-link" href="/politica-de-privacidade/">Pol&#237;tica de Privacidade</a>
+                        <a class="nav-link" href="/politica-de-cookies/">Pol&#237;tica de Cookies</a>
+                        <a class="nav-link" href="/termos-e-condicoes-de-utilizacao/">Termos e Condi&#231;&#245;es de Utiliza&#231;&#227;o</a>
+                </nav>
+            </div>
+            <div class="col-lg-4 col-12 img-cofinanced d-flex align-items-center justify-content-end">
+                <a href="/projeto">
+                    <img src="/media/1011/cofinanciamento.png" alt="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+
+<div class="container-fluid">
+    <div class="row no-gutters copyright">
+        <div class="col-lg col-12 order-lg-1 order-2 d-flex align-items-center justify-content-center justify-content-lg-start">
+            2026 &copy Segurança Rodoviária
+        </div>
+            <div class="col-lg col-12 order-lg-2 order-1 d-flex align-items-center justify-content-center">
+                <nav class="nav ml-lg-auto">
+                        <a href="https://www.facebook.com/segurancarodoviaria">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                                                                <a href="https://www.instagram.com/segurancarodoviaria/?hl=pt">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                                                                <a href="http://twitter.com/segrodoviaria">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                </nav>
+            </div>
+    </div>
+</div>
+    
+</div>
+        <div class="footer-fixed">
+
+
+<div class="page-footer-menu">
+    <div class="container-fluid">
+        <div class="row no-gutters cofinanced d-flex align-items-center">
+            <div class="col-lg-8 col-12">
+                <nav class="nav d-flex align-items-center">
+                        <a class="nav-link" href="/politica-de-privacidade/">Pol&#237;tica de Privacidade</a>
+                        <a class="nav-link" href="/politica-de-cookies/">Pol&#237;tica de Cookies</a>
+                        <a class="nav-link" href="/termos-e-condicoes-de-utilizacao/">Termos e Condi&#231;&#245;es de Utiliza&#231;&#227;o</a>
+                </nav>
+            </div>
+            <div class="col-lg-4 col-12 img-cofinanced d-flex align-items-center justify-content-end">
+                <a href="/projeto">
+                    <img src="/media/1011/cofinanciamento.png" alt="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+
+<div class="container-fluid">
+    <div class="row no-gutters copyright">
+        <div class="col-lg col-12 order-lg-1 order-2 d-flex align-items-center justify-content-center justify-content-lg-start">
+            2026 &copy Segurança Rodoviária
+        </div>
+            <div class="col-lg col-12 order-lg-2 order-1 d-flex align-items-center justify-content-center">
+                <nav class="nav ml-lg-auto">
+                        <a href="https://www.facebook.com/segurancarodoviaria">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                                                                <a href="https://www.instagram.com/segurancarodoviaria/?hl=pt">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                                                                <a href="http://twitter.com/segrodoviaria">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                </nav>
+            </div>
+    </div>
+</div>
+    
+</div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Account -->
+
+
+<!-- Login Modal -->
+<div class="modal" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true" data-current-url="https://www.segurancarodoviaria.pt/codigo-da-estrada/titulo-viii-do-processo/cap%25C3%25ADtulo-ii-processamento/artigo-176o-notificac%25C3%25B5es/">
+    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content modal-account">
+
+
+
+<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+<div id="loginForm">
+    <div class="modal-header">
+        <h5 class="modal-title mx-auto">Login</h5>
+    </div>
+
+    <div class="modal-body">
+<form action="/umbraco/Surface/UmbracoIdentityAccount/ExternalLogin?ReturnUrl=https%3A%2F%2Fwww.segurancarodoviaria.pt%2Fcodigo-da-estrada%2Ftitulo-viii-do-processo%2Fcap%2525C3%2525ADtulo-ii-processamento%2Fartigo-176o-notificac%2525C3%2525B5es%2F" class="form-horizontal d-flex justify-content-around" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="f4nAbrPcOrFYL430vRPqKhqemxiJKCQaBHzilGMhLYRRlLRjGdHMqed0Ic5Y4-Xh24U8GyB-lbroXXxW3ogKsrNJ5aIvBnI9k2R4v6UWMX-lta88BVEH3A0JXgYkJBa-jwZAoLNZr9VCZxIue95PKZPI3Sxpcjl84QbF569kCcjKbe99Xx6m0qhQMmcidI1Y0" />            <div class="form-row external-login-buttons" style="width: 100%;">
+                <div class="form-group col-sm-4">
+                    <button type="submit" class="btn btn-block btn-facebook" id="Facebook" name="provider" value="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Iniciar sess&#227;o com o Facebook</span>
+                    </button>
+                </div>
+                <div class="form-group col-sm-4">
+                    <button type="submit" class="btn btn-block btn-google" id="Google" name="provider" value="Google">
+                        <i class="fab fa-google"></i>
+                        <span>Iniciar sess&#227;o com a Google</span>
+                    </button>
+                </div>
+                <div class="form-group col-sm-4">
+                    <div id="appleid-signin" class="btn-apple" data-border="false"></div>
+                </div>
+            </div>
+</form>
+        <div class="text-divider">
+            <span>Ou</span>
+        </div>
+
+        <p class="text-uppercase text-center my-4">Entre com o seu Email</p>
+
+<form action="/umbraco/Surface/UmbracoIdentityAccount/HandleLogin?currentPageUrl=https%3A%2F%2Fwww.segurancarodoviaria.pt%2Fcodigo-da-estrada%2Ftitulo-viii-do-processo%2Fcap%2525C3%2525ADtulo-ii-processamento%2Fartigo-176o-notificac%2525C3%2525B5es%2F&amp;culture=pt-PT" class="form-horizontal standard-form" data-ajax="true" data-ajax-begin="BeginSubmit" data-ajax-complete="CompleteAction" data-ajax-success="SuccessAction(this, data)" data-ajax-update="modal-content" id="formLogin" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="9hCXc7IGiaJj1qxk7VZlckrPf9A_YUM9XeFqBc3Pr-MLIoMLP7pWV2hCHKIjtpsPxhAxU9vBm_Y0UDBGxwna6if2kb1Xj4eXO5ues4_uoZ48daRZBzoildFcqXxLveUKSWgWj5Hhe_juuAaJXJnY_5niVWOdGOSC3gJAM_3ANyBnZfw76ZAKj7imQ3nUbp4e0" /><input id="loginModel_RedirectUrl" name="loginModel.RedirectUrl" type="hidden" value="" />            <div class="form-group">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" data-val="true" data-val-email="O Email é inválido." data-val-required="Email é obrigatório." id="loginModel_Email" name="loginModel.Email" placeholder="Endereço de email" type="text" value="" />
+                </div>
+                <span class="field-validation-valid text-danger" data-valmsg-for="loginModel.Email" data-valmsg-replace="false">Campo obrigat&#243;rio</span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 col-12">
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                        </div>
+                        <input class="form-control" data-val="true" data-val-required="Password é obrigatória." id="loginModel_Password" name="loginModel.Password" placeholder="Password" type="password" />
+                        <div class="input-group-append" data-password-show="loginModel_Password">
+                            <span class="input-group-text">
+                                <i class="far fa-eye" data-password-toggle-icon="fas fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="field-validation-valid text-danger" data-valmsg-for="loginModel.Password" data-valmsg-replace="false">Campo obrigat&#243;rio</span>
+                </div>
+                <div class="form-group col-md-6 col-12 d-flex align-items-center remember-password">
+                    <div class="abc-checkbox abc-checkbox-sm abc-checkbox-primary">
+                        <input class="form-check-input" data-val="true" data-val-required="The Memorizar Login field is required." id="loginModel_RememberMe" name="loginModel.RememberMe" type="checkbox" value="true" /><input name="loginModel.RememberMe" type="hidden" value="false" />
+                        <label class="form-check-label">Memorizar Login</label>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="form-row d-flex justify-content-between buttons">
+                <div class="col-6">
+                    <button type="button" class="btn btn-link btn-link-primary forgot-password" onclick="LoadAccountModal('/umbraco/Surface/UmbracoIdentityAccount/ForgotPassword?culture=pt-PT')">Esqueci-me da Password</button>
+                </div>
+                <div class="col-6 text-right">
+                    <input type="submit" value="Entrar" class="btn btn-primary btn-w194" />
+                </div>
+            </div>
+</form>    </div>
+
+    <div class="modal-footer d-flex justify-content-center">
+        <span class="text-uppercase text-nowrap">Ainda n&#227;o tem conta?</span>
+        <button type="button" class="btn btn-link btn-link-primary text-uppercase register" onclick="LoadAccountModal('/umbraco/Surface/UmbracoIdentityAccount/Register?culture=pt-PT')">Registar</button>
+    </div>
+        <div class="privacy-policy">
+            Ao continuar, aceita a nossa <a href="/politica-de-privacidade/" target="_blank" class="btn btn-link btn-link-primary">Pol&#237;tica de Privacidade</a>, <a href="/politica-de-cookies/" target="_blank" class="btn btn-link btn-link-primary">Pol&#237;tica de Cookies</a> e os <a href="/termos-e-condicoes-de-utilizacao/" target="_blank" class="btn btn-link btn-link-primary">Termos e Condi&#231;&#245;es de Utiliza&#231;&#227;o</a>.
+        </div>
+</div>
+
+<script type="text/javascript">
+
+    var freeTestUserId = '';
+    var returnUrl = 'https://www.segurancarodoviaria.pt/codigo-da-estrada/titulo-viii-do-processo/cap%25C3%25ADtulo-ii-processamento/artigo-176o-notificac%25C3%25B5es/';
+
+    var stateData = {
+        returnUrl: returnUrl,
+        freeTestUserId: freeTestUserId
+    };
+    var state = encodeURIComponent(JSON.stringify(stateData));
+
+    AppleID.auth.init({
+        clientId: 'pt.segurancarodoviaria.client',
+        scope: 'name email',
+        redirectURI: 'https://www.segurancarodoviaria.pt/umbraco/Surface/UmbracoIdentityAccount/SignInApple',
+         
+        state: state,
+        //nonce: '[NONCE]',
+        usePopup: false //or false defaults to false
+    });
+</script>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#accountModal').on('hide.bs.modal', function (event) {
+            const culture = 'pt-PT';
+			LoadAccountModal('/umbraco/Surface/UmbracoIdentityAccount/Login?currentPageUrl=https%3A%2F%2Fwww.segurancarodoviaria.pt%2Fcodigo-da-estrada%2Ftitulo-viii-do-processo%2Fcap%2525C3%2525ADtulo-ii-processamento%2Fartigo-176o-notificac%2525C3%2525B5es%2F&culture=pt-PT');
+		});
+
+    });
+
+    function LoadAccountModal(url) {
+		if (url && url.length > 0) {
+            $("#accountModal .modal-content").addLoading();
+            $('[data-toggle="tooltip"]').tooltip('hide');
+
+            $("#accountModal .modal-content").load(url, function () {
+                var $form = $(this).find(".standard-form");
+
+                if ($form.length > 0)
+                {
+				    var action = $form.attr("action").replace("__currentPageUrl__", $(this).closest(".modal").data("current-url"));
+                    $form.attr("action", action);
+
+				    if ($(this).find("#formForgotPassword").length) {
+                        RebindFormValidators("formForgotPassword");
+                    }
+                    else if ($(this).find("#formResetPassword").length) {
+                        $('#accountModal').modal("show");
+                        RebindFormValidators("formResetPassword");
+                    }
+                    else if ($(this).find("#formRegister").length) {
+                        RebindFormValidators("formRegister");
+                        $('#accountModal').modal("show");
+                        $('[data-toggle="tooltip"]').tooltip();
+                    }
+                    else {
+                        RebindFormValidators("loginForm");
+				    }
+                }
+                $("#accountModal .modal-content").removeLoading();
+            });
+        }
+    }
+
+    function SetLoginCustomActionReturnUrl(returnUrl, cultureName = undefined) {
+        if (returnUrl.length > 0) {
+            $("#accountModal").attr("data-current-url", encodeURIComponent(returnUrl));
+
+            
+            var action = '/umbraco/Surface/UmbracoIdentityAccount/Login?currentPageUrl=__currentPageUrl__&culture=__culture__';
+            action = action.replace('__currentPageUrl__', encodeURIComponent(returnUrl));
+
+            if (cultureName) {
+                action = action.replace('__culture__', encodeURIComponent(cultureName));
+            }
+
+            console.log("a action", action);
+
+            LoadAccountModal(action);
+
+            $('#accountModal').modal("show");
+        }
+    }
+
+    function BeginSubmit() {
+		$(this).addLoading();
+    }
+	function CompleteAction() {
+        $(this).removeLoading();
+    }
+
+    function SuccessAction(form, data) {
+        var updateTargetId = $(form).data('ajax-update');
+        if (data) {
+            if (data.redirectUrl) {
+                window.location = data.redirectUrl;
+            }
+            else if (data.htmlToReplace !== undefined) {
+                $("."+ updateTargetId).html(null);
+                $("."+ updateTargetId).html(data.htmlToReplace);
+            }
+            else if (data.registerStatus) {
+                if (data.registerStatus === 'Sucess') {
+                    $("#formLogin").remove();
+                    $("#login-have-account span").remove();
+                    $("#registerForm .account-register-success").html(null).html(data.message).removeClass("d-none");
+                }
+                else {
+                    $("#registerForm .account-register-error").html(null).html(data.message);
+                }
+
+                $("#loginForm").removeLoading();
+            }
+            else if (data.forgotPasswordStatus)
+            {
+                $("#formForgotPassword").remove();
+                $(".forgotPasswordForm .forgot-password-success").html(null).html(data.message).removeClass("d-none");
+            }
+            else if (data.formResetPasswordStatus) {
+                if (data.formResetPasswordStatus == "OK") {
+                    LoadAccountModal('/umbraco/Surface/UmbracoIdentityAccount/Login?culture=pt-PT');
+                }
+                else {
+                    $(".error-message").html(data.message);
+                }
+            }
+            else if (data.refreshMenu) {
+                $.get('/umbraco/Surface/UmbracoIdentityAccount/MenuTop', function (data)
+                {
+                    if (data && data.htmlToReplaceMenu) {
+                        var currentMenuStyle = $("#top-menu").attr("class"),
+                            newMenu = $('<div />').html(data.htmlToReplaceMenu).find("#top-menu").attr("class", currentMenuStyle);
+
+                        $("#top-menu").replaceWith(newMenu);
+                        $('#loginModal').modal("hide");
+
+                        if (data.htmlToCookieAcceptence) {
+                            $("body").append(data.htmlToCookieAcceptence);
+                        }
+                        else {
+                            $(".footer-cookies").remove();
+                        }
+                    }
+                })
+                .always(function (data) {
+                    $("#loginForm").removeLoading();
+                });
+            }
+        }
+    }
+
+    function RebindFormValidators(formName) {
+        var currForm = $('#' + formName);
+        currForm.removeData("validator");
+        currForm.removeData("unobtrusiveValidation");
+        $.validator.unobtrusive.parse(currForm);
+        currForm.validate();
+    }
+</script>
+
+
+
+<div class="modal" id="modalCookieDetails" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modalCookieDetails" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto">Defini&#231;&#245;es de Cookies</h5>
+                <button type="button" class="btn-close" onclick="showCookieBanner()"></button>
+            </div>
+            <div id="cookie-modal-content" class="modal-body">
+                    <script id="CookieDeclaration" src="https://consent.cookiebot.com/048b06b4-29db-473d-a44e-3db2ba2f3a94/cd.js" type="text/javascript" async></script>
+            </div>
+            <div class="modal-footer d-flex justify-content-sm-between">
+                <button type="button" class="btn btn-w194 btn-outline-dark" onclick="showCookieBanner()">Voltar</button>
+                <button type="button" class="btn btn-w194 btn-primary" onclick="ModalCookieDetailsConsentCookie()">Aceitar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script id="cookiesScript">
+
+    window.addEventListener('CookiebotOnLoad', function () {
+        if (typeof Cookiebot !== 'undefined' && typeof Cookiebot.runScripts === 'function') {
+            Cookiebot.runScripts();
+
+            $('#modalCookieDetails').on('show.bs.modal', function () {
+                var cookiePageConsent = $(".cookie-page");
+                if (cookiePageConsent.length) {
+                    var html = $("<div/>").html(cookiePageConsent.html());
+                    html.find("#CookieDeclaration").remove();
+                    $("#cookie-modal-content").html(html.html());
+                }
+
+                SetCookieTypeStatus();
+                hideCookieBannerTemporary();
+            });
+        } else {
+            console.error('Cookiebot.runScripts não está disponível.');
+        }
+    });
+
+    $(function () {
+        //Cookiebot.runScripts();
+
+        //$('#modalCookieDetails').on('show.bs.modal', function () {
+        //    var cookiePageConsent = $(".cookie-page");
+        //    if (cookiePageConsent.length) {
+        //        var html = $("<div/>").html(cookiePageConsent.html());
+        //        html.find("#CookieDeclaration").remove();
+        //        $("#cookie-modal-content").html(html.html());
+        //    }
+
+        //    SetCookieTypeStatus();
+        //    hideCookieBannerTemporary();
+        //})
+    });
+
+    function SetCookieTypeStatus() {
+        var cookieTypesAvailable = $("body").find("[data-consent-type]");
+        $.each(cookieTypesAvailable, function (i, o) {
+            var cbType = $(this).data("consent-type");
+            if (cbType === 1) {
+                $(this).attr("disabled", "disabled").prop('checked', Cookiebot.consent.necessary);
+            }
+            else if (cbType === 2) {
+                $(this).prop('checked', Cookiebot.hasResponse ? Cookiebot.consent.preferences : true);
+            }
+            else if (cbType === 3) {
+                $(this).prop('checked', Cookiebot.hasResponse ? Cookiebot.consent.statistics : true);
+            }
+            else if (cbType === 4) {
+                $(this).prop('checked', Cookiebot.hasResponse ? Cookiebot.consent.marketing : true);
+            }
+        });
+    }
+
+    function ModalCookieDetailsConsentCookie() {
+        var optinPreferences = undefined,
+            optinStatistics = undefined,
+            optinMarketing = undefined;
+
+        var cookieTypesAvailable = $("#modalCookieDetails").find("[data-consent-type]");
+        $.each(cookieTypesAvailable, function (i, o) {
+            var cbType = $(this).data("consent-type");
+            if (cbType === 2) {
+                optinPreferences = $(this).is(':checked');
+            }
+            else if (cbType === 3) {
+                optinStatistics = $(this).is(':checked');
+            }
+            else if (cbType === 4) {
+                optinMarketing = $(this).is(':checked');
+            }
+        });
+
+        Cookiebot.submitCustomConsent(optinPreferences, optinStatistics, optinMarketing);
+        Cookiebot.runScripts();
+        hideCookieBanner();
+        $('#modalCookieDetails').modal('hide');
+    }
+</script>
+
+
+
+    <script src="/Scripts/underscore.min.js"></script>
+    <script src="/App_Plugins/Merchello/client/js/merchello.ui.js"></script>
+    <script src="/App_Plugins/Merchello/client/js/merchello.ui.settings.js"></script>
+    <script src="/App_Plugins/SegurancaRodoviaria/js/segurancarodoviaria.store.js?v=4"></script>
+</body>
+</html>

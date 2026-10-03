@@ -1,0 +1,376 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116574937-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116574937-1');
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META NAME="Title" CONTENT="VELOCIDAD Y SISTEMAS REGULADORES - Polic&iacute;a de la Provincia de C&oacute;rdoba">
+	<META NAME="Author" CONTENT="Policía caminera de la Policía de la Provincia de Córdoba">
+	<META NAME="Description" CONTENT="La Provincia de C&oacute;rdoba cuenta con millones de turistas anualmente, provenientes de todas partes del mundo. Ante este fen&oacute;meno tur&iacute;stico se tomaron medidas">
+ 
+
+<meta name="keywords" content="NO_KEYWORDS">
+  
+  <title>VELOCIDAD Y SISTEMAS REGULADORES - Polic&iacute;a de la Provincia de C&oacute;rdoba</title>
+<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="css/CH-estado-de-las-rutas.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/ico" href="/images/bootstrap/historia-favicon.ico" />
+<!-- CARROUSEL -->
+<link href="css/carrousel.css" rel="stylesheet" type="text/css">
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready( function() {
+    $('#myCarousel').carousel({
+    	interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+});// JavaScript Document
+</script>
+<!-- FIN CARROUSEL -->
+
+</head>
+<body id="body-caminera">
+<!-- ENCABEZADO -->
+
+
+
+<div class="page-header" id="encabezado-pagina">
+<div class="row" id="row_encabezado_logos">
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="div_logo_policia_cordoba" ><a href="http://www.policiacordoba.gov.ar/Default.aspx"><img src="images/bootstrap/logo-policia-cordoba.png" alt="Polic&iacute;a de la Provincia de C&oacute;rdoba" id="logo_policia_cordoba" width="236" height="74"/></a></div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="div_logo_gobierno_cordoba" ><img src="images/bootstrap/logo-gobierno.png" alt="Gobierno de la  Provincia de C&oacute;rdoba" id="logo_gobierno_cordoba" /></div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" id="div_logo_caminera"><img src="images/bootstrap/logo-caminera.png" alt="Polic&iacute;a Caminera de la Provincia de C&oacute;rdoba" id="logo_caminera" /></div>
+
+</div>
+
+
+	
+	
+</div>
+<!-- FIN ENCABEZADO -->
+
+<!-- MENU -->
+<script>
+function cambiarF () {  document.getElementById('encabezado-facebook').src = 'images/bootstrap/face2.jpg'; }
+  function volverF () {  document.getElementById('encabezado-facebook').src = 'images/bootstrap/face1.jpg';}
+  
+  function cambiarG () {  document.getElementById('encabezado-gplus').src = 'images/bootstrap/gmas2.jpg'; }
+  function volverG () {  document.getElementById('encabezado-gplus').src = 'images/bootstrap/gmas1.jpg';}
+  
+  function cambiarT () {  document.getElementById('encabezado-twiter').src = 'images/bootstrap/twit2.jpg'; }
+  function volverT () {  document.getElementById('encabezado-twiter').src = 'images/bootstrap/twit1.jpg'; }
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62942828-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62942828-1');
+</script>
+<ul class="nav nav-pills nav-justified" id="fondo-menu-superior">
+  <li id="item-menu-superior"><a href="/caminera" id="texto_menu_superior">INICIO</a></li>
+  <li id="item-menu-superior"><a href="la-historia"  id="texto_menu_superior">LA HISTORIA</a></li>
+  <li id="item-menu-superior"><a href="direccion-general" id="texto_menu_superior">DIRECCION GENERAL</a></li>
+  <li id="item-menu-superior"><a href="direccion-transito" id="texto_menu_superior">DIRECCIONES</a></li>
+  <li id="item-menu-superior"><a href="capacitacion-y-proyectos"  id="texto_menu_superior">CAPACITACION Y PROYECTOS</a></li>
+  
+    
+  <!--<li id="item-menu-superior"><a href="contacto" id="texto_menu_superior" >CONTACTO</a></li>-->
+ 
+  <!--<li id="item-menu-superior"><a href="general-contacto" id="texto_menu_superior" >CONTACTO</a></li>-->
+  
+  <li id="item-menu-images">
+  	<img src="images/bootstrap/face1.jpg" id="encabezado-facebook" onMouseOver="cambiarF();" onMouseOut="volverF();" onClick="window.open('https://es-la.facebook.com/PoliciaCordobaArgentina/');" />
+  	<!--<img src="images/bootstrap/gmas1.jpg" id="encabezado-gplus" onMouseOver="cambiarG();" onMouseOut="volverG()"; onClick="window.open('https://www.policiarcordoba.gov.ar/caminera/');" />-->
+  	<img src="images/bootstrap/twit1.jpg" id="encabezado-twiter"  onMouseOver="cambiarT();" onMouseOut="volverT();" onClick="window.open('https://twitter.com/PoliciaCbaOf');"/></li>
+</ul>
+
+<div id="encabezado-pagina-bottom"></div>
+<!-- FIN MENU -->
+
+<!-- CONTENIDO NOTA -->
+<p id="nota-titulo"><strong style="color:#888">
+01/01/2025</strong> - 
+VELOCIDAD Y SISTEMAS REGULADORES</p>	
+<p id="nota-resumen">La Provincia de C&oacute;rdoba cuenta con millones de turistas anualmente, provenientes de todas partes del mundo. Ante este fen&oacute;meno tur&iacute;stico se tomaron medidas que sean de convivencia com&uacute;n ante la diversidad cultural.
+</p>
+
+<!-- INICIO CARROUSEL -->
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      	
+        <div class="item active" id="nota-caja-carrousel">
+                <!--  <iframe class="actAsDiv" width="1000" height="465" src="https://www.youtube.com/embed/XACxg29BTnQ?rel=0" frameborder="0" allowfullscreen></iframe> -->
+         	 <img alt="" src="images/fotos/19/1.jpg">
+
+		
+           <!--<div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt <a href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank" class="label label-danger">Bootstrap 3 - Carousel Collection</a></p>
+          </div>-->
+        </div><!-- End Item -->
+ 
+ 		<!-- foto 2 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/2.jpg">
+         </div>
+         
+         <!-- fin foto 2 -->
+        
+        <!-- foto 3 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/3.jpg">
+         </div>
+         
+         <!-- fin foto 3 -->
+         
+         <!-- foto 4 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/4.jpg">
+         </div>
+         
+         <!-- fin foto 4 -->
+         
+         <!-- foto 2 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/5.jpg">
+         </div>
+         
+         <!-- fin foto 5 -->
+        
+        <!-- foto 6 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/6.jpg">
+         </div>
+         
+         <!-- fin foto 6 -->
+         
+         <!-- foto 7 -->
+		
+         <div class="item"  id="nota-caja-carrousel">
+          <img alt="" src="images/fotos/19/7.jpg">
+         </div>
+         
+         <!-- fin foto 7 -->
+         
+         <!-- foto 8 -->
+		
+         <!-- fin foto 8 -->
+         
+        <!-- video 1 -->
+		
+        <div class="item" id="nota-caja-carrousel">
+         <iframe  width="1200" height="400" src="https://www.youtube.com/embed/https://www.youtube.com/edit?o=U&video_id=ioy6WgwOLCI?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+        
+        <!-- fin video 1 -->
+
+        <!-- video 2 -->
+		
+        
+        <!-- fin video 2 -->
+
+        <!-- video 3 -->
+		
+        
+        <!-- fin video 3 -->
+
+         
+         
+      </div><!-- End Carousel Inner -->
+
+
+    	<ul class="nav nav-pills nav-justified">
+        
+		<li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="1"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+          
+          <li data-target="#myCarousel" data-slide-to="2"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="3"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="4"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="5"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="6"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="8"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="8"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+          <li data-target="#myCarousel" data-slide-to="8"><a href="#" id="nota-texto-menu-carrousel"></a></li>
+		
+        
+        </ul>
+
+
+    </div><!-- End Carousel -->
+</div>
+<!-- FIN CARROUSEL -->
+
+
+
+
+</p>
+
+
+<div class="row" id="rutas_celda_items">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" id="rutas_celda_items">
+        	<p id="nota-texto"><span style='font-weight: 800;'>¿QU&Eacute; ES LA VELOCIDAD?</span><br><br>La velocidad tambi&eacute;n es una magnitud f&iacute;sica vectorial que refleja el espacio recorrido por un cuerpo en una unidad de tiempo. El metro por segundo (m/s) es su unidad en el Sistema Internacional.<br><br>Para los autom&oacute;viles, la velocidad se fue incrementando con el paso del tiempo, produciendo un aumento en la implementaci&oacute;n de medidas de seguridad tanto para evitar el impacto, como para salvaguardar la unidad vital (habit&aacute;culo) del rodado, donde viajan las personas.<br><br>Sin embargo, el abuso de la velocidad puede llevar a la indecisi&oacute;n en ese segundo cr&iacute;tico, produciendo consecuencias fatales en el peor de los casos.<br><br><span style='font-weight: 800;'>LAS VELOCIDADES PERMITIDAS</span><br><br>La Provincia de C&oacute;rdoba cuenta con millones de turistas anualmente, provenientes de todas partes del mundo. Ante este fen&oacute;meno tur&iacute;stico se tomaron medidas que sean de convivencia com&uacute;n ante la diversidad cultural.<br><br>Existen dos tipos de velocidades dentro de la Ley: <U>la gen&eacute;rica</U>, determinada por la morfolog&iacute;a de la ruta y su entorno, de una m&aacute;xima general para todo el tramo, independientemente de la se&ntilde;alizaci&oacute;n que se implante en ella, y <U>la espec&iacute;fica</U>, encuadrada dentro de la incidencia que presente cada tramo, la cual est&aacute; regulada por la demarcaci&oacute;n horizontal y/o vertical. <br><br>¿Por qu&eacute; existe esta clasificaci&oacute;n? Porque si la carretera carece de carteles que indiquen la velocidad m&aacute;xima, se podr&aacute; circular al l&iacute;mite de la velocidad permitida, excepto casos especiales como transportes de pasajeros o de cargas, camionetas, veh&iacute;culos que remolquen un carro, y maquinaria especial.<br><br>Las velocidades m&aacute;xima y m&iacute;nima autorizadas para la circulaci&oacute;n de veh&iacute;culos a motor se fijan reglamentariamente, con car&aacute;cter general para los conductores, los veh&iacute;culos y las v&iacute;as objeto de la Ley y de su Reglamentaci&oacute;n, de acuerdo con sus propias caracter&iacute;sticas.<br><br>Se puede circular por debajo de los l&iacute;mites m&iacute;nimos de velocidad en los casos de transportes especiales o cuando las circunstancias del tr&aacute;nsito impidan el desarrollo de una velocidad superior a la m&iacute;nima sin riesgo para la circulaci&oacute;n.<br>Est&aacute; prohibido disminuir arbitraria y bruscamente la velocidad, realizar movimientos zigzagueantes o maniobras caprichosas e intempestivas.<br><br><br><span style='font-weight: 800;'>VELOCIDAD M&Aacute;XIMA.</span><br> <br>Los l&iacute;mites m&aacute;ximos (gen&eacute;ricos) de velocidad, <span style='font-weight: 800;'><span style='font-weight: 800;'><U>AL NO EXISTIR SE&Ntilde;ALIZACION QUE INDIQUE LO CONTRARIO</U></span></span>, son:<br><br><span style='font-weight: 800;'>1 - </span> En zona urbana:<br>     a) En calles: cuarenta (40) km./h.<br>     b) En avenidas: sesenta (60) km./h.<br>     c) En v&iacute;as con semaforizaci&oacute;n coordinada y s&oacute;lo para motocicletas y autom&oacute;viles: la velocidad de coordinaci&oacute;n de los sem&aacute;foros.<br><br><span style='font-weight: 800;'>2 - </span> En zona rural (rutas convencionales):<br>     a) Para motocicletas, autom&oacute;viles y camionetas: ciento diez (110) km./h.<br>     b) Para &oacute;mnibus y casas rodantes motorizadas: noventa (90) km./h.<br>     c) Para camiones y automotores con casa rodante acoplada: ochenta (80) km./h. <br>     d) Para transporte de sustancias peligrosas: ochenta (80) km /h.<br><br><span style='font-weight: 800;'>3 - </span> En autopistas y autov&iacute;as los mismos del apartado 2 salvo para motocicletas y autom&oacute;viles que puede llegar hasta ciento treinta (130) km./h. y los del punto b) que tienen el m&aacute;ximo de cien (100) km./h.<br><br><span style='font-weight: 800;'>4 - </span> L&iacute;mites m&aacute;ximos especiales:<br>     a) En las intersecciones urbanas sin sem&aacute;foros, ni se&ntilde;ales de prioridad; la velocidad precautoria, nunca ser&aacute; superior a treinta (30) km./h.<br>     b) En los pasos a nivel sin barrera ni sem&aacute;foros; la velocidad precautoria no ser&aacute; superior a veinte (20) km./h, y el cruce se efectuar&aacute; despu&eacute;s de asegurarse el conductor que no se acerca un tren.<br>     c) En proximidad de establecimientos escolares, deportivos y de gran afluencia de personas la velocidad precautoria no ser&aacute; mayor a treinta (30) km./h, durante su funcionamiento.<br>     d) En rutas que atraviesen zonas urbanas (traves&iacute;as), la velocidad precautoria no ser&aacute; mayor a sesenta (60) km./h.<br><br><br><span style='font-weight: 800;'>LEY Nº 8980 - UTILIZACI&Oacute;N DE DISPOSITIVOS REGULADORES Y CONTROLADORES DEL TR&Aacute;NSITO</span><br><br>Es la incidencia en los accidentes de tr&aacute;nsito como causa primaria de muertes e incapacidades graves lo que impulsa la necesidad de consagrar una regulaci&oacute;n seria, actualizada y severa en sus exigencias y sanciones. En tal sentido, se destaca que resulta necesario y conveniente reglamentar la utilizaci&oacute;n de los dispositivos reguladores y controladores del tr&aacute;nsito.<br><br><br><span style='font-weight: 800;'>CINEM&Oacute;METROS</span><br><br>La Ley 8980 nos dice: "se denominan cinem&oacute;metros a los radares y a todo instrumento de medici&oacute;n de velocidades, cualquiera sea el mecanismo que utilice, creado o a crearse, que permita constatar las contravenciones a los l&iacute;mites gen&eacute;ricos de velocidad establecidos en la Ley Provincial de Tr&aacute;nsito Nº 8560 -Texto Ordenado 2004..."<br><br>En el Decreto Reglamentario 447/04 se detallan las velocidades m&aacute;ximas "gen&eacute;ricas" de circulaci&oacute;n (Art. 6), y sobre el instalado del dispositivo, pudiendo ser en la misma ruta con una distancia de hasta 30 km del control donde se notificar&aacute; al infractor.<br><br>Los cinem&oacute;metros son siempre homologados por el INTI, y manipulados en los controles por efectivos de la Polic&iacute;a Caminera, quienes labrar&aacute;n las correspondientes Actas de Constataci&oacute;n por los excesos de velocidad, notificando a los infractores en el lugar. <br><br>El sistema empleado por el cinem&oacute;metro es el efecto Doppler. &Eacute;ste ocurre cuando el receptor de la onda se mueve con respecto al emisor, o viceversa. Si el emisor se est&aacute; moviendo, significa que cada nueva oscilaci&oacute;n parte desde una posici&oacute;n ligeramente diferente. A consecuencia de esto, la distancia entre cada cresta de la onda ser&aacute; diferente. <br><br>Cuando la onda rebota en alg&uacute;n veh&iacute;culo, debido a que &eacute;ste se mueve a cierta velocidad, cambia su frecuencia. Midiendo la diferencia en la frecuencia el radar puede saber la velocidad a la que se desplazaba el veh&iacute;culo elegido para la medici&oacute;n.<br><br>La resultante ser&aacute; una velocidad de desplazamiento y la distancia a la que fue medida.<br><br><br><span style='font-weight: 800;'>CONTROL DE VELOCIDAD</span><br><br>El control de la velocidad es significativo para que todas las personas puedan manejarse por igual dentro del marco legal. Esta velocidad ser&aacute; determinada por estudios de ingenier&iacute;a, que determinar&aacute;n el m&aacute;ximo permitido, y el m&iacute;nimo reglamentario.<br><br>Cuanto m&aacute;s velocidad desarrolle un veh&iacute;culo, mayor ser&aacute; la distancia que requiera para detenerse, aumentando exponencialmente el riesgo de un siniestro vial. El exceso de velocidad es el factor m&aacute;s importante generando como consecuencia el problema de las lesiones en la v&iacute;a p&uacute;blica a lo que se enfrentan muchos pa&iacute;ses, estad&iacute;stica a la cual no escapa la Provincia de C&oacute;rdoba. <br><br>Los controles de velocidad dispuestos en sectores cr&iacute;ticos son una herramienta important&iacute;sima utilizando como eje la seguridad vial, pero tambi&eacute;n para generar en los automovilistas la concientizaci&oacute;n de lo que representa el exceso de velocidad, al poner en riesgo su vida, la de sus acompa&ntilde;antes, y la de terceros. Los efectivos policiales afectados a los controles est&aacute;n capacitados para brindar la informaci&oacute;n que el usuario de la v&iacute;a requiera, en lo referente al trabajo diario de Polic&iacute;a Caminera. Otro medio es la comunicaci&oacute;n telef&oacute;nica, donde recibir&aacute; tambi&eacute;n una atenci&oacute;n personalizada. <br><br>El abordaje de este flagelo en carreteras cordobesas se est&aacute; llevando a cabo en controles de velocidad, entre otros,  con el objetivo de darle una soluci&oacute;n definitiva, sancionando a quien transgreda los l&iacute;mites de velocidad permitidos, sean m&iacute;nimos o m&aacute;ximos, con penas de reducci&oacute;n de hasta diez puntos de la licencia de conducir. <br><br><span style='font-weight: 800;'>QUITA DE PUNTOS</span><br><br>Las sanciones por excesos de velocidad son graduales, increment&aacute;ndose a medida que la circulaci&oacute;n sea mayor, siendo proporcional al peligro que genera un veh&iacute;culo que circule por fuera de los l&iacute;mites permitidos, sea en exceso o por debajo de la m&iacute;nima. <br><br>Exceso de velocidad Tipo 1 - 0pts.<br>Exceso de velocidad Tipo 2 - 4pts.<br>Exceso de velocidad Tipo 3 - 5pts.<br>Exceso de velocidad Tipo 4 - 10pts.<br>Velocidad inferior a la permitida Tipo 5 - 4pts.<br>Circular sin adecuar la velocidad de su veh&iacute;culo a las condiciones de circulaci&oacute;n - 4pts.<br><br><br><span style='font-weight: 800;'>¿POR QU&Eacute; NO HAY FOTOMULTAS EN LA PROVINCIA DE C&Oacute;RDOBA?</span><br><br>En la Resoluci&oacute;n 01/2007, la Direcci&oacute;n de Prevenci&oacute;n de Accidentes de Tr&aacute;nsito, organismo oficial referente en la materia de legislaci&oacute;n vial, proh&iacute;be la utilizaci&oacute;n de dispositivos que se utilicen con fines recaudatorios, ampar&aacute;ndose en el inc. F del Art. 8 de la Ley 8560, donde se dicta que La notificaci&oacute;n de la infracci&oacute;n, por circular a velocidades no permitidas, deber&aacute; realizarse sobre la misma carretera deteniendo al veh&iacute;culo fuera de la calzada, en un punto pr&oacute;ximo al del control de velocidad. Cuando el conductor no se allane a la detenci&oacute;n, o las caracter&iacute;sticas del tr&aacute;nsito lo impidan, su notificaci&oacute;n se efectuar&aacute; seg&uacute;n lo establecido en el Art&iacute;culo 20.<br>(Esta medida rige solamente en Rutas, Autopistas, y Autov&iacute;as)<br><br><br><span style='font-weight: 800;'>TEOR&Iacute;A DE LOS 2 SEGUNDOS</span><br><br>Si bien en rutas se recomienda aplicar la teor&iacute;a de los 2 segundos (aunque por las distancias y las velocidades es recomendable 4 segundos), no existe una reglamentaci&oacute;n espec&iacute;fica sobre la distancia de dos veh&iacute;culos para iniciar la maniobra de adelantamiento seguro en ruta, aunque la legislaci&oacute;n actual mencione algunas cuestiones al respecto. De hecho, si existiese tal medida, ser&iacute;a muy dificultoso el control y la aplicaci&oacute;n de una sanci&oacute;n, ya que dos veh&iacute;culos circulan en movimiento, con el mismo sentido.<br><br>La teor&iacute;a de los 2 segundos es observar un punto fijo bien visible, que pueda determinarse m&aacute;s o menos con exactitud su ubicaci&oacute;n, como por ejemplo un poste de SOS de los servicios de Peaje, por el cual veremos pasar al veh&iacute;culo que nos precede. Contamos mentalmente hasta 2 segundos, y es cuando nuestro veh&iacute;culo debe pasar por ese punto fijo elegido.<br><br>Esta teor&iacute;a apunta al doble de tiempo de reacci&oacute;n que una persona tarda en identificar un problema, y reaccionar para accionar el pedal de freno, siendo entre ambas de aproximadamente un segundo y medio. <br><br>Polic&iacute;a Caminera recomienda aumentar esa distancia en un segundo, ya que al ser una provincia con un caudal muy importante de turistas (las rutas suelen estar saturadas de veh&iacute;culos). Para cuando el primer automovilista identifica el peligro y acciona el freno, el rodado de atr&aacute;s reci&eacute;n se percatar&aacute; de la anomal&iacute;a al ver activarse las luces de freno de ese primer coche. Ese tiempo de identificaci&oacute;n de esa incidencia, entonces, se va retardando algunas mil&eacute;simas de segundo entre automovilistas.<br><br>Si consideramos que las velocidades de circulaci&oacute;n entre rodados son iguales, entonces las distancias de frenado ser&aacute;n m&aacute;s o menos iguales, existiendo factores que determinan y condicionan esa distancia, como el estado de la calzada y de los neum&aacute;ticos de los veh&iacute;culos, el clima,  y si posee o no frenos ABS.<br>
+          		<div style="">
+          		<a href="images/fotos/19/31.pdf" target="_blank"><img src="images/pdf.png" width="40" height="45"/></a>
+            	<p>La OMS detalla las consecuencias y efectos sobre los excesos de velocidad al conducir.</p>
+                </div>
+       	  
+          		<div style=" ">
+          		<a href="images/fotos/19/32.pdf" target="_blank"><img src="images/pdf.png" width="40" height="45"/></a>
+            	<p>Estudio sobre los excesos de velocidades y sus consecuencias,</p>
+                </div>
+       	  
+          		<div style="">
+          		<a href="images/fotos/19/33.pdf" target="_blank"><img src="images/pdf.png" width="40" height="45"/></a>
+            	<p>Art&iacute;culo de la DGT de Espa&ntilde;a.</p>
+                </div>
+       	  
+          </p>
+  </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" id="rutas_celda_items">
+        	<p  id="nota-anteriores-titulo">Otras capacitaciones y proyectos</p>
+            <hr id="nota-anteriores-texto">
+            <!-- noticia anterior 1 -->
+			
+            <a href="nota.asp?id_nota=50" id="nota-anteriores-texto"><strong>01/01/2025</strong> - LA LLUVIA, NIEBLA Y NIEVE COMO FEN&Oacute;MENO CLIM&Aacute;TICO QUE INCIDE EN LA CONDUCCI&Oacute;N</a>
+           <hr id="nota-anteriores-texto">
+            
+            <!-- fin noticia anterior 1 -->
+            
+             <!-- noticia anterior 2 -->
+			
+            <a href="nota.asp?id_nota=39" id="nota-anteriores-texto"><strong>01/01/2025</strong> - CONSEJOS PARA TURISTAS</a>
+           <hr id="nota-anteriores-texto">
+            
+            <!-- fin noticia anterior 2 -->
+            
+             <!-- noticia anterior 3 -->
+			
+            <a href="nota.asp?id_nota=38" id="nota-anteriores-texto"><strong>01/01/2025</strong> - NEUM&Aacute;TICOS</a>
+           <hr id="nota-anteriores-texto">
+            
+            <!-- fin noticia anterior 3 -->
+            
+             <!-- noticia anterior 4 -->
+			
+            <a href="nota.asp?id_nota=35" id="nota-anteriores-texto"><strong>01/01/2025</strong> - EL VEH&Iacute;CULO</a>
+           <hr id="nota-anteriores-texto">
+            
+            <!-- fin noticia anterior 4 -->
+            
+        </div>
+        
+        <div class=" col-md-1 col-lg-1" id="rutas_celda_items">
+        </div>
+
+    </div>
+    <hr>
+
+
+
+
+<!-- FIN CONTENIDO NOTA -->
+
+<script>
+function cambiarBottomF () {  document.getElementById('pie-pagina-socialf').src = 'images/bootstrap/face2.jpg'; }
+  function volverBottomF () {  document.getElementById('pie-pagina-socialf').src = 'images/bootstrap/face1.jpg';}
+  
+  function cambiarBottomG () {  document.getElementById('pie-pagina-socialg').src = 'images/bootstrap/gmas2.jpg'; }
+  function volverBottomG () {  document.getElementById('pie-pagina-socialg').src = 'images/bootstrap/gmas1.jpg';}
+  
+  function cambiarBottomT () {  document.getElementById('pie-pagina-socialt').src = 'images/bootstrap/twit2.jpg'; }
+  function volverBottomT () {  document.getElementById('pie-pagina-socialt').src = 'images/bootstrap/twit1.jpg'; }
+</script>
+
+</div>
+
+<!-- PIE DE PÁGINA -->
+<div id="pie-de-pagina">
+	<div id="top-pie-de-pagina"><img src="images/bootstrap/linha-com-sombra.png" class="img-responsive"/></div>
+    <div id="bottom-pie-de-pagina">
+    	<div class="row">
+            <!-- PIE DE PÁGINA COL 1 -->
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" id=""></div>
+            <div class="col-xs-10 col-sm-5 col-md-3 col-lg-3" id="contenido-columna-footer_izquierda">
+                <p id="columna-footer-titulo-izquierda">DIRECCI&Oacute;N GENERAL DE POLIC&Iacute;A CAMINERA</p>
+                <p id="columna-footer-texto"><p>
+                <p id="columna-footer-texto"><p>
+            </div>
+            <!-- FIN PIE DE PÁGINA COL 1 -->
+            <!-- PIE DE PÁGINA COL 2 -->
+            <div class="col-xs-10 col-sm-5 col-md-3 col-lg-3" id="contenido-columna-footer">
+                <p id="columna-footer-titulo-centro">Links de Inter&eacute;s</p>
+                <p id="columna-footer-texto-derecha"><a href="http://www.vialidad.gov.ar/" target="_blank" rel="nofollow">vialidad nacional</a><p>
+                <p id="columna-footer-texto-derecha">................................................................................<p>
+                <p id="columna-footer-texto-derecha"><a href="" target="_blank" rel="nofollow"></a><p>
+                <p id="columna-footer-texto-derecha">................................................................................<p>
+                <p id="columna-footer-texto-derecha"><a href="" target="_blank" rel="nofollow"></a><p>
+            </div>
+            <!-- FIN PIE DE PÁGINA COL 2 -->
+            <!-- PIE DE PÁGINA COL 3 -->
+            <div class="col-xs-10 col-sm-5 col-md-4 col-lg-4" id="contenido-columna-footer">
+                <p id="columna-footer-titulo-centro">Contacto</p>
+              <p id="columna-footer-texto-derecha"><p>
+              <p id="columna-footer-imagenes-derecha">
+                 <img src="images/bootstrap/face1.jpg"  id="pie-pagina-socialf" onMouseOver="cambiarBottomF();" onMouseOut="volverBottomF();" onClick="window.open('https://es-la.facebook.com/PoliciaCordobaArgentina/');" />
+                 <!--<img src="images/bootstrap/gmas1.jpg"  id="pie-pagina-socialg" onMouseOver="cambiarBottomG();" onMouseOut="volverBottomG()"; onClick="window.open('https://www.policiarcordoba.gov.ar/caminera/');"/>-->
+                 <img src="images/bootstrap/twit1.jpg"  id="pie-pagina-socialt" onMouseOver="cambiarBottomT();" onMouseOut="volverBottomT();" onClick="window.open('https://twitter.com/PoliciaCbaOf');"/>  <p>         
+            </div>
+            <!-- FIN PIE DE PÁGINA COL 3 -->
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" id=""></div>
+		</div>
+	</div>
+    <div id="base-pie-de-pagina" ><img src="images/bootstrap/piens5.png" class="img-responsive"/></div>
+   <!-- </div> no se de donde estaba-->
+</div>
+<!-- FIN PIE DE PÁGINA -->
+
+</body>
+</html>

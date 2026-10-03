@@ -1,0 +1,1459 @@
+=====PAGE 1=====
+Physikalisch-Technische Bundesanstalt
+Nationales Metrologieinstitut
+Oktober 2015
+PTB-Anforderungen
+PTB-A 12.01
+Messgeräte im öffentlichen Verkehr
+Geschwindigkeitsüberwachungsgeräte
+
+=====PAGE 2=====
+ 
+ 
+ 
+ 
+PTB-Anforderungen enthalten technische Spezifikationen für Messgeräte, um die wesentlichen 
+Anforderungen an Messgeräte nach § 6 des Mess- und Eichgesetzes1 i.V.m. § 7 der Mess- und 
+Eichverordnung2 zu erfüllen. 
+Diese PTB-Anforderungen konkretisieren die in Anlage 2 der Mess- und Eichverordnung näher 
+bestimmten wesentlichen Anforderungen an folgende Messgeräte nach § 1 Absatz 1 Nummer 12 
+Buchstabe a der Mess- und Eichverordnung zur amtlichen Überwachung des öffentlichen Verkehrs: 
+Verkehrsradargeräte, 
+Weg-Zeit-Messgeräte, 
+Laserhandmessgeräte 
+und 
+Laserscanner-
+Geschwindigkeitsmessgeräte. 
+Diese PTB-Anforderungen ersetzen die bisherigen PTB-A 18.11 der Ausgabe Dezember 2014. 
+ 
+ 
+1 MessEG vom 25. Juli 2013 (BGBl. I S. 2722) 
+2 MessEV vom 11. Dezember 2014 (BGBl. I S. 2010) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Diese Veröffentlichung steht unter der Lizenz CC BY-ND 3.0 DE 
+"Creative Commons Namensnennung - Keine Bearbeitungen 3.0 Deutschland", 
+siehe   http://creativecommons.org/licenses/by-nd/3.0/de/legalcode.  
+Diese Lizenz erlaubt die Weiterverbreitung - auch kommerziell -,  
+solange dies ohne Veränderungen und vollständig mit Quellenangabe und derselben CC-Lizenz 
+geschieht. 
+Eine Kurzübersicht der Lizenzbedeutung ist zu erreichen über  
+http://creativecommons.org/licenses/by-nd/3.0/de 
+ 
+Zitiervorschlag für die Quellenangabe: 
+PTB-Anforderungen 12.01 „Messgeräte im öffentlichen Verkehr; Geschwindigkeitsüberwachungsgeräte“ 
+(10/2015). Physikalisch-Technische Bundesanstalt, Braunschweig und Berlin. 
+DOI: 10.7795/510.20151031B 
+ 
+Verfügbar unter: http://dx.doi.org/10.7795/510.20151031B 
+
+=====PAGE 3=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 1 von 17 
+ 
+Inhalt 
+1 Begriffsbestimmungen 
+2 Funktionen, Anwendungsbereich und Zweck 
+3 Allgemeine Anforderungen an das Messgerät 
+3.1 
+Messwert 
+3.2 
+Zuordnung von Messwerten zu Fahrzeugen 
+3.3 
+Dokumentation der Verkehrssituation und der Messdaten 
+3.3.1 
+Allgemein 
+3.3.2 
+Anzeigeeinheit 
+3.3.3 
+Dokumentationseinheit 
+3.3.4 
+Auswerteeinheit 
+3.4 
+Anbindung an Wechselverkehrszeichenanlagen 
+3.5 
+Uhrzeitabhängige Bildauslösegrenzwerte 
+3.6 
+Funktions- und Speicherprüfung 
+3.6.1 
+Funktionsprüfung 
+3.6.2 
+Speicherprüfung 
+3.7 
+Robustheit gegenüber unkorrekter Aufstellung 
+3.8 
+Signaleingang für eichtechnische Prüfungen 
+3.9 
+Software-Anforderungen 
+3.10 Störfestigkeit gegenüber Umwelteinflüssen 
+3.10.1 Klimabeständigkeit 
+3.10.2 Beständigkeit gegen Spritzwasser und Staub 
+3.10.3 Elektromagnetische Verträglichkeit (EMV) 
+3.10.4 Versorgungsspannung 
+3.10.5 Mechanische Widerstandsfähigkeit 
+3.11 Konformitätserklärung 
+3.12 Übereinstimmung mit der zugelassenen Bauart 
+3.13 Gebrauchsanweisung 
+4 Schulung des Bedienpersonals 
+5 Besondere Anforderungen an Verkehrsradargeräte 
+5.1 
+Mikrowellenteil 
+5.1.1 
+Konformitätserklärung 
+5.1.2 
+Richtcharakteristik der Antenne 
+5.1.3 
+Langzeitstabilität der Sendefrequenz 
+5.1.4 
+Fahrtrichtungsselektion 
+5.1.5 
+Effektiver Messwinkel 
+5.1.6 
+Geometrischer Messwinkel 
+5.2 
+Signalauswertung im Niederfrequenzteil 
+5.2.1 
+Modulation des Dopplersignals 
+5.2.2 
+Signalanalysestrecke 
+5.2.3 
+Bandbreite des Dopplerkanals 
+5.3 
+Dokumentationseinheit 
+5.4 
+Auswertung 
+5.5 
+Antennenhalterung, Visiereinrichtung 
+6 Besondere Anforderungen an Weg-Zeit-Messgeräte 
+6.1 
+Mehrfachmessung 
+6.2 
+Länge der Messbasis 
+6.3 
+Anzeige der Sensorsignale 
+6.4 
+Rechenzeit 
+6.5 
+Anforderungen an die Messstelle 
+6.6 
+Lebensdauer der Sensoren 
+ 
+ 
+
+=====PAGE 4=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 2 von 17 
+6.7 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Lichtschranken als Messbasis 
+6.7.1 
+Lichtsender 
+6.7.2 
+Lichtempfänger 
+6.7.3 
+Ausrichtung der Lichtschranken parallel zur Fahrbahnoberfläche 
+6.8 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Drucksensoren als Messbasis 
+6.8.1 
+Bauarten von Drucksensoren 
+6.8.2 
+Lagestabilität und Verschleiß von auf der Fahrbahn verlegten Sensoren 
+6.9 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Induktionsschleifen als Messbasis 
+7 Besondere Anforderungen an Laserhandmessgeräte 
+7.1 
+Visiereinrichtung 
+7.2 
+Anforderungen an Anzeigen 
+7.3 
+Abgleiteffekt 
+7.4 
+Stufeneffekt 
+7.5 
+Anforderungen an Dokumentationseinheiten 
+8 Besondere Anforderungen an Laserscanner-Geschwindigkeitsmessgeräte 
+8.1 
+Einsatzsarten 
+8.2 
+Mechanik des Scanners 
+8.3 
+Scanfrequenz und Winkelauflösung 
+8.4 
+Messfeld und Fotobereich 
+8.5 
+Einflüsse der Fahrzeuggeometrie 
+9 Besondere Anforderungen an sonstige Geschwindigkeitsüberwachungsgeräte 
+10 Vorschriften und Literatur 
+11 Anhang: Tabelle zur elektromagnetischen Verträglichkeit 
+ 
+
+=====PAGE 5=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 3 von 17 
+1 Begriffsbestimmungen 
+ 
+Geschwindigkeits- 
+überwachungs-
+geräte 
+Geschwindigkeitsüberwachungsgeräte dienen bei der amtlichen Verkehrs-
+überwachung zur Geschwindigkeitsmessung vorbeifahrender Fahrzeuge. Optional 
+können Messdaten und die zugehörige Verkehrssituation dokumentiert werden. 
+Verkehrsradar-
+geräte 
+Verkehrsradargeräte 
+(Kurzbezeichnung: 
+Radargeräte) 
+messen 
+die 
+Geschwindigkeit auf der Basis des Dopplereffektes bei elektromagnetischen 
+Wellen im GHz-Bereich und bestimmen simultan die Entfernung zum betreffenden 
+Fahrzeug. 
+Weg-Zeit-
+Messgeräte 
+Weg-Zeit-Messgeräte bestimmen die Geschwindigkeit durch Messung der Zeit zur 
+Durchfahrt einer bekannten Wegstrecke zwischen Sensoren. 
+Laserhandmess-
+geräte 
+Bei Laserhandmessgeräten wird die Geschwindigkeit von Fahrzeugen als deren 
+Entfernungsänderung in Fahrtrichtung während einer bekannten Messzeit ermittelt. 
+Der Bediener visiert das Fahrzeug über ein Fernrohr mit integrierter Zielmarke an 
+und löst die Geschwindigkeitsmessung aus, worauf das Gerät eine Folge von 
+Laserimpulsen aussendet und jeweils die vom Fahrzeug reflektierten Laserimpulse 
+empfängt, 
+um 
+aus 
+der 
+Laufzeit 
+die 
+Entfernung 
+zu 
+berechnen. 
+Der 
+Geschwindigkeitsmesswert wird am Ende der Messung angezeigt. Das 
+Laserhandmessgerät besitzt keine Dokumentationseinrichtung, die den Messwert 
+oder das anvisierte Fahrzeug dokumentiert. Die Gewährleistung einer eindeutigen 
+Messwertzuordnung 
+zum 
+anvisierten 
+Fahrzeug 
+liegt 
+daher 
+im 
+Verantwortungsbereich des Bedieners. 
+Laserscanner-
+Geschwindigkeits
+messgeräte 
+Bei Laserscanner-Geschwindigkeitsmessgeräten wird die Geschwindigkeit von 
+Fahrzeugen aus deren Winkel- und Entfernungsänderung während einer 
+bekannten Messzeit ermittelt. Das am Fahrbahnrand aufgestellte Gerät scannt 
+hierzu die Fahrbahn über mehrere Fahrstreifen hinweg horizontal ab und erfasst 
+dabei die Bewegungen aller Fahrzeuge während der Vorbeifahrt. Für den 
+Scanvorgang sendet das Gerät in definierten Winkeln jeweils kurze Laserimpulse 
+aus und empfängt den vom jeweiligen Fahrzeug reflektierten Anteil, um für den 
+betreffenden Winkel die Laufzeit der Pulse und damit die Entfernung des erfassten 
+Fahrzeugteils zu ermitteln. 
+Verkehrssituation 
+Betreffendes Fahrzeug einschließlich Umfeld, soweit dieses bauartbedingt Einfluss 
+auf die Messwertbildung oder Zuordnung haben könnte. 
+Dokumentations-
+einheit 
+Geräteteil zur Erfassung der Verkehrssituation mit digitalen Bilddokumenten. Die 
+Bilddokumente können dabei aus einer Bildsequenz, einem Einzelbild oder 
+mehreren Einzelbildern bestehen. 
+Bildsequenz 
+Als Bildsequenz wird eine Folge von Einzelbildern mit einem festen Aufnahmetakt 
+bezeichnet. 
+Geeichte 
+Messgröße 
+Als geeichte Messgrößen werden die eichrechtlich relevanten Messgrößen 
+bezeichnet 
+Hilfsgröße 
+Als Hilfsgrößen werden vom Gerät ermittelte Messgrößen bezeichnet, deren 
+Messfehler bei der Bauartzulassung und bei der Eichung nicht näher untersucht 
+werden. 
+Falldaten 
+Messdaten, Bilddaten und ggf. ergänzende Daten (z. B. Standortcode). 
+Wechselver-
+kehrszeichen-
+anlage (WVA) 
+Gesamtanlage aller logisch zusammenarbeitenden Anzeigequerschnitte sowie der 
+zugehörigen Steuerung und Sensoren, gelegentlich auch Verkehrsbeein-
+flussungsanlage, Streckenbeeinflussungsanlage oder Linienbeeinflussungsanlage 
+genannt. 
+Anzeigequer-
+schnitt 
+Brücke mit einem oder mehreren Wechselzeichengebern (Einrichtung zur 
+Darstellung von Wechselverkehrszeichen). 
+Wechselverkehrs-
+zeichen (WVZ) 
+Verkehrszeichen, das bei Bedarf (computergesteuert) gezeigt, geändert und 
+aufgehoben werden kann. 
+Anhalte-
+kommando 
+Anhalten von Fahrzeugen aus dem fließenden Verkehr durch Einsatzkräfte nach 
+Geschwindigkeitsüberschreitungen, 
+um 
+dem 
+Betroffenen 
+den 
+Messwert 
+
+=====PAGE 6=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 4 von 17 
+vorzuwerfen und ggf. die Ordnungswidrigkeit unmittelbar vor Ort abschließend zu 
+ahnden. 
+Bildauslöse- 
+grenzwert 
+Geschwindigkeitswert, ab dem das Geschwindigkeitsüberwachungsgerät ein 
+Bilddokument erstellt. 
+Messfeld 
+Bereich in dem die Messwertbildung erfolgt. 
+2 Funktionen, Anwendungsbereich und Zweck 
+Geschwindigkeitsüberwachungsgeräte dienen bei der amtlichen Überwachung der zulässigen 
+Höchstgeschwindigkeit 
+zur 
+Messung 
+der 
+Geschwindigkeit 
+vorbeifahrender 
+Fahrzeuge. 
+Die 
+Überwachung kann 
+− 
+dauerhaft an einem ausgewähltem Standort (stationär), 
+− 
+an variabel auswählbaren Standorten (transportabel) oder 
+− 
+aus einem fahrenden Fahrzeug heraus (moving) 
+durchgeführt werden.  
+Das Geschwindigkeitsüberwachungsgerät umfasst funktional: 
+− 
+Sensor(en), 
+− 
+Zentraleinheit, 
+− 
+Bedieneinheit, 
+− 
+Anzeigeeinheit, 
+− 
+Dokumentations- und Auswerteeinheit (optional). 
+Die Sensoren liefern beim Vorbeifahren des Fahrzeugs Signale, aus denen die Zentraleinheit mit Hilfe 
+der Hard- und Software einen geeichten Geschwindigkeitsmesswert des Fahrzeugs ermittelt. 
+Die Bedieneinheit und die Anzeigeeinheit dienen zur Bedienung des Gerätes bzw. zum Ablesen der 
+Mess- und anderer Gerätedaten. 
+Die von der Dokumentationseinheit erfasste Verkehrssituation wird zusammen mit dem zugehörigen 
+Messwert in einer Falldatei abgelegt. Die Falldaten können anschließend vom Messgerät abgerufen 
+und ausgewertet werden. 
+Beim Einsatz eines Geschwindigkeitsüberwachungsgerätes sind folgende Auswertemöglichkeiten zu 
+unterscheiden: 
+− 
+Arbeiten mit Anhaltekommando vor Ort, unter Verwendung der Falldatei oder der geeichten 
+Anzeige 
+− 
+Übertragung von Mess- und Bilddaten in eine zentrale Auswertestelle. 
+3 Allgemeine Anforderungen an das Messgerät 
+3.1 
+Messwert 
+Die Abweichung des Geschwindigkeitsmesswertes vom wahren Wert darf bei Einhaltung der in der 
+Gebrauchsanweisung getroffenen Festlegungen - auch unter besonderen Einflüssen (z. B. 
+Karosserieform, Verkehrsdichte, Klima, EMV) - die Verkehrsfehlergrenzen nicht überschreiten. 
+Für den geeichten Geschwindigkeitsmesswert gelten die Fehlergrenzen der Anlage 18 Abschnitt 11 der 
+Eichordnung (EO 18-11). Der geeichte Geschwindigkeitsmesswert muss auch bei Beschleunigungs- 
+und Abbremsvorgängen die entsprechenden Fehlergrenzen einhalten. Das Messgerät sollte auch bei 
+geringfügigen Beschleunigungen (±1,5 m/s²) in der Lage sein, einen gültigen Geschwindigkeits-
+messwert in der Mehrzahl der Fälle auszugeben. 
+Bei betrieblichen Prüfungen im öffentlichen Straßenverkehr mit der PTB-Referenzanlage müssen die 
+Verkehrsfehlergenzen vom zuzulassenden Messgerät mit einer statistischen Sicherheit von mindestens 
+5 Standardabweichungen eingehalten werden. Es gilt daher: 
+ 
+ቤ|∆𝑥𝑥
+തതതത| −|𝑓𝑓|
+𝜎𝜎
+ቤ≥5  
+ 
+Hier bezeichnet ∆𝑥𝑥
+തതതത die mittlere Abweichung der Messwerte des zuzulassenden Messgerätes von der 
+Referenz und 𝑓𝑓 die Verkehrsfehlergrenze. Die Standardabweichung der Messwertabweichungen des 
+zuzulassenden Messgerätes wird hier mit 𝜎𝜎 bezeichnet. 
+
+=====PAGE 7=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 5 von 17 
+3.2 
+Zuordnung von Messwerten zu Fahrzeugen 
+Die Konstruktion des Geschwindigkeitsüberwachungsgerätes muss eine eindeutige Zuordnung eines 
+Geschwindigkeitsmesswertes zu einem Fahrzeug gewährleisten. 
+Werden innerhalb eines Messvorgangs die Geschwindigkeiten mehrerer Fahrzeuge gemessen und 
+dokumentiert, sind die Werte den Fahrzeugen eindeutig zuzuordnen (z. B. durch Angabe der Fahrspur). 
+Laserhandmessgeräte müssen eine eindeutige Zuordnung eines Fahrzeuges zu einem Messwert durch 
+den Benutzer ermöglichen (z. B. durch einen markierten Bereich in einer Zieleinrichtung). 
+3.3 
+Dokumentation der Verkehrssituation und der Messdaten 
+3.3.1 
+Allgemein 
+Der Geschwindigkeitsmesswert muss ganzzahlig und dreistellig angegeben werden. Die obere Grenze 
+des Messbereichs muss mindestens 200 km/h betragen. Der maximal anzeigbare Geschwindigkeits-
+messwert darf höchstens 300 km/h betragen. Messwerte oberhalb des maximal anzeigbaren 
+Messwertes für die Geschwindigkeit dürfen nicht angegeben werden. Stattdessen darf ggf. anstelle 
+eines Messwertes ein entsprechender Hinweis eingeblendet werden (z. B. „>250 km/h“ oder „gültiger 
+Wert größer 250 km/h“). Kombinierte Rotlicht- und Geschwindigkeitsüberwachungsanlagen sind von 
+diesen Anforderungen ausgenommen. 
+Geschwindigkeitsüberwachungsgeräte müssen sicherstellen, dass anhand der Messdaten und der in 
+den zugehörigen Bilddokumenten abgebildeten Fahrzeugposition der Geschwindigkeitsmesswert 
+eindeutig einem Fahrzeug zugeordnet werden kann. Für Ausnahmefälle (z. B. ein stark schräg 
+fahrendes Fahrzeug) sind ergänzende Regelungen zur Auswertung der Bilddokumente in der 
+Gebrauchsanweisung zulässig. 
+3.3.2 
+Anzeigeeinheit 
+Zusätzlich zu den o. a. allgemeinen Angaben gelten für Anzeigen am Gerät folgende speziellen 
+Anforderungen. Die Höhe der Ziffern für die eichrechtlich relevanten Größen muss mindestens 8 mm 
+betragen. Bei Geräten ohne Dokumentationseinheit muss sich die Anzeige nicht nur von einer Person, 
+sondern unter allen Bedingungen von zwei Personen gleichzeitig ablesen lassen. Der jeweils letzte 
+angezeigte Messwert darf automatisch frühestens nach 1 Minute gelöscht werden, um Strom zu sparen. 
+3.3.3 
+Dokumentationseinheit 
+Geschwindigkeitsüberwachungsgeräte müssen grundsätzlich mit einer Dokumentationseinheit zur 
+Erstellung von Einzelbilddokumenten oder zur Aufzeichnung einer Bildsequenz versehen werden. Diese 
+Anforderung gilt nicht für Laserhandmessgeräte, da bei diesen Messgeräten auf Grund des aktiven 
+Anvisierens des betreffenden Fahrzeugs durch den Bediener eine eindeutige Messwertzuordnung 
+gegeben ist. 
+In das Einzelbild oder die Bildsequenz sind alle Informationen und Messwerte einzublenden, die für die 
+Auswertung insbesondere die Messwertzuordnung benötigt werden. Außerdem sind das Datum und die 
+Uhrzeit (mit einer Auflösung in Sekunden) einzublenden. Werden von der Dokumentationseinheit 
+Bildsequenzen erstellt, so sind Messbeginn und Messende eindeutig identifizierbar in die Bildsequenz 
+einzublenden. Die eingeblendeten Messdaten müssen mit dem jeweils zugehörigen Einheitenzeichen 
+versehen sein. 
+Die eingeblendeten Messwerte müssen immer zur abgebildeten Verkehrssituation gehören. Dies gilt 
+insbesondere für in Bildsequenzen eingeblendete Messwerte. 
+Das Bilddokument muss die Bauartbezeichnung des Geschwindigkeitsüberwachungsgerätes enthalten 
+(z. B. in Form eines Kürzels). 
+Bei Geschwindigkeitsüberwachungsgeräten mit Fahrtrichtungserkennung ist zusätzlich neben anderen 
+eichrelevanten Werten (z. B. Fahrspurinformation bei in der Fahrbahn eingelassenen Sensoren) ein 
+Fahrtrichtungszeichen einzublenden. 
+Das Bild bzw. die Bildsequenz muss die Zone der Messwertentstehung soweit abbilden (z. B. Verlauf 
+der Messbasis, Verlauf der Messstrahlung bei Verkehrsradargeräten), dass ausgeschlossen werden 
+kann , dass der Messwert einem Fahrzeug zuzuordnen ist, das nicht im Bild abgebildet ist. Eventuell 
+muss der Bereich der Messwertbildung im Einzelbild bzw. in der Bildsequenz markiert sein. 
+Bei Messgeräten, die eine Justiereinrichtung der optischen Achse der Dokumentationseinheit relativ zur 
+Sensoranordnung besitzen, ist diese so stabil auszuführen, dass bei normalem Gebrauch eine 
+Verstellung der Justierung auszuschließen ist. 
+Eine Dokumentationseinheit zur Erstellung von einem oder mehreren Einzelbilddokumenten muss die 
+Verkehrssituation mit dem erfassten Fahrzeug so rechtzeitig (typischerweise nach dem Verlassen des 
+Erfassungsbereichs der Sensoren oder nach einer geschwindigkeitsabhängigen Verzögerungszeit zur 
+Realisierung einer festen Fotoposition) abbilden, dass eine Fehlzuordnung von Messwert und Fahrzeug 
+
+=====PAGE 8=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 6 von 17 
+durch Extrapolation der Fahrzeugbewegung bis zur Fotoposition ausgeschlossen werden kann. 
+Die erstellten Bilddokumente müssen in Form von digitalen Bilddaten zusammen mit den Messdaten 
+untrennbar in einer gemeinsamen Falldatei abgelegt werden. Die Falldatei ist mit einer digitalen 
+Signatur, basierend auf einem asymmetrischen Verschlüsselungsverfahren, zu sichern. Es ist zulässig, 
+wenn die Falldatei sich aus mehreren einzeln signierten Blöcken zusammensetzt (z.B. bei langen 
+Bildsequenzen). Die Auswerteeinheit muss die Richtigkeit der Signatur überprüfen. Durch die 
+Signaturprüfung mit Hilfe des öffentlichen Schlüssels des Messgerätes können die Integrität 
+(Unversehrtheit) des Inhalts der Datei und die Authentizität (Originalität) der Datei zweifelsfrei bestätigt 
+werden. Authentisch heißt in diesem Zusammenhang, dass die Datei vom betrachteten Messgerät 
+stammt. 
+Bei der Verwendung von verlustbehafteten Kompressionsverfahren (z.B. MPEG oder JPEG) der 
+Bilddaten dürfen keine Artefakte entstehen, die dazu führen, dass der Bildinhalt in verfälschender Weise 
+(z. B der Inhalt der Zeichenfolge des Nummernschildes) verändert wird. 
+Detailliertere Software-Anforderungen ergeben sich aus den in 3.9 aufgeführten Dokumenten. 
+3.3.4 
+Auswerteeinheit 
+Die Auswerteeinheit ist eine Komponente des Geschwindigkeitsüberwachungsgerätes und damit 
+zulassungspflichtig, auch wenn sie sich in einem zentralen Büro befindet und zur nachträglichen 
+Auswertung von übertragenen Falldaten vorgesehen ist. Da die Auswertung in der Zentrale im 
+Gegensatz zur Messung wiederholbar ist, gelten jedoch geeignete reduzierte Anforderungen an den 
+Manipulationsschutz und die Konformität von Hard- und Software. Insbesondere darf die 
+Auswerteeinheit die Falldaten nach Prüfung der Signatur zur weiteren Verwendung zu nicht 
+zulassungspflichtigen Einheiten exportieren, wenn die signierten Dateien archiviert werden. 
+3.4 
+Anbindung an Wechselverkehrszeichenanlagen 
+Ist das Geschwindigkeitsüberwachungsgerät an eine Wechselverkehrszeichenanlage mit nur einem 
+relevanten Anzeigequerschnitt angebunden, muss das Gerät aus den Meldungen der WVZ automatisch 
+den zum Zeitpunkt der Messwertbildung gültigen Geschwindigkeitsgrenzwert ermitteln, um 
+insbesondere den aktuellen Bildauslösegrenzwert festzulegen. Hierbei ist folgendermaßen vorzugehen. 
+Wird die zulässige Höchstgeschwindigkeit erhöht, so muss das Geschwindigkeitsüberwachungsgerät 
+dies spätestens nach 100 ms entsprechend berücksichtigen; bei Reduzierung des Wertes muss 
+Fahrzeugen, die kurz vor der Reduzierung den Anzeigequerschnitt durchfahren haben und sich noch 
+vor dem Erfassungsbereich der Sensoren (Messort) befinden, eine Räumzeit gewährt werden. Die 
+Räumzeit berücksichtigt die Zeit, die ein Fahrzeug vom Anzeigequerschnitt bis zum Messort benötigt. 
+Die Räumzeit wird aus der Entfernung zwischen dem Anzeigequerschnitt und dem Ort der Messung 
+und dem halben Wert der neuen zulässigen Höchstgeschwindigkeit vAnzeige berechnet. 
+ 
+𝑡𝑡=
+2 × 𝑠𝑠
+𝑣𝑣𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴
+ 
+ 
+Zulässig sind auch Installationen des Gerätes, bei denen sich der Messort zwischen zwei 
+Anzeigequerschnitten befindet. Liegt der Messort in Sichtweite vor dem zweiten Anzeigequerschnitt 
+(z.B. bei Montage auf der betreffenden Brücke mit Erfassung des Fahrzeugs vor der Brücke), so ist 
+zugunsten des Betroffenen auch die an diesem Anzeigequerschnitt dargestellte zulässige 
+Höchstgeschwindigkeit zu berücksichtigen. Hierzu wird dann der jeweils größte Wert der in Frage 
+kommenden Anzeigequerschnitte (der erste Wert gilt dabei ggf. noch bis zum Ablauf der Räumzeit) 
+herangezogen (maßgebliche Höchstgeschwindigkeit). 
+Das Gerät hat Dateien zu erstellen, in denen mit Zeitstempeln die Bildauslösungsgrenzwerte und die 
+Stellzustände 
+des 
+Anzeigequerschnittes 
+(ggf. 
+auch 
+die 
+Stellzustände 
+des 
+zweiten 
+Anzeigequerschnittes) protokolliert werden. 
+In den Bilddokumenten ist zusätzlich zu den im Abschnitt 3.3 aufgeführten Größen die zum Zeitpunkt 
+der Messung für das betroffene Fahrzeug gültige zulässige Höchstgeschwindigkeit einzublenden. 
+Die WVZ ist selbst nicht Gegenstand von Eichung und Zulassung, wenn die Daten zum 
+Geschwindigkeitsüberwachungsgerät 
+entsprechend 
+den 
+TLS-Spezifikationen 
+(siehe 
+Literatur) 
+übermittelt werden. 
+Detailliertere Software-Anforderungen ergeben sich aus den in 3.9 aufgeführten Dokumenten. 
+Im Bereich von Wechselverkehrszeichenanlagen ist die Geschwindigkeitsüberwachung mit Geräten 
+auch ohne Anbindung an diese Wechselverkehrszeichenanlage zulässig. Zur Ermittlung der zulässigen 
+Höchstgeschwindigkeit kann in diesem Fall entweder ein konstanter Geschwindigkeitswert zugrunde 
+
+=====PAGE 9=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 7 von 17 
+gelegt werden, der an dieser Stelle nie überschritten wird (z. B. 80 km/h in einem Tunnel) oder es muss 
+individuell die zulässige Höchstgeschwindigkeit durch das Bedienpersonal beobachtet werden. 
+3.5 
+Uhrzeitabhängige Bildauslösegrenzwerte 
+Wenn 
+das 
+Geschwindigkeitsüberwachungsgerät 
+die 
+Funktion 
+besitzt 
+uhrzeitabhängige 
+Bildauslösegrenzwerte 
+zur 
+Anwendung 
+zu 
+bringen, 
+um 
+damit 
+uhrzeitabhängige 
+zulässige 
+Höchstgeschwindigkeiten zu überwachen, dann muss mittels technischer oder regulatorischer 
+Maßnahmen sichergestellt werden, dass es zu keiner Benachteiligung Betroffener kommt. 
+Als regulatorische Maßnahme gilt zum Beispiel eine Auflage in der Gebrauchsanweisung, welche 
+vorschreibt in welchen regelmäßigen Zeitabständen der Bediener die Uhrzeit des Messgerätes zu 
+kontrollieren hat und welche Karenzzeiten zu Gunsten des Betroffenen einzuhalten sind. 
+Soll eine technische Maßnahme zum Einsatz kommen, so ist dem Geschwindigkeitsüberwachungsgerät 
+entweder eine mittels digitaler Signatur gesicherte Anbindung an die gesetzliche Uhrzeit zur Verfügung 
+zu stellen, oder es wird auf mehrere ungesicherte Zeitquellen (z.B. Satellitenzeit und DCF-77) 
+zurückgegriffen deren Zeitinformationen vom Messgerät hinsichtlich der Plausibilität geprüft werden. 
+3.6 
+Funktions- und Speicherprüfung 
+3.6.1 
+Funktionsprüfung 
+Das Geschwindigkeitsüberwachungsgerät muss automatisch eine interne Funktionsprüfung beim 
+Einschalten 
+durchführen. 
+Stationär 
+eingesetzte 
+Geschwindigkeitsüberwachungsgeräte 
+müssen 
+zusätzlich in bestimmten Abständen eine interne Funktionsprüfung durchführen. Hiermit soll zumindest 
+jeder permanente Fehler in den das Messergebnis verarbeitenden Schaltungen einschließlich der 
+Schaltungen und Elemente der Anzeige aufgezeigt werden. Ein erkannter Fehler muss die weitere 
+Bildung von Messwerten blockieren. 
+3.6.2 
+Speicherprüfung 
+Das Geschwindigkeitsüberwachungsgerät muss beim Einschalten die nichtflüchtigen Daten (Programm- 
+und Konfigurationsparameter) und den Schreib-Lesespeicher durch Testroutinen automatisch 
+überprüfen. Stationär eingesetzte Geschwindigkeitsüberwachungsgeräte müssen in bestimmten 
+Abständen die nichtflüchtigen Daten (Programm- und Konfigurationsparameter) und den Schreib-
+Lesespeicher automatisch überprüfen. Ein erkannter Fehler muss die weitere Bildung von Messwerten 
+blockieren. 
+3.7 
+Robustheit gegenüber unkorrekter Aufstellung 
+Das Messgerät muss entweder robust im Umgang mit unkorrekten Aufstellbedingungen sein oder eine 
+einfache Möglichkeit zur nachträglichen Überprüfung messrelevanter Aufstellparameter bieten. 
+3.8 
+Signaleingang für eichtechnische Prüfungen 
+Die Geschwindigkeitsüberwachungsgeräte müssen mit einem bei der Eichung leicht zugänglichen 
+Signaleingang ausgestattet sein, über den die zur Eichung erforderlichen normierten Signale 
+eingegeben werden können. 
+3.9 
+Software-Anforderungen  
+Die grundlegenden Software-Anforderungen ergeben sich in Anlehnung an den Softwareleitfaden 
+WELMEC 7.2 (siehe Literaturliste) mit der deutschen Ergänzung für die Risikoklasse „F“. Unter der 
+deutschen Ergänzung für die Risikoklasse „F“ ist zu verstehen, dass bezüglich Manipulationsschutz, 
+Prüftiefe und Konformität jeweils das Niveau „hoch“ zu verwenden ist. 
+Der 
+implementierte 
+Programmcode 
+(Maschinencode) 
+des 
+eingereichten 
+Messgerätes 
+muss 
+nachweisbar aus dem eingereichten Quellcode generiert worden sein. 
+Die Übertragung von für die Messung relevanten Daten (z. B. Messwert, Fahrtrichtungszeichen) über 
+Schnittstellen an Peripheriegeräte, deren Ausgaben für amtliche Zwecke verwendet werden, muss 
+WELMEC 7.2 entsprechen. 
+Der WELMEC 7.2 enthält u. a. Anforderungen an die Manipulationssicherheit. Eichtechnisch relevante 
+Funktionen und Daten eines geeichten Geschwindigkeitsüberwachungsgerätes dürfen sich nicht 
+verfälschen bzw. stören lassen. Insbesondere 
+− 
+müssen Schnittstellen entweder rückwirkungsfrei sein oder es sind nur Rückwirkungen zulässig, 
+soweit diese bei der Zulassung geregelt worden sind. Es muss ausgeschlossen sein, dass nicht 
+dokumentierte Befehle im Gerät eine Wirkung erzielen können. 
+− 
+müssen Programmspeicher durch eichtechnische Sicherungen geschützt sein, 
+− 
+dürfen Parameter ohne Verletzung einer eichtechnischen Sicherung nicht veränderbar sein, wenn 
+
+=====PAGE 10=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 8 von 17 
+sie als zu sichern gekennzeichnet worden sind, 
+− 
+müssen Daten bei der Datenübertragung durch Signierung mittels asymmetrischer Verschlüssel-
+ungsverfahren geschützt sein, um für Integrität und Authentizität zu sorgen. 
+3.10 Störfestigkeit gegenüber Umwelteinflüssen 
+Die Geschwindigkeitsüberwachungsgeräte müssen auch unter den Einflüssen von äußeren Störungen, 
+soweit mit ihnen in der Praxis gerechnet werden muss, funktionssicher arbeiten und die geforderten 
+Fehlergrenzen einhalten. Bei den Prüfungen zur Beständigkeit gegenüber Umwelteinflüssen dürfen die 
+Geschwindigkeitsüberwachungsgeräte auch automatisch in einen Modus übergehen, in dem keine 
+weiteren Messungen mehr möglich sind, oder der eindeutig als gestört erkennbar ist. 
+3.10.1 Klimabeständigkeit 
+Die Geschwindigkeitsüberwachungsgeräte müssen dem Lagertemperaturbereich von -25°C bis 70°C 
+standhalten (gemäß des Dokumentes OIML D 11 in der Ausgabe von 2004, Organisation Internationale 
+de Métrologie Légale). 
+Die 
+Geschwindigkeitsüberwachungsgeräte 
+müssen 
+in 
+dem 
+vom 
+Hersteller 
+empfohlenen 
+Umgebungstemperaturbereich (Betriebstemperaturbereich) ordnungsgemäß arbeiten (evtl. Hinweis in 
+der Gebrauchsanweisung). Dieser Bereich muss mindestens 0°C bis 40°C umfassen.  
+Durch eine geräteinterne Temperaturüberwachung ist sicherzustellen, dass die Messrichtigkeit 
+unabhängig von der Umgebungstemperatur gewährleistet wird. Ein Unter- oder Überschreiten des 
+spezifizierten Temperaturbereichs muss vom Geschwindigkeitsüberwachungsgerät automatisch erkannt 
+werden, ggf. muss eine geeignete Meldung erscheinen, der laufende Messvorgang muss abgebrochen 
+werden und das Geschwindigkeitsüberwachungsgerät muss weitere Messungen blockieren. Hierbei ist 
+auch ein Abschalten zulässig. Erreicht die Temperatur wieder den spezifizierten Bereich, muss das 
+Gerät die in 3.6 beschriebenen Prüfungen durchlaufen, bevor weitere Messungen möglich sind. 
+Die verwendeten Bauteile müssen für den geräteintern überwachten Temperaturbereich spezifiziert 
+sein.  
+Die Geschwindigkeitsüberwachungsgeräte müssen sowohl unter den Betriebs- als auch unter den 
+Lagerbedingungen unempfindlich sein gegenüber der relativen Feuchte der Umgebungsluft. 
+3.10.2 Beständigkeit gegen Spritzwasser und Staub 
+Die Teile des Geschwindigkeitsüberwachungsgeräts, die der Witterung ausgesetzt sind, müssen 
+entsprechend IP54 staubdicht und spritzwasserfest sein. 
+3.10.3 Elektromagnetische Verträglichkeit (EMV) 
+Die Geschwindigkeitsüberwachungsgeräte dürfen durch Einflüsse elektrischer Störungen nicht 
+beeinflusst werden oder müssen definiert (z.B. Reset, Fehlermeldung) auf diese reagieren. Eine 
+Übersicht über die einzelnen Prüfungen und die jeweiligen Schärfegraden gibt die im Anhang 
+aufgeführte Tabelle. 
+3.10.4 Versorgungsspannung 
+Bei netzbetriebenen Geräten (230-V-Netz) ist eine Überwachung dieser externen Betriebsspannung 
+oder der internen Betriebsspannung vorzusehen. Ggf. muss sich das Gerät abschalten bzw. blockieren 
+oder in einen Zustand überführt werden, in dem Messwertbildungen unterdrückt sind. Sollte die 
+Netzspannung des Gerätes nicht aus öffentlichen Netzen kommen sondern durch eine lokale 
+Gerätekomponente (z.B. durch Spannungsumsetzer oder Generatoren) erzeugt werden, so sind diese 
+Komponenten Bestandteil des Gerätes und der Zulassung. 
+Für mit anderen Wechselspannungsquellen (Zerhacker bzw. Wechselrichter, Generatoren) betriebene 
+Geräte ist eine Versorgungsspannungsüberwachung vorzusehen. Das Gerät muss mindestens im 
+Bereich von ±10 % um die Nennversorgungsspannung korrekt arbeiten. 
+Erfolgt die Versorgung mit Gleichspannung, so muss das Geschwindigkeitsüberwachungsgerät 
+zumindest im vom Hersteller spezifizierten Spannungsbereich (Umin und Umax) korrekt arbeiten. 
+Außerhalb des spezifizierten Bereiches muss sich das Gerät abschalten bzw. blockieren oder in einen 
+Zustand übergehen, in dem Messwertbildungen unterdrückt sind. Erreicht die Spannung wieder den 
+spezifizierten Bereich, muss das Gerät die in 3.6 beschriebenen Prüfungen durchlaufen, bevor weitere 
+Messungen möglich sind. 
+3.10.5 Mechanische Widerstandsfähigkeit 
+Das Geschwindigkeitsüberwachungsgerät muss gut und solide gebaut sein. Die verwendeten 
+Werkstoffe müssen ausreichende Festigkeit und Stabilität gewährleisten. Das Gerät muss gegen 
+mechanische Stöße gemäß OIML D 11, 11.2 (Schärfegrad 2) verträglich sein. 
+
+=====PAGE 11=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 9 von 17 
+3.11 Konformitätserklärung 
+Der Hersteller/Zulassungsinhaber muss eine Konformitätserklärung abgeben, sofern das Gerät unter 
+eine entsprechende Richtlinie fällt. Er erklärt hiermit, dass das in Verkehr gebrachte Produkt allen 
+einschlägigen Sicherheits- und Gesundheitsanforderungen (z. B. CE, Laserklasse) entspricht. 
+3.12 Übereinstimmung mit der zugelassenen Bauart 
+Hard- und Software-Änderungen am zugelassenen Geschwindigkeitsüberwachungsgerät (einschließlich 
+eines 
+ggf. 
+vorhandenen 
+Außengehäuses 
+oder 
+Fahrzeugeinbaus), 
+selbst 
+wenn 
+sie 
+nicht 
+messtechnischer Natur sind, müssen erläutert werden und bedürfen der Genehmigung durch die PTB. 
+3.13 Gebrauchsanweisung 
+Die Gebrauchsanweisung muss so formuliert werden, dass bei einem Einsatz entsprechend den 
+Festlegungen in der Gebrauchsanweisung die Fehlergrenzen stets eingehalten werden (ein gültig 
+geeichtes Gerät vorausgesetzt). Die vom Hersteller herausgegebene Gebrauchsanweisung wird 
+zusammen mit dem Gerät bei der Zulassung geprüft und ist Bestandteil der Bauartzulassung. 
+Jedem Geschwindigkeitsüberwachungsgerät ist eine Gebrauchsanweisung beizugeben. Sie muss in 
+deutscher Sprache abgefasst sein und mindestens folgende Angaben enthalten: 
+− 
+Arbeitsweise des Gerätes in den Grundzügen 
+− 
+unmissverständliche Darstellung der Handhabung und Aufstellung, Hinweise zu den Fehlermöglich-
+keiten der Bauart, ihrer Ursache und ihrer Vermeidung 
+− 
+Messbereich, Verkehrsfehlergrenzen und Nenngebrauchsbedingungen 
+− 
+Hinweise zur Auswertung der Beweisfotos (insbesondere Aspekte der zweifelsfreien Zuordnung des 
+Messwertes zu einem Fahrzeug) 
+− 
+Schulung des Bedienpersonals 
+− 
+Hinweise zur Zulässigkeit des Austauschs von geeichten und nicht geeichten Komponenten 
+− 
+Technische Daten  
+Änderungen der Gebrauchsanweisung bedürfen der Genehmigung durch die PTB und müssen vom 
+Gerätehersteller allen Betreibern mitgeteilt werden. 
+4 Schulung des Bedienpersonals 
+Amtliche Messungen dürfen nur von entsprechend geschultem Bedienpersonal vorgenommen werden. 
+Die Schulung muss durch kompetentes Personal (Hersteller oder Aus- und Fortbildungsstelle der 
+Polizei) erfolgen und ist schriftlich zu bestätigen. 
+Es ist zulässig, dass Hersteller oder Aus- und Fortbildungsstelle der Polizei Multiplikatoren autorisieren. 
+Ernannten Multiplikatoren ist die Eignung zur Durchführung von Schulungen schriftlich zu bestätigen. 
+5 Besondere Anforderungen an Verkehrsradargeräte 
+Das Verkehrsradargerät muss neben der Geschwindigkeit simultan den Abstand zum Fahrzeug 
+bestimmen. Diese simultane Abstandsmessfunktion dient der Entbindung des Messpersonals vom so 
+genannten 
+aufmerksamen 
+Messbetrieb. 
+Beim 
+aufmerksamen 
+Messbetrieb 
+beobachtet 
+eine 
+verantwortliche Person die Messsituation direkt und prüft den Messwert und die eindeutige Zuordnung 
+hinsichtlich Plausibilität. 
+5.1 
+Mikrowellenteil 
+5.1.1 
+Konformitätserklärung 
+Voraussetzung der Zulassung des Verkehrsradargerätes zur Eichung ist eine Selbsterklärung 
+(Konformitätserklärung) gemäß dem Gesetz über Funkanlagen und Telekommunikation (FTEG) und der 
+Richtlinie 1999/5/EG (R&TTE) in der jeweils gültigen Fassung. 
+5.1.2 
+Richtcharakteristik der Antenne 
+Wenn das Radargerät entsprechend der Gebrauchsanweisung installiert und eingesetzt wird, darf es 
+nicht möglich sein, in den Bereichen der Antennenkeule Messungen vorzunehmen, in denen ein 
+falscher Einstrahlwinkel zu Messfehlern > 2 % der richtigen Geschwindigkeit führen kann. Diese 
+Eigenschaft kann durch eine spezielle Formgebung der Richtcharakteristik erreicht werden. Bei 
+Einstrahlwinkeln von ca. 22° bewirken die folgenden aufgelisteten Anforderungen an die horizontale 
+Richtcharakteristik befriedigende Ergebnisse. 
+− Halbwertsbreite 
+3 dB 
+ 
+höchstens 7° 
+− Gesamtkeulenbreite 
+10 dB 
+ 
+höchstens 12° 
+
+=====PAGE 12=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 10 von 17 
+− Nebenkeulendämpfung 
+mind. 15 dB 
+Die Anforderungen beziehen sich auf die Einwegcharakteristik der Antenne. Sie wird in einer 
+Entfernung von 3 m mit einem 16 dB Standard-Gain-Horn ermittelt. Die Messvorschrift gewährleistet, 
+dass die geforderte Richtcharakteristik bereits bei den minimal vorkommenden Messentfernungen 
+ausgeprägt ist. Ein zweiter Weg besteht darin, die einlaufenden Dopplersignale einer intelligenten 
+Signalanalyse zu unterwerfen. 
+5.1.3 
+Langzeitstabilität der Sendefrequenz 
+Die Sendefrequenz des Mikrowellenteils darf innerhalb eines Zeitraumes von 2 Jahren höchstens um 
+0,2 % des Nennwertes der Sendefrequenz schwanken. 
+5.1.4 
+Fahrtrichtungsselektion 
+Wird eine Ausblendung der zweiten Fahrtrichtung nach dem Quadraturmischprinzip (Erzeugung von 
+zwei um 90° in der Phasenlage vor- oder nacheilenden Dopplersignalen) vorgenommen, so muss zur 
+Entscheidung der Fahrtrichtung die Phasenlage 90° ausgewertet werden. Eine Untersuchung lediglich 
+auf Vor- oder Nacheilen der Phasenlage ist nicht genügend störsicher. 
+5.1.5 
+Effektiver Messwinkel 
+Aufgrund der Verzögerung von Signalprüfschaltungen, der Rückstrahleigenschaften und der 
+Fahrtrichtung der Fahrzeuge, besteht die Möglichkeit, dass der Messwert unter verschiedenen Winkeln 
+im Strahlungsfeld der Antenne ermittelt wird. Durch Angabe eines effektiven Messwinkels kann diese 
+Eigenschaft des Radars berücksichtigt werden. Der effektive Messwinkel gibt den Erwartungswert des 
+Winkels an, unter dem das Fahrzeug sich im Augenblick der Messwertbildung im Strahlungsfeld der 
+Antenne befindet. Bei der Prüfung des Niederfrequenzteils durch simulierte Dopplersignale wird der 
+effektive Messwinkel bei der Berechnung der einzuspeisenden Dopplerfrequenz fd in folgender 
+Beziehung berücksichtigt: 
+ 
+fd = 2 v / λ cos ß. 
+ 
+v  Fahrzeuggeschwindigkeit 
+ 
+λ   Wellenlänge 
+ 
+ 
+ß   effektiver Messwinkel 
+5.1.6 
+Geometrischer Messwinkel 
+Unter dem geometrischen Messwinkel versteht man den Schnittwinkel der Strahlachse mit der 
+Fahrbahnachse. Dieser Winkel ergibt sich konstruktionsbedingt durch die Ausrichtung der Strahlachse 
+zum Gehäuse der Antenne, durch die Visiereinrichtung und / oder durch den Befestigungswinkel der 
+Antenne am Messfahrzeug. Die Einstellung des geometrischen Messwinkels darf höchstens zu einem 
+Messfehler von 0,5 % führen. (Bei einem richtigen Wert von 22° dürfen sich die Winkelfehler bei der 
+Ausrichtung der Strahlachse höchstens bis zu einem Betrag von 0,7° aufsummieren). In diesem 
+Fehlerbeitrag sind nicht die Visierfehler oder die Ausrichtfehler des Messfahrzeugs enthalten. 
+5.2 
+Signalauswertung im Niederfrequenzteil 
+5.2.1 
+Modulation des Dopplersignals 
+Weder eine Amplitudenmodulation noch eine zeitliche Beschränkung des Dopplersignals darf zu einer 
+Messwertanzeige führen, die die Eichfehlergrenzen (1 km/h bei Messwerten bis 150 km/h und 2 km/h 
+bei Messwerten über 150 km/h) überschreitet. 
+5.2.2 
+Signalanalysestrecke 
+Zur Erhöhung der Messsicherheit muss die Analyse des Dopplersignals (z. B. Messung und Bewertung 
+der Dopplerperioden) zur Bestimmung des Messwertes mindestens während einer Fahrstrecke des zu 
+messenden Fahrzeuges von 2 m im Strahlungsfeld vorgenommen werden. Die messwirksamen Signale 
+müssen während der gesamten Fahrzeugdurchfahrt erfasst und bewertet werden, insbesondere ist 
+dabei auch die Ausfahrt des Fahrzeugs zu detektieren (z. B. anhand der Signallücke). Einfache 
+Doppelreflexionssituationen mit im Frequenzspektrum sich um den Faktor zwei unterscheidenden 
+Signalen müssen vom Gerät automatisch erkannt werden und automatisch zur Annullation der Messung 
+führen. 
+5.2.3 
+Bandbreite des Dopplerkanals 
+Zur Dämpfung impulsförmiger Störungen muss die Bandbreite des Dopplerkanals entsprechend dem 
+gewählten Anzeigebereich begrenzt sein. Die verwendete Filterschaltung darf nicht unterhalb der 
+unteren Grenzfrequenz übersteuert werden, da die bei einem solchen Vorgang entstehenden 
+Signalharmonischen das Filter passieren und eine schwerwiegende Messwertverfälschung bewirken. 
+
+=====PAGE 13=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 11 von 17 
+5.3 
+Dokumentationseinheit 
+Die Ausrichtung der optischen Achse der Dokumentationseinheit muss zur Strahlachse der Antenne in 
+festgelegter Beziehung stehen. Hierdurch wird gewährleistet, dass eine Überprüfung der richtigen 
+Ausrichtung der Strahlachse der Antenne im Bilddokument möglich wird. 
+Falls die Position der Dokumentationseinheit verstellbar ist, muss der korrekte Anschlagpunkt für die 
+gewählte Position gewährleistet werden (z. B. durch einen elektrischen Kontakt oder eine geeignete 
+mechanische Konstruktion), um so ein unbeabsichtigtes Verstellen auszuschließen. Messungen dürfen 
+nur dann ausgeführt werden, wenn sich die Dokumentationseinheit im korrekten Anschlagpunkt 
+befindet. 
+Bei elektrischem Kontakt muss das Verkehrsradargerät die Messdurchführung in allen anderen 
+Positionen der Dokumentationseinheit unterbinden und eine eindeutige Fehlermeldung ausgeben.  
+Bei Geräten mit mehreren Positionen der Dokumentationseinheit (insbesondere auch für 
+unterschiedliche Brennweiten) sind diese am Gerät eindeutig anzuzeigen. 
+5.4 
+Auswertung 
+Im Rahmen der Auswertung muss überprüft werden, dass der im Bild eingeblendete Abstandsmesswert 
+zu dem im Bild befindlichen Fahrzeug passt. Die Gebrauchsanweisung muss hierfür ein 
+entsprechendes Verfahren vorschreiben. 
+5.5 
+Antennenhalterung, Visiereinrichtung 
+Die Visiereinrichtung muss es ermöglichen, die Antenne höchstens mit einem durch den Visiervorgang 
+bedingten Winkelfehler von 0,5° auf einen Ausrichtpunkt in 10 m Entfernung einzurichten. 
+Die 
+Befestigung 
+der 
+Antennenhalterung 
+am 
+Messfahrzeug 
+muss 
+an 
+einem 
+Punkt 
+der 
+Fahrzeugkarosserie vorgenommen werden, der unempfindlich gegen unbeabsichtigte Verformungen ist. 
+Insbesondere ist eine Befestigung am Stoßfänger zu vermeiden. Die installierte Antenne muss 
+unbehindert strahlen können. 
+6 Besondere Anforderungen an Weg-Zeit-Messgeräte 
+6.1 
+Mehrfachmessung 
+Zur Erkennung der wesentlichsten Messfehler bei Weg-Zeit-Messgeräten, ist es erforderlich, 
+voneinander unabhängige Zwei- oder Mehrfachmessungen der Geschwindigkeit durchzuführen. Durch 
+diese 
+Maßnahmen 
+wird 
+die 
+gleichzeitige 
+Anwesenheit 
+von 
+Fahrzeugen 
+unterschiedlicher 
+Verkehrsrichtung, das ungenaue Ansprechen eines Sensors (Lichtschranke, Koaxialkabel) oder ein 
+Abtastfehler der Fahrzeugkontur (Lichtschranke) erkannt. 
+6.2 
+Länge der Messbasis 
+Die Unsicherheit bei der mechanischen Einstellung der Länge der Messbasis (Abstände der Sensoren) 
+darf nicht zu einem Fehler größer 0,5 % des richtigen Wertes führen. 
+Wird die Einstellung der Länge der Messbasis, wie z.B. bei transportablen Sensoren, bei jeder Messung 
+neu vorgenommen, so ist ein geeichtes Längenmessgerät (z.B. Maßband) zu verwenden. 
+6.3 
+Anzeige der Sensorsignale 
+Die von den Sensoren einlaufenden Signale müssen sich dem Bediener der Anlage anzeigen (z. B. 
+optisch oder akustisch) lassen. An ihnen soll erkannt werden, ob das Messgerät Fehlimpulse infolge 
+eines beginnenden Defekts der Messwertaufnehmer liefert, oder ein neues Einjustieren der Sensoren 
+erforderlich ist. 
+6.4 
+ Rechenzeit 
+Die Rechenzeit muss so kurz sein, dass das gemessene Fahrzeug in der Nähe des Stoppsensors zum 
+Zeitpunkt der Auslösung eines Fotos abgebildet wird. Mit Hilfe der bekannten Fotoverzögerungszeit 
+lässt sich dann nachprüfen, ob der angezeigte Messwert dem Fahrzeug plausibel zugeordnet werden 
+kann. 
+6.5 
+Anforderungen an die Messstelle 
+Die Sensoren dürfen nur an Stellen installiert werden, wo Einflüsse durch einen nicht homogenen oder 
+unebenen Straßenbelag (z. B. Bodenwellen, Kanaldeckel) unter Berücksichtigung des Messprinzips der 
+Sensoren auszuschließen sind. 
+Werden 
+Induktionsschleifen 
+oder 
+Drucksensoren 
+eingesetzt, 
+sind 
+sie 
+im 
+Rahmen 
+von 
+Installationstoleranzen parallel zueinander zu verlegen. Um zu gewährleisten, dass sie jeweils vom 
+gleichen Fahrzeug ausgelöst werden, dürfen die Abstände zueinander jeweils höchstens 5,0 m (ca. 
+
+=====PAGE 14=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 12 von 17 
+eine Fahrzeuglänge) betragen. 
+6.6 
+Lebensdauer der Sensoren 
+Die Anwesenheitssensoren (z.B. Induktionsschleifen, Drucksensoren) müssen an jeder Messstelle so 
+verlegt sein, dass mindestens über den Zeitraum der Eichgültigkeitsdauer eine Beständigkeit in Bezug 
+auf Lage und messtechnische Eigenschaften unter den Bedingungen, mit denen in der Praxis zu 
+rechnen 
+ist 
+(z.B. 
+Witterung, 
+Belastung 
+durch 
+Schwerlastverkehr, 
+Bremsvorgänge 
+oder 
+Straßenreinigung), gewährleistet ist. 
+6.7 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Lichtschranken als Messbasis 
+Lichtschranken können entweder nach dem Lichtsender/Lichtempfängerprinzip (mit beiden Komponenten 
+auf verschiedenen Fahrbahnseiten oder auf der gleichen) oder als passiv arbeitende Geräte ohne 
+Lichtsender realisiert sein. 
+6.7.1 
+Lichtsender 
+Sinkt die Spannungsversorgung für die lichtaussendenden Elemente unter einen Wert, bei dem ein 
+sicheres Ansprechen der Lichtschranke nicht mehr gewährleistet ist, so muss der Lichtsender ein Signal 
+erzeugen (z.B. Blinken). Beim Defekt eines Elements muss die Abschaltung des kompletten Senders 
+gewährleistet sein. 
+6.7.2 Lichtempfänger 
+Bei Lichtschranken, die nach dem Prinzip Lichtsender/Lichtempfänger funktionieren, muss der 
+Lichtempfänger in seinem Signalverhalten weitgehend unabhängig vom Umgebungslicht sein. Ein 
+Signal je Schranke muss bei diesen Geräten den Bediener darauf hinweisen, dass das System richtig 
+einjustiert wurde. 
+6.7.3 Ausrichtung der Lichtschranken parallel zur Fahrbahnoberfläche 
+Das Messgerät muss mit einer Einrichtung versehen sein, die es gestattet, die Lichtschranken parallel 
+zur Fahrbahnoberfläche auszurichten (z.B. Nivellierwasserwaage). Ein Nicken des Gerätes ist bei 
+passiv arbeitenden Geräten zulässig. 
+6.8 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Drucksensoren als Messbasis 
+6.8.1 Bauarten von Drucksensoren 
+Es können Sensoren (z.B. piezoelektrische Koaxialkabel, faseroptische Sensoren, Luftschläuche) 
+verwendet werden, die durch Druckbelastung auf den Sensor (piezoelektrischer Effekt bzw. 
+Schwächung des Lichts, Kompression) bei der Fahrzeugüberfahrt Signale zur Zeitmessung erzeugen. 
+6.8.2 Lagestabilität und Verschleiß von auf der Fahrbahn verlegten Sensoren 
+Werden Drucksensoren nicht in die Fahrbahn eingelassen, sondern auf der Fahrbahndecke verlegt 
+(d.h. mit transportablen Sensoren), muss ihre Lage ausreichend fixiert sein. Die Bewegung des Kabels 
+bei normalen Überfahrten darf die Messbasis höchstens um 0,5 % des Nennwertes verändern. 
+Die Drucksensoren müssen bei dieser Einsatzart so beschaffen sein, dass sie eine Verwendung unter 
+normalen Verkehrsbedingungen (Stadtverkehr) über einen Zeitraum von einer Woche ohne Einbußen 
+der Signalqualität und der Oberflächenbeschaffenheit zulassen. 
+6.9 
+Besondere Anforderungen an Weg-Zeit-Messgeräte mit Induktionsschleifen als Messbasis 
+Wird die Messung mit nur zwei Sensoren realisiert, ist statt einer einfachen Triggerung eine intelligente 
+Auswertung des Signalverlaufes erforderlich. So müssen z.B. Unterschiede der Empfindlichkeit 
+detektiert werden. 
+Die Verlegung der Induktionsschleifen und der Anschluss ist entsprechend der Technischen 
+Lieferbedingungen für Streckenstationen (TLS, BASt) vorzunehmen. 
+ 
+ 
+
+=====PAGE 15=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 13 von 17 
+7 Besondere Anforderungen an Laserhandmessgeräte 
+7.1 
+Visiereinrichtung 
+Die Visiereinrichtung bei einem Laserhandmessgerät besteht in der Regel aus einem Fernrohr (mit oder 
+ohne Vergrößerung) mit integrierter Zielmarke. 
+Die Visiereinrichtung kann entweder in die Sendeoptik (Laserstrahlachse) integriert oder über eine 
+getrennte Optik (z.B. aufgesetztes Fernrohr) realisiert sein. Der sich bei einer getrennten Optik 
+ergebende Versatz der beiden Strahlachsen und die Justierung der beiden Achsen zueinander (z.B. 
+parallel oder am Ende des Messbereichs schneidend) muss so realisiert sein, dass ein eindeutiges 
+Anvisieren des Ziels (z.B. Kennzeichen) im gesamten Messbereich gewährleistet ist. 
+Die Visiereinrichtung ist so stabil auszuführen, dass bei normalem Gebrauch eine Verstellung der 
+Justierung auszuschließen ist. Sie muss mit einem Visiertest überprüfbar sein, den das Gerät 
+unterstützen muss (für eine Überprüfung vor jedem Messeinsatz). 
+Die Justiervorrichtung (falls vorhanden) der Visiereinrichtung muss eine Sicherung bei der Eichung 
+ermöglichen, so dass ein Nachjustieren nur nach Verletzen eichamtlicher Sicherungen möglich ist. 
+Die Visiereinrichtung muss eine zweifelsfreie Zuordnung des Geschwindigkeitsmesswertes zu dem 
+Fahrzeug gewährleisten. Zu diesem Zweck muss sie beispielsweise bei Messentfernungen ab 500 m 
+eine mindestens 2 fache Vergrößerung aufweisen.  
+Die Zielmarke zum Anvisieren des betreffenden Fahrzeugs muss dem Bediener eine Identifizierung des 
+Zielerfassungsbereichs (unter Berücksichtigung der Justiertoleranzen und möglicher Zielungenauig-
+keiten) ermöglichen. 
+7.2 
+Anforderungen an Anzeigen 
+Die Anzeigen sind so auszuführen, dass die Messwerte für den Bediener in der Visiereinrichtung und 
+zusätzlich für einen zweiten Beobachter von außen ablesbar sind. 
+Zusätzlich zu der Geschwindigkeit des Fahrzeugs muss das Gerät die Messentfernung (mit Einheit 
+Meter) zu Beginn der Geschwindigkeitsmessung ermitteln und anzeigen, um z.B. den zulässigen 
+Entfernungsbereich kontrollieren zu können. Die zulässige Messunsicherheit der Entfernungsmessung 
+beträgt 1 % des jeweiligen Messwertes, mindestens jedoch 0,2 m. Eine Eichung dieser 
+Entfernungsmessung im Sinne der Anlage 1 der Eichordnung ist nicht erforderlich. Die Anzeige der 
+Entfernung muss sich von der des Geschwindigkeitsmesswertes abheben (z.B. Anzeige der Entfernung 
+mit einer Dezimalstelle), um Verwechslungen zu vermeiden. 
+Geschwindigkeitsmessungen 
+dürfen 
+auch 
+außerhalb 
+des 
+spezifizierten 
+Entfernungsbereichs 
+durchgeführt werden, sie müssen aber in geeigneter Weise gekennzeichnet sein (z.B. durch Blinken 
+des Geschwindigkeitsmesswertes). 
+7.3 
+Abgleiteffekt 
+Das Gerät muss durch seine optischen oder elektronischen Eigenschaften oder aber über seine 
+Gerätesoftware sicherstellen, dass ein Auftreffen der Laserpulse auf eine schräge Fläche (so genannter 
+Abgleiteffekt) zu keinen unzulässigen Messwertverfälschungen führt. 
+7.4 
+Stufeneffekt 
+Das Gerät muss durch seine optischen oder elektronischen Eigenschaften oder aber über seine 
+Gerätesoftware sicherstellen, dass ein Auftreffen der Laserimpulse auf eine Stufe (so genannter 
+Stufeneffekt) zu keinen unzulässigen Messwertverfälschungen führt. 
+7.5 
+Anforderungen an Dokumentationseinheiten 
+Laserhandmessgeräte besitzen grundsätzlich keine Dokumentationseinheit. Bei Bedarf und unter 
+geeigneten Bedingungen kann eine Dokumentationseinheit eingesetzt werden, um den Zeugenbeweis 
+der Bediener des Laserhandmessgerätes bezüglich der Zuordnung des Geschwindigkeitsmesswertes 
+zu einem Fahrzeug zu unterstützen. 
+In das Einzelbild oder die Bildsequenz der Dokumentationseinheit sind die Messwerte für 
+Geschwindigkeit und Entfernung einzublenden. Größe und Mitte des Zielerfassungsbereichs müssen im 
+Einzelbild bzw. in der Bildsequenz markiert sein. 
+Die Justiereinrichtung der optischen Achse der Dokumentationseinheit ist so stabil auszuführen, dass 
+bei normalem Gebrauch eine Verstellung der Justierung auszuschließen ist. Der Visiertest muss eine 
+ggf. vorhandene Dokumentationseinheit einbeziehen. 
+Eine Dokumentationseinheit zur Erstellung von Einzelbilddokumenten muss die Verkehrssituation mit 
+dem anvisierten Fahrzeug spätestens 0,2 Sekunden nach dem Abschluss der Messung abbilden. 
+Eine Dokumentationseinheit zur Erstellung von Bildsequenzen muss folgende Anforderungen erfüllen: 
+
+=====PAGE 16=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 14 von 17 
+− 
+Bildtakt ≤ 0,2 s 
+− 
+Markierung von Start und Stopp des Messvorgangs in der Sequenz. 
+8 Besondere Anforderungen an Laserscanner-Geschwindigkeitsmessgeräte 
+8.1 
+Einsatzsarten 
+Ein Laserscanner-Geschwindigkeitsmessgerät kann stationär und/oder transportabel betrieben werden. 
+8.2 
+Mechanik des Scanners 
+Erfolgt der Scanvorgang mechanisch (z.B. durch einen sich drehenden Spiegel), so muss das Gerät die 
+tatsächliche Stellung der Mechanik während jedes Scans fortlaufend erfassen um sicherzustellen, dass 
+die Empfangssignale der tatsächlichen Strahlrichtung zugeordnet werden. Bei mechanischen Schäden 
+müssen Messungen automatisch unterbunden werden. Der Fehlerbeitrag der Winkelmessung zur 
+Positionsbestimmung muss kleiner sein als der Fehlerbeitrag der Entfernungsmessung. 
+8.3 
+Scanfrequenz und Winkelauflösung 
+Die Scanfrequenz, die Winkelauflösung und die Entfernungsauflösung müssen so hoch gewählt sein, 
+dass auch bei dichtem Verkehr eine Trennung der Fahrzeuge ermöglicht wird.  
+8.4 
+Messfeld und Fotobereich 
+Die Länge des Messfeldes muss in Fahrtrichtung mindestens 10 m betragen. Die Verdeckung eines 
+erfassten Fahrzeugs durch ein anderes bei einem Teil des Messfeldes ist zulässig. Sofern die 
+Zuordnung des Messwertes zu einem Fahrzeug in anderer Weise sichergestellt ist, muss das Messfeld 
+nicht vollständig abgebildet sein. 
+Die erfassten Fahrzeugkoordinaten müssen automatisch der Geometrie der im Foto abgebildeten 
+Messstelle zugeordnet werden. Dies kann entweder durch Erfassung der Geometrie der Messstelle 
+(z.B. der Fahrspurbegrenzungen) erfolgen oder durch eine Markierung im Bild, die die geometrischen 
+Verhältnisse zwischen Sensor und Dokumentationseinheit berücksichtigt. Dabei ist Folgendes zu 
+beachten: 
+− 
+Erfolgt die Messwertzuordnung mit Hilfe einer Markierung im Bild, so muss sichergestellt sein, dass 
+Fehlzuordnungen aufgrund von Verdeckungen im mehrspurigen Verkehr ausgeschlossen werden 
+können. 
+− 
+Erfolgt dagegen die Zuordnung über die Geometrie der Messstelle, so ist durch ein geeignetes 
+Referenzbild am Beginn und Ende jeder Messreihe zu dokumentieren, dass sich die geometrischen 
+Verhältnisse zwischen Messgerät und Messstelle im Verlauf der Messreihe nicht verändert haben. 
+8.5 
+Einflüsse der Fahrzeuggeometrie 
+Das Gerät muss durch seine optischen oder elektronischen Eigenschaften oder über seine 
+Gerätesoftware automatisch sicherstellen, dass ein Auftreffen der Laserimpulse auf eine Stufe (so 
+genannter Stufeneffekt), eine schräge Front oder die Seite des Fahrzeugs zu keinen unzulässigen 
+Messwertverfälschungen führt. 
+9 Besondere Anforderungen an sonstige Geschwindigkeitsüberwachungsgeräte 
+Für Geschwindigkeitsüberwachungsmessgeräte, auf die die Anforderungen der Abschnitte 5 bis 8 nicht 
+zutreffen, werden die besonderen Anforderungen an die Bauart bei der Zulassung festgelegt (§ 16 Abs. 
+3 der EO). Dies gilt beispielsweise für alle Geräte mit vollautomatischer Erfassung des Fahrzeugs über 
+einen aufgeweiteten Laserstrahl. 
+ 
+ 
+
+=====PAGE 17=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 15 von 17 
+10 Vorschriften und Literatur 
+− 
+International Recommendation OIML R 91 Edition 1990 (E); "Measurement of the speed of Vehicles 
+by Radar Equipment"; Organisation Internationale de Métrologie Légale 
+− 
+PTB-Prüfregel Band 19: Verkehrsradargeräte - Verfahren zur Prüfung von Verkehrsradargeräten, 
+Braunschweig, 1990 
+− 
+WELMEC 7.2 Softwareleitfaden Ausgabe 5, 2011, (Europäische Messgeräterichtlinie 2004/22/EC) 
+− 
+Gesetz über das Mess- und Eichwesen (Eichgesetz) –  zuletzt geändert durch Artikel 1 des 
+Gesetzes zur Umsetzung der Dienstleistungsrichtlinie im Eichgesetz sowie im Geräte- und 
+Produktsicherheitsgesetz 
+und 
+zur 
+Änderung 
+des 
+Verwaltungskostengesetzes, 
+des 
+Energiewirtschaftsgesetzes und des Energieleitungsausbaugesetzes vom 7. März 2011 
+− 
+Eichordnung – Allgemeine Vorschriften vom 12. August 1988, zuletzt geändert durch die Fünfte 
+Verordnung zur Änderung der Eichordnung vom 6. Juni 2011 
+− 
+DIN EN 61000-6-2, „Elektromagnetische Verträglichkeit (EMV) - Teil 6-2: Fachgrundnormen; Stör-
+festigkeit für Industriebereich“, Ausgabe 2006-03 (Deutsche Fassung EN 61000-6-2:2001-04) 
+− 
+ISO 7637-2 „Road vehicles – Electrical disturbances from conduction and coupling- 
+Part 2: Electrical transient conduction along supply lines only, Third Edition 2011-03-01 
+− 
+ISO 7637-3 „Road vehicles – Electrical disturbances from conduction and coupling- 
+Part 3: Electrical transient transmission by capacitive and inductive coupling via lines other than 
+supply lines, Second Edition 2007-07-01 
+− 
+ISO 16750-2 “Road vehicles – Environmental conditions and testing for electrical and electronic 
+equipment – Part 2: Electrical loads”, Third edition 2010-03-15 
+− 
+International Dokument OIML D 11 Edition 2004 (E); „General requirement for electronic measuring 
+instruments“; Organisation Internationale de Métrologie Légale 
+− 
+DIN EN 60529, Schutzarten durch Gehäuse (IP-Code) (IEC 60529:1989 + A1:1999); Ausgabe: 
+2000-09; Deutsche Fassung EN 60529:1991 + A1:2000 
+− 
+Gesetz über Funkanlagen und Telekommunikationsendeinrichtungen (FTEG), Datum des Inkraft-
+tretens: 8.2.2001, Ausfertigungsdatum: 31.1.2001, BGBl I 2001, 170, zuletzt angepasst durch 
+Artikel 23 des Post- und telekommunikationsrechtlichen Bereinigungsgesetzes vom 7. Mai 2002  
+− 
+Technische Lieferbedingungen für Streckenstationen (TLS), Bundesministerium für Verkehr, Bau- 
+und Wohnungswesen, erhältlich beim Wirtschaftsverlag NW 
+ 
+ 
+
+=====PAGE 18=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 16 von 17 
+11 Anhang: Tabelle zur elektromagnetischen Verträglichkeit 
+ 
+Teilprüfung 
+Prüfaufbau nach 
+Grenzwerte 
+Prüfschärfegrad 
+Bemerkung 
+Hochfrequente 
+elektromagnetische 
+Felder 
+DIN EN 61000-4-6: 
+2009-12 
+150 kHz bis 80 MHz, 
+20 V 
+1 %-Schritte 
+Bei batteriebetriebenen Geräten ist die 
+Startfrequenz aus Bild B.1 der Norm zu 
+ermitteln. 
+Abhängig von den Eigenschaften des Prüf-
+lings kann die Prüfung eines zusätzlichen 
+Frequenzbereichs erforderlich sein. 
+Abhängig von den Eigenschaften des Prüf-
+lings kann die Verwendung einer von der 
+Norm abweichenden Modulationsfrequenz 
+erforderlich sein. 
+Die in der Fachgrundnorm in Anmerkung b 
+vorgesehene Reduzierung der Amplitude auf 
+3 V im Rundfunkfrequenzbereich zwischen 
+47 MHz und 68 MHz entfällt. 
+Signalanschlüsse mit 
+Leitungslänge >3 m 
+Gleichstrom-Netzein- und 
+Ausgänge* 
+Wechselstrom-Netzein- 
+und Ausgänge 
+Funktionserde- 
+anschlüsse 
+Hochfrequente 
+elektromagnetische 
+Felder 
+ 
+DIN EN 61000-4-3: 
+2011-04 
+ 
+    80 MHz bis 1000 MHz, 
+1240 MHz bis 1300 MHz** 
+1300 MHz bis 1700 MHz*** 
+1710 MHz bis 1784 MHz 
+1805 MHz bis 1980 MHz 
+2110 MHz bis 2170 MHz 
+2320 MHz bis 2484 MHz 
+3400 MHz bis 3475 MHz** 
+5150 MHz bis 5350 MHz 
+5470 MHz bis 5875 MHz 
+5875 MHz bis 5905 MHz**** 
+20 V/m 
+1 %-Schritte 
+4 Seiten 
+Abhängig von den Eigenschaften des 
+Prüflings kann die Verwendung einer von der 
+Norm abweichenden Modulationsfrequenz 
+erforderlich sein. 
+auf Gehäuse 
+Entladung statischer 
+Elektrizität (ESD) 
+DIN EN 61000-4-2: 
+2009-12 
+±8 kV Luftentladung 
+±6 kV Kontaktentladung 
+auf Gehäuse 
+Schnelle transiente 
+elektrische 
+Störgrößen/Burst 
+DIN EN 61000-4-4: 
+2010-11 
+Signalanschlüsse: ±1 kV 
+Signalanschlüsse mit 
+Leitungslänge > 3 m 
+Gleich- bzw. Wechselstrom-
+versorgungsleitungen: ±2 kV 
+Gleichstrom-Netzein- und 
+-ausgänge* 
+Wechselstrom-Netzein- 
+und Ausgänge 
+Funktionserdeanschlüsse: ±1 kV 
+Funktionserdeanschlüsse 
+mit Leitungslänge >3 m 
+ 
+Stoßspannungen/ 
+Surge 
+ 
+DIN EN 61000-4-5: 
+2007-06 
+ 
+unsym.: ±1 kV 
+Signalanschlüsse mit 
+Leitungslänge > 30 m 
+unsym.: ±0,5 kV 
+sym. ±0,5 kV 
+Gleichstrom-Netzein- und 
+–ausgänge* 
+unsym.: ±2 kV 
+sym. ±1 kV 
+Wechselstrom-Netzein- 
+und Ausgänge 
+Spannungseinbrüche DIN EN 61000-4-
+11: 2005-02 
+Spannungseinbruch: 
+30 % und 60 % 
+Wechselstrom-Netzein- 
+und Ausgänge 
+Spannungsunter- 
+brechungen 
+DIN EN 61000-4-
+11: 2005-02 
+Spannungsunterbrechung: >95 % 
+Wechselstrom-Netzein- 
+und Ausgänge 
+*Hinweis: Siehe Tabelle 3 der Fachgrundnorm 61000-6-2 
+**Hinweis: Berücksichtigung eines im Amateurfunk genutzten Frequenzbereiches 
+***Hinweis: Berücksichtigung eines vom militärischen Funkdienst genutzten Frequenzbereiches 
+****Hinweis: Berücksichtigung eines für Funkanwendungen für intelligente Verkehrssysteme genutzten Frequenzbereiches 
+ 
+
+=====PAGE 19=====
+DOI: 10.7795/510.20151031B 
+PTB-A 12.01 
+ 
+Oktober 2015 
+Seite 17 von 17 
+Teilprüfung 
+Prüfaufbau nach 
+Grenzwerte 
+Prüfschärfegrad 
+Bemerkung 
+Magnetfelder mit 
+energietechnischer 
+Frequenz 
+DIN EN 61000-4-8: 
+2010-11 
+50 Hz 
+30 A/m 
+auf Gehäuse 
+Kfz: 
+Leitungsgebun-
+dene impuls-
+förmige Störgrößen 
+ISO 7637-2 
+2011-03-01 
+ 
+Imp. 1 
+Imp. 2a 
+Imp. 2b 
+Imp. 3a 
+Imp. 3b 
+12-V-Netz: 
+-150 V 
++112 V 
++10 V 
+-220 V 
++150 V 
+24-V-Netz: 
+-600 V 
++112 V 
++20 V 
+-300 V 
++300 V 
+auf 12-V- und 
+24-V-Versor-
+gungsleitungen 
+Kfz: 
+Leitungsgebun-
+dene impuls-
+förmige Störgrößen 
+beim Startvorgang 
+ISO 16750-2 
+2010-03-15 
+Level III 
+3 V 
+6 V auf 12-V- und 
+24-V-Versor-
+gungsleitungen 
+Kfz: 
+Übertragung von 
+impulsförmigen 
+elektrischen 
+Störgrößen durch 
+Kopplung 
+ISO 7637-3: 
+2007-07-01 
+ 
+Fast a (DCC and CCC) 
+Fast b (DCC and CCC) 
+DCC slow + 
+DCC slow – 
+ICC slow + 
+ICC slow - 
+12-V-Netz: 
+-60 V 
++40 V 
++30 V 
+-30 V 
++6 V 
+-6 V 
+24-V-Netz: 
+-80 V 
++80 V 
++45 V 
+-45 V 
++10 V 
+-10 V 
+auf Steuer-, 
+Regel und 
+Datenleitungen 
+ 
+ 
+
+=====PAGE 20=====
+Physikalisch-Technische Bundesanstalt 
+Bundesallee 100 
+38116 Braunschweig 
+www.ptb.de 
+ 
+ 

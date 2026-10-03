@@ -573,3 +573,432 @@ Para comparar, la multa mínima de velocidad hoy es $342.150. Para igualarla, al
   - deuda total de multas.
 - **No se pidió nada que cueste dinero ni se hizo ningún pedido de acceso a la información.**
 - **Las opiniones jurídicas** (marcadas [inferencia]) necesitan dictamen de un abogado antes de pasar al programa.
+
+
+---
+---
+
+# Segunda parte · Multas justas: cuánto y cómo
+
+Novena parte del programa · Investigación al 03/10/2026.
+Fuentes nuevas en `01_raw/multas/`, cada carpeta con su `FUENTES.txt`:
+- `7_cuanto/`: porcentajes en el mundo y anclas argentinas.
+- `8_otras_sanciones/`: puntos, cursos y suspensión.
+- `9_calle_primero/`: diseño vial frente a cámaras.
+- `10_tolerancia_y_aviso/`.
+- `11_tope_y_licencia/`: tope por persona y licencia para ir a trabajar.
+
+*Donde esta segunda parte decide algo que la primera dejaba «a decidir», vale lo de esta segunda parte.*
+
+**La idea del cliente:** las multas se siguen cobrando, pero nunca pueden hundir a quien menos tiene, y tienen que pesarle de verdad a quien más tiene. Hoy una multa igual para todos es regresiva.
+- Con un auto de 10 millones, una multa de 1 millón es desproporcionada: a lo sumo 300.000.
+- Con un ingreso de 1 millón por mes, una multa de 300.000 es imposible de pagar: ¿cómo come esa persona?
+
+---
+
+## Decisiones del cliente (03/10/2026)
+
+1. **Regla de fondo.**
+   - Las multas no pueden ser regresivas.
+   - El vecino no tiene que hacer nada para recibir la rebaja: ni ir al juzgado, ni hacer trámites, ni contratar abogado.
+   - Cómo se haría está en el informe 19.
+2. **Tope por persona.** Sumadas todas las multas, la cuota del mes no pasa del **2% del ingreso dividido por la raíz de la cantidad de personas del hogar**. Sin plazo máximo.
+3. **Tolerancia.** Se descuentan los 3 km/h de error del equipo y sólo hay multa con un exceso de 4 km/h o más. **En zona de 40, la multa empieza en 47.**
+4. **A quien más gana.** Además de la suspensión si reincide, una multa según el ingreso.
+   - Va como pedido a la Provincia, sólo para faltas graves.
+   - Sólo puede subir la multa, nunca bajarla, como en Finlandia.
+5. **La inteligencia artificial del Municipio es aliada del vecino antes que del gobierno.**
+   - Le dice dónde están las cámaras y cuál es el límite.
+   - Le avisa al primer exceso.
+   - Cuando una multa está mal (equipo vencido o exceso dentro de la tolerancia), se lo avisa y le arma el reclamo.
+6. **Una sola multa antes del aviso.**
+   - Para quien se anota, las pasadas por la misma cámara antes del aviso cuentan como una sola.
+   - Para quien no se anota, cuentan como una sola sólo las pasadas del primer día.
+7. **Descartado:** la regla de 10, 20 y 40% del ingreso por multa y la de 1, 2 y 3 patentes por valor del auto. Con las cámaras, una misma persona puede recibir diez multas antes de enterarse, y $192.000 para quien gana un millón es inaceptable.
+
+
+---
+
+## Resumen de la segunda parte
+
+### Cierto
+
+1. **Hoy la multa pesa muchísimo más sobre quien menos gana.** [cálculo propio sobre datos verificados]
+   - El exceso de velocidad mínimo, pagado voluntariamente, cuesta **$171.075** (75 UF a $2.281).
+   - Eso es:
+     - el 125% del ingreso medio del 10% que menos gana;
+     - el 43,7% del salario mínimo;
+     - el 19% del ingreso mediano;
+     - el 4,9% del ingreso medio del 10% que más gana.
+   - Fuentes: INDEC, EPH, 2º trimestre 2026; salario mínimo de $391.200 desde el 01/10/2026.
+2. **En los países con multas según el ingreso, las faltas comunes se cobran con monto fijo, y el ingreso entra en las graves.** Pasa en Finlandia (con más de 20 km/h de exceso), Suiza, Alemania, Suecia, y en Inglaterra cuando la falta llega al juzgado. [verificado]
+3. **Finlandia:**
+   - **Cómo se calcula:** cada día-multa vale (ingreso neto mensual − 255 €) / 60, menos 3 € por persona a cargo; el mínimo es 6 €. [verificado, Decreto 609/1999]
+   - **Cuánto da:** un exceso de 21 a 23 km/h vale 12 días-multa, que es alrededor del 17-20% del ingreso neto mensual para casi todos. [cálculo propio sobre la tabla policial 2018-2020: probable para 2026]
+4. **Inglaterra y Gales:**
+   - **Porcentajes:** las multas que van al juzgado son el 50%, 100% o 150% del ingreso semanal neto, es decir, alrededor del 11,5%, 23% y 35% del ingreso mensual. [verificado; equivalencia mensual: cálculo propio]
+   - **Piso y techo:** quien gana poco o vive de subsidios se computa como si ganara £120 por semana. El tope es £1.000 (£2.500 en autopista). [verificado]
+5. **California rebaja la multa a pedido de quien gana poco.**
+   - **Por ley:** la herramienta estatal debe recomendar una rebaja de al menos 50% a quien recibe ayuda social, y una cuota de no más de 25 dólares por mes (Gov. Code 68645.2). [verificado]
+   - **En 2024:** se aprobó el 77% de los pedidos, con una rebaja media del 61%. [verificado]
+   - **Pago y monto:** se paga completo más del 70% de lo ordenado cuando es de hasta 100 dólares, y cerca del 20% cuando supera los 500. Cuando la multa pasa el 20% del ingreso mensual, el pago cae casi un quinto. [verificado]
+6. **No existe hoy, en ningún país que haya encontrado, una multa de tránsito según el valor del auto.**
+   - Brasil tuvo un proyecto (0,1% a 0,35% del valor), retirado por su autor el 27/02/2025. [verificado]
+   - La Ciudad de Buenos Aires tiene un proyecto de 2025 (UF más 0,05% a 2% de la valuación); no encontré en qué estado está.
+7. **La patente bonaerense ya es progresiva** (Ley 15.558, art. 33). [verificado; ejemplos: cálculo propio]
+   - **Escala:** 1% de la valuación hasta $14,1 millones; desde ahí cobra 2%, 3%, 4% y 4,5% sobre el excedente.
+   - **Ejemplos:** un auto de $10 millones paga $100.000 por año; una Toyota Hilux 0 km de $84,3 millones paga $2,94 millones.
+8. **La licencia por puntos existe en la norma nacional.** [verificado, Decreto 437/2011, texto del Decreto 242/2022]
+   - Se empieza con 20 puntos.
+   - Al llegar a cero, la inhabilitación es de 60 días la primera vez, 120 la segunda y 180 la tercera.
+   - Se recuperan todos los puntos a los 2 años sin sanciones firmes.
+9. **La Provincia de Buenos Aires no aplica los puntos.**
+   - Anunció que adhería el 30/12/2022. [verificado, fuente oficial]
+   - El Senado aprobó la ley el 20/09/2024. [verificado, fuente oficial]
+   - Al 03/10/2026 no hay ley publicada. [verificado en el buscador de normas provinciales]
+   - San Isidro emite la licencia nacional, pero los puntos no dependen de él. [verificado]
+10. **El curso de educación vial no reemplaza la multa en la Provincia.**
+    - En la ley nacional el curso puede reemplazar a la multa (art. 83 d).
+    - En la bonaerense, desde la Ley 15.402 (2023), se suma a la multa.
+    - Entre 2018 y 2022 la ley provincial sí lo admitía como alternativa.
+    - [verificado]
+11. **La inhabilitación del reincidente grave ya está en la ley,** y el juez de faltas la puede aplicar hoy: hasta 9 meses la primera vez, hasta 12 la segunda y 18 obligatorios la tercera (Ley 13.927, art. 39 ter). [verificado el texto; que el juez municipal puede: inferencia]
+12. **Resultados medidos de cada medida:**
+    - **Curso de velocidad (Reino Unido):** reincidencia entre 12% y 23% menor que con multa y puntos a los 6 meses, y entre 6% y 13% menor a los 3 años; no se probó efecto en choques. [verificado]
+    - **Puntos:** entre 15% y 20% menos choques y muertes, efecto que se diluye en menos de 18 meses si no hay controles. [verificado, metaanálisis 2012]
+    - **Suspensión de la licencia:** es la medida individual más efectiva; en Alemania, un mes de suspensión bajó la reincidencia un 20%. Pero hasta el 75% de los suspendidos sigue manejando. [verificado]
+    - **Sacar la multa en dinero (Ciudad de México, 2019):** se asoció con más heridos y más muertes. [verificado]
+
+13. **El diseño de la calle baja la velocidad las 24 horas.**
+    - Las lomas: −23% de choques con heridos y −31% de graves.
+    - En el Reino Unido, las obras bajaron los choques con heridos el doble que las cámaras (−44% contra −22%).
+    - [verificado]
+14. **Ya hay topes de cuota por persona:** Nueva York y Florida, por ley, 2% del ingreso neto por mes. En Argentina el embargo de sueldos tiene tope (Decreto 484/87). [verificado]
+15. **Todos los países relevados descuentan el error del radar antes de multar.** En Argentina el error admitido es de 3 km/h (Res. 753/98), pero ninguna norma obliga a descontarlo. [verificado]
+16. **Hay licencias restringidas para ir a trabajar** en Texas, Florida, California, Nueva York, Michigan, Quebec y Queensland. En Argentina no existen; hace falta ley provincial. [verificado / inferencia]
+
+### No cierto
+
+1. **"En Finlandia todas las multas son según el ingreso".** No: hasta 20 km/h de exceso, y en el celular y el semáforo sin peligro, la multa es fija (70 a 200 €). [verificado]
+2. **"Algún país pone un tope a la multa según el valor del auto".** No lo encontré. El único proyecto nacional, el de Brasil, fue retirado. [verificado]
+3. **"Cambiar la multa por cursos o trabajo comunitario, sin dinero, mejora la seguridad".** En Ciudad de México pasó lo contrario. [verificado]
+4. **"San Isidro ya aplica la licencia por puntos".** No: la Provincia no la aplica. [verificado]
+5. **"El Municipio puede bajar la multa por debajo del mínimo".**
+   - No puede: la ley nacional fija un mínimo de 50 UF y prohíbe regímenes "más benignos" (Ley 24.449, arts. 2 y 84). [verificado el texto; la conclusión es inferencia]
+   - Lo que sí puede hacer el juez es aplicar el mínimo, dar cuotas y eximir por necesidad acreditada.
+
+### No verificado
+
+1. **La tabla vigente de días-multa de la policía finlandesa:** el manual se actualizó en 2021 y no está publicado. Usé la de 2018-2020.
+2. **Si el proyecto de puntos avanzó en Diputados** después de junio de 2026 (sólo prensa).
+3. **Resultados de los programas de trabajo comunitario** de Pinamar, Junín y La Plata: no hay datos publicados.
+4. **Si ARBA publica la valuación de cada auto por patente.**
+5. **Cómo se verificaría una declaración jurada de ingresos sin acceso a los datos de ARCA:** con el consentimiento del vecino y cruces de datos como SINTyS, el sistema nacional de cruce de datos sociales y tributarios. Ver la primera parte, sección 4.1.
+
+6. **Dónde van los reductores de la licitación de 2025:** no se publicaron.
+7. **Si el Municipio puede programar el umbral de sus cámaras sin autorización provincial.**
+
+---
+
+## 2.1 · Cuánto: qué porcentajes se usan en el mundo
+
+### Multa típica como porcentaje del ingreso mensual neto [cálculo propio sobre montos verificados]
+
+Niveles de ingreso por país (bajo / medio / alto / muy alto):
+- **Finlandia y Alemania:** 1.000 / 2.000 / 4.000 / 10.000 € netos por mes.
+- **Suecia:** 15.000 / 30.000 / 60.000 / 150.000 coronas.
+- **Inglaterra:** £120 / £300 / £440 / £2.000 por semana.
+- **California:** 1.662 / 3.437 / 10.000 dólares brutos por mes (tiene sólo tres niveles).
+- **Provincia de Buenos Aires:**
+  - decil 1 (el 10% que menos gana);
+  - salario mínimo;
+  - ingreso mediano;
+  - decil 10 (el 10% que más gana).
+
+| Falta | Finlandia | Alemania | Suecia | Inglaterra y Gales | California | Prov. de Buenos Aires hoy |
+|---|---|---|---|---|---|---|
+| Velocidad leve | 100 €: 10 / 5 / 2,5 / 1 | 50 €: 5 / 2,5 / 1,3 / 0,5 | 2.000 coronas: 13 / 7 / 3 / 1 | Multa fija £100: 19 / 8 / 5 / 1 | 234 USD: 14 / 7 / 2 | Pago voluntario $171.075: **125 / 44 / 19 / 5** |
+| Velocidad +21 a 25 km/h en ciudad | 12 días-multa: 20 / 17 / 19 / 19 | 115 €: 12 / 6 / 3 / 1 | 3.200 coronas: 21 / 11 / 5 / 2 | Banda B: 23 / 23 / 23 / 12 (tope) | 363 USD: 22 / 11 / 4 | Sin descuento $342.150: **251 / 87 / 38 / 10** |
+| Velocidad +30 a 40 km/h | 18 días-multa: 22 / 26 / 28 / 29 | 260 € y 1 mes sin licencia: 26 / 13 / 7 / 3 | 4.000 coronas: 27 / 13 / 7 / 3 | Banda C: 35 / 35 / 35 / 12 | 486 USD: 29 / 14 / 5 | Hasta $2,28 millones |
+| Semáforo en rojo | 100 € (sin peligro): 10 / 5 / 2,5 / 1 | 90 €: 9 / 4 / 2 / 1 | 3.000 coronas: 20 / 10 / 5 / 2 | Multa fija £100: 19 / 8 / 5 / 1 | 486 USD: 29 / 14 / 5 | Pago voluntario $342.150: **251 / 87 / 38 / 10** |
+| Celular | 100 €: 10 / 5 / 2,5 / 1 | 100 €: 10 / 5 / 2,5 / 1 | 1.500 coronas: 10 / 5 / 2,5 / 1 | Multa fija £200: 38 / 15 / 10 / 2 | 158 USD: 10 / 5 / 2 | Igual que el semáforo |
+
+**Cómo leer la tabla:**
+- Las cifras son porcentajes del ingreso mensual neto, para los niveles de ingreso de arriba.
+- California usa ingreso bruto.
+- **Suiza no está en la tabla:** sus fiscalías usan días-multa en las faltas graves, pero sin antecedentes la pena suele quedar en suspenso y se paga una multa accesoria de hasta el 20% del total. [verificado]
+
+### Finlandia, con ejemplos [verificado la fórmula; cálculo propio los ejemplos]
+
+| Ingreso neto mensual | Día-multa | +21 a 23 km/h, límite ≤60 (12 días) | +30 a 32 km/h (18 días) | +45 a 47 km/h (28 días) |
+|---|---|---|---|---|
+| 1.000 € | 12 € | 200 € (piso) = 20% | 216 € = 22% | 336 € = 34% |
+| 2.000 € | 29 € | 348 € = 17% | 522 € = 26% | 812 € = 41% |
+| 4.000 € | 62 € | 744 € = 19% | 1.116 € = 28% | 1.736 € = 43% |
+| 10.000 € | 162 € | 1.944 € = 19% | 2.916 € = 29% | 4.536 € = 45% |
+
+- **Los 255 € que se restan** son el "consumo básico": la parte del ingreso que la multa no toca.
+- **Si no se paga:** cuatro días-multa impagos equivalen a un día de prisión, salvo en multas policiales sumarias. [verificado]
+
+### California, capacidad de pago [verificado]
+
+- **Quién califica:** quien recibe ayudas sociales o gana hasta el 125% de la línea de pobreza federal (1.662,50 dólares por mes para una persona en 2026).
+- **Cuánto rebaja:**
+  - al menos 50% a quien recibe ayudas;
+  - cada tribunal fija su escala; en el ejemplo oficial, 60% si gana menos del 200% de la línea de pobreza y 50% si gana más.
+  - También se puede pagar en cuotas de hasta 25 dólares por mes, o con servicio comunitario (cada hora vale el doble del salario mínimo).
+- **Resultados (abril 2019 a diciembre 2024):**
+  - hubo unos 264.000 pedidos;
+  - la deuda media bajó de 516 a 257 dólares;
+  - del 01/07/2023 al 30/06/2024 se cobró el 35% de lo ordenado.
+
+### Inglaterra y Gales [verificado]
+
+| Banda | % del ingreso semanal | Cuánto es por mes | Cuándo se usa (velocidad) |
+|---|---|---|---|
+| A | 50% (25-75%) | ~11,5% | Exceso moderado (en zona de 30 mph, entre 31 y 40) |
+| B | 100% (75-125%) | ~23% | Exceso mayor (41 a 50 en zona de 30) |
+| C | 150% (125-175%) | ~35% | Exceso grave (51 o más en zona de 30) |
+
+- **Celular:** parte de la banda B. **Semáforo:** banda A.
+- **Admitir la falta enseguida** rebaja un tercio.
+- **Cuotas sugeridas por semana:** con £120 de ingreso, £10; con £300, £50. Es decir, entre el 8% y el 17% del ingreso semanal.
+
+### Recomendaciones sobre la cuota
+
+- **California:** no más de 25 dólares por mes. [verificado]
+- **Fines and Fees Justice Center, organización de EE.UU.:** la cuota no debe superar el 2% del ingreso neto mensual, o 10 dólares si eso es más. [verificado]
+- **Banco Mundial, OCDE, ITF y Comisión Europea:** no encontré recomendaciones con un porcentaje del ingreso.
+
+### Anclas argentinas [verificado]
+
+| Dato | Valor | Fuente |
+|---|---|---|
+| Canasta básica total (línea de pobreza), por adulto | $519.578 | INDEC, GBA, agosto 2026 |
+| Canasta básica total, hogar de 4 | $1.605.497 | Ídem |
+| Canasta alimentaria (línea de indigencia), por adulto | $235.103 | Ídem |
+| Salario mínimo | $391.200 desde el 01/10/2026 | Res. 4/2026, Consejo del Salario |
+| Jubilación mínima | $435.749 desde octubre 2026 | ANSES, Res. 284/2026 |
+| Ingreso medio del decil 1 / mediana / decil 10 | $136.480 / $900.000 / $3.466.554 | INDEC, EPH, 2º trimestre 2026 |
+| Unidad de multa (UF) | $2.281 | Provincia, Res. 4/2026 |
+| Mínimo y máximo de la ley nacional | 50 UF ($114.050) / 5.000 UF ($11,4 millones) | Ley 24.449, art. 84 |
+
+---
+
+## 2.2 · La propuesta
+
+### Lo primero es la calle [verificado salvo indicación; fuentes en `9_calle_primero/`]
+
+- **Qué baja la velocidad de verdad: el diseño.**
+  - Las lomas reducen 23% los choques con heridos y 31% los choques con muertos o heridos graves (síntesis del manual noruego de medidas de seguridad vial, revisada en 2025).
+  - Las zonas de 30 km/h con obras: 29% menos heridos y 40% menos muertos o heridos graves.
+  - En Londres, las zonas de 20 mph bajaron 42% las víctimas sin pasar los choques a las calles vecinas.
+- **Frente a frente con las cámaras (Reino Unido, calles de 30 mph):** las obras con lomas bajaron 44% los choques con heridos y las cámaras 22%.
+  - Pero las cámaras también funcionan, y la OMS les da mejor relación entre beneficio y costo.
+  - Lo honesto es combinar: obra en calles locales y cámara donde no se puede hacer obra.
+- **Problemas, con solución conocida:**
+  - **Ambulancias y bomberos** pierden entre 1 y 10 segundos por loma. Con almohadas que dejan pasar vehículos anchos, casi nada.
+  - **Ruido y vibración:** con camiones pesados.
+  - **Colectivos:** las lomas no van cerca de las paradas.
+  - **Lomas cortas y altas ("serruchos"):** funcionan mal y dañan vehículos.
+- **La norma:**
+  - La reglamentación nacional prohíbe en la calzada los "elementos agresivos". Sólo permite los que no incomoden circulando a la velocidad máxima de la calle (Decreto 779/95, Anexo 1, art. 23; repetido por el Decreto 532/09).
+  - Por eso se diseñan para la velocidad de cada calle, o primero se baja esa velocidad: zonas de 30, cruces sin semáforo, escuelas. [inferencia]
+- **San Isidro:**
+  - Adjudicó en 2025 la Licitación Pública 11/2025 de reductores por $536,7 millones, a 24 meses. No se publicaron las ubicaciones.
+  - De las 109 personas muertas en el tránsito entre 2017 y 2024, 53 murieron en la Panamericana, donde el Municipio no puede poner reductores, 7 en sus colectoras y 49 en el resto de las calles. [cálculo propio sobre microdatos nacionales]
+  - Para elegir esquinas hacen falta los datos de choques con heridos (la Provincia contó 869 en San Isidro en 2025, sin ubicación).
+
+### Tope por persona [verificado; ejemplos: cálculo propio; fuentes en `11_tope_y_licencia/`]
+
+**La regla:** sumadas todas las multas, la cuota del mes no pasa del 2% del ingreso dividido por la raíz de la cantidad de personas del hogar.
+
+**Precedentes:**
+- **Nueva York** (Vehicle and Traffic Law §1802(2), desde 2021): la cuota mensual que suma todas las multas no puede superar el 2% del ingreso neto, o 25 dólares si eso es mayor.
+- **Florida** (F.S. 28.246(4)): se presume pagable una cuota de hasta el 2% del ingreso neto, o 25 dólares.
+- **Argentina:** el embargo de sueldos ya tiene tope (Decreto 484/87). Nada hasta un salario mínimo; 10% de lo que lo excede hasta dos salarios mínimos; 20% por encima. Jubilaciones y asignaciones son inembargables.
+- **La Provincia ya congeló una vez la deuda en pesos:** 6 o 12 cuotas fijas sin interés (Disposición 69/2020).
+
+**Dos avisos:**
+- **La deuda sube con la nafta:** la multa se paga al valor de la unidad de multa del día de pago (Ley 24.449, art. 84). Congelarla en pesos lo puede hacer la Provincia. [inferencia]
+- **Sin plazo máximo hay riesgo de prescripción:** la sanción prescribe a los 5 años (art. 89), y pagar cuotas no figura entre lo que interrumpe ese plazo. [inferencia, necesita dictamen de un abogado]
+
+### Tolerancia [verificado; fuentes en `10_tolerancia_y_aviso/`]
+
+- **La regla, como en Países Bajos:** se descuentan 3 km/h (3% por encima de 100) y sólo hay multa si después queda un exceso de 4 km/h o más.
+  - En zona de 40, la multa empieza en 47; en zona de 60, en 67.
+  - Es parecido al Reino Unido (10% + 2 mph) y a Francia (5 km/h).
+- **El error del equipo en Argentina:** ±3 km/h por debajo de 100 y ±3% desde 100 (Resolución ex SICyM 753/98, punto 5.1.3).
+  - **Ninguna norma nacional ni provincial obliga a descontarlo antes de multar.**
+  - La Ley 24.449 (art. 77 n) habla de "un margen de tolerancia de hasta un 10%", sin reglamentar.
+- **Precedente en la Provincia:** un juez de Bahía Blanca absolvió en 2017 a un conductor medido a 44,18 km/h en zona de 40, descontando los 3 km/h de error que informó el INTI.
+- **Cómo se aplica:** el Municipio programa sus equipos para que no registren por debajo del umbral, como en Países Bajos. [inferencia: falta confirmar si hace falta autorización provincial]
+
+### Aviso inmediato e inteligencia artificial aliada del vecino [verificado salvo indicación; fuentes en `10_tolerancia_y_aviso/`]
+
+- **Qué hace la IA:**
+  - le dice al vecino dónde están las cámaras y cuál es el límite;
+  - le avisa al primer exceso;
+  - si una multa está mal (equipo con la verificación vencida o exceso dentro de la tolerancia), se lo avisa y le arma el reclamo.
+- **Precedentes de aviso rápido:**
+  - Uruguay manda un SMS ("MTOP INFORMA: Se detectó una infracción…") que no es notificación legal y no trae enlaces.
+  - Chile notifica en 15 días hábiles.
+  - La Provincia ya prevé avisos de cortesía por correo o mensaje desde el Domicilio Vial Electrónico (Resolución 125/2023). Sus considerandos dicen que la comunicación rápida busca "desalentar la repetición de la conducta disvaliosa".
+- **Precedentes de una sola multa:**
+  - Pensilvania: la primera infracción es una carta de advertencia, con 15 días de gracia.
+  - Chicago: 30 días sólo de avisos por cámara nueva.
+  - Victoria (Australia): varias detecciones leves en un período dan una sola multa.
+- **Es legal como "aviso de posible infracción", no como notificación.** La notificación sigue yendo al domicilio legal en 60 días hábiles (Ley 13.927, art. 35). [inferencia]
+  - Lo seguro es que el vecino se anote voluntariamente (Ley 25.326) y que el mensaje no traiga enlaces de pago, por las estafas.
+- **Contar varias pasadas como una sola necesita ley provincial,** porque la Ley 24.449 (art. 81) manda sumar las sanciones. [inferencia, necesita dictamen de un abogado]
+  - Mientras tanto, el juez puede unificar caso por caso si fueron en el mismo viaje.
+
+### Reincidencia sin dejar a nadie sin trabajo [verificado salvo indicación; fuentes en `11_tope_y_licencia/` y `8_otras_sanciones/`]
+
+- **Hoy el juez ya puede:**
+  - fijar una suspensión corta en la primera y la segunda reincidencia grave, porque la ley dice "hasta 9" y "hasta 12" meses (Ley 13.927, art. 39 ter);
+  - limitarla a una categoría de vehículo;
+  - sumar el curso.
+  - La tercera reincidencia son 18 meses obligatorios.
+- **Lo que no puede hoy:** dejarla en suspenso, ni dar un permiso "sólo para trabajar" (Ley 13.927, art. 39 bis: "cumplimiento efectivo"). [inferencia]
+- **Precedentes de licencia restringida:**
+  - **Texas:** licencia "ocupacional" con horarios y recorridos fijados por el juez, hasta 4 horas por día.
+  - **Florida:** licencia sólo para trabajar.
+  - **Quebec:** permiso judicial sólo para el trabajo, después de perder los puntos.
+  - **Queensland:** orden por dificultad extrema; si se incumple, la suspensión es el doble.
+  - **Francia:** suspensión limitada a fuera del horario de trabajo, salvo alcohol.
+- **Cuidado:** en California, quienes tenían licencia restringida reincidieron menos, pero chocaron más (+57% a +116%), probablemente porque manejan más.
+- **Además, el programa:**
+  - apoya que Diputados apruebe la licencia por puntos, que tiene media sanción del Senado;
+  - propone una ley provincial para que el curso pueda reemplazar a la multa, como ya permite la ley nacional (art. 83 d).
+
+### A quien más gana: multa según el ingreso, sólo para subir
+
+- **Pedido a la Provincia,** sólo para faltas graves.
+- **La regla:** se paga lo mayor entre el monto de hoy en unidades de multa y una multa por días, como en Finlandia.
+- **Propuesta a confirmar:**
+  - el día-multa es el ingreso neto mensual menos la canasta básica, dividido por 60;
+  - un exceso grave vale 12 días-multa, como en Finlandia con +21 a 23 km/h.
+- **Ejemplo** [cálculo propio]:
+  - Quien gana $10 millones paga $1.896.084, en vez de $342.150.
+  - Quien gana $1 millón sigue pagando el monto de hoy, porque la fórmula le da menos ($96.084).
+
+### La prueba con los casos del cliente [cálculo propio]
+
+Exceso de velocidad: pago voluntario de $171.075 hoy. Cuota máxima: 2% del ingreso dividido por la raíz de la cantidad de personas del hogar.
+
+| Caso | Hoy | Con la propuesta |
+|---|---|---|
+| $1 millón, vive solo, 1 multa | $171.075 de una vez (17% del ingreso) | 9 cuotas de $20.000, sin que el vecino haga nada (con el cambio provincial del informe 19) |
+| $1 millón, vive solo, 10 de la misma cámara | $1.710.750 (171% del ingreso) | Cuenta como 1: 9 cuotas de $20.000. Si no está anotado, cuentan como una sola las pasadas del primer día |
+| $1 millón, hogar de 4 | $171.075 | 18 cuotas de $10.000 |
+| $10 millones, 1 multa grave | $171.075 (1,7% del ingreso) | Con la ley provincial: $1.896.084, en 10 cuotas de hasta $200.000 |
+| $10 millones, 10 de la misma cámara | $1.710.750 | Cuenta como 1, igual que arriba |
+| 41 en zona de 40 | Puede haber multa: nadie obliga a descontar el error | No hay multa: el umbral es 47 |
+| Cuentapropista que reincide | Suspensión de hasta 9 meses, sin poder trabajar | Suspensión corta y curso. Con ley provincial, permiso para trabajar con horarios y recorridos; si comete otra falta, suspensión doble |
+
+## 2.3 · Otras formas de sancionar, que no son dinero
+
+### Licencia por puntos
+
+- **Cómo funciona en la norma nacional** [verificado, Decreto 437/2011, texto del Decreto 242/2022]:
+  - Se empieza con 20 puntos, y se descuentan con sanción firme.
+  - Ejemplos de descuentos:
+    - cruce en rojo: 5 puntos;
+    - velocidad: 5 puntos con un exceso del 10% al 30%, y 10 puntos con más del 30%;
+    - alcohol y contramano: 10 puntos;
+    - picadas: 20 puntos.
+  - Al llegar a cero, la inhabilitación es de 60, 120 y 180 días, y después se duplica.
+  - Se recupera todo a los 2 años sin sanciones, o hasta 4 puntos con un curso cada 2 años.
+- **En la Provincia** [verificado salvo indicación]:
+  - La Ley 13.927 adhiere a la ley nacional, pero no a su reglamento de puntos.
+  - El registro provincial de infractores (RUIT) debe "oportunamente" administrarlos.
+  - En 2022 se anunció la adhesión, y en 2023 hubo una prueba piloto sin descontar puntos [probable].
+  - La ley tiene media sanción del Senado desde el 20/09/2024, y estaba pendiente en Diputados en junio de 2026 [probable].
+  - La Ley Impositiva 2026 ya cobra una tasa por "recupero de puntos", aunque el sistema no funciona.
+- **En San Isidro:** el Municipio emite la licencia nacional, pero no maneja los puntos. [verificado]
+
+### Curso obligatorio
+
+- **Nación:** el curso puede reemplazar a la multa, y si no se hace, la multa se triplica (Ley 24.449, art. 83 d). [verificado]
+- **Provincia:** desde 2023 el curso se suma a la multa y es obligatorio en los casos de alcohol (Ley 13.927, art. 39 bis d). [verificado]
+- **Quién lo dicta:** el Ministerio de Transporte puede autorizar a los municipios a dictarlo (Decreto 751/2023), y la ANSV ya tiene un curso virtual para infractores. [verificado]
+
+### Trabajo comunitario
+
+- **En la norma:** no está como sanción de tránsito ni en la ley provincial ni en el Código de Faltas. En la ley nacional sólo reemplaza al arresto. [verificado]
+- **Por ordenanza:** Pinamar (2022) y Junín (2019) lo pusieron, sin datos de resultados. [verificado]
+
+### Suspensión de la licencia al reincidente
+
+- **En la ley:** hasta 9 meses la primera reincidencia grave, hasta 12 la segunda y 18 obligatorios la tercera (Ley 13.927, art. 39 ter). [verificado]
+- **Para aplicarla** hacen falta los datos de reincidencia del RUIT. Los juzgados deben cargar las sanciones firmes en 5 días hábiles (art. 5). [verificado]
+
+### Qué resultados tiene cada una, comparadas con la multa
+
+| Medida | Resultado medido | Fuente | Marca |
+|---|---|---|---|
+| Multa más alta | Finlandia: 200 € más bajan la reincidencia ~15% por unos meses, sobre todo en los ingresos altos. Subir la multa ayuda hasta duplicarla; más no agrega efecto | Kaila 2026; Elvik 2016 | [verificado] |
+| Curso en lugar de multa (velocidad) | Reincidencia entre 12% y 23% menor que con multa y puntos a los 6 meses, y entre 6% y 13% menor a los 3 años; choques: sin efecto probado | Reino Unido, Department for Transport 2018 | [verificado] |
+| Cursos generales para conductores ya habilitados | Sin efecto en choques (21 ensayos aleatorizados) | Ker y otros 2005 | [verificado] |
+| Puntos | Entre 15% y 20% menos choques y muertes, que se diluye en menos de 18 meses si no hay controles | Metaanálisis Castillo-Manzano 2012 | [verificado] |
+| Suspensión de la licencia | La medida individual más efectiva; Alemania: un mes bajó la reincidencia un 20%. Pero hasta el 75% de los suspendidos sigue manejando, y suspender por deudas no mejora la seguridad | Masten y Peck 2004; Gehrsitz 2017; AAMVA 2021 | [verificado] |
+| Puntos, cursos y trabajo comunitario en lugar de multa | Ciudad de México 2019: tendencia de mortalidad +2,7% y heridos +1,5% | Injury Prevention 2023 | [verificado] |
+
+**Conclusión de la evidencia** [inferencia]:
+- Ninguna sanción sola reemplaza a la multa.
+- Lo que mejor funciona es la combinación:
+  - una multa que pese según quién la paga;
+  - un curso para el que repite;
+  - la suspensión para el reincidente grave;
+  - controles en la calle.
+
+---
+
+## 2.4 · Qué puede hacer San Isidro solo y qué necesita de la Provincia
+
+| Medida | San Isidro solo | Necesita | Norma | Marca |
+|---|---|---|---|---|
+| Reductores donde hay choques, diseñados para la velocidad de la calle | **Sí**, en calles municipales | En rutas provinciales y nacionales, Vialidad | Decreto 779/95, Anexo 1, art. 23; Decreto 532/09, arts. 3 y 5 | [verificado / inferencia] |
+| Tolerancia de 47 en zona de 40 | **Probablemente sí** (configuración de sus equipos) | Quizás autorización provincial | Res. 753/98; Ley 24.449, art. 77 n | [inferencia] |
+| Aviso inmediato a quien se anota y reclamo armado por la IA | **Sí** | — | Ley 13.927, art. 35; Ley 25.326 | [inferencia] |
+| Una sola multa por cámara antes del aviso, como regla general | No | **Ley provincial** | Ley 24.449, art. 81 | [inferencia] |
+| Cuotas con el tope del 2% dividido por la raíz del hogar, en la sentencia | **Sí** (el juez) | — | Ley 24.449, arts. 85 c y 90; Código Penal, art. 21 | [inferencia] |
+| Cuotas y rebaja en el pago voluntario, sin que el vecino haga nada | No | **Decreto del Gobernador y disposición provincial** (ver informe 19) | Decreto 532/09, Anexo I, art. 33 b; Anexo III, art. 40 | [verificado] |
+| Congelar la deuda en pesos | No | **Disposición provincial** (antecedente: Disp. 69/2020) | Ley 24.449, art. 84 | [inferencia] |
+| Suspensión corta y curso para el reincidente | **Sí** (el juez) | — | Ley 13.927, art. 39 ter | [inferencia] |
+| Permiso para ir a trabajar | No | **Ley provincial** | Ley 13.927, arts. 39 bis y 39 ter | [inferencia] |
+| Curso en lugar de multa | No | **Ley provincial** | Ley 13.927, art. 39 bis d | [verificado el cambio de 2023] |
+| Multa según el ingreso, sólo para subir, en faltas graves | No | **Ley o decreto provincial** | Decreto 532/09, Anexo V | [inferencia] |
+| Licencia por puntos | No | **Ley provincial** (media sanción) y la Agencia Nacional de Seguridad Vial | Decreto 437/2011 | [verificado] |
+
+## Borrador de propuesta · segunda parte
+
+*Borrador con lo decidido por el cliente. Lo jurídico necesita dictamen de un abogado.*
+
+### Lo que San Isidro hace desde el primer día
+
+1. **Primero la calle.**
+   - Reductores, mesetas, sendas elevadas y zonas de 30 donde hay choques, diseñados para la velocidad de cada calle.
+   - Almohadas en las rutas de ambulancias, consultando a los bomberos y a los vecinos.
+   - Se publica dónde va cada uno de la licitación de 2025.
+   - Las cámaras quedan para donde no se puede hacer obra.
+2. **Tolerancia de 47 en zona de 40,** programada en los equipos y publicada.
+3. **La IA aliada del vecino:**
+   - mapa de cámaras y límites;
+   - aviso al primer exceso a quien se anota;
+   - aviso y reclamo armado cuando una multa está mal (equipo vencido o dentro de la tolerancia).
+4. **Cuotas sin trámites:**
+   - El vecino se anota una vez.
+   - El juez dicta la sentencia con cuotas de hasta el 2% del ingreso dividido por la raíz del hogar.
+   - El vecino no va al juzgado.
+5. **Reincidencia:** suspensión corta y curso para la primera y segunda reincidencia grave, con fecha de inicio que el vecino pueda organizar; 18 meses obligatorios en la tercera, como manda la ley.
+
+### Lo que San Isidro le pide a la Provincia
+
+6. **Pago voluntario rebajado y en cuotas, sin trámites, y deuda congelada en pesos.** Es decreto del Gobernador y disposición de la Dirección Provincial de Política y Seguridad Vial, no ley (ver informe 19).
+7. **Una sola multa por cámara antes del aviso.** Para quien no se anota, una sola por las pasadas del primer día.
+8. **Permiso para ir a trabajar** durante la suspensión, con horarios y recorridos. Si comete otra falta, la suspensión es el doble y sin permiso.
+9. **Que el curso pueda reemplazar a la multa,** como en la ley nacional.
+10. **Multa según el ingreso, sólo para subir, en faltas graves,** como en Finlandia.
+11. **Que Diputados apruebe la licencia por puntos,** con controles en la calle para que el efecto no se diluya.

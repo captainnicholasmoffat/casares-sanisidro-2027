@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	
+	
+            
+                        <link rel="shortcut icon" type="image/x-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg">
+            <link rel="apple-touch-icon" href="https://www.tiltak.no/wp-content/uploads/2017/02/favicon-01.jpg"/>
+        
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.tshandbok.no/xmlrpc.php" />
+
+	<title>Trafikksikkerhetshåndboken | 1.6 Rundkjøringer</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Trafikksikkerhetshåndboken &raquo; strøm" href="https://www.tshandbok.no/feed/" />
+		<!-- This site uses the Google Analytics by ExactMetrics plugin v10.3.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-V51KWCT49C"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var em_version = '10.3.0';
+				var em_track_user = true;
+				var em_no_track_reason = '';
+								var ExactMetricsDefaultLocations = {"page_location":"https:\/\/www.tshandbok.no\/del-2\/1-vegutforming-og-vegutstyr\/doc622\/"};
+								if ( typeof ExactMetricsPrivacyGuardFilter === 'function' ) {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsPrivacyGuardFilter( ExactMetricsExcludeQuery ) : ExactMetricsPrivacyGuardFilter( ExactMetricsDefaultLocations );
+				} else {
+					var ExactMetricsLocations = (typeof ExactMetricsExcludeQuery === 'object') ? ExactMetricsExcludeQuery : ExactMetricsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-V51KWCT49C',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.ExactMetricsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (em_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = exactmetrics_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof ExactMetricsDualTracker.trackers[hookName] !== 'undefined') {
+								ExactMetricsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dNDMyYj': true,
+											});
+					if ( ExactMetricsLocations.page_location ) {
+						__gtagTracker('set', ExactMetricsLocations);
+					}
+										__gtagTracker('config', 'G-V51KWCT49C', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by ExactMetrics -->
+		<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.tshandbok.no\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.10"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='wpmf-bakery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/vc_style.css?ver=6.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wpmf-bakery-display-gallery-style-css' href='https://www.tshandbok.no/wp-content/plugins/wp-media-folder/assets/css/display-gallery/style-display-gallery.css?ver=6.1.3' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.tshandbok.no/wp-includes/css/dist/block-library/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.tshandbok.no/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css' href='https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1' type='text/css' media='all' />
+<link rel='stylesheet' id='megamenu-css' href='https://www.tshandbok.no/wp-content/uploads/maxmegamenu/style.css?ver=a5cb64' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.tshandbok.no/wp-includes/css/dashicons.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css' href='https://www.tshandbok.no/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=6.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.tshandbok.no/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-default-style-css' href='https://www.tshandbok.no/wp-content/themes/bridge/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_awesome-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/font-awesome/css/font-awesome.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-font_elegant-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/elegant-icons/style.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-linea_icons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/linea-icons/style.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-dripicons-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/dripicons/dripicons.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-qode-kiko-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/kiko/kiko-all.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-stylesheet-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/stylesheet.min.css?ver=6.8.10' type='text/css' media='all' />
+<style id='bridge-stylesheet-inline-css' type='text/css'>
+   .postid-21728.disabled_footer_top .footer_top_holder, .postid-21728.disabled_footer_bottom .footer_bottom_holder { display: none;}
+
+
+</style>
+<link rel='stylesheet' id='bridge-print-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/print.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/responsive.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-dynamic-responsive-css' href='https://www.tshandbok.no/wp-content/themes/bridge/css/style_dynamic_responsive.css?ver=1592480880' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.tshandbok.no/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-style-handle-google-fonts-css' href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic%7COpen+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100italic%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bridge-core-dashboard-style-css' href='https://www.tshandbok.no/wp-content/plugins/bridge-core/modules/core-dashboard/assets/css/core-dashboard.min.css?ver=6.8.10' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='https://www.tshandbok.no/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=6.8.10' type='text/css' media='screen' />
+<link rel='stylesheet' id='childstyle-css' href='https://www.tshandbok.no/wp-content/themes/bridge-child/style.css?ver=1592316526' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery.min.js?ver=3.7.1&#039; defer onload=&#039;" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1&#039; defer onload=&#039;" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.tshandbok.no/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.tshandbok.no/wp-json/wp/v2/posts/21728" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.tshandbok.no/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.10" />
+<link rel="canonical" href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc622/" />
+<link rel='shortlink' href='https://www.tshandbok.no/?p=21728' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F1-vegutforming-og-vegutstyr%2Fdoc622%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.tshandbok.no/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.tshandbok.no%2Fdel-2%2F1-vegutforming-og-vegutstyr%2Fdoc622%2F&#038;format=xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+<link rel="mask-icon" href="/wp-content/uploads/fbrfg/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#eeeeee">            <style id="wpp-loading-animation-styles">@-webkit-keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}@keyframes bgslide{from{background-position-x:0}to{background-position-x:-200%}}.wpp-widget-placeholder,.wpp-widget-block-placeholder,.wpp-shortcode-placeholder{margin:0 auto;width:60px;height:3px;background:#dd3737;background:linear-gradient(90deg,#dd3737 0%,#571313 10%,#dd3737 100%);background-size:200% auto;border-radius:3px;-webkit-animation:bgslide 1s infinite linear;animation:bgslide 1s infinite linear}</style>
+            <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><style type="text/css">/** Mega Menu CSS: fs **/</style>
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-21728 single-format-standard wp-theme-bridge wp-child-theme-bridge-child bridge-core-2.1.4 mega-menu-top-navigation  qode-title-hidden qode-content-sidebar-responsive qode-child-theme-ver-1.0.0 qode-theme-ver-19.3 qode-theme-bridge disabled_footer_top qode_header_in_grid wpb-js-composer js-comp-ver-6.1 vc_responsive" itemscope itemtype="http://schema.org/WebPage">
+
+
+
+
+<div class="wrapper">
+			<div class="frise"><a href="/"><img src="/wp-content/uploads/2020/06/frise-tsh-enkel.jpg"   alt="heading-frise" /></a>
+			
+			
+		</div>
+	<div class="wrapper_inner">
+
+    
+		<!-- Google Analytics start -->
+				<!-- Google Analytics end -->
+
+		
+	<header class=" scroll_header_top_area  fixed scrolled_not_transparent with_border header_style_on_scroll page_header">
+	<div class="header_inner clearfix">
+		<form role="search" action="https://www.tshandbok.no/" class="qode_search_form_3" method="get">
+	    <div class="container">
+        <div class="container_inner clearfix">
+							                <div class="form_holder_outer">
+                    <div class="form_holder">
+
+                        <input type="text" placeholder="Search" name="s" class="qode_search_field" autocomplete="off" />
+                        <div class="qode_search_close">
+                            <a href="#">
+								<i class="qode_icon_font_awesome fa fa-times " ></i>                            </a>
+                        </div>
+                    </div>
+                </div>
+								        </div>
+    </div>
+</form>		<div class="header_top_bottom_holder">
+			
+			<div class="header_bottom clearfix" style=' background-color:rgba(255, 255, 255, 1);' >
+								<div class="container">
+					<div class="container_inner clearfix">
+																				<div class="header_inner_left">
+																	<div class="mobile_menu_button">
+		<span>
+			<i class="qode_icon_font_awesome fa fa-bars " ></i>		</span>
+	</div>
+								
+<div class="logo_wrapper" >
+	<div class="q_logo">
+		<a itemprop="url" href="https://www.tshandbok.no/" >
+      
+      
+       <img itemprop="image" class="normal" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"> 			 <img itemprop="image" class="light" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="dark" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="sticky" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 			 <img itemprop="image" class="mobile" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160685.png" alt="Logo"/> 					</a>
+	</div>
+	</div>															</div>
+															<div class="header_inner_right">
+									<div class="side_menu_button_wrapper right">
+																														<div class="side_menu_button">
+												<a class="search_button search_covers_header normal" href="javascript:void(0)">S&oslash;k
+		<i class="qode_icon_font_awesome fa fa-search " ></i>	</a>
+	<div class="printfriendly pf-button  pf-alignright">
+                    <a href="#" rel="nofollow" onclick="window.print(); return false;" title="Printer Friendly, PDF & Email">
+                    <span id="printfriendly-text2" class="pf-button-text">Utskrift</span>
+                    </a>
+                </div>																							
+										</div>
+									</div>
+								</div>
+							
+							
+							<nav class="main_menu drop_down center">
+								<div id="mega-menu-wrap-top-navigation" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"></div><div class="mega-toggle-blocks-center"></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-block mega-toggle-block-1' id='mega-toggle-block-1' tabindex='0'><span class='mega-toggle-label' role='button' aria-expanded='false'><span class='mega-toggle-label-closed'>MENU</span><span class='mega-toggle-label-open'>MENU</span></span></div></div></div><ul id="mega-menu-top-navigation" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="hover_intent" data-effect="fade_up" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="body" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1000" data-unbind="true" data-mobile-state="collapse_all" data-mobile-direction="vertical" data-hover-intent-timeout="300" data-hover-intent-interval="100"><html><body><li class="mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout mega-menu-item-172015" id="mega-menu-item-172015"><a class="mega-menu-link" href="/" tabindex="0">Forside</a></li><li class="mega-dw_content_menu mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-megamenu mega-menu-item-172033 dw_content_menu" id="mega-menu-item-172033"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/" aria-expanded="false" tabindex="0">Innhold<span class="mega-indicator" aria-hidden="true"></span></a>
+<ul class="mega-sub-menu">
+<li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172677" style="--columns:6; --span:1" id="mega-menu-item-172677"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/bakgrunn-og-leseveiledning/"><div class="dw_mm_icon"><i class="fa fas fa-car"></i></div>Bakgrunn og leseveiledning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-current-post-ancestor mega-current-menu-parent mega-current-post-parent mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172678" style="--columns:6; --span:1" id="mega-menu-item-172678"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/1-vegutforming-og-vegutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/road.svg" alt="road.svg"></div>1: Vegutforming og vegutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172679" style="--columns:6; --span:1" id="mega-menu-item-172679"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/2-vegvedlikehold/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/digging.svg" alt="digging.svg"></div>2: Drift og vedlikehold av veger</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172680" style="--columns:6; --span:1" id="mega-menu-item-172680"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/3-trafikkregulering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/traffic-light.svg" alt="traffic-light.svg"></div>3: Trafikkregulering</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172681" style="--columns:6; --span:1" id="mega-menu-item-172681"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/4-kjoeretoeyteknikk-og-personlig-verneutstyr/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-crash.svg" alt="car-crash.svg"></div>4: Kjøretøyteknikk og personlig verneutstyr</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172682" style="--columns:6; --span:1" id="mega-menu-item-172682"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/5-kjoeretoeykontroll-og-verkstedgodkjenning/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/car-mechanic.svg" alt="car-mechanic.svg"></div>5: Kjøretøykontroll og verkstedgodkjenning</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-clear mega-menu-item-172683" style="--columns:6; --span:1" id="mega-menu-item-172683"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/6-krav-til-foerere-foereropplaering-og-yrkeskjoering/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/address-card.svg" alt="address-card.svg"></div>6: Krav til førere, føreropplæring og yrkeskjøring</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172684" style="--columns:6; --span:1" id="mega-menu-item-172684"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/7-trafikkopplaering-og-informasjon/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/user-cog.svg" alt="user-cog.svg"></div>7: Trafikkopplæring og informasjon</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172685" style="--columns:6; --span:1" id="mega-menu-item-172685"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/8-kontroll-og-sanksjoner/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/hand-paper.svg" alt="hand-paper.svg"></div>8: Kontroll og sanksjoner</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172686" style="--columns:6; --span:1" id="mega-menu-item-172686"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/9-foerstehjelp-og-medisinsk-behandling/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/medkit.svg" alt="medkit.svg"></div>9: Førstehjelp og medisinsk behandling</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172687" style="--columns:6; --span:1" id="mega-menu-item-172687"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/10-overordnede-virkemidler/"><div class="dw_mm_icon"><img class="dw_mime_imagesvgxml" src="https://www.tshandbok.no/wp-content/uploads/2020/03/book-open.svg" alt="book-open.svg"></div>10: Overordnede virkemidler</a></li><li class="mega-menu-item mega-menu-item-type-taxonomy mega-menu-item-object-category mega-menu-column-standard mega-menu-columns-1-of-6 mega-menu-item-172688" style="--columns:6; --span:1" id="mega-menu-item-172688"><a class="mega-menu-link" href="https://www.tshandbok.no/innhold/del-2/11-definisjoner-og-ordforklaringer/"><div class="dw_mm_icon"><i class="fa far fa-bookmark"></i></div>11: Definisjoner og ordforklaringer</a></li></ul>
+</li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-post mega-align-bottom-left mega-menu-flyout mega-menu-item-172659" id="mega-menu-item-172659"><a class="mega-menu-link" href="https://www.tshandbok.no/info/trafikksikkerhetshaandboken/" tabindex="0">Om ts-håndboken</a></li><li class="mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-align-bottom-left mega-menu-flyout mega-menu-item-172674" id="mega-menu-item-172674"><a class="mega-menu-link" href="https://www.tshandbok.no/kontakt/" tabindex="0">Kontakt</a></li></body></html></ul></div>							</nav>
+																																		</div>
+					</div>
+									</div>
+			</div>
+		</div>
+</header>	<a id="back_to_top" href="#">
+        <span class="fa-stack">
+            <i class="qode_icon_font_awesome fa fa-arrow-up " ></i>        </span>
+	</a>
+	
+	
+    
+    	
+    
+    <div class="content content_top_margin">
+        <div class="content_inner  ">
+    <!-- before title -->
+	<!-- this is title -->
+									
+									
+										<div class="breadcrumb" > <div class="breadcrumbs"><div itemprop="breadcrumb" class="breadcrumbs_inner"><a href="https://www.tshandbok.no/">Home</a><span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/">Beskrivelser av trafikksikkerhetstiltak og virkninger</a> <span class="delimiter">&nbsp;>&nbsp;</span><a href="https://www.tshandbok.no/innhold/del-2/1-vegutforming-og-vegutstyr/">1: Vegutforming og vegutstyr</a> <span class="delimiter">&nbsp;>&nbsp;</span><span class="current">1.6 Rundkjøringer</span></div></div></div>
+									<!-- this is end of title --><!-- after title -->	
+										<div class="container">
+														<div class="container_inner default_template_holder" >
+																
+							<div class="two_columns_75_25 background_color_sidebar grid2 clearfix">
+								<div class="column1">
+											
+									<div class="column_inner">
+										<div class="blog_single blog_holder">
+											
+		<article id="post-21728" class="post-21728 post type-post status-publish format-standard has-post-thumbnail hentry category-1-vegutforming-og-vegutstyr">
+			<div class="post_content_holder">
+				
+				<div class="post_text">
+					<div class="post_text_inner">
+						<h1 itemprop="name" class="entry_title"><!-- LS <span itemprop="dateCreated" class="date entry_date updated">13 jul<meta itemprop="interactionCount" content="UserComments: 0"/></span> -->1.6 Rundkjøringer</h1>
+						
+							<div class="post_author">
+						<!-- LS 	21728								
+								
+								av									<a itemprop="author" class="post_author_link" href="https://www.tshandbok.no/author/mrleif/">MrLeif</a>
+								-->
+								
+								<div class='pd_authors'><div class='authorline'> Revidert 2025: Rune Elvik, TØI og Alena Høye, TØI</div></div>								
+							</div>
+						
+						<div class="post_info">
+						<!-- LS
+								<span class="time">Publisert den 12:29h</span>
+								i					
+					 <a href="https://www.tshandbok.no/innhold/del-2/1-vegutforming-og-vegutstyr/" rel="category tag">1: Vegutforming og vegutstyr</a> 
+						
+															<span class="dots"><i class="fa fa-square"></i></span><a itemprop="url" class="post_comments" href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc622/#respond" target="_self">0 Kommentarer</a>
+								
+								-->
+							                                                        
+						</div>
+					
+												
+						<div class="post_image">
+						
+	                        <img width="2000" height="1284" src="https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16.jpg" class="attachment-full size-full wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16.jpg 2000w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-300x193.jpg 300w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-1024x657.jpg 1024w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-768x493.jpg 768w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-1536x986.jpg 1536w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-150x96.jpg 150w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-250x161.jpg 250w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-500x321.jpg 500w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-650x417.jpg 650w, https://www.tshandbok.no/wp-content/uploads/2020/08/tsh16-700x449.jpg 700w" sizes="(max-width: 2000px) 100vw, 2000px" />	                        <div class="bildetekst">
+	                         Foto: Shutterstock	                         </div>
+						</div>
+										
+						
+						<div class="ingress">
+<p><strong>Ombygging av kryss til rundkjøringer kan bedre sikkerheten og trafikkavviklingen i kryss.  Ombygging av X- eller T-kryss til rundkjøring reduserer antall dødsulykker med rundt 70 prosent og antall personskadeulykker med 45 prosent. Antall materiellskadeulykker øker i store rundkjøringer og er omtrent uendret i mindre rundkjøringer. Små rundkjøringer har lavere ulykkesrisiko enn store, og økende diameter på midtøya medfører økende ulykkesrisiko. Hvordan rundkjøringer påvirker sykkelulykker, avhenger i veldig stor grad av den konkrete utformingen. Rundkjøringer med sykkelfelt har langt flere ulykker enn både andre rundkjøringer og kryss. I rundkjøringer med sykkelveg avhenger virkningen av hvordan vikeplikten er regulert. Generelt avhenger virkningen på sykkelulykker bl.a. av fartsnivået i rundkjøringen. Nyttekostnadsanalyser av ombygging av 46 kryss til rundkjøring viser at total nytte er større enn total kostnad. Nytten var større enn kostnadene i 27 av de 46 kryssene.</strong></p>
+</div>
+<h2>Problem og formål</h2>
+<div class="subchapter">
+<p>I vegkryss med stor trafikk kan ventetiden for vikepliktig trafikk bli lang. Dette kan friste trafikantene til å utnytte små tidsluker. Hyppige kryssinger og svingebevegelser kan skape farlige situasjoner og gjør trafikkbildet uoversiktlig. I perioden 2018-2022 inntraff 27 prosent av alle politirapporterte person­skadeulykker i kryss.</p>
+<p>Ombygging av kryss til rundkjøringer kan bedre sikkerheten og trafikkavviklingen i kryss. Rundkjøringer kan bidra til økt trafikksikkerhet ved at mulige konfliktpunkter mellom trafikkstrømmene som passerer et kryss reduseres. Reduksjonen er fra 32 til 20 mulige konfliktpunkter i X-kryss og fra 9 til 8 mulige konfliktpunkter i T-kryss. Trafikanter som er på veg inn i krysset pålegges vikeplikt for trafikanter som er inne i krysset, uansett hvilken vegarm de kommer fra og tvinges dermed til nøyere observasjon av trafikk i krysset. All trafikk inne i krysset kommer fra en retning. Trafikantene trenger dermed ikke å observere trafikk fra flere retninger samtidig for å finne en egnet tidsluke til å kjøre inn i krysset. Rundkjøringer eliminerer venstresving foran møtende trafikk. Rundkjøringer er bygget slik at trafikantene ikke kan kjøre rett fram gjennom krysset, men må svinge rundt en trafikkøy plassert midt i krysset. Dette reduserer farten.</p>
+<p>Rundkjøringer fungerer som regel bra når det er omtrent like mye trafikk på alle tilfarter. Store forskjeller i trafikkmengden eller høy fart på en eller flere av tilfartene kan medføre store forsinkelser og redusere kapasiteten i en rundkjøring (Glenn et al., 2009). Lange ventetider kan føre til risikabel atferd når førere prøver å presse seg inn i for små tidsluker. Vanlige ulykkestyper i rundkjøringer er ulykker hvor en fører har feilbedømt tidsluken ved innkjøring i rundkjøringen, samt påkjøring bakfra på tilfarter til rundkjøringen (Department for Transport, 2009). Signalregulering av rundkjøringer har som formål å forbedre trafikkavviklingen og å øke kapasiteten. Tilfartene med den største trafikkmengden blir signalregulert for å gjøre det mulig for trafikken fra tilfarter med lavere trafikkmengde å finne akseptable tidsluker for å kjøre inn i rundkjøringen. Et annet formål kan være å forbedre sikkerheten for fotgjengere (Transport for London Street Management, 2005).</p>
+</div>
+<h2>Beskrivelse av tiltaket</h2>
+<div class="subchapter">
+<p>En rundkjøring er et vegkryss med sirkulasjonstrafikk. Trafikken gjennom krysset er envegsregulert mot urviseren rundt en større eller mindre sirkelformet trafikkøy som er plassert midt i krysset. Trafikk i tilfartene til en rundkjøring er pålagt vikeplikt for trafikk som befinner seg i rundkjøringen. Hvordan rundkjøringer utformes i Norge, er beskrevet i Statens vegvesens håndbok V121 (2013).</p>
+<p>Alle resultater som presenteres i dette kapitlet, gjelder denne typen rundkjøring. De siste årene er det bygget mange nye rundkjøringer i Norge. I oktober 2023 fantes det 3428 rundkjøringer i Norge på riks- og fylkesveger. Det foreligger ingen landsomfattende oversikt over antall rundkjøringer på kommunal veg.</p>
+<p>Ved signalregulering av rundkjøringer blir trafikksignalanlegg installert på en eller flere tilfarter til rundkjøringen. Trafikk som kjører inn i rundkjøringen på en signalregulert tilfart må stoppe ved rødt lys. Ved grønt lys må det likevel vikes for trafikk i rundkjøringen. Som regel signalreguleres tilfartene med størst trafikkmengde. På disse er farten ofte høy når det ikke er kø. De kontrollerende tilfartene er tilfarter med lavere trafikkmengde og ofte lange ventetider for å kjøre inn i rundkjøringen. Trafikken på signalregulerte tilfarter får rødt lys når ventetiden eller antall kjøretøy på en kontrollerende tilfart overskrider en viss grense. Når trafikkmengden på alle tilfartene er høy kan alle tilfarter signalreguleres. En oversikt av det britiske Department for Transport (2009) viste at formålene med å signalregulere rundkjøringer er å redusere antall ulykker (72 prosent av rundkjøringene med signalregulering), å redusere køer (80 prosent) og å øke kapasiteten (70 prosent).</p>
+</div>
+<h2>Virkning på ulykker</h2>
+<div class="subchapter">
+<h3>Generelle virkninger av å bygge om kryss til rundkjøring</h3>
+<p>Følgende undersøkelser har studert virkninger på antall ulykker av å bygge om kryss til rundkjøringer:</p>
+<table>
+<thead>
+<tr>
+<td style="width: 45.8128%;" width="284">Lalani, 1975 (UK)<strong><br />
+</strong>Green, 1977 (UK)<strong><br />
+</strong>Lahrmann, 1981 (Denmark)<strong><br />
+</strong>Cedersund, 1983 (Sweden)<strong><br />
+</strong>Senneset, 1983 (Norway)<strong><br />
+</strong>Brüde &amp; Larsson, 1985 (Sweden)<strong><br />
+</strong>Johannessen, 1985 (Norway)<strong><br />
+</strong>Hall &amp; McDonald, 1988 (UK)<strong><br />
+</strong>Nygaard, 1988 (Norway)<strong><br />
+</strong>Corben, Ambrose, &amp; Wai, 1990 (Australia)<strong><br />
+</strong>Giæver, 1990 (Norway)<strong><br />
+</strong>Tudge, 1990 (Australia)<strong><br />
+</strong>Van Minnen, 1990 (Netherlands)<strong><br />
+</strong>Jørgensen, 1991 (Denmark)<strong><br />
+</strong>Brüde &amp; Larsson, 1992 (Sweden)<strong><br />
+</strong>Dagersten, 1992 (Switzerland)<strong><br />
+</strong>Holzwarth, 1992 (Germany)<strong><br />
+</strong>Hydén, Odelid, &amp; Várhelyi, 1992 (Sweden)<strong><br />
+</strong>Jørgensen, 1992 (Denmark)<strong><br />
+</strong>Kristiansen, 1992 (Norway)<strong><br />
+</strong>Schnüll et al., 1992 (Germany)<strong><br />
+</strong>Værø, 1992 (Denmark)<strong><br />
+</strong>Brilon, Stuwe, &amp; Drews, 1993 (Germany)<strong><br />
+</strong>Schoon &amp; van Minnen, 1994 (Netherlands)<strong><br />
+</strong>Voss, 1994 (Germany)<strong><br />
+</strong>Jørgensen, 1994 (Denmark)<strong><br />
+</strong>Seim, 1994 (Norway)</td>
+<td style="width: 62.069%;" width="331">Huber &amp; Bühlmann, 1994 (Switzerland)<strong><br />
+</strong>Bureau of Transport, 1995 (Australia)<strong><br />
+</strong>Oslo Veivesen, 1995 (Norway)<strong><br />
+</strong>Flannery &amp; Datta, 1996 (USA)<strong><br />
+</strong>Odberg, 1996 (Norway)<strong><br />
+</strong>Giæver, 1997 (Norway)<strong><br />
+</strong>Flannery et al., 1998 (USA)<strong><br />
+</strong>Mountain, Maher, &amp; Fawaz, 1998 (UK)<strong><br />
+</strong>Newstead &amp; Corben, 2001 (Australia)<strong><br />
+</strong>Persaud et al., 2001 (USA)<strong><br />
+</strong>Brabander &amp; Vereeck, 2007 (Belgia)<strong><br />
+</strong>Meuleners et al., 2008 (Australia)<strong><br />
+</strong>Schelling et al., 2009 (Denmark)<strong><br />
+</strong>Churchill, Stipdonk, &amp; Bijleveld, 2010 (Netherlands)<strong><br />
+</strong>Gross et al., 2013 (USA)<strong><br />
+</strong>Jensen, 2013 (Denmark)<strong><br />
+</strong>De Pauw et al., 2014 (Belgia)<strong><br />
+</strong>Hu et al., 2014 (USA)<strong><br />
+</strong>Ambros, 2015 (CZR)<strong><br />
+</strong>Vujanic et al., 2016 (SER)<strong><br />
+</strong>Zhao, 2017 (Canada)<strong><br />
+</strong>Awadalla &amp; de Albuquerque, 2021 (United Arab Emirates)<strong><br />
+</strong>Wang &amp; Cicchino, 2022 (USA)<strong><br />
+</strong>Hastiani, 2022 (Canada)<strong><br />
+</strong>Savolainen et al., 2023 (USA)<strong><br />
+</strong>Avelar et al., 2023 (USA)<strong><br />
+</strong>Qawasmeh et al., 2023 (USA)</td>
+</tr>
+</thead>
+</table>
+<p>På grunnlag av disse undersøkelsene oppgir tabell 1.6.1 gjennomsnittlige virkninger av å bygge om kryss til rundkjøringer. Virkningene for alle rundkjøringer er basert på alle studier, hvorav de fleste ikke har oppgitt størrelsen på rundkjøringen.</p>
+<p><em>Tabell 1.6.1: Virkninger av rundkjøringer på ulykker i kryss. Prosent endring av ulykkestall (usikkerhet i parentes).</em></p>
+</div>
+<div class="subchapter">
+<table style="width: 100%; height: 230px;">
+<tbody>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 22.5%; height: 23px; background-color: #7488e3;" width="104"></td>
+<td class="lineunder" style="width: 43.9583%; height: 23px; background-color: #7488e3;" width="208"><strong>Skadegrad</strong></td>
+<td class="lineunder" style="width: 63.125%; height: 23px; background-color: #7488e3;" width="151"><strong>Prosent endring av antall ulykker (usikkerhet)</strong></td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 22.5%; height: 69px;" rowspan="3" width="104">Alle rundkjøringer</td>
+<td style="width: 43.9583%; height: 23px;" width="208">Dødsulykker</td>
+<td style="width: 63.125%; height: 23px;" width="151"><strong>-72</strong> (-84; -49)</td>
+</tr>
+<tr style="height: 23px;">
+<td style="width: 43.9583%; height: 23px;" width="208">Personskadeulykker</td>
+<td style="width: 63.125%; height: 23px;" width="151"><strong>-45</strong> (-50; -39)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 43.9583%; height: 23px;" width="208">Materiellskadeulykker / uspes.</td>
+<td class="lineunder" style="width: 63.125%; height: 23px;" width="151"><strong>+8</strong> (-6; +24)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 22.5%; height: 46px;" rowspan="2" width="104">Store rundkjøringer</td>
+<td style="width: 43.9583%; height: 23px;" width="208">Personskadeulykker</td>
+<td style="width: 63.125%; height: 23px;" width="151"><strong>-30</strong> (-47; -7)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 43.9583%; height: 23px;" width="208">Materiellskadeulykker / uspes.</td>
+<td class="lineunder" style="width: 63.125%; height: 23px;" width="151"><strong>+30</strong> (-8; +83)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 22.5%; height: 46px;" rowspan="2" width="104">Middels store rundkjøringer</td>
+<td style="width: 43.9583%; height: 23px;" width="208">Personskadeulykker</td>
+<td style="width: 63.125%; height: 23px;" width="151"><strong>-24</strong> (-35; -11)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 43.9583%; height: 23px;" width="208">Materiellskadeulykker / uspes.</td>
+<td class="lineunder" style="width: 63.125%; height: 23px;" width="151"><strong>+2</strong> (-24; 37)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 22.5%; height: 46px;" rowspan="2" width="104">Små rundkjøringer</td>
+<td style="width: 43.9583%; height: 23px;" width="208">Personskadeulykker</td>
+<td style="width: 63.125%; height: 23px;" width="151">&#8211;<strong>32</strong> (-41; -21)</td>
+</tr>
+<tr style="height: 23px;">
+<td class="lineunder" style="width: 43.9583%; height: 23px;" width="208">Materiellskadeulykker / uspes.</td>
+<td class="lineunder" style="width: 63.125%; height: 23px;" width="151"><strong>-14</strong> (-38; +18)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Størrelse på rundkjøring og skadegrad: </strong>Når man ser på alle rundkjøringene under ett, viser resultatene en stor og statistisk signifikant reduksjon for antall dødsulykker (-72 prosent) og en noe mindre, men fortsatt stor reduksjon av antall personskadeulykker (-45 prosent). For antall materiellskadeulykker er det funnet en liten økning (+8 prosent) som ikke er statistisk signifikant.</p>
+<p>Når man ser på rundkjøringer i ulike størrelser, øker antall materiellskadeulykker i store rundkjøringer, er uendret i middels store rundkjøringer, og går ned i små rundkjøringer. Alle disse virkningene er ikke-signifikante, og virkningen på personskadeulykker ser ut til å være uavhengig av type rundkjøring. Det er likevel en generell tendens til at rundkjøringen har en mer positiv (eller mindre negativ) effekt på trafikksikkerheten i mindre rundkjøringer enn i store rundkjøringer, som er tydelig i en metaregresjonsanalyse. Hva som er definert som «store», «middels» og «små» rundkjøringer, varierer mellom studiene, men generelt vil større rundkjøringer ha f.eks. flere kjørefelt og større sentraløy, og ofte trolig også mer trafikk og høyere fart, enn mindre rundkjøringer.</p>
+<p>Også noen enkelte studier viser at mindre rundkjøringer har en mer positiv effekt på trafikksikkerheten enn større rundkjøringer. F.eks i studien til Savolainen et al. (2023) reduserer ombygging av X-kryss til rundkjøringer antall personskadeulykker med 40% når rundkjøringen har ett kjørefelt og med kun 6 prosent når rundkjøringen har to felt; antall personskadeulykker øker med 26 prosent når rundkjøringen har tre kjørefelt.</p>
+<p><strong>Tidligere regulering i kryss og antall armer i kryss:</strong> Våre resultater tyder ikke på at det er generelle forskjeller i virkningen av rundkjøringer mellom ulike typer kryss. Det er ingen systematiske forskjeller verken mellom tidligere signal- og vikepliktsregulerte kryss, mellom X- og T-kryss eller mellom kryss i og utenfor tettsted.</p>
+<p><strong>Metodologiske faktorer:</strong> Mange av studiene har kontrollert for en rekke forstyrrende variabler, regresjonseffekter og generelle utviklinger over tid. Studier som har kontrollert for regresjonseffekter, har i gjennomsnitt funnet noe mindre positive effekter enn andre studier. Forskjellen er imidlertid ikke statistisk signifikant i en metaregresjonsanalyse, og vi har derfor benyttet resultatene fra alle studiene i tabell 1.6.1. Resultatene kan i noen grad være påvirket av publikasjonsskjevhet. Virkningen på antall personskadeulykker er på -45 prosent når man ser på alle typer rundkjøringer; dette reduseres til -38 prosent (-44; -30) med kontroll for publikasjonsskjevhet. Andre effekter kan være overestimert i samme størrelsesorden, men dette er ikke mulig å kontrollere for statistisk da det foreligger for få resultater fra individuelle studier.</p>
+<p><strong>Diameter på sentraløya: </strong>En del studier har undersøkt sammenhengen mellom diameter på sentraløya i en rundkjøring (Kristiansen, 1992; Odberg, 1996; Brüde &amp; Larsson, 1999; Tran, 1999; Jørgensen &amp; Jørgensen, 2002). Alle disse undersøkelsene er gjort i nordiske land. Tabell 1.6.1 viser gjennomsnittlige antall personskadeulykker per mill. innkomne kjøretøy i rundkjøringer med ulik diameter på sentraløya. Ulykkesrisikoen øker med økende diameter på sentraløya opp til 20 meter.</p>
+<p>Lignende resultater er også funnet i nyere amerikansk studier (Alshannaq &amp; Imam, 2020; Awadalla et al., 2021). I studien til Alshannaq og Imam (2020) er det en enda tydeligere sammenheng, og gjennomsnittlig ulykkesrisiko i rundkjøringer hvor sentraløya har en diameter på 60-80 meter er omtrent dobbelt så høy som når diameteren på sentraløya er på 20-40 meter.</p>
+<p><img decoding="async" class="alignnone wp-image-173664" src="https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker.png" alt="" width="603" height="340" srcset="https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker.png 1488w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-300x170.png 300w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-1024x577.png 1024w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-768x433.png 768w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-150x85.png 150w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-250x141.png 250w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-500x282.png 500w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-650x366.png 650w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-700x395.png 700w, https://www.tshandbok.no/wp-content/uploads/2015/07/tsh-61-2023-figur-161-rundkjoring-sentraloydiameter-og-ulykker-539x303.png 539w" sizes="(max-width: 603px) 100vw, 603px" /></p>
+<p><em>Figur 1.6.1 Sammenheng mellom diameter på sentraløy i rundkjøringer og ulykkesrisiko (ulykker per million innkommende kjøretøy).</em></p>
+<p>Figuren viser at datapunktene er svært spredt og kun viser en svak tendens til at ulykkesrisikoen øker når diameter på sentraløya øker. Dersom datapunktene grupperes, fremkommer et tydeligere mønster (Tabell 1.6.2).</p>
+<p><em>Tabell 1.6.2: Sammenheng mellom diameter på sentraløya og antall personskadeulykker per mill. unnkommende kjøretøy.</em></p>
+<table style="width: 100%;">
+<thead>
+<tr>
+<td class="lineunder" style="background-color: #b09dc7; width: 49.5223%;" width="302"><strong><u>Sentraløyas diameter</u></strong></td>
+<td class="lineunder" style="background-color: #b09dc7; width: 70.5538%;" width="302"><strong><u>Personskadeulykker per million innkommende kjøretøy</u></strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 49.5223%;" width="302">Under 5 meter (gjennomsnitt 3,5 meter)</td>
+<td style="width: 70.5538%;" width="302"><strong>0,047</strong></td>
+</tr>
+<tr>
+<td style="width: 49.5223%;" width="302">5 &#8211; 10 meter (gjennomsnitt 7,8 meter)</td>
+<td style="width: 70.5538%;" width="302"><strong>0,070</strong></td>
+</tr>
+<tr>
+<td style="width: 49.5223%;" width="302">10 &#8211; 15 meter (gjennomsnitt 12,2 meter)</td>
+<td style="width: 70.5538%;" width="302"><strong>0,089</strong></td>
+</tr>
+<tr>
+<td style="width: 49.5223%;" width="302">15 &#8211; 20 meter (gjennomsnitt 17,6 meter)</td>
+<td style="width: 70.5538%;" width="302"><strong>0,091</strong></td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 49.5223%;" width="302">Over 20 meter (gjennomsnitt 31,0 meter)</td>
+<td class="lineunder" style="width: 70.5538%;" width="302"><strong>0,069</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ulykkesrisikoen øker med økende diameter på sentraløya opp til 20 meter. Er diameteren større, synker igjen ulykkesrisikoen.</p>
+<p>Siktlengder i rundkjøringer har også betydning for ulykkesrisikoen. En amerikansk undersøkelse (Zirkel et al., 2013) fant at ulykkesrisikoen økte svakt med økende siktlengde når fartsgrensen var 40 km/t eller lavere. Ved høyere fartsgrenser fant man motsatt tendens; ulykkesrisikoen sank betydelig når siktlengden økte.</p>
+<h3>Signalregulering av rundkjøringer</h3>
+<p>Det er kun funnet to studier av virkningen av signalregulering av rundkjøringer på antall ulykker: en britisk (Transport for London Street Management, 2005) og en polsk (Tracz &amp; Chodur, 2012). Den britiske undersøkelsen viste at antall ulykker blir redusert med 15 prosent (95 prosent konfidensintervall [-23; -7]). Undersøkelsen er imidlertid en enkel før og etter studie og det er ikke kontrollert for trafikkmengde eller andre variabler.</p>
+<p>Den polske undersøkelsen gjaldt ombygging av to rundkjøringer til såkalte turborundkjøringer, samtidig som rundkjøringene ble signalregulert (Tracz &amp; Chodur, 2012). I den ene rundkjøringen økte det totale antallet ulykker med 6 prosent, mens antall skadde personer gikk ned med 29 prosent. I den andre rundkjøringen gikk både antall ulykker og antall skadde personer ned med 80 prosent. Undersøkelsen er en enkel før-og-etterundersøkelser som ikke har kontrollert for noen mulige feilkilder.</p>
+<p>De to undersøkelsene tyder på at signalregulering kan redusere antall ulykker i rundkjøringer, men ikke alltid gjør det.</p>
+<h3>Sikkerhet for syklister i rundkjøringer</h3>
+<p>De mest typiske sykkelulykkene i rundkjøringer er kollisjoner mellom en sykkel i rundkjøringen og en bil som er på veg inn i rundkjøringen (Schramm et al., 2014). En konfliktstudie med videoobservasjoner fant de fleste konflikter mellom syklister i rundkjøringen og biler på veg inn i eller ut av rundkjøringen (Sakshaug et al., 2010).</p>
+<p>Hvordan ombygging av kryss til rundkjøringer påvirker antall sykkelulykker, er undersøkt av:</p>
+<p style="padding-left: 40px;">de Brabander &amp; Vereeck, 2007 (Belgia)<br />
+Daniels et al., 2008 (Belgia)<br />
+Daniels et al., 2009 (Belgia)<br />
+Harris et al., 2013 (Canada)<br />
+Jensen, 2013 (Danmark)<br />
+Bahroloom et al., 2016 (Australia)<br />
+Robartes &amp; Chen, 2017 (USA)<br />
+Meuleners et al., 2019 (Australia)<br />
+Morrison et al., 2019 (Australia)</p>
+<p>Sammenlagte resultater er vist i tabell 1.6. Det er en del metodologiske forskjeller mellom studiene som kan bidra til usikkerhet i de sammenlagte resultatene. En svakhet ved de fleste studiene er at de ikke har kontrollert for antall syklister i kryssene og rundkjøringene.</p>
+<p><em>Tabell 1.6.3: Virkninger av ombygging av kryss til rundkjøringer på sykkelulykker, prosent endring av antall ulykker (usikkerhet i parentes). </em></p>
+<table style="width: 100%;" width="614">
+<tbody>
+<tr>
+<td class="lineunder" style="width: 20.5255%; background-color: #6ed481;" width="123"><strong> </strong></td>
+<td class="lineunder" style="width: 53.8588%; background-color: #6ed481;" width="340"><strong>Ulykkens alvorlighetsgrad</strong></td>
+<td class="lineunder" style="width: 41.4502%; background-color: #6ed481;" width="151"><strong>Prosent endring av antall ulykker</strong></td>
+</tr>
+<tr>
+<td style="width: 20.5255%;" width="123">Alle rundkjøringer</td>
+<td style="width: 53.8588%;" width="340">Alle skadde syklister</td>
+<td style="width: 41.4502%;" width="151"><strong>+41 </strong>(-19; +148)</td>
+</tr>
+<tr>
+<td style="width: 20.5255%;" width="123"></td>
+<td style="width: 53.8588%;" width="340">Drepte/hardt skadde syklister</td>
+<td style="width: 41.4502%;" width="151"><strong>+43 </strong>(+10; +86)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 20.5255%;" width="123"></td>
+<td class="lineunder" style="width: 53.8588%;" width="340">Skadegrad: Drepte/hardt skadde (vs. lett skadde) syklister</td>
+<td class="lineunder" style="width: 41.4502%;" width="151"><strong>-40</strong> (-56; -19)</td>
+</tr>
+<tr>
+<td style="width: 20.5255%;" width="123">Rundkjøringer med</td>
+<td style="width: 53.8588%;" width="340"></td>
+<td style="width: 41.4502%;" width="151"></td>
+</tr>
+<tr>
+<td style="width: 20.5255%;" width="123"> &#8211; Sykkelveg</td>
+<td style="width: 53.8588%;" width="340">Alle skadde syklister</td>
+<td style="width: 41.4502%;" width="151"><strong>-42</strong> (-77; +48)</td>
+</tr>
+<tr>
+<td style="width: 20.5255%;" width="123"> &#8211; Blandet trafikk</td>
+<td style="width: 53.8588%;" width="340">Alle skadde syklister</td>
+<td style="width: 41.4502%;" width="151"><strong>+74</strong> (-31; +335)</td>
+</tr>
+<tr>
+<td class="lineunder" style="width: 20.5255%;" width="123"> &#8211; Sykkelfelt</td>
+<td class="lineunder" style="width: 53.8588%;" width="340">Alle skadde syklister</td>
+<td class="lineunder" style="width: 41.4502%;" width="151"><strong>+102</strong> (+55; +163)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Resultatene viser at rundkjøringer i gjennomsnitt øker antall sykkelulykker. Resultatene er imidlertid meget usikre, og virkningen vil alltid avhenge av den konkrete utformingen av rundkjøringen og krysset den erstatter. Man kan derfor ikke konkludere at rundkjøringer generelt har flere sykkelulykker enn andre kryssløsninger.</p>
+<p>Skadegraden i sykkelulykker er i gjennomsnitt lavere i rundkjøringer enn i kryss; dette ble også funnet i en studie som ikke kunne tas med i beregningen av de sammenlagte effektene (Hosseinpour et al., 2021). En mulig forklaring er at bilene har som regel lavere fart i rundkjøringer enn i kryss.</p>
+<p><strong>Rundkjøringer med sykkelfelt:</strong> Den største ulykkesøkningen i tabell 1.6.2 er funnet for rundkjøringer med sykkelfelt. Med dette menes sykkelfelt i sirkulasjonsarealet. Flere studier viser også at rundkjøringer med sykkelfelt i gjennomsnitt har flere sykkelulykker enn rundkjøringer med sykkelveg eller uten sykkeltilrettelegging (Daniels et al., 2010, 2011; Dijkstra, 2004; Jensen, 2013, 2017; Polders et al., 2015; Vandenbulcke et al., 2014). Det er i hovedsak høy risiko for kollisjoner mellom syklister som benytter sykkelfeltet i rundkjøringen og biler som er på ev inn i eller ut av rundkjøringen (Vandenbulcke et al., 2014). Sykkelfelt er derfor i de fleste land frarådet (Schramm et al., 2014).</p>
+<p><strong>Rundkjøring med sykkelveg:</strong> For rundkjøringer med separat sykkelveg viser tabell 1.6.2 en reduksjon av antall sykkelulykker, men denne er meget usikker. En studie som har sammenlignet rundkjøringer med sykkelveg og blandet trafikk, viser også at rundkjøringer med sykkelveg har i gjennomsnitt færre sykkelulykker (Polders et al., 2015). Virkningen vil imidlertid avhenge av vikepliktsreguleringen.</p>
+<p>Når syklister på sykkelvegen har vikeplikt for biler på veg inn i eller ut av rundkjøringen, er det som regel like mange eller færre sykkelulykker enn i blandet trafikk (Leich et al., 2022). Når bilene har vikeplikt for syklister på sykkelvegen derimot, viser flere studier at det skjer flere sykkelulykker enn når syklistene har vikeplikt (Dijkstra, 2004; Jensen, 2013, 2017; Leich et al., 2022). Generelt er det ofte mye usikkerhet og forvirring rundt vikepliktsregler ved sykkelveger i rundkjøringer og det er få som overholder vikeplikten, især når det er biler som har vikeplikt for sykler og når syklister sykler med klokken, dvs. mot den vanlige kjøreretningen i rundkjøringen (Sakshaug et al., 2010).</p>
+<p><strong>Blandet trafikk: </strong>For rundkjøringer med blandet trafikk (uten sykkelveg eller -felt) viser tabell 1.6.2. en meget usikker ulykkesøkning. Tiltak for å bedre sikkerheten for syklister i rundkjøringer med blandet trafikk, kan være fartsreduserende tiltak og tiltak som «tvinger» syklistene i midten av kjørefeltet i rundkjøringen (Cumming, 2012). Også sharrows (oppmerkede sykkelsymboler og piler) er foreslått som tiltak for å bedre sikkerheten for syklister (Wilke et al., 2014).</p>
+<p><strong>Andre faktorer som påvirker sykkelulykker i rundkjøringer: </strong>I tillegg til sykkeltilretteleggingen finnes en rekke andre faktorer som påvirker syklisters sikkerhet i rundkjøringer og som bidrar til den store usikkerheten i resultatene i tabell 1.6.2.</p>
+<ul>
+<li><strong>Fartsgrense: </strong>Rundkjøringer med høyere fartsgrense har som regel flere sykkelulykker enn rundkjøringer med lavere fartsgrense (Akgün et al., 2018).</li>
+<li><strong>Fart: </strong>Hvor fort biler kjører inn i rundkjøringen, avhenger også at hvordan rundkjøringen er utformet, bl.a. kurveradius mellom veg og sirkulasjonsareal og størrelse på sentraløya (Schramm et al., 2014; Wilke et al., 2014). Rundkjøringer med et høyere fartsnivå har, ikke overraskende, i gjennomsnitt flere sykkelulykker (Akgün et al., 2018; Hels &amp; Orozova-Bekkevold, 2007; Turner et al., 2009), især ulykker mellom syklister i rundkjøring og biler på veg inn i rundkjøringen.</li>
+<li><strong>Kjørefelt på vegene inn i rundkjøringen: </strong>Rundkjøringer med flere kjørefelt på vegene inn i rundkjøringen har i gjennomsnitt flere sykkelulykker (Akgün et al., 2018). Det er ikke funnet studier som har undersøkt sammenhengen mellom antall kjørefelt i sirkulasjonsarealet og sykkelulykker.</li>
+<li><strong>Antall armer inn i rundkjøringen: </strong>Rundkjøringer med flere armer har i gjennomsnitt flere sykkelulykker enn rundkjøringer med færre armer (gjelder rundkjøringer med 3 til 5 armer; Hollenstein et al., 2019).</li>
+</ul>
+</div>
+<h2>Virkning på framkommelighet</h2>
+<div class="subchapter">
+<p>Rundkjøringer har større kapasitet enn vanlige vikepliktregulerte kryss og signalregulerte kryss. Økningen i kapasitet skyldes både at kryssende og svingende bevegelser som ofte medfører ventetid og kan hindre annen trafikk er fjernet i rundkjøringer og at trafikantene synes å godta mindre tidsluker i rundkjøringer enn i andre kryss.</p>
+<p>Til tross for at rundkjøringer fører til lavere fart (Senneset, 1983), kan total passeringstid gjennom en rundkjøring bli redusert sammenliknet med andre kryss.</p>
+<p>Størrelsen av tidsgevinsten avhenger av trafikkmengden i det enkelte kryss, variasjoner i denne over døgnet og trafikkfordelingen mellom vegarmer. Generelle tall er derfor vanskelige å oppgi. En tysk undersøkelse (Brilon &amp; Stuwe 1991) tyder på at ventetiden pr bil i en rundkjøring er omlag 15 sekunder kortere enn i et signalregulert kryss ved en timetrafikk på mellom 500 og 2.000 biler. En studie av 20 vikepliktregulerte kryss som ble ombygget til rundkjøring i Växjö i Sverige (Várhelyi 1993), viste at biler som kom fra hovedvegen i gjennomsnitt tapte 2,3 sekunder pr kryss pr bil ved omlegging til rundkjøring. Biler som kom fra sidevegen oppnådde en tidsgevinst på 4,4 sekunder pr kryss pr bil. Kryssene hadde i gjennomsnitt 9.700 innkommende biler pr døgn fra hovedvegen og 3.130 innkommende biler pr døgn fra sidevegen. Den samme undersøkelsen (Várhelyi 1993) fant at ombygging av et signalregulert kryss med 23.500 innkommende biler pr døgn til rundkjøring ga en gjennomsnittlig tidsgevinst på 10,1 sekunder pr bil.</p>
+<p>En amerikansk undersøkelse (Flannery et al., 1998) av fem kryss med årsdøgntrafikk mellom 7.600 og 17.800 kjøretøy som ble ombygd til rundkjøringer viste gjennomsnittlige tidsgevinster per kjøretøy ved passering av krysset på mellom 2 sekunder og 160 sekunder i fire av kryssene. I det femte krysset var det et gjennomsnittlig tidstap på 3,5 sekunder. En nyere amerikansk undersøkelse (Rettinget al., 2002) viste tidsgevinster på mellom 1,6 og 3,2 sekunder i gjennomsnitt per bil i tre rundkjøringer med årsdøgntrafikk mellom 3.500 og 12.000.</p>
+<p>Signalregulering av rundkjøringer øker kapasiteten og reduserer forsinkelser i hovedsak på de kontrollerende (ikke signalregulerte) tilfartene. Hvordan kapasiteten påvirkes og den samlede virkning på ventetider på alle tilfartene er avhengig av bl.a. trafikkmengder og strategien for signalreguleringen. Virkningen på kapasitet og ventetider kan være positiv, men ved lave trafikkmengder kan ventetider øke med signalregulering (Akcelik, 2006; Bernetti et al., 2003). I store rundkjøringer kan signalregulering redusere behovet for sammenflettingsfelt og dermed forbedre utnyttelsen av arealet (Bernetti et al., 2003). I områder med mange rundkjøringer, store trafikk­mengder og ulik fordeling av trafikkmengden på tilfartene i rundkjøringene kan et trafikkstyrt system som knytter sammen signalregulering i flere rundkjøringer forhindre at enkelte rundkjøringer blokkerer trafikken i større deler av vegnettet.</p>
+</div>
+<h2>Virkning på miljøforhold</h2>
+<p>Bedre trafikkavvikling i rundkjøringer reduserer støy og utslipp. En dansk undersøkelse (Bendtsen 1992) viser at utslippene av hydrokarboner (HC), karbonmonoksid (CO) og nitrogenoksider (NOx), regnet i gram pr kjørt kilometer pr bil er omlag 5-10 prosent lavere ved passering av en rundkjøring enn ved passering av et signalregulert kryss. En svensk undersøkelse (Várhelyi 1993) viste en reduksjon på 29 prosent i kullosutslipp og en reduksjon på 21 prosent i utslipp av nitrogenoksider etter at et signalregulert kryss ble ombygget til rundkjøring. I kryss som tidligere var vikepliktregulerte ble mindre gunstige resultater oppnådd. Der økte utslippene av kullos med 6 prosent og utslippene av nitrogenoksider med 4 prosent etter ombygging til rundkjøring (Várhelyi 1993). En amerikansk undersøkelse (Hallmark et al., 2011) fant høyere utslipp av CO<sub>2</sub> og HC i rundkjøringer enn i signalregulerte kryss. En annen amerikansk undersøkelse (Hu et al., 2014) fant derimot utslippsreduksjoner for CO, CO<sub>2</sub>, HC og NOx på 15-45 prosent når kryss som tidligere hadde stoppskilt ble ombygd til rundkjøring. En portugisisk studie (Fernandes et al., 2020) fant reduksjon i CO<sub>2</sub> og NOx utslipp ved kjøring gjennom rundkjøringer, sammenlignet med vegstrekningene før og etter rundkjøringene. Virkningene på utslipp er følgelig varierende, men de fleste undersøkelser tyder på reduksjon.</p>
+<p>Signalregulering av rundkjøringer reduserer ventetider på tilfarter med lav trafikkmengde, men øker antall kjøretøy på tilfarter med stor trafikkmengde som må stoppe å vente før innkjøringen i rundkjøringen. En studie i Italia (Akcelik, 2006) viste at signalregulering reduserte utslipp i en rundkjøring.</p>
+<h2>Kostnader</h2>
+<p>Kostnadene ved å bygge en rundkjøring kan variere mellom noen få hundre tusen kroner og mellom 5 og 10 millioner kroner. Ifølge opplysninger gitt av vegkontorene (Elvik &amp; Rydningen, 2002) var gjennomsnittskostnaden ved ombygging av et T-kryss til rundkjøring 4,82 mill. kr. Tallet bygger på opplysninger om 27 rundkjøringer i Norge. Gjennomsnittskostnaden ved ombygging av et X-kryss til rundkjøring var 3,47 mill. kr, basert på opplysninger om 19 rundkjøringer. Oppdatert til dagens priser med kostnadsindeks for veganlegg tilsvarer dette om lag 11,9 og 8,5 mill. kr. Eventuelle endringer i vedlikeholdskostnader er ikke kjent.</p>
+<div class="subchapter"></div>
+<h2>Nytte-kostnadsvurderinger</h2>
+<div class="subchapter">
+<p>Selvik et al. (2020) har gjort nyttekostnadsanalyser av å bygge om kryss til rundkjøringer på grunnlag av oppdaterte analyser av dataene samlet av Elvik og Rydningen (2002).</p>
+<p>Data for 27 T-kryss som ble bygget om til rundkjøring viste en samlet beregnet nytte på 175,7 mill. kr og en samlet beregnet kostnad på 156,3 mill. kr. Nytten var større enn kostnadene i 15 av rundkjøringene. Høyeste verdi av nyttekostnadsbrøken var 14,9 og laveste verdi 0,1.</p>
+<p>For 19 X-kryss var samlet beregnet nytte 91,8 mill. kr. og samlet beregnet kostnad 79,0 mill. kr. Nytten var større enn kostnadene i 12 kryss. Høyeste verdi av nyttekostnadsbrøken var 8,2 og laveste verdi 0,5.</p>
+</div>
+<h2>Formelt ansvar og saksgang</h2>
+<div class="subchapter">
+<h3>Initiativ til tiltaket</h3>
+<p>Initiativ til bygging av rundkjøring tas ofte av vegmyndighetene. Vegnormalene (Statens vegvesen, håndbok N100, 2022) gir kriterier for valg av krysstype og drøfter fordeler og ulemper ved rundkjøringer og signalregulerte kryss. Utforming av rundkjøringer er beskrevet i håndbok V121 (2013).</p>
+<p>Dersom rundkjøringer krever omdisponering av regulert areal, må reguleringsplan utarbeides. Dette vil f.eks. gjelde dersom rundkjøringen krever plass utenfor eksisterende vegareal, slik at dette må utvides. Vegmyndigheten er ansvarlig for at nødvendige planer utarbeides og korrekt framgangsmåte med hensyn til offentlig innsyn mv blir fulgt.</p>
+<h3>Formelle krav og saksgang</h3>
+<p>Vedtak om bygging av rundkjøring treffes av vegholderen for den enkelte type offentlig veg. Vedtaksmyndigheten vil i praksis ofte være delegert til vegsjef eller annet administrativt organ.</p>
+<h3>Ansvar for gjennomføring av tiltaket</h3>
+<p>Vegmyndigheten er ansvarlig for gjennomføring av vedtak om å bygge om kryss til rundkjøring. Kostnadene bæres av vegholderen, det vil si staten for riksveg, fylkeskommunen for fylkesveg og kommunen for kommunal veg.</p>
+</div>
+<h2>Referanser</h2>
+<div class="subchapter">
+<p>Akcelik, R. (2006). Operating cost, fuel consumption and pollutant emission savings at a roundabout with metering signals. Paper presented at the 22nd ARRB Conference &#8211; Research into Practice, Canberra, Australia.</p>
+<p>Akgün, N., Dissanayake, D., Thorpe, N., &amp; Bell, M. C. (2018). Cyclist casualty severity at roundabouts: To what extent do the geometric characteristics of roundabouts play a part? Journal of Safety Research, 67, 83–91.</p>
+<p>Ambros, J. (2015). Safety evaluation of Czech roundabouts. Paper submitted for presentation at 94<sup>th</sup> Annual Meeting of the Transportation Research Board, Washington D. C., January 11-15, 2015.</p>
+<p>Bahrololoom, S., Moridpour, S., &amp; Tay, R. (2016). Factors affecting bicycle fatal and serious injury crashes in Victoria, Australia. In Proceedings of the 38th Australasian Transport Research Forum (pp. 1-12). Australian Transport Research Forum.</p>
+<p>Bendtsen, H. (1992). Rundkørsler reducerer luftforureningen. Dansk Vejtidsskrift, 10, 34.</p>
+<p>Bernetti, G., Dall&#8217;Acqua, M., &amp; Longo, G. (2003). Unsignalized vs. signalised roundabouts under critical traffic conditions: A quantitative comparison. Paper presented at the European Transport Conference, Strasbourg.</p>
+<p>Brabander, B.D., Vereeck, L. (2007). Safety effects of roundabouts in Flanders: Signal type, speed limits and vulnerable road users. Accident Analysis and Prevention, 39, 591-599.</p>
+<p>Brilon, W. &amp; B. Stuwe. (1991). Kreisverkehrsplätze &#8211; Leistungsfähigkeit, Sicherheit und verkehrstechnische Gestaltung. Strassenverkehrstechnik, 35, 296-304.</p>
+<p>Brilon, W., B. Stuwe &amp; O. Drews. (1993). Sicherheit und Leistungsfähigkeit von Kreisverkehrsplätzen. FE Nr 77359/91. Lehrstuhl für Verkehrswesen, Ruhr-Universität Bochum.</p>
+<p>Brüde, U. &amp; J. Larsson. (1985). Korsningsåtgärder vidtagna inom vägförvaltningarnas trafiksäkerhetsarbete. Regressions- och åtgärdseffekter. VTI-rapport 292. Statens väg- och trafikinstitut (VTI), Linköping.</p>
+<p>Brüde, U. &amp; J. Larsson. (1992). Trafiksäkerhet i tätortskorsningar. VTI-meddelande 685. Statens väg- och trafikinstitut (VTI), Linköping.</p>
+<p>Brüde, U. &amp; J. Larsson. (1999). Trafiksäkerhet i cirkulationsplatser avseende motorfordon. VTI meddelande 865. Väg- och Transportforskningsinstitutet, Linköping.</p>
+<p>Cedersund, H-Å. (1983A). Cirkulationsplatser. VTI-meddelande 361. Statens väg- och trafikinstitut (VTI), Linköping.</p>
+<p>Cedersund, H-Å. (1983B). Olyckor i tätortskorsningar. VTI-meddelande 362. Statens väg- och trafikinstitut (VTI), Linköping.</p>
+<p>Churchill, T., Stipdonk, H., Bijleveld, F. (2010). Effects of roundabouts on road casualties in the Netherlands. SWOV Report R-2010-21. Leidschendam, SWOV Institute for Road Safety Research.</p>
+<p>Corben, B., C. Ambrose &amp; F. C. Wai. (1990). Evaluation of accident black spot treatments. Report 11. Monash University (Melbourne, Australia), Accident Research Centre, Melbourne, Australia.</p>
+<p>Cumming, B. (2012). A bicycle friendly roundabout: Designing to direct cyclists to ride where drivers look. Paper presented at the Proceedings of the fourth Australian Cycling Conference.</p>
+<p>Dagersten, A. (1992). Roundabouts in Switzerland and Sweden. Thesis 72. University of Lund, Lund Institute of Technology, Department of Traffic Planning and Engineering, Lund, Sweden.</p>
+<p>Daniels, S., Nuyts, E., Wets, G. (2008). The effects of roundabouts on traffic safety for bicyclists: an observational study. Accident Analysis and Prevention, 40, 518-526.</p>
+<p>Daniels, S., Brijs, T., Nuyts, E., Wets, G. (2009). Injury crashes with bicyclists at roundabouts: influence of some location characteristics and the design of cycle facilities. Journal of Safety Research, 40, 141-148.</p>
+<p>Daniels, S., Brijs, T., Nuyt, E., Wets, G. (2010). Explaining variation in safety performance of roundabouts. Accident Analysis and Prevention, 42, 393-402.</p>
+<p>Daniels, S., Brijs, T., Nuyts, E., &amp; Wets, G. (2011). Extended prediction models for crashes at roundabouts. Safety science, 49(2), 198-207.</p>
+<p>De Brabander, B., &amp; Vereeck, L. (2007). Safety effects of roundabouts in Flanders: Signal type, speed limits and vulnerable road users. Accident Analysis &amp; Prevention, 39(3), 591-599.</p>
+<p>De Pauw, E., Daniels, S., Brijs, T., Hermans, E., Wets, G. (2014). Safety effects of an extensive black spot treatment programme in Flanders-Belgium. Accident Analysis and Prevention, 66, 72-79.</p>
+<p>Department for Transport (2009). Signal controlled roundabouts. Local Transport Note 1/09. London: Department for Transport.</p>
+<p>Dijkstra, A. (2004). Rotondes met vrijliggende fietspaden ook veilig voor fietsers? [Are roundabouts with separate cycle tracks also safe for cyclists?]. Institute for Road Safety Research.</p>
+<p>Elvik, R. &amp; U. Rydningen. (2002). Effektkatalog for trafikksikkerhetstiltak. TØI rapport 572. Transportøkonomisk institutt, Oslo.</p>
+<p>Fernandes, P., Tomas, R., Acuto, F., Pascale, A., Bahmankhah, B., Guarnaccia, C., Grana, A., Coelho, M. C. (2020). Impacts of roundabouts in suburban areas on congestion-specific vehicle profiles, pollutant and noise emissions: An empirical analysis. Sustainable Cities and Society, 62, 102386.</p>
+<p>Flannery, A. &amp; T. K. Datta (1996). Modern Roundabouts and Traffic Crash Experience in the United States. Paper 960658. Transportation Research Board 75th Annual Meeting January 7-11, 1996 Washington D.C.</p>
+<p>Flannery, A., Elefteriadou, L., Koza, P., McFadden, J. (1998). Safety, delay, and capacity of single-lane roundabouts in the United Stated. Transportation Research Record, 1646, 63-70.</p>
+<p>Giæver, T. (1990). Ulykkesfrekvenser i rundkjøringer og signalregulerte kryss. STF63 A90002. SINTEF Samferdselsteknikk, Trondheim.</p>
+<p>Giæver, T. (1997). Rundkjøringer i Hordaland – ulykkesanalyser, utforming og trafikantatferd. Rapport STF22 A97601. SINTEF Bygg og miljøteknikk, samferdsel, Trondheim.</p>
+<p>Glenn, G. D., Tyler, P., Hengst, B., Huang, E., &amp; Quail, D. (2009). Enhanced roundabout metering. Paper presented at the 16th ITS World Congress and Exhibition on Intelligent Transport Systems and Services. Stockholm, Sweden.,</p>
+<p>Green, H. (1977). Accidents at off-side priority roundabouts with mini or small islands. TRRL Laboratory Report 774. Transport and Road Research Laboratory, Crowthorne, Berkshire.</p>
+<p>Gross, F., Lyon, C., Persaud, B., Srinivasan, R. (2013). Safety effectiveness of converting signalized intersections to roundabouts. Accident Analysis and Prevention, 50, 234-241.</p>
+<p>Hall, R. D. &amp; M. McDonald. (1988). Junction design for safety. Paper presented at Roads and Traffic 2000, International Road and Traffic Conference, Berlin, 6-9 September 1988. Proceedings, Vol 4-2, 147-151.</p>
+<p>Hallmark, S. L., Wang, B., Mudgal, A., Isebrands, H. (2011). On-road evaluation of emission impacts of roundabouts. Transportation Research Record, 2265, 226-233.</p>
+<p>Harris, M. A., Reynolds, C. C. O., Winters, M., Cripton, P. A., Shen, H., Chipman, M. L., . . . Teschke, K. (2013). Comparing the Effects of Infrastructure on Bicycling Injury at Intersections and Non-Intersections Using a Case-Crossover Design. Injury Prevention, 19(5), 303-310.</p>
+<p>Hels, T., &amp; Orozova-Bekkevold, I. (2007). The effect of roundabout design features on cyclist accident rate. Accident Analysis &amp; Prevention, 39(2), 300–307.</p>
+<p>Hollenstein, D., Hess, M., Jordan, D., &amp; Bleisch, S. (2019). Investigating roundabout properties and bicycle accident occurrence at Swiss roundabouts: A logistic regression approach. ISPRS International Journal of Geo-Information, 8(2), 95.</p>
+<p>Holzwarth, J. (1992). Ausserorts-Kreisverkehrsplätze zur Unfallstellenbeseitigung. Ergebnisse zweier Modellvorhaben in Baden-Württemberg. Strassensverkehrstechnik, 36, 142-146.</p>
+<p>Hosseinpour, M., Madsen, T. K. O., Olesen, A. V., &amp; Lahrmann, H. (2021). An in-depth analysis of self-reported cycling injuries in single and multiparty bicycle crashes in Denmark. Journal of safety research, 77, 114-124.</p>
+<p>Hu, W., McCartt, A. T., Jermakian, J. S., Mamndavilli, S. (2014). Public opinion, traffic performance, the environment, and safety after construction of double-lane roundabouts. Transportation Research Record, 2402, 47-55.</p>
+<p>Huber, C. A. &amp; F. Bühlmann (1994). Sicherheit von Kreiselanlagen. Erfahrungen und vorläufige Empfehlungen. Pilotstudie. Schweitzerische Beratungsstelle für Unfallverhütung, Bern,.</p>
+<p>Hydén, C., &amp; Várhelyi, A. (2000). The effects on safety, time consumption and environment of large scale use of roundabouts in an urban area: A case study. Accident Analysis and Prevention, 32(1), 11–23.</p>
+<p>Hydén, C., K. Odelid &amp; A. Várhelyi. (1992). Effekten av generell hastighetsdämpning i tätort. Resultat av et storskaligt försök i Växjö. I. Huvudrapport. Lunds Tekniske Høgskola, Institutionen för trafikteknik, Lund.</p>
+<p>Jensen, S. U. (2017). Safe roundabouts for cyclists. Accident Analysis &amp; Prevention, 105, 30–37.</p>
+<p>Jensen, S. (2013). Safety effects of converting intersections to roundabouts. Transportation Research Record, 2389, 22-29.</p>
+<p>Johannessen, S. (1985). Rundkjøringer. Forslag til retningslinjer basert på data om 35 rundkjøringer. STF63 A85008. SINTEF Samferdselsteknikk, Trondheim.</p>
+<p>Jørgensen, E. &amp; Jørgensen, N.O. (2002). Trafiksikkerhed i rundkørsler i Danmark. Rapport 235 2002. København, Vejdirektoratet.</p>
+<p>Jørgensen, E. &amp; N. O. Jørgensen. (1992). Er der mere nyt om rundkørsler? Dansk Vejtidsskrift, 12, 29-31.</p>
+<p>Jørgensen, E. &amp; N. O. Jørgensen. (1994). Sikkerhed i nyere danske rundkørsler. Paper presentert ved Trafikdage ved Aalborg Universitets Center (AUC), 28-30 august, 1994. Proceedings, 191-198. Aalborg.</p>
+<p>Jørgensen, N. O. (1991). Rundkørslers kapacitet og sikkerhed. Dokumentasjonsrapport. Danmarks Tekniske Højskole, Institut for veje, trafik og byplan, København.</p>
+<p>Kristiansen, P. (1992). Erfaringer med rundkjøringer i Akershus. Statens vegvesen Akershus, Oslo.</p>
+<p>Lahrmann, H. (1981). Rundkørsler: trafiksikkerhed, geometrisk udformning, kapacitet. Vejdirektoratet, Sekretariatet for Sikkerhedsfremmende Vejforanstaltninger (SVV), Næstved.</p>
+<p>Lalani, N. (1975). The impact on accidents of the introduction of mini, small and large roundabouts at major/minor priority junctions. Traffic Engineering and Control, 16, 560-561.</p>
+<p>Leich, A., Fuchs, J., Srinivas, G., Niemeijer, J., &amp; Wagner, P. (2022). Traffic Safety at German Roundabouts—A Replication Study. Safety, 8(3), 50.</p>
+<p>Maycock, G. &amp; Hall, R.D. (1984). Accidents at 4-arm roundabouts. Transport and road Research Laboratory, Report LR 1120.Crowthorne.</p>
+<p>Meuleners, L., Hendrie, D., Legge, M. &amp; Cercarelli, L. R. (2005). An Evaluation of the Effectiveness of the Black Sport Programs in Western Australia 2000-2002, Rapport RR 155, Injury Research Centre, The University of Western Australia, Crawley.</p>
+<p>Meuleners, L., Hendrie, D., Lee, A. H. &amp; Legge, M., (2008). Effectiveness of the Black Spot Programs in Western Australia, Accident Analysis and Prevention, 40, 1211-1216.</p>
+<p>Meuleners, L. B., Stevenson, M., Fraser, M., Oxley, J., Rose, G., &amp; Johnson, M. (2019). Safer cycling and the urban road environment: A case control study. Accident Analysis &amp; Prevention, 129, 342-349.</p>
+<p>Morrison, C. N., Thompson, J., Kondo, M. C., &amp; Beck, B. (2019). On-road bicycle lane types, roadway characteristics, and risks for bicycle crashes. Accident Analysis &amp; Prevention, 123, 123-131.</p>
+<p>Motha, J., Musidlak B. &amp; Williams, C. (1995). An economic evaluation of the australian federal black spot road safety program, Prodeedings of the 7th World Conference on Transport Research, volume 3, Transport Policy, 137-149, Sydney.</p>
+<p>Mountain L., Maher, M. &amp; Fawaz, B. (1998). Improved estimates of the safety effects of accident remedial schemes, Traffik Engineering and Control, 10, 554-554.</p>
+<p>Newstead, S., &amp; Corben, B. (2001). Evaluation of the 1992-1996 Transport Accident Commission funded accident black spot treatment program in Victoria. Report No. 182. Melbourne, Australia: Monash University Accident Research Centre.</p>
+<p>Nygaard, H. C. (1988). Erfaringer med rundkjøringer i Akershus. Statens vegvesen Akershus, Oslo.</p>
+<p>Odberg. T. A. (1996). Erfaringer med rundkjøringer i Vestfold. Hovedoppgave i samferdselsteknikk. Trondheim, NTNU, Institutt for samferdselsteknikk.</p>
+<p>Oslo Veivesen (1995). Ulykkesanalyse. Rundkjøringer i Oslo. Statens Vegvesen, Oslo.</p>
+<p>Persaud, B.N., Retting, R.A., Gårder, P.E. &amp; Lord, D. (2001). Observational before-after study of the safety effect of US roundabout conversions using the Empirical Bayes method. TRB paper 01-0562. Washington DC, Transportation Research Board.</p>
+<p>Polders, E., Daniels, S., Casters, W., &amp; Brijs, T. (2015). Identifying crash patterns on roundabouts. Traffic Injury Prevention, 16(2), 202–207.</p>
+<p>Retting, R.A., Luttrell, G. &amp; Russell, E.R. (2002). Public opinion and traffic flow impacts of newly installed modern roundabouts in the United States. ITE Journal 72:30-32,37.</p>
+<p>Robartes, E., &amp; Chen, T. D. (2017). The effect of crash characteristics on cyclist injuries: An analysis of Virginia automobile-bicycle crash data. Accident Analysis &amp; Prevention, 104, 165-173.</p>
+<p>Sakshaug, L., Laureshyn, A., Svensson, Å., Hydén, C. (2010). Cyclists in roundabouts – different design solutions. Accident Analysis and Prevention, 42, 1338-1351.</p>
+<p>Schelling, A., Jespersen, L. K. (2009). Sorte pletter på statsveje. Evaluering 2009. Vejdirektoratet, København.</p>
+<p>Schnüll, R., W. Haller &amp; H. Von Lübke. (1992). Sicherheitsanliegen bei der Umgestaltung von Knotenpunkten in Städten. Forschungsberichte der Bundesanstalt für Strassenwesen (BASt) 253. Bundesanstalt für Strassenwesen, Bergisch-Gladbach.</p>
+<p>Schoon, C. C. &amp; J. Van Minnen. (1993). Ongevallen op rotondes II. Tweede onderzoek naar de onveiligheid van rotondes vooral voor fietsers en bromfietsers. R-93-16. Stichting Wetenschappelijk Onderzoek Verkeersveiligheid, SWOV, Leidschendam.</p>
+<p>Schramm, A., Haworth, N., van den Dool, D., Murphy, J., Qu, X., &amp; McDonald, M. (2014). Roundabout design and cycling safety. In Proceedings of the 3rd International Cycling Safety Conference (ICSC2014) (pp. 1-15). 3rd International Cycling Safety Conference Organizing Committee.</p>
+<p>Seim, R. (1994). Analyse av kryssulykker i Akershus fylke 1990-93. Hovedoppgave i samferdselsteknikk høsten 1994. Norges Tekniske Høgskole, Institutt for samferdselsteknikk, Trondheim.</p>
+<p>Selvik, J. T., Elvik, R. Abrahamsen, E. B. (2020). Can the use of road safety measures on national roads in Norway be interpreted as an informal application of the ALARP principle? Accident Analysis and Prevention, 135, 105363.</p>
+<p>Senneset, G. (1983). Rundkjøringer. Del II Hovedrapport. Erfaringer fra utvalgte rundkjøringer i Norge. STF63 A83001 II. SINTEF Samferdselsteknikk, Trondheim.</p>
+<p>StatensVegvesen. (2022). Håndbok N100 Vegnormaler. Veg- og gateutforming. Oslo, Statens vegvesen.</p>
+<p>Tracz, M., Chodur, J. (2012). Performance and safety of roundabouts with traffic signals. Procedia, Social and Behavioral Sciences, 53, 789-800</p>
+<p>Traffic Engineering Branch (2005). An Evaluation of the National Black Spot Programme in Tasmania. Traffic Engineering Branch, Department of Energy and Resources, Tasmania, Australia.</p>
+<p>Traffic Engineering Branch (2007). State Black Spot Program. Notes on Administration. Traffic Engineering Branch, Department of Energy and Resources, Tasmania, Australia.</p>
+<p>Tran, T. (1999). Vegtrafikkulykker i rundkjøringer – 1999. TTS rapport 2, 1999. Vegdirektoratet, Transport- and trafikksikkerhetsavdelingen, Oslo.</p>
+<p>Transport for London Street Management (2005). Do traffic signals at roundabouts save lives? Transportation Professional, April.</p>
+<p>Tudge, R. T. (1990). Accidents at roundabouts in New South Wales. Proceedings of the 15th ARRB Conference, Part 5, 331-349. Australian Road Research Board, Vermont South, Australia.</p>
+<p>Turner, S. A., Roozenburg, A. P., &amp; Smith, A. W. (2009). Roundabout crash prediction models. NZ Transport Agency.</p>
+<p>Van Minnen, J. (1990). Ongevallen op rotondes. Vergelijkende studie van de onveiligheid op een aantal locaties waar een kruispunt werd vervangen door een &laquo;nieuwe&raquo; rotonde. R-90-47. Stichting Wetenschappelijk Onderzoek Verkeersveiligheid, SWOV, Leidschendam.</p>
+<p>Vandenbulcke, G., Steenberghen, T., Thomas, I. (2007). Accessibility indicators to places and transports: final report. Research Contract AP/02. Belgian Science Policy and FPS Mobility and Transports, Brussels.</p>
+<p>Vandenbulcke, G., Thomas, I., &amp; Int Panis, L. (2014). Predicting cycling accident risk in Brussels: A spatial case-control approach. Accident Analysis &amp; Prevention, 62, 341-357.</p>
+<p>Várhelyi, A. (1993). Minirondeller. Energi- ofch miljöeffekter. TFB-rapport 1993:6. Transportforskningsberedningen, Stockholm.</p>
+<p>Voss, H. (1994). Zur Verkehrssicherheit innenörtlicher Knotenpunkte. Zeitschrift für Verkehrssicherheit, 40, 68-72.</p>
+<p>Vujanic, M., Antic, B., Pesic, D., Savicevic, M. (2016). Safety efffectiveness of converting conventional intersections to roundabouts: Case study in the city of Nis. Promet – Traffic and Transportation, 28, 529-537.</p>
+<p>Værø, H. (1992A). Effekt af sortpletbekæmpelse i Hillerød. Vejdirektoratet, Trafiksikkerhedsafdelingen, København.</p>
+<p>Værø, H. (1992C). Effekt af sortpletbekæmpelse i Silkeborg. Vejdirektoratet, Trafiksikkerhedsafdelingen, København.</p>
+<p>Værø, H. (1992D). Effekt af sortpletbekæmpelse i Skælskør. Vejdirektoratet, Trafiksikkerhedsafdelingen, København.</p>
+<p>Værø. H. (1992B). Effekt af sortpletbekæmpelse i Nyborg. Vejdirektoratet, Trafiksikkerhedsafdelingen, København.</p>
+<p>Wang, J. Cicchino, J. B. (2022). Safety effects of roundabout conversions in Carmel, Indiana, the Roundabout City. Journal of Safety Research, 82, 159-165.</p>
+<p>Wilke, A., Lieswyn, J., &amp; Munro, C. (2014). Assessment of the Effectiveness of On-road Bicycle Lanes at Roundabouts in Australia and New Zealand, Austroads Publication No. Ap-r461-14. Austroads Ltd, Sydney, NSW.</p>
+<p>Zhao, Y. (2017). Evaluation of safety effects of roundabouts in the region of Waterloo: inclement weather and conversion. Master Thesis in Geography. Waterloo, Ontario.</p>
+<p>Zirkel, B., Park, S., McFadden, J., Angelastro, M., McCarthy, L. (2013). Influence of sight distance on crash rates and operating speeds at low-volume single-lane roundabouts in the United States. Transportation Research Record, 2389, 42-50.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		
+	    	</article>										</div>
+										
+										<br/><br/> 
+									</div>
+								</div>	
+								<div class="column2"> 
+										<div class="column_inner">
+		<aside class="sidebar">
+							
+			<div class="widget widget_text">			<div class="textwidget"><h5>Andre relevante tiltak</h5><!-- her --><ul class="same_cat"><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc617/">1.1 Infrastrukturtiltak for syklister</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc618/">1.2 Motorveger</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc619/">1.3 Omkjøringsveger</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc620/">1.4 Hovedveger og innfartsveger i byer og tettsteder</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc621/">1.5 Kanalisering av kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc622/">1.6 Rundkjøringer</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc623/">1.7 Endret geometrisk utforming av kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc624/">1.8 Oppdeling av ett X-kryss til to T-kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc625/">1.9	Planskilte kryss</a>  </li><li class="same_cat"><a href="https://www.tshandbok.no/del-2/1-vegutforming-og-vegutstyr/doc627/">1.11 Utbedring av vegers tverrprofil</a>  </li></ul>
+</div>
+		</div>
+			</div>		</aside>
+	</div>
+								</div>
+							</div>
+											</div>
+                                 </div>
+	
+
+
+		
+	</div>
+</div>
+
+
+
+	<footer >
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+            			<div class="footer_top">
+								<div class="container">
+					<div class="container_inner">
+																	<div class="three_columns clearfix">
+								<div class="column1 footer_col1">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column2 footer_col2">
+									<div class="column_inner">
+																			</div>
+								</div>
+								<div class="column3 footer_col3">
+									<div class="column_inner">
+																			</div>
+								</div>
+							</div>
+															</div>
+				</div>
+							</div>
+					</div>
+							<div class="footer_bottom_holder">
+                								<div class="container">
+					<div class="container_inner">
+										<div class="three_columns footer_bottom_columns clearfix">
+					<div class="column1 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Ansvarlig utgiver</h5>			<div class="textwidget"><p><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172692" role="img" src="/wp-content/uploads/2020/06/toi-logo-byline-nor.svg" alt="" width="271" height="30" /></p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column2 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Redaktører:</h5>			<div class="textwidget"><p>Alena Høye (TØI)<br />
+Rune Elvik (TØI)</p>
+</div>
+									</div>
+						</div>
+					</div>
+					<div class="column3 footer_bottom_column">
+						<div class="column_inner">
+							<div class="footer_bottom">
+								<h5 class="footer_text_title">Finansieringspartnere</h5>			<div class="textwidget"><p><a href="http://www.regjeringen.no/nb/dep/sd.html?id=791"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-172057" src="https://www.tshandbok.no/wp-content/uploads/2019/04/sd-col.png" alt="" width="136" height="44" /><br />
+</a><a href="https://www.vegvesen.no"><img loading="lazy" decoding="async" class="alignnone size-full wp-image-160689" src="https://www.tshandbok.no/wp-content/uploads/2013/05/160689.png" alt="" width="110" height="57" /></a></p>
+</div>
+									</div>
+						</div>
+					</div>
+				</div>
+									</div>
+			</div>
+						</div>
+				</div>
+	</footer>
+		
+</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/bridge-child\/*","\/wp-content\/themes\/bridge\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+     <script type="text/javascript" id="pf_script">
+                      var pfHeaderImgUrl = '';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfImagesSize = 'full-size';
+          var pfImageDisplayStyle = 'right';
+          var pfEncodeImages = '0';
+          var pfShowHiddenContent  = '0';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+
+            var pfCustomCSS = "/wp-content/themes/bridge-child/css/printfriendly.css";
+          var pfPlatform = 'WordPress';
+
+        (function($){
+            $(document).ready(function(){
+                if($('.pf-button-content').length === 0){
+                    $('style#pf-excerpt-styles').remove();
+                }
+            });
+        })(jQuery);
+        </script>
+      <script defer src='https://cdn.printfriendly.com/printfriendly.js'></script>
+            
+            <link rel='stylesheet' id='font-awesome-css' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=6.8.10' type='text/css' media='all' />
+<script type="text/javascript" id="toc-front-js-extra">
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1","smooth_scroll_offset":"50"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1&#039; defer onload=&#039;" id="toc-front-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.prettyPhoto.js?ver=6.8.10&#039; defer onload=&#039;" id="prettyphoto-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.flexslider-min.js?ver=6.8.10&#039; defer onload=&#039;" id="flexslider-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.fullPage.min.js?ver=6.8.10&#039; defer onload=&#039;" id="one_page_scroll-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.mousewheel.min.js?ver=6.8.10&#039; defer onload=&#039;" id="mousewheel-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.touchSwipe.min.js?ver=6.8.10&#039; defer onload=&#039;" id="touchSwipe-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.isotope.min.js?ver=6.8.10&#039; defer onload=&#039;" id="isotope-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge/js/plugins/jquery.stretch.js?ver=6.8.10&#039; defer onload=&#039;" id="stretch-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/default.js?ver=6.8.10&#039; defer onload=&#039;" id="default-js"></script>
+<script type="text/javascript" src="https://www.tshandbok.no/wp-content/themes/bridge-child/js/custom.js?ver=1591615404&#039; defer onload=&#039;" id="ttk_custom-js"></script>
+</body>
+</html>	
