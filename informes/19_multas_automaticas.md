@@ -200,3 +200,213 @@ Programa San Isidro 2027 · Investigación al 03/10/2026.
   - un dictamen de la AAIP sobre si las bases municipales deben inscribirse en el registro nacional;
   - una adhesión de San Isidro al SINTyS o a la Ley 15.430.
 - **Todo lo marcado [inferencia] es opinión jurídica** y necesita dictamen de un abogado antes de pasar al programa.
+
+
+---
+---
+
+# Segunda parte · Trabajo en vez de plata, convenio con la Provincia, tribunal en línea y cantidad de multas
+
+Investigación al 03/10/2026.
+
+**Fuentes nuevas:**
+- `01_raw/multas_automaticas/s_trabajo_convenio_cantidad/` para los puntos 7, 8 y 10.
+- `01_raw/multas_automaticas/r_tribunal_en_linea/` para el punto 9 y la corrección.
+
+Las normas base siguen en `01_raw/multas/1_ley_y_montos/`.
+
+**El cliente descartó que el Municipio adelante las multas.** Por eso no se responden las preguntas del adelanto. Lo que se investigó sobre eso quedó en la carpeta `r_tribunal_en_linea/` y no se usa.
+
+*Donde esta segunda parte corrige a la primera, vale lo de esta segunda parte.*
+
+---
+
+## Corrección a la respuesta 2 de la primera parte
+
+- **La respuesta 2 decía que las cuotas del pago voluntario las da sólo la Provincia. No es así:** Balcarce las da por decreto municipal. [verificado]
+  - **Decreto 26/2022:** hasta 8 cuotas.
+  - **Decreto 21/2026:** hasta 6 cuotas, que se piden en persona dentro de los 15 días del acta. Se firma un convenio de reconocimiento, y si no se pagan dos cuotas seguidas se pierde el beneficio.
+- **La base que usan:** el Código de Faltas (Decreto-Ley 8751/77, art. 16 e) deja las «modalidades» del pago voluntario a «las Ordenanzas, Decretos y Reglamentos Municipales». [verificado]
+- **No sé si vale para tránsito,** que tiene un régimen provincial (Decreto 532/09, Anexo I, art. 33 b), ni si el sistema provincial de cobro lo permite. [inferencia, necesita dictamen de un abogado]
+- **Lo que cambia:** las cuotas del pago voluntario podrían no necesitar a la Provincia. **El monto rebajado según el ingreso sí la necesita** (ver punto 8).
+
+---
+
+## Respuestas en una línea
+
+**7 · Trabajo en vez de plata: NO SE SABE. Lo más defendible es que lo autorice el juez después de la condena, a pedido del vecino y con una ordenanza que organice el programa. Ofrecerlo «de entrada» no tiene base clara.** [inferencia, necesita dictamen de un abogado]
+- **El art. 21 del Código Penal exige condena:** habla de «el condenado» y del «término que fije la sentencia», y llega a tránsito por la Ley 24.449, art. 90, y por el Código de Faltas, art. 3. [verificado]
+- **Ese artículo es para antes de convertir la multa en prisión, y en tránsito la multa impaga no se convierte en arresto:** se cobra por vía ejecutiva (Ley 24.449, art. 85 b; Ley 13.927, art. 35 bis). Por eso su aplicación «en lo pertinente» es dudosa. [verificado los textos; el efecto: inferencia]
+- **La Provincia ya lo tuvo y lo sacó:** la Ley 11.768 (1996) dejaba al juez «disponer el cumplimiento de tareas comunitarias» si el infractor no pagaba; en 2006 el Gobernador vetó el trabajo comunitario como «única sanción» por los «altos índices de lesiones y mortalidad»; la Ley 13.927 (2008) no lo incluye. [verificado]
+- **El pago voluntario es dinero:** el mínimo de la falta menos 50% (Decreto 532/09, Anexo I, art. 33 b). No encontré ninguna norma provincial que deje cambiarlo por trabajo. [verificado; búsqueda en el sistema de normas de la Provincia]
+- **Lo que la IA sí puede hacer:** informar la opción y tomar el pedido apenas llega la multa. La decisión tiene que ser una resolución del juez. [inferencia]
+- **Pinamar (Ord. 6148/2022) lo hace antes de la sentencia:** el vecino reconoce la falta dentro del plazo de descargo y acredita que no puede pagar. Una jornada de 4 horas vale 50 UF ($114.050, 12,5 UF por hora). Si no cumple, debe la multa sin la rebaja; el seguro lo paga el infractor. [verificado; pesos: cálculo propio]
+- **Con la regla de Pinamar:** el pago voluntario por velocidad (75 UF) son 6 horas; el mínimo por sentencia (150 UF), 12 horas. [cálculo propio]
+- **Otros precedentes bonaerenses:** Baradero (2019), La Plata (2019), Junín (2019, después de la sentencia), Rauch (2020), Gonzales Chaves (2018, con seguro del Municipio), Capitán Sarmiento (2022), San Andrés de Giles (2023) y Coronel Rosales (2024). Todos por ordenanza. [verificado; Junín: probable, prensa]
+- **Uso real:** en Junín, sobre unas 500 sentencias por mes, en dos meses lo pidió una sola persona. De Pinamar no hay datos. [probable, prensa]
+- **Riesgos:**
+  - **seguro**, para cubrir accidentes durante la tarea;
+  - **relación laboral**: la Ley de Contrato de Trabajo, art. 23, presume contrato si hay dependencia;
+  - **trabajo forzoso**: el Convenio 29 de la OIT admite el trabajo exigido por «sentencia judicial», y el juez de faltas no es Poder Judicial.
+  - Por eso conviene que sea voluntario, sin paga, con tope de horas y nunca para una empresa privada. [verificado los textos; la conclusión: inferencia, necesita dictamen de un abogado]
+
+**8 · Convenio con la Provincia como prueba piloto. Las cuotas: SÍ. El monto según el ingreso: NO por convenio ni por disposición.** [inferencia, necesita dictamen de un abogado]
+- **Cuotas.** Hay tres vías:
+  - la del juez, caso por caso (Ley 24.449, art. 85 c);
+  - la del Municipio, como Balcarce (ver la corrección de arriba);
+  - la de la Dirección Provincial de Política y Seguridad Vial, por disposición «con alcance general» (Decreto 532/09, Anexo I, art. 33 b). [verificado]
+- **«Alcance general»:** se opone a una medida para una persona determinada, no necesariamente a toda la Provincia. Un plan para todos los infractores de un partido podría entrar. [inferencia, necesita dictamen de un abogado]
+- **Precedentes de planes provinciales:** la Disposición 69/2020 (6 o 12 cuotas sin interés por 90 días) y la 26/2021 (prórroga). No encontré ninguna posterior. [verificado; búsqueda en el sistema de normas de la Provincia]
+- **Monto según el ingreso.** La ley de tránsito sólo deja que un convenio cambie el **reparto** de la plata, no los montos: «pudiendo modificar la distribución de los ingresos provinciales» (Ley 13.927, art. 42). [verificado]
+- **Hace falta al menos un decreto del Gobernador** que cambie el Decreto 532/09. Para cobrar distinto la misma falta según el ingreso, o bajar de la rebaja del 50% que fija la ley nacional (art. 85 a), probablemente haga falta una ley. [inferencia, necesita dictamen de un abogado]
+- **El canal para un piloto existe:** la Res. 601/2021, que aprobó el convenio de 2020, prevé «protocolos adicionales» que pasan por la Asesoría General de Gobierno, la Contaduría General y la Fiscalía de Estado. El Municipio no necesita autorización del Concejo para firmar con la Provincia (LOM, art. 41). [verificado]
+- **El convenio de 2020 no trae nada sobre cuotas ni ingreso;** el anterior, de 2014, sí listaba entre las sentencias del sistema el «plan de facilidades de pago» y las «tareas comunitarias». [verificado]
+- **Precedentes de un trato distinto por municipio:** sólo en el reparto. San Nicolás deja el 10% a la Provincia (Res. 566/2019) y San Isidro el 20% (convenio de 2020). No encontré ninguna prueba piloto de tránsito en un solo municipio. [verificado; búsqueda en el sistema de normas de la Provincia]
+- **Igualdad ante la ley** (Constitución Nacional, art. 16; Constitución bonaerense, art. 11):
+  - las cuotas, que son una facilidad de pago, tienen riesgo bajo;
+  - cobrar distinto la misma falta según el lugar donde se cometió tiene riesgo más alto;
+  - lo baja que el piloto sea temporal, con un criterio objetivo como el ingreso y con evaluación;
+  - no encontré ningún fallo sobre este punto.
+  - [inferencia, necesita dictamen de un abogado]
+
+**9 · ¿El Tribunal de Faltas de San Isidro recibe trámites en línea? SÍ, en parte, por correo electrónico, sin norma que lo regule. Para ampliarlo, lo más seguro es una ordenanza.** [verificado; la norma: inferencia, necesita dictamen de un abogado]
+- **Hoy:** la página municipal publica un correo para los pedidos de pago voluntario al 50% y otro para los descargos de fotomultas. Los turnos en línea son para ir en persona. [verificado]
+- **Lo que no encontré:**
+  - una norma de San Isidro sobre trámites a distancia del Tribunal (revisé los decretos del Boletín de febrero de 2024 a septiembre de 2026);
+  - el Reglamento Interno que el Decreto 154/2024 le mandó dictar al Tribunal.
+  - [no encontrado]
+- **Expediente electrónico municipal:** rige desde 2024 (Ord. 8897 y 9321), pero no tiene trámites del Tribunal, y el uso obligatorio se prorrogó al 01/03/2027. [verificado]
+- **Modelos:**
+  - **Bragado, Ord. 5398/2021:** domicilio electrónico optativo, descargo por correo en PDF firmado y audiencia virtual, también para tránsito. Es el mejor modelo.
+  - **Vicente López, Ord. 36.929:** audiencia por videoconferencia.
+  - Castelli y Avellaneda: notificaciones y descargos por medios electrónicos.
+  - [verificado]
+- **La Provincia** tiene descargo web desde 2019 para sus juzgados (InfraccionesBA). [verificado]
+- **Un límite a resolver:** en las faltas que no son de tránsito, el Código de Faltas dice que en la audiencia «no se aceptará la presentación de escritos» (art. 47). La ordenanza tendría que resolverlo con audiencia virtual. [verificado el texto; la salida: inferencia]
+- **Para tránsito,** el descargo va «en el lugar y con las formas que establezca la reglamentación» (Ley 13.927, art. 35 g), que es provincial; por eso también podría habilitarse dentro del sistema provincial. [verificado el texto; la vía: inferencia]
+
+**10 · ¿Cuántas multas de tránsito se labran por año en San Isidro? NO HAY DATO PÚBLICO, ni total ni por cámara.** [no encontrado]
+- **Lo más cercano son las «infracciones tratadas» del Juzgado de Faltas,** que mezclan tránsito con otras faltas: 146.732 en 2022 y 218.720 en 2024. [verificado, presupuesto 2024 y situación económico-financiera 2024]
+- **Desde 2025 el presupuesto mide otra cosa:** «intervenciones» (72.897 en 2025). No sirve para contar multas. [verificado]
+- **Las de Panamericana y rutas provinciales** las juzga el juzgado provincial con asiento en General Pacheco; no hay cifras públicas. [verificado el juzgado; cifras: no encontrado]
+- **Por cámara:** sólo se sabe, según el Municipio, que tres radares concentraban la mayor cantidad de infracciones (Cuyo 3405, Elcano 1540 y Juan Díaz de Solís 2490) y que fueron reemplazados por reductores de velocidad. [según el Municipio, en La Nación, 20/01/2026]
+- **Estimación para 2024: unas 81.000 multas pagadas,** y unas 244.000 labradas si se paga una de cada tres, como calculó la Provincia para sus actas de 2016-2019. El rango posible es enorme: de 13.000 a 456.000. [cálculo propio; supuestos abajo]
+- **Lo que costaría la rebaja:** cada 10% de rebaja media cuesta unos $323 M por año a pesos de diciembre de 2025, si todas las «otras multas en vía pública» son de tránsito y la gente paga igual que antes. [cálculo propio]
+- **2025 no sirve para calcular:** las cámaras están suspendidas desde el 23/04/2025. [verificado]
+
+---
+
+## 7 · Trabajo en vez de plata: detalle
+
+**Los textos** [verificado]:
+- **Código Penal, art. 21:** «Podrá autorizarse al condenado a amortizar la pena pecuniaria, mediante el trabajo libre, siempre que se presente ocasión para ello. También se podrá autorizar al condenado a pagar la multa por cuotas. El tribunal fijará el monto y la fecha de los pagos, según la condición económica del condenado.» Va después de «antes de transformar la multa en la prisión correspondiente, procurará la satisfacción de la primera».
+- **Ley 24.449, art. 90:** «es de aplicación supletoria, en lo pertinente, la parte general del Código Penal».
+- **Ley 24.449, art. 87 d:** el **arresto** puede ser «reemplazado por la realización de trabajo comunitario». La multa no.
+- **Ley 24.449, art. 83, y Ley 13.927, art. 39 bis:** las sanciones son «de cumplimiento efectivo» y no pueden aplicarse «en suspenso». La lista no incluye el trabajo comunitario.
+- **Código de Faltas (Decreto-Ley 8751/77), art. 3:** «Las disposiciones de la parte general del Código Penal serán de aplicación para el juzgamiento de las faltas, siempre que no sean expresa o tácitamente excluidas por esta Ley.»
+- **Qué procedimiento rige en San Isidro:** el presupuesto 2024 dice que el Juzgado juzga el tránsito «con la aplicación del Código de Faltas… (Ley 8751)». El Código Penal llega entonces por dos vías: la Ley 24.449, art. 90, y el Código de Faltas, art. 3. [verificado el texto; la conclusión: inferencia]
+
+**La historia provincial** [verificado]:
+
+| Año | Norma | Qué decía |
+|---|---|---|
+| 1996 | Ley 11.768 (modificó el Código de Tránsito, Ley 11.430, art. 137) | «En caso de no verificarse el pago el Juez podrá disponer el cumplimiento de tareas comunitarias a realizar por el infractor.» Después de la sentencia firme |
+| 2006 | Ley 13.581 y su veto parcial (Decreto 3200/2006) | Se vetó el trabajo comunitario «como única sanción» porque «adolece de una flexibilidad… que no condice con los altos índices de lesiones y mortalidad» |
+| 2007 | Decreto 40/2007 | Tareas comunitarias «en concurrencia» con otras sanciones |
+| 2008 | Ley 13.927, vigente | No las incluye |
+
+Esa omisión puede leerse como una exclusión «tácita» en el sentido del art. 3 del Código de Faltas. [inferencia, necesita dictamen de un abogado]
+
+**Precedentes** [verificado salvo indicación]:
+
+| Dónde | Norma | Cuándo se ofrece | Equivalencia | Si no cumple / seguro |
+|---|---|---|---|---|
+| Pinamar | Ord. 6148/2022 | Antes de la sentencia, con reconocimiento y prueba de que no puede pagar | 50 UF por jornada de 4 horas | Debe la multa sin rebaja. Seguro a cargo del infractor |
+| Baradero | Ord. 5901/2019 | Dentro del plazo de la notificación, con reconocimiento | La fija un protocolo del Ejecutivo | Pierde la rebaja |
+| La Plata | Ord. 11.883/2019 | La decide el juez | Horas que fija el juez; curso de 10 horas | Agravamiento de la multa |
+| Junín | Ord. 7602/2019 | Después de la sentencia (5 días hábiles) | Según el juez | Si cumple, se archiva [probable, prensa] |
+| Rauch | Ord. 1419/2020 y Decreto 901/2020 | En la sentencia | Hasta 36 horas | Doble de la multa. El Municipio no responde por accidentes (validez dudosa) |
+| Gonzales Chaves | Ord. 3345/2018 | A pedido del juez | Hora = 1,5% del sueldo municipal de la categoría 5 | Seguro a cargo del Municipio |
+| Coronel Rosales | Ord. 4302/2024 | El juez convierte la multa (todas las faltas) | Hasta 5 horas por día | El Ejecutivo gestiona el seguro |
+| Capitán Sarmiento y San Andrés de Giles | Ord. 2816/2022; Ord. 2617/2023 | El juez convierte la multa | Horas que fija el juez | – |
+| Ciudad de Buenos Aires | Ley 451, arts. 32 y 33 | A pedido | Hasta 160 horas, 2 por día | Aumenta la multa |
+| Santa Fe | Ley 13.169 | A pedido, sin reincidencia | – | Si no cumple, 1 día = 10 UF |
+
+- **Fallos:** no encontré ninguno de juzgados de faltas o cámaras que aplique el art. 21 (trabajo libre) a multas de tránsito. [no encontrado]
+- **La evidencia de afuera:** está en la primera parte del informe 18. En Ciudad de México, cambiar multas por cursos y trabajo comunitario se asoció con más mortalidad vial.
+
+**Para el diseño del cliente** [inferencia, necesita dictamen de un abogado]:
+- La IA avisa la opción con la multa y toma el pedido; el juez la autoriza por resolución.
+- Hace falta una ordenanza (LOM, arts. 24 y 26) que diga:
+  - qué tareas, dónde y con qué supervisión;
+  - la equivalencia en horas;
+  - quién paga el seguro;
+  - qué pasa si no cumple.
+- Las tareas no pueden ser para empresas privadas.
+
+---
+
+## 8 · Convenio con la Provincia: detalle
+
+**Los textos** [verificado]:
+- **Decreto 532/09, Anexo I, art. 33 b** (texto del Decreto 1350/18): «se aplicará el monto mínimo de UF's correspondiente a la infracción notificada y se le aplicará un descuento del cincuenta por ciento (50%). Queda autorizada la Dirección Provincial de Política y Seguridad Vial para disponer, con alcance general, facilidades de pago en cuotas del monto de las multas e intereses adeudados».
+- **Anexo III, art. 40:** la rebaja del 50% «se aplica sobre el valor mínimo de la multa».
+- **Ley 13.927, art. 42:** «El Poder Ejecutivo podrá celebrar Convenios de colaboración y asistencia en materia de tránsito… cobro y control de infracciones… pudiendo modificar la distribución de los ingresos provinciales».
+- **Decreto 1350/18, art. 3:** faculta a hacer convenios «a fin de procurar la unidad de criterios».
+- **Ley 15.078 (Presupuesto 2019), art. 94:** la misma autorización de cuotas «con alcance general», con interés mínimo salvo en planes de hasta 5 cuotas.
+- **Disposición 69/2020:** dio 6 o 12 cuotas sin interés por 90 días. En sus considerandos dice que de las actas provinciales de 2016 a 2019 «tan solo un tercio» se pagó.
+
+**Lo que tendría que hacer cada uno para un piloto en San Isidro** [inferencia, necesita dictamen de un abogado]:
+
+| Qué | Quién | Con qué |
+|---|---|---|
+| Cuotas del pago voluntario con el tope del 2%/√hogar | El Municipio, por decreto o mejor por ordenanza, como Balcarce; o la Dirección Provincial, por disposición | Código de Faltas, art. 16 e; Decreto 532/09, Anexo I, art. 33 b |
+| Que el sistema provincial de cobro emita cuotas para San Isidro | La Dirección Provincial y el Municipio | Protocolo adicional al convenio de 2020 (Res. 601/2021, art. 2) |
+| Pago voluntario más bajo según el ingreso | El Gobernador, por decreto, y probablemente una ley | Decreto 532/09; Ley 24.449, art. 85 a, por la adhesión de la Ley 13.927, art. 1 |
+
+---
+
+## 10 · Cantidad de multas: detalle
+
+**Metas del Juzgado de Faltas en los presupuestos de San Isidro** [verificado]:
+
+| Año | Qué mide | Programado | Ejecutado |
+|---|---|---|---|
+| 2022 | Infracciones tratadas | – | 146.732 |
+| 2023 | Infracciones tratadas | 120.000 | no publicado |
+| 2024 | «Resolución de contravenciones (cantidad infracciones tratadas)» | 154.198 al inicio; 230.809 ajustado | 218.720 (y 76.834 audiencias) |
+| 2025 | «Intervenciones» (otra unidad) | 150.000 | 72.897 |
+| 2026 | «Intervenciones» | 14.977 | sin dato |
+
+No separan tránsito de las otras faltas y no se sabe si incluyen los pagos voluntarios. De 2019 a 2021 no hay dato.
+
+**La estimación** [cálculo propio]:
+- **Fórmula:** multas pagadas = recaudación ÷ (valor medio de la UF × UF por multa × parte que cobra el Municipio).
+- **Datos de 2024:**
+  - recaudación del subrubro «otras multas en vía pública», $2.207,9 M [verificado];
+  - valor medio de la UF, $1.130,5;
+  - 75 UF por multa (el pago voluntario por velocidad);
+  - 32% para el Municipio, por los convenios con las universidades desde agosto de 2022.
+- **Resultado:** unas 81.000 multas pagadas. Si se paga una de cada tres, unas 244.000 labradas, del mismo orden que las 218.720 «infracciones tratadas».
+- **Rango:** de 13.000 (150 UF por multa, el Municipio registra el total) a 456.000 (25 UF por multa, 32% para el Municipio y todo el rubro de multas).
+- **Supuesto clave:** que todo ese subrubro sea de tránsito. Ningún rubro lo dice.
+
+**Lo que haría falta para un número firme:** las multas de tránsito por año y por equipo del sistema provincial de cobro, o del propio Juzgado. No están publicadas y no se hizo ningún pedido.
+
+---
+
+## Método y límites de la segunda parte
+
+- **Los puntos 7, 8 y 10 los investigó un agente.** Verifiqué en la fuente:
+  - el art. 21 del Código Penal y el art. 3 del Código de Faltas;
+  - la Ley 11.768 y el veto de 2006;
+  - el art. 42 de la Ley 13.927 y el art. 2 de la Res. 601/2021;
+  - el art. 41 de la LOM y el art. 94 de la Ley 15.078;
+  - el convenio de 2014;
+  - la Ordenanza de Pinamar;
+  - la Disposición 69/2020;
+  - las 218.720 infracciones de 2024;
+  - la cifra de la recaudación.
+- **El punto 9 y la corrección de Balcarce** los investigó otro agente. Verifiqué la página del Juzgado, el art. 47 del Código de Faltas, la Ordenanza de Bragado y los dos decretos de Balcarce.
+- **Corregí al agente:** el artículo de la Ley 11.768 sobre tareas comunitarias es el 137, no el 136.
+- **No se nombran personas.** Una nota de prensa sobre un caso en La Plata que nombra a un particular no se subió.
