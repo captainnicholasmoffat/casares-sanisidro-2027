@@ -174,9 +174,19 @@ en Beccar.**
 
 **Seis**, una por localidad oficial.
 
-La regla para pasar de seis sería que alguna quede desproporcionada en población.
-No pasa: la zona más grande tiene **1,34 veces** la población de la más chica
-(55.157 contra 41.213). El test corta si esa relación pasa de 2,0.
+> **Actualización (04/10/2026).** Desde el 19/09/2026 las zonas del documento ya no
+> son las de este método (semillas y crecimiento por población), sino las seis
+> localidades de OpenStreetMap proyectadas sobre los radios
+> (`data/zonas_asignacion_radios.csv`); el 28/09 se regeneraron con ellas el geojson
+> y `data/zonas_resumen.csv` (`03_scripts/zonas_osm_geojson.py`). Las localidades
+> no son parejas: van de 11.035 (Acassuso) a 74.832 habitantes (Boulogne Sur Mer).
+> Por eso el test ya no corta por tamaño: controla que las zonas sean las seis
+> localidades, que `zonas_indicadores.csv` y `zonas_resumen.csv` digan lo mismo y
+> que sumen los 360 radios y las 295.978 personas.
+
+Con el método de abajo, la regla para pasar de seis era que alguna quedara
+desproporcionada en población; la zona más grande tenía **1,34 veces** la población
+de la más chica (55.157 contra 41.213), y el test cortaba si pasaba de 2,0.
 
 ---
 

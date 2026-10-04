@@ -74,6 +74,7 @@ cobra el 74% de lo que se factura, y los 1.242 que faltan, del gasto flexible. <
 de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y lo que el
 Municipio factura en total por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
+<p><b>Y adem&aacute;s:</b> multas de tr&aacute;nsito que no hunden a nadie, y una costa con movida toda la semana. <i>(Cap&iacute;tulo 5)</i></p>
 
 <p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. El 19 de
 marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona, puede anotar a su hijo

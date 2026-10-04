@@ -536,22 +536,24 @@ s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C
       note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,4%)")
 s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
 s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
-      note="5.5: dos clases por día de lunes a jueves en los seis lugares, 48 horas por semana, categoría 991 "
+      note="5.5: una clase a la mañana y una a la tarde, de lunes a jueves, en los seis lugares; 48 horas por semana, categoría 991 "
            "(490.335 $ por hora semanal y por año, con aguinaldo y cargas). Lo paga Deportes con su propio presupuesto: "
            "no cambia el gasto total ni el resultado")
 s_row(261, "Ambiente · baños de los seis lugares desde el año 3, por año", 354000000,
       note="5.5: de 251 a 354 M (el tope): limpieza dos veces por día, insumos, agua, mantenimiento y encargado fijo. "
-           "80 a 113 M el año 1 y 163 a 227 M el año 2. Dentro del aumento de Ambiente (filas 51 y 52): no cambia el gasto "
+           "82 a 121 M el año 1 y 167 a 240 M el año 2, de a dos por año desde el Águila. Dentro del aumento de Ambiente (filas 51 y 52): no cambia el gasto "
            "total ni el resultado")
 s_row(262, "Ambiente · mantenimiento del equipamiento para las clases, por año", 31700000,
       note="De 3,0 a 31,7 M con los seis (el tope). Dentro del aumento de Ambiente")
 s_row(263, "Obras deportivas · obra de los seis baños, en tres años", 791000000,
-      note="De 426 a 791 M (el tope), de a dos por año: Puerto y 33 Orientales, Pacheco y el Águila, Sáenz Peña y "
-           "Centenera con bomba. Sale de Construcción de infraestructura deportiva (programa 35)")
+      note="De 426 a 791 M (el tope), de a dos por año en el orden de la Escuela Náutica, desde el Águila: de 142 a 296 M "
+           "el año 1 y de 122 a 265 M los años 2 y 3; Sáenz Peña y Centenera con bomba. Sale de Construcción de "
+           "infraestructura deportiva (programa 35)")
 s_row(264, "Obras deportivas · equipamiento para las clases, seis lugares", 454000000,
-      note="De 164 a 454 M (el tope): plataforma desmontable, bebedero, sombra y luz solar, de a dos por año")
-s_row(265, "Obras deportivas · con la Escuela Náutica, lo que usa de lo que le queda, peor año", 0.36, fmt=FMT_PCT1,
-      note="Del 17% al 36% de los 1.943 M que le quedan por año a obras deportivas en los años 1 a 3")
+      note="De 215 a 454 M (el tope): plataforma desmontable de madera dura, como el módulo náutico, bebedero, sombra y "
+           "luz solar, de a dos por año")
+s_row(265, "Obras deportivas · con la Escuela Náutica, lo que usa de lo que le queda, peor año", 0.37, fmt=FMT_PCT1,
+      note="Del 17% al 37% de los 1.943 M que le quedan por año a obras deportivas en los años 1 a 3")
 s_row(266, "Canon de un foodtruck por mes, como el de Tigre", 201350,
       note="Ordenanza Impositiva 2026 de Tigre, en pesos de 2026. Con tres por puesto, 604.050 $ por mes; en Bosque "
            "Alegre, con 15 a 20, de 3,0 a 4,0 M. En los cuatro lugares del convenio queda el 60%")

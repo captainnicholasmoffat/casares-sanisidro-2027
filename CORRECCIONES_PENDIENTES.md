@@ -2723,3 +2723,31 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   (la lista es una cadena). (5) «Perú Beach» se usa como nombre de lugar y también es un comercio.
 - test_censo_zonas: una validación en falla (la zona más grande 6,78 veces la más chica); ya fallaba en la entrega
   anterior (02cf81f), no se tocó.
+
+## CIERRE DE LA VERSIÓN DE 46 PÁGINAS · RESPUESTA DE NICK APLICADA (04/10)
+- Índice: el 5.12 apunta a la pág. 34 y el 6.4 y el 6.5 a la 38. Control nuevo: cada sección numerada del índice
+  se busca en el PDF y coincide con su página.
+- Test de zonas: quedó viejo, no había error en los datos. Desde el 19/09 las zonas son las seis localidades
+  (regeneradas el 28/09 con zonas_osm_geojson.py) y el test seguía pidiendo zonas parejas (≤ 2,0). Ahora controla
+  que zonas_indicadores.csv y zonas_resumen.csv digan lo mismo y sumen 360 radios y 295.978 personas; pasa.
+  METODOLOGIA_ZONAS.md, sección 6, con la actualización.
+- Fechas propuestas: aprobadas como estaban; salen las marcas «Fecha propuesta».
+- Ordenanza XIV, art. 2: «playones pavimentados o de ripio, nunca sobre el pasto»; «un playón no es espacio verde»;
+  baños de uso gratuito. Igual en el punto 1 del 5.5.
+- Síntesis: una línea después del punto 8: «Y además: multas de tránsito que no hunden a nadie, y una costa con
+  movida toda la semana».
+- «Perú Beach» pasa a «el final de la calle Perú» (5.5, dos lugares).
+- Baños: gratis; de a dos por año en el orden de la Escuela Náutica, desde el Águila. Después del Águila el orden lo
+  decide el agua, así que el año a año va con todos los órdenes posibles (costa_movida/costos_CP2.py): obra de
+  142-296 M el año 1 y 122-265 M los años 2 y 3; funcionando, 82-121 M el año 1, 167-240 M el año 2 y 251-354 M
+  desde el año 3. Los seis, 426-791 M de obra (no cambia).
+- Bosque Alegre: la calle ancha es la prolongación de Del Barco Centenera hasta el río, con 5 m de margen; se
+  propone modificar el artículo 9 de la Ordenanza 5824.
+- Instructores: registro por ordenanza, que no da lugares ni horarios exclusivos (necesita dictamen de un abogado);
+  el incentivo pasa a «prioridad en» los mejores lugares y horarios.
+- Clases: una a la mañana y una a la tarde, de lunes a jueves; Deportes fija los horarios con los vecinos (23,5 M por
+  año, no cambia). Plataforma desmontable de madera dura, como el módulo náutico (320.500 $/m² de julio de 2026,
+  Decreto 393/25 de Hipólito Yrigoyen, 50 a 100 m², +30% por desmontable): equipamiento 36-76 M por lugar, 215-454 M
+  los seis. Obra y equipamiento en tres años, 641-1.245 M; obras deportivas usa del 17% al 37% de lo que le queda.
+- Excel: Supuestos 260-265 con las cifras nuevas; 13.453 fórmulas, 0 errores; Resumen anual igual al modelo.
+- Páginas que cambiaron: 2, 4, 11, 27, 28, 36, 38, 43 y 46. Sigue en 46 páginas, todas de hasta 2.700 pt.

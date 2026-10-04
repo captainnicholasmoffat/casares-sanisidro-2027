@@ -1598,7 +1598,7 @@ a&ntilde;o.</b> La costa no es de una zona, y la secci&oacute;n 4.6 ya fija qui&
 <p><b>Hoy no hay ning&uacute;n conteo de tr&aacute;nsito ni de visitantes en la costa</b>: ni de fin de semana, ni de d&iacute;as
 h&aacute;biles, ni por estaci&oacute;n del a&ntilde;o. Y lo que organiza el Municipio cae casi todo en verano y en fines de semana: de
 las 145 actividades de las vacaciones de invierno de 2026, la &uacute;nica en la costa fue la Reserva.</p>
-<p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa a Per&uacute; Beach hay unos 300 metros a
+<p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa al final de la calle Per&uacute; hay unos 300 metros a
 pie, y de Anchorena a Pacheco y el r&iacute;o, unos 400. Su operador ya muestra en su aplicaci&oacute;n, en tiempo real, cu&aacute;ndo
 llega cada tren a cada estaci&oacute;n; la Ciudad distribu&iacute;a la posici&oacute;n de los trenes en su API de transporte, que hoy
 est&aacute; suspendida.</p>
@@ -1657,7 +1657,7 @@ un club no tiene una bajada p&uacute;blica al r&iacute;o.</p>
 <p><b>1 &middot; Un puesto n&aacute;utico en cada parque de la costa con acceso al agua: seis, de a dos por a&ntilde;o.</b> Primero el
 Parque del &Aacute;guila, despu&eacute;s de medir su agua y con el dictamen de su asociaci&oacute;n de parque. Los otros cinco
 &mdash;Roque S&aacute;enz Pe&ntilde;a y el r&iacute;o, el final de Del Barco Centenera, la d&aacute;rsena del Puerto, el Paseo 33 Orientales y
-Pacheco&mdash; siguen, primero los de mejor agua. Per&uacute; Beach no, por la boca del desag&uuml;e; la
+Pacheco&mdash; siguen, primero los de mejor agua. El final de la calle Per&uacute; no, por la boca del desag&uuml;e; la
 Reserva, el Bosque Alegre y las islas tampoco, porque son &aacute;reas protegidas.</p>
 <p><b>2 &middot; Liviano, natural y desmontable, sin cemento</b>: un m&oacute;dulo de madera para guardar los equipos y una
 bajada de madera al r&iacute;o (anexo, Ordenanza XIV).</p>
@@ -1691,7 +1691,7 @@ presupuesto.</span></p>
 <p><b>Hoy San Isidro no tiene ordenanza de foodtrucks</b>: un proyecto de 2024 sigue en comisi&oacute;n, y por ocupar la
 superficie p&uacute;blica se cobra 246 pesos por metro cuadrado y por d&iacute;a. El Municipio ya hizo movida con comida en Bosque
 Alegre, seg&uacute;n el propio Municipio: Bocas Abiertas, un parador con foodtrucks y los DJ Sunset de los domingos. Pero
-una ordenanza de 1983, la 5824, s&oacute;lo permite ah&iacute; la venta de bebidas en kioscos.</p>
+el art&iacute;culo 9 de una ordenanza de 1983, la 5824, s&oacute;lo permite ah&iacute; la venta de bebidas en kioscos.</p>
 <p><b>No hay ba&ntilde;os p&uacute;blicos fijos confirmados en ninguno de los seis lugares</b>; el Municipio licit&oacute; el alquiler
 de ba&ntilde;os qu&iacute;micos para 33 Orientales, el Centro de Exposiciones y Del Barco Centenera. Y hay clases gratis al aire libre &mdash;funcional, running, Mix Dance y
 yoga&mdash; con profesores de Deportes, pero en la costa hay una sola: Funcional en Alvear y el R&iacute;o, lunes y
@@ -1700,44 +1700,48 @@ clases en plazas y parques no hay ninguna norma.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: que cada puesto tenga movida, ba&ntilde;o y clases</div>
-<p><b>1 &middot; Foodtrucks al borde de cada puesto.</b> En la calle o en playones que ya est&eacute;n pavimentados, aunque
-est&eacute;n dentro de la parcela del parque; nunca sobre el pasto (anexo, Ordenanza XIV; necesita dictamen de un abogado).
+<p><b>1 &middot; Foodtrucks al borde de cada puesto.</b> En la calle o en playones pavimentados o de ripio, aunque
+est&eacute;n dentro de la parcela del parque; nunca sobre el pasto: un play&oacute;n no es espacio verde (anexo, Ordenanza XIV;
+necesita dictamen de un abogado).
 Seg&uacute;n quienes conocen el lugar, hay m&aacute;s playones que los que figuran en los mapas: en fotos satelitales aparecen
 cinco que no figuran. Con una ordenanza nueva de foodtrucks y un canon como el de Tigre, 201.350 pesos por mes
 por veh&iacute;culo. Lo que queda en el Municipio va a la costa: el 60% en los cuatro lugares del convenio, donde el 40% va a
 la Provincia, y todo en el Puerto y en 33 Orientales. El mismo 75% de empleo local de la Ordenanza X, ofertas de
 lunes a jueves, y la inteligencia artificial del Municipio muestra qu&eacute; hay hoy en cada puesto.</p>
-<p><b>2 &middot; Bosque Alegre, polo de foodtrucks y movida.</b> Sobre la calle ancha, con cinco metros de margen al
-Paisaje Protegido, y en el lote de ripio del Centro de Exposiciones, sin entrar al bosque: en la calle entran
+<p><b>2 &middot; Bosque Alegre, polo de foodtrucks y movida.</b> Sobre la calle ancha &mdash;la prolongaci&oacute;n de Del Barco
+Centenera hasta el r&iacute;o&mdash;, con cinco metros de margen al Paisaje Protegido, y en el lote de ripio del Centro de Exposiciones, sin entrar al bosque: en la calle entran
 entre 15 y 20 foodtrucks, y se suma el lote. Seg&uacute;n quienes lo conocen, todo el mundo va ah&iacute; a relajarse. Es el mismo
 lugar que el puesto del final de Del Barco Centenera, que queda a siete metros del Paisaje Protegido: son seis
-lugares, no siete. Proponemos modificar la Ordenanza 5824 para permitirlo (necesita dictamen de un abogado).</p>
-<p><b>3 &middot; Ba&ntilde;os conectados a la cloaca</b>, nunca qu&iacute;micos ni secos, y al borde, nunca adentro del parque. Los
-construye el Municipio, de a dos por a&ntilde;o como la Escuela N&aacute;utica, empezando por los que tienen la cloaca cerca: el
-Puerto y 33 Orientales; despu&eacute;s Pacheco y el &Aacute;guila; y S&aacute;enz Pe&ntilde;a y Centenera, con bomba hacia la cloaca. Antes,
-el Municipio le pide a AySA la factibilidad de cada uno. Con encargado fijo, abiertos de d&iacute;a y cerrados de noche. En
+lugares, no siete. Proponemos modificar el art&iacute;culo 9 de la Ordenanza 5824 (necesita dictamen de un abogado).</p>
+<p><b>3 &middot; Ba&ntilde;os gratis, conectados a la cloaca</b>, nunca qu&iacute;micos ni secos, y al borde, nunca adentro del
+parque. Los construye el Municipio, de a dos por a&ntilde;o, en el mismo orden que la Escuela N&aacute;utica, empezando por el
+&Aacute;guila; en S&aacute;enz Pe&ntilde;a y en Centenera, con bomba hacia la cloaca. Antes, el Municipio le pide a AySA la factibilidad
+de cada uno. Con encargado fijo, abiertos de d&iacute;a y cerrados de noche. En
 la inteligencia artificial del Municipio, el vecino ve si est&aacute; abierto y avisa si est&aacute; sucio o roto. El canon de los
 foodtrucks paga una parte de la limpieza.</p>
-<p><b>4 &middot; Clases municipales gratis en cada lugar</b>, sobre todo de lunes a jueves, y combos con la Escuela
-N&aacute;utica: Deportes coordina las dos. Plataforma de madera desmontable, bebedero, sombra y luz solar, y lugar para
-guardar equipos en el m&oacute;dulo n&aacute;utico.</p>
-<p><b>5 &middot; Instructores privados, con un registro gratis</b>, sin canon y con reglas simples: lugar, horario y sin
-exclusividad. Para que las plazas tengan movimiento en la semana y eso llegue a los comercios: los mejores lugares y
-horarios de lunes a jueves, para quien da clases en la semana; plataforma, ba&ntilde;os, bebedero y guardado, gratis; la
+<p><b>4 &middot; Clases municipales gratis en cada lugar</b>, una a la ma&ntilde;ana y una a la tarde, de lunes a jueves:
+Deportes fija los horarios con los vecinos y coordina los combos con la Escuela N&aacute;utica. Plataforma desmontable de
+madera dura, como el m&oacute;dulo n&aacute;utico, bebedero, sombra y luz solar, y lugar para guardar equipos en el m&oacute;dulo.</p>
+<p><b>5 &middot; Instructores privados, con un registro gratis por ordenanza</b>, sin canon y con reglas simples: el
+registro no da lugares ni horarios exclusivos (necesita dictamen de un abogado). Para que las plazas tengan movimiento
+en la semana y eso llegue a los comercios: prioridad en los mejores lugares y horarios de lunes a jueves, para quien
+da clases en la semana; plataforma, ba&ntilde;os, bebedero y guardado, gratis; la
 inteligencia artificial del Municipio arma la agenda de cada parque con todas las clases, municipales y privadas, y
 la gente se anota ah&iacute;; los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase,
 y la inteligencia artificial lo avisa; curso gratis de primeros auxilios para los instructores registrados; y las
 c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase.</p>
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
-cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis: de 426 a 791
-millones de obra, de a dos por a&ntilde;o, y de 251 a 354 millones por a&ntilde;o cuando funcionan todos. Equipar cada lugar para
-las clases &mdash;plataforma, bebedero, sombra y luz&mdash;, de 27 a 76 millones; los seis, de 164 a 454, de a dos por a&ntilde;o, y de 3 a 32
-millones por a&ntilde;o de mantenimiento. Las clases, contando dos por d&iacute;a de lunes a jueves en cada lugar: unos 23,5
-millones por a&ntilde;o de profesores. Con tres foodtrucks, el canon de un puesto es de unos
+cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis, de 426 a 791
+millones de obra, de a dos por a&ntilde;o desde el &Aacute;guila: de 142 a 296 el a&ntilde;o 1 y de 122 a 265 los a&ntilde;os 2 y 3, seg&uacute;n qu&eacute;
+lugares sigan. Funcionando, de 82 a 121 millones el a&ntilde;o 1, de 167 a 240 el a&ntilde;o 2 y de 251 a 354 por a&ntilde;o desde el
+a&ntilde;o 3, con los seis. Equipar cada lugar para las clases &mdash;plataforma de madera dura, bebedero, sombra y luz&mdash;,
+de 36 a 76 millones; los seis, de 215 a 454, de a dos por a&ntilde;o, y de 3 a 32 millones por a&ntilde;o de mantenimiento. Las
+clases, una a la ma&ntilde;ana y una a la tarde de lunes a jueves en cada lugar: unos 23,5 millones por a&ntilde;o de
+profesores. Con tres foodtrucks, el canon de un puesto es de unos
 600.000 pesos por mes, y en Bosque Alegre, con 15 a 20, de 3,0 a 4,0 millones; en los lugares del convenio queda el
 60%. <span class="sg">La obra de los ba&ntilde;os y las plataformas sale de obras deportivas, como la Escuela N&aacute;utica; la
 limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el canon; los profesores, de
-Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 36% de lo que le queda cada a&ntilde;o a
+Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a
 obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 23% y el 33% del aumento de Ambiente a entre el 30% y
 el 44%.</p>
 </div>
@@ -2792,7 +2796,7 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, y el turno m&eacute;dico</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">15 &middot; La licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
 <tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que es real, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y la licitaci&oacute;n de las ochenta c&aacute;maras corporales, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
-<tr class="hd"><td class="l" colspan="2">Multas de tr&aacute;nsito (5.11) <span class="tag m">Fecha propuesta</span></td></tr>
+<tr class="hd"><td class="l" colspan="2">Multas de tr&aacute;nsito (5.11)</td></tr>
 <tr><td class="l">17 &middot; El decreto de las cuotas del pago voluntario de las multas de tr&aacute;nsito, sin tr&aacute;mites y seg&uacute;n el ingreso, como el de Balcarce</td><td class="n">El decreto, en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">18 &middot; El pedido a la Provincia: el pago voluntario seg&uacute;n el ingreso, el protocolo adicional al convenio de multas, la deuda congelada en pesos, las pasadas que cuentan como una y el permiso para trabajar; y a la Legislatura bonaerense, la licencia por puntos</td><td class="n">El expediente del pedido</td></tr>
 <tr><td class="l">19 &middot; La ordenanza del tr&aacute;mite en l&iacute;nea de las cuotas, como la de Bragado, ingresada al abrir las sesiones ordinarias, el 1 de marzo</td><td class="n">Expediente de ingreso</td></tr>
@@ -2860,10 +2864,10 @@ que la comprueba.</p>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 3</td><td>En seguridad, se lanza la licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;, y lo que se licita es la anal&iacute;tica</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que fue real y que no hubo coima, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y se lanza la licitaci&oacute;n de las ochenta c&aacute;maras corporales</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
-<tr><td class="l">Meses 1&ndash;3 <span class="tag m">Fecha propuesta</span></td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
-<tr><td class="l">Mes 3 <span class="tag m">Fecha propuesta</span></td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
+<tr><td class="l">Mes 3</td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, la partida propia de g&eacute;nero, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
-<tr><td class="l">Meses 4&ndash;6 <span class="tag m">Fecha propuesta</span></td><td>Entran la ordenanza de foodtrucks, con el canon y el 75% de empleo local; la modificaci&oacute;n del art&iacute;culo 9 de la Ordenanza 5824, para Bosque Alegre; y la del registro gratis de instructores (5.5)</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 4&ndash;6</td><td>Entran la ordenanza de foodtrucks, con el canon y el 75% de empleo local; la modificaci&oacute;n del art&iacute;culo 9 de la Ordenanza 5824, para Bosque Alegre; y la del registro gratis de instructores (5.5)</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Cada respuesta, con su fecha: se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el segundo ingreso en el mes 9 y el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>

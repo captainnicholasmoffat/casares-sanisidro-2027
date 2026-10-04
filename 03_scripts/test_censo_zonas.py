@@ -11,6 +11,10 @@ sale distinto de cero.
   2. Ninguna zona puede quedar con radios no contiguos.
   3. Todos los radios del partido tienen que caer en exactamente una zona.
 
+Desde el 19/09/2026 las zonas son las seis localidades (ver
+test_zonas_son_las_localidades); la regla vieja de zonas parejas en poblacion
+(la mayor no mas de 2,0 veces la menor) era de las zonas de zonas.py y salio.
+
 Uso:
     python3 03_scripts/test_censo_zonas.py
 """
@@ -27,7 +31,6 @@ import zonas as Z
 
 REPO = Z.REPO
 TOLERANCIA = 0.5          # por ciento
-UMBRAL_DESPROPORCION = 2.0  # zona mayor sobre zona menor
 
 
 class FalloDeTest(Exception):
@@ -163,16 +166,39 @@ def test_conglomerados_criticos_enteros(asignacion):
     return revisados, umbral
 
 
-def test_zonas_no_desproporcionadas():
-    filas = _leer("data/zonas_indicadores.csv")
-    pobs = [int(f["poblacion"]) for f in filas]
-    ratio = max(pobs) / min(pobs)
-    if ratio > UMBRAL_DESPROPORCION:
-        raise FalloDeTest(
-            "  la zona mas grande tiene %.2f veces la poblacion de la mas "
-            "chica, mas que el %.1f tolerado; habria que pasar de %d zonas"
-            % (ratio, UMBRAL_DESPROPORCION, len(filas)))
-    return len(filas), ratio, min(pobs), max(pobs)
+def test_zonas_son_las_localidades(particulares):
+    """
+    Desde el 19/09/2026 las zonas son las seis localidades de OpenStreetMap
+    proyectadas sobre los radios (data/zonas_asignacion_radios.csv), y el
+    28/09 se regeneraron con ellas el geojson y data/zonas_resumen.csv
+    (03_scripts/zonas_osm_geojson.py). Ya no se exige que sean parejas en
+    poblacion: Acassuso es chica porque la localidad es chica. Lo que se
+    controla es que los dos archivos digan lo mismo y sumen el partido.
+    """
+    ind = {f["zona"]: f for f in _leer("data/zonas_indicadores.csv")}
+    res = {f["zona"]: f for f in _leer("data/zonas_resumen.csv")}
+    errores = []
+    if len(ind) != 6:
+        errores.append("hay %d zonas, se esperaban las 6 localidades" % len(ind))
+    if set(ind) != set(res):
+        errores.append("las zonas no son las mismas: %s contra %s"
+                       % (sorted(ind), sorted(res)))
+    for zona in sorted(set(ind) & set(res)):
+        for campo in ("radios", "poblacion", "hogares"):
+            if int(ind[zona][campo]) != int(res[zona][campo]):
+                errores.append("%s: %s %s en zonas_indicadores y %s en zonas_resumen"
+                               % (zona, campo, ind[zona][campo], res[zona][campo]))
+    radios = sum(int(f["radios"]) for f in ind.values())
+    pob = sum(int(f["poblacion"]) for f in ind.values())
+    if radios != 360:
+        errores.append("las zonas suman %d radios, no 360" % radios)
+    if pob != particulares:
+        errores.append("las zonas suman %d personas, no las %d de los radios"
+                       % (pob, particulares))
+    if errores:
+        raise FalloDeTest("\n".join("  " + e for e in errores))
+    pobs = [int(f["poblacion"]) for f in ind.values()]
+    return len(ind), radios, pob, min(pobs), max(pobs)
 
 
 def main():
@@ -230,11 +256,13 @@ def main():
             print("  FALLA  conglomerados criticos\n%s" % e); fallas += 1
 
     try:
-        n, ratio, mini, maxi = test_zonas_no_desproporcionadas()
-        print("  OK     %d zonas, poblacion de %d a %d, la mayor sobre la menor "
-              "da %.2f" % (n, mini, maxi, ratio))
+        n, radios, pob, mini, maxi = test_zonas_son_las_localidades(
+            test_poblacion()[0])
+        print("  OK     las %d zonas son las localidades (zonas_resumen.csv del "
+              "28/09): %d radios, %d personas, de %d a %d por localidad"
+              % (n, radios, pob, mini, maxi))
     except FalloDeTest as e:
-        print("  FALLA  tamano de las zonas\n%s" % e); fallas += 1
+        print("  FALLA  zonas y localidades\n%s" % e); fallas += 1
 
     print()
     print("=" * 78)
