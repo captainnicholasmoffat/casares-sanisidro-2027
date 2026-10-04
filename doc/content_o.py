@@ -393,7 +393,10 @@ para uso exclusivo; los comercios de la costa funcionan en sus propios predios, 
 admite lo que sirve al uso p&uacute;blico del propio espacio &mdash;senderos, juegos, sanitarios, iluminaci&oacute;n, bancos,
 puestos de guardavidas y, en los parques de la costa, el puesto n&aacute;utico del Municipio para sus clases gratuitas,
 liviano, de madera y desmontable, con su bajada al r&iacute;o&mdash;, sin reducir su superficie absorbente. El puesto
-n&aacute;utico se instala con el dictamen de la asociaci&oacute;n del parque (Ordenanza V).</p>
+n&aacute;utico se instala con el dictamen de la asociaci&oacute;n del parque (Ordenanza V). En los parques de la costa, los
+foodtrucks y los ba&ntilde;os p&uacute;blicos van al borde de cada puesto n&aacute;utico: en la calle o en playones que ya est&eacute;n
+pavimentados, aunque est&eacute;n dentro de la parcela del parque, nunca sobre el pasto. A los efectos de este art&iacute;culo,
+un play&oacute;n ya pavimentado no es espacio verde. Los ba&ntilde;os se conectan a la cloaca.</p>
 
 <h3>Art&iacute;culo 3 &mdash; No se achican</h3>
 <p class="tight"><b>La superficie de espacios verdes p&uacute;blicos del Partido no disminuye.</b> La &uacute;nica permuta que admite

@@ -1686,6 +1686,61 @@ y unos 36 profesores nuevos.</p>
 <p><span class="sg">Lo paga Deportes: la inversi&oacute;n, con obras deportivas, y lo de cada a&ntilde;o, con su propio
 presupuesto.</span></p>
 </div>
+<h3>Alrededor de cada puesto: movida, ba&ntilde;os y clases</h3>
+<div class="cols">
+<p><b>Hoy San Isidro no tiene ordenanza de foodtrucks</b>: un proyecto de 2024 sigue en comisi&oacute;n, y por ocupar la
+superficie p&uacute;blica se cobra 246 pesos por metro cuadrado y por d&iacute;a. El Municipio ya hizo movida con comida en Bosque
+Alegre, seg&uacute;n el propio Municipio: Bocas Abiertas, un parador con foodtrucks y los DJ Sunset de los domingos. Pero
+una ordenanza de 1983, la 5824, s&oacute;lo permite ah&iacute; la venta de bebidas en kioscos.</p>
+<p><b>No hay ba&ntilde;os p&uacute;blicos fijos confirmados en ninguno de los seis lugares</b>; el Municipio licit&oacute; el alquiler
+de ba&ntilde;os qu&iacute;micos para 33 Orientales, el Centro de Exposiciones y Del Barco Centenera. Y hay clases gratis al aire libre &mdash;funcional, running, Mix Dance y
+yoga&mdash; con profesores de Deportes, pero en la costa hay una sola: Funcional en Alvear y el R&iacute;o, lunes y
+mi&eacute;rcoles de 9:15 a 10:15. En los puestos y en Bosque Alegre, ninguna. Sobre los instructores privados que dan
+clases en plazas y parques no hay ninguna norma.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: que cada puesto tenga movida, ba&ntilde;o y clases</div>
+<p><b>1 &middot; Foodtrucks al borde de cada puesto.</b> En la calle o en playones que ya est&eacute;n pavimentados, aunque
+est&eacute;n dentro de la parcela del parque; nunca sobre el pasto (anexo, Ordenanza XIV; necesita dictamen de un abogado).
+Seg&uacute;n quienes conocen el lugar, hay m&aacute;s playones que los que figuran en los mapas: en fotos satelitales aparecen
+cinco que no figuran. Con una ordenanza nueva de foodtrucks y un canon como el de Tigre, 201.350 pesos por mes
+por veh&iacute;culo. Lo que queda en el Municipio va a la costa: el 60% en los cuatro lugares del convenio, donde el 40% va a
+la Provincia, y todo en el Puerto y en 33 Orientales. El mismo 75% de empleo local de la Ordenanza X, ofertas de
+lunes a jueves, y la inteligencia artificial del Municipio muestra qu&eacute; hay hoy en cada puesto.</p>
+<p><b>2 &middot; Bosque Alegre, polo de foodtrucks y movida.</b> Sobre la calle ancha, con cinco metros de margen al
+Paisaje Protegido, y en el lote de ripio del Centro de Exposiciones, sin entrar al bosque: en la calle entran
+entre 15 y 20 foodtrucks, y se suma el lote. Seg&uacute;n quienes lo conocen, todo el mundo va ah&iacute; a relajarse. Es el mismo
+lugar que el puesto del final de Del Barco Centenera, que queda a siete metros del Paisaje Protegido: son seis
+lugares, no siete. Proponemos modificar la Ordenanza 5824 para permitirlo (necesita dictamen de un abogado).</p>
+<p><b>3 &middot; Ba&ntilde;os conectados a la cloaca</b>, nunca qu&iacute;micos ni secos, y al borde, nunca adentro del parque. Los
+construye el Municipio, de a dos por a&ntilde;o como la Escuela N&aacute;utica, empezando por los que tienen la cloaca cerca: el
+Puerto y 33 Orientales; despu&eacute;s Pacheco y el &Aacute;guila; y S&aacute;enz Pe&ntilde;a y Centenera, con bomba hacia la cloaca. Antes,
+el Municipio le pide a AySA la factibilidad de cada uno. Con encargado fijo, abiertos de d&iacute;a y cerrados de noche. En
+la inteligencia artificial del Municipio, el vecino ve si est&aacute; abierto y avisa si est&aacute; sucio o roto. El canon de los
+foodtrucks paga una parte de la limpieza.</p>
+<p><b>4 &middot; Clases municipales gratis en cada lugar</b>, sobre todo de lunes a jueves, y combos con la Escuela
+N&aacute;utica: Deportes coordina las dos. Plataforma de madera desmontable, bebedero, sombra y luz solar, y lugar para
+guardar equipos en el m&oacute;dulo n&aacute;utico.</p>
+<p><b>5 &middot; Instructores privados, con un registro gratis</b>, sin canon y con reglas simples: lugar, horario y sin
+exclusividad. Para que las plazas tengan movimiento en la semana y eso llegue a los comercios: los mejores lugares y
+horarios de lunes a jueves, para quien da clases en la semana; plataforma, ba&ntilde;os, bebedero y guardado, gratis; la
+inteligencia artificial del Municipio arma la agenda de cada parque con todas las clases, municipales y privadas, y
+la gente se anota ah&iacute;; los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase,
+y la inteligencia artificial lo avisa; curso gratis de primeros auxilios para los instructores registrados; y las
+c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase.</p>
+<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
+cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis: de 426 a 791
+millones de obra, de a dos por a&ntilde;o, y de 251 a 354 millones por a&ntilde;o cuando funcionan todos. Equipar cada lugar para
+las clases &mdash;plataforma, bebedero, sombra y luz&mdash;, de 27 a 76 millones; los seis, de 164 a 454, y de 3 a 32
+millones por a&ntilde;o de mantenimiento. Las clases, contando dos por d&iacute;a de lunes a jueves en cada lugar: unos 23,5
+millones por a&ntilde;o de profesores. Con tres foodtrucks, el canon de un puesto es de unos
+600.000 pesos por mes, y en Bosque Alegre, con 15 a 20, de 3,0 a 4,0 millones; en los lugares del convenio queda el
+60%. <span class="sg">La obra de los ba&ntilde;os y las plataformas sale de obras deportivas, como la Escuela N&aacute;utica; la
+limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el canon; los profesores, de
+Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 36% de lo que le queda cada a&ntilde;o a
+obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 23% y el 33% del aumento de Ambiente a entre el 30% y
+el 44%.</p>
+</div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
 <p><b>Hoy, la obra m&aacute;s visible de la costa no tuvo licitaci&oacute;n propia.</b> El Paseo 33 Orientales se
@@ -2408,6 +2463,100 @@ y les cobra la tasa de seguridad e higiene.</p>
 <p>Dos medidas, ninguna con costo: <b>que cualquiera pueda preguntar cu&aacute;nto tarda de verdad una habilitaci&oacute;n</b> comercial, que hoy no se sabe y es la queja m&aacute;s frecuente de quien abre un local; y <b>que cada
 comisi&oacute;n vecinal reciba el padr&oacute;n de habilitaciones de su zona</b>, porque el centro
 comercial de un barrio es infraestructura del barrio.</p>
+</div>
+<h3>Multas de tr&aacute;nsito: que no hundan a nadie y que pesen a quien m&aacute;s tiene</h3>
+<div class="cols">
+<p><b>Hoy los montos los fija la Provincia</b>, en unidades de multa que valen lo que un litro de la nafta m&aacute;s
+cara: 2.281 pesos desde septiembre de 2026. La ley nacional no deja que una norma local sea &laquo;m&aacute;s benigna&raquo; (Ley
+24.449, art&iacute;culo 2).</p>
+<p><b>Un exceso de velocidad cuesta lo mismo si uno se pas&oacute; por 5 o por 50 km/h</b>: de 342.150 a 2.281.000
+pesos, y pagando enseguida, 171.075. Para el 10% que menos gana, eso es el 125% del ingreso de un mes; para el 10%
+que m&aacute;s gana, el 5%. <span class="sg">Una multa igual para todos pesa m&aacute;s en quien menos tiene.</span> Y si no se
+paga, no se congela: se paga al valor del d&iacute;a.</p>
+<p><b>El juez de faltas ya puede dar cuotas a quien tiene pocos recursos</b> (Ley 24.449, art&iacute;culo 85 c), y el
+Tribunal de Faltas ya recibe por correo electr&oacute;nico los pedidos de pago voluntario. Las fotomultas de San Isidro
+est&aacute;n suspendidas desde el 23 de abril de 2025 (Decretos 411/2025 y 65/2026), y no se publica cu&aacute;ntas multas se
+labran por a&ntilde;o.</p>
+<p><b>De las 109 personas que murieron en el tr&aacute;nsito de San Isidro entre 2017 y 2024, 53 murieron en la
+Panamericana</b>, que es ruta nacional. El Municipio adjudic&oacute; en 2025 reductores de velocidad por 536,7 millones,
+sin publicar d&oacute;nde van.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: la inteligencia artificial del Municipio, del lado del vecino</div>
+<p><b>La inteligencia artificial del Municipio es aliada del vecino antes que del gobierno.</b> Y una regla de
+fondo: las multas no pueden ser regresivas, y el vecino no hace nada para recibir la rebaja: ni juzgado, ni
+tr&aacute;mites, ni abogado.</p>
+<p><b>1 &middot; La calle primero.</b> Mesetas, sendas elevadas y zonas de 30 donde hay choques; almohadas que dejan pasar
+a ambulancias y bomberos en sus recorridos; todo dise&ntilde;ado para la velocidad de cada calle, como pide la norma
+nacional (Decreto 779/95, anexo 1, art&iacute;culo 23). Se publica d&oacute;nde va cada reductor de la licitaci&oacute;n de 2025. La
+Panamericana es ruta nacional: ah&iacute; el Municipio no decide.</p>
+<p><b>2 &middot; Avisar antes de multar.</b> La inteligencia artificial del Municipio dice d&oacute;nde est&aacute;n las c&aacute;maras y cu&aacute;l
+es el l&iacute;mite de cada calle; avisa al primer exceso, por ella misma y por mensaje de texto, sin enlaces de pago; y
+muestra la foto, la velocidad, el descuento del error y la calibraci&oacute;n del equipo. Marca las multas de equipos con
+la verificaci&oacute;n vencida, y una persona las anula. Cuando una multa est&aacute; mal, se lo avisa al vecino y le arma el
+reclamo. El aviso no reemplaza a la notificaci&oacute;n, que sigue llegando al domicilio (necesita dictamen de un
+abogado).</p>
+<p><b>3 &middot; En zona de 40, la multa empieza en 47.</b> Se descuentan los 3 km/h de error que admite el equipo
+(Resoluci&oacute;n 753/98) y s&oacute;lo hay multa con un exceso de 4 o m&aacute;s, como en los Pa&iacute;ses Bajos. Con la regla del Reino
+Unido &mdash;10% m&aacute;s 2 millas&mdash; empezar&iacute;a en 48, y en Francia, en 46. Se programa en los equipos (necesita
+dictamen de un abogado: puede hacer falta la autorizaci&oacute;n de la Provincia).</p>
+<p><b>4 &middot; Cuotas sin tr&aacute;mites.</b> El pago voluntario en cuotas, por decreto del intendente, como Balcarce
+(Decretos 26/2022 y 21/2026). La cuota del mes, sumando todas las multas, no pasa del 2% del ingreso dividido por
+la ra&iacute;z de las personas del hogar, como en Nueva York y Florida, que la limitan al 2% del ingreso. Sin plazo
+m&aacute;ximo. El vecino se anota una sola vez, en l&iacute;nea, en la inteligencia artificial del Municipio, con una ordenanza
+como la de Bragado (Ordenanza 5398/2021), y la inteligencia artificial le avisa antes de cada vencimiento. M&aacute;s de
+ocho cuotas tiene m&aacute;s riesgo legal, y en los planes largos la multa puede prescribir a los cinco a&ntilde;os (necesita
+dictamen de un abogado).</p>
+<p><b>5 &middot; Los datos, cuidados.</b> Consentimiento expreso; el ingreso y el hogar se usan s&oacute;lo para las multas; la
+base se crea por ordenanza y se inscribe; hay contrato con el proveedor de la inteligencia artificial; y una
+persona decide de verdad, porque un acto no puede fundarse s&oacute;lo en un tratamiento automatizado (Ley 25.326,
+art&iacute;culo 20).</p>
+<p><b>6 &middot; El juez, sin que el vecino vaya.</b> Si la multa no se paga, el juez dicta la sentencia sin que el vecino
+se presente, con las cuotas seg&uacute;n ese criterio: la inteligencia artificial la prepara y el juez la revisa y la
+firma (Ley 13.927, art&iacute;culo 35 g; Ley 24.449, art&iacute;culos 85 c y 90; C&oacute;digo Penal, art&iacute;culo 21; necesita dictamen de
+un abogado).</p>
+<p><b>7 &middot; Varias pasadas, una multa.</b> Que las pasadas por la misma c&aacute;mara antes del aviso cuenten como una
+necesita a la Provincia (Ley 24.449, art&iacute;culo 81). Mientras tanto, el juez une las del mismo viaje. Para quien no
+se anota en el aviso, cuentan como una s&oacute;lo las del primer d&iacute;a.</p>
+<p><b>8 &middot; Reincidencia, sin dejar a nadie sin trabajo.</b> Hoy el juez ya puede dar una suspensi&oacute;n corta en la
+primera y en la segunda reincidencia grave &mdash;la ley dice &laquo;hasta&raquo; 9 y 12 meses&mdash;, limitada a un tipo de
+veh&iacute;culo, m&aacute;s el curso; la tercera son 18 meses obligatorios (Ley 13.927, art&iacute;culo 39 ter). Con una ley provincial,
+un permiso para trabajar con horarios y recorridos; si reincide, suspensi&oacute;n doble y sin permiso. Con una
+advertencia: en California, quienes ten&iacute;an licencia restringida reincidieron menos, pero chocaron m&aacute;s.</p>
+<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Los reductores ya est&aacute;n contratados: 536,7 millones de la licitaci&oacute;n de
+2025. El aviso, el mapa y el reclamo son parte de la inteligencia artificial del Municipio, que paga Ciencia y
+T&eacute;cnica (4.11). Lo que el Municipio deja de cobrar no tiene un n&uacute;mero cerrado, porque no se publica cu&aacute;ntas multas
+se labran: en 2024 se pagaron entre 13.000 y 456.000, y cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o.
+<span class="sg">Las multas no son para recaudar:</span> lo que se deja de cobrar sale del gasto flexible libre
+(3.4).</p>
+</div>
+
+""" + exhead("c", "Seis casos: lo que se paga hoy, lo que hace el Municipio solo y lo que hace falta de la Provincia",
+             "Exceso de velocidad, en pesos. Cuota m&aacute;xima: 2% del ingreso dividido por la ra&iacute;z de las personas del hogar.",
+             key="multas_casos") + """
+<table>
+<colgroup><col style="width:118pt"><col><col><col></colgroup>
+<tr class="hd"><th>Caso</th><th class="r">Hoy</th><th class="r">Hoy, el Municipio</th><th class="r">Con la Provincia</th></tr>
+<tr><td class="l">Un mill&oacute;n por mes, vive solo, una multa</td><td class="m">171.075 de una vez: el 17% del ingreso</td><td class="m">9 cuotas de 20.000, sin tr&aacute;mites</td><td class="m">Un pago voluntario seg&uacute;n el ingreso, m&aacute;s bajo</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, diez pasadas por la misma c&aacute;mara</td><td class="m">1.710.750: el 171% del ingreso</td><td class="m">El juez une las del mismo viaje; si fueron d&iacute;as distintos, 86 cuotas de 20.000</td><td class="m">Cuentan como una: 9 cuotas de 20.000</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, hogar de cuatro</td><td class="m">171.075 de una vez</td><td class="m">18 cuotas de 10.000</td><td class="m">Un pago voluntario seg&uacute;n el ingreso, m&aacute;s bajo</td></tr>
+<tr><td class="l">Diez millones por mes, una falta grave</td><td class="m">171.075: el 1,7% del ingreso</td><td class="m">Lo mismo, en una cuota</td><td class="m">Seg&uacute;n el ingreso: 1.896.084</td></tr>
+<tr><td class="l">41 km/h en zona de 40</td><td class="m">Puede haber multa: ninguna norma obliga a descontar el error</td><td class="m">No hay multa: empieza en 47</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Cuentapropista que reincide</td><td class="m">Suspensi&oacute;n de hasta 9 meses, sin poder trabajar</td><td class="m">Suspensi&oacute;n corta, para un tipo de veh&iacute;culo, y curso</td><td class="m">Permiso para trabajar con horarios y recorridos; si reincide, suspensi&oacute;n doble</td></tr>
+</table>
+<p class="cap"><b>Fuente:</b> c&aacute;lculo propio con la unidad de multa de 2.281 pesos (Resoluci&oacute;n 4/2026) y el pago
+voluntario por exceso de velocidad, 75 unidades; la multa seg&uacute;n el ingreso, como en Finlandia: 12 d&iacute;as-multa del
+ingreso menos la canasta b&aacute;sica, dividido por 60.</p>
+<p class="cap"><b>Nota:</b> sin la Provincia, quien m&aacute;s gana sigue pagando menos en proporci&oacute;n: 171.075 pesos son
+el 17% de un ingreso de un mill&oacute;n y el 1,7% de uno de diez millones.</p>
+<div class="callout">
+<div class="clabel">Lo que se le pide a la Provincia</div>
+<p><b>Un pago voluntario seg&uacute;n el ingreso</b> &mdash;hasta 57.025 pesos para quien menos gana&mdash; y, para quien
+m&aacute;s gana, una multa seg&uacute;n el ingreso, s&oacute;lo en faltas graves y s&oacute;lo para subir, como en Finlandia. Depende de la
+Provincia: es un decreto del Gobernador y probablemente una ley.</p>
+<p><b>Un protocolo adicional al convenio de multas de 2020</b> que blinde las cuotas de San Isidro; <b>congelar la
+deuda en pesos</b>, como hizo en 2020; <b>que las pasadas antes del aviso cuenten como una</b>; <b>el permiso para
+trabajar</b> durante la suspensi&oacute;n; y que la Legislatura bonaerense apruebe <b>la licencia por puntos</b>.</p>
 </div>
 
 <h2><span class="n">5.12</span>Los que tienen que ejecutar todo esto <span class="tag v">Gesti&oacute;n</span></h2>
