@@ -336,6 +336,7 @@ def proyectar(b, esc, hasta=FIN_LARGO):
                          "gasto_programa_empleo_vivienda":
                              b["gasto_empleo"] + b["gasto_vivienda"],
                          "reasignacion_necesaria": D0,
+                         "del_gasto_flexible": D0,
                          "percepcion_pct": b["percepcion_pct"]})
             filas.append(fila)
             continue
@@ -370,6 +371,7 @@ def proyectar(b, esc, hasta=FIN_LARGO):
         prog_base = b["gasto_empleo"] + b["gasto_vivienda"]
         prog = prog_base
         reasignacion = D0
+        del_flexible = D0
         if esc.objetivo_programa is not None:
             paso = Decimal(min(k, esc.anios_rampa)) / Decimal(esc.anios_rampa)
             objetivo = (g_ctes + g_cap) * esc.objetivo_programa
@@ -387,9 +389,22 @@ def proyectar(b, esc, hasta=FIN_LARGO):
                 # el programa se reparte 60% y 40% (5.3, cuadro 33): lo que
                 # suma cada uno es su parte del total menos lo que ya se
                 # gastaba en 2025. Antes de que arranque, queda como en 2025.
+                #
+                # La tabla nueva se cobra como se cobra el ABL (73,97% en
+                # 2025, el peor caso del rango de 74% a 82%, informe 20): no
+                # alcanza para todo. Lo que falta cada anio sale del gasto
+                # flexible del Municipio, que se achica en esa cifra: 170
+                # millones el anio 1 y 1.242 desde el cuarto. Ese dinero no
+                # suma al gasto total; lo que cobra la tabla, si.
                 if k >= 1:
-                    g_ctes += prog * PARTE_EMPLEO - b["gasto_empleo"]
-                    g_cap += prog * (1 - PARTE_EMPLEO) - b["gasto_vivienda"]
+                    if esc.financiamiento == "valuacion" and esc.rendimiento_valuacion:
+                        ultimo = max(esc.rendimiento_valuacion)
+                        cobrado = esc.rendimiento_valuacion[min(k, ultimo)]
+                        del_flexible = max(D0, reasignacion - cobrado)
+                    g_ctes += (prog * PARTE_EMPLEO - b["gasto_empleo"]
+                               - del_flexible * PARTE_EMPLEO)
+                    g_cap += (prog * (1 - PARTE_EMPLEO) - b["gasto_vivienda"]
+                              - del_flexible * (1 - PARTE_EMPLEO))
 
         g_totales = g_ctes + g_cap
         resultado = ing_totales - g_totales
@@ -421,6 +436,7 @@ def proyectar(b, esc, hasta=FIN_LARGO):
             "percepcion_pct": _q(perc * 100),
             "gasto_programa_empleo_vivienda": _q(prog),
             "reasignacion_necesaria": _q(reasignacion),
+            "del_gasto_flexible": _q(del_flexible),
         })
     return filas
 
@@ -448,8 +464,10 @@ def escenarios(par):
                   descripcion="el mismo programa, pagado con la actualizacion "
                               "de la base de valuacion de la tasa: escala de "
                               "ARBA 10,9% por encima de la neutral y tope de "
-                              "25% de suba anual por boleta. Cobra 7.225,2 "
-                              "millones por anio desde el cuarto"),
+                              "25% de suba anual por boleta. Cobrada como se "
+                              "cobra el ABL (73,97%), da 5.983 millones por "
+                              "anio desde el cuarto; lo que falta sale del "
+                              "gasto flexible"),
     ]
 
 
@@ -532,7 +550,8 @@ def opciones_financiamiento(b, filas_reformista):
             "costo_del_programa": _q(c),
             "cubre_pct": _q(100 * aporte / c) if c else D0,
             "detalle": ("escala de ARBA 10,9%% por encima de la neutral, tope de "
-                        "25%% de suba anual por boleta, cobrado al 89,32%%: %s "
+                        "25%% de suba anual por boleta, cobrado al 73,97%% "
+                        "(lo que se cobra del ABL): %s "
                         "en el anio %d del programa" % (_q(aporte), k)),
             "efecto_en_resultado_financiero": _q(aporte),
             "supuesto": "parte tierra de la tasa; ver informes/09_escenario_b_valuacion.md",
@@ -639,7 +658,8 @@ COLUMNAS = ["escenario", "anio", "ing_origen_municipal", "ing_origen_provincial"
             "gastos_de_capital", "gastos_totales", "ahorro_corriente",
             "resultado_financiero", "stock_deuda", "amortizacion",
             "nuevo_endeudamiento", "percepcion_pct",
-            "gasto_programa_empleo_vivienda", "reasignacion_necesaria"]
+            "gasto_programa_empleo_vivienda", "reasignacion_necesaria",
+            "del_gasto_flexible"]
 
 
 def main():
@@ -674,9 +694,12 @@ def main():
         f.write("#\n")
         f.write("# El escenario reformista_valuacion es el MISMO programa pagado\n")
         f.write("# con la base de valuacion actualizada (escala de ARBA 10,9%% por\n")
-        f.write("# encima de la neutral, tope de 25%% anual por boleta). En regimen\n")
-        f.write("# da el mismo resultado que el base; en los anios 1 a 3 queda\n")
-        f.write("# arriba, porque con el tope se cobra mas de lo que pide la rampa.\n")
+        f.write("# encima de la neutral, tope de 25%% anual por boleta), cobrada\n")
+        f.write("# como se cobra el ABL: 73,97%%. Lo que falta cada anio sale del\n")
+        f.write("# gasto flexible (columna del_gasto_flexible): 170 millones el\n")
+        f.write("# anio 1 y 1.242 desde el cuarto. Esos anios el resultado es el\n")
+        f.write("# del base; en los anios 2 y 3 la tabla cobra mas de lo que pide\n")
+        f.write("# la rampa y queda arriba.\n")
         w = csv.DictWriter(f, fieldnames=COLUMNAS, extrasaction="ignore")
         w.writeheader()
         for x in todas:

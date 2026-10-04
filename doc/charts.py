@@ -309,8 +309,8 @@ def g_tornado():
           ("Percepción de recursos: 92,32%",d("percepcion","92.32%")),
           ("Coparticipación: −3,5% anual",d("coparticipacion","-3.5% anual")),
           ("Coparticipación: −1,5% anual",d("coparticipacion","-1.5% anual")),
-          ("Coparticipación: −2,5% anual",d("coparticipacion","-2.5% anual")),
-          ("Percepción de recursos: 89,32%",0)]
+          ("Coparticipación: −2,5% anual",d("coparticipacion","-2.5% anual"))]
+    # Arreglo A1 (03/10): sale la barra de 89,32%, que es el caso base y mueve cero.
     fig, ax = plt.subplots(figsize=(W,2.3)); frame(ax, grid="x")
     y=range(len(rows))[::-1]
     for yy,(lbl,v) in zip(y,rows):

@@ -343,17 +343,18 @@ for i, (v, vm) in enumerate([(float(_val[k]["cobrado"]), float(_val[k]["cobrado_
                              for k in (1, 2, 3, 4)]):
     et = ["Año 1 del programa (2028)", "Año 2 (2029)", "Año 3 (2030)", "Año 4 en adelante (2031–2035)"][i]
     s_row(134 + i, f"{et} · lo cobrado", v,
-          note=("Lo cobrado a la percepción de 2025, 89,32%. data/valuacion_rendimiento_por_anio.csv" if i == 0 else None))
+          note=("Lo cobrado como se cobra el ABL: 73,97%, el peor caso (fila 252). "
+                "data/valuacion_rendimiento_por_anio.csv" if i == 0 else None))
     s_row(138 + i, f"Si el mínimo frena subas · {et.lower()}", vm,
-          note=("Si el mínimo de la tasa frena todas las subas de lotes chicos: hasta 44,5 M menos por año (3.5)"
+          note=("Si el mínimo de la tasa frena todas las subas de lotes chicos: hasta 37 M menos por año (3.5)"
                 if i == 0 else None))
 s_row(142, "¿El mínimo frena las subas de lotes chicos? 1 = sí, 0 = no", 0, fmt="0", key=True,
-      note="El documento y el modelo del repo corren el 0. Con 1, lo cobrado en régimen es 7.180,7 M: "
-           "el rango del 3.5 es 7.180,7 a 7.225,2 M")
+      note="El documento y el modelo del repo corren el 0. Con 1, lo cobrado en régimen es 5.946,4 M: "
+           "el rango del 3.5 es 5.946 a 5.983 M")
 s_row(143, "Lo que el programa necesita en régimen", formula="=C50-C49",
-      note="Los 7.225,2 M de fondos nuevos por año")
+      note="Los 7.225,2 M que el programa suma por año: 5.983 de la tabla y 1.242 del gasto flexible (fila 256)")
 s_row(144, "Lo cobrado en régimen, con el mínimo que frena subas, sobre lo que se necesita",
-      formula="=C141/C143", fmt=FMT_PCT1, note="Lo que el programa necesita, o un 0,6% menos (3.5)")
+      formula="=C141/C143", fmt=FMT_PCT1, note="El 82,3%: el resto sale del gasto flexible (3.5)")
 
 s_header(146, "O · EMPLEO Y VIVIENDA Y LA FORMACIÓN (5.3, cuadro 33)")
 s_row(147, "Empleo · devengado 2025 (Apoyo y Promoción al Empleo)", sef_prog("APOYO Y PROMOCION AL EMPLEO"))
@@ -465,12 +466,16 @@ s_row(217, "Parte de lo cobrado en el año que entra de abril a diciembre", roun
       note="2025: el primer trimestre trajo el 27,3% de lo cobrado en el año por tasas y derechos (rubro 1.2), "
            "en pesos constantes (data/ejecucion_recursos.csv)")
 s_row(218, "Año 1: lo que cobra la tabla nueva si cobra desde abril", formula="=C134*C217",
-      note="1.437 M en vez de 1.976 M")
-s_row(219, "Año 1: lo que suma el programa al gasto", formula="='Resumen anual'!C53", note="1.806 M")
-s_row(220, "Año 1: lo que cobra menos lo que suma el programa", formula="=C218-C219", note="−369 M")
-s_row(221, "Resultado 2028 con el programa, si la tabla cobra desde abril", formula="='Resumen anual'!C33-(C134-C218)",
-      note="+1.207 M: peor que sin el programa (+1.576 M), y con superávit. Desde 2029 no cambia nada")
+      note="1.190 M en vez de 1.637 M")
+s_row(219, "Año 1: lo que necesita el programa", formula="=C143/4", note="1.806 M")
+s_row(220, "Año 1: lo que cobra menos lo que necesita el programa", formula="=C218-C219",
+      note="−616 M, en vez de −170 M")
+s_row(221, "Resultado 2028 con el programa, si la tabla cobra desde abril",
+      formula="='Resumen anual'!C33-MAX(0,C134-C219)+MAX(0,C218-C219)",
+      note="+1.576 M: el mismo que sin el programa, porque lo que falta sale del gasto flexible")
 s_row(222, "Resultado 2028 si nada cambia, para comparar", formula="='Resumen anual'!C68")
+s_row(223, "Año 1: lo que sale del gasto flexible si la tabla cobra desde abril", formula="=MAX(0,C219-C218)",
+      note="616 M en vez de 170 M: el 0,7% del gasto flexible. Desde 2029 no cambia nada")
 s_header(224, "V · CUIDADORES DOMICILIARIOS Y EQUIPOS POR ÁREA (5.13 y 3.4)")
 s_row(225, "Cuidadores domiciliarios, primera etapa", 100, fmt=FMT_N,
       note="Formados en el curso de operador de cuidados de adultos mayores del CFL 404 (380 h, DGCyE 2269/2022); "
@@ -513,7 +518,23 @@ s_row(245, "Escuela Náutica · año 2, dos más: inversión", 224637400, note="
 s_row(246, "Escuela Náutica · año 2: por año, cuatro puestos", 265767740, note="De 250 a 266 M (el tope)")
 s_row(247, "Escuela Náutica · año 3, los dos últimos: inversión", 224637400,
       note="De 145 a 225 M (el tope). Supuesto: dos puestos de agua abierta el año 1 y uno en cada uno de los siguientes")
-for rr in range(106, 248):
+s_header(249, "W · LA TABLA SE COBRA COMO EL ABL; LO QUE FALTA SALE DEL GASTO FLEXIBLE (3.5 e informe 20)")
+s_row(250, "ABL 2025 · facturado (devengado)", 112987300000,
+      note="Rubro 1.2.1.01, ejecución de recursos 2025, acumulado anual (informe 20)")
+s_row(251, "ABL 2025 · cobrado (percibido)", 83572600000, note="Incluye deuda de años anteriores y pagos adelantados")
+s_row(252, "Lo que se cobra del ABL", formula="=C251/C250", fmt=FMT_PCT2,
+      note="73,97%: el peor caso del rango de 74% a 82% (2024: 82,1%; primer semestre de 2026: 79,3%). El 89,32% "
+           "de la fila 33 es la cobranza de todos los ingresos, coparticipación incluida")
+s_row(253, "Año 1 · lo que falta y sale del gasto flexible", formula="=MAX(0,C143*1/4-IF(C142=1,C138,C134))",
+      note="170 M: la tabla cobra 1.637 M y el programa pide 1.806 M")
+s_row(254, "Año 2 · lo que falta", formula="=MAX(0,C143*2/4-IF(C142=1,C139,C135))",
+      note="Cero: la tabla cobra más de lo que pide la rampa")
+s_row(255, "Año 3 · lo que falta", formula="=MAX(0,C143*3/4-IF(C142=1,C140,C136))", note="Cero")
+s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,C141,C137))",
+      note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
+s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
+      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,4%)")
+for rr in range(106, 258):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -614,6 +635,7 @@ put(P, "B13", "Habilitaciones y analítica de seguridad", font(9))
 put(P, "B14", "Salud · turno digital", font(9))
 put(P, "B15", "Salud · módulo de los años 1 y 2, del gasto flexible libre", font(9))
 put(P, "B16", "Contrapartida · reasignación desde el gasto flexible", font(9))
+put(P, "B17", "Empleo y vivienda · lo que la tabla no cobra y sale del gasto flexible", font(9))
 put(P, "B20", "TOTAL PROGRAMAS: lo único que suma al gasto", font(9, True), fill=F_TOT)
 for m in MESES:
     X, y = col(m), anio(m)
@@ -631,15 +653,18 @@ for m in MESES:
                        f"+Supuestos!$C$54*Supuestos!$C$57*{[0, 0.6, 1, 1, 1, 1, 1, 1][y]}/12")
     P[f"{X}15"] = f"=IF({X}8<=Supuestos!$C$152,{X}27*Supuestos!$C$150*(1-Supuestos!$C$151),0)"
     P[f"{X}16"] = f"=-({X}10+{X}11+{X}12+{X}13+{X}15)"
-    P[f"{X}20"] = f"=SUM({X}9:{X}15)+{X}16"
-    for rr in (10, 11, 13, 15, 16):
+    P[f"{X}17"] = (f"=-CHOOSE(MIN({X}8,4),Supuestos!$C$253,Supuestos!$C$254,Supuestos!$C$255,"
+                   f"Supuestos!$C$256)/12")
+    P[f"{X}20"] = f"=SUM({X}9:{X}15)+{X}16+{X}17"
+    for rr in (10, 11, 13, 15, 16, 17):
         P[f"{X}{rr}"].number_format = FMT_M
         P[f"{X}{rr}"].font = font(9)
 
 # bloque nuevo: empleo y vivienda, abierto, y la formacion
 for rr in range(22, 45):
     clear_row(P, rr)
-put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con la base de valuación. Ambiente, educación, apoyo "
+put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con lo que cobra la tabla nueva, y lo que falta cada "
+    "año sale del gasto flexible (fila 17). Ambiente, educación, apoyo "
     "escolar, habilitaciones y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
     "función de destino y salen de los tres programas que ceden (cuadro 15), así que el gasto total no cambia.",
     font(8, italic=True, color=GRAY))
@@ -650,8 +675,8 @@ put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 33)", font(9, True), fill=F_S
 lab2 = {27: "Empleo y vivienda · total del mes",
         28: "Empleo: 60%, gasto corriente",
         29: "Vivienda y servicios básicos: 40%, gasto de capital",
-        30: "Empleo · lo que suma a 2025",
-        31: "Vivienda · lo que suma a 2025",
+        30: "Empleo · lo que suma al gasto total",
+        31: "Vivienda · lo que suma al gasto total",
         32: "Formación, con la intermediación adentro",
         33: "Contratación de desarrollos",
         35: "LA FORMACIÓN: DOS INGRESOS POR AÑO, DOS AÑOS CADA UNO",
@@ -680,8 +705,8 @@ for m in MESES:
     P[f"{X}27"] = f"=Supuestos!$C$49/12+{X}9"
     P[f"{X}28"] = f"={X}27*Supuestos!$C$150"
     P[f"{X}29"] = f"={X}27*(1-Supuestos!$C$150)"
-    P[f"{X}30"] = f"={X}28-Supuestos!$C$147/12"
-    P[f"{X}31"] = f"={X}29-Supuestos!$C$148/12"
+    P[f"{X}30"] = f"={X}28-Supuestos!$C$147/12+{X}17*Supuestos!$C$150"
+    P[f"{X}31"] = f"={X}29-Supuestos!$C$148/12+{X}17*(1-Supuestos!$C$150)"
     P[f"{X}32"] = f"={X}28*IF({X}8<=Supuestos!$C$152,1,Supuestos!$C$151)"
     P[f"{X}33"] = f"={X}28-{X}32"
     per = f"ROUND({X}32*12/Supuestos!$C$153,0)"
@@ -949,7 +974,7 @@ ra_row(50, "Rigidez del gasto, en junio", lambda a, b, c, y: f"'Gastos objeto'!{
 ra_row(51, "Salud / gasto por función, en junio", lambda a, b, c, y: f"'Gastos función'!{col(12 * y + 6)}30",
        fmt=FMT_PCT1)
 ra_row(52, "Empleo y vivienda, total anual", lambda a, b, c, y: f"SUM(Programas!{a}27:{b}27)")
-ra_row(53, "Lo que el programa suma al gasto", lambda a, b, c, y: f"SUM(Programas!{a}9:{b}9)")
+ra_row(53, "Lo que el programa suma al gasto", lambda a, b, c, y: f"SUM(Programas!{a}9:{b}9)+SUM(Programas!{a}17:{b}17)")
 ra_row(54, "Egresados de la formación en el año", lambda a, b, c, y: f"SUM(Programas!{a}37:{b}37)", fmt=FMT_N)
 
 # control 1: el anio base
@@ -1009,9 +1034,9 @@ for r, t, vals, fx in filas:
 put(RA, "B77", "Las filas azules son el resultado del modelo del repo con los supuestos del documento, copiado de "
     "data/modelo_flujo_caja.csv. Las diferencias dan cero mientras los supuestos sean los del documento: si se "
     "mueve una palanca, se separan.", font(8, italic=True, color=GRAY))
-put(RA, "B78", "El programa suma 7.225,2 M por año en régimen y la base de valuación cobra 7.225,2 M: por eso desde "
-    "2031 el resultado es el mismo con y sin programa. Los tres primeros años la base cobra más de lo que pide la "
-    "rampa (cuadro 20).", font(8, italic=True, color=GRAY))
+put(RA, "B78", "El programa pide 7.225,2 M por año en régimen. La tabla nueva, cobrada como el ABL, da 5.983 M, y lo "
+    "que falta, 1.242 M, sale del gasto flexible: por eso en 2028 y desde 2031 el resultado es el mismo con y sin "
+    "programa. En 2029 y 2030 la tabla cobra más de lo que pide la rampa (cuadro 20).", font(8, italic=True, color=GRAY))
 
 # ======================================================================
 # ESCENARIOS: los dos del documento y la sensibilidad
@@ -1026,7 +1051,7 @@ put(ES, "B5", "ESCENARIO", font(8, True, color="FFFFFFFF"), fill=F_HDR, align="c
 for y in ANIOS:
     put(ES, f"{COL_ANIO[y]}5", str(2028 + y), font(8, True, color="FFFFFFFF"), fill=F_HDR, align="center")
 put(ES, "B6", "Si nada cambia", font(9, True))
-put(ES, "B7", "Con el programa, pagado con la base de valuación", font(9, True))
+put(ES, "B7", "Con el programa: la tabla, y lo que falta del gasto flexible", font(9, True))
 put(ES, "B8", "Diferencia", font(9))
 put(ES, "B9", "Diferencia si el mínimo frena subas", font(9))
 for y in ANIOS:
@@ -1036,10 +1061,12 @@ for y in ANIOS:
     put(ES, f"{c}6", f"='Resumen anual'!{c}33-('Resumen anual'!{c}9-'Resumen anual'!{c}53)", font(9, True, color=GREEN), FMT_M)
     put(ES, f"{c}7", f"='Resumen anual'!{c}33", font(9, True, color=GREEN), FMT_M)
     put(ES, f"{c}8", f"={c}7-{c}6", font(9), FMT_M1)
-    put(ES, f"{c}9", f"=Supuestos!$C${137 + kk}*Recursos!{a}18-'Resumen anual'!{c}53", font(9), FMT_M1)
+    put(ES, f"{c}9", f"=MAX(0,Supuestos!$C${137 + kk}*Recursos!{a}18-Supuestos!$C$143*{kk}/4)", font(9), FMT_M1)
 put(ES, "B10", "Los dos escenarios tienen los mismos supuestos de recaudación propia y de coparticipación: lo único "
-    "que cambia es el programa y lo que cobra la base de valuación. El programa empieza en 2028. Desde 2031 lo cobrado "
-    "y lo gastado se igualan; la última fila supone que el mínimo de la tasa frena todas las subas de lotes chicos (3.5).",
+    "que cambia es el programa y lo que cobra la tabla nueva, al 73,97% del ABL. El programa empieza en 2028. En 2028 "
+    "y desde 2031 la tabla cobra menos de lo que pide el programa y lo que falta sale del gasto flexible: el resultado "
+    "es el mismo. En 2029 y 2030 cobra más y el resultado mejora. La última fila supone que el mínimo de la tasa frena "
+    "todas las subas de lotes chicos (3.5).",
     font(8, italic=True, color=GRAY))
 
 put(ES, "B12", "SENSIBILIDAD · RESULTADO DE 2031 SI NADA CAMBIA (3.2, 3.6 y gráfico 19)", font(9, True), fill=F_SEC)
@@ -1059,10 +1086,10 @@ sens = [
      "Lo único de los tres que no depende del Municipio"),
     (18, "", -0.025, "=" + BASE31 + "+Supuestos!$C$115*Supuestos!$C$118*((1+C{r})^6-(1+Supuestos!$C$32)^6)", ""),
     (19, "", -0.035, "=" + BASE31 + "+Supuestos!$C$115*Supuestos!$C$118*((1+C{r})^6-(1+Supuestos!$C$32)^6)",
-     "Si cae 3,5% por año, 2031 queda en +5.514 M (3.2)"),
+     "Si cae 3,5% por año, 2031 queda en +5.342 M (3.2)"),
     (20, "Qué parte de lo facturado se cobra", 0.8632,
-     "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", "Tres puntos menos: −292 M en 2031 (3.6)"),
-    (21, "", "=Supuestos!C34", None, "La de 2025: 89,32%"),
+     "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", "Tres puntos menos: −426 M en 2031 (3.6)"),
+    (21, "", "=Supuestos!C34", None, "La de 2025, de todos los ingresos: 89,32%"),
     (22, "", 0.9232, "=" + BASE31 + "+" + IC31 + "*(C{r}/Supuestos!$C$34-1)", ""),
 ]
 for r, lab, var, fx, nota in sens:
@@ -1186,13 +1213,14 @@ guia = [
      "constantes. El gasto queda constante en términos reales —cero recomposición salarial y cero servicios "
      "nuevos—, salvo el programa."),
     ("EL PROGRAMA", "Empleo y vivienda pasan de 505,7 M a 7.730,9 M en cuatro años desde 2028 (25%, 50%, 75% y 100% "
-     "de lo que falta): 7.225,2 M de fondos nuevos por año, 60% a empleo —gasto corriente— y 40% a vivienda —gasto "
+     "de lo que falta): 7.225,2 M más por año, 60% a empleo —gasto corriente— y 40% a vivienda —gasto "
      "de capital—. Los dos primeros años la formación usa toda la partida de empleo: dos ingresos por año y 1.286 "
      "egresados en el mandato."),
     ("CÓMO SE PAGA", "Con la base de valuación actualizada, escenario B: la escala de ARBA 10,9% por encima de la "
-     "neutral y un tope de 25% de suba por boleta y por año. Cobra 1.976, 5.858 y 7.168 M los tres primeros años y "
-     "7.225,2 M desde el cuarto; entre 7.180,7 y 7.225,2 M según cuántas subas frene el mínimo. La cobranza no "
-     "paga el programa."),
+     "neutral y un tope de 25% de suba por boleta y por año, cobrada como se cobra el ABL: 73,97%, el peor caso del "
+     "rango de 74% a 82%. Cobra 1.637, 4.851 y 5.936 M los tres primeros años y 5.983 M desde el cuarto; entre "
+     "5.946 y 5.983 M según cuántas subas frene el mínimo. Lo que falta cada año sale del gasto flexible: 170 M el "
+     "año 1 y 1.242 M desde el cuarto, el 1,4%. La cobranza no paga el programa."),
     ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y el mantenimiento de habilitaciones —6.863 M en "
      "régimen, y la inversión de 1.200 M una vez—, la plataforma y "
      "el semillero —dentro de Ciencia y Técnica, 22,0%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
@@ -1201,7 +1229,7 @@ guia = [
      "y el módulo de salud de los años 1 y 2 —del gasto flexible libre— y el funcionamiento del sistema vecinal —1,5% "
      "de la partida— no cambian el gasto total: mueven lo que el Municipio ya gasta. Lo que pagan las empresas por "
      "los pasantes, 1.469,1 M, no es gasto municipal."),
-    ("ESCENARIOS", "Dos: si nada cambia, y con el programa pagado con la base de valuación. Más la sensibilidad del "
+    ("ESCENARIOS", "Dos: si nada cambia, y con el programa pagado con la tabla y lo que falta del gasto flexible. Más la sensibilidad del "
      "resultado de 2031 a lo que recauda el Municipio, a la coparticipación y a la percepción."),
     ("EL BONO", "El bono de 30.000 M de agosto de 2026 entra en la deuda y en la caja, no en el resultado: su capital "
      "va debajo de la línea, en siete cuotas trimestrales entre 2028 y 2029, y su interés no se proyecta porque la "

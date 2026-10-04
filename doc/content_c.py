@@ -891,7 +891,7 @@ presupuesto de mayor a menor y termina en el trabajo.</p>
 [[n:dos_partidas]]).</p>
 <p><b>Propuesta:</b> llevar el gasto conjunto en empleo y vivienda a <b>7.730,9 millones anuales en
 r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. De eso,
-<b>7.225,2 millones son fondos nuevos</b>; el resto ya se gasta.</p>
+<b>5.983 millones son fondos nuevos</b>, de la tabla, y 1.242 salen del gasto flexible; el resto ya se gasta.</p>
 </div>
 <h3>Qu&eacute; hace hoy el Municipio con esos 170 millones</h3>
 <div class="cols">
@@ -1584,8 +1584,10 @@ decide qu&eacute; se hace con cada una.</p>
 (Ordenanza 9430). Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b> en sus predios, no
 adentro de los parques, paguen
 un canon al Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). Por una ley
-provincial de 2025, el 40% de ese canon va a la Provincia; <b>el 60% que queda en el Municipio se destina a la
-costa</b> (anexo, Ordenanza XII). <span class="sg">No se
+provincial de 2025, el 40% de ese canon va a la Provincia, pero s&oacute;lo en los predios del convenio, donde est&aacute;n el
+Parque del &Aacute;guila, S&aacute;enz Pe&ntilde;a, Centenera y Pacheco; en el Puerto y en 33 Orientales, que no est&aacute;n en el convenio, no
+corresponde (necesita dictamen de un abogado). <b>Lo que queda en el Municipio se destina a la costa</b> (anexo,
+Ordenanza XII). <span class="sg">No se
 destruye capital ni empleo que funciona</span>: demoler es la &uacute;ltima opci&oacute;n, no la primera, y exige fundamentar
 por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
 <p><b>El objetivo es una costa linda que traiga gente y trabajo a los comercios toda la semana y todo el
@@ -1895,7 +1897,7 @@ medicamentos e insumos. No es una particularidad argentina: es d&oacute;nde fall
 cualquier pa&iacute;s.</p>
 <p><b>Y no hace falta que haya delito para que el da&ntilde;o exista.</b> Cuando un hospital no puede
 saber cu&aacute;nto paga otro hospital p&uacute;blico por el mismo producto, es imposible detectar
-sobreprecios. <span class="sg">Basta con que falte la comparaci&oacute;n para que el gasto se vuelva
+si se paga de m&aacute;s. <span class="sg">Basta con que falte la comparaci&oacute;n para que el gasto se vuelva
 estructuralmente ineficiente</span>, sin que nadie robe nada.</p>
 <p><b>Y en San Isidro ya pas&oacute;.</b> En 2024 el Municipio denunci&oacute; penalmente a
 exfuncionarios de Salud y directores de hospitales &mdash;<b>al menos diez personas</b>&mdash; por
@@ -2411,7 +2413,7 @@ comercial de un barrio es infraestructura del barrio.</p>
 <h2><span class="n">5.12</span>Los que tienen que ejecutar todo esto <span class="tag v">Gesti&oacute;n</span></h2>
 <div class="cols">
 <p><b>Este programa no propone reducir la planta.</b> Ni congelarla, ni reemplazarla por contratos, ni
-tercerizar funciones. Las dos propuestas m&aacute;s grandes se financian con la actualizaci&oacute;n de la base de valuaci&oacute;n y con reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
+tercerizar funciones. Las dos propuestas m&aacute;s grandes se financian con la actualizaci&oacute;n de la base de valuaci&oacute;n y el gasto flexible, y con reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
 personal</span>, y el modelo del cap&iacute;tulo 3 trata ese gasto como r&iacute;gido precisamente porque
 no se toca.</p>
 <p><b>Pero prometer que no se despide a nadie es una promesa defensiva, y no alcanza.</b> Lo que este
@@ -2762,7 +2764,7 @@ tres meses para ponerlas en servicio.</p>
 <tr class="hi"><td class="l">El Concejo no acompa&ntilde;a <span class="tag m">Cr&iacute;tico</span></td>
 <td>Hacen falta trece votos y diez bloques se reparten veinticuatro bancas: nada se aprueba sin cuatro bloques de acuerdo. <b>Mitigaci&oacute;n:</b> el mecanismo est&aacute; dise&ntilde;ado para ser votable &mdash;no reforma la LOM, no pide facultades nuevas, no compite con el Concejo&mdash; y el primer proyecto, derogar los arts. 8 a 10, no le cuesta nada a ning&uacute;n bloque. Si aun as&iacute; no hay acuerdo, la rampa no arranca.</td></tr>
 <tr><td class="l">La tabla nueva no sale en diciembre</td>
-<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde abril. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que <b>el a&ntilde;o 1 cobra 1.437 millones contra 1.806 que necesita el programa, y 2028 cierra en +1.207</b>. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la preparatoria va primera en la convocatoria de diciembre y se aprueba antes del 22, para que la asamblea se re&uacute;na antes de fin de a&ntilde;o con los ocho d&iacute;as de citaci&oacute;n que pide la Ley Org&aacute;nica (art. 98) y con su integraci&oacute;n adecuada al Concejo nuevo, como pide el Tribunal de Cuentas. La de 2025 se reuni&oacute; el 17 de diciembre.</td></tr>
+<td>Si la asamblea de diciembre no la sanciona, pasa a las sesiones ordinarias, que abren el 1 de marzo (Ley Org&aacute;nica, art. 68): se aprueba en marzo y cobra desde abril. El primer trimestre trae el 27,3% de lo que se cobra en el a&ntilde;o, as&iacute; que <b>el a&ntilde;o 1 cobra 1.190 millones contra 1.806 que necesita el programa: lo que falta sale del gasto flexible, 616 millones en vez de 170, y 2028 cierra igual, en +1.576</b>. Desde 2029 no cambia nada. <b>Mitigaci&oacute;n:</b> la preparatoria va primera en la convocatoria de diciembre y se aprueba antes del 22, para que la asamblea se re&uacute;na antes de fin de a&ntilde;o con los ocho d&iacute;as de citaci&oacute;n que pide la Ley Org&aacute;nica (art. 98) y con su integraci&oacute;n adecuada al Concejo nuevo, como pide el Tribunal de Cuentas. La de 2025 se reuni&oacute; el 17 de diciembre.</td></tr>
 <tr><td class="l">Zonas sin asociaci&oacute;n vecinal en condiciones de ejecutar</td>
 <td>El art&iacute;culo 132 exige una asociaci&oacute;n como parte contratante; si no la hay, la zona no puede ejecutar. <b>Mitigaci&oacute;n:</b> el Municipio convoca y acompa&ntilde;a la constituci&oacute;n (4.6), y mientras tanto la partida de esa zona se ejecuta por administraci&oacute;n, en esa zona. La priorizaci&oacute;n vecinal funciona igual: lo que se demora es la ejecuci&oacute;n directa.</td></tr>
 <tr><td class="l">La tecnicatura no tiene validez nacional a tiempo</td>
@@ -2774,7 +2776,7 @@ tres meses para ponerlas en servicio.</p>
 <tr><td class="l">Los recursos propios crecen menos de 1,2% real</td>
 <td>Es el punto de quiebre: por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo (3.6). <b>Sin mitigaci&oacute;n del lado del gasto.</b> Es la variable que m&aacute;s depende de la administraci&oacute;n municipal, y por eso el cap&iacute;tulo 3 la pone primera.</td></tr>
 <tr><td class="l">El Municipio cobra una parte menor de lo que factura</td>
-<td>Hoy cobra el 89,32%, y tres puntos menos dejan las cuentas de 2031 pr&aacute;cticamente en cero: &minus;426
+<td>Hoy cobra el 89,32% de todos sus ingresos, y tres puntos menos dejan las cuentas de 2031 pr&aacute;cticamente en cero: &minus;426
 millones (3.6). Una parte de lo que no se cobra es descuento, que decide el propio Municipio, y otra es mora
 (3.2). <b>Mitigaci&oacute;n:</b> el programa no se paga con la cobranza, as&iacute; que no la necesita; y la
 Ordenanza III le quita el descuento por pago anual al 10% de las partidas de mayor valuaci&oacute;n (anexo).</td></tr>
@@ -2786,8 +2788,8 @@ dependen del Municipio: la ca&iacute;da est&aacute; dentro del coeficiente autom
 los bancos, m&aacute;s 7 puntos&mdash;, y siete de sus ocho cuotas de capital las paga el gobierno que asume en
 diciembre de 2027, las siete en 2028 y 2029 (3.5). El modelo no lo proyecta: est&aacute; en pesos
 constantes y la tasa es nominal. <b>Sin mitigaci&oacute;n del lado de la tasa</b>, que la fija el mercado. Lo
-que s&iacute; hace el programa: no toma deuda, y en 2028 y 2029 la tabla nueva cobra m&aacute;s de lo que el
-programa gasta, as&iacute; que deja las cuentas mejor que no hacer nada justo en los a&ntilde;os del bono (3.6).</td></tr>
+que s&iacute; hace el programa: no toma deuda, y en 2029 la tabla nueva cobra m&aacute;s de lo que el programa gasta,
+as&iacute; que en los a&ntilde;os del bono deja las cuentas igual que no hacer nada en 2028 y mejor en 2029 (3.6).</td></tr>
 <tr><td class="l">La antig&uuml;edad de los recolectores</td>
 <td>Al cambiar el contrato, el Municipio paga la antig&uuml;edad acumulada hasta ese d&iacute;a, auditada (5.5): entre 2.800 y
 12.100 millones, unos 7.000 en el medio, sujeto al padr&oacute;n auditado, porque cu&aacute;ntos trabajadores son y cu&aacute;ntos a&ntilde;os

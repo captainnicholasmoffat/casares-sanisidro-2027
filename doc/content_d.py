@@ -12,7 +12,7 @@ explicar&iacute;a a un vecino.</div>
 <tr><td class="l">Percibido</td><td>Lo que efectivamente entr&oacute; a la caja. La diferencia con lo devengado no es s&oacute;lo deuda: incluye los descuentos y las exenciones que el Municipio aplica sobre lo ya facturado.</td></tr>
 <tr><td class="l">Percepci&oacute;n</td><td>Qu&eacute; porcentaje de lo devengado termin&oacute; entrando a la caja.</td></tr>
 <tr><td class="l">Gasto r&iacute;gido</td><td>Lo que no se puede dejar de pagar dentro del a&ntilde;o: sueldos, deuda y contratos ya firmados. En San Isidro es el 73,1%.</td></tr>
-<tr><td class="l">Gasto flexible</td><td>Lo que queda y s&iacute; se puede decidir cada a&ntilde;o: 87.326 millones, el 26,9%. De ah&iacute; sale todo lo que este programa propone, salvo los 7.225,2 millones nuevos, que paga la base de valuaci&oacute;n.</td></tr>
+<tr><td class="l">Gasto flexible</td><td>Lo que queda y s&iacute; se puede decidir cada a&ntilde;o: 87.326 millones, el 26,9%. De ah&iacute; sale todo lo que este programa propone, salvo los 5.983 millones nuevos que cobra la base de valuaci&oacute;n.</td></tr>
 <tr><td class="l">Ahorro corriente</td><td>Lo que sobra despu&eacute;s de pagar el funcionamiento diario, antes de invertir en obra.</td></tr>
 <tr><td class="l">Resultado financiero</td><td>Lo que queda al final del a&ntilde;o, despu&eacute;s de todo, incluida la obra. En 2025 fue &minus;6.051 millones.</td></tr>
 <tr><td class="l">Bienes de uso</td><td>El nombre contable de la obra p&uacute;blica y el equipamiento: lo que queda despu&eacute;s de gastarlo.</td></tr>

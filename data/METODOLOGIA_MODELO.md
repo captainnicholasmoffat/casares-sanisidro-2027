@@ -190,7 +190,7 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 |---|---:|---:|---:|---:|---:|
 | base | −6.051 | +1.576 | +10.236 | +19.953 | +30.756 |
 | reformista | −6.051 | +1.576 | +10.236 | +19.953 | +30.756 |
-| **reformista_valuacion** | −6.051 | **+1.746** | +10.236 | +19.953 | +30.756 |
+| **reformista_valuacion** | −6.051 | **+1.576** | +10.236 | +19.953 | +30.756 |
 
 > **Que `reformista` dé idéntico a `base` NO es un error de copiado.** El
 > programa se financia **íntegramente por reasignación dentro del gasto
@@ -202,16 +202,22 @@ Resultado financiero, en millones de pesos de diciembre de 2025:
 **`reformista_valuacion` es el mismo programa pagado con la base de valuación
 actualizada** (septiembre de 2026, informe 09). La escala de ARBA se fija un 10,9%
 por encima de la que dejaría la recaudación igual, y ninguna boleta sube más de 25%
-por año por esa actualización. Lo cobrado, al 89,32% de percepción, sale de
-`data/valuacion_rendimiento_por_anio.csv`: 1.976 millones el año 1 (2028), 5.858
-el 2, 7.168 el 3 y 7.225,2 desde el 4 (2031), en pesos constantes y sin crecimiento
+por año por esa actualización. **Se cobra como se cobra el ABL** (informe 20): el
+89,32% es la cobranza de todos los ingresos, coparticipación incluida; del ABL se
+cobra entre el 74% y el 82%, y el modelo usa el peor caso, 73,97% (83.572,6 millones
+percibidos sobre 112.987,3 facturados en 2025). Lo cobrado sale de
+`data/valuacion_rendimiento_por_anio.csv`: 1.637 millones el año 1 (2028), 4.851
+el 2, 5.936 el 3 y 5.983 desde el 4 (2031), en pesos constantes y sin crecimiento
 propio.
 Si el mínimo de la tasa frena las subas de lotes que hoy están debajo del piso, es
-hasta 44,5 millones menos por año (columna `cobrado_si_el_minimo_frena_subas`); el
+hasta 37 millones menos por año (columna `cobrado_si_el_minimo_frena_subas`); el
 modelo corre la columna `cobrado`.
-El gasto total sube lo que cuesta el programa. En régimen el resultado es el
-mismo que el base; en los años 1 a 3 (2028 a 2030) queda arriba, porque con el tope
-se cobra más de lo que pide la rampa (+170, +2.245 y +1.750 millones).
+**Lo que falta cada año sale del gasto flexible** (columna `del_gasto_flexible`):
+170 millones el año 1, nada los años 2 y 3, y 1.242 desde el 4, el 1,4% del gasto
+flexible. Esa parte no suma al gasto total.
+El gasto total sube lo que cobra la tabla. En 2028 y en régimen el resultado es el
+mismo que el base; en 2029 y 2030 queda arriba, porque con el tope se cobra más de
+lo que pide la rampa (+1.238 y +517 millones).
 
 Reemplaza al escenario `reformista_percepcion`, que pagaba el programa cobrando
 mejor: el documento ya no propone financiarlo con la cobranza.
@@ -249,7 +255,7 @@ servicio de la deuda:
 | **iii. Crédito, 0% real** | 7.225 mill. | 100% | +2.529 mill. |
 | **iii. Crédito, 5% real** | 7.225 mill. | 100% | +1.626 mill. |
 | **iii. Crédito, 10% real** | 7.225 mill. | 100% | +723 mill. |
-| **iv. Base de valuación (la del documento)** | 7.225 mill. | 100% | +7.225 mill. |
+| **iv. Base de valuación (la del documento)** | 5.983 mill. | 83% | +5.983 mill.; el resto, del gasto flexible |
 
 La opción (i) sale del gasto flexible: bienes de consumo, bienes de uso,
 transferencias. Cuáles exactamente es una decisión política, y el detalle por

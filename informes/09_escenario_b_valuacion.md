@@ -1,5 +1,12 @@
 # 09 · Escenario B de la base de valuación
 
+> **Corrección del 03/10/2026 (informe 20):** lo cobrado de este informe usa el 89,32%, que es la cobranza de
+> todos los ingresos, coparticipación incluida. Del ABL se cobra entre el 74% y el 82%; el programa usa el peor
+> caso, 73,97%. Con la misma tabla, se cobran 1.637, 4.851 y 5.936 millones los tres primeros años y 5.983 desde
+> el cuarto (5.946 si el mínimo frena subas). Lo que falta para los 7.225,2 sale del gasto flexible: 170 millones
+> el año 1 y 1.242 desde el cuarto. Los números al día están en `data/valuacion_rendimiento_por_anio.csv`; las
+> tablas de abajo quedan como estaban, para la historia.
+
 25 de septiembre de 2026. Rama `claude/cool-hopper-3hdk58`. Todo sale de
 `03_scripts/escenario_b_valuacion.py`, con los datos crudos guardados en el repo.
 

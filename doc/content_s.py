@@ -68,9 +68,9 @@ en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.
 <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que todo esto se pague sin subir el porcentaje de la tasa de servicios generales ni tomar deuda.</b> Cuesta 7.225,2 millones
-de fondos nuevos por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash;
-y sale de actualizar la tabla de 2008 con la que el Municipio calcula cu&aacute;nto vale la tierra para cobrar
-esa tasa. <span class="sg">Bajan m&aacute;s parcelas
+por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash;: 5.983 salen de actualizar la
+tabla de 2008 con la que el Municipio calcula cu&aacute;nto vale la tierra para cobrar esa tasa, contando que de esa tasa se
+cobra el 74% de lo que se factura, y los 1.242 que faltan, del gasto flexible. <span class="sg">Bajan m&aacute;s parcelas
 de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y lo que el
 Municipio factura en total por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>

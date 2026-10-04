@@ -168,7 +168,7 @@ contribuyentes.</li>
 C3A = dict(id="cap3a", runhead=RH, html=fig("f_escalera",
     "Bajada a la costa. Ilustraci&oacute;n.") + """
 <h1><span class="n">3</span>Los fondos</h1>
-<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028.<br>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente, y se paga actualizando la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra.</div>
+<div class="stand">El Municipio cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones que se corrige solo hacia 2028.<br>Este programa cuesta 7.225,2 millones por a&ntilde;o, el 8,3% del gasto que puede reasignar libremente. Actualizar la tabla de 2008 con la que se calcula la tasa, sin subir el porcentaje que se cobra, trae 5.983 millones; los 1.242 que faltan salen del gasto flexible del Municipio.</div>
 
 <p>De los a&ntilde;os con cuentas publicadas, el Municipio cerr&oacute; en d&eacute;ficit de 2010 a 2015, en
 2017, 2019, 2020 y 2025, y con super&aacute;vit en 2016, 2021, 2022 y 2024: el de 2024 fue de 27.154
@@ -254,7 +254,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
      "Ingresos menos gastos de cada a&ntilde;o, en miles de millones de pesos de diciembre de 2025, si lo que recauda el Municipio y lo que le gira la Provincia siguen la tendencia de los &uacute;ltimos a&ntilde;os.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la actualizaci&oacute;n de la tabla de valuaci&oacute;n est&aacute; en el modelo: en sus tres primeros a&ntilde;os la tabla nueva cobra m&aacute;s de lo que el programa gasta, y despu&eacute;s se igualan (cuadro [[n:programa_base]])."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la actualizaci&oacute;n de la tabla de valuaci&oacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva cobra m&aacute;s de lo que el programa gasta; en 2028 y desde 2031 cobra menos, y lo que falta sale del gasto flexible (cuadro [[n:programa_base]])."))
 
 
 # =====================================================================
@@ -268,7 +268,7 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <table>
 <colgroup><col style="width:150pt"><col style="width:74pt"><col style="width:88pt"><col></colgroup>
 <tr class="hd"><th>Parte del programa</th><th class="r">Cu&aacute;nto cuesta</th><th>&iquest;Es dinero nuevo?</th><th>De qu&eacute; partida sale</th></tr>
-<tr class="hi"><td class="l">Empleo y vivienda</td><td class="n"><b>7.730,9 M</b></td><td class="m"><b>S&iacute;: 7.225,2 M.</b> Los otros 505,7 M ya se gastan</td><td class="m">La base de valuaci&oacute;n actualizada (3.5). Los 505,7 M, de Apoyo y Promoci&oacute;n al Empleo e Infraestructura Habitacional</td></tr>
+<tr class="hi"><td class="l">Empleo y vivienda</td><td class="n"><b>7.730,9 M</b></td><td class="m"><b>S&iacute;: 5.983 M.</b> Los otros 1.747,7 M ya se gastan o salen del gasto flexible</td><td class="m">La base de valuaci&oacute;n actualizada (3.5): 5.983 M. Del gasto flexible, 1.242 M. Los 505,7 M, de Apoyo y Promoci&oacute;n al Empleo e Infraestructura Habitacional</td></tr>
 <tr><td class="l">Obra p&uacute;blica vecinal, la mitad de la obra al cuarto a&ntilde;o</td><td class="n">28.908 M</td><td class="m">No</td><td class="m">Bienes de uso: los 57.816 M de obra p&uacute;blica que ya se ejecutan</td></tr>
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
@@ -280,8 +280,8 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
 <tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
 </table>
-<p class="cap"><b>El &uacute;nico dinero nuevo son 7.225,2 millones y sale de la base de valuaci&oacute;n; todo lo
-dem&aacute;s se paga moviendo lo que el Municipio ya gasta.</b></p>
+<p class="cap"><b>El &uacute;nico dinero nuevo son 5.983 millones y sale de la base de valuaci&oacute;n; todo lo dem&aacute;s,
+incluidos los 1.242 millones que la tabla no alcanza a cobrar, se paga moviendo lo que el Municipio ya gasta.</b></p>
 <p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica y los equipos son estimaciones del equipo de este
 programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
 de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
@@ -299,7 +299,7 @@ Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y cuidado de perso
 Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con las cargas del cuadro [[n:equipo]] y trece
 sueldos.</p>
 <p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s
-grandes, y son los dos extremos: <span class="sg">una necesita 7.225 millones nuevos y la otra
+grandes, y son los dos extremos: <span class="sg">una necesita 5.983 millones nuevos y la otra
 ninguno</span>.</p>
 <h3>Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
 <div class="cols">
@@ -308,7 +308,8 @@ ninguno</span>.</p>
 <p>Este programa lleva ese gasto conjunto a <b>7.730,9
 millones anuales en r&eacute;gimen</b> &mdash;el 2,5% del gasto total proyectado&mdash;, que son
 <span class="sg">quince veces</span> lo que se gasta hoy. De esos 7.730,9 millones, 505,7 ya se gastan.
-<b>Los fondos nuevos que hay que financiar son 7.225,2 millones.</b></p>
+<b>Lo que hay que financiar son 7.225,2 millones:</b> 5.983 de la tabla nueva y 1.242 del gasto
+flexible, el 1,4% (3.5).</p>
 </div>
 <h3>Obra p&uacute;blica vecinal: esto no son fondos nuevos</h3>
 <div class="cols">
@@ -355,8 +356,8 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>El compromiso anual es de 7.225,2 millones nuevos m&aacute;s 6.863 de reasignaci&oacute;n del gasto
-flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
+<p><b>El compromiso anual es de 5.983 millones nuevos, m&aacute;s 1.242 del gasto flexible para empleo y
+vivienda y 6.863 de reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
 una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors; Desarrollo
 Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica, hasta 395 desde el tercer a&ntilde;o, con una
 inversi&oacute;n de hasta 717 en tres a&ntilde;os, de obras deportivas. Los primeros exigen
@@ -502,15 +503,16 @@ tierra al 33,2%, Mart&iacute;nez del 25,7% al 27,3% y Acassuso del 7,3% al 7,6%.
 al 3,8% y Boulogne del 16,8% al 14,5%.</b> B&eacute;ccar pasa del 15,1% al 13,6% porque el total sube y ella paga
 lo mismo.</p>
 <p><b>Cu&aacute;nto aporta.</b> El nivel de la tabla nueva se fija para que la parte tierra emita
-<b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. Con la percepci&oacute;n
-de hoy &mdash;89,32%&mdash; se cobran <b>entre 7.180,7 y 7.225,2 millones</b>, seg&uacute;n cu&aacute;ntas
-subas frene el m&iacute;nimo en lotes chicos: lo que el programa necesita, o un 0,6% menos. <b>El
-c&aacute;lculo es sobre la parte tierra</b>: los metros construidos no son p&uacute;blicos.</p>
+<b>8.089 millones m&aacute;s por a&ntilde;o</b>, un 10,9% m&aacute;s que hoy. No todo se cobra: el 89,32% que el Municipio
+cobra de lo que factura es de todos sus ingresos, coparticipaci&oacute;n incluida, y de esta tasa cobra entre el 74% y
+el 82%. Con el peor caso, 74%, se cobran <b>entre 5.946 y 5.983 millones</b>, seg&uacute;n cu&aacute;ntas subas frene el
+m&iacute;nimo en lotes chicos. <b>Los 1.242 millones que faltan para los 7.225,2 salen del gasto flexible del
+Municipio</b>: el 1,4%. <b>El c&aacute;lculo es sobre la parte tierra</b>: los metros construidos no son p&uacute;blicos.</p>
 <p><b>Con un tope.</b> Ninguna boleta sube m&aacute;s de 25% por a&ntilde;o, as&iacute; que la
-actualizaci&oacute;n se completa en cuatro ejercicios; las bajas no esperan, van desde el primero. <span
-class="sg">Y aun as&iacute; alcanza cada a&ntilde;o:</span> el primero se cobran 1.976 millones y el
-programa necesita 1.806; el segundo, 5.858 contra 3.613; el tercero, 7.168 contra 5.419. Si el
-m&iacute;nimo frena subas, esos tres a&ntilde;os son hasta 44,5 millones menos, y sigue alcanzando.</p>
+actualizaci&oacute;n se completa en cuatro ejercicios; las bajas no esperan, van desde el primero. El primer a&ntilde;o
+se cobran 1.637 millones y el programa necesita 1.806: faltan 170, que salen del gasto flexible. <span
+class="sg">El segundo y el tercero sobra:</span> 4.851 contra 3.613, y 5.936 contra 5.419. Desde el cuarto,
+5.983 contra 7.225: faltan los 1.242. Si el m&iacute;nimo frena subas, se cobran hasta 37 millones menos por a&ntilde;o.</p>
 <p><b>Cobra desde enero de 2028.</b> La ordenanza entra en la sesi&oacute;n extraordinaria que el
 intendente convoca en diciembre de 2027 (Ley Org&aacute;nica, art. 68, inc. 5), y la sanciona la asamblea
 de concejales y mayores contribuyentes que exige la Constituci&oacute;n provincial (art. 193, inc. 2).
@@ -579,7 +581,7 @@ a&ntilde;o de la proyecci&oacute;n.</p>
 <ol class="n">
 <li><b>Que la recaudaci&oacute;n propia crezca menos de 1,2% por a&ntilde;o por encima de la inflaci&oacute;n.</b> Es el punto de quiebre: por
 debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo.</li>
-<li><b>Que el Municipio cobre una parte menor de lo que factura</b>, que hoy es el 89,32%. Tres puntos menos dejan las cuentas de 2031
+<li><b>Que el Municipio cobre una parte menor de lo que factura</b>, que hoy es el 89,32% de todos sus ingresos. Tres puntos menos dejan las cuentas de 2031
 pr&aacute;cticamente en cero: &minus;426 millones.</li>
 <li><b>Que lo que la Provincia le gira a San Isidro por coparticipaci&oacute;n caiga m&aacute;s r&aacute;pido.</b> El menos grave de los tres primeros, y el
 &uacute;nico de ellos que no depende del Municipio.</li>
@@ -596,26 +598,27 @@ m&aacute;s mueven el resultado: en eso el futuro fiscal de San Isidro se decide 
 <b>El servicio del bono no</b>: lo fija la tasa mayorista, y es, con la coparticipaci&oacute;n, la variable fiscal relevante que queda fuera del control del Municipio.</p></div>
 
 <h3>El programa no est&aacute; entre los riesgos</h3>
-<p class="lead">Pagado con la actualizaci&oacute;n de la tabla de 2008, el programa deja las cuentas del
-Municipio <b>mejor que si nada cambia en 2028, 2029 y 2030</b>: en esos a&ntilde;os la tabla nueva cobra m&aacute;s de
-lo que el programa gasta. <span
-class="sg">No s&oacute;lo no empeora las cuentas: mientras sube, las deja mejor que no hacer nada.</span></p>
-""" + exhead("c", "Con el programa, las cuentas del Municipio no empeoran: quedan mejor los primeros tres a&ntilde;os e igual despu&eacute;s",
-             "Ingresos menos gastos de cada a&ntilde;o, en millones de pesos de diciembre de 2025. Se compara el programa pagado con la actualizaci&oacute;n de la tabla de valuaci&oacute;n contra no hacer nada.",
+<p class="lead">Pagado con la tabla nueva y, lo que falta, con el gasto flexible, el programa deja las cuentas
+del Municipio <b>igual que si nada cambia en 2028 y desde 2031, y mejor en 2029 y 2030</b>: en esos dos a&ntilde;os la
+tabla nueva cobra m&aacute;s de lo que el programa gasta. <span class="sg">No empeora las cuentas en ning&uacute;n a&ntilde;o.</span></p>
+""" + exhead("c", "Con el programa, las cuentas del Municipio no empeoran: quedan mejor en 2029 y 2030, e igual en 2028 y despu&eacute;s",
+             "Ingresos menos gastos de cada a&ntilde;o, en millones de pesos de diciembre de 2025. Se compara el programa pagado con la tabla de valuaci&oacute;n actualizada &mdash;y lo que falta, con el gasto flexible&mdash; contra no hacer nada.",
              key="programa_base") + """
 <table>
 <colgroup><col style="width:210pt"><col><col><col><col></colgroup>
 <tr class="hd"><th></th><th class="r">2028</th><th class="r">2029</th><th class="r">2030</th><th class="r">2031</th></tr>
 <tr><td class="l">Si nada cambia</td><td class="n">1.576</td><td class="n">4.347</td><td class="n">7.233</td><td class="n">10.236</td></tr>
-<tr><td class="l">Con el programa, pagado con la tabla nueva</td><td class="n">1.746</td><td class="n">6.592</td><td class="n">8.983</td><td class="n">10.236</td></tr>
-<tr class="hi"><td class="l">Diferencia</td><td class="n"><b>+170</b></td><td class="n"><b>+2.245</b></td><td class="n"><b>+1.750</b></td><td class="n"><b>0</b></td></tr>
-<tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">+140</td><td class="n">+2.202</td><td class="n">+1.705</td><td class="n">&minus;44,5</td></tr>
+<tr><td class="l">Con el programa, pagado con la tabla nueva</td><td class="n">1.576</td><td class="n">5.585</td><td class="n">7.751</td><td class="n">10.236</td></tr>
+<tr class="hi"><td class="l">Diferencia</td><td class="n"><b>0</b></td><td class="n"><b>+1.238</b></td><td class="n"><b>+517</b></td><td class="n"><b>0</b></td></tr>
+<tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">0</td><td class="n">+1.203</td><td class="n">+480</td><td class="n">0</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> modelo de flujo de caja, escenarios &laquo;si nada cambia&raquo; y &laquo;con el programa&raquo;, pagado con
-la tabla de valuaci&oacute;n actualizada; lo que cobra la tabla nueva, del informe 09.</p>
+la tabla de valuaci&oacute;n actualizada; lo que cobra la tabla nueva, del informe 09, cobrada como hoy se cobra el
+ABL (informe 20).</p>
 <p class="cap"><b>Nota:</b> los dos escenarios tienen los mismos supuestos de recaudaci&oacute;n propia y de
 coparticipaci&oacute;n: lo &uacute;nico que cambia es el programa y lo que cobra la tabla nueva. El programa empieza
-en 2028, el primer ejercicio completo del mandato. Desde 2031 lo cobrado y lo gastado se igualan. La
+en 2028, el primer ejercicio completo del mandato. En 2028 y desde 2031 la tabla cobra menos de lo que pide el
+programa y lo que falta sale del gasto flexible: 170 millones en 2028 y 1.242 desde 2031. La
 &uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de lotes chicos (3.5). Las
 diferencias se calculan sin redondear.</p>
 
@@ -623,10 +626,10 @@ diferencias se calculan sin redondear.</p>
 <ol class="n">
 <li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones; si lo que recauda y lo que le gira la
 Provincia siguen como en los &uacute;ltimos a&ntilde;os, se cierra solo en 2028.</li>
-<li>Este programa cuesta 7.225,2 millones de fondos nuevos por a&ntilde;o: el 8,3% del gasto que el
+<li>Este programa cuesta 7.225,2 millones por a&ntilde;o: el 8,3% del gasto que el
 Municipio puede reasignar libremente. La obra que deciden los vecinos no suma a esa cifra: sale de la
 obra p&uacute;blica que el Municipio ya paga.</li>
-<li>Proponemos pagarlo actualizando la tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra, sin subir el porcentaje que se cobra.</li>
+<li>Proponemos pagarlo actualizando la tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra, sin subir el porcentaje que se cobra: trae 5.983 millones, y los 1.242 que faltan salen del gasto flexible.</li>
 <li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a tasa variable: la tasa de referencia de los bancos, TAMAR, m&aacute;s 7 puntos.
 De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
 de 2027.</li>

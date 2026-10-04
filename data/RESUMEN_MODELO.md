@@ -41,7 +41,7 @@ menos de un peso de cada diez de los que el Municipio sí puede reasignar.**
 Hay cuatro caminos, cuantificados en `data/financiamiento_opciones.csv`. **El
 documento eligió el cuarto: actualizar la base de valuación de la tasa** (escala de
 ARBA 10,9% por encima de la neutral, tope de 25% de suba anual por boleta), que
-cobra 7.225,2 millones por año desde el cuarto, o hasta 44,5 menos si el mínimo frena subas de lotes chicos (informe 09). Los otros tres: **Reasignar** desde el gasto flexible cubre
+cobrada como se cobra el ABL —73,97%, el peor caso del rango de 74% a 82% (informe 20)— trae 5.983 millones por año desde el cuarto, o hasta 37 menos si el mínimo frena subas de lotes chicos; los 1.242 que faltan salen del gasto flexible (informe 09). Los otros tres: **Reasignar** desde el gasto flexible cubre
 el 100% del costo y no cambia el resultado financiero: cambia la composición del
 gasto, no su nivel. **Cobrar mejor** es una meta de gestión, no la fuente del programa: en 2025 quedaron **35.994 millones sin cobrar** —se devengaron
 337.149 y se percibieron 301.155, una percepción del 89,3%—, así que subir la
@@ -63,7 +63,7 @@ asume el 10 de diciembre de 2027).
 |---|---:|---:|---:|---:|
 | base, sin programa | +1.576 | +10.236 | +19.953 | +30.756 |
 | **reformista** (reasignación) | +1.576 | +10.236 | +19.953 | +30.756 |
-| **reformista_valuacion** (base de valuación actualizada) | **+1.746** | +10.236 | +19.953 | +30.756 |
+| **reformista_valuacion** (base de valuación actualizada) | **+1.576** | +10.236 | +19.953 | +30.756 |
 
 Millones de pesos de dic-2025.
 
@@ -73,10 +73,10 @@ su composición.
 
 `reformista_valuacion` es el mismo programa pagado con la base de valuación de la
 tasa actualizada: escala de ARBA 10,9% por encima de la neutral y tope de 25% de
-suba anual por boleta (informe 09). Cobra 7.225,2 millones por año desde el cuarto (7.180,7 si el mínimo
-frena todas las subas de lotes chicos; el modelo corre el 7.225,2)
-y más de lo que pide la rampa en los tres primeros (2028 a 2030); en régimen el resultado es el
-del base. Reemplaza al escenario que pagaba el programa cobrando mejor.
+suba anual por boleta (informe 09), cobrada como el ABL, al 73,97% (informe 20). Cobra 5.983 millones por año
+desde el cuarto (5.946 si el mínimo frena todas las subas de lotes chicos; el modelo corre el 5.983) y más de lo
+que pide la rampa en 2029 y 2030. Lo que falta cada año sale del gasto flexible: 170 millones en 2028 y 1.242
+desde 2031. Por eso en 2028 y en régimen el resultado es el del base, y en 2029 y 2030, mejor. Reemplaza al escenario que pagaba el programa cobrando mejor.
 
 ## La obra pública vecinal ya está contemplada
 

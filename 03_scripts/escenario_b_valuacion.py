@@ -54,7 +54,11 @@ MULTIPLICADOR_2026 = 575.9141      # Impositiva 2026, art. 1
 ALICUOTA = 0.012                   # vivienda, 12 por mil
 MINIMO_2026 = 234000               # tasa minima anual 2026, categorias 2, 3, 4, 5, 10 y 12
 FONDOS_NUEVOS = 7225.2e6           # lo que el programa necesita por anio, en pesos de dic-2025
-PERCEPCION = 0.8932                # percepcion de recursos corrientes 2025 (data/parametros_modelo.csv)
+PERCEPCION = 0.8932                # percepcion de TODOS los recursos corrientes 2025, coparticipacion incluida
+                                   # (data/parametros_modelo.csv). Con ella se fijo el nivel de la tabla: es su
+                                   # escala y no se cambia. Lo que se cobra de la tabla va con COBRO_ABL.
+COBRO_ABL = 83572.6 / 112987.3     # lo que se cobra del ABL: 2025, percibido sobre facturado (informe 20). El
+                                   # rango razonable es 74% a 82%; se usa el peor caso, 73,97%
 TOPE_ANUAL = 0.25                  # ninguna boleta sube mas de 25% por anio por esta actualizacion
 ANIOS_RAMPA = 4                    # el programa llega a su costo pleno en cuatro anios
 
@@ -298,12 +302,12 @@ def efecto_minimo_propuesta(ps):
             "superficie_mediana_con_baja_frenada_m2": round(statistics.median(p["superficie"] for p in frenadas), 1),
             "superficie_mediana_del_partido_m2": round(statistics.median(p["superficie"] for p in ps), 1),
             "baja_frenada_emitido_M": round(frenada / 1e6, 1),
-            "baja_frenada_cobrado_M": round(PERCEPCION * frenada / 1e6, 1),
+            "baja_frenada_cobrado_M": round(COBRO_ABL * frenada / 1e6, 1),
             "costo_contra_el_plan_M": 0.0,
             "suba_tapada_emitido_M": round(tapada / 1e6, 1),
-            "suba_tapada_cobrado_M": round(PERCEPCION * tapada / 1e6, 1),
-            "cobrado_con_la_propuesta_y_la_suba_tapada_M": round((PERCEPCION * sum(p["tbc"] - p["t0"] for p in ps)
-                                                                  - PERCEPCION * tapada) / 1e6, 1)}
+            "suba_tapada_cobrado_M": round(COBRO_ABL * tapada / 1e6, 1),
+            "cobrado_con_la_propuesta_y_la_suba_tapada_M": round((COBRO_ABL * sum(p["tbc"] - p["t0"] for p in ps)
+                                                                  - COBRO_ABL * tapada) / 1e6, 1)}
 
 
 def camino_con_tope(ps, tope, anios=6):
@@ -325,10 +329,10 @@ def camino_con_tope(ps, tope, anios=6):
                 emision += p["tbc"] - p["t0"]
         filas.append({"anio_del_programa": k,
                       "emision_extra": round(emision),
-                      "cobrado": round(PERCEPCION * emision),
+                      "cobrado": round(COBRO_ABL * emision),
                       "necesidad_de_la_rampa": round(FONDOS_NUEVOS * min(k, ANIOS_RAMPA) / ANIOS_RAMPA),
                       "parcelas_todavia_con_tope": topeadas,
-                      "cobrado_si_el_minimo_frena_subas": round(PERCEPCION * (emision - tapada))})
+                      "cobrado_si_el_minimo_frena_subas": round(COBRO_ABL * (emision - tapada))})
     return filas
 
 
@@ -391,13 +395,16 @@ def main():
         else:
             p["anios"] = 1
     rendimiento = camino_con_tope(cruzadas, TOPE_ANUAL)
-    tope_minimo = next(round(100 * c) for c in [x / 100 for x in range(10, 61)]
-                       if all(r["cobrado"] >= r["necesidad_de_la_rampa"] - 1
-                              for r in camino_con_tope(cruzadas, c)[:ANIOS_RAMPA]))
+    # Con lo que se cobra del ABL la tabla no cubre toda la rampa con ningun
+    # tope: lo que falta sale del gasto flexible (modelo.py). Queda None.
+    tope_minimo = next((round(100 * c) for c in [x / 100 for x in range(10, 61)]
+                        if all(r["cobrado"] >= r["necesidad_de_la_rampa"] - 1
+                               for r in camino_con_tope(cruzadas, c)[:ANIOS_RAMPA])), None)
     with open(os.path.join(DATA, "valuacion_rendimiento_por_anio.csv"), "w", newline="", encoding="utf-8") as f:
-        f.write("# Escenario B adoptado: escala de ARBA subida %.2f%% (para cobrar 7.225,2 M con la\n" % (100 * (sc - 1)))
-        f.write("# percepcion de %.2f%%) y tope de %d%% de suba anual por boleta. Parte tierra, pesos de\n"
+        f.write("# Escenario B adoptado: escala de ARBA subida %.2f%% (fijada para cobrar 7.225,2 M con la\n" % (100 * (sc - 1)))
+        f.write("# percepcion de todos los recursos, %.2f%%) y tope de %d%% de suba anual por boleta. Lo cobrado,\n"
                 % (100 * PERCEPCION, round(100 * TOPE_ANUAL)))
+        f.write("# con lo que se cobra del ABL, %.2f%% (2025, el peor caso). Parte tierra, pesos de\n" % (100 * COBRO_ABL))
         f.write("# diciembre de 2025. Lo lee 03_scripts/modelo.py.\n")
         w = csv.DictWriter(f, fieldnames=list(rendimiento[0].keys()))
         w.writeheader()
@@ -420,7 +427,7 @@ def main():
         "adoptado": {
             "suba_pareja_pct": round(100 * (sc - 1), 2),
             "emision_extra_M": round(sum(p["tbc"] - p["t0"] for p in cruzadas) / 1e6, 1),
-            "cobrado_M": round(PERCEPCION * sum(p["tbc"] - p["t0"] for p in cruzadas) / 1e6, 1),
+            "cobrado_M": round(COBRO_ABL * sum(p["tbc"] - p["t0"] for p in cruzadas) / 1e6, 1),
             "parcelas_suben": sum(1 for p in cruzadas if p["tbc"] > p["t0"] * 1.0005),
             "parcelas_bajan": sum(1 for p in cruzadas if p["tbc"] < p["t0"] * 0.9995),
             "parcelas_que_duplican": sum(1 for p in cruzadas if p["tbc"] >= 2 * p["t0"]),
