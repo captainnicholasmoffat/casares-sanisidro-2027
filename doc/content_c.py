@@ -971,6 +971,11 @@ secundario t&eacute;cnico, formaci&oacute;n profesional y educaci&oacute;n super
 universidades y organizaciones del barrio, bajo la idea de que la actividad tecnol&oacute;gica sea el
 rasgo identitario del lugar. <span class="sg">El punto que el diagn&oacute;stico marca como el m&aacute;s
 cr&iacute;tico del distrito es exactamente donde ya hay algo funcionando.</span></p>
+<p><b>Y el Concejo Deliberante ya lo reconoci&oacute;.</b> Declar&oacute; de inter&eacute;s, por unanimidad, &laquo;La Cava 4.0&raquo;, el
+proyecto de formaci&oacute;n en software, rob&oacute;tica e inteligencia artificial del Centro de Formaci&oacute;n Laboral N&ordm; 404 de
+La Cava, y dispuso un reconocimiento a su director, Jos&eacute; Luis Casares (Resoluci&oacute;n N&ordm; 26, sesi&oacute;n del 6 de agosto de
+2025). <span class="sg">Es un antecedente propio: la formaci&oacute;n que propone este programa parte de ah&iacute; y la actualiza
+para lo que la inteligencia artificial cambi&oacute; en el trabajo.</span></p>
 <p><b>De qui&eacute;n depende hoy.</b> El CFL 404 no es municipal: tiene convenio con la CGT Regional Zona Norte y
 depende del Instituto Provincial de Formaci&oacute;n Laboral del Ministerio de Trabajo bonaerense; los cargos
 docentes los paga la Provincia, por la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que es quien emite

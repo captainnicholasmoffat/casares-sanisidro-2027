@@ -2751,3 +2751,20 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   los seis. Obra y equipamiento en tres años, 641-1.245 M; obras deportivas usa del 17% al 37% de lo que le queda.
 - Excel: Supuestos 260-265 con las cifras nuevas; 13.453 fórmulas, 0 errores; Resumen anual igual al modelo.
 - Páginas que cambiaron: 2, 4, 11, 27, 28, 36, 38, 43 y 46. Sigue en 46 páginas, todas de hasta 2.700 pt.
+
+## RESOLUCIÓN 26 · LA CAVA 4.0 Y CASARES EN EL 5.3 (04/10, APROBADO POR NICK)
+- 5.3, en el recuadro «La Cava 4.0»: el Concejo declaró de interés, por unanimidad, «La Cava 4.0», el proyecto de
+  formación en software, robótica e inteligencia artificial del CFL N° 404 de La Cava, y dispuso un reconocimiento a
+  su director, José Luis Casares (Resolución N° 26, sesión del 6 de agosto de 2025). Va como antecedente propio, que
+  el programa actualiza para lo que la inteligencia artificial cambió en el trabajo.
+- Verificado en la versión taquigráfica del 06/08/2025 (págs. 25, 117 y 118 del PDF): «Resulta afirmativa por
+  unanimidad en general y en particular. Queda aprobada la Resolución N° 26»; art. 1, declara de interés; art. 2,
+  «autoriza al Presidente... a brindar reconocimiento de estilo al Director... Dr. José Luis Casares» (por eso dice
+  «dispuso un reconocimiento»). Lo que enseña el proyecto sale de sus fundamentos (informe 08, sección 6.2).
+- Ojo con el informe 08: dice que «lo votaron los 24 concejales»; la versión taquigráfica lista 23 presentes y uno
+  ausente con aviso. El documento dice sólo «por unanimidad». La carátula dice «14ª sesión ordinaria» y la nota al
+  Ejecutivo «11ª»: el documento dice sólo la fecha.
+- Fuentes: fila nueva «5.3 · La Cava 4.0 y la Resolución 26» (expediente 00427-2025-HCD).
+- Barrido: «Casares» sale de las palabras prohibidas; aparece una sola vez, junto a la resolución (pág. 22). La tapa
+  sigue sin su nombre ni su foto; la mención de la comisión de la UNSO (corrección 138) sigue afuera.
+- Páginas que cambiaron: 22 y 45. Excel sin cambios.
