@@ -1731,7 +1731,7 @@ c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimient
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
 cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis: de 426 a 791
 millones de obra, de a dos por a&ntilde;o, y de 251 a 354 millones por a&ntilde;o cuando funcionan todos. Equipar cada lugar para
-las clases &mdash;plataforma, bebedero, sombra y luz&mdash;, de 27 a 76 millones; los seis, de 164 a 454, y de 3 a 32
+las clases &mdash;plataforma, bebedero, sombra y luz&mdash;, de 27 a 76 millones; los seis, de 164 a 454, de a dos por a&ntilde;o, y de 3 a 32
 millones por a&ntilde;o de mantenimiento. Las clases, contando dos por d&iacute;a de lunes a jueves en cada lugar: unos 23,5
 millones por a&ntilde;o de profesores. Con tres foodtrucks, el canon de un puesto es de unos
 600.000 pesos por mes, y en Bosque Alegre, con 15 a 20, de 3,0 a 4,0 millones; en los lugares del convenio queda el
@@ -2756,8 +2756,8 @@ C6 = dict(id="cap6", runhead=RH, html="""
 <h2><span class="n">6.1</span>Los primeros cien d&iacute;as</h2>
 <p class="lead">El mandato empieza el 10 de diciembre de 2027. A los cien d&iacute;as, el 19 de
 marzo de 2028, un vecino de San Isidro ya fue convocado a la primera asamblea de su zona,
-puede anotar a su hijo en el primer centro de apoyo escolar y encuentra seis ordenanzas ingresadas en el
-Concejo. <span class="sg">Son diecis&eacute;is compromisos, y cada uno es un acto de gobierno o algo que
+puede anotar a su hijo en el primer centro de apoyo escolar y encuentra ocho ordenanzas ingresadas en el
+Concejo. <span class="sg">Son veinte compromisos, y cada uno es un acto de gobierno o algo que
 se puede ver que empez&oacute;.</span></p>
 <div class="cols">
 <p><b>El plazo no es una cifra redonda: lo fija el presupuesto.</b> Si la primera asamblea se corre a
@@ -2768,7 +2768,7 @@ presupuesto participativo de la Ciudad de Buenos Aires, seg&uacute;n su reglamen
 en cada barrio para informar a los vecinos y completar el diagn&oacute;stico, y las prioridades se votaban al
 cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es en los meses 6 a 9 (6.4).</p>
 </div>
-""" + exhead("c", "Diecis&eacute;is compromisos para los primeros cien d&iacute;as, y el documento que prueba cada uno",
+""" + exhead("c", "Veinte compromisos para los primeros cien d&iacute;as, y el documento que prueba cada uno",
              "Plazo: 19 de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.") + """
 <table>
 <colgroup><col style="width:250pt"><col></colgroup>
@@ -2792,6 +2792,11 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, y el turno m&eacute;dico</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">15 &middot; La licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
 <tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que es real, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y la licitaci&oacute;n de las ochenta c&aacute;maras corporales, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
+<tr class="hd"><td class="l" colspan="2">Multas de tr&aacute;nsito (5.11) <span class="tag m">Fecha propuesta</span></td></tr>
+<tr><td class="l">17 &middot; El decreto de las cuotas del pago voluntario de las multas de tr&aacute;nsito, sin tr&aacute;mites y seg&uacute;n el ingreso, como el de Balcarce</td><td class="n">El decreto, en el Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">18 &middot; El pedido a la Provincia: el pago voluntario seg&uacute;n el ingreso, el protocolo adicional al convenio de multas, la deuda congelada en pesos, las pasadas que cuentan como una y el permiso para trabajar; y a la Legislatura bonaerense, la licencia por puntos</td><td class="n">El expediente del pedido</td></tr>
+<tr><td class="l">19 &middot; La ordenanza del tr&aacute;mite en l&iacute;nea de las cuotas, como la de Bragado, ingresada al abrir las sesiones ordinarias, el 1 de marzo</td><td class="n">Expediente de ingreso</td></tr>
+<tr><td class="l">20 &middot; La ordenanza que crea la base de datos de las cuotas, con el ingreso y el hogar s&oacute;lo para las multas, ingresada con la anterior</td><td class="n">Expediente de ingreso</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> los dos primeros van juntos a esa sesi&oacute;n porque son el
 andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
@@ -2849,13 +2854,16 @@ que la comprueba.</p>
 <table>
 <colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>
 <tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
-<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la sesi&oacute;n extraordinaria de diciembre, las seis ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana. La preparatoria de la base de valuaci&oacute;n se aprueba antes del 22 de diciembre, y la asamblea de concejales y mayores contribuyentes la sanciona antes de fin de a&ntilde;o</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
+<tr class="hi"><td class="l">Mes 1</td><td>Entran al Concejo, en la sesi&oacute;n extraordinaria de diciembre, seis de las ordenanzas del 6.1: partida vecinal, derogaci&oacute;n de los arts. 8 a 10, base de valuaci&oacute;n, asociaciones de parque, adhesi&oacute;n a la Ley 15.302 y pliego de higiene urbana. La preparatoria de la base de valuaci&oacute;n se aprueba antes del 22 de diciembre, y la asamblea de concejales y mayores contribuyentes la sanciona antes de fin de a&ntilde;o</td><td class="n">Actas de sesi&oacute;n y expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio; y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; asistente de consulta y turno m&eacute;dico en funcionamiento</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 3</td><td>En seguridad, se lanza la licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;, y lo que se licita es la anal&iacute;tica</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que fue real y que no hubo coima, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y se lanza la licitaci&oacute;n de las ochenta c&aacute;maras corporales</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
+<tr><td class="l">Meses 1&ndash;3 <span class="tag m">Fecha propuesta</span></td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
+<tr><td class="l">Mes 3 <span class="tag m">Fecha propuesta</span></td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, la partida propia de g&eacute;nero, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido vehicular, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 4&ndash;6 <span class="tag m">Fecha propuesta</span></td><td>Entran la ordenanza de foodtrucks, con el canon y el 75% de empleo local; la modificaci&oacute;n del art&iacute;culo 9 de la Ordenanza 5824, para Bosque Alegre; y la del registro gratis de instructores (5.5)</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;9</td><td>Segunda ronda de asambleas, ya de priorizaci&oacute;n; el Ejecutivo responde por escrito y en plazo</td><td class="n">Cada respuesta, con su fecha: se le pregunta a la inteligencia artificial del municipio</td></tr>
 <tr><td class="l">Meses 6&ndash;12</td><td>Formaci&oacute;n laboral: las cinco sedes fijas y la itinerante de Acassuso funcionando, con el segundo ingreso en el mes 9 y el modelo del Centro 404 de B&eacute;ccar y la oferta revisada contra lo que el mercado pide hoy</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula se le pregunta a la inteligencia artificial del municipio</td></tr>
@@ -2967,7 +2975,7 @@ inscripci&oacute;n a la formaci&oacute;n laboral est&aacute; abierta en las seis
 alumnos arranc&oacute; en los espacios que ya existen, el primer centro de apoyo escolar abri&oacute;, y est&aacute;n
 lanzadas las dos licitaciones para que las c&aacute;maras que ya existen detecten hechos violentos en vivo y avisen al
 patrullero m&aacute;s cercano, y para que las inspecciones de comercios se transmitan en vivo y queden grabadas; las dos
-funcionan en el mes 9. Son diecis&eacute;is compromisos: seis ordenanzas en el Concejo, cuatro actos que no dependen
+funcionan en el mes 9. Son veinte compromisos: ocho ordenanzas en el Concejo, seis actos que no dependen
 de &eacute;l y seis cosas que arrancaron.</li>
 <li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
 anuales&mdash; la deciden los vecinos.</li>

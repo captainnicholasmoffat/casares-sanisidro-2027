@@ -410,8 +410,8 @@ s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mit
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
       note="El 41,4% del documento")
-s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240)/C128", fmt=FMT_PCT1,
-      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica y obra vecinal: el 52,9% del documento")
+s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260)/C128", fmt=FMT_PCT1,
+      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa y obra vecinal: el 52,9% del documento")
 s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,1%")
 s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
       note="El 44,4%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
@@ -534,7 +534,34 @@ s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,
       note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
 s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
       note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,4%)")
-for rr in range(106, 258):
+s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
+s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
+      note="5.5: dos clases por día de lunes a jueves en los seis lugares, 48 horas por semana, categoría 991 "
+           "(490.335 $ por hora semanal y por año, con aguinaldo y cargas). Lo paga Deportes con su propio presupuesto: "
+           "no cambia el gasto total ni el resultado")
+s_row(261, "Ambiente · baños de los seis lugares desde el año 3, por año", 354000000,
+      note="5.5: de 251 a 354 M (el tope): limpieza dos veces por día, insumos, agua, mantenimiento y encargado fijo. "
+           "80 a 113 M el año 1 y 163 a 227 M el año 2. Dentro del aumento de Ambiente (filas 51 y 52): no cambia el gasto "
+           "total ni el resultado")
+s_row(262, "Ambiente · mantenimiento del equipamiento para las clases, por año", 31700000,
+      note="De 3,0 a 31,7 M con los seis (el tope). Dentro del aumento de Ambiente")
+s_row(263, "Obras deportivas · obra de los seis baños, en tres años", 791000000,
+      note="De 426 a 791 M (el tope), de a dos por año: Puerto y 33 Orientales, Pacheco y el Águila, Sáenz Peña y "
+           "Centenera con bomba. Sale de Construcción de infraestructura deportiva (programa 35)")
+s_row(264, "Obras deportivas · equipamiento para las clases, seis lugares", 454000000,
+      note="De 164 a 454 M (el tope): plataforma desmontable, bebedero, sombra y luz solar, de a dos por año")
+s_row(265, "Obras deportivas · con la Escuela Náutica, lo que usa de lo que le queda, peor año", 0.36, fmt=FMT_PCT1,
+      note="Del 17% al 36% de los 1.943 M que le quedan por año a obras deportivas en los años 1 a 3")
+s_row(266, "Canon de un foodtruck por mes, como el de Tigre", 201350,
+      note="Ordenanza Impositiva 2026 de Tigre, en pesos de 2026. Con tres por puesto, 604.050 $ por mes; en Bosque "
+           "Alegre, con 15 a 20, de 3,0 a 4,0 M. En los cuatro lugares del convenio queda el 60%")
+s_header(268, "Y · MULTAS DE TRÁNSITO: LO QUE SE DEJA DE COBRAR (5.11 e informe 19)")
+s_row(269, "Cada 10% de rebaja media de las multas, por año", 323000000,
+      note="En 2024 se pagaron entre 13.000 y 456.000 multas (81.000 como estimación central). No se publica cuántas se "
+           "labran, así que no entra en el resultado: sale del gasto flexible libre")
+s_row(270, "Cada 10% de rebaja media, sobre el gasto flexible", formula="=C269/C128", fmt=FMT_PCT1,
+      note="0,4%: puntos del margen libre (44,4%)")
+for rr in range(106, 271):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -1225,10 +1252,11 @@ guia = [
      "régimen, y la inversión de 1.200 M una vez—, la plataforma y "
      "el semillero —dentro de Ciencia y Técnica, 22,0%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
      "Desarrollo Social —667,8 M—, la Escuela Náutica de Deportes —de a dos puestos por año, hasta 395 M por año "
-     "desde el tercero y una inversión de hasta 717 M en tres años, de obras deportivas—, la beca de práctica "
+     "desde el tercero y una inversión de hasta 717 M en tres años, de obras deportivas—, las clases de la costa —23,5 M por año, de Deportes—, los baños de la costa —hasta 354 M por año desde el tercero, dentro del aumento de Ambiente, con su obra y el equipamiento de las clases, hasta 1.245 M en tres años, de obras deportivas—, la beca de práctica "
      "y el módulo de salud de los años 1 y 2 —del gasto flexible libre— y el funcionamiento del sistema vecinal —1,5% "
      "de la partida— no cambian el gasto total: mueven lo que el Municipio ya gasta. Lo que pagan las empresas por "
-     "los pasantes, 1.469,1 M, no es gasto municipal."),
+     "los pasantes, 1.469,1 M, no es gasto municipal. Lo que se deje de cobrar en multas de tránsito, unos 323 M "
+     "por año por cada 10% de rebaja media, sale del gasto flexible libre y no entra en el resultado."),
     ("ESCENARIOS", "Dos: si nada cambia, y con el programa pagado con la tabla y lo que falta del gasto flexible. Más la sensibilidad del "
      "resultado de 2031 a lo que recauda el Municipio, a la coparticipación y a la percepción."),
     ("EL BONO", "El bono de 30.000 M de agosto de 2026 entra en la deuda y en la caja, no en el resultado: su capital "

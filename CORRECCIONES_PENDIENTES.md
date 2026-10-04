@@ -2683,3 +2683,43 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
   fórmulas, 0 errores; el resultado de 2028 no cambia (+1.746 M; +1.207 M si la tabla cobra desde abril).
 - Nick aprobó también: "dolor de garganta", lluvia fuerte de más de 25 mm en 24 horas, el 630 aplicado a cada
   muestra y los dos días de espera.
+
+## DISPATCH 1 DE 2 (MULTAS, ABL Y ARREGLOS) Y 2 DE 2 (LA COSTA: MOVIDA, BAÑOS Y CLASES) · APLICADOS (04/10)
+- A (arreglos): gráfico 19 sin la barra «Percepción de recursos»; notas de Escenarios +5.342 M y −426 M; «pagar de
+  más» en salud; el 40% del canon sólo en los cuatro predios del convenio (Águila, Sáenz Peña, Centenera y Pacheco),
+  no en el Puerto ni en 33 Orientales (necesita dictamen de un abogado).
+- B (ABL): el 89,32% es la cobranza de todos los ingresos; el ABL se cobra entre 74% y 82% y se usa el peor caso,
+  73,97% (83.572,6 M cobrados de 112.987,3 M facturados en 2025). La tabla cobra 5.983 M, no 7.225,2; lo que falta
+  cada año sale del gasto flexible (170 M en 2028, 1.242 M desde 2031, el 1,4%), como decidió Nick. El libre queda en
+  44,4% (decisión de Nick: los 1.242 M ya están dentro de los 7.225,2 M). Modelo, Excel (Supuestos W, filas 249-257;
+  Programas fila 17), tests, cuadros 14 y 20, sensibilidad, gráficos y todo el texto.
+- C (multas, 5.11): sección nueva con Hoy / Proponemos, los ocho puntos, el cuadro de seis casos y el pedido a la
+  Provincia. Lo que se deja de cobrar no tiene número cerrado: en 2024 se pagaron entre 13.000 y 456.000 multas;
+  cada 10% de rebaja media cuesta unos 323 M por año (informe 19) y sale del gasto flexible libre: 0,4 puntos del
+  44,4% (Excel, Supuestos fila 269-270). El curso de primeros auxilios y los mensajes de texto no tienen costo aparte.
+- Dispatch 2 (5.5, después de la Escuela Náutica): foodtrucks al borde (calle o playones ya pavimentados, aunque estén
+  dentro de la parcela; nunca el pasto), canon como Tigre (201.350 $ por mes, pesos de 2026), 75% de empleo local;
+  Bosque Alegre = Centenera: seis lugares; modificar el art. 9 de la Ordenanza 5824 (necesita dictamen); baños
+  conectados de a dos por año (Puerto y 33 Orientales; Pacheco y Águila; Sáenz Peña y Centenera con bomba), con
+  factibilidad de AySA; clases municipales gratis y registro gratis de instructores con los seis incentivos.
+- Costos, en pesos de diciembre de 2025 con el IPC de julio de 2026 (el último del repositorio; lo de agosto a
+  octubre queda un poco alto): baño por lugar 50-176 M de obra, 1,0-2,3 M por mes de operación y 2,3-3,0 M de
+  encargado; los seis, 426-791 M de obra y 251-354 M por año desde el año 3 (80-113 M el año 1, 163-227 M el año 2);
+  equipamiento para clases 27-76 M por lugar, 164-454 M los seis, 3-32 M por año de mantenimiento; profesores 23,5 M
+  por año (supuesto: dos clases por día, lunes a jueves, en cada lugar; Excel C260, dentro del 52,9%).
+  scratchpad/costa_movida/costos_CP.py.
+- ¿Entra? Sí. Obras deportivas, con la Escuela Náutica, usa del 17% al 36% de lo que le queda cada año en los años
+  1 a 3: el resto de esas obras se achica en esa medida. Ambiente: la costa pasa del 23-33% al 30-44% de su aumento.
+- Anexo: Ordenanza XIV, art. 2: foodtrucks y baños al borde; un playón ya pavimentado no es espacio verde.
+- Capítulo 3: cuadro 14 con trece partes (baños, foodtrucks y clases; multas), la nota y «Cuánto suma todo».
+- Capítulo 6: compromisos 17 a 20 (decreto de cuotas y pedido a la Provincia, meses 1-3; ordenanzas del trámite en
+  línea y de la base de datos, al abrir las sesiones ordinarias, el 1 de marzo): veinte compromisos, ocho ordenanzas.
+  Calendario: factibilidad de AySA en los meses 1-3; ordenanza de foodtrucks, modificación de la 5824 y registro de
+  instructores en los meses 4-6. TODAS MARCADAS «FECHA PROPUESTA» EN EL PDF PARA QUE NICK DECIDA.
+- Páginas: 46 (eran 43). La primera parte de las fuentes vuelve a la página de la nota de método (corrección 138).
+- PARA NICK: (1) «el 60% de lo que queda» se leyó como «el 60% que queda en el Municipio va a la costa»; en el Puerto
+  y 33 Orientales va todo. (2) el lote del Centro de Exposiciones es de ripio y el art. 2 dice «pavimentados»: ¿se
+  agrega «o de ripio»? (3) dos clases por día como supuesto. (4) la síntesis no suma un punto de multas ni de costa
+  (la lista es una cadena). (5) «Perú Beach» se usa como nombre de lugar y también es un comercio.
+- test_censo_zonas: una validación en falla (la zona más grande 6,78 veces la más chica); ya fallaba en la entrega
+  anterior (02cf81f), no se tocó.

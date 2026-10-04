@@ -52,21 +52,32 @@ C5B, C5B_A2 = split_at(C5B, '<h3>El espacio p&uacute;blico: qui&eacute;n decide 
                        "cap5ba2", "")
 # la costa (189) abre el 5.5: la costa y la recoleccion en una pagina; el ruido y el urbanismo, en la siguiente
 C5B, C5B_R = split_at(C5B, '<h3>El ruido es la contaminaci&oacute;n que nadie mide</h3>', "cap5br", "")
+# la Escuela Nautica, la movida, los banos y las clases de la costa (dispatch 2, 03/10) llevan el resto del 5.5 a otra pagina
+C5B_A2, C5B_A3 = split_at(C5B_A2, '<h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>', "cap5ba3", "")
 C5B_B, C5B_C = split_at(C5B_B_SRC, '<h2><span class="n">5.7</span>', "cap5bc",
                         H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.13</span>', "cap5b3",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
+# las multas de transito (dispatch 1, 03/10) no entran con el 5.10 y el 5.11: van con el 5.12 en la pagina siguiente
+C5B2B, C5B2C = split_at(C5B2B, '<h3>Multas de tr&aacute;nsito:', "cap5b2c", "")
 # 5.8 y 5.9 ya no entran juntas: la inspeccion transmitida se mudo al 5.9
 C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
+# el calendario suma las fechas propuestas de multas y costa: 6.4 y 6.5 en pagina propia
+C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
 
 # nota de metodo y notas de cada capitulo en una pagina; las fuentes del texto, en la
 # siguiente, la ultima del documento (correccion 138, respuesta 6; la 40 pasaba de 2.700 pt)
+# (dispatch 1 y 2, 03/10): con las filas de multas y de la costa las fuentes no entran en una pagina; la
+# primera parte vuelve a la de la nota de metodo y el resto sigue en la ultima
+_F_CORTE = F.FUENTES_HTML.index('<tr><td class="l">5.5 &middot; la costa: Per')
+_F_CAB = ('<table>\n<colgroup><col style="width:158pt"><col></colgroup>\n'
+          '<tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>\n')
 METODO = dict(A.METODO)
-FUENTES = dict(id="fuentes", runhead=A.RH,
-               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1))
+METODO["html"] = A.METODO["html"] + F.FUENTES_HTML[:_F_CORTE] + "</table>\n"
+FUENTES = dict(id="fuentes", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
 
 # el anexo articulado entra en tres paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,
@@ -77,7 +88,7 @@ ORD_B, ORD_C = split_at(ORD_B, '<h2>XI &middot; Ordenanza de la costa', "ordenan
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B3, C6, C6B_A, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, D.GLOSARIO, METODO, FUENTES]
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, D.GLOSARIO, METODO, FUENTES]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

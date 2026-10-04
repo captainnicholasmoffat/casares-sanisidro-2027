@@ -262,7 +262,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
 # =====================================================================
 C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
-<p class="lead">Estas son las once partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
+<p class="lead">Estas son las trece partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
 """ + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
              "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.") + """
 <table>
@@ -279,10 +279,12 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
 <tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
 <tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
+<tr><td class="l">Ba&ntilde;os, foodtrucks y clases en la costa (5.5)</td><td class="n">251 a 354 M por a&ntilde;o de ba&ntilde;os desde el a&ntilde;o 3, y 27 a 55 M de clases</td><td class="m">No. De a dos lugares por a&ntilde;o: los ba&ntilde;os, 80 a 113 M el a&ntilde;o 1 y 163 a 227 M el a&ntilde;o 2. El canon de los foodtrucks entra</td><td class="m">La obra y el equipamiento, de 590 a 1.245 M en tres a&ntilde;os, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); limpieza, encargados y mantenimiento, de Ambiente, menos el canon; los profesores, de Deportes</td></tr>
+<tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja media</td><td class="m">No: es lo que se deja de cobrar</td><td class="m">Del gasto flexible libre. Los reductores ya est&aacute;n contratados (536,7 M) y el aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica)</td></tr>
 </table>
 <p class="cap"><b>El &uacute;nico dinero nuevo son 5.983 millones y sale de la base de valuaci&oacute;n; todo lo dem&aacute;s,
 incluidos los 1.242 millones que la tabla no alcanza a cobrar, se paga moviendo lo que el Municipio ya gasta.</b></p>
-<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica y los equipos son estimaciones del equipo de este
+<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, lo que se deja de cobrar en multas y los equipos son estimaciones del equipo de este
 programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
 de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <p class="cap"><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis
@@ -359,10 +361,12 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 <p><b>El compromiso anual es de 5.983 millones nuevos, m&aacute;s 1.242 del gasto flexible para empleo y
 vivienda y 6.863 de reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
 una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors; Desarrollo
-Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica, hasta 395 desde el tercer a&ntilde;o, con una
-inversi&oacute;n de hasta 717 en tres a&ntilde;os, de obras deportivas. Los primeros exigen
+Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica y las clases de la costa, hasta 419 desde el
+tercer a&ntilde;o, con una inversi&oacute;n de hasta 717 en tres a&ntilde;os para la Escuela, de obras deportivas. De obras deportivas
+salen tambi&eacute;n la obra de los ba&ntilde;os de la costa y el equipamiento para las clases, hasta 1.245 en tres a&ntilde;os, y de
+Ambiente, dentro de su aumento, la limpieza y los encargados, hasta 386 por a&ntilde;o. Los primeros exigen
 actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
-class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,9% del gasto flexible y queda libre el 47,1%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,4%</b>. La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,9% del gasto flexible y queda libre el 47,1%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,4%</b>, y cada 10% de rebaja media de las multas ocupa 0,4 puntos de ese margen (5.11). La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">

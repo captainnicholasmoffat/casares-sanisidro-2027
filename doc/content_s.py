@@ -80,10 +80,10 @@ marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona
 en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
 en su zona, con la primera cohorte ya arrancando en los espacios que existen, y ya funcionan dos
 m&oacute;dulos de la inteligencia artificial del Municipio: la consulta y el turno m&eacute;dico por internet. Y hay
-<b>seis ordenanzas en el Concejo</b>, ingresadas en la sesi&oacute;n extraordinaria de diciembre: la que reserva el dinero
+<b>ocho ordenanzas en el Concejo</b>, seis de ellas ingresadas en la sesi&oacute;n extraordinaria de diciembre: la que reserva el dinero
 de obra de cada zona, con la f&oacute;rmula de reparto escrita; la que actualiza la tabla de 2008 con la que se
 cobra la tasa; y la que deroga los art&iacute;culos que hoy permiten al
-intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son diecis&eacute;is
+intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son veinte
 compromisos y el cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
 
 """)
