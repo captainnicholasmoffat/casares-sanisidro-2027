@@ -282,6 +282,15 @@ Investigación al 03/10/2026.
 - **Bosque Alegre se suma como polo de foodtrucks y movida,** sobre su calle ancha y junto al Centro Municipal de Exposiciones, sin entrar al bosque.
 - **Las clases del programa son gratis.**
 
+**Decisiones del cliente (04/10/2026):**
+- **Del Barco Centenera y Bosque Alegre son el mismo lugar.** Los puestos son seis, no siete.
+- **Foodtrucks:** los playones pavimentados cuentan como «al borde»; el pasto, nunca.
+- **Bomba hacia la cloaca** en Roque Sáenz Peña y en Del Barco Centenera / Bosque Alegre.
+- **Baños con encargado fijo y la IA del Municipio.**
+- **Los baños los paga el Municipio, de a dos por año.**
+- **Bosque Alegre avanza,** y se propone modificar la Ordenanza 5824/1983.
+- **Instructores privados: con registro gratis.**
+
 *Donde esta segunda parte corrige a la primera, vale lo de esta segunda parte.* En particular, quedan sin efecto las opciones de baño seco y químico de los puntos 14 y 15, y los costos del baño conectado se reemplazan por los de abajo.
 
 ---
@@ -308,7 +317,9 @@ Investigación al 03/10/2026.
 - **Operación:** entre $1,2 y $2,7 M por mes, con limpieza dos veces por día, insumos, agua y mantenimiento.
 - **Con la obra amortizada en 10 años:** entre $1,7 y $4,3 M por mes por puesto.
 - **Con encargado presente 10 horas por día:** sumar entre $2,8 y $3,6 M por mes por puesto.
-- **Los siete lugares, con la distancia de cada uno** (Puerto y 33 Orientales a 50 m; Águila y Pacheco a 150 m; Sáenz Peña, Centenera y Bosque Alegre a 300 m con bombeo): **obra de $617 M a $1.141 M** y **operación de $9,8 a $16,3 M por mes**, sin encargado. [cálculo propio]
+- **Los seis puestos, con la distancia de cada uno** (Puerto y 33 Orientales a 50 m; Águila y Pacheco a 150 m; Sáenz Peña y Centenera / Bosque Alegre a 300 m con bomba): **obra de $508 M a $944 M**. [cálculo propio]
+- **Operación de los seis con encargado fijo, como decidió el cliente:** **entre $25,0 M y $35,2 M por mes** (entre $8,2 y $13,6 M de limpieza, insumos, agua y mantenimiento, más entre $16,8 y $21,6 M de encargados). [cálculo propio]
+- **De a dos por año:** la obra cuesta entre $120 M y $394 M por año, según qué par se haga primero, y la operación crece hasta los $25–35 M por mes en el tercer año (ver el detalle). [cálculo propio]
 - **Limpieza:** el convenio de maestranza (CCT 281/96) paga $1.170.283 por mes a jornada completa en septiembre de 2026, lo que cuesta al empleador unos $1,57 M. [verificado la escala; el costo: cálculo propio]
 - **Inundación:** según la Autoridad del Agua, un piso 1 m sobre la cota de inundación es «riesgo medio» y 2 m es «riesgo bajo» (Res. 2222/2019). No encontré la cota oficial de inundación de la costa de San Isidro. [verificado; cota: no encontrado]
 
@@ -321,7 +332,7 @@ Investigación al 03/10/2026.
 - **La conexión puede costar más que el módulo:** en Nueva York, un kiosco de US$185.000 terminó en cerca de US$1 M con la conexión y la obra. [probable]
 - **Vicente López** paga unos $18,7 M por mes por limpiar los módulos sanitarios del Paseo de la Costa y alquilar químicos (Decreto 253/26). No encontré cuántos módulos son. [verificado]
 
-**¿Alcanza el canon de los foodtrucks?** [cálculo propio, 3 foodtrucks 13 días por mes, como en la primera parte]
+**¿Alcanza el canon de los foodtrucks?** [cálculo propio, 3 foodtrucks 13 días por mes, como en la primera parte] El cliente decidió el 04/10/2026 que los baños los pague el Municipio; esto queda como dato.
 - **Con un canon como el de Tigre ($604.050 por mes):** cubre entre el 22% y el 50% de la operación de un baño conectado.
 - **Con uno como el de Mar del Plata ($2,99 M por mes):** cubre la operación. En las parcelas del convenio, donde queda el 60%, cubre entre el 67% y el 100%.
 - **El modelo de la Ciudad de Buenos Aires,** donde el comercio construye y mantiene el baño y paga canon recién después, es el único precedente donde los comercios pagan la obra. [verificado]
@@ -342,6 +353,7 @@ Investigación al 03/10/2026.
   - Sólo la plazoleta del Puerto y el ripio de Pacheco quedan fuera de toda parcela, probablemente en vía pública.
   - [verificado el texto; el catastro: cálculo propio]
 - **Por eso hay que definir qué es «al borde».** Si un playón pavimentado dentro de la parcela del parque cuenta como «adentro», casi no quedan lugares. [necesita dictamen de un abogado]
+- **El cliente lo definió el 04/10/2026: los playones pavimentados cuentan como «al borde»; el pasto, nunca.** Para que el programa lo diga, el art. 2 de la Ordenanza XIV («fuera de los espacios verdes») tendría que aclarar que un playón pavimentado no es espacio verde. En las parcelas del convenio, el 40% del canon sigue yendo a la Provincia. [verificado los textos; el encuadre: inferencia, necesita dictamen de un abogado]
 - **Una norma vieja a revisar:** la Ordenanza 5824/1983 dice que en los sectores de Paraná a Güemes (Pacheco y Águila) «No existirán lugares destinados al estacionamiento». No sé si sigue vigente. [verificado el texto; vigencia: sin confirmar]
 
 **Bosque Alegre**
@@ -364,7 +376,8 @@ Investigación al 03/10/2026.
   - un parador musical con food trucks (febrero de 2023);
   - los «DJ Sunset» de los domingos con food trucks (verano de 2026).
   - [según el Municipio]
-- **El puesto 3 (final de Del Barco Centenera) y el polo de Bosque Alegre son prácticamente el mismo lugar.** [cálculo propio]
+- **El puesto 3 (final de Del Barco Centenera) y el polo de Bosque Alegre son el mismo lugar.** [verificado por el cliente, 04/10/2026]
+- **Para que avance, hay que modificar el art. 9 de la Ordenanza 5824/1983** («No se autorizará el servicio gastronómico en sí mismo…»). Es una ordenanza del Concejo. [verificado el texto; la vía: inferencia, necesita dictamen de un abogado]
 
 **16 · Clases al aire libre**
 - **a · En los parques del río hay una sola clase gratis del Municipio:** Funcional en «Alvear y el Río» (Bajo San Isidro), lunes y miércoles de 9:15 a 10:15. Queda a unos 770 m del puesto del Águila y a unos 580 m del de Pacheco. [verificado en la grilla municipal; distancias: cálculo propio]
@@ -377,6 +390,7 @@ Investigación al 03/10/2026.
   - la Ordenanza 7198 de 1993, que pide autorización y fianza para concurrencia «masiva» con fin comercial en plazas.
   - [verificado; si alcanzan a una clase al aire libre: necesita dictamen de un abogado]
 - **b · Lo que se podría cobrar hoy a un instructor:** la tasa de ocupación de superficie pública ($246 por m² y por día, art. 17 d.1). Con 50 m² y dos clases por semana son unos $106.600 por mes. [verificado la tasa; que se aplique: inferencia]
+- **b · El cliente decidió el 04/10/2026 un registro gratis de instructores privados.** El modelo más cercano es el registro de la Ordenanza 6700/1989, que es para gimnasios. Tiene que ser por ordenanza y no puede dar lugares u horarios exclusivos, por el art. 2 de la Ordenanza XIV del programa («reserven parte de ellos para uso exclusivo»). [verificado los textos; el encuadre: inferencia, necesita dictamen de un abogado]
 - **b · Un antecedente justo en Alvear y el Río:** un gimnasio privado ocupaba sin permiso un terreno municipal de 1.400 m² y lo devolvió por convenio en 2025 (Decreto 1090/2025). [verificado]
 - **c · Equipar un puesto para clases** (plataforma, bebedero, sombra y luz solar): entre $33 M y $90 M; los seis puestos, entre $196 M y $542 M. Mantenimiento: entre $0,6 M y $6,3 M por año por puesto. [cálculo propio]
 - **c · Bebedero:** San Isidro ya paga $2,02 M por bebedero de hormigón colocado en la zona del río, dentro de su propio contrato de espacios verdes (Licitación Pública 62/2024, Decreto 1077/2025); unos $2,9 M en pesos de julio de 2026. [verificado; ajuste: cálculo propio]
@@ -438,6 +452,18 @@ Si un caño puede cruzar el albardón necesita dictamen técnico de Hidráulica 
 - **Con encargado,** sumar entre $2,8 y $3,6 M por mes.
 - **Lo más débil del cálculo es el precio por metro de caño.**
 - **Con bombeo a 300 m la obra sale algo más barata** porque el caño de impulsión cuesta menos que el de gravedad. Pero suma mantenimiento, depende de la luz y puede fallar con la sudestada. [inferencia]
+
+**Los seis puestos de a dos por año, con encargado fijo** (en millones de pesos; el orden de los pares no está decidido) [cálculo propio]:
+
+| Par | Distancia y bomba | Obra del par | Operación del par por mes, con encargado |
+|---|---|---|---|
+| Puerto y 33 Orientales | 50 m, sin bomba | 120–238 | 8,0–11,2 |
+| Águila y Pacheco | 150 m, sin bomba | 170–312 | 8,2–11,4 |
+| Sáenz Peña y Centenera / Bosque Alegre | 300 m, con bomba | 218–394 | 8,8–12,6 |
+| **Los seis** | | **508–944** | **25,0–35,2** |
+
+- La operación se suma año a año: unos $8–13 M por mes el primer año, $16–24 M el segundo y $25–35 M desde el tercero.
+- Las distancias son estimadas; con la factibilidad de AySA pueden cambiar.
 
 ## Playones: detalle
 
@@ -514,16 +540,21 @@ Si un caño puede cruzar el albardón necesita dictamen técnico de Hidráulica 
 
 ## Preguntas abiertas (las decide el cliente)
 
-1. **¿Qué cuenta como «al borde»?** Casi todos los playones están dentro de la parcela del parque, y el Código incluye en el parque las calles que lo limitan. Necesita dictamen de un abogado.
-2. **¿Se acepta una estación de bombeo** en Sáenz Peña, Centenera y Bosque Alegre? **¿O una planta de tratamiento compacta?** El Código la admite y no es baño seco ni químico.
-3. **¿Encargado presente en horario de apertura** (unos $3 M más por mes por puesto) **o limpieza dos veces por día?** ¿Se cierra de noche? ¿Uso gratis?
-4. **¿Quién construye y opera el baño?** Puede ser el Municipio, una empresa de limpieza o los comercios, con el modelo de la Ciudad de Buenos Aires.
-5. **Bosque Alegre:**
+**Resueltas el 04/10/2026:**
+- qué cuenta como «al borde» (los playones pavimentados);
+- la bomba en Sáenz Peña y en Centenera / Bosque Alegre;
+- el encargado fijo con la IA;
+- quién paga los baños (el Municipio, de a dos por año);
+- si avanza Bosque Alegre (sí, modificando la Ordenanza 5824);
+- los instructores privados (registro gratis).
+
+**Siguen abiertas:**
+1. **¿En qué orden se hacen los pares de baños?** El más barato es Puerto y 33 Orientales.
+2. **Baños:** ¿se cierran de noche? ¿Uso gratis? ¿Qué hace la IA: muestra si están abiertos y limpios, recibe reclamos?
+3. **Bosque Alegre:**
    - ¿cuál es la calle ancha, la prolongación de Del Barco Centenera o Vuelta de Obligado?
    - ¿qué margen se deja con el bosque?
-   - ¿se avanza antes de tener un dictamen sobre la Ordenanza 5824/1983?
-6. **Clases:**
-   - ¿se admiten instructores privados que cobran, y con qué regla?
+4. **Clases:**
    - ¿qué días y horarios tienen las clases municipales en los puestos?
    - ¿la plataforma es de madera plástica o dura, y se desarma antes de las sudestadas?
 
