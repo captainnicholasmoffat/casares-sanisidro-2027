@@ -1,0 +1,389 @@
+ 
+Google Online Security Blog: How Pixel and Android are bringing a new level of trust to your images with C2PA Content Credentials
+ Security Blog
+The latest news and insights from Google on security and safety on the Internet
+How Pixel and Android are bringing a new level of trust to your images with C2PA Content Credentials
+September 10, 2025
+ Posted by Eric Lynch, Senior Product Manager, Android Security, and Sherif Hanna, Group Product Manager, Google C2PA Core 
+At Made by Google 2025, we announced that the new Google Pixel 10 phones will support C2PA [contentcredentials.org] Content Credentials in [https://blog.google/products/pixel/pixel-10-camera-features] Pixel Camera and [https://blog.google/products/photos/ai-photo-editing-google-photos] Google Photos . This announcement represents a series of steps towards greater digital media transparency:
+ The Pixel 10 lineup is the first to have Content Credentials built in across every photo created by Pixel Camera.
+ The Pixel Camera app [https://github.com/c2pa-org/conformance-public/blob/main/conforming-products/conforming-products-list.json] achieved Assurance Level 2 , the highest security rating [https://github.com/c2pa-org/conformance-public/blob/main/docs/current/C2PA%20Generator%20Product%20Security%20Requirements.pdf] currently defined by the C2PA Conformance Program. Assurance Level 2 for a mobile app is currently only possible on the Android platform .
+ A private-by-design approach to C2PA certificate management, where no image or group of images can be related to one another or the person who created them.
+ Pixel 10 phones support on-device trusted time-stamps, which ensures images captured with your native camera app can be trusted after the certificate expires, even if they were captured when your device was offline.
+These capabilities are [https://blog.google/products/pixel/tensor-G5-pixel-10] powered by Google Tensor G5 , Titan M2 security chip, the advanced hardware-backed security features of the Android platform, and Pixel engineering expertise. 
+In this post, we’ll break down our architectural blueprint for bringing a new level of trust to digital media, and how developers can apply this model to their own apps on Android.
+ A New Approach to Content Credentials 
+Generative AI can help us all to be more creative, productive, and innovative. But it can be hard to tell the difference between content that’s been AI-generated, and content created without AI. The ability to verify the source and history—or provenance—of digital content is more important than ever.
+Content Credentials convey a rich set of information about how media such as images, videos, or audio files were made, protected by the same digital signature technology that has secured online transactions and mobile apps for decades. It empowers users to identify AI-generated (or altered) content, helping to foster transparency and trust in generative AI. It can be complemented by watermarking technologies such as [https://deepmind.google/science/synthid/] SynthID . 
+Content Credentials are an [https://c2pa.org/membership/] industry standard backed by a broad coalition of leading companies for securely conveying the origin and history of media files. The standard is developed by the Coalition for Content Provenance and Authenticity (C2PA), of which Google is a steering committee member.
+The traditional approach to classifying digital image content has focused on categorizing content as “AI” vs. “not AI”. This has been the basis for many [https://artificialintelligenceact.eu/article/50/] legislative efforts , which have required the labeling of synthetic media. This traditional approach has drawbacks, as described in Chapter 5 of [http://publicpolicy.google/resources/determining_trustworthiness_en.pdf] this seminal report by Google. Research shows that if only synthetic content is labeled as “AI”, then users falsely believe unlabeled content is “not AI”, a phenomenon called “the implied truth effect”. This is why Google is taking a different approach to applying C2PA Content Credentials. 
+Instead of categorizing digital content into a simplistic “AI” vs. “not AI”, Pixel 10 takes the first steps toward implementing our vision of categorizing digital content as either i) media that comes with verifiable proof of how it was made or ii) media that doesn't. 
+ [https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjn37sHTBDdvDNieYBDEQwQhZi9rGDruWptlSomDIXQYpY1smY0zvs_Cu9S6h39fEFTQFNRuW2oxwUGtu8EC6nv_KyutlwMPQE4h1YWSOuOD5JU-A7iMJcRyZ9-CMet_ejzorqxvq9zBCIPG36LGW-yBcBgmTEZ23YVsirTBLAKMFF0XBgtzVL-cBCEoN5w/s1600/Blog%20image%20C2PA.png] 
+ Pixel Camera attaches Content Credentials to any JPEG photo capture, with the appropriate description as defined by the Content Credentials specification for each capture mode. 
+ Google Photos attaches Content Credentials to JPEG images that already have Content Credentials and are edited using AI or non-AI tools, and also to any images that are edited using AI tools. It will validate and display Content Credentials under a new section in the About panel, if the JPEG image being viewed contains this data. Learn more about it in [https://support.google.com/photos/answer/16496549?hl=en&sjid=12306603808317880081-NC#zippy=%2Chow-content-credentials-help-you-make-informed-decisions] Google Photos Help .
+Given the broad range of scenarios in which Content Credentials are attached by these apps, we designed our C2PA implementation architecture from the onset to be:
+ Secure from silicon to applications 
+ Verifiable, not personally identifiable 
+ Useable offline 
+ Secure from Silicon to Applications
+Good actors in the C2PA ecosystem are motivated to ensure that provenance data is trustworthy. C2PA Certification Authorities (CAs), such as Google, are incentivized to only issue certificates to genuine instances of apps from trusted developers in order to prevent bad actors from undermining the system. Similarly, app developers want to protect their C2PA claim signing keys from unauthorized use. And of course, users want assurance that the media files they rely on come from where they claim. For these reasons, the C2PA defined the Conformance Program. 
+The Pixel Camera application on the Pixel 10 lineup has [https://github.com/c2pa-org/conformance-public/blob/main/conforming-products/conforming-products-list.json] achieved Assurance Level 2 , the highest security rating [https://github.com/c2pa-org/conformance-public/blob/main/docs/current/C2PA%20Generator%20Product%20Security%20Requirements.pdf] currently defined by the C2PA Conformance Program. This was made possible by a strong set of hardware-backed technologies, including Tensor G5 and the certified Titan M2 security chip, along with Android’s hardware-backed security APIs. Only mobile apps running on devices that have the necessary silicon features and Android APIs can be designed to achieve this assurance level. We are working with C2PA to help define future assurance levels that will push protections even deeper into hardware. 
+Achieving Assurance Level 2 requires verifiable, difficult-to-forge evidence. Google has built an end-to-end system on Pixel 10 devices that verifies several key attributes. However, the security of any claim is fundamentally dependent on the integrity of the application and the OS, an integrity that relies on both being kept current with the latest security patches.
+ Hardware Trust: [https://source.android.com/docs/security/features/keystore/attestation] Android Key Attestation in Pixel 10 is built on support for Device Identifier Composition Engine (DICE) by Tensor, and Remote Key Provisioning (RKP) to establish a trust chain from the moment the device starts up to the OS, stamping out the most common forms of abuse on Android. 
+ Genuine Device and Software: Aided by the hardware trust described above, Android Key Attestation allows Google C2PA Certification Authorities (CAs) to verify that they are communicating with a genuine physical device. It also allows them to verify the device has booted securely into a [https://www.android.com/certified/] Play Protect Certified version of Android , and verify how recently the operating system, bootloader, and system software and firmware were patched for security vulnerabilities. 
+ Genuine Application: Hardware-backed Android Key Attestation certificates include the package name and signing certificates associated with the app that requested the generation of the C2PA signing key, allowing Google C2PA CAs to check that the app requesting C2PA claim signing certificates is a trusted, registered app.
+ Tamper-Resistant Key Storage: On Pixel, C2PA claim signing keys are generated and stored using Android StrongBox in the Titan M2 security chip. Titan M2 is [g.co/pixel/certifications] Common Criteria PP.0084 AVA_VAN.5 certified , meaning that it is strongly resistant to extracting or tampering with the cryptographic keys stored in it. Android Key Attestation allows Google C2PA CAs to verify that private keys were indeed created inside this hardware-protected vault before issuing certificates for their public key counterparts.
+ [https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSBeJf4Qfl08aWtVDWPqLMM8Ot7BUrL2bPmRPwfb6oNyu7G7v2-lGnpzgxyoX6x1lD8UNPq_nSrdPjxdLzPyYxBNviiOiYbJ5HA9tAAK7qX51Q9C7WHs6xT7OvzxzsRwimTTLck428lObad3kH9M3iSZiGvXqJVbW2UrTRoLqsfZRapuXktvV7Q2FTVTWW/s1600/25620_Blog%20image_1200x471_1A%20without%20title.png] 
+The C2PA Conformance Program requires verifiable artifacts backed by a hardware Root of Trust, which Android provides through features like Key Attestation. This means Android developers can leverage these same tools to build apps that meet this standard for their users.
+ Privacy Built on a Foundation of Trust: Verifiable, Not Personally Identifiable
+The robust security stack we described is the foundation of privacy. But Google takes steps further to ensure your privacy even as you use Content Credentials, which required solving two additional challenges:
+ Challenge 1: Server-side Processing of Certificate Requests. Google’s C2PA Certification Authorities must certify new cryptographic keys generated on-device. To prevent fraud, these certificate enrollment requests need to be authenticated. A more common approach would require user accounts for authentication, but this would create a server-side record linking a user's identity to their C2PA certificates—a privacy trade-off we were unwilling to make.
+ Our Solution: Anonymous, Hardware-Backed Attestation. We solve this with Android Key Attestation, which allows Google CAs to verify what is being used (a genuine app on a secure device) without ever knowing who is using it (the user). Our CAs also enforce a strict no-logging policy for information like IP addresses that could tie a certificate back to a user. 
+ Challenge 2: The Risk of Traceability Through Key Reuse. A significant privacy risk in any provenance system is traceability. If the same device or app-specific cryptographic key is used to sign multiple photos, those images can be linked by comparing the key. An adversary could potentially connect a photo someone posts publicly under their real name with a photo they post anonymously, deanonymizing the creator.
+ [https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiq8qjTGzJvObASymmwXeckSDYXWY13H8I6bxdnbW-Mmvdu0LTiUtPzyruDpLX5mHSNGZB2IMVEoqOtKK1aT9WrJifbEalHEBr01LGq-ub6FH_Au4-EX02S70oH6pd9EyzpkKl0avWRNDoVhRuN1QROELWB7-PJuITIF8hZ7GriPchAqBt9din9vQdkNGtr/s1600/25620%20_%20ANC%20_%20C2PA%20Blog%20Image%203Ax1.png] 
+ Our Solution: Unique Certificates. We eliminate this threat with a maximally private approach. Each key and certificate is used to sign exactly one image. No two images ever share the same public key, a "One-and-Done" Certificate Management Strategy, making it cryptographically impossible to link them. This engineering investment in user privacy is designed to set a clear standard for the industry.
+Overall, you can use Content Credentials on Pixel 10 without fear that another person or Google could use it to link any of your images to you or one another.
+ Ready to Use When You Are - Even Offline
+Implementations of Content Credentials use [https://www.ietf.org/rfc/rfc3161] trusted time-stamps to ensure the credentials can be validated even after the certificate used to produce them expires. Obtaining these trusted time-stamps typically requires connectivity to a Time-Stamping Authority (TSA) server. But what happens if the device is offline? 
+This is not a far-fetched scenario. Imagine you’ve captured a stunning photo of a remote waterfall. The image has Content Credentials that prove that it was captured by a camera, but the cryptographic certificate used to produce them will eventually expire. Without a time-stamp, that proof could become untrusted, and you're too far from a cell signal, which is required to receive one.
+To solve this, Pixel developed an on-device, offline TSA.
+Powered by the security features of Tensor, Pixel maintains a trusted clock in a secure environment, completely isolated from the user-controlled one in Android. The clock is synchronized regularly from a trusted source while the device is online, and is maintained even after the device goes offline (as long as the phone remains powered on). This allows your device to generate its own cryptographically-signed time-stamps the moment you press the shutter—no connection required. It ensures the story behind your photo remains verifiable and trusted after its certificate expires, whether you took it in your living room or at the top of a mountain.
+ Building a More Trustworthy Ecosystem, Together
+C2PA Content Credentials are not the sole solution for identifying the provenance of digital media. They are, however, a tangible step toward more media transparency and trust as we continue to unlock more human creativity with AI. 
+In our initial implementation of Content Credentials on the Android platform and Pixel 10 lineup, we prioritized a higher standard of privacy, security, and usability. We invite other implementers of Content Credentials to evaluate our approach and leverage these same foundational hardware and software security primitives. The full potential of these technologies can only be realized through widespread ecosystem adoption.
+We look forward to adding Content Credentials across more Google products in the near future.
+ Google
+Labels:
+android security
+ ,
+pixel
+No comments
+ :
+Post a Comment
+ 
+ 
+ 
+Labels
+ 
+#sharethemicincyber
+#supplychain #security #opensource
+AI Security
+android
+android security
+android tr
+app security
+big data
+biometrics
+blackhat
+C++
+chrome
+chrome enterprise
+chrome security
+connected devices
+CTF
+diversity
+encryption
+federated learning
+fuzzing
+Gboard
+google play
+google play protect
+hacking
+interoperability
+iot security
+kubernetes
+linux kernel
+memory safety
+Open Source
+pha family highlights
+pixel
+privacy
+private compute core
+Rowhammer
+rust
+Security
+security rewards program
+sigstore
+spyware
+supply chain
+targeted spyware
+tensor
+Titan M2
+VDP
+vulnerabilities
+workshop
+ 
+Archive
+ 
+ 
+ 
+2026
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2025
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2024
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2023
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2022
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2021
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2020
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2019
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2018
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2017
+Dec
+Nov
+Oct
+Sep
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2016
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2015
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2014
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2013
+Dec
+Nov
+Oct
+Aug
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2012
+Dec
+Sep
+Aug
+Jun
+May
+Apr
+Mar
+Feb
+Jan
+ 
+ 
+2011
+Dec
+Nov
+Oct
+Sep
+Aug
+Jul
+Jun
+May
+Apr
+Mar
+Feb
+ 
+ 
+2010
+Nov
+Oct
+Sep
+Aug
+Jul
+May
+Apr
+Mar
+ 
+ 
+2009
+Nov
+Oct
+Aug
+Jul
+Jun
+Mar
+ 
+ 
+2008
+Dec
+Nov
+Oct
+Aug
+Jul
+May
+Feb
+ 
+ 
+2007
+Nov
+Oct
+Sep
+Jul
+Jun
+May
+ [https://googleonlinesecurity.blogspot.com/atom.xml] 
+ Feed
+ Follow @google 
+ [https://www.facebook.com/google] Follow 
+Give us feedback in our [https://support.google.com/bin/static.py?hl=en&page=portal_groups.cs] Product Forums .
+ Google
+ Privacy
+ Terms
+ 

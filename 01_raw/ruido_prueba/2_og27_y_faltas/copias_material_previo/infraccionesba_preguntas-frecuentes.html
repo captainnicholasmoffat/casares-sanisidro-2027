@@ -1,0 +1,871 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 8 ]> <html class="no-js ie oldie" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,requiresActiveX=true">  -->
+	<!-- el XUA deberÃ­a ir por .HTACCES o config del servidor -->
+
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//google-analytics.com">
+
+	<link rel="prefetch" href="/img/inf_ba.svg">
+	<link rel="prefetch" href="/img/institucional.svg">
+	<link rel="prefetch" href="/img/institucional2.svg">
+
+	<link rel="sitemap" href="/sitemap.xml" type="application/xml">
+
+
+
+	<!-- favicon & app icons -->
+	<link rel="icon" href="/img/favicon.ico" sizes="32x32 48x48" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="/img/favicon.png" sizes="16x16 32x32 48x48" type="image/png">
+	<link rel="icon" href="/img/favicon-196x196.png" sizes="196x196" type="image/png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/favicon-152x152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/favicon-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/favicon-120x120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/favicon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/favicon-76x76.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/favicon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="/img/favicon-57x57.png">
+
+	<title>InfraccionesBA | Ministerio de Transporte | Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial | BA
+	</title>
+	<meta name="description"
+		content="Sitio web de infracciones de tr&aacute;nsito de la Provincia de Buenos Aires, un lugar donde podrás consultar e imprimir tus infracciones de tránsito, consultar ubicaciones con los horarios de los juzgados provinciales y municipales y también descargar documentación útil.">
+	<meta name="author"
+		content="Ministerio de Transporte | Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial | BA">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#00aec3">
+
+	<!-- css styles -->
+	<link rel="stylesheet" href="/css/font.css">
+	<link rel="stylesheet" href="/css/core.min.css?ver=3.38.1.0">
+	<link rel="stylesheet" href="/css/main.css?ver=3.38.1.0">
+
+	<!-- ie metadata -->
+	<meta name="application-name" content="InfraccionesBA">
+	<meta name="msapplication-tooltip"
+		content="InfraccionesBA | Ministerio de Transporte | Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial | BA">
+	<meta name="msapplication-navbutton-color" content="#00aec3">
+	<meta name="msapplication-TileColor" content="#00aec3">
+	<meta name="msapplication-TileImage" content="favicon-144x144-ie10.png">
+	<meta name="msapplication-square70x70logo" content="favicon-128x128-ie11.png" />
+	<meta name="msapplication-square150x150logo" content="favicon-270x270-ie11.png" />
+	<meta name="msapplication-wide310x150logo" content="favicon-558x270-ie11.png" />
+	<meta name="msapplication-square310x310logo" content="favicon-558x558-ie11.png" />
+
+	<meta name="_csrf" content="d89b47b6-c4a8-4d4d-9c12-255e996dca87" />
+	<meta name="_csrf_header" content="X-CSRF-TOKEN" />
+
+
+	<!-- fb opengraph -->
+	<meta property="og:url" content="http://www.infraccionesba.net/">
+	<meta property="og:title"
+		content="InfraccionesBA | Ministerio de Transporte | Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial | BA">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="favicon-152x152.png">
+	<meta property="og:site_name" content="InfraccionesBA">
+	<meta property="og:description"
+		content="Sitio web de infracciones de tránsito de la Provincia de Buenos Aires, un lugar donde podrás consultar e imprimir tus infracciones de tránsito, consultar ubicaciones con los horarios de los juzgados provinciales y municipales y también descargar documentación útil.">
+
+
+	<!-- twittercard -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@infraccionesba">
+	<meta name="twitter:creator" content="@infraccionesba">
+	<meta name="twitter:title"
+		content="InfraccionesBA | Ministerio de Transporte | Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial | BA">
+	<meta name="twitter:description"
+		content="Sitio web de infracciones de tránsito de la Provincia de Buenos Aires, un lugar donde podrás consultar e imprimir tus infracciones de tránsito, consultar ubicaciones con los horarios de los juzgados provinciales y municipales y también descargar documentación útil.">
+	<meta name="twitter:image" content="favicon-152x152.png">
+
+	<!-- page validation -->
+	<meta name="msvalidate.01" content="3B0B96F3E796A36CD24378BEF7B4645B" />
+	<meta name="google-site-verification" content="XAe_JGAU4aMWJmfgOby061ft8vXo3nDexD8Z8GYbU8Y" />
+
+	<!-- robots settings -->
+	<meta name="robots" content="noodp">
+	<meta name="robots" content="noydir">
+	<meta name="slurp" content="noydir">
+
+	<script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<!--[if lt IE 9]> 
+        <script src="js/vendor/respond.min.js"></script> 
+        <![endif]-->
+
+	<!-- <style>
+                #equipos {
+                width: 85%;
+                margin-top: 60px;
+                    /*min-height: 500px;*/
+                    background-color: white;
+            		/*transform: scale(0.8);*/
+            		/*transform: translateX(0) translateY(50px);*/
+            	}
+            	.equipos_visible #equipos {
+            	    transform: translateX(0) translateY(0);
+            		/*transform: scale(1);*/
+            	}
+            	/* Estilo para el boton de cierre del popup */
+            	#equipos .equipos_close {
+                    position: absolute;
+                    top: 16px;
+                    right: 23px;
+                    border: 0;
+                    background: #4d6a79;
+                    font-size: 25px;
+                    padding: 0 10px;
+            		color: white;
+                }
+            </style>	 -->
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176264257-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-176264257-1');
+	</script>
+</head>
+
+<body onload="cargarDatosComunes();" style="font-family: 'Encode Sans', sans-serif;">
+	<input type="hidden" value="" id="contexto">
+	<!--[if lt IE 9]><div class="browser_old" id="aviso">Â¡Tu navegador es muy viejo! <a href="http://browsehappy.com/?locale=es" title="actualizar navegador" target="_blank">Actualizalo a uno mÃ¡s moderno</a> para tener una mejor experiencia y velocidad en la web. <a href="#" class="close_message" title="cerrar aviso" onclick="document.getElementById('aviso').style.display='none';return false">&times;</a>
+    </div><![endif]-->
+
+	<!-- site or application content here -->
+
+	<!-- wrapper -->
+	<div class="wrapper" role="main">
+
+
+		<header id="top" class="document-main-head logos-sup">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="/img/inf_ba.svg" width="280" height="53" alt="InfraccionesBA" class="anim">
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3 text-center logos-sup2">
+						<a href="http://www.gob.gba.gov.ar/portal/index.php"
+							title="Ministerio de Jefatura de Gabinete de Ministros - Buenos Aires La Provincia" class="logo-wrap">
+							<img src="/img/institucional2.svg" width="240" height="90" alt="institucional" class="anim"
+								style="margin-top: -8px">
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- navbar -->
+		<nav class="navbar navbar-default" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- -->
+				<div class="collapse navbar-collapse" id="navbar-wrap" style="overflow-y: inherit !important;">
+
+					<ul class="nav navbar-nav">
+						<li id="home"><a href="home" title="Página principal" accesskey="1">Inicio</a></li>
+						
+						
+
+						<li id="consulta-infraccion"><a href="consulta-infraccion" title="Consulta de infracciones de tránsito"
+								accesskey="3">Infracciones</a></li>
+						
+						<li id="ubicacion-juzgado"><a href="ubicacion-juzgado" title="Ubicación de juzgados"
+								accesskey="4">Juzgados</a></li>
+						<li id="equiposDeConstatacion"><a href="equiposDeConstatacion" title="Equipos De Constatación"
+								accesskey="5">Radares</a></li>
+						
+							
+							
+								<li id="mi-web"><a href="/rest/redirect-sso" title="Mi Web | acceso a usuarios | registro"
+										accesskey="6">Mi
+										Web</a></li>
+								<li id="cargar-deber-informar"><a href="/rest/redirect-sso" title="Cargar deber de informar"
+										accesskey="7">Cargar DI</a></li>
+							
+						
+						<li id="otros" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"
+								title="Más opciones: descargas, preguntas frecuentes..." accesskey="8">Ayuda <span
+									class="fa fa-caret-down"></span></a>
+							<ul class="dropdown-menu">
+								<li><a class="ayuda-hover" href="descarga-documento" title="Descargas de documentos">Instructivos</a>
+								</li>
+								<li><a class="ayuda-hover" href="preguntas-frecuentes" title="Preguntas frecuentes">Preguntas
+										Frecuentes</a></li>
+							</ul>
+						</li>
+						
+
+					</ul>
+
+					<a class="uf-value hidden" style='margin-left: 25px;' data-container="body" data-toggle="popover"
+						data-placement="bottom" data-title="Valor de la Unidad Fija"
+						data-content="El costo de la multa se calcula de acuerdo al número de Unidades Fijas (U.F.) establecidas para cada tipo de infracción. El valor de cada Unidad Fija equivale al precio por litro de nafta de mayor octanaje, informado por el Automóvil Club Argentino sede Ciudad de La Plata (A.C.A.). Hacé click para conocer más..."
+						href="unidad-fija-detalle" id="idCuadroUnidadFija"> uf $ <span id="idUnidadFija" style="font-weight: 600">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+					</a>
+
+					
+						
+							<div class="user-access">
+								<a href="/rest/redirect-sso" class="btn-access" title="Acceso para usuarios registrados"
+									accesskey="6">Acceso
+									Usuarios</a>
+								
+							</div>
+						
+						
+					
+
+				</div>
+
+			</div>
+
+		</nav>
+		<!--! navbar -->
+
+		<!-- Modal Cambiar Operador-->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">SELECCIONE A QUIEN QUIERE REPRESENTAR</h4>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6">
+									<table id="tablaSeleccionarOperador" class="table">
+										<thead>
+											<tr>
+												<th scope="col">CUIL/CUIT</th>
+												<th scope="col">NOMBRE</th>
+												<th scope="col">TIPO OPERADOR</th>
+											</tr>
+										</thead>
+										<tbody>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal"
+							onclick="javascript: getSelectedRow()">Comenzar</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		
+
+
+
+
+<!-- sub-nav -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-4">
+			<ul class="breadcrumb">
+				<li><a href="/home">Inicio</a></li>
+				<li class="active">Preguntas Frecuentes</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--! .sub-nav -->
+
+<!-- section content -->
+
+<section id="page" class="container">
+
+	<div class="page-header">
+		<h1 class="main-title">Preguntas Frecuentes</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+			<p class="page-text">
+				Desde aquí podrás acceder a información útil que te ayudará a
+				resolver dudas en cuanto a las infracciones de tránsitos.<br>
+				Para mas información comuniquese con mesa de ayuda.
+
+			</p>
+		</div>
+	</div>
+
+	<div class="row">
+
+
+		<div class="panel-group" id="accordion">
+			<div class="col-xs-12 col-md-12">
+				<h3>FALTA DE PRESENTACIÓN O DESCARGO</h3>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse1">¿Qué ocurre si guardo silencio y no
+								realizo presentación alguna?</a>
+						</h4>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Se dictará resolución por parte del Juez Administrativo y
+								se notificará al presunto infractor para el pago efectivo de la
+								multa. Caso contrario se procederá a su cobro por la vía de
+								juicio de a premio (habilitando la procedencia de embargo de
+								inmuebles y activos financieros, inhibiciones, secuestros, etc.)</p>
+						</div>
+					</div>
+				</div>
+
+				<h3>RETENCIÓN DE LICENCIA</h3>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse2">¿Si me retuvieron la licencia puedo seguir
+								conduciendo?</a>
+						</h4>
+					</div>
+					<div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Si. Debe tener presente que el acta que le entregan
+								contiene la Boleta de Citación del inculpado que lo inhabilitará
+								para conducir por un plazo máximo de TREINTA (30) días corridos,
+								contados a partir de la fecha que fue labrada. Dentro de dicho
+								plazo, el infractor deberá presentarse personalmente y con DNI
+								ante el Juzgado Administrativo de Infracciones de Tránsito
+								Provincial competente habiendo regularizado la situación que
+								originó la infracción.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse3">¿Qué ocurre si no me presento ante el
+								Juzgado a regularizar mi situación y retirar la Licencia?</a>
+						</h4>
+					</div>
+					<div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Si el infractor no se presenta pasados los NOVENTA (90)
+								días corridos desde la fecha de confección de la Boleta de
+								Citación, se destruirá la licencia retenida y caducará la
+								habilitación para conducir de conformidad con lo establecido en
+								el art. 38 de la Ley Provincial Nº 13.927.</p>
+						</div>
+					</div>
+				</div>
+
+				<h3>QUE HAGO SI ME NOTIFICARON UNA INFRACCIÓN DE TRANSITO</h3>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse4">¿Si cometí una infracción y pago
+								voluntariamente en la primera notificación, tengo algún
+								beneficio?</a>
+						</h4>
+					</div>
+					<div id="collapse4" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Si. En caso que usted abone la multa dentro del periodo
+								del pago voluntario, previsto en la primera notificación, tiene
+								una bonificación del 50% del valor mínimo de la sanción
+								correspondiente a la misma. En las actas automáticas el
+								vencimiento está impreso. En las actas labradas manualmente por
+								la autoridad de comprobación, el vencimiento se genera a los
+								TREINTA (30) días hábiles de su confección.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse5">¿Si venció el plazo otorgado para el pago
+								voluntario, puedo igualmente abonar la infracción?</a>
+						</h4>
+					</div>
+					<div id="collapse5" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>
+								Si. Una vez vencido el plazo de pago voluntario podrá abonar la
+								infracción reimprimiendo un nuevo cupón de pago actualizado,
+								desde <a href="https://www.gob.gba.gov.ar" target="_blank">www.gob.gba.gov.ar</a>;
+								o bien podrá esperar la citación para presentar el descargo
+								correspondiente que contendrá un nuevo cupón de pago. En ambos
+								casos, esto será sin el beneficio del 50% de descuento
+								establecido originariamente en el periodo de pago voluntario. Si
+								nunca recibió la notificación de infracción o la recibió
+								vencida, puede obtener una prórroga de pago con el beneficio del
+								50% de descuento establecido originariamente desde Mi Web (debe
+								registrarse con usuario y clave), siempre y cuando no se haya
+								presentado en el juzgado o el mismo no haya iniciado ninguna
+								operación.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse6">¿Dónde puedo realizar el pago?</a>
+						</h4>
+					</div>
+					<div id="collapse6" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>
+								Se puede abonar en la Red Provincia Net Pagos y a través de su
+								portal de pagos con cualquier tarjeta de débito ingresando a <a
+									href="https://www.provincianet.com.ar" target="_blank">www.provincianet.com.ar</a>,
+								opción “pagar on line”. Además, puede realizar el pago en
+								cualquier sucursal Rapipago. Ingresando en <a
+									href="https://www.rapipago.com.ar" target="_blank">www.rapipago.com.ar</a>
+								encontrará la sucursal más próxima a su domicilio. También se
+								puede abonar on line con todos los medios de pago en la página
+								web.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse8">Ya pagué la infracción pero sigo sin poder
+								renovar mi licencia/vender mi vehículo. ¿Por qué?</a>
+						</h4>
+					</div>
+					<div id="collapse8" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Es importante tener presente que conforme a disposiciones
+								bancarias vigentes, la acreditación de los pagos no se efectúa
+								de modo inmediato, demorando aproximadamente SETENTA Y DOS (72)
+								horas en registrarse en el sistema y hasta ese momento, la
+								infracción seguirá bloqueando cualquier trámite. Por eso, y para
+								evitar inconvenientes en la realización de los mismos, se
+								recomienda prever con suficiente antelación la cancelación de
+								su(s) infracción(es) de tránsito impaga(s). No obstante, y si
+								transcurrido el periodo antes indicado aun persistieran tales
+								inconvenientes, podrá concurrir con el comprobante original de
+								pago respectivo al Juzgado Administrativo de Infracciones de
+								Tránsito Provincial más cercano a su domicilio a los efectos de verificar la correcta imputación
+								del pago.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse9">¿Dónde se puede solicitar un plan de pago?</a>
+						</h4>
+					</div>
+					<div id="collapse9" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>
+								El juez, luego del vencimiento del pago voluntario, puede
+								otorgar cuotas de conformidad a las reglamentaciones vigentes.
+								La presentación del acogimiento se hará personalmente por el
+								infractor, o por quien se presente en representación de éste. La
+								adhesión a un plan de pagos implicará: el reconocimiento expreso
+								e irrevocable de la deuda, debiendo asumir su cumplimiento en
+								tiempo y forma junto con la renuncia a la interposición de los
+								descargos y recursos administrativos y judiciales que pudieren
+								corresponder, como así también, a aquellos recursos, descargos
+								y/o presentaciones efectuadas con anterioridad por los
+								infractores o responsables y/o sus representantes
+								respectivamente. La firma en conformidad de lo anteriormente
+								mencionado operara como casual interruptiva del curso de la
+								prescripción.<br> <br>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse10">¿Cómo procedo si el titular de la
+								infracción es una persona jurídica (organización, sociedad,
+								empresa, etc.)?</a>
+						</h4>
+					</div>
+					<div id="collapse10" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>
+								Toda persona jurídica deberá constituir su "Domicilio Vial
+								Electrónico" a través de su representante legal y/o apoderado
+								con facultades suficientes, quien a la vez deberá haber
+								constituido el propio de forma previa. (conforme Res 125/2023).
+                                <br> 
+								Para ello, deberán acreditar su identidad a través de alguno de
+								los proveedores disponibles que certifiquen un nivel de
+								seguridad sustancial o superior. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse11">Si considero que no cometí una infracción
+								¿puedo presentar descargo?</a>
+						</h4>
+					</div>
+					<div id="collapse11" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>Si. Podrá presentarlo personalmente o por escrito (enviado
+								por correo postal si vive a mas de 60km), ante el Juez
+								competente.</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse12">¿Qué plazo tengo para realizar el
+								descargo?</a>
+						</h4>
+					</div>
+					<div id="collapse12" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>El descargo no tiene requisitos respecto a su forma y
+								contenido, pero debe contener documentación probatoria y datos
+								de contacto. Se recomienda que el descargo, para su mejor
+								individualización, contenga la siguiente información.
+							<ul>
+								<li>Nº de causa</li>
+								<li>Nombre del titular</li>
+								<li>Nº DNI/LE/LC.</li>
+								<li>Dominio del automotor sobre el cual se dirigió la
+									infracción</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse14">¿Cómo debo proceder si me notificaron una
+								infracción por un vehículo que no conducía o vendí pero no tiene
+								transferencia?</a>
+						</h4>
+					</div>
+					<div id="collapse14" class="panel-collapse collapse">
+						<div class="panel-body">
+							<p>La ley establece que cuando no se identifica al conductor
+								infractor, recaerá a una presunción de comisión de la infracción
+								en el propietario del vehículo. Ahora bien, si usted ha vendido
+								el vehículo, o al momento de la infracción el mismo no estaba
+								bajo su tenencia o custodia, deberá denunciar al comprador,
+								tenedor o custodio, mediante el descargo al Juzgado
+								administrativo de Infracciones de Tránsito Provincial
+								competente. De no cumplir con dicha obligación se harán
+								responsables a los titulares registrales del vehículo de la
+								imposición de la multa de conformidad con lo establecido por el
+								inc. F) art. 35 de la Ley Provincial Nº 13.924.</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div>
+					<h3>REQUISITOS PARA CIRCULAR POR LA PROVINCIA DE BUENOS AIRES</h3>
+					<div>
+						<br>
+						<p>
+							<strong>Documentación:</strong> Licencia habilitante de conducir
+							vigente, cédula de identificación de automotor, comprobante de
+							seguro obligatorio vigente y certificado de VTV vigente.<br>
+							<strong>Elementos:</strong> cinturones de seguridad, placas de
+							identificación de dominio, matafuego, balizas, sistemas de
+							seguridad originales y casco de seguridad homologado en caso de
+							motovehículos.<br> <strong>Condiciones:</strong> el número
+							de ocupantes adecuado a la capacidad del vehículo, menores de 10
+							años en el asiento trasero en la silla de seguridad acorde a la
+							edad, utilizar las luces bajas encendidas en rutas y autopistas
+							las 24hs.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+
+</section>
+
+		<!-- backdrop + preloader -->
+		<div id="cargando" class="hidden">
+			<div class="modal-backdrop fade in"></div>
+			<span class="preloader">Por favor espere...</span>
+		</div>
+
+		<div id="cargando-largo" class="hidden">
+			<div class="modal-backdrop fade in"></div>
+			<span class="preloader_time"> Esta operación puede tardar unos minutos. Por favor espere...
+				<div class="spinner"></div>
+			</span>
+		</div>
+		<!--! -->
+
+
+		<!--! site content -->
+
+		<footer class="container-fluid">
+
+
+
+			<div class="row foot-bar">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-xs-10 col-md-6">
+							<span class="copyright">&copy;
+								<script>var dteNow = new Date, intYear = dteNow.getFullYear(); document.write(intYear);</script>
+								InfraccionesBA. (V 3.38.1.0)
+							</span>
+						</div>
+
+						<div class="col-xs-2 col-md-6">
+							<a href="#top" title="ir arriba..." class="pull-right back-to-top" rel="nofollow"><i
+									class="fa fa-chevron-up"></i></a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+			<div class="container">
+
+				<div class="row" style="padding-top: 15px; padding-bottom: 15px">
+
+					<div class="col-xs-12 col-md-9">
+						<div class="organismos" role="contentinfo">
+							<span class="jb">Ministerio de Transporte</span>
+							<span class="psv">Subsecretar&iacute;a de Pol&iacute;tica y Seguridad Vial</span>
+							<span class="bapvcia">Buenos Aires Provincia</span>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-md-3">
+						<div class="technology-info pull-right">
+							<!-- <span class="technology wcag"><i class="fa fa-check"></i> wcag aa</span>
+                                   <span class="technology wai"><i class="fa fa-dot-circle-o"></i> wai-aria 1.0</span> -->
+							<span class="technology css3"><i class="fa fa-css3"></i>
+								css3</span> <span class="technology html5"><i class="fa fa-html5"></i> html5</span> <span
+								class="technology mobile"><i class="fa fa-mobile"></i> mobile</span>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+
+		</footer>
+
+		<!--! /section content -->
+
+		<!-- Mapa Equipos -->
+		<!-- <div id="equipos" style="display: none;">
+
+        <div class="row" style="margin: 0;">
+            <div class="col-xs-12 col-md-12">
+                <iframe id="mapa_iframe" src="https://www.google.com/maps/d/embed?mid=1DEX5xxHfIov3hFecYzbrbbBm8c59-Ebt&ll=-36.371659374393396%2C-59.51427040000004&z=7" width="100%" style="margin-top: 10px; min-height: 500px;"></iframe>
+            </div>
+            <div class="col-xs-12 col-md-12" style="margin: 10px;">
+                <h3 class="text-align: center;">Equipos Fijos de ConstataciÃ³n de Infracciones de TrÃ¡nsito en JurisdicciÃ³n Provincial</h3>
+                <p class="text-justify" style="font-size: 1.2em; margin-top: 30px; margin-right: 30px;">
+                La Provincia de Buenos Aires cuenta con 252 (doscientos cincuenta y dos) equipos fijos de constataciÃ³n de infracciones de trÃ¡nsito instalados sobre su jurisdicciÃ³n (rutas, caminos, autopistas, autovÃ­as o semiautopistas provinciales).<br/><br/>
+                El presente mapa  tiene como objetivo georreferenciar  y describir dichos equipos, como asÃ­ tambiÃ©n,  adjuntar la documentaciÃ³n exigida para que los mismos puedan operar..<br/><br/>
+                Cabe destacar que aquellos equipos que se encuentren detallados en el presente espacio, contarÃ¡n con la efectiva autorizaciÃ³n de la DirecciÃ³n Provincial de PolÃ­tica y Seguridad Vial para realizar controles..<br/><br/>
+                Asimismo, es importante seÃ±alar, que la informaciÃ³n provista tendrÃ¡ un carÃ¡cter dinÃ¡mico, se actualizarÃ¡ a medida que surjan modificaciones..<br/>
+                </p>
+            </div>
+        </div>
+
+          <button class="equipos_close" title="Cerrar">X</button>
+      </div>-->
+	</div>
+	<!--! ./wrapper -->
+
+	<a href="https://api.whatsapp.com/send/?phone=5492213095014" class="whatsapp-float" target="_blank"
+		rel="noopener noreferrer" aria-label="Chatea con nosotros por WhatsApp">
+		<span class="whatsapp-float-tooltip">
+			<span>&iquest;Necesitas Ayuda?</span>
+			<strong>Chatea con nosotros</strong>
+		</span>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"
+			focusable="false">
+			<path fill="#fff"
+				d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+		</svg>
+	</a>
+
+	<!--[if lt IE 9]>
+	  <script src="/js/vendor/jquery-1.11.0.min.js"></script>    
+    <![endif]-->
+
+	<!--[if gte IE 9]><!-->
+	<script src="/js/vendor/jquery-2.1.0.min.js"></script>
+	<!--<![endif]-->
+
+	<!-- Include jQuery Popup Overlay TITO -->
+	<script src="https://cdn.jsdelivr.net/gh/vast-engineering/jquery-popup-overlay@2/jquery.popupoverlay.min.js"></script>
+
+	<script src="/js/vendor/core.min.js"></script>
+	<script src="/js/plugins.js"></script>
+	<script src="/js/main.js"></script>
+
+	
+	
+		
+			<script src=" /js/general/general.js?ver=3.38.1.0"></script>
+		
+	
+
+	
+	
+	<!--  <script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit"  async defer></script>-->
+
+	<script>
+		$('.uf-value').popover({
+			trigger: "hover"
+		});
+		$('.notificaciones-domicilio-digital').popover({
+			trigger: "hover"
+		});
+
+		$(function () {
+			var token = $("meta[name='_csrf']").attr("content");
+			var header = $("meta[name='_csrf_header']").attr("content");
+			$(document).ajaxSend(function (e, xhr, options) {
+				xhr.setRequestHeader(header, token);
+			});
+		});
+
+		// Inicializamos el popup TITO
+		$('#popup').popup({
+			autoopen: true,
+			opacity: 0.2,
+			transition: 'all 0.3s',
+			blur: true
+		});
+
+		$("#tablaSeleccionarOperador tbody tr").click(function () {
+			$('#tablaSeleccionarOperador .selected').removeClass('selected');
+			$(this).addClass("selected");
+		});
+
+		function getSelectedRow() {
+			var cuilCuit = $(
+				'#tablaSeleccionarOperador > tbody > tr.selected td:first')
+				.text();
+			location.href = $(contexto).val() + "/mi-web?operador=" + cuilCuit;
+		}
+
+		// Inicializamos el mapa TITO
+		/*$('#equipos').popup({
+		outline: true,
+		vertical: 'top',
+		autoopen: false,
+		opacity: 0.2, transition: 'all 0.3s',
+		blur: false,
+		scrolllock: true
+		});*/
+		/*$.fn.popup.defaults.pagecontainer = '#page'	*/
+		function cargarDatosComunes() {
+			let
+				pestaña = window.location.hash;
+			if (pestaña == "#descarga") {
+				document.getElementById('descarga').click();
+				history.replaceState(null, null, ' ');
+			}
+			var res = window.location.href.split("/");
+			var idPagina = res[res.length - 1];
+			if (idPagina == "") {
+				idPagina = "home";
+			}
+			if (document.getElementById(idPagina) != null) {
+				$("#" + idPagina).addClass("active");
+			}
+			$("#idCuadroUnidadFija").addClass("hidden");
+			$.ajax({
+				type: 'POST',
+				url: $(contexto).val() + '/consultar-unidad-fija',
+				success: function (valor) {
+					$("#idUnidadFija").html(valor);
+					$("#idCuadroUnidadFija").removeClass("hidden");
+				},
+				error: function (res) {
+					$("#idUnidadFija").html(valor);
+					$("#idCuadroUnidadFija").removeClass("hidden");
+				}
+			});
+
+		}
+	</script>
+
+
+</body>
+
+</html>

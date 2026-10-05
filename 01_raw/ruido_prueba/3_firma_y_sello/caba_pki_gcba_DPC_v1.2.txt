@@ -1,0 +1,4453 @@
+--- p1
+ 
+ 
+ 
+ 
+ 
+ 
+Declaración de Políticas de Certificación.  
+ 
+Gobierno de la Ciudad Autónoma de Buenos Aires. 
+Jefatura de Gabinete de ministros. 
+Secretaria de Innovación y Transformación digital. 
+Agencia de Sistemas de Información. 
+ 
+Dirección General de Seguridad Informática. 
+Firma Digital 
+1.2 / 2022 
+ 
+ 
+Código 
+Versión 
+Dueño 
+Revisado por 
+Aprobado por 
+Historial 
+[PKI-PO-005] 
+1.2 
+Firma Digital 
+PRomanos 
+GLinares 
+28/09/2021 creación 
+24/11/2022 revisión final 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- p2
+ 
+ 
+ 
+ 
+P á g i n a 2 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Aprobado por: 
+ 
+ 
+Gustavo Andrés Linares 
+Director General de Seguridad Informática 
+Agencia de Sistemas de Información 
+Gobierno de la Ciudad Autónoma de Buenos Aires 
+ 
+ 
+
+--- p3
+ 
+ 
+ 
+ 
+P á g i n a 3 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Contenido 
+Aprobado por: .............................................................................................................................. 2 
+Información general ................................................................................................................... 11 
+1.1 
+Control documental ...................................................................................................... 11 
+1.2 
+Estado formal ................................................................................................................. 11 
+1.3 
+Control de versiones ..................................................................................................... 11 
+2 
+Introducción ....................................................................................................................... 12 
+2.1 
+Presentación .................................................................................................................. 12 
+2.2 Nombre del documento e identificación ..................................................................... 12 
+2.2.1 
+Identificadores de certificados ............................................................................................ 12 
+2.3 Participantes en los servicios de certificación............................................................... 13 
+2.3.1 
+Prestador de servicios de certificación ................................................................................ 13 
+2.3.2 
+Autoridad de Registro ......................................................................................................... 14 
+2.3.3 
+Entidades finales ................................................................................................................. 15 
+2.4 Uso de los certificados .................................................................................................. 18 
+2.4.1 
+Usos permitidos para los certificados ................................................................................. 18 
+2.4.2 
+Alcance en el uso de los certificados .................................................................................. 20 
+2.5 Administración de la política ......................................................................................... 21 
+2.5.1 
+Organización que administra el documento ..................................................................... 21 
+2.5.2 
+Datos de contacto de la organización ............................................................................... 21 
+2.5.3 
+Procedimientos de gestión del documento ........................................................................ 22 
+3 
+Publicación de información y depósito de certificados ................................................... 23 
+3.1 
+Repositorio(s) de certificados ........................................................................................ 23 
+3.2 Publicación de información del prestador de servicios de certificación ..................... 23 
+3.3 Frecuencia de publicación............................................................................................. 23 
+3.4 Control de acceso.......................................................................................................... 24 
+4 
+Identificación y autenticación ............................................................................................ 25 
+
+--- p4
+ 
+ 
+ 
+ 
+P á g i n a 4 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+4.1 
+Registro inicial ................................................................................................................ 25 
+4.1.1 
+Tipos de nombres ............................................................................................................... 25 
+4.1.2 
+Significado de los nombres................................................................................................. 26 
+4.1.3 
+Empleo de anónimos y seudónimos .................................................................................. 26 
+4.1.4 
+Interpretación de formatos de nombres ............................................................................ 26 
+4.1.5 
+Unicidad de los nombres .................................................................................................... 27 
+4.1.6 
+Resolución de conflictos relativos a nombres..................................................................... 27 
+4.2 Validación inicial de la identidad .................................................................................. 28 
+4.2.1 
+Prueba de posesión de clave privada................................................................................. 28 
+4.2.2 
+Validación de la Identidad de persona física ..................................................................... 28 
+4.2.3 
+Autenticación de la identidad de una persona física ......................................................... 29 
+4.2.4 
+Información de suscriptor no verificada ............................................................................. 30 
+4.2.5 
+Autenticación de la identidad de una RA y sus operadores .............................................. 30 
+4.3 Identificación y autenticación de solicitudes de renovación ....................................... 31 
+4.3.1 
+Validación para la renovación rutinaria de certificados .................................................... 31 
+4.3.2 
+Identificación y autenticación de la solicitud de renovación .............................................. 31 
+4.4 
+Identificación y autenticación de la solicitud de revocación, suspensión o 
+reactivación ............................................................................................................................. 32 
+5 
+Requisitos de operación del ciclo de vida de los certificados ......................................... 33 
+5.1 
+Solicitud de emisión de certificado ............................................................................... 33 
+5.1.1 
+Legitimación para solicitar la emisión ................................................................................ 33 
+5.1.2 
+Procedimiento de alta y responsabilidades ........................................................................ 33 
+5.2 Procesamiento de la solicitud de certificación ............................................................. 33 
+5.2.1 
+Ejecución de las funciones de identificación y autenticación ............................................. 33 
+5.2.2 
+Aprobación o rechazo de la solicitud ................................................................................. 34 
+5.2.3 
+Plazo para resolver la solicitud .......................................................................................... 34 
+5.3 Emisión del certificado .................................................................................................. 35 
+5.3.1 
+Acciones de la CA durante el proceso de emisión ............................................................. 35 
+5.3.2 
+Notificación de la emisión al suscriptor ............................................................................. 35 
+5.4 Entrega y aceptación del certificado ............................................................................ 36 
+5.4.1 
+Responsabilidades de la CA ............................................................................................... 36 
+
+--- p5
+ 
+ 
+ 
+ 
+P á g i n a 5 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.4.2 
+Conducta que constituye aceptación del certificado.......................................................... 37 
+5.4.3 
+Publicación del certificado .................................................................................................. 37 
+5.4.4 
+Notificación de la emisión a terceros ................................................................................. 37 
+5.5 Uso del par de claves y del certificado ......................................................................... 37 
+5.5.1 
+Uso por el firmante ............................................................................................................. 37 
+5.5.2 
+Uso por el subscriptor ......................................................................................................... 39 
+5.5.3 
+Uso por el tercero que confía en certificados ..................................................................... 40 
+5.6 Renovación de certificados ........................................................................................... 41 
+5.7 
+Renovación de claves y certificados ............................................................................. 41 
+5.7.1 
+Causas de renovación de claves y certificados .................................................................. 41 
+5.7.2 
+Procedimiento de renovación online de certificados .......................................................... 42 
+5.8 Modificación de certificados ......................................................................................... 44 
+5.9 Revocación, suspensión o reactivación de certificados ............................................... 44 
+5.9.1 
+Causas de revocación de certificados ................................................................................ 44 
+5.9.2 
+Causas de suspensión de un certificado ............................................................................ 46 
+5.9.3 
+Causas de reactivación de un certificado ........................................................................... 46 
+5.9.4 
+Quién puede solicitar la revocación, suspensión o reactivación ........................................ 47 
+5.9.5 
+Procedimientos de solicitud de revocación, suspensión o reactivación ............................. 47 
+5.9.6 
+Plazo temporal de solicitud de revocación, suspensión o reactivación ............................. 48 
+5.9.7 
+Plazo temporal de procesamiento de la solicitud de revocación, suspensión o reactivación
+ 
+48 
+5.9.8 
+Obligación de consulta de información de revocación o suspensión de certificados........ 48 
+5.9.9 
+Frecuencia de emisión de listas de revocación de certificados (LRCs) ............................... 49 
+5.9.10 
+Plazo máximo de publicación de LRCs .............................................................................. 49 
+5.9.11 
+Disponibilidad de servicios de comprobación en línea de estado de certificados ............. 50 
+5.9.12 
+Obligación de consulta de servicios de comprobación de estado de certificados ............. 50 
+5.9.13 
+Requisitos especiales en caso de compromiso de la clave privada ................................... 51 
+5.9.14 
+Período máximo de un certificado digital en estado suspendido ...................................... 51 
+5.10 
+Finalización de la suscripción.................................................................................... 51 
+5.11 
+Depósito y recuperación de claves .......................................................................... 51 
+5.11.1 
+Política y prácticas de depósito y recuperación de claves .................................................. 51 
+5.11.2 
+Política y prácticas de encapsulado y recuperación de claves de sesión ........................... 51 
+
+--- p6
+ 
+ 
+ 
+ 
+P á g i n a 6 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6 
+Controles de seguridad física, de gestión y de operaciones ........................................... 52 
+6.1 
+Controles de seguridad física ........................................................................................ 52 
+6.1.1 
+Localización y construcción de las instalaciones ................................................................ 53 
+6.1.2 
+Acceso físico ........................................................................................................................ 53 
+6.1.3 
+Electricidad y aire acondicionado ....................................................................................... 54 
+6.1.4 
+Exposición al agua .............................................................................................................. 54 
+6.1.5 
+Prevención y protección de incendios ................................................................................ 54 
+6.1.6 
+Almacenamiento de soportes ............................................................................................. 54 
+6.1.7 
+Tratamiento de residuos .................................................................................................... 55 
+6.1.8 
+Copia de respaldo fuera de las instalaciones ..................................................................... 55 
+6.2 Controles de procedimientos ....................................................................................... 55 
+6.2.1 
+Funciones fiables ................................................................................................................ 55 
+6.2.2 
+Número de personas por tarea .......................................................................................... 56 
+6.2.3 
+Identificación y autenticación para cada función .............................................................. 57 
+6.2.4 
+Roles que requieren separación de tareas ......................................................................... 57 
+6.2.5 
+Sistema de gestión PKI ....................................................................................................... 57 
+6.3 Controles de personal ................................................................................................... 58 
+6.3.1 
+Requisitos de historial, calificaciones, experiencia y autorización ...................................... 58 
+6.3.2 
+Procedimientos de investigación de historial ..................................................................... 59 
+6.3.3 
+Requisitos de formación ..................................................................................................... 59 
+6.3.4 
+Requisitos y frecuencia de actualización formativa ........................................................... 60 
+6.3.5 
+Secuencia y frecuencia de rotación laboral ........................................................................ 60 
+6.3.6 
+Sanciones para acciones no autorizadas ........................................................................... 60 
+6.3.7 
+Requisitos de contratación de profesionales ...................................................................... 60 
+6.3.8 
+Suministro de documentación al personal ........................................................................ 61 
+6.4 Procedimientos de auditoría de seguridad .................................................................. 61 
+6.4.1 
+Tipos de eventos registrados .............................................................................................. 61 
+6.4.2 
+Frecuencia de tratamiento de registros de auditoría ......................................................... 62 
+6.4.3 
+Período de conservación de registros de auditoría ............................................................ 63 
+6.4.4 
+Protección de los registros de auditoría ............................................................................. 63 
+6.4.5 
+Procedimientos de copia de respaldo ................................................................................ 64 
+6.4.6 
+Localización del sistema de acumulación de registros de auditoría .................................. 64 
+6.4.7 
+Notificación del evento de auditoría al causante del evento ............................................. 64 
+
+--- p7
+ 
+ 
+ 
+ 
+P á g i n a 7 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.4.8 
+Análisis de vulnerabilidades ............................................................................................... 64 
+6.5 Archivos de informaciones ............................................................................................ 65 
+6.5.1 
+Tipos de registros archivados ............................................................................................. 65 
+6.5.2 
+Período de conservación de registros ................................................................................. 66 
+6.5.3 
+Protección del archivo ........................................................................................................ 66 
+6.5.4 
+Procedimientos de copia de respaldo ................................................................................ 66 
+6.5.5 
+Requisitos de sellado de fecha y hora ................................................................................ 67 
+6.5.6 
+Localización del sistema de archivo ................................................................................... 67 
+6.5.7 
+Procedimientos de obtención y verificación de información de archivo ............................ 67 
+6.6 Renovación de claves .................................................................................................... 67 
+6.7 
+Compromiso de claves y recuperación de desastre .................................................... 68 
+6.7.1 
+Procedimientos de gestión de incidencias y compromisos ................................................ 68 
+6.7.2 
+Corrupción de recursos, aplicaciones o datos .................................................................... 68 
+6.7.3 
+Compromiso de la clave privada de la entidad ................................................................. 68 
+6.7.4 
+Continuidad del negocio después de un desastre ............................................................. 68 
+6.8 Terminación del servicio ................................................................................................ 69 
+7 
+Controles de seguridad técnica ........................................................................................ 71 
+7.1 
+Generación e instalación del par de claves .................................................................. 71 
+7.1.1 
+Generación del par de claves ............................................................................................. 71 
+7.1.2 
+Envío de la clave privada al firmante ................................................................................. 72 
+7.1.3 
+Envío de la clave pública al emisor del certificado ............................................................. 72 
+7.1.4 
+Distribución de la clave pública del prestador de servicios de certificación ....................... 72 
+7.1.5 
+Tamaño de claves .............................................................................................................. 73 
+7.1.6 
+Generación de parámetros de clave pública ..................................................................... 73 
+7.1.7 
+Comprobación de calidad de parámetros de clave pública .............................................. 73 
+7.1.8 
+Generación de claves en aplicaciones informáticas o en bienes de equipo ...................... 73 
+7.1.9 
+Propósitos de uso de claves ............................................................................................... 74 
+7.2 
+Protección de la clave privada ...................................................................................... 74 
+7.2.1 
+Estándares de módulos criptográficos ............................................................................... 74 
+7.2.2 
+Control por más de una persona (m de n) sobre la clave privada ................................... 74 
+7.2.3 
+Depósito de la clave privada .............................................................................................. 74 
+7.2.4 
+Copia de respaldo de la clave privada ............................................................................... 74 
+
+--- p8
+ 
+ 
+ 
+ 
+P á g i n a 8 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.2.5 
+Archivo de la clave privada ................................................................................................ 75 
+7.2.6 
+Introducción de la clave privada en el módulo criptográfico ............................................. 75 
+7.2.7 
+Método de activación de la clave privada ......................................................................... 76 
+7.2.8 
+Método de desactivación de la clave privada .................................................................... 76 
+7.2.9 
+Método de destrucción de la clave privada ....................................................................... 76 
+7.2.10 
+Clasificación de módulos criptográficos ............................................................................. 76 
+7.3 
+Otros aspectos de gestión del par de claves ............................................................... 76 
+7.3.1 
+Archivo de la clave pública ................................................................................................. 76 
+7.3.2 
+Períodos de utilización de las claves pública y privada ..................................................... 76 
+7.4 Datos de activación ....................................................................................................... 77 
+7.4.1 
+Generación e instalación de datos de activación ............................................................... 77 
+7.4.2 
+Protección de datos de activación ...................................................................................... 77 
+7.5 
+Controles de seguridad informática ............................................................................. 77 
+7.5.1 
+Requisitos técnicos específicos de seguridad informática .................................................. 78 
+7.5.2 
+Evaluación del nivel de seguridad informática .................................................................. 78 
+7.6 
+Controles técnicos del ciclo de vida ............................................................................. 79 
+7.6.1 
+Controles de desarrollo de sistemas .................................................................................. 79 
+7.6.2 
+Controles de gestión de seguridad ..................................................................................... 79 
+7.7 
+Controles de seguridad de red ..................................................................................... 82 
+7.8 
+Controles de ingeniería de módulos criptográficos .................................................... 83 
+7.9 
+Fuentes de Tiempo ........................................................................................................ 83 
+7.10 
+Cambio de estado de un Dispositivo Seguro de Creación de Firma (QSCD) ........ 83 
+8 
+Perfiles de certificados y listas de certificados revocados ................................................ 84 
+8.1 
+Perfil de certificado ........................................................................................................ 84 
+8.1.1 
+Número de versión ............................................................................................................. 84 
+8.1.2 
+Extensiones del certificado .................................................................................................. 84 
+8.1.3 
+Identificadores de objeto (OID) de los algoritmos .............................................................. 84 
+8.1.4 
+Formato de Nombres ......................................................................................................... 84 
+8.1.5 
+Restricción de los nombres ................................................................................................. 85 
+8.1.6 
+Identificador de objeto (OID) de los tipos de certificados .................................................. 85 
+8.2 Perfil de la lista de revocación de certificados ............................................................. 85 
+
+--- p9
+ 
+ 
+ 
+ 
+P á g i n a 9 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+8.2.1 
+Número de versión ............................................................................................................. 85 
+8.2.2 
+Perfil de OCSP .................................................................................................................... 85 
+9 
+Auditoría ............................................................................................................................. 86 
+9.1 
+Frecuencia de la auditoría de conformidad ................................................................. 86 
+9.2 Identificación y calificación del auditor ......................................................................... 86 
+9.3 Listado de elementos objeto de auditoría ................................................................... 86 
+9.4 Acciones a emprender como resultado de una falta de conformidad ...................... 87 
+9.5 Tratamiento de los informes de auditoría .................................................................... 87 
+10 
+Requisitos comerciales y legales ....................................................................................... 88 
+10.1 
+Tarifas ......................................................................................................................... 88 
+10.1.1 
+Tarifa de emisión o renovación de certificados .................................................................. 88 
+10.1.2 
+Tarifa de acceso a certificados ........................................................................................... 88 
+10.1.3 
+Tarifa de acceso a información de estado de certificado ................................................... 88 
+10.1.4 
+Tarifas de otros servicios .................................................................................................... 88 
+10.1.5 
+Política de reintegro ............................................................................................................ 88 
+10.2 
+Capacidad financiera................................................................................................. 88 
+10.2.1 
+Otros activos ....................................................................................................................... 88 
+10.3 
+Confidencialidad........................................................................................................ 89 
+10.3.1 
+Informaciones confidenciales.............................................................................................. 89 
+10.3.2 
+Informaciones no confidenciales ........................................................................................ 89 
+10.3.3 
+Divulgación de información de suspensión y revocación .................................................. 90 
+10.3.4 
+Divulgación legal de información ....................................................................................... 90 
+10.3.5 
+Divulgación de información por petición de su titular ....................................................... 90 
+10.3.6 
+Otras circunstancias de divulgación de información ......................................................... 90 
+10.4 
+Protección de datos personales ............................................................................... 91 
+10.5 
+Derechos de propiedad intelectual .......................................................................... 94 
+10.5.1 
+Propiedad de los certificados e información de revocación ............................................... 94 
+10.5.2 
+Propiedad de la Declaración de Prácticas de Certificación ................................................ 94 
+10.5.3 
+Propiedad de la información relativa a nombres .............................................................. 94 
+10.5.4 
+Propiedad de claves ............................................................................................................ 95 
+
+--- p10
+ 
+ 
+ 
+ 
+P á g i n a 10 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+10.6 
+Obligaciones y responsabilidad civil ........................................................................ 95 
+10.6.1 
+Obligaciones de GCABA ..................................................................................................... 95 
+10.6.2 
+Garantías ofrecidas a suscriptores y terceros que confían en certificados ........................ 96 
+10.6.3 
+Rechazo de otras garantías ............................................................................................... 97 
+10.6.4 
+Limitación de responsabilidades......................................................................................... 97 
+10.6.5 
+Cláusulas de indemnidad ................................................................................................... 98 
+10.6.6 
+Ley aplicable ....................................................................................................................... 99 
+10.6.7 
+Cláusulas de divisibilidad, supervivencia, acuerdo íntegro y notificación .......................... 99 
+10.6.8 
+Cláusula de jurisdicción competente ................................................................................ 100 
+10.6.9 
+Resolución de conflictos .................................................................................................... 100 
+Anexo I - Acrónimos................................................................................................................. 102 
+ 
+ 
+ 
+
+--- p11
+ 
+ 
+ 
+ 
+P á g i n a 11 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Información general 
+1.1 
+Control documental 
+ 
+Clasificación de seguridad: 
+Público 
+Entidad de destino: 
+Gobierno de la Ciudad Autónoma de Buenos Aires 
+Versión: 
+1.2 
+Fecha edición: 
+28/09/2021 
+Fichero: 
+ 
+PKI-PO-005-Politica-DPC-V1.1 
+Código 
+[PKI-PO-005] 
+ 
+1.2 
+Estado formal 
+ 
+Preparado por: 
+Revisado por: 
+Aprobado por: 
+ Nombre: Albert Borrás 
+ Fecha: 28/09/2021 
+ Nombre: Pablo Romanos 
+ Fecha: 13/09/2022 
+ Nombre: Gustavo Linares 
+ Fecha: 24/11/2022 
+ 
+1.3 
+Control de versiones 
+ 
+Versión 
+Partes 
+que 
+cambian 
+Descripción del cambio 
+Autor 
+del 
+cambio 
+Fecha 
+del 
+cambio 
+1.0 
+Original 
+Creación del documento 
+Albert Borrás 
+28/09/2021 
+1.1 
+Revisión 
+Modificación temas 
+Pablo Romanos 
+13/09/2022 
+1.2 
+Revisión 
+Validación final 
+Gustavo Linares 
+24/11/2022 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+--- p12
+ 
+ 
+ 
+ 
+P á g i n a 12 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+2 Introducción 
+2.1 
+Presentación 
+Este documento declara las prácticas de certificación de firma digital del Gobierno de la 
+Ciudad Autónoma de Buenos Aires. 
+Los certificados que se emiten son los siguientes: 
+• 
+De Persona Física  
+o Certificado de Firma Digital de Persona Física  
+ 
+• 
+De Aplicativo 
+o Certificado de Firma de Aplicativo 
+ 
+• 
+De Sello de Tiempo 
+o Certificado de sellado de tiempo 
+ 
+2.2 Nombre del documento e identificación 
+El presente documento establece la Declaración de Practicas de Certificación dedicada a la 
+expedición de certificados digitales del Gobierno de la Ciudad Autónoma de Buenos Aires, en 
+lo adelante “GCABA”. 
+ 
+2.2.1 
+Identificadores de certificados  
+GCABA ha asignado a cada política de certificado un identificador de objeto (OID), para su 
+identificación por las aplicaciones. 
+Número OID 
+Tipo de certificados 
+ 
+Persona Física 
+1.3.6.1.4.1. 58031.1.1. 
+Certificado de firma digital de Persona Física  
+ 
+Firma de Aplicativo 
+1.3.6.1.4.1. 58031.1.2 
+Certificado de firma de aplicativo  
+
+--- p13
+ 
+ 
+ 
+ 
+P á g i n a 13 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+Sellado de Tiempo 
+1.3.6.1.4.1. 58031.1.3 
+Certificado de sellado de tiempo 
+ 
+En caso de contradicción entre esta Declaración de Prácticas de Certificación y otros 
+documentos de prácticas, procedimientos y marcos normativos, prevalecerá lo establecido en 
+esta Declaración de Prácticas respecto al proceso de firma digital. 
+ 
+2.3 Participantes en los servicios de certificación 
+2.3.1 
+Prestador de servicios de certificación 
+El prestador de servicios electrónicos de certificación es la persona jurídica, que expide y 
+gestiona certificados para entidades finales, empleando una Autoridad de Certificación, o 
+presta otros servicios relacionados con la firma digital. 
+El GCABA es un prestador de servicios de certificación para la expedición y gestión de 
+certificados digitales basados en el estándar ETSI EN 319 411-1, al objeto de facilitar el 
+cumplimiento de los requisitos legales y el reconocimiento internacional de sus servicios. 
+Para la prestación de los servicios de certificación, GCABA ha establecido una jerarquía de 
+entidades de certificación: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2.3.1.1 
+ASI-GCABA 
+Se trata de la Autoridad de Certificación raíz de la jerarquía que emite certificados a otras 
+entidades de certificación, y cuyo certificado de clave público ha sido auto firmado. 
+GCABA Subordinate CA 01 
+ASI-GCABA 
+
+--- p14
+ 
+ 
+ 
+ 
+P á g i n a 14 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Datos de identificación: 
+CN: 
+GCABA ROOT CA 
+Huella digital: 
+BD 91 77 05 71 FE 13 B5 A5 C9 C3 3D BD F0 1F 3D 54 CA 61 D4 
+8C B8 12 FE A2 B0 90 26 8D 08 2F 4D 
+Válido desde: 
+viernes, 26 de noviembre de 2021, 15:01:05 hora estándar de 
+Argentina 
+Válido hasta: 
+lunes, 26 de noviembre de 2046, 15:01:05 hora estándar de 
+Argentina 
+Longitud de clave RSA: 
+4.096 bits 
+ 
+2.3.1.2 
+ASI-GCABA SUBORDINATE CA 01 
+Se trata de la Autoridad de certificación dentro de la jerarquía que emite los certificados a las 
+entidades finales, y cuyo certificado de clave pública ha sido firmado digitalmente por la 
+Autoridad de Certificación Raíz “GCABA ROOT CA”. 
+ 
+Datos de identificación: 
+CN: 
+GCABA SUBORDINATE CA 01 
+Huella digital: 
+99 55 79 16 B6 F4 48 37 44 6D 4E F2 09 50 22 67 C5 C2 2C 5E 
+26 85 8B 4C 78 FF 9A 1C 6C 60 72 13 
+Válido desde: 
+viernes, 26 de noviembre de 2021, 18:07:36 hora estándar de 
+Argentina 
+Válido hasta: 
+domingo, 26 de noviembre de 2034, 18:07:36 hora estándar de 
+Argentina 
+Longitud de clave RSA: 
+4.096 bits 
+ 
+ 
+2.3.2 Autoridad de Registro 
+ Una Autoridad de Registro de GCABA es la entidad encargada de: 
+
+--- p15
+ 
+ 
+ 
+ 
+P á g i n a 15 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Tramitar las solicitudes de certificados. 
+• 
+Identificar al solicitante y comprobar que cumple con los requisitos necesarios para la 
+solicitud de los certificados. 
+• 
+Validar las circunstancias personales de la persona que constará como firmante del 
+certificado. 
+• 
+Gestionar la generación de claves y la emisión del certificado 
+• 
+Hacer entrega del certificado al suscriptor o de los medios para su generación. 
+• 
+Custodiar la documentación relativa a la identificación y registro de los firmantes y/o 
+suscriptores y gestión del ciclo de vida de los certificados. 
+ 
+Podrán actuar como AR de ASI-GCABA: 
+• 
+Cualquier entidad autorizada por ASI-GCABA. 
+• 
+ASI-GCABA directamente. 
+ 
+ASI-GCABA formalizará contractualmente las relaciones entre ella misma y cada una de las 
+entidades que actúen como Autoridad de Registro de ASI-GCABA. 
+ 
+La entidad que actúe como Autoridad de Registro de ASI-GCABA podrá autorizar a una o 
+varias personas como Operador de la RA para operar con el sistema de emisión de 
+certificados de ASI-GCABA en nombre de la Autoridad de Registro.  
+ 
+La Autoridad de Registro podrá delegar las funciones de identificación de los suscriptores y/o 
+firmantes, previo acuerdo de colaboración en el que se acepte la delegación de estas 
+funciones. ASI-GCABA deberá autorizar de manera expresa dicho acuerdo de colaboración. 
+ 
+2.3.3 Entidades finales 
+Las entidades finales son las personas u organizaciones destinatarias de los servicios de 
+emisión, gestión y uso de certificados digitales, para los usos de autenticación y firma digital. 
+ 
+Serán entidades finales de los servicios de certificación de ASI-GCABA las siguientes: 
+
+--- p16
+ 
+ 
+ 
+ 
+P á g i n a 16 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+1. Suscriptores del servicio de certificación 
+2. Firmantes 
+3. Partes usuarias 
+ 
+2.3.3.1 
+Suscriptores del servicio de certificación 
+ 
+Los suscriptores del servicio de certificación son: 
+• 
+Las empresas, entidades, corporaciones u organizaciones que los adquieren a 
+(directamente o a través de un tercero) para su uso en su ámbito corporativo 
+empresarial, corporativo, institucional u organizativo, y se encuentran identificados 
+en los certificados. 
+• 
+Las personas físicas que adquieren los certificados para sí mismas, y se encuentran 
+identificados en los certificados. 
+ 
+El suscriptor del servicio de certificación adquiere una licencia de uso del certificado, para su 
+uso propio. El suscriptor del servicio electrónico de certificación es, por tanto, el cliente del 
+prestador de servicios de certificación, de acuerdo con la legislación privada, y tiene los 
+derechos y obligaciones que se definen por el prestador del servicio de certificación, que son 
+adicionales y se entienden sin perjuicio de los derechos y obligaciones de los firmantes, como 
+se autoriza y regula en las normas técnicas aplicables a la expedición de certificados digitales. 
+ 
+2.3.3.2 
+Firmantes 
+Los firmantes son las personas físicas que poseen de forma exclusiva las claves de firma 
+digital/electrónica para autenticación y/o firma digital; siendo típicamente los empleados, 
+representantes legales o voluntarios, así como otras personas vinculadas a los suscriptores; 
+incluyendo las personas al servicio de las Administraciones Públicas, en los certificados de 
+empleado público.  
+ 
+
+--- p17
+ 
+ 
+ 
+ 
+P á g i n a 17 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Los firmantes se encuentran debidamente autorizados por el suscriptor y debidamente 
+identificados en el certificado mediante su nombre y apellidos, y número de identificación 
+inequívoco, sin que sea posible el empleo de seudónimos. 
+ 
+La clave privada de un firmante no puede ser recuperada o deducida por el prestador de 
+servicios electrónicos de confianza, por lo que las personas físicas identificadas en los 
+correspondientes certificados son las únicas responsables de su protección y deberían 
+considerar las implicaciones de perder una clave privada. 
+ 
+Dada la existencia de certificados para usos diferentes de la firma electrónica/digital, como la 
+autenticación, también se emplea el término más genérico de “persona física identificada en 
+el certificado”, siempre con pleno respeto al cumplimiento de la regulación de firma digital en 
+relación con los derechos y obligaciones del firmante. 
+ 
+2.3.3.3 
+Partes usuarias 
+Las partes usuarias son las personas y las organizaciones que reciben firmas digitales y 
+certificados digitales. 
+ 
+Como paso previo a confiar en los certificados, las partes usuarias deben verificarlos, como 
+se establece en esta declaración de prácticas de certificación y en las correspondientes 
+instrucciones disponibles en la página web de GCABA. 
+ 
+ 
+
+--- p18
+ 
+ 
+ 
+ 
+P á g i n a 18 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+2.4 Uso de los certificados 
+Esta sección lista el uso que se le darán a cada tipo de certificado, estableciendo su alcance. 
+ 
+2.4.1 
+Usos permitidos para los certificados 
+Se deben tener en cuenta los usos permitidos indicados en los diversos campos de los perfiles 
+de certificados, disponibles en el web https://pki-gcba.buenosaires.gob.ar   
+ 
+2.4.1.1 
+Certificado de firma digital de Persona Física  
+Este certificado dispone del OID 1.3.6.1.4.1.58031.1.1. Es un certificado que se emite para la 
+firma digital y autenticación. Los certificados de persona física emitidos de acuerdo a las 
+presentes prácticas de certificación y garantizan la identidad del suscriptor, así como permiten 
+la generación de una firma digital basada en dicho certificado.  
+ 
+Los certificados se pueden utilizar en los casos que se indican a continuación: 
+a) Autenticación en sistemas de control de acceso. 
+b) Firma de correo electrónico/digital seguro. 
+c) Otros usos de firma electrónica/digital, en función de lo que acuerden las partes o 
+respecto de las normas jurídicas aplicables en cada caso. 
+ 
+ 
+La información de usos en el perfil de certificado indica lo siguiente: 
+El campo “key usage” tiene activadas y por tanto nos permite realizar, las siguientes 
+funciones: 
+a. Firma digital (Digital Signature, para realizar la función de autenticación) 
+b. Compromiso con el contenido (Content commitment, para realizar la función 
+de firma electrónica) 
+c. Key Encipherment 
+ 
+ 
+
+--- p19
+ 
+ 
+ 
+ 
+P á g i n a 19 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+2.4.1.2 
+Certificado de firma de Aplicativo 
+Este certificado dispone del OID 1.3.6.1.4.1.58031.1.2. Es un certificado que se emite para la 
+firma digital y autenticación. Los certificados de firma de aplicativo emitidos de acuerdo a las 
+presentes prácticas de certificación y garantizan la identidad del suscriptor, así como permiten 
+la generación de una firma digital de aplicativos basada en dicho certificado.  
+ 
+ 
+Estos certificados garantizan la identidad de la entidad suscriptora vinculada. La información 
+de usos en el perfil de certificado indica lo siguiente: 
+El campo “key usage” tiene activadas, y por tanto nos permite realizar, las siguientes 
+funciones: 
+a. Firma digital (Digital Signature, para realizar la función de autenticación) 
+b. Compromiso con el contenido (Content commitment, para realizar la función 
+de firma electrónica) 
+c. Key Encipherment 
+ 
+2.4.1.3 
+Certificado de sello de tiempo electrónico 
+Este certificado dispone del OID 1.3.6.1.4.1.58031.1.3. Los certificados de sello de tiempo 
+electrónico se tratan de certificados emitidos para la operación de autoridades de sellado de 
+tiempo y hora (TSA), para la firma de los sellos de tiempo que éstas producen.  
+ 
+Estos certificados permiten la firma de los sellos de tiempo que se emiten, desde el momento 
+que hayan obtenido un certificado de sello de tiempo electrónico válido y mientras éste se 
+encuentre vigente. 
+ 
+La sincronización de los tiempos en GCABA se realiza mediante un servicio servidor de tiempo 
+NTP Stratum 1.  
+ 
+
+--- p20
+ 
+ 
+ 
+ 
+P á g i n a 20 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Este servidor, un Meinberg Lantime M300/GPS, con oscilador TCXO de alta estabilidad, 
+receptor GPS, formado por una tarjeta GPS interna para sincronizarse simultáneamente con 
+los satélites con los que tiene visibilidad en cada momento (entre 3 y 8), y protección anti-
+rayos. 
+ 
+2.4.2 Alcance en el uso de los certificados 
+Los certificados se emplean para su función propia y finalidad establecida, sin que puedan 
+utilizarse en otras funciones y con otras finalidades.  
+ 
+Del mismo modo, los certificados deben emplearse únicamente de acuerdo con la regulación 
+aplicable, especialmente teniendo en cuenta las restricciones de importación y exportación 
+existentes en cada momento. 
+ 
+Los certificados no pueden emplearse para firmar certificados de clave pública de ningún tipo, 
+ni firmar listas de revocación de certificados (LRC). 
+ 
+Los certificados no se han diseñado, no se pueden destinar y no se autoriza su uso o reventa 
+como equipos de control de situaciones peligrosas o para usos que requieren actuaciones a 
+prueba de fallos, como el funcionamiento de instalaciones nucleares, sistemas de navegación 
+o comunicaciones aéreas, o sistemas de control de armamento, donde un fallo pudiera 
+directamente conllevar la muerte, lesiones personales o daños medioambientales severos. 
+ 
+El empleo de los certificados digitales en operaciones que contravienen esta Declaración de 
+Prácticas de Certificación, los documentos jurídicos vinculantes con cada certificado, o los 
+contratos con las entidades de registro o con sus firmantes/suscriptores, tiene la consideración 
+de uso indebido a los efectos legales oportunos, eximiéndose por tanto a GCABA, en función 
+de la legislación vigente, de cualquier responsabilidad por este uso indebido de los 
+certificados que realice el firmante o cualquier tercero. 
+
+--- p21
+ 
+ 
+ 
+ 
+P á g i n a 21 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+GCABA no tiene acceso a los datos sobre los que se puede aplicar el uso de un certificado. 
+Por lo tanto, y como consecuencia de esta imposibilidad técnica de acceder al contenido del 
+mensaje, no es posible por parte de GCABA emitir valoración alguna sobre dicho contenido, 
+asumiendo por tanto el suscriptor, el firmante o la persona responsable de la custodia, 
+cualquier responsabilidad relacionada al uso de un certificado. 
+ 
+Asimismo, le será imputable al suscriptor, al firmante o a la persona responsable de la 
+custodia, cualquier responsabilidad que pudiese derivarse de la utilización del mismo, fuera 
+de los límites y condiciones de uso recogidas en esta Declaración de Prácticas de Certificación, 
+los documentos jurídicos vinculantes con cada certificado, o los contratos o convenios con las 
+entidades de registro o con sus suscriptores, así como de cualquier otro uso indebido del 
+mismo derivado de este apartado o que pueda ser interpretado como tal, en función de la 
+legislación vigente. 
+ 
+2.5 Administración de la política 
+2.5.1 
+Organización que administra el documento 
+Gobierno de la Ciudad Autónoma de Buenos Aires.  
+Avenida Independencia N° 635 
+Buenos Aires, Argentina. 
+ 
+2.5.2 Datos de contacto de la organización 
+ 
+Gobierno de la Ciudad Autónoma de Buenos Aires.  
+Avenida Independencia N° 635 
+Buenos Aires, Argentina. 
++54 43239300 
+pki@buenosaires.gob.ar  
+
+--- p22
+ 
+ 
+ 
+ 
+P á g i n a 22 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+2.5.3 Procedimientos de gestión del documento 
+ 
+El sistema documental y de organización de GCABA garantiza, mediante la existencia y la 
+aplicación de los correspondientes procedimientos, el correcto mantenimiento de este 
+documento y de las especificaciones de servicio relacionados con el mismo. 
+ 
+ 
+
+--- p23
+ 
+ 
+ 
+ 
+P á g i n a 23 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+3 Publicación de información y depósito de certificados 
+3.1 
+Repositorio(s) de certificados 
+GCABA dispone de un repositorio de certificados, en el que se publican las informaciones 
+relativas a los servicios de certificación. 
+Dicho servicio se encuentra disponible durante las 24 horas de los 7 días de la semana y, en 
+caso de fallo del sistema fuera de control de GCABA, ésta realizará sus mejores esfuerzos para 
+que el servicio se encuentre disponible de nuevo en el plazo establecido en la sección 6.7.4 
+de esta Declaración de Prácticas de Certificación 
+ 
+3.2 Publicación de información del prestador de servicios de certificación 
+GCABA publica las siguientes informaciones, en su Repositorio: 
+• 
+Las listas de certificados revocados y otras informaciones de estado de revocación de 
+los certificados. 
+• 
+Las políticas de certificados aplicables. 
+• 
+La Declaración de Prácticas de Certificación. 
+ 
+3.3 Frecuencia de publicación 
+La información del prestador de servicios de certificación, incluyendo las políticas y la 
+Declaración de Prácticas de Certificación, se publica en cuanto se encuentra disponible. 
+ 
+Los cambios en la Declaración de Prácticas de Certificación se rigen por lo establecido en la 
+sección “Administración de la política” de este documento. 
+  
+La información de estado de revocación de certificados se publica de acuerdo con lo 
+establecido en esta Declaración de Prácticas de Certificación. 
+ 
+
+--- p24
+ 
+ 
+ 
+ 
+P á g i n a 24 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+3.4 Control de acceso 
+GCABA no limita el acceso de lectura a las informaciones establecidas en la sección 3.2, pero 
+establece controles para impedir que personas no autorizadas puedan añadir, modificar o 
+borrar registros del Repositorio, para proteger la integridad y autenticidad de la información, 
+especialmente la información de estado de revocación. 
+ 
+GCABA emplea sistemas fiables para el Repositorio, de modo tal que: 
+• 
+Únicamente personas autorizadas puedan hacer anotaciones y modificaciones. 
+• 
+Pueda comprobarse la autenticidad de la información. 
+• 
+Pueda detectarse cualquier cambio técnico que afecte a los requisitos de seguridad. 
+ 
+ 
+
+--- p25
+ 
+ 
+ 
+ 
+P á g i n a 25 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+4 Identificación y autenticación 
+4.1 
+Registro inicial 
+4.1.1 
+Tipos de nombres 
+Todos los certificados contienen un nombre distintivo (DN o distinguished name) conforme al 
+estándar X.509 en el campo Subject, incluyendo un componente Common Name (CN=), 
+relativo a la identidad del suscriptor y de la persona física identificada en el certificado, así 
+como diversas informaciones de identidad adicionales en el campo SubjectAlternativeName. 
+Los nombres contenidos en los certificados son los siguientes. 
+4.1.1.1 
+ Certificado de firma digital de Persona Física 
+Country (C) 
+AR 
+Surname 
+Apellidos del firmante 
+Given Name 
+Nombres del firmante 
+Serial Number 
+CUIT 
+ 
+4.1.1.2 
+Certificado de firma de Aplicativo 
+Country (C) 
+AR 
+Organization (O) 
+Nombre de la Organización  
+Organization Unit (OU) 
+Indica la naturaleza del certificado 
+Organization Identifier 
+CUIT o Número de identificación fiscal de la Organización a la 
+que está vinculado el sello electrónico 
+Serial Number 
+CUIT o Número de identificación fiscal de la Organización a la 
+que está vinculado el sello electrónico 
+Common Name (CN) 
+Nombre del sistema automático 
+ 
+4.1.1.3 
+Certificado de sello de tiempo electrónico 
+Country (C) 
+AR 
+Organization (O) 
+Nombre de la Organización  
+Locality (L) 
+Localidad de la Organización 
+
+--- p26
+ 
+ 
+ 
+ 
+P á g i n a 26 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Organization Identifier 
+CUIT o Número de identificación fiscal de la Organización 
+Common Name (CN) 
+Nombre del servicio 
+Organizational Unit (OU) 
+Unidad que presta el servicio 
+ 
+4.1.2 
+Significado de los nombres 
+Los nombres contenidos en los campos SubjectName y SubjectAlternativeName de los 
+certificados son comprensibles en lenguaje natural, de acuerdo con lo establecido en la 
+sección anterior. 
+4.1.2.1 
+Emisión de certificados del set de pruebas y certificados de pruebas en general 
+En el caso que los datos indicados en el DN o Subject fueran ficticios (ej. “Test Organization”, 
+“Test Nombre”, “Apellido1”) o se indique expresamente palabras que denoten su invalidez (ej. 
+“TEST”, “PRUEBA” o “INVALIDO”), se considerará al certificado sin validez legal y por lo tanto 
+sin responsabilidad alguna sobre GCABA. Estos certificados se emiten para realizar pruebas 
+técnicas de interoperabilidad y permitir al ente regulador su evaluación. 
+ 
+4.1.3 
+Empleo de anónimos y seudónimos 
+En ningún caso se pueden utilizar seudónimos para identificar una entidad, empresa u 
+organización, ni a un firmante. Asímismo, en ningún caso se emiten certificados anónimos. 
+ 
+4.1.4 
+Interpretación de formatos de nombres 
+Los formatos de nombres se interpretarán de acuerdo con la ley del país de establecimiento 
+del suscriptor, en sus propios términos. 
+Los certificados cuyos suscriptores sean personas jurídicas, entidades u organismos de la 
+administración pública, muestran la relación entre estas y una persona física, con 
+independencia de la nacionalidad de la persona física.  
+En el campo “número de serie” se incluye el DNI, CUIL, CUIT, Pasaporte u otro número de 
+identificación idóneo del firmante, reconocido en derecho. 
+
+--- p27
+ 
+ 
+ 
+ 
+P á g i n a 27 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+4.1.5 
+Unicidad de los nombres 
+La identidad de los suscriptores de certificados será única, para cada política de certificado de 
+GCABA. 
+No se podrá asignar un nombre de suscriptor que ya haya sido empleado, a un suscriptor 
+diferente, situación que, en principio no se ha de dar, gracias a la presencia del número del 
+Número de Identificación Fiscal, o equivalente, en el esquema de nombres. 
+Un suscriptor puede pedir más de un certificado siempre que la combinación de los siguientes 
+valores existentes en la solicitud fuera diferente de un certificado válido: 
+• 
+Código Único de Identificación Tributaria (CUIT)  
+• 
+Tipo de certificado (OID de identificador de política de certificación). 
+ 
+4.1.6 
+Resolución de conflictos relativos a nombres 
+Los solicitantes de certificados no incluirán nombres en las solicitudes que puedan suponer 
+infracción, por el futuro suscriptor, de derechos de terceros. 
+Asimismo, no actuará como árbitro o mediador, ni de ningún otro modo deberá resolver 
+disputa alguna concerniente a la propiedad de nombres de personas u organizaciones, 
+nombres de dominio o marcas comerciales. 
+ 
+Sin embargo, en caso de recibir una notificación relativa a un conflicto de nombres, conforme 
+a la legislación del país del suscriptor, podrá emprender las acciones pertinentes orientadas a 
+bloquear o retirar el certificado emitido. 
+ 
+En todo caso, el prestador de servicios de electrónicos de confianza se reserva el derecho de 
+rechazar una solicitud de certificado debido a conflicto de nombres. 
+ 
+Toda controversia o conflicto que se derive del presente documento se resolverá 
+definitivamente, mediante el arbitraje de derecho, en el marco de la normativa legalmente 
+aplicable. Las partes hacen constar su compromiso de cumplir el laudo dictado por un árbitro.  
+ 
+ 
+
+--- p28
+ 
+ 
+ 
+ 
+P á g i n a 28 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+4.2 Validación inicial de la identidad  
+ 
+La identidad de los suscriptores de certificados resulta fijada en el momento de la firma del 
+contrato entre GCABA y el suscriptor, momento en el que queda verificada la existencia del 
+suscriptor mediante su documento nacional de identidad. Para esta verificación, se podrá 
+emplear documentación pública o notarial, o la consulta directa a los registros públicos 
+correspondientes. 
+4.2.1 
+Prueba de posesión de clave privada 
+La posesión de la clave privada se demuestra en virtud del procedimiento fiable de entrega y 
+aceptación del certificado por el suscriptor, en certificados de firma de aplicativo o de persona 
+física. 
+4.2.2 Validación de la Identidad de persona física 
+ 
+Para las solicitudes de certificados, los Operadores de Registro verificarán la identidad del 
+firmante a la que se le expide el certificado.  
+ 
+Para la verificación se procederá de acuerdo con los siguientes métodos: 
+a) En presencia de la persona física. O si se trata de una renovación no se exigirá la 
+validación de la identidad mediante presencia física. 
+b) El operador o personal autorizado de la Autoridad de Registro verificará la 
+información suministrada para la autenticación y le devolverá la documentación 
+original aportada.  
+c) El operador o personal autorizado de la Autoridad de Registro, recabará datos 
+biométricos e imágenes fotográficas del solicitante.  
+ 
+La prestación del servicio de certificación digital se formaliza mediante el oportuno contrato 
+entre GCABA y el suscriptor, debidamente representado.  
+ 
+
+--- p29
+ 
+ 
+ 
+ 
+P á g i n a 29 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+4.2.3 Autenticación de la identidad de una persona física 
+Esta sección describe los métodos de comprobación de la identidad de una persona física 
+identificada en un certificado. 
+ 
+4.2.3.1 
+En los certificados 
+La identidad de las personas físicas firmantes identificados en los certificados, se valida 
+mediante la presentación de su documento oficial de identificación (Documento Nacional de 
+Identidad, tarjeta de identidad, pasaporte u otro medio idóneo reconocido en derecho para 
+su identificación). 
+ 
+La información de identificación de las personas físicas identificadas en los certificados cuyo 
+suscriptor sea una entidad con o sin personalidad jurídica, la información podrá ser validada 
+comparando la información de la solicitud con los registros de la entidad, empresa u 
+organización de derecho público o privado a la que está vinculado, o bien con la 
+documentación que esta haya suministrado sobre la persona física que identifica como 
+firmante, asegurando la corrección de la información a certificar. 
+ 
+4.2.3.2 
+Validación de la Identidad  
+Para la solicitud de certificados, el operador o personal autorizado de la Autoridad de Registro 
+GCABA valida la identidad del solicitante, para lo cual la persona física deberá exhibir su 
+documento nacional de identidad u otro medio idóneo reconocido en derecho para su 
+identificación en el lugar destinado para el registro.  
+ 
+Durante este trámite se confirma rigurosamente la identidad de la persona física identificada 
+en el certificado. Por este motivo, en todos los casos en que se expide un certificado se 
+acredita ante un operador de registro la identidad de la persona física firmante. 
+ 
+
+--- p30
+ 
+ 
+ 
+ 
+P á g i n a 30 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+La Autoridad de Registro verificará mediante la exhibición de documentos o a través de sus 
+propias fuentes de información, el resto de datos y atributos a incluir en el certificado si los 
+hubiese, guardando documentación acreditativa de la validez de estos.  
+ 
+4.2.4 Información de suscriptor no verificada 
+GCABA no incluye ninguna información de suscriptor no verificada en los certificados. 
+ 
+4.2.5 Autenticación de la identidad de una RA y sus operadores 
+Para la constitución de una nueva Autoridad de Registro, ASI-GCABA realiza las verificaciones 
+necesarias para confirmar la existencia de la entidad u organización de la que se trate. Para 
+ello, ASI-GCABA podrá utilizar exhibición de documentos o utilizar sus propias fuentes de 
+información.  
+ 
+Igualmente, ASI-GCABA directamente o a través de su Autoridad de Registro, verifica y valida 
+la identidad de los operadores de las Autoridades de Registro, para lo cual estas últimas 
+envían a ASI-GCABA la documentación de identificación correspondientes al nuevo operador, 
+conjuntamente con su autorización para actuar como tal.  
+ 
+ASI-GCABA se asegura que los operadores de la Autoridad de Registro reciben la formación 
+suficiente para el desarrollo de sus funciones, lo cual verifica con la evaluación 
+correspondiente. Dicha formación y evaluación puede ser ejecutada por la Autoridad de 
+Registro previamente autorizada por ASI-GCABA. 
+ 
+Para la prestación de los servicios, ASI-GCABA se asegura de que los operadores de Autoridad 
+de Registro acceden al sistema mediante autenticación fuerte con certificado digital.  
+ 
+ 
+
+--- p31
+ 
+ 
+ 
+ 
+P á g i n a 31 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+4.3 Identificación y autenticación de solicitudes de renovación 
+4.3.1 
+Validación para la renovación rutinaria de certificados 
+Antes de renovar un certificado, el operador o personal autorizado de la Autoridad de 
+Registro GCABA comprueba que la información empleada para verificar la identidad y los 
+restantes datos del suscriptor y de la persona física identificada en el certificado continúan 
+siendo válidos. 
+Los métodos aceptables para dicha comprobación son: 
+• 
+El uso del código “CRE” o “ERC” relativo al certificado anterior, o de otros métodos de 
+autenticación personal, que consiste en información que sólo conoce la persona física 
+identificada en el certificado, y que le permite renovar de forma automática su 
+certificado, siempre que no se haya superado el plazo máximo legalmente 
+establecido. 
+• 
+El empleo del certificado vigente para su renovación y no se haya superado el plazo 
+máximo legalmente establecido para esta posibilidad. 
+ 
+Si cualquier información del suscriptor o de la persona física identificada en el certificado ha 
+cambiado, se registra adecuadamente la nueva información y se produce una identificación 
+completa, de acuerdo con lo establecido en la sección 4.2. 
+ 
+4.3.2 Identificación y autenticación de la solicitud de renovación 
+Antes de renovar un certificado, el operador o personal autorizado de la Autoridad de 
+Registro comprobará que la información empleada en su día para verificar la identidad y los 
+restantes datos del suscriptor y de la persona física identificada en el certificado continúa 
+siendo válida, en cuyo caso se aplicará lo dispuesto en la sección anterior.  
+La renovación de certificados tras la revocación no será posible en los siguientes casos: 
+• 
+El certificado fue revocado por emisión errónea a una persona diferente a la 
+identificada en el certificado. 
+• 
+El certificado fue revocado por emisión no autorizada por la persona física identificada 
+en el certificado. 
+• 
+El certificado revocado puede contener información errónea o falsa. 
+
+--- p32
+ 
+ 
+ 
+ 
+P á g i n a 32 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+Si cualquier información del suscriptor o de la persona física identificada en el certificado ha 
+cambiado, se registra adecuadamente la nueva información y se produce una identificación 
+completa, de acuerdo con lo establecido en la sección 4.2. 
+ 
+4.4 Identificación y autenticación de la solicitud de revocación, suspensión o 
+reactivación 
+ASI-GCABA o un operador o personal autorizado de la Autoridad de Registro autentica las 
+peticiones e informes relativos a la revocación, suspensión o reactivación de un certificado, 
+comprobando 
+que 
+provienen 
+de 
+una 
+persona 
+autorizada.                             
+La identificación de los suscriptores y/o firmantes en el proceso de revocación, suspensión o 
+reactivación de certificados podrá ser realizada por: 
+ 
+• 
+El suscriptor y/o firmante: 
+o Identificándose y autenticándose mediante el uso del Código de Revocación 
+(ERC o ERC) a través de la página web de GCABA en horario 24x7. 
+o Otros medios de comunicación, como el teléfono, correo electrónico, etc. 
+cuando existan garantías razonables de la identidad del solicitante de la 
+suspensión o revocación, a juicio de ASI-GCABA y/o Autoridades de Registro. 
+ 
+• 
+Las autoridades de registro: deberán identificar al firmante ante una petición de 
+revocación, suspensión o reactivación según los propios medios que considere 
+necesarios. 
+ 
+Cuando en horario de oficina el suscriptor desee iniciar una petición de revocación y existan 
+dudas para su identificación, su certificado pasa a estado de suspensión.  
+ 
+ 
+
+--- p33
+ 
+ 
+ 
+ 
+P á g i n a 33 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5 Requisitos de operación del ciclo de vida de los certificados 
+5.1 
+Solicitud de emisión de certificado 
+5.1.1 
+Legitimación para solicitar la emisión 
+El solicitante del certificado, para persona física, debe firmar un contrato de aceptación de 
+servicios de certificación con GCABA.  
+Asimismo, con anterioridad a la emisión y entrega de un certificado, debe existir una solicitud 
+de certificados ya sea en el mismo contrato, en un documento específico de hoja de solicitud 
+de certificados o ante la autoridad de registro. 
+5.1.2 
+Procedimiento de alta y responsabilidades 
+ASI-GCABA recibe solicitudes de certificados, realizadas por personas, entidades, empresas u 
+organizaciones de derecho público o privado. 
+Las solicitudes se instrumentan mediante un formulario en formato papel o electrónico, de 
+manera individual o por lotes, o mediante la conexión con bases de datos externas, o a través 
+de una capa de Web Services cuyo destinatario es ASI-GCABA. En el caso de certificados cuyo 
+suscriptor sea una entidad, empresa u organización de derecho público o privado que actúe 
+como una Autoridad de Registro de ASI-GCABA, podrá gestionar directamente las solicitudes 
+accediendo a los sistemas informáticos de GCABA y generar los certificados correspondientes 
+para la propia entidad, empresa u organización o para sus miembros. 
+A la solicitud se deberá acompañar documentación justificativa de la identidad y otras 
+circunstancias de la persona física identificada en el certificado, de acuerdo con lo establecido 
+en la sección 4.2.3. También se deberá acompañar una dirección física, u otros datos, que 
+permitan contactar a la persona física identificada en el certificado. 
+ 
+5.2 Procesamiento de la solicitud de certificación 
+5.2.1 
+Ejecución de las funciones de identificación y autenticación 
+Una vez recibida una petición de certificado, ASI-GCABA se asegura de que las solicitudes de 
+certificado sean completas, precisas y estén debidamente autorizadas, antes de procesarlas.  
+
+--- p34
+ 
+ 
+ 
+ 
+P á g i n a 34 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+En caso afirmativo, GCABA verifica la información proporcionada, verificando los aspectos 
+descritos en la sección 4.2 
+La documentación justificativa de la aprobación de la solicitud debe ser conservada y 
+debidamente registrada y con garantías de seguridad e integridad durante el plazo de 10 
+años desde la expiración del certificado, incluso en caso de pérdida anticipada de vigencia 
+por revocación. 
+ 
+5.2.2 Aprobación o rechazo de la solicitud 
+En caso de que los datos se verifiquen correctamente, GCABA debe aprobar la solicitud del 
+certificado y proceder a su emisión y entrega. 
+Si la verificación indica que la información no es correcta, o si se sospecha que no es correcta 
+o que puede afectar a la reputación de GCABA, de la ASI-GCABA, de las Autoridades de 
+Registro o de los suscriptores, ASI-GCABA denegará la petición, o detendrá su aprobación 
+hasta haber realizado las comprobaciones complementarias que considere oportunas. 
+En caso de que de las comprobaciones adicionales no se desprenda la corrección de las 
+informaciones a verificar, ASI-GCABA denegará la solicitud definitivamente. ASI-GCABA 
+notifica al solicitante la aprobación o denegación de la solicitud. 
+ASI-GCABA podrá automatizar los procedimientos de verificación de la corrección de la 
+información que será contenida en los certificados, y de aprobación de las solicitudes. 
+ 
+5.2.3 Plazo para resolver la solicitud 
+ASI-GCABA atiende las solicitudes de certificados por orden de llegada, en un plazo 
+razonable, pudiendo especificarse una garantía de plazo máximo en el contrato de emisión 
+de certificados. Las solicitudes se mantienen activas hasta su aprobación o rechazo. 
+ 
+
+--- p35
+ 
+ 
+ 
+ 
+P á g i n a 35 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.3 Emisión del certificado 
+5.3.1 
+Acciones de la CA durante el proceso de emisión 
+Tras la aprobación de la solicitud de certificación se procede a la emisión del certificado de 
+forma segura y se pone a disposición del firmante para su aceptación. 
+Los procedimientos establecidos en esta sección también se aplican en caso de renovación 
+de certificados, dado que la misma implica la emisión de un nuevo certificado. 
+Durante el proceso, ASI-GCABA: 
+• 
+Protege la confidencialidad e integridad de los datos de registro de que dispone. 
+• 
+Utiliza sistemas y productos fiables que estén protegidos contra toda alteración y 
+que garanticen la seguridad técnica y, en su caso, criptográfica de los procesos 
+de certificación a los que sirven de soporte. 
+• 
+Genera el par de claves, mediante un procedimiento de generación de certificados 
+vinculado de forma segura con el procedimiento de generación de claves. 
+• 
+Emplea un procedimiento de generación de certificados que vincula de forma 
+segura el certificado con la información de registro, incluyendo la clave pública 
+certificada. 
+• 
+Se asegura de que el certificado es emitido por sistemas que utilicen protección 
+contra falsificación y que garanticen la confidencialidad de las claves durante el 
+proceso de generación de dichas claves. 
+• 
+Indica la fecha y la hora en que se expidió un certificado. 
+• 
+Garantiza el control exclusivo de las claves por parte del usuario, no pudiendo la 
+propia ASI-GCABA o sus Autoridades de Registro deducirlas o utilizarlas en ningún 
+modo. 
+ 
+5.3.2 Notificación de la emisión al suscriptor 
+ASI-GCABA notifica la emisión del certificado al suscriptor y/o a la persona física identificada 
+en el certificado y el método de generación/descarga. 
+ 
+
+--- p36
+ 
+ 
+ 
+ 
+P á g i n a 36 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.4 Entrega y aceptación del certificado 
+5.4.1 
+Responsabilidades de la CA 
+Durante este proceso, el operador o personal autorizado de la Autoridad de Registro GCABA 
+debe realizar las siguientes actuaciones: 
+• 
+Acreditar definitivamente la identidad de la persona física identificada en el 
+certificado, de acuerdo con lo establecido en las secciones 4.1.3 y 4.2.3. 
+• 
+Disponer del Contrato de Prestación de Servicios de Confianza debidamente 
+firmado por el Suscriptor. 
+• 
+Entregar la hoja de entrega y aceptación del certificado a la persona física 
+identificada en el certificado o del representante de la persona jurídica identificada 
+en el certificado con los siguientes contenidos mínimos: 
+o Información básica acerca del uso del certificado, incluyendo 
+especialmente información acerca del prestador de servicios de 
+certificación y de la Declaración de Prácticas de Certificación aplicable, 
+como sus obligaciones, facultades y responsabilidades. 
+o Información acerca del certificado. 
+o Reconocimiento, por parte del firmante, de recibir el certificado y/o los 
+mecanismos para su generación/descarga y la aceptación de los citados 
+elementos. 
+o Régimen de obligaciones del firmante. 
+o Responsabilidad del firmante. 
+o Método de imputación exclusiva al firmante, de su clave privada y de sus 
+datos de activación del certificado, de acuerdo con lo establecido en las 
+secciones 6.2 y 6.4. 
+o La fecha del acto de entrega y aceptación. 
+Toda esta información podrá incluirse en el propio Contrato de Prestación de 
+Servicios de Confianza. Dicho lo cual, cuando se produzca la firma del Contrato 
+Prestación de Servicios de Confianza por el Suscriptor, se entenderá 
+perfeccionada la entrega y aceptación del certificado. 
+• 
+Obtener la firma de la persona identificada en el certificado. 
+ 
+
+--- p37
+ 
+ 
+ 
+ 
+P á g i n a 37 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Las Autoridades de Registro son las encargadas de realizar estos procesos, debiendo registrar 
+documentalmente los anteriores actos y conserva los citados documentos originales (hojas de 
+entrega y aceptación), remitiendo copia electrónica a ASI-GCABA, así como los originales 
+cuando ASI-GCABA precise de acceso a los mismos. 
+ 
+5.4.2 Conducta que constituye aceptación del certificado 
+Cuando se haga entrega de la hoja de aceptación, la aceptación del certificado por la persona 
+física identificada en el certificado se produce mediante la firma de la hoja de entrega y 
+aceptación. 
+ 
+Cuando la generación y entrega del certificado se lleve a cabo a través del procedimiento 
+automatizado definido por ASI-GCABA, la aceptación del certificado por la persona física 
+identificada en el mismo se produce mediante la firma del contrato de Prestación de Servicios 
+de Confianza utilizando el propio certificado. 
+ 
+5.4.3 Publicación del certificado 
+ASI-GCABA publica el certificado en el Depósito a que se refiere la sección 2.1, con los 
+controles de seguridad pertinentes y siempre que ASI-GCABA disponga de la autorización de 
+la persona física identificada en el certificado. 
+ 
+5.4.4 Notificación de la emisión a terceros 
+ASI-GCABA no realiza ninguna notificación de la emisión a terceras entidades.  
+ 
+5.5 Uso del par de claves y del certificado 
+5.5.1 
+Uso por el firmante 
+ASI-GCABA obliga a: 
+
+--- p38
+ 
+ 
+ 
+ 
+P á g i n a 38 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Facilitar a ASI-GCABA información completa y adecuada, conforme a los requisitos 
+de esta Declaración de Prácticas de Certificación, en especial en lo relativo al 
+procedimiento de registro. 
+• 
+Manifestar su consentimiento previo a la emisión y entrega de un certificado. 
+• 
+Emplear el certificado de acuerdo con lo establecido en esta Declaración de 
+Prácticas de Certificación.  
+• 
+Cuando el certificado funcione conjuntamente con un dispositivo de creación de 
+firma digital, reconocer su capacidad de producción de firmas digitales 
+jurídicamente vinculantes. 
+• 
+Ser especialmente diligente en la custodia de su clave privada, con el fin de evitar 
+usos no autorizados, de acuerdo con lo establecido en las secciones 7.1 y 7.2. 
+• 
+Comunicar a ASI-GCABA, Autoridades de Registro y a cualquier persona que se 
+crea que pueda confiar en el certificado, sin retrasos injustificables: 
+o La pérdida, el robo o el compromiso potencial de su clave privada. 
+o La pérdida de control sobre su clave privada, debido al compromiso de 
+los datos de activación (por ejemplo, el código PIN) o por cualquier otra 
+causa. 
+o Las inexactitudes o cambios en el contenido del certificado que conozca 
+o pudiera conocer el suscriptor. 
+• 
+Dejar de emplear la clave privada transcurrido el periodo indicado en la sección 
+7.3.2. 
+ 
+ASI-GCABA obliga al firmante a responsabilizarse de: 
+• 
+Que todas las informaciones suministradas por el firmante que se encuentran 
+contenidas en el certificado son correctas. 
+• 
+Que el certificado se emplea exclusivamente para usos legales y autorizados, de 
+acuerdo con la Declaración de Prácticas de Certificación. 
+• 
+Que ninguna persona no autorizada ha tenido jamás acceso a la clave privada del 
+certificado, y que es el único responsable de los daños causados por su 
+incumplimiento del deber de proteger la clave privada. 
+• 
+Que el firmante es una entidad final y no un prestador de servicios de certificación, 
+y que no empleará la clave privada correspondiente a la clave pública listada en 
+el certificado para firmar certificado alguno (o cualquier otro formato de clave 
+
+--- p39
+ 
+ 
+ 
+ 
+P á g i n a 39 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+pública certificada), ni Lista de Revocación de Certificados, ni título de prestador 
+de servicios de certificación ni en ningún otro caso. 
+ 
+5.5.2 Uso por el subscriptor 
+5.5.2.1 
+Obligaciones del suscriptor del certificado 
+ASI-GCABA obliga contractualmente al suscriptor a: 
+• 
+Facilitar a la Autoridad de Certificación información completa y adecuada, 
+conforme a los requisitos de esta Declaración de Prácticas de Certificación, en 
+especial en lo relativo al procedimiento de registro. 
+• 
+Manifestar su consentimiento previo a la emisión y entrega de un certificado. 
+• 
+Emplear el certificado de acuerdo con lo establecido en la presente Declaración 
+de Prácticas de Certificación.  
+• 
+Comunicar a ASI-GCABA, Autoridades de Registro y a cualquier persona que el 
+suscriptor crea que pueda confiar en el certificado, sin retrasos injustificables: 
+o La pérdida, el robo o el compromiso potencial de su clave privada. 
+o La pérdida de control sobre su clave privada, debido al compromiso de 
+los datos de activación (por ejemplo, el código PIN) o por cualquier otra 
+causa. 
+o Las inexactitudes o cambios en el contenido del certificado que conozca 
+o pudiera conocer el suscriptor. 
+o La pérdida, la alteración, el uso no autorizado, el robo o el compromiso, 
+cuando exista, de la tarjeta. 
+• 
+Trasladar a las personas físicas identificadas en el certificado el cumplimiento de 
+las obligaciones específicas de los mismos, y establecer mecanismos para 
+garantizar el efectivo cumplimiento de las mismas. 
+• 
+No monitorizar, manipular o realizar actos de ingeniería reversa sobre la 
+implantación técnica de los servicios de certificación de GCABA, sin permiso previo 
+por escrito. 
+• 
+No comprometer la seguridad de los servicios de certificación del prestador de 
+servicios de certificación de GCABA. 
+ 
+
+--- p40
+ 
+ 
+ 
+ 
+P á g i n a 40 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.5.2.2 
+Responsabilidad civil del suscriptor de certificado 
+ASI-GCABA obliga contractualmente al suscriptor a responsabilizarse de: 
+• 
+Que todas las manifestaciones realizadas en la solicitud son correctas. 
+• 
+Que todas las informaciones suministradas por el suscriptor que se encuentran 
+contenidas en el certificado son correctas. 
+• 
+Que el certificado se emplea exclusivamente para usos legales y autorizados, de 
+acuerdo con la Declaración de Prácticas de Certificación. 
+• 
+Que ninguna persona no autorizada ha tenido jamás acceso a la clave privada del 
+certificado, y que es el único responsable de los daños causados por su 
+incumplimiento del deber de proteger la clave privada. 
+• 
+Que el suscriptor es una entidad final y no un prestador de servicios de 
+certificación, y que no empleará la clave privada correspondiente a la clave pública 
+listada en el certificado para firmar certificado alguno (o cualquier otro formato 
+de clave pública certificada), ni Lista de Revocación de Certificados, ni título de 
+prestador de servicios de certificación ni en ningún otro caso. 
+ 
+5.5.3 Uso por el tercero que confía en certificados 
+5.5.3.1 
+Obligaciones del tercero que confía en certificados 
+ASI-GCABA informa al tercero que confía en certificados de que el mismo debe asumir 
+las siguientes obligaciones: 
+• 
+Asesorarse de forma independiente acerca del hecho de que el certificado es 
+apropiado para el uso que se pretende. 
+• 
+Verificar la validez, suspensión o revocación de los certificados emitidos, para lo 
+que empleará información sobre el estado de los certificados. 
+• 
+Verificar todos los certificados de la jerarquía de certificados, antes de confiar en 
+la firma digital o en alguno de los certificados de la jerarquía 
+• 
+Reconocer que las firmas electrónicas verificadas, producidas a través de 
+certificados digitales producen vinculación jurídica.  
+• 
+Tener presente cualquier limitación en el uso del certificado, con independencia 
+de que se encuentre en el propio certificado o en el contrato de tercero que confía 
+en el certificado. 
+
+--- p41
+ 
+ 
+ 
+ 
+P á g i n a 41 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Tener presente cualquier precaución establecida en un contrato o en otro 
+instrumento, con independencia de su naturaleza jurídica. 
+• 
+No monitorizar, manipular o realizar actos de ingeniería reversa sobre la 
+implantación técnica de los servicios de certificación de GCABA, sin permiso previo 
+por escrito. 
+• 
+No comprometer la seguridad de los servicios de certificación de la GCABA. 
+ 
+5.5.3.2 
+Responsabilidad civil del tercero que confía en certificados 
+ASI-GCABA informa al tercero que confía en certificados de que el mismo debe asumir las 
+siguientes responsabilidades: 
+• 
+Que dispone de suficiente información para tomar una decisión informada con el 
+objeto de confiar en el certificado o no. 
+• 
+Que es el único responsable de confiar o no en la información contenida en el 
+certificado. 
+• 
+Que será el único responsable si incumple sus obligaciones como tercero que 
+confía en el certificado. 
+ 
+5.6 Renovación de certificados 
+La renovación de los certificados exige la renovación de claves, por lo que debe atenderse a 
+lo establecido en la sección 5.7. 
+ 
+5.7 Renovación de claves y certificados 
+5.7.1 
+Causas de renovación de claves y certificados 
+Los certificados vigentes se pueden renovar mediante un procedimiento específico y 
+simplificado de solicitud, al efecto de mantener la continuidad del servicio de certificación. 
+ 
+Se consideran al menos dos posibilidades para la renovación de certificados: 
+• 
+Proceso de renovación presencial, que se efectuará del mismo modo que la 
+emisión de un nuevo certificado.  
+
+--- p42
+ 
+ 
+ 
+ 
+P á g i n a 42 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Proceso de renovación online (a través de internet), que se detalla a continuación. 
+ 
+5.7.2 Procedimiento de renovación online de certificados 
+5.7.2.1 
+Circunstancias para la renovación online 
+Solamente se podrá proceder a la renovación online del certificado si se cumplen las 
+condiciones siguientes: 
+• 
+La Autoridad de Registro y/o ASI-GCABA dispone del servicio de renovación online. 
+• 
+El certificado con el que se firma la renovación esté vigente, es decir, no haya 
+caducado, no esté revocado ni suspendido.  
+• 
+Que no haya sido renovado dos veces previamente. 
+5.7.2.2 
+Quién puede solicitar la renovación online de un certificado 
+Cualquier firmante podrá pedir la renovación online de su certificado si se cumplen las 
+circunstancias descritas en el punto anterior. 
+ 
+El firmante podrá formalizar su solicitud accediendo al servicio de renovación online de 
+certificados en la página web de GCABA. 
+ 
+5.7.2.3 
+Aprobación o rechazo de la solicitud 
+En caso de que los datos se verifiquen correctamente, ASI-GCABA aprobará la solicitud de 
+renovación del certificado y proceder a su emisión y entrega. 
+ 
+ASI-GCABA notifica al solicitante la aprobación o denegación de la solicitud. 
+ 
+ASI-GCABA podrá automatizar los procedimientos de verificación de la corrección de la 
+información que será contenida en los certificados, y de aprobación de las solicitudes. 
+ 
+5.7.2.4 
+Tramitación de las peticiones de renovación online 
+La solicitud de una renovación del certificado se realizará de acuerdo con lo siguiente: 
+
+--- p43
+ 
+ 
+ 
+ 
+P á g i n a 43 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Cuando el certificado digital de un usuario esté próximo a caducar, ASI-GCABA podrá 
+enviar una o más notificaciones distribuidas en el tiempo, invitándole a su renovación. 
+• 
+El firmante se conectará al servicio de renovación de la página web de GCABA y 
+procederá a la solicitud de renovación. 
+• 
+El firmante firmará la renovación de su certificado válido. 
+• 
+Se procederá a la generación del nuevo par de claves y generación e importación del 
+certificado, respetando los siguientes condicionantes: 
+o 
+Protege la confidencialidad e integridad de los datos de registro de que 
+dispone. 
+o 
+Utiliza sistemas y productos fiables que estén protegidos contra toda 
+alteración y que garanticen la seguridad técnica y, en su caso, criptográfica 
+de los procesos de certificación a los que sirven de soporte. 
+o 
+Genera el par de claves, mediante un procedimiento de generación de 
+certificados vinculado de forma segura con el procedimiento de 
+generación de claves. 
+o 
+Emplea un procedimiento de generación de certificados que vincula de 
+forma segura el certificado con la información de registro, incluyendo la 
+clave pública certificada. 
+o 
+Se asegura de que el certificado es emitido por sistemas que utilicen 
+protección contra falsificación y que garanticen la confidencialidad de las 
+claves durante el proceso de generación de dichas claves. 
+o 
+Indica la fecha y la hora en que se expidió un certificado. 
+o 
+Garantiza el control exclusivo del usuario sobre sus propias claves, no 
+pudiendo la propia ASI-GCABA o sus Autoridades de Registro deducirlas 
+o utilizarlas. 
+ 
+5.7.2.5 
+Notificación de la emisión del certificado renovado 
+ASI-GCABA notifica la emisión del certificado al suscriptor y/o a la persona física identificada 
+en el certificado. 
+ 
+5.7.2.6 
+Conducta que constituye aceptación del certificado renovado 
+El certificado se considerará aceptado al firmar electrónicamente la renovación. 
+
+--- p44
+ 
+ 
+ 
+ 
+P á g i n a 44 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+5.7.2.7 
+Publicación del certificado renovado 
+ASI-GCABA publica el certificado renovado en el Depósito a que se refiere la sección 2.1, con 
+los controles de seguridad pertinentes. 
+ 
+5.7.2.8 
+Notificación de la emisión a terceros 
+ASI-GCABA no realiza notificación alguna de la emisión a terceras entidades.  
+ 
+5.8 Modificación de certificados 
+La modificación de certificados, excepto la modificación de la clave pública certificada, que se 
+considera renovación, será tratada como una nueva emisión de certificado, aplicándose lo 
+descrito en las secciones 5.1, 5.2, 5.3 y 5.4. 
+ 
+5.9 Revocación, suspensión o reactivación de certificados 
+La revocación de un certificado supone la pérdida de validez definitiva del mismo, y es 
+irreversible. 
+ 
+La suspensión (o revocación temporal) de un certificado supone la pérdida de validez 
+temporal del mismo, y es reversible. Sólo los certificados de entidad final podrán ser 
+suspendidos. 
+ 
+La reactivación de un certificado supone su paso de estado suspendido a estado activo. 
+ 
+5.9.1 
+Causas de revocación de certificados 
+ASI-GCABA revoca un certificado cuando concurre alguna de las siguientes causas: 
+1) Circunstancias que afectan a la información contenida en el certificado: 
+
+--- p45
+ 
+ 
+ 
+ 
+P á g i n a 45 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+a) 
+Modificación de alguno de los datos contenidos en el certificado, después de la 
+correspondiente emisión del certificado que incluye las modificaciones. 
+b) 
+Descubrimiento de que alguno de los datos contenidos en la solicitud de 
+certificado es incorrecto. 
+c) 
+Descubrimiento de que alguno de los datos contenidos en el certificado es 
+incorrecto. 
+ 
+2) Circunstancias que afectan a la seguridad de la clave o del certificado: 
+a) 
+Compromiso de la clave privada, de la infraestructura o de los sistemas del 
+prestador de servicios de certificación que emitió el certificado, siempre que afecte 
+a la fiabilidad de los certificados emitidos a partir de ese incidente. 
+b) 
+Infracción, por ASI-GCABA, de los requisitos previstos en los procedimientos de 
+gestión de certificados, establecidos en esta Declaración de Prácticas de 
+Certificación. 
+c) 
+Compromiso o sospecha de compromiso de la seguridad de la clave o del 
+certificado emitido. 
+d) 
+Acceso o utilización no autorizados, por un tercero, de la clave privada 
+correspondiente a la clave pública contenida en el certificado. 
+e) 
+El uso irregular del certificado por la persona física identificada en el certificado, o 
+la falta de diligencia en la custodia de la clave privada. 
+ 
+3) Circunstancias que afectan al suscriptor o a la persona física identificada en el certificado: 
+a) 
+Finalización de la relación jurídica de prestación de servicios entre ASI-GCABA y 
+el suscriptor. 
+b) 
+Modificación o extinción de la relación jurídica subyacente o causa que provocó 
+la emisión del certificado a la persona física identificada en el certificado. 
+c) 
+Infracción por el solicitante del certificado de los requisitos preestablecidos para 
+la solicitud del mismo. 
+d) 
+Infracción por el suscriptor o por la persona identificada en el certificado, de sus 
+obligaciones, responsabilidad y garantías, establecidas en el documento jurídico 
+correspondiente. 
+e) 
+La incapacidad sobrevenida o el fallecimiento del poseedor de claves. 
+
+--- p46
+ 
+ 
+ 
+ 
+P á g i n a 46 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+f) 
+La extinción de la persona jurídica suscriptora del certificado, así como el fin de la 
+autorización del suscriptor al poseedor de claves o la finalización de la relación 
+entre suscriptor y persona identificada en el certificado. 
+g) 
+Solicitud del suscriptor de revocación del certificado, de acuerdo con lo 
+establecido en la sección 4.4. 
+ 
+4) Otras circunstancias: 
+a) 
+La terminación del servicio de certificación del Prestador de Servicios de 
+Certificación de GCABA. 
+b) 
+El uso del certificado que sea dañino. En este caso, se considera que un uso es 
+dañino en función de los siguientes criterios: 
+o La naturaleza y el número de quejas recibidas. 
+o La identidad de las entidades que presentan las quejas. 
+o La legislación relevante vigente en cada momento. 
+o La respuesta del suscriptor o de la persona identificada en el certificado a las 
+quejas recibidas. 
+ 
+5.9.2 Causas de suspensión de un certificado 
+Los certificados de ASI-GCABA pueden ser suspendidos a partir de las siguientes causas: 
+• 
+Cuando así sea solicitado por el suscriptor o la persona física identificada en el 
+certificado. 
+• 
+Cuando la documentación requerida en la solicitud de revocación sea suficiente 
+pero no se pueda identificar razonablemente al suscriptor o la persona física 
+identificada en el certificado. 
+• 
+La falta de uso del certificado durante un periodo prolongado de tiempo, 
+conocido previamente. 
+• 
+Si se sospecha el compromiso de una clave, hasta que éste sea confirmado. En 
+este caso, ASI-GCABA tiene que asegurarse de que el certificado no está 
+suspendido durante más tiempo del necesario para confirmar su compromiso. 
+ 
+5.9.3 Causas de reactivación de un certificado 
+Los certificados de ASI-GCABA pueden ser reactivados a partir de las siguientes causas: 
+
+--- p47
+ 
+ 
+ 
+ 
+P á g i n a 47 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Cuando el certificado se encuentre en un estado de suspendido. 
+• 
+Cuando así sea solicitado por el suscriptor o la persona física identificada en el 
+certificado. 
+ 
+5.9.4 Quién puede solicitar la revocación, suspensión o reactivación 
+Pueden solicitar la revocación, suspensión o reactivación de un certificado: 
+• 
+La persona identificada en el certificado. 
+• 
+El suscriptor del certificado por medio responsable del servicio de certificación. 
+ 
+5.9.5 Procedimientos de solicitud de revocación, suspensión o reactivación 
+La entidad que precise revocación, suspensión o reactivación un certificado puede 
+solicitarlo directamente a ASI-GCABA o a la Autoridad de Registro del suscriptor o 
+realizarlo él mismo a través del servicio online disponible en la página web de GCABA. 
+La solicitud de revocación, suspensión o reactivación deberá incorporar la siguiente 
+información: 
+• 
+Fecha de solicitud de la revocación, suspensión o reactivación. 
+• 
+Identidad del suscriptor. 
+• 
+Nombre y título de la persona que pide la revocación, suspensión o reactivación. 
+• 
+Información de contacto de la persona que pide la revocación, suspensión o 
+reactivación. 
+• 
+Razón detallada para la petición de revocación. 
+ 
+La solicitud debe ser autenticada, por ASI-GCABA, de acuerdo con los requisitos establecidos 
+en la sección 4.4 de esta política, antes de proceder a la revocación, suspensión o reactivación. 
+ 
+El servicio de revocación, suspensión o reactivación se encuentra en la página web de GCABA 
+en la dirección: https://pki-gcba.buenosaires.gob.ar/ 
+ 
+
+--- p48
+ 
+ 
+ 
+ 
+P á g i n a 48 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+En caso de que el destinatario de una solicitud de revocación, suspensión o reactivación por 
+parte de una persona física identificada en el certificado fuera la entidad suscriptora, una vez 
+autenticada la solicitud debe remitir una solicitud en este sentido a ASI-GCABA. 
+ 
+La solicitud de revocación, suspensión o reactivación será procesada a su recepción, y se 
+informará al suscriptor y, en su caso, a la persona física identificada en el certificado, acerca 
+del cambio de estado del certificado. 
+ 
+Tanto el servicio de gestión de revocación, suspensión o reactivación como el servicio de 
+consulta son considerados servicios críticos y así constan en el Plan de contingencias y el plan 
+de continuidad de negocio de ASI-GCABA. 
+ 
+5.9.6 Plazo temporal de solicitud de revocación, suspensión o reactivación 
+Las solicitudes de revocación, suspensión o reactivación se remitirán de forma inmediata en 
+cuanto se tenga conocimiento. 
+ 
+5.9.7 Plazo temporal de procesamiento de la solicitud de revocación, suspensión o 
+reactivación 
+La revocación, suspensión o reactivación se producirá inmediatamente cuando sea recibida. 
+Si se realiza a través de un operador, se ejecutará dentro del horario ordinario de operación 
+de ASI-GCABA o en su caso de la Autoridad de Registro. Si se realiza a través del servicio 
+online, será inmediata. 
+ 
+5.9.8 Obligación de consulta de información de revocación o suspensión de 
+certificados 
+Los terceros deben comprobar el estado de aquellos certificados en los cuales desean confiar.  
+ 
+
+--- p49
+ 
+ 
+ 
+ 
+P á g i n a 49 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Un método por el cual se puede verificar el estado de los certificados es consultando la Lista 
+de Revocación de Certificados más reciente emitida por la Autoridad de Certificación de 
+GCABA.  
+ 
+Las Listas de Revocación de Certificados se publican en el Depósito de la Autoridad de 
+Certificación, así como en las siguientes direcciones web, indicadas dentro de los certificados: 
+ 
+• 
+GCABA Subordinate CA 01 
+https://pki.buenosaires.gob.ar/crl/subca.crl  
+ 
+El estado de la vigencia de los certificados también se puede comprobar por medio del 
+protocolo OCSP. 
+• 
+https://pki.buenosaires.gob.ar/va  
+ 
+5.9.9 Frecuencia de emisión de listas de revocación de certificados (LRCs) 
+ASI-GCABA emite una LRC al menos cada 24 horas. 
+ 
+La LRC indica el momento programado de emisión de una nueva LRC, si bien se puede emitir 
+una LRC antes del plazo indicado en la LRC anterior, para reflejar revocaciones. 
+ 
+La LRC mantiene obligatoriamente el certificado revocado o suspendido hasta que expira. 
+ 
+5.9.10 Plazo máximo de publicación de LRCs 
+Las LRCs se publican en el Depósito en un periodo inmediato razonable tras su generación, 
+que en ningún caso no supera unos pocos minutos. 
+ 
+
+--- p50
+ 
+ 
+ 
+ 
+P á g i n a 50 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.9.11 Disponibilidad de servicios de comprobación en línea de estado de certificados 
+De forma alternativa, los terceros que confían en certificados podrán consultar el Depósito de 
+certificados de ASI-GCABA, que se encuentra disponible las 24 horas de los 7 días de la 
+semana en el web:  
+• 
+https://pki-gcba.buenosaires.gob.ar/ 
+ 
+Para comprobar la última CRL emitida en cada CA se debe descargar: 
+- 
+Autoridad de Certificación Raíz (GCABA):  
+https://pki.buenosaires.gob.ar/arl1/arl.crl 
+https://pki.buenosaires.gob.ar/arl/arl.crl 
+ 
+- 
+GCABA Subordinate CA 01 
+https://pki.buenosaires.gob.ar/crl1/crl.crl 
+https://pki.buenosaires.gob.ar/crl2/crl.crl 
+ 
+En caso de fallo de los sistemas de comprobación de estado de certificados por causas fuera 
+del control de ASI-GCABA, ésta deberá realizar sus mejores esfuerzos por asegurar que este 
+servicio se mantenga inactivo el mínimo tiempo posible, que no podrá superar un día.  
+ 
+ASI-GCABA suministra información a los terceros que confían en certificados acerca del 
+funcionamiento del servicio de información de estado de certificados.  
+ 
+5.9.12 Obligación de consulta de servicios de comprobación de estado de 
+certificados 
+Resulta obligatorio consultar el estado de los certificados antes de confiar en los mismos. 
+ 
+
+--- p51
+ 
+ 
+ 
+ 
+P á g i n a 51 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+5.9.13 Requisitos especiales en caso de compromiso de la clave privada 
+El compromiso de la clave privada de ASI-GCABA es notificado a todos los participantes en 
+los servicios de certificación, en la medida de lo posible, mediante la publicación de este hecho 
+en la página web de GCABA, así como, si se considera necesario, en otros medios de 
+comunicación, incluso en papel. 
+5.9.14 Período máximo de un certificado digital en estado suspendido 
+El plazo máximo de un certificado digital en estado suspendido es indefinido hasta su 
+caducidad. 
+ 
+5.10 Finalización de la suscripción 
+Transcurrido el periodo de vigencia del certificado, finalizará la suscripción al servicio. 
+ 
+Como excepción, el suscriptor puede mantener el servicio vigente, solicitando la renovación 
+del certificado, con la antelación que determina esta Declaración de Prácticas de Certificación. 
+ASI-GCABA puede emitir de oficio un nuevo certificado, mientras los suscriptores mantengan 
+dicho estado. 
+ 
+5.11 Depósito y recuperación de claves 
+5.11.1 Política y prácticas de depósito y recuperación de claves 
+ASI-GCABA no presta servicios de depósito y recuperación de claves. 
+ 
+5.11.2 Política y prácticas de encapsulado y recuperación de claves de sesión 
+Sin estipulación. 
+ 
+ 
+
+--- p52
+ 
+ 
+ 
+ 
+P á g i n a 52 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6 Controles de seguridad física, de gestión y de operaciones 
+6.1 
+Controles de seguridad física 
+ASI-GCABA ha establecido controles de seguridad física y ambiental para proteger los 
+recursos de las instalaciones donde se encuentran los sistemas, los propios sistemas y los 
+equipamientos empleados para las operaciones para la prestación de los servicios 
+electrónicos de confianza. 
+En concreto, la política de seguridad de GCABA aplicable a los servicios electrónicos de 
+confianza establece prescripciones sobre lo siguiente: 
+• 
+Controles de acceso físico. 
+• 
+Protección frente a desastres naturales. 
+• 
+Medidas de protección frente a incendios. 
+• 
+Fallo de los sistemas de apoyo (energía electrónica, telecomunicaciones, etc.) 
+• 
+Derrumbamiento de la estructura. 
+• 
+Inundaciones. 
+• 
+Protección antirrobo. 
+• 
+Salida no autorizada de equipamientos, informaciones, soportes y aplicaciones 
+relativos a componentes empleados para los servicios del prestador de servicios 
+de certificación. 
+ 
+Estas medidas resultan aplicables a las instalaciones desde donde se prestan los servicios 
+electrónicos de confianza, en sus entornos de producción y contingencia, las cuales son 
+auditadas periódicamente de acuerdo a la normativa aplicable y a las políticas propias de 
+GCABA destinadas a este fin. 
+ 
+Las instalaciones cuentan con sistemas de mantenimiento preventivo y correctivo con 
+asistencia 24h-365 días al año con asistencia en las 24 horas siguientes al aviso 
+ 
+
+--- p53
+ 
+ 
+ 
+ 
+P á g i n a 53 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.1.1 
+Localización y construcción de las instalaciones 
+La protección física se logra mediante la creación de perímetros de seguridad claramente 
+definidos en torno a los servicios. La calidad y solidez de los materiales de construcción de las 
+instalaciones garantiza unos adecuados niveles de protección frente a intrusiones por la fuerza 
+bruta y ubicada en una zona de bajo riesgo de desastres y permite un rápido acceso. 
+ 
+La sala donde se realizan las operaciones criptográficas en el Centro de Proceso de Datos 
+cuenta con redundancia en sus infraestructuras, así como varias fuentes alternativas de 
+electricidad y refrigeración en caso de emergencia.  
+ 
+ASI-GCABA dispone de instalaciones que protegen físicamente la prestación de los servicios 
+de aprobación de solicitudes de certificados y de gestión de revocación, del compromiso 
+causado por acceso no autorizado a los sistemas o a los datos, así como a la divulgación de 
+los mismos. 
+ 
+6.1.2 
+Acceso físico 
+ASI-GCABA dispone de tres niveles de seguridad física (Entrada del Edificio donde se ubica el 
+CPD, acceso al Datacenter y acceso al Rack) para la protección del servicio de generación de 
+certificados, debiendo accederse desde los niveles inferiores a los niveles superiores. 
+ 
+El acceso físico a las dependencias de GCABA donde se llevan a cabo procesos de certificación 
+está limitado y protegido mediante una combinación de medidas físicas y procedimentales 
+así: 
+• 
+Está limitado a personal expresamente autorizado, con identificación en el 
+momento del acceso y registro del mismo, incluyendo filmación por circuito 
+cerrado de televisión y su archivo. 
+• 
+El acceso a las salas se realiza con lectores de tarjeta de identificación y gestionado 
+por un sistema informático que mantiene un log de entradas y salidas automático. 
+
+--- p54
+ 
+ 
+ 
+ 
+P á g i n a 54 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Para el acceso al rack donde se ubican los procesos criptográficos es necesario la 
+autorización previa de ASI-GCABA a los administradores del servicio de hospedaje 
+que disponen de la llave para abrir la jaula. 
+ 
+6.1.3 
+Electricidad y aire acondicionado 
+Las instalaciones de ASI-GCABA disponen de equipos estabilizadores de corriente y un 
+sistema de alimentación eléctrica de equipos duplicado con un grupo electrógeno. 
+ 
+Las salas que albergan equipos informáticos cuentan con sistemas de control de temperatura 
+con equipos de aire acondicionado. 
+ 
+6.1.4 
+Exposición al agua 
+Las instalaciones están ubicadas en una zona de bajo riesgo de inundación.  
+ 
+Las salas donde se albergan equipos informáticos disponen de un sistema de detección de 
+humedad. 
+ 
+6.1.5 
+Prevención y protección de incendios 
+Las instalaciones y activos de ASI-GCABA cuentan con sistemas automáticos de detección y 
+extinción de incendios. 
+ 
+6.1.6 
+Almacenamiento de soportes 
+Únicamente personal autorizado tiene acceso a los medios de almacenamiento. 
+ 
+La información de más alto nivel de clasificación se guarda en una caja de seguridad fuera de 
+las instalaciones del Centro de Proceso de Datos. 
+ 
+
+--- p55
+ 
+ 
+ 
+ 
+P á g i n a 55 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.1.7 
+Tratamiento de residuos 
+La eliminación de soportes, tanto papel como magnéticos, se realizan mediante mecanismos 
+que garantizan la imposibilidad de recuperación de la información. 
+ 
+En el caso de soportes magnéticos, se desechan en cuyo caso se destruyen físicamente, o se 
+reutilizan previo proceso de borrado permanente o formateo. En el caso de documentación 
+en papel, mediante trituradoras o en papeleras dispuestas al efecto para posteriormente ser 
+destruidos, bajo control. 
+ 
+6.1.8 
+Copia de respaldo fuera de las instalaciones 
+ASI-GCABA utiliza un almacén externo seguro para la custodia de documentos, dispositivos 
+magnéticos y electrónicos que son independientes del centro de operaciones. 
+ 
+6.2 Controles de procedimientos 
+ASI-GCABA garantiza que sus sistemas se operan de forma segura, para lo cual ha establecido 
+e implantado procedimientos para las funciones que afectan a la provisión de sus servicios. 
+ 
+El personal al servicio de ASI-GCABA ejecuta los procedimientos administrativos y de gestión 
+de acuerdo con la política de seguridad. 
+ 
+6.2.1 
+Funciones fiables  
+ASI-GCABA ha identificado, de acuerdo con su política de seguridad, las siguientes funciones 
+o roles con la condición de fiables: 
+• 
+Auditor Interno: Responsable del cumplimiento de los procedimientos operativos. 
+Se trata de una persona externa al departamento de Sistemas de Información. Las 
+tareas de Auditor interno son incompatibles en el tiempo con las tareas de 
+Certificación e incompatibles con Sistemas. Estas funciones estarán subordinadas 
+a la jefatura de operaciones, reportando tanto a ésta como a la dirección técnica. 
+
+--- p56
+ 
+ 
+ 
+ 
+P á g i n a 56 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Administrador de Sistemas: Responsable del funcionamiento correcto del 
+hardware y software soporte de la plataforma de certificación 
+• 
+Administrador de CA: Responsable de las acciones a ejecutar con el material 
+criptográfico, o con la realización de alguna función que implique la activación de 
+las claves privadas de las autoridades de certificación descritas en este documento, 
+o de cualquiera de sus elementos. 
+• 
+Operador de CA: Responsable necesario conjuntamente con el Administrador de 
+CA de la custodia de material de activación de las claves criptográficas, también 
+responsable de las operaciones de copia de respaldo y mantenimiento de la AC. 
+• 
+Operador de Registro: Persona responsable de aprobar las peticiones de 
+certificación realizadas por el suscriptor y emitir certificados digitales. 
+• 
+Oficial de Revocación: Persona responsable de realizar los cambios en el estado 
+de un certificado, principalmente proceder con la suspensión y revocación de los 
+mismos. 
+• 
+Responsable de Seguridad: Encargado de coordinar, controlar y hacer cumplir las 
+medidas de seguridad definidas por las políticas de seguridad de GCABA. Debe 
+encargarse de los aspectos relacionados con la seguridad de la información: 
+lógica, física, redes, organizativa, etc. 
+ 
+Las personas que ocupan los puestos anteriores se encuentran sometidas a procedimientos 
+de investigación y control específicos. Adicionalmente, ASI-GCABA implementa criterios en 
+sus políticas para la segregación de las funciones, como medida de prevención de actividades 
+fraudulentas.  
+ 
+6.2.2 Número de personas por tarea 
+ASI-GCABA garantiza al menos dos personas para realizar las tareas relativas a la generación, 
+recuperación y back-up de la clave privada de las Autoridades de Certificación. Igual criterio 
+se aplica para la ejecución de tareas de emisión y activación de certificados y claves privadas 
+de las Autoridades de Certificación, y en general cualquier manipulación del dispositivo de 
+custodia de las claves de la Autoridad de Certificación raíz y subordinada. 
+ 
+
+--- p57
+ 
+ 
+ 
+ 
+P á g i n a 57 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.2.3 Identificación y autenticación para cada función 
+Las personas asignadas para cada rol son identificadas por el auditor interno que se asegurará 
+que cada persona realiza las operaciones para las que está asignado. 
+ 
+Cada persona solo controla los activos necesarios para su rol, asegurando así que ninguna 
+persona accede a recursos no asignados. 
+ 
+El acceso a recursos se realiza dependiendo del activo mediante usuario/contraseña, 
+certificado digital, tarjeta de acceso físico y/o llaves. 
+ 
+6.2.4 Roles que requieren separación de tareas 
+Las siguientes tareas son realizadas, al menos, por dos personas: 
+• 
+Las tareas propias del rol de Auditor serán incompatibles con la operación y 
+administración de sistemas, y en general aquellas dedicadas a la prestación directa 
+de los servicios electrónicos de confianza.  
+• 
+Emisión y revocación de certificados, serán tareas incompatibles con la 
+Administración y operación de los sistemas.  
+• 
+La administración y operación de los sistemas y las CAs, serán incompatibles entre 
+sí. 
+ 
+6.2.5 Sistema de gestión PKI 
+El sistema de PKI se compone de los siguientes módulos: 
+• 
+Componente/módulo de gestión de la Autoridad de Certificación Subordinada. 
+• 
+Componente/módulo de gestión de la Autoridad de Registro. 
+• 
+Componente/módulo de gestión de solicitudes. 
+• 
+Componente/módulo de gestión de claves (HSM). 
+• 
+Componente/módulo de bases de datos. 
+• 
+Componente/módulo de gestión de CRL. 
+• 
+Componente/módulo de gestión de la Autoridad de Validación (servicios de 
+OCSP). 
+
+--- p58
+ 
+ 
+ 
+ 
+P á g i n a 58 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+6.3 Controles de personal 
+6.3.1 
+Requisitos de historial, calificaciones, experiencia y autorización 
+ 
+Todo el personal está cualificado y/o ha sido instruido convenientemente para realizar las 
+operaciones que le han sido asignadas. 
+El personal en puestos de confianza no tiene intereses personales que entran en conflicto con 
+el desarrollo de la función que tenga encomendada. 
+ASI-GCABA se asegura de que el personal de registro es confiable para realizar las tareas de 
+registro. El Administrador de Registro recibe formación para realizar las tareas de validación 
+de las peticiones. 
+En general, ASI-GCABA retirará de sus funciones de confianza a un empleado cuando se 
+tenga conocimiento de la existencia de conflictos de interés y/o la comisión de algún hecho 
+delictivo que pudiera afectar al desempeño de sus funciones.  
+ASI-GCABA no asignará a un sitio confiable o de gestión a una persona que no sea idónea 
+para el puesto, especialmente por una falta que afecte su idoneidad para el puesto. Por este 
+motivo, previamente se realiza una investigación hasta donde permita la legislación aplicable, 
+relativa a los siguientes aspectos: 
+• 
+Estudios, incluyendo titulación alegada. 
+• 
+Trabajos anteriores, hasta cinco años, incluyendo referencias profesionales. 
+• 
+Antecedentes Penales.  
+• 
+Consulta sobre registros de morosidad 
+• 
+Referencias profesionales. 
+ 
+En todo caso, las Autoridades de Registro podrán establecer procesos de comprobación de 
+antecedentes diferentes, siempre preservando las políticas de ASI-GCABA, siendo 
+responsables por la actuación de las personas que autoricen en sus operaciones. 
+ 
+
+--- p59
+ 
+ 
+ 
+ 
+P á g i n a 59 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.3.2 Procedimientos de investigación de historial 
+GCABA, antes de contratar a una persona o de que ésta acceda al puesto de trabajo para 
+tomar el rol de Operador de Registro, realiza las siguientes comprobaciones: 
+• 
+Referencias de los trabajos de los últimos años 
+• 
+Referencias profesionales 
+• 
+Estudios, incluyendo titulación alegada. 
+ 
+GCABA obtiene el consentimiento inequívoco del afectado para dicha investigación previa, y 
+procesa y protege todos sus datos personales en cumplimiento de la normativa vigente en 
+materia de protección de datos personales que resulte de aplicación.  
+ 
+Todas las comprobaciones se realizan hasta donde lo permite la legislación vigente aplicable. 
+Los motivos que pueden dar lugar a rechazar al candidato a un puesto fiable son los 
+siguientes: 
+• 
+Falsedades en la solicitud de trabajo, realizadas por el candidato. 
+• 
+Referencias profesionales muy negativas o muy poco fiables en relación con el 
+candidato. 
+ 
+6.3.3 Requisitos de formación 
+ASI-GCABA forma al personal en puestos fiables y de gestión, hasta que alcanzan la 
+cualificación necesaria, manteniendo archivo de dicha formación.  
+Los programas de formación son revisados periódicamente, y son actualizados para su mejor 
+y mejorados de forma periódica. 
+La formación incluye, al menos, los siguientes contenidos: 
+• 
+Principios y mecanismos de seguridad de la jerarquía de certificación, así como el 
+entorno de usuario de la persona a formar. 
+• 
+Tareas que debe realizar la persona. 
+• 
+Políticas y procedimientos de seguridad de GCABA. Uso y operación de 
+maquinaria y aplicaciones instaladas. 
+• 
+Gestión y tramitación de incidentes y compromisos de seguridad. 
+
+--- p60
+ 
+ 
+ 
+ 
+P á g i n a 60 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Procedimientos de continuidad de negocio y emergencia. 
+• 
+Procedimiento de gestión y de seguridad en relación con el tratamiento de los 
+datos de carácter personal. 
+ 
+6.3.4 Requisitos y frecuencia de actualización formativa 
+ASI-GCABA, actualiza la formación del personal de acuerdo con las necesidades, y con la 
+frecuencia suficiente para cumplir sus funciones de forma competente y satisfactoria, 
+especialmente cuando se realicen modificaciones sustanciales en las tareas de certificación. 
+ 
+6.3.5 Secuencia y frecuencia de rotación laboral 
+No aplicable. 
+ 
+6.3.6 Sanciones para acciones no autorizadas 
+GCABA dispone de un sistema sancionador, para depurar las responsabilidades derivadas de 
+acciones no autorizadas, adecuado a la legislación laboral aplicable. 
+ 
+Las acciones disciplinarias incluyen la suspensión, separación de las funciones y hasta el 
+despido de la persona responsable de la acción dañina, de forma proporcionada a la 
+gravedad de la acción no autorizada. 
+ 
+6.3.7 Requisitos de contratación de profesionales 
+Los empleados contratados para realizar tareas confiables firman con anterioridad las 
+cláusulas de confidencialidad y los requerimientos operacionales empleados por GCABA. 
+Cualquier acción que comprometa la seguridad de los procesos aceptados podrían, una vez 
+evaluados, dar lugar al cese del contrato laboral. 
+ 
+En el caso de que todos o parte de los servicios de certificación sean operados por un tercero, 
+los controles y previsiones realizadas en esta sección, o en otras partes de la Declaración de 
+
+--- p61
+ 
+ 
+ 
+ 
+P á g i n a 61 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Prácticas de Certificación, serán aplicados y cumplidos por el tercero que realice las funciones 
+de operación de los servicios de certificación, no obstante, lo cual, la Autoridad de 
+Certificación será responsable en todo caso de la efectiva ejecución. Estos aspectos quedan 
+concretados en el instrumento jurídico utilizado para acordar la prestación de los servicios de 
+certificación por tercero distinto a GCABA. 
+ 
+6.3.8 Suministro de documentación al personal 
+El prestador de servicios de certificación suministrará la documentación que estrictamente 
+precise su personal en cada momento, al objeto de realizar su trabajo de forma competente 
+y satisfactoria. 
+ 
+6.4 Procedimientos de auditoría de seguridad 
+6.4.1 
+Tipos de eventos registrados 
+ASI-GCABA produce y guarda registro, al menos, de los siguientes eventos relacionados con 
+la seguridad de la entidad: 
+• 
+Encendido y apagado del sistema. 
+• 
+Intentos de creación, borrado, establecimiento de contraseñas o cambio de 
+privilegios. 
+• 
+Intentos de inicio y fin de sesión. 
+• 
+Intentos de accesos no autorizados al sistema de la AC a través de la red. 
+• 
+Intentos de accesos no autorizados al sistema de archivos. 
+• 
+Acceso físico a los logs. 
+• 
+Cambios en la configuración y mantenimiento del sistema. 
+• 
+Registros de las aplicaciones de la AC. 
+• 
+Encendido y apagado de la aplicación de la AC. 
+• 
+Cambios en los detalles de la AC y/o sus claves. 
+• 
+Cambios en la creación de políticas de certificados. 
+• 
+Generación de claves propias. 
+• 
+Creación y revocación de certificados. 
+
+--- p62
+ 
+ 
+ 
+ 
+P á g i n a 62 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Registros de la destrucción de los medios que contienen las claves, datos de 
+activación. 
+• 
+Eventos relacionados con el ciclo de vida del módulo criptográfico, como 
+recepción, uso y desinstalación de éste. 
+• 
+La ceremonia de generación de claves y las bases de datos de gestión de claves. 
+• 
+Registros de acceso físico. 
+• 
+Mantenimientos y cambios de configuración del sistema. 
+• 
+Cambios en el personal. 
+• 
+Informes de compromisos y discrepancias. 
+• 
+Registros de la destrucción de material que contenga información de claves, datos 
+de activación o información personal del suscriptor, en caso de certificados 
+individuales, o de la persona física identificada en el certificado, en caso de 
+certificados de organización. 
+• 
+Posesión de datos de activación, para operaciones con la clave privada de la 
+Autoridad de Certificación. 
+• 
+Informes completos de los intentos de intrusión física en las infraestructuras que 
+dan soporte a la emisión y gestión de certificados. 
+ 
+Las entradas del registro incluyen los siguientes elementos: 
+• 
+Fecha y hora de la entrada. 
+• 
+Número de serie o secuencia de la entrada, en los registros automáticos. 
+• 
+Identidad de la entidad que entra el registro. 
+• 
+Tipo de entrada. 
+ 
+6.4.2 Frecuencia de tratamiento de registros de auditoría 
+ASI-GCABA revisa sus logs cuando se produce una alerta del sistema motivada por la 
+existencia de algún incidente. 
+ 
+El procesamiento de los registros de auditoría consiste en una revisión de los registros que 
+incluye la verificación de que éstos no han sido manipulados, una breve inspección de todas 
+las entradas de registro y una investigación más profunda de cualquier alerta o irregularidad 
+
+--- p63
+ 
+ 
+ 
+ 
+P á g i n a 63 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+en los registros. Las acciones realizadas a partir de la revisión de auditoría están 
+documentadas. 
+ 
+ASI-GCABA mantiene un sistema que permite garantizar: 
+• 
+Espacio suficiente para el almacenamiento de logs. 
+• 
+Que los ficheros de logs no se reescriben. 
+• 
+Que la información que se guarda incluye como mínimo: tipo de evento, fecha y 
+hora, usuario que ejecuta el evento y resultado de la operación. 
+• 
+Los ficheros de logs se guardarán en ficheros estructurados susceptibles de 
+incorporar en una BBDD para su posterior exploración. 
+ 
+6.4.3 Período de conservación de registros de auditoría 
+ASI-GCABA almacena la información de los logs durante un periodo de entre 1 y 10 años, en 
+función del tipo de información registrada. 
+ 
+6.4.4 Protección de los registros de auditoría 
+Los logs de los sistemas: 
+• 
+Están protegidos de manipulación mediante la firma de los ficheros que los 
+contienen. 
+• 
+Son almacenados en dispositivos ignífugos. 
+• 
+Se protege su disponibilidad mediante su almacenamiento en instalaciones 
+externas al centro donde se ubica la AC. 
+ 
+El acceso a los ficheros de logs está reservado solo a las personas autorizadas. Asimismo, los 
+dispositivos son manejados en todo momento por personal autorizado. 
+ 
+Existe un procedimiento interno donde se detallan los procesos de gestión de los dispositivos 
+que contienen datos de logs de auditoría. 
+ 
+
+--- p64
+ 
+ 
+ 
+ 
+P á g i n a 64 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.4.5 Procedimientos de copia de respaldo 
+ASI-GCABA dispone de un procedimiento adecuado de backup de manera que, en caso de 
+pérdida o destrucción de archivos relevantes, estén disponibles en un periodo corto de 
+tiempo las correspondientes copias de backup de los logs. 
+ 
+ASI-GCABA tiene implementado un procedimiento de backup seguro de los logs de auditoría, 
+realizando semanalmente una copia de todos los logs en un medio externo. Adicionalmente 
+se mantiene copia en centro de custodia externo. 
+ 
+6.4.6 Localización del sistema de acumulación de registros de auditoría 
+La información de la auditoria de eventos es recogida internamente y de forma automatizada 
+por el sistema operativo, las comunicaciones de red y por el software de gestión de 
+certificados, además de por los datos manualmente generados, que serán almacenados por 
+el personal debidamente autorizado. Todo ello compone el sistema de acumulación de 
+registros de auditoría. 
+ 
+6.4.7 Notificación del evento de auditoría al causante del evento 
+Cuando el sistema de acumulación de registros de auditoría registre un evento, no es preciso 
+enviar una notificación al individuo, organización, dispositivo o aplicación que causó el evento. 
+ 
+6.4.8 Análisis de vulnerabilidades 
+El análisis de vulnerabilidades queda cubierto por los procesos de auditoría de GCABA.  
+ 
+Los análisis de vulnerabilidad deben ser ejecutados, repasadas y revisadas por medio de un 
+examen de estos acontecimientos monitorizados. Estos análisis deben ser ejecutados 
+periódicamente de acuerdo al procedimiento interno que previsto para este fin.  
+ 
+
+--- p65
+ 
+ 
+ 
+ 
+P á g i n a 65 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Los datos de auditoría de los sistemas son almacenados con el fin de ser utilizados en la 
+investigación de cualquier incidencia y localizar vulnerabilidades. 
+6.5 Archivos de informaciones 
+ASI-GCABA, garantiza que toda la información relativa a los certificados se conserva durante 
+un período de tiempo apropiado, según lo establecido en la sección 6.5.2 de esta política. 
+ 
+6.5.1 
+Tipos de registros archivados 
+Los siguientes documentos implicados en el ciclo de vida del certificado son almacenados por 
+ASI-GCABA (o por las entidades de registro): 
+• 
+Todos los datos de auditoría de sistema. 
+• 
+Todos los datos relativos a los certificados, incluyendo los contratos con los 
+firmantes y los datos relativos a su identificación y su ubicación 
+• 
+Solicitudes de emisión y revocación de certificados. 
+• 
+Tipo de documento presentado en la solicitud del certificado. 
+• 
+Identidad de la Entidad de Registro que acepta la solicitud de certificado. 
+• 
+Número de identificación único proporcionado por el documento anterior. 
+• 
+Todos los certificados emitidos o publicados. 
+• 
+CRLs emitidas o registros del estado de los certificados generados. 
+• 
+El historial de claves generadas. 
+• 
+Las comunicaciones entre los elementos de la PKI. 
+• 
+Políticas y Prácticas de Certificación 
+• 
+Todos los datos de auditoría identificados en la sección 6.4 
+• 
+Información de solicitudes de certificación. 
+• 
+Documentación aportada para justificar las solicitudes de certificación. 
+• 
+Información del ciclo de vida del certificado. 
+ 
+ASI-GCABA y/o las Autoridades de Registro según corresponda, serán responsables del 
+correcto archivo de todo este material. 
+ 
+ 
+
+--- p66
+ 
+ 
+ 
+ 
+P á g i n a 66 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.5.2 Período de conservación de registros 
+ASI-GCABA archiva los registros especificados anteriormente durante al menos 10 años, o el 
+período que establezca la legislación vigente. 
+En particular, los registros de certificados revocados estarán accesibles para su libre consulta 
+durante al menos 10 años o el periodo que establezca la legislación vigente desde su cambio 
+de estado. 
+ 
+6.5.3 Protección del archivo 
+ASI-GCABA protege el archivo de forma que sólo personas debidamente autorizadas puedan 
+obtener acceso al mismo. El archivo es protegido contra visualización, modificación, borrado 
+o cualquier otra manipulación mediante su almacenamiento en un sistema fiable.  
+ 
+ASI-GCABA asegura la correcta protección de los archivos mediante la asignación de personal 
+cualificado para su tratamiento y el almacenamiento en instalaciones seguras externas. 
+ 
+6.5.4 Procedimientos de copia de respaldo 
+ASI-GCABA dispone de un centro de almacenamiento externo para garantizar la 
+disponibilidad de las copias del archivo de ficheros electrónicos. Los documentos físicos se 
+encuentran almacenados en lugares seguros de acceso restringido solo a personal 
+autorizado. 
+ 
+ASI-GCABA como mínimo realiza copias de respaldo incrementales diarias de todos sus 
+documentos electrónicos y realizar copias de respaldo completas semanalmente para casos 
+de recuperación de datos. 
+ 
+Además, ASI-GCABA (o las organizaciones que realizan la función de registro) guarda copia 
+de los documentos en papel en un lugar seguro diferente de las instalaciones de la propia 
+Autoridad de Certificación. 
+
+--- p67
+ 
+ 
+ 
+ 
+P á g i n a 67 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+6.5.5 Requisitos de sellado de fecha y hora 
+Los registros están fechados con una fuente fiable vía NTP. 
+No es necesario que esta información se encuentre firmada digitalmente. 
+ 
+6.5.6 Localización del sistema de archivo 
+ASI-GCABA dispone de un sistema centralizado de recogida de información de la actividad 
+de los equipos implicados en el servicio de gestión de certificados. 
+ 
+6.5.7 Procedimientos de obtención y verificación de información de archivo 
+ASI-GCABA dispone de un procedimiento donde se describe el proceso para verificar que la 
+información archivada es correcta y accesible. ASI-GCABA proporciona la información y 
+medios de verificación al auditor.  
+ 
+6.6 Renovación de claves 
+Con anterioridad a que el uso de la clave privada de la AC caduque, será realizado un cambio 
+de claves. La antigua AC y su clave privada solo se usarán para la firma de CRLs mientras 
+existan certificados activos emitidos por dicha AC. Se generará una nueva AC con una clave 
+privada nueva y un nuevo DN. El cambio de claves del suscriptor es realizado mediante la 
+realización de un nuevo proceso de emisión. 
+ 
+Alternativamente, en el caso de Autoridades de Certificación subordinadas, se podrá optar 
+por la renovación del certificado con o sin cambio de claves, no resultando aplicable el 
+procedimiento antes descrito.  
+ 
+
+--- p68
+ 
+ 
+ 
+ 
+P á g i n a 68 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+6.7 Compromiso de claves y recuperación de desastre 
+6.7.1 
+Procedimientos de gestión de incidencias y compromisos 
+ASI-GCABA ha desarrollado políticas de seguridad y continuidad del negocio que le permiten 
+la gestión y recuperación de los sistemas en caso de incidentes y compromiso de sus 
+operaciones, asegurando los servicios críticos de revocación y publicación del estado de los 
+certificados.  
+ 
+6.7.2 Corrupción de recursos, aplicaciones o datos 
+Cuando acontezca un evento de corrupción de recursos, aplicaciones o datos, se seguirán los 
+procedimientos de gestión oportunos de acuerdo a las políticas de seguridad y gestión de 
+incidentes de GCABA, que contemplan escalado, investigación y respuesta al incidente. Si 
+resulta necesario, se iniciarán los procedimientos de compromiso de claves o de recuperación 
+de desastres de GCABA. 
+ 
+6.7.3 Compromiso de la clave privada de la entidad 
+En caso de sospecha o conocimiento del compromiso de ASI-GCABA, se activarán los 
+procedimientos de compromiso de claves de acuerdo con las políticas de seguridad, gestión 
+de incidencias y continuidad del negocio, que permita la recuperación de los sistemas críticos, 
+si fuera necesario en un centro de datos alternativo. 
+ 
+6.7.4 Continuidad del negocio después de un desastre 
+ASI-GCABA restablecerá los servicios críticos (suspensión y revocación, y publicación de 
+información de estado de certificados) de acuerdo con el plan de incidencias y continuidad 
+de negocio existente restaurando la operación normal de los servicios anteriores en las 24 
+horas siguientes al desastre. 
+ 
+
+--- p69
+ 
+ 
+ 
+ 
+P á g i n a 69 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ASI-GCABA dispone de un centro alternativo en caso de ser necesario para la puesta en 
+funcionamiento de los sistemas de certificación descritos en el plan de continuidad de 
+negocio. 
+6.8 Terminación del servicio 
+ASI-GCABA asegura que las posibles interrupciones a los suscriptores y a terceras partes son 
+mínimas como consecuencia del cese de los servicios del prestador de servicios de 
+certificación. En este sentido, ASI-GCABA garantiza un mantenimiento continuo de los 
+registros definidos en el apartado 7.1 de esta Declaración de Prácticas de Certificación.  
+No obstante, lo anterior, si procede ASI-GCABA ejecutará todas las acciones que sean 
+necesarias para transferir a un tercero o a un depósito notarial, las obligaciones de 
+mantenimiento de los registros especificados durante el periodo correspondiente según esta 
+Declaración de Prácticas de Certificación o la previsión legal que corresponda. 
+Antes de terminar sus servicios, ASI-GCABA desarrolla un plan de terminación, con las 
+siguientes provisiones: 
+• 
+Proveerá de los fondos necesarios, incluyendo un seguro de responsabilidad civil, 
+para continuar la finalización de las actividades de revocación. 
+• 
+Informará a todos Firmantes/Suscriptores, Tercero que confían y otras AC’s con 
+los cuales tenga acuerdos u otro tipo de relación del cese con una anticipación 
+mínima de 6 meses. 
+• 
+Revocará toda autorización a entidades subcontratadas para actuar en nombre 
+de la AC en el procedimiento de emisión de certificados. 
+• 
+Transferirá sus obligaciones relativas al mantenimiento de la información del 
+registro y de los logs durante el periodo de tiempo indicado a los suscriptores y 
+usuarios. 
+• 
+Destruirá o deshabilitará para su uso las claves privadas de la AC. 
+• 
+Mantendrá los certificados activos y el sistema de verificación y revocación hasta 
+la extinción de todos los certificados emitidos. 
+• 
+Ejecutará las tareas necesarias para transferir las obligaciones de mantenimiento 
+de la información de registro y los archivos de registro de eventos durante los 
+
+--- p70
+ 
+ 
+ 
+ 
+P á g i n a 70 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+períodos de tiempo respectivos indicados al suscriptor y a los terceros que confían 
+en certificados. 
+ 
+ 
+
+--- p71
+ 
+ 
+ 
+ 
+P á g i n a 71 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7 Controles de seguridad técnica 
+ASI-GCABA emplea sistemas y productos fiables, protegidos contra toda alteración y que 
+garantizan la seguridad técnica y criptográfica de los procesos de certificación a los que sirven 
+de soporte. 
+ 
+7.1 
+Generación e instalación del par de claves 
+7.1.1 
+Generación del par de claves 
+El par de claves de las entidades de certificación intermedias “GCABA Subordinate CA” son 
+creadas por la Autoridad de Certificación raíz “GCABAROOTCA” de acuerdo con los 
+procedimientos de ceremonia de ASI-GCABA, dentro del perímetro de alta seguridad 
+destinado a esta tarea. 
+Las actividades realizadas durante la ceremonia de generación de claves han sido registradas, 
+fechadas y firmadas por todos los individuos participantes en la misma, con la presencia de 
+un Auditor. Dichos registros son custodiados a efectos de auditoría y seguimiento durante un 
+período apropiado determinado por ASI-GCABA. 
+Para la generación de la clave de las entidades de certificación raíz y subordinada se utilizan 
+dispositivos con las certificaciones FIPS 140-2 level 3 y Common Criteria EAL4+. 
+ 
+GCABAROOTCA  
+4.096 bits 
+25 años 
+GCABA Subordinate CA 01  
+4.096 bits 
+13 años 
+- 
+Certificados de entidad final 
+2.048 bits 
+Hasta 2 años 
+- 
+Certificados de la Unidad de Sello 
+de tiempo (TSA) 
+2.048 bits 
+Hasta 8 años 
+ 
+7.1.1.1 
+Generación del par de claves del firmante 
+Las claves del firmante pueden ser generadas mediante dispositivos hardware y/o software 
+autorizados por ASI-GCABA.  
+
+--- p72
+ 
+ 
+ 
+ 
+P á g i n a 72 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Las claves son generadas usando el algoritmo de clave pública RSA, con una longitud mínima 
+de 2048 bits. 
+ 
+7.1.2 
+Envío de la clave privada al firmante 
+En certificados en dispositivo de creación de firma la clave privada se genera y se almacena 
+debidamente protegida en el interior de dicho dispositivo. 
+ 
+En certificados en software la clave privada del firmante se genera y se almacena en el sistema 
+informático que utiliza este firmante cuando realiza la solicitud del certificado, por lo que en 
+este caso no existe envío de clave privada, garantizando el control exclusivo de la clave por 
+parte del usuario 
+ 
+En certificados en dispositivo centralizado la clave privada del firmante se genera en un área 
+privada del firmante en un HSM remoto. Las credenciales de acceso a la clave privada son 
+introducidas por el propio firmante, no siendo almacenadas ni susceptibles de capacidad de 
+deducción o intercepción por el sistema de generación y custodia remota. La clave privada 
+no se envía al firmante, es decir, nunca abandona el entorno de seguridad que garantiza el 
+control exclusivo de la clave privada por parte del firmante. 
+ 
+7.1.3 
+Envío de la clave pública al emisor del certificado 
+El método de remisión de la clave pública al prestador de servicios electrónicos de confianza 
+es PKCS#10, otra prueba criptográfica equivalente o cualquier otro método aprobado por 
+ASI-GCABA. 
+ 
+7.1.4 
+Distribución de la clave pública del prestador de servicios de certificación 
+Las claves de ASI-GCABA son comunicadas a los terceros que confían en certificados, 
+asegurando la integridad de la clave y autenticando su origen, mediante su publicación en el 
+Depósito. 
+
+--- p73
+ 
+ 
+ 
+ 
+P á g i n a 73 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+Los usuarios pueden acceder al Depósito para obtener las claves públicas, y adicionalmente, 
+en aplicaciones S/MIME, el mensaje de datos puede contener una cadena de certificados, que 
+de esta forma son distribuidos a los usuarios. 
+ 
+El certificado de las Autoridades de Certificación Raíz y Subordinadas estarán a disposición de 
+los usuarios en la página web de GCABA. 
+ 
+7.1.5 
+Tamaño de claves 
+• 
+La longitud de las claves de la Autoridad de Certificación raíz es de 4096 bits. 
+• 
+La longitud de las claves de las Autoridad de Certificación subordinada es de 4096 
+bits. 
+• 
+La longitud de las claves de los Certificados de Entidad final es de 2048 bits. 
+ 
+7.1.6 
+Generación de parámetros de clave pública 
+La clave pública de la Autoridades de Certificación raíz, subordinadas y de los certificados de 
+los suscriptores está codificada de acuerdo con RFC 5280. 
+ 
+7.1.7 
+Comprobación de calidad de parámetros de clave pública 
+• 
+Longitud del Módulo = 4096 bits 
+• 
+Algoritmo de generación de claves: rsagen1 
+• 
+Funciones criptográficas de Resumen: SHA256. 
+ 
+7.1.8 
+Generación de claves en aplicaciones informáticas o en bienes de equipo 
+Todas las claves se generan en bienes de equipo, de acuerdo con lo indicado en la sección 
+6.1.1. 
+ 
+
+--- p74
+ 
+ 
+ 
+ 
+P á g i n a 74 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.1.9 
+Propósitos de uso de claves 
+Los usos de las claves para los certificados de las CA son exclusivamente para la firma de 
+certificados y de CRLs. 
+Los usos de las claves para los certificados de entidad final son exclusivamente para la firma 
+digital, el no repudio y cifrado de datos. 
+ 
+7.2 Protección de la clave privada 
+7.2.1 
+Estándares de módulos criptográficos 
+En relación con los módulos que gestionan claves de ASI-GCABA y de los suscriptores de 
+certificados de firma electrónica, se asegura el nivel exigido por los estándares indicados en 
+las secciones anteriores. 
+ 
+7.2.2 Control por más de una persona (m de n) sobre la clave privada 
+Se requiere un control multi-persona para la activación de la clave privada de la AC. En el 
+caso de esta Declaración de Prácticas de Certificación, en concreto existe una política de 3 de 
+8 personas para la activación de las claves. 
+Los dispositivos criptográficos se encuentran protegidos físicamente tal y como se determina 
+en este documento. 
+ 
+7.2.3 Depósito de la clave privada 
+ASI-GCABA no almacena copias utilizables por medios propios de las claves privadas de los 
+firmantes.  
+7.2.4 Copia de respaldo de la clave privada 
+ASI-GCABA realiza copia de backup de las claves privadas de las CA que hacen posible su 
+recuperación en caso de desastre, de pérdida o deterioro de las mismas. Tanto la generación 
+de la copia como la recuperación de ésta necesitan al menos de la participación de dos 
+personas. 
+
+--- p75
+ 
+ 
+ 
+ 
+P á g i n a 75 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Estos ficheros de recuperación se almacenan en armarios ignífugos y en el centro de custodia 
+externo. 
+Claves generadas en dispositivo software: ASI-GCABA no puede realizar backups de las claves, 
+ya que no dispone de acceso a las mismas. El firmante sí que puede realizar un backup. 
+ 
+Claves generadas en QSCD: no se puede realizar backups de las claves, ya que no es posible 
+su exportación del QSCD. 
+ 
+Claves generadas en HSM Centralizado y en QSCD Centralizado: Sólo es posible realizar 
+backups de un bloob cifrado con la clave Security World del HSM utilizado, siendo imposible 
+su descifrado sin el uso de las credenciales que sólo el titular del certificado conoce. 
+ 
+7.2.5 Archivo de la clave privada 
+Las claves privadas de las AC son archivadas por un periodo de 10 años después de la emisión 
+del último certificado. Se almacenarán en archivos ignífugos seguros y en el centro de custodia 
+externo. Al menos será necesaria la colaboración de dos personas para recuperar la clave 
+privada de las AC en el dispositivo criptográfico inicial. 
+Solo en caso de certificados de cifrado, el suscriptor podrá almacenar la clave privada el 
+tiempo que crea oportuno. En este caso ASI-GCABA también guardará copia de la clave 
+privada asociada al certificado de cifrado. 
+ 
+ASI-GCABA no genera ni archiva claves de certificados, emitidas en software. 
+7.2.6 Introducción de la clave privada en el módulo criptográfico 
+Las claves privadas se generan directamente en los módulos criptográficos de producción de 
+ASI-GCABA.  
+ 
+
+--- p76
+ 
+ 
+ 
+ 
+P á g i n a 76 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.2.7 Método de activación de la clave privada 
+Las claves privadas de la Autoridad de Certificación se almacenan cifradas en los módulos 
+criptográficos de producción de ASI-GCABA. 
+ 
+7.2.8 Método de desactivación de la clave privada 
+Para la desactivación de la clave privada de ASI-GCABA se seguirán los pasos descritos en el 
+manual del administrador del equipo criptográfico correspondiente. 
+ 
+7.2.9 Método de destrucción de la clave privada 
+Para la desactivación de la clave privada de UANATACA se seguirán los pasos descritos 
+en el manual del administrador del equipo criptográfico correspondiente. 
+7.2.10 Clasificación de módulos criptográficos 
+Ver la sección 7.2.1 
+ 
+7.3 Otros aspectos de gestión del par de claves 
+7.3.1 
+Archivo de la clave pública 
+GCABA archiva sus claves públicas de forma rutinaria, de acuerdo con lo establecido en la 
+sección 6.5 de este documento. 
+ 
+7.3.2 Períodos de utilización de las claves pública y privada 
+Los periodos de utilización de las claves son los determinados por la duración del certificado, 
+transcurrido el cual no pueden continuar utilizándose. 
+ 
+Como excepción y en caso de existir, la clave privada de descifrado puede continuar 
+empleándose incluso tras la expiración del certificado. 
+ 
+
+--- p77
+ 
+ 
+ 
+ 
+P á g i n a 77 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.4 Datos de activación 
+7.4.1 
+Generación e instalación de datos de activación 
+Los datos de activación de los dispositivos que protegen las claves privadas de ASI-GCABA 
+son generados de acuerdo con lo establecido en la sección 7.2.2 y los procedimientos de 
+ceremonia de claves. 
+ 
+La creación y distribución de dichos dispositivos es registrada. 
+Asimismo, ASI-GCABA genera de forma segura los datos de activación. 
+ 
+7.4.2 Protección de datos de activación 
+Los datos de activación de los dispositivos que protegen las claves privadas de las Autoridades 
+de certificación raíz y subordinadas, están protegidos por los poseedores de las tarjetas de 
+administradores de los módulos criptográficos, según consta en el documento de ceremonia 
+de claves. 
+El firmante del certificado es el responsable de la protección de su clave privada, con una o 
+varias contraseñas lo más completas y complejas posible. El firmante debe recordar dicha(s) 
+contraseña(s). 
+ 
+7.5 Controles de seguridad informática 
+ASI-GCABA emplea sistemas fiables para ofrecer sus servicios de certificación. ASI-GCABA ha 
+realizado controles y auditorias informáticas a fin de establecer una gestión de sus activos 
+informáticos adecuados con el nivel de seguridad requerido en la gestión de sistemas de 
+certificación electrónica. 
+Respecto a la seguridad de la información, ASI-GCABA aplica controles propios del esquema 
+de certificación sobre sistemas de gestión de la información ISO 27001. 
+Los equipos usados son inicialmente configurados con los perfiles de seguridad adecuados 
+por parte del personal de sistemas de GCABA, en los siguientes aspectos: 
+
+--- p78
+ 
+ 
+ 
+ 
+P á g i n a 78 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Configuración de seguridad del sistema operativo. 
+• 
+Configuración de seguridad de las aplicaciones. 
+• 
+Dimensionamiento correcto del sistema. 
+• 
+Configuración de Usuarios y permisos. 
+• 
+Configuración de eventos de Log. 
+• 
+Plan de backup y recuperación. 
+• 
+Configuración antivirus. 
+• 
+Requerimientos de tráfico de red. 
+ 
+7.5.1 
+Requisitos técnicos específicos de seguridad informática 
+Cada servidor de ASI-GCABA incluye las siguientes funcionalidades: 
+• 
+Control de acceso a los servicios de las Autoridades de Certificación subordinadas 
+y gestión de privilegios. 
+• 
+Imposición de separación de tareas para la gestión de privilegios. 
+• 
+Identificación y autenticación de roles asociados a identidades. 
+• 
+Archivo del historial del suscriptor, de las Autoridades de Certificación 
+subordinadas y datos de auditoría. 
+• 
+Auditoria de eventos relativos a la seguridad. 
+• 
+Auto-diagnóstico de seguridad relacionado con los servicios de las Autoridades 
+de Certificación subordinadas. 
+• 
+Mecanismos de recuperación de claves y del sistema de las Autoridades de 
+Certificación subordinadas. 
+ 
+Las funcionalidades expuestas son realizadas mediante una combinación de sistema 
+operativo, software de PKI, protección física y procedimientos. 
+ 
+7.5.2 Evaluación del nivel de seguridad informática 
+Las aplicaciones de autoridad de certificación y de registro empleadas por ASI-GCABA son 
+fiables. 
+ 
+
+--- p79
+ 
+ 
+ 
+ 
+P á g i n a 79 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.6 Controles técnicos del ciclo de vida 
+7.6.1 
+Controles de desarrollo de sistemas 
+Las aplicaciones son desarrolladas e implementadas por ASI-GCABA de acuerdo con 
+estándares de desarrollo y control de cambios.  
+ 
+Las aplicaciones disponen de métodos para la verificación de la integridad y autenticidad, así 
+como de la corrección de la versión a emplear. 
+ 
+7.6.2 Controles de gestión de seguridad 
+ASI-GCABA desarrolla las actividades precisas para la formación y concienciación de los 
+empleados en materia de seguridad. Los materiales empleados para la formación y los 
+documentos descriptivos de los procesos, son actualizados después de su aprobación por un 
+grupo para la gestión de la seguridad. En la realización de esta función dispone de un plan 
+de formación anual. 
+ 
+ASI-GCABA exige mediante contrato, las medidas de seguridad equivalentes a cualquier 
+proveedor externo implicado en las labores de servicios electrónicos de confianza. 
+ 
+7.6.2.1 
+Clasificación y gestión de información y bienes  
+ASI-GCABA mantiene un inventario de activos y documentación y un procedimiento para la 
+gestión de este material para garantizar su uso. 
+La política de seguridad de GCABA detalla los procedimientos de gestión de la información 
+donde se clasifica según su nivel de confidencialidad. 
+Los documentos están catalogados en tres niveles: SIN CLASIFICAR, USO INTERNO y 
+CONFIDENCIAL. 
+ 
+
+--- p80
+ 
+ 
+ 
+ 
+P á g i n a 80 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.6.2.2 
+Operaciones de gestión 
+ASI-GCABA dispone de un adecuado procedimiento de gestión y respuesta de incidencias, 
+mediante la implementación de un sistema de alertas y la generación de reportes periódicos. 
+En el documento de seguridad de GCABA se desarrolla en detalle el proceso de gestión de 
+incidencias. 
+ASI-GCABA tiene documentado todo el procedimiento relativo a las funciones y 
+responsabilidades del personal implicado en el control y manipulación de elementos 
+contenidos en el proceso de certificación. 
+ 
+7.6.2.3 
+Tratamiento de los soportes y seguridad 
+Todos los soportes son tratados de forma segura de acuerdo con los requisitos de la 
+clasificación de la información. Los soportes que contengan datos sensibles son destruidos de 
+manera segura si no van a volver a ser requeridos. 
+ 
+7.6.2.3.1 
+Planificación del sistema 
+No aplica 
+ 
+7.6.2.3.2 
+Reportes de incidencias y respuesta 
+GCABA dispone de un procedimiento para el seguimiento de incidencias y su resolución 
+donde se registran las respuestas y una evaluación económica que supone la resolución de 
+la incidencia. 
+ 
+7.6.2.3.3 
+Procedimientos operacionales y responsabilidades 
+ASI-GCABA define actividades, asignadas a personas con un rol de confianza, distintas de las 
+personas encargadas de realizar las operaciones cotidianas que no tienen carácter de 
+confidencialidad. 
+ 
+
+--- p81
+ 
+ 
+ 
+ 
+P á g i n a 81 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.6.2.4 
+Gestión del sistema de acceso  
+ASI-GCABA realiza todos los esfuerzos que razonablemente están a su alcance para confirmar 
+que el sistema de acceso está limitado a las personas autorizadas. 
+En particular: 
+7.6.2.4.1 
+AC General 
+• 
+Se dispone de controles basados en firewalls, antivirus e IPS en alta disponibilidad. 
+• 
+Los datos sensibles son protegidos mediante técnicas criptográficas o controles 
+de acceso con identificación fuerte. 
+• 
+ASI-GCABA dispone de un procedimiento documentado de gestión de altas y 
+bajas de usuarios y política de acceso detallado en su política de seguridad. 
+• 
+ASI-GCABA dispone de procedimientos para asegurar que las operaciones se 
+realizan respetando la política de roles. 
+• 
+Cada persona tiene asociado un rol para realizar las operaciones de certificación. 
+ 
+7.6.2.4.2 
+Generación del certificado 
+La autenticación para el proceso de emisión se realiza mediante un sistema m de n 
+operadores para la activación de la clave privada de ASI-GCABA. 
+7.6.2.4.3 
+Gestión de la revocación 
+La revocación se realizará mediante autenticación fuerte a las aplicaciones de un 
+administrador autorizado. Los sistemas de logs generarán las pruebas que garantizan el no 
+repudio de la acción realizada por el administrador de ASI-GCABA. 
+7.6.2.4.4 
+Estado de la revocación 
+La aplicación del estado de la revocación dispone de un control de acceso basado en la 
+autenticación con certificados o con doble factor de identificación para evitar el intento de 
+modificación de la información del estado de la revocación. 
+ 
+
+--- p82
+ 
+ 
+ 
+ 
+P á g i n a 82 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.6.2.5 
+Gestión del ciclo de vida del hardware criptográfico  
+ASI-GCABA se asegura que el hardware criptográfico usado para la firma de certificados no 
+se manipula durante su transporte mediante la inspección del material entregado. 
+El hardware criptográfico se traslada sobre soportes preparados para evitar cualquier 
+manipulación. 
+ASI-GCABA registra toda la información pertinente del dispositivo para añadir al catálogo de 
+activos. 
+El uso del hardware criptográfico de firma de certificados requiere el uso de al menos dos 
+empleados de confianza. ASI-GCABA realiza test de pruebas periódicas para asegurar el 
+correcto funcionamiento del dispositivo. 
+El dispositivo hardware criptográfico solo es manipulado por personal confiable. 
+La clave privada de firma de ASI-GCABA almacenada en el hardware criptográfico se eliminará 
+una vez se ha retirado el dispositivo. 
+La configuración del sistema de ASI-GCABA, así como sus modificaciones y actualizaciones 
+son documentadas y controladas. 
+Los cambios o actualizaciones son autorizados por el responsable de seguridad y quedan 
+reflejados en las actas de trabajo correspondientes. Estas configuraciones se realizarán al 
+menos por dos personas confiables. 
+ 
+7.7 Controles de seguridad de red 
+ASI-GCABA protege el acceso físico a los dispositivos de gestión de red, y dispone de una 
+arquitectura que ordena el tráfico generado basándose en sus características de seguridad, 
+creando secciones de red claramente definidas. Esta división se realiza mediante el uso de 
+cortafuegos. 
+La información confidencial que se trasfiere por redes no seguras, se realiza de forma cifrada 
+mediante uso de protocolos SSL o del sistema VPN con autenticación por doble factor. 
+ 
+
+--- p83
+ 
+ 
+ 
+ 
+P á g i n a 83 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+7.8 Controles de ingeniería de módulos criptográficos 
+Los módulos criptográficos se someten a los controles de ingeniería previstos en las normas 
+indicadas a lo largo de esta sección. 
+Los algoritmos de generación de claves empleados se aceptan comúnmente para el uso de 
+la clave a que están destinados. 
+Todas las operaciones criptográficas de ASI-GCABA son realizadas en módulos con las 
+certificaciones FIPS 140-2 nivel 3. 
+ 
+7.9 Fuentes de Tiempo 
+ASI-GCABA tiene un procedimiento de sincronización de tiempo coordinado vía NTP, que 
+accede a dos servicios independientes: 
+• 
+La primera sincronización es con un servicio basado en un servidor provisto por el 
+GCABA. 
+• 
+La segunda dispone de una sincronización complementaria, vía NTP, con el Instituto 
+Geográfico Nacional. 
+ 
+7.10 Cambio de estado de un Dispositivo Seguro de Creación de Firma (QSCD) 
+ASI-GCABA en el caso de modificación del estado de la certificación de los dispositivos de 
+creación de firma, procederá de la siguiente manera: 
+1. ASI-GCABA dispone de una lista de varios QSCD certificados, así como una estrecha 
+relación con proveedores de dichos dispositivos, con el fin de garantizar alternativas 
+a posibles pérdidas de estado de certificación de dispositivos QSCD. 
+2. En el supuesto de finalización del periodo de validez o pérdida de la certificación, ASI-
+GCABA no utilizará dichos QSCD para la emisión de nuevos certificados digitales, bien 
+sea en nuevas emisiones como eventualmente en posibles renovaciones. 
+3. Procederá de inmediato a cambiar a de dispositivos QSCD con certificación válida. 
+4. En el supuesto caso que un dispositivo QSCD haya demostrado no haberlo sido 
+nunca, por falsificación o cualquier otro tipo de fraude, ASI-GCABA procederá de 
+inmediato a comunicárselo a sus clientes y al ente regulador, revocar los certificados 
+digitales emitidos en estos dispositivos y reemplazarlos emitiéndolos en QSCD válidos. 
+
+--- p84
+ 
+ 
+ 
+ 
+P á g i n a 84 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+8 Perfiles de certificados y listas de certificados revocados 
+8.1 
+Perfil de certificado 
+Todos los certificados emitidos bajo esta política cumplen con el estándar X.509 versión 3 y 
+el RFC 3739 y los diferentes perfiles descritos en la norma EN 319 412. 
+La documentación relativa a los perfiles de la norma EN 319 412 puede solicitarse a ASI-
+GCABA. 
+ 
+8.1.1 
+Número de versión 
+ASI-GCABA emite certificados X.509 Versión 3 
+ 
+8.1.2 
+Extensiones del certificado 
+Las extensiones de los certificados se encuentran detalladas en los documentos de perfiles 
+que son accesibles desde la página web de GCABA (https://pki-gcba.buenosaires.gob.ar/). 
+De esta forma se permite mantener unas versiones más estables de la Declaración de Prácticas 
+de Certificación y desligarlos de los frecuentes ajustes en los perfiles. 
+ 
+8.1.3 
+Identificadores de objeto (OID) de los algoritmos 
+El identificador de objeto del algoritmo de firma es: 
+• 
+1.2.840.113549.1.1.11 sha256WithRSAEncryption 
+ 
+El identificador de objeto del algoritmo de la clave pública es:  
+• 
+1.2.840.113549.1.1.1 rsaEncryption 
+ 
+8.1.4 
+Formato de Nombres 
+Los certificados deberán contener las informaciones que resulten necesarias para su uso, 
+según determine la correspondiente política. 
+ 
+
+--- p85
+ 
+ 
+ 
+ 
+P á g i n a 85 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+8.1.5 
+Restricción de los nombres 
+Los nombres contenidos en los certificados están restringidos a “Distinguished Names” X.500, 
+que son únicos y no ambiguos. 
+ 
+8.1.6 
+Identificador de objeto (OID) de los tipos de certificados 
+Todos los certificados incluyen un identificador de política de certificados bajo la que han sido 
+emitidos, de acuerdo con la estructura indicada en el punto 2.2.1 
+ 
+8.2 Perfil de la lista de revocación de certificados 
+8.2.1 
+Número de versión 
+Las CRL emitidas por ASI-GCABA son de la versión 2. 
+ 
+8.2.2 Perfil de OCSP 
+Según el estándar IETF RFC 6960. 
+ 
+ 
+
+--- p86
+ 
+ 
+ 
+ 
+P á g i n a 86 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+9 Auditoría  
+ 
+9.1 
+Frecuencia de la auditoría de conformidad 
+GCABA lleva a cabo una auditoría de acuerdo a sus planes internos de auditoría, las cuales 
+realiza que realiza bajo su propio criterio o en cualquier momento, debido a una sospecha 
+de incumplimiento de alguna medida de seguridad. 
+ 
+9.2 Identificación y calificación del auditor 
+Las auditorías son realizadas por personal cualificado competencia técnica y experiencia en 
+seguridad informática, en seguridad de sistemas de información y en auditorías de 
+conformidad de servicios de certificación de clave pública, y los elementos relacionados. 
+ 
+9.3 Listado de elementos objeto de auditoría 
+La auditoría verifica respecto a ASI-GCABA: 
+a) Que la entidad tiene un sistema de gestión que garantiza la calidad del servicio 
+prestado. 
+b) Que la entidad cumple con los requerimientos de la Declaración de Prácticas de 
+Certificación y otra documentación vinculada con la emisión de los distintos 
+certificados digitales. 
+c) Que la Declaración de Prácticas de Certificación y demás documentación jurídica 
+vinculada, se ajusta a lo acordado por ASI-GCABA y con lo establecido en la normativa 
+vigente. 
+d) Que la entidad gestiona de forma adecuada sus sistemas de información 
+ 
+En particular, los elementos objeto de auditoría serán los siguientes: 
+a) Procesos de las Autoridades de Certificación, Autoridades de Registro y elementos 
+relacionados. 
+b) Sistemas de información. 
+
+--- p87
+ 
+ 
+ 
+ 
+P á g i n a 87 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+c) Protección del centro de proceso de datos. 
+d) Documentos. 
+ 
+9.4 Acciones a emprender como resultado de una falta de conformidad 
+Una vez recibido por la dirección el informe de la auditoría de cumplimiento realizada, se 
+analizan las deficiencias encontradas y desarrolla y ejecuta las medidas correctivas que 
+solventen dichas deficiencias. 
+ 
+Si la ASI-GCABA es incapaz de desarrollar y/o ejecutar las medidas correctivas o si las 
+deficiencias encontradas suponen una amenaza inmediata para la seguridad o integridad del 
+sistema, deberá comunicarlo inmediatamente a un Comité de Seguridad de GCABA que 
+podrá ejecutar las siguientes acciones: 
+• 
+Cesar las operaciones transitoriamente. 
+• 
+Revocar la clave de la Autoridad de Certificación y regenerar la infraestructura. 
+• 
+Terminar el servicio de la Autoridad de Certificación. 
+• 
+Otras acciones complementarias que resulten necesarias. 
+ 
+9.5 Tratamiento de los informes de auditoría 
+Los informes de resultados de auditoría se entregan al Comité de Seguridad de GCABA en 
+un plazo máximo de 15 días tras la ejecución de la auditoría. 
+ 
+ 
+
+--- p88
+ 
+ 
+ 
+ 
+P á g i n a 88 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+10 Requisitos comerciales y legales 
+10.1 Tarifas 
+10.1.1 Tarifa de emisión o renovación de certificados 
+ASI-GCABA puede establecer una tarifa por la emisión o por la renovación de los certificados, 
+de la que, en su caso, se informará oportunamente a los suscriptores. 
+ 
+10.1.2 Tarifa de acceso a certificados 
+ASI-GCABA no ha establecido ninguna tarifa por el acceso a los certificados. 
+ 
+10.1.3 Tarifa de acceso a información de estado de certificado 
+ASI-GCABA no ha establecido ninguna tarifa por el acceso a la información de estado de 
+certificados. 
+ 
+10.1.4 Tarifas de otros servicios 
+Sin estipulación. 
+ 
+10.1.5 Política de reintegro 
+Sin estipulación. 
+ 
+10.2 Capacidad financiera 
+ASI-GCABA dispone de recursos suficientes para mantener sus operaciones y cumplir sus 
+obligaciones, así como para afrontar el riesgo de la responsabilidad por daños y perjuicios, , 
+en relación a la gestión de la finalización de los servicios y plan de cese. 
+ 
+10.2.1 Otros activos 
+Sin estipulación. 
+
+--- p89
+ 
+ 
+ 
+ 
+P á g i n a 89 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+10.3 Confidencialidad 
+10.3.1 Informaciones confidenciales 
+Las siguientes informaciones son mantenidas confidenciales por ASI-GCABA: 
+• 
+Solicitudes de certificados, aprobadas o denegadas, así como toda otra 
+información personal obtenida para la expedición y mantenimiento de 
+certificados, excepto las informaciones indicadas en la sección siguiente. 
+• 
+Claves privadas generadas y/o almacenadas por el prestador de servicios de 
+certificación. 
+• 
+Registros de transacciones, incluyendo los registros completos y los registros de 
+auditoría de las transacciones. 
+• 
+Registros de auditoría interna y externa, creados y/o mantenidos por la Autoridad 
+de Certificación y sus auditores. 
+• 
+Planes de continuidad de negocio y de emergencia. 
+• 
+Planes de seguridad. 
+• 
+Documentación de operaciones, archivo, monitorización y otros análogos. 
+• 
+Toda otra información identificada como “Confidencial”. 
+ 
+10.3.2 Informaciones no confidenciales 
+La siguiente información se considera no confidencial: 
+• 
+Los certificados emitidos o en trámite de emisión. 
+• 
+La vinculación del suscriptor a un certificado emitido por la Autoridad de 
+Certificación. 
+• 
+El nombre y los apellidos de la persona física identificada en el certificado, así 
+como cualquiera otra circunstancia o dato personal del titular, en el supuesto de 
+que sea significativa en función de la finalidad del certificado. 
+• 
+La dirección de correo electrónico de la persona física identificada en el 
+certificado, o la dirección de correo electrónico asignada por el suscriptor, en el 
+supuesto de que sea significativa en función de la finalidad del certificado. 
+• 
+Los usos y límites económicos reseñados en el certificado. 
+
+--- p90
+ 
+ 
+ 
+ 
+P á g i n a 90 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+El periodo de validez del certificado, así como la fecha de emisión del certificado 
+y la fecha de caducidad. 
+• 
+El número de serie del certificado. 
+• 
+Los diferentes estados o situaciones del certificado y la fecha del inicio de cada 
+uno de ellos, en concreto: pendiente de generación y/o entrega, válido, revocado, 
+suspendido o caducado y el motivo que provocó el cambio de estado. 
+• 
+Las listas de revocación de certificados (LRCs), así como las restantes 
+informaciones de estado de revocación. 
+• 
+La información contenida en los depósitos de certificados. 
+• 
+Cualquier otra información que no esté indicada en la sección anterior. 
+ 
+10.3.3 Divulgación de información de suspensión y revocación 
+Véase la sección anterior. 
+ 
+10.3.4 Divulgación legal de información 
+ASI-GCABA divulga la información confidencial únicamente en los casos legalmente previstos. 
+En concreto, los registros que avalan la fiabilidad de los datos contenidos en el certificado 
+serán divulgados en caso de ser requerido para ofrecer evidencia de la certificación en un 
+procedimiento judicial, incluso sin consentimiento del suscriptor del certificado. 
+ASI-GCABA indicará estas circunstancias en la política de privacidad prevista en la sección 
+10.4. 
+ 
+10.3.5 Divulgación de información por petición de su titular 
+ASI-GCABA incluye, en la política de privacidad prevista en la sección 10.4, prescripciones para 
+permitir la divulgación de la información del suscriptor y, en su caso, de la persona física 
+identificada en el certificado, directamente a los mismos o a terceros. 
+ 
+10.3.6 Otras circunstancias de divulgación de información 
+Sin estipulación. 
+
+--- p91
+ 
+ 
+ 
+ 
+P á g i n a 91 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+10.4 Protección de datos personales  
+El ASI-GCABA garantiza la protección de datos personales, el presente se regirá por la Ley de 
+Protección de datos de la CABA. Ley 1845. 
+ 
+En cumplimiento de la misma, ASI-GCABA ha documentado en esta Declaración de Prácticas 
+de Certificación los aspectos y procedimientos de seguridad y organizativos, con el fin de 
+garantizar que todos los datos personales a los que tenga acceso son protegidos ante su 
+pérdida, destrucción, daño, falsificación y procesamiento ilícito o no autorizado. 
+A continuación, se detalla toda la información necesaria con respecto al tratamiento de datos 
+personales realizado por ASI-GCABA: 
+Responsable del tratamiento 
+ 
+GCABA 
+CUIT: 34-99903208-9 
+Dirección: Avenida Independencia 635, Buenos Aires, Argentina. 
+Teléfono: (+54) 01143239300 Int 1062 
+Correo electrónico: linaresg@buenosaires.gob.ar 
+ 
+Finalidad del tratamiento 
+ASI-GCABA trata los datos de carácter personal facilitados para llevar a cabo los servicios 
+electrónicos solicitados, concretamente la expedición de certificados electrónicos, todo ello 
+de acuerdo con lo previsto en la Declaración de Prácticas de Certificación (DPC) de GCABA, 
+la cual se encuentra disponible en el siguiente enlace: http://pki-gcba.buenosaires.gob.ar/dpc. 
+Las finalidades de tratamiento de datos relativos al SERVICIO son las siguientes: 
+• 
+Identificación de los suscriptores y/o firmantes de los certificados electrónicos. 
+ 
+• 
+Expedición y gestión de certificados electrónicos. 
+ 
+
+--- p92
+ 
+ 
+ 
+ 
+P á g i n a 92 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Gestión del ciclo de vida del certificado (suspensión, renovación, reactivación y 
+revocación). 
+ 
+• 
+Comunicaciones relativas al servicio. 
+ 
+• 
+Custodia y mantenimiento del archivo relativo al certificado electrónico. 
+ 
+• 
+Gestión administrativa, contable y de facturación derivada de la contratación. 
+ 
+Legitimación del tratamiento 
+La legitimación del tratamiento de datos personales para la Prestación de Servicios de 
+Certificación para la expedición de certificados electrónicos, se basa en la ejecución de un 
+contrato de los servicios solicitados, donde el usuario es parte del mismo. 
+ 
+Datos tratados y conservación 
+Las categorías de datos personales tratados por ASI-GCABA, a título enunciativo, pero no 
+limitativo, comprenden: 
+• 
+Datos identificativos: nombre, apellidos y número oficial de identidad. 
+• 
+Datos profesionales: organización, departamento y/o cargo. 
+• 
+Datos de contacto: dirección postal, correo electrónico y número de teléfono. 
+• 
+Datos relativos a la identidad o identificación de los usuarios: fotografías y/o cuando 
+corresponda el patrón biométrico facial, con la finalidad de poder llevar a cabo el 
+proceso de vídeo identificación de GCABA. 
+ 
+Los datos personales se conservarán hasta la finalización de la relación contractual y 
+posteriormente, durante los plazos legalmente exigidos acorde a cada caso. Como norma 
+general, los datos personales relativos al SERVICIO se conservarán durante 10 años desde la 
+revocación del certificado correspondiente. 
+ 
+Los datos personales se almacenarán en las instalaciones seguras de GCABA ubicadas en 
+Buenos Aires.  
+ 
+
+--- p93
+ 
+ 
+ 
+ 
+P á g i n a 93 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Transferencia de datos 
+Los datos pueden ser puestos a disposición de terceros, con motivo de la prestación de 
+servicios contratados por el usuario (por ejemplo, proveedores de alojamiento de datos (CPD), 
+servicios de apoyo en la identificación, empresas del grupo, etc.), todo ello al amparo del 
+correspondiente contrato de encargo de tratamiento de datos personales, garantizando en 
+todo momento unas medidas de seguridad idóneas que aseguren la debida protección de 
+los datos personales de los usuarios. 
+Sin perjuicio de lo anterior, como norma general los datos personales únicamente se cederán 
+a terceros bajo obligación legal. 
+Como norma general, no se realizarán transferencias internacionales. 
+ 
+Derechos de los usuarios 
+Los usuarios podrán ejercitar sus derechos de confirmación, acceso, rectificación, supresión, 
+cancelación, limitación, oposición y portabilidad. 
+• 
+Confirmación. Todos los usuarios tienen derecho a obtener confirmación sobre si 
+GCABA está tratando datos personales que les conciernan. 
+ 
+• 
+Acceso y rectificación. Los usuarios tienen derecho a acceder a todos sus datos 
+personales, así como solicitar la rectificación de aquellos que sean inexactos o 
+erróneos. 
+ 
+• 
+Supresión y cancelación. Los usuarios podrán solicitar la supresión/cancelación de los 
+datos cuando, entre otros motivos, éstos no sean necesarios para los fines para los 
+que fueron recogidos. 
+ 
+• 
+Limitación y oposición. El usuario podrá solicitar la limitación del tratamiento para que 
+sus datos personales no se apliquen en las operaciones que correspondan. En 
+determinadas circunstancias y por motivos relacionados con su situación particular, el 
+usuario podrá oponerse al tratamiento de datos, estando GCABA obligada a dejar de 
+tratarlos, salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles 
+reclamaciones. 
+ 
+• 
+Portabilidad. Los interesados podrán solicitar que sus datos personales les sean 
+enviados o bien se transmitan a otro responsable, en un formato electrónico 
+
+--- p94
+ 
+ 
+ 
+ 
+P á g i n a 94 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+estructurado y de uso habitual. 
+ 
+Para ejercer sus derechos, los usuarios pueden enviar una petición a la dirección de correo 
+electrónico Avenida Independencia N° 635, Buenos Aires. En dicha petición, deberán adjuntar 
+copia de su documento de identidad e indicar claramente cuál es el derecho que se desea 
+ejercer. 
+ 
+10.5 Derechos de propiedad intelectual 
+10.5.1 Propiedad de los certificados e información de revocación 
+Únicamente GCABA goza de derechos de propiedad intelectual sobre los certificados que 
+emita, sin perjuicio de los derechos de los suscriptores, poseedores de claves y terceros, a los 
+que conceda licencia no exclusiva para reproducir y distribuir certificados, sin coste alguno, 
+siempre y cuando la reproducción sea íntegra y no altere elemento alguno del certificado, y 
+sea necesaria en relación con firmas digitales y/o sistemas de cifrado dentro del ámbito de 
+uso del certificado, y de acuerdo con la documentación que los vincula. 
+Adicionalmente, los certificados emitidos por GCABA contienen un aviso legal relativo a la 
+propiedad de los mismos. 
+Las mismas reglas resultan de aplicación al uso de la información de revocación de los 
+certificados. 
+ 
+10.5.2 Propiedad de la Declaración de Prácticas de Certificación 
+Únicamente GCABA goza de derechos de propiedad intelectual sobre esta Declaración de 
+Prácticas de Certificación. 
+ 
+10.5.3 Propiedad de la información relativa a nombres 
+El suscriptor y, en su caso, la persona física identificada en el certificado, conserva la totalidad 
+de derechos, de existir los mismos, sobre la marca, producto o nombre comercial contenido 
+en el certificado. 
+
+--- p95
+ 
+ 
+ 
+ 
+P á g i n a 95 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+El suscriptor es el propietario del nombre distinguido (DN) del certificado, formado por las 
+informaciones especificadas en la sección 4.1.1. 
+ 
+10.5.4 Propiedad de claves 
+Los pares de claves son propiedad de los suscriptores de los certificados. 
+Cuando una clave se encuentra fraccionada en partes, todas las partes de la clave son 
+propiedad del propietario de la clave. 
+ 
+10.6 Obligaciones y responsabilidad civil 
+10.6.1 Obligaciones de GCABA 
+GCABA garantiza, bajo su plena responsabilidad, que cumple con la totalidad de los requisitos 
+establecidos en la Declaración de Prácticas de Certificación, siendo el responsable del 
+cumplimiento de los procedimientos descritos, de acuerdo a las indicaciones contenidas en 
+este documento. GCABA presta los servicios electrónicos de confianza conforme con esta 
+Declaración de Prácticas de Certificación. 
+GCABA informa al suscriptor de los términos y condiciones relativos al uso del certificado, de 
+su precio y de sus limitaciones de uso, mediante un contrato de suscriptor que incorpora por 
+referencia a este Declaración de Prácticas de Certificación y las políticas en ella contenidas 
+relativas a los certificados digitales.  
+GCABA vincula a suscriptores, poseedores de claves y terceros que confían en certificados, 
+mediante las políticas de certificación contenidas en la presente Declaración de Prácticas de 
+Certificación, en lenguaje escrito y comprensible, con los siguientes contenidos mínimos: 
+• 
+Prescripciones para dar cumplimiento a lo establecido en las secciones 5.5.3, 10.2, 
+10.6.6, 10.6.7, 10.6.8 y 10.6.9. 
+• 
+Indicación de la política aplicable, con indicación de que los certificados no se 
+expiden al público. 
+• 
+Manifestación de que la información contenida en el certificado es correcta, 
+excepto notificación en contra por el suscriptor. 
+
+--- p96
+ 
+ 
+ 
+ 
+P á g i n a 96 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Consentimiento para la publicación del certificado en el depósito y acceso por 
+terceros al mismo. 
+• 
+Consentimiento para el almacenamiento de la información empleada para el 
+registro del suscriptor y para la cesión de dicha información a terceros, en caso 
+de terminación de operaciones de la Autoridad de Certificación sin revocación de 
+certificados válidos. 
+• 
+Límites de uso del certificado, incluyendo las establecidas en la sección 2.4.2 
+• 
+Información sobre cómo validar un certificado, incluyendo el requisito de 
+comprobar el estado del certificado, y las condiciones en las cuales se puede 
+confiar razonablemente en el certificado, que resulta aplicable cuando el 
+suscriptor actúa como tercero que confía en el certificado. 
+• 
+Forma en que se garantiza la responsabilidad patrimonial de la Autoridad de 
+Certificación. 
+• 
+Limitaciones de responsabilidad aplicables, incluyendo los usos por los cuales la 
+Autoridad de Certificación acepta o excluye su responsabilidad. 
+• 
+Periodo de archivo de información de solicitud de certificados. 
+• 
+Periodo de archivo de registros de auditoría. 
+• 
+Procedimientos aplicables de resolución de disputas.  
+• 
+Ley aplicable y jurisdicción competente. 
+• 
+Si la Autoridad de Certificación ha sido declarada conforme con la política de 
+certificación y, en su caso, de acuerdo con qué sistema. 
+ 
+10.6.2 Garantías ofrecidas a suscriptores y terceros que confían en certificados 
+GCABA, en la documentación que la vincula con suscriptores y terceros que confían en 
+certificados, establece y rechaza garantías, y limitaciones de responsabilidad aplicables. 
+GCABA, como mínimo, garantiza al suscriptor: 
+• 
+Que no hay errores de hecho en las informaciones contenidas en los certificados, 
+conocidos o realizados por la Autoridad de Certificación de Certificación. 
+• 
+Que no hay errores de hecho en las informaciones contenidas en los certificados, 
+debidos a falta de la diligencia debida en la gestión de la solicitud de certificado 
+o en la creación del mismo. 
+
+--- p97
+ 
+ 
+ 
+ 
+P á g i n a 97 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+• 
+Que los certificados cumplen con todos los requisitos materiales establecidos en 
+la Declaración de Prácticas de Certificación. 
+• 
+Que los servicios de revocación y el empleo del Depósito cumplen con todos los 
+requisitos materiales establecidos en la Declaración de Prácticas de Certificación. 
+ 
+GCABA, como mínimo, garantizará al tercero que confía en el certificado: 
+• 
+Que la información contenida o incorporada por referencia en el certificado es 
+correcta, excepto cuando se indique lo contrario. 
+• 
+En caso de certificados publicados en el Depósito, que el certificado ha sido 
+emitido al suscriptor identificado en el mismo y que el certificado ha sido 
+aceptado, de acuerdo con la sección 5.4. 
+• 
+Que en la aprobación de la solicitud de certificado y en la emisión del certificado 
+se han cumplido todos los requisitos materiales establecidos en la Declaración de 
+Prácticas de Certificación. 
+• 
+La rapidez y seguridad en la prestación de los servicios, en especial de los servicios 
+de revocación y Depósito. 
+ 
+Adicionalmente, GCABA garantiza al suscriptor y al tercero que confía en el certificado: 
+• 
+Que, en el caso de que genere las claves privadas del suscriptor o, en su caso, 
+persona física identificada en el certificado, se mantiene su confidencialidad 
+durante el proceso. 
+• 
+La responsabilidad de la Autoridad de Certificación, con los límites que se 
+establezcan. 
+ 
+10.6.3 Rechazo de otras garantías 
+GCABA rechaza toda otra garantía que no sea legalmente exigible, excepto las contempladas 
+en la sección 10.6.2. 
+ 
+10.6.4 Limitación de responsabilidades 
+GCABA limita su responsabilidad a la emisión y gestión de certificados y de pares de claves 
+de suscriptores suministrados por la Autoridad de Certificación. 
+
+--- p98
+ 
+ 
+ 
+ 
+P á g i n a 98 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+ 
+10.6.5 Cláusulas de indemnidad 
+10.6.5.1 Cláusula de indemnidad de suscriptor 
+GCABA incluye en el contrato con el suscriptor, una cláusula por la cual el suscriptor se 
+compromete a mantener indemne a la Autoridad de Certificación de todo daño proveniente 
+de cualquier acción u omisión que resulte en responsabilidad, daño o pérdida, gasto de 
+cualquier tipo, incluyendo los judiciales y de representación letrada en que pueda incurrir, por 
+la publicación y uso del certificado, cuando concurra alguna de las siguientes causas: 
+• 
+Falsedad o manifestación errónea realizada por el usuario del certificado. 
+• 
+Error del usuario del certificado al facilitar los datos de la solicitud, si en la acción 
+u omisión medió dolo o negligencia con respecto a la Autoridad de Certificación 
+o a cualquier persona que confía en el certificado. 
+• 
+Negligencia en la protección de la clave privada, en el empleo de un sistema fiable 
+o en el mantenimiento de las precauciones necesarias para evitar el compromiso, 
+la pérdida, la divulgación, la modificación o el uso no autorizado de dicha clave. 
+• 
+Empleo por el suscriptor de un nombre (incluyendo nombres comunes, dirección 
+de correo electrónico y nombres de domino), u otras informaciones en el 
+certificado, que infrinja derechos de propiedad intelectual o industrial de terceros. 
+ 
+10.6.5.2 Cláusula de indemnidad de tercero que confía en el certificado 
+El tercero que confía en el certificado se compromete a mantener indemne a GCABA de todo 
+daño proveniente de cualquier acción u omisión que resulte en responsabilidad, daño o 
+pérdida, gasto de cualquier tipo, incluyendo los judiciales y de representación letrada en que 
+pueda incurrir, por la publicación y uso del certificado, cuando concurra alguna de las 
+siguientes causas: 
+• 
+Incumplimiento de las obligaciones del tercero que confía en el certificado. 
+• 
+Confianza temeraria en un certificado, a tenor de las circunstancias. 
+• 
+Falta de comprobación del estado de un certificado, para determinar que no se 
+encuentra suspendido o revocado. 
+ 
+
+--- p99
+ 
+ 
+ 
+ 
+P á g i n a 99 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+10.6.5.3 Caso fortuito y fuerza mayor 
+GCABA limita su responsabilidad en caso fortuito y en caso de fuerza mayor. 
+ 
+10.6.6 Ley aplicable 
+La interpretación, obligatoriedad, diseño y validez de esta Política y Practica de Certificación 
+se encuentran sometidos a lo establecido por la Ley Nacional N° 25.506, la Ley CABA N° 
+2.751/08, su Decreto Reglamentario Nº 1.181/08 y demás normas complementarias dictadas 
+por la autoridad competente, constituyen el marco normativo aplicable en materia de Firma 
+Digital en la CIUDAD AUTONOMA DE BUENOS AIRES. 
+ 
+10.6.7 Cláusulas de divisibilidad, supervivencia, acuerdo íntegro y notificación 
+GCABA establece, en el contrato de suscriptor, cláusulas de divisibilidad, supervivencia, 
+acuerdo íntegro y notificación: 
+• 
+En virtud de la cláusula de divisibilidad, la invalidez de una cláusula no afectará al 
+resto del contrato. 
+• 
+En virtud de la cláusula de supervivencia, ciertas reglas continuarán vigentes tras 
+la finalización de la relación jurídica reguladora del servicio entre las partes. A este 
+efecto, GCABA vela porque, al menos los requisitos contenidos en las secciones 
+10.6.1 (Obligaciones y responsabilidad), 9 (Auditoría de conformidad) y 10.3 
+(Confidencialidad), continúen vigentes tras la terminación del servicio y de las 
+condiciones generales de emisión/uso. 
+• 
+En virtud de la cláusula de acuerdo íntegro se entenderá que el documento 
+jurídico regulador del servicio contiene la voluntad completa y todos los acuerdos 
+entre las partes. 
+• 
+En virtud de la cláusula de notificación se establecerá el procedimiento por el cual 
+las partes se notifican hechos mutuamente. 
+ 
+
+--- p100
+ 
+ 
+ 
+ 
+P á g i n a 100 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+10.6.8 Cláusula de jurisdicción competente 
+GCABA establece, en el contrato de suscriptor, someterse a la competencia de la Justicia del 
+fuero Contencioso Administrativo y Tributario de la Ciudad Autónoma de Buenos Aires, 
+renunciando a cualquier otro fuero o jurisdicción. 
+ 
+10.6.9 Resolución de conflictos 
+GCABA establece, en el contrato de suscriptor, Cualquier controversia y/o conflicto resultante 
+de la aplicación de esta Política de Certificación, deberá ser resuelta en sede administrativa. 
+ 
+El presente documento se encuentra en un todo subordinada a las prescripciones de la Ley 
+Nacional N° 25.506, la Ley CABA N° 2.751/08 y su Decreto Reglamentario Nº 1.181/08 y demás 
+normativa complementaria dictada por la autoridad de competente. 
+ 
+Los titulares de certificados podrán efectuar reclamos ante la AC y eventualmente interponer 
+recurso administrativo por conflictos referidos a la prestación del servicio por parte del 
+Certificador. Una vez agotada la vía administrativa, podrá interponerse acción judicial, siendo 
+competente la Justicia del fuero Contencioso Administrativo y Tributario de la Ciudad 
+Autónoma de Buenos Aires. 
+ 
+A los efectos del reclamo antes citado, se procederá de la siguiente manera:  
+a. Una vez recibido el reclamo en las oficinas de la AC, esta citará al reclamante a una 
+audiencia y labrará un acta que deje expresa constancia de los hechos que motivan 
+el reclamo y de todas y cada uno de los antecedentes que le sirvan de causa. 
+b. Una vez que la AC emita opinión, se notificará al reclamante y se le otorgará un plazo 
+de CINCO (5) días hábiles administrativos para ofrecer y producir la prueba de su 
+descargo. 
+
+--- p101
+ 
+ 
+ 
+ 
+P á g i n a 101 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+c. La AC resolverá en un plazo de DIEZ (10) días lo que estime corresponder, dictando 
+el Acto Administrativo correspondiente, conforme a los criterios de máxima 
+razonabilidad, equidad y pleno ajuste al bloque de legalidad vigente y aplicable. 
+ 
+ 
+ 
+
+--- p102
+ 
+ 
+ 
+ 
+P á g i n a 102 | 102 
+PKI-PO-005-Politica-DPC-V1.2 
+ 
+Anexo I - Acrónimos 
+AC 
+Autoridad de Certificación 
+CA 
+Certification Authority. Autoridad de Certificación 
+RA 
+Autoridad de Registro 
+CP 
+Certificate Policy 
+CRL 
+Certificate Revocation List. Lista de certificados revocados 
+CSR 
+Certificate Signing Request. Petición de firma de certificado 
+DES 
+Data Encryption Standard. Estándar de cifrado de datos 
+PSD2 
+Directiva de Servicios de Pago 
+DN 
+Distinguished Name. Nombre distintivo dentro del certificado digital 
+DSA 
+Digital Signature Algorithm. Estándar de algoritmo de firma 
+FIPS  
+Federal Information Processing Standard Publication 
+ISO  
+International Organization for Standardization. Organismo Internacional de 
+Estandarización 
+LDAP  
+Lightweight Directory Access Protocol. Protocolo de acceso a directorios 
+OCSP  
+On-line Certificate Status Protocol. Protocolo de acceso al estado de los certificados 
+OID 
+Object Identifier. Identificador de objeto 
+PA  
+Policy Authority. Autoridad de Políticas 
+PC 
+Política de Certificación 
+PIN 
+Personal Identification Number. Número de identificación personal 
+PKI 
+Public Key Infrastructure. Infraestructura de clave pública  
+RSA  
+Rivest-Shimar-Adleman. Tipo de algoritmo de cifrado 
+SHA 
+Secure Hash Algorithm. Algoritmo seguro de Hash 
+SSL 
+Secure Sockets Layer 
+TCP/IP 
+Transmission Control. Protocol/Internet Protocol 
+ 
+ 

@@ -1,0 +1,2989 @@
+--- p1
+ 
+ 
+1 
+ 
+ 
+ 
+INFRAESTRUCTURA DE FIRMA DIGITAL – REPÚBLICA ARGENTINA 
+ 
+LEY Nº 25.506 
+ 
+ 
+POLÍTICA ÚNICA DE CERTIFICACIÓN 
+AUTORIDAD CERTIFICANTE  
+de la  
+OFICINA NACIONAL DE TECNOLOGÍAS DE INFORMACIÓN 
+AC ONTI 
+ 
+DIRECCIÓN NACIONAL DE TRAMITACIÓN E IDENTIFICACIÓN A DISTANCIA  
+SUBSECRETARÍA DE GESTIÓN ADMINISTRATIVA 
+SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA 
+SECRETARÍA DE GOBIERNO  DE MODERNIZACIÓN 
+JEFATURA DE GABINETE DE MINISTROS DE LA NACIÓN 
+ 
+Versión 3.0 
+Enero 2019 
+ 
+ 
+ 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 1 de 70
+
+--- p2
+ 
+ 
+2 
+ÍNDICE
+ÍNDICE ....................................................................................................................................................................................... 2 
+1. – INTRODUCCIÓN............................................................................................................................................................. 5 
+1.1. - Descripción general. ................................................................................................................................................... 5 
+1.2. - Nombre e Identificación del Documento................................................................................................................ 5 
+1.3. – Participantes................................................................................................................................................................ 5 
+1.3.1. – AC ONTI. ............................................................................................................................................................ 6 
+1.3.2. - Autoridad de Registro. ....................................................................................................................................... 6 
+1.3.3. - Suscriptores de certificados. ............................................................................................................................. 9 
+1.3.4. - Terceros Usuarios. ............................................................................................................................................ 10 
+1.4. - Uso de los certificados. ............................................................................................................................................ 10 
+1.5. - Administración de la Política.................................................................................................................................. 10 
+1.5.1. - Responsable del documento............................................................................................................................ 10 
+1.5.2. – Contacto............................................................................................................................................................. 11 
+1.5.3. - Procedimiento de aprobación de la Política Única de Certificación........................................................ 11 
+1.6. - Definiciones y Acrónimos....................................................................................................................................... 11 
+1.6.1. – Definiciones. ..................................................................................................................................................... 11 
+1.6.2. – Acrónimos. ........................................................................................................................................................ 13 
+2.- RESPONSABILIDADES VINCULADAS A LA PUBLICACIÓN Y A LOS REPOSITORIOS. .................... 15 
+2.1. – Repositorios. ............................................................................................................................................................. 17 
+2.2. - Publicación de información de la AC ONTI........................................................................................................ 17 
+2.3. - Frecuencia de publicación. ...................................................................................................................................... 18 
+2.4. - Controles de acceso a la información.................................................................................................................... 18 
+3. - IDENTIFICACIÓN Y AUTENTICACIÓN................................................................................................................ 19 
+3.1.- Asignación de nombres de suscriptores. ................................................................................................................ 19 
+3.1.1. - Tipos de Nombres............................................................................................................................................. 19 
+3.1.2. - Necesidad de Nombres Distintivos................................................................................................................ 19 
+3.1.4. - Reglas para la interpretación de nombres..................................................................................................... 21 
+3.1.5. - Unicidad de nombres. ...................................................................................................................................... 21 
+3.1.6. - Reconocimiento, autenticación y rol de las marcas registradas................................................................ 22 
+3.2. - Registro inicial. ......................................................................................................................................................... 22 
+3.2.2 - Autenticación de Personas Jurídicas o Entidades Públicas. ....................................................................... 23 
+3.2.3. - Autenticación de la identidad de Personas Humanas. ................................................................................ 24 
+3.2.4. - Información no verificada del suscriptor. ..................................................................................................... 26 
+3.2.5. - Validación de autoridad................................................................................................................................... 26 
+3.2.6. - Criterios para la interoperabilidad. ................................................................................................................ 26 
+3.3. - Identificación y autenticación para la generación de nuevo par de claves (Rutina de Re Key).................. 26 
+3.3.1. - Renovación con generación de nuevo par de claves (Rutina de Re Key)............................................... 26 
+3.3.2. - Generación de un certificado con el mismo par de claves......................................................................... 26 
+3.4. - Requerimiento de revocación. ................................................................................................................................ 27 
+4. - CICLO DEL CERTIFICADO: REQUERIMIENTOS OPERATIVOS. ................................................................ 27 
+4.1. - Solicitud de certificado. ........................................................................................................................................... 27 
+4.1.1. - Solicitantes de certificados.............................................................................................................................. 27 
+4.1.2. - Solicitud de certificado. ................................................................................................................................... 27 
+4.2. - Procesamiento de la solicitud del certificado....................................................................................................... 28 
+4.3. - Emisión del certificado. ........................................................................................................................................... 29 
+4.3.1. - Proceso de emisión del certificado. ............................................................................................................... 29 
+4.3.2. - Notificación de emisión................................................................................................................................... 29 
+4.4.- Aceptación del certificado........................................................................................................................................ 29 
+4.5.- Uso del par de claves y del certificado................................................................................................................... 29 
+4.5.1.- Uso de la clave privada y del certificado por parte del suscriptor............................................................. 29 
+4.5.2.- Uso de la clave pública y del certificado por parte de Terceros Usuarios. .............................................. 30 
+4.6. - Renovación del certificado sin generación de un nuevo par de claves............................................................ 30 
+4.7. - Renovación del certificado con generación de un nuevo par de claves. ......................................................... 30 
+4.8. - Modificación del certificado. .................................................................................................................................. 30 
+Página 2 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p3
+ 
+ 
+3 
+4.9. - Suspensión y Revocación de Certificados............................................................................................................ 31 
+4.9.1. - Causas de revocación. ...................................................................................................................................... 31 
+4.9.2. - Autorizados a solicitar la revocación. ........................................................................................................... 32 
+4.9.3. - Procedimientos para la solicitud de revocación. ......................................................................................... 32 
+4.9.4. - Plazo para la solicitud de revocación. ........................................................................................................... 34 
+4.9.5. - Plazo para el procesamiento de la solicitud de revocación........................................................................ 34 
+4.9.6. - Requisitos para la verificación de la lista de certificados revocados. ...................................................... 34 
+4.9.7. - Frecuencia de emisión de listas de certificados revocados........................................................................ 35 
+4.9.8.- Vigencia de la lista de certificados revocados. ............................................................................................. 35 
+4.9.9. - Disponibilidad del servicio de consulta sobre revocación y de estado del certificado. ........................ 35 
+4.9.10. - Requisitos para la verificación en línea del estado de revocación. ........................................................ 36 
+4.9.11. - Otras formas disponibles para la divulgación de la revocación. ............................................................ 36 
+4.9.12. - Requisitos específicos para casos de compromiso de claves. ................................................................. 37 
+4.9.13. - Causas de suspensión..................................................................................................................................... 37 
+4.9.14. - Autorizados a solicitar la suspensión. ......................................................................................................... 37 
+4.9.15. - Procedimientos para la solicitud de suspensión. ....................................................................................... 37 
+4.9.16. - Límites del periodo de suspensión de un certificado................................................................................ 37 
+4.10. – Estado del certificado............................................................................................................................................ 37 
+4.10.1. – Características técnicas. ................................................................................................................................ 37 
+4.10.2. – Disponibilidad del servicio. ......................................................................................................................... 38 
+4.10.3. – Aspectos operativos....................................................................................................................................... 38 
+4.11. – Desvinculación del suscriptor.............................................................................................................................. 38 
+4.12. – Recuperación y custodia de claves privadas. .................................................................................................... 38 
+5. - CONTROLES DE SEGURIDAD FÍSICA, OPERATIVOS Y DE GESTIÓN..................................................... 39 
+5.1. - Controles de seguridad física.................................................................................................................................. 39 
+5.2. - Controles de Gestión. ............................................................................................................................................... 39 
+5.3. - Controles de seguridad del personal...................................................................................................................... 40 
+5.4. - Procedimientos de Auditoría de Seguridad. ......................................................................................................... 40 
+5.5. - Conservación de registros de eventos. .................................................................................................................. 41 
+5.6. - Cambio de claves criptográficas. ........................................................................................................................... 42 
+5.7. - Plan de respuesta a incidentes y recuperación ante desastres. .......................................................................... 42 
+5.8. - Plan de Cese de Actividades. .................................................................................................................................. 43 
+6. - CONTROLES DE SEGURIDAD TÉCNICA............................................................................................................. 44 
+6.1. - Generación e instalación del par de claves criptográficas. ................................................................................ 44 
+6.1.1. - Generación del par de claves criptográficas................................................................................................. 44 
+6.1.2. - Entrega de la clave privada. ............................................................................................................................ 45 
+6.1.3. - Entrega de la clave pública al emisor del certificado. ................................................................................ 45 
+6.1.4. - Disponibilidad de la clave pública del AC ONTI. ...................................................................................... 45 
+6.1.5. - Tamaño de claves. ............................................................................................................................................ 46 
+6.1.6. - Generación de parámetros de claves asimétricas. ....................................................................................... 46 
+6.1.7. - Propósitos de utilización de claves (campo “KeyUsage” en certificados X.509 v.3)........................... 46 
+6.2. - Protección de la clave privada y controles sobre los dispositivos criptográficos. ......................................... 46 
+6.2.1. – Controles y estándares para dispositivos criptográficos............................................................................ 47 
+6.2.2. - Control “M de N” de clave privada. .............................................................................................................. 47 
+6.2.3. - Recuperación de clave privada....................................................................................................................... 47 
+6.2.4. - Copia de seguridad de clave privada. ............................................................................................................ 47 
+6.2.5. - Archivo de clave privada................................................................................................................................. 48 
+6.2.6. - Transferencia de claves privadas en dispositivos criptográficos. ............................................................. 48 
+6.2.7. - Almacenamiento de claves privadas en dispositivos criptográficos. ....................................................... 48 
+6.2.8. - Método de activación de claves privadas. .................................................................................................... 48 
+6.2.9. - Método de desactivación de claves privadas. .............................................................................................. 49 
+6.2.10. - Método de destrucción de claves privadas. ................................................................................................ 49 
+6.2.11. – Requisitos de los dispositivos criptográficos. ........................................................................................... 49 
+6.3. - Otros aspectos de administración de claves. ........................................................................................................ 49 
+6.3.1. - Archivo permanente de la clave pública....................................................................................................... 49 
+6.3.2. - Período de uso de clave pública y privada. .................................................................................................. 50 
+Página 3 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p4
+ 
+ 
+4 
+6.4. - Datos de activación. ................................................................................................................................................. 50 
+6.4.1. - Generación e instalación de datos de activación. ........................................................................................ 50 
+6.4.2. - Protección de los datos de activación............................................................................................................ 50 
+6.4.3. - Otros aspectos referidos a los datos de activación. ..................................................................................... 51 
+6.5. - Controles de seguridad informática. ...................................................................................................................... 51 
+6.5.1. - Requisitos Técnicos específicos..................................................................................................................... 51 
+6.5.2. - Requisitos de seguridad computacional........................................................................................................ 52 
+6.6. - Controles Técnicos del ciclo de vida de los sistemas. ........................................................................................ 52 
+6.6.1. - Controles de desarrollo de sistemas............................................................................................................... 52 
+6.6.2. – Controles de gestión de seguridad................................................................................................................. 52 
+6.6.3. - Controles de seguridad del ciclo de vida del software. .............................................................................. 53 
+6.7. - Controles de seguridad de red. ............................................................................................................................... 53 
+6.8. – Certificación de fecha y hora. ................................................................................................................................ 53 
+7. - PERFILES DE CERTIFICADOS Y DE LISTAS DE CERTIFICADOS REVOCADOS. ................................ 53 
+7.1. - Perfil del certificado. ................................................................................................................................................ 53 
+7.2. - Perfil de la lista de certificados revocados. .......................................................................................................... 60 
+7.3. - Perfil de la consulta en línea del estado del certificado ..................................................................................... 62 
+8. – AUDITORÍA DE CUMPLIMIENTO Y OTRAS EVALUACIONES.............................................................. 62 
+9. – ASPECTOS LEGALES Y ADMINISTRATIVOS............................................................................................... 63 
+9.1. – Aranceles. .................................................................................................................................................................. 63 
+9.2. - Responsabilidad Financiera. ................................................................................................................................... 63 
+9.3. – Confidencialidad. ..................................................................................................................................................... 64 
+9.3.1. - Información confidencial. ............................................................................................................................... 64 
+9.3.2. - Información no confidencial ........................................................................................................................... 65 
+9.3.3. – Responsabilidades de los roles involucrados .............................................................................................. 65 
+9.4.- Privacidad.................................................................................................................................................................... 66 
+9.5.- Derechos de Propiedad Intelectual.......................................................................................................................... 66 
+9.6.- Responsabilidades y garantías. ................................................................................................................................ 66 
+9.7. – Deslinde de responsabilidad................................................................................................................................... 67 
+9.8. – Limitaciones a la responsabilidad frente a terceros. .......................................................................................... 67 
+9.9. – Compensaciones por daños y perjuicios. ............................................................................................................. 67 
+9.10. – Condiciones de vigencia. ...................................................................................................................................... 67 
+9.11.- Avisos personales y comunicaciones con los participantes. ............................................................................ 67 
+9.12.- Gestión del ciclo de vida del documento............................................................................................................. 67 
+9.12.1. - Procedimientos de cambio. ........................................................................................................................... 67 
+9.12.2 – Mecanismo y plazo de publicación y notificación. ................................................................................... 68 
+9.12.3. – Condiciones de modificación del OID. ...................................................................................................... 68 
+9.13. - Procedimientos de resolución de conflictos....................................................................................................... 68 
+9.14. - Legislación aplicable. ............................................................................................................................................ 69 
+9.15. – Conformidad con normas aplicables. ................................................................................................................. 70 
+9.16. – Cláusulas adicionales ............................................................................................................................................ 70 
+9.17. – Otras cuestiones generales ................................................................................................................................... 70 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Página 4 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p5
+ 
+ 
+5 
+1. – INTRODUCCIÓN. 
+1.1. - Descripción general. 
+El presente documento establece las políticas que se aplican a la relación entre la Autoridad 
+Certificante ONTI  en el marco de la Infraestructura de Firma Digital (Ley N° 25.506 y sus 
+modificatorias) y los solicitantes, suscriptores y terceros usuarios de los certificados que ésta 
+emita. Un certificado vincula los datos de verificación de firma digital de una persona 
+humana o de un servidor a un conjunto de datos que permiten identificar a dicha persona, 
+conocida como suscriptor del certificado. 
+La autoridad de aplicación de la Infraestructura de Firma Digital antes mencionada es la 
+SECRETARÍA DE GOBIERNO DE MODERNIZACIÓN de la JEFATURA DE GABINETE DE 
+MINISTROS DE LA NACIÓN, siendo dicho organismo y la SECRETARÍA DE 
+MODERNIZACIÓN ADMINISTRATIVA, quienes entienden en las funciones de ente 
+licenciante. 
+ 
+1.2. - Nombre e Identificación del Documento.  
+Nombre: Política Única de Certificación de la Autoridad Certificante ONTI  
+Versión: 3.0 
+Fecha de aplicación: Enero 2019 
+Sitio de publicación: http://firmar.gob.ar/cps/cps.pdf 
+OID: 2.16.32.1.1.3 
+Lugar: Ciudad Autónoma de Buenos Aires, República Argentina 
+ 
+1.3. – Participantes.  
+Integran la infraestructura del AC ONTI las siguientes entidades: 
+ 
+Página 5 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p6
+ 
+ 
+6 
+1.3.1. – AC ONTI. 
+La Autoridad Certificante de la Oficina Nacional de Tecnologías de Información (en adelante, 
+AC ONTI), cuyas funciones son administradas por la DIRECCIÓN NACIONAL DE 
+TRAMITACIÓN E IDENTIFICACIÓN A DISTANCIA de la SUBSECRETARÍA DE GESTIÓN 
+ADMINISTRATIVA 
+dependiente 
+de 
+la 
+SECRETARÍA 
+DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA de la SECRETARÍA DE GOBIERNO  DE MODERNIZACIÓN de la 
+JEFATURA DE GABINETE DE MINISTROS DE LA NACIÓN, presta los servicios de 
+certificación, de acuerdo con los términos de la presente Política. 
+Domicilio: Roque Sáenz Peña 511 - (C1035AAA) Ciudad Autónoma de Buenos Aires 
+Argentina 
+Correo electrónico: firmadigital@modernizacion.gob.ar 
+ 
+ 
+ 
+ 
+1.3.2. - Autoridad de Registro. 
+El AC ONTI posee una estructura de Autoridades de Registro (en adelante AR), delegando 
+en ellas las funciones de: 
+1. Recepción de las solicitudes de certificados. 
+2. Validación de la identidad  y de la titularidad de la clave pública de los solicitantes o 
+suscriptores de certificados que se presenten ante ella. 
+3. Verificación de cualquier otro dato de los solicitantes o suscriptores.  
+4. Remisión de las solicitudes aprobadas a la AC ONTI. 
+5. Recepción y validación de las solicitudes de revocación de certificados y su remisión 
+a la AC ONTI. 
+6. Identificación y autenticación de los solicitantes de revocación de certificados. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 6 de 70
+
+--- p7
+ 
+ 
+7 
+7. Archivo y conservación de toda la documentación de respaldo del proceso de 
+validación de identidad, de acuerdo con los procedimientos establecidos por la AC 
+ONTI. 
+8. Cumplimiento de las normas y recaudos establecidos para la protección de datos 
+personales. 
+9. Cumplimiento de las disposiciones que establezca la Política Única de Certificación y 
+el Manual de Procedimientos de la AC ONTI en la parte que resulte aplicable. 
+10. Captura de fotografía y datos biométricos determinados por la reglamentación. 
+ 
+ 
+La AC ONTI conformará sus Autoridades de Registro en:  
+a) Entidades o jurisdicciones pertenecientes al SECTOR PÚBLICO NACIONAL, 
+PROVINCIAL, MUNICIPAL, en cualquiera de sus tres Poderes, organismos binacionales, 
+organismos tripartitos, el BANCO CENTRAL DE LA REPÚBLICA ARGENTINA, y otras 
+organizaciones públicas.  
+b) Personas jurídicas del SECTOR PRIVADO y ENTES PÚBLICOS NO ESTATALES.  
+c) Personas jurídicas del SECTOR PRIVADO  que cuenten con Políticas y áreas de  
+Compliance (Cumplimiento) para los casos de aplicaciones de firma digital de recibos de 
+sueldo  
+En todos los casos, la SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA se reserva 
+el derecho de autorizar la incorporación de las nuevas Autoridades de Registro. 
+La AC ONTI se reserva el derecho de dar de baja aquellas Autoridades de Registro que en 
+un plazo de SEIS (6) meses no aprueben ninguna solicitud de emisión de certificado digital. 
+Las entidades públicas y privadas que tengan interés en constituirse como Autoridades de 
+Registro de la AC ONTI, deberán solicitarlo por intermedio de su máxima autoridad, a la AC 
+ONTI, a través de los procedimientos electrónicos que determine la SECRETARÍA DE 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 7 de 70
+
+--- p8
+ 
+ 
+8 
+MODERNIZACIÓN ADMINISTRATIVA, en el sistema de Gestión Documental Electrónica – 
+GDE o en la Plataforma de Trámites a Distancia (TAD), según el caso, informando la 
+modalidad (fija o móvil).   
+Con dicha solicitud, la AR deberá proporcionar determinada información y acompañar 
+documentación con carácter de Declaración Jurada, en los términos de los Artículos 109 y 
+110 del Reglamento de Procedimientos Administrativos Decreto 1759/72 T.O. 2017 
+aprobado por el Decreto N° 894/2017. 
+La AC ONTI en un primer análisis de la información y documentación que acompaña la 
+solicitud, podrá, a su criterio, determinar su admisibilidad, solicitar ampliación de la 
+información o documentación o desestimar la solicitud. Una vez admitido el trámite de 
+solicitud de conformación de AR, asignará vacantes para el curso de Oficiales de Registro, y 
+evaluará el cumplimiento de los requisitos establecidos para las AR, entre los que se cuenta 
+la capacitación de sus OFICIALES DE REGISTRO y de los RESPONSABLES DE 
+SOPORTE TÉCNICO, así como la presentación de un seguro de caución cuando 
+correspondiere, entre otros. Cumplidos los requisitos mencionados, la AC ONTI elevará un 
+informe 
+y 
+solicitará 
+autorización 
+a 
+la 
+SECRETARÍA 
+DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA.   
+Las ARs serán autorizadas a funcionar como tales mediante acto administrativo de la 
+SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA.  
+Las ARs serán notificadas de dicha Resolución en su cuenta de usuario TAD, en caso de 
+corresponder, o en su cuenta de usuario GDE. 
+Las Autoridades de Registro deben abstenerse de generar, exigir, o por cualquier otro medio 
+tomar conocimiento o acceder bajo ninguna circunstancia, a los datos de creación de firma 
+digital de los titulares de certificados digitales emitidos. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 8 de 70
+
+--- p9
+ 
+ 
+9 
+La conservación de la documentación respaldatoria de los certificados digitales emitidos por 
+10 (DIEZ) años a partir de la fecha de vencimiento o revocación se realizará por los medios 
+establecidos por la SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA. 
+Las Autoridades de Registro pueden desempeñar sus funciones en una instalación fija o en 
+modalidad móvil.  
+Las Autoridades de Registro de la AC ONTI deberán asistirse mutuamente para expedirse 
+sobre solicitudes de emisión y de revocación de certificados digitales. 
+Toda la información vinculada a las AR conformadas en la AC ONTI, se encuentra 
+disponible en el sitio web del AC ONTI: https://firmar.gob.ar/ 
+Toda documentación relacionada con cualquier trámite que efectúe una Autoridad de 
+Registro ante la AC ONTI (tal como solicitudes de altas y bajas de ARs, designaciones de 
+personal que cumple roles propios de la AR, presentación de certificados de seguros de 
+caución, etc.) debe ser presentada por los interesados únicamente a través de la plataforma 
+de Trámites a Distancia (TAD), o del sistema de Gestión Documental Electrónica – GDE en 
+caso de corresponder. A tal fin, la Autoridad de Registro debe constituir una cuenta de 
+usuario en la Plataforma de Trámites a Distancia (TAD) como requisito previo a su 
+autorización para operar en tal carácter, en el caso de no disponer de un usuario en el 
+sistema de Gestión Documental Electrónica - GDE. 
+ 
+Toda la información vinculada a las AR conformadas en la AC ONTI, se encuentra 
+disponible en el sitio web del AC ONTI: https://firmar.gob.ar 
+ 
+1.3.3. - Suscriptores de certificados. 
+Podrán ser suscriptores de los certificados emitidos por la AC ONTI las personas humanas, 
+que requieran un certificado digital para firmar digitalmente cualquier documento o 
+Página 9 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p10
+ 
+ 
+10 
+transacción, pudiendo ser utilizados para cualquier uso o aplicación, como así también para 
+autenticación o cifrado. 
+La AC ONTI emite también un certificado para ser usado en relación con el servicio On Line 
+Certificate Status Protocol (en adelante, OCSP) de consulta sobre el estado de un 
+certificado. 
+Asimismo, la AC ONTI emite certificados de aplicación, y presta el servicio de sello de 
+tiempo, según lo dispuesto en el artículo 9° de la Resolución N° 399-E/2016° del 5 de 
+octubre de 2016 del entonces MINISTERIO DE MODERNIZACIÓN. 
+ 
+1.3.4. - Terceros Usuarios. 
+Son Terceros Usuarios de los certificados emitidos bajo la presente Política Única de 
+Certificación, toda persona física o jurídica que recibe un documento firmado digitalmente y 
+que genera una consulta para verificar la validez del certificado digital correspondiente, de 
+acuerdo al Anexo I del Decreto N° 2628 del 19 de diciembre de 2002. 
+ 
+1.4. - Uso de los certificados.  
+Las claves correspondientes a los certificados digitales que se emitan bajo la presente 
+Política Única de Certificación podrán ser utilizadas en forma interoperable en los procesos 
+de firma digital de cualquier documento o transacción y para la autenticación o el cifrado. 
+ 
+1.5. - Administración de la Política. 
+1.5.1. - Responsable del documento. 
+Es responsable de la presente Política Única de Certificación la DIRECCIÓN NACIONAL DE 
+TRAMITACIÓN E IDENTIFICACIÓN A DISTANCIA de la SECRETARÍA DE GOBIERNO DE 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 10 de 70
+
+--- p11
+ 
+ 
+11 
+MODERNIZACIÓN de la JEFATURA DE GABINETE DE MINISTROS, con los siguientes 
+datos:  
+Correo electrónico: firmadigital@modernizacion.gob.ar 
+ 
+1.5.2. – Contacto. 
+La presente Política Única es administrada por el máximo responsable de la AC ONTI, 
+cuyos datos de contacto figuran en el apartado anterior: 
+ 
+1.5.3. - Procedimiento de aprobación de la Política Única de Certificación. 
+Esta Política Única de Certificación ha sido presentada ante la SECRETARÍA DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA 
+de 
+la 
+SECRETARÍA 
+DE 
+GOBIERNO 
+DE 
+MODERNIZACIÓN y ha sido aprobada por el correspondiente acto administrativo.  
+ 
+1.6. - Definiciones y Acrónimos. 
+1.6.1. – Definiciones. 
+Acuerdo con Suscriptores: Establece los derechos y obligaciones de las partes con 
+respecto a la solicitud, aceptación y uso de los certificados emitidos en el marco de la 
+Política de Única de Certificación.  
+Autoridad de Aplicación: La SECRETARÍA DE GOBIERNO DE MODERNIZACIÓN de la 
+JEFATURA DE GABINETE DE MINISTROS  DE LA NACIÓN es la Autoridad de Aplicación 
+de la Infraestructura de Firma Digital establecida por la Ley N° 25.506 y modificatorias.  
+Autoridad de Registro: Es la entidad que tiene a su cargo las funciones indicadas en 
+artículo 35 del Decreto Nº 2628/02.  
+Certificado Digital: Documento digital firmado digitalmente por un Certificador Licenciado, 
+que vincula los datos de verificación de firma a su titular (artículo 13 de la Ley N° 25.506). 
+Página 11 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p12
+ 
+ 
+12 
+Certificador Licenciado: Toda persona de existencia ideal, registro público de contratos u 
+organismo público que expide certificados, presta otros servicios en relación con la firma 
+digital y cuenta con una licencia para ello, otorgada por el ente licenciante. (Artículo 17 de la 
+Ley N° 25.506). 
+Certificación digital de fecha y hora: Indicación de la fecha y hora cierta, asignada a un 
+documento o registro electrónico por una tercera parte confiable y firmada digitalmente por 
+ella. (Anexo al Decreto N° 2628/02). 
+Ente licenciante: La SECRETARÍA DE GOBIERNO  DE MODERNIZACIÓN de la 
+JEFATURA DE GABINETE DE MINISTROS DE LA NACIÓN y la SECRETARÍA DE 
+MODERNIZACIÓN ADMINISTRATIVA constituyen el Ente Licenciante. 
+Lista de certificados revocados: Lista de certificados que han sido dejados sin efecto en 
+forma permanente por la AC ONTI, la cual ha sido firmada digitalmente y publicada por ella. 
+En inglés: Certificate Revocation List (CRL). (Anexo al Decreto N° 2628/02). 
+Manual de Procedimientos: Conjunto de prácticas utilizadas por la AC ONTI en la emisión 
+y administración de los certificados. En inglés: Certification Practice Statement (CPS). 
+(Anexo al Decreto N° 2628/02). 
+Plan de Cese de Actividades: conjunto de actividades a desarrollar por la AC ONTI en 
+caso de finalizar la prestación de sus servicios. (Anexo al Decreto N° 2628/02). 
+Plan de Continuidad de las operaciones: Conjunto de procedimientos a seguir por la AC 
+ONTI ante situaciones de ocurrencia no previstas que comprometan la continuidad de sus 
+operaciones.  
+Plan de Seguridad: Conjunto de políticas, prácticas y procedimientos destinados a la 
+protección de los recursos de la AC ONTI. (Anexo al Decreto N° 2628/02). 
+Política de Privacidad: conjunto de declaraciones que la AC ONTI se compromete a 
+cumplir de manera de resguardar los datos de los solicitantes y suscriptores de certificados 
+digitales por él emitidos. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 12 de 70
+
+--- p13
+ 
+ 
+13 
+Servicio OCSP (Protocolo en línea del estado de un certificado – “Online Certificate 
+Status Protocol”): servicio de verificación en línea del estado de los certificados. El OCSP 
+es un método para determinar el estado de revocación de un certificado digital usando otros 
+medios que no sean el uso de Listas de Revocación de Certificados (CRL). El resultado de 
+una consulta a este servicio está firmado por la AC ONTI que brinda el servicio. 
+Suscriptor o Titular de certificado digital: Persona a cuyo nombre se emite un certificado 
+y que posee una clave privada que se corresponde con la clave pública contenida en el 
+mismo. 
+Tercero Usuario: persona humana o jurídica que recibe un documento firmado digitalmente 
+y que genera una consulta para verificar la validez del certificado digital correspondiente.  
+ 
+1.6.2. – Acrónimos. 
+ACR-RA – Autoridad Certificante Raíz de la REPÚBLICA ARGENTINA. 
+AC ONTI - Autoridad Certificante de la OFICINA NACIONAL DE TECNOLOGÍAS DE 
+INFORMACIÓN,  dependiente de la DIRECCIÓN NACIONAL DE TRAMITACIÓN E 
+IDENTIFICACIÓN A DISTANCIA. 
+AR – Autoridad de Registro. 
+CRL - Lista de Certificados Revocados (“Certificate Revocation List”). 
+CUIL – Clave Única de Identificación Laboral. 
+CUIT - Clave Única de Identificación Tributaria. 
+DNTEID - DIRECCIÓN NACIONAL DE TRAMITACIÓN E IDENTIFICACIÓN A DISTANCIA. 
+DNSAFD - DIRECCIÓN NACIONAL DE SISTEMAS DE ADMINISTRACIÓN Y FIRMA 
+DIGITAL. 
+FIPS - Estándares Federales de Procesamiento de la Información (“Federal Information 
+Processing Standard”). 
+GDE – Sistema de Gestión Documental Electrónica 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 13 de 70
+
+--- p14
+ 
+ 
+14 
+HSM – Módulo de Seguridad de Hardware (“Hardware Security Module”).  
+IEC - International Electrotechnical Commission. 
+IETF - Internet Engineering Task Force.  
+NIST - Instituto Nacional de Normas y Tecnología (“National Institute of Standards and 
+Technology”). 
+OCSP - Protocolo en línea del estado de un certificado (“On line Certificate Status Protocol”). 
+OID - Identificador de Objeto (“Object Identifier”). 
+ONTI - Oficina Nacional de Tecnologías de Información.  
+OR - Oficial de Registro. 
+PIN – Contraseña que protege la clave privada del suscriptor, deberá contener como mínimo 
+un largo de 8 caracteres requiriendo utilizar mayúsculas, minúsculas y números. 
+PKCS #10 - Estándar de solicitud de certificación (“Public-Key Cryptography Standards”). 
+RFC - Request for Comments. 
+RSA - Sistema Criptográfico de Clave Pública (“Rivest, Shamir y Adleman”). 
+SHA-256 - Algoritmo de Hash Seguro (“Secure Hash Algorithm”). 
+SGM JGM – SECRETARÍA DE GOBIERNO DE MODERNIZACIÓN DE LA JEFATURA DE 
+GABINETE DE MINISTROS DE LA NACIÓN. 
+SMA - SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA de la SECRETARÍA DE 
+GOBIERNO DE MODERNIZACIÓN de la JEFATURA DE GABINETE DE MINISTROS DE 
+LA NACIÓN. 
+TAD – Plataforma de Trámites a Distancia del sistema de Gestión Documental Electrónica – 
+GDE. 
+X.509 - Estándar UIT-T para infraestructuras de claves públicas. 
+ 
+Página 14 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p15
+ 
+ 
+15 
+2.- 
+RESPONSABILIDADES 
+VINCULADAS 
+A 
+LA 
+PUBLICACIÓN 
+Y 
+A 
+LOS 
+REPOSITORIOS. 
+Conforme a lo dispuesto por la Ley N° 25.506, la relación entre la AC ONTI que emite un 
+certificado digital y el titular de ese certificado se rige por el contrato que celebren entre 
+ellos, sin perjuicio de las previsiones de la citada ley, y demás legislación vigente. Al emitir 
+un certificado digital o al reconocerlo en los términos del artículo 16 de la Ley N° 25.506, la 
+AC ONTI es responsable por los daños y perjuicios que provoque, por los incumplimientos a 
+las previsiones de ésta, por los errores u omisiones que presenten los certificados digitales 
+que expida, por no revocarlos, en legal tiempo y forma cuando así correspondiere y por las 
+consecuencias imputables a la inobservancia de procedimientos de certificación exigibles 
+todo ello de acuerdo con lo establecido en el artículo 38 de la Ley N° 25.506. Corresponderá 
+a la AC ONTI demostrar que actuó con la debida diligencia. 
+El artículo 36 del Decreto N° 2628/02, reglamentario de la Ley N° 25.506, establece la 
+responsabilidad de la AC ONTI respecto de las AR. 
+En ese sentido prescribe que una AR puede constituirse como única unidad o con varias 
+unidades dependientes jerárquicamente entre sí, pudiendo delegar su operatoria en otras 
+AR, siempre que medie la aprobación de la AC ONTI y de la SECRETARÍA DE 
+MODERNIZACIÓN ADMINISTRATIVA. 
+La AC ONTI es responsable con los alcances establecidos en la Ley N° 25.506, aún en el 
+caso de que delegue parte de su operatoria en AR, sin perjuicio del derecho de la AC ONTI 
+de reclamar a la AR las indemnizaciones por los daños y perjuicios que aquella sufriera 
+como consecuencia de los actos y/u omisiones de ésta.  
+Las Autoridades de Registro pertenecientes al sector privado que serán conformadas en la 
+AC 
+ONTI, 
+previa 
+autorización 
+de 
+la 
+SECRETARÍA 
+DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA, deberán constituir una garantía mediante un seguro de caución a fin de 
+garantizar el cumplimiento de las obligaciones establecidas en la normativa vigente, sin 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 15 de 70
+
+--- p16
+ 
+ 
+16 
+perjuicio de otros requisitos que puedan ser exigidos con posterioridad a la aprobación de la 
+presente Política Única de Certificación. 
+ 
+La AC ONTI no es responsable en los siguientes casos, según el artículo 39 de la Ley N° 
+25.506: 
+a) Por los casos que se excluyan taxativamente en las condiciones de emisión y 
+utilización de sus certificados digitales y que no estén expresamente previstos en la 
+Ley N° 25.506; 
+b) Por los daños y perjuicios que resulten del uso no autorizado de un certificado digital, 
+si en las correspondientes condiciones de emisión y utilización de sus certificados 
+constan las restricciones de su utilización; 
+c) Por eventuales inexactitudes en el certificado que resulten de la información facilitada 
+por el titular que, según lo dispuesto en las normas y en los manuales de 
+procedimientos respectivos, deba ser objeto de verificación, siempre que la AC ONTI 
+pueda demostrar que ha tomado todas las medidas razonables. 
+Los criterios de valoración que seguirá la AR sobre la documentación aportada por el 
+suscriptor para acreditar identidad u otros datos a incluir en el certificado, serán los 
+normalmente aceptados en Derecho. La Autoridad de Registro siempre exigirá la presencia 
+física del suscriptor.  
+Todos los trámites realizados por las ARs son firmados digitalmente por los oficiales de 
+registro y operadores que los realizan, asumiendo así su plena responsabilidad en el 
+proceso. 
+Los alcances de la responsabilidad de la AC ONTI se limitan a las consecuencias directas 
+de la falta de cumplimiento de los procedimientos establecidos en esta Política Única de 
+Certificación en relación a la emisión y revocación de certificados.  
+IF-2019-01737754-APN-DNTEID#JGM
+Página 16 de 70
+
+--- p17
+ 
+ 
+17 
+Asimismo, la responsabilidad de la AC ONTI se limita a los ámbitos de su incumbencia 
+directa, en ningún momento será responsable por el mal uso de los certificados que pudiera 
+hacerse, tampoco por los daños y perjuicios derivados de la falta de consulta de la 
+información disponible en Internet sobre la validez de los certificados, ni tampoco será 
+responsable de los usos de los certificados en aplicaciones específicas.  
+La AC ONTI no garantiza el acceso a la información cuando mediaran razones de fuerza 
+mayor (catástrofes naturales, cortes masivos de luz por períodos indeterminados, 
+destrucción debido a eventos no previstos, etc.) ni asume responsabilidad por los daños o 
+perjuicios que se deriven en forma directa o indirecta como consecuencia de estos casos. 
+La AC ONTI no asume responsabilidad: 
+a) en los casos no establecidos expresamente en la legislación aplicable, 
+b) en aquellos casos de utilización no autorizada de un certificado cuya descripción se 
+encuentra establecida en esta Política Única de Certificación, 
+c) en aquellos casos de eventuales inexactitudes en los datos contenidos en el certificado 
+que resulten de información facilitada por el suscriptor del certificado y que hubieran sido 
+objeto de verificación de acuerdo con los procedimientos establecidos en la Política Única 
+de Certificación y en el Manual de Procedimientos 
+d) en los supuestos de falta de cumplimiento de los procedimientos establecidos para la 
+emisión y revocación de certificados por parte de las Autoridades de Registro y/o sus 
+Oficiales de Registro. 
+2.1. – Repositorios. 
+El servicio de repositorio de información y la publicación de la Lista de Certificados 
+Revocados y su servicio de OCSP son administrados en forma directa por la AC ONTI. 
+2.2. - Publicación de información de la AC ONTI. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 17 de 70
+
+--- p18
+ 
+ 
+18 
+La AC ONTI garantiza el acceso a la información actualizada y vigente publicada en su 
+repositorio, en cumplimiento con lo dispuesto en el artículo 20 de la Resolución MM Nº 399-
+E/2016. 
+Adicionalmente, la AC ONTI mantiene en el mismo repositorio en línea de acceso público: 
+a) Su certificado OCSP. 
+b) Las Políticas de Certificación anteriores.  
+c) Información relevante de los informes de la última auditoría dispuesta por la 
+Autoridad de Aplicación. 
+d) Las versiones anteriores de certificados de la ACR-RA. 
+ 
+El servicio de repositorio se encuentra disponible para uso público durante las 
+VEINTICUATRO (24) horas los SIETE (7) días de la semana, sujeto a un razonable 
+calendario de mantenimiento, en el sitio web del AC ONTI https://firmar.gob.ar 
+La AC ONTI está obligada a brindar el servicio de repositorio en cumplimiento de lo 
+dispuesto en el artículo 21 inc. k) de la Ley N° 25.506, el artículo 34 inc. g), h) y m) del 
+Decreto N° 2628/02 y sus modificatorios   y en la presente Política Única de Certificación.  
+ 
+2.3. - Frecuencia de publicación. 
+El procedimiento de emisión y publicación de la CRL y de las delta CRL se ejecuta en forma 
+automática por la aplicación de la AC ONTI, se emitirá cada VEINTICUATRO (24) horas la 
+CRL completa y se emitirán deltas CRL con frecuencia horaria. 
+Se garantiza la actualización inmediata del repositorio cada vez que cualquiera de los 
+documentos publicados sea modificado. 
+ 
+2.4. - Controles de acceso a la información. 
+Página 18 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p19
+ 
+ 
+19 
+Se garantizan los controles de los accesos al certificado de la AC ONTI, a la Lista de 
+Certificados Revocados y a las versiones anteriores y actualizadas de la Política de 
+Certificación y a su Manual de Procedimientos (excepto en sus aspectos confidenciales). 
+Solo se revelará información confidencial o privada, si es requerida judicialmente o en el 
+marco de los procedimientos administrativos que resulten aplicables. 
+En virtud de lo dispuesto por la Ley de Protección de Datos Personales N° 25.326 y por el 
+inciso h) del artículo 21 de la Ley N° 25.506, el solicitante o titular de un certificado digital 
+podrá solicitar el acceso a toda la información relativa a las tramitaciones realizadas. 
+ 
+3. - IDENTIFICACIÓN Y AUTENTICACIÓN. 
+En esta sección se describen los procedimientos empleados para autenticar la identidad de 
+los solicitantes de certificados digitales y utilizados por la AC ONTI o sus AR como 
+prerrequisito para su emisión. También se describen los pasos para la autenticación de los 
+solicitantes de renovación y revocación de certificados. 
+ 
+3.1.- Asignación de nombres de suscriptores. 
+3.1.1. - Tipos de Nombres. 
+El nombre a utilizar es el que surge de la documentación presentada por el solicitante, de 
+acuerdo al apartado que sigue. 
+ 
+3.1.2. - Necesidad de Nombres Distintivos. 
+Para los certificados de aplicación: 
+- 
+“commonName” (OID 2.5.4.3: Nombre común): corresponde al nombre de la 
+aplicación, servicio o de la unidad operativa responsable del servicio. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 19 de 70
+
+--- p20
+ 
+ 
+20 
+- 
+“organizationalUnitName” (OID 2.5.4.11: Nombre de la suborganización): contiene a 
+las unidades operativas relacionadas con el servicio, en caso de existir, pudiendo utilizarse 
+varias instancias de este atributo de ser necesario. 
+- 
+“organizationName” (OID 2.5.4.10: Nombre de la organización): este campo está 
+presente y coincide con el nombre de la persona responsable del servicio o aplicación. 
+- 
+“serialNumber” (OID 2.5.4.5: Nro. de serie): este campo está presente y contiene el 
+número de identificación de la persona responsable del servicio o aplicación, expresado 
+como texto y respetando el siguiente formato y codificación: “[código de identificación]” “[nro. 
+de identificación]”. 
+El valor para el campo [código de identificación] es: 
+- 
+“CUIT”: Clave Única de Identificación Tributaria para las Personas Jurídicas 
+argentinas. 
+- 
+“countryName” (OID 2.5.4.6: Código de país): DEBE estar presente y DEBE 
+representar el país de emisión de los certificados, codificado según el estándar 
+[ISO3166] de DOS (2) caracteres. 
+Para los certificados de Personas Humanas: 
+- 
+“commonName” (OID 2.5.4.3: Nombre común): este campo está presente y se 
+corresponde con el nombre que figura en el Documento de Identidad del suscriptor, 
+acorde a lo establecido en el punto 3.2.3. 
+- 
+“serialNumber” (OID 2.5.4.5: Nro. de serie): este campo está presente y contiene el 
+tipo y número de identificación del titular, expresado como texto y respetando el 
+siguiente formato y codificación: “[tipo de documento]” “[nro. de documento]” 
+Los valores posibles para el campo [tipo de documento] son: 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 20 de 70
+
+--- p21
+ 
+ 
+21 
+- 
+En caso de ciudadanos argentinos o residentes: “CUIT/CUIL”: Clave Única de 
+Identificación Tributaria o Laboral. 
+- 
+En caso de extranjeros: 
+a) “PA” [país]: Número de Pasaporte y código de país emisor. El atributo [país] DEBE 
+estar codificado según el estándar [ISO3166] de DOS (2) caracteres. 
+b) “EX” [país]: Número y tipo de documento extranjero aceptado en virtud de acuerdos 
+internacionales. El atributo [país] DEBE estar codificado según el estándar [ISO3166] 
+de DOS (2) caracteres. 
+c)  “countryName” (OID 2.5.4.6: Código de país): este campo está presente y 
+representa el país de emisión de los certificados, codificado según el estándar 
+[ISO3166] de DOS (2) caracteres. 
+3.1.3. - Anonimato o uso de seudónimos. 
+No se emitirán certificados anónimos o cuyo Nombre Distintivo contenga seudónimo. 
+3.1.4. - Reglas para la interpretación de nombres. 
+Todos los nombres representados dentro de los certificados emitidos bajo la presente 
+Política coinciden con los correspondientes al documento de identidad del suscriptor. Las 
+discrepancias o conflictos que pudieran generarse cuando los datos de los solicitantes o 
+suscriptores contengan caracteres especiales, se tratarán de modo de asegurar la precisión 
+de la información contenida en el certificado. 
+3.1.5. - Unicidad de nombres. 
+El nombre distintivo debe ser único para cada suscriptor, pudiendo existir más de un 
+certificado con igual nombre distintivo si corresponde al mismo suscriptor. El procedimiento 
+de resolución de homonimias se basa en la utilización del número de CUIL / CUIT.  
+IF-2019-01737754-APN-DNTEID#JGM
+Página 21 de 70
+
+--- p22
+ 
+ 
+22 
+Si se suscribiera más de UN (1) certificado con el mismo CUIL / CUIT, los certificados se 
+diferencian por el número de serie. 
+3.1.6. - Reconocimiento, autenticación y rol de las marcas registradas. 
+No se admite la inclusión de marcas comerciales, marcas de servicios o nombres de 
+fantasía como nombres distintivos en los certificados.  
+AC ONTI se reserva el derecho de tomar todas las decisiones referidas a posibles conflictos 
+sobre la utilización y titularidad de cualquier nombre entre sus suscriptores conforme su 
+normativa al respecto. En caso de conflicto, la parte que solicite el certificado debe 
+demostrar su interés legítimo y su derecho a la utilización de un nombre en particular. 
+3.2. - Registro inicial. 
+Se describen los procedimientos a utilizar para autenticar, como paso previo a la emisión de 
+UN (1) certificado, la identidad y demás atributos del solicitante que se presente ante AC 
+ONTI o ante la Autoridad de Registro operativamente vinculada. Se establecen los medios 
+admitidos para recibir los requerimientos de certificados y para comunicar su aceptación. 
+AC ONTI cumple con lo establecido en: 
+a) 
+El artículo 21, inciso a) de la Ley de Firma Digital Nº 25.506 y el artículo 34, inciso e) 
+de su reglamentario, Decreto Nº 2628/02, relativos a la información a brindar a los 
+solicitantes. 
+b) 
+El artículo 14, inciso b) de la Ley de Firma Digital Nº 25.506 relativo a los contenidos 
+mínimos de los certificados. 
+3.2.1. - Métodos para comprobar la posesión de la clave privada. 
+AC ONTI comprueba que el solicitante es el titular del par de claves mediante la verificación 
+de la solicitud del certificado digital en formato PKCS#10, la cual no incluye dicha clave. Las 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 22 de 70
+
+--- p23
+ 
+ 
+23 
+claves siempre son generadas por el solicitante. En ningún caso AC ONTI ni sus AR podrán 
+tomar conocimiento o acceder bajo ninguna circunstancia a las claves de los solicitantes o 
+titulares de los certificados, conforme el inciso b) del artículo 21 de la Ley N° 25.506. 
+3.2.2 - Autenticación de Personas Jurídicas o Entidades Públicas.  
+Este apartado resulta aplicable únicamente para los casos de emisión de certificados de 
+aplicaciones, a fin de autenticar la identidad de la persona jurídica titular de la aplicación. 
+Los procedimientos de autenticación de la identidad comprenden los siguientes aspectos: 
+a) 
+El requerimiento debe efectuarse únicamente por intermedio del responsable 
+autorizado a actuar en nombre de la persona jurídica titular de la aplicación. 
+b) 
+AC ONTI o la AR, en su caso, verificará la identidad del responsable antes 
+mencionado y su autorización para gestionar el certificado correspondiente. 
+c) 
+El responsable mencionado en el apartado a) deberá validar su identidad según lo 
+dispuesto en el apartado siguiente. 
+d) 
+La identidad de la Persona Jurídica titular de la aplicación deberá ser verificada 
+mediante documentación que acredite su condición de tal.  
+En todos los casos, la siguiente  documentación se presentará en formato digital a través de 
+la plataforma de Trámites a Distancia (TAD) del sistema de Gestión Documental Electrónica 
+– GDE o a través de éste último de corresponder:  
+Para personas jurídicas: 
+a) Constancia de inscripción en el Registro Societario correspondiente a la jurisdicción. 
+b) Autorización de la máxima autoridad o su apoderado para gestionar el certificado 
+digital.  
+Para entidades públicas: 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 23 de 70
+
+--- p24
+ 
+ 
+24 
+a) Nota del órgano con competencia dentro del organismo para gestionar el certificado. 
+b) Identificación de la aplicación, servicio o unidad operativa responsable. 
+AC ONTI cumple con las siguientes exigencias reglamentarias impuestas por: 
+a) 
+El artículo 21, inciso i) de la Ley Nº 25.506 relativo a la conservación de la 
+documentación de respaldo de los certificados emitidos. 
+b) 
+El artículo 21, inciso f) de la Ley Nº 25.506 relativo a la recolección de datos 
+personales. 
+c) 
+El artículo 34, inciso m) del Decreto Nº 2628/02 relativo a la protección de datos 
+personales. 
+Debe conservarse la documentación que respalda el proceso de identificación de la persona 
+responsable de la custodia de las claves criptográficas. 
+El responsable autorizado o a cargo de la aplicación debe firmar un acuerdo que contenga la 
+confirmación de que la información incluida en el certificado es correcta.  
+Todos  los documentos anteriormente detallados, tanto para entidades públicas o privadas, 
+serán presentados por los interesados a través de la Plataforma de Trámites a Distancia 
+(TAD) del sistema de Gestión Documental Electrónica – GDE o a través de éste último de 
+corresponder, de acuerdo a lo que establezca la SECRETARÍA DE MODERNIZACIÓN 
+ADMINISTRATIVA. 
+3.2.3. - Autenticación de la identidad de Personas Humanas. 
+Se describen los procedimientos de autenticación de la identidad de los suscriptores de los 
+certificados de Personas Humanas. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 24 de 70
+
+--- p25
+ 
+ 
+25 
+Se exige la presencia física del solicitante o suscriptor del certificado ante AC ONTI o la 
+Autoridad de Registro. La verificación se efectúa mediante la presentación de los siguientes 
+documentos: 
+- 
+De poseer nacionalidad argentina, se requiere Documento Nacional de Identidad. 
+- 
+De tratarse de extranjeros, se requiere Documento Nacional de Identidad argentino o 
+Pasaporte válido u otro documento válido aceptado en virtud de acuerdos 
+internacionales. 
+Adicionalmente, la AR efectuará una captura de fotografía y huella dactilar del solicitante del 
+certificado utilizando un dispositivo biométrico.  
+Se consideran obligatorias las exigencias reglamentarias impuestas por: 
+a) 
+El artículo 21, inciso i) de la Ley Nº 25.506 relativo a la conservación de la 
+documentación de respaldo de los certificados emitidos. 
+b) 
+El artículo 21, inciso f) de la Ley Nº 25.506 relativo a la recolección de datos 
+personales. 
+c) 
+El artículo 34, inciso i) del Decreto Nº 2628/02 relativo a generar, exigir o tomar 
+conocimiento de la clave privada del suscriptor. 
+d) 
+El artículo 34, inciso m) del Decreto Nº 2628/02 relativo a la protección de datos 
+personales. 
+Adicionalmente, AC ONTI debe celebrar un acuerdo con el solicitante o suscriptor, conforme 
+el Anexo IV de la Resolución N° 399-E/2016 del entonces MINISTERIO DE 
+MODERNIZACIÓN, del que surge su conformidad respecto a la veracidad de la información 
+incluida en el certificado. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 25 de 70
+
+--- p26
+ 
+ 
+26 
+La Autoridad de Registro deberá verificar que el dispositivo criptográfico utilizado por el 
+solicitante, cumple con las especificaciones técnicas establecidas por la SECRETARÍA DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA 
+de 
+la 
+SECRETARÍA 
+DE 
+GOBIERNO 
+DE 
+MODERNIZACIÓN. 
+ 
+3.2.4. - Información no verificada del suscriptor.  
+Se conserva la información referida al solicitante que no hubiera sido verificada. 
+Adicionalmente, se cumple con lo establecido en el apartado 3 del inciso b) del artículo 14 
+de la Ley N° 25.506. 
+ 
+3.2.5. - Validación de autoridad.  
+Según lo dispuesto en el punto 3.2.2., AC ONTI o la AR verifican la autorización de la 
+persona humana que actúa en nombre de la Persona Jurídica para gestionar el certificado 
+correspondiente. 
+3.2.6. - Criterios para la interoperabilidad.  
+Los certificados emitidos pueden ser utilizados por sus titulares en forma interoperable para 
+firmar digitalmente cualquier documento o transacción, así como para autenticación o 
+cifrado. 
+ 
+3.3. - Identificación y autenticación para la generación de nuevo par de claves (Rutina 
+de Re Key). 
+3.3.1. - Renovación con generación de nuevo par de claves (Rutina de Re Key). 
+No aplicable. 
+3.3.2. - Generación de un certificado con el mismo par de claves.  
+No aplicable. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 26 de 70
+
+--- p27
+ 
+ 
+27 
+ 
+ 
+3.4. - Requerimiento de revocación. 
+El suscriptor cuando se trate de los certificados de persona humana o la persona humana a 
+cargo de la custodia de la clave privada de certificados de aplicación, podrá revocar el 
+certificado digital utilizando cualquiera de los siguientes métodos: 
+a) A través de la aplicación de la AC ONTI: https://pki.jgm.gob.ar/app/ que se encuentra 
+disponible VEINTICUATRO (24) horas, si tiene acceso a su clave privada o utilizando 
+el código de revocación que le fuera informado al momento de la emisión de su 
+certificado. 
+b) Presentándose ante una AR con documento que permita acreditar su identidad en 
+caso de no poder utilizar alguno de los anteriores.  
+Asimismo, el requerimiento de revocación podrá ser solicitado por quienes se encuentren 
+legitimados en el punto “4.9.2. – Autorizados a solicitar la revocación” de la presente 
+Política. 
+ 
+4. - CICLO DEL CERTIFICADO: REQUERIMIENTOS OPERATIVOS. 
+4.1. - Solicitud de certificado. 
+4.1.1. - Solicitantes de certificados. 
+Los solicitantes de certificados cumplen con lo establecido en el apartado 1.3.3.- 
+Suscriptores de certificados. 
+4.1.2. - Solicitud de certificado. 
+Las solicitudes sólo podrán ser iniciadas por el solicitante, en el caso de certificados de 
+personas humanas; en el caso de certificados de aplicación, por el representante legal o 
+Página 27 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p28
+ 
+ 
+28 
+apoderado con poder suficiente a dichos efectos, o por el Responsable del Servicio o de 
+aplicación, autorizado a tal fin. 
+Dicho solicitante debe presentar la documentación prevista en los apartados 3.2.2.- 
+Autenticación de la identidad de Personas Jurídicas o Entidades Públicas y 3.2.3.- 
+Autenticación de la identidad de Personas Humanas.  
+Los pasos para realizar la solicitud son los siguientes: 
+a) Ingresar al sitio web de AC ONTI https://pki.jgm.gob.ar/app/ seleccionando el enlace 
+a la aplicación de solicitud de emisión de certificados. 
+b) Completar la solicitud de certificado con los datos requeridos de acuerdo al tipo de 
+certificado, seleccionando una AR. 
+c) Aceptar el Acuerdo con Suscriptores en el que se hace referencia a la Política Única 
+de Certificación que respalda la emisión del certificado. 
+d) Enviar su solicitud a la AC ONTI. 
+e) Presentarse ante la AR correspondiente para realizar la identificación personal y la 
+verificación de la documentación y datos biométricos requeridos en cada caso. 
+Adicionalmente, el solicitante deberá leer y aceptar el Acuerdo con Suscriptores para 
+continuar el proceso. 
+ 
+4.2. - Procesamiento de la solicitud del certificado. 
+El procesamiento de la solicitud finaliza con su aceptación o rechazo por parte de la AR.  
+En todos los casos, la AR efectúa los siguientes pasos: 
+a) Verifica la existencia de la solicitud en la aplicación de AC ONTI. 
+b) Valida la identidad del solicitante o su representante autorizado mediante la 
+verificación de la documentación requerida. 
+Página 28 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p29
+ 
+ 
+29 
+c) Efectúa una captura de fotografía y de la huella dactilar del solicitante del certificado 
+utilizando un dispositivo biométrico.  
+ 
+4.3. - Emisión del certificado. 
+4.3.1. - Proceso de emisión del certificado. 
+Cumplidos los recaudos del proceso de validación de identidad y otros datos del solicitante, 
+de acuerdo con esta Política Única de Certificación y una vez aprobada la solicitud de 
+certificado por la AR, la AC ONTI emite el certificado firmándolo digitalmente y lo pone a 
+disposición del suscriptor.  
+4.3.2. - Notificación de emisión. 
+La notificación de la emisión del certificado se efectúa a través de un correo electrónico 
+remitido por la aplicación de AC ONTI a la cuenta de correo declarada por el solicitante o 
+representante autorizado al momento de iniciar el trámite. En dicho correo se indica el 
+enlace al que debe acceder para descargar el certificado emitido. 
+ 
+4.4.- Aceptación del certificado. 
+Un certificado emitido por AC ONTI se considera aceptado por su titular una vez que éste 
+haya sido puesto a su disposición por los medios indicados en el apartado anterior.  
+ 
+4.5.- Uso del par de claves y del certificado. 
+4.5.1.- Uso de la clave privada y del certificado por parte del suscriptor. 
+1) Según lo establecido en la Ley Nº 25.506, en su artículo 25, el suscriptor debe: 
+a) Mantener el control exclusivo de sus datos de creación de firma digital, no 
+compartirlos, e impedir su divulgación; 
+b) Utilizar UN (1) dispositivo de creación de firma digital técnicamente confiable; 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 29 de 70
+
+--- p30
+ 
+ 
+30 
+c) Solicitar la revocación de su certificado AC ONTI ante cualquier circunstancia que 
+pueda haber comprometido la privacidad de sus datos de creación de firma; 
+d) Informar sin demora a la AC ONTI el cambio de alguno de los datos contenidos en el 
+certificado digital que hubiera sido objeto de verificación. 
+2) 
+De acuerdo a lo establecido en la Resolución MM N° 399-E/2016 y sus 
+modificatorias, el suscriptor debe:  
+a) Proveer toda la información que le sea requerida a los fines de la emisión del 
+certificado de modo completo y preciso. 
+b) Utilizar los certificados de acuerdo a los términos y condiciones establecidos en la 
+presente Política Única de Certificación. 
+c) Tomar debido conocimiento, a través del procedimiento previsto en cada caso, del 
+contenido de la Política Única de Certificación, del Manual de Procedimientos, del 
+Acuerdo con Suscriptores y de cualquier otro documento aplicable. 
+ 
+4.5.2.- Uso de la clave pública y del certificado por parte de Terceros Usuarios.  
+Los Terceros Usuarios deben: 
+a) Conocer los alcances de la presente Política Única de Certificación. 
+b) Verificar la validez del certificado digital. 
+4.6. - Renovación del certificado sin generación de un nuevo par de claves.  
+No aplicable 
+4.7. - Renovación del certificado con generación de un nuevo par de claves. 
+No aplicable.  
+4.8. - Modificación del certificado. 
+El suscriptor se encuentra obligado a notificar a la AC ONTI cualquier cambio en alguno de 
+los datos contenidos en el certificado digital que hubiera sido objeto de verificación, de 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 30 de 70
+
+--- p31
+ 
+ 
+31 
+acuerdo a lo dispuesto en el inciso d) del artículo 25 de la Ley N° 25.506. En cualquier caso 
+procede la revocación de dicho certificado y de ser requerido, la solicitud de uno nuevo. 
+4.9. - Suspensión y Revocación de Certificados. 
+Los certificados serán revocados de manera oportuna y sobre la base de una solicitud de 
+revocación de certificado validada. 
+El estado de suspensión no es admitido en el marco de la Ley Nº 25.506. 
+4.9.1. - Causas de revocación. 
+AC ONTI procederá a revocar los certificados digitales que hubiera emitido en los siguientes 
+casos: 
+a) A solicitud del titular del certificado digital o del responsable autorizado para el 
+caso de certificados de Aplicación. 
+b) Si determinara que el certificado fue emitido en base a información falsa, que al 
+momento de la emisión hubiera sido objeto de verificación. 
+c) Si determinara que los procedimientos de emisión y/o verificación han dejado de 
+ser seguros. 
+d) Por Resolución Judicial.  
+e) Por Resolución de la Autoridad de Aplicación.  
+f) Por fallecimiento del titular. 
+g) Por declaración judicial de ausencia con presunción de fallecimiento del titular. 
+h) Por declaración judicial de incapacidad del titular. 
+i) Si se determina que la información contenida en el certificado ha dejado de ser 
+válida. 
+j) Cuando la clave privada asociada al certificado, o el medio en que se encuentre 
+almacenada, se encuentren comprometidos o corran peligro de estarlo. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 31 de 70
+
+--- p32
+ 
+ 
+32 
+k) Ante incumplimiento por parte del suscriptor de las obligaciones establecidas en 
+el Acuerdo con Suscriptores. 
+l) Si se determina que el certificado no fue emitido de acuerdo a los lineamientos de 
+la Política Única de Certificación, del  Manual de Procedimientos, de la Ley N° 
+25.506, el Decreto Reglamentario N° 2628/02, la Resolución MM Nº 399-E/2016, 
+sus modificatorias y demás normativa sobre firma digital. 
+m) Por revocación de su propio certificado digital.  
+AC ONTI, de corresponder, revocará el certificado en un plazo no superior a las 
+VEINTICUATRO (24) horas de recibido el requerimiento de revocación. 
+4.9.2. - Autorizados a solicitar la revocación. 
+Se encuentran autorizados a solicitar la revocación de un certificado emitido por AC ONTI: 
+a) El suscriptor del certificado. 
+b) El responsable autorizado que efectuara el requerimiento, en el caso de certificados 
+de aplicación. 
+c) El responsable autorizado por la Persona Jurídica que es titular de la aplicación. 
+d) El responsable autorizado por la Persona Jurídica responsable del sitio web, en el 
+caso de certificados de sitio seguro. 
+e) Aquellas personas habilitadas por el suscriptor del certificado a tal fin, previa 
+acreditación fehaciente de tal autorización. 
+f) AC ONTI o una de sus AR. 
+g) El ente licenciante. 
+h) La autoridad judicial competente. 
+i) La Autoridad de Aplicación. 
+ 
+4.9.3. - Procedimientos para la solicitud de revocación. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 32 de 70
+
+--- p33
+ 
+ 
+33 
+AC ONTI garantiza que: 
+a) 
+Se identifica debidamente al solicitante de la revocación según se establece en el 
+apartado 3.4. 
+b) 
+Las solicitudes de revocación, así como toda acción efectuada por AC ONTI o la 
+Autoridad de Registro en el proceso, están documentadas y conservadas en sus archivos. 
+c) 
+Se documentan y archivan las justificaciones de las revocaciones aprobadas. 
+d) 
+Una vez efectuada la revocación, se actualiza el estado del certificado en el 
+repositorio y se incluye en la próxima lista de certificados revocados a ser emitida. 
+e) 
+El suscriptor del certificado revocado es informado del cambio de estado de su 
+certificado. 
+ 
+Un suscriptor podrá revocar su certificado digital utilizando cualquiera de los siguientes 
+métodos: 
+a) A través de la aplicación de la AC ONTI https://pki.jgm.gob.ar/app/ que se 
+encuentra disponible VEINTICUATRO (24) horas, si tiene acceso a su clave 
+privada.   
+b) A través de la aplicación de la AC ONTI  https://pki.jgm.gob.ar/app/ que se 
+encuentra disponible VEINTICUATRO (24) horas, utilizando el código de 
+revocación que le fue entregado al momento de la emisión del certificado. 
+c) En caso de no poder utilizar alguno de los anteriores, presentándose ante una de 
+las AR de AC ONTI, con documento de identidad que permita acreditar su 
+identidad. 
+Los suscriptores serán notificados en sus respectivas direcciones de correo electrónico o en 
+la aplicación de  AC ONTI, del cumplimiento del proceso de revocación. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 33 de 70
+
+--- p34
+ 
+ 
+34 
+ 
+4.9.4. - Plazo para la solicitud de revocación. 
+El titular de un certificado debe requerir su revocación en forma inmediata cuando se 
+presente alguna de las circunstancias previstas en el apartado 4.9.1. 
+El servicio de recepción de solicitudes de revocación se encuentra disponible en forma 
+permanente SIETE POR VEINTICUATRO (7x24) horas cumpliendo con lo establecido en el 
+artículo 34, inciso f) del Decreto Nº 2628/02, a través de la aplicación web de la AC ONTI. 
+ 
+4.9.5. - Plazo para el procesamiento de la solicitud de revocación. 
+El plazo máximo entre la recepción de la solicitud y el cambio de la información de estado 
+del certificado indicando que la revocación ha sido puesta a disposición de los Terceros 
+Usuarios, no superará en ningún caso las VEINTICUATRO (24) horas. 
+ 
+4.9.6. - Requisitos para la verificación de la lista de certificados revocados. 
+Los Terceros Usuarios están obligados a verificar el estado de validez de los certificados 
+mediante el control de la lista de certificados revocados o en su defecto, mediante el servicio 
+de consultas en línea sobre el estado de los certificados (OCSP), que AC ONTI pondrá a su 
+disposición. 
+Los Terceros Usuarios están obligados a confirmar la autenticidad y validez de las listas de 
+certificados revocados mediante la verificación de la firma digital de AC ONTI y de su 
+período de validez. 
+AC ONTI cumple con lo establecido en el artículo 34, inciso g) del Decreto Nº 2628/02 
+relativo al acceso al repositorio de certificados revocados y las obligaciones establecidas en 
+la Resolución MM N° 399-E/2016 y sus correspondientes Anexos. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 34 de 70
+
+--- p35
+ 
+ 
+35 
+ 
+4.9.7. - Frecuencia de emisión de listas de certificados revocados. 
+AC ONTI genera y publica una Lista de Certificados Revocados asociada a esta Política 
+Única de Certificación con una frecuencia diaria, disponible en: 
+ 
+http://pki.jgm.gob.ar/crl/FD.crl  
+ 
+y en: 
+ 
+http://pkicont.jgm.gob.ar/crl/FD.crl  
+ 
+ 
+con listas complementarias (delta CRL) en modo horario. 
+4.9.8.- Vigencia de la lista de certificados revocados. 
+La lista de certificados revocados indicará su fecha de efectiva vigencia, así como la fecha 
+de su próxima actualización. 
+4.9.9. - Disponibilidad del servicio de consulta sobre revocación y de estado del 
+certificado. 
+AC ONTI pone a disposición de los interesados la posibilidad de verificar el estado de un 
+certificado por medio del acceso a la lista de certificados revocados y mediante el servicio de 
+consultas en línea sobre el estado de los certificados (OCSP). 
+Ambos servicios se encuentran disponibles SIETE POR VEINTICUATRO (7x24) horas, 
+sujetos a un razonable calendario de mantenimiento. 
+La 
+CRL 
+puede ser descargada del sitio web de AC ONTI disponible en: 
+http://pki.gob.ar/crl/FD.crl  y 
+http://pkicont.gob.ar/crl/FD.crl 
+Las delta CRL pueden ser descargadas del sitio web de AC ONTI disponible en:  
+http://pki.gob.ar/crl/FD+.crl y 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 35 de 70
+
+--- p36
+ 
+ 
+36 
+http://pkicont.gob.ar/crl/FD+.crl 
+El uso del protocolo OCSP permite, mediante su consulta, determinar el estado de validez 
+de un certificado digital de acuerdo con las características enunciadas en el apartado 4.1.10, 
+el mismo representa un método alternativo de consulta a la CRL.  
+El servicio OCSP se provee por medio del sitio web del AC ONTI disponible en 
+http://pki.gob.ar/ocsp y 
+http://pkicont.gob.ar/ocsp 
+AC ONTI posee servicios de alta disponibilidad para la consulta del estado de verificación de 
+los certificados y ante la eventualidad de no contar dicho servicio, AC ONTI posee sistemas 
+de contingencia publicados en:  
+http://pkicont.gob.ar/crl/FD.crl y 
+http://pkicont.gob.ar/ocsp 
+4.9.10. - Requisitos para la verificación en línea del estado de revocación. 
+Para la correcta verificación en línea del estado de revocación de un certificado, el tercero 
+usuario deberá disponer de un sistema operativo que implemente el protocolo OCSP. En su 
+defecto, el protocolo debe ser implementado por la aplicación que pretenda validar la firma 
+digital. Asimismo, los certificados de la ACR-RA y de la AC ONTI deberán encontrarse 
+instalados en el almacén de certificados de confianza del sistema operativo y/o de la 
+aplicación utilizada. 
+4.9.11. - Otras formas disponibles para la divulgación de la revocación. 
+AC ONTI a través de su servicio de búsqueda y consulta de certificados emitidos, permite 
+buscar un certificado y consultar su estado a ese instante; el mismo se encuentra disponible 
+en el sitio web del AC ONTI: https://pki.jgm.gov.ar. Para disponer de este servicio el tercero 
+usuario deberá poseer una computadora conectada a Internet y un navegador web a fin de 
+poder acceder al sitio web de AC ONTI. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 36 de 70
+
+--- p37
+ 
+ 
+37 
+4.9.12. - Requisitos específicos para casos de compromiso de claves. 
+En caso de compromiso de su clave privada, el titular del certificado correspondiente se 
+encuentra obligado a comunicar inmediatamente dicha circunstancia a la AC ONTI mediante 
+alguno de los mecanismos previstos en el apartado 4.9.3. - Procedimientos para la solicitud 
+de revocación. 
+4.9.13. - Causas de suspensión. 
+El estado de suspensión no es admitido en el marco de la Ley N° 25.506. 
+4.9.14. - Autorizados a solicitar la suspensión. 
+El estado de suspensión no es admitido en el marco de la Ley N° 25.506. 
+4.9.15. - Procedimientos para la solicitud de suspensión. 
+El estado de suspensión no es admitido en el marco de la Ley N° 25.506. 
+4.9.16. - Límites del periodo de suspensión de un certificado. 
+El estado de suspensión no es admitido en el marco de la Ley N° 25.506. 
+4.10. – Estado del certificado. 
+4.10.1. – Características técnicas. 
+Los servicios disponibles para la verificación del estado de los certificados emitidos por la 
+AC ONTI son: 
+a) Lista de certificados revocados (CRL). 
+b) Servicio OCSP. 
+c) Servicio de búsqueda y consulta de certificados emitidos. 
+Cada lista de certificados revocados (CRL) emitida contendrá información sobre los números 
+de serie de todos los certificados revocados durante un período de DOS (2) AÑOS 
+anteriores al momento de la emisión de dicha CRL. Esta información estará firmada 
+digitalmente por AC ONTI. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 37 de 70
+
+--- p38
+ 
+ 
+38 
+Cada lista de certificados revocados complementaria (delta CRL) contendrá los números de 
+serie de los certificados que fueron revocados durante el período que abarca desde la 
+emisión de la última CRL hasta el momento de emisión de dicha delta CRL; dicho período 
+nunca superará las VEINTICUATRO (24) horas. Esta información se encontrará firmada 
+digitalmente por AC ONTI.  
+El servicio OCSP permitirá consultar el estado de revocación en línea de un certificado 
+contra la información contenida en las últimas CRL y delta CRL emitidas; la información del 
+estado de revocación de dicho certificado estará firmada digitalmente por AC ONTI. 
+El servicio de búsqueda y consulta de certificados emitidos, permite buscar un certificado y a 
+la vez consultar su estado a ese instante; la información sobre el estado del certificado no 
+estará firmada digitalmente por AC ONTI. 
+4.10.2. – Disponibilidad del servicio. 
+Todos los servicios se encuentran disponibles SIETE POR VEINTICUATRO (7x24) horas, 
+sujetos a un razonable calendario de mantenimiento. 
+4.10.3. – Aspectos operativos. 
+No existen otros aspectos a mencionar. 
+4.11. – Desvinculación del suscriptor. 
+Una vez expirado el certificado o si este fuera revocado, de no tramitar un nuevo certificado, 
+su titular se considera desvinculado de los servicios de AC ONTI.  
+De igual forma se producirá la desvinculación, ante el cese de las operaciones de AC ONTI. 
+4.12. – Recuperación y custodia de claves privadas. 
+En virtud de lo dispuesto en el inciso b) del artículo 21 de la Ley N° 25.506, AC ONTI se 
+obliga a no realizar bajo ninguna circunstancia la recuperación o custodia de claves privadas 
+de los titulares de certificados digitales. Asimismo, de acuerdo a lo dispuesto en el inciso a) 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 38 de 70
+
+--- p39
+ 
+ 
+39 
+del artículo 25 de la Ley N° 25.506, el suscriptor de un certificado emitido en el marco de 
+esta Política Única de Certificación se encuentra obligado a mantener el control exclusivo de 
+sus datos de creación de firma digital, no compartirlos e impedir su divulgación.  
+ 
+5. - CONTROLES DE SEGURIDAD FÍSICA, OPERATIVOS Y DE GESTIÓN.  
+Se describen a continuación los procedimientos referidos a los controles de seguridad física, 
+de gestión y operativos implementados por AC ONTI. La descripción detallada se encuentra 
+en el Plan de Seguridad. 
+5.1. - Controles de seguridad física. 
+Se cuenta con controles de seguridad relativos a: 
+a) Construcción y ubicación de instalaciones.  
+b) Niveles de acceso físico. 
+c) Comunicaciones, energía y ambientación. 
+d) Exposición al agua. 
+e) Prevención y protección contra incendios. 
+f) Medios de almacenamiento. 
+g) Disposición de material de descarte. 
+h) Instalaciones de seguridad externas. 
+5.2. - Controles de Gestión. 
+Se cuenta con controles de seguridad relativos a: 
+a) Definición de roles afectados al proceso de certificación. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 39 de 70
+
+--- p40
+ 
+ 
+40 
+b) Número de personas requeridas por función. 
+c) Identificación y autenticación para cada rol. 
+d) Separación de funciones 
+5.3. - Controles de seguridad del personal. 
+Se cuenta con controles de seguridad relativos a: 
+a) Calificaciones, experiencia e idoneidad del personal, tanto de aquellos que cumplen 
+funciones críticas como de aquellos que cumplen funciones administrativas, de 
+seguridad, limpieza, etcétera. 
+b) Antecedentes laborales. 
+c) Entrenamiento y capacitación inicial. 
+d) Frecuencia de procesos de actualización técnica. 
+e) Frecuencia de rotación de cargos. 
+f) Sanciones a aplicar por acciones no autorizadas. 
+g) Requisitos para contratación de personal. 
+h) Documentación provista al personal, incluidas tarjetas y otros elementos de 
+identificación personal. 
+5.4. - Procedimientos de Auditoría de Seguridad. 
+Se mantienen políticas de registro de eventos, cuyos procedimientos detallados serán 
+desarrollados en el Manual de Procedimientos. 
+Se cuenta con procedimientos de auditoría de seguridad sobre los siguientes aspectos: 
+a) Tipo de eventos registrados: se cumple con lo establecido en el Anexo I Sección 3 de 
+la Resolución MM N° 399-E/2016. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 40 de 70
+
+--- p41
+ 
+ 
+41 
+b) Frecuencia de procesamiento de registros. 
+c) Período de guarda de los registros. se cumple con lo establecido en el inciso i) del 
+artículo 21 de la Ley N° 25.506 respecto a los certificados emitidos. 
+d) Medidas de protección de los registros, incluyendo privilegios de acceso. 
+e) Procedimientos de resguardo de los registros. 
+f) Sistemas de recolección y análisis de registros (internos vs. externos). 
+g) Notificaciones del sistema de recolección y análisis de registros. 
+h) Evaluación de vulnerabilidades. 
+ 
+5.5. - Conservación de registros de eventos. 
+Se han desarrollado e implementado políticas de conservación de registros, cuyos 
+procedimientos detallados se encuentran desarrollados en el Manual de Procedimientos. 
+Los procedimientos cumplen con lo establecido por el artículo 21, inciso i) de la Ley Nº 
+25.506 relativo al mantenimiento de la documentación de respaldo de los certificados 
+digitales emitidos. 
+Se respeta lo establecido en el Anexo I Sección 3 de la Resolución MM N° 399-E/2016 
+respecto del registro de eventos. 
+Existen procedimientos de conservación y guarda de registros en los siguientes aspectos, 
+que se encuentran detallados en el Manual de Procedimientos: 
+a) Tipo de registro archivado: se cumple con lo establecido en el Anexo II Sección 3 de 
+la Resolución MM N° 399-E/2016. 
+b) Período de guarda de los registros.  
+c) Medidas de protección de los registros archivados, incluyendo privilegios de acceso. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 41 de 70
+
+--- p42
+ 
+ 
+42 
+d) Procedimientos de resguardo de los registros. 
+e) Requerimientos para los registros de certificados de fecha y hora. 
+f) Sistemas de recolección y análisis de registros (internos vs. externos). 
+g) Procedimientos para obtener y verificar la información archivada. 
+5.6. - Cambio de claves criptográficas. 
+El par de claves de AC ONTI ha sido generado con motivo del licenciamiento y tiene una 
+vigencia de DIEZ (10) años. Por su parte la licencia tiene una vigencia de CINCO (5) años. 
+En todos los casos el cambio de claves criptográficas de AC ONTI implica la emisión de un 
+nuevo certificado por parte de la AC Raíz RA. Si la clave privada del AC ONTI se encontrase 
+comprometida, se procederá a la revocación de su certificado y esa clave ya no podrá ser 
+usada en el proceso de emisión de certificados.  
+AC ONTI tomará los recaudos necesarios para efectuar con suficiente antelación la 
+renovación de su licencia y la obtención del certificado, si correspondiese. 
+ 
+5.7. - Plan de respuesta a incidentes y recuperación ante desastres. 
+Se describen los requerimientos relativos a la recuperación de los recursos del AC ONTI en 
+caso de falla o desastre. Estos requerimientos serán desarrollados en el Plan de 
+Continuidad de las Operaciones. 
+Se han desarrollado procedimientos referidos a: 
+a) 
+Identificación, registro, reporte y gestión de incidentes. 
+b) 
+Recuperación ante falla inesperada o sospecha de falla de componentes de 
+hardware, software y datos. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 42 de 70
+
+--- p43
+ 
+ 
+43 
+c) 
+Recuperación ante compromiso o sospecha de compromiso de la clave privada del 
+AC ONTI. 
+d) 
+Continuidad de las operaciones en un entorno seguro luego de desastres. 
+Los procedimientos cumplen con lo establecido por el artículo 33 del Decreto Nº 2628/02 en 
+lo relativo a los servicios de infraestructura tecnológica prestados por un tercero. 
+ 
+5.8. - Plan de Cese de Actividades. 
+Se describen los requisitos y procedimientos a ser adoptados en caso de finalización de 
+servicios de la AC ONTI o de una o varias de sus Autoridades de Registro. Estos 
+requerimientos son desarrollados en su Plan de Cese de Actividades. 
+Se han implementado procedimientos referidos a: 
+a) 
+Notificación 
+a 
+la 
+SECRETARÍA 
+DE 
+MODERNIZACIÓN 
+ADMINISTRATIVA, 
+suscriptores, terceros usuarios, otros certificadores licenciados y usuarios vinculados. 
+b) 
+Revocación del certificado del AC ONTI y de los certificados emitidos. 
+c) 
+Transferencia de la custodia de archivos y documentación e identificación de su 
+custodio. 
+En relación a la custodia de archivos y documentación, se cumple con idénticas exigencias 
+de seguridad que las previstas para la AC ONTI o su Autoridad de Registro que cesó. 
+Se contempla lo establecido por el artículo 44 de la Ley Nº 25.506 de Firma Digital en lo 
+relativo a las causales de caducidad de la licencia. Asimismo, los procedimientos cumplen lo 
+dispuesto por el artículo 33 del Decreto Nº 2628/02, reglamentario de la Ley de Firma Digital, 
+en lo relativo a los servicios de infraestructura tecnológica prestados por un tercero y las 
+obligaciones establecidas en la Resolución MM N° 399-E/2016, sus correspondientes 
+Anexos y sus modificatorias.   
+IF-2019-01737754-APN-DNTEID#JGM
+Página 43 de 70
+
+--- p44
+ 
+ 
+44 
+ 
+6. - CONTROLES DE SEGURIDAD TÉCNICA. 
+Se describen las medidas de seguridad implementadas por la AC ONTI para proteger las 
+claves criptográficas y otros parámetros de seguridad críticos. Además, se incluyen los 
+controles técnicos que se implementarán sobre las funciones operativas de la AC ONTI, AR, 
+repositorios, suscriptores, etcétera. 
+6.1. - Generación e instalación del par de claves criptográficas. 
+6.1.1. - Generación del par de claves criptográficas. 
+La AC ONTI, luego del otorgamiento de su licencia, genera el par de claves criptográficas en 
+un ambiente seguro con la participación de personal autorizado, sobre dispositivos 
+criptográficos (HSM) FIPS 140-2 Nivel 3.  
+En el caso de las AR, cada Oficial de Registro genera y almacena su par de claves 
+utilizando un dispositivo criptográfico FIPS 140-2 Nivel 2 o superior. 
+Las claves criptográficas de los suscriptores de certificados de personas humanas son 
+generadas por hardware (nivel de seguridad alto) y almacenada por ellos. En este último 
+caso los dispositivos criptográficos utilizados deben ser FIPS 140-2 Nivel 2 o superior.  
+Las claves criptográficas utilizadas por los proveedores de otros servicios relacionados con 
+la firma digital serán generadas y almacenadas por software o utilizando dispositivos 
+criptográficos FIPS 140-2 Nivel 2 o superior (hardware). 
+La clave privada almacenada en un dispositivo criptográfico por hardware queda protegida a 
+través de DOS (2) factores: 
+1. La posesión personal e intransferible del dispositivo criptográfico por parte del 
+suscriptor. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 44 de 70
+
+--- p45
+ 
+ 
+45 
+2. La generación de un pin o contraseña creada por el suscriptor y que sólo él conoce 
+para acceder a la clave privada alojada en el dispositivo.  
+ 
+6.1.2. - Entrega de la clave privada.  
+En todos los casos, se cumple con la obligación de abstenerse de generar, exigir o por 
+cualquier otro medio tomar conocimiento o acceder a los datos de creación de firmas de los 
+suscriptores (incluyendo los roles vinculados a las actividades de registro), establecido por la 
+Ley Nº 25.506, artículo 21, inciso b) y el Decreto Nº 2628/02, artículo 34, inciso i). 
+6.1.3. - Entrega de la clave pública al emisor del certificado. 
+Todo solicitante de un certificado emitido bajo esta Política Única de Certificación entrega su 
+clave pública a la AC ONTI, a través de la aplicación correspondiente, durante el proceso de 
+solicitud de su certificado. La AC ONTI por su parte utilizará técnicas de “prueba de 
+posesión” para determinar que el solicitante se encuentra en posesión de la clave privada 
+asociada a dicha clave pública. 
+Los procesos de solicitud utilizan el formato PKCS#10 para implementar la “prueba de 
+posesión”, remitiendo los datos del solicitante y su clave pública dentro de una estructura 
+firmada con su clave privada. 
+El procedimiento descripto asegura que: 
+a) La clave pública no pueda ser cambiada durante la transferencia. 
+b) Los datos recibidos por la AC ONTI se encuentran vinculados a dicha clave pública. 
+c) El remitente posee la clave privada que corresponde a la clave pública transferida. 
+6.1.4. - Disponibilidad de la clave pública del AC ONTI. 
+El certificado de la AC ONTI y el de la AC Raíz RA se encuentran a disposición de los 
+suscriptores y terceros usuarios en un repositorio en línea de acceso público a través de 
+Internet en https://pki.jgm.gob.ar/app/ 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 45 de 70
+
+--- p46
+ 
+ 
+46 
+ 
+6.1.5. - Tamaño de claves. 
+La AC ONTI genera su par de claves criptográficas utilizando el algoritmo RSA de 4096 bits. 
+Los suscriptores, incluyendo las AR y los proveedores de otros servicios de firma digital 
+generan sus claves mediante el algoritmo RSA con un tamaño de clave 2048 bits.  
+6.1.6. - Generación de parámetros de claves asimétricas. 
+No se establecen condiciones especiales para la generación de parámetros de claves 
+asimétricas más allá de las que se indican en el punto 6.1.5. 
+ 
+6.1.7. - Propósitos de utilización de claves (campo “KeyUsage” en certificados X.509 
+v.3). 
+Las claves criptográficas de los suscriptores de los certificados pueden ser utilizados para 
+firmar digitalmente, para funciones de autenticación y para cifrado. 
+6.2. - Protección de la clave privada y controles sobre los dispositivos criptográficos. 
+La protección de la clave privada es considerada desde la perspectiva de la AC ONTI, de los 
+repositorios, de las AR y de los suscriptores, siempre que sea aplicable. Para cada una de 
+estas entidades se abordan los siguientes temas: 
+a) 
+Estándares utilizados para la generación del par de claves. 
+b) 
+Número de personas involucradas en el control de la clave privada. 
+c) 
+Procedimiento de almacenamiento de la clave privada en un dispositivo criptográfico. 
+d) 
+Responsable de activación de la clave privada y acciones a realizar para su 
+activación. 
+e) 
+Duración del período de activación de la clave privada y procedimiento a utilizar para 
+su desactivación. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 46 de 70
+
+--- p47
+ 
+ 
+47 
+f) 
+Procedimiento de destrucción de la clave privada. 
+g) 
+Requisitos aplicables al dispositivo criptográfico utilizado para el almacenamiento de 
+las claves privadas. 
+ 
+6.2.1. – Controles y estándares para dispositivos criptográficos. 
+Para la generación y el almacenamiento de las claves criptográficas, la AC ONTI, las AR y 
+los suscriptores deberán hacerlo con un nivel Alto para sus certificados para lo cual deberán 
+utilizar los dispositivos referidos en el apartado 6.1.1. 
+6.2.2. - Control “M de N” de clave privada. 
+Los controles empleados para la activación de las claves se basan en la presencia de M de 
+N con M mayor a 2. 
+6.2.3. - Recuperación de clave privada. 
+Ante una situación que requiera recuperar su clave privada, y siempre que ésta no se 
+encuentre comprometida, el AC ONTI cuenta con procedimientos para su recuperación. Esta 
+sólo puede ser realizada por personal autorizado, sobre dispositivos criptográficos seguros y 
+con el mismo nivel de seguridad que aquel en el que se realicen las operaciones críticas de 
+la AC ONTI. 
+No se implementan mecanismos de resguardo y recuperación de las claves privadas de las 
+AR y de los suscriptores. Estos deberán proceder a la revocación del certificado y a tramitar 
+una nueva solicitud de emisión de certificado, si así correspondiere.  
+6.2.4. - Copia de seguridad de clave privada. 
+La AC ONTI genera una copia de seguridad de la clave privada a través de un 
+procedimiento que garantiza su integridad y confidencialidad. 
+No se mantienen copias de las claves privadas de los suscriptores de certificados ni de los 
+Oficiales de Registro.  
+IF-2019-01737754-APN-DNTEID#JGM
+Página 47 de 70
+
+--- p48
+ 
+ 
+48 
+6.2.5. - Archivo de clave privada. 
+La AC ONTI almacena las copias de reguardo de su clave privada a través de un 
+procedimiento que garantiza su integridad, disponibilidad y confidencialidad, conservándola 
+en un lugar seguro, al igual que sus elementos de activación, de acuerdo a lo dispuesto por 
+la Resolución MM N° 399-E/2016 en cuanto a los niveles de resguardo de claves. 
+ 
+6.2.6. - Transferencia de claves privadas en dispositivos criptográficos. 
+El par de claves criptográficas de la AC ONTI se genera y almacena en dispositivos 
+criptográficos conforme a lo establecido en la presente Política, salvo en el caso de las 
+copias de resguardo que también están soportadas en dispositivos criptográficos 
+homologados FIPS 140-2 nivel 3. 
+El par de claves criptográficas de las AR y de los suscriptores de certificados de nivel de 
+seguridad Alto es almacenado en el mismo dispositivo criptográfico FIPS 140-2 nivel 2 
+donde se genera, no permitiendo su exportación. 
+6.2.7. - Almacenamiento de claves privadas en dispositivos criptográficos. 
+El almacenamiento de las claves criptográficas de la AC ONTI se realiza en el mismo 
+dispositivo de generación (HSM) que brinda un alto nivel de seguridad de acuerdo a la 
+certificación FIPS 140-2 nivel 3 y en cuanto a seguridad física, en un nivel 4, de acuerdo a lo 
+establecido en el Anexo I de la Resolución MM N° 399-E/2016. 
+Las claves criptográficas de los suscriptores de certificados son generadas y almacenadas 
+en un dispositivo criptográfico FIPS 140-2 nivel 2 o superior, no permitiendo su exportación. 
+6.2.8. - Método de activación de claves privadas. 
+Para la activación de la clave privada de la AC ONTI se aplican procedimientos que 
+requieren la participación de los poseedores de claves de activación según el control M de N 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 48 de 70
+
+--- p49
+ 
+ 
+49 
+descripto más arriba. Estos participantes son autenticados utilizando métodos adecuados de 
+identificación. 
+6.2.9. - Método de desactivación de claves privadas. 
+Para la desactivación de la clave privada de la AC ONTI se aplican procedimientos que 
+requieren la participación de los poseedores de las claves, según el control M de N. Para 
+desarrollar esta actividad, los participantes son autenticados utilizando métodos adecuados 
+de identificación. 
+6.2.10. - Método de destrucción de claves privadas. 
+Las claves privadas de la AC ONTI se destruyen mediante procedimientos que imposibilitan 
+su posterior recuperación o uso, bajo las mismas medidas de seguridad física que se 
+emplearon para su creación. 
+6.2.11. – Requisitos de los dispositivos criptográficos. 
+La AC ONTI utiliza un dispositivo criptográfico (HSM) con la certificación FIPS  140-2 Nivel 3 
+para la generación y almacenamiento de sus claves. 
+En el caso de los OR se utilizan dispositivos criptográficos FIPS 140-2 Nivel 2 o superior. 
+Los suscriptores utilizan dispositivos criptográficos FIPS 140-2 Nivel 2 o superior.  
+Los proveedores de otros servicios relacionados con la firma digital, utilizan dispositivos 
+FIPS 140-2 Nivel 2 o superior. 
+6.3. - Otros aspectos de administración de claves. 
+6.3.1. - Archivo permanente de la clave pública. 
+Los certificados emitidos a suscriptores, como así también el certificado de la AC ONTI, que 
+contienen las correspondientes claves públicas, son almacenados bajo un esquema de 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 49 de 70
+
+--- p50
+ 
+ 
+50 
+redundancia y respaldados en forma periódica sobre dispositivos de solo lectura, lo cual 
+sumado a la firma de los mismos, garantiza su integridad. 
+Los certificados se almacenan en formato estándar bajo codificación internacional DER. 
+6.3.2. - Período de uso de clave pública y privada. 
+Las claves privadas correspondientes a los certificados emitidos por la AC ONTI son 
+utilizadas por los suscriptores únicamente durante el período de validez de los certificados. 
+Las correspondientes claves públicas son utilizadas durante el período establecido por las 
+normas legales vigentes, a fin de posibilitar la verificación de las firmas generadas durante 
+su período de validez. 
+6.4. - Datos de activación. 
+Se entiende por datos de activación, a diferencia de las claves, a los valores requeridos para 
+la operatoria de los dispositivos criptográficos y que necesitan estar protegidos. 
+Se establecen medidas suficientes de seguridad para proteger los datos de activación 
+requeridos para la operación de los dispositivos criptográficos de los usuarios de 
+certificados. 
+6.4.1. - Generación e instalación de datos de activación. 
+Los datos de activación del dispositivo criptográfico de la AC ONTI tienen un control “M de 
+N” en base a “M” Poseedores de claves de activación, que deben estar presentes de un total 
+de “N” Poseedores posibles. 
+Ni la AC ONTI ni las AR implementan mecanismos de respaldo de contraseñas y 
+credenciales de acceso a las claves privadas de los suscriptores o a sus dispositivos 
+criptográficos. 
+6.4.2. - Protección de los datos de activación. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 50 de 70
+
+--- p51
+ 
+ 
+51 
+La AC ONTI establece medidas de seguridad para proteger adecuadamente los datos de 
+activación de su clave privada contra usos no autorizados. En este sentido, instruirá a los 
+poseedores de las claves de activación para el uso seguro y resguardo de los dispositivos 
+correspondientes. 
+6.4.3. - Otros aspectos referidos a los datos de activación. 
+Es responsabilidad de las AR, de los proveedores de otros servicios relacionados con la 
+firma digital y demás suscriptores de certificados emitidos por la AC ONTI, la elección de 
+contraseñas fuertes para la protección de sus claves privadas y para el acceso a los 
+dispositivos criptográficos que utilicen. 
+6.5. - Controles de seguridad informática. 
+6.5.1. - Requisitos Técnicos específicos. 
+La AC ONTI establece requisitos de seguridad referidos al equipamiento y al software de 
+certificación vinculados con los siguientes aspectos:  
+a) Control de acceso a los servicios y roles afectados al proceso de certificación. 
+b) Separación de funciones entre los roles afectados al proceso de certificación. 
+c) Identificación y autenticación de los roles afectados al proceso de certificación. 
+d) Utilización de criptografía para las sesiones de comunicación y bases de datos. 
+e) Archivo de datos históricos y de auditoría del AC ONTI y usuarios. 
+f) Registro de eventos de seguridad. 
+g) Prueba de seguridad relativa a servicios de certificación. 
+h) Mecanismos confiables para identificación de roles afectados al proceso de 
+certificación. 
+i) Mecanismos de recuperación para claves y sistema de certificación. 
+Las funcionalidades mencionadas son provistas a través de una combinación del sistema 
+operativo, software de certificación y controles físicos. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 51 de 70
+
+--- p52
+ 
+ 
+52 
+6.5.2. - Requisitos de seguridad computacional. 
+La AC ONTI cumple con las siguientes calificaciones de seguridad certificadas PP Compliant 
+y/o EAL4+ sobre los productos en los que se basa la implementación, según corresponda. 
+El dispositivo criptográfico utilizado por la AC ONTI está certificado por el NIST (National 
+Institute of Standards and Technology) FIPS 140-2 Nivel 3 o superior. 
+Los dispositivos criptográficos utilizados por los ORs y por los suscriptores están certificados 
+por NIST (National Institute of Standards and Technology) FIPS 140-2 Nivel 2 o superior. 
+Los dispositivos criptográficos utilizados por los proveedores de otros servicios en relación a 
+la firma digital están certificados por NIST (National Institute of Standards and Technology) 
+FIPS 140-2 Nivel 2 como mínimo. 
+La AC ONTI cumple con calificaciones de seguridad certificadas PP Compliant y/o EAL4+ 
+sobre los productos en los que se basa la implementación, según corresponda. 
+6.6. - Controles Técnicos del ciclo de vida de los sistemas. 
+Se implementan procedimientos de control técnico para el ciclo de vida de los sistemas. 
+Asimismo, se contemplan controles para el desarrollo, administración de cambios y gestión 
+de la seguridad, en lo relacionado directa o indirectamente con las actividades de 
+certificación. 
+ 
+6.6.1. - Controles de desarrollo de sistemas. 
+La AC ONTI cumple con procedimientos específicos para el diseño, desarrollo y prueba de 
+los sistemas entre los que se encuentran: 
+a) Separación de ambientes de desarrollo, prueba y producción. 
+b) Control de versiones para los componentes desarrollados. 
+c) Pruebas con casos de uso. 
+6.6.2. – Controles de gestión de seguridad 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 52 de 70
+
+--- p53
+ 
+ 
+53 
+Se documenta y controla la configuración del sistema, así como toda modificación o 
+actualización, habiéndose implementado un método de detección de modificaciones no 
+autorizadas. 
+6.6.3. - Controles de seguridad del ciclo de vida del software. 
+No aplicable. 
+6.7. - Controles de seguridad de red. 
+Los controles de seguridad de la red interna y externa de la AC ONTI se encuentran a cargo 
+de 
+la 
+DIRECCIÓN 
+NACIONAL 
+DE 
+INFRAESTRUCTURA 
+TECNOLÓGICA 
+Y 
+CIBERSEGURIDAD 
+dependiente 
+de 
+la 
+SECRETARÍA 
+DE 
+INFRAESTRUCTURA 
+TECNOLÓGICA 
+Y 
+PAÍS 
+DIGITAL 
+de 
+la 
+SECRETARÍA 
+DE 
+GOBIERNO 
+DE 
+MODERNIZACIÓN DE LA JEFATURA DE GABINETE DE MINISTROS. 
+6.8. – Certificación de fecha y hora. 
+La AC ONTI presta el servicio de emisión de sello de tiempo para la certificación de fecha y 
+hora, conforme lo establecido el artículo 9°, inc. b) de la Resolución MM Nº 399-E/16. 
+Dicho servicio se implementa conforme a lo indicado en los estándares ETSI TS 102 023 
+“Electronic Signatures and Infrastructures (ESI); Policy requirements for time-stamping 
+authorities”, ETSI TS 101 861 “Time stamping profile” y a la especificación RFC-3628 “Policy 
+Requirements for Time-Stamping Authorities (TSAs)”. 
+7. - PERFILES DE CERTIFICADOS Y DE LISTAS DE CERTIFICADOS REVOCADOS. 
+7.1. - Perfil del certificado.  
+Todos los certificados son emitidos conforme con lo establecido en la especificación ITU 
+X.509 versión 3, y cumplen con las indicaciones establecidas en la sección “2 - Perfil de 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 53 de 70
+
+--- p54
+ 
+ 
+54 
+certificados digitales” del Anexo III - Perfiles de los Certificados y de las Listas de 
+Certificados Revocados de la Resolución MM N° 399–E/2016. 
+Perfil del certificado de PERSONA HUMANA. 
+Certificado x.509 v3 Nombre del campo 
+y OID 
+Contenido 
+Atributos 
+Extensiones 
+ 
+Versión 
+ 
+Version 
+V3 
+2 (correspondiente a versión 3) 
+Número de serie  
+Serial Number 2.5.4.5 
+<Número de serie del certificado> 
+(entero positivo asignado unívocamente por la  
+AC ONTI a cada certificado de hasta 20 octetos) 
+Algoritmo de Firma 
+ 
+signatureAlgoritm 
+ 
+sha256RSA 
+(1.2.840.113549.1.1.11) 
+Nombre 
+distintivo 
+del 
+emisor 
+(Issuer) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=Autoridad Certificante de Firma Digital 
+serialNumber - 2.5.4.5 SERIALNUMBER=CUIT 30680604572  
+organizationName  - 
+2.5.4.10 
+O=Jefatura de Gabinete de Ministros 
+organizationalUnitNa
+me - 2.5.4.11 
+OU=Oficina 
+Nacional 
+de 
+Tecnologías 
+de 
+Información 
+stateOrProvinceName 
+- 2.5.4.8 
+S=Ciudad Autónoma de Buenos Aires 
+countryName - 2.5.4.6 C=AR 
+Validez (desde, hasta) 
+notBefore 
+<fecha y hora de emisión UTC> 
+yyyy/mm/dd hh:mm:ss huso-horario 
+notAfter 
+<fecha y hora de emisión UTC+ 2 años>  
+yyyy/mm/dd hh:mm:ss huso-horario 
+Nombre 
+distintivo 
+del 
+suscriptor 
+(Subject DN) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=APELLIDO Nombre 
+serialNumber - 2.5.4.5 SERIALNUMBER=<CUIT/CUIL> <Número> 
+countryName - 2.5.4.6 C=AR 
+Clave 
+pública 
+del 
+suscriptor 
+(Subject 
+Public Key Info) 
+ 
+public key algorithm  
+ 
+RSA 
+(1.2.840.113549.1.1.1) 
+Public key length 
+2048 bits 
+Clave 
+pública 
+del 
+suscriptor 
+<Clave pública del suscriptor> 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 54 de 70
+
+--- p55
+ 
+ 
+55 
+Restricciones básicas 
+ 
+basicConstraint  
+2.5.29.19 
+Tipo de asunto = Entidad final 
+pathLenghtConstraint = Null 
+Usos de clave  
+ 
+keyUsage  
+2.5.29.15 
+digitalSignature = 1 
+contentCommitment = 1 
+keyEncipherment = 1 
+dataEncipherment = 1 
+keyAgreement = 0 
+keyCertSign = 0 
+cRLSign = 0 
+encipherOnly = 0 
+decipherOnly = 0 
+Identificador 
+de 
+clave 
+del suscriptor  
+subjectkeyIdentifier 
+2.5.29.14 
+Contiene un hash de 20 bytes del atributo clave 
+pública del suscriptor 
+Puntos de Distribución 
+de 
+la 
+Lista 
+de 
+Certificados Revocados 
+ 
+CRLDistributionPoints 
+- 2.5.29.31 
+[1]Punto de distribución CRL 
+     Nombre del punto de distribución: 
+          Nombre completo: 
+               Dirección 
+URL=http://pki.jgm.gov.ar/crl/FD.crl 
+               Dirección 
+URL=http://pkicont.jgm.gov.ar/crl/FD.crl 
+Política de Certificación 
+certificatePolicies 
+ 
+2.5.29.32  
+ 
+[1]Política de certificación: 
+     OID de la Política Única =2.16.32.1.1.3 
+     [1.1] Información de la Política de Certificación: 
+          Id. De la Política de Certificación =CPS 
+          Ubicación:   http://pki.jgm.gov.ar/cps/cps.pdf 
+User notice = certificado emitido por un AC ONTI 
+Licenciado en el marco de Ley 25.506. 
+Identificador 
+de 
+la 
+Clave de la Autoridad 
+Certificante  
+AuthorityKeyIdentifier  
+2.5.29.35 
+keyIdentifier = <Identificador de la clave de la AC>  
+(Contiene un hash de 20 bytes del atributo clave 
+pública de la AC ONTI)  
+Uso 
+Extendido 
+de 
+Clave  
+ 
+ExtendedKeyUsage 
+2.5.29.37 
+Autenticación del cliente (1.3.6.1.5.5.7.3.2) 
+Correo seguro (1.3.6.1.5.5.7.3.4) 
+Nombres 
+Alternativos 
+del Suscriptor  
+SubjectAltName 
+2.5.29.17 
+Dirección de correo electrónico (campo optativo) 
+Información de Acceso 
+de la AC  
+authorityInfo 
+ 
+Access 
+ 
+1.3.6.1.5.5.7.1.1 
+[1]Acceso a información de autoridad 
+     Método de acceso=Emisor de la entidad 
+de certificación (1.3.6.1.5.5.7.48.2) 
+     Nombre alternativo: 
+Página 55 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p56
+ 
+ 
+56 
+          Dirección 
+URL=http://pki.jgm.gov.ar/aia/cafdONTI.crt 
+[2]Acceso a información de autoridad 
+     Método de acceso=Emisor de la entidad 
+de certificación (1.3.6.1.5.5.7.48.2) 
+     Nombre alternativo: 
+          Dirección 
+URL=http://pkicont.jgm.gov.ar/aia/cafdONTI.
+crt 
+[3]Acceso a información de autoridad 
+     Método de acceso=Protocolo de estado 
+de certificado en línea (1.3.6.1.5.5.7.48.1) 
+     Nombre alternativo: 
+          Dirección 
+URL=http://pki.jgm.gov.ar/ocsp 
+[4]Acceso a información de autoridad 
+     Método de acceso=Protocolo de estado 
+de certificado en línea (1.3.6.1.5.5.7.48.1) 
+     Nombre alternativo: 
+          Dirección 
+URL=http://pkicont.jgm.gov.ar/ocsp 
+Declaración del  
+ 
+certificado  
+ 
+calificado 
+QCStatment 
+ 
+1.3.6.1.5.5.7.1.3   
+ 
+ 
+OID= 2.16.32.1.10.2.2 (claves generadas por disp. 
+FIPS 140-2 nivel 2 o superior) 
+ 
+ 
+ 
+Perfil del certificado de APLICACIÓN 
+ 
+Certificado x.509 v3 Nombre del campo 
+y OID 
+Contenido 
+Atributos 
+Extensiones 
+ 
+Versión 
+ 
+Version 
+V3 
+2 (correspondiente a versión 3) 
+Número de serie 
+Serial Number 2.5.4.5 
+<Número de serie del certificado> 
+(entero positivo asignado unívocamente por la  
+AC ONTI a cada certificado de hasta 20 octetos) 
+Algoritmo de Firma 
+ 
+signatureAlgoritm 
+ 
+sha256RSA 
+(1.2.840.113549.1.1.11) 
+Nombre 
+distintivo 
+del 
+emisor 
+(Issuer) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=Autoridad Certificante de Firma Digital 
+serialNumber - 2.5.4.5  
+Página 56 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p57
+ 
+ 
+57 
+SERIALNUMBER=CUIT 30680604572  
+ 
+organizationName  - 
+2.5.4.10 
+O=Jefatura de Gabinete de Ministros 
+organizationalUnitNa
+me - 2.5.4.11 
+OU=Oficina 
+Nacional 
+de 
+Tecnologías 
+de 
+Información 
+stateOrProvinceName 
+- 2.5.4.8 
+S=Ciudad Autónoma de Buenos Aires 
+countryName - 2.5.4.6 C=AR 
+Validez (desde, hasta) 
+notBefore 
+<fecha y hora de emisión UTC> 
+yyyy/mm/dd hh:mm:ss huso-horario 
+notAfter 
+<fecha y hora de emisión UTC+ 3 años>  
+yyyy/mm/dd hh:mm:ss huso-horario 
+Nombre 
+distintivo 
+del 
+suscriptor 
+(Subject DN) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=Denominación de la Aplicación 
+organizationName 
+2.5.4.10 
+O=nombre 
+dela 
+Persona 
+Jurídica 
+Pública 
+responsable de la aplicación 
+organizationalUnitNa
+me 
+2.5.4.11 
+OU=Unidad Operativa relacionada con la aplicación 
+serialNumber - 2.5.4.5 SN= <CUIT/CUIL> <Número de la Persona Jurídica 
+Pública responsable de la aplicación> 
+countryName - 2.5.4.6 C=AR 
+Clave 
+pública 
+del 
+suscriptor 
+(Subject 
+Public Key Info) 
+ 
+ 
+publicKey Algorithm  
+ 
+RSA 
+(1.2.840.113549.1.1.1) 
+Public key length 
+2048 bits 
+Clave 
+pública 
+del 
+suscriptor 
+<Clave pública del suscriptor> 
+Restricciones básicas 
+ 
+basicConstraint  
+2.5.29.19 
+Tipo de asunto = Entidad final 
+pathLenghtConstraint = Null 
+Usos de clave  
+ 
+keyUsage  
+2.5.29.15 
+digitalSignature = 1 
+contentCommitment = 1 
+keyEncipherment = 1 
+dataEncipherment = 1 
+keyAgreement = 0 
+keyCertSign = 0 
+cRLSign = 0 
+encipherOnly = 0 
+decipherOnly = 0 
+Identificador 
+de 
+clave 
+del suscriptor  
+ 
+subjectkeyIdentifier 
+2.5.29.14 
+Contiene un hash de 20 bytes del atributo clave 
+pública del suscriptor 
+Puntos de Distribución 
+de 
+la 
+Lista 
+de 
+Certificados Revocados 
+  
+CRLDistributionPoints  
+2.5.29.31 
+[1]Punto de distribución CRL 
+     Nombre del punto de distribución: 
+          Nombre completo: 
+               Dirección 
+URL=http://pki.jgm.gov.ar/crl/FD.crl 
+               Dirección 
+URL=http://pkicont.jgm.gov.ar/crl/FD.crl 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 57 de 70
+
+--- p58
+ 
+ 
+58 
+Política de Certificación 
+certificatePolicies 
+ 
+2.5.29.32 
+[1]Política de certificación: 
+     OID de la Política Única =2.16.32.1.1.3 
+     [1.1] Información de la Política de Certificación: 
+          Id. De la Política de Certificación =CPS 
+          Ubicación:   http://pki.jgm.gov.ar/cps/cps.pdf 
+User notice = certificado emitido por un AC ONTI 
+Licenciado en el marco de Ley 25.506. 
+Identificador 
+de 
+la 
+Clave de la Autoridad 
+Certificante  
+authorityKeyIdentifier  
+2.5.29.35 
+keyIdentifier = <Identificador de la clave de la AC>  
+(Contiene un hash de 20 bytes del atributo clave 
+pública de la AC ONTI)  
+Uso 
+Extendido 
+de 
+Clave  
+ 
+extendedKeyUsage 
+2.5.29.37 
+Autenticación del cliente (1.3.6.1.5.5.7.3.2) 
+Respuesta OCSP (1.3.6.1.5.5.7.3.9) 
+Información de Acceso 
+de la AC 
+authority InfoAccess 
+1.3.6.1.5.5.7.1.1 
+Método = Emisor de autoridad de certificación 
+URI = http://pki.jgm.gov.ar/aia/cafdONTI.crt 
+Método = Emisor de autoridad de certificación 
+URI = http://pkicont.jgm.gov.ar/aia/cafdONTI.crt 
+Método = OCSP 
+URI = http://pki.jgm.gov.ar/ocsp 
+Método = OCSP 
+URI = http://pkicont.jgm.gov.ar/ocsp 
+Declaración 
+del 
+certificado calificado 
+ 
+QCStatment 
+ 
+1.3.6.1.5.5.7.1.3 
+OID= 2.16.32.1.10.2.3 (claves generadas por disp. 
+140-2 nivel 3) 
+ 
+OID= 2.16.32.1.10.2.2 (claves generadas por disp. 
+FIPS 140-2 nivel 2) 
+ 
+OID= 
+2.16.32.1.10.1 
+(claves 
+generadas 
+por 
+software) 
+ 
+Perfil del certificado de proveedores de servicios de firma digital. 
+Para Autoridad de Sello de tiempo. 
+Certificado x.509 v3 Nombre del campo 
+y OID 
+Contenido 
+Atributos 
+Extensiones 
+ 
+Versión 
+ 
+Version 
+V3 
+2 (correspondiente a versión 3) 
+Número de serie  
+Serial Number 2.5.4.5 
+<Número de serie del certificado> 
+(entero positivo asignado unívocamente por la  
+AC ONTI a cada certificado de hasta 20 octetos) 
+Página 58 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p59
+ 
+ 
+59 
+Algoritmo de Firma 
+ 
+signatureAlgoritm  
+sha256RSA 
+(1.2.840.113549.1.1.11) 
+Nombre 
+distintivo 
+del 
+emisor 
+(Issuer) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=Autoridad Certificante de Firma Digital 
+serialNumber - 2.5.4.5 
+ 
+SERIALNUMBER=CUIT 30680604572  
+ 
+organizationName  - 
+2.5.4.10 
+O=Jefatura de Gabinete de Ministros 
+organizationalUnitNa
+me - 2.5.4.11 
+OU=Oficina 
+Nacional 
+de 
+Tecnologías 
+de 
+Información 
+stateOrProvinceName 
+- 2.5.4.8 
+S=Ciudad Autónoma de Buenos Aires 
+countryName - 2.5.4.6 C=AR 
+Validez (desde, hasta) 
+notBefore 
+<fecha y hora de emisión UTC> 
+yyyy/mm/dd hh:mm:ss huso-horario 
+notAfter 
+<fecha y hora de expiración a establecer por AC 
+ONTI>  
+yyyy/mm/dd hh:mm:ss huso-horario 
+Nombre 
+distintivo 
+del 
+suscriptor 
+(Subject DN) 
+commonName 
+ 
+- 
+2.5.4.3 
+CN=Denominación del servicio de emisión de sello 
+de tiempo 
+organizationalUnitNa
+me 
+2.5.4.11 
+OU=Unidad Operativa relacionada con el suscriptor 
+organizationName 
+2.5.4.10 
+O=Nombre de la Persona Jurídica Pública o 
+Privada responsable del servicio 
+serialNumber - 2.5.4.5 SN= <CUIT/CUIL> <Número de la Persona Jurídica 
+Pública o Privada> 
+countryName - 2.5.4.6 C=AR 
+Clave 
+pública 
+del 
+suscriptor 
+(Subject 
+Public Key Info) 
+publicKey Algorithm  
+ 
+RSA 
+(1.2.840.113549.1.1.1) 
+Public key length 
+2048 bits 
+Clave 
+pública 
+del 
+suscriptor 
+<Clave pública del suscriptor> 
+Restricciones básicas 
+ 
+basicConstraint  
+2.5.29.19 
+Tipo de asunto = Entidad final 
+pathLenghtConstraint = Null 
+Usos de clave  
+ 
+keyUsage  
+2.5.29.15 
+digitalSignature = 1 
+contentCommitment = 1 
+keyEncipherment = 0 
+dataEncipherment = 0 
+keyAgreement = 0 
+keyCertSign = 0 
+cRLSign = 0 
+encipherOnly = 0 
+decipherOnly = 0 
+Identificador 
+de 
+clave 
+del suscriptor  
+ 
+subjectKey Identifier 
+2.5.29.14 
+Contiene un hash de 20 bytes del atributo clave 
+pública del suscriptor 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 59 de 70
+
+--- p60
+ 
+ 
+60 
+Puntos de Distribución 
+de la Lista de sellos de 
+tiempo Revocados 
+  
+CRLDistributionPoints  
+ 2.5.29.31 
+[1]Punto de distribución CRL 
+     Nombre del punto de distribución: 
+          Nombre completo: 
+               Dirección 
+URL=http://pki.jgm.gov.ar/crl/FD.crl 
+               Dirección 
+URL=http://pkicont.jgm.gov.ar/crl/FD.crl 
+Política de Certificación 
+certificatePolicies 
+ 
+2.5.29.32 
+[1]Política de certificación: 
+     OID de la Política Única =2.16.32.1.1.3 
+     [1.1] Información de la Política de Certificación: 
+          Id. De la Política de Certificación =CPS 
+          Ubicación:   http://pki.jgm.gov.ar/cps/cps.pdf 
+User notice = certificado emitido por un AC ONTI 
+Licenciado en el marco de Ley 25.506. 
+Identificador 
+de 
+la 
+Clave de la Autoridad 
+Certificante  
+authorityKeyIdentifier  
+2.5.29.35 
+keyIdentifier = <Identificador de la clave de la AC>  
+(Contiene un hash de 20 bytes del atributo clave 
+pública de la AC ONTI)  
+Uso 
+Extendido 
+de 
+Clave  
+ 
+extendedKeyUsage 
+2.5.29.37 
+Autenticación del cliente (1.3.6.1.5.5.7.3.2) 
+Certificación 
+digital 
+de 
+fecha 
+y 
+hora 
+(1.3.6.1.5.5.7.3.8) 
+Información de Acceso 
+de la AC 
+authority InfoAccess 
+1.3.6.1.5.5.7.1.1 
+Método = Emisor de autoridad de certificación 
+URI = http://pki.jgm.gov.ar/aia/cafdONTI.crt 
+Método = Emisor de autoridad de certificación 
+URI = http://pkicont.jgm.gov.ar/aia/cafdONTI.crt 
+Método = OCSP 
+URI = http://pki.jgm.gov.ar/ocsp 
+Método = OCSP 
+URI = http://pkicont.jgm.gov.ar/ocsp 
+Declaración del  
+ 
+certificado  
+ 
+calificado 
+ 
+ 
+QCStatment 
+ 
+1.3.6.1.5.5.7.1.3 
+OID= 2.16.32.1.10.2.2 (claves generadas por disp. 
+FIPS 140-2  nivel 2) 
+ 
+OID= 2.16.32.1.10.2.3 (claves generadas por disp. 
+FIPS 140-2  nivel 3) 
+ 
+7.2. - Perfil de la lista de certificados revocados. 
+Las listas de certificados revocados correspondientes a la presente Política Única de 
+Certificación son emitidas conforme con lo establecido en la especificación ITU X.509 
+versión 2 y cumplen con las indicaciones establecidas en la sección “3 - Perfil de CRLs” del 
+Página 60 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p61
+ 
+ 
+61 
+Anexo III “Perfiles de los Certificados y de las Listas de Certificados Revocados” de la 
+Resolución MM N° 399–E/2016. 
+ 
+Atributos Extensiones 
+Nombre del campo y 
+OID 
+Contenido 
+Versión 
+Version 
+1  
+(correspondiente a versión 2) 
+Algoritmo de Firma 
+ 
+signatureAlgorithm 
+1.2.840.113549.1.1.11 
+sha256RSA 
+Nombre distintivo del emisor   
+(Issuer) 
+commonName  - 2.5.4.3 
+CN=Autoridad 
+Certificante 
+de 
+Firma 
+Digital 
+serialNumber - 2.5.4.5 
+SERIALNUMBER=CUIT 30680604572 
+organizationName 
+ 
+- 
+2.5.4.10 
+O=Jefatura de Gabinete de Ministros, 
+Secretaría 
+de 
+la 
+Gestión 
+Pública, 
+Subsecretaría 
+de 
+Tecnologías 
+de 
+Gestión 
+organizationalUnitName 
+- 2.5.4.11 
+OU=Oficina Nacional de Tecnologías de  
+Información 
+stateOrProvinceName 
+- 
+2.5.4.8 
+S=Ciudad Autónoma de Buenos Aires 
+countryName - 2.5.4.6 
+C=AR 
+Fecha efectiva 
+thisUpdate 
+<fecha y hora UTC> 
+yyyy/mm/dd hh:mm:ss huso-horario 
+Próxima Actualización 
+nextUpdate 
+<fecha y hora UTC>  
+yyyy/mm/dd hh:mm:ss huso-horario 
+Identificador de la Clave de 
+la Autoridad Certificante  
+authorityKeyIdentifier  
+2.5.29.35 
+keyIdentifier = <Identificador de la clave 
+de la AC>  
+(es una cadena de 20 bytes que 
+identifica unívocamente la clave pública 
+de la AC ONTI que firmó el certificado.)  
+Id. de clave=70 ba 03 71 7a d8 10 e4 ee 
+52 b5 7f 32 8f 9f 6c 2e f7 84 0d 
+Número de CRL 
+ 
+CRL Number  
+ 
+Número de la CRL 
+Puntos de Distribución del 
+emisor  
+issuingDistributionPoints  
+2.5.29.28 
+[1]Punto de distribución CRL 
+     URL=http://pki.jgm.gob.ar/crl/FD.crl 
+[2]Punto de distribución CRL 
+   URL=http://pkicont.jgm.gob.ar/crl/FD.crl 
+Solo Contiene certificados de usuario = 
+no  
+Solo Contiene certificados de la entidad 
+emisora = no 
+Lista 
+de 
+revocación 
+de 
+Certificados 
+Indirecta = no 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 61 de 70
+
+--- p62
+ 
+ 
+62 
+Certificados 
+Revocados 
+(Revoked certificates) 
+InvalidityDate 
+<fecha y hora UTC> 
+Serial Number 
+Número 
+de 
+Serie 
+del 
+Certificado 
+Revocado 
+ReasonCode 
+Motivo de la Revocación 
+Algoritmo de Identificación 
+Huella Digital 
+ 
+SHA1 
+1.3.14.3.2.26 
+Versión de CA 
+V0.0 
+Siguiente 
+Publicación 
+de 
+lista de revocación 
+ 
+<fecha y hora UTC>  
+yyyy/mm/dd hh:mm:ss huso-horario 
+ 
+7.3. - Perfil de la consulta en línea del estado del certificado 
+La consulta en línea del estado de un certificado digital se realiza utilizando el Protocolo 
+OCSP (On-Line Certificate Status Protocol). Se implementa conforme a lo indicado en la 
+especificación RFC 6960 y cumple con las indicaciones establecidas en la sección “4 - Perfil 
+de la consulta en línea del estado del certificado” del Anexo III “Perfiles de los Certificados y 
+de las Listas de Certificados Revocados” de la Resolución MM N° 399–E/2016.   
+8. – AUDITORÍA DE CUMPLIMIENTO Y OTRAS EVALUACIONES. 
+La DNTEID, en su calidad de administrador de la AC ONTI, se encuentra sujeta a las 
+auditorías dispuestas en el artículo 10 del Decreto N° 561/16 de fecha 6 de abril de 2016.  
+Las auditorías se realizan en base a los programas de trabajo que son generados por la 
+Autoridad de Aplicación, los que son comunicados e informados oportunamente. 
+Los aspectos a evaluar se encuentran establecidos en el artículo 27 de la Ley N° 25.506 y 
+otras normas reglamentarias. 
+Los informes resultantes de las auditorías son elevados a la SECRETARÍA DE 
+MODERNIZACIÓN ADMINISTRATIVA. Sus aspectos relevantes son publicados en forma 
+permanente e ininterrumpida en su sitio web.  
+La AC ONTI cumple las exigencias reglamentarias impuestas por: 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 62 de 70
+
+--- p63
+ 
+ 
+63 
+a) El artículo 33 de la Ley Nº 25.506 de Firma Digital, respecto al sistema de auditoría y 
+el artículo 21, inciso k) de la misma Ley, relativo a la publicación de informes de 
+auditoría. 
+b) Los artículos 19 y 21 del Decreto Nº 2628/02, reglamentario de la Ley de Firma 
+Digital, relativos al sistema de auditoría. 
+ 
+9. – ASPECTOS LEGALES Y ADMINISTRATIVOS. 
+9.1. – Aranceles. 
+La AC ONTI no percibe aranceles por ninguno de los servicios que pudiera brindar 
+relacionados con esta Política Única de Certificación. Los certificados emitidos bajo la 
+presente Política son gratuitos.  
+9.2. - Responsabilidad Financiera. 
+La responsabilidad financiera surge de lo establecido por la Ley N° 25.506, su Decreto 
+Reglamentario Nº 2628/02 y en las disposiciones de la presente Política.  
+Asimismo, en virtud de lo establecido en el Decreto Nº 1063/16 (modificatorio del Decreto Nº 
+2628/02), las Autoridades de Registro del sector privado dependientes de la AC ONTI, 
+deberán constituir una garantía mediante un seguro de caución a fin de garantizar el 
+cumplimiento de las obligaciones establecidas en la normativa vigente. 
+Las Autoridades de Registro y sus Oficiales de Registro son responsables de la validación 
+de la identidad de los suscriptores. Los criterios de valoración que seguirá la AR sobre la 
+documentación aportada por el suscriptor para acreditar identidad u otros datos a incluir en 
+el certificado, serán los normalmente aceptados en Derecho.  
+La Autoridad de Registro siempre exigirá la presencia física del suscriptor. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 63 de 70
+
+--- p64
+ 
+ 
+64 
+Todos los trámites realizados por las ARs son firmados digitalmente por los oficiales de 
+registro y operadores que los realizan, asumiendo así su plena responsabilidad en el 
+proceso. 
+9.3. – Confidencialidad. 
+Toda información referida a solicitantes o suscriptores de certificados que sea recibida por la 
+AC ONTI o por las AR operativamente vinculadas, será tratada en forma confidencial y no 
+puede hacerse pública sin el consentimiento previo de los titulares de los datos, salvo que 
+sea requerida judicialmente. La exigencia se extiende a toda otra información referida a los 
+solicitantes y los suscriptores de certificados a la que tenga acceso la AC ONTI o sus AR 
+durante el ciclo de vida del certificado. 
+Lo indicado no es aplicable cuando se trate de información que se transcriba en el 
+certificado o sea obtenida de fuentes públicas. 
+9.3.1. - Información confidencial. 
+Toda información remitida por el solicitante o suscriptor de un certificado al momento de 
+efectuar un requerimiento es considerada confidencial y no es divulgada a terceros sin su 
+consentimiento previo y expreso, salvo que sea requerida mediante resolución fundada en 
+causa judicial por juez competente. La exigencia se extenderá también a toda otra 
+información referida a los suscriptores de certificados a la que tenga acceso el AC ONTI o la 
+Autoridad de Registro durante el ciclo de vida del certificado. 
+La AC ONTI garantiza la confidencialidad frente a terceros de su clave privada, la que, al ser 
+el punto de máxima confianza, será generada y custodiada conforme a lo que se especifique 
+en la presente Política. Asimismo, se considera confidencial cualquier información: 
+a) Resguardada en servidores o bases de datos y vinculada al proceso de gestión del 
+ciclo de vida de los certificados digitales emitidos por el AC ONTI. 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 64 de 70
+
+--- p65
+ 
+ 
+65 
+b) Almacenada en cualquier soporte, incluyendo aquella que se trasmita verbalmente, 
+vinculada a procedimientos de certificación, excepto aquella declarada como no 
+confidencial en forma expresa. 
+c) Relacionada con los Planes de Continuidad de Operaciones, controles, 
+procedimientos de seguridad y registros de auditoría pertenecientes al AC ONTI. 
+En todos los casos resulta de aplicación la Ley N° 25.326 de protección de datos 
+personales, su reglamentación y normas complementarias. 
+9.3.2. - Información no confidencial 
+La siguiente información recibida por la AC ONTI o por sus AR no es considerada 
+confidencial: 
+a) Contenido de los certificados y de las listas de certificados revocados. 
+b) Información sobre suscriptores que se encuentre disponible en certificados o en 
+directorios de acceso público. 
+c) Políticas de Certificación y Manual de Procedimientos (en sus aspectos no 
+confidenciales). 
+d) Secciones públicas de la Política de Seguridad de la AC ONTI. 
+e) Política de privacidad de la AC ONTI. 
+9.3.3. – Responsabilidades de los roles involucrados 
+La información confidencial podrá ser revelada ante un requerimiento emanado de juez 
+competente como parte de un proceso judicial o ante requerimiento de autoridad 
+administrativa como parte de un proceso administrativo. 
+Toda divulgación de información referida a los datos de identificación del suscriptor o a 
+cualquier otra información generada o recibida durante el ciclo de vida del certificado sólo 
+podrá efectuarse previa autorización escrita del suscriptor del certificado. 
+No será necesario el consentimiento cuando: 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 65 de 70
+
+--- p66
+ 
+ 
+66 
+a) Los datos se hayan obtenido de fuentes de acceso público irrestricto; 
+b) Los datos se limiten a nombre, Documento Nacional de Identidad, identificación 
+tributaria o previsional u ocupación. 
+c) Aquellos para los que la AC ONTI hubiera obtenido autorización expresa de su titular. 
+9.4.- Privacidad. 
+Todos los aspectos vinculados a la privacidad de los datos personales se encuentran 
+sujetos a la normativa vigente en materia de Protección de los Datos Personales (Ley Nº 
+25.326 y normas reglamentarias, complementarias y aclaratorias). Las consideraciones 
+particulares se incluyen en la Política de Privacidad. 
+ 
+9.5.- Derechos de Propiedad Intelectual. 
+El derecho de autor de los sistemas y aplicaciones informáticas desarrollados por el 
+certificador licenciado para la implementación de su AC, como así también toda la 
+documentación relacionada, pertenece a la SECRETARÍA DE GOBIERNO DE 
+MODERNIZACIÓN de la JEFATURA DE GABINETE DE MINISTROS.  
+El derecho de autor de la presente Política Única de Certificación y de toda otra 
+documentación generada por la AC ONTI en relación con la Infraestructura de Firma Digital, 
+pertenece a la SECRETARÍA DE GOBIERNO DE MODERNIZACIÓN de la JEFATURA DE 
+GABINETE DE MINISTROS. Consecuentemente, dichos documentos no pueden ser 
+reproducidos, copiados ni utilizados de ninguna manera, total o parcial, sin previo y formal 
+consentimiento de la SECRETARÍA DE GOBIERNO DE MODERNIZACIÓN de la 
+JEFATURA DE GABINETE DE MINISTROS, de acuerdo a la legislación vigente. 
+9.6.- Responsabilidades y garantías. 
+Las responsabilidades y garantías para la AC ONTI, sus AR, los suscriptores, los terceros 
+usuarios y otras entidades participantes, se originan en lo establecido por la Ley N° 25.506 y 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 66 de 70
+
+--- p67
+ 
+ 
+67 
+su Decreto Reglamentario Nº 2628/02, la Resolución MM Nº 399-E/2016, sus modificatorias 
+y en las disposiciones de la presente Política.  
+9.7. – Deslinde de responsabilidad.  
+Las limitaciones de responsabilidad de la AC ONTI licenciado se rigen por lo establecido en 
+el artículo 39 de la Ley N° 25.506, en las disposiciones de la presente Política y en el 
+Acuerdo con suscriptores.  
+9.8. – Limitaciones a la responsabilidad frente a terceros. 
+Las limitaciones de responsabilidad de la AC ONTI respecto a otras entidades participantes, 
+se rigen por lo establecido en el artículo 39 de la Ley N° 25.506, en las disposiciones de la 
+presente Política y en los Términos y Condiciones con Terceros Usuarios. 
+9.9. – Compensaciones por daños y perjuicios. 
+No aplicable 
+9.10. – Condiciones de vigencia. 
+La presente Política Única de Certificación se encuentra vigente a partir de la fecha de su 
+aprobación por parte del Ente Licenciante y hasta tanto sea reemplazada por una nueva 
+versión. Todo cambio en la Política, una vez aprobado por el Ente Licenciante, será 
+debidamente comunicado al suscriptor. 
+9.11.- Avisos personales y comunicaciones con los participantes. 
+No aplicable. 
+9.12.- Gestión del ciclo de vida del documento. 
+No se agrega información. 
+ 
+9.12.1. - Procedimientos de cambio.  
+Toda modificación a la Política Única de Certificación es aprobada previamente por la 
+SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA conforme a lo establecido por la 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 67 de 70
+
+--- p68
+ 
+ 
+68 
+Ley N° 25.506, artículo 21, inciso q) y por la Resolución MM N° 399-E/2016, sus Anexos 
+respectivos y sus modificatorias. 
+Toda Política Única de Certificación es sometida a aprobación de la SECRETARÍA DE 
+MODERNIZACIÓN ADMINISTRATIVA durante el proceso de licenciamiento. 
+Todo cambio en la Política Única de Certificación es comunicada al suscriptor.  
+La presente Política Única de Certificación será revisada y actualizada periódicamente por la 
+AC ONTI y sus nuevas versiones se pondrán en vigencia, previa aprobación de la 
+SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA. 
+9.12.2 – Mecanismo y plazo de publicación y notificación. 
+Una copia de la versión vigente de la presente Política Única de Certificación se encuentra 
+disponible en forma pública y accesible a través de Internet en el sitio web 
+http://pki.jgm.gob.ar/cps/cps.pdf. 
+9.12.3. – Condiciones de modificación del OID. 
+No aplicable. 
+9.13. - Procedimientos de resolución de conflictos. 
+Cualquier controversia y/o conflicto resultante de la aplicación de esta Política Única de 
+Certificación, deberá ser resuelto en sede administrativa de acuerdo a las previsiones de la 
+Ley Nacional de Procedimientos Administrativos N° 19.549 y su Decreto Reglamentario N° 
+894/2017.  
+La presente Política Única de Certificación se encuentra en un todo subordinada a las 
+prescripciones de la Ley N° 25.506, el Decreto Nº 2628/02 y modificatorios, la Resolución 
+MM Nº 399-E/2016 y sus modificatorias, la Resolución SMA Nº 37-E/2016 y demás 
+normativa complementaria dictada por la autoridad competente. 
+Los titulares de certificados y los terceros usuarios podrán interponer ante el ente licenciante 
+recurso administrativo por conflictos referidos a la prestación del servicio por parte de la AC 
+Página 68 de 70
+IF-2019-01737754-APN-DNTEID#JGM
+
+--- p69
+ 
+ 
+69 
+ONTI. Una vez agotada la vía administrativa, podrá interponerse acción judicial, siendo 
+competente la Justicia en lo Contencioso Administrativo Federal. 
+El reclamo efectuado por un tercero usuario o por el titular de un certificado digital expedido 
+por la AC ONTI, sólo será procedente previa acreditación de haberse efectuado reclamo 
+ante este último con resultado negativo. Acreditada dicha circunstancia, el ente licenciante 
+procederá a recibir, evaluar y resolver las denuncias mediante la instrucción del 
+correspondiente trámite administrativo.  
+A los efectos del reclamo antes citado, se procederá de la siguiente manera: 
+a) Una vez recibido el reclamo en la sede de la AC ONTI, este citará al reclamante a 
+una audiencia y labrará un acta que deje expresa constancia de los hechos que 
+motivan el reclamo y de todos y cada uno de los antecedentes que le sirvan de 
+causa. 
+b) Una vez que la AC ONTI emita opinión, se notificará al reclamante y se le otorgará 
+un plazo de CINCO (5) días hábiles administrativos para ofrecer y producir la prueba 
+de su descargo. 
+c) La SECRETARÍA DE MODERNIZACIÓN ADMINISTRATIVA resolverá en un plazo 
+de DIEZ (10) días lo que estime corresponder, dictando el Acto Administrativo 
+correspondiente, conforme a los criterios de máxima razonabilidad, equidad y pleno 
+ajuste al bloque de legalidad vigente y aplicable. 
+El suscriptor o los terceros usuarios podrán accionar ante el ente licenciante, previo 
+agotamiento del procedimiento ante la AC ONTI, la cual deberá proveer obligatoriamente al 
+interesado de un adecuado procedimiento de resolución de conflictos. 
+9.14. - Legislación aplicable. 
+La Ley N° 25.506 y modificatorias, el Decreto Nº 2628/02 y modificatorios, la Resolución MM 
+Nº 399-E/16 y sus modificatorias, las Resoluciones SMA Nros. 37-E/2016, 116-E/2017, 63-
+IF-2019-01737754-APN-DNTEID#JGM
+Página 69 de 70
+
+--- p70
+ 
+ 
+70 
+E/2018 y demás normativa complementaria dictada por la autoridad competente, constituyen 
+el marco normativo aplicable en materia de Firma Digital en la REPÚBLICA ARGENTINA. 
+9.15. – Conformidad con normas aplicables. 
+Se aplicará la normativa indicada en el apartado 9.14. 
+9.16. – Cláusulas adicionales 
+No se establecen cláusulas adicionales. 
+9.17. – Otras cuestiones generales 
+No aplicable. 
+ 
+ 
+Historia de las revisiones: 
+VERSIÓN Y 
+MODIFICACIÓN 
+FECHA DE 
+EMISIÓN 
+DESCRIPCIÓN 
+MOTIVO DEL 
+CAMBIO 
+Versión 1.6 
+22/09/2010 
+Política de Certificación 
+Licenciamiento  
+AC ONTI 
+Versión 2.0 
+12/2014 
+Política Única de 
+Certificación 
+Revisión 
+Versión 3.0 
+01/2019 
+Política Única de 
+Certificación 
+Revisión 
+ 
+ 
+ 
+ 
+ 
+ 
+Nota: Cada nueva versión y/o modificación suplanta a las anteriores, resultando sólo vigente 
+la última, la que está representada por el presente documento.  
+ 
+IF-2019-01737754-APN-DNTEID#JGM
+Página 70 de 70
+
+--- p71
+República Argentina - Poder Ejecutivo Nacional
+2019 - Año de la Exportación
+Hoja Adicional de Firmas
+Informe gráfico
+Número: 
+Referencia: Política Única de Certificación AC ONTI v3.0
+ 
+El documento fue importado por el sistema GEDO con un total de 70 pagina/s.
+Miércoles 9 de Enero de 2019
+IF-2019-01737754-APN-DNTEID#JGM
+CIUDAD DE BUENOS AIRES
+Digitally signed by GESTION DOCUMENTAL ELECTRONICA - GDE
+DN: cn=GESTION DOCUMENTAL ELECTRONICA - GDE, c=AR, o=MINISTERIO DE MODERNIZACION, 
+ou=SECRETARIA DE MODERNIZACION ADMINISTRATIVA, serialNumber=CUIT 30715117564
+Date: 2019.01.09 21:26:06 -03'00'
+Alejandra Battaglia
+Directora Nacional
+Dirección Nacional de Tramitación e Identificación a Distancia
+Jefatura de Gabinete de Ministros
+Digitally signed by GESTION DOCUMENTAL ELECTRONICA - 
+GDE
+DN: cn=GESTION DOCUMENTAL ELECTRONICA - GDE, c=AR, 
+o=MINISTERIO DE MODERNIZACION, ou=SECRETARIA DE 
+MODERNIZACION ADMINISTRATIVA, serialNumber=CUIT 
+30715117564
+Date: 2019.01.09 21:26:07 -03'00'
