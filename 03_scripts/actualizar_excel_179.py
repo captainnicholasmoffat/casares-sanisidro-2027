@@ -225,7 +225,7 @@ s_note(36, "Supuesto conservador, el del modelo del repo: cero servicios nuevos,
 s_row(49, "Empleo y vivienda · base 2025", formula="=C147+C148",
       note="170,3 M de empleo más 335,4 M de vivienda, devengado 2025")
 s_row(50, "Empleo y vivienda · objetivo anual", formula="=C149*(C123+C124)",
-      note="2,5% del gasto total de 2025 en la cuenta Ahorro-Inversión: 7.730,9 M, quince veces la base (cuadro 33)")
+      note="2,5% del gasto total de 2025 en la cuenta Ahorro-Inversión: 7.730,9 M, quince veces la base (cuadro 34)")
 s_row(51, "Ambiente · gasto 2025 (función 4.4)", 1410000000,
       note="5.5: «Hoy: 1.410 millones, el 0,4% del presupuesto». La ejecución da 1.410,1 M (bloque S)")
 s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=FMT_PCT1,
@@ -356,7 +356,7 @@ s_row(143, "Lo que el programa necesita en régimen", formula="=C50-C49",
 s_row(144, "Lo cobrado en régimen, con el mínimo que frena subas, sobre lo que se necesita",
       formula="=C141/C143", fmt=FMT_PCT1, note="El 82,3%: el resto sale del gasto flexible (3.5)")
 
-s_header(146, "O · EMPLEO Y VIVIENDA Y LA FORMACIÓN (5.3, cuadro 33)")
+s_header(146, "O · EMPLEO Y VIVIENDA Y LA FORMACIÓN (5.3, cuadro 34)")
 s_row(147, "Empleo · devengado 2025 (Apoyo y Promoción al Empleo)", sef_prog("APOYO Y PROMOCION AL EMPLEO"))
 s_row(148, "Vivienda · devengado 2025 (Infraestructura Habitacional)", sef_prog("INFRAESTRUCTURA HABITACIONAL"))
 s_row(149, "Objetivo: parte del gasto total de 2025", 0.025, fmt=FMT_PCT1,
@@ -366,7 +366,7 @@ s_row(150, "Parte de empleo; el resto es vivienda y servicios básicos", 0.60, f
 s_row(151, "Parte de formación dentro de empleo, desde el año 3", 0.60, fmt=FMT_PCT0,
       note="El resto paga la contratación de desarrollos: salud y automatización de tareas de la planta")
 s_row(152, "Años en que la formación usa toda la partida de empleo", 2, fmt="0",
-      note="Todavía no hay egresados que contratar: entran 462 y 824 en vez de 277 y 494 (nota del cuadro 33)")
+      note="Todavía no hay egresados que contratar: entran 462 y 824 en vez de 277 y 494 (notas del capítulo 5)")
 s_row(153, "Costo por persona, los dos años de formación", 3000000,
       note="Con las materias y el título de la UNSO. Cada año entran lo que paga formación dividido por esto, redondeado")
 s_row(154, "Mes del primer ingreso de cada año", 3, fmt="0", note="La primera cohorte arranca a los cien días")
@@ -390,7 +390,7 @@ s_row(164, "Parte de Ciencia y Técnica ocupada", formula="=(C161+C162+C163)/C16
 
 s_header(166, "Q · PASANTÍAS Y GASTO FLEXIBLE (5.3 y 3.4)")
 s_row(167, "Pasantes a la vez en el Municipio, en régimen", 464, fmt=FMT_N, note="928 por año, seis meses cada uno")
-s_row(168, "De ellos, en la plataforma y los dispositivos", 17, fmt=FMT_N, note="Cuadro 31: 15 de la plataforma y 2 de dispositivos")
+s_row(168, "De ellos, en la plataforma y los dispositivos", 17, fmt=FMT_N, note="Cuadro 27: 15 de la plataforma y 2 de dispositivos, los 17 del cuadro 32")
 s_row(169, "Costo de un pasante por año, con ART y salud", 3166250,
       note="240.000 $ por mes: 1.013,2 M por 320 pasantes (5.3)")
 s_row(170, "Beca de práctica por mes", 240000, note="La asignación del pasante: la misma para quien no tiene lugar en una empresa")
@@ -700,7 +700,7 @@ put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con lo que cobra
 put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36, y en el año 1 adelanta 350 M para "
     "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año y habilitaciones sigue la rampa: son supuestos de este libro.",
     font(8, italic=True, color=GRAY))
-put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 33)", font(9, True), fill=F_SEC)
+put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 34)", font(9, True), fill=F_SEC)
 lab2 = {27: "Empleo y vivienda · total del mes",
         28: "Empleo: 60%, gasto corriente",
         29: "Vivienda y servicios básicos: 40%, gasto de capital",

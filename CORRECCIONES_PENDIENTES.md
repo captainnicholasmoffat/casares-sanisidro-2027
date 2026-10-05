@@ -2768,3 +2768,42 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
 - Barrido: «Casares» sale de las palabras prohibidas; aparece una sola vez, junto a la resolución (pág. 22). La tapa
   sigue sin su nombre ni su foto; la mención de la comisión de la UNSO (corrección 138) sigue afuera.
 - Páginas que cambiaron: 22 y 45. Excel sin cambios.
+
+## DISPATCH 3 · PARTE A (A1 A A13) · CORRECCIONES DE LA LECTURA DE NICK (05/10)
+- A1 · Cuadro 9 (pág. 9): tránsito, «lo decide la comisión zonal, en asamblea abierta»; digitalización con el texto
+  aprobado; salud y educación en una línea con turnos, faltantes, apoyo escolar y profesor digital.
+- A2 y A3 · 5.9 y capítulo 4 sin «sistema», «asistente» ni «aplicación» para la IA; textos aprobados del 4.11 (pág. 19).
+- A4 · Multas (5.11, pág. 35): nadie cobra por multa (operación pública; Francia, Australia, Virginia, Seattle, guía
+  federal 2023; la cláusula del promedio de seis meses, para el abogado); fondo cerrado de seguridad vial en un renglón
+  propio (Ley 24.449, art. 85); cámaras de tramo (−36% a −56% contra −11% a −44%); dónde van (umbral publicado del Reino
+  Unido y Francia; la comisión zonal elige cámara o reductor; panel sorteado en avenidas; revisión anual; autorización
+  provincial por punto); deuda vieja (Baradero, Chivilcoy); todo vale también para las de semáforo. Cuadro 14 con el
+  fondo cerrado. HOY: las cámaras las operaban dos universidades nacionales que cobraban un porcentaje (Decretos 704,
+  1542, 1543, 1588 y 1982 de 2022).
+- A5 y A5 bis · Salud (pág. 30): cualquier faltante con su porqué (stent como ejemplo, nunca datos de pacientes); turnos
+  en la charla para el vecino y la turnera para los hospitales. Sin números nuevos: esperan el informe 23.
+- A6 · Ruido (pág. 27): «hay norma; lo que no hay es medición» (Ord. 5182, art. 81; OG 27, art. 4 d; OG 154); prueba
+  sellada (Ley 25.506, art. 10), cómo se prueba, límites, mediación, multa por decibeles por ordenanza ambiental,
+  instrumento definido como CABA (Decreto 740/2007), estaciones móviles. Ordenanza VIII rehecha (pág. 44), para el
+  abogado.
+- A7 · Apoyo escolar: «cinco espacios chicos, sólo en Beccar y Boulogne...» en la síntesis, el 5.8, el compromiso 13 y
+  la meta (págs. 4, 32, 38 y 39).
+- A8 · Profesor digital (5.8, pág. 32): los ocho puntos del dispatch; costo y canon esperan el informe 23.
+- A9 · Textos bajo cuadros: ninguno pasa de tres renglones; el resto, a «Las notas de cada capítulo» (págs. 47 y 48),
+  que ahora tiene ese título y los capítulos debajo.
+- A10 · Cuadro de pasantías con el texto aprobado (ahora cuadro 30, pág. 23).
+- A11 · Financiación completa sólo en el 3.5; afuera el viejo cuadro 28 (5.1, pág. 22, una frase con las cuatro
+  etiquetas). Los cuadros se renumeraron solos: 42 seguidos.
+- A12 a A12 sexies · IA que escucha y espacio propio de cada asociación (pág. 20, con artículos en las Ordenanzas I y
+  V); defensa del comerciante (5.9, pág. 33, y Ordenanza IV, art. 6); costa en la semana con espectáculos (págs. 28 y
+  29); género y discapacidad (5.13, pág. 36); por qué siete días (5.12, pág. 35).
+- A13 · Los seis resúmenes rehechos, una línea por sección con sus números, hoy y propuesta en oraciones separadas:
+  1.6 en cinco líneas (pág. 7), 2.4 en once con el cuadro 9 área por área (pág. 9), 3.7 en ocho (pág. 13), 4.13 en doce
+  (pág. 21), 5.15 en veinte (pág. 37) y 6.7 en seis (pág. 41).
+- Excel: sin cambios de cifras (0 diferencias); se corrigen las referencias a cuadros que habían quedado viejas
+  (empleo y vivienda es el cuadro 34; los 17 pasantes de la plataforma, cuadros 27 y 32). 13.453 fórmulas, 0 errores.
+- Controles: 49 páginas de hasta 2.700 pt; índice contra páginas, 64 entradas sin error; sin Liberation ni DejaVu;
+  barrido limpio («beach» sólo en el título en inglés de una fuente de la EPA); cinco tests OK.
+- Para Nick: (1) el fondo cerrado de seguridad vial puede mover el 44,4% libre si hoy lo que se cobra por multas
+  financia otra cosa: falta el gasto vial actual; (2) la fuente dice que el 85% eran cámaras de semáforo, no fotomultas,
+  y así quedó; (3) «Beccar» sin tilde en los cuatro textos aprobados del apoyo escolar, «Béccar» en el resto.

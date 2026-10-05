@@ -30,6 +30,8 @@ C4B,    _c4 = split_at(_c4, '<h3>Lo que proponemos que una comisi&oacute;n zonal
 C4B_B,  _c4 = split_at(_c4, '<h2><span class="n">4.7</span>', "cap4bb2", "")
 C4B_B2, _c4 = split_at(_c4, '<h2><span class="n">4.9</span>', "cap4b2", "")
 C4B2,  C4B_C = split_at(_c4, '<h2><span class="n">4.12</span>', "cap4bc", "")
+# (dispatch 3, A12): la inteligencia artificial que escucha y el espacio de las asociaciones llevan el resto del 4.11 a otra pagina
+C4B2, C4B2B = split_at(C4B2, '<h3>Escucha a los vecinos, les hace el seguimiento y les responde</h3>', "cap4b2b", "")
 C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C3B_A, C3B_B = split_at(B.C3B, '<h2><span class="n">3.5</span>', "cap3b2",
@@ -59,6 +61,8 @@ C5B_B, C5B_C = split_at(C5B_B_SRC, '<h2><span class="n">5.7</span>', "cap5bc",
 C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.13</span>', "cap5b3",
                       H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
+# los resumenes de cada capitulo (dispatch 3, A13) crecieron: el 5.14 y el 5.15 van en pagina propia
+C5B3, C5B3B = split_at(C5B3, '<h2><span class="n">5.14</span>', "cap5b3b", "")
 # las multas de transito (dispatch 1, 03/10) no entran con el 5.10 y el 5.11: van con el 5.12 en la pagina siguiente
 C5B2B, C5B2C = split_at(C5B2B, '<h3>Multas de tr&aacute;nsito:', "cap5b2c", "")
 # 5.8 y 5.9 ya no entran juntas: la inspeccion transmitida se mudo al 5.9
@@ -75,9 +79,12 @@ C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
 _F_CORTE = F.FUENTES_HTML.index('<tr><td class="l">5.5 &middot; la costa: Per')
 _F_CAB = ('<table>\n<colgroup><col style="width:158pt"><col></colgroup>\n'
           '<tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>\n')
+# (dispatch 3, A9): las notas de cada capitulo crecieron con el detalle que salio de abajo de los cuadros; la nota de
+# metodo vuelve a ir sola y las fuentes del texto van en dos paginas
 METODO = dict(A.METODO)
-METODO["html"] = A.METODO["html"] + F.FUENTES_HTML[:_F_CORTE] + "</table>\n"
-FUENTES = dict(id="fuentes", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
+FUENTES = dict(id="fuentes", runhead=A.RH,
+               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)[:F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1).index('<tr><td class="l">5.5 &middot; la costa: Per')] + "</table>\n")
+FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
 
 # el anexo articulado entra en tres paginas
 ORD_A, ORD_B = split_at(O.ORDENANZA,
@@ -87,8 +94,8 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 ORD_B, ORD_C = split_at(ORD_B, '<h2>XI &middot; Ordenanza de la costa', "ordenanza3", "")
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
-            C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B_C,
-            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, D.GLOSARIO, METODO, FUENTES]
+            C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, D.GLOSARIO, METODO, FUENTES, FUENTES2]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

@@ -89,6 +89,12 @@ vecinal, comprendidos sus registros contables, seguros y la justificaci&oacute;n
 <p class="tight">El Departamento Ejecutivo repondr&aacute; y mantendr&aacute; al d&iacute;a el registro de las
 asociaciones vecinales de la Ordenanza 6045, con su zona, sus autoridades y su domicilio. Toda persona
 puede consultarlo en el Sistema de Informaci&oacute;n Municipal.</p>
+
+<h3>Art&iacute;culo 12 &mdash; Espacio propio en la inteligencia artificial del Municipio</h3>
+<p class="tight">Cada asociaci&oacute;n vecinal registrada y cada comisi&oacute;n zonal tiene, gratis, un espacio propio en la
+inteligencia artificial del Municipio para organizarse, priorizar y controlar la partida de su zona. El Municipio no lee
+ni filtra ese espacio. Su uso se limita a los fines de la asociaci&oacute;n o de la comisi&oacute;n y excluye la propaganda
+partidaria.</p>
 <h2>II &middot; Ordenanza del Sistema de Informaci&oacute;n Municipal</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n</h3>
@@ -187,6 +193,14 @@ artificial del Municipio registra cada clausura con su transmisi&oacute;n, su mo
 avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una clausura no se sostiene con una
 infracci&oacute;n constatada. Toda clausura puede reclamarse.</p>
 
+<h3>Art&iacute;culo 6 &mdash; Denuncia de coimas, aprietes y amenazas</h3>
+<p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero,
+la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de
+Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo
+al superior del denunciado. La identidad del denunciante se reserva. Mientras se investiga, el comercio no es
+inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. La
+denuncia falsa se sanciona.</p>
+
 <h2>V &middot; Ordenanza de asociaciones de parque</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Reconocimiento</h3>
@@ -210,6 +224,11 @@ espacio, o la observa por escrito, dentro de los <b>quince (15) d&iacute;as corr
 firma, la recepci&oacute;n no habilita el pago final. Vencido el plazo sin firma ni observaci&oacute;n, la
 recepci&oacute;n la resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante:
 <b>en la recepci&oacute;n no hay silencio positivo.</b></p>
+
+<h3>Art&iacute;culo 5 &mdash; Espacio propio en la inteligencia artificial del Municipio</h3>
+<p class="tight">Cada asociaci&oacute;n de parque tiene, gratis, un espacio propio en la inteligencia artificial del Municipio
+para organizarse y ejercer las facultades de esta ordenanza. El Municipio no lee ni filtra ese espacio. Su uso se limita
+a los fines de la asociaci&oacute;n y excluye la propaganda partidaria.</p>
 
 <h2>VI &middot; Ordenanza de la partida propia de g&eacute;nero</h2>
 

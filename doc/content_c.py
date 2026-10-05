@@ -702,10 +702,56 @@ firmar un alquiler.</p>
 autom&aacute;tica contra las compras anteriores, contra los otros dos hospitales y contra los municipios
 que publiquen&mdash; y un <b>canal de denuncias</b> que revisa la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del
 Concejo Deliberante &mdash;personas, no un algoritmo&mdash;, con cada denuncia y su respuesta consultables en la
-inteligencia artificial del Municipio. No se crea ning&uacute;n &oacute;rgano nuevo.</p>
+inteligencia artificial del Municipio. No se crea ning&uacute;n &oacute;rgano nuevo. Por ese canal llegan tambi&eacute;n las denuncias de comerciantes por coimas, aprietes y amenazas (5.9).</p>
 <p><b>Y todo lo que este programa promete que el vecino va a poder saber se pregunta ac&aacute;</b>, no se
 busca en un PDF suelto en un portal: lo que el 5.10 encontr&oacute; ca&iacute;do o escondido, la
 ejecuci&oacute;n por zona, el tiempo de respuesta de los reclamos y las trece metas del cap&iacute;tulo 6.</p>
+</div>
+<h3>Escucha a los vecinos, les hace el seguimiento y les responde</h3>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: un solo circuito, del vecino al responsable y de vuelta al vecino</div>
+<p><b>1 &middot; Escucha todo.</b> Cuenta todo lo que los vecinos le dicen a la inteligencia artificial del Municipio en
+cualquier charla, no s&oacute;lo el reclamo formal.</p>
+<p><b>2 &middot; Junta todo.</b> Con miles de quejas por d&iacute;a, no manda cada una: las agrupa por tema y por zona, con cu&aacute;ntas
+son, si crecen y qu&eacute; tan urgentes son. Cada responsable de &aacute;rea y cada comisi&oacute;n vecinal recibe ese resumen, y una alerta
+cuando algo se dispara: la obra que se atrasa, la recolecci&oacute;n que falla en una zona, la inspecci&oacute;n que se aparta de lo
+normal, el reclamo que tarda m&aacute;s en Boulogne que en Acassuso.</p>
+<p><b>3 &middot; Hace el seguimiento.</b> Le pone plazo a cada tema y le recuerda al responsable que act&uacute;e y conteste. Si no
+contesta a tiempo, el tema sube a su superior y queda a la vista en el seguimiento p&uacute;blico.</p>
+<p><b>4 &middot; Le responde al vecino como alguien que lo representa ante el Municipio:</b> &laquo;El otro d&iacute;a me comentaste que te
+hab&iacute;as quejado de esto. Habl&eacute; con el encargado del &aacute;rea y me mand&oacute; esta respuesta. &iquest;Est&aacute; bien? &iquest;Quer&eacute;s que le diga algo
+m&aacute;s?&raquo;. Lo que el vecino contesta vuelve al circuito. <span class="sg">Trabaja para el vecino, que se siente defendido y
+representado.</span></p>
+<p><b>5 &middot; Lo grave va a quien no depende del responsable.</b> Lo que parece corrupci&oacute;n, mala intenci&oacute;n o un error grave
+no va s&oacute;lo al responsable, que puede estar involucrado: va tambi&eacute;n a un control independiente &mdash;la auditor&iacute;a
+externa, el Concejo y la asociaci&oacute;n de la zona&mdash;.</p>
+<p><b>6 &middot; Con l&iacute;mites.</b> La inteligencia artificial corrige sola lo que es informaci&oacute;n, respuestas y datos; cambiar
+reglas o sancionar a alguien lo decide siempre una persona (Ley 25.326, art&iacute;culo 20). Al responsable le llegan los temas
+y las zonas, no los nombres de los vecinos, salvo que el vecino quiera darlo.</p>
+</div>
+<h3>Un espacio propio para cada asociaci&oacute;n</h3>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: las asociaciones, con la misma herramienta que el Municipio</div>
+<p><b>1 &middot; Gratis, para cada asociaci&oacute;n vecinal, asociaci&oacute;n de parque y comisi&oacute;n zonal:</b> su propio espacio en la
+inteligencia artificial del Municipio.</p>
+<p><b>2 &middot; Ah&iacute; arma lo que necesita para organizarse y defender lo que defiende</b> &mdash;su parque, su zona, sus
+vecinos&mdash;. No s&oacute;lo procesa textos y contesta: genera lo que haga falta para cuidar y mejorar el Municipio, como
+notas y pedidos de informes; im&aacute;genes y renders de c&oacute;mo quedar&iacute;a la plaza con la obra que proponen; actas, padr&oacute;n y
+votaciones internas; y an&aacute;lisis de los datos del Municipio sobre su zona.</p>
+<p><b>3 &middot; Los pasantes de la tecnicatura la ayudan a armar sus m&oacute;dulos</b>: es pr&aacute;ctica para ellos y apoyo para la
+asociaci&oacute;n.</p>
+<p><b>4 &middot; El espacio es de la asociaci&oacute;n:</b> el Municipio no lo lee ni lo filtra, y la asociaci&oacute;n lo puede usar para
+oponerse al propio Municipio.</p>
+<p><b>5 &middot; Un l&iacute;mite de para qu&eacute; se usa, m&aacute;s que de cu&aacute;nto, y vale para toda la inteligencia artificial del
+Municipio.</b> Es para los temas del Municipio, para cualquier vecino; para lo de cada asociaci&oacute;n, en su espacio; para la
+formaci&oacute;n, para los alumnos y pasantes de la tecnicatura; y, por convenio, para las empresas del semillero que trabajan
+con pasantes del Municipio. No es para trabajo privado que no tiene que ver con el Municipio: si alguien pide algo
+ajeno, le dice que no es para eso. Hay cupos l&oacute;gicos por tipo de usuario, generosos para el uso normal, y quien
+necesita m&aacute;s para algo del Municipio lo pide y se ampl&iacute;a. Una cuenta por persona, con identidad verificada, y ning&uacute;n
+programa de terceros se conecta sin convenio: as&iacute; nadie engancha robots. El control es autom&aacute;tico y mira la categor&iacute;a
+de uso y el volumen, no el contenido, para no leer el espacio de nadie: marca lo que se sale de lo normal, una persona
+revisa, y antes de cortar se le avisa al usuario o a la asociaci&oacute;n. Nada de propaganda partidaria (necesita dictamen de
+un abogado).</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Que la adjudicaci&oacute;n aparezca el d&iacute;a que
@@ -777,13 +823,9 @@ empleo, es planta encubierta.</p>
 <tr><td class="l">Dispositivos: instalar sensores, centros de acceso, transmisi&oacute;n de inspecciones y guardias; los equipos, en cada &aacute;rea (3.4)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
 <tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.676,6 M</b></td></tr>
 </table>
-<p class="cap"><b>Nota:</b> sueldos brutos de mercado &mdash;mediana de la encuesta de Sysarmy 2026.1: senior 3,40 M
-por mes, semi-senior 2,43 M, junior 1,50 M&mdash; por trece, m&aacute;s las cargas del empleador: 16,8% de contribuciones
-(IPS 12%, Decreto-Ley 9650/80, e IOMA 4,8%, Decreto 2655/04) y la ART que contrat&oacute; el Municipio, 3,275% m&aacute;s
-una suma fija por persona (Decreto 1587/2025). Pasantes, 240.000 $ por mes, con ART y salud. Infraestructura
-y licencias, 18%, y auditor&iacute;a externa, 10%, del equipo sin cargas. El soporte en cada una de las seis zonas lo
-hace planta reasignada, que ya cobra su sueldo. Son sueldos de referencia, a presupuestar y licitar antes de
-comprometerse. <span class="tag m">Estimado</span></p>
+<p class="cap"><b>Nota:</b> sueldos brutos de mercado por trece, m&aacute;s las cargas del empleador; pasantes, 240.000 $ por
+mes. Son de referencia, a presupuestar y licitar antes de comprometerse; el detalle, en las notas del cap&iacute;tulo 4.
+<span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>Proponemos que salga de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones al a&ntilde;o.</b> Con los dispositivos son
 1.676,6 millones, el <b>20,6%</b> de esa partida, y con el semillero de empresas del 5.3, el 22,0%. No hay fondos nuevos y no hay una partida que crear.</p>
@@ -820,24 +862,22 @@ asamblea. Es una p&eacute;rdida real de discrecionalidad.</p>
 manzana</span>.</p>
 </div>
 
-<h2><span class="n">4.13</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
+<h2><span class="n">4.13</span>Lo que dice este cap&iacute;tulo, en doce l&iacute;neas</h2>
 <ol class="n">
-<li>En la Provincia de Buenos Aires lo que vota una asamblea de vecinos no puede obligar al Municipio:
-en diciembre de 2025 el intendente de Pinamar vet&oacute; por eso una ordenanza que lo intentaba.</li>
-<li>Lo que s&iacute; puede volverse obligatorio es el dinero reservado para cada zona, y la ley permite
-adem&aacute;s que la asociaci&oacute;n vecinal haga la obra, contratada directamente por el Municipio.</li>
-<li>Proponemos que, al cuarto a&ntilde;o, las comisiones vecinales de las seis zonas decidan 28.908 millones por a&ntilde;o: uno de
-cada dos pesos de obra p&uacute;blica.</li>
-<li>Proponemos que ese dinero se reparta entre las zonas mitad por poblaci&oacute;n y mitad por necesidad contada en
-hogares, no en porcentajes, con la f&oacute;rmula escrita en una ordenanza.</li>
-<li>Proponemos como primer acto de gobierno derogar los art&iacute;culos que hoy le permiten al intendente disolver
-una asociaci&oacute;n vecinal.</li>
-<li>Y nada de esto funciona sin la inteligencia artificial que proponemos, que lee todo lo que el
-Municipio registra y le contesta al vecino en castellano. Sin eso el vecino vota sin poder leer lo que
-vota, y por eso tantos presupuestos participativos se apagan.</li>
+<li>En la Provincia de Buenos Aires lo que vota una asamblea de vecinos no puede obligar al Municipio: en diciembre de 2025 el intendente de Pinamar vet&oacute; por eso una ordenanza que lo intentaba. Lo que s&iacute; puede volverse obligatorio es la partida, y as&iacute; funcionan hace a&ntilde;os Rosario, Mor&oacute;n y decenas de municipios.</li>
+<li>La Constituci&oacute;n provincial manda desde 1994 que los municipios tengan refer&eacute;ndum, consulta e iniciativa popular, y la Legislatura sigue sin hacerlo: todo este mecanismo trabaja alrededor de esa omisi&oacute;n de treinta y dos a&ntilde;os.</li>
+<li>Proponemos que la obra que deciden los vecinos suba del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os: de 7.227 a 28.908 millones por a&ntilde;o, uno de cada dos pesos de obra, sin gasto nuevo.</li>
+<li>Boulogne y B&eacute;ccar suman dos tercios de la necesidad del partido. Proponemos repartir el dinero mitad por poblaci&oacute;n y mitad por necesidad contada en hogares &mdash;sin cloaca, sin gas de red, con necesidades b&aacute;sicas insatisfechas y hacinados&mdash;, con la f&oacute;rmula escrita en la ordenanza: B&eacute;ccar recibe 1,71 veces por habitante lo que Mart&iacute;nez, y a Acassuso sus 827 millones le alcanzan de sobra para lo que le falta.</li>
+<li>Dos capas: los vecinos priorizan en asamblea y el Ejecutivo tiene que contestar por escrito, con fundamentos y en plazo; y donde el 60% de los beneficiarios lo pide por escrito, la asociaci&oacute;n vecinal hace la obra, contratada directamente, como permite el art&iacute;culo 132 de la Ley Org&aacute;nica y como ya hace Pilar.</li>
+<li>Las comisiones son las asociaciones vecinales que ya existen; vota cada persona de 16 a&ntilde;os o m&aacute;s que vive o trabaja en la zona; si una comisi&oacute;n falla, se la interviene y su partida queda en su zona; quien prioriza una obra no la cobra, y la reciben tres vecinos que no la hacen; y lo que es de todo el partido, como la costa, lo decide un panel sorteado.</li>
+<li>El Concejo tiene 24 bancas repartidas en diez bloques, y ninguno pasa de cuatro: cada ordenanza necesita trece votos, de cuatro bloques por lo menos. Y en 2025 el Ejecutivo vet&oacute; cuatro ordenanzas en once semanas, y en uno de esos vetos sostuvo que las decisiones t&eacute;cnicas son s&oacute;lo suyas: por eso el mecanismo va por ordenanza, con la partida afectada y los plazos escritos.</li>
+<li>Juntas, las dos capas cambian qui&eacute;n hace la obra: el dinero, el trabajo y lo aprendido se quedan en el barrio, y los 28.908 millones del a&ntilde;o 4 son casi cuatro veces todo el programa de empleo y vivienda.</li>
+<li>Cada comisi&oacute;n ve cu&aacute;nto se gast&oacute; en su zona, en qu&eacute; y d&oacute;nde &mdash;un dato que hoy no existe y hay que construir&mdash;, y la partida queda protegida como recurso afectado (art&iacute;culo 119).</li>
+<li>El primer proyecto que entra al Concejo deroga los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045, que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
+<li>Y nada de esto funciona sin la inteligencia artificial del Municipio: lee todo lo que el Municipio registra y contesta en castellano mostrando de d&oacute;nde sale cada dato; sirve para votar y para el resto del a&ntilde;o &mdash;turnos, guardias, trabajo, habilitaciones, compras y denuncias&mdash;; escucha a los vecinos, les hace el seguimiento y les responde, y lo grave lo manda a un control independiente; y cada asociaci&oacute;n tiene ah&iacute; su espacio, gratis. La construye gente del partido, con t&iacute;tulo de la UNSO, y cuesta 1.676,6 millones por a&ntilde;o, de Ciencia y T&eacute;cnica: 49 personas en la plataforma y 5 en dispositivos.</li>
+<li>Le molesta al propio cargo de intendente, que deja de decidir la mitad de la obra; a las &aacute;reas que hoy la priorizan; a las empresas que hoy la hacen, donde la haga el barrio; y a quien la tabla de 2008 le cobra de menos.</li>
 </ol>
-<p><b>Proponemos que este mecanismo decida la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice
-qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
+<p><b>Proponemos que este mecanismo decida la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
 """ + fig("f_mesa", "Trabajo sobre el mapa del partido. Ilustraci&oacute;n.") + """
 """)
 
@@ -848,20 +888,12 @@ qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
 C5A = dict(id="cap5a", runhead=RH, html=fig("f_nautica",
     "Escuela de n&aacute;utica en el bajo. Ilustraci&oacute;n.") + """
 <h1><span class="n">5</span>Qu&eacute; hacemos en cada &aacute;rea</h1>
-<div class="stand">Cada &aacute;rea lleva una o dos de cuatro etiquetas &mdash;fondos nuevos, reasignaci&oacute;n, gesti&oacute;n o gratis&mdash; que dice de d&oacute;nde sale lo que propone.</div>
+<div class="stand">&Aacute;rea por &aacute;rea: qu&eacute; hay hoy, qu&eacute; proponemos y de d&oacute;nde sale.</div>
 
 <h2><span class="n">5.1</span>C&oacute;mo leer este cap&iacute;tulo</h2>
 <p>Un intendente gobierna todo: salud, seguridad, educaci&oacute;n, transporte, ambiente, obras,
 comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacute;amos.</p>
-""" + exhead("c", "Cuatro formas de pagar lo que se propone: fondos nuevos, reasignaci&oacute;n, gesti&oacute;n o gratis") + """
-<table>
-<colgroup><col style="width:130pt"><col></colgroup>
-<tr class="hd"><th>Etiqueta</th><th class="r">Qu&eacute; significa</th></tr>
-<tr><td class="l">Fondos nuevos</td><td class="n">Requiere fondos adicionales. Est&aacute; costeado en el cap&iacute;tulo 3.</td></tr>
-<tr><td class="l">Reasignaci&oacute;n</td><td class="n">Se financia moviendo fondos ya presupuestados, sin aumentar el gasto total. Se declara de d&oacute;nde salen.</td></tr>
-<tr><td class="l">Gesti&oacute;n</td><td class="n">No cuesta dinero. Cambia c&oacute;mo se administra lo que ya se gasta.</td></tr>
-<tr><td class="l">Gratis</td><td class="n">Cuesta cero. Registrar, contestar, ordenar.</td></tr>
-</table>
+<p>Cada &aacute;rea lleva una o dos de cuatro etiquetas que dicen de d&oacute;nde sale lo que propone: <b>fondos nuevos</b>, que pide dinero adicional, costeado en el cap&iacute;tulo 3; <b>reasignaci&oacute;n</b>, que mueve fondos ya presupuestados sin aumentar el gasto total, y dice de d&oacute;nde salen; <b>gesti&oacute;n</b>, que no cuesta dinero porque cambia c&oacute;mo se administra lo que ya se gasta; y <b>gratis</b>, que cuesta cero: registrar, contestar, ordenar.</p>
 <div class="pull"><p>Las dos propuestas m&aacute;s grandes ya ocupan el 41,4% del gasto flexible. Lo que sigue
 entra en el 58,6% restante, o no cuesta nada.</p></div>
 
@@ -889,8 +921,8 @@ presupuesto de mayor a menor y termina en el trabajo.</p>
 <p><b>Hoy:</b> 170 millones en Apoyo y Promoci&oacute;n al Empleo, el 0,05% del presupuesto (cuadro
 [[n:dos_partidas]]).</p>
 <p><b>Propuesta:</b> llevar el gasto conjunto en empleo y vivienda a <b>7.730,9 millones anuales en
-r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. De eso,
-<b>5.983 millones son fondos nuevos</b>, de la tabla, y 1.242 salen del gasto flexible; el resto ya se gasta.</p>
+r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. C&oacute;mo se paga, en el
+cap&iacute;tulo 3 (3.5).</p>
 </div>
 <h3>Qu&eacute; hace hoy el Municipio con esos 170 millones</h3>
 <div class="cols">
@@ -907,23 +939,23 @@ partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reempla
 le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, que es el que financia
 &eacute;l.</p>
 </div>
-""" + exhead("c", "Hoy hay talleres de empleo, pr&aacute;cticas de Medicina y Veterinaria y 15 pasantes en las fiscal&iacute;as; proponemos una pasant&iacute;a paga para 928 por a&ntilde;o",
+""" + exhead("c", "Hoy hay talleres de empleo, pr&aacute;cticas de Medicina y Veterinaria y 15 pasantes en las fiscal&iacute;as; proponemos que 928 alumnos por a&ntilde;o hagan una pasant&iacute;a paga",
              "Lo que el Municipio hace hoy en primer empleo, pasant&iacute;as y pr&aacute;cticas, y lo que propone este programa.",
              key="hoy_propuesta") + """
 <table>
-<colgroup><col style="width:70pt"><col><col style="width:150pt"></colgroup>
+<colgroup><col style="width:70pt"><col><col></colgroup>
 <tr class="hd"><th></th><th>Hoy</th><th>Lo que proponemos</th></tr>
-<tr><td class="l">Qu&eacute; hay</td><td class="m">Mi Primer Empleo: talleres de curr&iacute;culum y contacto con empresas, y el portal de empleo. Pr&aacute;cticas de Medicina en hospitales y centros de salud (Barcel&oacute;, UCA y, de 2026 a 2028, Favaloro) y de Veterinaria en Zoonosis (UBA). 15 pasantes que paga el Municipio en las fiscal&iacute;as, por un convenio de 2003 con el Ministerio P&uacute;blico. La UNSO tiene pasant&iacute;as pagas con pymes, sin convenio vigente con el Municipio: el de 2021 no tiene movimientos desde 2022</td><td class="m">Una tecnicatura de la UNSO con pasant&iacute;a paga para todos</td></tr>
-<tr><td class="l">Escala</td><td class="m">El portal: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas no publican cupo; las fiscal&iacute;as, 15 lugares</td><td class="m">928 por a&ntilde;o, con lugar garantizado</td></tr>
-<tr><td class="l">Pago</td><td class="m">Las fiscal&iacute;as, 747.500 $ por mes desde marzo de 2026: becas designadas por decreto, fuera del r&eacute;gimen de pasant&iacute;as, sin horas publicadas ni cobertura encontrada. Las pr&aacute;cticas de Barcel&oacute; y de Veterinaria, ninguno; los convenios de Favaloro y de la UCA no est&aacute;n publicados</td><td class="m">240.000 $ por mes, con ART y salud</td></tr>
-<tr><td class="l">Qu&eacute; hacen</td><td class="m">Rotaciones cl&iacute;nicas de Medicina; pr&aacute;ctica supervisada en Zoonosis, hasta dos meses; en las fiscal&iacute;as, tareas del Ministerio P&uacute;blico</td><td class="m">Proyectos de inteligencia artificial que el Municipio necesita</td></tr>
-<tr><td class="l">Despu&eacute;s</td><td class="m">M&aacute;s de 300 vecinos con trabajo por el portal, seg&uacute;n una gacetilla; no hay un registro que se pueda consultar</td><td class="m">Pasant&iacute;a, junior en el Municipio, empresa del partido o semillero</td></tr>
-<tr><td class="l">El Municipio</td><td class="m">Acerca candidatos y empresas</td><td class="m">Forma, da el primer empleo y es cliente</td></tr>
-<tr><td class="l">Las empresas</td><td class="m">Publican avisos. D&oacute;nde est&aacute;n las que cobran del Municipio no se publica: la pr&aacute;ctica se abandon&oacute; en 2018 (1.2)</td><td class="m">Cl&aacute;usula de empleo local del 75% y el 20% de cada licitaci&oacute;n para pymes del partido</td></tr>
+<tr><td class="l">Qu&eacute; hay</td><td class="m">Talleres de curr&iacute;culum y un portal de empleo; pr&aacute;cticas de Medicina y Veterinaria sin pago; 15 pasantes pagos en las fiscal&iacute;as.</td><td class="m">Una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, con un a&ntilde;o de pasant&iacute;a paga para cada alumno.</td></tr>
+<tr><td class="l">Cu&aacute;ntos</td><td class="m">El portal muestra 131 empresas y unos 600 puestos; las pr&aacute;cticas no dicen cu&aacute;ntos lugares tienen.</td><td class="m">928 alumnos por a&ntilde;o, y cada uno tiene asegurado su lugar de pasant&iacute;a.</td></tr>
+<tr><td class="l">Cu&aacute;nto cobran</td><td class="m">Las pr&aacute;cticas, nada. Los 15 de las fiscal&iacute;as, 747.500 $ por mes, como beca por decreto.</td><td class="m">240.000 $ por mes por 20 horas semanales, con ART y obra social.</td></tr>
+<tr><td class="l">Qu&eacute; hacen</td><td class="m">Rotaciones de Medicina, pr&aacute;ctica en Zoonosis y tareas en las fiscal&iacute;as.</td><td class="m">Construyen los proyectos de inteligencia artificial que necesita el Municipio.</td></tr>
+<tr><td class="l">Despu&eacute;s</td><td class="m">Una gacetilla dice que m&aacute;s de 300 vecinos consiguieron trabajo por el portal; no hay un registro para consultar.</td><td class="m">Siguen como junior en el Municipio, en una empresa del partido o en el semillero, y cualquier vecino puede ver d&oacute;nde termin&oacute; cada camada.</td></tr>
+<tr><td class="l">El Municipio</td><td class="m">Acerca candidatos y empresas.</td><td class="m">Forma a la gente, le da el primer empleo y le compra trabajo a las empresas del partido.</td></tr>
+<tr><td class="l">Las empresas</td><td class="m">Publican avisos. Desde 2018 no se publica d&oacute;nde est&aacute;n las que cobran del Municipio.</td><td class="m">Las que cobran del Municipio toman al menos 75% de gente del partido, y el 20% de cada licitaci&oacute;n va a pymes del partido.</td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> Mi Primer Empleo, sanisidro.gob.ar; Bolet&iacute;n Oficial Municipal, decretos 374/2025
-(Barcel&oacute;), 498/2026 (UCA), 775/2026 (UBA) y 298/2026 (fiscal&iacute;as); nota del Municipio del 3 de septiembre de 2026, reproducida por
-InfoBAN (Favaloro); Zona Norte Visi&oacute;n, 16 de junio de 2025 (UNSO) y 11 de agosto de 2026 (portal).</p>
+<p class="cap"><b>Fuente:</b> Mi Primer Empleo, sanisidro.gob.ar; Bolet&iacute;n Oficial Municipal, decretos 374/2025, 498/2026,
+775/2026 y 298/2026; nota del Municipio del 3 de septiembre de 2026; Zona Norte Visi&oacute;n, 16 de junio de 2025 y 11 de agosto
+de 2026. El detalle, en las notas del cap&iacute;tulo 5.</p>
 <ol class="n">
 <li><b>Formaci&oacute;n laboral orientada a la demanda real.</b> <b>Proponemos una tecnicatura
 universitaria de dos a&ntilde;os en inteligencia artificial aplicada y datos</b>, de la UNSO, dictada en
@@ -1149,17 +1181,14 @@ trescientos juniors por a&ntilde;o se quedaran, a sueldo de mercado costar&iacut
 <tr><td class="l">Supervisor</td><td class="n">95</td><td class="m">48 en el Municipio &mdash;planta reasignada y los seniors de la plataforma&mdash; y 47 en las empresas</td><td class="m">Ya se pagan</td><td class="m">&mdash;</td></tr>
 <tr class="hi"><td class="l">Segundo escal&oacute;n</td><td class="n">180 a 230</td><td class="m">Empresas contratadas: obra, servicios, desarrollos y obra vecinal</td><td class="m">Cada empresa</td><td class="m">Por a&ntilde;o, m&aacute;s los juniors que dejan el Municipio</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> un junior queda un a&ntilde;o y medio en promedio; un semi-senior, tres; un senior,
-cuatro. En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segundo, 355 y 356 el tercero y 464 y 464 el cuarto; cada uno pasa seis meses por el Municipio y seis por las empresas. Egresan 1.286 en el mandato. <span class="tag m">Estimado</span></p>
-<p class="cap"><b>Un cuadro adentro del otro:</b> el equipo de la plataforma (cuadro [[n:equipo]]) es parte
-de los pasantes y juniors del Municipio (cuadro [[n:proyectos]]), y &eacute;stos son parte de esta
-pir&aacute;mide.</p>
+<p class="cap"><b>Nota:</b> egresan 1.286 en el mandato; un junior queda un a&ntilde;o y medio en promedio, un semi-senior tres
+y un senior cuatro. El detalle, en las notas del cap&iacute;tulo 5. <span class="tag m">Estimado</span></p>
 <p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de empleo, en r&eacute;gimen, 2.783,1 millones van a formaci&oacute;n, con la intermediaci&oacute;n adentro, y 1.855,4 a
 contratar desarrollos. A vivienda van 3.092,4 millones. <b>La obra vecinal hace las redes de agua, cloaca y
 gas en la calle; la partida de vivienda, la conexi&oacute;n de cada casa</b> donde falta, que es lo que el
 cap&iacute;tulo 1 mide.</p>
 """ + exhead("c", "Los 7.730,9 millones de empleo y vivienda: 60% para empleo, 40% para vivienda",
-             "Monto por a&ntilde;o una vez que el programa funciona completo, en pesos de diciembre de 2025.") + """
+             "Monto por a&ntilde;o una vez que el programa funciona completo, en pesos de diciembre de 2025.", key="reparto_empleo") + """
 <table>
 <colgroup><col style="width:215pt"><col><col></colgroup>
 <tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
@@ -1169,8 +1198,8 @@ cap&iacute;tulo 1 mide.</p>
 <tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">La conexi&oacute;n de cada casa al agua, la cloaca y el gas. Las redes en la calle, la obra vecinal (cap&iacute;tulo 4)</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por
-persona, que pagan los dos a&ntilde;os de formaci&oacute;n; la pasant&iacute;a la paga quien la recibe. Los dos primeros a&ntilde;os la formaci&oacute;n usa toda la partida de empleo, porque todav&iacute;a no hay egresados que contratar: entran 462 y 824 en vez de 277 y 494, y egresan 1.286 en el mandato. El tercer a&ntilde;o vuelve este reparto. El m&oacute;dulo de salud de los meses 12 a 18, que se pagaba con la contrataci&oacute;n de desarrollos, sale esos dos a&ntilde;os del gasto flexible libre.
+<p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por persona; los dos primeros
+a&ntilde;os la formaci&oacute;n usa toda la partida de empleo. El detalle, en las notas del cap&iacute;tulo 5.
 <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
@@ -1642,7 +1671,7 @@ inteligencia artificial del Municipio las difunde.</p>
 <p><b>4 &middot; Actividades fijas, no eventos sueltos</b>: clases n&aacute;uticas &mdash;la Escuela N&aacute;utica, m&aacute;s abajo&mdash;, de kite, caminatas guiadas, todas las
 semanas el mismo d&iacute;a, que se van extendiendo por la costa a medida que crecen, empezando por algunos parques. Los
 eventos solos no alcanzan: en los Docklands de Melbourne, tres noches de festival llevaron 100.000 personas y los
-locales vac&iacute;os siguieron entre el 15% y el 20%.</p>
+locales vac&iacute;os siguieron entre el 15% y el 20%. Y en cada puesto, de lunes a jueves, la Escuela N&aacute;utica, clases gratis de gimnasia y de baile, foodtrucks con ofertas y espect&aacute;culos al aire libre: m&aacute;s abajo.</p>
 <p><b>5 &middot; Medir cu&aacute;nta gente va cada d&iacute;a, para saber si funciona.</b> Una c&aacute;mara que cuenta en cada acceso de los
 21 playones de la costa: unos 110 a 117 millones una vez y 13 millones por a&ntilde;o, dentro del aumento de ambiente, a
 los que falta sumar el montaje y el programa. Cualquiera ve el resultado en la inteligencia artificial del
@@ -1661,7 +1690,7 @@ corregir antes. Toda inspecci&oacute;n que termine en una clausura se transmite 
 inspecciones (anexo, Ordenanza IV): se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro
 real obliga a cerrar en el momento, igual se transmite y se explica. Todo queda en la inteligencia artificial del
 Municipio, que cualquier vecino puede consultar y que audita las clausuras: avisa si a un mismo comercio se lo
-clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar.
+clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar. Y si a un comerciante le piden una coima o lo aprietan, tiene la herramienta del 5.9.
 <span class="sg">As&iacute; a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y
 Barisidro.</span></p>
 <p><b>9 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
@@ -1752,7 +1781,17 @@ da clases en la semana; plataforma, ba&ntilde;os, bebedero y guardado, gratis; l
 inteligencia artificial del Municipio arma la agenda de cada parque con todas las clases, municipales y privadas, y
 la gente se anota ah&iacute;; los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase,
 y la inteligencia artificial lo avisa; curso gratis de primeros auxilios para los instructores registrados; y las
-c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase.</p>
+c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase. La agenda suma tambi&eacute;n los espect&aacute;culos y vale para todas las plazas y parques del partido, no s&oacute;lo para la costa: cualquier vecino le pregunta a la inteligencia artificial del Municipio &laquo;&iquest;qu&eacute; hay para hacer hoy?&raquo; y le contesta con todo &mdash;clases de baile y de gimnasia, instructores privados, espect&aacute;culos y lo del Municipio, de d&iacute;a y despu&eacute;s de la oficina&mdash;. As&iacute; se entera sin ir a averiguar, y va m&aacute;s gente de lunes a jueves (punto 1, m&aacute;s arriba).</p>
+<p><b>6 &middot; Espect&aacute;culos al aire libre, en la semana.</b> M&uacute;sica, teatro y otros espect&aacute;culos en las plazas y parques
+que funcionan bien, la costa primero; no s&oacute;lo los que organiza el Municipio, tambi&eacute;n los de artistas independientes y
+peque&ntilde;os grupos que quieren armar algo. De lunes a jueves, con fechas fijas cada semana y no eventos sueltos (Melbourne,
+m&aacute;s arriba): el fin de semana las plazas ya se llenan y no se suma nada. Igual que los instructores, con un registro
+gratis y sin canon: el artista pide lugar y horario en la inteligencia artificial del Municipio, que arma la agenda de
+cada parque y la difunde, y fuera del horario de las clases la plataforma de madera sirve de escenario. Para que no se
+llene, un cupo por lugar y por horario, distancia o turnos para que los sonidos no se mezclen, un tope de volumen y
+sectores tranquilos marcados en el mapa; y quien quiere silencio total tiene los horarios sin espect&aacute;culos, que la
+inteligencia artificial tambi&eacute;n muestra. Las reglas concretas las fija la reglamentaci&oacute;n (necesita dictamen de un
+abogado). Los descuentos y las c&aacute;maras que cuentan gente, como en el punto 5.</p>
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
 cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis, de 426 a 791
 millones de obra, de a dos por a&ntilde;o desde el &Aacute;guila: de 142 a 296 el a&ntilde;o 1 y de 122 a 265 los a&ntilde;os 2 y 3, seg&uacute;n qu&eacute;
@@ -1824,7 +1863,7 @@ reconoce y les da poder.</p>
 dise&ntilde;o de la recuperaci&oacute;n desde el principio; recibe la informaci&oacute;n de cada obra antes que nadie y
 la sigue con la inteligencia artificial del Municipio &mdash;costo por metro y avance&mdash;; y <span
 class="sg">firma la recepci&oacute;n: sin esa firma no se paga</span>. Tiene quince d&iacute;as para firmar u observar;
-si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo.</p>
+si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo. Y cada asociaci&oacute;n tiene su propio espacio en la inteligencia artificial del Municipio (4.11).</p>
 <p><b>Y qui&eacute;n decide.</b> La obra en los parques de cada zona la vota la comisi&oacute;n de esa zona; la de la
 costa, que es de todo el partido, la decide el panel sorteado del cap&iacute;tulo 4. En un parque costero, como el
 del &Aacute;guila, las dos cosas: el dictamen de su asociaci&oacute;n y la decisi&oacute;n del panel.</p>
@@ -2454,13 +2493,32 @@ p&uacute;blica desde un comercio o una vivienda alcanza a terceros que no son pa
 <span class="sg">El l&iacute;mite es el acto, no el lugar</span>: la reglamentaci&oacute;n define el
 resguardo de esos datos y el archivo queda con fecha, domicilio y agente interviniente.</p>
 </div>
+<h3>Si a un comerciante le piden una coima, lo aprietan o lo amenazan</h3>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: la herramienta del comerciante frente a coimas, aprietes y amenazas</div>
+<p><b>1 &middot; Lo cuenta, y la inteligencia artificial lo defiende.</b> El comerciante, o cualquier vecino, le cuenta a la
+inteligencia artificial del Municipio que un funcionario le pide dinero, lo amenaza o le clausura sin motivo. Le explica
+sus derechos: a quien le exigen dinero es v&iacute;ctima; exigirlo es delito (C&oacute;digo Penal, art&iacute;culo 266, exacciones ilegales),
+y recibirlo tambi&eacute;n (art&iacute;culo 256, cohecho). Sella la prueba en el momento de grabar, como la del vecino que denuncia un
+ruido (5.5), y le arma la denuncia.</p>
+<p><b>2 &middot; La denuncia va a quien no depende del denunciado:</b> la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo
+(el canal del cap&iacute;tulo 4), la auditor&iacute;a externa y, si hay delito, la fiscal&iacute;a. Nunca s&oacute;lo al jefe del denunciado.</p>
+<p><b>3 &middot; Sin represalias.</b> La identidad del comerciante queda reservada. Mientras se investiga, a ese comercio no lo
+inspecciona el mismo agente, y cualquier clausura nueva la revisa antes un supervisor que no dependa del
+denunciado.</p>
+<p><b>4 &middot; Cruza los datos.</b> La inteligencia artificial cruza denuncias, clausuras e inspecciones: si se concentran en
+un mismo agente, rubro o zona, avisa al control independiente. Y le cuenta al comerciante en qu&eacute; est&aacute; su denuncia
+(4.11).</p>
+<p><b>5 &middot; Tambi&eacute;n protege al inspector honesto:</b> la transmisi&oacute;n en vivo lo cubre, y la denuncia falsa se sanciona
+(anexo, Ordenanza IV; necesita dictamen de un abogado).</p>
+</div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
 <p class="tight"><b>Proponemos que nada de lo que sigue se publique para que el vecino lo vaya a buscar: se lo pregunta a
 la inteligencia artificial del Municipio, y le contesta.</b> Es el argumento del cap&iacute;tulo 4: lo que
 hay que leer no se lee, y lo que nadie lee no controla nada. Antes hay que poner en orden lo que el
 Municipio ya public&oacute; alguna vez, y eso <span class="sg">no cuesta un peso</span>: se hace, no se
-anuncia.</p>
+anuncia. Y adem&aacute;s escucha: lo que los vecinos le cuentan, lo junta, le hace el seguimiento y les responde (4.11).</p>
 """ + exhead("c", "La informaci&oacute;n que el Municipio ya public&oacute;: qu&eacute; est&aacute;, qu&eacute; est&aacute; escondido y qu&eacute; no est&aacute;") + """
 <table>
 <colgroup><col style="width:150pt"><col style="width:96pt"><col></colgroup>
@@ -2636,12 +2694,12 @@ se labran: en 2024 se pagaron entre 13.000 y 456.000, y cada 10% de rebaja media
 <table>
 <colgroup><col style="width:118pt"><col><col><col></colgroup>
 <tr class="hd"><th>Caso</th><th class="r">Hoy</th><th class="r">Hoy, el Municipio</th><th class="r">Con la Provincia</th></tr>
-<tr><td class="l">Un mill&oacute;n por mes, vive solo, una multa</td><td class="m">171.075 de una vez: el 17% del ingreso</td><td class="m">9 cuotas de 20.000, sin tr&aacute;mites</td><td class="m">Un pago voluntario seg&uacute;n el ingreso, m&aacute;s bajo</td></tr>
-<tr><td class="l">Un mill&oacute;n por mes, diez pasadas por la misma c&aacute;mara</td><td class="m">1.710.750: el 171% del ingreso</td><td class="m">El juez une las del mismo viaje; si fueron d&iacute;as distintos, 86 cuotas de 20.000</td><td class="m">Cuentan como una: 9 cuotas de 20.000</td></tr>
-<tr><td class="l">Un mill&oacute;n por mes, hogar de cuatro</td><td class="m">171.075 de una vez</td><td class="m">18 cuotas de 10.000</td><td class="m">Un pago voluntario seg&uacute;n el ingreso, m&aacute;s bajo</td></tr>
-<tr><td class="l">Diez millones por mes, una falta grave</td><td class="m">171.075: el 1,7% del ingreso</td><td class="m">Lo mismo, en una cuota</td><td class="m">Seg&uacute;n el ingreso: 1.896.084</td></tr>
-<tr><td class="l">41 km/h en zona de 40</td><td class="m">Puede haber multa: ninguna norma obliga a descontar el error</td><td class="m">No hay multa: empieza en 47</td><td class="m">&mdash;</td></tr>
-<tr><td class="l">Cuentapropista que reincide</td><td class="m">Suspensi&oacute;n de hasta 9 meses, sin poder trabajar</td><td class="m">Suspensi&oacute;n corta, para un tipo de veh&iacute;culo, y curso</td><td class="m">Permiso para trabajar con horarios y recorridos; si reincide, suspensi&oacute;n doble</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, vive solo, una multa</td><td class="m">Paga 171.075 de una vez: el 17% de su ingreso.</td><td class="m">Paga 9 cuotas de 20.000, sin tr&aacute;mites.</td><td class="m">Paga menos, porque el pago voluntario depende del ingreso.</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, diez pasadas por la misma c&aacute;mara</td><td class="m">Debe 1.710.750: el 171% de su ingreso.</td><td class="m">El juez une las del mismo viaje; si fueron d&iacute;as distintos, paga 86 cuotas de 20.000.</td><td class="m">Las diez cuentan como una: paga 9 cuotas de 20.000.</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, hogar de cuatro</td><td class="m">Paga 171.075 de una vez.</td><td class="m">Paga 18 cuotas de 10.000.</td><td class="m">Paga menos, porque el pago voluntario depende del ingreso.</td></tr>
+<tr><td class="l">Diez millones por mes, una falta grave</td><td class="m">Paga 171.075: el 1,7% de su ingreso.</td><td class="m">Paga lo mismo, en una cuota.</td><td class="m">Paga seg&uacute;n su ingreso: 1.896.084.</td></tr>
+<tr><td class="l">41 km/h en zona de 40</td><td class="m">Puede tener multa: ninguna norma obliga a descontar el error del equipo.</td><td class="m">No tiene multa: la multa empieza en 47.</td><td class="m">&mdash;</td></tr>
+<tr><td class="l">Cuentapropista que reincide</td><td class="m">Lo suspenden hasta 9 meses y no puede trabajar.</td><td class="m">Le dan una suspensi&oacute;n corta, para un tipo de veh&iacute;culo, y un curso.</td><td class="m">Tiene un permiso para trabajar con horarios y recorridos; si reincide, la suspensi&oacute;n es doble.</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> c&aacute;lculo propio con la unidad de multa de 2.281 pesos (Resoluci&oacute;n 4/2026) y el pago
 voluntario por exceso de velocidad, 75 unidades; la multa seg&uacute;n el ingreso, como en Finlandia: 12 d&iacute;as-multa del
@@ -2696,9 +2754,12 @@ viernes.</b></p>
 <div class="clabel">Lo que proponemos: horarios rotativos optativos</div>
 <p><b>Quien opta trabaja el fin de semana y descansa en la semana.</b> Mismas horas, otros d&iacute;as: sin costo extra
 en sueldos.</p>
-<p><b>Lo que buscamos:</b> un Municipio disponible para el vecino tambi&eacute;n el s&aacute;bado y el domingo; descomprimir
-el tr&aacute;nsito y la gente de los fines de semana; y generar demanda en la semana, en vez de que todo dependa del fin de
-semana: es bueno para la econom&iacute;a de la costa y sus comercios (5.5).</p>
+<p><b>Por qu&eacute;.</b> Para que el Municipio est&eacute; disponible tambi&eacute;n el s&aacute;bado y el domingo. Para que quien trabaja de
+lunes a viernes no pierda una ma&ntilde;ana de trabajo por un tr&aacute;mite: el que m&aacute;s pierde es el que cobra por d&iacute;a. Para
+descomprimir el tr&aacute;nsito y la gente de los fines de semana. Y porque el empleado que opta descansa en la semana y es &eacute;l
+mismo quien va a los parques y a los comercios de lunes a jueves: eso genera demanda en la semana para la costa y sus
+comercios (5.5). Es optativo y en positivo: a mucha gente le conviene un franco en la semana para sus tr&aacute;mites, para
+viajar m&aacute;s barato o para estar con los chicos.</p>
 <p><b>Empieza por tres:</b> las delegaciones el s&aacute;bado a la ma&ntilde;ana, rotando por zona; el Juzgado de Faltas; y los
 turnos de salud por tel&eacute;fono el s&aacute;bado. Y la inteligencia artificial del Municipio atiende todos los d&iacute;as, a toda
 hora.</p>
@@ -2780,22 +2841,38 @@ propio Municipio</span>, porque la junta evaluadora es municipal y emite los cer
 </p><p>Proponemos que cualquiera pueda preguntarlo por zona: no cuesta un peso, y nadie m&aacute;s tiene ese dato.</p>
 </div>
 <div class="callout g">
-<div class="clabel">La propuesta, sin fondos nuevos</div>
-<p><b>1 &middot; Partida propia para g&eacute;nero</b>, separada del programa que hoy comparte con
-ni&ntilde;ez, juventud y personas mayores. Discapacidad ya tiene la suya, con 65,9 millones en 2025: lo que
-le falta no es una partida. No es dinero nuevo: es abrir la ejecuci&oacute;n para que se pueda ver y
-discutir cada a&ntilde;o.</p>
-<p><b>2 &middot; Sedes donde est&aacute; la gente.</b> El &iacute;ndice de necesidad del cap&iacute;tulo 4
-dice d&oacute;nde, y la partida vecinal del cap&iacute;tulo 4 puede financiar el local: una sede barrial
-es obra, y una comisi&oacute;n la puede priorizar.</p>
-<p><b>3 &middot; Los dos mapas, cada uno donde corresponde.</b> Infancia en B&eacute;ccar y Boulogne;
-personas mayores en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido y
-los n&uacute;meros dicen que no deber&iacute;a serlo.</p>
-<p><b>4 &middot; Atenci&oacute;n domiciliaria para personas mayores</b>, que hoy no existe y es lo
-&uacute;nico de las tres que no pide un edificio. Se dota con cuidadores formados en el CFL 404 y pagados por
-Desarrollo Social, y se mide en personas atendidas, no en centros abiertos.</p>
-<p><b>5 &middot; Que cualquiera pueda preguntar cu&aacute;ntos certificados de discapacidad emiti&oacute; la junta municipal en su zona</b>, y una p&aacute;gina institucional que diga qu&eacute; hay y d&oacute;nde, con una
-l&iacute;nea de atenci&oacute;n que no sea un tel&eacute;fono de guardia.</p>
+<div class="clabel">La propuesta, sin fondos nuevos ni unidades nuevas: con lo que el programa ya tiene</div>
+<p><b>Ni&ntilde;ez y personas mayores.</b> Los dos mapas, cada uno donde corresponde: infancia en B&eacute;ccar y Boulogne; personas
+mayores en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido y los n&uacute;meros dicen que no deber&iacute;a serlo.
+Y atenci&oacute;n domiciliaria para personas mayores, que hoy no existe y es lo &uacute;nico de las tres que no pide un edificio: cien
+cuidadores formados en el CFL 404 y pagados por Desarrollo Social, que se miden en personas atendidas, no en centros
+abiertos.</p>
+<p><b>G&eacute;nero.</b></p>
+<p><b>1 &middot; La inteligencia artificial del Municipio, primer contacto a toda hora:</b> orienta y deriva sin juzgar &mdash;a
+la direcci&oacute;n de g&eacute;nero, a la l&iacute;nea nacional 144 o a la guardia&mdash;, saca el turno y tiene un modo discreto: la charla
+no queda guardada en el tel&eacute;fono.</p>
+<p><b>2 &middot; La prueba sellada (5.5)</b> le sirve a una v&iacute;ctima para guardar mensajes, audios y fotos con su fecha. Quedan
+en la inteligencia artificial del Municipio y no en el tel&eacute;fono, donde el agresor podr&iacute;a verlos.</p>
+<p><b>3 &middot; Sin sedes nuevas:</b> la direcci&oacute;n atiende d&iacute;as fijos en lugares que ya existen en cada zona &mdash;delegaciones,
+centros de salud, centros de apoyo escolar&mdash;, empezando por Boulogne y B&eacute;ccar.</p>
+<p><b>4 &middot; Patrocinio jur&iacute;dico y refugio, sin oficinas nuevas:</b> la inteligencia artificial arma el caso y lo deriva al
+patrocinio gratuito que exista &mdash;de la Provincia, del colegio de abogados o de las universidades&mdash;, y el refugio
+va por convenio con la Provincia.</p>
+<p><b>5 &middot; La partida propia</b>, separada del programa que hoy comparte con ni&ntilde;ez, juventud y personas mayores, sin dinero
+nuevo, y una p&aacute;gina con una l&iacute;nea de atenci&oacute;n de verdad.</p>
+<p><b>6 &middot; Lo que escucha la inteligencia artificial (4.11)</b> se junta por zona y le muestra a la direcci&oacute;n ad&oacute;nde
+ir.</p>
+<p><b>Discapacidad.</b></p>
+<p><b>1 &middot; Los cien cuidadores a domicilio</b> atienden tambi&eacute;n a personas con discapacidad que no pueden salir.</p>
+<p><b>2 &middot; Turnos (5.6):</b> la inteligencia artificial les saca el turno, les ofrece teleconsulta cuando no pueden
+moverse y los acompa&ntilde;a en el tr&aacute;mite del certificado ante la junta evaluadora municipal.</p>
+<p><b>3 &middot; Veredas y rampas:</b> las barreras que los vecinos le cuentan a la inteligencia artificial llegan a la comisi&oacute;n
+de cada zona, que decide la obra de veredas (cap&iacute;tulo 4).</p>
+<p><b>4 &middot; La inteligencia artificial del Municipio se usa por voz, con letra grande y en lectura f&aacute;cil.</b></p>
+<p><b>5 &middot; El profesor digital (5.8)</b>, tambi&eacute;n para chicos con discapacidad.</p>
+<p><b>6 &middot; Y lo que ya estaba:</b> cualquiera pregunta cu&aacute;ntos certificados de discapacidad emiti&oacute; la junta municipal en
+su zona. Discapacidad ya tiene su partida, con 65,9 millones en 2025: lo que falta es abrir la ejecuci&oacute;n para que se
+pueda ver y discutir cada a&ntilde;o.</p>
 </div>
 
 <h2><span class="n">5.14</span>Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;</h2>
@@ -2814,33 +2891,30 @@ afuera.</p>
 <tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
 </table>
 
-<h2><span class="n">5.15</span>Lo que dice este cap&iacute;tulo, en siete l&iacute;neas</h2>
+<h2><span class="n">5.15</span>Lo que dice este cap&iacute;tulo, en veinte l&iacute;neas</h2>
 <ol class="n">
-<li>Cada &aacute;rea lleva una etiqueta, o dos, que dicen de d&oacute;nde sale lo que propone, y s&oacute;lo empleo y vivienda
-necesitan fondos nuevos; todo lo dem&aacute;s se paga moviendo gasto que ya existe, o no cuesta nada.</li>
-<li>Salud es el 24,1% del presupuesto y <b>no se puede sacar turno por internet en ning&uacute;n hospital ni
-centro de salud municipal</b>, mientras el turno para castrar una mascota s&iacute; se saca por internet, con la
-plataforma que el Municipio ya tiene. No falta tecnolog&iacute;a: falta prioridad.</li>
-<li>En 2023 el Municipio anunci&oacute; inteligencia artificial para leer im&aacute;genes m&eacute;dicas en los tres
-hospitales, sin proveedor conocido ni resultados publicados. Ac&aacute; no hay que proponerla: hay que auditarla.</li>
-<li>El gasto en seguridad creci&oacute; 34,8% por encima de la inflaci&oacute;n en un a&ntilde;o, y el Municipio anuncia
-unas <b>2.646 c&aacute;maras con anal&iacute;tica que nunca tuvo una auditor&iacute;a externa</b>. No proponemos comprar c&aacute;maras
-nuevas: que las que hay detecten hechos violentos y avisen al patrullero m&aacute;s cercano, patrullaje dirigido
-donde se concentra el delito y una oficina de ciberdelito.</li>
-<li>La recolecci&oacute;n de residuos, con barrido y limpieza, es el servicio m&aacute;s caro que paga el
-Municipio &mdash;49.270 millones al a&ntilde;o&mdash;: la presta el mismo grupo desde 1998, se licit&oacute; cuatro veces sin
-llegar a un contrato, y corre sobre uno de seis meses de 2009, prorrogado hasta el 31 de diciembre de 2026 o hasta
-que se adjudique su reemplazo.</li>
-<li>Proponemos que el gasto en ambiente pase del 0,4% al 1,5% del presupuesto, con fondos que se sacan de otros
-programas, empezando por la costa: que deje de entrar cloaca, que est&eacute; limpia y que vuelva la arena, con bandera
-diaria y ba&ntilde;o con guardavidas en los tramos de arena; educaci&oacute;n recupera lo que perdi&oacute; contra la inflaci&oacute;n en 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, escuela por escuela.</li>
-<li>De las siete cosas que se buscaron en el sitio del Municipio, seis &mdash;el portal de datos
-abiertos, las declaraciones juradas de los funcionarios, la planta de personal, el organigrama, las
-adjudicaciones y los estados contables&mdash; hoy est&aacute;n ca&iacute;das, escondidas, incompletas o no se pueden
-verificar. Reponerlas no cuesta nada.</li>
+<li>Cada &aacute;rea lleva una o dos etiquetas que dicen de d&oacute;nde sale lo que propone &mdash;fondos nuevos, reasignaci&oacute;n, gesti&oacute;n o gratis&mdash;, y s&oacute;lo empleo y vivienda necesitan fondos nuevos: todo lo dem&aacute;s mueve gasto que ya existe, o no cuesta nada.</li>
+<li>San Isidro es sobre todo un municipio de salud y de obra: ambiente y agua potable juntas no llegan al 1,5% del presupuesto, y en 2025 lo que m&aacute;s creci&oacute; fue el pago de deudas, 36,3% por encima de la inflaci&oacute;n, y lo que m&aacute;s cay&oacute;, la asistencia social, 32,5%.</li>
+<li>La funci&oacute;n Trabajo es la &uacute;ltima de las veinte del presupuesto, con 170 millones. Proponemos llevar empleo y vivienda a 7.730,9 millones por a&ntilde;o: una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, que nace en el Centro de Formaci&oacute;n Laboral N&ordm; 404 de La Cava, donde ya funciona La Cava 4.0, declarada de inter&eacute;s por el Concejo, y llega a las seis zonas; el segundo a&ntilde;o, una pasant&iacute;a paga, seis meses en el Municipio y seis en una empresa del partido. Son 928 alumnos por a&ntilde;o, de 250 a 300 empleos pagos por a&ntilde;o y 1.286 egresados en el mandato.</li>
+<li>Para que el trabajo quede en el partido, los egresados tienen prioridad, quien trabaja para el Municipio toma al menos el 75% de su gente del partido y el 20% de cada licitaci&oacute;n va a pymes del partido. Del dinero, el 60% va a empleo y el 40% a vivienda; y un semillero de empresas, por 121 millones por a&ntilde;o, le da al egresado que no queda contratado su primer cliente.</li>
+<li>El Censo no mide la conexi&oacute;n a internet. Proponemos medirla por zona con el primer ciclo de asambleas; las redes de cloaca y de gas en la calle las hace la obra vecinal, y la partida de vivienda, 3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa.</li>
+<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 790 a 1.140 millones por a&ntilde;o.</li>
+<li>La recolecci&oacute;n, con barrido y limpieza, es el servicio m&aacute;s caro que paga el Municipio, 49.270 millones por a&ntilde;o: la presta el mismo grupo desde 1998, cuatro licitaciones fracasaron, y corre sobre un contrato directo de seis meses de 2009. Proponemos licitarla en dos zonas, con el pliego aprobado antes del llamado, todos sus trabajadores con su antig&uuml;edad, y el pago seg&uacute;n lo que se mide.</li>
+<li>El ruido tiene norma, pero nadie lo mide. Proponemos que el vecino lo grabe con la inteligencia artificial del Municipio y la prueba quede sellada, y estaciones m&oacute;viles que midan motos y colectivos con el instrumento que fija la ordenanza; primero va el aviso, y un inspector valida antes de multar.</li>
+<li>En urbanismo, lo que se da de m&aacute;s se da por decreto, sin pasar por el Concejo; y en la costa se demolieron Catalejo y Barisidro. Proponemos audiencia p&uacute;blica y dictamen de la comisi&oacute;n de la zona antes de cada excepci&oacute;n, y cobrar el 15% de lo que se valoriza un terreno; que los comercios de la costa sigan en sus predios, con canon y 75% de empleo local; ninguna obra en un parque sin el dictamen de su asociaci&oacute;n; y parques que nunca se privatizan, se edifican ni se achican.</li>
+<li>Para que la costa tenga gente tambi&eacute;n de lunes a jueves, proponemos que la inteligencia artificial del Municipio empuje hacia la semana y avise d&oacute;nde est&aacute; el tren; una Escuela N&aacute;utica gratis en seis parques, de a dos por a&ntilde;o, de 373 a 395 millones por a&ntilde;o desde el tercero; y en cada puesto, foodtrucks al borde, ba&ntilde;os gratis conectados a la cloaca, clases municipales gratis y espect&aacute;culos en la semana. Sin cobrar estacionamiento.</li>
+<li>Salud es el 24,1% del presupuesto, y <b>no hay turno por internet en ning&uacute;n hospital ni centro de salud municipal</b>, mientras el turno para castrar una mascota s&iacute; se saca por internet. Proponemos el turno en l&iacute;nea sobre esa misma plataforma, y que la inteligencia artificial del Municipio lo saque en la charla, lo recuerde y pase a otro el lugar que se libera.</li>
+<li>Y que cada compra de insumos se vea con su precio por unidad y se compare sola contra las anteriores y contra los otros hospitales &mdash;en la Ciudad de Buenos Aires, que cada hospital viera lo que pagaban los dem&aacute;s baj&oacute; los precios 13% en el primer a&ntilde;o&mdash;; que cualquiera pregunte por qu&eacute; falta un medicamento, un insumo o una cama; y que se audite la inteligencia artificial que el Municipio anunci&oacute; en 2023 en los tres hospitales, sin proveedor conocido.</li>
+<li>Seguridad creci&oacute; 34,8% por encima de la inflaci&oacute;n en un a&ntilde;o, y el Municipio anuncia unas <b>2.646 c&aacute;maras con anal&iacute;tica que nunca tuvo una auditor&iacute;a externa</b>. No proponemos comprar c&aacute;maras: patrullar donde se concentra el delito, empezando por el mapa de incidentes que hoy no existe; que las c&aacute;maras que hay detecten hechos violentos en vivo y avisen al patrullero m&aacute;s cercano, sin reconocimiento facial masivo; una oficina de ciberdelito; y una constancia para quien es acusado sin causa.</li>
+<li>Educaci&oacute;n cay&oacute; 11,6% real en 2025, y hoy hay cinco espacios chicos de apoyo escolar, s&oacute;lo en B&eacute;ccar y Boulogne. Proponemos devolverle los 2.064 millones que perdi&oacute;, un centro de apoyo escolar gratuito en cada localidad, en edificios que ya existen, y un profesor digital particular que da pistas y nunca la respuesta, probado primero seis meses. En cultura, la m&uacute;sica en vivo se rige por decretos de 1970 &mdash;uno, publicado todav&iacute;a como vigente, proh&iacute;be la entrada de &laquo;mujeres solas&raquo;&mdash;; proponemos adherir a la Ley 15.302 de espacios culturales.</li>
+<li>La inteligencia artificial del Municipio lee cada tr&aacute;mite contra la norma y contesta en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda, empezando por la habilitaci&oacute;n comercial; y antes de alquilar, con la c&aacute;mara del tel&eacute;fono, dice si ese negocio se puede poner ah&iacute;. Cada inspecci&oacute;n se transmite en vivo y queda grabada, y sin transmisi&oacute;n el acta no vale. Y al comerciante al que le piden una coima, lo aprietan o lo amenazan, lo defiende: su denuncia va a quien no depende del denunciado.</li>
+<li>De siete cosas que se buscaron en el sitio del Municipio, seis est&aacute;n ca&iacute;das, escondidas, incompletas o no se pueden verificar. Ponerlas en orden no cuesta nada, y desde ah&iacute; todo se le pregunta a la inteligencia artificial del Municipio, casi siempre al d&iacute;a.</li>
+<li>Hoy una multa por exceso de velocidad pagada enseguida, 171.075 pesos, es el 17% de un ingreso de un mill&oacute;n y el 1,7% de uno de diez millones. Proponemos multas que no hundan a nadie: avisar antes de multar, cuotas sin tr&aacute;mites con un tope seg&uacute;n el ingreso, c&aacute;maras s&oacute;lo donde hay choques, que nadie cobre por multa y que lo que se cobra vaya a un fondo cerrado de seguridad vial; cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o. Y las calles y veredas entran en el dinero de obra de cada zona.</li>
+<li>No se reduce la planta: la automatizaci&oacute;n le saca al empleado lo que no requiere criterio y lo deja para lo que s&iacute;. Y el Municipio atiende tambi&eacute;n el fin de semana, con horarios rotativos optativos &mdash;mismas horas, otros d&iacute;as, sin costo extra&mdash;, empezando por las delegaciones, el Juzgado de Faltas y los turnos de salud.</li>
+<li>San Isidro ya tiene m&aacute;s personas mayores que chicos, 17,8% contra 17,4%, y no tiene una sola cama ni atenci&oacute;n a domicilio; g&eacute;nero no tiene partida propia y tiene una sola sede; y discapacidad deveng&oacute; 65,9 millones en 2025, el 0,020% del gasto. Proponemos cien cuidadores formados en el CFL 404, por 667,8 millones por a&ntilde;o, que atienden tambi&eacute;n a personas con discapacidad; para g&eacute;nero, la partida propia, la inteligencia artificial del Municipio como primer contacto, con un modo discreto, y atenci&oacute;n en lugares que ya existen, empezando por Boulogne y B&eacute;ccar; y para discapacidad, turnos y teleconsulta, veredas que decide cada comisi&oacute;n, y la inteligencia artificial del Municipio por voz y en lectura f&aacute;cil.</li>
+<li>Lo que queda afuera &mdash;el c&oacute;digo de ordenamiento urbano, la polic&iacute;a, las escuelas, la justicia y la salud compleja&mdash; est&aacute; dicho, con su porqu&eacute; y d&oacute;nde queda.</li>
 </ol>
-<p><b>Lo que tiene costo est&aacute; calculado en el cap&iacute;tulo 3, y todo est&aacute; fechado en el 6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de
-verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
+<p><b>Lo que tiene costo est&aacute; calculado en el cap&iacute;tulo 3, y todo est&aacute; fechado en el 6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
 
 """)
 
@@ -2868,7 +2942,7 @@ en cada barrio para informar a los vecinos y completar el diagn&oacute;stico, y 
 cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es en los meses 6 a 9 (6.4).</p>
 </div>
 """ + exhead("c", "Veinte compromisos para los primeros cien d&iacute;as, y el documento que prueba cada uno",
-             "Plazo: 19 de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.") + """
+             "Plazo: 19 de marzo de 2028. Ninguno necesita fondos nuevos, salvo la primera cohorte de la formaci&oacute;n, que usa el primer escal&oacute;n de la rampa.", key="compromisos") + """
 <table>
 <colgroup><col style="width:250pt"><col></colgroup>
 <tr class="hd"><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>
@@ -2897,10 +2971,8 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr><td class="l">19 &middot; La ordenanza del tr&aacute;mite en l&iacute;nea de las cuotas, como la de Bragado, ingresada al abrir las sesiones ordinarias, el 1 de marzo</td><td class="n">Expediente de ingreso</td></tr>
 <tr><td class="l">20 &middot; La ordenanza que crea la base de datos de las cuotas, con el ingreso y el hogar s&oacute;lo para las multas, ingresada con la anterior</td><td class="n">Expediente de ingreso</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> los dos primeros van juntos a esa sesi&oacute;n porque son el
-andamiaje del resto: sin partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide puede ser disuelta por quien le respondi&oacute;
-que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo, y los dos se licitan: la anal&iacute;tica que corre sobre las c&aacute;maras que el Municipio ya compr&oacute;, y las c&aacute;maras corporales que compra habilitaciones (3.4). A los cien d&iacute;as las dos licitaciones est&aacute;n lanzadas; funcionan en el mes 9. <b>La ordenanza que vuelve inv&aacute;lida el acta labrada sin
-transmisi&oacute;n va despu&eacute;s</b>, y est&aacute; escrita en el anexo.</p>
+<p class="cap"><b>Nota:</b> los dos primeros van juntos porque son el andamiaje del resto, y los compromisos 15 y 16 se
+licitan y funcionan en el mes 9; el detalle, en las notas del cap&iacute;tulo 6.</p>
 
 <h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
 <p>La rampa, a&ntilde;o por a&ntilde;o, es la del cuadro [[n:rampa]]: del 12,5% de la obra p&uacute;blica en el
@@ -3065,24 +3137,16 @@ esa deuda crece unos 650 millones.</td></tr>
 <td>Imputar el gasto con referencia territorial no est&aacute; costeado (3.4) y ning&uacute;n municipio del conurbano norte lo hace. <b>Mitigaci&oacute;n:</b> va como meta del mandato y no de los cien d&iacute;as, y las siete filas del relevamiento de transparencia no dependen de &eacute;l.</td></tr>
 </table>
 
-<h2><span class="n">6.7</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">6.7</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
-<li>En la sesi&oacute;n extraordinaria de diciembre de 2027 entra al Concejo el proyecto que deroga los art&iacute;culos que
-hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
-<li>A los cien d&iacute;as la primera ronda de asambleas ya se hizo en las seis zonas, la
-inscripci&oacute;n a la formaci&oacute;n laboral est&aacute; abierta en las seis y el primer grupo de
-alumnos arranc&oacute; en los espacios que ya existen, el primer centro de apoyo escolar abri&oacute;, y est&aacute;n
-lanzadas las dos licitaciones para que las c&aacute;maras que ya existen detecten hechos violentos en vivo y avisen al
-patrullero m&aacute;s cercano, y para que las inspecciones de comercios se transmitan en vivo y queden grabadas; las dos
-funcionan en el mes 9. Son veinte compromisos: ocho ordenanzas en el Concejo, seis actos que no dependen
-de &eacute;l y seis cosas que arrancaron.</li>
-<li>Al cuarto a&ntilde;o, la mitad de la obra p&uacute;blica municipal &mdash;28.908 millones
-anuales&mdash; la deciden los vecinos.</li>
-<li>Trece metas para los cuatro a&ntilde;os, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con el que se va a poder comprobar.</li>
-<li>Y la inteligencia artificial del Municipio, que para cada vecino es como tener a
-disposici&oacute;n a alguien que sabe todo del Municipio: el turno, la guardia, el trabajo, la obra de su
-cuadra y lo que se gast&oacute; en su zona.</li>
+<li>A los cien d&iacute;as, el 19 de marzo de 2028, hay veinte compromisos que se pueden comprobar: ocho ordenanzas en el Concejo &mdash;en la sesi&oacute;n extraordinaria de diciembre, la partida de cada zona, la derogaci&oacute;n de los art&iacute;culos que permiten disolver una asociaci&oacute;n vecinal y la tabla nueva&mdash;; seis actos que no dependen de &eacute;l, como el turno m&eacute;dico por internet, el precio de cada compra de los hospitales y las cuotas de las multas; y seis cosas que arrancaron: las asambleas en las seis zonas, la formaci&oacute;n laboral, el primer centro de apoyo escolar, dos m&oacute;dulos de la inteligencia artificial del Municipio, y las licitaciones de la detecci&oacute;n en vivo y de las c&aacute;maras corporales, que funcionan en el mes 9.</li>
+<li>La obra que deciden los vecinos sube del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os, hasta 28.908 millones. Cada escal&oacute;n se gana con lo que mostr&oacute; el anterior: si uno no se cumple, la rampa se congela, y lo que una zona no ejecut&oacute; queda para esa zona.</li>
+<li>Trece metas para los cuatro a&ntilde;os, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con que se comprueba: entre ellas, la mitad de los hogares sin cloaca de Boulogne y B&eacute;ccar &mdash;hoy son 4.616&mdash;, empleo y vivienda en 7.730,9 millones, ambiente al 1,5%, turno en l&iacute;nea en los trece efectores de salud, la recolecci&oacute;n licitada, un centro de apoyo escolar en cada localidad y 1.286 egresados en el mandato.</li>
+<li>Un calendario de cuarenta y ocho meses dice qu&eacute; pasa y c&oacute;mo se comprueba: en el mes 9 funcionan la detecci&oacute;n en vivo y las inspecciones transmitidas, y se adjudica la recolecci&oacute;n; en el 27 egresan los primeros 231; y en el 48 los vecinos deciden la mitad de la obra.</li>
+<li>Lo que no prometemos, porque no depende del Municipio o no entra en las cuentas: consulta popular vinculante, reformar la Ley Org&aacute;nica, autonom&iacute;a municipal plena, que los vecinos voten todo el presupuesto, duplicar el gasto en salud, bajar las tasas, o el mapa del delito por zona.</li>
+<li>Diecis&eacute;is cosas pueden salir mal, cada una con lo que la reduce. Las dos cr&iacute;ticas: que el Concejo no acompa&ntilde;e &mdash;hacen falta cuatro bloques&mdash; y que la inteligencia artificial del Municipio no se construya o llegue tarde; por eso se entrega por partes, desde el mes 3.</li>
 </ol>
+<p>Y todo pasa por la inteligencia artificial del Municipio, que para cada vecino es como tener a disposici&oacute;n a alguien que sabe todo del Municipio: el turno, la guardia, el trabajo, la obra de su cuadra y lo que se gast&oacute; en su zona.</p>
 """)
 
 # Correccion 138 (respuesta 5): en el 5.8 sale la mencion a Casares hasta que

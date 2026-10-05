@@ -55,7 +55,7 @@ Boulogne. Ese dato se produce &mdash;cada reclamo entra por un sistema&mdash; y 
 <p><b>Este programa se compromete a que cualquier vecino le pregunte a la inteligencia artificial del
 Municipio cu&aacute;nto tardan en resolver un reclamo en su zona, y tenga la respuesta</b>: es la prueba m&aacute;s
 simple de si el servicio llega parejo. Para eso cada reclamo se registra con su zona, el d&iacute;a que entra y
-el d&iacute;a que se resuelve.</p>
+el d&iacute;a que se resuelve. Y no queda en el dato: la inteligencia artificial del Municipio junta los reclamos, les hace el seguimiento y le contesta a cada vecino (4.11).</p>
 </div>
 
 <h2><span class="n">2.2</span>Lo que se prometi&oacute; publicar y no est&aacute; publicado</h2>
@@ -119,12 +119,9 @@ Seguridad, usar los espacios p&uacute;blicos y hacer tr&aacute;mites y reclamos.
 <tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Un centro de apoyo escolar gratuito en cada localidad, donde los chicos se est&aacute;n quedando atr&aacute;s, en edificios que ya existen y hoy cierran a la tarde; un profesor digital particular en la inteligencia artificial del Municipio, que explica la tarea con pistas y nunca con la respuesta; y devolver a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025</td></tr>
 <tr class="hd"><td class="l">Qui&eacute;n decide la obra</td><td class="m">El Departamento Ejecutivo, sobre el 100%</td><td class="m">Los vecinos, sobre la mitad, al cuarto a&ntilde;o</td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, documento firmado
-por el intendente Ram&oacute;n Lan&uacute;s: tres prioridades, diecinueve objetivos y setenta y siete metas
-numeradas, contadas una por una.</p>
-<p class="cap"><b>Nota:</b> las 77 metas est&aacute;n agrupadas por tema, no recortadas: las cuatro
-primeras filas cubren las tres prioridades completas del plan de gobierno 2024&ndash;2025. Las celdas vac&iacute;as de la
-columna del medio son &aacute;reas donde ese plan no fija ninguna meta.</p>
+<p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente Ram&oacute;n Lan&uacute;s: 77 metas,
+agrupadas por tema. Las celdas vac&iacute;as del medio son &aacute;reas donde ese plan no fija ninguna meta; el detalle, en las notas
+del cap&iacute;tulo 2.</p>
 
 <p>En las 3.137 palabras del plan de gobierno 2024&ndash;2025, <span class="sg">la palabra &laquo;salud&raquo; no aparece ni
 una vez</span>. Tampoco vivienda,
@@ -142,21 +139,19 @@ barrido, arbolado, alumbrado, residuos, tr&aacute;nsito, tr&aacute;mites y ciber
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
 
-<h2><span class="n">2.4</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">2.4</span>Lo que dice este cap&iacute;tulo, en once l&iacute;neas</h2>
 <ol class="n">
-<li>En las 3.137 palabras del plan de gobierno del intendente, &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, hospitales y escuelas aparecen s&oacute;lo para
-se&ntilde;alizar sus esquinas.</li>
-<li>&Aacute;rea por &aacute;rea, donde el plan de gobierno 2024&ndash;2025 propone algo, este programa propone otra cosa, y
-est&aacute;n lado a lado en el cuadro [[n:accion]]. En empleo, vivienda, salud y educaci&oacute;n ese plan
-no propone nada.</li>
-<li>Ejecutar el presupuesto no es prestar el servicio: el Municipio es el cuarto de 106 municipios
-bonaerenses que m&aacute;s invierte en obra p&uacute;blica, y aun as&iacute; registr&oacute; <b>setenta reclamos diarios de
-arbolado</b>, y el intendente calific&oacute; el cuidado del arbolado como &laquo;una deuda hist&oacute;rica&raquo;, <b>&laquo;algo que no
-se hizo nunca&raquo;</b>.</li>
-<li>El Municipio publica lo que se mide en los rankings de transparencia fiscal, y lo dem&aacute;s &mdash;organigrama,
-adjudicaciones, estados contables&mdash; queda donde nadie lo encuentra. El portal de datos abiertos
-est&aacute; ca&iacute;do y el enlace a las declaraciones juradas de los funcionarios lleva a las de los
-contribuyentes.</li>
+<li>Ejecutar el presupuesto no es prestar el servicio: con la partida de arbolado ejecutada casi entera, entraban <b>setenta reclamos por d&iacute;a</b>, y el intendente calific&oacute; ese cuidado como &laquo;algo que no se hizo nunca&raquo;. Durante a&ntilde;os las cuadrillas se repartieron con la Panamericana como l&iacute;mite, y hoy no se publica cu&aacute;nto tarda el Municipio en resolver un reclamo en cada zona.</li>
+<li>Lo que se prometi&oacute; publicar no est&aacute;: el portal de datos abiertos est&aacute; ca&iacute;do, el enlace a las declaraciones juradas de los funcionarios lleva a las de los contribuyentes, la &uacute;ltima rendici&oacute;n con estados contables es la de 2022, y las tres cifras que el Municipio dio de su propia flota no cierran entre ellas.</li>
+<li>En las 3.137 palabras del plan de gobierno 2024&ndash;2025 no aparecen salud, vivienda, empleo, pobreza, cloaca ni agua; hospitales y escuelas aparecen s&oacute;lo para se&ntilde;alizar sus esquinas. Y el plan venci&oacute;: hoy el Municipio no tiene un plan de gobierno vigente y publicado.</li>
+<li>&Aacute;rea por &aacute;rea, en el cuadro [[n:accion]]. En seguridad, ese plan propone cambiar todas las c&aacute;maras por otras de alta definici&oacute;n, 150 lectoras de patentes y 40% m&aacute;s patrulleros; este programa, patrullar donde ocurre el delito, que las c&aacute;maras que ya hay detecten hechos violentos en vivo, sin reconocimiento facial masivo, y una oficina de ciberdelito.</li>
+<li>En espacio p&uacute;blico, ese plan propone 10.000 &aacute;rboles nuevos y 15.000 podas; este programa, primero la poda que falta y el &aacute;rbol ca&iacute;do, asociaciones de parque sin cuya firma ninguna obra se paga, y parques que nunca se privatizan, se edifican ni se achican.</li>
+<li>En residuos y ambiente, ese plan propone gestionar el 20% de los reciclables y un punto de acopio por localidad; este programa, licitar la recolecci&oacute;n en dos zonas con todos sus trabajadores, llevar ambiente del 0,4% al 1,5% del presupuesto empezando por la costa, y medir el ruido.</li>
+<li>En tr&aacute;nsito, ese plan propone digitalizar las multas y se&ntilde;alizar las esquinas de escuelas y hospitales; este programa, que las calles y veredas las decida la comisi&oacute;n de cada zona con su dinero de obra.</li>
+<li>En digitalizaci&oacute;n, ese plan propone el 30% de los tr&aacute;mites en l&iacute;nea y un centro de atenci&oacute;n telef&oacute;nica nuevo; este programa, que la inteligencia artificial del Municipio atienda todos los d&iacute;as, a toda hora, y conteste cada tr&aacute;mite en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda.</li>
+<li>En transparencia, ese plan propone un &iacute;ndice y un tablero por secretar&iacute;a; este programa, que cualquiera le pregunte a la inteligencia artificial del Municipio y que ella muestre de d&oacute;nde saca cada dato: la obra de su cuadra, lo que se gast&oacute; en su zona, qui&eacute;n gan&oacute; cada licitaci&oacute;n y d&oacute;nde tiene su domicilio, el precio de cada insumo de los hospitales, y las inspecciones, transmitidas en vivo.</li>
+<li><b>En empleo, vivienda, salud y educaci&oacute;n, ese plan no propone nada.</b> Este programa multiplica por quince el gasto en empleo y vivienda, con formaci&oacute;n de dos a&ntilde;os en las seis zonas; reduce a la mitad los hogares sin cloaca de Boulogne y B&eacute;ccar; saca el turno m&eacute;dico en la charla y explica cada faltante; abre un centro de apoyo escolar en cada localidad, con un profesor digital; y le devuelve a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025.</li>
+<li>Y la obra: hoy la decide entera el Departamento Ejecutivo; con este programa, al cuarto a&ntilde;o, los vecinos deciden la mitad.</li>
 </ol>
 <p>Nada de esto se puede corregir sin saber si hay con qu&eacute;. El cap&iacute;tulo siguiente lo mide.</p>
 """)
@@ -254,7 +249,7 @@ dos cosas cambia lo muestra el an&aacute;lisis de sensibilidad del 3.6.</p>
      "Ingresos menos gastos de cada a&ntilde;o, en miles de millones de pesos de diciembre de 2025, si lo que recauda el Municipio y lo que le gira la Provincia siguen la tendencia de los &uacute;ltimos a&ntilde;os.",
      "ex09.png",
      "modelo de flujo de caja. Pesos constantes de diciembre de 2025, sin supuesto de inflaci&oacute;n.",
-     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> colocado en agosto de 2026, que la secci&oacute;n 3.5 detalla. El programa pagado con la actualizaci&oacute;n de la tabla de valuaci&oacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva cobra m&aacute;s de lo que el programa gasta; en 2028 y desde 2031 cobra menos, y lo que falta sale del gasto flexible (cuadro [[n:programa_base]])."))
+     "el modelo est&aacute; cerrado al 31 de diciembre de 2025 y <b>no incluye el bono de 30.000 millones</b> de agosto de 2026 (3.5); el detalle, en las notas del cap&iacute;tulo 3.", key="sinada"))
 
 
 # =====================================================================
@@ -264,7 +259,7 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <h2><span class="n">3.4</span>Cu&aacute;nto cuesta este programa</h2>
 <p class="lead">Estas son las trece partes del programa que tienen un costo calculado. S&oacute;lo una necesita dinero nuevo.</p>
 """ + exhead("c", "Todo el programa: cu&aacute;nto cuesta y de d&oacute;nde sale",
-             "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.") + """
+             "Cu&aacute;nto cuesta cada parte por a&ntilde;o, una vez que funciona completa.", key="programa") + """
 <table>
 <colgroup><col style="width:150pt"><col style="width:74pt"><col style="width:88pt"><col></colgroup>
 <tr class="hd"><th>Parte del programa</th><th class="r">Cu&aacute;nto cuesta</th><th>&iquest;Es dinero nuevo?</th><th>De qu&eacute; partida sale</th></tr>
@@ -272,34 +267,18 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Obra p&uacute;blica vecinal, la mitad de la obra al cuarto a&ntilde;o</td><td class="n">28.908 M</td><td class="m">No</td><td class="m">Bienes de uso: los 57.816 M de obra p&uacute;blica que ya se ejecutan</td></tr>
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
-<tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
-<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M una vez y 264 M por a&ntilde;o</td><td class="m">No. Inversi&oacute;n en los a&ntilde;os 1 y 2, y mantenimiento del 22%</td><td class="m">Los mismos tres programas</td></tr>
-<tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">1.676,6 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
-<tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">2.135,3 M</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno, comunicaci&oacute;n, hacienda, ambiente, movilidad, desarrollo social, legal y t&eacute;cnica, gabinete y cultura</td></tr>
-<tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
-<tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
-<tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
-<tr><td class="l">Ba&ntilde;os, foodtrucks y clases en la costa (5.5)</td><td class="n">251 a 354 M por a&ntilde;o de ba&ntilde;os desde el a&ntilde;o 3, y 27 a 55 M de clases</td><td class="m">No. De a dos lugares por a&ntilde;o, desde el &Aacute;guila: los ba&ntilde;os, 82 a 121 M el a&ntilde;o 1 y 167 a 240 M el a&ntilde;o 2. El canon de los foodtrucks entra</td><td class="m">La obra y el equipamiento, de 641 a 1.245 M en tres a&ntilde;os, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); limpieza, encargados y mantenimiento, de Ambiente, menos el canon; los profesores, de Deportes</td></tr>
-<tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja media</td><td class="m">No: es lo que se deja de cobrar</td><td class="m">Del gasto flexible libre. Los reductores ya est&aacute;n contratados (536,7 M) y el aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica). Lo que se cobra va a un fondo cerrado de seguridad vial, en un rengl&oacute;n propio</td></tr>
+<tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M*</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
+<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M una vez y 264 M por a&ntilde;o*</td><td class="m">No. Inversi&oacute;n en los a&ntilde;os 1 y 2, y mantenimiento del 22%</td><td class="m">Los mismos tres programas</td></tr>
+<tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">1.676,6 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
+<tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">2.135,3 M*</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno, comunicaci&oacute;n, hacienda, ambiente, movilidad, desarrollo social, legal y t&eacute;cnica, gabinete y cultura</td></tr>
+<tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
+<tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M*</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
+<tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3*</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
+<tr><td class="l">Ba&ntilde;os, foodtrucks y clases en la costa (5.5)</td><td class="n">251 a 354 M por a&ntilde;o de ba&ntilde;os desde el a&ntilde;o 3, y 27 a 55 M de clases*</td><td class="m">No. De a dos lugares por a&ntilde;o, desde el &Aacute;guila: los ba&ntilde;os, 82 a 121 M el a&ntilde;o 1 y 167 a 240 M el a&ntilde;o 2. El canon de los foodtrucks entra</td><td class="m">La obra y el equipamiento, de 641 a 1.245 M en tres a&ntilde;os, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); limpieza, encargados y mantenimiento, de Ambiente, menos el canon; los profesores, de Deportes</td></tr>
+<tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja media*</td><td class="m">No: es lo que se deja de cobrar</td><td class="m">Del gasto flexible libre. Los reductores ya est&aacute;n contratados (536,7 M) y el aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica). Lo que se cobra va a un fondo cerrado de seguridad vial, en un rengl&oacute;n propio</td></tr>
 </table>
-<p class="cap"><b>El &uacute;nico dinero nuevo son 5.983 millones y sale de la base de valuaci&oacute;n; todo lo dem&aacute;s,
-incluidos los 1.242 millones que la tabla no alcanza a cobrar, se paga moviendo lo que el Municipio ya gasta.</b></p>
-<p class="cap"><b>Nota:</b> apoyo escolar, habilitaciones, la plataforma, las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, lo que se deja de cobrar en multas y los equipos son estimaciones del equipo de este
-programa, no cifras oficiales, y se presupuestan o se licitan antes de comprometerse. Las dem&aacute;s salen
-de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
-<p class="cap"><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis
-estaciones de monitoreo de ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso,
-137,1 M una vez y 39,5 M por a&ntilde;o de conexi&oacute;n; habilitaciones, ochenta c&aacute;maras corporales para
-transmitir las inspecciones, 168,7 M de sus 1.200 M y 3,8 M por a&ntilde;o de licencia; salud, trece pantallas de
-ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las personas que los instalan
-(cuadro [[n:equipo]]).</p>
-<p class="cap"><b>Fuente de los equipos, el mantenimiento y los cuidadores:</b> compras p&uacute;blicas de la Ciudad
-(estaci&oacute;n de ruido, diciembre de 2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre
-de 2025; c&aacute;mara corporal 4G, enero de 2026; televisor, escritorio y silla, 2026), llevadas a diciembre de 2025
-con el IPC. Mantenimiento: el soporte anual de software de lista es el 22% de la licencia (Oracle, 2026).
-Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y cuidado de personas, diciembre de 2025 (Comisi&oacute;n
-Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con las cargas del cuadro [[n:equipo]] y trece
-sueldos.</p>
+<p class="cap"><b>Fuente:</b> ejecuci&oacute;n presupuestaria 2025 y modelo del cap&iacute;tulo 3. Las cifras marcadas con * son
+estimaciones de este programa; el detalle, en las notas del cap&iacute;tulo 3.</p>
 <p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s
 grandes, y son los dos extremos: <span class="sg">una necesita 5.983 millones nuevos y la otra
 ninguno</span>.</p>
@@ -310,8 +289,7 @@ ninguno</span>.</p>
 <p>Este programa lleva ese gasto conjunto a <b>7.730,9
 millones anuales en r&eacute;gimen</b> &mdash;el 2,5% del gasto total proyectado&mdash;, que son
 <span class="sg">quince veces</span> lo que se gasta hoy. De esos 7.730,9 millones, 505,7 ya se gastan.
-<b>Lo que hay que financiar son 7.225,2 millones:</b> 5.983 de la tabla nueva y 1.242 del gasto
-flexible, el 1,4% (3.5).</p>
+<b>Lo que hay que financiar son 7.225,2 millones</b>, y c&oacute;mo se pagan est&aacute; en el 3.5.</p>
 </div>
 <h3>Obra p&uacute;blica vecinal: esto no son fondos nuevos</h3>
 <div class="cols">
@@ -358,8 +336,8 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>El compromiso anual es de 5.983 millones nuevos, m&aacute;s 1.242 del gasto flexible para empleo y
-vivienda y 6.863 de reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
+<p><b>El compromiso anual es de 7.225,2 millones para empleo y vivienda (3.5) y 6.863 de
+reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
 una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors; Desarrollo
 Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica y las clases de la costa, hasta 419 desde el
 tercer a&ntilde;o, con una inversi&oacute;n de hasta 717 en tres a&ntilde;os para la Escuela, de obras deportivas. De obras deportivas
@@ -467,7 +445,7 @@ cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oac
 <span class="sg">La tasa cobra hoy con la fotograf&iacute;a de 2008.</span></p>
 </div>
 """ + exhead("c", "La tabla de 2008 le cobra de menos a la localidad de San Isidro, a Mart&iacute;nez y a Acassuso, y de m&aacute;s a Villa Adelina",
-             "Valor de la tierra de cada localidad, en veces el de Boulogne Sur Mer, seg&uacute;n la tabla municipal de 2008 y seg&uacute;n la valuaci&oacute;n provincial. Promedio ponderado por superficie de parcela.") + """
+             "Valor de la tierra de cada localidad, en veces el de Boulogne Sur Mer, seg&uacute;n la tabla municipal de 2008 y seg&uacute;n la valuaci&oacute;n provincial. Promedio ponderado por superficie de parcela.", key="tabla2008") + """
 <table>
 <colgroup><col style="width:210pt"><col><col><col></colgroup>
 <tr class="hd"><th>Localidad</th><th class="r">Tabla municipal</th><th class="r">Valuaci&oacute;n provincial</th><th class="r">Reconocido</th></tr>
@@ -478,25 +456,9 @@ cambia cada a&ntilde;o es un <b>multiplicador parejo para todos</b>, que pas&oac
 <tr><td class="l">Boulogne Sur Mer, la referencia</td><td class="n">1&times;</td><td class="n">1&times;</td><td class="n">&mdash;</td></tr>
 <tr class="hi"><td class="l">Villa Adelina</td><td class="n"><b>0,96&times;</b></td><td class="n"><b>0,67&times;</b></td><td class="n"><b>144%</b></td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la tabla de la Ordenanza 8373, publicada en la
-Ordenanza Impositiva 2016, y sobre los valores por macizo de ARBA (Decreto 790/16), con las parcelas del
-geoservicio de ARBA. &laquo;Reconocido&raquo; es la tabla municipal dividida por la valuaci&oacute;n
-provincial, con los valores sin redondear: debajo de 100%, la tabla cobra de menos; arriba, de m&aacute;s. Detalle
-en el informe 09.</p>
-<p class="cap"><b>De qu&eacute; unidad catastral sale cada localidad:</b> las localidades son las de
-los cap&iacute;tulos 1 y 4, armadas con radios censales, y sus l&iacute;mites no siguen el catastro: cada parcela va a
-la localidad donde cae. El grueso de cada una, por circunscripci&oacute;n y secci&oacute;n: Acassuso, III-A y III-C;
-Mart&iacute;nez, III-B, III-D a III-J y IV-A a IV-D; la localidad de San Isidro, I-A, I-B, II-A a II-C, III-K, IV-E, VII-C, VII-D
-y VII-H; B&eacute;ccar, VII-A, VII-B, VII-E a VII-G y VIII-A a VIII-E; Villa Adelina, V-B, V-D, V-F y V-G; Boulogne
-Sur Mer, V-A, V-C, V-E y VI-A a VI-J. El 2,9% de las parcelas cae en una secci&oacute;n donde la mayor&iacute;a es de
-otra localidad; con las secciones enteras, Acassuso da 2,37 contra 2,94 veces Boulogne Sur Mer. La lista parcela
-por parcela est&aacute; en data/valuacion_parcelas.csv y el cruce por secci&oacute;n, en
-data/valuacion_secciones_localidad.csv.</p>
-<p class="cap"><b>L&iacute;mites:</b> la comparaci&oacute;n es de proporciones, no de pesos, porque las dos
-escalas usan unidades distintas. Cruzan con la tabla municipal 68.644 de las 69.258 parcelas de la
-valuaci&oacute;n provincial, el 99,1%. Es s&oacute;lo tierra, sin construcci&oacute;n. Y la
-valuaci&oacute;n provincial es de un reval&uacute;o de 2016: <b>no es el mercado de hoy</b>. Lo que se
-compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+<p class="cap"><b>Fuente:</b> elaboraci&oacute;n propia sobre la tabla de la Ordenanza 8373 (Ordenanza Impositiva 2016) y los
+valores por macizo de ARBA (Decreto 790/16). &laquo;Reconocido&raquo; es la tabla municipal dividida por la valuaci&oacute;n provincial:
+debajo de 100%, la tabla cobra de menos. Es s&oacute;lo tierra, con un reval&uacute;o de 2016; el detalle, en las notas del cap&iacute;tulo 3.</p>
 <div class="cols">
 <p><b>El caso que lo muestra sin necesidad de porcentajes.</b> Hay <b>768 manzanas con el mismo puntaje
 municipal</b>, que pagan exactamente lo mismo. Para la valuaci&oacute;n provincial, la mayor&iacute;a de
@@ -553,7 +515,7 @@ class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eac
 
 <h3>La deuda que ya existe, y que este programa no aumenta</h3>
 """ + exhead("c", "La deuda consolidada casi se duplic&oacute; en dos a&ntilde;os y medio, descontada la inflaci&oacute;n",
-             "Saldo al cierre de cada trimestre, seg&uacute;n el Registro de Endeudamiento Municipal de la Ley 12.462 que publica el propio Municipio.") + """
+             "Saldo al cierre de cada trimestre, seg&uacute;n el Registro de Endeudamiento Municipal de la Ley 12.462 que publica el propio Municipio.", key="deuda") + """
 <table>
 <colgroup><col style="width:130pt"><col><col><col></colgroup>
 <tr class="hd"><th>Corte</th><th class="r">Deuda consolidada</th><th class="r">Deuda flotante</th><th class="r">Total</th></tr>
@@ -562,14 +524,9 @@ class="sg">Boulogne, la zona con m&aacute;s necesidad, paga menos que hoy; B&eac
 <tr><td class="l">IV trim. 2025</td><td class="n">4.984 M</td><td class="n">3.976 M</td><td class="n">8.960 M</td></tr>
 <tr class="hi"><td class="l">II trim. 2026</td><td class="n"><b>5.927 M</b></td><td class="n">8.231 M</td><td class="n"><b>14.157 M</b></td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> informes trimestrales de stock de deuda del Municipio de San Isidro,
-Registro de Endeudamiento Municipal Ley 12.462.</p>
-<p class="cap"><b>Nota:</b> la deuda flotante son obligaciones de corto plazo y oscila mucho entre
-trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones; descontada la
-inflaci&oacute;n, de 2.660 a 5.072 millones de pesos de diciembre de 2025: casi el doble.</p>
-<p class="cap"><b>Nota:</b> <b>el bono de 30.000 millones no est&aacute; en este cuadro</b>, porque se
-coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio. Sumado a
-la deuda consolidada de 5.927 millones, la multiplica por seis.</p>
+<p class="cap"><b>Fuente:</b> informes trimestrales de stock de deuda del Municipio (Registro de Endeudamiento Municipal,
+Ley 12.462). El bono de 30.000 millones de agosto de 2026 no est&aacute;: multiplica por seis la deuda consolidada; el detalle,
+en las notas del cap&iacute;tulo 3.</p>
 <div class="cols">
 <p><b>La deuda consolidada pas&oacute; de 1.408 a 4.984 millones entre el primer trimestre de 2024 y el cierre de
 2025. Eso explica por qu&eacute; los servicios de la deuda fueron la funci&oacute;n que m&aacute;s creci&oacute; entre 2024 y 2025:
@@ -616,29 +573,20 @@ tabla nueva cobra m&aacute;s de lo que el programa gasta. <span class="sg">No em
 <tr class="hi"><td class="l">Diferencia</td><td class="n"><b>0</b></td><td class="n"><b>+1.238</b></td><td class="n"><b>+517</b></td><td class="n"><b>0</b></td></tr>
 <tr><td class="l">Diferencia, si el m&iacute;nimo frena subas</td><td class="n">0</td><td class="n">+1.203</td><td class="n">+480</td><td class="n">0</td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> modelo de flujo de caja, escenarios &laquo;si nada cambia&raquo; y &laquo;con el programa&raquo;, pagado con
-la tabla de valuaci&oacute;n actualizada; lo que cobra la tabla nueva, del informe 09, cobrada como hoy se cobra el
-ABL (informe 20).</p>
-<p class="cap"><b>Nota:</b> los dos escenarios tienen los mismos supuestos de recaudaci&oacute;n propia y de
-coparticipaci&oacute;n: lo &uacute;nico que cambia es el programa y lo que cobra la tabla nueva. El programa empieza
-en 2028, el primer ejercicio completo del mandato. En 2028 y desde 2031 la tabla cobra menos de lo que pide el
-programa y lo que falta sale del gasto flexible: 170 millones en 2028 y 1.242 desde 2031. La
-&uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de lotes chicos (3.5). Las
-diferencias se calculan sin redondear.</p>
+<p class="cap"><b>Fuente:</b> modelo de flujo de caja, con y sin el programa, pagado con la tabla nueva cobrada como hoy
+se cobra el ABL (informes 09 y 20). Los dos escenarios tienen los mismos supuestos; el detalle, en las notas del
+cap&iacute;tulo 3.</p>
 
-<h2><span class="n">3.7</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
+<h2><span class="n">3.7</span>Lo que dice este cap&iacute;tulo, en ocho l&iacute;neas</h2>
 <ol class="n">
-<li>San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones; si lo que recauda y lo que le gira la
-Provincia siguen como en los &uacute;ltimos a&ntilde;os, se cierra solo en 2028.</li>
-<li>Este programa cuesta 7.225,2 millones por a&ntilde;o: el 8,3% del gasto que el
-Municipio puede reasignar libremente. La obra que deciden los vecinos no suma a esa cifra: sale de la
-obra p&uacute;blica que el Municipio ya paga.</li>
-<li>Proponemos pagarlo actualizando la tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra, sin subir el porcentaje que se cobra: trae 5.983 millones, y los 1.242 que faltan salen del gasto flexible.</li>
-<li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a tasa variable: la tasa de referencia de los bancos, TAMAR, m&aacute;s 7 puntos.
-De las ocho cuotas de capital, siete &mdash;el 87,5%&mdash; las paga el gobierno que asuma en diciembre
-de 2027.</li>
-<li>Lo que m&aacute;s decide si las cuentas cierran no es la Provincia: es cu&aacute;nto crece lo que recauda San
-Isidro y qu&eacute; parte de lo que factura llega a cobrar. Fuera de su alcance quedan la coparticipaci&oacute;n, que pesa menos, y la tasa variable del bono de 2026.</li>
+<li>Contado como manda la cuenta oficial &mdash;lo cobrado contra lo gastado&mdash;, San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones, no con el super&aacute;vit de 29.943 que da contar lo facturado. Y el d&eacute;ficit viene de la obra: despu&eacute;s de pagar el funcionamiento diario sobraron 51.781 millones, y la obra y el equipamiento costaron 57.832.</li>
+<li>Cuatro n&uacute;meros deciden las cuentas: lo que recauda el Municipio crece 1,95% por a&ntilde;o por encima de la inflaci&oacute;n, lo que le toca de la coparticipaci&oacute;n cae 2,196% por a&ntilde;o, el 73,1% del gasto no se puede mover en el a&ntilde;o, y se cobra el 89,32% de lo facturado, menos que en 2024, en buena parte porque el Municipio decidi&oacute; cobrar menos. El que m&aacute;s pesa es el primero: con un punto menos, 2031 pasa de +10.236 a &minus;3.044 millones; si la coparticipaci&oacute;n cayera m&aacute;s r&aacute;pido, a +5.342.</li>
+<li>Si nada cambia, el d&eacute;ficit se cierra solo: en 2028 el Municipio vuelve a ingresar m&aacute;s de lo que gasta.</li>
+<li>El programa tiene trece partes con costo, y s&oacute;lo una necesita dinero nuevo: empleo y vivienda, que pasa de 505,7 a 7.730,9 millones por a&ntilde;o; hay que financiar 7.225,2. La obra que deciden los vecinos, 28.908 millones, sale de la obra que ya se paga. Ambiente, educaci&oacute;n, apoyo escolar y habilitaciones salen de que tres programas &mdash;mantenimiento y embellecimiento, obras deportivas y arbolado&mdash; cedan el 28% de su gasto, 6.863 millones por a&ntilde;o; lo dem&aacute;s, del presupuesto de cada &aacute;rea o del margen que queda libre.</li>
+<li>Todo junto usa el 52,9% del gasto que el Municipio puede mover cada a&ntilde;o, y aun sumando la beca de pr&aacute;ctica y el m&oacute;dulo de salud <b>queda libre el 44,4%</b>. No hay lugar para una tercera propuesta de este tama&ntilde;o sin tocar el gasto que no se mueve.</li>
+<li>La tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra le cobra de menos a la localidad de San Isidro, a Mart&iacute;nez y a Acassuso, y de m&aacute;s a Villa Adelina. Proponemos pagar el programa actualiz&aacute;ndola, sin subir el porcentaje que se cobra: cobrada como hoy se cobra esa tasa, trae 5.983 millones por a&ntilde;o, y los 1.242 que faltan salen del gasto flexible. Bajan 34.998 parcelas y suben 33.619, ninguna boleta m&aacute;s de 25% por a&ntilde;o; Boulogne paga 4,5% menos y B&eacute;ccar, lo mismo.</li>
+<li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a tasa variable, TAMAR m&aacute;s 7 puntos, y siete de sus ocho cuotas de capital, el 87,5%, las paga el gobierno que asuma en diciembre de 2027; la deuda consolidada ya casi se hab&iacute;a duplicado en dos a&ntilde;os y medio, descontada la inflaci&oacute;n. No proponemos deuda: este programa no le agrega un peso.</li>
+<li>Lo que hay que vigilar es que lo que recauda el Municipio crezca menos de 1,2% por a&ntilde;o por encima de la inflaci&oacute;n &mdash;por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo&mdash; y que cobre una parte menor de lo que factura: tres puntos menos dejan 2031 en &minus;426 millones. El programa no est&aacute; entre los riesgos: deja las cuentas igual que si nada cambia en 2028 y desde 2031, y mejor en 2029 y 2030, en 1.238 y 517 millones.</li>
 </ol>
 """ + fig("f_plaza", "Plaza de barrio, un s&aacute;bado. Ilustraci&oacute;n.") + """
 """)

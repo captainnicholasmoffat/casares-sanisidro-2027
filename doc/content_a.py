@@ -72,12 +72,12 @@ _IDX = [
  ("i", "1.3 &nbsp;D&oacute;nde no va el dinero", "cap1a2"),
  ("i", "1.4 &nbsp;Por qu&eacute; pasa esto: est&aacute; escrito", "cap1b"),
  ("i", "1.5 &nbsp;San Isidro se financia solo. Eso cambia todo.", "cap1b"),
- ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap1b"),
+ ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap1b"),
  ("g", "2 &middot; La gesti&oacute;n, medida", None),
  ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
  ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
- ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas", "cap2b"),
+ ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en once l&iacute;neas", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que gobiernan el futuro fiscal", "cap3a"),
@@ -85,7 +85,7 @@ _IDX = [
  ("i", "3.4 &nbsp;Cu&aacute;nto cuesta este programa", "cap3b"),
  ("i", "3.5 &nbsp;De d&oacute;nde salen los fondos", "cap3b2"),
  ("i", "3.6 &nbsp;Qu&eacute; habr&iacute;a que vigilar", "cap3b3"),
- ("i", "3.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap3b3"),
+ ("i", "3.7 &nbsp;Lo que dice este cap&iacute;tulo, en ocho l&iacute;neas", "cap3b3"),
  ("g", "4 &middot; El mecanismo", None),
  ("i", "4.1 &nbsp;El l&iacute;mite legal: lo que un intendente bonaerense no puede delegar", "cap4a"),
  ("i", "4.2 &nbsp;La deuda que la Provincia tiene con sus municipios", "cap4a"),
@@ -99,7 +99,7 @@ _IDX = [
  ("i", "4.10 &nbsp;El primer acto de gobierno: derogar tres art&iacute;culos", "cap4b2"),
  ("i", "4.11 &nbsp;La inteligencia artificial del Municipio", "cap4b2"),
  ("i", "4.12 &nbsp;A qui&eacute;n le molesta esto", "cap4bc"),
- ("i", "4.13 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap4bc"),
+ ("i", "4.13 &nbsp;Lo que dice este cap&iacute;tulo, en doce l&iacute;neas", "cap4bc"),
  ("g", "5 &middot; Qu&eacute; hacemos en cada &aacute;rea", None),
  ("i", "5.1 &nbsp;C&oacute;mo leer este cap&iacute;tulo", "cap5a"),
  ("i", "5.2 &nbsp;D&oacute;nde va hoy cada peso", "cap5a"),
@@ -114,8 +114,8 @@ _IDX = [
  ("i", "5.11 &nbsp;Transporte y comercio", "cap5b2b"),
  ("i", "5.12 &nbsp;Los que tienen que ejecutar todo esto", "cap5b2c"),
  ("i", "5.13 &nbsp;Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad", "cap5b3"),
- ("i", "5.14 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3"),
- ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en siete l&iacute;neas", "cap5b3"),
+ ("i", "5.14 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3b"),
+ ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en veinte l&iacute;neas", "cap5b3b"),
  ("g", "6 &middot; El plan, con fechas", None),
  ("i", "6.1 &nbsp;Los primeros cien d&iacute;as", "cap6"),
  ("i", "6.2 &nbsp;La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o", "cap6"),
@@ -123,7 +123,7 @@ _IDX = [
  ("i", "6.4 &nbsp;El calendario del mandato, mes por mes", "cap6b2"),
  ("i", "6.5 &nbsp;Qu&eacute; no prometemos, y de qui&eacute;n depende", "cap6b2"),
  ("i", "6.6 &nbsp;Qu&eacute; puede salir mal", "cap6c"),
- ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas", "cap6c"),
+ ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
@@ -135,7 +135,7 @@ _IDX = [
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
- ("i", "Las fuentes de lo que afirma el texto", "metodo"),
+ ("i", "Las fuentes de lo que afirma el texto", "fuentes"),
 ]
 
 def _indice():
@@ -389,15 +389,13 @@ a&ntilde;o. <b>El cap&iacute;tulo 3 muestra que la ca&iacute;da est&aacute; ente
      "Ministerio de Hacienda y Finanzas de la Provincia de Buenos Aires, transferencias a municipios 2021&ndash;2025.",
      "2026 va con seis meses y queda fuera del gr&aacute;fico. San Isidro cae a 1,6811% y Tigre sube a 1,8370%.") + """
 
-<h2><span class="n">1.6</span>Lo que dice este cap&iacute;tulo, en cuatro l&iacute;neas</h2>
+<h2><span class="n">1.6</span>Lo que dice este cap&iacute;tulo, en cinco l&iacute;neas</h2>
 <ol class="n">
-<li>San Isidro es un municipio rico que invierte m&aacute;s en obra p&uacute;blica que el 96% de los
-municipios bonaerenses.</li>
-<li>Casi la mitad de su poblaci&oacute;n &mdash;el 46,8%, en Boulogne Sur Mer y B&eacute;ccar&mdash; vive
-donde est&aacute; el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca.</li>
-<li>El municipio destina el 0,05% de su presupuesto a empleo y el 0,10% a vivienda.</li>
-<li>San Isidro tiene los fondos y la autonom&iacute;a para cambiar ese reparto. Lo que falta es que decida quien vive
-donde est&aacute; el problema.</li>
+<li>San Isidro est&aacute; partido en dos: en Boulogne Sur Mer y B&eacute;ccar vive el 46,8% de la gente, y ah&iacute; est&aacute;n el 60% de los hogares sin gas de red y el 71% de los que no tienen cloaca. Un hogar de ah&iacute; tiene tres veces y media m&aacute;s probabilidad de tener necesidades b&aacute;sicas insatisfechas que uno de Mart&iacute;nez, y la universidad completa va del 9% en Boulogne al 32% en Acassuso.</li>
+<li>El Municipio pone en obra p&uacute;blica el 17,8% de su gasto, m&aacute;s del triple que el municipio bonaerense t&iacute;pico: es el cuarto de 106, sobre un gasto que cay&oacute; 24,4% desde 2017. Pero el alumbrado recibe el triple que el agua y las cloacas, en los &uacute;ltimos dos a&ntilde;os y medio los diez primeros adjudicatarios se llevaron el 54,5% de lo adjudicado, la mitad de lo adjudicado entre 2002 y 2017 fue a empresas de afuera del partido, y desde 2018 no se publica d&oacute;nde est&aacute;n las que cobran.</li>
+<li>A empleo va el 0,05% del gasto, 170 millones por a&ntilde;o, y a vivienda el 0,10%, 335 millones.</li>
+<li>Est&aacute; escrito en el plan de gobierno 2024&ndash;2025: su primera prioridad, seguridad, subi&oacute; 34,8% por encima de la inflaci&oacute;n en un a&ntilde;o, y la asistencia social, que no est&aacute; entre sus prioridades, cay&oacute; 32,5%.</li>
+<li>San Isidro se financia solo: lo que recauda paga el 64% de su gasto, y la Provincia, el 25%; la parte que le toca de lo que la Provincia reparte entre los municipios cay&oacute; 8,5% entre 2021 y 2025. Tiene los fondos y la autonom&iacute;a para cambiar el reparto. Lo que falta es que decida quien vive donde est&aacute; el problema.</li>
 </ol>
 <p><b>Los cap&iacute;tulos siguientes proponen c&oacute;mo: que los vecinos de cada zona decidan la mitad de la obra p&uacute;blica.</b></p>
 """)
@@ -410,8 +408,8 @@ donde est&aacute; el problema.</li>
 METODO = dict(id="metodo", runhead=RH, html="""
 <h1>Nota de m&eacute;todo</h1>
 <div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, al final
-de esta nota.</p>
+<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, en las p&aacute;ginas
+que siguen a esta nota.</p>
 <div class="cols">
 <p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026, y donde el texto
 dice &laquo;hoy&raquo; se refiere a esa fecha. Hay cuatro excepciones: el modelo fiscal est&aacute; cerrado al 31 de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; la valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026; y lo que la lista de fuentes fecha despu&eacute;s del corte lleva su fecha al lado.</p>
@@ -433,7 +431,8 @@ incomparable buena parte de las series interanuales.</p>
 </div>
 
 <div class="hairline"></div>
-<h2>Cap&iacute;tulo 1 &middot; Diagn&oacute;stico</h2>
+<h2>Las notas de cada cap&iacute;tulo</h2>
+<h3>Cap&iacute;tulo 1 &middot; Diagn&oacute;stico</h3>
 <div class="note">
 <p>Las series fiscales provienen de los informes de ejecuci&oacute;n
 presupuestaria y rendiciones de cuentas publicados por la Municipalidad de San Isidro, de los fallos del
@@ -459,7 +458,7 @@ de San Isidro.</p>
 por objeto y por programa, y el que publica RAFAM. El estado por finalidad y funci&oacute;n suma 324.133,9
 millones porque deja afuera 170,1 millones de activos financieros.</p>
 </div>
-<h2>Cap&iacute;tulo 2 &middot; La gesti&oacute;n, medida</h2>
+<h3>Cap&iacute;tulo 2 &middot; La gesti&oacute;n, medida</h3>
 <div class="note">
 <p>Todas las cifras provienen de documentos
 publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
@@ -468,8 +467,11 @@ situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades E
 bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota del cap&iacute;tulo 1. El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
 cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
 cap&iacute;tulo 5 enumera.</p>
+<p><b>Cuadro [[n:accion]].</b> El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; tiene tres prioridades,
+diecinueve objetivos y setenta y siete metas numeradas, contadas una por una. Las metas est&aacute;n agrupadas por tema, no
+recortadas: las cuatro primeras filas del cuadro cubren las tres prioridades completas del plan.</p>
 </div>
-<h2>Cap&iacute;tulo 3 &middot; Los fondos</h2>
+<h3>Cap&iacute;tulo 3 &middot; Los fondos</h3>
 <div class="note">
 <p>El modelo est&aacute; construido sobre la ejecuci&oacute;n presupuestaria 2010&ndash;2025 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
 Estado de Situaci&oacute;n Econ&oacute;mico-Financiera municipal y las planillas de transferencias de la
@@ -485,8 +487,44 @@ ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con su s
 2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
 cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie. Como los metros construidos no son
 p&uacute;blicos, el aporte de actualizar la tabla de valuaci&oacute;n entra en el modelo calculado sobre la parte tierra.</p>
+<p><b>Gr&aacute;fico [[n:sinada]].</b> El programa tambi&eacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva
+cobra m&aacute;s de lo que el programa gasta, y en 2028 y desde 2031 cobra menos (cuadro [[n:programa_base]]).</p>
+<p><b>Cuadro [[n:programa]].</b> Las cifras marcadas son estimaciones del equipo de este programa, no
+cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, habilitaciones, la plataforma,
+las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, lo que se deja de
+cobrar en multas y los equipos. Las dem&aacute;s salen de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
+<p><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis estaciones de monitoreo de
+ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso, 137,1 M una vez y 39,5 M por a&ntilde;o de
+conexi&oacute;n; habilitaciones, ochenta c&aacute;maras corporales para transmitir las inspecciones, 168,7 M de sus 1.200 M y 3,8 M
+por a&ntilde;o de licencia; salud, trece pantallas de ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las
+personas que los instalan (cuadro [[n:equipo]]). Fuentes: compras p&uacute;blicas de la Ciudad (estaci&oacute;n de ruido, diciembre de
+2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre de 2025; c&aacute;mara corporal 4G, enero de 2026;
+televisor, escritorio y silla, 2026), llevadas a diciembre de 2025 con el IPC. Mantenimiento: el soporte anual de
+software de lista es el 22% de la licencia (Oracle, 2026). Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y
+cuidado de personas, diciembre de 2025 (Comisi&oacute;n Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con
+las cargas del cuadro [[n:equipo]] y trece sueldos.</p>
+<p><b>Cuadro [[n:tabla2008]].</b> Las parcelas salen del geoservicio de ARBA, y &laquo;reconocido&raquo; usa los
+valores sin redondear; el detalle est&aacute; en el informe 09. Las localidades son las de los cap&iacute;tulos 1 y 4, armadas con
+radios censales, y sus l&iacute;mites no siguen el catastro: cada parcela va a la localidad donde cae. El grueso de cada una,
+por circunscripci&oacute;n y secci&oacute;n: Acassuso, III-A y III-C; Mart&iacute;nez, III-B, III-D a III-J y IV-A a IV-D; la localidad de
+San Isidro, I-A, I-B, II-A a II-C, III-K, IV-E, VII-C, VII-D y VII-H; B&eacute;ccar, VII-A, VII-B, VII-E a VII-G y VIII-A a
+VIII-E; Villa Adelina, V-B, V-D, V-F y V-G; Boulogne Sur Mer, V-A, V-C, V-E y VI-A a VI-J. El 2,9% de las parcelas cae
+en una secci&oacute;n donde la mayor&iacute;a es de otra localidad; con las secciones enteras, Acassuso da 2,37 contra 2,94 veces
+Boulogne Sur Mer. La lista parcela por parcela est&aacute; en data/valuacion_parcelas.csv y el cruce por secci&oacute;n, en
+data/valuacion_secciones_localidad.csv. L&iacute;mites: la comparaci&oacute;n es de proporciones, no de pesos, porque las dos escalas
+usan unidades distintas. Cruzan con la tabla municipal 68.644 de las 69.258 parcelas de la valuaci&oacute;n provincial, el
+99,1%. Es s&oacute;lo tierra, sin construcci&oacute;n, y la valuaci&oacute;n provincial es de un reval&uacute;o de 2016: no es el mercado de hoy. Lo
+que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+<p><b>Cuadro [[n:deuda]].</b> La deuda flotante son obligaciones de corto plazo y oscila mucho entre
+trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones; descontada la inflaci&oacute;n,
+de 2.660 a 5.072 millones de pesos de diciembre de 2025: casi el doble. El bono de 30.000 millones no est&aacute; en el cuadro
+porque se coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio.</p>
+<p><b>Cuadro [[n:programa_base]].</b> Los dos escenarios tienen los mismos supuestos de recaudaci&oacute;n
+propia y de coparticipaci&oacute;n: lo &uacute;nico que cambia es el programa y lo que cobra la tabla nueva. El programa empieza en
+2028, el primer ejercicio completo del mandato. La &uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de
+lotes chicos (3.5). Las diferencias se calculan sin redondear.</p>
 </div>
-<h2>Cap&iacute;tulo 4 &middot; El mecanismo</h2>
+<h3>Cap&iacute;tulo 4 &middot; El mecanismo</h3>
 <div class="note">
 <p>Los art&iacute;culos 60, 132 y 119 de la Ley
 Org&aacute;nica de las Municipalidades fueron verificados contra tres fuentes oficiales independientes: la
@@ -522,8 +560,14 @@ Aires&mdash; son experiencias en curso o documentadas; el argumento sobre pregun
 proviene de la literatura acad&eacute;mica sobre sorteo y control popular. Ninguno es transferible sin
 adaptaci&oacute;n: Barcelona y Par&iacute;s no tienen las restricciones de la Ley Org&aacute;nica
 bonaerense, y la Ciudad de Buenos Aires tiene comunas con autoridades electas que San Isidro no tiene.</p>
+<p><b>Cuadro [[n:equipo]].</b> Sueldos brutos de mercado &mdash;mediana de la encuesta de Sysarmy 2026.1:
+senior 3,40 M por mes, semi-senior 2,43 M, junior 1,50 M&mdash; por trece, m&aacute;s las cargas del empleador: 16,8% de
+contribuciones (IPS 12%, Decreto-Ley 9650/80, e IOMA 4,8%, Decreto 2655/04) y la ART que contrat&oacute; el Municipio, 3,275%
+m&aacute;s una suma fija por persona (Decreto 1587/2025). Pasantes, 240.000 $ por mes, con ART y salud. Infraestructura y
+licencias, 18%, y auditor&iacute;a externa, 10%, del equipo sin cargas. El soporte en cada una de las seis zonas lo hace planta
+reasignada, que ya cobra su sueldo.</p>
 </div>
-<h2>Cap&iacute;tulo 5 &middot; Qu&eacute; hacemos en cada &aacute;rea</h2>
+<h3>Cap&iacute;tulo 5 &middot; Qu&eacute; hacemos en cada &aacute;rea</h3>
 <div class="note">
 <p>El gasto por funci&oacute;n proviene del estado
 de ejecuci&oacute;n presupuestaria acumulado anual 2025 del Municipio de San Isidro. Las variaciones reales
@@ -546,8 +590,28 @@ para este caso. Los datos de Tigre son comunicaciones del propio Municipio de Ti
 <p>La propuesta de Bezos se formul&oacute; en el America Business Forum de Miami en noviembre de 2025, y la
 adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en marzo de 2026: es una
 referencia de d&oacute;nde est&aacute; la vara, sin resultados medidos todav&iacute;a.</p>
+<p><b>Cuadro [[n:piramide]].</b> En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segundo, 355 y
+356 el tercero y 464 y 464 el cuarto; cada uno pasa seis meses por el Municipio y seis por las empresas. El equipo de la
+plataforma (cuadro [[n:equipo]]) es parte de los pasantes y juniors del Municipio (cuadro [[n:proyectos]]), y &eacute;stos son
+parte de esta pir&aacute;mide.</p>
+<p><b>Cuadro [[n:reparto_empleo]].</b> Los 3 millones por persona pagan los dos a&ntilde;os de formaci&oacute;n; la
+pasant&iacute;a la paga quien la recibe. Los dos primeros a&ntilde;os la formaci&oacute;n usa toda la partida de empleo, porque todav&iacute;a no hay
+egresados que contratar: entran 462 y 824 en vez de 277 y 494, y egresan 1.286 en el mandato. El tercer a&ntilde;o vuelve este
+reparto. El m&oacute;dulo de salud de los meses 12 a 18, que se pagaba con la contrataci&oacute;n de desarrollos, sale esos dos a&ntilde;os del
+gasto flexible libre.</p>
+<p><b>Cuadro [[n:hoy_propuesta]].</b> Mi Primer Empleo da talleres de curr&iacute;culum y contacto con empresas, y el
+portal de empleo: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas de Medicina son en hospitales y
+centros de salud &mdash;Barcel&oacute; (Decreto 374/2025, sin gasto municipal), UCA (Decreto 498/2026) y, de 2026 a 2028,
+Favaloro, seg&uacute;n una nota del Municipio reproducida por InfoBAN&mdash;, y las de Veterinaria, en Zoonosis, con la UBA, hasta
+dos meses (Decreto 775/2026). Las de Barcel&oacute; y de Veterinaria no se pagan, y los convenios de Favaloro y de la UCA no est&aacute;n
+publicados. Los 15 pasantes de las fiscal&iacute;as los paga el Municipio por un convenio de 2003 con el Ministerio P&uacute;blico:
+747.500 $ por mes desde marzo de 2026, becas designadas por decreto (Decreto 298/2026), fuera del r&eacute;gimen de pasant&iacute;as, sin
+horas publicadas ni cobertura encontrada. La UNSO tiene pasant&iacute;as pagas con pymes, sin convenio vigente con el Municipio:
+el de 2021 no tiene movimientos desde 2022 (Zona Norte Visi&oacute;n, 16 de junio de 2025). Lo de los m&aacute;s de 300 vecinos con
+trabajo es de una gacetilla citada por Zona Norte Visi&oacute;n el 11 de agosto de 2026. D&oacute;nde est&aacute;n las empresas que cobran del
+Municipio se dej&oacute; de publicar en 2018 (1.2).</p>
 </div>
-<h2>Cap&iacute;tulo 6 &middot; El plan, con fechas</h2>
+<h3>Cap&iacute;tulo 6 &middot; El plan, con fechas</h3>
 <div class="note">
 <p>Este cap&iacute;tulo no introduce datos nuevos.
 Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
@@ -557,5 +621,11 @@ cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5
 <p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los
 360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los l&iacute;mites de
 localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
+<p><b>Cuadro [[n:compromisos]].</b> Los dos primeros van juntos a la sesi&oacute;n extraordinaria porque sin
+partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
+puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo, y los dos se
+licitan: la anal&iacute;tica que corre sobre las c&aacute;maras que el Municipio ya compr&oacute;, y las c&aacute;maras corporales que compra
+habilitaciones (3.4). A los cien d&iacute;as las dos licitaciones est&aacute;n lanzadas; funcionan en el mes 9. La ordenanza que vuelve
+inv&aacute;lida el acta labrada sin transmisi&oacute;n va despu&eacute;s, y est&aacute; escrita en el anexo.</p>
 </div>
 """)
