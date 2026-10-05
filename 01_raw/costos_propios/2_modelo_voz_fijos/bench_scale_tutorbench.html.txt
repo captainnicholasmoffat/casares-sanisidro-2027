@@ -1,0 +1,184 @@
+ Scale Labs Leaderboard: TutorBench 
+ [PAPERS] [BLOG] [LEADERBOARDS] ⌘K ⌘K 
+ Agentic 
+ Safety 
+ Frontier 
+ Humanity's Last Exam (Diamond) 
+ SciPredict 
+ AudioMultiChallenge 
+ AudioMultiChallenge - Audio Output 
+ AudioMultiChallenge - Text Output 
+ Professional Reasoning Benchmark - Finance 
+ Professional Reasoning Benchmark - Legal 
+ VisualToolBench (VTB) 
+ MultiNRC 
+ MultiChallenge 
+ EnigmaEval 
+ VISTA 
+ TutorBench 
+ Legacy 
+ 2026 Scale AI. All rights reserved.
+ TutorBench
+ AI Tutoring
+ Overview
+ Large Language Models serve as on-demand tutors for learners worldwide, yet, a critical evaluation gap exists. While most benchmarks assess an LLM's ability to solve problems, this capability alone does not make the models effective tutors. Effective tutors require nuanced, human-centered skills essential for student learning like providing adaptive explanations, offering guiding feedback, and adjusting to a learner's specific needs. 
+ To address this gap, we introduce TutorBench, a comprehensive benchmark designed to rigorously evaluate the core tutoring skills of LLMs. TutorBench moves beyond simple answer-correctness to measure how well models perform three common and critical tutoring tasks: 
+ Generating adaptive explanations tailored to a student's background
+ Providing actionable feedback on a student's work
+ Promoting active learning through effective hint generation
+ Comprising 1,490 challenging prompts curated by human experts, TutorBench is intentionally difficult and multimodal, incorporating images of student work to reflect authentic learning interactions and expose the true tutoring strengths and weaknesses of today's most advanced AI.
+ The benchmark contains:
+ 1,490 total examples across six STEM subjects (physics, chemistry, biology, calculus, statistics, computer science).
+ 828 multimodal examples (≈56%) requiring models to interpret images such as handwritten work, diagrams, or screenshots.
+ 15,220 rubric criteria , with 3–39 per example, covering correctness, explanation quality, tone, personalization, and more.
+ The leaderboard reports overall tutoring ability across three use cases: adaptive explanation generation, assessment & feedback, and active learning support.
+ Methodology
+ TutorBench evaluates models using three tutoring scenarios, each reflecting a common real-world interaction between student and tutor:
+ Adaptive Explanation Generation Input: a student’s question → expert answer → student follow-up
+ Model task: adapt its explanation to the student’s specific confusion
+ Rubrics: clarity, adaptation to student level, correctness
+ Assessment & Feedback Input: a question + a student’s (often incorrect) solution, in text or image
+ Model task: identify errors, provide feedback, and classify misconceptions
+ Rubrics: correctness of assessment, identification and categorization of mistake type, constructive tone
+ Active Learning Support Input: a question + a student's partial solution
+ Model task: generate helpful hints without revealing the final answer
+ Rubrics: guidance quality, step-by-step scaffolding, avoidance of spoilers
+ Rubrics
+ Each example includes a sample-specific rubric authored by expert tutors. Rubrics decompose desirable tutoring behavior into pass/fail checks with weights:
+ +5: highly desirable behavior
+ +1: desirable but less critical behavior
+ −5: critical failure (e.g., giving away the answer when only a hint is requested)
+ Rubrics are also tagged along several axes:
+ Evaluation dimensions : Instruction-following
+ Truthfulness
+ Style/tone 
+ Visual reasoning
+ Visual perception
+ Calibration to student level
+ Conciseness
+ Emotional component
+ Tutoring skills : Identify core misconceptions
+ Ask guiding questions
+ Give examples or analogies
+ Provide alternative solutions
+ Offer step-by-step help (scaffolding)
+ Recall relevant knowledge
+ Identify correct/incorrect steps
+ Explicit vs. implicit and objective vs. subjective criteria.
+ LLM-Judge
+ To automate evaluation at scale, we use an LLM-judge (Claude-4-Sonnet). Validation against 250 human-rated examples shows:
+ Mean inter-human agreement: 0.75
+ Human–judge agreement: 0.78
+ F1 agreement on majority labels: 0.81
+ This indicates the judge aligns with human raters as well as a typical human annotator does.
+ Dataset Design
+ Authoring Process
+ Expert tutors (with at least a bachelor’s degree and teaching experience) created questions, gold solutions, and rubrics.
+ Examples were drawn from six STEM subjects with varied difficulty (mapped to Bloom’s taxonomy levels).
+ Each example includes 3–39 rubric checks for fine-grained evaluation.
+ Filtering for Difficulty
+ To ensure the dataset remains challenging:
+ Candidate examples were tested on five frontier models.
+ Only examples where at least 3 of 5 models scored <50% were retained.
+ Multimodality
+ Over half the dataset includes images (handwritten equations, diagrams, or screenshots) requiring visual reasoning in addition to text understanding.
+ Example Anatomy
+ A typical example includes:
+ Prompt (student question or partial solution).
+ Supporting content (image or text).
+ Rubric set (3–39 criteria with weights).
+ Evaluation & Results
+ We evaluated 16 of the most advanced frontier LLMs on TutorBench. Results show that while progress is promising, today’s models fall short of being effective tutors. 
+ The best-performing model, Gemini 2.5 Pro, achieved an overall score of just 55.7%, meaning even the strongest model fails nearly half of the essential tutoring criteria. 
+ Models performed worst on Adaptive Explanation Generation, averaging only 47.3%. They were stronger in Assessment & Feedback (52.6% avg), a more structured task and in providing support for active learning (53.4% avg).
+ The breakdown highlights a clear pattern: 
+ Models are relatively proficient at analytical tasks, such as identifying correct and incorrect steps in a student’s work (53.4% average). 
+ They struggle much more with pedagogical and creative skills. Performance drops sharply when asked to provide alternative solutions, examples, and analogies, averaging only 37.4%.
+ These results suggest that while current LLMs can provide structured checking and feedback, they lack the adaptability, creativity, and pedagogical nuance that real tutoring requires. Adaptive personalization remains the hardest challenge.
+ Read the TutorBench paper here . 
+ Performance Comparison
+ 1 
+ Muse Spark
+ 68.55 ± 0.95 
+ 1 
+ gpt-5.4-pro-2026-03-05
+ 56.62 ± 1.02 
+ 1 
+ gemini-2.5-pro-preview-06-05
+ 55.65 ± 1.11 
+ 1 
+ gpt-5-2025-08-07
+ 55.33 ± 1.02 
+ 1 
+ o3-pro-2025-06-10
+ 54.62 ± 1.02 
+ 1 
+ kimi-k2.5
+ 54.56 ± 1.20 
+ 2 
+ gpt-5.1-thinking
+ 54.09 ± 1.06 
+ 2 
+ claude-opus-4-6-thinking-max
+ 53.68 ± 1.02 
+ 2 
+ gemini-3-pro-preview
+ 53.67 ± 1.05 
+ 2 
+ claude-opus-4-6 (Non-Thinking) 
+ 53.55 ± 1.01 
+ 2 
+ gpt-5.2-2025-12-11
+ 53.49 ± 1.06 
+ 4 
+ gemini-3.1-pro-preview
+ 52.99 ± 1.06 
+ 4 
+ o3-2025-04-16-medium
+ 52.76 ± 1.00 
+ 6 
+ o3-2025-04-16-high
+ 52.09 ± 1.01 
+ 9 
+ gemini-3.1-flash-lite-preview
+ 51.50 ± 1.04 
+ 11 
+ claude-opus-4-5-20251101-thinking
+ 51.20 ± 0.99 
+ 12 
+ claude-opus-4-1-20250805-thinking
+ 50.78 ± 1.05 
+ 14 
+ claude-opus-4-5-20251101
+ 49.82 ± 0.98 
+ 14 
+ claude-4-opus-20250514-thinking
+ 49.71 ± 1.02 
+ 16 
+ gpt-5.1-instant
+ 49.08 ± 1.06 
+ 16 
+ claude-sonnet-4-5-20250929-thinking
+ 49.00 ± 1.01 
+ 19 
+ claude-opus-4-1-20250805_anthropic
+ 47.40 ± 1.06 
+ 21 
+ claude-37-sonnet-thinking
+ 46.45 ± 1.03 
+ 21 
+ claude-sonnet-4-5-20250929
+ 45.70 ± 1.01 
+ 21 
+ claude-opus-4-20250514
+ 45.46 ± 1.06 
+ 25 
+ llama4-maverick
+ 40.20 ± 1.00 
+ 26 
+ gpt-4o
+ 36.12 ± 0.96 
+ Legend 
+ Rank (UB): 1 + the number of models whose lower CI bound exceeds this model’s upper CI bound. 
+ All leaderboards 
+ 

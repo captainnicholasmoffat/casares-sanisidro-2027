@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Comunidades Sin Violencias</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        
+        <!-- Font Awesome icons -->
+        <script src="https://use.fontawesome.com/releases/v6.5.2/js/all.js" crossorigin="anonymous"></script>
+    
+        <!-- Css y Js de la galeria de imagenes --> 
+        <script src="js/jquery.min.js"></script> 
+         
+        <!-- Bootstrap 5 mod -->
+        <link href="css/styles.css" rel="stylesheet" />
+        
+        <!-- Custom Css -->
+        <link href="css/custom-styles.css" rel="stylesheet" /> 
+         
+        <link rel='stylesheet' href='css/swiper.min.css'>
+        <link rel='stylesheet' href='css/magnific-popup.min.css'> 
+        <script src="js/prefixfree.min.js"></script>
+        
+        <style>
+        
+        #logo { 
+        width: 400px;  
+        padding-bottom: 10px;
+        } 
+        .red-bottom{
+        border-bottom: 2px solid #00AEC3;
+        }
+        .noselect * {
+
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          cursor: default;
+        }
+        .page-block {
+          width: 100%; 
+          display: block;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          box-sizing: border-box;  
+        }
+        .page-content {
+          min-height: 100px;
+        }
+        .swiper-container.videoswiper {
+          padding: 10px;
+          margin-left: -10px;
+          margin-right: -10px;
+          box-sizing: border-box;
+        }
+
+        .videoswiper h1 {
+          margin-bottom: 20px;
+          font-weight:400;
+        }
+        .videoswiper h1 a {
+          margin-left:8px;
+          color:#7f8083;
+          font-size:13px;
+          font-weight:400;
+          text-decoration:none;
+          cursor:pointer;
+        }
+        .videoswiper h1 a:hover {
+          text-decoration:underline;
+        }
+
+        .videoswiper .swiper-slide {
+          overflow:hidden;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          transition: 0.6s all;
+        }
+        .videoswiper .swiper-slide:hover {
+        
+          z-index: 2;
+        }
+        
+        .videoswiper .swiper-card {
+          position: relative;
+          height: 260px;
+          background-color: white;
+          padding: 10px;
+          margin: 10px;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+
+        .videoswiper .card-img {
+          position:relative;
+          height: 160px;
+          width: 100%;
+          background-color: #f2f2f2;
+          background-position:50%;
+          background-repeat:no-repeat;
+          background-size:cover;
+        }
+        .videoswiper .card-img:after {
+          content:'';
+          position:absolute;
+          height:100%;
+          width:100%;
+          top:0;
+          left:0;
+          background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20d%3D%22M20%200C9%200%200%209%200%2020s9%2020%2020%2020%2020-9%2020-20S31%200%2020%200zM16%2029V11l12%209L16%2029z%22%20fill%3D%22%23FFFFFF%22%2F%3E%3C%2Fsvg%3E%0A");
+          background-repeat:no-repeat;
+          background-position:50%;
+          background-size:40px;
+          filter:drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
+          transition:0.6s all;
+          cursor:pointer;
+        }
+        .videoswiper .card-img:hover:after {
+          filter:drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+        }
+        .videoswiper .card-img a {
+          height:100%;
+          display:block;
+          cursor:pointer;
+        }
+
+        .videoswiper .card-info {
+          position: relative;
+          width: 100%;
+          z-index: 1;
+        }
+
+        .videoswiper .card-info > a {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+        }
+        .videoswiper .card-info h2 {
+          margin:10px 0;
+          color:#e85510;
+          font-size:18px;
+          line-height:22px;
+          cursor: inherit;
+        }
+        .videoswiper .card-info p {
+          font-size:13px;
+          cursor: inherit;
+        }
+
+        .videoswiper .pagination {
+          position: absolute;
+          bottom: 2px;
+          text-align: center;
+          z-index: 9;
+        }
+
+        .videoswiper .swiper-pagination-bullet {
+          height: 6px;
+          width: 6px;
+        }
+
+        .videoswiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background-color: #7f8083;
+        }
+
+        .videoswiper .swiper-button-prev,
+        .videoswiper .swiper-button-next {
+          height: 40px;
+          width: 40px;
+          top: 29px;
+          background-color: white;
+          background-size: 14px;
+          border-radius: 50%;
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+          transition: 0.6s all;
+          cursor: pointer;
+        }
+
+        .videoswiper .swiper-button-prev:hover,
+        .videoswiper .swiper-button-next:hover {
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .videoswiper .swiper-button-prev {
+          color: #7f8083;
+          left: initial;
+          right: 60px;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%237f8083'%2F%3E%3C%2Fsvg%3E");
+        }
+
+        .videoswiper .swiper-button-next {
+          color: #7f8083;
+          background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%237f8083'%2F%3E%3C%2Fsvg%3E")
+        }    
+                    
+
+        .fotos .videoswiper .card-img:after {
+            display: none!important;
+        }
+            
+                    
+        .mfp-iframe-holder .mfp-content {
+            line-height: 0;
+            max-width: 1000px!important;
+            height: 667px!important;
+        }
+            iframe{
+                overflow: hidden!important;
+            }
+ 
+            
+        </style>
+        
+         
+ 
+        
+    </head>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7D9QPN0D43"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7D9QPN0D43');
+</script>
+    
+    <body>
+        
+        
+        <!-- Menu de Navegacion -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+          <div class="container px-4 px-lg-2">
+              <a class="navbar-brand" href="index.php">
+                  <img src="images/logo-provincia.png" style="max-width:290px;" alt="Logo Provincia" />
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                  Menu
+                  <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav ml-auto pt-4 py-lg-0"> 
+                          <li class="nav-item">
+                              <a class="nav-link" href="#inicio">Inicio</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#inicio">Programa</a>
+                          </li> 
+                          <li class="nav-item">
+                              <a class="nav-link" href="#galeria">Galería</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="https://gba.gob.ar/mujeres">Volver</a>
+                          </li> 
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+ 
+        
+        <!-- Header-->
+        <header class="masthead">
+            
+        <video class="fullscreen-video" id="myVideo" autoplay="autoplay" loop muted>
+            <source src="animacion.mp4">
+            Your browser does not support the video tag.
+        </video>        
+           
+        </header>
+
+
+
+        <div class="background-minis" id="inicio">
+        <!-- Main Content-->
+        <div class="container">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-12">
+                    <!-- Post preview-->
+                    <div class="post-preview"> 
+                        
+                    <p style="font-size: 17px;">El Programa Comunidades sin Violencias promueve que los municipios de la provincia de Buenos Aires fortalezcan la gestión municipal contra las violencias de género con la finalidad de ampliar la capacidad de respuesta en la prevención, atención y salida de las violencias. Además, busca que las organizaciones sociales puedan abordar las situaciones de violencias de género que se viven en los territorios, impulsar estrategias para modificar esa realidad y generar herramientas que posibiliten la independencia de las personas que atraviesan violencias de género.</p>
+
+                      <h5 class="text-center font-bold text-white mb-2 mt-4">Contempla tres líneas de acción:</h5>
+
+                      <ul style="font-size: 17px;" class="space-y-3">
+                        <li class="p-2">
+                            Fortalecer los dispositivos de atención integral municipales y las organizaciones territoriales para la prevención, asistencia y acompañamiento en situaciones de violencia por razones de género.
+                        </li>
+                        <li class="p-2">
+                            Equipar y poner en funcionamiento los Dispositivos Territoriales de Protección Integral (DTPI): Hogares de Protección Integral, Casas Abiertas, refugios.
+                        </li>
+                        <li class="p-2">
+                            Desarrollar proyectos productivos y de inserción laboral que impulsen el proceso de salida de las violencias por razones de género.
+                        </li>
+                    </ul>               
+                         
+                    </div> 
+                </div>
+            </div>
+        </div> 
+        
+        </div>
+        
+         
+        
+        <!-- acordeon -->
+        <div class="fotos">
+        <div class="container px-4 px-lg-5" id="programa" >
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+    
+                
+                
+<!-- partial:index.partial.html -->
+<div class="all">
+  <section>
+    <div class="page-block">
+      <div class="page-content">
+        <div class="swiper-container videoswiper noselect">
+          <h1 id="galeria">Fotos </h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen1.jpg)">
+                  <a href="img/nuevas/imagen1.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen2.jpg)">
+                  <a href="img/nuevas/imagen2.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen3.jpg)">
+                  <a href="img/nuevas/imagen3.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen4.jpg)">
+                  <a href="img/nuevas/imagen4.jpg"></a>
+                </div> 
+              </div>
+            </div> 
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen5.jpg)">
+                  <a href="img/nuevas/imagen5.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen6.jpg)">
+                  <a href="img/nuevas/imagen6.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen7.jpg)">
+                  <a href="img/nuevas/imagen7.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen8.jpg)">
+                  <a href="img/nuevas/imagen8.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen9.jpg)">
+                  <a href="img/nuevas/imagen9.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen10.jpg)">
+                  <a href="img/nuevas/imagen10.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen11.jpg)">
+                  <a href="img/nuevas/imagen11.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen12.jpg)">
+                  <a href="img/nuevas/imagen12.jpg"></a>
+                </div> 
+              </div>
+            </div> 
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen13.jpg)">
+                  <a href="img/nuevas/imagen13.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen14.jpg)">
+                  <a href="img/nuevas/imagen14.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen15.jpg)">
+                  <a href="img/nuevas/imagen15.jpg"></a>
+                </div> 
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen16.jpg)">
+                  <a href="img/nuevas/imagen16.jpg"></a>
+                </div> 
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen17.jpg)">
+                  <a href="img/nuevas/imagen17.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen18.jpg)">
+                  <a href="img/nuevas/imagen18.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen19.jpg)">
+                  <a href="img/nuevas/imagen19.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen20.jpg)">
+                  <a href="img/nuevas/imagen20.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen21.jpg)">
+                  <a href="img/nuevas/imagen21.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen22.jpg)">
+                  <a href="img/nuevas/imagen22.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen23.jpg)">
+                  <a href="img/nuevas/imagen23.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen24.jpg)">
+                  <a href="img/nuevas/imagen24.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen25.jpg)">
+                  <a href="img/nuevas/imagen25.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen26.jpg)">
+                  <a href="img/nuevas/imagen26.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen27.jpg)">
+                  <a href="img/nuevas/imagen27.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen28.jpg)">
+                  <a href="img/nuevas/imagen28.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen29.jpg)">
+                  <a href="img/nuevas/imagen29.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen30.jpg)">
+                  <a href="img/nuevas/imagen30.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen31.jpg)">
+                  <a href="img/nuevas/imagen31.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen32.jpg)">
+                  <a href="img/nuevas/imagen32.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen33.jpg)">
+                  <a href="img/nuevas/imagen33.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen34.jpg)">
+                  <a href="img/nuevas/imagen34.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen35.jpg)">
+                  <a href="img/nuevas/imagen35.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen36.jpg)">
+                  <a href="img/nuevas/imagen36.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen37.jpg)">
+                  <a href="img/nuevas/imagen37.jpg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen38.jpeg)">
+                  <a href="img/nuevas/imagen38.jpeg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen39.jpeg)">
+                  <a href="img/nuevas/imagen39.jpeg"></a>
+                </div> 
+              </div>
+            </div>  <div class="swiper-slide">
+              <div class="swiper-card" style="height: auto;">
+                <div class="card-img" style="background-image:url(img/nuevas/imagen40.jpeg)">
+                  <a href="img/nuevas/imagen40.jpeg"></a>
+                </div> 
+              </div>
+            </div>
+                        
+              
+          </div>
+          <div class="pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>        
+                
+                
+        
+        
+            </div>
+        </div>
+        </div>
+        
+        
+        
+        
+
+
+
+
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5" id="programa"  style="display:none">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                
+                
+                <div class="col-md-12">
+                <div class="boton-grande">En los municipios comenzó implementarse en el año 2021, a partir de tres líneas de acción y ejes de trabajo:</div>
+                </div>
+                
+                
+                
+                <div class="col-md-4">
+                    <div class="cuadro-violeta">
+<h3>1. Equipos Interdisciplinarios</h3><br> 
+
+propone el fortalecimiento de los
+equipos interdisciplinarios de las
+áreas de género de los municipios,
+la atención a varones que ejercieron
+violencia y la conformación de
+grupos de ayuda mutua.
+                    </div>      
+                </div>
+                
+                <div class="col-md-4">
+                   <div class="cuadro-violeta">
+ <h3>2. Hogares de Protección Integral y Casas Abiertas</h3><br>  
+                    
+ofrece la posibilidad de llevar
+adelante el equipamiento
+y funcionalización de Hogares
+de Protección Integral y la
+construcción o refuncionalización
+de Casas Abiertas.
+                </div>
+                </div>
+                
+                <div class="col-md-4">
+                   <div class="cuadro-violeta">
+ <h3>3. Promoción para la salida laboral</h3><br> 
+                    
+en tanto, se aboca a la promoción
+para el trabajo, formación en oficios,
+capacitación y fortalecimiento para
+el trabajo asociativo.
+                </div>       
+                </div>
+              
+            </div>
+        </div>
+  
+        
+        <div class="container px-4 px-lg-5  mt-4"  style="display:none">
+            <div class="row gx-4 gx-lg-5 justify-content-center text-center">    
+<p>Durante el primer año del Programa, se distribuyeron 500 millones de pesos entre los 135 municipios bonaerenses, de los cuales
+133 presentaron proyectos. En total, se presentaron 186 proyectos, ya que 53 distritos solicitaron más de una línea de acción, 
+según los datos correspondientes a abril de 2022.</p> 
+                
+            </div>
+        </div>       
+          
+ 
+        
+        <!-- tablas -->
+        <div class="container px-4 px-lg-5" id="lineas" style="display:none">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                 
+            <div class="col-md-12 linea-cont">
+                <div class="lineas">
+                <span>1. Equipos Interdisciplinarios</span>
+                </div>  
+                <ul>           
+                <li>• Para "Equipos Interdisciplinarios" se destinaron $354 millones</li>
+                <li>• 111 municipios seleccionaron el eje 1 que permite fortalecer los equipos interdisciplinarios de las áreas de género.
+                De esta manera, se proyectó el ingreso de 493 profesionales y 161 administrativas y administrativos.</li>
+                <li>• 59 municipios eligieron el eje 2 para llevar adelante equipos de atención a varones que ejercieron violencia.</li>
+                <li>• 48 municipios seleccionaron el eje 3 que facilita la creación y/o fortalecimiento de los grupos de ayuda mutua.</li>
+                </ul> 
+            </div>
+                
+            <div class="col-md-12 linea-cont">
+                <div class="lineas">
+                <span>2. Hogares de Protección Integral y Casas Abiertas</span>
+                </div>  
+                <ul>           
+                    
+<li>• Para "Hogares de Protección Integral y Casas Abiertas" se distribuyeron $55 millones.</li> 
+<li>• 9 municipios seleccionaron el eje 1 para trabajar sobre el Equipamiento y funcionalización de Hogares de Protección Integral.</li>
+<li>• 8 municipios seleccionaron el eje 2 para la construcción o refuncionalización de Casas Abiertas.</li>
+<li>• 4 municipios se encuentran construyendo Casas Abiertas Regionales en articulación con la Dirección Provincial de Intervenciones
+Complementarias de la Subsecretaría de Hábitat, dependiente del Ministerio de Desarrollo de la Comunidad de la provincia de
+Buenos Aires (MDCPBA), área encargada de la asignación de presupuesto.</li>
+                </ul> 
+            </div>   
+                
+            <div class="col-md-12 linea-cont">
+                <div class="lineas">
+                <span>3. Promoción para la salida laboral</span>
+                </div>  
+                <ul>           
+<li>• 49 proyectos de capacitación y fortalecimiento sobre producción textil, producción agropecuaria, carpintería, diseño gráfico, jardine-
+ría, energías renovables, mantenimiento general, espacios verdes, turismo y organización de eventos y formación en TIC (tecnologías 
+de la información y la comunicación).</li>
+                    
+<li>• Con el fin de alcanzar una mirada integral de esta política pública, en 2022 se puso en marcha la etapa de regionalización del equipo de trabajo del Programa que, entre otras acciones y propuestas, incluye jornadas de capacitación destinadas a los equipos profesionales, técnicos y administrativos; cursos de acompañantes en violencias por razones de género para las operadoras; la implementación de una cuarta línea destinada a organizaciones comunitarias y la puesta en valor de los esquemas productivos iniciados en 2021.</li>
+                </ul> 
+            </div> 
+                
+
+
+            </div>
+        </div>
+        
+         
+         
+        
+        <div class="container px-4 px-lg-5  mt-4" id="">
+            <div class="row gx-4 gx-lg-5 justify-content-center text-center">    
+ 
+                <img src="img/mapa.gif">
+                 
+                <p class="mt-4"><b>Mail de contacto:</b> comunidadessinviolencias@ministeriodelasmujeres.gba.gob.ar</p>
+                
+                <div style="max-width: 100%; display: none;"><a href="https://ministeriodelasmujeres.gba.gob.ar/gestor/uploads/informe%20-%20comunidades%20sin%20violencias%20digital%20.pdf" target="_blank"><div class="descargar">DESCARGÁ EL INFORME</div></a></div>  
+                
+            </div>
+             
+        </div>       
+ 
+        
+        
+        
+        
+        
+        
+        <!-- acordeon -->
+        <div style="background: #e2e2e2;">
+        <div class="container">
+            <div class="row gx-4 mt-5 justify-content-center"> 
+     
+<!-- partial:index.partial.html -->
+<div class="all" >
+  <section>
+    <div class="page-block">
+      <div class="page-content">
+        <div class="swiper-container videoswiper noselect">
+          <h1 id="galeria">Videos </h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min1.jpg)">
+                  <a href="https://www.youtube.com/watch?v=2p2PkUP4tg4"></a>
+                </div>
+                <div class="card-info">
+                  <h2>TORNQUIST</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min2.jpg)">
+                  <a href="https://www.youtube.com/watch?v=HEzRg8w-_i4"></a>
+                </div>
+                <div class="card-info">
+                  <h2>TRES LOMAS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min3.jpg)">
+                  <a href="https://www.youtube.com/watch?v=KLmrvEZjfa4"></a>
+                </div>
+                <div class="card-info">
+                  <h2>CHASCOMÚS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min4.jpg)">
+                  <a href="https://www.youtube.com/watch?v=uD24fwuKbgE"></a>
+                </div>
+                <div class="card-info">
+                  <h2>LA COSTA</h2>
+                </div>
+              </div>
+            </div> 
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min5.jpg)">
+                  <a href="https://www.youtube.com/watch?v=aF8Bg2zGDvU"></a>
+                </div>
+                <div class="card-info">
+                  <h2>BENITO JUÁREZ</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min6.jpg)">
+                  <a href="https://www.youtube.com/watch?v=rdUJxpXoMiM"></a>
+                </div>
+                <div class="card-info">
+                  <h2>FLORENTINO AMEGHINO</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min7.jpg)">
+                  <a href="https://www.youtube.com/watch?v=UiJohvrPRDc"></a>
+                </div>
+                <div class="card-info">
+                  <h2>PILA</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min8.jpg)">
+                  <a href="https://www.youtube.com/watch?v=VrVX328rX74"></a>
+                </div>
+                <div class="card-info">
+                  <h2>GENERAL VILLEGAS</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min9.jpg)">
+                  <a href="https://www.youtube.com/watch?v=49Ndekc5jow"></a>
+                </div>
+                <div class="card-info">
+                  <h2>GONZÁLES CHAVES</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min10.jpg)">
+                  <a href="https://www.youtube.com/watch?v=X73y4EN8pgA"></a>
+                </div>
+                <div class="card-info">
+                  <h2>GENERAL GUIDO</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min11.jpg)">
+                  <a href="https://www.youtube.com/watch?v=-aJUFkVkpig"></a>
+                </div>
+                <div class="card-info">
+                  <h2>GENERAL PAZ</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min12.jpg)">
+                  <a href="https://www.youtube.com/watch?v=AM-Ez8M-h1A"></a>
+                </div>
+                <div class="card-info">
+                  <h2>JUNÍN</h2>
+                </div>
+              </div>
+            </div> 
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min13.jpg)">
+                  <a href="https://www.youtube.com/watch?v=-3o80Z-E73I"></a>
+                </div>
+                <div class="card-info">
+                  <h2>9 DE JULIO</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min14.jpg)">
+                  <a href="https://www.youtube.com/watch?v=bXTkisiw5VE"></a>
+                </div>
+                <div class="card-info">
+                  <h2>PEHUAJÓ</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min15.jpg)">
+                  <a href="https://www.youtube.com/watch?v=16lsBuCG3Mg"></a>
+                </div>
+                <div class="card-info">
+                  <h2>LAS FLORES</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min16.jpg)">
+                  <a href="https://www.youtube.com/watch?v=2G_pz72dHME"></a>
+                </div>
+                <div class="card-info">
+                  <h2>LAPRIDA</h2>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min17.jpg)">
+                  <a href="https://www.youtube.com/watch?v=7cWjXElFVH0"></a>
+                </div>
+                <div class="card-info">
+                  <h2>Capacitación en el abordaje de las violencias por razones de género</h2>
+                </div>
+              </div>
+            </div>          
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="card-img" style="background-image:url(img/min18.jpg)">
+                  <a href="https://www.youtube.com/watch?v=2hrH1sn8yS0"></a>
+                </div>
+                <div class="card-info">
+                  <h2>Informe de Telesur: Mujeres argentinas impulsan programa Comunidades sin Violencia</h2>
+                </div>
+              </div>
+            </div> 
+               
+          </div>
+          <div class="pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>        
+             
+        </div>
+        </div>
+        </div>    
+        
+        
+        
+
+        
+   <!-- Imagen de fondo del footer -->
+   <img class="back-footer" src="images/footer.png" alt="icon-footer">
+   <div class="bg-pie text-center text-white py-2">
+       Dirección de Informática MMyD - 2025 - Provincia de Buenos Aires
+   </div>
+
+   <footer>
+       <div class="container px-4 px-lg-5 pt-4">
+           <div class="row gx-4 gx-lg-5"> 
+               <div class="col-md-4 my-3">
+                   <p class="titulofooter">Canales de Comunicación</p>
+                   <ul class="list-unstyled">
+                       <li class="mb-3"><a href="tel:148"><img class="icon-footer icon148" src="images/148-logo.png" alt="Logo Línea 148"></a></li>
+                       <li class="mb-3"><a href="https://gba.gob.ar/gobiernodigital/148accesible"><img class="icon-footer icon148acc" src="images/148-acc-logo.png" alt="Logo Línea 148 Accesible"></a></li>
+                       <li class="mb-3"><a href="tel:144"><img class="icon-footer icon144" src="images/144-logo.png" alt="Logo Línea 144"></a></li>
+                   </ul>
+               </div> 
+               <div class="col-md-4 my-3">
+                   <p class="titulofooter">Guía Servicios</p>
+                   <ul class="list-unstyled">
+                       <li class="mb-3"><a href="https://sistemas.gba.gov.ar/consulta/expedientes/" class="text-dark">Expedientes</a></li>
+                       <li class="mb-3"><a href="http://www.arba.gov.ar/" class="text-dark">ARBA</a></li>
+                       <li class="mb-3"><a href="https://boletinoficial.gba.gob.ar/" class="text-dark">Boletín oficial</a></li>
+                       <li class="mb-3"><a href="https://www.gba.gob.ar/registrodelaspersonas" class="text-dark">Registro de las Personas</a></li>
+                   </ul>
+               </div> 
+               <div class="col-md-4 my-3">
+                   <p class="titulofooter">Uso Interno</p>
+                   <ul class="list-unstyled">  
+                       <li class="mb-3"><a target="_blank" href="https://mail.ministeriodelasmujeres.gba.gob.ar/" class="text-dark">Webmail MMyD</a></li>
+                       <li class="mb-3"><a target="_blank" href="https://sistemas.gba.gob.ar/login.php" class="text-dark">Sistemas</a></li>
+                       <li class="mb-3"><a target="_blank" href="https://gdeba.gba.gob.ar/" class="text-dark">GDEBA</a></li>
+                       <li class="mb-3"><a target="_blank" href="https://portal.rrhh.gba.gob.ar/portal/login" class="text-dark">Portal del Empleado</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="botones-fin my-3">
+               <a href="https://mapadelestado.gba.gob.ar/" target="_blank" class="text-primary">Mapa del Estado</a>
+                
+               <a href="https://www.gba.gob.ar/Politicasdeprivacidad" target="_blank" class="text-primary">Política de Privacidad</a>
+           </div>
+       </div>
+       <div class="barra-pie w-100 bg-info d-flex align-items-center">
+           <div class="container text-center">
+               <ul class="list-inline mb-0">
+                   <li class="list-inline-item social">
+                       <a href="https://www.facebook.com/minmujerespba/" target="_blank" aria-label="Facebook">
+                           <span class="fa-stack fa-sm">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   <li class="list-inline-item social">
+                       <a href="https://www.instagram.com/minmujerespba/" target="_blank" aria-label="Instagram">
+                           <span class="fa-stack fa-sm">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   <li class="list-inline-item social">
+                       <a href="https://twitter.com/minmujerespba" target="_blank" aria-label="Twitter">
+                           <span class="fa-stack fa-sm">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fab fa-x-twitter fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   <li class="list-inline-item social">
+                       <a href="https://www.youtube.com/c/minmujerespba" target="_blank" aria-label="Youtube">
+                           <span class="fa-stack fa-sm">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+               </ul>
+
+           </div>
+       </div>
+   </footer>
+        
+<!-- Bootstrap core JS-->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src='js/swiper.min.js'></script>
+<script src='js/classList.min.js'></script>
+<script src='js/jquery.magnific-popup.min.js'></script> 
+
+<script src="js/main.js"></script>
+        
+    </body>
+</html>

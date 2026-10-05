@@ -1,0 +1,1057 @@
+ 
+
+Deploy and use MAI image models in Microsoft Foundry - Microsoft Foundry | Microsoft Learn
+
+			Skip to main content
+
+			Skip to Ask Learn chat experience
+
+This browser is no longer supported.
+
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+
+							Download Microsoft Edge
+
+							More info about Internet Explorer and Microsoft Edge
+
+ Table of contents 
+
+Exit editor mode
+
+Ask Learn
+
+Ask Learn
+
+Reading mode
+
+Table of contents
+
+Read in English
+
+Add
+
+Add to Plans
+
+Edit
+
+Copy Markdown
+
+Print
+
+Note
+
+						Access to this page requires authorization. You can try 
+signing in
+ or 
+changing directories
+.
+
+						Access to this page requires authorization. You can try 
+changing directories
+.
+
+Deploy and use MAI image models in Microsoft Foundry (preview)
+
+Feedback
+
+						Summarize this article for me
+
+				In this article
+
+Important
+
+Items marked preview in this article are currently in preview. This preview is provided without a service-level agreement, and Microsoft doesn't recommend it for production workloads. Certain features might not be supported or might have constrained capabilities. For more information, see 
+Supplemental Terms of Use for Microsoft Azure Previews
+.
+
+MAI Image models are a family of image models developed by Microsoft AI that deliver state-of-the-art text-to-image generation and for some models, image-to-image edits. These models are offered as part of Microsoft Foundry Models sold by Azure, providing secure, enterprise-grade access through Microsoft Foundry.
+
+In this article, you learn how to:
+
+Deploy MAI image models in Microsoft Foundry
+
+Authenticate by using Microsoft Entra ID or API keys
+
+Generate images by using the MAI image generations API
+
+Run an image edit by using the MAI image edits API
+
+Prerequisites
+
+An Azure subscription with a valid payment method. If you don't have an Azure subscription, create a 
+paid Azure account
+.
+
+Access to Microsoft Foundry with appropriate permissions to create and manage resources.
+
+A 
+Microsoft Foundry project
+ in a region supported for the MAI image model you want to deploy. For each model's supported deployment regions, see 
+Region availability for Foundry Models sold by Azure
+.
+
+Cognitive Services Contributor
+ role on the Azure AI Foundry resource to deploy models. For more information, see 
+Azure RBAC roles
+.
+
+MAI image models at a glance
+
+MAI image models in Microsoft Foundry include:
+
+Model name
+
+Model version
+
+Deployment type
+
+API type
+
+MAI-Image-2.6-Flash
+ (Preview)
+
+2026-07-31
+
+Global Standard
+
+Text-to-image generation
+ Image-to-image edits
+
+MAI-Image-2.6
+ (Preview)
+
+2026-07-31
+
+Global Standard
+
+Text-to-image generation
+ Image-to-image edits
+
+MAI-Image-2.5-Pro
+ (Preview)
+
+2026-06-19
+
+Global Standard
+
+Text-to-image generation
+ Image-to-image edits
+
+MAI-Image-2.5-Flash
+ (Preview)
+
+2026-06-02
+
+Global Standard
+
+Text-to-image generation
+ Image-to-image edits
+
+MAI-Image-2.5
+ (Preview)
+
+2026-06-02
+
+Global Standard
+
+Text-to-image generation
+ Image-to-image edits
+
+For each model's supported deployment regions, see 
+Region availability for Foundry Models sold by Azure
+.
+
+To learn more about the individual models, see 
+MAI image model capabilities
+.
+
+Deploy MAI image models
+
+To deploy an MAI image model, follow the instructions in 
+Deploy Microsoft Foundry Models in the Foundry portal
+.
+
+Alternatively, you can deploy the model by using the Azure CLI. The following code shows deployment of 
+MAI-Image-2.5
+. To deploy a different model, replace the model name and version in the lines 
+--model-name MAI-Image-2.5
+ and 
+--model-version 2026-06-02
+ with the values for your desired model.
+
+Replace 
+<ACCOUNT_NAME>
+, 
+<RESOURCE_GROUP>
+, 
+<DEPLOYMENT_NAME>
+ with your values.
+
+az cognitiveservices account deployment create \
+  --name <ACCOUNT_NAME> \
+  --resource-group <RESOURCE_GROUP> \
+  --deployment-name <DEPLOYMENT_NAME> \
+  --model-name "MAI-Image-2.5" \
+  --model-format Microsoft \
+  --model-version 2026-06-02 \
+  --sku-name GlobalStandard \
+  --sku-capacity 1
+
+Reference:
+
+az cognitiveservices account deployment create
+
+To list all available deployments on your resource:
+
+az cognitiveservices account deployment list \
+  --resource-group <RESOURCE_GROUP> \
+  --name <ACCOUNT_NAME> \
+  -o table
+
+Reference:
+
+az cognitiveservices account deployment list
+
+After deployment, use the 
+Foundry playground
+ to interactively test the model.
+
+Run text-to-image generation
+
+MAI image models can generate high-quality images from natural language prompts, enabling users to translate textual descriptions into visually coherent outputs suitable for a wide range of creative and design use cases.
+
+The following example shows how to generate an image from a text prompt using an MAI image model with the 
+MAI image generations API
+.
+
+Python
+
+REST API
+
+Use API key authentication
+
+Install the 
+requests
+ library:
+
+pip install requests
+
+Set environment variables:
+
+export AZURE_ENDPOINT="https://<resource-name>.services.ai.azure.com"
+export AZURE_API_KEY="<your-api-key>"
+export DEPLOYMENT_NAME="<your-deployment-name>"
+
+Run the following code:
+
+import os
+import base64
+import requests
+
+endpoint = os.environ["AZURE_ENDPOINT"]
+api_key = os.environ["AZURE_API_KEY"]
+deployment_name = os.environ["DEPLOYMENT_NAME"]
+
+width = 1024
+height = 1024
+
+url = f"{endpoint}/mai/v1/images/generations"
+
+payload = {
+    "model": deployment_name,
+    "prompt": "A photorealistic concept art poster of a university at sunset, cinematic lighting",
+    "width": width,
+    "height": height
+}
+
+response = requests.post(
+    url,
+    headers={
+        "Content-Type": "application/json",
+        "api-key": api_key,
+    },
+    json=payload,
+)
+response.raise_for_status()
+
+result = response.json()
+print(result)
+
+image_data = [
+    output
+    for output in result.get("data", [])
+    if "b64_json" in output
+]
+
+if image_data:
+    image_base64 = image_data[0]["b64_json"]
+    output_path = "output.png"
+    with open(output_path, "wb") as f:
+        f.write(base64.b64decode(image_base64))
+    print(f"Image saved to {output_path}")
+else:
+    print("Unexpected response format:", result)
+
+Expected output:
+ A JSON response containing the generated image data in base64 format. The response includes the image data, which you decode and save as 
+output.png
+ in the current directory. For more information, see 
+Response format
+.
+
+Use Microsoft Entra ID authentication
+
+To use Microsoft Entra ID instead of an API key, replace the 
+api-key
+ header with a bearer token obtained using the 
+DefaultAzureCredential
+:
+
+Install the Azure Identity library:
+
+pip install azure-identity
+
+Update the request headers in the API key authentication code:
+
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+
+token_provider = get_bearer_token_provider(
+    DefaultAzureCredential(), "https://cognitiveservices.azure.com/.default"
+)
+token = token_provider()
+
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {token}",
+}
+
+Reference:
+
+DefaultAzureCredential
+
+Use API key authentication
+
+Export your endpoint and API key, then run the following cURL command:
+
+export AZURE_API_KEY="<your-api-key>"
+export DEPLOYMENT_NAME="<your-deployment-name>"
+
+curl -X POST "https://<resource-name>.services.ai.azure.com/mai/v1/images/generations" \
+  -H "Content-Type: application/json" \
+  -H "api-key: $AZURE_API_KEY" \
+  -d '{
+      "model": "'"$DEPLOYMENT_NAME"'",
+      "prompt": "A photorealistic concept art poster of a university at sunset, cinematic lighting",
+      "width": 1024,
+      "height": 1024
+    }' \
+| jq -r '.data[0].b64_json' \
+| base64 --decode > output.png
+
+Expected output:
+ A JSON response containing the generated image data in base64 format. The response includes the image data, which you decode and save as 
+output.png
+ in the current directory. For more information, see 
+Response format
+.
+
+Use Microsoft Entra ID authentication
+
+Replace the 
+api-key
+ header with an 
+Authorization
+ header:
+
+-H "Authorization: Bearer $AZURE_AUTH_TOKEN"
+
+Where 
+AZURE_AUTH_TOKEN
+ is a valid Microsoft Entra ID token scoped to 
+https://cognitiveservices.azure.com/.default
+.
+
+Run an image-to-image edit
+
+Some MAI image models support precise, controllable edits to existing images, including object removal, replacement, attribute changes, inpainting, text updates, and artifact cleanup while preserving composition and layout.
+For the list of models that support image-to-image edits, see 
+MAI image models at a glance
+.
+
+The following example shows how to perform an image-to-image edit by using an MAI image model with the 
+MAI image edits API
+.
+
+Note
+
+Requests for image-to-image edits use 
+multipart form data
+ and accept up to five reference images. Repeat the 
+image
+ field for each file.
+
+Python
+
+REST API
+
+Use API key authentication
+
+Install the 
+requests
+ library:
+
+pip install requests
+
+Set environment variables:
+
+export AZURE_ENDPOINT="https://<resource-name>.services.ai.azure.com"
+export AZURE_API_KEY="<your-api-key>"
+export DEPLOYMENT_NAME="<your-deployment-name>"
+
+Run the following code:
+
+import os
+import base64
+import requests
+
+endpoint = os.environ["AZURE_ENDPOINT"]
+api_key = os.environ["AZURE_API_KEY"]
+deployment_name = os.environ["DEPLOYMENT_NAME"]
+
+width = 1024
+height = 1024
+
+url = f"{endpoint}/mai/v1/images/edits"
+
+files = [
+    ("image", ("first.png", open("first.png", "rb"), "image/png")),
+    ("image", ("second.png", open("second.png", "rb"), "image/png")),
+]
+
+payload={
+    "model": deployment_name,
+    "prompt": "Combine both source images into a clean futuristic product shot",
+}
+
+response = requests.post(
+    url,
+    headers={
+        "api-key": api_key,
+    },
+    data=payload,
+    files=files
+)
+
+response.raise_for_status()
+
+result = response.json()
+print(result)
+
+image_data = [
+    output
+    for output in result.get("data", [])
+    if "b64_json" in output
+]
+
+if image_data:
+    image_base64 = image_data[0]["b64_json"]
+    output_path = "output.png"
+    with open(output_path, "wb") as f:
+        f.write(base64.b64decode(image_base64))
+    print(f"Image saved to {output_path}")
+else:
+    print("Unexpected response format:", result)
+
+Expected output:
+ A JSON response containing the edited image data in base64 format. The response includes the image data, which you decode and save as 
+output.png
+ in the current directory. For more information, see 
+Response format
+.
+
+To use Microsoft Entra ID instead of an API key, modify this code as described in the earlier section: 
+Use Microsoft Entra ID authentication
+.
+
+Use API key authentication
+
+Export your endpoint and API key, then run the following cURL command:
+
+export AZURE_API_KEY="<your-api-key>"
+export DEPLOYMENT_NAME="<your-deployment-name>"
+
+curl -X POST "https://<resource-name>.services.ai.azure.com/mai/v1/images/edits" \
+  -H "api-key: $AZURE_API_KEY" \
+  -F "model=$DEPLOYMENT_NAME" \
+    -F "prompt=Combine both source images into a clean futuristic product shot" \
+    -F "image=@first.png;type=image/png" \
+    -F "image=@second.png;type=image/png" \
+| jq -r '.data[0].b64_json' \
+| base64 --decode > output.png
+
+Expected output:
+ A JSON response containing the edited image data in base64 format. The response includes the image data, which you decode and save as 
+output.png
+ in the current directory. For more information, see 
+Response format
+.
+
+To use Microsoft Entra ID authentication instead of an API key, modify this code as described in the earlier section: 
+Use Microsoft Entra ID authentication
+
+MAI image model capabilities
+
+MAI image models are diffusion-based generative models designed for both high-quality text-to-image generation and precise, controllable image-to-image editing. Each model uses a diffusion-based approach to progressively refine images from a natural language prompt, enabling strong alignment between the input text and the generated output.
+
+Core capabilities
+
+All MAI image models in this article share these core capabilities:
+
+Text-to-image generation:
+ Generates high-quality images from natural language prompts, enabling users to translate textual descriptions into visually coherent outputs suitable for a wide range of creative and design use cases.
+
+Image-to-image editing:
+ Supports precise, controllable edits to existing images, including object removal, replacement, attribute changes, inpainting, text updates, and artifact cleanup while preserving composition and layout.
+
+Photorealistic image synthesis:
+ Generates realistic imagery with consistent visual structure, making it suitable for concept visualization and content creation scenarios.
+
+High-fidelity portraits:
+ Generates expressive, natural-looking portraits with accurate facial structure, lighting, and texture.
+
+Product, branding, and commercial design:
+ Well suited for product imagery, marketing visuals, brand assets, and commercial creative workflows.
+
+Accurate text rendering:
+ Improved rendering of text within generated images, including labels, posters, packaging, and signage.
+
+Visual reasoning:
+ Reasons across objects, scene structure, lighting, scale, and spatial positioning to produce consistent outputs, even from ambiguous prompts.
+
+The following table highlights what distinguishes each model and the scenarios it best fits.
+
+Model
+
+Key capabilities
+
+Best for
+
+MAI-Image-2.6-Flash
+ (Preview)
+
+Same generation and editing capabilities as 
+MAI-Image-2.6
+, offered as a faster, lower-cost variant.
+
+The same scenarios as 
+MAI-Image-2.6
+ when you need lower cost and faster generation.
+
+MAI-Image-2.6
+ (Preview)
+
+Core capabilities
+, with stronger text rendering, improved portraits and 3D imagery, and more polished commercial and photorealistic output.
+
+Projects that need the latest quality gains in text rendering, portraits, and commercial or photorealistic imagery.
+
+MAI-Image-2.5-Pro
+ (Preview)
+
+Highest-quality model in the Image-2.5 series, at a higher cost than the other Image-2.5 models. Adds object consistency across complex scenes, character consistency across views and moments, material and physical-property accuracy, and spatial and geometric reasoning to the core family capabilities.
+
+Visually dense compositions that require consistent object identity, materials, and spatial relationships.
+
+MAI-Image-2.5-Flash
+ (Preview)
+
+Same generation and editing capabilities as 
+MAI-Image-2.5
+, offered as a faster, lower-cost variant.
+
+Concept visualization, creative content generation, image editing workflows, and production design when you need lower cost and faster generation.
+
+MAI-Image-2.5
+ (Preview)
+
+Core capabilities
+.
+
+Concept visualization, creative content generation, image editing workflows, and production design.
+
+For more details, see the individual 
+model cards in the Foundry model catalog
+ and the capabilities comparison table in 
+Foundry Models sold by Azure
+.
+
+API endpoints
+
+After you deploy an MAI image model, use the 
+MAI image generations API
+ to generate images and the 
+MAI image edits API
+ for image-to-image edits.
+
+Image generations API endpoint
+: A Microsoft-managed endpoint that accepts a text prompt and returns a PNG image. The API endpoint has the following form:
+
+https://<resource-name>.services.ai.azure.com/mai/v1/images/generations
+
+Image edits API endpoint
+: A Microsoft-managed endpoint that accepts up to five JPEG or PNG reference images and returns a PNG image. The API endpoint has the following form:
+
+https://<resource-name>.services.ai.azure.com/mai/v1/images/edits
+
+To authenticate, you need your 
+resource endpoint
+ and either a 
+Microsoft Entra ID token
+ or an 
+API key
+. You can find these values in the 
+Keys and Endpoint
+ section of your resource in the Azure portal, or on the deployment details page in the 
+Foundry portal
+.
+
+Request parameters
+
+The following table lists the request parameters for the image APIs:
+
+Parameter
+
+API
+
+Type
+
+Required
+
+Description
+
+model
+
+Both
+
+string
+
+Yes
+
+The deployment name you assigned when you deployed the model.
+
+prompt
+
+Both
+
+string
+
+Yes
+
+The text prompt that describes the image to generate or edits to make. 
+Maximum context length: 32,000 tokens.
+
+image
+
+Image edits
+
+file
+
+Yes
+
+A JPEG or PNG reference image passed as multipart form data. Provide up to five images by repeating the 
+image
+ field for each file.
+
+width
+
+Image generations
+
+integer
+
+No
+
+Width of the output image in pixels. 
+Minimum: 768. For MAI-Image-2.6 models, the product of 
+width
+ × 
+height
+ must not exceed 2,359,296. For MAI-Image-2.5 models, it must not exceed 1,048,576.
+
+height
+
+Image generations
+
+integer
+
+No
+
+Height of the output image in pixels. 
+Minimum: 768. For MAI-Image-2.6 models, the product of 
+width
+ × 
+height
+ must not exceed 2,359,296. For MAI-Image-2.5 models, it must not exceed 1,048,576.
+
+auto_aspect_ratio
+
+Both
+
+boolean
+
+No
+
+Applies only to 
+MAI-Image-2.6
+ (Preview) and 
+MAI-Image-2.6-Flash
+ (Preview). Enables model-directed aspect ratio selection. When enabled, the model evaluates the prompt and any provided image inputs to select the output aspect ratio it determines is best suited to the requested content, composition, and framing. When disabled, the configured or default aspect ratio is used instead.
+
+web_grounding
+
+Both
+
+boolean
+
+No
+
+Applies only to 
+MAI-Image-2.6
+ (Preview) and 
+MAI-Image-2.6-Flash
+ (Preview). Enables web-grounded image generation. When enabled, the model can retrieve current, relevant information from Bing Search and use the results as additional context when interpreting the prompt and generating the image. This can improve accuracy for requests involving real-world entities, places, events, or other information that might change over time. When disabled, no web search is performed.
+
+Response format
+
+Both the MAI image generations and image edits APIs return a JSON object that contains the generated PNG image as base64-encoded data. Decode the 
+b64_json
+ value to save the image as a PNG file.
+
+Note
+
+The output format is always PNG. The maximum total pixel count is 2,359,296 (equivalent to 1536×1536) for 
+MAI-Image-2.6
+ and 
+MAI-Image-2.6-Flash
+, and 1,048,576 (equivalent to 1024×1024) for MAI-Image-2.5 models. Both 
+width
+ and 
+height
+ must be at least 768 pixels each. Either dimension can exceed the equivalent square dimensions as long as the total pixel count stays within the applicable limit.
+
+Field
+
+Type
+
+Description
+
+data
+
+array
+
+Collection of generated image results.
+
+data[].b64_json
+
+string
+
+Base64-encoded PNG image data. Decode this value to create an image file.
+
+The following example shows a successful response:
+
+{
+    "data": [
+        {
+            "b64_json": "<base64-encoded PNG image data>"
+        }
+    ]
+}
+
+API quotas and limits
+
+MAI image models have the following rate limits measured in Requests Per Minute (RPM). The tier available to you depends on your subscription and deployment configuration.
+
+Deployment Type
+
+Tier
+
+MAI-Image-2.6-Flash 
+ (RPM)
+
+MAI-Image-2.6 
+ (RPM)
+
+MAI-Image-2.5-Pro 
+ (RPM)
+
+MAI-Image-2.5-Flash 
+ (RPM)
+
+MAI-Image-2.5 
+ (RPM)
+
+Global Standard
+
+0 
+ (Free)
+
+0
+
+0
+
+0
+
+0
+
+0
+
+Global Standard
+
+1
+
+6
+
+6
+
+2
+
+2
+
+2
+
+Global Standard
+
+2
+
+12
+
+12
+
+4
+
+4
+
+4
+
+Global Standard
+
+3
+
+18
+
+18
+
+6
+
+6
+
+6
+
+Global Standard
+
+4
+
+24
+
+24
+
+8
+
+8
+
+8
+
+Global Standard
+
+5
+
+30
+
+30
+
+10
+
+10
+
+10
+
+Global Standard
+
+6
+
+36
+
+36
+
+12
+
+12
+
+12
+
+To request a quota increase, submit the 
+quota increase request form
+. Requests are processed in the order they're received, and priority goes to customers who actively use their existing quota allocation.
+
+Troubleshoot
+
+Use the following table to resolve common errors when working with MAI image models:
+
+Error
+
+Cause
+
+Fix
+
+401 Unauthorized
+
+Invalid API key or expired token
+
+Regenerate the key in the Azure portal. For Entra ID authentication, ensure the token scope is 
+https://cognitiveservices.azure.com/.default
+.
+
+404 Not Found
+
+Incorrect deployment name or endpoint URL
+
+Verify the deployment name and endpoint in the Foundry portal under 
+Deployments
+.
+
+400 Bad Request
+
+A required field is missing, a reference image uses an unsupported format, image dimensions are invalid, or a parameter isn't supported by the deployed model
+
+Include the required 
+model
+ and 
+prompt
+ fields and, for edits, at least one 
+image
+ field containing a JPEG or PNG file. Use 
+auto_aspect_ratio
+ and 
+web_grounding
+ only with MAI-Image-2.6 models. Ensure 
+width
+ and 
+height
+ are each at least 768. Keep 
+width
+ × 
+height
+ at or below 2,359,296 for MAI-Image-2.6 models or 1,048,576 for MAI-Image-2.5 models.
+
+429 Too Many Requests
+
+Rate limit exceeded
+
+Wait and retry, or 
+request a quota increase
+.
+
+Responsible AI considerations
+
+When using MAI image models in Foundry, consider these responsible AI practices:
+
+Be aware of known limitations
+: Despite technical mitigations such as data filtering and content classifiers applied at the system level, image generation models can produce harmful or unexpected content based on user requests. Common risk areas include violent or gory content, sexual content or nudity, depictions of public figures, and replication of trademarked or other protected material.
+
+Configure content safety
+: Apply additional mitigations appropriate to your use case, because no generative model is immune to adversarial prompts.
+
+Comply with applicable terms
+: Ensure your use of generated images complies with 
+Microsoft's terms of service
+ and applicable copyright and intellectual property laws.
+
+Be transparent
+: Disclose that content is AI-generated when sharing or publishing images.
+
+Avoid harmful content
+: Don't generate content that could be harmful, misleading, or in violation of privacy.
+
+Special considerations for editing images of minors
+
+Photorealistic image edits involving minors are blocked by default. Customers can 
+request access
+ to this model capability. Enterprise-tier customers are automatically approved.
+
+Related content
+
+Explore available models in Foundry
+
+Deploy Microsoft Foundry Models in the Foundry portal
+
+Configure Microsoft Entra ID authentication
+
+Feedback
+
+					Was this page helpful?
+
+Yes
+
+No
+
+No
+
+								Need help with this topic?
+
+								Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn
+
+Ask Learn
+
+ Suggest a fix? 
+
+				Additional resources
+
+Last updated on 
+
+		2026-09-21
+
+In this article
+
+					Was this page helpful?
+
+								Need help with this topic?
+
+								Want to try using Ask Learn to clarify or guide you through this topic?
+
+Ask Learn
+
+Ask Learn
+
+ Suggest a fix? 
+
+en-us
+
+Your Privacy Choices
+
+Theme
+
+ Light 
+
+ Dark 
+
+ High contrast 
+
+AI Disclaimer
+
+Previous Versions
+
+Blog
+
+Contribute
+
+Privacy
+
+Consumer Health Privacy
+
+Terms of Use
+
+Trademarks
+
+© Microsoft 2026
+

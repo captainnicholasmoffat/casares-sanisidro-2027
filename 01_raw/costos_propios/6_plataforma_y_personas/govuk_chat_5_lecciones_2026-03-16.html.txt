@@ -1,0 +1,487 @@
+
+
+5 things we learned testing GOV.UK Chat: an AI assistant for government – Inside GOV.UK
+
+Skip to main content
+
+Blog
+:
+
+Inside GOV.UK
+
+Organisations:
+
+Government Digital Service
+
+Search blog
+
+                            This blog post was published under the 
+2024 to 2026 Starmer government
+
+https://insidegovuk.blog.gov.uk/2026/03/16/5-things-we-learned-testing-gov-uk-chat-an-ai-assistant-for-government/
+
+5 things we learned testing GOV.UK Chat: an AI assistant for government
+
+Posted by: 
+
+Sam Dub, Lead Product Manager, GOV.UK AI, GDS
+ and 
+Sharon McDonald, Lead User Researcher, GDS
+, 	
+Posted on:
+
+16 March 2026
+
+	-
+
+Categories:
+
+Data
+, 
+User insights
+, 
+What we're working on
+
+Over the last 18 months, we’ve run 2 public pilots of GOV.UK Chat, an AI assistant for GOV.UK built at the Government Digital Service (GDS). More than 10,000 users asked 26,000 questions about government services, from tax to benefits to visas. We measured accuracy, reliability, speed, safety and user trust.
+
+Together, these pilots represent one of the largest user research exercises GDS has ever conducted, and the government’s biggest public test of generative AI to date. Based on the findings, we feel confident to begin opening up access more widely, starting by making GOV.UK Chat available to all users of the GOV.UK app.
+
+5 headline findings from the pilots
+
+1. GOV.UK Chat offers users a faster way to get answers
+
+Users told us GOV.UK Chat saves them time. Participants said that GOV.UK Chat’s answers helped them decide what to do next, providing clear, concise answers, relevant links, and step-by-step lists – for some, saving them a phone call to a department’s call centre.
+
+In a follow-up survey of GOV.UK app users, 73% found GOV.UK Chat useful, and 64% were satisfied with GOV.UK Chat. We’re pleased with these numbers, and think we can increase them further with improvements in areas like answer speed.
+
+2. We’ve made strong progress on increasing accuracy and answer quality
+
+Thanks to the work of our data scientists, and advances in the underlying AI models, we’ve been able to increase answer accuracy scores from 76%, our earliest benchmark, to our latest figure of 90% accuracy across all topics.
+
+We assess answers using a combination of subject matter experts, and automated evaluation tools. Chat exclusively draws on guidance published on GOV.UK, and our assessors only rate an answer as ‘accurate’ if it meets all the standards of published content. In cases of ‘inaccuracy’, it’s often that GOV.UK Chat is able to answer some but not all aspects of a user’s question. Overall, these accuracy scores are in line with industry benchmarks, and for government-related questions GOV.UK Chat scores higher than widely-used consumer AI assistants.
+
+We want to be straightforward with users that, like all AI assistants, GOV.UK Chat can make mistakes. Users expect accuracy warnings, which are used across the industry, and the research showed they appreciated the features we’ve built that make it easy to double-check answers at source.
+
+3. We have increased confidence in operating public-facing Large Language Models (LLMs) reliably at scale
+
+During the two pilots, there were 508 attempts to ‘jailbreak’ GOV.UK Chat. These are attempts to trick an AI system to provide an inappropriate or harmful response. This is an ongoing risk we will need to manage, but the safety guardrails we’ve put in place successfully prevented all these attempts. You can read more about our work to prevent jailbreaking in 
+our previous blog post on the subject
+.
+
+At a technical level, the system coped comfortably with demand, which bodes well for our ability to scale it up. We are now using Amazon’s Bedrock platform and Anthropic’s Claude models to power the latest version of GOV.UK Chat. The system is built to allow us to upgrade to new models as they become available, and this will form part of the ongoing operation and iteration of the service.
+
+4. We’re improving how we handle questions we can’t answer
+
+By design, GOV.UK Chat won’t provide answers outside the scope of government guidance, and that means there will always be occasions when users’ questions can’t be answered. However, in the pilot on the website, we noticed instances where users phrased questions in a way that GOV.UK Chat couldn’t answer with confidence, and so in some cases didn’t receive an answer at all. To fix this, we introduced the ability for Chat to ask users clarifying questions where the original questions are ambiguous. Our answer rate for in-scope questions is now 88% with plans to improve further.
+
+We also found some people wanted to speak to an advisor with access to their personal information, which isn’t something we currently support. Longer term, we’re working on being able to hand users over to departmental customer support where needed, connecting users – within the same interface – to the right person to answer their question.
+
+5. Users want answers even faster
+
+When designing systems like GOV.UK Chat with LLMs, there’s a trade-off right now between speed and accuracy. This year, the latest versions of frontier models have been more powerful but slower than previous versions.
+
+For us, accuracy is the most important thing, and consequently GOV.UK Chat responses are slower than we’d ideally like; an average 10.7 seconds for an answer. We found this to be within acceptable bounds for users of GOV.UK Chat, and still amounts to a time saving. However, in testing, satisfaction increased when we simulated faster answer speeds.
+
+As a team, we’ll be looking at ways to increase answer speed in future versions without sacrificing answer quality. We’re considering implementing answer streaming, where the first part of an answer appears to users before the answer is fully written. This tested well with users, but requires redesigning how some of our safety guardrails work, so will be a substantial bit of work for the team to implement.
+
+Our research methods
+
+For the first pilot, we recruited 10,136 users who asked 23,838 questions of a web version of GOV.UK Chat. Most recently, in the GOV.UK app, we used the iOS TestFlight system to give 641 people access to a version of the GOV.UK app with GOV.UK Chat integrated into it; these users asked 2,670 questions in 4 weeks.
+
+To generate the insights above, and many more, the team applied a mix of qualitative and quantitative user research methods to understand how GOV.UK Chat was used.
+
+For our web pilot, we used 6 methods:
+
+Task-based benchmarking:
+
+we conducted 99 remote usability tests during which each participant was given 5 timed tasks to complete
+
+Diary study: we asked 15 people to keep diaries of their Chat usage for one week, and ran 30 hours of video interviews and observations
+
+Survey: we analysed 576 surveys and reviewed the 2,135 questions respondents asked
+
+Manual evaluation: we reviewed and scored 419 conversations and 1,084 question-answer pairs
+
+Performance analysis: we analysed the paths of 4,764 user journeys
+
+Conversation analysis: we ran detailed qualitative analysis of 29 conversations
+
+In the app study, we focussed on areas where we’d made significant changes between the pilots:
+
+Performance analysis: we analysed 641 users’ usage of GOV.UK Chat in the app
+
+Answer quality analysis: we reviewed the answers of 1,338 in-scope questions
+
+Answer speed study: we invited 144 participants to give feedback on answers at 4 different speeds and 3 different response modes
+
+User observations study: we ran user research observations of 12 participants from 3 user segments
+
+Survey analysis: we analysed 45 survey responses across 3 key metrics – user motivation, perceived usefulness, and overall satisfaction
+
+What’s next
+
+Our aim is to provide a joined-up chat experience for government and make it available wherever users need it; you can read more about our vision for GOV.UK Chat in our 
+December blog post
+. The evidence from our pilots is clear: GOV.UK Chat simplifies interaction with government, providing clear and helpful information to users, and saving them time. We’re keen to make GOV.UK Chat publicly available as soon as possible, and continue to improve it based on feedback.
+
+GOV.UK Chat will be released first to users of the GOV.UK app, and later in 2026, we’ll start testing the best way to make it available across the GOV.UK website. Alongside this work, we’re continuing to experiment with agentic AI, going beyond answers to use AI to help get things done on the user’s behalf. All this work will be tracked via the new 
+Roadmap for modern digital government
+.
+
+Subscribe to Inside GOV.UK
+ to get the latest updates about our work.
+
+Tags:
+
+GOV.UK AI experiments
+
+How we retired a web application to make GOV.UK simpler to run
+
+Why GOV.UK APIs are changing and how you can get involved
+
+Sharing and comments
+
+Share this page
+
+X (formerly Twitter)
+
+Facebook
+
+LinkedIn
+
+Email
+
+12 comments
+
+Comment by
+
+Matt
+
+posted on 
+
+16 March 2026
+
+What are you doing to minimise the environmental impacts of using AI?
+
+Having a chat bot for this using a General LLM rather than a smaller scale specific LLM that just knows about specific information feels like huge overkill.
+
+Link to this comment
+
+Replies to Matt>
+
+Comment by
+
+Sam Dub, Lead Product Manager
+
+posted on 
+
+25 March 2026
+
+Hi Matt,
+
+We recognise the environmental challenges posed by AI and are committed to using the technology responsibly. Running pilots allows us to gather data, and build a service that meets user needs and our commitment to sustainability. The team has tested a range of LLMs for Chat, with the aim of providing the best answers we can, while minimising energy use. As a result, our data pipeline uses LLMs only where necessary, and wherever possible we use smaller more efficient models.
+
+Thanks,
+
+Sam
+
+Link to this comment
+
+Comment by
+
+Becca
+
+posted on 
+
+16 March 2026
+
+Thanks for sharing what you have been learning.
+
+What else have you need learning about transparency: how to onboard users, manage their expectations and build their trust?
+
+You talked about this in the early days in 2024 but are there other insights you can share? 
+
+https://insidegovuk.blog.gov.uk/2024/11/28/how-were-designing-gov-uk-chat/#:~:text=Managing%20trust%20and%20expectations
+
+Link to this comment
+
+Replies to Becca>
+
+Comment by
+
+Sam Dub, Lead Product Manager
+
+posted on 
+
+26 March 2026
+
+Hi Becca,
+
+Thanks for getting in touch and for your interest in the work. Through our research and design process we’ve been able to refine our onboarding approach quite a bit. For the app release we’ve been able to reduce the onboarding flow down to 3 key messages. 1. Stating purpose and scope of Chat 2. Encouraging users to double check answers 3. Explaining how conversation data is used. 
+
+There’s more to share and we’ll take this as a nudge to encourage our designers to blog about their recent work! 
+
+Thanks,
+
+Sam
+
+Link to this comment
+
+Comment by
+
+Johnson Nwamaraihe
+
+posted on 
+
+18 March 2026
+
+I am having difficulty verifying my identity with companies house.  I have been routed to gov. Uk one login
+
+Link to this comment
+
+Replies to Johnson Nwamaraihe>
+
+Comment by
+
+GDS Comms Team
+
+posted on 
+
+25 March 2026
+
+Hi Johnson,
+
+Thanks for getting in touch. You can contact the GOV.UK One Login team to get help, report a problem or give feedback: 
+https://home.account.gov.uk/contact-gov-uk-one-login
+
+Thanks,
+
+GDS Comms Team
+
+Link to this comment
+
+Comment by
+
+Ahmad Jawid Behroz
+
+posted on 
+
+19 March 2026
+
+Hello, I received [...] for our children. How do I get a letter for this aid?
+
+Link to this comment
+
+Replies to Ahmad Jawid Behroz>
+
+Comment by
+
+GDS Comms Team
+
+posted on 
+
+16 April 2026
+
+Hello Ahmad,
+
+Thanks for getting in touch. We have edited your reply to remove personal information. Please could you let us know which service this refers to, so we can suggest the most relevant contact?
+
+Thanks,
+
+GDS Comms Team
+
+Link to this comment
+
+Comment by
+
+Shughofa EYSHAN
+
+posted on 
+
+24 March 2026
+
+I want pay for council tax bill [...] intalked one of your colleague and I talk to her she said we will check and we will be give you discount
+
+Link to this comment
+
+Replies to Shughofa EYSHAN>
+
+Comment by
+
+GDS Comms Team
+
+posted on 
+
+20 April 2026
+
+Hi Shughofa,
+
+Thanks for getting in touch. We have edited your comment to remove personal information. You can find information about council tax here: 
+https://www.gov.uk/browse/housing-local-services/council-tax
+
+Thanks,
+
+GDS Comms Team
+
+Link to this comment
+
+Comment by
+
+Kyle Stevenson
+
+posted on 
+
+26 March 2026
+
+I'm curious why the decision was taken to use a commercial model than rather building and hosting our own model using some of the open weight and open source models?
+
+Link to this comment
+
+Replies to Kyle Stevenson>
+
+Comment by
+
+Sam Dub, Lead Product Manager
+
+posted on 
+
+20 April 2026
+
+Hi Kyle,
+
+Our team tested a range of model options, including open source models, and made our choice based on maximising answer accuracy whilst keeping latency within acceptable bounds. We’re happy with the performance of the model, but this is fast-moving space, and model-choice is something we keep under regular review.
+
+Thanks,
+
+Sam
+
+Link to this comment
+
+Related content and links
+
+Inside GOV.UK
+A blog about running and improving GOV.UK, for anyone who is working on GOV.UK or interested in how the digital home of the UK government works. Written by the Government Digital Service team.
+
+Subscribe to Inside GOV.UK
+
+Subscribe to Inside GOV.UK
+ to keep up to date with our work.
+
+Categories
+Categories
+
+Select Category
+
+Accessibility  (4)
+
+Best practice  (95)
+
+Content  (78)
+
+Data  (16)
+
+Events  (37)
+
+Finding things  (29)
+
+GDS team  (16)
+
+How we work  (140)
+
+Incident reports  (28)
+
+Product changes  (171)
+
+Transition  (51)
+
+Uncategorized  (1)
+
+User insights  (102)
+
+Vision and plans  (37)
+
+What we're working on  (134)
+
+Working with us  (87)
+
+Standards and guidelines
+
+Read GOV.UK 
+standards and guidelines
+ on blogs, URLs, service requests, Welsh, logos and more.
+
+Sign up and manage updates
+
+Email
+
+Atom
+
+Follow GOV.UK on social media
+GOV.UK on Facebook
+
+GOV.UK on Instagram
+
+GOV.UK on Threads
+
+GOV.UK on X
+
+GOV.UK on YouTube
+
+Follow GDS on social media
+GDS on Instagram
+
+GDS on LinkedIn
+
+Download the GOV.UK app
+
+The GOV.UK app went live in public beta in July 2025. Find out how to 
+download it for free on GOV.UK
+.
+
+Recent posts
+
+Designing GOV.UK Chat for the GOV.UK app
+
+19 August 2026
+
+Launching GOV.UK's new content and publishing guidance
+
+8 June 2026
+
+Developing GOV.UK Chat: Our data science and AI engineering journey
+
+15 May 2026
+
+Why GOV.UK APIs are changing and how you can get involved
+
+7 April 2026
+
+5 things we learned testing GOV.UK Chat: an AI assistant for government
+
+16 March 2026
+
+Comments and moderation
+
+Read our guidelines
+.
+
+Useful links
+
+All GOV.UK blogs
+
+All GOV.UK blog posts
+
+GOV.UK
+
+All departments
+
+Accessibility statement
+
+Cookies
+
+All content is available under the 
+Open Government Licence v3.0
+, except where otherwise stated
+
+© Crown copyright
+

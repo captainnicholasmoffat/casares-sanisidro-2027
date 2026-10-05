@@ -1,0 +1,220 @@
+# LiveAvatar
+
+> Real-time Avatar API by HeyGen. Unlimited concurrency, pennies a minute. Professional-grade 1080p avatars — one session or ten thousand at once.
+
+LiveAvatar is HeyGen's real-time AI avatar API platform. It lets developers put lifelike, interactive digital humans into their products — avatars that listen, respond, and speak back in real time with natural lip-sync, expressions, and gestures over WebRTC. Bring your own voice agent, or use the managed one.
+
+## Quick Facts
+
+- Company: HeyGen (https://www.heygen.com)
+- Product: LiveAvatar (https://www.liveavatar.com)
+- Type: Real-time avatar streaming API
+- API Base URL: https://api.liveavatar.com/v1
+- Docs: https://docs.liveavatar.com
+- App / Dashboard: https://app.liveavatar.com
+- SDK (npm): @heygen/liveavatar-web-sdk
+- SDK source: https://github.com/heygen-com/liveavatar-web-sdk
+- Agent skills (for AI coding agents): https://github.com/heygen-com/liveavatar-agent-skills
+- Transport: WebRTC via LiveKit
+- Auth: API key via X-API-KEY header
+
+## Who It's For
+
+Developers building real-time avatar experiences into products — their own, their clients', or their company's. Common use cases: customer support, language learning, sales training and role-play, hiring and onboarding, interactive presentations, holographic displays, and digital twins.
+
+## Headline Numbers
+
+- $0 — cost of additional concurrent sessions (unlimited concurrency on paid plans)
+- $0.01 / min — streaming rate at the top volume tier
+- <300ms — median time to first frame
+- 99.99% — API uptime
+- 100+ preset 1080p avatars, half-body or full-body framing
+- Custom avatar from a single image or 2 minutes of footage
+
+## Voice Agents
+
+A voice agent is a reusable, stored definition of an avatar's persona — voice plus behavioral context — referenced by `id` across sessions. Three agent types:
+
+- `liveavatar_agent` — LiveAvatar's managed pipeline (STT → LLM → TTS). Runs a **Full Mode** session. You pick a voice + context; per-session overrides (language, dynamic variables) are supported.
+- `elevenlabs_agent` — your ElevenLabs Conversational AI agent. ElevenLabs owns the conversation, LiveAvatar renders the avatar. Runs an **Avatar Only** session.
+- `cartesia_agent` — your Cartesia-hosted agent, same split as above. Runs an **Avatar Only** session.
+
+Provider-hosted agents are used as-is: prompt, language, and variables are configured on the provider's platform. Per-session overrides are rejected (400). Import them by connecting a provider API key (stored as a secret) and selecting an agent from the provider's list.
+
+## Integration Modes
+
+### Full Mode
+HeyGen provides everything: ASR, LLM, TTS, avatar rendering, and WebRTC streaming. You configure the avatar, voice agent, and context. Fastest path to production.
+
+- You configure: avatar_id, voice_agent (voice + context), language
+- HeyGen manages: ASR, LLM, TTS, avatar rendering, WebRTC room
+- Credit cost: 2 credits = 1 minute of streaming
+
+### Avatar Only
+HeyGen provides the avatar and real-time streaming layer only. You bring your own voice agent — an imported provider agent (ElevenLabs, Cartesia) or your own STT/LLM/TTS pipeline. Same avatars, same API, more control at lower cost.
+
+- You manage: the voice agent / conversational stack
+- HeyGen manages: avatar rendering, WebRTC streaming
+- Credit cost: 1 credit = 1 minute of streaming
+
+Note: the docs still label Avatar Only as **LITE Mode** in URLs and some page titles — the two names refer to the same mode.
+
+LiveAvatar credits are independent of HeyGen API credits.
+
+## Core API Flow
+
+1. Create session token: POST /v1/sessions/token (with X-API-KEY header)
+2. Start session: POST /v1/sessions/start (with Bearer session_token)
+3. Receive LiveKit room URL and token for the WebRTC connection
+4. Interact via events and callbacks through the session lifecycle
+
+Setup is three steps: pick an avatar, choose Full Mode or Avatar Only, mount the stream. Interruption handling and auto-reconnect are built into the SDK.
+
+## Key API Endpoints
+
+- POST /v1/sessions/token — create authenticated session token (accepts a `voice_agent` object)
+- POST /v1/sessions/start — start a session, returns LiveKit room credentials
+- POST /v1/sessions/stop — stop a session
+- GET /v1/sessions — list sessions; GET /v1/sessions/{id} — session detail + transcript
+- GET /v1/avatars/public — list public avatars; GET /v1/avatars — list your avatars
+- GET/POST /v1/voice_agents — list and create voice agents
+- GET /v1/voice_agents/third_party — browse provider-hosted agents for import
+- POST /v2/embeddings — create an embeddable avatar widget (accepts `voice_agent_id`)
+- GET /v1/users/credits — credit balance
+- Contexts (knowledge bases) managed via dashboard or /v1/contexts
+
+## Avatars
+
+- Preset avatars: 100+ pre-built 1080p avatars across age, ethnicity, and style, half-body or full-body
+- Custom avatars: from a single image, or from 2 minutes of continuous footage (15s listening / 90s talking / 15s listening, no cuts). 720p on Essential, 1080p on Business
+- Non-human / 3D characters: supported with manual review
+- Consent verification required for custom likeness
+
+## Pricing
+
+Credits: 2 credits = 1 minute in Full Mode, 1 credit = 1 minute in Avatar Only.
+
+### Free — $0/mo
+- 10 credits included
+- Full 1080p preset avatar library
+- Full API and integration access
+- Max 2 min / session, max 1 concurrency
+- Watermark included
+
+### Essential — $99/mo
+- 1,100 credits included
+- Everything in Free, plus: unlimited voice agents, developer sandbox, 1 custom avatar (720p), watermark removed
+- Unlimited concurrency
+- Max 20 min / session
+- Additional 720p custom avatars $49/mo each
+- Pay-as-you-go overage at $0.095/credit, billed in $100 increments, no caps
+
+### Business — $475/mo
+- 6,000 credits included
+- Everything in Essential, plus: 1 custom avatar (1080p)
+- Unlimited concurrency
+- Max 60 min / session
+- Additional 1080p custom avatars $49/mo each
+- Pay-as-you-go overage at $0.09/credit, billed in $100 increments, no caps
+
+### Enterprise — Custom pricing
+- Everything in Business, plus: custom avatar guide & finetune, large-scale credit volume, unlimited/custom session duration, dedicated clusters, dedicated capacity & SLA, dedicated high-priority support
+
+## Key Features
+
+- Real-time two-way conversation (voice, video, text)
+- Natural lip-sync, facial expressions, gesture, and eye contact
+- Sub-300ms median time to first frame, held at volume
+- Unlimited concurrency on paid plans — no session cap to hit
+- Bring your own voice agent (ElevenLabs, Cartesia, or your own stack)
+- Reusable voice agents: voice + context stored once, referenced by id
+- Knowledge base / context injection
+- Push-to-talk support
+- Sandbox mode for development (conserves credits)
+- Event-driven architecture with callbacks
+- Embeddable avatar widget (POST /v2/embeddings)
+- Custom avatars from an image or 2 min of footage
+- Background removal (via API, advanced)
+
+## Technology
+
+- Avatar rendering: proprietary CPU-based model (cost-efficient, scalable)
+- Transport: WebRTC via LiveKit
+- Default ASR (Full Mode): Deepgram, AssemblyAI
+- Default TTS (Full Mode): ElevenLabs Flash v2.5
+- Default LLM (Full Mode): OpenAI 4o-mini
+- Scalability: thousands of concurrent sessions; unlimited concurrency on paid plans
+
+## Security & Compliance
+
+- SOC 2 certified infrastructure; security portal at https://security.heygen.com
+- GDPR compliant
+- Consent-based avatar creation (video + consent verification required)
+- Provider API keys stored as encrypted secrets
+- Separate credit system from the HeyGen main platform
+- API key management via dashboard
+
+## Documentation Map
+
+- Overview: https://docs.liveavatar.com/
+- Voice Agents: https://docs.liveavatar.com/docs/core-concepts/voice-agents
+- Avatars: https://docs.liveavatar.com/docs/core-concepts/avatars
+- Sandbox Mode: https://docs.liveavatar.com/docs/sandbox-mode
+- Agent Skills (for AI coding agents): https://docs.liveavatar.com/docs/agent-skills
+- FULL Mode Guide: https://docs.liveavatar.com/docs/full-mode/overview
+- FULL Mode Lifecycle: https://docs.liveavatar.com/docs/full-mode/lifecycle
+- FULL Mode Config: https://docs.liveavatar.com/docs/full-mode/configuration
+- FULL Mode Events: https://docs.liveavatar.com/docs/full-mode/events
+- Push-to-Talk: https://docs.liveavatar.com/docs/full-mode/push-to-talk
+- Avatar Only (LITE) Guide: https://docs.liveavatar.com/docs/lite-mode/overview
+- Avatar Only (LITE) Lifecycle: https://docs.liveavatar.com/docs/lite-mode/lifecycle
+- Avatar Only (LITE) Config: https://docs.liveavatar.com/docs/lite-mode/configuration
+- Avatar Only (LITE) Events: https://docs.liveavatar.com/docs/lite-mode/events
+- Integrations & Plugins: https://docs.liveavatar.com/docs/lite-mode/integrations
+- Embed Avatar Guide: https://docs.liveavatar.com/docs/guides/embed-avatar
+- API Reference: https://docs.liveavatar.com/api-reference/sessions/create-session-token
+- Master FAQ: https://docs.liveavatar.com/master-faq
+- Changelog: https://docs.liveavatar.com/changelog
+- Migration from Interactive Avatar: https://docs.liveavatar.com/docs/faq/migration-guide
+- API Key Setup: https://docs.liveavatar.com/docs/faq/api-key
+- Firewall Config: https://docs.liveavatar.com/docs/faq/firewall
+- Credits & Subscriptions: https://docs.liveavatar.com/docs/faq/credits
+
+## Site Map (www.liveavatar.com)
+
+- Home: https://www.liveavatar.com/
+- AI Sales Agent: https://www.liveavatar.com/ai-sales-agent
+- AI SDR: https://www.liveavatar.com/ai-sdr
+- HeyGen vs LiveAvatar: https://www.liveavatar.com/heygen-vs-liveavatar
+- Contact Sales: https://www.liveavatar.com/contact-sales
+- Customer stories: https://www.liveavatar.com/customer-story/{slug}
+
+## Ecosystem Integrations
+
+- ElevenLabs Conversational AI agents (import into LiveAvatar)
+- Cartesia agents (import into LiveAvatar)
+- LiveKit Agents plugin: https://docs.livekit.io/agents/models/avatar/plugins/liveavatar/
+- npm SDK: https://www.npmjs.com/package/@heygen/liveavatar-web-sdk
+- GitHub SDK source: https://github.com/heygen-com/liveavatar-web-sdk
+- GitHub demo: https://github.com/heygen-com/liveavatar-web-sdk/tree/master/apps/demo
+
+## Support
+
+- Help Center: https://help.heygen.com
+- API Support: https://docs.liveavatar.com/discuss
+- Discord: https://discord.gg/Je4mCXmccS
+- Email: support@heygen.com
+- LiveAvatar FAQ: https://help.heygen.com/en/articles/12758866-liveavatar-faq
+- Pricing FAQ: https://help.heygen.com/en/articles/10060327-heygen-api-liveavatar-pricing-subscriptions-explained
+- Custom avatar best practices: https://help.heygen.com/en/articles/10035615-how-to-get-started-with-liveavatars
+
+## Customer Success Stories
+
+- Reid Hoffman's digital twin: 50M+ impressions (/customer-story/reid-hoffman-ai)
+- edYOU: 3,000%+ growth with personalized learning (/customer-story/edyou)
+- Zeligate: 27 hours saved per hire in recruitment (/customer-story/zeligate)
+- Master English: English fluency for 60,000+ professionals (/customer-story/master-english)
+- Speakology: language learning across 600 schools (/customer-story/speakology)
+- Copient AI: 2,500+ hours of sales training scaled (/customer-story/copient-ai)
+- Proto Hologram: Fortune 500 AI-powered holograms in physical spaces (/customer-story/proto-hologram)
+- EXL: 20% faster hiring/onboarding, 60% fewer live trainer hours (/customer-story/exl)

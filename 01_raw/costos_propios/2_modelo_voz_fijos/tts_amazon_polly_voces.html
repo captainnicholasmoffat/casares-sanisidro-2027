@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Available voices - Amazon Polly</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="assets_root" content="/assets" /><meta name="target_state" content="available-voices" /><meta name="default_state" content="available-voices" /><link rel="icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="shortcut icon" type="image/ico" href="/assets/images/favicon.ico" /><link rel="canonical" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" /><meta name="description" content="Amazon Polly provides a variety of lifelike voices in multiple languages for synthesizing speech from text. The following table shows all the voices that Amazon Polly offers." /><meta name="deployment_region" content="IAD" /><meta name="product" content="Amazon Polly" /><meta name="guide" content="Developer Guide" /><meta name="abstract" content="Amazon Polly Developer Guide, a cloud service that converts text into lifelike speech." /><meta name="guide-locale" content="en_us" /><meta name="tocs" content="toc-contents.json" /><link rel="canonical" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/polly/latest/dg/available-voices.html" hreflang="id-id" /><link rel="alternate" href="https://docs.aws.amazon.com/id_id/polly/latest/dg/available-voices.html" hreflang="id" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/polly/latest/dg/available-voices.html" hreflang="de-de" /><link rel="alternate" href="https://docs.aws.amazon.com/de_de/polly/latest/dg/available-voices.html" hreflang="de" /><link rel="alternate" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" hreflang="en-us" /><link rel="alternate" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" hreflang="en" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/polly/latest/dg/available-voices.html" hreflang="es-es" /><link rel="alternate" href="https://docs.aws.amazon.com/es_es/polly/latest/dg/available-voices.html" hreflang="es" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/polly/latest/dg/available-voices.html" hreflang="fr-fr" /><link rel="alternate" href="https://docs.aws.amazon.com/fr_fr/polly/latest/dg/available-voices.html" hreflang="fr" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/polly/latest/dg/available-voices.html" hreflang="it-it" /><link rel="alternate" href="https://docs.aws.amazon.com/it_it/polly/latest/dg/available-voices.html" hreflang="it" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/polly/latest/dg/available-voices.html" hreflang="ja-jp" /><link rel="alternate" href="https://docs.aws.amazon.com/ja_jp/polly/latest/dg/available-voices.html" hreflang="ja" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/polly/latest/dg/available-voices.html" hreflang="ko-kr" /><link rel="alternate" href="https://docs.aws.amazon.com/ko_kr/polly/latest/dg/available-voices.html" hreflang="ko" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/polly/latest/dg/available-voices.html" hreflang="pt-br" /><link rel="alternate" href="https://docs.aws.amazon.com/pt_br/polly/latest/dg/available-voices.html" hreflang="pt" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_cn/polly/latest/dg/available-voices.html" hreflang="zh-cn" /><link rel="alternate" href="https://docs.aws.amazon.com/zh_tw/polly/latest/dg/available-voices.html" hreflang="zh-tw" /><link rel="alternate" href="https://docs.aws.amazon.com/polly/latest/dg/available-voices.html" hreflang="x-default" /><meta name="feedback-item" content="Polly" /><meta name="this_doc_product" content="Amazon Polly" /><meta name="this_doc_guide" content="Developer Guide" /><head xmlns="http://www.w3.org/1999/xhtml"> <script defer="" src="/assets/r/awsdocs-doc-page.2.0.0.js"></script><link href="/assets/r/awsdocs-doc-page.2.0.0.css" rel="stylesheet"/></head>
+<script defer="" id="awsc-panorama-bundle" type="text/javascript" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{'appEntity':'aws-documentation','region':'us-east-1','service':'polly'}"></script><meta id="panorama-serviceSubSection" value="Developer Guide" /><meta id="panorama-serviceConsolePage" value="Available voices" /></head><body class="awsdocs awsui"><div class="awsdocs-container"><p><a href="available-voices.md">View a markdown version of this page</a></p><awsdocs-header></awsdocs-header><awsui-app-layout id="app-layout" class="awsui-util-no-gutters" ng-controller="ContentController as $ctrl" header-selector="awsdocs-header" navigation-hide="false" navigation-width="$ctrl.navWidth" navigation-open="$ctrl.navOpen" navigation-change="$ctrl.onNavChange($event)" tools-hide="$ctrl.hideTools" tools-width="$ctrl.toolsWidth" tools-open="$ctrl.toolsOpen" tools-change="$ctrl.onToolsChange($event)"><div id="guide-toc" dom-region="navigation"><awsdocs-toc></awsdocs-toc></div><div id="main-column" dom-region="content" tabindex="-1"><awsdocs-view class="awsdocs-view"><div id="awsdocs-content"><head><title>Available voices - Amazon Polly</title><meta name="pdf" content="/pdfs/polly/latest/dg/polly-dg.pdf#available-voices" /><meta name="rss" content="doc-history.rss" /><meta name="forums" content="https://repost.aws/tags/TAkMF5YGJLQgqSnTawlqoSsQ" /><meta name="feedback" content="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=Polly&amp;topic_url=https://docs.aws.amazon.com/en_us/polly/latest/dg/available-voices.html" /><meta name="feedback-yes" content="feedbackyes.html?topic_url=https://docs.aws.amazon.com/en_us/polly/latest/dg/available-voices.html" /><meta name="feedback-no" content="feedbackno.html?topic_url=https://docs.aws.amazon.com/en_us/polly/latest/dg/available-voices.html" /><link rel="alternate" type="text/markdown" href="available-voices.md" title="Markdown version" /><script type="application/ld+json">
+{
+    "@context" : "https://schema.org",
+    "@type" : "BreadcrumbList",
+    "itemListElement" : [
+      {
+        "@type" : "ListItem",
+        "position" : 1,
+        "name" : "AWS",
+        "item" : "https://aws.amazon.com"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 2,
+        "name" : "Amazon Polly",
+        "item" : "https://docs.aws.amazon.com/polly/index.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 3,
+        "name" : "Developer Guide",
+        "item" : "https://docs.aws.amazon.com/polly/latest/dg"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 4,
+        "name" : "Voices in Amazon Polly",
+        "item" : "https://docs.aws.amazon.com/polly/latest/dg/voices-in-polly.html"
+      },
+      {
+        "@type" : "ListItem",
+        "position" : 5,
+        "name" : "Available voices",
+        "item" : "https://docs.aws.amazon.com/polly/latest/dg/voices-in-polly.html"
+      }
+    ]
+}
+</script></head><body><div id="main"><div style="display: none"><a href="/pdfs/polly/latest/dg/polly-dg.pdf#available-voices" target="_blank" rel="noopener noreferrer" title="Open PDF"></a></div><div id="breadcrumbs" class="breadcrumb"><a href="/index.html">Documentation</a><a href="/polly/index.html">Amazon Polly</a><a href="what-is.html">Developer Guide</a></div><div id="page-toc-src"><a href="#brand-voices">Brand voices</a></div><div id="main-content" class="awsui-util-container"><div id="main-col-body"><awsdocs-language-banner data-service="$ctrl.pageService"></awsdocs-language-banner><h1 class="topictitle" id="available-voices">Available voices</h1><div class="awsdocs-page-header-container"><awsdocs-page-header></awsdocs-page-header><awsdocs-filter-selector id="awsdocs-filter-selector"></awsdocs-filter-selector></div><p>Amazon Polly provides a variety of lifelike voices in multiple languages for synthesizing speech
+        from text. The following table shows all the voices that Amazon Polly offers.</p><div class="table-container"><div class="table-contents disable-scroll"><table id="w367aac13c11b5"><thead>
+                <tr>
+                    <th></th>
+                    <th>Language and language variants</th>
+                    <th>Language code</th>
+                    <th>Name/ID</th>
+                    <th>Gender</th>
+                    <th>Generative voice</th>
+                    <th>Long Form voice</th>
+                    <th>Neural voice</th>
+                    <th>Standard voice</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td tabindex="-1"><p>1</p></td>
+                    <td tabindex="-1">
+                        <p><b>Arabic</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>arb</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Zeina</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>2</p></td>
+                    <td tabindex="-1">
+                        <p><b>Arabic (Gulf)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ar-AE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Hala*</p>
+                        <p>Zayd*</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>3</p></td>
+                    <td tabindex="-1">
+                        <p><b>Dutch (Belgian)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>nl-BE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Lisa</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>4</p></td>
+                    <td tabindex="-1">
+                        <p><b>Catalan</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ca-ES</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Arlet</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td tabindex="-1"><p>5</p></td>
+                    <td tabindex="-1">
+                        <p><b>Czech</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>cs-CZ</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Jitka</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>6</p></td>
+                    <td tabindex="-1">
+                        <p><b>Chinese (Cantonese)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>yue-CN</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Hiujin</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>7</p></td>
+                    <td tabindex="-1">
+                        <p><b>Chinese (Mandarin)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>cmn-CN</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Zhiyu</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>8</p></td>
+                    <td tabindex="-1">
+                        <p><b>Danish</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>da-DK</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Naja</p>
+                        <p>Mads</p>
+                        <p>Sofie</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>9</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>Dutch</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>nl-NL</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Laura</p>
+                        <p>Lotte</p>
+                        <p>Ruben</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>10</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (Australian)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-AU</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Nicole</p>
+                        <p>Olivia</p>
+                        <p>Russell</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>11</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (British)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-GB</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Amy**</p>
+                        <p>Emma</p>
+                        <p>Brian</p>
+                        <p>Arthur</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>12</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (Indian)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-IN</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Aditi* </p>
+                        <p>Raveena</p>
+                        <p>Kajal*</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>13</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (Ireland)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-IE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Niamh</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>14</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (New Zealand)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-NZ</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Aria</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td tabindex="-1"><p>15</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (Singaporean)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-SG</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Jasmine</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>16</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (South African)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-ZA</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Ayanda</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>17</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (US)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-US</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Danielle</p>
+                        <p>Gregory</p>
+                        <p>Ivy</p>
+                        <p>Joanna**</p>
+                        <p>Kendra</p>
+                        <p>Kimberly</p>
+                        <p>Salli</p>
+                        <p>Joey</p>
+                        <p>Justin</p>
+                        <p>Kevin</p>
+                        <p>Matthew**</p>
+                        <p>Ruth</p>
+                        <p>Stephen</p>
+                        <p>Tiffany</p>
+                        <p>Patrick</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Female (child)</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male (child)</p>
+                        <p>Male (child)</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>18</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>English (Welsh)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>en-GB-WLS</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Geraint</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>19</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>Finnish</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>fi-FI</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Suvi</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>20</p></td>
+                    <td tabindex="-1">
+                        <p><b>French</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>fr-FR</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Ambre</p>
+                        <p>Céline/Celine</p>
+                        <p>Florian</p>
+                        <p>Léa</p>
+                        <p>Mathieu</p>
+                        <p>Rémi</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>21</p></td>
+                    <td tabindex="-1">
+                        <p><b>French (Belgian)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>fr-BE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Isabelle</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>22</p></td>
+                    <td tabindex="-1">
+                        <p><b>French (Canadian)</b></p></td>
+                    <td tabindex="-1">
+                        <p>fr-CA</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Chantal</p>
+                        <p>Gabrielle</p>
+                        <p>Liam</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>23</p></td>
+                    <td tabindex="-1">
+                        <p>
+                            <b>German</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>de-DE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Marlene</p>
+                        <p>Vicki</p>
+                        <p>Hans</p>
+                        <p>Daniel</p>
+                        <p>Lennart</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>24</p></td>
+                    <td tabindex="-1">
+                        <p><b>German (Austrian)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>de-AT</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Hannah</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td tabindex="-1"><p>25</p></td>
+                    <td tabindex="-1">
+                        <p><b>German (Swiss)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>de-CH</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Sabrina</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td tabindex="-1"><p>26</p></td>
+                    <td tabindex="-1">
+                        <p><b>Hindi</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>hi-IN</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Aditi*</p>
+                        <p>Kajal*</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>27</p></td>
+                    <td tabindex="-1">
+                        <p><b>Icelandic</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>is-IS</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Dóra/Dora</p>
+                        <p>Karl</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>28</p></td>
+                    <td tabindex="-1">
+                        <p><b>Italian</b></p></td>
+                    <td tabindex="-1">
+                        <p>it-IT</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Beatrice</p>
+                        <p>Carla</p>
+                        <p>Bianca</p>
+                        <p>Lorenzo</p>
+                        <p>Giorgio</p>
+                        <p>Adriano</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>29</p></td>
+                    <td tabindex="-1">
+                        <p><b>Japanese</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ja-JP</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Mizuki</p>
+                        <p>Takumi</p>
+                        <p>Kazuha</p>
+                        <p>Tomoko</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>30</p></td>
+                    <td tabindex="-1">
+                        <p><b>Korean</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ko-KR</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Seoyeon</p>
+                        <p>Jihye</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>31</p></td>
+                    <td tabindex="-1">
+                        <p><b>Norwegian</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>nb-NO</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Liv</p>
+                        <p>Ida</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>32</p></td>
+                    <td tabindex="-1">
+                        <p><b>Polish</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>pl-PL</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Ewa</p>
+                        <p>Maja</p>
+                        <p>Jacek</p>
+                        <p>Jan</p>
+                        <p>Ola</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>33</p></td>
+                    <td tabindex="-1">
+                        <p><b>Portuguese (Brazilian)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>pt-BR</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Camila</p>
+                        <p>Vitória/Vitoria</p>
+                        <p>Ricardo</p>
+                        <p>Thiago</p>
+                    </td>
+                    <td tabindex="-1"><p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>34</p></td>
+                    <td tabindex="-1">
+                        <p><b>Portuguese (European)</b></p>
+                    </td>
+                    <td tabindex="-1">pt-PT</td>
+                    <td tabindex="-1">
+                        <p>Inês/Ines</p>
+                        <p>Cristiano</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>35</p></td>
+                    <td tabindex="-1">
+                        <p><b>Romanian</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ro-RO</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Carmen</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>36</p></td>
+                    <td tabindex="-1">
+                        <p><b>Russian</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>ru-RU</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Tatyana</p>
+                        <p>Maxim</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>37</p></td>
+                    <td tabindex="-1">
+                        <p><b>Spanish (Spain)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>es-ES</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Conchita</p>
+                        <p>Lucia</p>
+                        <p>Alba</p>
+                        <p>Enrique</p>
+                        <p>Sergio</p>
+                        <p>Raúl</p>
+                    </td>
+                    <td tabindex="-1"><p>Female</p>
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td tabindex="-1"><p>38</p></td>
+                    <td tabindex="-1">
+                        <p><b>Spanish (Mexican)</b>
+                        </p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>es-MX</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Mia</p>
+                        <p>Andrés</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>39</p></td>
+                    <td tabindex="-1">
+                        <p><b>Spanish (US)</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>es-US</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Lupe**</p>
+                        <p>Penélope/Penelope</p>
+                        <p>Miguel</p>
+                        <p>Pedro</p></td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                        <p>Male</p>
+                        <p>Male</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>40</p></td>
+                    <td tabindex="-1">
+                        <p><b>Swedish</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>sv-SE</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Astrid</p>
+                        <p>Elin</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>41</p></td>
+                    <td tabindex="-1">
+                        <p><b>Turkish</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>tr-TR</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Filiz</p>
+                        <p>Burcu</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                        <p>Yes</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                        <p>No</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td tabindex="-1"><p>42</p></td>
+                    <td tabindex="-1">
+                        <p><b>Welsh</b></p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>cy-GB</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Gwyneth</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Female</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>No</p>
+                    </td>
+                    <td tabindex="-1">
+                        <p>Yes</p>
+                    </td>
+                </tr>
+            </table></div></div><p>* This voice is bilingual. For more information, see <a href="./bilingual-voices.html">Bilingual voices</a>.</p><p>** These voices can be used with Newscaster speaking styles when used with the Neural
+        format. For more information, see <a href="./newscaster-voices.html">Applying the newscaster voice</a>.</p><p></p><p> Each Amazon Polly voice engine has unique features. Learn more about features and Region
+        availability for the voice engines offered by Amazon Polly: </p><div class="itemizedlist">
+         
+         
+         
+         
+    <ul class="itemizedlist"><li class="listitem">
+            <p><a href="./generative-voices.html">Generative voices</a></p>
+        </li><li class="listitem">
+            <p><a href="./long-form-voices.html">Long-form voices</a></p>
+        </li><li class="listitem">
+            <p><a href="./neural-voices.html">Neural voices</a></p>
+        </li><li class="listitem">
+            <p><a href="./standard-voices.html">Standard voices</a></p>
+        </li></ul></div>
+        <h2 id="brand-voices">Brand voices</h2>
+        <p>In addition to the available voices listed in the previous table, you can use Amazon Polly to
+            build a custom voice for your brand persona. With a brand voice, you can offer unique
+            and exclusive  voices to your customers. To learn more about Amazon Polly brand
+            voices, see <a href="https://aws.amazon.com/polly/features/#Brand_Voice" rel="noopener noreferrer" target="_blank"><span>Brand
+                Voice</span><awsui-icon class="awsdocs-link-icon" name="external"></awsui-icon></a>.
+        </p>
+    <awsdocs-copyright class="copyright-print"></awsdocs-copyright><awsdocs-thumb-feedback right-edge="{{$ctrl.thumbFeedbackRightEdge}}"></awsdocs-thumb-feedback></div><noscript><div><div><div><div id="js_error_message"><p><img src="https://d1ge0kk1l5kms0.cloudfront.net/images/G/01/webservices/console/warning.png" alt="Warning" /> <strong>Javascript is disabled or is unavailable in your browser.</strong></p><p>To use the Amazon Web Services Documentation, Javascript must be enabled. Please refer to your browser's Help pages for instructions.</p></div></div></div></div></noscript><div id="main-col-footer" class="awsui-util-font-size-0"><div id="doc-conventions"><a target="_top" href="/general/latest/gr/docconventions.html">Document Conventions</a></div><div class="prev-next"><div id="previous" class="prev-link" accesskey="p" href="./voices-in-polly.html">Voices in Amazon Polly</div><div id="next" class="next-link" accesskey="n" href="./bilingual-voices.html">Bilingual voices</div></div></div><awsdocs-page-utilities></awsdocs-page-utilities></div><div id="quick-feedback-yes" style="display: none;"><div class="title">Did this page help you? - Yes</div><div class="content"><p>Thanks for letting us know we're doing a good job!</p><p>If you've got a moment, please tell us what we did right so we can do more of it.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=Polly&amp;topic_url=https://docs.aws.amazon.com/en_us/polly/latest/dg/available-voices.html"></awsui-button></p></div></div><div id="quick-feedback-no" style="display: none;"><div class="title">Did this page help you? - No</div><div class="content"><p>Thanks for letting us know this page needs work. We're sorry we let you down.</p><p>If you've got a moment, please tell us how we can make the documentation better.</p><p><awsui-button id="fblink" rel="noopener noreferrer" target="_blank" text="Feedback" click="linkClick($event)" href="https://docs.aws.amazon.com/forms/aws-doc-feedback?hidden_service_name=Polly&amp;topic_url=https://docs.aws.amazon.com/en_us/polly/latest/dg/available-voices.html"></awsui-button></p></div></div></div></body></div></awsdocs-view><div class="page-loading-indicator" id="page-loading-indicator"><awsui-spinner size="large"></awsui-spinner></div></div><div id="tools-panel" dom-region="tools"><awsdocs-tools-panel id="awsdocs-tools-panel"></awsdocs-tools-panel></div></awsui-app-layout><awsdocs-cookie-banner class="doc-cookie-banner"></awsdocs-cookie-banner></div></body></html>

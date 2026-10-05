@@ -1,0 +1,89 @@
+ Real-Time Lip-Sync with MuseTalk on an RTX 5090 (Blackwell Survival Guide) | Aillex — Do-It-Yourself AI Aillex — Do-It-Yourself AI 
+ Can I Run It? 
+ News 
+ Engine Room 
+ Voice 
+ Avatars 
+ Video 
+ Agents 
+ Companion 
+ All Guides 
+ About 
+ Search 
+ YouTube  
+ Home 
+ Guides 
+ Real-Time Lip-Sync with MuseTalk on an RTX 5090 (Blackwell Survival Guide)
+ July 1, 2026  ·  4 min  ·  Aillex / DIY AI 
+ Table of Contents The Blackwell recipe 
+ Batch vs realtime mode 
+ Quality notes from production 
+ Where it fits 
+ Field doctrine (updated after five episodes + a music video) 
+ The companion episode: she learns to talk, and reveals mid-episode that she already had. 
+ Update, 30 September 2026. MuseTalk is no longer Aillex’s live face. It saves a .png for every frame it renders and keeps them on disk; over months of use those piled up, and we cleared nearly 600 GB of them at the start of September. Her live face is now SoulX-FlashHead Pro with a tiny decoder, picked after testing ten free options side by side ( the full test ). Our longform episodes’ presenter shots moved to MiniMax H3 in September; the daily Shorts still use MuseTalk, in our four-model chain , because H3 only renders landscape. The Blackwell install recipe below still works. If you run MuseTalk for long, watch the disk use of its output folder, since every frame is saved as a .png, and clear it on a schedule.
+ See MuseTalk in context against every other local method in Local AI Video Tools, Honestly Compared . 
+ MuseTalk v1.5 does real-time mouth inpainting: give it a video of your character + any audio, and it repaints the mouth region to match the speech. On an RTX 5090 it runs ~1.4 to 2.5× faster than real-time playback at ~8.5 GB VRAM, fast enough for a live conversational avatar, small enough to co-reside with a 17 GB LLM.
+ The catch: Blackwell (sm_120) breaks the documented install. PyTorch versions below 2.6 don’t support the architecture, and MuseTalk’s dependency chain (mmcv/mmdet/mmpose) fights modern toolchains. This is the exact recipe that builds clean.
+ The Blackwell recipe # 
+ Environment: WSL2 Ubuntu 22.04, CUDA toolkit 12.8, Python 3.10 (uv venv).
+ # 1. torch with Blackwell support 
+ pip install torch == 2.9.1 torchvision torchaudio \
+ --index-url https://download.pytorch.org/whl/cu128
+ # 2. requirements.txt MINUS tensorflow/tensorboard (unused at inference) 
+ # pin numpy for legacy deps: 
+ pip install numpy == 1.23.5 mmengine == 0.10.7
+ # 3. THE big one - mmcv must be built from source for sm_120, 
+ # and needs old setuptools (82 dropped pkg_resources): 
+ pip install "setuptools<81" 
+ MMCV_WITH_OPS = 1 FORCE_CUDA = 1 TORCH_CUDA_ARCH_LIST = 12.0 \
+ CUDA_HOME = /usr/local/cuda-12.8 \
+ pip install mmcv == 2.1.0 --no-build-isolation --no-cache-dir # ~3.5 min 
+ # 4. detection/pose stacks (chumpy needs pip importable inside the venv): 
+ pip install pip && pip install mmdet == 3.2.0 mmpose == 1.1.0
+ One more patch: torch ≥2.6 defaults weights_only=True in torch.load , which breaks MuseTalk’s pickled checkpoints. Wrap the entry point:
+ import torch , functools
+ torch . load = functools . partial(torch . load, weights_only = False )
+ Batch vs realtime mode # 
+ Batch ( scripts.inference ): render a finished clip per reply. Simple, robust, our conversational avatar shipped on this first.
+ Realtime ( scripts.realtime_inference ): prepares your character’s video loop once (caches face coords/latents), then each new audio runs warm, we measured a 24s clip generated in 9.4s (~64 fps). This is the live-avatar mode. Run it as a persistent server so models load once.
+ Quality notes from production # 
+ MuseTalk conditions on audio features, so it generalizes across art styles, but it’s strongest on realistic/semi-real faces .
+ Feed it a video loop where the character’s mouth area is unobstructed and reasonably front-facing.
+ Sync quality is tunable ( bbox_shift , margins); generate a single test frame to dial it in before long renders.
+ Where it fits # 
+ LLM reply → local TTS (see the voice guide) → MuseTalk server
+ → lip-synced clip → your avatar page swaps it in as the "speaking" state
+ This 2D path is the fastest route to a talking face. It was Aillex’s live face until September 2026, when the per-frame .png files it keeps on disk retired it from that job; it still does the mouth in our daily Shorts (see the update above). (The machine it runs on: our exact build .)
+ Field doctrine (updated after five episodes + a music video) # 
+ Hard-won rules from running MuseTalk in weekly production:
+ Avatar sources must be idle listeners, not talkers. MuseTalk repaints only the mouth region: the source video’s jaw, cheeks, and rhythm keep “performing” outside the mask. A talking source leaks visible speech through every pause in your audio. Render sources with lips gently closed, calm presence, occasional blink, minimal head movement .
+ …and no visible breathing. A slow chest-rise loop reads as rhythmic sighing when the source frames cycle. Prompt “poised and still” over “breathing softly.”
+ A 5-second idle source is enough for any audio length , frames cycle pingpong, so short clean sources beat long drifty ones.
+ Multi-avatar serving : wrap MuseTalk in a small server with a /prepare endpoint (video → baked avatar, ~20 to 90s once) and an avatar parameter on /talk , swapping between prepared characters/settings then costs nothing per call.
+ No spaces in audio filenames , the internal ffmpeg mux doesn’t quote paths and fails cryptically.
+ It sings. Feed it a vocal track instead of speech and the same pipeline produces a performing artist, that’s how our character’s music video works.
+ Watch it running live on YouTube → @AskAillex . Next steps up: a full 3D character or a whole music video . 
+ KEEP BUILDING
+ Free Local HeyGen: The Four-Model Chain Behind Every Talking Shot on This Channel 🎬 
+ Build a Local AI Companion with a Real Face (Ollama → Talking Avatar) 
+ Duix / HeyGem: The Open-Source HeyGen Clone, Tested 🎬 
+ Building something with these? Show it off or get unstuck at
+ r/aillex — or start from a
+ topic hub .
+ Lip-Sync 
+ Musetalk 
+ Blackwell 
+ Rtx 5090 
+ Cuda 
+ Sm_120 
+ « Prev 
+ Give Your AI a Custom Voice, Cloned Locally, Running on CPU 
+ Next » 
+ Run a 26B AI Brain Locally, Warm, Multimodal, and With Memory 
+ © 2026 Aillex — Do-It-Yourself AI ·
+ Powered by
+ Hugo &
+ PaperMod As an Amazon Associate, this site earns from qualifying purchases. Referral links are
+always disclosed .
+ 

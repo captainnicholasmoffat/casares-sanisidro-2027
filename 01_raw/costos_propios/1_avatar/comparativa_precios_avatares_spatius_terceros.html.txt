@@ -1,0 +1,195 @@
+ Spatius — Best AI Avatar Services by Price in 2026: Real Cost Per Minute Skip to content Playground Pricing Docs Resources 
+ Get Started 
+ Playground Pricing Docs Customer Stories Blog LiveKit Get Started Spatius Blog / Research Best AI Avatar Services by Price in 2026: Real Cost Per Minute
+ Written by Spatius Team 
+ Published Jul 5, 2026 · 14 min read 
+ in 
+ Sections Why “Best by Price” Is Harder Than Comparing Monthly Plans 
+ Why “Best by Price” Is Harder Than Comparing Monthly Plans 
+ Pricing at a Glance: Production-Grade Platforms 
+ How We Normalize Pricing 
+ The Two Pricing Worlds: Generated Video vs Real-Time Interactive 
+ Deep Dive: Rendering-Only Pricing (BYO AI Stack) 
+ Deep Dive: Bundled / Adjacent Pricing 
+ Hidden Cost: Cloud GPU Rendering 
+ Custom Avatar Costs Are Setup Costs, Not the Main Unit Economics 
+ Which Pricing Model Fits You? 
+ Bottom Line 
+ Try the Most Affordable Real-Time AI Avatar API Yourself 
+ Further Reading 
+ On this page 
+ Why “Best by Price” Is Harder Than Comparing Monthly Plans 
+ Pricing at a Glance: Production-Grade Platforms 
+ How We Normalize Pricing 
+ The Two Pricing Worlds: Generated Video vs Real-Time Interactive 
+ Deep Dive: Rendering-Only Pricing (BYO AI Stack) 
+ Deep Dive: Bundled / Adjacent Pricing 
+ Hidden Cost: Cloud GPU Rendering 
+ Custom Avatar Costs Are Setup Costs, Not the Main Unit Economics 
+ Which Pricing Model Fits You? 
+ Bottom Line 
+ Try the Most Affordable Real-Time AI Avatar API Yourself 
+ Further Reading 
+ TL;DR: Most pricing comparisons rank AI avatar platforms by monthly fee, which mixes pre-recorded video generators, bundled conversational agents, and real-time rendering APIs. This article normalizes the comparison by real cost per minute, separates rendering-only platforms from bundled stacks, and highlights the cost driver many buyers miss: cloud GPU rendering. Among the publicly priced production-grade real-time avatar APIs surveyed here, Spatius annual Scale is the most affordable published rate at $0.0056 per minute.
+ Prefer to run your own numbers? We turned this survey into an interactive calculator — enter your minutes, concurrency, and session length to see the true monthly cost and every published restriction across the seven services. Open the Live AI Avatar Cost Calculator → 
+ Why “Best by Price” Is Harder Than Comparing Monthly Plans
+ If you have searched for the best AI avatar service by price , you have probably seen the same structure: a list of tools, a table with monthly plans, and a vague recommendation at the end.
+ The problem is that many of these tools are not the same product. A pre-recorded avatar video generator, a bundled conversational-video platform, and a rendering-only real-time avatar API have different cost drivers. Monthly subscription price alone does not tell you what happens when a kiosk, tutor, support agent, or AI companion runs for hours every day.
+ This analysis is based on public pricing data available up to July 4, 2026, with LiveAvatar reverified on September 2, 2026. Public pricing changes often, so numbers should be verified before purchase or publication.
+ Rendering-only vs bundled stack: some platforms bill only for the visual avatar layer; others include STT, LLM, TTS, orchestration, and hosting.
+ Cloud rendering vs on-device rendering: cloud-rendered avatars bake GPU and bandwidth cost into every minute; on-device rendering changes the unit economics.
+ Minutes are not always equal: some products bill by streaming minute, some by credits, some by generated video second, and some enforce minimum charges.
+ Pricing at a Glance: Production-Grade Platforms
+ The table below normalizes the price columns to per-minute rates. Monthly plan fees are used only to identify tier context; if a vendor publishes credit-based or non-live usage, the row shows the calculation method rather than forcing a false apples-to-apples comparison.
+ Comparison Table
+ Platform | Category | Entry / listed $/min | Scale / lowest public $/min | Video resolution | BYO stack? | Source confidence | 
+ Spatius | Real-time rendering | $0.009/min | $0.007/min monthly Scale; $0.0056/min annual Scale | 1080p | Yes | Official pricing | 
+ Simli | Real-time rendering | ~$0.01/min estimated | ~$0.009/min estimated | Configurable; no public max | Yes | Public site; effective-rate estimate | 
+ LiveAvatar | Real-time rendering or bundled | LITE effective ≈ $0.095/min on Starter included credits | Business LITE ≈ $0.079/min included; FULL ≈ $0.158/min included | Default 720p; max 1080p | LITE mode | Official pricing + current help article | 
+ Anam | Real-time bundled | $0.16/min overage | $0.11/min Professional overage | Public default 720x480; higher Cara 4 resolutions for enabled orgs | BYO LLM / LiveKit options, not pure rendering-only pricing | Official pricing page + docs | 
+ Beyond Presence | Real-time bundled | €0.175/min | €0.0875/min Scale | 1080p | Product-line dependent | Official pricing page | 
+ Tavus | Real-time bundled | $0.37/min conversation-video overage | $0.26/min Business conversation-video overage | 1080p | BYO LLM may be supported, but pricing is bundled | Official pricing page | 
+ Runway | Credit-based real-time avatar / generated-video tool | $0.20/min + $0.02 startup (API credits) | $0.20/min API rate; no lower public real-time avatar API rate listed | 1080p; 4K upscale on paid plans | Adjacent, not comparable to rendering-only avatar API | Official API pricing; calculated from credits | 
+ The key takeaway is not that every platform is directly interchangeable. The takeaway is that Spatius has the most affordable published per-minute rate in the production-grade real-time avatar API set where a live streaming or rendering minute can be normalized.
+ How We Normalize Pricing
+ Use real-time interaction minutes when the vendor publishes them, or calculate them from official credit rules when the mapping is explicit.
+ Separate rendering-only platforms from bundled all-in-one platforms.
+ Treat generated-video and credit-based real-time systems, including Runway, as adjacent unless the pricing maps cleanly to the same live-rendering scope.
+ Exclude enterprise quotes unless a public rate is available.
+ Mark resolution limits and caveats instead of assuming that a lower price supports the same output quality.
+ The Two Pricing Worlds: Generated Video vs Real-Time Interactive
+ Generated video platforms such as Runway are useful for producing finished video assets. Real-time interactive avatar platforms stream a live digital human, often over WebRTC-style real-time media channels , that responds to the user. That distinction matters because a 10-second generated clip and a 10-minute customer-service session have different infrastructure, latency, concurrency, and cost requirements.
+ This article focuses on real-time interactive avatar pricing. Runway is included because its character and real-time avatar credit model are adjacent to avatar buying decisions. Its API docs publish a calculable real-time avatar rate, but it should still be evaluated separately from rendering-only avatar APIs.
+ Deep Dive: Rendering-Only Pricing (BYO AI Stack)
+ Rendering-only platforms price the visual avatar layer separately from LLM, TTS, and STT. These rows are the closest apples-to-apples comparison for teams that already have their own AI stack.
+ Spatius - rendering-only, BYO AI stack
+ Plan | Price | Included usage | $/min / overage | Notes | 
+ Free | $0/mo | 1,000 credits (~100 min/mo) | No paid overage listed | 2 concurrent sessions; 10 min session cap; stock avatars; 1 one-time avatar creation after registration survey | 
+ Starter | $19/mo | 20,000 credits (~2,000 min/mo) | $0.009/min | 4 concurrent sessions; 30 min session cap; 2 avatar creations/mo | 
+ Builder | $49/mo | 55,000 credits (~5,500 min/mo) | $0.009/min | 8 concurrent sessions; 60 min session cap; 4 avatar creations/mo | 
+ Growth | $149/mo | 180,000 credits (~18,000 min/mo) | $0.009/min | 22 concurrent sessions; 120 min session cap; 14 avatar creations/mo | 
+ Scale | $299/mo | 400,000 credits (~40,000 min/mo) | $0.007/min | 40 concurrent sessions; unlimited session length; 40 avatar creations/mo | 
+ Annual Scale | $2,869/yr | 4,800,000 credits/yr (~40,000 min/mo) | $0.0056/min | 20% annual discount; most affordable public rate in this comparison | 
+ Source: Spatius pricing , accessed July 5, 2026.
+ Why it matters: Spatius prices the avatar rendering layer, so teams with their own LLM, TTS, and STT stack are not paying again for bundled AI services.
+ For the full cost breakdown, read our dedicated deep-dive on Spatius pricing . For hardware coverage, see our entry-level chipsets deep-dive .
+ Simli - rendering-only benchmark
+ Plan | Price | Included minutes | Overage / effective rate | Notes | 
+ Free | $0 | 50 min/mo | No paid overage listed | 1 concurrent session; no face slots listed; unlimited agents | 
+ Hobby | $10/mo | 1,000 min/mo | $0.01/min | 2 concurrent sessions; 1 face generation slot; unlimited agents | 
+ Pro | $49/mo | 5,500 min/mo | $0.0095/min | 10 concurrent sessions; 5 face slots; unlimited agents | 
+ Scale | $249/mo | 27,500 min/mo | $0.009/min | 50 concurrent sessions; 30 face slots; unlimited agents | 
+ Source: Simli , accessed July 5, 2026. Plan-level figures should be verified in the current self-serve pricing screen for purchase decisions.
+ Caveat: Simli is the closest rendering-only benchmark, but the public landing page exposes only the free monthly top-up and paid volume-discount framing. The plan-level numbers above come from the supplied pricing research material, so buyers should confirm them in the current self-serve pricing screen.
+ Use Simli as the closest rendering-only benchmark, but verify the current self-serve pricing screen for purchase decisions.
+ LiveAvatar - LITE vs FULL mode
+ Tier | Price | Credits / month | Credit / overage note | Normalized live-minute rate | 
+ Free | $0 | 10 | Not available | LITE uses 1 credit/min; FULL uses 2 credits/min | 
+ Starter | $19/mo | 200 | Extra credits $0.10/credit | LITE ≈ $0.095/min; FULL ≈ $0.190/min | 
+ Essential | $99/mo | 1,100 | Extra credits $0.095/credit | LITE ≈ $0.090/min; FULL ≈ $0.180/min | 
+ Business | $475/mo | 6,000 | Extra credits $0.09/credit | LITE ≈ $0.079/min; FULL ≈ $0.158/min | 
+ Source: LiveAvatar pricing , the current plan guide , and the LiveAvatar credit FAQ , accessed September 2, 2026.
+ Resolution note: official configuration docs list high as the 720p default and very_high as 1080p. The current pricing page uses Starter / Essential / Business and 200 / 1,100 / 6,000 credits, while an older credit FAQ still shows previous names and allowances. LITE is the closest BYO-style workflow; FULL/Embed is more bundled.
+ For the current plan math, read our dedicated LiveAvatar pricing guide. For the architecture tradeoffs, see our Spatius vs LiveAvatar breakdown .
+ Deep Dive: Bundled / Adjacent Pricing
+ Bundled and adjacent platforms include more of the conversational stack, use product-line-specific credits, or sit closer to generated video. Compare their prices as cost-structure references, not pure rendering-only rates.
+ D-ID also separates Studio subscriptions from API plans and uses credits across several output modes. For the current plan structure and conversion rules, read the D-ID pricing and API costs guide .
+ Anam - bundled real-time avatar API
+ Plan | Price | Included minutes | Overage | Operational notes | 
+ Free | $0 | 30 min/mo | No overage | 1 simultaneous session; 3 min conversation limit; 1 custom avatar with watermark | 
+ Starter | $12/mo | 50 min/mo | $0.16/min | 1 simultaneous session; 5 min conversation limit; 2 custom avatars; commercial use | 
+ Explorer | $49/mo | 250 min/mo | $0.14/min | 3 simultaneous sessions; 10 min conversation limit; 3 custom avatars; remove watermark | 
+ Growth | $299/mo | 2,000 min/mo | $0.12/min | 5 simultaneous sessions; 2 hour conversation limit; 5 custom avatars | 
+ Professional | $999/mo | 5,000 min/mo | $0.11/min | 10 simultaneous sessions; 2 hour conversation limit; 10 custom avatars; priority support | 
+ Enterprise | Custom | Custom | Custom | Custom avatars; uptime SLA / dedicated support | 
+ Source: Anam pricing and Anam docs , accessed July 5, 2026.
+ Resolution note: Anam’s public docs list Cara 3 at 720x480. Cara 4 can support 1152x768 landscape or 768x1152 portrait for organizations with Cara 4 access enabled, so do not assume that higher resolution is available on every public self-serve setup. The public price is bundled, not a pure rendering-only rate.
+ For the full plan math, including idle-session billing and costs at 100 to 10,000 minutes, read our dedicated Anam pricing guide . For architecture and product fit, use the Anam AI API review .
+ Beyond Presence - bundled speech-to-video / agent platform
+ Plan | Price | Included minutes | Overage | Operational notes | 
+ Free | €0/mo | 40 min/mo | No overage | 1 concurrent session; 3 min session duration; stock avatars | 
+ Starter | €49/mo | 280 min/mo | €0.175/min | 10 concurrent sessions; 1 custom avatar; customizable session duration | 
+ Growth | €149/mo | 1,490 min/mo | €0.10/min | 25 concurrent sessions; 3 custom avatars; white-label UI customization | 
+ Scale | €349/mo | 4,000 min/mo | €0.0875/min | 50 concurrent sessions; 10 custom avatars; image-to-avatar / text-to-avatar features | 
+ Enterprise | Custom | Custom | Custom | Unlimited sessions and avatars; dedicated support | 
+ Source: Beyond Presence pricing , accessed July 5, 2026.
+ Resolution note: Beyond Presence pricing lists High Resolution as 1080p on all public plans. That means the public plan table presents 1080p as an included capability across tiers, while the platform still belongs in bundled/product-line-dependent comparisons rather than the pure rendering-only ranking.
+ Use Beyond Presence as a bundled/product-line-dependent comparison, not a pure rendering-only benchmark. If you are comparing fully managed real-time agents rather than speech-to-video style usage, verify the managed-agent credit model separately.
+ Tavus - premium bundled conversational video
+ Plan | Price | Included conversation-video minutes | Conversation-video overage | Operational notes | 
+ Starter | $22/mo | 60 min/mo | $0.37/min | 1 concurrent stream; high-resolution video listed on pricing page | 
+ Builder | $59/mo | 175 min/mo | $0.34/min | Up to 3 concurrent streams; custom replica trainings; no watermark | 
+ Growth | $397/mo | 1,300 min/mo | $0.31/min | Up to 10 concurrent streams; more custom replica trainings; priority support | 
+ Business | $975/mo | 4,000 min/mo | $0.26/min | Up to 25 concurrent streams; higher included usage and business support | 
+ Enterprise | Custom | Custom | Scaling discounts | Custom concurrency, compliance, and private support | 
+ Source: Tavus pricing , accessed July 5, 2026.
+ Tavus is best treated as a bundled conversational-video platform. The supplied research document listed older or different plan rows; the table above keeps the current public pricing page values to avoid mixing stale and current plan names.
+ For a side-by-side architecture and cost breakdown, see our Tavus API review .
+ Runway - credit-based characters and real-time avatar model
+ Plan / model | Price or credits | Usage / rate | Notes | 
+ Free | $0 | 125 one-time credits | Creative-tool plan; not a recurring live avatar API rate | 
+ Standard | $12/mo annually ($15 monthly) | 625 credits/mo | Pricing page examples show generated-video and image usage; includes 4K upscaling and no watermarks | 
+ Pro | $28/mo annually ($35 monthly) | 2,250 credits/mo | Higher monthly credit pool; custom voices for lip sync and TTS | 
+ Max | $76/mo annually ($95 monthly) | 9,500 credits/mo | Heavy-usage credit pool; credit rollover for 1 month | 
+ gwm1_avatars real-time model | API credits: $0.01/credit | 2 credits startup + 2 credits / 6 seconds (=20 credits/min) | Calculated API rate: $0.20/min after startup + $0.02 startup. Keep separate from subscription plan credits and direct live-avatar overage tables. | 
+ Source: Runway pricing and Runway API pricing , accessed July 5, 2026.
+ Runway is relevant because Characters and gwm1_avatars sit near avatar buying decisions. Its API docs price gwm1_avatars at 2 credits upfront plus 2 credits per 6 seconds; at $0.01/credit, that equals $0.20/min after startup plus $0.02 startup. Keep it as an adjacent reference rather than a direct $/min peer to Spatius, Simli, or LiveAvatar LITE.
+ Keep Runway as an adjacent generated-video and credit-based API reference rather than a direct rendering-only peer.
+ Hidden Cost: Cloud GPU Rendering
+ For high-quality 2D cloud-rendered real-time avatars, the meaningful infrastructure comparison is not a small T4 or L-series card. Production-grade real-time rendering often relies on high-end GPU capacity such as A100/H100-class infrastructure, plus bandwidth, scheduling, observability, and redundancy.
+ Spatius’s on-device 3DGS approach off-loads most rendering cost from the cloud server. The avatar’s visual layer runs locally on the client device, while the cloud layer can focus on orchestration, AI services, and session control.
+ In short: 2D cloud rendering routes every frame through server-side GPU infrastructure. Spatius on-device 3DGS rendering keeps the visual layer local, which is why the per-minute live-avatar cost can be dramatically lower.
+ Custom Avatar Costs Are Setup Costs, Not the Main Unit Economics
+ Custom avatar creation matters, especially for branded staff, regional characters, or multiple use-case-specific faces. But it should not be mixed into the recurring live-minute comparison.
+ For Spatius, the current paid-plan framing is that paid plans include avatar creation quota: Starter includes 2 avatar creations per month, Builder includes 4, Growth includes 14, and Scale includes 40. Additional enterprise-scale avatar creation economics are better handled in a dedicated custom-avatar pricing article.
+ A platform can have low or free avatar creation and still be expensive at scale if every streaming minute is costly. Conversely, a platform with included or modest setup cost can be the most affordable over time when the recurring per-minute rate is low.
+ Which Pricing Model Fits You?
+ If you already have your own LLM, TTS, and STT stack
+ Choose rendering-only. Spatius is the most affordable public option in this surveyed set, especially on annual Scale, and Simli is the closest rendering-only benchmark. Runway is evaluated separately because its real-time avatar model is credit-based rather than a rendering-only visual-layer API.
+ If you want the whole conversational-video stack handled for you
+ Compare Anam, Tavus, Beyond Presence, and LiveAvatar FULL Mode. They may reduce engineering work, but the live-minute economics are materially higher than rendering-only APIs.
+ If you are creating finished clips rather than live interactions
+ Evaluate Runway separately. Its generated-video and real-time avatar workflows are credit-based; the real-time avatar API can be calculated at $0.20/min after a $0.02 startup charge, but it does not map cleanly to rendering-only live-avatar overage tables.
+ FAQ
+ What is the most affordable real-time AI avatar API in this comparison? The most affordable real-time AI avatar API in this comparison is Spatius annual Scale at $0.0056/min. At monthly billing, Spatius Scale is $0.007/min and Starter is $0.009/min. Simli remains the closest rendering-only benchmark at roughly ~$0.009/min at scale.
+ Can I use my own LLM and TTS with these platforms? Yes, you can bring your own LLM and TTS with rendering-only platforms such as Spatius and Simli, and with LiveAvatar LITE-style workflows where supported. Bundled platforms such as Tavus, Anam, and Beyond Presence include more of the AI stack, so they are convenient but harder to compare against pure rendering APIs.
+ Why does per-minute cost matter more than monthly subscription price? Per-minute cost matters because real-time avatars scale with live usage minutes, not only seats or produced videos. A low monthly fee can become expensive if the overage rate is high and the avatar runs for hours every day.
+ Should custom avatar creation be included in the per-minute comparison? Custom avatar creation should usually be treated as a setup cost, not part of the recurring per-minute comparison. Custom avatar creation and live rendering minutes both matter for budget planning, but mixing them into one $/min number hides the real unit economics.
+ Is Runway a direct competitor to real-time avatar APIs? Runway is not a clean rendering-only peer to real-time avatar APIs such as Spatius, Simli, or LiveAvatar LITE. Runway is relevant for generated character/video workflows and publishes credit-based real-time avatar pricing: $0.20/min after a $0.02 startup charge using API credits. It should still be evaluated separately from live rendering APIs because the product scope is different.
+ Bottom Line
+ The question is not only “which platform has the lowest monthly plan?” The better question is: “what am I paying for every time the avatar is live?”
+ For production-grade real-time avatars, recurring live-minute cost is the lever that decides whether a deployment scales. On that metric, among the publicly priced real-time avatar APIs surveyed here, Spatius annual Scale is the most affordable option at $0.0056/min.
+ Most pricing comparisons miss this distinction. They treat generated video, bundled conversational agents, and rendering-only live avatars as interchangeable SaaS subscriptions. But if you are deploying real-time interactive avatars at any meaningful scale, the difference between $0.0056/min and even $0.10/min is not a pricing detail. It is your unit economics.
+ Try the Most Affordable Real-Time AI Avatar API Yourself
+ Spatius offers a permanent free tier with 1,000 credits, about 100 minutes per month, 2 concurrent sessions, and 1 free custom avatar creation after registration survey. No credit card required.
+ Start building on the Spatius Playground or dive into the docs at docs.spatius.ai .
+ Further Reading
+ Pricing 
+ The Most Affordable Real-Time AI Avatar API (2026)
+ A deeper breakdown of Spatius pricing, included credits, annual Scale economics, and why the public $0.0056/min rate matters for production deployments.
+ Read next 
+ Architecture 
+ On-Device vs Cloud AI Avatar Architecture
+ Compare cloud-rendered avatars with on-device rendering, including infrastructure cost, bandwidth requirements, latency, and deployment tradeoffs.
+ Read next 
+ Hardware 
+ AI Avatar on Entry-Level Chipsets
+ See how on-device rendering changes the hardware cost model for kiosks, edge devices, mobile deployments, and real-time avatar applications.
+ Read next 
+ Guide 
+ Interactive Avatar: Complete Guide
+ A practical guide to real-time AI avatars, including use cases, technical architecture, latency expectations, and platform evaluation criteria.
+ Read next 
+ Related Articles
+ The Most Affordable Real-Time AI Avatar API in 2026: Pricing, Per-Minute Cost, and What You Actually Pay For On-Device AI Avatar vs Cloud Streaming: Architecture, Bandwidth, and Cost in 2026 Anam AI API Review 2026: Is It Best for Developers? 
+ Give your agent a face that responds.
+ Start building 
+ Customer Stories Tools Blog Glossary Comparisons LiveKit Contact 
+ Privacy Terms Cookies 
+ LinkedIn 
+ © 2026 SPATIALWALK PTE. LTD., operating Spatius. All rights reserved. 
+ Cookie Consent
+ We use optional analytics cookies to understand how you use Spatius and improve your experience.
+ Rejecting them doesn’t affect cookies required for the site to work. Cookie Policy 
+ Reject Accept 
+ 

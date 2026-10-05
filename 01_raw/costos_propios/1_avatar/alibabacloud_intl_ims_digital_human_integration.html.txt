@@ -1,0 +1,54 @@
+ 
+ Integrate an avatar into a real-time workflow | IMS - Intelligent Media Services - Alibaba Cloud Documentation Center
+ -->
+Document Center
+ All Products
+Search
+ Document Center 
+ Intelligent Media Services 
+ User Guide 
+ Real-time Conversational AI 
+ Basic features 
+ Integrate an avatar 
+all-products-head 
+ This Product 
+ This Product
+ All Products
+ Intelligent Media Services:Integrate an avatar 
+Document Center
+ Intelligent Media Services:Integrate an avatar
+Last Updated:Aug 13, 2026
+ Add an avatar node to a real-time workflow to generate lip-synced video from speech input.
+ Supported avatar services
+ Real-time Conversational AI supports avatars from Alibaba Cloud Lingjing and FaceUnity.
+ Note 
+ Tongyi Xingchen avatar support was discontinued on August 31, 2025.
+ Billing
+ Pricing details:
+ FaceUnity: Contact FaceUnity for pricing.
+ Alibaba Cloud Lingjing: Submit a ticket for pricing.
+ Integration methods
+ Alibaba Cloud Lingjing
+ Step 1: Obtain configuration information 
+ Submit a ticket to obtain your tenant ID and interaction configuration ID.
+ Step 2: Configure the avatar node in the console
+ Go to the Real-time Workflow Template page.
+ Create a real-time workflow and click the avatar node.
+ On the Real-time Workflow Template page, select a Digital Human Call or Video Call workflow type. The workflow pipeline ends with an Avatar (Avatar3D) node, positioned after the TTS Text-to-Speech node and before the End (RTC Output) node.
+ Select Lingjing Digital Avatar Platform , and then enter the Tenant ID , Interaction Configuration ID , AccessKey ID , and AccessKey Secret .
+ Click Save .
+ FaceUnity
+ FaceUnity avatars offer detailed facial rendering and smooth movements for interactive and visual scenarios.
+ Step 1: Obtain configuration information 
+ Prepare the following:
+ Activate the avatar service on the FaceUnity website .
+ Contact FaceUnity to obtain your AvatarId .
+ Record the AppId , AppKey , and AvatarId .
+ Step 2: Configure the avatar node in the console
+ Go to the Real-time Workflow Template page.
+ Create a real-time workflow and click the avatar node.
+ Select Avatar Plug-in , and then enter the AppId , AppKey , and AvatarId .
+ Select FaceUnity in the Avatar Plug-in .
+ Click Save .
+Thank you! We've received your feedback.
+ 

@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Milestone Systems Developer Forum</title>
+    <meta name="description" content="">
+    <meta name="generator" content="Discourse 2026.3.0-latest.1 - https://github.com/discourse/discourse version 11f1054d0d54c507a5568f18974ac4db3eb7eeb7">
+<link rel="icon" type="image/png" href="https://forum.milestonesys.com/uploads/default/optimized/1X/05db87c18938370c5a0c374f4656b8da0c549968_2_32x32.png">
+<link rel="apple-touch-icon" type="image/png" href="https://forum.milestonesys.com/uploads/default/optimized/1X/05db87c18938370c5a0c374f4656b8da0c549968_2_180x180.png">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+
+<meta name="color-scheme" content="light dark">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+<link rel="canonical" href="https://forum.milestonesys.com/" />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"https://forum.milestonesys.com","name":"Milestone Systems Developer Forum","potentialAction":{"@type":"SearchAction","target":"https://forum.milestonesys.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://forum.milestonesys.com/opensearch.xml" title="Milestone Systems Developer Forum Search">
+
+    
+    <link href="/stylesheets/color_definitions_light-default_-1_-1_53249a3168b39dd0655e211f772c5216ec645893.css?__ws=forum.milestonesys.com" media="(prefers-color-scheme: light)" rel="stylesheet" class="light-scheme"/><link href="/stylesheets/color_definitions_dark_13_-1_157903112dc51d68fcd002ee29a8d363ffea930c.css?__ws=forum.milestonesys.com" media="(prefers-color-scheme: dark)" rel="stylesheet" class="dark-scheme" data-scheme-id="13"/>
+
+<link href="/stylesheets/common_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="common"  />
+
+  <link href="/stylesheets/mobile_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="mobile"  />
+  <link href="/stylesheets/desktop_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(min-width: 40rem)" rel="stylesheet" data-target="desktop"  />
+
+
+
+    <link href="/stylesheets/chat_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="chat"  />
+    <link href="/stylesheets/checklist_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="checklist"  />
+    <link href="/stylesheets/discourse-assign_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-assign"  />
+    <link href="/stylesheets/discourse-chat-integration_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-chat-integration"  />
+    <link href="/stylesheets/discourse-data-explorer_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-data-explorer"  />
+    <link href="/stylesheets/discourse-details_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-details"  />
+    <link href="/stylesheets/discourse-lazy-videos_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-lazy-videos"  />
+    <link href="/stylesheets/discourse-local-dates_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-local-dates"  />
+    <link href="/stylesheets/discourse-narrative-bot_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-narrative-bot"  />
+    <link href="/stylesheets/discourse-presence_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-presence"  />
+    <link href="/stylesheets/discourse-solved_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-solved"  />
+    <link href="/stylesheets/discourse-templates_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-templates"  />
+    <link href="/stylesheets/discourse-topic-voting_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="discourse-topic-voting"  />
+    <link href="/stylesheets/docker_manager_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="docker_manager"  />
+    <link href="/stylesheets/footnote_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="footnote"  />
+    <link href="/stylesheets/poll_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="poll"  />
+    <link href="/stylesheets/spoiler-alert_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="all" rel="stylesheet" data-target="spoiler-alert"  />
+    <link href="/stylesheets/chat_mobile_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="chat_mobile"  />
+    <link href="/stylesheets/discourse-assign_mobile_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="discourse-assign_mobile"  />
+    <link href="/stylesheets/discourse-solved_mobile_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="discourse-solved_mobile"  />
+    <link href="/stylesheets/discourse-topic-voting_mobile_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(max-width: 39.99999rem)" rel="stylesheet" data-target="discourse-topic-voting_mobile"  />
+    <link href="/stylesheets/chat_desktop_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(min-width: 40rem)" rel="stylesheet" data-target="chat_desktop"  />
+    <link href="/stylesheets/discourse-topic-voting_desktop_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(min-width: 40rem)" rel="stylesheet" data-target="discourse-topic-voting_desktop"  />
+    <link href="/stylesheets/poll_desktop_360a6dd793a376e05f96e5ce1be0d6a41fd3b565.css?__ws=forum.milestonesys.com" media="(min-width: 40rem)" rel="stylesheet" data-target="poll_desktop"  />
+
+  
+    
+    
+
+    
+    
+        <link rel="next" href="/latest?no_definitions=true&amp;page=1">
+    <link rel="alternate" type="application/rss+xml" title="Latest posts" href="https://forum.milestonesys.com/posts.rss" />
+    <link rel="alternate" type="application/rss+xml" title="Latest topics" href="https://forum.milestonesys.com/latest.rss" />
+    <meta property="og:site_name" content="Milestone Systems Developer Forum" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://forum.milestonesys.com/uploads/default/original/1X/05db87c18938370c5a0c374f4656b8da0c549968.png" />
+<meta property="og:image" content="https://forum.milestonesys.com/uploads/default/original/1X/05db87c18938370c5a0c374f4656b8da0c549968.png" />
+<meta property="og:url" content="https://forum.milestonesys.com/" />
+<meta name="twitter:url" content="https://forum.milestonesys.com/" />
+<meta property="og:title" content="Milestone Systems Developer Forum" />
+<meta name="twitter:title" content="Milestone Systems Developer Forum" />
+
+    
+  </head>
+  <body class="crawler ">
+    
+    <header>
+  <a href="/">Milestone Systems Developer Forum</a>
+    <p></p>
+</header>
+
+    <div id="main-outlet" class="wrap" role="main">
+      
+
+
+
+
+<div class="topic-list-container" itemscope itemtype='http://schema.org/ItemList'>
+  <meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'>
+
+  <table class='topic-list'>
+
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th></th>
+        <th class="replies">Replies</th>
+        <th class="views">Views</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='1'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/get-ready-for-hafnia-hackathon-2026/14817' class='title raw-link raw-topic-link'>🚀 Get ready for Hafnia Hackathon 2026</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+              <p class='excerpt'>
+                Following the success of Hafnia Hackathon 2025, we’re excited to welcome both familiar faces and new builders to the 2026 challenge. Whether you joined us last year or are taking part for the first time, we can’t wait to&hellip;
+              </p>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Haider_Muhammad" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/haider_muhammad/25/3178_2.png" class="avatar" title='Haider Muhammad (Milestone Systems) - Original Poster' aria-label='Haider Muhammad (Milestone Systems) - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>34</span>
+          </td>
+          <td>
+            September 30, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='2'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/developer-forum-info-policies/9' class='title raw-link raw-topic-link'>Developer Forum Info &amp; Policies</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+              <p class='excerpt'>
+                FORUM INFO 
+Welcome to the Milestone Developer Forum! 
+Ask questions, share comments and experiences with other developers and Milestone engineers. We encourage you to help each other, share ideas and implementations for&hellip;
+              </p>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/system" class="latest single">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/system/25/9_2.png" class="avatar" title='system - Original Poster, Most Recent Poster' aria-label='system - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>575</span>
+          </td>
+          <td>
+            December 11, 2025
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='3'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/ai-bridge-3-0-1-with-xprotect-2026-r1-init-container-errors-error-configuring-endpoint-500-internal-server-error/14697' class='title raw-link raw-topic-link'>[AI Bridge 3.0.1 with XProtect 2026 R1] init container errors- Error configuring endpoint: 500 Internal Server Error</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/xprotect-professional/128' class='discourse-tag'>xprotect-professional</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/ai-bridge/4178' class='discourse-tag'>ai-bridge</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/sajeev" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/s/cab0a1/25.png" class="avatar" title='Sajeev Rajput - Original Poster, Most Recent Poster' aria-label='Sajeev Rajput - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/ferguzman" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/f/67e7ee/25.png" class="avatar" title='Fernando Guzman (Milestone Systems) - Frequent Poster, Accepted Answer' aria-label='Fernando Guzman (Milestone Systems) - Frequent Poster, Accepted Answer'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>70</span>
+          </td>
+          <td>
+            October 5, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='4'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/view-parameters-not-retrieved-after-sc-startup/14821' class='title raw-link raw-topic-link'>View parameters not retrieved after sc startup</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/sdk/34' class='discourse-tag'>sdk</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Lucv" class="latest single">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/lucv/25/3626_2.png" class="avatar" title='Lvw - Original Poster, Most Recent Poster' aria-label='Lvw - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>8</span>
+          </td>
+          <td>
+            October 2, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='5'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/vehicles-search-plate-works-but-color-brand-model-type-do-not-how-search-works-and-how-to-enable-all-filters-from-a-mip-event-server-anpr-plugin/14779' class='title raw-link raw-topic-link'>Vehicles Search: plate works, but color / brand / model / type do not — how Search works and how to enable all filters from a MIP Event Server ANPR plugin</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/mip/26' class='discourse-tag'>mip</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/dineshchandra" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/d/49beb7/25.png" class="avatar" title='Dinesh Chandra - Original Poster' aria-label='Dinesh Chandra - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>47</span>
+          </td>
+          <td>
+            October 2, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='6'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/how-to-disable-https-processing-during-login-in-the-sdk/14789' class='title raw-link raw-topic-link'>How to Disable HTTPS Processing During Login in the SDK</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/login/1034' class='discourse-tag'>login</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/NVSTS" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/n/b4bc9f/25.png" class="avatar" title='Nvstechsupport - Original Poster, Most Recent Poster' aria-label='Nvstechsupport - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>4</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>54</span>
+          </td>
+          <td>
+            October 2, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='7'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/how-to-get-our-ip-cameras-and-nvrs-listed-on-milestone-s-supported-devices-page/14813' class='title raw-link raw-topic-link'>How to get our IP cameras and NVRs listed on Milestone’s supported devices page?</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/xprotect/584' class='discourse-tag'>xprotect</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Lei" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/l/7feea3/25.png" class="avatar" title='Tl - Original Poster, Most Recent Poster' aria-label='Tl - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>31</span>
+          </td>
+          <td>
+            September 28, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='8'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/query-regarding-time-taken-by-native-application-from-login-to-successful-camera-streaming/14812' class='title raw-link raw-topic-link'>Query regarding time taken by Native Application from login to successful camera streaming</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/raficheriyadathil" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/r/bbce88/25.png" class="avatar" title='Muhammed Rafi Cheriyadathil - Original Poster' aria-label='Muhammed Rafi Cheriyadathil - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>26</span>
+          </td>
+          <td>
+            September 28, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='9'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/application-hang-imageviewerwpfcontrol-disconnect-never-returns-while-the-camera-source-is-still-connecting/14807' class='title raw-link raw-topic-link'>Application hang: ImageViewerWpfControl.Disconnect() never returns while the camera source is still connecting</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/component-integration/1' class='discourse-tag'>component-integration</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Shrimp" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/s/90db22/25.png" class="avatar" title='Shrimp - Original Poster' aria-label='Shrimp - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>34</span>
+          </td>
+          <td>
+            September 28, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='10'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/access-control-plugin-disappears-from-management-client-and-smart-client-after-creating-an-alarm-definition-and-restarting-event-server-plugin-still-loads-on-event-server/14714' class='title raw-link raw-topic-link'>Access Control plugin disappears from Management Client and Smart Client after creating an Alarm Definition and restarting Event Server (plugin still loads on Event Server)</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/krista" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/k/9fc29f/25.png" class="avatar" title='Suprema@19 - Original Poster' aria-label='Suprema@19 - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>14</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>116</span>
+          </td>
+          <td>
+            September 24, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='11'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/on-xprotect-corporate-2022-r3-is-there-a-supported-api-or-interface-for-an-external-system-to-read-system-log-entries-specifically-camera-communication-started-communication-stopped-events-without-querying-the-log-server-sql-database-directly/14797' class='title raw-link raw-topic-link'>On XProtect Corporate 2022 R3, is there a supported API or interface for an external system to read System log entries — specifically camera Communication Started / Communication Stopped events — without querying the Log Server SQL database directly</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/milestone/21' class='discourse-tag'>milestone</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/sdk/34' class='discourse-tag'>sdk</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/api/204' class='discourse-tag'>api</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/xprotect/584' class='discourse-tag'>xprotect</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Neethu" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/n/58956e/25.png" class="avatar" title='Neethu - Original Poster' aria-label='Neethu - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>6</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>63</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='12'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/rtp-timestamp-in-webrtc-playback-streams-showing-incorrect-time/14799' class='title raw-link raw-topic-link'>RTP timestamp in WebRTC playback streams showing incorrect time</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/webrtc/5104' class='discourse-tag'>webrtc</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/webrtc-javascript/5616' class='discourse-tag'>webrtc-javascript</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/DavidSHS" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/d/5daacb/25.png" class="avatar" title='DavidSHS - Original Poster' aria-label='DavidSHS - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>45</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='13'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/messagecommunication-providecurrentstateresponse-only-returns-device-states-from-a-single-recording-server/14801' class='title raw-link raw-topic-link'>MessageCommunication.ProvideCurrentStateResponse only returns device states from a single recording server</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Anders" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/59ef9b/25.png" class="avatar" title='Anders - Original Poster' aria-label='Anders - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>3</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>32</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='14'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/milestone-log-issue-after-upgrade/14802' class='title raw-link raw-topic-link'>Milestone log issue after upgrade</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Shemin" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/s/b487fb/25.png" class="avatar" title='Cctvops - Original Poster' aria-label='Cctvops - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>34</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='15'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/api-to-track-licenses-available-consumed/14805' class='title raw-link raw-topic-link'>API to track licenses -available-consumed</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/license-information/3301' class='discourse-tag'>license-information</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/rest-api/4169' class='discourse-tag'>rest-api</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/eby.varghese" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/e/bbce88/25.png" class="avatar" title='Eby Varghese - Original Poster' aria-label='Eby Varghese - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>30</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='16'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/how-can-i-determine-if-the-camera-is-indoor-or-outdoor/14798' class='title raw-link raw-topic-link'>How can i determine if the camera is Indoor or outdoor?</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/anuK" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/f19dbf/25.png" class="avatar" title='anuK - Original Poster' aria-label='anuK - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>37</span>
+          </td>
+          <td>
+            September 23, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='17'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/the-webhook-messageid-does-not-correspond-to-the-actual-event-type/14803' class='title raw-link raw-topic-link'>The webhook `MessageId` does not correspond to the actual event type</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/protocol-integration/25' class='discourse-tag'>protocol-integration</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/override" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/o/73ab20/25.png" class="avatar" title='Branislav Vujaklija - Original Poster, Most Recent Poster' aria-label='Branislav Vujaklija - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>28</span>
+          </td>
+          <td>
+            September 22, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='18'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/detecting-per-camera-topic-unsubscribe-in-ai-bridge-iva-apps/14777' class='title raw-link raw-topic-link'>Detecting per-camera topic unsubscribe in AI Bridge IVA apps</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/ai-bridge/4178' class='discourse-tag'>ai-bridge</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/andy_eyepop_ai" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/a3d4f5/25.png" class="avatar" title='Andy - Original Poster' aria-label='Andy - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/lisber" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/l/9dc877/25.png" class="avatar" title='Lisber Gouveia de Pontes (Milestone Systems) - Most Recent Poster' aria-label='Lisber Gouveia de Pontes (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>47</span>
+          </td>
+          <td>
+            September 22, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='19'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/restful-api-export-endpoints/13754' class='title raw-link raw-topic-link'>RESTful API Export Endpoints</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/video/33' class='discourse-tag'>video</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/restful-api/4219' class='discourse-tag'>restful-api</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/restful-api-export-endpoints/5797' class='discourse-tag'>restful-api-export-endpoints</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/api-export-endpoints/5798' class='discourse-tag'>api-export-endpoints</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/0053X000009uspXQAQ" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/0/3da27b/25.png" class="avatar" title='Eric Fournier - Original Poster' aria-label='Eric Fournier - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Robb" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/r/a183cd/25.png" class="avatar" title='Robin Blanchard - Most Recent Poster' aria-label='Robin Blanchard - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>56</span>
+          </td>
+          <td>
+            September 22, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='20'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/the-hostname-could-not-be-parsed/13656' class='title raw-link raw-topic-link'>The hostname could not be parsed</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/component-integration/1' class='discourse-tag'>component-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/sdk/34' class='discourse-tag'>sdk</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/smart-client/88' class='discourse-tag'>smart-client</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/uri/870' class='discourse-tag'>uri</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/login/1034' class='discourse-tag'>login</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/0053X00000AnqkkQAB" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/0/858c86/25.png" class="avatar" title='Awais Rafique - Original Poster' aria-label='Awais Rafique - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/awais.rafique" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/90ced4/25.png" class="avatar" title='Awais Rafique - Frequent Poster' aria-label='Awais Rafique - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Rik" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/r/90db22/25.png" class="avatar" title='Rie Kiuchi (Milestone Systems) - Frequent Poster' aria-label='Rie Kiuchi (Milestone Systems) - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>8</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>96</span>
+          </td>
+          <td>
+            September 21, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='21'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/access-control-api-options/14497' class='title raw-link raw-topic-link'>Access Control API Options</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/access-control/67' class='discourse-tag'>access-control</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/elanp" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/e/90ced4/25.png" class="avatar" title='elanp - Original Poster' aria-label='elanp - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/gmuerov" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/g/d78d45/25.png" class="avatar" title='Georgi Muerov (Milestone Systems) - Frequent Poster' aria-label='Georgi Muerov (Milestone Systems) - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>3</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>91</span>
+          </td>
+          <td>
+            September 18, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='22'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/java-8-required-for-xprotect-on-husky-350/14787' class='title raw-link raw-topic-link'>Java (8) required for XProtect on Husky 350</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/jaredstipe" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/j/ce73a5/25.png" class="avatar" title='Jared Stipe - Original Poster, Most Recent Poster' aria-label='Jared Stipe - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster, Accepted Answer'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>38</span>
+          </td>
+          <td>
+            September 16, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='23'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/smart-client-web-application-integration/14781' class='title raw-link raw-topic-link'>Smart Client – web application integration</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Hrvoje_Bilic" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/h/5f9b8f/25.png" class="avatar" title='Hrvoje Bilic - Original Poster, Most Recent Poster' aria-label='Hrvoje Bilic - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/ChristophAcs" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/christophacs/25/3354_2.png" class="avatar" title='Christoph Acs - Frequent Poster' aria-label='Christoph Acs - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>3</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>71</span>
+          </td>
+          <td>
+            September 14, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='24'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/events-state-websocket-stays-subscribed-but-delivers-zero-events-even-after-fixing-api-gateways-idp-secret-registration-xprotect-2025-r3/14725' class='title raw-link raw-topic-link'>Events &amp; State WebSocket stays &quot;subscribed&quot; but delivers zero events, even after fixing API Gateway&#39;s IDP secret registration (XProtect 2025 R3)</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/component-integration/1' class='discourse-tag'>component-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/protocol-integration/25' class='discourse-tag'>protocol-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/event-server/38' class='discourse-tag'>event-server</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/smart-client/88' class='discourse-tag'>smart-client</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Neethu" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/n/58956e/25.png" class="avatar" title='Neethu - Original Poster' aria-label='Neethu - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>64</span>
+          </td>
+          <td>
+            September 14, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='25'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/webrtc-reverse-backward-playback-is-it-supported/14786' class='title raw-link raw-topic-link'>WebRTC reverse/backward playback – Is it supported?</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/DavidSHS" class="latest">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/d/5daacb/25.png" class="avatar" title='DavidSHS - Original Poster, Most Recent Poster' aria-label='DavidSHS - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>2</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>53</span>
+          </td>
+          <td>
+            September 14, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='26'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/milestone-xprotect-rest-api-2023-r3-camera-permissions-and-camera-deletion/14731' class='title raw-link raw-topic-link'>Milestone XProtect REST API 2023 R3 – Camera Permissions and Camera Deletion</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/marianogarcia" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/m/c0e974/25.png" class="avatar" title='Mariano Garcia - Original Poster' aria-label='Mariano Garcia - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Peter_Posselt_Vergmann" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/peter_posselt_vergmann/25/3167_2.png" class="avatar" title='Peter Posselt Vergmann (Milestone Systems) - Most Recent Poster' aria-label='Peter Posselt Vergmann (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>64</span>
+          </td>
+          <td>
+            September 11, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='27'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/ai-bridge-version-4-0-0-is-now-officially-released/14776' class='title raw-link raw-topic-link'>AI Bridge version 4.0.0 is now officially released</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/ai-bridge/4178' class='discourse-tag'>ai-bridge</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/ferguzman" class="latest single">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/f/67e7ee/25.png" class="avatar" title='Fernando Guzman (Milestone Systems) - Original Poster, Most Recent Poster' aria-label='Fernando Guzman (Milestone Systems) - Original Poster, Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>0</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>46</span>
+          </td>
+          <td>
+            September 10, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='28'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/geteventlines-fail-on-a-installation-2026-r1/14736' class='title raw-link raw-topic-link'>GetEventLines fail on a installation (2026 R1)</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/ChristophAcs" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/christophacs/25/3354_2.png" class="avatar" title='Christoph Acs - Original Poster, Most Recent Poster' aria-label='Christoph Acs - Original Poster, Most Recent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Vince" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/v/b5e925/25.png" class="avatar" title='Vincent - Frequent Poster' aria-label='Vincent - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Frequent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>8</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>93</span>
+          </td>
+          <td>
+            September 10, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='29'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/unable-to-close-alarm-with-api-milestone-2026-r1/14722' class='title raw-link raw-topic-link'>Unable to close alarm with API Milestone 2026 R1</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/general/4' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #25AAE2'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>General</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/pjgreeff" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/p/c2a13f/25.png" class="avatar" title='Phillip Greeff - Original Poster' aria-label='Phillip Greeff - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/HansK" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/h/bc8723/25.png" class="avatar" title='Hans Kierulff (Milestone Systems) - Frequent Poster' aria-label='Hans Kierulff (Milestone Systems) - Frequent Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>7</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>109</span>
+          </td>
+          <td>
+            September 8, 2026
+          </td>
+        </tr>
+        <tr class="topic-list-item">
+          <td class="main-link" itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>
+            <meta itemprop='position' content='30'>
+            <span class="link-top-line">
+              <a itemprop='url' href='https://forum.milestonesys.com/t/how-to-retrieve-currently-registered-devices-and-receive-device-add-delete-events-from-a-recording-server-via-the-mip-sdk/14772' class='title raw-link raw-topic-link'>How to Retrieve Currently Registered Devices and Receive Device Add/Delete Events from a Recording Server via the MIP SDK</a>
+            </span>
+            <div class="link-bottom-line">
+                <a href='/c/mip/5' class='badge-wrapper bullet'>
+                  <span class='badge-category-bg' style='background-color: #F7941D'></span>
+                  <span class='badge-category clear-badge'>
+                    <span class='category-name'>MIP</span>
+                  </span>
+                </a>
+                <div class="discourse-tags">
+                    <a href='https://forum.milestonesys.com/tag/component-integration/1' class='discourse-tag'>component-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/plugin-integration/17' class='discourse-tag'>plugin-integration</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/milestone/21' class='discourse-tag'>milestone</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/mip/26' class='discourse-tag'>mip</a>
+                    ,&nbsp;
+                    <a href='https://forum.milestonesys.com/tag/sdk/34' class='discourse-tag'>sdk</a>
+                    
+                </div>
+            </div>
+          </td>
+          <td class='posters'>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/ayoung" class="">
+                <img width="25" height="25" src="/letter_avatar_proxy/v4/letter/a/db5fbb/25.png" class="avatar" title='Ay Kim - Original Poster' aria-label='Ay Kim - Original Poster'>
+              </a>
+              <a rel='nofollow' href="https://forum.milestonesys.com/u/Bo_Ellegard_Andersen" class="latest">
+                <img width="25" height="25" src="/user_avatar/forum.milestonesys.com/bo_ellegard_andersen/25/3243_2.png" class="avatar" title='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster' aria-label='Bo Ellegård Andersen (Milestone Systems) - Most Recent Poster'>
+              </a>
+          </td>
+          <td class="replies">
+            <span class='posts' title='posts'>1</span>
+          </td>
+          <td class="views">
+            <span class='views' title='views'>47</span>
+          </td>
+          <td>
+            September 8, 2026
+          </td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+
+  <div class="navigation" role='navigation' itemscope itemtype='http://schema.org/SiteNavigationElement'>
+      <span itemprop='name'><b><a href='/latest?no_definitions=true&amp;page=1' rel='next' itemprop='url'>next page →</a></b></span>
+  </div>
+
+ <!-- include_crawler_content? -->
+
+
+
+
+    </div>
+    <footer class="container wrap">
+  <nav class='crawler-nav'>
+    <ul>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/' itemprop="url">Home </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/categories' itemprop="url">Categories </a>
+        </span>
+      </li>
+      <li itemscope itemtype='http://schema.org/SiteNavigationElement'>
+        <span itemprop='name'>
+          <a href='/guidelines' itemprop="url">Guidelines </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <p class='powered-by-link'>Powered by <a href="https://www.discourse.org">Discourse</a>, best viewed with JavaScript enabled</p>
+</footer>
+
+    
+    
+  </body>
+  
+</html>

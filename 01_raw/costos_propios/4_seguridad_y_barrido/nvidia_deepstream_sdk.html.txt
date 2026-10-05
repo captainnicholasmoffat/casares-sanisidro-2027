@@ -1,0 +1,370 @@
+ 
+ DeepStream SDK | NVIDIA Developer | NVIDIA Developer 
+ Home 
+ Deep Learning 
+ Deep Learning Software 
+ DeepStream SDK
+ Quick Links
+ Get Started 
+ Download DeepStream 
+ NVIDIA DeepStream SDK
+ NVIDIA DeepStream’s open, multi-platform support gives you a faster, easier way to develop and deploy real-time video streaming pipelines for generative AI agents and applications. You can even deploy them on premises, at the edge, and in the cloud with just the click of a button.
+ Get Started Download DeepStream 
+ What Is NVIDIA DeepStream?
+ The NVIDIA DeepStream SDK is an open source, comprehensive real-time streaming analytics toolkit based on GStreamer for AI-based multi-sensor processing, video, audio, and image understanding. It’s ideal for developers, software partners, startups, and OEMs building vision AI agents, applications, and services for a wide range of industries like smart cities, retail, manufacturing, and more.
+You can now create and deploy stream-processing pipelines that incorporate generative AI and other complex processing tasks like multi-camera tracking in minutes with agent skills. To further accelerate development, DeepStream is also part of the NVIDIA Metropolis Blueprint for Video Search and Summarization (VSS) . This sample architecture for building visual AI agents can extract valuable insights from massive volumes of industrial video sensor data in real time.
+ DeepStream is an integral part of NVIDIA Metropolis , the platform for building end-to-end services and solutions that transform pixel and sensor data to actionable insights. 
+ Benefits
+ Rapidly Deploy AI From the Cloud to the Edge
+ The DeepStream SDK provides a complete video stream processing, ingestion, multi-camera, tracking pipeline that’s 100% NVIDIA GPU-accelerated. It’s ideal for a wide range of use cases across industries such as manufacturing, logistics, retail, and more.
+ Reduce Development Time to Minutes With Skills
+ Use DeepStream agent skills with coding agents to easily generate complete video analytics pipelines from natural language prompts, simplifying pipeline creation from weeks to hours. 
+ Gain Valuable Multimodal Insights in Real Time
+ Extract rich metadata and intelligence about what’s happening, where, when, and how in real time from sensor data such as images, video, audio, and lidar.
+ Achieve the Lowest Total Cost of Ownership With NVIDIA GPUs
+ Increase stream density, maximize performance, and minimize TCO by deploying AI models with DeepStream on NVIDIA hardware.
+ Use the Programming Language of Your Choice
+ Access multiple programming language options to create powerful vision AI applications using C/C++ and Python. 
+ Build Without Friction With Open Source
+ DeepStream goes open source, providing free access to production-grade video AI you can embed, customize, and deploy at scale.
+ Unique Capabilities
+ Accelerate Vision AI Development With Coding Agents and GPU-Accelerated Plug-Ins
+ DeepStream kickstarts the development of seamless real-time streaming pipelines for AI-based video, audio, and image analytics. It ships with 40+ hardware-accelerated plug-ins and 30+ sample applications and extensions to optimize pre/post processing, inference, multi-camera tracking, message brokers, and more. 
+ DeepStream Skills helps coding agents automatically generate complete, real-time vision AI pipelines from natural language prompts — accelerating vision AI development from weeks to hours. DeepStream coding agents can use Inference Builder to leverage an extensive list of templates to ensure code quality.
+DeepStream Service Maker simplifies the development process by abstracting the complexities of GStreamer to easily build C++ object-oriented applications. Use Service Maker to build complete DeepStream pipelines with a few lines of code
+ DeepStream Libraries  powered by NVIDIA CV-CUDA™, nvImageCodec, NvImageCodec, and PyNvVideoCodec offer low-level GPU-accelerated operations to optimize pre- and post- stages of vision AI pipelines.
+ Learn More 
+ Enable Multi-Camera Tracking Across 
+a Range of Cameras
+ Multiview 3D tracking (MV3DT), an extension of DeepStream NvTracker, enables distributed, real-time 3D tracking across networks of cameras. It works seamlessly with both 2D and 3D detectors, supporting a wide range of use cases. DeepStream automatically assigns unique IDs for new objects, preserving identity through occlusions and handovers. 
+For precise multi-camera tracking, DeepStream includes a new calibration tool, AutoMagicCalib, that aligns multiple cameras to the deployment floor plan simultaneously. This reduces manual effort and ensures consistent, accurate results. 
+Now both MV3DT and AutoMagicCalib are available as skills.
+ Learn More 
+ Build End-to-End AI Solutions
+ Speed up overall development efforts and unlock greater real-time performance by building end-to-end vision AI applications with NVIDIA Metropolis. Start with production-quality vision AI models, adapt and optimize them with the NVIDIA TAO Toolkit, and deploy using DeepStream. Use the Metropolis VSS Blueprint to build visual AI agents that can process thousands of live videos simultaneously to drive insights and automation. 
+Get incredible flexibility—from rapid prototyping to full production-level solutions—and choose your inference path. With native integration to NVIDIA Dynamo , you can deploy models in native frameworks such as PyTorch and TensorFlow for inference. For high-throughput inference, use NVIDIA TensorRT™ to achieve the best possible performance.
+ Learn More 
+ Click to Expand
+ Click to Expand
+ Enjoy Seamless Development From Edge to Cloud
+ DeepStream’s off-the-shelf containers let you build once and deploy anywhere—on clouds, workstations with NVIDIA GPUs, or NVIDIA Jetson™ devices. With the DeepStream Container Builder and NGC™ containers, you can easily create scalable, high-performance AI applications managed with Kubernetes and Helm.
+DeepStream REST-APIs also let you manage multiple parameters at run time, simplifying the creation of SaaS solutions. With a standard REST-API interface, you can build web portals for control and configuration or integrate into your existing applications.
+ Learn More 
+ Get Production-Ready
+ DeepStream is available as a part of NVIDIA AI Enterprise, an end-to-end, secure, cloud-native AI software platform optimized to accelerate enterprises to the leading edge of AI.
+NVIDIA AI Enterprise delivers validation and integration for NVIDIA AI open source software, access to AI solution workflows to speed time to production, certifications to deploy AI everywhere, and enterprise-grade support, security, and API stability to mitigate the potential risks of open source software.
+ Learn More 
+ Explore Ways to Build a DeepStream Pipeline 
+ Skills
+ Generate complete vision pipelines using DeepStream skills with coding agents like Claude Code or Cursor using natural language prompts, and reduce coding time from 8 weeks to 8 hours.
+ Learn More 
+ Python
+ Construct DeepStream pipelines using Gst Python, the GStreamer framework’s Python bindings. The source code for the binding and Python sample applications are available on GitHub.
+ Learn More About Python 
+ C/C++
+ Create applications in C/C++, interact directly with GStreamer and DeepStream plug-ins, and use reference applications and templates.
+ Learn More About C/C++ 
+ Improve Accuracy and Real-Time Performance
+ DeepStream offers exceptional throughput for a wide variety of object detection, image processing, and instance segmentation AI models. The following table shows the end-to-end application performance from data ingestion, decoding, and image processing to inference. It takes multiple 1080p/30fps streams as input. Note that running on the DLAs for Jetson devices frees up the GPU for other tasks. For performance best practices, watch this video tutorial .
+ Foundation Model
+ | 
+ Tracker
+ | 
+ Precision
+ | 
+ Jetson Thor™ 
+ | 
+ DGX Spark
+ | 
+ L40S
+ | 
+ RTX PRO 4500
+ | 
+ B200
+ | 
+ RTX PRO™ WS
+ | 
+ RTX PRO SE
+ | 
+ MaskGroundingDINO V2
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 23 
+ | 
+ 21
+ | 
+ 102 
+ | 
+ 63 
+ | 
+ 216
+ | 
+ 102
+ | 
+ 101
+ | 
+ C-RADIO-Base 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 1258
+ | 
+ 969
+ | 
+ 2989
+ | 
+ 2050
+ | 
+ 8204
+ | 
+ 4131
+ | 
+ 3754
+ | 
+ C-RADIO-Large
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 547
+ | 
+ 337
+ | 
+ 1097
+ | 
+ 647
+ | 
+ 3831
+ | 
+ 1497
+ | 
+ 1303
+ | 
+ NV-DinoV2-Large 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 431
+ | 
+ 239
+ | 
+ 873
+ | 
+ 533
+ | 
+ 3568
+ | 
+ 1292
+ | 
+ 1173
+ | 
+ RT-DETR 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 195
+ | 
+ 160
+ | 
+ 649
+ | 
+ 345
+ | 
+ 1280
+ | 
+ 659
+ | 
+ 978
+ | 
+ RT-DETR
+ | 
+ NvDCF 
+ | 
+ FP16 
+ | 
+ 171 
+ | 
+ 153
+ | 
+ 615
+ | 
+ 316
+ | 
+ 1249
+ | 
+ 640
+ | 
+ 955
+ | 
+ RT-DETR 
+ | 
+ MV3DT 
+ | 
+ FP16 
+ | 
+ 90 
+ | 
+ 100
+ | 
+ 237
+ | 
+ 257
+ | 
+ 900
+ | 
+ 645
+ | 
+ 537
+ | 
+ TrafficCamNet Transformer Lite 
+ | 
+ NvDCF 
+ | 
+ FP16 
+ | 
+ 144
+ | 
+ 139 
+ | 
+ 665
+ | 
+ 369 
+ | 
+ 1088
+ | 
+ 650
+ | 
+ 918
+ | 
+ Peoplenet2.6.3
+ | 
+ MV3DT 
+ | 
+ FP16 
+ | 
+ 363 
+ | 
+ 350 
+ | 
+ 724
+ | 
+ 595
+ | 
+ 2016
+ | 
+ 1225
+ | 
+ 763
+ | 
+ Peoplenet Transformer
+ | 
+ MV3DT 
+ | 
+ FP16 
+ | 
+ 24
+ | 
+ 13
+ | 
+ 137
+ | 
+ 78
+ | 
+ 230
+ | 
+ 208
+ | 
+ 175
+ | 
+ Grounding-DINO 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 23 
+ | 
+ 21
+ | 
+ 101
+ | 
+ 63
+ | 
+ 218
+ | 
+ 103
+ | 
+ 102
+ | 
+ SegFormer + C-RADIO-Base 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 253 
+ | 
+ 201
+ | 
+ 1008
+ | 
+ 435
+ | 
+ 1488
+ | 
+ 1236
+ | 
+ 1061
+ | 
+ Mask2Former + SWIN 
+ | 
+ No Tracker 
+ | 
+ FP16 
+ | 
+ 26 
+ | 
+ 29
+ | 
+ 76
+ | 
+ 70
+ | 
+ 144
+ | 
+ 75
+ | 
+ 99
+ | 
+ The DeepStream SDK lets you apply AI to streaming video and simultaneously optimize video decode/encode, image scaling, conversion, and edge-to-cloud connectivity for complete end-to-end performance optimization.
+To learn more about the performance using DeepStream, check the documentation .
+ Read Customer Stories
+ Enhance City Safety and Mobility
+ The City of Raleigh used NVIDIA DeepStream and the VSS Blueprint to build AI agents and provide real-time insights 4x faster—potentially saving commuters an estimated $9.7 million annually in time and fuel costs.
+ Read the Story 
+ Enhancing Distribution Center Operation 
+ KoiReader developed an AI-powered machine vision solution using NVIDIA developer tools that included the DeepStream SDK to help PepsiCo achieve precision and efficiency in dynamic distribution environments.
+ Read the Blog  
+ Optimizing Operations at Bengaluru Airport
+ Industry.AI used the NVIDIA Metropolis stack, including DeepStream, to increase the safety and efficiency of the airport. Using vision AI, it was able to track abandoned baggage, flag long passenger queues, and alert security teams of potential issues.
+ Read the Blog 
+ General FAQ
+ DeepStream is now open source and the source code is now available on GitHub , including all DeepStream-related tools. DeepStream Inference Builder will be open source and available on GitHub . Please note that a few libraries remain closed. 
+ The DeepStream SDK can be used to build end-to-end AI-powered applications to analyze video and sensor data. Some popular use cases are retail analytics, parking management, managing logistics, optical inspection, robotics, and sports analytics.
+ See the Platforms and OS compatibility table .
+ Yes, that’s now possible with the integration of Dynamo. Also, since DeepStream 6.1.1, applications can communicate with independent/remote instances of Dynamo using gPRC.
+ DeepStream supports several popular models out of the box. For instance, DeepStream supports all NVIDIA TAO models and ships with an example to run YOLO models.
+ Yes, DeepStream 8.0 or later supports NVIDIA Blackwell architecture.
+ Audio processing capabilities, including automatic speech recognition (ASR) and text‑to‑speech (TTS), are no longer supported directly within DeepStream. Customers requiring speech recognition or speech synthesis should use the NVIDIA Riva Speech AI SDK, which provides production‑grade ASR and TTS services optimized for NVIDIA GPUs.
+ Build high-performance vision AI apps and services using the DeepStream SDK.
+ Get Started 

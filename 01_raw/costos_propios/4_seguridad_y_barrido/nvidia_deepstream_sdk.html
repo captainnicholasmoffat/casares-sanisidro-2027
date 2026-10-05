@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang='en' class='h-100' data-color-scheme='light'>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="gr1iyi_0mclMv99j6AhlaTJeoGw05KQ8mXu891yO5B4eQ_E3xGWmAHf0dEKjHT8pnNw_zEsGF6krmbWzH6ltMQ" />
+    <meta name="csp-nonce" />
+    <title>DeepStream SDK | NVIDIA Developer | NVIDIA Developer</title>
+<meta name="description" content="Explore the streaming analytics toolkit for AI-based multi-sensor processing, video, audio, and image understanding.">
+<meta name="keywords" content="deepstream sdk, video analytics, vision ai, image processing, object detection, nvidia">
+<link rel="canonical" href="https://developer.nvidia.com/deepstream-sdk">
+<link rel="alternate" href="https://developer.nvidia.com/deepstream-sdk" hreflang="x-default">
+<link rel="alternate" href="https://developer.nvidia.com/deepstream-sdk" hreflang="en-us">
+<link rel="alternate" href="https://developer.nvidia.com/ja-jp/deepstream-sdk" hreflang="ja-jp">
+<link rel="alternate" href="https://developer.nvidia.com/ko-kr/deepstream-sdk" hreflang="ko-kr">
+<link rel="alternate" href="https://developer.nvidia.cn/deepstream-sdk" hreflang="zh-cn">
+<meta property="og:site_name" content="NVIDIA Developer">
+<meta property="og:title" content="DeepStream SDK">
+<meta property="og:description" content="Develop and deploy AI-powered intelligent video analytics apps and services faster anywhere.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/embedded-kv-deepstream-sdk-1200x630.jpg">
+<meta property="og:url" content="https://developer.nvidia.com/deepstream-sdk">
+<meta name="twitter:title" content="NVIDIA DeepStream SDK">
+<meta name="twitter:description" content="Explore the complete streaming analytics toolkit based on GStreamer for AI-based multi-sensor processing, video, audio, and image understanding.">
+<meta name="twitter:image" content="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/embedded-kv-deepstream-sdk-1200x630.jpg">
+<meta name="twitter:site" content="@NVIDIA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@NVIDIA">
+<meta name="nv-cre-date" content="2023-09-18T17:01:32.511Z">
+<meta name="nv-pub-date" content="2026-07-15T23:59:42.078Z">
+<meta property="interest" content="Computer Vision / Video Analytics">
+    <link rel="alternate" type="text/markdown" title="Page Markdown" href="https://developer.nvidia.com/deepstream-sdk.md">
+
+    <link rel="stylesheet" href="https://developer.nvidia.com/assets/application-9e4a823de8771e59cf1ae04de333e5e14d86a990b878d196a65779d7140a6415.css" media="all" />
+
+    <script>
+  const NvAssets = {
+    CSS: {
+      highlightJs: "https://developer.nvidia.com/assets/highlight-7c6157fe69da4cc401cddeb387737d6991b2012dc14e90f3d52764a3a58fd3da.css",
+    }
+  }
+</script>
+
+
+    
+  <link rel="stylesheet" href="https://developer.nvidia.com/assets/one-trust-bea625cf16a072ce5fdb0707a19f2645daf63c05eb1a016db72773eba008fc07.css" />
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="3e2b62ff-7ae7-4ac5-87c8-d5949ecafff5"></script>
+
+<script src="https://images.nvidia.com/aem-dam/Solutions/ot-js/ot-custom.js"></script>
+
+<script>
+  function OptanonWrapper() {
+    let event = new Event('bannerLoaded');
+    window.dispatchEvent(event);
+
+      if (window.OnetrustActiveGroups && window.OnetrustActiveGroups.includes("C0002")) {
+        window.DD_RUM && window.DD_RUM.init({
+          clientToken: 'pub0430c74fae5d2b467bcb8d48b13e5b32',
+          applicationId: '9fc963c7-14e6-403d-bdec-ee671550bb7f',
+          site: 'datadoghq.com',
+          service: 'devzone',
+          env: 'prod',
+          version: 'v2.60.0',
+          sessionSampleRate: 10,
+          sessionReplaySampleRate: 5,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: 'mask-user-input',
+        });
+      }
+  }
+</script>
+
+
+    <script>
+  (function() {
+    var didInit = false;
+    function initMunchkin() {
+      if(didInit === false) {
+        didInit = true;
+        Munchkin.init('156-OFN-742');
+      }
+    }
+    function loadMunchkin() {
+      // Munchkin falls under the OneTrust "Advertising" category (C0004); only
+      // load it once the user has consented to that category.
+      if (!window.OnetrustActiveGroups || !window.OnetrustActiveGroups.includes("C0004")) {
+        return;
+      }
+      // bannerLoaded re-fires on every consent change; once we have consent we
+      // only need to inject the script tag once.
+      window.removeEventListener('bannerLoaded', loadMunchkin);
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//munchkin.marketo.net/munchkin.js';
+      s.onreadystatechange = function() {
+        if (this.readyState == 'complete' || this.readyState == 'loaded') {
+          initMunchkin();
+        }
+      };
+      s.onload = initMunchkin;
+      document.getElementsByTagName('head')[0].appendChild(s);
+    }
+    // OnetrustActiveGroups is populated asynchronously after the OneTrust SDK
+    // loads, which dispatches "bannerLoaded" (see layouts/_one_trust). Wait for
+    // that signal so consenting users still get Munchkin, then re-check on each
+    // consent change (the didInit guard keeps init idempotent).
+    window.addEventListener('bannerLoaded', loadMunchkin);
+})();
+</script>
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NVIDIA Developer",
+    "url": "https://developer.nvidia.com",
+    "logo": "https://www.nvidia.com/en-us/about-nvidia/legal-info/logo-brand-usage/_jcr_content/root/responsivegrid/nv_container_392921705/nv_container_412055486/nv_image.coreimg.100.630.png/1703060329095/nvidia-logo-horz.png",
+    "sameAs": [
+      "https://github.com/nvidia",
+      "https://www.linkedin.com/company/nvidia/",
+      "https://x.com/nvidiadeveloper"
+    ]
+  }
+</script>
+
+    
+    <meta name='typesense-host' content='typesense.svc.nvidia.com'>
+<meta name='typesense-key' content='uFs9XGl9BWS7af7eAIbKNQ49sJnjEfQk'>
+<script src="https://developer.download.nvidia.com/scripts/typesense.js"></script>
+
+
+    <script src="https://assets.adobedtm.com/5d4962a43b79/c1061d2c5e7b/launch-191c2462b890.min.js" data-ot-ignore="true"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://developer.nvidia.com/assets/bootstrap/5.1.3/bootstrap.bundle.min-51ad1d8cab4ebd9873a0429f5e67ca717a71fd96daf8025bc04a88848e5b375c.js"></script>
+
+
+    <link rel="icon" type="image/x-icon" href="https://developer.nvidia.com/assets/favicon-81bff16cada05fcff11e5711f7e6212bdc2e0a32ee57cd640a8cf66c87a6cbe6.ico" />
+  </head>
+
+  <body class='d-flex flex-column h-100'>
+    
+    
+
+      <div id='header'></div>
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div id='page-mobile-nav-container'></div>
+    <div class='page'>
+      <div class="product-page">
+<div class="container breadcrumb-container"><div class="col"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/" id="iqr9">Home</a></li>
+<div id="io9dm4" class="breadcrumb-item"><a href="https://developer.nvidia.com/deep-learning" id="ieybaj"> Deep Learning</a></div>
+<div id="ijhkmw" class="breadcrumb-item"><a href="https://developer.nvidia.com/deep-learning-software" id="iky1mh">Deep Learning Software</a></div>
+<div id="iyw7xk" class="breadcrumb-item active">DeepStream SDK</div>
+</ol></div></div>
+<div class="container page"><div class="row">
+<div class="col-xl-2 col-lg-3 col-md-12 col-sm-12 col-sidebar"><aside class="page__sidebar with-sticky-nav"><div class="page-navigation-container">
+<div class="page-quick-links">
+<p class="p--small page-quick-links__header">Quick Links</p>
+<ul>
+<li><a href="/deepstream-sdk" class="link-cta page-quick-links__link">Get Started</a></li>
+<li><a href="https://github.com/NVIDIA/DeepStream" target="_blank" class="link-cta page-quick-links__link pe-4">Download DeepStream</a></li>
+</ul>
+</div>
+<hr>
+<div data-react-class="PageNavigation" data-react-props='{"draggable":"true","editable":"true","id":"iysymu"}' data-react-cache-id="PageNavigation-iysymu"></div>
+</div></aside></div>
+<div class="col-xl-1 col-lg-1 col-separator with-border"></div>
+<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-main-content"><main class="page__content"><section class="page__section page__first-section"><div class="separator separator--no-scale separator--60 d-md-block d-lg-none"></div>
+<h1 title="Introduction" class="h--large section__heading toc-item">NVIDIA DeepStream SDK</h1>
+<p class="p--large text-color-gray">NVIDIA DeepStream’s open, multi-platform support gives you a faster, easier way to develop and deploy real-time video streaming pipelines for generative AI agents and applications. You can even deploy them on premises, at the edge, and in the cloud with just the click of a button.</p>
+<p id="isgvi"><a href="https://developer.nvidia.com/deepstream-getting-started" target="" title="Get Started" class="btn btn-cta me-2 mt-2">Get Started</a><a href="https://github.com/NVIDIA/DeepStream" target="_blank" title="Download DeepStream" class="btn btn-cta--light btn-cta me-2 mt-2">Download DeepStream</a></p></section><hr class="separator separator--md">
+<p class="mb-0"></p>
+<section class="page__section page__second-section pb-0 pt-0"><h2 class="h--medium section__heading toc-item">What Is NVIDIA DeepStream?</h2>
+<p class="mb-0 p--medium">The NVIDIA DeepStream SDK is an open source, comprehensive real-time streaming analytics toolkit based on GStreamer for AI-based multi-sensor processing, video, audio, and image understanding. It’s ideal for developers, software partners, startups, and OEMs building vision AI agents, applications, and services for a wide range of industries like smart cities, retail, manufacturing, and more.<br><br>You can now create and deploy stream-processing pipelines that incorporate generative AI and other complex processing tasks like multi-camera tracking in minutes with agent skills. To further accelerate development, DeepStream is also part of the <a href="https://build.nvidia.com/nvidia/video-search-and-summarization/nim" id="izsytc" target="_blank">NVIDIA Metropolis Blueprint for Video Search and Summarization (VSS)</a>. This sample architecture for building visual AI agents can extract valuable insights from massive volumes of industrial video sensor data in real time.<br></p>
+<figure id="ik2zhp-2"><img alt="What is DeepStream and how does the software stack look like" src="https://developer.download.nvidia.com/images/deepstream/metropolis-deepstream-vision-ai-edge.jpg" class="img-fluid figure-img"><figcaption><div id="irgxph">DeepStream is an integral part of <a href="https://www.nvidia.com/en-us/autonomous-machines/intelligent-video-analytics-platform/" id="ijkyol">NVIDIA Metropolis</a>, the platform for building end-to-end services and solutions that transform pixel and sensor data to actionable insights. </div></figcaption></figure></section><hr class="separator separator--md">
+<section class="page__section page__second-section pb-0 pt-0"><div id="imb4u-2" class="figure"><div class="figure-caption"></div></div>
+<h2 title="Benefits" class="h--medium section__heading toc-item tablet-45">Benefits<br>
+</h2>
+<div class="row cards-grid--60">
+<div class="col-lg-4 col-sm-12 grid-col col-md-6">
+<img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/m48-configuration-sdk-256px-blk.png" id="i1iq9p-2" alt="decorative icon" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Rapidly Deploy AI From the Cloud to the Edge</h3>
+<p class="mb-0">The DeepStream SDK provides a complete video stream processing, ingestion, multi-camera, tracking pipeline that’s 100% NVIDIA GPU-accelerated. It’s ideal for a wide range of use cases across industries such as manufacturing, logistics, retail, and more.<br></p>
+</div>
+<div class="col-lg-4 col-sm-12 grid-col col-md-6">
+<img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/m48-microservices-2-256x-blk.png" id="iw48u5-2" alt="decorative icon" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Reduce Development Time to Minutes With Skills</h3>
+<p class="mb-0">Use DeepStream agent skills with coding agents to easily generate complete video analytics pipelines from natural language prompts, simplifying pipeline creation from weeks to hours. </p>
+</div>
+<div class="col-lg-4 col-sm-12 grid-col col-md-6">
+<img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/m48-speed-256px-blk.png" id="ia9peg-2" alt="decorative icon" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Gain Valuable Multimodal Insights in Real Time</h3>
+<p class="mb-0">Extract rich metadata and intelligence about what’s happening, where, when, and how  in real time from sensor data such as images, video, audio, and lidar.</p>
+</div>
+<div class="col-sm-12 grid-col col-md-6 col-lg-4">
+<img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/m48-edge-computing-256px-blk.png" id="ipodne-2" alt="decorative icon" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Achieve the Lowest Total Cost of Ownership With NVIDIA GPUs</h3>
+<p class="mb-0">Increase stream density, maximize performance, and minimize TCO by deploying AI models with DeepStream on NVIDIA hardware.<br></p>
+</div>
+<div class="col-sm-12 grid-col col-md-6 col-lg-4">
+<img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/m48-complexity-1-256px-blk.png" id="ieofei-2" alt="decorative icon" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Use the Programming Language of Your Choice</h3>
+<p class="mb-0">Access multiple programming language options to create powerful vision AI applications using C/C++ and Python. </p>
+</div>
+<div class="col-sm-12 grid-col col-md-6 col-lg-4">
+<img src="https://developer.download.nvidia.com/icons/m48-lock-open.svg" id="ieofei-2-2" alt="A decorative image of  DeepStream providing multiple programming options" class="img-fluid mw-6-rem svg-icon"><h3 class="h--smaller">Build Without Friction With Open Source</h3>
+<p class="mb-0">DeepStream goes open source, providing free access to production-grade video AI you can embed, customize, and deploy at scale.<br></p>
+</div>
+</div></section><hr class="separator separator--md">
+<section class="page__section pt-0 pb-0"><h2 title="Capabilities" class="h--medium section__heading toc-item tablet-45">Unique Capabilities<br>
+</h2>
+<div class="row nv-waterfall">
+<div class="col-lg-6 col-md-12 col-sm-12 js-text-column text-column">
+<h1 id="iv2o4k-2" class="h--smaller">Accelerate Vision AI Development With Coding Agents and GPU-Accelerated Plug-Ins<br>
+</h1>
+<p id="ib7j3o-2">DeepStream kickstarts the development of seamless real-time streaming pipelines for AI-based video, audio, and image analytics. It ships with 40+ hardware-accelerated plug-ins and 30+ sample applications and extensions to optimize pre/post processing, inference, multi-camera tracking, message brokers, and more. <br><br><b id="i82ayg">DeepStream Skills</b> helps coding agents automatically generate complete, real-time vision AI pipelines from natural language prompts —  accelerating vision AI development from weeks to hours. DeepStream coding agents can use Inference Builder to leverage an extensive list of templates to ensure code quality.<br><b><br>DeepStream Service Maker</b> simplifies the development process by abstracting the complexities of GStreamer to easily build C++ object-oriented applications. Use Service Maker to build complete DeepStream pipelines with a few lines of code<br><br><b>DeepStream Libraries</b> powered by NVIDIA CV-CUDA™, nvImageCodec, NvImageCodec, and PyNvVideoCodec offer low-level GPU-accelerated operations to optimize pre- and post- stages of vision AI pipelines.</p>
+<a href="https://github.com/NVIDIA-AI-IOT/inference_builder" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a>
+</div>
+<div class="col-md-12 col-sm-12 image-column js-image-column col-lg-6">
+<figure id="iftj3i" title="A diagram showing how DeepStream inference builder works to accelerate vision AI. "><div title="Watch video of multi-camera tracking across a range of cameras with Multiview 3D tracking" class="ratio ratio-16x9"><video id="izlyay-2" src="https://developer.download.nvidia.com/images/deepstream/DS-Copilot-Demo-Update-005.mp4" loop="" controls=""></video></div></figure> </div>
+</div>
+<div class="row nv-waterfall">
+<div class="col-md-12 col-sm-12 image-column js-image-column col-lg-6"><figure id="iq37jz" title="Watch video of multi-camera tracking across a range of cameras with Multiview 3D tracking"><div title="Watch video of multi-camera tracking across a range of cameras with Multiview 3D tracking" class="ratio ratio-16x9"><video id="izlyay" src="https://developer.download.nvidia.com/images/deepstream/multiview-3d-tracking-6-14.mp4" loop="" autoplay=""></video></div> </figure></div>
+<div class="col-md-12 col-sm-12 text-column js-text-column col-lg-6">
+<h4 id="ibechh" class="h--smaller">Enable Multi-Camera Tracking Across <br>a Range of Cameras</h4>
+<p id="iu969d" title="MV3DT enables real-time 3D tracking across multiple cameras. ">Multiview 3D tracking (MV3DT), an extension of DeepStream NvTracker, enables distributed, real-time 3D tracking across networks of cameras. It works seamlessly with both 2D and 3D detectors, supporting a wide range of use cases. DeepStream automatically assigns unique IDs for new objects, preserving identity through occlusions and handovers. <br><br>For precise multi-camera tracking, DeepStream includes a new calibration tool, AutoMagicCalib, that aligns multiple cameras to the deployment floor plan simultaneously. This reduces manual effort and ensures consistent, accurate results. <br><br>Now both MV3DT and AutoMagicCalib are available as skills.<br><br></p>
+<a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_MV3DT.html" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a>
+</div>
+</div>
+<div class="row nv-waterfall">
+<div class="col-md-12 col-sm-12 text-column js-text-column col-lg-6">
+<h1 id="i1dxdw" class="h--smaller">Build End-to-End AI Solutions<br>
+</h1>
+<p id="iklxkx">Speed up overall development efforts and unlock greater real-time performance by building end-to-end vision AI applications with NVIDIA Metropolis. Start with production-quality vision AI models, adapt and optimize them with the NVIDIA TAO Toolkit, and deploy using DeepStream. Use the Metropolis VSS Blueprint to build visual AI agents that can process thousands of live videos simultaneously to drive insights and automation. <br><br>Get incredible flexibility—from rapid prototyping to full production-level solutions—and choose your inference path. With native integration to NVIDIA <a href="/nvidia-triton-inference-server" id="i1cw7t">Dynamo</a>, you can deploy models in native frameworks such as PyTorch and TensorFlow for inference. For high-throughput inference, use NVIDIA TensorRT™ to achieve the best possible performance.</p>
+<a id="ibi4j2" href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_TAO_integration.html" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a>
+</div>
+<div class="col-md-12 col-sm-12 image-column js-image-column col-lg-6"><figure id="i0n38n" title="DeepStream helps developers build seamless streaming pipeline for AI based video analytics"><a id="im8v1i" href="https://developer.download.nvidia.com/images/deepstream/end-to-end-vision-ai-development-ari.jpg"><img src="https://developer.download.nvidia.com/images/deepstream/end-to-end-vision-ai-development-ari.jpg" alt="DeepStream helps developers build seamless streaming pipeline for AI based video analytics" class="card-img-top img-fluid"></a><figcaption><div id="ijg64u" class="text-center">Click to Expand</div></figcaption></figure></div>
+</div>
+<div class="row nv-waterfall">
+<div class="col-md-12 col-sm-12 image-column js-image-column col-lg-6"><figure id="issvfj" title="DeepStream helps developers build seamless streaming pipeline for AI based video analytics"><a id="ixycu3" href="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/embedded-deepstream-sdk3.jpg"><img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/deepstream/embedded-deepstream-sdk3.jpg" alt="DeepStream helps developers build seamless streaming pipeline for AI based video analytics" class="card-img-top img-fluid"></a><figcaption id="inx0hz"><div id="ija6yr" class="text-center">Click to Expand</div></figcaption></figure></div>
+<div class="col-md-12 col-sm-12 text-column js-text-column col-lg-6">
+<h4 id="i1f21a" class="h--smaller">Enjoy Seamless Development From Edge to Cloud</h4>
+<p id="imr3nf-2">DeepStream’s off-the-shelf containers let you build once and deploy anywhere—on clouds, workstations with NVIDIA GPUs, or NVIDIA Jetson™ devices. With the DeepStream Container Builder and NGC™ containers, you can easily create scalable, high-performance AI applications managed with Kubernetes and Helm.<br><br>DeepStream REST-APIs also let you manage multiple parameters at run time, simplifying the creation of SaaS solutions. With a standard REST-API interface, you can build web portals for control and configuration or integrate into your existing applications.<br></p>
+<a id="iv1huc-2" href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a>
+</div>
+</div>
+<div class="row nv-waterfall">
+<div class="col-md-12 col-sm-12 text-column js-text-column col-lg-6">
+<h1 id="i4abjm" class="h--smaller">Get Production-Ready</h1>
+<p id="irjb2u">DeepStream is available as a part of NVIDIA AI Enterprise, an end-to-end, secure, cloud-native AI software platform optimized to accelerate enterprises to the leading edge of AI.<br><br>NVIDIA AI Enterprise delivers validation and integration for NVIDIA AI open source software, access to AI solution workflows to speed time to production, certifications to deploy AI everywhere, and enterprise-grade support, security, and API stability to mitigate the potential risks of open source software.</p>
+<a id="itznw4" href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a>
+</div>
+<div class="col-md-12 col-sm-12 image-column js-image-column col-lg-6"><figure id="ilsjxl" title="A collage of images showing DeepStream as a part of NVIDIA AI Enterprise to help deploy AI anywhere"><img src="https://d29g4g2dyqv443.cloudfront.net/sites/default/files/akamai/nvidia-ai-enterprise-630x354_1.jpg" alt="A collage of images showing DeepStream as a part of NVIDIA AI Enterprise to help deploy AI anywhere" class="card-img-top"></figure></div>
+</div></section><section class="page__section pt-0 pb-0"><hr class="separator separator--md">
+<h2 title="Programming Options" class="h--medium section__heading toc-item tablet-45">Explore Ways to Build a DeepStream Pipeline <br>
+</h2>
+<div class="row cards__list">
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card"><div class="card__content">
+<div id="i5774d">
+<h3 class="h--smaller txt-clr--blck">Skills</h3>
+<p class="mb-0">Generate complete vision pipelines using DeepStream skills with coding agents like Claude Code or Cursor using natural language prompts, and reduce coding time from 8 weeks to 8 hours.</p>
+</div>
+<div class="card__cta"><a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_AI_Agent.html" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More</a></div>
+</div></div></div></div>
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card"><div class="card__content">
+<div id="i6d8uj">
+<h3 class="h--smaller txt-clr--blck">Python</h3>
+<p class="mb-0">Construct DeepStream pipelines using Gst Python, the GStreamer framework’s Python bindings. The source code for the binding and Python sample applications are available on GitHub.<br></p>
+</div>
+<div class="card__cta mt-3"><a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_service_maker_python.html" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More About Python</a></div>
+</div></div></div></div>
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card"><div class="card__content">
+<div id="iw424m">
+<h3 class="h--smaller txt-clr--blck">C/C++</h3>
+<p class="mb-0">Create applications in C/C++, interact directly with GStreamer and DeepStream plug-ins, and use reference applications and templates.</p>
+</div>
+<div class="card__cta"><a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_C_Sample_Apps.html" target="_blank" class="link-cta text-transform-unset fw-bold">Learn More About C/C++</a></div>
+</div></div></div></div>
+</div></section><hr class="separator separator--md">
+<section class="page__section pt-0 pb-0"><h2 title="Performance" class="h--medium section__heading toc-item">Improve Accuracy and Real-Time Performance<br>
+</h2></section><p id="ioj18j">DeepStream offers exceptional throughput for a wide variety of object detection, image processing, and instance segmentation AI models. The following table shows the end-to-end application performance from data ingestion, decoding, and image processing to inference. It takes multiple 1080p/30fps streams as input. Note that running on the DLAs for Jetson devices frees up the GPU for other tasks. For performance best practices, <a href="https://www.youtube.com/watch?v=Or8vfydL69s&amp;feature=youtu.be" id="iys636" target="_blank">watch this video tutorial</a>.</p>
+        <div class="custom-html-wrapper">
+          <div class="custom-html-wrapper__code">
+<div class="table-responsive nv-table nv-table-alt-row-1">
+  <table class="table">
+    <thead>
+      <tr style="background-color:#f7f7f7;border-bottom-color:#666;">
+        <th style="vertical-align:middle;width:100px;">Foundation Model
+        </th>
+        <th style="vertical-align:middle;width:100px;">Tracker
+        </th>
+        <th style="vertical-align:middle;width:100px;">Precision
+        </th>
+        <th style="vertical-align:middle;width:100px;">Jetson Thor™ 
+        </th>
+        <th style="vertical-align:middle;width:100px;">DGX Spark
+        </th>   
+        <th style="vertical-align:middle;width:100px;">L40S
+        </th>
+        <th style="vertical-align:middle;width:100px;">RTX PRO 4500
+        </th>
+        <th style="vertical-align:middle;width:100px;">B200
+        </th>
+        <th style="vertical-align:middle;width:100px;">RTX PRO™ WS
+        </th>
+        <th style="vertical-align:middle;width:100px;">RTX PRO SE
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">MaskGroundingDINO V2
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">23 
+        </td>
+        <td style="vertical-align:middle;width:100px;">21
+        </td>
+        <td style="vertical-align:middle;width:100px;">102 
+        </td>
+        <td style="vertical-align:middle;width:100px;">63 
+        </td>
+        <td style="vertical-align:middle;width:100px;">216
+        </td>
+        <td style="vertical-align:middle;width:100px;">102
+        </td>
+        <td style="vertical-align:middle;width:100px;">101
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">C-RADIO-Base 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">1258
+        </td>
+        <td style="vertical-align:middle;width:100px;">969
+        </td>
+        <td style="vertical-align:middle;width:100px;">2989
+        </td>
+        <td style="vertical-align:middle;width:100px;">2050
+        </td>
+        <td style="vertical-align:middle;width:100px;">8204
+        </td>
+        <td style="vertical-align:middle;width:100px;">4131
+        </td>
+        <td style="vertical-align:middle;width:100px;">3754
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">C-RADIO-Large
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">547
+        </td>
+        <td style="vertical-align:middle;width:100px;">337
+        </td>
+        <td style="vertical-align:middle;width:100px;">1097
+        </td>
+        <td style="vertical-align:middle;width:100px;">647
+        </td>
+        <td style="vertical-align:middle;width:100px;">3831
+        </td>
+        <td style="vertical-align:middle;width:100px;">1497
+        </td>
+        <td style="vertical-align:middle;width:100px;">1303
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">NV-DinoV2-Large 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">431
+        </td>
+        <td style="vertical-align:middle;width:100px;">239
+        </td>
+        <td style="vertical-align:middle;width:100px;">873
+        </td>
+        <td style="vertical-align:middle;width:100px;">533
+        </td>
+        <td style="vertical-align:middle;width:100px;">3568
+        </td>
+        <td style="vertical-align:middle;width:100px;">1292
+        </td>
+        <td style="vertical-align:middle;width:100px;">1173
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">RT-DETR 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">195
+        </td>
+        <td style="vertical-align:middle;width:100px;">160
+        </td>
+        <td style="vertical-align:middle;width:100px;">649
+        </td>
+        <td style="vertical-align:middle;width:100px;">345
+        </td>
+        <td style="vertical-align:middle;width:100px;">1280
+        </td>
+        <td style="vertical-align:middle;width:100px;">659
+        </td>
+        <td style="vertical-align:middle;width:100px;">978
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">RT-DETR
+        </td>
+        <td style="vertical-align:middle;width:100px;">NvDCF 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">171 
+        </td>
+        <td style="vertical-align:middle;width:100px;">153
+        </td>
+        <td style="vertical-align:middle;width:100px;">615
+        </td>
+        <td style="vertical-align:middle;width:100px;">316
+        </td>
+        <td style="vertical-align:middle;width:100px;">1249
+        </td>
+        <td style="vertical-align:middle;width:100px;">640
+        </td>
+        <td style="vertical-align:middle;width:100px;">955
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">RT-DETR 
+        </td>
+        <td style="vertical-align:middle;width:100px;">MV3DT 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">90 
+        </td>
+        <td style="vertical-align:middle;width:100px;">100
+        </td>
+        <td style="vertical-align:middle;width:100px;">237
+        </td>
+        <td style="vertical-align:middle;width:100px;">257
+        </td>
+        <td style="vertical-align:middle;width:100px;">900
+        </td>
+        <td style="vertical-align:middle;width:100px;">645
+        </td>
+        <td style="vertical-align:middle;width:100px;">537
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">TrafficCamNet Transformer Lite 
+        </td>
+        <td style="vertical-align:middle;width:100px;">NvDCF 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">144
+        </td>
+        <td style="vertical-align:middle;width:100px;">139 
+        </td>
+        <td style="vertical-align:middle;width:100px;">665
+        </td>
+        <td style="vertical-align:middle;width:100px;">369 
+        </td>
+        <td style="vertical-align:middle;width:100px;">1088
+        </td>
+        <td style="vertical-align:middle;width:100px;">650
+        </td>
+        <td style="vertical-align:middle;width:100px;">918
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">Peoplenet2.6.3
+        </td>
+        <td style="vertical-align:middle;width:100px;">MV3DT 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">363 
+        </td>
+        <td style="vertical-align:middle;width:100px;">350 
+        </td>
+        <td style="vertical-align:middle;width:100px;">724
+        </td>
+        <td style="vertical-align:middle;width:100px;">595
+        </td>
+        <td style="vertical-align:middle;width:100px;">2016
+        </td>
+        <td style="vertical-align:middle;width:100px;">1225
+        </td>
+        <td style="vertical-align:middle;width:100px;">763
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">Peoplenet Transformer
+        </td>
+        <td style="vertical-align:middle;width:100px;">MV3DT 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">24
+        </td>
+        <td style="vertical-align:middle;width:100px;">13
+        </td>
+        <td style="vertical-align:middle;width:100px;">137
+        </td>
+        <td style="vertical-align:middle;width:100px;">78
+        </td>
+        <td style="vertical-align:middle;width:100px;">230
+        </td>
+        <td style="vertical-align:middle;width:100px;">208
+        </td>
+        <td style="vertical-align:middle;width:100px;">175
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">Grounding-DINO 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">23 
+        </td>
+        <td style="vertical-align:middle;width:100px;">21
+        </td>
+        <td style="vertical-align:middle;width:100px;">101
+        </td>
+        <td style="vertical-align:middle;width:100px;">63
+        </td>
+        <td style="vertical-align:middle;width:100px;">218
+        </td>
+        <td style="vertical-align:middle;width:100px;">103
+        </td>
+        <td style="vertical-align:middle;width:100px;">102
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">SegFormer + C-RADIO-Base 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">253 
+        </td>
+        <td style="vertical-align:middle;width:100px;">201
+        </td>
+        <td style="vertical-align:middle;width:100px;">1008
+        </td>
+        <td style="vertical-align:middle;width:100px;">435
+        </td>
+        <td style="vertical-align:middle;width:100px;">1488
+        </td>
+        <td style="vertical-align:middle;width:100px;">1236
+        </td>
+        <td style="vertical-align:middle;width:100px;">1061
+        </td>
+      </tr>
+      <tr>
+        <td style="vertical-align:middle;width:100px;">Mask2Former + SWIN 
+        </td>
+        <td style="vertical-align:middle;width:100px;">No Tracker 
+        </td>
+        <td style="vertical-align:middle;width:100px;">FP16 
+        </td>
+        <td style="vertical-align:middle;width:100px;">26 
+        </td>
+        <td style="vertical-align:middle;width:100px;">29
+        </td>
+        <td style="vertical-align:middle;width:100px;">76
+        </td>
+        <td style="vertical-align:middle;width:100px;">70
+        </td>
+        <td style="vertical-align:middle;width:100px;">144
+        </td>
+        <td style="vertical-align:middle;width:100px;">75
+        </td>
+        <td style="vertical-align:middle;width:100px;">99
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+          <div data-react-class="CustomHtml" data-react-props='{"preview":false}'></div>
+        </div>
+        <div id="ixorip">The DeepStream SDK lets you apply AI to streaming video and simultaneously optimize video decode/encode, image scaling, conversion, and edge-to-cloud connectivity for complete end-to-end performance optimization.<br><br>To learn more about the performance using DeepStream, check the <a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Performance.html#" id="iywt4t" target="_blank">documentation</a>.</div>
+<section class="page__section pt-0 pb-0"><hr class="separator separator--md">
+<h2 title="Customer Stories" class="h--medium section__heading toc-item tablet-45">Read Customer Stories<br>
+</h2>
+<div class="row cards__list">
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card">
+<div id="iqp14x" title="YMA  Customer Story Please take the image from the video "><img alt="YMA  Customer Story Please take the image from the video " src="https://developer.download.nvidia.com/images/deepstream/robotics-raleigh-ari.1920x1080.jpg" class="img-fluid"></div>
+<div class="card__content">
+<div id="i3ty2s">
+<h3 class="h--smaller">Enhance City Safety and Mobility</h3>
+<p class="mb-0">The City of Raleigh used NVIDIA DeepStream and the VSS Blueprint to build AI agents and provide real-time insights 4x faster—potentially saving commuters an estimated $9.7 million annually in time and fuel costs.<br></p>
+</div>
+<div class="card__cta"><a href="https://www.nvidia.com/en-us/case-studies/raleigh-smart-city/" target="" class="link-cta text-transform-unset fw-bold">Read the Story</a></div>
+</div>
+</div></div></div>
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card">
+<div id="iqp14x-2" title="KoiReader Customer Story"><img alt="KoiReader Customer Story" src="https://developer.download.nvidia.com/images/deepstream/koireader-distribution-center-operation-ari.jpg" class="img-fluid"></div>
+<div class="card__content">
+<div id="idqk1d">
+<h3 class="h--smaller">Enhancing Distribution Center Operation </h3>
+<p class="mb-0">KoiReader developed an AI-powered machine vision solution using NVIDIA developer tools that included the DeepStream SDK to help PepsiCo achieve precision and efficiency in dynamic distribution environments.</p>
+</div>
+<div class="card__cta"><a href="https://blogs.nvidia.com/blog/pepsi-koivision/" target="_blank" class="link-cta text-transform-unset fw-bold">Read the Blog <i class="chevron-right"></i></a></div>
+</div>
+</div></div></div>
+<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12"><div class="card-wrapper"><div class="card">
+<div id="iqp14x-4" title="Industry.AI Customer Story"><img alt="Industry.AI used NVIDIA Metropolis stack, including DeepStream, to optimize operations at Bengaluru Airport" src="https://developer.download.nvidia.com/images/deepstream/bengaluru-airport-ai-ari.jpg" class="img-fluid"></div>
+<div class="card__content">
+<div id="iefyej">
+<h3 class="h--smaller">Optimizing Operations at Bengaluru Airport<br>
+</h3>
+<p class="mb-0">Industry.AI used the NVIDIA Metropolis stack, including DeepStream, to  increase the safety and efficiency of the airport. Using vision AI, it was able to track abandoned baggage, flag long passenger queues, and alert security teams of potential issues.</p>
+</div>
+<div class="card__cta mt-3"><a href="https://blogs.nvidia.com/blog/bengaluru-airport-vision-ai/" target="_blank" class="link-cta text-transform-unset fw-bold">Read the Blog<i class="chevron-right"></i></a></div>
+</div>
+</div></div></div>
+</div></section><hr class="separator separator--md">
+<section class="page__section pt-0 pb-0"><h2 title="FAQ" class="h--medium section__heading toc-item">General FAQ</h2>
+<div class="Accordion-izax6x-child visually-hidden">
+<div class="AccordionItem-i04rnk-child visually-hidden"><p id="i1ph19">DeepStream is now open source and the source code is now available on <a href="https://github.com/nvidia/deepstream" id="ic0xi6" target="_blank">GitHub</a>, including all DeepStream-related tools. DeepStream Inference Builder will be open source and available on <a href="https://github.com/NVIDIA-AI-IOT/inference_builder" id="i7ltlj" target="_blank">GitHub</a>. Please note that a few libraries remain closed. </p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"Is DeepStream open source?","id":"i04rnk","size":"smallest","childSelector":".AccordionItem-i04rnk-child"}' data-react-cache-id="AccordionItem-i04rnk"></div>
+<div class="AccordionItem-iczu8s-child visually-hidden"><p id="isu07k">The DeepStream SDK can be used to build end-to-end AI-powered applications to analyze video and sensor data. Some popular use cases are retail analytics, parking management, managing logistics, optical inspection, robotics, and sports analytics.</p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"What applications are deployable using the DeepStream SDK?","size":"smallest","id":"iczu8s","childSelector":".AccordionItem-iczu8s-child"}' data-react-cache-id="AccordionItem-iczu8s"></div>
+<div class="AccordionItem-iynjep-child visually-hidden"><p id="i18pl4">See the <a href="https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html#platform-and-os-compatibility" id="inj2bv" target="_blank">Platforms and OS compatibility table</a>.</p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"What platforms and OSs are compatible with DeepStream?","size":"smallest","id":"iynjep","childSelector":".AccordionItem-iynjep-child"}' data-react-cache-id="AccordionItem-iynjep"></div>
+<div class="AccordionItem-ir17hq-child visually-hidden"><p id="iawfq4">Yes, that’s now possible with the integration of Dynamo. Also, since DeepStream 6.1.1, applications can communicate with independent/remote instances of Dynamo using gPRC.<br></p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"Can I run my models natively in TensorFlow or PyTorch with DeepStream?","size":"smallest","id":"ir17hq","childSelector":".AccordionItem-ir17hq-child"}' data-react-cache-id="AccordionItem-ir17hq"></div>
+<div class="AccordionItem-iwrtb6-child visually-hidden"><p id="isv86i">DeepStream supports several popular models out of the box. For instance, DeepStream supports all NVIDIA TAO models and ships with an example to run YOLO models.<br></p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"How do I deploy models from the TAO Toolkit with DeepStream?","size":"smallest","id":"iwrtb6","childSelector":".AccordionItem-iwrtb6-child"}' data-react-cache-id="AccordionItem-iwrtb6"></div>
+<div class="AccordionItem-icerpm-child visually-hidden"><p id="i7a55a">Yes, DeepStream 8.0 or later supports NVIDIA Blackwell architecture.</p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"Is DeepStream supported on NVIDIA Blackwell architecture GPUs?","size":"smallest","id":"icerpm","childSelector":".AccordionItem-icerpm-child"}' data-react-cache-id="AccordionItem-icerpm"></div>
+<div class="AccordionItem-iwpzgh-child visually-hidden"><p id="ik97vj">Audio processing capabilities, including automatic speech recognition (ASR) and text‑to‑speech (TTS), are no longer supported directly within DeepStream. Customers requiring speech recognition or speech synthesis should use the NVIDIA Riva Speech AI SDK, which provides production‑grade ASR and TTS services optimized for NVIDIA GPUs.</p></div>
+<div data-react-class="AccordionItem" data-react-props='{"title":"Are audio transcription and analytics supported with DeepStream SDK?","size":"smallest","id":"iwpzgh","childSelector":".AccordionItem-iwpzgh-child"}' data-react-cache-id="AccordionItem-iwpzgh"></div>
+</div>
+<div data-react-class="Accordion" data-react-props='{"id":"izax6x","childSelector":".Accordion-izax6x-child"}' data-react-cache-id="Accordion-izax6x"></div>
+<div class="separator separator--60"><div data-react-class="Accordion" data-react-props='{"id":"ijejug"}' data-react-cache-id="Accordion-ijejug"></div></div></section><section class="page__section page__section--light-gray page__last-section page__cta-section"><p class="p--large text-center text-color-gray">Build high-performance vision AI  apps and services using the DeepStream SDK.<br></p>
+<p class="text-center mb-0"><a href="/deepstream-getting-started" title="Get Started with DeepStream SDK" class="btn btn-cta">Get Started</a></p></section></main></div>
+</div></div>
+<div class="separator separator--90 phone-0"></div>
+</div>
+    </div>
+
+
+
+
+
+
+          <script type="text/javascript">
+  (() => {
+    const handleQuotesBlock = (quotesBlock, idx) => {
+      const blockquotes = quotesBlock.querySelectorAll('blockquote');
+      if (blockquotes.length < 1) {
+        return;
+      }
+
+      const navContainer = document.createElement('ul');
+      navContainer.classList.add('quotes-list-navigation');
+      for (let i = 0; i < blockquotes.length; i++) {
+        let navItem = document.createElement('li');
+        let btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset['group'] = idx.toString();
+        btn.dataset['length'] = blockquotes.length.toString();
+        btn.value = i.toString();
+
+        btn.addEventListener('click', (e) => {
+          const group = e.target.dataset['group'];
+          const groupActiveButtons = document.querySelectorAll(`button[data-group="${group}"].active`);
+          groupActiveButtons.forEach((activeButton) => {
+            activeButton.classList.remove('active');
+          });
+          e.target.classList.add('active');
+          const viewPortWidth = quotesBlock.getBoundingClientRect().width;
+          const clickedSlide = parseInt(e.target.value);
+          quotesBlock.querySelector('.quotes-list').style.transform = `translate(-${viewPortWidth * clickedSlide}px)`;
+        });
+        navItem.appendChild(btn);
+        navContainer.appendChild(navItem);
+
+        if (i === 0) {
+          btn.click();
+        }
+      }
+      quotesBlock.appendChild(navContainer);
+    };
+
+    const refreshQuotesBlock = () => {
+      document.querySelectorAll('.quotes-list-navigation button.active').forEach((b) => {
+        const currentItem = parseInt(b.value);
+        const maxItem = parseInt(b.dataset['length']);
+        const group = parseInt(b.dataset['group']);
+        const next = currentItem + 1;
+        if (next < maxItem) {
+          document.querySelectorAll(`button[data-group="${group}"]`)[next].click();
+        } else {
+          document.querySelectorAll(`button[data-group="${group}"]`)[0].click();
+        }
+      });
+    };
+
+    const refreshInterval = 4000;
+    const quotesBlocks = document.querySelectorAll('.quotes-list-viewport');
+
+    if (quotesBlocks.length) {
+      quotesBlocks.forEach(handleQuotesBlock);
+      setInterval(refreshQuotesBlock, refreshInterval);
+    }
+  })();
+</script>
+
+      <script type="text/javascript" charset="utf-8">
+  (() => {
+    const doInit = (accordionRoot, idx) => {
+      const baseID = `page-accordion-${idx}`;
+      accordionRoot.id = baseID;
+      const headings = accordionRoot.querySelectorAll('.accordion-header');
+      if (!headings.length) {
+        return;
+      }
+
+      const collapseElements = accordionRoot.querySelectorAll('.accordion-collapse');
+
+      headings.forEach((headingElement, idx) => {
+        const headingID = `${baseID}-heading-${idx}`;
+        const targetID = `${baseID}-target-${idx}`;
+        headingElement.id = headingID;
+        const headingButton = headingElement.querySelector('.accordion-button');
+        if (!headingButton) {
+          return;
+        }
+        headingButton.type = 'button';
+        headingButton.dataset['bsToggle'] = 'collapse';
+        headingButton.dataset['bsTarget'] = `#${targetID}`;
+        headingButton.setAttribute('aria-expanded', true);
+        headingButton.setAttribute('aria-controls', targetID);
+        headingButton.setAttribute('role', 'button');
+
+        if (!collapseElements[idx].classList.contains('show')) {
+          headingButton.classList.add('collapsed');
+        }
+
+        collapseElements[idx].id = targetID;
+        collapseElements[idx].setAttribute('aria-labelledby', headingID);
+      });
+
+      new bootstrap.Collapse(accordionRoot);
+    };
+
+    const initAccordions = () => {
+      const accordions = document.querySelectorAll('section.page__section div.accordion');
+      if (!accordions.length) {
+        return;
+      }
+
+      let accordionIndex = 0;
+      accordions.forEach((accordion) => {
+        doInit(accordion, accordionIndex);
+        accordionIndex += 1;
+      });
+    };
+    
+    document.addEventListener('DOMContentLoaded', initAccordions)
+  })();
+</script>
+
+      <script src="https://developer.nvidia.com/assets/grapesjs-tabs-f0b094476ecf56695b765f533e437303138b1e0824d993c50ff672e16dcccd8f.js"></script>
+      <script src="https://developer.nvidia.com/assets/grapesjs-code-container-d9f9220defaa8a53ba3e8b7a6b1d155f6a1e5e5b37b9fa2282a7ace75bc60ae2.js"></script>
+      <script src="https://developer.nvidia.com/assets/legacy-chart/d3.v4.min-41cfecdf7c41476e805de7afacf4aacdd1a4be6947fbecf95217e947ebc2faf5.js"></script>
+      <script src="https://developer.nvidia.com/assets/legacy-chart/visualize-d-6a082dca95b2facd89f05ef138213cffea2419e9195042f6ceed4aa706943cb1.js"></script>
+      <script src="https://developer.nvidia.com/assets/momentjs/moment-b955adb4137f92dd932ff2c3179ce60cb5e1daed5fcc4423f95cf17df02b4d68.js"></script>
+      <script src="https://developer.nvidia.com/assets/momentjs/moment-timezone-with-data-10-year-range-dd05517070a46fa0052f9e706803d57a4fc38c1a223137ab480369e6308ba8d4.js"></script>
+      <script src="https://developer.nvidia.com/assets/calendar-256ba38a1da92b24c057388ff6623eddd4cf1498f51d1a389cc4dfac501ab87c.js"></script>
+      <script src="https://developer.nvidia.com/assets/hoverable-tooltip-06658c1c074450575999f586a2be4df71fb000fa8fbc3eec0955c1484012c593.js"></script>
+
+    <script src="https://developer.nvidia.com/assets/nv-developer-menu-8ae864e49d5d53c328146a66e7ad6d73242af7511f642a7d1aa1ffedd496f826.js"></script>
+  <div id='footer' class='mt-auto'></div>
+  <script src="https://www.nvidia.com/content/dam/en-zz/Solutions/librarian/bundle-search-prod-pub-v3.1.js"></script>
+  <div id="librarian-overlay"></div>
+  <script defer>
+    setTimeout(() => {
+      LIBRARIAN.Home.mount({
+        elementId: 'librarian-overlay',
+        searchPage: false,
+        placeholder: '',
+        site: 'https://developer.nvidia.com',
+        retainFilters: true,
+        overlay: true,
+        pillsOpen: true,
+        suggestedSearchPills: ["CUDA Toolkit","cuDNN Installation Guide","Computer Vision for Self-Driving Cars","DGX SuperPOD","NVIDIA Container Toolkit","Documentation for Triton Inference Server","NeMo Framework Fundamentals","TensorRT","Download SDK Manager","NVIDIA API Guides","Omniverse Renderer Microservice","CUDA Programming Guide","vGPU","Networking Solutions","Building a RAG Powered AI Chatbot"]
+      })
+    }, 1000)
+  </script>
+<script>
+  // The menu CDN publishes en-US and zh-CN only. Any other available locale
+  // (ja-JP reaches here via the login page and the /ja-jp/ path prefix) would
+  // 404 the header and footer fetches and report a menu error, so fall back
+  // rather than lose the nav.
+  const MENU_LOCALES = ['en-US', 'zh-CN'];
+
+  let menuLocale = 'en';
+
+  if (menuLocale == 'en') {
+    menuLocale = 'en-US';
+  }
+
+  if (!MENU_LOCALES.includes(menuLocale)) {
+    menuLocale = 'en-US';
+  }
+
+  function mountHeader(data = false) {
+    const headerTarget = document.getElementById('header');
+    if (!headerTarget) {
+      return;
+    }
+    let options = {
+      baseURL: window.location.origin,
+      signedIn: false,
+      locale: menuLocale
+    };
+
+    if (data) {
+      options.secondaryMenu = data;
+    }
+
+
+    options.showMembershipCardLink = true;
+
+    new NVDeveloperHeader({
+      target: headerTarget,
+      props: options
+    });
+  }
+
+  function mountFooter(data = false) {
+    const footerTarget = document.getElementById('footer');
+    if (!footerTarget) {
+      return;
+    }
+    let options = {
+      menu: data,
+      locale: menuLocale
+    };
+
+    new NVDeveloperFooter({
+      target: document.getElementById('footer'),
+      props: options
+    });
+  }
+
+  let url = 'd29g4g2dyqv443.cloudfront.net';
+  let headerMenuURL = "https://d29g4g2dyqv443.cloudfront.net/menu/en-US/header-secondary.json";
+
+  if (headerMenuURL) {
+    fetch(headerMenuURL)
+      .then(response => response.json())
+      .then(data => {
+        mountHeader(data);
+      })
+      .catch((error) => {
+        mountHeader();
+        window.nv.tracing.addError('menu', error);
+      });
+  } else {
+    mountHeader();
+  }
+
+  fetch(`https://${url}/menu/${menuLocale}/footer.json`)
+    .then(response => response.json())
+    .then(data => {
+      mountFooter(data);
+    })
+    .catch((error) => {
+      mountFooter();
+      window.nv.tracing.addError('menu', error);
+    });
+</script>
+
+      <script src="https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js"></script>
+
+    
+    
+      <script>
+  let silentAuthHost = 'www.nvidia.com';
+  let crossOriginPageUrl = `https://${silentAuthHost}/auth/hints/`;
+
+  function readHint() {
+    return new Promise((resolve) => {
+      const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+      const iframe = document.createElement('iframe');
+      iframe.hidden = true;
+      iframe.src = crossOriginPageUrl;
+
+      function responseHandler(event) {
+        if (event.origin === targetOrigin) {
+          iframe.parentNode.removeChild(iframe);
+          return resolve(event.data);
+        }
+      }
+
+      window.addEventListener('message', responseHandler, { once: true });
+
+      iframe.onload = () => {
+        iframe.contentWindow.postMessage({ type: 'read' }, targetOrigin);
+      }
+
+      document.body.appendChild(iframe);
+    });
+  }
+
+  function writeHint(login_hint, idp_id, timestamp, sub) {
+    const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+    const iframe = document.createElement('iframe');
+    iframe.hidden = true;
+    iframe.src = crossOriginPageUrl;
+
+    iframe.onload = () => {
+      const message = { type: 'write', login_hint, idp_id, timestamp, sub };
+      iframe.contentWindow.postMessage(message, targetOrigin);
+    }
+
+    document.body.appendChild(iframe);
+  }
+
+  function deleteHint() {
+    const { origin: targetOrigin } = new URL(crossOriginPageUrl);
+
+    const iframe = document.createElement('iframe');
+    iframe.hidden = true;
+    iframe.src = crossOriginPageUrl;
+
+    iframe.onload = () => {
+      iframe.contentWindow.postMessage({ type: 'delete' }, targetOrigin);
+    }
+
+    document.body.appendChild(iframe);
+  }
+
+
+</script>
+
+    <script>_satellite.pageBottom();</script>
+    <script src="https://api-prod.nvidia.com/search/nvidia-search-library.js"></script>
+
+    <script src="https://developer.nvidia.com/assets/nv-gallery-widget-d1571cad15d961fd3ba013f57119be04a2adf32aa31b16be44a0f10f4671c37b.js"></script>
+    <script src="https://developer.nvidia.com/packs/js/runtime-f904b50470fcb0ec9bf4.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/4692-e2ed051c68e93113bb58.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/2681-6ac336ff34441936c0fb.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/2778-e8f3c5f27fbb1956fdb2.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/9878-baa65d618824b708a55b.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8465-f321c9c28242e4383fa8.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/4622-1cd0dbd2a0f0b5243900.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/3566-c56dfeed5cc4ed4a9b8f.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/486-1ddc749b634c231b0122.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8311-71b2da0387dad11f356f.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/1252-6d8bb3f37b33aca41843.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/8823-bac8f579788282b3f2cd.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/2104-e321c989c64d33f15cfd.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/6900-b1b00a8ef19d3868862c.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/application-afbb46c9b6cc3093d8f1.js" defer="defer"></script>
+<script src="https://developer.nvidia.com/packs/js/ls_track-d4505a41101e752062c8.js" defer="defer"></script>
+  </body>
+</html>
