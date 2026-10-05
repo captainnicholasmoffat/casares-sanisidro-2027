@@ -1,0 +1,1965 @@
+A META-ANALYSIS OF LLM EFFECTS ON STUDENTS ACROSS
+QUALIFICATION, SOCIALISATION, AND SUBJECTIFICATION
+A PREPRINT
+Jiayu Huang1,∗, Ruoxin Ritter Wang2,∗, Jen-Hao Liu1, Boming Xia3, Yue Huang4, Ruoxi Sun4,
+Jason (Minhui) Xue3,4, Jinan Zou1,†
+1Australian Institute for Machine Learning, The University of Adelaide
+2Centre for Research in Educational and Social Inclusion, Education Futures, University of South Australia
+3Responsible AI Research (RAIR) Centre, The University of Adelaide
+4CSIRO’s Data61
+* Equal contribution
+† Corresponding author
+October 1, 2025
+ABSTRACT
+Large language models (LLMs) are increasingly positioned as solutions for education, yet evaluations
+often reduce their impact to narrow performance metrics. This paper reframes the question by asking
+“what kind of impact should LLMs have in education?” Drawing on Biesta’s tripartite account
+of good education: qualification, socialisation, and subjectification, we present a meta-analysis
+of 133 experimental and quasi-experimental studies (k = 188). Overall, the impact of LLMs on
+student learning is positive but uneven. Strong effects emerge in qualification, particularly when
+LLMs function as tutors in sustained interventions. Socialisation outcomes appear more variable,
+concentrated in sustained, reflective interventions. Subjectification, linked to autonomy and learner
+development, remains fragile, with improvements confined to small-scale, long-term studies. This
+purpose-level view highlights design as the decisive factor: without scaffolds for participation and
+agency, LLMs privilege what is easiest to measure while neglecting broader aims of education.
+For HCI and education, the issue is not just whether LLMs work, but what futures they enable or
+foreclose.
+Keywords Large Language Models (LLMs) · Meta-analysis · Qualification · Socialisation · Subjectification · Education
+1
+Introduction
+Large language models (LLMs) are entering classrooms at an unprecedented pace, serving as tutors, writing partners,
+and coding assistants [1, 2]. Their adoption is not only an educational shift but also a human–computer interaction
+(HCI) challenge: these systems reshape how learners engage with knowledge, peers, and technology. Because the
+design of AI-mediated platforms will determine whether LLMs foster agency, collaboration, and long-term growth
+or instead reduce learning to quick answers and short-term gains, their rapid rise has sparked intense debate [3, 4].
+Advocates highlight opportunities to democratise knowledge and lighten teacher workload [3], while critics warn of
+diminished critical thinking, weakened academic integrity, and the over-automation of judgement [5].
+Amid these debates, empirical studies highlight both the potential and the pitfalls of LLMs in education. Experimental
+studies point to gains in achievement, higher-order thinking, and engagement [6, 7], and randomised field trials show
+improved short-term performance when LLMs are used with structured prompts [8]. However, other findings caution
+that unguided or answer-provision use can harm long-term learning [9, 10], and prior work warns that over-reliance
+may undermine creativity and learner autonomy [11, 12]. These tensions reflect wider philosophical and policy divides:
+arXiv:2509.22725v2  [cs.CY]  30 Sep 2025
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+governments oscillate between promoting responsible use [13, 14] and imposing school bans [15], while teachers and
+students juggle new opportunities with fears of inequity and disempowerment.
+Most existing evidence, however, is narrowly framed. Current meta-analyses report mainly positive effects [16, 17, 18],
+but almost all treat educational success as improved test scores and skills. As noted by Selwyn [19] and Williamson &
+Piattoeva [20], this “age of measurement” privileges what is easiest to quantify while neglecting what is hardest to value.
+This leaves three gaps: (i) it zooms in on easily measured performance while underreporting interactional participation
+and learner agency; (ii) it offers little theoretical basis for asking what kinds of education LLMs enable (i.e., educational
+purposes); and (iii) it limits empirical coverage (e.g., narrow subjects, higher education, short interventions) and leaves
+open how effects vary across contexts and over longer durations. This requires a conceptual shift from measuring
+isolated skills to evaluating holistic educational aims.
+We address these gaps using Biesta’s tripartite framework of education: qualification, socialisation, and subjectifica-
+tion [21, 22, 23]. This enables us to ask not just whether LLMs raise performance, but also how they shape students’
+social participation and development as autonomous subjects. We conduct a meta-analysis of 133 experimental and
+quasi-experimental studies (k = 188) following PRISMA 2020 guidelines [24, 25], reclassify outcomes into Biesta’s
+three purposes, and test how design factors (e.g., subject, duration, instructional design) moderate effects. To address the
+coverage gap, we explicitly code context and design (role, duration, learning strategy, level, subject, region), quantify
+where evidence is concentrated, and estimate context-specific effects rather than pooling brief trials. This provides the
+first purpose-level synthesis of LLMs’ educational impact, aiming to inform both educational research and HCI debates
+on how interactive technologies affect human agency, identity, and community.
+This study is guided by three research questions:
+• RQ1: What are the characteristics of student-facing LLM interventions reported to date?
+• RQ2: What are the aggregate effects of LLM interventions on Biesta’s three purposes: qualification, socialisa-
+tion, and subjectification?
+• RQ3: Which intervention characteristics (e.g., LLM role, duration, subject area, educational level, learning
+strategy) are associated with effect variation within each purpose?
+The remainder proceeds as follows: §2 reviews existing scholarship on LLMs in education and situates our work within
+broader debates on educational technology and its purposes. §3 presents the theoretical framework (Biesta) and its
+interpretive role. §4 describes the methodology of our meta-analysis, including data collection, coding, and statistical
+procedures. §5 presents the findings, first by mapping the descriptive landscape, then by reporting overall effects, and
+finally by examining key moderators. §6 then interprets these findings in relation to each research question and the
+broader literature. Building on this analysis, §7 outlines their implications for theory, method, practice, and policy.
+Finally, §8 concludes by reflecting on what these results suggest for the future of education in an age of LLMs.
+2
+Related Work
+2.1
+Student-Facing LLMs: Empirical Baseline
+Work on student-facing LLM uses (e.g., writing support [26, 27, 28], problem-solving [29, 30], and exam preparation [31,
+32]) has expanded rapidly since late 2022. Across language learning [33, 34, 35], computer science [36, 30, 37], and
+health education [38, 39], studies report gains in achievement and higher-order thinking, with effects that vary by
+setting and design [6, 7]. Field and classroom experiments also identify boundary conditions. Benefits are larger when
+LLMs are embedded in structured, guided workflows that position the system as a tutor or partner, while unguided
+or answer-provision use can produce neutral or negative longer-term outcomes [40, 10]. These patterns suggest that
+design choices such as LLM role and duration are consequential, and that “LLM use” should not be treated as a single
+treatment. We focus the remainder of this section on closely related reviews and meta-analyses, since our contribution
+is a synthesis at that level and the next section provides the normative frame used to interpret outcomes.
+2.2
+Prior Syntheses: Coverage and Methods
+Our map of the ten most closely related meta-analyses (Table 1) reveals three regularities.
+The dominant focus of the syntheses is on performance outcomes. In our sample, nine of the ten syntheses focus
+exclusively on qualification outcomes, such as knowledge and skill performance. Three of these organize their findings
+using Bloom’s Taxonomy [48], a scheme useful for grading cognitive demand. However, Bloom-based classifications
+assess the the type or level of cognition rather than the purposes of education, largely overlooking crucial dimensions
+2
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 1: Overview of Related Meta-Analyses
+Author (Year)
+Period
+N
+Education Level
+Scope
+Outcome Focus
+Method
+Ours
+2022–
+2025.3
+133
+Kindergarten, K12,
+Higher Education
+broader
+LLMs
+Qualification (e.g., academic
+performance),
+Socialisation
+(e.g., collaboration engagement),
+Subjectification
+(e.g.,
+self-
+efficacy)
+Meta-analyses +
+Moderator analy-
+ses
+Deng et al. (2025) [16]
+2022.11–
+2024.8
+69
+K12, Higher Educa-
+tion
+ChatGPT
+only
+Qualification
+(Academic
+performance,
+higher-order
+thinking),
+Subjectification
+(affective-motivational
+states,
+self-efficacy)
+Meta-analyses +
+Moderator analy-
+ses
+Sun
+&
+Zhou
+(2024) [41]
+2022.11–
+2024
+28
+Higher Education
+broader
+LLMs
+Qualification
+(Academic
+achievement)
+Meta-analyses +
+Moderator analy-
+ses
+Liu et al. (2025) [42]
+2022–
+2024.8
+49
+K12, Higher Educa-
+tion
+broader
+LLMs
+Qualification (Learning achieve-
+ment), Subjectification (learning
+motivation)
+Meta-analyses +
+Moderator analy-
+ses
+Hu et al. (2025) [43]
+2022–
+2024.5
+21
+K12, Higher Educa-
+tion
+broader
+LLMs
+Qualification (Bloom’s taxon-
+omy:
+cognitive, behavioural),
+Subjectification (affective)
+Meta-analyses +
+Moderator analy-
+ses
+Zhu et al. (2025) [18]
+2020–
+2024.8
+28
+K12, Higher Educa-
+tion
+broader
+LLMs
+Qualification (Physical, intellec-
+tual outcomes), Subjectification
+(social-emotional outcomes)
+Meta-analyses +
+Moderator analy-
+ses
+Qu et al. (2025) [44]
+2023.1–
+2024.9
+18
+Higher Education
+broader
+LLMs
+Qualification
+(Cognitive
+out-
+comes in Bloom’s taxonomy)
+Meta-analyses +
+Regression
+Heung
+&
+Chiu
+(2025) [17]
+2021–
+2024.8
+17
+K12, Higher Educa-
+tion
+ChatGPT
+only
+Subjectification (learning en-
+gagement)
+Meta-analyses
+Wang
+&
+Fan
+(2025) [45]
+2022.11–
+2025.2
+51
+K12, Higher Educa-
+tion
+ChatGPT
+only
+Qualification (Learning perfor-
+mance, higher-order thinking)
+Meta-analyses +
+Moderator analy-
+ses
+Liu et al. (2025) [46]
+2022.11–
+2025.3
+37
+K12, Higher Educa-
+tion
+ChatGPT
+only
+Qualification
+(Academic
+achievement)
+Meta-analyses +
+Moderator analy-
+ses
+Xia et al. (2025) [47]
+Not
+reported
+24
+Higher Education
+broader
+LLMs
+Qualification (cognitive skill in
+Bloom’s taxonomy), Subjectifi-
+cation (non-cognitive skills)
+Meta-analyses +
+Moderator analy-
+ses + Pattern min-
+ing
+like social participation and learner autonomy. Consequently, no review in our set synthesizes interactional outcomes
+that align with socialisation, and only one includes proxies for self-efficacy that speak to subjectification. The dominant
+evidence base, therefore, reflects a narrow focus on task-based performance, with much thinner coverage of student
+participation or agency.
+The reviews vary in both population and scope. Seven cover both K–12 and higher education, while only three focus
+exclusively on higher education. The technological scope is also mixed, with four papers restricted to ChatGPT and six
+including broader LLMs. Most time windows span 2022–2024, though two extend into 2025 and one does not report a
+window. The number of included studies per review varies widely [17, 16], which cautions against over-generalisation.
+The analytic strategies used in these reviews are limited and uneven. Eight of the ten reviews conduct moderator
+analyses, and one additionally applies association-pattern mining alongside meta-analytic models [47]. Despite this
+analytic activity, most syntheses pool mixed outcome types and interpret effects primarily as evidence of “what works”
+for performance. Only a few attempt to link design conditions to differential impacts on outcomes beyond performance.
+These regularities motivate the present study in two ways. First, the field offers a partial account of educational impact
+by equating success with performance. Second, existing syntheses seldom link design conditions to which educational
+purposes benefit.
+2.3
+Design Moderating Factors in Prior Work
+Across recent meta-analyses reviews, several study and design factors recur as sources of heterogeneity in student-facing
+LLM deployments [16, 46, 17, 47]. Frequently discussed are design conditions such as LLM role (tutor or partner vs.
+learning tool), intervention duration (one-shot vs. multi-week exposure), and the learning strategy embedded in the
+activity (for example, problem-based, project-based, reflective). Context factors also appear often, including educational
+3
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+level (K-12 vs. higher education), subject category (language, computer science or medical), and sample size. Narrative
+syntheses often note stronger gains for dialogic tutor or partner deployments sustained over time, with more mixed
+results for brief, tool-like use [16, 46]. Classroom and field experiments report similar boundary conditions when
+comparing structured and scaffolded workflows to unguided answer provision [10].
+What is less developed in prior syntheses is an explicit connection between these conditions and outcomes beyond
+performance. When moderator analyses are reported, they typically pool mixed outcomes into a single effect size (for
+example, aggregating cognition, behavior, and affection learning outcome) [17, 18, 43]. This makes it difficult to see
+whether factors like role or duration differentially benefit collaboration and participation (socialisation) or autonomy
+and self-regulation (subjectification).
+Positioning relative to our contributions. We draw from five major databases and cover from 2022 to 2025.3, synthesizing
+133 experimental or quasi-experimental studies. This is larger than most reviews in our set (median 28, range 17 [17] to
+69 [16]). Our corpus spans higher education and K-12 and includes a small kindergarten subset. We track model families,
+including ChatGPT-class systems and others. Rather than collapsing to a single effectiveness construct, we organize
+outcomes using Biesta’s purposes of qualification, socialisation, and subjectification, addressing the qualification-centric
+emphasis observed across the 10 reviews (Section 2). We then relate the recurring conditions identified in the literature
+to which educational purposes are advanced, instead of treating LLM use as a single undifferentiated treatment.
+3
+Theoretical Framework
+Evaluations of educational technologies have often emphasised short-term performance indicators such as test scores,
+task accuracy, and assignment grades [19, 20]. Policy guidance likewise foregrounds measurable attainment and
+assessment alignment [14, 13]. These indicators are useful, but a performance-first framing narrows what counts as
+impact. Following Biesta, questions of purpose should come first: “only when we have a meaningful and justifiable
+answer to what our educational endeavors are for can we decide about content and relationships” [49]. We therefore
+interpret effects through Biesta’s account of education’s three purposes [21, 22, 23].
+• Qualification: the acquisition of knowledge, skills, and dispositions that enable learners to “do something.”
+This includes not only vocational and academic competencies but also broader life skills. Although education
+systems increasingly equate qualification with credentials for labour market success, Biesta stresses that it
+encompasses a wider set of abilities and responsibilities.
+• Socialisation: the processes through which individuals become part of social, cultural, or political communities.
+Education socialises learners by transmitting norms, values, and professional standards, but also by shaping
+their implicit understandings of belonging and participation.
+• Subjectification: the formation of learners as autonomous and responsible beings. It is about enabling
+individuals to take up their own positions, make choices, and respond to the world not merely as objects of
+external expectations but as subjects of their own lives. Subjectification does not mean unrestricted freedom;
+rather, it emphasises reflective engagement and the negotiation of limits.
+These purposes are interdependent and often in tension; privileging one can erode the others. As Biesta cautions,
+“one-sidedness always comes at a price” [22]. In LLM-mediated settings, for example, designs that emphasise answer
+provision can raise qualification metrics while dampening participation or autonomy.
+In the analyses that follow, we read outcomes at the level of purposes rather than collapsing them into a single
+effectiveness score.
+This lens is pertinent to HCI because design choices in human-AI systems (e.g., role, duration) allocate control and
+shape participation and identity; reading effects by educational purpose renders those allocations empirically visible
+[50, 51].
+Applied here, the framework foregrounds three concerns: which educational purposes show gains, where evidence
+remains thin, and how the observed distribution bears on agency and participation. We estimate purpose-level effects
+of student-facing LLM interventions (RQ2) and examine how intervention characteristics are associated with effects
+within each purpose (RQ3).
+4
+Methodology
+To address these questions, we conducted a systematic meta-analysis following PRISMA 2020 guidelines (Figure 1).
+4
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Academic Literature: Web of Science,
+Scopus, ProQuest Central, ERIC, and
+IEEE Xplore
+Keyword Search
+§4.1
+Retrieved: 1,219
+Screening based on
+title and abstract
+§4.2
+Tentative: 692
+Duplicates Removing
+Tentative: 228
+Screening based on
+full-text review
+§4.2
+Selected: 133
+Literature Selection
+Data Extraction & Coding §4.3
+Study Characteristics
+Bibliographic details
+Educational context
+Intervention features
+Outcome measures
+Statistical information
+Outcome Classification
+Step 1: Primary Classification via a Domain Mapping
+Scheme
+Qualification outcomes: Academic performance,
+test scores and higher-order thinking skills
+Socialisation outcomes: Willingness to
+communicate and collaboration engagement
+Subjectification outcomes: Self-efficacy, self-
+regulated learning strategies, learning motivation,
+learning interest and positive affective states
+Step 2: Verification with Author Definitions
+Moderator Vairables
+Educational level
+Subject category
+Intervention duration
+Sample size
+LLMs role
+Learning strategy
+Research Planning
+Motivation
+RQ Development
+Research Protocol
+Statistical Analysis §4.4
+Hedges's g
+Cochran's Q
+Inconsistency
+Index I2
+Figure 1: An overview of our meta-analysis framework.
+For RQ1, we extracted descriptive characteristics of all eligible studies to map the current landscape of LLM inter-
+ventions in education. For RQ2, we classified outcomes into Biesta’s three domains, qualification, socialisation, and
+subjectification, and we estimated the overall effects within each. For RQ3, we coded intervention features (educational
+level, subject category, duration, sample size, LLM role and learning strategy) as moderators and tested their influence
+on effect sizes. The methodology section proceeds as follows: §4.1 outlines the search strategy, §4.2 specifies inclusion
+and exclusion criteria, §4.3 details data extraction and coding (including the operationalisation of Biesta’s framework),
+and §4.4 describes effect size computation and statistical models.
+4.1
+Search Strategy
+We conducted a systematic literature search, which was completed on March 18, 2025, across five major academic
+databases: Web of Science, Scopus, ProQuest Central, ERIC, and IEEE Xplore. The first four databases were selected
+because they are widely used in educational research and frequently appear in systematic reviews [17, 16, 46], while
+IEEE Xplore was included to capture studies from computer science, where many large language model (LLM)
+applications are published.
+The search covered publications from November 2022, when ChatGPT was first released, through March 2025. We
+used the following query: (“Generative AI” OR “Large Language Model” OR “LLM” OR “ChatGPT” OR “GPT-4”
+OR “GPT-3” OR “GPT-3.5”) AND (“Education” OR “Learning” OR “Teaching”) AND (“Experimental Group” OR
+“Control Group” OR “ChatGPT Group” OR “Randomised Controlled Trial” OR “RCT” OR “Quasi-experimental” OR
+“Mixed-methods”).
+The initial search identified 1,219 records. After removing 527 duplicates, 692 articles were screened by title and
+abstract, with 464 excluded for being irrelevant to LLM learning outcomes or for lacking an experimental design. The
+remaining 228 articles underwent full-text review. Of these, 95 were excluded for reasons such as non-experimental
+5
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+design, non-student participants, absence of a control group, inconsistent learning conditions, or insufficient quantitative
+data. The final dataset comprised 133 studies, which were retained for meta-analysis.
+4.2
+Inclusion and Exclusion Criteria
+To establish a consistent evidence base, we defined a set of inclusion and exclusion criteria adapted from prior
+meta-analyses in educational technology [45, 16, 17] and refined for the specific context of LLM interventions. Two
+researchers independently applied these criteria during both abstract screening and full-text review, with disagreements
+resolved through discussion to minimise bias. Studies were included if they met four conditions: (1) they were
+peer-reviewed publications; (2) written in English; (3) they examined LLM interventions specifically targeting student
+learning outcomes; and (4) they employed an experimental or quasi-experimental design that incorporated a control
+or comparison group. Conversely, we excluded studies that failed to provide a valid basis for effect size estimation.
+This applied to (1) non-experimental or purely descriptive studies, (2) research involving non-student participants, (3)
+cases where control groups also used LLMs or differed in learning methods beyond LLM usage, and (4) studies lacking
+sufficient quantitative data (e.g., missing sample sizes, means, standard deviations, or test statistics). These criteria
+ensured that the final dataset consisted of robust and comparable evidence suitable for meta-analytic synthesis of LLMs’
+effects on student learning.
+4.3
+Data Extraction and Coding
+Following eligibility screening, all included studies were systematically coded using a structured codebook to enable
+effect size computation and moderator analysis. Two researchers coded independently, and discrepancies were resolved
+through discussion until consensus was reached.
+Study characteristics. For each study we recorded bibliographic details (author, year, outlet, and region), educational
+context (educational level, subject domain, sample size, and intervention duration), intervention features (LLM role,
+LLM type and learning strategy), outcome measures, and statistical information required to compute effect sizes (group
+size, means, standard deviations, or reported test statistics). Independent comparisons between an experimental and a
+control group were treated as separate entries. Where multiple independent experiments were reported within the same
+study, each was coded separately.
+Outcome classification. To address RQ2, we classified learning outcomes from the included studies into Biesta’s
+three domains: qualification, socialisation, and subjectification. Recognizing that these domains are conceptually
+interdependent and often overlap in practice [52], we developed a systematic, two-step coding procedure to ensure
+consistency and mitigate misclassification. The process was conducted by two researchers, with ambiguous cases
+reviewed jointly until consensus was reached.
+Step 1: Primary Classification via a Domain Mapping Scheme. We began by developing a primary mapping scheme
+based on Biesta’s core definitions. This scheme guided our initial classification of the outcomes reported in each study:
+• Qualification outcomes were defined as those concerning the acquisition of knowledge, skills, and competencies.
+This category primarily included measures of academic performance, test scores and higher-order thinking
+skills (e.g., critical thinking, creativity, problem-solving ability).
+• Socialisation outcomes were those related to the induction of students into social and cultural practices. This
+included measures of willingness to communicate and collaboration engagement (e.g., participation in group
+discussions).
+• Subjectification outcomes were those focused on the cultivation of learner autonomy, agency, and identity. This
+category included measures of self-efficacy, self-regulated learning strategies, learning motivation, learning
+interest, and positive affective states (e.g., greater learning enjoyment).
+Step 2: Verification with Author Definitions. Second, we verified our initial coding against the definitions provided
+by the original studies’ authors. We prioritised how the authors themselves conceptualized their outcome variables to
+ensure our coding was faithful to the original research context. For example, if a study measured “engagement” using a
+validated scale that focused on students’ sense of belonging and peer interaction, we coded it as Socialisation, whereas
+if it was measured by on-task time during a problem-solving exercise, it was coded as Qualification. This two-step
+process ensured that our classification was both systematically grounded in our theoretical framework and empirically
+faithful to the context of the original studies.
+Moderator variables. To address RQ3, we coded intervention-level moderators, drawing on prior coding schemes
+used in recent meta-analyses [53, 45]: educational level (higher, secondary, primary, kindergarten), subject domain (arts
+and music, computer science, economics, education and psychology, language and writing, mathematics, medical and
+6
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+health, science), intervention duration (<1 week, 1–4 weeks, 4–8 weeks, >8 weeks), sample size (1–50, 51–100, >100),
+LLM role (tutor, partner, learning tool), and learning strategy (personalised, project-based, problem-based, contextual,
+reflective, gamified). Coding decisions followed author descriptions of interventions; when strategies overlapped, we
+coded the dominant activity as defined by the study’s primary research objectives or instructional emphasis.
+Independence of effect sizes. To ensure statistical independence, we followed the approach used in prior meta-
+analyses [45]:: (1) each experimental vs. control group comparison yielded one effect size; (2) multiple independent
+experiments within the same study were coded separately; and (3) when multiple sub-dimensions of the same construct
+were reported, effect sizes were aggregated into a single value for that domain. When studies reported outcomes across
+multiple educational purposes, separate effect sizes were extracted for each.
+Missing and ambiguous information. When critical variables such as intervention duration or sample size were not
+explicitly reported, we inferred values where possible from descriptions of sessions or cohorts; otherwise, values were
+coded as missing and excluded from moderator analyses. Subject domains were coded according to the content of the
+measured learning outcome rather than course titles, to reduce misclassification in interdisciplinary contexts.
+Reliability. Coding reliability was assessed after independent coding. Cohen’s κ was 0.93, indicating excellent
+agreement. Remaining discrepancies were resolved with the involvement of a third researcher. Ultimately, the coding
+process yielded 188 independent effect sizes extracted from 133 studies.
+4.4
+Statistical Analysis
+All statistical analyses were conducted in R using the metafor package [63]. Most included studies reported post-test
+means and standard deviations for experimental and control groups, which allowed us to calculate standardized mean
+difference effect sizes. To correct for the small-sample bias inherent in Cohen’s d, we used Hedges’ g [64], defined as:
+d =
+
+1 −
+3
+4N −9
+ ¯X1 −¯X2
+SDpooled
+,
+(1)
+where ¯X1 and ¯X2 are the group means, SDpooled is the pooled standard deviation, and N is the total sample size. When
+means or standard deviations were not reported, equivalent statistics (e.g., t, F, or χ2) were converted into effect sizes
+using the formulas of Lipsey and Wilson [65]. To facilitate interpretation, the calculated effect sizes were interpreted
+following the extended guidelines proposed by [66]: very small (0.1), small (0.2), medium (0.5), large (0.8), very large
+(1.2), and huge (2.0). Heterogeneity was assessed using Cochran’s Q and the inconsistency index I2. A Q-test p-value
+below 0.10 was taken as evidence of significant heterogeneity, in which case a random-effects model was applied for
+the meta-analysis [67]. The I2 statistic further quantified the degree of heterogeneity, with 0–25% interpreted as low,
+25–75% as moderate, and 75–100% as high heterogeneity [68].
+5
+Results
+5.1
+Descriptive Statistics: A Rapidly Growing but Skewed Research Landscape
+The descriptive profile of the 133 included studies, as summarized in Table 3, points to a research field that is both
+expanding at remarkable speed and unevenly distributed. The publication timeline illustrates its novelty and acceleration:
+more than half of all studies appeared in 2024 (54.13%), with a further 38.35% published in the first quarter of 2025, a
+surge that closely followed the public release of ChatGPT in late 2022.
+This growth, however, is accompanied by pronounced structural imbalances.
+Geographical concentration. The evidence base is heavily skewed towards Asia, which accounts for 78.20% of all
+studies. By contrast, North America (5.36%) and Europe (10.53%) are strikingly under-represented. As a result, the
+current literature reflects predominantly Asian educational settings and cultural assumptions, raising questions about
+the transferability of findings to other contexts.
+Educational level. Research is also disproportionately concentrated in higher education (81.20%). Far fewer studies
+investigate secondary (12.03%) or primary (6.02%) education, levels where learners’ developmental needs and classroom
+ecologies differ substantially. This leaves a major evidence gap regarding how LLMs function in earlier stages of
+schooling.
+Disciplinary focus. Studies cluster around domains where the relevance of LLMs is most immediate. Language and
+writing (36.84%) and computer science (24.06%) dominate, whereas mathematics (3.76%), arts and music (1.50%) are
+rarely addressed. Such patterns suggest that the field is still largely exploring “low-hanging fruit” applications, with
+much less known about how LLMs might support learning outside language-centric or computational tasks.
+7
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 2: Coding scheme of the moderator variables.
+Moderator
+Description
+Educational Level
+1. Higher Education (ages over 18)
+2. Secondary Education (ages 14–17)
+3. Primary Education (ages 7–13)
+4. Kindergarten (ages below 6)
+Subject Category
+1. Arts and Music (includes creative arts and music education)
+2. Computer Science (includes programming, robotics, and related digital technologies)
+3. Economics (includes economics, business ethics and entrepreneurship)
+4. Education and Psychology (includes general education, instructional design, psy-
+chology, and educational technology)
+5. Language and Writing (includes academic writing, second language learning, debate,
+and writing pedagogy)
+6. Mathematics (includes mathematics and statistics)
+7. Medical and Health (includes medical education, nursing, pharmacy, and healthcare
+training)
+8. Science (includes chemistry, physics, science and sustainability)
+Intervention Duration
+1. < 1 week
+2. 1–4 weeks
+3. 4–8 weeks
+4. > 8 weeks
+Sample Size
+1. 1–50
+2. 51–100
+3. > 100
+LLM Role
+1. Intelligent tutor (serves mainly as an instructor, offering tailored guidance, evaluative
+feedback, and structured learning support) [54]
+2. Intelligent partner (acts as a peer-like collaborator, engaging in joint discussions and
+cooperative tasks to foster learning) [55]
+3. Intelligent learning tool (functions as a utility that supplies resources, information,
+or task aids without engaging in social interaction) [56]
+Learning Strategy
+1. personalised learning (tailors instruction and resources to match each learner’s needs,
+preferences, and pace) [57]
+2. Project-based learning (centres on long-term tasks where students investigate and
+create products around complex questions) [58]
+3. Problem-based learning (builds understanding through tackling authentic, real-world
+challenges) [59]
+4. Contextual learning (links new knowledge to specific, authentic situations to enhance
+relevance) [60]
+5. Reflective learning (encourages learners to think critically about their progress and
+make informed improvements) [61]
+6. Gamified approach (applies game-like elements such as points or rewards to increase
+engagement) [62]
+Intervention design. Encouragingly, the field is beginning to move beyond short, one-off trials. A majority of
+interventions extend over four weeks or longer (61.66%), and nearly half (45.11%) position LLMs as an intelligent
+tutor embedded within broader pedagogical models such as personalised learning (29.32%) or problem-based learning
+(19.55%). This reflects a shift towards more authentic, sustained integrations of LLMs into teaching practice.
+Model type. However, the evidence base remains overwhelmingly dominated by a single model. Nearly nine in ten
+studies (87.22%) relied exclusively on ChatGPT, while only 12.78% involved other large language models, such as
+Gemini, LLaMA, ERNIE Bot, and Qwen. This heavy reliance limits the generalisability of findings and underscores
+the need for comparative studies across different LLM architectures.
+In summary, the literature on LLMs in education is growing at an exceptional pace but remains defined by university-
+based research in Asia, concentrated in language and computer science. These descriptive patterns provide critical
+context for the effect-size estimates reported in the next section and highlight limitations that will be further interrogated
+in the discussion.
+8
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 3: Descriptive statistics of included studies (n = 133).
+Category
+Subcategory
+Frequency
+Percent
+Year of publication
+2024
+72
+54.13
+2025
+51
+38.35
+2023
+10
+7.52
+Type of publication
+Journal article
+116
+87.22
+Conference paper
+17
+12.78
+Study location
+Asia
+104
+78.2
+Europe
+14
+10.53
+North America
+7
+5.36
+South America
+6
+4.51
+Africa
+2
+1.50
+Educational Level
+Higher Education
+108
+81.20
+Secondary Education
+16
+12.03
+Primary Education
+8
+6.02
+Kindergarten
+1
+0.75
+Subject
+Language and Writing
+49
+36.84
+Computer Science
+32
+24.06
+Medical and Health
+16
+12.03
+Science
+13
+9.77
+Education and Psychology
+11
+8.27
+Mathematics
+5
+3.76
+Economics
+5
+3.76
+Arts and Music
+2
+1.50
+LLM Model
+ChatGPT
+116
+87.22
+Other LLM
+17
+12.78
+Intervention Duration
+> 8 weeks
+42
+31.58
+4–8 weeks
+40
+30.08
+1–4 weeks
+28
+21.05
+< 1 week
+23
+17.29
+Sample Size
+51–100
+68
+51.13
+1–50
+39
+29.32
+>100
+26
+19.55
+LLM Role
+Intelligent tutor
+60
+45.11
+Intelligent learning tool
+44
+33.08
+Intelligent partner
+29
+21.80
+Learning Strategy
+personalised learning
+39
+29.32
+Problem-based learning
+26
+19.55
+Reflective learning
+25
+18.80
+Contextual learning
+21
+15.79
+Project-based learning
+17
+12.78
+Gamified approach
+5
+3.76
+5.2
+Overall Effects: LLMs Enhance Learning, but Unevenly Across Domains
+To answer RQ2, we estimated the overall effects of LLM-based interventions across Biesta’s three educational domains
+(Table 4). Across all domains, results indicate significant positive impacts, though the magnitude and stability of these
+effects differ. Given the high degree of heterogeneity across studies (I2 = 80.8%–88.2%, p < .0001), random-effects
+models were applied throughout.
+• Qualification. The strongest and most consistent effects emerged for qualification, encompassing knowledge
+acquisition, skill development, and academic performance. The estimated effect size was large and robust
+9
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 4: Results of overall effects analysis of LLM on students’ learning outcomes.
+Learning outcome
+k
+g
+95% CI
+Two-tailed test
+Test of homogeneity
+LL
+UL
+Z
+P
+Q
+df(Q)
+I2 p
+Qualification
+123
+0.751
+0.635
+0.867
+12.7
+< .0001
+1008.69
+122
+88.23% < .0001
+Socialisation
+11
+0.745
+0.429
+1.06
+4.63
+< .0001
+53.823
+10
+80.82% < .0001
+Subjectification
+54
+0.654
+0.506
+0.802
+8.66
+< .0001
+274.30
+53
+85.57% < .0001
+Note. k = number of independent studies; g = mean effect size; CI = confidence interval.
+(g = 0.751, 95% CI [0.635, 0.867], p < .0001), underscoring LLMs’ clear value in supporting measurable
+academic achievement.
+• Socialisation. LLMs also exerted a significant positive influence on socialisation outcomes (g = 0.745, 95%
+CI [0.429, 1.060], p < .0001), which include communication, collaboration, and participation in learning
+communities. However, the relatively wide confidence interval points to greater variability across studies,
+suggesting that socialisation gains are more context-dependent.
+• Subjectification. The effect on subjectification, defined here as the development of learner autonomy, agency,
+and identity, was positive but smaller (g = 0.654, 95% CI [0.506, 0.802], p < .0001). While significant, this
+finding highlights a more fragile and uneven evidence base for LLMs’ ability to foster students’ personal
+becoming.
+Taken together, these findings confirm that LLMs are effective in enhancing learning but do so unevenly. Their most
+reliable contributions lie in boosting qualification, whereas their effects on socialisation and subjectification, though
+positive, are less consistent and less pronounced. This hierarchy of impacts underscores the need for our subsequent
+moderator analyses, which examine the conditions under which LLMs can more effectively support the broader social
+and developmental purposes of education.
+5.3
+Moderator Analyses: When and How LLMs Work
+To address RQ3, we examined moderators that shape the impact of LLM interventions. Across domains, the analyses
+showed that how an LLM is used matters as much as whether it is used at all. Two factors consistently emerged as
+decisive: the pedagogical role assigned to the LLM and the duration of the intervention. Programs that positioned
+LLMs as active tutors, and that sustained their use over eight weeks or longer, achieved the largest and most reliable
+gains. Other moderators, including subject domain, pedagogical strategy, and sample size exerted more domain-specific
+effects.
+5.3.1
+Qualification: Strongest Gains with Tutor Roles and Sustained Use
+For qualification outcomes (see Table 5), both the LLM’s role (QB = 13.341, p = .0013) and intervention duration
+(QB = 18.091, p < .001) were highly significant moderators. The hierarchy of effects was clear: LLMs framed as
+interactive tutors (g = 0.902) or collaborative partners (g = 0.842) generated substantially larger improvements in
+performance than when they functioned as passive tools (g = 0.436). Duration also mattered in a “dose–response”
+fashion: interventions longer than eight weeks produced the largest effects (g = 1.024), while those lasting only 1–4
+weeks were far weaker (g = 0.389).
+Notably, qualification effects were otherwise stable: no significant moderation was found by education level, subject
+area, sample size, or learning strategy. This suggests that long-term, tutor-style deployments of LLMs are broadly
+effective for enhancing knowledge and skills across diverse contexts. In summary, for boosting knowledge and skills,
+LLMs are most potent when they are designed to act as persistent, active pedagogical agents rather than as one-off,
+functional utilities.
+5.3.2
+Socialisation: Efficacy Hinges on Sustained Use and Structured Pedagogy
+For socialisation, which involves skills like communication and collaboration, the analysis revealed that intervention
+duration (QB = 16.470, p = .0009) and learning strategy (QB = 12.752, p = .0052) were the decisive moderators
+(see Table 6). A clear “dose–response” relationship emerged for duration: interventions lasting more than eight
+weeks yielded exceptionally large gains (g = 1.204), whereas those under four weeks produced negligible effects.
+Similarly, pedagogical structure was critical; actively engaging approaches like personalised learning (g = 1.299) and
+10
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 5: Moderator analysis for Qualification.
+Moderator
+k
+g (95% CI)
+z
+df(Q)
+QB
+p-value
+Educational Level
+3
+0.436
+0.933
+1. Higher Education
+98
+0.771 [0.639, 0.903]
+11.45***
+2. Secondary Education
+16
+0.691 [0.376, 1.007]
+4.29***
+3. Primary Education
+8
+0.651 [0.194, 1.108]
+2.79**
+4. Kindergarten
+1
+0.651 [-0.643, 1.945]
+0.99
+Subject Category
+7
+10.859
+0.145
+1. Arts & Music
+2
+1.147 [0.278, 2.017]
+2.59**
+2. Computer Science
+32
+0.638 [0.415, 0.861]
+5.60***
+3. Economics
+4
+1.368 [0.713, 2.024]
+4.09***
+4. Education & Psychology
+10
+0.782 [0.352, 1.211]
+3.56***
+5. Language
+41
+0.679 [0.483, 0.875]
+6.79***
+6. Mathematics
+5
+0.342 [-0.236, 0.919]
+1.16
+7. Medical & Health
+16
+0.812 [0.495, 1.128]
+5.03***
+8. Science
+13
+1.058 [0.714, 1.402]
+6.02***
+Intervention Duration
+3
+18.091
+0.0004***
+1. < 1 week
+21
+0.622 [0.355, 0.889]
+4.56***
+2. 1–4 weeks
+27
+0.389 [0.158, 0.620]
+3.30***
+3. 4–8 weeks
+38
+0.805 [0.640, 0.970]
+7.86***
+4. > 8 weeks
+37
+1.024 [0.827, 1.221]
+10.21***
+Sample Size
+2
+1.017
+0.602
+1. 1–50
+37
+0.787 [0.560, 1.013]
+6.81***
+2. 51–100
+62
+0.781 [0.619, 0.943]
+9.44***
+3. > 100
+24
+0.639 [0.391, 0.886]
+5.06***
+LLM Role
+2
+13.341
+0.0013**
+1. Intelligent learning tool
+37
+0.436 [0.234, 0.638]
+4.24***
+2. Intelligent partner
+29
+0.842 [0.611, 1.074]
+7.12***
+3. Intelligent tutor
+57
+0.902 [0.741, 1.062]
+11.01***
+Learning Strategy
+5
+6.011
+0.305
+1. Contextual learning
+21
+0.990 [0.708, 1.271]
+6.90***
+2. Gamified approach
+5
+0.654 [0.091, 1.217]
+2.28*
+3. personalised learning
+34
+0.742 [0.523, 0.961]
+6.64***
+4. Problem-based learning
+26
+0.568 [0.314, 0.822]
+4.38***
+5. Project-based learning
+16
+0.901 [0.571, 1.231]
+5.35***
+6. Reflective learning
+21
+0.669 [0.393, 0.945]
+4.76***
+Note. z = z-value for g; QB = between-group heterogeneity. p-value: * p < .05, ** p < .01, *** p < .001.
+reflective learning (g = 0.921) generated strong outcomes, in sharp contrast to the ineffectiveness of contextual learning
+(g = 0.168).
+Notably, several other factors were not significant. The LLM’s role, subject category, and sample size did not moderate
+the effects on socialisation. While a marginal trend was observed for education level (p = .094), the sparse data in
+categories outside of Higher Education prevent any firm conclusions. In summary, fostering socialisation with LLMs
+depends less on the tool itself and more on its integration into long-term, structurally-sound learning activities.
+5.3.3
+Subjectification: Tutor Roles and Small-Scale, Long-Term Programs
+For subjectification, the development of learner agency and autonomy, both the role of the LLM (QB = 6.062, p = .048)
+and duration of intervention (QB = 12.283, p = .0065) again proved decisive (see table 7). Framing the LLM as a
+tutor (g = 0.857) was significantly more effective than using it as a partner (g = 0.476) or tool (g = 0.503). Programs
+extending beyond eight weeks (g = 0.955) produced the strongest outcomes. Crucially, sample size moderated effects
+(QB = 9.019, p = .011). Studies with 1–50 participants reported very large impacts on learner agency (g = 1.044),
+while effects diminished sharply in cohorts larger than 100 (g = 0.470). By contrast, education level, subject category,
+and learning strategy were not significant moderators. This points to a structural constraint: fostering subjectification
+with LLMs appears most feasible in small, highly structured, long-term programs, while scalability remains a challenge.
+11
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 6: Moderator analysis for Socialisation.
+Moderator
+k
+g (95% CI)
+z
+df(Q)
+QB
+p-value
+Education Level
+3
+6.40
+0.0939
+1. Higher Education
+8
+0.860 [0.538, 1.181]
+5.25***
+2. Secondary Education
+1
+0.501 [-0.367, 1.369]
+1.13
+3. Primary Education
+1
+1.124 [0.187, 2.061]
+2.35*
+4. Kindergarten
+1
+-0.299 [-2.131, -0.187]
+-2.34*
+Subject Category
+1
+1.447
+0.229
+1. Language
+8
+0.861 [0.499, 1.223]
+4.66***
+2. Science
+3
+0.436 [-0.153, 1.026]
+1.45
+Intervention Duration
+3
+16.470
+0.0009**
+1. < 1 week
+1
+0.088 [-0.590, 0.766]
+0.25
+2. 1–4 weeks
+2
+0.152 [-0.323, 0.626]
+0.63
+3. 4–8 weeks
+4
+0.767 [0.432, 1.102]
+4.48***
+4. > 8 weeks
+4
+1.204 [0.860, 1.547]
+6.87***
+Sample Size
+2
+3.818
+0.1482
+1. 1–50
+2
+1.207 [0.461, 1.953]
+3.17**
+2. 51–100
+8
+0.571 [0.234, 0.908]
+3.32***
+3. > 100
+1
+1.245 [0.392, 2.098]
+2.86**
+LLM Role
+2
+1.125
+0.5699
+1. Intelligent learning tool
+3
+0.998 [0.383, 1.613]
+3.18**
+2. Intelligent partner
+5
+0.714 [0.233, 1.196]
+2.91**
+3. Intelligent tutor
+3
+0.523 [-0.119, 1.166]
+1.60
+Learning Strategy
+3
+12.752
+0.0052**
+1. Contextual learning
+3
+0.168 [-0.260, 0.597]
+0.77
+2. personalised learning
+2
+1.299 [0.824, 1.775]
+5.35***
+3. Project-based learning
+3
+0.718 [0.295, 1.142]
+3.33***
+4. Reflective learning
+3
+0.921 [0.457, 1.384]
+3.89***
+Note. z = z-value for g; QB = between-group heterogeneity. p-value: * p < .05, ** p < .01, *** p < .001.
+Together, these moderator analyses reveal a nuanced picture. For qualification, the story is clear: LLMs are most
+effective when used as sustained tutors across contexts. For socialisation, benefits hinge on alignment with language-rich
+domains, reflective pedagogies, and small-group settings. For subjectification, positive effects emerge under highly
+structured, tutor-like designs but are strongest in small-scale, long-term interventions. Across domains, the key lesson is
+that implementation design, not simply access, determines whether LLMs contribute to performance, participation, or
+autonomy.
+6
+Discussion
+6.1
+Contributions: Findings in Context
+This section situates our main findings relative to some closest meta-analyses (Table 1) and explains what is substantively
+novel.
+Purpose-level effects clarify what prior syntheses left implicit. Prior reviews more converge on “qualification” gains [16,
+41, 42, 45, 46, 44] and sometimes report engagement or affect [17, 43, 18, 47], but they do not synthesise interactional
+participation and treat autonomy-related constructs only tangentially. By estimating effects at the level of qualification,
+socialisation, and subjectification, we find that all three purposes improve on average in our sample, with subjectification
+positive but less stable. This moves interpretation from “LLMs raise scores” toward “which educational purposes
+benefit,” a distinction not captured by Bloom-aligned groupings.
+Within-purpose moderators help reconcile mixed results. prior syntheses list design and context factors, but moderator
+tests typically pool mixed outcomes [43, 18], making it unclear whether conditions differentially support participation or
+autonomy. We test moderators within each purpose. At a high level, we estimate larger qualification effects for tutor-like,
+multi-week deployments; socialisation effects that depend critically on the intervention’s duration and pedagogical
+structure; and subjectification gains that appear under tutor-like, longer-duration, smaller-scale programs. These patterns
+align with emerging experimental evidence underscoring the importance of pedagogical design in shaping LLMs’
+12
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 7: Moderator analysis for Subjectification.
+Moderator
+k
+g (95% CI)
+z
+df(Q)
+QB
+p-value
+Education Level
+2
+3.178
+0.204
+1. Higher Education
+44
+0.716 [0.552, 0.880]
+8.57***
+2. Secondary Education
+7
+0.339 [-0.047, 0.725]
+1.72
+3. Primary Education
+3
+0.570 [-0.052, 1.192]
+1.80
+Subject Category
+7
+2.042
+0.958
+1. Arts & Music
+1
+0.305 [-0.773, 1.383]
+0.55
+2. Computer Science
+14
+0.551 [0.242, 0.861]
+3.49***
+3. Economics
+2
+0.624 [-0.201, 1.448]
+1.48
+4. Education & Psychology
+5
+0.661 [0.147, 1.175]
+2.52*
+5. Language
+23
+0.731 [0.489, 0.972]
+5.93***
+6. Mathematics
+1
+0.934 [-0.241, 2.109]
+1.56
+7. Medical & Health
+5
+0.781 [0.266, 1.296]
+2.97**
+8. Science
+3
+0.451 [-0.201, 1.103]
+1.36
+Intervention Duration
+3
+12.283
+0.0065**
+1. < 1 week
+10
+0.542 [0.223, 0.861]
+3.33***
+2. 1–4 weeks
+12
+0.291 [0.001, 0.581]
+1.96*
+3. 4–8 weeks
+15
+0.668 [0.407, 0.928]
+5.02***
+4. > 8 weeks
+17
+0.955 [0.710, 1.200]
+7.63***
+Sample Size
+2
+9.019
+0.011*
+1. 1–50
+14
+1.044 [0.745, 1.342]
+6.85***
+2. 51–100
+26
+0.590 [0.391, 0.789]
+5.81***
+3. >100
+14
+0.470 [0.220, 0.720]
+3.68***
+LLM Role
+2
+6.062
+0.048*
+1. Intelligent learning tool
+19
+0.503 [0.264, 0.743]
+4.12***
+2. Intelligent partner
+11
+0.476 [0.156, 0.796]
+2.92**
+3. Intelligent tutor
+24
+0.857 [0.640, 1.074]
+7.73***
+Learning Strategy
+5
+4.346
+0.501
+1. Contextual learning
+9
+0.759 [0.383, 1.135]
+3.95***
+2. Gamified approach
+1
+0.112 [-0.936, 1.160]
+0.21
+3. personalised learning
+13
+0.676 [0.374, 0.979]
+4.38***
+4. Problem-based learning
+8
+0.384 [-0.008, 0.775]
+1.92
+5. Project-based learning
+7
+0.566 [0.154, 0.978]
+2.69**
+6. Reflective learning
+16
+0.796 [0.517, 1.074]
+5.61***
+Note. z = z-value for g; QB = between-group heterogeneity. p-value: * p < .05, ** p < .01, *** p < .001.
+educational impact. For example, when students are given unguided access to a powerful LLM, it can function as a
+"crutch" that undermines long-term learning, leaving them worse off than peers without access [10]. By contrast, when
+an AI is deliberately designed as a tutor with pedagogical safeguards, it can outperform even well-established active
+learning techniques and enhance student engagement [69, 10]. The surrounding study context also matters: combining
+LLM use with a traditional tactic like note-taking leads to greater comprehension and retention than LLM use alone,
+likely because note-taking elicits the deeper cognitive engagement essential for memory formation [11].
+Integrating seemingly divergent findings across adjacent reviews. Existing meta-analyses present apparently inconsistent
+conclusions: some emphasise substantial performance improvements in higher education [41, 42, 46], others find limited
+effects on higher-order cognition [16, 44], while others highlight behavioural or emotional engagement [43, 17]. Viewed
+through the lens of educational purposes, these findings are compatible: qualification effects are robust [70, 71, 72];
+socialisation gains emerge from the pedagogical design, specifically, long-term and structured interaction, rather
+than the subject context [73, 74, 75]; subjectification requires designs that cultivate agency rather than answer-
+seeking [76, 77, 78, 79]. By aligning effect estimates with purpose and conducting moderator tests within each domain,
+our study integrates results that previous work examined in isolation and clarifies the conditions under which they hold.
+6.2
+Descriptive Landscape and Coverage Gaps (RQ1)
+What makes these descriptives consequential is not only who and where is studied, but which design imaginaries and
+measurement choices become dominant as a result. First, an ecological concentration in Asian higher education and
+13
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+in language or computer science courses tends to favour designs that fit individual assignment workflows and course
+management platforms [80, 81, 82]. This privileges tutor-style deployments and unit-length exposures, and it naturally
+leads instructors to select outcomes that are easy to capture at that grain size. Second, those outcomes are predominantly
+qualification indicators, such as tests and task accuracy. They are appropriate for mastery claims, but they underexpose
+interactional participation and agency, which are central for socialisation and subjectification [83, 84, 85]. In other
+words, what is being measured follows from how the systems are being used and where they are used.
+Two interpretive cautions follow from this structure.
+Transferability. Because the corpus analysed in this study is anchored in Asian higher education and language or
+computer science, extrapolation to primary and secondary schooling or to domains like mathematics and arts remains
+uncertain. The social organisation of classrooms and the role of talk differ substantially in those settings, which can
+change how socialisation and subjectification show up when LLMs are present.
+Construct asymmetry. When most deployments use tutor roles and assess near-term mastery, average effects will mainly
+reflect qualification [19, 20]. This does not imply that LLMs cannot support participation or autonomy; rather, it
+shows that current studies rarely instrument for those constructs. For human–computer interaction, the implication
+is straightforward: unless interactional and agency measures are foregrounded as outcomes, the impact conveyed to
+designers and policymakers will remain unduly narrow.
+These observations do not diminish the value of existing studies. They indicate what today’s evidence is optimised
+to detect and where blind spots persist. In §6.3 and §6.4, we therefore apply these interpretive filters, treating strong
+qualification estimates as securely grounded in the present design space, while viewing socialisation and subjectification
+estimates as dependent on the explicit design and measurement of interaction and agency.
+6.3
+Purpose-Level Effects (Qualification, Socialisation, Subjectification) (RQ2)
+We estimate positive average effects within each purpose: qualification g = 0.751, socialisation g = 0.745, and
+subjectification g = 0.654.
+Qualification. Gains are higher on average for outcomes aligned with knowledge and skill acquisition. This pattern is
+consistent with current student-facing uses and assessments of LLMs, where item-level, exemplars, and stepwise hints
+align with mastery tests and rubric-based assessments [86, 87, 88].
+Socialisation. Positive average effects indicate that LLM-supported activities can enhance participation and collabo-
+ration, but these gains appear more contingent on the intervention design. Measures often capture dialogue quality,
+contribution, or communicative clarity. Improvements are most pronounced when interaction is scaffolded, such as with
+reflective prompts or structured peer exchange, and these activities are sustained over longer periods [89, 90, 73, 91].
+Subjectification. Average gains in autonomy and agency are positive but less stable. Autonomy is not only a cognitive
+state; it is a relation to peers, tasks, norms, and tools. Designs that put learners in control, such as tutor-like systems
+that hold back the final answer and ask for justification, or workflows with plan–revise cycles and reflective journals,
+tend to show stronger signals of self-regulation and ownership [92, 76, 83]. In contrast, tasks that reward only speed or
+correctness rarely track subjectification outcomes, and any benefits are typically superficial [10, 3].
+Heterogeneity and durability. The positive averages sit atop substantial variability across studies. External trials are
+consistent with a common boundary condition: unguided answer use can inflate immediate scores yet depress delayed
+performance when AI is removed, whereas guardrailed tutoring and study tactics such as note-taking mitigate that
+risk [10, 11]. Distributional effects reported elsewhere suggest that lower-baseline readers may benefit more from
+summarisation tools, while higher-baseline readers can be harmed [9], and that over-reliance can weaken higher-order
+cognition [12]. Viewed through Biesta’s framework, these tensions are expected: privileging qualification without
+designing for participation and agency compromises socialisation and subjectification at follow-up.
+6.4
+Moderator Effects Interpretation (RQ3)
+We modelled six moderators: three design moderators (LLM role, intervention duration, learning strategy) and three
+context moderators (educational level, subject category, sample size). Below we interpret patterns within each purpose
+and draw out what they imply for interaction design and evaluation.
+Qualification. Effects were larger when deployments were tutor-like rather than answer-providing and when exposure
+was multi-week rather than one-shot. Two mechanisms plausibly underlie this pattern. First, allocation of initiative:
+tutor-like designs request plans, rationales, and self-checks, which increase time-on-reasoning and reduce copy-
+through [93, 94]. Second, feedback granularity: stepwise hints and error-contingent prompts align with mastery rubrics,
+14
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Table 8: Publication bias and sensitivity analyses for the three educational domains
+Domain
+Egger’s Test
+Trim & Fill
+Fail-safe N
+Leave-one-out 95% CI Range
+z
+p
+kmiss
+SE
+N
+Threshold
+CIlb
+CIub
+Qualification
+3.62
+.0003
+0
+6.26
+4583
+625
+[0.621, 0.651]
+[0.844, 0.877]
+Socialisation
+0.25
+.8038
+0
+2.21
+34
+65
+[0.354, 0.574]
+[1.003, 1.129]
+Subjectification
+3.15
+.0016
+0
+4.23
+872
+280
+[0.483, 0.525]
+[0.755, 0.817]
+making gains legible to achievement measures [95]. Learning strategy, level, subject, and sample size did not reliably
+differ in our model. A practical reading is that role and duration act as first-order levers for qualification, with other
+factors mostly bounding transfer rather than shifting the mean.
+Socialisation. The effects on socialisation were highly sensitive to the intervention’s design. The key drivers were
+not the subject context but the pedagogical structure, particularly when interventions were sustained over time. The
+most effective designs provided strong interactional scaffolding through strategies like reflective or personalised
+learning [96, 97]. This principle helps explain the high variability in outcomes: when tasks require perspective-taking,
+justification, or peer exchange, LLM support can enhance participation; however, in contexts with specialised norms
+(e.g., professional programs), generic conversational affordances may not align with expected practices, yielding mixed
+results [98, 99]. Methodologically, a limitation of the current evidence is that many socialisation measures are coarse
+(e.g., counts of studies). Future work should pair designs that elicit dialogue with instruments that capture the quality,
+not just the quantity, of participation.
+Subjectification. Gains in autonomy and agency appeared more often under tutor-like designs, extended duration, and
+small-scale programs; effects attenuate in large cohorts. Autonomy is not merely a cognitive state but a relation to
+peers, tasks, norms, and technology. It flourishes when students exercise disciplined choice, self-explanation, and
+responsibility within a structure [100, 101], consistent with Biesta’s view that subjectification is freedom with limits,
+not from limits [102]. The scalability challenge we observe is therefore principled: agency practices are harder to
+orchestrate at scale unless schools redesign roles, time, and assessment.
+Cross-cutting synthesis. Across purposes, the same basic dimension recurs: who holds initiative when uncertainty arises.
+Designs that keep the learner initiating, explaining, and revising tend to lift qualification and create conditions for
+socialisation and subjectification to register. Role and duration consistently shape outcomes, while strategy and subject
+matter only influence results in certain contexts. Level and sample size primarily constrain transfer and orchestration
+rather than shift effects.
+6.5
+Subjectification in the Context of AI: Significance and Risks
+When access to explanations becomes almost effortless, we need to rethink what education is for. Our synthesis (RQ2)
+shows that outcomes linked to subjectification – students’ ability to take initiative and act with responsibility – are
+generally positive but less stable than gains in knowledge or collaboration, and they depend more on how learning is
+designed and how much time is given. This pattern supports Biesta’s view that becoming an active subject is not just
+about producing correct answers; it requires structured chances to choose, justify, and take ownership of decisions.
+Our moderator analysis (RQ3) helps explain this vulnerability. Growth in agency tends to occur when LLMs are used
+in tutor-like ways over longer periods, and it weakens when designs focus on giving answers quickly or provide only
+brief exposure. The key mechanism is who holds the initiative: if the system supplies solutions too readily, students
+may lean on it, risking “automation bias” and losing confidence in their own judgement [103, 104]. When learners
+are encouraged to plan, explain, and revise, they practise agency and build resilience [105, 106]. Classroom studies
+show the difference: unstructured answer use can boost immediate scores but undermine later performance once AI is
+removed, whereas note-taking and reflective prompts help sustain learning over time [11].
+The main risk is not the technology itself but how we position it in education. Systems designed only for fast answers can
+narrow teaching and learning to what is easiest to measure, sidelining opportunities for thoughtful judgement [19, 20].
+The implications are wide-ranging: philosophical (what kind of agency we want learners to have), pedagogical (how to
+design for growth as well as performance), and institutional (what schools choose to value as success).
+15
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+Figure 2: Funnel plot of studies on Qualification (95% CI).
+Figure 3: Funnel plot of studies on Socialisation (95% CI).
+Figure 4: Funnel plot of studies on Subjectification (95% CI).
+16
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+6.6
+Publication Bias and Sensitivity Analysis
+We assessed potential publication bias [107] by examining funnel plots for asymmetry, a phenomenon known as
+small-study effects, where smaller studies tend to report larger effects. Egger’s regression test [108] was used to detect
+such effects statistically.
+Visual inspection revealed asymmetry in the funnel plots for Qualification (Figure 2) and Subjectification (Figure 4),
+which Egger’s test confirmed as statistically significant (p < .001 and p = .0016, respectively). In contrast, the plot for
+Socialisation (Figure 3) appeared symmetrical, a finding supported by a non-significant Egger’s test (p = .8038).
+However, further sensitivity analyses indicate that this asymmetry does not threaten our core conclusions; instead,
+it highlights the varying robustness of the evidence across domains (Table 8). Although small-study effects were
+present, the Trim and Fill method [109] imputed no missing studies for any domain. More importantly, the findings for
+Qualification and Subjectification proved highly robust, with Fail-safe Ns (4583 and 872) [110] massively exceeding
+their tolerance thresholds. Conversely, the result for Socialisation is fragile, with its Fail-safe N (34) falling below the
+required threshold of 65, suggesting this finding should be interpreted with caution. Finally, leave-one-out analysis [111]
+confirmed that no single study unduly influenced the overall effect sizes.
+7
+Implications for Theory, Method, Practice, and Policy
+7.1
+Theoretical Implications
+Our study shows that, when we evaluate educational technologies, we need to look beyond simple “does it raise scores?”
+questions. Using Biesta’s framework helps explain why apparently positive results may hide tensions: if we focus
+mainly on helping students master knowledge and skills (qualification), improvements in collaboration (socialisation)
+and personal agency (subjectification) become less steady and rely much more on how activities are designed [21, 22].
+Our findings support Biesta’s view that developing students’ sense of agency is not about removing all structure; rather, it
+requires well-designed opportunities for them to make choices, explain their reasoning, and take responsibility [102, 23].
+In contexts where large language models can supply answers almost instantly, such structured opportunities may be
+especially important, as they can help create the conditions under which students’ autonomy is more likely to develop.
+7.2
+Methodological and Scholarly Implications
+Our analysis tentatively points to several shifts that may help strengthen the methodological and scholarly foundations
+of research on LLMs in education.
+Adopt a Purpose-Driven Evaluation Lens. Future studies may find it useful to report outcomes not only by cognitive
+taxonomies (e.g., Bloom’s) but also by the broader educational purposes: qualification, socialisation, and subjectification.
+Prior syntheses often emphasise test-based performance, which may make social and personal outcomes less visible [41,
+44, 46]. A purpose-level lens could help surface these dimensions and enable more like-for-like comparisons across
+designs.
+Assess for Durable, Transferable Learning. It may be valuable to pre-register analytic plans and, where feasible, include
+follow-up or transfer assessments. Because many studies rely on immediate post-tests [112, 38, 30], it can be difficult to
+judge whether observed gains persist or coincide with delayed drawbacks from over-reliance (e.g., weaker performance
+once AI support is removed). Incorporating delayed measures could help distinguish short-lived boosts from more
+durable learning [113, 114, 115].
+Broaden the Evidence Base for generalisability. Given the current concentration in higher education and language/CS
+contexts in our sample, generalising to earlier schooling and other subjects remains uncertain. Extending coverage to
+primary and secondary levels, a wider range of subjects, and under-represented groups may improve transferability and
+help guard against sample-driven bias in design [14, 3].
+Demand Granular Reporting of Design Parameters. It would be helpful for studies to describe key design choices,
+for example, the intended role of the LLM (i.e., tutor, collaborator, or tool), prompting/guardrails, duration, and any
+encouraged study practices (e.g., note-taking) [116, 117]. In our moderator analyses, role and duration appeared to
+be associated with differences in effects. More granular reporting may facilitate replication and support a cumulative
+account of what works, for whom, for what purpose, and under what conditions.
+17
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+7.3
+Practice Implications
+Our findings point to several possible implications for educational practice, offering tentative guidance on how students
+might engage with LLMs, how teachers could design learning activities, and how institutions might structure their
+integration. These suggestions are informed by our moderator analysis (RQ3), which indicated that the benefits of
+LLMs may depend on how they are positioned and scaffolded in learning contexts.
+For Students: Engage as a Thinking Partner, Not an Answer Key. LLMs may be more effective for qualification when
+combined with active study habits rather than used as answer providers [11]. Practices such as note-taking, practising
+recall, and self-explaining ideas have been associated with the deeper cognitive processing required for long-term
+retention [118, 119]. Without these strategies, students could risk becoming passive recipients of AI outputs, which
+might produce superficial short-term gains but undermine durable understanding [10, 103]. Treating LLMs as thinking
+partners that complement rather than replace one’s own reasoning may help students build transferable knowledge and
+skills.
+For Teachers: Design for Agency and Transfer. Our moderator analysis suggested that “tutor-style” prompting appeared
+to be associated with stronger effects on subjectification. Prompts that invite students to plan, justify, and revise
+their thinking, while strategically withholding the final answer, may encourage self-regulated learning and reduce
+over-reliance on AI [120, 121, 122]. We believe that designing interactions in this way could help shift students from
+answer-seeking toward agency-driven learning processes, potentially supporting the transfer of learning beyond the
+immediate task [123, 124].
+For Schools and Courses: Build Scaffolding for Holistic Growth. At the institutional level, realising the potential of
+LLMs may benefit from clearer norms and more structured workflows [125]. Our analysis suggests that socialisation
+benefits, such as collaboration and communication, do not typically emerge from isolated tool use but may depend
+on sustained interventions with time for reflection and peer discussion. Administrators and educators might articulate
+expected study strategies (e.g., “plan–explain–revise” cycles) and embed these interactional elements into the curriculum
+to support these social outcomes [126, 127]. Furthermore, to help ensure that gains in qualification are robust, short
+follow-up assessments without AI support could be used to check whether students can apply what they have learned
+independently.
+7.4
+Policy Implications
+Policy responses to LLMs in education have often defaulted to polarised positions, either banning them outright or
+embracing them without restriction [128, 129]. Such binary framings ignore how design determines impact, risking
+both the loss of beneficial applications and the unchecked spread of harmful ones. Our results indicate that effective
+policy should move beyond access decisions and directly regulate design, evaluation, and equity.
+Mandate Design Transparency. Policies should require clear disclosure of the pedagogical role assigned to LLMs (e.g.,
+tutor, collaborator, or tool), the prompting and guardrail strategies used, and the intended learning outcomes. Trans-
+parency in these design choices is essential for reproducibility, comparability, and accountability across deployments
+[130, 131]. Regulators can set minimum reporting standards, similar to clinical trial registries [132, 133], that make it
+harder for providers to market opaque “black-box” educational tools.
+Require Holistic Evaluation. Evaluations should go beyond test scores. Policies ought to require reporting across all
+three educational purposes: knowledge and skills (qualification), social interaction (socialisation), and personal agency
+(subjectification), and, where feasible, include a delayed follow-up test [134]. Such multidimensional assessment
+ensures that durable learning and broader developmental outcomes are captured, and accreditation bodies or funding
+agencies can make their approval contingent on its inclusion.
+Direct Funding Toward Equity and Generalisability. Current evidence is heavily skewed toward Asian higher education
+and language/computer science contexts [135, 16, 17]. Policies should target funding toward under-represented groups,
+earlier education levels, and less-studied domains such as arts and mathematics. Support for longer pilot programs
+in diverse regions will strengthen generalisability and help ensure that global policy debates reflect a wider range of
+educational realities [136, 137, 138].
+Establish Accountability Mechanisms. Finally, policies should embed accountability into the deployment of LLMs in
+schools and universities. This includes regular audits of actual classroom practices, safeguards against over-reliance,
+and mechanisms for student and teacher feedback. Without such structures, even well-designed systems risk drifting
+toward shallow uses that privilege short-term gains over long-term educational purposes.
+18
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+In summary, effective policy cannot be reduced to whether LLMs are present in classrooms. It should specify how
+they are designed, evaluated, and distributed. Only then can LLMs contribute reliably to education’s full purposes:
+qualification, socialisation, and subjectification.
+8
+Conclusion
+This meta-analysis offers the first large-scale synthesis of how LLMs affect students across Biesta’s three purposes
+of education: qualification, socialisation, and subjectification. Our findings confirm that LLMs reliably enhance
+qualification, particularly when deployed as sustained, tutor-like interventions. Yet effects on socialisation and
+subjectification, while positive, are more fragile and context-dependent. These uneven patterns reveal a structural
+imbalance: LLMs currently strengthen what is most easily measurable, while leaving more relational and developmental
+purposes vulnerable.
+Our findings extend beyond earlier observations that structured use leads to stronger cognitive gains. The moderator
+analyses presented in this paper identify which design levers matter most: the role assigned to the LLM and the duration
+of its use, and map their impact onto Biesta’s three educational purposes. This new purpose-level synthesis shows that
+qualification gains are reliably achieved under tutor-like, sustained designs, while socialisation and subjectification only
+materialise when participation and agency are deliberately designed into the interaction. Without such intentionality,
+the broader aims of education remain systematically underdeveloped.
+For HCI and educational practice, the implication is practical and normative. Researchers and designers must move
+beyond treating “LLM use” as a single treatment and instead attend to when, how, and for what purposes LLMs are
+integrated. Educators and policymakers should not equate success with short-term performance alone, but should
+prioritise designs that scaffold interaction, foster autonomy, and situate learning in community.
+Future work should extend evidence beyond higher education and beyond ChatGPT-dominated contexts, incorporate
+longitudinal and cross-cultural designs, and develop evaluation frameworks that capture not only what students know
+but also how they belong and who they become. Only by foregrounding these multiple purposes can we realise the
+promise of LLMs in education without narrowing its horizons.
+References
+[1] Kamil Malinka, Martin Peresíni, Anton Firc, Ondrej Hujnák, and Filip Janus. On the educational impact of
+chatgpt: Is artificial intelligence ready to obtain a university degree? In Proceedings of the 2023 Conference on
+Innovation and Technology in Computer Science Education V. 1, pages 47–53, 2023.
+[2] Nora McDonald, Aditya Johri, Areej Ali, and Aayushi Hingle Collier. Generative artificial intelligence in higher
+education: Evidence from an analysis of institutional policies and guidelines. Computers in Human Behavior:
+Artificial Humans, 3:100121, 2025.
+[3] Enkelejda Kasneci, Kathrin Seßler, Stefan Küchemann, Maria Bannert, Daryna Dementieva, Frank Fischer, Urs
+Gasser, Georg Groh, Stephan Günnemann, Eyke Hüllermeier, et al. Chatgpt for good? on opportunities and
+challenges of large language models for education. Learning and individual differences, 103:102274, 2023.
+[4] John YH Bai, Wolfgang Müskens, Olaf Zawacki-Richter, and Frank Senyo Loglo. Future prospects of artificial
+intelligence in education: Developing strategic scenarios to engage educators. In 2023: ASCILITE 2023
+Conference Proceedings: People, Partnerships and Pedagogies, pages 22–29, 2023.
+[5] Jürgen Rudolph, Samson Tan, and Shannon Tan. Chatgpt: Bullshit spewer or the end of traditional assessments
+in higher education? Journal of applied learning and teaching, 6(1):342–363, 2023.
+[6] Matthias Lehmann, Philipp B Cornelius, and Fabian J Sting. Ai meets the classroom: When does chatgpt harm
+learning? Available at SSRN 4941259, 2024.
+[7] Angxuan Chen, Yuang Wei, Huixiao Le, and Yan Zhang. Learning by teaching with chatgpt: The effect of
+teachable chatgpt agent on programming education. British Journal of Educational Technology, 2024.
+[8] Zhaoyang Liu, Wenlan Zhang, and Panpan Yang. Can ai chatbots effectively improve efl learners’ learning
+effects?—a meta-analysis of empirical research from 2022–2024. Computer Assisted Language Learning, pages
+1–27, 2025.
+[9] Hudson K Etkin, Kai J Etkin, Ryan J Carter, and Camarin E Rolle. Differential effects of gpt-based tools on
+comprehension of standardized passages. In Frontiers in Education, volume 10, page 1506752. Frontiers Media
+SA, 2025.
+19
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[10] Hamsa Bastani, Osbert Bastani, Alp Sungu, Haosen Ge, Özge Kabakcı, and Rei Mariman. Generative ai without
+guardrails can harm learning: Evidence from high school mathematics. Proceedings of the National Academy of
+Sciences, 122(26):e2422633122, 2025.
+[11] Pia Kreijkes, Viktor Kewenig, Martina Kuvalja, Mina Lee, Sylvia Vitello, Jake M Hofman, Abigail Sellen,
+Sean Rintel, Daniel G Goldstein, David M Rothschild, et al. Effects of llm use and note-taking on reading
+comprehension and memory: A randomised experiment in secondary schools. Available at SSRN, 2025.
+[12] Chunpeng Zhai, Santoso Wibowo, and Lily D Li. The effects of over-reliance on ai dialogue systems on students’
+cognitive abilities: a systematic review. Smart Learning Environments, 11(1):28, 2024.
+[13] Quentin Vidal, Stéphan Vincent-Lancrin, and Hyunkyeong Yun. Emerging governance of generative ai in
+education. 2023.
+[14] Wayne Holmes, Fengchun Miao, et al. Guidance for generative AI in education and research. Unesco Publishing,
+2023.
+[15] James Vincent. New york city schools ban access to chatgpt over fears of cheating and misinformation. The
+Verge, 5, 2023.
+[16] Ruiqi Deng, Maoli Jiang, Xinlu Yu, Yuyan Lu, and Shasha Liu. Does chatgpt enhance student learning? a
+systematic review and meta-analysis of experimental studies. Computers & Education, 227:105224, 2025.
+[17] Yuk Mui Elly Heung and Thomas KF Chiu. How chatgpt impacts student engagement from a systematic review
+and meta-analysis study. Computers and Education: Artificial Intelligence, 8:100361, 2025.
+[18] Yinkun Zhu, Qiwen Liu, and Li Zhao. Exploring the impact of generative artificial intelligence on students’
+learning outcomes: A meta-analysis. Education and Information Technologies, pages 1–29, 2025.
+[19] Neil Selwyn. Is technology good for education? John Wiley & Sons, 2016.
+[20] B Williamson and N Piattoeva. Education governance and datafication. Education and Information Technologies,
+27:3515–3531, 2022.
+[21] Gert Biesta. Good education in an age of measurement: On the need to reconnect with the question of purpose in
+education. Educational Assessment, Evaluation and Accountability (formerly: Journal of Personnel Evaluation
+in Education), 21(1):33–46, 2009.
+[22] Gert JJ Biesta. Good education in an age of measurement: Ethics, politics, democracy. Routledge, 2015.
+[23] Gert Biesta. World-centred education: A view for the present. Routledge, 2021.
+[24] Matthew J Page, Joanne E McKenzie, Patrick M Bossuyt, Isabelle Boutron, Tammy C Hoffmann, Cynthia D
+Mulrow, Larissa Shamseer, Jennifer M Tetzlaff, Elie A Akl, Sue E Brennan, et al. The prisma 2020 statement:
+an updated guideline for reporting systematic reviews. bmj, 372, 2021.
+[25] Alessandro Liberati, Douglas G Altman, Jennifer Tetzlaff, Cynthia Mulrow, Peter C Gøtzsche, John PA Ioannidis,
+Mike Clarke, Philip J Devereaux, Jos Kleijnen, and David Moher. The prisma statement for reporting systematic
+reviews and meta-analyses of studies that evaluate healthcare interventions: explanation and elaboration. Bmj,
+339, 2009.
+[26] Jennifer Meyer, Thorben Jansen, Ronja Schiller, Lucas W Liebenow, Marlene Steinbach, Andrea Horbach, and
+Johanna Fleckenstein. Using llms to bring evidence-based feedback into the classroom: Ai-generated feedback
+increases secondary students’ text revision, motivation, and positive emotions. Computers and Education:
+Artificial Intelligence, 6:100199, 2024.
+[27] Jining Han and Mimi Li. Exploring chatgpt-supported teacher feedback in the efl context. System, 126:103502,
+2024.
+[28] Kai Guo and Deliang Wang. To resist it or to embrace it? examining chatgpt’s potential to support teacher
+feedback in efl writing. Education and Information Technologies, 29(7):8435–8463, 2024.
+[29] Marek Urban, Filip Dˇechtˇerenko, Jiˇrí Lukavsk`y, Veronika Hrabalová, Filip Svacha, Cyril Brom, and Kamila
+Urban. Chatgpt improves creative problem-solving performance in university students: An experimental study.
+Computers & Education, 215:105031, 2024.
+[30] Dan Sun, Azzeddine Boudouaia, Chengcong Zhu, and Yan Li. Would chatgpt-facilitated programming mode im-
+pact college students’ programming behaviors, performances, and perceptions? an empirical study. International
+Journal of Educational Technology in Higher Education, 21(1):14, 2024.
+[31] Ibnatul Jalilah Yusof. Chatgpt-assisted retrieval practice and exam scores: Does it work? Journal of Information
+Technology Education: Research, 24:008, 2025.
+20
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[32] Abdullah Al-Abri. Exploring chatgpt as a virtual tutor: A multi-dimensional analysis of large language models
+in academic support. Education and Information Technologies, pages 1–36, 2025.
+[33] Promethi Das Deep, Nara Martirosyan, Nitu Ghosh, and Md Shiblur Rahaman. Chatgpt in esl higher education:
+Enhancing writing, engagement, and learning outcomes. Information, 16(4):316, 2025.
+[34] Risang Baskara et al. Exploring the implications of chatgpt for language learning in higher education. Indonesian
+Journal of English Language Teaching and Applied Linguistics, 7(2):343–358, 2023.
+[35] Hao Yu, Yunyun Guo, Hailiang Yang, Weiyu Zhang, and Yan Dong. Can chatgpt revolutionize language learning?
+unveiling the power of ai in multilingual education through user insights and pedagogical impact. European
+Journal of Education, 60(1):e12749, 2025.
+[36] Eason Chen, Ray Huang, Han-Shin Chen, Yuen-Hsien Tseng, and Liang-Yi Li. Gptutor: a chatgpt-powered
+programming tool for code explanation. In International conference on artificial intelligence in education, pages
+321–327. Springer, 2023.
+[37] Anas Husain. Potentials of chatgpt in computer programming: Insights from programming instructors. Journal
+of Information Technology Education: Research, 23:002, 2024.
+[38] Brendan P Mackey, Razmig Garabet, Laura Maule, Abay Tadesse, James Cross, and Michael Weingarten.
+Evaluating chatgpt-4 in medical education: an assessment of subject exam performance reveals limitations in
+clinical curriculum support for students. Discover Artificial Intelligence, 4(1):38, 2024.
+[39] Alexandra Aster, Matthias Carl Laupichler, Tamina Rockwell-Kollmann, Gilda Masala, Ebru Bala, and Tobias
+Raupach. Chatgpt and other large language models in medical education—scoping literature review. Medical
+Science Educator, 35(1):555–567, 2025.
+[40] Alessandro Vanzo, Sankalan Pal Chowdhury, and Mrinmaya Sachan. Gpt-4 as a homework tutor can improve
+student engagement and learning outcomes. arXiv preprint arXiv:2409.15981, 2024.
+[41] Lihui Sun and Liang Zhou. Does generative artificial intelligence improve the academic achievement of college
+students? a meta-analysis. Journal of Educational Computing Research, 62(7):1676–1713, 2024.
+[42] Xiaohong Liu, Baoxin Guo, Wei He, and Xiaoyong Hu. Effects of generative artificial intelligence on k-12 and
+higher education students’ learning outcomes: A meta-analysis. Journal of Educational Computing Research,
+page 07356331251329185, 2025.
+[43] De-Xin Hu, Dan-Dan Pang, and Zhe Xing. Evaluating the effects of generative ai on student learning outcomes.
+Educational Technology & Society, 28(3):226–240, 2025.
+[44] Xiaodong Qu, Joshua Sherwood, Peiyan Liu, and Nawwaf Aleisa. Generative ai tools in higher education: A
+meta-analysis of cognitive impact. In Proceedings of the Extended Abstracts of the CHI Conference on Human
+Factors in Computing Systems, pages 1–9, 2025.
+[45] Jin Wang and Wenxiang Fan. The effect of chatgpt on students’ learning performance, learning perception, and
+higher-order thinking: insights from a meta-analysis. Humanities and Social Sciences Communications, 12(1):
+1–21, 2025.
+[46] Zhiwei Liu, Haode Zuo, and Yongjing Lu. The impact of chatgpt on students’ academic achievement: A
+meta-analysis. Journal of Computer Assisted Learning, 41(4):e70096, 2025.
+[47] Qi Xia, Peng Zhang, Wendan Huang, and Thomas KF Chiu. The impact of generative ai on university students’
+learning outcomes via bloom’s taxonomy: a meta-analysis and pattern mining approach. Asia Pacific Journal of
+Education, pages 1–31, 2025.
+[48] David R Krathwohl. A revision of bloom’s taxonomy: An overview. Theory into practice, 41(4):212–218, 2002.
+[49] Gert Biesta. Taking education seriously: The ongoing challenge. Educational Theory, 74(3):434–448, 2024.
+[50] Jeremy Knox, Ben Williamson, and Sian Bayne. Machine behaviourism: Future visions of ‘learnification’and
+‘datafication’across humans and digital technologies. Learning, Media and Technology, 45(1):31–45, 2020.
+[51] Carlo Perrotta and Neil Selwyn. Deep learning goes to school: Toward a relational understanding of ai in
+education. Learning, media and technology, 45(3):251–269, 2020.
+[52] Dalila Pinto Coelho, Miriam Ham, and Sarah-Louise Jones. Understanding biesta’s three purposes of education:
+A framework proposal. British Educational Research Journal, 2025.
+[53] Lanqin Zheng, Jiayu Niu, Lu Zhong, and Juliana Fosua Gyasi. The effectiveness of artificial intelligence on
+learning achievement and learning perception: A meta-analysis. Interactive Learning Environments, 31(9):
+5650–5664, 2023.
+21
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[54] Chien-Chang Lin, Anna YQ Huang, and Owen HT Lu. Artificial intelligence in intelligent tutoring systems
+toward sustainable education: a systematic review. Smart learning environments, 10(1):41, 2023.
+[55] Tingting Li, Yu Ji, and Zehui Zhan. Expert or machine? comparing the effect of pairing student teacher
+with in-service teacher and chatgpt on their critical thinking, learning performance, and cognitive load in an
+integrated-stem course. Asia Pacific Journal of Education, 44(1):45–60, 2024.
+[56] Rouye Pan, Zihan Qin, Lan Zhang, Ligao Lou, Huiju Yu, and Junfeng Yang. Exploring the impact of intelligent
+learning tools on students’ independent learning abilities: a pls-sem analysis of grade 6 students in china.
+Humanities and Social Sciences Communications, 10(1):1–11, 2023.
+[57] Juan Escalante, Austin Pack, and Alex Barrett. Ai-generated feedback on writing: Insights into efficacy and enl
+student preference. International Journal of Educational Technology in Higher Education, 20(1):57, 2023.
+[58] Maria Perifanou and Anastasios A Economides. Collaborative uses of genai tools in project-based learning.
+Education Sciences, 15(3):354, 2025.
+[59] Hazrina Hamid, Khadjizah Zulkifli, Faiza Naimat, Nor Liana Che Yaacob, and Kwok Wen Ng. Exploratory study
+on student perception on the use of chat ai in process-driven problem-based learning. Currents in Pharmacy
+Teaching and Learning, 15(12):1017–1025, 2023.
+[60] Yao Fu, Hao Peng, Tushar Khot, and Mirella Lapata. Improving language model negotiation with self-play and
+in-context learning from ai feedback. arXiv preprint arXiv:2305.10142, 2023.
+[61] Anita Samuel, Michael Soh, and Eulho Jung. Enhancing reflective practice with chatgpt: A new approach to
+assignment design. Medical Teacher, pages 1–3, 2025.
+[62] Aray M Kassenkhan, AIMAN N Moldagulova, and Vasiliy V Serbin. Gamification and artificial intelligence in
+education: A review of innovative approaches to fostering critical thinking. IEEE Access, 2025.
+[63] Wolfgang Viechtbauer. Conducting meta-analyses in r with the metafor package. Journal of statistical software,
+36:1–48, 2010.
+[64] Larry V Hedges. Distribution theory for glass’s estimator of effect size and related estimators. journal of
+Educational Statistics, 6(2):107–128, 1981.
+[65] Mark W Lipsey and David B Wilson. Practical meta-analysis. SAGE publications, Inc, 2001.
+[66] Shlomo S Sawilowsky. New effect size rules of thumb. Journal of modern applied statistical methods, 8(2):26,
+2009.
+[67] Yanjun Zhang, Yanping Liang, Xiaohong Tian, and Xiao Yu. The effects of unplugged programming activities
+on k-9 students’ computational thinking: meta-analysis. Educational technology research and development, 72
+(3):1331–1356, 2024.
+[68] Julian PT Higgins, Simon G Thompson, Jonathan J Deeks, and Douglas G Altman. Measuring inconsistency in
+meta-analyses. bmj, 327(7414):557–560, 2003.
+[69] Greg Kestin, Kelly Miller, Anna Klales, Timothy Milbourne, and Gregorio Ponti. Ai tutoring outperforms
+in-class active learning: an rct introducing a novel research-based design in an authentic educational setting.
+Scientific Reports, 15(1):17458, 2025.
+[70] Alexander Scarlatos, Naiming Liu, Jaewook Lee, Richard Baraniuk, and Andrew Lan. Training llm-based tutors
+to improve student learning outcomes in dialogues. In International Conference on Artificial Intelligence in
+Education, pages 251–266. Springer, 2025.
+[71] Shakked Noy and Whitney Zhang. Experimental evidence on the productivity effects of generative artificial
+intelligence. Science, 381(6654):187–192, 2023.
+[72] Saif Alneyadi and Yousef Wardat. Chatgpt: Revolutionizing student achievement in the electronic magnetism
+unit for eleventh-grade students in emirates schools. Contemporary Educational Technology, 15(4):ep448, 2023.
+[73] Attila Kovari. A systematic review of ai-powered collaborative learning in higher education: Trends and outcomes
+from the last decade. Social Sciences & Humanities Open, 11:101335, 2025.
+[74] Wanqing Hu, Jirong Tian, and Yanyan Li. Enhancing student engagement in online collaborative writing through
+a generative ai-based conversational agent. The Internet and Higher Education, 65:100979, 2025.
+[75] Xiaodong Wei, Lei Wang, Lap-Kei Lee, and Ruixue Liu. The effects of generative ai on collaborative problem-
+solving and team creativity performance in digital story creation: an experimental study. International Journal of
+Educational Technology in Higher Education, 22(1):23, 2025.
+[76] Xusheng Dai, Zhaochun Wen, Jianxiao Jiang, Huiqin Liu, and Yu Zhang. How students use ai feedback matters:
+Experimental evidence on physics achievement and autonomy. arXiv preprint arXiv:2505.08672, 2025.
+22
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[77] Harsh Kumar, Ilya Musabirov, Mohi Reza, Jiakai Shi, Xinyuan Wang, Joseph Jay Williams, Anastasia Kuzminykh,
+and Michael Liut. Impact of guidance and interaction strategies for llm use on learner performance and perception.
+arXiv preprint arXiv:2310.13712, 2023.
+[78] Xinyue Chen, Kunlin Ruan, Kexin Phyllis Ju, Nathan Yap, and Xu Wang. More ai assistance reduces cognitive
+engagement: Examining the ai assistance dilemma in ai-supported note-taking. arXiv preprint arXiv:2509.03392,
+2025.
+[79] Antonie Alm. Exploring autonomy in the ai wilderness: Learner challenges and choices. Education sciences, 14
+(12):1369, 2024.
+[80] Marina Belkina, Scott Daniel, Sasha Nikolic, Rezwanul Haque, Sarah Lyden, Peter Neal, Sarah Grundy, and
+Ghulam M Hassan. Implementing generative ai (genai) in higher education: A systematic review of case studies.
+Computers and Education: Artificial Intelligence, page 100407, 2025.
+[81] Olaf Zawacki-Richter, Victoria I Marín, Melissa Bond, and Franziska Gouverneur. Systematic review of research
+on artificial intelligence applications in higher education–where are the educators? International journal of
+educational technology in higher education, 16(1):1–27, 2019.
+[82] Daniela Marzano. Generative artificial intelligence (gai) in teaching and learning processes at the k-12 level: A
+systematic review: D. marzano. Technology, Knowledge and Learning, pages 1–41, 2025.
+[83] Ana Mouta, Ana María Pinto-Llorente, and Eva María Torrecilla-Sánchez. “where is agency moving to?”:
+Exploring the interplay between ai technologies in education and human agency. Digital Society, 4(2):49, 2025.
+[84] Soosy Joseph. Rethinking assessment: how ai is changing the way we measure student success? AI & SOCIETY,
+pages 1–3, 2025.
+[85] Daire Maria Ni Uanachain and Lila Ibrahim Aouad. Generative ai in education: Rethinking learning, assessment
+& student agency for the ai era. Thresholds in Education, 48(1):111–132, 2025.
+[86] Sophia Soomin Lee and Robert L Moore. Harnessing generative ai (genai) for automated feedback in higher
+education: A systematic review. Online Learning, 28(3):82–106, 2024.
+[87] Fatih Yavuz, Özgür Çelik, and Gamze Yava¸s Çelik. Utilizing large language models for efl essay grading: An
+examination of reliability and validity in rubric-based assessments. British Journal of Educational Technology,
+56(1):150–166, 2025.
+[88] Jian Zhao, Elaine Chapman, and Peyman GP Sabet. Generative ai and educational assessments: A systematic
+review. Education Research and Perspectives, 51:124–155, 2024.
+[89] Msafiri Mgambi Msambwa, Zhang Wen, and Kangwa Daniel. The impact of ai on the personal and collaborative
+learning environments in higher education. European Journal of Education, 60(1):e12909, 2025.
+[90] Siyu Zha, Yuanrong Tang, Jiangtao Gong, and Yingqing Xu. Colp: Scaffolding children’s online long-term
+collaborative learning. International Journal of Human–Computer Interaction, pages 1–23, 2025.
+[91] Watcharapol Wiboolyasarin, Kanokpan Wiboolyasarin, Kanpabhat Suwanwihok, Nattawut Jinowat, and Renu
+Muenjanchoey. Synergizing collaborative writing and ai feedback: An investigation into enhancing l2 writing
+proficiency in wiki-based environments. Computers and Education: Artificial Intelligence, 6:100228, 2024.
+[92] Jasper Roe and Mike Perkins. Generative ai and agency in education: A critical scoping review and thematic
+analysis. arXiv preprint arXiv:2411.00631, 2024.
+[93] Geesje Van den Berg and Elize Du Plessis. Chatgpt and generative ai: Possibilities for its contribution to lesson
+planning, critical thinking and openness in teacher education. Education Sciences, 13(10):998, 2023.
+[94] Michelene TH Chi and Ruth Wylie. The icap framework: Linking cognitive engagement to active learning
+outcomes. Educational psychologist, 49(4):219–243, 2014.
+[95] Maxwell Szymanski, John Stamper, Vero Vanden Abeele, and Katrien Verbert. Granular feedback: Leveraging
+domain expertise and explainable ai to effectively steer models. In Proceedings of the 33rd ACM Conference on
+User Modeling, Adaptation and Personalization, pages 94–103, 2025.
+[96] Chia-Ju Lin, Hsin-Yu Lee, Wei-Sheng Wang, Yueh-Min Huang, and Ting-Ting Wu. Enhancing reflective thinking
+in stem education through experiential learning: The role of generative ai as a learning aid. Education and
+Information Technologies, 30(5):6315–6337, 2025.
+[97] Muh Putra Pratama, Rigel Sampelolo, and Hans Lura. Revolutionizing education: harnessing the power of
+artificial intelligence for personalized learning. Klasikal: Journal of education, language teaching and science, 5
+(2):350–357, 2023.
+23
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[98] XUJIANG ZHAO, JIAYING LU, CHENGYUAN DENG, C ZHENG, JUNXIANG WANG, TANMOY CHOWD-
+HURY, L YUN, HEJIE CUI, ZHANG XUCHAO, Tianjiao Zhao, et al. Beyond one-model-fits-all: A survey of
+domain specialization for large language models. arXiv preprint arXiv, 2305, 2023.
+[99] Chen Ling, Xujiang Zhao, Jiaying Lu, Chengyuan Deng, Can Zheng, Junxiang Wang, Tanmoy Chowdhury, Yun
+Li, Hejie Cui, Xuchao Zhang, et al. Domain specialization as the key to make large language models disruptive:
+A comprehensive survey. ACM Computing Surveys, 2023.
+[100] Dech-siri Nopas. Algorithmic learning or learner autonomy? rethinking ai’s role in digital education. Qualitative
+Research Journal, 2025.
+[101] Christian Karl Grund and Maria Tulis. Facilitating student autonomy in large-scale lectures with audience
+response systems. Educational Technology Research and Development, 68(3):975–993, 2020.
+[102] Gert JJ Biesta. Beautiful risk of education. Routledge, 2015.
+[103] Ali Darvishi, Hassan Khosravi, Shazia Sadiq, Dragan Gaševi´c, and George Siemens. Impact of ai assistance on
+student agency. Computers & Education, 210:104967, 2024.
+[104] Amit K Shukla, Vagan Terziyan, and Timo Tiihonen. Ai as a user of ai: Towards responsible autonomy. Heliyon,
+10(11), 2024.
+[105] Victoria D Smith and Janet W Darvas. Encouraging student autonomy through higher order thinking skills.
+Journal of Instructional Research, 6:29–34, 2017.
+[106] Maryam Ahmadi and Siros Izadpanah. The study of relationship between learning autonomy, language anxiety,
+and thinking style: The case of iranian university students. International Journal of Research in English
+Education, 4(2):73–88, 2019.
+[107] Kenneth F Schulz, Iain Chalmers, Richard J Hayes, and Douglas G Altman. Empirical evidence of bias:
+dimensions of methodological quality associated with estimates of treatment effects in controlled trials. Jama,
+273(5):408–412, 1995.
+[108] Matthias Egger, George Davey Smith, Martin Schneider, and Christoph Minder. Bias in meta-analysis detected
+by a simple, graphical test. bmj, 315(7109):629–634, 1997.
+[109] Sue Duval and Richard Tweedie. A nonparametric “trim and fill” method of accounting for publication bias in
+meta-analysis. Journal of the american statistical association, 95(449):89–98, 2000.
+[110] Michael Borenstein, Larry V Hedges, Julian PT Higgins, and Hannah R Rothstein. Introduction to meta-analysis.
+John wiley & sons, 2021.
+[111] Wolfgang Viechtbauer and Mike W-L Cheung. Outlier and influence diagnostics for meta-analysis. Research
+synthesis methods, 1(2):112–125, 2010.
+[112] Muhammad Hakiki, Radinal Fadli, Agariadne Dwinggo Samala, Ade Fricticarani, Popi Dayurni, Kurniati
+Rahmadani, Ayu Dewi Astiti, and Arisman Sabir. Exploring the impact of using chat-gpt on student learning
+outcomes in technology learning: The comprehensive experiment. Advances in Mobile Learning Educational
+Research, 3(2):859–872, 2023.
+[113] Behnam Behforouz and Ali Al Ghaithi. Grammar gains: Transforming efl learning with chatgpt. Educational
+Process: International Journal, 13(4):25–41, 2024.
+[114] Biju Theruvil Sayed, Zein Bassam Bani Younes, Ahmad Alkhayyat, Iroda Adhamova, and Habesha Teferi.
+To be with artificial intelligence in oral test or not to be: a probe into the traces of success in speaking skill,
+psychological well-being, autonomy, and academic buoyancy. Language Testing in Asia, 14(1):49, 2024.
+[115] Hamza Farhane. The impact of chatgpt as a formative feedback tool on moroccan secondary school students’
+paragraph writing skills: A quasi-experimental design. Journal of English Language Teaching and Applied
+Linguistics, 7(3):258–275, 2025.
+[116] Melissa Bond, Hassan Khosravi, Maarten De Laat, Nina Bergdahl, Violeta Negrea, Emily Oxley, Phuong Pham,
+Sin Wang Chong, and George Siemens. A meta systematic review of artificial intelligence in higher education:
+A call for increased ethics, collaboration, and rigour. International journal of educational technology in higher
+education, 21(1):4, 2024.
+[117] Yao Fu and Zhenjie Weng. Navigating the ethical terrain of ai in education: A systematic review on framing
+responsible human-centered ai practices. Computers and Education: Artificial Intelligence, 7:100306, 2024.
+[118] John Dunlosky, Katherine A Rawson, Elizabeth J Marsh, Mitchell J Nathan, and Daniel T Willingham. Improving
+students’ learning with effective learning techniques: Promising directions from cognitive and educational
+psychology. Psychological Science in the Public interest, 14(1):4–58, 2013.
+24
+
+A Meta-Analysis of LLM Effects on Students
+A PREPRINT
+[119] Pooja K Agarwal and Patrice M Bain. Powerful teaching: Unleash the science of learning. John Wiley & Sons,
+2024.
+[120] Griffin Pitts, Neha Rani, Weedguet Mildort, and Eva-Marie Cook. Students’ reliance on ai in higher education:
+Identifying contributing factors. arXiv preprint arXiv:2506.13845, 2025.
+[121] Ze-Min Liu, Gwo-Jen Hwang, Chuang-Qi Chen, Xiang-Dong Chen, and Xin-Dong Ye. Integrating large language
+models into efl writing instruction: effects on performance, self-regulated learning strategies, and motivation.
+Computer Assisted Language Learning, pages 1–25, 2024.
+[122] Xiaoqing Xu, Lifang Qiao, Nuo Cheng, Hongxia Liu, and Wei Zhao. Enhancing self-regulated learning and
+learning experience in generative ai environments: The critical role of metacognitive support. British Journal of
+Educational Technology, 2025.
+[123] Steffen Steinert, Karina E Avila, Stefan Ruzika, Jochen Kuhn, and Stefan Küchemann. Harnessing large language
+models to develop research-based learning assistants for formative feedback. Smart Learning Environments, 11
+(1):62, 2024.
+[124] Shuai Ma, Junling Wang, Yuanhao Zhang, Xiaojuan Ma, and April Yi Wang. Dbox: Scaffolding algorithmic
+programming learning through learner-llm co-decomposition. In Proceedings of the 2025 CHI Conference on
+Human Factors in Computing Systems, pages 1–20, 2025.
+[125] Oleksan V Spivakovsky, Serhii A Omelchuk, Vitaliy V Kobets, Nataliia V Valko, and Daria S Malchykova. Insti-
+tutional policies on artificial intelligence in university learning, teaching and research. Information Technologies
+and Learning Tools, 97(5):181, 2023.
+[126] Kadaruddin Kadaruddin. Empowering education through generative ai: Innovative instructional strategies for
+tomorrow’s learners. International Journal of Business, Law, and Education, 4(2):618–625, 2023.
+[127] Sang Joon Lee and Kyungbin Kwon. A systematic review of ai education in k-12 classrooms from 2018 to 2023:
+Topics, strategies, and learning outcomes. Computers and Education: Artificial Intelligence, 6:100211, 2024.
+[128] Shohil Kishore, Yvonne Hong, Andy Nguyen, and Saima Qutab. Should chatgpt be banned at schools? organizing
+visions for generative artificial intelligence (ai) in education. Rising like a Phoenix: Emerging from the Pandemic
+and Reshaping Human Endeavors with Digital Technologies, 2023.
+[129] Hao Yu. Reflection on whether chat gpt should be banned by academia from the perspective of education and
+teaching. Frontiers in Psychology, 14:1181712, 2023.
+[130] Bahar Memarian and Tenzin Doleck. Fairness, accountability, transparency, and ethics (fate) in artificial
+intelligence (ai) and higher education: A systematic review. Computers and Education: Artificial Intelligence, 5:
+100152, 2023.
+[131] Muhammad Ali Chaudhry, Mutlu Cukurova, and Rose Luckin. A transparency index framework for ai in
+education. In International conference on artificial intelligence in education, pages 195–198. Springer, 2022.
+[132] John PA Ioannidis. Why most published research findings are false. PLoS medicine, 2(8):e124, 2005.
+[133] Ida Sim, An-Wen Chan, A Metin Gülmezoglu, Tim Evans, and Tikki Pang. Clinical trial registration: transparency
+is the watchword. The Lancet, 367(9523):1631–1633, 2006.
+[134] F Miao and W Holmes. Artificial intelligence and education. guidance for policy-makers. 2021.
+[135] Sai-Leung Ng and Chih-Chung Ho. Generative ai in education: Mapping the research landscape through
+bibliometric analysis. Information, 16(8):657, 2025.
+[136] Silvio Marcello Pagliara, Gianmarco Bonavolonta, Mariella Pia, Stefania Falchi, Antioco Luigi Zurru, Gianni
+Fenu, and Antonello Mura. The integration of artificial intelligence in inclusive education: A scoping review.
+Information, 15(12):774, 2024.
+[137] Li Li, Fengchao Yu, and Enting Zhang. A systematic review of learning task design for k-12 ai education: Trends,
+challenges, and opportunities. Computers and Education: Artificial Intelligence, 6:100217, 2024.
+[138] Nang Sagawah Win Bo. Oecd digital education outlook 2023: Towards an effective education ecosystem.
+Hungarian Educational Research Journal, 15(2):284–289, 2025.
+25
