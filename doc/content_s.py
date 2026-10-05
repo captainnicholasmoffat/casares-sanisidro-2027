@@ -28,16 +28,15 @@ capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se f
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
 tecnolog&iacute;a</b>, con una tecnicatura de la universidad nacional del partido, para que lo aprendido
 sirva tambi&eacute;n fuera del Municipio: un a&ntilde;o com&uacute;n y cuatro orientaciones, hacia los puestos
-que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>, donde hoy
-no hay ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
+que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>: hoy hay cinco espacios chicos, s&oacute;lo en Beccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
 empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
 administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la
 parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, que entran de a 464 cada seis meses y se forman en dos a&ntilde;os: el primero cursan, y el segundo trabajan como pasantes, seis meses en el Municipio y seis en una empresa del partido, con un tutor que las acompa&ntilde;a hasta el empleo: uno de sus profesores, votado por cada alumno. En el mandato egresan 1.286. <span class="sg">La formaci&oacute;n laboral se
 paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: un asistente propio
-al que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con pasantes y egresados de
+<li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: una inteligencia artificial propia,
+a la que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con pasantes y egresados de
 la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Se paga con la partida
 de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones al a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>

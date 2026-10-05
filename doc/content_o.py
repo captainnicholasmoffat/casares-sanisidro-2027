@@ -111,7 +111,7 @@ depender del cierre contable.</p>
 
 <h3>Art&iacute;culo 3 &mdash; L&iacute;mites</h3>
 <p class="tight">El Sistema no muestra datos que permitan identificar a un paciente ni im&aacute;genes del interior de
-un establecimiento de salud. El asistente de consulta que el Sistema provea responder&aacute;
+un establecimiento de salud. La inteligencia artificial del Municipio responder&aacute;
 &uacute;nicamente sobre informaci&oacute;n registrada en el Sistema, indicando el documento de origen, <b>y no
 ejercer&aacute; funci&oacute;n alguna de moderaci&oacute;n, filtro o selecci&oacute;n de la informaci&oacute;n</b>.</p>
 
@@ -236,18 +236,43 @@ topes que ella fija de <b>trescientos (300) asistentes y quinientos (500) metros
 exigencias de seguridad proporcionales al aforo. La comisi&oacute;n zonal es o&iacute;da sobre horarios
 y localizaci&oacute;n.</p>
 
-<h2>VIII &middot; Ordenanza de ruido vehicular</h2>
+<h2>VIII &middot; Ordenanza de ruido</h2>
+<p class="tight"><i>Necesita dictamen de un abogado: la base en la Ordenanza 5182 y en la Ordenanza General 27, la
+definici&oacute;n del instrumento, la prueba del vecino y la reserva de su identidad.</i></p>
 
-<h3>Art&iacute;culo 1 &mdash; Competencia y medici&oacute;n</h3>
-<p class="tight">En ejercicio de la facultad del art&iacute;culo 27 inciso 17 del Decreto-Ley 6769/58,
-el Municipio medir&aacute; la emisi&oacute;n sonora de veh&iacute;culos en circulaci&oacute;n conforme
-los l&iacute;mites y m&eacute;todos del Anexo 1 del Decreto 779/95, reglamentario de la Ley 24.449, y toda persona podr&aacute; consultar las mediciones.</p>
+<h3>Art&iacute;culo 1 &mdash; Competencia y base</h3>
+<p class="tight">En ejercicio de la facultad del art&iacute;culo 27 inciso 17 del Decreto-Ley 6769/58, y sobre la base del
+art&iacute;culo 81 de la Ordenanza 5182/1976 (C&oacute;digo Contravencional) y de la Ordenanza General 27/1968, el Municipio mide la
+emisi&oacute;n sonora de los veh&iacute;culos en circulaci&oacute;n y recibe la prueba de los ruidos molestos. Toda persona puede consultar
+las mediciones en la inteligencia artificial del Municipio.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Sanci&oacute;n</h3>
-<p class="tight">La constataci&oacute;n por medios autom&aacute;ticos habilita a labrar acta
-&uacute;nicamente cuando el instrumento se encuentre <b>homologado</b> conforme la normativa
-metrol&oacute;gica aplicable. Hasta entonces la medici&oacute;n tiene fines de diagn&oacute;stico y de informaci&oacute;n al vecino. Rige en todos los casos el derecho de descargo ante la Justicia de Faltas
-Municipal.</p>
+<h3>Art&iacute;culo 2 &mdash; Instrumento homologado</h3>
+<p class="tight">A los efectos de esta ordenanza, es instrumento homologado el son&oacute;metro clase 1 o 2 seg&uacute;n la norma
+IEC 61672, con certificado de calibraci&oacute;n de un laboratorio de no m&aacute;s de dos a&ntilde;os, comprobado con un calibrador
+ac&uacute;stico al empezar y al terminar cada medici&oacute;n. Los l&iacute;mites son los del Anexo 1 del Decreto 779/95, reglamentario de
+la Ley 24.449, y el m&eacute;todo de medici&oacute;n lo fija la reglamentaci&oacute;n.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Estaciones m&oacute;viles</h3>
+<p class="tight">Las estaciones de medici&oacute;n se trasladan seg&uacute;n el mapa del ruido que arma la inteligencia artificial
+del Municipio, sin nueva calibraci&oacute;n por el solo traslado. Sus lugares se publican antes de medir.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Sanci&oacute;n</h3>
+<p class="tight">La multa por emisi&oacute;n sonora de motos y colectivos se labra s&oacute;lo con instrumento homologado, despu&eacute;s
+de un aviso al titular y con la validaci&oacute;n de un inspector. Rige en todos los casos el derecho de descargo ante la
+Justicia de Faltas Municipal.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Prueba del vecino</h3>
+<p class="tight">Toda persona puede denunciar ruidos molestos con grabaciones que la inteligencia artificial del
+Municipio sella al momento de grabar con firma digital, hora y lugar (Ley 25.506, art&iacute;culo 10). Varias grabaciones
+selladas, con el acta del inspector, prueban el ruido molesto del art&iacute;culo 81 de la Ordenanza 5182 sin necesidad de
+medir decibeles. El denunciante graba desde su domicilio y no registra a otras personas.</p>
+
+<h3>Art&iacute;culo 6 &mdash; Reserva de identidad y denuncia falsa</h3>
+<p class="tight">La identidad del denunciante se reserva frente al denunciado, y se le informa desde el inicio que una
+autoridad judicial puede requerirla. La denuncia falsa se sanciona.</p>
+
+<h3>Art&iacute;culo 7 &mdash; Mediaci&oacute;n voluntaria</h3>
+<p class="tight">Antes de la inspecci&oacute;n, el Municipio ofrece a las partes una mediaci&oacute;n voluntaria.</p>
 
 <h2>IX &middot; Ordenanza del pliego de higiene urbana</h2>
 
