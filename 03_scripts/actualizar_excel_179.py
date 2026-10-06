@@ -1150,12 +1150,12 @@ for cc in "GHIJ":
     ES.column_dimensions[cc].width = 15
 
 # ======================================================================
-# METAS: las trece del 6.3
+# METAS: las veinte del 6.3 (dispatch 3, C1: siete nuevas)
 # ======================================================================
 MT = wb["Metas"]
 for rr in range(1, 40):
     clear_row(MT, rr)
-put(MT, "B2", "LAS TRECE METAS DEL MANDATO (6.3)", font(13, True, color=WINE))
+put(MT, "B2", "LAS VEINTE METAS DEL MANDATO (6.3)", font(13, True, color=WINE))
 put(MT, "B3", "Línea de base de hoy, lo que proyecta este libro donde lo hay y la fuente pública que la comprueba.",
     font(9, italic=True, color=GRAY))
 for cc, t in (("B", "META"), ("C", "LÍNEA DE BASE"), ("D", "AÑO 4 · 2031"), ("E", "AÑO 8 · 2035"),
@@ -1178,7 +1178,8 @@ metas = [
     ("La inteligencia artificial del Municipio en producción, con la partida vecinal, las asambleas transcriptas "
      "y cada dato cargado el día que ocurre", "No existe. Hoy el Municipio publica en PDF y su portal de datos "
      "abiertos devuelve error", NP, NP, "Se le pregunta a la inteligencia artificial del Municipio: cualquiera puede hacerlo"),
-    ("Turno médico en línea en los tres hospitales, el odontológico y los nueve centros de atención primaria",
+    ("Turno médico en línea en los tres hospitales, el odontológico y los nueve centros de atención primaria, que la "
+     "inteligencia artificial del Municipio saca en la charla, con recordatorio y lista de espera",
      "Cero efectores de salud humana con turno en línea", NP, NP, "La propia plataforma, consultable por cualquiera"),
     ("Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y "
      "avise cuando se sale del rango", "Hoy se publica el total del expediente, no el precio por unidad", NP, NP,
@@ -1190,9 +1191,13 @@ metas = [
      "tiene, y que cualquiera pueda preguntar cuántas órdenes judiciales se recibieron y cuántas se cumplieron",
      "No hay registro público de que ninguno de los dos usos opere", NP, NP,
      "Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y órdenes"),
-    ("Partida presupuestaria propia para género, separada del programa que hoy comparte",
-     "Género no tiene partida propia; discapacidad sí, y devengó 65,9 M en 2025", NP, NP, "Estado de ejecución por programa"),
-    ("Un centro de apoyo escolar gratuito en cada una de las seis localidades", "Cero centros municipales",
+    ("Partida presupuestaria propia para género, separada del programa que hoy comparte, y la dirección atendiendo "
+     "días fijos en cada zona, empezando por Boulogne y Béccar",
+     "Género no tiene partida propia; discapacidad sí, y devengó 65,9 M en 2025. La dirección tiene una sola sede, en "
+     "la ciudad de San Isidro", NP, NP,
+     "Estado de ejecución por programa; los días y lugares de atención se le preguntan a la inteligencia artificial del Municipio"),
+    ("Un centro de apoyo escolar gratuito en cada una de las seis localidades",
+     "Cinco espacios chicos, sólo en Béccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno",
      "=SUM(Programas!AM12:AX12)/Supuestos!$C$55", "=SUM(Programas!CI12:CT12)/Supuestos!$C$55",
      "Ejecución por programa; la matrícula por sede se le pregunta a la inteligencia artificial del Municipio"),
     ("La tecnicatura de dos años de la UNSO en las seis zonas, el segundo como pasante —seis meses en el Municipio "
@@ -1202,6 +1207,28 @@ metas = [
      "Una sede, la del Barrio La Cava", "=Programas!AX38", "=SUM(Programas!CI37:CT37)",
      "Ejecución por programa y convenios de pasantías; la matrícula por sede se le pregunta a la inteligencia "
      "artificial del Municipio; el empleo, al registro de inserción laboral"),
+    ("El profesor digital, probado seis meses en los primeros centros de apoyo escolar, medido con pruebas sin "
+     "inteligencia artificial y con el resultado publicado antes de extenderlo",
+     "No existe: el Municipio no ofrece ningún tutor digital", NP, NP,
+     "El resultado de la prueba se le pregunta a la inteligencia artificial del Municipio"),
+    ("Que cada responsable conteste en plazo lo que junta la inteligencia artificial que escucha a los vecinos",
+     "No hay forma pública de saber cuánto tarda el Municipio en responder un reclamo", NP, NP,
+     "Se le pregunta a la inteligencia artificial del Municipio: tema por tema y zona por zona, el plazo y la respuesta"),
+    ("Que cada denuncia de un comerciante por coimas, aprietes o amenazas tenga respuesta, y llegue a la fiscalía "
+     "cuando hay delito", "No existe: el canal es nuevo (5.9)", NP, NP,
+     "Se le pregunta a la inteligencia artificial del Municipio: cuántas denuncias hubo, en qué están y cuántas "
+     "llegaron a la fiscalía"),
+    ("Espectáculos al aire libre todas las semanas, de lunes a jueves, en los parques y plazas del partido",
+     "En 2026, un solo espectáculo en un día hábil en la costa, según el Municipio", NP, NP,
+     "La agenda, en la inteligencia artificial del Municipio; la gente, con las cámaras que cuentan cada acceso"),
+    ("Medir el ruido de motos y colectivos con estaciones móviles, y que cualquiera pueda preguntar qué midieron en "
+     "su zona", "No hay medición ni límites en decibeles para vehículos en circulación", NP, NP,
+     "Se le pregunta a la inteligencia artificial del Municipio"),
+    ("Cada asociación inscripta en el Municipio, con su espacio propio en la inteligencia artificial del Municipio",
+     "No existe", NP, NP, "Cuántas asociaciones lo usan: se le pregunta a la inteligencia artificial del Municipio"),
+    ("Que nadie cobre por multa, y que lo cobrado vaya a un fondo cerrado de seguridad vial",
+     "Hasta 2025, las universidades que operaban las cámaras cobraban un porcentaje de lo recaudado", NP, NP,
+     "Los contratos, en el Boletín Oficial; el fondo, en la ejecución presupuestaria"),
 ]
 FMTS = {1: FMT_M, 2: FMT_PCT1, 3: FMT_PCT1, 11: "0", 12: FMT_N}
 for i, (meta, base, a4, a8, fuente) in enumerate(metas):
@@ -1214,7 +1241,7 @@ for i, (meta, base, a4, a8, fuente) in enumerate(metas):
         else:
             put(MT, f"{cc}{r}", v, font(9), wrap=True, align="center")
     put(MT, f"F{r}", fuente, font(8, italic=True, color=GRAY), wrap=True)
-put(MT, "B20", "Las metas que no proyecta el modelo se comprueban en su fuente: el modelo dice que hay fondos, no que "
+put(MT, "B27", "Las metas que no proyecta el modelo se comprueban en su fuente: el modelo dice que hay fondos, no que "
     "la obra se haga.", font(8, italic=True, color=GRAY))
 MT.column_dimensions["B"].width = 60
 MT.column_dimensions["C"].width = 26
@@ -1301,7 +1328,7 @@ hojas = [
     ("Deuda", "La deuda al 31/12/2025, que llega a cero en 2029; el bono 2026; la flotante del rezago; el margen contra el tope de la Constitución provincial."),
     ("Resumen anual", "Los ocho ejercicios en la cuenta Ahorro-Inversión, con los dos controles: año base y modelo del repo."),
     ("Escenarios", "Si nada cambia y con el programa, año por año (cuadro 20), y la sensibilidad de 2031."),
-    ("Metas", "Las trece metas del 6.3, con lo que proyecta el modelo donde lo hay."),
+    ("Metas", "Las veinte metas del 6.3, con lo que proyecta el modelo donde lo hay."),
 ]
 for h, t in hojas:
     put(GU, f"B{r}", h, font(10, True, color=WINE))
