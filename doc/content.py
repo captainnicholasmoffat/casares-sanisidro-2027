@@ -88,16 +88,17 @@ FUENTES = dict(id="fuentes", runhead=A.RH,
                html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)[:F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1).index('<tr><td class="l">5.5 &middot; la costa: Per')] + "</table>\n")
 FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
 
-# el anexo articulado entra en tres paginas
+# el anexo articulado entra en cuatro paginas (C1: crecieron la II, la VI y llegaron la XV y la XVI)
 ORD_A, ORD_B = split_at(O.ORDENANZA,
-                        '<h2>V &middot; Ordenanza de asociaciones de parque</h2>',
+                        '<h2>IV &middot; Ordenanza de transmisi&oacute;n de los actos de fiscalizaci&oacute;n</h2>',
                         "ordenanza2", "")
-# las ordenanzas XI a XIII (costa, obra en parques y costa, excepciones) van en una tercera
-ORD_B, ORD_C = split_at(ORD_B, '<h2>XI &middot; Ordenanza de la costa', "ordenanza3", "")
+ORD_B, ORD_C = split_at(ORD_B, '<h2>VIII &middot; Ordenanza de ruido</h2>', "ordenanza3", "")
+# de la XI en adelante (costa, obra en parques y costa, excepciones, parques y cuotas de multas) va en una cuarta
+ORD_C, ORD_D = split_at(ORD_C, '<h2>XI &middot; Ordenanza de la costa', "ordenanza4", "")
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
-            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, D.GLOSARIO, METODO, FUENTES, FUENTES2]
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

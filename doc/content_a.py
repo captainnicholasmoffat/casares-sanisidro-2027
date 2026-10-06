@@ -127,11 +127,12 @@ _IDX = [
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
- ("i", "La partida vecinal, el sistema de informaci&oacute;n, la base de valuaci&oacute;n y la fiscalizaci&oacute;n", "ordenanza"),
- ("i", "Seis ordenanzas m&aacute;s, de los parques al empleo local", "ordenanza2"),
- ("i", "La costa, la obra en parques y costa, las excepciones urban&iacute;sticas y los parques; y las metas que no llevan ordenanza", "ordenanza3"),
+ ("i", "La partida vecinal, el sistema de informaci&oacute;n y la base de valuaci&oacute;n", "ordenanza"),
+ ("i", "La fiscalizaci&oacute;n, las asociaciones de parque, g&eacute;nero y los espacios culturales", "ordenanza2"),
+ ("i", "El ruido, la higiene urbana y el empleo local", "ordenanza3"),
+ ("i", "La costa, la obra en parques y costa, las excepciones urban&iacute;sticas, los parques y las cuotas de las multas; y las metas que no llevan ordenanza", "ordenanza4"),
  ("g", "Glosario", None),
- ("i", "Veintitr&eacute;s palabras, explicadas", "glosario"),
+ ("i", "Treinta y una palabras, explicadas", "glosario"),
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
@@ -418,6 +419,12 @@ cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tri
 Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
+<p><b>Las investigaciones de esta edici&oacute;n.</b> Los informes 21 (ruido y prueba sellada), 22 (profesores digitales),
+23 (costos con la opci&oacute;n &oacute;ptima en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y
+g&eacute;nero y discapacidad) y 23 bis (redes en los desag&uuml;es, tel&eacute;fonos de los inspectores, escuelas parroquiales,
+espect&aacute;culos y mensajes de texto) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
+repositorio, y marcan qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. Lo que est&aacute; en d&oacute;lares va al de diciembre de
+2025, $1.447,84 (BCRA).</p>
 <p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
@@ -616,7 +623,7 @@ Municipio se dej&oacute; de publicar en 2018 (1.2).</p>
 </div>
 <h3>Cap&iacute;tulo 6 &middot; El plan, con fechas</h3>
 <div class="note">
-<p>Este cap&iacute;tulo no introduce datos nuevos.
+<p>Este cap&iacute;tulo no introduce datos nuevos, salvo el caso de Los &Aacute;ngeles del cuadro de riesgos, del LA School Report (23 de julio de 2024); el plan B de la cara y del modelo del profesor digital sale del informe 23.
 Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
 1, la auditor&iacute;a del plan de gobierno 2024&ndash;2025 del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
 presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
@@ -626,10 +633,10 @@ cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5
 localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
 <p><b>Cuadro [[n:compromisos]].</b> Los dos primeros van juntos a la sesi&oacute;n extraordinaria porque sin
 partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
-puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
+puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15, 16 y 21 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
 usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;: no hay nada que licitar, y funciona a los cien
 d&iacute;as. Las inspecciones se transmiten desde el tel&eacute;fono del inspector: el decreto sale a los cien d&iacute;as, los tel&eacute;fonos se
 compran para quien no tenga uno apto, y funciona en el mes 9. La ordenanza que vuelve
-inv&aacute;lida el acta labrada sin transmisi&oacute;n va despu&eacute;s, y est&aacute; escrita en el anexo.</p>
+inv&aacute;lida el acta labrada sin transmisi&oacute;n va despu&eacute;s, y est&aacute; escrita en el anexo. La denuncia del comerciante y el registro de instructores y artistas arrancan por decreto, y las Ordenanzas IV y XIV los fijan despu&eacute;s. Las fechas que no estaban en el calendario anterior son propuestas.</p>
 </div>
 """)

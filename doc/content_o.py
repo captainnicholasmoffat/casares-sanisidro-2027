@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y trece cortas. Se votan por separado porque son
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y quince cortas. Se votan por separado porque son
 discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
 
 <div class="callout a">
@@ -120,6 +120,17 @@ depender del cierre contable.</p>
 un establecimiento de salud. La inteligencia artificial del Municipio responder&aacute;
 &uacute;nicamente sobre informaci&oacute;n registrada en el Sistema, indicando el documento de origen, <b>y no
 ejercer&aacute; funci&oacute;n alguna de moderaci&oacute;n, filtro o selecci&oacute;n de la informaci&oacute;n</b>.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Base de datos del profesor digital</h3>
+<p class="tight"><i>Necesita dictamen de un abogado: Ley 25.326, art&iacute;culos 20 y 22, y Resoluci&oacute;n 9/2025 de la Provincia.</i></p>
+<p class="tight">Cr&eacute;ase la base de datos del profesor digital de la inteligencia artificial del Municipio, con la &uacute;nica
+finalidad de acompa&ntilde;ar el aprendizaje de los alumnos que lo usan. Contiene el avance de cada alumno, los temas que le
+cuestan y los hechos concretos que el profesor digital informa a su docente; <b>nunca diagn&oacute;sticos, datos de salud ni
+emociones</b>. Se carga s&oacute;lo con el consentimiento de la familia, dado por separado para el profesor digital y para el
+informe al docente, y revocable en cualquier momento. El alumno y su familia ven lo mismo que el docente. Las
+conversaciones se borran en d&iacute;as. El proveedor no puede entrenar modelos con estos datos, que se procesan en pa&iacute;ses
+que la ley argentina considera adecuados. Responde el &aacute;rea municipal de educaci&oacute;n, ante la que se ejercen los derechos
+de acceso, rectificaci&oacute;n y supresi&oacute;n.</p>
 
 <h2>III &middot; Ordenanza de actualizaci&oacute;n de la base de valuaci&oacute;n</h2>
 <p class="tight"><i>Como sube lo que se emite, la sanciona la asamblea de concejales y mayores contribuyentes
@@ -241,6 +252,23 @@ ni&ntilde;ez, juventud y personas mayores.</p>
 <p class="tight">La ejecuci&oacute;n del programa puede consultarse con la misma apertura y la misma
 periodicidad que la del resto del presupuesto. Esta ordenanza no fija monto: fija que el monto exista
 por separado y pueda verse.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Atenci&oacute;n en cada zona, sin sedes nuevas</h3>
+<p class="tight">La direcci&oacute;n de pol&iacute;ticas de g&eacute;nero atiende d&iacute;as fijos en lugares municipales que ya existen en cada
+zona &mdash;delegaciones, centros de salud y centros de apoyo escolar&mdash;, empezando por Boulogne y B&eacute;ccar. Los d&iacute;as y los
+lugares se consultan en la inteligencia artificial del Municipio.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Primer contacto y prueba</h3>
+<p class="tight">La inteligencia artificial del Municipio orienta y deriva a toda hora, sin juzgar, a la direcci&oacute;n de
+g&eacute;nero, a la l&iacute;nea nacional 144 o a la guardia, y saca el turno. Tiene un modo discreto, en el que la charla no queda
+guardada en el tel&eacute;fono. La v&iacute;ctima puede guardar mensajes, audios y fotos con la prueba sellada al momento de
+grabar (Ordenanza VIII, art&iacute;culo 5), que queda en el Municipio y no en su tel&eacute;fono. <i>Necesita dictamen de un abogado:
+el resguardo de los datos de las v&iacute;ctimas.</i></p>
+
+<h3>Art&iacute;culo 5 &mdash; Patrocinio jur&iacute;dico y refugio</h3>
+<p class="tight">El Municipio arma el caso y lo deriva al patrocinio jur&iacute;dico gratuito que existe, y pide la vacante en
+la red provincial de hogares. El Departamento Ejecutivo celebra los convenios necesarios con la Provincia y con quienes
+dan ese patrocinio. Esta ordenanza no crea oficinas ni sedes.</p>
 
 <h2>VII &middot; Adhesi&oacute;n a la Ley provincial 15.302</h2>
 
@@ -466,6 +494,32 @@ lugares ni horarios exclusivos. La reglamentaci&oacute;n fija los puntos se&ntil
 turnos, el tope de volumen medido, los d&iacute;as y la hora de corte, y las zonas tranquilas, entre ellas la Reserva Ribera
 Norte, el Bosque Alegre y los frentes de vivienda.</p>
 
+<h2>XV &middot; Ordenanza de las cuotas de las multas de tr&aacute;nsito</h2>
+<p class="tight"><i>Necesita dictamen de un abogado: m&aacute;s de ocho cuotas tiene m&aacute;s riesgo legal, y en los planes largos la
+multa puede prescribir a los cinco a&ntilde;os.</i></p>
+
+<h3>Art&iacute;culo 1 &mdash; Tr&aacute;mite en l&iacute;nea</h3>
+<p class="tight">Quien quiera pagar en cuotas sus multas de tr&aacute;nsito se anota una sola vez, en l&iacute;nea, en la inteligencia
+artificial del Municipio, para pagar en las cuotas que fija el Departamento Ejecutivo. La inteligencia artificial le
+avisa antes de cada vencimiento.</p>
+
+<h3>Art&iacute;culo 2 &mdash; La deuda vieja</h3>
+<p class="tight">Las multas de tr&aacute;nsito adeudadas a la fecha de esta ordenanza pueden pagarse en un plan de pagos sin
+inter&eacute;s. El Departamento Ejecutivo depura las prescriptas, y la inteligencia artificial del Municipio le avisa a cada
+vecino cu&aacute;nto debe y hasta cu&aacute;ndo.</p>
+
+<h2>XVI &middot; Ordenanza de la base de datos de las cuotas</h2>
+<p class="tight"><i>Necesita dictamen de un abogado: Ley 25.326, art&iacute;culos 20 y 22.</i></p>
+
+<h3>Art&iacute;culo 1 &mdash; Creaci&oacute;n y finalidad</h3>
+<p class="tight">Cr&eacute;ase la base de datos de las cuotas de las multas de tr&aacute;nsito, con la &uacute;nica finalidad de fijar la
+cuota de quien se anota. Contiene el ingreso y la composici&oacute;n del hogar que la persona declara con su consentimiento
+expreso, y se usa s&oacute;lo para las multas. Se inscribe ante la autoridad de protecci&oacute;n de datos personales.</p>
+
+<h3>Art&iacute;culo 2 &mdash; Una persona decide</h3>
+<p class="tight">La inteligencia artificial del Municipio prepara la cuota; la fija una persona, y el vecino puede pedir
+que se revise. El proveedor de la inteligencia artificial act&uacute;a por contrato y no usa estos datos para otro fin.</p>
+
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>
 <div class="cols">
@@ -495,8 +549,8 @@ conviene que se voten por separado.</p>
 </div>
 
 <h2>Las metas que no llevan ordenanza, y por qu&eacute;</h2>
-<p class="tight">De las trece metas del cap&iacute;tulo 6, <b>ocho tienen su art&iacute;culo
-ac&aacute;</b>. Las otras cinco no lo necesitan.</p>
+<p class="tight">De las veinte metas del cap&iacute;tulo 6, <b>catorce tienen su art&iacute;culo
+ac&aacute;</b>. Las otras seis no lo necesitan.</p>
 <div class="note">
 <p><b>Tres se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
 conjunto en empleo y vivienda a 7.730,9 millones; llevar la funci&oacute;n ambiental al 1,5%; y abrir un
@@ -506,13 +560,15 @@ laboral tiene sus reglas en la Ordenanza X &mdash;pasant&iacute;as, incentivo do
 personas forma por a&ntilde;o tambi&eacute;n lo fija el presupuesto.</p>
 <p><b>La cuarta se resuelve conectando:</b> el turno m&eacute;dico en l&iacute;nea se monta sobre la
 plataforma de turnos que el Municipio ya opera para otros tr&aacute;mites, y no necesita norma local.</p>
-<p><b>Y la quinta se resuelve con lo que ya se compr&oacute; y lo que se licita:</b> la detecci&oacute;n en
-vivo y la reconstrucci&oacute;n de recorrido corren sobre las c&aacute;maras que el Municipio ya tiene, y la
-anal&iacute;tica que las hace funcionar es a licitar, dentro de los 1.200 millones del cap&iacute;tulo 3, como dice
-el 5.9. No es una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
+<p><b>La quinta se resuelve con lo que ya se compr&oacute;:</b> la detecci&oacute;n en
+vivo y la reconstrucci&oacute;n de recorrido corren sobre las c&aacute;maras que el Municipio ya tiene, con las 110
+licencias de an&aacute;lisis de video que ya compr&oacute;, como dice el 5.7. No es una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
 se ordena por decreto.</p>
-<p><span class="sg">De las cinco, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
+<p><b>Y la sexta se resuelve con la ley y los contratos:</b> que lo cobrado por multas vaya a la seguridad vial ya lo
+manda la Ley 24.449 (art&iacute;culo 85), y que nadie cobre por multa se escribe en cada contrato, al vencer el actual
+(5.11).</p>
+<p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
 la espera por especialidad, el precio unitario, el stock, la matr&iacute;cula por sede, las &oacute;rdenes
 judiciales y la inserci&oacute;n laboral entran en el art&iacute;culo 2 de la Ordenanza II. Lo que no se puede atar por ordenanza es el monto; lo que s&iacute;
 se puede es que el resultado se vea.</p>
