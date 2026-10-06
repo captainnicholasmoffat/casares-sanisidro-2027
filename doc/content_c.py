@@ -733,7 +733,7 @@ y las zonas, no los nombres de los vecinos, salvo que el vecino quiera darlo.</p
 <div class="callout g">
 <div class="clabel">Lo que proponemos: las asociaciones, con la misma herramienta que el Municipio</div>
 <p><b>1 &middot; Gratis, para cada asociaci&oacute;n vecinal, asociaci&oacute;n de parque y comisi&oacute;n zonal:</b> su propio espacio en la
-inteligencia artificial del Municipio.</p>
+inteligencia artificial del Municipio, primero para las asociaciones inscriptas en el Municipio.</p>
 <p><b>2 &middot; Ah&iacute; arma lo que necesita para organizarse y defender lo que defiende</b> &mdash;su parque, su zona, sus
 vecinos&mdash;. No s&oacute;lo procesa textos y contesta: genera lo que haga falta para cuidar y mejorar el Municipio, como
 notas y pedidos de informes; im&aacute;genes y renders de c&oacute;mo quedar&iacute;a la plaza con la obra que proponen; actas, padr&oacute;n y
@@ -801,7 +801,7 @@ laboratorios de inteligencia artificial del mundo (5.3).</p>
 </div>
 
 <h3>Cu&aacute;nto cuesta y de d&oacute;nde sale</h3>
-""" + exhead("c", "Cuarenta y nueve personas, abiertas por funci&oacute;n: 9 seniors, 12 semi-seniors, 13 juniors y 15 pasantes",
+""" + exhead("c", "Cincuenta y nueve personas, abiertas por funci&oacute;n: 10 seniors, 17 semi-seniors, 17 juniors y 15 pasantes",
              "Equipo en r&eacute;gimen, con las cargas del empleador, en pesos de diciembre de 2025.",
              key="equipo") + """
 <table>
@@ -817,26 +817,35 @@ laboratorios de inteligencia artificial del mundo (5.3).</p>
 <tr><td class="l">Dise&ntilde;o y lenguaje claro</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">114,5 M</td></tr>
 <tr><td class="l">Soporte a distancia; en cada zona, planta reasignada</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">61,3 M</td></tr>
 <tr><td class="l">Coordinaci&oacute;n</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">53,1 M</td></tr>
-<tr class="hd"><td class="l">Equipo</td><td class="n">9</td><td class="n">12</td><td class="n">13</td><td class="n">15</td><td class="n">1.285,1 M</td></tr>
-<tr><td class="l">Infraestructura y licencias</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">193,2 M</td></tr>
+<tr><td class="l">Profesor digital particular (5.8)</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">&mdash;</td><td class="n">175,9 M</td></tr>
+<tr><td class="l">Escuchar a los vecinos y hacer el seguimiento</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">61,4 M</td></tr>
+<tr><td class="l">Prueba sellada y cadena de custodia</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">38,0 M</td></tr>
+<tr><td class="l">Aviso de multas, del lado del vecino</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">23,4 M</td></tr>
+<tr><td class="l">Puente con los laboratorios (5.3)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">&mdash;</td><td class="n">&mdash;</td><td class="n">38,0 M</td></tr>
+<tr class="hd"><td class="l">Equipo</td><td class="n">10</td><td class="n">17</td><td class="n">17</td><td class="n">15</td><td class="n">1.621,8 M</td></tr>
+<tr><td class="l">Infraestructura y licencias</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">243,5 M</td></tr>
 <tr><td class="l">Auditor&iacute;a externa</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">107,3 M</td></tr>
-<tr class="hi"><td class="l"><b>Plataforma</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.585,6 M</b></td></tr>
+<tr class="hi"><td class="l"><b>Plataforma</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.972,6 M</b></td></tr>
 <tr><td class="l">Dispositivos: instalar sensores, centros de acceso, transmisi&oacute;n de inspecciones y guardias; los equipos, en cada &aacute;rea (3.4)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
-<tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.676,6 M</b></td></tr>
+<tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>2.063,6 M</b></td></tr>
+<tr><td class="l">Fuera de Ciencia y T&eacute;cnica, en las &aacute;reas: 4 docentes que revisan el profesor digital, en Educaci&oacute;n, y 4 que validan las actas de multas, en Tr&aacute;nsito o el Juzgado de Faltas</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">202,0 M</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> sueldos brutos de mercado por trece, m&aacute;s las cargas del empleador; pasantes, 240.000 $ por
 mes. Son de referencia, a presupuestar y licitar antes de comprometerse; el detalle, en las notas del cap&iacute;tulo 4.
 <span class="tag m">Estimado</span></p>
 <div class="cols">
 <p><b>Proponemos que salga de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones al a&ntilde;o.</b> Con los dispositivos son
-1.676,6 millones, el <b>20,6%</b> de esa partida, y con el semillero de empresas del 5.3, el 22,0%. No hay fondos nuevos y no hay una partida que crear.</p>
-<p><b>Para dimensionarlo:</b> la plataforma, 1.585,6 millones, es
-<span class="sg">el 11% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
+2.063,6 millones, el <b>25,3%</b> de esa partida, y con el semillero de empresas del 5.3, el 26,8%. No hay fondos nuevos y no hay una partida que crear.</p>
+<p><b>Para dimensionarlo:</b> la plataforma, 1.972,6 millones, es
+<span class="sg">el 13% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
 &mdash;14.654,8 millones, el quinto programa del presupuesto&mdash;.</p>
-<p><b>No se cuenta dos veces.</b> Estos 1.585,6 millones pagan la plataforma. Los m&oacute;dulos de salud y
-de habilitaciones se construyen con el presupuesto de su &aacute;rea y se integran a la misma plataforma:
-salud, con la partida de contrataci&oacute;n del cap&iacute;tulo 5 &mdash;los dos primeros a&ntilde;os, con el gasto flexible libre (3.4)&mdash;, igual que la automatizaci&oacute;n de tareas de la planta; habilitaciones, con la reasignaci&oacute;n del cap&iacute;tulo 3, igual que la
-anal&iacute;tica de seguridad. <span class="sg">El vecino ve una sola cosa; el presupuesto est&aacute; en tres lugares &mdash;cuatro los dos primeros a&ntilde;os&mdash; y cada uno se paga una vez.</span></p>
+<p><b>No se cuenta dos veces.</b> Estos 1.972,6 millones pagan la plataforma y los m&oacute;dulos que construye el propio
+equipo, entre ellos las habilitaciones y el profesor digital. El m&oacute;dulo de salud se construye con el presupuesto de su
+&aacute;rea y se integra a la misma plataforma: con la partida de contrataci&oacute;n del cap&iacute;tulo 5 &mdash;los dos primeros a&ntilde;os, con el
+gasto flexible libre (3.4)&mdash;, igual que la automatizaci&oacute;n de tareas de la planta. Lo que usa el profesor digital &mdash;el
+modelo, la voz y la cara&mdash; lo paga Educaci&oacute;n (5.8), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya
+compr&oacute; (5.7). <span class="sg">El vecino ve una sola cosa; el presupuesto est&aacute; en varios lugares, y cada uno se paga una
+vez.</span></p>
 <p><b>Y se licita.</b> Lo que queda comprometido no es el n&uacute;mero: es que la inteligencia artificial del Municipio exista y que la
 construya gente del partido.</p>
 </div>
@@ -875,7 +884,7 @@ manzana</span>.</p>
 <li>Juntas, las dos capas cambian qui&eacute;n hace la obra: el dinero, el trabajo y lo aprendido se quedan en el barrio, y los 28.908 millones del a&ntilde;o 4 son casi cuatro veces todo el programa de empleo y vivienda.</li>
 <li>Cada comisi&oacute;n ve cu&aacute;nto se gast&oacute; en su zona, en qu&eacute; y d&oacute;nde &mdash;un dato que hoy no existe y hay que construir&mdash;, y la partida queda protegida como recurso afectado (art&iacute;culo 119).</li>
 <li>El primer proyecto que entra al Concejo deroga los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045, que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
-<li>Y nada de esto funciona sin la inteligencia artificial del Municipio: lee todo lo que el Municipio registra y contesta en castellano mostrando de d&oacute;nde sale cada dato; sirve para votar y para el resto del a&ntilde;o &mdash;turnos, guardias, trabajo, habilitaciones, compras y denuncias&mdash;; escucha a los vecinos, les hace el seguimiento y les responde, y lo grave lo manda a un control independiente; y cada asociaci&oacute;n tiene ah&iacute; su espacio, gratis. La construye gente del partido, con t&iacute;tulo de la UNSO, y cuesta 1.676,6 millones por a&ntilde;o, de Ciencia y T&eacute;cnica: 49 personas en la plataforma y 5 en dispositivos.</li>
+<li>Y nada de esto funciona sin la inteligencia artificial del Municipio: lee todo lo que el Municipio registra y contesta en castellano mostrando de d&oacute;nde sale cada dato; sirve para votar y para el resto del a&ntilde;o &mdash;turnos, guardias, trabajo, habilitaciones, compras y denuncias&mdash;; escucha a los vecinos, les hace el seguimiento y les responde, y lo grave lo manda a un control independiente; y cada asociaci&oacute;n tiene ah&iacute; su espacio, gratis. La construye gente del partido, con t&iacute;tulo de la UNSO, y cuesta 2.063,6 millones por a&ntilde;o, de Ciencia y T&eacute;cnica: 59 personas en la plataforma y 5 en dispositivos.</li>
 <li>Le molesta al propio cargo de intendente, que deja de decidir la mitad de la obra; a las &aacute;reas que hoy la priorizan; a las empresas que hoy la hacen, donde la haga el barrio; y a quien la tabla de 2008 le cobra de menos.</li>
 </ol>
 <p><b>Proponemos que este mecanismo decida la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
@@ -1062,7 +1071,7 @@ class="sg">los nuestros entran como juniors, y la pasant&iacute;a achica la dist
 <table>
 <colgroup><col style="width:112pt"><col><col style="width:118pt"></colgroup>
 <tr class="hd"><th>A&ntilde;o y orientaci&oacute;n</th><th>Qu&eacute; se estudia</th><th>Puesto y lugar</th></tr>
-<tr class="hi"><td class="l">Primer a&ntilde;o, com&uacute;n</td><td class="m">Arquitectura de agentes; programar con asistentes de c&oacute;digo; dise&ntilde;o de instrucciones para modelos; dise&ntilde;o de herramientas y conexi&oacute;n entre sistemas, con protocolos abiertos como MCP; manejo de contexto; evaluar y validar lo que produce la inteligencia artificial</td><td class="m">Lo que piden las certificaciones profesionales de arquitectura de IA</td></tr>
+<tr class="hi"><td class="l">Primer a&ntilde;o, com&uacute;n</td><td class="m">Arquitectura de agentes; programar con asistentes de c&oacute;digo; dise&ntilde;o de instrucciones para modelos; dise&ntilde;o de herramientas y conexi&oacute;n entre sistemas, con protocolos abiertos como MCP; manejo de contexto; evaluar y validar lo que produce la inteligencia artificial; e ingl&eacute;s</td><td class="m">Lo que piden las certificaciones profesionales de arquitectura de IA</td></tr>
 <tr><td class="l">Desarrollo con IA</td><td class="m">Aplicaciones sobre modelos: LangChain, recuperaci&oacute;n aumentada (RAG), PyTorch</td><td class="m">Ingeniero en IA, 1&ordm;</td></tr>
 <tr><td class="l">IA en organizaciones</td><td class="m">Elegir modelos de lenguaje, ponerlos a funcionar en un &aacute;rea o una empresa y mantenerlos</td><td class="m">Consultor en IA, 2&ordm;</td></tr>
 <tr><td class="l">Datos para IA</td><td class="m">Planillas, bases de datos y SQL; calidad y etiquetado; los documentos de los que la IA contesta y las pruebas de que contesta bien; datos personales (Ley 25.326)</td><td class="m">Anotador y curador de datos, 4&ordm;</td></tr>
@@ -1152,8 +1161,8 @@ como hoy</b>; los juniors la toman cuando egresan.</p>
 <tr><td class="l">Movilidad</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, las licencias de conducir, y uno que mide el ruido con sensores donde est&aacute; el problema</td><td class="m">&mdash;</td></tr>
 <tr><td class="l">Desarrollo social y personas mayores</td><td class="n">20</td><td class="m">Uno de automatizaci&oacute;n, y uno que releva hogar por hogar a los mayores que ya no pueden salir, para la atenci&oacute;n domiciliaria</td><td class="m">&mdash;</td></tr>
 <tr><td class="l">Gobierno, legal y t&eacute;cnica, gabinete y cultura</td><td class="n">40</td><td class="m">El padr&oacute;n de asociaciones vecinales, el digesto de ordenanzas y decretos, la planta y la escala salarial consultables, y los espacios culturales y lo que traba su habilitaci&oacute;n</td><td class="m">&mdash;</td></tr>
-<tr><td class="l">Plataforma y dispositivos</td><td class="n">17</td><td class="m">Construyen los m&oacute;dulos de la inteligencia artificial del Municipio e instalan los equipos</td><td class="m">15, con los seniors</td></tr>
-<tr class="hi"><td class="l">Municipio</td><td class="n"><b>467</b></td><td class="m">El tope de la ley es 556; a la vez hay 464</td><td class="m"><b>105</b></td></tr>
+<tr><td class="l">Plataforma y dispositivos</td><td class="n">17</td><td class="m">Construyen los m&oacute;dulos de la inteligencia artificial del Municipio e instalan los equipos</td><td class="m">19, con los seniors</td></tr>
+<tr class="hi"><td class="l">Municipio</td><td class="n"><b>467</b></td><td class="m">El tope de la ley es 556; a la vez hay 464</td><td class="m"><b>109</b></td></tr>
 <tr><td class="l">Empresas del partido</td><td class="n">464</td><td class="m">La segunda mitad, con la misma regla: proyectos, no puestos</td><td class="m">&mdash;</td></tr>
 </table>
 <p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta &mdash;en ambiente, dos, porque 593 de sus 966 cargos son de barrido&mdash;; y uno de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
@@ -1188,8 +1197,8 @@ Municipio es el primer escal&oacute;n:</b> uno o dos a&ntilde;os como junior en 
 artificial necesita de verdad &mdash;la operaci&oacute;n de cada &aacute;rea, la plataforma, los dispositivos&mdash;. <b>Las
 empresas contratadas son el segundo</b>, y la cl&aacute;usula del 75% es la que las hace buscar gente en el
 partido.</p>
-<p><b>Es un flujo, no un stock.</b> Los 105 puestos de junior rotan: cada uno queda libre al a&ntilde;o y medio,
-as&iacute; que entran 70 egresados por a&ntilde;o y salen otros tantos, a las empresas o al escal&oacute;n de arriba. Si
+<p><b>Es un flujo, no un stock.</b> Los 109 puestos de junior rotan: cada uno queda libre al a&ntilde;o y medio,
+as&iacute; que entran 73 egresados por a&ntilde;o y salen otros tantos, a las empresas o al escal&oacute;n de arriba. Si
 trescientos juniors por a&ntilde;o se quedaran, a sueldo de mercado costar&iacute;an m&aacute;s de 28.000 millones a los cuatro a&ntilde;os. <span class="sg">As&iacute;, los de las &aacute;reas cuestan 720 millones por a&ntilde;o, a escala municipal.</span></p>
 </div>
 """ + exhead("c", "Del pasante al empleo: 928 pasantes por a&ntilde;o, 250 a 300 empleos pagos",
@@ -1199,9 +1208,9 @@ trescientos juniors por a&ntilde;o se quedaran, a sueldo de mercado costar&iacut
 <colgroup><col style="width:88pt"><col style="width:52pt"><col><col style="width:100pt"><col style="width:84pt"></colgroup>
 <tr class="hd"><th>Escal&oacute;n</th><th class="r">Cu&aacute;ntos</th><th>D&oacute;nde</th><th>Qui&eacute;n paga</th><th>Suben por a&ntilde;o</th></tr>
 <tr><td class="l">Pasante, en el segundo a&ntilde;o</td><td class="n">928</td><td class="m">464 a la vez en el Municipio, los primeros seis meses, y 464 en empresas del partido, los segundos</td><td class="m">El &aacute;rea los primeros seis meses; la empresa, los segundos</td><td class="m">250 a 300 pasan a un empleo pago</td></tr>
-<tr><td class="l">Junior, el primer escal&oacute;n</td><td class="n">105</td><td class="m">90 en la operaci&oacute;n de las &aacute;reas, 13 en la plataforma y 2 en dispositivos, por uno o dos a&ntilde;os</td><td class="m">Cada &aacute;rea, a escala municipal; la plataforma, a sueldo de mercado</td><td class="m">Entran 70</td></tr>
-<tr><td class="l">Semi-senior</td><td class="n">13</td><td class="m">Plataforma y dispositivos</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 4 desde junior</td></tr>
-<tr><td class="l">Senior</td><td class="n">9</td><td class="m">Plataforma</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 2 desde semi-senior</td></tr>
+<tr><td class="l">Junior, el primer escal&oacute;n</td><td class="n">109</td><td class="m">90 en la operaci&oacute;n de las &aacute;reas, 17 en la plataforma y 2 en dispositivos, por uno o dos a&ntilde;os</td><td class="m">Cada &aacute;rea, a escala municipal; la plataforma, a sueldo de mercado</td><td class="m">Entran 73</td></tr>
+<tr><td class="l">Semi-senior</td><td class="n">18</td><td class="m">Plataforma y dispositivos</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 6 desde junior</td></tr>
+<tr><td class="l">Senior</td><td class="n">10</td><td class="m">Plataforma</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 2 o 3 desde semi-senior</td></tr>
 <tr><td class="l">Supervisor</td><td class="n">95</td><td class="m">48 en el Municipio &mdash;planta reasignada y los seniors de la plataforma&mdash; y 47 en las empresas</td><td class="m">Ya se pagan</td><td class="m">&mdash;</td></tr>
 <tr class="hi"><td class="l">Segundo escal&oacute;n</td><td class="n">180 a 230</td><td class="m">Empresas contratadas: obra, servicios, desarrollos y obra vecinal</td><td class="m">Cada empresa</td><td class="m">Por a&ntilde;o, m&aacute;s los juniors que dejan el Municipio</td></tr>
 </table>
@@ -1378,7 +1387,7 @@ cada 80 metros, como m&iacute;nimo dos, y un bote (Ley 14.798).</p>
 <div class="clabel">Lo que proponemos para la costa</div>
 <p><b>1 &middot; Cortar la cloaca en el origen, empezando por Per&uacute;.</b> Antes de cualquier obra, en este orden: medir con
 el marcador de ADN humano, unos 5.000 a 15.000 d&oacute;lares de laboratorio; rastrear el origen ca&ntilde;o arriba con unos
-veinte sensores de 500 d&oacute;lares, en los tres partidos de la cuenca; si es la red de AySA, exigirle el arreglo ante
+veinte sensores de unos 25 d&oacute;lares cada uno &mdash;unos 500 d&oacute;lares en total&mdash;, en los tres partidos de la cuenca; si es la red de AySA, exigirle el arreglo ante
 su ente regulador, con el art&iacute;culo 16 de su marco; si son casas, intimar y subsidiar el arreglo, como Par&iacute;s: el
 Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (Ley 5965). Reci&eacute;n despu&eacute;s, si hace falta,
 un desviador de tiempo seco en la boca, acordado con AySA y pagado como obra p&uacute;blica. <span class="sg">El
@@ -1416,7 +1425,7 @@ millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibri
 Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 790 a 1.140 millones: <span
 class="sg">entre el 23% y el 33% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
 moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
-muestras y la primera temporada de guardavidas, unos 350 millones&mdash;, con dinero de los programas que
+muestras y la primera temporada de guardavidas, unos 335 millones&mdash;, con dinero de los programas que
 ceden (cuadro [[n:ceden]]) y no de lo que Ambiente ya gasta: sin gasto nuevo. El
 desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas se fija con el diagn&oacute;stico.</p>
 </div>
@@ -2521,9 +2530,9 @@ inspector. Tambi&eacute;n compara las inspecciones del mismo rubro y marca las q
 patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los insumos.</p>
 </div>
 
-<p><b>Cu&aacute;nto cuesta.</b> El cap&iacute;tulo 3 lo estima en 1.200 millones de inversi&oacute;n
-inicial, junto con la anal&iacute;tica de seguridad y las ochenta c&aacute;maras corporales de los inspectores, y 264
-millones por a&ntilde;o de mantenimiento, a licitar.</p>
+<p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma
+(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los tel&eacute;fonos, los
+soportes, los datos y las grabaciones de las inspecciones: [23 bis].</p>
 
 <h3>La coima en la inspecci&oacute;n: el acto de autoridad, transmitido en vivo</h3>
 <p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto
@@ -2694,7 +2703,8 @@ velocidad, c&aacute;maras de tramo, que miden el promedio entre dos puntos: baja
 se retiraron 3 en 2023&mdash;, y los datos de cada c&aacute;mara son p&uacute;blicos. Cada punto lo autoriza la Provincia
 (Disposiciones 14/2020 y 43/2021).</p>
 <p><b>3 &middot; Avisar antes de multar.</b> La inteligencia artificial del Municipio dice d&oacute;nde est&aacute;n las c&aacute;maras y cu&aacute;l
-es el l&iacute;mite de cada calle; avisa al primer exceso, por ella misma y por mensaje de texto, sin enlaces de pago; y
+es el l&iacute;mite de cada calle; avisa al primer exceso, por la propia inteligencia artificial y por mensaje de texto s&oacute;lo a
+quien no la usa, sin enlaces de pago; y
 muestra la foto, la velocidad, el descuento del error y la calibraci&oacute;n del equipo. Marca las multas de equipos con
 la verificaci&oacute;n vencida, y una persona las anula. Cuando una multa est&aacute; mal, se lo avisa al vecino y le arma el
 reclamo. El aviso no reemplaza a la notificaci&oacute;n, que sigue llegando al domicilio (necesita dictamen de un
@@ -2728,8 +2738,9 @@ primera y en la segunda reincidencia grave &mdash;la ley dice &laquo;hasta&raquo
 veh&iacute;culo, m&aacute;s el curso; la tercera son 18 meses obligatorios (Ley 13.927, art&iacute;culo 39 ter). Con una ley provincial,
 un permiso para trabajar con horarios y recorridos; si reincide, suspensi&oacute;n doble y sin permiso. Con una
 advertencia: en California, quienes ten&iacute;an licencia restringida reincidieron menos, pero chocaron m&aacute;s.</p>
-<p><b>10 &middot; Nadie cobra por multa.</b> Las c&aacute;maras las operan el Municipio y los egresados de la tecnicatura, y los
-proveedores cobran s&oacute;lo los equipos y su mantenimiento, a precio fijo. As&iacute; lo hacen Australia y Francia, que les pagan a
+<p><b>10 &middot; Nadie cobra por multa.</b> Las c&aacute;maras las opera el Municipio &mdash;cuatro personas en Tr&aacute;nsito o el Juzgado de
+Faltas validan las actas, con los egresados de la tecnicatura primero&mdash;, y los proveedores cobran s&oacute;lo los equipos y su
+mantenimiento, a precio fijo. As&iacute; lo hacen Australia y Francia, que les pagan a
 los proveedores por insumos u horas &mdash;Francia paga sus autos-radar por hora de manejo y &laquo;en ning&uacute;n caso&raquo; por
 infracci&oacute;n&mdash;; en Estados Unidos, Virginia, Seattle y la gu&iacute;a federal de 2023 pagan un fijo por equipo. Se aplica al
 vencer cada contrato actual: dos convenios obligan a pagar igual el promedio de los &uacute;ltimos seis meses si se deja de
@@ -2744,7 +2755,11 @@ se depuran las multas prescriptas; y la inteligencia artificial del Municipio le
 hasta cu&aacute;ndo.</p>
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Los reductores ya est&aacute;n contratados: 536,7 millones de la licitaci&oacute;n de
 2025. El aviso, el mapa y el reclamo son parte de la inteligencia artificial del Municipio, que paga Ciencia y
-T&eacute;cnica (4.11), y quienes operan las c&aacute;maras salen de su equipo; los equipos y su mantenimiento se pagan con el fondo de seguridad vial. Lo que el Municipio deja de cobrar no tiene un n&uacute;mero cerrado, porque no se publica cu&aacute;ntas multas
+T&eacute;cnica (4.11); el mensaje de texto para quien no la usa, [23 bis]. Las cuatro personas que validan las actas cuestan
+108,3 millones por a&ntilde;o y van con el resto del presupuesto, no con el fondo: pagar con las multas a quien multa invita a
+multar m&aacute;s. Los equipos y su mantenimiento se pagan con el fondo de seguridad vial, que no cambia las cuentas: en 2025
+se cobraron 3.819 millones de multas en la v&iacute;a p&uacute;blica y el Municipio gast&oacute; 7.199 millones en semaforizaci&oacute;n,
+se&ntilde;alamiento y movilidad. Lo que el Municipio deja de cobrar no tiene un n&uacute;mero cerrado, porque no se publica cu&aacute;ntas multas
 se labran: en 2024 se pagaron entre 13.000 y 456.000, y cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o.
 <span class="sg">Las multas no son para recaudar:</span> lo que se deja de cobrar sale del gasto flexible libre
 (3.4).</p>
@@ -3025,16 +3040,16 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hi"><td class="l">12 &middot; La inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas, con el convenio con la UNSO firmado, y la primera cohorte arrancando en los espacios que ya existen</td><td class="n">Inscripci&oacute;n y matr&iacute;cula por zona: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, y el turno m&eacute;dico</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">15 &middot; La licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
-<tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que es real, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y la licitaci&oacute;n de las ochenta c&aacute;maras corporales, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
+<tr class="hi"><td class="l">15 &middot; La detecci&oacute;n en vivo de hechos violentos funcionando en las 110 c&aacute;maras con inteligencia artificial que ya hay, con alerta al patrullero m&aacute;s cercano</td><td class="n">El decreto de puesta en servicio; cu&aacute;ntas alertas hubo y en cu&aacute;nto lleg&oacute; el patrullero se le preguntan a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal desde el tel&eacute;fono del inspector, con la inteligencia artificial del Municipio, para que se vea que es real, y grabarla sellada, para que cualquier vecino la vea despu&eacute;s. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial</td></tr>
 <tr class="hd"><td class="l" colspan="2">Multas de tr&aacute;nsito (5.11)</td></tr>
 <tr><td class="l">17 &middot; El decreto de las cuotas del pago voluntario de las multas de tr&aacute;nsito, sin tr&aacute;mites y seg&uacute;n el ingreso, como el de Balcarce</td><td class="n">El decreto, en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">18 &middot; El pedido a la Provincia: el pago voluntario seg&uacute;n el ingreso, el protocolo adicional al convenio de multas, la deuda congelada en pesos, las pasadas que cuentan como una y el permiso para trabajar; y a la Legislatura bonaerense, la licencia por puntos</td><td class="n">El expediente del pedido</td></tr>
 <tr><td class="l">19 &middot; La ordenanza del tr&aacute;mite en l&iacute;nea de las cuotas, como la de Bragado, ingresada al abrir las sesiones ordinarias, el 1 de marzo</td><td class="n">Expediente de ingreso</td></tr>
 <tr><td class="l">20 &middot; La ordenanza que crea la base de datos de las cuotas, con el ingreso y el hogar s&oacute;lo para las multas, ingresada con la anterior</td><td class="n">Expediente de ingreso</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> los dos primeros van juntos porque son el andamiaje del resto, y los compromisos 15 y 16 se
-licitan y funcionan en el mes 9; el detalle, en las notas del cap&iacute;tulo 6.</p>
+<p class="cap"><b>Nota:</b> los dos primeros van juntos porque son el andamiaje del resto; el 15 usa las c&aacute;maras con
+inteligencia artificial que ya hay, y el 16 funciona en el mes 9; el detalle, en las notas del cap&iacute;tulo 6.</p>
 
 <h2><span class="n">6.2</span>La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o</h2>
 <p>La rampa, a&ntilde;o por a&ntilde;o, es la del cuadro [[n:rampa]]: del 12,5% de la obra p&uacute;blica en el
@@ -3091,8 +3106,8 @@ que la comprueba.</p>
 <tr><td class="l">Meses 1&ndash;3</td><td>Los cuatro actos que no dependen del Concejo: turno m&eacute;dico en l&iacute;nea en los primeros efectores, precio unitario comparable de los insumos, datos de seguridad municipal con el pedido a la Provincia, y las respuestas a los pedidos de informes</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio; y los expedientes</td></tr>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; la consulta y el turno m&eacute;dico de la inteligencia artificial del Municipio, en funcionamiento</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Mes 3</td><td>En seguridad, se lanza la licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano. No hace falta comprar c&aacute;maras nuevas: el equipo ya se compr&oacute;, y lo que se licita es la anal&iacute;tica</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que fue real y que no hubo coima, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y se lanza la licitaci&oacute;n de las ochenta c&aacute;maras corporales</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
+<tr><td class="l">Mes 3</td><td>En seguridad, funciona la detecci&oacute;n en vivo de hechos violentos en las 110 c&aacute;maras con inteligencia artificial que ya hay, con alerta al patrullero m&aacute;s cercano. No hace falta comprar c&aacute;maras ni licencias: ya se compraron</td><td class="n">El decreto de puesta en servicio; las alertas y el tiempo de llegada se le preguntan a la inteligencia artificial del Municipio</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal desde el tel&eacute;fono del inspector, para que se vea que fue real y que no hubo coima, y grabarla sellada, para que cualquier vecino la vea despu&eacute;s; y se compran los tel&eacute;fonos y soportes para quien no tenga uno apto</td><td class="n">El decreto, y la compra en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
 <tr><td class="l">Mes 3</td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran las cinco ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, la partida propia de g&eacute;nero, transmisi&oacute;n obligatoria de los actos de fiscalizaci&oacute;n, ruido, y empleo local con la subcontrataci&oacute;n y el semillero</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
@@ -3103,12 +3118,12 @@ que la comprueba.</p>
 <tr><td class="l">Mes 6</td><td>Se llama a licitaci&oacute;n la recolecci&oacute;n de residuos, con el pliego ya aprobado por ordenanza</td><td class="n">El llamado, en el Bolet&iacute;n Oficial municipal</td></tr>
 <tr><td class="l">Mes 6</td><td>Arranca el <b>registro de inserci&oacute;n laboral</b>: cualquier vecino le pregunta a la inteligencia artificial del Municipio cu&aacute;ntas personas consiguieron empleo, con el dato cargado el d&iacute;a que pasa. Hoy ese n&uacute;mero aparece suelto en alguna gacetilla, no en un registro continuo que se pueda consultar</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico</td></tr>
 <tr class="hi"><td class="l">Meses 6&ndash;9</td><td>La inteligencia artificial del Municipio suma a la consulta y al turno m&eacute;dico del mes 3 la partida vecinal y el seguimiento de obra</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Mes 9</td><td>Funciona la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que ya existen, con alerta al m&oacute;vil m&aacute;s cercano; y cada inspecci&oacute;n municipal se transmite en vivo y queda grabada, con las c&aacute;maras corporales</td><td class="n">Decreto de puesta en servicio; el tiempo de respuesta se le pregunta a la inteligencia artificial del Municipio, y la transmisi&oacute;n y su grabaci&oacute;n quedan abiertas para cualquier vecino</td></tr>
+<tr><td class="l">Mes 9</td><td>Cada inspecci&oacute;n municipal se transmite en vivo desde el tel&eacute;fono del inspector y queda grabada y sellada</td><td class="n">Decreto de puesta en servicio; la transmisi&oacute;n y su grabaci&oacute;n quedan abiertas para cualquier vecino</td></tr>
 <tr><td class="l">Mes 9</td><td>Se adjudica la recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica</td><td class="n">Decreto de adjudicaci&oacute;n, en el Bolet&iacute;n Oficial municipal</td></tr>
 <tr><td class="l">Mes 9</td><td>Cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; se hizo en su zona, y tiene la respuesta; desde ah&iacute;, al d&iacute;a: la adjudicaci&oacute;n queda registrada el d&iacute;a que se firma</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 de la rampa ejecutado (cuadro [[n:rampa]])</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
 <tr><td class="l">Mes 12</td><td>Turno m&eacute;dico en l&iacute;nea en los trece efectores: los tres hospitales, el odontol&oacute;gico y los nueve centros de atenci&oacute;n primaria</td><td class="n">La propia plataforma, consultable por cualquiera</td></tr>
-<tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo. Antes, en el a&ntilde;o 1, se adelantan unos 350 millones para empezar la costa: el diagn&oacute;stico de Per&uacute;, las muestras y la bandera de cada tramo, y el primer piloto de arena con sus guardavidas</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
+<tr><td class="l">Mes 12</td><td>Ambiente: la funci&oacute;n ambiental empieza a moverse hacia el 1,5%, reasignando dentro de Servicios Econ&oacute;micos y Urbanismo. Antes, en el a&ntilde;o 1, se adelantan unos 335 millones para empezar la costa: el diagn&oacute;stico de Per&uacute;, las muestras y la bandera de cada tramo, y el primer piloto de arena con sus guardavidas</td><td class="n">Gastos por finalidad y funci&oacute;n</td></tr>
 <tr><td class="l">Mes 12</td><td>Educaci&oacute;n: se revierte la ca&iacute;da real de 2025, y cualquiera puede preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Salud en la inteligencia artificial del Municipio: turnos, ocupaci&oacute;n de guardias, stock y precio unitario de cada compra, con la comparaci&oacute;n autom&aacute;tica operativa</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 12&ndash;18</td><td>Seguridad: el patrullaje, las c&aacute;maras que funcionan y el tiempo de respuesta del 911 municipal, que se preguntan desde los cien d&iacute;as, pasan a estar al d&iacute;a</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio</td></tr>
@@ -3126,8 +3141,8 @@ que la comprueba.</p>
 <p class="cap"><b>Nota:</b> los meses 4 a 12 son los de constituci&oacute;n, y no hay obra decidida por
 vecinos antes del primer ciclo de asambleas. Lo que se licita se adjudica tres meses despu&eacute;s del llamado
 &mdash;la licitaci&oacute;n de la recolecci&oacute;n de 2008 tard&oacute; dos, del llamado a la adjudicaci&oacute;n provisoria
-(Decretos 1113 y 1566 de 2008)&mdash;, y el pliego de la detecci&oacute;n en vivo y de las c&aacute;maras corporales da
-tres meses para ponerlas en servicio.</p>
+(Decretos 1113 y 1566 de 2008)&mdash;, y los tel&eacute;fonos de las inspecciones se ponen en servicio tres meses
+despu&eacute;s de comprarlos.</p>
 
 <h2><span class="n">6.5</span>Qu&eacute; no prometemos, y de qui&eacute;n depende</h2>
 """ + exhead("c", "Lo que no est&aacute; en nuestras manos, y por qu&eacute;") + """
@@ -3201,7 +3216,7 @@ esa deuda crece unos 650 millones.</td></tr>
 
 <h2><span class="n">6.7</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
-<li>A los cien d&iacute;as, el 19 de marzo de 2028, hay veinte compromisos que se pueden comprobar: ocho ordenanzas en el Concejo &mdash;en la sesi&oacute;n extraordinaria de diciembre, la partida de cada zona, la derogaci&oacute;n de los art&iacute;culos que permiten disolver una asociaci&oacute;n vecinal y la tabla nueva&mdash;; seis actos que no dependen de &eacute;l, como el turno m&eacute;dico por internet, el precio de cada compra de los hospitales y las cuotas de las multas; y seis cosas que arrancaron: las asambleas en las seis zonas, la formaci&oacute;n laboral, el primer centro de apoyo escolar, dos m&oacute;dulos de la inteligencia artificial del Municipio, y las licitaciones de la detecci&oacute;n en vivo y de las c&aacute;maras corporales, que funcionan en el mes 9.</li>
+<li>A los cien d&iacute;as, el 19 de marzo de 2028, hay veinte compromisos que se pueden comprobar: ocho ordenanzas en el Concejo &mdash;en la sesi&oacute;n extraordinaria de diciembre, la partida de cada zona, la derogaci&oacute;n de los art&iacute;culos que permiten disolver una asociaci&oacute;n vecinal y la tabla nueva&mdash;; seis actos que no dependen de &eacute;l, como el turno m&eacute;dico por internet, el precio de cada compra de los hospitales y las cuotas de las multas; y seis cosas que arrancaron: las asambleas en las seis zonas, la formaci&oacute;n laboral, el primer centro de apoyo escolar, dos m&oacute;dulos de la inteligencia artificial del Municipio, la detecci&oacute;n en vivo funcionando en las 110 c&aacute;maras que ya hay, y el decreto que manda transmitir cada inspecci&oacute;n.</li>
 <li>La obra que deciden los vecinos sube del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os, hasta 28.908 millones. Cada escal&oacute;n se gana con lo que mostr&oacute; el anterior: si uno no se cumple, la rampa se congela, y lo que una zona no ejecut&oacute; queda para esa zona.</li>
 <li>Trece metas para los cuatro a&ntilde;os, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con que se comprueba: entre ellas, la mitad de los hogares sin cloaca de Boulogne y B&eacute;ccar &mdash;hoy son 4.616&mdash;, empleo y vivienda en 7.730,9 millones, ambiente al 1,5%, turno en l&iacute;nea en los trece efectores de salud, la recolecci&oacute;n licitada, un centro de apoyo escolar en cada localidad y 1.286 egresados en el mandato.</li>
 <li>Un calendario de cuarenta y ocho meses dice qu&eacute; pasa y c&oacute;mo se comprueba: en el mes 9 funcionan la detecci&oacute;n en vivo y las inspecciones transmitidas, y se adjudica la recolecci&oacute;n; en el 27 egresan los primeros 231; y en el 48 los vecinos deciden la mitad de la obra.</li>

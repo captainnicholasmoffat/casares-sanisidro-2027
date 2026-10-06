@@ -490,17 +490,17 @@ p&uacute;blicos, el aporte de actualizar la tabla de valuaci&oacute;n entra en e
 <p><b>Gr&aacute;fico [[n:sinada]].</b> El programa tambi&eacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva
 cobra m&aacute;s de lo que el programa gasta, y en 2028 y desde 2031 cobra menos (cuadro [[n:programa_base]]).</p>
 <p><b>Cuadro [[n:programa]].</b> Las cifras marcadas son estimaciones del equipo de este programa, no
-cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, habilitaciones, la plataforma,
+cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, las inspecciones transmitidas, la plataforma,
 las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, lo que se deja de
 cobrar en multas y los equipos. Las dem&aacute;s salen de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <p><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis estaciones de monitoreo de
 ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso, 137,1 M una vez y 39,5 M por a&ntilde;o de
-conexi&oacute;n; habilitaciones, ochenta c&aacute;maras corporales para transmitir las inspecciones, 168,7 M de sus 1.200 M y 3,8 M
-por a&ntilde;o de licencia; salud, trece pantallas de ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las
+conexi&oacute;n; salud, trece pantallas de ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las
 personas que los instalan (cuadro [[n:equipo]]). Fuentes: compras p&uacute;blicas de la Ciudad (estaci&oacute;n de ruido, diciembre de
-2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre de 2025; c&aacute;mara corporal 4G, enero de 2026;
-televisor, escritorio y silla, 2026), llevadas a diciembre de 2025 con el IPC. Mantenimiento: el soporte anual de
-software de lista es el 22% de la licencia (Oracle, 2026). Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y
+2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre de 2025; televisor, escritorio y silla,
+2026), llevadas a diciembre de 2025 con el IPC. Las inspecciones se transmiten con el tel&eacute;fono del inspector: no hay
+c&aacute;maras corporales, y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (informe 23). Lo que
+est&aacute; en d&oacute;lares va al de diciembre de 2025, $1.447,84 (BCRA). Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y
 cuidado de personas, diciembre de 2025 (Comisi&oacute;n Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con
 las cargas del cuadro [[n:equipo]] y trece sueldos.</p>
 <p><b>Cuadro [[n:tabla2008]].</b> Las parcelas salen del geoservicio de ARBA, y &laquo;reconocido&raquo; usa los
@@ -563,8 +563,11 @@ bonaerense, y la Ciudad de Buenos Aires tiene comunas con autoridades electas qu
 <p><b>Cuadro [[n:equipo]].</b> Sueldos brutos de mercado &mdash;mediana de la encuesta de Sysarmy 2026.1:
 senior 3,40 M por mes, semi-senior 2,43 M, junior 1,50 M&mdash; por trece, m&aacute;s las cargas del empleador: 16,8% de
 contribuciones (IPS 12%, Decreto-Ley 9650/80, e IOMA 4,8%, Decreto 2655/04) y la ART que contrat&oacute; el Municipio, 3,275%
-m&aacute;s una suma fija por persona (Decreto 1587/2025). Pasantes, 240.000 $ por mes, con ART y salud. Infraestructura y
-licencias, 18%, y auditor&iacute;a externa, 10%, del equipo sin cargas. El soporte en cada una de las seis zonas lo hace planta
+m&aacute;s una suma fija por persona (Decreto 1587/2025). Pasantes, 240.000 $ por mes, con ART y salud. Las 10 personas
+nuevas y las 8 de las &aacute;reas salen del informe 23. Infraestructura y licencias, con precios publicados y el d&oacute;lar de
+diciembre de 2025, $1.447,84 (informe 23): lo que usan los vecinos, las 160 asociaciones inscriptas al 40% de su cupo,
+los alumnos, el semillero y las herramientas del equipo; los avisos van por la propia inteligencia artificial del
+Municipio, sin WhatsApp. Auditor&iacute;a externa, 10% del equipo de las primeras 49 personas, sin cargas. El soporte en cada una de las seis zonas lo hace planta
 reasignada, que ya cobra su sueldo.</p>
 </div>
 <h3>Cap&iacute;tulo 5 &middot; Qu&eacute; hacemos en cada &aacute;rea</h3>
@@ -623,9 +626,10 @@ cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5
 localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
 <p><b>Cuadro [[n:compromisos]].</b> Los dos primeros van juntos a la sesi&oacute;n extraordinaria porque sin
 partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
-puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo, y los dos se
-licitan: la anal&iacute;tica que corre sobre las c&aacute;maras que el Municipio ya compr&oacute;, y las c&aacute;maras corporales que compra
-habilitaciones (3.4). A los cien d&iacute;as las dos licitaciones est&aacute;n lanzadas; funcionan en el mes 9. La ordenanza que vuelve
+puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15 y 16 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
+usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;: no hay nada que licitar, y funciona a los cien
+d&iacute;as. Las inspecciones se transmiten desde el tel&eacute;fono del inspector: el decreto sale a los cien d&iacute;as, los tel&eacute;fonos se
+compran para quien no tenga uno apto, y funciona en el mes 9. La ordenanza que vuelve
 inv&aacute;lida el acta labrada sin transmisi&oacute;n va despu&eacute;s, y est&aacute; escrita en el anexo.</p>
 </div>
 """)

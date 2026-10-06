@@ -14,7 +14,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter as L
 
 SRC, OUT = sys.argv[1], sys.argv[2]
-HAB_MODO = "inicial"    # habilitaciones y analitica: "inicial" (1.200 M una vez y 22% de mantenimiento) o "anual"
+HAB_MODO = "inicial"    # ya no se usa: desde el 06/10 las inspecciones transmitidas van en las filas 54 y 57
 for a in sys.argv[3:]:
     if a.startswith("--habilitaciones="):
         HAB_MODO = a.split("=", 1)[1]
@@ -233,16 +233,14 @@ s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=F
            "Empieza a moverse en el mes 12 y llega en el mes 36 (6.4); el año 1 adelanta lo de la costa (fila 238)")
 s_row(53, "Educación · recomposición anual", 2064000000,
       note="Devolver la función educativa al nivel real de 2024, que cayó 11,6%: 2.064 M (5.8, cuadro 14). Desde el mes 12 (6.4)")
-s_row(54, "Habilitaciones y analítica de seguridad · inversión inicial, una vez", 1200000000,
-      note="Cuadro 14 y 5.9: 1.200 M a licitar, 60% el año 1 y 40% el año 2; incluye 80 cámaras corporales. "
-           "ESTIMACIÓN PROPIA, NO VERIFICADA")
+s_row(54, "Inspecciones transmitidas · teléfonos y soportes, una vez", 0,
+      note="5.9: el inspector transmite con su teléfono, desde la inteligencia artificial del Municipio, en un soporte en el pecho. Salen los 1.200 M (cámaras corporales y analítica nueva): quedan las 110 licencias de análisis de video que ya existen, sin ampliar (decisión del 06/10). El costo de teléfonos y soportes llega con el informe 23 bis")
 s_row(55, "Apoyo escolar · costo anual por sede", 180000000,
       note="ESTIMACIÓN PROPIA, NO VERIFICADA. Seis sedes: 1.080 M (cuadro 14). Dos sedes por año es supuesto de este libro")
 s_row(56, "Salud · adhesión al sistema provincial", 0,
       note="Mi Salud Digital no tiene costo de licencia para el municipio que adhiere")
-s_row(57, "Habilitaciones y analítica · mantenimiento anual, sobre lo invertido", 0.22, fmt=FMT_PCT0,
-      note="Desde el año siguiente a cada compra: 264 M por año en régimen. Es el soporte anual de software de lista: "
-           "10.450 USD sobre una licencia de 47.500 USD (lista de precios de Oracle, 2026)")
+s_row(57, "Inspecciones transmitidas · plan de datos y dos años de grabaciones, por año", 0,
+      note="Salen los 264 M de mantenimiento (el 22% de una lista de Oracle). El plan de datos y las grabaciones, que se guardan dos años, llegan con el informe 23 bis")
 
 # --- F · deuda
 s_row(59, "Stock de deuda al 30/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),
@@ -379,14 +377,13 @@ s_row(157, "Tope de pasantes a la vez en el Municipio: 7% de los cargos", 556, f
 s_header(159, "P · CIENCIA Y TÉCNICA: PLATAFORMA, DISPOSITIVOS Y SEMILLERO (4.11 y 5.3)")
 s_row(160, "Ciencia y Técnica · devengado 2025", formula="=C199",
       note="Función 3.5 (bloque S): los 8.155 M del documento")
-s_row(161, "Plataforma: 49 personas con cargas, infraestructura y auditoría", 1585600000,
-      note="Cuadro 27, suma exacta de sus filas: equipo 1.285,1 M, infraestructura y licencias 193,2 M, "
-           "auditoría externa 107,3 M. Con los dispositivos, 1.676,6 M. ESTIMACIÓN PROPIA")
+s_row(161, "Plataforma: 59 personas con cargas, infraestructura y licencias, y auditoría", 1972600000,
+      note="Cuadro 27, suma exacta de sus filas: equipo 1.621,8 M (las 49 personas de antes y 10 nuevas del informe 23: profesor digital, escucha y seguimiento, prueba sellada, aviso de multas y puente con los laboratorios); infraestructura y licencias 243,5 M (informe 23 con el dólar de diciembre de 2025, $1.447,84, y sin WhatsApp: lo que usan los vecinos, 78,3 M; con las herramientas del equipo, las 160 asociaciones inscriptas al 40% de su cupo, los alumnos y el semillero, 226,1 M; y las licencias de las 10 nuevas, 17,4 M; usadas enteras, las 160 asociaciones suman hasta 66 M más); auditoría externa 107,3 M. Con los dispositivos, 2.063,6 M. ESTIMACIÓN PROPIA")
 s_row(162, "Dispositivos", 91000000, note="Cuadro 27")
 s_row(163, "Semillero de empresas", 121000000,
       note="5.3 e informe 10: 117,1 M del fondo que presta uno a uno (hasta cinco empresas por año, 23,4 M cada una) y 3,9 M para constituirlas")
 s_row(164, "Parte de Ciencia y Técnica ocupada", formula="=(C161+C162+C163)/C160", fmt=FMT_PCT1,
-      note="El 22,0% del documento. Sin el semillero, 20,6%")
+      note="El 26,8% del documento. Sin el semillero, 25,3%")
 
 s_header(166, "Q · PASANTÍAS Y GASTO FLEXIBLE (5.3 y 3.4)")
 s_row(167, "Pasantes a la vez en el Municipio, en régimen", 464, fmt=FMT_N, note="928 por año, seis meses cada uno")
@@ -403,18 +400,17 @@ s_row(174, "Beca de práctica, peor caso: ninguna empresa toma pasantes", formul
       note="1.336,3 M por año, del gasto flexible que queda libre")
 s_row(175, "Módulo de salud de los años 1 y 2, como máximo", formula="=(C49+C143/2)*C150*(1-C151)",
       note="Lo que habría pagado la contratación de desarrollos el año 2: 988,4 M. Sale del gasto flexible libre")
-s_row(176, "Reasignación del gasto flexible, en régimen", formula="=(C52*C127-C51)+C53+6*C55+C54*C57",
-      note="Ambiente, educación, apoyo escolar y el mantenimiento de habilitaciones: los 6.863 M del cuadro 15. "
-           "La inversión de 1.200 M va aparte, una vez")
+s_row(176, "Reasignación del gasto flexible, en régimen", formula="=(C52*C127-C51)+C53+6*C55+C57",
+      note="Ambiente, educación, apoyo escolar y los datos y las grabaciones de las inspecciones: lo que ceden los tres programas del cuadro 15. Los teléfonos y soportes van aparte, una vez")
 s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mitad de la obra pública")
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
       note="El 41,4% del documento")
-s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260)/C128", fmt=FMT_PCT1,
-      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa y obra vecinal: el 52,9% del documento")
-s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,1%")
+s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271)/C128", fmt=FMT_PCT1,
+      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores de multas y obra vecinal: el 52,7% del documento")
+s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,3%")
 s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
-      note="El 44,4%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
+      note="El 44,6%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
 
 s_header(184, "R · EL SISTEMA VECINAL (capítulo 4)")
 s_row(185, "Funcionamiento: parte fija de la partida vecinal", 0.015, fmt=FMT_PCT1,
@@ -457,7 +453,7 @@ s_row(211, "Mantenimiento y embellecimiento del Municipio (programa 49)", sef_pr
 s_row(212, "Construcción de infraestructura deportiva (programa 35)", sef_prog("INFRAESTRUCTURA DEPORTIVA"))
 s_row(213, "Mantenimiento y reposición del arbolado público (programa 23)", sef_prog("ARBOLADO"))
 s_row(214, "Lo que ceden: la reasignación sobre los tres", formula="=C176/SUM(C211:C213)", fmt=FMT_PCT0,
-      note="El 28% del cuadro 15")
+      note="El 27% del cuadro 15")
 _r12 = [r for r in _leer("ejecucion_recursos.csv") if r["anio"] == "2025" and r["rubro_codigo"] == "1.2"]
 _q1 = float([r for r in _r12 if r["periodo_tipo"] == "trimestre" and r["trimestre"] == "I"][0]["percibido_const_dic2025"])
 _an = float([r for r in _r12 if r["periodo_tipo"] == "acumulado_anual"][0]["percibido_const_dic2025"])
@@ -492,17 +488,16 @@ s_row(231, "Formación · sesenta puestos en seis centros de acceso, una vez", 1
       note="Notebook, escritorio y silla: 2,28 M por puesto (compras públicas 2025 y 2026)")
 s_row(232, "Formación · conexión de las seis sedes, por año", 39502616,
       note="Fibra óptica, 629.200 $ por mes (Ciudad, 2026)")
-s_row(233, "Habilitaciones · ochenta cámaras corporales, una vez, dentro de los 1.200 M", 168737624,
-      note="2.170.000 $ cada una (Superintendencia de Riesgos del Trabajo, enero de 2026)")
-s_row(234, "Habilitaciones · licencia de monitoreo, por año", 3825756,
-      note="55.878 $ por cámara y por año, desde el segundo año (lista de proveedor, 2026)")
+s_row(233, "Inspecciones · cámaras corporales: salen", 0,
+      note="El inspector transmite con su teléfono (filas 54 y 57): salen las 80 cámaras corporales (168,7 M) y su licencia (3,8 M por año)")
+clear_row(S, 234, 2, 5)
 s_row(235, "Salud · trece pantallas de ocupación de guardia, una vez", 8318978,
       note="Televisor de 43 pulgadas, soporte y mini PC: 0,64 M por pantalla (compras públicas 2025 y 2026)")
 put(S, "B236", "Cada equipo entra en la línea de su área y dentro de su monto; en Ciencia y Técnica quedan las "
     "personas que los instalan (cuadro 27). Precios llevados a diciembre de 2025 con el IPC.",
     font(8, italic=True, color=GRAY))
-s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 350000000,
-      note="5.5 (189): diagnóstico de Perú 22-36 M, piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
+s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 335000000,
+      note="5.5 (189): diagnóstico de Perú 8-22 M (veinte sensores de unos 25 dólares, unos 500 dólares en total, informe 16), piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
            "desfibrilador y primera temporada de guardavidas 42 M. Sale de los tres programas que ceden (contrapartida, "
            "Programas fila 16), no de los 1.410 M que Ambiente ya gasta: no cambia el gasto total ni el resultado")
 s_row(240, "Deportes · Escuela Náutica, seis puestos desde el año 3, por año", 395416610,
@@ -533,7 +528,7 @@ s_row(255, "Año 3 · lo que falta", formula="=MAX(0,C143*3/4-IF(C142=1,C140,C13
 s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,C141,C137))",
       note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
 s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
-      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,4%)")
+      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,6%)")
 s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
 s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
       note="5.5: una clase a la mañana y una a la tarde, de lunes a jueves, en los seis lugares; 48 horas por semana, categoría 991 "
@@ -562,8 +557,21 @@ s_row(269, "Cada 10% de rebaja media de las multas, por año", 323000000,
       note="En 2024 se pagaron entre 13.000 y 456.000 multas (81.000 como estimación central). No se publica cuántas se "
            "labran, así que no entra en el resultado: sale del gasto flexible libre")
 s_row(270, "Cada 10% de rebaja media, sobre el gasto flexible", formula="=C269/C128", fmt=FMT_PCT1,
-      note="0,4%: puntos del margen libre (44,4%)")
-for rr in range(106, 271):
+      note="0,4%: puntos del margen libre (44,6%)")
+s_row(271, "Tránsito o Juzgado de Faltas · cuatro personas que validan las actas, por año", 108280000,
+      note="Informe 23: 1 semi-senior y 3 juniors, con los sueldos del cuadro 27. Con el resto del presupuesto y no con el "
+           "fondo de seguridad vial: pagar con las multas a quien multa invita a multar más. Entra en el gasto flexible ocupado")
+s_row(272, "Educación · cuatro docentes que revisan el profesor digital, por año", 93760000,
+      note="Informe 23: a sueldo de junior. Dentro de la recomposición de Educación (fila 53): no suma")
+s_header(274, "Z · EL FONDO DE SEGURIDAD VIAL NO MUEVE EL MARGEN (5.11 e informe 18)")
+s_row(275, "Multas cobradas en 2025: otras multas en vía pública, a pesos de diciembre de 2025", 3818583182,
+      note="Rubro 1.2.6.04, trimestre por trimestre con el IPC (informe 18, 1.8). El presupuesto no separa las de tránsito")
+s_row(276, "Con las multas por contravenciones", 4420261601, note="Más el rubro 1.2.6.01: el techo de lo que puede ser de tránsito")
+s_row(277, "Gasto 2025 en semaforización y señalamiento vial y en la política de movilidad, a pesos de diciembre de 2025",
+      7199058415, note="Programas 27 y 26 de 2025 (1.654,2 M y 4.687,6 M), por 1,1352: el promedio del IPC del año")
+s_row(278, "Lo que ya se gasta en seguridad vial menos lo que se cobra en multas", formula="=C277-C276",
+      note="Positivo: lo que se cobra ya se gasta en seguridad vial, como manda la Ley 24.449, art. 85. El fondo no mueve el margen")
+for rr in range(106, 279):
     S.row_dimensions[rr].height = None
 
 # ======================================================================
@@ -660,7 +668,7 @@ put(P, "B9", "Empleo y vivienda · lo que suma a 2025", font(9))
 put(P, "B10", "Ambiente · reasignación", font(9))
 put(P, "B11", "Educación · recomposición", font(9))
 put(P, "B12", "Apoyo escolar · seis sedes", font(9))
-put(P, "B13", "Habilitaciones y analítica de seguridad", font(9))
+put(P, "B13", "Inspecciones transmitidas: teléfonos, datos y grabaciones", font(9))
 put(P, "B14", "Salud · turno digital", font(9))
 put(P, "B15", "Salud · módulo de los años 1 y 2, del gasto flexible libre", font(9))
 put(P, "B16", "Contrapartida · reasignación desde el gasto flexible", font(9))
@@ -675,11 +683,8 @@ for m in MESES:
     P[f"{X}10"] = (f"=(Supuestos!$C$52*Supuestos!$C$127-Supuestos!$C$51)*MIN(MAX(({m}-12)/24,0),1)/12"
                    f"+IF({m}<=12,Supuestos!$C$238/12,0)")
     P[f"{X}11"] = f"=Supuestos!$C$53*IF({m}>=12,1,0)/12"
-    if HAB_MODO == "anual":
-        P[f"{X}13"] = f"=Supuestos!$C$54*{X}7/12"
-    else:   # inversion inicial: 60% el anio 1, 40% el anio 2; y el mantenimiento sobre lo ya invertido
-        P[f"{X}13"] = (f"=Supuestos!$C$54*{[0.6, 0.4, 0, 0, 0, 0, 0, 0][y]}/12"
-                       f"+Supuestos!$C$54*Supuestos!$C$57*{[0, 0.6, 1, 1, 1, 1, 1, 1][y]}/12")
+    P[f"{X}13"] = (f"=Supuestos!$C$54*{[1, 0, 0, 0, 0, 0, 0, 0][y]}/12"
+                   f"+IF({m}>=9,Supuestos!$C$57,0)/12")
     P[f"{X}15"] = f"=IF({X}8<=Supuestos!$C$152,{X}27*Supuestos!$C$150*(1-Supuestos!$C$151),0)"
     P[f"{X}16"] = f"=-({X}10+{X}11+{X}12+{X}13+{X}15)"
     P[f"{X}17"] = (f"=-CHOOSE(MIN({X}8,4),Supuestos!$C$253,Supuestos!$C$254,Supuestos!$C$255,"
@@ -694,11 +699,11 @@ for rr in range(22, 45):
     clear_row(P, rr)
 put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con lo que cobra la tabla nueva, y lo que falta cada "
     "año sale del gasto flexible (fila 17). Ambiente, educación, apoyo "
-    "escolar, habilitaciones y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
+    "escolar, las inspecciones transmitidas y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
     "función de destino y salen de los tres programas que ceden (cuadro 15), así que el gasto total no cambia.",
     font(8, italic=True, color=GRAY))
-put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36, y en el año 1 adelanta 350 M para "
-    "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año y habilitaciones sigue la rampa: son supuestos de este libro.",
+put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36, y en el año 1 adelanta 335 M para "
+    "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año; las inspecciones transmitidas compran los teléfonos el año 1 y pagan datos y grabaciones desde el mes 9: son supuestos de este libro.",
     font(8, italic=True, color=GRAY))
 put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 34)", font(9, True), fill=F_SEC)
 lab2 = {27: "Empleo y vivienda · total del mes",
@@ -1250,9 +1255,9 @@ guia = [
      "rango de 74% a 82%. Cobra 1.637, 4.851 y 5.936 M los tres primeros años y 5.983 M desde el cuarto; entre "
      "5.946 y 5.983 M según cuántas subas frene el mínimo. Lo que falta cada año sale del gasto flexible: 170 M el "
      "año 1 y 1.242 M desde el cuarto, el 1,4%. La cobranza no paga el programa."),
-    ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y el mantenimiento de habilitaciones —6.863 M en "
-     "régimen, y la inversión de 1.200 M una vez—, la plataforma y "
-     "el semillero —dentro de Ciencia y Técnica, 22,0%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
+    ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y los datos y las grabaciones de las inspecciones —6.599 M en "
+     "régimen—, la plataforma y "
+     "el semillero —dentro de Ciencia y Técnica, 26,8%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
      "Desarrollo Social —667,8 M—, la Escuela Náutica de Deportes —de a dos puestos por año, hasta 395 M por año "
      "desde el tercero y una inversión de hasta 717 M en tres años, de obras deportivas—, las clases de la costa —23,5 M por año, de Deportes—, los baños de la costa —hasta 354 M por año desde el tercero, dentro del aumento de Ambiente, con su obra y el equipamiento de las clases, hasta 1.245 M en tres años, de obras deportivas—, la beca de práctica "
      "y el módulo de salud de los años 1 y 2 —del gasto flexible libre— y el funcionamiento del sistema vecinal —1,5% "

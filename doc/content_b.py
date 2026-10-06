@@ -268,14 +268,14 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
 <tr><td class="l">Educaci&oacute;n, al nivel real de 2024</td><td class="n">2.064 M</td><td class="m">No</td><td class="m">Mantenimiento y embellecimiento, no de adentro de educaci&oacute;n</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M*</td><td class="m">No</td><td class="m">Los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado</td></tr>
-<tr><td class="l">Habilitaciones y anal&iacute;tica de seguridad</td><td class="n">1.200 M una vez y 264 M por a&ntilde;o*</td><td class="m">No. Inversi&oacute;n en los a&ntilde;os 1 y 2, y mantenimiento del 22%</td><td class="m">Los mismos tres programas</td></tr>
-<tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">1.676,6 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
+<tr><td class="l">Inspecciones transmitidas desde el tel&eacute;fono del inspector (5.9)</td><td class="n">[23 bis]*</td><td class="m">No. La anal&iacute;tica de seguridad usa las 110 licencias que ya existen, y no hay c&aacute;maras corporales</td><td class="m">Los mismos tres programas</td></tr>
+<tr><td class="l">Plataforma de inteligencia artificial y dispositivos (4.11)</td><td class="n">2.063,6 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica, que ya tiene 8.155 M al a&ntilde;o</td></tr>
 <tr><td class="l">Pasant&iacute;as y primer empleo en las &aacute;reas (5.3)</td><td class="n">2.135,3 M*</td><td class="m">No</td><td class="m">El presupuesto de cada &aacute;rea: salud, seguridad, educaci&oacute;n, obra, gobierno, comunicaci&oacute;n, hacienda, ambiente, movilidad, desarrollo social, legal y t&eacute;cnica, gabinete y cultura</td></tr>
-<tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 22,0% de la partida</td></tr>
+<tr><td class="l">Semillero de empresas (5.3)</td><td class="n">121,0 M*</td><td class="m">No</td><td class="m">Ciencia y T&eacute;cnica: con la plataforma, el 26,8% de la partida</td></tr>
 <tr><td class="l">Atenci&oacute;n domiciliaria de personas mayores (5.13)</td><td class="n">667,8 M*</td><td class="m">No</td><td class="m">Desarrollo Social: cien cuidadores formados en el CFL 404</td></tr>
 <tr><td class="l">Escuela N&aacute;utica en los parques de la costa (5.5)</td><td class="n">373 a 395 M por a&ntilde;o desde el a&ntilde;o 3*</td><td class="m">No. De a dos puestos por a&ntilde;o: 127 a 136 M el a&ntilde;o 1 y 250 a 266 M el a&ntilde;o 2</td><td class="m">Deportes: la inversi&oacute;n, de 167 a 268 M el a&ntilde;o 1 y de 145 a 225 M los a&ntilde;os 2 y 3, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); lo de cada a&ntilde;o, de su propio presupuesto</td></tr>
 <tr><td class="l">Ba&ntilde;os, foodtrucks y clases en la costa (5.5)</td><td class="n">251 a 354 M por a&ntilde;o de ba&ntilde;os desde el a&ntilde;o 3, y 27 a 55 M de clases*</td><td class="m">No. De a dos lugares por a&ntilde;o, desde el &Aacute;guila: los ba&ntilde;os, 82 a 121 M el a&ntilde;o 1 y 167 a 240 M el a&ntilde;o 2. El canon de los foodtrucks entra</td><td class="m">La obra y el equipamiento, de 641 a 1.245 M en tres a&ntilde;os, de Construcci&oacute;n de Infraestructura Deportiva (programa 35); limpieza, encargados y mantenimiento, de Ambiente, menos el canon; los profesores, de Deportes</td></tr>
-<tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja media*</td><td class="m">No: es lo que se deja de cobrar</td><td class="m">Del gasto flexible libre. Los reductores ya est&aacute;n contratados (536,7 M) y el aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica). Lo que se cobra va a un fondo cerrado de seguridad vial, en un rengl&oacute;n propio</td></tr>
+<tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja media, y 108,3 M por a&ntilde;o de las cuatro personas que validan las actas*</td><td class="m">No: es lo que se deja de cobrar, y las cuatro personas van con el resto del presupuesto</td><td class="m">Lo que se deja de cobrar, del gasto flexible libre; las cuatro personas, del presupuesto de Tr&aacute;nsito o del Juzgado de Faltas, no del fondo. Los reductores ya est&aacute;n contratados (536,7 M) y el aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica). Lo que se cobra va a un fondo cerrado de seguridad vial, en un rengl&oacute;n propio</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> ejecuci&oacute;n presupuestaria 2025 y modelo del cap&iacute;tulo 3. Las cifras marcadas con * son
 estimaciones de este programa; el detalle, en las notas del cap&iacute;tulo 3.</p>
@@ -308,8 +308,8 @@ sale.</p>
 <p><b>El criterio es uno solo:</b> <span class="sg">si la obra cambia c&oacute;mo vive una familia todos los d&iacute;as, no se toca; si
 mejora lo que ya funcionaba, espera.</span> Una cloaca, el gas de red o una conexi&oacute;n que permita
 trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya funcionaba, no.</p>
-""" + exhead("c", "Proponemos que tres programas cedan el 28% de su gasto: 6.863 millones por a&ntilde;o, y 1.200 una vez",
-             "Lo que gastaron en 2025 los programas de los que salen ambiente, educaci&oacute;n, apoyo escolar y habilitaciones.",
+""" + exhead("c", "Proponemos que tres programas cedan el 27% de su gasto: 6.599 millones por a&ntilde;o",
+             "Lo que gastaron en 2025 los programas de los que salen ambiente, educaci&oacute;n, apoyo escolar y las inspecciones transmitidas.",
              key="ceden") + """
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
@@ -317,12 +317,12 @@ trabajar y estudiar cambian la vida adentro de la casa. Rehacer una plaza que ya
 <tr class="hi"><td class="l">Mantenimiento y embellecimiento</td><td class="n"><b>14.654,8 M</b></td><td class="m">El quinto programa del presupuesto. <b>Ochenta y seis veces</b> lo que se gasta en empleo</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m"><b>Ocho veces</b> lo que se destina a infraestructura habitacional</td></tr>
 <tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.406,2 M</td><td class="m">&mdash;</td></tr>
-<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">6.863 M por a&ntilde;o</td><td class="m">El 28% de esos tres programas sumados. Y 1.200 M una vez, los a&ntilde;os 1 y 2</td></tr>
+<tr class="hd"><td class="l">Lo que hay que reasignar</td><td class="n">6.599 M por a&ntilde;o</td><td class="m">El 27% de esos tres programas sumados</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> Municipio de San Isidro, Estado de Ejecuci&oacute;n de Gastos por Programa,
 ejercicio 2025, acumulado anual.</p>
 <div class="cols">
-<p><b>Con el 28% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
+<p><b>Con el 27% de esos tres programas alcanza.</b> No hay que eliminarlos: hay que dejar de ampliarlos
 mientras haya 6.488 hogares sin cloaca y 25.165 sin gas de red. <span class="sg">Lo que est&aacute;
 construido y funcionando no se rehace mientras haya gente esperando lo b&aacute;sico.</span></p>
 <p><b>Y el arbolado entra con el mismo criterio que los otros dos.</b> Lo que repone un servicio que
@@ -336,15 +336,16 @@ secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de
 </div>
 <h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
 <div class="cols">
-<p><b>El compromiso anual es de 7.225,2 millones para empleo y vivienda (3.5) y 6.863 de
-reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y el mantenimiento de habilitaciones, cuya inversi&oacute;n de 1.200 se hace
-una sola vez&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors; Desarrollo
+<p><b>El compromiso anual es de 7.225,2 millones para empleo y vivienda (3.5) y 6.599 de
+reasignaci&oacute;n del gasto flexible</b> &mdash;ambiente, educaci&oacute;n, apoyo escolar y los datos y las grabaciones de las inspecciones
+transmitidas&mdash;; las &aacute;reas mueven 2.135,3 dentro de su propio presupuesto para pasantes y juniors, y 108,3 para las cuatro
+personas que validan las actas de las multas; Desarrollo
 Social, 667,8 para los cuidadores; y Deportes, para la Escuela N&aacute;utica y las clases de la costa, hasta 419 desde el
 tercer a&ntilde;o, con una inversi&oacute;n de hasta 717 en tres a&ntilde;os para la Escuela, de obras deportivas. De obras deportivas
 salen tambi&eacute;n la obra de los ba&ntilde;os de la costa y el equipamiento para las clases, hasta 1.245 en tres a&ntilde;os, y de
 Ambiente, dentro de su aumento, la limpieza y los encargados, hasta 386 por a&ntilde;o. Los primeros exigen
 actualizar la base de valuaci&oacute;n; los segundos, decidir distinto con el dinero que ya existe. <span
-class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,9% del gasto flexible y queda libre el 47,1%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,4%</b>, y cada 10% de rebaja media de las multas ocupa 0,4 puntos de ese margen (5.11). La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
+class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 52,7% del gasto flexible y queda libre el 47,3%.</span> De ese margen salen, si hacen falta, la beca de pr&aacute;ctica &mdash;1.336,3 millones en el peor caso, que ninguna empresa tome pasantes&mdash; y el m&oacute;dulo de salud de los dos primeros a&ntilde;os, como m&aacute;ximo 988,4 millones: <b>aun con las dos cosas, queda libre el 44,6%</b>, y cada 10% de rebaja media de las multas ocupa 0,4 puntos de ese margen (5.11). La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
 </div>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
@@ -357,7 +358,7 @@ obras que ejecuta la propia comisi&oacute;n &mdash;cuentas, seguro y justificaci
 el honorario del panel sorteado que el cap&iacute;tulo 4 propone para los bienes de alcance distrital, como la
 costa, sale de reasignaci&oacute;n: <b>3,1 millones por panel</b>. Y <b>imputar el gasto con referencia
 territorial</b>, que es lo que permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona, no requiere
-personal nuevo ni estructura nueva, y entra dentro del 44,4% del gasto flexible que queda libre con todo
+personal nuevo ni estructura nueva, y entra dentro del 44,6% del gasto flexible que queda libre con todo
 sumado.</p>
 </div>
 <p>Sobre un gasto flexible de 87.326 millones, <b>empleo y vivienda y la obra vecinal ocupan juntas el
@@ -582,8 +583,8 @@ cap&iacute;tulo 3.</p>
 <li>Contado como manda la cuenta oficial &mdash;lo cobrado contra lo gastado&mdash;, San Isidro cerr&oacute; 2025 con un d&eacute;ficit de 6.051 millones, no con el super&aacute;vit de 29.943 que da contar lo facturado. Y el d&eacute;ficit viene de la obra: despu&eacute;s de pagar el funcionamiento diario sobraron 51.781 millones, y la obra y el equipamiento costaron 57.832.</li>
 <li>Cuatro n&uacute;meros deciden las cuentas: lo que recauda el Municipio crece 1,95% por a&ntilde;o por encima de la inflaci&oacute;n, lo que le toca de la coparticipaci&oacute;n cae 2,196% por a&ntilde;o, el 73,1% del gasto no se puede mover en el a&ntilde;o, y se cobra el 89,32% de lo facturado, menos que en 2024, en buena parte porque el Municipio decidi&oacute; cobrar menos. El que m&aacute;s pesa es el primero: con un punto menos, 2031 pasa de +10.236 a &minus;3.044 millones; si la coparticipaci&oacute;n cayera m&aacute;s r&aacute;pido, a +5.342.</li>
 <li>Si nada cambia, el d&eacute;ficit se cierra solo: en 2028 el Municipio vuelve a ingresar m&aacute;s de lo que gasta.</li>
-<li>El programa tiene trece partes con costo, y s&oacute;lo una necesita dinero nuevo: empleo y vivienda, que pasa de 505,7 a 7.730,9 millones por a&ntilde;o; hay que financiar 7.225,2. La obra que deciden los vecinos, 28.908 millones, sale de la obra que ya se paga. Ambiente, educaci&oacute;n, apoyo escolar y habilitaciones salen de que tres programas &mdash;mantenimiento y embellecimiento, obras deportivas y arbolado&mdash; cedan el 28% de su gasto, 6.863 millones por a&ntilde;o; lo dem&aacute;s, del presupuesto de cada &aacute;rea o del margen que queda libre.</li>
-<li>Todo junto usa el 52,9% del gasto que el Municipio puede mover cada a&ntilde;o, y aun sumando la beca de pr&aacute;ctica y el m&oacute;dulo de salud <b>queda libre el 44,4%</b>. No hay lugar para una tercera propuesta de este tama&ntilde;o sin tocar el gasto que no se mueve.</li>
+<li>El programa tiene trece partes con costo, y s&oacute;lo una necesita dinero nuevo: empleo y vivienda, que pasa de 505,7 a 7.730,9 millones por a&ntilde;o; hay que financiar 7.225,2. La obra que deciden los vecinos, 28.908 millones, sale de la obra que ya se paga. Ambiente, educaci&oacute;n, apoyo escolar y las inspecciones transmitidas salen de que tres programas &mdash;mantenimiento y embellecimiento, obras deportivas y arbolado&mdash; cedan el 27% de su gasto, 6.599 millones por a&ntilde;o; lo dem&aacute;s, del presupuesto de cada &aacute;rea o del margen que queda libre.</li>
+<li>Todo junto usa el 52,7% del gasto que el Municipio puede mover cada a&ntilde;o, y aun sumando la beca de pr&aacute;ctica y el m&oacute;dulo de salud <b>queda libre el 44,6%</b>. No hay lugar para una tercera propuesta de este tama&ntilde;o sin tocar el gasto que no se mueve.</li>
 <li>La tabla de 2008 con la que el Municipio calcula la tasa seg&uacute;n el valor de la tierra le cobra de menos a la localidad de San Isidro, a Mart&iacute;nez y a Acassuso, y de m&aacute;s a Villa Adelina. Proponemos pagar el programa actualiz&aacute;ndola, sin subir el porcentaje que se cobra: cobrada como hoy se cobra esa tasa, trae 5.983 millones por a&ntilde;o, y los 1.242 que faltan salen del gasto flexible. Bajan 34.998 parcelas y suben 33.619, ninguna boleta m&aacute;s de 25% por a&ntilde;o; Boulogne paga 4,5% menos y B&eacute;ccar, lo mismo.</li>
 <li>En agosto de 2026 el Municipio coloc&oacute; un bono por 30.000 millones a tasa variable, TAMAR m&aacute;s 7 puntos, y siete de sus ocho cuotas de capital, el 87,5%, las paga el gobierno que asuma en diciembre de 2027; la deuda consolidada ya casi se hab&iacute;a duplicado en dos a&ntilde;os y medio, descontada la inflaci&oacute;n. No proponemos deuda: este programa no le agrega un peso.</li>
 <li>Lo que hay que vigilar es que lo que recauda el Municipio crezca menos de 1,2% por a&ntilde;o por encima de la inflaci&oacute;n &mdash;por debajo, el mandato termina en d&eacute;ficit aunque no se haga nada nuevo&mdash; y que cobre una parte menor de lo que factura: tres puntos menos dejan 2031 en &minus;426 millones. El programa no est&aacute; entre los riesgos: deja las cuentas igual que si nada cambia en 2028 y desde 2031, y mejor en 2029 y 2030, en 1.238 y 517 millones.</li>
