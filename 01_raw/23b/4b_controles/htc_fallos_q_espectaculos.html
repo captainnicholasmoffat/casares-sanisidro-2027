@@ -1,0 +1,551 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Fallo del H.T.C.</h4></div>
+     Como natural consecuencia del desarrollo de las actividades involucradas en la descripción efectuada en el apartado Misión, y a la vez como culminación, específica para cada sujeto de control, de aquellos procesos referidos en Funcionamiento,
+     el H. Tribunal de Cuentas emite sus Fallos y Resoluciones.
+     Así, anualmente, cada uno de ellos se constituye en el producto final de un complejo entramado de tareas que, por imperio de la normativa vigente, se concretan con intervención de diversas áreas de nuestro Organismo.
+     </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+      <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/fallohtc/0/buscador/filter' method='post'>
+           
+
+
+          <div>
+            <label for="fallohtc_filter_type_palabra">Palabras</label>
+	    <input type="text" id="fallohtc_filter_type_palabra" name="fallohtc_filter_type[palabra]"    class="input-xlarge" value="espectáculos" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+          </span>
+          </div>
+
+
+        <div id='filtroFormulario' style='display:none'> 
+
+                
+          <div class="control-group">
+              <label for="fallohtc_filter_type_ente">Entes</label>
+              <input type="text" id="fallohtc_filter_type_ente" name="fallohtc_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+          </div>
+          <div class="control-group">
+            <span><label for="fallohtc_filter_type_ejercicioInicio">Año del Ejercicio</label></span>
+            <span>Desde<input type="number" id="fallohtc_filter_type_ejercicioInicio" name="fallohtc_filter_type[ejercicioInicio]"    class="input-mini" /></span>
+            <span>Hasta</span>
+            <span><input type="number" id="fallohtc_filter_type_ejercicioFin" name="fallohtc_filter_type[ejercicioFin]"    class="input-mini" /></span>
+          </div>
+          <div class="control-group">
+            <span><label for="fallohtc_filter_type_expediente">Expediente</label></span>
+            <span><input type="text" id="fallohtc_filter_type_expediente" name="fallohtc_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+            </span>
+          </div>
+	  
+	  <fieldset>
+	    <div class="control-group">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_tipo_fallo')" class="cursor"><a href="#">Tipos de Fallos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_tipo_fallo" style="display:none">
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_1" name="fallohtc_filter_type[tipoFallo][1]" value="1" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_1">Fallo H.T.C.</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_5" name="fallohtc_filter_type[tipoFallo][5]" value="5" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_5">Recurso de Revisión</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_8" name="fallohtc_filter_type[tipoFallo][8]" value="8" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_8">Sumario</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_6" name="fallohtc_filter_type[tipoFallo][6]" value="6" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_6">Aclaratoria</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_2" name="fallohtc_filter_type[tipoFallo][2]" value="2" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_2">Procedencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_3" name="fallohtc_filter_type[tipoFallo][3]" value="3" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_3">Improcedencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_4" name="fallohtc_filter_type[tipoFallo][4]" value="4" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_4">Proc./Improc.</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_11" name="fallohtc_filter_type[tipoFallo][11]" value="11" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_11">Declaración de Competencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_12" name="fallohtc_filter_type[tipoFallo][12]" value="12" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_12">Revisión Art.74 LPA</label>
+    </div>
+     </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_tipo_fallo = false;
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_1').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_5').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_8').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_6').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_2').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_3').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_4').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_11').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_12').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+  </script>	    </div>
+	  </fieldset>
+            
+        </div>
+            
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/fallohtc/0/buscador">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>           
+      </form>
+      <div>
+	<i>Los resultados mostrarán:
+	 <ul>
+	   <li>anteriores a 01/06/03: parte resolutiva</li> 
+	   <li>posteriores a 01/06/03: fallo completo</li> 
+	 </ul>
+	 </i>
+	</div>		
+   </div>
+  </div>
+<br>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Acuerdo">Fecha Acuerdo</a>
+</th>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.ejercicio&amp;direction=asc&amp;page=1" title="Ejercicio">Ejercicio</a>
+</th>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.expediente&amp;direction=asc&amp;page=1" title="Expediente">Expediente</a>
+</th>
+	    <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=tf.nombre&amp;direction=asc&amp;page=1" title="Tipo Fallo">Tipo Fallo</a>
+</th>
+	    <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+            <th>Resuelve</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>26/05/2022</td>
+	    <td>2019</td>
+	    <td>4-033.0-2019</td>
+	    <td>Fallo H.T.C.</td>
+	    <td>Municipalidad de ENSENADA</td>
+	       
+<td width='350px'>
+            o respecto de las cuentas correspondientes al ejercicio 2018, en lo que se refiere a los temas abordados en los considerandos segundo - acápite 1.4) <font class="text-warning"><strong>espectáculos</strong></font> y obras teatrales contratados por la Comuna, y octavo, apartado 4) considerando séptimo, apartado 6.7) considerando sexto, apartado 5) 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32620/resumen/ajax','Resuelve')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+ARTÍCULO PRIMERO: Aprobar la rendición de cuentas de la MUNICIPALIDAD DE ENSENADA ejercicio 2019, acorde a lo expresado en el Considerando undécimo.
+
+ARTÍCULO SEGUNDO: Dejar constancia sin otros alcances de las cuestiones tratadas en el Considerando segundo apartado 1.2) y 1.6).
+
+ARTÍCULO TERCERO: Disponer que las autoridades tomen nota de lo manifestado en el Considerando séptimo, apartado 6.6).
+
+ARTÍCULO CUARTO: Disponer que la Delegación actuante retome la cuestión abordada en el considerando segundo apartado 1.7), informando al respecto, y formulando las observaciones a que hubiere lugar.
+
+ARTÍCULO QUINTO: Por los fundamentos reseñados en los Considerandos segundo, cuarto, quinto, sexto y séptimo y en base a la determinación efectuada en el Considerando décimo aplicar multas de $ 80.000,00 al Intendente Municipal Sr. Mario Carlos Secco, de $ 40.000,00 al Secretario de Obras Públicas Sr. José Alberto Núñez, de $ 35.000,00 a la Contadora Municipal Sra. Graciela Liliana Ranieri, de $ 15.000,00 al Subdirector de Obras Públicas Interino Sr. Hugo Claudio Pose y de $ 15.000,00 al Secretario de Hacienda y Producción Sr. Hugo Marcelo Schneider y sendas amonestaciones a la Jefa de Compras Sra. Mónica Leticia Blasevich, al Secretario de Relaciones Institucionales, Prensa y Ceremonial Sr. Agustín Duscovich, al Director de Obras Particulares Sr. Darío Gabriel Di Paolo, al  Subsecretario de Obras Públicas Sr. Emilio Ernesto Martínez, al Secretario de Servicios Públicos Sr. Héctor Adrián Espósito, al Subsecretario de Recaudación Sr. Rodolfo Pagani, a la Tesorera Municipal Sra. Laura Andrea Ocampos, al Secretario de Hacienda y Producción Interino Sr. Carlos Daniel Iurada y al Director de Producción Sr. Luis Alberto Urrizmendi (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SEXTO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6.1) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 1.241.617,01, por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, la Tesorera Municipal Sra. Laura Andrea Ocampos, el Secretario de Obras Públicas Sr. José Alberto Núñez (responsable Unidad Ejecutora), y el Subdirector de Obras Públicas Interino Sr. Hugo Claudio Pose (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SÉPTIMO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6.2) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 17.755.332,32 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Obras Públicas Sr. José Alberto Núñez, la Secretaria de Gobierno Sra. María Alejandra Sabio y el Director de Obras Particulares Sr. Darío Gabriel Di Paolo hasta la suma de $ 1.970.541,98 (acápite 6.2.1)), el Intendente Municipal Sr. Mario Carlos Secco, el Secretario de Obras Públicas Sr. José Alberto Núñez, el Director de Obras Particulares Sr. Darío Gabriel Di Paolo y el Subsecretario de Obras Públicas Sr. Emilio Ernesto Martínez hasta la suma de $ 336.262,56 (acápite 6.2.6)), el Intendente Municipal Sr. Mario Carlos Secco y el Subsecretario de Obras Públicas Sr. Emilio Ernesto Martínez hasta la suma de $ 3.550.694.13 (acápite 6.2.11)), el Intendente Municipal Sr. Mario Carlos Secco y el Secretario de Obras Públicas Sr. José Alberto Núñez hasta la suma de $ 3.032.582,44 (acápite 6.2.12)), el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Hacienda y Producción Sr. Hugo Marcelo Schneider y la Tesorera Municipal Sra. Laura Andrea Ocampos hasta la suma de $ 1.759.247,06 (acápite 6.2.17)), el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras Públicas Sr. José Alberto Núñez y la Tesorera Municipal Sra. Laura Andrea Ocampos hasta la suma de $ 723.299,01 (acápite 6.2.18)), el Intendente Municipal Sr. Mario Carlos Secco y el Secretario de Obras Públicas Sr. José Alberto Núñez hasta la suma de $ 4.363.300,34 (acápite 6.2.21)) y el Intendente Municipal Sr. Mario Carlos Secco y el Secretario de Obras Públicas Sr. José Alberto Núñez hasta la suma de $ 2.019.404,80 (acápite 6.2.22)) (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO OCTAVO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-3) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 736.084,04 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras Públicas Sr. José Alberto Núñez, responsable Unidad Ejecutora (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO NOVENO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-5) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 7.336.612,39por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Servicios Públicos Sr. Héctor Adrián Espósito, responsable Unidad Ejecutora y la Tesorera Municipal Sra. Laura Andrea Ocampos hasta la suma de $ 3.201.608,81 y el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Servicios Públicos Sr. Héctor Adrián Espósito hasta la asuma de 4.135.003,58 (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-6) y sobre la base de lo allí expuesto, formular cargopor la suma total de $2.342.040,34 por el que responderán solidariamenteel Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Hacienda y Producción Sr. Hugo Marcelo Schneider hasta la suma de $ 714.600,62, el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y Secretario de Obras Públicas Sr. José Alberto Núñez hasta la suma de $  644.629,72 y el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Servicios Públicos Sr. Héctor Adrián Espósito hasta la suma de $ 982.810,00 (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO UNDÉCIMO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-8) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 202.770,24 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras Públicas Sr. José Alberto Núñez, responsable Unidad Ejecutora (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DUODÉCIMO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-10) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 302.452,27 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, a la Tesorera Municipal Sra. Laura Andrea Ocampos, y el Secretario de Relaciones Institucionales, Prensa y Ceremonial Sr. Agustín Duscovich (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO TERCERO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-13) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 58.824,14 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, a la Tesorera Municipal Sra. Laura Andrea Ocampos, el Secretario de Obras Públicas Sr. José Alberto Núñez, responsable Unidad Ejecutora y el Subsecretario de Obras Públicas Sr. Emilio Ernesto Martínez (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO CUARTO: Desaprobar los egresos tratados en el Considerando séptimo apartado 6-15) y sobre la base de lo allí expuesto, formular cargopor la suma total de $ 1.779.997,81 por el que responderán solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Obras Públicas Sr. José Alberto Núñez y el Subsecretario de Obras Públicas Sr. Emilio Ernesto Martínez (Artículo 16 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO QUINTO: Mantener en suspenso el pronunciamiento del H Tribunal Cuentas sobre las cuestiones abordadas en los considerandos séptimo apartados 6.7), 6.16) Gastos Judiciales y  6.17) Órdenes de Cancelación de Ejercicios Anteriores y Órdenes de Pago faltantes (orden de pago Nº 4044 - Club Social y Deportivo Porteño) y y disponer que la Delegación y la División Relatora tomen nota para informar en el primer traslado que se corra con posterior al dictado de la presente sentencia y su notificación a los responsables,  declarando que los Sres Mario Carlos Secco, Agustín Duscovich, Rubén Omar Resa, Hugo Marcelo Schneider, Carlos Daniel Iurada, José Alberto Núñez, Ezequiel Pablo Lopardo y las Sras. Graciela Liliana Ranieri, Laura Andrea Ocampos, Mariana Esteves, María Natalia Colombo y Mónica Andrea Pastrana, no deberán considerarse exentos de responsabilidad, hasta tanto este H. Tribunal se pronuncie definitivamente sobre la cuestión cuyo tratamiento se posterga.
+
+ARTÍCULO DÉCIMO SEXTO: En base a lo manifestado en el Considerando octavo, disponer la continuación de las reservas dispuestas por medio del artículo Décimo cuarto, del fallo dictado respecto de las cuentas correspondientes al ejercicio 2018, en lo que se refiere a los temas abordados en los considerandos segundo - acápite 1.4) Espectáculos y obras teatrales contratados por la Comuna, y octavo, apartado 4) considerando séptimo, apartado 6.7) considerando sexto, apartado 5) considerando sexto, apartado 3) “considerando quinto, apartado 2) Exención de la Tasa por Servicios Generales y Alumbrado Público” de la citada sentencia, declarando que los Sres. Mario Carlos Secco, Agustín Duscovich,, Rodolfo Pagani y las Sras. Graciela Liliana Ranieri y María Alejandra Sabio, no deberán considerarse exentos de responsabilidad hasta tanto el H. Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.
+
+ARTÍCULO DÉCIMO SÉPTIMO:  En base a lo manifestado en el Considerando octavo, dejar sin efecto la reserva dispuesta por el artículo Décimo cuarto, considerando séptimo – Incompatibilidades – Artículo 53 de la Constitución de la Provincia de Buenos Aires, de la sentencia dictada respecto de las cuentas del ejercicio 2018, notificando tal circunstancia al Sr. Mario Carlos Secco y a las Sras. Graciela Liliana Ranieri y María Natalia Colombo.
+
+ARTÍCULO DÉCIMO OCTAVO: Notificar a los Sres. Mario Carlos Secco, José Alberto Núñez, Hugo Claudio Pose, Hugo Marcelo Schneider, Agustín Duscovich, Darío Gabriel Di Paolo, Emilio Ernesto Martínez, Héctor Adrián Espósito, Rodolfo Pagani, Carlos Daniel Iurada, Luis Alberto Urrizmendi, Rubén Omar Resa, Ezequiel Pablo Lopardo, Graciela Liliana Ranieri, Mónica Leticia Blasevich, Laura Andrea Ocampos, María Alejandra Sabio, Mariana Esteves, María Natalia Colombo y Mónica Andrea Pastrana de lo resuelto en los artículos precedentes, según particularmente corresponda a cada uno de ellos, y fijarles a los funcionarios alcanzados por sanciones pecuniarias, plazo de noventa (90) días para que procedan a depositar dichos importes en el Banco de la Provincia de Buenos Aires, cuentas fiscales Nº 1865/4 (multas – Pesos) - CBU 0140999801200000186543 y Nº 108/9 (cargos – Pesos) – CBU 0140999801200000010893 a la orden del señor Presidente del H. Tribunal de Cuentas de la provincia de Buenos Aires – CUIT 30-66570882-5, debiéndose comunicar fehacientemente a este Organismo el depósito efectuado, adjuntándose el comprobante que así lo acredite dentro del mismo plazo señalado. Asimismo se les hace saber, en el caso de las sanciones impuestas, que la sentencia podrá ser recurrida dentro del plazo de quince (15) días conforme lo establecido en el Artículo 38° de la Ley Nº 10.869 y sus modificatorias. Para el caso en que los responsables opten por interponer demanda contencioso administrativa, deberán notificar a este H. Tribunal de Cuentas, dentro del plazo que establece el Artículo 18° de la Ley Nº 12.008, fecha de interposición de la demanda, carátula, número de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervención al señor Fiscal de Estado para que promueva las acciones pertinentes (Artículo 159° de la Constitución Provincial (Artículo 33° de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO NOVENO: Comunicar la presente sentencia al Ministerio de Gobierno de la Provincia de Buenos Aires y al Ministerio de Economía de la Provincia de Buenos Aires lo manifestado en el considerando cuarto.
+
+
+ARTÍCULO VIGÉSIMO: Rubríquese por el Señor Director General de Receptoría y Procedimiento (Resolución Nº 18/2016 del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires) la presente resolución que consta de setenta y una fojas; publíquese en el Boletín Oficial, y en la página electrónica del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires, reservar éste Expediente en la Secretaría de Actuaciones y Procedimiento durante los términos fijados en el artículo décimo octavo. Fírmese, cumplido, archívese"/>
+     </a>
+     </td>            <td>
+              <a href="/sistemas/summun/busqueda/fallohtc/0/buscador/32620/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>
+	         <a onclick="mostrarAdjuntos('/sistemas/summun/busqueda/32620/adjuntos','Archivos Adjuntos')">
+   <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/attach.png" alt="Archivos Adjuntos" title="Archivos Adjuntos" /></a>
+            </td>
+	    
+        </tr>
+            <tr>
+            <td>25/02/2016</td>
+	    <td>2014</td>
+	    <td>4-095.0-2014</td>
+	    <td>Fallo H.T.C.</td>
+	    <td>Municipalidad de QUILMES</td>
+	       
+<td width='350px'>
+            ble Tribunal Cuentas sobre las materias tratadas en los considerandos tercero: Prueba del Saldo (parcial, incisos 2-c) y 3-b)); quinto: Derecho a los <font class="text-warning"><strong>espectáculos</strong></font> Públicos; sexto, inciso 6-d): Autos “Rojas Luis Alberto c/ Provincia Aseguradora de Riesgos del Trabajo y Otro/a s/ Accidente de Trab
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/26728/resumen/ajax','Resuelve')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="ARTÍCULO PRIMERO: Aprobar la rendición de cuentas de la Municipalidad de QUILMES, Ejercicio 2014 con arreglo a los libros y documentos examinados.
+
+ARTÍCULO SEGUNDO: Declarar que el saldo de Pesos Trescientos ochenta y dos millones quinientos sesenta mil seiscientos cincuenta y dos con cuatro centavos ($ 382.560.652,04) que la Municipalidad acusó al finalizar el ejercicio no significa la convalidación de las existencias en Caja y Bancos.
+
+ARTÍCULO TERCERO: Dejar constancia del incumplimiento de las formalidades legales y reglamentarias tratadas en los considerandos segundo, incisos 4) y 7) y cuarto, incisos 1) y 2).
+
+ARTÍCULO CUARTO: Por los fundamentos expuestos en el considerando noveno, aplicar una amonestación a la Asesora Letrada Sra. Silvina Judith Maceira, al Secretario de Salud Sr. Sergio Lorenzo Troiano, al Secretario Privado Sr. Omar David Gutiérrez, al Director General de Rentas Sr. Julio Gustavo Mauricio y a la Contadora Municipal Sra. Ana María Manzotti (artículo 16 inciso 2) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO QUINTO: En base a los fundamentos expuestos en el considerando noveno aplicar una multa de $ 16.000,00 al Intendente Sr. Francisco Virgilio Gutiérrez, de $ 4.000,00 al Director General de Compras Sr. Cristian Gastón Menna, de $ 4.000,00 al Secretario de Medio Ambiente, Higiene Urbana y Turismo Sr. Claudio Gustavo Olivares, de $ 4.500,00 al Secretario de Hacienda Sr. Alejandro Ítalo Tózzola, de $ 4.500,00 al Subsecretario de la Agencia de Recaudación Quilmes (A.R.QUI.) y Director General de Rentas Sr. Alejandro Víctor Phatouros, de $ 4.500,00 al  Subsecretario de la Agencia de Recaudación Quilmes (A.R.QUI.) Sr. Pablo Daniel Predazzi, de $ 4.000,00 al Secretario de Hacienda Sr. Guillermo Oscar Loyola, de $ 4.000,00 al Secretario de Cultura y Educación Sr. Héctor Alberto Bandera y de $ 4.500,00 al Secretario de Gobierno y Derechos Humanos Sr. Federico Raúl Oviedo Amarilla (artículo 16 inciso 4) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SÉXTO: Desaprobar los egresos a que hace referencia el considerando sexto, inciso 4), con formulación de cargo de $ 880.635,83 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez (artículos 243 inciso 1) de la Ley Orgánica de las Municipalidades de la Provincia de Buenos Aires y 16 inciso 3) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SÉPTIMO: Desaprobar los egresos a que hace referencia el considerando sexto, inciso 5), con formulación de cargo de $ 131.106,40 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez en solidaridad con el Secretario de Hacienda Sr. Guillermo Oscar Loyola, con la Contadora Municipal Sra. Ana María Manzotti y con la Secretaria de Desarrollo Social Sra. María Valeria Isla Blum (artículos 243 inciso 1) de la Ley Orgánica de las Municipalidades de la Provincia de Buenos Aires y 16 inciso 3) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO OCTAVO: Encomendar a la Delegación Zonal las verificaciones indicadas en los considerandos tercero, incisos 3-a) y 3-b) y sexto, incisos 1) y 2).
+
+ARTÍCULO NOVENO: Mantener en suspenso el pronunciamiento del Honorable Tribunal Cuentas sobre las materias tratadas en los considerandos tercero: Prueba del Saldo (parcial, incisos 2-c) y 3-b)); quinto: Derecho a los Espectáculos Públicos; sexto, inciso 6-d): Autos “Rojas Luis Alberto c/ Provincia Aseguradora de Riesgos del Trabajo y Otro/a s/ Accidente de Trabajo – Acción Especial”; inciso 6-g): Autos “SIT S.A. c/ Municipalidad de Quilmes s/ Materia a Categorizar”; inciso 6-h): Autos “Iglesias Pedro Luis c/ Municipalidad de Quilmes y Otro/a s/ Daños y Perjuicios”; inciso 7): Recursos Afectados-Rendición y octavo, inciso 4): Autos “Benquerenca Mendes Nicolás Martín y Otro c/ EDESUR S.A. y Otro s/ Daños y Perjuicios”; inciso 5): Escritura; inciso 6): Tasa de Seguridad e Higiene; inciso 7): Tasa de Servicios Urbanos Municipales e inciso 8): Habilitación de Antenas (parcial) y disponer que la Delegación Zonal y la División Relatora tomen nota para informar en sus próximos estudios.
+
+ARTÍCULO DÉCIMO: Declarar que los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Federico Raúl Oviedo Amarilla, Pablo Daniel Predazzi, Julio Gustavo Mauricio, Walter Alejandro Di Giuseppe, Alejandro Víctor Phatouros, Claudio Gustavo Olivares, Guillermo Oscar Loyola, Gustavo Ángel Pol y las Sras. Silvina Judith Maceira, María Roxana González, Ana María Manzotti y Olga Liliana Naranjo, alcanzados por la reserva del artículo anterior, no deberán considerarse exentos de responsabilidad hasta tanto el Honorable Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.
+
+ARTÍCULO UNDÉCIMO: Disponer la formación de un Expediente Especial a través del cual se canalizará el tratamientos de los temas abordados en el considerando sexto, incisos 6-a), 6-e) y 6-f) y considerando octavo, inciso 3).
+
+ARTÍCULO DUODÉCIMO: Declarar que los Sres. Francisco Virgilio Gutiérrez, Walter Alejandro Di Giuseppe y la Sra. Silvina Judith Maceira, alcanzados por la formación del Expediente Especial del artículo anterior, no deberán considerarse exentos de responsabilidad hasta tanto el Honorable Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.
+
+ARTÍCULO DÉCIMO TERCERO: Disponer el tratamiento conjunto de los temas abordados en los considerandos quinto y octavo, inciso 1).
+
+ARTÍCULO DÉCIMO CUARTO: Disponer la acumulación de los temas tratados en el considerando sexto, incisos 6-b) y 6-c) a los Expedientes Especiales N°s. 4.095.0-1-2009 y 4.095.0-2-2011, respectivamente.
+
+ARTÍCULO DÉCIMO QUINTO: Dejar sin efecto las reservas de ejercicios anteriores tratadas en el considerando octavo, incisos 2),  liberando de responsabilidad a los funcionarios actuantes Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Pablo Daniel Predazzi y Julio Gustavo Mauricio.
+
+ARTÍCULO DÉCIMO SEXTO: Dejar asimismo sin efecto la reserva tratada en el considerando octavo, inciso 1) en las condiciones allí expuestas.
+
+ARTÍCULO DÉCIMO SÉPTIMO: Notificar a las Sras. Silvina Judith Maceira y Ana María Manzotti y a los Sres. Sergio Lorenzo Troiano, Omar David Gutiérrez y Julio Gustavo Mauricio de la amonestación que se le formula en el artículo cuarto.
+
+ARTÍCULO DÉCIMO OCTAVO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Cristian Gastón Menna, Claudio Gustavo Olivares, Alejandro Ítalo Tózzola, Alejandro Víctor Phatouros, Pablo Daniel Predazzi, Guillermo Oscar Loyola, Héctor Alberto Bandera y Federico Raúl Oviedo Amarilla de las multas que se les formulan en el artículo quinto y fijarle plazo de noventa días para que procedan a depositar dichos importes en el Banco de la Provincia de Buenos Aires, Cuenta Fiscal Nº 1.865/4, debiéndose comunicar fehacientemente a este Organismo el depósito efectuado, adjuntándose comprobante que así lo acredite dentro del mismo plazo señalado, bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias). Asimismo, se les hace saber que la sentencia podrá ser recurrida dentro del plazo de quince días conforme lo establecido en el artículo 38 de la Ley Nº 10.869 y sus modificatorias). Para el caso en que los responsables opten por interponer demanda contencioso administrativa, deberán notificar a este Honorable Tribunal de Cuentas, dentro del plazo que establece el artículo 18 de la Ley Nº 12.008, fecha de interposición de la demanda, carátula, número de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO DÉCIMO NOVENO: Notificar a los Sres. Francisco Virgilio Gutiérrez y Guillermo Oscar Loyola y a las Sras. Ana María Manzotti y María Valeria Isla Blum de los cargos que se les formulan en  los  artículos sexto y séptimo y fijarles plazo de noventa días para que procedan a depositar dichos importes en el Banco de la Provincia de Buenos Aires, Cuenta Fiscal Nº 108/9, debiéndose comunicar fehacientemente a este Organismo el depósito efectuado, adjuntándose comprobante que así lo acredite dentro del mismo plazo señalado, bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en los artículo 159 de la Constitución Provincial (artículo de la 33 Ley Nº 10.869 y sus modificatorias). Asimismo, se les hace saber que la sentencia podrá ser recurrida dentro del plazo de quince días conforme lo establecido en el artículo 38 de la Ley Nº 10.869 y sus modificatorias). Para el caso en que los responsables opten por interponer demanda contencioso administrativa, deberán notificar a este Honorable Tribunal de Cuentas, dentro del plazo que establece el artículo 18 de la Ley Nº 12.008, fecha de interposición de la demanda, carátula, número de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO VIGÉSIMO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Federico Raúl Oviedo Amarilla, Pablo Daniel Pedrazzi, Julio Gustavo Mauricio, Walter Alejandro Di Giuseppe, Alejandro Víctor Phatouros, Claudio Gustavo Olivares, Guillermo Oscar Loyola, Gustavo Ángel Pol y las Sras. Silvina Judith Maceira, María Roxana González, Ana María Manzotti y Olaga Liliana Naranjo, de las reservas dispuestas por el artículo noveno.
+
+ARTÍCULO VIGÉSIMO PRIMERO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Walter Alejandro Di Giuseppe y la Sra. Silvina Judith Maceira de la formación del Expediente Especial dispuesto por el artículo undécimo.
+
+ARTÍCULO VIGÉSIMO SEGUNDO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Pablo Daniel Predazzi, Julio Gustavo Mauricio y Federico Raúl Oviedo Amarilla lo dispuesto por los artículos décimo quinto y décimo sexto.
+
+ARTÍCULO VIGÉSIMO TERCERO: Notificar a los Sres. Alejandro Ítalo Tózzola y Guillermo Oscar Loyola y a la Sra. Ana María Manzotti, lo manifestado en los considerandos segundo, inciso 3) y sexto, incisos 6-a), 6-b), 6-c), 6-c), 6-d), 6-e), 6-f), 6-g) y 6-h) en relación a su responsabilidad sobre los temas allí abordados.
+
+ARTÍCULO VIGÉSIMO CUARTO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Federico Raúl Oviedo Amarilla y Walter Alejandro Di Giuseppe y a la Sra. Silvina Judith Maceira lo dispuesto en los artículos décimo tercero y décimo cuarto.
+
+ARTÍCULO VIGÉSIMO QUINTO: Disponer que las autoridades tomen debida nota de lo manifestado en el considerando sexto, inciso 1).
+
+ARTÍCULO VIGÉSIMO SEXTO: Comunicar a la Administradora Federal de Ingresos Públicos lo manifestado en el considerando segundo, inciso 4).
+
+ARTÍCULO VIGÉSIMO SÉPTIMO: Comunicar la presente sentencia a la Municipalidad de Quilmes, a la Delegación Zona II de este Honorable Tribunal de Cuentas y al Ministerio de Gobierno de la Provincia de Buenos Aires.
+
+ARTÍCULO VIGÉSIMO OCTAVO: Rubricar por el Sr. Director General de Receptoría y Procedimiento (Resolución 018/16 del Honorable Tribunal de Cuentas de la Provincia de Buenos  Aires) el presente Fallo que consta de treinta y nueve fojas; firmarlo en un ejemplar; publicarlo en el Boletín Oficial y en la página web de este Honorable Tribunal de Cuentas; reservar este expediente en la Secretaría de Actuaciones y Procedimiento durante los términos fijados en los artículos décimo octavo y décimo noveno. Cumplido, archívese.
+
+ 
+
+ "/>
+     </a>
+     </td>            <td>
+              <a href="/sistemas/summun/busqueda/fallohtc/0/buscador/26728/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>
+	         <a onclick="mostrarAdjuntos('/sistemas/summun/busqueda/26728/adjuntos','Archivos Adjuntos')">
+   <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/attach.png" alt="Archivos Adjuntos" title="Archivos Adjuntos" /></a>
+            </td>
+	    
+        </tr>
+            <tr>
+            <td>12/03/2015</td>
+	    <td>2013</td>
+	    <td>4-095.0-2013</td>
+	    <td>Fallo H.T.C.</td>
+	    <td>Municipalidad de QUILMES</td>
+	       
+<td width='350px'>
+            ener en suspenso el pronunciamiento del Honorable Tribunal Cuentas sobre las materias tratadas en los considerandos tercero, inciso 1): Derecho a los <font class="text-warning"><strong>espectáculos</strong></font> Públicos e inciso 2): Derecho de Ocupación de Espacios Públicos; cuarto, inciso 6-a): Autos “García Cristian Marcelo c/ Comesaña 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25808/resumen/ajax','Resuelve')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="ARTÍCULO PRIMERO: Aprobar la rendición de cuentas de la Municipalidad de QUILMES, Ejercicio 2013 con arreglo a los libros y documentos examinados.
+
+ARTÍCULO SEGUNDO: Aprobar el saldo de Pesos Ciento setenta y cuatro millones quinientos cuarenta y un mil seiscientos treinta y ocho con ochenta y nueve centavos ($ 174.541.638,89) que la Municipalidad acusó al finalizar el ejercicio.
+
+ARTÍCULO TERCERO: Dejar constancia del incumplimiento de las formalidades legales y reglamentarias tratadas en los considerandos segundo, incisos 9) y 10) y cuarto, inciso 3).
+
+ARTÍCULO CUARTO: Por los fundamentos expuestos en el considerando sexto, aplicar una amonestación a los Directores Generales de Compras Sres. José Hugo Muñoz y  Cristian Gastón Menna, a la Contadora Municipal Sra. Ana María Manzotti, a la Secretaria de Planeamiento Estratégico, Obras, Gestión Pública, Tierras y Vivienda Sra. María Roxana González, al Secretario Privado y Responsable de la Unidad Ejecutora Sr. Omar David Gutiérrez, al Secretario de Cultura y Educación Sr. Héctor Alberto Bandera, al Secretario de Salud Sr. Sergio Lorenzo Troiano, al Subsecretario de Tierras y Viviendas Sr. Héctor Daniel Braga y al Secretario de Medio Ambiente, Higiene Urbana y Turismo Sr. Claudio Gustavo Olivares (artículo 16 inciso 2) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO QUINTO: En base a los fundamentos expuestos en el considerando sexto aplicar una multa de $ 8.000,00 al Intendente Sr. Francisco Virgilio Gutiérrez (artículo 16 inciso 4) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SÉXTO: Desaprobar los egresos a que hace referencia el considerando cuarto, inciso 4), con formulación de cargo de $ 620.215,28 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez (artículos 243 inciso 1) de la Ley Orgánica de las Municipalidades de la Provincia de Buenos Aires y 16 inciso 3) de la Ley Nº 10.869 y sus modificatorias).
+
+ARTÍCULO SÉPTIMO: Encomendar a la Delegación Zonal las verificaciones indicadas en los considerandos segundo, inciso 1) y cuarto, incisos 1) y 2).
+
+ARTÍCULO OCTAVO: Mantener en suspenso el pronunciamiento del Honorable Tribunal Cuentas sobre las materias tratadas en los considerandos tercero, inciso 1): Derecho a los Espectáculos Públicos e inciso 2): Derecho de Ocupación de Espacios Públicos; cuarto, inciso 6-a): Autos “García Cristian Marcelo c/ Comesaña Omar Enrique y Otro s/ Daños y Perjuicios”; inciso 6-d): Autos “ Benquerenca Mendes Nicolás Martín y Otro c/ EDESUR S.A. y Otro s/ Daños y Perjuicios” e inciso 7): Escrituración y quinto, inciso 1): Tasa de Seguridad e Higiene (Cuenta N° 401021089-0), inciso 2): Tasa de Servicios Urbanos Municipales e inciso 8): Habilitación de antenas (parcial) y disponer que la Delegación Zonal y la División Relatora tomen nota para informar en sus próximos estudios.
+
+ARTÍCULO NOVENO: Declarar que los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Federico Raúl Oviedo Amarilla, Pablo Daniel Pedrazzi, Julio Gustavo Mauricio, Walter Alejandro Di Giuseppe, Alejandro Víctor Phatouros y Claudio Gustavo Olivares y la Sra. Silvina Judith Maceira, alcanzados por la reserva del artículo anterior, no deberán considerarse exentos de responsabilidad hasta tanto el Honorable Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.
+
+ARTÍCULO DÉCIMO: Disponer el tratamiento conjunto de los temas abordados en los considerandos cuarto, inciso 6-a) y quinto, inciso 5) y quinto, inciso 1) y quinto, inciso 8).
+
+ARTÍCULO UNDÉCIMO: Disponer la acumulación del tema tratado en el considerando cuarto, incisos 6-b) y 6-c) al Expediente Especial N° 4.095.0-1-2009.
+
+ARTÍCULO DUODÉCIMO: Dejar sin efecto las reservas de ejercicios anteriores tratadas en el considerando quinto, incisos 3), 4), 6), 7) y 9) liberando de responsabilidad a los funcionarios actuantes Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Guillermo Oscar Loyola, Guillermo Eduardo Robledo, Carlos Manuel Martínez, Omar Marcelo Fernández, Walter Alejandro Di Giuseppe y Claudio Gustavo Olivares y Sras. María Ángela Arata, María Roxana González, María del Luján Dubroca, Ana María Manzotti, Olga Liliana Naranjo, Silvina Judith Maceira y María Belén Hoyos Camean.
+
+ARTÍCULO DÉCIMO TERCERO: Dejar asimismo sin efecto la reserva tratada en el considerando quinto, inciso 6) en las condiciones allí expuestas.
+
+ARTÍCULO DÉCIMO CUARTO: Notificar a los Sres. José Hugo Muñoz, Cristian Gastón Menna, Omar David Gutiérrez, Héctor Alberto Bandera, Sergio Lorenzo Troiano, Héctor Daniel Braga y Claudio Gustavo Olivares y a las Sras. Ana María Manzotti, María Roxana González de la amonestación que se le formula en el artículo cuarto.
+
+ARTÍCULO DÉCIMO QUINTO: Notificar al Sr. Francisco Virgilio Gutiérrez de las multa que se le formula en el artículo quinto y fijarle plazo de noventa días para que proceda a depositar dicho importe en el Banco de la Provincia de Buenos Aires, Cuenta Fiscal Nº 1.865/4, debiéndose comunicar fehacientemente a este Organismo el depósito efectuado, adjuntándose comprobante que así lo acredite dentro del mismo plazo señalado, bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias). Asimismo, se le hace saber que la sentencia podrá ser recurrida dentro del plazo de quince días conforme lo establecido en el artículo 38 de la Ley Nº 10.869 y sus modificatorias Nºs. 10.876 y 11.755). Para el caso en que el responsable opte por interponer demanda contencioso administrativa, deberá notificar a este Honorable Tribunal de Cuentas, dentro del plazo que establece el artículo 18 de la Ley Nº 12.008, fecha de interposición de la demanda, carátula, número de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias Nºs. 10.876 y 11.755).
+
+ARTÍCULO DÉCIMO SEXTO: Notificar al Sr. Francisco Virgilio Gutiérrez del cargo que se le formula en  el  artículo sexto y fijarle plazo de noventa días para que proceda a depositar dicho importe en el Banco de la Provincia de Buenos Aires, Cuenta Fiscal Nº 108/9, debiéndose comunicar fehacientemente a este Organismo el depósito efectuado, adjuntándose comprobante que así lo acredite dentro del mismo plazo señalado, bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en los artículo 159 de la Constitución Provincial (artículo de la 33 Ley Nº 10.869 y sus modificatorias). Asimismo, se le hace saber que la sentencia podrá ser recurrida dentro del plazo de quince días conforme lo establecido en el artículo 38 de la Ley Nº 10.869 y sus modificatorias Nºs. 10.876 y 11.755). Para el caso en que el responsable opte por interponer demanda contencioso administrativa, deberá notificar a este Honorable Tribunal de Cuentas, dentro del plazo que establece el artículo 18 de la Ley Nº 12.008, fecha de interposición de la demanda, carátula, número de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervención al Sr. Fiscal de Estado para que promueva las acciones pertinentes previstas en el artículo 159 de la Constitución Provincial (artículo 33 de la Ley Nº 10.869 y sus modificatorias Nºs. 10.876 y 11.755).
+
+ARTÍCULO DÉCIMO SÉPTIMO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Federico Raúl Oviedo Amarilla, Pablo Daniel Pedrazzi, Julio Gustavo Mauricio, Walter Alejandro Di Giuseppe, Alejandro Víctor Phatouros y Claudio Gustavo Olivares y la Sra. Silvina Judith Maceira de la reserva dispuesta por el artículo octavo.
+
+ARTÍCULO DÉCIMO OCTAVO: Notificar a los Sres. Francisco Virgilio Gutiérrez, Alejandro Ítalo Tózzola, Guillermo Oscar Loyola, Guillermo Eduardo Robledo, Carlos Manuel Martínez, Omar Marcelo Fernández, Walter Alejandro Di Giuseppe y Claudio Gustavo Olivares y a las Sras. María Ángela Arata, María Roxana González, María del Luján Dubroca, Ana María Manzotti, Olga Liliana Naranjo, Silvina Judith Maceira y María Belén Hoyos Camean lo dispuesto por el artículo duodécimo.
+
+ARTÍCULO DÉCIMO NOVENO: Notificar a los Sres. José Hugo Muñoz, Cristian Gastón Menna, Sergio Lorenzo Troiano, Alejandro Ítalo Tózzola, Omar David Gutiérrez, Héctor Alberto Bandera y Guillermo Oscar Loyola y a las Sras. María Valeria Isla Blum y Ana María Manzotti, lo manifestado en los considerandos segundo, incisos 5) y 6) y cuarto, incisos 1), 2), 6-a), 6-b), 6-c), 6-d) y 7) en relación a su responsabilidad sobre los temas allí abordados.
+
+ARTÍCULO VIGÉSIMO: Notificar a las Sras. Silvina Judith Maceira y Silvia Beatriz Pose y a los Sres. Francisco Virgilio Gutiérrez, Walter Alejandro Di Giuseppe, Alejandro Ítalo Tózzola, Claudio Gustavo Olivares y Alejandro Víctor Phatouros lo dispuesto en los artículos décimo y undécimo.
+
+ARTÍCULO VIGÉSIMO PRIMERO: Disponer que las autoridades tomen debida nota de lo manifestado en los considerandos cuarto, inciso 3) y quinto, incisos 4) y 6).
+
+ARTÍCULO VIGÉSIMO SEGUNDO: Comunicar la presente sentencia a la Municipalidad de Quilmes, a la Delegación Zona II de este Honorable Tribunal de Cuentas y al Ministerio de Gobierno de la Provincia de Buenos Aires.
+
+ARTÍCULO VIGÉSIMO TERCERO: Rubricar por el Sr. Director General de Asuntos Jurídicos (Resolución 7/14 del H. Tribunal de Cuentas de la Provincia de Buenos Aires) el presente Fallo que consta de  treinta y ocho fojas; firmarlo en un ejemplar; publicarlo en el Boletín Oficial y en la página web de este Honorable Tribunal de Cuentas; reservar este expediente en la Dirección General de Receptoría y Procedimientos durante los términos fijados en los artículos décimo quinto y décimo sexto. Cumplido, archívese."/>
+     </a>
+     </td>            <td>
+              <a href="/sistemas/summun/busqueda/fallohtc/0/buscador/25808/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>
+	         <a onclick="mostrarAdjuntos('/sistemas/summun/busqueda/25808/adjuntos','Archivos Adjuntos')">
+   <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/attach.png" alt="Archivos Adjuntos" title="Archivos Adjuntos" /></a>
+            </td>
+	    
+        </tr>
+            <tr>
+            <td>27/05/2010</td>
+	    <td>2008</td>
+	    <td>4-095.0-2008</td>
+	    <td>Fallo H.T.C.</td>
+	    <td>Municipalidad de QUILMES</td>
+	       
+<td width='350px'>
+            ero: Prueba del Saldo (parcial); quinto, apartado 3): Derechos de Cementerio (Título XIII Ordenanza Fiscal e Impositiva); apartado 4): Derecho a los <font class="text-warning"><strong>espectáculos</strong></font> Públicos (Título X Ordenanza Fiscal e Impositiva); apartado 5): Base Informática para el cálculo de la Tasa por Servicios Públicos,
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/19247/resumen/ajax','Resuelve')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="ARTÍCULO PRIMERO: Aprobar la rendición de cuentas de la Municipalidad de Quilmes, ejercicio 2008 con arreglo a los libros y documentos examinados.
+ARTÍCULO SEGUNDO: Declarar el saldo de Pesos Cincuenta y tres millones cuatrocientos noventa y un mil novecientos treinta y dos con veintiún centavos  ($ 53.491.932,21) que la Municipalidad acusó al finalizar el ejercicio, conforme a lo expuesto en el Considerando tercero, no significa la convalidación de los valores en caja y bancos.
+ARTÍCULO TERCERO: Dejar constancia del incumplimiento de las formalidades legales y reglamentarias tratadas en los considerandos  segundo, apartado 3); cuarto, apartados 1), 2-a), 3), 4) y séptimo, apartado 13-c).
+ARTÍCULO CUARTO: Por los fundamentos expuestos en el considerando octavo, aplicar una amonestación al Intendente Sr. Jorge Alberto Molina,  al Intendente Sr. Alejandro Omar Lastra, al Intendente Sr. Sergio Omar Villordo, al Secretario de Hacienda Sr. Alejandro Ítalo Tozzola, al Secretario de Hacienda Sr. Edgardo Mario Cutello, al Secretario de Hacienda Sr. Alberto Fernando Guglielmetto, al Director de Compras Sr. Carlos Daniel Debernardi, a la Contadora Municipal Sra. María Ángela Arata, a la Contadora Municipal Sra. María Cristina Lukac y al Secretario de Planeamiento Estratégico, Obras, Servicios Públicos, Tierras y Vivienda Sr. Brian Renison (artículos 243 inciso 4º de la Ley Orgánica Municipal y 16 inciso 2° de la Ley 10.869 y sus modificatorias).
+ARTÍCULO QUINTO: En base a los fundamentos expuestos en el considerando octavo aplicar una multa de $ 6.000.= al  Intendente Sr. Francisco Virgilio Gutiérrez (artículos 243 inciso 2º de la Ley Orgánica Municipal y 16 inciso 4º de la Ley 10869 y sus modificatorias).
+ARTÍCULO SEXTO: Desaprobar los egresos a que hace referencia el considerando tercero con formulación de cargo de $ 509.349,91, por el que deberá responder por $ 509.338,02 la Contadora Municipal Sra. María Ángela Arata en solidaridad con la Tesorera Sra. Olga Liliana Naranjo y por $ 11,89 Contadora Municipal Sra. María Ángela Arata en solidaridad con la Tesorera Sra. Mónica Graciela Barraza (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO SÉPTIMO: Desaprobar los egresos a que hace referencia el considerando sexto, apartado 2-b) con formulación de cargo de $ 25.166,70 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez conforme a la jurisprudencia sentada por mayoría de este H. Tribunal de Cuentas a partir del fallo recaído en las cuentas del Expediente 061/95 -La Plata -Ejercicio 1995- Recurso de Revisión - Acuerdo del 15/11/2007, en relación con la responsabilidad de los funcionarios actuantes, en solidaridad con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO OCTAVO: Desaprobar los egresos a que hace referencia el considerando sexto, apartado 3) con formulación de cargo de $ 3.620,56 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez conforme a la jurisprudencia sentada por mayoría de este H. Tribunal de Cuentas a partir del fallo recaído en las cuentas del Expediente 061/95 -La Plata -Ejercicio 1995- Recurso de Revisión - Acuerdo del 15/11/2007, en relación con la responsabilidad de los funcionarios actuantes, en solidaridad con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola y con el profesor de la “Escuela Municipal de Bellas Artes Carlos Morel”, Sr. Ariel Esteban Osuna (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO NOVENO: Desaprobar los egresos a que hace referencia el considerando sexto, apartado 4) con formulación de cargo de $ 3.423,36  por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez conforme a la jurisprudencia sentada por mayoría de este H. Tribunal de Cuentas a partir del fallo recaído en las cuentas del Expediente 061/95 -La Plata -Ejercicio 1995- Recurso de Revisión - Acuerdo del 15/11/2007, en relación con la responsabilidad de los funcionarios actuantes,en solidaridad con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO DÉCIMO: Desaprobar los egresos a que hace referencia el considerando sexto, apartado 15) con formulación de cargo de $ 27.314,03  por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez conforme a la jurisprudencia sentada por mayoría de este H. Tribunal de Cuentas a partir del fallo recaído en las cuentas del Expediente 061/95 -La Plata -Ejercicio 1995- Recurso de Revisión - Acuerdo del 15/11/2007, en relación con la responsabilidad de los funcionarios actuantes, en solidaridad con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola y con la Contadora Municipal Sra. María Ángela Arata  (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO UNDÉCIMO: Desaprobar los egresos a que hace referencia el considerando sexto, apartado 16) con formulación de cargo de $ 551,85  por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez conforme a la jurisprudencia sentada por mayoría de este H. Tribunal de Cuentas a partir del fallo recaído en las cuentas del Expediente 061/95 -La Plata -Ejercicio 1995- Recurso de Revisión - Acuerdo del 15/11/2007, en relación con la responsabilidad de los funcionarios actuantes, en solidaridad con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola y con la Contadora Municipal Sra. María Ángela Arata  (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO DUOÉCIMO: Desaprobar los egresos a que hace referencia el considerando séptimo, apartado 13-b) con formulación de cargo de $ 636,94 por el que deberá responder el Intendente Sr. Francisco Virgilio Gutiérrez en solidaridad con el Intendente Sr. Sergio Omar Villordo, con el Secretario de Hacienda Sr. Alejandro Ítalo Tozzola, con el Secretario de Hacienda Sr. Edgardo Mario Cutello y con la Contadora Municipal Sra. María Ángela Arata  (artículos 243 inciso 1º de la Ley Orgánica Municipal y 16 inciso 3º de la Ley 10869 y sus modificatorias).
+ARTÍCULO DÉCIMO TERCERO: Encomendar a la Delegación Zonal la verificación indicada en el considerando sexto, apartado 2-a).
+ARTÍCULO DÉCIMO CUARTO: Mantener en suspenso el pronunciamiento del H Tribunal Cuentas sobre las materias tratadas en los considerandos tercero: Prueba del Saldo (parcial); quinto, apartado 3): Derechos de Cementerio (Título XIII Ordenanza Fiscal e Impositiva); apartado 4): Derecho a los Espectáculos Públicos (Título X Ordenanza Fiscal e Impositiva); apartado 5): Base Informática para el cálculo de la Tasa por Servicios Públicos, Salud y Acción Social; sexto, apartado 5): Recolección de Residuos-Licitación Pública Nº 01/05; apartado 6): Plan de Emergencia Habitacional - Anticipo financiero 35%; apartado 7): Alquiler de inmuebles; apartado 8): Constancia de incorporación al Patrimonio; apartado 9-a): Autos “Barrientos Amado Eduardo y Otros c/Hospital SubZonal Materno Infantil de San Francisco Solano y Otros S/Daños y Perjuicios”; apartado 9-b): Autos “Ojeda Ceferino Marcelo c/ Municipalidad de Quilmes y otra s/ Accidente”; apartado 9-c): Autos “Fileretto Roberto Francisco c/ Aguas Argentinas SA y Otro s/ Daños y Perjuicios”; apartado 9-d): Autos “Szewczuk Alberto Tomás c/Municipalidad de Quilmes s/ Daños y Perjuicios”; apartado 12):Ejecución de 3200 mts. lineales de Vereda y 680 m2 Muro de Medianero; apartado13): Plan Nacional de Abordaje Integral Plan AHI - Anticipo financiero 50%;  apartado 17): Honorarios – Apoderados Internos y apartado18, incisos a), b) y c)): Notas de Compensación de la empresa EDESUR S.A. y  séptimo, apartado 5): Regulación de Honorarios; apartado 7): Autos “Alarcón, Gladys c/Hospital Subzonal Materno Infantil de San Francisco Solano y otros s/Daños y Perjuicios”; apartado 8): Autos “De Carli, Carlos Alberto y otros c/Cabasas Javier"/>
+     </a>
+     </td>            <td>
+              <a href="/sistemas/summun/busqueda/fallohtc/0/buscador/19247/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>
+	         <a onclick="mostrarAdjuntos('/sistemas/summun/busqueda/19247/adjuntos','Archivos Adjuntos')">
+   <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/attach.png" alt="Archivos Adjuntos" title="Archivos Adjuntos" /></a>
+            </td>
+	    
+        </tr>
+        </tbody>
+</table>
+    <div class="pull-right">Total de Registros: <strong>4</strong></div>
+    
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

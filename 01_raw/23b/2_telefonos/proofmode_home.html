@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Proofmode</title>
+  <meta name="description" content="Capture, Verify, and Defend Reality">
+
+  <!-- <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="canonical" href="/">
+  <link rel="alternate" type="application/rss+xml" title="Proofmode" href="/feed.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- favicon -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="icon" href="favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/assets/img/proofmode-mark.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" /><!-- 180×180 -->
+  <link rel="manifest" href="site.webmanifest" />
+
+</head>
+
+
+  <body>
+
+    <header>
+  <nav class="proofmode-navbar mx-auto px-4 lg:px-10 py-2.5 relative flex flex-col lg:flex-row justify-between items-center">
+    <a href="/" class="mr-auto lg:mr-0">
+      <img width="258" height="49" src="/assets/img/proofmode-logo.svg" alt="Proofmode Logo"
+        class="" />
+    </a>
+
+    <button type="button" aria-label="menu" id="hamburger"
+      class="block absolute top-5 end-5 text-proofmode-blue text-3xl leading-none lg:hidden">
+      <svg class="proofmode-icon-hamburger size-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+        <path
+          d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+      </svg>
+      <svg class="proofmode-icon-close size-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <path
+          d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
+      </svg>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <ul class="hidden lg:flex w-full lg:w-auto lg:space-x-[60px]">
+      <li class="w-full lg:w-auto m-0 p-0 sr-only focus-within:not-sr-only">
+        <a href="#content" class="h5 block p-5 no-underline text-proofmode-gray-4 text-nowrap">Skip Navigation</a>
+      </li><li class="w-full lg:w-auto m-0 p-0" x-data="{ isOpen: false }" 
+        x-on:mouseenter="if (window.innerWidth >= 1024) isOpen = true"
+        x-on:mouseleave="if (window.innerWidth >= 1024) isOpen = false" 
+        x-on:click.outside="isOpen = false">
+        <button type="button" x-on:click="isOpen = !isOpen" x-on:keydown.enter="isOpen = !isOpen"
+          x-on:keydown.space.prevent="isOpen = !isOpen" aria-expanded="false" x-bind:aria-expanded="isOpen.toString()"
+          :class="{'bg-proofmode-gray-2': isOpen}"
+          class="py-5 lg:p-5 inline-flex items-center justify-between w-full text-nowrap">
+          <span>Products</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2.5"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
+
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform scale-95"
+          x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-95"
+          class="proofmode-navbar-dropdown lg:absolute border-t border-[#E3E3E1] lg:bg-background lg:top-full lg:left-0 lg:right-0 z-20 shadow-2xl">
+          <ul class="p-5 flex gap-5 justify-center"><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/install/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Capture</h3>
+                  
+                    <svg class="ml-2.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="13.1292" cy="13.2229" r="5.87077" stroke="currentColor" stroke-width="1.5" />
+    <circle cx="4.77498" cy="6.66331" r="1.94551" fill="currentColor" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Mobile camera app with advanced, built-in provenance features.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/verify/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Verify</h3>
+                  
+                    <svg class="ml-2.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.70227 18.0746H21.4157" stroke="currentColor" stroke-width="1.5" />
+    <path d="M2.70227 13.025H8.19748" stroke="currentColor" stroke-width="1.5" />
+    <path d="M2.70227 7.97531H8.19748" stroke="currentColor" stroke-width="1.5" />
+    <path d="M11 9.37499L14.0181 12.7345L21.4701 5.28257" stroke="currentColor" stroke-width="1.5" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Powerful multimedia metadata inspection and analysis tool.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/identify/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Identify</h3>
+                  
+                    <svg class="ml-2.5" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6.4326" cy="7.55119" r="1.52208" fill="currentColor" />
+    <circle cx="8.41738" cy="5.77105" r="0.628899" fill="currentColor" />
+    <path
+        d="M3.34326 15.0658V6.15491C3.34326 4.77693 4.46034 3.65985 5.83832 3.65985H12.2542C13.6322 3.65985 14.7492 4.77693 14.7492 6.15491V15.0658"
+        stroke="currentColor" stroke-width="1.42575" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  A service for device verification and attestation signing.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/connect/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Connect</h3>
+                  
+                    <svg class="ml-2.5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Secure communication and file-sharing with media provenance preservation features.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/ai/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Enhance</h3>
+                  
+                    <svg class="ml-2.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="5.8125" y="8.78271" width="7.31734" height="7.31734" stroke="currentColor" stroke-width="1.5" />
+    <rect x="13.2384" y="3.48833" width="5.93458" height="5.93458" fill="currentColor" />
+    <rect x="13.0458" y="16.0901" width="3.15991" height="3.15991" fill="currentColor" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Enhanced AI safety through provenance and authentication workflows and skills.
+                </p>
+              </a>
+            </li></ul>
+        </div>
+      </li><li class="w-full lg:w-auto m-0 p-0" x-data="{ isOpen: false }" 
+        x-on:mouseenter="if (window.innerWidth >= 1024) isOpen = true"
+        x-on:mouseleave="if (window.innerWidth >= 1024) isOpen = false" 
+        x-on:click.outside="isOpen = false">
+        <button type="button" x-on:click="isOpen = !isOpen" x-on:keydown.enter="isOpen = !isOpen"
+          x-on:keydown.space.prevent="isOpen = !isOpen" aria-expanded="false" x-bind:aria-expanded="isOpen.toString()"
+          :class="{'bg-proofmode-gray-2': isOpen}"
+          class="py-5 lg:p-5 inline-flex items-center justify-between w-full text-nowrap">
+          <span>For Developers</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2.5"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
+
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform scale-95"
+          x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-95"
+          class="proofmode-navbar-dropdown lg:absolute border-t border-[#E3E3E1] lg:bg-background lg:top-full lg:left-0 lg:right-0 z-20 shadow-2xl">
+          <ul class="p-5 flex gap-5 justify-center"><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/developers/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Build</h3>
+                  
+                    <svg class="ml-2.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="5.8125" y="8.78271" width="7.31734" height="7.31734" stroke="currentColor" stroke-width="1.5" />
+    <rect x="13.2384" y="3.48833" width="5.93458" height="5.93458" fill="currentColor" />
+    <rect x="13.0458" y="16.0901" width="3.15991" height="3.15991" fill="currentColor" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Developer solutions to support authentication and provenance.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/preserve/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Preserve</h3>
+                  
+                    <svg class="ml-2.5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect x="6.05579" y="9.21797" width="11.8884" height="9.65702" stroke="currentColor" stroke-width="1.5" />
+    <path
+        d="M9.21075 9.44422V5.53926C9.21075 3.99879 10.4595 2.75 12 2.75V2.75C13.5405 2.75 14.7893 3.99879 14.7893 5.53926V9.44422"
+        stroke="currentColor" stroke-width="1.5" />
+    <circle cx="12" cy="14.0465" r="2.23141" fill="currentColor" />
+</svg>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Redundant, reliable storage of verifiable proof.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/contact/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Integration Support</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Contact us to integrate Proofmode developer tools into your builds.
+                </p>
+              </a>
+            </li></ul>
+        </div>
+      </li><li class="w-full lg:w-auto m-0 p-0" x-data="{ isOpen: false }" 
+        x-on:mouseenter="if (window.innerWidth >= 1024) isOpen = true"
+        x-on:mouseleave="if (window.innerWidth >= 1024) isOpen = false" 
+        x-on:click.outside="isOpen = false">
+        <button type="button" x-on:click="isOpen = !isOpen" x-on:keydown.enter="isOpen = !isOpen"
+          x-on:keydown.space.prevent="isOpen = !isOpen" aria-expanded="false" x-bind:aria-expanded="isOpen.toString()"
+          :class="{'bg-proofmode-gray-2': isOpen}"
+          class="py-5 lg:p-5 inline-flex items-center justify-between w-full text-nowrap">
+          <span>Use Cases</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2.5"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
+
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform scale-95"
+          x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-95"
+          class="proofmode-navbar-dropdown lg:absolute border-t border-[#E3E3E1] lg:bg-background lg:top-full lg:left-0 lg:right-0 z-20 shadow-2xl">
+          <ul class="p-5 flex gap-5 justify-center"><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/journalists-and-media/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Journalists & Media</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Capture media with built-in chain of custody, or verify 3rd party media.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/products/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Apps & Software</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Integrate verification tools and preservation systems into your tools.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/humanitarian-efforts/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Humanitarian Efforts</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Document and preserve evidence during critical events to build verifiable proof.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/business/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Business</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Use verification tools to ensure authenticity of media used in your organization.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/individuals/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Individuals</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Verify the content being served to you, or capture authentic content for your audience.
+                </p>
+              </a>
+            </li></ul>
+        </div>
+      </li><li class="w-full lg:w-auto m-0 p-0" x-data="{ isOpen: false }" 
+        x-on:mouseenter="if (window.innerWidth >= 1024) isOpen = true"
+        x-on:mouseleave="if (window.innerWidth >= 1024) isOpen = false" 
+        x-on:click.outside="isOpen = false">
+        <button type="button" x-on:click="isOpen = !isOpen" x-on:keydown.enter="isOpen = !isOpen"
+          x-on:keydown.space.prevent="isOpen = !isOpen" aria-expanded="false" x-bind:aria-expanded="isOpen.toString()"
+          :class="{'bg-proofmode-gray-2': isOpen}"
+          class="py-5 lg:p-5 inline-flex items-center justify-between w-full text-nowrap">
+          <span>About</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-2.5"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+          </svg>
+        </button>
+
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 transform scale-95"
+          x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-150"
+          x-transition:leave-start="opacity-100 transform scale-100"
+          x-transition:leave-end="opacity-0 transform scale-95"
+          class="proofmode-navbar-dropdown lg:absolute border-t border-[#E3E3E1] lg:bg-background lg:top-full lg:left-0 lg:right-0 z-20 shadow-2xl">
+          <ul class="p-5 flex gap-5 justify-center"><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/about/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">About Proofmode</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  A passionate team making technology that defends reality.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/baseline/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Baseline</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  A crowd-sourced record of current events and our world.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/news/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">News</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  A crowd-sourced record of current events and our world.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/help/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Help & Documentation</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Read our documentation and get answers to common questions.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/contact/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Contact</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Email/Signal/Whatsapp us for support, partnerships, or just to say hi.
+                </p>
+              </a>
+            </li><li class="lg:flex-1 lg:max-w-1/5">
+              <a href="/privacy/"
+                class="group block h-full bg-gradient-to-b from-background to-white p-5 rounded-[20px] border-background hover:from-green-100 relative transition-all duration-300">
+                <div class="absolute top-0 right-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <svg class="w-full h-full text-green-200" width="234" height="126" viewBox="0 0 234 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="24.1562" y="99.9696" width="20.4146" height="20.4146" fill="currentColor"/>
+<rect x="166.498" y="77.2195" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="166.498" y="19.2927" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="101.61" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="142.108" y="-5.09753" width="24.3902" height="24.3902" fill="currentColor"/>
+<rect x="190.888" y="43.6829" width="24.3903" height="33.5366" fill="currentColor"/>
+<rect x="196.985" y="61.9756" width="18.2927" height="15.2439" fill="currentColor"/>
+<rect x="0.0708008" y="109.301" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="12.1135" y="120.75" width="12.0427" height="12.0427" fill="currentColor"/>
+<rect x="103.49" y="107.707" width="18.2927" height="18.2927" fill="currentColor"/>
+<rect x="215.278" y="19.2927" width="18.2927" height="106.707" fill="currentColor"/>
+</svg>
+
+                </div>
+
+                <div class="flex items-start justify-between mb-5 relative">
+                  <h3 class="font-mono uppercase block">Privacy Policy</h3>
+                  
+                </div>
+                <p class="text-sm text-proofmode-gray-5 relative">
+                  Learn how we protect and interact with your personal data.
+                </p>
+              </a>
+            </li></ul>
+        </div>
+      </li></ul>
+
+    <div class="flex gap-4 mt-5 lg:mt-0">
+      <a href="/install/" class="proofmode-btn proofmode-btn-dark"> INSTALL APP </a>
+      <a href="/verify/" class="proofmode-btn proofmode-btn-gradient">
+        Verify Media
+      </a>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <section class="overflow-hidden relative">
+    <div class="container mx-auto px-4 py-16 space-y-5 relative">
+        <h1 class="font-serif leading-[1.1] text-5xl lg:text-[60px] text-center xl:w-2/3 mx-auto">Media and reality, verified.</h1>
+        <p class="text-xl text-center">Capture, notarize and verify media with open, decentralized, and privacy-focused tools.</p>
+    </div>
+
+    
+    <div class="flex w-full gap-5 mb-14 items-center justify-center relative">
+    <!-- NOTE: hardcoded image dimensions based on Figma -->
+    <div class="relative shrink-0 w-[240px] h-[276px]">
+        <img src="/assets/img/28030c698081427809736ecbade7658262574e4e.webp" alt="decorative hero image"
+            class="object-cover w-full h-full" width="1920" height="1200" />
+    </div>
+    <div class="relative shrink-0 w-[240px] h-auto">
+        <img fetchpriority="high" src="/assets/img/db9175555f72efb993008ef4a09559ac1d6f6ec6.webp" alt="decorative hero image"
+            class="object-cover w-full h-[360px]" width="1280" height="1920" />
+
+        <div class="absolute -bottom-12 left-5">
+            <div class="flex flex-col gap-2.5"><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M9.04657 2.71558C11.763 2.71577 13.9645 4.56061 13.9645 7.63452C13.9642 11.2447 9.07734 15.8031 9.04657 15.8318C9.04657 15.8318 4.12801 11.2561 4.12762 7.63452C4.12762 4.56045 6.32991 2.71558 9.04657 2.71558ZM9.04657 4.48804C7.495 4.48804 6.23726 5.7461 6.237 7.29761C6.237 8.84934 7.49483 10.1082 9.04657 10.1082C10.5981 10.108 11.8561 8.84923 11.8561 7.29761C11.8559 5.74621 10.598 4.48823 9.04657 4.48804Z"
+        fill="currentColor" />
+</svg></div><div class="proofmode-tag">San Francisco, CA, USA</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6.4326" cy="7.55119" r="1.52208" fill="currentColor" />
+    <circle cx="8.41738" cy="5.77105" r="0.628899" fill="currentColor" />
+    <path
+        d="M3.34326 15.0658V6.15491C3.34326 4.77693 4.46034 3.65985 5.83832 3.65985H12.2542C13.6322 3.65985 14.7492 4.77693 14.7492 6.15491V15.0658"
+        stroke="currentColor" stroke-width="1.42575" />
+</svg></div><div class="proofmode-tag">Samsung Galaxy S25</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="9.04634" cy="8.52857" r="4.46756" stroke="currentColor" stroke-width="1.42575" />
+    <path d="M9.04626 5.50677V8.74454L11.0969 10.5073" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M7.42488 1.87787L6.74643 3.99403H11.6053L10.9268 1.87787H7.42488Z" fill="currentColor" />
+    <path d="M10.9266 15.2443L11.6051 13.1281L6.74627 13.1281L7.42473 15.2443L10.9266 15.2443Z"
+        fill="currentColor" />
+</svg></div><div class="proofmode-tag">September 9, 2025</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.69971 4.92749H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M3.69971 9.20471H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M3.69971 13.482H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <circle cx="6.5512" cy="4.77157" r="1.60397" fill="currentColor" />
+    <circle cx="11.7195" cy="9.04879" r="1.60397" fill="currentColor" />
+    <circle cx="8.3334" cy="13.326" r="1.60397" fill="currentColor" />
+</svg></div><div class="proofmode-tag">Media Edited</div><div class="proofmode-tag px-2.5 border-white uppercase bg-green-400">Yes</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M13.1387 1.71657L13.5273 2.89598C13.652 3.2751 13.9463 3.57376 14.3232 3.70497L15.4142 4.08409C15.4881 4.11018 15.4881 4.21529 15.4142 4.24066L14.3232 4.61979C13.9463 4.75099 13.652 5.04965 13.5273 5.42877L13.1387 6.60818C13.1134 6.6843 13.0061 6.6843 12.9814 6.60818L12.5929 5.42877C12.4682 5.04965 12.1739 4.75099 11.7969 4.61979L10.706 4.24066C10.632 4.21457 10.632 4.10946 10.706 4.08409L11.7969 3.70497C12.1739 3.57376 12.4682 3.2751 12.5929 2.89598L12.9814 1.71657C13.0068 1.64046 13.1141 1.64046 13.1387 1.71657Z"
+        fill="black" />
+    <path
+        d="M8.16895 3.23522L9.1173 6.11391C9.42163 7.03927 10.14 7.76823 11.06 8.08848L13.7229 9.01384C13.9033 9.07754 13.9033 9.33409 13.7229 9.39601L11.06 10.3214C10.14 10.6416 9.42163 11.3706 9.1173 12.2959L8.16895 15.1746C8.10702 15.3604 7.84516 15.3604 7.785 15.1746L6.83664 12.2959C6.53232 11.3706 5.81397 10.6416 4.89392 10.3214L2.23109 9.39601C2.05062 9.33232 2.05062 9.07577 2.23109 9.01384L4.89392 8.08848C5.81397 7.76823 6.53232 7.03927 6.83664 6.11391L7.785 3.23522C7.84693 3.04944 8.10879 3.04944 8.16895 3.23522Z"
+        fill="black" />
+</svg></div><div class="proofmode-tag">AI Generated</div><div class="proofmode-tag px-2.5 border-white uppercase bg-flag-300">No</div></div></div>
+        </div>
+    </div>
+    <div class="relative shrink-0 w-[240px] h-[276px]">
+        <img src="/assets/img/abefe68ebebdf3bc1efdff8f936869e0504583b4.webp" alt="decorative hero image"
+            class="object-cover w-full h-full" width="1282" height="1920"/>
+    </div>
+    <div class="relative shrink-0 w-[240px] h-[320px]">
+        <img fetchpriority="high" src="/assets/img/303860623ebccc35cd65e464a7a039b285b2c7ff.webp" alt="decorative hero image"
+            class="object-cover w-full h-full" width="1259" height="1920"/>
+
+        <div class="absolute -top-12 left-5">
+            <div class="flex flex-col gap-2.5"><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M9.04657 2.71558C11.763 2.71577 13.9645 4.56061 13.9645 7.63452C13.9642 11.2447 9.07734 15.8031 9.04657 15.8318C9.04657 15.8318 4.12801 11.2561 4.12762 7.63452C4.12762 4.56045 6.32991 2.71558 9.04657 2.71558ZM9.04657 4.48804C7.495 4.48804 6.23726 5.7461 6.237 7.29761C6.237 8.84934 7.49483 10.1082 9.04657 10.1082C10.5981 10.108 11.8561 8.84923 11.8561 7.29761C11.8559 5.74621 10.598 4.48823 9.04657 4.48804Z"
+        fill="currentColor" />
+</svg></div><div class="proofmode-tag">Kilauea Volcano, Hawaii, United States</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="6.4326" cy="7.55119" r="1.52208" fill="currentColor" />
+    <circle cx="8.41738" cy="5.77105" r="0.628899" fill="currentColor" />
+    <path
+        d="M3.34326 15.0658V6.15491C3.34326 4.77693 4.46034 3.65985 5.83832 3.65985H12.2542C13.6322 3.65985 14.7492 4.77693 14.7492 6.15491V15.0658"
+        stroke="currentColor" stroke-width="1.42575" />
+</svg></div><div class="proofmode-tag">iPhone 14</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="9.04634" cy="8.52857" r="4.46756" stroke="currentColor" stroke-width="1.42575" />
+    <path d="M9.04626 5.50677V8.74454L11.0969 10.5073" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M7.42488 1.87787L6.74643 3.99403H11.6053L10.9268 1.87787H7.42488Z" fill="currentColor" />
+    <path d="M10.9266 15.2443L11.6051 13.1281L6.74627 13.1281L7.42473 15.2443L10.9266 15.2443Z"
+        fill="currentColor" />
+</svg></div><div class="proofmode-tag">10:21 AM PST | February 26, 2025</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M13.1387 1.71657L13.5273 2.89598C13.652 3.2751 13.9463 3.57376 14.3232 3.70497L15.4142 4.08409C15.4881 4.11018 15.4881 4.21529 15.4142 4.24066L14.3232 4.61979C13.9463 4.75099 13.652 5.04965 13.5273 5.42877L13.1387 6.60818C13.1134 6.6843 13.0061 6.6843 12.9814 6.60818L12.5929 5.42877C12.4682 5.04965 12.1739 4.75099 11.7969 4.61979L10.706 4.24066C10.632 4.21457 10.632 4.10946 10.706 4.08409L11.7969 3.70497C12.1739 3.57376 12.4682 3.2751 12.5929 2.89598L12.9814 1.71657C13.0068 1.64046 13.1141 1.64046 13.1387 1.71657Z"
+        fill="black" />
+    <path
+        d="M8.16895 3.23522L9.1173 6.11391C9.42163 7.03927 10.14 7.76823 11.06 8.08848L13.7229 9.01384C13.9033 9.07754 13.9033 9.33409 13.7229 9.39601L11.06 10.3214C10.14 10.6416 9.42163 11.3706 9.1173 12.2959L8.16895 15.1746C8.10702 15.3604 7.84516 15.3604 7.785 15.1746L6.83664 12.2959C6.53232 11.3706 5.81397 10.6416 4.89392 10.3214L2.23109 9.39601C2.05062 9.33232 2.05062 9.07577 2.23109 9.01384L4.89392 8.08848C5.81397 7.76823 6.53232 7.03927 6.83664 6.11391L7.785 3.23522C7.84693 3.04944 8.10879 3.04944 8.16895 3.23522Z"
+        fill="black" />
+</svg></div><div class="proofmode-tag">AI Generated</div><div class="proofmode-tag px-2.5 border-white uppercase bg-flag-300">No</div></div></div>
+        </div>
+    </div>
+    <div class="relative shrink-0 w-[240px] h-auto">
+        <img src="/assets/img/1eeaaaab324baf5d0934333e52b5be5b64e99dc2.webp" alt="decorative hero image"
+            class="object-cover w-full h-[360px]" width="1920" height="1200"/>
+    </div>
+    <div class="relative shrink-0 w-[240px] h-[360px]">
+        <img src="/assets/img/5dede5b3bf5ab018d50005fb3fc60956b2902474.webp" alt="decorative hero image"
+            class="object-cover w-full h-full" width="1080" height="1920"/>
+    </div>
+</div>
+
+    
+
+    
+    <div class="h-[calc(100vw*336/1441)]">
+        <!-- NOTE: placeholder offset for whitespace -->
+    </div>
+    
+</section>
+
+<section class="relative">
+    <div class="relative z-1 -mb-1 -mt-[calc(100vw*336/1440)] aspect-[1440/336]">
+        <svg class="w-full h-auto text-green-300-core" width="1440" height="336" viewBox="0 0 1440 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M90 84H45V126H90V84Z" fill="currentColor" />
+    <path d="M90 42V0H0V84H45V42H90Z" fill="currentColor" />
+    <path d="M135 42H90V84H135V42Z" fill="currentColor" />
+    <path
+        d="M1350 0V42H1215V84H1170V126H1260V168H1170V126H1125V168H1080V126H1125V84H1035V126H360V84H225V42H180V84H135V126H90V168H45V126H0V336H1440V0H1350ZM1305 84H1350V126H1305V84ZM270 126V168H180V126H270Z"
+        fill="currentColor" />
+</svg>
+    </div>
+
+    <div class="-mb-[calc(100vw*336/1441/2)]">
+        <!-- NOTE: placeholder offset for whitespace -->
+    </div>`
+
+    <div class="bg-green-300-core relative z-10">
+        <div class="container mx-auto px-4 py-16 space-y-10 relative">
+            <div class="mb-20">
+  <h2
+    class="text-green-900 font-serif leading-[1.1] text-[30px] text-center lg:max-w-1/2 lg:mx-auto"
+  >
+    Meet Proofmode’s ecosystem of open-source tools and systems
+  </h2>
+  <ul
+    class="flex flex-col lg:flex-row gap-5 lg:gap-[60px] items-center justify-center mt-10 mb-20"
+  >
+    
+    <li class="flex items-center gap-1.5 font-mono uppercase text-green-900">
+      <svg class="size-6" width="32" height="32" viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" />
+    <path d="M8.1875 15.875L13.3125 21L23.8125 10.5" stroke="currentColor" stroke-width="1.5" />
+</svg> Prove Chain of Custody
+    </li>
+    
+    <li class="flex items-center gap-1.5 font-mono uppercase text-green-900">
+      <svg class="size-6" width="32" height="32" viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" />
+    <path d="M8.1875 15.875L13.3125 21L23.8125 10.5" stroke="currentColor" stroke-width="1.5" />
+</svg> Detect AI
+    </li>
+    
+    <li class="flex items-center gap-1.5 font-mono uppercase text-green-900">
+      <svg class="size-6" width="32" height="32" viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" />
+    <path d="M8.1875 15.875L13.3125 21L23.8125 10.5" stroke="currentColor" stroke-width="1.5" />
+</svg> Privacy-Focused tools
+    </li>
+    
+    <li class="flex items-center gap-1.5 font-mono uppercase text-green-900">
+      <svg class="size-6" width="32" height="32" viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="16" cy="16" r="13" stroke="currentColor" stroke-width="1.5" />
+    <path d="M8.1875 15.875L13.3125 21L23.8125 10.5" stroke="currentColor" stroke-width="1.5" />
+</svg> Capture Reality
+    </li>
+    
+  </ul>
+</div>
+
+
+            <div class="grid lg:grid-cols-12 gap-[60px] mb-20">
+                <div
+  class="rounded-[40px] proofmode-block-gradient border-2 p-16 pb-0 overflow-hidden @container lg:col-span-6"
+>
+  <div class="flex flex-col h-full @md:flex-row">
+    <div
+      class="flex flex-col gap-5 pb-16 @md:w-1/2 @md:justify-center @md:pr-16"
+    >
+      <h3>
+        <span class="font-serif text-xl">Proofmode</span><br />
+        <span class="font-mono uppercase text-[22px]">Capture</span>
+      </h3>
+      <p class="text-xl">
+        Free and open-source camera app with built-in provenance and
+        authentication for chain of custody.
+      </p>
+      <a href="/install/" class="flex">
+        <div
+          class="proofmode-tag font-mono uppercase bg-transparent text-base pl-0"
+        >
+          Get the app
+        </div>
+        <span class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"
+          ><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg></span
+        >
+      </a>
+    </div>
+    <div class="flex justify-center h-full @md:justify-end @md:w-1/2">
+      <div class="relative flex items-end">
+        <img
+          src="/assets/img/phone-launch.webp"
+          alt="Rocket launch decorative illustration"
+          class=""
+        />
+        <img
+          width="81"
+          height="80"
+          src="/assets/img/proofmode-mark.svg"
+          alt="Proofmode Logo Mark"
+          class="size-[100px] object-contain absolute bottom-10 -left-10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                <div
+  class="rounded-[40px] proofmode-block-gradient border-2 p-16 pb-0 overflow-hidden @container lg:col-span-6"
+>
+  <div class="flex flex-col h-full @md:flex-row">
+    <div class="flex flex-col gap-5 pb-16 @md:w-1/2 @md:justify-center">
+      <h3>
+        <span class="font-serif text-xl">Proofmode</span><br />
+        <span class="font-mono uppercase text-[22px]">Verify</span>
+      </h3>
+      <p class="text-xl">
+        Free and open-source multi-purpose tool to inspect meta data and detect
+        AI in audio, images, and videos.
+      </p>
+      <a href="/verify/" class="flex">
+        <div
+          class="proofmode-tag font-mono uppercase bg-transparent text-base pl-0"
+        >
+          Learn more
+        </div>
+        <span class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"
+          ><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg></span
+        >
+      </a>
+    </div>
+    <div class="flex justify-center h-full @md:justify-end @md:w-1/2">
+      <div class="relative @md:-top-16 @md:-right-16">
+        <img
+          src="/assets/img/24bf9d8873f92b0c1eacf7589807d0dbcd7661c4.webp"
+          alt="Busy street decorative illustration"
+          class=""
+        />
+        <div class="absolute top-10 -left-10">
+          <div class="flex flex-col gap-2.5"><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="9.04634" cy="8.52857" r="4.46756" stroke="currentColor" stroke-width="1.42575" />
+    <path d="M9.04626 5.50677V8.74454L11.0969 10.5073" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M7.42488 1.87787L6.74643 3.99403H11.6053L10.9268 1.87787H7.42488Z" fill="currentColor" />
+    <path d="M10.9266 15.2443L11.6051 13.1281L6.74627 13.1281L7.42473 15.2443L10.9266 15.2443Z"
+        fill="currentColor" />
+</svg></div><div class="proofmode-tag">July 9, 2024</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.69971 4.92749H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M3.69971 9.20471H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <path d="M3.69971 13.482H14.3928" stroke="currentColor" stroke-width="1.06931" />
+    <circle cx="6.5512" cy="4.77157" r="1.60397" fill="currentColor" />
+    <circle cx="11.7195" cy="9.04879" r="1.60397" fill="currentColor" />
+    <circle cx="8.3334" cy="13.326" r="1.60397" fill="currentColor" />
+</svg></div><div class="proofmode-tag">Media Edited</div><div class="proofmode-tag px-2.5 border-white uppercase bg-green-400">Yes</div></div><div class="flex relative z-10"><div class="proofmode-tag px-2.5"><svg class="size-6" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M13.1387 1.71657L13.5273 2.89598C13.652 3.2751 13.9463 3.57376 14.3232 3.70497L15.4142 4.08409C15.4881 4.11018 15.4881 4.21529 15.4142 4.24066L14.3232 4.61979C13.9463 4.75099 13.652 5.04965 13.5273 5.42877L13.1387 6.60818C13.1134 6.6843 13.0061 6.6843 12.9814 6.60818L12.5929 5.42877C12.4682 5.04965 12.1739 4.75099 11.7969 4.61979L10.706 4.24066C10.632 4.21457 10.632 4.10946 10.706 4.08409L11.7969 3.70497C12.1739 3.57376 12.4682 3.2751 12.5929 2.89598L12.9814 1.71657C13.0068 1.64046 13.1141 1.64046 13.1387 1.71657Z"
+        fill="black" />
+    <path
+        d="M8.16895 3.23522L9.1173 6.11391C9.42163 7.03927 10.14 7.76823 11.06 8.08848L13.7229 9.01384C13.9033 9.07754 13.9033 9.33409 13.7229 9.39601L11.06 10.3214C10.14 10.6416 9.42163 11.3706 9.1173 12.2959L8.16895 15.1746C8.10702 15.3604 7.84516 15.3604 7.785 15.1746L6.83664 12.2959C6.53232 11.3706 5.81397 10.6416 4.89392 10.3214L2.23109 9.39601C2.05062 9.33232 2.05062 9.07577 2.23109 9.01384L4.89392 8.08848C5.81397 7.76823 6.53232 7.03927 6.83664 6.11391L7.785 3.23522C7.84693 3.04944 8.10879 3.04944 8.16895 3.23522Z"
+        fill="black" />
+</svg></div><div class="proofmode-tag">AI Generated</div><div class="proofmode-tag px-2.5 border-white uppercase bg-green-400">Yes</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+                <div
+  class="bg-[url(/assets/img/c6587366bf5cb84adb5654e0baf2606bf5537d0f.webp)] bg-cover bg-center text-white rounded-[40px] p-16 pb-0 relative overflow-hidden @container lg:col-span-12"
+>
+  <div
+    class="absolute inset-0 proofmode-gradient-overlay-to-r"
+  >
+    <!-- NOTE: or simpler defaults: bg-gradient-to-r from-black to-transparent -->
+  </div>
+  <div class="flex flex-col h-full relative @3xl:flex-row">
+    <div class="flex flex-col gap-5 pb-16 @3xl:w-1/4 @3xl:justify-center">
+      <h3>
+        <span class="font-serif text-xl">Proofmode</span><br />
+        <span class="font-mono uppercase text-[22px]">Develop</span>
+      </h3>
+      <p class="text-xl">
+        Proofmode offers developers an easy solution to support provenance and
+        authentication features, including C2PA and AI detection.
+      </p>
+      <a href="/developers/" class="flex">
+        <div
+          class="proofmode-tag font-mono uppercase bg-transparent text-base pl-0"
+        >
+          Build with Proofmode
+        </div>
+        <span class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"
+          ><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg></span
+        >
+      </a>
+    </div>
+  </div>
+</div>
+
+
+                
+                
+                
+                
+                
+                
+                <div
+  class="rounded-[40px] proofmode-block-gradient border-2 p-16 lg:col-span-12"
+>
+  <div class="flex flex-col lg:flex-row gap-5 lg:gap-24">
+    <h3>
+      <span class="font-serif text-xl">Proofmode</span><br />
+      <span class="font-mono uppercase text-[22px]">Preserve</span>
+    </h3>
+    <p class="text-xl">Processes and tools for reliable, redundant, longterm storage of verifiable proof on decentralized web technologies</p>
+    <div>
+      <a href="/preserve/" class="flex whitespace-nowrap">
+        
+        <span class="sr-only">Read more</span>
+        
+        <span class="proofmode-btn proofmode-btn-gradient px-0 aspect-square">
+          <svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-[60px] items-center justify-center mx-auto">
+    <h3 class="font-mono uppercase whitespace-nowrap">We support</h3>
+    <ul class="flex flex-col lg:flex-row gap-10 items-center justify-center">
+        
+        <li class="">
+            <img src="/assets/img/logo-cai.png" alt="Content Authenticity Initiative logo"
+                class="w-full h-[60px] object-contain mix-blend-multiply" width="953" height="326" />
+        </li>
+        
+        <li class="">
+            <img src="/assets/img/logo-cr.png" alt="Content Credentials logo"
+                class="w-full h-[60px] object-contain mix-blend-multiply" width="2048" height="645" />
+        </li>
+        
+        <li class="">
+            <img src="/assets/img/logo-c2pa.png" alt="Coalition for Content Provenance and Authentication (C2PA) logo"
+                class="w-full h-[60px] object-contain mix-blend-multiply" width="463" height="161" />
+        </li>
+        
+</div>
+        </div>
+    </div>
+
+    <div class="-mt-[calc(100vw*336/1441/2)]">
+        <!-- NOTE: placeholder offset for whitespace -->
+    </div>`
+
+    <div class="relative z-1 -mt-1 -mb-[calc(100vw*336/1441)] aspect-[1441/336]">
+        <svg class="w-full h-auto text-green-300-core rotate-180" width="1441" height="336" viewBox="0 0 1441 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M180 126H135V168H180V126Z" fill="currentColor" />
+    <path d="M1350 42H1305V84H1350V42Z" fill="currentColor" />
+    <path
+        d="M1350 0V42H1395V84H1350V126H1305V84H1260V42H1215V126H1260V168H1215V126H1170V84H1080V168H1035V126H360V168H180V210H135V252H90V210H135V168H45V126H0V336H1440V0H1350Z"
+        fill="currentColor" />
+</svg>
+    </div>
+</section>
+
+<section class="overflow-hidden relative text-white">
+  <img
+    src="/assets/img/casestudy-cover-1.webp"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  <div
+    class="absolute inset-0 proofmode-gradient-overlay-to-b"
+  >
+  <!-- NOTE: linear gradient so that the text is readable -->
+  </div>
+
+  <div class="h-[calc(100vw*336/1441)]">
+    <!-- NOTE: placeholder offset for whitespace -->
+  </div>
+
+  <div
+    class="container mx-auto px-4 py-16 lg:pt-96 lg:pb-32 space-y-10 relative"
+  >
+    <p class="font-mono uppercase text-[30px] ">Case Study</p>
+    <h2
+      class="font-serif leading-[1.1] text-4xl lg:text-[46px] lg:max-w-2/3"
+    >
+      Proofmode "Hunt" event featured at Global Gathering 2025 in Lisbon, Portugal
+      Operations
+    </h2>
+    <a href="/blog/thehuntgg2025" class="flex">
+      <div class="proofmode-tag uppercase bg-green-400 text-black">Read More</div>
+      <span class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"
+        ><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg></span
+      >
+    </a>
+  </div>
+</section>
+
+
+
+<section class="bg-gradient-to-br from-background to-green-100">
+    <div class="container mx-auto px-4 py-16 space-y-4">
+        <div class="flex items-center justify-between">
+            <h2 class="font-serif leading-[1.1] text-4xl lg:text-[46px]">
+                The Latest
+            </h2>
+            <a href="#" class="proofmode-btn proofmode-btn-outline">See more</a>
+        </div>
+
+        <ul class="post-list">
+            <!-- for post in site.posts limit:3 -->
+            
+            
+            <li
+                class="py-10 grid lg:grid-cols-12 gap-4  border-b border-green-300-core ">
+                <div class="lg:col-span-6">
+                    <h2 class="font-serif text-[30px] mb-4">
+                        <a href="/blog/usa250anniversary">BASELINE:USA 250th Anniversary</a>
+                    </h2>
+                    <p>Celebrating the 250th Anniversary of the United States of America</p>
+                </div>
+
+                <div class="lg:flex lg:justify-center">
+                    
+                </div>
+
+                <div class="lg:col-span-5 flex items-start lg:justify-end">
+                    <div class="flex flex-col lg:flex-row lg:justify-end flex-wrap gap-y-4">
+                        <div class="flex flex-wrap">
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">baseline</div>
+                            
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">Independence Day</div>
+                            
+                            
+                        </div>
+                        <div class="flex">
+                            <div class="proofmode-tag">
+                                Jul 4, 2026
+                            </div>
+                            <a href="/blog/usa250anniversary"
+                                class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg><span class="sr-only">BASELINE:USA 250th Anniversary</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li
+                class="py-10 grid lg:grid-cols-12 gap-4  border-b border-green-300-core ">
+                <div class="lg:col-span-6">
+                    <h2 class="font-serif text-[30px] mb-4">
+                        <a href="/blog/anniversary-route-66">BASELINE: Route 66 - 100 Years on the Mother Road</a>
+                    </h2>
+                    <p>A century of asphalt, adventure, and the American spirit - captured and verified across Oklahoma.</p>
+                </div>
+
+                <div class="lg:flex lg:justify-center">
+                    
+
+                    <img src="/assets/img/authors/fabiola.webp"
+                        alt="Fabiola" class="rounded-full overflow-hidden size-[60px] object-cover" />
+
+                    
+                </div>
+
+                <div class="lg:col-span-5 flex items-start lg:justify-end">
+                    <div class="flex flex-col lg:flex-row lg:justify-end flex-wrap gap-y-4">
+                        <div class="flex flex-wrap">
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">baseline</div>
+                            
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">community</div>
+                            
+                            
+                        </div>
+                        <div class="flex">
+                            <div class="proofmode-tag">
+                                May 26, 2026
+                            </div>
+                            <a href="/blog/anniversary-route-66"
+                                class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg><span class="sr-only">BASELINE: Route 66 - 100 Years on the Mother Road</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li
+                class="py-10 grid lg:grid-cols-12 gap-4 ">
+                <div class="lg:col-span-6">
+                    <h2 class="font-serif text-[30px] mb-4">
+                        <a href="/blog/proofmode-android-conformant">Proofmode Android is C2PA Conformant</a>
+                    </h2>
+                    <p>Proofmode for Android has passed the C2PA Conformance Process</p>
+                </div>
+
+                <div class="lg:flex lg:justify-center">
+                    
+
+                    <img src="/assets/img/authors/nathan.webp"
+                        alt="Nathan" class="rounded-full overflow-hidden size-[60px] object-cover" />
+
+                    
+                </div>
+
+                <div class="lg:col-span-5 flex items-start lg:justify-end">
+                    <div class="flex flex-col lg:flex-row lg:justify-end flex-wrap gap-y-4">
+                        <div class="flex flex-wrap">
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">c2pa</div>
+                            
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">standards</div>
+                            
+                            
+                            
+                            <div class="proofmode-tag uppercase bg-green-400">community</div>
+                            
+                            
+                        </div>
+                        <div class="flex">
+                            <div class="proofmode-tag">
+                                May 8, 2026
+                            </div>
+                            <a href="/blog/proofmode-android-conformant"
+                                class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg><span class="sr-only">Proofmode Android is C2PA Conformant</span></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- <div class="h-[calc(100vw*336/1440)]"> -->
+    <!-- NOTE: placeholder offset for whitespace -->
+    <!-- </div> -->
+</section>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="grid lg:grid-cols-12">
+    <div class="lg:col-span-6 px-4 lg:px-20 py-10 bg-purple">
+      <h2 class="font-serif text-2xl lg:max-w-2/3">
+        Help us document the reality of our world.
+      </h2>
+      <div class="flex mt-16">
+        <div class="proofmode-tag uppercase bg-green-400">Baseline</div>
+        <div class="proofmode-tag">A Media Cooperative</div>
+        <a
+          href="/baseline/"
+          class="proofmode-btn proofmode-btn-gradient px-0 aspect-square"
+          ><svg class="size-5" width="18" height="18" viewBox="0 0 18 18"
+    fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.71716 1.34167L16.7608 9.38535L8.71716 17.429" stroke="currentColor" />
+    <path d="M16.7599 9.48667H1.53433" stroke="currentColor" />
+</svg>
+          <span class="sr-only">Read more</span>
+        </a>
+      </div>
+    </div>
+    <div class="lg:col-span-6 px-4 lg:px-20 py-10 bg-flag-300">
+      <h2 class="font-serif text-2xl lg:max-w-2/3">
+        Subscribe to get Proofmode updates in your inbox
+      </h2>
+      <form class="flex mt-16" method="GET" action="https://lists.mayfirst.org/mailman/listinfo/proofmode">
+        <!-- <p class="hidden">
+          <label>Leave this empty <input name="bot-field" /></label>
+        </p>
+        <input
+          type="email"
+          class="proofmode-tag placeholder:text-center placeholder:text-black lg:min-w-[270px]"
+          placeholder="Your email"
+        />
+ -->
+        <button type="submit" class="proofmode-tag uppercase bg-green-400">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="bg-green-900 text-white px-10 py-14 relative">
+    <svg class="w-full h-auto lg:w-auto
+    lg:h-full absolute bottom-0 lg:bottom-auto lg:top-0 right-0
+    aspect-[3840/2160] opacity-25" width="3840" height="2160" viewBox="0 0 3840 2160" fill="none"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="3840" height="2160" fill="url(#pattern0_793_3091)" />
+    <defs>
+        <pattern id="pattern0_793_3091" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_793_3091" transform="scale(0.000260417 0.000462963)" />
+        </pattern>
+        <image id="image0_793_3091" width="3840" height="2160" preserveAspectRatio="none"
+            xlink:href="data:image/png;base64,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" />
+    </defs>
+</svg>
+
+    <div class="mx-auto px-4 space-y-14 lg:space-y-4 relative">
+      <ul class="grid md:grid-cols-5 lg:grid-cols-8 gap-14 lg:gap-4">
+        <li class="shrink-0">
+          <a href="/"
+            ><img
+              width="81"
+              height="80"
+              src="/assets/img/proofmode-mark.svg"
+              alt="Proofmode Logo Mark"
+          /></a>
+        </li><li class="">
+          <h3 class="uppercase font-mono mb-5">Products</h3>
+
+          <ul class="space-y-1 lg:space-y-4"><li class="">
+              <a href="/install/" class="text-sm">
+                Capture
+              </a>
+            </li><li class="">
+              <a href="/verify/" class="text-sm">
+                Verify
+              </a>
+            </li><li class="">
+              <a href="/identify/" class="text-sm">
+                Identify
+              </a>
+            </li><li class="">
+              <a href="/connect/" class="text-sm">
+                Connect
+              </a>
+            </li><li class="">
+              <a href="/ai/" class="text-sm">
+                Enhance
+              </a>
+            </li></ul>
+        </li><li class="">
+          <h3 class="uppercase font-mono mb-5">For Developers</h3>
+
+          <ul class="space-y-1 lg:space-y-4"><li class="">
+              <a href="/developers/" class="text-sm">
+                Build
+              </a>
+            </li><li class="">
+              <a href="/preserve/" class="text-sm">
+                Preserve
+              </a>
+            </li><li class="">
+              <a href="/contact/" class="text-sm">
+                Integration Support
+              </a>
+            </li></ul>
+        </li><li class="">
+          <h3 class="uppercase font-mono mb-5">Use Cases</h3>
+
+          <ul class="space-y-1 lg:space-y-4"><li class="">
+              <a href="/journalists-and-media/" class="text-sm">
+                Journalists & Media
+              </a>
+            </li><li class="">
+              <a href="/products/" class="text-sm">
+                Apps & Software
+              </a>
+            </li><li class="">
+              <a href="/humanitarian-efforts/" class="text-sm">
+                Humanitarian Efforts
+              </a>
+            </li><li class="">
+              <a href="/business/" class="text-sm">
+                Business
+              </a>
+            </li><li class="">
+              <a href="/individuals/" class="text-sm">
+                Individuals
+              </a>
+            </li></ul>
+        </li><li class="">
+          <h3 class="uppercase font-mono mb-5">About</h3>
+
+          <ul class="space-y-1 lg:space-y-4"><li class="">
+              <a href="/about/" class="text-sm">
+                About Proofmode
+              </a>
+            </li><li class="">
+              <a href="/baseline/" class="text-sm">
+                Baseline
+              </a>
+            </li><li class="">
+              <a href="/news/" class="text-sm">
+                News
+              </a>
+            </li><li class="">
+              <a href="/help/" class="text-sm">
+                Help & Documentation
+              </a>
+            </li><li class="">
+              <a href="/contact/" class="text-sm">
+                Contact
+              </a>
+            </li><li class="">
+              <a href="/privacy/" class="text-sm">
+                Privacy Policy
+              </a>
+            </li></ul>
+        </li><li
+          class="flex flex-col md:col-span-8 lg:col-span-2 lg:col-start-7 items-center lg:items-end space-y-5"
+        >
+          <ul class="flex space-x-4 lg:justify-end"><li>
+              <a href="https://github.com/guardianproject/proofmode" class="leading-none text-green-300-core">
+                <svg class="size-9" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <title>GitHub</title>
+    <path
+        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+</svg>
+                <span class="sr-only">github</span>
+              </a>
+            </li><li>
+              <a href="https://youtube.com/playlist?list=PL4-CVUWabKWdOinhL2O08QvLpor_ZmSjC&feature=shared" class="leading-none text-green-300-core">
+                <svg class="size-9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 640 640">
+    <path
+        d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+</svg>
+                <span class="sr-only">youtube</span>
+              </a>
+            </li><li>
+              <a href="https://www.reddit.com/r/proofmode/" class="leading-none text-green-300-core">
+                <svg class="size-9" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+    <path
+        d="M64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576L101.1 576C87.4 576 80.6 559.5 90.2 549.8L139 501C92.7 454.7 64 390.7 64 320zM413.6 217.6C437.2 217.6 456.3 198.5 456.3 174.9C456.3 151.3 437.2 132.2 413.6 132.2C393 132.2 375.8 146.8 371.8 166.2C337.3 169.9 310.4 199.2 310.4 234.6L310.4 234.8C272.9 236.4 238.6 247.1 211.4 263.9C201.3 256.1 188.6 251.4 174.9 251.4C141.9 251.4 115.1 278.2 115.1 311.2C115.1 335.2 129.2 355.8 149.5 365.3C151.5 434.7 227.1 490.5 320.1 490.5C413.1 490.5 488.8 434.6 490.7 365.2C510.9 355.6 524.8 335 524.8 311.2C524.8 278.2 498 251.4 465 251.4C451.3 251.4 438.7 256 428.6 263.8C401.2 246.8 366.5 236.1 328.6 234.7L328.6 234.5C328.6 209.1 347.5 188 372 184.6C376.4 203.4 393.3 217.4 413.5 217.4L413.6 217.6zM241.1 310.9C257.8 310.9 270.6 328.5 269.6 350.2C268.6 371.9 256.1 379.8 239.3 379.8C222.5 379.8 207.9 371 208.9 349.3C209.9 327.6 224.3 311 241 311L241.1 310.9zM431.2 349.2C432.2 370.9 417.5 379.7 400.8 379.7C384.1 379.7 371.5 371.8 370.5 350.1C369.5 328.4 382.3 310.8 399 310.8C415.7 310.8 430.2 327.4 431.1 349.1L431.2 349.2zM383.1 405.9C372.8 430.5 348.5 447.8 320.1 447.8C291.7 447.8 267.4 430.5 257.1 405.9C255.9 403 257.9 399.7 261 399.4C279.4 397.5 299.3 396.5 320.1 396.5C340.9 396.5 360.8 397.5 379.2 399.4C382.3 399.7 384.3 403 383.1 405.9z" />
+</svg>
+                <span class="sr-only">reddit</span>
+              </a>
+            </li><li>
+              <a href="https://www.linkedin.com/products/the-guardian-project-proofmode/" class="leading-none text-green-300-core">
+                <svg class="size-9" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 640 640">
+    <path
+        d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z" />
+</svg>
+                <span class="sr-only">linkedin</span>
+              </a>
+            </li></ul>
+          <a
+            href="https://play.google.com/store/apps/details?id=org.witness.proofmode"
+            class="proofmode-btn proofmode-btn-gradient-light"
+          >
+            Capture for Android <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+    <path
+        d="M389.6 298.3L168.9 77L449.7 238.2L389.6 298.3zM111.3 64C98.3 70.8 89.6 83.2 89.6 99.3L89.6 540.6C89.6 556.7 98.3 569.1 111.3 575.9L367.9 319.9L111.3 64zM536.5 289.6L477.6 255.5L411.9 320L477.6 384.5L537.7 350.4C555.7 336.1 555.7 303.9 536.5 289.6zM168.9 563L449.7 401.8L389.6 341.7L168.9 563z" />
+</svg>
+          </a>
+          <a
+            href="https://apps.apple.com/us/app/proofmode/id1526270484"
+            class="proofmode-btn proofmode-btn-gradient-light"
+          >
+            Capture for iOS <svg class="size-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 640 640">
+    <path
+        d="M447.1 332.7C446.9 296 463.5 268.3 497.1 247.9C478.3 221 449.9 206.2 412.4 203.3C376.9 200.5 338.1 224 323.9 224C308.9 224 274.5 204.3 247.5 204.3C191.7 205.2 132.4 248.8 132.4 337.5C132.4 363.7 137.2 390.8 146.8 418.7C159.6 455.4 205.8 545.4 254 543.9C279.2 543.3 297 526 329.8 526C361.6 526 378.1 543.9 406.2 543.9C454.8 543.2 496.6 461.4 508.8 424.6C443.6 393.9 447.1 334.6 447.1 332.7zM390.5 168.5C417.8 136.1 415.3 106.6 414.5 96C390.4 97.4 362.5 112.4 346.6 130.9C329.1 150.7 318.8 175.2 321 202.8C347.1 204.8 370.9 191.4 390.5 168.5z" />
+</svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="text-sm space-y-4 text-gray-100 lg:mt-24">
+        <p>
+          © 2026 Proofmode Reality Systems, LLC.<br />
+          <a href="https://proofmode.org/" class="underline">Proofmode.org Website</a>
+          is licensed under
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1"
+            class="underline"
+            >CC BY-SA 4.0</a
+          >.
+        </p>
+        <p>
+          Proofmode is a collaborative effort between PRS
+          <a href="https://guardianproject.info/" class="underline"
+            >Guardian Project</a
+          >, <a href="https://www.witness.org/" class="underline">WITNESS</a>,
+          and
+          <a href="https://okthanks.com/" class="underline">Okthanks</a> since
+          2013.<br />
+          We have been primarily sponsored by
+          <a href="https://www.witness.org/" class="underline">WITNESS</a> and
+          the
+          <a href="https://ffdweb.org/" class="underline"
+            >Filecoin Foundation for the Decentralized Web</a
+          >.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" async></script>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" async></script>
+<!-- <script src="/assets/js/vendor/alpinejs.min.js" async></script> -->
+
+
+  </body>
+
+</html>

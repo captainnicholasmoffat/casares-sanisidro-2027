@@ -1,0 +1,706 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="eventos" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>14/08/2026</td>
+      <td>[004.0] Municipalidad de AVELLANEDA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      LICITACION PUBLICA [VIABILIDAD]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            e, por Expediente N° 105005/2022 tramitaba la Licitación Pública N° 01/2023 para la "Construcción de Nueva Estructura para Auditorio y Centro de <font class="text-warning"><strong>eventos</strong></font> Municipal en Parque Museo del Fútbol", adjudicada a la firma ACEROCORP S.R.L., cuyo contrato fue rescindido por Decreto N° 836/2024 del Depa
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/38206/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 18301-2026: Vienen las presentes actuaciones en consulta ante este Organismo, efectuada por el Sr. Jorge Horacio Ferraresi, intendente del municipio de Avellaneda, a fin de requerir dictamen en cuanto a la viabilidad legal y administrativa de readecuar el objeto de la Licitación Pública N° 110/2023, referida a la &quot;Provisión e Instalación de Ascensores para el Edificio Auditorio Municipal en Parque Museo del Fútbol&quot;, con el objeto de permitir la instalación de los equipos ya fabricados en dependencias de salud municipal.
+
+En tal sentido, se manifiesta que la necesidad de readecuación se funda en la imposibilidad material de ejecutar el montaje en el emplazamiento original, producto de la rescisión del contrato de la obra civil principal (Licitación Pública N° 01/2023).
+
+La cuestión central planteada en la presente consulta consiste en determinar si la readecuación del lugar de emplazamiento de los ascensores —modificando el edificio de destino originalmente licitado— constituye una modificación lícita del objeto contractual que pueda ser instrumentada sin necesidad de llevar adelante un nuevo procedimiento licitatorio, o si, por el contrario, implica una alteración sustancial que excede las prerrogativas de modificación unilateral reconocidas a la Administración en el marco del contrato administrativo.
+
+ 
+
+ Al respecto, se destaca que mediante expediente TRAMIX N° 2-0-110112/2023 tramitó la Licitación Pública N° 110/2023 para la &quot;Provisión e Instalación de Ascensores para el Edificio Auditorio Municipal en Parque Museo del Fútbol&quot;, adjudicada a la firma EWS CONSTRUCTORA S.A. mediante Orden de Compra N° 3096 de fecha 7 de agosto de 2023, por un monto total de $59.800.000,00.
+
+La contratista presentó el Certificado N° 1 (14/09/2023) por $29.900.000 —avance del 50%— y el Certificado N° 2 (04/12/2023) por $11.960.000 —avance acumulado del 70%—, ambos abonados por el Municipio, acreditándose la íntegra fabricación del equipamiento, quedando pendiente únicamente el montaje in situ del mismo.
+
+Paralelamente, por Expediente N° 105005/2022 tramitaba la Licitación Pública N° 01/2023 para la &quot;Construcción de Nueva Estructura para Auditorio y Centro de Eventos Municipal en Parque Museo del Fútbol&quot;, adjudicada a la firma ACEROCORP S.R.L., cuyo contrato fue rescindido por Decreto N° 836/2024 del Departamento Ejecutivo Municipal, por causa imputable a la contratista, en razón de incumplimientos técnicos y de plazo. Surge del informe de la Secretaría Legal y Técnica que se habría ejecutado la garantía de contrato y la de anticipo financiero, las que, a la fecha del informe —8 de abril de 2026—, se encontrarían saldadas.
+
+Como consecuencia directa de dicha rescisión, resultó materialmente imposible ejecutar el montaje de los ascensores en el emplazamiento originalmente previsto. En este contexto, la Secretaría de Obras y Servicios Públicos propone modificar el lugar de emplazamiento original de los ascensores, adaptándolos a edificios municipales que requieren modernizar los equipos de elevación o instalar nuevos, como el Centro Integral de Salud Mental Adolescente y la Secretaría de Salud, a efectos de concluir la contratación con EWS CONSTRUCTORA S.A.
+
+La Secretaría Legal y Técnica Municipal concluye que habiendo sido el equipamiento íntegramente fabricado y certificado, y siendo imposible su instalación en la localización originalmente prevista por causas ajenas al contratista, la readecuación del lugar de emplazamiento no constituiría una modificación ilícita o sustancial del objeto contractual, sino una solución razonable orientada a permitir la culminación de una contratación válida, evitando la inutilización de bienes ya producidos.
+
+Asimismo, fundamenta que la instalación de los equipos en otros edificios municipales resultaría jurídicamente procedente en tanto no se modifica el proveedor, no se amplían las cantidades contratadas, no se alteran sustancialmente las prestaciones, no se incrementan los precios pactados y no se elude procedimiento licitatorio alguno, toda vez que la provisión del equipamiento ya fue oportunamente licitada, adjudicada y ejecutada.
+
+Como lo señaló la Delegación Zona III Avellaneda en su dictamen previo, y conforme surge de la providencia de esta Secretaría de Jurisprudencia, Doctrina y Consultas de fecha 4 de junio de 2026, para que el Honorable Tribunal de Cuentas pueda expedirse corresponderá al Municipio aportar la totalidad de la documentación a que se hace alusión en el dictamen elaborado por el Secretario Legal y Técnico municipal, así como la elaboración de un informe técnico por parte de la Secretaría de Obras y Servicios Públicos, dependencia técnica que estaría proponiendo la modificación del lugar de emplazamiento.
+
+Vueltas las actuaciones a la Secretaría de Jurisprudencia, Doctrina y Consultas, firmadas por el señor Intendente Municipal, legitimado activo, remitiendo en días posteriores la documentación requerida oportunamente en la providencia ut supra mencionada, necesaria para llevar adelante un análisis jurídico-administrativo de la cuestión:
+
+a) del requerido Informe técnico a la Secretaría de Obras y Servicios Públicos, la cual debería acreditar la compatibilidad técnica y constructiva de los equipos de elevación fabricados con las instalaciones del Centro Integral de Salud Mental Adolescente y la Secretaría de Salud, incluyendo las adecuaciones eventualmente necesarias para su montaje en dichos inmuebles y los costos adicionales que ello pudiere generar. De ello, el Municipio acredita que las características técnicas de los equipos no varían e identifica las direcciones de destino (Mario Bravo 1740, Piñeyro; Av. Manuel Belgrano 2855, Sarandí). No obstante, no se acompaña estudio de compatibilidad edilicia (dimensiones de caja/pasadizo existente en cada inmueble, estructura, potencia eléctrica disponible) ni presupuesto de las adecuaciones civiles o eléctricas que pudiera demandar cada montaje, ni informe de costos adicionales. b) A lo solicitado respecto de la documentación técnica completa correspondiente a los nuevos inmuebles de destino —planos, memoria descriptiva, croquis de implantación— que permita verificar la factibilidad de la instalación en cada uno de los edificios propuestos, no se ha incorporado al expediente plano, memoria descriptiva ni croquis de implantación del Centro Integral de Salud Mental Adolescente ni de la Secretaría de Salud.
+
+c) Al requerimiento de presentación del proyecto de acto administrativo o instrumento formal mediante el cual el Departamento Ejecutivo haya dispuesto y fundado la propuesta de readecuación del lugar de emplazamiento, incluyendo el dictamen de la asesoría legal municipal que sustente su procedencia, se incorpora el dictamen jurídico de la Secretaría Legal y Técnica (IF-2026-00121570 del 08/04/2026), que analiza la procedencia jurídica, pero no se ha acompañado un proyecto de decreto o resolución del Departamento Ejecutivo que instrumente formalmente la readecuación del lugar de emplazamiento.
+
+d) A la necesidad de prestar conformidad o manifestación de la firma contratista EWS CONSTRUCTORA S.A. respecto de la propuesta de modificación del lugar de ejecución del contrato, dado que la readecuación del destino implica, cuando menos, la necesidad de evaluar el impacto en las condiciones técnicas de instalación, no obra en el expediente ninguna nota, acta o comunicación de la contratista prestando conformidad (o formulando reservas) respecto de la instalación de los equipos en emplazamientos distintos del originalmente licitado.
+
+e) asimismo, cabe indicar que se debería haber presentado la acreditación del estado actual del equipamiento fabricado: lugar de depósito, condiciones de conservación, y verificación de que la guarda del material no ha generado ni generará costos adicionales para el erario municipal. No se ha incorporado constancia de depósito, custodia o inspección actual de los dos kits de ascensores fabricados. Se destaca que, no habiéndose producido la recepción provisoria (artículo 23 del Pliego de Bases y Condiciones Generales), el plazo de garantía de setecientos treinta (730) días corridos previsto en el artículo 15° del Pliego de Bases y Condiciones Legales Particulares aún no ha comenzado a correr, circunstancia que debe ser expresamente verificada antes de disponer el montaje.
+
+f) se debería presentar el detalle del saldo contractual pendiente de pago a la firma EWS CONSTRUCTORA S.A., con indicación precisa de los montos ya abonados y los que quedarían por abonar como consecuencia de la instalación en los nuevos emplazamientos, y si dichos valores se corresponden con los precios pactados originalmente en la Orden de Compra N° 3096. Se han incorporado los Certificados N° 1 ($29.900.000, avance 50%, pagado el 25/09/2023) y N° 2 ($11.960.000, avance acumulado 70%, pagado el 08/01/2024), de los que surge un monto abonado de $41.860.000 sobre un total contratado de $59.800.000, restando un saldo de $17.940.000 (30%) correspondiente al montaje in situ. Sin embargo, no se ha acompañado el detalle formal de facturación pendiente ni la ratificación expresa de que dicho saldo se mantiene a valores históricos, sin actualización ni intereses.
+
+g) información respecto de si la nueva planificación de la obra civil en el Parque Museo del Fútbol —a cargo de la Secretaría de Planificación, que proyecta un núcleo de ascensores de distintas características— prevé la adquisición de equipamiento alternativo, a efectos de determinar si la propuesta de readecuación evita efectivamente un perjuicio patrimonial al Municipio o si, por el contrario, genera un solapamiento de bienes con funciones equivalentes. De la nueva documentación no surge el informe de la Secretaría de Planificación sobre el estado del núcleo de ascensores de nuevas características proyectado para el Centro de Convenciones, ni se descarta la eventual adquisición de equipamiento adicional que compita funcionalmente con el ya fabricado por EWS CONSTRUCTORA S.A.
+
+En dicho contexto, corresponde indicar que en materia de contratos administrativos, la doctrina ha reconocido la potestad de la Administración de introducir modificaciones unilaterales —ius variandi— para adaptar la prestación a las cambiantes necesidades del interés público. Sin embargo, dicha prerrogativa no es absoluta y encuentra límites tanto en el plano cuantitativo como en el cualitativo.
+
+En el plano cuantitativo, el artículo 146 de la Ley Orgánica de las Municipalidades, faculta al Departamento Ejecutivo a disponer aumentos o reducciones de ítems contratados, o la creación de nuevos ítems, cuyo valor no exceda en conjunto el veinte por ciento (20%) del monto total del contrato, admitiéndose excepcionalmente, previo dictamen del organismo técnico municipal, trabajos que superen dicho porcentaje hasta el cincuenta por ciento (50%), siempre que resulten indispensables, urgentes o convenientes. En el caso, la readecuación propuesta no importa aumento, reducción ni creación de ítems —el objeto, las cantidades y los precios permanecen inalterados—, por lo que, en principio, no se encontraría comprometido este límite cuantitativo, extremo que, sin perjuicio de ello, deberá confirmarse una vez acreditado el inciso f).
+
+En el plano cualitativo, la modificación no debe alterar la sustancia del objeto contractual, ni convertir la prestación en una prestación objetivamente nueva que hubiera requerido un procedimiento de selección distinto, ni vulnerar la igualdad de los oferentes del proceso licitatorio originario.
+
+Por su parte, en cuanto a la frustración sobreviniente del fin del contrato, esto es la imposibilidad de ejecución en el emplazamiento originario, obedece a causas ajenas al contratista de los bienes (en el caso, a la rescisión por culpa de un tercero —ACEROCORP S.R.L.— en un contrato de obra civil distinto, dispuesta por Decreto N° 836/2024 del 05/03/2024); dicha imposibilidad no resulta imputable al proveedor de los equipos, y habilita, en principio, soluciones que eviten la inutilización de bienes ya producidos, sin que ello implique automáticamente la licitud de cualquier modificación.
+
+Es menester resaltar que este organismo se expidió en términos que podrían aplicarse a la presente, donde sostuvo &quot;…corresponde indicar que en el campo del derecho administrativo, las modificaciones de los contratos tienen un campo mayor de acción, porque la ejecución de los contratos administrativos está dominada por un dinamismo ignorado en los civiles. De allí que el principio de la inmutabilidad que reina en el campo del derecho privado se transforme en el de la mutabilidad de los contratos administrativos. Por ende, en virtud de esta facultad, la Administración puede, siempre por razones de interés público y con los límites y los requisitos que establece la ley, modificar el contenido obligacional de los contratos ya perfeccionados…” “… el fundamento del poder de la Administración pública para modificar los contratos administrativos no es otro que atender o satisfacer en la mejor forma posible las pertinentes necesidades públicas…” “… el interés público exige que los contratos se ejecuten de la forma más acorde con él. En ese marco, la Administración no es libre de modificar un contrato o no, como quiera o mejor entienda; por el contrario, se encuentra obligada a ello si el interés público demanda que el contrato se modifique, ya que su actuación siempre se rige sobre la base de dicho interés…? (Municipalidad de Ensenada - Consulta Digital N° 11690-2024 – de fecha 08/07/2024).
+
+Si bien la modificación de los contratos puede conllevar un contrato auténticamente nuevo, dichas modificaciones, cuando son propuestas por la Administración, deben ser aceptadas por el cocontratante.
+
+Si bien el objeto de aquella consulta —redeterminación de precios— difiere del aquí analizado —readecuación del lugar de emplazamiento—, ambos casos constituyen supuestos de modificación unilateral de un contrato de obra pública en ejecución, por lo que el estándar jurídico allí fijado resulta un precedente directo y aplicable.
+
+De lo expuesto se sigue que la conformidad de EWS CONSTRUCTORA S.A. —inciso d), señalada como documentación faltante— no constituye un mero recaudo instrumental o de buen orden administrativo, sino una condición sustancial de validez de la modificación contractual, conforme el propio criterio se aplicó en el precedente.
+
+Asimismo, dicho precedente exige acreditar la motivación técnica de por qué la desviación no fue prevista originalmente y las razones que descartan la necesidad de una nueva licitación, lo que reafirma la relevancia de los incisos a) y b) —compatibilidad técnica y documentación de los inmuebles de destino—.
+
+La readecuación del objeto de un contrato administrativo en el ámbito municipal de la Provincia de Buenos Aires encuentra sustento, en concreto, en el régimen de la obra pública provincial, sin perjuicio de los límites y recaudos de validez ya señalados.
+
+Conforme la Ley de Obra Pública N° 6.021 y su modificatoria de la Provincia de Buenos Aires, readecuar el objeto de una licitación para cambiar el destino de bienes —los ascensores ya fabricados—resulta jurídica y administrativamente viable, en tanto se fundamenta en los principios de economía, eficiencia y continuidad de la gestión pública. Dicha viabilidad se encuentra sujeta a los límites estrictos y principios basales del derecho administrativo destinados a evitar la nulidad de los actos.
+
+Sin embargo, esa facultad no es ilimitada: las modificaciones no pueden alterar la sustancia o la esencia del contrato originalmente previsto. Si el cambio implica condiciones enteramente nuevas, se configura una &quot;obra nueva&quot; o un contrato distinto, lo que obligaría a tramitar una nueva licitación. Tampoco pueden concederse al adjudicatario ventajas que alteren lo establecido en el pliego primigenio, pues ello vulneraría el principio de igualdad respecto de los demás oferentes del proceso licitatorio original; y todo cambio debe perseguir un propósito legítimo y de carácter público, ajustado a criterios de razonabilidad y no discriminación.
+
+Ahora bien, la viabilidad jurídica de la readecuación propuesta depende en forma determinante de la acreditación documental de los extremos enunciados. En particular, resultará necesario establecer: (i) si los equipos fabricados son técnica y funcionalmente aptos para ser instalados en los nuevos edificios sin alteraciones sustanciales; (ii) si la prestación así modificada continúa siendo la misma en su objeto esencial —provisión e instalación de ascensores con las características técnicas licitadas— o si implica una prestación nueva; y (iii) si el costo de las adecuaciones eventualmente necesarias para el montaje en los nuevos inmuebles se encuadra dentro de los límites cuantitativos del artículo 146 de la Ley Orgánica de las Municipalidades, o si excede dichos porcentajes.
+
+En virtud de lo expuesto, se concluye que, habiéndose salvado la legitimación activa del firmante de los obrados, y sin perjuicio de la insuficiencia documental, a fin de orientar al Municipio en la subsanación pendiente, corresponde dejar sentado lo siguiente sobre la base de los elementos que sí obran en el expediente:
+
+1) Identidad del proveedor y del objeto técnico: los dos kits de ascensor hidráulico a instalar en el Centro Integral de Salud Mental Adolescente y en la Secretaría de Salud son exactamente los mismos que fueron oportunamente licitados, adjudicados y fabricados. No surge que se proponga un cambio de proveedor, de cantidades ni de precios, lo que constituye un indicio favorable a la licitud de la modificación bajo el estándar cualitativo del ius variandi.
+
+2) Causa de la imposibilidad originaria. El Decreto N° 836/2024 acredita fehacientemente que la rescisión del contrato de obra civil principal, adjudicado a ACEROCORP S.R.L., obedeció exclusivamente a incumplimientos técnicos, documentales y de plazo de obra por parte de dicha contratista, llegándose a constatar el abandono de la obra, lo que llevó aparejada la devolución del anticipo financiero no invertido ($74.911.845,07) y la ejecución de las garantías constituidas por ACEROCORP. Se destaca que dicho Decreto no contiene mención alguna al contrato de provisión de ascensores adjudicado a EWS CONSTRUCTORA S.A., lo que confirma la autonomía de ambos contratos y que la causal de rescisión es enteramente ajena a esta última firma, sustentando la calificación de la situación como frustración sobreviniente del fin del contrato de ascensores por causas imputables a un tercero.
+
+3) Estado de avance y garantías. Se encuentra acreditada la fabricación íntegra del equipamiento (avance certificado del 70%), restando únicamente el montaje in situ. No obstante ello, se fijó oportunamente un plazo de garantía de las provisiones de 730 días corridos, contados desde la recepción, el cual —al no haberse producido el montaje— aún no ha comenzado a correr. Esta circunstancia deberá ser expresamente verificada por la Secretaría de Obras y Servicios Públicos al momento de acreditar el inciso e), dado el tiempo transcurrido desde la fabricación (septiembre/diciembre de 2023) hasta la fecha.
+
+4) Ausencia de instrumentación formal e inexistencia de conformidad contractual. No obra proyecto de acto administrativo del Departamento Ejecutivo que disponga formalmente la readecuación, ni la manifestación expresa de conformidad por parte de EWS CONSTRUCTORA S.A., la cual constituye una condición sustancial de validez de toda modificación unilateral del contrato, en tanto se trata de derechos subjetivos ya incorporados al patrimonio del contratista. Su ausencia —sumada a la falta de instrumentación formal— podría exponer al acto a un vicio de forma o generar controversias sobre el alcance de las obligaciones asumidas por EWS CONSTRUCTORA S.A. respecto de la instalación en inmuebles distintos de los originalmente previstos, entre ellas la responsabilidad por garantía del elemento y la garantía del contrato.
+
+5) Compatibilidad técnica de destino y costos. Estos extremos resultan determinantes para descartar que la readecuación importe una alteración sustancial del objeto contractual. La sola afirmación de que las características técnicas del equipo &quot;no varían&quot; no permite verificar, por sí sola, que los inmuebles de destino (Centro Integral de Salud Mental Adolescente y Secretaría de Salud) cuenten con las condiciones edilicias, estructurales y eléctricas necesarias para alojar equipos diseñados originalmente para el Auditorio Municipal, ni permite descartar la necesidad de obras civiles o eléctricas adicionales que —de existir y superar los límites cuantitativos del artículo 146 de la Ley Orgánica de las Municipalidades— podrían tornar inviable la vía de la mera readecuación y exigir un nuevo procedimiento de selección.
+
+6) Riesgo de solapamiento patrimonial. Resulta especialmente relevante frente a la mención efectuada en el propio Informe IF-2026-00121570 (punto III), en cuanto a que la Secretaría de Planificación proyectó, para el nuevo Centro de Convenciones, &quot;un núcleo de ascensores… que se modificó en cuanto a las características constructivas&quot;. Corresponde descartar expresamente que dicha planificación contemple la adquisición de equipamiento adicional que compita funcionalmente con el ya fabricado por EWS CONSTRUCTORA S.A., a fin de resguardar el principio de buena administración de los fondos públicos.
+
+RESPUESTA: En virtud de lo expuesto, y a fin de dar respuesta a la consulta de marras correspondería ratificar, en lo sustancial, que la readecuación del lugar de emplazamiento de los ascensores licitados en la Licitación Pública N° 110/2023 —en tanto no implique cambio de proveedor, de cantidades ni de precios, y encuentre sustento en circunstancias objetivas, imprevistas y ajenas al contratista de los equipos (Decreto N° 836/2024)— resulta, en el plano de los principios, encuadrable dentro de los límites cualitativos del ius variandi reconocido por el artículo 146 de la Ley Orgánica de las Municipalidades. No obstante ello, la documentación incorporada al expediente continúa siendo insuficiente para tener por acreditados los extremos de hecho de los que depende la procedencia jurídica de la readecuación, encontrándose sin acreditar los incisos b), d), e) y g), y solo parcialmente acreditados los incisos a), c) y f). Asimismo, resulta fundamental la aceptación expresa de EWS CONSTRUCTORA S.A. de la readecuación del emplazamiento de manera unilateral, la cual constituye una condición sustancial de validez."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/38206/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>05/02/2019</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      PUBLICIDAD [FACEBOOK]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             la población que utiliza las redes sociales y las páginas web.
+
+Señala que el uso de la página está dirigido a campañas publicitarias de los <font class="text-warning"><strong>eventos</strong></font> culturales que realiza el municipio, como también a publicidad de las noticias más relevantes sobre obras ejecutadas y/o en ejecución, nove
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29954/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: La Contadora de la Municipalidad de DOLORES consulta acerca del correcto tratamiento de los gastos en concepto de publicidad -efectuados específicamente en la red social Facebook-. 
+
+En su nota de elevación puntualiza que a criterio del D. Ejecutivo resulta sumamente necesario efectuar campañas de publicidad, haciendo uso de esa herramienta moderna de conexión, ya que los medios gráficos, radiales y audiovisuales se han visto sustancialmente modificados por los avances y desarrollos tecnológicos, pudiendo de esta forma llegar a una gran parte de la población que utiliza las redes sociales y las páginas web.
+
+Señala que el uso de la página está dirigido a campañas publicitarias de los eventos culturales que realiza el municipio, como también a publicidad de las noticias más relevantes sobre obras ejecutadas y/o en ejecución, novedades turísticas, etc.  Que no se cuenta con un contrato firmado por las partes con las condiciones pactadas, dado que el mismo se materializa a través de la página social. Que el gasto mensual es variable, toda vez que el costo se relaciona con la cantidad de usuarios a la que va dirigida la publicidad. Que el servicio se factura a través de tarjeta de crédito VISA -tramitada en el Banco Provincia por el señor Intendente-, con débito automático en la cuenta Fiscal ... Municipalidad de Dolores-donde sólo se refleja el servicio de la página- (fs.3).
+
+Particularmente la consultante plantea como interrogante la registración contable de estas erogaciones, atento contar solamente con la liquidación mensual de la citada tarjeta de crédito -con el respectivo débito bancario por dicho cargo- y con un recibo emitido por la empresa Facebook Ireland Limited que no cumple con las normas legales vigentes (fs. 4/5).
+
+Habiendo ingresado las actuaciones por Delegación Zona XVIII – Chascomús de este Organismo, la misma en informe de fojas 9 refiere a la doctrina sentada en Expediente N° 4104-6436-2016-0-1 Municipalidad de San Fernando (fojas 7/8), la que si bien se vincula sólo con determinados aspectos de campañas publicitarias en Facebook Institucional, comprende consideraciones a ser tenidas en cuenta. 
+
+RESPUESTA: No obstante relacionarse la consulta con la registración contable del gasto, resulta necesario referirnos a las etapas previas del mismo.                                                        En primer lugar deviene considerar que si bien estamos frente al acceso a diversas herramientas de comunicación como la traída a consulta, la utilización de las mismas en la esfera de la administración y uso de recursos públicos, encuentra precariedad e informalidad dado no contar con un adecuado procedimiento que permita garantizar, a la hora del control, la procedencia, la legalidad y la transparencia de los gastos que se efectúen.
+
+Por tal razón, reconociendo estos medios masivos de contratación de publicidad como nuevas tendencias, se estima que las autoridades municipales debieran tomar en consideración respecto a su uso, las circunstancias que a continuación se señalan.
+
+Comenzamos señalando con carácter general, que con relación a la naturaleza del gasto en publicidad y a fin de evaluar su legitimidad, este Organismo ha sostenido que independientemente de las publicidades que son legalmente obligatorias, se admite la realización de otras cuyo contenido sea estrictamente oficial y de carácter municipal. Es decir, resultan procedentes los gastos que hagan a la información de los actos de gobierno en forma objetiva, no aquella subjetiva sesgada a favor de una persona o que posea tendencia a favorecer actos personales. Básicamente, procede aquella publicidad que ofrece información de interés general y utilidad pública sobre actos propios del quehacer municipal, con el objetivo de informar políticas, programas y servicios en beneficio de toda la comunidad a través de los medios contratados por el municipio, sin dejar librado al contratista el modo, la oportunidad y los medios de propalación que pueden desvirtuar el carácter de aquélla (doctrina según Expte. Nº 4134-020928-2014-1-1 Municipalidad de Ituzaingó, agregado a fs. 10).          
+
+Dicho lo anterior, se entiende que las emisiones de pago referidas a los egresos materia de la consulta, debieran contar con los antecedentes documentales -textos publicitados o captura de pantalla de la publicación en el caso- que posibiliten verificar a la hora de las auditorías, la legitimidad del gasto realizado.
+
+Respecto del nexo contractual, la contratación de publicidad a través de la red social Facebook se perfecciona mediante una suscripción -contrato de suscripción o adhesión- en la que se establece un presupuesto máximo a gastar durante un período de tiempo, implicando para la comuna la aceptación de los términos, condiciones y políticas de la empresa. Estamos frente a un contrato bilateral, consensual y de tracto sucesivo con una modalidad cibernética -vía internet-, que genera efectos jurídicos entre las partes, que en este caso poseen domicilio en distintos países. Se advierte también que el contrato queda alcanzado por la prórroga de jurisdicción convenida en las condiciones de la adhesión, implicando que en caso de litigio, el mismo deberá resolverse ante tribunales extranjeros, situación que resultaría en principio objetable en base al artículo 171 del Reglamento de Contabilidad y Disposiciones de Administración para las Municipalidades de la provincia de Buenos Aires.
+
+Resulta de interés señalar, que toda vez que estamos frente al manejo de información pública en forma masiva -con las implicancias que ello conlleva-, resultaría necesario definir en un Acto Administrativo de la Municipalidad la responsabilidad tanto de la decisión de efectuar la suscripción del medio, como de la administración, uso y operatividad del mismo.
+
+En relación al comprobante de pago, sólo obraría copia de recibo de pago -mediante VISA con número de referencia-, que identifica una cuenta a nombre del señor Intendente y una transacción. El mismo enuncia las campañas publicitadas, la cantidad de impresiones y su valor expresado en pesos argentinos.
+
+Debiera aportarse factura -invoice- con los datos identificatorios de la empresa contratada y el servicio prestado -reconociendo que va de suyo, que no cumpliría con las normas legales vigentes de orden nacional - AFIP-.
+
+Respecto de los medios de pago de los gastos municipales, cabe indicar que este Organismo se ha expedido indicando que éstos deben afrontarse mediante cancelaciones bancarias por parte de la Tesorería o a través de cajas chicas (gastos menores y urgentes), pudiendo eventualmente por adhesión a débito en la cuenta corriente municipal, previa aceptación de la factura de la empresa prestataria del servicio, o bien por cuenta corriente de la empresa girando los fondos mediante transferencia o pago con cheque no a la orden (Expte. N° 4104-6436-2016-0-1 Municipalidad de San Fernando y Expte. Nº 5300-771-2015-0-1 Municipalidad de Presidente Perón).
+
+Probada la imposibilidad de utilizar otro medio de pago, se estima que en el caso planteado, debería acreditarse que la tarjeta de crédito posee sólo esta aplicación.
+
+Finalmente, a la luz de las circunstancias, encontrándonos frente a hechos consumados, la registración contable tendrá lugar inevitablemente pudiendo dar lugar a objeciones por parte de las auditorías. En este sentido se recuerda la facultad que el artículo 186 de la Ley Orgánica de las Municipalidades otorga al contador municipal respecto a los egresos a diligenciar."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29954/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>18/04/2018</td>
+      <td>[025.0] Municipalidad de CORONEL DORREGO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      PUBLICIDAD [EVENTOS DEPORTIVOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Doctrina: La Presidente del H. Concejo Deliberante de la Municipalidad de CORONEL DORREGO eleva consulta relacionada con la posibilidad de dar publicidad especial a particulares, en este caso a corredores de automovilismo que participan a nivel nacional en dicho deporte.
+
+Al especificar el tipo d
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29247/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Doctrina: La Presidente del H. Concejo Deliberante de la Municipalidad de CORONEL DORREGO eleva consulta relacionada con la posibilidad de dar publicidad especial a particulares, en este caso a corredores de automovilismo que participan a nivel nacional en dicho deporte.
+
+Al especificar el tipo de publicidad, informa que el corredor colocaría en su vehículo un calco sólo con la leyenda “Honorable Concejo Deliberante de Coronel Dorrego”, recibiendo por tal anuncio una determinada cantidad de dinero.
+
+Respuesta: En materia de gastos en publicidad, la doctrina de este Organismo ha determinado que en términos generales deben considerarse como admitidos aquellos que hagan a la información de los actos de gobierno y en la medida de la objetividad de la forma, a diferencia de aquella subjetiva sesgada a favor de una persona o que posea una tendencia a favorecer actos personales.
+
+Independientemente de las publicaciones que son obligatorias de acuerdo al artículo 165 inciso 6) de la Ley Orgánica de las Municipalidades, como así también de las Ordenanzas de interés público –artículo 67 del Reglamento de Contabilidad-, sobre las que no cabe duda acerca la legitimidad del gasto en que se incurre para dar a conocer dichos antecedentes, se entiende que merece un análisis especial determinar el carácter que otorgamos a la información que se incluye en diversos medios de comunicación, a fin de definir si este resulta municipal. Así, se interpretan admisibles los gastos referidos a publicaciones en las cuales predominantemente se exteriorizan planes, acciones y obras realizadas o a realizar por la Municipalidad en beneficio de la comunidad toda, siendo estos actos propios del quehacer municipal.
+
+En resumen, para determinar si el gasto es “publicidad oficial” debemos tener en cuenta la particular existencia de autorización presupuestaria y su encuadre en el nomenclador de gastos de la comuna, y como principio general, la razonabilidad del gasto en función de la utilidad pública que de ella se desprenda.
+
+Ahora bien, también podrían admitirse otros gastos en publicidad como por ejemplo, dirigidos a promocionar ciudades, parajes, instituciones o lugares, teniendo en cuenta que deben responder a conceptos como los previstos en el artículo 25 de la Ley Orgánica Municipal, debiendo primar siempre el interés colectivo o sectorial con proyección general.
+
+Sin embargo, el caso particular consultado trata de un auspicio a deportista profesional, lo que conlleva un provecho personal de un tercero a cambio de publicidad institucional.
+
+En conclusión, esta Secretaría entiende no factible la posibilidad de otorgar la publicidad especial propuesta, por no encuadrar la misma en los preceptos antes desarrollados."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29247/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>23/02/2018</td>
+      <td>[007.0] Municipalidad de BAHIA BLANCA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      MÉDICOS [BONIFICACIONES]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            ue no pueda ser realizada por el titular-. Y además, aunque dicha circunstancia sólo se ha de renovar en el tiempo en la medida que acontezcan esos <font class="text-warning"><strong>eventos</strong></font>, esto ha sido previsto, al menos en su faz remunerativa, en la Ordenanza 8398 del 28 de diciembre de 1994 -acotación efectuada toda vez que n
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29043/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: formulada por la Contadora de la Municipalidad de BAHIA BLANCA, a fin de que este Organismo se expida sobre la procedencia de incluir en el cálculo del “Sueldo Anual Complementario” correspondiente a los profesionales médicos de la comuna, el concepto Bonificación por Reemplazo de Guardia en día hábil y día no hábil.
+
+A tal efecto se acompaña el Convenio Colectivo de Trabajo que nuclea a los Trabajadores Municipales de Bahía Blanca, aprobado por Ordenanza 18601 de fecha 1ro. de septiembre de 2016 – conf. fs. 16/41 – y dictamen producido por la Asesoría Letrada del propio municipio –fs. 6/8 -.
+
+Respuesta: Previo a la intervención de esta Secretaría, se ha expedido la Delegación Zona IX - Bahía Blanca de este Organismo, la que señala que deberá realizarse un estudio pormenorizado de cada agente en particular al momento de la liquidación correspondiente, debiendo incluir el concepto siempre y cuando cumpla con la condición de regularidad y permanencia y se halle sujeta a aportes previsionales.
+
+Si bien he de coincidir con lo señalado por la Delegación, resultaría necesario precisar este enunciado un tanto genérico, a partir de la legislación vigente en la materia en el Municipio y la Provincia.
+
+En principio acompañamos copias de dictámenes elaborados por esta Secretaría que permitirán acotar el concepto de “remuneración” que ha sido recepcionado en la legislación provincial y por la Suprema Corte de Justicia de la Provincia de Buenos Aires  (exptes. Nro. 4001-0105-2017-0-1 y 5300-303-2017-0-1).           
+
+En el caso puntual traído a consulta, resulta conveniente tener presente lo establecido en el art. 28 del Convenio Colectivo vigente en la Comuna que deviene de una réplica de la redacción dada al art. 72 apartado e) de la Ley 14.656, cuando señala que “…Todo trabajador gozará del beneficio de una retribución anual complementaria, conforme lo determine la legislación vigente. Se liquidará de acuerdo a la mejor remuneración percibida por todo concepto en cada semestre…”.
+
+Por tal motivo me he de circunscribir a la frase final del citado artículo “la mejor remuneración percibida por todo concepto en cada semestre”, y más precisamente, al término remuneración, que implica ingresos de carácter remuneratorio cualquiera sea su modalidad, a la que tendremos que sumarle los caracteres de habitualidad y permanencia, para resultar factibles de integrar el Sueldo Anual Complementario. Entonces deberemos analizar si la bonificación por reemplazo de guardia posee esas características.
+
+En principio un reemplazo implica de por sí una situación no ordinaria, y si bien puede resultar una verdad manifiesta que la misma sólo se puede dar si quien tiene que efectuar la guardia, no puede hacerlo, posee cierto paralelismo con el caso del docente suplente -que sólo ejerce su actividad en la medida que no pueda ser realizada por el titular-. Y además, aunque dicha circunstancia sólo se ha de renovar en el tiempo en la medida que acontezcan esos eventos, esto ha sido previsto, al menos en su faz remunerativa, en la Ordenanza 8398 del 28 de diciembre de 1994 -acotación efectuada toda vez que no se cuenta, en estas actuaciones, con otra norma municipal que complemente la citada ordenanza-. Esta actividad normativa de la administración municipal, dando un tratamiento especial a la situación, refleja que la misma ha de producirse con cierta habitualidad.
+
+Similar situación acontece con el carácter de permanencia, ya que la circunstancia del reemplazo se dará siempre regularmente en caso de necesitarse los mismos. Las condiciones señaladas tienen directa relación con el servicio de guardias médicas. Por tratarse la salud de un servicio público esencial, su regularidad y habitualidad deben estar garantizadas por el Estado, y de tal forma la Municipalidad de Bahía Blanca así lo ha previsto.
+
+Finalmente, si a la bonificación abonada en concepto de reemplazo de guardia se le efectuaran los aportes al Instituto de Previsión Social, ello complementaría el cuadro para determinar que la misma posee el carácter remuneratorio al que hemos hecho referencia con anterioridad.
+
+Como colofón debemos señalar que para el caso de que surgiera alguna duda al respecto, de conformidad a lo dispuesto en el art. 1ro. de la Ley 14.656, en armonía con lo establecido en el art. 39 apartado 3 de la Constitución de la Provincia de Buenos Aires, la situación ha de ser interpretada a favor del trabajador.
+
+No obstante lo expuesto, serán las propias autoridades municipales las que evaluarán si el pago de reemplazo de guardia forma parte de la remuneración de los profesionales que deben cumplir con dicha tarea."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29043/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>09/10/2017</td>
+      <td>[072.0] Municipalidad de MAR CHIQUITA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ASOCIACIÓN CIVIL  [COMPRA DIRECTA]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            as de gobierno”. El Municipio, en forma general se compromete a aportar recursos humanos, colaborar con la logística, difusión y organización de <font class="text-warning"><strong>eventos</strong></font> relacionados al Plan Estratégico y a aportar los recursos económicos necesarios. Por otro lado, la Asociación Civil se compromete a realiza
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/28716/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: relativa a una contratación efectuada por la comuna en forma directa con la “Asociación Civil por la Responsabilidad Social AMARTYA” -asociación civil sin fines de lucro conformada como ONG-.
+
+Concretamente consulta si es posible contratar bajo esa modalidad a una ONG, en razón de no tratarse de una entidad pública –que posibilite su contratación en forma directa, operando la excepción al régimen del artículo 151 de la LOM, según artículo 156 inciso 2) de la citada norma-.     
+
+Con motivo de dicha inquietud se ha expedido la Delegación de este Organismo Zona X - Mar del Plata, mediante el dictamen que luce agregado a fs. 3/4 de estas actuaciones, al que nos remitimos en honor a la brevedad.
+
+Teniendo en cuenta el desarrollo que se ha efectuado en el citado dictamen, la conclusión a la que se arriba resulta correcta, ya que el negocio jurídico que pretende realizarse no encontraría su marco de legalidad dentro de una contratación directa. Ello así, toda vez que el monto involucrado de pesos ... ($ ...) excede holgadamente los límites económicos impuestos para una contratación de esas características -conforme a lo dispuesto por la Resolución N° 223/17 del Ministerio de Gobierno de la Provincia- y atento no encuadrar en ninguna de las excepciones contempladas en el art. 156 de la LOM.
+
+Los procedimientos de selección del cocontratante pueden ser una licitación privada o pública -en las que dicha Asociación podrá participar-, a efectos de ampliar la concurrencia con propuestas que le permitan a la comuna cotejar las ventajas y desventajas para disponer la adjudicación a la mejor de ellas, dando de tal modo cumplimiento a la modalidad de contratación requerida para este caso por la Ley Orgánica de las Municipalidades. Por lo expuesto, debería efectuarse la licitación correspondiente.
+
+Dictamen de Delegación:
+
+&quot;...De la documental acompañada, surge que el Sr. Intendente Municipal (...) suscribió un convenio marco de cooperación y asistencia técnica con la Asociación Civil por la Responsabilidad Social Amartya, representada por su Presidente Christian Tiscornia Biaus con el fin de “definir las condiciones de colaboración por medio de las cuales la Municipalidad y Amartya trabajarán de forma mancomunada para lograr la gestión sustentable del Partido de Mar Chiquita, la cual sea transversal a todas las iniciativas, programas y obras de gobierno”. El Municipio, en forma general se compromete a aportar recursos humanos, colaborar con la logística, difusión y organización de eventos relacionados al Plan Estratégico y a aportar los recursos económicos necesarios. Por otro lado, la Asociación Civil se compromete a realizar la coordinación del Plan Estratégico, aportar recursos humanos, elaborar recomendaciones y actividades para la ejecución del Plan, colaborar con el desarrollo, y poner a disposición su escuela de sustentabilidad Quinta Esencia para llevar a cabo las acciones educativas y culturales.
+
+Por otro lado, también se acompaña copia de un Convenio específico de asistencia técnica -Plan de Educación Ambiental Mar Chiquita- a través de cual ambas partes se comprometen a cooperar mutuamente para implementar el Plan de Educación Ambiental, aportando la Municipalidad la suma de $... destinado al Plan de Referentes Ambientales que conforma el Anexo II del Convenio, en tres cuotas. Por otro lado, la Asociación se compromete a realizar la coordinación de dicho Plan, buscar cofinanciamiento de actores públicos y privados, poner a disposición las instalaciones mencionada en el párrafo que antecede y efectuar las rendiciones de gastos correspondientes.
+
+Del Anexo II que se agrega se describe al Programa como un proceso de formación docente para directivos y profesores de nivel inicial, primario y secundaria, coordinado por Amartya, el área de Cultura municipal y la Secretaría de Educación del Partido, que establezca en las instituciones ambientales del Partido referentes capaces de planificar, elaborar, gestionar, dar seguimiento y evaluar procesos y proyectos de educación ambiental en cada una de sus instituciones.
+
+Asimismo, consta agregado en el expediente el estatuto de AMARTYA, Resolución de la Inspección General de Justicia N° 77 del año 2006 que la autoriza a funcionar con carácter de persona jurídica, actas de asamblea y copia del poder otorgado a su representante. Consta también declaración de interés educativo del Plan de Educación Ambiental de Mar Chiquita 2016-2020 otorgada por la Dirección General de Cultura y Educación de la Provincia de Buenos Aires.
+
+Por otro lado, debe agregarse que conforme lo informado por la Municipalidad en Consulta efectuada por expediente municipal N° 597-17, el financiamiento de dicho Plan se realizaría con el Fondo de Financiamiento Educativo. En dicho expediente se agregó también nota con firma digital, sin certificar, de fecha 17 de mayo de 2017 de la Sra. (...), quien en su carácter de Jefa de Gabinete de Asesores del Ministerio de Ambiente y Desarrollo Sustentable de la Nación informa que habiendo tomado intervención la Dirección de Educación Ambiental y la Dirección Nacional de Desarrollo Sustentable de la Subsecretaría de Cambio Climático y Desarrollo Sustentable, dependiente de la Secretaria de Política Ambiental, Cambio Climático y Desarrollo Sustentable, considerando que PLANMAR constituye un aporte significativo para la difusión de temáticas ambientales a la vez que contribuye a enriquecer las prácticas de educación ambiental, estima que la propuesta es altamente positiva por lo que el Ministerio otorga el  auspicio institucional solicitado.
+
+Debe también agregarse que el art. 112 de la Ley Nacional de Educación, establece que tanto el Ministerio de Educación de Nación y las jurisdicciones promoverán propuestas de educación no formal, incluyendo el objetivo en el inciso d) de “Coordinar acciones con instituciones públicas o privadas y organizaciones no gubernamentales, comunitarias y sociales para desarrollar actividades formativas complementarias de la educación formal”, supuesto en el cual encuadraría el presente Convenio.
+
+Esta Relatoría considera que si bien se trata de una asociación civil sin fines de lucro, conformada como ONG, no encuadra en una de las excepciones previstas por la ley para tratar en forma directa y que no se llevó a cabo ningún mecanismo de selección o concurso de proyecto previo a su formalización...&quot;"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/28716/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>30/09/2016</td>
+      <td>[108.0] Municipalidad de SAN FERNANDO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      PUBLICIDAD [FACEBOOK]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            la comuna, resultaría necesaria una comunicación más efectiva, precisa y que llegue a toda la comunidad en lo que respecta a campañas sanitarias, <font class="text-warning"><strong>eventos</strong></font> culturales, actividades deportivas, obras públicas y demás cuestiones -en apoyo al derecho a la información del ciudadano-.
+
+Por último,
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/27617/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+Consulta: Si resulta factible destinar recursos a la generación de campañas para promocionar la página de Facebook institucional de la ciudad y así conseguir un crecimiento de suscriptores (vecinos) a esa red social.
+
+Se afirma que el avance de la comunicación por canales 3.0 a través del surgimiento de las redes sociales posibilitó que las mismas prevalezcan a la hora de recibir y buscar información y opinar sobre la misma; destacándose que los canales sociales digitales institucionales se convirtieron en la fuente de consulta más importante para los vecinos a la hora de conseguir datos de las acciones de los municipios.
+
+Se informa que todas las campañas publicitarias desarrolladas en la página de facebook institucional (www.facebook.com/SanFerMunicipio) han sido solventadas hasta el momento con fondos particulares.
+
+Asimismo, se señala que a efectos de que los sanfernandinos se enteren y beneficien de las acciones encaradas por la comuna, resultaría necesaria una comunicación más efectiva, precisa y que llegue a toda la comunidad en lo que respecta a campañas sanitarias, eventos culturales, actividades deportivas, obras públicas y demás cuestiones -en apoyo al derecho a la información del ciudadano-.
+
+Por último, indica que el pago a Facebook es digital (internet), por tarjeta de crédito, débito o paypal.
+
+A fojas 4/6 se acompaña copia de las formas de pago, del resultado de una campaña de publicidad encarada por el municipio y del informe de facturación emitido por Facebook.
+
+Respuesta: En principio corresponde citar que este Tribunal se ha expedido en el sentido de que los gastos municipales deben afrontarse mediante cancelaciones bancarias por parte de la Tesorería o a través de Cajas Chicas en caso de ser menores -conforme artículos 190 y 192 del Decreto Ley Nº 6.769/58-, pudiendo eventualmente efectuarse cancelaciones por adhesión a débito a la cuenta corriente municipal, previa aceptación de la factura de la empresa prestadora del servicio; o bien por cuenta corriente con la empresa, girando mediante transferencia o pago con cheque no a la orden (expte. Nº 5300-771-2015-0-1 Municipalidad de Presidente Perón); no advirtiéndose en el caso particular la posibilidad de cumplir con las modalidades de pago señaladas.
+
+En otro orden, en materia de publicaciones corresponde recordar que resultan procedentes los gastos referidos a la publicidad relacionada con la información de los actos de gobierno, esto es la indicada en artículos 193 inciso 1º de la Constitución Provincial, 165 inciso 6º del Decreto Ley Nº 6.769/58 y 153 del Reglamento de Contabilidad; habiéndose interpretado que publicidad oficial es la referida a los antecedentes determinados por dichas normas, como también la relacionada con ordenanzas de señalado interés público y la necesaria de acuerdo a la normativa vigente. En ese sentido, se ha sostenido que debe considerarse como publicidad oficial la referida a la información de los actos de gobierno y en la medida de la objetividad de la forma, a diferencia de aquella subjetiva sesgada a favor de una persona o que posea una tendencia a favorecer actos personales. Básicamente, entonces, se ha entendido factible aquella publicidad que ofrece información de interés general y utilidad pública, sobre actos propios del quehacer municipal, efectuada con el objetivo de informar políticas, programas y servicios, en beneficio de toda la comunidad, y efectuada a través de los medios contratados por el Municipio (conforme expediente 4134-20928-2014-1-1-Municipalidad de Ituzaingó).
+
+En el caso particular aquí planteado, los gastos que se pretenden afrontar son los destinados a obtener suscriptores de la Página de Facebook Institucional.
+
+Finalmente, se destaca que las cláusulas predispuestas por Facebook para la prestación del servicio determinan la prórroga de jurisdicción a Tribunales extranjeros en caso de controversia.
+
+En atención a lo expuesto y en función de los antecedentes reseñados, esta Secretaría no estima factible la contratación de Facebook con fondos municipales, para el servicio de generación de campañas publicidad a efectos de lograr mayor cantidad de suscriptores a la página que la Comuna posee en esa plataforma social. 
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/27617/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>24/05/2016</td>
+      <td>[018.0] Municipalidad de CAPITAN SARMIENTO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      RECURSOS MUNICIPALES [PLACAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            
+
+            Como conclusión, el gasto derivado de la adquisición de placas -que incluyan el apellido del Intendente- para entregar en <font class="text-warning"><strong>eventos</strong></font> municipales a Instituciones que se inauguran u homenajean, resultará procedente siempre que se desprenda que tal entrega se hace en nombre y 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/27010/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Relacionada con la posibilidad de solventar con recursos municipales el gasto que demanda la adquisición de Placas para ser colocadas en homenaje o inauguración de Instituciones, en las que se inscribe la razón, el nombre del municipio, el del intendente (que actúa nombre y representación de la Municipalidad) y la fecha. 
+
+Respuesta: La Jurisprudencia de este H. Organismo en el tratamiento del Fallo del Recurso de Revisión correspondiente al Municipio de Tres Lomas Ejercicio 2005 (expediente  4-127.0/05-0-1-0) de fecha 05/02/09, para un caso de inclusión del apellido del intendente en servicios de prensa y propaganda, aceptó el gasto “ante la falta de intención de promoción política a título personal, considerando que el objetivo final fue el de informar, publicitar la acción de gobierno, y dentro de ésta destacar especialmente la ejecución de obras públicas”, agregando que “…la publicidad en cuestión fue realizada en momentos en que no existía necesidad de hacerse campaña a título personal ante la circunstancia de inexistencia de la celebración de elecciones que involucren al Sr. Intendente Municipal”.
+
+            En consulta según Expediente N°4123-2377/11 de la Municipalidad de Pinamar, se ha citado que  el  artículo 42º de la Ley Nacional n° 25.188 (Ley de Ética de la función Pública ) -que dispuso la imposibilidad de constar en actos, programas, obras, servicios y campañas, nombres que supongan promoción personal de las autoridades o funcionarios públicos-, no resulta de aplicación para el ámbito de la Provincia de Buenos Aires, por no haberse dictado en tal territorio norma similar que regule la publicidad de los actos de Gobierno; añadiendo que no obstante ello, la doctrina y la jurisprudencia de este Organismo se han pronunciado en este aspecto, considerando como gastos de publicidad admitidos todos los que hagan a la información de los actos de gobierno y en la medida de la objetividad de la forma, a diferencia de aquella subjetiva, sesgada a favor de una persona o que posea una tendencia a favorecer actos personales. 
+
+            Corresponde señalar que a la fecha no se ha dictado norma en la provincia sobre ética pública.
+
+            Como conclusión, el gasto derivado de la adquisición de placas -que incluyan el apellido del Intendente- para entregar en eventos municipales a Instituciones que se inauguran u homenajean, resultará procedente siempre que se desprenda que tal entrega se hace en nombre y representación del Municipio, sin que se vislumbre pretensión política ni interés personal de parte del titular del Ejecutivo en tal acto."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/27010/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>08/05/2015</td>
+      <td>[027.0] Municipalidad de CORONEL SUAREZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            zos, meriendas), a pesar de recibir un subsidio de la Provincia, contar con fondos provenientes de una cuota de padres y realizar diferentes tipos de <font class="text-warning"><strong>eventos</strong></font>, rifas, etc., con fines recaudadores.
+
+En principio, en relación con el Fondo de Financiamiento Educativo corresponde señalar que a partir
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25978/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre la factibilidad de otorgar un subsidio al Jardín Maternal “Hijitus”, con recursos provenientes del Fondo de Financiamiento Educativo, que es administrado por la institución sin fines de lucro &quot;Liga de Madres de Familia&quot;. A su vez, requiere conocer si dicho jardín se encuentra dentro de la Resolución AG 0010/14 de este Organismo.
+
+Respuesta: De las presentes actuaciones se desprende que a dicho jardín maternal concurren niños desde los 45 días hasta los 5 años de edad, que la administración está a cargo de la Liga de Madres de Familia (con trabajo voluntario y ad honorem) y que es la única guardería existente en el municipio. Se argumenta la dificultad presentada para pagar sueldos, cargas sociales y otros gastos (seguros, servicios, almuerzos, meriendas), a pesar de recibir un subsidio de la Provincia, contar con fondos provenientes de una cuota de padres y realizar diferentes tipos de eventos, rifas, etc., con fines recaudadores.
+
+En principio, en relación con el Fondo de Financiamiento Educativo corresponde señalar que a partir de la sanción de la Ley Nacional Nº 27.008 de Presupuesto General de la Administración Pública Nacional para el ejercicio fiscal 2015, se establece la vigencia del artículo 7º de la Ley Nacional Nº 26.075, asegurando el reparto automático de los recursos a los municipios para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En el mismo sentido, la Ley provincial Nº 14.652 de Presupuesto General de la Provincia de Buenos Aires para el ejercicio 2015, establece que los recursos de afectación específica que perciba la Provincia, en virtud de la vigencia del artículo 7º de la Ley Nacional Nº 26.075, serán distribuidos en forma automática, según las pautas establecidas en el artículo 1º y concordantes de la Ley Nº 10.559 y modificatorias, para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En armonía con lo desarrollado precedentemente, este Organismo suscribió la Resolución Nº AG 0010/14, cuyo artículo 1º determina que los mencionados recursos deberán ser utilizados por los Municipios en concordancia con los objetivos estrictamente educativos del artículo 2º de la Ley Nacional Nº 26.075.
+
+En razón de las normas enunciadas y de la naturaleza de la organización beneficiaria, incorporada en los niveles de la estructura del Sistema Educativo Nacional en los términos del artículo 17º de la Ley de Educación Nacional Nº 26.206, compartiendo lo informado a fojas 3 por la Delegación Zonal, se entiende que resulta viable la utilización del fondo aquí tratado para los fines pretendidos.
+
+No obstante ello, es necesario aclarar que la institución Liga de Madres de Familia, para poder ser beneficiada con la obtención del subsidio en cuestión, debe figurar inscripta en el Registro de Entidades de Bien Público del municipio, debiendo presentar la rendición de cuentas de las ayudas recibidas."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25978/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>09/02/2015</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             de la Ley Nacional n° 26.075.
+
+            Por todo lo expuesto, esta Secretaría entiende, que en razón de este marco normativo, no resulta factible la aplicación de recursos provenientes del Fondo Educativo Nacional para el financiamiento de gastos derivados de <font class="text-warning"><strong>eventos</strong></font> culturales.
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25683/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre la posibilidad de financiar un evento cultural con recursos provenientes del Fondo Educativo Nacional, atento a la notificación de la Resolución n° 10/14 de este H. Tribunal de Cuentas.
+
+Respuesta: Al respecto, los mencionados recursos se destinarían para cancelar los gastos que no puedan ser cubiertos con el producido de las entradas en el marco de la Fiesta Nacional de la Guitarra, evento cultural de mayor trascendencia de la ciudad.
+
+                                 Corresponde señalar que, a partir de la sanción de la Ley Nacional n° 27.008 de Presupuesto General de la Administración Pública Nacional para el ejercicio fiscal 2015, se establece la vigencia del artículo 7° de la Ley Nacional n° 26.075, asegurando el reparto automático de los recursos a los municipios para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+                                 En el mismo sentido, resulta importante considerar lo establecido por la Ley Provincial n° 14.652  de Presupuesto General de la Provincia de Buenos Aires para el ejercicio 2015, que establece que los recursos de afectación específica que perciba la Provincia, en virtud de la vigencia del artículo 7 de la Ley Nacional n° 26.075, serán distribuidos en forma automática, según las pautas establecidas en el artículo 1° y concordantes de la Ley n° 10.559 y modificatorias, para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+                                 En armonía con lo desarrollado precedentemente, este Organismo suscribió la Resolución n°10/14, en la que por medio de su artículo 1°, se determina que los mencionados recursos deberán ser utilizados por los Municipios en concordancia con los objetivos estrictamente educativos del artículo 2° de la Ley Nacional n° 26.075.
+
+            Por todo lo expuesto, esta Secretaría entiende, que en razón de este marco normativo, no resulta factible la aplicación de recursos provenientes del Fondo Educativo Nacional para el financiamiento de gastos derivados de eventos culturales."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25683/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>10/07/2014</td>
+      <td>[007.0] Municipalidad de BAHIA BLANCA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      INTENDENTE MUNICIPAL [FIRMA]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Deliberante de la Ciudad de Bahía Blanca” -esta última mediante declaración al respecto-, a través de las cuales podrá declarar de su interés <font class="text-warning"><strong>eventos</strong></font> como congresos, exposiciones, simposios, asambleas, reuniones, homenajes, actos conmemorativos, etc., mediante resolución suscripta por el se
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25165/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Respecto de la posibilidad de la delegación de firma del Intendente municipal en el Secretario de Gobierno en las “declaraciones de interés municipal”, cuya regulación se establece en el municipio a través de la Ordenanza Nº 11415 “Régimen de Honores”, a fin de dotar de mayor celeridad a la gestión de las mismas.
+ 
+Respuesta: La citada ordenanza instituye en sus artículos 31º, 32º y 33º las figuras de reconocimiento “Declaración de Interés Municipal de la Ciudad de Bahía Blanca” y “Declaración de Interés del H. Concejo Deliberante de la Ciudad de Bahía Blanca” -esta última mediante declaración al respecto-, a través de las cuales podrá declarar de su interés eventos como congresos, exposiciones, simposios, asambleas, reuniones, homenajes, actos conmemorativos, etc., mediante resolución suscripta por el señor Intendente Municipal. Por su parte, el artículo 35º bis establece la figura de “Reconocimiento Municipal” a los acontecimientos locales que aporten positiva contribución deportivo-cultural o de interés general a la comunidad.
+Analizando el marco normativo, la Ley Orgánica de las Municipalidades establece en su artículo 181º que los Intendentes Municipales podrán delegar, por resolución expresa, el ejercicio de facultades propias en los secretarios, según la competencia que a ellos corresponda, detallando taxativamente las materias en las cuales no se podrá realizar.
+En los casos consultados en las presentes actuaciones, se coincide con los conceptos vertidos en el informe de la Delegación Bahía Blanca del Organismo, en cuanto a que se trata de cuestiones que no revisten el carácter sustancial de actos de gobierno o políticos ni que afecten o comprometan el régimen patrimonial o jurídico de la Comuna, ni las que específicamente están reservadas al Departamento Ejecutivo, tal como se prescribe en los artículos 181º y 182º del plexo legal citado. También debe resaltarse lo expresado en dicho informe respecto de que las declaraciones de interés o reconocimiento municipal en sí mismas son un instrumento para dar relevancia a algunos eventos por parte del municipio, y de esa manera factibilizar la realización de una erogación, pero de ninguna forma alcanzan para dotar de legitimidad a un gasto, la que deberá ser probada teniendo en cuenta la observancia de requerimientos normativos y que se correspondan con finalidades sociales, comunitarias, sanitarias, etc., y que además no revistan el carácter de personal de los funcionarios que los disponen o autorizan (artículos 241º y siguientes de la LOM, 126 del Reglamento de Contabilidad y 62 de las Disposiciones de Administración anexas al Decreto 2980/00 de RAFAM).
+En razón de lo expuesto en el presente dictamen, se entiende factible la delegación de firma del Intendente municipal en el Secretario del área respectiva para el caso de las declaraciones consultadas, con el objeto de aportar celeridad a la gestión de dichos actos, sin perjuicio de que el titular del Departamento Ejecutivo tenga intervención directa en los casos que estime conveniente."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25165/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>20</strong></div>
+ 
+<div class="pagination">
+    <ul>
+    
+    
+                        <li class="active"><a href="#">1</a></li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">2</a>
+            </li>
+        
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;</a>
+        </li>
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;&rarr;</a>
+        </li>
+        </ul>
+</div>
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

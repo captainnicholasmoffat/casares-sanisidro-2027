@@ -1,0 +1,191 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+     <div class="container">
+     <h4 class="pull-left">Ver Jurisprudencia "35711 Jur.  GASTOS [NO PREVISTOS POR LAS NOR..]"</h4>
+         <div class="pull-right">
+      <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/jurisprudencia/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>     </div>
+        </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	    <table class="table table-bordered table-striped table-hover">
+      <tr>
+  <th>N° U.I.</th>
+  <td>35711</td>
+</tr>
+<tr>
+  <th>Fecha Acuerdo</th>
+  <td>23/03/2023&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Ámbito</th>
+  <td>Municipal</td>
+</tr>  
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades A</li>
+        </ul>
+  </td>
+</tr> <tr>
+    <th>Ejercicio</th>
+    <td>2021&nbsp;</td>
+ </tr>   
+<tr>
+  <th>Ente</th>
+  <td>[032.0] Municipalidad de DOLORES&nbsp;</td>
+</tr>         
+<tr>
+  <th>Resúmen</th>
+  <td><p><span style="font-size:9pt">Se observ&oacute; la falta de contratos en distintas erogaciones realizadas por el Municipio, tales como provisi&oacute;n de servicio de capacitaci&oacute;n m&oacute;dulo conciliaci&oacute;n bancaria del sistema Rafam, Contrataci&oacute;n de un tom&oacute;grafo, Contrato psic&oacute;loga, Alquiler De Fotocopiadoras, Contrataci&oacute;n de Cami&oacute;n sin chofer para recolecci&oacute;n de basura y transporte de suelo en calles de la ciudad, Contrataci&oacute;n de artistas, Renovaci&oacute;n del contrato de la casa de la estudiante femenina en la ciudad de La Plata</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:9pt">Se viol&oacute; el art&iacute;culo 126 del Reglamento de Contabilidad y Disposiciones de Administraci&oacute;n para las Municipalidades de la Provincia de Buenos Aires, por la falta del respectivo contratos, alcanzados como Responsables el Intendente Municipal y la Contadora Municipal en base a las atribuciones y deberes establecidos en los art&iacute;culos 1&ordm;, 107, 108 inciso 17), 186 y 187 incisos 5) y 6) art&iacute;culo de la Ley Org&aacute;nica de las Municipalidades de la Provincia de Buenos Aires, 1&ordm;, 8&ordm; y 9&ordm; incisos d) y f) del Reglamento de Contabilidad de las Disposiciones de Administraci&oacute;n para las Municipalidades de la Provincia de Buenos Aires y 1&ordm; y 32 inciso i) de las Disposiciones de Administraci&oacute;n de los Recursos Financieros y Reales para Municipios aprobadas por el art&iacute;culo 3&deg; del Decreto N&ordm; 2980/00 y declarado de aplicaci&oacute;n por el art&iacute;culo 9&ordm; de la Ley N&ordm; 13.295.&nbsp;</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:9pt">Funcionario Responsable: Intendente Municipal - Sanci&oacute;n: Multa</span></p>
+
+<p><span style="font-size:9pt">Funcionario Responsable: Contadora Municipal- Sanci&oacute;n: Multa</span></p>&nbsp;</td>
+</tr>
+<tr>
+  <th>Responsables</th>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <th>Sanción</th>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+            &bull;erogaciones, sin, contrato<br>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;GASTOS [NO PREVISTOS POR LAS NORMAS LEGALES VIGENTES]<br>
+     &nbsp;
+  </td>
+</tr>    </table>
+ </div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

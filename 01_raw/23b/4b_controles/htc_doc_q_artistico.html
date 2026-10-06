@@ -1,0 +1,502 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="artistico" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>05/04/2021</td>
+      <td>[082.0] Municipalidad de 9 DE JULIO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [CONSTRUCCIóN DE NUEVO ESPACIO RECREATIVO, CULTURAL Y SOCIAL]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA DIGITAL 2012-2021: Por las presentes actuaciones el Intendente de la Municipalidad de 9 DE JULIO, se dirige a este H. Tribunal de Cuentas a los fines de presentar una consulta relacionada con la posibilidad de utilizar recursos del Fondo de Financiamiento Educativo para la construcción d
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/31718/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 2012-2021: Por las presentes actuaciones el Intendente de la Municipalidad de 9 DE JULIO, se dirige a este H. Tribunal de Cuentas a los fines de presentar una consulta relacionada con la posibilidad de utilizar recursos del Fondo de Financiamiento Educativo para la construcción de nuevos espacios en el Paseo Vía Crucis.
+Al respecto se señala, que en los años 2013 y 2014 se financió parcialmente la construcción de dicho Paseo con recursos del mencionado Fondo, y por ello por medio de la presente, se solicita a este Organismo que se expida sobre la correspondencia de volver a hacerlo para la ampliación en cuestión.
+En relación a la obra, se agrega escrito de la Secretaria de Cultura, Educación y Deportes, en el que se detalla que el objetivo de la misma es “Incorporar un espacio al servicio de todas las instituciones educativas para ser utilizado con fines recreativos, culturales, sociales considerando el nuevo rol que hoy juegan los ámbitos complementarios a las AULAS; motivo por el cual resulta fundamental el desarrollo de estos espacios municipales teniendo en cuenta cómo ha cambiado la dinámica de los aprendizajes en los últimos años.”
+Por otra parte, también se menciona que desde dicha Secretaría se observa “la necesidad de construir un espacio público el cual pueda ser utilizados tanto por la educación formal como no formal y a su vez un espacio recreativo para ser disfrutado por la sociedad en general”. En otro tramo se menciona que el proyecto tiene el propósito de dotar a la población en general de “un espacio físico adecuado para las actividades socioeducativas, deportivas y culturales, bridando la mejora en la calidad de vida….”
+Además, en dicho texto se menciona que “la finalidad de este tipo de construcciones es promover la práctica deportiva amateur, fortalecer el cuidado de la salud en niños, jóvenes y adultos, generando además un espacio público para la participación comunitaria, promoviendo procesos de inclusión que posibilitan el ejercicio de los derechos ciudadanos”.
+En último orden, se refiere a que “Con el propósito de crear y diseñar nuevas estrategias para dar respuestas al desarrollo y crecimiento sostenido de nuestro ecosistema artístico, se plantea la necesidad de crear un espacio con características de anfiteatro en la ciudad de 9 de Julio.”
+Sobre el particular, se adjunta intervención de la Delegación Zona XIX - 25 de Mayo en la que se expresa que luego de analizar los antecedentes y la fundamentación escueta obrante en el presente expediente, concluye que no queda reflejado con claridad que la iniciativa se refiera a un gasto estrictamente ligado con la finalidad y función educativa. Por ello, recomienda a las autoridades municipales elevar el proyecto completo a la Dirección General de Cultura y Educación, ya que resulta ser la repartición facultada para emitir normas aclaratorias e interpretativas sobre esta materia, para que se expida respecto al carácter educativo del proyecto y la procedencia del mismo.
+RESPUESTA: En primer lugar, coincidimos con la opinión exteriorizada en el dictamen confeccionado por la Delegación actuante.
+Como ya lo ha dicho, el marco normativo de aplicación referido a los recursos de afectación específica que percibió la Provincia de Buenos Aires en concepto del Fondo de Financiamiento Educativo (artículo 7° Ley Nacional N°26.075), en los años 2013 y 2014, se rigieron por las Leyes Nros. 14.393 y 14.552 respectivamente, y tuvieron vigencia exclusivamente para esos ejercicios fiscales.
+En la actualidad, la aplicación de estos recursos se encuentran regulados por la Ley N° 15.225 – Presupuesto General para el Ejercicio 2021, específicamente en el artículo 43 y conforme queda expresado, deberán ser destinados a cubrir gastos estrictamente ligados a la finalidad y función educación – abarcando tanto la educación formal como la no formal-.
+Asimismo, de la totalidad de los recursos que la Municipalidad de 9 de Julio recibe en concepto de este Fondo, debe afectar como mínimo el cuarenta por ciento (40%) de dichos recursos a la infraestructura escolar. La afectación de los recursos a infraestructura escolar deberá realizarse para la mejora de los servicios educativos existentes, priorizando i) la habitabilidad de los establecimientos educativos de niveles obligatorios ii) la ampliación de establecimientos de niveles obligatorios ya existentes iii) la habitabilidad y/o ampliación en servicios educativos de niveles no obligatorios iv) equipamiento mobiliario y educativo. La totalidad de dichas intervenciones deberán ser informadas a la Dirección General de Cultura y Educación con vistas a poder coordinar de manera más eficiente el uso de los recursos públicos.
+Por otra parte, la normativa prevé que en caso de haber cumplimentado lo previsto en el párrafo anterior sin alcanzar los porcentajes afectados a tal fin, los municipios deberán coordinar con la Dirección General de Cultura y Educación otros posibles destinos hasta alcanzar los porcentajes mencionados, dentro de la finalidad y función educación.
+Además, aquellos municipios que cuenten con servicios de educación formal municipal de niveles obligatorios oficialmente reconocidos por la Dirección General de Cultura y Educación, deberán destinar los recursos prioritariamente a cubrir los gastos de funcionamiento y mantenimiento de los mismos para garantizar la seguridad y normal prestación de dichos servicios.
+Ahora bien respecto a lo pretendido por el señor Intendente, advertimos que el nuevo espacio a construir, posee intrínsecamente distintas características de forma simultánea, pudiendo ser apreciado tanto sea educativo, deportivo o cultural, en razón de la escasa información y documentación respaldatoria remitida.
+En este sentido, consideramos que para que la presente obra pueda ser financiada con recursos del Fondo de Financiamiento Educativo, se debe demostrar con claridad que corresponde a un “gasto estrictamente ligado con la finalidad y función educativa”, conforme lo establece la Ley N° 15.225.
+Por tal motivo, al igual que lo menciona la Delegación Zona XIX - 25 de Mayo, resultaría conveniente que la Dirección General de Cultura y Educación como Autoridad facultada para emitir normas aclaratorias e interpretativas sobre esta materia, se expida de forma previa respecto al carácter educativo del proyecto y la procedencia de lo aquí pretendido.
+Posteriormente a que dicha Dirección se pronuncie en términos favorables respecto a la construcción de este espacio con recursos del Fondo de Financiamiento Educativo, esta Secretaría no tendría objeciones que formular respecto al mismo."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/31718/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>01/02/2019</td>
+      <td>[018.0] Municipalidad de CAPITAN SARMIENTO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA: La Intendente Interina de la Municipalidad de CAPITAN SARMIENTO reitera la elevación de las presentes actuaciones, referidas al uso del Fondo de Financiamiento Educativo para la refacción de galpones ubicados a la vera del ferrocarril -que serían cedidos a la comuna en comodato de uso,
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29771/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: La Intendente Interina de la Municipalidad de CAPITAN SARMIENTO reitera la elevación de las presentes actuaciones, referidas al uso del Fondo de Financiamiento Educativo para la refacción de galpones ubicados a la vera del ferrocarril -que serían cedidos a la comuna en comodato de uso, por la empresa Nuevo Central Argentino S.A.-.
+
+Inicialmente se consultó sobre la posibilidad de utilizar dichos recursos, a fin de concretar un espacio de encuentro para que los ciudadanos puedan recrear su historia mediante la utilización de los galpones citados, dándole un nuevo significado por medio de la cultura a la antigua Estación, fortaleciendo así la identidad de una ciudad nacida del ferrocarril, planificando desarrollar actividades socio culturales tales como: presentaciones artístico musicales, encuentros varios y convenciones locales y regionales, etc.. Se adjunta a fs. 4 dictamen del 05/02/18 de esta Secretaría al respecto.
+
+En esta oportunidad (fs. 8), la consultante indica que si bien la anterior presentación se efectuó atendiendo a una política socio cultural del municipio, recepcionados los galpones de parte del cedente, se advierte un uso casi estricto por parte de los establecimientos educativos, quienes los solicitan en préstamo para desarrollar diversas actividades escolares.
+
+RESPUESTA: En esta instancia respecto al uso del recurso afectado aquí tratado, resulta de aplicación la Ley N° 15.078 de Presupuesto de Gastos y Recursos de la Administración Provincial 2019. El artículo 38 de dicha norma determina que los recursos del Fondo de Financiamiento Educativo serán destinados a cubrir gastos ligados estrictamente a la finalidad y función educación, abarcando tanto la formal como la no formal.
+
+Así también establece que los municipios que cuenten con servicios de educación formal municipal oficialmente reconocidos por la DGCyE, destinarán los recursos prioritariamente a cubrir los gastos de funcionamiento y mantenimiento de los mismos.
+
+Que los municipios que integran el área territorial del conurbano bonaerense, conforme lo establecido en el artículo 1 de la Ley ? 13.473, deberán destinar como mínimo el cincuenta por ciento (50%) de estos recursos a la infraestructura educativa. Los restantes municipios deberán afectar como mínimo el cuarenta por ciento (40%) de dichos recursos a idéntico destino. Aclara que la afectación en infraestructura escolar debe realizarse para la mejora de los servicios educativos existentes, priorizando las instalaciones de gas, electricidad, reparaciones de cubiertas y sanitarios.
+
+Agrega que en caso de haber cumplimentado lo antes previsto sin alcanzar los porcentajes afectados a tal fin, los municipios deberán coordinar con la DGCyE otros posibles destinos para cumplimentarlos, dentro de la finalidad y función educación.
+
+Tal como se observa, la restricción legal refiere principalmente a cubrir los gastos de funcionamiento de los establecimientos educativos de gestión municipal, para luego referirse al porcentaje de los recursos a ser destinado como mínimo a infraestructura educativa.
+
+Ahora bien, cumplidos los preceptos legalmente establecidos, en relación al resto de los recursos, aplica la doctrina de este Organismo imperante al momento. Esto es, en el análisis de los gastos efectuados por los Municipios con los recursos provenientes del Fondo de Financiamiento Educativo creado por el artículo 7° de la Ley 26.075, se considerarán procedentes, tanto los vinculados con los objetivos del artículo 2° de dicha norma – ejemplo: gastos de adquisición y/o mantenimiento de equipamiento escolar, gastos referidos a la generación de programas de capacitación y apoyo pedagógico destinados al mejoramiento de la calidad educativa y a evitar la deserción escolar-, como con las propuestas, acciones y/o programas afines a la “Educación no Formal” en los términos del artículo 112 de la Ley de Educación Nacional N° 26.206.
+
+Habiéndose detallado el marco legal de aplicación del recurso afectado, esta Secretaría entiende factible el uso pretendido relacionado con la finalidad y función educación –según manifiesta la consultante-, una vez cumplidas las prioridades en él determinadas, y acreditada la firma del comodato de uso a largo plazo, como también el pedido y la utilización del sector a refaccionar por parte de los establecimientos educativos -circunstancias no documentadas-."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29771/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>05/02/2018</td>
+      <td>[018.0] Municipalidad de CAPITAN SARMIENTO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: El Intendente de la Municipalidad de CAPITAN SARMIENTO consulta sobre la posibilidad de utilizar recursos del Fondo de Financiamiento Educativo para refaccionar galpones ubicados a la vera del ferrocarril, que serán cedidos al municipio en comodato de uso por parte de la empresa Nuevo Cen
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29051/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: El Intendente de la Municipalidad de CAPITAN SARMIENTO consulta sobre la posibilidad de utilizar recursos del Fondo de Financiamiento Educativo para refaccionar galpones ubicados a la vera del ferrocarril, que serán cedidos al municipio en comodato de uso por parte de la empresa Nuevo Central Argentino S.A., para el destino que en párrafos siguientes se enuncia. Propone un plan de inversión de obras, ampliaciones y mejoras en el inmueble, que respetará su imagen y lo pondrá en valor, preservando los materiales originales.
+
+A su vez, manifiesta que la Dirección de Cultura Municipal -que funciona actualmente en el Centro Cultural “La Estación” del Distrito de Capitán Sarmiento-,  pretende concretar un espacio de encuentro para que los ciudadanos puedan recrear su rica historia mediante la utilización de los galpones citados, dándole un nuevo significado por medio de la cultura a la antigua Estación, fortaleciendo así la identidad de una ciudad nacida del ferrocarril.
+
+Conforme se detalla, se planifica desarrollar actividades socio culturales tales como:
+
+“Encuentro Nacional de Artesanos Cahuane”, “Fiesta Provincial de la Pastafrola”, presentaciones artístico musicales, encuentros y convenciones locales y regionales, etc.
+
+Respuesta: En primer lugar, es necesario tener en cuenta las prescripciones de la Ley N° 14.982 de Presupuesto de Gastos y Recursos de la Administración Provincial 2018. El artículo 46 de la norma, referido al Fondo de Financiamiento Educativo, determina que los recursos serán destinados a cubrir gastos ligados estrictamente a la finalidad y función educación. Así también establece: “Los municipios que cuenten con servicios de educación formal municipal, destinarán los recursos prioritariamente a cubrir los gastos de funcionamiento de los mismos. Los municipios que integran el área territorial del conurbano bonaerense, conforme lo establecido en el artículo 1 de la Ley ? 13.473, deberán destinar como mínimo el cincuenta por ciento (50%) de estos recursos a la infraestructura educativa. Los restantes municipios deberán afectar como mínimo el cuarenta por ciento (40%) de dichos recursos a idéntico destino. En ambos casos, la afectación dispuesta en el presente párrafo será de aplicación luego de contemplar los gastos de funcionamiento mencionados en el párrafo anterior.”
+
+Tal como se observa, la restricción legal refiere principalmente a cubrir los gastos de funcionamiento de los establecimientos educativos de gestión municipal, para luego referirse al porcentaje de los recursos a ser destinado como mínimo a infraestructura educativa, que para el caso de Capitán Sarmiento es de un 40%. En el caso del Municipio consultante, no se verifican establecimiento de gestión municipal.
+
+Por tal motivo, cumplida la aplicación en infraestructura, en relación al resto de los recursos aplica la doctrina de este Organismo imperante al momento. Esto es, en el análisis de los gastos efectuados por los Municipios con los recursos provenientes del Fondo de Financiamiento Educativo creado por el artículo 7° de la Ley 26.075, se considerarán procedentes, tanto los vinculados con los objetivos del artículo 2° de dicha norma – ejemplo: gastos de adquisición y/o mantenimiento de equipamiento escolar, gastos referidos a la generación de programas de capacitación y apoyo pedagógico destinados al mejoramiento de la calidad educativa y a evitar la deserción escolar-, como con las propuestas, acciones y/o programas afines a la “Educación no Formal” en los términos del artículo 112 de la Ley de Educación Nacional N° 26.206.
+
+Ahora bien, detallado el marco legal de aplicación del recurso afectado, reparemos en detalle en el proyecto en cuestión. No se ha adjuntado en el expediente precisiones concretas sobre lo pretendido que permitan arribar a esta Secretaría a una conclusión acabada sobre esta iniciativa. En tal sentido, el consultante solamente se limitó a exponer en la nota presentada, diversas pretensiones a realizar en los galpones ferroviarios, que corresponden a una acción de política socio-.cultural del municipio, no pudiéndose advertir la finalidad y función estrictamente educativa del gasto –en el caso, en el ámbito de la educación no formal del municipio- que exige la Ley N° 14.982.
+
+Por ello, considerando las explicaciones ofrecidas, esta Secretaría considera que no resultaría factible solventar las refacciones pretendidas con recursos del Fondo de Financiamiento Educativo."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29051/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>09/06/2015</td>
+      <td>[064.0] Municipalidad de LEANDRO N. ALEM</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Sobre la factibilidad de financiar con recursos provenientes del Fondo Educativo - Ley 26075, una serie de gastos de acuerdo al siguiente detalle:
+
+1) Ayuda financiera al Consejo Escolar del Distrito, para complementar y reforzar las asignaciones provinciales, en los gastos de "Transport
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/26068/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre la factibilidad de financiar con recursos provenientes del Fondo Educativo - Ley 26075, una serie de gastos de acuerdo al siguiente detalle:
+
+1) Ayuda financiera al Consejo Escolar del Distrito, para complementar y reforzar las asignaciones provinciales, en los gastos de &quot;Transporte Escolar&quot;, &quot;Menú Adolescente y Comedor&quot; y &quot;Desayuno Merienda Completa&quot;;
+
+2) Pago a talleristas y/o capacitadores, afectados a las Asistencias Técnicas Municipales, dentro de una propuesta de educación no formal en disciplinas y actividades de carácter productivo, artístico, recreativo y deportivo;
+
+3) Costos de funcionamiento del Centro Universitario de Leandro N. Alem, que dicta bajo la modalidad de educación a distancia, carreras de grado, pregrado y posgrado, mediante convenios con tres universidades nacionales y fundaciones;
+
+4) Becas estudiantiles, para alumnos de establecimientos oficiales universitarios y terciarios;
+
+5) Aporte adicional para garantizar el funcionamiento de Jardines Maternales que cuentan con aporte provincial, destinado especialmente al pago de sueldos y cargas sociales del personal docente y no docente, como así también prestación alimentaria y mejoras edilicias.
+
+Respuesta: A partir de la sanción de la Ley Nacional Nº 27.008 de Presupuesto General de la Administración Pública Nacional para el ejercicio fiscal 2015, se establece la vigencia del artículo 7º de la Ley Nacional Nº 26.075, asegurando el reparto automático de los recursos a los municipios para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En el mismo sentido, la Ley provincial Nº 14.652 de Presupuesto General de la Provincia de Buenos Aires para el ejercicio 2015, establece que los recursos de afectación específica que perciba la Provincia, en virtud de la vigencia del artículo 7 de la Ley Nacional Nº 26.075, serán distribuidos en forma automática, según las pautas establecidas en el artículo 1º y concordantes de la Ley Nº 10.559 y modificatorias, para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En el marco antedicho, el Tribunal de Cuentas dictó la Resolución AG 0010/14, determinando que los mencionados recursos deberán ser utilizados por los municipios en concordancia con los objetivos estrictamente educativos del artículo 2º de la Ley Nacional Nº 26.075 y destinados a entidades incorporadas al Sistema Educativo Nacional de acuerdo a lo normado en el artículo 17 de la Ley Nacional Nº 26.206, pudiendo ser aplicado para construcción y/o mantenimiento de infraestructura, generación de programas de capacitación y apoyo pedagógico a fin de mejorar la calidad educativa, adquisición y/o mantenimiento de equipamiento escolar, u otra finalidad educativa.
+
+A partir de las normas señaladas, se analizará cada finalidad en particular, a saber:
+
+Sobre las erogaciones incluidas en el punto 1), en cuanto a transporte escolar la doctrina de este Organismo ha considerado viable el uso del fondo en cuestión. Como los recursos destinados al transporte escolar son complementarios de los otorgados a tal efecto por la Provincia, y que están a cargo de la Dirección Provincial de Gestión Descentralizada, si la contratación y el correspondiente pago los realiza el Consejo Escolar, como consecuencia de que la Provincia financia hasta un límite preestablecido, se entiende que los municipios podrán subsidiar dichos gastos, debiendo el receptor del mismo rendir al municipio con la correspondiente copia autenticada de la documentación respaldatoria. También se ha considerado viable financiar con este fondo gastos de tipo alimentario (Expte. Nº 4024-083-2015-0-1, Municipalidad de Colón).
+
+En cuanto a las finalidades detalladas en el apartado 2), se considera que no resultan factibles, dado que se relacionan directamente con objetivos sociales y culturales. Concretamente dichas inversiones se vinculan con actividades de asistencias técnicas culturales dirigidas a toda la comunidad y técnicas deportivas con fines de contención e inclusión social, es decir poseen otros usos y destinos no ligados estrictamente  a la educación. 
+
+Con respecto a las erogaciones consignadas en el punto 3) podemos argumentar favorable el financiamiento pretendido, toda vez que los mismos están directamente relacionados con la promoción de la educación universitaria, coadyuvando al cumplimiento de uno de los objetivos primordiales de la Ley Nacional de Educación, tal es “el fortalecimiento de la democratización, la calidad, los procesos de innovación y la pertinencia de la educación brindada en el sistema universitario nacional” (artículo 2º inciso j Ley Nº 26.075). 
+
+El apartado 4) se refiere a becas estudiantiles, y sobre éstas la doctrina de este Organismo ha respondido de manera favorable, aceptando el uso del Fondo de Financiamiento Educativo para tales fines (Expte. Nº 4026-897-2014-0-0, Municipalidad de Coronel Dorrego).
+
+Por último, dando tratamiento al punto 5) de la consulta, se concluye que los Jardines Maternales forman parte de la organización de la educación inicial de acuerdo al artículo 24 de la Ley 26.206, por lo cual es viable el financiamiento pretendido para dicho destino. El recaudo a considerar en este punto será que, conjuntamente con las respectivas rendiciones de cuentas, las constancias de las comunicaciones que deberán realizar los receptores de los aportes adicionales a las autoridades correspondientes de la Dirección General de Escuelas, a los efectos de evitar un exceso de financiación de los gastos incurridos.  "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/26068/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>06/05/2015</td>
+      <td>[026.0] Municipalidad de CORONEL PRINGLES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Respecto a la posibilidad de utilización de los recursos provenientes del Fondo de Financiamiento Educativo para el funcionamiento de Talleres Educativos Municipales.
+
+Concretamente, se plantean las siguientes inquietudes: a) contratar profesores, docentes e idóneos a cargo de especial
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25977/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Respecto a la posibilidad de utilización de los recursos provenientes del Fondo de Financiamiento Educativo para el funcionamiento de Talleres Educativos Municipales.
+
+Concretamente, se plantean las siguientes inquietudes: a) contratar profesores, docentes e idóneos a cargo de especialidades en capacitación, aprendizaje y difusión de talleres educativos de formación gratuita; b) puesta en marcha de un nuevo ciclo de los Talleres Educativos Municipales, dado que han adquirido mayor alcance al estar destinados a fomentar la captación de alumnos de diferentes edades, brindando formación desde lo artístico, pasando por el plano laboral y sus alcances sociales; c) pretensión de generar espacios educativos, culturales y artísticos correspondientes a la creación de Coro Municipal, Orquesta Municipal, Talleres de Concientización Ambiental y Cuidados del Medio.
+
+Respuesta: En principio, en relación con el Fondo de Financiamiento Educativo corresponde señalar que a partir de la sanción de la Ley Nacional Nº 27.008 de Presupuesto General de la Administración Pública Nacional para el ejercicio fiscal 2015, se establece la vigencia del artículo 7º de la Ley Nacional Nº 26.075, asegurando el reparto automático de los recursos a los municipios para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En el mismo sentido, la Ley provincial Nº 14.652 de Presupuesto General de la Provincia de Buenos Aires para el ejercicio 2015, establece que los recursos de afectación específica que perciba la Provincia, en virtud de la vigencia del artículo 7º de la Ley Nacional Nº 26.075, serán distribuidos en forma automática, según las pautas establecidas en el artículo 1º y concordantes de la Ley Nº 10.559 y modificatorias, para cubrir gastos estrictamente ligados a la finalidad y función Educación.
+
+En armonía con lo desarrollado precedentemente, este Organismo suscribió la Resolución Nº AG 0010/14, cuyo artículo 1º determina que los mencionados recursos deberán ser utilizados por los Municipios en concordancia con los objetivos estrictamente educativos del artículo 2º de la Ley Nacional Nº 26.075.
+
+En razón de las normas enunciadas y de la naturaleza de la organización beneficiaria, no incorporada en los niveles de la estructura del Sistema Educativo Nacional en los términos del artículo 17º de la Ley de Educación Nacional Nº 26.206, se entiende que no resulta viable la utilización del fondo aquí tratado para los fines pretendidos."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25977/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>11/09/2014</td>
+      <td>[026.0] Municipalidad de CORONEL PRINGLES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Sobre la posibilidad de utilización del  “ Fondo de Financiamiento Educativo”, para el reacondicionamiento de un vagón de tren para ser utilizado como Oficina de Turismo Municipal.
+El citado vagón fue cedido en comodato gratuito por el término de 99 años por la Empresa Ferrosur 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25347/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre la posibilidad de utilización del  “ Fondo de Financiamiento Educativo”, para el reacondicionamiento de un vagón de tren para ser utilizado como Oficina de Turismo Municipal.
+El citado vagón fue cedido en comodato gratuito por el término de 99 años por la Empresa Ferrosur Roca S.A., siendo el objetivo del proyecto contar con un lugar físico que se encuentre ubicado en el principal acceso de la ciudad, a donde los visitantes se puedan acercar para obtener información de las atracciones y actividades relacionadas con el turismo y entretenimiento, así como sobre lugares de referencia histórica,  tales como Museos, Casa de la Cultura y Obras del Arquitecto Francisco Salamone muestras de la cultura patrimonial (como la Plaza Juan Pascual Pringles, Municipalidad, Matadero Municipal y Cementerio).
+ 
+Respuesta: La creación del Fondo de Financiamiento Educativo coparticipable, tiene su origen en la Ley Nacional Nº 26075,  que en su artículo 1º establece que “…la inversión en educación, ciencia y tecnología, será aplicada con el objetivo de garantizar la igualdad de oportunidades de aprendizaje, apoyar las políticas de mejora en la calidad de la enseñanza y fortalecer la investigación científico-tecnológica en el desarrollo económico y socio-cultural del país”; aclarando en su artículo 2° los objetivos propuestos basados fundamentalmente en la educación y enseñanza.
+Del análisis del tema traído a consulta, surge que el municipio desea fomentar el turismo en la zona, definiéndose  el  mismo,  como una actividad  económica donde se ponen en contacto diferentes culturas, que supone un intercambio de pautas de conducta, formas de vida y hábitos de diversa índole. El proyecto que intenta llevar a cabo la comuna se relaciona con el  turismo cultural el cual precisa de recursos históricos- artísticos para su desarrollo, como museos y monumentos, idiomas, folklore, costumbres, gastronomía, música, literatura, religión, historia, etc. que puede ser un positivo instrumento desarrollo local y regional, reflejado en una mejora de la educación, la formación, la creación de empleo y la generación de ingresos.
+Si bien la doctrina de este Organismo ha ampliado el criterio acerca de los conceptos en que pueden utilizarse los fondos en cuestión, se entiende que los mismos deben ser destinados a los objetivos prioritarios que estableció la ley, los cuales están referenciados fundamentalmente a incluir a la totalidad de la población en los distintos niveles educativos, tratando de erradicar el analfabetismo en todo el territorio nacional y fortalecer la educación de jóvenes y adultos en todos los niveles del sistema.
+ En razón de los fundamentos expuestos, y considerando que el turismo no se encuentra dentro de los objetivos prioritarios  que estableció la ley N° 26.075, se entiende que no sería viable el financiamiento del proyecto objeto de la presente consulta."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25347/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>13/12/2013</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si resulta viable afrontar los gastos que generará la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo Municipal, ya sea en forma parcial o totalmente.   
+ 
+Respuesta: De acuerdo a lo manifestado en la nota de elevación, las erogaciones que se efectúen est
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/24514/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si resulta viable afrontar los gastos que generará la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo Municipal, ya sea en forma parcial o totalmente.   
+ 
+Respuesta: De acuerdo a lo manifestado en la nota de elevación, las erogaciones que se efectúen estarán destinadas a solventar espectáculos artísticos de diversa índole, tales como una feria artesanal con más de 200 puestos, jineteadas, desfile de caballos y agrupaciones intermedias de la ciudad, charlas y  muestras relacionadas con la actividad desarrollada por Abel Fleury -eximio guitarrista de trayectoria mundial oriundo del partido- y otras actividades.
+La doctrina de este Organismo ha dictaminado con relación a los recursos del Fondo Educativo de afectación específica que perciba la Provincia para ser distribuidos entre los municipios, que el destino de ese fondo tenga un sentido amplio basándose en el origen que tiene dicho emprendimiento, que es la Ley nacional de Financiamiento Educativo Nº 26075. La misma fue ampliada y se dictaminó en forma posterior que se incluyen todos aquellos gastos e inversiones cuyos objetivos estén destinados indudablemente a la educación, cultura, ciencia y técnica.
+En virtud del marco doctrinario existente, se entiende que un evento de las características reseñadas en la presentes actuaciones se encuentra comprendido dentro de dicho contexto, razón por la que se entiende pueden financiarse en la forma propuesta todas aquellas actividades del citado evento que sean de libre acceso al público en general."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/24514/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>7</strong></div>
+ 
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

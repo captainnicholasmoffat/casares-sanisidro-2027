@@ -1,0 +1,2484 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="max-image-size:large">
+
+
+   
+<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  window.dataLayer = window.dataLayer || [];
+</script>
+	<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+		window.csrfToken = 'c999f7423672ba3b6ce0eeb50d162c3b5c89cf4b074f785573190e6b7562b92a';
+	</script>
+<style nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  /* CLS FIX – critical */
+  .nx-header {
+    min-height: 56px;
+  }
+
+  @media (min-width: 768px) {
+    .nx-header {
+      min-height: 72px;
+    }
+  }
+
+  .nx-bottom-nav {
+    height: 56px;
+  }
+
+  #nxFooterPlaceholder {
+    min-height: 550px;
+  }
+    .nx-header__search {
+    height: 40px;
+  }
+
+  .nx-header__search input {
+    height: 40px;
+    box-sizing: border-box;
+  }
+    .nx-menu__auth {
+    min-height: 96px;
+  }
+  .nx-menu-categories .nx-mega-menu {
+  display: none !important;  /* no se renderiza hasta hover o JS */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Mostrar solo al hover o cuando se active con JS */
+.nx-menu-categories:hover > .nx-mega-menu,
+.nx-menu-categories .nx-mega-menu.open {
+  display: flex !important; /* mantener layout de flex */
+  opacity: 1;
+  pointer-events: auto;
+}
+  /*nx-body-hide*/body {
+    opacity: 0;
+    transition: opacity .2s ease;
+  }    
+</style>
+
+ <!-- Google Tag Manager con temporizador o con click para que no baje el rendimiento-->
+<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+(function() {
+    var gtmLoaded = false;
+
+    // Tráfico interno: el código viejo excluía por Referer al panel de gestión
+    // (host "servidor", 172.16.3.8), a 172.16.3.105 y a localweb. Además de
+    // replicar esa exclusión en los helpers de medición, con esta bandera no se
+    // carga ni GTM, así ninguna etiqueta del contenedor dispara desde esas
+    // visitas. La leen js/nx-meta.js, js/nx-tiktok.js y js/nx-ga4.js.
+    window.NX_INTERNO = /^https?:\/\/(servidor|localweb|172\.16\.3\.(8|105))(\/|:|$)/i
+        .test(document.referrer || '');
+
+    function loadGTM() {
+        if (gtmLoaded || window.NX_INTERNO) return;
+        gtmLoaded = true;
+
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            // Nonce explícito: bajo CSP con 'strict-dynamic', el navegador ya
+            // confía en gtm.js porque lo crea este script (que sí tiene nonce).
+            // PERO GTM también necesita conocer el nonce para poder
+            // reaplicarlo a los <script> que él mismo inyecta después (tags
+            // Custom HTML como el widget de Brevo/Sendinblue) -- sin esto,
+            // esos scripts secundarios quedan bloqueados aunque su host esté
+            // en la whitelist, porque 'strict-dynamic' ignora esa whitelist.
+            // GTM detecta este nonce automáticamente (soporte oficial desde
+            // 2020) y lo propaga solo, sin tocar nada en el panel de GTM.
+            j.nonce='ZdjKGp6CIUNRHBXy8TM9LA==';
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KJRW8ZW');
+    }
+
+    // 1. Esperar a que la página esté completamente pintada
+    if (document.readyState === 'complete') {
+        // Si ya cargó, usar requestIdleCallback para no bloquear
+        ('requestIdleCallback' in window)
+            ? requestIdleCallback(loadGTM, { timeout: 4000 })
+            : setTimeout(loadGTM, 1000);
+    } else {
+        window.addEventListener('load', function() {
+            ('requestIdleCallback' in window)
+                ? requestIdleCallback(loadGTM, { timeout: 4000 })
+                : setTimeout(loadGTM, 1000);
+        }, { once: true });
+    }
+
+    // 2. Interacción real del usuario (más confiable que scroll)
+    ['pointerdown', 'keydown', 'touchstart'].forEach(function(evt) {
+        document.addEventListener(evt, loadGTM, { once: true, passive: true });
+    });
+
+})();
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- IP pública del cliente: la resuelve nx_client_ip() server-side desde
+     REMOTE_ADDR (nginx real_ip + proxy_protocol) — ya no hace falta pedirla
+     al navegador vía ipify. client-ip.js hoy es solo un shim legacy que
+     define window.nxGetClientIp (lee cookie client_ip / #ip_client, o ''):
+     ningún caller lo invoca en parse-time, así que 'defer' es seguro y lo
+     saca de la ruta crítica de render (Lighthouse: render-blocking). -->
+<script src="/js/client-ip.js?v=1789136533" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+<!-- Puente a la API de conversiones de Meta (pata servidor del pixel). Con
+     'defer' queda definido antes de DOMContentLoaded, que es cuando corren los
+     eventos del sitio (el de contacto va envuelto a propósito). -->
+<script src="/js/nx-meta.js?v=1790800880" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+<!-- Pata del navegador de TikTok: se engancha en nx-meta.js, por eso va despues. -->
+<script src="/js/nx-tiktok.js?v=1790800890" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+<!-- Eventos de GA4: los manda este archivo (el contenedor quedó con una sola
+     declaración del ID para que la librería de Google no se baje dos veces). -->
+<script src="/js/nx-ga4.js?v=1790800894" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+	
+	<link rel="canonical" href="https://www.necxus.com.ar/categorias/12/120954/servidores/" /><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2A2A2A">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="distribution" content="global"><meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="14 days">
+    <meta name="author" content="Necxus Negocios Informáticos">
+    <meta name="copyright" content="Propietario del copyright Necxus Negocios Informáticos" />
+    <meta name="msapplication-navbutton-color" content="#2A2A2A">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2A2A2A">
+    <meta name="geo.country" content="AR-Buenos Aires">
+    <meta name="geo.placename" content="Buenos Aires, Argentina">
+    <meta name="geo.region" content="AR-Bs">
+    <meta property="fb:app_id" content="340266413064123">
+    <meta name="twitter:site" content="@necxus_baires">
+    <meta name="twitter:creator" content="@necxus_baires">
+    <meta name="google-site-verification" content="1fIHTRrjG_2FmP9Ezo1TF-NvpHmtyudtlsXV2dMvAH0" />
+    <meta name="twitter:domain" content="necxus.com.ar">
+    <meta property="og:title" content="Necxus Negocios Informáticos">
+    <meta name="twitter:title" content="Necxus Negocios Informáticos">
+    <meta name="twitter:description" content="Necxus es lider en la venta E-commerce a nivel nacional. Encontrarás una amplia gama de productos, un servicio premium, grandes ofertas y promociones.">
+    <meta name="twitter:image" content="https://www.necxus.com.ar/img/necx_bk.jpg">
+    <meta property="og:image:type" content="image/jpg"><meta property="og:type" content="website">
+        <title>Necxus Negocios Informáticos</title>
+        <meta property="og:title" content="Necxus Negocios Informáticos">
+        <meta property="og:image" content=" https://www.necxus.com.ar/img/NecxusWeb.png">
+        <meta property="og:url" content="https://www.necxus.com.ar/">
+        <meta name="og:description" content="Necxus es líder en la venta E-commerce a nivel nacional. Encontrarás una amplia gama de productos, un servicio premium, grandes ofertas y promociones.">
+        <meta name="description" content="Increíbles Precios en Tecnología y ElectroHogar. ¡Ingresá y Comprá Online Ahora! Envíos a Todo el País · Las Mejores Ofertas · Envíos a Domicilio · 12 Cuotas sin Interés" />	
+
+
+
+		<!-- Preload fonts y CSS -->
+  <link rel="preload" href="/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  // Reemplazo de los antiguos onload="this.rel='stylesheet'" (atributo inline,
+  // incompatible con CSP estricta sin 'unsafe-inline'). Un solo listener
+  // delegado en document, en fase de captura porque 'load' de <link> no hace
+  // bubble, cubre todos los <link data-onload="stylesheet"> de la página —
+  // incluidos los que agregan más abajo HomeSpeed/hero-desktop.php y
+  // hero-mobile.php. Va inline (nonce) y se ejecuta ya, no en un .js con
+  // defer: si el CSS ya está en la caché del navegador, 'load' puede disparar
+  // antes de que un script defer llegue a registrarse, y el <link> se
+  // quedaría en modo preload para siempre (el CSS nunca se aplicaría).
+  document.addEventListener('load', function (e) {
+    if (e.target.matches && e.target.matches('link[data-onload="stylesheet"]')) {
+      e.target.rel = 'stylesheet';
+    }
+  }, true);
+  // Va ANTES de main.css/nx-header.css: un <script> inline espera a que
+  // terminen los stylesheets bloqueantes previos, y si el preload del footer
+  // ya estaba en caché su 'load' disparaba en ese hueco, sin listener → el
+  // footer quedaba sin CSS. Barrido de respaldo por si igual se perdió algún
+  // 'load' (el CSS ya está descargado, cambiar rel solo lo aplica).
+  window.addEventListener('load', function () {
+    document.querySelectorAll('link[rel="preload"][data-onload="stylesheet"]').forEach(function (l) {
+      l.rel = 'stylesheet';
+    });
+  });
+  </script>
+	<style nonce="ZdjKGp6CIUNRHBXy8TM9LA==" data-src="/css/main.css">:root{--nx-color-bg:#2A2A2A;--nx-color-bg-soft:#1f1f1f;--nx-color-bg-w:#ffffff;--nx-color-bg-s:#f5f5f5;--nx-color-text:#ffffff;--nx-color-text-textcomment:#515151;--nx-color-text-darks:#333;--nx-color-text-darks2:#515151;--nx-color-text-dark:#000;--nx-color-muted:#bdbdbd;--nx-color-accent:#194170;--nx-color-button-b:#194170;--nx-color-button-bd:#037FFF;--nx-active-color:#037FFF;--nx-color-button-dark:#1c1c1c;--nx-color-background-dark:#111;--nx-color-background-v:#267349;--nx-color-background-vs:#e8fff4;--nx-color-background-r:#ff3541;--nx-color-background-n:#ffaf22;--nx-color-background-c:#32b6e6;--nx-color-background-cs:#dff6ff;--nx-highlight-color:#ffc107;--nx-highlight-rgb:255,193,7;--nx-border-light:#e0e0e0;--nx-surface-1:#ffffff;--nx-surface-2:#f7f7f7;--nx-surface-3:#eeeeee;--nx-text-dark:#000000;--nx-border-light:#eeeeee;--nx-input-bg:#f7f7f7;--nx-input-bg-focus:#eeeeee;--nx-radius-sm:6px;--nx-radius-md:10px;--nx-space-xs:6px;--nx-space-sm:8px;--nx-space-md:16px;--nx-font-sm:0.875rem;--nx-font-xs:0.70rem;--nx-font-m:1rem;--nx-font-m2:0.93rem;--nx-font-g:1.5rem;--nx-font-offper:1.2rem;--nx-font-title:2rem;--nx-font-badge:0.5rem;--nx-font-base:Roboto,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}body{margin:0;font-family:var(--nx-font-base);background:#fff;color:#000;font-weight:500}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:'Roboto';font-weight:700;src:url('/fonts/Roboto-Bold.woff2') format('woff2');font-display:swap}@font-face{font-family:'Roboto';src:url('/fonts/Roboto-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}img{max-width:100%}
+.nx-noscript-hidden{display:none;visibility:hidden}
+.nx-empty-no-results-cta{padding-bottom:0px;margin-bottom:-90px}
+.nx-cursor-pointer{cursor:pointer}
+.nx-hidden{display:none}</style>
+<style nonce="ZdjKGp6CIUNRHBXy8TM9LA==" data-src="/css/nx-header.css">[hidden]{display:none !important}.nx-header{position:sticky;top:0;z-index:1000;min-height:56px;padding:var(--nx-space-sm);background:var(--nx-color-bg);color:var(--nx-color-text);contain:layout style}.nx-header__row{display:flex;align-items:center;gap:var(--nx-space-sm)}.nx-header__logo{display:flex;align-items:center;height:24px}.nx-header__logo img{height:24px;width:27px;display:block}.nx-header__search{flex:1}.nx-header__search input{width:100%;height:42px;padding:0 14px;font-size:14px;border:none;border-radius:var(--nx-radius-md);background:var(--nx-input-bg);color:var(--nx-text-dark)}.nx-header__search input::placeholder{color:var(--nx-color-muted)}.nx-header__search input:focus{outline:none;background:var(--nx-input-bg-focus)}.nx-header__menu{display:flex;align-items:center;padding:6px;border-radius:var(--nx-radius-sm);background:transparent;border:1px solid rgba(255,255,255,0.35);cursor:pointer}.nx-header__menu svg{width:26px;height:26px;fill:var(--nx-color-text)}.nx-header__menu:active{transform:scale(0.96)}.nx-header__menu svg rect{transform-origin:center;transition:transform 0.2s ease,opacity 0.15s ease}.nx-header__menu[aria-expanded="true"] svg rect:nth-child(1){transform:translateY(7px) rotate(45deg)}.nx-header__menu[aria-expanded="true"] svg rect:nth-child(2){opacity:0}.nx-header__menu[aria-expanded="true"] svg rect:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.nx-menu{position:fixed;top:56px;left:0;width:100%;height:calc(100vh - 56px);background:var(--nx-surface-2);z-index:9999;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity 0.2s ease,transform 0.2s ease}.nx-menu.is-open{opacity:1;transform:translateY(0);pointer-events:auto}.nx-menu__content{height:100%;overflow:hidden}.nx-menu__user{background:var(--nx-surface-3);padding:var(--nx-space-md);margin-bottom:10px}.nx-menu__welcome{font-size:18px;font-weight:500;margin:0 0 12px;color:var(--nx-text-dark)}.nx-btn{display:flex;align-items:center;padding:14px;margin-bottom:10px;font-size:16px;font-weight:600;border-radius:14px;text-decoration:none}.nx-btn--primary{background:var(--nx-color-button-b);color:#fff;width:100%}.nx-btn--secondary{background:var(--nx-surface-1);border:1px solid var(--nx-border-light);color:var(--nx-text-dark);width:100%}.nx-menu__links,.nx-menu__cat-list{list-style:none;margin:0 0 10px;padding:0}.nx-menu__links--cards,.nx-menu__cat-list{padding:0 10px}.nx-menu__links--cards li a,.buttonmenu1,.nx-menu__cat-list li{display:flex;align-items:center;padding:14px 16px;margin-bottom:10px;background:var(--nx-surface-1);border-radius:14px;border:1px solid var(--nx-border-light);font-size:15px;font-weight:600;color:var(--nx-text-dark);text-decoration:none;transition:transform 0.15s ease,background 0.15s ease}.nx-menu__links--cards:first-of-type li:last-child a{margin-bottom:0}.nx-menu__links--cards li a:active,.buttonmenu1:active{transform:scale(0.97);background:var(--nx-surface-2)}.nx-icon{display:inline-flex;align-items:center;margin-right:10px;line-height:1}.nx-skip-link{position:absolute;left:-9999px}.nx-skip-link:focus{left:16px;top:16px;background:var(--nx-color-bg);color:var(--nx-color-text);padding:8px;z-index:9999}a,button{-webkit-tap-highlight-color:transparent}.nx-cat-layout{display:flex;height:100%;min-height:0}.nx-cat-families{width:50%;max-width:180px;background:var(--nx-surface-2);border-right:1px solid var(--nx-border-light);overflow-y:auto}.nx-cat-families ul{list-style:none;margin:0;padding:0}.nx-cat-families li{padding:12px 5px 12px 30px;font-size:14px;cursor:pointer;border-left:3px solid transparent;color:var(--nx-text-dark)}.nx-cat-families li.is-active{background:var(--nx-color-background-c);border-left-color:var(--nx-color-accent);font-weight:700;color:var(--nx-color-text)}.icon-phone{stroke:#2A2A2A;fill:none}.icon-phone circle{fill:#2A2A2A}.menu-activo .icon-phone{stroke:#FFFFFF}.menu-activo .icon-phone circle{fill:#FFFFFF}.icon-phone{color:#2A2A2A}.menu-activo .icon-phone{color:#FFFFFF}.nx-cat-subfamilies{flex:1;padding:14px;overflow-y:auto;min-height:0}.nx-subfamily-grid{display:none;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:14px}.nx-subfamily-grid.is-active{display:grid}.nx-subfamily-card{display:flex;flex-direction:column;align-items:center;padding:14px 10px;background:var(--nx-surface-1);border-radius:12px;border:1px solid var(--nx-border-light);text-decoration:none;color:var(--nx-text-dark);font-size:13px;font-weight:600;text-align:center}.nx-subfamily-card img{width:48px;height:48px;object-fit:contain;margin-bottom:8px}.nx-subfamily-card:active{transform:scale(0.96)}.nx-back{width:100%}.nx-bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:var(--nx-color-bg);border-top:1px solid rgba(255,255,255,0.1);z-index:1000}.nx-bottom-nav__list{display:flex;justify-content:space-around;margin:0;padding:6px 0;list-style:none}.nx-bottom-nav__link{display:flex;flex-direction:column;align-items:center;font-size:12px;font-weight:500;color:var(--nx-color-text);text-decoration:none;padding:4px 0;border:0px;background:transparent}.nx-bottom-nav__link:active,.nx-bottom-nav__link--active{color:var(--nx-color-accent)}.nx-bottom-nav__icon{display:flex;margin-bottom:2px;line-height:1}.nx-bottom-nav__icon svg{width:24px;height:24px;stroke:currentColor;fill:none}.divimgcat{position:absolute;margin-left:-30px;margin-top:-5px}.nx-page-loader-box{display:flex;flex-direction:column;align-items:center;gap:16px}.nx-spinner{width:42px;height:42px;border:4px solid var(--nx-color-accent);border-top-color:transparent;border-radius:50%;animation:nx-spin .9s linear infinite}@keyframes nx-spin{to{transform:rotate(360deg)}}.nx-loader-text{font-size:14px;font-weight:600;color:var(--nx-text-dark);margin:0}#nx-page-loader{position:fixed;inset:0;z-index:20000;background:rgba(0,0,0,0.45);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;pointer-events:auto}#nx-page-loader.hidden{display:none}#nx-page-loader .nx-page-loader-box{background:#ffffff;padding:22px 24px;border-radius:16px;text-align:center;width:auto;max-width:80%;box-shadow:0 10px 40px rgba(0,0,0,0.25)}#nx-page-loader .nx-spinner{width:38px;height:38px;border-width:4px}#nx-page-loader .nx-loader-text{font-size:14px;font-weight:600;color:var(--nx-text-dark)}.nx-bottom-nav__list li button{background:transparent;border:0;color:var(--nx-color-text)}#credential_picker_container,#credential_picker_iframe{position:fixed !important;top:50% !important;left:50% !important;transform:translate(-50%,-50%) !important;z-index:2147483647 !important}.nx-enter-with-email,.nx-enter-with-gmail{display:none}.nx-enter-with-email button{background:transparent;border:0;color:var(--nx-color-accent);cursor:pointer}.nx-enter-with-gmail h3{margin-bottom:0}.google-login-wrapper{justify-content:center}.nx-auth-desktop-switch{background:transparent;border:0;color:var(--nx-color-accent)}#toast-container{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;gap:0.5rem;z-index:99999;pointer-events:none;align-items:center}.toast{min-width:250px;max-width:350px;background-color:rgba(0,0,0,0.85);color:#fff;padding:0.8rem 1rem;border-radius:5px;font-size:0.95rem;box-shadow:0 4px 10px rgba(0,0,0,0.3);opacity:0;transform:translateY(-20px);transition:transform 0.3s ease,opacity 0.3s ease;pointer-events:auto;text-align:center}.toast.show{opacity:1;transform:translateY(0)}.toast.success{background-color:var(--nx-color-background-v)}.toast.error{background-color:var(--nx-color-background-r)}.toast.info{background-color:var(--nx-color-background-c)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#nx-confirm-container{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;pointer-events:none}.nx-confirm{background:var(--nx-color-bg-w);color:var(--nx-color-bg-soft);border-radius:10px;max-width:600px;box-shadow:0 10px 40px rgba(0,0,0,0.3);padding:1.2rem;text-align:center;opacity:0;transform:scale(0.9);transition:all 0.25s ease;pointer-events:auto}.nx-confirm.show{opacity:1;transform:scale(1)}.nx-confirm-title{font-weight:600;font-size:var(--nx-font-offper);margin-bottom:0.5rem}.nx-confirm-text{font-size:var(--nx-font-m);margin-bottom:1rem;color:var(--nx-color-text-textcommen)}.nx-confirm-actions{display:flex;gap:0.5rem}.nx-confirm-btn{flex:1;padding:0.6rem;border-radius:6px;font-size:var(--nx-font-m);cursor:pointer;border:none}.nx-confirm-btn.cancel{background:var(--nx-surface-3)}.nx-confirm-btn.confirm{background:var(--nx-color-background-v);color:var(--nx-color-text)}#nx-confirm-container{position:fixed;inset:0;z-index:999999;display:none;align-items:center;justify-content:center}#nx-confirm-container::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.3)}.nx-confirm-btn.confirm.success{background:var(--nx-color-background-v);color:var(--nx-color-text)}.nx-confirm-btn.confirm.danger{background:var(--nx-color-background-r);color:var(--nx-color-text)}.nx-confirm input.nx-input{width:100%;box-sizing:border-box}#nx-confirm-container{align-items:center;justify-content:center}@media (max-width:480px){.nx-confirm{border-radius:12px;padding:1rem}}.nx-product-slider{max-width:100%;overflow:hidden}
+.nx-menu-icon-20{width:20px;height:20px}
+.nx-prompt-input{margin-bottom:1rem;width:100%;padding:0.6rem;border-radius:6px;border:1px solid #ddd}</style>
+<style nonce="ZdjKGp6CIUNRHBXy8TM9LA==" data-src="/css/nx-header-desktop.css">@media (min-width:1024px){.nx-header-desktop-wrap{background:var(--nx-color-bg);color:var(--nx-color-text);width:100%}.nx-header-desktop-top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;padding:10px 0px}.nx-header-desktop-logo img{height:34px;display:block}.nx-header-desktop-search input{width:100%;height:40px;border-radius:8px;border:none;padding:0 14px;font-size:var(--nx-font-m)}.nx-header-desktop-actions{display:flex;align-items:center;gap:16px;white-space:nowrap}.nx-header-link{font-size:var(--nx-font-m);color:var(--nx-color-text);text-decoration:none;opacity:0.85}.nx-header-link:hover{opacity:1}.nx-header-cta{background:var(--nx-color-accent);color:var(--nx-color-text);padding:7px 14px;border-radius:8px;font-size:var(--nx-font-m);font-weight:600;text-decoration:none}.nx-header-desktop-bottom{border-top:1px solid rgba(255,255,255,0.12)}.nx-header-menu{display:flex;align-items:center;gap:22px;list-style:none;margin:0;padding:0}.nx-header-menu a,.nx-header-menu button{background:none;border:none;color:var(--nx-color-text);font-size:var(--nx-font-m);cursor:pointer;padding:10px 0;text-decoration:none}.nx-menu-categories{position:relative}.nx-mega-menu{position:absolute;top:32px;left:0;background:var(--nx-color-bg-w);color:var(--nx-color-text-dark);border-radius:10px;box-shadow:0 20px 40px rgba(0,0,0,0.25);display:flex;opacity:0;pointer-events:none;transform:translateY(8px);transition:all 0.2s ease;z-index:9999}.nx-menu-categories:hover > .nx-mega-menu{opacity:1;transform:translateY(0);pointer-events:auto}.nx-mega-col-left{width:220px;background:var(--nx-color-bg-w);border-radius:10px 0 0 10px}.nx-mega-col-left ul{list-style:none;margin:0;padding:0}.nx-mega-col-left li{padding:14px 16px;font-size:var(--nx-font-m);cursor:pointer}.nx-mega-col-left li.active{background:var(--nx-color-bg-w);font-weight:700}.nx-mega-col-right{flex:1;padding:20px}.nx-mega-col-right strong{display:block;margin-bottom:10px;font-size:var(--nx-font-m)px}.nx-mega-col-right a{display:block;font-size:var(--nx-font-m);color:var(--nx-color-text-darks);text-decoration:none;margin-bottom:6px}.nx-mega-col-right a:hover{text-decoration:underline}.nx-menu-categories button,.nx-menu-categories li a{padding:10px 0}}.nx-container{max-width:1200px;margin:0 auto}.nx-header-cart{position:relative;font-size:var(--nx-font-m);text-decoration:none}.nx-header-cart-count{position:absolute;top:-6px;right:-8px;background:var(--nx-color-background-r);color:var(--nx-color-text);font-size:11px;font-weight:700;padding:2px 6px;border-radius:999px}.nx-header-separator{opacity:0.4;font-size:var(--nx-font-m)px}.nx-header-desktop-actions{gap:12px}.nx-header-desktop-search{position:relative}.nx-header-desktop-search input{padding-right:44px}.nx-search-btn{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;padding:4px}.nx-header-menu{gap:32px}.nx-header-menu > li{position:relative}.nx-header-menu > li:not(:last-child)::after{content:"";position:absolute;right:-16px;top:50%;transform:translateY(-50%);width:1px;height:14px;background:rgba(255,255,255,0.25)}.nx-header{padding:0px;color:var(--nx-color-text)}.nx-mega-level-1{width:310px;background:var(--nx-color-bg);color:var(--nx-color-text);border-radius:10px 0 0 10px}.nx-mega-level-1 ul{list-style:none;margin:0;padding:8px 0}.nx-mega-level-1 li{cursor:pointer;font-size:var(--nx-font-m)}.nx-mega-level-1 li.active,.nx-mega-level-1 li:hover{background:var(--nx-color-background-c)}.nx-mega-level-2{width:260px;background:var(--nx-color-bg-wn);white-space:nowrap;overflow-x:hidden;text-overflow:ellipsis}.nx-subcat{display:none;list-style:none;margin:0;padding:8px 0}.nx-subcat.active{display:block}.nx-subcat li{cursor:pointer;font-size:var(--nx-font-m)}.nx-subcat li:hover{background:var(--nx-color-background-c);color:var(--nx-color-text)}.nx-mega-level-3{width:220px;flex:1;padding:12px;display:none}.nx-mega-panel{display:none}.nx-mega-panel.active{display:block}.nx-mega-panel strong{display:block;margin-bottom:12px;font-size:var(--nx-font-m)px}.nx-mega-panel a{display:block;font-size:var(--nx-font-m);color:var(--nx-color-text-darks);text-decoration:none;padding:14px 18px}.nx-mega-panel a:hover{background:var(--nx-color-background-c);color:var(--nx-color-text)}.nx-mega-menu{opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease}.nx-mega-menu.open{opacity:1;pointer-events:auto;transform:translateY(0)}.nx-auth-desktop-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:10000}.nx-auth-desktop-overlay.hidden{display:none}.nx-auth-desktop-modal{background:var(--nx-color-bg-w);padding:30px;border-radius:16px;width:400px;max-width:90%;box-shadow:0 8px 30px rgba(0,0,0,0.3);position:relative;display:flex;flex-direction:column;gap:16px}.nx-auth-desktop-close{position:absolute;top:12px;right:12px;background:transparent;border:none;font-size:28px;line-height:1;cursor:pointer;color:var(--nx-text-dark)}.nx-auth-desktop-header h2{margin:0;font-size:24px;text-align:center;color:var(--nx-text-dark)}.nx-auth-desktop-form{display:flex;flex-direction:column;gap:12px}.nx-auth-desktop-form input{padding:10px 14px;font-size:14px;border-radius:10px;border:1px solid var(--nx-border-light);background:var(--nx-input-bg);color:var(--nx-text-dark)}.nx-auth-desktop-password-wrapper input{width:100%}.nx-auth-desktop-form input:focus{outline:none;border-color:var(--nx-color-accent)}.nx-auth-desktop-password-wrapper{position:relative;display:flex;align-items:center}.nx-auth-desktop-toggle-password{position:absolute;right:10px;background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center}.nx-auth-desktop-toggle-password .eye-icon{width:20px;height:20px;display:block;pointer-events:none}.nx-auth-desktop-link{background:transparent;border:none;color:var(--nx-color-accent);font-size:13px;text-align:left;padding:0;cursor:pointer}.nx-auth-desktop-social{display:flex;flex-direction:column;gap:8px;text-align:center}.nx-auth-desktop-social p{margin:0;font-size:13px;color:var(--nx-text-dark)}.nx-auth-desktop-footer{text-align:center;font-size:13px}.nx-auth-desktop-switch{background:transparent;border:none;color:var(--nx-color-accent);cursor:pointer}.nx-auth-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);display:flex;justify-content:center;align-items:center;z-index:10000}.nx-auth-overlay.hidden{display:none}.nx-auth{background:var(--nx-color-bg-w);padding:30px;border-radius:16px;width:400px;max-width:90%;box-shadow:0 8px 30px rgba(0,0,0,0.3);position:relative}.nx-auth__close{position:absolute;top:12px;right:12px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--nx-text-dark)}.nx-icon{position:absolute;left:2px}.nx-menu-categories a{color:var(--nx-color-text-darks)}.nx-menu-categories li:hover a{color:var(--nx-color-text)}.nx-mega-level-1 a{color:var(--nx-color-text)}.nx-enter-with-gmail p{font-size:var(--nx-space-md)}#googleBtn{transform:scale(1.2)}.nx-mega-menu li a{display:flex;align-items:center;width:100%;height:100%;text-decoration:none}.divimgcat{display:flex;align-items:center;justify-content:center}.nx-mega-level-1 li a{padding:14px 36px}.nx-mega-level-2 li a{padding:14px 18px}
+.nx-icon-mt2{margin-top:-2px}.nx-icon-1rem{width:1rem;height:1rem}.nx-icon-fav{margin-top:-2px;padding:1px}.nx-mega-icon-pad{padding-left:4px}
+/* Mega menu: alto maximo = viewport - posicion real del menu (--nx-mega-top lo setea nx-footer-Desktop.js al abrir; 140px = fallback sin JS). Cada columna scrollea sola. */
+.nx-mega-menu{--nx-mega-maxh:calc(100vh - var(--nx-mega-top,140px) - 16px);max-height:var(--nx-mega-maxh)}
+.nx-mega-level-1,.nx-mega-level-2,.nx-mega-level-3{max-height:var(--nx-mega-maxh);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.25) transparent}
+.nx-mega-level-3{max-height:calc(var(--nx-mega-maxh) - 24px)}
+.nx-mega-level-1{scrollbar-color:rgba(255,255,255,.25) transparent}
+.nx-mega-level-1::-webkit-scrollbar,.nx-mega-level-2::-webkit-scrollbar,.nx-mega-level-3::-webkit-scrollbar{width:6px}
+.nx-mega-level-1::-webkit-scrollbar-track,.nx-mega-level-2::-webkit-scrollbar-track,.nx-mega-level-3::-webkit-scrollbar-track{background:transparent}
+.nx-mega-level-1::-webkit-scrollbar-thumb{background:rgba(255,255,255,.25);border-radius:3px}
+.nx-mega-level-2::-webkit-scrollbar-thumb,.nx-mega-level-3::-webkit-scrollbar-thumb{background:rgba(0,0,0,.25);border-radius:3px}
+@media (min-width:1024px) and (max-height:800px){.nx-mega-level-1 ul,.nx-subcat{padding:4px 0}.nx-mega-level-1 li a{padding:9px 36px}.nx-mega-level-2 li a,.nx-mega-panel a{padding:9px 18px}.nx-mega-level-1 .divimgcat svg[width="30"]{width:24px;height:24px}}
+/* Mega menu: indicador "hay mas" (degrade + flecha) y auto-scroll al pasar el mouse por la flecha. Clases nx-can-up/down las pone nx-footer-Desktop.js */
+.nx-mega-level-1{--nx-col-bg:var(--nx-color-bg)}.nx-mega-level-2{--nx-col-bg:var(--nx-color-bg-wn)}.nx-mega-level-3{--nx-col-bg:var(--nx-color-bg-w)}
+.nx-mega-edge{position:sticky;height:0;z-index:1;display:none}.nx-mega-edge--up{top:0}.nx-mega-edge--down{bottom:0}
+.nx-can-up>.nx-mega-edge--up,.nx-can-down>.nx-mega-edge--down{display:block}
+.nx-mega-edge span{position:absolute;left:0;right:0;height:44px;box-sizing:border-box;display:flex;justify-content:center;cursor:pointer}
+.nx-mega-edge--up span{top:0;align-items:flex-start;padding-top:4px;background:linear-gradient(to top,transparent,var(--nx-col-bg) 70%)}
+.nx-mega-edge--down span{bottom:0;align-items:flex-end;padding-bottom:4px;background:linear-gradient(to bottom,transparent,var(--nx-col-bg) 70%)}
+.nx-mega-edge--down svg{animation:nxMegaNudge 1.4s ease-in-out infinite}
+@keyframes nxMegaNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){.nx-mega-edge--down svg{animation:none}}
+</style>
+  <link rel="preload" href="/css/nx-footer-desktop.css?v=1789136533" as="style" fetchpriority="low" data-onload="stylesheet">
+  <link rel="preload" href="/css/nx-auth.css?v=1789136533" as="style" fetchpriority="low" data-onload="stylesheet">
+	<!-- Anti-flash CSS crítico -->
+	<style nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+	#nxMenu[hidden] { display: none; }
+	.nx-auth-overlay.hidden, .nx-auth-desktop-overlay.hidden { display: none; }
+	.nx-header, .nx-header * { contain: layout style; }
+	</style>
+
+	<noscript>
+    	<link rel="stylesheet" href="/css/nx-footer-desktop.css?v=1789136533">  <link rel="stylesheet" href="/css/nx-auth.css?v=1789136533">
+	</noscript>
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJRW8ZW"
+    height="0" width="0" class="nx-noscript-hidden"></iframe>
+  </noscript>
+
+  <a href="#main-content" class="nx-skip-link">Saltar al contenido</a>
+	
+  <!-- =================== Header inline (critical) =================== -->
+   
+   <header class="nx-header" role="banner">   
+  <div class="nx-header-desktop-wrap">
+
+    <div class="nx-container">
+
+      <!-- BARRA 1 -->
+      <div class="nx-header-desktop-top">
+
+    <div class="nx-header-desktop-logo">
+      <a href="/">
+        <img src="/img/NecxusWeb.svg" alt="Necxus" width="141" height="34">
+      </a>
+    </div>
+
+    <form class="nx-header-desktop-search" role="search" action="/buscar/">
+      <input 
+          type="search" 
+          name="q"
+          placeholder="Buscar productos, marcas o categorías"
+          required
+      >
+      <button type="submit" class="nx-search-btn" aria-label="Buscar">
+        <svg xmlns="https://www.w3.org/2000/svg" width="18" height="18"
+          viewBox="0 0 24 24" fill="none" stroke="#666"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </form>
+
+
+    <div class="nx-header-desktop-actions">
+      <a href="/ayuda" class="nx-header-link">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+    <circle cx="12" cy="12" r="10"
+      stroke="currentColor"
+      stroke-width="2"/>
+    <path d="M9.5 9.5C9.5 8.1 10.7 7 12 7C13.3 7 14.5 8.1 14.5 9.5C14.5 11 12 11.5 12 13"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"/>
+    <line x1="12" y1="17" x2="12" y2="17"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"/>
+  </svg>
+Ayuda</a>
+          <a href="#" class="nx-header-link" data-nx-auth="login">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"></circle>
+        <path d="M4 20C4 16 8 14 12 14C16 14 20 16 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      Ingresar
+    </a><a href="/carrito" class="nx-header-cart"><span class="sr-only">Carrito</span>  <svg
+  xmlns="https://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#ffffff"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <circle cx="9" cy="21" r="1"></circle>
+  <circle cx="20" cy="21" r="1"></circle>
+  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+</svg>
+  <span class="nx-header-cart-count" data-cart-count>0</span>
+  </a>
+      <a href="/contacto" class="nx-header-cta"><img loading="lazy" src="/img/contact.svg" width="15" height="15" alt="">Contacto</a>
+    </div>
+
+  </div>
+
+  <!-- ================= BARRA 2 ================= -->
+  <nav class="nx-header-desktop-bottom">
+
+    <ul class="nx-header-menu">
+      <li class="nx-menu-categories">
+        <button type="button">
+          ☰ Categorías
+        </button>
+
+
+       <div class="nx-mega-menu" id="nxMegaMenu"><div class="nx-mega-level-1"><ul><li data-lvl2="lvl2-aires-y-calefacci-n"><a href="/categorias/49/aires-y-calefaccion/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><circle cx="44" cy="20" r="8" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M44 4v6M44 30v6M28 20h6M54 20h6M6 36c12 0 12-6 24-6M6 42c14 0 14-6 28-6M6 48c16 0 16-6 32-6"/></svg></span> Aires y Calefacción</a></li><li data-lvl2="lvl2-audio-tv-y-video"><a href="/categorias/8/audio-tv-y-video/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><rect width="44" height="28" x="10" y="12" stroke="currentColor" stroke-width="2" rx="4"/><path stroke="currentColor" stroke-width="2" d="M24 44h16M18 22h6l6-4v16l-6-4h-6ZM34 22c4 2 4 6 0 8M38 20q9 6 0 12"/></svg></span> Audio, TV y Video</a></li><li data-lvl2="lvl2-camping-playa-y-viaje"><a href="/categorias/2/camping-playa-y-viaje/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="M40 14a8 8 0 1 1-8 12 6 6 0 1 0 8-12Z"/><rect width="40" height="8" x="12" y="36" stroke="currentColor" stroke-width="2" rx="2"/></svg></span> Camping, Playa Y Viaje</a></li><li data-lvl2="lvl2-celulares-y-smartwatches"><a href="/categorias/40/celulares-y-smartwatches/"><span class="divimgcat"><svg class="nx-icon" width="30" height="30" viewBox="0 0 64 64" xmlns="https://www.w3.org/2000/svg" aria-hidden="true"><rect x="14" y="8" width="20" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="42" r="2" fill="currentColor"/></svg></span> Celulares y Smartwatches</a></li><li data-lvl2="lvl2-consolas-gaming-y-videojuegos"><a href="/categorias/7/consolas-gaming-y-videojuegos/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="M18 26h28c4 0 8 4 8 8s-4 8-8 8H18c-4 0-8-4-8-8s4-8 8-8ZM20 34h8M24 30v8"/><circle cx="40" cy="32" r="1.5" fill="currentColor"/><circle cx="44" cy="34" r="1.5" fill="currentColor"/><circle cx="40" cy="36" r="1.5" fill="currentColor"/><circle cx="36" cy="34" r="1.5" fill="currentColor"/></svg></span> Consolas, Gaming y Videojuegos</a></li><li data-lvl2="lvl2-electrodomesticos"><a href="/categorias/6/electrodomesticos/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><rect width="28" height="48" x="18" y="8" stroke="currentColor" stroke-width="2" rx="4"/><path stroke="currentColor" stroke-width="2" d="M18 30h28"/><rect width="8" height="4" x="22" y="14" stroke="currentColor" stroke-width="2" rx="1"/><circle cx="32" cy="40" r="6" stroke="currentColor" stroke-width="2"/></svg></span> Electrodomesticos</a></li><li data-lvl2="lvl2-electronica-y-seguridad"><a href="/categorias/4/electronica-y-seguridad/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="m32 10 14 6v14c0 10-14 20-14 20S18 40 18 30V16Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m26 30 4 4 8-8"/></svg></span> Electronica y Seguridad</a></li><li data-lvl2="lvl2-hogar-y-bazar"><a href="/categorias/62/hogar-y-bazar/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="m12 30 20-16 20 16"/><rect width="32" height="22" x="16" y="30" stroke="currentColor" stroke-width="2" rx="2"/><rect width="8" height="14" x="28" y="38" stroke="currentColor" stroke-width="2" rx="1"/></svg></span> Hogar y Bazar</a></li><li data-lvl2="lvl2-infantiles"><a href="/categorias/45/infantiles/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="14" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2"/><circle cx="44" cy="20" r="6" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="32" r="1.5" fill="currentColor"/><circle cx="36" cy="32" r="1.5" fill="currentColor"/><circle cx="32" cy="36" r="2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" d="M30 38q3 3 6 0"/></svg></span> Infantiles</a></li><li data-lvl2="lvl2-informatica"><a href="/categorias/1/informatica/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><rect width="28" height="28" x="18" y="18" stroke="currentColor" stroke-width="2" rx="4"/><rect width="12" height="12" x="26" y="26" stroke="currentColor" stroke-width="2" rx="2"/><path stroke="currentColor" stroke-width="2" d="M32 12v6M32 46v6M12 32h6M46 32h6"/></svg></span> Informatica</a></li><li data-lvl2="lvl2-instrumentos-musicales"><a href="/categorias/68/instrumentos-musicales/"><span class="divimgcat"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" style="padding-left: 4px;" width="18" height="18"> 
+  <path d="M18.5 47V11.8C18.5 10.2 19.6 8.8 21.2 8.45L60 0V38.5H55V6.1L23.5 13V47H18.5Z" fill="#FFFFFF"></path>  
+  <ellipse cx="11.5" cy="48.5" rx="11.5" ry="8.5" fill="#FFFFFF"></ellipse> 
+  <ellipse cx="52.5" cy="39.5" rx="11.5" ry="8.5" fill="#FFFFFF"></ellipse> 
+</svg></span> Instrumentos Musicales</a></li><li data-lvl2="lvl2-jard-n-patio-y-parrilla"><a href="/categorias/15/jardin-patio-y-parrilla/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="m12 30 20-16 20 16"/><rect width="32" height="22" x="16" y="30" stroke="currentColor" stroke-width="2" rx="2"/><rect width="8" height="14" x="28" y="38" stroke="currentColor" stroke-width="2" rx="1"/></svg></span> Jardín, Patio y Parrilla</a></li><li data-lvl2="lvl2-notebooks"><a href="/categorias/30/notebooks/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><rect width="40" height="24" x="12" y="14" stroke="currentColor" stroke-width="2" rx="3"/><path stroke="currentColor" stroke-width="2" d="M8 40h48l-4 6H12Z"/><rect width="8" height="3" x="28" y="42" stroke="currentColor" stroke-width="2" rx="1"/></svg></span> Notebooks</a></li><li data-lvl2="lvl2-piletas-spas-y-n-uticas"><a href="/categorias/9/piletas-spas-y-nauticas/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="M32 8c-8 10-14 18-14 28s6 16 14 16 14-6 14-16-6-18-14-28Z"/></svg></span> Piletas, Spas y Náuticas</a></li><li data-lvl2="lvl2-salud-belleza-y-fitness"><a href="/categorias/5/salud-belleza-y-fitness/"><span class="divimgcat"><svg xmlns="https://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 64 64" fill="none"><path stroke="currentColor" stroke-width="2" d="M32 46C22 36 16 30 16 22c0-4 4-8 8-8 3 0 8 4 8 6 0-2 5-6 8-6 4 0 8 4 8 8 0 8-6 14-16 24Z"/></svg></span> Salud, Belleza y Fitness</a></li></ul></div><div class="nx-mega-level-2"><ul class="nx-subcat" id="lvl2-aires-y-calefacci-n"><li data-lvl3="lvl3-490750-calefactores"><a href="/categorias/49/490750/calefactores/">Calefactores</a></li><li data-lvl3="lvl3-490573-ventiladores"><a href="/categorias/49/490573/ventiladores/">Ventiladores</a></li></ul><ul class="nx-subcat" id="lvl2-audio-tv-y-video"><li data-lvl3="lvl3-54-audio"><a href="/categorias/8/54/audio/">Audio</a></li><li data-lvl3="lvl3-50-tv-led-y-video"><a href="/categorias/8/50/tv-led-y-video/">TV LED y Video</a></li></ul><ul class="nx-subcat" id="lvl2-camping-playa-y-viaje"><li data-lvl3="lvl3-111-camping-y-viaje"><a href="/categorias/2/111/camping-y-viaje/">Camping y Viaje</a></li><li data-lvl3="lvl3-102-carpas-y-gazebos"><a href="/categorias/2/102/carpas-y-gazebos/">Carpas y Gazebos</a></li><li data-lvl3="lvl3-56-colchones-y-almohadas"><a href="/categorias/2/56/colchones-y-almohadas/">Colchones y Almohadas</a></li><li data-lvl3="lvl3-112-termos-conservadoras-e-hidratac"><a href="/categorias/2/112/termos-conservadoras-e-hidratac/">Termos, Conservadoras e Hidratac</a></li></ul><ul class="nx-subcat" id="lvl2-celulares-y-smartwatches"><li data-lvl3="lvl3-400505-accesorios"><a href="/categorias/40/400505/accesorios/">Accesorios</a></li><li data-lvl3="lvl3-400926-celulares"><a href="/categorias/40/400926/celulares/">Celulares</a></li><li data-lvl3="lvl3-400865-memorias"><a href="/categorias/40/400865/memorias/">Memorias</a></li><li data-lvl3="lvl3-400667-smartwatches"><a href="/categorias/40/400667/smartwatches/">Smartwatches</a></li></ul><ul class="nx-subcat" id="lvl2-consolas-gaming-y-videojuegos"><li data-lvl3="lvl3-53-consolas-y-videojuegos"><a href="/categorias/7/53/consolas-y-videojuegos/">Consolas y Videojuegos</a></li><li data-lvl3="lvl3-65-gaming"><a href="/categorias/7/65/gaming/">Gaming</a></li></ul><ul class="nx-subcat" id="lvl2-electrodomesticos"><li data-lvl3="lvl3-43-grandes-electrodomesticos"><a href="/categorias/6/43/grandes-electrodomesticos/">Grandes Electrodomésticos</a></li><li data-lvl3="lvl3-63-pequenos-electrodomesticos"><a href="/categorias/6/63/pequenos-electrodomesticos/">Pequeños Electrodomésticos</a></li></ul><ul class="nx-subcat" id="lvl2-electronica-y-seguridad"><li data-lvl3="lvl3-24-electronica"><a href="/categorias/4/24/electronica/">Electrónica</a></li><li data-lvl3="lvl3-33-seguridad"><a href="/categorias/4/33/seguridad/">Seguridad</a></li></ul><ul class="nx-subcat" id="lvl2-hogar-y-bazar"><li data-lvl3="lvl3-52-herramientas"><a href="/categorias/62/52/herramientas/">Herramientas</a></li><li data-lvl3="lvl3-621009-mascotas"><a href="/categorias/62/621009/mascotas/">Mascotas</a></li><li data-lvl3="lvl3-620753-muebles"><a href="/categorias/62/620753/muebles/">Muebles</a></li><li data-lvl3="lvl3-620757-organizadores"><a href="/categorias/62/620757/organizadores/">Organizadores</a></li></ul><ul class="nx-subcat" id="lvl2-infantiles"><li data-lvl3="lvl3-450514-juegos-y-juguetes"><a href="/categorias/45/450514/juegos-y-juguetes/">Juegos y Juguetes</a></li></ul><ul class="nx-subcat" id="lvl2-informatica"><li data-lvl3="lvl3-12-almacenamiento"><a href="/categorias/1/12/almacenamiento/">Almacenamiento</a></li><li data-lvl3="lvl3-69-combos-actualizacion"><a href="/categorias/1/69/combos-actualizacion/">Combos actualizacion</a></li><li data-lvl3="lvl3-32-computadoras-armadas"><a href="/categorias/1/32/computadoras-armadas/">Computadoras armadas</a></li><li data-lvl3="lvl3-18-conectividad"><a href="/categorias/1/18/conectividad/">Conectividad</a></li><li data-lvl3="lvl3-36-fuentes"><a href="/categorias/1/36/fuentes/">Fuentes</a></li><li data-lvl3="lvl3-20-gabinetes-con-y-sin-fuente"><a href="/categorias/1/20/gabinetes-con-y-sin-fuente/">Gabinetes con y sin Fuente</a></li><li data-lvl3="lvl3-44-impresoras"><a href="/categorias/1/44/impresoras/">Impresoras</a></li><li data-lvl3="lvl3-10-memorias"><a href="/categorias/1/10/memorias/">Memorias</a></li><li data-lvl3="lvl3-21-monitores"><a href="/categorias/1/21/monitores/">Monitores</a></li><li data-lvl3="lvl3-13-motherboards"><a href="/categorias/1/13/motherboards/">Motherboards</a></li><li data-lvl3="lvl3-37-perifericos-y-accesorios"><a href="/categorias/1/37/perifericos-y-accesorios/">Periféricos y Accesorios</a></li><li data-lvl3="lvl3-14-placas-de-video-y-editoras"><a href="/categorias/1/14/placas-de-video-y-editoras/">Placas de Video y Editoras</a></li><li data-lvl3="lvl3-11-procesadores"><a href="/categorias/1/11/procesadores/">Procesadores</a></li><li data-lvl3="lvl3-55-tablets"><a href="/categorias/1/55/tablets/">Tablets</a></li><li data-lvl3="lvl3-71-videoconferencia"><a href="/categorias/1/71/videoconferencia/">Videoconferencia</a></li></ul><ul class="nx-subcat" id="lvl2-instrumentos-musicales"><li data-lvl3="lvl3-681081-accesorios"><a href="/categorias/68/681081/accesorios/">Accesorios</a></li><li data-lvl3="lvl3-680827-amplificadores"><a href="/categorias/68/680827/amplificadores/">Amplificadores</a></li><li data-lvl3="lvl3-680825-guitarras-electricas"><a href="/categorias/68/680825/guitarras-electricas/">Guitarras Eléctricas</a></li><li data-lvl3="lvl3-680844-microfonos"><a href="/categorias/68/680844/microfonos/">Micrófonos</a></li></ul><ul class="nx-subcat" id="lvl2-jard-n-patio-y-parrilla"><li data-lvl3="lvl3-110-juegos-y-rodados"><a href="/categorias/15/110/juegos-y-rodados/">Juegos y Rodados</a></li><li data-lvl3="lvl3-106-muebles-de-exterior"><a href="/categorias/15/106/muebles-de-exterior/">Muebles de Exterior</a></li><li data-lvl3="lvl3-108-parrillas"><a href="/categorias/15/108/parrillas/">Parrillas</a></li><li data-lvl3="lvl3-107-sombrillas"><a href="/categorias/15/107/sombrillas/">Sombrillas</a></li></ul><ul class="nx-subcat" id="lvl2-notebooks"><li data-lvl3="lvl3-301099-gamer-diseno"><a href="/categorias/30/301099/gamer-diseno/">Gamer / Diseño</a></li><li data-lvl3="lvl3-301086-intel-core-i3-amd-ryzen-3"><a href="/categorias/30/301086/intel-core-i3-amd-ryzen-3/">INTEL Core i3 / AMD Ryzen 3</a></li><li data-lvl3="lvl3-301087-intel-core-i5-amd-ryzen-5"><a href="/categorias/30/301087/intel-core-i5-amd-ryzen-5/">INTEL Core i5 / AMD Ryzen 5</a></li><li data-lvl3="lvl3-301088-intel-core-i7-amd-ryzen-7"><a href="/categorias/30/301088/intel-core-i7-amd-ryzen-7/">INTEL Core i7 / AMD Ryzen 7</a></li><li data-lvl3="lvl3-301114-intel-ultra-amd-ryzen-ai"><a href="/categorias/30/301114/intel-ultra-amd-ryzen-ai/">INTEL Ultra / AMD Ryzen AI</a></li><li data-lvl3="lvl3-300129-notebooks"><a href="/categorias/30/300129/notebooks/">Notebooks</a></li></ul><ul class="nx-subcat" id="lvl2-piletas-spas-y-n-uticas"><li data-lvl3="lvl3-98-inflables-y-diversion"><a href="/categorias/9/98/inflables-y-diversion/">Inflables y diversión</a></li><li data-lvl3="lvl3-100-mantenimiento-y-accesorios"><a href="/categorias/9/100/mantenimiento-y-accesorios/">Mantenimiento y accesorios</a></li><li data-lvl3="lvl3-99-nautica-y-deportes"><a href="/categorias/9/99/nautica-y-deportes/">Náutica y deportes</a></li><li data-lvl3="lvl3-64-piletas"><a href="/categorias/9/64/piletas/">Piletas</a></li><li data-lvl3="lvl3-97-spas-y-relax"><a href="/categorias/9/97/spas-y-relax/">Spas y relax</a></li></ul><ul class="nx-subcat" id="lvl2-salud-belleza-y-fitness"><li data-lvl3="lvl3-59-deportes-y-fitness"><a href="/categorias/5/59/deportes-y-fitness/">Deportes y Fitness</a></li><li data-lvl3="lvl3-46-salud-y-belleza"><a href="/categorias/5/46/salud-y-belleza/">Salud y Belleza</a></li></ul></div><div class="nx-mega-level-3"><div class="nx-mega-panel" id="lvl3-490750-calefactores"></div><div class="nx-mega-panel" id="lvl3-490573-ventiladores"></div><div class="nx-mega-panel" id="lvl3-54-audio"><a href="/categorias/54/540653/amplificadores/">Amplificadores</a><a href="/categorias/54/540929/asistente-virtual/">Asistente Virtual</a><a href="/categorias/54/540645/auriculares/">Auriculares </a><a href="/categorias/54/540927/auriculares-bt/">Auriculares BT</a><a href="/categorias/54/540928/auriculares-in-ear-bt/">Auriculares in Ear BT</a><a href="/categorias/54/540725/equipos-de-audio/">Equipos de Audio</a><a href="/categorias/54/540803/microfonos/">Micrófonos</a><a href="/categorias/54/540649/parlantes/">Parlantes</a><a href="/categorias/54/540646/portatiles/">Portátiles</a></div><div class="nx-mega-panel" id="lvl3-50-tv-led-y-video"><a href="/categorias/50/500853/pantallas/">Pantallas</a><a href="/categorias/50/500851/proyectores/">Proyectores</a><a href="/categorias/50/500674/smart-tv-hd/">Smart TV HD</a><a href="/categorias/50/500675/smart-tv-uhd-4k/">Smart TV UHD 4K</a><a href="/categorias/50/500854/soportes/">Soportes</a><a href="/categorias/50/500723/streaming/">Streaming</a><a href="/categorias/50/500574/tv-led/">TV LED</a></div><div class="nx-mega-panel" id="lvl3-111-camping-y-viaje"><a href="/categorias/111/1111188/bolsas-de-dormir/">Bolsas de Dormir</a><a href="/categorias/111/1111190/valijas/">Valijas</a></div><div class="nx-mega-panel" id="lvl3-102-carpas-y-gazebos"><a href="/categorias/102/1021155/carpas-de-camping/">Carpas de camping</a><a href="/categorias/102/1021158/combos/">Combos</a><a href="/categorias/102/1021157/gazebos/">Gazebos</a></div><div class="nx-mega-panel" id="lvl3-56-colchones-y-almohadas"><a href="/categorias/56/561149/a-pila-usb/">A pila / USB</a><a href="/categorias/56/561187/almohadas/">Almohadas</a><a href="/categorias/56/561151/combos/">Combos</a><a href="/categorias/56/561148/electricos-220v/">Eléctricos 220V</a><a href="/categorias/56/561150/para-inflador/">Para inflador</a></div><div class="nx-mega-panel" id="lvl3-112-termos-conservadoras-e-hidratac"><a href="/categorias/112/1121196/botellas/">Botellas</a><a href="/categorias/112/1121197/conservadoras/">Conservadoras</a><a href="/categorias/112/1121194/termos/">Termos</a></div><div class="nx-mega-panel" id="lvl3-400505-accesorios"></div><div class="nx-mega-panel" id="lvl3-400926-celulares"></div><div class="nx-mega-panel" id="lvl3-400865-memorias"></div><div class="nx-mega-panel" id="lvl3-400667-smartwatches"></div><div class="nx-mega-panel" id="lvl3-53-consolas-y-videojuegos"><a href="/categorias/53/530641/accesorios/">Accesorios</a><a href="/categorias/53/530934/joystick/">Joystick</a><a href="/categorias/53/530638/nintendo/">Nintendo</a><a href="/categorias/53/531008/realidad-virtual/">Realidad Virtual</a></div><div class="nx-mega-panel" id="lvl3-65-gaming"><a href="/categorias/65/650798/audio-gaming/">Audio gaming</a><a href="/categorias/65/650931/mesas/">Mesas</a><a href="/categorias/65/650799/sillas/">Sillas</a><a href="/categorias/65/650823/simuladores/">Simuladores</a><a href="/categorias/65/650796/teclados/">Teclados</a></div><div class="nx-mega-panel" id="lvl3-43-grandes-electrodomesticos"><a href="/categorias/43/431124/anafes-a-gas/">Anafes a Gas</a><a href="/categorias/43/430679/anafes-electricos/">Anafes Electricos</a><a href="/categorias/43/430496/aspiradoras/">Aspiradoras</a><a href="/categorias/43/431123/calefones-a-gas/">Calefones a gas</a><a href="/categorias/43/430591/calefones-electricos/">Calefones Electricos</a><a href="/categorias/43/431126/cocinas-a-gas/">cocinas a gas</a><a href="/categorias/43/430559/cocinas-electricas/">Cocinas electricas</a><a href="/categorias/43/430487/hornos-electricos/">Hornos Eléctricos</a></div><div class="nx-mega-panel" id="lvl3-63-pequenos-electrodomesticos"><a href="/categorias/63/630773/ayudantes-de-cocina/">Ayudantes de cocina</a><a href="/categorias/63/630841/batidoras/">Batidoras</a><a href="/categorias/63/630767/cafeteras/">Cafeteras</a><a href="/categorias/63/630777/duchas-electricas/">Duchas Eléctricas</a><a href="/categorias/63/630842/freidoras/">Freidoras</a><a href="/categorias/63/630771/jugueras/">Jugueras</a><a href="/categorias/63/630772/licuar-y-mezclar/">Licuar y Mezclar</a><a href="/categorias/63/630774/pasteleria-y-dulces/">Pastelería y Dulces</a><a href="/categorias/63/630768/pavas-electricas/">Pavas Eléctricas</a><a href="/categorias/63/630776/planchas/">Planchas</a><a href="/categorias/63/630780/procesadoras/">Procesadoras</a><a href="/categorias/63/630779/purificadores-de-agua/">Purificadores de Agua</a><a href="/categorias/63/630770/sandwicheras/">Sandwicheras</a><a href="/categorias/63/630769/tostadoras/">Tostadoras</a></div><div class="nx-mega-panel" id="lvl3-24-electronica"><a href="/categorias/24/240080/camaras-digitales/">Cámaras Digitales</a><a href="/categorias/24/240971/drones/">Drones</a><a href="/categorias/24/241128/hogar-inteligente/">Hogar Inteligente</a><a href="/categorias/24/240484/solar/">Solar</a><a href="/categorias/24/240970/varios/">Varios</a></div><div class="nx-mega-panel" id="lvl3-33-seguridad"><a href="/categorias/33/330160/accesorios/">Accesorios</a><a href="/categorias/33/330843/alarmas/">Alarmas</a><a href="/categorias/33/330162/camaras/">Cámaras</a><a href="/categorias/33/330366/camaras-ip/">Cámaras IP</a><a href="/categorias/33/330166/grabadoras-de-video/">Grabadoras de Video</a><a href="/categorias/33/330906/puertas-de-seguridad/">Puertas de seguridad</a></div><div class="nx-mega-panel" id="lvl3-52-herramientas"><a href="/categorias/52/520599/amoladoras/">Amoladoras</a><a href="/categorias/52/520605/destornilladores/">Destornilladores</a><a href="/categorias/52/520600/soldadoras/">Soldadoras</a></div><div class="nx-mega-panel" id="lvl3-621009-mascotas"></div><div class="nx-mega-panel" id="lvl3-620753-muebles"></div><div class="nx-mega-panel" id="lvl3-620757-organizadores"></div><div class="nx-mega-panel" id="lvl3-450514-juegos-y-juguetes"></div><div class="nx-mega-panel" id="lvl3-12-almacenamiento"><a href="/categorias/12/120732/discos-externos/">Discos Externos</a><a href="/categorias/12/120424/hdd-sata/">HDD SATA</a><a href="/categorias/12/120954/servidores/">SERVIDORES</a><a href="/categorias/12/120461/ssd-2-5-pulgadas/">SSD 2.5 Pulgadas</a><a href="/categorias/12/120617/ssd-m-2-pci-e/">SSD M.2 PCI-e</a><a href="/categorias/12/121110/ssd-m-2-sata/">SSD M.2 SATA</a></div><div class="nx-mega-panel" id="lvl3-69-combos-actualizacion"><a href="/categorias/69/691007/mother-y-micro-memoria-y-disco/">Mother y Micro, Memoria y Disco</a></div><div class="nx-mega-panel" id="lvl3-32-computadoras-armadas"><a href="/categorias/32/321100/gamer-diseno/">Gamer / Diseño</a><a href="/categorias/32/321091/intel-celeron-amd-athlon/">INTEL Celeron / AMD Athlon</a><a href="/categorias/32/321092/intel-core-i3-amd-ryzen-3/">INTEL Core i3 / AMD Ryzen 3</a><a href="/categorias/32/321093/intel-core-i5-amd-ryzen-5/">INTEL Core i5 / AMD Ryzen 5</a><a href="/categorias/32/321094/intel-core-i7-amd-ryzen-7/">INTEL Core i7 / AMD Ryzen 7</a><a href="/categorias/32/321095/intel-core-i9-amd-ryzen-9/">INTEL Core i9 / AMD Ryzen 9</a><a href="/categorias/32/320741/mini-pc/">Mini PC</a><a href="/categorias/32/320145/servidores/">Servidores</a></div><div class="nx-mega-panel" id="lvl3-18-conectividad"><a href="/categorias/18/180209/access-point/">Access Point</a><a href="/categorias/18/180896/adaptadores/">Adaptadores</a><a href="/categorias/18/180475/cables/">Cables</a><a href="/categorias/18/180290/placas-de-red/">Placas de red</a><a href="/categorias/18/180905/repetidor/">Repetidor</a><a href="/categorias/18/180148/routers/">Routers</a><a href="/categorias/18/180060/switchs/">Switchs</a><a href="/categorias/18/180439/telefonos-ip/">Telefonos IP</a><a href="/categorias/18/180091/usb/">USB</a></div><div class="nx-mega-panel" id="lvl3-36-fuentes"><a href="/categorias/36/360633/atx/">ATX</a><a href="/categorias/36/360737/atx-modulares/">ATX Modulares</a><a href="/categorias/36/360856/pilas-y-cargadores/">Pilas y cargadores</a></div><div class="nx-mega-panel" id="lvl3-20-gabinetes-con-y-sin-fuente"><a href="/categorias/20/200101/accesorios/">Accesorios</a><a href="/categorias/20/200066/gabinetes-atx/">Gabinetes ATX</a><a href="/categorias/20/200477/gabinetes-rackeables/">Gabinetes Rackeables</a><a href="/categorias/20/200736/gabinetes-slim/">Gabinetes Slim</a><a href="/categorias/20/200967/gamer/">Gamer</a></div><div class="nx-mega-panel" id="lvl3-44-impresoras"><a href="/categorias/44/440501/laser/">Láser</a><a href="/categorias/44/440500/multifuncion-chorro-de-tinta/">Multifunción Chorro de Tinta</a><a href="/categorias/44/440502/multifuncion-laser/">Multifunción Láser</a><a href="/categorias/44/440744/multifuncion-sistema-continuo/">Multifunción Sistema Continuo</a><a href="/categorias/44/440745/plotter/">Plotter</a><a href="/categorias/44/440587/rotuladoras/">Rotuladoras</a><a href="/categorias/44/440950/termicas/">Termicas</a></div><div class="nx-mega-panel" id="lvl3-10-memorias"><a href="/categorias/10/100564/ddr4/">DDR4</a><a href="/categorias/10/101000/ddr5/">DDR5</a><a href="/categorias/10/101107/sodimm-ddr4/">SODIMM DDR4</a><a href="/categorias/10/101109/sodimm-ddr5/">SODIMM DDR5</a></div><div class="nx-mega-panel" id="lvl3-21-monitores"><a href="/categorias/21/210886/accesorios/">Accesorios</a><a href="/categorias/21/211079/extensor-portatil/">Extensor Portátil</a><a href="/categorias/21/210408/hasta-24-pulgadas/">Hasta 24 pulgadas</a><a href="/categorias/21/210409/mas-de-24-pulgadas/">Más de 24 pulgadas</a><a href="/categorias/21/210410/monitores-gamer/">Monitores Gamer</a></div><div class="nx-mega-panel" id="lvl3-13-motherboards"><a href="/categorias/13/130608/amd-am4/">AMD AM4</a><a href="/categorias/13/131104/amd-am5/">AMD AM5</a><a href="/categorias/13/130899/intel-socket-1200/">Intel Socket 1200</a><a href="/categorias/13/131101/intel-socket-1700/">Intel Socket 1700</a><a href="/categorias/13/131118/intel-socket-1851/">Intel Socket 1851</a></div><div class="nx-mega-panel" id="lvl3-37-perifericos-y-accesorios"><a href="/categorias/37/371082/accesorios-de-notebook/">Accesorios de notebook</a><a href="/categorias/37/370432/auriculares/">Auriculares</a><a href="/categorias/37/370881/base-notebooks/">Base Notebooks</a><a href="/categorias/37/370955/baterias/">Baterias</a><a href="/categorias/37/370474/bolsos-y-fundas/">Bolsos y Fundas</a><a href="/categorias/37/370746/cables-y-hubs-usb/">Cables y Hubs USB</a><a href="/categorias/37/370885/combos/">Combos</a><a href="/categorias/37/370632/gamer/">Gamer</a><a href="/categorias/37/370470/hd-externos/">HD Externos</a><a href="/categorias/37/370996/lector-de-codigo/">Lector de código</a><a href="/categorias/37/371083/mochilas/">Mochilas</a><a href="/categorias/37/370760/mouse-pads/">Mouse Pads</a><a href="/categorias/37/370430/mouses/">Mouses</a><a href="/categorias/37/370417/pen-drives/">Pen Drives</a><a href="/categorias/37/370415/scanners/">Scanners</a><a href="/categorias/37/370443/tabletas-digitalizadoras/">Tabletas Digitalizadoras</a><a href="/categorias/37/370418/teclados/">Teclados</a><a href="/categorias/37/370420/ups-y-estabilizadores/">UPS y Estabilizadores</a><a href="/categorias/37/370419/webcams/">Webcams</a></div><div class="nx-mega-panel" id="lvl3-14-placas-de-video-y-editoras"><a href="/categorias/14/140941/geforce-rtx/">Geforce RTX</a><a href="/categorias/14/140735/radeon/">Radeon</a></div><div class="nx-mega-panel" id="lvl3-11-procesadores"><a href="/categorias/11/110607/amd-socket-am4/">AMD Socket AM4</a><a href="/categorias/11/111105/amd-socket-am5/">AMD Socket AM5</a><a href="/categorias/11/110506/coolers-y-accesorios/">Coolers y Accesorios</a><a href="/categorias/11/111013/intel-socket-lga1700/">intel Socket LGA1700</a><a href="/categorias/11/111119/intel-socket-lga1851/">Intel Socket LGA1851</a><a href="/categorias/11/110952/intel-socket-lga3647/">Intel Socket LGA3647</a></div><div class="nx-mega-panel" id="lvl3-55-tablets"><a href="/categorias/55/550664/accesorios/">Accesorios</a><a href="/categorias/55/550665/e-books/">E-Books</a><a href="/categorias/55/550942/e-reader/">E-Reader</a><a href="/categorias/55/550661/mas-de-9-pulgadas/">Más de 9 Pulgadas</a></div><div class="nx-mega-panel" id="lvl3-71-videoconferencia"><a href="/categorias/71/711002/accesorios/">Accesorios</a><a href="/categorias/71/710887/headset/">Headset</a><a href="/categorias/71/710888/parlantes/">Parlantes</a><a href="/categorias/71/710958/soporte-webcam/">Soporte Webcam</a><a href="/categorias/71/710889/webcam/">Webcam</a></div><div class="nx-mega-panel" id="lvl3-681081-accesorios"></div><div class="nx-mega-panel" id="lvl3-680827-amplificadores"></div><div class="nx-mega-panel" id="lvl3-680825-guitarras-electricas"></div><div class="nx-mega-panel" id="lvl3-680844-microfonos"></div><div class="nx-mega-panel" id="lvl3-110-juegos-y-rodados"><a href="/categorias/110/1101184/juegos-de-exterior/">Juegos de Exterior</a></div><div class="nx-mega-panel" id="lvl3-106-muebles-de-exterior"><a href="/categorias/106/1061173/guardado-exterior/">Guardado Exterior</a><a href="/categorias/106/1061169/reposeras/">Reposeras</a><a href="/categorias/106/1061171/sillas-y-sets-de-jardin/">Sillas y Sets de Jardín</a></div><div class="nx-mega-panel" id="lvl3-108-parrillas"><a href="/categorias/108/1081175/a-carbon/">A Carbón</a><a href="/categorias/108/1081179/accesorios/">Accesorios</a></div><div class="nx-mega-panel" id="lvl3-107-sombrillas"><a href="/categorias/107/1071174/playa-y-jardin/">Playa y Jardín</a></div><div class="nx-mega-panel" id="lvl3-301099-gamer-diseno"></div><div class="nx-mega-panel" id="lvl3-301086-intel-core-i3-amd-ryzen-3"></div><div class="nx-mega-panel" id="lvl3-301087-intel-core-i5-amd-ryzen-5"></div><div class="nx-mega-panel" id="lvl3-301088-intel-core-i7-amd-ryzen-7"></div><div class="nx-mega-panel" id="lvl3-301114-intel-ultra-amd-ryzen-ai"></div><div class="nx-mega-panel" id="lvl3-300129-notebooks"></div><div class="nx-mega-panel" id="lvl3-98-inflables-y-diversion"><a href="/categorias/98/981147/conservadoras-flotantes/">Conservadoras flotantes</a><a href="/categorias/98/981133/flotadores-y-colchonetas/">Flotadores y Colchonetas</a><a href="/categorias/98/981134/juegos-de-pileta/">Juegos de Pileta</a><a href="/categorias/98/981135/kids-y-bebes/">Kids y Bebés</a><a href="/categorias/98/981132/playcenters/">Playcenters</a></div><div class="nx-mega-panel" id="lvl3-100-mantenimiento-y-accesorios"><a href="/categorias/100/1001141/bombas-y-filtros/">Bombas y Filtros</a><a href="/categorias/100/1001146/buceo-y-natacion/">Buceo y Natación</a><a href="/categorias/100/1001142/cobertores-y-tapiz-protector/">Cobertores y Tapiz protector</a><a href="/categorias/100/1001144/escaleras-e-infladores/">Escaleras e Infladores</a><a href="/categorias/100/1001143/limpieza-y-quimicos/">Limpieza y Químicos</a><a href="/categorias/100/1001140/robots-limpiafondos/">Robots limpiafondos</a><a href="/categorias/100/1001145/sombrillas-y-decorativo/">Sombrillas y Decorativo</a></div><div class="nx-mega-panel" id="lvl3-99-nautica-y-deportes"><a href="/categorias/99/991139/accesorios-nauticos/">Accesorios Náuticos</a><a href="/categorias/99/991136/botes-y-gomones/">Botes y Gomones</a><a href="/categorias/99/991137/kayaks/">Kayaks</a><a href="/categorias/99/991138/tablas/">Tablas</a></div><div class="nx-mega-panel" id="lvl3-64-piletas"><a href="/categorias/64/641129/combos-y-promociones/">Combos y promociones</a><a href="/categorias/64/640789/piletas-estructurales/">Piletas Estructurales</a><a href="/categorias/64/640890/piletas-infantiles/">Piletas Infantiles</a><a href="/categorias/64/640790/piletas-inflables/">Piletas Inflables</a><a href="/categorias/64/641199/piletas-para-mascotas/">Piletas para mascotas</a></div><div class="nx-mega-panel" id="lvl3-97-spas-y-relax"><a href="/categorias/97/971131/accesorios-de-spa/">Accesorios de Spa</a><a href="/categorias/97/971130/spas/">Spas</a></div><div class="nx-mega-panel" id="lvl3-59-deportes-y-fitness"><a href="/categorias/59/590864/seguridad/">Seguridad</a></div><div class="nx-mega-panel" id="lvl3-46-salud-y-belleza"><a href="/categorias/46/460542/trimmer/">Trimmer</a></div></div></div>
+
+
+        
+      </li>
+
+      <li><a href="/sites/70/1/Retira-YA/"><img alt="" loading="lazy" src="/img/location-point-blanco2.svg" width="15" height="15" class="nx-icon-mt2"> Retirá YA</a></li>
+      <li><a href="/sites/87/1/Destacados/"><img alt="" loading="lazy" src="/img/label-destacados.svg" width="15" height="15" class="nx-icon-mt2"> Destacados</a></li>
+      <li><a href="/sites/205/1/MesDelGamer/"><svg viewBox="0 0 24 24" class="nx-icon-1rem" fill="#FFF"><path d="M7.97,16L5,19C4.67,19.3 4.23,19.5 3.75,19.5A1.75,1.75 0 0,1 2,17.75V17.5L3,10.12C3.21,7.81 5.14,6 7.5,6H16.5C18.86,6 20.79,7.81 21,10.12L22,17.5V17.75A1.75,1.75 0 0,1 20.25,19.5C19.77,19.5 19.33,19.3 19,19L16.03,16H7.97M7,8V10H5V11H7V13H8V11H10V10H8V8H7M16.5,8A0.75,0.75 0 0,0 15.75,8.75A0.75,0.75 0 0,0 16.5,9.5A0.75,0.75 0 0,0 17.25,8.75A0.75,0.75 0 0,0 16.5,8M14.75,9.75A0.75,0.75 0 0,0 14,10.5A0.75,0.75 0 0,0 14.75,11.25A0.75,0.75 0 0,0 15.5,10.5A0.75,0.75 0 0,0 14.75,9.75M18.25,9.75A0.75,0.75 0 0,0 17.5,10.5A0.75,0.75 0 0,0 18.25,11.25A0.75,0.75 0 0,0 19,10.5A0.75,0.75 0 0,0 18.25,9.75M16.5,11.5A0.75,0.75 0 0,0 15.75,12.25A0.75,0.75 0 0,0 16.5,13A0.75,0.75 0 0,0 17.25,12.25A0.75,0.75 0 0,0 16.5,11.5Z"></path></svg> Gaming</a></li>
+      <li><a href="/informatica"><svg viewBox="0 0 24 24" class="nx-icon-1rem" fill="#FFF"><path d="M11,1.07C7.05,1.56 4,4.92 4,9H11M4,15A8,8 0 0,0 12,23A8,8 0 0,0 20,15V11H4M13,1.07V9H20C20,4.92 16.94,1.56 13,1.07Z"></path></svg> Informática</a></li>
+      <li><a href="/sites/150/1/Empresa/"><img alt="" loading="lazy" src="/img/empresas.svg" width="15" height="15" class="nx-icon-mt2"> Empresas</a></li>
+      <li><a href="/favoritos"><img alt="" loading="lazy" src="/img/favinwhite.svg" width="15" height="15" class="nx-icon-fav"> Favoritos</a></li>
+    </ul>
+
+  </nav>
+ </div>
+
+  </div>
+</header>
+
+
+
+<!-- Overlay Menu -->
+<div id="nxAuthDesktopOverlay" class="nx-auth-desktop-overlay hidden">
+  <!-- Modal -->
+  <div class="nx-auth-desktop-modal">
+    <button class="nx-auth-desktop-close" aria-label="Cerrar">&times;</button>
+
+    <header class="nx-auth-desktop-header">
+      <h2>Ingresar</h2>
+    </header>
+
+    <form class="nx-auth-desktop-form" action="#" method="post" data-nx-login novalidate>
+      <label>E-mail</label>
+      <input type="email" name="email" autocomplete="email" required>
+
+      <label>Contraseña</label>
+      <div class="nx-auth-desktop-password-wrapper">
+        <input type="password" name="password" autocomplete="current-password" required>
+        <button type="button" class="nx-auth-desktop-toggle-password" aria-label="Mostrar contraseña">
+          <img src="/img/eye.svg" class="eye-icon" alt="Mostrar contraseña" width="20" height="20" decoding="async">
+        </button>
+      </div>
+
+      <button type="button" class="nx-auth-desktop-link nx-recover-link" data-nx-auth="recover">
+        Olvidé mi contraseña
+      </button>
+
+      <button type="submit" class="nx-btn nx-btn--primary">
+        Ingresar
+      </button>
+    </form>
+    
+    
+    <div class="nx-auth-desktop-social">
+      <p class="nx-enter-with">O ingresar con:</p>
+      <h3 class="nx-enter-with-gmail">Elegí una cuenta de Google para continuar</h3>
+
+      <button type="button" id="btnGoogleLogin" class="nx-btn nx-btn--google">
+        <img src="/img/gmail.svg" width="20" height="20" alt="Google logo" loading="lazy" decoding="async">
+        Ingresar con Gmail
+      </button>
+       <div class="google-login-wrapper">
+        <div id="googleBtn"></div>
+      </div>
+    </div>
+   
+    <div class="nx-auth-desktop-footer">
+      <p class="nx-enter-with-email">
+        ¿Querés usar otro método?<br>
+        <button type="button" class="nx-auth-desktop-switch" data-nx-auth="register">
+          Registrate
+        </button>
+        o
+        <button id="enter-email-btn">
+          Ingresar con email y contraseña
+        </button>
+      </p>
+
+      <p class="nx-enter-with-register">
+        ¿No tenés cuenta?
+        <button type="button" class="nx-auth-desktop-switch" data-nx-auth="register">
+          Registrate
+        </button>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Recuperar contraseña -->
+<div id="nxAuthRecover" class="nx-auth-overlay hidden">
+    <section class="nx-auth">
+      <header class="nx-auth__header">
+        <h2>Recuperar contraseña</h2>
+      </header>
+      <div><p class="nx-auth__subtitle">Ingresá tu email y te enviaremos un link para crear una nueva contraseña.</p></div>
+      <form class="nx-auth__form" action="#" method="post" data-nx-reset>
+        <label>E-mail</label>
+        <input type="email" name="email" autocomplete="email" required placeholder="tu@email.com">
+
+        <button type="submit" class="nx-btn nx-btn--primary nx-btn--modal-login">
+          Enviar enlace
+        </button>
+      </form>
+
+      <p class="nx-auth__footer">
+        ¿Recordaste tu contraseña?
+        <button type="button" data-nx-auth="login" class="nx-auth__switch">Ingresar</button>
+      </p>
+      <button class="nx-auth__close">&times;</button>
+    </section>
+</div>
+
+<!-- Crear cuenta -->
+<div id="nxAuthRegister" class="nx-auth-overlay hidden">
+    <section class="nx-auth">
+      <header class="nx-auth__header">
+        <h2>Crear cuenta</h2>
+      </header>
+      <form class="nx-auth__form" action="#" method="post" data-nx-register>
+        <label>Nombre</label>
+        <input type="text" name="name" autocomplete="name" required>
+
+        <label>E-mail</label>
+        <input type="email" name="email" autocomplete="email" required>
+
+        <label>Contraseña</label>
+        <div class="nx-auth__password-wrapper">
+          <input type="password" name="password" autocomplete="new-password" required>
+          <button type="button" class="nx-auth__toggle-password" aria-label="Mostrar contraseña">
+            <img src="/img/eye.svg" class="eye-icon" alt="Mostrar contraseña" width="20" height="20" decoding="async">
+          </button>
+        </div>
+
+        <label>Repetir contraseña</label>
+        <div class="nx-auth__password-wrapper">
+          <input type="password" name="repeat_password" autocomplete="new-password" required>
+          <button type="button" class="nx-auth__toggle-password" aria-label="Mostrar contraseña">
+           <img src="/img/eye.svg" class="eye-icon" alt="Mostrar contraseña" width="20" height="20" decoding="async">
+          </button>
+        </div>
+
+        <button type="submit" class="nx-btn nx-btn--primary nx-btn--modal-login">
+          Registrarme
+        </button>
+      </form>
+
+      <p class="nx-auth__footer">
+        ¿Ya tenés cuenta?
+        <button type="button" data-nx-auth="login" class="nx-auth__switch">Ingresar</button>
+      </p>
+      <button class="nx-auth__close">&times;</button>
+    </section>
+</div>
+
+
+    
+  
+      <!-- =================== Auth modal container =================== -->
+     
+<div id="nxAuthContainer" aria-hidden="true"></div>
+
+  <!-- =================== JS =================== -->
+  <script src="/js/nx-main.js?v=1789136533" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+
+			<link rel="preload" href="/css/grid-product.css?8" as="style" data-onload="stylesheet">
+		
+	<link rel="preload" href="/css/slider-desktop.css" as="style" data-onload="stylesheet">
+	<noscript>
+		  
+			<link rel="stylesheet" href="/css/grid-product.css">
+				
+		<link rel="stylesheet" href="/css/slider-desktop.css">
+	</noscript>
+	<main id="main-content" data-filter-mode="server">        
+        <section class="nx-product-page"  data-slider-name="SERVIDORES"  data-slider-id="servidores">
+
+                           <h1 class="nx-product-grid__title">
+                    SERVIDORES                                       
+                </h1>
+                                    <nav class="nx-breadcrumb" aria-label="Breadcrumb"><ol class="nx-breadcrumb__list"><li class="nx-breadcrumb__item"><a href="/">Inicio</a></li><li class="nx-breadcrumb__sep" aria-hidden="true">›</li><li class="nx-breadcrumb__item"><a href="/categorias/1/Informatica/">Informatica</a></li><li class="nx-breadcrumb__sep" aria-hidden="true">›</li><li class="nx-breadcrumb__item"><a href="/categorias/1/12/Almacenamiento/">Almacenamiento</a></li><li class="nx-breadcrumb__sep" aria-hidden="true">›</li><li class="nx-breadcrumb__item nx-breadcrumb__item--current" aria-current="page">SERVIDORES</li></ol></nav><script type="application/ld+json" nonce="ZdjKGp6CIUNRHBXy8TM9LA==">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.necxus.com.ar/"},{"@type":"ListItem","position":2,"name":"Informatica","item":"https://www.necxus.com.ar/categorias/1/Informatica/"},{"@type":"ListItem","position":3,"name":"Almacenamiento","item":"https://www.necxus.com.ar/categorias/1/12/Almacenamiento/"},{"@type":"ListItem","position":4,"name":"SERVIDORES","item":"https://www.necxus.com.ar/categorias/12/120954/SERVIDORES/"}]}</script>                
+                
+            
+            
+
+            <div class="nx-product-grid-layout">
+
+                                    <!-- DESKTOP SIDEBAR -->
+                    <aside class="nx-product-filter-desktop">
+                        
+<form class="nx-filter" method="GET">
+
+    <h2 class="nx-filter__title">Filtros</h2>
+
+    <!-- ORDENAR -->
+    <div class="nx-filter__group nx-filter__group--sort">
+        <h3 class="nx-filter__group-title" id="nx-sort-label">Ordenar por</h3>
+        <div class="nx-sort-select-wrapper">
+            <select name="sort"
+                    id="nx-sort-select"
+                    aria-labelledby="nx-sort-label"
+                    class="nx-sort-select"
+                    data-nx-filter-autosubmit="1">
+
+                <option value="" selected>
+                    Relevante
+                </option>
+
+                <option value="price_asc"
+                    >
+                    Precio menor a mayor
+                </option>
+
+                <option value="price_desc"
+                    >
+                    Precio mayor a menor
+                </option>
+
+            </select>
+        </div>
+    </div>
+
+    
+    <!-- MARCA -->
+        <div class="nx-filter__group">
+        <h3 class="nx-filter__group-title">Marca</h3>
+
+        
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="QNAP"
+                       data-nx-filter-autosubmit="1"                       >
+                QNAP (7)
+            </label>
+
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="HP "
+                       data-nx-filter-autosubmit="1"                       >
+                HP  (6)
+            </label>
+
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="LENOVO"
+                       data-nx-filter-autosubmit="1"                       >
+                LENOVO (3)
+            </label>
+
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="Asustor"
+                       data-nx-filter-autosubmit="1"                       >
+                Asustor (1)
+            </label>
+
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="Q-BOX"
+                       data-nx-filter-autosubmit="1"                       >
+                Q-BOX (1)
+            </label>
+
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                        name="marca[]"
+                       value="Seagate"
+                       data-nx-filter-autosubmit="1"                       >
+                Seagate (1)
+            </label>
+
+        
+            </div>
+    
+
+    <!-- CATEGORÍA -->
+        <div class="nx-filter__group">
+        <h3 class="nx-filter__group-title">Categoría</h3>
+
+        
+                    
+            <label class="nx-filter__item">
+                <input type="checkbox"
+                       name="family[]"
+                       value="Almacenamiento"
+                       data-nx-filter-autosubmit="1"                       >
+                Almacenamiento (27)
+            </label>
+
+        
+            </div>
+    
+    <!-- PRECIO -->
+    <div class="nx-filter__group">
+        <h3 class="nx-filter__group-title">Precio</h3>
+        <label class="nx-filter__item"><input type="checkbox"
+                                name="price[]"
+                                value="133000-580000"
+                                data-nx-filter-autosubmit="1"
+                                >$133.000 - $580.000</label><label class="nx-filter__item"><input type="checkbox"
+                                name="price[]"
+                                value="729000-1660000"
+                                data-nx-filter-autosubmit="1"
+                                >$729.000 - $1.660.000</label><label class="nx-filter__item"><input type="checkbox"
+                                name="price[]"
+                                value="1739000-4700000"
+                                data-nx-filter-autosubmit="1"
+                                >$1.739.000 - $4.700.000</label><label class="nx-filter__item"><input type="checkbox"
+                                name="price[]"
+                                value="4699000-12700000"
+                                data-nx-filter-autosubmit="1"
+                                >$4.699.000 - $12.700.000</label>    </div>
+    <!-- CARACTERÍSTICAS -->
+    </form>
+
+                    </aside>
+                
+                <!-- PRODUCT GRID -->
+                <div class="nx-product-grid-content">
+                    <div class="nx-product-grid__wrapper">
+                        <a href="/productos/42741/disco-solido-lenovo-thinksystem-2-5-1-92tb-sata-6gb-hs-v2-lectura-intensiva" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="6299999"
+   data-brand="LENOVO"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42741"
+  data-item-name="Disco solido lenovo thinksystem 2.5 1.92tb sata 6gb hs v2  lectura intensiva"
+  data-item-price="6299999"
+  data-item-brand="LENOVO"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42741_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42741_250x250_1.jpg"
+                    alt="Disco solido lenovo thinksystem 2.5 1.92tb sata 6gb hs v2  lectura intensiva"
+                    width="268"
+                    height="268"
+                    loading="eager" fetchpriority="high"                    decoding="auto">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco solido lenovo thinksystem 2.5 1.92tb sata 6gb hs v2  lectura intensiva            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $6.299.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $5.701.357                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42361/disco-duro-interno-seagate-skyhawk-20tb-vigilancia" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1779999"
+   data-brand="Seagate"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42361"
+  data-item-name="Disco Duro Interno Seagate skyhawk 20tb vigilancia"
+  data-item-price="1779999"
+  data-item-brand="Seagate"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42361_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42361_250x250_1.jpg"
+                    alt="Disco Duro Interno Seagate skyhawk 20tb vigilancia"
+                    width="268"
+                    height="268"
+                    loading="eager"                    decoding="auto">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco Duro Interno Seagate skyhawk 20tb vigilancia            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.779.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.610.859                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44239/storage-qnap-nas-12-bay-xeon-4core-3-2ghz-32gb" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="12699999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44239"
+  data-item-name="Storage Qnap Nas 12-BAY xeon 4core 3.2ghz 32gb"
+  data-item-price="12699999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44239_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44239_250x250_1.jpg"
+                    alt="Storage Qnap Nas 12-BAY xeon 4core 3.2ghz 32gb"
+                    width="268"
+                    height="268"
+                    loading="eager"                    decoding="auto">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Storage Qnap Nas 12-BAY xeon 4core 3.2ghz 32gb            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $12.699.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $11.493.212                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/41946/storage-servidor-nas-qnap-ts-433-4-bahias-4gb-ram-quad-core" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1009999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="41946"
+  data-item-name="Storage Servidor NAS QNAP TS-433 4 Bahías 4GB RAM Quad-Core"
+  data-item-price="1009999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/41946_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/41946_250x250_1.jpg"
+                    alt="Storage Servidor NAS QNAP TS-433 4 Bahías 4GB RAM Quad-Core"
+                    width="268"
+                    height="268"
+                    loading="eager"                    decoding="auto">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Storage Servidor NAS QNAP TS-433 4 Bahías 4GB RAM Quad-Core            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.009.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $914.026                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44245/storage-qnap-nas-8-bay-amd-4core-2-2ghz-4gb-ddr4-rack" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="6799999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44245"
+  data-item-name="STORAGE QNAP NAS 8-BAY AMD 4CORE 2.2GHZ 4GB DDR4 RACK"
+  data-item-price="6799999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44245_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44245_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 8-BAY AMD 4CORE 2.2GHZ 4GB DDR4 RACK"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 8-BAY AMD 4CORE 2.2GHZ 4GB DDR4 RACK            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $6.799.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $6.153.845                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/41950/almacenamiento-nas-qnap-ts-864eu-rp-8g-8-bays-intel-celeron" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="4699999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="41950"
+  data-item-name="Almacenamiento Nas Qnap Ts-864eu-rp-8g 8 Bays Intel Celeron"
+  data-item-price="4699999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/41950_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/41950_250x250_1.jpg"
+                    alt="Almacenamiento Nas Qnap Ts-864eu-rp-8g 8 Bays Intel Celeron"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Almacenamiento Nas Qnap Ts-864eu-rp-8g 8 Bays Intel Celeron            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $4.699.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $4.253.393                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42800/qnap-tvs-h674-nas-de-escritorio-6-bahias-intel-core-i5-32gb-ram-2-5gbe" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="6699999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42800"
+  data-item-name="QNAP TVS-h674 NAS de Escritorio 6 Bahías - Intel Core i5, 32GB RAM, 2.5GbE"
+  data-item-price="6699999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42800_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42800_250x250_1.jpg"
+                    alt="QNAP TVS-h674 NAS de Escritorio 6 Bahías - Intel Core i5, 32GB RAM, 2.5GbE"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                QNAP TVS-h674 NAS de Escritorio 6 Bahías - Intel Core i5, 32GB RAM, 2.5GbE            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $6.699.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $6.063.348                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/26344/disco-duro-hpe-enterprise-2-4-tb-hot-swap-2-5" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1739999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="26344"
+  data-item-name="Disco duro HPE Enterprise 2.4 TB Hot Swap 2.5"
+  data-item-price="1739999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/26344_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/26344_250x250_1.jpg"
+                    alt="Disco duro HPE Enterprise 2.4 TB Hot Swap 2.5"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco duro HPE Enterprise 2.4 TB Hot Swap 2.5            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.739.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.574.660                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/41942/nas-rackeable-12-bahias-qnap-4gb-ram-expandible-storage-2u-2-fuentes-modulares-r" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="4699999"
+   data-brand="Q-BOX"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="41942"
+  data-item-name="Nas Rackeable 12 Bahias Qnap 4GB Ram Expandible Storage 2U 2 Fuentes modulares r"
+  data-item-price="4699999"
+  data-item-brand="Q-BOX"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/41942_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/41942_250x250_1.jpg"
+                    alt="Nas Rackeable 12 Bahias Qnap 4GB Ram Expandible Storage 2U 2 Fuentes modulares r"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Nas Rackeable 12 Bahias Qnap 4GB Ram Expandible Storage 2U 2 Fuentes modulares r            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $4.699.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $4.253.393                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42316/disco-duro-lenovo-thinksystem-2-4tb-hotswap-2-5-4xb7a83970" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1659999"
+   data-brand="LENOVO"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42316"
+  data-item-name="Disco duro Lenovo Thinksystem 2.4TB hotswap 2.5 4XB7A83970"
+  data-item-price="1659999"
+  data-item-brand="LENOVO"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42316_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42316_250x250_1.jpg"
+                    alt="Disco duro Lenovo Thinksystem 2.4TB hotswap 2.5 4XB7A83970"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco duro Lenovo Thinksystem 2.4TB hotswap 2.5 4XB7A83970            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.659.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.502.262                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/24918/disco-duro-hpe-midline-helium-12-tb" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1439999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="24918"
+  data-item-name="Disco duro HPE Midline Helium 12 TB"
+  data-item-price="1439999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/24918_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/24918_250x250_1.jpg"
+                    alt="Disco duro HPE Midline Helium 12 TB"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco duro HPE Midline Helium 12 TB            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.439.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.303.167                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44244/storage-qnap-nas-6-bay-intel-celeron-2-0ghz-8gb-ddr4" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="2299999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44244"
+  data-item-name="STORAGE QNAP NAS 6-BAY INTEL CELERON 2.0GHZ 8GB DDR4"
+  data-item-price="2299999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44244_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44244_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 6-BAY INTEL CELERON 2.0GHZ 8GB DDR4"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 6-BAY INTEL CELERON 2.0GHZ 8GB DDR4            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $2.299.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $2.081.447                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/39196/disco-duro-lenovo-simple-swap-2tb-sata-3-5" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="469999"
+   data-brand="LENOVO"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="39196"
+  data-item-name="Disco duro Lenovo Simple Swap 2TB SATA 3.5"
+  data-item-price="469999"
+  data-item-brand="LENOVO"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/39196_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/39196_250x250_1.jpg"
+                    alt="Disco duro Lenovo Simple Swap 2TB SATA 3.5"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco duro Lenovo Simple Swap 2TB SATA 3.5            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $469.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $425.338                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/36971/cinta-hpe-lto-8-ultrium-30-tb-rw-data-cartridge-q2078a" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="204999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="36971"
+  data-item-name="Cinta HPE LTO-8 Ultrium 30 TB RW Data Cartridge Q2078A"
+  data-item-price="204999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/36971_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/36971_250x250_1.jpg"
+                    alt="Cinta HPE LTO-8 Ultrium 30 TB RW Data Cartridge Q2078A"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Cinta HPE LTO-8 Ultrium 30 TB RW Data Cartridge Q2078A            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $204.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $185.519                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42799/storage-qnap-nas-12-bahias-intel-4core-2-9ghz-8gb-rack" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="5899999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42799"
+  data-item-name="Storage qnap nas 12 bahias Intel 4core 2.9ghz 8gb rack"
+  data-item-price="5899999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42799_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42799_250x250_1.jpg"
+                    alt="Storage qnap nas 12 bahias Intel 4core 2.9ghz 8gb rack"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Storage qnap nas 12 bahias Intel 4core 2.9ghz 8gb rack            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $5.899.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $5.339.366                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42751/cinta-hp-ultrium-limpieza-c7978a" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="133999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42751"
+  data-item-name="Cinta hp ultrium limpieza c7978a"
+  data-item-price="133999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42751_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42751_250x250_1.jpg"
+                    alt="Cinta hp ultrium limpieza c7978a"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Cinta hp ultrium limpieza c7978a            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $133.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $110.743                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44243/storage-qnap-nas-5bay-i3-core-12g-thunder-desk" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="3069999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44243"
+  data-item-name="STORAGE QNAP NAS 5BAY I3 CORE 12G THUNDER DESK"
+  data-item-price="3069999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44243_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44243_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 5BAY I3 CORE 12G THUNDER DESK"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 5BAY I3 CORE 12G THUNDER DESK            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $3.069.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $2.778.280                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/41944/storage-qnap-nas-2-bay-cortex-a55-4core-2ghz-2gb-ddr4" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="579999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="41944"
+  data-item-name="STORAGE QNAP NAS 2-BAY Cortex A55 4CORE 2GHZ 2GB DDR4"
+  data-item-price="579999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/41944_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/41944_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 2-BAY Cortex A55 4CORE 2GHZ 2GB DDR4"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 2-BAY Cortex A55 4CORE 2GHZ 2GB DDR4            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $579.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $524.886                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42969/storage-qnap-nas-2-bay-cel-2-9ghz-8gb-2-x-2-5g-port" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1339999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42969"
+  data-item-name="STORAGE QNAP NAS 2-BAY CEL 2.9Ghz 8GB 2 x 2,5G port"
+  data-item-price="1339999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42969_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42969_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 2-BAY CEL 2.9Ghz 8GB 2 x 2,5G port"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 2-BAY CEL 2.9Ghz 8GB 2 x 2,5G port            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.339.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.212.669                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44241/storage-qnap-nas-2-bay-arm-2-0ghz-4gb-1x2-5g-port" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="799999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44241"
+  data-item-name="STORAGE QNAP NAS 2-BAY ARM 2.0Ghz 4GB 1x2,5G port"
+  data-item-price="799999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44241_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44241_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 2-BAY ARM 2.0Ghz 4GB 1x2,5G port"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 2-BAY ARM 2.0Ghz 4GB 1x2,5G port            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $799.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $723.981                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42802/storage-nas-qnap-ts-832px-4g-8-bahias-2x10gb-sfp-quad-core-4gb" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="2559999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42802"
+  data-item-name="Storage Nas Qnap Ts-832px-4g 8 Bahias 2x10gb Sfp+ Quad Core 4gb"
+  data-item-price="2559999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42802_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42802_250x250_1.jpg"
+                    alt="Storage Nas Qnap Ts-832px-4g 8 Bahias 2x10gb Sfp+ Quad Core 4gb"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Storage Nas Qnap Ts-832px-4g 8 Bahias 2x10gb Sfp+ Quad Core 4gb            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $2.559.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $2.316.741                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42982/storage-nas-9-bahias-qnap-4gb-ram-raid-2-5gbe-sfp-10gbe-ts-932px-4g" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1969999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42982"
+  data-item-name="Storage Nas 9 Bahias Qnap 4gb Ram Raid 2.5gbe Sfp+ 10gbe TS-932PX-4G"
+  data-item-price="1969999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42982_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42982_250x250_1.jpg"
+                    alt="Storage Nas 9 Bahias Qnap 4gb Ram Raid 2.5gbe Sfp+ 10gbe TS-932PX-4G"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Storage Nas 9 Bahias Qnap 4gb Ram Raid 2.5gbe Sfp+ 10gbe TS-932PX-4G            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.969.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.782.805                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/44240/storage-qnap-nas-1-bay-4-core-1-7ghz-1gb-2port1g" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="499999"
+   data-brand="QNAP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="44240"
+  data-item-name="STORAGE QNAP NAS 1-BAY 4 CORE 1.7GHZ 1GB 2PORT1G"
+  data-item-price="499999"
+  data-item-brand="QNAP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/44240_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/44240_250x250_1.jpg"
+                    alt="STORAGE QNAP NAS 1-BAY 4 CORE 1.7GHZ 1GB 2PORT1G"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                STORAGE QNAP NAS 1-BAY 4 CORE 1.7GHZ 1GB 2PORT1G            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $499.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $452.488                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/39057/almacenamiento-asustor-lockerstor-4-gen2-as6704t-servidor-nas" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="1529999"
+   data-brand="Asustor"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="39057"
+  data-item-name="Almacenamiento asustor lockerstor 4 gen2 as6704t - servidor nas"
+  data-item-price="1529999"
+  data-item-brand="Asustor"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/39057_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/39057_250x250_1.jpg"
+                    alt="Almacenamiento asustor lockerstor 4 gen2 as6704t - servidor nas"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Almacenamiento asustor lockerstor 4 gen2 as6704t - servidor nas            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $1.529.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $1.384.614                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/45850/nas-asustor-drivestor-2-gen2-2-bahias-2-5gbe" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="489999"
+   data-brand=""
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="45850"
+  data-item-name="Nas asustor drivestor 2 gen2 2 bahias 2.5gbe"
+  data-item-price="489999"
+  data-item-brand=""
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/45850_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/45850_250x250_1.jpg"
+                    alt="Nas asustor drivestor 2 gen2 2 bahias 2.5gbe"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Nas asustor drivestor 2 gen2 2 bahias 2.5gbe            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $489.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $443.438                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/42369/disco-rigido-hpe-1-2tb-sas-10k-sffbc-p28586-b21" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="729999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="42369"
+  data-item-name="Disco Rigido Hpe 1.2tb Sas 10k Sffbc P28586-b21"
+  data-item-price="729999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/42369_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/42369_250x250_1.jpg"
+                    alt="Disco Rigido Hpe 1.2tb Sas 10k Sffbc P28586-b21"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                Disco Rigido Hpe 1.2tb Sas 10k Sffbc P28586-b21            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $729.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $660.633                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><a href="/productos/40377/cinta-hp-ultrium-lto7-15tb" class="nx-card nx-product-card"
+  data-pickup="0"
+   data-free-shipping="0"
+   data-discount="0"
+   data-destacado="0"
+   data-price="184999"
+   data-brand="HP"
+   data-categories='[&quot;Almacenamiento&quot;]'
+
+
+  data-item-itemid="40377"
+  data-item-name="CINTA HP ULTRIUM LTO7 15TB"
+  data-item-price="184999"
+  data-item-brand="HP"
+  data-item-category='[&quot;Almacenamiento&quot;]'
+  data-type="product"
+>
+    <article >
+
+        <div class="nx-card__media">
+
+        
+            <picture>
+                <source srcset="/cache/40377_250x250_1.webp" type="image/webp">
+                <img
+                    src="/cache/40377_250x250_1.jpg"
+                    alt="CINTA HP ULTRIUM LTO7 15TB"
+                    width="268"
+                    height="268"
+                    loading="lazy"                    decoding="async">
+            </picture>
+
+        </div>
+
+        <div class="nx-card__body">
+
+            <h3 class="nx-card__title">
+                CINTA HP ULTRIUM LTO7 15TB            </h3>
+
+            <div class="nx-card__pricing">
+
+                
+                <div class="nx-price-main">
+                    <span class="nx-price-current">
+                        $184.999                    </span>
+
+                                                      </div>
+
+                                    <div class="nx-price-nt">
+                        Precio sin impuestos nacionales:
+                        $167.420                    </div>
+                
+               
+                
+            </div>
+
+        </div>
+
+    </article>
+</a><script type="application/ld+json" nonce="ZdjKGp6CIUNRHBXy8TM9LA==">{"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"/productos/42741/disco-solido-lenovo-thinksystem-2-5-1-92tb-sata-6gb-hs-v2-lectura-intensiva"},{"@type":"ListItem","position":2,"url":"/productos/42361/disco-duro-interno-seagate-skyhawk-20tb-vigilancia"},{"@type":"ListItem","position":3,"url":"/productos/44239/storage-qnap-nas-12-bay-xeon-4core-3-2ghz-32gb"},{"@type":"ListItem","position":4,"url":"/productos/41946/storage-servidor-nas-qnap-ts-433-4-bahias-4gb-ram-quad-core"},{"@type":"ListItem","position":5,"url":"/productos/44245/storage-qnap-nas-8-bay-amd-4core-2-2ghz-4gb-ddr4-rack"},{"@type":"ListItem","position":6,"url":"/productos/41950/almacenamiento-nas-qnap-ts-864eu-rp-8g-8-bays-intel-celeron"},{"@type":"ListItem","position":7,"url":"/productos/42800/qnap-tvs-h674-nas-de-escritorio-6-bahias-intel-core-i5-32gb-ram-2-5gbe"},{"@type":"ListItem","position":8,"url":"/productos/26344/disco-duro-hpe-enterprise-2-4-tb-hot-swap-2-5"},{"@type":"ListItem","position":9,"url":"/productos/41942/nas-rackeable-12-bahias-qnap-4gb-ram-expandible-storage-2u-2-fuentes-modulares-r"},{"@type":"ListItem","position":10,"url":"/productos/42316/disco-duro-lenovo-thinksystem-2-4tb-hotswap-2-5-4xb7a83970"},{"@type":"ListItem","position":11,"url":"/productos/24918/disco-duro-hpe-midline-helium-12-tb"},{"@type":"ListItem","position":12,"url":"/productos/44244/storage-qnap-nas-6-bay-intel-celeron-2-0ghz-8gb-ddr4"},{"@type":"ListItem","position":13,"url":"/productos/39196/disco-duro-lenovo-simple-swap-2tb-sata-3-5"},{"@type":"ListItem","position":14,"url":"/productos/36971/cinta-hpe-lto-8-ultrium-30-tb-rw-data-cartridge-q2078a"},{"@type":"ListItem","position":15,"url":"/productos/42799/storage-qnap-nas-12-bahias-intel-4core-2-9ghz-8gb-rack"},{"@type":"ListItem","position":16,"url":"/productos/42751/cinta-hp-ultrium-limpieza-c7978a"},{"@type":"ListItem","position":17,"url":"/productos/44243/storage-qnap-nas-5bay-i3-core-12g-thunder-desk"},{"@type":"ListItem","position":18,"url":"/productos/41944/storage-qnap-nas-2-bay-cortex-a55-4core-2ghz-2gb-ddr4"},{"@type":"ListItem","position":19,"url":"/productos/42969/storage-qnap-nas-2-bay-cel-2-9ghz-8gb-2-x-2-5g-port"},{"@type":"ListItem","position":20,"url":"/productos/44241/storage-qnap-nas-2-bay-arm-2-0ghz-4gb-1x2-5g-port"},{"@type":"ListItem","position":21,"url":"/productos/42802/storage-nas-qnap-ts-832px-4g-8-bahias-2x10gb-sfp-quad-core-4gb"},{"@type":"ListItem","position":22,"url":"/productos/42982/storage-nas-9-bahias-qnap-4gb-ram-raid-2-5gbe-sfp-10gbe-ts-932px-4g"},{"@type":"ListItem","position":23,"url":"/productos/44240/storage-qnap-nas-1-bay-4-core-1-7ghz-1gb-2port1g"},{"@type":"ListItem","position":24,"url":"/productos/39057/almacenamiento-asustor-lockerstor-4-gen2-as6704t-servidor-nas"},{"@type":"ListItem","position":25,"url":"/productos/45850/nas-asustor-drivestor-2-gen2-2-bahias-2-5gbe"},{"@type":"ListItem","position":26,"url":"/productos/42369/disco-rigido-hpe-1-2tb-sas-10k-sffbc-p28586-b21"},{"@type":"ListItem","position":27,"url":"/productos/40377/cinta-hp-ultrium-lto7-15tb"}]}</script>                    </div>
+                </div>
+
+            </div>
+
+        </section>
+         </main>		<script src="/js/grid-product.js" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+			
+	<div id="loadingOverlay" > Cargando...</div>
+	<div id="toast-container"></div>
+<div id="nxFooterPlaceholder"></div>
+<section class="nx-footer-bottom" aria-label="Cierre institucional">
+  <div class="nx-footer-legal-text">
+    <p>© 2026 Necxus Negocios Informáticos S.A. Todos los derechos reservados</p>
+  </div>
+</section>
+
+<div id="nx-page-loader" class="nx-auth-overlay hidden">
+  <div class="nx-auth nx-page-loader-box">
+    <div class="nx-spinner"></div>
+    <p class="nx-loader-text">Verificando acceso…</p>
+  </div>
+</div>
+<div id="nx-confirm-container"></div>
+
+<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  // reCAPTCHA — se carga solo cuando se necesita (lazy, ya lo tenías así ✓)
+  const Recaptcha = (() => {
+    const SITE_KEY = '6LfrjfIqAAAAAPr-AdG_veux6wuk5P5f32-7rIPy';
+    let scriptLoaded = false;
+    async function loadScript() {
+      if (scriptLoaded) return;
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+        script.async = true;
+        script.defer = true;
+        script.onload = () => { scriptLoaded = true; resolve(); };
+        script.onerror = reject;
+        document.body.appendChild(script);
+      });
+    }
+    async function execute(action = 'general') {
+      await loadScript();
+      return new Promise((resolve, reject) => {
+        grecaptcha.ready(() => {
+          grecaptcha.execute(SITE_KEY, { action }).then(resolve).catch(reject);
+        });
+      });
+    }
+    return { execute };
+  })();
+  // Colgarlo de window: varios forms (perfil.js, nx-footer-md.js, etc.)
+  // chequean window.Recaptcha antes de usarlo, y un `const` de script no
+  // se cuelga de window automáticamente como sí lo hace `var`.
+  window.Recaptcha = Recaptcha;
+
+</script>
+
+<!-- login/registro/recuperar contraseña: carga inmediata, no demorada,
+     para que nunca dependan del bundle diferido por scroll/5s -->
+<script src="/js/nx-auth-critical.js?v=1790779929" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+<script src="/js/nx-confirm.js?v=1789136533" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+<!-- guarda/precarga email, WhatsApp, DNI y teléfono ya dados en cualquier
+     formulario del sitio (ver js/nx-contact-memory.js) -->
+<script src="/js/nx-contact-memory.js?v=1789136533" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+
+<script src="/js/nx-footer-Desktop.js?v=1790618371" nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer></script>
+  
+<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  (function () {
+    const sheets = [];
+
+    // En desktop, nx-footer-Desktop.js ya se cargó de forma inmediata más
+    // arriba (<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==" defer>): no debe repetirse acá, porque volver a
+    // cargarlo registra sus listeners de click dos veces (ej: el toggle
+    // de mostrar contraseña se activaba y desactivaba en el mismo click).
+    // En mobile no hay carga inmediata, así que nx-footer.js sí tiene que
+    // ir en este array.
+    const scripts = [
+            '/js/nx-footer-md.js'
+    ];
+
+    let loaded = false;
+    let pendingBtn = null; // botón que el usuario tocó mientras esto cargaba
+
+    function loadDeferred() {
+      if (loaded) return;
+      loaded = true;
+
+      sheets.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        document.head.appendChild(link);
+      });
+
+      scripts.forEach(src => {
+        const s = document.createElement('script');
+        s.src = src + (src.includes('?') ? '&' : '?') + 'v=1789154479';
+        s.defer = true;
+        if (src.includes('nx-footer-md.js')) {
+          // Si el usuario clickeó el botón de Google antes de que esto
+          // terminara de cargar, retomamos ese click apenas está listo,
+          // en vez de dejarlo esperando un segundo click.
+          s.onload = () => {
+            if (pendingBtn) {
+              pendingBtn.disabled = false;
+              pendingBtn.style.opacity = '';
+              pendingBtn.click();
+              pendingBtn = null;
+            }
+          };
+        }
+        document.body.appendChild(s);
+      });
+    }
+
+    window.addEventListener('scroll', loadDeferred, { once: true, passive: true });
+    setTimeout(loadDeferred, 5000); // fallback
+
+    // El botón de Google necesita nx-footer-md.js, que se carga recién con
+    // el scroll o a los 5s. Si lo tocan antes, disparamos la carga ya mismo
+    // y mostramos feedback en vez de dejarlo sin responder.
+    ['btnGoogleLogin', 'btnGoogleLoginMob'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        if (loaded) return; // nx-footer-md.js ya está activo, se encarga solo
+        btn.disabled = true;
+        btn.style.opacity = '0.6';
+        pendingBtn = btn;
+        loadDeferred();
+      });
+    });
+  })();
+</script>
+
+<script nonce="ZdjKGp6CIUNRHBXy8TM9LA==">
+  (function () {
+    // El body arranca en opacity:0 (ver headerSpeed.php) para evitar FOUC
+    // mientras el CSS async (preload+onload) termina de aplicarse.
+    //
+    // Primer intento: esperábamos el evento 'load' (HTML + imágenes eager +
+    // TODOS los scripts defer terminados) — en Lighthouse esto aparecía
+    // como ~1600ms de "retraso de renderizado" en el desglose de LCP: la
+    // imagen del banner ya estaba lista y pintada en el árbol de render,
+    // pero seguía invisible por el opacity:0 hasta que 'load' disparaba.
+    //
+    // Ahora usamos 'DOMContentLoaded' en su lugar: dispara apenas el HTML
+    // terminó de parsearse y los scripts defer corrieron, SIN esperar a
+    // que bajen imágenes ni recursos async. Este script inline corre
+    // durante el parseo (antes de que 'DOMContentLoaded' pueda disparar),
+    // así que 'complete'/'interactive' cubren el caso raro de que ya haya
+    // pasado. El CSS crítico se pide con máxima prioridad al principio del
+    // <head> y es chico, así que para cuando el HTML (mucho más pesado)
+    // termina de parsearse ya debería estar aplicado — por eso este punto
+    // es seguro contra FOUC. El timeout de 1200ms queda solo como red de
+    // seguridad final, no como mecanismo principal.
+    //
+    // 2026-10-01 (LCP móvil): 'DOMContentLoaded' igual espera a que BAJEN y
+    // corran todos los defer (nx-main, ga4, meta, tiktok, grid...) — en 4G
+    // eso era 1-2 s de página invisible con el LCP ya listo. Ahora además
+    // se muestra apenas el CSS async de la página (los preload data-onload,
+    // salvo los fetchpriority=low: footer/auth, fuera de pantalla) ya está
+    // aplicado. Nunca muestra más tarde que antes (DCL y 1200ms siguen como
+    // tope) y nunca antes de que haya CSS → sin FOUC.
+    var shown = false;
+    function show() {
+      if (shown) return;
+      shown = true;
+      document.body.style.opacity = '1';
+    }
+    var css = [].filter.call(
+      document.querySelectorAll('link[data-onload="stylesheet"]'),
+      function (l) { return l.getAttribute('fetchpriority') !== 'low'; }
+    );
+    function cssReady() {
+      for (var i = 0; i < css.length; i++) {
+        if (!css[i].sheet && !css[i].hasAttribute('data-nx-fail')) return false;
+      }
+      return true;
+    }
+    function check() { if (!shown && cssReady()) show(); }
+    document.addEventListener('load', function (e) {
+      if (e.target.tagName === 'LINK') setTimeout(check, 0);
+    }, true);
+    document.addEventListener('error', function (e) {
+      if (e.target.tagName === 'LINK') { e.target.setAttribute('data-nx-fail', '1'); check(); }
+    }, true);
+    if (document.readyState !== 'loading') {
+      show();
+    } else {
+      check();
+      document.addEventListener('DOMContentLoaded', show, { once: true });
+      setTimeout(show, 1200);
+    }
+  })();
+</script>
+
+<!-- Schema.org -->
+<script type="application/ld+json" nonce="ZdjKGp6CIUNRHBXy8TM9LA==">{"@context":"https://schema.org","@type":"Organization","name":"Necxus Negocios Informáticos","url":"https://www.necxus.com.ar","logo":"https://www.necxus.com.ar/img/NecxusWeb.png","sameAs":["https://www.facebook.com/necxus.ok","https://www.instagram.com/necxus_baires","https://x.com/necxus_baires","https://www.tiktok.com/@necxus_baires"]}</script>
+<script type="application/ld+json" nonce="ZdjKGp6CIUNRHBXy8TM9LA==">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Necxus Negocios Informáticos","image":"https://www.necxus.com.ar/img/logo_necxus_1200.jpg","url":"https://www.necxus.com.ar","telephone":"+54 11 2120-2250","email":"contacto@necxus.com.ar","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"Melincué 3929","addressLocality":"CABA","addressRegion":"Buenos Aires","addressCountry":"AR","postalCode":"1417"},"openingHours":"Mo-Fr 09:00-18:00, Sa 10:00-13:00","contactPoint":[{"@type":"ContactPoint","telephone":"+54 11 2732-1440","contactType":"customer support","availableLanguage":"Spanish"}]}</script>
+
+<a href="/nx-catalogo-promo-7k2p9" hidden aria-hidden="true" tabindex="-1" rel="nofollow noindex">ver promociones</a></body>
+</html>

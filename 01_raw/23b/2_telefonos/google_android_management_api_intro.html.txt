@@ -1,0 +1,194 @@
+
+ Android Management API  |  Google for Developers 
+ Ir al contenido principal
+ Android Management API
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Acceder 
+ Página principal
+ Guías
+ Referencia
+ Muestra
+ Android Management API
+ Página principal
+ Guías
+ Referencia
+ Muestra
+ Introducción 
+ Guía de inicio rápido 
+ Guía para programadores 
+ Crea una cuenta de servicio 
+ Crea una empresa 
+ Crear una política 
+ Configura reglas de cumplimiento de políticas 
+ Integración con el SDK de AMAPI 
+ Aprovisiona un dispositivo 
+ Configura notificaciones de Pub/Sub 
+ Iframe de Zero-touch 
+ Modo perdido 
+ Cómo administrar apps 
+ Asistencia sobre la administración de apps 
+ Cómo controlar las actualizaciones de apps 
+ Compatibilidad con aplicaciones web 
+ Cómo admitir configuraciones administradas 
+ Recuperar comentarios de apps 
+ Cómo depurar las instalaciones y actualizaciones de apps 
+ Políticas de ejemplo 
+ Dispositivos con perfiles de trabajo 
+ Dispositivos completamente administrados 
+ Dispositivos exclusivos 
+ Configuraciones de red 
+ Información adicional 
+ Notas de la versión 
+ Comprensión de la postura de seguridad 
+ Guía para socios de EMM existentes 
+ Comentarios y asistencia 
+ Uso permitido 
+ Condiciones del Servicio 
+ Únete a la comunidad de EMM 
+ Google utiliza tecnología de IA para traducir contenido a tu idioma preferido. Las traducciones realizadas con IA pueden contener errores.
+ Página principal
+ Productos
+ Android Management API
+ Guías
+ Enviar comentarios
+ Android Management API 
+ Organiza tus páginas con colecciones
+ Guarda y categoriza el contenido según tus preferencias.
+ Nota: Si usas la API de EMM de Google Play , consulta la guía para socios de EMM existentes . 
+ La API de Android Management está disponible como parte de Android Enterprise , una iniciativa que proporciona a los desarrolladores herramientas para compilar soluciones que permitan a las organizaciones administrar sus flotas de dispositivos Android. El
+está dirigido a proveedores de administración de movilidad empresarial (EMM). Para implementar una solución de producción que use la API de Android Management, los EMM deben seguir los pasos que se describen en Cómo lanzar tu solución .
+ Puedes usar la API de Android Management para admitir la
+ perfil de trabajo en un dispositivo de propiedad personal 
+ perfil de trabajo en un dispositivo empresarial ,
+un dispositivo completamente administrado 
+y conjuntos de soluciones para dispositivos exclusivos .
+ Consulta la Guía de inicio rápido para probar la API.
+ Cómo funciona
+ La API de Android Management admite la administración completa de movilidad empresarial
+de Google Cloud, desde la inscripción inicial de los clientes hasta la configuración y administración de dispositivos.
+ Como desarrollador de EMM, proporcionas a tus clientes una solución local
+Consola de EMM En la consola, los clientes generan tokens de inscripción de dispositivos.
+y crear políticas de administración. Usan los tokens para inscribir dispositivos y aplicar políticas de administración a los dispositivos que inscribieron.
+ En el backend, tu consola usa la API de Android Management para crear
+tokens de inscripción, políticas y otros recursos de administración. Durante la inscripción,
+en cada dispositivo se instala la aplicación complementaria de la API
+ Android Device Policy .
+Cuando las políticas se vinculan a un dispositivo en la API, Android Device Policy
+aplica la configuración de la política en el dispositivo.
+ Nota: Android Device Policy es el único controlador de política de dispositivo compatible
+con la API de Android Management. 
+ Recursos de la API
+ En esta sección, se describen los recursos principales que se usan en la API de Android Management.
+ Empresas
+ Por lo general, un recurso enterprises representa una sola organización. Crea una empresa como parte de un flujo de configuración en línea que tus clientes usan para vincular su organización con tu solución de EMM. Las políticas, los tokens de inscripción y los dispositivos pertenecen a una empresa.
+ Políticas
+ La API de Android Management sigue un modelo basado en políticas. R
+ policies 
+contiene un grupo de configuraciones de administración de aplicaciones y dispositivos que rigen la
+de un dispositivo. El rango y la flexibilidad de la configuración admitida en policies te permiten configurar dispositivos para una variedad de casos de uso diferentes.
+ Consulta Crea una política para obtener más información.
+ Tokens de inscripción
+ Usas enrollmentTokens para vincular dispositivos a una empresa, un proceso llamado inscripción y aprovisionamiento.
+De manera opcional, los tokens de inscripción pueden contener detalles adicionales (p. ej., credenciales de Wi-Fi corporativas), un policyName vinculado a un recurso policies y un identificador de cuenta de usuario.
+ Después de crear un token de inscripción , puedes pasarlo a un dispositivo con uno de los diferentes métodos de aprovisionamiento . Los dispositivos instalan Android Device Policy como parte del proceso de aprovisionamiento. Si un
+Si se especifica policyName en el token de inscripción, se aplicará la política
+se aplican inmediatamente después de que se completa el aprovisionamiento.
+ La API de Android Management simplifica la administración de usuarios. Puedes inscribir un dispositivo con o sin especificar un usuario en el token de inscripción.
+ Si no especificas un usuario, se creará uno nuevo automáticamente.
+ Si especificas un usuario existente, este se asociará con el dispositivo. Puedes asociar un usuario con hasta 10 dispositivos.
+ Consulta Cómo aprovisionar un dispositivo para obtener más información.
+ Dispositivos
+ Un objeto devices 
+cuando se inscribe correctamente un dispositivo. El recurso
+contiene detalles de solo lectura sobre un dispositivo, incluido su usuario asociado
+la política y el modo de administración.
+ La administración de dispositivos se lleva a cabo a través de políticas, pero puedes usar
+ enterprises.devices.issueCommand 
+para bloquear, reiniciar o restablecer la contraseña de un dispositivo. Para limpiar un dispositivo, llama a enterprises.devices.delete .
+ Comenzar
+ Prueba la API. Usa la guía de inicio rápido para configurar un dispositivo en minutos. Asegúrate de comprender los pasos necesarios
+ lanzar tu solución en una fase de producción.
+antes de usar la guía del desarrollador y la API
+referencia en este sitio para crear tu
+de Google Cloud.
+ Enviar comentarios
+ Salvo que se indique lo contrario, el contenido de esta página está sujeto a la licencia Atribución 4.0 de Creative Commons , y los ejemplos de código están sujetos a la licencia Apache 2.0 . Para obtener más información, consulta las políticas del sitio de Google Developers . Java es una marca registrada de Oracle o sus afiliados.
+ Última actualización: 2025-07-26 (UTC)
+ ¿Quieres brindar más información?
+ [[["Fácil de comprender","easyToUnderstand","thumb-up"],["Resolvió mi problema","solvedMyProblem","thumb-up"],["Otro","otherUp","thumb-up"]],[["Falta la información que necesito","missingTheInformationINeed","thumb-down"],["Muy complicado o demasiados pasos","tooComplicatedTooManySteps","thumb-down"],["Desactualizado","outOfDate","thumb-down"],["Problema de traducción","translationIssue","thumb-down"],["Problema con las muestras o los códigos","samplesCodeIssue","thumb-down"],["Otro","otherDown","thumb-down"]],["Última actualización: 2025-07-26 (UTC)"],[],["The Android Management API allows enterprise mobility management (EMM) providers to manage Android device fleets. EMMs use their console to create enrollment tokens and management policies. Devices are enrolled using these tokens, installing the Android Device Policy app to enforce policies. Key actions include creating `enterprises`, `policies`, and `enrollmentTokens`. `devices` resources are created upon successful enrollment. Device management involves applying policies, and using commands to lock, reboot, or reset passwords, while deletion will wipe the device.\n"]]
+ Interactúa
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+ Conéctate
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+ Compilación
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ Todos los productos
+ Condiciones
+ Privacidad
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 

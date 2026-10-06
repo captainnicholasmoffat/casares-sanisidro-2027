@@ -1,0 +1,220 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Fallo H.T.C. "464 / 2020"</h4>
+    <div class="pull-right">
+      <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/fallohtc/0/buscador/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>  </div>
+        </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	  <table class="table table-bordered table-striped table-hover">
+    <tr>
+  <th>N° U.I.</th>
+  <td>31561</td>
+</tr>
+<tr>
+  <th>Fecha Acuerdo</th>
+  <td>05/11/2020&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+    <th>Expediente</th>
+    <td>4-033.0-2018</td>
+</tr>
+<tr>
+    <th>Fecha Acuerdo</th>
+    <td>05/11/2020&nbsp;</td>
+</tr>
+<tr>
+    <th>Número</th>
+    <td>464&nbsp;</td>
+</tr>
+<tr>
+    <th>Año</th>
+    <td>2020&nbsp;</td>
+</tr>
+<tr>
+    <th>Ejercicio</th>
+    <td>2018</td>
+</tr>
+<tr>
+   <th>Tipo Fallo</th>
+   <td>Fallo H.T.C.</td>
+</tr>
+<tr>
+    <th>Ente</th>
+    <td>[033.0] Municipalidad de ENSENADA</td>
+</tr>          
+<tr>
+    <th>Resuelve</th>
+    <td><p><u>ART&Iacute;CULO PRIMERO:</u> Aprobar la rendici&oacute;n de cuentas de la MUNICIPALIDAD DE ENSENADA ejercicio 2018, acorde a lo expresado en el Considerando d&eacute;cimo.</p>
+
+<p><u>ART&Iacute;CULO SEGUNDO:</u> Dejar constancia sin otros alcances de las cuestiones tratadas en el Considerando quinto apartado 4.7.1).</p>
+
+<p><u>ART&Iacute;CULO TERCERO</u>: Disponer que las autoridades tomen nota de lo manifestado en los Considerandos quinto apartado 4.4) y octavo apartado 1).</p>
+
+<p><u>ART&Iacute;CULO CUARTO</u>: Disponer que la Delegaci&oacute;n actuante retome las tareas encomendadas en el considerando cuarto ac&aacute;pites 3.1), 3.2) y 3.3.2), quinto apartado 4.16).</p>
+
+<p><u>ART&Iacute;CULO QUINTO</u>: Por los fundamentos rese&ntilde;ados en los <strong>Considerandos segundo, tercero, cuarto, quinto y octavo y en base a la determinaci&oacute;n efectuada en el Considerando noveno</strong> aplicar <strong>multas de $ 80.000,00 a</strong><strong>l Intendente Municipal Sr. Mario Carlos Secco, </strong><strong>de $ 30.000,00 a </strong><strong>la Contadora Municipal Sra. Graciela Liliana Ranieri, </strong><strong>de $ 12.000,00 al </strong><strong>Secretario de Hacienda, Producci&oacute;n y Servicios P&uacute;blicos Sr. Hugo Marcelo Schneider, de $ 12.000,00 a la Secretaria de Gobierno y Asesora Letrada Sra. Mar&iacute;a Alejandra Sabio, </strong><strong>de $ 12.000,00 </strong><strong>al Subsecretario de Cooperativas Sr. Ezequiel Pablo Lopardo,</strong><strong> de $ 12.000,00 al Tesorero Municipal Sr. Germ&aacute;n Gregorio Epifanio </strong><strong>y sendas amonestaciones al </strong><strong>Secretario de Relaciones Institucionales, Prensa y Ceremonial Sr. Enrique Arturo Mui&ntilde;os, </strong><strong>a la Tesorera Municipal Interina Sra. Laura Andrea Ocampos, al Subsecretario de Recaudaci&oacute;n Sr. Rodolfo Pagani, </strong><strong>al </strong><strong>Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez, al Secretario de Relaciones, Institucionales, Prensa y Ceremonial Sr. Agust&iacute;n Duscovich, al Presidente del Honorable Concejo Deliberante Sr. Luis Alberto Blasetti, a la Jefa de Patrimonio Sra. Laura Cristina Fronciani, a la Contadora Municipal Interina Sra. Graciela Patricia Cepeda y a la Tesorera Municipal Interina Sra. Graciela Beatriz Fronciani</strong> (Art&iacute;culo 16 de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO SEXTO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.1.1) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo</strong> por la suma total <strong>de </strong><strong>$ 9.811,51 por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el Secretario de Relaciones Institucionales Prensa y Ceremonial: Enrique Arturo Mui&ntilde;os y el </strong><strong>Secretario de Relaciones, Institucionales, Prensa y Ceremonial Sr.</strong><strong> Agust&iacute;n Duscovich </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO S&Eacute;PTIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.5) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma total de <strong>$ 204.557,71 por el que responder&aacute;n solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Relaciones Institucionales Prensa y Ceremonial Sr. Enrique Arturo Mui&ntilde;os </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO OCTAVO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.10) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma total de <strong>$165.309,54 por el que responder&aacute;n solidariamente el Intendente Municipal Sr. Mario Carlos Secco en solidaridad con la Contadora Municipal Sra. Graciela Liliana Ranieri por la suma de $ 12.506,99, el Intendente Municipal Sr. Mario Carlos Secco en solidaridad con el Secretario de Relaciones Institucionales Prensa y Ceremonial Sr. Agust&iacute;n Duscovich por la suma de 45.262,03 y el Intendente Municipal Sr. Mario Carlos Secco en solidaridad con la Secretaria Privada Sra. Mar&iacute;a Celina Ferella por la suma de $ 106.540,52 </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO NOVENO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.11) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma total de <strong>$ 295.854,32 por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco en solidaridad con la Contadora Municipal y Secretaria de Hacienda, Producci&oacute;n y Servicios P&uacute;blicos Interina Sra. Graciela Liliana Ranieri, el Subsecretario de Cooperativas Sr. Ezequiel Pablo Lopardo y el Tesorero Municipal Sr. Germ&aacute;n Gregorio Epifanio </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.12) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma total de <strong>$ 92.161,45 por el que responder&aacute;n solidariamente el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez</strong> (Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO UND&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.13) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma total <strong>de $ 22.006,39 por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y la Secretaria de Gobierno Sra.&nbsp; Mar&iacute;a Alejandra Sabio por la suma de $ 3.365,86 y </strong><strong>el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Hacienda, Producci&oacute;n y Servicio P&uacute;blicos Sr. Hugo Marcelo Schneider por la suma de $ 18.640,53 </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO DUOD&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando quinto apartado 4.20) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma <strong>total de</strong><strong>$ 112.330,89 por el que debe responder el Ex Intendente Municipal Sr. Adalberto Rodolfo Del Negro </strong>(Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO TERCERO:</u> Desaprobar los egresos tratados en el <strong>Considerando octavo apartado 3) </strong>y sobre la base de lo all&iacute; expuesto formular <strong>cargo </strong>por la suma <strong>total de $ 8.066,71 por el que deber&aacute;n responder&aacute;n en forma solidaria el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Tesorero Municipal Sr. Germ&aacute;n Gregorio Epifanio</strong> (Art&iacute;culo 16 inciso 3&ordm; de la Ley N&deg; 10869 y sus modificatorias).</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO CUARTO:</u> Mantener en suspenso el pronunciamiento del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires sobre las cuestiones a que se refieren los considerandos segundo ac&aacute;pite 1.4), s&eacute;ptimo, octavo apartado 4), declarando que los se&ntilde;ores Intendente Municipal Sr. Mario Carlos Secco, Contadora Municipal Sra. Graciela Liliana Ranieri, Secretario de Relaciones, Institucionales, Prensa y Ceremonial Sr. Agust&iacute;n Duscovich, la Directora de Recursos Humanos Sra. Mar&iacute;a Natalia Colombo, Subsecretario de Recaudaci&oacute;n Sr. Rodolfo Pagani y Asesora Letrada Sra. Mar&iacute;a Alejandra Sabio alcanzados por las reserva detalladas, no deber&aacute;n considerarse exentos de responsabilidad hasta tanto el Honorable Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO QUINTO:</u> Dejar sin efecto las reservas de ejercicios anteriores tratadas en el considerando octavo apartados 1), 2), 3) , comunicando tal circunstancia a los Sres. Mario Carlos Secco, Germ&aacute;n Gregorio Epifanio, Diego Gonz&aacute;lez, Federico Santiago Civardi y a las Sras. Graciela Liliana Ranieri, Mar&iacute;a Natalia Colombo, Laura Cristina Fronciani y Aurelia Evangelina Monserrat Ben&iacute;tez.</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO SEXTO:</u> Notificar a los Sres. Adalberto Rodolfo Del Negro, Agust&iacute;n Duscovich, Aurelia Evangelina Monserrat Ben&iacute;tez, Diego Gonz&aacute;lez, Enrique Arturo Mui&ntilde;os, Ezequiel Pablo Lopardo, Federico Santiago Civardi, Germ&aacute;n Gregorio Epifanio, Graciela Beatriz Fronciani, Graciela Liliana Ranieri, Graciela Patricia Cepeda, Hugo Marcelo Schneider, Jos&eacute; Alberto N&uacute;&ntilde;ez, Laura Andrea Ocampos, Laura Cristina Fronciani, Luis Alberto Blasetti, Mar&iacute;a Alejandra Sabio, Mar&iacute;a Celina Ferella, Mar&iacute;a Natalia Colombo, Mario Carlos Secco, Rodolfo Pagani de lo resuelto en los art&iacute;culos precedentes, seg&uacute;n particularmente corresponda a cada uno de ellos, y fijarles a los funcionarios alcanzados por sanciones pecuniarias, plazo de noventa (90) d&iacute;as para que procedan a depositar dichos importes en el Banco de la Provincia de Buenos Aires, cuentas fiscales N&ordm; 1865/4 (multas &ndash; Pesos) - CBU 0140999801200000186543 y N&ordm; 108/9 (cargos &ndash; Pesos) &ndash; CBU 0140999801200000010893 a la orden del se&ntilde;or Presidente del H. Tribunal de Cuentas de la provincia de Buenos Aires &ndash; CUIT 30-66570882-5, debi&eacute;ndose comunicar fehacientemente a este Organismo el dep&oacute;sito efectuado, adjunt&aacute;ndose el comprobante que as&iacute; lo acredite dentro del mismo plazo se&ntilde;alado. Asimismo se les hace saber, en el caso de las sanciones impuestas, que la sentencia podr&aacute; ser recurrida dentro del plazo de quince (15) d&iacute;as conforme lo establecido en el Art&iacute;culo 38&deg; de la Ley N&ordm; 10.869 y sus modificatorias. Para el caso en que los responsables opten por interponer demanda contencioso administrativa&nbsp; deber&aacute;n notificar a este H. Tribunal de Cuentas, dentro del plazo que establece el Art&iacute;culo 18&deg; de la Ley N&deg; 12.008, fecha de interposici&oacute;n de la demanda, car&aacute;tula, n&uacute;mero de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervenci&oacute;n al se&ntilde;or Fiscal de Estado para que promueva las acciones pertinentes (Art&iacute;culo 159&deg; de la Constituci&oacute;n Provincial (Art&iacute;culo 33&deg; de la Ley N&ordm; 10.869 y sus modificatorias.</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO S&Egrave;PTIMO</u>: Comunicar la presente sentencia a la municipalidad de Ensenada y al Ministerio de Gobierno de la Provincia de Buenos Aires.</p>
+
+<p><u>ART&Iacute;CULO D&Eacute;CIMO OCTAVO:</u> Rubr&iacute;quese por el Se&ntilde;or Director General de Receptor&iacute;a y Procedimiento (Resoluci&oacute;n n&ordm; 18/2016 del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires) la presente resoluci&oacute;n que consta de ochenta y dos fojas; publ&iacute;quese en el Bolet&iacute;n Oficial, y en la p&aacute;gina electr&oacute;nica del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires, reservar &eacute;ste Expediente en la Secretar&iacute;a de Actuaciones y Procedimiento durante los t&eacute;rminos fijados en el Art&iacute;culo d&eacute;cimo sexto. F&iacute;rmese, cumplido, arch&iacute;vese.</p>
+
+<p>&nbsp;</p>&nbsp;</td>
+</tr>
+<tr>
+    <th>Archivos Adjuntos</th>
+    <td>
+            <div>
+        <strong>Ensenada2018F.pdf</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/sistemas/summun/uploads/documents/fallohtc/31561/603e92b75c6d5.Ensenada2018F.pdf" alt="Ensenada2018F.pdf" title="Ensenada2018F.pdf" target="_blank">
+        <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_acrobat.png" alt="Ensenada2018F.pdf" title="Ensenada2018F.pdf"/></a>
+        <hr>
+        </div>
+      &nbsp;
+    </td>
+</tr><tr>
+   <th>Observaciones</th>
+    <td>&nbsp;</td>
+</tr>  </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

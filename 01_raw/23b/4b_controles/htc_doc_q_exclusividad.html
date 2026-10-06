@@ -1,0 +1,707 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="exclusividad" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>09/12/2025</td>
+      <td>[030.0] Municipalidad de CHIVILCOY</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      PAGOS [PAGO EN ESPECIE]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            , fecha de salida: 24/05/2007-.
+
+Por otra parte, el hecho de que la Cooperativa sea la concesionaria de la distribución de energía y eso implique <font class="text-warning"><strong>exclusividad</strong></font> en el uso de la red y la infraestructura, puede ser un argumento adicional para justificar la contratación directa. Aunque la Ley Orgán
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/37108/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 17104-2025: Por las presentes actuaciones, el Contador de la Municipalidad de CHIVILCOY formaliza una consulta en relación a la contratación del servicio de extracción de columnas de alumbrado público.
+
+Al respecto, considerando que la Comuna pretende abonar el servicio mediante la entrega de las columnas retiradas, solicita a este H. Tribunal de Cuentas se informe cuál sería el marco normativo de la operatoria, como así también la modalidad de contratación. También se consulta si corresponde la facturación del servicio realizado y si se requiere algún procedimiento a fin de valorizar las columnas retiradas a entregarse como medio de pago.
+
+Se adjunta una descripción de la situación confeccionada por el Secretario de Obras y Servicios Públicos, que expone la necesidad de extracción y retiro de la vía pública de 304 columnas de alumbrado obsoletas, en estado crítico de caída en Secciones I, II, III y IV dentro del radio urbano de Chivilcoy. Asimismo fue enviada la propuesta de la Cooperativa de Consumo de Electricidad y Servicios Anexos de Gorostiaga Ltda en la que proponen realizar el trabajo, recibiendo como pago las columnas retiradas sin luminaria en el estado que se encuentren por su valor como hierro usado y peso.
+
+Sobre el particular, se agrega un dictamen elaborado por la Delegación Zona XIX 25 de Mayo en el que se ofrece respuesta a cada uno de los interrogantes.
+
+Presentada la situación, esta Secretaría informa lo siguiente:
+
+En primer término, se recuerda que esta Secretaría, al atender las consultas remitidas, emite opinión en torno al cumplimiento del marco normativo aplicable a los hechos planteados, teniendo en cuenta además la doctrina emanada de este H. Tribunal de Cuentas y los antecedentes jurisprudenciales pertinentes. Su intervención se orienta a prevenir posibles irregularidades, en el ámbito de las atribuciones que le son propias, sin ingresar en la valoración de oportunidad, mérito o conveniencia, aspectos que competen exclusivamente al Municipio.
+
+Respecto a lo consultado, se comparte lo expresado por la Delegación interviniente.
+
+RESPUESTA: En primer orden, la contratación del servicio de extracción y reposición de columnas que conforman el sistema de alumbrado público del municipio, queda comprendida dentro del concepto de obra pública municipal según lo establecen los artículos 2 y 79 de la Ordenanza General N° 165.
+
+Como ha quedado sentado en la doctrina del Organismo, las obras de iluminación están explícitamente catalogadas como obras públicas municipales de infraestructura urbana, y dicho concepto se extiende tanto a la ejecución como a la conservación, reparación o mantenimiento de bienes muebles e inmuebles, que estén directamente afectados a ésta - Municipalidad de Campana de fecha 22/03/2011-. 
+
+En relación al procedimiento administrativo de selección del contratista, como cualquier otra contratación municipal, deberá plasmarse en un expediente donde consten todos los antecedentes, ajustándose a los principios generales de la contratación pública, conforme el artículo 100 de las Disposiciones de Administración aprobadas por el artículo 3° del Decreto N° 2980/00 – RAFAM-.
+
+A su vez, como lo establece el artículo 132 de la Ley Orgánica de las Municipalidades, las obras públicas que se realicen por contrato con terceros, aún aquellas, respecto de las cuales se impone la percepción de su costo a los beneficiarios, sólo podrán ser adjudicadas cumplido el requisito previo de la licitación. Sin embargo la Ley prevé excepciones a este requisito, que en este caso podrían resultar de aplicación. En este sentido, el artículo 132 inciso c) de la Ley Orgánica de las Municipalidades habilita la contratación directa de una obra pública municipal con una Cooperativa. En relación a este encuadre legal, la doctrina de este Organismo, no ha puesto objeciones a la contratación en forma directa con Cooperativas cuando éstas realicen obras de infraestructura – Municipalidad de Campana, fecha de salida 22/03/2011 y Municipalidad de 9 de Julio, fecha de salida: 24/05/2007-.
+
+Por otra parte, el hecho de que la Cooperativa sea la concesionaria de la distribución de energía y eso implique exclusividad en el uso de la red y la infraestructura, puede ser un argumento adicional para justificar la contratación directa. Aunque la Ley Orgánica Municipal no prevé expresamente la exclusividad del contratista como una excepción para las obras públicas, la doctrina ha admitido la contratación directa en casos donde la ejecución solo puede ser realizada por una única empresa por razones específicamente técnicas o de conveniencia económica – Municipalidad de La Matanza, fecha: 30/08/2005-.
+
+Ahora bien, corresponde señalar con respecto a la entrega de las columnas retiradas como forma de pago del servicio contratado, que si bien constituye un pago en especie o dación en pago que resultaría factible, implica una enajenación o transmisión de bienes municipales para extinguir una obligación. Esta operatoria para no ser objetada legalmente está sujeta a un requisito que previamente se debe cumplir. Es decir, los bienes que integran el patrimonio municipal están sujetos a un régimen de disposición regulado principalmente por la Ley Orgánica de las Municipalidades. Por ello, de acuerdo al artículo 55 de esta norma, el H. Concejo Deliberante debe autorizar las transmisiones, arrendamientos o gravámenes de los bienes públicos y privados municipales, y para esto deberá suscribir una Ordenanza votada por la mayoría absoluta del total de sus miembros.
+
+También se deberá tener presente lo señalado por el artículo 161 de la Ley Orgánica de las Municipalidades que menciona que en aquellos casos en los que se entregue bienes a cuenta de precio, con la debida autorización del H. Concejo Deliberante, los elementos que se ofrezcan en forma de pago deberán ser tasados por la correspondiente oficina técnica y el Departamento Ejecutivo no podrá aceptar propuestas inferiores al setenta y cinco por ciento (75%) de la tasación.
+
+Por último, se recuerda que se debe emitir Factura por la operación, conforme la Ley de Impuesto al Valor Agregado y la Resolución General AFIP N° 1415 y modificaciones. El pago en especie no exime al Responsable Inscripto en IVA de su obligación de emitir el comprobante por la prestación del servicio. El hecho de que la contraprestación sea en bienes no altera la base imponible del servicio prestado. Por tal motivo, se debe consignar el valor de mercado que tiene el servicio en condiciones normales, como si el pago se realizara en moneda de curso legal. Además de la Factura por el servicio, se debe documentar la transferencia de los bienes en concepto de pago con un correspondiente Remito."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/37108/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>18/07/2025</td>
+      <td>[022.0] Municipalidad de CASTELLI</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      INCOMPATIBILIDADES [VARIOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            La asamblea de concejales con mayores contribuyentes tiene los siguientes caracteres a) Es un Órgano especial, b) es un órgano ad hoc y de allí su <font class="text-warning"><strong>exclusividad</strong></font> c) tiene raigambre constitucional en el artículo 193 incisos 2° y 3° d) posee ratificación y reglamentación legal en la presente Ley
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/36478/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 15199-2025: Vienen las presentes en consulta ante este Honorable Tribunal de Cuentas efectuada por los Presidentes de Bloque PRO, Sra. Susana Bertoglio, y UCR Sra. Malena Massara, y los concejales Gonzalo Castrillón y Mauricio Bertucci, del Honorable Concejo Deliberante de Castelli, quienes solicitan dictamen sobre la interpretación y aplicación del artículo 94 de la Ley Orgánica de las Municipalidades, en relación a las posibles inhabilidades o incompatibilidades de los integrantes de la Asamblea de Mayores Contribuyentes.
+
+La consulta expresa tres (3) interrogantes de situaciones puntuales que se han suscitado a 1) incompatibilidad por vínculo contractual, 2) incompatibilidad por falta de domicilio real, 3) incompatibilidad por responsabilidad ante el Honorable Tribunal de Cuentas.
+
+ 
+
+ La Delegación Zona XVIII Chascomús interviene dando respuestas a los puntos de consulta en los siguientes términos:
+
+1) Incompatibilidad por vínculo contractual: el inciso 2° del artículo 6° de la Ley Orgánica de las Municipalidades al cual remite su artículo 94, establece: a) inhabilidades: “Los que directa o indirectamente estén interesados en algún contrato en que la Municipalidad sea parte, quedando comprendidos los miembros de las sociedades civiles y comerciales, directores, administradores, gerentes, factores o habilitados. No se encuentran comprendidos en esta disposición, los que revisten en la simple calidad de asociados de Sociedades Cooperativas y Mutualistas”. 
+
+Por su parte la doctrina emanada de este Organismo se ha expresado en sentido concordante con lo antes citado, en los siguientes términos “…Siguiendo el ordenamiento normativo descripto, se arriba a la conclusión de que el mayor contribuyente no podrá inscribirse como tal cuando posea un contrato de prestación de servicios o en esemomento sea proveedor de la municipalidad. La simple inscripción en el listado de proveedores, sin existir relación comercial mediante, no lo inhabilita para ejercer la representación…”. No obstante, lo manifestado, la doctrina de este Organismo ha dictaminado la existencia de una excepción a la inhabilidad cuando quede fehacientemente demostrado que es el único proveedor de bienes necesarios o prestador de un servicio indispensable (Municipalidad de Capitán Sarmiento – Expediente N°5300-3196/2010 – de fecha 05/05/2010).
+
+2) Incompatibilidad por falta de domicilio real: a los efectos de la integración de la Asamblea de Concejales y Mayores Contribuyentes, Departamento Ejecutivo, tal como lo determina el inciso 1° del citado artículo 94 de la Ley Orgánica de las Municipalidades. Seguidamente el inciso 2° a) del mismo artículo indica “…no podrán inscribirse los que no tengan su domicilio real y permanente en el Municipio…”. Determinada tal circunstancia, no se producirá automáticamente su eliminación del mencionado registro, debiendo proceder a ello el Honorable Concejo Deliberante, en el marco de sus atribuciones legalmente conferidas, así el inciso 4° del mismo artículo 94 contempla “…El Concejo Deliberante comprobará si los inscriptos reúnen las condiciones establecidas en la presente ley y, en su caso, eliminará a quienes no las llenen…”.
+
+3) Incompatibilidad por responsabilidad ante el Tribunal de Cuentas: el inciso 5° del artículo 6° de la Ley Orgánica de las Municipalidades establece dentro de las Inhabilidades, lo siguiente “…Las personas declaradas responsables por el Tribunal de Cuentas mientras no den cumplimiento a sus resoluciones…”.
+
+Llamada a intervenir esta Secretaría de Jurisprudencia, Doctrina y Consultas, ante la intervención de la Delegación de este Organismo es menester resaltar la coincidencia con el análisis propuesto.
+
+Al respecto, la doctrina argentina considera que la Asamblea de Mayores Contribuyentes es una institución vetusta y con una perspectiva de inequidad manifiesta ante los demás contribuyentes. No obstante ello, esta figura se encuentra receptada en el artículo 193 de la Constitución de la Provincia de Buenos Aires como una de las limitaciones a las atribuciones conferidas al régimen municipal cuyos incisos segundo y tercero respectivamente rezan “…Todo aumento o creación de impuestos o contribución demejoras, necesita ser sancionado por mayoría absoluta de votos de una asamblea compuesta por los miembros del Concejo Deliberante y un número igual de mayores contribuyentes de impuestos municipales…”. “… No podrá autorizarse empréstito alguno sobre el crédito general de la Municipalidad, sino por ordenanza sancionada en la forma que determina el inciso anterior; pero en ningún caso podrá sancionarse ordenanza de esta clase cuando el total de los servicios de amortización e intereses, afecte en más del veinticinco por ciento los recursos ordinarios de la Municipalidad. Cuando se trate de contratar empréstitos en el extranjero o enajenar o grabar los edificios municipales, se requerirá, además, autorización legislativa...”.
+
+Asimismo, en el libro de Ley Orgánica de las Municipalidades de la Provincia de Buenos Aires comentada, el jurista Iván Darío Tenaglia, realiza un análisis de la naturaleza jurídica de la figura en cuestión “…La asamblea de concejales con mayores contribuyentes tiene los siguientes caracteres a) Es un Órgano especial, b) es un órgano ad hoc y de allí su exclusividad c) tiene raigambre constitucional en el artículo 193 incisos 2° y 3° d) posee ratificación y reglamentación legal en la presente Ley Orgánica de las Municipalidades e) posee un régimen especial de constitución distinto al del Concejo Deliberante y algunas diferencias para formar quórum cuyos detalles dimanan de los artículos 98 a 100 inclusive, f) está regido por un sistema específico de nulidades dispuesto en el artículo 105 de la presente, g) es susceptible de ostentar legitimación activa y pasiva, h) y las demás características que le son comunes al Concejo Deliberante – al realizar también una actividad deliberativa- como ser la de ser un cargo que implica una carga publica, i) constituye un reaseguro del principio de legalidad tributaria, j) es un órgano no decisorio importante para la vida municipal. Es una estructura adhocratica pues posee asignados temas y un tiempo perentorio para su realización. Su exclusividad deriva de ser el único órgano autorizado para crear y aumentar impuestos....”.
+
+En tal sentido, la Ley Orgánica de las Municipalidades recepta la figura, en su Capítulo III, determinando que la función de mayores contribuyentes es una carga pública, y para ello establece incompatibilidades e inhabilidades para los contribuyentes que integren la nómina. Asimismo, dicha nomina debe atravesar un doble control, la del Departamento Ejecutivo que es quién la conforma y remite al Departamento Deliberativo quién debe comprobar que los inscriptos reúnan las condiciones establecidas por la ley, y en caso contrario eliminarlo de la misma.
+
+Dicho ello, las observaciones sobre incompatibilidades e inhabilidades para conformar la nómina de mayores contribuyentes debe ser sorteada por el Concejo Deliberante que es quien debe eliminar de las listas aquellos que no cumplan con los requisitos que la ley establece.
+
+RESPUESTA: A fin de dar respuesta a los tres puntos de consulta planteados, corresponde indicar como primera medida que los tres se encuentran dentro de las inhabilidades que la ley establece para conformar parte de la asamblea de concejales y mayores contribuyentes.
+
+Respecto al domicilio real del mayor contribuyente, este debe residir en forma permanente en el municipio siendo ese su domicilio real, conforme lo determina el artículo 94 inciso 2° apartado a).
+
+En tanto a los otros dos casos traídos a consulta a saber, el vínculo contractual con el municipio y haber sido responsable ante el Honorable Tribunal de Cuentas, ambas representan inhabilidades manifiestas insertas en el artículo 94 inciso 2° apartado d).
+
+En tal sentido, no podrán inscribirse en el listado los que directa o indirectamente estén interesados en algún contrato en el que el municipio sea parte, como los miembros de las sociedades civiles y comerciales, directores, administradores, gerentes, factores o habilitados; tampoco podrán serlo los fiadores o garantes de ellos, quedando solo exceptuados los asociados de Sociedades Cooperativas y Mutualistas, como tampoco podrán hacerlo quienes el Honorable Tribunal de Cuentas los haya declarado como responsables.
+
+No obstante ello, es facultad del Concejo Deliberante comprobar que los inscriptos reúnan las condiciones establecidas en la ley y ordena, en caso de corresponder, la consiguiente eliminación de los contribuyentes que se encuentran alcanzados por inhabilidades o incompatibilidades. A mayor abundamiento, es el Honorable Concejo Deliberante quien debe velar por el cumplimiento de la Ley Orgánica de las Municipalidades y eliminar de las listas de mayores contribuyentes, antes de aprobarlas, a quienes no estén en condiciones de integrarlas."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/36478/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>23/02/2022</td>
+      <td>[050.0] Municipalidad de GENERAL RODRIGUEZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONCEJO DELIBERANTE. [FACULTADES]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            rganismo ya se ha expedido expresando que la ejecución de gastos presupuestaria le corresponde al Departamento Ejecutivo, reiterando el concepto de <font class="text-warning"><strong>exclusividad</strong></font> en su incumbencia. (Municipalidad de Chascomús, Expediente Nº 5300-82/14, fecha 26/02/2014). Por lo tanto, se concluye que para que el 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32466/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 4419-2022: Vienen las presentes actuaciones por las que tramita la consulta formulada por el Presidente del Bloque de Concejales del Frente de Todos de la MUNICIPALIDAD DE GENERAL RODRIGUEZ, la cual versa sobre una serie de interrogantes relacionados con la iniciativa y el trámite de dos proyectos de ordenanzas que se formalizan por expedientes separados, pero que para el consultante se asemejan en su tratamiento. Los proyectos de ordenanzas que se formalizan a través de los expedientes Nº4050-7080, de fecha 15/12/2021, y Nº 4050-7095, de fecha 07/01/2022, refieren a la creación de un Hospital Veterinario Municipal y de un Centro Universitario, respectivamente. Respecto al Hospital Veterinario Municipal, el proyecto de ordenanza en su considerando manifiesta que el municipio cuenta con “…una obra financiada y en marcha… donde se instalará Zoonosis, Bromatología y SENASA…”; a su vez el artículo 2º propone que esa obra se establezca como lugar de implantación del hospital, y el artículo 3º autoriza al Ejecutivo a realizar las modificaciones presupuestarias y organizacionales que estime corresponder. En relación al Proyecto del Centro Universitario, su considerando hace referencia a un trámite legislativo en la Honorable Cámara de Diputados de la Nación para la creación de la Universidad de General Rodríguez y menciona también “…se encuentra en marcha la ejecución de la obra edilicia destinada a la radicación de la posible futura Universidad…”. En el texto del proyecto expresa en su artículo 1º “…la creación del centro Universitario Rodríguez…” y en su artículo 2º la autorización al Departamento Ejecutivo para realizar las modificaciones presupuestarias que correspondan para garantizar su financiamiento. 
+
+La consulta plantea los siguientes puntos 1) si el Honorable Concejo Deliberante se encontraría habilitado a plantear la creación de ambos proyectos desde la órbita de lo normado en el artículo 28 de la Ley Orgánica de las Municipalidades; 2) si los H. TRIBUNAL DE CUENTAS ORGANISMO DE LA CONSTITUCIÓN proyectos de ordenanza atento a lo normado por el artículo 77 del mismo cuerpo normativo deberían plantearse como proyecto de resolución o de declaración; 3) si el Departamento Deliberativo puede exigir al Ejecutivo Municipal la modificación presupuestaria y adjudicar otras partidas para estos proyectos; 4) en relación al punto 3) si no se estaría desfinanciando partidas aprobadas aduciendo el consultante que debería proponerse una creación o aumento de impuestos o contribución de mejoras atento a lo normado por la Constitución de la Provincia de Buenos Aires en su artículo 193 inciso 2°; 5) si el accionar del bloque que propuso los proyectos intentan invadir ilegítimamente al Departamento Ejecutivo; y 6) si el pedido de informe al Ejecutivo Municipal debe ser hecho por Ordenanza, Decreto o Comunicación.
+
+La consulta es elevada a la Delegación Zona V San Justo de este Honorable Cuerpo. Analizado lo planteado, el Auditor Jefe procede a dictaminar sobre los puntos en cuestión, compartiendo el Informe de la Delegación y elevando las actuaciones a esta Secretaría de Jurisprudencia, Doctrina y Consultas a fin de dar respuesta al consultante. El dictamen de la Delegación de San Justo hace referencia a todos los puntos presentados en la consulta.
+
+RESPUESTA: Esta Secretaría informa que coincide y comparte el dictamen confeccionado por la Delegación en todas sus preguntas que se desarrollan a continuación: En primer lugar, el consultante, plantea si el artículo 28 de la Ley Orgánica de las Municipalidades, habilita por sí mismo al Concejo Deliberante la posibilidad de establecer distintas instituciones tales como las que se mencionan en la normativa (hospitales, maternidades, bibliotecas, instituciones destinadas a la educación y toda otra institución de bien público vinculada con los intereses sociales del municipio), sin que conste una iniciativa del Departamento Ejecutivo para modificar la asignación de las partidas presupuestarias del Presupuesto de Gastos y Calculo de Recursos. La Ley Orgánica de las Municipalidades es muy clara en su artículo 107, donde expresa que la administración general y la ejecución de las ordenanzas corresponden exclusivamente al Departamento Ejecutivo. De este modo, el artículo 34 del mismo plexo normativo deja en claro que una vez promulgado el presupuesto, no podrá ser modificado sino por iniciativa del Departamento Ejecutivo. Asimismo la Doctrina de este Organismo ya se ha expedido expresando que la ejecución de gastos presupuestaria le corresponde al Departamento Ejecutivo, reiterando el concepto de exclusividad en su incumbencia. (Municipalidad de Chascomús, Expediente Nº 5300-82/14, fecha 26/02/2014). Por lo tanto, se concluye que para que el Honorable Concejo pudiera establecer cualquiera de las dos instituciones que persigue a través de sus proyectos, solo podría hacerlo siempre que se encuentren dentro de las autorizadas por la ley, existiendo asignada una partida específica en la ordenanza de gastos y recursos vigentes para esa institución. En segundo lugar, la consulta plantea el interrogante sobre la forma de cómo deberían encuadrarse los expedientes, si como proyecto de declaración o como proyecto de resolución, según lo normado por el artículo 77 de la Ley Orgánica Municipal. Tanto la Delegación de este Tribunal, como esta Secretaría entienden que los expedientes traídos a consulta claramente deberán ser tratados como proyectos de resolución. El artículo 77 inciso c) de la Ley Orgánica de las Municipalidades dice que las disposiciones que adopte el Concejo se denominarán “…Resolución, si tiene por objeto expresar una opinión del Concejo sobre cualquier asunto de carácter público o privado, o manifestar su voluntad de practicar algún acto en tiempo determinado...”. Es dable destacar que al no contar con partidas presupuestarias asignadas para la creación especifica de las instituciones que pretenden establecerse, no les cabe la figura de ordenanza. Sin embargo, en el caso que se instrumente como proyecto de ordenanza y el mismo sea aprobado por el Concejo y el Intendente promulgue la misma sin vetarla en alguna o todas sus formas, se convierte en ley en sentido formal y material. (Municipalidad de Lobería, Expediente Nº 2097-2021, Fecha 01/05/2021). Continuando el orden de las preguntas, en tercer lugar se plantea si el Honorable Concejo puede exigir al Departamento Ejecutivo que tome el crédito de otras partidas, previamente afectadas a otros fines, para poder llevar adelante los proyectos de ordenanzas por los que se consulta. Nuevamente el artículo 34 de la Ley Orgánica de las Municipalidades aplica directamente sobre el interrogante, ya que es claro en cuanto a que “…Promulgado que sea el presupuesto, no podrá ser modificado sino por la iniciativa del Departamento Ejecutivo...”, razón por la cual para dar cumplimiento al citado precepto legal, las transferencias dispuestas en las partidas presupuestarias previstas en la Ordenanza a sancionarse, debieron figurar en el proyecto remitido por el Departamento Ejecutivo por montos similares o mayores (Municipalidad de Mercedes, Expediente Nº 5300-2788/03, Fecha 15/09/2003). Asimismo, lo dictaminado en párrafos anteriores también aplica a este interrogante cuando se hizo mención a la incumbencia exclusiva del Departamento Ejecutivo respecto del presupuesto de gastos. En cuarto lugar, el consultante afirma que en caso que se transfirieran fondos a partidas ya aprobadas pero no previamente asignadas, se estarían desfinanciando las mismas y en base a ese análisis, plantea si el Bloque de Juntos debiera proponer la creación o aumento de impuestos o contribuciones de mejoras según el artículo 193 inciso 2° de la Constitución Provincial. Como se mencionó previamente, el Honorable Concejo está imposibilitado de intervenir en la asignación de los fondos que integran las partidas presupuestarias. Observando el marco legal existente, se advierte que los artículos 109 de la Ley Orgánica de las Municipalidades y el 54 del Reglamento de Contabilidad, establecen que corresponde al Departamento Ejecutivo proyectar las ordenanzas impositivas, con excepción de lo dispuesto por el artículo 29, inciso 1° de la citada norma, que posibilita que el proyecto pueda ser presentado por un miembro del Concejo cuando se trate de la proyección de aumentos o creación de tasas. En base a esta base normativa, se concluye que cualquier modificación que pretenda instrumentar a las ordenanzas impositivas, siempre que no sean aumentos o creación de tributos, deberá tener origen en el Departamento Ejecutivo con su posterior aprobación por parte del Concejo Deliberante (Municipalidad de Zarate, Expediente Nº 5300- 24-2013, Fecha 19/03/2013). Continuando con el orden de las preguntas, el consultante plantea si la fuerza política de oposición al Intendente que propone estos dos proyectos, intenta de esta manera evadir las competencias del Departamento Ejecutivo, creando gastos no previstos legalmente. En este punto debemos recordar que las atribuciones que se le asignan a este Organismo, según lo establecido por el artículo 159 inciso 2° de la Constitución de la Provincia de Buenos Aires, se refieren exclusivamente al control de legalidad de los gastos públicos. Por lo tanto el Tribunal de Cuentas no tiene facultades para emitir una respuesta a este planteo, ya que este pronunciamiento le cabe a la Justicia exclusivamente. La Doctrina mencionada por la Delegación de este Tribunal, aclara que el único instrumento legal que permite ponerle coto a este tipo de situaciones, consideradas anormales por los consultantes, es a través de la aplicación del artículo 108 inciso 2° de la Ley Orgánica de las Municipalidades, que le otorga la facultad de veto al Intendente, en caso de que los proyectos se conviertan en ordenanzas y/o en última instancia plantear un conflicto de poderes ante la Suprema Corte de Justicia de la Provincia de Buenos Aires (Municipalidad de Marcos Paz, Expediente Nº 5300-5045/05, Fecha 09/12/2005). Finalmente, la consulta hace referencia al tipo de norma que debería usarse para efectuar los pedidos de informes al Departamento Ejecutivo. Tanto la Ley Orgánica de las Municipalidades en su artículo 108, como la Circular Nº 380 de este Organismo, que adjunta la Delegación a su dictamen, establecen que la forma legítima de exigir informes al Ejecutivo será siempre mediante Decreto emanado del Órgano Legislativo. La decisión de interpelar al titular del Departamento Ejecutivo es un acto que debe tomar el Cuerpo mediante decreto, cada vez que se plantee la necesidad de realizarla. (Municipalidad de MONTE, Fecha 16/07/2003). Por otra parte este Organismo a través de la circular mencionada produjo una interpretación sobre los alcances del artículo antedicho, considerando falta grave la no concurrencia del Intendente cuando haya sido citado mediante decreto del Concejo Deliberante. "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32466/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>26/09/2019</td>
+      <td>[061.0] Municipalidad de LA PLATA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACIÓN DIRECTA [IMPRESIóN DE BOLETAS SUM Y PATENTE DE RODADOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             marca) apta para imprimir a partir de los archivos generados por las áreas informáticas de la Comuna”, nos encontraríamos frente a una supuesta <font class="text-warning"><strong>exclusividad</strong></font> para efectuar la contratación con la empresa contratista, licenciataria de la marca de las impresoras adquiridas por el Municipio (XEROX
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/30642/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: Vienen las presentes actuaciones relacionadas con la consulta formulada por el Contador de la Municipalidad de La Plata, a efectos de solicitar se emita opinión acerca de la pertinencia del encuadre jurídico a dar respecto de la contratación directa para la provisión de insumos y soporte técnico con el fin de cumplir con los trabajos de impresión de las boletas de cobro correspondiente a las Tasas de Servicios Urbanos Municipales, Impuesto Automotor Descentralizado y Patente de Rodados.
+
+En tal sentido, se pone de manifiesto que la Agencia Platense de Recaudación, encargada entre otras cosas de la liquidación de los tributos e impresión de los archivos informáticos, posee dos máquinas de gran porte para la impresión de las boletas, que posteriormente son distribuidas a los contribuyentes a efectos de que abonen las tasas correspondientes.
+
+Motiva la consulta formulada la adquisición reciente de esas dos impresoras marca Xerox, y que las mismas necesitan el soporte técnico correspondiente, las licencias del software y los insumos (toner y papel, entre otras cosas) necesarios para atender, según dichos del consultante, con “suma urgenciala emisión para asegurar los ingresos en los vencimientos tributarios próximos”.
+
+Al respecto, según el Contador Municipal, luego de una exhaustiva búsqueda a los efectos de conseguir proveedor por el servicio requerido, se solicitó presupuesto a la empresa licenciataria de Xerox, la cual es la única apta para imprimir a partir de los archivos generados por las áreas informáticas de la Comuna, y que por lo tanto, la contratación se podría encuadrar en el marco de los establecido por el inciso 1) de artículo 156 de la Ley Orgánica de las Municipalidades.
+
+Asimismo, se hace mención a que los valores del presupuesto elevado por la empresa licenciataria, agregado a fs. 1/2, son similares a los obtenidos de los distintos proveedores del rubro consultados. De lo cual no consta antecedente al respecto en el expediente.
+
+Cabe aclarar que el Contador Municipal, en su informe de fs. 5/6 considera que a su criterio sería más conveniente su encuadre en los términos de lo establecido por el inciso 9) del artículo 156 de la Ley Orgánica de las Municipalidades. 
+
+Llamada a intervenir esta Secretaría, corresponde, en primera instancia, señalar que el caso traído a consulta no debiera ser encuadrado dentro de lo que el inciso 9) del artículo 156 de la Ley Orgánica de las Municipalidades establece como “trabajo de impresión”, toda vez que el servicio requerido en esta instancia consta entre otras cosas de servicio técnico oficial, servicio de soporte de ingeniería de sistemas, servicio de veinte (20) horas mensuales de servicios profesionales para el mantenimiento y cambios en las aplicaciones diseñadas, servicio de contingencia ante desperfectos en las máquinas mediante el cual la empresa proveedora se haría cargo de las impresiones totales y/o parciales de las boletas, y el abastecimiento de ... (...) hojas, tamaño A4, de 80 gramos, pre-impresas a dos tintas, siendo la propia Municipalidad, a través de la Agencia Platense de Recaudación, la encargada de imprimir las boletas utilizando las máquinas adquiridas.
+
+Ahora bien, dicho esto, teniendo en cuenta las consideraciones vertidas por el Contador Municipal en las cuales expone que “solo se ha podido obtener presupuesto de una sola empresa (por ser además la licenciataria de la marca) apta para imprimir a partir de los archivos generados por las áreas informáticas de la Comuna”, nos encontraríamos frente a una supuesta exclusividad para efectuar la contratación con la empresa contratista, licenciataria de la marca de las impresoras adquiridas por el Municipio (XEROX), y por tanto se podría encuadrar la contratación en los términos de lo establecido por el incido 1) del artículo 156 de la Ley Orgánica de las Municipalidades.
+
+RESPUESTA: En el mismo sentido, debemos hacer mención a la doctrina existente de este Honorable Tribunal de Cuentas (Expediente de la Municipalidad de Dolores Nro. 4032-78062-2019-0-1), que ha establecido que “el encuadre jurídico en el que pudiera formularse la contratación tenemos que en el inciso 1º contempla la compra y contrataciones directas cuando se trate de artículos de venta exclusiva, y si bien en el caso no se trata técnicamente de una venta, el servicio poseería las características de exclusividad” , ya que se contrataría el servicio a la empresa licenciataria de XEROX, y que según manifiesta el consultante, resultó ser “apta para imprimir a partir de los archivos generados por las áreas informáticas de la Comuna”.
+
+Si bien no se acompaña documentación que acredite dicha circunstancia, resulta ser la contratación un acto de gestión de las autoridades municipales, las que deberán acreditar en el caso de que se les requiriera su justificación, las razones por las cuales han optado por efectuar la contratación dentro de las excepciones contempladas en el art. 156º de la L.O.M.
+
+Por último, cabe señalar que la consulta resulta procedente en los términos indicados en el párrafo precedente, toda vez que las autoridades municipales deben dar cumplimiento con lo dispuesto en el artículo 161 del Reglamento de Contabilidad, el que establece que las excepciones al régimen de licitaciones y concursos (artículo 156º de la Ley Orgánica Municipal) deberán fundarse en todos los casos con clara indicación del o de los incisos legales que las contemplen.
+
+Asimismo, sin perjuicio de aquello, debemos recordar que la contratación en tales términos debiera contar con elementos que permitan acreditar que el valor abonado por la comuna resulta razonable, con instrumentos que acrediten la prudencia con que se han manejado las autoridades municipales. En este punto, el Reglamento de Contabilidad y Disposiciones de Administración para las Municipalidades de la Provincia de Buenos Aires en su artículo 194 determina que las autoridades contratantes deben procurar asegurarse por los medios a su alcance, que el precio cotizado sea el más conveniente a la fecha de la contratación."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/30642/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>12/08/2019</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ARTíCULO 156 LOM [INC. 8 &quot;PRESTACIONES A CARGO DEL MUNICIPIO&quot;]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            ina que los tanques suministrados en comodato por la Empresa, serán llenados exclusivamente con el producto suministrado por la misma –cláusula 8 <font class="text-warning"><strong>exclusividad</strong></font>: Dolores Gas S.A.-; inquiere si la contratación podría ser incluida en algunas de las excepciones contempladas en el art. 156° de la L
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/30584/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+CONSULTA: Vienen estas actuaciones relacionadas con la consulta formulada por el señor Intendente Municipal de DOLORES, referida a la modalidad de contratación del servicio de Gas Licuado de Petróleo para el funcionamiento del Parque Termal Dolores (P.T.D.).
+
+Señala el consultante que a la fecha se encuentra vigente el Contrato de Comodato y Suministro formalizado con la firma Dolores Gas S.A., conforme copia de contrato acompañado y que luce a fs. 4/7 de estas actuaciones.
+
+Cabe destacar que de dicho contrato no surge que con la instalación de dos tanques por parte del comodatario se suministre gas al Parque Termal exclusivamente, ya que en la propia consulta señala que “…El principal uso del mencionado gas, es la provisión del mismo para las calderas que se utilizarán para el mantenimiento de la temperatura del agua termal…”, por lo que se infiere que ese suministro es utilizado para otros fines además del señalado, sin que surja de la consulta mayores precisiones al respecto.
+
+RESPUESTA: Ingresando al examen del contrato de referencia, el mismo se ha firmado con fecha 23 de junio de 2015, y este poseía una vigencia de 12 meses (cláusula 13 Plazo contractual), y que vencido el mismo se pactaron prorrogas automáticas (mes por mes), hasta tanto alguno de los contratantes disponga hacer cesar los efectos de dicho contrato, ello previa comunicación al cocontratante en forma fehaciente, con una antelación de 30 días. Por tal motivo, si no se hubiese hecho uso de esa rescisión, el contrato se encontraría vigente en la actualidad.
+
+Si bien la extensión del mismo resulta ser mensual, debemos tener en cuenta lo dispuesto en la cláusula 11 PAGO, la cual refiere que el servicio se abonará en efectivo contra entrega del recibo oficial respectivo con el que se acreditará el pago de la carga de los tanques aludidos en el clausula 2. En resumen, cada entrega genera un pago que debe hacerse en efectivo por parte del municipio.
+
+El consultante manifiesta que a partir del mayor consumo de gas, su costo excedería el monto máximo de la contratación directa –a la fecha $ 173.641– y que teniendo en cuenta lo dispuesto en la cláusula 2 Instalaciones – consumo, la cual determina que los tanques suministrados en comodato por la Empresa, serán llenados exclusivamente con el producto suministrado por la misma –cláusula 8 Exclusividad: Dolores Gas S.A.-; inquiere si la contratación podría ser incluida en algunas de las excepciones contempladas en el art. 156° de la Ley Orgánica de las Municipalidades, ya sea en el inciso 1 (artículos de venta exclusiva) o en su defecto en el inciso 8 (para prestaciones a cargo del municipio) o en el inciso 10 (adquisición de bienes de valor corriente en plaza).
+
+De la copia del contrato acompañado a la presente consulta -fs. 4/7- surge que la Empresa DOLORES GAS S.A. resulta ser proveedor de la Municipalidad de Dolores del suministro de Gas Licuado de Petróleo, para los tanques dados en comodato por parte de esta a la Comuna y que se encontrarían instalados en la Avda. Belgrano N°1695 de la localidad de Dolores (cláusula 1), y por tal motivo han pactado la exclusividad de aquella para efectuar la carga de los citados tanques (cláusulas 1, 2, 8).
+
+La exclusividad a la que se refiere el contrato no coincide con la regulada en el art. 156° inciso 1 de la LOM, ya que lo pactado en el mismo es la imposibilidad de que otro proveedor de gas licuado pueda efectuar la carga de los tanques correspondientes a Dolores Gas S.A., lo que difiere diametralmente de lo consignado en el citado inciso. La LOM se refiere a artículos de “venta exclusiva”, es decir, cuya provisión resulta de tal particularidad que no podrá ser sustituida convenientemente por otra de similares características (conf. art. 161° inc. 1 del Reglamento de Contabilidad para las Municipalidades), y solo podrá invocarse la excepción en la medida que no hubiera otro proveedor que pueda suministrar el gas licuado de petróleo. De la documentación aportada en la consulta, no resulta acreditado que acontezca tal extremo.
+
+En lo que respecta a la determinación del precio de mercado, deben ser las autoridades municipales quienes comprueben tal extremo, acreditando documentalmente que el suministro se adquiera en las condiciones comerciales de oferta más conveniente en el mercado, ello a fin de justificar la excepción contemplada en el art. 156° inc. 10 de la LOM, lo cual tampoco resultaría acreditado con los elementos aportados en la consulta.
+
+Finalmente, si el suministro de gas que se efectúa con la carga de los tanques ubicados en la Avda. Belgrano N°1695 de Dolores, resulta ser la prestación de un servicio a cargo del municipio, lo que parece inferirse a partir de lo señalado en la consulta “…En lo que respecta al suministro de gas para el funcionamiento del P.T.D., se utiliza Gas propano, debido a que, por cuestiones ajenas al municipio, el Gas Natural no llega al P.T.D….”, ha sido el propio Municipio quien ha asumido el suministro de un servicio público como es el abastecimiento de gas, ante la falta de extensión de la red de gas natural a la que se alude en la consulta. Por lo tanto, si dicha provisión resulta ser un servicio cuya prestación está a cargo de la comuna -y máxime cuando se trata de un servicio público-, consideramos que de acreditarse todos estos extremos podría resultar factible la contratación en el marco de lo dispuesto en el art. 156° inciso 8 de la LOM.
+
+
+Sin perjuicio de lo hasta aquí señalado, la contratación es un acto de gestión de las autoridades municipales, por ende, deberán acreditar las razones por las cuales han optado por efectuar la contratación dentro de las excepciones contempladas en el art. 156º de la L.O.M., en el caso que se les requiriera su justificación."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/30584/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>14/05/2019</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [SERVICIO MANTENIMIENTO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            concreta respecto de dicho encuadre.
+
+En ese sentido, y teniendo en cuenta lo señalado por el consultante, nos encontraríamos frente a una cierta <font class="text-warning"><strong>exclusividad</strong></font> para efectuar la contratación con la misma contratista que ha llevado a cabo la perforación, ya que aquella conoce la técnica que ha u
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/30273/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: Vienen estas actuaciones relacionadas con la consulta formulada por el señor Intendente Municipal de DOLORES referida a la realización de una contratación directa en el marco de las excepciones contempladas en el art. 156º del Decreto Ley 6769/58 (Ley Orgánica de las Municipalidades).
+
+A fin de justificar la singularidad contemplada en la norma de referencia, procede a efectuar un pormenorizado análisis sobre las consecuencias desfavorables que le pudieran generar a la Comuna, si no se formaliza la contratación con el encuadre referido.
+
+Señala que el Municipio se encuentra incumpliendo con la provisión de dicho servicio en los términos pactados a partir de la merma en el suministro de agua termal, lo que irrogaría perjuicios económicos, no solo a la Municipalidad sino también a terceros.
+
+RESPUESTA: Indudablemente que el cuadro descripto debiera generar una solución inmediata a fin de prevenir que la Comuna pueda sufrir algún perjuicio, ante el incumplimiento referido.
+
+Va de suyo que los tiempos que demanda una contratación, en los términos del art. 151º de la L.O.M. –excluyendo la contratación directa– podría impedirle efectuar las tareas para el mantenimiento a la Comuna –generada como consecuencia de la cristalización del caño de perforación-, lo cual le impedía dar cumplimiento en tiempo oportuno con la provisión asumida, debiendo estar contemplada en una norma o contrato que genere tal obligación. De esa manera, podría evaluarse la contratación dentro de algunas de las excepciones contempladas en el art. 156º del citado cuerpo normativo.
+
+En el caso traído no resulta sencillo efectuar el encuadre en una de las excepciones contempladas en la citada norma, ya que pudiera generarse alguna duda respecto de la utilización de una de ellas en detrimento de la otra y que pueda significar una errónea imputación concreta respecto de dicho encuadre.
+
+En ese sentido, y teniendo en cuenta lo señalado por el consultante, nos encontraríamos frente a una cierta exclusividad para efectuar la contratación con la misma contratista que ha llevado a cabo la perforación, ya que aquella conoce la técnica que ha utilizado, la ubicación de los filtros, como así también la problemática técnica y específica en perforaciones termales. Si bien no se acompañan informes técnicos que acrediten dicha circunstancia, las mismas deberán ser aportadas para el caso de que las autoridades municipales adopten alguna de las excepciones contempladas en el citado art. 156º.
+
+Retomando el encuadre jurídico en el que pudiera formularse la contratación tenemos que en el inciso 1º contempla la compra y contrataciones directas cuando se trate de artículos de venta exclusiva, y si bien en el caso no se trata técnicamente de una venta, el servicio poseería las características de exclusividad, ya que se contrataría un mantenimiento a la propia empresa que ha realizado la obra, y que según manifiesta el consultante, resultó adjudicatario de aquella oportunamente. Por otra parte, el inciso 6º se refiere a reparación de aparatos en general, por lo que la tarea de mantenimiento implica en cierta medida una reparación, en el caso del caño de perforación. Finalmente el inciso 8º se refiere al servicio periódico de limpieza y mantenimiento de bienes para las prestaciones a cargo del Municipio, resultando este último el más apropiado para su encuadre legal.
+
+Tengamos en cuenta que respecto de este último inciso, el art. 161º del Reglamento de Contabilidad para las Municipalidades señala expresamente que los servicios contemplados en el art. 156º inciso 8 de la LOM, se circunscriben con exclusividad a las dependencias donde funcione la sede municipal. No obstante, en su parte final, se refiere a prestaciones a cargo del municipio, sin que en la ley resulte alcanzado por la limitación a la que si se refiere en la reglamentación. De este modo, deberán tenerse presente las circunstancias particulares del caso, revistiendo la situación consultada, uno de los supuestos alcanzado por la norma.
+
+Sin perjuicio de lo hasta aquí señalado, resulta ser la contratación un acto de gestión de las autoridades municipales, las que deberán acreditar en el caso de que se les requiriera su justificación, las razones por las cuales han optado por efectuar la contratación dentro de las excepciones contempladas en el art. 156º de la L.O.M."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/30273/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>10/12/2018</td>
+      <td>[064.0] Municipalidad de LEANDRO N. ALEM</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [PARA ADQUISICIóN DE INMUEBLE]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            a a través del procedimiento de excepción de compras y contrataciones establecido en el artículo 156 inciso 1) de la LOM -dadas las condiciones de <font class="text-warning"><strong>exclusividad</strong></font> y características particulares que reúne el bien-, y si resulta factible adquirir excepcionalmente la suma de dólares correspondientes
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29743/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: Por las presentes actuaciones el señor Intendente de la Municipalidad de LEANDRO N. ALEM consulta en primer término si es posible utilizar el Fondo de Financiamiento Educativo para costear la adquisición de un inmueble ubicado en la ciudad de Junín destinado a residencia estudiantil para albergar a estudiantes terciarios y/o universitarios del distrito, y así también, si tal adquisición puede ser efectuada a través del procedimiento de excepción de compras y contrataciones establecido en el artículo 156 inciso 1) de la LOM -dadas las condiciones de exclusividad y características particulares que reúne el bien-, y si resulta factible adquirir excepcionalmente la suma de dólares correspondientes al saldo de precio hasta la escrituración -que quedarían en depósito bancario afectados exclusivamente a tales efectos-, con la finalidad de garantizar la inmutabilidad cambiaria hasta la fecha de cancelación de la obligación pendiente en moneda de curso legal.
+
+Detalla que se trata de la adquisición de un edifico de 15 unidades funcionales con capacidad para entre 30 y 45 estudiantes y con posibilidades de ser ampliado. Resalta su proximidad a la UNNOBA central y al resto de sus dependencias, con una localización céntrica que posibilita el rápido acceso a los medios de transporte.
+
+Así también indica que el mecanismo de contratación propuesto será implementado previo aval del H. Concejo Deliberante, incorporando dos tasaciones que den cuenta del valor corriente del bien, y que para la escritura traslativa de dominio se le dará intervención a la Escribanía General de Gobierno de la Provincia de Buenos Aire a los efectos de generar un ahorro al erario municipal.
+
+RESPUESTA: Al respecto, esta Secretaría informa que ha tomado intervención la Delegación Zonal de este Organismo en informes que lucen agregados a fs. 3/4 de los expedientes de consultas referenciados, efectuando consideraciones y conclusiones que compartimos y a las cuales nos remitimos en honor a la brevedad.
+
+Resta remarcar que la adquisición del inmueble con el recurso afectado, se estima viable en caso de haberse dado previamente cumplimiento con la manda referida a su aplicación determinada en el artículo 46 de la ley Nº 14.982 de Presupuesto de la Provincia correspondiente al año 2018.
+
+Así también reforzar, que previo al dictado de la Ordenanza del HCD que autorice al Departamento Ejecutivo a efectuar la compra del inmueble, deberán tomarse los recaudos pertinentes que exige la operatoria, por ejemplo: la justificación de la adquisición del inmueble y su destino, antecedentes dominiales y catastrales, valuación fiscal, previsión presupuestaria, tasación por las reparticiones técnicas competentes que acrediten el valor con ajuste aproximado al de mercado (doctrina Expediente N° 4121-4979-2015-0-1). Respecto a este último requisito específicamente, el artículo 105 de las Disposiciones de Administración anexas al Decreto 2980/00, establece que en las compras de bienes, cualquiera sea el procedimiento a seguir, será necesaria la fijación previa de un valor base estimado con intervención de las reparticiones técnicas que sean competentes y acreditando aproximación a los precios de mercado. La fijación del valor mercado del inmueble que el municipio desea comprar, deberá ser probada mediante una tasación practicada por un organismo público o por una comisión interna existente en el ámbito municipal, o que se conforme a tales efectos, pudiendo los autoridades municipales consultar el valor del inmueble en el ARBA, siendo este un dato adicional a los efectos de probar documentalmente la aproximación al valor de mercado del bien en el proceso de contratación (doctrina Expediente N° 5300-87-2015-0-1).
+
+Por último, toda vez que no resultaría posible la adquisición dólares a fin de resguardar el valor de la moneda de curso legal, se menciona que constituye un acto de gestión requerir los servicios de un escribano particular a fin de escriturar la operación, como consecuencia de que solamente en las escrituraciones de carácter social las comunas deberán agotar la instancia de escrituración por parte de la Escribanía General de Gobierno, de acuerdo a lo establecido por su Ley Orgánica (artículo 4º inciso d) de la Ley Nº 10830), en cuyo caso las hará en forma gratuita (doctrina Expediente N° 5300-51-2014-0-1)."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29743/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>23/10/2018</td>
+      <td>[008.1] MUNICIPALIDAD DE BALCARCE - HOSPITAL SUBZONAL DR. ..</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      GASTO ESPECIAL [EN APARATOLOGíA MéDICA -TRAUMATOLOGíA, UROLOGIA, OTORRINOLARINGOLOGíA-]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            articular, siendo propietario de la aparatología médica que se encontraría prestando servicio en el Hospital municipal.
+
+Contemplando razones de <font class="text-warning"><strong>exclusividad</strong></font> y económicas, resultaría procedente que se perfeccione una contratación bajo estos supuestos (doctrina según expediente 4005-1353-201
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29680/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: El Director del Hospital Municipal Subzonal de Balcarce “Dr. Felipe A. Fossati” efectúa consulta referida a la posibilidad de abonar gastos en concepto de uso de aparatología, a los profesionales médicos propietarios de equipos que el nosocomio no posee, necesarios para la atención de pacientes carenciados. Agrega que no existe otro centro público de salud cercano y que los honorarios de los profesionales no se abonan, ya que trabajan en relación de dependencia con el Hospital.
+
+Se refiere en el caso de equipos para efectuar video artroscopias, que poseen profesionales del área de traumatología y que utilizan para pacientes mutualizados y con cobertura de A.R.T., donde en ambos casos el Hospital cobra por gastos sanatoriales y el médico cobra honorarios y uso de tal aparatología.  Manifiesta también, que esta situación se presenta con las especialidades de urología (el profesional es dueño del ureteroscopio con litotritor neumático) y de otorrinolaringología (el profesional es dueño del equipo para realizar la cirugía endoscópica nasal).
+
+Con respecto a lo señalado, se expide la Delegación Zona X – Mar del Plata de este Organismo en informe que luce a fojas 11, el que es compartido por esta Secretaría.        
+
+RESPUESTA: En el caso presentado, la aportación del equipamiento específico se asimilaría a la prestación de un servicio susceptible de ser contratado por el Hospital bajo los principios generales que regula la normativa vigente -Ley Orgánica de las Municipalidades, Disposiciones de Administración anexas al Decreto 2980/00 y Reglamento de Contabilidad- y en el caso particular con los resguardos en materia de seguridad y sanidad pertinentes.
+
+Por otra parte, en concordancia con el artículo 3º inciso f de la Ley Nº 14656, el artículo 6 inciso 2) de la Ley Orgánica de las Municipalidades prescribe que: &quot;No se admitirán como miembros de la municipalidad a los que directa o indirectamente estén interesados en algún contrato en que la municipalidad sea parte...&quot; y, por otro lado, el artículo 179 inciso 1) de la norma, reza: &quot;Ninguna persona será empleada en la municipalidad cuando tenga directa o indirectamente interés pecuniario en contrato, obra o servicio en ella...&quot;. Ambas pautas marcan claramente la situación de inhabilidad y/o incompatibilidad en el caso traído a consulta.
+
+Más allá de lo antedicho, en situaciones particulares o de fundada necesidad, la doctrina de este Organismo ha merituado la excepción a la norma (Municipalidad de Tornquist, ­ Expediente Nº 4114-263/2010). Los fundamentos para adoptar tal temperamento están basados en que el prestador del servicio requerido, si bien es integrante de la Comuna, resulta ser el único proveedor de dicha prestación en la zona.
+
+En caso de no existir debida fundamentación para la excepción, se consideraría que dicho agente se halla inmerso dentro de las inhabilidades mencionadas en los párrafos anteriores, entendiéndose que el mismo presentaría un interés particular, siendo propietario de la aparatología médica que se encontraría prestando servicio en el Hospital municipal.
+
+Contemplando razones de exclusividad y económicas, resultaría procedente que se perfeccione una contratación bajo estos supuestos (doctrina según expediente 4005-1353-2015-0-1 Hospital Municipal Dr. Pedro Solanet de Ayacucho).
+
+Por último, procede señalar que quedará a consideración de la Delegación Zonal de este Organismo el análisis de la contratación en cuestión, verificando que el aporte de la aparatología y la compensación por esta, se encuentren en un plano de razonabilidad.
+
+Dictámen de la Delegación Zona X -Mar del Plata-, parte pertinente:
+
+&quot;...La Secretaria de Consultas y Dictámenes de este Organismo ha considerado en expediente N° 4005-1353-2015-0-1 ante la consulta efectuada por el Hospital descentralizado de la Municipalidad de Ayacucho, que si bien en principio la contratación con profesionales dependientes encuadraría en una situación de inhabilidad o incompatibilidad conforme los artículo 6 inciso 2 y 179 de la Ley Orgánica de las Municipalidades, y artículo 3 inciso f) de la Ley 14.656 de Empleo Público Municipal, podría admitirse en situaciones particulares o de fundada necesidad, a modo de excepción (Municipalidad de Tornquist, Expediente N&#039; 4114-263-2010). 
+En ese sentido se ha considerado que el prestador del servicio requerido, si bien es integrante de la Comuna, debe ser el único proveedor de dicha prestación en la zona y que por razones de exclusividad y económicas resultaría factible proceder a la contratación. En caso de no existir debida fundamentación para la excepción, el agente se encontraría inmerso dentro de las inhabilidades mencionadas. ...&quot; "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29680/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>12/04/2017</td>
+      <td>[018.0] Municipalidad de CAPITAN SARMIENTO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACIÓN DIRECTA [EXCEPCIóN]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            de una empresa con experiencia en la labor- se encuadre dentro de las excepciones previstas, puesto que el aludido atributo no implica necesariamente <font class="text-warning"><strong>exclusividad</strong></font>, sino una condición para la prestación del servicio.
+
+ En tal sentido, el artículo 161 del Reglamento de Contabilidad dispone que �
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/28044/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: La viabilidad de proceder a la contratación directa de una empresa especializada para dar continuidad al Programa Municipal Integral de Seguridad Vial, recibiendo como contraprestación un porcentaje de la efectiva recaudación por las infracciones percibidas, ante la rescisión del contrato celebrado oportunamente con la Universidad Tecnológica Nacional.
+
+Informa el consultante que en el año 2013 la comuna firmó un Convenio Marco de Cooperación Técnico Institucional con la Universidad Tecnológica Nacional (UTN), Facultad Regional La Plata, para la aplicación del programa  mencionado (fojas 3/11), como así también para la instrumentación y puesta en funcionamiento del mismo. Asimismo señala que en el marco de tal convenio, transcurridos veinticuatro (24) meses desde el inicio del mismo, los equipos utilizados para la captura de imágenes fueron transferidos al patrimonio municipal. Empero, apunta que dicho convenio fue rescindido por Decreto N° 119/2017 ante incumplimientos diversos por parte de la entidad educativa (fojas 12/14).
+
+Se afirma que ante la necesidad de continuar con los objetivos del Programa y la imposibilidad de hacerlo con personal municipal idóneo y técnico para la prestación del servicio, se propicia la posibilidad de contratar los servicios de un tercero con experiencia en dicha labor.
+
+Se adjunta informe de la Asesoría Letrada de la comuna en el cual se considera viable la contratación directa de una empresa ya individualizada -no se precisa su nombre o razón social-, en base a los antecedentes de la misma, por no poder estimarse un valor referencial de contratación mensual, al depender éste de un porcentaje de los montos recaudados por las infracciones.
+
+Respuesta: La Ley Orgánica de las Municipalidades establece que para las adquisiciones o contrataciones a ser realizadas por el municipio, deben aplicarse los procedimientos descriptos en el artículo 151, en función del monto de la compra de bienes o, como en este caso, del servicio a contratar. El artículo 156 de dicho cuerpo normativo contempla una serie de supuestos en los que se puede contratar en forma directa, ello como excepción a los mecanismos previstos en el articulo antes mencionado.
+
+En el caso puntualmente consultado en las presentes actuaciones, no se observa que los motivos por los cuales se requiere proceder a una contratación directa -esto es, que se trata de una empresa con experiencia en la labor- se encuadre dentro de las excepciones previstas, puesto que el aludido atributo no implica necesariamente exclusividad, sino una condición para la prestación del servicio.
+
+ En tal sentido, el artículo 161 del Reglamento de Contabilidad dispone que “Las excepciones al régimen de licitaciones y concursos (artículo 156º de la Ley Orgánica Municipal) deberán fundarse en todos los casos con clara indicación del o de los incisos legales que las contemplen.” Por tal motivo, de procederse a la contratación de la empresa en cuestión, el municipio deberá aportar los elementos suficientes para fundamentar tal proceder.
+
+Por todo lo expuesto, esta Secretaría considera que no resulta viable la contratación en forma directa del servicio destinado a cumplir con los objetivos del Programa Municipal Integral de Seguridad Vial.
+
+Por último, en caso de que las autoridades municipales resuelvan recurrir a la forma de contratación traída a consulta, será responsabilidad de las autoridades municipales demostrar que tal contratación fue tramitada con fundamento en la excepción a los procesos previstos en la LOM y será la Delegación Zonal, en oportunidad de efectuar el estudio de cuentas, la encargada de verificar los antecedentes que justifiquen la decisión adoptada al respecto."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/28044/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>16/05/2016</td>
+      <td>[021.0] Municipalidad de CARMEN DE ARECO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ORDENANZA IMPOSITIVA [ASAMBLEA MAYORES CONTRIBUYENTES]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            ca de las Municipalidades. El art. 24° de la referida ley establece que la sanción de las ordenanzas y disposiciones del municipio corresponden con <font class="text-warning"><strong>exclusividad</strong></font> al Concejo Deliberante. Por su parte, el art. 29° dispone que el Concejo sancionará las Ordenanzas Impositivas ([i]) y la determinació
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/27085/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+Consulta: Respecto de la validez de la Ordenanza Impositiva aprobada por la Asamblea de Concejales y Mayores Contribuyentes del Partido.
+
+Respuesta: A tal efecto, acompaña la Ordenanza Preparatoria N°068/16 y la Ordenanza Impositiva sancionada en la Asamblea de Concejales y Mayores Contribuyentes N°2816/16. Del simple cotejo de las mismas surge evidente la reducción de los valores en la segunda de las citadas respecto de la primera -Capítulos I, III y XVIII-. Por tal motivo, el señor Intendente entiende que esas modificaciones introducidas a la Ordenanza Preparatoria convierten a la Impositiva en nula -art. 105° de la L.O.M.-.
+
+            Para determinar si la Asamblea de Concejales y Mayores Contribuyentes puede efectuar modificaciones respecto de la Ordenanza Preparatoria sancionada por el Concejo Deliberante -art. 29° apartado 2° de la L.O.M.-, debemos analizar previamente qué atribuciones posee la misma.
+
+            La Asamblea de referencia se encuentra contemplada en el art. 193° incisos 2° y 3° de la Constitución de la Provincia de Buenos Aires, para los supuestos de aumento o creación de impuestos o contribuciones de mejoras, y para la autorización de empréstitos sobre el crédito general de la municipalidad. Por otra parte, la composición de esa Asamblea y su funcionamiento se encuentran regulados en los arts. 93° a 105° de la Ley Orgánica de las Municipalidades.
+
+            De este plexo normativo podemos inferir que el constituyente ha requerido para la sanción de esas Ordenanzas el voto de la mayoría absoluta de los que integran la Asamblea, la que estará compuesta ya no sólo por los Concejales sino también por los ciudadanos (mayores contribuyentes) del partido que deben afrontar el pago de los nuevos valores de las gabelas. Este extremo es el que resulta distintivo del resto de las Ordenanzas municipales, las que son resueltas con la votación exclusiva de los Concejales Municipales (electos mediante el sufragio popular, en contraposición con los Mayores Contribuyentes que no reúnen tal condición, sino que su designación resulta de un procedimiento que se resuelve con el concurso de los dos Departamentos Municipales).
+
+            Los Mayores Contribuyentes no son funcionarios municipales. Se inscriben por propia voluntad en el Registro abierto a tal efecto; su actividad constituye una carga pública y no perciben suma alguna por su actuación -arts. 94° inc. 1° y 95° de la L.O.M.-. Por último, su representación se extingue en el plazo de un año, ya que cada 30 de abril caduca la vigencia de la lista que integran -art. 94° inc. 7° norma citada-.
+
+            Lo antes señalado debemos interpretarlo armónicamente con el resto de las disposiciones de la Ley Orgánica de las Municipalidades. El art. 24° de la referida ley establece que la sanción de las ordenanzas y disposiciones del municipio corresponden con exclusividad al Concejo Deliberante. Por su parte, el art. 29° dispone que el Concejo sancionará las Ordenanzas Impositivas ([i]) y la determinación de los recursos y gastos de la municipalidad; acto seguido exige que las ordenanzas que establezcan aumentos o creación de impuestos deben dar cumplimiento a lo dispuesto en el art. 193° inc. 2° de la Constitución Provincial, la que prevé la constitución de un órgano, a ese solo efecto, que es la Asamblea de Concejales y Mayores Contribuyentes, los que tendrán a su cargo la sanción de esa ordenanza.
+
+            Por otra parte, es el Concejo Deliberante quien sanciona el Presupuesto de Gastos y el Cálculo de Recursos -art. 34° L.O.M.- estableciendo el art. 35° que el Concejo considerará el proyecto remitido por el Departamento Ejecutivo y no podrá aumentar su monto total. Como vemos, en este último caso establece que no podrá incrementar su monto total, no impidiendo su facultad de reducirlo, lo que implica que sólo posee dicha atribución el Concejo Deliberante.
+
+            Los preceptos señalados avalan la postura que ya ha adoptado este Tribunal respecto a que la intervención de los Mayores Contribuyentes, impuesta por la Constitución Provincial, lo es a los efectos de sancionar -en caso de obtener la mayoría requerida- la Ordenanza Impositiva o efectuar su rechazo -en caso de no obtener la mayoría exigida-.
+
+            El pronunciamiento al que hace referencia el art. 101° de la LOM es a partir de las discusiones que se generen en el seno de la Asamblea, las que se rigen por lo dispuesto en el art. 102°. En caso de producirse modificaciones a la Ordenanza Preparatoria ameritaría un retorno a la instancia que admita la formulación de un nuevo despacho de la Comisión, el que deberá ser aprobado por el Concejo con las mayorías requeridas, generando así una nueva Ordenanza Preparatoria que, para obtener sanción definitiva, necesitará del pronunciamiento de la Asamblea de Concejales y Mayores Contribuyentes -art. 29° incs. 2° y 3° de la ley de referencia-.
+
+            De no acontecer tal extremo, se violaría lo dispuesto en los artículos 24°, 29° primer párrafo y 34° de la Ley Orgánica de las Municipalidades, mediante la constitución de una Asamblea que poseería mayores atribuciones que la del propio Órgano Deliberativo, circunstancia no contemplada dentro de la Ley Orgánica Municipal.
+
+            Dicho de otro modo, si en el seno de la Asamblea de Concejales y Mayores Contribuyentes se produjeran modificaciones a las Ordenanzas Fiscal e Impositiva alterando el espíritu de la normas, con incidencia en el Cálculo de Recursos y Presupuesto de Gastos, se estaría ubicando por sobre los propios Departamentos Ejecutivo y Deliberativo del Municipio a la Asamblea de Concejales y Mayores Contribuyentes, comprometiendo en consecuencia la percepción de impuestos y tasas suficientes para responder al presupuesto de gastos, el cual debe resultar equilibrado tanto en su formulación como en su ejecución.
+
+            Esta situación, que debe ser evaluada por cada Intendente (ya que poseen la facultad de disponer su veto dentro de los diez días hábiles desde su notificación -art. 108° inc. 2 de la L.O.M.-), resulta una cuestión de oportunidad, mérito y conveniencia, ya que una vez promulgada la Ordenanza sólo quien posea un interés jurídicamente tutelado podrá plantear su nulidad conforme a lo dispuesto por el art. 105° de la L.O.M., ello mediante una acción originaria de inconstitucionalidad, instituida en el art. 161 inc. 1° de la Constitución Provincial y reglada en los arts. 683 y siguientes del Código Procesal Civil y Comercial de la Provincia de Buenos Aires, y/o a partir de algún cuestionamiento de los actos de aplicación de la misma, en el marco de lo dispuesto en el art. 3° del Código Contencioso Administrativo de la Provincia de Buenos Aires.
+
+            Promulgada por parte del Departamento Ejecutivo dicha Ordenanza, éste ya no tendría legitimación para plantear la ilegalidad o inconstitucionalidad de la misma, teniendo en cuenta que habría perdido su legitimidad activa para actuar, dado que con la promulgación habría consentido los vicios que pudiera haber tenido dicho instrumento jurídico. Una vez publicada, serán los contribuyentes y/o quienes se encuentren alcanzados por sus disposiciones, los que se hallen legitimados para cuestionar judicialmente la misma.
+
+
+ 
+
+            De acontecer la circunstancia descripta en el párrafo anterior y de generarse algún perjuicio a las arcas de la Comuna, este Tribunal determinará oportunamente la responsabilidad de todos aquellos funcionarios que con su acción u omisión generaron el mismo.
+
+
+ 
+
+
+
+[i]  Conforme lo dispone el art 54 del Reglamento de Contabilidad para las Municipalidades de la Provincia de Buenos Aires la Ordenanza General de Impuestos se encuentra integrada por la Ordenanza Fiscal e Impositiva - conforme surge de la Circular 449/2011,  art. 1ro. Anexo XII apartado a). De tal modo cuando la Ley Orgánica de las Municipalidades se refiera a la Ordenanza impositiva, en la misma se encuentra incluida la Ordenanza Fiscal. 
+
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/27085/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>34</strong></div>
+ 
+<div class="pagination">
+    <ul>
+    
+    
+                        <li class="active"><a href="#">1</a></li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">2</a>
+            </li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=3">3</a>
+            </li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=4">4</a>
+            </li>
+        
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;</a>
+        </li>
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=4">&rarr;&rarr;</a>
+        </li>
+        </ul>
+</div>
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

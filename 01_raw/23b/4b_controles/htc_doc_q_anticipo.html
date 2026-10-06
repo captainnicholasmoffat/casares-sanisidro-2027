@@ -1,0 +1,744 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="anticipo" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>14/08/2026</td>
+      <td>[004.0] Municipalidad de AVELLANEDA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      LICITACION PUBLICA [VIABILIDAD]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             incumplimientos técnicos y de plazo. Surge del informe de la Secretaría Legal y Técnica que se habría ejecutado la garantía de contrato y la de <font class="text-warning"><strong>anticipo</strong></font> financiero, las que, a la fecha del informe —8 de abril de 2026—, se encontrarían saldadas.
+
+Como consecuencia directa de dicha rescis
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/38206/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 18301-2026: Vienen las presentes actuaciones en consulta ante este Organismo, efectuada por el Sr. Jorge Horacio Ferraresi, intendente del municipio de Avellaneda, a fin de requerir dictamen en cuanto a la viabilidad legal y administrativa de readecuar el objeto de la Licitación Pública N° 110/2023, referida a la &quot;Provisión e Instalación de Ascensores para el Edificio Auditorio Municipal en Parque Museo del Fútbol&quot;, con el objeto de permitir la instalación de los equipos ya fabricados en dependencias de salud municipal.
+
+En tal sentido, se manifiesta que la necesidad de readecuación se funda en la imposibilidad material de ejecutar el montaje en el emplazamiento original, producto de la rescisión del contrato de la obra civil principal (Licitación Pública N° 01/2023).
+
+La cuestión central planteada en la presente consulta consiste en determinar si la readecuación del lugar de emplazamiento de los ascensores —modificando el edificio de destino originalmente licitado— constituye una modificación lícita del objeto contractual que pueda ser instrumentada sin necesidad de llevar adelante un nuevo procedimiento licitatorio, o si, por el contrario, implica una alteración sustancial que excede las prerrogativas de modificación unilateral reconocidas a la Administración en el marco del contrato administrativo.
+
+ 
+
+ Al respecto, se destaca que mediante expediente TRAMIX N° 2-0-110112/2023 tramitó la Licitación Pública N° 110/2023 para la &quot;Provisión e Instalación de Ascensores para el Edificio Auditorio Municipal en Parque Museo del Fútbol&quot;, adjudicada a la firma EWS CONSTRUCTORA S.A. mediante Orden de Compra N° 3096 de fecha 7 de agosto de 2023, por un monto total de $59.800.000,00.
+
+La contratista presentó el Certificado N° 1 (14/09/2023) por $29.900.000 —avance del 50%— y el Certificado N° 2 (04/12/2023) por $11.960.000 —avance acumulado del 70%—, ambos abonados por el Municipio, acreditándose la íntegra fabricación del equipamiento, quedando pendiente únicamente el montaje in situ del mismo.
+
+Paralelamente, por Expediente N° 105005/2022 tramitaba la Licitación Pública N° 01/2023 para la &quot;Construcción de Nueva Estructura para Auditorio y Centro de Eventos Municipal en Parque Museo del Fútbol&quot;, adjudicada a la firma ACEROCORP S.R.L., cuyo contrato fue rescindido por Decreto N° 836/2024 del Departamento Ejecutivo Municipal, por causa imputable a la contratista, en razón de incumplimientos técnicos y de plazo. Surge del informe de la Secretaría Legal y Técnica que se habría ejecutado la garantía de contrato y la de anticipo financiero, las que, a la fecha del informe —8 de abril de 2026—, se encontrarían saldadas.
+
+Como consecuencia directa de dicha rescisión, resultó materialmente imposible ejecutar el montaje de los ascensores en el emplazamiento originalmente previsto. En este contexto, la Secretaría de Obras y Servicios Públicos propone modificar el lugar de emplazamiento original de los ascensores, adaptándolos a edificios municipales que requieren modernizar los equipos de elevación o instalar nuevos, como el Centro Integral de Salud Mental Adolescente y la Secretaría de Salud, a efectos de concluir la contratación con EWS CONSTRUCTORA S.A.
+
+La Secretaría Legal y Técnica Municipal concluye que habiendo sido el equipamiento íntegramente fabricado y certificado, y siendo imposible su instalación en la localización originalmente prevista por causas ajenas al contratista, la readecuación del lugar de emplazamiento no constituiría una modificación ilícita o sustancial del objeto contractual, sino una solución razonable orientada a permitir la culminación de una contratación válida, evitando la inutilización de bienes ya producidos.
+
+Asimismo, fundamenta que la instalación de los equipos en otros edificios municipales resultaría jurídicamente procedente en tanto no se modifica el proveedor, no se amplían las cantidades contratadas, no se alteran sustancialmente las prestaciones, no se incrementan los precios pactados y no se elude procedimiento licitatorio alguno, toda vez que la provisión del equipamiento ya fue oportunamente licitada, adjudicada y ejecutada.
+
+Como lo señaló la Delegación Zona III Avellaneda en su dictamen previo, y conforme surge de la providencia de esta Secretaría de Jurisprudencia, Doctrina y Consultas de fecha 4 de junio de 2026, para que el Honorable Tribunal de Cuentas pueda expedirse corresponderá al Municipio aportar la totalidad de la documentación a que se hace alusión en el dictamen elaborado por el Secretario Legal y Técnico municipal, así como la elaboración de un informe técnico por parte de la Secretaría de Obras y Servicios Públicos, dependencia técnica que estaría proponiendo la modificación del lugar de emplazamiento.
+
+Vueltas las actuaciones a la Secretaría de Jurisprudencia, Doctrina y Consultas, firmadas por el señor Intendente Municipal, legitimado activo, remitiendo en días posteriores la documentación requerida oportunamente en la providencia ut supra mencionada, necesaria para llevar adelante un análisis jurídico-administrativo de la cuestión:
+
+a) del requerido Informe técnico a la Secretaría de Obras y Servicios Públicos, la cual debería acreditar la compatibilidad técnica y constructiva de los equipos de elevación fabricados con las instalaciones del Centro Integral de Salud Mental Adolescente y la Secretaría de Salud, incluyendo las adecuaciones eventualmente necesarias para su montaje en dichos inmuebles y los costos adicionales que ello pudiere generar. De ello, el Municipio acredita que las características técnicas de los equipos no varían e identifica las direcciones de destino (Mario Bravo 1740, Piñeyro; Av. Manuel Belgrano 2855, Sarandí). No obstante, no se acompaña estudio de compatibilidad edilicia (dimensiones de caja/pasadizo existente en cada inmueble, estructura, potencia eléctrica disponible) ni presupuesto de las adecuaciones civiles o eléctricas que pudiera demandar cada montaje, ni informe de costos adicionales. b) A lo solicitado respecto de la documentación técnica completa correspondiente a los nuevos inmuebles de destino —planos, memoria descriptiva, croquis de implantación— que permita verificar la factibilidad de la instalación en cada uno de los edificios propuestos, no se ha incorporado al expediente plano, memoria descriptiva ni croquis de implantación del Centro Integral de Salud Mental Adolescente ni de la Secretaría de Salud.
+
+c) Al requerimiento de presentación del proyecto de acto administrativo o instrumento formal mediante el cual el Departamento Ejecutivo haya dispuesto y fundado la propuesta de readecuación del lugar de emplazamiento, incluyendo el dictamen de la asesoría legal municipal que sustente su procedencia, se incorpora el dictamen jurídico de la Secretaría Legal y Técnica (IF-2026-00121570 del 08/04/2026), que analiza la procedencia jurídica, pero no se ha acompañado un proyecto de decreto o resolución del Departamento Ejecutivo que instrumente formalmente la readecuación del lugar de emplazamiento.
+
+d) A la necesidad de prestar conformidad o manifestación de la firma contratista EWS CONSTRUCTORA S.A. respecto de la propuesta de modificación del lugar de ejecución del contrato, dado que la readecuación del destino implica, cuando menos, la necesidad de evaluar el impacto en las condiciones técnicas de instalación, no obra en el expediente ninguna nota, acta o comunicación de la contratista prestando conformidad (o formulando reservas) respecto de la instalación de los equipos en emplazamientos distintos del originalmente licitado.
+
+e) asimismo, cabe indicar que se debería haber presentado la acreditación del estado actual del equipamiento fabricado: lugar de depósito, condiciones de conservación, y verificación de que la guarda del material no ha generado ni generará costos adicionales para el erario municipal. No se ha incorporado constancia de depósito, custodia o inspección actual de los dos kits de ascensores fabricados. Se destaca que, no habiéndose producido la recepción provisoria (artículo 23 del Pliego de Bases y Condiciones Generales), el plazo de garantía de setecientos treinta (730) días corridos previsto en el artículo 15° del Pliego de Bases y Condiciones Legales Particulares aún no ha comenzado a correr, circunstancia que debe ser expresamente verificada antes de disponer el montaje.
+
+f) se debería presentar el detalle del saldo contractual pendiente de pago a la firma EWS CONSTRUCTORA S.A., con indicación precisa de los montos ya abonados y los que quedarían por abonar como consecuencia de la instalación en los nuevos emplazamientos, y si dichos valores se corresponden con los precios pactados originalmente en la Orden de Compra N° 3096. Se han incorporado los Certificados N° 1 ($29.900.000, avance 50%, pagado el 25/09/2023) y N° 2 ($11.960.000, avance acumulado 70%, pagado el 08/01/2024), de los que surge un monto abonado de $41.860.000 sobre un total contratado de $59.800.000, restando un saldo de $17.940.000 (30%) correspondiente al montaje in situ. Sin embargo, no se ha acompañado el detalle formal de facturación pendiente ni la ratificación expresa de que dicho saldo se mantiene a valores históricos, sin actualización ni intereses.
+
+g) información respecto de si la nueva planificación de la obra civil en el Parque Museo del Fútbol —a cargo de la Secretaría de Planificación, que proyecta un núcleo de ascensores de distintas características— prevé la adquisición de equipamiento alternativo, a efectos de determinar si la propuesta de readecuación evita efectivamente un perjuicio patrimonial al Municipio o si, por el contrario, genera un solapamiento de bienes con funciones equivalentes. De la nueva documentación no surge el informe de la Secretaría de Planificación sobre el estado del núcleo de ascensores de nuevas características proyectado para el Centro de Convenciones, ni se descarta la eventual adquisición de equipamiento adicional que compita funcionalmente con el ya fabricado por EWS CONSTRUCTORA S.A.
+
+En dicho contexto, corresponde indicar que en materia de contratos administrativos, la doctrina ha reconocido la potestad de la Administración de introducir modificaciones unilaterales —ius variandi— para adaptar la prestación a las cambiantes necesidades del interés público. Sin embargo, dicha prerrogativa no es absoluta y encuentra límites tanto en el plano cuantitativo como en el cualitativo.
+
+En el plano cuantitativo, el artículo 146 de la Ley Orgánica de las Municipalidades, faculta al Departamento Ejecutivo a disponer aumentos o reducciones de ítems contratados, o la creación de nuevos ítems, cuyo valor no exceda en conjunto el veinte por ciento (20%) del monto total del contrato, admitiéndose excepcionalmente, previo dictamen del organismo técnico municipal, trabajos que superen dicho porcentaje hasta el cincuenta por ciento (50%), siempre que resulten indispensables, urgentes o convenientes. En el caso, la readecuación propuesta no importa aumento, reducción ni creación de ítems —el objeto, las cantidades y los precios permanecen inalterados—, por lo que, en principio, no se encontraría comprometido este límite cuantitativo, extremo que, sin perjuicio de ello, deberá confirmarse una vez acreditado el inciso f).
+
+En el plano cualitativo, la modificación no debe alterar la sustancia del objeto contractual, ni convertir la prestación en una prestación objetivamente nueva que hubiera requerido un procedimiento de selección distinto, ni vulnerar la igualdad de los oferentes del proceso licitatorio originario.
+
+Por su parte, en cuanto a la frustración sobreviniente del fin del contrato, esto es la imposibilidad de ejecución en el emplazamiento originario, obedece a causas ajenas al contratista de los bienes (en el caso, a la rescisión por culpa de un tercero —ACEROCORP S.R.L.— en un contrato de obra civil distinto, dispuesta por Decreto N° 836/2024 del 05/03/2024); dicha imposibilidad no resulta imputable al proveedor de los equipos, y habilita, en principio, soluciones que eviten la inutilización de bienes ya producidos, sin que ello implique automáticamente la licitud de cualquier modificación.
+
+Es menester resaltar que este organismo se expidió en términos que podrían aplicarse a la presente, donde sostuvo &quot;…corresponde indicar que en el campo del derecho administrativo, las modificaciones de los contratos tienen un campo mayor de acción, porque la ejecución de los contratos administrativos está dominada por un dinamismo ignorado en los civiles. De allí que el principio de la inmutabilidad que reina en el campo del derecho privado se transforme en el de la mutabilidad de los contratos administrativos. Por ende, en virtud de esta facultad, la Administración puede, siempre por razones de interés público y con los límites y los requisitos que establece la ley, modificar el contenido obligacional de los contratos ya perfeccionados…” “… el fundamento del poder de la Administración pública para modificar los contratos administrativos no es otro que atender o satisfacer en la mejor forma posible las pertinentes necesidades públicas…” “… el interés público exige que los contratos se ejecuten de la forma más acorde con él. En ese marco, la Administración no es libre de modificar un contrato o no, como quiera o mejor entienda; por el contrario, se encuentra obligada a ello si el interés público demanda que el contrato se modifique, ya que su actuación siempre se rige sobre la base de dicho interés…? (Municipalidad de Ensenada - Consulta Digital N° 11690-2024 – de fecha 08/07/2024).
+
+Si bien la modificación de los contratos puede conllevar un contrato auténticamente nuevo, dichas modificaciones, cuando son propuestas por la Administración, deben ser aceptadas por el cocontratante.
+
+Si bien el objeto de aquella consulta —redeterminación de precios— difiere del aquí analizado —readecuación del lugar de emplazamiento—, ambos casos constituyen supuestos de modificación unilateral de un contrato de obra pública en ejecución, por lo que el estándar jurídico allí fijado resulta un precedente directo y aplicable.
+
+De lo expuesto se sigue que la conformidad de EWS CONSTRUCTORA S.A. —inciso d), señalada como documentación faltante— no constituye un mero recaudo instrumental o de buen orden administrativo, sino una condición sustancial de validez de la modificación contractual, conforme el propio criterio se aplicó en el precedente.
+
+Asimismo, dicho precedente exige acreditar la motivación técnica de por qué la desviación no fue prevista originalmente y las razones que descartan la necesidad de una nueva licitación, lo que reafirma la relevancia de los incisos a) y b) —compatibilidad técnica y documentación de los inmuebles de destino—.
+
+La readecuación del objeto de un contrato administrativo en el ámbito municipal de la Provincia de Buenos Aires encuentra sustento, en concreto, en el régimen de la obra pública provincial, sin perjuicio de los límites y recaudos de validez ya señalados.
+
+Conforme la Ley de Obra Pública N° 6.021 y su modificatoria de la Provincia de Buenos Aires, readecuar el objeto de una licitación para cambiar el destino de bienes —los ascensores ya fabricados—resulta jurídica y administrativamente viable, en tanto se fundamenta en los principios de economía, eficiencia y continuidad de la gestión pública. Dicha viabilidad se encuentra sujeta a los límites estrictos y principios basales del derecho administrativo destinados a evitar la nulidad de los actos.
+
+Sin embargo, esa facultad no es ilimitada: las modificaciones no pueden alterar la sustancia o la esencia del contrato originalmente previsto. Si el cambio implica condiciones enteramente nuevas, se configura una &quot;obra nueva&quot; o un contrato distinto, lo que obligaría a tramitar una nueva licitación. Tampoco pueden concederse al adjudicatario ventajas que alteren lo establecido en el pliego primigenio, pues ello vulneraría el principio de igualdad respecto de los demás oferentes del proceso licitatorio original; y todo cambio debe perseguir un propósito legítimo y de carácter público, ajustado a criterios de razonabilidad y no discriminación.
+
+Ahora bien, la viabilidad jurídica de la readecuación propuesta depende en forma determinante de la acreditación documental de los extremos enunciados. En particular, resultará necesario establecer: (i) si los equipos fabricados son técnica y funcionalmente aptos para ser instalados en los nuevos edificios sin alteraciones sustanciales; (ii) si la prestación así modificada continúa siendo la misma en su objeto esencial —provisión e instalación de ascensores con las características técnicas licitadas— o si implica una prestación nueva; y (iii) si el costo de las adecuaciones eventualmente necesarias para el montaje en los nuevos inmuebles se encuadra dentro de los límites cuantitativos del artículo 146 de la Ley Orgánica de las Municipalidades, o si excede dichos porcentajes.
+
+En virtud de lo expuesto, se concluye que, habiéndose salvado la legitimación activa del firmante de los obrados, y sin perjuicio de la insuficiencia documental, a fin de orientar al Municipio en la subsanación pendiente, corresponde dejar sentado lo siguiente sobre la base de los elementos que sí obran en el expediente:
+
+1) Identidad del proveedor y del objeto técnico: los dos kits de ascensor hidráulico a instalar en el Centro Integral de Salud Mental Adolescente y en la Secretaría de Salud son exactamente los mismos que fueron oportunamente licitados, adjudicados y fabricados. No surge que se proponga un cambio de proveedor, de cantidades ni de precios, lo que constituye un indicio favorable a la licitud de la modificación bajo el estándar cualitativo del ius variandi.
+
+2) Causa de la imposibilidad originaria. El Decreto N° 836/2024 acredita fehacientemente que la rescisión del contrato de obra civil principal, adjudicado a ACEROCORP S.R.L., obedeció exclusivamente a incumplimientos técnicos, documentales y de plazo de obra por parte de dicha contratista, llegándose a constatar el abandono de la obra, lo que llevó aparejada la devolución del anticipo financiero no invertido ($74.911.845,07) y la ejecución de las garantías constituidas por ACEROCORP. Se destaca que dicho Decreto no contiene mención alguna al contrato de provisión de ascensores adjudicado a EWS CONSTRUCTORA S.A., lo que confirma la autonomía de ambos contratos y que la causal de rescisión es enteramente ajena a esta última firma, sustentando la calificación de la situación como frustración sobreviniente del fin del contrato de ascensores por causas imputables a un tercero.
+
+3) Estado de avance y garantías. Se encuentra acreditada la fabricación íntegra del equipamiento (avance certificado del 70%), restando únicamente el montaje in situ. No obstante ello, se fijó oportunamente un plazo de garantía de las provisiones de 730 días corridos, contados desde la recepción, el cual —al no haberse producido el montaje— aún no ha comenzado a correr. Esta circunstancia deberá ser expresamente verificada por la Secretaría de Obras y Servicios Públicos al momento de acreditar el inciso e), dado el tiempo transcurrido desde la fabricación (septiembre/diciembre de 2023) hasta la fecha.
+
+4) Ausencia de instrumentación formal e inexistencia de conformidad contractual. No obra proyecto de acto administrativo del Departamento Ejecutivo que disponga formalmente la readecuación, ni la manifestación expresa de conformidad por parte de EWS CONSTRUCTORA S.A., la cual constituye una condición sustancial de validez de toda modificación unilateral del contrato, en tanto se trata de derechos subjetivos ya incorporados al patrimonio del contratista. Su ausencia —sumada a la falta de instrumentación formal— podría exponer al acto a un vicio de forma o generar controversias sobre el alcance de las obligaciones asumidas por EWS CONSTRUCTORA S.A. respecto de la instalación en inmuebles distintos de los originalmente previstos, entre ellas la responsabilidad por garantía del elemento y la garantía del contrato.
+
+5) Compatibilidad técnica de destino y costos. Estos extremos resultan determinantes para descartar que la readecuación importe una alteración sustancial del objeto contractual. La sola afirmación de que las características técnicas del equipo &quot;no varían&quot; no permite verificar, por sí sola, que los inmuebles de destino (Centro Integral de Salud Mental Adolescente y Secretaría de Salud) cuenten con las condiciones edilicias, estructurales y eléctricas necesarias para alojar equipos diseñados originalmente para el Auditorio Municipal, ni permite descartar la necesidad de obras civiles o eléctricas adicionales que —de existir y superar los límites cuantitativos del artículo 146 de la Ley Orgánica de las Municipalidades— podrían tornar inviable la vía de la mera readecuación y exigir un nuevo procedimiento de selección.
+
+6) Riesgo de solapamiento patrimonial. Resulta especialmente relevante frente a la mención efectuada en el propio Informe IF-2026-00121570 (punto III), en cuanto a que la Secretaría de Planificación proyectó, para el nuevo Centro de Convenciones, &quot;un núcleo de ascensores… que se modificó en cuanto a las características constructivas&quot;. Corresponde descartar expresamente que dicha planificación contemple la adquisición de equipamiento adicional que compita funcionalmente con el ya fabricado por EWS CONSTRUCTORA S.A., a fin de resguardar el principio de buena administración de los fondos públicos.
+
+RESPUESTA: En virtud de lo expuesto, y a fin de dar respuesta a la consulta de marras correspondería ratificar, en lo sustancial, que la readecuación del lugar de emplazamiento de los ascensores licitados en la Licitación Pública N° 110/2023 —en tanto no implique cambio de proveedor, de cantidades ni de precios, y encuentre sustento en circunstancias objetivas, imprevistas y ajenas al contratista de los equipos (Decreto N° 836/2024)— resulta, en el plano de los principios, encuadrable dentro de los límites cualitativos del ius variandi reconocido por el artículo 146 de la Ley Orgánica de las Municipalidades. No obstante ello, la documentación incorporada al expediente continúa siendo insuficiente para tener por acreditados los extremos de hecho de los que depende la procedencia jurídica de la readecuación, encontrándose sin acreditar los incisos b), d), e) y g), y solo parcialmente acreditados los incisos a), c) y f). Asimismo, resulta fundamental la aceptación expresa de EWS CONSTRUCTORA S.A. de la readecuación del emplazamiento de manera unilateral, la cual constituye una condición sustancial de validez."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/38206/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>08/04/2026</td>
+      <td>[101.0] Municipalidad de SAAVEDRA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ANTICIPOS JUBILATORIOS [RE LIQUIDACION]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            uaciones tienen origen en la consulta efectuada por el Señor Intendente Municipal de Saavedra - Pigüé, relativa a la procedencia de re liquidar el <font class="text-warning"><strong>anticipo</strong></font> jubilatorio de un ex agente municipal.
+
+De las actuaciones acompañadas surge que el entonces agente se desempeñó durante casi treinta (3
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/37399/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 17621-2026:  Las presentes actuaciones tienen origen en la consulta efectuada por el Señor Intendente Municipal de Saavedra - Pigüé, relativa a la procedencia de re liquidar el anticipo jubilatorio de un ex agente municipal.
+
+De las actuaciones acompañadas surge que el entonces agente se desempeñó durante casi treinta (30) años con un régimen horario de cuarenta y dos (42) horas semanales de labor. Cabe señalar, que el 1° de julio de 2025 cesó sus funciones a los fines jubilatorios (artículo 22, punto III del Decreto Ley N° 9650/80).
+
+Asimismo, corresponde indicar que la Municipalidad había sido declarada en emergencia económica y financiera desde el 15/05/2025 hasta el 31/12/2025, y como una de las consecuencias de dicha situación, se dispuso la reducción del régimen horario correspondiente a su categoría a treinta y cinco (35) horas semanales de labor, lo que implicó, naturalmente, una disminución en su remuneración. Finalizada dicha emergencia, el régimen horario fue restituido a su carga original de cuarenta y dos (42) horas semanales.
+
+En ese marco, el anticipo jubilatorio del ex agente fue liquidado conforme al régimen de treinta y cinco (35) horas semanales vigente al momento de su cese. Posteriormente, restituido el régimen de cuarenta y dos (42) horas semanales para el cargo que ocupaba y en el cual habría continuado de permanecer en actividad, el entonces agente solicita la adecuación del anticipo jubilatorio, en virtud del restablecimiento de dicho régimen horario.
+
+En tal sentido, se somete a consideración de este Organismo la consulta relativa a la procedencia de la solicitud de marras. En una primera intervención, toma conocimiento la Delegación Zonal de Pigüé, la que, previo análisis de las cuestiones planteadas, emite el informe técnico pertinente, cuyas conclusiones se comparten en todos sus términos.
+
+Como acertadamente señaló la Delegación en su informe, la doctrina de este Honorable Tribunal de Cuentas es clara y uniforme en cuanto a que el sesenta por ciento (60%) abonado en concepto de anticipo jubilatorio debe calcularse sobre la remuneración correspondiente a un agente en actividad, descartando expresamente su determinación como una suma fija sobre el último haber percibido, criterio que ha quedado superado a partir de la reforma introducida por la Ley N° 15.243 a la Ley N° 12.950.
+
+En consecuencia, y a fin de evitar un perjuicio económico al agente durante el lapso en que la Administración sustancia y otorga el beneficio jubilatorio, corresponde tomar como base el cargo en actividad equivalente al que detentaba al momento de su cese, con actualización conforme a los incrementos salariales aplicables a los agentes en actividad, aplicando sobre dicha retribución el porcentual del sesenta por ciento (60%) (Municipalidad de San Fernando – Consulta Digital N° 4000-2021 - de fecha 19/11/2021).
+
+RESPUESTA: Del análisis conjunto de la normativa aplicable y del antecedente doctrinario referido, se advierte con nitidez la finalidad protectoria que inspira el instituto, orientada a conferir al anticipo jubilatorio un carácter sustitutivo y dinámico, que garantice la subsistencia del personal afiliado al Instituto de Previsión Social de la Provincia (I.P.S.) que, tras el cese de sus funciones, permanece a la espera del reconocimiento y percepción de su haber previsional.
+
+En ese marco, la reimplantación del régimen horario de cuarenta y dos (42) horas, en tanto conlleva una mejora en las remuneraciones del personal en actividad, debe necesariamente reflejarse en el anticipo jubilatorio del ex agente, imponiendo su adecuación mediante el correspondiente recalculo, a fin de incorporar el incremento derivado del abandono del régimen de treinta y cinco (35) horas considerado al momento de su determinación originaria."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/37399/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>05/02/2026</td>
+      <td>[056.0] Municipalidad de GUAMINI</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ANTICIPO FINANCIERO [ACTUALIZACION]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Las presentes actuaciones tienen origen en la consulta efectuada por la Contadora Municipal de Guaminí, a fin de determinar si procede actualizar el <font class="text-warning"><strong>anticipo</strong></font> financiero percibido por la contratista Ernesto Tarnousky S.A., en el marco de la Licitación Pública N° 15/2022 (expediente N° 4056-12632
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/37397/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 17129-2025: Las presentes actuaciones tienen origen en la consulta efectuada por la Contadora Municipal de Guaminí, a fin de determinar si procede actualizar el anticipo financiero percibido por la contratista Ernesto Tarnousky S.A., en el marco de la Licitación Pública N° 15/2022 (expediente N° 4056-12632/2022), para la construcción de la Escuela Técnica en la localidad de Casbas, cuyo monto debe ser ahora devuelto por dicha empresa.
+
+A los efectos de la consulta, se acompaña Dictamen de la Asesoría Letrada del Municipio, copia de los Pliegos de la Licitación y el Decreto N° 262/2025, mediante el cual se dispuso la rescisión contractual, no adjuntándose el contrato ni la póliza de seguro correspondientes.
+
+Al ser elevadas las actuaciones a este Organismo, toma intervención en primer término la Delegación Pigüé Zona XII, donde se realiza un estudio pormenorizado de las actuaciones, se emite el correspondiente informe y se giran las mismas a esta Secretaría de Jurisprudencia, Doctrina y Consultas para su tratamiento.
+
+De la documentación acompañada surge que el contrato N° 539/2023 fue suscripto el 4 de julio de 2023, por un monto de $663.951.981,22 y con un plazo de ejecución de trescientos sesenta (360) días corridos desde el acta de inicio.
+
+El artículo 66 del Pliego prevé un anticipo financiero equivalente al quince por ciento (15%) del monto de la obra, sin contemplar en la documentación licitatoria una eventual actualización del mismo, lo que motiva el interrogante respecto de la procedencia de adicionar su cómputo y del parámetro a adoptar. En tal concepto, la contratista percibió la suma de $99.592.797,18.- mediante transferencias efectuadas por el Municipio los días 19, 20 y 21 de julio de 2023, constituyendo en garantía la Póliza de Caución N° 56.872, emitida por Pacífico Compañía de Seguros S.A., a fin de afianzar el monto otorgado.
+
+Que, ante la decisión del Gobierno Nacional de discontinuar el financiamiento de obras públicas y requerir la devolución de los fondos oportunamente concedidos, la Municipalidad comunicó dicha situación a la contratista mediante carta documento en el mes de mayo de 2024, intimándola a la restitución de los fondos transferidos en concepto de anticipo financiero.
+
+Al respecto, mediante Decreto N° 262 de fecha 1° de abril de 2025, notificado el 22 de abril de 2025, el Departamento Ejecutivo dispuso la resolución del contrato por culpa de la empresa adjudicataria, conforme a lo establecido en la cláusula octava del contrato, el artículo 17 y concordantes de las condiciones y especificaciones particulares del Pliego de Licitación y, supletoriamente, los artículos 60 inciso a) y 62 de la Ley N° 6.021, así como la retención y ejecución de las pólizas de caución constituidas en garantía, a cuenta de los mayores montos que pudieran determinarse en concepto de daños y perjuicios.
+
+Ahora bien, como manifiesta la Delegación en su Dictamen, la falta de devolución del anticipo viene siendo seguida por este Organismo de Control. Así, en el Fallo correspondiente al Ejercicio 2023 se decidió su reserva y, en el Ejercicio 2024, aún pendiente de fallo, con motivo del informe de auditoría pudo verificarse que, frente al precitado reclamo de la Administración, la empresa respondió que la falta de financiamiento (causal de disolución del vínculo contractual) no es de su responsabilidad.
+
+Por Resolución de la Secretaría de Obras Públicas N° RESOL-2024-231- APN-SOP#MEC, de fecha 20/11/2024, se decidió la rescisión del convenio de adhesión suscripto con fecha 09/05/2023, que contempla en su artículo 2° la instrucción a la Dirección de Asuntos Judiciales, dependiente de la Dirección de Asuntos Jurídicos del Ministerio de Economía de la Nación, a promover la acción legal de recupero contra la Municipalidad por $99.592.797,18.
+
+Vale señalar que el avance de la obra fue del 0%, atento que no se realizó el Acta de Inicio de Obra por lo que el importe abonado no ha tenido, en principio, contraprestación alguna, configurando un perjuicio contra los intereses de la comuna.
+
+Cabe recordar que el objetivo de la póliza de anticipo financiero es garantizar que dicho anticipo abonado a la empresa contratista sea utilizado para los fines que le dieron origen, caso contrario, ante el incumplimiento de la contratista o la ruptura del vínculo contractual por otra razón, en principio, dará lugar a la restitución (total o parcial) de ese dinero que se percibió en forma adelantada.
+
+RESPUSTA: En función de lo expuesto, y a fin de dar respuesta al interrogante planteado por la consultante, corresponde señalar que la cuestión objeto de la presente consulta se encuentra actualmente siendo analizada en el marco del estudio de cuentas correspondiente, conforme surge de los antecedentes obrantes en estas actuaciones. En consecuencia, a fin de no adelantar criterio ni interferir con el proceso de control en curso, no resulta procedente que esta Secretaria emita pronunciamiento sobre el fondo de lo consultado en esta instancia, debiendo aguardarse la resolución que oportunamente recaiga en dicho ámbito."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/37397/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>19/02/2025</td>
+      <td>[044.0] Municipalidad de GENERAL LAS HERAS</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      RESCISIóN DEL CONTRATO [DEVOLUCIóN DEL ANTICIPO FINANCIERO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            a realizada por el Intendente del Municipio de General Las Heras, en relación a la posibilidad que tiene el Municipio de realizar la devolución del <font class="text-warning"><strong>anticipo</strong></font> financiero no ejecutado de la obra “Construcción E.S. N°2 Villars”, correspondiente a la Licitación Publica N°08/22, a la Dirección 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/36032/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 14051-2024: Vienen las presentes actuaciones a este Honorable Tribunal de Cuentas, a los efectos de dar respuesta a la consulta realizada por el Intendente del Municipio de General Las Heras, en relación a la posibilidad que tiene el Municipio de realizar la devolución del anticipo financiero no ejecutado de la obra “Construcción E.S. N°2 Villars”, correspondiente a la Licitación Publica N°08/22, a la Dirección General de Cultura y Educación que es el ente que financia la obra, esto mientras se sustancia la rescisión de la obra y de corresponder se ejecutan las pólizas de garantías tanto del contrato como del anticipo financiero.
+
+Manifiesta que el monto de anticipo financiero pagado al contratista asciende a la suma de pesos once millones ciento treinta y cuatro mil trescientos ochenta y uno con 30/100 ($11.134.381,30), de los que correspondería devolver a la Dirección General de Cultura y Educación la suma de pesos ocho millones noventa mil cuatrocientos veinte con 48/100 ($8.090.420,48) atento al avance de obra y el balance realizado.
+
+ 
+
+ Expone el consultante que el motivo de la consulta es la situación imperante a nivel nacional y provincial respecto al financiamiento de la obra pública, y la demora que podría acarrear en caso de corresponder ejecutar las pólizas mencionadas, esto en pos de contar con otro financiamiento por parte de la Dirección General de Cultura y Educación para poder cubrir la necesidad educativa de la localidad.
+
+Tomo intervención el área Legal y Técnica del Municipio, y se acompaña su dictamen.
+
+Se acompaña documentación respaldatoria, copia del Decreto N°750/2022, copia del Libro de Contratos y Licitaciones, copia de la Póliza de Seguro de Caución, copia del contrato de Locación de Obra, copia del Decreto N°1462/2022, copia de la Factura de Rola Construcciones S.A. por el anticipo financiero, Acta de Inicio de Obra, Certificados de Pago, notas de pedido de neutralización de la obra por parte de la prestataria, acta de acuerdo de neutralización y el copia del pedido de rescisión mutua realizado por el representante de Rola Construcciones S.A.
+
+Luego toma intervención la Delegación Zona XI – Mercedes, que analiza la consulta realizada, expidiéndose al respecto y luego elevando las actuaciones a esta Secretaria de Jurisprudencia, Doctrina y Consultas.
+
+RESPUESTA: A la hora de analizar la consulta recibida, en primer término corresponde señalar que el objeto de la misma se centra en actos de gestión que deben ser evaluados por los funcionarios en cuanto a su mérito, oportunidad y conveniencia.
+
+En este orden de ideas, se considera que tanto la rescisión del contrato como la devolución del anticipo financiero no ejecutado a la Dirección General de Cultura y Educación son actos discrecionales, cuya adopción corresponde a la autoridad competente. Las decisiones en este sentido deberán tomarse con base en el principio de salvaguarda del patrimonio comunal, garantizando el adecuado resguardo de los intereses públicos involucrados.
+
+Será necesario evaluar si procede la rescisión de mutuo acuerdo, tal como lo solicita la contratista, o si, por el contrario, se identifica un incumplimiento por parte de esta en la ejecución del contrato correspondiente. Asimismo, deberá ponderarse las alternativas destinadas a garantizar el cumplimiento de la devolución del anticipo financiero.
+
+En virtud de lo expuesto, no se identifica obstáculo legal alguno que impida al municipio proceder con la rescisión del contrato y la devolución del anticipo financiero. No obstante, deberán implementarse las medidas correspondientes para salvaguardar el patrimonio municipal y evitar perjuicios a las arcas públicas, dado que será este Organismo el encargado de evaluarlo en el pertinente estudio de cuentas."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/36032/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>21/02/2024</td>
+      <td>[101.0] Municipalidad de SAAVEDRA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ANTICIPOS JUBILATORIOS [PLAZO MáXIMO PARA EL PAGO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            e la renuncia al cargo de un funcionario de planta política, con el objeto de acogerse a los beneficios jubilatorios, así como el requerimiento del <font class="text-warning"><strong>anticipo</strong></font> jubilatorio en los términos del artículo 1° de la Ley N° 12.950. Así también, se consulta si el dictado del Decreto Municipal N° 1577/
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/34728/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 10639-2023: Vienen las presentes actuaciones en consulta ante este Honorable Cuerpo, formuladas por el Sr. Matías Nebot, Intendente Municipal del distrito de Saavedra - Pigüe, a fin de requerir dictamen sobre la renuncia al cargo de un funcionario de planta política, con el objeto de acogerse a los beneficios jubilatorios, así como el requerimiento del anticipo jubilatorio en los términos del artículo 1° de la Ley N° 12.950. Así también, se consulta si el dictado del Decreto Municipal N° 1577/2023 es alcanzado por la prohibición dispuesta por el artículo 6° bis de la Ley N° 13.295.
+
+La presente trata sobre la renuncia del Subsecretario de Desarrollo Urbano y Territorial, designado a través del Decreto Municipal N° 2843/2019, cargo que desempeñó desde el 10 de diciembre de 2019 hasta el día que se lo da de baja, por medio del Decreto N° 1577/2023, a partir del 1° de diciembre de 2023, para acogerse a los beneficios de la jubilación, solicitando la percepción del anticipo jubilatorio previsto en el artículo 1° de la Ley N° 12.950.
+
+A tal efecto, se le dio intervención a la Oficina de Personal, la cual detalla la carrera laboral municipal del agente; de ello resulta que posee diecinueve (19) años, cuatro (4) meses y diez (10) días de servicios, y sesenta y cuatro (64) años de edad.
+
+Por su parte, en el dictamen de la asesora letrada del municipio, a la consulta sobre el cargo político, considera que no influyen las calificaciones otorgadas a la contratación del agente, por lo tanto correspondería el pago del beneficio en los términos de la ley mencionada. Respecto de si corresponde dicho acogimiento concluye “…siempre y cuando se encuentre los requisitos legales (aportes y edad) para el acceso al beneficio jubilatorio…”.
+
+Según los artículos 1° y 3° del Decreto Municipal N° 1577/2023, se da de baja al agente para acogerse al beneficio jubilatorio y consecuentemente, la autorización a hacer efectivo el pago del anticipo jubilatorio.
+
+Del dictado del decreto municipal ut supra mencionado, surge el segundo punto de consulta. En ese sentido, se requiere se informe si el pago de dicho anticipo jubilatorio se encuentra alcanzado por la prohibición dispuesta por el artículo 6° bis de la Ley N° 13.295.
+
+Remitida la consulta a la Delegación Pigüé Zona XII de este Honorable Tribunal de Cuentas, la cual refiere que de las actuaciones no se desprende, de ninguna de las áreas municipales intervinientes, la acreditación fehaciente de los servicios prestados y aportados por el agente y si los mismos son suficientes para acceder al beneficio jubilatorio; como tampoco hay dictamen municipal dando certeza sobre el cumplimiento de los requisitos necesarios para la obtención de un beneficio jubilatorio estatal de la Provincia (Decreto Provincial N° 736/2021, artículo 2° - modificatorio del Decreto N° 7881/84). También remarca que no existe certeza sobre el cumplimiento de los años de servicios exigidos para acceder a dicho beneficio previsional, así como tampoco hay agregadas constancias documentales ni intervención del Instituto de Previsión Social de la Provincia de Buenos Aires al respecto.
+
+A entender de la Delegación, sería de vital importancia a fin de deslindar responsabilidad de los funcionarios municipales frente a cualquier eventual desvío que pudiera surgir, esto así, si se debiera dar curso al recupero de las sumas abonadas como anticipo del retroactivo del beneficio previsional (Ley N° 12950, artículo 1°) y si el beneficio fuere denegado, el afiliado deberá abonar íntegramente los aportes adeudados que correspondan, con retroactividad a la fecha de baja correspondiente, con más la actualización dineraria respectiva (Decreto N° 736/2021, artículo 2°).
+
+Por último, da respuesta a la segunda consulta, considerando que no se infringiría el artículo 6° bis de la Ley N° 13.295, por constituir un supuesto de excepción de los previstos en el primer párrafo de dicho artículo (Municipalidad de Junín – Expediente N° 4059-2026-2019-0-1 – de fecha 11/07/2019).
+
+Llamada intervenir esta Secretaria, y previo a dar respuesta, se analizará la normativa aplicada al caso.
+
+Al respecto, corresponde indicar que el agente solicita acogerse al beneficio jubilatorio y el correspondiente pago del anticipo hasta tanto se haga efectivo el pago del beneficio, en el marco de lo previsto en el artículo 1° de la Ley N° 12.950, el cual reza “…El personal afiliado al Instituto de Previsión Social que, comprendido en el artículo 2 del Decreto-Ley 9.650/1980 y no excluido por el artículo 3 del mismo y/o normas que lo suplanten, cese en su condición de activo, o hubiere cesado con anterioridad a la sanción de la presente, cumplimentando los recaudos necesarios para la obtención del beneficio jubilatorio, tendrá derecho a seguir percibiendo el importe correspondiente al sesenta por ciento (60%) de su remuneración mensual, incluyendo el sueldo anual complementario (SAC) debiendo ser actualizadas de conformidad a la paritaria vigente de cada año calendario del sector del afiliado hasta tanto se haga efectivo el pago de su prestación previsional. Las retribuciones percibidas durante dicho período tendrán el carácter de anticipo, y serán deducidas al momento de efectuarse la liquidación de los retroactivos correspondientes…”.
+
+Así las cosas, el Decreto Municipal N° 1577/2023 concedió el cese al agente y el acogimiento al beneficio jubilatorio en el marco del artículo 24 del Decreto Ley N° 9650/80, que prevé “…Tendrán derecho a la jubilación ordinaria los afiliados que acrediten como mínimo veintidós (22) años de servicios con aportes en uno o más regímenes jubilatorios comprendidos en el sistema de reciprocidad, mínimo que el Poder Ejecutivo queda facultado para elevar cuando el lapso de la vigencia de esta Ley lo justifique, y que reúnan las siguientes condiciones: a)Hubieran cumplido sesenta (60) años de edad y treinta y cinco (35) años de servicios…”.
+
+RESPUESTA: A fin de dar respuesta a la primer consulta, es de destacar que el artículo 1° de la Ley N° 12.950 establece que el agente debe haber cumplimentado los recaudos necesarios para la obtención del beneficio jubilatorio, tendrá derecho a seguir percibiendo el importe correspondiente al sesenta por ciento (60%) de su remuneración mensual, incluyendo el sueldo anual complementario (SAC). Al hacer referencia a los recaudos exigidos, dentro de un proceso de jubilación ordinaria, los mismos se encuentran legislados en el artículo 24 del Decreto Ley N° 9650/80 el que determina que el agente debe poseer sesenta (60) años de edad y treinta y cinco (35) años de servicios con aportes. Dicho artículo plantea como excepción, que podrán acogerse a la jubilación ordinaria aquellos afiliados que acrediten como mínimo veintidós (22) años de servicios con aportes en uno o más regímenes jubilatorios.
+
+De lo aquí expuesto, y de la documentación que se adunó a la consulta, no se ha podido constatar los años de servicio requeridos por la ley a fin de acogerse al beneficio jubilatorio, conforme el proceso ordinario. Al respecto, la Dirección de Personal del Municipio ha manifestado que al momento del cese, el agente cuenta con sesenta y cuatro (64) años de edad, y diecinueve (19) años, cuatro (4) meses y diez (10) días de servicios con aportes. También así expresa que dicho plazo temporal se compone de dos periodos de tiempo; el primero va desde el 1° de mayo de 1998 hasta el 10 de diciembre de 2012 y el segundo, que corresponde al período comprendido entre el 10 de diciembre de 2019 hasta el 1° de diciembre 2023.
+
+En tal sentido, se recomienda que, a fin de determinar si se cumplen con los recaudos requeridos por el artículo 1° de la Ley N° 12,950, se remitan las presentes al Instituto de Previsión Social de la Provincia de Buenos Aires a fin de que se expida al respecto.
+
+Respecto al segundo punto de consulta referido a la posible infracción a las prohibiciones establecidas en el artículo 6° bis de la Ley N° 13.295, este Tribunal se ha expedido en diversas oportunidades, donde en líneas generales se entiende que no habría objeción cuando el objeto pasible de prohibición proviene de una situación preexistente, es decir, de una situación cuya causa originante existe con anterioridad al último semestre del mandato del Intendente municipal (Municipalidad de Junín – Expediente N° 4059-2026-2019 – de fecha 11/07/2019; Municipalidad de Balcarce - Consulta Digital N° 8598-2023 – de fecha 07/09/2023).
+
+La doctrina ut supra mencionada, aplicada al caso en concreto, radicaría en que el anticipo jubilatorio tiene su causa originante en la percepción de haberes por la prestación de servicio al municipio. A mayor abundamiento, los haberes que el agente venía percibiendo poseen carácter alimentario, por ende el anticipo jubilatorio también contaría con dicho carácter. En tal sentido, no podría ser considerado una nueva erogación, sino un hecho consecuente del antecedente laboral.
+
+Que, habiendo dado respuesta a la intervención requerida, se envía el presente dictamen para su vista y conformidad, luego deberá ser remitido a la Vocalía Municipalidades “A” a los mismos efectos."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/34728/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>11/07/2022</td>
+      <td>[226.0] Municipalidad de SAN MIGUEL</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      LICITACION PUBLICA [EXCEPCIóN ARTS. 133 Y 151 LOM HORMIGóN Y ASFALTO, PAGO ANTICIPADO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             estamos ante un gasto que sería exorbitante o al menos extraordinario, en este sentido la garantía que se utilice (Seguro de Caución/Garantía de <font class="text-warning"><strong>anticipo</strong></font> Financiero y/o Acopio), deberá hacer frente al monto total de la obligación asumida evitando cualquier perjuicio económico que pueda padec
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32941/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 5112-2022: Vienen las presentes actuaciones a este Honorable Tribunal de Cuentas, a los efectos de dar respuesta a la consulta realizada por el Intendente del Municipio de SAN MIGUEL, en relación a la viabilidad legal - reglamentaria de la realización de una Licitación, ya sea en los términos del artículo 133º o del artículo 151º, ambos de la Ley Orgánica de las Municipalidades cuyo objeto sería la provisión en obra de hormigón y/o material asfáltico, por medio de entregas parciales a requerimiento del personal técnico de la Secretaria interviniente, abonando el Municipio la totalidad del monto contratado por adelantado, contra facturación y presentación de una caución por medio de póliza de garantía por parte del adjudicatario.
+Acompaña informe elaborado por el Secretario de Obras Públicas donde constan los motivos por los cuales cree conveniente realizar los trabajos de bacheo de hormigón y asfalto de la manera aludida. El Secretario manifiesta que los materiales necesarios para llevar adelante la obra sufren constantes variaciones de precios debido a las vicisitudes económicas de público y notorio, además al ser contrataciones de ejecuciones periódicas los materiales tienden a tener un alza constante de sus valores debido a los índices inflacionarios.
+Luego interviene el Secretario de Hacienda quien concuerda con el preopinante y aclara que la intención de este mecanismo de cancelación es aspirar a retrotraer al momento de cotizar la expectativa de componentes inflacionarios, costos financieros calculados en función de las entregas parcializadas y el plazo de pago, el tipo de cambio y el nivel de precios de bienes transables, todos ellos incluidos implícitamente en los precios ofertados usualmente en las licitaciones; fundamenta igualmente que el material asfaltico es un derivado del petróleo, bien transable internacionalmente y por lo tanto cotizado en dólares estadounidenses y que a nivel interno conforme estimaciones macroeconómicas el nivel inflacionario proyectado estaría en un nivel del setenta por ciento (70%) anualizado.
+Se acompaña asimismo dictamen del Director General de Asuntos Legales, quien luego de hacer un análisis del marco normativo de las contrataciones de obras públicas dispuesto por Ley Orgánica de las Municipalidades, el que arroja como conclusión que no existiría ningún obstáculo legal para establecer la forma de pago planteada.
+Expresa que la propuesta generaría que el precio fijado por los oferentes sea cierto, evitando la inclusión de componentes financieros implícitos inherentes a la situación financiera nacional y que la comuna contrataría a precios reales y más bajos, y las empresas al adquirir certezas en cuanto al pago propondrán ofertas con precios fijos y acordes al mercado y que en cuanto al aparente riesgo que existiere por pagar de manera anticipada, esgrime que en los pliegos licitatorios deberá exigirse la presentación por parte del proveedor de una póliza de garantía equivalente al valor ofertado.
+Luego toma intervención la Delegación Zona VI – Morón, que analiza la consulta realizada, expidiéndose sobre el encuadre legal correspondiente a las licitaciones de obra pública a nivel municipal y respecto la garantía que deberá exigirse para asegurarse el cobro del dinero aportado en caso de incumplimiento del contratista.
+RESPUESTA: Analizando el marco legal específico para este tipo de contrataciones en la órbita Municipal, nos encontramos con la Ley Orgánica de las Municipalidades (Decreto-Ley 6769/58 - artículos 132 a 157) y con el Reglamento de Contabilidad y Disposiciones de Administración para las Municipalidades de La Provincia de Buenos Aires (aprobado por Resolución del Honorable Tribunal de Cuentas en su Acuerdo el día 23 de octubre de 1991), en dichos plexos normativos se establece que las licitaciones públicas se regirán por las cláusulas generales del pliego de bases y condiciones que adopte el departamento ejecutivo conforme a la Ley Orgánica y el Reglamento, en este sentido y en sintonía tanto con el dictamen la Dirección de Asuntos Legales del Municipio de San Miguel, como así también con lo dictaminado por la Delegación de este Honorable Tribunal de Cuentas, la normativa aplicable al sistema de contrataciones (Licitación Pública) no impone una determinada forma de pago, y la misma puede podrá ser pactada libremente entre las partes al momento de establecer las condiciones generales del pliego; lo mismo aplica a la modalidad de garantía que la comuna quiera solicitar para salvaguardar sus intereses ante un probable  incumplimiento por parte del contratista.
+Ahora bien, más allá de la respuesta favorable dada a la consulta que nos compete, es dable hacer un análisis en función de la realidad jurídica y económica que franquea la Argentina, donde nos encontramos atravesando una profunda crisis que obliga a todos los niveles del gobierno a ser creativos en la búsqueda de alternativas en la utilización de los recursos públicos, como en este caso donde se propone pactar un modo de pago (el cual no es el habitual para este tipo de contratos), teniendo como objetivo principal que las consecuencias inflacionarias sean mitigadas congelando valores ante un pago total por anticipado.
+Cuando el nivel general de precios se eleva hablamos de inflación, si tenemos en cuenta que el contrato de obra pública es de prolongada duración (aun por muy corto que sea su plazo de ejecución), advertimos que el alza generalizada de los precios en forma constante altera el equilibrio económico-financiero del mismo y la equivalencia de las prestaciones al afectar la estructura de costos del mismo, con un impacto concreto en la práctica.
+El contrato de obra pública es conmutativo, esto significa que las prestaciones de ambas partes se presumen equivalentes, y para preservar este equilibrio se han desarrollado diferentes conceptos y principios jurídicos como; ecuación económico-financiera, equivalencia de las prestaciones e intangibilidad del precio contractual o de la remuneración del contratista. Todos ellos refieren a una equivalencia y equilibrio cualitativo. Es decir, hacen referencia a una relación cualitativa, vale señalar que en todos los contratos administrativos existe una relación entre las obligaciones de las partes y lo que obtienen a cambio.
+Asimismo, el contrato de obra pública tiene por objeto la entrega por parte del contratista de un opus a la Administración y el pago por parte de esta última de un precio al primero. Para lograr una equivalencia, se fijan ab initio ciertas condiciones que deberá cumplir cada parte, tanto el contratista como la Administración. Estas condiciones iniciales fijan los parámetros de la relación contractual. Para que el contrato sea exitoso, esta relación debe guardar cierta equivalencia, la obligación del contratista debe estar cualitativa y cuantitativamente remunerada mediante el precio. Y, a la vez, la obligación de la Administración debe estar cualitativa y cuantitativamente representada por el objeto del contrato.
+En toda contratación administrativa, el contratista cotiza guiado por el propósito de obtener de esa relación contractual un beneficio económico, que resultará de la diferencia que exista entre el costo que para él significan las prestaciones y obligaciones que debe cumplir y el precio contractual que tiene derecho a percibir y el de los demás importes complementarios que le correspondan. Este beneficio económico o rentabilidad sólo se asegura si durante toda la ejecución de la obra se mantiene una real equivalencia de las prestaciones, es decir, entre el costo de sus obligaciones y el precio, forma y plazo de pago del mismo.
+Surge así el principio de la intangibilidad o inmutabilidad del precio del contrato, cuando estamos refiriéndonos a la estabilidad e intangibilidad de esta equivalencia, que es la que le permite al contratista obtener la ganancia esperada y a la Administración obtener la obra en el tiempo y por el precio cotizado oportunamente.
+La intangibilidad o inmutabilidad del precio del contrato, sería la permanencia durante la ejecución de los trabajos y hasta el referido saldo final de la obra, de la igualdad proporcional comparativa producto del procedimiento licitatorio, con respecto a todo lo cual el precio es sólo el dato básico de referencia. La intangibilidad de la remuneración supone las ideas de equilibrio económico-financiero del contrato, del principio del equilibrio o estabilidad económica, pero las supera, ya que no sólo se refiere a la relación entre las partes contratantes (cuestión propia de la figura del equilibrio económico financiero) sino, de acuerdo a lo dicho, plantea un mantenimiento integral de las razones que dieron lugar a la adjudicación.
+Esta intangibilidad, este equilibrio contractual, en definitiva, esta relación de equivalencia debe proyectarse y garantizarse durante toda la vida del contrato. Si se quiebra esta equivalencia, se modifican los incentivos y se quiebra el equilibrio económico financiero del contrato.
+Los elementos que componen los derechos y obligaciones son, entre otros, el valor de la moneda, prestaciones, ejecución de tareas, costos directos, costos financieros, costos indirectos, materiales, insumos, recursos, el pago del precio, etc. Si alguno de los elementos que componen esta relación varía, entonces deberían variarse los otros elementos de la ecuación para compensar y restablecer el equilibrio de la proporción. Esto es lo que se conoce como equilibrio económico-financiero del contrato. Si no se restablece el equilibrio, una de las partes terminará enriqueciéndose a costa de la otra.
+En este sentido, Marienhoff ha afirmado &quot;…el equilibrio financiero, o la ecuación financiera del contrato, es una relación establecida por las partes contratantes en el momento de celebrar el contrato, entre un conjunto de derechos del cocontratante y un conjunto de obligaciones de éste, considerandos equivalentes: de ahí el nombre de ecuación (equivalencia-igualdad), esta última no puede ser alterada…”.
+El equilibrio económico-financiero del contrato, la equivalencia de las prestaciones, la intangibilidad del precio contractual y, en definitiva, cualquier otro principio similar hacen referencia al equilibrio de la relación entre derechos y obligaciones tanto del contratista como de la Administración comitente, que quedan fijados ab initio.
+Entonces entendiendo la realidad inflacionaria que nos toca atravesar, tiene entre otras consecuencias, la de la inseguridad jurídica que se da por los riesgos a los que enfrentan las partes en este tipo de contratos, donde a mayor riesgo se supone mayor costo, es decir, en una economía inflacionaria, cuando los sistemas de estabilización y equilibrio contractual —redeterminación de precios, teoría de la imprevisión, caso fortuito— no funcionan eficazmente, los oferentes suelen requerir mayores tasas de retorno que se traducen en ofertas más caras.
+Como conclusión vale señalar que el objetivo de estas líneas es dejar en claro que mantener el equilibrio de las prestaciones y preservar la ecuación económico-financiera del contrato, son principios rectores del contrato de obra pública que garantizan su carácter conmutativo y a la vez, el principio de colaboración entre contratista y Administración Pública comitente, entendiendo estos principios y la realidad económica que nos atraviesan, forzarán necesariamente un estudio exhaustivo por parte de las áreas técnicas de la comuna por definir las condiciones a establecerse oportunamente en los pliegos a publicarse, para salvaguardar los recursos públicos.
+Asimismo será de vital importancia que las áreas especializadas en determinar el modo de afianzamiento de la obligación por parte del contratista, realicen un estudio exhaustivo de los riesgos por pagar de manera anticipada el total de la obra y las condiciones a establecer ya que ante un incumplimiento los intereses de la comuna se verían gravemente afectados, entendiendo que estamos ante un gasto que sería exorbitante o al menos extraordinario, en este sentido la garantía que se utilice (Seguro de Caución/Garantía de Anticipo Financiero y/o Acopio), deberá hacer frente al monto total de la obligación asumida evitando cualquier perjuicio económico que pueda padecer la comuna. Se sugiere igualmente que previo a la aceptación de la oferta y a través de sus oficinas técnicas, el municipio analice la solvencia de la compañía aseguradora ofrecida en la caución, esta sería una medida adicional de protección al patrimonio municipal, ante el eventual incumplimiento y de tener que ejecutar el seguro respectivo, de manera que le asegure el recupero de lo abonado al municipio.
+Del mismo modo, será de vital importancia el estudio económico-financiero que deberá hacer la Secretaria de Hacienda del Municipio, en relación a las obligaciones habituales a las cuales debe hacer frente, es decir, que el hecho de realizar una erogación de tamaña magnitud en un solo pago no ponga en riesgo el cumplimiento de las obligaciones y compromisos previamente asumidos por el municipio.
+Por último, tomando la inteligencia vertida en el dictamen de la Delegación de Zona VI - Morón, se entiende que el asunto en cuestión es un acto de gestión, reservado al organismo municipal, siendo susceptible el mismo de las atribuciones que le confieren al Honorable Tribunal de Cuentas el artículo 159 de la Constitución Provincial, demás leyes y reglamentaciones vigentes respecto de la legalidad del mismo."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32941/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>30/05/2022</td>
+      <td>[043.0] Municipalidad de GENERAL LA MADRID</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      HONORARIOS [ABOGADOS CONTRATADOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            o a reclamar suma alguna, por cualquier concepto, al Municipio, aun cuando este resultare perdidoso en el juicio promovido, y que no podrán requerir <font class="text-warning"><strong>anticipo</strong></font>s de ninguna índole para afrontar los gastos en concepto de jus previsional, bono ley 8480 o cualquier otra erogación que corresponda direct
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32669/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 4812-2022: Vienen las presentes actuaciones por las que tramita la consulta formulada por el Intendente de General La Madrid, con motivo del reclamo de pago de honorarios del abogado ..., quien fue contratado bajo la modalidad de locación de servicios.
+El contrato de locación de servicios tenía como objeto especifico representar legalmente al municipio en los autos “P... E. H. C/MINISTERIO DE O Y S P GRAL VIALIDAD Y OTROS S/ PRETENCION INDEMNIZATORIA Y OTROS JUICIOS” el cual estaba en trámite ante el Juzgado Contencioso Administrativo N°1 de la Ciudad de La Plata.
+La contratación fue solicitada por quien se excusa de sus funciones legales para con este expediente en particular, en el marco legal otorgado por el artículo 148 de la Ley Orgánica de las Municipalidades, fundamentado en razón de que “…la Asesoría no estaría en condiciones de llevar adelante dicho proceso, no solo por cuestiones de onerosidad… sino por una cuestión de imposibilidad material de viajar las veces necesarias a fin de cumplir responsablemente además del cumulo de trabajo propio de la Asesoría como así también por no contar con personal idóneo para llevar adelante el proceso judicial…”.
+Con posterioridad, por Decreto N°254/11 del Ejecutivo Municipal, se convoca públicamente a los abogados interesados que posean matricula profesional al día a presentar su curriculum vitae e inscribirse.
+Así por Ordenanza N°1443/11 se autoriza a contratar, bajo la modalidad de locación de servicios, al abogado ... para representar al municipio en los autos mencionados, estableciéndose en la cláusula tercera la forma de percibir sus honorarios “…el monto del presente contrato se fija en la regulación judicial que por la actuación del letrado disponga el juez interviniente conforme a las disposiciones legales que rijan la materia…”.
+La sentencia sustanciada el 3 de mayo de 2019, resuelve, en el acápite 2), “…rechazar la acción interpuesta contra el Municipio de General La Madrid…” y en el acápite sucesivo expresa “…impone las costas del proceso a la Provincia de Buenos Aires en su condición de vencida y en lo que respecta a la actuación del municipio demandado, las costas las soportará la parte actora… (Artículo. 51 del CCA to. Ley 14.437…)…”.
+Al respecto, el letrado apeló los honorarios por considerarlos bajos en razón de la tarea realizada. La sentencia de fecha 1° de diciembre de 2020, hace lugar al recurso, fijando los honorarios del Doctor ... en la suma de pesos equivalente a ... (...) IUS.
+El 28 de diciembre de 2021, en el escrito de presentación, el profesional refiere haber percibido los horarios fijados judicialmente por parte de la condenada en costas, poniendo de manifiesto que dicho cobro no anula la obligación resultante del convenio de honorarios, por ser obligaciones independientes, ello conforme al artículo 3° y concordantes del Decreto Ley N°8.904/77 -actual Ley N°14.967- y el criterio de la Suprema Corte de Justicia de la Provincia (SCBA LP Ac N° 73.136- S 5/7/2000 Juez de LÁZZARI SD, Carátula: Romero, Guillermo Julio c/ Acosta, Abel Ignacio y Otros s/ cumplimiento de contrato, magistrados votantes DE LÁZZARI-PISANO-NEGRI-LABORDE-PETTIGIANI, TRIBUNAL ORIGEN CC0001SI).
+Por su parte, el dictamen de la Secretaria Legal y Técnica del Municipio, hace las siguientes consideraciones: que no surge del contrato que se deban honorarios independientemente de los regulados judicialmente; en tal sentido, su retribución por la función será equivalente y pagada según sentencia judicial; que la suscripción de un contrato de locación de servicios es un requisito necesario para formalizar el vínculo contractual por la prestación de un servicio y no un convenio de honorarios, uniendo al profesional con el municipio para un fin determinado; que en dicho contrato se estableció el alcance de su labor y su responsabilidad, que conforme la cuarta cláusula la erogación “…deberá imputarse a la partida del Presupuesto de Gastos vigente al momento de que la regulación de honorarios quede firme…” lo cual procedería si la condenada en costas hubiera sido el municipio de General La Madrid.
+No obstante, ante el reclamo del profesional, la Secretaría Legal y Técnica corre traslado mediante cédula al entonces Secretario Legal en funciones al momento de la firma del contrato de locación, a fin de determinar la procedencia del reclamo. En tal sentido, en su contestación refiere a doctrina este Organismo “…las municipalidades deben estarse a las resultas de las sentencias judiciales…” (expedientes N° 5300-165/07 y 4024-443-2013-0-1). Al tratar acuerdos o convenios celebrados con motivos de causas judiciales concluye “…se puede apreciar de la sentencia regulatoria que, solo se condena en costas a la actora, no pesando sobre la Municipalidad de General La Madrid obligación de pago alguna. Esto interpretado a la luz de la cláusula tercera mencionada, evidencia que no correspondería el pago de honorarios según se reclama…”.
+Elevadas las actuaciones a la Delegación Zona XII Pigüe de este organismo, se considera que el instrumento celebrado se formalizó como locación de servicios y no meramente como un convenio de honorarios. Ello en atención a lo establecido por las cláusulas 3° y 4° de dicho convenio “…el monto del presente se fija en la regulación judicial…” y “…la erogación de la cláusula precedente deberá imputarse a la partida al Presupuesto de Gastos vigentes al momento de que la regulación de honorarios quede firme…”, respectivamente.
+Asimismo la Delegación concluye “…la intención del convenio sobre el pago de honorarios esta sujeta a la regulación judicial conforme las disposiciones legales que rijan la materia… Producida dicha resolución judicial, su pago fue efectivizado por la actora condenada en costas….”, en virtud de lo previsto por el artículo 51 inciso 1° del Código Contencioso Administrativo. No obstante del contrato no surge que las partes hayan pautado honorarios adicionales a los regulados judicialmente, abonados por la actora condenada en costas. En tanto así determina que el reclamo del letrado no podría ser admitido.
+RESPUESTA: es menester resaltar que en todo momento surge, incluso de los propios dichos del letrado, que fueron percibidos efectivamente los honorarios regulados, los cuales fueron abonados por la condenada en costas.
+La pretensión del letrado al reclamar el pago de honorarios al municipio se fundamenta en que, a su entender, existen dos obligaciones independientes entre sí, una la del contrato de locación de servicios y otra nacida de la sentencia que condena en costas a la actora a pagar sus honorarios. A fin de resolver este dilema jurídico ha de estarse a lo regulado por el Código Civil y Comercial que en su artículo 724 define a la obligación como “…una relación jurídica en virtud de la cual el acreedor tiene el derecho a exigir del deudor una prestación destinada a satisfacer un interés lícito y, ante el incumplimiento, a obtener forzadamente la satisfacción de dicho interés…”. Dicha obligación está compuesta por los sujetos que se comprometen, el vínculo jurídico que faculta al acreedor a perseguir al deudor en caso de incumplimiento y ante la efectiva satisfacción del interés de liberar al deudor. Para que una obligación exista, debe contener todos los elementos, incluso la causa que le dio origen y llevo a las partes a obligarse.
+En este caso, la obligación tiene como fuente el contrato de locación de servicios, por el cual el municipio contrata a un profesional en carácter de representante legal ante los estrados judiciales en atención específica de los autos “P... E. H. C/MINISTERIO DE O Y S P GRAL VIALIDAD Y OTROS S/ PRETENCION INDEMNIZATORIA Y OTROS JUICIOS”.
+Dicho contrato establece claramente la prestación que debe cumplir el letrado como así también la forma en la que percibirá sus honorarios, resultando dicha redacción extremadamente clara “…se atendrá a la regulación de honorarios que se fijen en la sentencia…”. La cláusula tercera en ningún momento hace referencia a que podría estarse a un convenio de honorarios extraordinarios a los regulados en la sentencia, o en su defecto, que dicho contrato equivale a honorarios pactados entre cliente y abogado, independientemente a los regulados en sede judicial.
+Para que existan dos obligaciones debería existir una segunda obligación con todos los elementos que la constituyen. En el presente caso, el municipio contrata al letrado ... en carácter de representante legal, entendiéndose por representante a la figura jurídica por la cual una persona ejecuta o celebra en nombre de otra, facultada por la propia persona representada o designada por la ley para representarla, y que produce efectos jurídicos de esa actuación en la esfera patrimonial y jurídica del representado.
+Así, la sentencia de fecha 3 de mayo de 2019, rechaza la acción incoada contra el Municipio, consecuentemente condena en costas a la parte actora, habiéndose hecho efectivo el pago al profesional interviniente en representación del municipio; por ende, la obligación queda extinguida por el pago íntegro de los honorarios regulados.
+El pago íntegro aceptado, en este caso por el Letrado ..., liberó al deudor y extinguió la obligación. Según el artículo 731 del Código Civil y Comercial “…El cumplimiento exacto de la obligación confiere al deudor el derecho a obtener la liberación y el de rechazar las acciones del acreedor…”.
+Ahora bien, es menester referenciar lo expresado por el Dr. Emilio E. Romualdi, en su aporte doctrinario en cuanto “…los honorarios profesionales al abogado son debidos en principio al mismo, por quien contrató sus servicios. En la provincia de Buenos Aires las partes pueden pactar un honorario en un convenio que presentado ante el juez de trámite de la causa en la regulación de honorarios deberá efectuarla con sujeción al mismo. Ahora bien, lo dispuesto por las leyes N° 27.423 y la ley N° 14.967, la normativa habilita el reclamo al cliente del profesional si el impuesto en costas no efectiviza el pago y en las condiciones de ejecución que ambas normas imponen. Ello nos podría llevar a la conclusión que la acción posterior del no impuesto en costas al que resultó impuestas de la misma, es una subrogación de los derechos del Profesional ejecutando las acciones que el derecho le concede para la persecución del cobro…”.
+De la normativa aquí reseñada, tanto del Código Civil y Comercial y las leyes de honorarios nacional y provincial, surge claramente que la obligación por el pago de honorarios es una sola. Que el profesional, habiendo declarado que ha percibido el pago íntegro de los honorarios regulados por la condenada en costas, ha liberado al deudor y extinguido la obligación.
+Este Honorable Tribunal de Cuentas en su Circular N° 374 (modificada por la Circular N° 379) establece la formalización de los contratos de personal externos al municipio. En su artículo 1° se determina “…Solo se podrán nombrar mandatarios independientes en jurisdicción de las Municipalidades, cuando se acredite que las oficinas jurídicas carecen de personal suficiente para cumplir tales tareas…”. Por su parte, el artículo 5° prevé que estos mandatarios independientes “…se hallarán retribuidos exclusivamente con los honorarios a cargo del ejecutado no admitiéndose pactos de cuota litis, lo cual deberá hallarse expresamente consignado en el convenio a celebrar… estos profesionales carecen de derecho a reclamar suma alguna, por cualquier concepto, al Municipio, aun cuando este resultare perdidoso en el juicio promovido, y que no podrán requerir anticipos de ninguna índole para afrontar los gastos en concepto de jus previsional, bono ley 8480 o cualquier otra erogación que corresponda directamente al profesional.”
+Atento a lo expresado se considera que el reclamo del cobro de honorarios requeridos por el Letrado ... al Municipio de General La Madrid, carece de causa lícita, pues la obligación que le dio origen a la relación contractual fue extinguida a través del pago de los honorarios regulados en la sentencia a cargo de la actora condenada en costas."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32669/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>14/03/2022</td>
+      <td>[049.8] MUNICIPALIDAD DE GENERAL PUEYRREDON - OBRAS SANITA..</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      GARANTIAS [CAUCIóN - PóLIZA DIGITAL]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            o y que con todas las formalidades a fin de que la Administración Pública en este caso cuente con el seguro correspondiente de contratos, ofertas o <font class="text-warning"><strong>anticipo</strong></font>s que se generen en el accionar con los distintos proveedores por cada una de las acciones que deban se aseguradas.
+En el mismo orden de idea
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32480/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 4386-2022: Vienen las presentes actuaciones por las que tramita la consulta formulada por el Tesorero de Obras Sanitaria Mar del Plata Sociedad del Estado (O.S.S.E.), Ente descentralizado del municipio de General Pueyrredón, por la cual solicita realizar consulta ante este Honorable Tribunal de Cuentas a fin de que emita opinión sobre la posibilidad de solicitar a su proveedores pólizas de caución en forma digital y que la misma posea idéntica validez a las de formato papel.
+La póliza proyectada contaría con un formato PDF, su recepción seria vía correo electrónico con una certificación y legalización digitales, en el caso de que el Escribano actuante fuera de una jurisdicción distinta a la de la Provincia de Buenos Aires. La misma se fundamenta en cuestiones ambientales, de salud, legales y a efectos de acelerar los procesos correspondientes.
+La Contadora del Ente considera indispensable de que el documento sea íntegro y que con todas las formalidades a fin de que la Administración Pública en este caso cuente con el seguro correspondiente de contratos, ofertas o anticipos que se generen en el accionar con los distintos proveedores por cada una de las acciones que deban se aseguradas.
+En el mismo orden de idea no ve impedimentos normativos como tampoco de seguridad, dado que es la propia Superintendencia de Seguros de la Nación la que establece que la implementación de la póliza de caución digital es plenamente válida jurídicamente (PV-2020-30541551-APN-GTYN#SSN, de fecha 07/05/2020).
+Por su parte, la Gerencia de Asuntos Judiciales y Administrativos acompaña en un todo los fundamentos y las expresiones referidas por la Contaduría y aporta la Resolución de la Superintendencia de Seguros N° 219/2018 en la cual resalta puntos de la misma que considera de relevancia para la resolución de la consulta. El punto 7.8 “…Firma facsimilar para suscribir pólizas: La presente póliza se suscribe mediante firma facsimilar conforme lo previsto en el punto 7.8. del Reglamento General de la Actividad Aseguradora…”. Así también las siguientes consideraciones respecto a la oferta y a la comercialización, el punto 25.2.1. “…las aseguradoras son responsables por todo el proceso de oferta y/o comercialización…”. Y respecto a la documentación el punto 25.3.1 “…La documentación deberá remitirse a través de un medio electrónico que permita ser leídos y descargado I. el correo electrónico del asegurado y o tomador debe ser declarados previa contratación, II. Debe figurar la dirección de la página web de la aseguradora en los formularios y en dicha página poder descargar el formulario de la póliza. III. aplicaciones móviles, indicadas por la aseguradora. La entrega de su póliza y/o endosos a través de medios electrónicos que no impide la solicitud de la documentación física; el punto 25.3.3 manifiesta “…Las aseguradoras deben garantizar la inalterabilidad de los contenidos de la información emitida, remitida, transferida o publicada por los procesos de medios electrónicos, particularmente en lo referido a las fechas y numeración correlativa de emisión. adoptar los recaudos necesarios para garantizar la seguridad y confidencialidad…” Por su parte, el punto 25.3.4. establece “…Las aseguradoras deben conservar y poner a disposición de esta SSN, las constancias que respalden la entrega de la documentación al asegurado, cualquiera sea el medio utilizado…”.
+Elevada la consulta a la Delegación Zona X Mar Del Plata de este Honorable Tribunal de Cuentas, ésta dictamina respecto de la facultad que posee la Superintendencia de Seguros de la Nación de dictar sus propias resoluciones de carácter general, conforme lo establecido en la Ley Nacional N° 20.091. Asimismo destaca que la Resolución N° 219/18 que modifica el Reglamento General de la Actividad Aseguradora, en especial los puntos resaltados por la Gerencia de Asuntos Judiciales y Administrativos trascritos ut supra.
+Por otra parte, la Gerencia Técnica Normativa de la Superintendencia de Seguros de la Nación mediante PV-2020-30541551-APN-GTYN#SSN consideró “…ha de señalarse sobre el mecanismo de presentaciones de información y/o documentación vía digital en un marco de eficacia eficiencia y calidad en la prestación de servicios al ciudadano y toda vez que las nuevas tecnologías han sido adoptadas masivamente por la población, que la Póliza de caución con firma digital, cuenta con plena validez jurídica…”.
+El dictamen de la Delegación concluye con los antecedentes que dan sustento a lo requerido. En tal sentido, el Código Civil y Comercial de Nación en su artículo 288 establece que la firma digital es prueba de autoría de la voluntad; así la Ley N° 25.506 que reconoce y establece las condiciones para el empleo de la firma electrónica y de la firma digital y su eficacia jurídica, y crea la Infraestructura de Firma Digital de la República Argentina; la Ley N° 13.666 de la Provincia de Buenos Aires que adhiere a ésta última y la ordenanza Municipal N° 24.705 por la que O.S.S.E. adhiere a la normativa provincial.
+RESPUESTA: previo a dar opinión es menester poner en perspectiva la temática a abordar.
+En tal sentido, la Ley N° 17.418 brinda, en su artículo 1°, la definición de seguros “…Hay contrato de seguro cuando el asegurador se obliga, mediante una prima o cotización, a resarcir un daño o cumplir la prestación convenida si ocurre el evento previsto…”. Define así en el artículo 2° al objeto de este seguro como “…toda clase de riesgos si existe interés asegurable, salvo prohibición expresa de la ley…”. En su Artículo 11 establece el medio de probar la póliza “…escrito; sin embargo, todos los demás medios de prueba serán admitidos, si hay principio de prueba por escrito…”, y párrafo seguido define a la póliza “…El asegurador entregará al tomador una póliza debidamente firmada, con redacción clara y fácilmente legible. La póliza deberá contener los nombres y domicilios de las partes; el interés la persona asegurada; los riesgos asumidos; el momento desde el cual éstos se asumen y el plazo; la prima o cotización; la suma asegurada; y las condiciones generales del contrato. Podrán incluirse en la póliza condiciones particulares. Cuando el seguro se contratase simultáneamente con varios aseguradores podrá emitirse una sola póliza….”.
+Cuando se habla de firma se hace referencia a lo establecido en el artículo 288 del Código Civil y Comercial “…La firma prueba la autoría de la declaración de voluntad expresada en el texto al cual corresponde. Debe consistir en el nombre del firmante o en un signo. En los instrumentos generados por medios electrónicos, el requisito de la firma de una persona queda satisfecho si se utiliza una firma digital, que asegure indubitablemente la autoría e integridad del instrumento…”
+Al referirnos al concepto de “firma digital”, se la define como un mecanismo criptográfico que permite al receptor de un mensaje firmado digitalmente identificar a la entidad originadora de dicho mensaje, y confirmar que el mensaje no ha sido alterado desde que fue firmado por el originador.
+En nuestro país, Ley Nacional N° 25.506 que regula a la firma digital, la define en su artículo 2° como “…al resultado de aplicar a un documento digital un procedimiento matemático que requiere información de exclusivo conocimiento del firmante, encontrándose ésta bajo su absoluto control. La firma digital debe ser susceptible de verificación por terceras partes, tal que dicha verificación simultáneamente permita identificar al firmante y detectar cualquier alteración del documento digital posterior a su firma. Los procedimientos de firma y verificación a ser utilizados para tales fines serán los determinados por la Autoridad de Aplicación en consonancia con estándares tecnológicos internacionales vigentes…”.
+El Artículo 9° del mismo cuerpo normativo establece los requisitos que debe cumplir para que sea válida. “…a) Haber sido creada durante el período de vigencia del certificado digital válido del firmante, b) Ser debidamente verificada por la referencia a los datos de verificación de firma digital indicados en dicho certificado según el procedimiento de verificación correspondiente. c) Que dicho certificado haya sido emitido o reconocido por un certificador licenciado….”. Por su parte, la Provincia de Buenos Aires adhiere a la normativa nacional a través de la Ley N° 13.666.
+Esta Secretaría entiende que con la PV-2020-30541551-APN-GTYN#SSN, del 07/05/2020, de la Superintendencia de Seguros de la Nación (SSN), se otorga validez jurídica a los seguros con firma digital, brinda certeza a organismos públicos y a beneficiarios privados sobre la validez de la firma digital en las pólizas de seguro de caución, no siendo necesaria ninguna otra validación para su normal aceptación como instrumento eficaz de garantía, despejando así cualquier duda sobre su alcance y aceptación. Dicha validación por parte del organismo de control de seguros otorga una solución integral a todo el sistema de garantías otorgadas a través de los seguros de caución previsto en las leyes de obras públicas y de contrataciones del Estado a nivel Nacional, Provincial y Municipal, como así también para todos los requerimientos de garantías bajo los seguros de caución en las contrataciones del sector privado.
+Todo este recorrido normativo culmina con sendas ordenanzas en las cuales se aprobó el presupuesto de gastos y cálculo de recursos de Obras Sanitarias Mar del Plata Sociedad del Estado por las cuales se adhiere a las leyes provinciales; por la Ordenanza Municipal N° 24.705/2020 que en su artículo 26 “…Adhiérase Obras Sanitarias Mar del Plata Sociedad de Estado al Régimen de la Ley Nº 13.666 por la cual la Provincia de Buenos Aires adhiere a la Ley Nacional Nº 25.506, Ley de Firma Digital, en los términos del artículo 50º de dicho cuerpo legal, en sus capítulos I a IV, V en su artículo 26º, VII, IX y Anexo, en los términos dispuestos en la misma”. Asimismo, a través del artículo 25º de la Ordenanza N° 25006/2021 se establece “… Adhiérase al Decreto Nacional N° 434/16 “Plan de Modernización del Estado”, a la Ley Provincial Nº 14.828 “Plan Estratégico de Modernización de la Administración Pública de la Provincia de Buenos Aires” y al Régimen de la Ley Nº 13.666 por la cual la Provincia de Buenos Aires adhiere a la Ley Nacional Nº 25.506, Ley de Firma Digital, en los términos del artículo 50º de dicho cuerpo legal, en sus capítulos I a IV V en su artículo 26º, VII, IX y Anexo, en las condiciones términos dispuestos en la misma….”.
+A entender de esta Secretaría de Jurisprudencia, Doctrina y Consultas no existe inconveniente alguno para que se establezca para con sus proveedores pólizas de caución con firma digital y adopten los medios que consideren corresponder para su recepción y envío vía correo electrónico, siempre que el contenido sea íntegro, cumpla con los requisitos de validez y sea susceptible de verificación por terceras partes, a fin de identificar al firmante y detectar cualquier alteración del documento digital posterior a su firma."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32480/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>19/11/2021</td>
+      <td>[004.0] Municipalidad de AVELLANEDA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ANTICIPOS JUBILATORIOS [PLAZO MáXIMO PARA EL PAGO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            iado hasta tanto se haga efectivo el pago de su prestación previsional. Las retribuciones percibidas durante dicho período tendrán el carácter de <font class="text-warning"><strong>anticipo</strong></font>, y serán deducidas al momento de efectuarse la liquidación de los retroactivos correspondientes. La presente norma será de aplicación par
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32135/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 3253-2021: Vienen las presentes actuaciones por las que tramita la consulta formulada el municipio de Lanús, que versa sobre la interpretación del artículo 1° de la Ley N° 12.950, modificada por la Ley N° 15.243 y el artículo 72 inciso f) de la Ley N° 14.656.
+La consulta es realizada por el Contador Municipal ..., previo a la nota recibida por el área de Recursos Humanos del municipio, la cual se acompaña a la presente. Asimismo, se aduna el dictamen N° 578/2021, del 9 de agosto de 2021, emitido por el Director de Asuntos Jurídicos de la Subsecretaría Técnica Jurídica del Municipio de Lanús, a efectos de consultar de si existe contradicción entre las previsiones normadas en el artículo 1° de la Ley N° 12.950, reformado por la Ley N° 15.423, y el artículo 72 inciso f) de la Ley N° 14.656.
+Las contradicciones mencionadas estarían dadas por la reforma que introdujo la Ley N° 15.423 al artículo 1 de la Ley N° 12.950 el cual quedó redactado de la siguiente forma: “…El personal afiliado al Instituto de Previsión Social que, comprendido en el artículo 2 del Decreto-Ley 9.650/1980 y no excluido por el artículo 3 del mismo y/o normas que lo suplanten, cese en su condición de activo, o hubiere cesado con anterioridad a la sanción de la presente, cumplimentando los recaudos necesarios para la obtención del beneficio jubilatorio, tendrá derecho a seguir percibiendo el importe correspondiente al sesenta por ciento (60%) de su remuneración mensual, incluyendo el sueldo anual complementario (SAC) debiendo ser actualizadas de conformidad a la paritaria vigente de cada año calendario del sector del afiliado hasta tanto se haga efectivo el pago de su prestación previsional. Las retribuciones percibidas durante dicho período tendrán el carácter de anticipo, y serán deducidas al momento de efectuarse la liquidación de los retroactivos correspondientes. La presente norma será de aplicación para los anticipos que se encontraran en curso…”.
+Por su parte, el artículo 72 inciso f de la ley de Empleo Público Municipal N° 14.656, menciona “…El trabajador tiene derecho a una retribución justa por sus servicios, de acuerdo con su ubicación en la carrera o en las demás situaciones previstas en esta ley y que deban ser remuneradas, conforme con el principio que a igual situación de revista y de modalidades de prestación de servicios, gozará de idéntica remuneración, la que se integrará con los siguientes conceptos: inc f) Anticipo jubilatorio: el trabajador que cese con los años de servicios necesarios para la obtención del beneficio jubilatorio, tendrá derecho a seguir percibiendo el importe correspondiente al sesenta por ciento (60%) de su remuneración mensual por hasta un máximo de doce (12) meses, como adelanto de su jubilación, de la que será deducida al liquidarse esta última…”.
+La diferencia sustancial introducida por la Ley N° 15.243 que reforma a la Ley N° 12.950 está dada en tres puntos claves: a) deja abierto el límite temporal sin restricciones, el cual era de un máximo de doce (12) meses; b) incorpora que para el cálculo de la remuneración deberá incluir el sueldo anual complementario (SAC) y c) que deberán ser actualizadas de conformidad a la paritaria vigente.
+En tal sentido, el Contador Municipal plantea “….considerando que dicha Ley N° 15.243 en modo alguno alude a lo previsto en el antes citado artículo 72 inciso f) de la Ley N° 14.656, por lo que no la deroga, manteniendo dicha norma, al menos formalmente su vigencia es que vengo a realizar la consulta antedicha…”.
+De la intervención del Subsecretario de Recursos Humanos del Municipio, surgen dos posibles interpretaciones de la colisión normativa traída a consulta a saber: en primer término, podría sostenerse que al ser la Ley N° 15.423 posterior a la Ley N° 14.656 y existe una contradicción entre el referido en el artículo 1° y artículo 72 inciso f), por lo que habría quedado derogada la previsión allí contenida; y la segunda interpretación presupone una derogación parcial, dado que al no derogarse expresamente el artículo 72 inciso f), de la Ley N° 14.656, por la Ley N° 15.423, el primero mantiene su vigencia, persistiendo el límite temporal de doce (12) meses para el pago del anticipo jubilatorio, entendiendo que el objetivo de la reforma fue incorporar expresamente el salario anual complementario y los aumentos que se originen en la paritaria vigente al monto que surja de aplicar el sesenta por ciento (60%) de la remuneración del trabajador que inicie el trámite jubilatorio.
+Con posterioridad, toma intervención la Dirección de Asuntos Jurídicos del municipio que sostiene “…la Ley N° 15.423 derogó de manera tácita el artículo 72 inciso f) de la Ley N° 14.656 en cuanto al plazo máximo de otorgamiento del anticipo jubilatorio, esto en atención a que ambas normas especiales legislan sobre la misma temática… de lo contrario se afectaría la seguridad jurídica estando en vigencia dos normas contradictorias…”.
+Asimismo destaca doctrina de este Honorable Cuerpo, extraída de la Consulta N° 28.405 efectuada por la Municipalidad de Pinamar, de fecha 8/08/2017, de la cual se trascribe “…Con relación a lo señalado, he de manifestar que respecto de la vigencia de las leyes no se desconoce que en Derecho rige el principio que reza “ley posterior deroga a la ley anterior”; pero en el presente caso estamos en presencia de dos leyes con características especiales. La primera de ellas -Ley 12.950- regula un régimen especialísimo, ya que prevé los casos de aquellos agentes que cesan en la relación laboral a los fines de acogerse a los beneficios jubilatorios, refiriéndose a una situación concreta como lo son las consecuencias económicas que se producen ante el cese del trabajador. La segunda norma –Ley 14.656-, también posee características especiales y dentro de un contexto general debido a que regula la totalidad de la relación del trabajador municipal. A esta realidad debemos adunarle que el propio art. 1° de la ley 14.656 establece que respecto al régimen de la I Sección de la norma, son de aplicación los principios de irrenunciabilidad, justicia social, gratuidad de las actuaciones en beneficio del trabajador, primacía de la realidad, indemnidad, progresividad y, en caso de duda, interpretación a favor del trabajador (coincidentes con los que se encuentran enumerados en el art. 39 inciso 3 de la Constitución de la Provincia de Buenos Aires), finalizando el citado artículo con una expresión categórica “…Los mayores derechos adquiridos por los trabajadores a la fecha de la sanción de la presente norma, no podrán ser modificados en perjuicio de los trabajadores…”.
+Remitida la consulta a la Delegación Zona III de Avellaneda de este Honorable Tribunal de Cuentas, de la intervención del Oficial Letrado surge en primer término la remisión a la doctrina del Organismo transcripta ut supra; de ella expresa que el dictamen es previo a la sanción de la Ley N° 15.243, haciendo un análisis de lo allí dictaminado por lo cual concluye “…rige en el ámbito de todo el territorio de la Provincia de Buenos Aires, incluidos los municipios que la componen, lo dispuesto en el art. 1° de la Ley 12.950, desplazando lo citado en el art. 72 inc. f) de la Ley 14.656; aconteciendo del mismo modo en caso de dictarse un Convenio Colectivo de Trabajo y/u Ordenanza que contenga un precepto de esas características...”.
+El Oficial Letrado de la Delegación considera que como el Honorable Tribunal de Cuentas se ha expedido sobre la prevalencia de la Ley N° 13.547, modificatoria de la Ley N° 12.950, respecto de la Ley N° 14.656, en el caso de marras se debería continuar dicho criterio y adicionándosele la Ley N° 15.243 dictada con posterioridad al Régimen Marco de Empleo Público Municipal. En tanto así, de la interpretación normativa señalada, se entiende que debe aplicarse el artículo 1° de la Ley N° 15.243 por sobre el articulo 72 inciso f de la Ley N° 14.656.
+Al respecto, la Delegación establece, conforme lo hace la doctrina legal, que para resolver situaciones de contradicciones normativas o antinomias, resultan de aplicación las reglas clásicas o criterios tradicionales de interpretación: cronológica, de jerarquía y de especialidad: 1) ley posterior prevalece sobre la ley anterior; 2) ley superior prevalece sobre la ley inferior; 3) ley especial prevalece sobre la ley general. Asimismo considera que deberá tenerse en cuenta el beneficio pro trabajador que la Constitución de la Provincia de Buenos Aires establece en su artículo 39 inciso 3°.
+RESPUESTA: es menester establecer una coincidencia con lo dictaminado por la Delegación. En tal sentido, es relevante establecer que el ámbito de aplicación y alcance de la normativa que da la legitimidad y marco legal al Instituto de Previsión Social hace referencia al universo de los afiliados del Instituto, sin discriminar la dependencia del Estado donde se desempeñan.
+En el mismo orden de ideas, la modificación introducida por la Ley N° 15.243 establece en su artículo 1° “…será de aplicación para todos los afiliados al Instituto de Previsión Social comprendido en el artículo 2° del Decreto Ley 9.650/1980 y no excluido por el artículo 3 del mismo y/o normas que lo suplanten…” e introduce tres derechos respecto a la percepción del anticipo jubilatorio en cuanto a que el mismo deberá a) seguir percibiendo en carácter de anticipo el importe correspondiente al 60% de su remuneración mensual hasta tanto el beneficio jubilatorio es otorgado por el Instituto de Previsión Social y se haga efectivo el pago de la prestación previsional; b) que tendrá que incluir el sueldo anual complementario (SAC), y c) que deberá ser actualizado de conformidad a la paritaria vigente de cada año.
+En este punto, es relevante la reglamentación de la Ley N° 15.243 a través del Decreto N° 736/2021 que determina “…Establecer que la percepción del importe fijado por el artículo 1° de la Ley N° 12.950, texto según Ley N° 15.243, en concepto de anticipo jubilatorio, se mantendrá hasta el momento del efectivo pago de la prestación previsional y su monto será actualizado de conformidad y en oportunidad de las modificaciones que se produzcan sobre el salario del personal en actividad, en base al cargo por el cual se estableció el pago del anticipo, debiendo incluir el sueldo anual complementario en su proporción correspondiente…”.
+De esta manera, el decreto reglamentario viene a resaltar el principio reparatorio y de amparo económico que se busca con esta esta figura, por lo que el agente que haya optado por el beneficio del anticipo jubilatorio percibirá el sesenta por ciento (60%) correspondiente a los agentes activos, tomando en consideración el cargo y la categoría que detentaba al momento del optar por dicho beneficio.
+Como corolario a lo expuesto, cabe destacarse los siguientes aspectos: a) que la ley de empleo público es temporalmente anterior a esta modificación en cuestión; b) que ambas son leyes especiales pero que el ámbito de aplicación de la normativa del Instituto de Previsión Social tiene el alcance legal de todo el universo de afiliados; c) que la normativa laboral tiene un principio constitucional de que se aplique la ley más benigna para con el trabajador; d) que la remuneración que percibe el trabajador en actividad o como beneficiario del régimen previsional, ambas tienen carácter alimentario; e) que a los efectos de abonar el anticipo jubilatorio, conforme las pautas del Decreto N° 736/2021, deberá tomarse el cargo en actividad que se corresponde con el que ocupara el agente beneficiario del anticipo, aplicando sobre dicha retribución el porcentual del sesenta por ciento (60%), indicado en el artículo 1° de la Ley N° 15.243.
+En el caso traído a consulta, es preciso destacar el perjuicio económico que ocasionaría el límite temporal de doce (12) meses que aún mantiene la ley de empleo municipal, implica que en el tiempo que sustancie el Instituto de Previsión Social el alta al trabajador como jubilado, este quedaría sin sustento alimentario si se superara dicho límite temporal.
+Por todo lo expuesto, se deberá abonar el anticipo jubilatorio en los términos que la Ley N° 15.243 y el Decreto N° 736/21 determinan, entendiéndose ello que el mismo deberá hacerse efectivo hasta tanto exista una resolución definitiva por parte del Instituto de Previsión Social dando el alta previsional correspondiente, con los salarios anuales complementarios y los aumentos salariales que correspondan durante el transcurso del tiempo."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32135/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>19/11/2021</td>
+      <td>[108.0] Municipalidad de SAN FERNANDO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ANTICIPOS JUBILATORIOS [COMIENZO DEL PAGO DEL AUMENTO SALARIAL Y CóMPUTO DE LA LEY N°15.243]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            entos otorgados a los agentes municipales en los meses de diciembre 2020 y marzo 2021, respecto a su alcance sobre aquellos agentes alcanzados por el <font class="text-warning"><strong>anticipo</strong></font> jubilatorio
+La consulta es realizada por el Secretario de Gobierno del Municipio de San Fernando en razón de la modificación introducida a
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32137/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 4000-2021 :Vienen las presentes actuaciones por las que tramita la consulta formulada por el municipio de San Fernando, que versa sobre la fecha desde la cual correspondería la aplicación de los aumentos otorgados a los agentes municipales en los meses de diciembre 2020 y marzo 2021, respecto a su alcance sobre aquellos agentes alcanzados por el anticipo jubilatorio
+La consulta es realizada por el Secretario de Gobierno del Municipio de San Fernando en razón de la modificación introducida a la Ley N° 12.950 por la Ley N° 15.243, la que fuera sancionada el 22 de diciembre de 2020, y publicada en el boletín oficial a fecha 18 de enero de 2021, la cual afecta directamente a la aplicación de esta sobre los anticipos jubilatorios en curso en razón de los incrementos salariales decretados por el municipio.
+Elevada la consulta a la Delegación Zona VIII San Isidro de este Organismo, esta concluye que la fecha a partir de la cual se aplica la ley mencionada es a los ocho (8) días posteriores a su publicación, y es por ello, que a partir de esa fecha que deben aplicarse los aumentos otorgados a los empleados municipales a aquellos que se encuentren en la situación descrita en la ley aludida.
+RESPUESTA: es menester poner de manifiesto el nuevo enfoque que prevé la sanción de la Ley N° 15.243, la cual valora el carácter alimentario que trae implícito el salario y el cuidado que este amerita dentro del proceso del tiempo que transita el agente en actividad al cobro efectivo del beneficio jubilatorio.
+Ello se ve reflejado en la reforma al artículo 1° de la Ley N° 12.950 introducida por la Ley N° 15.243, el cual queda redactado de la siguiente forma “…Artículo 1°: El personal afiliado al Instituto de Previsión Social que, comprendido en el artículo 2 del Decreto-Ley 9.650/1980 y no excluido por el artículo 3 del mismo y/o normas que lo suplanten, cese en su condición de activo, o hubiere cesado con anterioridad a la sanción de la presente, cumplimentando los recaudos necesarios para la obtención del beneficio jubilatorio, tendrá derecho a seguir percibiendo el importe correspondiente al sesenta por ciento (60%) de su remuneración mensual, incluyendo el sueldo anual complementario (SAC) debiendo ser actualizadas de conformidad a la paritaria vigente de cada año calendario del sector del afiliado hasta tanto se haga efectivo el pago de su prestación previsional. Las retribuciones percibidas durante dicho período tendrán el carácter de anticipo, y serán deducidas al momento de efectuarse la liquidación de los retroactivos correspondientes. La presente norma será de aplicación para los anticipos que se encontraran en curso”.
+Los fundamentos que llevaron al legislador a introducir la modificación que poseen mayor relevancia fueron, entre otros, los siguientes “se busca mantener la equidad entre una situación donde los agentes de la administración ya sea municipal o provincial, pasan de ser trabajadores activos, para gozar en un breve lapso de un beneficio jubilatorio…” “…modificar una norma que ha olvidado que el trabajo que está en ese estado de transito de activo a pasivo debe mantener el principio de movilidad consagrado en la legislación previsional provincia…”. “…Esta herramienta que es abonada por el empleador y luego compensada por el Instituto de Previsión Social de la Provincia de Buenos Aires, una vez dictado el acto administrativo de otorgamiento del beneficio, constituye un paliativo para la situación transitoria que padece el futuro jubilado, pues su razón de ser tiene sustento en que la misma no quede sin haberes durante todo el periodo de tiempo hasta tanto el empleador emita la certificación de servicios y remuneraciones para la determinación del cargo y del haber en pasividad….”. “…La inclusión de los aumentos paritarios tendrá por objeto que no se pierda la relación que debe tenerse entre el salario activo y el haber que tendrá como jubilado, posibilitando que el titular no quede desamparado ante una demora del trámite jubilatorio que lo llevaría a una desvalorización y pérdida de poder adquisitivo, lo que motivaría un deterioro en su vida habitual….”. “…Siendo entonces un acto de reparación, de justicia social y de reconocimiento de los derechos que protegen a los trabajadores…”.
+En ese sentido, el Decreto N° 736/2021, que reglamenta la Ley N° 15.243, en su artículo 1° reza “…Establecer que la percepción del importe fijado por el artículo 1° de la Ley N° 12.950, texto según Ley N° 15.243, en concepto de anticipo jubilatorio, se mantendrá hasta el momento del efectivo pago de la prestación previsional y su monto será actualizado de conformidad y en oportunidad de las modificaciones que se produzcan sobre el salario del personal en actividad, en base al cargo por el cual se estableció el pago del anticipo, debiendo incluir el sueldo anual complementario en su proporción correspondiente”.
+De esta manera, el decreto reglamentario pone luz sobre el fin que persigue el anticipo jubilatorio, entendido como el monto que se percibe en el lapso de tiempo que va desde que el agente deja de estar en actividad y hasta el cobro del beneficio jubilatorio. A esos efectos, el anticipo debe tener una relación directa con lo que percibe un agente en actividad en el mismo cargo y categoría. Ello así, que ese sesenta por ciento (60%) que se paga como anticipo jubilatorio debe ser el sesenta por ciento (60%) del sueldo percibido por un agente en actividad, y no una suma fija del último sueldo percibido como lo determinaba la Ley N° 12.950, previo a la reforma introducida por la Ley N° 15.243.
+Por todo lo expuesto, la mencionada ley trae incursa en su sanción una reparación para con el trabajador que está transitando los tramites jubilatorios, que debe ser de aplicación inmediata desde la entrada en vigencia, a fin de no dañar al agente en el transcurso de este tiempo, entendido dicho daño como desamparo económico mientras la administración resuelve y otorga el beneficio jubilatorio.
+Dicho ello y a los efectos de abonar el anticipo jubilatorio conforme las pautas del Decreto N° 736/2021, deberá tomarse el cargo en actividad que se corresponde con el que ocupara el agente beneficiario del anticipo, que ha cesado en la prestación de servicios y se encuentra a la espera del otorgamiento de su beneficio jubilatorio, a valores que correspondan por cada aumento salarial a los agentes en actividad, aplicando sobre dicha retribución el porcentual del sesenta por ciento (60%) indicado en el artículo 1° de la Ley N° 15.243."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32137/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>83</strong></div>
+ 
+<div class="pagination">
+    <ul>
+    
+    
+                        <li class="active"><a href="#">1</a></li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">2</a>
+            </li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=3">3</a>
+            </li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=4">4</a>
+            </li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=5">5</a>
+            </li>
+        
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;</a>
+        </li>
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=9">&rarr;&rarr;</a>
+        </li>
+        </ul>
+</div>
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

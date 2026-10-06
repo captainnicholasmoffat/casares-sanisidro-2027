@@ -1,0 +1,296 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Jurisprudencia</h4></div>
+    <div class="hide">En este apartado se encuentran los extractos de jurisprudencia emergentes de los fallos resueltos por el H. Tribunal de Cuentas.
+    La búsqueda de jurisprudencia se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+     </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/jurisprudencia/filter' method='post'>
+           
+          <div>
+            <label for="jurisprudencia_filter_type_palabra">Palabras</label>
+            <input type="text" id="jurisprudencia_filter_type_palabra" name="jurisprudencia_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen, Voces" class="input-xlarge" value="espectáculos" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+          </div>
+	 <div id='filtroFormulario' style='display:  none '> 
+          <div>
+              <label for="jurisprudencia_filter_type_ente">Entes</label>
+              <span><input type="text" id="jurisprudencia_filter_type_ente" name="jurisprudencia_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" /></span>
+          </div>
+          <div>
+            <label for="jurisprudencia_filter_type_ejercicioInicio">Año del Ejercicio</label>
+            <span>
+	      Desde<input type="number" id="jurisprudencia_filter_type_ejercicioInicio" name="jurisprudencia_filter_type[ejercicioInicio]"    class="input-small" />
+	      Hasta<input type="number" id="jurisprudencia_filter_type_ejercicioFin" name="jurisprudencia_filter_type[ejercicioFin]"    class="input-small" />
+	    </span>
+          </div>
+	  <br>
+          <div>
+            <span><label for="jurisprudencia_filter_type_fechaInicio">Fecha del Acuerdo</label></span>
+            <span>Desde<input type="text" class="input-datepicker datepicker" id="jurisprudencia_filter_type_fechaInicio" name="jurisprudencia_filter_type[fechaInicio]" /></span>
+            <span>Hasta</span>
+            <span><input type="text" class="input-datepicker datepicker" id="jurisprudencia_filter_type_fechaFin" name="jurisprudencia_filter_type[fechaFin]" /></span>
+          </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="jurisprudencia_filter_type_ambitos_2" name="jurisprudencia_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="jurisprudencia_filter_type_ambitos_1" name="jurisprudencia_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#jurisprudencia_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#jurisprudencia_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="jurisprudencia_filter_type_vocalias_37" name="jurisprudencia_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="jurisprudencia_filter_type_vocalias_1" name="jurisprudencia_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="jurisprudencia_filter_type_vocalias_38" name="jurisprudencia_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="jurisprudencia_filter_type_vocalias_40" name="jurisprudencia_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="jurisprudencia_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#jurisprudencia_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#jurisprudencia_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#jurisprudencia_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#jurisprudencia_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/jurisprudencia/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form> 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/jurisprudencia/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Acuerdo">Fecha Acuerdo</a>
+</th>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/jurisprudencia/filter?sort=a.ejercicio&amp;direction=asc&amp;page=1" title="Ejercicio">Ejercicio</a>
+</th>
+            <th>Voces</th>
+            <th>Resúmen</th>
+            <th>Ver</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>18/11/1998</td>
+            <td>0</td>
+            <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      IMPUESTOS ATRASADOS [CONTABILIZACION]
+      &nbsp;  
+</td>                  
+<td width='350px'>
+            " fue contabilizada a valores históricos de las deudas originales.
+Asimismo no se contabilizaron las deudas atrasadas correspondientes a los rubros <font class="text-warning"><strong>espectáculos</strong></font> públicos y tasa por espacios públicos.
+El H. Tribunal de Cuentas sancionó con aplicación de multa, por incumplimiento de los Arts. 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/4441/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Expte. 5.300-3.962/96
+
+En el estado patrimonial municipal correspondiente al ejercicio 1995, el rubro &quot;Impuestos Atrasados&quot; fue contabilizada a valores históricos de las deudas originales.
+Asimismo no se contabilizaron las deudas atrasadas correspondientes a los rubros espectáculos públicos y tasa por espacios públicos.
+El H. Tribunal de Cuentas sancionó con aplicación de multa, por incumplimiento de los Arts. 166 y 187 inc. 1) de la Ley Orgánica de las Municipalidades y 103 del Reglamento de Contabilidad a la Contadora Municipal actuante."/>
+     </a>
+     </td>            <td>
+              <a href="/sistemas/summun/busqueda/jurisprudencia/4441/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+            </td>
+        </tr>
+        </tbody>
+</table>
+    <div class="pull-right">Total de Registros: <strong>1</strong></div>
+    
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

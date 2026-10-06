@@ -1,0 +1,224 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Fallo H.T.C. "316 / 2022"</h4>
+    <div class="pull-right">
+      <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/fallohtc/0/buscador/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>  </div>
+        </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	  <table class="table table-bordered table-striped table-hover">
+    <tr>
+  <th>N° U.I.</th>
+  <td>32620</td>
+</tr>
+<tr>
+  <th>Fecha Acuerdo</th>
+  <td>26/05/2022&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+    <th>Expediente</th>
+    <td>4-033.0-2019</td>
+</tr>
+<tr>
+    <th>Fecha Acuerdo</th>
+    <td>26/05/2022&nbsp;</td>
+</tr>
+<tr>
+    <th>Número</th>
+    <td>316&nbsp;</td>
+</tr>
+<tr>
+    <th>Año</th>
+    <td>2022&nbsp;</td>
+</tr>
+<tr>
+    <th>Ejercicio</th>
+    <td>2019</td>
+</tr>
+<tr>
+   <th>Tipo Fallo</th>
+   <td>Fallo H.T.C.</td>
+</tr>
+<tr>
+    <th>Ente</th>
+    <td>[033.0] Municipalidad de ENSENADA</td>
+</tr>          
+<tr>
+    <th>Resuelve</th>
+    <td><div>
+<p style="text-align:justify"><u>ART&Iacute;CULO PRIMERO:</u> Aprobar la rendici&oacute;n de cuentas de la MUNICIPALIDAD DE ENSENADA ejercicio 2019, acorde a lo expresado en el Considerando und&eacute;cimo.</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO SEGUNDO:</u> Dejar constancia sin otros alcances de las cuestiones tratadas en el Considerando segundo apartado 1.2) y 1.6).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO TERCERO</u>: Disponer que las autoridades tomen nota de lo manifestado en el Considerando s&eacute;ptimo, apartado 6.6).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO CUARTO:</u> Disponer que la Delegaci&oacute;n actuante retome la cuesti&oacute;n abordada en el considerando segundo apartado 1.7), informando al respecto, y formulando las observaciones a que hubiere lugar.</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO QUINTO: </u>Por los fundamentos rese&ntilde;ados en los <strong>Considerandos segundo, cuarto, quinto, sexto y s&eacute;ptimo </strong>y en base a la determinaci&oacute;n efectuada en el<strong> Considerando d&eacute;cimo </strong>aplicar <strong>multas de </strong><strong>$ </strong><strong>80.000,00 al Intendente Municipal Sr. Mario Carlos Secco, de $ 40.000,00 al </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez</strong><strong>, d</strong><strong>e $ 35.000,00 a la </strong><strong>Contadora Municipal Sra. Graciela Liliana Ranieri</strong><strong>, de </strong><strong>$ 15.000,00 al Subdirector de Obras P&uacute;blicas Interino Sr. Hugo Claudio Pose </strong><strong>y de </strong><strong>$ 15.000,00 al Secretario de Hacienda y Producci&oacute;n Sr. Hugo Marcelo Schneider </strong><strong>y sendas amonestaciones a </strong><strong>la </strong><strong>Jefa de Compras Sra. M&oacute;nica Leticia Blasevich</strong><strong>, al Secretario de Relaciones Institucionales, Prensa y Ceremonial Sr. Agust&iacute;n Duscovich, al Director de Obras Particulares Sr. Dar&iacute;o Gabriel Di Paolo, al&nbsp; </strong><strong>Subsecretario de Obras P&uacute;blicas</strong><strong> Sr. Emilio Ernesto Mart&iacute;nez</strong><strong>, al Secretario de Servicios P&uacute;blicos Sr. </strong><strong>H&eacute;ctor Adri&aacute;n Esp&oacute;sito, al </strong><strong>Subsecretario de Recaudaci&oacute;n Sr. Rodolfo Pagani</strong><strong>, a la </strong><strong>Tesorera Municipal Sra. Laura Andrea Ocampos, </strong><strong>al </strong><strong>Secretario de Hacienda y Producci&oacute;n Interino Sr. Carlos Daniel Iurada y al </strong><strong>Director de Producci&oacute;n Sr. Luis Alberto Urrizmendi</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO SEXTO</u>: Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6.1) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $ 1.241.617,01</strong>, por el que responder&aacute;n solidariamente <strong>el </strong><strong>Intendente Municipal </strong><strong>Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, la Tesorera Municipal Sra. Laura Andrea Ocampos, el Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez (</strong><strong>responsable Unidad Ejecutora), y el </strong><strong>Subdirector de Obras P&uacute;blicas Interino Sr. Hugo Claudio Pose </strong>(Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO S&Eacute;PTIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6.2) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $ </strong><strong>17.755.332,32</strong> por el que responder&aacute;n solidariamente <strong>el Intendente Municipal Sr. Mario Carlos Secco, la </strong><strong>Contadora Municipal Sra. Graciela Liliana Ranieri, </strong><strong>el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez, </strong><strong>la Secretaria de Gobierno Sra. Mar&iacute;a Alejandra Sabio y el </strong><strong>Director de Obras Particulares Sr. Dar&iacute;o Gabriel Di Paolo </strong><strong>hasta la suma de $ 1.970.541,98 (ac&aacute;pite 6.2.1)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco, el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez, </strong><strong>el </strong><strong>Director de Obras Particulares Sr. Dar&iacute;o Gabriel Di Paolo y el </strong><strong>Subsecretario de Obras P&uacute;blicas</strong><strong> Sr. Emilio Ernesto Mart&iacute;nez hasta la suma de $ 336.262,56 (ac&aacute;pite 6.2.6)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco y el </strong><strong>Subsecretario de Obras P&uacute;blicas</strong><strong> Sr. Emilio Ernesto Mart&iacute;nez hasta la suma de $ 3.550.694.13 (ac&aacute;pite 6.2.11)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco y el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez hasta la suma de $ 3.032.582,44 (ac&aacute;pite 6.2.12)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco, la </strong><strong>Contadora Municipal Sra. Graciela Liliana Ranieri</strong><strong>, el </strong><strong>Secretario de Hacienda y Producci&oacute;n Sr. Hugo Marcelo Schneider y la </strong><strong>Tesorera Municipal Sra. Laura Andrea Ocampos </strong><strong>hasta la suma de $ 1.759.247,06 (ac&aacute;pite 6.2.17)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco, la </strong><strong>Contadora Municipal Sra. Graciela Liliana Ranieri y </strong><strong>el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez</strong><strong> y la </strong><strong>Tesorera Municipal Sra. Laura Andrea Ocampos</strong><strong> hasta la suma de $ 723.299,01 (ac&aacute;pite 6.2.18)), </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco y el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez hasta la suma de $ 4.363.300,34 (ac&aacute;pite 6.2.21)) y el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco y el </strong><strong>Secretario de Obras P&uacute;blicas Sr.</strong><strong> Jos&eacute; Alberto N&uacute;&ntilde;ez hasta la suma de $ 2.019.404,80 (ac&aacute;pite 6.2.22))</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO OCTAVO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-3) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $ </strong><strong>736.084,04 por el que responder&aacute;n solidariamente </strong><strong>el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez</strong><strong>, responsable Unidad Ejecutora</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO NOVENO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-5) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $</strong><strong> 7.336.612,39</strong><strong>por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el </strong><strong>Secretario de Servicios P&uacute;blicos Sr. H&eacute;ctor Adri&aacute;n Esp&oacute;sito, responsable Unidad Ejecutora y la </strong><strong>Tesorera Municipal Sra. Laura Andrea Ocampos hasta la suma de $ 3.201.608,81 y </strong><strong>el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el </strong><strong>Secretario de Servicios P&uacute;blicos Sr. H&eacute;ctor Adri&aacute;n Esp&oacute;sito hasta la asuma de 4.135.003,58</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-6) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $</strong><strong>2.342.040,34 por el que responder&aacute;n solidariamente</strong><strong>el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Hacienda y Producci&oacute;n Sr. Hugo Marcelo Schneider hasta la suma de $ 714.600,62, el Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez hasta la suma de $&nbsp; 644.629,72 </strong><strong>y el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el </strong><strong>Secretario de Servicios P&uacute;blicos Sr. H&eacute;ctor Adri&aacute;n Esp&oacute;sito hasta la suma de $ 982.810,00</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO UND&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-8) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $</strong><strong> 202.770,24 por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri y el Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez</strong><strong>, responsable Unidad Ejecutora</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO DUOD&Eacute;CIMO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-10) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $ </strong><strong>302.452,27 por el que responder&aacute;n solidariamente el I</strong><strong>ntendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, a la Tesorera Municipal Sra. Laura Andrea Ocampos, y el </strong><strong>Secretario de Relaciones Institucionales, Prensa y Ceremonial Sr. Agust&iacute;n Duscovich </strong>(Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO TERCERO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-13) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de </strong><strong>$ 58.824,14 por el que responder&aacute;n solidariamente el I</strong><strong>ntendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, a la Tesorera Municipal Sra. Laura Andrea Ocampos, el </strong><strong>Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez, responsable Unidad Ejecutora y el Subsecretario de Obras P&uacute;blicas Sr. Emilio Ernesto Mart&iacute;nez </strong>(Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO CUARTO:</u> Desaprobar los egresos tratados en el <strong>Considerando s&eacute;ptimo apartado 6-15) </strong>y sobre la base de lo all&iacute; expuesto, formular <strong>cargo</strong><strong>por la suma </strong><strong>total de $ 1.779.997,81 por el que responder&aacute;n solidariamente el </strong><strong>Intendente Municipal Sr. Mario Carlos Secco, la Contadora Municipal Sra. Graciela Liliana Ranieri, el </strong><strong>Secretario de Obras P&uacute;blicas Sr. Jos&eacute; Alberto N&uacute;&ntilde;ez y el Subsecretario de Obras P&uacute;blicas Sr. Emilio Ernesto Mart&iacute;nez</strong> (Art&iacute;culo 16 de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO QUINTO:</u> Mantener en suspenso el pronunciamiento del H Tribunal Cuentas sobre las cuestiones abordadas en los considerandos s&eacute;ptimo apartados 6.7), 6.16) Gastos Judiciales y &nbsp;6.17) &Oacute;rdenes de Cancelaci&oacute;n de Ejercicios Anteriores y &Oacute;rdenes de Pago faltantes (orden de pago N&ordm; 4044 - Club Social y Deportivo Porte&ntilde;o) y y disponer que la Delegaci&oacute;n y la Divisi&oacute;n Relatora tomen nota para informar en el primer traslado que se corra con posterior al dictado de la presente sentencia y su notificaci&oacute;n a los responsables, &nbsp;declarando que los Sres Mario Carlos Secco, Agust&iacute;n Duscovich, Rub&eacute;n Omar Resa, Hugo Marcelo Schneider, Carlos Daniel Iurada, Jos&eacute; Alberto N&uacute;&ntilde;ez, Ezequiel Pablo Lopardo y las Sras. Graciela Liliana Ranieri, Laura Andrea Ocampos, Mariana Esteves, Mar&iacute;a Natalia Colombo y M&oacute;nica Andrea Pastrana, no deber&aacute;n considerarse exentos de responsabilidad, hasta tanto este H. Tribunal se pronuncie definitivamente sobre la cuesti&oacute;n cuyo tratamiento se posterga.</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO SEXTO</u>: En base a lo manifestado en el Considerando octavo, disponer la continuaci&oacute;n de las reservas dispuestas por medio del art&iacute;culo D&eacute;cimo cuarto, del fallo dictado respecto de las cuentas correspondientes al ejercicio 2018, en lo que se refiere a los temas abordados en los considerandos segundo - ac&aacute;pite 1.4) Espect&aacute;culos y obras teatrales contratados por la Comuna, y octavo, apartado 4) considerando s&eacute;ptimo, apartado 6.7) considerando sexto, apartado 5) considerando sexto, apartado 3) &ldquo;considerando quinto, apartado 2) Exenci&oacute;n de la Tasa por Servicios Generales y Alumbrado P&uacute;blico&rdquo; de la citada sentencia, declarando que los Sres. Mario Carlos Secco, Agust&iacute;n Duscovich,, Rodolfo Pagani y las Sras. Graciela Liliana Ranieri y Mar&iacute;a Alejandra Sabio, no deber&aacute;n considerarse exentos de responsabilidad hasta tanto el H. Tribunal de Cuentas no se pronuncie concreta y definitivamente respecto de los temas cuyo tratamiento se posterga.</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO S&Eacute;PTIMO: </u>&nbsp;En base a lo manifestado en el Considerando octavo, dejar sin efecto la reserva dispuesta por el art&iacute;culo D&eacute;cimo cuarto, considerando s&eacute;ptimo &ndash; Incompatibilidades &ndash; Art&iacute;culo 53 de la Constituci&oacute;n de la Provincia de Buenos Aires, de la sentencia dictada respecto de las cuentas del ejercicio 2018, notificando tal circunstancia al Sr. Mario Carlos Secco y a las Sras. Graciela Liliana Ranieri y Mar&iacute;a Natalia Colombo.</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO OCTAVO:</u> Notificar a los Sres. Mario Carlos Secco, Jos&eacute; Alberto N&uacute;&ntilde;ez, Hugo Claudio Pose, Hugo Marcelo Schneider, Agust&iacute;n Duscovich, Dar&iacute;o Gabriel Di Paolo, Emilio Ernesto Mart&iacute;nez, H&eacute;ctor Adri&aacute;n Esp&oacute;sito, Rodolfo Pagani, Carlos Daniel Iurada, Luis Alberto Urrizmendi, Rub&eacute;n Omar Resa, Ezequiel Pablo Lopardo, Graciela Liliana Ranieri, M&oacute;nica Leticia Blasevich, Laura Andrea Ocampos, Mar&iacute;a Alejandra Sabio, Mariana Esteves, Mar&iacute;a Natalia Colombo y M&oacute;nica Andrea Pastrana de lo resuelto en los art&iacute;culos precedentes, seg&uacute;n particularmente corresponda a cada uno de ellos, y fijarles a los funcionarios alcanzados por sanciones pecuniarias, plazo de noventa (90) d&iacute;as para que procedan a depositar dichos importes en el Banco de la Provincia de Buenos Aires, cuentas fiscales N&ordm; 1865/4 (multas &ndash; Pesos) - CBU 0140999801200000186543 y N&ordm; 108/9 (cargos &ndash; Pesos) &ndash; CBU 0140999801200000010893 a la orden del se&ntilde;or Presidente del H. Tribunal de Cuentas de la provincia de Buenos Aires &ndash; CUIT 30-66570882-5, debi&eacute;ndose comunicar fehacientemente a este Organismo el dep&oacute;sito efectuado, adjunt&aacute;ndose el comprobante que as&iacute; lo acredite dentro del mismo plazo se&ntilde;alado. Asimismo se les hace saber, en el caso de las sanciones impuestas, que la sentencia podr&aacute; ser recurrida dentro del plazo de quince (15) d&iacute;as conforme lo establecido en el Art&iacute;culo 38&deg; de la Ley N&ordm; 10.869 y sus modificatorias. Para el caso en que los responsables opten por interponer demanda contencioso administrativa, deber&aacute;n notificar a este H. Tribunal de Cuentas, dentro del plazo que establece el Art&iacute;culo 18&deg; de la Ley N&ordm; 12.008, fecha de interposici&oacute;n de la demanda, car&aacute;tula, n&uacute;mero de causa y juzgado interviniente, todo ello bajo apercibimiento de darle intervenci&oacute;n al se&ntilde;or Fiscal de Estado para que promueva las acciones pertinentes (Art&iacute;culo 159&deg; de la Constituci&oacute;n Provincial (Art&iacute;culo 33&deg; de la Ley N&ordm; 10.869 y sus modificatorias).</p>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO D&Eacute;CIMO NOVENO</u>: Comunicar la presente sentencia al Ministerio de Gobierno de la Provincia de Buenos Aires y al Ministerio de Econom&iacute;a de la Provincia de Buenos Aires lo manifestado en el considerando cuarto.</p>
+</div>
+
+<p style="text-align:justify"><u>ART&Iacute;CULO VIG&Eacute;SIMO:</u> Rubr&iacute;quese por el Se&ntilde;or Director General de Receptor&iacute;a y Procedimiento (Resoluci&oacute;n N&ordm; 18/2016 del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires) la presente resoluci&oacute;n que consta de setenta y una fojas; publ&iacute;quese en el Bolet&iacute;n Oficial, y en la p&aacute;gina electr&oacute;nica del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires, reservar &eacute;ste Expediente en la Secretar&iacute;a de Actuaciones y Procedimiento durante los t&eacute;rminos fijados en el art&iacute;culo d&eacute;cimo octavo. F&iacute;rmese, cumplido, arch&iacute;vese</p>&nbsp;</td>
+</tr>
+<tr>
+    <th>Archivos Adjuntos</th>
+    <td>
+            <div>
+        <strong>Ensenada2019F.pdf</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/sistemas/summun/uploads/documents/fallohtc/32620/6291002770c2d.Ensenada2019F.pdf" alt="Ensenada2019F.pdf" title="Ensenada2019F.pdf" target="_blank">
+        <img class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_acrobat.png" alt="Ensenada2019F.pdf" title="Ensenada2019F.pdf"/></a>
+        <hr>
+        </div>
+      &nbsp;
+    </td>
+</tr><tr>
+   <th>Observaciones</th>
+    <td>&nbsp;</td>
+</tr>  </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

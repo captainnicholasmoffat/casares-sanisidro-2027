@@ -1,0 +1,171 @@
+
+ Uso permitido  |  Android Management API  |  Google for Developers 
+ Ir al contenido principal
+ Android Management API
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Acceder 
+ Página principal
+ Guías
+ Referencia
+ Muestra
+ Android Management API
+ Página principal
+ Guías
+ Referencia
+ Muestra
+ Introducción 
+ Guía de inicio rápido 
+ Guía para programadores 
+ Crea una cuenta de servicio 
+ Crea una empresa 
+ Crear una política 
+ Configura reglas de cumplimiento de políticas 
+ Integración con el SDK de AMAPI 
+ Aprovisiona un dispositivo 
+ Configura notificaciones de Pub/Sub 
+ Iframe de Zero-touch 
+ Modo perdido 
+ Cómo administrar apps 
+ Asistencia sobre la administración de apps 
+ Cómo controlar las actualizaciones de apps 
+ Compatibilidad con aplicaciones web 
+ Cómo admitir configuraciones administradas 
+ Recuperar comentarios de apps 
+ Cómo depurar las instalaciones y actualizaciones de apps 
+ Políticas de ejemplo 
+ Dispositivos con perfiles de trabajo 
+ Dispositivos completamente administrados 
+ Dispositivos exclusivos 
+ Configuraciones de red 
+ Información adicional 
+ Notas de la versión 
+ Comprensión de la postura de seguridad 
+ Guía para socios de EMM existentes 
+ Comentarios y asistencia 
+ Uso permitido 
+ Condiciones del Servicio 
+ Únete a la comunidad de EMM 
+ Google utiliza tecnología de IA para traducir contenido a tu idioma preferido. Las traducciones realizadas con IA pueden contener errores.
+ Página principal
+ Productos
+ Android Management API
+ Guías
+ Enviar comentarios
+ Uso permitido 
+ Organiza tus páginas con colecciones
+ Guarda y categoriza el contenido según tus preferencias.
+ El uso de la API de Android Management de Google y el SDK asociado ("Servicio") se restringe exclusivamente a los desarrolladores comerciales de administración de movilidad empresarial (EMM), los proveedores de soluciones de Device Trust de Android Enterprise (Device Trust) y los fabricantes de equipos originales de dispositivos Android (OEM). Todos los usuarios del Servicio deben cumplir con esta política de Uso Permitido. Los proveedores de soluciones de Device Trust son proveedores de identidad (IDP), defensores de amenazas móviles (MTD), detección y respuesta de endpoints (EDR), información de seguridad y administración de eventos (SIEM) y herramientas de operaciones de seguridad. Los desarrolladores de EMM y los proveedores de soluciones de Device Trust son organizaciones que crean soluciones de administración de dispositivos o de Device Trust y ofrecen sus soluciones a sus clientes finales a través de ventas comerciales a entidades fuera de su empresa inmediata o entidad matriz, y que brindan asistencia directamente a estos clientes finales.
+ Los OEM solo pueden usar los Servicios para habilitar las funciones de administración de movilidad empresarial en sus dispositivos para cumplir con los requisitos de GMS de Android.
+ Los indicadores de Device Trust que proporciona el Servicio son exclusivamente para brindar seguridad de TI empresarial o de Device Trust a los clientes finales en dispositivos administrados y no administrados por EMM.
+ Para acceder al Servicio y usarlo, los desarrolladores de EMM o los proveedores de soluciones de Device Trust deben hacer lo siguiente:
+ Tener un acuerdo directo con sus clientes finales, respectivamente, para crear soluciones de administración de dispositivos o de Device Trust.
+ Informar a los clientes finales y a sus usuarios, según corresponda, sobre su acceso a los datos y el uso que hacen de ellos a partir del uso del Servicio.
+ No se permiten los siguientes casos de uso y administración de tecnología:
+ Soluciones de financiación de dispositivos, incluidas las que se usan en conjunto con acuerdos de arrendamiento de hardware o en otros casos de uso de B2C o venta minorista, que administran, restringen o controlan el uso o la funcionalidad del dispositivo según el estado de pago (p. ej., falta de pago de cuotas mensuales equivalentes [EMI]).
+ Soluciones desarrolladas exclusivamente con el propósito de supervisar, identificar o escuchar dispositivos o usuarios, independientemente de la administración empresarial.
+ Alteración de un dispositivo Android disponible comercialmente para vender,
+revender o arrendar posteriormente dicho dispositivo alterado, con la excepción de los dispositivos en modo
+ kiosco sin usuario (p.ej., una tablet bloqueada en una sola aplicación o app
+web).
+ Enviar, precargar o instalar automáticamente aplicaciones o servicios en dispositivos Android sin el consentimiento previo expreso e informado de los clientes pertinentes y sus usuarios finales.
+ Soluciones desarrolladas y utilizadas exclusivamente para aplicaciones internas de origen.
+ Uso de las políticas y los comandos del Servicio en dispositivos no administrados por EMM, excepto para las soluciones de Device Trust.
+ Uso de los indicadores de Device Trust con la funcionalidad heredada de administrador de dispositivos.
+ Uso de los indicadores de Device Trust en soluciones que usan las APIs de accesibilidad.
+ Uso de los indicadores de Device Trust en conjunto con el ID de publicidad o para fines de seguimiento publicitario.
+ Google se reserva el derecho de revocar el acceso al Servicio o limitarlo a ciertas funciones si un desarrollador de EMM o un proveedor de soluciones de Device Trust no cumple con estos requisitos de uso.
+ Para consultar sobre el uso potencial del Servicio fuera de los lineamientos mencionados anteriormente, puedes completar y enviar este formulario .
+ Cuotas y restricciones
+ El Servicio aplica las siguientes cuotas y restricciones:
+ Para solicitar una cuota inicial de hasta 500 dispositivos, deberás proporcionar una justificación empresarial completa.
+ Para superar la cuota de 500 dispositivos, deberás postularte a Android Enterprise
+a través de este formulario 
+ Cuota predeterminada de 1,000 consultas por cada 100 segundos para cada proyecto. Por ejemplo, si realizas 1,000 solicitudes en 1 segundo, no podrás realizar más solicitudes durante los próximos 99 segundos.
+ Además, hay una cuota por recurso de 60 consultas por minuto para preservar el estado del servicio para todos los usuarios de la API de AM. El límite se activa si se producen más de 60 solicitudes en un minuto para la misma combinación de lo siguiente:
+ Acción de la API
+ ID de EMM
+ ID de la empresa
+ ID de la política o del dispositivo
+ Puedes solicitar la cuota inicial, un aumento de la cuota o la eliminación de
+las restricciones con este formulario . Se otorgará una cuota para un máximo de 2 proyectos por desarrollador para admitir la separación de los entornos de desarrollo y producción.
+ Enviar comentarios
+ Salvo que se indique lo contrario, el contenido de esta página está sujeto a la licencia Atribución 4.0 de Creative Commons , y los ejemplos de código están sujetos a la licencia Apache 2.0 . Para obtener más información, consulta las políticas del sitio de Google Developers . Java es una marca registrada de Oracle o sus afiliados.
+ Última actualización: 2026-03-30 (UTC)
+ ¿Quieres brindar más información?
+ [[["Fácil de comprender","easyToUnderstand","thumb-up"],["Resolvió mi problema","solvedMyProblem","thumb-up"],["Otro","otherUp","thumb-up"]],[["Falta la información que necesito","missingTheInformationINeed","thumb-down"],["Muy complicado o demasiados pasos","tooComplicatedTooManySteps","thumb-down"],["Desactualizado","outOfDate","thumb-down"],["Problema de traducción","translationIssue","thumb-down"],["Problema con las muestras o los códigos","samplesCodeIssue","thumb-down"],["Otro","otherDown","thumb-down"]],["Última actualización: 2026-03-30 (UTC)"],[],["The Android Management API is for commercial Enterprise Mobility Management (EMM) developers and Zero Trust solution providers, which includes IDPs, MTDs, EDR, SIEM, and security operations tools. Permitted users build device management or Zero Trust solutions for external customers. Prohibited actions include device financing, device monitoring/fingerprinting outside enterprise management, unauthorized device alteration, and unauthorized app installations. API usage requires direct customer agreements, limited to 500 devices per project, and 1000 queries per 100 seconds.\n"]]
+ Interactúa
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+ Conéctate
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+ Compilación
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ Todos los productos
+ Condiciones
+ Privacidad
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 

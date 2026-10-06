@@ -1,0 +1,176 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Doctrina Consulta "1062 D.C.  CONTRATACION [ARTISTAS O CIENTIFICOS Y..]"</h4>
+      <div class="pull-right">
+     <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/doctrinaconsulta/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>    </div>
+      </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	 <table class="table table-bordered table-striped table-hover">
+  <tr>
+  <th>N° U.I.</th>
+  <td>1062</td>
+</tr>
+<tr>
+  <th>Fecha Salida</th>
+  <td>11/04/2005&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades B</li>
+        </ul>
+  </td>
+</tr><tr>
+  <th>Expediente</th>
+  <td>5300-4241/05&nbsp;</td>
+</tr>
+<tr>
+  <th>Ente</th>
+  <td>[061.0] Municipalidad de LA PLATA</td>
+</tr>
+<tr>
+  <th>Ámbito</th>
+  <td>Provincial</td>
+</tr> 
+<tr>
+  <th>Resúmen</th>
+  <td>Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3° de la Ley Orgánica de las Municipalidades, dado que en este tipo de contrataciones es donde deben tenerse en cuenta de manera especial las calidades técnicas, artísticas y científicas del prestador en razón de obtener los mejores resultados.  <br />
+<br />
+Respuesta: El artículo en cuestión prevé la excepción de la aplicación del régimen establecido por el artículo 151 de la Ley Orgánica de las Municipalidades teniendo en cuenta los conocimientos del prestador en la ejecución de ciertas cosas y/o sus obras.    <br />
+La extensa lista de eventos organizados por los integrantes de la consultora que acredita más de 30 años de experiencia en la organización de emprendimientos de las características como el que es intención de la Comuna encarar, se entiende que son antecedentes suficientes para encuadrar a la citada organización dentro de las exigencias que prevé la aplicación de la excepción prevista por el artículo 156 inciso 3° de la Ley Orgánica Municipal.<br />
+              &nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]<br>
+     &nbsp;
+  </td>
+</tr> </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

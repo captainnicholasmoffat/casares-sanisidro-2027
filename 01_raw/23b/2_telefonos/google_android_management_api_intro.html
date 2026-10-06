@@ -1,0 +1,2192 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="es-419-x-mtfrom-en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#009688"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/android/management/introduction?hl=es-419"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml?hl=es-419">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/android/management/introduction" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/android/management/introduction" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/android/management/introduction?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/android/management/introduction?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/android/management/introduction?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/android/management/introduction?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/android/management/introduction?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/android/management/introduction?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/android/management/introduction?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/android/management/introduction?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/android/management/introduction?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/android/management/introduction?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/android/management/introduction?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/android/management/introduction?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/android/management/introduction?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/android/management/introduction?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/android/management/introduction?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/android/management/introduction?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/android/management/introduction?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/android/management/introduction?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/android/management/introduction?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/android/management/introduction?hl=vi" /><title>Android Management API &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Android Management API &nbsp;|&nbsp; Google for Developers"><meta property="og:url" content="https://developers.google.com/android/management/introduction?hl=es-419"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/opengraph/teal.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="es_419"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Android Management API"
+  }
+</script><link rel="alternate machine-translated-from" hreflang="en"
+        href="https://developers.google.com/android/management/introduction?hl=en">
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="teal"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Ir al contenido principal
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Abrir menú">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/android/management?hl=es-419">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Android Management API"
+           src="https://developers.google.com/static/android/management/images/adp.png?hl=es-419"
+           srcset="https://developers.google.com/static/android/management/images/adp_36.png?hl=es-419 36w, https://developers.google.com/static/android/management/images/adp_48.png?hl=es-419 48w, https://developers.google.com/static/android/management/images/adp_72.png?hl=es-419 72w, https://developers.google.com/static/android/management/images/adp_96.png?hl=es-419 96w, https://developers.google.com/static/android/management/images/adp_480.png?hl=es-419 480w, https://developers.google.com/static/android/management/images/adp_720.png?hl=es-419 720w, https://developers.google.com/static/android/management/images/adp_856.png?hl=es-419 856w, https://developers.google.com/static/android/management/images/adp_960.png?hl=es-419 960w, https://developers.google.com/static/android/management/images/adp_1440.png?hl=es-419 1440w, https://developers.google.com/static/android/management/images/adp_1920.png?hl=es-419 1920w, https://developers.google.com/static/android/management/images/adp_2880.png?hl=es-419 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/android/management?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Android Management API"
+      
+    >
+    
+          Android Management API
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="Android Management API"
+    tenant-name="Google for Developers"
+    project-scope="/android/management"
+    url-scoped="https://developers.google.com/s/results/android/management?hl=es-419"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results?hl=es-419" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Abrir la búsqueda"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Buscar"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Buscar"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Cerrar la búsqueda"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Acceder</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    ">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Pestañas inferiores">
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/android/management?hl=es-419"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/android/management?hl=es-419"
+    
+       track-type="nav"
+       track-metadata-position="nav - home"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Página principal"
+         
+           track-name="home"
+         
+       >
+    Página principal
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/android/management/introduction?hl=es-419"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/android/management/introduction?hl=es-419"
+    
+       track-type="nav"
+       track-metadata-position="nav - guías"
+       track-metadata-module="primary nav"
+       aria-label="Guías, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guías"
+         
+           track-name="guías"
+         
+       >
+    Guías
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/android/management/reference/rest?hl=es-419"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/android/management/reference/rest?hl=es-419"
+    
+       track-type="nav"
+       track-metadata-position="nav - referencia"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Referencia"
+         
+           track-name="referencia"
+         
+       >
+    Referencia
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/android/management/sample-app?hl=es-419"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/android/management/sample-app?hl=es-419"
+    
+       track-type="nav"
+       track-metadata-position="nav - muestra"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Muestra"
+         
+           track-name="muestra"
+         
+       >
+    Muestra
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filtrar"
+         
+         aria-label="Escribe para filtrar"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Borrar filtro"
+        aria-label="Borrar filtro"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Menú lateral">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Cerrar navegación">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/android/management?hl=es-419">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="Android Management API"
+           src="https://developers.google.com/static/android/management/images/adp.png?hl=es-419"
+           srcset="https://developers.google.com/static/android/management/images/adp_36.png?hl=es-419 36w, https://developers.google.com/static/android/management/images/adp_48.png?hl=es-419 48w, https://developers.google.com/static/android/management/images/adp_72.png?hl=es-419 72w, https://developers.google.com/static/android/management/images/adp_96.png?hl=es-419 96w, https://developers.google.com/static/android/management/images/adp_480.png?hl=es-419 480w, https://developers.google.com/static/android/management/images/adp_720.png?hl=es-419 720w, https://developers.google.com/static/android/management/images/adp_856.png?hl=es-419 856w, https://developers.google.com/static/android/management/images/adp_960.png?hl=es-419 960w, https://developers.google.com/static/android/management/images/adp_1440.png?hl=es-419 1440w, https://developers.google.com/static/android/management/images/adp_1920.png?hl=es-419 1920w, https://developers.google.com/static/android/management/images/adp_2880.png?hl=es-419 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/android/management?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="Android Management API"
+      
+    >
+    
+          Android Management API
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/android/management"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Página principal"
+      
+        track-name="home"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Página principal"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Página principal
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/android/management/introduction"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guías"
+      
+        track-name="guías"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guías"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Guías
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/android/management/reference/rest"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Referencia"
+      
+        track-name="referencia"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Referencia"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Referencia
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="/android/management/sample-app"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Muestra"
+      
+        track-name="muestra"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Muestra"
+     track-type="navMenu"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Muestra
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/android/management/introduction"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Introducción</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/android/management/quickstart"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Guía de inicio rápido</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Guía para programadores</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/android/management/service-account"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Crea una cuenta de servicio</span></a></li><li class="devsite-nav-item"><a href="/android/management/create-enterprise"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Crea una empresa</span></a></li><li class="devsite-nav-item"><a href="/android/management/create-policy"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Crear una política</span></a></li><li class="devsite-nav-item"><a href="/android/management/compliance"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Configura reglas de cumplimiento de políticas</span></a></li><li class="devsite-nav-item"><a href="/android/management/extensibility-sdk-integration"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Integración con el SDK de AMAPI</span></a></li><li class="devsite-nav-item"><a href="/android/management/provision-device"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Aprovisiona un dispositivo</span></a></li><li class="devsite-nav-item"><a href="/android/management/notifications"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Configura notificaciones de Pub/Sub</span></a></li><li class="devsite-nav-item"><a href="/android/management/zero-touch-iframe"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Iframe de Zero-touch</span></a></li><li class="devsite-nav-item"><a href="/android/management/lost-mode"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Modo perdido</span></a></li><li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Cómo administrar apps</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/android/management/apps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Asistencia sobre la administración de apps</span></a></li><li class="devsite-nav-item"><a href="/android/management/control-app-updates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Cómo controlar las actualizaciones de apps</span></a></li><li class="devsite-nav-item"><a href="/android/management/web-apps"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Compatibilidad con aplicaciones web</span></a></li><li class="devsite-nav-item"><a href="/android/management/managed-configurations-iframe"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Cómo admitir configuraciones administradas</span></a></li><li class="devsite-nav-item"><a href="/android/management/app-feedback"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Recuperar comentarios de apps</span></a></li><li class="devsite-nav-item"><a href="/android/management/debug-installs-updates"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Cómo depurar las instalaciones y actualizaciones de apps</span></a></li></ul></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Políticas de ejemplo</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/android/management/policies/work-profile"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Dispositivos con perfiles de trabajo</span></a></li><li class="devsite-nav-item"><a href="/android/management/policies/fully-managed-devices"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Dispositivos completamente administrados</span></a></li><li class="devsite-nav-item"><a href="/android/management/policies/dedicated-devices"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Dispositivos exclusivos</span></a></li><li class="devsite-nav-item"><a href="/android/management/configure-networks"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Configuraciones de red</span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Información adicional</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/android/management/release-notes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Notas de la versión</span></a></li><li class="devsite-nav-item"><a href="/android/management/understanding-security-posture"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Comprensión de la postura de seguridad</span></a></li><li class="devsite-nav-item"><a href="/android/management/existing-emms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Guía para socios de EMM existentes</span></a></li><li class="devsite-nav-item"><a href="/android/management/feedback"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Comentarios y asistencia</span></a></li><li class="devsite-nav-item"><a href="/android/management/permissible-usage"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Uso permitido</span></a></li><li class="devsite-nav-item"><a href="/android/management/terms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Condiciones del Servicio</span></a></li><li class="devsite-nav-item"><a href="/android/management/join"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Únete a la comunidad de EMM</span></a></li></ul></li>
+          </ul>
+        
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="En esta página"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="https://developers.google.com/_static/images/translated.svg?hl=es-419"
+               class="devsite-banner-translated-image invert"
+               alt="">
+          <span class="devsite-banner-translated-text">
+            
+            Google utiliza tecnología de IA para traducir contenido a tu idioma preferido. Las traducciones realizadas con IA pueden contener errores.
+          </span>
+        </div>
+        <devsite-switch-to-english-button></devsite-switch-to-english-button>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Ruta de navegación">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Página principal
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Productos
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/android/management?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="Android Management API"
+      
+    >
+    
+          Android Management API
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/android/management/introduction?hl=es-419"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Guías
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="Android Management API"
+  product-id="721952"
+  bucket=""
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260924-r00-rc00.480666406702936294"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/android/management/images/adp.png?hl=es-419"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Enviar comentarios
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Android Management API<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Descartar"
+
+      
+      close-button-text="Entendido">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Organiza tus páginas con colecciones
+    </span>
+    <span slot="popout-contents">
+      
+      Guarda y categoriza el contenido según tus preferencias.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+    
+
+<aside class="note"><strong>Nota:</strong><span> Si usas la <a href="https://developers.google.com/android/work/play/emm-api?hl=es-419">API de EMM de Google Play</a>, consulta la <a href="https://developers.google.com/android/management/existing-emms?hl=es-419">guía para socios de EMM existentes</a>.</span></aside>
+<p>La API de Android Management está disponible como parte de <a href="https://developers.google.com/android/work?hl=es-419">Android Enterprise</a>, una iniciativa que proporciona a los desarrolladores herramientas para compilar soluciones que permitan a las organizaciones administrar sus flotas de dispositivos Android. El
+está dirigido a proveedores de administración de movilidad empresarial (EMM). Para implementar una solución de producción que use la API de Android Management, los EMM deben seguir los pasos que se describen en <a href="https://developers.google.com/android/work/release-solution?hl=es-419">Cómo lanzar tu solución</a>.</p>
+
+<p>Puedes usar la API de Android Management para admitir la
+<a href="https://developers.google.com/android/work/requirements/work-profile?hl=es-419">perfil de trabajo en un dispositivo de propiedad personal</a>
+<a href="https://developers.google.com/android/work/requirements/work-profile-corporate?hl=es-419">perfil de trabajo en un dispositivo empresarial</a>,
+un <a href="https://developers.google.com/android/work/requirements/fully-managed-device?hl=es-419">dispositivo completamente administrado</a>
+y conjuntos de soluciones para <a href="https://developers.google.com/android/work/requirements/dedicated-device?hl=es-419">dispositivos exclusivos</a>.</p>
+
+<p>Consulta la <a href="https://developers.google.com/android/management/quickstart?hl=es-419">Guía de inicio rápido</a> para probar la API.</p>
+
+<hr />
+
+<h2 data-text="Cómo funciona" id="how_it_works" tabindex="-1">Cómo funciona</h2>
+
+<p>La API de Android Management admite la administración completa de movilidad empresarial
+de Google Cloud, desde la inscripción inicial de los clientes hasta la configuración y administración de dispositivos.</p>
+
+<figure id="android-management-overview">
+  <img alt="Las consolas de EMM usan la API de Android Management para establecer políticas en los dispositivos." src="https://developers.google.com/static/android/management/images/android-management-api.png?hl=es-419" width="800" />
+</figure>
+
+<p>Como desarrollador de EMM, proporcionas a tus clientes una solución local
+Consola de EMM En la consola, los clientes generan tokens de inscripción de dispositivos.
+y crear políticas de administración. Usan los tokens para inscribir dispositivos y aplicar políticas de administración a los dispositivos que inscribieron.</p>
+
+<p>En el backend, tu consola usa la API de Android Management para crear
+tokens de inscripción, políticas y otros recursos de administración. Durante la inscripción,
+en cada dispositivo se instala la aplicación complementaria de la API
+<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.work.clouddpc&hl=es-419">Android Device Policy</a>.
+Cuando las políticas se vinculan a un dispositivo en la API, Android Device Policy
+aplica la configuración de la política en el dispositivo.</p>
+<aside class="note"><strong>Nota:</strong><span> Android Device Policy es el <strong>único</strong> controlador de política de dispositivo compatible
+con la API de Android Management.</span></aside>
+<hr />
+
+<h2 data-text="Recursos de la API" id="api_resources" tabindex="-1">Recursos de la API</h2>
+
+<p>En esta sección, se describen los recursos principales que se usan en la API de Android Management.</p>
+
+<h3 data-text="Empresas" id="enterprises" tabindex="-1">Empresas</h3>
+
+<p>Por lo general, un recurso <a href="https://developers.google.com/android/management/reference/rest/v1/enterprises?hl=es-419"><code dir="ltr" translate="no">enterprises</code></a> representa una sola organización. <a href="https://developers.google.com/android/management/create-enterprise?hl=es-419">Crea una empresa</a> como parte de un flujo de configuración en línea que tus clientes usan para vincular su organización con tu solución de EMM. Las políticas, los tokens de inscripción y los dispositivos pertenecen a una empresa.</p>
+
+<h3 data-text="Políticas" id="policies" tabindex="-1">Políticas</h3>
+
+<p>La API de Android Management sigue un modelo basado en políticas. R
+<a href="https://developers.google.com/android/management/reference/rest/v1/enterprises.policies?hl=es-419"><code dir="ltr" translate="no">policies</code></a>
+contiene un grupo de configuraciones de administración de aplicaciones y dispositivos que rigen la
+de un dispositivo. El rango y la flexibilidad de la configuración admitida en <code dir="ltr" translate="no">policies</code> te permiten configurar dispositivos para una variedad de <a href="https://developers.google.com/android/work/overview?hl=es-419#android_devices_enterprise_use_cases">casos de uso</a> diferentes.</p>
+
+<p>Consulta <a href="https://developers.google.com/android/management/create-policy?hl=es-419">Crea una política</a> para obtener más información.</p>
+
+<h3 data-text="Tokens de inscripción" id="enrollment_tokens" tabindex="-1">Tokens de inscripción</h3>
+
+<p>Usas <a href="https://developers.google.com/android/management/reference/rest/v1/enterprises.enrollmentTokens?hl=es-419"><code dir="ltr" translate="no">enrollmentTokens</code></a> para vincular dispositivos a una empresa, un proceso llamado inscripción y aprovisionamiento.
+De manera opcional, los tokens de inscripción pueden contener detalles adicionales (p. ej., credenciales de Wi-Fi corporativas), un <code dir="ltr" translate="no">policyName</code> vinculado a un recurso <code dir="ltr" translate="no">policies</code> y un identificador de cuenta de usuario.</p>
+
+<p>Después de <a href="https://developers.google.com/android/management/provision-device?hl=es-419">crear un token de inscripción</a>, puedes pasarlo a un dispositivo con uno de los diferentes <a href="https://developers.google.com/android/management/provision-device?hl=es-419#provisioning_methods">métodos de aprovisionamiento</a>. Los dispositivos instalan Android Device Policy como parte del proceso de aprovisionamiento. Si un
+Si se especifica <code dir="ltr" translate="no">policyName</code> en el token de inscripción, se aplicará la política
+se aplican inmediatamente después de que se completa el aprovisionamiento.</p>
+
+<p>La API de Android Management simplifica la administración de usuarios. Puedes inscribir un dispositivo con o sin especificar un usuario en el token de inscripción.</p>
+
+<ul>
+<li>Si no especificas un usuario, se creará uno nuevo automáticamente.</li>
+<li>Si especificas un usuario existente, este se asociará con el dispositivo. Puedes asociar un usuario con hasta 10 dispositivos.</li>
+</ul>
+
+<p>Consulta <a href="https://developers.google.com/android/management/provision-device?hl=es-419">Cómo aprovisionar un dispositivo</a> para obtener más información.</p>
+
+<h3 data-text="Dispositivos" id="devices" tabindex="-1">Dispositivos</h3>
+
+<p>Un objeto <a href="https://developers.google.com/android/management/reference/rest/v1/enterprises.devices?hl=es-419"><code dir="ltr" translate="no">devices</code></a>
+cuando se inscribe correctamente un dispositivo. El recurso
+contiene detalles de solo lectura sobre un dispositivo, incluido su usuario asociado
+la política y el modo de administración.</p>
+
+<p>La administración de dispositivos se lleva a cabo a través de políticas, pero puedes usar
+<a href="https://developers.google.com/android/management/reference/rest/v1/enterprises.devices/issueCommand?hl=es-419"><code dir="ltr" translate="no">enterprises.devices.issueCommand</code></a>
+para bloquear, reiniciar o restablecer la contraseña de un dispositivo. Para limpiar un dispositivo, llama a <a href="https://developers.google.com/android/management/reference/rest/v1/enterprises.devices/delete?hl=es-419"><code dir="ltr" translate="no">enterprises.devices.delete</code></a>.</p>
+
+<hr />
+
+<h2 data-text="Comenzar" id="get_started" tabindex="-1">Comenzar</h2>
+
+<p>Prueba la API. Usa la <a href="https://developers.google.com/android/management/quickstart?hl=es-419">guía de inicio rápido</a> para configurar un dispositivo en minutos. Asegúrate de comprender los pasos necesarios
+<a href="https://developers.google.com/android/work/release-solution?hl=es-419">lanzar tu solución</a> en una fase de producción.
+antes de usar la guía del desarrollador y la <a href="https://developers.google.com/android/management/reference/rest?hl=es-419">API
+referencia</a> en este sitio para crear tu
+de Google Cloud.</p>
+
+  
+
+  
+
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="Android Management API"
+  product-id="721952"
+  bucket=""
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260924-r00-rc00.480666406702936294"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/android/management/images/adp.png?hl=es-419"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Enviar comentarios
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Salvo que se indique lo contrario, el contenido de esta página está sujeto a la <a href="https://creativecommons.org/licenses/by/4.0/">licencia Atribución 4.0 de Creative Commons</a>, y los ejemplos de código están sujetos a la <a href="https://www.apache.org/licenses/LICENSE-2.0">licencia Apache 2.0</a>. Para obtener más información, consulta las <a href="https://developers.google.com/site-policies?hl=es-419">políticas del sitio de Google Developers</a>. Java es una marca registrada de Oracle o sus afiliados.</p>
+  <p>Última actualización: 2025-07-26 (UTC)</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="Android Management API"
+  product-id="721952"
+  bucket=""
+  context="DevSite feedback link"
+  version="t-devsite-webserver-20260924-r00-rc00.480666406702936294"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/android/management/images/adp.png?hl=es-419"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    ¿Quieres brindar más información?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Fácil de comprender","easyToUnderstand","thumb-up"],["Resolvió mi problema","solvedMyProblem","thumb-up"],["Otro","otherUp","thumb-up"]],[["Falta la información que necesito","missingTheInformationINeed","thumb-down"],["Muy complicado o demasiados pasos","tooComplicatedTooManySteps","thumb-down"],["Desactualizado","outOfDate","thumb-down"],["Problema de traducción","translationIssue","thumb-down"],["Problema con las muestras o los códigos","samplesCodeIssue","thumb-down"],["Otro","otherDown","thumb-down"]],["Última actualización: 2025-07-26 (UTC)"],[],["The Android Management API allows enterprise mobility management (EMM) providers to manage Android device fleets.  EMMs use their console to create enrollment tokens and management policies.  Devices are enrolled using these tokens, installing the Android Device Policy app to enforce policies. Key actions include creating `enterprises`, `policies`, and `enrollmentTokens`. `devices` resources are created upon successful enrollment. Device management involves applying policies, and using commands to lock, reboot, or reset passwords, while deletion will wipe the device.\n"]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Vínculos a pie de página"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Interactúa</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/program?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/experts?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/accelerators?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/nvidia?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Conéctate</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//desarrolladores.googleblog.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevslatam"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/channel/UCeo-MamuQVFRcfQmS2N7fhw?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Compilación</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/products?hl=es-419"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Otros sitios web de Google Developers">
+    <a href="https://developers.google.com/?hl=es-419"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.com/products?hl=es-419"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          Todos los productos
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Vínculos de utilidad">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="https://developers.google.com/terms/site-terms?hl=es-419"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Condiciones
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy?hl=es-419"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacidad
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension11&#34;: true, &#34;dimension5&#34;: &#34;es-419&#34;, &#34;dimension6&#34;: &#34;es-419&#34;, &#34;dimension4&#34;: &#34;Android Management API&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 1}, {&#34;dimensions&#34;: {&#34;dimension11&#34;: true, &#34;dimension5&#34;: &#34;es-419&#34;, &#34;dimension6&#34;: &#34;es-419&#34;, &#34;dimension4&#34;: &#34;Android Management API&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false}, &#34;gaid&#34;: &#34;UA-100339529-3&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}, &#34;purpose&#34;: 0}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;es-419&#34;, &#34;served&#34;: &#34;es-419&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;Android Management API&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+<script nonce="vCEvm3k29yN6QEVX80x03a/8XpZIEk">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/js/app_loader.js', '[1,"es_419",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd","https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vfdb441d2e08dbd9d3e48d8cd72b242388a87bcf7626bf5fb9df50c2bdd4a70fd/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"[clave-omitida]","[clave-omitida]","developers.google.com","[clave-omitida]","[clave-omitida]",null,null,null,["Cloud__enable_cloudx_experiment_ids","Search__enable_ai_search_summaries_for_all","MiscFeatureFlags__enable_variable_operator","Search__enable_page_map","DevPro__enable_credits_banner","CloudShell__cloud_code_overflow_menu","Concierge__enable_pushui","DevPro__enable_vertex_credit_card","Experiments__reqs_query_experiments","Search__enable_dynamic_content_confidential_banner","DevPro__enable_developer_subscriptions","DevPro__enable_free_benefits","MiscFeatureFlags__gdp_dashboard_reskin_enabled","DevPro__enable_devpro_offers","BookNav__enable_tenant_cache_key","Profiles__enable_playlist_community_acl","Profiles__require_profile_eligibility_for_signin","DevPro__enable_code_assist","TpcFeatures__proxy_prod_host","Cloud__enable_free_trial_server_call","DevPro__enable_google_one_card","DevPro__enable_embed_profile_creation","DevPro__enable_enterprise","EngEduTelemetry__enable_engedu_telemetry","Profiles__enable_recognition_badges","MiscFeatureFlags__enable_project_variables","DevPro__enable_nvidia_credits_card","MiscFeatureFlags__enable_view_transitions","Profiles__enable_page_saving","Profiles__enable_targeted_hero","MiscFeatureFlags__developers_footer_dark_image","Profiles__enable_release_notes_notifications","Profiles__enable_user_type","Profiles__enable_public_developer_profiles","Cloud__cache_serialized_dynamic_content","Profiles__enable_join_program_group_endpoint","Search__enable_suggestions_from_borg","Profiles__enable_auto_apply_credits","CloudShell__cloud_shell_button","Concierge__enable_devsite_llm_tools","MiscFeatureFlags__enable_variable_operator_index_yaml","DevPro__enable_firebase_workspaces_card","MiscFeatureFlags__fix_lower_breadcrumbs","SignIn__enable_l1_signup_flow","Profiles__enable_stripe_subscription_management","TpcFeatures__enable_unmirrored_page_left_nav","MiscFeatureFlags__enable_appearance_cookies","Significatio__enable_by_tenant","DevPro__enable_cloud_innovators_plus","Profiles__enable_callout_notifications","DevPro__enable_google_payments_buyflow","DevPro__enable_g1_integration","MiscFeatureFlags__remove_cross_domain_tracking_params","Search__enable_ai_eligibility_checks","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_awarding_url","Cloud__enable_cloud_shell","Concierge__enable_remove_info_panel_tags","Profiles__enable_complete_playlist_endpoint","Profiles__enable_developer_profile_benefits_ui_redesign","Profiles__enable_developer_profile_pages_as_content","MiscFeatureFlags__developers_footer_image","Concierge__enable_key_takeaways","Profiles__enable_completecodelab_endpoint","AIStudioInteractionsToggle__interactions_are_default","Profiles__enable_developer_profiles_callout","Cloud__enable_legacy_calculator_redirect","Analytics__enable_devpro_interaction_logging","Cloud__fast_free_trial","Cloud__enable_cloud_dlp_service","Profiles__enable_dashboard_curated_recommendations","Profiles__enable_purchase_prompts","DevPro__enable_devsite_captcha","DevPro__enable_g1_ineligible_redirect","Profiles__enable_profile_collections","MiscFeatureFlags__enable_framebox_badge_methods","MiscFeatureFlags__enable_explicit_template_dependencies","Profiles__enable_completequiz_endpoint","Analytics__enable_clearcut_logging","Concierge__enable_actions_menu","DevPro__remove_eu_tax_intake_form","Concierge__enable_key_takeaways_new_ui","Cloud__enable_cloud_shell_fte_user_flow"],null,null,"[clave-omitida]","https://developerscontentserving-pa.clients6.google.com","[clave-omitida]","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[13,10],[1,1],[14,11],[5,4],[15,12],[11,8],[4,3],[16,13],[3,2],[6,5],[12,9]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],1,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,null,"https://developerscontentinsights-pa.clients6.google.com","[clave-omitida]","[clave-omitida]","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com"],null,"[clave-omitida]\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

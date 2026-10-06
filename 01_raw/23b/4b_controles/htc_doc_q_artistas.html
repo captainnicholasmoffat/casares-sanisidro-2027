@@ -1,0 +1,392 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="artistas" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>22/05/2014</td>
+      <td>[106.10] CONSEJO ESCOLAR DE SAN ANTONIO DE ARECO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      REGISTRO PROVEEDORES [CONTRATACIóN]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             en trámite.             Por último, el artículo 101 permite la admisibilidad de ofertas de proponentes no inscriptos en determinados casos: <font class="text-warning"><strong>artistas</strong></font>, técnicos o profesionales; ofertas que provengan de firmas extranjeras, sin agente o representante en el país; locación, arrendamiento o c
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25032/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Vinculada con los fundamentos legales referidos a la inscripción en el Registro de Proveedores al momento de adjudicar una contratación. 
+ 
+Respuesta: Que el Reglamento de Contrataciones al referirse al contenido de las propuestas,  especifica en su artículo 18 sobre la necesidad de estar inscripto en el Registro de Proveedores al momento de presentar una propuesta: “Artículo 18- Contenido de la propuesta. En las propuestas se consignarán los domicilios real y legal de los proponentes, siendo requisito indispensable que este último se fije en la Provincia de Buenos Aires, sometiéndose expresamente a la Justicia de la misma, y el número con que figura inscripto en el Registro de Proveedores y Licitadores.”
+Por otro lado, el artículo 100 del citado Reglamento también habilita a que formulen ofertas y resulten adjudicatarias firmas con certificado en trámite emitido por la Contaduría General de la Provincia: Artículo 100-Habilitación para contratar. Podrán formular ofertas y resultar adjudicatarias, las firmas que hayan presentado su solicitud de inscripción en el Registro de Proveedores y Licitadores en los términos del artículo 96 y a quienes la Contaduría General de la Provincia les haya otorgado el certificado de inscripción en trámite.             Por último, el artículo 101 permite la admisibilidad de ofertas de proponentes no inscriptos en determinados casos: artistas, técnicos o profesionales; ofertas que provengan de firmas extranjeras, sin agente o representante en el país; locación, arrendamiento o compra de inmuebles; cuando entre los proveedores inscriptos no se pueda obtener oferta válida; contrataciones directas a que se refiere el artículo 26 de la Ley de Contabilidad, se trate de unidades productivas o de servicios, inscriptas en el Registro Provincial de Microempresas; o cuando lo autorice expresamente el Poder Ejecutivo.            
+En conclusión, de la normativa analizada se desprende que para poder contratar con un Consejo Escolar el proveedor debe encontrarse inscripto en el Registro de Proveedores, tener un certificado de inscripción en trámite emitido por la Contaduría General de la Provincia, o sin estar inscripto presentar alguno de los casos previstos por el artículo 101 del Reglamento de Contrataciones."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25032/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>26/09/2008</td>
+      <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los <font class="text-warning"><strong>artistas</strong></font> en los distintos centros culturales municipales mediante el sistema de "bordereaux", procediendo al pago inmediato de sus servicios, o sea al término de cada función
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/2486/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de &quot;bordereaux&quot;, procediendo al pago inmediato de sus servicios, o sea al término de cada función. 
+
+Respuesta: En las presentes actuaciones se informa que el procedimiento utilizado hasta el presente es ingresar la totalidad de lo recaudado por bordereaux a las cuentas generales municipales, existiendo una tardanza en la efectivización del pago de los artistas de hasta 60 días,  abonándose el 80% de lo recaudado en los distintos espectáculos.
+En principio se debe señalar que la metodología propuesta no está prevista en la normativa municipal, debiendo respetar los tiempos administrativos para realizar los controles y operaciones contables para luego abonar el porcentaje fijado para artistas. Con relación a éstos, cuando sean extranjeros se comparte la excepción contemplada por la Delegación Vicente López que consta en las presentes actuaciones.
+No obstante lo  informado, de adoptarse un sistema informático en el cual se prevean los correspondientes controles que incluyan la emisión informatizada de las entradas y liquidaciones de las retenciones, podría instrumentarse la modalidad de pago sugerida, en cuyo caso deberá someterse a la aprobación de este Organismo. 
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/2486/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>27/03/2007</td>
+      <td>[154.0] H. TRIBUNAL DE CUENTAS</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      GASTOS [PUBLICIDAD]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            los previstos en el artículo 25 de LOM, debiendo primar siempre el interés colectivo o sectorial con proyección general, pero nunca el provecho individual de terceros, como sería el caso del patrocinio de deportistas, <font class="text-warning"><strong>artistas</strong></font>, etc. – que fueran profesionales -, a cambio de publicidad oficial.
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/2211/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Cuál es el criterio del Organismo respecto de los gastos de publicidad. A tal efecto solicita que se aclare si los gastos no considerados como publicidad oficial resultan observables y con qué basamento legal.  
+
+Respuesta: En líneas generales, se consideran gastos de publicidad admitidos todos los que hagan a la información de los actos de gobierno y en la medida de la objetividad de la forma, a diferencia de aquella subjetiva sesgada a favor de una persona o que posea una tendencia a favorecer actos personales.
+Desde el punto de vista doctrinario se puede citar la respuesta brindada a la Delegación Dolores de este Organismo, donde se esclarecen aspectos admitidos de la publicidad. A continuación se transcribe la misma.
+“El artículo 161 inciso 4) del Reglamento de Contabilidad considera como publicidad oficial la incluida en el artículo 67 de esta reglamentación y la que resulte necesaria de acuerdo a la normativa vigente. 
+Este último artículo establece que son obligatorias las publicaciones que surgen del artículo 165 inciso 6) de la Ley Orgánica de las Municipalidades, como así también las ordenanzas de señalado interés público.
+Todo este análisis normativo tiene por finalidad interpretar qué contrataciones pueden hacerse en forma directa, de acuerdo a la excepción prevista por el artículo 156 inc. 4) de la Ley Orgánica de las Municipalidades.
+Otro enfoque que merece un análisis especial es determinar el carácter que le otorgamos a la información que se incluye en el periódico municipal que consta en las presentes actuaciones, a los efectos de definir si el gasto es municipal y, consecuentemente, determinar si es observable por este Organismo. Se entiende que se refiere a una publicación en la cual de manera mayoritaria y predominante se exteriorizan planes, acciones y obras realizadas o a realizar por la Municipalidad en beneficio de la comunidad toda, siendo estos actos propios del quehacer municipal, ejerciendo el derecho constitucional de las autoridades y de los propios contribuyentes de dar publicidad los actos de gobierno.
+En conclusión, para determinar si el gasto en cuestión es municipal, debemos tener en cuenta en particular la existencia de la correspondiente autorización presupuestaria y su encuadre en el nomenclador de gastos de cada municipio; y, como principio general, la razonabilidad del gasto en función de la utilidad pública que de ella se desprenda, con las pautas previstas en la doctrina sentada en el estudio de cuentas de la Municipalidad de Lomas de Zamora - Ejercicio 1995.”
+Lo señalado en los párrafos anteriores esta dirigido, especialmente, a lo que se denomina “publicidad oficial”. 
+Evidentemente, como se expresa en la consulta, los municipios efectúan otros gastos en concepto de publicidad, como ser los auspicios en medios periodísticos, publicidad estática en lugares de acceso público, como asimismo toda aquella de carácter institucional que no incluyen anuncios de interés para la comunidad, es decir, no contempladas en las disposiciones que surgen como obligatorias de la ley y del reglamento. Sobre esta clase de erogaciones cabe señalar que están dirigidas a promocionar ciudades, parajes, instituciones o lugares, razón por la cual deberá tenerse en cuenta que respondan a conceptos como los previstos en el artículo 25 de LOM, debiendo primar siempre el interés colectivo o sectorial con proyección general, pero nunca el provecho individual de terceros, como sería el caso del patrocinio de deportistas, artistas, etc. – que fueran profesionales -, a cambio de publicidad oficial."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/2211/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>11/04/2005</td>
+      <td>[061.0] Municipalidad de LA PLATA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3�
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1062/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3° de la Ley Orgánica de las Municipalidades, dado que en este tipo de contrataciones es donde deben tenerse en cuenta de manera especial las calidades técnicas, artísticas y científicas del prestador en razón de obtener los mejores resultados.  
+
+Respuesta: El artículo en cuestión prevé la excepción de la aplicación del régimen establecido por el artículo 151 de la Ley Orgánica de las Municipalidades teniendo en cuenta los conocimientos del prestador en la ejecución de ciertas cosas y/o sus obras.    
+La extensa lista de eventos organizados por los integrantes de la consultora que acredita más de 30 años de experiencia en la organización de emprendimientos de las características como el que es intención de la Comuna encarar, se entiende que son antecedentes suficientes para encuadrar a la citada organización dentro de las exigencias que prevé la aplicación de la excepción prevista por el artículo 156 inciso 3° de la Ley Orgánica Municipal.
+              "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1062/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>16/01/1996</td>
+      <td>[008.0] Municipalidad de BALCARCE</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATO [SIN GARANTIA]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA: Posibilidad de contratar artistas, con pago previo, sin 
+garantías.-
+
+RESPUESTA: Es gestión, pero el perjuicio por falta de cumplimiento 
+recaería en los funcionarios que lo autorizan.-
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/237/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: Posibilidad de contratar artistas, con pago previo, sin 
+garantías.-
+
+RESPUESTA: Es gestión, pero el perjuicio por falta de cumplimiento 
+recaería en los funcionarios que lo autorizan.-"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/237/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>5</strong></div>
+ 
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

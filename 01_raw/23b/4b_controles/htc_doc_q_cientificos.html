@@ -1,0 +1,372 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="cientificos" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>16/11/2021</td>
+      <td>[059.0] Municipalidad de JUNIN</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      TASA POR ALUMBRADO, LIMPIEZA Y CONSERVACIóN DE LA VíA PúBLICA Y SERVICIOS VARIOS [PROCEDENCIA O EXIMICIóN]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA DIGITAL 3241-2021: Por las presentes actuaciones, tramita una consulta realizada por el Contador de la Municipalidad de JUNIN, referida a un pedido de eximición y condonación de tasas y derechos municipales sobre ciertos inmuebles de propiedad de la Universidad Nacional del Noroeste de 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/32133/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA DIGITAL 3241-2021: Por las presentes actuaciones, tramita una consulta realizada por el Contador de la Municipalidad de JUNIN, referida a un pedido de eximición y condonación de tasas y derechos municipales sobre ciertos inmuebles de propiedad de la Universidad Nacional del Noroeste de la Provincia de Buenos Aires. Particularmente se plantea si el pedido iniciado por la Universidad mediante Expediente Nº 4059-940/2008 de registro municipal, habilita la posibilidad de eximir y condonar tasas y derechos municipales respecto de una serie de inmuebles cuya titularidad detenta y se detallan en el mismo. Específicamente, el Contador Municipal expone que la Universidad motiva su pretensión de acuerdo a lo establecido por el Código Fiscal sancionado el 11/01/2019 mediante Ordenanza Nº 7297 del Municipio, que en su artículo 143 establece que “… las Universidades Nacionales están exentas del pago de los siguientes tributos respecto de todos aquellos inmuebles que resulten de su propiedad y se encuentren destinados al asiento y funcionamiento de las mismas, sus áreas científicas, de investigación y/o trabajo de campo: - Tasa por Limpieza y Conservación de la Vía Pública; - Conservación, Reparación y Mejorado de la Red Vial Municipal; y - Servicios Sanitarios. “ Asimismo, por el uso que las Universidades Nacionales y/o Provinciales hagan del espacio aéreo, suelo, subsuelo, con cables, cañerías, tuberías u otras instalaciones, tanques, depósitos y/o construcciones especiales que se utilicen como parte de programas de su funcionamiento, investigación, desarrollos científicos y/o trabajos de campo, están exentas de pago de: - Derecho de Ocupación o Uso del Espacio Público.” Por otro lado, el mismo funcionario indica que el Departamento Ejecutivo decidió preliminarmente no dar curso al pedido de eximición y condonación de tasas respecto de las partidas Nº 13.495, 5.178, 58.683, 65.441 a 65.470, luego de haber verificado que los inmuebles referenciados estarían destinados a viviendas para las autoridades de la Universidad y a lotes baldíos para un futuro plan de viviendas para el personal de la Institución. El Contador Municipal junto con el Asesor Legal de la Comuna interpretan que no se puede acreditar que los inmuebles en cuestión estén incluidos dentro del ámbito previsto por el artículo 143 del Código Fiscal Municipal vigente, ya que la normativa claramente expresa que la exención de pago de derecho de ocupación o uso de espacio público será para aquellos inmuebles “que se encuentren destinados al asiento y funcionamiento de las mismas, sus áreas científicas, de investigación y/o de trabajo”, no contemplándose para el caso de asiento de viviendas. En el mismo sentido, la Oficial Letrada de la Delegación Zona XVI conjuntamente con el Auditor y el Analista de la misma Delegación de este Honorable Tribunal, exponen que comparten el criterio detallado precedentemente expuesto por la Comuna.
+
+RESPUESTA: de acuerdo a la información que obra en las presentes actuaciones, se deduce que la Universidad Nacional del Noroeste de la Provincia de Buenos Aires solicita se le condone una deuda tributaria por un lado y se le exima de pagar para el presente y futuro las tasas municipales de los inmuebles que son de su dominio. Con respecto a la eximición, cabe manifestar que de todo lo hasta aquí planteado, tal como expresa la Delegación de este Organismo, la Ordenanza Fiscal Nº 7297/19 particularmente dispone que para que se pueda iniciar la misma, el inmueble debe ser destinado al asiento y funcionamiento de la propia Universidad, incluyendo sus áreas científicas, de investigación y/o trabajo de campo, pero no contempla el concepto de vivienda como el caso traído a consulta. En cuanto a la exención propiamente dicha, la doctrina ha manifestado que se deberá ceñir a lo estipulado por el artículo 40 de la Ley Orgánica de las Municipalidades; la misma se refiere a las exenciones parciales o totales de tributos municipales, las que serán de carácter general. Se ha interpretado que las mismas pueden otorgarse a todos aquellos que se encuentren en un sector o una franja de contribuyentes en iguales condiciones ante la aplicación del tributo, por lo cual no es procedente la exención ante un pedido expreso de un solo contribuyente. Ante este caso en particular, se deberá corroborar si dentro de las disposiciones de exención de la Ordenanza Fiscal e Impositiva de la Comuna, existen taxativamente disposiciones que eximan de las tasas a la Universidad; de no contemplarse, a efectos de darle solución al caso planteado deberá impulsarse la exención, la que deberá ser aprobada por el Departamento Deliberativo. (Doctrina Municipalidad de Maipú, Expediente Nº 5300-1641/08, Fecha 22/09/2008) Por otro lado, debemos agregar el concepto de condonación y la postura de este Organismo al respecto. La misma se define como el perdón o remisión de una deuda tributaria que opera sobre el pasado, cuando las tasas ya han sido devengadas. Asimismo y en base a las facultades concedidas a los Concejos Deliberantes por el artículo 56 de la Ley Orgánica de las Municipalidades, este Tribunal ha admitido la condonación de deudas, ante pedidos expresos de contribuyentes, siempre que los mismos fueran impulsados por el Departamento Ejecutivo y debidamente fundados, previa valoración de los motivos en que se sustentan; considerando beneficiarios también a las entidades sin fines de lucro o de bien público. Dicha doctrina se encuentra receptada en los expedientes Municipalidad de Balcarce, Expediente Nº 4008-03555-2018-0-1, de fecha 19/03/2019; Municipalidad de Balcarce, Expediente Nº 4008-00378-2017-0-1, de fecha 19/09/2019, Municipalidad de Berisso, Expediente Nº 4012-5169-2016-0-1, de fecha 03/03/2017 entre otros. En el mismo orden, la Ley nº 14.048 promulgada en 2009, otorga la prerrogativa a los Municipios de condonar deudas hasta el total del capital y accesorios de tasas correspondientes a determinados contribuyentes, cuando razones sociales, laborales o económicas así lo justifiquen y siempre que se contare para ello con la aprobación a través de Ordenanzas de los respectivos Concejos Deliberantes. Ello, sin perjuicio que sea el Intendente Municipal el promotor de la iniciativa, por cuanto se trata de una modificación en el cálculo de recursos presupuestado para la comuna y del cual resulta administrador. Por su parte, la Asesoría General de Gobierno tiene dicho “…considerando que todo régimen de condonación de deudas municipales importa una modificación en el cálculo de los recursos presupuestados para la Comuna, en virtud de las atribuciones conferidas por los artículos 34, 35, 36, 109 y 110 de la L.O.M., ello sólo puede ser dispuesto por el Departamento Deliberativo a propuesta del Departamento Ejecutivo” (Ver Doctrina de Consultas Municipales de Asesoría General de Gobierno, Secretaria Letrada V, de fecha 29 de Diciembre de 2006, pág. 104 y ss). Finalmente y de acuerdo a lo detallado en los párrafos precedentes, para que prospere la solicitud de la Universidad Nacional de Noroeste de la Provincia de Buenos Aires respecto de eximir y condonar las tasas y derechos municipales de las partidas Nº 13.495, 5.178, 58.683 y 65.441 al 65.470 destinadas a viviendas para las autoridades y empleados de la Institución educativa, esta Secretaría entiende que es potestad del Honorable Concejo Deliberante evaluar con criterio propio y en ejercicio de las facultades que le son privativas, el mérito, oportunidad o conveniencia de disponer o no la condonación de las mismas; asimismo la eximición también debe ser aprobada por el Concejo Deliberante mediente su respectiva Ordenanza Fiscal e Impositiva siempre y cuando la solicitud sea impulsada por parte del Departamento Ejecutivo Municipal."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/32133/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>15/05/2018</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA: El Intendente de la Municipalidad de DOLORES solicita se autorice la posibilidad de utilizar recursos remanentes del Fondo Educativo -sin afectar las obras ya previstas para los períodos 2018 y 2019- para la financiación del proyecto de creación del “Museo de la Aventura” en la ciu
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29594/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: El Intendente de la Municipalidad de DOLORES solicita se autorice la posibilidad de utilizar recursos remanentes del Fondo Educativo -sin afectar las obras ya previstas para los períodos 2018 y 2019- para la financiación del proyecto de creación del “Museo de la Aventura” en la ciudad de Dolores.
+
+En su nota de presentación de fojas 1, describe que se trata del Museo de la Exploración, que contendrá la historia de los descubrimientos geográficos rescatando el espíritu de los pioneros y los emprendedores que conquistaron los confines de la Tierra, conteniendo también la Biblioteca Universal de las Exploraciones, características que aseguran una enorme trascendencia cultural. Agrega que este emprendimiento cuenta con el apoyo decidido del Estado nacional y provincial, tal como surge del informe de evolución que acompaña a fojas 2/4 de las presentes actuaciones.
+
+Por otra parte, a fojas 5 obra nota del Presidente del Consejo Escolar de Dolores dirigida al señor Intendente, donde expone que la “Expedición Atlantis” -emprendimiento argentino de exploración con gran reconocimiento internacional que será su emblemático elemento fundacional-, legitima su emplazamiento en Dolores. Remarca también el evidente carácter educativo del proyecto, tal como lo han expresado, entre otros, el Congreso de la Nación, el Ministerio de Educación nacional y la Dirección General de Cultura y Educación de la Provincia de Buenos Aires.
+
+RESPUESTA: Habiendo esta Secretaría dado intervención a la Dirección General de Cultura y Educación, en razón del tema que nos ocupa (fojas 7), la misma se expide en dictamen agregado a fojas 8, concluyendo no tener objeciones que formular respecto a la creación del Museo dado el carácter educativo del mismo.
+
+Presentado el tema, en primer término debemos dejar aclarado que este Organismo no tiene facultades para autorizar cuestiones como las aquí tratadas, conforme lo solicita el consultante, debiendo entenderse que las mismas corresponden a actos de gestión que deberán evaluar los funcionarios municipales respecto al mérito, la oportunidad y la conveniencia de llevarlas a cabo.
+
+Al margen de ello, consideramos que el proyecto del Museo de la Aventura posee intrínsecamente caracteres culturales, científicos y turísticos innegables. Más allá de estos atributos, es necesario tener presente también, que la Expedición Atlantis fue declarada “De Interés Educacional”, tanto por el Ministerio de Educación de la Nación como por la Dirección General de Cultura y Educación de la Provincia, destacando su carácter educativo. Tales declaraciones le aportan el carácter formativo y pedagógico a dicha Expedición, intentado fomentar el interés por los conocimientos y las experiencias por parte de alumnos de los distintos niveles y modalidades educativas formales y no formales del distrito y de la zona.
+
+Ahora bien, respecto a la factibilidad de la financiación del proyecto con el Fondo Educativo, resulta imperioso tener en cuenta la Ley N° 14.982 de Presupuesto de Gastos y Recursos de la Administración Provincial 2018.
+
+Dicha norma en su artículo 46 prescribe que los recursos que se distribuyan a los Municipios referidos al Fondo Educativo, serán destinados a cubrir gastos ligados estrictamente a la finalidad y función educación, formal y no formal. Asimismo introduce prioridades en el uso de los recursos, al indicar que: “Los municipios que cuenten con servicios de educación formal municipal, destinarán los recursos prioritariamente a cubrir los gastos de funcionamiento de los mismos. Los municipios que integran el área territorial del conurbano bonaerense, conforme lo establecido en el artículo 1 de la Ley ? 13.473, deberán destinar como mínimo el cincuenta por ciento (50%) de estos recursos a la infraestructura educativa. Los restantes municipios deberán afectar como mínimo el cuarenta por ciento (40%) de dichos recursos a idéntico destino. En ambos casos, la afectación dispuesta en el presente párrafo será de aplicación luego de contemplar los gastos de funcionamiento mencionados en el párrafo anterior.”
+
+En este estado, consideramos que una vez cumplida la aplicación en servicios de educación formal de gestión municipal y en infraestructura educativa, en relación al resto de los recursos aplica la doctrina de este Organismo vigente al momento. Esto es, en el análisis de los gastos efectuados por los Municipios con los recursos provenientes del Fondo de Financiamiento Educativo creado por el artículo 7° de la Ley 26.075, se considerarán procedentes los vinculados tanto con los objetivos del artículo 2° de dicha norma, como con las propuestas, acciones y/o programas afines a la “Educación no Formal” en los términos del artículo 112 de la Ley de Educación Nacional N° 26.206.
+
+En conclusión, visto el carácter educativo del proyecto, el dictamen de la Dirección General de Cultura y Educación y las argumentaciones expresadas –que dan cuenta de las prioridades dispuestas legalmente respecto al uso de los recursos-, esta Secretaría entiende factible que la construcción del “Museo de la Aventura” de Dolores pueda ser financiada con los recursos remanentes del Fondo Educativo."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29594/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>26/09/2008</td>
+      <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de "bordereaux", procediendo al pago inmediato de sus servicios, o sea al término de cada función
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/2486/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de &quot;bordereaux&quot;, procediendo al pago inmediato de sus servicios, o sea al término de cada función. 
+
+Respuesta: En las presentes actuaciones se informa que el procedimiento utilizado hasta el presente es ingresar la totalidad de lo recaudado por bordereaux a las cuentas generales municipales, existiendo una tardanza en la efectivización del pago de los artistas de hasta 60 días,  abonándose el 80% de lo recaudado en los distintos espectáculos.
+En principio se debe señalar que la metodología propuesta no está prevista en la normativa municipal, debiendo respetar los tiempos administrativos para realizar los controles y operaciones contables para luego abonar el porcentaje fijado para artistas. Con relación a éstos, cuando sean extranjeros se comparte la excepción contemplada por la Delegación Vicente López que consta en las presentes actuaciones.
+No obstante lo  informado, de adoptarse un sistema informático en el cual se prevean los correspondientes controles que incluyan la emisión informatizada de las entradas y liquidaciones de las retenciones, podría instrumentarse la modalidad de pago sugerida, en cuyo caso deberá someterse a la aprobación de este Organismo. 
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/2486/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>11/04/2005</td>
+      <td>[061.0] Municipalidad de LA PLATA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3�
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1062/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3° de la Ley Orgánica de las Municipalidades, dado que en este tipo de contrataciones es donde deben tenerse en cuenta de manera especial las calidades técnicas, artísticas y científicas del prestador en razón de obtener los mejores resultados.  
+
+Respuesta: El artículo en cuestión prevé la excepción de la aplicación del régimen establecido por el artículo 151 de la Ley Orgánica de las Municipalidades teniendo en cuenta los conocimientos del prestador en la ejecución de ciertas cosas y/o sus obras.    
+La extensa lista de eventos organizados por los integrantes de la consultora que acredita más de 30 años de experiencia en la organización de emprendimientos de las características como el que es intención de la Comuna encarar, se entiende que son antecedentes suficientes para encuadrar a la citada organización dentro de las exigencias que prevé la aplicación de la excepción prevista por el artículo 156 inciso 3° de la Ley Orgánica Municipal.
+              "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1062/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>4</strong></div>
+ 
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

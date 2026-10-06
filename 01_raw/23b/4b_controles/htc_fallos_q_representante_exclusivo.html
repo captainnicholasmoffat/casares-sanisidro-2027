@@ -1,0 +1,312 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Fallo del H.T.C.</h4></div>
+     Como natural consecuencia del desarrollo de las actividades involucradas en la descripción efectuada en el apartado Misión, y a la vez como culminación, específica para cada sujeto de control, de aquellos procesos referidos en Funcionamiento,
+     el H. Tribunal de Cuentas emite sus Fallos y Resoluciones.
+     Así, anualmente, cada uno de ellos se constituye en el producto final de un complejo entramado de tareas que, por imperio de la normativa vigente, se concretan con intervención de diversas áreas de nuestro Organismo.
+     </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+      <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/fallohtc/0/buscador/filter' method='post'>
+           
+
+
+          <div>
+            <label for="fallohtc_filter_type_palabra">Palabras</label>
+	    <input type="text" id="fallohtc_filter_type_palabra" name="fallohtc_filter_type[palabra]"    class="input-xlarge" value="representante exclusivo" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+          </span>
+          </div>
+
+
+        <div id='filtroFormulario' style='display:none'> 
+
+                
+          <div class="control-group">
+              <label for="fallohtc_filter_type_ente">Entes</label>
+              <input type="text" id="fallohtc_filter_type_ente" name="fallohtc_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+          </div>
+          <div class="control-group">
+            <span><label for="fallohtc_filter_type_ejercicioInicio">Año del Ejercicio</label></span>
+            <span>Desde<input type="number" id="fallohtc_filter_type_ejercicioInicio" name="fallohtc_filter_type[ejercicioInicio]"    class="input-mini" /></span>
+            <span>Hasta</span>
+            <span><input type="number" id="fallohtc_filter_type_ejercicioFin" name="fallohtc_filter_type[ejercicioFin]"    class="input-mini" /></span>
+          </div>
+          <div class="control-group">
+            <span><label for="fallohtc_filter_type_expediente">Expediente</label></span>
+            <span><input type="text" id="fallohtc_filter_type_expediente" name="fallohtc_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+            </span>
+          </div>
+	  
+	  <fieldset>
+	    <div class="control-group">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_tipo_fallo')" class="cursor"><a href="#">Tipos de Fallos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_tipo_fallo" style="display:none">
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_1" name="fallohtc_filter_type[tipoFallo][1]" value="1" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_1">Fallo H.T.C.</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_5" name="fallohtc_filter_type[tipoFallo][5]" value="5" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_5">Recurso de Revisión</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_8" name="fallohtc_filter_type[tipoFallo][8]" value="8" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_8">Sumario</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_6" name="fallohtc_filter_type[tipoFallo][6]" value="6" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_6">Aclaratoria</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_2" name="fallohtc_filter_type[tipoFallo][2]" value="2" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_2">Procedencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_3" name="fallohtc_filter_type[tipoFallo][3]" value="3" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_3">Improcedencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_4" name="fallohtc_filter_type[tipoFallo][4]" value="4" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_4">Proc./Improc.</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_11" name="fallohtc_filter_type[tipoFallo][11]" value="11" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_11">Declaración de Competencia</label>
+    </div>
+       <div class="span">
+      <input type="checkbox" id="fallohtc_filter_type_tipoFallo_12" name="fallohtc_filter_type[tipoFallo][12]" value="12" />&nbsp;&nbsp;<label for="fallohtc_filter_type_tipoFallo_12">Revisión Art.74 LPA</label>
+    </div>
+     </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_tipo_fallo = false;
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_1').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_5').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_8').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_6').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_2').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_3').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_4').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_11').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+      if (!cambie_tipo_fallo) {
+      if($('#fallohtc_filter_type_tipoFallo_12').attr('checked'))
+      {
+        toggleDiv('form_filter_tipo_fallo');
+        cambie_tipo_fallo = true;
+      }
+    }
+  </script>	    </div>
+	  </fieldset>
+            
+        </div>
+            
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/fallohtc/0/buscador">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>           
+      </form>
+      <div>
+	<i>Los resultados mostrarán:
+	 <ul>
+	   <li>anteriores a 01/06/03: parte resolutiva</li> 
+	   <li>posteriores a 01/06/03: fallo completo</li> 
+	 </ul>
+	 </i>
+	</div>		
+   </div>
+  </div>
+<br>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Acuerdo">Fecha Acuerdo</a>
+</th>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.ejercicio&amp;direction=asc&amp;page=1" title="Ejercicio">Ejercicio</a>
+</th>
+            <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=a.expediente&amp;direction=asc&amp;page=1" title="Expediente">Expediente</a>
+</th>
+	    <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=tf.nombre&amp;direction=asc&amp;page=1" title="Tipo Fallo">Tipo Fallo</a>
+</th>
+	    <th><a class="sortable" href="/sistemas/summun/busqueda/fallohtc/0/buscador/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+            <th>Resuelve</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        </tbody>
+</table>
+    <div class="pull-right">Total de Registros: <strong>0</strong></div>
+    
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

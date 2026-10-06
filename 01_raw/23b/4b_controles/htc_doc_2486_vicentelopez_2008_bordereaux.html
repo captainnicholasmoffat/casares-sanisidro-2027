@@ -1,0 +1,177 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Doctrina Consulta "2486 D.C.  CONTRATACION [ARTISTAS O CIENTIFICOS Y..]"</h4>
+      <div class="pull-right">
+     <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/doctrinaconsulta/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>    </div>
+      </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	 <table class="table table-bordered table-striped table-hover">
+  <tr>
+  <th>N° U.I.</th>
+  <td>2486</td>
+</tr>
+<tr>
+  <th>Fecha Salida</th>
+  <td>26/09/2008&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades B</li>
+        </ul>
+  </td>
+</tr><tr>
+  <th>Expediente</th>
+  <td>5300-1647/08&nbsp;</td>
+</tr>
+<tr>
+  <th>Ente</th>
+  <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+</tr>
+<tr>
+  <th>Ámbito</th>
+  <td>Provincial</td>
+</tr> 
+<tr>
+  <th>Resúmen</th>
+  <td>Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de "bordereaux", procediendo al pago inmediato de sus servicios, o sea al término de cada función. <br />
+<br />
+Respuesta: En las presentes actuaciones se informa que el procedimiento utilizado hasta el presente es ingresar la totalidad de lo recaudado por bordereaux a las cuentas generales municipales, existiendo una tardanza en la efectivización del pago de los artistas de hasta 60 días,  abonándose el 80% de lo recaudado en los distintos espectáculos.<br />
+En principio se debe señalar que la metodología propuesta no está prevista en la normativa municipal, debiendo respetar los tiempos administrativos para realizar los controles y operaciones contables para luego abonar el porcentaje fijado para artistas. Con relación a éstos, cuando sean extranjeros se comparte la excepción contemplada por la Delegación Vicente López que consta en las presentes actuaciones.<br />
+No obstante lo  informado, de adoptarse un sistema informático en el cual se prevean los correspondientes controles que incluyan la emisión informatizada de las entradas y liquidaciones de las retenciones, podría instrumentarse la modalidad de pago sugerida, en cuyo caso deberá someterse a la aprobación de este Organismo. <br />
+&nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]<br>
+     &nbsp;
+  </td>
+</tr> </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

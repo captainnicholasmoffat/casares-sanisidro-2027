@@ -1,0 +1,495 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="espectaculo" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>06/12/2016</td>
+      <td>[079.0] Municipalidad de MORON</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      HORA POLAD [PAGO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Acerca del valor hora a considerar para el pago por los servicios POLAD contratados por la comuna a partir del 1º de abril de 2016; como así también se informe el tratamiento a dispensar a los servicios abonados a un monto diferente respecto del que se interprete como correcto.
+
+La Re
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/27705/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Acerca del valor hora a considerar para el pago por los servicios POLAD contratados por la comuna a partir del 1º de abril de 2016; como así también se informe el tratamiento a dispensar a los servicios abonados a un monto diferente respecto del que se interprete como correcto.
+
+La Resolución Nº 162/16 del Ministerio de Seguridad Provincial (agregada a fojas 6), determina a partir del 01/04/16 los nuevos valores correspondientes a las horas de policía adicional como sigue: $ 88 para la categoría 1 (espectáculos o reuniones públicas, hospitales y demás organismos centralizados o descentralizados de la Administración Pública Provincial), $ 120 para la categoría 2 (Bancos, Instituciones de Crédito o locales en que se guarden valores) y $ 145 para la categoría 3 (Acompañamiento de Pagadores, recaudadores y todo traslado de valores y seguridad de personas o bienes no comprendidos en los incisos anteriores). Advierte el presentante que la norma no encasilla los servicios prestados a Municipios, y de entenderse que se encuentran en la categoría 1, el nuevo valor no rige hasta que culmine el relevamiento integral de la prestación del servicio de policía adicional efectuado por el Ministerio de acuerdo a su artículo 3º.
+
+Agrega que a través de la Resolución Nº 807/16 del 23 de junio 2016  se establece en $ 77 el valor hora-hombre para los municipios y demás organismos centralizados o descentralizados de la administración pública municipal a partir del 1º de julio de 2016.
+
+En cumplimiento del requerimiento previo efectuado por esta Secretaria, en relación a la definición del valor hora POLAD correspondiente a los municipios en el período consultado, la Dirección General de Administración del Ministerio de Seguridad produce informe de fojas 16 y rectificativo de fojas 24/25. Indica que “…los Servicios a realizarse en el Municipio en cuestión, no tienen un valor determinado, toda vez que de ello depende la categoría a corresponder según el Servicio a realizar”. Señala, asimismo, que hasta el 30 de junio inclusive deberían haberse abonado sin ninguna modificación los Servicios según la categoría que corresponde a cada caso; esto es Categoría 1ra $ 40, Categoría 2da $ 45 y Categoría 3ra $ 50; habiéndose incrementado su valor a partir del 1º de julio del corriente a $ 77, $ 120 y $ 145 respectivamente.
+
+Respuesta: Mediante Resolución del Ministro de Seguridad Nº 807/16 se fijó desde el 01/07/16 en $ 77 el monto correspondiente a servicios de policía adicional que se presten en municipios y demás organismos centralizados o descentralizados de la Administración Pública Municipal, determinándose que los que se presten a comunas en locales donde se guarden valores y aquellos de acompañamiento de pagadores, recaudadores y todo traslado de valores que deba realizar el municipio, quedan comprendidos en las categorías 2 y 3 previstas en el artículo 2º de la Resolución Nº 162/16. Por su parte la aludida Resolución determina que los servicios de POLAD correspondientes a las categorías 2 y 3 se fijan en las sumas de $ 120 y $ 145 respectivamente.
+
+Vale decir que a partir del 1º de julio de 2016 los servicios de policía adicional contratados por los municipios debían abonarse a $ 77, $ 120 o $ 145 según el caso (artículos 1º, 2º y 3º de la Resolución Nº 807/16).
+
+Ahora bien, en atención a lo informado por la Dirección General de Administración del Ministerio de Seguridad, para los períodos anteriores al 1º de julio de 2016 corresponde estarse a los valores que hubiesen estado vigentes, independientemente de los aumentos dispuestos por la Resolución Nº 162 de marzo 2016.
+
+Consecuentemente, se entiende que de haberse pagado sumas en demasía correspondería recuperar las eventuales diferencias iniciando la pertinente presentación administrativa bajo apercibimiento de iniciar acciones judiciales."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/27705/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>22/04/2016</td>
+      <td>[004.0] Municipalidad de AVELLANEDA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      VENTA ON LINE [TEATRO MUNICIPAL]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            
+Consulta: Relativa a la operatoria que proyecta contratar la Comuna con la empresa Ticketera Argentina S.A., para la prestación del servicio de venta de entradas del Teatro Municipal Roma. Se señala que a partir del convenio que se formalizará para la venta de las entradas, vía telefónica o m
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/26919/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+Consulta: Relativa a la operatoria que proyecta contratar la Comuna con la empresa Ticketera Argentina S.A., para la prestación del servicio de venta de entradas del Teatro Municipal Roma. Se señala que a partir del convenio que se formalizará para la venta de las entradas, vía telefónica o mediante plataforma internet que posee la misma -Plateanet S.A.-, la Comuna deberá habilitar nuevos códigos de comercio con las entidades emisoras de tarjetas de crédito, para incorporar el servicio no presencial de las operaciones.  Agregan que la liquidación proporcionada por la empresa -mediante consulta en la página oficial de la misma- resulta ser el único respaldo de la operación, atento la inexistencia de un cupón firmado por parte de los espectadores adquirentes de las entradas.
+
+            Concretamente se consulta respecto de la suficiencia de la documentación de respaldo que se obtendrá en la operatoria descripta, como sustento de la misma (fojas 1 y 2).
+
+Respuesta: Se acompaña el proyecto del convenio a formalizar con la empresa Ticketera Argentina S.A. (sitio web es www.plateanet.com) -que luce agregado a fojas 4/13-, por el cual el Municipio cede a favor de ella el derecho exclusivo de venta de la totalidad de las entradas de espectáculos, a través del uso del Sistema Informático de la firma -la venta puede realizarse por boletería, telefónicamente o vía web-.   
+
+            Respecto del punto especialmente consultado, si bien adelanto que comparto las argumentaciones vertidas por el Delegado Zonal en dictamen de fojas 15, respecto de los avances tecnológicos y los cambios culturales, los mismos no deben encontrarse reñidos con las obligaciones que emergen respecto de los funcionarios que tienen a su cargo el manejo del dinero público, que es precisamente la obligación de rendir cuentas de la administración de esos fondos. De tal manera, no surge del texto del proyecto del convenio la forma de liquidación y rendición de las ventas efectuadas por parte de la empresa, información indispensable para la Comuna para efectuar el cotejo de las transacciones consumadas por la firma contratada y los ingresos efectivamente percibidos. Una cláusula que contemple la forma de rendir el objeto del contrato, no puede surgir implícita mediante un acuerdo que no se consigne expresamente en el convenio a firmarse.   
+
+La cláusula tercera sólo se refiere a que los ingresos por la totalidad de las ventas a través de tarjetas de crédito se acreditarán directamente en la cuenta bancaria que el Municipio indique, para lo cual deberá éste gestionar sus propios códigos de comercio con las entidades emisoras de tarjetas.
+
+           Sin acompañarse certificaciones del sitio, reportes ni modelos de rendición, la información aportada es insuficiente para poder expedirnos.
+
+            No obstante ello, se interpreta que en la selección de la firma proveedora, la Comuna habrá evaluado -entre otras condiciones y parámetros- las medidas de seguridad del portal (como por ejemplo, certificaciones de terceros).
+
+            Se advierte que la información on line de las ventas realizadas por la empresa,  a la que se presume se accederá con claves de administrador, será suficiente en la medida de contener todos los datos identificatorios de las operaciones y de resultar seguro y confiable el sitio web, descartándose que necesariamente debe ser cruzada con los talones de las entradas (facturas) que quedan en el Teatro y con las acreditaciones bancarias (momento de la percepción), todo ello a efectos de efectuar la debida conciliación de los ingresos.
+
+Téngase presente además que la documentación deberá servir de base para confeccionar oportunamente la liquidación a las compañías y los aranceles a las asociaciones que correspondan.
+
+            Independientemente de todo lo señalado, resulta apropiado indicar que la cesión de la venta exclusiva a la empresa –operación que se presume fue evaluada como conveniente a los intereses municipales-, excluye la posibilidad de que el espectador pueda abonar la entrada con dinero en efectivo, impidiendo a quien no posee tarjeta de crédito la posibilidad de acceder a su adquisición y la consecuente contraprestación de disfrutar de la obra, llegando al absurdo de que aquellos contribuyentes que con el pago de sus impuestos y tasas permitieron la construcción o adquisición de un Teatro Municipal, podrían ver frustrada su expectativa de concurrir a presenciar una obra por el solo hecho de no poseer una tarjeta de crédito que le permita adquirir una entrada por call center o por internet. La falta de presencia de una disposición que contemple lo señalado, resultaría reñido con disposiciones de raigambre constitucional como las establecidas en los arts. 11 y 36 de la Constitución de la Provincia de Buenos Aires.
+
+            Así también, debiera considerarse la posibilidad de modificar la cláusula 1 del Anexo al proyecto de convenio referida al cargo por “service charge” (honorario a favor de la empresa que abona el comprador por sobre el valor de venta de la misma), fijado en un 13% y 10% según sea venta por call center o vía internet respectivamente, que determina que los porcentajes pueden ser modificados en cualquier momento por la empresa y al sólo arbitrio de la misma. El hipotético incremento desmedido de los costos podría atentar contra el acceso a los espectáculos.
+
+            Corresponde dejar aclarado que de implementarse el convenio -el que deberá estar convalidado por el H. Concejo Deliberante-, las futuras auditorías evaluarán las salidas del sistema presentado.
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/26919/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>13/02/2014</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Sobre la posibilidad de enmarcar los gastos que genera la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo, en función de los argumentos volcados en las presentes actuaciones. 
+ 
+Respuesta: En principio, cabe señalar que en el marco del Expte. Nº 5300-711-2
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/24695/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre la posibilidad de enmarcar los gastos que genera la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo, en función de los argumentos volcados en las presentes actuaciones. 
+ 
+Respuesta: En principio, cabe señalar que en el marco del Expte. Nº 5300-711-2013-0-1 una consulta sobre el aspecto principal de la presente originó el dictamen, en el cual se concluyó que podían financiarse con los citados fondos aquellas actividades del citado evento que sean de libre acceso al público en general.
+En esta oportunidad, además de argumentarse la significación y trascendencia del evento para el Partido, lo cual ya se había hecho en la anterior presentación, se aclara que el valor de la entrada en el salón de espectáculos es muy económica ($ 35) a los efectos de garantizar la accesibilidad de la mayor cantidad de público, ello solo para cinco espectáculos, siendo los demás con entrada gratuita. Sobre este punto, se informa que con el producido de dichos ingresos solamente se estima que se va a cubrir el 20% del total de las erogaciones que demanda la realización de todo el festival, razón por la cual se infiere que se solicita que se reconsidere lo anteriormente dictaminado.    
+Atento, entonces, a las argumentaciones ofrecidas en ambas presentaciones, tanto acerca de la trascendencia y significado del evento a nivel local como la de carácter económico, y considerando el evento en forma global, se entiende factible que se financien con el Fondo Educativo los gastos no cubiertos con el producido de las entradas, sin tener en cuenta la pauta señalada en el dictamen anterior.    "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/24695/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>13/12/2013</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      FONDO EDUCATIVO [DESTINO]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si resulta viable afrontar los gastos que generará la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo Municipal, ya sea en forma parcial o totalmente.   
+ 
+Respuesta: De acuerdo a lo manifestado en la nota de elevación, las erogaciones que se efectúen est
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/24514/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si resulta viable afrontar los gastos que generará la Fiesta Nacional de la Guitarra con fondos provenientes del Fondo Educativo Municipal, ya sea en forma parcial o totalmente.   
+ 
+Respuesta: De acuerdo a lo manifestado en la nota de elevación, las erogaciones que se efectúen estarán destinadas a solventar espectáculos artísticos de diversa índole, tales como una feria artesanal con más de 200 puestos, jineteadas, desfile de caballos y agrupaciones intermedias de la ciudad, charlas y  muestras relacionadas con la actividad desarrollada por Abel Fleury -eximio guitarrista de trayectoria mundial oriundo del partido- y otras actividades.
+La doctrina de este Organismo ha dictaminado con relación a los recursos del Fondo Educativo de afectación específica que perciba la Provincia para ser distribuidos entre los municipios, que el destino de ese fondo tenga un sentido amplio basándose en el origen que tiene dicho emprendimiento, que es la Ley nacional de Financiamiento Educativo Nº 26075. La misma fue ampliada y se dictaminó en forma posterior que se incluyen todos aquellos gastos e inversiones cuyos objetivos estén destinados indudablemente a la educación, cultura, ciencia y técnica.
+En virtud del marco doctrinario existente, se entiende que un evento de las características reseñadas en la presentes actuaciones se encuentra comprendido dentro de dicho contexto, razón por la que se entiende pueden financiarse en la forma propuesta todas aquellas actividades del citado evento que sean de libre acceso al público en general."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/24514/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>26/09/2008</td>
+      <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de "bordereaux", procediendo al pago inmediato de sus servicios, o sea al término de cada función
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/2486/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si resulta procedente modificar el procedimiento de pagos utilizado hasta el momento para la contratación de los artistas en los distintos centros culturales municipales mediante el sistema de &quot;bordereaux&quot;, procediendo al pago inmediato de sus servicios, o sea al término de cada función. 
+
+Respuesta: En las presentes actuaciones se informa que el procedimiento utilizado hasta el presente es ingresar la totalidad de lo recaudado por bordereaux a las cuentas generales municipales, existiendo una tardanza en la efectivización del pago de los artistas de hasta 60 días,  abonándose el 80% de lo recaudado en los distintos espectáculos.
+En principio se debe señalar que la metodología propuesta no está prevista en la normativa municipal, debiendo respetar los tiempos administrativos para realizar los controles y operaciones contables para luego abonar el porcentaje fijado para artistas. Con relación a éstos, cuando sean extranjeros se comparte la excepción contemplada por la Delegación Vicente López que consta en las presentes actuaciones.
+No obstante lo  informado, de adoptarse un sistema informático en el cual se prevean los correspondientes controles que incluyan la emisión informatizada de las entradas y liquidaciones de las retenciones, podría instrumentarse la modalidad de pago sugerida, en cuyo caso deberá someterse a la aprobación de este Organismo. 
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/2486/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>25/10/2005</td>
+      <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      SALA CINEMATOGRÁGICA MUNICIPAL [IMPUTACIÓN DEL I.V.A.]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Cuál es el modo correcto de facturación que deberán efectuar los distribuidores de cine, atento la apertura comercial de la sala cinematográfica municipal, teniendo en cuenta que la Comuna es sujeto exento del Impuesto al Valor Agregado.
+
+Respuesta: En las presentes actuaciones se br
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1948/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Cuál es el modo correcto de facturación que deberán efectuar los distribuidores de cine, atento la apertura comercial de la sala cinematográfica municipal, teniendo en cuenta que la Comuna es sujeto exento del Impuesto al Valor Agregado.
+
+Respuesta: En las presentes actuaciones se brindan explicaciones de cómo es el procedimiento de cálculo que se viene realizando hasta el momento  para abonar el porcentaje a los distribuidores cinematográficos, los cuales varían entre un 50 % y el 80 % y cuál es la pretensión de una de las distribuidoras que plantea una manera distinta de realizar dicho cálculo.
+En primer lugar debemos remitirnos a las normas específicas que tratan el tema en cuestión: por un lado,  La Ley Nacional 17.741 y su modificatoria Ley 24.377 (Fomento de Actividad Cinematográfica Nacional); la misma establece en su artículo 24: &quot;El fondo de Fomento Cinematográfico, cuya administración estará a cargo del Instituto Nacional de Cine y Arte Audiovisuales, se integrará: a) con un impuesto equivalente al 10 por cinto aplicable sobre el precio básico de toda localidad o boleto entregado gratuita u onerosamente para presenciar espectáculos cinematográficos en todo el país, cualquiera sea el ámbito donde se realicen&quot;. Este impuesto recae sobre los espectadores y los dueños de los cines adicionarán éste al precio del básico. 
+Otra norma específica es el Decreto Nacional 1008/01, modificatorio de la Ley de Impuesto al Valor Agregado, quien dispone que los empresarios o entidades exhibidores de las películas que se exhiban en los cines, que resulten inscriptos en el Impuesto al Valor Agregado, podrán computar como pago a cuenta del mismo el porcentaje establecido en el inciso a) del artículo 24 de la Ley 17.741.
+Hasta el presente la Municipalidad en su planilla de recaudación semanal practica la liquidación del porcentaje que le correspondía a la Distribuidora sobre la base del total de la recaudación bruta (entradas vendidas) menos el descuento a la actividad &quot;decreto 1248&quot; y sobre este importe neto se practica el porcentaje establecido de acuerdo al film que se exhibe. 
+Una de la distribuidora plantea que por ser la Municipalidad un organismo exento del IVA, deberá realizarse el porcentaje de distribución de bordereaux sobre el precio de ventanilla y no sobre el neto. 
+En virtud del análisis realizado y tomando en consideración las normas precedentes, esta Secretaría entiende que si las películas se exhiben en un cine Municipal, no debe cambiarse la base de cálculo para abonarle  el porcentaje correspondiente a los distribuidores; por lo tanto, se deberá aplicar el mismo sobre el valor neto, es decir, monto de entradas vendidas menos el 10 por ciento establecido para el fondo de fomento cinematográfico.
+Viendo la documentación adjuntada (planillas de recaudación semanal por el cine municipal y facturación de la Distribuidora Pachamama Cine S.A.), se advierte que esta última practica una liquidación incorrecta  ya que toma como base de cálculo el 80 % del total recaudado.
+ "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1948/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>18/10/2004</td>
+      <td>[059.0] Municipalidad de JUNIN</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      TRIBUTOS [ESPECTÁCULOS PÚBLICOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: Si es posible incorporar el derecho de ingreso a los espectáculos públicos organizados por ella como un tributo más y conjuntamente con ello lo propuesto en el proyecto de ordenanza donde se propone la explotación por sí o por terceros de los servicios de cantina, kiosco y otros recur
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1035/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si es posible incorporar el derecho de ingreso a los espectáculos públicos organizados por ella como un tributo más y conjuntamente con ello lo propuesto en el proyecto de ordenanza donde se propone la explotación por sí o por terceros de los servicios de cantina, kiosco y otros recursos vinculados a una explotación de espectáculos públicos; de ser así, si corresponden ser creados por la Asamblea de Mayores Contribuyentes, o en su defecto constituye un recurso más que puede obtener la Comuna que sólo debe incluirse en la partida presupuestaria correspondiente.
+
+Respuesta: El artículo 226 de la Ley Orgánica de las Municipalidades dispone cuáles son los recursos municipales y entre ellos podemos mencionar los del inciso 4), que en su última parte dispone &quot;..los servicios municipales que produzcan ingresos&quot;; dentro del mismo podemos encuadrar el ingreso a los espectáculos públicos organizados por la Municipalidad. De esta manera estarían diferenciados de los mencionados en el inciso 16), que son eventos organizados por terceros.
+Ahora bien, cómo se debe determinar si esta creación debe ser o no aprobada por la Asamblea integrada por Concejales y Mayores Contribuyentes. Sabido es que los aumentos o creaciones de impuestos o contribuciones de mejoras necesitan ser aprobados por los procedimientos que se encuentran prescriptos por el artículo 193 inciso 2) de la Constitución de la Provincia de Buenos Aires y el artículo 29 de la Ley Orgánica de las Municipalidades; sólo quedaría determinar si este derecho entra dentro del concepto de impuesto que establecen tanto el artículo 227 como el 106 de la Ley Orgánica de las Municipalidades. 
+La doctrina de este Organismo interpretó que corresponde hacer una diferenciación entre los tributos que se impongan en forma obligatoria y general a los contribuyentes por el municipio y aquellos que los vecinos lo hagan en forma voluntaria y cuya modalidad sea mediante el pago de una tarifa o precio, como es el ingreso a un espectáculo que brinda la Municipalidad. Para este último caso se entiende que no es necesaria la  Asamblea de Mayores Contribuyentes; véase que el artículo 208 (sobre Organismos Descentralizados) dispone que las tarifas, precios, derechos, aranceles, etc. correspondientes a los servicios que los entes presenten o a los productos que se expendan, serán fijados por la Dirección y aprobados por el Departamento Ejecutivo y el Concejo. 
+Por lo expuesto, se infiere que una prestación de un servicio producido por la Municipalidad no requiere ser aprobado por la Asamblea de Concejales y Mayores Contribuyentes.                                         
+El  proyecto  de ordenanza que se adjunta a las presentes actuaciones, establece en forma conjunta el derecho de ingreso a los espectáculos públicos organizados por la Municipalidad, como así también la explotación de los servicios de cantina, kiosco, estacionamiento, emisión de publicidad, auspicios y cualquier otro recurso relacionado; ésto lo podrá hacer directamente o a través de terceros. Con respecto a esto último se debe manifestar que corresponde la misma conclusión que la descripta en el párrafo precedente. 
+En concordancia con lo informado por la Delegación Zona XVI, Sede Junín, no se consignan en el proyecto de ordenanza las tarifas, importes o valores que en cada caso se desean percibir, recordándose que por el producido de los mismos se deberá incrementar el Cálculo de Recursos y el Presupuesto de Gastos no contemplados hasta el presente.      "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1035/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>16/08/2001</td>
+      <td>[117.0] Municipalidad de TORDILLO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      TASAS [COBRO EN ESPECIES]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            Consulta: La viabilidad de eximirdel pago del Derecho de Publicidad y Propaganda que fija la Ordenanza Fiscal e Impositiva.-
+
+Respuesta: Por cuanto la oferta, consite en el canje de entradas a espectáculos que la impresa brinda por la cancelación de sus deudas en concepto de derechos, no se tratar
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1895/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: La viabilidad de eximirdel pago del Derecho de Publicidad y Propaganda que fija la Ordenanza Fiscal e Impositiva.-
+
+Respuesta: Por cuanto la oferta, consite en el canje de entradas a espectáculos que la impresa brinda por la cancelación de sus deudas en concepto de derechos, no se trataría de una eximición de tributos, sino de un pago en especie, procedimiento que el H.Tribunal de Cuentas ha considerado aplicable transitoriamente en forma excepcional de adoptar las pautas similares a las que fija el Decreto Provincial n° 3862.-"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1895/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>8</strong></div>
+ 
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

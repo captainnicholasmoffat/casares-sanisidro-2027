@@ -1,0 +1,1039 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+      <div class="container">
+   <div class="panel hide">
+    <div class="panel-heading"><h4>Doctrina Consultas</h4></div>
+    <div class="hide">Se exponen en este apartado los extractos de los dictámenes que contienen las opiniones y criterios vigentes del Organismo acerca de temas administrativos,
+    contables y jurídicos traídos en consulta por los funcionarios provinciales y municipales autorizados.
+    La búsqueda de Doctrinas se puede hacer una búsqueda símple y una búsqueda avanzada por varios criterios, los cuales se pueden ir complementando
+    para ir ajustando la cantidad de resultados obtenidos.
+    </div>
+    </div>
+    </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+           <div class="panel">
+   <form class="form-inline" action='/sistemas/summun/busqueda/doctrinaconsulta/filter' method='post'>
+           
+          <div>
+            <label for="doctrinaconsulta_filter_type_palabra">Palabras</label>
+            <input type="text" id="doctrinaconsulta_filter_type_palabra" name="doctrinaconsulta_filter_type[palabra]"    placeholder="Palabras Claves, Resúmen" class="input-xlarge" value="156 inc. 3" />
+	    <span id='filtroFormularioToggle'>
+	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              <span class="cursor" onclick='toggleDiv("filtroFormulario")'>
+	       <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Búsqueda" title="Búsqueda" />
+	       <u>
+		<span id="textoBusqueda" class="badge">
+		  Búsqueda  Avanzada 		</span>
+	       </u>
+	    </span>
+         </span>
+        </div>
+        <div id='filtroFormulario' style='display:  none '> 
+        <div>
+           <label for="doctrinaconsulta_filter_type_ente">Entes</label>
+           <input type="text" id="doctrinaconsulta_filter_type_ente" name="doctrinaconsulta_filter_type[ente]"    placeholder="Municipales, Autárquicos, Administración Central de la Pcia de Bs. As." class="input-xxlarge" />
+        </div>
+        <div>
+           <label for="doctrinaconsulta_filter_type_expediente">Expediente</label>
+           <input type="text" id="doctrinaconsulta_filter_type_expediente" name="doctrinaconsulta_filter_type[expediente]"    placeholder="Característica, Número o Ejercicio" class="input-xlarge" />
+        </div>
+	<br>
+        <div>
+          <label for="doctrinaconsulta_filter_type_fechaInicio">Fecha Salida</label>
+          Desde<input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaInicio" name="doctrinaconsulta_filter_type[fechaInicio]" />
+          <span>Hasta</span>
+          <input type="text" class="input-datepicker datepicker" id="doctrinaconsulta_filter_type_fechaFin" name="doctrinaconsulta_filter_type[fechaFin]" />
+        </div>
+	  <fieldset>
+	    <span class="span3">
+	      <fieldset class="span">
+  <legend onclick="toggleDiv('form_filter_ambito')" class="cursor"><a href="#">Ámbitos <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+  <div id="form_filter_ambito" style="display:none">
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_2" name="doctrinaconsulta_filter_type[ambitos][2]" value="2" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_2">Provincial</label></div> 
+      <div><input type="checkbox" id="doctrinaconsulta_filter_type_ambitos_1" name="doctrinaconsulta_filter_type[ambitos][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_ambitos_1">Municipal</label></div> 
+    </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_ambito = false;
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_2').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+      if (!cambie_ambito) {
+      if($('#doctrinaconsulta_filter_type_ambitos_1').attr('checked'))
+      {
+        toggleDiv('form_filter_ambito');
+        cambie_ambito = true;
+      }
+    }
+   
+</script>
+	    </span>
+	    <span class="span3">
+	      <fieldset class="span">
+ <legend onclick="toggleDiv('form_filter_vocalia')" class="cursor"><a href="#">Vocalías <img src="/sistemas/summun/bundles/summun/images/famfamfam/text_align_justify.png"/></a></legend>
+   <div id="form_filter_vocalia" style="display:none">
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_37" name="doctrinaconsulta_filter_type[vocalias][37]" value="37" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_37">Administración Central</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_1" name="doctrinaconsulta_filter_type[vocalias][1]" value="1" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_1">Municipalidades A</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_38" name="doctrinaconsulta_filter_type[vocalias][38]" value="38" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_38">Municipalidades B</label>
+     </div>
+         <div>
+       <input type="checkbox" id="doctrinaconsulta_filter_type_vocalias_40" name="doctrinaconsulta_filter_type[vocalias][40]" value="40" />&nbsp;&nbsp;<label for="doctrinaconsulta_filter_type_vocalias_40">Reparticiones Autárquicas</label>
+     </div>
+       </div>
+</fieldset>
+<script type="text/javascript">
+  cambie_vocalia = false;
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_37').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_1').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_38').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+      if (!cambie_vocalia) {
+      if($('#doctrinaconsulta_filter_type_vocalias_40').attr('checked'))
+      {
+        toggleDiv('form_filter_vocalia');
+        cambie_vocalia = true;
+      }
+    }
+  </script>	    </span>
+	  </fieldset>
+          
+	</div>
+	<br>
+	<div class="divMarginLeft200">
+	   <button class="btn btn-primary"
+                                value="Búsqueda">
+    Búsqueda
+     
+</button>	   <a class="btn" href="/sistemas/summun/busqueda/doctrinaconsulta/">                     
+  Resetear
+   
+</a>	   <img class="span2 pull-right imgLogoPublico" src="/sistemas/summun/bundles/summun/images/logo-summun.png" title="Summun" alt="Summun" />
+	</div>
+      
+    </form>
+ 
+  </div>
+    </div>
+        <div class="container mainBody">
+	<div class="container">
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=a.fecha&amp;direction=asc&amp;page=1" title="Fecha Salida">Fecha Salida</a>
+</th>
+      <th><a class="sortable" href="/sistemas/summun/busqueda/doctrinaconsulta/filter?sort=en.nombre&amp;direction=asc&amp;page=1" title="Ente">Ente</a>
+</th>
+      <th>Voces</th>
+      <th>Resúmen</th>
+      <th>Ver</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+      <td>12/08/2019</td>
+      <td>[032.0] Municipalidad de DOLORES</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ARTíCULO 156 LOM [INC. 8 &quot;PRESTACIONES A CARGO DEL MUNICIPIO&quot;]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            �cláusula 8 Exclusividad: Dolores Gas S.A.-; inquiere si la contratación podría ser incluida en algunas de las excepciones contempladas en el art. <font class="text-warning"><strong>156</strong></font>° de la Ley Orgánica de las Municipalidades, ya sea en el inciso 1 (artículos de venta exclusiva) o en su defecto en el inciso 8 (para prestacio
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/30584/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+CONSULTA: Vienen estas actuaciones relacionadas con la consulta formulada por el señor Intendente Municipal de DOLORES, referida a la modalidad de contratación del servicio de Gas Licuado de Petróleo para el funcionamiento del Parque Termal Dolores (P.T.D.).
+
+Señala el consultante que a la fecha se encuentra vigente el Contrato de Comodato y Suministro formalizado con la firma Dolores Gas S.A., conforme copia de contrato acompañado y que luce a fs. 4/7 de estas actuaciones.
+
+Cabe destacar que de dicho contrato no surge que con la instalación de dos tanques por parte del comodatario se suministre gas al Parque Termal exclusivamente, ya que en la propia consulta señala que “…El principal uso del mencionado gas, es la provisión del mismo para las calderas que se utilizarán para el mantenimiento de la temperatura del agua termal…”, por lo que se infiere que ese suministro es utilizado para otros fines además del señalado, sin que surja de la consulta mayores precisiones al respecto.
+
+RESPUESTA: Ingresando al examen del contrato de referencia, el mismo se ha firmado con fecha 23 de junio de 2015, y este poseía una vigencia de 12 meses (cláusula 13 Plazo contractual), y que vencido el mismo se pactaron prorrogas automáticas (mes por mes), hasta tanto alguno de los contratantes disponga hacer cesar los efectos de dicho contrato, ello previa comunicación al cocontratante en forma fehaciente, con una antelación de 30 días. Por tal motivo, si no se hubiese hecho uso de esa rescisión, el contrato se encontraría vigente en la actualidad.
+
+Si bien la extensión del mismo resulta ser mensual, debemos tener en cuenta lo dispuesto en la cláusula 11 PAGO, la cual refiere que el servicio se abonará en efectivo contra entrega del recibo oficial respectivo con el que se acreditará el pago de la carga de los tanques aludidos en el clausula 2. En resumen, cada entrega genera un pago que debe hacerse en efectivo por parte del municipio.
+
+El consultante manifiesta que a partir del mayor consumo de gas, su costo excedería el monto máximo de la contratación directa –a la fecha $ 173.641– y que teniendo en cuenta lo dispuesto en la cláusula 2 Instalaciones – consumo, la cual determina que los tanques suministrados en comodato por la Empresa, serán llenados exclusivamente con el producto suministrado por la misma –cláusula 8 Exclusividad: Dolores Gas S.A.-; inquiere si la contratación podría ser incluida en algunas de las excepciones contempladas en el art. 156° de la Ley Orgánica de las Municipalidades, ya sea en el inciso 1 (artículos de venta exclusiva) o en su defecto en el inciso 8 (para prestaciones a cargo del municipio) o en el inciso 10 (adquisición de bienes de valor corriente en plaza).
+
+De la copia del contrato acompañado a la presente consulta -fs. 4/7- surge que la Empresa DOLORES GAS S.A. resulta ser proveedor de la Municipalidad de Dolores del suministro de Gas Licuado de Petróleo, para los tanques dados en comodato por parte de esta a la Comuna y que se encontrarían instalados en la Avda. Belgrano N°1695 de la localidad de Dolores (cláusula 1), y por tal motivo han pactado la exclusividad de aquella para efectuar la carga de los citados tanques (cláusulas 1, 2, 8).
+
+La exclusividad a la que se refiere el contrato no coincide con la regulada en el art. 156° inciso 1 de la LOM, ya que lo pactado en el mismo es la imposibilidad de que otro proveedor de gas licuado pueda efectuar la carga de los tanques correspondientes a Dolores Gas S.A., lo que difiere diametralmente de lo consignado en el citado inciso. La LOM se refiere a artículos de “venta exclusiva”, es decir, cuya provisión resulta de tal particularidad que no podrá ser sustituida convenientemente por otra de similares características (conf. art. 161° inc. 1 del Reglamento de Contabilidad para las Municipalidades), y solo podrá invocarse la excepción en la medida que no hubiera otro proveedor que pueda suministrar el gas licuado de petróleo. De la documentación aportada en la consulta, no resulta acreditado que acontezca tal extremo.
+
+En lo que respecta a la determinación del precio de mercado, deben ser las autoridades municipales quienes comprueben tal extremo, acreditando documentalmente que el suministro se adquiera en las condiciones comerciales de oferta más conveniente en el mercado, ello a fin de justificar la excepción contemplada en el art. 156° inc. 10 de la LOM, lo cual tampoco resultaría acreditado con los elementos aportados en la consulta.
+
+Finalmente, si el suministro de gas que se efectúa con la carga de los tanques ubicados en la Avda. Belgrano N°1695 de Dolores, resulta ser la prestación de un servicio a cargo del municipio, lo que parece inferirse a partir de lo señalado en la consulta “…En lo que respecta al suministro de gas para el funcionamiento del P.T.D., se utiliza Gas propano, debido a que, por cuestiones ajenas al municipio, el Gas Natural no llega al P.T.D….”, ha sido el propio Municipio quien ha asumido el suministro de un servicio público como es el abastecimiento de gas, ante la falta de extensión de la red de gas natural a la que se alude en la consulta. Por lo tanto, si dicha provisión resulta ser un servicio cuya prestación está a cargo de la comuna -y máxime cuando se trata de un servicio público-, consideramos que de acreditarse todos estos extremos podría resultar factible la contratación en el marco de lo dispuesto en el art. 156° inciso 8 de la LOM.
+
+
+Sin perjuicio de lo hasta aquí señalado, la contratación es un acto de gestión de las autoridades municipales, por ende, deberán acreditar las razones por las cuales han optado por efectuar la contratación dentro de las excepciones contempladas en el art. 156º de la L.O.M., en el caso que se les requiriera su justificación."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/30584/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>12/08/2019</td>
+      <td>[047.0] Municipalidad de GENERAL LAVALLE</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      ARTíCULO 156 LOM [INC. 10 - EXCEPCIóN COMPRA AUTOMOTOR]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            efe de Compras de GENERAL LAVALLE relacionada con la adquisición de vehículos para el municipio en el marco de la excepción contemplada en el art. <font class="text-warning"><strong>156</strong></font> inciso 10 de la Ley Orgánica de las Municipalidades.
+
+Liminarmente, he de señalar que el funcionario que efectúa la presente consulta no se e
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/30586/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTAS: Vienen estas actuaciones relacionadas con la consulta formulada por el señor Jefe de Compras de GENERAL LAVALLE relacionada con la adquisición de vehículos para el municipio en el marco de la excepción contemplada en el art. 156 inciso 10 de la Ley Orgánica de las Municipalidades.
+
+Liminarmente, he de señalar que el funcionario que efectúa la presente consulta no se encuentra facultado para realizar la misma, toda vez que no resulta ser alguno de los funcionarios contemplados en el art. 238° del Reglamento de Contabilidad para las Municipalidades de la Provincia de Buenos Aires, modificado por la Circular N°376 de este Organismo (de fecha 15 de noviembre de 1995), y el art. 60° de las Disposiciones de Administración de los Recursos Financieros y Reales (RAFAM).
+
+No obstante ello, y dejando expresado que en el futuro deberá formalizarse la consulta por alguna de las autoridades habilitadas a tales efectos, se procederá a evacuar la consulta con el objeto de brindar colaboración con las autoridades del Municipio.
+
+Previa intervención de esta Secretaría, se ha expedido la Delegación Zona XIV – Dolores – de este Tribunal, mediante dictamen obrante a fs. 7/8, la que compartimos y en honor a la brevedad nos remitimos a la misma.
+
+RESPUESTA: Sin perjuicio de lo señalado hemos de efectuar alguna consideración que viene a complementar lo señalado por la Delegación. La contratación en consulta se formalizaría mediante la modalidad de plan de ahorro y la adquisición se efectuaría en 84 cuotas mensuales. Por otra parte señala el consultante, que  el valor del bien se rige por actualizaciones de fábrica que rondarían aproximadamente de 2 a 3 % mensual, por lo que cada cuota a abonar por la comuna ha de resultar incrementada, proporcionalmente, en ese mismo porcentaje, el que una vez impuesto se ha de capitalizar frente a la cuota siguiente y aquí surge la primera gran duda a resolver es si frente a esa variación, como podría determinarse – ya que es un contrato que se extiende por espacio de 7 años – que nos encontramos en las condiciones comerciales de oferta más conveniente en el mercado, mucho más aún ante la volatilidad bursátil que caracteriza a la economía nacional y que proyecta sus efectos a los bienes de las características que se pretende adquirir. Hoy un 2 o 3 % difícilmente pueda sostenerse en tan prolongado lapso de tiempo.
+
+Por lo expuesto, la citada contratación, en principio, no resultaría encuadrable en el supuesto de excepción contemplado en el art. 156 inciso 10 de la Ley Orgánica de las Municipalidades.
+
+Dictámen de Delegación Zona XIV - Dolores -, parte pertinente:
+
+&quot;Del análisis de la normativa aplicable en el caso, el Decreto-Ley 6769/58, establece en su artículo 151°, los distintos valores a respetar para las adquisiciones y contrataciones, que se efectúen según Ia modalidad, en forma directa, mediante concurso de precios, y mediante licitación pública a privada.
+Y en su artículo 1560 se prescribe con excepción a lo prescripto en el articulo 151&#039; sobre licitaciones y concursos, se admitirán compras y contrataciones directas en los siguientes casos: &quot;... Inc. 10&#039; Las adquisiciones de bienes de valor corriente en plaza en las condiciones comerciales de oferta más convenientes en el mercado, cualquiera sea su monto. Sera responsabilidad del secretario del ramo y del contador municipal comprobar y certificar que la operación se encuadra en el nivel de precios y en las condiciones habituales del mercado&quot;.
+Dando respuesta al interrogante planteado por Ia Jefa de compras entiendo que no correspondería aplicar la excepción del art 156, inc.10 de la LOM atento que sería difícil para el Secretario y el Contador Municipal comprobar y certificar que la operación encuadra en precios y condiciones de mercado comprando en cuotas y durante varios años.
+Además en el caso planteado, se observa que Ia Municipalidad ingresa a un Grupo, es decir a un conjunto que se constituye con tantos adherentes como meses tiene cada Plan multiplicado por dos, y que mediante el Plan de Ahorro obtiene la adjudicación por sorteo, o licitación del automotores- según definición que consta en el contrato de adhesión.- y no efectúan una compra directa de un bien vehículo para el patrimonio municipal. Siendo esto último corroborado con Ia puesta a disposición de los fondos en el caso de no aceptar la adjudicación del automotor.
+De este modo, surge que no se trata de una compra a fabrica, sino a una sociedad Anónima Administradora, que en el caso no es Toyota Argentina S.A. Asimismo cabe agregar que con el dictado de la Ley N° 13.295, que regula el Régimen Provincial de Responsabilidad Fiscal Municipal se dispuso invitar a adherir a los municipios a través de las Ordenanzas de sus Honorables Concejos Deliberantes, y mediante el artículo 6 Bis se prescribe que “los municipios no tomaran medidas que incrementen el gasto corriente con carácter permanente durante el último semestre del año de fin de mandato del Departamento Ejecutivo, exceptuando aquel cuya causa originante exista con anterioridad al periodo indicado y su cumplimiento sea obligatorio. 
+Durante el plazo aludido en el párrafo anterior no se podrá disponer a título gratuito u oneroso de activos fijos del municipio. A los fines del presente artículo deberá entenderse por incremento del gasto corriente de carácter permanente a aquel que se prolongue por más de seis (6) meses y que no se encuentre fundado en situaciones de emergencia de tipo social y/o desastres naturales&quot;. Atento a lo mencionado, el Municipio de General Lavalle, si es adherente al Régimen Provincial de Responsabilidad Fiscal Municipal deberá cumplir con las obligaciones asumidas.&quot;
+
+ "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/30586/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>27/09/2018</td>
+      <td>[037.0] Municipalidad de FLORENCIO VARELA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      IMPREVISIBILIDAD DE LOS MERCADOS [ART. 156 INC.10 LOM-ORDEN DE COMPRA]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            CONSULTA: Por las presentes actuaciones el Intendente de la Municipalidad de FLORENCIO VARELA consulta acerca de los extremos legales del artículo <font class="text-warning"><strong>156</strong></font> inciso 10) de la Ley Orgánica de las Municipalidades y su aplicación en el circuito administrativo a causa de la imprevisibilidad vigente en los m
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/29661/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="CONSULTA: Por las presentes actuaciones el Intendente de la Municipalidad de FLORENCIO VARELA consulta acerca de los extremos legales del artículo 156 inciso 10) de la Ley Orgánica de las Municipalidades y su aplicación en el circuito administrativo a causa de la imprevisibilidad vigente en los mercados.
+
+Comienza relatando que nuestro país no ha quedado exento de los avatares de la economía global, viendo depreciar marcadamente su moneda, a lo que debe sumarse los cambios de las metas inflacionarias establecidas a nivel local. Que ello produce en la economía local desfasajes y variaciones en los precios de los productos principalmente importados, que genera imprevisibilidad en los costos al momento de fijar los precios -por imperio de las reglas que regulan los procesos licitatorios-. Que quedan licitaciones fracasadas o desiertas, por la imposibilidad de los proveedores de mantener sus ofertas –principalmente en aquellos bienes que poseen costos en dólares-.
+
+Señala que particularmente motivan la consulta las licitaciones privadas realizadas para la adquisición de vehículos, en las que no se han presentado oferentes ante la incertidumbre de cotizar a una fecha determinada sin tener asegurado tanto el plazo de generación de la Orden de Compra, como los tiempos posteriores para las transferencias de las unidades. Sostiene que es necesario contar con instrucciones que les permitan de manera temporal seguir gestionando las actividades habituales que se ven afectadas en el actual contexto económico. A  partir de ello, solicita opinión sobre interrogantes que plantea como sigue:
+
+1).- Cuál sería el procedimiento administrativo admisible para justificar los extremos exigidos en el artículo 156 inc. 10 de la Ley Orgánica Municipal, en aquellos casos que amerite realizarlo, y hasta tanto dure la imprevisibilidad de los mercados?
+
+2).- Cuáles serían los parámetros que debe tener en cuenta el Jefe de Compras para definir el inicio de las actuaciones por la modalidad de contratación fundada en el citado artículo? (previo miramiento de los antecedentes a considerar en la compulsa que se trate; el tipo de bien a adquirir o el servicio a contratar; como las diferencias existentes en las condiciones personales de los oferentes, valorándose de manera conjunta, siendo indistinto el monto a contratar).
+
+3).- Dada la volatilidad de la moneda extranjera (dólar) se podría contratar por igual importe con disminución de las cantidades, y para el caso de no ser ello factible se podría contratar igualmente, a pesar de superar los parámetros?
+
+4).- Verificado el tipo de Producto, y dado que entre la fecha de la Adjudicación y la Orden de Compra debido a las variaciones de la divisa de EEUU puede variar el precio, sería viable autorizar cambios en las cantidades y/o en las condiciones impuestas en la Orden de Compra (previo informe)?
+
+RESPUESTA:  comenzamos indicando que en términos generales el artículo 156 inc. 10) de la Ley Orgánica de las Municipalidades -como norma de excepción al régimen de adquisición de bienes y contrataciones establecido en el art. 151 de la norma-, señala que podrá realizarse en forma directa la adquisición de bienes de valor corriente en plaza en las condiciones de oferta más conveniente en el mercado, cualquiera sea su monto, agregando que resulta responsabilidad del Secretario del ramo y del Contador Municipal, comprobar y certificar que la operación se encuadra en el nivel de precios y en las condiciones habituales del mercado.
+
+Surgiendo claro que para adoptar tal modalidad de adquisición, la comuna debe necesariamente cumplimentar los requisitos previstos en la referida disposición legal, corresponde agregar que la omisión de las circunstancias que acrediten tales condiciones resulta imputable al titular del Departamento Ejecutivo, según lo prescripto por el artículo 161º inciso 10) de Reglamento de Contabilidad.
+
+Si bien la norma aquí tratada, constituye una regla de excepción que se habilita frente a razones de urgencia, dada la situación que estamos transitando de cambios sostenidos en los precios que alteran los costos de los bienes y servicios a contratar, y hasta tanto se mantenga la imprevisibilidad de los mercados, se considera razonable utilizar el procedimiento previsto en la misma, que brindaría solución al caso, como también extender el mismo a la contratación de servicios que resulten indispensables y sobre los cuáles puedan determinarse valores corrientes en plaza (doctrina según expte. Nº 4003-64747-2018-0-1  Municipalidad Almirante Brown).
+
+Para ello, los Contadores, Secretarios del Área y Jefes de Compra, serán quienes deberán informar adecuadamente la situación que justificaría cada Compra Directa que se pretenda efectuar. Asimismo debieran definirse pautas en la comuna que garanticen fehacientemente que el costo de las contrataciones a adjudicar lo sea ajustado a los valores de mercado, con la debida intervención de los funcionarios responsables de certificar tal circunstancia.            
+
+Más allá de lo expuesto, resultaría conveniente sea evaluado en la municipalidad la determinación del volumen y la extensión de las prestaciones a contratar, a fin de minimizar los impactos de los cambios en los precios, lo que evitaría las circunstancias indicadas en los interrogantes 3 y 4, toda vez que las ordenes de compras debieran respetarse en los términos de su confección.
+
+No obstante todo lo señalado, y reiterando que tales medidas -que flexibilizan la  aplicación de las reglas vigentes en materia de contrataciones- lo son por excepción y de uso transitorio mientras perdure la imprevisibilidad de los mercados, deberá retornarse a la aplicación de las normas legales vigentes cuando se normalice la situación que hoy aqueja.
+
+Por último se entiende que corresponderá a la Delegación Zonal, analizar las contrataciones que se desarrollen en los términos enunciados."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/29661/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>21/11/2017</td>
+      <td>[059.0] Municipalidad de JUNIN</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONVENIOS [CONSEJO PROFESIONAL]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            rgos técnicos que hacen falta para llevar adelante la tarea con personal municipal.
+
+A este respecto cabe consignar que el inciso b) del artículo <font class="text-warning"><strong>156</strong></font> de la Ley Orgánica de las Municipalidades establece como excepción al régimen impuesto en el artículo 151 de la misma en los casos que "…se 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/28887/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Respecto de un Convenio a ser convalidado, celebrado entre la Municipalidad y el Consejo Profesional de Agrimensura de la Provincia de Buenos Aires con la finalidad de contratar profesionales agrimensores para la realización de trabajos específicos que no puedan ser efectuados por personal de las oficinas técnicas de la comuna (fs. 1). 
+
+En particular consulta:
+
+
+	¿Si el Convenio debe detallar los trabajos pendientes a los que genéricamente hace referencia?
+	¿Si la declaración de incompetencia debería estar debidamente fundada y con la documentación que la respalde?
+	¿Si el convenio  debería incluir duración y/o lapso de vigencia?
+	¿Si la omisión del llamado previo a concurso para cubrir las vacantes debe ser subsanada como requisito previo a un contrato de estas características?
+
+
+Se adjunta nota de Incompetencia del Secretario de Obras y Servicios Públicos (fs. 3), adhesión del Secretario de Hacienda (fs. 4), y dictamen sin objeciones de la Secretaría Legal y Técnica acerca del reconocimiento de la declaración señalada (fs. 5).
+
+De la copia del Convenio Específico de Cooperación suscripto surge que a través del mismo se busca articular un mecanismo transparente y eficiente de contratación de profesionales agrimensores para la realización de trabajos específicos y determinados, que la Municipalidad requiera y que no pueda realizar con el personal de sus oficinas técnicas correspondientes. El convenio tiene vigencia por un año pudiendo ser renovado sucesivamente y por el mismo término (fs. 6/8).
+
+Finalmente a a fs. 9 obra copia del Decreto Nº 2670 del 29 de Agosto de 2017 declarándose la incompetencia de la Secretaria de Obra y Servicios Públicos.
+
+Respuesta: Que compartimos el dictamen emitido por la Delegación Zonal XVI Junín interviniente -agregado a fs. 10/13-, el que da contestación a cada uno de los puntos consultados y al que nos remitimos en honor a la brevedad.            
+
+Sólo cabe mencionar a mayor abundamiento, que de acuerdo al artículo 108 inc. 14 de la L.O.M., constituye una atribución y deber general del Departamento Ejecutivo “celebrar contratos”, y que además este Honorable Tribunal acepta la suscripción de convenios con instituciones como la mencionada (según doctrina Expedientes Nº 5300-266-2017-0-1 de la Municipalidad de Arrecifes, Nº 4079-10907/09 de la Municipalidad de Morón, Nº 41331-2017 de la Municipalidad de Carlos Casares).
+
+ 
+
+Dictamen de Delegación:
+
+&quot;Vienen las presentes actuaciones con motivo de la consulta formulada por el Presidente del Bloque Frente Renovador del Honorable Concejo Deliberante de la Municipalidad de Junín, (...) referida a la convalidación de un Convenio suscripto entre la Comuna y el Consejo Profesional de Agrimensura de la Provincia de Buenos Aires con la finalidad de contratar a profesionales agrimensores para la realización de trabajos específicos que no puedan realizar personal de las oficinas técnicas municipales.
+
+Principia destacando que no hubo concurso para cubrir los cargos técnicos que hacen falta para llevar adelante la tarea con personal municipal.
+
+A este respecto cabe consignar que el inciso b) del artículo 156 de la Ley Orgánica de las Municipalidades establece como excepción al régimen impuesto en el artículo 151 de la misma en los casos que &quot;…se compre a reparticiones oficiales nacionales, provinciales o municipales y a entidades en las que el Estado tenga participación mayoritaria…&quot;; por lo tanto, el convenio celebrado con las autoridades del Consejo Profesional de Agrimensura de la Provincia de Buenos Aires no está comprendido específicamente dentro de dicha norma.
+No obstante ello, la Institución con la cual es intención celebrar el convenio en cuestión tiene ciertas características particulares por las cuales se entiende puede utilizarse el mecanismo de compra directa tal como lo proponen las autoridades municipales: en primer término, se trata de una persona jurídica para-estatal de derecho público, es decir no persigue un fin de lucro y en segundo lugar, de acuerdo al artículo 10 inciso g) de la Ley 10.321 que regula el funcionamiento del Consejo Profesional de Agrimensura, constituye uno de los objetivos que persigue esta organización profesional, según prevé el citado inciso la de &quot;Asesorar a los poderes públicos, en especial a las reparticiones técnicas oficiales, en asuntos de cualquier naturaleza relacionados con el ejercicio de la profesión de agrimensor&quot;  (Expte. 4049-20988/05 Municipalidad de General Pueyrredón).
+
+Por otra parte, en el caso planteado el Consejo será el encargado de proporcionar al profesional inscripto en el registro, realizando la selección mediante un mecanismo que asegura la transparencia y la concurrencia de los inscriptos en un pie de igualdad, debiendo asegurarse la alternancia en la selección de los mismos según se establece en la cláusula Quinta del convenio en cuestión.
+
+A continuación consulta los siguientes extremos:
+
+a.- Si el Convenio en cuestión deberá detallar los trabajos pendientes a los que genéricamente hace referencia.
+
+A través del Convenio se trata de articular un mecanismo transparente y eficiente de contratación de profesionales agrimensores por parte de la Municipalidad (Cláusula Primera) por lo que esta Relatoría entiende que se trata de un Convenio marco con la imposibilidad por lo tanto de establecer a priori las tareas a desarrollar, no surgiendo del mismo &quot;trabajos pendientes&quot; que plantea el consultante.
+
+b.- Si la declaración de incompetencia debiera ser debidamente fundada y con documentación que la respalde.
+
+El artículo 148 de la Ley Orgánica de las Municipalidades de la Pcia. de Buenos Aires establece que en el caso de tener la Comuna su oficina técnica y ésta se declarara incompetente se podrán contratar los estudios proyectos y/o dirección de las obras públicas con profesionales que figuren inscriptos en un registro que habilitarán al efecto. La precitada declaración de incompetencia deberá ser fundada y reconocida por el Departamento Ejecutivo.
+
+Se adjuntan copia de los fundamentos expuestos por el Secretario de Obras públicas solicitando el reconocimiento de la incompetencia por parte del Departamento Ejecutivo y el Decreto 2670/2017 del 29/08/17 donde se reconoce la citada incompetencia.
+
+c.- Si dicho Convenio, y por la propia asimilación a una emergencia que el oficialismo pretende darle, deberá incluir duración y/o lapso de vigencia.
+
+Se informa que en la cláusula décimo cuarta del Convenio suscripto prevé la vigencia de un año, pudiendo ser renovado sucesivamente por igual periodo mediando acuerdo de las partes, lo que se entiende que tal circunstancia deberá ser evaluada por el Departamento Ejecutivo y decidir en consecuencia.
+
+d.- Si la omisión del llamado previo a concurso para cubrir las vacantes necesarias en el área técnica municipal debe ser subsanada como requisito previo a un contrato de estas características.
+
+Cabe señalar que nuestra doctrina ha considerado factible la contratación de personal bajo la modalidad de locación de obra con carácter excepcional, siempre que no se cuente con el personal especializado o el existente se declare incompetente siendo una atribución propia del Departamento Ejecutivo decidir al respecto considerando la eventualidad de la labor a desarrollar.&quot;
+
+ "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/28887/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>07/09/2017</td>
+      <td>[037.0] Municipalidad de FLORENCIO VARELA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      DEPARTAMENTO EJECUTIVO [DELEGACIóN DE COMPETENCIAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            pública, para el llamado y adjudicación de la misma.
+
+b) Cuando se trate de los supuestos de los artículos 1<font class="text-warning"><strong>3</strong></font>2 incisos a), b), c), d), f) y g) y <font class="text-warning"><strong>156</strong></font> en los casos que los importes contratados excedan el monto establecido para las licitaciones privadas.
+
+4 ° Transmisión de bienes, salvo las s
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/28690/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: solicita la opinión de este Honorable Tribunal de Cuentas en relación a determinadas cuestiones relacionadas con la delegación de competencias efectuada por el Departamento Ejecutivo a los Secretarios municipales, mediante el Decreto Nº 657/17 (fs. 28/32).
+
+Obra en el expediente copia de: Decreto Nº 657/17 (fs. 2/19), doctrina de este Organismo respecto a delegación de funciones (fs. 20/27), dictamen de la Dirección de Dictámenes del municipio (fs. 36/37), Decreto Nº 1147/16 (fs. 40/42), CD del Decreto Nº 429/17 referido a las misiones y funciones de los Secretarios municipales (fs. 43), Decreto Nº 1135/17 que suspende la aplicación del Decreto Nº 657/17, hasta tanto se expida este Honorable Tribunal (44/45).
+
+Por último, se agrega copia del dictamen de la Oficial Letrada de la Delegación II – Quilmes (fs. 47/50).
+
+Respuest: En primer lugar corresponde poner de resalto el pormenorizado trabajo realizado por la Oficial Letrada de la Delegación Zonal antes citada, el que en términos generales se comparte.
+
+La pieza de consulta consta de seis preguntas (una general y cinco particulares), que serán reproducidas y contestadas en su orden. Asimismo, corresponde poner de manifiesto que las cuestiones que no han sido sometidas a consulta y que puedan derivar de las delegaciones que se pretenden,serán analizadas en el estudio de la cuenta correspondiente.
+
+Respecto de la consulta general “Visto el Decreto Municipal Nº 657/17 que establece la delegación de funciones en los Secretarios del Departamento Ejecutivo ¿Resulta procedente que estos últimos dicten Resoluciones, en el marco de sus competencias, que no se encuentren taxativamente descriptas en el referido Acto Administrativo? Todo ello con las excepciones previstas en los Artículos 181, Inc. 1,2, 3, 4, 5 y 182 de la Ley Orgánica de las Municipalidades?”
+
+Como bien lo pone de resalto la Oficial Letrada de la Delegación en su informe, la Ley Orgánica Municipal en su art. 181 dispone que “…Los Intendentes Municipales podrán delegar, por resolución expresa, el ejercicio de facultades propias en los secretarios, según la competencia que a ellos corresponda.
+
+La delegación de facultades que se autoriza precedentemente, no se podrá realizar en las siguientes materias:
+
+1° Atribuciones reglamentarias que establezcan obligaciones para los administrados y las privativas inherentes a actos de gobierno y al carácter político de la autoridad.
+
+2° Régimen de personal.
+
+a) Las designaciones del personal superior, delegados municipales, asesores, personal de planta permanente de los distintos regímenes escalafonarios y contratado.
+
+b) El cese del personal de planta permanente con estabilidad que se deba resolver previo sumario.
+
+3° Obras públicas, adquisiciones y otras contrataciones:
+
+a) Cuando se requiera licitación pública, para el llamado y adjudicación de la misma.
+
+b) Cuando se trate de los supuestos de los artículos 132 incisos a), b), c), d), f) y g) y 156 en los casos que los importes contratados excedan el monto establecido para las licitaciones privadas.
+
+4 ° Transmisión de bienes, salvo las situaciones previstas por el artículo 159° incisos 1), 2) y 3) apartados a) y c).
+
+5° Concesión de servicios públicos.
+
+Las delegaciones que se efectúen serán comprensivas de las potestades necesarias para realizar todos los actos inherentes al ejercicio de las facultades a que se refieren.
+
+El Intendente Municipal como órgano delegante, puede avocarse al conocimiento y decisión de cualquier asunto concreto que corresponda decidir al inferior en virtud de la delegación. Podrá también en cualquier momento revocar total o parcialmente la delegación, debiendo disponer en el acto que así lo establezca, qué órganos continuarán con la tramitación y decisión de los asuntos que en virtud de la delegación conocía el delegado.
+
+Las resoluciones que dicten los secretarios en virtud de las facultades que se acuerden por delegación, deberán contener expresa mención de tal circunstancia.
+
+El acto administrativo que disponga la delegación y el de revocación total o parcial de la misma, en su caso, deberán publicarse en la misma forma que las Ordenanzas.”
+
+A mayor abundamiento, el art. 3 de la Ordenanza General Nº 267/80 reza :“La competencia de los órganos de la Municipalidad se determinará por la Constitución de la Provincia, la Ley Orgánica de las Municipalidades y las ordenanzas y decretos que se dicten en su consecuencia. La competencia es irrenunciable, y se ejercerá precisamente por los órganos que la tengan atribuida como propia, salvo los casos de delegación, sustitución o avocación previstos por las leyes.”
+
+En consecuencia, va de suyo que mas allá de dictar resoluciones en materias que le son propias, también pueden dictar resoluciones en materia expresamente delegada, pero no pueden dictar actos administrativos sobre materia que no haya sido expresamente delegada. Como sostiene Marienhoff “en derecho administrativo la competencia es la excepción y la incompetencia la regla. Por eso se dice que la competencia debe ser “expresa”, lo que claro está no debe interpretarse en forma literal sino racionalmente”[1]. Además el mismo art. 19 del Decreto Nº 657/17 establece  que “La competencia que se ejerza en virtud de delegación de atribuciones contenidas en los artículos anteriores será de interpretación restrictiva de modo que en el caso de duda se considerará la función como no delegada”. 
+
+En relación a la consultaparticular Nº 1“Los Decretos de concesión de habilitaciones comerciales que, a la fecha se encuentran bajo la órbita de la firma del Sr. Intendente, no expresamente mencionados en la delegación realizada por el Decreto Nº 657/17, pero que, por su naturaleza no “afectan o comprometen el régimen patrimonial o jurídico de la comuna (…)” ¿es procedentemente su dictado mediante Resolución suscripta por el Sr. Secretario General de Administración y Fiscalización, en este caso, por tratarse de una dependencia a su cargo?”
+
+Conforme lo manifestado anteriormente y salvo que se trate de materia propia -lo cual no se vislumbra del Decreto Nº 429/17 (fs. 43)-  la delegación requiere de una norma expresa que la autorice, no procediendo en el supuesto de silencio de la norma[2].
+
+Respecto de la consulta particular Nº 2 “De la delegación establecida en el Artículo 2 inciso 4 del Decreto Nº 657/17 que permite al Sr. Secretario General de Administración y Fiscalización “Celebrar, ejecutar y extinguir contratos fijando a las partes la jurisdicción Provincial en las materias de su competencia (…)”
+
+
+	“¿Puede utilizarse la interpretación en sentido amplio y aplicarlo a cualquier tipo de contrato, ello considerando siempre las excepciones previstas en el mismo decreto y en la Ley Orgánica de las Municipalidades?”
+
+
+En tanto y en cuanto se respeten las excepciones normativasy se trate de celebración, ejecución y extinción de contratos en materias de su competencia, la norma no establece restricciones respecto de los tipos de contratos. Deberán tenerse presenteslos art. 181 inc. 3 y 182 de la Ley Orgánica Municipal.
+
+
+	“¿La extinción de los contratos debe ser interpretada de modo tal que incluya a los contratos firmados oportunamente por el Sr. Intendente Municipal? ¿O simplemente pueden ser extinguidos mediante Resolución para aquellos que han sido firmados por el Secretario de la cartera correspondiente a tenor de las delegación de firmas operadas por el Decreto Nº 657/17?”
+
+
+Se entiende que resulta factible la extinción de los contratos que se encuentren en curso de ejecución al entrar en vigencia el Decreto Nº 657/17, independientemente de quién lo haya firmado (art. 7 del Código Civil y Comercial).
+
+En relación a la consulta particular Nº 3“Para otro caso, ¿resulta procedente la suscripción por parte del Secretario de Obras, Servicios Públicos e Higiene Urbana, de un Acta de Rescisión –de común acuerdo-  de un contrato que oportunamente hubiera sido firmado por el Sr. Intendente Municipal? 
+
+Tratándose de una competencia delegada (art. 3 inc. 4 del Decreto Nº 657/17) me remito a la respuesta Nº 2 b).
+
+En lo que respecta a la consulta particular Nº 4 “Considerando que existen Resoluciones cuyo dictado tiene como contrapartida una erogación, por ejemplo aquella establecida en el Artículo 1 inc. 10 del Decreto en cuestión, relativa a “el otorgamiento de Auspicio, Declaración de Interés Municipal y/o Subsidio (…) ¿es requisito indispensable que el mismo, a pesar de ser una delegación atribuida expresamente a otra Secretaria, sea suscripto – además-  por la Secretaria de Hacienda?
+
+El Inciso 10 del art. 1 del Decreto Nº 657/17 dispone respecto a la delegación de atribuciones en la Secretaria de Gobierno, la atribución de “Intervenir en el otorgamiento de Auspicio, Declaración de Interés Municipal y/o Subsidio, previa consideración y opinión de las áreas y organismos de incumbencia en cada caso”, por lo que deberán intervenir tantas áreas como sean necesarias. Ello, sin perjuicio de las consideraciones realizadas por laOficial Letrada en su informe, al cual nos remitimos.
+
+Por último, en relación a la consulta Particular Nº 5 “Extendiendo el concepto anterior ¿Debe la Secretaria de Hacienda suscribir todas las Resoluciones y Contratos que, iniciados por otras Secretarias, impliquen un gasto?”
+
+Se entiende que dentro de las Misiones y Funciones de la Secretaria de Hacienda (ver Decreto de 429/17) corresponde la intervención de la misma cada vez que la comuna realice una erogación,por lo que si otra Secretaria suscribe una Resolución o un Contrato que implique un gasto debe dársele intervención a la Secretaria de Hacienda.
+
+
+ 
+
+
+
+[1]              Ver Tratado de Derecho Administrativo- Miguel S . Marienhoff, Tomo I, 1977, Abeledo Perrot, pág 572.
+
+
+
+[2]              Ver Tratado de Derecho Administrativo- Miguel S . Marienhoff, Tomo I, 1977, AbeledoPerrot, pág 579.
+
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/28690/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>31/03/2017</td>
+      <td>[037.0] Municipalidad de FLORENCIO VARELA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      BIENES [SU BAJA]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            vilidad Urbana.
+
+
+El procedimiento de contratación debe llevarse a cabo de acuerdo al art. 151 y ss. y concordantes del Decreto-Ley 6769/58, art. <font class="text-warning"><strong>156</strong></font> y ss. del Reglamento de Contabilidad y Disposiciones de Administración para las Municipalidades de la Provincia de Buenos Aires art. 97 y ss. de 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/28020/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="
+Consulta: Relacionada con la baja patrimonial de vehículos en condiciones irreparables y su posterior compactación; como también acerca del procedimiento admisible para esta última finalidad, conforme a las facultades que otorga la Ley N° 14.547.
+
+Puntualmente respecto de la baja patrimonial, desea saber cuál es el procedimiento que debe llevarse a cabo, teniendo en cuenta que si bien estos bienes dejaron de tener la calidad de vehículos (desde su baja registral) aún poseen algún valor monetario; tratamiento que el RAFAM otorga a los bienes de rezago a consideración del HTC; si los bienes deben llevar el mismo número de inventario u otro distinto. También consulta acerca del valor contable y patrimonial con que se registrarán estos bienes y si deben incluirse dentro del nomenclador como Bienes de Uso.
+
+Por otra parte, y  específicamente acerca de la compactación vehicular, plantea cuál sería el mecanismo de contratación admisible para aquellas empresas metalúrgicas que compactan y disponen del material de rezago; y finalmente, señalando que podría existir por parte de la empresa -de acuerdo a la contratación efectuada-  el reintegro de una suma dineraria y por peso,  consulta si dicha adición podría ser reinvertida en el sistema.
+
+Respuesta: El Relator de la Delegación Zona II Quilmes de este Organismo y la Oficial Letrada de la misma Delegación, emiten extenso dictamen reseñando, analizando y definiendo fundadamente las inquietudes planteadas, indicando la normativa legal aplicable y proponiendo criterios a adoptar en relación al tema, tanto contables como legales.
+
+Compartiendo plenamente las conclusiones vertidas en los dictámenes enunciados en el párrafo anterior -que dan contestación a las inquietudes presentadas-, esta Secretaria se remite y da por reproducidos los mismos, en honor a la brevedad.
+
+Delegación Zona II: Relator
+
+&quot;Me dirijo a Ud., a fin de remitir para su consideración y, en su caso, elevación a la Secretaría de Consultas y Dictámenes, el presente informe elaborado en torno a la consulta efectuada por la Subcontadora Mónica Ponce de la Municipalidad de Municipalidad de Florencio Varela, designada a cargo de la Dirección General de Contaduría conforme el Decreto Nº 166/16 (en cumplimiento con la formalidad dispuesta por el artículo 21 del Reglamento Interno del Honorable Tribunal de Cuentas, modificado por Resolución N°450/11).
+
+A través de la misma, se solicita información y opinión de éste Organismo respecto de:
+
+PLANTEO DE LA CONSULTA:
+
+ 
+
+El presente planteo de consulta puede ser segmentado en dos tramos bien diferenciados:
+
+
+	Relacionado Específicamente con la BAJA PATRIMONIAL de los vehículos irreparables y su posterior compactación, todo conforme a los interrogantes planteados según prosigue:
+
+
+
+	¿Cuál es el procedimiento que debe llevarse a cabo, teniendo en cuenta que si bien estos bienes dejaron de tener calidad de vehículos (desde su baja registral), aún poseen valor monetario?
+
+
+RESPUESTA:
+
+Se estima prudente recomendar que para el tratamiento de los Bienes Patrimoniales con las características del caso planteado, se debe aplicar en forma armónica lo establecido por el andamiaje normativo que según su anticuación, existencia y vigencia es el siguiente:
+
+1)Normas para el Recuento, Valorización, Identificación y ´Registro de Bienes Patrimoniales pertenecientes a las Municipalidades de la Provincia de Buenos Aires que suministra el Ministerio de Gobierno. 
+
+
+	Concepto General:
+
+
+ A la luz de lo planteado en este punto por la Comuna, estimamos importante efectuar una consideración relacionada con el concepto asignable a los rodados que se dan de baja, toda vez que puede ocurrir que los mismos sean: Bienes Fuera de Uso (Apartado V. b) de las Normas para el Recuento, O Rezagos, desechos, desperdicios, descarte (Apartado V.c) de las mismas normas.
+
+
+	Baja de Tales Bienes:
+
+
+En caso de la baja de tales bienes, para considerarlo operativamente y bajo la interpretación de la Doctrina producida por el H. Tribunal de Cuentas de la Provincia de Buenos Aires, se estima aplicable en su parte pertinente la consulta Expediente 4024-140/06 Municipalidad de Colón de fecha 23/11/2006.
+
+
+	Mantenimiento en el Activo – Patrimonio Municipal:
+
+
+De mantenerse los bienes en el Patrimonio Comunal, corresponde aplicar el plexo normativo expuesto Ut-Supra, con las salvedades planteadas en el apartado VII)  Identificación de los Bienes.
+
+
+	Valor Asignable- Valuación:
+
+
+Con relación al valor asignable, se reputa como aplicable, el apartado VI. CRITERIO PARA VALUAR BIENES, inciso b) Muebles, sub inciso 5) Cuenta 6.1.0 – Bienes de Rezago que serán valorizados según probable valor de venta, pudiendo requerirse a tal fin, tasación oficial por peritos especializados.
+
+ 
+
+
+	Sistema de Administración de Bienes Físicos de las Disposiciones de Administración de los Recursos Financieros y Reales para los Municipios, en el marco del Artículo 3 del Decreto 2980/00.
+
+
+ 
+
+Se relaciona con el Sistema Contable mediante lo expuesto en el Capítulo 2. LAS INTERRELACIONES SISTEMICAS, apartado 2.3 RELACIONES CON EL SISTEMA DE CONTABILIDAD, inciso a) Segundo párrafo.
+
+ 
+
+
+	¿ Cuál es el tratamiento que el RAFAM otorga a los bienes de rezago a consideración del HTC?
+
+
+RESPUESTA:
+
+ 
+
+
+	Concepto General:
+
+
+Se interpreta con carácter amplio, que el RAFAM contempla las cuestiones relacionadas con los bienes alcanzados por esta consulta en los siguientes tramos del mismo:
+
+Sistema de Administración de Bienes Físicos:
+
+Capítulo 3.7) Concepto Contable de los Bienes, con referencia normativa complementaria en la Resolución 25/95 de la Secretaría de Hacienda de la Nación.
+
+
+	Codificación en el Plan de Cuentas:
+
+
+Analizada la posibilidad de exponer los bienes en desuso o rezago contablemente, corresponde como primera medida conceptualizarlo a nivel de Plan de Cuentas utilizado, por ello un desarrollo posible es el siguiente:
+
+1.2) ACTIVO NO CORRIENTE
+
+1.2.4) BIENES DE USO
+
+1.2.4.9) OTROS BIENES DE USO
+
+Posteriormente continuar con un mayor grado de identificación específica que se desprende del rango anterior
+
+1.2.4.9.1) Bienes en Desuso
+
+1.2.4.9.2) Rezagos y Asimilables.
+
+ 
+
+
+	Consideraciones Generales Sobre Bienes de Uso Inventariables:
+
+
+ 
+
+Los elementos a considerar para inventariar un bien de uso son aquellos que permiten determinar las características esenciales de los mismos. Por lo tanto, el primer elemento a considerar es su naturaleza, es decir, si se trata de un bien de uso o no.
+
+El segundo elemento importante que debe ser tenido en cuenta es su valor económico. Este es un parámetro  importante  a  considerar  a  fin  de  no  tener  inventariados  elementos  que,  por  su  valor individual, sean  insignificantes para poner  en  movimiento  el  circuito administrativo de  control de inventarios, máxime que se piensa en fijar un sistema de valuación y amortización de los mismos.
+
+El tercer elemento es su duración, no obstante la existencia de bienes que pueden tener una vida útil superior a un año pero que por su composición o por su uso, pueden ser objetos de roturas, desgaste o deterioros prematuros.
+
+El cuarto elemento es el destino, es decir un bien que por su naturaleza, por su valor económico y por su duración es un bien de uso, pero por su destino va a formar parte de un producto objeto de venta (bien de cambio), en cuyo caso deja de ser un bien de uso.
+
+Como conclusión general, se puede decir que los elementos que configuran el carácter de bien de uso de  una  determinada  cosa  son:  su  naturaleza,  que  define  la  calidad  en  primera  instancia (condición  necesaria  pero  no  suficiente),  el  valor  económico,  su  duración  y  su  destino  para determinar finalmente si tiene entidad suficiente para ser considerado como tal.
+
+ 
+
+
+	Deben llevar número de inventario? En caso afirmativo, es el mismo que tenía el bien o por el contrario, se deberá asignar otra numeración distintiva?
+
+
+ 
+
+Se interpreta que si el bien tiene su número de inventario, el mismo debe mantenerse aunque su característica de uso haya cambiado y salga de Inventario Productivo a Inventario Residual con el mismo número.
+
+Asimismo en su traslado dentro de la Comuna, debe procederse tal como se conceptualiza la Transferencia interna. Todo esto se encuentra tratado en Sistema de Administración de Bienes Físicos  CAPITULO II) MANUAL DE PROCEDIMIENTOS Y NORMAS PARA LA ADMINISTRACION DE BIENES DE USO.
+
+
+	CONSIDERACIONES GENERALES
+
+
+7.2) BAJA PATRIMONIAL
+
+7.2.4.2) BAJA POR TRANSFERENCIA INTERNA
+
+7.2.6) BAJA POR DESTRUCCION DESAPARICION ETCÉTERA.
+
+ 
+
+ 
+
+ 
+
+
+	¿Con que valor se registrarán de forma contable y de manera patrimonial?
+
+
+ 
+
+Con sustento en las normas que se interpretan como vigentes, para este punto de la consulta, se estima aplicable lo siguiente: Normas para el Recuento, Valorización, Identificación y ´Registro de Bienes Patrimoniales pertenecientes a las Municipalidades de la Provincia de Buenos Aires que suministra el Ministerio de Gobierno. apartado VI. CRITERIO PARA VALUAR BIENES, inciso b) Muebles, sub inciso 5) Cuenta 6.1.0 – Bienes de Rezago que serán valorizados según probable valor de venta, pudiendo requerirse a tal fin, tasación oficial por peritos especializados.
+
+ 
+
+
+	¿Deben incluirse dentro del nomenclador como Bienes de Uso?
+
+
+ 
+
+Se estima aplicable lo establecido en el Sistema de Administración de Bienes Físicos de las Disposiciones de Administración de los Recursos Financieros y Reales para los Municipios, en el marco del Artículo 3 del Decreto 2980/00.
+
+ 
+
+1.2) ACTIVO NO CORRIENTE
+
+1.2.4) BIENES DE USO
+
+1.2.4.9) OTROS BIENES DE USO
+
+Posteriormente continuar con un mayor grado de identificación específica que se desprende del rango anterior
+
+1.2.4.9.1) Bienes en Desuso
+
+1.2.4.9.2) Rezagos y Asimilables.
+
+ 
+
+
+	Relacionado específicamente con la Compactación Vehicular:
+
+
+ 
+
+Sobre el resto de la consulta, Compactación Vehicular, se considera prudente recomendar la toma de conocimiento e intervención de la Oficial Letrada de Nuestra Delegación toda vez que en esta confluyen temas tanto contables propiamente, como también aristas temáticas de índole legal que hacen necesario contar con la pertinente  opinión letrada y luego con su giro definitivo a la Secretaría de Consultas y Dictámenes.&quot;
+
+Oficial Letrado:
+
+&quot;Me dirijo a Ud., conforme el pase efectuado por el Relator Cr. Gandini, a fin de remitir para su consideración y, en su caso, elevación a la Secretaría de Consultas y Dictámenes, el presente informe elaborado en torno al punto b) de la consulta efectuada por la Subcontadora Mónica Ponce de la Municipalidad de Municipalidad de Florencio Varela, designada a cargo de la Dirección General de Contaduría conforme el Decreto Nº 166/16 (en cumplimiento con la formalidad dispuesta por el artículo 21 del Reglamento Interno del Honorable Tribunal de Cuentas, modificado por Resolución N°450/11).
+
+ 
+
+I.-CONSULTA:
+
+A través de la misma, se solicita la opinión de éste Honorable Tribunal de Cuentas respecto de diversas inquietudes que giran en torno a:
+
+ b)Compactación vehicular:
+
+1) ¿Cuál sería el mecanismo de contratación admisible para aquellas empresas metalúrgicas que compactan y disponen del material de rezago? Adjuntan copia de convenio e informe emitido por la Subsecretaría de Seguridad Vial y Movilidad Urbana.
+
+2) Según la modalidad de contratación apropiada, existe por parte de la empresa contratada el reintegro de una suma dineraria y por peso (según los aranceles de mercado es un monto determinado por tonelada compactada), dicha adición podría ser destinada a ser reinvertida en el sistema?
+
+3) Teniendo en cuenta que el proceso de destrucción será aplicado para los rodados municipales en condiciones irreparables, la consulta versa con relación a la operatoria descripta precedentemente y si la misma sería motivo de observaciones por parte de éste H.T.C.
+
+           
+
+II.-ANTECEDENTES:
+
+En la mentada consulta se acompaña expediente nro. 4037-2896-S-16.
+
+A fs. 1 se requiere la baja registral y patrimonial de dos dominios (vehículo oficial y ambulancia de traslado). En ambos casos la solicitud se sustenta en que el estado de los mismos es obsoleto y su reparación tiene altos costos.
+
+A fs. 2 obra copia de título del dominio AVW736, cuya titularidad se encuentra en cabeza de la Municipalidad de Florencio Varela. No se encuentra adunado título de propiedad del dominio DJR696.  
+
+A fs. 34 y 35 se encuentran agregados los formularios 04 de solicitud de baja de los automotores, sin que en dichos formularios conste la leyenda “BAJA DEL AUTOMOTOR” que se estampa al culminar con el procedimiento de solicitud de baja, conforme las normas dictadas por la DNRPA, Título II, Cap. III, Sección 5º, art. 5 inc. f) que reza: “En el caso de baja del automotor por las causales contempladas en el arti?culo 1o, inciso a), entregar al peticionario el triplicado de la Solicitud Tipo haciendo constar en el rubro “Observaciones” la siguiente leyenda: “BAJA DEL AUTOMOTOR”.
+
+Asimismo, se acompaña expediente nro. 4037-4689-S-16.
+
+A fs. 1, se detalla la documentación incorporada en dicho expediente, relativa al tratamiento del problema que genera para la Comuna la acumulación de vehículos en depósitos municipales y el procedimiento que sería viable para su compactación.
+
+A fs. 4 y ss. se elabora un resumen de la normativa que atiende a la cuestión planteada. Se señala a la Ley Nacional Nº 26.348, Decreto Nº 993/08 y Resoluciones del Ministerio de Justicia Nº 442/09 (crea el PRO.NA.COM) y 2143/09. Allí, se indica que para aclarar la aplicabilidad al distrito de dicha normativa, el área operativa del programa mencionado les envió documental que les sería de utilidad para poder implementar el sistema, iniciándolo con el dictado, por parte del Municipio, de una Ordenanza de adhesión. Dicha Ordenanza ha sido sancionada bajo el número 8682/15.
+
+Por otra parte, se hace mención de la Ley Provincial Nº 14.547, Decreto Municipal por medio del cual el Intendente delega las funciones encomendadas por la ley mencionada a la Subsecretaría de Seguridad Vial y Movilidad Urbana y el protocolo de actuación formulado por esa Subsecretaría para aplicar dicha ley.
+
+Asimismo, informa que se encuentra en proceso la celebración de un convenio con la UNAJ para la realización de los informes técnicos que requieren los materiales a compactar, para evaluar su aptitud para rodar y su posible afectación al medio ambiente así como un sistema informático que resguarde la información obtenida, automatice la gestión del sistema y permita el acceso de los usuarios a la información sobre los vehículos.
+
+Se indica que para proceder a la compactación se seleccionarán autopartes, piezas, rezagos, cascos o restos de vehículos que se consideren chatarra, o vehículos que por su estado no se consideren aptos para rodar, o aún siendo aptos para rodar impliquen un peligro real e inminente para la salud o el medio ambiente.
+
+Una vez seleccionado el material a afectar, en caso de que los vehículos posean propietarios identificables se torna imprescindible, tanto para la Ley provincial Nº 14.547 como para la Resolución Nacional Nº 442/09 y Nº 2143/09, intimar a quién figure como titular registral del vehículo o a terceros interesados, a fin de que se presenten a ejercer sus derechos.
+
+Señala que la diferencia esencial entre ambos sistemas normativos (nacional y provincial) radica en la intervención de Entidades de Bien Público en el proceso de compactación, tanto para su gestión como para la obtención de beneficios, lo que se encuentra previsto, esto último, en el Convenio Tipo de entrega de bienes entregado por las autoridades del PRO.NA.COM. Aduce que si bien resulta loable el destinar los ingresos de la compactación a ese tipo de entidades, se critica la circunstancia de poner bajo la responsabilidad de esas entidades, si bien compartida con las municipales, la de gestionar los servicios de compactación, teniendo en cuenta la falta de conocimientos especiales en la materia, así como el hecho de tener que correr con los gastos en que se incurra en las primeras etapas.
+
+Sostiene que la Ley Provincial Nº 14.547 soluciona en mejor medida el proceso de compactación, toda vez que garantiza el derecho de defensa de los titulares de los bienes y el cumplimiento de pautas ambientales en las tareas, delegando el funcionamiento del sistema en los Departamentos Ejecutivos municipales.
+
+Paso seguido realiza una descripción del procedimiento que debería llevarse a cabo conforme la ley mencionada.
+
+En cuanto a las modalidades de contratación entiende que debería seguirse los estándares ya fijados por la Oficina de Compras municipal, en los términos del art. 31 y ss del Reglamento de Contabilidad, así como también las recomendaciones que resulten aplicables al caso municipal y que fueran expuestas en el Decreto Provincial 80/07 por el cual se aprobó el “Pliego Tipo de Condiciones Particulares para la Contratación del Servicio de Descontaminación, Desguace, Clasificación, Compactación, Destrucción y Disposición Final de Vehículos y/o Autopartes de la Provincia de Buenos Aires” así como las “Especificaciones Técnicas Básicas para la Contratación del Servicio de Descontaminación, Desguace, Clasificación, Compactación, Destrucción y Disposición Final de vehículos y/o Autopartes de la Provincia de Buenos Aires”.
+
+En cuanto a las modalidades de contratación entiende que dependerán de los valores que insuma la tarea, en los términos del art. 151 de la LOM y la resolución que actualiza los montos respectivos.
+
+Por último, hace alusión a que la compactación sólo podrá estar a cargo de aquel que se encuentre inscripto en el Registro Único de Prestadores de Servicios de Compactación de la Provincia, conf. Decretos Nº 1980/06 y 80/07 y cumpla con lo normado en el art. 16 de la Ley 14.547.
+
+Concluye en solicitar la opinión de este Órgano de control respecto de la propuesta que acompañan como anexo III, el Dictamen de Secretaría Legal, la nueva formulación de la propuesta y como Anexo IV la opinión de la Subsecretaría respecto del convenio reformulado.
+
+A fs. 12/45 obra copia de la normativa apuntada supra, a fs. 46/62 obra protocolo de la Ley 14.547 y en las fojas restantes lo mencionado en el párrafo precedente.
+
+ 
+
+III.-RESPUESTAS:
+
+Compactación vehicular:
+
+En punto a este tema, cabe aclarar que corresponde distinguir si se trata de vehículos que se encuentran en depósitos municipales a causa de infracciones de tránsito o faltas o debido a su retiro de lugares de dominio público, de aquellos vehículos de propiedad del Municipio adquiridos para uso oficial.
+
+En el primer caso, se deberá aplicar la Ley 14.547, toda vez que se trata de una materia de competencia local que no ha sido delegada expresamente en las autoridades nacionales, conforme los parámetros dados por nuestra Constitución Nacional.
+
+Dicha norma provincial regula en su artículo 1º el ámbito de aplicación, refiriéndose a los casos mencionados al comienzo, señalando como autoridad de aplicación a cada Departamento Ejecutivo municipal (art 2º), normando lo relativo a la compactación en los arts. 15 y 16 y lo atinente a la registración, aptitud para rodar y valuación en los arts. 18 a 20. Disponiendo en el art. 20, que la Autoridad de aplicación deberá informar al Registro Nacional de la Propiedad Automotor en todos los casos que se aplique alguno de los procesos y procedimientos dispuestos por la norma.
+
+En punto a ello, se aconseja la elaboración de la reglamentación pertinente, dictada por la Autoridad de Aplicación, que conforme los parámetros dados por la norma enunciada precedentemente regule todo el procedimiento con las diversas variantes que puedan presentarse.
+
+Cabe tener en cuenta, al momento de la elaboración del procedimiento antes referido que no correspondería el procedimiento propuesto en el punto 12 de  fs. 10 del expediente 4037-4689-S-16, toda vez que la ley 14.547 expresamente excluye de su aplicación a los vehículos involucrados en casusa penales o cuyo motor o chasis se encuentren adulterados. En dichos casos, se deberá dar aviso a la autoridad provincial competente a fin de que dé cumplimiento al procedimiento reglado por el art. 32 de la Ley 13.434.
+
+En cuanto a los vehículos de propiedad del Municipio adquiridos para uso oficial se dará tratamiento en el punto 3) del presente.
+
+Respecto de los interrogantes planteados en la consulta, a saber:  
+
+
+	¿Cuál sería el mecanismo de contratación admisible para aquellas empresas metalúrgicas que compactan y disponen del material de rezago? Adjuntan copia de convenio e informe emitido por la Subsecretaría de Seguridad Vial y Movilidad Urbana.
+
+
+El procedimiento de contratación debe llevarse a cabo de acuerdo al art. 151 y ss. y concordantes del Decreto-Ley 6769/58, art. 156 y ss. del Reglamento de Contabilidad y Disposiciones de Administración para las Municipalidades de la Provincia de Buenos Aires art. 97 y ss. de las Disposiciones de Administración de los Recursos Financieros y Reales para los Municipios, aprobadas por Decreto 2980/00.
+
+Es decir, que conforme el monto de la contratación deberán efectuarse los distintos procedimientos que se encuentran regulados en el articulado mencionado.
+
+Al respecto, se aconseja llevar adelante la contratación mediante licitación pública por ser el procedimiento que mayor garantiza la igualdad, concurrencia y publicidad.
+
+Para la elaboración de las normas que rijan dicho procedimiento podrá tomarse como antecedente, con las adaptaciones correspondientes al ámbito local, el Decreto Provincial Nº80/07 que aprueba el “Pliego Tipo de Condiciones Particulares para la Contratación del Servicio de Descontaminación, Desguace, Clasificación, Compactación, Destrucción y Disposición Final de Vehículos y/o Autopartes de la Provincia de Buenos Aires” y las “Especificaciones Técnicas Básicas para la Contratación del Servicio de Descontaminación, Desguace, Clasificación, Compactación, Destrucción y Disposición Final de Vehículos y/o Autopartes de la Provincia de Buenos Aires”.
+
+Cabe destacar que el art. 7 de dicha norma prevé la elaboración de un informe o programa en donde se exprese la cantidad de vehículos, chatarras, etc., almacenada en los depósitos y su valor aproximado en toneladas. Dicho documento, que debiera efectuarse en forma previa al procedimiento de compactación, permitirá contar con la información necesaria a fin de adoptar el procedimiento más eficiente.
+
+En cuanto al modelo de convenio adjuntado a fs. 70/72 del expediente 4037-4689-S-16, en primer lugar se destaca que el mismo debe ser celebrado una vez que se adopte el procedimiento de selección del co-contratista que estipulan las normas reseñadas al comienzo.
+
+De allí que, en consonancia con lo expuesto a fs. 75 del expediente mencionado precedentemente, se sugiere, en forma previa a llevar a cabo el procedimiento que marca la Ley 14.547, recabar información a las empresas -inscriptas en el Registro que regula el art. 16 de dicha normativa- relativa a la operatoria en el mercado, a fin de poder determinar con mayor precisión los elementos contractuales en cuanto al objeto, monto, plazo, así como también cualquier otra estipulación que pueda derivarse de un conocimiento más acabado de dicho proceso.
+
+Cabe aclarar, que atento no resultar aplicable la Ley N° 26.348 y, por lo tanto, la Ordenanza de adhesión, en caso de optar por donar a entidades de Bien Público el producido que pudiera existir al finalizar el proceso de compactación, se deberá dar cumplimiento con el art. 56 del Decreto-Ley 6769/58.
+
+ 
+
+2) Según la modalidad de contratación apropiada, existe por parte de la empresa contratada el reintegro de una suma dineraria y por peso (según los aranceles de mercado es un monto determinado por tonelada compactada), dicha adición ¿podría ser destinada a ser reinvertida en el sistema?
+
+En caso de que ello ocurra, el art. 3 de la Ley 14.547 establece que constituyen recursos específicos de la Autoridad de Aplicación, afectados al presupuesto de gastos e inversiones los vehículos secuestrados que no hubieren sido reclamados por su titular dentro de los plazos previstos en el art. 4.
+
+Por lo tanto, no existiría óbice legal para que, en caso de existir un reintegro de suma dineraria, la Autoridad de Aplicación pueda disponer de la misma a fin de reinvertirla en el mentado proceso, conforme se estipule en la ordenanza presupuestaria municipal.
+
+3) Teniendo en cuenta que el proceso de destrucción será aplicado para los rodados municipales en condiciones irreparables, la consulta versa con relación a la operatoria descripta precedentemente y si la misma sería motivo de observaciones por parte de éste H.T.C.
+
+Para el caso de estos bienes, atento la ausencia de tratamiento expreso en el Decreto-Ley Nº6769/58, dicha cuestión podría ser regulado por un Decreto emanado del Departamento Ejecutivo, toda vez que se trata de una competencia implícita que se desprende del art. 107 del mencionado cuerpo normativo.
+
+En ese entendimiento, nada obsta que la normativa que se aconseja dictar para regular el procedimiento de compactación en los supuestos previstos por la Ley 14.547, contenga un apartado dedicado a dicha cuestión.
+
+Sin perjuicio de ello, cabe hacer mención que el art. 15 del Decreto Provincial Nº 1980/06 (reglamentario del Dec-Ley 7543/69, Orgánica de fiscalía de Estado) que regula lo relativo a los depósitos fiscales, vehículos, automotores, chatarra, subasta, compactación, invita a los Poderes Legislativo y Judicial y a los Municipios de la Provincia de Buenos Aires, a adherir a las disposiciones de dicho régimen. Con lo cual, también se podría celebrar un convenio con las autoridades provinciales competentes a fin de aplicar en el Municipio el procedimiento implementado por dicha normativa.&quot;
+"/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/28020/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>27/03/2015</td>
+      <td>[079.0] Municipalidad de MORON</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACIONES [PRECIOS CUIDADOS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            ulta acerca del encuadre de tal programa en lo normado tanto por el artículo 70 <font class="text-warning"><strong>inc.</strong></font> a) de la Ley de Obras Públicas Nº 6021, como por el artículo <font class="text-warning"><strong>156</strong></font> <font class="text-warning"><strong>inc.</strong></font> 10) de la Ley Orgánica Municipal.
+
+Entiende el consultante que los precios de los bienes incluidos en el programa citado, resultan inferio
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25824/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: En relación al Programa Nacional “Precios Cuidados”, a efectos de la adquisición de insumos destinados a obras por administración que se están desarrollando a través de la Subsecretaría para la Producción Social del Hábitat del municipio.
+
+Concretamente consulta acerca del encuadre de tal programa en lo normado tanto por el artículo 70 inc. a) de la Ley de Obras Públicas Nº 6021, como por el artículo 156 inc. 10) de la Ley Orgánica Municipal.
+
+Entiende el consultante que los precios de los bienes incluidos en el programa citado, resultan inferiores respecto a aquellos que no lo están, considerando que reúnen la condición de precios oficiales, constituyendo un valor corriente en plaza y resultando así su oferta la más conveniente a los intereses municipales, circunstancias que acreditan las previsiones de las normas legales enunciadas en el primer párrafo, a fin de efectuar las compras en forma directa.
+
+Respuesta: En primer lugar, corresponde citar que el artículo 149 de la LOM determina que las disposiciones de la Ley de Obras Públicas Nº 6021 rigen de manera supletoria en todos los aspectos que no estén expresamente contemplados en la Ley Orgánica Municipal, ni en las Cláusulas Generales y Particulares de los Pliegos de Bases y Condiciones.
+
+Por su parte, el artículo 135 de la Ley Orgánica de las Municipalidades y el 122 de las Disposiciones de Administración del Decreto 2980/00, prevén que las adquisiciones y contrataciones de insumos necesarios para las obras efectuadas por administración, deben ser realizadas de conformidad con los artículos 151 y 156 de la LOM.
+
+El artículo 156 inciso 10) de la LOM establece el régimen de excepción a lo prescripto por el artículo 151 sobre licitaciones y concursos, admitiendo la adquisición directa cuando se trate de bienes de valor corriente en plaza en condiciones comerciales de oferta más conveniente cualquiera sea su monto, previa comprobación y certificación del Secretario del ramo y del Contador Municipal acerca de que la operación se encuadra en el nivel de precios y en las condiciones habituales del mercado, resultando la omisión de tales circunstancias imputable al titular del Departamento Ejecutivo (artículo 161 del Reglamento de Contabilidad).
+
+Ahora bien, respecto al Programa “Precios Cuidados”, coincidiendo con el dictamen de la Delegación Zonal interviniente (se adjunta a fojas 19/20), las normas referidas al mismo, esto es las Resoluciones N° 2/14  y 20/14 de la Secretaría de Comercio, determinan una mecánica de administración de precios para productos de consumo masivo a fin de asegurar su abastecimiento con precios ciertos y transparentes, determinados a través de acuerdos entre el Estado y las principales empresas proveedoras y comercializadoras de aquellos, con el objeto de considerar toda la cadena de valor y las variaciones de costos. De tal modo, se interpreta que el Programa asume la posible existencia de precios en el mercado, que pueden ser inferiores a los ofertados. A mayor abundamiento, de los antecedentes documentales acompañados por el presentante (información de páginas oficiales), surge que los precios cuidados no son ofertas, es decir no son siempre los precios más económicos, son valores de referencia que permiten efectuar comparación de precios en bienes de similar calidad, evaluar diferencias y facilitar la posibilidad de elección de productos. 
+
+Por ende y en función de todo lo manifestado, esta Secretaría señala que la sola consideración de “adquisición de bienes incluidos en el Programa Precios Cuidados”, no es suficiente para dar por acreditadas las circunstancias que permitan habilitar la excepción prevista en el artículo 156 inciso 10) de la LOM, debiéndose cumplimentar la comprobación y certificación del Secretario del ramo y del Contador acerca de que la operación se encuadra en el nivel de precios y en las condiciones habituales de mercado, para adquirir bienes al valor corriente en plaza en las condiciones de oferta más convenientes.   
+
+Por otro lado y más allá de la aclaración efectuada en párrafos anteriores en cuanto a la aplicación supletoria de la Ley de Obras Públicas en el caso, estos mecanismos de negociación de los precios y de hecho la existencia en el mercado de precios mayores a los fijados en el Programa, desvirtúan la consideración de “precio oficial”, entendido como tal al establecido por autoridad reguladora como límite máximo para la venta del producto."/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25824/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>22/09/2014</td>
+      <td>[025.0] Municipalidad de CORONEL DORREGO</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      LICITACION PUBLICA [CONSTRUCCIóN DE VIVIENDAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            ptación. En circunstancias distintas como el caso que nos ocupa dado que la oferta única no se ajusta al pliego de contratación, si se insistiera con la compra, deberá efectuarse un segundo llamado, fracasado este podrá recurrirse a la excepción prevista en el artículo <font class="text-warning"><strong>156</strong></font> <font class="text-warning"><strong>inc.</strong></font> 5 de la LOM. 
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/25382/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Sobre el tratamiento legal que ha de implementar, con motivo del llamado a licitación pública para la ejecución de la obra “Construcción de 24 Viviendas – Programa Buenos Aires Hogar”.
+Concretamente, la consulta se refiere a si es posible que la Comuna proceda a adjudicar la obra a la única oferta presentada, la cual no se ajusta al pliego de contratación, pero según los fundamentos vertidos la misma resulta de evidente conveniencia a los intereses municipales.
+ 
+Respuesta: Específicamente, en el caso traído a consulta, conforme lo manifiesta el Intendente Municipal, el oferente no ha dado cumplimiento con lo que establece el pliego en cuanto a la capacidad económica – financiera de obra.
+Se anexa a las actuaciones únicamente el pliego de la licitación en cuestión, el cual establece, dentro de sus cláusulas, la forma en que la Comuna debe medir tanto la capacidad técnica como la económica-financiera de los proponentes.
+Asimismo, estipula que una Comisión Evaluadora efectuará el estudio y evaluación de las ofertas (Cláusulas 3.7 del Pliego de Condiciones Generales), para lo cual a los efectos de determinar la capacidad económica y financiera de los oferentes analizará los índices de liquidez – solvencia – capital propio – endeudamiento y activos líquidos con la información de los balances y cuadros de resultados de los últimos tres ejercicios contables consecutivos.
+Los oferentes para calificar deberán obtener un porcentaje igual o superior a 50 puntos, debiendo además obtener puntaje superior a cero en todos y en cada unos de los apartados (Cláusula 2.5 del Pliego de Bases y Condiciones General y Anexo 1 del Pliego de Bases y Condiciones Particulares). Es importante destacar que dentro de las causales de exclusión que determina el artículo 9° del Pliego de Condiciones Particulares, se encuentra previsto no haber obtenido la puntuación requerida, con independencia de la capacidad financiera que los proponentes tuvieran asignada por el Registro de Licitadores (Sección Obras), la cual deberá cubrir el monto necesario para responder al número de obras cuya adjudicación se aceptará.
+De acuerdo al artículo 114 de las Disposiciones de Administración del Decreto 2980/00 y 185 del Reglamento de Contabilidad, el carácter de oferta solo será conferido a las que se ajusten a las condiciones de la licitación, debiendo la adjudicación recaer en aquella más conveniente que se ajuste a lo pedido. Tales preceptos son recogidos en el pliego de la contratación traído a consulta, el cual establece que la “adjudicación recaerá sobre la propuesta que sea más conveniente a los intereses fiscales, entre aquellas que se ajusten en un todo a las Bases y Condiciones establecidas para la licitación”. El artículo 155 de la LOM debe aplicarse para el caso en que dentro del proceso licitatorio quede una sola oferta, la cual a su vez debe estar de acuerdo con lo que se estableció en el pliego de contratación y que la misma sea de evidente conveniencia a los intereses municipales, debiendo intervenir el H. Concejo Deliberante para su aceptación. En circunstancias distintas como el caso que nos ocupa dado que la oferta única no se ajusta al pliego de contratación, si se insistiera con la compra, deberá efectuarse un segundo llamado, fracasado este podrá recurrirse a la excepción prevista en el artículo 156 inc. 5 de la LOM. "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/25382/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>30/08/2005</td>
+      <td>[074.0] Municipalidad de LA MATANZA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      OBRA PUBLICA [EXCEPCIÓN - ART. 156 INC. 1]
+      &nbsp;  
+</td>            
+<td width='350px'>
+            co en especial en barrios carenciados, encuadrando la misma dentro de la excepción al régimen de licitaciones y/o concursos que prevé el artículo <font class="text-warning"><strong>156</strong></font> inciso 1) de la Ley Orgánica de las Municipalidades (venta exclusiva), por tratarse de una contratación con la empresa EDENOR distribuidora de e
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1253/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si es factible la ampliación del sistema de alumbrado público en especial en barrios carenciados, encuadrando la misma dentro de la excepción al régimen de licitaciones y/o concursos que prevé el artículo 156 inciso 1) de la Ley Orgánica de las Municipalidades (venta exclusiva), por tratarse de una contratación con la empresa EDENOR distribuidora de energía eléctrica de la jurisdicción, donde se pretende instalar el tendido sobre los postes de la red de la concesionaria. 
+
+Respuesta: En la nota de elevación se manifiesta que dicha instalación se realizaría de manera económica y eficiente y que la empresa, por la naturaleza propia de su quehacer, cuenta con una red de distribución de energía para el alumbrado público de su propiedad, y de acuerdo a los términos del contrato de concesión se constituye en única y exclusiva responsable de la operación de mantenimiento de la misma, pudiendo el municipio utilizar los postes de la red para la fijación de los brazos con artefactos lumínicos. Esta utilización de la infraestructura haría reservar para sí la ejecución de las tareas que demande la instalación y conexión a la red eléctrica del equipamiento  de alumbrado provisto por la Comuna. 
+Además expresa el señor Intendente que el abaratamiento en los costos, surgiría como consecuencia del aprovechamiento de la infraestructura de EDENOR.
+Por tratarse de una obra pública y no una contratación en los términos del artículo 151 de la Ley Orgánica de las Municipalidades, las disposiciones no prevén expresamente como excepción al régimen de licitación, la alternativa de poder adjudicarse directamente las obras públicas cuando medien razones de exclusividad por parte del contratista; sin embargo, la doctrina de este Organismo se ha valido de otras razones para facultar dicha modalidad de contratación, al tratar el caso planteado por la Delegación Azul, por Expte. 5300-4506/05, cuando la ejecución de la obra por razones específicamente técnicas y/o de conveniencia económica, debiera ser realizada por una única empresa. Si bien se trata de un caso diferente, se acompaña copia de la misma por ser consideradas de utilidad las argumentaciones plasmadas en dicho dictamen. 
+Para este caso puntual se entiende que si la empresa EDENOR, como concesionaria de la distribución de energía, cuenta con la exclusividad del uso de su infraestructura, como se pretende fundamentar en las presentes actuaciones, el municipio estaría facultado a contratar en forma directa con EDENOR S.A.
+Finalmente, se debe manifestar que la alternativa expuesta, corresponde ser estudiada y evaluada por la respectiva Delegación encargada del estudio de cuentas, como así también que los funcionarios responsables del área de obras públicas deberán justificar lo actuado en la implementación de dicha modalidad de contratación. "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1253/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+        <tr>
+      <td>11/04/2005</td>
+      <td>[061.0] Municipalidad de LA PLATA</td>
+      <td style="word-wrap: break-word; white-space: normal; max-width: 150px;">
+      CONTRATACION [ARTISTAS O CIENTIFICOS Y/O SUS OBRAS]
+      &nbsp;  
+</td>            
+<td width='350px'>
+             que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo <font class="text-warning"><strong>156</strong></font> <font class="text-warning"><strong>inc.</strong></font> <font class="text-warning"><strong>3</strong></font>° de la Ley Orgánica de las Municipalidades, dado que en este tipo de contrataciones es donde deben tenerse en cuenta de manera especial l
+       
+     
+     <a onclick="mostrarResumen('/sistemas/summun/busqueda/1062/resumen/ajax','Resúmen')">
+         <img  class="cursor" src="/sistemas/summun/bundles/summun/images/famfamfam/page_white_text.png" alt="Ver" title="Consulta: Si la contratación con una Organización de Consultores S.A.,  para la organización de una Exposición de la Ciudad de La Plata que tratará sobre el potencial industrial, comercial, cultural y turístico de la región, encuadra jurídicamente en lo dispuesto por el artículo 156 inc. 3° de la Ley Orgánica de las Municipalidades, dado que en este tipo de contrataciones es donde deben tenerse en cuenta de manera especial las calidades técnicas, artísticas y científicas del prestador en razón de obtener los mejores resultados.  
+
+Respuesta: El artículo en cuestión prevé la excepción de la aplicación del régimen establecido por el artículo 151 de la Ley Orgánica de las Municipalidades teniendo en cuenta los conocimientos del prestador en la ejecución de ciertas cosas y/o sus obras.    
+La extensa lista de eventos organizados por los integrantes de la consultora que acredita más de 30 años de experiencia en la organización de emprendimientos de las características como el que es intención de la Comuna encarar, se entiende que son antecedentes suficientes para encuadrar a la citada organización dentro de las exigencias que prevé la aplicación de la excepción prevista por el artículo 156 inciso 3° de la Ley Orgánica Municipal.
+              "/>
+     </a>
+     </td>      <td>
+        <a href="/sistemas/summun/busqueda/doctrinaconsulta/1062/show"> <img src="/sistemas/summun/bundles/summun/images/famfamfam/magnifier.png" alt="Ver" title="Ver"/></a>  
+      </td>
+    </tr>
+      </tbody>
+</table>
+ <div class="pull-right">Total de Registros: <strong>14</strong></div>
+ 
+<div class="pagination">
+    <ul>
+    
+    
+                        <li class="active"><a href="#">1</a></li>
+        
+                        <li>
+                <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">2</a>
+            </li>
+        
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;</a>
+        </li>
+    
+            <li>
+            <a href="/sistemas/summun/busqueda/doctrinaconsulta/filter?page=2">&rarr;&rarr;</a>
+        </li>
+        </ul>
+</div>
+
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="es" class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html lang="es" class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="es">
+<!--<![endif]-->
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	COMPR.AR - Portal de Compras Públicas de la República Argentina
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="JavaScript/Generica.js" type="text/javascript"></script>
+    
+    <style>
+        #logoModernizacion {
+    	    margin-top: 10px;
+        }
+        .botonAtajo {
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 20%;
+        float: left;
+        }
+
+        @media only screen and (max-width:768px) {
+            .botonAtajo {
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                float: left;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .botonAtajo {
+                min-height: 1px;
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 50%;
+                float: left;
+            }
+        }
+    </style>
+<link href="../App_Themes/bastrap/bootstrap.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/bootstrap-multiselect.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/font-awesome.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/integracion-bp.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/styles-2.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/styles-seac-2.min.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <!--[if lt IE 9]>
+        <script src="/App_Themes/bastrap/scripts/html5shiv.min.js"></script>
+        <script src="/App_Themes/bastrap/scripts/respond.min.js"></script>
+    <![endif]-->
+    
+
+<header class="navbar-primary navbar-top">
+    <div class="container">
+        
+        <div class="row">
+
+                <a href="/Default.aspx" id="ctl00_CtrlHeader_linkLogoBAC" onclick="" style="margin-top:30px" class="navbar-brand logoBac"></a>
+
+                <div id="logoModernizacion">
+                    
+                </div>
+
+        </div>
+    </div>
+</header>
+
+    <form method="post" action="./GenerarActaAperturaBastrap.aspx?qs=%7cc3sc8YiU%7crolrc9OrzYVlVCv%7cltaCRS%2f9sz9A3UxDCrvGK9a5lx%7cuAuY%2fCHTY6PRrEybvAVkUNVXU2wMcRVr5Onub3B%2fyLzH%7ckP4m8WHsSbBbRZhahbXOUSU5dSABKXZYk71XiJVwC6FX8xx%7czxqtU1pdL7XBbI4b%7cNKR6JBu33ugQoJJ5R7XTShygW%2fTwT7yTJwli4RpKaVD23oyY4fCCzsM3Zf9JAsel7LH9H4S61e5MlOF85AoV%2foNZkB5mjyzha7EpC3Hl6pVQsIIH5uBgegBUNqW1u4UXrv41VvtQv%7cQCqKSNcSlOnkk%7cTVitLwZejpNpo3q4%3d&amp;AspxAutoDetectCookieSupport=1" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHIkIAwvqk5sDLFxdCntH3FSodH-wG9KL7A4yjJiRuzvDiSddw2&amp;t=637939486428282627" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhhL0DIu0X3wSUqOAl1vjQLKkUGDOqeYW97sC8T9ftWm6Kb6hwXU_om87t2hH9M1M1AysmM-rdLD5GjOOpZD4Kay8W8PZntIt80tOnA-LsqN-BMK-bQ2&amp;t=125d5fef" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"es-AR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"$","NaNSymbol":"NuN","CurrencyNegativePattern":2,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinito","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":2,"PositiveInfinitySymbol":"Infinito","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a.m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135586000000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy hh:mm:ss tt","LongDatePattern":"dddd, dd\u0027 de \u0027MMMM\u0027 de \u0027yyyy","LongTimePattern":"hh:mm:ss tt","MonthDayPattern":"dd\u0027 de \u0027MMMM","PMDesignator":"p.m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"hh:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM\u0027 de \u0027yyyy","AbbreviatedDayNames":["dom","lun","mar","mié","jue","vie","sáb"],"ShortestDayNames":["do","lu","ma","mi","ju","vi","sá"],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":true,"NativeCalendarName":"calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yLrloimtGIA5sUyFkkiByDRGpvtI0b7uyZ5heKgHpI2RzAhKtvEMAaB992jT18OGp6DkO4apkEEnX34gxi_C0y1jUksfhwiMVqaKlODLDX-nbRFM7IdCNlhoWQ9YosUcoTh6Tnw1&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Jw6tUGWnA15YEa3ai3FadJfdm9jVRbCpjSj5czfDJ_l6MsQpUkIt274jf5PJ1dKYJ31NQVoh_aFRN8nyvBprDHgE6RVCvqHRNx3x12aPfDH6pnBjr4bkMscP_-7tRVZK0cDcsA9jlvC5S8e3aRDYPDU4waQ1&amp;t=ffffffffe6d5a9ac" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0F0FC3CF" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$CtrlMenuPortal$logIn$updateModal','','tctl00$CtrlMenuPortal$logIn$ctl00',''], ['ctl00$CtrlMenuPortal$logIn$btnSolicitar',''], ['ctl00$CtrlMenuPortal$logIn$lnkConfirmar',''], 90, 'ctl00');
+//]]>
+</script>
+
+        <nav class="navbar-inverse">
+            
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="collapse navbar-collapse" id="nav">
+    <div class="container">
+        <div class="row">
+            <ul class="nav navbar-nav">
+                <li><a target="_blank" href="https://www.argentina.gob.ar/jefatura/innovacion-publica/oficina-nacional-de-contrataciones"><strong>Institucional</strong></a></li>
+                <li><a target="_blank" href="http://www.infoleg.gob.ar/?page_id=91"><strong>Normativa</strong></a></li>
+                <li><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>Capacitación</strong></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ComprasElectronicas.aspx?qs=uZmpNBcarZh/t6e8LDmVN|XFAS9B6k9ddqFj4heYwZ4=" id="ctl00_CtrlMenuPortal_lnkProveedoresInstructivos">Proveedores</a></li>
+                        <li><a href="/capacitacion.aspx">Organismos</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contactenos.aspx"><strong>Atención al usuario</strong></a></li>
+                
+                <li><a href="/Dictamen/Dictamen/Buscar"><strong>Material de apoyo</strong></a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                   
+                    <a id="lnkIngresar" href="../Login.aspx" style="cursor: pointer">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        <strong>Ingresar</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="JavaScript/Generica.js"></script>
+<script>
+
+    // Se guardan en un array el ClientInstanceName del popup. Si se usa varias veces el control se agregan varios
+    if (document.popups == undefined) {
+        document.popups = Array();
+    }
+
+    function ClosePopups() {
+        for (i = 0; i < document.popups.length; i++) {
+            this[document.popups[i]].Hide();
+        }
+        $('.modal-backdrop').remove();
+    }
+
+
+</script>
+
+
+<div class="modal" id="modalIngresar" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="ctl00_CtrlMenuPortal_logIn_updateModal">
+	
+                    <div id="ctl00_CtrlMenuPortal_logIn_divHeaderModal" class="modal-header">
+                        <a onclick="CloseModalIngresar();" id="ctl00_CtrlMenuPortal_logIn_lnkClose" class="close" data-dismiss="modal" aria-hidden="true" href="javascript:__doPostBack(&#39;ctl00$CtrlMenuPortal$logIn$lnkClose&#39;,&#39;&#39;)">&times;</a>
+                        <h2 class="text-center">
+                            <span id="ctl00_CtrlMenuPortal_logIn_lblHeader">Bienvenido</span>
+                        </h2>
+                        
+
+                    </div>
+                    <div id="ctl00_CtrlMenuPortal_logIn_divBodyModal" class="modal-body" data-backdrop="static" data-keyboard="false">
+                        
+                            <div class="row form-group">
+                                <div class="form-horizontal">
+                                    <div class="col-md-12">
+                                        
+
+<script >
+ 
+    function Validatorctl00_CtrlMenuPortal_logIn_txtUsername(val, args) {
+        var valid = ValidarControlVacio(val, args);
+
+        var id_attr = "#" + $(val).attr("id") + "G";
+        
+        if (valid) {
+            args.IsValid = true;
+            $(val).parent().removeClass('has-error').addClass('has-success has-feedback');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+        }
+        else {
+            args.IsValid = false;
+            $(val).parent().removeClass('has-success').addClass('has-error has-feedback');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            if (args["ErrorMessage"] != null)
+                $(val).text(args["ErrorMessage"]);
+        }
+    }
+</script>
+
+<input name="ctl00$CtrlMenuPortal$logIn$txtUsername$txtTextBox" id="ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBox" class="form-control" type="text" placeholder="CUIL / CUIT / Pasaporte" />
+<span id="ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxVG" class="glyphicon form-control-feedback"></span>
+<span id="ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV" class="control-label" style="display:none;">Verifique que el CUIT haya sido ingresado</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="form-horizontal">
+                                    <div class="col-md-12">
+                                        <span id="ctl00_CtrlMenuPortal_logIn_Label2" class="text">El número de identificación que ingrese debe ser el personal. No el del organismo o empresa.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
+
+                        
+
+                        
+
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="form-horizontal">
+                                <div class="col-md-12">
+                                    
+                                    <a id="ctl00_CtrlMenuPortal_logIn_lnkConfirmar" class="btn btn-primary pull-right" data-loading-text="Validando..." href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CtrlMenuPortal$logIn$lnkConfirmar&quot;, &quot;&quot;, true, &quot;vgLogin&quot;, &quot;&quot;, false, true))">Siguiente</a>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+</div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modalRecuperarCuenta" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="ctl00_CtrlMenuPortal_logIn_ctl00">
+	
+                    <div class="modal-header">
+                        <a onclick="CloseModalRecuperarCuenta();" class="close" data-dismiss="modal" aria-hidden="true" href="javascript:__doPostBack(&#39;ctl00$CtrlMenuPortal$logIn$ctl03&#39;,&#39;&#39;)">&times;</a>
+                        <h2 class="text-center">
+                            <span id="ctl00_CtrlMenuPortal_logIn_Label1">Recuperar contraseña</span>
+                        </h2>
+                    </div>
+                    <div class="modal-body" data-backdrop="static" data-keyboard="false">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    
+                                    
+                                    
+                                    <div id="ctl00_CtrlMenuPortal_logIn_divAdvertencia" class="alert alert-info"><strong>Importante:</strong> El correo electrónico debe ser el mismo que ingresó al sistema al momento de registrarse como usuario.</div>
+                                    <div class="row form-group">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12">
+                                                <input name="ctl00$CtrlMenuPortal$logIn$textBoxUserRecuperoContrasenia" id="ctl00_CtrlMenuPortal_logIn_textBoxUserRecuperoContrasenia" class="form-control" type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group ">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12">
+                                                
+
+<script >
+ 
+    function Validatorctl00_CtrlMenuPortal_logIn_txtMail(val, args) {
+        var valid = ValidarControlEmail(val, args);
+
+        var id_attr = "#" + $(val).attr("id") + "G";
+        
+        if (valid) {
+            args.IsValid = true;
+            $(val).parent().removeClass('has-error').addClass('has-success has-feedback');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+        }
+        else {
+            args.IsValid = false;
+            $(val).parent().removeClass('has-success').addClass('has-error has-feedback');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            if (args["ErrorMessage"] != null)
+                $(val).text(args["ErrorMessage"]);
+        }
+    }
+</script>
+
+<input name="ctl00$CtrlMenuPortal$logIn$txtMail$txtTextBox" id="ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBox" class="form-control" type="text" placeholder="Correo electronico" />
+<span id="ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxVG" class="glyphicon form-control-feedback"></span>
+<span id="ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV" class="control-label" style="display:none;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12">
+                                                
+
+<script >
+ 
+    function Validatorctl00_CtrlMenuPortal_logIn_txtMail2(val, args) {
+        var valid = ValidarControlReingresarEmail(val, args);
+
+        var id_attr = "#" + $(val).attr("id") + "G";
+        
+        if (valid) {
+            args.IsValid = true;
+            $(val).parent().removeClass('has-error').addClass('has-success has-feedback');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+        }
+        else {
+            args.IsValid = false;
+            $(val).parent().removeClass('has-success').addClass('has-error has-feedback');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            if (args["ErrorMessage"] != null)
+                $(val).text(args["ErrorMessage"]);
+        }
+    }
+</script>
+
+<input name="ctl00$CtrlMenuPortal$logIn$txtMail2$txtTextBox" id="ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBox" class="form-control" type="text" placeholder="Reingrese correo electronico" />
+<span id="ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxVG" class="glyphicon form-control-feedback"></span>
+<span id="ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV" class="control-label" style="display:none;">Verifique que el correo electrónico haya sido ingresado.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pull-right">
+                                <div class="col-md-12">
+                                    <a id="ctl00_CtrlMenuPortal_logIn_btnSolicitar" class="btn btn-success m-l-1 btn-sm" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CtrlMenuPortal$logIn$btnSolicitar&quot;, &quot;&quot;, true, &quot;vgRecuperar&quot;, &quot;&quot;, false, true))">Solicitar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+</div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function Loading(btn) {
+
+        if (Page_ClientValidate("vgLogin")) {
+            var idbuttonLogin = 'ctl00_CtrlMenuPortal_logIn_btnIngresar';
+            var $bar = $('#' + idbuttonLogin);
+            $bar.button('loading');
+        }
+
+    }
+
+    function OpenModalIngresar() {
+        $('#ctl00_CtrlMenuPortal_logIn_MensajeUsuario').hide();
+        $('#ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBox').val('');
+        $('#ctl00_CtrlMenuPortal_logIn_txtPassword_txtTextBox').val('');
+        $('#modalIngresar').modal('show');
+    }
+
+    function CloseModalIngresar() {
+        $('#modalIngresar').modal('hide');
+    }
+
+    function CloseModalRecuperarCuenta() {
+        $('#modalRecuperarCuenta').modal('hide');
+    }
+
+    function OpenModalRecuperarCuenta() {
+        $('#modalRecuperarCuenta').modal('show');
+    }
+
+    function LimpiarCampos() {
+        $('#ctl00_CtrlMenuPortal_logIn_txtUsuario_txtTextBox').val('');
+        $('#ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBox').val('');
+        $('#ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBox').val('');
+    }
+
+    function OcultarErrores() {
+        $('#ctl00_CtrlMenuPortal_logIn_divAdvertencia').show();
+        $('#ctl00_CtrlMenuPortal_logIn_divExito').hide();
+        $('#ctl00_CtrlMenuPortal_logIn_errValidacion').hide();
+    }
+
+    function RecuperarCuenta() {
+        CloseModalIngresar();
+        LimpiarCampos();
+        OcultarErrores();
+        OpenModalRecuperarCuenta();
+    }
+
+
+
+    function ValidarControlVacio(val, args) {
+        return args.Value.length != 0;
+    }
+
+
+    function ValidarControlEmail(val, args) {
+        var valid = false;
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+
+        if (args.Value.length == 0) {
+            args["ErrorMessage"] = "Verifique que el correo electrónico haya sido ingresado.";
+            return false;
+        }
+        else if (!re.test(args.Value)) {
+            args["ErrorMessage"] = "Verifique que el formato del correo electrónico sea válido.";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    function ValidarControlReingresarEmail(val, args) {
+        var valid = false;
+        var mailOriginal = "#" + $(val).attr("id").substring(0, $(val).attr("id").length - 1);
+        mailOriginal = mailOriginal.replace('2', '');
+
+        if (args.Value.length == 0) {
+            args["ErrorMessage"] = "Verifique que el correo electrónico haya sido reingresado.";
+            return false;
+        }
+        else if (args.Value != $(mailOriginal).val()) {
+            args["ErrorMessage"] = "Verifique que el correo electrónico haya sido reingresado correctamente..";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+</script>
+
+
+        </nav>
+        <div class="bg-white-1" style="padding-top: 5px; padding-bottom: 5px;">
+            <div class="container">
+                <div class="row">
+                    
+
+<script>
+    //Función de Fecha y Hora
+    var months = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+    var dayName = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")
+    var relojGlobal
+    var intDiferencia
+
+    function reloj() {
+        var date = relojGlobal
+        intDiferencia = (relojGlobal - new Date()) / 1000
+        correrReloj()
+    }
+    function correrReloj() {
+
+        var difMax = 60;
+        var difSeg = (relojGlobal - new Date()) / 1000
+        if (difSeg > intDiferencia + difMax || difSeg < intDiferencia - difMax)
+            window.location.reload();
+
+        var date = new Date();
+        relojGlobal = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds() + intDiferencia)
+        date = relojGlobal
+
+        var year = date.getFullYear()
+        var month = date.getMonth()
+        var day = date.getDate()
+        var hour = date.getHours()
+        var minute = date.getMinutes()
+        var second = date.getSeconds()
+        var monthname = months[month]
+
+        if (hour > 12) {
+            //hour = hour - 12;
+            var AM_PM = ""
+        }
+        else {
+            var AM_PM = ""
+        }
+        if (minute < 10) { minute = "0" + minute }
+        if (second < 10) { second = "0" + second }
+        if (month < 10) { month = "0" + month }
+        var dayString = dayName[date.getDay()]
+        if (document.getElementById('divReloj') != null) {
+            document.getElementById('divReloj').innerHTML = " " + dayString + " " + day + " de " + monthname + ", <b class=\"texto11Azul\">" + hour + ":" + minute + ":" + second + " " + AM_PM + "</b>"
+        }
+        setTimeout("correrReloj()", 1000)
+    }
+</script>
+<div id="date" style="font-size: 11px; text-align: right;">
+    <span id="ctl00_CtrlTimeNow_scriptFechaHora"><script>relojGlobal= new Date(2026, 9, 6, 3, 46, 42);reloj()</script></span>
+    <span id="divReloj"></span>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            
+    <div class="container" id="contenido">
+        <div style="padding-left: 23px">
+            <br />
+            <!-- LOGO Y TITULO DEL COMIENZO -->
+            
+
+<blockquote>
+    <img src="/controles/Logo.aspx?qs=\\PRDFINMSAPPB01\e\SHARED\Logos\Escudo_Oficial.png" id="ctl00_CPH1_UCControlLogo_imgLogo" alt="Logo" /><br />
+    <span id="ctl00_CPH1_UCControlLogo_lblGobierno">Gobierno de la República Argentina</span><br />
+    <footer>
+        <span id="ctl00_CPH1_UCControlLogo_lblLeyenda">Año 2023</span></footer>
+</blockquote>
+
+
+            <h2>
+                <span id="ctl00_CPH1_lblActa">Acta de Apertura</span></h2>
+
+            <br />
+            
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Procedimiento de Selección</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblNumeroProceso">Número del proceso de compra</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblNumeroProcComp">79/6-0009-LPU23</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblNombreProceso">Nombre descriptivo del proceso de compra</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblNombreProcComp">“Servicio de envío de SMS masivo”</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblEjerc">Ejercicio</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblEjercicio">2023</span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblModalidad">Tipo de modalidad</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblTipoModalidad">Solicitud De Ofertas</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblEncuadre">Encuadre legal</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblEncuadreLegal">Regulaciones de Adquisiciones para Prestatarios en Proyectos de Inversión posteriores al 1 de julio de 2016.</br></span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblExp">Expediente</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblExpediente">EX-2023-24314542-   -APN-DPYPSYE#JGM</span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblRubro">Rubro y clases</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblRubroClases">SERVICIOS BASICOS</br></span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblObjeto">Objeto de la contratación</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblObjetoContratacion">“Servicio de envío de SMS masivo”</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Apertura</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblFecha">Fecha</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblFechaApertura">11/04/2023</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblHora">Hora</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaActa_lblHoraApertura">10:00 a.m.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4>
+    <span id="ctl00_CPH1_UCVistaPreviaActa_lblTituloOfertas">Ofertas presentadas</span></h4>
+
+<div class="row">
+    <div class="col-md-12">
+        
+
+        <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas" style="border-collapse:collapse;">
+		<tr class="tr-header">
+			<th scope="col">Nombre</th><th scope="col">Razón Social / Nombre y Apellidos</th><th scope="col">Número de C.U.I.T</th><th scope="col">Fecha de confirmación</th><th scope="col">Moneda cotizada</th><th scope="col">Precio total general</th><th scope="col">Tipo de garantía</th><th scope="col">Forma de la garantía</th><th scope="col">Monto de la garantía</th><th scope="col">Moneda de la garantía</th>
+		</tr><tr>
+			<td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblNombreOferta">Oferta 79/6-0009-LPU23 TELEPROM ARGENTINA SA</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblRazonSocialNombre">Teleprom Argentina SA</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblNumeroCuit">33709104409</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblFechaConfirmacionOferta">10/04/2023</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblMonedaCotizada">Dolar Estadounidense</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblPrecioTotalGeneral">1.770.000,00</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblTipoGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblFormaGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblMontoGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl02_lblMonedaGarantia"></span>
+                    </td>
+		</tr><tr>
+			<td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblNombreOferta">ATX SA / Sondeos - Servicio de envío de SMS masivo</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblRazonSocialNombre">ATX S.A</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblNumeroCuit">30700595842</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblFechaConfirmacionOferta">11/04/2023</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblMonedaCotizada">Peso Argentino</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblPrecioTotalGeneral">275.040.000,00</span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblTipoGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblFormaGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblMontoGarantia"></span>
+                    </td><td>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_gvOfertas_ctl03_lblMonedaGarantia"></span>
+                    </td>
+		</tr>
+	</table>
+</div>
+    </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<script type="text/javascript">
+    window.onload = function() {
+        $("#ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_lblVerCuadroComparativo").tooltip({
+            tooltipClass: "txt_10px_naranja"
+        });
+    };
+</script>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <span id="ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_lblTitulo"></span></h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_Label2">Proveedores participantes:</span>
+                        <span class="badge">
+                            <span id="ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_lblOfertasPresentadas"></span>
+                        </span>
+                    </h5>
+                </div>
+                <div class="col-md-4">
+                    <h5>
+                        <span id="ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_Label3">Ofertas confirmadas:</span>
+                        <span class="badge">
+                            <span id="ctl00_CPH1_UCVistaPreviaActa_UC_OfertasProceso_lblOfertasConfirmadas"></span>
+                        </span>
+                    </h5>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        </div>
+    </div>
+
+
+            <br />
+            <div style="text-align: left; width: 100%">
+                <a id="ctl00_CPH1_lnkVolver" class="btn btn-default" href="javascript:__doPostBack(&#39;ctl00$CPH1$lnkVolver&#39;,&#39;&#39;)">Volver</a>
+            </div>
+        </div>
+        <br />
+    </div>
+
+    <!-- Este campo se utiliza para validar la pantalla al generar el documento GEDO -->
+    <input type="hidden" name="ctl00$CPH1$VistaGEDO" id="ctl00_CPH1_VistaGEDO" />
+
+        </section>
+        <script src="/App_Themes/bastrap/scripts/jquery.min.js"></script>
+        <script src="/App_Themes/bastrap/scripts/bootstrap.min.js"></script>
+        
+
+<script>
+    function openModalNavegadores() {
+        $('#modalAvisoNavegadores').modal('show');
+    }
+
+    function openModalTerminos() {
+        $('#modalTerminosYCondiciones').modal('show');
+    }
+</script>
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-2 imgLogo">
+                <!-- LOGO COMPRAR -->
+                <img src="../Imagenes/Logos/jefatura.png" alt="Jefatura de Gabinete de Ministros - Argentina" style="border-style:None;width:200px;" />
+            </div>
+            <div class="col-md-2 lblFooter lblFooterLeft">
+                <span id="ctl00_pie_lblSecretaria" style="display:inline-block;width:140px;">Secretaría Ejecutiva</span>
+            </div>
+            <div class="col-md-2 lblFooter">
+                <span id="ctl00_pie_lblContrataciones" style="display:inline-block;width:140px;">Oficina Nacional de Contrataciones</span>
+            </div>
+            <div class="col-md-3 imgLogo imgLogoLeft">
+
+            </div>
+            <div class="col-md-3 links-externos">
+                <!-- LINKS EXTERNOS -->
+                <div class="row">
+                    
+                    <!-- BOLETIN OFICIAL -->
+                    <div class="col-md-12">
+                        
+                        <span>Presidencia de la nación</span>
+                    </div>
+                    <!-- INSTITUCIONAL -->
+                    <div class="col-md-12 margin-top-2">
+                        <span id="ctl00_pie_lblNombreserver" class="footer-version">PRDFINMSAPPB05</span>
+                        <span id="ctl00_pie_Label1" class="footer-version">
+                                v 1.1.930_COMPRAR</span>
+                    </div>
+                    <!-- NORMATIVA -->
+                    <div class="col-md-12 margin-top-2">
+                        <a id="ctl00_pie_LinkButton1" href="javascript:__doPostBack(&#39;ctl00$pie$LinkButton1&#39;,&#39;&#39;)">Avisos sobre Navegadores</a>
+                    </div>
+                    <div class="col-md-12 margin-top-2">
+                        <a id="ctl00_pie_LinkButton2" href="javascript:__doPostBack(&#39;ctl00$pie$LinkButton2&#39;,&#39;&#39;)">Términos y Condiciones de Uso</a>
+                    </div>
+                    <div class="col-md-12 margin-top-2">
+                        <a id="ctl00_pie_LinkButton3" href="javascript:__doPostBack(&#39;ctl00$pie$LinkButton3&#39;,&#39;&#39;)">Preguntas Frecuentes</a>
+                    </div>
+                    <div class="col-md-12 margin-top-2">
+                        <span class="glyphicon glyphicon-send"></span>&nbsp;
+                            <span id="ctl00_pie_lblTextIncidencias">Envíenos por favor un ticket</span>
+                        <a id="ctl00_pie_linkIncidencias" href="https://incidencias.innovacion.gob.ar/servicedesk/customer/portal/6" target="_blank"> aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- LINKS AVISOS -->
+        
+        <!-- VERSION -->
+        
+        <!--NOMBRE SERVIDOR-->
+        
+    </div>
+</footer>
+<div class="modal" id="modalAvisoNavegadores" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="ctl00_pie_div1" class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Aviso sobre Navegadores</h4>
+            </div>
+            <div class="modal-body" data-backdrop="static" data-keyboard="false">
+                <div class="container-fluid">
+                    Para brindar la mejor calidad y velocidad de navegación nuestro sitio está desarrollado en función de las últimas versiones de los navegadores:
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="container-fluid">
+                            <div class="carousel slide" data-ride="carousel" id="carouselnav">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img id="ctl00_pie_imgCarrousel" src="/App_Themes/bastrap/images/navegadores.jpg" alt="Navegadores" style="border-style:None;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modalTerminosYCondiciones" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <p><u>DI-2016-29-E-APN-ONC#MM – ANEXO II</u></p>
+                <h4 class="modal-title">POLÍTICAS, TÉRMINOS Y CONDICIONES DE USO DEL SISTEMA (PTCUS) COMUNES A TODOS LOS USUARIOS</h4>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: auto; text-align: justify;">
+                <p>Artículo 1°.- Encuadre Jurídico</p>
+                <p>El acceso y/o uso al Sistema Electrónico de Contrataciones de la Administración Nacional denominado COMPR.AR., se efectúa en el marco de lo normado por los artículos 21 y 22 del Decreto Delegado Nº 1023/01, el artículo 33 del reglamento del Régimen de Contrataciones de la Administración Nacional aprobado por el Decreto Nº 893/12, las Políticas, Términos y Condiciones de Uso del Sistema y las Condiciones Particulares que en el futuro puedan complementarlas, sustituirlas o modificarlas. </p>
+                <p>Artículo 2°.- Aceptación </p>
+                <p>Desde el momento de acceso y/o uso del COMPR.AR, se considera que el usuario acepta plenamente y sin reserva alguna, las Políticas, Términos y Condiciones así como las Condiciones Particulares de uso del sistema que pudieran dictarse, adhiriendo en forma inmediata a todas y cada de una ellas. </p>
+                <p>Artículo 3°.- Acceso</p>
+                <p>El acceso a COMPR.AR es público y gratuito, y se realiza a través de Internet, en el sitio cuya página principal se encuentra ubicada en <a>https://comprar.gob.ar</a> o aquella que en un futuro la reemplace. El Usuario deberá contar con un equipo y programas informáticos que cumplan con los requisitos mínimos de compatibilidad con el sistema (acceso por internet; navegadores Internet Explorer; Mozilla Firefox o Google Chrome). El Usuario toma conocimiento que cuando su equipo o programas de computación no reúnan tales requisitos mínimos, no podrá tener acceso al sistema y/o se podrá bloquear su acceso. </p>
+                <p>Artículo 4°.- Términos </p>
+                <p>A los efectos de las presentes Políticas, Términos y Condiciones, se entenderá que:</p>
+                <p><u>COMPR.AR</u></p>
+                <p>Constituye el Sistema Electrónico de Contrataciones de la Administración Nacional a través del cual las jurisdicciones y entidades de la Administración Pública Nacional comprendidas en el artículo 2º del Decreto Delegado Nº 1023/01 y sus modificaciones efectuarán en forma electrónica todos los procedimientos prescriptos en el Reglamento del Régimen de Contrataciones de la Administración Nacional, aprobado por el Decreto Nº 893/12 y sus modificaciones.</p>
+                <p><a>https://comprar.gob.ar</a></p>
+                <p>Es el portal sobre el que se gestiona el COMPR.AR y a través del cual se difunden las convocatorias y las restantes etapas de los procedimientos de selección. El acceso a este portal es público y gratuito. </p>
+                <p>Asimismo, es medio válido de todas las notificaciones entre la jurisdicción o entidad contratante y los interesados, oferentes, adjudicatarios o cocontratantes que deban realizarse durante los procedimientos de selección. </p>
+                <p><u>USUARIOS DEL PROVEEDOR:</u></p>
+                <p>Es la persona humana que utiliza el COMPR.AR en representación de la persona humana o jurídica inscripta en el Sistema de Información de Proveedores que administra la OFICINA NACIONAL DE CONTRATACIONES, conforme el procedimiento de autenticación de los usuarios de los proveedores obrante en el Anexo III de la presente medida. </p>
+                <p><u>USUARIOS COMPRADORES:</u></p>
+                <p>Es la persona humana designada por la Unidad Operativa de Contrataciones, en adelante UOC, como responsable de la utilización del COMPR.AR, de acuerdo a los roles otorgados conforme al procedimiento de Administradores de Perfiles y Usuarios de la Administración obrante en los Anexos IV y V. </p>
+                <p><u>SISTEMA DE INFORMACION DE PROVEEDORES:</u></p>
+                <p>El Sistema de Información de Proveedores (SIPRO) que administra la OFICINA NACIONAL DE CONTRATACIONES se incorpora también al sistema COMPR.AR. Este sistema tiene por objeto registrar información relativa a los proveedores, sus antecedentes, historial de procedimientos de selección en los que se hubieren presentado como oferentes, historial de contratos, órdenes de compra o venta, incumplimientos contractuales y extra-contractuales, en ambos casos por causas imputables al proveedor, sanciones de apercibimiento, suspensión e inhabilitación y toda otra información que la OFICINA NACIONAL DE CONTRATACIONES considere de utilidad. </p>
+                <p><u>PROTECCIÓN DE LA INFORMACIÓN CONTENIDA EN EL PORTAL:</u></p>
+                <p>Toda la información elaborada o disponible en, o a través del COMPR.AR, se encuentra protegida como propiedad intelectual. Está prohibido a todos los usuarios modificar, copiar, transmitir, vender, distribuir, exhibir, publicar, licenciar, crear trabajos derivados, o usar, en general, el contenido disponible en o a través del COMPR.AR para fines comerciales y otros. </p>
+                <p><u>USO ADECUADO DE COMPR.AR:</u></p>
+                <p>El usuario que ingresa al COMPR.AR, se compromete a utilizar el mismo en forma lícita y de acuerdo a las presentes PTCUS. Se encuentra prohibido a los usuarios, la realización de actos maliciosos o que atenten contra el sitio, o que de alguna manera puedan dañar, inutilizar, sobrecargar, deteriorar, impedir o limitar la utilización de todas o algunas de las funcionalidades del mismo.</p>
+                <p><u>RESPONSABILIDAD POR CLAVES DE USUARIO:</u></p>
+                <p>Los usuarios de COMPR.AR no pueden ceder, transferir o comunicar bajo ninguna circunstancia sus claves y nombres de usuarios, haciéndose plenamente responsables por los actos, documentos, anexos, ofertas, y demás antecedentes que bajo esas claves y nombres de usuario, ingresen al COMPR.AR. Además, los usuarios asumen la obligación de cambiar sus claves frecuentemente, las que se debe evitar que sean evidentes y/o simples. </p>
+                <p><u>RESPONSABILIDAD:</u></p>
+                <p>El Gobierno Nacional no se responsabiliza por los daños y/o perjuicios derivados del acceso y/o uso de los contenidos publicados en el sitio <a>https://comprar.gob.ar</a> o en el que en un futuro lo reemplace. </p>
+                <p>El Gobierno Nacional no se responsabiliza por las interrupciones de este servicio, ni por cualquier inconveniente originado en causas ajenas que impidan el acceso. </p>
+                <p>La veracidad e integridad de la totalidad de la información y contenido de los documentos publicados son de exclusiva responsabilidad de los usuarios que los publican y envían, de acuerdo a las claves de acceso bajo las cuales actúen. </p>
+                <p>El Gobierno Nacional no es responsable por la interrupción en la recepción de correos electrónicos por parte del usuario-proveedor. </p>
+                <p>El Gobierno Nacional no es responsable de los virus que puedan contener los documentos que adjuntan los usuarios del sitio. Es responsabilidad de cada usuario velar por que los archivos que sube al sitio no tengan virus de ninguna especie. </p>
+                <p>Las estadísticas e informes disponibles en el COMPR.AR son meramente referenciales y no comprometen a la OFICINA NACIONAL DE CONTRATACIONES, ni al Gobierno Nacional. </p>
+                <p><u>SUSPENSIÓN O ELIMINACIÓN DE USUARIOS:</u></p>
+                <p>La OFICINA NACIONAL DE CONTRATACIONES se reserva el derecho de suspender y/o eliminar unilateral y automáticamente del COMPR.AR a los usuarios que incumplan las PTCUS. </p>
+                <p><u>CENTRO DE CONTACTO. MESA DE AYUDA TELEFÓNICA:</u></p>
+                <p>La OFICINA NACIONAL DE CONTRATACIONES establecerá para todos los usuarios del COMPR.AR un centro de contacto que contará con una mesa de ayuda telefónica y vía correo electrónico. Esta mesa de ayuda atenderá las consultas de los usuarios sobre el funcionamiento del COMPR.AR.</p>
+                <p>Artículo 5°.- Usuarios de los proveedores </p>
+                <p><u>CORREOS ELECTRÓNICOS ENVIADOS POR COMPR.AR. A PROVEEDORES:</u></p>
+                <p>Los usuarios proveedores aceptan recibir permanentemente correos electrónicos relativos a procedimientos de selección y demás información relevante, a la dirección de correo informada por ellos en el SIPRO. </p>
+                <p>El sitio <a>https://comprar.gob.ar</a> o el que en un futuro lo reemplace es el medio obligatorio de difusión de las convocatorias y de las restantes etapas de los procedimientos de selección, sin perjuicio de las demás formas de difusión y publicidad que la reglamentación vigente determina.</p>
+                <p>Los correos electrónicos enviados por el COMPR.AR solo constituyen un medio de aviso. </p>
+                <p>Se recomienda a los proveedores, revisar periódicamente el COMPR.AR –en particular Escritorio del Proveedor– para informarse de las novedades vinculadas a las etapas, desarrollo del proceso de contratación electrónica y demás información relevante, como así también consultar las demás formas de difusión y publicidad que la reglamentación vigente determina.</p>
+                <p><u>LIBERACIÓN DE RESPONSABILIDAD:</u></p>
+                <p>Los usuarios proveedores deben velar por la seriedad de las ofertas ingresadas al COMPR.AR, siendo plenamente responsables por las mismas. </p>
+                <p>Los usuarios proveedores deberán aceptar que el Gobierno Nacional carece de toda responsabilidad por los resultados que obtengan en cada uno de los procedimientos de selección electrónicos en que participen. </p>
+                <p>Los usuarios proveedores liberan al Gobierno Nacional de cualquier responsabilidad derivada de la dilación o no envío oportuno de correos electrónicos de alerta, declarando conocer que el medio de notificación es la difusión que cada Usuario Comprador efectúa en el portal <a>https://comprar.gob.ar</a> o en el que en un futuro lo reemplace. La no recepción oportuna de correos electrónicos de alerta que envía el COMPR.AR, no justificará, ni se considerará como causal suficiente para eximir a los proponentes de sus cargas y responsabilidades. </p>
+                <p><u>POLÍTICAS DE PRIVACIDAD:</u></p>
+                <p>Los usuarios de COMPR.AR aceptan, por el sólo hecho de su inscripción o registro en el sitio, que los datos, antecedentes e información aportados en las diversas etapas de los procedimientos en que participan, sean de público conocimiento en el ámbito de las transacciones que se efectúan en él y que sólo están disponibles públicamente para esos efectos. Asimismo, los usuarios de COMPR.AR, por el sólo hecho de su inscripción otorgan su conformidad para que los resultados de los procedimientos de selección en que participen y las respectivas contrataciones, formen parte de las estadísticas e informes, se procesen y se publiquen por parte del Gobierno Nacional.</p>
+                <p>Cuando se solicite por parte de terceros acceso a información que pudiese afectar derechos de los usuarios proveedores, tales como los relacionados con su vida privada o derechos de carácter económico o comercial, se procederá en un todo conforme a la Ley Nº 25.326 de “Protección de Datos Personales” modificada por la Ley Nº 26.343 y reglamentada por el Decreto Nº 1558/2001 modificado por el Decreto 1160/2010, el Decreto Nº 1172/2003 de “Acceso a la Información Pública” y el Decreto N° 117/2016 “Plan de Apertura de Datos”. </p>
+                <p><u>DECLARACIÓN:</u></p>
+                <p>Los usuarios de COMPR.AR declaran conocer y aceptar la circunstancia relativa a que la OFICINA NACIONAL DE CONTRATACIONES, puede en cualquier momento modificar todo o parte de las presentes PTCUS, que serán oportunamente publicadas en el portal de COMPR.AR. </p>
+                <p><u>USUARIOS COMPRADORES:</u></p>
+                <p>El usuario-comprador es responsable de la información que se difunda y debe procurar que su contenido se adapte a las previsiones contempladas por la normativa vigente. Queda estrictamente prohibido a los usuarios compradores realizar cualquier uso de COMPR.AR ajeno al marco del proceso de contrataciones públicas electrónicas. Los Organismos de Control están autorizados a utilizar el COMPR.AR con el objeto de asegurar el correcto desempeño de los distintos procesos y velar por su transparencia. </p>
+                <p><u>LÍMITE DE RESPONSABILIDAD DEL COMPR.AR SOBRE EL PROCESO DE SELECCION:</u></p>
+                <p>El COMPR.AR es un medio que facilita la realización de los procedimientos de selección sin garantizar la seriedad e idoneidad de las ofertas recibidas, las que deben ser evaluadas por cada usuario comprador, y en su caso, por la Comisión Evaluadora de Ofertas.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV"), document.getElementById("ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV"), document.getElementById("ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV = document.all ? document.all["ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV"] : document.getElementById("ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV");
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.controltovalidate = "ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBox";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.errormessage = "Verifique que el CUIT haya sido ingresado";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.display = "Dynamic";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.validationGroup = "vgLogin";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.clientvalidationfunction = "Validatorctl00_CtrlMenuPortal_logIn_txtUsername";
+ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV.validateemptytext = "true";
+var ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV = document.all ? document.all["ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV"] : document.getElementById("ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV");
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.controltovalidate = "ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBox";
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.display = "Dynamic";
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.validationGroup = "vgRecuperar";
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.clientvalidationfunction = "Validatorctl00_CtrlMenuPortal_logIn_txtMail";
+ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV.validateemptytext = "true";
+var ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV = document.all ? document.all["ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV"] : document.getElementById("ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV");
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.controltovalidate = "ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBox";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.errormessage = "Verifique que el correo electrónico haya sido ingresado.";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.display = "Dynamic";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.validationGroup = "vgRecuperar";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.clientvalidationfunction = "Validatorctl00_CtrlMenuPortal_logIn_txtMail2";
+ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV.validateemptytext = "true";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_CtrlMenuPortal_logIn_txtUsername_txtTextBoxV'));
+}
+
+document.getElementById('ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_CtrlMenuPortal_logIn_txtMail_txtTextBoxV'));
+}
+
+document.getElementById('ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_CtrlMenuPortal_logIn_txtMail2_txtTextBoxV'));
+}
+//]]>
+</script>
+</form>
+
+
+</body>
+</html>
