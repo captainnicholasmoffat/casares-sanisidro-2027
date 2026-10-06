@@ -28,7 +28,7 @@ capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se f
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
 tecnolog&iacute;a</b>, con una tecnicatura de la universidad nacional del partido, para que lo aprendido
 sirva tambi&eacute;n fuera del Municipio: un a&ntilde;o com&uacute;n y cuatro orientaciones, hacia los puestos
-que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>: hoy hay cinco espacios chicos, s&oacute;lo en Beccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
+que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>: hoy hay cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
 abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
 empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
 administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la

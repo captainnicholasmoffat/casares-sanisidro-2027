@@ -796,7 +796,8 @@ auditor&iacute;a es a su vez trabajo</span>.</p>
 &uacute;nico empleador que sabe lo que sabe hacer. Con t&iacute;tulo, lo que aprendi&oacute; en los proyectos del Municipio &mdash;la plataforma, la automatizaci&oacute;n, los relevamientos&mdash; vale en cualquier empresa del pa&iacute;s.</p>
 <p><span class="sg">El municipio es la cuna y no el techo: si se van, funcion&oacute;.</span> Un programa
 de formaci&oacute;n cuyo &uacute;nico destino es el propio Estado que lo dicta no es pol&iacute;tica de
-empleo, es planta encubierta.</p>
+empleo, es planta encubierta. Y para que puedan ir m&aacute;s lejos, el Municipio arma con la UNSO un puente con los grandes
+laboratorios de inteligencia artificial del mundo (5.3).</p>
 </div>
 
 <h3>Cu&aacute;nto cuesta y de d&oacute;nde sale</h3>
@@ -1085,8 +1086,9 @@ pantalla y conexi&oacute;n. <b>Y primero se mide la conectividad</b> en La Cava 
 no est&aacute; relevada: es el relevamiento que propone la secci&oacute;n 5.4.</p>
 <p><b>Lo que se licita es el servicio de inteligencia artificial: el acceso a los modelos.</b> Primero la
 capacidad &mdash;las universidades del partido prueban cu&aacute;l rinde mejor&mdash;, despu&eacute;s el
-costo. La implementaci&oacute;n y el soporte los toman empresas del partido, con el mismo criterio de
-proximidad del resto del programa.</p>
+costo. Y para cada herramienta, la opci&oacute;n &oacute;ptima en calidad y precio, sea un servicio, c&oacute;digo abierto o algo propio:
+lo que ya existe bien hecho no se fabrica, y nada de precios de lista caros. La implementaci&oacute;n y el soporte los toman
+empresas del partido, con el mismo criterio de proximidad del resto del programa.</p>
 </div>
 
 <div class="callout a">
@@ -1156,6 +1158,28 @@ como hoy</b>; los juniors la toman cuando egresan.</p>
 </table>
 <p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta &mdash;en ambiente, dos, porque 593 de sus 966 cargos son de barrido&mdash;; y uno de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
 horas, cada uno con un junior. <span class="tag m">Estimado</span></p>
+
+<h3>Un puente con los grandes laboratorios de inteligencia artificial</h3>
+<div class="cols">
+<p><b>Hoy casi ning&uacute;n laboratorio tiene programas para quien vive en la Argentina.</b> Casi todos piden estar cursando
+una carrera de grado o un doctorado, o tener permiso de trabajo en Estados Unidos, el Reino Unido o Canad&aacute;. Hay algunos
+a distancia, y para ir a Estados Unidos la v&iacute;a m&aacute;s realista es la visa de pasante (necesita dictamen de un abogado).
+Y los acuerdos que firman los laboratorios son con gobiernos nacionales: ninguno con un municipio.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: un puente, no una promesa de trabajo</div>
+<p><b>1 &middot; El Municipio, con la UNSO, se acerca</b> a los grandes laboratorios de inteligencia artificial de Estados Unidos,
+Europa y Asia para contarles lo que se hace ac&aacute; y armar un puente.</p>
+<p><b>2 &middot; Que vayan los nuestros:</b> los egresados con pasant&iacute;a y experiencia &mdash;los que construyeron la inteligencia
+artificial del Municipio&mdash; van a intercambios, residencias o trabajos en sus equipos, en otros pa&iacute;ses, para aprender
+m&aacute;s. <b>3 &middot; Que vengan ellos:</b> que manden gente a ver lo que se hace ac&aacute; e intercambiar.</p>
+<p><b>4 &middot; La puerta es el t&iacute;tulo.</b> Que la tecnicatura tenga validez nacional, que este programa pide en los primeros
+tres meses (6.4), es lo que abre la visa de pasante y las pr&aacute;cticas en Europa. Y los programas piden ingl&eacute;s: la
+tecnicatura lo ense&ntilde;a.</p>
+<p><b>5 &middot; Qui&eacute;n firma:</b> el rector de la UNSO y el intendente, con autorizaci&oacute;n del Concejo (Ley Org&aacute;nica, art&iacute;culo 41;
+necesita dictamen de un abogado). Lo lleva una persona del equipo de la plataforma. No promete trabajos: arma el
+puente.</p>
+</div>
 
 <h3>La pir&aacute;mide: del pasante al empleo</h3>
 <div class="cols">
@@ -1782,16 +1806,7 @@ inteligencia artificial del Municipio arma la agenda de cada parque con todas la
 la gente se anota ah&iacute;; los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase,
 y la inteligencia artificial lo avisa; curso gratis de primeros auxilios para los instructores registrados; y las
 c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase. La agenda suma tambi&eacute;n los espect&aacute;culos y vale para todas las plazas y parques del partido, no s&oacute;lo para la costa: cualquier vecino le pregunta a la inteligencia artificial del Municipio &laquo;&iquest;qu&eacute; hay para hacer hoy?&raquo; y le contesta con todo &mdash;clases de baile y de gimnasia, instructores privados, espect&aacute;culos y lo del Municipio, de d&iacute;a y despu&eacute;s de la oficina&mdash;. As&iacute; se entera sin ir a averiguar, y va m&aacute;s gente de lunes a jueves (punto 1, m&aacute;s arriba).</p>
-<p><b>6 &middot; Espect&aacute;culos al aire libre, en la semana.</b> M&uacute;sica, teatro y otros espect&aacute;culos en las plazas y parques
-que funcionan bien, la costa primero; no s&oacute;lo los que organiza el Municipio, tambi&eacute;n los de artistas independientes y
-peque&ntilde;os grupos que quieren armar algo. De lunes a jueves, con fechas fijas cada semana y no eventos sueltos (Melbourne,
-m&aacute;s arriba): el fin de semana las plazas ya se llenan y no se suma nada. Igual que los instructores, con un registro
-gratis y sin canon: el artista pide lugar y horario en la inteligencia artificial del Municipio, que arma la agenda de
-cada parque y la difunde, y fuera del horario de las clases la plataforma de madera sirve de escenario. Para que no se
-llene, un cupo por lugar y por horario, distancia o turnos para que los sonidos no se mezclen, un tope de volumen y
-sectores tranquilos marcados en el mapa; y quien quiere silencio total tiene los horarios sin espect&aacute;culos, que la
-inteligencia artificial tambi&eacute;n muestra. Las reglas concretas las fija la reglamentaci&oacute;n (necesita dictamen de un
-abogado). Los descuentos y las c&aacute;maras que cuentan gente, como en el punto 5.</p>
+<p><b>6 &middot; Espect&aacute;culos al aire libre, en la semana:</b> m&aacute;s abajo.</p>
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
 cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis, de 426 a 791
 millones de obra, de a dos por a&ntilde;o desde el &Aacute;guila: de 142 a 296 el a&ntilde;o 1 y de 122 a 265 los a&ntilde;os 2 y 3, seg&uacute;n qu&eacute;
@@ -1806,6 +1821,43 @@ limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el ca
 Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a
 obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 23% y el 33% del aumento de Ambiente a entre el 30% y
 el 44%.</p>
+</div>
+<h3>Espect&aacute;culos al aire libre, en la semana</h3>
+<div class="cols">
+<p><b>Hoy San Isidro no tiene reglas para los artistas callejeros:</b> una ordenanza de 2019 reconoce el arte a la gorra,
+pero no crea un permiso ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Y lo que organiza el Municipio en la costa cae
+casi todo los fines de semana, con artistas que elige el propio Municipio: en 2026 hubo un solo espect&aacute;culo en un d&iacute;a
+h&aacute;bil, seg&uacute;n el Municipio, que no publica cu&aacute;nta gente fue.</p>
+</div>
+<div class="callout g">
+<div class="clabel">Lo que proponemos: m&aacute;s espect&aacute;culos, mejores y con m&aacute;s p&uacute;blico, sin lugar para la corrupci&oacute;n</div>
+<p><b>Artistas callejeros, a la gorra.</b></p>
+<p><b>1 &middot; El Municipio no les da dinero:</b> les da todo lo dem&aacute;s. Un equipo de producci&oacute;n municipal les lleva y arma el
+sonido, los micr&oacute;fonos y un escenario chico, y los ayuda durante el show; y la inteligencia artificial del Municipio
+promociona sus shows.</p>
+<p><b>2 &middot; Reglas simples:</b> puntos se&ntilde;alizados; cien metros entre puntos con sonido; turnos de una hora; un tope de
+volumen medido; de lunes a jueves, con hora de corte; y zonas tranquilas: la Reserva Ribera Norte, el Bosque Alegre y
+los frentes de vivienda.</p>
+<p><b>3 &middot; Primero, una prueba por decreto;</b> despu&eacute;s, el registro gratis de artistas en la Ordenanza XIV, junto al de
+instructores (necesita dictamen de un abogado).</p>
+<p><b>Shows que paga el Municipio.</b></p>
+<p><b>4 &middot; S&oacute;lo artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de afuera. Como no se gasta en famosos, alcanza
+para pagar bien a muchos artistas del partido.</p>
+<p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
+eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
+un cupo grande para artistas nuevos.</p>
+<p><b>6 &middot; Sin intermediarios y a la vista:</b> se le paga directo al artista, sin productora; cada pago se publica en la
+inteligencia artificial del Municipio, con un tope por artista por a&ntilde;o; y el show se graba desde la inteligencia
+artificial: si el artista no se presenta, no se paga.</p>
+<p><b>7 &middot; Si cancela el Municipio, el show se paga igual</b> y siempre se reprograma: la nueva fecha se fija en el momento,
+con el artista. La inteligencia artificial les avisa a todos los que iban la nueva fecha, y aclara que cancel&oacute; el
+Municipio, no el artista, para que el artista no quede mal con su p&uacute;blico. Por clima, s&oacute;lo se cancela con alerta
+oficial del Servicio Meteorol&oacute;gico Nacional para la zona, y cada cancelaci&oacute;n se publica con su motivo.</p>
+<p><b>M&aacute;s p&uacute;blico.</b></p>
+<p><b>8 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino</b> qu&eacute; hay, d&oacute;nde y cu&aacute;ndo, seg&uacute;n lo que le
+gusta; y con quienes le avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien acepta
+(Ley 25.326, de datos personales).</p>
+<p><b>9 &middot; D&iacute;as de semana y de d&iacute;a,</b> junto con los foodtrucks y las ofertas de los comercios.</p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
@@ -1942,12 +1994,14 @@ m&aacute;s barata de este programa y la que m&aacute;s r&aacute;pido se nota</b>
 funcione, nadie pierde una ma&ntilde;ana de trabajo para pedir un turno.</p>
 <p><b>Y la inteligencia artificial del Municipio hace dos cosas m&aacute;s.</b> Al vecino le saca el turno en la charla
 &mdash;&laquo;sacame turno con el cardi&oacute;logo&raquo;&mdash;; le dice a qu&eacute; servicio y a qu&eacute; centro ir, qu&eacute; llevar, qu&eacute; d&iacute;a hay lugar
-antes y si lo suyo se resuelve por teleconsulta; le recuerda el turno y, si no puede ir, lo cancela y el lugar pasa a
-otro. No diagnostica: si hay urgencia, lo manda a la guardia o al 107.</p>
+antes y si lo suyo se resuelve por teleconsulta; le recuerda el turno con un mensaje para contestar &laquo;confirmo&raquo; o
+&laquo;cancelo&raquo; y, si no puede ir, lo cancela. No diagnostica: si hay urgencia, lo manda a la guardia o al 107.</p>
 <p><b>Y a los hospitales les mejora la turnera,</b> que hoy funciona con la cola en la ventanilla: confirma y recuerda
-para que se pierdan menos turnos, reasigna en el momento los que se cancelan a quien est&aacute; esperando, prev&eacute; la demanda
-por especialidad y por centro, y marca d&oacute;nde falta un m&eacute;dico o un horario. Propone c&oacute;mo reorganizar las agendas, y lo
-decide la direcci&oacute;n de cada hospital.</p>
+para que se pierdan menos turnos &mdash;en 21 ensayos, los recordatorios por mensaje bajaron los faltazos de 21% a 15%&mdash;;
+cuando alguien cancela, le ofrece el turno al siguiente de la lista de espera; prev&eacute; la demanda por especialidad y por
+centro, y marca d&oacute;nde falta un m&eacute;dico o un horario. Propone c&oacute;mo reorganizar las agendas, y lo decide la direcci&oacute;n de
+cada hospital. El personal que hoy atiende la ventanilla controla que funcione y llama a quienes no usan la
+inteligencia artificial del Municipio.</p>
 <p><b>Mi Salud Digital</b> es el sistema de la Provincia de Buenos
 Aires: turno por celular, historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y
 orden integradas autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de
@@ -2131,7 +2185,10 @@ falta es una frase.</p>
 <b>2.646 c&aacute;maras de alta definici&oacute;n</b> con anal&iacute;tica de video y alertas en tiempo
 real, sobre fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal, por una
 inversi&oacute;n anunciada de <b>15.000 millones</b>.</p>
-<p><b>Y lo que no se puede verificar, que es todo lo dem&aacute;s.</b> Las cifras que el propio Municipio
+<p><b>Lo que compr&oacute; s&iacute; est&aacute; publicado.</b> Entre 2025 y 2026 compr&oacute; 110 licencias de an&aacute;lisis de video con inteligencia
+artificial, con tres a&ntilde;os de soporte, que en vivo marcan una persona ca&iacute;da, una agrupaci&oacute;n, un objeto abandonado o un
+auto a contramano, y permiten buscar despu&eacute;s en lo grabado.</p>
+<p><b>Y lo que no se puede verificar es lo que hacen.</b> Las cifras que el propio Municipio
 public&oacute; entre 2025 y 2026 van de 500 a 1.000, a 2.100 y a 2.646 seg&uacute;n la fecha del
 anuncio. <b>Esa anal&iacute;tica nunca tuvo una auditor&iacute;a externa</b>, y el Municipio no publica
 delitos esclarecidos, tiempo de respuesta del m&oacute;vil ni cu&aacute;ntas de sus alertas terminaron en
@@ -2144,7 +2201,7 @@ m&aacute;s: es que exista un n&uacute;mero auditado de qu&eacute; hace el sistem
 <h3>Los tres usos, en orden</h3>
 <div class="cols">
 <p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
-patrullaje m&aacute;s cercano. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
+patrullaje m&aacute;s cercano, en las 110 c&aacute;maras con inteligencia artificial que ya hay, sin ampliar. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
 sistema reconoce lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo. Un robo detectado
 mientras ocurre y avisado al m&oacute;vil que est&aacute; a tres cuadras es la diferencia entre un
 patrullero que llega y uno que toma la denuncia.</p>
@@ -2258,7 +2315,7 @@ presupuesto.</p></div>
 <p><b>Hoy:</b> 13.986 millones, el 4,3%. Cay&oacute; <b>11,6% real</b> entre 2024 y 2025. La
 educaci&oacute;n obligatoria es competencia provincial, no municipal. Pero el Municipio administra el Fondo
 de Financiamiento Educativo &mdash;3.931 millones devengados en 2025&mdash; y sostiene infraestructura
-escolar y talleres de empleo. Y tiene un programa de apoyo escolar: cinco espacios chicos, s&oacute;lo en Beccar y Boulogne, con un centenar de chicos de primaria, una hora por semana y dos educadores; en las otras cuatro localidades, ninguno (seg&uacute;n el Municipio, junio de 2026).</p>
+escolar y talleres de empleo. Y tiene un programa de apoyo escolar: cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos de primaria, una hora por semana y dos educadores; en las otras cuatro localidades, ninguno (seg&uacute;n el Municipio, junio de 2026).</p>
 <h3>Lo que un intendente s&iacute; puede hacer en educaci&oacute;n</h3>
 <p class="tight">Puede hacer todo lo que pasa fuera del aula, y ese margen es amplio.</p>
 <div class="cols">
@@ -2287,8 +2344,9 @@ ning&uacute;n tutor digital.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: un profesor digital que da pistas, nunca la respuesta</div>
-<p><b>1 &middot; Qu&eacute; es.</b> En la inteligencia artificial del Municipio, un profesor digital particular, con cara realista y
-video, que le explica al chico sus dudas de la tarea. Da pistas, nunca la respuesta: en Turqu&iacute;a, un chatbot que daba
+<p><b>1 &middot; Qu&eacute; es.</b> En la inteligencia artificial del Municipio, un profesor digital particular, con una cara realista
+de cat&aacute;logo y video, que le explica al chico sus dudas de la tarea. Antes de elegir el servicio, una prueba a ciegas de
+un mes compara la calidad y el precio de cada uno. Da pistas, nunca la respuesta: en Turqu&iacute;a, un chatbot que daba
 respuestas subi&oacute; un 48% las notas de pr&aacute;ctica y baj&oacute; un 17% el examen sin inteligencia artificial, y el que daba pistas
 evit&oacute; ese da&ntilde;o.</p>
 <p><b>2 &middot; Lo que dice la evidencia.</b> En ensayos con alumnos de escuela, los tutores con inteligencia artificial
@@ -2296,9 +2354,10 @@ subieron el aprendizaje entre 0,06 y 0,36 desv&iacute;os est&aacute;ndar, siempr
 En casa no est&aacute; probado.</p>
 <p><b>3 &middot; D&oacute;nde.</b> En los centros de apoyo escolar municipales, con horario fijo y un docente, y adem&aacute;s en casa,
 para todos los chicos del partido, de primaria y secundaria.</p>
-<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis para los alumnos de escuelas estatales y del apoyo escolar municipal. Los de
-colegios privados pagan un canon seg&uacute;n la cuota de su colegio: los de cuota baja &mdash;por ejemplo, los que reciben
-aporte estatal del 100%&mdash; pagan poco o nada, y los de cuota alta, m&aacute;s.</p>
+<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis en las escuelas p&uacute;blicas, parroquiales y cooperativas, y en el apoyo escolar
+municipal; en los dem&aacute;s colegios privados, cada alumno paga su costo, sin subsidio ni excepci&oacute;n, y lo cobra el
+Municipio desde su inteligencia artificial. El Municipio paga s&oacute;lo el de los alumnos que lo tienen gratis, con lo que
+Educaci&oacute;n recupera de su ca&iacute;da de 2025 (m&aacute;s abajo).</p>
 <p><b>5 &middot; Qu&eacute; informa.</b> C&oacute;mo avanza el chico y qu&eacute; temas le cuestan. Y le avisa al docente si sospecha trampa, con
 los hechos concretos que vio &mdash;una respuesta pegada de afuera, una tarea que no coincide con lo trabajado&mdash;,
 nunca con detectores de &laquo;texto hecho con inteligencia artificial&raquo;, que marcaron como tal el 61% de los ensayos de
@@ -2306,13 +2365,14 @@ alumnos que escriben en segunda lengua. <span class="sg">La inteligencia artific
 siempre el docente, que habla con el chico.</span> El chico y la familia ven lo mismo que el docente (Ley 25.326,
 art&iacute;culo 20, y Resoluci&oacute;n 9/2025 de la Provincia; necesita dictamen de un abogado).</p>
 <p><b>6 &middot; A qu&eacute; docentes les llega.</b> A los de todas las escuelas: en el apoyo escolar municipal, directo; en las
-estatales, por convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c); y en las
-privadas, por acuerdo con cada colegio, que adem&aacute;s paga su propio canon para que sus docentes reciban los
-informes.</p>
+p&uacute;blicas, por convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c); en las
+parroquiales y cooperativas, por acuerdo con cada escuela; y en los dem&aacute;s colegios privados, por acuerdo con cada
+colegio, que si quiere los informes para sus docentes tambi&eacute;n paga su costo.</p>
 <p><b>7 &middot; Los datos de los chicos, cuidados.</b> Consentimiento de la familia en dos partes &mdash;el profesor digital
 y el informe al docente&mdash;, que puede revocar; el chico sabe qu&eacute; se informa de &eacute;l; la base se crea por ordenanza;
-nada de diagn&oacute;sticos, salud ni emociones; un contrato que le proh&iacute;be al proveedor entrenar modelos con estos datos; y
-las conversaciones se borran en d&iacute;as (necesita dictamen de un abogado).</p>
+nada de diagn&oacute;sticos, salud ni emociones; el modelo, con los datos procesados en Europa, que la ley argentina acepta
+(Disposici&oacute;n 60/2016); un contrato que le proh&iacute;be al proveedor entrenar modelos con estos datos; y las conversaciones se
+borran en d&iacute;as (necesita dictamen de un abogado).</p>
 <p><b>8 &middot; Sin reemplazar a la escuela.</b> El Municipio lo hace como apoyo complementario, sin evaluar ni reemplazar a
 la escuela (Ley 13.688, art&iacute;culo 6). Primero, una prueba de seis meses en los primeros centros de apoyo escolar,
 medida con pruebas sin inteligencia artificial; despu&eacute;s, a todos.</p>
@@ -2470,11 +2530,13 @@ millones por a&ntilde;o de mantenimiento, a licitar.</p>
 donde el tr&aacute;mite se compra: <span class="sg">el momento en que un agente con facultad de
 clausurar entra a un local</span>.</p>
 <div class="cols">
-<p><b>La propuesta es que ese acto se transmita.</b> El inspector transmite en vivo mientras inspecciona,
-para que se vea que la inspecci&oacute;n es real, y la transmisi&oacute;n queda grabada tal cual se hizo
-para que cualquier vecino la vea despu&eacute;s: que pas&oacute; donde dice que pas&oacute; y que no hubo
-coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute;
-transmitiendo.</span></p>
+<p><b>La propuesta es que ese acto se transmita.</b> El inspector transmite en vivo mientras inspecciona, con su
+tel&eacute;fono, desde la inteligencia artificial del Municipio, en un soporte en el pecho: no hay c&aacute;maras corporales que
+comprar. La grabaci&oacute;n se sella en el momento de grabar y queda en el Municipio, no en el tel&eacute;fono, as&iacute; que no se puede
+editar ni borrar; se guarda dos a&ntilde;os, y cualquier vecino la ve despu&eacute;s: que pas&oacute; donde dice que pas&oacute; y que no hubo
+coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; transmitiendo.</span> El Municipio paga el
+plan de datos y le da un tel&eacute;fono a quien no tenga uno apto (necesita dictamen de un abogado, por el uso del tel&eacute;fono
+propio).</p>
 <p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
 fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
 labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
@@ -2814,9 +2876,9 @@ tiene tres sedes, discapacidad dos, y hay treinta y cinco centros de tercera eda
 queda adentro de un programa que comparte con ni&ntilde;ez, juventud y personas mayores.
 <span class="sg">Sin partida propia no hay ejecuci&oacute;n que se pueda auditar</span>, ni siquiera
 para saber cu&aacute;nto se gasta.</p>
-<p><b>No hay refugio ni casa de abrigo:</b> no aparece ninguno en el Bolet&iacute;n Oficial desde marzo
-de 2024 ni en el sitio municipal. Tampoco se encontr&oacute; un programa formalizado de patrocinio
-jur&iacute;dico gratuito.</p>
+<p><b>San Isidro no tiene un hogar propio para v&iacute;ctimas:</b> cuando hace falta, el Municipio pide una vacante a la red
+provincial. Y el patrocinio jur&iacute;dico gratuito que hay cerca no es del Municipio: es del colegio de abogados, de la
+Defensa Oficial y de la universidad p&uacute;blica.</p>
 <p><b>Y la p&aacute;gina institucional del &aacute;rea est&aacute; vac&iacute;a:</b> tiene el
 t&iacute;tulo y nada m&aacute;s. La l&iacute;nea de atenci&oacute;n publicada es un
 <b>n&uacute;mero de WhatsApp de guardia</b>, no una l&iacute;nea institucional. La &uacute;nica ordenanza
@@ -2829,7 +2891,7 @@ dispositivo ni asigna un peso.</p>
 municipal.</b> Es <b>menos</b> que el programa de abordaje de las adicciones, y
 <span class="sg">veinte veces menos que cultura</span>.</p>
 <p><b>A diferencia de g&eacute;nero,</b> discapacidad s&iacute; tiene infraestructura visible: dos sedes, dispositivos propios y una junta
-evaluadora municipal que emite los certificados del partido. <b>El problema no es que no exista: es que
+evaluadora municipal, que funciona en el Hospital Central y emite los certificados del partido. <b>El problema no es que no exista: es que
 no tiene fondos.</b></p>
 </div>
 <h3>Lo que el Municipio tiene y nadie m&aacute;s tiene</h3>
@@ -2855,9 +2917,9 @@ no queda guardada en el tel&eacute;fono.</p>
 en la inteligencia artificial del Municipio y no en el tel&eacute;fono, donde el agresor podr&iacute;a verlos.</p>
 <p><b>3 &middot; Sin sedes nuevas:</b> la direcci&oacute;n atiende d&iacute;as fijos en lugares que ya existen en cada zona &mdash;delegaciones,
 centros de salud, centros de apoyo escolar&mdash;, empezando por Boulogne y B&eacute;ccar.</p>
-<p><b>4 &middot; Patrocinio jur&iacute;dico y refugio, sin oficinas nuevas:</b> la inteligencia artificial arma el caso y lo deriva al
-patrocinio gratuito que exista &mdash;de la Provincia, del colegio de abogados o de las universidades&mdash;, y el refugio
-va por convenio con la Provincia.</p>
+<p><b>4 &middot; Patrocinio jur&iacute;dico y refugio, sin oficinas nuevas:</b> la inteligencia artificial del Municipio arma el caso y lo
+deriva al patrocinio gratuito que existe &mdash;el del colegio de abogados, la Defensa Oficial y la universidad p&uacute;blica&mdash;, y
+la direcci&oacute;n pide la vacante en la red provincial de hogares.</p>
 <p><b>5 &middot; La partida propia</b>, separada del programa que hoy comparte con ni&ntilde;ez, juventud y personas mayores, sin dinero
 nuevo, y una p&aacute;gina con una l&iacute;nea de atenci&oacute;n de verdad.</p>
 <p><b>6 &middot; Lo que escucha la inteligencia artificial (4.11)</b> se junta por zona y le muestra a la direcci&oacute;n ad&oacute;nde
@@ -2865,7 +2927,7 @@ ir.</p>
 <p><b>Discapacidad.</b></p>
 <p><b>1 &middot; Los cien cuidadores a domicilio</b> atienden tambi&eacute;n a personas con discapacidad que no pueden salir.</p>
 <p><b>2 &middot; Turnos (5.6):</b> la inteligencia artificial les saca el turno, les ofrece teleconsulta cuando no pueden
-moverse y los acompa&ntilde;a en el tr&aacute;mite del certificado ante la junta evaluadora municipal.</p>
+moverse y los acompa&ntilde;a en el tr&aacute;mite del certificado ante la junta evaluadora municipal, en el Hospital Central.</p>
 <p><b>3 &middot; Veredas y rampas:</b> las barreras que los vecinos le cuentan a la inteligencia artificial llegan a la comisi&oacute;n
 de cada zona, que decide la obra de veredas (cap&iacute;tulo 4).</p>
 <p><b>4 &middot; La inteligencia artificial del Municipio se usa por voz, con letra grande y en lectura f&aacute;cil.</b></p>
@@ -2961,7 +3023,7 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hd"><td class="l" colspan="2">Lo que arranca y se ve</td></tr>
 <tr class="hi"><td class="l">11 &middot; La primera ronda de asambleas en las seis zonas, informativa y de relevamiento</td><td class="n">Actas y asistentes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">12 &middot; La inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas, con el convenio con la UNSO firmado, y la primera cohorte arrancando en los espacios que ya existen</td><td class="n">Inscripci&oacute;n y matr&iacute;cula por zona: se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cinco espacios chicos, s&oacute;lo en Beccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
+<tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto. Hoy hay cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
 <tr class="hi"><td class="l">14 &middot; Dos m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, y el turno m&eacute;dico</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">15 &middot; La licitaci&oacute;n de la detecci&oacute;n en vivo de hechos violentos sobre las c&aacute;maras que el Municipio ya tiene, con alerta autom&aacute;tica al m&oacute;vil m&aacute;s cercano, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El llamado en el Bolet&iacute;n Oficial, con su fecha de apertura</td></tr>
 <tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal, para que se vea que es real, y grabarla tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s; y la licitaci&oacute;n de las ochenta c&aacute;maras corporales, lanzada y con fecha de apertura. Funciona en el mes 9 (6.4)</td><td class="n">El decreto, y el llamado en el Bolet&iacute;n Oficial con su fecha de apertura</td></tr>
@@ -3015,7 +3077,7 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Adjudicar el servicio de recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica, con el pliego discutido antes del llamado</td><td class="n">Cuatro licitaciones llamadas desde 2004 y ninguna termin&oacute; en un contrato; el mismo grupo presta el servicio desde 1998</td><td class="n">Bolet&iacute;n Oficial municipal</td></tr>
 <tr class="hi"><td class="l">Detecci&oacute;n en vivo de hechos violentos y reconstrucci&oacute;n de recorrido operando sobre las c&aacute;maras que el Municipio ya tiene, y que cualquiera pueda preguntar cu&aacute;ntas &oacute;rdenes judiciales se recibieron y cu&aacute;ntas se cumplieron</td><td class="n">No hay registro p&uacute;blico de que ninguno de los dos usos opere, y las alertas no se publican</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y &oacute;rdenes</td></tr>
 <tr class="hi"><td class="l">Partida presupuestaria propia para g&eacute;nero, separada del programa que hoy comparte</td><td class="n">G&eacute;nero no tiene partida propia; discapacidad s&iacute;, y deveng&oacute; 65,9 M en 2025, el 0,020% del gasto</td><td class="n">Estado de ejecuci&oacute;n por programa</td></tr>
-<tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cinco espacios chicos, s&oacute;lo en Beccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">Un centro de apoyo escolar gratuito en cada una de las seis localidades</td><td class="n">Cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">Extender el modelo del CFL 404 Barrio La Cava a las seis zonas &mdash;cinco sedes fijas y una itinerante en Acassuso&mdash;, con una tecnicatura de dos a&ntilde;os de la UNSO, el segundo como pasante &mdash;seis meses en el Municipio y seis en una empresa del partido&mdash;; y que desde el mes 27 egrese una cohorte cada seis meses con un a&ntilde;o de trabajo real: 1.286 en el mandato y 928 por a&ntilde;o en r&eacute;gimen; y 250 a 300 egresados con empleo pago por a&ntilde;o</td><td class="n"><b>Una sede</b>, la del Barrio La Cava. Ni la matr&iacute;cula ni la inserci&oacute;n laboral se publican hoy: el primer registro fija las dos</td><td class="n">Ejecuci&oacute;n por programa y convenios de pasant&iacute;as; la matr&iacute;cula por sede se le pregunta a la inteligencia artificial del Municipio; el empleo, al registro de inserci&oacute;n laboral</td></tr>
 </table>
 

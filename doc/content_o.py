@@ -459,6 +459,12 @@ ley <b>Paisaje Protegido de Inter&eacute;s Provincial a la ribera del Partido y 
 parques principales</b> (Ley 12.704), con prohibici&oacute;n expresa de venderlos, edificarlos y achicarlos, y que reconozca
 por ley la Reserva Ribera Norte (Ley 10.907, art&iacute;culo 7). Toda norma que reduzca la protecci&oacute;n de esta ordenanza se
 funda en un estudio t&eacute;cnico y ambiental previo y pasa por audiencia p&uacute;blica.</p>
+<h3>Art&iacute;culo 6 &mdash; Registro de instructores y de artistas</h3>
+<p class="tight">Cr&eacute;ase un registro gratuito, sin canon ni tasa, de
+instructores que dan clases y de artistas que act&uacute;an a la gorra en los espacios verdes p&uacute;blicos. El registro no da
+lugares ni horarios exclusivos. La reglamentaci&oacute;n fija los puntos se&ntilde;alizados, la distancia entre puntos con sonido, los
+turnos, el tope de volumen medido, los d&iacute;as y la hora de corte, y las zonas tranquilas, entre ellas la Reserva Ribera
+Norte, el Bosque Alegre y los frentes de vivienda.</p>
 
 <div class="hairline"></div>
 <h2>Lo que este articulado deliberadamente no dice</h2>
