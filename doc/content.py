@@ -78,14 +78,15 @@ C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
 # siguiente, la ultima del documento (correccion 138, respuesta 6; la 40 pasaba de 2.700 pt)
 # (dispatch 1 y 2, 03/10): con las filas de multas y de la costa las fuentes no entran en una pagina; la
 # primera parte vuelve a la de la nota de metodo y el resto sigue en la ultima
-_F_CORTE = F.FUENTES_HTML.index('<tr><td class="l">5.5 &middot; la costa: Per')
+_F_CORTE = F.FUENTES_HTML.index('<tr><td class="l">5.5 &middot; la costa toda la semana')
 _F_CAB = ('<table>\n<colgroup><col style="width:158pt"><col></colgroup>\n'
           '<tr class="hd"><th>D&oacute;nde</th><th>Fuente</th></tr>\n')
 # (dispatch 3, A9): las notas de cada capitulo crecieron con el detalle que salio de abajo de los cuadros; la nota de
 # metodo vuelve a ir sola y las fuentes del texto van en dos paginas
+# (dispatch 6): con las ciudades y las fuentes del 23 quater la segunda pasaba de 2.700 pt; el corte baja a «la costa toda la semana»
 METODO = dict(A.METODO)
 FUENTES = dict(id="fuentes", runhead=A.RH,
-               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)[:F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1).index('<tr><td class="l">5.5 &middot; la costa: Per')] + "</table>\n")
+               html=F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1)[:F.FUENTES_HTML.replace('<div class="hairline"></div>\n', "", 1).index('<tr><td class="l">5.5 &middot; la costa toda la semana')] + "</table>\n")
 FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_CORTE:])
 
 # el anexo articulado entra en cuatro paginas (C1: crecieron la II, la VI y llegaron la XV y la XVI)

@@ -1430,7 +1430,7 @@ funcionan, se extienden por la costa.</p>
 los precios del propio contrato municipal, y de 4 a 20 millones por a&ntilde;o para reponer arena; sus guardavidas, 29
 millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Las rejas, de 70,4 a 130,9 millones una vez. Con las rejas, la
 barrera de Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 432 a 821 millones (la barrera de Alto Per&uacute;, con un costo estimado
-igual al de la de Per&uacute;, [23&nbsp;qu&aacute;ter]): <span
+igual al de la de Per&uacute;, [23&nbsp;quinquies]): <span
 class="sg">entre el 12% y el 24% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
 moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
 muestras y la primera temporada de guardavidas, unos 335 millones&mdash;, con dinero de los programas que
@@ -1842,7 +1842,7 @@ el 35%.</p>
 <h3>Espect&aacute;culos al aire libre, en la semana</h3>
 <div class="cols">
 <p><b>Hoy San Isidro no tiene reglas para los artistas callejeros:</b> una ordenanza de 2019 reconoce el arte a la gorra,
-pero no crea un permiso ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Y lo que organiza el Municipio en la costa cae
+pero no crea un permiso ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Ninguna norma del partido fija un tope de volumen para un show al aire libre, y la Ordenanza 5182 presume molesto, sin admitir prueba en contrario, todo parlante en o hacia la v&iacute;a p&uacute;blica. Y lo que organiza el Municipio en la costa cae
 casi todo los fines de semana, con artistas que elige el propio Municipio: en 2026 hubo un solo espect&aacute;culo en un d&iacute;a
 h&aacute;bil, seg&uacute;n el Municipio, que no publica cu&aacute;nta gente fue.</p>
 </div>
@@ -1861,13 +1861,11 @@ los frentes de vivienda.</p>
 instructores (necesita dictamen de un abogado).</p>
 <p><b>Shows que paga el Municipio.</b></p>
 <p><b>4 &middot; Doscientos por a&ntilde;o, todo el a&ntilde;o, s&oacute;lo con artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de
-afuera. En invierno, bajo techo, por convenio con centros culturales, clubes sociales y otros espacios cerrados del
-partido (los meses y el costo de los convenios, [23&nbsp;qu&aacute;ter]). Es del partido si al menos la mitad de sus
+afuera. Al aire libre, del 20 de septiembre a mediados de abril; el resto del a&ntilde;o, bajo techo: los solistas, en espacios municipales, y los dem&aacute;s, en clubes y centros culturales del partido, por convenio (el instrumento lo define un abogado). Los shows grandes, al aire libre. Cu&aacute;ntos shows van bajo techo y lo que cuestan los convenios con estas fechas, [23&nbsp;quinquies]. Es del partido si al menos la mitad de sus
 integrantes tiene en el DNI domicilio en San Isidro, y es emergente si tiene menos de 50.000 oyentes mensuales en
 Spotify, que se verifican con una captura fechada, una declaraci&oacute;n jurada y un acceso de &laquo;lector&raquo; que el artista le da
 gratis al Municipio; quien no est&aacute; en Spotify no queda afuera. Como no se gasta en famosos, alcanza para pagar bien a
-muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]): unos 323 millones por a&ntilde;o y 454 el primer a&ntilde;o,
-con la compra de los equipos.</p>
+muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]): unos 326 millones por a&ntilde;o, 202,6 de ellos para los artistas, y 465 el primer a&ntilde;o, con la compra de los equipos.</p>
 <p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
 eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
 un cupo grande para artistas nuevos. La grilla cumple el cupo de la Ley 27.539 &mdash;al menos un 30% de mujeres&mdash;, y la
@@ -1886,12 +1884,7 @@ el artista, para que el artista no quede mal con su p&uacute;blico.</p>
 para San Isidro cubre el horario del show, y si truena en el lugar, se pausa y se espera 30 minutos desde el &uacute;ltimo
 trueno: es el procedimiento ante tormenta el&eacute;ctrica que pide la Resoluci&oacute;n 1749/2014 del Ministerio de Seguridad
 bonaerense. Cada cancelaci&oacute;n se publica con su motivo.</p>
-<p><b>9 &middot; El sonido justo:</b> dos equipos de calidad para bandas, con subwoofer y monitores, de 29,5 millones cada uno con
-tarima y toldo, y dos chicos para los callejeros, de 4,9 millones cada uno. El p&uacute;blico va de 50 a 1.000 personas: nada
-de potencia para multitudes. El volumen tiene un tope seg&uacute;n el lugar, m&aacute;s bajo en las plazas junto a casas, y el equipo
-grande va sobre todo al r&iacute;o (los topes, [23&nbsp;qu&aacute;ter]). Se compra por licitaci&oacute;n p&uacute;blica, abierta a cualquier
-proveedor, con requisitos de calidad publicados, y reemplaza al alquilado s&oacute;lo en los eventos chicos. Lo manejan tres
-equipos de producci&oacute;n con ocho personas nuevas, 85,3 millones por a&ntilde;o con reemplazos.</p>
+<p><b>9 &middot; El sonido justo:</b> dos equipos de calidad para bandas, con subwoofer y monitores, de 29,5 millones cada uno con tarima y toldo, y dos chicos para los callejeros, de 4,9 millones cada uno. Se compran por licitaci&oacute;n p&uacute;blica, abierta a cualquier proveedor, con requisitos de calidad publicados, y reemplazan al alquilado s&oacute;lo en los eventos chicos. Los manejan tres equipos de producci&oacute;n con ocho personas nuevas, 85,3 millones por a&ntilde;o con reemplazos. El p&uacute;blico va de 50 a 1.000 personas: nada de potencia para multitudes. El volumen tiene un tope seg&uacute;n el lugar, medido junto a la consola: 80 decibeles en las plazas chicas, 85 en los parques y 88 en la costa, y nunca m&aacute;s de 60 en la fachada de la casa m&aacute;s cercana; el equipo grande va sobre todo al r&iacute;o. Cada equipo de show lleva un limitador con bloqueo y clave, y dos bafles chicos para el &laquo;modo plaza&raquo;, sin subwoofer: 7,7 millones m&aacute;s por los dos. Se mide con el son&oacute;metro del Municipio. Los shows se reparten en unos 17 lugares, sin pasar de 12 por lugar por a&ntilde;o, y terminan a las 22. Un decreto u ordenanza saca a los shows autorizados de la presunci&oacute;n de ruido molesto de la Ordenanza 5182 (art&iacute;culo 81) y de la Ordenanza General 27 (necesita dictamen de un abogado).</p>
 <p><b>10 &middot; Sin robos ni roturas:</b> cada equipo tiene un cargo patrimonial firmado por quien lo tiene a cargo; en cada
 show hay remito de salida y de entrada, con QR y la firma de dos personas; Patrimonio, no Cultura, hace un arqueo
 sorpresa cada mes; y el dep&oacute;sito tiene registro de acceso y c&aacute;maras. Cada equipo lleva el sello del Municipio y su
@@ -2572,10 +2565,7 @@ patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los 
 </div>
 
 <p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma
-(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones cuestan, para los inspectores y los agentes de
-tr&aacute;nsito, de 19,8 a 26,5 millones una vez y de 104,4 a 141,0 millones por a&ntilde;o, m&aacute;s 9,5 millones por cada base donde se
-descargan los videos (tr&aacute;nsito tiene dos); para Habilitaciones y los inspectores de obra, [23&nbsp;qu&aacute;ter]; y para la
-patrulla municipal, en la segunda etapa, de 29,5 a 35,3 millones una vez y de 135,7 a 162,4 millones por a&ntilde;o. Salen de
+(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones de la primera etapa &mdash;inspectores, Habilitaciones, obra y tr&aacute;nsito&mdash; cuestan de 20,5 a 27,5 millones una vez y de 107,6 a 145,5 millones por a&ntilde;o, m&aacute;s 9,5 millones por cada base donde se descargan los videos (tr&aacute;nsito tiene dos); difuminar las caras cuando alguien pide ver una inspecci&oacute;n, de 5 a 23 millones por a&ntilde;o; y la patrulla municipal, en la segunda etapa, de 29,5 a 35,3 millones una vez y de 135,7 a 162,4 millones por a&ntilde;o. Salen de
 los tres programas que ceden su gasto (3.4).</p>
 
 <h3>La coima en la inspecci&oacute;n: el acto de autoridad, grabado y sellado</h3>
@@ -2591,19 +2581,14 @@ el video se sube al volver a la base, y si una grabaci&oacute;n sellada no se su
 nadie puede editarla ni borrarla sin que se note. La inteligencia artificial corta el turno en una grabaci&oacute;n por
 inspecci&oacute;n y la guarda en una base por comercio o domicilio: cualquier vecino puede ver cualquier inspecci&oacute;n, de a
 una, y comprobar que pas&oacute; donde dice que pas&oacute; y que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; grabando.</span></p>
-<p><b>El tel&eacute;fono es propio.</b> Quien trabaje de inspector o de agente de tr&aacute;nsito necesita un tel&eacute;fono
-propio apto. El Municipio no compra tel&eacute;fonos ni adelanta dinero: firma un
-convenio con el banco que paga los sueldos para que se compre en cuotas sin inter&eacute;s, y el riesgo de cobro lo toma el
-banco. Paga el plan de datos, el soporte de pecho y la bater&iacute;a. La Ley 14.656, del empleo municipal,
+<p><b>El tel&eacute;fono es propio.</b> Quien sale a inspeccionar o trabaja de agente de tr&aacute;nsito necesita un tel&eacute;fono propio apto. El Municipio no compra tel&eacute;fonos ni adelanta dinero: firma un convenio con el banco que paga los sueldos para que los modelos aptos se puedan comprar en 24 cuotas sin inter&eacute;s todo el a&ntilde;o, y el riesgo de cobro lo toma el banco (necesita dictamen de un abogado). Paga el plan de datos, el soporte de pecho y la bater&iacute;a. La Ley 14.656, del empleo municipal,
 pone a cargo del Municipio los &uacute;tiles de trabajo: la salida es compensar el gasto, como prev&eacute; su art&iacute;culo 75, y
 acordarlo con los trabajadores municipales (necesita dictamen de un abogado). Las grabaciones se guardan dos a&ntilde;os en una nube
 con servidores en B&eacute;lgica, adonde la ley argentina permite llevar datos personales, y se ven al instante durante todo ese
 tiempo.</p>
 <p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
 fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, agentes de tr&aacute;nsito, patrulla municipal: quien puede
-labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>durante su turno</b>. Fuera del turno, no. Empiezan
-los inspectores de comercio y de la Agencia de Control, los de Habilitaciones y los de obra, y los agentes de
-tr&aacute;nsito; la patrulla municipal, en una segunda etapa.</p>
+labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>durante su turno</b>. Fuera del turno, no. Empiezan los inspectores de comercio y de la Agencia de Control, los de Habilitaciones &mdash;unos cuatro&mdash; y los de Obras Particulares &mdash;de tres a seis&mdash;, s&oacute;lo quienes salen a inspeccionar, y los agentes de tr&aacute;nsito: de 208 a 280 agentes. La patrulla municipal, en una segunda etapa.</p>
 <p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
 naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial,
 y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
@@ -2613,11 +2598,7 @@ una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a 
 cumplirla.</p>
 <p><b>Del otro lado, el vecino graba y lo sube a la inteligencia artificial del Municipio</b>, y ese registro tiene el mismo valor
 en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
-<p><b>Qui&eacute;n ve qu&eacute;.</b> Cualquier vecino ve cada inspecci&oacute;n, con su fecha, el domicilio y el agente.
-Lo que pasa entre una inspecci&oacute;n y otra lo ven s&oacute;lo los auditores del Municipio y la auditor&iacute;a externa. La inteligencia
-artificial difumina las caras de los clientes y de la gente que pasa, y una inspecci&oacute;n adentro de una casa particular la
-ve s&oacute;lo su due&ntilde;o. <span class="sg">El l&iacute;mite es el acto, no el lugar</span> (necesita dictamen de un abogado, por la Ley
-25.326).</p>
+<p><b>Qui&eacute;n ve qu&eacute;.</b> Una ordenanza crea la base de las inspecciones y declara de inter&eacute;s general que se puedan ver, como pide la Disposici&oacute;n 10/2015 para difundir grabaciones. Cualquier vecino puede ver cualquier inspecci&oacute;n, de a una, busc&aacute;ndola por comercio o por domicilio, con su fecha y el agente: todo vecino tiene un inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, que es de todos, y la ordenanza lo declara as&iacute; para cumplir con el art&iacute;culo 20 de la Constituci&oacute;n bonaerense (necesita dictamen de un abogado). Cuando alguien pide ver una inspecci&oacute;n, la inteligencia artificial difumina las caras de los clientes y de la gente que pasa, y una persona lo revisa antes de mostrarla: unos 2.200 pesos por pedido, de 5 a 23 millones por a&ntilde;o. Lo que pasa entre una inspecci&oacute;n y otra lo ven s&oacute;lo los auditores del Municipio y la auditor&iacute;a externa. Adentro de una casa &mdash;sobre todo en las inspecciones de obra&mdash; se graba igual, como prueba y para que no haya coima, pero el interior nunca se publica: lo ven s&oacute;lo el due&ntilde;o, los auditores y, si hace falta, un juez (necesita dictamen de un abogado, por la Ley 25.326).</p>
 </div>
 <h3>Si a un comerciante le piden una coima, lo aprietan o lo amenazan</h3>
 <div class="callout g">
@@ -3172,7 +3153,7 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; la consulta, el turno m&eacute;dico en la charla y la escucha de los vecinos, con su seguimiento, en la inteligencia artificial del Municipio</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 3</td><td>En seguridad, funciona la detecci&oacute;n en vivo de hechos violentos en las 110 c&aacute;maras con inteligencia artificial que ya hay, con alerta al patrullero m&aacute;s cercano. No hace falta comprar c&aacute;maras ni licencias: ya se compraron</td><td class="n">El decreto de puesta en servicio; las alertas y el tiempo de llegada se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda grabar cada inspecci&oacute;n municipal con el tel&eacute;fono del agente, sellada en el momento de grabar, para que se vea que fue real y que no hubo coima, y para que cualquier vecino la vea despu&eacute;s; se compran los soportes y las bater&iacute;as, y se firma el convenio con el banco que paga los sueldos para comprar el tel&eacute;fono en cuotas sin inter&eacute;s. Y el comerciante ya puede denunciar coimas, aprietes y amenazas ante la inteligencia artificial del Municipio, con la prueba sellada al grabar (5.9)</td><td class="n">El decreto, y la compra en el Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda grabar cada inspecci&oacute;n municipal con el tel&eacute;fono del agente, sellada en el momento de grabar, para que se vea que fue real y que no hubo coima, y para que cualquier vecino la vea despu&eacute;s; se compran los soportes y las bater&iacute;as, y se firma el convenio con el banco que paga los sueldos para comprar el tel&eacute;fono en 24 cuotas sin inter&eacute;s. Y el comerciante ya puede denunciar coimas, aprietes y amenazas ante la inteligencia artificial del Municipio, con la prueba sellada al grabar (5.9)</td><td class="n">El decreto, y la compra en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares, y la prueba por decreto de los espect&aacute;culos de lunes a jueves, con el registro gratis de instructores y artistas abierto en la inteligencia artificial del Municipio (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
 <tr><td class="l">Mes 3</td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas, con el plan de pagos sin inter&eacute;s de la deuda vieja, y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
 <tr><td class="l">Mes 3</td><td>Profesor digital: la prueba a ciegas de un mes que compara la calidad y el precio de cada cara, antes de pagar nada (5.8)</td><td class="n">El resultado, publicado: se le pregunta a la inteligencia artificial del Municipio</td></tr>

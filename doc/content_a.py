@@ -420,12 +420,9 @@ Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen de
 a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
 diferencia cero.</p>
 <p><b>Las investigaciones de esta edici&oacute;n.</b> Los informes 21 (ruido y prueba sellada), 22 (profesores digitales),
-23 (costos con la opci&oacute;n &oacute;ptima en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y
-g&eacute;nero y discapacidad) 23 bis (rejas en los desag&uuml;es, tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital,
-espect&aacute;culos y mensajes de texto) y 23 ter (los tel&eacute;fonos sin transmisi&oacute;n, los colegios con aporte del 100% y los
-doscientos shows) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
+23 (costos con la opci&oacute;n &oacute;ptima en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y g&eacute;nero y discapacidad), 23 bis (rejas en los desag&uuml;es, tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital, espect&aacute;culos y mensajes de texto), 23 ter (los tel&eacute;fonos sin transmisi&oacute;n, los colegios con aporte del 100% y los doscientos shows) y 23 qu&aacute;ter (los inspectores de Habilitaciones y de obra, el banco de los sueldos, las grabaciones a la vista, el invierno bajo techo y el volumen) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
 repositorio, y marcan qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. Lo que est&aacute; en d&oacute;lares va al de diciembre de
-2025, $1.447,84 (BCRA). Lo que todav&iacute;a no tiene cifra est&aacute; marcado [23&nbsp;qu&aacute;ter]: lo trae el informe 23 qu&aacute;ter.</p>
+2025, $1.447,84 (BCRA). Lo que todav&iacute;a no tiene cifra est&aacute; marcado [23&nbsp;quinquies]: lo trae el informe 23 quinquies.</p>
 <p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
@@ -636,7 +633,7 @@ localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 l
 partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
 puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15, 16 y 21 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
 usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;: no hay nada que licitar, y funciona a los cien
-d&iacute;as. Las inspecciones se graban con el tel&eacute;fono del agente: el decreto sale a los cien d&iacute;as, con el convenio de cuotas sin inter&eacute;s con el banco que paga los sueldos, y funciona en el
+d&iacute;as. Las inspecciones se graban con el tel&eacute;fono del agente: el decreto sale a los cien d&iacute;as, con el convenio de 24 cuotas sin inter&eacute;s con el banco que paga los sueldos, y funciona en el
 mes 9, primero con los inspectores y los agentes de tr&aacute;nsito; la patrulla, en una segunda etapa. La ordenanza que vuelve inv&aacute;lida el acta labrada sin grabaci&oacute;n sellada y subida va despu&eacute;s, y est&aacute; escrita en
 el anexo. La denuncia del comerciante y el registro de instructores y artistas arrancan por decreto, y las Ordenanzas IV y XIV los fijan despu&eacute;s.</p>
 </div>

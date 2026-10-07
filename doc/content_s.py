@@ -58,9 +58,7 @@ despu&eacute;s de un robo denunciado, <b>el sistema reconstruye hacia d&oacute;n
 en vez de uno que toma la denuncia. Es an&aacute;lisis de hechos y no de personas: ni reconocimiento
 facial masivo ni registro municipal de personas sin orden judicial. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que las inspecciones de comercios queden grabadas y selladas.</b> El inspector graba con su tel&eacute;fono
-mientras inspecciona, y la grabaci&oacute;n se sella en el momento de grabar: si alguien la cambia, se nota. Cualquier
-vecino la ve despu&eacute;s: que pas&oacute; donde dice que pas&oacute;
+<li><b>Que las inspecciones de comercios queden grabadas y selladas.</b> El inspector graba todo su turno con su tel&eacute;fono, y cada grabaci&oacute;n se sella en el momento de grabar: si alguien la cambia, se nota. Cualquier vecino ve despu&eacute;s cada inspecci&oacute;n: que pas&oacute; donde dice que pas&oacute;
 y qu&eacute; pas&oacute; adentro. <b>Y el comerciante
 inspeccionado tambi&eacute;n graba</b>, con el mismo valor en el expediente. Esto no resuelve el delito
 en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.

@@ -233,14 +233,14 @@ s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=F
            "Empieza a moverse en el mes 12 y llega en el mes 36 (6.4); el año 1 adelanta lo de la costa (fila 238)")
 s_row(53, "Educación · recomposición anual", 2064000000,
       note="Devolver la función educativa al nivel real de 2024, que cayó 11,6%: 2.064 M (5.8, cuadro 14). Desde el mes 12 (6.4)")
-s_row(54, "Inspecciones grabadas · soportes, baterías y dos bases de descarga, una vez (primera etapa)", 45500000,
-      note="Informe 23 ter: de 19,8 a 26,5 M para 201 a 270 agentes (inspectores de comercio y de la Agencia de Control, y agentes de tránsito), más 9,5 M por cada base de descarga (tránsito tiene 2); se toma el tope. El teléfono es propio: se compra en cuotas sin interés por convenio con el banco que paga los sueldos, sin dinero del Municipio. Habilitaciones e inspectores de obra: informe 23 quáter. La patrulla, en la segunda etapa (29,5 a 35,3 M una vez y 135,7 a 162,4 M por año), no está sumada")
+s_row(54, "Inspecciones grabadas · soportes, baterías y dos bases de descarga, una vez (primera etapa)", 46500000,
+      note="Informe 23 quáter: de 20,5 a 27,5 M para la primera etapa completa, 208 a 280 agentes (inspectores de comercio y de la Agencia de Control, los de Habilitaciones y de Obras Particulares que salen a inspeccionar, y agentes de tránsito), más 9,5 M por cada base de descarga (tránsito tiene 2); se toma el tope: 27,5 + 19. El teléfono es propio: se compra en 24 cuotas sin interés todo el año por convenio con el banco que paga los sueldos, sin dinero del Municipio (decisión del 07/10). La patrulla, en la segunda etapa (29,5 a 35,3 M una vez y 135,7 a 162,4 M por año), no está sumada")
 s_row(55, "Apoyo escolar · costo anual por sede", 180000000,
       note="ESTIMACIÓN PROPIA, NO VERIFICADA. Seis sedes: 1.080 M (cuadro 14). Dos sedes por año es supuesto de este libro")
 s_row(56, "Salud · adhesión al sistema provincial", 0,
       note="Mi Salud Digital no tiene costo de licencia para el municipio que adhiere")
-s_row(57, "Inspecciones grabadas · plan de datos, guarda de dos años y reposición, por año (primera etapa)", 141000000,
-      note="Informe 23 ter: de 104,4 a 141,0 M por año en régimen; se toma el tope. Las grabaciones se guardan dos años en una nube con servidores en Bélgica y se ven al instante todo ese tiempo. Salen los 264 M de mantenimiento de antes (el 22% de una lista de precios)")
+s_row(57, "Inspecciones grabadas · plan de datos, guarda de dos años, reposición y difuminado a pedido, por año (primera etapa)", 168500000,
+      note="Informe 23 quáter: de 107,6 a 145,5 M por año en régimen para la primera etapa completa, y de 5 a 23 M por año para difuminar las caras cuando alguien pide ver una inspección, con revisión de una persona (unos $2.200 por pedido, de 1.000 a 10.000 pedidos); se toman los topes: 145,5 + 23. Las grabaciones se guardan dos años en una nube con servidores en Bélgica y se ven al instante todo ese tiempo. Salen los 264 M de mantenimiento de antes (el 22% de una lista de precios)")
 
 # --- F · deuda
 s_row(59, "Stock de deuda al 30/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),
@@ -401,7 +401,7 @@ s_row(174, "Beca de práctica, peor caso: ninguna empresa toma pasantes", formul
 s_row(175, "Módulo de salud de los años 1 y 2, como máximo", formula="=(C49+C143/2)*C150*(1-C151)",
       note="Lo que habría pagado la contratación de desarrollos el año 2: 988,4 M. Sale del gasto flexible libre")
 s_row(176, "Reasignación del gasto flexible, en régimen", formula="=(C52*C127-C51)+C53+6*C55+C57",
-      note="Ambiente, educación, apoyo escolar y los datos y las grabaciones de las inspecciones: lo que ceden los tres programas del cuadro 15. Los teléfonos y soportes van aparte, una vez")
+      note="Ambiente, educación, apoyo escolar y los datos, la guarda y el difuminado de las grabaciones de las inspecciones: lo que ceden los tres programas del cuadro 15, 6.767 M. Los soportes y las bases van aparte, una vez")
 s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mitad de la obra pública")
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
@@ -410,7 +410,7 @@ s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C1
       note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores y mensajes de texto de las multas, espectáculos de Cultura y obra vecinal: el 53,3% del documento")
 s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 46,7%")
 s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
-      note="El 44,1%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
+      note="El 44,0%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
 
 s_header(184, "R · EL SISTEMA VECINAL (capítulo 4)")
 s_row(185, "Funcionamiento: parte fija de la partida vecinal", 0.015, fmt=FMT_PCT1,
@@ -528,7 +528,7 @@ s_row(255, "Año 3 · lo que falta", formula="=MAX(0,C143*3/4-IF(C142=1,C140,C13
 s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,C141,C137))",
       note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
 s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
-      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,1%)")
+      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,0%)")
 s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
 s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
       note="5.5: una clase a la mañana y una a la tarde, de lunes a jueves, en los seis lugares; 48 horas por semana, categoría 991 "
@@ -557,7 +557,7 @@ s_row(269, "Cada 10% de rebaja media de las multas, por año", 323000000,
       note="En 2024 se pagaron entre 13.000 y 456.000 multas (81.000 como estimación central). No se publica cuántas se "
            "labran, así que no entra en el resultado: sale del gasto flexible libre")
 s_row(270, "Cada 10% de rebaja media, sobre el gasto flexible", formula="=C269/C128", fmt=FMT_PCT1,
-      note="0,4%: puntos del margen libre (44,1%)")
+      note="0,4%: puntos del margen libre (44,0%)")
 s_row(271, "Tránsito o Juzgado de Faltas · cuatro personas que validan las actas, por año", 108280000,
       note="Informe 23: 1 semi-senior y 3 juniors, con los sueldos del cuadro 27. Con el resto del presupuesto y no con el "
            "fondo de seguridad vial: pagar con las multas a quien multa invita a multar más. Entra en el gasto flexible ocupado")
@@ -573,12 +573,12 @@ s_row(277, "Gasto 2025 en semaforización y señalamiento vial y en la política
       7199058415, note="Programas 27 y 26 de 2025 (1.654,2 M y 4.687,6 M), por 1,1352: el promedio del IPC del año")
 s_row(278, "Lo que ya se gasta en seguridad vial menos lo que se cobra en multas", formula="=C277-C276",
       note="Positivo: lo que se cobra ya se gasta en seguridad vial, como manda la Ley 24.449, art. 85. El fondo no mueve el margen")
-s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informe 23 ter)")
-s_row(281, "Cultura · 200 shows, tres equipos de producción y control contra robos, por año", 323000000,
-      note="Informe 23 ter: cachets de los 200 shows con las cancelaciones, 214,0 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); control contra robos, 2,0 a 2,7 M. Entra en el gasto flexible ocupado. Los convenios de invierno y los topes de volumen: informe 23 quáter")
-s_row(282, "Cultura · compra de equipos y control contra robos, una vez", 131100000,
-      note="Informe 23 ter: 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control")
-s_row(283, "Cultura · el primer año, con la compra", 454000000, note="Informe 23 ter: unos 323 M por año más 131,1 M de compra")
+s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informes 23 ter y 23 quáter)")
+s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 326000000,
+      note="Informe 23 quáter: cachets de los 200 shows con las cancelaciones nuevas, 202,6 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, 13,8 M; control contra robos, 2,0 a 2,7 M: unos 326 M. Entra en el gasto flexible ocupado. Con las temporadas decididas el 07/10 (al aire libre del 20 de septiembre a mediados de abril), cuántos shows van bajo techo y lo que cuestan los convenios: informe 23 quinquies")
+s_row(282, "Cultura · compra de equipos, limitadores y control contra robos, una vez", 138800000,
+      note="Informe 23 ter: 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control. Informe 23 quáter: un limitador con bloqueo y clave y dos bafles chicos para el «modo plaza» en cada equipo de show, 7,7 M por los dos")
+s_row(283, "Cultura · el primer año, con la compra", 464800000, note="Unos 326 M por año más 138,8 M de compra")
 for rr in range(106, 284):
     S.row_dimensions[rr].height = None
 
@@ -1290,7 +1290,7 @@ guia = [
      "rango de 74% a 82%. Cobra 1.637, 4.851 y 5.936 M los tres primeros años y 5.983 M desde el cuarto; entre "
      "5.946 y 5.983 M según cuántas subas frene el mínimo. Lo que falta cada año sale del gasto flexible: 170 M el "
      "año 1 y 1.242 M desde el cuarto, el 1,4%. La cobranza no paga el programa."),
-    ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y los datos y las grabaciones de las inspecciones —6.740 M en "
+    ("LO QUE SE REASIGNA", "Ambiente, educación, apoyo escolar y los datos y las grabaciones de las inspecciones —6.767 M en "
      "régimen—, la plataforma y "
      "el semillero —dentro de Ciencia y Técnica, 27,1%—, las pasantías de las áreas —2.135,3 M—, los cuidadores de "
      "Desarrollo Social —667,8 M—, la Escuela Náutica de Deportes —de a dos puestos por año, hasta 395 M por año "

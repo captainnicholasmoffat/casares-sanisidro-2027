@@ -180,19 +180,11 @@ su publicaci&oacute;n en el Bolet&iacute;n Oficial.</p>
 <p class="tight">Todo agente municipal con facultad de fiscalizaci&oacute;n o autoridad &mdash;quien
 pueda labrar acta, clausurar, multar o demorar a una persona&mdash; deber&aacute; grabar en audio y video, desde la
 inteligencia artificial del Municipio, <b>todo su turno</b>, y &uacute;nicamente su turno. La grabaci&oacute;n no alcanza a la
-actividad del agente fuera de &eacute;l. La obligaci&oacute;n empieza por los inspectores &mdash;de comercio, de la Agencia de
-Control, de Habilitaciones y de obra&mdash; y los agentes de tr&aacute;nsito; la reglamentaci&oacute;n fija cu&aacute;ndo alcanza a la patrulla
+actividad del agente fuera de &eacute;l. La obligaci&oacute;n empieza por los inspectores que salen a inspeccionar &mdash;de comercio, de la Agencia de Control, de Habilitaciones y de obra&mdash; y los agentes de tr&aacute;nsito; la reglamentaci&oacute;n fija cu&aacute;ndo alcanza a la patrulla
 municipal.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Sellado y publicidad</h3>
-<p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su
-huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base,
-y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. La inteligencia artificial corta el turno en
-una grabaci&oacute;n por acto y la guarda en una base por comercio o domicilio. <b>Toda persona puede ver la grabaci&oacute;n de
-cualquier acto, de a una</b>, con su fecha, el domicilio del acto y el agente interviniente, a trav&eacute;s de la
-inteligencia artificial del Municipio, que difumina las caras de quienes no son parte del acto. Lo grabado entre un
-acto y otro s&oacute;lo lo ven los auditores del Municipio y la auditor&iacute;a externa, y el acto en una vivienda particular s&oacute;lo
-lo ve su titular. Las grabaciones se guardan dos a&ntilde;os.</p>
+<h3>Art&iacute;culo 2 &mdash; Sellado, base de datos y publicidad</h3>
+<p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base, y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. Cr&eacute;ase la base de datos de los actos de fiscalizaci&oacute;n: la inteligencia artificial corta el turno en una grabaci&oacute;n por acto y la guarda por comercio o domicilio. Decl&aacute;rase de inter&eacute;s general la publicidad de esos actos: toda persona tiene inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, y puede ver la grabaci&oacute;n de cualquier acto, de a una, busc&aacute;ndola por comercio o domicilio, con su fecha y el agente interviniente. Cuando alguien pide ver un acto, la inteligencia artificial difumina las caras de quienes no son parte de &eacute;l, y una persona lo revisa antes de mostrarlo. Lo grabado entre un acto y otro s&oacute;lo lo ven los auditores del Municipio y la auditor&iacute;a externa. El acto dentro de una vivienda se graba igual, pero su interior nunca se publica: lo ven s&oacute;lo su titular, los auditores y, si hace falta, un juez. Las grabaciones se guardan dos a&ntilde;os.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
 <p class="tight"><b>El acta labrada sin grabaci&oacute;n sellada y subida carece de validez.</b></p>
@@ -219,11 +211,9 @@ denuncia falsa se sanciona.</p>
 
 <h3>Art&iacute;culo 7 &mdash; El tel&eacute;fono</h3>
 <p class="tight">Los inspectores y los agentes de tr&aacute;nsito graban con un tel&eacute;fono propio, apto seg&uacute;n la
-reglamentaci&oacute;n. El Municipio no adelanta dinero: conviene con el banco que paga los sueldos la compra en cuotas sin
-inter&eacute;s, con el riesgo de cobro a cargo del banco. Paga el plan de datos, el soporte y la bater&iacute;a, y compensa el gasto del uso del tel&eacute;fono propio en los t&eacute;rminos que se acuerden con los
+reglamentaci&oacute;n. El Municipio no adelanta dinero: conviene con el banco que paga los sueldos la compra de los modelos aptos en veinticuatro (24) cuotas sin inter&eacute;s durante todo el a&ntilde;o, con el riesgo de cobro a cargo del banco. Paga el plan de datos, el soporte y la bater&iacute;a, y compensa el gasto del uso del tel&eacute;fono propio en los t&eacute;rminos que se acuerden con los
 trabajadores municipales (Ley 14.656, art&iacute;culo 75).</p>
-<p class="tight"><i>Necesita dictamen de un abogado: Ley 14.656, que pone a cargo del Municipio los &uacute;tiles de
-trabajo, y Ley 25.326, por qui&eacute;n ve cada grabaci&oacute;n y por las grabaciones guardadas fuera del pa&iacute;s (art&iacute;culo 12).</i></p>
+<p class="tight"><i>Necesita dictamen de un abogado: Ley 14.656, que pone a cargo del Municipio los &uacute;tiles de trabajo; el convenio con el banco que paga los sueldos; el art&iacute;culo 20 de la Constituci&oacute;n de la Provincia, que pide un inter&eacute;s leg&iacute;timo para dar datos a terceros, y la Disposici&oacute;n 10/2015 de la Direcci&oacute;n Nacional de Protecci&oacute;n de Datos Personales, que pide una norma y un inter&eacute;s general para difundirlos; y Ley 25.326, por qui&eacute;n ve cada grabaci&oacute;n y por las grabaciones guardadas fuera del pa&iacute;s (art&iacute;culo 12).</i></p>
 
 <h2>V &middot; Ordenanza de asociaciones de parque</h2>
 
