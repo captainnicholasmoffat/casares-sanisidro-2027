@@ -2912,3 +2912,13 @@ Páginas de la versión de pantalla (51 págs.).
 - Paso 1 (hecho): borrados salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf, doc/build_a4.py, assets/svg_a4/ y
   doc/charts_a4.py, que hacía los gráficos rehechos para A4. La versión de pantalla no se tocó. Lo que el apartado
   «D · VERSIÓN A4 PARA IMPRIMIR (07/10)» de arriba describe ya no existe.
+- Pasos 2 y 3 (hecho): doc/corte_a4.py toma cada página del PDF de pantalla y la reparte en hojas A4, achicada al
+  90% (660 → 595,28 pt), cortando sólo entre bloques; cada hoja lleva el encabezado y el pie de pantalla, con el número
+  de hoja. Con el corte, la A4 tiene 133 hojas. Cuatro hojas de muestra, cada una al lado de la misma parte de la
+  versión de pantalla, en salida/muestras_a4/: la portada, la hoja 78 (espectáculos: texto y recuadro), la hoja 26
+  (cuadro 15) y la hoja 57 (gráficos 28 y 29).
+- Avisos para Nick, sin cambiar nada: al 90% quedan por debajo de 8 pt el texto de los cuadros (8,6 → 7,8), las
+  fuentes y notas (7,9 → 7,1), los epígrafes y notas de capítulo (7,5 → 6,8), los rótulos en mayúscula, el pie y el
+  encabezado (6,4–6,75 → 5,8–6,1), las etiquetas (5,6 → 5,1) y la letra de los gráficos (5,5–8,8 → 5,0–8,0). Diez
+  bloques no entran en una hoja: los cuadros 9, 14, 38, 39, 40 y 42, el glosario, las dos páginas de fuentes y el
+  recuadro de multas del 5.11 (pág. 36). El dispatch 5 aprueba partir los cuadros con el encabezado repetido.
