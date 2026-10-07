@@ -2985,3 +2985,60 @@ Páginas de la versión de pantalla (51 págs.).
 - Para Nick: (1) la pág. 4 dice que el inspector «graba con su teléfono mientras inspecciona»; con el Dispatch 5
   diría «graba todo su turno»; (2) las ciudades del 23 bis (Bahía Blanca, Mendoza, Mar del Plata, Rosario, entre
   otras) no están nombradas en las fuentes de rejas, mensajes de texto y clima.
+
+## DISPATCH 6 · INFORME 23 QUÁTER Y LAS DOS PREGUNTAS (07/10) · APLICADO
+Páginas de la versión de pantalla (51 págs.).
+1. Pág. 4: el inspector «graba todo su turno con su teléfono», y cualquier vecino ve después cada inspección.
+2. Fuentes (págs. 50 y 51), con las ciudades: del 23 bis, rejas (Gales, Mendoza, la Ciudad de Buenos Aires, Mar del
+   Plata, Rosario y Tigre, y las cooperativas de Bahía Blanca, Carmen de Areco y Moreno), mensajes de texto (Bahía
+   Blanca), espectáculos (Bahía Blanca, Coronel Suárez, Coronel Pringles, Campana, Ensenada, Dolores, Berazategui, Santa
+   Rosa de Mendoza, General Lavalle, Mar del Plata, Brandsen y la Ciudad de Buenos Aires) y teléfonos (Crosby y
+   Rosario); del 23 ter, Salta, San Fernando y Coronel Suárez, además de las que ya estaban; del 23 quáter, Bahía
+   Blanca, Patagones, Magdalena, Puan, Daireaux, la Ciudad de Buenos Aires, Seattle, Los Ángeles, Washington, Florida,
+   Lambeth, Leeds, Haringey, Bruselas y San Fernando. Sin empresas ni el nombre del banco.
+3. Teléfonos (págs. 11, 34, 41, 45 y 49): Habilitaciones (unos 4) y Obras Particulares (3 a 6), sólo quienes salen a
+   inspeccionar, entran en la primera etapa: 208 a 280 agentes, 20,5 a 27,5 M de compra y 107,6 a 145,5 M por año, más
+   9,5 M por base; en las cuentas, el número alto. Convenio con el banco que paga los sueldos: 24 cuotas sin interés
+   todo el año para los modelos aptos, con el riesgo de cobro del banco y sin adelanto del Municipio; para el abogado.
+   Ordenanza IV, artículos 1 y 7.
+4. Grabaciones (págs. 34, 45 y 51): una ordenanza crea la base y declara de interés general que se puedan ver
+   (Disposición 10/2015); cualquier vecino ve cualquier inspección, de a una, buscada por comercio o domicilio, porque
+   todo vecino tiene interés legítimo en controlar a los agentes del Municipio, y la ordenanza lo declara así para
+   cumplir con el artículo 20 de la Constitución bonaerense (abogado); adentro de una casa se graba igual, pero el
+   interior nunca se publica: lo ven el dueño, los auditores y, si hace falta, un juez; las caras de terceros se
+   difuminan cuando alguien pide ver una inspección, con revisión de una persona: unos $2.200 por pedido, de 5 a 23 M
+   por año. Ordenanza IV, artículo 2 («Sellado, base de datos y publicidad») y la nota del abogado. Sale «El límite es
+   el acto, no el lugar», que ya no vale con el interior de las casas.
+5. Espectáculos (págs. 11, 30 y 51): en el «Hoy», ninguna norma del partido fija un tope para un show al aire libre y
+   la Ordenanza 5182 presume molestos los parlantes hacia la vía pública. Temporadas: al aire libre del 20 de
+   septiembre a mediados de abril; el resto del año, bajo techo (los solistas en espacios municipales y los demás en
+   clubes y centros culturales por convenio, con el instrumento que defina un abogado); los shows grandes, al aire
+   libre; cuántos van bajo techo y lo que cuestan los convenios, [23 quinquies]. Unos 326 M por año (202,6 M para los
+   artistas) y 465 M el primer año. Topes medidos junto a la consola: 80 decibeles en plazas chicas, 85 en parques y 88
+   en la costa; 60 en la fachada de la casa más cercana; unos 17 lugares, hasta 12 shows por lugar por año; cierre a las
+   22. Limitador con bloqueo y clave, y dos bafles chicos para el «modo plaza», sin subwoofer: 7,7 M por los dos equipos;
+   se mide con el sonómetro del Municipio. Un decreto u ordenanza saca a los shows autorizados de la presunción de
+   ruido molesto (Ordenanza 5182, artículo 81, y Ordenanza General 27); abogado.
+6. Alto Perú (pág. 26): la marca pasa a [23 quinquies]. «Mayo a agosto» no aparecía en el documento.
+7. Cifras (págs. 11 y 13): la reasignación pasa de 6.740 a 6.767 M (sigue siendo el 27%); el gasto flexible ocupado
+   (53,3%) y el libre (46,7%) no cambian; con la beca y el módulo de salud, de 44,1% a 44,0%. Se suman los teléfonos con
+   el tope (145,5 M), el difuminado con el tope (23 M) y los espectáculos (326 M).
+- Método (pág. 49): suma el informe 23 quáter; lo que falta va marcado [23 quinquies]: cuatro marcas (págs. 11, 26, 30
+  y 49); ninguna [23 quáter], [23 ter] ni [23 bis].
+- Fuentes: la segunda página pasaba de 2.700 pt (2.917); el corte entre las dos baja a «5.5 · la costa toda la semana»
+  (2.113 y 1.998 pt). La página más alta del documento, 2.676 pt.
+- La Disposición 10/2015 la dictó la Dirección Nacional de Protección de Datos Personales, hoy dentro de la Agencia de
+  Acceso a la Información Pública: así se cita.
+- Excel: fila 54, 46,5 M (27,5 más dos bases); fila 57, 168,5 M (145,5 de teléfonos y datos y 23 de difuminado);
+  filas 281 a 283, 326 M, 138,8 M y 464,8 M; 13.454 fórmulas, 0 errores; Resumen anual sin diferencias.
+- Controles de pantalla: 51 páginas de hasta 2.700 pt; índice, 65 entradas y ninguna fuera de lugar; 42 cuadros y
+  gráficos seguidos; ninguna fuente Liberation ni DejaVu; barridos sin cambios; sin marcas, empresas ni personas nuevas.
+- A4, con el mismo método aprobado: salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf, 139 hojas. Además de lo que ya se partía,
+  ahora se parte entre sus puntos el recuadro de espectáculos (hojas 78 y 79), que ya no entra en una hoja. Cada página
+  de pantalla está entera en sus hojas, palabra por palabra; índice con los números de hoja de la A4, 64 entradas,
+  ninguna fuera de lugar; 42 cuadros y gráficos seguidos; cuatro marcas [23 quinquies]; ninguna fuente Liberation ni
+  DejaVu.
+- La raya del pie de la A4 ahora se redibuja igual que en pantalla (mismo color y transparencia) en vez de recortarla de
+  la página: el recorte se llevaba la punta del borde de un recuadro que llega hasta el pie (una astilla coral de 0,25 pt
+  en las hojas 78 a 80) o del último cuadro de la página (una línea de 0,1 pt).
+- Cinco tests OK (data/ restaurado).

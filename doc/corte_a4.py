@@ -236,6 +236,24 @@ def pie_original(src_pg, m):
     return pie, x_num, base
 
 
+_RAYAS = {}
+
+
+def raya_pie(src, pno, pie):
+    """La raya del pie tal como la dibujo Chrome: el rectangulo de 0,75 pt a lo ancho de la caja, junto al pie, con su
+    color y su transparencia. Se redibuja igual en la hoja, en vez de recortarla, para no llevarse la punta del borde
+    de un recuadro o de un cuadro que llega hasta ella."""
+    key = (id(src), pno)
+    if key not in _RAYAS:
+        _RAYAS[key] = None
+        for d in src[pno].get_drawings():
+            r = d["rect"]
+            if abs(r.height - 0.75) < 0.2 and r.width > 500 and abs(r.y0 - pie["top"]) < 3 and d.get("fill"):
+                _RAYAS[key] = (fitz.Rect(r), d["fill"], d.get("fill_opacity") or 1.0)
+                break
+    return _RAYAS[key]
+
+
 def escribir(pg, x_der, base, texto, tam, espaciado):
     """Texto alineado a la derecha, con la letra y el espaciado del pie de pantalla."""
     f = fitz.Font(fontfile=str(INTER))
@@ -271,10 +289,17 @@ def componer(dst, src, pno, m, hoja, n_hoja, total):
     _, x_num, base = pie_original(src[pno], m)
     alto = max(m["alto"], 841.89)
     dy = HOJA - alto                           # el pie va al fondo de la hoja, como en pantalla
-    raya = fitz.Rect(0, pie["top"] + 0.1, 660, pie["top"] + 0.85)     # solo la raya (0,75 pt), nada de arriba
-    izq = fitz.Rect(0, pie["top"] + 0.85, x_num - 2, alto)
-    for r in (raya, izq):
-        pg.show_pdf_page(fitz.Rect(r.x0 * E, (r.y0 + dy) * E, r.x1 * E, (r.y1 + dy) * E), src, pno, clip=r)
+    rp = raya_pie(src, pno, pie)
+    if rp:                                     # la raya, redibujada igual: nada de lo que la toca arriba
+        r, color, opac = rp
+        pg.draw_rect(fitz.Rect(r.x0 * E, (r.y0 + dy) * E, r.x1 * E, (r.y1 + dy) * E), color=None, fill=color,
+                     fill_opacity=opac, overlay=True)
+        izq = fitz.Rect(0, r.y1, x_num - 2, alto)
+    else:
+        raya = fitz.Rect(0, pie["top"] + 0.1, 660, pie["top"] + 0.85)
+        pg.show_pdf_page(fitz.Rect(0, (raya.y0 + dy) * E, A4_W, (raya.y1 + dy) * E), src, pno, clip=raya)
+        izq = fitz.Rect(0, raya.y1, x_num - 2, alto)
+    pg.show_pdf_page(fitz.Rect(izq.x0 * E, (izq.y0 + dy) * E, izq.x1 * E, (izq.y1 + dy) * E), src, pno, clip=izq)
     escribir(pg, (660 - 45) * E, (base + dy) * E, f"Página {n_hoja} de {total}", 6.4 * E, 0.25 * E)
     return pg
 
