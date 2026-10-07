@@ -14,7 +14,7 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter as L
 
 SRC, OUT = sys.argv[1], sys.argv[2]
-HAB_MODO = "inicial"    # ya no se usa: desde el 06/10 las inspecciones transmitidas van en las filas 54 y 57
+HAB_MODO = "inicial"    # ya no se usa: desde el 06/10 las inspecciones grabadas van en las filas 54 y 57
 for a in sys.argv[3:]:
     if a.startswith("--habilitaciones="):
         HAB_MODO = a.split("=", 1)[1]
@@ -233,14 +233,14 @@ s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=F
            "Empieza a moverse en el mes 12 y llega en el mes 36 (6.4); el año 1 adelanta lo de la costa (fila 238)")
 s_row(53, "Educación · recomposición anual", 2064000000,
       note="Devolver la función educativa al nivel real de 2024, que cayó 11,6%: 2.064 M (5.8, cuadro 14). Desde el mes 12 (6.4)")
-s_row(54, "Inspecciones transmitidas · teléfonos y soportes, una vez", 0,
-      note="5.9: el inspector transmite con su teléfono, desde la inteligencia artificial del Municipio, en un soporte en el pecho. Salen los 1.200 M (cámaras corporales y analítica nueva): quedan las 110 licencias de análisis de video que ya existen, sin ampliar (decisión del 06/10). El costo de teléfonos y soportes llega con el informe 23 bis")
+s_row(54, "Inspecciones grabadas · soportes y baterías, una vez", 0,
+      note="5.9: el agente graba su turno con su teléfono, desde la inteligencia artificial del Municipio, en un soporte en el pecho; cada grabación se sella al grabar y se sube al volver a la base. El Municipio no compra teléfonos: consigue financiación y descuentos, y paga el plan de datos, el soporte y la batería (07/10). Salen los 1.200 M (cámaras corporales y analítica nueva): quedan las 110 licencias de análisis de video que ya existen, sin ampliar (06/10). El costo llega con el informe 23 ter")
 s_row(55, "Apoyo escolar · costo anual por sede", 180000000,
       note="ESTIMACIÓN PROPIA, NO VERIFICADA. Seis sedes: 1.080 M (cuadro 14). Dos sedes por año es supuesto de este libro")
 s_row(56, "Salud · adhesión al sistema provincial", 0,
       note="Mi Salud Digital no tiene costo de licencia para el municipio que adhiere")
-s_row(57, "Inspecciones transmitidas · plan de datos y dos años de grabaciones, por año", 0,
-      note="Salen los 264 M de mantenimiento (el 22% de una lista de Oracle). El plan de datos y las grabaciones, que se guardan dos años, llegan con el informe 23 bis")
+s_row(57, "Inspecciones grabadas · plan de datos y guarda de las grabaciones, por año", 0,
+      note="Salen los 264 M de mantenimiento (el 22% de una lista de precios). El plan de datos y la guarda (seis meses a mano y archivo hasta dos años, en una nube en Europa) llegan con el informe 23 ter")
 
 # --- F · deuda
 s_row(59, "Stock de deuda al 30/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),
@@ -406,9 +406,9 @@ s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mit
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
       note="El 41,4% del documento")
-s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271)/C128", fmt=FMT_PCT1,
-      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores de multas y obra vecinal: el 52,7% del documento")
-s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,3%")
+s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271+C273)/C128", fmt=FMT_PCT1,
+      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores y mensajes de texto de las multas, y obra vecinal: el 52,8% del documento")
+s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 47,2%")
 s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
       note="El 44,6%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
 
@@ -489,7 +489,7 @@ s_row(231, "Formación · sesenta puestos en seis centros de acceso, una vez", 1
 s_row(232, "Formación · conexión de las seis sedes, por año", 39502616,
       note="Fibra óptica, 629.200 $ por mes (Ciudad, 2026)")
 s_row(233, "Inspecciones · cámaras corporales: salen", 0,
-      note="El inspector transmite con su teléfono (filas 54 y 57): salen las 80 cámaras corporales (168,7 M) y su licencia (3,8 M por año)")
+      note="El agente graba con su teléfono (filas 54 y 57): salen las 80 cámaras corporales (168,7 M) y su licencia (3,8 M por año)")
 clear_row(S, 234, 2, 5)
 s_row(235, "Salud · trece pantallas de ocupación de guardia, una vez", 8318978,
       note="Televisor de 43 pulgadas, soporte y mini PC: 0,64 M por pantalla (compras públicas 2025 y 2026)")
@@ -563,6 +563,8 @@ s_row(271, "Tránsito o Juzgado de Faltas · cuatro personas que validan las act
            "fondo de seguridad vial: pagar con las multas a quien multa invita a multar más. Entra en el gasto flexible ocupado")
 s_row(272, "Educación · cuatro docentes que revisan el profesor digital, por año", 93760000,
       note="Informe 23: a sueldo de junior. Dentro de la recomposición de Educación (fila 53): no suma")
+s_row(273, "Tránsito · mensajes de texto para avisar antes de multar, por año", 5900000,
+      note="Informe 23 bis: de 0,8 a 5,9 M por año; se toma el tope. El aviso va por la inteligencia artificial del Municipio y, a quien dio su celular, por mensaje de texto (decisión del 07/10). Lo paga Tránsito: entra en el gasto flexible ocupado")
 s_header(274, "Z · EL FONDO DE SEGURIDAD VIAL NO MUEVE EL MARGEN (5.11 e informe 18)")
 s_row(275, "Multas cobradas en 2025: otras multas en vía pública, a pesos de diciembre de 2025", 3818583182,
       note="Rubro 1.2.6.04, trimestre por trimestre con el IPC (informe 18, 1.8). El presupuesto no separa las de tránsito")
@@ -668,7 +670,7 @@ put(P, "B9", "Empleo y vivienda · lo que suma a 2025", font(9))
 put(P, "B10", "Ambiente · reasignación", font(9))
 put(P, "B11", "Educación · recomposición", font(9))
 put(P, "B12", "Apoyo escolar · seis sedes", font(9))
-put(P, "B13", "Inspecciones transmitidas: teléfonos, datos y grabaciones", font(9))
+put(P, "B13", "Inspecciones grabadas: soportes, datos y grabaciones", font(9))
 put(P, "B14", "Salud · turno digital", font(9))
 put(P, "B15", "Salud · módulo de los años 1 y 2, del gasto flexible libre", font(9))
 put(P, "B16", "Contrapartida · reasignación desde el gasto flexible", font(9))
@@ -699,11 +701,11 @@ for rr in range(22, 45):
     clear_row(P, rr)
 put(P, "B22", "Sólo empleo y vivienda suman al gasto: se pagan con lo que cobra la tabla nueva, y lo que falta cada "
     "año sale del gasto flexible (fila 17). Ambiente, educación, apoyo "
-    "escolar, las inspecciones transmitidas y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
+    "escolar, las inspecciones grabadas y el módulo de salud se pagan moviendo partidas dentro del gasto flexible: entran en su "
     "función de destino y salen de los tres programas que ceden (cuadro 15), así que el gasto total no cambia.",
     font(8, italic=True, color=GRAY))
 put(P, "B23", "Ambiente empieza a moverse en el mes 12 y llega al 1,5% en el mes 36, y en el año 1 adelanta 335 M para "
-    "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año; las inspecciones transmitidas compran los teléfonos el año 1 y pagan datos y grabaciones desde el mes 9: son supuestos de este libro.",
+    "empezar la costa (5.5); educación se recompone desde el mes 12 (6.4). Apoyo escolar abre dos sedes por año; las inspecciones grabadas compran los soportes el año 1 y pagan datos y grabaciones desde el mes 9: son supuestos de este libro.",
     font(8, italic=True, color=GRAY))
 put(P, "B25", "EMPLEO Y VIVIENDA, ABIERTOS (cuadro 34)", font(9, True), fill=F_SEC)
 lab2 = {27: "Empleo y vivienda · total del mes",

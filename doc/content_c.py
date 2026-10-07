@@ -712,7 +712,9 @@ ejecuci&oacute;n por zona, el tiempo de respuesta de los reclamos y las veinte m
 <div class="callout g">
 <div class="clabel">Lo que proponemos: un solo circuito, del vecino al responsable y de vuelta al vecino</div>
 <p><b>1 &middot; Escucha todo.</b> Cuenta todo lo que los vecinos le dicen a la inteligencia artificial del Municipio en
-cualquier charla, no s&oacute;lo el reclamo formal.</p>
+cualquier charla, no s&oacute;lo el reclamo formal. Y recibe denuncias, porque el Municipio es de todos los vecinos: cualquier
+vecino, comerciante o artista le muestra, con foto o video, el mal uso de un bien municipal o un pedido indebido de un
+empleado, en cualquier &aacute;rea; lo registra, lo deriva al responsable y le cuenta qu&eacute; se hizo, como con los reclamos.</p>
 <p><b>2 &middot; Junta todo.</b> Con miles de quejas por d&iacute;a, no manda cada una: las agrupa por tema y por zona, con cu&aacute;ntas
 son, si crecen y qu&eacute; tan urgentes son. Cada responsable de &aacute;rea y cada comisi&oacute;n vecinal recibe ese resumen, y una alerta
 cuando algo se dispara: la obra que se atrasa, la recolecci&oacute;n que falla en una zona, la inspecci&oacute;n que se aparta de lo
@@ -827,7 +829,7 @@ laboratorios de inteligencia artificial del mundo (5.3).</p>
 <tr><td class="l">Infraestructura y licencias</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">243,5 M</td></tr>
 <tr><td class="l">Auditor&iacute;a externa</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">107,3 M</td></tr>
 <tr class="hi"><td class="l"><b>Plataforma</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>1.972,6 M</b></td></tr>
-<tr><td class="l">Dispositivos: instalar sensores, centros de acceso, transmisi&oacute;n de inspecciones y guardias; los equipos, en cada &aacute;rea (3.4)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
+<tr><td class="l">Dispositivos: instalar sensores, centros de acceso, grabaci&oacute;n de inspecciones y guardias; los equipos, en cada &aacute;rea (3.4)</td><td class="n">&mdash;</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">91,0 M</td></tr>
 <tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>2.063,6 M</b></td></tr>
 <tr><td class="l">Fuera de Ciencia y T&eacute;cnica, en las &aacute;reas: 4 docentes que revisan el profesor digital, en Educaci&oacute;n, y 4 que validan las actas de multas, en Tr&aacute;nsito o el Juzgado de Faltas</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">202,0 M</td></tr>
 </table>
@@ -1393,9 +1395,13 @@ su ente regulador, con el art&iacute;culo 16 de su marco; si son casas, intimar 
 Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (Ley 5965). Reci&eacute;n despu&eacute;s, si hace falta,
 un desviador de tiempo seco en la boca, acordado con AySA y pagado como obra p&uacute;blica. <span class="sg">El
 compromiso es el resultado &mdash;que deje de entrar cloaca&mdash;, no una obra que nadie dise&ntilde;&oacute; todav&iacute;a.</span></p>
-<p><b>2 &middot; Frenar la basura.</b> Redes y barreras en las bocas de los desag&uuml;es, vaciadas todos los d&iacute;as, empezando
-por Per&uacute;, como ya ped&iacute;a el Plan de Manejo de la Reserva en 2012; y una cuadrilla municipal de la costa m&aacute;s grande,
-con personal del Municipio reasignado. Robots y barcazas no sirven en una costa abierta como esta.</p>
+<p><b>2 &middot; Frenar la basura.</b> Rejas en unas diez bocas de los desag&uuml;es, revisadas cada semana
+y despu&eacute;s de cada lluvia, con alivio para que no inunden: si la reja se llena, el agua pasa por arriba. En las dos
+bocas grandes, Per&uacute; y Alto Per&uacute;, no van rejas sino barreras, empezando por Per&uacute;, como ya ped&iacute;a el Plan de Manejo de la
+Reserva en 2012. Las vac&iacute;a una cuadrilla municipal de la costa m&aacute;s grande, con personal del Municipio reasignado; y se
+llama a concurso a las cooperativas de trabajo del partido, con un contrato por resultado &mdash;se paga por boca vaciada&mdash;:
+si cobran menos que la cuadrilla, lo hacen ellas (necesita dictamen de un abogado). Robots y barcazas no sirven en una
+costa abierta como esta.</p>
 <p><b>3 &middot; Informar en lugar de prohibir, como Montevideo.</b> Muestras de agua en cada tramo que se usa, por lo
 menos dos veces por semana, y una bandera sanitaria por tramo, todos los d&iacute;as. <b>El ba&ntilde;o se habilita en los
 pilotos de arena</b>, con los guardavidas que pide la ley &mdash;el Municipio ya los contrata para sus natatorios&mdash; y
@@ -1422,9 +1428,9 @@ ambiental, la decisi&oacute;n del panel sorteado y, en un parque costero, el dic
 funcionan, se extienden por la costa.</p>
 <p><b>Cu&aacute;nto cuesta.</b> Un piloto de arena de 100 por 20 metros, con su pie de piedra, 196 millones una vez, con
 los precios del propio contrato municipal, y de 4 a 20 millones por a&ntilde;o para reponer arena; sus guardavidas, 29
-millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Con las redes, la barrera de
-Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 790 a 1.140 millones: <span
-class="sg">entre el 23% y el 33% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
+millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Las rejas, de 70,4 a 130,9 millones una vez. Con las rejas, la
+barrera de Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 432 a 821 millones: <span
+class="sg">entre el 12% y el 24% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
 moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
 muestras y la primera temporada de guardavidas, unos 335 millones&mdash;, con dinero de los programas que
 ceden (cuadro [[n:ceden]]) y no de lo que Ambiente ya gasta: sin gasto nuevo. El
@@ -1720,9 +1726,9 @@ todos. Tampoco se construyen playones: no hay lugar. En los d&iacute;as de mucha
 Municipio orienta el tr&aacute;nsito y dice d&oacute;nde hay lugar; la gente estaciona en los barrios, y a la costa accede la
 cantidad que entre.</p>
 <p><b>8 &middot; Clausuras totalmente transparentes.</b> Ninguna clausura sin motivo escrito ni sin plazo para
-corregir antes. Toda inspecci&oacute;n que termine en una clausura se transmite en vivo y queda grabada, como las dem&aacute;s
+corregir antes. Toda inspecci&oacute;n que termine en una clausura queda grabada y sellada, como las dem&aacute;s
 inspecciones (anexo, Ordenanza IV): se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro
-real obliga a cerrar en el momento, igual se transmite y se explica. Todo queda en la inteligencia artificial del
+real obliga a cerrar en el momento, igual se graba y se explica. Todo queda en la inteligencia artificial del
 Municipio, que cualquier vecino puede consultar y que audita las clausuras: avisa si a un mismo comercio se lo
 clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar. Y si a un comerciante le piden una coima o lo aprietan, tiene la herramienta del 5.9.
 <span class="sg">As&iacute; a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y
@@ -1829,8 +1835,8 @@ profesores. Con tres foodtrucks, el canon de un puesto es de unos
 60%. <span class="sg">La obra de los ba&ntilde;os y las plataformas sale de obras deportivas, como la Escuela N&aacute;utica; la
 limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el canon; los profesores, de
 Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a
-obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 23% y el 33% del aumento de Ambiente a entre el 30% y
-el 44%.</p>
+obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 12% y el 24% del aumento de Ambiente a entre el 20% y
+el 35%.</p>
 </div>
 <h3>Espect&aacute;culos al aire libre, en la semana</h3>
 <div class="cols">
@@ -1842,32 +1848,49 @@ h&aacute;bil, seg&uacute;n el Municipio, que no publica cu&aacute;nta gente fue.
 <div class="callout g">
 <div class="clabel">Lo que proponemos: m&aacute;s espect&aacute;culos, mejores y con m&aacute;s p&uacute;blico, sin lugar para la corrupci&oacute;n</div>
 <p><b>Artistas callejeros, a la gorra.</b></p>
-<p><b>1 &middot; El Municipio no les da dinero:</b> les da todo lo dem&aacute;s. Un equipo de producci&oacute;n municipal les lleva y arma el
-sonido, los micr&oacute;fonos y un escenario chico, y los ayuda durante el show; y la inteligencia artificial del Municipio
-promociona sus shows.</p>
+<p><b>1 &middot; El Municipio no les da dinero:</b> les da todo lo dem&aacute;s. Un equipo de producci&oacute;n municipal, de cinco personas
+nuevas, les lleva y arma el sonido, los micr&oacute;fonos y un escenario chico, y los ayuda durante el show; y la inteligencia
+artificial del Municipio promociona sus shows. El artista puede usar su propio sonido siempre que quiera.</p>
 <p><b>2 &middot; Reglas simples:</b> puntos se&ntilde;alizados; cien metros entre puntos con sonido; turnos de una hora; un tope de
 volumen medido; de lunes a jueves, con hora de corte; y zonas tranquilas: la Reserva Ribera Norte, el Bosque Alegre y
 los frentes de vivienda.</p>
 <p><b>3 &middot; Primero, una prueba por decreto;</b> despu&eacute;s, el registro gratis de artistas en la Ordenanza XIV, junto al de
 instructores (necesita dictamen de un abogado).</p>
 <p><b>Shows que paga el Municipio.</b></p>
-<p><b>4 &middot; S&oacute;lo artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de afuera. Como no se gasta en famosos, alcanza
-para pagar bien a muchos artistas del partido.</p>
+<p><b>4 &middot; Doscientos por a&ntilde;o, s&oacute;lo con artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de afuera. Es del
+partido si al menos la mitad de sus integrantes tiene en el DNI domicilio en San Isidro, y es emergente si tiene menos de
+50.000 oyentes mensuales en Spotify. Como no se gasta en famosos, alcanza para pagar bien a muchos artistas del partido.
+Los paga Cultura (cuadro [[n:programa]]); cu&aacute;nto cuestan, [23 ter].</p>
 <p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
 eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
-un cupo grande para artistas nuevos.</p>
+un cupo grande para artistas nuevos. La grilla cumple el cupo de la Ley 27.539 &mdash;al menos un 30% de mujeres&mdash;, y la
+inteligencia artificial del Municipio lo controla.</p>
 <p><b>6 &middot; Sin intermediarios y a la vista:</b> se le paga directo al artista, sin productora; cada pago se publica en la
 inteligencia artificial del Municipio, con un tope por artista por a&ntilde;o; y el show se graba desde la inteligencia
-artificial: si el artista no se presenta, no se paga.</p>
-<p><b>7 &middot; Si cancela el Municipio, el show se paga igual</b> y siempre se reprograma: la nueva fecha se fija en el momento,
-con el artista. La inteligencia artificial les avisa a todos los que iban la nueva fecha, y aclara que cancel&oacute; el
-Municipio, no el artista, para que el artista no quede mal con su p&uacute;blico. Por clima, s&oacute;lo se cancela con alerta
-oficial del Servicio Meteorol&oacute;gico Nacional para la zona, y cada cancelaci&oacute;n se publica con su motivo.</p>
+artificial: si el artista no se presenta, no se paga. Si a un artista le piden algo a cambio, lo denuncia en la
+inteligencia artificial del Municipio (4.11).</p>
+<p><b>7 &middot; Si cancela el Municipio, el artista no pierde:</b> el Municipio le paga el 70% del show al cancelar, y el show
+entero cuando se hace en la nueva fecha, que se fija en el momento, con el artista. Va como cl&aacute;usula del contrato
+(C&oacute;digo Civil y Comercial, art&iacute;culo 1261), con la constancia de la funci&oacute;n reprogramada (necesita dictamen de un
+abogado). La inteligencia artificial les avisa a todos los que iban la nueva fecha, y aclara que cancel&oacute; el Municipio, no
+el artista, para que el artista no quede mal con su p&uacute;blico.</p>
+<p><b>8 &middot; El clima, con una regla fija:</b> se cancela con alerta amarilla del Servicio Meteorol&oacute;gico Nacional para San
+Isidro, y si truena en el lugar, se pausa y se espera 30 minutos desde el &uacute;ltimo trueno: es el procedimiento ante
+tormenta el&eacute;ctrica que pide la Resoluci&oacute;n 1749/2014 del Ministerio de Seguridad bonaerense. Cada cancelaci&oacute;n se publica
+con su motivo.</p>
+<p><b>9 &middot; El sonido del Municipio, cuidado:</b> se compra por licitaci&oacute;n p&uacute;blica, abierta a cualquier proveedor, con
+requisitos de calidad publicados, y reemplaza al alquilado s&oacute;lo en los eventos chicos. Cada equipo lleva el sello del
+Municipio y su n&uacute;mero de serie, en un inventario p&uacute;blico en la inteligencia artificial del Municipio, que registra con
+foto qu&eacute; sale y qu&eacute; vuelve cada d&iacute;a, y qui&eacute;n lo firma; cada caja y la camioneta llevan un rastreador GPS; el dep&oacute;sito
+est&aacute; cerrado y con c&aacute;mara; y hay seguro contra robo. Lo que falta o se rompe por mal uso es responsabilidad de quien lo
+firm&oacute;, y los m&uacute;sicos y los vecinos pueden denunciar en la inteligencia artificial, con foto o video, si alguien roba o
+maltrata los equipos. Cu&aacute;nto cuesta, y si para doscientos shows hace falta un tercer equipo de sonido, [23 ter].</p>
 <p><b>M&aacute;s p&uacute;blico.</b></p>
-<p><b>8 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino</b> qu&eacute; hay, d&oacute;nde y cu&aacute;ndo, seg&uacute;n lo que le
-gusta; y con quienes le avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien acepta
-(Ley 25.326, de datos personales).</p>
-<p><b>9 &middot; D&iacute;as de semana y de d&iacute;a,</b> junto con los foodtrucks y las ofertas de los comercios.</p>
+<p><b>10 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino</b> qu&eacute; hay, d&oacute;nde y cu&aacute;ndo, seg&uacute;n lo que le
+gusta; y con quienes le avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien lo acepta
+expresamente; el grupo ve el nombre de pila, el show y el punto de encuentro, nunca el tel&eacute;fono ni la ubicaci&oacute;n, y todo
+se borra despu&eacute;s del show (Ley 25.326, de datos personales).</p>
+<p><b>11 &middot; D&iacute;as de semana y de d&iacute;a,</b> junto con los foodtrucks y las ofertas de los comercios.</p>
 </div>
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
@@ -2364,10 +2387,12 @@ subieron el aprendizaje entre 0,06 y 0,36 desv&iacute;os est&aacute;ndar, siempr
 En casa no est&aacute; probado.</p>
 <p><b>3 &middot; D&oacute;nde.</b> En los centros de apoyo escolar municipales, con horario fijo y un docente, y adem&aacute;s en casa,
 para todos los chicos del partido, de primaria y secundaria.</p>
-<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis en las escuelas p&uacute;blicas, parroquiales y cooperativas, y en el apoyo escolar
-municipal; en los dem&aacute;s colegios privados, cada alumno paga su costo, sin subsidio ni excepci&oacute;n, y lo cobra el
-Municipio desde su inteligencia artificial. El Municipio paga s&oacute;lo el de los alumnos que lo tienen gratis, con lo que
-Educaci&oacute;n recupera de su ca&iacute;da de 2025 (m&aacute;s abajo).</p>
+<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis en las escuelas p&uacute;blicas y en los colegios que el Estado financia por
+completo, y en el apoyo escolar municipal; en los dem&aacute;s, cada alumno paga lo que usa, con su parte del sueldo de las
+nueve personas que lo sostienen, sin subsidio ni excepci&oacute;n, y lo cobra el Municipio desde su inteligencia artificial:
+con el uso que se espera, de 10.887 a 12.146 pesos por a&ntilde;o &mdash;unos 1.100 a 1.200 por mes&mdash;, y si lo usa al m&aacute;ximo,
+de 34.532 a 42.919. El Municipio paga s&oacute;lo el de los alumnos que lo tienen gratis, con lo que Educaci&oacute;n recupera de su
+ca&iacute;da de 2025 (m&aacute;s abajo).</p>
 <p><b>5 &middot; Qu&eacute; informa.</b> C&oacute;mo avanza el chico y qu&eacute; temas le cuestan. Y le avisa al docente si sospecha trampa, con
 los hechos concretos que vio &mdash;una respuesta pegada de afuera, una tarea que no coincide con lo trabajado&mdash;,
 nunca con detectores de &laquo;texto hecho con inteligencia artificial&raquo;, que marcaron como tal el 61% de los ensayos de
@@ -2375,8 +2400,7 @@ alumnos que escriben en segunda lengua. <span class="sg">La inteligencia artific
 siempre el docente, que habla con el chico.</span> El chico y la familia ven lo mismo que el docente (Ley 25.326,
 art&iacute;culo 20, y Resoluci&oacute;n 9/2025 de la Provincia; necesita dictamen de un abogado).</p>
 <p><b>6 &middot; A qu&eacute; docentes les llega.</b> A los de todas las escuelas: en el apoyo escolar municipal, directo; en las
-p&uacute;blicas, por convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c); en las
-parroquiales y cooperativas, por acuerdo con cada escuela; y en los dem&aacute;s colegios privados, por acuerdo con cada
+p&uacute;blicas, por convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c); en los colegios que el Estado financia por completo, por acuerdo con cada uno; y en los dem&aacute;s, por acuerdo con cada
 colegio, que si quiere los informes para sus docentes tambi&eacute;n paga su costo.</p>
 <p><b>7 &middot; Los datos de los chicos, cuidados.</b> Consentimiento de la familia en dos partes &mdash;el profesor digital
 y el informe al docente&mdash;, que puede revocar; el chico sabe qu&eacute; se informa de &eacute;l; la base se crea por ordenanza;
@@ -2393,7 +2417,8 @@ medida con pruebas sin inteligencia artificial; despu&eacute;s, a todos.</p>
 <li><b>Revertir la ca&iacute;da real</b>, devolviendo la funci&oacute;n educativa al nivel de 2024. Son
 <b>2.064 millones</b> de pesos constantes, que no salen de adentro de educaci&oacute;n, que
 ser&iacute;a circular, sino del programa de mantenimiento y embellecimiento, que el
-cap&iacute;tulo 3 identifica con nombre. Es el <b>2,4% de los 87.326 millones</b> reasignables.</li>
+cap&iacute;tulo 3 identifica con nombre. Es el <b>2,4% de los 87.326 millones</b> reasignables. Adentro va el profesor digital de los alumnos
+que lo tienen gratis: cu&aacute;ntos son y cu&aacute;nto cuesta, [23 ter].</li>
 <li><b>Que cualquiera pueda preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra y escuela por escuela.</b> Es dinero
 afectado con destino espec&iacute;fico: su ejecuci&oacute;n deber&iacute;a ser trazable y hoy no lo es.
 Y sirve para lo &uacute;nico que importa ac&aacute;: saber si la obra escolar cae donde est&aacute;n las
@@ -2524,8 +2549,7 @@ pregunta si puede poner ah&iacute; lo que tiene en la cabeza. La inteligencia ar
 y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
 puede cambiar de idea sin perder dinero.</p>
 <p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
-momento discrecional que sobra.</b> Por eso, como proponemos para toda inspecci&oacute;n municipal, se transmite en vivo
-para que se vea que es real y queda grabada tal cual se transmiti&oacute; para que cualquier vecino la vea
+momento discrecional que sobra.</b> Por eso, como proponemos para toda inspecci&oacute;n municipal, queda grabada y sellada en el momento de grabar, para que se vea que fue real y para que cualquier vecino la vea
 despu&eacute;s; y el comerciante puede objetar por escrito y recibir respuesta fundada.</p>
 <p><b>Programada, no aleatoria.</b> La inteligencia artificial del Municipio la agenda, y el comerciante sabe cu&aacute;ndo va el
 inspector. Tambi&eacute;n compara las inspecciones del mismo rubro y marca las que se apartan del
@@ -2533,36 +2557,41 @@ patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los 
 </div>
 
 <p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma
-(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los tel&eacute;fonos, los
-soportes, los datos y las grabaciones de las inspecciones: [23 bis].</p>
+(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones de las inspecciones: [23 ter].</p>
 
-<h3>La coima en la inspecci&oacute;n: el acto de autoridad, transmitido en vivo</h3>
+<h3>La coima en la inspecci&oacute;n: el acto de autoridad, grabado y sellado</h3>
 <p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto
 donde el tr&aacute;mite se compra: <span class="sg">el momento en que un agente con facultad de
 clausurar entra a un local</span>.</p>
 <div class="cols">
-<p><b>La propuesta es que ese acto se transmita.</b> El inspector transmite en vivo mientras inspecciona, con su
-tel&eacute;fono, desde la inteligencia artificial del Municipio, en un soporte en el pecho: no hay c&aacute;maras corporales que
-comprar. La grabaci&oacute;n se sella en el momento de grabar y queda en el Municipio, no en el tel&eacute;fono, as&iacute; que no se puede
-editar ni borrar; se guarda dos a&ntilde;os, y cualquier vecino la ve despu&eacute;s: que pas&oacute; donde dice que pas&oacute; y que no hubo
-coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; transmitiendo.</span> El Municipio paga el
-plan de datos y le da un tel&eacute;fono a quien no tenga uno apto (necesita dictamen de un abogado, por el uso del tel&eacute;fono
-propio).</p>
+<p><b>La propuesta es que ese acto quede grabado y sellado.</b> El agente graba todo su turno con su tel&eacute;fono,
+desde la inteligencia artificial del Municipio, en un soporte en el pecho: no hay c&aacute;maras corporales que comprar. Cada
+grabaci&oacute;n se sella en el momento de grabar, y su huella llega en ese momento a la inteligencia artificial del Municipio;
+el video se sube al volver a la base, y si una grabaci&oacute;n sellada no se sube, la inteligencia artificial lo marca. As&iacute;
+nadie puede editarla ni borrarla sin que se note, y cualquier vecino ve despu&eacute;s la de cada inspecci&oacute;n: que pas&oacute; donde
+dice que pas&oacute; y que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; grabando.</span></p>
+<p><b>El tel&eacute;fono es propio.</b> Quien trabaje de inspector o de agente de tr&aacute;nsito necesita un tel&eacute;fono
+propio apto. El Municipio no compra tel&eacute;fonos: consigue financiaci&oacute;n y descuentos
+con marcas y comercios, y paga el plan de datos, el soporte de pecho y la bater&iacute;a. La Ley 14.656, del empleo municipal,
+pone a cargo del Municipio los &uacute;tiles de trabajo: la salida es compensar el gasto, como prev&eacute; su art&iacute;culo 75, y
+acordarlo con los trabajadores municipales (necesita dictamen de un abogado). Las grabaciones se guardan en una nube en
+Europa, adonde la ley argentina permite llevar datos personales: los primeros seis meses con acceso r&aacute;pido y
+despu&eacute;s en archivo, hasta cumplir dos a&ntilde;os.</p>
 <p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
-fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, patrulla municipal: quien puede
-labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>mientras ejerce esa funci&oacute;n</b>.
-Fuera de ella, no.</p>
+fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, agentes de tr&aacute;nsito, patrulla municipal: quien puede
+labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>durante su turno</b>. Fuera del turno, no. Empiezan
+los inspectores y los agentes de tr&aacute;nsito; la patrulla municipal, en una segunda etapa.</p>
 <p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
-naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial llevada un paso m&aacute;s,
+naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial,
 y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
 acusaci&oacute;n falsa</span>.</p>
-<p><b>Y tiene una consecuencia escrita:</b> sin transmisi&oacute;n, el acta no vale. Sin eso la regla es
+<p><b>Y tiene una consecuencia escrita:</b> sin grabaci&oacute;n sellada y subida, el acta no vale. Sin eso la regla es
 una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
 cumplirla.</p>
 <p><b>Del otro lado, el vecino graba y lo sube a la inteligencia artificial del Municipio</b>, y ese registro tiene el mismo valor
 en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
-<p><b>Lo que la reglamentaci&oacute;n tiene que resolver.</b> Una transmisi&oacute;n
-p&uacute;blica desde un comercio o una vivienda alcanza a terceros que no son parte del acto.
+<p><b>Lo que la reglamentaci&oacute;n tiene que resolver.</b> La grabaci&oacute;n
+de una inspecci&oacute;n en un comercio o una vivienda alcanza a terceros que no son parte del acto.
 <span class="sg">El l&iacute;mite es el acto, no el lugar</span>: la reglamentaci&oacute;n define el
 resguardo de esos datos y el archivo queda con fecha, domicilio y agente interviniente.</p>
 </div>
@@ -2573,7 +2602,8 @@ resguardo de esos datos y el archivo queda con fecha, domicilio y agente intervi
 inteligencia artificial del Municipio que un funcionario le pide dinero, lo amenaza o le clausura sin motivo. Le explica
 sus derechos: a quien le exigen dinero es v&iacute;ctima; exigirlo es delito (C&oacute;digo Penal, art&iacute;culo 266, exacciones ilegales),
 y recibirlo tambi&eacute;n (art&iacute;culo 256, cohecho). Sella la prueba en el momento de grabar, como la del vecino que denuncia un
-ruido (5.5), y le arma la denuncia.</p>
+ruido (5.5), y le arma la denuncia. Es la misma puerta por la que cualquiera denuncia, en cualquier &aacute;rea, el mal uso de
+un bien municipal o un pedido indebido de un empleado (4.11).</p>
 <p><b>2 &middot; La denuncia va a quien no depende del denunciado:</b> la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo
 (el canal del cap&iacute;tulo 4), la auditor&iacute;a externa y, si hay delito, la fiscal&iacute;a. Nunca s&oacute;lo al jefe del denunciado.</p>
 <p><b>3 &middot; Sin represalias.</b> La identidad del comerciante queda reservada. Mientras se investiga, a ese comercio no lo
@@ -2582,7 +2612,7 @@ denunciado.</p>
 <p><b>4 &middot; Cruza los datos.</b> La inteligencia artificial cruza denuncias, clausuras e inspecciones: si se concentran en
 un mismo agente, rubro o zona, avisa al control independiente. Y le cuenta al comerciante en qu&eacute; est&aacute; su denuncia
 (4.11).</p>
-<p><b>5 &middot; Tambi&eacute;n protege al inspector honesto:</b> la transmisi&oacute;n en vivo lo cubre, y la denuncia falsa se sanciona
+<p><b>5 &middot; Tambi&eacute;n protege al inspector honesto:</b> la grabaci&oacute;n sellada lo cubre, y la denuncia falsa se sanciona
 (anexo, Ordenanza IV; necesita dictamen de un abogado).</p>
 </div>
 
@@ -2705,8 +2735,8 @@ velocidad, c&aacute;maras de tramo, que miden el promedio entre dos puntos: baja
 se retiraron 3 en 2023&mdash;, y los datos de cada c&aacute;mara son p&uacute;blicos. Cada punto lo autoriza la Provincia
 (Disposiciones 14/2020 y 43/2021).</p>
 <p><b>3 &middot; Avisar antes de multar.</b> La inteligencia artificial del Municipio dice d&oacute;nde est&aacute;n las c&aacute;maras y cu&aacute;l
-es el l&iacute;mite de cada calle; avisa al primer exceso, por la propia inteligencia artificial y por mensaje de texto s&oacute;lo a
-quien no la usa, sin enlaces de pago; y
+es el l&iacute;mite de cada calle; avisa al primer exceso por la propia inteligencia artificial y, a quien dio su celular, por
+mensaje de texto, sin enlaces de pago; y
 muestra la foto, la velocidad, el descuento del error y la calibraci&oacute;n del equipo. Marca las multas de equipos con
 la verificaci&oacute;n vencida, y una persona las anula. Cuando una multa est&aacute; mal, se lo avisa al vecino y le arma el
 reclamo, que sigue el circuito de la inteligencia artificial que escucha, con plazo y respuesta (4.11). El aviso no reemplaza a la notificaci&oacute;n, que sigue llegando al domicilio (necesita dictamen de un
@@ -2757,7 +2787,7 @@ se depuran las multas prescriptas; y la inteligencia artificial del Municipio le
 hasta cu&aacute;ndo.</p>
 <p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Los reductores ya est&aacute;n contratados: 536,7 millones de la licitaci&oacute;n de
 2025. El aviso, el mapa y el reclamo son parte de la inteligencia artificial del Municipio, que paga Ciencia y
-T&eacute;cnica (4.11); el mensaje de texto para quien no la usa, [23 bis]. Las cuatro personas que validan las actas cuestan
+T&eacute;cnica (4.11); el mensaje de texto, de 0,8 a 5,9 millones por a&ntilde;o, lo paga Tr&aacute;nsito. Las cuatro personas que validan las actas cuestan
 108,3 millones por a&ntilde;o y van con el resto del presupuesto, no con el fondo: pagar con las multas a quien multa invita a
 multar m&aacute;s. Los equipos y su mantenimiento se pagan con el fondo de seguridad vial, que no cambia las cuentas: en 2025
 se cobraron 3.819 millones de multas en la v&iacute;a p&uacute;blica y el Municipio gast&oacute; 7.199 millones en semaforizaci&oacute;n,
@@ -2977,7 +3007,7 @@ afuera.</p>
 <li>La funci&oacute;n Trabajo es la &uacute;ltima de las veinte del presupuesto, con 170 millones. Proponemos llevar empleo y vivienda a 7.730,9 millones por a&ntilde;o: una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, que nace en el Centro de Formaci&oacute;n Laboral N&ordm; 404 de La Cava, donde ya funciona La Cava 4.0, declarada de inter&eacute;s por el Concejo, y llega a las seis zonas; el segundo a&ntilde;o, una pasant&iacute;a paga, seis meses en el Municipio y seis en una empresa del partido. Son 928 alumnos por a&ntilde;o, de 250 a 300 empleos pagos por a&ntilde;o y 1.286 egresados en el mandato.</li>
 <li>Para que el trabajo quede en el partido, los egresados tienen prioridad, quien trabaja para el Municipio toma al menos el 75% de su gente del partido y el 20% de cada licitaci&oacute;n va a pymes del partido. Del dinero, el 60% va a empleo y el 40% a vivienda; y un semillero de empresas, por 121 millones por a&ntilde;o, le da al egresado que no queda contratado su primer cliente.</li>
 <li>El Censo no mide la conexi&oacute;n a internet. Proponemos medirla por zona con el primer ciclo de asambleas; las redes de cloaca y de gas en la calle las hace la obra vecinal, y la partida de vivienda, 3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa.</li>
-<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 790 a 1.140 millones por a&ntilde;o.</li>
+<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 432 a 821 millones por a&ntilde;o.</li>
 <li>La recolecci&oacute;n, con barrido y limpieza, es el servicio m&aacute;s caro que paga el Municipio, 49.270 millones por a&ntilde;o: la presta el mismo grupo desde 1998, cuatro licitaciones fracasaron, y corre sobre un contrato directo de seis meses de 2009. Proponemos licitarla en dos zonas, con el pliego aprobado antes del llamado, todos sus trabajadores con su antig&uuml;edad, y el pago seg&uacute;n lo que se mide.</li>
 <li>El ruido tiene norma, pero nadie lo mide. Proponemos que el vecino lo grabe con la inteligencia artificial del Municipio y la prueba quede sellada, y estaciones m&oacute;viles que midan motos y colectivos con el instrumento que fija la ordenanza; primero va el aviso, y un inspector valida antes de multar.</li>
 <li>En urbanismo, lo que se da de m&aacute;s se da por decreto, sin pasar por el Concejo; y en la costa se demolieron Catalejo y Barisidro. Proponemos audiencia p&uacute;blica y dictamen de la comisi&oacute;n de la zona antes de cada excepci&oacute;n, y cobrar el 15% de lo que se valoriza un terreno; que los comercios de la costa sigan en sus predios, con canon y 75% de empleo local; ninguna obra en un parque sin el dictamen de su asociaci&oacute;n; y parques que nunca se privatizan, se edifican ni se achican.</li>
@@ -2986,7 +3016,7 @@ afuera.</p>
 <li>Y que cada compra de insumos se vea con su precio por unidad y se compare sola contra las anteriores y contra los otros hospitales &mdash;en la Ciudad de Buenos Aires, que cada hospital viera lo que pagaban los dem&aacute;s baj&oacute; los precios 13% en el primer a&ntilde;o&mdash;; que cualquiera pregunte por qu&eacute; falta un medicamento, un insumo o una cama; y que se audite la inteligencia artificial que el Municipio anunci&oacute; en 2023 en los tres hospitales, sin proveedor conocido.</li>
 <li>Seguridad creci&oacute; 34,8% por encima de la inflaci&oacute;n en un a&ntilde;o, y el Municipio anuncia unas <b>2.646 c&aacute;maras con anal&iacute;tica que nunca tuvo una auditor&iacute;a externa</b>. No proponemos comprar c&aacute;maras: patrullar donde se concentra el delito, empezando por el mapa de incidentes que hoy no existe; que las c&aacute;maras que hay detecten hechos violentos en vivo y avisen al patrullero m&aacute;s cercano, sin reconocimiento facial masivo; una oficina de ciberdelito; y una constancia para quien es acusado sin causa.</li>
 <li>Educaci&oacute;n cay&oacute; 11,6% real en 2025, y hoy hay cinco espacios chicos de apoyo escolar, s&oacute;lo en B&eacute;ccar y Boulogne. Proponemos devolverle los 2.064 millones que perdi&oacute;, un centro de apoyo escolar gratuito en cada localidad, en edificios que ya existen, y un profesor digital particular que da pistas y nunca la respuesta, probado primero seis meses. En cultura, la m&uacute;sica en vivo se rige por decretos de 1970 &mdash;uno, publicado todav&iacute;a como vigente, proh&iacute;be la entrada de &laquo;mujeres solas&raquo;&mdash;; proponemos adherir a la Ley 15.302 de espacios culturales.</li>
-<li>La inteligencia artificial del Municipio lee cada tr&aacute;mite contra la norma y contesta en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda, empezando por la habilitaci&oacute;n comercial; y antes de alquilar, con la c&aacute;mara del tel&eacute;fono, dice si ese negocio se puede poner ah&iacute;. Cada inspecci&oacute;n se transmite en vivo y queda grabada, y sin transmisi&oacute;n el acta no vale. Y al comerciante al que le piden una coima, lo aprietan o lo amenazan, lo defiende: su denuncia va a quien no depende del denunciado.</li>
+<li>La inteligencia artificial del Municipio lee cada tr&aacute;mite contra la norma y contesta en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda, empezando por la habilitaci&oacute;n comercial; y antes de alquilar, con la c&aacute;mara del tel&eacute;fono, dice si ese negocio se puede poner ah&iacute;. Cada inspecci&oacute;n queda grabada y sellada, y sin esa grabaci&oacute;n el acta no vale. Y al comerciante al que le piden una coima, lo aprietan o lo amenazan, lo defiende: su denuncia va a quien no depende del denunciado.</li>
 <li>De siete cosas que se buscaron en el sitio del Municipio, seis est&aacute;n ca&iacute;das, escondidas, incompletas o no se pueden verificar. Ponerlas en orden no cuesta nada, y desde ah&iacute; todo se le pregunta a la inteligencia artificial del Municipio, casi siempre al d&iacute;a.</li>
 <li>Hoy una multa por exceso de velocidad pagada enseguida, 171.075 pesos, es el 17% de un ingreso de un mill&oacute;n y el 1,7% de uno de diez millones. Proponemos multas que no hundan a nadie: avisar antes de multar, cuotas sin tr&aacute;mites con un tope seg&uacute;n el ingreso, c&aacute;maras s&oacute;lo donde hay choques, que nadie cobre por multa y que lo que se cobra vaya a un fondo cerrado de seguridad vial; cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o. Y las calles y veredas entran en el dinero de obra de cada zona.</li>
 <li>No se reduce la planta: la automatizaci&oacute;n le saca al empleado lo que no requiere criterio y lo deja para lo que s&iacute;. Y el Municipio atiende tambi&eacute;n el fin de semana, con horarios rotativos optativos &mdash;mismas horas, otros d&iacute;as, sin costo extra&mdash;, empezando por las delegaciones, el Juzgado de Faltas y los turnos de salud.</li>
@@ -3043,7 +3073,7 @@ cierre, dos meses despu&eacute;s. Ac&aacute;, la ronda de priorizaci&oacute;n es
 <tr class="hi"><td class="l">13 &middot; El primer centro de apoyo escolar abierto, con la prueba a ciegas que elige la cara del profesor digital (5.8). Hoy hay cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno</td><td class="n">Ejecuci&oacute;n por programa y matr&iacute;cula por sede</td></tr>
 <tr class="hi"><td class="l">14 &middot; Tres m&oacute;dulos de la inteligencia artificial del Municipio en funcionamiento: la consulta sobre lo que el Municipio ya registr&oacute;, que es tambi&eacute;n el primer contacto, a toda hora, de una v&iacute;ctima de violencia (5.13); el turno m&eacute;dico, sacado en la charla (5.6); y la escucha de los vecinos, con su seguimiento y su respuesta (4.11)</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr class="hi"><td class="l">15 &middot; La detecci&oacute;n en vivo de hechos violentos funcionando en las 110 c&aacute;maras con inteligencia artificial que ya hay, con alerta al patrullero m&aacute;s cercano</td><td class="n">El decreto de puesta en servicio; cu&aacute;ntas alertas hubo y en cu&aacute;nto lleg&oacute; el patrullero se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr class="hi"><td class="l">16 &middot; El decreto que manda transmitir en vivo cada inspecci&oacute;n municipal desde el tel&eacute;fono del inspector, con la inteligencia artificial del Municipio, para que se vea que es real, y grabarla sellada, para que cualquier vecino la vea despu&eacute;s. Funciona en el mes 9 (6.4). Y desde los cien d&iacute;as, el comerciante a quien le piden una coima, lo aprietan o lo amenazan lo denuncia ante la inteligencia artificial del Municipio, con la prueba sellada al grabar, que sirve tambi&eacute;n para el ruido y para toda denuncia; la Ordenanza IV lo fija despu&eacute;s (5.5 y 5.9)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial; cu&aacute;ntas denuncias hay y en qu&eacute; est&aacute;n se le pregunta a la inteligencia artificial del Municipio</td></tr>
+<tr class="hi"><td class="l">16 &middot; El decreto que manda grabar cada inspecci&oacute;n municipal con el tel&eacute;fono del agente, desde la inteligencia artificial del Municipio, sellada en el momento de grabar, para que se vea que fue real y para que cualquier vecino la vea despu&eacute;s. Funciona en el mes 9 (6.4). Y desde los cien d&iacute;as, el comerciante a quien le piden una coima, lo aprietan o lo amenazan lo denuncia ante la inteligencia artificial del Municipio, con la prueba sellada al grabar, que sirve tambi&eacute;n para el ruido y para toda denuncia; la Ordenanza IV lo fija despu&eacute;s (5.5 y 5.9)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial; cu&aacute;ntas denuncias hay y en qu&eacute; est&aacute;n se le pregunta a la inteligencia artificial del Municipio</td></tr>
 <tr class="hd"><td class="l" colspan="2">Multas de tr&aacute;nsito (5.11)</td></tr>
 <tr><td class="l">17 &middot; El decreto de las cuotas del pago voluntario de las multas de tr&aacute;nsito, sin tr&aacute;mites y seg&uacute;n el ingreso, como el de Balcarce</td><td class="n">El decreto, en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">18 &middot; El pedido a la Provincia: el pago voluntario seg&uacute;n el ingreso, el protocolo adicional al convenio de multas, la deuda congelada en pesos, las pasadas que cuentan como una y el permiso para trabajar; y a la Legislatura bonaerense, la licencia por puntos</td><td class="n">El expediente del pedido</td></tr>
@@ -3118,11 +3148,11 @@ que la comprueba.</p>
 <tr class="hi"><td class="l">Mes 3</td><td>Primera ronda de asambleas en las seis zonas; inscripci&oacute;n a la formaci&oacute;n laboral abierta en las seis zonas y primera cohorte arrancando en los espacios que ya existen; primer centro de apoyo escolar abierto; la consulta, el turno m&eacute;dico en la charla y la escucha de los vecinos, con su seguimiento, en la inteligencia artificial del Municipio</td><td class="n">Actas, matr&iacute;cula por zona y la propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>El convenio con la UNSO para la tecnicatura, con el pedido de su validez nacional al Ministerio de Educaci&oacute;n; y el pedido a la Provincia para que habilite la pasant&iacute;a en la formaci&oacute;n profesional</td><td class="n">Los convenios y los expedientes: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Mes 3</td><td>En seguridad, funciona la detecci&oacute;n en vivo de hechos violentos en las 110 c&aacute;maras con inteligencia artificial que ya hay, con alerta al patrullero m&aacute;s cercano. No hace falta comprar c&aacute;maras ni licencias: ya se compraron</td><td class="n">El decreto de puesta en servicio; las alertas y el tiempo de llegada se le preguntan a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda transmitir en vivo cada inspecci&oacute;n municipal desde el tel&eacute;fono del inspector, para que se vea que fue real y que no hubo coima, y grabarla sellada, para que cualquier vecino la vea despu&eacute;s; y se compran los tel&eacute;fonos y soportes para quien no tenga uno apto. Y el comerciante ya puede denunciar coimas, aprietes y amenazas ante la inteligencia artificial del Municipio, con la prueba sellada al grabar (5.9)</td><td class="n">El decreto, y la compra en el Bolet&iacute;n Oficial</td></tr>
+<tr><td class="l">Meses 1&ndash;3</td><td>En el tr&aacute;mite, el decreto que manda grabar cada inspecci&oacute;n municipal con el tel&eacute;fono del agente, sellada en el momento de grabar, para que se vea que fue real y que no hubo coima, y para que cualquier vecino la vea despu&eacute;s; se compran los soportes y las bater&iacute;as, y se acuerdan la financiaci&oacute;n y los descuentos para quien no tenga un tel&eacute;fono apto. Y el comerciante ya puede denunciar coimas, aprietes y amenazas ante la inteligencia artificial del Municipio, con la prueba sellada al grabar (5.9)</td><td class="n">El decreto, y la compra en el Bolet&iacute;n Oficial</td></tr>
 <tr><td class="l">Meses 1&ndash;3</td><td>Multas de tr&aacute;nsito: el decreto de las cuotas sin tr&aacute;mites y el pedido a la Provincia (5.11). Costa: los pedidos de factibilidad a AySA para los ba&ntilde;os de los seis lugares, y la prueba por decreto de los espect&aacute;culos de lunes a jueves, con el registro gratis de instructores y artistas abierto en la inteligencia artificial del Municipio (5.5)</td><td class="n">El decreto, en el Bolet&iacute;n Oficial, y los expedientes de los pedidos</td></tr>
 <tr><td class="l">Mes 3</td><td>Al abrir las sesiones ordinarias, el 1 de marzo, entran las ordenanzas del tr&aacute;mite en l&iacute;nea de las cuotas de las multas, con el plan de pagos sin inter&eacute;s de la deuda vieja, y de su base de datos (5.11)</td><td class="n">Expedientes de ingreso</td></tr>
 <tr><td class="l">Mes 3</td><td>Profesor digital: la prueba a ciegas de un mes que compara la calidad y el precio de cada cara, antes de pagar nada (5.8)</td><td class="n">El resultado, publicado: se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Meses 4&ndash;6</td><td>Entran las nueve ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, con la base de datos del profesor digital; la partida propia de g&eacute;nero; la transmisi&oacute;n de los actos de fiscalizaci&oacute;n, con la defensa del comerciante; ruido; empleo local, con la subcontrataci&oacute;n y el semillero; la costa: ba&ntilde;o y calidad del agua; la obra en parques y costa; las excepciones urban&iacute;sticas; y los parques y espacios verdes, con el registro de instructores y artistas</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
+<tr><td class="l">Meses 4&ndash;6</td><td>Entran las nueve ordenanzas restantes del anexo: el Sistema de Informaci&oacute;n Municipal, con la base de datos del profesor digital; la partida propia de g&eacute;nero; la grabaci&oacute;n de los actos de fiscalizaci&oacute;n, con la defensa del comerciante; ruido; empleo local, con la subcontrataci&oacute;n y el semillero; la costa: ba&ntilde;o y calidad del agua; la obra en parques y costa; las excepciones urban&iacute;sticas; y los parques y espacios verdes, con el registro de instructores y artistas</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Entran la ordenanza de foodtrucks, con el canon y el 75% de empleo local, y la modificaci&oacute;n del art&iacute;culo 9 de la Ordenanza 5824, para Bosque Alegre (5.5)</td><td class="n">Expedientes y Bolet&iacute;n Oficial Municipal</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>Se reconoce o se constituye la comisi&oacute;n de cada una de las seis zonas; se repone el padr&oacute;n de asociaciones</td><td class="n">Padr&oacute;n y actas: se le preguntan a la inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 4&ndash;6</td><td>G&eacute;nero: la direcci&oacute;n atiende d&iacute;as fijos en lugares que ya existen en cada zona, empezando por Boulogne y B&eacute;ccar (5.13)</td><td class="n">Los d&iacute;as y los lugares: se le preguntan a la inteligencia artificial del Municipio</td></tr>
@@ -3135,7 +3165,7 @@ que la comprueba.</p>
 <tr><td class="l">Mes 6</td><td>Arranca el <b>registro de inserci&oacute;n laboral</b>: cualquier vecino le pregunta a la inteligencia artificial del Municipio cu&aacute;ntas personas consiguieron empleo, con el dato cargado el d&iacute;a que pasa. Hoy ese n&uacute;mero aparece suelto en alguna gacetilla, no en un registro continuo que se pueda consultar</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio, con el hist&oacute;rico</td></tr>
 <tr class="hi"><td class="l">Meses 6&ndash;9</td><td>La inteligencia artificial del Municipio suma a lo del mes 3 la partida vecinal, el seguimiento de obra y el espacio propio de cada asociaci&oacute;n inscripta</td><td class="n">La propia inteligencia artificial del Municipio</td></tr>
 <tr><td class="l">Meses 7&ndash;12</td><td>Profesor digital: la prueba de seis meses en los primeros centros de apoyo escolar, con la base de datos ya creada por la Ordenanza II, medida con pruebas sin inteligencia artificial; con el resultado publicado, se extiende a todos desde el ciclo lectivo siguiente (5.8)</td><td class="n">El resultado de la prueba: se le pregunta a la inteligencia artificial del Municipio</td></tr>
-<tr><td class="l">Mes 9</td><td>Cada inspecci&oacute;n municipal se transmite en vivo desde el tel&eacute;fono del inspector y queda grabada y sellada</td><td class="n">Decreto de puesta en servicio; la transmisi&oacute;n y su grabaci&oacute;n quedan abiertas para cualquier vecino</td></tr>
+<tr><td class="l">Mes 9</td><td>Los inspectores y los agentes de tr&aacute;nsito graban cada inspecci&oacute;n con su tel&eacute;fono, sellada al grabar; la patrulla municipal, en una segunda etapa</td><td class="n">Decreto de puesta en servicio; la grabaci&oacute;n de cada inspecci&oacute;n queda abierta para cualquier vecino</td></tr>
 <tr><td class="l">Mes 9</td><td>Se adjudica la recolecci&oacute;n de residuos por licitaci&oacute;n p&uacute;blica</td><td class="n">Decreto de adjudicaci&oacute;n, en el Bolet&iacute;n Oficial municipal</td></tr>
 <tr><td class="l">Mes 9</td><td>Cualquier vecino le pregunta a la inteligencia artificial del Municipio qu&eacute; se hizo en su zona, y tiene la respuesta; desde ah&iacute;, al d&iacute;a: la adjudicaci&oacute;n queda registrada el d&iacute;a que se firma</td><td class="n">Se le pregunta a la inteligencia artificial del Municipio. S&oacute;lo la ejecuci&oacute;n presupuestaria sigue el cierre trimestral</td></tr>
 <tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 de la rampa ejecutado (cuadro [[n:rampa]])</td><td class="n">Ejecuci&oacute;n presupuestaria del ejercicio</td></tr>
@@ -3160,8 +3190,8 @@ que la comprueba.</p>
 <p class="cap"><b>Nota:</b> los meses 4 a 12 son los de constituci&oacute;n, y no hay obra decidida por
 vecinos antes del primer ciclo de asambleas. Lo que se licita se adjudica tres meses despu&eacute;s del llamado
 &mdash;la licitaci&oacute;n de la recolecci&oacute;n de 2008 tard&oacute; dos, del llamado a la adjudicaci&oacute;n provisoria
-(Decretos 1113 y 1566 de 2008)&mdash;, y los tel&eacute;fonos de las inspecciones se ponen en servicio tres meses
-despu&eacute;s de comprarlos.</p>
+(Decretos 1113 y 1566 de 2008)&mdash;, y la grabaci&oacute;n de las inspecciones arranca en el mes 9, con tiempo para comprar los soportes y
+las bater&iacute;as y para que cada agente tenga su tel&eacute;fono apto.</p>
 
 <h2><span class="n">6.5</span>Qu&eacute; no prometemos, y de qui&eacute;n depende</h2>
 """ + exhead("c", "Lo que no est&aacute; en nuestras manos, y por qu&eacute;") + """
@@ -3258,10 +3288,10 @@ esa deuda crece unos 650 millones.</td></tr>
 
 <h2><span class="n">6.7</span>Lo que dice este cap&iacute;tulo, en seis l&iacute;neas</h2>
 <ol class="n">
-<li>A los cien d&iacute;as, el 19 de marzo de 2028, hay veinti&uacute;n compromisos que se pueden comprobar: ocho ordenanzas en el Concejo &mdash;en la sesi&oacute;n extraordinaria de diciembre, la partida de cada zona, la derogaci&oacute;n de los art&iacute;culos que permiten disolver una asociaci&oacute;n vecinal y la tabla nueva&mdash;; seis actos que no dependen de &eacute;l, como el turno m&eacute;dico por internet, el precio de cada compra de los hospitales y las cuotas de las multas; y siete cosas que arrancaron: las asambleas en las seis zonas, la formaci&oacute;n laboral, el primer centro de apoyo escolar, tres m&oacute;dulos de la inteligencia artificial del Municipio &mdash;con la escucha de los vecinos&mdash;, la detecci&oacute;n en vivo funcionando en las 110 c&aacute;maras que ya hay, el decreto que manda transmitir cada inspecci&oacute;n, con la denuncia del comerciante, y la prueba de los espect&aacute;culos de lunes a jueves.</li>
+<li>A los cien d&iacute;as, el 19 de marzo de 2028, hay veinti&uacute;n compromisos que se pueden comprobar: ocho ordenanzas en el Concejo &mdash;en la sesi&oacute;n extraordinaria de diciembre, la partida de cada zona, la derogaci&oacute;n de los art&iacute;culos que permiten disolver una asociaci&oacute;n vecinal y la tabla nueva&mdash;; seis actos que no dependen de &eacute;l, como el turno m&eacute;dico por internet, el precio de cada compra de los hospitales y las cuotas de las multas; y siete cosas que arrancaron: las asambleas en las seis zonas, la formaci&oacute;n laboral, el primer centro de apoyo escolar, tres m&oacute;dulos de la inteligencia artificial del Municipio &mdash;con la escucha de los vecinos&mdash;, la detecci&oacute;n en vivo funcionando en las 110 c&aacute;maras que ya hay, el decreto que manda grabar cada inspecci&oacute;n, con la denuncia del comerciante, y la prueba de los espect&aacute;culos de lunes a jueves.</li>
 <li>La obra que deciden los vecinos sube del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os, hasta 28.908 millones. Cada escal&oacute;n se gana con lo que mostr&oacute; el anterior: si uno no se cumple, la rampa se congela, y lo que una zona no ejecut&oacute; queda para esa zona.</li>
 <li>Veinte metas para los cuatro a&ntilde;os, cada una con el n&uacute;mero de hoy al lado y el documento p&uacute;blico con que se comprueba: entre ellas, la mitad de los hogares sin cloaca de Boulogne y B&eacute;ccar &mdash;hoy son 4.616&mdash;, empleo y vivienda en 7.730,9 millones, ambiente al 1,5%, turno en l&iacute;nea en los trece efectores de salud, la recolecci&oacute;n licitada, un centro de apoyo escolar en cada localidad, 1.286 egresados en el mandato y la prueba medida del profesor digital.</li>
-<li>Un calendario de cuarenta y ocho meses dice qu&eacute; pasa y c&oacute;mo se comprueba: en el mes 3 funciona la detecci&oacute;n en vivo; en el 9, las inspecciones transmitidas, y se adjudica la recolecci&oacute;n; en el 27 egresan los primeros 231; y en el 48 los vecinos deciden la mitad de la obra.</li>
+<li>Un calendario de cuarenta y ocho meses dice qu&eacute; pasa y c&oacute;mo se comprueba: en el mes 3 funciona la detecci&oacute;n en vivo; en el 9, las inspecciones grabadas, y se adjudica la recolecci&oacute;n; en el 27 egresan los primeros 231; y en el 48 los vecinos deciden la mitad de la obra.</li>
 <li>Lo que no prometemos, porque no depende del Municipio o no entra en las cuentas: consulta popular vinculante, reformar la Ley Org&aacute;nica, autonom&iacute;a municipal plena, que los vecinos voten todo el presupuesto, duplicar el gasto en salud, bajar las tasas, el mapa del delito por zona, un refugio propio, condenas por coima o trabajos en los laboratorios.</li>
 <li>Veinticinco cosas pueden salir mal, cada una con lo que la reduce. Las dos cr&iacute;ticas: que el Concejo no acompa&ntilde;e &mdash;hacen falta cuatro bloques&mdash; y que la inteligencia artificial del Municipio no se construya o llegue tarde; por eso se entrega por partes, desde el mes 3.</li>
 </ol>

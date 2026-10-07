@@ -174,23 +174,25 @@ partidas, el descuento se mantiene como est&aacute;.</p>
 manzana, la tabla actualizada, la que reemplaza y la metodolog&iacute;a con que se construy&oacute;, sin perjuicio de
 su publicaci&oacute;n en el Bolet&iacute;n Oficial.</p>
 
-<h2>IV &middot; Ordenanza de transmisi&oacute;n de los actos de fiscalizaci&oacute;n</h2>
+<h2>IV &middot; Ordenanza de grabaci&oacute;n de los actos de fiscalizaci&oacute;n</h2>
 
 <h3>Art&iacute;culo 1 &mdash; Alcance</h3>
 <p class="tight">Todo agente municipal con facultad de fiscalizaci&oacute;n o autoridad &mdash;quien
-pueda labrar acta, clausurar, multar o demorar a una persona&mdash; deber&aacute; transmitir en vivo, en
-audio y video, el acto <b>mientras lo ejerce</b>, y &uacute;nicamente mientras lo ejerce. La
-transmisi&oacute;n no alcanza a la actividad del agente fuera de esa funci&oacute;n.</p>
+pueda labrar acta, clausurar, multar o demorar a una persona&mdash; deber&aacute; grabar en audio y video, desde la
+inteligencia artificial del Municipio, <b>todo su turno</b>, y &uacute;nicamente su turno. La grabaci&oacute;n no alcanza a la
+actividad del agente fuera de &eacute;l. La obligaci&oacute;n empieza por los inspectores y los agentes de tr&aacute;nsito; la
+reglamentaci&oacute;n fija cu&aacute;ndo alcanza a la patrulla municipal.</p>
 
-<h3>Art&iacute;culo 2 &mdash; Publicidad</h3>
-<p class="tight">La transmisi&oacute;n es <b>p&uacute;blica mientras dura el acto, para que se vea que es
-real, y queda grabada tal cual se transmiti&oacute;, para que cualquier vecino la vea despu&eacute;s</b>,
-con su fecha, el domicilio del acto y el agente interviniente. Las dos se consultan a trav&eacute;s de la
-inteligencia artificial del Municipio. La reglamentaci&oacute;n determina el resguardo de los datos personales de terceros que
-aparezcan sin ser parte del acto.</p>
+<h3>Art&iacute;culo 2 &mdash; Sellado y publicidad</h3>
+<p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su
+huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base,
+y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. <b>La grabaci&oacute;n de cada acto queda tal cual
+se grab&oacute;, para que cualquier vecino la vea despu&eacute;s</b>, con su fecha, el domicilio del acto y el agente interviniente,
+y se consulta a trav&eacute;s de la inteligencia artificial del Municipio. Las grabaciones se guardan dos a&ntilde;os. La
+reglamentaci&oacute;n determina el resguardo de los datos personales de terceros que aparezcan sin ser parte del acto.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
-<p class="tight"><b>El acta labrada sin transmisi&oacute;n carece de validez.</b></p>
+<p class="tight"><b>El acta labrada sin grabaci&oacute;n sellada y subida carece de validez.</b></p>
 
 <h3>Art&iacute;culo 4 &mdash; Registro del vecino</h3>
 <p class="tight">La persona alcanzada por el acto podr&aacute; registrarlo por sus propios medios,
@@ -199,8 +201,8 @@ que el del agente.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Clausuras</h3>
 <p class="tight">Toda clausura se funda por escrito y, salvo un peligro que obligue a cerrar en el momento, va
-precedida de un plazo para corregir. La clausura inmediata tambi&eacute;n se transmite y se funda. La inteligencia
-artificial del Municipio registra cada clausura con su transmisi&oacute;n, su motivo y la infracci&oacute;n que la sostiene, y
+precedida de un plazo para corregir. La clausura inmediata tambi&eacute;n se graba y se funda. La inteligencia
+artificial del Municipio registra cada clausura con su grabaci&oacute;n, su motivo y la infracci&oacute;n que la sostiene, y
 avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una clausura no se sostiene con una
 infracci&oacute;n constatada. Toda clausura puede reclamarse.</p>
 
@@ -211,6 +213,14 @@ Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a
 al superior del denunciado. La identidad del denunciante se reserva. Mientras se investiga, el comercio no es
 inspeccionado por el agente denunciado, y toda clausura nueva la revisa antes un supervisor que no dependa de &eacute;l. La
 denuncia falsa se sanciona.</p>
+
+<h3>Art&iacute;culo 7 &mdash; El tel&eacute;fono</h3>
+<p class="tight">Los inspectores y los agentes de tr&aacute;nsito graban con un tel&eacute;fono propio, apto seg&uacute;n la
+reglamentaci&oacute;n. El Municipio gestiona financiaci&oacute;n y descuentos para comprarlo, paga el plan de datos, el soporte y la
+bater&iacute;a, y compensa el gasto del uso del tel&eacute;fono propio en los t&eacute;rminos que se acuerden con los
+trabajadores municipales (Ley 14.656, art&iacute;culo 75).</p>
+<p class="tight"><i>Necesita dictamen de un abogado: Ley 14.656, que pone a cargo del Municipio los &uacute;tiles de
+trabajo, y Ley 25.326, por las grabaciones guardadas fuera del pa&iacute;s (art&iacute;culo 12).</i></p>
 
 <h2>V &middot; Ordenanza de asociaciones de parque</h2>
 

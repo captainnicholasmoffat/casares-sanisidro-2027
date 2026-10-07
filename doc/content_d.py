@@ -3,7 +3,7 @@ from content_a import RH
 
 GLOSARIO = dict(id="glosario", runhead=RH, html="""
 <h1>Glosario</h1>
-<div class="stand">Treinta y una palabras t&eacute;cnicas que aparecen seguido, explicadas como se las
+<div class="stand">Treinta y dos palabras t&eacute;cnicas que aparecen seguido, explicadas como se las
 explicar&iacute;a a un vecino.</div>
 <table>
 <colgroup><col style="width:158pt"><col></colgroup>
@@ -32,6 +32,7 @@ explicar&iacute;a a un vecino.</div>
 <tr><td class="l">Profesor digital</td><td>El tutor de la inteligencia artificial del Municipio que le explica al chico sus dudas de la tarea, con cara y voz. Le da pistas, nunca la respuesta (5.8).</td></tr>
 <tr><td class="l">Prueba sellada</td><td>Una grabaci&oacute;n, una foto o un audio que la inteligencia artificial del Municipio sella en el momento de grabar, con firma digital, hora y lugar: si despu&eacute;s alguien lo cambia, se nota. Sirve para denunciar un ruido, una coima o una violencia.</td></tr>
 <tr><td class="l">Firma digital</td><td>Un sello electr&oacute;nico, hecho con un certificado, que prueba de d&oacute;nde viene un archivo y que nadie lo cambi&oacute; despu&eacute;s. La Naci&oacute;n le da gratis al Municipio el certificado (Ley 25.506).</td></tr>
+<tr><td class="l">Huella</td><td>Un c&oacute;digo corto que se saca de un archivo, como una huella digital: si alguien cambia el archivo, aunque sea un poco, la huella ya no coincide. La huella de cada grabaci&oacute;n de una inspecci&oacute;n llega a la inteligencia artificial del Municipio en el momento de grabar (5.9).</td></tr>
 <tr><td class="l">Cadena de custodia</td><td>El registro de qui&eacute;n tuvo una prueba, cu&aacute;ndo y qu&eacute; hizo con ella, desde que se graba hasta que la ve un juez. Sin ella, la prueba pesa menos.</td></tr>
 <tr><td class="l">Son&oacute;metro</td><td>El aparato que mide el ruido en decibeles. Para multar, la Ordenanza VIII pide uno de clase 1 o 2, calibrado por un laboratorio en los &uacute;ltimos dos a&ntilde;os y comprobado antes y despu&eacute;s de cada medici&oacute;n.</td></tr>
 <tr><td class="l">C&aacute;mara de tramo</td><td>Una c&aacute;mara de velocidad que mide el promedio entre dos puntos, y no la velocidad en un solo lugar. Baja m&aacute;s los choques graves que las fijas (5.11).</td></tr>

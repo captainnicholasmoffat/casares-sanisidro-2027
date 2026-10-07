@@ -67,7 +67,7 @@ C5B2, C5B2B = split_at(C5B2, '<h2><span class="n">5.10</span>', "cap5b2b", "")
 C5B3, C5B3B = split_at(C5B3, '<h2><span class="n">5.14</span>', "cap5b3b", "")
 # las multas de transito (dispatch 1, 03/10) no entran con el 5.10 y el 5.11: van con el 5.12 en la pagina siguiente
 C5B2B, C5B2C = split_at(C5B2B, '<h3>Multas de tr&aacute;nsito:', "cap5b2c", "")
-# 5.8 y 5.9 ya no entran juntas: la inspeccion transmitida se mudo al 5.9
+# 5.8 y 5.9 ya no entran juntas: la inspeccion grabada se mudo al 5.9
 C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
 C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
@@ -90,7 +90,7 @@ FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_COR
 
 # el anexo articulado entra en cuatro paginas (C1: crecieron la II, la VI y llegaron la XV y la XVI)
 ORD_A, ORD_B = split_at(O.ORDENANZA,
-                        '<h2>IV &middot; Ordenanza de transmisi&oacute;n de los actos de fiscalizaci&oacute;n</h2>',
+                        '<h2>IV &middot; Ordenanza de grabaci&oacute;n de los actos de fiscalizaci&oacute;n</h2>',
                         "ordenanza2", "")
 ORD_B, ORD_C = split_at(ORD_B, '<h2>VIII &middot; Ordenanza de ruido</h2>', "ordenanza3", "")
 # de la XI en adelante (costa, obra en parques y costa, excepciones, parques y cuotas de multas) va en una cuarta

@@ -132,7 +132,7 @@ _IDX = [
  ("i", "El ruido, la higiene urbana y el empleo local", "ordenanza3"),
  ("i", "La costa, la obra en parques y costa, las excepciones urban&iacute;sticas, los parques y las cuotas de las multas; y las metas que no llevan ordenanza", "ordenanza4"),
  ("g", "Glosario", None),
- ("i", "Treinta y una palabras, explicadas", "glosario"),
+ ("i", "Treinta y dos palabras, explicadas", "glosario"),
  ("g", "Nota de m&eacute;todo", None),
  ("i", "C&oacute;mo est&aacute; construido, y qu&eacute; l&iacute;mites tiene", "metodo"),
  ("i", "Las notas de cada cap&iacute;tulo", "metodo"),
@@ -421,10 +421,10 @@ a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del
 diferencia cero.</p>
 <p><b>Las investigaciones de esta edici&oacute;n.</b> Los informes 21 (ruido y prueba sellada), 22 (profesores digitales),
 23 (costos con la opci&oacute;n &oacute;ptima en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y
-g&eacute;nero y discapacidad) y 23 bis (redes en los desag&uuml;es, tel&eacute;fonos de los inspectores, escuelas parroquiales,
+g&eacute;nero y discapacidad) y 23 bis (rejas en los desag&uuml;es, tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital,
 espect&aacute;culos y mensajes de texto) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
 repositorio, y marcan qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. Lo que est&aacute; en d&oacute;lares va al de diciembre de
-2025, $1.447,84 (BCRA).</p>
+2025, $1.447,84 (BCRA). Lo que todav&iacute;a no tiene cifra est&aacute; marcado [23 ter]: lo trae el informe 23 ter.</p>
 <p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
@@ -497,15 +497,15 @@ p&uacute;blicos, el aporte de actualizar la tabla de valuaci&oacute;n entra en e
 <p><b>Gr&aacute;fico [[n:sinada]].</b> El programa tambi&eacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva
 cobra m&aacute;s de lo que el programa gasta, y en 2028 y desde 2031 cobra menos (cuadro [[n:programa_base]]).</p>
 <p><b>Cuadro [[n:programa]].</b> Las cifras marcadas son estimaciones del equipo de este programa, no
-cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, las inspecciones transmitidas, la plataforma,
-las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, lo que se deja de
+cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, las inspecciones grabadas, la plataforma,
+las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, los espect&aacute;culos, lo que se deja de
 cobrar en multas y los equipos. Las dem&aacute;s salen de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
 <p><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis estaciones de monitoreo de
 ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso, 137,1 M una vez y 39,5 M por a&ntilde;o de
 conexi&oacute;n; salud, trece pantallas de ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las
 personas que los instalan (cuadro [[n:equipo]]). Fuentes: compras p&uacute;blicas de la Ciudad (estaci&oacute;n de ruido, diciembre de
 2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre de 2025; televisor, escritorio y silla,
-2026), llevadas a diciembre de 2025 con el IPC. Las inspecciones se transmiten con el tel&eacute;fono del inspector: no hay
+2026), llevadas a diciembre de 2025 con el IPC. Las inspecciones se graban con el tel&eacute;fono del agente: no hay
 c&aacute;maras corporales, y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (informe 23). Lo que
 est&aacute; en d&oacute;lares va al de diciembre de 2025, $1.447,84 (BCRA). Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y
 cuidado de personas, diciembre de 2025 (Comisi&oacute;n Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con
@@ -635,8 +635,9 @@ localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 l
 partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
 puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15, 16 y 21 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
 usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;: no hay nada que licitar, y funciona a los cien
-d&iacute;as. Las inspecciones se transmiten desde el tel&eacute;fono del inspector: el decreto sale a los cien d&iacute;as, los tel&eacute;fonos se
-compran para quien no tenga uno apto, y funciona en el mes 9. La ordenanza que vuelve
-inv&aacute;lida el acta labrada sin transmisi&oacute;n va despu&eacute;s, y est&aacute; escrita en el anexo. La denuncia del comerciante y el registro de instructores y artistas arrancan por decreto, y las Ordenanzas IV y XIV los fijan despu&eacute;s. Las fechas que no estaban en el calendario anterior son propuestas.</p>
+d&iacute;as. Las inspecciones se graban con el tel&eacute;fono del agente: el decreto sale a los cien d&iacute;as, con la financiaci&oacute;n y los
+descuentos para quien no tenga un tel&eacute;fono apto, y funciona en el mes 9, primero con los inspectores y los agentes de
+tr&aacute;nsito. La ordenanza que vuelve inv&aacute;lida el acta labrada sin grabaci&oacute;n sellada y subida va despu&eacute;s, y est&aacute; escrita en
+el anexo. La denuncia del comerciante y el registro de instructores y artistas arrancan por decreto, y las Ordenanzas IV y XIV los fijan despu&eacute;s. Las fechas que no estaban en el calendario anterior son propuestas.</p>
 </div>
 """)
