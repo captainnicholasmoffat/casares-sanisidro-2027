@@ -2922,3 +2922,52 @@ Páginas de la versión de pantalla (51 págs.).
   encabezado (6,4–6,75 → 5,8–6,1), las etiquetas (5,6 → 5,1) y la letra de los gráficos (5,5–8,8 → 5,0–8,0). Diez
   bloques no entran en una hoja: los cuadros 9, 14, 38, 39, 40 y 42, el glosario, las dos páginas de fuentes y el
   recuadro de multas del 5.11 (pág. 36). El dispatch 5 aprueba partir los cuadros con el encabezado repetido.
+
+## DISPATCH 5 · DECISIONES DE NICK SOBRE EL INFORME 23 TER Y LAS PREGUNTAS (07/10) · APLICADO
+Páginas de la versión de pantalla (51 págs.).
+1. Grabaciones (págs. 34 y 45): el agente graba todo el turno, para que nada pase fuera de cámara; la IA lo corta
+   en una grabación por inspección y la guarda en una base por comercio o domicilio; cualquier vecino ve cualquier
+   inspección, de a una; lo que pasa entre inspecciones lo ven sólo los auditores y la auditoría externa; la IA
+   difumina las caras de clientes y de quien pasa; las inspecciones dentro de una casa particular las ve sólo su
+   dueño. Ordenanza IV, artículos 1 y 2; para el abogado, la Ley 25.326 (también por la guarda fuera del país).
+2. Teléfonos (págs. 11, 34, 41, 45 y 49): primera etapa, inspectores de comercio y de la Agencia de Control,
+   Habilitaciones, inspectores de obra y agentes de tránsito; la patrulla, en la segunda. Inspectores y tránsito:
+   19,8 a 26,5 M de compra y 104,4 a 141,0 M por año, más 9,5 M por base de descarga (tránsito tiene dos).
+   Habilitaciones y obra: [23 quáter]. Patrulla: 29,5 a 35,3 M y 135,7 a 162,4 M por año, sin sumar hasta su
+   etapa. Convenio con el banco que paga los sueldos, en cuotas sin interés y con el riesgo de cobro del banco: el
+   Municipio no adelanta dinero (Ordenanza IV, art. 7; calendario, meses 1 a 3). Guarda en una nube con servidores
+   en Bélgica, a la vista al instante durante los dos años (págs. 34 y 51). Sin nombres de bancos, marcas ni empresas.
+3. Profesor digital (págs. 11 y 33): gratis en las escuelas públicas y en los colegios privados con aporte estatal
+   del 100%, 22.748 alumnos, por nivel y con el aporte vigente al empezar el año. Al Municipio le cuesta de 151,9 a
+   180,5 M por año con el uso esperado (788,3 a 979,1 M si lo usan todos); la parte del equipo, 120,7 M, ya está en
+   el cuadro 27. En los demás colegios privados lo contrata el colegio para todos sus alumnos: de $10.887 a $12.146
+   por alumno por año, con su parte del equipo, revisado cada año con el uso real; sin precio por sesión ni por familia.
+4. Espectáculos (págs. 11, 30 y 51): plazas y espacios públicos, y sobre todo el río; 200 shows por año, todo el
+   año; en invierno, bajo techo, por convenio con centros culturales, clubes sociales y otros espacios cerrados del
+   partido (meses y costo: [23 quáter]); cancela sólo la alerta amarilla que cubre el horario del show; si la nueva
+   fecha también se cancela, otro 70%, y la tercera va bajo techo; tres equipos con ocho personas nuevas (85,3 M por
+   año con reemplazos), cada uno firma por su equipo; sonido: dos equipos de calidad para bandas (29,5 M cada uno,
+   con tarima y toldo) y dos chicos para callejeros (4,9 M cada uno), para públicos de 50 a 1.000; tope de volumen
+   por lugar, más bajo junto a casas, y el equipo grande sobre todo en el río (topes: [23 quáter]); controles contra
+   robos (cargo patrimonial, remito con QR y dos firmas, arqueo sorpresa mensual de Patrimonio, depósito con registro
+   y cámaras, GPS, seguro y marcado), 5,2 M de compra y 2,0 a 2,7 M por año; Spotify verificado con captura fechada,
+   declaración jurada y acceso de «lector» gratis, y quien no está en Spotify no queda afuera. Unos 323 M por año y
+   454 M el primer año (cuadro 14).
+5. Auditoría externa de 135,4 M, el 10% del sueldo del equipo de 59 personas (pág. 20): la plataforma, 2.000,7 M, y
+   Ciencia y Técnica, 2.091,7 M (págs. 11, 20 y 21); plataforma y semillero, el 27,1% de Ciencia y Técnica (25,6%
+   sin el semillero).
+6. Margen (págs. 11 y 13): la reasignación sube a 6.740 M (27%); el gasto flexible ocupado, a 53,3%, y el libre
+   baja a 46,7%; con la beca y el módulo de salud, 44,1%. Se suman los teléfonos de la primera etapa con el tope
+   (141 M por año) y los espectáculos de Cultura (323 M); la patrulla, no.
+7. Calendario (pág. 49): fechas aprobadas; sale «Las fechas que no estaban en el calendario anterior son propuestas».
+8. Alto Perú (pág. 26): la barrera, con un costo estimado igual al de la de Perú. El costo de la de Perú no está
+   escrito por separado en ningún informe, así que queda [23 quáter].
+9. Ciudades: se nombran. Las del 23 ter van en las fuentes (pág. 51).
+- Siete marcas [23 quáter] (págs. 11, 26, 30, 34 y 49); ninguna [23 ter] ni [23 bis]. Sin marcas ni empresas,
+  salvo Spotify.
+- Excel: filas 54 (45,5 M una vez: soportes, baterías y dos bases), 57 (141 M por año), 161 (2.000,7 M), 180 a 182
+  (53,3%, 46,7% y 44,1%) y bloque nuevo de espectáculos, filas 280 a 283 (323 M por año, 131,1 M una vez, 454 M el
+  primer año); 13.454 fórmulas, 0 errores; Resumen anual sin diferencias. Cinco tests OK (data/ restaurado).
+- Para Nick: (1) la pág. 4 dice que el inspector «graba con su teléfono mientras inspecciona»; con el Dispatch 5
+  diría «graba todo su turno»; (2) las ciudades del 23 bis (Bahía Blanca, Mendoza, Mar del Plata, Rosario, entre
+  otras) no están nombradas en las fuentes de rejas, mensajes de texto y clima.
