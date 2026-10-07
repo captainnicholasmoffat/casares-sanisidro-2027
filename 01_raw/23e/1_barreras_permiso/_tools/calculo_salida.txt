@@ -1,0 +1,126 @@
+=== 0. Índices usados
+  IPC (2018, 12) 184.2552
+  IPC (2020, 6) 321.9738
+  IPC (2021, 8) 510.3942
+  IPC (2024, 11) 7491.431
+  IPC (2025, 3) 8353.3158
+  IPC (2025, 12) 10121.3715
+  IPC (2026, 1) 10413.0309
+  IPC (2026, 7) 12076.3937
+  Dólar dic-2025 (BCRA A3500 promedio): 1447.84
+
+=== 1. Precio por metro de barrera (pesos dic-2025)
+  NUMACO 2020 dinámica con pollera de red (OSSE): 445.031 $/m
+  SINCERAR 2018 lona (OSSE, si 140 m): 148.824 $/m
+  EcoWay BRV1520 valla (lista oct-26): 821.424 $/m
+  EcoWay BRV1014 valla: 408.516 $/m
+  EcoWay BR1018 antiderrame: 384.357 $/m
+  EcoWay BR1014 antiderrame: 362.394 $/m
+  Rango adoptado tipo 'corriente y residuos grandes': 445.031 a 821.424 $/m; medio 633.228
+  OSSE CP 87/26 (NUMACO, largo no publicado): 31,0 M; presupuesto oficial 31,4 M
+     si midiera 40 m: 774.416 $/m
+     si midiera 60 m: 516.277 $/m
+     si midiera 80 m: 387.208 $/m
+     si midiera 100 m: 309.766 $/m
+     si midiera 140 m: 221.262 $/m
+
+=== 2. Largo de barrera
+  Perú: ancho W=13 m (rango 10-18)
+    W=  10 m: diag45 14.1 m; diag30 20.0 m; J37.5 22.4 m; U_bandalong(2W) 20.0 m; U_semicirculo(pi*W/2) 15.7 m
+    W=  13 m: diag45 18.4 m; diag30 26.0 m; J37.5 27.4 m; U_bandalong(2W) 26.0 m; U_semicirculo(pi*W/2) 20.4 m
+    W=  18 m: diag45 25.5 m; diag30 36.0 m; J37.5 35.6 m; U_bandalong(2W) 36.0 m; U_semicirculo(pi*W/2) 28.3 m
+    Recomendado J a ~37,5° + bolsillo 6 m + 10% uniones/holgura: 25 / 30 / 39 m instalados; con 25% de repuesto (ACUMAR): 31 / 38 / 49 m
+  Alto Perú: ancho W=23 m (rango 18-30)
+    W=  18 m: diag45 25.5 m; diag30 36.0 m; J37.5 35.6 m; U_bandalong(2W) 36.0 m; U_semicirculo(pi*W/2) 28.3 m
+    W=  23 m: diag45 32.5 m; diag30 46.0 m; J37.5 43.8 m; U_bandalong(2W) 46.0 m; U_semicirculo(pi*W/2) 36.1 m
+    W=  30 m: diag45 42.4 m; diag30 60.0 m; J37.5 55.3 m; U_bandalong(2W) 60.0 m; U_semicirculo(pi*W/2) 47.1 m
+    Recomendado J a ~37,5° + bolsillo 6 m + 10% uniones/holgura: 39 / 48 / 61 m instalados; con 25% de repuesto (ACUMAR): 49 / 60 / 76 m
+  Alternativa Alto Perú si la boca diera a canal abierto (~70 m): encierro semicircular radio 15 m = 47 m
+  Referencia OSSE Arroyo del Barco: reja 3,70 x 7,40 m y barrera de 140 m (encierro en el puerto)
+  Referencia Bandalong: canal de 200 pies con 400 pies de brazos = 2,0 x ancho
+
+=== 3. Recorrido vertical (m sobre el Cero del Riachuelo, SHN en Plan de Manejo 2012)
+  recurrencia 1 año: max 2.55 m -> rango desde el mínimo anual (-0.7) = 3.25 m
+  recurrencia 2,5 años: max 3.05 m -> rango desde el mínimo anual (-0.7) = 3.75 m
+  recurrencia 10 años: max 3.55 m -> rango desde el mínimo anual (-0.7) = 4.25 m
+  recurrencia 45 años: max 4.05 m -> rango desde el mínimo anual (-0.7) = 4.75 m
+  recurrencia 90 años: max 4.40 m -> rango desde el mínimo anual (-0.7) = 5.10 m
+  Marea astronómica: M2 0,27 m de amplitud en Buenos Aires (rango ~0,5-0,6 m); sudestada 09/08/2021: 2,80 m (según el Municipio)
+  Tope de guía recomendado ~ +4.65 m CdR (10 años + 0,6 m de barrera + 0,5 m de margen) [supuesto]; por encima: se suelta por alerta
+
+=== 4. Fuerzas (ITOPF TIP 3: F[kgf]=100*A*V^2; viento: V/40)
+  Perú L=30 m, pollera 0.6 m, v=0.5 m/s a 37,5°: corriente 167 kgf
+  Perú L=30 m, pollera 0.6 m, v=1.0 m/s a 37,5°: corriente 669 kgf
+  Perú L=30 m, pollera 0.6 m, v=1.5 m/s a 37,5°: corriente 1,505 kgf
+   -> diseño v=1,0 m/s + viento 15 m/s + 30% por basura: 1,090 kgf; caso extremo v=2 m/s perpendicular: 7,222 kgf (por eso: eslabón fusible/suelta rápida)
+   -> muerto (3x carga en aire, ITOPF) si toma 1/3: 1.09 t = 0.45 m3 de hormigón; se adopta 1,0 m3 por muerto [supuesto]
+  Alto Perú L=48 m, pollera 0.6 m, v=0.5 m/s a 37,5°: corriente 268 kgf
+  Alto Perú L=48 m, pollera 0.6 m, v=1.0 m/s a 37,5°: corriente 1,071 kgf
+  Alto Perú L=48 m, pollera 0.6 m, v=1.5 m/s a 37,5°: corriente 2,409 kgf
+   -> diseño v=1,0 m/s + viento 15 m/s + 30% por basura: 1,744 kgf; caso extremo v=2 m/s perpendicular: 11,558 kgf (por eso: eslabón fusible/suelta rápida)
+   -> muerto (3x carga en aire, ITOPF) si toma 1/3: 1.74 t = 0.73 m3 de hormigón; se adopta 1,0 m3 por muerto [supuesto]
+
+=== 5. Precios de anclaje (pesos dic-2025)
+  H°A° in situ por m3 (LP 62/2024, mar-25): 504.316 $/m3; premoldeado con ojal (+20% supuesto): 605.179
+  Acero (minorista Easy, caño 100x100x1,6 mm 3 m $64.190, oct-26): 3.569 $/kg
+  Cadena galvanizada 7 mm (Easy, oct-26): 16.704 $/m; 13 mm extrapolada por peso (x(13/7)^2): 57.610 $/m [cálculo propio]
+  Hora de equipo con cuadrilla (LP 60/2024, $133.100, nov-24): 179.826 $/h
+  Gasoil grado 3 dic-25 (mediana SE): 1972.5 $/l; grado 2: 1723.0 $/l
+  Poste guía en orilla (caño 273x9,3 x 9 m, 544 kg, x1,5-2,5 por fabricar/galvanizar/collar/colocar + 2 m3 de base): 3,9 M a 5,9 M; medio 4,9 M
+  Muerto 1 m3 + 16 m de cadena 13 mm + boya y grilletes: 1,8 M
+
+=== 6. Compra por boca (barrera + anclaje + instalación + proyecto + permisos)
+  Perú [bajo] compra 31 m a 445.031 $/m: barrera 13,7 M; postes 7,8 M; muertos 1 = 1,8 M; herrajes/señales 0,6 M; instalación 3,9 M -> OBRA 27,9 M
+      proyecto 8,0 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 0,5 M + constancia 1,5% 0,4 M; EIA provincial (si corresponde) 0,5 M
+      TOTAL 37,0 M (EIA municipal) a 37,5 M (EIA provincial)
+  Perú [medio] compra 38 m a 633.228 $/m: barrera 23,8 M; postes 9,8 M; muertos 1 = 1,8 M; herrajes/señales 1,0 M; instalación 5,3 M -> OBRA 41,8 M
+      proyecto 8,4 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 0,8 M + constancia 1,5% 0,6 M; EIA provincial (si corresponde) 0,5 M
+      TOTAL 51,7 M (EIA municipal) a 52,2 M (EIA provincial)
+  Perú [alto] compra 49 m a 821.424 $/m: barrera 40,2 M; postes 11,7 M; muertos 2 = 3,7 M; herrajes/señales 1,5 M; instalación 6,8 M -> OBRA 63,8 M
+      proyecto 16,0 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 1,1 M + constancia 1,5% 1,0 M; EIA provincial (si corresponde) 0,6 M
+      TOTAL 82,1 M (EIA municipal) a 82,7 M (EIA provincial)
+  Alto Perú [bajo] compra 49 m a 445.031 $/m: barrera 21,8 M; postes 7,8 M; muertos 2 = 3,7 M; herrajes/señales 0,8 M; instalación 5,3 M -> OBRA 39,4 M
+      proyecto 8,0 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 0,7 M + constancia 1,5% 0,6 M; EIA provincial (si corresponde) 0,5 M
+      TOTAL 48,9 M (EIA municipal) a 49,4 M (EIA provincial)
+  Alto Perú [medio] compra 60 m a 633.228 $/m: barrera 38,1 M; postes 9,8 M; muertos 2 = 3,7 M; herrajes/señales 1,5 M; instalación 6,8 M -> OBRA 59,8 M
+      proyecto 12,0 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 1,1 M + constancia 1,5% 0,9 M; EIA provincial (si corresponde) 0,6 M
+      TOTAL 74,0 M (EIA municipal) a 74,6 M (EIA provincial)
+  Alto Perú [alto] compra 76 m a 821.424 $/m: barrera 62,4 M; postes 11,7 M; muertos 3 = 5,5 M; herrajes/señales 2,0 M; instalación 9,6 M -> OBRA 91,3 M
+      proyecto 22,8 M; ADA: CPH 0,2 M + aptitud hidráulica 1,8% 1,6 M + constancia 1,5% 1,4 M; EIA provincial (si corresponde) 0,8 M
+      TOTAL 117,3 M (EIA municipal) a 118,1 M (EIA provincial)
+
+  DOS BOCAS:
+   [bajo] obra 67,3 M; proyecto 16,0 M; permisos 2,6 M (+EIA prov. 1,0 M); TOTAL 85,9 M a 86,8 M
+   [medio] obra 101,6 M; proyecto 20,3 M; permisos 3,7 M (+EIA prov. 1,1 M); TOTAL 125,6 M a 126,8 M
+   [alto] obra 155,1 M; proyecto 38,8 M; permisos 5,5 M (+EIA prov. 1,4 M); TOTAL 199,4 M a 200,8 M
+
+=== 7. Reposición por año (sin vaciado)
+  Perú [bajo]: barrera 15%/año 1,6 M + cadenas/herrajes 0,4 M + postes/muertos 5% 0,4 M = 2,5 M por año
+  Perú [medio]: barrera 20%/año 3,8 M + cadenas/herrajes 0,5 M + postes/muertos 5% 0,5 M = 4,8 M por año
+  Perú [alto]: barrera 25%/año 8,0 M + cadenas/herrajes 0,8 M + postes/muertos 5% 0,7 M = 9,5 M por año
+  Alto Perú [bajo]: barrera 15%/año 2,6 M + cadenas/herrajes 0,7 M + postes/muertos 5% 0,5 M = 3,8 M por año
+  Alto Perú [medio]: barrera 20%/año 6,1 M + cadenas/herrajes 0,8 M + postes/muertos 5% 0,6 M = 7,5 M por año
+  Alto Perú [alto]: barrera 25%/año 12,5 M + cadenas/herrajes 1,2 M + postes/muertos 5% 0,7 M = 14,4 M por año
+
+=== 8. Referencias importadas (dólares históricos a $1.447,84, sin ajustar por inflación de EE. UU.)
+  Bandalong Watts Branch, DC (2009) instalado: US$ 55.000 = 79,6 M
+  Bandalong Fairfax (2020) trampa sola: US$ 104.500 = 151,3 M
+  Fairfax (2020) diseño, permisos, accesos, obra: US$ 587.000 = 849,9 M
+  Fairfax total: US$ 691.500 = 1.001,2 M
+  Fort Worth (Lake Como) total: US$ 226.000 = 327,2 M
+  Fairfax mantenimiento estimado por año: US$ 45.000 = 65,2 M
+
+=== 9. Velocidad en el canal en la crecida de diseño (río bajo)
+  Alto Perú: Q = 4 millones de litros por minuto (según el Municipio) = 66.7 m3/s
+    dársena 23 m x 1.5 m de agua: v = 1.93 m/s
+    dársena 23 m x 2.0 m de agua: v = 1.45 m/s
+    dársena 23 m x 3.0 m de agua: v = 0.97 m/s
+    túnel 4,40 m lleno: v = 4.38 m/s
+  Perú: dos bocas 3,2x3,2 m (20.5 m2) a 1.5 m/s [supuesto] -> Q=31 m3/s; canal 13 m x 1,5-3 m: v = 0.79 a 1.58 m/s
+  Perú: dos bocas 3,2x3,2 m (20.5 m2) a 2.0 m/s [supuesto] -> Q=41 m3/s; canal 13 m x 1,5-3 m: v = 1.05 a 2.10 m/s
+  Perú: dos bocas 3,2x3,2 m (20.5 m2) a 2.5 m/s [supuesto] -> Q=51 m3/s; canal 13 m x 1,5-3 m: v = 1.31 a 2.63 m/s
+  MSMA: la basura escapa por debajo desde ~1 m/s. ITOPF tabla 2 (petróleo): 0,5 m/s -> 45°; 0,75 -> 28°; 1,0 -> 20°.
+
+=== 10. Canon posible si la ADA aplicara la fórmula del Decreto 3233/2025 con Q=0 (sólo cargo fijo) [inferencia]
+  8 l de gasoil grado 3 por mes = 15.780 $/mes = 0,2 M por año y por permiso
+  Arancel EIA provincial mínimo (1.484,90 UT x $275, a pesos dic-25 con IPC jul-26): 0,3 M
