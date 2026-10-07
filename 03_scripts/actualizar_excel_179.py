@@ -573,12 +573,12 @@ s_row(277, "Gasto 2025 en semaforización y señalamiento vial y en la política
       7199058415, note="Programas 27 y 26 de 2025 (1.654,2 M y 4.687,6 M), por 1,1352: el promedio del IPC del año")
 s_row(278, "Lo que ya se gasta en seguridad vial menos lo que se cobra en multas", formula="=C277-C276",
       note="Positivo: lo que se cobra ya se gasta en seguridad vial, como manda la Ley 24.449, art. 85. El fondo no mueve el margen")
-s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informes 23 ter y 23 quáter)")
-s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 326000000,
-      note="Informe 23 quáter: cachets de los 200 shows con las cancelaciones nuevas, 202,6 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, 13,8 M; control contra robos, 2,0 a 2,7 M: unos 326 M. Entra en el gasto flexible ocupado. Con las temporadas decididas el 07/10 (al aire libre del 20 de septiembre a mediados de abril), cuántos shows van bajo techo y lo que cuestan los convenios: informe 23 quinquies")
+s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informes 23 ter a 23 quinquies)")
+s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 329000000,
+      note="Informe 23 quinquies: 114 shows al aire libre, del 20 de septiembre al 15 de abril, y 86 bajo techo; cachets de los 200 shows con las cancelaciones, 201,9 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, en espacios municipales para los solistas y en cuatro clubes o centros culturales por convenio, 17,8 M; control contra robos, 2,0 a 2,7 M: unos 329 M. Entra en el gasto flexible ocupado")
 s_row(282, "Cultura · compra de equipos, limitadores y control contra robos, una vez", 138800000,
       note="Informe 23 ter: 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control. Informe 23 quáter: un limitador con bloqueo y clave y dos bafles chicos para el «modo plaza» en cada equipo de show, 7,7 M por los dos")
-s_row(283, "Cultura · el primer año, con la compra", 464800000, note="Unos 326 M por año más 138,8 M de compra")
+s_row(283, "Cultura · el primer año, con la compra", 467000000, note="Informe 23 quinquies: unos 467 M, de 328,5 a 329,2 M por año más 138,8 M de compra")
 for rr in range(106, 284):
     S.row_dimensions[rr].height = None
 

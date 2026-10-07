@@ -1396,11 +1396,7 @@ Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (L
 un desviador de tiempo seco en la boca, acordado con AySA y pagado como obra p&uacute;blica. <span class="sg">El
 compromiso es el resultado &mdash;que deje de entrar cloaca&mdash;, no una obra que nadie dise&ntilde;&oacute; todav&iacute;a.</span></p>
 <p><b>2 &middot; Frenar la basura.</b> Rejas en unas diez bocas de los desag&uuml;es, revisadas cada semana
-y despu&eacute;s de cada lluvia, con alivio para que no inunden: si la reja se llena, el agua pasa por arriba. En las dos
-bocas grandes, Per&uacute; y Alto Per&uacute;, no van rejas sino barreras, como ya ped&iacute;a para Per&uacute; el Plan de Manejo de la Reserva
-en 2012. Las vac&iacute;a una cuadrilla municipal de la costa m&aacute;s grande, con personal del Municipio reasignado; y se
-llama a concurso a las cooperativas de trabajo del partido, con un contrato por resultado &mdash;se paga por boca vaciada&mdash;:
-si cobran menos que la cuadrilla, lo hacen ellas (necesita dictamen de un abogado). Robots y barcazas no sirven en una
+y despu&eacute;s de cada lluvia, con alivio para que no inunden: si la reja se llena, el agua pasa por arriba. En las dos bocas grandes, Per&uacute; y Alto Per&uacute;, no van rejas sino barreras flotantes en &laquo;J&raquo;, como ya ped&iacute;a para Per&uacute; el Plan de Manejo de la Reserva en 2012: de unos 30 metros en Per&uacute; y de unos 48 en Alto Per&uacute;, con un anclaje que sube y baja con el r&iacute;o. Las rejas las vac&iacute;a una cuadrilla municipal de la costa m&aacute;s grande, con personal del Municipio reasignado; las barreras, el cami&oacute;n con almeja que el Municipio ya alquila, con la cuadrilla, despu&eacute;s de cada lluvia fuerte y de cada sudestada, y se revisan cada semana. Para las dos cosas se llama a concurso a las cooperativas de trabajo del partido, con un contrato por resultado &mdash;se paga por boca vaciada&mdash;: si cobran menos, lo hacen ellas (necesita dictamen de un abogado). La ubicaci&oacute;n exacta de la boca de Alto Per&uacute;, la crecida para la que se dise&ntilde;a el anclaje y el permiso de la Autoridad del Agua los define el proyecto; el permiso del titular de la d&aacute;rsena necesita dictamen de un abogado. Robots y barcazas no sirven en una
 costa abierta como esta.</p>
 <p><b>3 &middot; Informar en lugar de prohibir, como Montevideo.</b> Muestras de agua en cada tramo que se usa, por lo
 menos dos veces por semana, y una bandera sanitaria por tramo, todos los d&iacute;as. <b>El ba&ntilde;o se habilita en los
@@ -1428,10 +1424,8 @@ ambiental, la decisi&oacute;n del panel sorteado y, en un parque costero, el dic
 funcionan, se extienden por la costa.</p>
 <p><b>Cu&aacute;nto cuesta.</b> Un piloto de arena de 100 por 20 metros, con su pie de piedra, 196 millones una vez, con
 los precios del propio contrato municipal, y de 4 a 20 millones por a&ntilde;o para reponer arena; sus guardavidas, 29
-millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Las rejas, de 70,4 a 130,9 millones una vez. Con las rejas, la
-barrera de Per&uacute;, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 432 a 821 millones (la barrera de Alto Per&uacute;, con un costo estimado
-igual al de la de Per&uacute;, [23&nbsp;quinquies]): <span
-class="sg">entre el 12% y el 24% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
+millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Las rejas, de 70,4 a 130,9 millones una vez, y las dos barreras, 125,6 millones una vez (de 86 a 199, seg&uacute;n lo que defina el proyecto), con el anclaje, el proyecto y los permisos; vaciarlas y reponer lo que se gasta, 39,3 millones por a&ntilde;o (de 27 a 57). Con las rejas, las barreras, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 139 a 346 millones: <span
+class="sg">entre el 4% y el 10% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
 moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
 muestras y la primera temporada de guardavidas, unos 335 millones&mdash;, con dinero de los programas que
 ceden (cuadro [[n:ceden]]) y no de lo que Ambiente ya gasta: sin gasto nuevo. El
@@ -1836,8 +1830,7 @@ profesores. Con tres foodtrucks, el canon de un puesto es de unos
 60%. <span class="sg">La obra de los ba&ntilde;os y las plataformas sale de obras deportivas, como la Escuela N&aacute;utica; la
 limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el canon; los profesores, de
 Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a
-obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 12% y el 24% del aumento de Ambiente a entre el 20% y
-el 35%.</p>
+obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 4% y el 10% del aumento de Ambiente a entre el 11% y el 21%.</p>
 </div>
 <h3>Espect&aacute;culos al aire libre, en la semana</h3>
 <div class="cols">
@@ -1861,11 +1854,11 @@ los frentes de vivienda.</p>
 instructores (necesita dictamen de un abogado).</p>
 <p><b>Shows que paga el Municipio.</b></p>
 <p><b>4 &middot; Doscientos por a&ntilde;o, todo el a&ntilde;o, s&oacute;lo con artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de
-afuera. Al aire libre, del 20 de septiembre a mediados de abril; el resto del a&ntilde;o, bajo techo: los solistas, en espacios municipales, y los dem&aacute;s, en clubes y centros culturales del partido, por convenio (el instrumento lo define un abogado). Los shows grandes, al aire libre. Cu&aacute;ntos shows van bajo techo y lo que cuestan los convenios con estas fechas, [23&nbsp;quinquies]. Es del partido si al menos la mitad de sus
+afuera. Al aire libre, del 20 de septiembre al 15 de abril: 114 shows. Los otros 86, bajo techo: los solistas, en espacios municipales, y los dem&aacute;s, en cuatro clubes o centros culturales del partido, por convenio (el instrumento lo define un abogado), por 17,8 millones por a&ntilde;o. Los shows grandes, al aire libre. Es del partido si al menos la mitad de sus
 integrantes tiene en el DNI domicilio en San Isidro, y es emergente si tiene menos de 50.000 oyentes mensuales en
 Spotify, que se verifican con una captura fechada, una declaraci&oacute;n jurada y un acceso de &laquo;lector&raquo; que el artista le da
 gratis al Municipio; quien no est&aacute; en Spotify no queda afuera. Como no se gasta en famosos, alcanza para pagar bien a
-muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]): unos 326 millones por a&ntilde;o, 202,6 de ellos para los artistas, y 465 el primer a&ntilde;o, con la compra de los equipos.</p>
+muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]): unos 329 millones por a&ntilde;o, 201,9 de ellos para los artistas, y 467 el primer a&ntilde;o, con la compra de los equipos.</p>
 <p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
 eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
 un cupo grande para artistas nuevos. La grilla cumple el cupo de la Ley 27.539 &mdash;al menos un 30% de mujeres&mdash;, y la
@@ -3012,7 +3005,7 @@ afuera.</p>
 <li>La funci&oacute;n Trabajo es la &uacute;ltima de las veinte del presupuesto, con 170 millones. Proponemos llevar empleo y vivienda a 7.730,9 millones por a&ntilde;o: una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, que nace en el Centro de Formaci&oacute;n Laboral N&ordm; 404 de La Cava, donde ya funciona La Cava 4.0, declarada de inter&eacute;s por el Concejo, y llega a las seis zonas; el segundo a&ntilde;o, una pasant&iacute;a paga, seis meses en el Municipio y seis en una empresa del partido. Son 928 alumnos por a&ntilde;o, de 250 a 300 empleos pagos por a&ntilde;o y 1.286 egresados en el mandato.</li>
 <li>Para que el trabajo quede en el partido, los egresados tienen prioridad, quien trabaja para el Municipio toma al menos el 75% de su gente del partido y el 20% de cada licitaci&oacute;n va a pymes del partido. Del dinero, el 60% va a empleo y el 40% a vivienda; y un semillero de empresas, por 121 millones por a&ntilde;o, le da al egresado que no queda contratado su primer cliente.</li>
 <li>El Censo no mide la conexi&oacute;n a internet. Proponemos medirla por zona con el primer ciclo de asambleas; las redes de cloaca y de gas en la calle las hace la obra vecinal, y la partida de vivienda, 3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa.</li>
-<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 432 a 821 millones por a&ntilde;o.</li>
+<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 139 a 346 millones por a&ntilde;o.</li>
 <li>La recolecci&oacute;n, con barrido y limpieza, es el servicio m&aacute;s caro que paga el Municipio, 49.270 millones por a&ntilde;o: la presta el mismo grupo desde 1998, cuatro licitaciones fracasaron, y corre sobre un contrato directo de seis meses de 2009. Proponemos licitarla en dos zonas, con el pliego aprobado antes del llamado, todos sus trabajadores con su antig&uuml;edad, y el pago seg&uacute;n lo que se mide.</li>
 <li>El ruido tiene norma, pero nadie lo mide. Proponemos que el vecino lo grabe con la inteligencia artificial del Municipio y la prueba quede sellada, y estaciones m&oacute;viles que midan motos y colectivos con el instrumento que fija la ordenanza; primero va el aviso, y un inspector valida antes de multar.</li>
 <li>En urbanismo, lo que se da de m&aacute;s se da por decreto, sin pasar por el Concejo; y en la costa se demolieron Catalejo y Barisidro. Proponemos audiencia p&uacute;blica y dictamen de la comisi&oacute;n de la zona antes de cada excepci&oacute;n, y cobrar el 15% de lo que se valoriza un terreno; que los comercios de la costa sigan en sus predios, con canon y 75% de empleo local; ninguna obra en un parque sin el dictamen de su asociaci&oacute;n; y parques que nunca se privatizan, se edifican ni se achican.</li>
