@@ -2902,3 +2902,13 @@ Páginas de la versión de pantalla (51 págs.).
   externa, 107,3 M (49 personas) o 135,4 M (59); (4) las catorce fechas nuevas del calendario del C1 esperan su visto
   bueno; (5) la barrera de Alto Perú sigue sin costo, como antes; (6) de la grabación del turno, cualquier vecino ve
   la de cada inspección, no el turno entero.
+
+## ORDEN DE NICK · LA VERSIÓN A4 CON EL DISEÑO APROBADO (07/10)
+- Nick no acepta la versión A4 de 157 páginas: cambiaba lo visual y el formato. La A4 nueva es la versión de pantalla
+  tal cual, achicada en forma pareja (660 → 595 pt, un 90%) y cortada en hojas A4 entre bloques, sin cortar nunca un
+  cuadro ni un gráfico; nada rehecho para A4. Si alguna letra queda por debajo de 8 pt o un cuadro no entra en una
+  hoja, se avisa antes de cambiar nada. Primero, cuatro hojas de muestra (portada, texto con recuadro, cuadro y
+  gráfico) al lado de la versión de pantalla; con su visto bueno, el A4 completo y la comparación hoja por hoja.
+- Paso 1 (hecho): borrados salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf, doc/build_a4.py, assets/svg_a4/ y
+  doc/charts_a4.py, que hacía los gráficos rehechos para A4. La versión de pantalla no se tocó. Lo que el apartado
+  «D · VERSIÓN A4 PARA IMPRIMIR (07/10)» de arriba describe ya no existe.
