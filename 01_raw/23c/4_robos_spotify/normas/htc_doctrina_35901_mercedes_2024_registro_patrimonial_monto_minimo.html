@@ -1,0 +1,188 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Doctrina Consulta "35901 D.C.  BIENES [REGISTRO PATRIMONIAL]"</h4>
+      <div class="pull-right">
+     <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/doctrinaconsulta/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>    </div>
+      </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	 <table class="table table-bordered table-striped table-hover">
+  <tr>
+  <th>N° U.I.</th>
+  <td>35901</td>
+</tr>
+<tr>
+  <th>Fecha Salida</th>
+  <td>25/10/2024&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades A</li>
+        </ul>
+  </td>
+</tr><tr>
+  <th>Expediente</th>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <th>Ente</th>
+  <td>[075.0] Municipalidad de MERCEDES</td>
+</tr>
+<tr>
+  <th>Ámbito</th>
+  <td>Municipal</td>
+</tr> 
+<tr>
+  <th>Resúmen</th>
+  <td><p style="text-align:justify"><u>CONSULTA DIGITAL 13450-2024:</u> Por las presentes actuaciones el Intendente de la Municipalidad de Mercedes se dirige a este H. Tribunal de Cuentas con el objeto de elevar una consulta relacionada con la posibilidad de fijar a nivel local, un monto m&iacute;nimo en moneda de curso legal, que justifique la inclusi&oacute;n en sus inventarios de un bien adquirido por la Comuna.</p>
+
+<p style="text-align:justify">Al respecto resalta que esta condici&oacute;n para inventariar bienes se encuentra prevista en el Decreto Provincial N&ordm; 1555/2022 -conocido como RAFAM 2 y a&uacute;n no vigente-, que en su art&iacute;culo 152 lo fija en el tres y medio por ciento (3,50 %) del valor establecido por el art&iacute;culo 151 de la Ley Org&aacute;nica de las Municipalidades para la compra directa.</p>
+
+<p style="text-align:justify">El consultante plantea la voluntad del Municipio de dictar una disposici&oacute;n independiente, que no implique la adhesi&oacute;n a la aludida norma provincial, pero que promueva el establecimiento de una medida en esa direcci&oacute;n, fijando el valor m&iacute;nimo en el dos con cuarenta y ocho por ciento (2,48%) del mismo par&aacute;metro. En relaci&oacute;n a esto, se adjunta el proyecto de Decreto que se pretende suscribir, el cual seg&uacute;n lo menciona, resulta conveniente desde un punto de vista operativo, pero del que tiene dudas sobre su validez legal, toda vez que incursiona sobre un aspecto no previsto en la legislaci&oacute;n positiva vigente. A su vez, se acompa&ntilde;an a la presente consulta, informes t&eacute;cnicos con opiniones vertidas por el responsable del &aacute;rea legal y el Contador Municipal.</p>
+
+<p style="text-align:justify">Sobre lo consultado se agrega escrito emitido por el Relator Mayor de la Vocal&iacute;a Municipalidades &ldquo;A&rdquo; en el que posteriormente a se&ntilde;alar que el Decreto N&deg;1555/22 a&uacute;n no puede aplicarse, concluye detallando cu&aacute;l es el marco normativo que se debe cumplir en este caso.</p>
+
+<p style="text-align:justify">Presentada la situaci&oacute;n tra&iacute;da a consideraci&oacute;n, esta Secretar&iacute;a informa lo siguiente:</p>
+
+<p style="text-align:justify"><u>RESPUESTA:</u> En primer lugar se comparte plenamente lo expresado por el Relator Mayor de la Vocal&iacute;a Municipalidades &ldquo;A&rdquo;.</p>
+
+<p style="text-align:justify">En ese sentido, se debe recordar que las Disposiciones de Administraci&oacute;n de los Recursos Financieros y Reales para los Municipios piloto del Decreto N&ordm; 2980/00 &ndash;RAFAM-, en su Cap&iacute;tulo VII que da tratamiento al Sistema de Administraci&oacute;n de Bienes F&iacute;sicos, prescribe en su art&iacute;culo 128: <em>&ldquo;Consid&eacute;rase bienes f&iacute;sicos, dentro del contexto de la definici&oacute;n de Patrimonio Municipal a que alude el art&iacute;culo 225 de la Ley Org&aacute;nica de las Municipalidades, los bienes de uso inmuebles, muebles, semovientes e intangibles que son adquiridos a terceros a t&iacute;tulo gratuito u oneroso, o bien elaborados por el propio Municipio, que sirven para producir otros bienes y servicios, no se agotan en el primer uso que de ellos se hace, tienen una duraci&oacute;n superior a un (1) a&ntilde;o y est&aacute;n sujetos a depreciaci&oacute;n&rdquo;. </em>A continuaci&oacute;n el art&iacute;culo 129 reza que: <em>&ldquo;Los bienes f&iacute;sicos comprendidos en el art&iacute;culo 128 de las presentes disposiciones cuando correspondan al dominio privado, deber&aacute;n ser inventariados y valuados en funci&oacute;n de los criterios que se establezca el &oacute;rgano rector del Sistema, para poder incorporarlos en el activo del Municipio&rdquo;. </em>Es decir, la norma que regula el Sistema de Administraci&oacute;n de Bienes F&iacute;sicos en la actualidad, identifica claramente cu&aacute;les son las condiciones que debe reunir un bien para que deba ser inventariado.</p>
+
+<p style="text-align:justify">Por otra parte el Decreto N&ordm; 1555/22, actualiza el Decreto N&ordm; 2980/00, y en su Art&iacute;culo 152 establece los requisitos para la consideraci&oacute;n de un bien f&iacute;sico exponiendo: <em>&ldquo;Consid&eacute;rase bienes f&iacute;sicos, dentro del contexto de la definici&oacute;n de Patrimonio Municipal a que alude el art&iacute;culo 225 de la Ley Org&aacute;nica de las Municipalidades, los bienes de uso, inmuebles, muebles, semovientes e intangibles que son adquiridos a terceros a t&iacute;tulo gratuito u oneroso, o bien elaborados por el propio municipio, valorizados por el &aacute;rea t&eacute;cnica competente y sirven para producir otros bienes y servicios, no se agotan en el primer uso que de ellos se hace, tienen una duraci&oacute;n superior a un (1) a&ntilde;o, est&aacute;n sujetos a depreciaci&oacute;n y tienen un valor m&iacute;nimo, que fijar&aacute; el municipio, el cual no podr&aacute; superar el tres y medio por ciento (3,5%) del establecido para las compras directas en el art&iacute;culo 151 de la Ley Org&aacute;nica de las Municipalidades&rdquo;</em>. Como se puede advertir, se ha agregado el valor m&iacute;nimo del bien como un requisito adicional que se debe tener en cuenta para realizar o no un alta en el Patrimonio Municipal.</p>
+
+<p style="text-align:justify">No obstante lo esgrimido por el Decreto N&deg;1555/22, el mismo a&uacute;n no resulta de aplicaci&oacute;n, como correctamente se especifica en la consulta, por ello para este tema, se debe seguir respetando las normas legales, reglamentarias, estatutarias y de procedimiento vigentes, que son el Decreto-Ley N&ordm; 6769/58 - Ley Org&aacute;nica de las Municipalidades, el Reglamento de Contabilidad de la Provincia y el Decreto N&ordm; 2980/2000 (Cap&iacute;tulo VII), marco legal que como se puede apreciar, no identifica como requisito considerar un valor m&iacute;nimo a los efectos de incorporar un bien al Patrimonio Municipal.</p>&nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;BIENES [REGISTRO PATRIMONIAL]<br>
+     &nbsp;
+  </td>
+</tr> </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

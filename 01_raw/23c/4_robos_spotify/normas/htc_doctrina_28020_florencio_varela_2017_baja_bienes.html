@@ -1,0 +1,484 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Doctrina Consulta "28020 D.C.  BIENES [SU BAJA]"</h4>
+      <div class="pull-right">
+     <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/doctrinaconsulta/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>    </div>
+      </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	 <table class="table table-bordered table-striped table-hover">
+  <tr>
+  <th>N° U.I.</th>
+  <td>28020</td>
+</tr>
+<tr>
+  <th>Fecha Salida</th>
+  <td>31/03/2017&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades B</li>
+        </ul>
+  </td>
+</tr><tr>
+  <th>Expediente</th>
+  <td>4037-2896-2016-0-0&nbsp;</td>
+</tr>
+<tr>
+  <th>Ente</th>
+  <td>[037.0] Municipalidad de FLORENCIO VARELA</td>
+</tr>
+<tr>
+  <th>Ámbito</th>
+  <td>Municipal</td>
+</tr> 
+<tr>
+  <th>Resúmen</th>
+  <td><div>
+<p style="text-align:justify"><u><strong>Consulta</strong></u>: Relacionada con la baja patrimonial de veh&iacute;culos en condiciones irreparables y su posterior compactaci&oacute;n; como tambi&eacute;n acerca del procedimiento admisible para esta &uacute;ltima finalidad, conforme a las facultades que otorga la Ley N&deg; 14.547.</p>
+
+<p style="text-align:justify">Puntualmente respecto de la baja patrimonial, desea saber cu&aacute;l es el procedimiento que debe llevarse a cabo, teniendo en cuenta que si bien estos bienes dejaron de tener la calidad de veh&iacute;culos (desde su baja registral) a&uacute;n poseen alg&uacute;n valor monetario; tratamiento que el RAFAM otorga a los bienes de rezago a consideraci&oacute;n del HTC; si los bienes deben llevar el mismo n&uacute;mero de inventario u otro distinto. Tambi&eacute;n consulta acerca del valor contable y patrimonial con que se registrar&aacute;n estos bienes y si deben incluirse dentro del nomenclador como Bienes de Uso.</p>
+
+<p style="text-align:justify">Por otra parte, y &nbsp;espec&iacute;ficamente acerca de la compactaci&oacute;n vehicular, plantea cu&aacute;l ser&iacute;a el mecanismo de contrataci&oacute;n admisible para aquellas empresas metal&uacute;rgicas que compactan y disponen del material de rezago; y finalmente, se&ntilde;alando que podr&iacute;a existir por parte de la empresa -de acuerdo a la contrataci&oacute;n efectuada- &nbsp;el reintegro de una suma dineraria y por peso, &nbsp;consulta si dicha adici&oacute;n podr&iacute;a ser reinvertida en el sistema.</p>
+
+<p style="text-align:justify"><u><strong>Respuesta</strong></u>: El Relator de la Delegaci&oacute;n Zona II Quilmes de este Organismo y la Oficial Letrada de la misma Delegaci&oacute;n, emiten extenso dictamen rese&ntilde;ando, analizando y definiendo fundadamente las inquietudes planteadas, indicando la normativa legal aplicable y proponiendo criterios a adoptar en relaci&oacute;n al tema, tanto contables como legales.</p>
+
+<p style="text-align:justify">Compartiendo plenamente las conclusiones vertidas en los dict&aacute;menes enunciados en el p&aacute;rrafo anterior -que dan contestaci&oacute;n a las inquietudes presentadas-, esta Secretaria se remite y da por reproducidos los mismos, en honor a la brevedad.</p>
+
+<p style="text-align:justify"><strong>Delegaci&oacute;n Zona II: Relator</strong></p>
+
+<p style="text-align:justify"><em>&quot;Me dirijo a Ud., a fin de remitir para su consideraci&oacute;n y, en su caso, elevaci&oacute;n a la Secretar&iacute;a de Consultas y Dict&aacute;menes, el presente informe elaborado en torno a la consulta efectuada por la Subcontadora M&oacute;nica Ponce de la Municipalidad de Municipalidad de Florencio Varela, designada a cargo de la Direcci&oacute;n General de Contadur&iacute;a conforme el Decreto N&ordm; 166/16 (en cumplimiento con la formalidad dispuesta por el art&iacute;culo 21 del Reglamento Interno del Honorable Tribunal de Cuentas, modificado por Resoluci&oacute;n N&deg;450/11).</em></p>
+
+<p style="text-align:justify"><em>A trav&eacute;s de la misma, se solicita informaci&oacute;n y opini&oacute;n de &eacute;ste Organismo respecto de:</em></p>
+
+<p style="text-align:justify"><em><strong><u>PLANTEO DE LA CONSULTA:</u></strong></em></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>El presente planteo de consulta puede ser segmentado en dos tramos bien diferenciados:</em></p>
+
+<ol style="list-style-type:lower-alpha">
+	<li style="text-align:justify"><em>Relacionado Espec&iacute;ficamente con la BAJA PATRIMONIAL de los veh&iacute;culos irreparables y su posterior compactaci&oacute;n, todo conforme a los interrogantes planteados seg&uacute;n prosigue:</em></li>
+</ol>
+
+<ol>
+	<li style="text-align:justify"><em><strong><u>&iquest;Cu&aacute;l es el procedimiento que debe llevarse a cabo, teniendo en cuenta que si bien estos bienes dejaron de tener calidad de veh&iacute;culos (desde su baja registral), a&uacute;n poseen valor monetario?</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em><strong><u>RESPUESTA:</u></strong></em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Se estima prudente recomendar que para el tratamiento de los Bienes Patrimoniales con las caracter&iacute;sticas del caso planteado, se debe aplicar en forma arm&oacute;nica lo establecido por el andamiaje normativo que seg&uacute;n su anticuaci&oacute;n, existencia y vigencia es el siguiente:</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em><strong>1)</strong><strong><u>Normas para el Recuento, Valorizaci&oacute;n, Identificaci&oacute;n y &acute;Registro de Bienes Patrimoniales pertenecientes a las Municipalidades de la Provincia de Buenos Aires que suministra el Ministerio de Gobierno. </u></strong></em></p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Concepto General:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>&nbsp;A la luz de lo planteado en este punto por la Comuna, estimamos importante efectuar una consideraci&oacute;n relacionada con el concepto asignable a los rodados que se dan de baja, toda vez que puede ocurrir que los mismos sean: Bienes Fuera de Uso (Apartado V. b) de las Normas para el Recuento, O Rezagos, desechos, desperdicios, descarte (Apartado V.c) de las mismas normas.</em></p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Baja de Tales Bienes:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>En caso de la baja de tales bienes, para considerarlo operativamente y bajo la interpretaci&oacute;n de la Doctrina producida por el H. Tribunal de Cuentas de la Provincia de Buenos Aires, se estima aplicable en su parte pertinente la consulta Expediente 4024-140/06 Municipalidad de Col&oacute;n de fecha 23/11/2006.</em></p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Mantenimiento en el Activo &ndash; Patrimonio Municipal:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>De mantenerse los bienes en el Patrimonio Comunal, corresponde aplicar el plexo normativo expuesto Ut-Supra, con las salvedades planteadas en el apartado VII)&nbsp; Identificaci&oacute;n de los Bienes.</em></p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Valor Asignable- Valuaci&oacute;n:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>Con relaci&oacute;n al valor asignable, se reputa como aplicable, el apartado VI. CRITERIO PARA VALUAR BIENES, inciso b) Muebles, sub inciso 5) Cuenta 6.1.0 &ndash; Bienes de Rezago que ser&aacute;n valorizados seg&uacute;n probable valor de venta, pudiendo requerirse a tal fin, tasaci&oacute;n oficial por peritos especializados.</em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol>
+	<li style="text-align:justify"><em><strong><u>Sistema de Administraci&oacute;n de Bienes F&iacute;sicos </u></strong><strong><u>de las Disposiciones de Administraci&oacute;n de los Recursos Financieros y Reales para los Municipios, en el marco del Art&iacute;culo 3 del Decreto 2980/00.</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Se relaciona con el Sistema Contable mediante lo expuesto en el Cap&iacute;tulo 2. LAS INTERRELACIONES SISTEMICAS, apartado 2.3 RELACIONES CON EL SISTEMA DE CONTABILIDAD, inciso a) Segundo p&aacute;rrafo.</em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol>
+	<li style="text-align:justify"><em><strong><u>&iquest; Cu&aacute;l es el tratamiento que el RAFAM otorga a los bienes de rezago a consideraci&oacute;n del HTC?</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em><strong><u>RESPUESTA:</u></strong></em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Concepto General:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>Se interpreta con car&aacute;cter amplio, que el RAFAM contempla las cuestiones relacionadas con los bienes alcanzados por esta consulta en los siguientes tramos del mismo:</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Sistema de Administraci&oacute;n de Bienes F&iacute;sicos:</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Cap&iacute;tulo 3.7) Concepto Contable de los Bienes, con referencia normativa complementaria en la Resoluci&oacute;n 25/95 de la Secretar&iacute;a de Hacienda de la Naci&oacute;n.</em></p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Codificaci&oacute;n en el Plan de Cuentas:</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify"><em>Analizada la posibilidad de exponer los bienes en desuso o rezago contablemente, corresponde como primera medida conceptualizarlo a nivel de Plan de Cuentas utilizado, por ello un desarrollo posible es el siguiente:</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2) ACTIVO NO CORRIENTE</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4) BIENES DE USO</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9) OTROS BIENES DE USO</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Posteriormente continuar con un mayor grado de identificaci&oacute;n espec&iacute;fica que se desprende del rango anterior</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9.1) Bienes en Desuso</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9.2) Rezagos y Asimilables.</em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol style="list-style-type:upper-roman">
+	<li style="text-align:justify"><em><strong><u>Consideraciones Generales Sobre Bienes de Uso Inventariables:</u></strong></em></li>
+</ol>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>Los elementos a considerar para inventariar un bien de uso son aquellos que permiten determinar las caracter&iacute;sticas esenciales de los mismos. Por lo tanto, el primer elemento a considerar es su naturaleza, es decir, si se trata de un bien de uso o no.</em></p>
+
+<p style="text-align:justify"><em>El segundo elemento importante que debe ser tenido en cuenta es su valor econ&oacute;mico. Este es un par&aacute;metro&nbsp; importante&nbsp; a&nbsp; considerar&nbsp; a&nbsp; fin&nbsp; de&nbsp; no&nbsp; tener&nbsp; inventariados&nbsp; elementos&nbsp; que,&nbsp; por&nbsp; su&nbsp; valor individual, sean&nbsp; insignificantes para poner&nbsp; en&nbsp; movimiento&nbsp; el&nbsp; circuito administrativo de&nbsp; control de inventarios, m&aacute;xime que se piensa en fijar un sistema de valuaci&oacute;n y amortizaci&oacute;n de los mismos.</em></p>
+
+<p style="text-align:justify"><em>El tercer elemento es su duraci&oacute;n, no obstante la existencia de bienes que pueden tener una vida &uacute;til superior a un a&ntilde;o pero que por su composici&oacute;n o por su uso, pueden ser objetos de roturas, desgaste o deterioros prematuros.</em></p>
+
+<p style="text-align:justify"><em>El cuarto elemento es el destino, es decir un bien que por su naturaleza, por su valor econ&oacute;mico y por su duraci&oacute;n es un bien de uso, pero por su destino va a formar parte de un producto objeto de venta (bien de cambio), en cuyo caso deja de ser un bien de uso.</em></p>
+
+<p style="text-align:justify"><em>Como conclusi&oacute;n general, se puede decir que los elementos que configuran el car&aacute;cter de bien de uso de&nbsp; una&nbsp; determinada&nbsp; cosa&nbsp; son:&nbsp; su&nbsp; naturaleza,&nbsp; que&nbsp; define&nbsp; la&nbsp; calidad&nbsp; en&nbsp; primera&nbsp; instancia (condici&oacute;n&nbsp; necesaria&nbsp; pero&nbsp; no&nbsp; suficiente),&nbsp; el&nbsp; valor&nbsp; econ&oacute;mico,&nbsp; su&nbsp; duraci&oacute;n&nbsp; y&nbsp; su&nbsp; destino&nbsp; para determinar finalmente si tiene entidad suficiente para ser considerado como tal.</em></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<ol>
+	<li style="text-align:justify"><em><strong><u>Deben llevar n&uacute;mero de inventario? En caso afirmativo, es el mismo que ten&iacute;a el bien o por el contrario, se deber&aacute; asignar otra numeraci&oacute;n distintiva?</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Se interpreta que si el bien tiene su n&uacute;mero de inventario, el mismo debe mantenerse aunque su caracter&iacute;stica de uso haya cambiado y salga de Inventario Productivo a Inventario Residual con el mismo n&uacute;mero.</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Asimismo en su traslado dentro de la Comuna, debe procederse tal como se conceptualiza la Transferencia interna. Todo esto se encuentra tratado en Sistema de Administraci&oacute;n de Bienes F&iacute;sicos&nbsp; CAPITULO II) MANUAL DE PROCEDIMIENTOS Y NORMAS PARA LA ADMINISTRACION DE BIENES DE USO.</em></p>
+
+<ol>
+	<li style="text-align:justify"><em>CONSIDERACIONES GENERALES</em></li>
+</ol>
+
+<p style="margin-left:42.55pt; text-align:justify"><em>7.2) BAJA PATRIMONIAL</em></p>
+
+<p style="margin-left:42.55pt; text-align:justify"><em>7.2.4.2) BAJA POR TRANSFERENCIA INTERNA</em></p>
+
+<p style="margin-left:42.55pt; text-align:justify"><em>7.2.6) BAJA POR DESTRUCCION DESAPARICION ETC&Eacute;TERA.</em></p>
+
+<p style="margin-left:42.55pt; text-align:justify">&nbsp;</p>
+
+<p style="margin-left:42.55pt; text-align:justify">&nbsp;</p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol>
+	<li style="text-align:justify"><em><strong><u>&iquest;Con que valor se registrar&aacute;n de forma contable y de manera patrimonial?</u></strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>Con sustento en las normas que se interpretan como vigentes, para este punto de la consulta, se estima aplicable lo siguiente: <strong><u>Normas para el Recuento, Valorizaci&oacute;n, Identificaci&oacute;n y &acute;Registro de Bienes Patrimoniales pertenecientes a las Municipalidades de la Provincia de Buenos Aires que suministra el Ministerio de Gobierno. </u></strong>apartado VI. CRITERIO PARA VALUAR BIENES, inciso b) Muebles, sub inciso 5) Cuenta 6.1.0 &ndash; Bienes de Rezago que ser&aacute;n valorizados seg&uacute;n probable valor de venta, pudiendo requerirse a tal fin, tasaci&oacute;n oficial por peritos especializados.</em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol>
+	<li style="text-align:justify"><em><strong>&iquest;Deben incluirse dentro del nomenclador como <u>Bienes de Uso</u>?</strong></em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>Se estima aplicable lo establecido en el <strong><u>Sistema de Administraci&oacute;n de Bienes F&iacute;sicos </u></strong><strong><u>de las Disposiciones de Administraci&oacute;n de los Recursos Financieros y Reales para los Municipios, en el marco del Art&iacute;culo 3 del Decreto 2980/00.</u></strong></em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2) ACTIVO NO CORRIENTE</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4) BIENES DE USO</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9) OTROS BIENES DE USO</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>Posteriormente continuar con un mayor grado de identificaci&oacute;n espec&iacute;fica que se desprende del rango anterior</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9.1) Bienes en Desuso</em></p>
+
+<p style="margin-left:36pt; text-align:justify"><em>1.2.4.9.2) Rezagos y Asimilables.</em></p>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<ol style="list-style-type:lower-alpha">
+	<li style="text-align:justify"><em>Relacionado espec&iacute;ficamente con la Compactaci&oacute;n Vehicular:</em></li>
+</ol>
+
+<p style="margin-left:36pt; text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>Sobre el resto de la consulta, Compactaci&oacute;n Vehicular, se considera prudente recomendar la toma de conocimiento e intervenci&oacute;n de la Oficial Letrada de Nuestra Delegaci&oacute;n toda vez que en esta confluyen temas tanto contables propiamente, como tambi&eacute;n aristas tem&aacute;ticas de &iacute;ndole legal que hacen necesario contar con la pertinente&nbsp; opini&oacute;n letrada y luego con su giro definitivo a la Secretar&iacute;a de Consultas y Dict&aacute;menes.&quot;</em></p>
+
+<p style="text-align:justify"><em>Oficial Letrado:</em></p>
+
+<p style="text-align:justify"><em>&quot;</em><em>Me dirijo a Ud., conforme el pase efectuado por el Relator Cr. Gandini, a fin de remitir para su consideraci&oacute;n y, en su caso, elevaci&oacute;n a la Secretar&iacute;a de Consultas y Dict&aacute;menes, el presente informe elaborado en torno al punto b) de la consulta efectuada por la Subcontadora M&oacute;nica Ponce de la Municipalidad de Municipalidad de Florencio Varela, designada a cargo de la Direcci&oacute;n General de Contadur&iacute;a conforme el Decreto N&ordm; 166/16 (en cumplimiento con la formalidad dispuesta por el art&iacute;culo 21 del Reglamento Interno del Honorable Tribunal de Cuentas, modificado por Resoluci&oacute;n N&deg;450/11).</em></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>I.-CONSULTA:</em></p>
+
+<p style="text-align:justify"><em>A trav&eacute;s de la misma, se solicita la opini&oacute;n de &eacute;ste Honorable Tribunal de Cuentas respecto de diversas inquietudes que giran en torno a:</em></p>
+
+<p style="margin-left:35.4pt; text-align:justify"><em><u>&nbsp;b)Compactaci&oacute;n vehicular:</u></em></p>
+
+<p style="text-align:justify"><em>1) &iquest;Cu&aacute;l ser&iacute;a el mecanismo de contrataci&oacute;n admisible para aquellas empresas metal&uacute;rgicas que compactan y disponen del material de rezago? Adjuntan copia de convenio e informe emitido por la Subsecretar&iacute;a de Seguridad Vial y Movilidad Urbana.</em></p>
+
+<p style="text-align:justify"><em>2) Seg&uacute;n la modalidad de contrataci&oacute;n apropiada, existe por parte de la empresa contratada el reintegro de una suma dineraria y por peso (seg&uacute;n los aranceles de mercado es un monto determinado por tonelada compactada), dicha adici&oacute;n podr&iacute;a ser destinada a ser reinvertida en el sistema?</em></p>
+
+<p style="text-align:justify"><em>3) Teniendo en cuenta que el proceso de destrucci&oacute;n ser&aacute; aplicado para los rodados municipales en condiciones irreparables, la consulta versa con relaci&oacute;n a la operatoria descripta precedentemente y si la misma ser&iacute;a motivo de observaciones por parte de &eacute;ste H.T.C.</em></p>
+
+<p style="text-align:justify"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em></p>
+
+<p style="text-align:justify"><em>II.-ANTECEDENTES:</em></p>
+
+<p style="text-align:justify"><em>En la mentada consulta se acompa&ntilde;a expediente nro. 4037-2896-S-16.</em></p>
+
+<p style="text-align:justify"><em>A fs. 1 se requiere la baja registral y patrimonial de dos dominios (veh&iacute;culo oficial y ambulancia de traslado). En ambos casos la solicitud se sustenta en que el estado de los mismos es obsoleto y su reparaci&oacute;n tiene altos costos.</em></p>
+
+<p style="text-align:justify"><em>A fs. 2 obra copia de t&iacute;tulo del dominio AVW736, cuya titularidad se encuentra en cabeza de la Municipalidad de Florencio Varela. No se encuentra adunado t&iacute;tulo de propiedad del dominio DJR696. &nbsp;</em></p>
+
+<p style="text-align:justify"><em>A fs. 34 y 35 se encuentran agregados los formularios 04 de solicitud de baja de los automotores, sin que en dichos formularios conste la leyenda &ldquo;BAJA DEL AUTOMOTOR&rdquo; que se estampa al culminar con el procedimiento de solicitud de baja, conforme las normas dictadas por la DNRPA, T&iacute;tulo II, Cap. III, Secci&oacute;n 5&ordm;, art. 5 inc. f) que reza: &ldquo;En el caso de baja del automotor por las causales contempladas en el arti?culo 1o, inciso a), entregar al peticionario el triplicado de la Solicitud Tipo haciendo constar en el rubro &ldquo;Observaciones&rdquo; la siguiente leyenda: &ldquo;BAJA DEL AUTOMOTOR&rdquo;.</em></p>
+
+<p style="text-align:justify"><em>Asimismo, se acompa&ntilde;a expediente nro. 4037-4689-S-16.</em></p>
+
+<p style="text-align:justify"><em>A fs. 1, se detalla la documentaci&oacute;n incorporada en dicho expediente, relativa al tratamiento del problema que genera para la Comuna la acumulaci&oacute;n de veh&iacute;culos en dep&oacute;sitos municipales y el procedimiento que ser&iacute;a viable para su compactaci&oacute;n.</em></p>
+
+<p style="text-align:justify"><em>A fs. 4 y ss. se elabora un resumen de la normativa que atiende a la cuesti&oacute;n planteada. Se se&ntilde;ala a la Ley Nacional N&ordm; 26.348, Decreto N&ordm; 993/08 y Resoluciones del Ministerio de Justicia N&ordm; 442/09 (crea el PRO.NA.COM) y 2143/09. All&iacute;, se indica que para aclarar la aplicabilidad al distrito de dicha normativa, el &aacute;rea operativa del programa mencionado les envi&oacute; documental que les ser&iacute;a de utilidad para poder implementar el sistema, inici&aacute;ndolo con el dictado, por parte del Municipio, de una Ordenanza de adhesi&oacute;n. Dicha Ordenanza ha sido sancionada bajo el n&uacute;mero 8682/15.</em></p>
+
+<p style="text-align:justify"><em>Por otra parte, se hace menci&oacute;n de la Ley Provincial N&ordm; 14.547, Decreto Municipal por medio del cual el Intendente delega las funciones encomendadas por la ley mencionada a la Subsecretar&iacute;a de Seguridad Vial y Movilidad Urbana y el protocolo de actuaci&oacute;n formulado por esa Subsecretar&iacute;a para aplicar dicha ley.</em></p>
+
+<p style="text-align:justify"><em>Asimismo, informa que se encuentra en proceso la celebraci&oacute;n de un convenio con la UNAJ para la realizaci&oacute;n de los informes t&eacute;cnicos que requieren los materiales a compactar, para evaluar su aptitud para rodar y su posible afectaci&oacute;n al medio ambiente as&iacute; como un sistema inform&aacute;tico que resguarde la informaci&oacute;n obtenida, automatice la gesti&oacute;n del sistema y permita el acceso de los usuarios a la informaci&oacute;n sobre los veh&iacute;culos.</em></p>
+
+<p style="text-align:justify"><em>Se indica que para proceder a la compactaci&oacute;n se seleccionar&aacute;n autopartes, piezas, rezagos, cascos o restos de veh&iacute;culos que se consideren chatarra, o veh&iacute;culos que por su estado no se consideren aptos para rodar, o a&uacute;n siendo aptos para rodar impliquen un peligro real e inminente para la salud o el medio ambiente.</em></p>
+
+<p style="text-align:justify"><em>Una vez seleccionado el material a afectar, en caso de que los veh&iacute;culos posean propietarios identificables se torna imprescindible, tanto para la Ley provincial N&ordm; 14.547 como para la Resoluci&oacute;n Nacional N&ordm; 442/09 y N&ordm; 2143/09, intimar a qui&eacute;n figure como titular registral del veh&iacute;culo o a terceros interesados, a fin de que se presenten a ejercer sus derechos.</em></p>
+
+<p style="text-align:justify"><em>Se&ntilde;ala que la diferencia esencial entre ambos sistemas normativos (nacional y provincial) radica en la intervenci&oacute;n de Entidades de Bien P&uacute;blico en el proceso de compactaci&oacute;n, tanto para su gesti&oacute;n como para la obtenci&oacute;n de beneficios, lo que se encuentra previsto, esto &uacute;ltimo, en el Convenio Tipo de entrega de bienes entregado por las autoridades del PRO.NA.COM. Aduce que si bien resulta loable el destinar los ingresos de la compactaci&oacute;n a ese tipo de entidades, se critica la circunstancia de poner bajo la responsabilidad de esas entidades, si bien compartida con las municipales, la de gestionar los servicios de compactaci&oacute;n, teniendo en cuenta la falta de conocimientos especiales en la materia, as&iacute; como el hecho de tener que correr con los gastos en que se incurra en las primeras etapas.</em></p>
+
+<p style="text-align:justify"><em>Sostiene que la Ley Provincial N&ordm; 14.547 soluciona en mejor medida el proceso de compactaci&oacute;n, toda vez que garantiza el derecho de defensa de los titulares de los bienes y el cumplimiento de pautas ambientales en las tareas, delegando el funcionamiento del sistema en los Departamentos Ejecutivos municipales.</em></p>
+
+<p style="text-align:justify"><em>Paso seguido realiza una descripci&oacute;n del procedimiento que deber&iacute;a llevarse a cabo conforme la ley mencionada.</em></p>
+
+<p style="text-align:justify"><em>En cuanto a las modalidades de contrataci&oacute;n entiende que deber&iacute;a seguirse los est&aacute;ndares ya fijados por la Oficina de Compras municipal, en los t&eacute;rminos del art. 31 y ss del Reglamento de Contabilidad, as&iacute; como tambi&eacute;n las recomendaciones que resulten aplicables al caso municipal y que fueran expuestas en el Decreto Provincial 80/07 por el cual se aprob&oacute; el &ldquo;Pliego Tipo de Condiciones Particulares para la Contrataci&oacute;n del Servicio de Descontaminaci&oacute;n, Desguace, Clasificaci&oacute;n, Compactaci&oacute;n, Destrucci&oacute;n y Disposici&oacute;n Final de Veh&iacute;culos y/o Autopartes de la Provincia de Buenos Aires&rdquo; as&iacute; como las &ldquo;Especificaciones T&eacute;cnicas B&aacute;sicas para la Contrataci&oacute;n del Servicio de Descontaminaci&oacute;n, Desguace, Clasificaci&oacute;n, Compactaci&oacute;n, Destrucci&oacute;n y Disposici&oacute;n Final de veh&iacute;culos y/o Autopartes de la Provincia de Buenos Aires&rdquo;.</em></p>
+
+<p style="text-align:justify"><em>En cuanto a las modalidades de contrataci&oacute;n entiende que depender&aacute;n de los valores que insuma la tarea, en los t&eacute;rminos del art. 151 de la LOM y la resoluci&oacute;n que actualiza los montos respectivos.</em></p>
+
+<p style="text-align:justify"><em>Por &uacute;ltimo, hace alusi&oacute;n a que la compactaci&oacute;n s&oacute;lo podr&aacute; estar a cargo de aquel que se encuentre inscripto en el Registro &Uacute;nico de Prestadores de Servicios de Compactaci&oacute;n de la Provincia, conf. Decretos N&ordm; 1980/06 y 80/07 y cumpla con lo normado en el art. 16 de la Ley 14.547.</em></p>
+
+<p style="text-align:justify"><em>Concluye en solicitar la opini&oacute;n de este &Oacute;rgano de control respecto de la propuesta que acompa&ntilde;an como anexo III, el Dictamen de Secretar&iacute;a Legal, la nueva formulaci&oacute;n de la propuesta y como Anexo IV la opini&oacute;n de la Subsecretar&iacute;a respecto del convenio reformulado.</em></p>
+
+<p style="text-align:justify"><em>A fs. 12/45 obra copia de la normativa apuntada supra, a fs. 46/62 obra protocolo de la Ley 14.547 y en las fojas restantes lo mencionado en el p&aacute;rrafo precedente.</em></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>III.-RESPUESTAS:</em></p>
+
+<p style="margin-left:35.4pt; text-align:justify"><em><u>Compactaci&oacute;n vehicular:</u></em></p>
+
+<p style="text-align:justify"><em>En punto a este tema, cabe aclarar que corresponde distinguir si se trata de veh&iacute;culos que se encuentran en dep&oacute;sitos municipales a causa de infracciones de tr&aacute;nsito o faltas o debido a su retiro de lugares de dominio p&uacute;blico, de aquellos veh&iacute;culos de propiedad del Municipio adquiridos para uso oficial.</em></p>
+
+<p style="text-align:justify"><em>En el primer caso, se deber&aacute; aplicar la Ley 14.547, toda vez que se trata de una materia de competencia local que no ha sido delegada expresamente en las autoridades nacionales, conforme los par&aacute;metros dados por nuestra Constituci&oacute;n Nacional.</em></p>
+
+<p style="text-align:justify"><em>Dicha norma provincial regula en su art&iacute;culo 1&ordm; el &aacute;mbito de aplicaci&oacute;n, refiri&eacute;ndose a los casos mencionados al comienzo, se&ntilde;alando como autoridad de aplicaci&oacute;n a cada Departamento Ejecutivo municipal (art 2&ordm;), normando lo relativo a la compactaci&oacute;n en los arts. 15 y 16 y lo atinente a la registraci&oacute;n, aptitud para rodar y valuaci&oacute;n en los arts. 18 a 20. Disponiendo en el art. 20, que la Autoridad de aplicaci&oacute;n deber&aacute; informar al Registro Nacional de la Propiedad Automotor en todos los casos que se aplique alguno de los procesos y procedimientos dispuestos por la norma.</em></p>
+
+<p style="text-align:justify"><em>En punto a ello, se aconseja la elaboraci&oacute;n de la reglamentaci&oacute;n pertinente, dictada por la Autoridad de Aplicaci&oacute;n, que conforme los par&aacute;metros dados por la norma enunciada precedentemente regule todo el procedimiento con las diversas variantes que puedan presentarse.</em></p>
+
+<p style="text-align:justify"><em>Cabe tener en cuenta, al momento de la elaboraci&oacute;n del procedimiento antes referido que no corresponder&iacute;a el procedimiento propuesto en el punto 12 de&nbsp; fs. 10 del expediente 4037-4689-S-16, toda vez que la ley 14.547 expresamente excluye de su aplicaci&oacute;n a los veh&iacute;culos involucrados en casusa penales o cuyo motor o chasis se encuentren adulterados. En dichos casos, se deber&aacute; dar aviso a la autoridad provincial competente a fin de que d&eacute; cumplimiento al procedimiento reglado por el art. 32 de la Ley 13.434.</em></p>
+
+<p style="text-align:justify"><em>En cuanto a los veh&iacute;culos de propiedad del Municipio adquiridos para uso oficial se dar&aacute; tratamiento en el punto 3) del presente.</em></p>
+
+<p style="text-align:justify"><em>Respecto de los interrogantes planteados en la consulta, a saber: &nbsp;</em></p>
+
+<ol>
+	<li style="text-align:justify"><em>&iquest;Cu&aacute;l ser&iacute;a el mecanismo de contrataci&oacute;n admisible para aquellas empresas metal&uacute;rgicas que compactan y disponen del material de rezago? Adjuntan copia de convenio e informe emitido por la Subsecretar&iacute;a de Seguridad Vial y Movilidad Urbana.</em></li>
+</ol>
+
+<p style="text-align:justify"><em>El procedimiento de contrataci&oacute;n debe llevarse a cabo de acuerdo al art. 151 y ss. y concordantes del Decreto-Ley 6769/58, art. 156 y ss. del Reglamento de Contabilidad y Disposiciones de Administraci&oacute;n para las Municipalidades de la Provincia de Buenos Aires art. 97 y ss. de las Disposiciones de Administraci&oacute;n de los Recursos Financieros y Reales para los Municipios, aprobadas por Decreto 2980/00.</em></p>
+
+<p style="text-align:justify"><em>Es decir, que conforme el monto de la contrataci&oacute;n deber&aacute;n efectuarse los distintos procedimientos que se encuentran regulados en el articulado mencionado.</em></p>
+
+<p style="text-align:justify"><em>Al respecto, se aconseja llevar adelante la contrataci&oacute;n mediante licitaci&oacute;n p&uacute;blica por ser el procedimiento que mayor garantiza la igualdad, concurrencia y publicidad.</em></p>
+
+<p style="text-align:justify"><em>Para la elaboraci&oacute;n de las normas que rijan dicho procedimiento podr&aacute; tomarse como antecedente, con las adaptaciones correspondientes al &aacute;mbito local, el Decreto Provincial N&ordm;80/07 que aprueba el &ldquo;Pliego Tipo de Condiciones Particulares para la Contrataci&oacute;n del Servicio de Descontaminaci&oacute;n, Desguace, Clasificaci&oacute;n, Compactaci&oacute;n, Destrucci&oacute;n y Disposici&oacute;n Final de Veh&iacute;culos y/o Autopartes de la Provincia de Buenos Aires&rdquo; y las &ldquo;Especificaciones T&eacute;cnicas B&aacute;sicas para la Contrataci&oacute;n del Servicio de Descontaminaci&oacute;n, Desguace, Clasificaci&oacute;n, Compactaci&oacute;n, Destrucci&oacute;n y Disposici&oacute;n Final de Veh&iacute;culos y/o Autopartes de la Provincia de Buenos Aires&rdquo;.</em></p>
+
+<p style="text-align:justify"><em>Cabe destacar que el art. 7 de dicha norma prev&eacute; la elaboraci&oacute;n de un informe o programa en donde se exprese la cantidad de veh&iacute;culos, chatarras, etc., almacenada en los dep&oacute;sitos y su valor aproximado en toneladas. Dicho documento, que debiera efectuarse en forma previa al procedimiento de compactaci&oacute;n, permitir&aacute; contar con la informaci&oacute;n necesaria a fin de adoptar el procedimiento m&aacute;s eficiente.</em></p>
+
+<p style="text-align:justify"><em>En cuanto al modelo de convenio adjuntado a fs. 70/72 del expediente 4037-4689-S-16, en primer lugar se destaca que el mismo debe ser celebrado una vez que se adopte el procedimiento de selecci&oacute;n del co-contratista que estipulan las normas rese&ntilde;adas al comienzo.</em></p>
+
+<p style="text-align:justify"><em>De all&iacute; que, en consonancia con lo expuesto a fs. 75 del expediente mencionado precedentemente, se sugiere, en forma previa a llevar a cabo el procedimiento que marca la Ley 14.547, recabar informaci&oacute;n a las empresas -inscriptas en el Registro que regula el art. 16 de dicha normativa- relativa a la operatoria en el mercado, a fin de poder determinar con mayor precisi&oacute;n los elementos contractuales en cuanto al objeto, monto, plazo, as&iacute; como tambi&eacute;n cualquier otra estipulaci&oacute;n que pueda derivarse de un conocimiento m&aacute;s acabado de dicho proceso.</em></p>
+
+<p style="text-align:justify"><em>Cabe aclarar, que atento no resultar aplicable la Ley N&deg; 26.348 y, por lo tanto, la Ordenanza de adhesi&oacute;n, en caso de optar por donar a entidades de Bien P&uacute;blico el producido que pudiera existir al finalizar el proceso de compactaci&oacute;n, se deber&aacute; dar cumplimiento con el art. 56 del Decreto-Ley 6769/58.</em></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+<p style="text-align:justify"><em>2) Seg&uacute;n la modalidad de contrataci&oacute;n apropiada, existe por parte de la empresa contratada el reintegro de una suma dineraria y por peso (seg&uacute;n los aranceles de mercado es un monto determinado por tonelada compactada), dicha adici&oacute;n &iquest;podr&iacute;a ser destinada a ser reinvertida en el sistema?</em></p>
+
+<p style="text-align:justify"><em>En caso de que ello ocurra, el art. 3 de la Ley 14.547 establece que constituyen recursos espec&iacute;ficos de la Autoridad de Aplicaci&oacute;n, afectados al presupuesto de gastos e inversiones los veh&iacute;culos secuestrados que no hubieren sido reclamados por su titular dentro de los plazos previstos en el art. 4.</em></p>
+
+<p style="text-align:justify"><em>Por lo tanto, no existir&iacute;a &oacute;bice legal para que, en caso de existir un reintegro de suma dineraria, la Autoridad de Aplicaci&oacute;n pueda disponer de la misma a fin de reinvertirla en el mentado proceso, conforme se estipule en la ordenanza presupuestaria municipal.</em></p>
+
+<p style="text-align:justify"><em>3) Teniendo en cuenta que el proceso de destrucci&oacute;n ser&aacute; aplicado para los rodados municipales en condiciones irreparables, la consulta versa con relaci&oacute;n a la operatoria descripta precedentemente y si la misma ser&iacute;a motivo de observaciones por parte de &eacute;ste H.T.C.</em></p>
+
+<p style="text-align:justify"><em>Para el caso de estos bienes, atento la ausencia de tratamiento expreso en el Decreto-Ley N&ordm;6769/58, dicha cuesti&oacute;n podr&iacute;a ser regulado por un Decreto emanado del Departamento Ejecutivo, toda vez que se trata de una competencia impl&iacute;cita que se desprende del art. 107 del mencionado cuerpo normativo.</em></p>
+
+<p style="text-align:justify"><em>En ese entendimiento, nada obsta que la normativa que se aconseja dictar para regular el procedimiento de compactaci&oacute;n en los supuestos previstos por la Ley 14.547, contenga un apartado dedicado a dicha cuesti&oacute;n.</em></p>
+
+<p style="text-align:justify"><em>Sin perjuicio de ello, cabe hacer menci&oacute;n que el art. 15 del Decreto Provincial N&ordm; 1980/06 (reglamentario del Dec-Ley 7543/69, Org&aacute;nica de fiscal&iacute;a de Estado) que regula lo relativo a los dep&oacute;sitos fiscales, veh&iacute;culos, automotores, chatarra, subasta, compactaci&oacute;n, invita a los Poderes Legislativo y Judicial y a los Municipios de la Provincia de Buenos Aires, a adherir a las disposiciones de dicho r&eacute;gimen. Con lo cual, tambi&eacute;n se podr&iacute;a celebrar un convenio con las autoridades provinciales competentes a fin de aplicar en el Municipio el procedimiento implementado por dicha normativa.&quot;</em></p>
+</div>&nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;BIENES [SU BAJA]<br>
+     &nbsp;
+  </td>
+</tr> </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

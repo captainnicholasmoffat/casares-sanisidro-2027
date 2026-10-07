@@ -1,0 +1,460 @@
+<div wire:id="1Z2A0i786rmd5MM0vFym" class="space-y-5 p-4">
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm px-5 py-4">
+        <div class="flex flex-wrap gap-3">
+            <div class="flex-1 min-w-48">
+                <input
+                    type="text"
+                    wire:model.live.debounce.300ms="buscar"
+                    placeholder="Buscar por número, referencia, descripción..."
+                    class="w-full text-sm border border-gray-300 rounded-xl px-4 py-2
+                           focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+                />
+            </div>
+            <select
+                wire:model.live="filtroTipo"
+                class="text-sm border border-gray-300 rounded-xl px-3 py-2
+                       focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+            >
+                <option value="">Todos los tipos</option>
+                <!--[if BLOCK]><![endif]-->                    <option value="Decreto">Decreto</option>
+                                    <option value="Resolución de firma conjunta">Resolución de firma conjunta</option>
+                                    <option value="Resolución simple">Resolución simple</option>
+                                    <option value="Ordenanza">Ordenanza</option>
+                                    <option value="Disposición">Disposición</option>
+                                    <option value="Edicto">Edicto</option>
+                <!--[if ENDBLOCK]><![endif]-->            </select>
+        </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="border-b border-gray-100 bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-500 text-left">
+                    <th class="px-5 py-3">Boletín</th>
+                    <th class="px-5 py-3">Tipo / Nro</th>
+                    <th class="px-5 py-3">Referencia</th>
+                    <th class="px-5 py-3">Fecha firma</th>
+                    <th class="px-5 py-3">Tags</th>
+                    <th class="px-5 py-3 text-right">PDF</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-50">
+                <!--[if BLOCK]><![endif]-->                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1232
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">23/07/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2026-638-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N° EX-2026-00179411-SI-DDS - Asignación de funciones de Jefe de Departamento en el Depósito Central de la Dirección General de Compras al Sr. Mariano Javier Alegre (Legajo Nº 60.550).-</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            11/06/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Asignación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Funciones
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/boletin/pdf/eyJpdiI6IkswcEVyN2VKWlNUdmIvYXpTNk9ZVnc9PSIsInZhbHVlIjoibjE3QU1QbTVSOGhwVGptK2ZUbzNwcGxNZzhpU0JlK09VeDJmWXBxTkg1WkdhbnQ4MnF3MUNCVC83NGNTNjNOaSIsIm1hYyI6ImJiYjY1MjI1NGI3ZTZjZDM2MTliNjVlOWM3YmYzNjhkMDFkYzQ5ODFhZTA2MjhlZmZkZjE4ZTE3MTAyOWM3N2EiLCJ0YWciOiIifQ==" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1221
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">26/02/2026</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2026-15-SI-SECPDU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N°3814/2025 - Resolución de Autorización de la ampliación, demoliciones parciales y modificaciones internas con cambio de destino a “Depósito”, en el inmueble sito en la calle Teniente General Eduardo Lonardi N° 1157, localidad de Beccar </p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            13/01/2026
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Autorización 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Cambio de Destino
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1771514157.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1202
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">12/09/2025</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2025-720-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2025-00139570-SI-DDS - Designar Deposito de Farmacia</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            26/08/2025
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Planta Temporaria 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal Mensualizado 
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1757084298.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1196
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">26/08/2025</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2025-912-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N° 2261/2025 - Consulta de factibilidad: autorizar a GRUPO MASSA S.A., C.U.I.T. N° 30-69729342-2, a realizar un proyecto con destino “Depósito y Oficinas”.-</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            11/08/2025
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Factibilidad 
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1755620068.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1195
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">11/08/2025</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2025-469-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2025-00105414-SI-DDS - Designar Deposito de Farmacia Legajo Nº 65491-75939</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            30/07/2025
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Planta Temporaria 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal Mensualizado
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1754072942.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1158
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">29/10/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full">Ordenanza Municipal</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. INLEG-2024-00024785-SI-DELE</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expte. Nº 3125-2024 (C 0 y 2) - Ordenanza Nº 9360 - DECLARACIONES - Emergencia Depósito Municipal de Vehículos .- </p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            22/10/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Ordenanza 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Emergencia Depósito Municipal de Vehículos
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1729768394.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1158
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">29/10/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2024-1453-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente Nº 3125-2024 (Cuerpos 0 y 2) - Promulgar y hacer cumplir la Ordenanza Municipal Nº 9360 (Emergencia del Depósito Municipal).</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            21/10/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Promulgación 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Ordenanza 
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1729609295.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1157
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">21/10/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2024-1363-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N° 5750-2024 - Factibilidad - ZEDIL S.A. - &quot;Depósito y Viviendas Unifamiliares Agrupadas&quot; - Pampa s/n y Luis De Flores s/n (Beccar). </p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            07/10/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Autorización
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Construcción
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1728928932.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1156
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">01/10/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2024-1317-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente Nº 10539-2024 - Asignar a la Sra. Elsa Carolina Vera (Legajo Nº 60.708), funciones de Coordinadora General del Depósito Central de Farmacia, dependiente de la Secretaría de Salud Pública</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            27/09/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Asignación
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Funciones
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1727720311.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1149
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">02/07/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-amber-50 text-amber-700 px-2 py-0.5 rounded-full">Resolución firma conjunta</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. RESFC-2024-357-SI-SSSALU</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">EX-2024-7799-SI-DGRRHH - Designar Deposito de Farmacia - Legajo Nº 75085 y otros</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            24/06/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Designación Planta Temporaria
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Personal Mensualizado
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1719583783.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1147
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">03/06/2024</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2024-628-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente Nº 5166-2024 - Limitar las funciones de Coordinadora General del Hospital Odontológico a la agente Marcela Minisini (Legajo N° 64.576) y trasladarla al Depósito Central de Farmacia con funciones administrativas.</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            31/05/2024
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Traslado Personal
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1717445215.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->            </tbody>
+        </table>
+
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+</div>

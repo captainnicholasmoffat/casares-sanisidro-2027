@@ -1,0 +1,1838 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="es" class="lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="es" class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html lang="es" class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="es">
+<!--<![endif]-->
+<head><link rel="stylesheet" type="text/css" href="/DXR.axd?r=1_68" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	BAC - Sistema de compras públicas
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="/App_Themes/styles-viejo/javascript/Trazabilidad.js"></script>
+    
+    <script src="/App_Themes/bastrap/scripts/jquery.min.js"></script>
+    <script src="JavaScript/Generica.js" type="text/javascript"></script>
+    <script src="JavaScript/VistaPreviaPliegoCiudadano.js" type="text/javascript"></script>
+<link href="../App_Themes/bastrap/bootstrap.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/bootstrap-datepicker.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/bootstrap-icons.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/bootstrap-multiselect.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/css/typeahead.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/scripts/dataEntry/jquery.timeentry.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/styles.min.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/bastrap/styles-seac.min.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <!--[if lt IE 9]>
+        <script src="/App_Themes/bastrap/scripts/html5shiv.min.js"></script>
+        <script src="/App_Themes/bastrap/scripts/respond.min.js"></script>
+    <![endif]-->
+    
+
+<header class="navbar-primary navbar-top">
+    <div class="container">
+        <div class="row">
+            <a href="/Default.aspx" id="ctl00_CtrlHeader_linkLogoBAC" onclick="" class="navbar-brand logoBac"></a>
+            <a href="http://www.buenosaires.gov.ar/" id="ctl00_CtrlHeader_linkLogo" class="navbar-brand bac-header sub-brand" target="_blank" style="float: right;">Buenos Aires Ciudad</a>
+        </div>
+    </div>
+</header>
+
+    <form name="aspnetForm" method="post" action="./VistaPreviaPliegoCiudadano.aspx?qs=BQoBkoMoEhy71GZOFmp4PQe0giRLuqYCNDtYt4UKTyWFWOmtopeDjFL%2fub4bHkdn" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="yzVtIStsra0dm0Au5hcCRXOCgUtxGf1xHx9WuTmdRoMmQEG5EgczyeGuJkF/OL3r1JAIS6yxTXvHiFbYy89ppjHcH8divm3aG0T3ATvdIcJjhVas0gqCC1pQfk/FLoEpMy+lYDO01yN+MT07XmziApSm2mDulLX3OIn8ndngSXNy8QKBGDp5hm6r+feJd6qWsPiRxxJLpC7tmku4UaP75sh76QcRK9eUI3Un8OWmoAH5G2BRbyjNFoKZ9zXv7lFHxhQQWI5sXtiXl1NWxH23EtJCcN4Eo5s10YF0vNnHNbP+hDm8LbIaLw2+7qCAxxEhffvtwith/bpmbFGzTHrk9mnpUNQUMmijmXKouNj/lc56tWuwH5gOHIO1XSXEo3gRJXQi9/FcAx0c/wXIHqEno1yY6J2NUDokePKFheJ7k/1T1+7uZ562jkesWVu1rAq1lremQf3TenpiL+PuAoEKGjothslqUhyR2DZvijRaZCHOc8jC/RKRaYcze2xMjUFA9coLSGHcDo3HN7bURdpQnKuW2RRbdjjYAZV4jlcawn0CDys6E1TLcIgZPTMz8FuWmBatGDA0bcZKDdLFrfmlylxU4KZXIy5ZUp6NqtPNBrWUuCVLI7PLGsveqD1KMf+UWoQzqoVoeVLEVtKF/9ktlfJKg82MqgA20cPm8YsqorixHGPvnjG8laIg++5ymif8UE2pw8sNQtGfgF/LrBP/vm0xEWhFsj80+V9qenik67bJ9iZ4iWaPQpoK5VEopZyuEEgTcNAcrMBaM+y9dCrTLzpWmLuQrOipW+6AhkDi/iBmxZsoM4soK/tRntkpoaFiU6or2UM5DK3mYg1oMnnzUsQqijkrKpecvSGsn/B/+azJVpjFjAsB6fUEmzqyGzNWm3rdf2byK/bGrZ/Ig3g8UaFGOSa/RbG8YK33YfI9xPwEDnkTBV1rh6RydeSbogiaQiN/xik/Dk+sXnHwz3f0Au6PDYzBu2k65aaejvPdDhh8Ud55JcFTdbAN0xtYDUA4z6pwS3g6p5efph2IRrsgyMuzD8w1HAXpcWNdQzIxDS3HGhzERRV4Bzwo+rylt7aUG78a1FMdRLWHiH/bZaihwIYNy6QaMuc5i08XDMN1m8uw8VHPhjy0MDggGXsVr2vGtQ413CYcT94HSjUaz/HX0v9oNgew7StAmgF4mqnBbmXk8GbVHeyqsEdYizjk2G+JQcKEaCbjxd/CfX7BsfNPJSKXDsu6SzC5eb4PLMnAwpN/1DK6QdEoMJVjLCUdwji9wOOOB3BcA6JGqz2ZQmrgcvimDvvVXlZegTRp3rjVC14hOH1WFTLfSwr40mYa8IhCf4jfDeBc2tIupX8XJVYAKndA2cxHkEQuagCMs1z+JbxfJ6NW9ODUYwsVcg+btYLGeqC764c604I2oEw6Rv0DSEVTEi61pMwzv/Ed16egkQ8c0DtaV/kkbl1ZUfFVomave9mRjTgM133AJUIWVhk3ei8qxG//AV9zJ2Oj+4cl3IsazDy5S5mdCq6ah1kXSlMIncRRt+sHFPjJHvwe+imYiMynZollT3nEgbxqwKJIenQ71U6U5Xizvkh1tlfVmQGJRWD7p/wvzTHW1Q/Goi6feU8eYslw9GvQFOmHijX40WRs+hlw7g79eaRHAi2u82Sda736ZgV7Ko1bOlalNiZdsUAoITr6+SfV4s2lmr8QLIMX5npG5QvwEHVyYN7+u4vRtoxUjfxlQX6Ftc4CNhU8DU3xnKLSvylXm5wfz2JAIXruIOnGiZ5vMfreV+0EzpzusLn4JI2m+ZlR8712/iERo1lLhgam+AZkuD+/rQH8pxhW+VDMuetAIrA2zxMtWxlsg9eXsSYO3vQ8MV3b6VvReOGwaMfuw8A5o0kTx7lXPTwK802CyLfV4SQtW7PDvdu1O/VAcoND4+xEWH3ROP6Yirlfp8om9BDTfCQWWIkIR+NWLUZgg6Mq0OGaI4Hxidhyd5FSWT7XNCgVxAku3msuoNOglHTHr1DXj7o6iptU1M6ITsSIRmb/VoKbkQEhgUBEOkP79Zn5ZhmoobSpuhe3BMx7lmwIJN+xBnyoJ2QVCanf+FshGBLXIos0VJy0u9IgKSZIdAUIgyTR5sjKQu0ZBJ7or0o9o0VYJrjgwe6oJTyfO1wO/V8uXQtgN3+KJtil9Cv50SFQtb79uCMpsqmHVtZrH5djYrbRhsiA8w787msbDcuXRCZy+GJVewa61aTJfJI+UeMstqzoxvpCzBLM+WO62UixPMxDnu5eatsKSTU8zFkjjG2thoZiU/nkT8pwII/6blcJOloU3R/dJbCFFnvt8M78L+g5yGwRVR07DGHzRoljJr6MgCKmtadNJRMjCCyuP6qLzJmhFGkQAZL/NcPQaHrrZyTFtbAhco+e3Fb0JBVV/mrCXdSgGz/L84j6UtuLd8jwmGxTiiowGpvnF7Ug7LGkejB8GM8wNIdpyMsfYwK/1GAu5r9yc0c+VKNplabwgXqv6iSH+lxIEzMa/RI19VjlfsibMHm1f82zHe5d0EbhYg8QUmPS+EhzdjxbtvgPDi8GHf7cKYDtHvT01etW75ExmNvp72Yl52cKn+vZghTC5KOjRuUG2PywCVc36/fmVBgNuGLe6Utdm8bplH69S6N6WzfOTgMwcY7J/2DhjLgBSdUaGl0/QQuFFRGBO3RXB4WVEiuOWcuYoE436AWc1HugwjScrmuL1I37/dDoAAVWH9cJecUPvMlo7ynh2BVjHhEPhdxvM4/nVB2NbaYNAk3cqIsQ3xfSixpag/8R0XcAXWwArU1fNdr2RuI81lUn1hv+S06S5unevOS36tvmmAr3FmIlKeqS2+/Ew1i+ivZsyKHk2+fL4zLpOF6GJBEHNqjxTof9jhErvgwZhaDSBI9pwwhAgTtwqeWbUwqTDv2vFWzV93VqchWw1Ux7Ttwk0cHVaxTW4uvLDU5kTrDJ6Rkib8mP00606WTmN5mBX0KAh7b4bbvTdoh7/YE9jMiuWAeTnWkJSUAWb5AVIvkwOLHpFoePgmp7Cl/iCItD2WKUj0so3o2WgtUm5UkTve8P3ZWVjFSHsAV2RU5OucN304IrnGjwh5ld5a6ja51j/Vp/Xh1ui4r58Xd1rsp9oj57f5yPQ1iga9i+Rv3bgugNI5r1fyGQs6OhU4KHeZPBADzcSszFqY5AleRWi4RnO4XEL8mYndWJasgmY93TA62K4LaWEblnWxub16bdlSbIN7ImDJhWhufPwTEA0FGHOoMnGLdXqRxtTtPj4h09wOqM65VcZf3WNZoAxUh+MXpgICUxCQKGCw7lc2ih7Z8R1dEa8yRtwjWMZHWcUR2yAyCsO6yaaxaun4RnM1rmFacN0Cf2WiuZRdvbIU7/qarRBetDclWxsQeofoTnNrQaW++jLnhaWiRtWpLbnOQHV6d9fKogO3SBZ5x009bN7BnNBzTx4FGV0lX4YAMdZ2N6vKjopiUQLW2RXfNkC+p28NuJZ3Vp1iajuFMLa77Cwz73kiAIHPysCcJZOPnGIBBtrd1eSMYRiJorrdWmL2byQO0SfKNh8MLMN5am/i+VGt/A8xxlomB01vhviDQVrNrCHBvAAGwNjsTFtXI4dnOI4G0Oi+PFbVxo4eV9GxA+6iEJf7tWbXnkbQW2RBvwK7FwX21NiCc5ZGgmxznKJ0tqXTCWTH/Zz1Y9l7Qbu0OfRczX+HgUn8XXZEGnpZ2N+Uixmb/CX6M9y4AkeY0uoftmjCPQXxUyQi3yDEvipSj54VBoqzgGIdU38O7nGlLSipiFOEQW3eFvp1PO4UsKY0bDEQh22G4kzPTx5H9hhOMy9zh4ARbuYP2BJStZj0WvMQ1plFvrj9v0RayAqzy5MxcDdgF+Ju1zhrlqmr4nXpnPGVcu2xXM6oT+EW7VUnyCVET2IfNiRiKLf0+J/rt1BS1OJGgvGyY2rDmIlMcmQWHhf98KiQUOuY4BhNBLQTqZcu3aK3PwRPiqvyqB5BxP84EJoZyd7iaUzXoF3BRGbBd3pOW0qaWFJo83gJm7dTQB0R+T6PrsXvZVEHG/gKjjXpFkgDSy1psq5gdYPNWxdxLw/96hQ6wMPcg6vVvAt4j6pcMhVAOqTbeke+4OkVCo8eiVsQv3R+X186eLOQbC2lb2KM0lkc3ezKGM6wAGIoRtbuEex32RU4ZY1+OTRMHnKSn8PT+/6xj6Qxdfsepok6+DNgcxC+mC27E/4WcCNoh0f/B02wiH96JhDnAtY1m9REt+P4U4NI+oA1d3ZYXj3VZlm9BtYTwqYfs/qqKOPyUMSuvA3Uotpd/uMofBY0fGeuBRBycmac3TDEjU96BIjgUQNxu+PNYSuH3z2Rkd+scm2fQFjmHwuSPH8SfuYwsvx0rBHAqRVtgUl5gH7PKbkJVsoU+DTGw7kmrchOsE2xxFgIs3hn5gqkocLInVw9+WaOYjlhWRL6OkzZgEzMrPuqV7Cp+ulgZ+8Uit6Ho3ErU/N91mqZ7rJsDvCieE8jHTmZbaGqdCu+tWx/H0LsNDDgHOmzjDj66R3S0xlC0P0wPvPeWLgSAmT1SFUgJhzNfX4baYAKfP13ePAo/e/lzw+oTU76MozL8QbQwEIuHyKVGrVjqhw4Iwz6QLFtvhALMrMgZJC3yYo67p1b4QwGKUo3SGLLeRXpZn1v4F1onpndM/IYYr4JjQgTUsqlh9z8uoWNMhvSWKMPiRTiCyP8M+cxMkFak4whZ8J7aNBRSTdLP7zdaOQbADBbHZMoCMJtPdAqEK/Ie8LgG9g/DreiWRtXbYKDRQEdwFy8HcZ7tZ6NkN8zH41gUFrADsmR1qpVipFsgZxOPVHI1JiYfRD4KxnNnbKSGIKyUq4DiCcqZgu6VOhU9qim7wrQYJgq2KNMf3agB3k+G0MtTSzwMQouGwnqnQLJ2Cg4VQMeVSWJmZ1uZexfID5T1d6c5s69i5O9+GNpcIlRnkZ/KLvaYefnCI8FlFXK+rIHP/6pYvkz4/AMo5iBE0Os2mKISSrYimEP7DMcVvBvqAetl75Ng5YP87hrwTBcUQlVO4VCBE6ZK5RHhM/FYa5uTqw0Frih6YHN42Pz362NcuqjNxEv+MrIurlrYvH+yvEsAYqCnhgOXnLeoINqdtWbQjYVMcCdGCSzdjIutfe/EmC924tLvuzXe3EfiKszqM1b3/w+DRwdcQ0mu3eRaImxcEwXhhWeKLaC2GNMXmuc93VjOjf66U3po84ul9GnaZzi63+BB+XEhPkC/2qWS9Aaaly9QwdHU6VGrzmRV1mAosXBAHEdkbGNZ6AL2LmC99RLtgRZIpuIk/K0qzfLNNyFBCNX0tCpeYwXRz79dTivbnlXYwEyIHS/SyaUKxhYmYXrUyFq3ETob5hLu90Ey0fHayOgsmoxEJobkjVRsQAU972qW0xBDmYoIlmnVwbG7MC9Kzqqm7iYOgcbgxF66nh5qx9/89RAy4HnAXl8gWkTrdV9E22JVkU3/+uKyb74turVtJ7flFtGPx4yMfmVEfSoJ4Noj4RDnqP99+apxgwfxyfEPW8Y4udNwunj2Our7WGcxfXMphoDZ4MpHfDsNuD/iKobXaoGkJgH8L3HM5Ns9tVGdMqLq3k6LmOhX9G1B6xISg/MU/ahcFBT954ItO428iKcMjEyfbJq8D6Cjzdp7i49kcJ0JJz+kuLmzyNupaTwoHCeAvnfSLTAkED1jdTsK0xBQE/PBqgtza52jtT8ad3ODfn73gbxMciK8AlZ8g/jV/2Cb0NBFlATzv+U2WzfjBepjF4jQD+XQop8x5HDA4R+b2utuRVGdS+7WC9WRThg+27UFCNclS4VJHNptniO31aIz5aujF4Y3W0P1awdKf3MNsX6cxL7Yg92ERPuobAqo390pS4CETVaBYCNgeNhusva8MhQtRgkJG8IE0wO/PRM5bF3KnnwTR0gtKC06t4QxCfGNZgVd+xSOWWnodGZlfHJed6woHEQKj3GG4YIL1F3gKNmEiXEsMz2qZMDu9v2FFZvTrXB2tRM/ATMpfjq9YYHojixRtDfv8iVPN/b6wm7c6EcpGqcdxegGS2L99DfW+F5nnt5dqUIt6IqcMcvBYIo/9U6dfo/j5lPeUlE0g7Cqe53q6NanaqoDjhlcCRzp0kqPKmM1vzazBdeRIlDRRN1lE3pmoHYFZRcJYPvSktGhJeMcrqEHxgnbi/Z+FR1Rp92Xy2Ipozf+zJLSWrcK6c4/ycZF0XRj6WhchvjV3PutOwpWwvXKaT1H3NqxpM23s9PDbkTt2vUcQzehH9ohZ3t7KmXJVrfY4B4Kfctd0iZYp2er4NdommW+/SklW9rr0LK+8fpLXYYdM492FFaGy9ptk9EAUbNqbSstjX8Y4cS5yUT6LjrelxSLTOazFGhfIlITrVLuJHhl2FgeIz9G4WL/IXZhcykvcOP+4YVLANuYHSiaiFJn2GzUJ2a/CYHf10KcGjyMKmopVJ7+VdPca1Q5ezdAFgvA06KRnUkNk7i4zoes9Av4mkJ5cHZRUMJ2B/DEf/FfCYRKJrFdazn3b+Yrg5xeo2Jwpr6yL2gQ6RxpSdQ2Fu6X0Ml03H29TxedyT0rIM2w6eFP7drs01YNTgd81PJg2H/+TtX1gn9PTZdz+JZ/Kd1jw5ePlEOBobj5Cm/KxMNf99gHLa+rOjPe9x+Q6T15AgRLFvHyeMpza8+fRe3U8MEEGckUcgZr7f8vEY19X6o8saiEYx2fXnT7J5Cu6lZhCaULfKHQmlzb//EHsdaH458uE9s6hgajo/fH6r7nlbNFoGjdpLq/BV3p9R5nhzCsb4rzPWZjyXOkEzzUaEMk/2Lr8vmE32wPi+Eb+YRsC5nU9gCMQlzo17MazTZphYP/TvBv+i+NNTah9i6ErfDKzRwb+SwRzL3z3j9cT4pGgPFk7cnilOJg/13zuo5iUipGbmN41soUEwEz4a3wlLiMfL+C8yRzx0co1UpHMyUpX7vDr+68PUgFrlW5k9Y+bTmamkaQPqEJzjSs4996XlDNtEEDaDeF050wyDJPeUqEjgj36FKoXcQ/KQFLQauh1ep6MgM20h5cfBxr8qyKp+sjYXx3LMAzHRfGMmwbsemYwXfn0/bDD/JfRsr+Hgzizypji4lUFu96EE1s2mjnxeH1OodB0d2RHknYCIykswjg/S4iIASM4rt8qE36LobO2vY2zyJ5KR3GUV+X9GJu1r1Ur8YrnfRcQN7I0g2I3rgcgY3GHAazPKY7F0vbQssV4wxkVYCqU8nj+GKM3Zc838GgAt+lhLHPt9I0L5NRDiIUMhpN75yYs/AE+Tb+FvnEiAfFdB3IrIqQL8n39+xVzREjwH4SmGaNPKSrAVZb9IgIUNgmnhqx/Xx7NSZ6ZtPMMUueSQPoYIs8JMOon3P/iyh6DKmIukN0a8s3jLfW58HBZPwTSR6bvwnMAJacSzTodFc2YGOVMo4PxLVux2wyI3A//5y9P+4tDcVSb2d3wujtY7bdzDELoMvr8njOt32SfoEz7Zvw8yiLf70szlfKtilpGUduusRao3X4DoA+5oQ3THX4SbIdnRadh3MHIkbVVz+MJq4DTG3rFAYPEEHqQYhxCP9P8Jg9jxkA7sikTqxHREnOCkHBrSXsP0LVwm6z2KMtC8BrK394d6ITQRkInyeSOsFbKQ68hVZw4FhDAgJ5k5HlseJzJcK5EzPsAFebIMdrOeHtE82rCqbxB0fVa+1W4nuOhSq3bOsaj0JdVsziKSLGgqXHk35+t6RnKiE0vgg9MLaDUs4cC+UmgrJYlV6uw4+TDqZBnzTczceRK5ZzKYcCf1PCX8lidTmbDjaug5WT0tvqg8DhoV8WsH0HC8uTf56vJqh6/eNF4aDMzWGW2zoYUgUdjeCqyKkQI5fDIybvCW1h3kbtfeRQIEAVKXdBC9Zq35CEx/Z+cbc61nFJi1RV56tZvIvSYeqIUcjrTuRgW/P2CVj8DLbDFFDI/ClUMSctpFlY3CCaswYMrk1ttXM6/yqe75l8M1DN39TjjVgeZGvB0/us4pDxlIAZ2XRqmTCt6l6Pjv5TlIFCJhZEtlSKuy+IY0M9whSQgYfVaxeMAqCBhfoYyNYxD07e7Od1WY0Zz28SIGEccATsNJiBbgat9cCOBL7yH4/qR8AmgEcWDnPwMrSG/6+XZyE1x3XVLMPckBJMJGaOxuar0V/DWuDKndimu3ATq0orbDU2uwq6Oku5Qp0MmTvEmWy8Ozjb8Yztea74TOOeGwXcu5k5Ap1il1n1ctC+vQi5+wVx/kCk3GBZBYWW23O+F/ZwHrleMOlJvSioygDR3RyCwy6x0QtGVHWb59DpKebE+Bw73kHsSmZo81IpYoQZcSfAyaWXpjJYUAmITU5x8zyMkbG1MhKtnyGy9/Xy88ne8qNq50ZYPCiOcLdzhp66rq2Gdxc0BG3XliGS+B7Y8ohzecAgnFvVbS0lCJtbjD1AHLdDLNGLsB0cPThaoyg8dfElAWfGZW+tnzTzf2/90ailaeKzjal69PQgCHpYk2e53GBut7NGDnxFuJTN+KguJT4BcjQ95SyAN7JvTKHV5Za/CTLQSsCsqWQYuyaQEvx8s9BAE/IJdZYp2AxbsjL4ePT3PGbCZ0X08efdHCxpdMXk6deY1HiqFa6KMrzfkMFCGFKJpgG/DcoDiFaYu22AlkbTYEEZGscEjrZxj0upv5FxLPxOKpYieoP3VT5RdgY0ZKe5TST0OgHbQb3LS0m6BuS9dq3eZTCCX8VC5xxHplOt3psszBM9roDYpNz1UOeMRBQIrg9jN4R+HCMMLdnuyLQC09I4veky3waVZTdpOw/tEGbW+iUrEXzUuznLT246yGf7UDDqOG/iv/ot+ShlGLBFH7c2vLlbS4oL1PGAw16o4Fi/9WOWUFbJFyFEHYI6zzsjPSjF4V7/IqFYyYSSV66BslNt83hmFUPivbkv73XlR8zhczoJLY6Y32A6ArMXOw6RQXLWf3FsY/rfgdYr8UV+PI9Kga6oZaaxtlyifJp28r8b9gmFXFauIRHN/RJjTBSXYHrio0Wz/8aDDfH0UY2hebCR2lVOcXVD7sVWCkZCbDlPGamqxRXjeotehdvoTv51MmMW6xfl6d8xqlvGybOUTBa/TNwsHsL9S78B6MSDxygj7Arrte/ZJ7HXEgshfh4BogVHzOMElOJeiCERL7Z3A08uIAFPsKOjUonrviDcahBX0EXoII44JiUCqykV2yOoyjBMWfMjsD+Wsl1SaTaBftutJObT0M3R/zVCyxhkWGdzIIPTh2nUPRKJBdWG3T1qst/tdABoiu2Qvl13Cq9U0m2NOpZdBlO5qfJigB9mPjoUHvPqwzwWT4GpbH+epYRnL4xlbtJ3XpZ/gx2TsxHUtFDoSkNOeja1Ek9O+xHgCwczLW7ue0IbYTeke1OstBvfr6bZ7gNgvPS5/5hCaFlyYrf+DTvUotl4vVs6tdtGkjHov12RrKO0dx/H2kUw2dlyV+buWl4faU+4bZdqLFy83+aoK7gvimIEh8ibp79SS0JLHkvV7IGsZ6mOWR+OMihOrv4+89yP5h4tuduyfqpV5xrLyQsw0vEazTL8BDjNaJF/nmaHLWqfxTfpYy+ekGMAM8sB42ZP6xxa4bZpP8s2uKB7eHE2IBsdtVQLzoczo3Ge+8YxLBihE6T8ru+mc0TkGq7YkXKo7JlUzStZkQGJwJMoyecerf1yiShdY6aHQVw0zxD2cjXIykWNHAB+f0VGpN6ERtmvVQMWeQ6rs41dwavd09h4adaDXjwFWUlff7+LIqbxcggIGwkBrWR8sT5kXDjiNXKNbT8DjvQc0drV2O12pZhNQkGgiWSBsgdUsNdz8J5Kn2JSnzih7EAlYfpMfeaDBurUCyOMGCcauAxlTOK0vC2B0pxLAaKjmAUtTFhj04UwWqUbHGkfEnwHgSNx8LoEhiFhK0n53pEMvmkyWhUeS6ZF3ZygR/AnU3aFj4U1htw87/E0rY/xfUkpYAOGbq61Ix+m5bydSQgDdnt5SUMGDjIjBPrg76cyJ7/QdLJUmPsGYNkFiwF+qhWIiYPFevesSvhdqt/BjBmwDVrFsLZriCWw0mEWtjZHTnj9lvnRoaH2IDEmdEOnxbWF1cTeYJKJ6jqLKKpNFu1H3ZsI7bQ7BcfxqsL/z6bANSfjNGvKVE82W3Da+H49u7fJoljZ+cOFLnAEvestpmHQNzDr0idXkxwwRDKBlXbcu+etaJMIv4emvamjoC0LJczMMKr4jByhtXj/6b0YTPIYioEYQbBjQzEMLpsNQ8ZE3mqdwnzdHZz5e2XxCPGt2/uI+cllJ3eHIO57r1eQ0ge3JbSmYeL8oNF4c/wbM8t9ZCplyChKEdIn/lAFnazfz7TmmvFsLCvYY7fEdkeO15zxNQOLIeMfYnOo51lNqeDlPDpnPe8IdumDe4qiG376lh1jEAYY6ppEqKFnAfCCJAH64GwtGsqKq+0N2elp7oxak3BW2+Rw4uEOYkUO3YN1smr2U2VPhkVB85oS794/KPi9PQe7rU2k+3TDEDqXHqE6rlkMur/w1rpiC6KDXsmwEHi4DbTI2QQfjRkRu9PJQC6bKyTBrFrJdWwu1bSvuL6hcZn75EN0KGeuSR37+6fisilpy6SS+qdaS9z3zFLNYMx0CT/pt5KNiRJiPMEGu2QlpQq/eFZvtQKiocAFnFkMy3pNWHqzmlEyczorLMbq7wj2rm12Uj6G6ErsunJOzbRs9xj1tlwIRsyteyryASQSs4F6abbVYgvxgWR5GrWzsoxwKxipCLs82lbdjWE6dBJe8sNBYc+ZfU2LLUY8RpDoowNF+0khG1KcKS1NlvxOo3Yx5ENyNN0Gr1IOAZ9rVz9dlsvcsrppkR7xmBMqTHniN9SGfBCGFHlO1ZTflg84O3D1K+MmWgfJJM3po4ZO48aU806Xef3EfMiose0dlsTAgelNzJbUOg0L/ixTRNRRvip+EeDokzIgIoYz3SF1Mm6U4Zn1crMAJ5f8jN4I7uHlkUri1FtNq0BCurbhDTMjPbGAWdy/P2UlJBAKeum92+WXqCebn6D4KLcvId6+1kckkJYARLS8T4RmgJIO2K4NmDPc+wyIdulpQXIU8Tlbn985wWRwLyML6YxCKwm/Z1KumABauZ/x1ztFdtnnrNM5ICsO3EziBjs2xKi/D/If6JJMySrhSOhHOvlSPdCORzleVx0yGBaI6qctFf+lhQ4zjHbJcNVuPn3e9TwQ+6NbmQ/50GAPm966LjqkWewZOM7H6QEyQRgVycJDYq/IGC0de5Vn0KAOIsh8R6Yt8iduREKL4Zk2/Txjf1H/DwXAdO6HYTptXvail4epNpafizZeyv7iH+wwudftKtE8duiC2hQm81qsFlyZqAtQ0ePgSnRUX6WWqTvDLkO3ovBGpj5ePb9Y7bmvBiF0PC5KpczwvaYFXdBR/L++2mRmqVNwPx56WrFALdGYlzCX1UY6X8bvxF8wA7zuVqurmNZJWHYAxh+62aMzFiWdV4cZcuz3Ca+4c+WffLy4fjsEmLnWdqomWXev2gwj+s2mMotxLBBR9jSzl4fu/iEo2paaT4VPsFIzMIG+2OIF9/+XIIfqmJ0Nbl3a4Ok6CsTLUhxZusv9Bb/RL7u5CrvVks3y194Kg9m3Pss+AGTUrM0q14YQ4fcR2/LFkqTColvzHdffJEUkiWq390ykwmlzJqy0b28YEVZkEghGvSMucs8/NX7lp51mPonxwBfDvJiX0YrsKrpYwMYZcpjXd6oBA2c3icKCLifYTFGMNo7E0Z75r9pmYeD7EMjVfUj+VmODHv6xluWP28NoNN5zUW//gx27KgfeOsPQtEWlhOe9pt/L4o5iQcfVbrvV/9G4jOVq0DY2Ovr139oAJR73WTtFjoKd3Bew9jog3R5AXEG3BbYrNJIQXl8O+xx+kqpcC3pxzfvThrEnb3+koN0FbpZYKZixkVgwJy9eKlus5BM2k2Z+jejndv8TJYMah9Hr5ZwQVA66+0ZmXpYYLblTj7kZ0QUxY9mKFt5N3QlVKHdcQZQ6Iva9eeeGwBfk5WI7h10hFdfVwII3JiAu0QaMIRlevOnenEvnKMhyAOVi7q04zO8ddPBscQ0E/QzoVzAHYDISnXcTvB/rWUs3N6FiXabuRhgisga/3fcNhyvo1YIs13lyoDXO0fPebShWadMtnTHU/I/cd4JNadJzd9QNqIx+b27qTn1k8SeHmRw60e7Y/l8xwij7Ef5FD2Lr/mr4RuAFgx07leNqjlRflvLzwYdCeddxuWHmIUez6+CbPUe9JtUjHkF3cAw4EkqdDVHPbVTFw2jWz8gkEmAzTqSHaoG1aw9b4tiLyV4ZUxf0IsrHk1qPZRJZFgH/pw5mOrAxLopE7xSBp5yP48NClliOtFQHPk2dFXMDpy42pc4rN2HSZHw6/sjY/wXKaAAveA4BSQJJsi6cSzXQZyVESP/S5J8trh5lQE3mamrukR6Gyc916h9/ifS1vnI0i0ZX4hFuV+hbYBmSAdFg5e0QIKIn9ZW3lPo0dZZClnc/r6kOmamVQsxgdDA+sSlNzeyZmZ2oN/U+2li75y5dKEkAZPEb+g/5nfSznfNbI2t6wUeTWI3bgGPIDcuBak2HGmhyj5GVdXW4RI0u6R1NIO8ImMNNFAMaIGTrPr81i2ut4EqpZZTEsUPZFzS+ni8vr/HGe8FiE5FPMzUvcpgUpsp4EhNu8wxjhsrI3NF3eXZdTKXXR/yRRBLfLFJ9jdjHX/Dw7sYfiqwL5CHY8Ft0NYNSlA2CJqLm8MGMyUh0tVqe6N03FpJucr5OMsl1VF7YVrrtigyS3pMybRoKX5UF13dxj6DJWn9ldVVssZ6HTUsdOdYFV14njq5eAIcYy+SSZdKe/exUZvh5W4WYhHACGsTvgNnLNLJQ/W77v2X2rvz+xTKQZLgEYBnalnQz50c3kWKLec3zYXA8tsVz7NgVw4BKkazgdBxTOj6qSN2zKdJdUIlnCNYifG7RP0foM7423/oIoPtBtXUCIVqAeMVbpNCgh+VShKiGMoRLT8OM1J4x53XzEX7TQ7DDJECNQCa98LM9znIKVY7/UXyistD91H50flZ+CBc6wVd0eOyUwTKxUGMsm0wAPpRf3O6GmDwbbaoQyG9XwH8rKA2ELdQPt8IR6+CUIkW6ikWp5pXwSEgctdTYclb+0DYLN85qQotLdyEJoiVGbUGYYVfmRpL+z/XOro1ZO/qDUtw0wDFhFVjpdv+X/zyuEexrPU9ReYqaQ/PoqDNSeJHeyRjHvED1wG74Xy+JtwOqEi4PpucHZkBW+d9inDRYGIrVMRj95VZkrr98NGPlHh2JbGZWYML56toc6v/XbnCMNgBM056+M+9Vd0MWY2Z22LTk5u8SnpZaL4PSvBPVB7+dydQp3zwfqyJoiOCoTt1nqJybQO/bt0JIQpo0dK3EkI1MWJlEqSCfxXZPQvldo/ma/vY6UUvWRr/Tbzhsb+EI51zKaaQ4DdbvqnUMKsJVdSs5oamoSR0+RLqpbv/wv54A5efcVKT0CRzi5mvUDHtbGd0rFATwSRIipniCxP5r1BW33U2DJ+HjniRf0xPcf9O2gpOeb/fUzKWC28aluQSXydRSxoiTYgzCpxIruWeKs92eUggTpQ+z9thz33cNMhwsvZc88oiN8VCDrpKnXZuif4BdF281NnAOxwzoTdjVsPF697RXUVs+DBaQiXcApMCa1BuP4QmS4BoXpPJdG54aJbp6MXpztNRiDmzQOSS1CUTdb1/Vv+ZngpsX7bkV4DjxZvXgQ7pfd9bgXK7/sW8kSb1nfwWPpYJQYyx20WCwvkba1HNg1FuGjtaHzLXXNzsUaaVRkdSyKmfLnb1nuVRPHBDMSmvBwA4joeDj022GKTd9QcZnZQ/WycIrFZV8nxrrz6cdcitXg2SalMKW+qIClB2vGIgtsYRTN+kmEWQu4CJTb8eIRKH6we69tIkzjs2FapBu2Pdi6oIqFOwCG4uvDmWUIjZuPrvDHPDTSVzKc5hK/o0udJWysvvePXhZNynw6fJu1pX35ElNN6zprXZIktmXZ3u1ubgTxDvVjj5ignzjVnighVbIcbP0coFasFfqEALRr8XQHqjfiON27b2Mmdy642x38CZqT2tkfOP4Re4X1zqM4uoYbYC6sZjGq8xF/2rhibcxwJO4veUZLAF5PbU8sfGQ4RqJOvqE+WYasOCupUGEgfLVRuY4PqwI0emKYXa9KDZ1R+q66e4TRdu/sREVJZxeYGMMoukjmYEAX+0N4mEF+DHjd2Ry+ZOyd+tW4EzRdDZuTvyQ4yrEn07ZwoinphqwBRjybP2KJSWuIQXIC5SrthUvTp8u+INJBNuYaCgM/5+U6keW7hHPtP03IQa8sS7I1dh8Nbmqu2Guerq+/p+3QPbc6i57q0rFmfv9rjID/ZJznaGciMtNIph/5HJedkjvmFfBwJuiz7vhfN6Sz5K0/OOgsiEHRl4FSbMBY8cV5KYt4lZ3B9A33cNgW2R5wlVvLY5b2rnCGCShjZn9m5AobeT/PY4z6c4J6DWgv6bHFiezIqf2eQ1RAnkXnH5/dXJzEnLDNDy4Iw0F76Mxxb1uZ53dxWAfjA3u6Zzl2h6r7b/N5d5agQ0YQJ+1bo+8cXnEWrTwzCvtttkBxwvuD+2ntRUeSp2qKEEpcxzn0vsuSZA4a1W8+Nf6abk228HmxH+MhTSvXwMnuJVkCzfXqb6VE9jYefoas5WRizkxIGeuyqiFdK/6nKj/5614jgNdpiJcDqcduEzwvmFoCKc9JmNUd8X0Z7Z7HTCWCLTPB0bXhg54Djw+i+ccoyavhWjzflPWhdMCiHj4bdGBIpIA8EVmEE6PXb9VP9y1m5kejMBChY4offdlBNGrVnwjlphOjf14iek9IlA5KVReC2waX47xROEd8vt6/45J+K+gggJa1UjSUkBMJgzBlHwFXrUYIX/J9wcdNnjygxPRS6DdpwNOyeg2eknQ5h0yxl+CejjIkUjettqEUO/F8B14IoAQI6csY+PH69xDmkvVz0DfKtb4FcT8EHXf95bYSHsOtffjYvfybLIxUjQd0GVlGgeQk0jUKpmz2cjvFvUeTvsS8jMlXJxfh/2CyDbaU7KRcLlB3JgL49ldjW8KKkEofFGATLye6YRZGQ8voUzYMSwcDw4GZbGucgnCt05hxavarU8XZFvzz1pso0VbH4tFZOZJpTpHRlu9uxTIy/HVbxMtmvCEV0mPZktV9IV+LUlDoevr9NNYDhuDqMm4/3uIfow3GOiZ6+EEu8ZlrctkZsstp6SEbnIoOuAb76p6yxTV5KPL76WaPs079jMduHenDA5oENRxMJKU/rTekll71gbwzW8YEqvyuviV3PLeHVc5FJ/p8jd/53b/G0nh5nLI3Hf1VhiIrmHR/rFgQ382zk188N7LQy8aIM3LOZnzXVPCOZ7VqHiNOhGBY0dEZ/MQfp/Sx9m2w47IgeN6irs8cBwJaxnKJ0Yn7nhovXJt8Awif8Q89jlql8gMB33mpJ/AB+vIK79k6USgD5hIJdjItb08HQWFOvAGn1blQybH7dx7KXsBiV2OIJfPee5TVAZURFXrkd82ObIptN6vGgReYGd35ne8voIxc4k2shw8JnWvOwD9qOqFV6kdC/1Jkflw8JAyRFyEvOJIu4NCjKgnPEYgx9Rea53dERSFHJl5LnuxgPgEIsI7Y7xzuaIf8f0jMH+oE3NRx/KiaUOR3nb3TvZvlsCQ/w+FzrzJIgoCOPEPkZJrpUSZzYcHrQmULiNW+312tzCCpjvGpFg+hNKnL1a+A/6I8rnqmmcB52od0NK7yNXIjn7IM9tAp7LBSgsatxxcpDmuBe0ieyaCUuMjt8r7xmOXoXIAgOVXCmj8xgY75UqcIrC2xWrpsTE8+bOhUA015feeWfKqhvG6WcF+0aFCrpgDcP4BCObrcEYWKrKiAD/am2AqFM2hXCoYdjtY6kCl/FNSe8gCSRfZyrRa6F/MY0PGmg6YB7adlrhVhN7aoabhrQ1OctnqdzlRbsCWH7TvyelEQhneiKvuMbN1Xze8r8iVdKRRJbqUFOVW51eKCUYU72xDjmC7rZJOLyO0dD6ENTXhVguSfZ5PnrymSnXa1noR9gf74EQ2I7q6hHMG3PO7dn5E40BRddBXde/3TAikH9lhOlfEorKq9kXJc2PnoBi0LpIhphDkqMKmPIAavCamAkbqxSJ01stwpeRPrOvzccC3ztxTg8C5DhSlSw57lIHSffp7vtCx/OtQtghuLOl+NN+SpcraFBHt2iMQsI9LmHgnjrIyyS5h380W18jVgK8iQGQgJ+bzc+SSojjwC1GVzT59q5cEwWgGuYnq4gAXeu9VqxAOjkQyV+6ADpIfgbr7RcJ+kJWn1ISXh3e22PBwcLZsFSfMwUhRCtKmolPZXOGNChKK42Np+SLsrDcP04ncZ6sY5D//4Xmvs0fzOHZW3hqQ/5vw+QEB+IAskPHzGsgi3rYZFdbQHsyS6Ff3KO+1BOgP55WekX0MYD09uisC9M1Lx2fH3bC6JHdivcwCYkawNnswFwHT2yU8nH6qRqb8Iws/kAk4zShpcyxy2cDK/TD7y8BdWZ6CbM2qn9/I9o5X8rV3jdtMxlUw/XfZIU5zkQpYbW6F7SMWvePqofm/SO4rHe0IU+zz5F79dFbZvOVZIvAJN4CCdSHz8C7oipTLlUZoTgPWXVUEftIagShAk95H/AJMOBfm0cZ3LNwS4PwtP2bDMWrKgADkGYOCadAlZuoe98i7IqFbkgxzWdQ32KFSBQnb3PqAHA9f2bIHoTG2S2iaIq7+dqL+gBOo/h+yHY/DKW1Vns2kaF9o08i+Day1F4MxYyeWi4z0n2ow8OuHMyR30WOz8XjD13ppgyHGEzgS7kEXtSa7pfF7/J62yX0U2i1n0h7PWm8QrbPxllSgk/OzxLSF7lzaF1aCEMtVICv1vmeHCfEIlLvVTKe8AB7RzAcQGn1niNrgYbk+Apib3ivKmd628MX6dP2Y0e1gTE0n6003uWX+Rp/R69jUYgS1U7rcVVWxoAcc6Rnj7+/m2E7FFZS1csDjEP5wEhX/VwsaFHHzPs6bSx+5X+RgdOYIN0K9bkWa0gs8CitFY5Mh0MN1IFJIp//uK6/5vvWBnmg3JqFPzzq1chy9Y8OSatinmxJzvVdi9TTcTBb+cB3ajA1HRDrxXDLM3NDdIgJ6lJbApd69LetLa5jp0G9i3rXvV/vAnJ0K3BiCJTWRljdgha6b6o8lXSgdm+/6EiWTNUhAIYQaAMEdlJVcRR4TlW+eIJ6HuuAg4yaud0+SuLZKWS+5ZhuzgLavTdSKk8cBN/qajaK6ZxxFDrFJMdSKT9u8NX9Ayc18+c9RNnHXg4Nvv0ycsyzmR0NGqk5XhlpuiJJlj2Lb9/+QYx65s9YsX5jngzR63IgetIuEY38dIKYdp7Z3AXteqfSpux0PcHozVGGHl+nQmHp9dX2mwXOM5jsd4CMv/3wV739xRCu5b6pCF2VfL/biJHT+ge9qzgU1hKOOFK+1/gU0Kf4zaDF6F6JmXKVHih2o71ukU2jEKe3MPyTMtq1Fd9BHIWhkNYCD627wOywpfOp87cW8exhMxGV7K9PKty37YoY0qI8BQB8Bcw+aHocFVHO0Clb2knR6/3NMsRyE2GgGyhakAs52HqiiU/7woFVZXLMyxbNmlQ9AWgJ4WQ7v5H2awHjIhmlTPJWHGuQLMuidtoNzZTruJ35LxIs8wkWh8mKGgHJMUwnw0eFO6SM81cufSsPOeRdtmXuQg/n7uUo7QI4nbv7ooCwlYg7Szh/Cunbe+d5z/hhTUdK+R4Mnjb3EZtH0woErHIbxIXi9jiIiKn7sa0s7gsvKRFwI70yTBJtH9epldoEP9guGcqnuqGi6vjpEQ89UwQHkZWT/N4U1ysiBCmfTT3WLVEn+vdC0QB25o5S0WRXx4KZG85/EpBlUqAdm9wC0qmYbRV17ljKDlHFmHMnaTvvKtpt+Wn4VVaSJtWerjGcTlI6k1ZVK+EAfSxl1/jRS3G9OQP/SG+XPn2CZYoBzh8o21iRNemPs08SpKCkXkMiLgMcQ5MyViKkEbbVevhUJaIcpzFZtjCQIyLoWFbMkWbCb4928m7JiEhNASN/n0Mq1oRbow9n+ZY5Lj2q4FW6iCJ7P+oDu6SNskD2iIDXlDUDUO7q5EcQ04lzzAbCnTzWvcE6rdx7y3xgtLFXmEXfeeoCOJ0vzq6quFRyvGbHNrHSJn4uPUuxFjVVhvGcODIRlgEbRbqs0Fko1obfZKRA2MOuSqSHGdlOHLc1lPwgotJ1fXgdUmJ2HGMw07F0ruLbffDVoFkU7fIromopdptGXdg/JqRAJA7+KKVSxuTbWcLN4fwrNRVZLnSsNHplrBb4J5se+QxCetlP/dLt7vTSr8vOyekAmf9Z0nEb1x24V8dZl527JPR3zm9/s8PLHThcTfKVyY+4sjnJhk8fEdPWEL26XbjkI1D5pt3pQAywzdFFpY+YrbKjUn5nmjmK8xBPkYTxoIgxjJZVA5QwXwr0j+9vX45qpZDuK2AEChaUQPXm4OkdZoq8LSB8nyq7MnISB53gMMF7bmciB0iNNlSe9/6JAzYbI4R11LD+W9Nv494SOg/Zyx5Rfm7Vp7U+e4EyLEHoCAeVYb2suKVXXbMLVKDRFQ3Dhhjg4cviG2PDnSvjQ69JAX/1j6/SH1RN4ftTGwidgfOnSIH9sct2zsf2wF9cfKURNJCiCg2bHvXxnQLPVFynaGLZhYIhUQ6kSTi11uMNj7eSU1EZSyOFssARHI5zhDDaHzixusQtGMQEKdz5BsCnziqnXamk3Q05XdeoXbboPbuJobGMlf1EjGbDcStiXsnMexAfY8Cit2FUQINzKFzBDafmLC4SX1uOa7U2ZryjPprd4lRgAknsF2N8bo71c6C28INuQW2wTy+tApRxQzW7sB/n0hvzMoiFT0PEyxv3r/K67hfU5ra9KVKciGL+7wOW2S0x4LpFVnzIcL4V8Ui4kv4VUTvmqTVZlqKnnWuy+zipxxUpxZIX8e9PXnvYL9CVhR3BkAEZuTS3ii1M9ZfbdRMGxAKY1MQb+Q2bIuf0a+ywP0CqT1rfGx4vDSp7FF5qLC7/TzZ9A4J8XHD2NWdb2qvm1kBIyYS5nPiR3qMw3Sf2mRoiOkTJt1cEZ5z9KWEKsXeCd7AoLoNWIb9o7EePE1x0FU1xk4OMCWzvNUulyi1k3gN+eG58DOQtriqopENQui5CEU2CD9FfQHBDbunOK40Gm1/Gxv0oe9QZnWXXu817MDWFKqBo0K3GFXayzL4AqQwdNEzZcs5Uuon6xLsIhMYTEtn0RMxZ2LtYcQyjYXm6wTDtdvWtr4J6iA6EMzggvNoyLK57Kifi6CXD3umh4k7RDQHHPIqGrZhEqqcVb/JzmzeaLhobf6I7j4rQ1d/xe+OzE/5WiKvpFikO6pr6AWGT2cgpfX4OcGt0RO3lJ9iiaaSBl7kW9iUQQsS/GAGIroIamtqTBTrlsQ9WyrbxbZzrjJDy0+Aj07LO1D99MUi4CbdDV6hcsm9ulGDMY8/b8m1rdUHIWjTIcM92BBosSdYy57yRDdVB9KMrnrQ/YfYUrqtLNHrJQqoy+WIynA6KjG6NOBNmdqLSp3SeO+2qSg5A5uiBvMyvyMvEiJAlS7deZKOABxs3ug8huFWTqm6if8ZzkTcSfNAsMwewWA3URqFtVO+FmCbRbx46fB6T44Jq8yahqVApUFhmSKx0DzvMGafOFAzETRQOpjDIi1VaQihHn9gdRj6367DP1Yn8HM7VPjdFpUeYFiqrBBxBmvC/rjRX/y+8ZSXDPhSwWwo7mS1PuM1UnQs/zRPw77eryJiWfQ+bHSLXqWVNY9LgpcnzQSDHSstZSYLZWhtathAMIyreXXVrZgq6dQRCJ55rVkT9rRpln2tDadpfYLTMlMwVoYbC1omUYicV52poUOZHcmzO4vsk2RIEb9ie2e3JFz+ZwDyLgnyRD2C2Bx8Ajlqe12C0FDi9+iCz/T3By7ALsjGTZlWNe17DmWhvk8136W7JoA1gJQzkL9ASgQOoZPztY1VkjxDkbWU90JXjbtZwYvDYDl/ZmF74XGlsuNgRGWz59Y0DFphY6RjPB6YGF8e52g50i/SCPJTuEBvhWORbU61sULItfRTvlqy42fPwFkbwHrJxiNHdvNuZiV/EaxzowszUr34GIXbaAX541ZO4HohVLWnwTWfGokeu5+HTjpOQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=YqJKWLp-i7Nwvc2irJqnqtkcS4FHbz58dIj4fzUhP55akhIVTEFoLeA8MCPviSyB7n3rU9iAlNsbAJSrEsKUY8mmmMFQi0VtxqskUgauMD01&amp;t=638824246710508763" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"es-AR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"$","NaNSymbol":"NaN","CurrencyNegativePattern":9,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":2,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"a.m.","Calendar":{"MinSupportedDateTime":"\/Date(-62135586000000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, d \u0027de\u0027 MMMM \u0027de\u0027 yyyy HH:mm:ss","LongDatePattern":"dddd, d \u0027de\u0027 MMMM \u0027de\u0027 yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"d \u0027de\u0027 MMMM","PMDesignator":"p.m.","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"d/M/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM \u0027de\u0027 yyyy","AbbreviatedDayNames":["dom","lun","mar","mié","jue","vie","sáb"],"ShortestDayNames":["DO","LU","MA","MI","JU","VI","SA"],"DayNames":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"AbbreviatedMonthNames":["ene","feb","mar","abr","may","jun","jul","ago","sept","oct","nov","dic",""],"MonthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""],"IsReadOnly":true,"NativeCalendarName":"calendario gregoriano","AbbreviatedMonthGenitiveNames":["ene","feb","mar","abr","may","jun","jul","ago","sept","oct","nov","dic",""],"MonthGenitiveNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre",""]},"eras":[1,"d.C.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=aQeYELo3u0AXu6WxKjfrp4mXRG-wVnUaMCBhGu3H7hAC7u0wS_lrSozTenA9ZKcVYERlPo9OHb0C8EGfRCyfh6vG68mGHUECNALjRdVtgjIq7C8YGeRgVzZZFLkbFpIEqFBhY_eQwRBQBpLXBt1vN_l05P4tlIYORtLtAx042NM1&amp;t=4227dd99" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=X7K4iQ8xeF3IC7O-1XUZF-MXhd7WZHrtxNcxUA-33V6OgvK_vxLLWo657jxZieSATEwdFWSuo8l6UCmGAE3X5wxhRCe-abw6BXUIAztoQuCyeljbOKSuvLIFlImtPe6jsiqSXiO8N2uHANZfp8naBvoJ9sBGiCdLWylmcwmjHoJwKYGmG2qbTZlExZF-p4f50&amp;t=4227dd99" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3125B9FB" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <input type="hidden" name="ctl00$CSRFToken" id="ctl00_CSRFToken" value="94e628e1-d6cb-4105-9787-cc8d807a630b" />
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos_PoseePliegoTecnico$UpdatePanel6','','tctl00$CPH1$UCVistaPreviaPliego$UC_Evaluadores$UpdatePanel6','','tctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos$UpdatePanel6',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <nav class="navbar-inverse" role="navigation">
+            
+
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+
+<div class="collapse navbar-collapse" id="nav">
+    <div class="container">
+        <div class="row">
+            <ul class="nav navbar-nav">
+                <li><a href="https://buenosaires.gob.ar/gcaba_historico/haciendayfinanzas/compras"><strong>Institucional</strong></a></li>
+                <li><a href="/normativa.aspx"><strong>Normativa</strong></a></li>
+                <li><a href="/proveedor.aspx"><strong>Proveedores</strong></a></li>
+                <li><a href="../contactenos.aspx"><strong>Atención al usuario</strong></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a onclick="MostrarLogin();" id="ctl00_CtrlMenuPortal_lnkIngresar" href="javascript:__doPostBack(&#39;ctl00$CtrlMenuPortal$lnkIngresar&#39;,&#39;&#39;)">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        <strong>Ingresar</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<input name="ctl00$CtrlMenuPortal$hdnLogin" type="hidden" id="ctl00_CtrlMenuPortal_hdnLogin" value="0" />
+
+<script type="text/javascript">
+
+    function MostrarLogin() {
+        document.getElementById('ctl00_CtrlMenuPortal_hdnLogin').value = 1;
+    }
+
+</script>
+
+        </nav>
+        <div class="bg-white-1" style="padding-top: 5px; padding-bottom: 5px;">
+            <div class="container">
+                <div class="row">
+                    
+
+<script type="text/javascript">
+    //Función de Fecha y Hora
+    var months = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+    var dayName = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")
+    var relojGlobal
+    var intDiferencia
+
+    function reloj() {
+        var date = relojGlobal
+        intDiferencia = (relojGlobal - new Date()) / 1000
+        correrReloj()
+    }
+    function correrReloj() {
+
+        var difMax = 60;
+        var difSeg = (relojGlobal - new Date()) / 1000
+        if (difSeg > intDiferencia + difMax || difSeg < intDiferencia - difMax)
+            window.location.reload();
+
+        var date = new Date();
+        relojGlobal = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds() + intDiferencia)
+        date = relojGlobal
+
+        var year = date.getFullYear()
+        var month = date.getMonth()
+        var day = date.getDate()
+        var hour = date.getHours()
+        var minute = date.getMinutes()
+        var second = date.getSeconds()
+        var monthname = months[month]
+
+        if (hour > 12) {
+            //hour = hour - 12;
+            var AM_PM = ""
+        }
+        else {
+            var AM_PM = ""
+        }
+        if (minute < 10) { minute = "0" + minute }
+        if (second < 10) { second = "0" + second }
+        if (month < 10) { month = "0" + month }
+        var dayString = dayName[date.getDay()]
+        if (document.getElementById('divReloj') != null) {
+            document.getElementById('divReloj').innerHTML = " " + dayString + " " + day + " de " + monthname + ", <b class=\"texto11Azul\">" + hour + ":" + minute + ":" + second + " " + AM_PM + "</b>"
+        }
+        setTimeout("correrReloj()", 1000)
+    }
+</script>
+<div id="date" style="font-size: 11px; text-align: right;">
+    <span id="ctl00_CtrlTimeNow_scriptFechaHora"><script>relojGlobal= new Date(2026, 9, 7, 2, 39, 26);reloj()</script></span>
+    <span id="divReloj"></span>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            
+
+
+    <div class="container">
+        <div id="divImprimir">
+            
+
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+
+
+<script src="JavaScript/Generica.js" type="text/javascript"></script>
+<script src="JavaScript/VistaPreviaPliego.js" type="text/javascript"></script>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <h2>Proceso de compra</h2>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-12">
+        
+
+
+<div class="panel panel-default">
+    <div class="panel-body bg-info">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lblNumPliego">Número del proceso de compra</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_usrCabeceraPliego_lblNumPliego">3190-1544-CME24</span>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <label for="lblNumExpediente">Número de expediente</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_usrCabeceraPliego_lblNumExpediente">EX-2024-18095992-&nbsp&nbsp&nbsp-GCABA-DGFNC</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lblNomPliego">Nombre del proceso de compra</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_usrCabeceraPliego_lblNomPliego">Servicio de alquiler integral de audio e iluminacion</span>
+                </p>
+            </div>
+
+            
+                <div class="col-md-6">
+                    <label for="lblUnidadOperativa">Unidad Operativa de Adquisiciones</label>
+                    <p>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_usrCabeceraPliego_lblUnidadOperativa">3190 - Direccion General Festivales y Noches Culturales</span>
+                    </p>
+                </div>
+            
+
+            
+
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+<br />
+
+<br />
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Información básica del proceso</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblNumeroProceso">Nº de proceso</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblNumeroProceso">3190-1544-CME24</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblNombreProceso">Nombre de proceso</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblNombreProceso">Servicio de alquiler integral de audio e iluminacion</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblObjetoContratacion">Objeto de la contratación</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblObjetoContratacion">Servicio de alquiler integral de audio e iluminacion</span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblProcedimientoSeleccion">Procedimiento de selección</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblProcedimientoSeleccion">Contratación menor</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblEtapa">Etapa</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblEtapa">Única</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblModalidad">Modalidad</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblModalidad">Sin Modalidad</span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblAlcance">Alcance</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblAlcance">Nacional</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblMoneda">Moneda</label>
+                <p>
+                    <ul class="table table-striped table-condensed">
+                        
+                                <li>
+                                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_rptMonedasPliego_ctl00_lblMonedaPliego">ARS-Peso Argentino
+</span>
+                                </li>
+                            
+                    </ul>
+                </p>
+            </div>
+            
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblTipoCotizacionCantidad">Tipo de cotización</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTipoCotizacionCantidad">Por cantidad de renglón: total</span><br />
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTipoCotizacionLinea">Por renglones: total</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblTipoAdjudicacionCantidad">Tipo de adjudicación</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTipoAdjudicacionCantidad">Por cantidad de renglón: total</span><br />
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTipoAdjudicacionLinea">Por renglones: total</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblTipoProcesoGen">Tipo documento que genera el proceso</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTipoProcesoGen">Orden de compra</span>
+                </p>
+            </div>
+
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblCantidadOferta">Cantidad de Ofertas al proceso</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblCantidadOferta">No acepta más de una oferta</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblLugarRecepcionFisica">Lugar de recepción de documentación física</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblLugarRecepcionFisica">Agustin R. Caffarena 1</span>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <label for="lblPlazoMantenimientoOferta">Plazo mantenimiento de la oferta</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblPlazoMantenimientoOferta">10 Días corridos Acto de apertura</span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            
+                <div class="col-md-4">
+                    <label for="lblTituloTelefonoContactoUOA">Teléfono de contacto de la UOA</label>
+                    <p>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblTelefonoContactoUOA">49092670</span>
+                    </p>
+                </div>
+            
+            <div class="col-md-4">
+                <label for="lblEncuadreLegal">Encuadre legal</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblEncuadreLegal">Ley N? 2.095 (Texto Consolidado por Ley N? 6.588) y Decreto N? 129/23 Art. 39<br/></span>
+                </p>
+            </div>
+        </div>
+        <div class="row form-group">
+            
+                <div class="col-md-4">
+                    <label for="lblAceptaRedeterminacion">Acepta redeterminación de precios</label>
+                    <p>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblAceptaRedeterminacion">No</span>
+                    </p>
+                </div>
+            
+            <div class="col-md-4">
+                <label for="lblRequierePago">Requiere pago</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblRequierePago">No</span>
+                </p>
+            </div>
+            
+                <div class="col-md-4">
+                    <label for="lblTipoProcesoGen">Otras condiciones</label>
+                    <p>
+                        
+                    </p>
+                </div>
+            
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblInciso">Posee pliego técnico</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblPoseePliegoTecnico">Si</span>
+                </p>
+            </div>
+
+            
+
+            <div class="col-md-4">
+                <label for="lblAceptaRedeterminacion">Otros requisitos obligatorios</label>
+                <p>
+                    
+                    <br />
+                    
+                </p>
+            </div>
+            
+
+            
+            
+        </div>
+        <div class="row form-group">
+            
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-4">
+                <label for="lblAceptaActualizacionPrecios">Aceptar actualización de precios</label>
+                <p>
+                    
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="row form-group">
+            
+                <div class="col-md-4">
+                    <label for="lblAceptaProrroga">Acepta prórroga</label>
+                    <p>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblAceptaProrroga">No</span>
+                    </p>
+                </div>
+            
+            
+
+
+            
+
+            
+
+            
+                <div class="col-md-4">
+                    <label for="lblUnidadCompra">Valor de unidad de compra</label>
+                    <p>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_InformacionBasica_lblUnidadCompra">310,00</span>
+                    </p>
+                </div>
+            
+
+            
+            
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<h4>Solicitudes de gasto asignadas al proceso</h4>
+<div class="table-responsive">
+    <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_SolicitudesGasto_gvSolicitudesGasto" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col" style="width:20%;">Número solicitud de gasto</th><th scope="col">Estado</th><th scope="col">Unidad Ejecutora</th><th scope="col">Rubro</th><th scope="col">Tipo de urgencia</th><th scope="col">Fecha creaci&#243;n</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                    
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_SolicitudesGasto_gvSolicitudesGasto_ctl02_lblSolicitudGasto">3190-3638-SG24</span>
+                </td><td>Autorizada en Proceso</td><td>3190 - Direccion General Festivales y Noches Culturales</td><td>Cultura, Deporte y Recreaci&#243;n</td><td>Normal</td><td>10/5/2024</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+<h4>Detalle de productos o servicios</h4>
+<div class="table-responsive">
+    <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_DetalleProductos_gvLineaPliego" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">N&#250;mero rengl&#243;n</th><th scope="col">Objeto del gasto</th><th scope="col">C&#243;digo del &#237;tem</th><th scope="col">Descripción</th><th scope="col">Cantidad</th><th scope="col">Acciones</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>1</td><td style="width:7%;">3-9-9-0</td><td>26.02.005.0009.4</td><td style="width:40%;">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_DetalleProductos_gvLineaPliego_ctl02_lblDescripcion">SERVICIO DE ILUMINACION Y SONIDO PARA EVENTO . Modelo: . Variedad: Para Festival  </span>
+                    <u style="color: #0265A1">
+                        
+                    </u>
+                </td><td style="width:8%;">1,00 UNIDAD</td><td>
+                     <a onclick="VistaPreviaItem(&#39;BQoBkoMoEhw/PPhSFGKoJZEZ|am|YSlPzoYmPBqKk/3K9aPCifvwIjGQHEQNujOV&#39;);return false;" id="ctl00_CPH1_UCVistaPreviaPliego_UC_DetalleProductos_gvLineaPliego_ctl02_lnkVerItem" title="Ver vista previa ítem" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UC_DetalleProductos$gvLineaPliego$ctl02$lnkVerItem&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+        </div>
+    </div>
+    <br />
+    <br />
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Cronograma</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            
+            <div class="col-md-6">
+                <label for="lblFechaPublicacion">Fecha y hora estimada de publicación en el portal</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaPublicacion">21/5/2024 14:00:00</span>
+                </p>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lblFechaInicioConsultas">Fecha y hora inicio de consultas</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaInicioConsultas">21/5/2024 14:01:00</span>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <label for="lblFechaFinalConsultas">Fecha y hora final de consultas</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaFinalConsultas">23/5/2024 09:00:00</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lblFechaInicioRecepcionDocumentos">Fecha y hora inicio recepción de documentos en soporte físico</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaInicioRecepcionDocumentos">21/5/2024 14:01:00</span>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <label for="lblFechaFinRecepcionDocumentos">Fecha y hora fin recepción de documentos en soporte físico</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaFinRecepcionDocumentos">23/5/2024 09:00:00</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <label for="lblFechaActoApertura">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblTitFechaActoApertura">Fecha y hora acto de apertura</span></label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Cronograma_lblFechaActoApertura">23/5/2024 10:00:00</span>
+                </p>
+            </div>
+        </div>
+        
+        
+
+
+        
+    </div>
+</div>
+
+        </div>
+    </div>
+
+<div class="row">
+    <div class="col-md-12">
+        
+
+<h4>Pliego de bases y condiciones generales</h4>
+<div class="table-responsive">
+    <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UCCondicionesGenerales_gvCondicionesGenerales" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Documento</th><th scope="col">N&#250;mero disposici&#243;n aprobatoria</th><th scope="col">Fecha creación</th><th scope="col">Acciones</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>Pliego de Bases y Condiciones Generales</td><td>Disposici&#243;n Aprobatoria</td><td>
+                    <p>27/4/2023</p>
+                </td><td>
+                    <div class="col-md-1">
+                        <a id="ctl00_CPH1_UCVistaPreviaPliego_UCCondicionesGenerales_gvCondicionesGenerales_ctl02_lnkAbrir" title="Ver pliego" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UCCondicionesGenerales$gvCondicionesGenerales$ctl02$lnkAbrir&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                    </div>
+                    <div class="col-md-1">
+                        <a id="ctl00_CPH1_UCVistaPreviaPliego_UCCondicionesGenerales_gvCondicionesGenerales_ctl02_lnkAbrirDisposicion" title="Ver disposición" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UCCondicionesGenerales$gvCondicionesGenerales$ctl02$lnkAbrirDisposicion&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                    </div>
+                </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+<br />
+
+
+    </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+<div class="list-group list-group-panel">
+    <div class="list-group-item list-heading list-heading-default ">
+        <h4 class="panel-title">Requisitos mínimos de participación</h4>
+    </div>
+    <div class="list-group-item">
+        <h5>
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_Label4">I. Requisitos económicos y financieros</span></h5>
+        
+        <div class="table-responsive">
+            
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <td>Nº de requisito</td>
+                                <td>Descripción</td>
+                                <td>Tipo de documento</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                
+                    <tr>
+                        <td class="fondoblanco" style="width: 25%;">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoEconomico_ctl01_Label2">1</span>
+                        </td>
+                        <td style="width: 60%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoEconomico_ctl01_Label1">VER PLIEGO DE BASES Y CONDICIONES PARTICULARES. VER PLIEGO ÚNICO DE
+BASES Y CONDICIONES GENERALES</span>
+                        </td>
+                        <td style="width: 15%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoEconomico_ctl01_TipoDocumento">No requiere adjuntar documentación</span>
+                        </td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                
+        </div>
+    </div>
+    <div class="list-group-item">
+        <h5>
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_lblTitRequisitoTecnico" style="color:#007BAF;font-family:Verdana;font-size:11px;font-weight:bold;">II. Requisitos técnicos</span></h5>
+        
+        <div class="table-responsive">
+            
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <td>Nº de requisito</td>
+                                <td>Descripción</td>
+                                <td>Tipo de documento</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                
+                    <tr>
+                        <td class="fondoblanco" style="width: 25%;">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoTecnico_ctl01_Label3">1</span>
+                        </td>
+                        <td style="width: 60%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoTecnico_ctl01_Label1">VER PLIEGO DE BASES Y CONDICIONES PARTICULARES. VER PLIEGO ÚNICO DE
+BASES Y CONDICIONES GENERALES</span>
+                        </td>
+                        <td style="width: 15%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoTecnico_ctl01_TipoDocumento">No requiere adjuntar documentación</span>
+                        </td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                
+        </div>
+    </div>
+    <div class="list-group-item">
+        <h5>
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_lblTitRequisitoAdministrativo">III. Requisitos administrativos</span></h5>
+        
+        <div class="table-responsive">
+            
+                    <table class="table table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <td>Nº de requisito</td>
+                                <td>Descripción</td>
+                                <td>Tipo de documento</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                
+                    <tr>
+                        <td class="fondoblanco" style="width: 25%;">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoAdministrativo_ctl01_Label4">1</span>
+                        </td>
+                        <td style="width: 60%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoAdministrativo_ctl01_Label1">ADJUNTAR ELECTRÓNICAMENTE DECLARACIÓN JURADA DE APTITUD PARA
+CONTRATAR (ANEXO I). VER PLIEGO ÚNICO DE BASES Y CONDICIONES
+GENERALES</span>
+                        </td>
+                        <td style="width: 15%; vertical-align: top;" class="fondoblanco">
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Requistos_rptRequisitoAdministrativo_ctl01_TipoDocumento">Requiere adjuntar documentación electrónica</span>
+                        </td>
+                    </tr>
+                
+                    </tbody>
+                </table>
+                
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <br />
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_Label1"></span>
+    <div class="row">
+        <div class="col-md-12">
+            <h4><span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_lblSubtitulo">Posee pliego técnico</span></h4>
+            <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_UpdatePanel6">
+	
+                    <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_divMensajeError" class="alert bg-danger" style="display: none">
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_lblMensajeError" class="text-danger"></span>
+                    </div>
+                
+</div>    
+            <div class="table-responsive">
+                <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Documento</th><th scope="col">Número SADE</th><th scope="col">Número especial</th><th scope="col">Fecha vinculación</th><th scope="col">Opciones</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos_ctl02_lblDocumento">Pliego Tecnico</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos_ctl02_lblNumeroSade">IF-2024-19517855-   -DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos_ctl02_lblNumeroEspecial"></span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos_ctl02_lblFechaVinculacion">20/5/2024</span>
+                            </td><td>
+                                <a id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_PoseePliegoTecnico_gvActosAdministrativos_ctl02_btnVer" title="Ver" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos_PoseePliegoTecnico$gvActosAdministrativos$ctl02$btnVer&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                            </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </div>
+    <br />
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<div class="list-group list-group-panel">
+    <div class="list-group-item list-heading list-heading-default ">
+        <h4>Garantías</h4>
+    </div>
+    <div class="list-group-item">
+        <h5>
+           <strong> <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_Label2" style="color:#007BAF;font-family:Verdana;font-size:12px;font-weight:bold;">Garantía de impugnación al pliego</span></strong></h5>
+        <div class="row">
+            <div class="col-md-1">
+                <h6>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblTitPorcGarantiaImpugnacion" style="color:#007BAF;font-family:Verdana;font-size:11px;font-weight:bold;">Porcentaje</span></h6>
+            </div>
+            <div class="col-md-1">
+                <input name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$txtPorcGarantiaImpugnacion" type="text" value="3,00%" maxlength="6" size="4" id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_txtPorcGarantiaImpugnacion" disabled="disabled" class="form-control" onkeypress="return SoloNumeros(event)" />
+            </div>
+            <div class="col-md-10">
+                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblMensajePorcentajeImpugnacionPliego">La garant?a de impugnaci?n al pliego ser? entre el uno por ciento (1%) y el tres por ciento (3%) del presupuesto oficial o monto estimado de la compra.</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="divGarMantOferta" class="list-group-item">
+        <h5><strong>
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_Label3" style="color:#007BAF;font-family:Verdana;font-size:12px;font-weight:bold;">Garantía de mantenimiento de oferta</span></strong></h5>
+        <div class="row">
+            <div class="form-horizontal">
+                <div class="col-md-2">
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoGarantiaOfertaCompraMenorSi" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$GarantiaOfertaCompraMenor" value="rdoGarantiaOfertaCompraMenorSi" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoGarantiaOfertaCompraMenorSi">Si</label></span>
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoGarantiaOfertaCompraMenorNo" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$GarantiaOfertaCompraMenor" value="rdoGarantiaOfertaCompraMenorNo" checked="checked" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoGarantiaOfertaCompraMenorNo">No</label></span>
+                </div>
+                <div class="col-md-10">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblMensajeRequerimientoMantenimientoOferta">Requiere incorporar garant?a de mantenimiento de oferta cuando el monto de la misma no supere las 100.000 unidades de compra y para las excepciones enumeradas en el art?culo 95 de la Ley 2.095 (texto consolidado seg?n Ley 6.588).</span>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_divMantOfertaAlt" style="display: none;">
+            <div class="row">
+                <div class="col-md-12">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblMensajeMasUnaOfertaProveedor">En el caso de aceptar m?s de una oferta por proveedor, la garant?a se calcula sobre el mayor valor propuesto. En caso de resultar adjudicatario esta garant?a se prolongar? hasta la constituci?n de la garant?a de cumplimiento del contrato.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_divCumpContrato" class="list-group-item">
+        <h5><strong>
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_Label5" style="color:#007BAF;font-family:Verdana;font-size:12px;font-weight:bold;">Garantía de cumplimiento de contrato</span></strong></h5>
+        <div class="row">
+            <div class="form-horizontal">
+                <div class="col-md-2">
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoCumplimientoContratoSi" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$GarantiaCumplimientoContrato" value="rdoCumplimientoContratoSi" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoCumplimientoContratoSi">Si</label></span>
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoCumplimientoContratoNo" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$GarantiaCumplimientoContrato" value="rdoCumplimientoContratoNo" checked="checked" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoCumplimientoContratoNo">No</label></span>
+                </div>
+                <div class="col-md-10">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblMensajeRequerimientoGarantiaCumplimientoContrato">Requiere incorporar garant?a de cumplimiento de contrato cuando el monto del instrumento contractual no supere las 100.000 unidades de compra y para las excepciones enumeradas en el art?culo 95 de la Ley 2.095 (texto consolidado seg?n Ley 6.588).</span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="form-horizontal">
+                <div class="col-md-2">
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoContragarantiaSi" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$Contragarantia" value="rdoContragarantiaSi" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoContragarantiaSi">Si</label></span>
+                    <span disabled="disabled"><input id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoContragarantiaNo" type="radio" name="ctl00$CPH1$UCVistaPreviaPliego$UC_Garantias$Contragarantia" value="rdoContragarantiaNo" checked="checked" disabled="disabled" /><label for="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rdoContragarantiaNo">No</label></span>
+                </div>
+                <div class="col-md-10">
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_lblMensajeRequerimientoContragarantiaCumplimientoContrato">Requiere incorporar contragarant?a.</span>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            
+        </div>
+        
+    </div>
+    <div>
+    <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_dvMonedasGarantias" class="list-group-item">
+        <h5>
+            <strong>
+                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_Label4" style="color:#007BAF;font-family:Verdana;font-size:12px;font-weight:bold;">Monedas habilitadas para presentacion de Garantías</span>
+            </strong>
+        </h5>
+        <div class="row">
+            <ul class="table table-striped table-condensed">
+                
+                        <li>
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Garantias_rptMonedasGarantias_ctl00_Label1">Peso Argentino</span>
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <br />
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Monto y duración del contrato</h4>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="lblMontoDuracionMonto">Monto</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_lblMontoDuracionMonto">$ 18.000.000,00</span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <label for="lblMontoDuracionMoneda">Moneda</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_lblMontoDuracionMoneda">ARS - Peso Argentino</span>
+                </p>
+            </div>
+            <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_divPeriodicidadRecepcion" style="display:;" class="col-md-3">
+                <label for="lblPeriodicidadRecepcion">Periodicidad recepción</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_lblPeriodicidadRecepcion">Diario</span>
+                </p>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-md-6">
+                <label for="lblMontoDuracionFechaInicioContrato">Fecha estimada del inicio del contrato</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_lblMontoDuracionFechaInicioContrato">Dentro de los 5 Días corridos del perfeccionamiento del documento contractual</span>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <label for="lblMontoDuracionDuracionContrato">Duración del contrato</label>
+                <p>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_MontoDuracion_lblMontoDuracionDuracionContrato">5 Días corridos</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+<h4>Supervisor</h4>
+<div class="table-responsive">
+    <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_Supervisor_gvSupervisor" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Nombre</th><th scope="col">Apellido</th><th scope="col">Tipo documento</th><th scope="col">N&#250;mero documento</th><th scope="col">Cargo</th><th scope="col">Unidad Ejecutora</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>Carlos Rosendo</td><td>Villoldo</td><td>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Supervisor_gvSupervisor_ctl02_lblTipoDocumento3">DNI</span>
+                </td><td>22427224</td><td>Gerente</td><td>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Supervisor_gvSupervisor_ctl02_lblUnidadEjecutora">3190 - Direccion General Festivales y Noches Culturales</span>
+                </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+
+        </div>
+    </div>
+
+
+<span id="ctl00_CPH1_UCVistaPreviaPliego_lblAnchorAnexos"></span>
+    <h4>
+        <span id="ctl00_CPH1_UCVistaPreviaPliego_UCAnexos_lblSubtitulo">Anexos</span></h4>
+
+
+
+    <div class="table-responsive">
+        
+                <table class="table table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Nombre</th>
+                            <th style="width: 15%;">Tipo</th>
+                            <th style="width: 30%;">Descripción</th>
+                            
+                            <th style="width: 6%;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                <tr>
+                    <td>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UCAnexos_rptAnexos_ctl01_Label4">Pliego de Bases y Condiciones Particulares.docx</span>
+                    </td>
+                    <td>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UCAnexos_rptAnexos_ctl01_Label2">Administrativo</span>
+                    </td>
+                    <td>
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UCAnexos_rptAnexos_ctl01_lblDescripcion">Pliego de Bases y Condiciones Particulares.</span>
+                        <u style="color: #0265A1">
+                            </u>
+                    </td>
+                    
+                    <td>
+                        <a id="ctl00_CPH1_UCVistaPreviaPliego_UCAnexos_rptAnexos_ctl01_btnVerAnexo" title="Ver" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UCAnexos$rptAnexos$ctl01$btnVerAnexo&#39;,&#39;&#39;)">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </td>
+                </tr>
+            
+                </tbody>
+                </table>              
+            
+    </div>
+
+
+
+
+
+<br />
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<h4>Evaluadores del proceso de compra</h4>
+<div id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_UpdatePanel6">
+	
+        <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_divMensajeError" class="alert bg-danger" style="display: none">
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_lblMensajeError" class="text-danger"></span>
+        </div>
+    
+</div>    
+<div class="table-responsive">
+    <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_gvEvaluadores" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Nombre y apellido</th><th scope="col">Unidad Ejecutora</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_gvEvaluadores_ctl02_lblNombre">Carlos Rosendo Villoldo</span>
+                </td><td>
+                    <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_Evaluadores_gvEvaluadores_ctl02_lblUnidadEjecutora">3190 - Direccion General Festivales y Noches Culturales</span>
+                </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+<div>
+    <label for="lblCantidadEvaluadores">Cantidad de Evaluadores considerados:</label>
+    
+</div>
+
+
+
+        </div>
+    </div>
+
+<br />
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4><span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_lblSubtitulo">Actos administrativos</span></h4>
+            <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_UpdatePanel6">
+	
+                    <div id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_divMensajeError" class="alert bg-danger" style="display: none">
+                        <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_lblMensajeError" class="text-danger"></span>
+                    </div>
+                
+</div>    
+            <div class="table-responsive">
+                <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Documento</th><th scope="col">Número SADE</th><th scope="col">Número especial</th><th scope="col">Fecha vinculación</th><th scope="col">Opciones</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl02_lblDocumento">Autorización pliego</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl02_lblNumeroSade">DI-2024-19753618-   -DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl02_lblNumeroEspecial">DI-2024-19-DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl02_lblFechaVinculacion">21/5/2024</span>
+                            </td><td>
+                                <a id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl02_btnVer" title="Ver" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos$gvActosAdministrativos$ctl02$btnVer&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                            </td>
+			</tr><tr>
+				<td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl03_lblDocumento">Autorización llamado</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl03_lblNumeroSade">DI-2024-19753618-   -DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl03_lblNumeroEspecial">DI-2024-19-DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl03_lblFechaVinculacion">21/5/2024</span>
+                            </td><td>
+                                <a id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl03_btnVer" title="Ver" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos$gvActosAdministrativos$ctl03$btnVer&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                            </td>
+			</tr><tr>
+				<td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl04_lblDocumento">Adjudicación y OC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl04_lblNumeroSade">DI-2024-20374336-   -DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl04_lblNumeroEspecial">DI-2024-22-DGFNC</span>
+                            </td><td>
+                                <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl04_lblFechaVinculacion">24/5/2024</span>
+                            </td><td>
+                                <a id="ctl00_CPH1_UCVistaPreviaPliego_UC_ActosAdministrativos_gvActosAdministrativos_ctl04_btnVer" title="Ver" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UC_ActosAdministrativos$gvActosAdministrativos$ctl04$btnVer&#39;,&#39;&#39;)">
+    <span class="glyphicon glyphicon-search"></span>
+</a>
+                            </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <span id="ctl00_CPH1_UCVistaPreviaPliego_lblAnchorCircular"></span>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+<script type="text/javascript">
+    function MostrarVistaPreviaSolicitudImpugnacion(queryString) {
+        devPopupVistaPreviaSolicitud.SetContentUrl('/ADJ/VerPopupSolicitudImpugnacion.aspx?qs=' + queryString);
+        devPopupVistaPreviaSolicitud.Show();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Documento contractual por proveedor</h4>
+            <div class="table-responsive">
+                <div>
+	<table class="table table-hover table-striped table-condensed" cellspacing="0" border="0" id="ctl00_CPH1_UCVistaPreviaPliego_UCDetalleImputacionAdjudicacion_gvDetalleImputacion" style="border-collapse:collapse;">
+		<thead>
+			<tr class="tr-header">
+				<th scope="col">Número</th><th scope="col">Nombre proveedor</th><th scope="col">Identificador tributario</th><th scope="col">Tipo</th><th scope="col">Estado</th><th scope="col">Fecha perfeccionamiento</th><th scope="col">Monto</th>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+                                <a id="ctl00_CPH1_UCVistaPreviaPliego_UCDetalleImputacionAdjudicacion_gvDetalleImputacion_ctl02_lnkOC" class="btn btn-link" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$UCDetalleImputacionAdjudicacion$gvDetalleImputacion$ctl02$lnkOC&#39;,&#39;&#39;)">3190-6425-OC24</a>
+                            </td><td>miguel angel saccomanno</td><td>[CUIT omitido]</td><td>Original</td><td>Perfeccionado</td><td>24/5/2024</td><td>ARS 12758000,00</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+<br />
+
+    <div class="row">
+        <div class="col-md-12">
+            
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Sustentabilidad</h4>
+    </div>
+    <div class="panel-body">
+        
+                <div class="row">
+                    <div class="col-md-12">
+                        <label id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl00_lblPregunta" for="lblRespuesta">&#191;El pliego posee requisitos y/o Recomendaciones de sustentabilidad?</label>
+                        <p>
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl00_lblRespuesta">Si<br /></span>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <label id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl01_lblPregunta" for="lblRespuesta">Tipo de recomendaciones/clausulas</label>
+                        <p>
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl01_lblRespuesta">Ambientales<br /></span>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <label id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl02_lblPregunta" for="lblRespuesta">&#191;Incluye cl&#225;usulas de log&#237;stica inversa y/o m&#237;nimo de envases, packaging y/o embalajes?</label>
+                        <p>
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl02_lblRespuesta">No<br /></span>
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <label id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl03_lblPregunta" for="lblRespuesta">&#191;Incluye cl&#225;usulas que exigen que el packaging, envases o embalajes deben estar elaboradas con materiales reciclados y/o reciclables o reutilizables?</label>
+                        <p>
+                            <span id="ctl00_CPH1_UCVistaPreviaPliego_UC_FormularioSustentabilidad_rptRespuestas_ctl03_lblRespuesta">No<br /></span>
+                        </p>
+                    </div>
+                </div>
+            
+    </div>
+</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="pull-right">
+            
+            
+            
+
+            
+                <a onclick="javascript:printDiv(&#39;divImprimir&#39;);" id="ctl00_CPH1_UCVistaPreviaPliego_lnkImprimir" class="btn btn-link" href="javascript:__doPostBack(&#39;ctl00$CPH1$UCVistaPreviaPliego$lnkImprimir&#39;,&#39;&#39;)">Imprimir</a>
+        </div>
+    </div>
+</div>
+<br />
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a id="ctl00_CPH1_lnkVolver" class="btn btn-default" href="javascript:__doPostBack(&#39;ctl00$CPH1$lnkVolver&#39;,&#39;&#39;)">Volver</a>
+                <div class="pull-right">
+                    <a onclick="javascript:printDiv(&#39;divImprimir&#39;);" id="ctl00_CPH1_lnkImprimir" class="btn btn-primary" href="javascript:__doPostBack(&#39;ctl00$CPH1$lnkImprimir&#39;,&#39;&#39;)">Imprimir</a>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <input type="hidden" id="ctl00_CPH1_PopupHistorialWS" name="ctl00_CPH1_PopupHistorialWS" value="0:0:-1:0:0:0:0:0:" />
+<script id="dxis_1157921788" src="/DXR.axd?r=1_103" type="text/javascript"></script><script id="dxis_754637261" src="/DXR.axd?r=1_100" type="text/javascript"></script><script id="dxis_359055403" src="/DXR.axd?r=1_83" type="text/javascript"></script>
+<script id="dxss_1006651743" type="text/javascript">
+<!--
+window.__aspxServerFormID = 'aspnetForm';
+window.__aspxEmptyImageUrl = '/DXR.axd?r=1_74';
+//-->
+</script>
+
+<table id="ctl00_CPH1_PopupHistorial_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupHistorial&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupHistorial&#39;,-1)" style="height:575px;width:850px;cursor:default;"><table id="ctl00_CPH1_PopupHistorial_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:575px;width:850px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupHistorial_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupHistorial&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupHistorial_PWH-1T" class="dxpc" style="width:100%;"></td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupHistorial_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupHistorial&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupHistorial_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupHistorial_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupHistorial_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_745665267" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupHistorial',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupHistorial');
+window['PopupHistorial'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupHistorial';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupVistaActAdmWS" name="ctl00_CPH1_PopupVistaActAdmWS" value="0:0:-1:0:0:0:0:0:" />
+<table id="ctl00_CPH1_PopupVistaActAdm_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupVistaActAdm&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupVistaActAdm&#39;,-1)" style="height:600px;width:920px;cursor:default;"><table id="ctl00_CPH1_PopupVistaActAdm_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:600px;width:920px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupVistaActAdm_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupVistaActAdm&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupVistaActAdm_PWH-1T" class="dxpc" style="width:100%;"></td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupVistaActAdm_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupVistaActAdm&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupVistaActAdm_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupVistaActAdm_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupVistaActAdm_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_263132845" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupVistaActAdm',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupVistaActAdm');
+window['PopupVistaActAdm'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupVistaActAdm';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupVistaCircularWS" name="ctl00_CPH1_PopupVistaCircularWS" value="0:0:-1:0:0:0:0:0:" />
+<table id="ctl00_CPH1_PopupVistaCircular_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupVistaCircular&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupVistaCircular&#39;,-1)" style="height:750px;width:800px;cursor:default;"><table id="ctl00_CPH1_PopupVistaCircular_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:750px;width:800px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupVistaCircular_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupVistaCircular&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupVistaCircular_PWH-1T" class="dxpc" style="width:100%;"></td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupVistaCircular_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupVistaCircular&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupVistaCircular_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupVistaCircular_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupVistaCircular_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_1950320435" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupVistaCircular',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupVistaCircular');
+window['PopupVistaCircular'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupVistaCircular';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupDictamenPreAdjudicacionWS" name="ctl00_CPH1_PopupDictamenPreAdjudicacionWS" value="0:0:-1:0:0:0:0:0:" />
+<table id="ctl00_CPH1_PopupDictamenPreAdjudicacion_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupDictamenPreAdjudicacion&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupDictamenPreAdjudicacion&#39;,-1)" style="height:640px;width:770px;cursor:default;"><table id="ctl00_CPH1_PopupDictamenPreAdjudicacion_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:640px;width:770px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupDictamenPreAdjudicacion_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupDictamenPreAdjudicacion&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupDictamenPreAdjudicacion_PWH-1T" class="dxpc" style="width:100%;">Dictamen de pre adjudicaci&#243;n de ofertas</td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupDictamenPreAdjudicacion_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupDictamenPreAdjudicacion&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupDictamenPreAdjudicacion_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupDictamenPreAdjudicacion_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupDictamenPreAdjudicacion_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_1562428107" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupDictamenPreAdjudicacion',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupDictamenPreAdjudicacion');
+window['PopupDictamenPreAdjudicacion'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupDictamenPreAdjudicacion';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupDictamenPreseleccionWS" name="ctl00_CPH1_PopupDictamenPreseleccionWS" value="0:0:-1:0:0:0:0:0:" />
+<table id="ctl00_CPH1_PopupDictamenPreseleccion_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupDictamenPreseleccion&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupDictamenPreseleccion&#39;,-1)" style="height:640px;width:770px;cursor:default;"><table id="ctl00_CPH1_PopupDictamenPreseleccion_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:640px;width:770px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupDictamenPreseleccion_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupDictamenPreseleccion&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupDictamenPreseleccion_PWH-1T" class="dxpc" style="width:100%;">Dictamen de preselecci&#243;n</td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupDictamenPreseleccion_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupDictamenPreseleccion&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupDictamenPreseleccion_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupDictamenPreseleccion_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupDictamenPreseleccion_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_2125968299" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupDictamenPreseleccion',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupDictamenPreseleccion');
+window['PopupDictamenPreseleccion'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupDictamenPreseleccion';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupCertificadoOfertaWS" name="ctl00_CPH1_PopupCertificadoOfertaWS" value="0:0:-1:0:0:0:0:0:" />
+<table id="ctl00_CPH1_PopupCertificadoOferta_PW-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<tr>
+		<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupCertificadoOferta&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupCertificadoOferta&#39;,-1)" style="height:640px;width:770px;cursor:default;"><table id="ctl00_CPH1_PopupCertificadoOferta_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:640px;width:770px;border-collapse:collapse;border-collapse:separate;">
+			<tr>
+				<td id="ctl00_CPH1_PopupCertificadoOferta_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupCertificadoOferta&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+					<tr>
+						<td id="ctl00_CPH1_PopupCertificadoOferta_PWH-1T" class="dxpc" style="width:100%;">Certificado de oferta</td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+							<tr>
+								<td id="ctl00_CPH1_PopupCertificadoOferta_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupCertificadoOferta&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupCertificadoOferta_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+							</tr>
+						</table></td>
+					</tr>
+				</table></td>
+			</tr><tr>
+				<td id="ctl00_CPH1_PopupCertificadoOferta_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;</td>
+			</tr>
+		</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+	</tr><tr>
+		<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+	</tr>
+</table><div id="ctl00_CPH1_PopupCertificadoOferta_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_1812337387" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupCertificadoOferta',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupCertificadoOferta');
+window['PopupCertificadoOferta'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupCertificadoOferta';
+dxo.enableAnimation=false;
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input type="hidden" id="ctl00_CPH1_PopupVistaItemWS" name="ctl00_CPH1_PopupVistaItemWS" value="0:0:-1:0:0:0:0:0:" />
+<div id="ctl00_CPH1_PopupVistaItem_PW-1" style="position:absolute;left:0px;top:0px;z-index:10000;visibility:hidden;display:none;">
+	<table id="ctl00_CPH1_PopupVistaItem_PWST-1" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;position:relative;">
+		<tr>
+			<td class="dxpcControl" onmousedown="aspxPWMDown(event,&#39;ctl00_CPH1_PopupVistaItem&#39;,-1,false)" onmousemove="aspxPWMMove(event,&#39;ctl00_CPH1_PopupVistaItem&#39;,-1)" style="height:500px;width:750px;cursor:default;"><table id="ctl00_CPH1_PopupVistaItem_CLW-1" cellspacing="0" cellpadding="0" border="0" style="height:500px;width:750px;border-collapse:collapse;border-collapse:separate;">
+				<tr>
+					<td id="ctl00_CPH1_PopupVistaItem_PWH-1" class="dxpcHeader" onmousedown="aspxPWDGMDown(event,&#39;ctl00_CPH1_PopupVistaItem&#39;,-1)" style="cursor:move;padding-left:12px;padding-right:2px;padding-top:2px;padding-bottom:2px;-khtml-user-select:none;"><table cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+						<tr>
+							<td id="ctl00_CPH1_PopupVistaItem_PWH-1T" class="dxpc" style="width:100%;">Vista Previa Item</td><td style="padding-left:4px;"><table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+								<tr>
+									<td id="ctl00_CPH1_PopupVistaItem_HCB-1" class="dxpcCloseButton" onclick="aspxPWCBClick(&#39;ctl00_CPH1_PopupVistaItem&#39;,-1)" onmousedown="return aspxPWCBMDown(event);" style="cursor:pointer;"><img id="ctl00_CPH1_PopupVistaItem_HCB-1Img" src="/DXR.axd?r=1_7" alt="[Close]" style="height:14px;width:15px;border-width:0px;" /></td>
+								</tr>
+							</table></td>
+						</tr>
+					</table></td>
+				</tr><tr>
+					<td id="ctl00_CPH1_PopupVistaItem_PWC-1" class="dxpcContent" style="height:100%;border-top-width:0px;padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">&nbsp;</td>
+				</tr>
+			</table></td><td style="background:url('/DXR.axd?r=1_71') no-repeat left top;"></td>
+		</tr><tr>
+			<td style="background:url('/DXR.axd?r=1_73') no-repeat left top;"></td><td><img src="/DXR.axd?r=1_72" alt="" style="height:5px;width:5px;border-width:0px;" /></td>
+		</tr>
+	</table>
+</div><div id="ctl00_CPH1_PopupVistaItem_DXPWMB-1" class="dxpcModalBackground" style="position:absolute;visibility:hidden;left:0px;top:0px;z-index:9999;">
+
+</div><script id="dxss_362747902" type="text/javascript">
+<!--
+aspxAddHoverItems('ctl00_CPH1_PopupVistaItem',[[['dxpcCloseButtonHover'],[''],['HCB-1']]]);
+
+var dxo = new ASPxClientPopupControl('ctl00_CPH1_PopupVistaItem');
+window['PopupVistaItem'] = dxo;
+dxo.uniqueID = 'ctl00$CPH1$PopupVistaItem';
+dxo.allowResize=true;
+dxo.closeAction='CloseButton';
+dxo.popupHorizontalAlign='WindowCenter';
+dxo.popupVerticalAlign='WindowCenter';
+dxo.isPopupPositionCorrectionOn=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+
+    <input name="ctl00$CPH1$hdnPliegoEncriptado" type="hidden" id="ctl00_CPH1_hdnPliegoEncriptado" value="tk7UtQXAQeQ=" />
+    <input name="ctl00$CPH1$hdnActoAdm" type="hidden" id="ctl00_CPH1_hdnActoAdm" value="E/gATy0jnXA=" />
+
+        </section>
+        <script src="/App_Themes/bastrap/scripts/jquery.min.js"></script>
+        <script src="/App_Themes/bastrap/scripts/bootstrap.min.js"></script>
+        
+        
+
+<script type="text/javascript">
+    function openModalNavegadores() {
+        $('#modalAvisoNavegadores').modal('show');
+    }
+
+    function openModalTerminos() {
+        $('#modalTerminosYCondiciones').modal('show');
+    }
+</script>
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sub-brand">
+                        <p class="text-center">
+                            <a class="bac-footer text-center" href="http://www.buenosaires.gob.ar" target="_blank">Buenos Aires Ciudad</a>
+                        </p>
+                        <p class="text-center">
+                            Dirección General de Compras y Contrataciones - 
+                        </p>
+                        <p class="text-center">
+                            <a id="ctl00_pie_lnkAvisoNavegadores" href="javascript:__doPostBack(&#39;ctl00$pie$lnkAvisoNavegadores&#39;,&#39;&#39;)">Avisos sobre Navegadores</a>
+                            |&nbsp;
+                            <a id="ctl00_pie_lnkTerminos" href="javascript:__doPostBack(&#39;ctl00$pie$lnkTerminos&#39;,&#39;&#39;)">Términos y Condiciones de Uso</a>
+                            
+                        </p>
+                        
+                        <div align="center" title="Haga Click para Verificar - Este sitio cuenta con un Certificado SSL para asegurar la confidencialidad de sus comunicaciones.">
+                            <a href="http://www.macroseguridad.net/ssl/"> <img src="/Imagenes/certificado/comodo_secure_76x26_white.png" alt="Certificado SSL" width="76" style="border: 0px;"></a><br>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal" id="modalAvisoNavegadores" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="ctl00_pie_div1" class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Aviso sobre Navegadores</h4>
+            </div>
+            <div class="modal-body" data-backdrop="static" data-keyboard="false">
+                <div class="container-fluid">
+                    Para brindar la mejor calidad y velocidad de navegación nuestro sitio está desarrollado en función de las últimas versiones de los navegadores:
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="container-fluid">
+                            <div class="carousel slide" data-ride="carousel" id="carousel">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img id="ctl00_pie_imgCarrousel" src="/App_Themes/bastrap/images/navegadores.jpg" style="border-width:0px;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="modalTerminosYCondiciones" tabindex="-2" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">POLÍTICAS, TERMINOS Y CONDICIONES DE USO DEL SISTEMA (PTCUS) “BUENOS AIRES COMPRAS”</h4>
+            </div>
+            <div class="modal-body" style="height: 500px; overflow-y: auto; text-align: justify;">
+                <h5>POLÍTICAS, TÉRMINOS Y CONDICIONES DE USO DEL SISTEMA COMUNES A TODOS LOS USUARIOS</h5>
+                <h5>ENCUADRE JURÍDICO</h5>
+                El acceso y/o uso al Sistema Electrónico de Adquisiciones y Contrataciones del Gobierno de la Ciudad Autónoma de Buenos Aires (GCABA), denominado Buenos Aires Compras (BAC), se efectúa en el marco de lo normado por el Art. 83 de la Ley 2095 y su Decreto Reglamentario, Decreto 1145/GCABA/2009, las Políticas, Términos y Condiciones de Uso del Sistema y las Condiciones Particulares que en el futuro puedan complementarlas, sustituirlas o modificarlas.
+                <h5>ACEPTACIÓN</h5>
+                Desde el momento de acceso y/o uso del BAC, se considera que el usuario acepta plenamente, y sin reserva alguna, las Políticas, Términos y Condiciones, así como las Condiciones Particulares de uso del sistema que pudieran dictarse, adhiriendo en forma inmediata a todas y cada una de ellas.
+                <h5>ACCESO</h5>
+                El acceso a BAC es público y gratuito, y se realiza a través de Internet, en el sitio cuya página principal se encuentra ubicada en <a href="http://www.buenosairescompras.gob.ar">http://www.buenosairescompras.gob.ar</a>. El Usuario deberá contar con un equipo y programas informáticos que cumplan con los requisitos mínimos de compatibilidad con el sistema que establezca el GCABA. El usuario toma conocimiento que cuando su equipo o programas de computación no reúnan tales requisitos mínimos, no podrá tener acceso al sistema y/o se podrá bloquear su acceso.
+                <h5>TÉRMINOS</h5>
+                A los efectos de las presentes Políticas, Términos y Condiciones, se entenderá que:
+                <br />
+                <u>BAC</u> constituye el medio informático a través del cual, los Organismos que componen el Gobierno de la Ciudad Autónoma de Buenos Aires señalados por el Art. 2 de la Ley 2095 publicarán sus llamados y efectuarán progresivamente sus procesos de contratación electrónica de bienes y servicios necesarios para su funcionamiento. El acceso a este portal es público y gratuito, y se realiza a través de la página web www.buenosairescompras.gob.ar. Asimismo, es medio de notificación fehaciente de todos los actos administrativos que se dicten en los respectivos procesos electrónicos, sin perjuicio de las demás formas de difusión y publicidad que la reglamentación vigente determina.
+                <br />
+                <u>USUARIOS DEL PROVEEDOR</u>: Es la persona hunmana que utiliza el BAC en representación de la persona humana o jurídica inscripta en el Registro Informatizado Único y Permanente de Proveedores del Gobierno de la Ciudad Autónoma de Buenos Aires como proveedor de bienes y servicios, conforme el procedimiento de autenticación de los usuarios de los proveedores establecido obrante en el Anexo II de la Resolución 596/GCABA/2011.
+                <br />
+                <u>USUARIOS COMPRADORES</u>: Es la persona humana designada por la Unidad Operativa de Compras, en adelante UOA, como responsable de la utilización del BAC, de acuerdo a los roles otorgados conforme al procedimiento de Administradores de Perfiles y Usuarios de BAC que establezca la Dirección General de Compras y Contrataciones.
+                <br />
+                <u>REGISTRO INFORMATIZADO UNICO Y PERMANENTE DE PROVEEDORES</u>
+                El Registro Informatizado Único y Permanente de Proveedores (RIUPP), a cargo de la Dirección de General de Compras y Contrataciones (DGCyC) o la que en el futuro la reemplace, dependiente del Ministerio de Hacienda se incorpora también al sistema del BAC. Este registro tiene por objeto registrar a todas las personas físicas y jurídicas proveedoras de bienes y servicios que deseen contratar con el Sector Público de la Ciudad Autónoma de Buenos Aires, donde se consignarán sus antecedentes legales, económicos y comerciales y constatará la existencia de inhabilidad o incompatibilidad para contratar con los Organismos de la Administración.
+                <br />
+                <u>PROTECCIÓN DE LA INFORMACIÓN CONTENIDA EN EL PORTAL</u>
+                Toda la información elaborada o disponible en, o a través del BAC, se encuentra protegida como propiedad intelectual. Está prohibido a todos los usuarios modificar, copiar, transmitir, vender, distribuir, exhibir, publicar, licenciar, crear trabajos derivados, o usar, en general, el contenido disponible en o a través del BAC para fines comerciales y otros.
+                <br />
+                <u>USO ADECUADO DEL BAC</u>
+                El usuario que ingresa a BAC, se compromete a utilizar el mismo en forma lícita y de acuerdo a las presentes PCUS. Se encuentra prohibido a los usuarios, la realización de actos maliciosos o que atenten contra el sitio, o que de alguna manera pueda dañar, sobrecargar, deteriorar, impedir o limitar la utilización de todas o algunas de las funcionalidades del mismo.
+                <br />
+                <u>RESPONSABILIDAD POR CLAVES DE USUARIO</u>
+                Los usuarios de BAC no pueden ceder, transferir o comunicar bajo ninguna circunstancia sus claves y nombres de usuarios, haciéndose plenamente responsables por los actos, documentos, anexos, ofertas y demás antecedentes que bajo esas claves y nombres de usuario, ingresen al BAC. Además, los usuarios asumen la obligación de cambiar sus claves frecuentemente, las que se debe evitar que sean evidentes y/o simples.
+                <br />
+                <u>RESPONSABILIDAD</u>
+                El Gobierno de la Ciudad Autónoma de Buenos Aires no se responsabiliza por los daños y/o perjuicios derivados del acceso y/o uso de los contenidos publicados en el BAC.
+                <br />
+                El Gobierno de la Ciudad Autónoma de Buenos Aires no se responsabiliza por las interrupciones de este servicio, ni por cualquier causa ajena que impida el acceso a la página por causa no imputable al mismo.
+                <br />
+                La veracidad e integridad de la totalidad de la información y contenido de los documentos publicados son de exclusiva responsabilidad de los usuarios que lo publican y envían, de acuerdo a las claves de acceso bajo las cuales actúen.
+                <br />
+                El Gobierno de la Ciudad Autónoma de Buenos Aires no es responsable por la interrupción en la recepción de e-mails por parte del usuario-proveedor.
+                <br />
+                El Gobierno de la Ciudad Autónoma de Buenos Aires no es responsable de los virus que puedan contener los documentos que adjuntan los usuarios del sitio. Es responsabilidad de cada usuario velar por los archivos que sube al sitio no tengan virus de ninguna especie. Las estadísticas e informes disponibles en el BAC, son meramente referenciales y no comprometen a la DGCyC o la que en el futuro la reemplace, ni al Gobierno de la Ciudad Autónoma de Buenos Aires.
+                <br />
+                <u>SUSPENSIÓN O ELIMINACIÓN DE USUARIOS</u>
+                La DGCyC o la que en el futuro la reemplace se reserva el derecho de suspender y/o eliminar unilateral y automáticamente del BAC a los usuarios que incumplan las PCUS.
+                <br />
+                <u>CENTRO DE CONTACTO. MESA DE AYUDA TELEFÓNICA</u>
+                La DGCyC o la que en el futuro la reemplace, establecerá para todos los usuarios del BAC, un centro de contacto, que contará con una mesa de ayuda telefónica. Esta mesa de ayuda atenderá las consultas de los usuarios sobre el funcionamiento del BAC en el horario de atención de lunes a viernes de 08:00 a 20:00 horas, en el número telefónico (011) 5236-4800 opción 8.
+                <h5>USUARIOS DE LOS PROVEEDORES</h5>
+                <u>CORREOS ELECTRÓNICOS ENVIADOS POR BAC A PROVEEDORES DURANTE EL PROCESO DE CONTRATACIÓN</u>
+                Los usuarios proveedores aceptan recibir permanentemente correos electrónicos relativos a procesos electrónicos de adquisición, órdenes de compra y demás información relevante, a la dirección de correo informado por ellos en el BAC.
+                <br />
+                El BAC es el medio obligatorio de publicación de los llamados y procesos de contratación electrónica del GCABA, sin perjuicio de las demás formas de difusión y publicidad que la reglamentación vigente determina.
+                <br />
+                Los correos electrónicos enviados por el BAC sólo constituyen un medio de aviso. Recomendándose a los proveedores revisar periódicamente del BAC en las páginas que corresponden -en particular Escritorio del Proveedor- para informarse de las novedades vinculadas a las etapas, desarrollo del proceso de adquisición electrónica y demás información relevante, como así también consultar las demás formas de difusión y publicidad que la reglamentación vigente determina.
+                <br />
+                <u>LIBERACIÓN DE RESPONSABILIDAD</u>
+                Los usuarios proveedores deben velar por la seriedad de las ofertas ingresadas al BAC, siendo plenamente responsables por las mismas.
+                <br />
+                Los usuarios proveedores deberán aceptar que el Gobierno de la Ciudad Autónoma de Buenos Aires carece de toda responsabilidad por los resultados que obtengan en cada uno de los procesos electrónicos de adquisición en que participen.
+                <br />
+                Los usuarios proveedores liberan al Gobierno de la Ciudad Autónoma de Buenos Aires de cualquier responsabilidad derivada de la dilación o no envío oportuno de correos electrónicos de alerta, declarando conocer que el medio de notificación es la publicación que cada Usuario Comprador efectúa en el BAC. La no recepción oportuna de correos electrónicos de alerta que envía el BAC, no justificará, ni se considerará como causal suficiente para eximir a los proponentes de sus cargas y responsabilidades.
+                <br />
+                <u>POLÍTICAS DE PRIVACIDAD</u>
+                Los usuarios proveedores del BAC aceptan por el solo hecho de su inscripción o registro en el sitio, que los datos, antecedentes e información aportados en las diversas etapas de los procesos en que participan, sean de público conocimiento en el ámbito de las transacciones que se efectúan en él y que solo están disponibles públicamente para esos efectos. Asimismo los usuarios del BAC por el sólo hecho de su inscripción, otorgan su conformidad para que los resultados de los procesos de contratación en que participen y las respectivas contrataciones formen parte de las estadísticas e informes, se procesen y se publiquen por parte del Gobierno de la Ciudad Autónoma de Buenos Aires.
+                <br />
+                Cuando se solicite por parte de terceros acceso a información que pudiese afectar derechos de los usuarios proveedores, tales como los relacionados con su vida privada o derechos de carácter económico o comercial, se procederá en un todo conforme a la Ley Nacional N° 25.326 de “Protección de Datos Personales” modificada por la Ley Nacional N°26.343, la Ley Nacional N°27.806 de “Transparencia y Acceso a la Información Pública”, y las Leyes Locales N°1.845 de “Protección de Datos Personales” reglamentada por el Decreto N° 725/2007 y la Ley 104 de “Acceso a la Información” y su Decreto Reglamentario N°1361/07 vigentes en el ámbito de la Ciudad Autónoma de Buenos Aires.
+                <br />
+                <u>DECLARACIÓN</u>
+                Los usuarios del BAC declaran conocer y aceptar la circunstancia relativa a que la DGCyC o la que en el futuro la reemplace, puede en cualquier momento modificar todo o en parte de las presentes PCUS, que serán oportunamente publicadas en BAC.
+                <br />
+                <u>USUARIOS COMPRADORES</u>
+                El usuario-comprador es responsable de la información que se publique y debe procurar que su contenido se adapte a las previsiones contempladas por la normativa vigente. Queda estrictamente prohibido a los usuarios compradores realizar cualquier uso del BAC ajeno al marco del proceso de compras públicas electrónicas. Los Organismos de Control están autorizados a utilizar el BAC con el objeto de asegurar el correcto desempeño de los distintos procesos y velar por su transparencia.
+                <br />
+                <u>LIMITE DE RESPONSABILIDAD DEL BAC SOBRE EL PROCESO DE ADQUISICIONES</u>
+                El BAC es un medio que facilita la realización de los procesos de contratación, sin garantizar la seriedad e idoneidad de las ofertas recibidas, las que deben ser evaluadas por cada usuario comprador, y en su caso, por la Comisión Evaluadora de Ofertas prevista en la Ley N°2095.
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+</body>
+</html>

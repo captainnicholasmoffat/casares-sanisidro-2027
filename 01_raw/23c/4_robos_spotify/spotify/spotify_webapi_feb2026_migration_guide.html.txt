@@ -1,0 +1,483 @@
+ February 2026 Web API Dev Mode Changes - Migration Guide | Spotify for Developers Skip to content
+ Documentation Documentation Products Web API 
+ Web Playback SDK 
+ Ads API 
+ iOS 
+ Android 
+ Embeds 
+ Commercial Hardware 
+ Open Access 
+ Spotify Soloist 
+ Guidelines Design 
+ Accessibility 
+ Legal 
+ Community 
+ 0
+ Documentation Documentation Products Web API 
+ Web Playback SDK 
+ Ads API 
+ iOS 
+ Android 
+ Embeds 
+ Commercial Hardware 
+ Open Access 
+ Spotify Soloist 
+ Guidelines Design 
+ Accessibility 
+ Legal 
+ Community 
+ Web API 
+ Overview 
+ Getting started 
+ Building with AI 
+ Concepts Concepts Concepts Access Token 
+ API calls 
+ Apps 
+ Authorization 
+ Redirect URIs 
+ Playlists 
+ Quota modes 
+ Rate limits 
+ Scopes 
+ Spotify URIs and IDs 
+ Track Relinking 
+ Tutorials Tutorials Tutorials Authorization code 
+ Authorization code PKCE 
+ Client credentials 
+ Implicit grant [Deprecated] 
+ Refreshing tokens 
+ Migration: Implicit grant to Authorization code 
+ Migration: Insecure redirect URI 
+ Migration: February 2026 Dev Mode Changes 
+ How-Tos How-Tos How-Tos Display your Spotify profile data in a web app 
+ Changelog Changelog Changelog July 2026 
+ May 2026 
+ March 2026 
+ February 2026 
+ Reference Albums Albums Albums Get Album
+ Get Several Albums
+ Get Album Tracks
+ Get User's Saved Albums
+ Save Albums for Current User
+ Remove Users' Saved Albums
+ Check User's Saved Albums
+ Get New Releases
+ Artists Artists Artists Get Artist
+ Get Several Artists
+ Get Artist's Albums
+ Get Artist's Top Tracks
+ Get Artist's Related Artists
+ Audiobooks Audiobooks Audiobooks Get an Audiobook
+ Get Several Audiobooks
+ Get Audiobook Chapters
+ Get User's Saved Audiobooks
+ Save Audiobooks for Current User
+ Remove User's Saved Audiobooks
+ Check User's Saved Audiobooks
+ Categories Categories Categories Get Several Browse Categories
+ Get Single Browse Category
+ Chapters Chapters Chapters Get a Chapter
+ Get Several Chapters
+ Episodes Episodes Episodes Get Episode
+ Get Several Episodes
+ Get User's Saved Episodes
+ Save Episodes for Current User
+ Remove User's Saved Episodes
+ Check User's Saved Episodes
+ Genres Genres Genres Get Available Genre Seeds
+ Library Library Library Save Items to Library
+ Remove Items from Library
+ Check User's Saved Items
+ Markets Markets Markets Get Available Markets
+ Player Player Player Get Playback State
+ Transfer Playback
+ Get Available Devices
+ Get Currently Playing Track
+ Start/Resume Playback
+ Pause Playback
+ Skip To Next
+ Skip To Previous
+ Seek To Position
+ Set Repeat Mode
+ Set Playback Volume
+ Toggle Playback Shuffle
+ Get Recently Played Tracks
+ Get the User's Queue
+ Add Item to Playback Queue
+ Playlists Playlists Playlists Get Playlist
+ Change Playlist Details
+ Get Playlist Items [DEPRECATED]
+ Update Playlist Items [DEPRECATED]
+ Add Items to Playlist [DEPRECATED]
+ Remove Playlist Items [DEPRECATED]
+ Get Playlist Items
+ Update Playlist Items
+ Add Items to Playlist
+ Remove Playlist Items
+ Get Current User's Playlists
+ Create Playlist
+ Get User's Playlists
+ Create Playlist for user
+ Get Featured Playlists
+ Get Category's Playlists
+ Get Playlist Cover Image
+ Add Custom Playlist Cover Image
+ Search Search Search Search for Item
+ Shows Shows Shows Get Show
+ Get Several Shows
+ Get Show Episodes
+ Get User's Saved Shows
+ Save Shows for Current User
+ Remove User's Saved Shows
+ Check User's Saved Shows
+ Tracks Tracks Tracks Get Track
+ Get Several Tracks
+ Get User's Saved Tracks
+ Save Tracks for Current User
+ Remove User's Saved Tracks
+ Check User's Saved Tracks
+ Get Several Tracks' Audio Features
+ Get Track's Audio Features
+ Get Track's Audio Analysis
+ Get Recommendations
+ Users Users Users Get Current User's Profile
+ Get User's Top Items
+ Get User's Profile
+ Follow Playlist
+ Unfollow Playlist
+ Get Followed Artists
+ Follow Artists or Users
+ Unfollow Artists or Users
+ Check If User Follows Artists or Users
+ Check if Current User Follows Playlist
+ Web API Overview 
+ Getting started 
+ Building with AI 
+ Concepts Concepts Concepts Access Token 
+ API calls 
+ Apps 
+ Authorization 
+ Redirect URIs 
+ Playlists 
+ Quota modes 
+ Rate limits 
+ Scopes 
+ Spotify URIs and IDs 
+ Track Relinking 
+ Tutorials Tutorials Tutorials Authorization code 
+ Authorization code PKCE 
+ Client credentials 
+ Implicit grant [Deprecated] 
+ Refreshing tokens 
+ Migration: Implicit grant to Authorization code 
+ Migration: Insecure redirect URI 
+ Migration: February 2026 Dev Mode Changes 
+ How-Tos How-Tos How-Tos Display your Spotify profile data in a web app 
+ Changelog Changelog Changelog July 2026 
+ May 2026 
+ March 2026 
+ February 2026 
+ Reference Albums Albums Albums Get Album
+ Get Several Albums
+ Get Album Tracks
+ Get User's Saved Albums
+ Save Albums for Current User
+ Remove Users' Saved Albums
+ Check User's Saved Albums
+ Get New Releases
+ Artists Artists Artists Get Artist
+ Get Several Artists
+ Get Artist's Albums
+ Get Artist's Top Tracks
+ Get Artist's Related Artists
+ Audiobooks Audiobooks Audiobooks Get an Audiobook
+ Get Several Audiobooks
+ Get Audiobook Chapters
+ Get User's Saved Audiobooks
+ Save Audiobooks for Current User
+ Remove User's Saved Audiobooks
+ Check User's Saved Audiobooks
+ Categories Categories Categories Get Several Browse Categories
+ Get Single Browse Category
+ Chapters Chapters Chapters Get a Chapter
+ Get Several Chapters
+ Episodes Episodes Episodes Get Episode
+ Get Several Episodes
+ Get User's Saved Episodes
+ Save Episodes for Current User
+ Remove User's Saved Episodes
+ Check User's Saved Episodes
+ Genres Genres Genres Get Available Genre Seeds
+ Library Library Library Save Items to Library
+ Remove Items from Library
+ Check User's Saved Items
+ Markets Markets Markets Get Available Markets
+ Player Player Player Get Playback State
+ Transfer Playback
+ Get Available Devices
+ Get Currently Playing Track
+ Start/Resume Playback
+ Pause Playback
+ Skip To Next
+ Skip To Previous
+ Seek To Position
+ Set Repeat Mode
+ Set Playback Volume
+ Toggle Playback Shuffle
+ Get Recently Played Tracks
+ Get the User's Queue
+ Add Item to Playback Queue
+ Playlists Playlists Playlists Get Playlist
+ Change Playlist Details
+ Get Playlist Items [DEPRECATED]
+ Update Playlist Items [DEPRECATED]
+ Add Items to Playlist [DEPRECATED]
+ Remove Playlist Items [DEPRECATED]
+ Get Playlist Items
+ Update Playlist Items
+ Add Items to Playlist
+ Remove Playlist Items
+ Get Current User's Playlists
+ Create Playlist
+ Get User's Playlists
+ Create Playlist for user
+ Get Featured Playlists
+ Get Category's Playlists
+ Get Playlist Cover Image
+ Add Custom Playlist Cover Image
+ Search Search Search Search for Item
+ Shows Shows Shows Get Show
+ Get Several Shows
+ Get Show Episodes
+ Get User's Saved Shows
+ Save Shows for Current User
+ Remove User's Saved Shows
+ Check User's Saved Shows
+ Tracks Tracks Tracks Get Track
+ Get Several Tracks
+ Get User's Saved Tracks
+ Save Tracks for Current User
+ Remove User's Saved Tracks
+ Check User's Saved Tracks
+ Get Several Tracks' Audio Features
+ Get Track's Audio Features
+ Get Track's Audio Analysis
+ Get Recommendations
+ Users Users Users Get Current User's Profile
+ Get User's Top Items
+ Get User's Profile
+ Follow Playlist
+ Unfollow Playlist
+ Get Followed Artists
+ Follow Artists or Users
+ Unfollow Artists or Users
+ Check If User Follows Artists or Users
+ Check if Current User Follows Playlist
+ February 2026 Web API Dev Mode Changes - Migration Guide 
+ This guide is here to help developers with existing apps migrate to the updated Web API following the February 2026 announcement . It covers what's changing, who is affected, and provides step-by-step migration paths for common use cases.
+ Who is affected?
+ Extended Quota Mode apps: No migration required. Apps in extended quota mode are not affected by any of the changes described in this guide — all existing endpoints, fields, and behaviors remain unchanged. You can optionally adopt the new generic library endpoints ( PUT/DELETE /me/library ) but your existing integrations will remain fully functional.
+ Development Mode apps: This guide is for you. Read on for the full details of what's changing and how to update your app.
+ Timeline
+ Date What happens 
+ February 11, 2026 New Development Mode apps are created with new restrictions 
+ March 9, 2026 Existing Development Mode apps are migrated to new restrictions 
+ Account and App Limit Changes
+ Premium Requirement
+ All Development Mode apps require the app owner to have an active Spotify Premium subscription. If the owner's Premium subscription lapses, the app will stop working. It will resume functioning once the owner resubscribes.
+ App Limits
+ Requirement New apps 
+ Client IDs per developer 1 
+ Users per app 5 
+ Info: As of July 2026, the Client IDs per developer limit has been increased
+to 25. See the
+ July 2026 Changelog 
+for details.
+ Existing apps are grandfathered: If you already have multiple Client IDs or more than 5 users, you will retain them. These limits only restrict what you can create or add going forward.
+ Endpoint Changes
+ Library Management
+ The entity type specific save, remove, follow, and unfollow endpoints have been replaced with generic library endpoints that work with Spotify URIs.
+ Saving items and following
+ Before: 
+ _ 10 PUT /me/tracks 
+ _ 10 PUT /me/albums 
+ _ 10 PUT /me/episodes 
+ _ 10 PUT /me/shows 
+ _ 10 PUT /me/audiobooks 
+ _ 10 PUT /me/following 
+ _ 10 PUT /playlists/{id}/followers 
+ After: 
+ _ 10 PUT /me/library 
+ The new PUT /me/library endpoint accepts Spotify URIs instead of IDs, allowing you to save or follow any supported content type in a single request. Appropriate scopes need to be passed depending on the entities being saved.
+ Removing items and unfollowing
+ Before: 
+ _ 10 DELETE /me/tracks 
+ _ 10 DELETE /me/albums 
+ _ 10 DELETE /me/episodes 
+ _ 10 DELETE /me/shows 
+ _ 10 DELETE /me/audiobooks 
+ _ 10 DELETE /me/following 
+ _ 10 DELETE /playlists/{id}/followers 
+ After: 
+ _ 10 DELETE /me/library 
+ Like the save endpoint, DELETE /me/library accepts Spotify URIs instead of IDs.
+ Checking if items are saved
+ The individual "contains" endpoints have been replaced with a single generic endpoint.
+ Before: 
+ _ 10 GET /me/tracks/contains 
+ _ 10 GET /me/albums/contains 
+ _ 10 GET /me/episodes/contains 
+ _ 10 GET /me/shows/contains 
+ _ 10 GET /me/audiobooks/contains 
+ _ 10 GET /me/following/contains 
+ _ 10 GET /playlists/{id}/followers/contains 
+ After: 
+ _ 10 GET /me/library/contains 
+ The new GET /me/library/contains endpoint accepts Spotify URIs instead of IDs.
+ Playlist Endpoint Renames
+ The playlist track management endpoints have been renamed from /tracks to /items :
+ Removed endpoint Replacement Comment 
+ POST /playlists/{id}/tracks POST /playlists/{id}/items 
+ GET /playlists/{id}/tracks GET /playlists/{id}/items Only available for playlists the user owns or collaborates on. Fields have been renamed in the response, see Playlist field changes for response changes. 
+ DELETE /playlists/{id}/tracks DELETE /playlists/{id}/items Parameter tracks renamed to items 
+ PUT /playlists/{playlist_id}/tracks PUT /playlists/{id}/items 
+ Batch/Bulk Fetch Endpoints (Removed)
+ The following batch endpoints are no longer available. Fetch items individually instead.
+ Removed endpoint Replacement 
+ GET /tracks GET /tracks/{id} (one request per track) 
+ GET /albums GET /albums/{id} 
+ GET /artists GET /artists/{id} 
+ GET /episodes GET /episodes/{id} 
+ GET /shows GET /shows/{id} 
+ GET /audiobooks GET /audiobooks/{id} 
+ GET /chapters GET /chapters/{id} 
+ Migration example: 
+ _ 11 // Before: Batch fetch 
+ _ 11 const response = await fetch('/v1/tracks?ids=id1,id2,id3'); 
+ _ 11 const { tracks } = await response.json(); 
+ _ 11 
+ _ 11 // After: Individual fetches 
+ _ 11 const trackIds = ['id1', 'id2', 'id3']; 
+ _ 11 const tracks = await Promise.all( 
+ _ 11 trackIds.map(id => 
+ _ 11 fetch(`/v1/tracks/${id}`).then(r => r.json()) 
+ _ 11 ) 
+ _ 11 ); 
+ Browse and Artist Endpoints (Removed)
+ Removed endpoint Description 
+ GET /browse/new-releases New album releases 
+ GET /browse/categories Browse categories list 
+ GET /browse/categories/{id} Single category details 
+ GET /artists/{id}/top-tracks Artist's top tracks by country 
+ Other User Data (Removed)
+ Removed endpoint Replacement 
+ GET /users/{id} No replacement - use GET /me for current user 
+ GET /users/{id}/playlists No replacement - use GET /me/playlists for current user 
+ POST /users/{user_id}/playlists POST /me/playlists 
+ GET /markets No replacement 
+ Search Endpoint
+ The GET /search endpoint's limit parameter has been updated:
+ Parameter Before After 
+ limit maximum 50 10 
+ limit default 20 5 
+ If your app relies on fetching more than 10 results per search request, you will need to paginate through results using the offset parameter.
+ Field Changes by Content Type
+ The following field changes apply across all endpoints that return these content types.
+ Removed fields
+ The following fields have been removed from response objects. Update your code to handle their absence gracefully.
+ Track
+ available_markets , external_ids (reverted — see March 2026 changelog ) , linked_from , popularity 
+ Album
+ album_group , available_markets , external_ids (reverted — see March 2026 changelog ) , label , popularity 
+ Artist
+ followers , popularity 
+ User (from GET /me )
+ country , email , explicit_content , followers , product 
+ Show
+ available_markets , publisher 
+ Audiobook / Chapter
+ available_markets , publisher (audiobook only)
+ Renamed fields
+ Playlist
+ The tracks field has been renamed:
+ Before After 
+ tracks items 
+ tracks.tracks items.items 
+ tracks.tracks.track items.items.item 
+ Important: Playlist contents ( items ) are only returned for playlists the user owns or collaborates on. For other playlists, only metadata is returned and the items field will be absent from the response.
+ Migration Checklist
+ Use this checklist to ensure your app is ready:
+ Account: Ensure the app owner has Spotify Premium
+ Library endpoints: Replace content-specific save/remove/follow/unfollow calls with PUT/DELETE /me/library 
+ Contains checks: Replace content-specific "contains" calls with GET /me/library/contains 
+ Batch fetches: Replace batch endpoints with individual fetch calls
+ Browse and artist endpoints: Remove features using browse categories, new releases, or artist top tracks
+ Other users: Remove features that fetch other users' profiles or playlists
+ Playlist endpoints: Update /playlists/{id}/tracks calls to /playlists/{id}/items 
+ Playlist handling: Update code for the tracks → items field rename
+ Removed fields: Handle missing fields gracefully (check for undefined/null)
+ Search pagination: Update search requests to handle the reduced limit maximum (10) and paginate if needed
+ Global recommendation: Limit API calls to avoid hitting rate limits
+ Common Migration Patterns
+ Pattern 1: Updating library save calls
+ _ 14 // Before 
+ _ 14 await spotify.put('/me/tracks', { ids: ['trackId1', 'trackId2'] }); 
+ _ 14 await spotify.put('/me/albums', { ids: ['albumId1'] }); 
+ _ 14 await spotify.put('/me/following', { ids: ['artistId1'], type: 'artist' }); 
+ _ 14 
+ _ 14 // After — all entity types in a single call 
+ _ 14 await spotify.put('/me/library', { 
+ _ 14 uris: [ 
+ _ 14 'spotify:track:trackId1', 
+ _ 14 'spotify:track:trackId2', 
+ _ 14 'spotify:album:albumId1', 
+ _ 14 'spotify:artist:artistId1' 
+ _ 14 ] 
+ _ 14 }); 
+ Pattern 2: Handling missing popularity field
+ _ 10 // Before 
+ _ 10 const sortedTracks = tracks.sort((a, b) => b.popularity - a.popularity); 
+ _ 10 
+ _ 10 // After - popularity is no longer available 
+ _ 10 // Consider alternative sorting criteria or remove this feature 
+ _ 10 const sortedTracks = tracks.sort((a, b) => 
+ _ 10 a.name.localeCompare(b.name) 
+ _ 10 ); 
+ Pattern 3: Handling playlist field rename
+ _ 12 // Before 
+ _ 12 const trackCount = playlist.tracks.total; 
+ _ 12 const firstTrack = playlist.tracks.items[0].track; 
+ _ 12 
+ _ 12 // After 
+ _ 12 const trackCount = playlist.items?.total ?? 0; 
+ _ 12 const firstTrack = playlist.items?.items?.[0]?.item; 
+ _ 12 
+ _ 12 // Note: items may be undefined for playlists you don't own 
+ _ 12 if (!playlist.items) { 
+ _ 12 console.log('Track details not available for this playlist'); 
+ _ 12 } 
+ Need Help?
+ Full list of available endpoints 
+ Developer Community forum 
+ Footer
+ Documentation
+ Web API 
+ Web Playback SDK 
+ Ads API 
+ iOS 
+ Android 
+ Embeds 
+ Commercial Hardware 
+ Guidelines
+ Design 
+ Accessibility 
+ Community
+ News 
+ Forum 
+ Legal
+ Developer Terms 
+ Developer Policy 
+ Compliance Tips 
+ Third Party Licenses 
+ Legal Cookies © 2026 Spotify AB 
+ 

@@ -1,0 +1,283 @@
+
+ Calculadora de cuotas  |  YouTube Data API  |  Google for Developers 
+ Ir al contenido principal
+ YouTube
+ Data API
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Acceder 
+ Página principal
+ Guías
+ Referencia
+ Ejemplos
+ YouTube
+ Data API
+ Página principal
+ Guías
+ Referencia
+ Ejemplos
+ Descripción general 
+ Bibliotecas cliente 
+ Cómo autorizar solicitudes 
+ Descripción general 
+ Obtener credenciales de autenticación 
+ Aplicaciones web del servidor 
+ Aplicaciones web del cliente 
+ Apps instaladas 
+ Dispositivos 
+ Guías de inicio rápido 
+ Android 
+ Apps Script 
+ Go 
+ iOS 
+ Java 
+ JavaScript 
+ Node.js 
+ PHP 
+ Python 
+ Ruby 
+ Guías y tutoriales 
+ Costos de cuota para solicitudes a la API 
+ Auditorías de cuotas y cumplimiento 
+ Subir un video 
+ Enviar cargas reanudables 
+ Cómo encontrar el estado de video de MadeForKids 
+ Suscribirse a las notificaciones de aplicación 
+ Cómo trabajar con los ID del canal 
+ Cambiar de ClientLogin a OAuth 
+ Solicitudes de muestra 
+ Guía de implementación 
+ Descripción general 
+ Actividades 
+ Subtítulos 
+ Canales 
+ Comentarios 
+ Paginación 
+ Respuestas parciales 
+ Playlists 
+ Clasificaciones 
+ Solicitudes de búsqueda 
+ Suscripciones 
+ Videos 
+ Herramientas 
+ Explorador de API 
+ Google usa tecnología de IA para traducir contenido al idioma que prefieras. Las traducciones generadas por IA pueden contener errores.
+ Página principal
+ Productos
+ YouTube
+ Data API
+ Guías
+ Calculadora de cuotas 
+ Organízate con las colecciones
+ Guarda y clasifica el contenido según tus preferencias.
+ En la siguiente tabla se muestra el coste de cuota de cada método de la API. Todas las solicitudes a la API, incluidas las solicitudes no válidas, tienen un coste de cuota de al menos un punto.
+ Los proyectos que habilitan la API YouTube Data tienen una asignación de cuota predeterminada de 100 llamadas a search.list , 100 llamadas a videos.insert y 10.000 unidades al día combinadas para todos los demás endpoints. Puedes consultar el uso de la cuota en la página Cuotas de la Consola de APIs de Google. Las cuotas diarias se restablecen a medianoche, hora del Pacífico (PT).
+ Los siguientes puntos merecen la pena destacarse, ya que afectan al uso de la cuota:
+ Los métodos search.list y videos.insert tienen sus propios depósitos de cuota. Cada uno de estos métodos tiene un límite diario predeterminado de 100. El coste de cuota es de 1 por llamada.
+ Si tu aplicación llama a un método, como search.list , que devuelve varias
+ páginas de resultados, cada solicitud para recuperar una página adicional de resultados incurre en el coste de cuota estimado.
+ Los métodos de la YouTube Live Streaming API forman parte, técnicamente, de la API YouTube Data, y las llamadas a
+ esos métodos también incurren en costes de cuota. Por lo tanto, los métodos de la API para la emisión en directo también se incluyen en
+ la tabla.
+ Costes de cuota 
+ recurso 
+ método 
+ coste 
+ activities
+ list 
+ 1 
+ captions
+ list 
+ 50 
+ insert 
+ 400 
+ update 
+ 450 
+ delete 
+ 50 
+ channelBanners
+ insert 
+ 50 
+ channels
+ list 
+ 1 
+ update 
+ 50 
+ channelSections
+ list 
+ 1 
+ insert 
+ 50 
+ update 
+ 50 
+ delete 
+ 50 
+ comments
+ list 
+ 1 
+ insert 
+ 50 
+ update 
+ 50 
+ setModerationStatus 
+ 50 
+ delete 
+ 50 
+ commentThreads
+ list 
+ 1 
+ insert 
+ 50 
+ update 
+ 50 
+ guideCategories
+ list 
+ 1 
+ i18nLanguages
+ list 
+ 1 
+ i18nRegions
+ list 
+ 1 
+ members
+ list 
+ 1 
+ membershipsLevels
+ list 
+ 1 
+ playlistItems
+ list 
+ 1 
+ insert 
+ 50 
+ update 
+ 50 
+ delete 
+ 50 
+ playlists
+ list 
+ 1 
+ insert 
+ 50 
+ update 
+ 50 
+ delete 
+ 50 
+ search
+ list 
+ 100 unidades de cuota al día. Cada llamada cuesta 1 unidad de cuota. 
+ subscriptions
+ list 
+ 1 
+ insert 
+ 50 
+ delete 
+ 50 
+ thumbnails
+ set 
+ 50 
+ videoAbuseReportReasons
+ list 
+ 1 
+ videoCategories
+ list 
+ 1 
+ videos
+ list 
+ 1 
+ insert 
+ 100 unidades de cuota al día. Cada llamada cuesta 1 unidad de cuota. 
+ update 
+ 50 
+ rate 
+ 50 
+ getRating 
+ 1 
+ reportAbuse 
+ 50 
+ delete 
+ 50 
+ watermarks
+ set 
+ 50 
+ unset 
+ 50 
+ A menos que se indique lo contrario, el contenido de esta página está sujeto a la licencia Reconocimiento 4.0 de Creative Commons y las muestras de código están sujetas a la licencia Apache 2.0 . Para obtener más información, consulta las políticas del sitio web de Google Developers . Java es una marca registrada de Oracle o sus afiliados.
+ Última actualización: 2026-09-12 (UTC).
+ [[["Es fácil de entender","easyToUnderstand","thumb-up"],["Me ofreció una solución al problema","solvedMyProblem","thumb-up"],["Otro","otherUp","thumb-up"]],[["Me falta la información que necesito","missingTheInformationINeed","thumb-down"],["Es demasiado complicado o hay demasiados pasos","tooComplicatedTooManySteps","thumb-down"],["Está obsoleto","outOfDate","thumb-down"],["Problema de traducción","translationIssue","thumb-down"],["Problema de muestras o código","samplesCodeIssue","thumb-down"],["Otro","otherDown","thumb-down"]],["Última actualización: 2026-09-12 (UTC)."],[],["API requests have quota costs, with a minimum of one point per request, even if invalid. Retrieving multiple result pages from methods like `search.list` costs quota for each page. Live Streaming API methods, part of the YouTube Data API, also incur costs. Quota costs vary by resource and method, ranging from 1 for actions such as `list` to 1600 for actions like `videos insert`. Methods like `insert`, `update`, and `delete` typically cost more.\n"]]
+ Blog
+ Las últimas noticias del blog de YouTube
+ GitHub
+ Encuentra ejemplos de código de API y otros proyectos de código abierto de YouTube.
+ Herramienta de seguimiento de errores
+ ¿Tienes algún problema? Envíanos un informe de errores.
+ Stack Overflow
+ Haz una pregunta con la etiqueta youtube-api
+ Programa de investigación de YouTube
+ Para investigadores interesados en usar datos de la API global de YouTube
+ Herramientas
+ Explorador de APIs de Google
+ Demostración del reproductor de YouTube
+ Cómo configurar un botón de suscripción
+ Herramienta de seguimiento de errores
+ Informa un error
+ Solicitar una función
+ Ver incidentes abiertos
+ Información sobre el producto
+ Condiciones del Servicio
+ Políticas para Desarrolladores
+ Funcionalidad mínima requerida
+ Lineamientos de desarrollo de la marca
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ Todos los productos
+ Condiciones
+ Privacidad
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<title>API - Guide - SoundCloud Developers</title>
+<script src="/assets/application-66afef9566e52eeb710b8ab0295ed19398dde7b79f0e67e024c4f6a1e401a949.js"></script>
+<link rel="stylesheet" href="/assets/application-7a60446fd4edbc4cf356ce32f1300f2f90f1c0a86ba9f0f2ea02a16319fbb4eb.css" />
+<meta content='#333' name='theme-color'>
+</head>
+<body class='docs'>
+<div class='sc-header'>
+<nav class='sc-nav'>
+<a class="sc-logo" title="Go to SoundCloud.com" aria-label="SoundCloud" href="https://soundcloud.com/"></a>
+<ul class='sc-nav__links'>
+<li><a class="sc-nav__highlight" href="https://soundcloud.com/you/apps">Your Apps</a></li>
+<li><a href="https://soundcloud.com/jobs">Jobs</a></li>
+<li><a class="sc-nav__highlight" href="https://developers.soundcloud.com/blog">Blog</a></li>
+</ul>
+<button aria-expanded='false' aria-label='Open menu' class='sc-nav__hamburger'>
+<span></span>
+<span></span>
+<span></span>
+</button>
+</nav>
+</div>
+
+<div class='sc-header-wipeout'>
+<div class='two-columns'>
+<aside class='menu'>
+<div class='main-menu line-sidebar line-sidebar--markers line-sidebar--scale-tick'>
+<ul class='line-sidebar__list'>
+<li class='line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" aria-label="Back to home" href="/"><svg class="line-sidebar__icon" width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</a></li>
+<li class='head line-sidebar__item newLink'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/building-with-ai">Building with AI
+</a><b class='new'>new!</b>
+</li>
+<li class='head line-sidebar__item newLink'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/register-app">Get an API key</a>
+<b class='new'>new!</b>
+</li>
+
+<li class='active head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/guide">API Guide</a>
+</li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#authentication"><span class='line-sidebar__index'>01</span>
+<span class='line-sidebar__text'>Authentication</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#uploading"><span class='line-sidebar__index'>02</span>
+<span class='line-sidebar__text'>Uploading Tracks</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#playing"><span class='line-sidebar__index'>03</span>
+<span class='line-sidebar__text'>Playing Tracks</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#follow"><span class='line-sidebar__index'>04</span>
+<span class='line-sidebar__text'>Follow &amp; Like</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#search"><span class='line-sidebar__index'>05</span>
+<span class='line-sidebar__text'>Search</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#pagination"><span class='line-sidebar__index'>06</span>
+<span class='line-sidebar__text'>Pagination</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#resolving"><span class='line-sidebar__index'>07</span>
+<span class='line-sidebar__text'>SoundCloud URLs</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#crossdomain"><span class='line-sidebar__index'>08</span>
+<span class='line-sidebar__text'>Cross Domain Requests</span>
+</a></li>
+<li class='sub line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="#errors"><span class='line-sidebar__index'>09</span>
+<span class='line-sidebar__text'>Errors</span>
+</a></li>
+
+
+<li class='head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/html5-widget">Widget API</a>
+</li>
+
+<li class='head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/rate-limits">Rate Limits</a>
+</li>
+
+<li class='head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/support">Support
+</a></li>
+<li class='head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/buttons-logos">Buttons &amp; Logos</a>
+</li>
+
+<li class='head line-sidebar__item'>
+<span class='line-sidebar__marker'></span>
+<a class="line-sidebar__label" href="/docs/api/terms-of-use">Terms of Use</a>
+</li>
+
+</ul>
+</div>
+
+</aside>
+<section id='content'>
+<h1 id="api-guide">API Guide</h1>
+<h2 id="overview">Overview<a href="#overview" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The SoundCloud API provides endpoints for authentication, track upload and playback, social features, and search. This guide covers common integration patterns with code examples. For detailed endpoint specifications, see the <a href="/docs/api/explorer/open-api">API Explorer</a>. If you use an AI coding assistant, see <a href="/docs/building-with-ai">Building with AI</a> for OpenAPI-first prompt templates and example requests.</p>
+<h3 id="key-facts">Key Facts<a href="#key-facts" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<ul>
+<li><strong>Base URL:</strong> <code>https://api.soundcloud.com</code></li>
+<li><strong>Auth URL:</strong> <code>https://secure.soundcloud.com</code></li>
+<li><strong>Auth method:</strong> OAuth 2.1 with PKCE</li>
+<li><strong>Token expiry:</strong> ~1 hour</li>
+<li><strong>Token refresh:</strong> single-use refresh tokens</li>
+<li><strong>Required header:</strong> <code>Authorization: OAuth ACCESS_TOKEN</code></li>
+<li><strong>Full reference:</strong> <a href="https://swagger.io/specification/">OpenAPI spec</a> via the <a href="/docs/api/explorer/open-api">Swagger UI Explorer</a> or <a href="https://github.com/soundcloud/api/blob/master/openapi/api.yaml">YAML on GitHub</a>, updated on each <a href="https://github.com/soundcloud/api/releases">release</a>. File issues via the <a href="https://github.com/soundcloud/api">GitHub Issue Tracker</a>.</li>
+<li><strong>Upload source formats (examples):</strong> AIFF, WAVE, FLAC, OGG, MP2, MP3, AAC, AMR, WMA — canonical list, limits, and recording tips: <a href="https://help.soundcloud.com/hc/en-us/articles/360039171614-Upload-Requirements">Upload Requirements</a> (same rules for API and in-app uploads)</li>
+<li><strong>Upload limits:</strong> up to <strong>4 GB</strong> per file and <strong>24 hours</strong> of audio per track (<a href="https://help.soundcloud.com/hc/en-us/articles/360039171614-Upload-Requirements">Upload Requirements</a>)</li>
+<li><strong>Playback / transcoding:</strong> SoundCloud <strong>transcodes</strong> uploads into high-quality <strong>streaming formats (such as AAC)</strong> for listeners. SoundCloud Help: <em>“SoundCloud transcodes your audio into high-quality streaming formats (like AAC), but starting with a lossless file gives listeners the most detailed sound.”</em></li>
+</ul>
+<h3 id="prerequisites">Prerequisites<a href="#prerequisites" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>All API usage requires a registered application:</p>
+
+<ol>
+<li><strong><a href="/docs/api/register-app">Get an API key</a></strong> — create a SoundCloud account (Artist Pro required), register an app in the browser or with the <a href="/docs/api/register-app#alternative-register-from-the-command-line">API credentials CLI</a>, and copy your <code>client_id</code> and <code>client_secret</code></li>
+<li><a href="https://soundcloud.com/you/apps">Manage your apps</a> anytime after registration</li>
+<li><a href="#authentication">Authenticate</a> (required for endpoints that access user resources)</li>
+</ol>
+<h2 id="authentication">Authentication<a href="#authentication" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>SoundCloud uses <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-05">OAuth 2.1</a> for authentication. <a href="https://www.rfc-editor.org/rfc/rfc7636.html">PKCE is required</a> for the authorization code exchange.</p>
+
+<p>If migrating from OAuth 2.0, see the <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-05#section-10">differences in the RFC</a>.</p>
+<h3 id="supported-authorization-flows">Supported Authorization Flows<a href="#supported-authorization-flows" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<table><thead>
+<tr>
+<th>Flow</th>
+<th>User Resources Access</th>
+<th>Server-side Implementation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization Code</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Client Credentials</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+
+<ul>
+<li><strong>Authorization Code:</strong> For applications that perform actions on a user&#39;s behalf (upload, access private content). Requires user consent.</li>
+<li><strong>Client Credentials:</strong> For applications accessing public resources only (search, playback, URL resolution). No user session required.</li>
+</ul>
+<h3 id="sign-in-with-soundcloud">Sign in with SoundCloud<a href="#sign-in-with-soundcloud" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>The Connect with SoundCloud button enables one-click OAuth registration and sign-in. After authorization, the application gains access to the user&#39;s account for uploading, playlist creation, and other user-scoped actions.</p>
+<h3 id="authorization-code-flow">Authorization Code Flow<a href="#authorization-code-flow" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+<h4 id="1-redirect-user-to-authorization-url">1. Redirect User to Authorization URL<a href="#1-redirect-user-to-authorization-url" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>Construct the authorization URL with the required parameters and redirect the user&#39;s browser to it. This step runs on the front-end.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># open in the browser</span>
+
+https://secure.soundcloud.com/authorize?client_id<span class="o">=</span>YOUR_CLIENT_ID&amp;redirect_uri<span class="o">=</span>YOUR_REDIRECT_URI&amp;response_type<span class="o">=</span>code&amp;code_challenge<span class="o">=</span>CODE_CHALLENGE&amp;code_challenge_method<span class="o">=</span>S256&amp;state<span class="o">=</span>STATE
+</code></pre></div>
+<p>Parameters:
+- <code>YOUR_CLIENT_ID</code>: The client ID from application registration.
+- <code>YOUR_REDIRECT_URI</code>: The URI from application registration. The user is redirected here after authentication.
+- <code>CODE_CHALLENGE</code>: A PKCE code challenge. See <a href="https://blog.postman.com/what-is-pkce/">What is PKCE?</a> and <a href="https://example-app.com/pkce">PKCE generator sandbox</a>.
+- <code>STATE</code>: A random string for <a href="https://tools.ietf.org/html/draft-ietf-oauth-security-topics-16#section-4.7">CSRF protection</a>. Verify this nonce after retrieving the token.</p>
+<h4 id="2-user-authorization">2. User Authorization<a href="#2-user-authorization" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The user is redirected to SoundCloud to log in and approve the authorization request.</p>
+<h4 id="3-obtain-access-token">3. Obtain Access Token<a href="#3-obtain-access-token" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>After approval, SoundCloud redirects to your <code>redirect_uri</code> with a <code>code</code> query parameter. Exchange this code for an access token:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://secure.soundcloud.com/oauth/token"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"grant_type=authorization_code"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"client_id=YOUR_CLIENT_ID"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"client_secret=YOUR_CLIENT_SECRET"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"redirect_uri=YOUR_REDIRECT_URI"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"code_verifier=YOUR_PKCE_GENERATED_CODE_VERIFIER"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"code=YOUR_CODE"</span>
+</code></pre></div>
+<p>Parameters:
+- <code>YOUR_CLIENT_ID</code>, <code>YOUR_CLIENT_SECRET</code>: From application registration.
+- <code>YOUR_PKCE_GENERATED_CODE_VERIFIER</code>: Generated by your application during step 1.
+- <code>YOUR_REDIRECT_URI</code>: Must match the URI used in the authorization request exactly.
+- <code>YOUR_CODE</code>: The authorization code received from the authorization server.</p>
+<h4 id="4-store-and-use-tokens">4. Store and Use Tokens<a href="#4-store-and-use-tokens" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The response contains <code>access_token</code>, <code>refresh_token</code>, <code>expires_in</code>, and <code>scope</code>. Store these values associated with the user. Use the <code>access_token</code> for subsequent API requests and the <code>refresh_token</code> to <a href="#refreshing-tokens">renew expired tokens</a>.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="s2">"https://api.soundcloud.com/me"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h3 id="client-credentials-token-exchange-flow">Client Credentials Token Exchange Flow<a href="#client-credentials-token-exchange-flow" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>The Client Credentials flow authenticates an application (not a user) to access public resources. Send <code>client_id</code> and <code>client_secret</code> via HTTP Basic authentication to obtain an access token.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://secure.soundcloud.com/oauth/token"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"Authorization: Basic Base64(client_id:client_secret)"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"grant_type=client_credentials"</span>
+
+<span class="c"># If your client_id is "my_client_id" and client_secret is "my_client_secret"</span>
+<span class="c"># The concatenated string would be "my_client_id:my_client_secret"</span>
+<span class="c"># The Base64 encoded string of "my_client_id:my_client_secret" is "bXlfY2xpZW50X2lkOm15X2NsaWVudF9zZWNyZXQ="</span>
+</code></pre></div>
+<p>For the <code>client_credentials</code> grant type, only HTTP Basic authentication (<code>Authorization: Basic ...</code>) is supported. Sending credentials in the request body is not supported.</p>
+
+<p>The response contains <code>access_token</code>, <code>refresh_token</code>, <code>expires_in</code>, and <code>scope</code>. Store and reuse the token; use <code>refresh_token</code> to renew expired tokens.</p>
+
+<p><strong>Constraints — Client Credentials token rate limits:</strong>
+- 50 tokens per 12 hours per application
+- 30 tokens per 1 hour per IP address
+- Reuse tokens across service instances
+- Implement the refresh token flow to stay within limits</p>
+
+<p>Note: All clients are currently treated as <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10#name-client-types">confidential rather than public</a>, meaning a secret is required to obtain a token.</p>
+<h3 id="refreshing-tokens">Refreshing Tokens<a href="#refreshing-tokens" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Access tokens expire after approximately 1 hour. Use the <code>refresh_token</code> to obtain a new access token. Each refresh token is single-use.</p>
+
+<p>Note: All clients are currently treated as <a href="https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1-10#name-client-types">confidential rather than public</a>, meaning a secret is required to obtain a token.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://secure.soundcloud.com/oauth/token"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+     <span class="nt">-H</span>  <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"grant_type=refresh_token"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"client_id=YOUR_CLIENT_ID"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"client_secret=YOUR_CLIENT_SECRET"</span> <span class="se">\</span>
+     <span class="nt">--data-urlencode</span> <span class="s2">"refresh_token=YOUR_TOKEN"</span>
+</code></pre></div><h3 id="mobile-and-desktop-applications">Mobile and Desktop Applications<a href="#mobile-and-desktop-applications" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Mobile and desktop applications use the same authorization code flow as web applications. Use a custom protocol scheme for the <code>redirect_uri</code> (e.g., <code>my-app://soundcloud/callback</code>).</p>
+
+<p>For mobile devices, add <code>display=popup</code> to the authorization URL query string to use the mobile-optimized connect screen.</p>
+<h3 id="signing-out">Signing Out<a href="#signing-out" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>To sign out the user, send the access_token as follows:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://secure.soundcloud.com/sign-out"</span> <span class="se">\</span>
+     <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+     <span class="nt">-d</span> <span class="s1">'{"access_token": "ACCESS_TOKEN"}'</span>
+</code></pre></div>
+<p>Error responses have the following format:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># Error:</span>
+  <span class="o">{</span>
+    <span class="s2">"error"</span>: <span class="s2">"XXXX"</span>
+  <span class="o">}</span>
+</code></pre></div>
+<p>Sign-out error details:</p>
+
+<table><thead>
+<tr>
+<th>Response</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bad_request</td>
+<td>400</td>
+<td>body is missing access token</td>
+</tr>
+<tr>
+<td>unauthorized</td>
+<td>401</td>
+<td>this token is associated with a session that is already invalid</td>
+</tr>
+</tbody></table>
+<h3 id="accessing-resources">Accessing Resources<a href="#accessing-resources" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Every API request requires an <code>Authorization</code> header:</p>
+
+<p><code>-H &quot;Authorization: OAuth ACCESS_TOKEN&quot;</code></p>
+
+<p>Requests without this header return <code>401 Unauthorized</code>. See the <a href="#authentication">Authentication</a> section for supported auth methods.</p>
+<h3 id="getting-information-about-the-authenticated-user">Getting Information about the Authenticated User<a href="#getting-information-about-the-authenticated-user" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>The <code>/me</code> endpoint returns profile information for the authenticated user.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="s2">"https://api.soundcloud.com/me"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h2 id="uploading">Uploading Tracks<a href="#uploading" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The API supports uploading, managing, and sharing tracks. <strong><a href="https://help.soundcloud.com/hc/en-us/articles/360039171614-Upload-Requirements">SoundCloud Upload Requirements</a></strong> is the general reference for formats, file preparation, and quality — <strong>all of that guidance applies to API uploads as well</strong> as to uploads from the SoundCloud website or apps.</p>
+
+<p><strong>Limits:</strong> each upload may be up to <strong>4 GB</strong> and <strong>24 hours</strong> of audio in length (see the help article above).</p>
+
+<blockquote>
+<p>SoundCloud transcodes your audio into high-quality streaming formats (like AAC), but starting with a lossless file gives listeners the most detailed sound.</p>
+</blockquote>
+
+<p>Accepted source formats include: AIFF, WAVE, FLAC, OGG, MP2, MP3, AAC, AMR, WMA. After a successful upload the track is <strong>queued for encoding</strong>; listeners stream <strong>transcoded</strong> output (for example <strong>AAC</strong>), not the raw bytes of your uploaded file.</p>
+<h3 id="uploading-audio-files">Uploading Audio Files<a href="#uploading-audio-files" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Send a <code>POST</code> request with <code>multipart/form-data</code> to the <a href="/docs/api/explorer/open-api#/tracks/post_tracks">/tracks</a> endpoint.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://api.soundcloud.com/tracks"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Content-Type: multipart/form-data"</span> <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[title]=YOUR_TITLE"</span> <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[artist]=YOUR_ARTIST"</span> <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[asset_data]=@PATH_TO_A_FILE"</span>
+</code></pre></div>
+<p>On success, the track is queued for encoding. The response includes <code>metadata_artist</code> (see <a href="#artist-metadata">Artist metadata</a>).</p>
+<h3 id="artist-metadata">Artist metadata<a href="#artist-metadata" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Track responses include a <code>metadata_artist</code> field: the artist name shown on SoundCloud when it differs from the uploader&#39;s profile name. If omitted, SoundCloud defaults to the uploader&#39;s profile name.</p>
+
+<p><strong>Field names differ between upload and response:</strong></p>
+
+<table><thead>
+<tr>
+<th>Operation</th>
+<th>Parameter</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Multipart upload (<code>POST /tracks</code>)</td>
+<td><code>track[artist]</code></td>
+</tr>
+<tr>
+<td>Track response (<code>GET</code>, upload response)</td>
+<td><code>metadata_artist</code></td>
+</tr>
+<tr>
+<td>JSON metadata update (<code>PUT /tracks/:id</code>)</td>
+<td><code>metadata_artist</code> inside the <code>track</code> object</td>
+</tr>
+</tbody></table>
+
+<p>Do not use <code>track[metadata_artist]</code> on upload — that parameter is not supported. Set <code>track[artist]</code> when uploading; read and update <code>metadata_artist</code> on the returned track object.</p>
+
+<p>See also: <a href="https://developers.soundcloud.com/blog/api-artist-metadata">New artist name field on our API</a>.</p>
+<h3 id="updating-metadata">Updating Metadata<a href="#updating-metadata" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>To update track metadata, send a <code>PUT</code> request to the <a href="/docs/api/explorer/open-api#/tracks/put_tracks__track_id_">/tracks/:id</a> endpoint with the properties to update.</p>
+
+<p>Track artwork can be updated via the <code>artwork_data</code> parameter. The audio file cannot be updated after upload.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># Multipart request</span>
+curl <span class="nt">-X</span> PUT <span class="s2">"https://api.soundcloud.com/tracks/TRACK_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Content-Type: multipart/form-data"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span> <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[title]=YOUR_TITLE"</span> <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[description]=YOUR_DESCRIPTION"</span>  <span class="se">\</span>
+       <span class="nt">-F</span> <span class="s2">"track[artwork_data]=@PATH_TO_FILE"</span>
+
+<span class="c"># JSON request</span>
+curl <span class="nt">-X</span> PUT <span class="s2">"https://api.soundcloud.com/tracks/TRACK_ID"</span>  <span class="se">\</span>
+      <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+      <span class="nt">-H</span>  <span class="s2">"Content-Type: application/json"</span>  <span class="se">\</span>
+      <span class="nt">-H</span>  <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>  <span class="se">\</span>
+      <span class="nt">-d</span> <span class="s1">'{"track":{"title":"NEW TITLE", "metadata_artist":"YOUR_ARTIST"}}'</span>
+</code></pre></div><h3 id="creating-playlists">Creating Playlists<a href="#creating-playlists" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Playlists group tracks for sharing. A track can belong to multiple playlists. Playlists can be public or private.</p>
+
+<p>Create a playlist by sending a <code>POST</code> request to <a href="/docs/api/explorer/open-api#/playlists/post_playlists">/playlists</a> with playlist metadata and a list of track IDs.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://api.soundcloud.com/playlists"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span> <span class="se">\</span>
+       <span class="nt">-d</span> <span class="s1">'{"playlist": {"title":"YOUR_TITLE", "description":"YOUR_DESCRIPTION", "sharing":"public", "tracks":[{"id":1},{"id":2},{"id":3}]}}'</span>
+</code></pre></div><h3 id="adding-tracks-to-a-playlist">Adding Tracks to a Playlist<a href="#adding-tracks-to-a-playlist" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Add tracks to an existing playlist by updating the <code>tracks</code> property via <code>PUT</code>.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> PUT <span class="s2">"https://api.soundcloud.com/playlists/PLAYLIST_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span> <span class="se">\</span>
+       <span class="nt">-d</span> <span class="s1">'{"playlist": {"tracks":[{"id":1}, {"id":2}, {"id":3}]}}'</span>
+</code></pre></div><h3 id="accessing-playlists">Accessing Playlists<a href="#accessing-playlists" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Retrieve tracks in a playlist with a <code>GET</code> request to <a href="/docs/api/explorer/open-api#/playlists/get_playlists__playlist_id_">/playlists/:id</a>.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/playlists/PLAYLIST_ID?show_tracks=false"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h2 id="playing">Playing Tracks<a href="#playing" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>Tracks and playlists can be played from your application by embedding the SoundCloud widget or using stream URLs with a custom audio player. Playback uses <strong>SoundCloud’s transcoded streams</strong> (high-quality streaming formats <strong>such as AAC</strong>), not your original upload file. The <a href="/docs/api/html5-widget">Widget API</a> provides programmatic control and event handling.</p>
+<h3 id="embedding-a-soundcloud-widget">Embedding a SoundCloud Widget<a href="#embedding-a-soundcloud-widget" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Use the <a href="/docs/oembed">oEmbed</a> endpoint to retrieve embed code for any track or playlist URL.</p>
+
+<p>See also: <a href="https://soundcloud.com/pages/embed">Embedded player</a> guide, <a href="/docs/api/html5-widget">Widget API</a>.</p>
+<h3 id="streaming-tracks">Streaming Tracks<a href="#streaming-tracks" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+
+<p>Custom player streaming requires proper attribution per the <a href="/docs/api/terms-of-use">Terms of Use</a> and <a href="/docs/api/buttons-logos">Attribution Guidelines</a>:</p>
+
+<ol>
+<li>Credit the uploader as the creator of the track</li>
+<li>Credit SoundCloud as the source by including one of the <a href="/docs/api/buttons-logos">logos</a></li>
+<li>Link to the SoundCloud URL containing the work</li>
+<li>If the track is private, link to the profile of the creator</li>
+</ol>
+
+<p>To stream with a custom player, retrieve the track resource and use its <code>stream_url</code> property. A <code>GET</code> request to the stream URL returns available transcodings.</p>
+
+<p>Public tracks can be streamed without a user session. Private tracks require an authorized user session and a <code>secret_token</code>.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># request a track you want to stream</span>
+curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/tracks/TRACK_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+
+<span class="c"># extract stream_url when available from a response</span>
+curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/tracks/TRACK_ID/stream"</span> <span class="se">\</span>
+         <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+         <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div>
+<p>See also: <a href="/docs/oembed">/oembed</a>, <a href="/docs/api/html5-widget">HTML5 Widget API</a>.</p>
+<h4 id="restricted-access">Restricted Access<a href="#restricted-access" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>Not all tracks are available for off-platform streaming. Tracks may be restricted by the creator, paywalled, or geo-blocked. Restricted tracks have no <code>stream_url</code> and their <code>access</code> field is set to <code>blocked</code>. Calling <code>/tracks/:id/streams</code> for a blocked track returns an error.</p>
+
+<p>Track access levels:
+- <code>playable</code> — the track is fully streamable
+- <code>preview</code> — a preview snippet is available
+- <code>blocked</code> — not streamable, only metadata is provided</p>
+
+<p>The <code>access</code> filter parameter can be used when searching or fetching tracks to include only tracks with specific access levels. See the <a href="/docs/api/explorer/open-api">API Explorer</a> for details.</p>
+<h2 id="comments">Comments<a href="#comments" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>Send a <code>POST</code> request to <a href="/docs/api/explorer/open-api#/tracks/post_tracks__track_id__comments">/tracks/:track_id/comments</a> to create a comment. Include a <code>timestamp</code> parameter (in milliseconds from track start) for a timed comment. Omitting it creates a non-timed comment.</p>
+
+<p>Comments cannot be posted on tracks where the creator has disabled comments.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> POST <span class="s2">"https://api.soundcloud.com/tracks/YOUR_TRACK_ID/comments"</span>  <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Content-Type: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span> <span class="se">\</span>
+       <span class="nt">-d</span> <span class="s1">'{"comment":{"body":"YOUR_COMMENT","timestamp":12345}}'</span>
+</code></pre></div>
+<p>Retrieve comments for a track:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/tracks/YOUR_TRACK_ID/comments?limit=3&amp;linked_partitioning=true"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h2 id="follow">Follow &amp; Like<a href="#follow" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The API supports following users and liking tracks or playlists. Followed users&#39; tracks and reposts appear in the activity feed.</p>
+
+<p>Follow a user via <code>PUT /me/followings/:user_id</code>:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> PUT <span class="s2">"https://api.soundcloud.com/me/followings/USER_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div>
+<p>Like a track or playlist via the <a href="/docs/api/explorer/open-api#likes">/likes/</a> endpoints:</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># liking a track</span>
+curl <span class="nt">-X</span> POST <span class="s2">"https://api.soundcloud.com/likes/tracks/TRACK_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+
+<span class="c"># liking a playlist</span>
+curl <span class="nt">-X</span> POST <span class="s2">"https://api.soundcloud.com/likes/playlists/PLAYLIST_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h2 id="search">Search<a href="#search" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>Search tracks, users, and playlists using the <code>q</code> parameter, which matches against fields like <code>title</code>, <code>username</code>, and <code>description</code>.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># search for playable tracks</span>
+curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/tracks?q=hello&amp;ids=1,2,3&amp;genres=Pop,House&amp;access=playable&amp;limit=3&amp;linked_partitioning=true"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div>
+<p>Range filters are supported for <code>bpm</code>, <code>duration</code>, and other fields:</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/tracks?q=hello&amp;ids=1,2,3&amp;genres=Pop,House&amp;bpm%5Bfrom%5D=120&amp;duration%5Bfrom%5D=30000&amp;access=playable&amp;limit=3&amp;linked_partitioning=true"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div>
+<p>See the <a href="/docs/api/explorer/open-api#search">API Explorer</a> for all available search fields and filters.</p>
+<h2 id="pagination">Pagination<a href="#pagination" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>Collection responses return up to 50 items by default (maximum 200). Pass <code>linked_partitioning=true</code> to enable pagination. Paginated responses include a <code>next_href</code> property pointing to the next page. When <code>next_href</code> is absent, there are no more results.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># fetch first 25 user's playlists</span>
+curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/me/playlists?show_tracks=false&amp;linked_partitioning=true&amp;limit=25"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+
+<span class="c"># response contains 'next_href': "https://api.soundcloud.com/playlists?show_tracks=false&amp;page_size=25&amp;cursor=1234567"</span>
+</code></pre></div><h2 id="resolving">SoundCloud URLs<a href="#resolving" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The <a href="/docs/api/explorer/open-api#/miscellaneous/get_resolve">/resolve</a> endpoint converts a SoundCloud permalink URL into a full API resource representation.</p>
+<div class="highlight"><pre class="highlight shell"><code>curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/resolve?url=https://soundcloud.com/PERMALINK"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: */*"</span> <span class="se">\</span>
+       <span class="nt">-H</span> <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+</code></pre></div><h2 id="crossdomain">Cross Domain Requests<a href="#crossdomain" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The API supports <a href="https://www.w3.org/TR/cors/">CORS</a> for browser-based JavaScript requests. <a href="http://json-p.org/">JSONP</a> is also supported via a <code>callback</code> query parameter.</p>
+<div class="highlight"><pre class="highlight javascript"><code><span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://api.soundcloud.com/tracks?ids=1,2,3</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">Accept</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">application/json; charset=utf-8</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OAuth ACCESS_TOKEN</span><span class="dl">"</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+<span class="kd">const</span> <span class="nx">tracks</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="nx">tracks</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">track</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">track</span><span class="p">.</span><span class="nx">title</span><span class="p">));</span>
+</code></pre></div><h2 id="errors">Errors<a href="#errors" class="heading-anchor" aria-label="Link to this section">#</a></h2>
+
+<p>The API returns standard HTTP status codes with JSON error descriptions.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="c"># try fetching a non-existing user</span>
+curl <span class="nt">-X</span> GET <span class="s2">"https://api.soundcloud.com/users/INVALID_ID"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"accept: application/json; charset=utf-8"</span> <span class="se">\</span>
+       <span class="nt">-H</span>  <span class="s2">"Authorization: OAuth ACCESS_TOKEN"</span>
+
+<span class="c"># response 404 Error: Not Found</span>
+<span class="o">{</span>
+  <span class="s2">"code"</span>: 404,
+  <span class="s2">"message"</span>: <span class="s2">"404 - Not Found"</span>,
+  <span class="s2">"link"</span>: <span class="s2">"https://developers.soundcloud.com/docs/api/explorer/open-api"</span>,
+  <span class="s2">"status"</span>: <span class="s2">"404 - Not Found"</span>,
+  <span class="s2">"errors"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"error_message"</span>: <span class="s2">"404 - Not Found"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"error"</span>: null
+<span class="o">}</span>
+</code></pre></div><h3 id="http-status-codes">HTTP Status Codes<a href="#http-status-codes" class="heading-anchor" aria-label="Link to this section">#</a></h3>
+<h4 id="400-bad-request">400 Bad Request<a href="#400-bad-request" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The request was malformed or missing required parameters. Consult the <a href="/docs/api/explorer/open-api">API Explorer</a> for endpoint requirements.</p>
+<h4 id="401-unauthorized">401 Unauthorized<a href="#401-unauthorized" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>Authentication failed. Verify the <code>Authorization</code> header is present and contains a valid token.</p>
+
+<p>Public endpoints accept tokens from the <strong>Client Credentials flow</strong>. User-specific actions require an Authorization Code token. See the <a href="#authentication">Authentication</a> section.</p>
+
+<p>OAuth tokens expire and must be <a href="#refreshing-tokens">refreshed</a> to avoid 401 errors.</p>
+<h4 id="403-forbidden">403 Forbidden<a href="#403-forbidden" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The authenticated user does not have permission to access this resource.</p>
+<h4 id="404-not-found">404 Not Found<a href="#404-not-found" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The requested resource does not exist. Verify the URL path and resource ID.</p>
+<h4 id="406-not-accessible">406 Not Accessible<a href="#406-not-accessible" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The server cannot produce a response matching the request&#39;s <code>Accept</code> header.</p>
+<h4 id="422-unprocessable-entity">422 Unprocessable Entity<a href="#422-unprocessable-entity" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>One or more parameters failed validation (e.g., wrong data type such as an array where a string was expected).</p>
+<h4 id="429-too-many-requests">429 Too Many Requests<a href="#429-too-many-requests" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The request exceeded a rate limit. See the <a href="/docs/api/rate-limits">Rate Limits</a> page for details.</p>
+<h4 id="500-internal-server-error">500 Internal Server Error<a href="#500-internal-server-error" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>An unexpected server error occurred.</p>
+<h4 id="503-service-unavailable">503 Service Unavailable<a href="#503-service-unavailable" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The service is temporarily unavailable. Implement retry logic with backoff.</p>
+<h4 id="504-gateway-timeout">504 Gateway Timeout<a href="#504-gateway-timeout" class="heading-anchor" aria-label="Link to this section">#</a></h4>
+
+<p>The server did not receive a timely upstream response. The request may still have been processed; verify resource state before retrying.</p>
+
+</section>
+</div>
+</div>
+<footer class='sc-page-footer'>
+<div class='hp-footer__socials'>
+<p class='hp-footer__follow'>Follow us</p>
+<div class='hp-footer__icons'>
+<a target="_blank" title="@SoundCloudDev on X" data-tracking-category="Footer" data-tracking-action="@SoundCloudDev" href="https://x.com/soundclouddev"><img alt="X" width="24" height="24" src="/assets/social-x-a5f83227dc1a3aa1111c5591c6da8c89221c8c24ace0e6ddc98c3763cb175fd9.svg" />
+</a><a target="_blank" title="SoundCloud on GitHub" data-tracking-category="Footer" data-tracking-action="GitHub" href="https://github.com/soundcloud"><img alt="GitHub" width="24" height="24" src="/assets/social-github-5148fd5646c6868528117dfe157657deb430e5f13095bcc51bad963ff3614bd7.svg" />
+</a><a target="_blank" title="@soundcloud.dev on Bluesky" data-tracking-category="Footer" data-tracking-action="@soundcloud.dev" href="https://bsky.app/profile/soundcloud.dev"><img alt="Bluesky" width="24" height="24" src="/assets/social-bluesky-a6e138314156ae1c730ec571ac05db3a0271079f7d236c27958551fca01edef0.svg" />
+</a><a target="_blank" title="SoundCloud on Stack Overflow" data-tracking-category="Footer" data-tracking-action="StackOverflow" href="https://stackoverflow.com/questions/tagged/soundcloud"><img alt="Stack Overflow" width="20" height="24" src="/assets/social-stackoverflow-d4ede78048f778b5e1d55465eefd27ed1584ad8aecc6171a34f726ae257987c2.svg" />
+</a><a target="_blank" title="SoundCloud on LinkedIn" data-tracking-category="Footer" data-tracking-action="LinkedIn" href="https://www.linkedin.com/company/soundcloud"><img alt="LinkedIn" width="24" height="24" src="/assets/social-linkedin-95ee91bbc1fd89446f7ac65a218a7c2d5ef6564fd9aea408bfd33f9fa8b7462f.svg" />
+</a></div>
+</div>
+<ul class='hp-footer__links'>
+<li><a target="_blank" data-tracking-category="Footer" data-tracking-action="Status" href="https://status.soundcloud.com">Status</a></li>
+<li><a data-tracking-category="Footer" href="/docs/api/privacy">Privacy</a></li>
+<li><a data-tracking-category="Footer" href="/docs/api/cookies">Cookies</a></li>
+<li><a data-tracking-category="Footer" href="/docs/api/contest-terms">Competition Terms</a></li>
+<li><a onclick="window.SCConsent &amp;&amp; window.SCConsent.showConsentDialog(); return false;" data-tracking-category="Footer" data-tracking-action="Cookie Manager" href="#">Cookie Manager</a></li>
+<li><a target="_blank" data-tracking-category="Footer" href="https://soundcloud.com/imprint">Imprint</a></li>
+</ul>
+
+</footer>
+<!-- OT Consent (preload) -->
+<script src="https://consent.sndcdn.com/v1/preload.js"></script>
+<!-- End OT Consent (preload) -->
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79535818-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "UA-79535818-1");
+
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    analytics_storage: "denied",
+    functionality_storage: "denied",
+    personalization_storage: "denied",
+    security_storage: "granted",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    region: [
+      "BE",
+      "EL",
+      "LT",
+      "PT",
+      "BG",
+      "ES",
+      "LU",
+      "RO",
+      "CZ",
+      "FR",
+      "HU",
+      "SI",
+      "DK",
+      "HR",
+      "MT",
+      "SK",
+      "DE",
+      "IT",
+      "NL",
+      "FI",
+      "EE",
+      "CY",
+      "AT",
+      "SE",
+      "IE",
+      "LV",
+      "PL",
+      "US-CA",
+    ],
+  });
+
+  gtag("consent", "default", {
+    ad_storage: "granted",
+    analytics_storage: "granted",
+    functionality_storage: "granted",
+    personalization_storage: "granted",
+    security_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  });
+</script>
+<!-- Google Tag Manager -->
+
+<!-- GTM - Only loaded after consent -->
+<script>
+  const CookieCategory = {
+    StrictlyNecessary: 'C0001',
+    Performance: 'C0002',
+    Functional: 'C0003',
+    Targeting: 'C0004',
+    SocialMedia: 'C0005',
+    Communications: 'C0007',
+  };
+
+  Promise.all([
+    window.SCConsent.waitForCategory(CookieCategory.Performance),
+    window.SCConsent.waitForCategory(CookieCategory.Targeting),
+  ]).then(() => {
+    // Initialize GTM after consent is granted
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WPMTH6QD");
+    
+    // Push initial dataLayer event
+    (function () {
+      window.dataLayer.push({
+        event: "dataLayer-initialized",
+        page_path: window.location.pathname || undefined,
+        page_url: window.location.href || undefined,
+        page_referrer: document.referrer || undefined,
+        page_title: document.title || undefined,
+      });
+    })();
+  });
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- OT Consent -->
+<script src="https://consent.sndcdn.com/v1/consent.js"></script>
+<!-- End OT Consent -->
+
+</body>
+</html>

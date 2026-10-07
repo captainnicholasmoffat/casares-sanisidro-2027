@@ -1,0 +1,739 @@
+
+ Channels  |  YouTube Data API  |  Google for Developers 
+ Ir al contenido principal
+ YouTube
+ Data API
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Acceder 
+ Página principal
+ Guías
+ Referencia
+ Ejemplos
+ YouTube
+ Data API
+ Página principal
+ Guías
+ Referencia
+ Ejemplos
+ Descripción general 
+ Actividades 
+ Descripción general 
+ list 
+ Subtítulos 
+ Descripción general 
+ list 
+ insert 
+ update 
+ download 
+ delete 
+ ChannelBanners 
+ Descripción general 
+ insert 
+ Canales 
+ Descripción general 
+ list 
+ update 
+ Secciones del canal 
+ Descripción general 
+ list 
+ insert 
+ update 
+ delete 
+ Comentarios 
+ Descripción general 
+ list 
+ insert 
+ update 
+ establecerModerationStatus 
+ delete 
+ Conversaciones 
+ Descripción general 
+ list 
+ insert 
+ i18nIdiomas 
+ Descripción general 
+ list 
+ i18nRegiones 
+ Descripción general 
+ list 
+ Miembros 
+ Descripción general 
+ list 
+ Niveles de las membresías 
+ Descripción general 
+ list 
+ PlaylistImages 
+ Descripción general 
+ list 
+ insert 
+ update 
+ delete 
+ PlaylistItems 
+ Descripción general 
+ list 
+ insert 
+ update 
+ delete 
+ Playlists 
+ Descripción general 
+ list 
+ insert 
+ update 
+ delete 
+ Buscar 
+ Descripción general 
+ list 
+ Suscripciones 
+ Descripción general 
+ list 
+ insert 
+ delete 
+ Miniaturas 
+ Descripción general 
+ set 
+ Denuncia de motivos del abuso de video 
+ Descripción general 
+ list 
+ VideoCategories 
+ Descripción general 
+ list 
+ Videos 
+ Descripción general 
+ list 
+ insert 
+ update 
+ de conversiones 
+ getRating 
+ denunciar abuso 
+ delete 
+ batchGetStats 
+ Marcas de agua 
+ Descripción general 
+ set 
+ desconfigurar 
+ Parámetros de búsqueda estándar 
+ Errores de la API de datos de YouTube 
+ Descripción general 
+ Errores de dominio global 
+ Historial de revisión 
+ Google utiliza tecnología de IA para traducir contenido a tu idioma preferido. Las traducciones realizadas con IA pueden contener errores.
+ Página principal
+ Productos
+ YouTube
+ Data API
+ Referencia
+ Channels 
+ Organiza tus páginas con colecciones
+ Guarda y categoriza el contenido según tus preferencias.
+ La API ahora admite la capacidad de marcar tu canal o videos como “creados para niños”. Además, los recursos channel y video ahora también contienen una propiedad que identifica el estado “creado para niños” de ese canal o video. Las Condiciones del Servicio y las Políticas para Desarrolladores de los Servicios de la API de YouTube también se actualizaron el 10 de enero de 2020. Para obtener más información, consulta los registros de revisión del Servicio de la API de YouTube Data y las Condiciones del Servicio de los Servicios de la API de YouTube .
+ Un recurso channel contiene información sobre un canal de YouTube.
+ Métodos
+ La API admite los siguientes métodos para los recursos channels :
+ list 
+ Devuelve una colección de cero o más recursos channel que coinciden con los criterios de la solicitud.
+ Pruébalo ahora . 
+ actualización 
+ Actualiza los metadatos de un canal. Ten en cuenta que, actualmente, este método solo admite actualizaciones de los objetos brandingSettings y invideoPromotion del recurso channel y sus propiedades secundarias.
+ Pruébalo ahora . 
+ Representación de recursos
+ En la siguiente estructura JSON, se muestra el formato de un recurso channels :
+ {
+ " kind " : "youtube#channel" , 
+ " etag " : etag , 
+ " id " : string , 
+ " snippet " : {
+ " title " : string , 
+ " description " : string , 
+ " customUrl " : string , 
+ " publishedAt " : datetime , 
+ " thumbnails " : {
+ ( key ) : {
+ " url " : string , 
+ " width " : unsigned integer , 
+ " height " : unsigned integer 
+ }
+ } , 
+ " defaultLanguage " : string , 
+ " localized " : {
+ " title " : string , 
+ " description " : string 
+ } , 
+ " country " : string 
+ } , 
+ " contentDetails " : {
+ " relatedPlaylists " : {
+ " likes " : string , 
+ " favorites " : string , 
+ " uploads " : string 
+ }
+ } , 
+ " statistics " : {
+ " viewCount " : unsigned long , 
+ " subscriberCount " : unsigned long , // this value is rounded to three significant figures 
+ " hiddenSubscriberCount " : boolean , 
+ " videoCount " : unsigned long 
+ } , 
+ " topicDetails " : {
+ " topicIds " : [ 
+ string 
+ ], 
+ " topicCategories " : [ 
+ string 
+ ] 
+ } , 
+ " status " : {
+ " privacyStatus " : string , 
+ " isLinked " : boolean , 
+ " longUploadsStatus " : string , 
+ " madeForKids " : boolean , 
+ " selfDeclaredMadeForKids " : boolean 
+ } , 
+ " brandingSettings " : {
+ " channel " : {
+ " title " : string , 
+ " description " : string , 
+ " keywords " : string , 
+ " trackingAnalyticsAccountId " : string , 
+ " unsubscribedTrailer " : string , 
+ " defaultLanguage " : string , 
+ " country " : string 
+ } , 
+ " watch " : {
+ " textColor " : string , 
+ " backgroundColor " : string , 
+ " featuredPlaylistId " : string 
+ }
+ } , 
+ " auditDetails " : {
+ " overallGoodStanding " : boolean , 
+ " communityGuidelinesGoodStanding " : boolean , 
+ " copyrightStrikesGoodStanding " : boolean , 
+ " contentIdClaimsGoodStanding " : boolean 
+ } , 
+ " contentOwnerDetails " : {
+ " contentOwner " : string , 
+ " timeLinked " : datetime 
+ } , 
+ " localizations " : {
+ ( key ) : {
+ " title " : string , 
+ " description " : string 
+ }
+ }
+} 
+ Propiedades
+ La siguiente tabla define las propiedades que aparecen en este recurso:
+ Propiedades 
+ kind 
+ string 
+ Identifica el tipo de recurso de la API. El valor será youtube#channel . 
+ etag 
+ etag 
+ Es la etiqueta de Etag de este recurso. 
+ id 
+ string 
+ Es el ID que YouTube usa para identificar de forma única el canal. 
+ snippet 
+ object 
+ El objeto snippet contiene detalles básicos sobre el canal, como el título, la descripción y las imágenes de miniatura. 
+ snippet. title 
+ string 
+ Es el título del canal. 
+ snippet. description 
+ string 
+ Es la descripción del canal. El valor de la propiedad tiene una longitud máxima de 1,000 caracteres. 
+ snippet. customUrl 
+ string 
+ Es la URL personalizada del canal. En el Centro de ayuda de YouTube , se explican los requisitos de elegibilidad para obtener una URL personalizada y cómo configurarla. 
+ snippet. publishedAt 
+ datetime 
+ Es la fecha y hora en que se creó el canal. El valor se especifica en formato ISO 8601 . 
+ snippet. thumbnails 
+ object 
+ Es un mapa de las miniaturas asociadas con el canal. Para cada objeto del mapa, la clave es el nombre de la imagen de miniatura y el valor es un objeto que contiene otra información sobre la miniatura.
+Cuando muestres miniaturas en tu aplicación, asegúrate de que tu código use las URLs de las imágenes exactamente como se muestran en las respuestas de la API. Por ejemplo, tu aplicación no debe usar el dominio http en lugar del dominio https en una URL que se muestra en una respuesta de la API.
+Las URLs de miniaturas de canales solo están disponibles en el dominio https , que es la forma en que aparecen las URLs en las respuestas de la API. Es posible que veas imágenes dañadas en tu aplicación si intenta cargar imágenes de YouTube desde el dominio http . Es posible que las miniaturas de los canales recién creados estén vacías y que tarden hasta un día en propagarse. 
+ snippet.thumbnails. (key) 
+ object 
+ Los valores de clave válidos son los siguientes: default : Es la imagen en miniatura predeterminada. La viñeta predeterminada de un video, o de un recurso que se refiere a un video, como un elemento de una lista de reproducción o el resultado de una búsqueda, es de 120 píxeles de ancho y 90 píxeles de alto. La viñeta predeterminada para un canal es de 88 píxeles de ancho y 88 píxeles de alto.
+ medium : Es una versión de mayor resolución de la imagen en miniatura. Para un video (o un recurso que hace referencia a un video), esta imagen es de 320 píxeles de ancho y 180 píxeles de alto. Para un canal, esta imagen es de 240 píxeles de ancho y 240 píxeles de alto.
+ high : Es una versión de alta resolución de la imagen en miniatura. Para un video (o un recurso que hace referencia a un video), esta imagen es de 480 píxeles de ancho y 360 píxeles de alto. Para un canal, esta imagen es de 800 píxeles de ancho y 800 píxeles de alto.
+ snippet.thumbnails.(key). url 
+ string 
+ Es la URL de la imagen. Para obtener lineamientos adicionales sobre el uso de URLs de miniaturas en tu aplicación, consulta la definición de la propiedad snippet.thumbnails . 
+ snippet.thumbnails.(key). width 
+ unsigned integer 
+ Es el ancho de la imagen. 
+ snippet.thumbnails.(key). height 
+ unsigned integer 
+ Es la altura de la imagen. 
+ snippet. defaultLanguage 
+ string 
+ Es el idioma del texto en las propiedades snippet.title y snippet.description del recurso channel . 
+ snippet. localized 
+ object 
+ El objeto snippet.localized contiene un título y una descripción localizados para el canal, o bien el título y la descripción del canal en el idioma predeterminado de los metadatos del canal. El texto localizado se muestra en el fragmento de recurso si la solicitud channels.list usó el parámetro hl para especificar un idioma para el que se debe mostrar el texto localizado, el valor del parámetro hl identifica un idioma de la aplicación de YouTube y el texto localizado está disponible en ese idioma.
+ Se muestran los metadatos del idioma predeterminado si no se especifica un valor del parámetro hl o si se especifica un valor, pero los metadatos localizados no están disponibles para el idioma especificado.
+ La propiedad contiene un valor de solo lectura. Usa el objeto localizations para agregar, actualizar o borrar metadatos localizados. 
+ snippet.localized. title 
+ string 
+ Es el título localizado del canal. 
+ snippet.localized. description 
+ string 
+ Es la descripción localizada del canal. 
+ snippet. country 
+ string 
+ Es el país con el que está asociado el canal. Para establecer el valor de esta propiedad, actualiza el valor de la propiedad brandingSettings.channel.country . 
+ contentDetails 
+ object 
+ El objeto contentDetails encapsula información sobre el contenido del canal. 
+ contentDetails. relatedPlaylists 
+ object 
+ El objeto relatedPlaylists es un mapa que identifica las playlists asociadas con el canal, como los videos subidos o los videos que le gustaron al usuario. Puedes recuperar cualquiera de estas playlists con el método playlists.list . 
+ contentDetails.relatedPlaylists. likes 
+ string 
+ Es el ID de la playlist que contiene los videos que le gustaron al canal. Usa los métodos playlistItems.insert y playlistItems.delete para agregar o quitar elementos de esa lista. 
+ contentDetails.relatedPlaylists. favorites 
+ string 
+ Esta propiedad dejó de estar disponible. 
+Es el ID de la playlist que contiene los videos favoritos del canal. Usa los métodos playlistItems.insert y playlistItems.delete para agregar o quitar elementos de esa lista.
+Ten en cuenta que YouTube dio de baja la función de videos favoritos. Por ejemplo, la propiedad statistics.favoriteCount del recurso video dejó de estar disponible el 28 de agosto de 2015. Como resultado, por motivos históricos, este valor de propiedad puede contener un ID de playlist que hace referencia a una playlist vacía y, por lo tanto, no se puede recuperar. 
+ contentDetails.relatedPlaylists. uploads 
+ string 
+ Es el ID de la playlist que contiene los videos subidos del canal. Usa el método videos.insert para subir videos nuevos y el método videos.delete para borrar videos subidos anteriormente. 
+ statistics 
+ object 
+ El objeto statistics encapsula las estadísticas del canal. 
+ statistics. viewCount 
+ unsigned long 
+ Es la suma de la cantidad de veces que se miraron todos los videos de un canal en todos los formatos.
+ A partir del 31 de marzo de 2025, en el caso de los Shorts de un canal, se actualizará viewCount para incluir la cantidad de veces que un Short comienza o vuelve a reproducirse.
+ statistics. commentCount 
+ unsigned long 
+ Esta propiedad dejó de estar disponible. 
+ Es la cantidad de comentarios del canal. 
+ statistics. subscriberCount 
+ unsigned long 
+ Es la cantidad de suscriptores que tiene el canal. Este valor se redondea hacia abajo a tres cifras significativas. Para obtener más detalles sobre cómo se redondean los recuentos de suscriptores, consulta el Historial de revisiones o el Centro de ayuda de YouTube . 
+ statistics. hiddenSubscriberCount 
+ boolean 
+ Indica si el recuento de suscriptores del canal es visible para el público. 
+ statistics. videoCount 
+ unsigned long 
+ Es la cantidad de videos públicos subidos al canal. Ten en cuenta que el valor refleja solo el recuento de los videos públicos del canal, incluso para los propietarios. Este comportamiento es coherente con los registros que se muestran en el sitio web de YouTube. 
+ topicDetails 
+ object 
+ El objeto topicDetails encapsula información sobre los temas asociados con el canal.
+ Importante: Para obtener más detalles sobre los cambios relacionados con los IDs de tema, consulta la definición de la propiedad topicDetails.topicIds[] y el historial de revisiones . 
+ topicDetails. topicIds[] 
+ list 
+ Es una lista de IDs de temas asociados con el canal.
+ Esta propiedad dejó de estar disponible a partir del 10 de noviembre de 2016. Se admitirá hasta el 10 de noviembre de 2017. 
+ Importante: Debido a la baja de Freebase y la API de Freebase, los IDs de tema comenzaron a funcionar de manera diferente a partir del 27 de febrero de 2017. En ese momento, YouTube comenzó a mostrar un pequeño conjunto de IDs de temas seleccionados.
+ Consulta los IDs de tema compatibles a partir del 15 de febrero de 2017 
+ Temas 
+ Temas musicales 
+ /m/04rlf 
+ Música (tema principal) 
+ /m/02mscn 
+ música cristiana 
+ /m/0ggq0m 
+ Música clásica 
+ /m/01lyv 
+ País 
+ /m/02lkt 
+ Música electrónica 
+ /m/0glt670 
+ Música hip hop 
+ /m/05rwpb 
+ Música independiente 
+ /m/03_d0 
+ Jazz 
+ /m/028sqc 
+ Música de Asia 
+ /m/0g293 
+ Música de Latinoamérica 
+ /m/064t9 
+ Música pop 
+ /m/06cqb 
+ Reggae 
+ /m/06j6l 
+ R&B 
+ /m/06by7 
+ Música rock 
+ /m/0gywn 
+ Soul 
+ Temas de videojuegos 
+ /m/0bzvm2 
+ Videojuegos (tema principal) 
+ /m/025zzc 
+ Juego de acción 
+ /m/02ntfj 
+ Juego de acción y aventura 
+ /m/0b1vjn 
+ Juego casual 
+ /m/02hygl 
+ Videojuego de música 
+ /m/04q1x3q 
+ Videojuego de rompecabezas 
+ /m/01sjng 
+ Videojuego de carreras 
+ /m/0403l3g 
+ Videojuego de rol 
+ /m/021bp2 
+ Videojuego de simulación 
+ /m/022dc6 
+ Partido deportivo 
+ /m/03hf_rm 
+ Videojuego de estrategia 
+ Temas deportivos 
+ /m/06ntj 
+ Deportes (tema superior) 
+ /m/0jm_ 
+ Fútbol americano 
+ /m/018jz 
+ Béisbol 
+ /m/018w8 
+ Básquetbol 
+ /m/01cgz 
+ Boxeo 
+ /m/09xp_ 
+ Críquet 
+ /m/02vx4 
+ Fútbol americano 
+ /m/037hz 
+ Golf 
+ /m/03tmr 
+ Hockey sobre hielo 
+ /m/01h7lh 
+ Artes marciales mixtas 
+ /m/0410tth 
+ Deportes de motor 
+ /m/07bs0 
+ Tenis 
+ /m/07_53 
+ Voleibol 
+ Temas de entretenimiento 
+ /m/02jjt 
+ Entretenimiento (tema principal) 
+ /m/09kqc 
+ Humor 
+ /m/02vxn 
+ Películas 
+ /m/05qjc 
+ Artes escénicas 
+ /m/066wd 
+ Lucha libre profesional 
+ /m/0f2f9 
+ Programas de TV 
+ Temas de estilo de vida 
+ /m/019_rr 
+ Estilo de vida (tema superior) 
+ /m/032tl 
+ Moda 
+ /m/027x7n 
+ Fitness 
+ /m/02wbm 
+ Comida 
+ /m/03glg 
+ Pasatiempo 
+ /m/068hy 
+ Mascotas 
+ /m/041xxh 
+ Atractivo físico [Belleza] 
+ /m/07c1v 
+ Tecnología 
+ /m/07bxq 
+ Turismo 
+ /m/07yv9 
+ Vehículos 
+ Temas sobre la sociedad 
+ /m/098wr 
+ Sociedad (tema superior) 
+ /m/09s1f 
+ Empresa 
+ /m/0kt51 
+ Salud 
+ /m/01h6rj 
+ Militar 
+ /m/05qt0 
+ Política 
+ /m/06bvp 
+ Religión 
+ Otros temas 
+ /m/01k8wb 
+ Conocimiento 
+ topicDetails. topicCategories[] 
+ list 
+ Es una lista de URLs de Wikipedia que describen el contenido del canal. 
+ status 
+ object 
+ El objeto status encapsula información sobre el estado de privacidad del canal. 
+ status. privacyStatus 
+ string 
+ Es el estado de privacidad del canal.
+Los valores válidos para esta propiedad son los siguientes:
+ private 
+ public 
+ unlisted 
+ status. isLinked 
+ boolean 
+ Indica si los datos del canal identifican a un usuario que ya está vinculado a un nombre de usuario de YouTube o a una cuenta de Google+. Un usuario que tenga uno de estos vínculos ya cuenta con una identidad pública de YouTube, que es un requisito para varias acciones, como subir videos. 
+ status. longUploadsStatus 
+ string 
+ Indica si el canal es apto para subir videos de más de 15 minutos. Esta propiedad solo se muestra si el propietario del canal autorizó la solicitud a la API. Para obtener más información sobre esta función, consulta el Centro de ayuda de YouTube .
+Estos son los valores válidos para esta propiedad:
+ allowed : Este canal puede subir videos de más de 15 minutos.
+ disallowed : Este canal no puede subir videos de más de 15 minutos o no es apto para hacerlo. Un canal solo es apto para subir videos largos si cumple con los Lineamientos de la Comunidad de YouTube y no tiene bloqueos de Content ID en todo el mundo.
+Después de que el propietario del canal resuelva los problemas que impiden que suba videos más largos, el canal volverá al estado allowed o eligible .
+ eligible : Este canal es apto para subir videos de más de 15 minutos. Sin embargo, el propietario del canal primero debe habilitar la opción para subir videos más largos a través de la verificación telefónica . Para obtener más información sobre esta función, consulta el Centro de ayuda de YouTube .
+ status. madeForKids 
+ boolean 
+ Este valor indica si el canal está designado como contenido para niños y contiene el estado actual de “creado para niños” del canal. Por ejemplo, el estado se puede determinar según el valor de la propiedad selfDeclaredMadeForKids . Para obtener más información sobre cómo configurar el público de tu canal, tus videos o tus transmisiones, consulta el Centro de ayuda de YouTube .
+ status. selfDeclaredMadeForKids 
+ boolean 
+ En una solicitud channels.update ,
+ esta propiedad permite que el propietario del canal designe el canal como dirigido a niños. El valor de la propiedad solo se muestra si el propietario del canal autorizó la solicitud a la API.
+ brandingSettings 
+ object 
+ El objeto brandingSettings encapsula información sobre el desarrollo de la marca del canal. 
+ brandingSettings. channel 
+ object 
+ El objeto channel encapsula las propiedades de desarrollo de la marca de la página del canal. 
+ brandingSettings.channel. title 
+ string 
+ Es el título del canal. El título tiene una longitud máxima de 30 caracteres. 
+ brandingSettings.channel. description 
+ string 
+ La descripción del canal, que aparece en el cuadro de información del canal de usuario. El valor de la propiedad tiene una longitud máxima de 1,000 caracteres. 
+ brandingSettings.channel. keywords 
+ string 
+ Palabras clave asociadas con tu canal. El valor es una lista de cadenas separadas por espacios. Es posible que las palabras clave del canal se truncen si superan la longitud máxima permitida de 500 caracteres o si contienen comillas sin escape ( " ). Ten en cuenta que el límite de 500 caracteres no es un límite por palabra clave, sino un límite en la longitud total de todas las palabras clave. 
+ brandingSettings.channel. trackingAnalyticsAccountId 
+ string 
+ Es el ID de una cuenta de Google Analytics que deseas usar para hacer un seguimiento y medir el tráfico a tu canal. 
+ brandingSettings.channel. unsubscribedTrailer 
+ string 
+ Es el video que se debe reproducir en el módulo de video destacado de la vista de navegación del canal de usuario para los usuarios que no se suscribieron. Es posible que los usuarios suscritos vean un video diferente que destaque la actividad más reciente del canal.
+ Si se especifica, el valor de la propiedad debe ser el ID de video de YouTube de un video público o no listado que pertenezca al propietario del canal. 
+ brandingSettings.channel. defaultLanguage 
+ string 
+ Es el idioma del texto en las propiedades snippet.title y snippet.description del recurso channel . 
+ brandingSettings.channel. country 
+ string 
+ Es el país con el que está asociado el canal. Actualiza esta propiedad para establecer el valor de la propiedad snippet.country . 
+ brandingSettings. watch 
+ object 
+ Nota: Este objeto y todas sus propiedades secundarias dejaron de estar disponibles.
+ El objeto watch encapsula las propiedades de desarrollo de la marca de las páginas de reproducción de los videos del canal. 
+ brandingSettings.watch. textColor 
+ string 
+ Nota: Esta propiedad dejó de estar disponible.
+ Es el color de texto del área de marca de la página de reproducción del video. 
+ brandingSettings.watch. backgroundColor 
+ string 
+ Nota: Esta propiedad dejó de estar disponible.
+ Es el color de fondo del área de marca de la página de reproducción del video. 
+ brandingSettings.watch. featuredPlaylistId 
+ string 
+ Nota: Esta propiedad dejó de estar disponible. La API muestra un error si intentas establecer su valor. 
+ brandingSettings. image 
+ object 
+ Esta propiedad y todas sus propiedades secundarias dejaron de estar disponibles. 
+ El objeto image encapsula información sobre las imágenes que se muestran en la página del canal o en las páginas de reproducción de los videos. 
+ brandingSettings.image. bannerImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de la imagen del banner que se muestra en la página del canal del sitio web de YouTube. La imagen es de 1060 píxeles por 175 píxeles. 
+ brandingSettings.image. bannerMobileImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de la imagen del banner que se muestra en la página del canal en las aplicaciones para dispositivos móviles. La imagen es de 640 píxeles por 175 píxeles. 
+ brandingSettings.image. watchIconImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de la imagen que aparece sobre el reproductor de video. Esta es una imagen de 25 píxeles de altura con un ancho flexible que no puede exceder los 170 píxeles. Si no proporcionas esta imagen, aparecerá el nombre del canal en lugar de una imagen. 
+ brandingSettings.image. trackingImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de un píxel de seguimiento de 1 px por 1 px que se puede usar para recopilar estadísticas de las vistas del canal o de las páginas de video. 
+ brandingSettings.image. bannerTabletLowImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de baja resolución que se muestra en la página del canal en las aplicaciones para tablets. El tamaño máximo de la imagen es de 1,138 px por 188 px. 
+ brandingSettings.image. bannerTabletImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner que se muestra en el canal de usuario en aplicaciones para tablets. La imagen es de 1707 píxeles por 283 píxeles. 
+ brandingSettings.image. bannerTabletHdImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de alta resolución que se muestra en el canal de usuario en las aplicaciones para tablets. El tamaño máximo de la imagen es de 2,276 px × 377 px. 
+ brandingSettings.image. bannerTabletExtraHdImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de resolución extra alta que se muestra en la página del canal en las aplicaciones para tablets. El tamaño máximo de la imagen es de 2,560 px por 424 px. 
+ brandingSettings.image. bannerMobileLowImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de baja resolución que se muestra en la página del canal en las aplicaciones para dispositivos móviles. El tamaño máximo de la imagen es de 320 px por 88 px. 
+ brandingSettings.image. bannerMobileMediumHdImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de resolución media que se muestra en la página del canal en aplicaciones para dispositivos móviles. El tamaño máximo de la imagen es de 960 px por 263 px. 
+ brandingSettings.image. bannerMobileHdImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de alta resolución que se muestra en la página del canal en las aplicaciones para dispositivos móviles. El tamaño máximo de la imagen es de 1,280 px por 360 px. 
+ brandingSettings.image. bannerMobileExtraHdImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de muy alta resolución que se muestra en la página del canal en las aplicaciones para dispositivos móviles. El tamaño máximo de la imagen es de 1,440 px por 395 px. 
+ brandingSettings.image. bannerTvImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de resolución extra alta que se muestra en la página del canal en las aplicaciones para televisión. El tamaño máximo de la imagen es de 2,120 px por 1,192 px. 
+ brandingSettings.image. bannerTvLowImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de baja resolución que se muestra en la página del canal en las aplicaciones para televisión. El tamaño máximo de la imagen es de 854 px por 480 px. 
+ brandingSettings.image. bannerTvMediumImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de resolución media que se muestra en la página del canal en las aplicaciones para televisión. El tamaño máximo de la imagen es de 1280 x 720 px. 
+ brandingSettings.image. bannerTvHighImageUrl 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es la URL de una imagen de banner de alta resolución que se muestra en la página del canal en las aplicaciones para televisión. El tamaño máximo de la imagen es de 1,920 px por 1,080 px. 
+ brandingSettings.image. bannerExternalUrl 
+ string 
+ Esta propiedad especifica la ubicación de la imagen del banner que YouTube usa para generar
+ los diferentes tamaños de imagen del banner de un canal. 
+ brandingSettings. hints[] 
+ list 
+ Esta propiedad y todas sus propiedades secundarias dejaron de estar disponibles. 
+ El objeto hints encapsula propiedades de desarrollo de la marca adicionales. 
+ brandingSettings.hints[]. property 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Una propiedad. 
+ brandingSettings.hints[]. value 
+ string 
+ Esta propiedad dejó de estar disponible. 
+ Es el valor de la propiedad. 
+ auditDetails 
+ object 
+ El objeto auditDetails encapsula los datos del canal que una red multicanal (MCN) evaluaría para determinar si acepta o rechaza un canal en particular. Ten en cuenta que cualquier solicitud a la API que recupere esta parte del recurso debe proporcionar un token de autorización que contenga el permiso https://www.googleapis.com/auth/youtubepartner-channel-audit . Además, cualquier token que use ese alcance debe revocarse cuando la MCN decida aceptar o rechazar el canal, o dentro de las dos semanas posteriores a la fecha en que se emitió el token. 
+ auditDetails. overallGoodStanding 
+ boolean 
+ Este campo indica si hay algún problema con el canal. Actualmente, este campo representa el resultado de la operación lógica AND sobre las propiedades communityGuidelinesGoodStanding , copyrightStrikesGoodStanding y contentIdClaimsGoodStanding , lo que significa que esta propiedad tiene un valor de true si todas esas otras propiedades también tienen un valor de true . Sin embargo, esta propiedad tendrá un valor de false si alguna de esas propiedades tiene un valor de false . Sin embargo, ten en cuenta que la metodología que se usa para establecer el valor de esta propiedad está sujeta a cambios. 
+ auditDetails. communityGuidelinesGoodStanding 
+ boolean 
+ Indica si el canal respeta los Lineamientos de la Comunidad de YouTube. 
+ auditDetails. copyrightStrikesGoodStanding 
+ boolean 
+ Indica si el canal tiene faltas por incumplimiento de los derechos de autor. 
+ auditDetails. contentIdClaimsGoodStanding 
+ boolean 
+ Indica si el canal tiene reclamos sin resolver. 
+ contentOwnerDetails 
+ object 
+ El objeto contentOwnerDetails encapsula los datos del canal que solo puede ver el socio de YouTube que vinculó el canal a su Administrador de contenido. 
+ contentOwnerDetails. contentOwner 
+ string 
+ Es el ID del propietario del contenido vinculado al canal. 
+ contentOwnerDetails. timeLinked 
+ datetime 
+ Es la fecha y hora en que se vinculó el canal al propietario del contenido. El valor se especifica en formato ISO 8601 . 
+ localizations 
+ object 
+ El objeto localizations encapsula las traducciones de los metadatos del canal. 
+ localizations. (key) 
+ object 
+ Es el idioma de los metadatos localizados asociados con el valor de clave. El valor es una cadena que contiene un código de idioma BCP-47 . 
+ localizations.(key). title 
+ string 
+ Es el título localizado del canal. 
+ localizations.(key). description 
+ string 
+ Es la descripción localizada del canal. 
+ Salvo que se indique lo contrario, el contenido de esta página está sujeto a la licencia Atribución 4.0 de Creative Commons , y los ejemplos de código están sujetos a la licencia Apache 2.0 . Para obtener más información, consulta las políticas del sitio de Google Developers . Java es una marca registrada de Oracle o sus afiliados.
+ Última actualización: 2026-02-18 (UTC)
+ [[["Fácil de comprender","easyToUnderstand","thumb-up"],["Resolvió mi problema","solvedMyProblem","thumb-up"],["Otro","otherUp","thumb-up"]],[["Falta la información que necesito","missingTheInformationINeed","thumb-down"],["Muy complicado o demasiados pasos","tooComplicatedTooManySteps","thumb-down"],["Desactualizado","outOfDate","thumb-down"],["Problema de traducción","translationIssue","thumb-down"],["Problema con las muestras o los códigos","samplesCodeIssue","thumb-down"],["Otro","otherDown","thumb-down"]],["Última actualización: 2026-02-18 (UTC)"],[],["The API now supports marking YouTube channels and videos as \"made for kids,\" with new properties in the `channel` and `video` resources to indicate this status. The `channel` resource, which contains channel information, has a `list` method for retrieval and an `update` method to modify `brandingSettings` and `invideoPromotion`. There are various properties such as `snippet`, `statistics` and `status` providing channel details, metrics, and privacy information. Terms were updated on January 10, 2020.\n"]]
+ Blog
+ Las últimas noticias del blog de YouTube
+ GitHub
+ Encuentra ejemplos de código de API y otros proyectos de código abierto de YouTube.
+ Herramienta de seguimiento de errores
+ ¿Tienes algún problema? Envíanos un informe de errores.
+ Stack Overflow
+ Haz una pregunta con la etiqueta youtube-api
+ Programa de investigación de YouTube
+ Para investigadores interesados en usar datos de la API global de YouTube
+ Herramientas
+ Explorador de APIs de Google
+ Demostración del reproductor de YouTube
+ Cómo configurar un botón de suscripción
+ Herramienta de seguimiento de errores
+ Informa un error
+ Solicitar una función
+ Ver incidentes abiertos
+ Información sobre el producto
+ Condiciones del Servicio
+ Políticas para Desarrolladores
+ Funcionalidad mínima requerida
+ Lineamientos de desarrollo de la marca
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ Todos los productos
+ Condiciones
+ Privacidad
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ 

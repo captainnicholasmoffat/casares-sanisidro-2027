@@ -1,0 +1,174 @@
+<html>
+  <head>
+   <title>.: Summun :.</title>
+<link rel="icon" href="/sistemas/summun/favicon-bank.ico" type="image/x-icon">
+<link href="/sistemas/summun/bundles/summun/css/jquery-ui-1.8.20/css/smoothness/jquery-ui-1.8.20.custom.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.fonts.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/spacelab.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/summun.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/summun/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/sistemas/summun/bundles/common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="/sistemas/summun/bundles/summun/js/jquery.1.7.2.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-1.8.17.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery-ui-i18n.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/jquery.smooth-scroll.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootstrap.min.js"></script>
+<script src="/sistemas/summun/bundles/summun/js/bootswatch.js"></script>
+
+<script type="text/javascript">
+           (function($) {
+	    // mio
+             $(document).ready(function(){
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+                $('body').delegate('.datepicker', 'focusin', function(){$(this).datepicker({'changeMonth': true,'changeYear': true, 'dateFormat': 'dd/mm/yy'});});
+             });
+            })(jQuery);
+
+    $(document).ready(function(){
+    	$(function() {
+		$("#dialog").dialog({
+			autoOpen: false,
+			show: "blind",
+         hide: "blind",
+         modal: true,
+         minWidth: 700
+		});
+	});
+    });
+   function mostrarResumen(url,title)
+	{
+		$("#dialog").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#dialog").load(url);
+		$("#dialog").dialog("option", "title",title );
+		$("#dialog").dialog("open");
+  
+		return false;
+   }
+
+   $(document).ready(function(){
+    	$(function() {
+							$("#ventanaAdjuntos").dialog({
+								autoOpen: false,
+								show: "blind",
+								hide: "blind",
+								modal: true,
+								minWidth: 500
+							});
+						});
+    });
+
+   function mostrarAdjuntos(url,title)
+	{
+		$("#ventanaAdjuntos").html('<img src="/sistemas/summun/bundles/genemuform/images/ajax-loader.gif" alt="Cargando" title="Cargando"/>');
+		$("#ventanaAdjuntos").load(url);
+		$("#ventanaAdjuntos").dialog("option","title",title );
+		$("#ventanaAdjuntos").dialog("open");
+
+		return false;
+   }
+</script>
+   <script type="text/javascript">
+    function toggleDiv(div)
+    {
+      div = document.getElementById(div);
+      if(div.style.display == "none"){
+	div.style.display = "block";
+	document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Simple';
+	}else{
+	 div.style.display = "none";
+	 document.getElementById('textoBusqueda').innerHTML = 'Búsqueda Avanzada';
+	}
+    }
+   </script>
+   <style>
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+   </style>
+  </head>
+  <body>
+    
+    <div id="dialog" name="dialog" class="ui-widget"></div>
+    <div id="ventanaAdjuntos" name="ventanaAdjuntos" class="ui-widget"></div>
+    <div class="container">
+    <div class="container">
+  <h4 class="pull-left">Ver Doctrina Consulta "1971 D.C.  BIENES [SU BAJA]"</h4>
+      <div class="pull-right">
+     <button class="btn"
+        onclick="location.href= &quot;/sistemas/summun/busqueda/doctrinaconsulta/filter&quot;"                         value="Volver al Listado">
+    Volver al Listado
+         <img src="/sistemas/summun/bundles/summun/images/famfamfam/door_out.png"/>
+     
+</button>    </div>
+      </div>
+    <div class="container">
+     
+
+
+    </div>
+       
+            <div class="container">
+            </div>
+        <div class="container mainBody">
+	 <table class="table table-bordered table-striped table-hover">
+  <tr>
+  <th>N° U.I.</th>
+  <td>1971</td>
+</tr>
+<tr>
+  <th>Fecha Salida</th>
+  <td>15/03/2003&nbsp;</td>
+</tr>
+<tr>
+  <th>Estado</th>
+  <td>Público</td>
+</tr> 
+<tr>
+  <th>Vocalía</th>
+  <td>
+    <ul>
+          <li> Municipalidades B</li>
+        </ul>
+  </td>
+</tr><tr>
+  <th>Expediente</th>
+  <td>5300-2380/03&nbsp;</td>
+</tr>
+<tr>
+  <th>Ente</th>
+  <td>[123.0] Municipalidad de VICENTE LOPEZ</td>
+</tr>
+<tr>
+  <th>Ámbito</th>
+  <td>Provincial</td>
+</tr> 
+<tr>
+  <th>Resúmen</th>
+  <td>Consulta: En la cual solicita instrucciones en cuanto al procedimiento a seguir para dar de baja a los elementos que, por su condición actual, se considere imposible o inconveniente su recuperación o aprovechamiento.<br />
+Respuesta: La Acordada 4/84 del H. Tribunal de Cuentas establece  los criterios a seguir con relación a los bienes patrimoniales pertenecientes a las Municipalidades. El  artículo noveno dispone que son de aplicación las "Normas para el Recuento, Valorización, Identificación y Registro de Bienes Patrimoniales" empleadas por el Ministerio de Gobierno de la Provincia de Buenos Aires. Esta última norma en su artículo XII es la que brinda solución al tema planteado. El mismo dispone que los elementos que por conveniencia a los intereses comunales se haga imposible o inconveniente su recuperación o aprovechamiento, se liquidarán en el lugar donde se encuentren, a cuyo efecto se constituirá una Comisión, la que se ajustará a los procedimientos indicados en este artículo.<br />
+ Al respecto entendemos que si bien él último párrafo del artículo 159 de la Ley Orgánica de las Municipalidades obliga que la enajenación de bienes debe realizarse previa  tasación oficial, la baja de los elementos irrecuperables no se encuentra comprendida dentro de esta disposición.    &nbsp;</td>
+</tr>
+<tr>
+    <th>Palabras Claves:</th>
+    <td>
+     &nbsp;
+    </td>
+</tr><tr>
+ <th>Voces:</th>
+  <td>
+            &bull;BIENES [SU BAJA]<br>
+     &nbsp;
+  </td>
+</tr> </table>
+</div><!-- <div class="container"-->
+    </div>
+      
+     </body>  
+</html>

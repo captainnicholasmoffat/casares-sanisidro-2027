@@ -1,0 +1,124 @@
+<div wire:id="tHFH89ZJdjpVcJLyjLIv" class="space-y-5 p-4">
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm px-5 py-4">
+        <div class="flex flex-wrap gap-3">
+            <div class="flex-1 min-w-48">
+                <input
+                    type="text"
+                    wire:model.live.debounce.300ms="buscar"
+                    placeholder="Buscar por número, referencia, descripción..."
+                    class="w-full text-sm border border-gray-300 rounded-xl px-4 py-2
+                           focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+                />
+            </div>
+            <select
+                wire:model.live="filtroTipo"
+                class="text-sm border border-gray-300 rounded-xl px-3 py-2
+                       focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition"
+            >
+                <option value="">Todos los tipos</option>
+                <!--[if BLOCK]><![endif]-->                    <option value="Decreto">Decreto</option>
+                                    <option value="Resolución de firma conjunta">Resolución de firma conjunta</option>
+                                    <option value="Resolución simple">Resolución simple</option>
+                                    <option value="Ordenanza">Ordenanza</option>
+                                    <option value="Disposición">Disposición</option>
+                                    <option value="Edicto">Edicto</option>
+                <!--[if ENDBLOCK]><![endif]-->            </select>
+        </div>
+    </div>
+
+    
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+        <table class="w-full text-sm">
+            <thead>
+                <tr class="border-b border-gray-100 bg-gray-50 text-xs font-semibold uppercase tracking-wide text-gray-500 text-left">
+                    <th class="px-5 py-3">Boletín</th>
+                    <th class="px-5 py-3">Tipo / Nro</th>
+                    <th class="px-5 py-3">Referencia</th>
+                    <th class="px-5 py-3">Fecha firma</th>
+                    <th class="px-5 py-3">Tags</th>
+                    <th class="px-5 py-3 text-right">PDF</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-50">
+                <!--[if BLOCK]><![endif]-->                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1213
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">30/12/2025</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2025-1587-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente Nº EX-2025-00081865-SI-DDS - Adjudicar la Licitación Pública N° 44/2025, para la contratación del “SEGURO DE RIESGOS DEL TRABAJO”.-</p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            23/12/2025
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Adjudicación 
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Licitación Pública
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1767040762.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-5 py-3 whitespace-nowrap">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">
+                                #1195
+                            </span>
+                            <p class="text-xs text-gray-400 mt-0.5">11/08/2025</p>
+                        </td>
+                        <td class="px-5 py-3">
+                            <span class="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-0.5 rounded-full">Decreto</span>
+                            <!--[if BLOCK]><![endif]-->                                <p class="text-xs text-gray-500 font-mono">Nro. DECRE-2025-810-SI-INTEN</p>
+                            <!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 max-w-sm">
+                            <p class="text-sm text-gray-800 leading-snug">Expediente N° EX-2025-00081865-SI-DDS - Llamar a Licitación Pública N° 44/2025 para la contratación del “SEGURO DE RIESGOS DEL TRABAJO”.- </p>
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                        <td class="px-5 py-3 text-xs text-gray-500 font-mono whitespace-nowrap">
+                            24/07/2025
+                        </td>
+                        <td class="px-5 py-3">
+                            <div class="flex flex-wrap gap-1">
+                                <!--[if BLOCK]><![endif]-->                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Llamado
+                                    </span>
+                                                                                                        <span class="text-xs px-2 py-0.5 rounded-full font-medium" style="background-color: #8b5cf61a; color: #8b5cf6; border: 1px solid #8b5cf640">
+                                        Licitación Pública 
+                                    </span>
+                                <!--[if ENDBLOCK]><![endif]-->                            </div>
+                        </td>
+                        <td class="px-5 py-3 text-right">
+                            <!--[if BLOCK]><![endif]-->                                
+                                <a href="https://tesi.sanisidro.gob.ar/nfs-storage/gde/v2/gde_1754604919.pdf" target="_blank"
+                                    class="inline-flex items-center gap-1 text-xs font-semibold text-indigo-600
+                                           hover:text-indigo-800 hover:underline transition">
+                                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,152a8,8,0,0,1-8,8H192v16h16a8,8,0,0,1,0,16H192v16a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8h32A8,8,0,0,1,224,152ZM92,172a28,28,0,0,1-28,28H56v8a8,8,0,0,1-16,0V152a8,8,0,0,1,8-8H64A28,28,0,0,1,92,172Zm-16,0a12,12,0,0,0-12-12H56v24h8A12,12,0,0,0,76,172Zm88,8a36,36,0,0,1-36,36H112a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8h16A36,36,0,0,1,164,180Zm-16,0a20,20,0,0,0-20-20h-8v40h8A20,20,0,0,0,148,180ZM40,112V40A16,16,0,0,1,56,24h96a8,8,0,0,1,5.66,2.34l56,56A8,8,0,0,1,216,88v24a8,8,0,0,1-16,0V96H152a8,8,0,0,1-8-8V40H56v72a8,8,0,0,1-16,0ZM160,80h28.69L160,51.31Z"/></svg>                                    Ver
+                                </a>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->            </tbody>
+        </table>
+
+        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->    </div>
+
+</div>

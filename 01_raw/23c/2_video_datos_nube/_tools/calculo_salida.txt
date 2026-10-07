@@ -1,0 +1,259 @@
+Deflactor oct-2026 (IPC jul-2026) -> dic-2025: 0.83811. Dólar 1.447,84. Euro promedio BCRA dic-2025: 1.695,71 (20 días hábiles)
+Precios en USD/EUR de 2026 tomados como de dic-2025 sin ajustar por inflación externa [supuesto]
+
+== 1. Peso de una hora de video ==
+  720p30 H.264 4 Mbps (piso): video 4.0 Mbps + audio 0,128 -> 1,89 GB por hora (314 MB cada 10 min)
+  720p30 H.265 2,5 Mbps (piso): video 2.5 Mbps + audio 0,128 -> 1,20 GB por hora (200 MB cada 10 min)
+  1080p30 H.264 8 Mbps (alternativa): video 8.0 Mbps + audio 0,128 -> 3,71 GB por hora (619 MB cada 10 min)
+  1080p30 H.265 5 Mbps (RECOMENDADO): video 5.0 Mbps + audio 0,128 -> 2,34 GB por hora (390 MB cada 10 min)
+  1440p30 H.265 8 Mbps (opcional): video 8.0 Mbps + audio 0,128 -> 3,71 GB por hora (619 MB cada 10 min)
+  2160p30 H.265 16 Mbps (no recomendado): video 16.0 Mbps + audio 0,128 -> 7,37 GB por hora (1.228 MB cada 10 min)
+  Referencias [verificado]: NIJ 2016: VGA 30 fps 0,55-1,1 GB/h; 720p 1,65-3,3 GB/h. CAST 2018: 10 min HD 350-500 MB = 2,1-3,0 GB/h = 4,7-6,7 Mbps; 10 min 4K 1.000-1.500 MB
+  YouTube (vivo, 30 fps): 1080p H.265 mín 4 / rec 10 Mbps; H.264 mín 5 / rec 14. 720p H.265 2/6; H.264 3/8 [verificado]
+
+  Densidad de píxeles (px por metro de escena, horizontal) con el teléfono en el pecho [cálculo propio]
+  Umbrales IEC 62676-4 (vía Axis, [probable]): 2014 identificar 250 px/m; 2025 caracterizar 250, validar 500 (verificar personas conocidas, leer patente), escrutar 1.500 (identidad con alta certeza, leer patente)
+  Documento: letra de 2,5 mm con 6 px de alto -> 2.400 px/m [supuesto]
+   lente 70° horizontal, a 0.4 m: 720p 2.285 | 1080p 3.428 | 1440p 4.570 | 2160p 6.855
+   lente 70° horizontal, a 1 m: 720p 914 | 1080p 1.371 | 1440p 1.828 | 2160p 2.742
+   lente 70° horizontal, a 2 m: 720p 457 | 1080p 686 | 1440p 914 | 2160p 1.371
+   lente 70° horizontal, a 3 m: 720p 305 | 1080p 457 | 1440p 609 | 2160p 914
+   lente 100° horizontal, a 0.4 m: 720p 1.343 | 1080p 2.014 | 1440p 2.685 | 2160p 4.028
+   lente 100° horizontal, a 1 m: 720p 537 | 1080p 806 | 1440p 1.074 | 2160p 1.611
+   lente 100° horizontal, a 2 m: 720p 269 | 1080p 403 | 1440p 537 | 2160p 806
+   lente 100° horizontal, a 3 m: 720p 179 | 1080p 269 | 1440p 358 | 2160p 537
+
+== 2. Turno completo, memoria libre y bloques de 10 minutos ==
+  6 h | 720p30 H.265 2,5 Mbps (piso): 7,2 GB por turno; 36 bloques de 10 min de 200 MB; memoria libre recomendada 21 GB; por mes (22 turnos) 0,16 TB
+  6 h | 1080p30 H.265 5 Mbps (RECOMENDADO): 14,1 GB por turno; 36 bloques de 10 min de 390 MB; memoria libre recomendada 36 GB; por mes (22 turnos) 0,31 TB
+  6 h | 1080p30 H.264 8 Mbps (alternativa): 22,3 GB por turno; 36 bloques de 10 min de 619 MB; memoria libre recomendada 54 GB; por mes (22 turnos) 0,49 TB
+  8 h | 720p30 H.265 2,5 Mbps (piso): 9,6 GB por turno; 48 bloques de 10 min de 200 MB; memoria libre recomendada 26 GB; por mes (22 turnos) 0,21 TB
+  8 h | 1080p30 H.265 5 Mbps (RECOMENDADO): 18,7 GB por turno; 48 bloques de 10 min de 390 MB; memoria libre recomendada 46 GB; por mes (22 turnos) 0,41 TB
+  8 h | 1080p30 H.264 8 Mbps (alternativa): 29,7 GB por turno; 48 bloques de 10 min de 619 MB; memoria libre recomendada 70 GB; por mes (22 turnos) 0,65 TB
+  12 h | 720p30 H.265 2,5 Mbps (piso): 14,4 GB por turno; 72 bloques de 10 min de 200 MB; memoria libre recomendada 37 GB; por mes (15 turnos) 0,22 TB
+  12 h | 1080p30 H.265 5 Mbps (RECOMENDADO): 28,1 GB por turno; 72 bloques de 10 min de 390 MB; memoria libre recomendada 67 GB; por mes (15 turnos) 0,42 TB
+  12 h | 1080p30 H.264 8 Mbps (alternativa): 44,5 GB por turno; 72 bloques de 10 min de 619 MB; memoria libre recomendada 103 GB; por mes (15 turnos) 0,67 TB
+
+== 3. Datos móviles fuera de la base ==
+  Medido con openssl: manifiesto JSON 583 B (dos huellas SHA-256 y SHA-512, hora, GPS, huella del bloque anterior) + firma ECDSA P-256 en base64 96 B -> cuerpo 709 B
+  A mínimo (huellas + control) | 6 h: huellas 0,07 MB (peor caso 0,29), control 0,36 MB, resto 0,5 MB -> 0,9 MB por turno; 21 MB por mes (22 turnos)
+  A mínimo (huellas + control) | 8 h: huellas 0,10 MB (peor caso 0,38), control 0,48 MB, resto 0,5 MB -> 1,1 MB por turno; 24 MB por mes (22 turnos)
+  A mínimo (huellas + control) | 12 h: huellas 0,14 MB (peor caso 0,58), control 0,72 MB, resto 0,5 MB -> 1,4 MB por turno; 20 MB por mes (15 turnos)
+  B típico (+10 consultas, 6 actas, 18 fotos reducidas) | 6 h: huellas 0,07 MB (peor caso 0,29), control 0,36 MB, resto 11,3 MB -> 11,8 MB por turno; 259 MB por mes (22 turnos)
+  B típico (+10 consultas, 6 actas, 18 fotos reducidas) | 8 h: huellas 0,10 MB (peor caso 0,38), control 0,48 MB, resto 11,3 MB -> 11,9 MB por turno; 262 MB por mes (22 turnos)
+  B típico (+10 consultas, 6 actas, 18 fotos reducidas) | 12 h: huellas 0,14 MB (peor caso 0,58), control 0,72 MB, resto 11,3 MB -> 12,2 MB por turno; 183 MB por mes (15 turnos)
+  C alto (+30 consultas de voz, 15 actas, 60 fotos) | 6 h: huellas 0,07 MB (peor caso 0,29), control 0,36 MB, resto 51,0 MB -> 51,5 MB por turno; 1.133 MB por mes (22 turnos)
+  C alto (+30 consultas de voz, 15 actas, 60 fotos) | 8 h: huellas 0,10 MB (peor caso 0,38), control 0,48 MB, resto 51,0 MB -> 51,6 MB por turno; 1.136 MB por mes (22 turnos)
+  C alto (+30 consultas de voz, 15 actas, 60 fotos) | 12 h: huellas 0,14 MB (peor caso 0,58), control 0,72 MB, resto 51,0 MB -> 51,9 MB por turno; 779 MB por mes (15 turnos)
+  Con bloques de 1 minuto las huellas se multiplican por 10 (8 h: 0,96 MB por turno) [cálculo propio]
+
+  Planes (por línea y mes, pesos de dic-2025):
+   Ciudad, convenio LPU25 renglón 21, M2M 1 GB (AMX, abr-2026): 6.631 a 7.119 por mes -> 79.567 a 85.423 por año
+   Ciudad, renglón 43, M2M 1 GB asistencia a distancia (Telefónica, jul-2026): 9.356 a 10.792 por mes -> 112.270 a 129.502 por año
+   Ciudad, renglón 6, voz+SMS+5 GB (Telecom, jul-2026): 18.794 a 20.059 por mes -> 225.524 a 240.704 por año
+   Ciudad, renglón 20, M2M 5 GB (Telefónica, mar-2026): 22.241 a 24.921 por mes -> 266.892 a 299.051 por año
+   Ciudad, renglón 5, voz+SMS+10 GB (Telecom, may-2026): 33.690 a 37.323 por mes -> 404.276 a 447.871 por año
+   Movistar Empresas, Plan Control 2 GB, lista 2026 + impuestos x1,235: 25.023 a 25.023 por mes -> 300.273 a 300.273 por año
+   Movistar Empresas, Plan Control 4 GB, lista 2026 + impuestos x1,235: 31.363 a 31.363 por mes -> 376.351 a 376.351 por año
+
+== 4. Subida por wifi en la base ==
+  Turno de 6 h (14,1 GB H.265): 20 Mbps: 110 min (H.264: 175) | 50 Mbps: 44 min (H.264: 70) | 100 Mbps: 22 min (H.264: 35) | 300 Mbps: 7 min (H.264: 12)
+  Turno de 8 h (18,7 GB H.265): 20 Mbps: 147 min (H.264: 233) | 50 Mbps: 59 min (H.264: 93) | 100 Mbps: 29 min (H.264: 47) | 300 Mbps: 10 min (H.264: 16)
+  Turno de 12 h (28,1 GB H.265): 20 Mbps: 220 min (H.264: 349) | 50 Mbps: 88 min (H.264: 140) | 100 Mbps: 44 min (H.264: 70) | 300 Mbps: 15 min (H.264: 23)
+  Ancho de banda para N agentes que vuelven juntos (Mbps útiles) [cálculo propio]
+   6 h H.265, 50 agentes (0,70 TB): en 0.5 h: 3.674 | en 1 h: 1.837 | en 8 h: 230 | en 24 h: 77
+   6 h H.265, 150 agentes (2,11 TB): en 0.5 h: 11.022 | en 1 h: 5.511 | en 8 h: 689 | en 24 h: 230
+   6 h H.265, 450 agentes (6,32 TB): en 0.5 h: 33.067 | en 1 h: 16.533 | en 8 h: 2.067 | en 24 h: 689
+   8 h H.265, 50 agentes (0,94 TB): en 0.5 h: 4.899 | en 1 h: 2.449 | en 8 h: 306 | en 24 h: 102
+   8 h H.265, 150 agentes (2,81 TB): en 0.5 h: 14.696 | en 1 h: 7.348 | en 8 h: 919 | en 24 h: 306
+   8 h H.265, 450 agentes (8,43 TB): en 0.5 h: 44.089 | en 1 h: 22.044 | en 8 h: 2.756 | en 24 h: 919
+   12 h H.265, 50 agentes (1,41 TB): en 0.5 h: 7.348 | en 1 h: 3.674 | en 8 h: 459 | en 24 h: 153
+   12 h H.265, 150 agentes (4,22 TB): en 0.5 h: 22.044 | en 1 h: 11.022 | en 8 h: 1.378 | en 24 h: 459
+   12 h H.265, 450 agentes (12,65 TB): en 0.5 h: 66.133 | en 1 h: 33.067 | en 8 h: 4.133 | en 24 h: 1.378
+  Con H.264 multiplicar por 1,59
+
+== 5. Guarda en Europa: 6 meses de acceso inmediato + 18 meses de archivo ==
+  Bloque de 10 min H.265: 390 MB -> 26 operaciones de escritura por objeto (partes de 16 MiB) [supuesto]
+  Azure Suecia Central (Cold -> Archive) [USD]: rápido 0.00360/GB-mes, archivo 0.00099/GB-mes; ciclo de 24 meses 39,4 por TB; escritura y paso de capa 1,23 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 6,41 por TB -> TOTAL 47,1 USD por TB producido = 68.128 $ por TB; demora del archivo: hasta 15 h; mínimos 90/180 días
+  Azure Europa Occidental (Cold -> Archive) [USD]: rápido 0.00450/GB-mes, archivo 0.00180/GB-mes; ciclo de 24 meses 59,4 por TB; escritura y paso de capa 1,23 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 6,41 por TB -> TOTAL 67,0 USD por TB producido = 97.055 $ por TB; demora del archivo: hasta 15 h; mínimos 90/180 días
+  AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive) [USD]: rápido 0.00400/GB-mes, archivo 0.00099/GB-mes; ciclo de 24 meses 41,8 por TB; escritura y paso de capa 1,47 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 6,55 por TB -> TOTAL 49,8 USD por TB producido = 72.165 $ por TB; demora del archivo: horas (estándar) [sin confirmar el plazo]; mínimos 90/180 días
+  AWS Fráncfort (Glacier IR -> Deep Archive) [USD]: rápido 0.00500/GB-mes, archivo 0.00180/GB-mes; ciclo de 24 meses 62,4 por TB; escritura y paso de capa 1,49 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 6,57 por TB -> TOTAL 70,5 USD por TB producido = 102.009 $ por TB; demora del archivo: horas [sin confirmar el plazo]; mínimos 90/180 días
+  Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive) [USD]: rápido 0.00373/GB-mes, archivo 0.00112/GB-mes; ciclo de 24 meses 42,5 por TB; escritura y paso de capa 1,46 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 7,31 por TB -> TOTAL 51,2 USD por TB producido = 74.186 $ por TB; demora del archivo: milisegundos; mínimos 90/365 días
+  Google Cloud Fráncfort/Estocolmo (Coldline -> Archive) [USD]: rápido 0.00559/GB-mes, archivo 0.00233/GB-mes; ciclo de 24 meses 75,4 por TB; escritura y paso de capa 1,46 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 7,31 por TB -> TOTAL 84,2 USD por TB producido = 121.920 $ por TB; demora del archivo: milisegundos; mínimos 90/365 días
+  OVHcloud París 3 zonas (Infrequent Access -> Cold Archive) [EUR]: rápido 0.00885/GB-mes, archivo 0.00155/GB-mes; ciclo de 24 meses 81,0 por TB; escritura y paso de capa 0,00 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 0,23 por TB -> TOTAL 81,2 EUR por TB producido = 137.692 $ por TB; demora del archivo: [sin confirmar]; mínimos 30/180 días
+  OVHcloud una zona IA -> Cold Archive 3 zonas [EUR]: rápido 0.00373/GB-mes, archivo 0.00155/GB-mes; ciclo de 24 meses 50,3 por TB; escritura y paso de capa 0,00 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 0,23 por TB -> TOTAL 50,5 EUR por TB producido = 85.606 $ por TB; demora del archivo: [sin confirmar]; mínimos 30/180 días
+  Scaleway París (One Zone -> Glacier) [EUR]: rápido 0.00803/GB-mes, archivo 0.00254/GB-mes; ciclo de 24 meses 93,9 por TB; escritura y paso de capa 0,00 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 0,60 por TB -> TOTAL 94,5 EUR por TB producido = 160.236 $ por TB; demora del archivo: [sin confirmar]; mínimos 0/0 días
+  Hetzner Alemania/Finlandia (una sola clase, 24 meses) [EUR]: rápido 0.00626/GB-mes, archivo 0.00626/GB-mes; ciclo de 24 meses 150,2 por TB; escritura y paso de capa 0,00 por TB; lecturas (5% rápido + 0,5% archivo, con salida a la Argentina) 0,06 por TB -> TOTAL 150,3 EUR por TB producido = 254.857 $ por TB; demora del archivo: inmediato; mínimos 0/0 días
+
+  Por agente y por año, en régimen (año 3 en adelante) y en el año 1 (pesos de dic-2025):
+  6 h, 1080p30 H.265 5 Mbps (RECOMENDADO): 3,71 TB por año por agente; en régimen se guardan 7,4 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 252.758 $/año; año 1 142.170 $
+     Azure Europa Occidental (Cold -> Archive): régimen 360.082 $/año; año 1 172.748 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 267.736 $/año; año 1 154.462 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 378.459 $/año; año 1 187.768 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 275.236 $/año; año 1 152.671 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 452.331 $/año; año 1 211.577 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 510.846 $/año; año 1 282.820 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 317.604 $/año; año 1 129.836 $
+     Scaleway París (One Zone -> Glacier): régimen 594.487 $/año; año 1 271.670 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 945.535 $/año; año 1 256.335 $
+  6 h, 1080p30 H.264 8 Mbps (alternativa): 5,88 TB por año por agente; en régimen se guardan 11,8 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 400.627 $/año; año 1 225.343 $
+     Azure Europa Occidental (Cold -> Archive): régimen 570.738 $/año; año 1 273.810 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 424.367 $/año; año 1 244.826 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 599.866 $/año; año 1 297.616 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 436.256 $/año; año 1 241.987 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 716.956 $/año; año 1 335.355 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 809.703 $/año; año 1 448.276 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 503.409 $/año; año 1 205.793 $
+     Scaleway París (One Zone -> Glacier): régimen 942.275 $/año; año 1 430.603 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 1.498.696 $/año; año 1 406.297 $
+  8 h, 1080p30 H.265 5 Mbps (RECOMENDADO): 4,95 TB por año por agente; en régimen se guardan 9,9 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 337.010 $/año; año 1 189.560 $
+     Azure Europa Occidental (Cold -> Archive): régimen 480.109 $/año; año 1 230.331 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 356.981 $/año; año 1 205.950 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 504.612 $/año; año 1 250.357 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 366.982 $/año; año 1 203.561 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 603.108 $/año; año 1 282.103 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 681.128 $/año; año 1 377.093 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 423.472 $/año; año 1 173.115 $
+     Scaleway París (One Zone -> Glacier): régimen 792.649 $/año; año 1 362.226 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 1.260.714 $/año; año 1 341.780 $
+  8 h, 1080p30 H.264 8 Mbps (alternativa): 7,84 TB por año por agente; en régimen se guardan 15,7 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 534.169 $/año; año 1 300.458 $
+     Azure Europa Occidental (Cold -> Archive): régimen 760.984 $/año; año 1 365.080 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 565.823 $/año; año 1 326.435 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 799.822 $/año; año 1 396.822 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 581.675 $/año; año 1 322.649 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 955.941 $/año; año 1 447.140 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 1.079.604 $/año; año 1 597.701 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 671.212 $/año; año 1 274.391 $
+     Scaleway París (One Zone -> Glacier): régimen 1.256.367 $/año; año 1 574.137 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 1.998.261 $/año; año 1 541.729 $
+  12 h, 1080p30 H.265 5 Mbps (RECOMENDADO): 5,06 TB por año por agente; en régimen se guardan 10,1 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 344.670 $/año; año 1 193.869 $
+     Azure Europa Occidental (Cold -> Archive): régimen 491.021 $/año; año 1 235.565 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 365.094 $/año; año 1 210.631 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 516.081 $/año; año 1 256.047 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 375.322 $/año; año 1 208.188 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 616.815 $/año; año 1 288.515 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 696.608 $/año; año 1 385.663 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 433.096 $/año; año 1 177.049 $
+     Scaleway París (One Zone -> Glacier): régimen 810.664 $/año; año 1 370.459 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 1.289.366 $/año; año 1 349.547 $
+  12 h, 1080p30 H.264 8 Mbps (alternativa): 8,02 TB por año por agente; en régimen se guardan 16,0 TB por agente
+     Azure Suecia Central (Cold -> Archive): régimen 546.309 $/año; año 1 307.286 $
+     Azure Europa Occidental (Cold -> Archive): régimen 778.280 $/año; año 1 373.377 $
+     AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): régimen 578.683 $/año; año 1 333.854 $
+     AWS Fráncfort (Glacier IR -> Deep Archive): régimen 818.000 $/año; año 1 405.841 $
+     Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): régimen 594.895 $/año; año 1 329.982 $
+     Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): régimen 977.667 $/año; año 1 457.302 $
+     OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): régimen 1.104.140 $/año; año 1 611.285 $
+     OVHcloud una zona IA -> Cold Archive 3 zonas: régimen 686.467 $/año; año 1 280.627 $
+     Scaleway París (One Zone -> Glacier): régimen 1.284.921 $/año; año 1 587.185 $
+     Hetzner Alemania/Finlandia (una sola clase, 24 meses): régimen 2.043.676 $/año; año 1 554.041 $
+
+  Costo de borrar antes de tiempo (por GB) [cálculo propio]:
+   Google Archive (mínimo 365 días): un bloque que pasó al archivo a los 6 meses y se borra a los 12 paga 6 meses más: 0.00671 USD/GB
+   Azure Archive Suecia (mínimo 180 días): borrado a los 9 meses (3 en archivo) paga 3 meses: 0.00297 USD/GB
+   AWS Deep Archive Estocolmo (mínimo 180 días): igual, 0.00297 USD/GB
+   Con el plan de 6 + 18 meses no hay cargo: los mínimos (90 días en la capa rápida; 180 o 365 en archivo) se cumplen
+  Recuperar 1 TB del archivo y bajarlo a la Argentina:
+   Azure Suecia Central (Cold -> Archive): 111,0 USD = 160.710 $ (hasta 15 h)
+   Azure Europa Occidental (Cold -> Archive): 111,0 USD = 160.710 $ (hasta 15 h)
+   AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): 110,0 USD = 159.262 $ (horas (estándar) [sin confirmar el plazo])
+   AWS Fráncfort (Glacier IR -> Deep Archive): 114,0 USD = 165.054 $ (horas [sin confirmar el plazo])
+   Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): 158,3 USD = 229.229 $ (milisegundos)
+   Google Cloud Fráncfort/Estocolmo (Coldline -> Archive): 158,3 USD = 229.229 $ (milisegundos)
+   OVHcloud París 3 zonas (Infrequent Access -> Cold Archive): 8,4 EUR = 14.213 $ ([sin confirmar])
+   OVHcloud una zona IA -> Cold Archive 3 zonas: 8,4 EUR = 14.213 $ ([sin confirmar])
+   Scaleway París (One Zone -> Glacier): 19,0 EUR = 32.218 $ ([sin confirmar])
+   Hetzner Alemania/Finlandia (una sola clase, 24 meses): 1,0 EUR = 1.696 $ (inmediato)
+
+== 6. Cuenta final por agente (pesos de dic-2025) ==
+  Soporte de pecho 56.422; batería 10.000 mAh 41.905; 20.000 mAh 46.095; microSD 256 GB 74.592 (sólo si falta memoria)
+  6 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 275.236 (año 1: 152.671) + reposición 49.164 = 406.895
+  6 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 275.236 (año 1: 152.671) + reposición 49.164 = 557.514
+  6 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 275.236 (año 1: 152.671) + reposición 49.164 = 624.673
+  6 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 252.758 (año 1: 142.170) + reposición 49.164 = 384.416
+  6 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 252.758 (año 1: 142.170) + reposición 49.164 = 535.035
+  6 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 252.758 (año 1: 142.170) + reposición 49.164 = 602.195
+  6 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 317.604 (año 1: 129.836) + reposición 49.164 = 449.262
+  6 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 317.604 (año 1: 129.836) + reposición 49.164 = 599.881
+  6 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 317.604 (año 1: 129.836) + reposición 49.164 = 667.041
+  6 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 436.256 (año 1: 241.987) + reposición 49.164 = 567.914
+  6 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 436.256 (año 1: 241.987) + reposición 49.164 = 718.534
+  6 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 436.256 (año 1: 241.987) + reposición 49.164 = 785.693
+  6 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 400.627 (año 1: 225.343) + reposición 49.164 = 532.285
+  6 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 400.627 (año 1: 225.343) + reposición 49.164 = 682.904
+  6 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 400.627 (año 1: 225.343) + reposición 49.164 = 750.064
+  6 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 503.409 (año 1: 205.793) + reposición 49.164 = 635.067
+  6 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 503.409 (año 1: 205.793) + reposición 49.164 = 785.687
+  6 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 503.409 (año 1: 205.793) + reposición 49.164 = 852.846
+  8 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 366.982 (año 1: 203.561) + reposición 49.164 = 498.640
+  8 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 366.982 (año 1: 203.561) + reposición 49.164 = 649.259
+  8 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 366.982 (año 1: 203.561) + reposición 49.164 = 716.419
+  8 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 337.010 (año 1: 189.560) + reposición 49.164 = 468.668
+  8 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 337.010 (año 1: 189.560) + reposición 49.164 = 619.288
+  8 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 337.010 (año 1: 189.560) + reposición 49.164 = 686.447
+  8 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 423.472 (año 1: 173.115) + reposición 49.164 = 555.130
+  8 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 423.472 (año 1: 173.115) + reposición 49.164 = 705.749
+  8 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 423.472 (año 1: 173.115) + reposición 49.164 = 772.908
+  8 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 581.675 (año 1: 322.649) + reposición 49.164 = 713.333
+  8 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 581.675 (año 1: 322.649) + reposición 49.164 = 863.952
+  8 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 581.675 (año 1: 322.649) + reposición 49.164 = 931.112
+  8 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 534.169 (año 1: 300.458) + reposición 49.164 = 665.827
+  8 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 534.169 (año 1: 300.458) + reposición 49.164 = 816.447
+  8 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 534.169 (año 1: 300.458) + reposición 49.164 = 883.606
+  8 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 98.327 (con microSD 172.919); por año: datos 82.495 + guarda 671.212 (año 1: 274.391) + reposición 49.164 = 802.870
+  8 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 98.327 (con microSD 172.919); por año: datos 233.114 + guarda 671.212 (año 1: 274.391) + reposición 49.164 = 953.490
+  8 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 98.327 (con microSD 172.919); por año: datos 300.273 + guarda 671.212 (año 1: 274.391) + reposición 49.164 = 1.020.649
+  12 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 375.322 (año 1: 208.188) + reposición 51.259 = 509.076
+  12 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 375.322 (año 1: 208.188) + reposición 51.259 = 659.695
+  12 h | 1080p30 H.265 5 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 375.322 (año 1: 208.188) + reposición 51.259 = 726.855
+  12 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 344.670 (año 1: 193.869) + reposición 51.259 = 478.423
+  12 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 344.670 (año 1: 193.869) + reposición 51.259 = 629.042
+  12 h | 1080p30 H.265 5 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 344.670 (año 1: 193.869) + reposición 51.259 = 696.202
+  12 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 433.096 (año 1: 177.049) + reposición 51.259 = 566.849
+  12 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 433.096 (año 1: 177.049) + reposición 51.259 = 717.469
+  12 h | 1080p30 H.265 5 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 433.096 (año 1: 177.049) + reposición 51.259 = 784.628
+  12 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 594.895 (año 1: 329.982) + reposición 51.259 = 728.648
+  12 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 594.895 (año 1: 329.982) + reposición 51.259 = 879.268
+  12 h | 1080p30 H.264 8 Mbps | Google Cloud Bélgica/Finlandia/Países Bajos | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 594.895 (año 1: 329.982) + reposición 51.259 = 946.427
+  12 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 546.309 (año 1: 307.286) + reposición 51.259 = 680.063
+  12 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 546.309 (año 1: 307.286) + reposición 51.259 = 830.682
+  12 h | 1080p30 H.264 8 Mbps | Azure Suecia Central | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 546.309 (año 1: 307.286) + reposición 51.259 = 897.842
+  12 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos M2M 1 GB: compra 102.518 (con microSD 177.110); por año: datos 82.495 + guarda 686.467 (año 1: 280.627) + reposición 51.259 = 820.221
+  12 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos voz+5 GB: compra 102.518 (con microSD 177.110); por año: datos 233.114 + guarda 686.467 (año 1: 280.627) + reposición 51.259 = 970.840
+  12 h | 1080p30 H.264 8 Mbps | OVHcloud una zona IA -> Cold Archive 3 zonas | datos lista Movistar 2 GB: compra 102.518 (con microSD 177.110); por año: datos 300.273 + guarda 686.467 (año 1: 280.627) + reposición 51.259 = 1.037.999
+
+  TABLA FINAL (1080p H.265; datos M2M 1 GB a precio de la Ciudad; guarda en la nube indicada; reposición del kit cada 2 años):
+   6 h | Google Cloud Bélgica/Finlandia/Países Bajos: compra 98.327; año 1 284.329; régimen 406.895; régimen con voz+5 GB 557.514; régimen con H.264 567.914
+   6 h | Azure Suecia Central: compra 98.327; año 1 273.828; régimen 384.416; régimen con voz+5 GB 535.035; régimen con H.264 532.285
+   6 h | OVHcloud una zona IA -> Cold Archive 3 zonas: compra 98.327; año 1 261.494; régimen 449.262; régimen con voz+5 GB 599.881; régimen con H.264 635.067
+   8 h | Google Cloud Bélgica/Finlandia/Países Bajos: compra 98.327; año 1 335.219; régimen 498.640; régimen con voz+5 GB 649.259; régimen con H.264 713.333
+   8 h | Azure Suecia Central: compra 98.327; año 1 321.218; régimen 468.668; régimen con voz+5 GB 619.288; régimen con H.264 665.827
+   8 h | OVHcloud una zona IA -> Cold Archive 3 zonas: compra 98.327; año 1 304.773; régimen 555.130; régimen con voz+5 GB 705.749; régimen con H.264 802.870
+   12 h | Google Cloud Bélgica/Finlandia/Países Bajos: compra 102.518; año 1 341.941; régimen 509.076; régimen con voz+5 GB 659.695; régimen con H.264 728.648
+   12 h | Azure Suecia Central: compra 102.518; año 1 327.622; régimen 478.423; régimen con voz+5 GB 629.042; régimen con H.264 680.063
+   12 h | OVHcloud una zona IA -> Cold Archive 3 zonas: compra 102.518; año 1 310.803; régimen 566.849; régimen con voz+5 GB 717.469; régimen con H.264 820.221
+
+  Batería: consumo de una videollamada 679 a 1.345 mAh por hora (Scientific Reports 2023, material z2) como techo; grabar con la pantalla apagada debería gastar menos [inferencia]
+   solo el teléfono (5.000 mAh): 3,7 a 7,4 h
+   + batería de 10.000 mAh (60% útil): 8,2 a 16,2 h
+   + batería de 20.000 mAh (60% útil): 12,6 a 25,0 h
+
+  Guarda por TB [cálculo propio]: el costo de vida completa por TB producido se paga en 2 años; en régimen, cada TB guardado cuesta la mitad por año
+   Google Cloud Bélgica/Finlandia/Países Bajos (Coldline -> Archive): 74.186 $ por TB producido; 37.093 $ por TB guardado y por año
+   Azure Suecia Central (Cold -> Archive): 68.128 $ por TB producido; 34.064 $ por TB guardado y por año
+   AWS Estocolmo o Irlanda (Glacier IR -> Deep Archive): 72.165 $ por TB producido; 36.082 $ por TB guardado y por año
+   OVHcloud una zona IA -> Cold Archive 3 zonas: 85.606 $ por TB producido; 42.803 $ por TB guardado y por año
+   Hetzner Alemania/Finlandia (una sola clase, 24 meses): 254.857 $ por TB producido; 127.428 $ por TB guardado y por año
+
+  Escala (combinación recomendada: 8 h, 1080p H.265, Google Cloud Bélgica, M2M 1 GB) [cálculo propio]
+   50 agentes: compra 4,92 M; por año en régimen 24,93 M (año 1: 16,76 M); video guardado en régimen 495 TB
+   150 agentes: compra 14,75 M; por año en régimen 74,80 M (año 1: 50,28 M); video guardado en régimen 1.484 TB
+   450 agentes: compra 44,25 M; por año en régimen 224,39 M (año 1: 150,85 M); video guardado en régimen 4.452 TB
+
+  Estación de descarga en la base (opcional, no por agente): servidor de almacenamiento intermedio [referencia de precios z2, oct-2026]
+   QNAP 12 bahías 3.939.126 + 4 discos de 22 TB 5.531.536 = 9.470.662 (unos 40 TB útiles en RAID 6) [supuesto el armado]

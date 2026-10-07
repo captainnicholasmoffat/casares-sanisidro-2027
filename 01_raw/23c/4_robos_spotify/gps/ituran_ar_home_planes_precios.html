@@ -1,0 +1,2612 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style id="jetpack-boost-critical-css">@media all{.gm_tr_list>*{display:block;position:relative;padding:10px;box-sizing:border-box;background-color:#2b2c30;border-radius:5px;height:120px;padding:20px 20px;grid-area:"cell";color:#b7bbc0}.gm_br_desc{grid-area:br_desc;height:100%;padding-bottom:20px;box-sizing:border-box;display:flex;align-items:flex-end;line-height:1.3}.gm_br_banner{display:flex;justify-content:flex-end;align-items:flex-end;grid-area:br_image;height:110px;margin-top:auto;filter:drop-shadow(0px 8px 40px rgba(0,0,0,.25))}}html{font-family:PFBeauSansPro;font-size:15px;font-weight:400;line-height:1.55;-webkit-text-size-adjust:100%;background:#fff;color:#000e2d;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}body{margin:0}a{color:#00a8e3;text-decoration:none}strong{font-weight:bolder}img{vertical-align:middle}img{max-width:100%;height:auto;box-sizing:border-box}p,ul{margin:0 0 20px 0}*+p{margin-top:20px}.uk-h1,.uk-h5,h2,h3,h5{margin:0 0 20px 0;font-family:PFBeauSansPro;font-weight:400;color:#001630;text-transform:none;letter-spacing:-.05rem}*+h2,*+h3{margin-top:40px}.uk-h1{font-size:37.4px;line-height:1.2}h2{font-size:27.2px;line-height:1.3}h3{font-size:24px;line-height:1.4}.uk-h5,h5{font-size:15px;line-height:1.4;font-weight:500;letter-spacing:0}@media (min-width:960px){.uk-h1{font-size:44px}h2{font-size:32px}}ul{padding-left:30px}hr{overflow:visible;text-align:inherit;margin:0 0 20px 0;border:0;border-top:1px solid #00a8e3}*+hr{margin-top:20px}main{display:block}a.uk-link-muted{color:#999}a.uk-link-text{color:inherit}.uk-table{border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:20px}.uk-table td{padding:16px 12px;vertical-align:top}.uk-table td>:last-child{margin-bottom:0}.uk-table-middle,.uk-table-middle td{vertical-align:middle!important}.uk-table-small td{padding:10px 12px}.uk-button{margin:0;border:none;overflow:visible;font:inherit;color:inherit;text-transform:none;-webkit-appearance:none;border-radius:0;display:inline-block;box-sizing:border-box;padding:0 20px;vertical-align:middle;font-size:20px;line-height:46px;text-align:center;text-decoration:none;font-family:PFBeauSansPro;font-weight:700;letter-spacing:0;border-radius:40px;background-origin:border-box}.uk-button-primary{background-color:#97ca3d;color:#1c386b}.uk-section{display:flow-root;box-sizing:border-box;padding-top:40px;padding-bottom:40px}@media (min-width:960px){.uk-section{padding-top:70px;padding-bottom:70px}}.uk-section>:last-child{margin-bottom:0}.uk-section-large{padding-top:70px;padding-bottom:70px}@media (min-width:960px){.uk-section-large{padding-top:140px;padding-bottom:140px}}.uk-section-xlarge{padding-top:140px;padding-bottom:140px}@media (min-width:960px){.uk-section-xlarge{padding-top:210px;padding-bottom:210px}}.uk-section-default{background:#fff}.uk-section-primary{background:#1c386b}.uk-container{display:flow-root;box-sizing:content-box;max-width:1200px;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}@media (min-width:640px){.uk-container{padding-left:30px;padding-right:30px}}@media (min-width:960px){.uk-container{padding-left:40px;padding-right:40px}}.uk-container>:last-child{margin-bottom:0}.uk-container .uk-container{padding-left:0;padding-right:0}.uk-container-small{max-width:1000px}.uk-container-expand{max-width:none}.uk-tile{display:flow-root;position:relative;box-sizing:border-box;padding-left:15px;padding-right:15px;padding-top:40px;padding-bottom:40px}@media (min-width:640px){.uk-tile{padding-left:30px;padding-right:30px}}@media (min-width:960px){.uk-tile{padding-left:40px;padding-right:40px;padding-top:70px;padding-bottom:70px}}.uk-tile>:last-child{margin-bottom:0}.uk-tile-xsmall{padding-top:20px;padding-bottom:20px}.uk-card{position:relative;box-sizing:border-box;border-radius:40px}.uk-card-body{display:flow-root;padding:30px 30px}@media (min-width:1200px){.uk-card-body{padding:40px 40px}}.uk-card-body>:last-child{margin-bottom:0}.uk-card-primary{background-color:#1c386b;color:#fff;box-shadow:3px 8px 16px rgba(0,0,0,.12)}.uk-card-small .uk-card-body{padding:20px 20px}.uk-overlay{padding:30px 30px}.uk-overlay>:last-child{margin-bottom:0}.uk-accordion-title{display:block;font-size:19px;line-height:1.4;color:#333;overflow:hidden;font-family:PFBeauSansPro;font-weight:700;letter-spacing:0}.uk-accordion-title::before{content:"";width:1.4em;height:1.4em;margin-left:10px;float:right;background-image:url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23000E2D%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23000E2D%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E);background-repeat:no-repeat;background-position:50% 50%}.uk-accordion-content{display:flow-root;margin-top:20px}.uk-accordion-content>:last-child{margin-bottom:0}.uk-drop{display:none;position:absolute;z-index:1020;box-sizing:border-box;width:300px}.uk-slideshow-items{position:relative;z-index:0;margin:0;padding:0;list-style:none;overflow:hidden;-webkit-touch-callout:none;touch-action:pan-y}.uk-slideshow-items>*{position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;will-change:transform,opacity}.uk-slideshow-items>:not(.uk-active){display:none}.uk-offcanvas-bar{position:absolute;top:0;bottom:0;left:-320px;box-sizing:border-box;width:320px;padding:20px 20px;background:#00326f;overflow-y:auto}@media (min-width:640px){.uk-offcanvas-bar{left:-350px;width:350px;padding:30px 30px}}.uk-offcanvas-close{position:absolute;z-index:1000;top:5px;right:5px;padding:5px}@media (min-width:640px){.uk-offcanvas-close{top:10px;right:10px}}.uk-offcanvas-close:first-child+*{margin-top:0}.uk-switcher{margin:0;padding:0;list-style:none}.uk-switcher>:not(.uk-active){display:none}.uk-switcher>*>:last-child{margin-bottom:0}.uk-notification{position:fixed;top:15px;left:15px;z-index:1040;box-sizing:border-box;width:420px}@media (max-width:639px){.uk-notification{left:15px;right:15px;width:auto;margin:0}}.uk-notification-message{position:relative;padding:30px;background:#f7f7f7;color:#000e2d;font-size:15px;line-height:1.5}.uk-grid{display:flex;flex-wrap:wrap;margin:0;padding:0;list-style:none}.uk-grid>*{margin:0}.uk-grid>*>:last-child{margin-bottom:0}.uk-grid{margin-left:-30px}.uk-grid>*{padding-left:30px}*+.uk-grid-margin{margin-top:30px}@media (min-width:1200px){.uk-grid{margin-left:-40px}.uk-grid>*{padding-left:40px}*+.uk-grid-margin{margin-top:40px}}.uk-grid-small{margin-left:-15px}.uk-grid-small>*{padding-left:15px}.uk-grid-column-medium{margin-left:-30px}.uk-grid-column-medium>*{padding-left:30px}.uk-grid-collapse{margin-left:0}.uk-grid-collapse>*{padding-left:0}.uk-grid-divider>*{position:relative}.uk-grid-divider>:not(.uk-first-column)::before{content:"";position:absolute;top:0;bottom:0;border-left:1px solid rgba(0,0,0,.1)}.uk-grid-divider{margin-left:-60px}.uk-grid-divider>*{padding-left:60px}.uk-grid-divider>:not(.uk-first-column)::before{left:30px}@media (min-width:1200px){.uk-grid-divider{margin-left:-80px}.uk-grid-divider>*{padding-left:80px}.uk-grid-divider>:not(.uk-first-column)::before{left:40px}}.uk-grid-divider.uk-grid-column-medium{margin-left:-60px}.uk-grid-divider.uk-grid-column-medium>*{padding-left:60px}.uk-grid-divider.uk-grid-column-medium>:not(.uk-first-column)::before{left:30px}.uk-grid-item-match,.uk-grid-match>*{display:flex;flex-wrap:wrap}.uk-grid-item-match>:not([class*=uk-width]),.uk-grid-match>*>:not([class*=uk-width]){box-sizing:border-box;width:100%;flex:auto}.uk-nav{margin:0;padding:0;list-style:none}.uk-nav li>a{display:flex;align-items:center;column-gap:.25em;text-decoration:none}.uk-nav>li>a{padding:5px 0}.uk-nav-default{font-size:15px;line-height:1.55;font-family:PFBeauSansPro;font-weight:700;letter-spacing:0}.uk-nav-default>li>a{color:#fff}.uk-nav-default .uk-nav-subtitle{font-size:12px}.uk-nav-center{text-align:center}.uk-nav-center li>a{justify-content:center}.uk-navbar{display:flex;position:relative}.uk-navbar-container:not(.uk-navbar-transparent){background:#00356d}.uk-navbar-left,.uk-navbar-right{display:flex;gap:15px;align-items:center}.uk-navbar-right{margin-left:auto}.uk-navbar-nav{display:flex;gap:15px;margin:0;padding:0;list-style:none}.uk-navbar-left,.uk-navbar-right{flex-wrap:wrap}.uk-navbar-item,.uk-navbar-nav>li>a,.uk-navbar-toggle{display:flex;justify-content:center;align-items:center;column-gap:.25em;box-sizing:border-box;min-height:75px;font-size:15px;font-family:PFBeauSansPro;text-decoration:none}.uk-navbar-nav>li>a{padding:0 0;color:rgba(255,255,255,.74);position:relative;z-index:1;font-weight:500;text-transform:uppercase;letter-spacing:0}.uk-navbar-nav>li>a::before{content:"";display:block;position:absolute;z-index:-1;bottom:22px;height:2px;background-color:rgba(0,0,0,0);--uk-navbar-nav-item-line-margin-horizontal:0;left:var(--uk-navbar-nav-item-line-margin-horizontal);right:100%}.uk-navbar-item{padding:0 0;color:#fff}.uk-navbar-item>:last-child{margin-bottom:0}.uk-navbar-toggle{padding:0 0;color:#fff;font-weight:500;text-transform:uppercase;letter-spacing:0}.uk-navbar-dropdown{width:200px;padding:20px;background:#001e49;color:#fff;border-radius:0 0 20px 20px;box-shadow:2px 5px 10px rgba(0,0,0,.08)}.uk-navbar-dropdown>:last-child{margin-bottom:0}@media (min-width:960px){.uk-navbar-left,.uk-navbar-right{gap:20px}}@media (min-width:960px){.uk-navbar-nav{gap:20px}}.uk-dotnav{display:flex;flex-wrap:wrap;margin:0;padding:0;list-style:none;margin-left:-12px}.uk-dotnav>*{flex:none;padding-left:12px}.uk-dotnav>*>*{display:block;box-sizing:border-box;width:10px;height:10px;border-radius:50%;background:rgba(0,14,45,.2);text-indent:100%;overflow:hidden;white-space:nowrap}[class*=uk-child-width]>*{box-sizing:border-box;width:100%}.uk-child-width-1-2>*{width:50%}.uk-child-width-expand>:not([class*=uk-width]){flex:1;min-width:1px}@media (min-width:960px){.uk-child-width-1-4\@m>*{width:25%}.uk-child-width-1-4\@m>:not([class*=uk-width]){flex:initial}}[class*=uk-width]{box-sizing:border-box;width:100%;max-width:100%}.uk-width-1-3{width:calc(100%/3)}.uk-width-2-3{width:calc(200%/3)}.uk-width-1-4{width:25%}.uk-width-3-4{width:75%}.uk-width-2-5{width:40%}.uk-width-3-5{width:60%}.uk-width-medium{width:300px}.uk-width-xlarge{width:600px}.uk-width-2xlarge{width:750px}.uk-width-auto{width:auto}.uk-width-expand{flex:1;min-width:1px}@media (min-width:960px){.uk-width-1-2\@m{width:50%}.uk-width-1-2\@m{flex:initial}}.uk-text-meta{font-size:13px;line-height:1.4;color:#999;font-family:PFBeauSansPro;font-weight:700;letter-spacing:0}.uk-text-primary{color:#1c386b!important}.uk-text-left{text-align:left!important}.uk-text-center{text-align:center!important}[uk-cover]:where(img,video){position:absolute;top:0;left:0;width:100%;height:100%;box-sizing:border-box;object-fit:cover;object-position:center}.uk-background-contain,.uk-background-cover{background-position:50% 50%;background-repeat:no-repeat}.uk-background-cover{background-size:cover}.uk-background-contain{background-size:contain}.uk-background-top-center{background-position:50%0}.uk-background-center-center{background-position:50% 50%}.uk-background-norepeat{background-repeat:no-repeat}.uk-panel{display:flow-root;position:relative;box-sizing:border-box}.uk-panel>:last-child{margin-bottom:0}[class*=uk-inline]{display:inline-block;position:relative;max-width:100%;vertical-align:middle;-webkit-backface-visibility:hidden}.uk-inline-clip{overflow:hidden}.uk-logo{font-size:24px;font-family:PFBeauSansPro;color:#333;text-decoration:none;font-weight:400;letter-spacing:-.05rem}:where(.uk-logo){display:inline-block;vertical-align:middle}.uk-logo :where(img,svg,video){display:block}.uk-flex{display:flex}.uk-flex-left{justify-content:flex-start}.uk-flex-center{justify-content:center}.uk-flex-middle{align-items:center}.uk-flex-column{flex-direction:column}.uk-flex-nowrap{flex-wrap:nowrap}.uk-margin{margin-bottom:20px}*+.uk-margin{margin-top:20px!important}.uk-margin-top{margin-top:20px!important}.uk-margin-small{margin-bottom:10px}*+.uk-margin-small{margin-top:10px!important}.uk-margin-small-top{margin-top:10px!important}.uk-margin-medium-top{margin-top:40px!important}.uk-margin-large{margin-bottom:40px}*+.uk-margin-large{margin-top:40px!important}.uk-margin-large-top{margin-top:40px!important}@media (min-width:1200px){.uk-margin-large{margin-bottom:70px}*+.uk-margin-large{margin-top:70px!important}.uk-margin-large-top{margin-top:70px!important}}.uk-margin-auto{margin-left:auto!important;margin-right:auto!important}.uk-margin-auto-bottom{margin-bottom:auto!important}.uk-margin-remove-top{margin-top:0!important}.uk-margin-remove-bottom{margin-bottom:0!important}.uk-margin-remove-vertical{margin-top:0!important;margin-bottom:0!important}.uk-margin-remove-adjacent+*,.uk-margin-remove-first-child>:first-child{margin-top:0!important}.uk-padding{padding:30px}@media (min-width:1200px){.uk-padding{padding:40px}}.uk-padding-remove-top{padding-top:0!important}.uk-padding-remove-bottom{padding-bottom:0!important}.uk-padding-remove-horizontal{padding-left:0!important;padding-right:0!important}:root{--uk-position-margin-offset:0px}[class*=uk-position-bottom],[class*=uk-position-center]{position:absolute!important;max-width:calc(100% - (var(--uk-position-margin-offset)*2));box-sizing:border-box}.uk-position-center{top:calc(50% - var(--uk-position-margin-offset));left:calc(50% - var(--uk-position-margin-offset));--uk-position-translate-x:-50%;--uk-position-translate-y:-50%;transform:translate(var(--uk-position-translate-x),var(--uk-position-translate-y));width:max-content}[class*=uk-position-center-left],[class*=uk-position-center-right]{top:calc(50% - var(--uk-position-margin-offset));--uk-position-translate-y:-50%;transform:translate(0,var(--uk-position-translate-y))}.uk-position-center-left{left:0}.uk-position-center-right{right:0}.uk-position-bottom-center{left:calc(50% - var(--uk-position-margin-offset));--uk-position-translate-x:-50%;transform:translate(var(--uk-position-translate-x),0);width:max-content}.uk-position-bottom-center{bottom:0}.uk-position-cover{position:absolute;top:0;bottom:0;left:0;right:0}.uk-position-medium{margin:30px;--uk-position-margin-offset:30px}.uk-position-relative{position:relative!important}.uk-position-absolute{position:absolute!important}.uk-transition-opaque{opacity:1}@media (min-width:960px){.uk-hidden\@m{display:none!important}}@media (max-width:639px){.uk-visible\@s{display:none!important}}@media (max-width:959px){.uk-visible\@m{display:none!important}}.uk-hidden-visually:not(:focus):not(:active):not(:focus-within){position:absolute!important;width:0!important;height:0!important;padding:0!important;border:0!important;margin:0!important;overflow:hidden!important}.uk-card-primary>:not([class*=uk-card-media]),.uk-light,.uk-offcanvas-bar,.uk-section-primary:not(.uk-preserve-color){color:rgba(255,255,255,.8)}.uk-card-primary>:not([class*=uk-card-media]) a,.uk-light a,.uk-offcanvas-bar a{color:#fff}.uk-light h3,.uk-section-primary:not(.uk-preserve-color) h2,.uk-section-primary:not(.uk-preserve-color) h3{color:#fff}.uk-offcanvas-bar hr{border-top-color:rgba(255,255,255,.2)}.uk-light a.uk-link-muted{color:rgba(255,255,255,.6)}.uk-offcanvas-bar .uk-nav-default>li>a{color:rgba(255,255,255,.6)}.uk-light .uk-text-meta{color:rgba(255,255,255,.6)}.uk-section-primary:not(.uk-preserve-color) .uk-text-primary{color:#fff!important}.uk-offcanvas-bar .uk-logo{color:#fff}html{overflow-y:scroll}body{overflow:hidden;overflow:clip}.tm-page{position:relative}@media (min-width:960px){.tm-page{border-right:solid transparent}}.tm-header,.tm-header-mobile{position:relative}.tm-grid-expand>*{flex-grow:1}.tm-grid-expand>.uk-width-expand{flex-grow:999}@media (min-width:960px){.tm-grid-expand>.uk-width-1-2\@m{flex-grow:1}}.uk-parent>a::after{content:url(https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/arrow.png);color:green;font-weight:700;position:relative;top:-3px}.tm-side-bar{background:#00356d;color:#fff;padding:0 20px}.main-title{font-size:5.2em;line-height:1;font-weight:700}.side-title{color:#a1cd3d;font-size:16px;font-weight:700;margin-top:0}.size-full{width:100%}.subtitle{font-size:1.4em;line-height:1.2;max-width:52vw}.white-text{color:#fff}.text-white{color:#fff;margin:0;font-size:18px;font-weight:700}.large-amount{font-size:50px;font-weight:700;line-height:1}.desde{color:#fff;position:absolute;font-size:15px;top:-15px;padding-left:12px;font-weight:700}.price-section{margin-top:26px}.price{color:#a1cd3d}.currency{position:relative}.currency{font-size:24px;position:relative;top:-45px}.disclaimer{color:#fff;font-size:10px;max-width:75%;margin:0 auto}.buttons{padding-top:20px}.btn{display:block;background-color:#a1cd3d;font-size:11px;color:#1a3b6d;padding:6px 0;border-radius:5px;text-decoration:none;margin-bottom:10px;font-weight:700}.btn-contact{color:#fff;border:3px solid #fff;padding:3px 0;display:block;font-size:11px;border-radius:5px;margin-bottom:10px}.title-overlay{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center}.data-section{text-align:left}.data-section>div:first-child{padding-left:14px}li{font-size:.9em}ul{padding-left:15px}.uk-table-small td{padding:3px 5px;line-height:1}.uk-table-small td{padding:7px 5px}.mobil .tm-side-bar{padding:21px 20px}.mobil .main-title{font-size:2em;line-height:1;font-weight:700;text-align:center}.mobil .side-title{color:#a1cd3d;font-size:3.6vw;text-align:center;font-weight:700;margin-top:0}.mobil .size-full{width:100%}.mobil .uk-overlay{padding:30px 7px}.mobil .subtitle{font-size:1.1em;line-height:1.2;max-width:90vw}.mobil .white-text{color:#fff}.mobil .text-white{color:#fff;margin:0;font-size:13px;font-weight:700}.mobil .large-amount{font-size:25px;font-weight:700;line-height:1}.mobil .desde{color:#fff;position:absolute;font-size:15px;top:-30px;padding-left:15px;font-weight:700}.mobil .price-section{margin-top:26px}.mobil .price{color:#a1cd3d}.mobil .disclaimer{background-color:#001630;color:#fff;font-size:10px;max-width:100%;padding:3px 5px}.mobil .button{padding-top:20px;width:40vw;margin:0 auto}.mobil .button{padding-top:7px}.mobil .btn{display:block;background-color:#a1cd3d;font-size:11px;color:#1a3b6d;padding:6px 0;border-radius:5px;text-decoration:none;margin-bottom:10px;font-weight:700;text-align:center}.mobil .btn-contact{color:#fff;border:3px solid #fff;padding:3px 0;display:block;font-size:2.4vw;border-radius:5px;margin-bottom:10px;text-align:center}.mobil .uk-grid-divider>:not(.uk-first-column)::before{content:"";position:absolute;top:0;bottom:0;border-left:1px solid #0094cf}.mobil .bot-title{color:#a1cd3d;font-size:15px;font-weight:700;margin-top:0}.mobil .bot-title1{color:#a1cd3d;font-size:16px;font-weight:700;margin-top:0}.btn-contact{color:#fff;border:3px solid #fff;padding:3px 0;display:block;font-size:11px;border-radius:5px;margin-bottom:10px}.title-overlay{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center}.data-section{text-align:left}.data-section>div:first-child{padding-left:14px}li{font-size:.9em}ul{padding-left:15px}.uk-table-small td{padding:3px 5px;line-height:1}.uk-table-small td{padding:7px 5px}.show-desktop{display:block}.show-movil{display:none}@media screen and (max-width:780px){.show-desktop{display:none}.show-movil{display:block}}@media screen and (max-width:1200px){.uk-navbar-container .uk-container{padding:0 10px}.uk-navbar-item,.uk-navbar-nav>li>a,.uk-navbar-toggle{font-size:12px}}@media all{.side-title{font-size:1.5vw;line-height:1;font-weight:700}@media (max-width:1400px){.uk-margin-large-top{margin-top:40px!important}}}</style><title>Ituran Argentina</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Ituran Argentina &raquo; Feed" href="https://www.ituran.com.ar/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ituran Argentina &raquo; Feed de los comentarios" href="https://www.ituran.com.ar/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.ituran.com.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ituran.com.ar%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.ituran.com.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ituran.com.ar%2F&#038;format=xml" />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<noscript><link rel='stylesheet' id='nktools-css' href='https://www.ituran.com.ar/wp-content/plugins/nktools/public/css/nktools-public.css?ver=1.0.7' media='all' />
+</noscript><link data-media="all" onload="this.media=this.dataset.media; delete this.dataset.media; this.removeAttribute( &apos;onload&apos; );" rel='stylesheet' id='nktools-css' href='https://www.ituran.com.ar/wp-content/plugins/nktools/public/css/nktools-public.css?ver=1.0.7' media="not all" />
+<link href="https://www.ituran.com.ar/wp-content/plugins/nktools/includes/modules/elements/assets/css/custom.css?ver=5.0.37" rel="stylesheet">
+<style>/*css elements*/</style>
+<link href="https://www.ituran.com.ar/wp-content/themes/yootheme-ituran/css/theme.2.css?ver=1787677221" rel="stylesheet">
+<link href="https://www.ituran.com.ar/wp-content/themes/yootheme-ituran/css/custom.css?ver=5.0.37" rel="stylesheet">
+<script id="jquery-core-js" src="https://www.ituran.com.ar/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.ituran.com.ar/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="nktools-js" src="https://www.ituran.com.ar/wp-content/plugins/nktools/public/js/nktools-public.js?ver=1.0.7"></script>
+<link rel="https://api.w.org/" href="https://www.ituran.com.ar/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.ituran.com.ar/wp-json/wp/v2/pages/5" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ituran.com.ar/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel="canonical" href="https://www.ituran.com.ar/" />
+<link rel='shortlink' href='https://www.ituran.com.ar/' />
+<!-- start Simple Custom CSS and JS -->
+<!-- end Simple Custom CSS and JS -->
+
+<link rel='stylesheet' id='443-css' href='//www.ituran.com.ar/wp-content/uploads/sites/2/custom-css-js/443.css?v=6690' media='all' />
+<link rel="icon" href="/wp-content/uploads/sites/2/2024/10/favicon1.webp" sizes="any">
+<link rel="apple-touch-icon" href="/wp-content/uploads/sites/2/2024/10/logo_nosotros.svg"><meta name="generator" content="Powered by Slider Revolution 6.7.20 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script src="https://www.ituran.com.ar/wp-content/plugins/nktools/includes/modules/elements/assets/js/custom.js?ver=5.0.37" defer></script>
+<script>var custom = 123;</script>
+<script src="https://www.ituran.com.ar/wp-content/themes/yootheme/vendor/assets/uikit/dist/js/uikit.min.js?ver=5.0.37"></script>
+<script src="https://www.ituran.com.ar/wp-content/themes/yootheme/vendor/assets/uikit/dist/js/uikit-icons-design-bites.min.js?ver=5.0.37"></script>
+<script src="https://www.ituran.com.ar/wp-content/themes/yootheme/assets/site/js/theme.js?ver=5.0.37"></script>
+<script>window.yootheme ||= {}; yootheme.theme = {"i18n":{"close":{"label":"Cerrar","0":"yootheme"},"totop":{"label":"Back to top","0":"yootheme"},"marker":{"label":"Open","0":"yootheme"},"navbarToggleIcon":{"label":"Abrir el men\u00fa","0":"yootheme"},"paginationPrevious":{"label":"P\u00e1gina anterior","0":"yootheme"},"paginationNext":{"label":"P\u00e1gina siguiente","0":"yootheme"},"searchIcon":{"toggle":"B\u00fasqueda abierta","submit":"Enviar b\u00fasqueda"},"slider":{"next":"Diapositiva siguiente","previous":"Diapositiva anterior","slideX":"Diapositiva %s","slideLabel":"%s de %s"},"slideshow":{"next":"Diapositiva siguiente","previous":"Diapositiva anterior","slideX":"Diapositiva %s","slideLabel":"%s de %s"},"lightboxPanel":{"next":"Diapositiva siguiente","previous":"Diapositiva anterior","slideLabel":"%s de %s","close":"Cerrar"}}};</script>
+<link rel="icon" href="/wp-content/uploads/sites/2/2024/10/favicon1.webp" sizes="any">
+<link rel="apple-touch-icon" href="/wp-content/uploads/sites/2/2024/10/logo_nosotros.svg">
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+    <noscript><link rel='stylesheet' id='rs-plugin-settings-css' href='//www.ituran.com.ar/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.20' media='all' />
+</noscript><link data-media="all" onload="this.media=this.dataset.media; delete this.dataset.media; this.removeAttribute( &apos;onload&apos; );" rel='stylesheet' id='rs-plugin-settings-css' href='//www.ituran.com.ar/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.20' media="not all" />
+<style id="rs-plugin-settings-inline-css">
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+
+</head>
+    <body class="home wp-singular page-template-default page page-id-5 wp-embed-responsive wp-theme-yootheme wp-child-theme-yootheme-ituran">
+
+        
+        <div class="uk-hidden-visually uk-notification uk-notification-top-left uk-width-auto">
+            <div class="uk-notification-message">
+                <a href="#tm-main" class="uk-link-reset">Ir al contenido principal</a>
+            </div>
+        </div>
+
+        
+        
+        <div class="tm-page">
+
+                        
+
+
+<header class="tm-header-mobile uk-hidden@m">
+
+
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header-mobile&quot;,&quot;boundary&quot;:&quot;.tm-header-mobile .uk-navbar-container&quot;}">
+
+                                        <div class="uk-navbar-left ">
+
+                                                    <a href="https://www.ituran.com.ar/" aria-label="Volver al inicio" class="uk-logo uk-navbar-item">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/54/Group-54c71af2.webp 102w" sizes="(min-width: 102px) 102px"><img src="/wp-content/uploads/sites/2/2024/09/Group.png" width="102" height="56" alt></picture></a>                        
+                        
+                        
+                    </div>
+                    
+                    
+                                        <div class="uk-navbar-right">
+
+                                                    
+<div class="uk-navbar-item widget widget_builderwidget" id="builderwidget-5">
+
+    
+    <style class="uk-margin-remove-adjacent">#builderwidget-5\#0 .flag-icon img{padding-right:5px;}#builderwidget-5\#0 .uk-parent a.flag-icon::after{top:0px;}#builderwidget-5\#0 .flag-drop{min-width: 70px;}#builderwidget-5\#0 .flag-drop div{margin-top: 7px;}</style>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    <div id="builderwidget-5#0"><div class="uk-inline uk-parent">
+    <a class="flag-icon" type="button"><img src="/wp-content/uploads/sites/2/2024/10/argentina.png" alt="Argentina"/></a>
+    <div class="flag-drop" uk-dropdown>
+        <div>
+            <a href="https://www.ituran.com.ec/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-3.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.com.mx/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-4.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.com.co/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-5.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.cl/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-6.png" /></a>
+        </div>
+    </div>
+</div>
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+</div>
+                        
+                                                    <a uk-toggle href="#tm-dialog-mobile" class="uk-navbar-toggle" aria-controls="tm-dialog-mobile">
+
+        
+        <div uk-navbar-toggle-icon></div>
+
+        
+    </a>                        
+                    </div>
+                    
+                </nav>
+            </div>
+
+        </div>
+
+    
+
+
+
+        <div id="tm-dialog-mobile" uk-offcanvas="container: true; overlay: true" mode="slide" flip>
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+                        <button class="uk-offcanvas-close uk-close-large" type="button" uk-close uk-toggle="cls: uk-close-large; mode: media; media: @s"></button>
+            
+                        <div class="uk-margin-auto-bottom uk-text-center">
+                
+<div class="uk-grid uk-child-width-1-1" uk-grid>    <div>
+<div class="uk-panel">
+
+    
+    <a href="https://www.ituran.com.ar/" aria-label="Volver al inicio" class="uk-logo">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/54/Group-54c71af2.webp 102w" sizes="(min-width: 102px) 102px"><img src="/wp-content/uploads/sites/2/2024/09/Group.png" width="102" height="56" alt></picture></a>
+</div>
+</div>    <div>
+<div class="uk-panel widget widget_builderwidget" id="builderwidget-4">
+
+    
+    <style class="uk-margin-remove-adjacent">#builderwidget-4\#0 .el-item{text-transform: uppercase;}#builderwidget-4\#1 .el-image{margin-right:7px;}#builderwidget-4\#1 .el-item{font-size: 12px;}#builderwidget-4\#2 .el-item{font-size: 13px; font-weight: bold;}#builderwidget-4\#2 .el-item .uk-nav-subtitle{color: #7ac526; font-weight: normal; text-align: left;}</style>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div id="builderwidget-4#0" class="uk-text-center">
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default uk-nav-center">                                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/nosotros/">
+    
+        
+                    Nosotros        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/centros-de-instalacion/">
+    
+        
+                    Centros de Instalación        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/blog/">
+    
+        
+                    Blog        
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div><hr>
+<div>
+    
+        
+                    <strong>SERVICIOS</strong>        
+        
+    
+</div>
+<div id="builderwidget-4#1">
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default">                                <li class="el-item ">
+<a class="el-link" href="/para-vehiculo/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/99/Frame-1813-99533740.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1813.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU VEHÍCULO        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-moto/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/8e/Frame-1812-8eb690aa.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1812.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU MOTO        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-flota/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/97/Frame-1811-9785f7b9.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1811.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU FLOTA        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-seguros/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/07/Frame-1810-0778fa3c.webp 54w" sizes="(min-width: 54px) 54px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1810.png" alt loading="lazy" width="54" height="25"></picture>
+                    PARA TU COMPAÑÍA DE SEGUROS        
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div><hr class="uk-margin-small">
+<div class="uk-margin-small-top uk-margin-remove-bottom">
+    
+        
+                    <strong>CONTACTOS</strong>        
+        
+    
+</div>
+<div id="builderwidget-4#2">
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default">                                <li class="el-item ">
+<a class="el-link" href="tel:08107771001" target="_blank">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                TELÉFONO DE EMERGENCIA                <div class="uk-nav-subtitle"> 0810 777 1001</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="tel:08104448872" target="_blank">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                ATENCIÓN AL CLIENTE                <div class="uk-nav-subtitle">0810 444 8872</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="https://wa.link/n4rgjc" target="_blank">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                WHATSAPP VENTAS                <div class="uk-nav-subtitle">116 398 4106</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/contactos/">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                FORMULARIO DE CONTACTO <img src="/wp-content/uploads/sites/2/2024/10/arrow2.png" />                <div class="uk-nav-subtitle"> </div>            </div>
+        </div>
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+</div>
+</div></div>            </div>
+            
+            
+        </div>
+    </div>
+    
+    
+    
+
+</header>
+
+
+
+
+<header class="tm-header uk-visible@m">
+
+
+
+        <div uk-sticky media="@m" show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container">
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header &gt; [uk-sticky]&quot;,&quot;boundary&quot;:&quot;.tm-header .uk-navbar-container&quot;}">
+
+                                        <div class="uk-navbar-left ">
+
+                                                    <a href="https://www.ituran.com.ar/" aria-label="Volver al inicio" class="uk-logo uk-navbar-item">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/54/Group-54c71af2.webp 102w" sizes="(min-width: 102px) 102px"><img src="/wp-content/uploads/sites/2/2024/09/Group.png" width="102" height="56" alt></picture></a>                        
+                        
+                        
+                    </div>
+                    
+                    
+                                        <div class="uk-navbar-right">
+
+                                                    
+<ul class="uk-navbar-nav" uk-scrollspy-nav="closest: li; scroll: true; target: &gt; * &gt; a[href];">
+    
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ituran.com.ar/nosotros/">Nosotros</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom uk-parent"><a role="button">Servicios</a>
+	<div class="uk-drop uk-navbar-dropdown" mode="hover" pos="bottom-left" style="width: 400px;"><style class="uk-margin-remove-adjacent">#menu-item-232\#0 .el-image{margin-right:7px;}</style>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div id="menu-item-232#0">
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default">                                <li class="el-item ">
+<a class="el-link" href="/para-vehiculo/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/99/Frame-1813-99533740.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1813.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU VEHÍCULO        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-moto/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/8e/Frame-1812-8eb690aa.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1812.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU MOTO        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-flota/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/97/Frame-1811-9785f7b9.webp 53w" sizes="(min-width: 53px) 53px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1811.png" alt loading="lazy" width="53" height="21"></picture>
+                    PARA TU FLOTA        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/para-seguros/">
+    
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/07/Frame-1810-0778fa3c.webp 54w" sizes="(min-width: 54px) 54px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Frame-1810.png" alt loading="lazy" width="54" height="25"></picture>
+                    PARA TU COMPAÑÍA DE SEGUROS        
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div></div></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ituran.com.ar/centros-de-instalacion/">Centros de Instalación</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.ituran.com.ar/blog/">Blog</a></li>
+	<li class="contactos menu-item menu-item-type-custom menu-item-object-custom uk-parent"><a role="button">Contactanos</a>
+	<div class="uk-drop uk-navbar-dropdown uk-padding-remove-horizontal" mode="hover" pos="bottom-left" style="width: 550px;"><style class="uk-margin-remove-adjacent">#menu-item-64\#0 .el-item{font-size: 13px; font-weight: bold;}#menu-item-64\#0 .el-item .uk-nav-subtitle{color: #7ac526; font-weight: normal;}#menu-item-64\#1{font-size: 1.7em; color: #fff;}#menu-item-64\#2{color: #7ac526; font-size: 12px;}#menu-item-64\#3{padding-left: 30px; padding-right: 30px;}</style>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-grid-column-medium uk-grid-divider" uk-grid id="menu-item-64#3">
+    
+        
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<div id="menu-item-64#0">
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default">                                <li class="el-item ">
+<a class="el-content uk-disabled">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                TELÉFONO DE EMERGENCIA                <div class="uk-nav-subtitle"> 0810 777 1001</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-content uk-disabled">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                ATENCIÓN AL CLIENTE                <div class="uk-nav-subtitle">0810 444 8872</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="https://wa.link/n4rgjc" target="_blank">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                WHATSAPP VENTAS                <div class="uk-nav-subtitle">116 398 4106</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/contactos/">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/58/Rectangle-19-58b5ed27.webp 2w" sizes="(min-width: 2px) 2px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/09/Rectangle-19.png" alt loading="lazy" width="2" height="22"></picture></div>            <div>
+                FORMULARIO DE CONTACTO <img src="/wp-content/uploads/sites/2/2024/10/arrow2.png" />                <div class="uk-nav-subtitle"> </div>            </div>
+        </div>
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<h5 class="uk-h5" id="menu-item-64#1">
+    
+        
+                    CONTACTANOS        
+        
+    
+</h5><div class="uk-panel uk-margin" id="menu-item-64#2"><p>Conocé nuestros diferentes canales de comunicación</p></div>
+                
+            
+        
+    
+</div>
+    
+</div></div></li></ul>
+
+<div class="uk-navbar-item widget widget_builderwidget" id="builderwidget-3">
+
+    
+    <style class="uk-margin-remove-adjacent">#builderwidget-3\#0 .flag-icon img{padding-right:5px;}#builderwidget-3\#0 .uk-parent a.flag-icon::after{top:0px;}#builderwidget-3\#0 .flag-drop{min-width: 70px;}#builderwidget-3\#0 .flag-drop div{margin-top: 7px;}</style>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    <div id="builderwidget-3#0"><div class="uk-inline uk-parent">
+    <a class="flag-icon" type="button"><img src="/wp-content/uploads/sites/2/2024/10/argentina.png" alt="Argentina"/></a>
+    <div class="flag-drop" uk-dropdown>
+        <div>
+            <a href="https://www.ituran.com.ec/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-3.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.com.mx/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-4.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.com.co/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-5.png" /></a>
+        </div>
+        <div>
+            <a href="https://www.ituran.cl/" target="_blank"><img src="/wp-content/uploads/sites/2/2024/09/Frame-6.png" /></a>
+        </div>
+    </div>
+</div>
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+</div>
+
+<div class="uk-navbar-item widget widget_builderwidget" id="builderwidget-2">
+
+    
+    <style class="uk-margin-remove-adjacent">#builderwidget-2\#0{margin: 0 7px;}#builderwidget-2\#1{font-size: 12px;}#builderwidget-2\#2 .el-content{color: #7ccb26; font-size: 1.6em; text-decoration: underline;}#builderwidget-2\#3{margin: 0 7px;}#builderwidget-2\#4{font-size: 12px;}#builderwidget-2\#5 .el-content{color: #7ccb26; font-size: 1.6em; text-decoration: underline;}#builderwidget-2\#6 .uk-tile-xsmall{padding-top: 7px; padding-bottom: 7px;}@media (min-width: 960px){#builderwidget-2\#6 .uk-tile-xsmall{padding-left: 7px; padding-right: 7px; padding-top: 7px; padding-bottom: 7px;}}#builderwidget-2\#7 .el-content{color: #000e2d; font-size: 16px; font-weight: bold; line-height:1; letter-spacing:0.05em;}</style>
+<div class="uk-container uk-container-expand">
+        <div class="uk-grid uk-grid-collapse" uk-grid>    
+        
+<div class="uk-grid-item-match uk-width-expand" id="builderwidget-2#6">
+        <div class="uk-flex">    
+                <div class="uk-background-norepeat uk-background-cover uk-background-center-center uk-tile  uk-tile-xsmall uk-width-1-1 uk-flex uk-flex-middle" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/52\/Frame-1518-526ffd62.webp 301w&quot;,&quot;sizes&quot;:&quot;(max-aspect-ratio: 301\/56) 538vh&quot;}]" data-src="/wp-content/uploads/sites/2/2024/10/Frame-1518.png" loading="eager" uk-img>        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel show-desktop uk-margin-remove-vertical">
+<div class="uk-container uk-margin-remove-vertical">
+        <div class="uk-grid tm-grid-expand uk-grid-collapse" uk-grid>    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-expand">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="builderwidget-2#0">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/99/admin-ajax-99960858.webp 64w" sizes="(min-width: 32px) 32px"><img class="el-image" src="/wp-content/uploads/sites/2/yootheme/cache/29/admin-ajax-293525b3.png" alt loading="lazy" width="32" height="33"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-light uk-width-auto">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-margin-remove-vertical uk-text-center" id="builderwidget-2#1"><p>ASISTENCIA POR EMERGENCIA</p></div>
+<div id="builderwidget-2#2" class="uk-margin-remove-vertical uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-link-muted" title="0810 777 1001" href="#" uk-scroll>
+    
+        0810 777 1001    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+        
+    
+</div>
+        </div>    
+</div></div><div class="uk-panel show-movil uk-margin-remove-vertical">
+<div class="uk-container uk-margin-remove-vertical">
+        <div class="uk-grid tm-grid-expand uk-grid-collapse" uk-grid>    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-expand">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="builderwidget-2#3">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/6f/admin-ajax-6f19e47a.webp 136w" sizes="(min-width: 136px) 136px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/10/admin-ajax.png" alt loading="lazy" width="136" height="140"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-light uk-width-auto">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-margin-remove-vertical uk-text-center" id="builderwidget-2#4"><p>ASISTENCIA POR EMERGENCIA</p></div>
+<div id="builderwidget-2#5" class="uk-margin-remove-vertical uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-link-muted" title="0810 777 1001" href="tel:08107771001">
+    
+        0810 777 1001    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+        
+    
+</div>
+        </div>    
+</div></div>
+                
+                        </div>            
+                </div>        
+        </div>    
+</div>
+<div class="uk-grid-item-match uk-width-auto">
+        <div class="uk-card-primary uk-card uk-card-small uk-flex uk-cover-container">    
+                <div class="uk-background-norepeat uk-background-cover uk-background-center-center uk-card-body uk-width-1-1 uk-flex uk-flex-middle" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/80\/Frame-1519-8068e66c.webp 162w&quot;,&quot;sizes&quot;:&quot;(max-aspect-ratio: 162\/56) 289vh&quot;}]" data-src="/wp-content/uploads/sites/2/2024/10/Frame-1519.png" loading="eager" uk-img>        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div id="builderwidget-2#7" class="uk-margin-remove-vertical uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-link-text" title="ÁREA DEL CLIENTE" href="/area-del-cliente/">
+    
+        ÁREA DEL <br />CLIENTE    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+                </div>        
+        </div>    
+</div>
+        </div>    
+</div>
+</div>
+                        
+                                                                            
+                    </div>
+                    
+                </nav>
+            </div>
+
+        </div>
+
+        </div>
+    
+
+
+
+
+
+
+
+</header>
+
+            
+            <div id="builderwidget-6" class="builder"><!-- Builder #builderwidget-6 --><style class="uk-margin-remove-adjacent">#builderwidget-6\#0{margin: 0 7px;}#builderwidget-6\#1{font-size: 10px;}#builderwidget-6\#2 .el-content{color: #7ccb26; font-size: 1.2em; text-decoration: underline;}#builderwidget-6\#3{padding: 7px;}#builderwidget-6\#4{background-color: #001e49;}#builderwidget-6\#5 .el-content{color: #000e2d; font-size: 15px; font-weight: bold; line-height:1!important; letter-spacing:0.05em;}#builderwidget-6\#5{padding: 7px;}#builderwidget-6\#6{background-color: #00aae6;}#builderwidget-6\#7{display: none;}@media screen and (max-width: 780px){#builderwidget-6\#7{display: block;}}</style>
+<div id="builderwidget-6#7" class="uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid tm-grid-expand uk-grid-collapse uk-margin-small" uk-grid>
+    
+        
+<div class="uk-width-3-5" id="builderwidget-6#4">
+    
+        
+            
+            
+            
+                
+                    <style class="uk-margin-remove-adjacent">.el-element {
+    padding: 7px;
+}
+</style><div class="uk-panel uk-margin-remove-vertical" id="builderwidget-6#3">
+<div class="uk-container uk-margin-small">
+        <div class="uk-grid tm-grid-expand uk-grid-collapse" uk-grid>    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-expand">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="builderwidget-6#0">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/99/admin-ajax-99960858.webp 64w" sizes="(min-width: 32px) 32px"><img class="el-image" src="/wp-content/uploads/sites/2/yootheme/cache/29/admin-ajax-293525b3.png" alt loading="lazy" width="32" height="33"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-light uk-width-auto">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-margin-remove-vertical uk-text-center" id="builderwidget-6#1"><p>ASISTENCIA POR EMERGENCIA</p></div>
+<div id="builderwidget-6#2" class="uk-margin-remove-vertical uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-link-muted" title="0810 777 1001" href="tel:08107771001">
+    
+        0810 777 1001    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+        
+    
+</div>
+        </div>    
+</div></div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-2-5" id="builderwidget-6#6">
+    
+        
+            
+            
+            
+                
+                    
+<div id="builderwidget-6#5" class="uk-margin-remove-vertical uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-link-text" title="ÁREA DEL CLIENTE" href="/area-del-cliente/">
+    
+        ÁREA DEL <br />CLIENTE    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+            
+        
+    
+</div>
+    
+</div>
+                
+            
+        
+    
+</div></div>
+            <main id="tm-main">
+
+                <!-- Builder #page --><style class="uk-margin-remove-adjacent">#page\#0 .el-title{color: #fff; font-size: 100px; line-height: 1; font-weight: bold;}#page\#0 .el-content{color: #fff; font-size: 20px;}#page\#0 .thin{font-weight:normal;}#page\#1 .el-title{text-transform: uppercase; font-weight: bold; color: #ffffff;}#page\#1 .el-content{color: #FFF;}#page\#1 .el-link{text-transform: uppercase;}#page\#2 .el-content{color: #000e2d; font-size: 13px; line-height:1; font-weight: bold;}#page\#2 .el-title{font-weight: bold; font-size: 2em; color: #000e2d;}#page\#2 .el-title::after{content:""; display: block; width: 20vw; border-bottom: 2px solid #7ccb26; margin: 0 auto;}#page\#2 .el-meta{text-transform: uppercase; color: #000e2d;}#page\#2 .down-arrows img{width:100px;}#page\#3 .uk-tab{margin-left:0;}#page\#3 .uk-tab li{padding-left:0;}#page\#3 .el-nav.uk-margin-small{margin-bottom: 0;}#page\#3 .el-nav li a{color:#ffffff; height: 90px;}#page\#3 .el-nav li a::after{content:url(/wp-content/uploads/sites/2/2024/09/tab-arrow.png); padding-top:15px; position: absolute; border-radius: 60px; width: 60px; height: 45px; vertical-align: center; bottom:-45px; text-align: center; display: none; z-index:100;}#page\#3 .el-nav li.uk-active a::after{display: block;}#page\#3 .el-nav li:nth-child(1) a,#page\#3 .el-nav li:nth-child(1) a::after{background: #97ca3d;}#page\#3 .el-nav li:nth-child(2) a,#page\#3 .el-nav li:nth-child(2) a::after{background: #00a8e3;}#page\#3 .el-nav li:nth-child(3) a,#page\#3 .el-nav li:nth-child(3) a::after{background: #001630;}#page\#3 .el-nav li:nth-child(4) a,#page\#3 .el-nav li:nth-child(4) a::after{background: #97ca3d;}#page\#3 .el-nav li:nth-child(5) a,#page\#3 .el-nav li:nth-child(5) a::after{background: #00a8e3;}#page\#3 .el-title{display: none;}#page\#4 .el-item:nth-child(1) a.el-title{background: #97ca3d;}#page\#4 .el-item:nth-child(2) a.el-title{background: #00a8e3;}#page\#4 .el-item:nth-child(3) a.el-title{background: #001630;}#page\#4 .el-item:nth-child(4) a.el-title{background: #97ca3d;}#page\#4 .el-item:nth-child(5) a.el-title{background: #00a8e3;}#page\#4 .el-title{text-align: center; padding: 7px; min-height:50px;}#page\#4 .el-title img{position:relative; right:-14px;}#page\#4 .el-item .uk-accordion-content{margin-top:0;}#page\#4 .el-item{margin-top: 0; padding-top: 0; border-top: 0;}#page\#4 .uk-accordion-title::before{content: "+"; background-image: none; color: #fff;}#page\#4 .uk-open > .uk-accordion-title::before{background-image:none; content:"-";}#page\#5{background: #00aae6;}#page\#6 .el-title{line-height:1;}#page\#6 .el-counter{font-weight: bold;}#page\#6 .el-item .el-counter{color: #7ccb26!important; font-weight: bold!important;}@media screen and (max-width: 780px){#page\#7{display: none;}}#page\#8{color: #000e2d; font-weight: bold; font-size: 2.2em}@media screen and (min-width: 780px){#page\#9{display: none;}}#page\#9{padding-top: 7px;}#page\#10 .el-image{width: 12vw;}#page\#11{font-size: 18px; color: #ffffff;}@media screen and (max-width: 780px){#page\#11{font-size: 10px;}}@media (max-width: 768px){#page\#12{font-size: 25px; /* Tamaño de texto más pequeño para móviles */}} @media (max-width: 760px){#page\#13 .el-image{width: 60%; /* Ajusta el porcentaje según lo que necesites */ height: auto;}}@media (max-width: 768px){#page\#14{font-size: 25px; /* Tamaño de texto más pequeño para móviles */}} @media (max-width: 760px){#page\#15 .el-image{width: 60%; /* Ajusta el porcentaje según lo que necesites */ height: auto;}}#page\#16 .el-content iframe{min-height: 500px !important;}</style>
+<div class="uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin-remove-bottom uk-visible@m" uk-slideshow="ratio: 240:97;" id="page#0">
+    <div class="uk-position-relative">
+        
+            <div class="uk-slideshow-items">                
+                    <div class="el-item">
+
+    
+        
+            
+                <img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2025/09/1440-x-582-PANTALLAWEB_Mesa-de-trabajo-1-copia.webp" alt loading="lazy" width="1440" height="582" uk-cover srcset="/wp-content/uploads/sites/2/yootheme/cache/2f/1440-x-582-PANTALLAWEB_Mesa-de-trabajo-1-copia-2fbd03ea.webp 768w, /wp-content/uploads/sites/2/yootheme/cache/a6/1440-x-582-PANTALLAWEB_Mesa-de-trabajo-1-copia-a6f63d7b.webp 1024w, /wp-content/uploads/sites/2/2025/09/1440-x-582-PANTALLAWEB_Mesa-de-trabajo-1-copia.webp 1440w" sizes="(min-width: 1440px) 1440px">
+            
+        
+        
+                <div class="uk-position-cover uk-flex uk-container uk-container-small uk-section uk-flex-left uk-flex-middle">            <div class="el-overlay uk-panel uk-margin-remove-first-child">
+            
+
+<h3 class="el-title uk-margin-top uk-margin-remove-bottom">        <span class="thin">LOCALIZAMOS </span><br> Y RECUPERAMOS    </h3>
+
+<div class="el-content uk-panel uk-margin-top"><p>TU AUTO con TECNOLOGÍA INTELIGENTE </p></div>
+
+<div class="uk-margin-top"><a href="/para-vehiculo/" class="el-link uk-button uk-button-primary">CONOCÉ MÁS</a></div>
+            </div>        </div>        
+    
+</div>
+                            </div>
+        
+                
+
+    <div class="uk-visible@s uk-position-medium uk-position-center-left" uk-inverse>    <a class="el-slidenav" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>    </div>
+    <div class="uk-visible@s uk-position-medium uk-position-center-right" uk-inverse>    <a class="el-slidenav" href="#" uk-slidenav-next uk-slideshow-item="next"></a>    </div>
+        
+                
+<div class="uk-position-bottom-center uk-position-medium uk-visible@s" uk-inverse>
+    <ul class="el-nav uk-slideshow-nav uk-dotnav uk-flex-center" uk-margin>                <li uk-slideshow-item="0">
+            <a href="#"><span class="thin">LOCALIZAMOS </span><br> Y RECUPERAMOS</a>
+        </li>
+            </ul>
+</div>        
+    </div>
+    
+</div>
+<div class="uk-margin-remove-top uk-hidden@m" uk-slideshow="ratio: 430:547;" id="page#1">
+    <div class="uk-position-relative">
+        
+            <div class="uk-slideshow-items">                
+                    <div class="el-item">
+
+    
+        
+            
+                <img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2025/09/430-X-547-OPCION-3_Mesa-de-trabajo-1-copia.webp" alt="ituran" loading="lazy" width="431" height="547" uk-cover srcset="/wp-content/uploads/sites/2/2025/09/430-X-547-OPCION-3_Mesa-de-trabajo-1-copia.webp 431w" sizes="(min-width: 431px) 431px">
+            
+        
+                <div class="uk-position-cover" style="background-color: rgba(0, 0, 0, 0.28);"></div>        
+                <div class="uk-position-cover uk-flex uk-padding uk-flex-left uk-flex-middle">            <div class="el-overlay uk-panel uk-margin-remove-first-child">
+            
+
+<h3 class="el-title uk-margin-top uk-margin-remove-bottom">        LOCALIZAMOS Y <br> RECUPERAMOS    </h3>
+
+<div class="el-content uk-panel uk-margin-medium-top"><p>TU AUTO con TECNOLOGÍA INTELIGENTE</p></div>
+
+<div class="uk-margin-medium-top"><a href="/para-vehiculo/" class="el-link uk-button uk-button-primary">Conocé más</a></div>
+            </div>        </div>        
+    
+</div>
+                            </div>
+        
+                
+
+    <div class="uk-visible@s uk-position-medium uk-position-center-left" uk-inverse>    <a class="el-slidenav" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>    </div>
+    <div class="uk-visible@s uk-position-medium uk-position-center-right" uk-inverse>    <a class="el-slidenav" href="#" uk-slidenav-next uk-slideshow-item="next"></a>    </div>
+        
+                
+<div class="uk-position-bottom-center uk-position-medium uk-visible@s" uk-inverse>
+    <ul class="el-nav uk-slideshow-nav uk-dotnav uk-flex-center" uk-margin>                <li uk-slideshow-item="0">
+            <a href="#">LOCALIZAMOS Y <br> RECUPERAMOS</a>
+        </li>
+            </ul>
+</div>        
+    </div>
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-light uk-margin-remove-vertical uk-text-center uk-hidden@m" id="page#2">
+    <div class="uk-inline-clip">
+        
+            
+<img decoding="async" class="el-image uk-transition-opaque" src="/wp-content/uploads/sites/2/2024/10/servicios-ituran.webp" alt loading="lazy" width="1367" height="575" srcset="/wp-content/uploads/sites/2/yootheme/cache/0f/servicios-ituran-0f36e062.webp 768w, /wp-content/uploads/sites/2/yootheme/cache/bf/servicios-ituran-bfaf2b30.webp 1024w, /wp-content/uploads/sites/2/2024/10/servicios-ituran.webp 1367w" sizes="(min-width: 1367px) 1367px">
+
+            
+            
+                        <div class="uk-position-center"><div class="uk-panel uk-padding uk-margin-remove-first-child">
+<div class="el-meta uk-text-meta uk-margin-top">Hacé Click y Descubrí Cada Uno De</div>
+<h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">        Nuestros Servicios    </h3>
+
+<div class="el-content uk-panel uk-margin-small-top"><div>Nuestras Soluciones brindan tranquilidad y crean valor para nuestros clientes.</div>
+<div class="uk-margin-small-top down-arrows"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/down-arrows.png" alt="" /></div></div>
+
+</div></div>            
+        
+    </div>
+</div>
+<div id="page#3" class="uk-margin-remove-vertical uk-visible@m">
+    
+                
+
+<ul class="el-nav uk-margin-small uk-child-width-expand" uk-tab="connect: #js-0; animation: uk-animation-fade;">        <li>
+        <a href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/auto.png" alt="para tu vehículo" /></a>
+    </li>
+        <li>
+        <a href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/moto.png" alt="para tu moto" /></a>
+    </li>
+        <li>
+        <a href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/flota.png" /></a>
+    </li>
+        <li>
+        <a href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/seguros.png" /></a>
+    </li>
+        <li>
+        <a href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/app.png" /></a>
+    </li>
+    </ul>
+        
+        <div id="js-0" class="uk-switcher" uk-height-match="row: false">
+                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+                <h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">                        <img decoding="async" src="/wp-content/uploads/sites/2/2024/09/auto.png" alt="para tu vehículo" />                    </h3>        
+        
+    
+        
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-3-4">
+<div class="uk-inline"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-auto.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1108" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU VEHÍCULO</h2>
+<p class="subtitle">Recupero vehicular y asistencia en caso de accidente. Las 24 horas, los 365 días del año en cualquier punto del país.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-4">
+<div class="tm-side-bar"><!-- Sección de Iconos -->
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/11/ituran-emergencia-w-1.webp" alt="Emergencia" class="icon-img" /></div>
+</div>
+<!-- Sección de Promoción y Precios -->
+<div class="promo-container uk-margin-top uk-text-center">
+<div class="price uk-position-relative uk-margin-top"><span class="amount large-amount">30% OFF</span></div>
+<div class="side-title">RECUPERO<span class="white-text"> VEHICULAR<br />Y ASISTENCIA ANTE ACCIDENTES</span></div>
+<!-- Información de Precios -->
+<div class="price-section">
+<div class="price uk-position-relative uk-margin-top"><span class="currency"></span><span class="amount large-amount">$22.699</span></div>
+<div class="disclaimer">Final/mes x3 meses <br />Descuento exclusivo hasta 30/11/26</div>
+<div class="text-white">+ Instalación Gratis</div>
+<div class="disclaimer">(*) Válido solo para autos particulares</div>
+</div>
+<!-- Botones de Acción -->
+<div class="buttons"><a href="https://api.whatsapp.com/send?phone=541163984106" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a> <a href="/para-vehiculo/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a> <a href="/para-vehiculo/" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div>
+</div></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+                <h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">                        <img decoding="async" src="/wp-content/uploads/sites/2/2024/09/moto.png" alt="para tu moto" />                    </h3>        
+        
+    
+        
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-3-4">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-moto.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1108" srcset="https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-moto.webp 1120w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-moto-300x163.webp 300w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-moto-1024x556.webp 1024w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-moto-768x417.webp 768w" sizes="(max-width: 1120px) 100vw, 1120px" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU MOTO</h2>
+<p class="subtitle">Brindamos una solución basada en tecnología de localización<br />GPS que monitorea la ubicación y localiza tu moto en tiempo <br />real, permitiendo el recupero en caso de robo o hurto.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-4">
+<div class="tm-side-bar"><!-- Sección de Iconos -->
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/Frame-1859.png" alt="Protección Plus" class="icon-img" /></div>
+</div>
+<!-- Sección de Promoción y Precios -->
+<div class="promo-container uk-margin-top uk-text-center">
+<div class="side-title">RECUPERAMOS <span class="white-text">TU MOTO <br />Y TUS AVENTURAS</span></div>
+<!-- Información de Precios -->
+<div class="price-section">
+<div class="price uk-position-relative uk-margin-top"><span class="currency"></span><span class="amount large-amount">$26.499</span></div>
+<div class="disclaimer">final/mes</div>
+</div>
+<!-- Botones de Acción -->
+<div class="buttons"><a href="https://api.whatsapp.com/send?phone=541163984106" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a> <a href="/para-moto/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a> <a href="/para-moto/" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div>
+</div></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+                <h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">                        <img decoding="async" src="/wp-content/uploads/sites/2/2024/09/flota.png" />                    </h3>        
+        
+    
+        
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-3-4">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-flota.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1108" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU FLOTA</h2>
+<p class="subtitle">Soluciones para la administración de flotas, con la tecnología y protección que tu negocio o empresa necesitan.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-4">
+<div class="tm-side-bar"><!-- Sección de Iconos -->
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/flota-icons.png" alt="Protección Plus" class="icon-img" style="width: 77%;" /></div>
+</div>
+<!-- Sección de Promoción y Precios -->
+<div class="promo-container uk-margin-top uk-text-center">
+<div class="side-title">OPTIMIZÁ <span class="white-text">TU NEGOCIO</span></div>
+<!-- Información de Precios -->
+<div class="price-section">
+<div class="text-white">Proporcionamos soluciones para potenciar las operaciones de logística y distribución</div>
+<div class="disclaimer">Consultá el servicio que más se adapte a tus necesidades</div>
+</div>
+<!-- Botones de Acción -->
+<div class="buttons"><a href="https://api.whatsapp.com/send?phone=541163984106" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a> <a href="/para-flota/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a> <a href="/para-flota/" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div>
+</div></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+                <h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">                        <img decoding="async" src="/wp-content/uploads/sites/2/2024/09/seguros.png" />                    </h3>        
+        
+    
+        
+                <div class="el-content uk-panel"><div class="uk-grid-collapse uk-grid-match" uk-grid="">
+
+<div class="uk-width-1-4">
+<div class="tm-side-bar"><!-- Sección de Iconos -->
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/08/Group.png" alt="Protección Plus" style="max-width:65%" /></div>
+</div>
+<!-- Sección de Promoción y Precios -->
+<div class="promo-container uk-text-center">
+<div class="side-title uk-margin-top"  style="font-size:1.5em;">RENTABILIZÁ <span class="white-text">EL <br />VALOR DE TU CARTERA</span></div>
+<!-- Información de Precios -->
+<div class="data-section uk-margin-large-top">
+<div style="font-weight: bold;">VENTAJAS DE NUESTRAS SOLUCIONES UBI</div>
+    <div class="uk-margin-top">
+        <ul>
+            <li>Evaluar el riesgo de cada cliente</li>
+            <li>Reducción de la cantidad de fraudes</li>
+            <li>Diferenciarse de la competencia</li>
+        </ul>
+    </div>
+</div>
+<!-- Botones de Acción -->
+<div class="buttons"> <a href="/para-seguros/" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div> 
+
+<div class="uk-width-3-4">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-seguros.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1108" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU COMPAÑIA <br/>DE SEGUROS</h2>
+<p class="subtitle">Servicios de telemática que permiten evaluar el riesgo de cada asegurado y brindar planes a medida.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+                <h3 class="el-title uk-margin-remove-top uk-margin-remove-bottom">                        <img decoding="async" src="/wp-content/uploads/sites/2/2024/09/app.png" />                    </h3>        
+        
+    
+        
+                <div class="el-content uk-panel"><div class="uk-grid-collapse uk-grid-match" uk-grid="">
+
+<div class="uk-width-1-4">
+<div class="tm-side-bar">
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/08/Group.png" alt="Protección Plus" style="max-width:65%" /></div>
+</div>
+<!-- Sección de Promoción y Precios -->
+<div class="promo-container uk-text-center">
+    <div class="side-title uk-margin-top"  style="font-size:1.5em;"><span class="white-text">CONECTÁ CON TU </span><br /> SEGURIDAD</div>
+<!-- Información de Precios -->
+<div class="data-section uk-margin-large-top">
+    <table class="uk-table uk-table-middle uk-table-small">
+    <tbody>
+        <tr>
+            <td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/robo-auto.png" /></td>
+            <td>Accedé directamente a
+llamadas ante robo de
+tu auto</td>
+        </tr>
+                <tr>
+            <td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/emergencias.png" /></td>
+            <td>Accedé directamente a
+llamadas ante emergencias</td>
+        </tr>
+        <tr>
+            <td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/alertas.png" /></td>
+            <td>Activá alertas de<br />
+zonas seguras</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- Botones de Acción -->
+<div class="buttons"> <a href="/app-ituran/" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div> 
+
+<div class="uk-width-3-4">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/app-ituran.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1108" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">APP ITURAN</h2>
+<p class="subtitle">Sabemos lo importante que es para vos cuidar tu vehículo y a tu familia, por eso nuestra aplicación utiliza la última tecnología disponible para que te sientas siempre protegido.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>        
+        
+        
+    
+
+</div>            
+        </div>
+        
+    
+</div>
+<div class="uk-accordion-default mobil uk-margin-remove-top uk-hidden@m" uk-accordion="collapsible: true;" id="page#4">
+        
+<div class="el-item">
+    <a class="el-title uk-accordion-title" href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/auto.png" alt="para tu auto" /> <span uk-accordion-icon></span></a>
+
+    <div class="uk-accordion-content">
+    
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-1-1">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-auto.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1104" srcset="https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-auto.webp 1120w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-auto-300x163.webp 300w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-auto-1024x556.webp 1024w, https://www.ituran.com.ar/wp-content/uploads/sites/2/2024/10/para-tu-auto-768x417.webp 768w" sizes="(max-width: 1120px) 100vw, 1120px" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU VEHÍCULO</h2>
+<div class="subtitle">Recupero vehicular y asistencia en caso de accidente. Las 24 horas, los 365 días del año en cualquier punto del país.
+<div class="button"><a href="/para-vehiculo" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-1">
+<div class="tm-side-bar">
+<div class="uk-child-width-1-2 uk-grid-divider" uk-grid="">
+<div>
+<div class="side-title">RECUPERO <span class="white-text">VEHICULAR Y ASISTENCIA ANTE ACCIDENTES</span></div>
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/11/ituran-emergencia-w-1.webp" alt="Emergencia" /></div>
+</div>
+</div>
+<div>
+<div class="price-section">
+<div class="price uk-position-relative uk-margin-top"><span class="desde">30% OFF</span> <span class="amount large-amount">$22.699</span></div>
+<div class="text-white">final/mes x3 meses <br />Descuento exclusivo hasta 30/11/26<br />+ Instalación Gratis</div>
+</div>
+</div>
+</div>
+<div class="buttons uk-child-width-1-2 uk-grid-small" uk-grid="">
+<div><a href="#" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a></div>
+<div><a href="/para-vehiculo/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a></div>
+</div>
+</div>
+<div class="disclaimer">(*) Válido solo para autos particulares</div>
+</div>
+</div></div>                
+    
+    </div>
+</div>        
+<div class="el-item">
+    <a class="el-title uk-accordion-title" href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/moto.png" alt="para tu moto" /> <span uk-accordion-icon></span></a>
+
+    <div class="uk-accordion-content">
+    
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-1-1">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-moto.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1104" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU MOTO</h2>
+<div class="subtitle">Brindamos una solución basada en tecnología de localización GPS que monitorea la ubicación y localiza tu moto en tiempo real, permitiendo el recupero en caso de robo o hurto.
+<div class="button"><a href="/para-moto" class="btn">CONOCÉ MÁS</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-1">
+<div class="tm-side-bar">
+<div class="uk-child-width-1-2 uk-grid-divider" uk-grid="">
+<div>
+<div class="side-title">RECUPERAMOS <span class="white-text">TU MOTO Y TUS AVENTURAS</span></div>
+<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/Frame-1859.png" alt="Protección Plus" /></div>
+</div>
+</div>
+<div>
+<div class="price-section">
+<div class="price uk-position-relative uk-margin-top"><span class="amount large-amount">$26.499</span></div>
+<div class="text-white">final/mes</div>
+</div>
+</div>
+</div>
+<div class="buttons uk-child-width-1-2 uk-grid-small" uk-grid="">
+<div><a href="#" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a></div>
+<div><a href="/para-moto/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a></div>
+</div>
+</div>
+<div class="disclaimer">*Los valores pueden variar de acuerdo a los planes de recuperación escogidos*</div>
+</div>
+</div></div>                
+    
+    </div>
+</div>        
+<div class="el-item">
+    <a class="el-title uk-accordion-title" href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/flota.png" alt="para tu flota" /> <span uk-accordion-icon></span></a>
+
+    <div class="uk-accordion-content">
+    
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-1-1">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-moto.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1104" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU FLOTA</h2>
+<div class="subtitle">Soluciones para la administración de flotas, con la tecnología y protección que tu negocio o empresa necesitan.
+<div class="button"><a href="/para-flota/" class="btn">CONOCÉ MÁS</a></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-1">
+
+	<div class="tm-side-bar">
+		<div class="uk-child-width-1-2 uk-grid-divider" uk-grid>
+			<div>
+				<div class="side-title">OPTIMIZA <span class="white-text">TU NEGOCIO</div>
+				<div class="uk-child-width-1-1 uk-text-center uk-grid-small uk-margin-top" uk-grid="">
+					<div><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/flota-icons.png" alt="Protección Plus" /></div>
+				</div>
+			</div>
+			<div>
+				<div class="price-section">
+					
+					<div class="text-white">Proporcionamos soluciones para potenciar las operaciones de logística y distribución</div>
+				</div>
+			</div>
+		</div>
+		<div class="buttons uk-child-width-1-2 uk-grid-small" uk-grid>
+			<div>
+				<a href="#" class="btn whatsapp-btn"><span uk-icon="whatsapp"></span> WHATSAPP DE VENTAS</a>
+			</div>
+			<div>
+				<a href="/para-flota/" class="btn-contact"> <span uk-icon="file-edit"></span> FORMULARIO DE CONTACTO</a>
+			</div>
+		</div>
+	</div>
+	<div class="disclaimer">*Los valores pueden variar de acuerdo a los planes de recuperación escogidos*</div>
+	
+</div>
+</div></div>                
+    
+    </div>
+</div>        
+<div class="el-item">
+    <a class="el-title uk-accordion-title" href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/seguros.png" alt="para tu seguro" /> <span uk-accordion-icon></span></a>
+
+    <div class="uk-accordion-content">
+    
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-1-1">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/para-tu-seguros.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1104" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">PARA TU COMPAÑIA <br />DE SEGUROS</h2>
+<div class="subtitle">
+    Servicios de telemática que permiten evaluar el riesgo de cada asegurado y brindar planes a medida.
+    <div class="button"><a href="/para-seguros/" class="btn">CONOCÉ MÁS</a></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-1">
+
+	<div class="tm-side-bar">
+		<div class="uk-grid-small" uk-grid>
+			<div class="uk-width-1-3">
+				<img decoding="async" style="width: 100%;" src="/wp-content/uploads/sites/2/2024/08/Group.png" />
+			</div>
+			<div class="uk-width-2-3">
+				<div class="bot-title1">RENTABILIZÁ <span class="white-text">EL VALOR <br />DE TU CARTERA</span></div>
+			</div>
+		</div>
+		<hr>
+		<div style="width: 85%;margin: 0 auto;">
+			<div class="bot-title"><span class="white-text">VENTAJAS DE NUESTRAS</span> SOLUCIONES UBI</div>
+			<div class="uk-margin-small-top">
+				<ul>
+					<li>Evaluar el riesgo de cada cliente</li>
+					<li>Reducción de la cantidad de fraudes</li>
+					<li>Diferenciarse de la competencia</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</div>
+</div></div>                
+    
+    </div>
+</div>        
+<div class="el-item">
+    <a class="el-title uk-accordion-title" href><img decoding="async" src="/wp-content/uploads/sites/2/2024/09/app.png" alt="App ituran" /> <span uk-accordion-icon></span></a>
+
+    <div class="uk-accordion-content">
+    
+                <div class="el-content uk-panel"><!-- Grid Principal -->
+<div class="uk-grid-collapse uk-grid-match" uk-grid=""><!-- Área Principal (Imagen de fondo y Overlay) -->
+<div class="uk-width-1-1">
+<div class="uk-inline"><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/app-ituran.webp" alt="" width="1120" height="608" class="alignnone size-full wp-image-1104" /><br />
+<div class="uk-overlay uk-position-center">
+<div class="title-overlay text-center">
+<h2 class="main-title">APP ITURAN</h2>
+<div class="subtitle">
+    Sabemos lo importante que es para vos cuidar tu vehículo y a tu familia, por eso nuestra aplicación utiliza la última tecnología disponible para que te sientas siempre protegido.
+    <div class="button"><a href="/app-ituran/" class="btn">CONOCÉ MÁS</a></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Área Lateral (Iconos y Promoción) -->
+<div class="uk-width-1-1">
+
+	<div class="tm-side-bar">
+		<div class="uk-grid-small" style="width: 80%;margin: 0 auto;" uk-grid>
+			<div class="uk-width-1-3">
+				<img decoding="async" src="/wp-content/uploads/sites/2/2024/08/Group.png" />
+			</div>
+			<div class="uk-width-2-3">
+				<div class="bot-title1"><span class="white-text">CONECTÁ CON TU</span> SEGURIDAD</div>
+			</div>
+		</div>
+		<hr>
+		<div>
+			
+			<div class="uk-child-width-1-2 uk-flex-center uk-grid-small" style="font-size:0.7em;" uk-grid>
+				<div>
+					<table class="uk-table uk-table-middle uk-table-small">
+						<tbody>
+							<tr>
+								<td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/robo-auto.png" /></td>
+								<td>Accedé directamente a llamadas ante robo de tu auto</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<table class="uk-table uk-table-middle uk-table-small">
+						<tbody>
+							
+							<tr>
+								<td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/emergencias.png" /></td>
+								<td>Accedé directamente a llamadas ante emergencias</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<table class="uk-table uk-table-middle uk-table-small">
+						<tbody>
+							<tr>
+								<td style="width: 38px; padding:3px 3px; "><img decoding="async" src="/wp-content/uploads/sites/2/2024/10/alertas.png" /></td>
+								<td>Activá alertas de<br /> zonas seguras</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			
+		</div>
+	</div>
+	
+</div>
+</div></div>                
+    
+    </div>
+</div>    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="show-movil uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div id="page#5">
+            <div style="height:10px"></div>
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-section-primary uk-section uk-padding-remove-top uk-section-medium-bottom">
+    
+        
+        
+        
+            
+                                <div class="uk-container">                
+                    
+<div class="uk-grid-margin uk-container">
+        <div class="uk-grid tm-grid-expand uk-child-width-1-1">    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+    <script>
+        UIkit.util.ready(() => new FsCounterInit(
+            {"js-1":{"control_start_value":0,"control_value":100,"counter_prefix":"<span class=\"el-prefix uk-text-normal\">+</span>","counter_suffix":"<span class=\"el-suffix uk-text-normal\">M</span>"},"js-2":{"control_start_value":0,"control_value":95,"counter_prefix":"","counter_suffix":"<span class=\"el-suffix uk-text-normal\">%</span>"},"js-3":{"control_start_value":0,"control_value":98,"counter_prefix":"","counter_suffix":"<span class=\"el-suffix uk-text-normal\">%</span>"},"js-4":{"control_start_value":0,"control_value":800,"counter_prefix":"<span class=\"el-prefix uk-text-normal\">+</span>","counter_suffix":""}},
+            {"counter_separator":"","counter_decimal":",","counter_decimalPlaces":0,"counter_animation_duration":5,"counter_animation_repeat":true,"counter_animation_useEasing":true,"counter_smartEasingThreshold":0,"counter_smartEasingAmount":0}        ));
+    </script>
+
+    <div class="fs-counter uk-margin uk-text-center" data-license="free" id="page#6">
+    <div class="uk-grid uk-child-width-1-2 uk-child-width-1-4@m uk-grid-match fs-load-more-container" uk-grid>            <div class="fs-counter-item fs-load-more-item">
+<div class="el-item uk-panel uk-margin-remove-first-child">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/f6/Untitled-2-f6bae9ae.webp 61w" sizes="(min-width: 61px) 61px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/Untitled-2.png" alt loading="lazy" width="61" height="64"></picture>            
+
+<h2 id="js-1" class="el-counter uk-h1 uk-text-primary uk-text-normal uk-margin-small-top uk-margin-remove-bottom">100</h2>
+    <h3 class="el-title uk-margin-small-top uk-margin-remove-bottom">            Clientes <br />conectados        </h3>
+
+
+
+
+        
+</div></div>            <div class="fs-counter-item fs-load-more-item">
+<div class="el-item uk-panel uk-margin-remove-first-child">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/ec/Untitled-23-ec5ba632.webp 65w" sizes="(min-width: 65px) 65px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/Untitled-23.png" alt loading="lazy" width="65" height="61"></picture>            
+
+<h2 id="js-2" class="el-counter uk-h1 uk-text-primary uk-text-normal uk-margin-small-top uk-margin-remove-bottom">95</h2>
+    <h3 class="el-title uk-margin-small-top uk-margin-remove-bottom">            Efectividad <br />de recupero        </h3>
+
+
+
+
+        
+</div></div>            <div class="fs-counter-item fs-load-more-item">
+<div class="el-item uk-panel uk-margin-remove-first-child">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/b7/satisfaccion-b72fa172.webp 58w" sizes="(min-width: 58px) 58px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/satisfaccion.png" alt loading="lazy" width="58" height="52"></picture>            
+
+<h2 id="js-3" class="el-counter uk-h1 uk-text-primary uk-text-normal uk-margin-small-top uk-margin-remove-bottom">98</h2>
+    <h3 class="el-title uk-margin-small-top uk-margin-remove-bottom">            Satisfacción <br />del cliente        </h3>
+
+
+
+
+        
+</div></div>            <div class="fs-counter-item fs-load-more-item">
+<div class="el-item uk-panel uk-margin-remove-first-child">
+    <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/48/empresas-48124cb2.webp 68w" sizes="(min-width: 68px) 68px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/empresas.png" alt loading="lazy" width="68" height="68"></picture>            
+
+<h2 id="js-4" class="el-counter uk-h1 uk-text-primary uk-text-normal uk-margin-small-top uk-margin-remove-bottom">800</h2>
+    <h3 class="el-title uk-margin-small-top uk-margin-remove-bottom">            Empresas <br />beneficiadas        </h3>
+
+
+
+
+        
+</div></div>        </div>
+    </div>
+                
+            
+        
+    
+</div>
+        </div>    
+</div>
+                                </div>                
+            
+        
+    
+</div>
+<div id="page#7" class="uk-section-default">
+        <div class="uk-background-norepeat uk-background-contain uk-background-top-center uk-section uk-section-xlarge" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/88\/nuestra-app-880a4768.webp 768w, \/wp-content\/uploads\/sites\/2\/yootheme\/cache\/59\/nuestra-app-59db9072.webp 1024w, \/wp-content\/uploads\/sites\/2\/yootheme\/cache\/f2\/nuestra-app-f2c34179.webp 1440w&quot;,&quot;sizes&quot;:&quot;(min-width: 1440px) 1440px&quot;}]" data-src="/wp-content/uploads/sites/2/2024/10/nuestra-app.png" uk-img uk-parallax="bgx: 120,50,150; easing: 1">    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-container">
+        <div class="uk-grid" uk-grid>    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m uk-visible@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-position-relative uk-margin uk-width-2xlarge uk-text-center uk-visible@m" uk-parallax="opacity: 0.1; easing: 0" style="bottom: -200px;">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/99/vehiculoapp-removebg-preview-1-991ac879.webp 513w" sizes="(min-width: 513px) 513px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/10/vehiculoapp-removebg-preview-1.png" alt width="513" height="257"></picture>    
+    
+</div>
+<div class="uk-position-absolute uk-width-1-1 uk-width-2xlarge uk-text-left uk-visible@m" uk-parallax="x: -300,-160 100%; easing: 0" style="left: -90px; top: -10px;">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/41/app-e1727920219996-41ef2e26.webp 703w" sizes="(min-width: 703px) 703px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/10/app-e1727920219996.png" alt width="703" height="603"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<h2 class="uk-h1 uk-width-xlarge">
+    
+        
+                    Conocé nuestra APP diseñada con tecnología de última generación.        
+        
+    
+</h2>
+<div class="uk-margin">
+    
+    
+        
+        
+<a class="el-content uk-button uk-button-primary" title="CONOCE MÁS" href="/app-ituran/">
+    
+        CONOCÉ MÁS    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+        
+    
+</div>
+        </div>    
+</div>
+                
+            
+        
+        </div>
+    
+</div>
+<div id="page#9" class="uk-section-default">
+        <div class="uk-background-norepeat uk-background-contain uk-background-top-center uk-section uk-section-large" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/88\/nuestra-app-880a4768.webp 768w, \/wp-content\/uploads\/sites\/2\/yootheme\/cache\/59\/nuestra-app-59db9072.webp 1024w, \/wp-content\/uploads\/sites\/2\/yootheme\/cache\/f2\/nuestra-app-f2c34179.webp 1440w&quot;,&quot;sizes&quot;:&quot;(min-width: 1440px) 1440px&quot;}]" data-src="/wp-content/uploads/sites/2/2024/10/nuestra-app.png" uk-img uk-parallax="bgx: -20vw,40vw; easing: 1">    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-container">
+        <div class="uk-grid uk-child-width-1-1">    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-1">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-width-medium uk-margin-auto" id="page#8">Conocé nuestra APP diseñada con tecnología de última generación.</div>
+<div class="uk-margin uk-text-center">
+    
+    
+        
+        
+<a class="el-content uk-button uk-button-primary" title="CONOCE MÁS" href="/app-ituran/">
+    
+        CONOCÉ MÁS    
+    
+</a>
+
+
+        
+    
+    
+</div>
+
+                
+                        </div>            
+        
+    
+</div>
+        </div>    
+</div>
+                
+            
+        
+        </div>
+    
+</div>
+<div class="uk-section-default uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-grid-item-match uk-width-1-1">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin-remove-vertical">
+    
+        
+            <video src="/wp-content/uploads/sites/2/2024/11/Animacion-mapa.mp4" playsinline loop muted preload="none" uk-video="autoplay: inview;" width="100%" class="el-image"></video>
+            
+                
+                
+            
+            
+        
+    
+</div><div class="uk-panel uk-position-absolute uk-width-1-1" style="bottom: 3vh;">
+<div class="uk-grid tm-grid-expand uk-grid-row-collapse" uk-grid>
+    
+        
+<div class="uk-width-2-5 uk-width-2-3@m">
+    
+        
+            
+            
+            
+                
+                    
+                
+            
+        
+    
+</div>
+<div class="uk-width-3-5 uk-width-1-3@m">
+    
+        
+            
+            
+            
+                
+                    <div class="uk-panel uk-margin">
+<div class="uk-grid-margin uk-grid tm-grid-expand" uk-grid>
+    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-3 uk-width-2-5@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="page#10">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/e6/Group-1-e604d69d.webp 169w" sizes="(min-width: 169px) 169px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/10/Group-1.png" alt loading="lazy" width="169" height="76"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-bottom uk-width-expand uk-width-3-5@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-margin" id="page#11"><p>La <strong>única</strong> empresa global<br />de <strong>recupero vehicular</strong></p></div>
+                
+                        </div>            
+        
+    
+</div>
+    
+</div></div>
+                
+            
+        
+    
+</div>
+    
+</div></div>
+                
+                        </div>            
+        
+    
+</div>
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-section-default uk-section">
+    
+        
+        
+        
+            
+                                <div class="uk-container">                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand" uk-grid>
+    
+        
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    <div class="uk-panel uk-margin">
+<div class="uk-grid-margin uk-grid tm-grid-expand" uk-grid>
+    
+        
+<div class="uk-grid-item-match uk-width-1-2 uk-width-1-2@s uk-width-1-2@m">
+        <div class="uk-flex">    
+                <div class="uk-background-norepeat uk-background-center-left uk-tile  uk-tile-xsmall uk-width-1-1 uk-flex uk-flex-middle" style="background-size: 7px 105px;" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/db\/Rectangle-17-db0766fa.webp 7w&quot;,&quot;sizes&quot;:&quot;(min-width: 7px) 7px&quot;}]" data-src="/wp-content/uploads/sites/2/2024/09/Rectangle-17.png" uk-img>        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<h3 class="uk-h1" id="page#12">
+    
+        
+                    <strong>NOTICIAS</strong>        
+        
+    
+</h3>
+                
+                        </div>            
+                </div>        
+        </div>    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-5 uk-width-1-5@s uk-width-1-2@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="page#13">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/12/Frame-1506-e1728960342461-129a68d0.webp 170w" sizes="(min-width: 155px) 155px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/yootheme/cache/b8/Frame-1506-e1728960342461-b8ca5dc4.png" alt loading="lazy" width="155" height="145"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+    
+</div></div>
+<div class="uk-margin uk-text-left">
+        <a class="el-link" href="/blog/"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/af/Frame-1532-af24da00.webp 419w" sizes="(min-width: 419px) 419px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/10/Frame-1532.png" alt loading="lazy" width="419" height="56"></picture></a>    
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    <div class="uk-panel uk-margin">
+<div class="uk-grid tm-grid-expand uk-margin-remove-vertical" uk-grid>
+    
+        
+<div class="uk-grid-item-match uk-width-1-2 uk-width-2-3@m">
+        <div class="uk-flex">    
+                <div class="uk-background-norepeat uk-background-center-left uk-tile  uk-tile-xsmall uk-width-1-1" style="background-size: 7px 105px;" data-sources="[{&quot;type&quot;:&quot;image\/webp&quot;,&quot;srcset&quot;:&quot;\/wp-content\/uploads\/sites\/2\/yootheme\/cache\/db\/Rectangle-17-db0766fa.webp 7w&quot;,&quot;sizes&quot;:&quot;(min-width: 7px) 7px&quot;}]" data-src="/wp-content/uploads/sites/2/2024/09/Rectangle-17.png" uk-img>        
+            
+            
+            
+                
+                    
+<h3 class="uk-h1" id="page#14">
+    
+        
+                    <strong>CENTROS DE </strong><br /><strong>INSTALACIÓN</strong>        
+        
+    
+</h3>
+                
+            
+                </div>        
+        </div>    
+</div>
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-5 uk-width-1-3@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin" id="page#15">
+        <img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/instalacion-home-1-e1728961407260.png" alt loading="lazy">    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+    
+</div></div>
+<div class="uk-margin uk-text-left">
+        <a class="el-link" href="/centros-de-instalacion/"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/c2/Frame-1532-1-c291f893.webp 393w" sizes="(min-width: 393px) 393px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/10/Frame-1532-1.png" alt loading="lazy" width="393" height="55"></picture></a>    
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                                </div>                
+            
+        
+    
+</div>
+<div class="uk-section-muted uk-section uk-padding-remove-vertical">
+    
+        
+        
+        
+            
+                                <div class="uk-container uk-container-xlarge uk-container-expand-right">                
+                    
+<div class="uk-grid-margin-large uk-grid tm-grid-expand uk-grid-column-small uk-grid-row-large" uk-grid>
+    
+        
+<div class="uk-grid-item-match uk-flex-middle uk-width-1-2@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+<div class="uk-margin-remove-vertical uk-container-item-padding-remove-right">
+        <picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/59/form-1-59014310.webp 683w" sizes="(min-width: 683px) 683px"><img decoding="async" class="el-image" src="/wp-content/uploads/sites/2/2024/08/form-1.png" alt loading="lazy" width="1500" height="1370"></picture>    
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+<div class="uk-grid-item-match uk-flex-bottom uk-width-1-2@m uk-flex-first@m">
+    
+        
+            
+            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    <div class="uk-panel uk-text-large uk-margin"><p>Seleccioná una opción para obtener información personalizada.</p></div>
+<div id="page#16" class="uk-margin">
+    
+                
+
+<ul class="el-nav uk-margin-small uk-subnav uk-subnav-pill" uk-switcher="connect: #js-7; animation: uk-animation-fade;">        <li>
+        <a href>PARA TU VEHÍCULO</a>
+    </li>
+        <li>
+        <a href>PARA TU MOTO</a>
+    </li>
+        <li>
+        <a href>PARA TU FLOTA</a>
+    </li>
+        <li>
+        <a href>PARA TU COMPAÑÍA DE SEGUROS</a>
+    </li>
+        <li>
+        <a href>TERMINALES AUTOMOTRICES</a>
+    </li>
+        <li>
+        <a href>RECURSOS HUMANOS</a>
+    </li>
+    </ul>
+        
+        <div id="js-7" class="uk-switcher">
+                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/212221.js></script></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/212465.js></script></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/212469.js></script></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/212482.js></script></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/214719.js></script></div>        
+        
+        
+    
+
+</div>                        <div class="el-item uk-margin-remove-first-child">
+
+
+        
+
+        
+        
+        
+    
+        
+                <div class="el-content uk-panel uk-margin-top"><script type="text/javascript" src=https://api.clientify.net/web-marketing/superforms/script/212483.js></script></div>        
+        
+        
+    
+
+</div>            
+        </div>
+        
+    
+</div>
+                
+                        </div>            
+        
+    
+</div>
+    
+</div>
+                                </div>                
+            
+        
+    
+</div>        
+            </main>
+
+            
+                        <footer>
+                <!-- Builder #footer --><style class="uk-margin-remove-adjacent">#footer\#0{font-weight: bold;}#footer\#1{font-weight: bold;}#footer\#2{font-weight: bold;}#footer\#3{font-weight: bold;}#footer\#4{font-weight: bold;}#footer\#5 .el-item a{text-transform: uppercase;}@media screen and (max-width:780px){#footer\#5 .el-item a{font-size: 10px;}}</style>
+<div class="uk-section-primary uk-section" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-medium; delay: false;">
+    
+        
+        
+        
+            
+                                <div class="uk-container">                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-grid-divider" uk-grid>
+    
+        
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin" uk-scrollspy-class>
+        <a class="el-link" href="/home/"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/c7/Group-c7cc711c.webp 309w" sizes="(min-width: 309px) 309px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/08/Group.png" alt loading="lazy" width="309" height="170"></picture></a>    
+    
+</div><div class="uk-panel uk-margin" uk-scrollspy-class><p>Empresa líder en innovación y tecnología enfocada en servicios para la administración, localización, gestión, control y asistencia en recupero de vehículos tanto para empresas como para personas y compañías de seguros.</p></div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    
+<h5 class="uk-text-success uk-text-center" id="footer#0" uk-scrollspy-class>
+    
+        
+                    ITURAN.COM.AR        
+        
+    
+</h5>
+<nav class="uk-margin uk-width-medium uk-margin-auto@l uk-text-center" uk-scrollspy-class>
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default uk-nav-center">                                <li class="el-item ">
+<a class="el-link" href="/home/">
+    
+        
+                    INICIO        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/nosotros/">
+    
+        
+                    NOSOTROS        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/centros-de-instalacion/">
+    
+        
+                    CENTROS DE INSTALACIÓN        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/blog/">
+    
+        
+                    BLOG        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/contactos/">
+    
+        
+                    CONTACTANOS        
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-link" href="/faq/">
+    
+        
+                    FAQ        
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</nav>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    
+<h5 class="uk-text-success uk-text-center" id="footer#1" uk-scrollspy-class>
+    
+        
+                    DESCARGA NUESTRA APP        
+        
+    
+</h5>
+<div class="uk-margin uk-text-center" uk-scrollspy-class>
+        <a class="el-link" href="https://play.google.com/store/apps/details?id=com.ituran.ituranargentina" target="_blank"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/db/Frame-db4a0880.webp 159w" sizes="(min-width: 159px) 159px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/08/Frame.png" alt loading="lazy" width="159" height="51"></picture></a>    
+    
+</div>
+<div class="uk-margin uk-text-center" uk-scrollspy-class>
+        <a class="el-link" href="https://apps.apple.com/ar/app/ituran-argentina/id670655716" target="_blank"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/b4/Frame-1-b472e1a1.webp 159w" sizes="(min-width: 159px) 159px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/08/Frame-1.png" alt loading="lazy" width="159" height="50"></picture></a>    
+    
+</div>
+<h5 class="uk-text-success uk-text-center" id="footer#2" uk-scrollspy-class>
+    
+        
+                    SEGUINOS        
+        
+    
+</h5>
+<div class="uk-margin uk-text-center" uk-scrollspy-class>    <ul class="uk-child-width-auto uk-grid-small uk-flex-inline uk-flex-middle" uk-grid>
+            <li class="el-item">
+<a class="el-link uk-icon-link" href="https://es-la.facebook.com/IturanAR/" target="_blank"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/88/Group-4-88b808be.webp 36w" sizes="(min-width: 36px) 36px"><img src="/wp-content/uploads/sites/2/2024/09/Group-4.png" alt loading="lazy" width="36" height="37"></picture></a></li>
+            <li class="el-item">
+<a class="el-link uk-icon-link" href="https://www.instagram.com/ituranar/" target="_blank"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/e2/Frame-7-e2044d2f.webp 37w" sizes="(min-width: 37px) 37px"><img src="/wp-content/uploads/sites/2/2024/09/Frame-7.png" alt loading="lazy" width="37" height="37"></picture></a></li>
+            <li class="el-item">
+<a class="el-link uk-icon-link" href="https://www.linkedin.com/company/ituran-de-argentina/" target="_blank"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/17/Frame-1799e470.webp 36w" sizes="(min-width: 36px) 36px"><img src="/wp-content/uploads/sites/2/2024/09/Frame.png" alt loading="lazy" width="36" height="37"></picture></a></li>
+    
+    </ul></div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@s uk-width-1-4@m">
+    
+        
+            
+            
+            
+                
+                    
+<h5 class="uk-text-success uk-text-center" id="footer#3" uk-scrollspy-class>
+    
+        
+                    <p>OFICINAS ADMINISTRATIVAS</p>        
+        
+    
+</h5>
+<div uk-scrollspy-class>
+    
+    
+        
+        <ul class="uk-margin-remove-bottom uk-nav uk-nav-default">                                <li class="el-item ">
+<a class="el-link" href="https://maps.app.goo.gl/RuxrAKMsdwMHJAhx7" target="_blank">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/a8/x35_k7BE8.tif_2_-a8f69373.webp 26w" sizes="(min-width: 26px) 26px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/08/x35_k7BE8.tif_2_.png" alt loading="lazy" width="30" height="31"></picture></div>            <div>
+                Dirección:                <div class="uk-nav-subtitle">Echeverría 1980, Florida Oeste, Buenos Aires, Arg.</div>            </div>
+        </div>
+    
+</a></li>
+                                            <li class="el-item ">
+<a class="el-content uk-disabled">
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><picture><source type="image/webp" srcset="/wp-content/uploads/sites/2/yootheme/cache/21/XaLpBW_1_-21da44a8.webp 25w" sizes="(min-width: 25px) 25px"><img class="el-image" src="/wp-content/uploads/sites/2/2024/08/XaLpBW_1_.png" alt loading="lazy" width="30" height="30"></picture></div>            <div>
+                Teléfonos:                <div class="uk-nav-subtitle">0810 444 8872</div>            </div>
+        </div>
+    
+</a></li>
+                            </ul>
+        
+    
+    
+</div>
+<h5 class="uk-text-success uk-text-center" id="footer#4" uk-scrollspy-class>
+    
+        
+                    <p>HORARIO DE ATENCIÓN</p>        
+        
+    
+</h5><div class="uk-panel uk-margin uk-text-center" uk-scrollspy-class><p>Lun-Vier de 09:00 a 18:00<br />Sábados de 09:00 a 15:00</p></div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                                </div>                
+            
+        
+    
+</div>
+<div class="uk-section-primary uk-section">
+    
+        
+        
+        
+            
+                                <div class="uk-container">                
+                    
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    <hr>
+<div id="footer#5" class="uk-flex uk-text-center">
+    
+        <ul class="uk-margin-remove-bottom uk-subnav uk-flex-center" uk-margin>                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/politicas-de-privacidad/" target="_blank">
+        Politicas de privacidad
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/terminos-y-condiciones/" target="_blank">
+        Terminos y condiciones
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://buenosaires.gob.ar/gcaba_historico/gobierno/atencion-ciudadana/defensa-al-consumidor" target="_blank">
+        DIRECCIÓN GENERAL DE DEFENSA Y PROTECCIÓN AL CONSUMIDOR
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://autogestion.produccion.gob.ar/consumidores" target="_blank">
+        DEFENSA DE LAS Y LOS CONSUMIDORES
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/formulario-de-devolucion/" target="_blank">
+        Devolucion de equipos
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/terminos-y-condiciones/" target="_blank">
+        CONTRATOS DE ADHESIÓN
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/formulario-de-baja/" target="_blank">
+        Botón de baja
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/formulario-de-arrepentimiento/" target="_blank">
+        Botón de arrepentimiento
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/compliance/" target="_blank">
+        Compliance
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="https://www.ituran.com.ar/politica-anti-spam/" target="_blank">
+        Política Anti-Spam
+</a></li>
+                </ul>
+    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+                                </div>                
+            
+        
+    
+</div>            </footer>
+            
+        </div>
+
+        
+        
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/2/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/yootheme-ituran/*","/wp-content/themes/yootheme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="https://www.ituran.com.ar/wp-content/plugins/fs-counter/modules/element/counter/assets/js/fs-counter.lib.umd.min.js?v=2.9.0&amp;ver=5.0.37" defer></script>
+<script src="https://www.ituran.com.ar/wp-content/plugins/fs-counter/modules/element/counter/assets/js/fs-counter.init.min.js?v=1.4.3&amp;ver=5.0.37" defer></script>
+		<script>window.addEventListener( 'load', function() {
+				document.querySelectorAll( 'link' ).forEach( function( e ) {'not all' === e.media && e.dataset.media && ( e.media = e.dataset.media, delete e.dataset.media );} );
+				var e = document.getElementById( 'jetpack-boost-critical-css' );
+				e && ( e.media = 'not all' );
+			} );</script>
+		<script defer async id="tp-tools-js" src="//www.ituran.com.ar/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.20"></script>
+<script defer async id="revmin-js" src="//www.ituran.com.ar/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.20"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.ituran.com.ar/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.ituran.com.ar/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<!-- start Simple Custom CSS and JS -->
+<!-- end Simple Custom CSS and JS -->
+    </body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+
+Served from: www.ituran.com.ar @ 2026-10-07 02:37:52 by W3 Total Cache
+-->
