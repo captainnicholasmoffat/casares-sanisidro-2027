@@ -3042,3 +3042,35 @@ Páginas de la versión de pantalla (51 págs.).
   la página: el recorte se llevaba la punta del borde de un recuadro que llega hasta el pie (una astilla coral de 0,25 pt
   en las hojas 78 a 80) o del último cuadro de la página (una línea de 0,1 pt).
 - Cinco tests OK (data/ restaurado).
+
+## DISPATCH 7 · INFORME 23 QUINQUIES Y EL EXCEL (07/10) · APLICADO
+Páginas de la versión de pantalla (51 págs.).
+1. Excel, fila 89: queda el Banco Provincia; es un dato de la deuda del Municipio, no una propuesta.
+2. Barreras de Perú y Alto Perú, escenario medio (pág. 26): barreras flotantes en «J», de unos 30 m en Perú y de unos
+   48 m en Alto Perú, con un anclaje que sube y baja con el río; las vacía el camión con almeja que el Municipio ya
+   alquila, con la cuadrilla, después de cada lluvia fuerte y de cada sudestada, y se revisan cada semana; concurso a
+   las cooperativas de trabajo del partido, por resultado (abogado). La ubicación exacta de la boca de Alto Perú, la
+   crecida del anclaje y el permiso de la Autoridad del Agua los define el proyecto; el permiso del titular de la
+   dársena, para el abogado. Compra de las dos, 125,6 M (de 86 a 199), con anclaje, proyecto y permisos; por año,
+   39,3 M (de 27 a 57) de vaciado y reposición. Sale la marca [23 quinquies].
+3. La costa (págs. 26, 29 y 38): el documento contaba para la barrera de Perú lo del informe 11 (323 a 530 M por año)
+   y dejaba Alto Perú sin cifra; con las dos barreras, lo que funciona todo el año pasa de 432–821 a 139–346 M (arena 4
+   a 20, rejas 36,8 a 75,9, barreras 27,3 a 56,9, cuadrilla 0 a 89, muestras 42 a 75 y guardavidas 29): del 12–24% al
+   4–10% del aumento de Ambiente, y con baños y mantenimiento, del 20–35% al 11–21%. El adelanto del año 1 sigue en
+   335 M: las barreras, como las rejas, no van en él.
+4. La Res. 2222/19 de la Autoridad del Agua no estaba citada en el documento; las fuentes de las barreras citan la
+   1746/25 (pág. 50).
+5. Shows (págs. 11 y 30): al aire libre del 20 de septiembre al 15 de abril, 114 shows; bajo techo, los otros 86: los
+   solistas en espacios municipales y los demás en cuatro clubes o centros culturales por convenio, 17,8 M por año. Los
+   200 shows, 201,9 M por año para los artistas; el programa, unos 329 M por año y 467 M el primer año (cuadro 14 y
+   3.4). Sale la marca [23 quinquies].
+- Método (pág. 49): suma el informe 23 quinquies; ya no queda ninguna marca pendiente.
+- Fuentes (págs. 50 y 51): barreras y temporada bajo techo, informes/23e_barreras.md; sin nombres de empresas ni
+  proveedores.
+- Excel: filas 281 a 283, 329 M, 138,8 M y 467 M; gasto flexible ocupado 53,3%, libre 46,7% y 44,0% con beca y salud,
+  sin cambio; reasignación 6.767 M; 13.454 fórmulas, 0 errores; Resumen anual sin diferencias.
+- Controles de pantalla: 51 páginas de hasta 2.700 pt; índice, 65 entradas y ninguna fuera de lugar; 42 cuadros y
+  gráficos seguidos; ninguna fuente Liberation ni DejaVu; sin marcas [23 …] y sin empresas ni proveedores nuevos.
+- A4, con el mismo método aprobado: 139 hojas; cada página de pantalla entera en sus hojas, palabra por palabra; índice
+  con los números de hoja, 64 entradas, ninguna fuera de lugar; 42 cuadros y gráficos seguidos; ninguna marca [23 …];
+  la raya del pie igual en las 138 hojas; ninguna fuente Liberation ni DejaVu. Cinco tests OK (data/ restaurado).
