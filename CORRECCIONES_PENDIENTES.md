@@ -2922,6 +2922,20 @@ Páginas de la versión de pantalla (51 págs.).
   encabezado (6,4–6,75 → 5,8–6,1), las etiquetas (5,6 → 5,1) y la letra de los gráficos (5,5–8,8 → 5,0–8,0). Diez
   bloques no entran en una hoja: los cuadros 9, 14, 38, 39, 40 y 42, el glosario, las dos páginas de fuentes y el
   recuadro de multas del 5.11 (pág. 36). El dispatch 5 aprueba partir los cuadros con el encabezado repetido.
+- Paso 4 (hecho, con el visto bueno de Nick a las muestras): salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf, 139 hojas A4
+  (595 × 842) con la portada, 16,4 MB, hecha con doc/corte_a4.py desde el PDF de pantalla del dispatch 5. Lo que no
+  entra en una hoja se parte, como aprobó Nick: los cuadros 9, 14, 38, 39, 40 (calendario) y 42, el glosario y las
+  dos páginas de fuentes, entre filas y con el encabezado repetido; el recuadro de la IA del lado del vecino del 5.11
+  (pág. 36), entre sus puntos; la lista del 5.15, entre sus líneas. Ningún gráfico se corta. Cada página de pantalla
+  empieza en una hoja nueva, como en la pantalla.
+- Comparación hoja por hoja: cada página de pantalla está entera en sus hojas A4, palabra por palabra (sin el
+  encabezado ni el pie, y descontando el encabezado repetido de los cuadros partidos). Vistas las 139 hojas, y de
+  cerca los cortes de los cuadros 14 y 40, el cuadro 27 entero con sus cifras nuevas y el recuadro de multas.
+- Controles: 139 hojas A4, cada una con su «Página N de 139»; 42 cuadros y gráficos seguidos, ningún rótulo
+  separado de su cuadro al pie de la hoja; índice con los números de hoja de la A4, 64 entradas, ninguna fuera de
+  lugar; ninguna fuente Liberation ni DejaVu; siete marcas [23 quáter] y los mismos barridos que la pantalla.
+- Letra: al 90% siguen debajo de 8 pt los textos ya avisados (cuadros 7,8; notas 7,1; epígrafes 6,8; rótulos,
+  encabezado y pie 5,8 a 6,1; etiquetas 5,1; gráficos 5,0 a 8,0). Nick aprobó las muestras así.
 
 ## DISPATCH 5 · DECISIONES DE NICK SOBRE EL INFORME 23 TER Y LAS PREGUNTAS (07/10) · APLICADO
 Páginas de la versión de pantalla (51 págs.).
