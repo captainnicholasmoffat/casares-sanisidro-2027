@@ -1860,7 +1860,7 @@ instructores (necesita dictamen de un abogado).</p>
 <p><b>4 &middot; Doscientos por a&ntilde;o, s&oacute;lo con artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de afuera. Es del
 partido si al menos la mitad de sus integrantes tiene en el DNI domicilio en San Isidro, y es emergente si tiene menos de
 50.000 oyentes mensuales en Spotify. Como no se gasta en famosos, alcanza para pagar bien a muchos artistas del partido.
-Los paga Cultura (cuadro [[n:programa]]); cu&aacute;nto cuestan, [23 ter].</p>
+Los paga Cultura (cuadro [[n:programa]]); cu&aacute;nto cuestan, [23&nbsp;ter].</p>
 <p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
 eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
 un cupo grande para artistas nuevos. La grilla cumple el cupo de la Ley 27.539 &mdash;al menos un 30% de mujeres&mdash;, y la
@@ -1884,7 +1884,7 @@ Municipio y su n&uacute;mero de serie, en un inventario p&uacute;blico en la int
 foto qu&eacute; sale y qu&eacute; vuelve cada d&iacute;a, y qui&eacute;n lo firma; cada caja y la camioneta llevan un rastreador GPS; el dep&oacute;sito
 est&aacute; cerrado y con c&aacute;mara; y hay seguro contra robo. Lo que falta o se rompe por mal uso es responsabilidad de quien lo
 firm&oacute;, y los m&uacute;sicos y los vecinos pueden denunciar en la inteligencia artificial, con foto o video, si alguien roba o
-maltrata los equipos. Cu&aacute;nto cuesta, y si para doscientos shows hace falta un tercer equipo de sonido, [23 ter].</p>
+maltrata los equipos. Cu&aacute;nto cuesta, y si para doscientos shows hace falta un tercer equipo de sonido, [23&nbsp;ter].</p>
 <p><b>M&aacute;s p&uacute;blico.</b></p>
 <p><b>10 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino</b> qu&eacute; hay, d&oacute;nde y cu&aacute;ndo, seg&uacute;n lo que le
 gusta; y con quienes le avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien lo acepta
@@ -2418,7 +2418,7 @@ medida con pruebas sin inteligencia artificial; despu&eacute;s, a todos.</p>
 <b>2.064 millones</b> de pesos constantes, que no salen de adentro de educaci&oacute;n, que
 ser&iacute;a circular, sino del programa de mantenimiento y embellecimiento, que el
 cap&iacute;tulo 3 identifica con nombre. Es el <b>2,4% de los 87.326 millones</b> reasignables. Adentro va el profesor digital de los alumnos
-que lo tienen gratis: cu&aacute;ntos son y cu&aacute;nto cuesta, [23 ter].</li>
+que lo tienen gratis: cu&aacute;ntos son y cu&aacute;nto cuesta, [23&nbsp;ter].</li>
 <li><b>Que cualquiera pueda preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra y escuela por escuela.</b> Es dinero
 afectado con destino espec&iacute;fico: su ejecuci&oacute;n deber&iacute;a ser trazable y hoy no lo es.
 Y sirve para lo &uacute;nico que importa ac&aacute;: saber si la obra escolar cae donde est&aacute;n las
@@ -2557,7 +2557,7 @@ patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los 
 </div>
 
 <p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma
-(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones de las inspecciones: [23 ter].</p>
+(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones de las inspecciones: [23&nbsp;ter].</p>
 
 <h3>La coima en la inspecci&oacute;n: el acto de autoridad, grabado y sellado</h3>
 <p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto

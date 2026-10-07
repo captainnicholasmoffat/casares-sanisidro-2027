@@ -240,7 +240,7 @@ s_row(55, "Apoyo escolar · costo anual por sede", 180000000,
 s_row(56, "Salud · adhesión al sistema provincial", 0,
       note="Mi Salud Digital no tiene costo de licencia para el municipio que adhiere")
 s_row(57, "Inspecciones grabadas · plan de datos y guarda de las grabaciones, por año", 0,
-      note="Salen los 264 M de mantenimiento (el 22% de una lista de precios). El plan de datos y la guarda (seis meses a mano y archivo hasta dos años, en una nube en Europa) llegan con el informe 23 ter")
+      note="Salen los 264 M de mantenimiento (el 22% de una lista de precios). El plan de datos y la guarda (seis meses con acceso rápido y después archivo hasta dos años, en una nube en Europa) llegan con el informe 23 ter")
 
 # --- F · deuda
 s_row(59, "Stock de deuda al 30/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),

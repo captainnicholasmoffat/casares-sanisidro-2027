@@ -15,8 +15,9 @@
 
 Sale a /mnt/user-data/outputs/PROGRAMA_SAN_ISIDRO_2027_A4.pdf."""
 import html as H
-import os, pathlib, re, sys, unicodedata
+import json, os, pathlib, re, sys, unicodedata
 from playwright.sync_api import sync_playwright
+import pymupdf as fitz
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import RectangleObject
 
@@ -60,7 +61,7 @@ h1{font-size:18pt;line-height:1.2}
 h2{font-size:13pt}
 h3,.cols>h3{font-size:12pt}
 td,.kv td{font-size:9.5pt;line-height:1.32}
-th,.exlabel,.clabel,.plabel,.kv td:first-child,.tag{font-size:8pt;line-height:1.2}
+th,.exlabel,.clabel,.plabel,.pull .plabel,.kv td:first-child,.tag{font-size:8pt;line-height:1.2}
 th{height:auto;padding-bottom:4pt}
 .exlabel{line-height:10pt}
 .extitle{font-size:12pt;line-height:1.3}
@@ -79,13 +80,15 @@ table,.kv{width:100%}
 table{break-inside:avoid}
 thead{display:table-header-group}
 tr{break-inside:avoid}
-.ex{break-inside:avoid;break-after:avoid}
+.ex{break-inside:avoid}
+.exw>.ex{break-after:avoid}
 .exw{break-inside:avoid}
 .cap{break-before:avoid}
 h1,h2,h3,.stand,.clabel,.plabel{break-after:avoid;break-inside:avoid}
 p,li{orphans:3;widows:3}
+.cols>p,.cols>ul,.cols>ol{break-inside:auto}
 .chart,figure,.duo,.pull,.diag{break-inside:avoid}
-.diag svg{width:100% !important;height:auto !important}
+.diag svg{max-width:100%}
 figure img{height:62mm}
 figure.tall img{height:80mm}
 figure.band img{height:46mm}
@@ -102,13 +105,34 @@ def a_imprenta(html):
     html = re.sub(r'<col style="width:([0-9.]+)pt">',
                   lambda m: f'<col style="width:{float(m.group(1)) / 570 * 100:.3f}%">', html)
     # el titulo de un cuadro o grafico va pegado a su cuadro o grafico y a su fuente
-    html = re.sub(r'(<div class="ex"><div class="exlabel">[^<]*</div><div class="extitle">.*?</div>'
-                  r'(?:<div class="exsub">.*?</div>)?</div>\s*'
-                  r'(?:<table.*?</table>|<div class="chart[^"]*">.*?</div>)'
-                  r'(?:\s*<p class="cap">.*?</p>)*)',
+    # (solo los que tienen el titulo aparte; los que lo llevan adentro ya son un bloque). Ningun trozo del
+    # patron cruza un </div>: antes un .*? podia tragarse otros cuadros y parrafos enteros.
+    sin_div = r"(?:(?!</div>).)*"
+    html = re.sub(r'(<div class="ex"><div class="exlabel">[^<]*</div><div class="extitle">' + sin_div + '</div>'
+                  r'(?:<div class="exsub">' + sin_div + r'</div>)?</div>\s*'
+                  r'(?:<table.*?</table>|<div class="chart[^"]*">' + sin_div + r'</div>'
+                  r'|<div class="diag"[^>]*>\s*<svg.*?</svg>\s*</div>)'
+                  r'(?:\s*<p class="cap">(?:(?!</p>).)*</p>)*)',
                   r'<div class="exw">\1</div>', html, flags=re.S)
     return html
 
+
+
+def circuitos_a4(html):
+    """El diagrama de los dos circuitos (4.4) tiene en pantalla los dos lado a lado, con letra de 5,5 pt al ancho de
+    A4. En papel van uno arriba del otro, cada uno recortado a lo suyo, con la letra mas chica en 8 pt."""
+    m = re.search(r'<div class="diag"[^>]*>\s*<svg[^>]*viewBox="0 0 830 400"[^>]*>(.*?)</svg>\s*</div>', html, re.S)
+    if not m:
+        return html
+    cuerpo, esc, y0, alto = m.group(1), 8.05 / 8.6, 12, 326      # 8,6 es la letra mas chica del dibujo
+
+    def uno(x0, ancho):
+        return (f'<svg viewBox="{x0} {y0} {ancho} {alto}" preserveAspectRatio="xMidYMid meet" '
+                f'style="display:block;margin:0 auto;overflow:hidden;width:{ancho * esc:.1f}pt;height:{alto * esc:.1f}pt">'
+                f'{cuerpo}</svg>')
+    nuevo = ('<div class="diag" style="text-align:center;margin:8pt 0 4pt">' + uno(40, 362)
+             + '<div style="height:10pt"></div>' + uno(458, 344) + '</div>')
+    return html[:m.start()] + nuevo + html[m.end():]
 
 SVG_A4 = B.ROOT / "assets" / "svg_a4"
 CAJA_PT = 210 / 25.4 * 72 - (24 + 16) / 25.4 * 72      # ancho de la caja de texto en A4
@@ -159,11 +183,190 @@ def armar_html(sections, solo_indice=False):
     for tr in trozos(sections)[:1] if solo_indice else trozos(sections):
         cuerpo = "".join(f'<div class="page">{s["html"]}</div>' for s in tr)
         partes.append(f'<div class="trozo">{cuerpo}</div>')
-    body = a_imprenta("".join(partes))
+    body = circuitos_a4(a_imprenta("".join(partes)))
     return B.SHELL % {"css": B.CSS + PRINT_CSS, "body": B.inline_images(inline_svgs_a4(body))}
 
 
-def imprimir(pg, html, pdf):
+CAJA_ALTO = A4_H - 2 * 20 / 25.4 * 72                  # alto de la caja de texto en A4 (728,5 pt)
+VIEWPORT = round(CAJA_PT * 96 / 72) + 1                 # la pagina se mide en pantalla con el ancho de la caja
+
+# Medir y acomodar en el navegador, antes de imprimir: los cuadros mas altos que una pagina no pueden ir
+# enteros, asi que se dejan partir desde donde caen (con el encabezado repetido) en vez de saltar a la pagina
+# siguiente y dejar un hueco.
+JS_A4 = r"""
+window.A4 = (() => {
+  const pt = px => px * 0.75;
+  function largos(caja) {
+    let n = 0;
+    for (const e of document.querySelectorAll('.exw, .ex, table')) {
+      if (pt(e.getBoundingClientRect().height) > caja - 12) { e.style.breakInside = 'auto'; n++; }
+    }
+    return n;
+  }
+  // un cuadro o grafico, con su titulo y sus notas
+  function unidad(label) {
+    const lab = [...document.querySelectorAll('.exlabel')]
+      .find(l => l.textContent.replace(/\u00a0/g, ' ').trim() === label);
+    if (!lab) return null;
+    const root = lab.closest('.exw') || lab.closest('.ex');
+    let last = root;
+    if (!root.classList.contains('exw')) {
+      let s = root.nextElementSibling;
+      while (s && s.matches('.chart,.diag,table,p.cap,figure,.duo')) { last = s; s = s.nextElementSibling; }
+    }
+    return {root, last};
+  }
+  const titulo = e => e.matches('h1,h2,h3,h4');
+  const cuadro = e => e.matches('.exw,.ex,.chart,.diag,table,figure,.duo');
+  // el texto que sigue al cuadro (y a los cuadros pegados a el), bloque por bloque, hasta un titulo u otro cuadro
+  function bloques(u) {
+    const out = [];
+    let s = u.last.nextElementSibling;
+    while (s && cuadro(s)) s = s.nextElementSibling;
+    for (; s; s = s.nextElementSibling) {
+      if (titulo(s) || cuadro(s)) break;
+      if (s.matches('.cols')) {
+        for (const c of s.children) { if (titulo(c) || cuadro(c)) return out; out.push(c); }
+      } else out.push(s);
+    }
+    return out;
+  }
+  // el texto que lo precede, del mas cercano hacia atras, hasta un titulo u otro cuadro
+  function previos(u) {
+    const out = [];
+    for (let s = u.root.previousElementSibling; s; s = s.previousElementSibling) {
+      if (titulo(s) || cuadro(s)) break;
+      if (s.matches('.cols')) {
+        for (const c of [...s.children].reverse()) { if (titulo(c) || cuadro(c)) return out; out.push(c); }
+      } else out.push(s);
+    }
+    return out;
+  }
+  function alto(e) {
+    const cs = getComputedStyle(e);
+    return pt(e.getBoundingClientRect().height + parseFloat(cs.marginTop) + parseFloat(cs.marginBottom));
+  }
+  function medir(label) {
+    const u = unidad(label);
+    if (!u) return null;
+    return {E: pt(u.last.getBoundingClientRect().bottom - u.root.getBoundingClientRect().top),
+            altos: bloques(u).map(alto), previos: previos(u).map(alto)};
+  }
+  // el cuadro sube por encima de los k bloques de texto que lo preceden, que pasan abajo del cuadro
+  function subir(label, k) {
+    const u = unidad(label);
+    if (!u) return 0;
+    const ps = previos(u).slice(0, k);
+    if (!ps.length) return 0;
+    const nodos = [];
+    for (let n = u.root; n; n = n.nextElementSibling) { nodos.push(n); if (n === u.last) break; }
+    const lejos = ps[ps.length - 1];
+    let ancla = lejos;
+    const C = lejos.parentElement;
+    if (C.matches('.cols') && C !== u.root.parentElement) {
+      if (lejos !== C.firstElementChild) {
+        const C2 = document.createElement('div'); C2.className = 'cols';
+        for (let n = lejos; n; ) { const nx = n.nextElementSibling; C2.appendChild(n); n = nx; }
+        C.after(C2);
+        ancla = C2;
+      } else ancla = C;
+    }
+    for (const n of nodos) ancla.before(n);
+    return ps.length;
+  }
+  // sube los primeros k bloques de texto antes del cuadro: el texto llena el hueco y el cuadro va despues
+  function mover(label, k) {
+    const u = unidad(label);
+    if (!u) return 0;
+    let caja = null, de = null;
+    const bs = bloques(u).slice(0, k);
+    for (const b of bs) {
+      const padre = b.parentElement;
+      if (padre.matches('.cols') && padre !== u.root.parentElement) {
+        if (!caja || de !== padre) { caja = document.createElement('div'); caja.className = 'cols'; u.root.before(caja); de = padre; }
+        caja.appendChild(b);
+        if (!padre.children.length) padre.remove();
+      } else { caja = null; de = null; u.root.before(b); }
+    }
+    return bs.length;
+  }
+  // una ilustracion que al pie no entra y quedaria sola en la pagina siguiente: se achica para que entre
+  function achicar(cap, alto) {
+    const f = [...document.querySelectorAll('figure')]
+      .find(x => x.querySelector('figcaption') && x.querySelector('figcaption').textContent.trim() === cap);
+    if (!f) return 0;
+    for (const im of f.querySelectorAll('img')) im.style.height = alto + 'pt';
+    return 1;
+  }
+  return {largos, medir, mover, subir, achicar};
+})();
+"""
+
+
+def huecos(pdf):
+    """Paginas con blanco al pie porque el cuadro o grafico que seguia no entraba: el rotulo del cuadro esta
+    entre los primeros renglones de la pagina siguiente (a veces despues de su titulo de seccion)."""
+    d = fitz.open(str(pdf))
+    pie = A4_H - 20 / 25.4 * 72
+    out = []
+    for i in range(1, len(d) - 1):
+        pg = d[i]
+        ys = [b[3] for b in pg.get_text("blocks") if b[3] < pie - 2]
+        ys += [r["rect"].y1 for r in pg.get_drawings() if r["rect"].y1 < pie - 2 and r["rect"].height < A4_H * 0.9]
+        hueco = pie - (max(ys) if ys else 0)
+        if hueco < 0.15 * CAJA_ALTO:
+            continue
+        sig = [l.strip().replace("\xa0", " ") for l in d[i + 1].get_text("text").split("\n") if l.strip()]
+        sig = [l for l in sig if not l.startswith(("PROGRAMA DE GOBIERNO", "Página ", "Programa de gobierno"))]
+        rot = next((l for l in sig[:3] if re.match(r"^(CUADRO|GRÁFICO) \d+$", l)), None)
+        if rot:
+            out.append((i + 1, hueco, rot))
+        elif len(sig) == 1 and sig[0].endswith("Ilustración."):
+            out.append((i + 1, hueco, "figura:" + sig[0]))
+    return out
+
+
+def inicios(sections, pdf):
+    """La pagina donde empieza cada trozo (cada uno empieza pagina): se busca el primer titulo de cada uno."""
+    paginas = [norm(p.extract_text() or "") for p in PdfReader(str(pdf)).pages]
+    out, desde = [], 1
+    for tr in trozos(sections)[1:]:
+        ts = [t for s_ in tr for t in titulos(s_["html"])]
+        t = norm(ts[0]) if ts else None
+        n = next((i for i in range(desde, len(paginas)) if t and t in paginas[i]), None)
+        if n is not None:
+            out.append(n + 1)
+            desde = n
+    return out
+
+
+def cuantos_subir(hueco, E, previos):
+    """Cuantos bloques de texto anteriores deja atras el cuadro para entrar en la pagina del hueco."""
+    if E > CAJA_ALTO - 14:
+        return 0
+    suma = 0.0
+    for i, h in enumerate(previos, 1):
+        suma += h
+        if hueco + suma >= E + 10:
+            return i
+    return 0
+
+
+def cuantos(hueco, E, altos):
+    """Cuantos bloques de texto subir: los que llenan el hueco, sin que lo que pase a la pagina siguiente deje
+    sin lugar al cuadro."""
+    holgura = max(0.0, CAJA_ALTO - 14 - E)
+    k, suma = 0, 0.0
+    for i, h in enumerate(altos, 1):
+        if suma + h - hueco > holgura:
+            break
+        suma, k = suma + h, i
+        if suma >= hueco - 20:
+            break
+    return k
+
+
+def imprimir(pg, html, pdf, movidas=()):
     f = B.OUT / "a4.html"
     f.write_text(html, encoding="utf-8")
     pg.goto(f.as_uri())
@@ -173,6 +376,11 @@ def imprimir(pg, html, pdf):
     except Exception:
         pass
     pg.wait_for_timeout(400)
+    pg.evaluate(JS_A4)
+    pg.evaluate("c => A4.largos(c)", CAJA_ALTO)
+    for rot, modo, k in movidas:
+        fn = {"texto": "mover", "cuadro": "subir", "figura": "achicar"}[modo]
+        pg.evaluate("([r, k]) => A4.%s(r, k)" % fn, [rot[len("figura:"):] if modo == "figura" else rot, k])
     pg.pdf(path=str(pdf), prefer_css_page_size=True, print_background=True)
     return len(PdfReader(str(pdf)).pages)
 
@@ -237,17 +445,54 @@ def main():
     exe = os.environ.get("PW_CHROMIUM")
     with sync_playwright() as pw:
         br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
-        pg = br.new_page()
+        pg = br.new_page(viewport={"width": VIEWPORT, "height": 900})
         # cuantas paginas ocupa el indice (la tapa es la 1)
         n_indice = imprimir(pg, armar_html(secs, solo_indice=True), B.OUT / "a4_indice.pdf") - 1
-        # primera pasada: donde cae cada titulo del indice
+        # primera pasada: donde cae cada titulo del indice. Antes, hasta tres vueltas para llenar los huecos
+        # que deja un cuadro que no entra al pie de una pagina, subiendo el texto que lo sigue
         p1 = B.OUT / "a4_pasada1.pdf"
-        imprimir(pg, armar_html(secs), p1)
+        movidas = []
+        for vuelta in range(7):
+            imprimir(pg, armar_html(secs), p1, movidas)
+            if vuelta == 6:
+                break
+            ini = inicios(secs, p1)
+            nuevas, hechos = [], set()
+            for n, hueco, rot in huecos(p1):
+                cap = sum(1 for x in ini if x <= n)
+                if cap in hechos or sum(1 for r, _, _ in movidas if r == rot) >= 2:
+                    continue
+                if rot.startswith("figura:"):
+                    alto = hueco - 36           # menos el margen y el epigrafe
+                    if alto >= 0.6 * 62 / 25.4 * 72 and not any(r == rot for r, _, _ in movidas):
+                        nuevas.append((rot, "figura", round(alto, 1)))
+                        hechos.add(cap)
+                        print(f"  hueco en la pagina {n} ({hueco:.0f} pt): la ilustracion «{rot[7:]}» baja a {alto:.0f} pt")
+                    continue
+                m = pg.evaluate("r => A4.medir(r)", rot)
+                if not m:
+                    continue
+                k = cuantos(hueco, m["E"], m["altos"])
+                lleno = sum(m["altos"][:k])
+                k2 = cuantos_subir(hueco, m["E"], m["previos"])
+                if k2 and lleno < hueco - 40:
+                    nuevas.append((rot, "cuadro", k2))
+                    print(f"  hueco en la pagina {n} ({hueco:.0f} pt): el {rot} sube por encima de {k2} bloques de texto")
+                elif k:
+                    nuevas.append((rot, "texto", k))
+                    print(f"  hueco en la pagina {n} ({hueco:.0f} pt): suben {k} bloques de texto antes del {rot}")
+                else:
+                    continue
+                hechos.add(cap)
+            if not nuevas:
+                break
+            movidas += nuevas
+        (B.OUT / "a4_movidas.json").write_text(json.dumps(movidas, ensure_ascii=False, indent=1), encoding="utf-8")
         pags, faltan = paginas_por_entrada(secs, p1, n_indice)
         secs[0] = dict(secs[0], html=indice_a4(pags))
         # segunda pasada: el indice con las paginas de A4, y se comprueba que no se movio nada
         p2 = B.OUT / "a4_pasada2.pdf"
-        imprimir(pg, armar_html(secs), p2)
+        imprimir(pg, armar_html(secs), p2, movidas)
         pags2, _ = paginas_por_entrada(secs, p2, n_indice)
         br.close()
     if pags2 != pags:

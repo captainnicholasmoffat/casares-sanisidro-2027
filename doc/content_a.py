@@ -424,7 +424,7 @@ diferencia cero.</p>
 g&eacute;nero y discapacidad) y 23 bis (rejas en los desag&uuml;es, tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital,
 espect&aacute;culos y mensajes de texto) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
 repositorio, y marcan qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. Lo que est&aacute; en d&oacute;lares va al de diciembre de
-2025, $1.447,84 (BCRA). Lo que todav&iacute;a no tiene cifra est&aacute; marcado [23 ter]: lo trae el informe 23 ter.</p>
+2025, $1.447,84 (BCRA). Lo que todav&iacute;a no tiene cifra est&aacute; marcado [23&nbsp;ter]: lo trae el informe 23 ter.</p>
 <p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
 reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>

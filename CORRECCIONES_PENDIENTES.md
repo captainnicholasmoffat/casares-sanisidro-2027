@@ -2807,3 +2807,98 @@ C238 y la nota E52, Programas filas 10 y 16 en 2028 y Gastos función filas 23 y
 - Para Nick: (1) el fondo cerrado de seguridad vial puede mover el 44,4% libre si hoy lo que se cobra por multas
   financia otra cosa: falta el gasto vial actual; (2) la fuente dice que el 85% eran cámaras de semáforo, no fotomultas,
   y así quedó; (3) «Beccar» sin tilde en los cuatro textos aprobados del apoyo escolar, «Béccar» en el resto.
+
+## DISPATCH 3 · PARTE B (06/10) · CIFRAS DEL INFORME 23 APROBADAS POR NICK
+- Textos decididos (2b5fd2f): Béccar con tilde; turnos con lista de espera y recordatorios; género y discapacidad;
+  puente con los laboratorios (5.3 y capítulo 4); criterio de calidad y precio; espectáculos al aire libre con página
+  propia y el registro de artistas en la Ordenanza XIV; las 110 licencias de análisis de video que ya existen.
+- Cifras (41fabf3): dólar de diciembre de 2025, $1.447,84 (BCRA); plataforma con 59 personas y 160 asociaciones
+  (2.063,6 M, 26,8% de Ciencia y Técnica); 8 personas en las áreas; sin cámaras corporales ni los 1.200 y 264 M;
+  reasignación 6.599 M (27%); sensores de Perú y adelanto de 335 M; validadores de multas (108,3 M) con el resto del
+  presupuesto; el fondo vial no mueve el margen; compromisos 15 y 16; pirámide con 109 juniors; inglés en la
+  tecnicatura. Lo que faltaba quedó marcado [23 bis].
+
+## DISPATCH 3 · C1 (06/10) · CAPÍTULO 6, ANEXO, GLOSARIO, MÉTODO Y FUENTES
+- Capítulo 6 (0ab12ae): veintiún compromisos (nuevo el 21, espectáculos con el registro), veinte metas (siete
+  nuevas), calendario con las fechas nuevas propuestas (marcadas para que Nick decida), cinco filas nuevas en «qué no
+  prometemos», veinticinco riesgos (Los Ángeles, datos de chicos, represalias, ruido, multas, género, IA que escucha).
+- Anexo en cuatro páginas: base de datos del profesor digital (Ord II, art. 4), género (Ord VI, arts. 3 a 5) y las
+  Ordenanzas XV y XVI (cuotas de las multas y su base de datos), todo para el abogado.
+- Glosario con ocho palabras; método con los informes 21 a 23 bis; fuentes del profesor digital, del fallo de La
+  Plata, del §5 del informe 18 y de Los Ángeles. Excel: hoja Metas con las veinte metas (b75e26d).
+
+## DISPATCH 4 · DECISIONES DE NICK SOBRE EL INFORME 23 BIS (07/10) · APLICADO
+Páginas de la versión de pantalla (51 págs.).
+1. Redes (págs. 26, 29, 38 y 51): rejas con alivio en unas diez bocas, «revisadas cada semana y después de cada
+   lluvia, con alivio para que no inunden»; Perú y Alto Perú sin rejas, con barrera (Plan de Manejo 2012); las vacía
+   la cuadrilla de la costa y se llama a concurso a las cooperativas de trabajo del partido, por resultado (abogado).
+   Rejas 70,4 a 130,9 M una vez; la costa, de 432 a 821 M por año: del 12% al 24% del aumento de Ambiente, y con
+   baños y mantenimiento del 20% al 35%.
+2. Inspecciones (págs. 4, 9, 11, 13, 20, 28, 34, 38, 39, 41, 42, 45 y 49): sin transmisión en vivo. El agente graba
+   todo el turno con su teléfono, desde la IA, en un soporte en el pecho; cada grabación se sella al grabar y su huella
+   llega a la IA en el momento; el video se sube al volver a la base; si no se sube, la IA lo marca; sin grabación
+   sellada y subida, el acta no vale. Teléfono propio apto; el Municipio no compra teléfonos: financiación y
+   descuentos, y paga datos, soporte y batería (Ley 14.656, art. 75, para el abogado). Empiezan inspectores y agentes
+   de tránsito; la patrulla, en una segunda etapa. Nube en Europa: seis meses con acceso rápido y archivo hasta dos
+   años. Ordenanza IV de grabación, con el art. 7 nuevo (el teléfono). Costo: [23 ter]. La detección en vivo de las
+   110 cámaras no se tocó.
+3. Profesor digital (págs. 11, 33 y 51): gratis en las escuelas públicas, en el apoyo escolar municipal y en los
+   colegios que el Estado financia por completo; en los demás, cada alumno paga lo que usa: de 10.887 a 12.146 pesos
+   por año (unos 1.100 a 1.200 por mes) con el uso esperado, de 34.532 a 42.919 al máximo. Cuántos alumnos y cuánto
+   cuesta: [23 ter], dentro de los 2.064 M de Educación.
+4. Espectáculos (págs. 11, 13, 30 y 51): once puntos. Doscientos shows por año que paga Cultura (fila nueva del
+   cuadro 14; el programa tiene catorce partes con costo); del partido si la mitad tiene domicilio del DNI en San
+   Isidro; emergente con menos de 50.000 oyentes mensuales en Spotify; cupo de la Ley 27.539 que controla la IA; si
+   cancela el Municipio, 70% al cancelar y el show entero en la nueva fecha (CCyC, art. 1261; abogado); alerta
+   amarilla del SMN y 30 minutos desde el último trueno (Res. 1749/2014); sonido propio del artista siempre; el del
+   Municipio por licitación pública, sólo en eventos chicos, con sello, inventario público, registro con foto, GPS,
+   depósito con cámara y seguro; grupos sólo con consentimiento expreso, nombre de pila, show y punto de encuentro, y
+   se borran después. Costos y si hace falta un tercer equipo de sonido: [23 ter].
+5. Avisar antes de multar (págs. 11, 13, 36 y 51): por la IA y, a quien dio su celular, por mensaje de texto; de 0,8 a
+   5,9 M por año, que paga Tránsito. Con el tope, el gasto flexible ocupado pasa de 52,7% a 52,8% y el libre de 47,3%
+   a 47,2%; con la beca y el módulo de salud sigue en 44,6%.
+6. Denuncias en la IA (págs. 20, 30 y 34): en la IA que escucha (4.11) y en la defensa del comerciante (5.9), una o
+   dos líneas: cualquier vecino, comerciante o artista denuncia con foto o video el mal uso de un bien municipal o un
+   pedido indebido, en cualquier área; la IA lo registra, lo deriva y le cuenta qué se hizo. Nombrado en espectáculos.
+- Glosario con «huella»: treinta y dos palabras (pág. 48). Método: el 23 bis sin nombres de escuelas y la marca
+  [23 ter] explicada (pág. 49). Quedan diez marcas [23 ter] (págs. 11, 30, 33, 34, 49 y 51); ninguna [23 bis].
+- Excel: fila 273 nueva (mensajes de texto, 5,9 M, en el gasto flexible ocupado: 52,8%, 47,2% y 44,6%); filas 54,
+  57 y 233 y la hoja Programas con «grabadas»; 13.454 fórmulas, 0 errores; Resumen anual sin diferencias.
+- Cifras que se movieron como consecuencia directa de las decisiones (para que Nick las confirme): gasto flexible
+  ocupado 52,7% → 52,8% y libre 47,3% → 47,2% (mensajes de texto); la costa, del 23–33% al 12–24% del aumento de
+  Ambiente, y con baños y mantenimiento del 30–44% al 20–35%. El margen todavía no cuenta lo marcado [23 ter].
+
+## D · VERSIÓN A4 PARA IMPRIMIR (07/10)
+- salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf: 157 páginas A4 (595 × 842), una columna, cuerpo de 10,5 pt, cuadros de
+  9,5 pt, notas de 8,5 pt y nada por debajo de 8 pt; 24 mm del lado del lomo para abrochar o anillar; encabezado y
+  «Página N de M». Se arma con doc/build_a4.py (gráficos de imprenta: doc/charts_a4.py → assets/svg_a4).
+- Cuadros: no se parten salvo los que no entran en una página, y entonces repiten el encabezado; ningún título queda
+  separado de su cuadro; 42 cuadros y gráficos seguidos. El diagrama de los dos circuitos (gráfico 26) va uno arriba
+  del otro, para que la letra no baje de 8 pt.
+- Huecos: si un cuadro no entra al pie, sube el texto que lo sigue, o el cuadro sube por encima del párrafo anterior;
+  la ilustración de la introducción se achica para no quedar sola. Quedan dos huecos que no se llenan sin partir un
+  cuadro: pág. 53 (el cuadro 27 ocupa casi una página) y pág. 57 (gráfico 28, al abrir el capítulo 5).
+- Arreglos del armado: el agrupado de cada cuadro con su título a veces se tragaba otros cuadros y párrafos (era la
+  causa de la mayoría de los huecos), y los rótulos de las frases destacadas estaban a 6,4 pt.
+- Índice con las páginas del A4: 50 secciones verificadas contra la página. Las remisiones del texto son a
+  secciones y cuadros, que son los mismos en las dos versiones.
+
+## C · CONTROLES FINALES (07/10)
+- Pantalla: 51 páginas de hasta 2.700 pt (la más alta, 2.676). A4: 157 páginas A4. Ninguna con Liberation ni DejaVu.
+- Barrido: «plata» sólo La Plata y plataforma; «rojo» sólo la bandera; «Casares» con la Resolución 26; ni «mafia» ni
+  «sobreprecio»; ni «aplicación», «sistema» ni «asistente» para la IA (el «Sistema de Información Municipal» del
+  anexo es su nombre legal); ni «parroquial», «Obispado», «religión», «lucro» ni «gremio»; ninguna inspección «en
+  vivo» ni «transmitida»; «beach» sólo en el título en inglés de una fuente de la EPA.
+- Índice de pantalla: 65 entradas, ninguna fuera de lugar; 42 cuadros y gráficos seguidos.
+- Excel: 13.454 fórmulas, 0 errores; Resumen anual sin diferencias. Cinco tests OK (data/ restaurado).
+- Lista de coherencia (C0), páginas de pantalla: 52,8% (11, 13), 47,2% (11) y 44,6% (11, 13) = Excel 52,75%, 47,25%
+  y 44,58%; reasignación 6.599 M (11, 13) = Excel 6.598,6; Ambiente 3.455 M (11, 26, 38); costa 432 a 821 M (26, 38);
+  Educación 2.064 M (9, 11, 33, 38) = Excel; validadores 108,3 M (11, 36) = Excel; mensajes 0,8 a 5,9 M (11, 36) =
+  Excel 5,9; catorce partes (11, 13); doscientos shows (11, 30, 51); inspecciones grabadas (4, 9, 11, 13, 28, 34, 38,
+  41, 42, 45, 49); 110 licencias (11, 20, 34, 47, 49, 51); veintiún compromisos (4, 39, 42, 43); veinte metas (39, 40,
+  42, 43, 47); dólar $1.447,84 (49). Sin restos de 52,7%, 47,3%, «790 a 1.140» ni «trece partes».
+- Para Nick: (1) «sin nombres de municipios» se aplicó a lo nuevo; los que ya estaban (Montevideo, Miami, Los
+  Ángeles, Baradero, Chivilcoy, entre otros) siguen; (2) ¿se deja partir el cuadro 27 en el A4?; (3) auditoría
+  externa, 107,3 M (49 personas) o 135,4 M (59); (4) las catorce fechas nuevas del calendario del C1 esperan su visto
+  bueno; (5) la barrera de Alto Perú sigue sin costo, como antes; (6) de la grabación del turno, cualquier vecino ve
+  la de cada inspección, no el turno entero.
