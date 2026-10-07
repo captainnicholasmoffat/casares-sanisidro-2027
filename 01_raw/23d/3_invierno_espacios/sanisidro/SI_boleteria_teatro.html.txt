@@ -1,0 +1,113 @@
+ 
+ TESI San Isidro | TESI · Ingresar 
+ TESI
+ San Isidro 
+ Theme Switcher
+ Te damos la bienvenida a TESI
+ La plataforma digital del Municipio para gestionar trámites de manera ágil, sencilla y segura.
+ Ingresá con tus datos:
+ CUIT / Legajo / IdTESI
+ [data-slot=input-actions]]:col-start-2 [&>[data-slot=input-actions]]:row-start-1 [&>[data-slot=input-actions]]:z-10 [&>[data-slot=input-actions]]:place-self-center [&>[data-slot=control]]:col-start-1 [&>[data-slot=control]]:row-start-1 [&>[data-slot=control]]:col-span-2 [&:has([data-slot=input-actions]):has([data-slot=input-option])>[data-slot=control]]:pr-[1.9rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[3.8rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[5.7rem]"
+ style="--icon-count: 0; --icon-width: 2rem; grid-template-columns: 1fr calc(var(--icon-width) * var(--icon-count));"
+ >
+ Contraseña
+ [data-slot=input-actions]]:col-start-2 [&>[data-slot=input-actions]]:row-start-1 [&>[data-slot=input-actions]]:z-10 [&>[data-slot=input-actions]]:place-self-center [&>[data-slot=control]]:col-start-1 [&>[data-slot=control]]:row-start-1 [&>[data-slot=control]]:col-span-2 [&:has([data-slot=input-actions]):has([data-slot=input-option])>[data-slot=control]]:pr-[1.9rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[3.8rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[5.7rem]"
+ style="--icon-count: 1; --icon-width: 2rem; grid-template-columns: 1fr calc(var(--icon-width) * var(--icon-count));"
+ >
+ Iniciar sesión
+ ¿Olvidaste tu contraseña?
+ ¿Todavía no tenés cuenta?
+ Registrate
+ O conectate con:
+ Con tecnología GDSI 
+ Gestión Documental San Isidro
+ {
+ this.current = (this.current + 1) % this.slides.length
+ }, 5000)
+ }
+ }" x-init="start()"
+ class="relative h-[380px] w-full sm:h-[420px] lg:h-full lg:min-h-[540px] xl:min-h-[600px] 2xl:min-h-[660px]">
+ Trámites digitales,
+ San Isidro cerca.
+ Con tecnología 
+ GDSI 
+ GDSI
+ Gestión Documental San Isidro
+ La tecnología detrás de tus trámites
+ Expediente digital
+ Tu trámite queda registrado y ordenado, sin papeles.
+ Firma electrónica
+ Con la misma validez que una firma en papel.
+ Seguimiento en línea
+ Mirá en qué paso está, cuando quieras.
+ this.maxToasts) {
+ this.toasts = this.toasts.slice(0, this.maxToasts);
+ }
+ },
+ removeToast(id) {
+ this.toasts = this.toasts.filter(toast => toast.id !== id);
+ this.pausedToastIds.delete(id);
+ },
+ pauseFromToast(targetId) {
+ const targetIndex = this.toasts.findIndex(toast => toast.id === targetId);
+ if (targetIndex === -1) return;
+ // Pause the target toast and all toasts above it (index 0 to targetIndex)
+ this.pausedToastIds.clear();
+ for (let i = 0; i 
+ {
+ this.visible = true;
+ this.startTimer();
+ });
+ },
+ startTimer() {
+ if (!toast.duration || toast.duration this.updateProgress());
+ return; 
+ }
+ // Calculate progress percentage (from 100% down to 0%), clamp minimum to 0.
+ this.progress = Math.max(0, 100 - (elapsed / toast.duration) * 100);
+ // If the toast has been visible longer than its duration, dismiss it.
+ if (elapsed >= toast.duration) {
+ this.dismiss();
+ return; // Stop updating since the toast is being removed.
+ }
+ // Request next animation frame to keep the progress bar updating smoothly.
+ this.animationId = requestAnimationFrame(() => this.updateProgress());
+ },
+ onMouseEnter() {
+ $data.pauseFromToast(toast.id);
+ },
+ onMouseLeave() {
+ $data.resumeAllToasts();
+ },
+ dismiss() {
+ this.visible = false;
+ if (this.animationId) {
+ cancelAnimationFrame(this.animationId);
+ }
+ // Wait for exit animation before removing
+ setTimeout(() => {
+ $data.removeToast(toast.id);
+ }, 200);
+ },
+ destroy() {
+ if (this.animationId) {
+ cancelAnimationFrame(this.animationId);
+ }
+ }
+ }"
+ x-show="visible"
+ x-transition:enter="transition ease-out duration-300"
+ x-transition:enter-start="opacity-0 transform translate-y-2 scale-95"
+ x-transition:enter-end="opacity-100 transform translate-y-0 scale-100"
+ x-transition:leave="transition ease-in duration-200"
+ x-transition:leave-start="opacity-100 transform translate-y-0 scale-100"
+ x-transition:leave-end="opacity-0 transform translate-y-2 scale-95"
+ x-bind:class="[
+ 'pointer-events-auto relative w-full max-w-sm rounded-xl border py-2 pl-4 pr-2 shadow-lg dark:border-white/15 border-gray-200 overflow-hidden',
+ '[--alpha(var(--color-green-500) / 50%)]',
+ getToastClasses(toast.type)
+ ]"
+ x-on:mouseenter="onMouseEnter()"
+ x-on:mouseleave="onMouseLeave()"
+>
+ 0">

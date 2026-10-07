@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html class="h-full overflow-hidden"
+      lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token"
+              content="NHDK41Wgy6DHpNpRotMiu0WAdc4KoGMauJesK038">
+        <title>TESI San Isidro | TESI · Ingresar</title>
+        <link rel="icon" type="image/png" href="https://tesi.sanisidro.gob.ar/favicon-tesi.png">
+
+        <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+        <link rel="preload" as="style" href="https://tesi.sanisidro.gob.ar/build/assets/app-tgMZ3azJ.css" /><link rel="preload" as="style" href="https://tesi.sanisidro.gob.ar/build/assets/app-DhaCK5jB.css" /><link rel="modulepreload" as="script" href="https://tesi.sanisidro.gob.ar/build/assets/app-Ccl8LrYu.js" /><link rel="modulepreload" as="script" href="https://tesi.sanisidro.gob.ar/build/assets/bootstrap-C8jaTp1x.js" /><link rel="stylesheet" href="https://tesi.sanisidro.gob.ar/build/assets/app-tgMZ3azJ.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://tesi.sanisidro.gob.ar/build/assets/app-DhaCK5jB.css" data-navigate-track="reload" /><script type="module" src="https://tesi.sanisidro.gob.ar/build/assets/app-Ccl8LrYu.js" data-navigate-track="reload"></script>        
+        <style>
+            /* gives the progress bar primary color */
+            :root {
+                --livewire-progress-bar-color: var(--color-primary);
+            }
+        </style>
+
+        
+                <style>
+            :root {
+                --BPrincipal_Dark: #103323;
+
+                
+                            }
+        </style>
+
+</head>
+    <script>
+        // this is script is essentiel to prevent page's flicker at render time
+        const loadDarkMode = () => {
+            const theme = localStorage.getItem('theme') ?? 'system'
+
+            if (
+                theme === 'dark' ||
+                (theme === 'system' &&
+                    window.matchMedia('(prefers-color-scheme: dark)')
+                    .matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            }
+        }
+        loadDarkMode();
+        document.addEventListener('livewire:navigated', function() {
+            loadDarkMode();
+        });
+    </script>
+
+    <body class="h-full overflow-hidden flex flex-col bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50">
+
+
+        <div
+        class="flex h-dvh flex-col overflow-y-auto bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50">
+        <header
+    class="relative inset-x-0 top-0 z-50 border-b border-b-neutral-100 bg-white dark:border-b-neutral-800 dark:bg-neutral-900"
+>
+    <nav
+        class="mx-auto flex h-20 items-center justify-between px-6 lg:px-8"
+        aria-label="global"
+    >
+        <div class="flex pr-7">
+            <div class="flex items-center gap-3 w-full"
+    x-bind:class="(typeof collapsedSidebar !== 'undefined' && !collapsedSidebar) ? '-ml-4' : ''">
+    <a class="relative inline-flex items-center justify-center px-1 whitespace-nowrap rounded-[3px] cursor-pointer pointer-events-auto select-none"
+        href="https://tesi.sanisidro.gob.ar" wire:navigate
+        x-bind:class="(typeof collapsedSidebar !== 'undefined' && collapsedSidebar) ? 'mx-auto' : ''"
+        x-bind:title="(typeof collapsedSidebar !== 'undefined' && collapsedSidebar) ? 'TESI · San Isidro' : ''">
+                    
+            <img alt="San Isidro" src="https://tesi.sanisidro.gob.ar/images/brand/logo-verde.png" class="h-14 w-auto object-contain dark:hidden" />
+
+            
+            <img alt="San Isidro" src="https://tesi.sanisidro.gob.ar/images/brand/logo-blanco.png"
+                class="h-14 w-auto object-contain hidden dark:block" />
+            </a>
+
+            <a class="inline-flex flex-col leading-tight" href="https://tesi.sanisidro.gob.ar" wire:navigate>
+            <h1 class="text-primary-brand dark:text-white text-lg font-bold leading-5">TESI</h1>
+            <span class="text-xs italic opacity-70 dark:text-white/80">San Isidro</span>
+        </a>
+    </div>
+        </div>
+
+        <div class="hidden gap-4 lg:flex lg:items-center lg:justify-end">
+            
+            <div 
+    class='flex items-center'>
+    <label class="sr-only">
+        Theme Switcher
+    </label>
+
+    <div x-data>
+                    <div
+    class="flex items-center transition-all duration-200 size-10 overflow-hidden"
+ >
+    <button type="button" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-10 text-base w-10 hover:opacity-80 transition" style="display: none;" data-slot="button" role="button" aria-busy="false" aria-disabled="false" aria-label="Activate light theme" x-show="$theme.isResolvedToLight" x-on:click="$theme.toggle()" aria-pressed="true" x-bind:aria-pressed="$theme.isResolvedToLight">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-6 animate-spin  size-5" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+            <svg data-slot="right-icon" class="text-current  size-5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3V5.25M18.364 5.63604L16.773 7.22703M21 12H18.75M18.364 18.364L16.773 16.773M12 18.75V21M7.22703 16.773L5.63604 18.364M5.25 12H3M7.22703 7.22703L5.63604 5.63604M15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+    <button type="button" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-10 text-base w-10 hover:opacity-80 transition" style="display: none;" data-slot="button" role="button" aria-busy="false" aria-disabled="false" aria-label="Activate dark theme" x-show="$theme.isResolvedToDark" x-on:click="$theme.toggle()" aria-pressed="true" x-bind:aria-pressed="$theme.isResolvedToDark">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-6 animate-spin  size-5" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+            <svg data-slot="right-icon" class="text-current  size-5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21.7519 15.0021C20.597 15.484 19.3296 15.7501 18 15.7501C12.6152 15.7501 8.25 11.3849 8.25 6.00011C8.25 4.67052 8.51614 3.40308 8.99806 2.24817C5.47566 3.71798 3 7.19493 3 11.2501C3 16.6349 7.36522 21.0001 12.75 21.0001C16.8052 21.0001 20.2821 18.5245 21.7519 15.0021Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+</div>       
+            </div>
+</div>
+        </div>
+    </nav>
+
+    
+    <div class="absolute bottom-0 left-0 h-[3px] w-full bg-[var(--color-link-positive)]"></div>
+</header>
+        <main class="flex flex-1 items-start justify-center px-4 py-6 md:px-6 md:py-8 lg:items-center">
+            <div class="w-full">
+                <div wire:snapshot="{&quot;data&quot;:{&quot;embedded&quot;:false,&quot;form&quot;:[{&quot;cuit&quot;:&quot;&quot;,&quot;password&quot;:&quot;&quot;,&quot;remember&quot;:false},{&quot;class&quot;:&quot;App\\Livewire\\Forms\\Auth\\LoginForm&quot;,&quot;s&quot;:&quot;form&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;5KK2iEHseSwa90Bv9bJ2&quot;,&quot;name&quot;:&quot;auth.login&quot;,&quot;path&quot;:&quot;login&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;es&quot;},&quot;checksum&quot;:&quot;5c6e4bdbcdd4353336c0c498cc6de272edd737f9bd0398ab6efa70d5f1ef0dc6&quot;}" wire:effects="[]" wire:id="5KK2iEHseSwa90Bv9bJ2" class="relative z-10 w-full">
+     
+    <div class="mx-auto flex w-full justify-center px-6 pt-4 pb-8 lg:px-10 lg:pt-6 lg:pb-10">
+        <div class="w-full max-w-6xl">
+            <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[0.45fr_0.55fr]">
+                <div class="[:where(&amp;)]:p-4 [:where(&amp;)]:rounded-[14px] w-full bg-white dark:bg-neutral-900 border border-black/10 dark:border-white/10 transition-colors duration-200 h-full rounded-[28px] lg:min-h-[540px] xl:min-h-[600px] 2xl:min-h-[660px]">
+    <div class="flex h-full flex-col p-4 sm:p-5 lg:p-6 2xl:p-8">
+        <h1 class="font-semibold text-[var(--color-grey-title)] text-xl mb-2 text-center text-[1.68rem] leading-tight tracking-[-0.03em] text-[var(--color-grey-title)] sm:text-[1.78rem] lg:text-[1.82rem] xl:text-[1.9rem]" data-slot="heading">
+    Te damos la bienvenida a TESI
+    </h1>
+
+        <div class="text-sm mx-auto mb-4 max-w-md text-center text-[var(--color-grey-description)] opacity-80" data-slot="text">
+    La plataforma digital del Municipio para gestionar trámites de manera ágil, sencilla y segura.
+</div>
+
+        <div class="pt-4">
+            
+            <div class="mb-5 flex items-center gap-4">
+                <div class="h-px flex-1 bg-black/10 dark:bg-white/10" aria-hidden="true"></div>
+
+                <div class="shrink-0 text-center text-sm text-[var(--color-grey-description)] opacity-80" data-slot="text">
+    Ingresá con tus datos:
+</div>
+
+                <div class="h-px flex-1 bg-black/10 dark:bg-white/10" aria-hidden="true"></div>
+            </div>
+
+            <form wire:submit="login" class="space-y-3">
+                <div class="min-w-0 w-full [&amp;&gt;[data-slot=label]]:mb-2 text-start [&amp;&gt;[data-slot=label]:has(+[data-slot=description])]:mb-1.5 [&amp;&gt;[data-slot=label]+[data-slot=description]]:mt-0 [&amp;&gt;[data-slot=label]+[data-slot=description]]:mb-2 [&amp;&gt;*:not([data-slot=label])+[data-slot=description]]:mt-2 [&amp;&gt;[data-slot=error]]:mt-1.5  [&amp;:has([data-slot=control][disabled])&gt;[data-slot=label]]:opacity-50" data-slot="field">
+    <div class="text-sm [:where(&amp;)]:text-start font-medium select-none [:where(&amp;)]:text-neutral-800 [:where(&amp;)]:dark:text-white" data-slot="label">
+    <!--[if BLOCK]><![endif]-->        CUIT / Legajo / IdTESI
+    <!--[if ENDBLOCK]><![endif]-->    
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
+                    <div class="isolate relative flex items-stretch w-full shadow-xs disabled:shadow-none transition-colors duration-200 rounded-box [&amp;:has([data-slot=input-prefix])_input]:rounded-l-none [&amp;:has([data-slot=input-suffix])_input]:rounded-r-none [&amp;:has([data-slot=input-prefix]):has([data-slot=input-suffix])_input]:rounded-none" wire:model="form.cuit" placeholder="20123456789 o 123456" inputmode="numeric" autocomplete="username">
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <div
+        x-data="{
+            revealed: false,
+            inputType: 'text',
+            isRevealable: false,
+        }"
+        class="relative w-full grid isolate [&>[data-slot=input-actions]]:col-start-2 [&>[data-slot=input-actions]]:row-start-1 [&>[data-slot=input-actions]]:z-10 [&>[data-slot=input-actions]]:place-self-center [&>[data-slot=control]]:col-start-1 [&>[data-slot=control]]:row-start-1 [&>[data-slot=control]]:col-span-2  [&:has([data-slot=input-actions]):has([data-slot=input-option])>[data-slot=control]]:pr-[1.9rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[3.8rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[5.7rem]"
+        
+        style="--icon-count: 0; --icon-width: 2rem; grid-template-columns: 1fr calc(var(--icon-width) * var(--icon-count));"
+    >
+        <!--[if ENDBLOCK]><![endif]-->
+        <input
+            class="z-10 inline-block border p-2 w-full text-base sm:text-sm text-neutral-800 disabled:text-neutral-500 placeholder-neutral-400 disabled:placeholder-neutral-400/70 dark:text-neutral-300 dark:disabled:text-neutral-400 dark:placeholder-neutral-400 dark:disabled:placeholder-neutral-500 bg-white dark:bg-neutral-900 dark:disabled:bg-neutral-800 disabled:cursor-not-allowed transition-colors duration-200 shadow-none dark:shadow-sm disabled:shadow-none rounded-box focus:ring-2 focus:ring-offset-0 focus:outline-none border-black/10 focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]/20 dark:border-white/15 dark:focus:border-[var(--color-primary)] dark:focus:ring-[var(--color-primary)]/25"
+            name="form.cuit"
+            data-slot="control"
+            wire:model="form.cuit" placeholder="20123456789 o 123456" inputmode="numeric" autocomplete="username"
+            x-ref="input"
+            x-bind:type="isRevealable ? (revealed ? 'text' : 'password') : inputType"
+                    />
+        <div class="flex items-center h-[92%] mr-1" data-slot="input-actions">
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->        </div>
+    </div>
+
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+</div>
+                <div class="min-w-0 w-full [&amp;&gt;[data-slot=label]]:mb-2 text-start [&amp;&gt;[data-slot=label]:has(+[data-slot=description])]:mb-1.5 [&amp;&gt;[data-slot=label]+[data-slot=description]]:mt-0 [&amp;&gt;[data-slot=label]+[data-slot=description]]:mb-2 [&amp;&gt;*:not([data-slot=label])+[data-slot=description]]:mt-2 [&amp;&gt;[data-slot=error]]:mt-1.5  [&amp;:has([data-slot=control][disabled])&gt;[data-slot=label]]:opacity-50" data-slot="field">
+    <div class="text-sm [:where(&amp;)]:text-start font-medium select-none [:where(&amp;)]:text-neutral-800 [:where(&amp;)]:dark:text-white" data-slot="label">
+    <!--[if BLOCK]><![endif]-->        Contraseña
+    <!--[if ENDBLOCK]><![endif]-->    
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
+                    <div class="isolate relative flex items-stretch w-full shadow-xs disabled:shadow-none transition-colors duration-200 rounded-box [&amp;:has([data-slot=input-prefix])_input]:rounded-l-none [&amp;:has([data-slot=input-suffix])_input]:rounded-r-none [&amp;:has([data-slot=input-prefix]):has([data-slot=input-suffix])_input]:rounded-none" wire:model="form.password" autocomplete="current-password">
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <div
+        x-data="{
+            revealed: false,
+            inputType: 'password',
+            isRevealable: true,
+        }"
+        class="relative w-full grid isolate [&>[data-slot=input-actions]]:col-start-2 [&>[data-slot=input-actions]]:row-start-1 [&>[data-slot=input-actions]]:z-10 [&>[data-slot=input-actions]]:place-self-center [&>[data-slot=control]]:col-start-1 [&>[data-slot=control]]:row-start-1 [&>[data-slot=control]]:col-span-2  [&:has([data-slot=input-actions]):has([data-slot=input-option])>[data-slot=control]]:pr-[1.9rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[3.8rem] [&:has([data-slot=input-actions]):has([data-slot=input-option]+[data-slot=input-option]+[data-slot=input-option])>[data-slot=control]]:pr-[5.7rem]"
+        
+        style="--icon-count: 1; --icon-width: 2rem; grid-template-columns: 1fr calc(var(--icon-width) * var(--icon-count));"
+    >
+        <!--[if ENDBLOCK]><![endif]-->
+        <input
+            class="z-10 inline-block border p-2 w-full text-base sm:text-sm text-neutral-800 disabled:text-neutral-500 placeholder-neutral-400 disabled:placeholder-neutral-400/70 dark:text-neutral-300 dark:disabled:text-neutral-400 dark:placeholder-neutral-400 dark:disabled:placeholder-neutral-500 bg-white dark:bg-neutral-900 dark:disabled:bg-neutral-800 disabled:cursor-not-allowed transition-colors duration-200 shadow-none dark:shadow-sm disabled:shadow-none rounded-box focus:ring-2 focus:ring-offset-0 focus:outline-none border-black/10 focus:border-[var(--color-primary)] focus:ring-[var(--color-primary)]/20 dark:border-white/15 dark:focus:border-[var(--color-primary)] dark:focus:ring-[var(--color-primary)]/25"
+            name="form.password"
+            data-slot="control"
+            wire:model="form.password" autocomplete="current-password"
+            x-ref="input"
+            x-bind:type="isRevealable ? (revealed ? 'text' : 'password') : inputType"
+                    />
+        <div class="flex items-center h-[92%] mr-1" data-slot="input-actions">
+            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--> <button
+    x-on:click="revealed = !revealed" x-bind:data-slot-revealed="revealed" x-bind:aria-label="revealed ? 'Hide password' : 'Show password'" x-bind:title="revealed ? 'Hide password' : 'Show password'"
+    data-slot="input-option"
+    type="button"  
+    class="mx-0.5 cursor-pointer [&_[data-slot=icon]]:!text-neutral-500 dark:[&_[data-slot=icon]]:!text-neutral-500 hover:dark:[&_[data-slot=icon]]:!text-neutral-400 [&_[data-slot=icon]]:transition"
+>     
+    <svg data-slot="icon" class="text-current block [[data-slot-revealed]&gt;&amp;]:hidden" aria-hidden="true" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.03555 12.3224C1.96647 12.1151 1.9664 11.8907 2.03536 11.6834C3.42372 7.50972 7.36079 4.5 12.0008 4.5C16.6387 4.5 20.5742 7.50692 21.9643 11.6776C22.0334 11.8849 22.0335 12.1093 21.9645 12.3166C20.5761 16.4903 16.6391 19.5 11.9991 19.5C7.36119 19.5 3.42564 16.4931 2.03555 12.3224Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg data-slot="icon" class="text-current hidden [[data-slot-revealed]&gt;&amp;]:block" aria-hidden="true" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3.97993 8.22257C3.05683 9.31382 2.35242 10.596 1.93436 12.0015C3.22565 16.338 7.24311 19.5 11.9991 19.5C12.9917 19.5 13.9521 19.3623 14.8623 19.1049M6.22763 6.22763C7.88389 5.13558 9.86771 4.5 12 4.5C16.756 4.5 20.7734 7.66205 22.0647 11.9985C21.3528 14.3919 19.8106 16.4277 17.772 17.772M6.22763 6.22763L3 3M6.22763 6.22763L9.87868 9.87868M17.772 17.772L21 21M17.772 17.772L14.1213 14.1213M14.1213 14.1213C14.6642 13.5784 15 12.8284 15 12C15 10.3431 13.6569 9 12 9C11.1716 9 10.4216 9.33579 9.87868 9.87868M14.1213 14.1213L9.87868 9.87868" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button> <!--[if ENDBLOCK]><![endif]-->        </div>
+    </div>
+
+    
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]--></div>
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+</div>
+                <!--[if BLOCK]><![endif]-->        <button type="submit" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;_a]:no-underline [&amp;_a]:decoration-none [&amp;_a:hover]:no-underline rounded-field [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-10 text-base ps-4 pe-4 bg-[var(--color-primary)] hover:bg-[--alpha(var(--color-primary)/50%)] text-[var(--color-primary-fg)] border border-black/10 dark:border-white/10 w-full" data-slot="button" aria-busy="false" aria-disabled="false">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            wire:loading.attr="data-loading"
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-4 animate-spin  size-5 !text-[var(--color-primary-fg)]" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]-->        <span >
+            Iniciar sesión
+        </span>
+    <!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </button>
+<!--[if ENDBLOCK]><![endif]-->
+                <div class="space-y-2 pt-1 text-center">
+                    <div>
+                        <a
+    class="inline font-medium text-base underline-offset-[6px] hover:decoration-current no-underline  text-sm text-[var(--color-primary)] underline hover:opacity-90" href="https://tesi.sanisidro.gob.ar/forgot-password"
+    data-slot="link"
+    >
+    ¿Olvidaste tu contraseña?
+</a>                    </div>
+
+                    <div class="pt-1">
+                        <div class="text-sm text-start inline text-neutral-500 dark:text-neutral-400" data-slot="text">
+    ¿Todavía no tenés cuenta?
+</div>
+
+                        <a
+    class="inline font-medium text-base underline-offset-[6px] hover:decoration-current no-underline  ml-1 text-sm text-[var(--color-primary)] underline hover:opacity-90" href="https://tesi.sanisidro.gob.ar/register"
+    data-slot="link"
+    >
+    Registrate
+</a>                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="pt-4">
+            <div class="mt-4">
+    
+    <div class="mb-5 flex items-center gap-4">
+        <div class="h-px flex-1 bg-black/10 dark:bg-white/10" aria-hidden="true"></div>
+
+        <div class="shrink-0 text-center text-sm text-[var(--color-grey-description)] opacity-80" data-slot="text">
+    O conectate con:
+</div>
+
+        <div class="h-px flex-1 bg-black/10 dark:bg-white/10" aria-hidden="true"></div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <a href="https://tesi.sanisidro.gob.ar/login/afip" class="w-full sm:max-w-[7.25rem] sm:justify-self-center">
+            <!--[if BLOCK]><![endif]-->        <button type="button" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;_a]:no-underline [&amp;_a]:decoration-none [&amp;_a:hover]:no-underline rounded-field [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-12 text-md ps-5 pe-5 border border-[--alpha(var(--color-primary)/50%)] hover:border-[color-mix(in_oklab,_var(--color-primary),_black_20%)] bg-[--alpha(var(--color-primary)/5%)] hover:bg-[--alpha(var(--color-primary)/10%)] text-[var(--color-primary)] [--color-primary:var(--color-slate-800)] [--color-primary-content:var(--color-slate-800)] [--color-primary-fg:var(--color-neutral-50)] dark:[--color-primary:var(--color-white)] dark:[--color-primary-content:var(--color-white)] dark:[--color-primary-fg:var(--color-slate-800)] w-full transition-colors duration-200 border-black/15 bg-white hover:bg-white hover:border-[var(--color-link-positive)] focus-visible:border-[var(--color-link-positive)] focus-visible:ring-2 focus-visible:ring-[--alpha(var(--color-link-positive)/18%)]" data-slot="button" aria-busy="false" aria-disabled="false">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-4 animate-spin  size-5 !text-[var(--color-primary)]" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]-->        <span >
+            <span class="flex w-full items-center justify-center">
+                    <img src="https://tesi.sanisidro.gob.ar/images/brand/logo-arca.png" alt="ARCA"
+                        class="h-6 w-auto max-w-[96px] object-contain">
+                </span>
+        </span>
+    <!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </button>
+<!--[if ENDBLOCK]><![endif]-->        </a>
+
+        <a href="https://tesi.sanisidro.gob.ar/login/miarg" class="w-full sm:max-w-[7.25rem] sm:justify-self-center">
+            <!--[if BLOCK]><![endif]-->        <button type="button" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;_a]:no-underline [&amp;_a]:decoration-none [&amp;_a:hover]:no-underline rounded-field [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-12 text-md ps-5 pe-5 border border-[--alpha(var(--color-primary)/50%)] hover:border-[color-mix(in_oklab,_var(--color-primary),_black_20%)] bg-[--alpha(var(--color-primary)/5%)] hover:bg-[--alpha(var(--color-primary)/10%)] text-[var(--color-primary)] [--color-primary:var(--color-slate-800)] [--color-primary-content:var(--color-slate-800)] [--color-primary-fg:var(--color-neutral-50)] dark:[--color-primary:var(--color-white)] dark:[--color-primary-content:var(--color-white)] dark:[--color-primary-fg:var(--color-slate-800)] w-full transition-colors duration-200 border-black/15 bg-white hover:bg-white hover:border-[var(--color-link-positive)] focus-visible:border-[var(--color-link-positive)] focus-visible:ring-2 focus-visible:ring-[--alpha(var(--color-link-positive)/18%)]" data-slot="button" aria-busy="false" aria-disabled="false">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-4 animate-spin  size-5 !text-[var(--color-primary)]" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]-->        <span >
+            <span class="flex w-full items-center justify-center">
+                    <img src="https://tesi.sanisidro.gob.ar/images/brand/logo-miArgentina.png" alt="miArgentina"
+                        class="h-6 w-auto max-w-[102px] object-contain">
+                </span>
+        </span>
+    <!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </button>
+<!--[if ENDBLOCK]><![endif]-->        </a>
+
+        <a href="https://tesi.sanisidro.gob.ar/login/anses" class="w-full sm:max-w-[7.25rem] sm:justify-self-center">
+            <!--[if BLOCK]><![endif]-->        <button type="button" class="relative inline-flex items-center font-medium justify-center gap-x-2 whitespace-nowrap transition-colors duration-200 disabled:opacity-75 dark:disabled:opacity-75 disabled:cursor-default disabled:pointer-events-none cursor-pointer [&amp;_a]:no-underline [&amp;_a]:decoration-none [&amp;_a:hover]:no-underline rounded-field [&amp;&gt;[data-loading=true]:first-child]:flex [&amp;&gt;[data-loading=true]:first-child~*]:opacity-0 [:where(&amp;)]:h-12 text-md ps-5 pe-5 border border-[--alpha(var(--color-primary)/50%)] hover:border-[color-mix(in_oklab,_var(--color-primary),_black_20%)] bg-[--alpha(var(--color-primary)/5%)] hover:bg-[--alpha(var(--color-primary)/10%)] text-[var(--color-primary)] [--color-primary:var(--color-slate-800)] [--color-primary-content:var(--color-slate-800)] [--color-primary-fg:var(--color-neutral-50)] dark:[--color-primary:var(--color-white)] dark:[--color-primary-content:var(--color-white)] dark:[--color-primary-fg:var(--color-slate-800)] w-full transition-colors duration-200 border-black/15 bg-white hover:bg-white hover:border-[var(--color-link-positive)] focus-visible:border-[var(--color-link-positive)] focus-visible:ring-2 focus-visible:ring-[--alpha(var(--color-link-positive)/18%)]" data-slot="button" aria-busy="false" aria-disabled="false">
+            <div
+            class="absolute inset-0 hidden items-center justify-center "
+            
+            
+        >
+            <svg class="shrink-0 [:where(&amp;)]:size-4 animate-spin  size-5 !text-[var(--color-primary)]" data-slot="loading-indicator" data-flux-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true" data-slot="icon">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+
+        </div> 
+
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]-->        <span >
+            <span class="flex w-full items-center justify-center">
+                    <img src="https://tesi.sanisidro.gob.ar/images/brand/logo-miAnses.png" alt="mi ANSES"
+                        class="h-6 w-auto max-w-[102px] object-contain">
+                </span>
+        </span>
+    <!--[if ENDBLOCK]><![endif]-->
+    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        </button>
+<!--[if ENDBLOCK]><![endif]-->        </a>
+    </div>
+</div>
+        </div>
+
+        
+        <div class="mt-auto pt-6">
+            <div class="flex items-center justify-center gap-2.5">
+                <span class="grid size-8 shrink-0 place-items-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                    <svg aria-hidden="true" class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-52.2,6.84-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg>                </span>
+                <div class="text-left leading-tight">
+                    <p class="text-[12px] text-[var(--color-grey-description)]">
+                        Con tecnología <span class="font-semibold tracking-[0.06em] text-[var(--color-grey-title)]">GDSI</span>
+                    </p>
+                    <p class="whitespace-nowrap text-[11px] text-[var(--color-grey-description)] opacity-70">Gestión Documental San Isidro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <div class="[:where(&amp;)]:p-4 [:where(&amp;)]:rounded-[14px] w-full bg-white dark:bg-neutral-900 border border-black/10 dark:border-white/10 transition-colors duration-200 h-full overflow-hidden rounded-[28px] !p-0 lg:min-h-[540px] xl:min-h-[600px] 2xl:min-h-[660px]">
+    <div x-data="{
+        current: 0,
+        slides: JSON.parse('[\u0022https:\\\/\\\/tesi.sanisidro.gob.ar\\\/images\\\/login\\\/slide-1.jpg\u0022,\u0022https:\\\/\\\/tesi.sanisidro.gob.ar\\\/images\\\/login\\\/slide-2.jpg\u0022,\u0022https:\\\/\\\/tesi.sanisidro.gob.ar\\\/images\\\/login\\\/slide-3.jpg\u0022,\u0022https:\\\/\\\/tesi.sanisidro.gob.ar\\\/images\\\/login\\\/slide-4.jpg\u0022]'),
+        interval: null,
+        start() {
+            this.interval = setInterval(() => {
+                this.current = (this.current + 1) % this.slides.length
+            }, 5000)
+        }
+    }" x-init="start()"
+        class="relative h-[380px] w-full sm:h-[420px] lg:h-full lg:min-h-[540px] xl:min-h-[600px] 2xl:min-h-[660px]">
+        
+        <template x-for="(slide, index) in slides" :key="index">
+            <div class="absolute inset-0 transition-opacity duration-[1800ms] ease-in-out"
+                :class="current === index ? 'opacity-100' : 'opacity-0'">
+                <div class="absolute inset-0 bg-cover bg-center brightness-[.68] will-change-transform animate-[loginKenBurns_18s_ease-in-out_infinite_alternate]"
+                    :style="`
+                        background-image: url('${slide}');
+                        animation-delay: ${index * -4}s;
+                    `">
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent"></div>
+            </div>
+        </template>
+
+        
+        <div class="absolute inset-x-0 bottom-0 z-10 flex items-end p-6 sm:p-8 lg:p-8">
+            <div class="text-white">
+                <div class="text-2xl font-normal leading-tight opacity-95 sm:text-3xl">
+                    Trámites digitales,
+                </div>
+                <div class="text-3xl font-semibold leading-tight sm:text-4xl">
+                    San Isidro cerca.
+                </div>
+            </div>
+        </div>
+
+        
+        <div x-data="{ abierto: false }" x-on:keydown.escape.window="abierto = false"
+            class="gdsi-sello absolute right-4 top-4 z-20 sm:right-6 sm:top-6">
+            <button type="button" x-on:click="abierto = !abierto" x-on:click.outside="abierto = false"
+                :aria-expanded="abierto.toString()" aria-controls="gdsi-sello-detalle"
+                class="group inline-flex items-center gap-2 rounded-full bg-white/15 py-1.5 pl-1.5 pr-4 text-[13px] text-white ring-1 ring-white/35 backdrop-blur-md transition duration-300 hover:bg-white/25 hover:ring-white/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <span class="grid size-7 place-items-center rounded-full bg-white text-[var(--color-primary)] transition-transform duration-300 group-hover:scale-105">
+                    <svg aria-hidden="true" class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-52.2,6.84-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg>                </span>
+                <span class="leading-none">
+                    <span class="opacity-85">Con tecnología</span>
+                    <span class="ml-0.5 font-semibold tracking-[0.08em]">GDSI</span>
+                </span>
+            </button>
+
+            <div id="gdsi-sello-detalle" x-cloak x-show="abierto"
+                x-transition:enter="transition duration-200 ease-out" x-transition:enter-start="scale-95 opacity-0"
+                x-transition:enter-end="scale-100 opacity-100" x-transition:leave="transition duration-150 ease-in"
+                x-transition:leave-start="scale-100 opacity-100" x-transition:leave-end="scale-95 opacity-0"
+                class="absolute right-0 mt-3 w-[19.5rem] origin-top-right overflow-hidden rounded-3xl bg-white/95 text-left shadow-2xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-neutral-900/95 dark:ring-white/10">
+                <div class="px-5 pt-5">
+                    <div class="flex items-center gap-3">
+                        <span class="grid size-10 place-items-center rounded-2xl bg-[var(--color-primary)] text-white shadow-sm">
+                            <svg aria-hidden="true" class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-52.2,6.84-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg>                        </span>
+                        <div>
+                            <p class="text-[15px] font-semibold leading-tight tracking-[0.08em] text-neutral-900 dark:text-white">GDSI</p>
+                            <p class="text-xs leading-tight text-neutral-500 dark:text-neutral-400">Gestión Documental San Isidro</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-base font-semibold leading-snug text-neutral-900 dark:text-white">
+                        La tecnología detrás de tus trámites
+                    </p>
+                </div>
+
+                <ul class="mt-2 space-y-0.5 px-3 pb-3">
+                    <li class="flex items-start gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-neutral-50 dark:hover:bg-white/5">
+                        <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                            <svg aria-hidden="true" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,72V184a8,8,0,0,1-8,8H176V104L136,64H80V40a8,8,0,0,1,8-8h80Z" opacity="0.2"/><path d="M213.66,66.34l-40-40A8,8,0,0,0,168,24H88A16,16,0,0,0,72,40V56H56A16,16,0,0,0,40,72V216a16,16,0,0,0,16,16H168a16,16,0,0,0,16-16V200h16a16,16,0,0,0,16-16V72A8,8,0,0,0,213.66,66.34ZM168,216H56V72h76.69L168,107.31v84.53c0,.06,0,.11,0,.16s0,.1,0,.16V216Zm32-32H184V104a8,8,0,0,0-2.34-5.66l-40-40A8,8,0,0,0,136,56H88V40h76.69L200,75.31Zm-56-32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,152Zm0,32a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h48A8,8,0,0,1,144,184Z"/></svg>                        </span>
+                        <div>
+                            <p class="text-[13px] font-semibold text-neutral-900 dark:text-white">Expediente digital</p>
+                            <p class="text-[13px] leading-snug text-neutral-500 dark:text-neutral-400">Tu trámite queda registrado y ordenado, sin papeles.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-neutral-50 dark:hover:bg-white/5">
+                        <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                            <svg aria-hidden="true" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M67.41,142.56C35.71,129.52,45.41,32.07,78,32,111.82,32.05,92,90.26,67.41,142.56Z" opacity="0.2"/><path d="M232,168H63.86c2.66-5.24,5.33-10.63,8-16.11,14.94,1.65,32.58-8.78,52.66-31.14,5,13.46,14.45,30.93,30.58,31.25,9.09.18,18.11-5.2,27.42-16.37C189.31,143.75,203.3,152,232,152a8,8,0,0,0,0-16c-30.43,0-39.43-10.45-40-16.11a7.67,7.67,0,0,0-5.46-7.75,8.14,8.14,0,0,0-9.25,3.49C165.23,134.17,158,136.06,155.38,136c-8.26-.16-16.66-19.52-19.54-33.42a8,8,0,0,0-14.09-3.37C101.54,124.55,88,133.08,79.57,135.29,88.06,116.42,94.4,99.85,98.46,85.9c6.82-23.44,7.32-39.83,1.51-50.1-3-5.38-9.34-11.8-22.06-11.8C61.85,24,49.18,39.18,43.14,65.65c-3.59,15.71-4.18,33.21-1.62,48s7.87,25.55,15.59,31.94c-3.73,7.72-7.53,15.26-11.23,22.41H24a8,8,0,0,0,0,16H37.41c-11.32,21-20.12,35.64-20.26,35.88a8,8,0,1,0,13.71,8.24c.15-.26,11.27-18.79,24.7-44.12H232a8,8,0,0,0,0-16ZM58.74,69.21C62.72,51.74,70.43,40,77.91,40c5.33,0,7.1,1.86,8.13,3.67,3,5.33,6.52,24.19-21.66,86.39C56.12,118.78,53.31,93,58.74,69.21Z"/></svg>                        </span>
+                        <div>
+                            <p class="text-[13px] font-semibold text-neutral-900 dark:text-white">Firma electrónica</p>
+                            <p class="text-[13px] leading-snug text-neutral-500 dark:text-neutral-400">Con la misma validez que una firma en papel.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-neutral-50 dark:hover:bg-white/5">
+                        <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                            <svg aria-hidden="true" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,200a24,24,0,1,1-24-24A24,24,0,0,1,224,200Z" opacity="0.2"/><path d="M200,168a32.06,32.06,0,0,0-31,24H72a32,32,0,0,1,0-64h96a40,40,0,0,0,0-80H72a8,8,0,0,0,0,16h96a24,24,0,0,1,0,48H72a48,48,0,0,0,0,96h97a32,32,0,1,0,31-40Zm0,48a16,16,0,1,1,16-16A16,16,0,0,1,200,216Z"/></svg>                        </span>
+                        <div>
+                            <p class="text-[13px] font-semibold text-neutral-900 dark:text-white">Seguimiento en línea</p>
+                            <p class="text-[13px] leading-snug text-neutral-500 dark:text-neutral-400">Mirá en qué paso está, cuando quieras.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="absolute bottom-4 right-4 z-10 flex gap-2">
+            <template x-for="(slide, index) in slides" :key="'dot-' + index">
+                <button type="button" class="h-2.5 w-2.5 rounded-full transition-all duration-300"
+                    :class="current === index ? 'bg-white/90 scale-110' : 'bg-white/40 hover:bg-white/60'"
+                    x-on:click="current = index" :aria-label="'Ir al slide ' + (index + 1)"></button>
+            </template>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </main>
+    </div>
+
+                
+        <script  data-navigate-once="true">window.livewireScriptConfig = {"csrf":"NHDK41Wgy6DHpNpRotMiu0WAdc4KoGMauJesK038","uri":"\/livewire\/update","progressBar":"","nonce":""};</script>
+        
+        <script>
+            loadDarkMode()
+        </script>
+
+        <script>
+            /**
+             * BLOQUEO GLOBAL DE SCROLL EN WINDOW
+             * Al ser una app de viewport fijo (layout h-screen), el único que debe
+             * scrollear es [data-slot="main"]. A veces, al colapsar contenido por
+             * Livewire (loading states), el browser intenta 'ayudar' scrolleando
+             * el window, lo que causa un hueco gris abajo.
+             */
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 0 || window.scrollX > 0) {
+                    window.scrollTo(0, 0);
+                }
+            }, { passive: true });
+        </script>
+
+        
+        <script>
+            document.addEventListener('livewire:initialized', () => {
+                Livewire.hook('commit', ({ succeed }) => {
+                    const main = document.querySelector('[data-slot="main"]');
+                    const saved = main ? main.scrollTop : 0;
+                    succeed(() => {
+                        if (saved <= 0) return;
+                        // Reaplicamos la posición durante varios frames para ganarle
+                        // al reflow tardío del morph y al contenido que se asienta
+                        // async (ej. los tributos del plan de pago que cargan
+                        // después). Con un solo requestAnimationFrame, el restore
+                        // corría cuando el contenido todavía no tenía su alto final
+                        // → el scrollTop quedaba desfasado/clampeado y aparecía un
+                        // hueco gris (wizard con listas largas, o subir archivo
+                        // estando scrolleado abajo).
+                        let frames = 0;
+                        const restore = () => {
+                            const el = document.querySelector('[data-slot="main"]');
+                            if (el) el.scrollTop = saved;
+                            // Clavamos el window en 0 para evitar que el body scrollee
+                            // por accidente (causa el 'huevo gris' abajo).
+                            window.scrollTo(0, 0);
+                            if (++frames < 12) requestAnimationFrame(restore);
+                        };
+                        requestAnimationFrame(restore);
+                    });
+                });
+            });
+        </script>
+        <div
+    x-data="{
+        toasts: [],
+        maxToasts: 1,
+        pausedToastIds: new Set(),
+
+       typeConfig: {
+            info: {
+                textColor: 'text-gray-600 dark:text-gray-400', // we're using color-mix for making variants color solid and not transparent
+                background: 'dark:bg-[color-mix(in_oklab,_var(--color-gray-600)_10%,_var(--color-neutral-900)_90%)] bg-[color-mix(in_oklab,_var(--color-gray-500)_20%,_var(--color-white)_80%)]',
+                borderColor: 'border-gray-500/55',
+                ariaLabel: 'Information',
+            },
+            success: {
+                textColor: 'text-green-600 dark:text-green-400',
+                background: 'dark:bg-[color-mix(in_oklab,_var(--color-green-600)_10%,_var(--color-neutral-900)_90%)] bg-[color-mix(in_oklab,_var(--color-green-500)_20%,_var(--color-white)_80%)]',
+                borderColor: 'border-green-500/55',
+                ariaLabel: 'Success',
+            },
+            error: {
+                textColor: 'text-red-600 dark:text-red-400',
+                background: 'dark:bg-[color-mix(in_oklab,_var(--color-red-600)_10%,_var(--color-neutral-900)_90%)] bg-[color-mix(in_oklab,_var(--color-red-500)_25%,_var(--color-white)_75%)]',
+                borderColor: 'border-red-500/55',
+                ariaLabel: 'Error',
+            },
+            warning: {
+                textColor: 'text-yellow-600 dark:text-yellow-400',
+                background: 'dark:bg-[color-mix(in_oklab,_var(--color-yellow-600)_10%,_var(--color-neutral-900)_90%)] bg-[color-mix(in_oklab,_var(--color-yellow-500)_25%,_var(--color-white)_75%)]',
+                borderColor: 'border-yellow-500/55',
+                ariaLabel: 'Warning',
+            },
+        },
+
+        init() {
+            // used for toasts used after redirect..., any backend toast. 
+            if(false){
+                const toast = null;
+                this.addToast(toast);
+            }
+        },
+
+        normalizeToast(details) {
+            if (!details) return null;
+
+            const content = details.content ?? details.mensaje;
+            if (!content) return null;
+
+            return {
+                type: details.type ?? details.tipo ?? 'info',
+                content,
+                duration: details.duration || 4000,
+                showProgress: details.showProgress !== false
+            };
+        },
+
+        addToast(details) {
+            const normalizedToast = this.normalizeToast(details);
+            if (!normalizedToast) return;
+
+            const toast = {
+                id: Date.now() + Math.random(),
+                ...normalizedToast
+            };
+
+            this.toasts.unshift(toast); 
+
+            // Limit number of toasts
+            if (this.toasts.length > this.maxToasts) {
+                this.toasts = this.toasts.slice(0, this.maxToasts);
+            }
+        },
+
+        removeToast(id) {
+            this.toasts = this.toasts.filter(toast => toast.id !== id);
+            this.pausedToastIds.delete(id);
+        },
+
+        pauseFromToast(targetId) {
+            const targetIndex = this.toasts.findIndex(toast => toast.id === targetId);
+            
+            if (targetIndex === -1) return;
+            
+            // Pause the target toast and all toasts above it (index 0 to targetIndex)
+            this.pausedToastIds.clear();
+
+            for (let i = 0; i <= targetIndex; i++) {
+                this.pausedToastIds.add(this.toasts[i].id);
+            }
+        },
+
+        resumeAllToasts() {
+            this.pausedToastIds.clear();
+        },
+
+        isToastPaused(id) {
+            return this.pausedToastIds.has(id);
+        },
+
+        getToastClasses(type) {
+            const config = this.typeConfig[type] || this.typeConfig.info;
+            return `${config.background} ${config.borderColor}`;
+        },
+
+        getIconColor(type) {
+            const config = this.typeConfig[type] || this.typeConfig.info;
+            return config.textColor;
+        },
+
+        getAriaLabel(type) {
+            const config = this.typeConfig[type] || this.typeConfig.info;
+            return config.ariaLabel;
+        }
+    }"
+    x-on:notify.window="addToast($event.detail)"
+    x-on:toast.window="addToast($event.detail)"
+    class="fixed flex w-full max-w-xs gap-4 sm:justify-start z-50 flex-col-reverse bottom-0 right-0 pr-4 pb-4"
+    role="status"
+    aria-live="polite"
+>
+    <template x-for="toast in toasts" :key="toast.id">
+        <div 
+    x-data="{
+        visible: false,
+        progress: 100,
+        startTime: null,
+        animationId: null,
+        totalPausedTime: 0,
+        pauseStartTime: null,
+
+        init() {
+            // Show toast with slight delay for smooth animation
+            this.$nextTick(() => {
+                this.visible = true;
+                this.startTimer();
+            });
+        },
+
+        startTimer() {
+            if (!toast.duration || toast.duration <= 0) return;
+            
+            this.startTime = performance.now();
+            this.updateProgress();
+        },
+
+        updateProgress() {
+            // OK OK I know this is not simple, let me explain to you 
+
+            // This method updates the progress bar also the dismiss logic  for this **specific** toast.
+            // It starts counting down as soon as the toast appears on screen.
+
+            const now = performance.now();  // Get the current high-resolution timestamp.
+            const shouldPauseNow = this.$data.isToastPaused(toast.id); // Check if this toast is currently paused (e.g., hovered).
+
+            // Detect when pause starts: if toast just entered paused state, record the time pause started.
+            if (shouldPauseNow && !this.pauseStartTime) {
+                this.pauseStartTime = now;
+            }
+            // Detect when pause ends: if toast just resumed, add paused duration to totalPausedTime.
+            else if (!shouldPauseNow && this.pauseStartTime) {
+                this.totalPausedTime += now - this.pauseStartTime;
+                this.pauseStartTime = null;
+            }
+
+            // Calculate elapsed time since start, excluding any paused time.
+            let elapsed = now - this.startTime - this.totalPausedTime;
+
+            // If toast is paused, do not update progress, but keep requesting new frames . @todo: find better logic for this case.
+            if (shouldPauseNow) {
+                this.animationId = requestAnimationFrame(() => this.updateProgress());
+                return; 
+            }
+
+            // Calculate progress percentage (from 100% down to 0%), clamp minimum to 0.
+            this.progress = Math.max(0, 100 - (elapsed / toast.duration) * 100);
+
+            // If the toast has been visible longer than its duration, dismiss it.
+            if (elapsed >= toast.duration) {
+                this.dismiss();
+                return; // Stop updating since the toast is being removed.
+            }
+
+            // Request next animation frame to keep the progress bar updating smoothly.
+            this.animationId = requestAnimationFrame(() => this.updateProgress());
+        },
+
+
+        onMouseEnter() {
+            $data.pauseFromToast(toast.id);
+        },
+
+        onMouseLeave() {
+            $data.resumeAllToasts();
+        },
+
+        dismiss() {
+            this.visible = false;
+
+            if (this.animationId) {
+                cancelAnimationFrame(this.animationId);
+            }
+            // Wait for exit animation before removing
+            setTimeout(() => {
+                $data.removeToast(toast.id);
+            }, 200);
+        },
+
+        destroy() {
+            if (this.animationId) {
+                cancelAnimationFrame(this.animationId);
+            }
+        }
+    }"
+    x-show="visible"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform translate-y-2 scale-95"
+    x-transition:enter-end="opacity-100 transform translate-y-0 scale-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 transform translate-y-0 scale-100"
+    x-transition:leave-end="opacity-0 transform translate-y-2 scale-95"
+    x-bind:class="[
+        'pointer-events-auto relative w-full max-w-sm rounded-xl border py-2 pl-4 pr-2 shadow-lg  dark:border-white/15 border-gray-200 overflow-hidden',
+        '[--alpha(var(--color-green-500) / 50%)]',
+        getToastClasses(toast.type)
+    ]"
+    x-on:mouseenter="onMouseEnter()"
+    x-on:mouseleave="onMouseLeave()"
+>
+    <div class="flex items-center">
+        <!-- Icon -->
+        <div class="shrink-0" x-bind:class="getIconColor(toast.type)">
+            <div aria-hidden="true" class="flex items-center justify-center">
+                <template x-if="toast.type === 'info'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                    </svg>
+                </template>
+                <template x-if="toast.type === 'success'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </template>
+                <template x-if="toast.type === 'error'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </template>
+                <template x-if="toast.type === 'warning'">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                    </svg>
+                </template>
+            </div>
+            <span class="sr-only" x-text="getAriaLabel(toast.type)"></span>
+        </div>
+
+        <!-- Content -->
+        <div class="ml-3 flex-1 w-0">
+            <p x-text="toast.content" class="text-sm font-medium leading-5 text-gray-900 dark:text-white break-words"></p>
+        </div>
+
+        <!-- Close Button -->
+        <div 
+            class="ml-4 flex "
+            x-on:click="dismiss()"
+        >
+            <button 
+                type="button" 
+                class="hover:bg-white/5 z-10 p-2 focus:ring-0 rounded-full cursor-pointer text-gray-400 transition-colors focus:outline-none"
+                x-bind:aria-label="`Close ${getAriaLabel(toast.type).toLowerCase()} notification`"
+            >
+                <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <template x-if="toast.showProgress !== false && toast.duration > 0">
+        <div 
+            class="bottom-0 absolute left-0 right-0 overflow-hidden h-full"
+        >
+            <div 
+                class="h-full bg-current/10 transition-all duration-100 ease-linear"
+                x-bind:class="[
+                    getIconColor(toast.type),
+                    $data.isToastPaused(toast.id) ? 'opacity-30' : 'opacity-50',
+                ]"
+                x-bind:style="`width: ${progress}%`"
+            ></div>
+        </div>
+    </template>
+</div>    </template>
+</div>
+    </body>
+
+</html>

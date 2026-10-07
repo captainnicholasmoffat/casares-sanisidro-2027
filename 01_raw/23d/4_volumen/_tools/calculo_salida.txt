@@ -1,0 +1,154 @@
+0. COEFICIENTES
+   IPC dic-2025 10121.3715 / jul-2026 12076.3937 -> coeficiente para precios de oct-2026: 0.8381
+   Dólar $1.447,84; euro: tipo de pase promedio dic-2025 1.1711 USD/EUR (20 días hábiles, API BCRA) -> $1695,6 por euro
+
+1. TOPES EN LA FACHADA SEGÚN CADA NORMA O GUÍA (dB(A); LAeq salvo indicación)
+   1.a IRAM 4062:2016 (Res. 159/96 y 94/2002 PBA; método según UTN-AJEA): LC = 40 + Kz + Ku + Kh; ruido molesto si LE - LC >= 8
+     suburbana con poco tránsito (Kz 0), exterior (jardín/patio, Ku +5): hábil 8-20 y sáb 8-14: LC 50 -> molesto desde 58; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 45 -> molesto desde 53; noche 22-6: LC 40 -> molesto desde 48
+     suburbana con poco tránsito (Kz 0), interior lindero con la calle (Ku 0): hábil 8-20 y sáb 8-14: LC 45 -> molesto desde 53; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 40 -> molesto desde 48; noche 22-6: LC 35 -> molesto desde 43
+     urbana residencial (Kz 5), exterior (jardín/patio, Ku +5): hábil 8-20 y sáb 8-14: LC 55 -> molesto desde 63; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 50 -> molesto desde 58; noche 22-6: LC 45 -> molesto desde 53
+     urbana residencial (Kz 5), interior lindero con la calle (Ku 0): hábil 8-20 y sáb 8-14: LC 50 -> molesto desde 58; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 45 -> molesto desde 53; noche 22-6: LC 40 -> molesto desde 48
+     residencial con rutas principales (Kz 10), exterior (jardín/patio, Ku +5): hábil 8-20 y sáb 8-14: LC 60 -> molesto desde 68; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 55 -> molesto desde 63; noche 22-6: LC 50 -> molesto desde 58
+     residencial con rutas principales (Kz 10), interior lindero con la calle (Ku 0): hábil 8-20 y sáb 8-14: LC 55 -> molesto desde 63; descanso: hábil 20-22, sáb 14-22, dom/feriado 6-22: LC 50 -> molesto desde 58; noche 22-6: LC 45 -> molesto desde 53
+   1.b COU San Isidro, Anexo IV (dBA hábil / feriado / noche; «Observaciones: IRAM 4062»):
+     Cb, Rb (residencial baja): literal 45/40/35; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 53/48/43
+     APP/1, Rm1/4, Rma2/4/5, Rma1, CR1: literal 45/40/35; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 53/48/43
+     APP/2, Cmb1, Cm1, Cm4, Cm5, Cma, Ca1: literal 50/45/40; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 58/53/48
+     CmbB, Cmb3, Cm3, Rmb3, Rm3, Rma3: literal 55/50/45; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 63/58/53
+     Cm2, CE1: literal 60/55/50; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 68/63/58
+     Zonas de AC: literal 55/50/45; si son el LC de IRAM 4062 (lectura [inferencia]: coinciden con Kz 0/5/10 y Ku 0), molesto desde 63/58/53
+     Nota: los valores de Cb/Rb (45/40/35) son exactamente LC = 40 + 0 + 0 + (5/0/-5): la tabla parece ser el «nivel calculado» de IRAM 4062 [inferencia].
+   1.c Ciudad de Buenos Aires, Ley 1540 art. 46 (exterior, LAeq,T; día 07-22 / noche 22-07): Tipo II residencial 65/50; Tipo III 70/60; Tipo V (incluye «espectáculos al aire libre») 80/75
+   1.d Reino Unido, Noise Council 1995 (LAeq 15 min en receptores): 1-3 días/año: 75 estadios urbanos, 65 otros lugares; 4-12 días/año: LA90 + 15
+   1.e Alemania, LAI Freizeitlärm-Richtlinie 2015 (fuera, frente a ventanas): residencial general 55 hábil fuera de descanso / 50 descanso y domingo / 40 noche; residencial puro 50/45/35; mixto 60/55/45; «eventos raros» (máx. 18 días/año por lugar): 70 día / 55 noche, picos 90/65
+   1.f Londres, Lambeth (Brockwell Park 2025): grandes eventos 75 dBA y 90 dBC LCeq 15 min; eventos comunitarios chicos 65 dBA y 75 dBC (o +3 dB sobre el nivel existente)
+   1.g Victoria (Australia), EPA 1826: 65 dB(A) afuera en área sensible, 55 dB(A) adentro, en horario estándar
+   Con un fondo LA90 de 45 dBA [supuesto: calle residencial de día]: «fondo + 15» = 60; «fondo + 10» = 55; «fondo + 5» = 50
+   Con un fondo LA90 de 50 dBA [supuesto: calle residencial de día]: «fondo + 15» = 65; «fondo + 10» = 60; «fondo + 5» = 55
+   Con un fondo LA90 de 55 dBA [supuesto: calle residencial de día]: «fondo + 15» = 70; «fondo + 10» = 65; «fondo + 5» = 60
+
+2. CUÁNTO VOLUMEN HACE FALTA SEGÚN EL PÚBLICO (fuente puntual, 6 dB por duplicación de distancia)
+   Supuestos [supuesto]: 1,5 m² por persona (mezcla de sentados y parados); público en rectángulo de ancho 1,2 x profundidad;
+   primera fila a 4 m de los bafles; mezcla a 4 m + 60% de la profundidad (mín. 8 m); par de bafles (+3 dB); margen de pico de la música en vivo 12 dB sobre el LAeq.
+   50 personas: superficie neta 75 m² (bruta con la regla de 1 persona cada 3 m²: 150 m²); 9,5 m de ancho x 7,9 m de fondo; mezcla a 8,7 m; última fila a 11,9 m
+     mezcla 80 dBA -> primera fila 86,8 | última fila 77,3 | pico necesario por bafle a 1 m: 107,8 dB -> alcanzan: JBL EON ONE Compact (112), JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 85 dBA -> primera fila 91,8 | última fila 82,3 | pico necesario por bafle a 1 m: 112,8 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 88 dBA -> primera fila 94,8 | última fila 85,3 | pico necesario por bafle a 1 m: 115,8 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 90 dBA -> primera fila 96,8 | última fila 87,3 | pico necesario por bafle a 1 m: 117,8 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     con columnas (caída 3 dB por duplicación en campo cercano, cota optimista): mezcla 80 -> primera fila 83,4 (vs 86,8 con bafles)
+   300 personas: superficie neta 450 m² (bruta con la regla de 1 persona cada 3 m²: 900 m²); 23,2 m de ancho x 19,4 m de fondo; mezcla a 15,6 m; última fila a 23,4 m
+     mezcla 80 dBA -> primera fila 91,8 | última fila 76,5 | pico necesario por bafle a 1 m: 112,9 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 85 dBA -> primera fila 96,8 | última fila 81,5 | pico necesario por bafle a 1 m: 117,9 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 88 dBA -> primera fila 99,8 | última fila 84,5 | pico necesario por bafle a 1 m: 120,9 dB -> alcanzan: B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 90 dBA -> primera fila 101,8 | última fila 86,5 | pico necesario por bafle a 1 m: 122,9 dB -> alcanzan: JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     con columnas (caída 3 dB por duplicación en campo cercano, cota optimista): mezcla 85 -> primera fila 90,9 (vs 96,8 con bafles)
+   1000 personas: superficie neta 1.500 m² (bruta con la regla de 1 persona cada 3 m²: 3.000 m²); 42,4 m de ancho x 35,4 m de fondo; mezcla a 25,2 m; última fila a 39,4 m
+     mezcla 80 dBA -> primera fila 96,0 | última fila 76,1 | pico necesario por bafle a 1 m: 117,0 dB -> alcanzan: JBL EON ONE MK2 a batería (119), B-Hype 10 (121), JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 85 dBA -> primera fila 101,0 | última fila 81,1 | pico necesario por bafle a 1 m: 122,0 dB -> alcanzan: JBL EON ONE MK2 con 220 V (123), B-Hype 12 (126)
+     mezcla 88 dBA -> primera fila 104,0 | última fila 84,1 | pico necesario por bafle a 1 m: 125,0 dB -> alcanzan: B-Hype 12 (126)
+     mezcla 90 dBA -> primera fila 106,0 | última fila 86,1 | pico necesario por bafle a 1 m: 127,0 dB -> alcanzan: ninguno de la lista
+     con columnas (caída 3 dB por duplicación en campo cercano, cota optimista): mezcla 88 -> primera fila 96,0 (vs 104,0 con bafles)
+   1000 personas con 2 bafles de retardo a 21,7 m (los principales cubren la mitad delantera; mezcla dentro de esa zona a 15 m):
+     mezcla 85 dBA a 15 m -> primera fila 96,5 dBA (sin retardos y mezcla a 25,2 m: 101,0)
+     mezcla 88 dBA a 15 m -> primera fila 99,5 dBA (sin retardos y mezcla a 25,2 m: 104,0)
+   Topes en el público: OMS 100 LAeq 15 min (nunca superar); Suiza 93 sin obligaciones, 96 con aviso y medición; Bruselas 85 sin condiciones; menores de 13 años (Países Bajos) 91.
+
+3. DISTANCIA MÍNIMA A LA FACHADA PARA CUMPLIR EL TOPE (dBA): d = d_mezcla x 10^((L_mezcla - L_tope + DI)/20)
+   DI = ventaja por directividad hacia la casa [supuesto]: 0 dB si la casa está delante; -5 de costado; -10 si está detrás del escenario (sólo medios y agudos).
+   a) plaza chica, 50 personas: mezcla 80 dBA a 8,7 m, tope 65 en fachada -> delante 49 m | costado 28 m | detrás 16 m
+   a) plaza chica, 50 personas: mezcla 80 dBA a 8,7 m, tope 60 en fachada -> delante 87 m | costado 49 m | detrás 28 m
+   a) plaza chica, 50 personas: mezcla 80 dBA a 8,7 m, tope 58 en fachada -> delante 110 m | costado 62 m | detrás 35 m
+   a) plaza chica, 50 personas: mezcla 80 dBA a 8,7 m, tope 55 en fachada -> delante 155 m | costado 87 m | detrás 49 m
+   a) plaza chica, 50 personas: mezcla 80 dBA a 8,7 m, tope 50 en fachada -> delante 276 m | costado 155 m | detrás 87 m
+   a) plaza chica, 300 personas: mezcla 80 dBA a 15,6 m, tope 65 en fachada -> delante 88 m | costado 49 m | detrás 28 m
+   a) plaza chica, 300 personas: mezcla 80 dBA a 15,6 m, tope 60 en fachada -> delante 156 m | costado 88 m | detrás 49 m
+   a) plaza chica, 300 personas: mezcla 80 dBA a 15,6 m, tope 58 en fachada -> delante 197 m | costado 111 m | detrás 62 m
+   a) plaza chica, 300 personas: mezcla 80 dBA a 15,6 m, tope 55 en fachada -> delante 278 m | costado 156 m | detrás 88 m
+   a) plaza chica, 300 personas: mezcla 80 dBA a 15,6 m, tope 50 en fachada -> delante 494 m | costado 278 m | detrás 156 m
+   b) plaza o parque grande, 300 personas: mezcla 85 dBA a 15,6 m, tope 65 en fachada -> delante 156 m | costado 88 m | detrás 49 m
+   b) plaza o parque grande, 300 personas: mezcla 85 dBA a 15,6 m, tope 60 en fachada -> delante 278 m | costado 156 m | detrás 88 m
+   b) plaza o parque grande, 300 personas: mezcla 85 dBA a 15,6 m, tope 58 en fachada -> delante 350 m | costado 197 m | detrás 111 m
+   b) plaza o parque grande, 300 personas: mezcla 85 dBA a 15,6 m, tope 55 en fachada -> delante 494 m | costado 278 m | detrás 156 m
+   b) plaza o parque grande, 300 personas: mezcla 85 dBA a 15,6 m, tope 50 en fachada -> delante 878 m | costado 494 m | detrás 278 m
+   b) plaza o parque grande, 1000 personas: mezcla 85 dBA a 25,2 m, tope 65 en fachada -> delante 252 m | costado 142 m | detrás 80 m
+   b) plaza o parque grande, 1000 personas: mezcla 85 dBA a 25,2 m, tope 60 en fachada -> delante 448 m | costado 252 m | detrás 142 m
+   b) plaza o parque grande, 1000 personas: mezcla 85 dBA a 25,2 m, tope 58 en fachada -> delante 564 m | costado 317 m | detrás 178 m
+   b) plaza o parque grande, 1000 personas: mezcla 85 dBA a 25,2 m, tope 55 en fachada -> delante 797 m | costado 448 m | detrás 252 m
+   b) plaza o parque grande, 1000 personas: mezcla 85 dBA a 25,2 m, tope 50 en fachada -> delante 1418 m | costado 797 m | detrás 448 m
+   c) costa, 1000 personas: mezcla 88 dBA a 25,2 m, tope 65 en fachada -> delante 356 m | costado 200 m | detrás 113 m
+   c) costa, 1000 personas: mezcla 88 dBA a 25,2 m, tope 60 en fachada -> delante 633 m | costado 356 m | detrás 200 m
+   c) costa, 1000 personas: mezcla 88 dBA a 25,2 m, tope 58 en fachada -> delante 797 m | costado 448 m | detrás 252 m
+   c) costa, 1000 personas: mezcla 88 dBA a 25,2 m, tope 55 en fachada -> delante 1126 m | costado 633 m | detrás 356 m
+   c) costa, 1000 personas: mezcla 88 dBA a 25,2 m, tope 50 en fachada -> delante 2003 m | costado 1126 m | detrás 633 m
+   Con 5 dB extra de atenuación (suelo blando, arboleda, edificios en el medio) las distancias se dividen por 1,8 [cálculo].
+
+   Al revés: tope operativo en la mezcla para que la fachada cumpla, según la distancia real (casa delante / detrás):
+     mezcla a 8,7 m, tope fachada 65: 20 m: 72,2 / 82,2 | 30 m: 75,8 / 85,8 | 40 m: 78,3 / 88,3 | 60 m: 81,8 / 91,8
+     mezcla a 8,7 m, tope fachada 60: 20 m: 67,2 / 77,2 | 30 m: 70,8 / 80,8 | 40 m: 73,3 / 83,3 | 60 m: 76,8 / 86,8
+     mezcla a 8,7 m, tope fachada 55: 20 m: 62,2 / 72,2 | 30 m: 65,8 / 75,8 | 40 m: 68,3 / 78,3 | 60 m: 71,8 / 81,8
+     mezcla a 15,6 m, tope fachada 65: 40 m: 73,2 / 83,2 | 80 m: 79,2 / 89,2 | 120 m: 82,7 / 92,7 | 150 m: 84,7 / 94,7
+     mezcla a 15,6 m, tope fachada 60: 40 m: 68,2 / 78,2 | 80 m: 74,2 / 84,2 | 120 m: 77,7 / 87,7 | 150 m: 79,7 / 89,7
+     mezcla a 15,6 m, tope fachada 55: 40 m: 63,2 / 73,2 | 80 m: 69,2 / 79,2 | 120 m: 72,7 / 82,7 | 150 m: 74,7 / 84,7
+     mezcla a 25,2 m, tope fachada 65: 150 m: 80,5 / 90,5 | 250 m: 84,9 / 94,9 | 400 m: 89,0 / 99,0 | 600 m: 92,5 / 102,5
+     mezcla a 25,2 m, tope fachada 60: 150 m: 75,5 / 85,5 | 250 m: 79,9 / 89,9 | 400 m: 84,0 / 94,0 | 600 m: 87,5 / 97,5
+     mezcla a 25,2 m, tope fachada 55: 150 m: 70,5 / 80,5 | 250 m: 74,9 / 84,9 | 400 m: 79,0 / 89,0 | 600 m: 82,5 / 92,5
+
+4. GRAVES: dB(C) FRENTE A dB(A), CON Y SIN SUBWOOFER, DELANTE Y DETRÁS DEL ESCENARIO
+   con subwoofer, a) plaza chica, 300 personas: mezcla 80 dBA = 88,9 dBC (LC-LA 8,9) a 15.6 m; fachada a 30 m: delante 74,1 dBA / 83,2 dBC (LC-LA 9,1) | detrás 66,0 dBA / 81,7 dBC (LC-LA 15,6)
+   con subwoofer, b) parque grande, 1000 personas: mezcla 85 dBA = 93,9 dBC (LC-LA 8,9) a 25.2 m; fachada a 120 m: delante 70,7 dBA / 80,3 dBC (LC-LA 9,6) | detrás 63,0 dBA / 78,8 dBC (LC-LA 15,8)
+   con subwoofer, c) costa, 1000 personas: mezcla 88 dBA = 96,9 dBC (LC-LA 8,9) a 25.2 m; fachada a 400 m: delante 62,1 dBA / 72,6 dBC (LC-LA 10,5) | detrás 55,1 dBA / 71,2 dBC (LC-LA 16,1)
+   sin subwoofer, a) plaza chica, 300 personas: mezcla 80 dBA = 85,7 dBC (LC-LA 5,7) a 15.6 m; fachada a 30 m: delante 74,1 dBA / 80,0 dBC (LC-LA 5,9) | detrás 65,5 dBA / 76,3 dBC (LC-LA 10,9)
+   sin subwoofer, b) parque grande, 1000 personas: mezcla 85 dBA = 90,7 dBC (LC-LA 5,7) a 25.2 m; fachada a 120 m: delante 70,7 dBA / 76,9 dBC (LC-LA 6,3) | detrás 62,4 dBA / 73,4 dBC (LC-LA 11,0)
+   sin subwoofer, c) costa, 1000 personas: mezcla 88 dBA = 93,7 dBC (LC-LA 5,7) a 25.2 m; fachada a 400 m: delante 62,0 dBA / 69,1 dBC (LC-LA 7,1) | detrás 54,4 dBA / 65,8 dBC (LC-LA 11,3)
+   Lectura: el sub casi no mueve el dBA pero sube el dBC; detrás del escenario el dBA baja mucho más que el dBC.
+
+5. PRECIOS (pesos de dic-2025; vistos el 07/10/2026 en comercios con precio visible, con IVA)
+   dB Technologies B-Hype 10 (121 dB pico, 85°-120° x 85°) (Todo Música): $877.044 -> 0,74 M
+   dB Technologies B-Hype 10 (Hendrix): $1.127.100 -> 0,94 M
+   dB Technologies B-Hype 12 (126 dB) (Todo Música): $1.051.484 -> 0,88 M
+   dB Technologies B-Hype 12 (Hendrix): $1.351.300 -> 1,13 M
+   dB Technologies B-Hype 8 (Hendrix): $903.000 -> 0,76 M
+   dB Technologies SUB 615 (131 dB) (Todo Música): $2.452.215 -> 2,06 M
+   dB Technologies SUB 612 (129 dB) (Todo Música): $1.989.325 -> 1,67 M
+   Par de pies dB SK 25 TT (Todo Música): $325.093 -> 0,27 M
+   Behringer XR18 (Hendrix): $1.450.100 -> 1,22 M
+   JBL EON ONE Compact (112 dB, batería) (Hendrix): $1.997.600 -> 1,67 M
+   JBL EON ONE PRO (discontinuado) (Todo Música): $3.032.808 -> 2,54 M
+   Bose L1 Pro8 (180° horizontal) (Hendrix): $5.343.500 -> 4,48 M
+   dB Technologies ES 503 (columna + sub 12") (Todo Música): $3.952.043 -> 3,31 M
+   dB Technologies ES 1002 (columna + 2 sub 12") (Todo Música): $7.877.193 -> 6,60 M
+   dbx DriveRack VENU360 (limitador con bloqueo y clave) (Todo Música): $2.505.962 -> 2,10 M
+   Decibelímetro Nisuta NSDEC (no es clase IEC) (Frávega): $50.819 -> 0,04 M
+   10EaZy clase 2 (Dinamarca, sin IVA, envío ni impuestos): 1999 € -> $3.389.450 = 3,39 M (dic-2025, sin derechos de importación)
+   10EaZy clase 1: 2499 € -> 4,24 M
+   Sonómetro clase 2 con registro, Trotec (Infoagro, España, sin IVA; no informa LAeq): 317.15 € -> 0,54 M
+   No encontré con precio visible en comercios argentinos: JBL EON ONE MK2, Bose L1 Pro16, sonómetro integrador clase 2, calibrador acústico, micrófono de medición.
+
+6. KITS POR LUGAR (sólo sonido y control de nivel; pesos de dic-2025)
+   Kit de show del 23 ter (sonido): 19,4 M; con tarima y toldos: 29,5 M (dato del c23c, no recalculado)
+   A) Modo plaza = kit de show sin SUB 615 ni B-Hype 12; principales = 2 B-Hype 10; se compran 2 B-Hype 10 más para no perder monitores:
+      2 B-Hype 10 + 1 par de pies: 1,74 M
+   B) Limitador con bloqueo para cada kit de show: dbx VENU360 2,10 M
+   C) Medición permanente en la mezcla con registro (10EaZy clase 2, sin importación): 3,39 M
+   Total por kit de show (A + B + C): 7,23 M; para 2 kits: 14,46 M  (+ notebook Windows para el 10EaZy: no cotizada)
+   Sin 10EaZy (si se usa app validada + micrófono externo, sin precio local): 3,84 M por kit
+   Retardos para 1000 personas: 2 B-Hype 10 + pies = 1,74 M (el VENU360 trae retardo de torre)
+   Alternativas para plaza (2 unidades): JBL EON ONE Compact 3,35 M (no alcanza para 300 a 80 dBA); Bose L1 Pro8 8,96 M (dispersión de 180°)
+   Ahorro por no comprar el SUB 615 en un kit sólo de plazas: 2,06 M; en B-Hype 12: 1,76 M
+
+7. CUÁNTOS SHOWS POR LUGAR: 200 shows por año repartidos
+   en 8 lugares: 25,0 shows por lugar y por año
+   en 12 lugares: 16,7 shows por lugar y por año
+   en 17 lugares: 11,8 shows por lugar y por año
+   en 25 lugares: 8,0 shows por lugar y por año
+   en 40 lugares: 5,0 shows por lugar y por año
+   Para quedar en «hasta 12 por año» (Reino Unido) hacen falta 17 lugares; para «hasta 18» (Alemania), 12 lugares.
+
+8. PROPUESTA [inferencia] Y CHEQUEO: tope del lugar en la mezcla vs. tope que permite la fachada (casa delante / detrás del escenario)
+   a) plaza chica junto a casas: tope del lugar 80 dBA en la mezcla (8.7 m), fachada 60 dBA -> tope operativo 20 m: 67,2 / 77,2 | 30 m: 70,8 / 80,0 | 40 m: 73,3 / 80,0
+   a) plaza chica, 300 personas: tope del lugar 80 dBA en la mezcla (15.6 m), fachada 60 dBA -> tope operativo 30 m: 65,7 / 75,7 | 40 m: 68,2 / 78,2 | 60 m: 71,7 / 80,0
+   b) plaza o parque grande: tope del lugar 85 dBA en la mezcla (15.6 m), fachada 60 dBA -> tope operativo 80 m: 74,2 / 84,2 | 120 m: 77,7 / 85,0 | 150 m: 79,7 / 85,0
+   b) idem, lugar con hasta 12 shows/año: tope del lugar 85 dBA en la mezcla (15.6 m), fachada 65 dBA -> tope operativo 80 m: 79,2 / 85,0 | 120 m: 82,7 / 85,0 | 150 m: 84,7 / 85,0
+   c) costa lejos de casas: tope del lugar 88 dBA en la mezcla (25.2 m), fachada 60 dBA -> tope operativo 250 m: 79,9 / 88,0 | 400 m: 84,0 / 88,0 | 600 m: 87,5 / 88,0
+   c) idem, lugar con hasta 12 shows/año: tope del lugar 88 dBA en la mezcla (25.2 m), fachada 65 dBA -> tope operativo 250 m: 84,9 / 88,0 | 400 m: 88,0 / 88,0 | 600 m: 88,0 / 88,0
+   (el tope operativo es el menor entre el del lugar y el que deja la fachada; con la casa detrás se suma la ventaja de 10 dB supuesta)

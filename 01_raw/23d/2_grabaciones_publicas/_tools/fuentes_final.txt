@@ -1,0 +1,29 @@
+LEÍDO Y NO GUARDADO (sólo resultados de búsqueda o páginas leídas con WebFetch)
+- Resultados de búsqueda web (13 búsquedas) usados sólo para encontrar URL; ninguna cifra sale de un resumen de búsqueda sin la fuente guardada, salvo lo marcado [probable].
+- https://abogados.com.ar/resolucion-de-aaip-actualiza-carteles-obligatorios-para-espacios-videovigilados/34247 (sólo el título en la búsqueda: Res. AAIP 38/2024 cambia el cartel; la norma ya está en la Disposición 10/2015 copiada).
+- https://cdn.www.gob.pe/... (Perú, opinión consultiva 011-2023-JUS/DGTAIPD sobre acceso a imágenes de videovigilancia): sólo título en la búsqueda; no se bajó.
+- https://www.diarioconstitucional.cl/2021/06/11/carabineros-solicita-... (Chile, Consejo para la Transparencia y videos de cámaras corporales de Carabineros): sólo título.
+- Herramientas instaladas para medir (no son fuentes): deface 1.5.0 y onnxruntime 1.30.0 desde pypi.org, en _tools/venv, borrado al terminar para ahorrar espacio (ver _tools/pip_install.log). Se borraron también las salidas a 1080p, 540p y 360p y la recodificación de prueba; quedan la salida a 720p, el video de prueba y dos cuadros.
+
+DIERON ERROR (no hay archivo guardado)
+- https://raw.githubusercontent.com/ORB-HD/deface/main/README.md y /LICENSE -> 404 (la rama es master; se bajó de ahí).
+- gh api repos/ORB-HD/deface -> 403 (el repositorio no está habilitado en esta sesión; no se pidió acceso).
+- https://www.gob.gba.gob.ar/legislacion/constitucion/cpcompleta.htm -> 404.
+- OCR de pba_constitucion_provincial_1994.pdf con tesseract 5.3.4 -> texto vacío; se transcribió a mano la página 2 desde la imagen.
+- https://www.diarioconstitucional.cl/2025/08/10/contraloria-respalda-difusion-de-imagenes-de-televigilancia-para-informar-sobre-seguridad-municipal/ -> 403 (Chile, Contraloría y difusión municipal de imágenes: NO LEÍDO).
+- https://www.seattle.gov/police-manual/title-16---patrol-operations/16090---in-car-and-body-worn-video -> 404 (el manual 16.090 se mudó; se usó la página del programa y la copia de BJA).
+- https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=7923.625 -> 403 (curl y WebFetch). Ley de California AB 748 / Código de Gobierno 7923.625: NO LEÍDA.
+- https://law.justia.com/codes/california/code-gov/.../section-7923-625/ -> 403.
+- https://www.lapdonline.org/office-of-the-chief-of-police/constitutional-policing/critical-incident-videos/ -> 404.
+- https://fountain.colorado.gov/sites/fountain/files/documents/Body%20Worn%20Camera%20Request.pdf -> 404 (el dato «3 horas por hora» de Fountain sólo aparece en la búsqueda: no se usa).
+- https://docs-preview.legis.wisconsin.gov/... -> 503 (se bajó de docs.legis.wisconsin.gov).
+- https://www.sanmartin.gov.ar/ojos-en-alerta/ -> 200 pero sólo «Loading...» (carga con JavaScript); borrado.
+- https://www.ojosenalerta.org/ -> conexión rechazada por el proxy (connect_rejected).
+- https://biblioteca.boletinoficialsalta.gob.ar/anexodigital/2026/22153.pdf -> 503 (curl y WebFetch). Reglas de filmación de audiencias en Salta: NO LEÍDAS.
+- https://jusrionegro.gov.ar/.../ACORDADA4021.pdf -> 404.
+- https://www.college.police.uk/app/media-and-communications/images-and-footage -> 403 (curl y WebFetch); se usó la copia de production.copweb.aws.college.police.uk.
+- https://bja.ojp.gov/.../ukbwvguidance2014.pdf -> 404 (guía de 2014 del College of Policing: NO LEÍDA).
+- https://www.ashfield.gov.uk/media/0crlqe2r/body-worn-video-policy.docx -> 404.
+- https://lpderecho.pe/caracteristicas-camaras-video-corporales-activas-emplearse-serenazgo-resolucion-ministerial-0791-2026-in/ -> 403 (Perú, RM 0791-2026-IN: NO LEÍDA).
+- https://cloud.google.com/compute/gpus-pricing -> 200 pero los precios cargan con JavaScript; borrado (se usó Azure como referencia de alquiler de GPU).
+- https://www.argentina.gob.ar/normativa/buscar?... (búsqueda del Decreto 206/2017) -> página sin resultados útiles; se encontró el ID 273023 por búsqueda web.
