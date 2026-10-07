@@ -3074,3 +3074,51 @@ Páginas de la versión de pantalla (51 págs.).
 - A4, con el mismo método aprobado: 139 hojas; cada página de pantalla entera en sus hojas, palabra por palabra; índice
   con los números de hoja, 64 entradas, ninguna fuera de lugar; 42 cuadros y gráficos seguidos; ninguna marca [23 …];
   la raya del pie igual en las 138 hojas; ninguna fuente Liberation ni DejaVu. Cinco tests OK (data/ restaurado).
+
+## DISPATCH 9 · LAS 13 IMÁGENES NUEVAS Y EL TEXTO ESCONDIDO DE LA A4 (07/10) · APLICADO
+Páginas de la versión de pantalla (52 págs.). El Dispatch 8 no llegó; el punto 2 de este lo repite.
+1. Imágenes: las 13 aprobadas por Nick, bajadas de los enlaces; a la 8 (pasantía) y a la 12 (show bajo techo) se les
+   recortó abajo lo justo para sacar el sello. Mismo tamaño, tratamiento y estilo de epígrafe que las fotos que ya
+   estaban (el ancho de la caja, 232 pt de alto, epígrafe corto que termina en «Ilustración.»), sin nombres:
+   - 4.11 (pág. 19), al principio de «Qué hace»: «Una vecina le pregunta con la voz a la inteligencia artificial del
+     Municipio».
+   - 5.3 (pág. 23), antes de «Enseñar IA sin acceso a IA…»: «La tecnicatura en inteligencia artificial»; (pág. 24),
+     antes de «Un puente con los grandes laboratorios…»: «La pasantía en el Municipio».
+   - 5.5, la costa (pág. 26), antes de «Se intentó licitar cuatro veces…»: «Una barrera flotante en la boca de un
+     desagüe»; (pág. 28), antes de «La Escuela Náutica, en todos los parques de la costa»: «La costa en la semana:
+     gimnasia, vela, kayak y foodtrucks».
+   - 5.5, espectáculos (pág. 30): al principio, «Una banda emergente del partido, en una plaza»; entre el «Hoy» y lo que
+     proponemos, «Un show en la costa, al atardecer»; al cerrar, «Un show bajo techo, en un club, en invierno».
+   - 5.6 (pág. 32), antes de «La inteligencia artificial en salud ya fue anunciada…»: «El turno, sacado desde el
+     teléfono, en un hospital municipal» (sin «sin fila»).
+   - 5.7 (pág. 33), antes de «3. Estafas virtuales…»: «La cámara avisa y el patrullero llega».
+   - 5.8 (pág. 34), antes de «Un profesor digital particular para cada chico»: «Apoyo escolar en Boulogne, con un tutor
+     y el profesor digital»; antes de «Y lo que hay que arreglar del dinero»: «El profesor digital, en una escuela
+     pública».
+   - 5.9 (pág. 35), antes de «Si a un comerciante le piden una coima…»: «Una inspección grabada: graban el inspector y
+     el comerciante».
+   - Encuadre: en la vecina, la inspección y el club se corrió el recorte para que se vean la cara y el escenario. En la
+     franja de 232 pt no entran la cámara del patrullero ni la almeja de la barrera: los epígrafes dicen la propuesta.
+   - Para que todo entre sin pasar de 2.700 pt, la obra en parques y costa («Cemento o naturaleza») empieza en página
+     nueva (pág. 31) y el documento pasa de 51 a 52 páginas. Ninguna sección con dos imágenes seguidas; ninguna página
+     nueva con un tercio vacío. Entraron las 13.
+2. A4 sin texto escondido: cada hoja guardaba entera la página de pantalla de la que sale, y lo que no se veía quedaba
+   tapado por el recorte pero se leía. Ahora cada recorte sale de una copia de la página a la que se le borró el texto
+   de afuera del recorte; los dibujos y las imágenes, como estaban (doc/corte_a4.py).
+   - Leyendo todo el texto que guarda cada hoja, se vea o no, cada página de pantalla está entera en sus hojas, palabra
+     por palabra, sin ninguna de más (con el método de antes sobraban palabras en las 51 páginas).
+   - Palabras, con un lector común de PDF: A4, 87.013 (antes 678.524); pantalla, 82.306. La diferencia es sólo el
+     encabezado y el pie de página, que se repiten en cada una de las 145 hojas, los números de hoja y los encabezados
+     de los cuadros partidos, que se ven en dos hojas.
+   - «El domicilio de los adjudicatarios» cae sólo en la hoja 137 (antes, en la 131, la 132 y la 133). De los 5.572
+     renglones de la pantalla, cada uno cae en una sola hoja, salvo el encabezado y el pie de página, dos encabezados de
+     cuadros partidos y una línea del índice que en la A4 corta en otra palabra.
+   - Píxel por píxel, las 145 hojas son iguales a las armadas con el método de antes, salvo una fila de un píxel arriba
+     de las hojas 81 y 103: ahí asomaban las puntitas de las letras del último renglón de la hoja anterior (donde se
+     parten el recuadro de espectáculos y el de la inteligencia artificial del Municipio); ahora no.
+3. A4 armada de nuevo con el mismo método aprobado: 145 hojas; índice con los números de hoja, 64 entradas, ninguna
+   fuera de lugar; 42 cuadros y gráficos seguidos; ninguna marca [23 …]; ninguna fuente Liberation ni DejaVu; ningún
+   hueco nuevo en medio de una página. Excel sin cambios (ninguna cifra cambió): 13.454 fórmulas, 0 errores.
+- Controles de pantalla: 52 páginas de hasta 2.676 pt; índice, 65 entradas, ninguna fuera de lugar; 42 cuadros y
+  gráficos seguidos; ninguna fuente Liberation ni DejaVu; sin marcas [23 …] y sin empresas ni personas nuevas. Cinco
+  tests OK (data/ restaurado).

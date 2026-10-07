@@ -45,9 +45,10 @@ def exhead(kind, title, sub=None, key=None):
     return (f'<div class="ex"><div class="exlabel">{lbl}&nbsp;{k}</div>'
             f'<div class="extitle">{title}</div>{s}</div>')
 
-def fig(img, cap):
+def fig(img, cap, pos=None):
     if "." not in img: img += ".jpg"
-    return f'<figure><img src="asset:{img}" alt=""><figcaption>{cap}</figcaption></figure>'
+    st = f' style="object-position:center {pos}"' if pos else ""
+    return f'<figure><img src="asset:{img}" alt=""{st}><figcaption>{cap}</figcaption></figure>'
 
 def duo(a, b, cap):
     a = a if "." in a else a+".jpg"

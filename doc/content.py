@@ -58,6 +58,8 @@ C5B, C5B_R = split_at(C5B, '<h3>El ruido es la contaminaci&oacute;n que nadie mi
 C5B_A2, C5B_A3 = split_at(C5B_A2, '<h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>', "cap5ba3", "")
 # los espectaculos al aire libre (dispatch 3, parte B) abren pagina, con la obra en parques y costa
 C5B_A3, C5B_A4 = split_at(C5B_A3, '<h3>Espect&aacute;culos al aire libre, en la semana</h3>', "cap5ba4", "")
+# (dispatch 9) con sus tres fotos, los espectaculos van solos; la obra en parques y costa abre la pagina siguiente
+C5B_A4, C5B_A5 = split_at(C5B_A4, '<h3>Cemento o naturaleza: la obra en parques y costa</h3>', "cap5ba5", "")
 C5B_B, C5B_C = split_at(C5B_B_SRC, '<h2><span class="n">5.7</span>', "cap5bc",
                         H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5B2, C5B3 = split_at(C5B2_SRC, '<h2><span class="n">5.13</span>', "cap5b3",
@@ -99,7 +101,7 @@ ORD_C, ORD_D = split_at(ORD_C, '<h2>XI &middot; Ordenanza de la costa', "ordenan
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
-            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2]
+            C5A, C5A2, C5A3, C5A4, C5B, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

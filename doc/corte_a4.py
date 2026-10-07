@@ -11,6 +11,9 @@ fila del encabezado; un recuadro, entre sus puntos; una lista, entre sus items.
 Cada hoja lleva el encabezado y el pie de la pagina de pantalla; el pie dice el numero de hoja de la A4. El
 indice es el mismo, con los numeros de hoja de la A4.
 
+Cada hoja guarda solo el texto que se ve en ella (dispatch 9): cada recorte sale de una copia de la pagina de
+pantalla a la que se le borro el texto de afuera del recorte, y se comprueba que lo que se ve no cambia.
+
 Uso:  python3 doc/corte_a4.py              (la A4 entera, a salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf)
       python3 doc/corte_a4.py --muestras   (cuatro hojas de muestra, al lado de la version de pantalla)
 Lee salida/PROGRAMA_SAN_ISIDRO_2027.pdf y out/sNN.html, que deja doc/build.py: correr antes build.py."""
@@ -266,6 +269,69 @@ def escribir(pg, x_der, base, texto, tam, espaciado):
     tw.write_text(pg)
 
 
+# ---------------------------------------------------------------------------------------------- solo lo visible
+# show_pdf_page pone en la hoja la pagina de pantalla entera y la recorta: lo de afuera del recorte no se ve, pero su
+# texto queda guardado en la hoja y lo leen los buscadores y los programas que sacan el texto de un PDF (dispatch 9).
+# Por eso cada recorte sale de una copia de la pagina a la que se le borro, con redaccion, el texto de afuera del
+# recorte; los dibujos y las imagenes quedan como estan. Lo que se ve no cambia: cada copia se compara con la pagina
+# original adentro del recorte, letra por letra y pixel por pixel.
+TODO_EL_TEXTO = fitz.TEXT_PRESERVE_LIGATURES | fitz.TEXT_PRESERVE_WHITESPACE   # todo el texto, aun fuera de la hoja
+_COPIAS, _LETRAS = {}, {}
+CONTROL_COPIAS = {"copias": 0, "problemas": []}
+
+
+def _letras(pg):
+    """Las letras de una pagina, con su lugar y su centro."""
+    out = []
+    for b in pg.get_text("rawdict", flags=TODO_EL_TEXTO)["blocks"]:
+        for l in b.get("lines", []):
+            for s in l["spans"]:
+                for c in s["chars"]:
+                    if c["c"].strip():
+                        x0, y0, x1, y1 = c["bbox"]
+                        out.append(((c["c"], round(c["origin"][0], 1), round(c["origin"][1], 1)),
+                                    (x0 + x1) / 2, (y0 + y1) / 2))
+    return out
+
+
+def _pixeles(pg, clip):
+    """Los pixeles de adentro del recorte, a 144 dpi, sin la fila y la columna del borde (que caen a medias afuera)."""
+    adentro = fitz.Rect(clip.x0 + 0.5, clip.y0 + 0.5, clip.x1 - 0.5, clip.y1 - 0.5)
+    return pg.get_pixmap(matrix=fitz.Matrix(2, 2), clip=adentro, alpha=False).samples
+
+
+def visible(src, pno, clip):
+    """La pagina pno de src con solo el texto que se ve en clip, como (documento, numero de pagina) para show_pdf_page."""
+    if id(src) not in _COPIAS:
+        _COPIAS[id(src)] = (fitz.open("pdf", src.tobytes()), {})   # las copias comparten imagenes y letras
+    doc, hechas = _COPIAS[id(src)]
+    clave = (pno, tuple(round(v, 3) for v in clip))
+    if clave not in hechas:
+        doc.fullcopy_page(pno)
+        k = len(doc) - 1
+        pg = doc[k]
+        w, h = pg.rect.width, pg.rect.height
+        for r in (fitz.Rect(0, 0, w, clip.y0), fitz.Rect(0, clip.y1, w, h),
+                  fitz.Rect(0, clip.y0, clip.x0, clip.y1), fitz.Rect(clip.x1, clip.y0, w, clip.y1)):
+            if r.width > 0.01 and r.height > 0.01:
+                pg.add_redact_annot(r, fill=False)
+        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
+                            text=fitz.PDF_REDACT_TEXT_REMOVE)
+        # el control: la copia tiene justo las letras que se ven en el recorte, y adentro del recorte se ve igual
+        if (id(src), pno) not in _LETRAS:
+            _LETRAS[(id(src), pno)] = _letras(src[pno])
+        se_ven = collections.Counter(c for c, x, y in _LETRAS[(id(src), pno)] if clip.x0 <= x <= clip.x1
+                                     and clip.y0 <= y <= clip.y1)
+        quedan = collections.Counter(c for c, _, _ in _letras(pg))
+        igual = _pixeles(src[pno], clip) == _pixeles(pg, clip)
+        CONTROL_COPIAS["copias"] += 1
+        if se_ven != quedan or not igual:
+            CONTROL_COPIAS["problemas"].append((pno + 1, tuple(round(v, 1) for v in clip), sum((se_ven - quedan).values()),
+                                                sum((quedan - se_ven).values()), igual))
+        hechas[clave] = k
+    return doc, hechas[clave]
+
+
 def componer(dst, src, pno, m, hoja, n_hoja, total):
     """Una hoja A4: fondo, encabezado, los tramos de la pagina de pantalla y el pie con el numero de hoja."""
     pg = dst.new_page(width=A4_W, height=A4_H)
@@ -276,14 +342,15 @@ def componer(dst, src, pno, m, hoja, n_hoja, total):
     y = 0.0
     if not hoja["primera"]:
         cab = next(b for b in m["bloques"] if b["cls"] == "runhead")
-        pg.show_pdf_page(fitz.Rect(0, 0, A4_W, (cab["bottom"] + 2) * E), src, pno,
-                         clip=fitz.Rect(0, 0, 660, cab["bottom"] + 2))
+        cl = fitz.Rect(0, 0, 660, cab["bottom"] + 2)
+        pg.show_pdf_page(fitz.Rect(0, 0, A4_W, cl.y1 * E), *visible(src, pno, cl), clip=cl)
         y = ARRIBA_CONT
     for (a, z, pa, pz, _) in hoja["tramos"]:
         a0 = max(0.0, a - pa)
         z1 = min(z + pz, tope)
         y0 = y - (a - a0)
-        pg.show_pdf_page(fitz.Rect(0, y0 * E, A4_W, (y0 + z1 - a0) * E), src, pno, clip=fitz.Rect(0, a0, 660, z1))
+        cl = fitz.Rect(0, a0, 660, z1)
+        pg.show_pdf_page(fitz.Rect(0, y0 * E, A4_W, (y0 + z1 - a0) * E), *visible(src, pno, cl), clip=cl)
         y += z - a
     # el pie: la raya y el titulo, tal cual; el numero, el de la hoja
     _, x_num, base = pie_original(src[pno], m)
@@ -297,9 +364,10 @@ def componer(dst, src, pno, m, hoja, n_hoja, total):
         izq = fitz.Rect(0, r.y1, x_num - 2, alto)
     else:
         raya = fitz.Rect(0, pie["top"] + 0.1, 660, pie["top"] + 0.85)
-        pg.show_pdf_page(fitz.Rect(0, (raya.y0 + dy) * E, A4_W, (raya.y1 + dy) * E), src, pno, clip=raya)
+        pg.show_pdf_page(fitz.Rect(0, (raya.y0 + dy) * E, A4_W, (raya.y1 + dy) * E), *visible(src, pno, raya), clip=raya)
         izq = fitz.Rect(0, raya.y1, x_num - 2, alto)
-    pg.show_pdf_page(fitz.Rect(izq.x0 * E, (izq.y0 + dy) * E, izq.x1 * E, (izq.y1 + dy) * E), src, pno, clip=izq)
+    pg.show_pdf_page(fitz.Rect(izq.x0 * E, (izq.y0 + dy) * E, izq.x1 * E, (izq.y1 + dy) * E), *visible(src, pno, izq),
+                     clip=izq)
     escribir(pg, (660 - 45) * E, (base + dy) * E, f"Página {n_hoja} de {total}", 6.4 * E, 0.25 * E)
     return pg
 
@@ -410,12 +478,16 @@ def numeros_indice(med, por_pagina):
     return out
 
 
-def comparar(fuentes, dst, plan):
-    """Hoja por hoja contra la version de pantalla: las palabras de cada pagina de pantalla tienen que estar,
-    todas y una sola vez, en sus hojas de la A4 (sin contar el encabezado y el pie de pagina, y descontando el
-    encabezado repetido de los cuadros partidos)."""
-    def palabras(pg, clip):
-        return collections.Counter(w[4] for w in pg.get_text("words", clip=clip))
+def comparar(fuentes, dst, plan, total):
+    """Hoja por hoja contra la version de pantalla, con todo el texto que guarda cada hoja, se vea o no (como lo lee
+    cualquier programa que saca el texto de un PDF): las palabras de cada pagina de pantalla tienen que estar, todas y
+    una sola vez, en sus hojas de la A4. De cada hoja se descuentan el encabezado y el pie de pagina, su numero y el
+    encabezado repetido de los cuadros partidos; si una hoja guardara texto escondido, sobraria."""
+    def palabras(pg, zona=None):
+        """Las palabras de una pagina (todas, se vean o no), o las que tienen el centro adentro de zona."""
+        return collections.Counter(w[4] for w in pg.get_text("words", flags=TODO_EL_TEXTO)
+                                   if zona is None or (zona.x0 <= (w[0] + w[2]) / 2 <= zona.x1
+                                                       and zona.y0 <= (w[1] + w[3]) / 2 <= zona.y1))
     malas = []
     por_pag = collections.defaultdict(list)
     for (pno, h, n) in plan:
@@ -424,12 +496,14 @@ def comparar(fuentes, dst, plan):
         sp, m = fuentes[pno]
         cab = next(b for b in m["bloques"] if b["cls"] == "runhead")
         pie = next(b for b in m["bloques"] if b["cls"] == "runfoot")
-        esperado = palabras(sp, fitz.Rect(0, cab["bottom"] + 1, 660, pie["top"] - 0.5))
-        visto = collections.Counter()
         alto = max(m["alto"], 841.89)
+        _, x_num, _ = pie_original(sp, m)
+        cabeza = palabras(sp, fitz.Rect(0, 0, 660, cab["bottom"] + 1))
+        pie_izq = palabras(sp, fitz.Rect(0, pie["top"], x_num - 2, alto))
+        esperado = palabras(sp, fitz.Rect(0, cab["bottom"] + 1, 660, pie["top"]))
+        visto = collections.Counter()
         for h, n in hs:
-            hp = dst[n - 1]
-            ws = palabras(hp, fitz.Rect(0, (cab["bottom"] + 1) * ESC, A4_W, (HOJA - (alto - pie["top"]) - 0.5) * ESC))
+            ws = palabras(dst[n - 1]) - cabeza - pie_izq - collections.Counter(f"Página {n} de {total}".split())
             for (a, z, _, _, rep) in h["tramos"]:
                 if rep:
                     ws -= palabras(sp, fitz.Rect(0, a, 660, z))
@@ -467,6 +541,10 @@ def armar():
     dst.save(str(SALIDA), garbage=3, deflate=True)
     dst = fitz.open(str(SALIDA))
     print(f"-> {SALIDA} | {len(dst)} hojas | {SALIDA.stat().st_size / 1e6:.1f} MB")
+    print(f"  recortes con solo el texto que se ve: {CONTROL_COPIAS['copias']}; con diferencias: "
+          f"{len(CONTROL_COPIAS['problemas'])}")
+    for p in CONTROL_COPIAS["problemas"]:
+        print("     !! pag. %d, recorte %s: faltan %d letras, sobran %d, se ve igual: %s" % p)
     fuentes = {pno: (src[pno], med[pno - 1]) for pno in range(2, len(src))}
     fuentes[1] = (ind_doc[0], ind_m)
     return dst, plan_final, fuentes, nums, total
@@ -520,11 +598,12 @@ if __name__ == "__main__":
         muestras([int(x) for x in sys.argv[sys.argv.index("--muestras") + 1:]] or [78, 26, 57])
         sys.exit(0)
     dst, plan, fuentes, nums, total = armar()
-    malas = comparar(fuentes, dst, plan)
+    malas = comparar(fuentes, dst, plan, total)
     if malas:
         print("  !! paginas cuyas palabras no coinciden con las de sus hojas A4:")
         for p in malas:
             print("     pag. %d: faltan %d, sobran %d · %s · %s" % p)
     else:
-        print("  OK: cada pagina de pantalla esta entera en sus hojas A4, palabra por palabra")
+        print("  OK: cada pagina de pantalla esta entera en sus hojas A4, palabra por palabra, y ninguna hoja guarda "
+              "texto escondido")
     print("  indice A4:", ", ".join(map(str, nums)))

@@ -682,6 +682,7 @@ Mart&iacute;nez.</span></p>
 <span class="sg">Lo que hace que la gente la use los otros once meses es el turno, el trabajo y el tr&aacute;mite.</span></p>
 </div>
 
+""" + fig("f_voz", "Una vecina le pregunta con la voz a la inteligencia artificial del Municipio. Ilustraci&oacute;n.", "30%") + """
 <h3>Qu&eacute; hace</h3>
 <div class="cols">
 <p>En el centro, <b>la inteligencia artificial del Municipio</b>, que lee todo lo que registra el Municipio y contesta en
@@ -1082,6 +1083,7 @@ class="sg">los nuestros entran como juniors, y la pasant&iacute;a achica la dist
 </table>
 <p class="cap"><b>Fuente:</b> LinkedIn, &laquo;Jobs on the Rise 2026&raquo;, 7 de enero de 2026: los 25 puestos
 cuyas contrataciones m&aacute;s crecieron en Estados Unidos entre 2023 y julio de 2025.</p>
+""" + fig("f_tecnicatura", "La tecnicatura en inteligencia artificial. Ilustraci&oacute;n.") + """
 <h3>Ense&ntilde;ar IA sin acceso a IA es ense&ntilde;ar oficios sin herramientas</h3>
 <div class="cols">
 <p><b>Proponemos que el Municipio d&eacute; acceso gratuito a inteligencia artificial de nivel profesional</b> &mdash;la misma
@@ -1171,6 +1173,7 @@ como hoy</b>; los juniors la toman cuando egresan.</p>
 <p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta &mdash;en ambiente, dos, porque 593 de sus 966 cargos son de barrido&mdash;; y uno de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
 horas, cada uno con un junior. <span class="tag m">Estimado</span></p>
 
+""" + fig("f_pasantia", "La pasant&iacute;a en el Municipio. Ilustraci&oacute;n.") + """
 <h3>Un puente con los grandes laboratorios de inteligencia artificial</h3>
 <div class="cols">
 <p><b>Hoy casi ning&uacute;n laboratorio tiene programas para quien vive en la Argentina.</b> Casi todos piden estar cursando
@@ -1433,6 +1436,7 @@ desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas 
 </div>
 
 
+""" + fig("f_barrera", "Una barrera flotante en la boca de un desag&uuml;e. Ilustraci&oacute;n.") + """
 <h3>Se intent&oacute; licitar cuatro veces, las cuatro fracasaron, y el contrato de seis meses va por el
 a&ntilde;o diecisiete</h3>
 <div class="cols">
@@ -1732,6 +1736,7 @@ Barisidro.</span></p>
 estacionar, cu&aacute;ndo llega el tren, qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del
 &uacute;ltimo dato.</p>
 </div>
+""" + fig("f_costa_semana", "La costa en la semana: gimnasia, vela, kayak y foodtrucks. Ilustraci&oacute;n.") + """
 <h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>
 <div class="cols">
 <p><b>Hoy el Municipio ya ense&ntilde;a a navegar en el r&iacute;o</b>, en el Campo de Deportes N&deg; 9 del Bajo: kayak, vela,
@@ -1833,12 +1838,15 @@ Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% 
 obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 4% y el 10% del aumento de Ambiente a entre el 11% y el 21%.</p>
 </div>
 <h3>Espect&aacute;culos al aire libre, en la semana</h3>
+""" + fig("f_banda", "Una banda emergente del partido, en una plaza. Ilustraci&oacute;n.") + """
+
 <div class="cols">
 <p><b>Hoy San Isidro no tiene reglas para los artistas callejeros:</b> una ordenanza de 2019 reconoce el arte a la gorra,
 pero no crea un permiso ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Ninguna norma del partido fija un tope de volumen para un show al aire libre, y la Ordenanza 5182 presume molesto, sin admitir prueba en contrario, todo parlante en o hacia la v&iacute;a p&uacute;blica. Y lo que organiza el Municipio en la costa cae
 casi todo los fines de semana, con artistas que elige el propio Municipio: en 2026 hubo un solo espect&aacute;culo en un d&iacute;a
 h&aacute;bil, seg&uacute;n el Municipio, que no publica cu&aacute;nta gente fue.</p>
 </div>
+""" + fig("f_show_costa", "Un show en la costa, al atardecer. Ilustraci&oacute;n.") + """
 <div class="callout g">
 <div class="clabel">Lo que proponemos: m&aacute;s espect&aacute;culos, mejores y con m&aacute;s p&uacute;blico, sin lugar para la corrupci&oacute;n</div>
 <p><b>D&oacute;nde:</b> en las plazas y los espacios p&uacute;blicos, y sobre todo en el r&iacute;o, para llevar gente a la costa en la
@@ -1892,6 +1900,7 @@ expresamente; el grupo ve el nombre de pila, el show y el punto de encuentro, nu
 se borra despu&eacute;s del show (Ley 25.326, de datos personales).</p>
 <p><b>12 &middot; D&iacute;as de semana y de d&iacute;a,</b> junto con los foodtrucks y las ofertas de los comercios.</p>
 </div>
+""" + fig("f_show_club", "Un show bajo techo, en un club, en invierno. Ilustraci&oacute;n.", "13%") + """
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
 <p><b>Hoy, la obra m&aacute;s visible de la costa no tuvo licitaci&oacute;n propia.</b> El Paseo 33 Orientales se
@@ -2057,6 +2066,7 @@ con la ejecuci&oacute;n por centro y por zona, que hoy no se sabe: con 263.106 p
 a&ntilde;o en juego, esa es la diferencia entre saber y suponer si el sistema llega a Boulogne.</p>
 </div>
 
+""" + fig("f_turno", "El turno, sacado desde el tel&eacute;fono, en un hospital municipal. Ilustraci&oacute;n.") + """
 <h3>La inteligencia artificial en salud ya fue anunciada. Lo que falta es auditarla</h3>
 <div class="pull"><div class="plabel">La fecha importa, y es la mitad del argumento</div>
 <p>El anuncio es de <b>abril de 2023</b>. Lo que se anunci&oacute; con esa etiqueta es <i>triage</i>
@@ -2266,6 +2276,7 @@ la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
 </div>
 
 
+""" + fig("f_patrullero", "La c&aacute;mara avisa y el patrullero llega. Ilustraci&oacute;n.") + """
 <h3>3. Estafas virtuales, grooming y robo de identidad: una oficina de ciberdelito</h3>
 <div class="cols">
 <p><b>Estafas virtuales, robo de identidad, grooming y extorsiones por redes: es lo que menos aparece
@@ -2369,6 +2380,7 @@ y de salud del Municipio, que ya existen. <b>Es articulaci&oacute;n, no estructu
 <p><b>3 &middot; Y el modelo del CFL 404, que la secci&oacute;n 5.3 lleva a las seis zonas:</b>
 <span class="sg">el puente entre la escuela y el trabajo que hoy no existe a esa escala</span>.</p>
 </div>
+""" + fig("f_apoyo", "Apoyo escolar en Boulogne, con un tutor y el profesor digital. Ilustraci&oacute;n.") + """
 <h3>Un profesor digital particular para cada chico</h3>
 <div class="cols">
 <p><b>Hoy los chicos ya usan inteligencia artificial para estudiar</b>: el 52% de los alumnos argentinos de 15 a&ntilde;os
@@ -2412,6 +2424,7 @@ la escuela (Ley 13.688, art&iacute;culo 6). Primero, una prueba de seis meses en
 medida con pruebas sin inteligencia artificial; despu&eacute;s, a todos.</p>
 </div>
 
+""" + fig("f_profesor", "El profesor digital, en una escuela p&uacute;blica. Ilustraci&oacute;n.") + """
 <h3>Y lo que hay que arreglar del dinero</h3>
 <ol class="n">
 <li><b>Revertir la ca&iacute;da real</b>, devolviendo la funci&oacute;n educativa al nivel de 2024. Son
@@ -2593,6 +2606,7 @@ cumplirla.</p>
 en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
 <p><b>Qui&eacute;n ve qu&eacute;.</b> Una ordenanza crea la base de las inspecciones y declara de inter&eacute;s general que se puedan ver, como pide la Disposici&oacute;n 10/2015 para difundir grabaciones. Cualquier vecino puede ver cualquier inspecci&oacute;n, de a una, busc&aacute;ndola por comercio o por domicilio, con su fecha y el agente: todo vecino tiene un inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, que es de todos, y la ordenanza lo declara as&iacute; para cumplir con el art&iacute;culo 20 de la Constituci&oacute;n bonaerense (necesita dictamen de un abogado). Cuando alguien pide ver una inspecci&oacute;n, la inteligencia artificial difumina las caras de los clientes y de la gente que pasa, y una persona lo revisa antes de mostrarla: unos 2.200 pesos por pedido, de 5 a 23 millones por a&ntilde;o. Lo que pasa entre una inspecci&oacute;n y otra lo ven s&oacute;lo los auditores del Municipio y la auditor&iacute;a externa. Adentro de una casa &mdash;sobre todo en las inspecciones de obra&mdash; se graba igual, como prueba y para que no haya coima, pero el interior nunca se publica: lo ven s&oacute;lo el due&ntilde;o, los auditores y, si hace falta, un juez (necesita dictamen de un abogado, por la Ley 25.326).</p>
 </div>
+""" + fig("f_inspeccion", "Una inspecci&oacute;n grabada: graban el inspector y el comerciante. Ilustraci&oacute;n.", "30%") + """
 <h3>Si a un comerciante le piden una coima, lo aprietan o lo amenazan</h3>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: la herramienta del comerciante frente a coimas, aprietes y amenazas</div>
