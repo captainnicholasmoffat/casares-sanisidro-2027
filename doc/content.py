@@ -34,7 +34,8 @@ C4B2,  C4B_C = split_at(_c4, '<h2><span class="n">4.12</span>', "cap4bc", "")
 C4B2, C4B2B = split_at(C4B2, '<h3>Escucha a los vecinos, les hace el seguimiento y les responde</h3>', "cap4b2b", "")
 C5B_SRC, C5B2_SRC = split_at(C.C5B, '<h2><span class="n">5.8</span>', "cap5b2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
-C3B_A, C3B_B = split_at(B.C3B, '<h2><span class="n">3.5</span>', "cap3b2",
+# (dispatch 11) con el texto en lenguaje llano el 3.4 no entra en una pagina: lo que cuesta administrar pasa a la siguiente
+C3B_A, C3B_B = split_at(B.C3B, '<h3>Lo que cuesta administrar todo esto</h3>', "cap3b2",
                         H_CONT.format(n=3, t="Los fondos"))
 C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
 C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.2</span>', "cap2b",

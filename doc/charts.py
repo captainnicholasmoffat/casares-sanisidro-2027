@@ -255,8 +255,8 @@ def g_rigidez():
     for k in ("top","right","left"): ax.spines[k].set_visible(False)
     ax.spines["bottom"].set_linewidth(.6); ax.spines["bottom"].set_color(HAIR)
     segs=[("Personal y deuda\nno se tocan",126488,INK),
-          ("Contratos de servicios\nno dentro del ejercicio",110491,SAGE),
-          ("Gasto flexible\nreasignable",87326,SAGED)]
+          ("Contratos de servicios\nno se cambian en el año",110491,SAGE),
+          ("Gasto flexible\nse puede cambiar de destino",87326,SAGED)]
     left=0
     for lbl,v,c in segs:
         ax.barh(1.6, v/1000, .46, left=left/1000, color=c, edgecolor="none")
@@ -303,10 +303,10 @@ def g_tornado():
          for r in _csv("sensibilidad.csv") if r["anio"] == "2031"}
     base = s[("recursos_propios", "1.95% anual")]
     d = lambda k, v: round(s[(k, v)] - base)
-    rows=[("Recursos propios: 2,95% anual",d("recursos_propios","2.95% anual")),
-          ("Recursos propios: 0,95% anual",d("recursos_propios","0.95% anual")),
-          ("Percepción de recursos: 86,32%",d("percepcion","86.32%")),
-          ("Percepción de recursos: 92,32%",d("percepcion","92.32%")),
+    rows=[("Lo que recauda: 2,95% anual",d("recursos_propios","2.95% anual")),
+          ("Lo que recauda: 0,95% anual",d("recursos_propios","0.95% anual")),
+          ("Se cobra el 86,32%",d("percepcion","86.32%")),
+          ("Se cobra el 92,32%",d("percepcion","92.32%")),
           ("Coparticipación: −3,5% anual",d("coparticipacion","-3.5% anual")),
           ("Coparticipación: −1,5% anual",d("coparticipacion","-1.5% anual")),
           ("Coparticipación: −2,5% anual",d("coparticipacion","-2.5% anual"))]
@@ -323,7 +323,7 @@ def g_tornado():
     ax.axvline(0, color=TAUPE, lw=.7)
     ax.set_xlim(-19,19)
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
-    ax.set_xlabel("efecto sobre el resultado financiero de 2031, miles de millones", fontsize=6.2)
+    ax.set_xlabel("cuánto cambia lo que sobra en 2031, en miles de millones", fontsize=6.2)
     save(fig,"g_tornado")
 
 # --- 11. obra vecinal, año 1 y año 4 ----------------------------------------
@@ -512,7 +512,7 @@ def g_dots():
     fig, a2 = plt.subplots(1, 1, figsize=(W, 1.05))
     paneles = [
         (a2, obr, MED_O, SI_O, int(si["puesto_obra"]), 26,
-         "Peso de la obra pública", "bienes de uso sobre gasto devengado",
+         "Peso de la obra pública", "parte del gasto que va a obra (bienes de uso)",
          "de 106 municipios, San Isidro es el 4º que más invierte en obra"),
     ]
     for ax, vals, med, mio, puesto, xmax, tit, sub, pie in paneles:
