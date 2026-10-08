@@ -124,7 +124,12 @@ JS_CONFIG = r"""(cfg) => {
   for (const mv of cfg.mover) {
     const el = pg.querySelector(`[data-foto="${mv.foto}"]`);
     const ref = pg.querySelector(`:scope > [data-i="${mv.antes}"]`);
-    if (el && ref) pg.insertBefore(el, ref);
+    if (!el || !ref) continue;
+    // dispatch 11: el par de fotos lleva su epigrafe al lado, como bloque aparte; viaja con las fotos
+    const sig = el.nextElementSibling;
+    const epi = el.classList.contains('duo') && sig && sig.tagName === 'FIGCAPTION' ? sig : null;
+    pg.insertBefore(el, ref);
+    if (epi) pg.insertBefore(epi, ref);
   }
   return pg.children.length;
 }"""
@@ -655,12 +660,14 @@ def arreglo_con_fotos(cap, caps, rep, at, hojas, s, registro):
         ultimo = at[h["j"] - 1]["g"]["partes"][-1]
         sub_final = at[h["j"] - 1]["g"]["sub"]
         for g in [a["g"] for a in at[h["j"]:] if a["primero"] and a["g"]["foto"]]:
-            if (g["sec"], g["sub"]) != (sec_final, sub_final) or g["foto"].startswith("duo:") or g["foto"] in rep.mover:
+            # dispatch 11: «subir una foto de esa misma seccion» (regla de Nick): vale cualquier foto de la seccion,
+            # aunque este en otro apartado, y tambien el par de fotos; solo se usa si la hoja pasa del tercio
+            if g["sec"] != sec_final or g["foto"] in rep.mover:
                 continue
             if ultimo["foto"] or ref["foto"] or any(p["tag"] == "h1" for p in g["partes"]):
                 continue                                  # nunca dos fotos seguidas
             fig = next(p for p in g["partes"] if p["foto"])
-            cola = (fig["bottom"] - fig["top"]) - fig["img_h"]
+            cola = (g["bottom"] - fig["top"]) - fig["img_h"]   # con el epigrafe, tambien el del par de fotos
             aire = max(ultimo["mb"], 0) + fig["mt"]
             f = rep.foto(g["foto"])
             nuevo = f.ajustar(espacio - aire - cola - 1.0)

@@ -3176,3 +3176,46 @@ repitiendo arriba su título con «(sigue)».
   por colores. La pág. 32 pasa a 2.688 pt (debajo de 2.700). Queda el 4.11 con «por nivel de gravedad» (Nick).
 - Pantalla (52 págs.) y A4 (126 hojas) exportadas de nuevo: ninguna hoja con más de un tercio en blanco (la última,
   6%), índice con sus 64 entradas en su lugar, sin texto escondido, mismos controles que la entrega anterior.
+
+## DISPATCH 11 · LENGUAJE LLANO EN TODO EL DOCUMENTO (08/10) · APLICADO
+- Paso 1 (final de la introducción y «Qué proponemos hacer»): 1a312ba y a6d33e9, aprobado por Nick con los puntos 2 y 3
+  en su texto.
+- Paso 2, capítulo por capítulo: introducción y capítulos 1 a 3 (f104663), capítulo 4 (8a6399b), 5.1 a 5.5 (58cf491),
+  5.6 a 5.15 (4996654), capítulo 6, cierre, glosario, nota de método, notas, presentación del anexo y fuentes (ca013e3).
+  El informe de cada parte (oraciones cambiadas, números antes y después, títulos, bajadas y notas de cuadros y
+  gráficos) está en salida/revision_d11/PASO2_INFORME_POR_CAPITULO.md.
+- Punto 1, fechas: las de actualización salen del texto y pasan a su fila de fuentes: 2.2 y 2.3 («la propia flota»,
+  «el plan está vencido»), 5.6 («los turnos») y 5.7 (fila nueva, «la oficina de delitos por internet»). El índice
+  pierde «Los datos están actualizados al 20 de septiembre de 2026»; queda la «Fecha de corte» de la nota de método.
+  Las fuentes debajo de cuadros y gráficos no se tocaron.
+- Punto 10: 5.11, punto 13 nuevo, «Un tope a lo que se debe», con el texto de Nick, marcado «necesita dictamen de un
+  abogado: puede hacer falta la Provincia». También en «Lo que se le pide a la Provincia», en el compromiso 18 del 6.1
+  y en el resumen del 5.15. Lo que se deja de cobrar entra en el «Cuánto cuesta» del 5.11 (gasto flexible libre).
+- Punto 11: bloques cortos juntados (1.1, 2.3, 5.8, 5.10, 5.12 y 5.13, entre otros).
+- Punto 12: bajada del gráfico 3 con el texto de Nick.
+- Punto 13: las aclaraciones morales salen del cuerpo y van una sola vez al final de las fuentes, en «Lo que este
+  programa no hace». Salieron de: «Qué proponemos hacer», punto 6; 2.3 (cuadro, fila Seguridad); 2.4 (resumen, punto
+  4); 5.6 (no diagnostica; la línea que no cruza; datos de pacientes; no acusa; no clasifica); 5.7 (análisis de eventos;
+  registro y reconocimiento facial; no censura; no es verificador de noticias); 5.8 (no acusa ni sanciona); 5.9 (no
+  reemplaza la inspección; no es vigilancia del trabajador); 5.15 (reconocimiento facial). El precedente de la Ciudad
+  (reconocimiento facial, 2022) queda en el 5.7, unido al párrafo de la Ley 12.154. Las reglas del 4.11 quedan donde
+  estaban.
+- Punto 14: «en castellano» sale donde se habla de preguntarle a la inteligencia artificial del Municipio (capítulos 2
+  y 4; 5.9 con el texto de Nick); el 4.11 dice que contesta en el idioma en que le hablen.
+- Punto 15: lenguaje llano en todo el documento, menos el articulado del anexo y las citas de las fuentes. En cada
+  capítulo los números quedan iguales, salvo las fechas que pasaron a las fuentes, los números de las aclaraciones que
+  pasaron al final (107 y 4.11) y el 13 del punto nuevo del 5.11. Los resúmenes dejan sólo la idea; el 5.15 y el 6.7
+  pasan de «líneas» a «puntos», también en el índice. «Mitigación» pasa a «Qué lo reduce» en el 6.6.
+- Otros, avisados a Nick: el 5.8 dice «un centro de apoyo escolar gratuito en cada localidad», como ya decían el
+  resumen y «Qué proponemos hacer»; en el glosario, TAMAR «más 7 puntos», como el 6.6; «aprietes» pasa a «presiones».
+- Cortes de página: el 3.4 corta antes de «Lo que cuesta administrar todo esto»; el 6.5 pasa a la página del 6.6.
+- Pantalla: 52 páginas, la más alta de 2.680 pt (ninguna pasa de 2.700). Ningún «plata» (salvo La Plata y el Río de
+  la Plata), «mafia», «sobreprecio», «en castellano», «no hundan», «movida» ni «Nick»; la inteligencia artificial,
+  siempre «del Municipio».
+- A4: 127 hojas (antes 126). Ninguna hoja con más de un tercio en blanco (33 entre 15% y un tercio; la última, 6%).
+  Índice con sus 64 entradas en su lugar. Sin texto escondido (161 recortes, ninguno con diferencias); todo el texto es
+  el de la pantalla, palabra por palabra; de más, sólo los encabezados repetidos de los cuadros partidos y los títulos
+  con «(sigue)». La hoja 8 (apertura del capítulo 1) quedaba con 40% en blanco: se llena subiendo el par de fotos de
+  Boulogne y Martínez, que es del mismo 1.1, con su epígrafe (regla de Nick: subir una foto de esa misma sección;
+  doc/corte_a4.py ahora acepta otra foto de la sección y el par, sólo en una hoja que pasa del tercio).
+- Cinco tests OK (data/ y 01_raw/indec restaurados). El Excel no cambia.
