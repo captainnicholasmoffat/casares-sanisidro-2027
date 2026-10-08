@@ -67,7 +67,9 @@ JS_MEDIR = r"""() => {
                txt: (e.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 90),
                tabla: e.tagName === 'TABLE' || !!e.querySelector('table'),
                dibujo: !!e.querySelector('svg, img') || ['FIGURE', 'IMG', 'SVG'].includes(e.tagName),
-               sec: e.dataset.sec || null, foto: e.dataset.foto || null, i: e.dataset.i != null ? +e.dataset.i : null};
+               sec: e.dataset.sec || null, foto: e.dataset.foto || null, i: e.dataset.i || null};
+    if (/^(cols|note)\b/.test(b.cls)) b.parrafos = [...e.children].map(k => ({tag: k.tagName.toLowerCase(),
+                                                       n: (k.textContent || '').length}));
     if (b.foto) { const [a, z] = caja(e.querySelector('img')); b.img_h = z - a; }
     // una lista larga se parte entre sus puntos; un cuadro, entre sus filas; un recuadro, entre sus parrafos
     if (e.tagName === 'OL' || e.tagName === 'UL') b.items = [...e.children].map(caja);
@@ -87,7 +89,28 @@ JS_MEDIR = r"""() => {
 # el reparto de las fotos: el alto y el encuadre de cada una, y las que se suben a otro lugar
 JS_CONFIG = r"""(cfg) => {
   const pg = document.getElementById('pg');
-  [...pg.children].forEach((e, i) => { e.dataset.i = i; });
+  [...pg.children].forEach((e, i) => { e.dataset.i = String(i); });
+  for (const p of (cfg.partir || [])) {
+    const el = pg.querySelector(`:scope > [data-i="${p.i}"]`);
+    if (!el) continue;
+    const nuevo = el.cloneNode(false);
+    nuevo.dataset.i = p.i + 'b';
+    delete nuevo.dataset.sec;
+    nuevo.removeAttribute('style');
+    if (p.tipo === 'recuadro') {
+      const lab = el.querySelector(':scope > .clabel');
+      const puntos = [...el.children].filter(k => k !== lab);
+      if (lab) {
+        const l2 = lab.cloneNode(true);
+        l2.innerHTML = lab.innerHTML + ' <span style="text-transform:none">(sigue)</span>';
+        nuevo.appendChild(l2);
+      }
+      puntos.slice(p.n).forEach(k => nuevo.appendChild(k));
+    } else {
+      [...el.children].slice(p.n).forEach(k => nuevo.appendChild(k));
+    }
+    el.after(nuevo);
+  }
   for (const [f, c] of Object.entries(cfg.fotos)) {
     const el = pg.querySelector(`[data-foto="${f}"]`);
     if (!el) continue;
@@ -392,7 +415,7 @@ def atomos(m):
             nuevo(g, it[-2][0], g["bottom"], primero=False, parte="lista")
             partidos.append(("lista", g))
             continue
-        if recuadro and alto > entra:
+        if recuadro and alto > entra and False:          # (dispatch 10: se parte en dos recuadros, con «(sigue)»)
             hijos = recuadro["hijos"]
             cortes = [hijos[1][1]] + [h[1] for h in hijos[2:-1]]      # el rotulo va con el primer punto
             a = g["top"]
@@ -504,6 +527,7 @@ class Reparto:
         self.fotos = {}                         # nombre -> alto
         self.mover = {}                         # nombre -> data-i del bloque antes del cual va
         self.al_anterior = set()
+        self.partir = {}                        # capitulo -> [{"i": bloque, "n": cuantos van en la primera parte, "tipo"}]
         self.notas = []
         for c in caps:
             for nombre, f in c["fotos"].items():
@@ -525,7 +549,7 @@ class Reparto:
                     pos = [pos, otra.pos(min(h, otra.h_nat))]
                 fotos[nombre] = {"h": round(h, 2), "pos": pos}
         mover = [{"foto": f, "antes": i} for f, i in self.mover.items() if f in cap["fotos"]]
-        return {"fotos": fotos, "mover": mover}
+        return {"fotos": fotos, "mover": mover, "partir": self.partir.get(cap["id"], [])}
 
     def plan(self):
         return {"al_anterior": self.al_anterior}
@@ -542,111 +566,238 @@ def _fotos_en(hojas_k, at):
     return [a["g"] for a in at[hojas_k["i"]:hojas_k["j"]] if a["g"]["foto"] and a["primero"]]
 
 
-def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
-    """Dibuja el capitulo, lo corta y llena los huecos con las fotos, hasta que ninguna hoja pase del tercio."""
+UMBRAL = 0.15                             # con mas blanco que esto, se intenta llenar la hoja
+
+
+def _y_en_hoja(at, h, top):
+    """Donde cae, en la hoja h, un punto de la pagina dibujada que va en su tramo."""
+    if h["primera"]:
+        return top
+    rep = at[h["i"]]["rep"]
+    extra = (rep[1] - rep[0]) if (rep and not at[h["i"]]["primero"]) else 0.0
+    return ARRIBA_CONT + extra + top - at[h["i"]]["top"]
+
+
+def _cortes_texto(b):
+    """Entre que parrafos se puede partir un bloque a dos columnas: nunca despues de un subtitulo, y en cada parte
+    por lo menos un parrafo."""
+    ps = b.get("parrafos") or []
+    titulo = lambda k: ps[k]["tag"] in ("h2", "h3", "h4")
+    out = []
+    for n in range(1, len(ps)):
+        if titulo(n - 1):
+            continue
+        if not any(not titulo(k) for k in range(n)) or not any(not titulo(k) for k in range(n, len(ps))):
+            continue
+        out.append(n)
+    return out
+
+
+def _alto_parte_texto(b, n):
+    """El alto estimado de las primeras n partes de un bloque a dos columnas (en proporcion al texto)."""
+    ps = b["parrafos"]
+    total = sum(max(p["n"], 40) for p in ps)
+    return (b["bottom"] - b["top"]) * sum(max(p["n"], 40) for p in ps[:n]) / total
+
+
+def _alto_parte_recuadro(b, n):
+    return b["hijos"][n][1] - b["top"] + 11.0
+
+
+def proponer_particion(g, h, s, at, partir, estado, sin_partir, entra, forzar=False):
+    """Si lo que sigue a la hoja h es un bloque a dos columnas, o un recuadro que no entra en una hoja, lo parte para
+    llenarla: el texto entre parrafos, el recuadro entre puntos. Devuelve el texto del registro o None."""
+    b = g["partes"][-1]
+    es_texto = bool(b.get("parrafos")) and len(b["parrafos"]) >= 2
+    es_recuadro = bool(b.get("hijos")) and (b["bottom"] - b["top"]) > entra
+    if not (es_texto or es_recuadro) or b["i"] in sin_partir or b["i"] in estado:
+        return None
+    if b["i"].endswith("b") and estado.get(b["i"][:-1], {}).get("s") == s:
+        return None                              # la segunda parte de lo que se partio en esta misma hoja
+    disponible = LIM - _y_en_hoja(at, h, b["top"]) - 4.0
+    if forzar:                                   # el recuadro arranca arriba de una hoja nueva
+        disponible = LIM - ARRIBA_CONT - (b["top"] - g["top"]) - 4.0
+    if es_texto:
+        validos = [n for n in _cortes_texto(b) if _alto_parte_texto(b, n) <= disponible]
+        tipo = "texto"
+    else:
+        npuntos = len(b["hijos"]) - 1
+        validos = [n for n in range(1, npuntos) if _alto_parte_recuadro(b, n) <= disponible]
+        tipo = "recuadro"
+    if not validos:
+        return None
+    n = max(validos)
+    partir.append({"i": b["i"], "n": n, "tipo": tipo})
+    estado[b["i"]] = {"n": n, "ok": None, "falla": None, "tipo": tipo, "s": s, "validos": _cortes_texto(b)
+                      if es_texto else list(range(1, len(b["hijos"]) - 1))}
+    return f"parte {'el bloque a dos columnas' if es_texto else 'el recuadro'} «{b['txt'][:40]}» ({n} " \
+           f"{'parrafos' if es_texto else 'puntos'} en esta hoja)"
+
+
+def arreglo_con_fotos(cap, caps, rep, at, hojas, s, registro):
+    """Una hoja con mas de un tercio en blanco: una foto de esa hoja mas alta; subir una foto de su apartado; en la
+    ultima hoja del capitulo, la foto de apertura del siguiente. Devuelve el texto del registro o None."""
+    h = hojas[s]
+    espacio = LIM - h["uso"]
+    ultima_del_cap = s == len(hojas) - 1
+    cands = _fotos_en(h, at)
+    sec_final = at[h["j"] - 1]["g"]["sec"]
+    cands.sort(key=lambda g: (g["sec"] != sec_final, -g["top"]))
+    for g in cands:
+        f = rep.foto(g["foto"])
+        nuevo = f.ajustar(rep.fotos[g["foto"]] + espacio - 1.0)
+        if nuevo and nuevo > rep.fotos[g["foto"]] + 0.5 and blanco(h["uso"] + nuevo - rep.fotos[g["foto"]]) <= TOPE:
+            texto = f"hoja {s + 1}: {g['foto']} de {rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt"
+            rep.fotos[g["foto"]] = nuevo
+            return texto
+    if not ultima_del_cap and at[h["j"]]["primero"]:
+        ref = at[h["j"]]["g"]
+        ultimo = at[h["j"] - 1]["g"]["partes"][-1]
+        sub_final = at[h["j"] - 1]["g"]["sub"]
+        for g in [a["g"] for a in at[h["j"]:] if a["primero"] and a["g"]["foto"]]:
+            if (g["sec"], g["sub"]) != (sec_final, sub_final) or g["foto"].startswith("duo:") or g["foto"] in rep.mover:
+                continue
+            if ultimo["foto"] or ref["foto"] or any(p["tag"] == "h1" for p in g["partes"]):
+                continue                                  # nunca dos fotos seguidas
+            fig = next(p for p in g["partes"] if p["foto"])
+            cola = (fig["bottom"] - fig["top"]) - fig["img_h"]
+            aire = max(ultimo["mb"], 0) + fig["mt"]
+            f = rep.foto(g["foto"])
+            nuevo = f.ajustar(espacio - aire - cola - 1.0)
+            if nuevo:
+                rep.fotos[g["foto"]] = nuevo
+                rep.mover[g["foto"]] = ref["inicio"]
+                return f"hoja {s + 1}: sube {g['foto']} ({nuevo:.0f} pt)"
     k_cap = caps.index(cap)
-    sin_arreglo = set()                       # huecos que ninguna foto puede llenar (por su lugar en el capitulo)
-    for vuelta in range(80):
+    if ultima_del_cap and k_cap + 1 < len(caps):
+        sig = caps[k_cap + 1]
+        if sig["apertura"] and sig["apertura"][0] not in rep.al_anterior:
+            nombre = sig["apertura"][0]
+            f = sig["fotos"][nombre]
+            ultimo = at[h["j"] - 1]["g"]["partes"][-1]
+            nuevo = f.ajustar(espacio - max(ultimo["mb"], 0) - 13.0 - 18.0 - 1.0)
+            if nuevo:
+                rep.al_anterior.add(nombre)
+                rep.fotos[nombre] = nuevo
+                return f"hoja {s + 1}: la foto de apertura del capitulo siguiente ({nombre}, {nuevo:.0f} pt)"
+    return None
+
+
+def _grupo_de_bloque(at, i_bloque):
+    for k, a in enumerate(at):
+        if a["primero"] and any(p["i"] == i_bloque for p in a["g"]["partes"]):
+            return k
+    return None
+
+
+def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
+    """Dibuja el capitulo y lo reparte hoja por hoja, de arriba abajo. Una hoja con mas de 15% en blanco se llena
+    partiendo lo que sigue si es texto a dos columnas (entre parrafos) o un recuadro que no entra en una hoja (entre
+    puntos); si igual pasa del tercio, con las fotos. Lo que quede, se reparte entre las hojas."""
+    entra = LIM - ARRIBA_CONT
+    partir = rep.partir.setdefault(cap["id"], [])
+    estado, sin_partir, pendientes = {}, set(), []
+    probando = None                                  # la ultima particion, a comprobar en el dibujo siguiente
+    s = 0
+    for vuelta in range(500):
+        body = html_capitulo(cap, caps, rep.plan())
+        m, _ = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap))
+        at, _ = atomos(m)
+        hojas = voraz(at)
+        if probando is not None:
+            # la primera parte tiene que haber quedado en su hoja; si no entro, una parte menos; si sobro lugar, una mas
+            e = estado[probando]
+            k = _grupo_de_bloque(at, probando)
+            hs = hojas[s] if s < len(hojas) else None
+            entro = hs is not None and k is not None and hs["i"] <= k < hs["j"]
+            entrada = next(x for x in partir if x["i"] == probando)
+            if entro:
+                e["ok"] = entrada["n"]
+                mas = [n for n in e["validos"] if n > entrada["n"] and (e["falla"] is None or n < e["falla"])]
+                if hs["blanco"] > UMBRAL and mas:
+                    entrada["n"] = min(mas)
+                    continue
+                probando = None
+            else:
+                e["falla"] = entrada["n"]
+                menos = [n for n in e["validos"] if n < entrada["n"]]
+                if e["ok"] is not None:
+                    entrada["n"] = e["ok"]
+                    probando = None
+                    continue
+                if menos:
+                    entrada["n"] = max(menos)
+                    continue
+                partir.remove(entrada)
+                sin_partir.add(probando)
+                del estado[probando]
+                probando = None
+                continue
+        if s >= len(hojas):
+            break
+        h = hojas[s]
+        ultima = s == len(hojas) - 1
+        if ultima and ultimo_doc:
+            break
+        # un recuadro que no entra ni en una hoja entera y quedo solo en esta: se parte para una hoja llena
+        if h["uso"] > LIM + 0.5 and at[h["i"]]["primero"]:
+            txt = proponer_particion(at[h["i"]]["g"], h, s, at, partir, estado, sin_partir, entra, forzar=True)
+            if txt:
+                registro.append(f"{cap['id']}: hoja {s + 1}: {txt}")
+                probando = partir[-1]["i"]
+                continue
+        if h["blanco"] <= UMBRAL:
+            s += 1
+            continue
+        if not ultima and at[h["j"]]["primero"]:
+            txt = proponer_particion(at[h["j"]]["g"], h, s, at, partir, estado, sin_partir, entra)
+            if txt:
+                registro.append(f"{cap['id']}: hoja {s + 1}: {txt}")
+                probando = partir[-1]["i"]
+                continue
+        if h["blanco"] <= TOPE:
+            s += 1
+            continue
+        txt = arreglo_con_fotos(cap, caps, rep, at, hojas, s, registro)
+        if txt:
+            registro.append(f"{cap['id']}: {txt}")
+            continue
+        pendientes.append(s)
+        s += 1
+    else:
+        raise RuntimeError(f"{cap['id']}: no converge")
+    todas = malas(hojas, ultimo_doc)
+    if not todas:
+        return m, hojas, at, "voraz"
+    # lo que ninguna foto ni ninguna particion pudo llenar: se reparte el corte entre las hojas; una particion cuyas
+    # dos partes queden en la misma hoja se deshace
+    for vuelta in range(12):
+        r = repartido(at, ultimo_doc, estricto=False)
+        juntas = []
+        for x in partir:
+            k1, k2 = _grupo_de_bloque(at, x["i"]), _grupo_de_bloque(at, x["i"] + "b")
+            if k1 is not None and k2 is not None and any(hh["i"] <= k1 < hh["j"] and hh["i"] <= k2 < hh["j"] for hh in r):
+                juntas.append(x)
+        if not juntas:
+            break
+        for x in juntas:
+            partir.remove(x)
+            registro.append(f"{cap['id']}: se deshace la particion de «{x['i']}» (las dos partes quedaban juntas)")
         body = html_capitulo(cap, caps, rep.plan())
         m, _ = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap))
         at, _ = atomos(m)
         hojas = voraz(at)
         todas = malas(hojas, ultimo_doc)
-        mal = [k for k in todas if (hojas[k]["i"], hojas[k]["j"]) not in sin_arreglo]
-        if not todas:
-            return m, hojas, at, "voraz"
-        if not mal:
-            # sin fotos que sirvan: se reparte el corte entre las hojas
-            r = repartido(at, ultimo_doc)
-            if r is not None:
-                registro.append(f"{cap['id']}: corte repartido en {len(r)} hojas (sin fotos para llenar "
-                                f"{', '.join('la hoja %d' % (k + 1) for k in todas)})")
-                return m, r, at, "repartido"
-            r = repartido(at, ultimo_doc, estricto=False)
-            quedan = malas(r, ultimo_doc)
-            if len(quedan) >= len(todas):
-                r, quedan = hojas, todas
-            for k in quedan:
-                registro.append(f"{cap['id']}: !! la hoja {k + 1} queda con {r[k]['blanco']:.0%} en blanco y no hay "
-                                f"como llenarla")
-            return m, r, at, "repartido"
-        s = mal[0]
-        h = hojas[s]
-        espacio = LIM - h["uso"]
-        ultima_del_cap = s == len(hojas) - 1
-        hecho = None
-        # 1) una foto de esa hoja, mas alta
-        cands = _fotos_en(h, at)
-        sec_final = at[h["j"] - 1]["g"]["sec"]
-        cands.sort(key=lambda g: (g["sec"] != sec_final, -g["top"]))
-        for g in cands:
-            f = rep.foto(g["foto"])
-            nuevo = f.ajustar(rep.fotos[g["foto"]] + espacio - 1.0)
-            if nuevo and nuevo > rep.fotos[g["foto"]] + 0.5 and blanco(h["uso"] + nuevo - rep.fotos[g["foto"]]) <= TOPE:
-                hecho = f"hoja {s + 1}: {g['foto']} de {rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt"
-                rep.fotos[g["foto"]] = nuevo
-                break
-        # 2) subir una foto de esa seccion (de mas adelante en el capitulo) al final de la hoja
-        if not hecho and not ultima_del_cap and at[h["j"]]["primero"]:
-            ref = at[h["j"]]["g"]
-            ultimo = at[h["j"] - 1]["g"]["partes"][-1]
-            sub_final = at[h["j"] - 1]["g"]["sub"]
-            for g in [a["g"] for a in at[h["j"]:] if a["primero"] and a["g"]["foto"]]:
-                if (g["sec"], g["sub"]) != (sec_final, sub_final) or g["foto"].startswith("duo:") or g["foto"] in rep.mover:
-                    continue
-                if ultimo["foto"] or ref["foto"]:              # nunca dos fotos seguidas
-                    continue
-                if any(p["tag"] == "h1" for p in g["partes"]):
-                    continue
-                fig = next(p for p in g["partes"] if p["foto"])
-                cola = (fig["bottom"] - fig["top"]) - fig["img_h"]
-                aire = max(ultimo["mb"], 0) + fig["mt"]
-                f = rep.foto(g["foto"])
-                nuevo = f.ajustar(espacio - aire - cola - 1.0)
-                if nuevo:
-                    hecho = f"hoja {s + 1}: sube {g['foto']} ({nuevo:.0f} pt)"
-                    rep.fotos[g["foto"]] = nuevo
-                    rep.mover[g["foto"]] = ref["inicio"]
-                    break
-        # 3) en la ultima hoja del capitulo, la foto de apertura del siguiente
-        if not hecho and ultima_del_cap and k_cap + 1 < len(caps):
-            sig = caps[k_cap + 1]
-            if sig["apertura"] and sig["apertura"][0] not in rep.al_anterior:
-                nombre = sig["apertura"][0]
-                f = sig["fotos"][nombre]
-                ultimo = at[h["j"] - 1]["g"]["partes"][-1]
-                cola = 18.0                                   # epigrafe de una linea y su aire
-                nuevo = f.ajustar(espacio - max(ultimo["mb"], 0) - 13.0 - cola - 1.0)
-                if nuevo:
-                    hecho = f"hoja {s + 1}: la foto de apertura del capitulo siguiente ({nombre}, {nuevo:.0f} pt)"
-                    rep.al_anterior.add(nombre)
-                    rep.fotos[nombre] = nuevo
-        # 4) una foto de la hoja anterior, mas alta, empuja su ultimo bloque a esta hoja
-        if not hecho and s > 0:
-            ha = hojas[s - 1]
-            for g in _fotos_en(ha, at):
-                f = rep.foto(g["foto"])
-                for kk in range(1, 6):
-                    j2 = ha["j"] - kk
-                    if j2 <= ha["i"] or at[j2]["top"] <= g["bottom"] or not at[j2]["primero"]:
-                        break
-                    if uso(at, j2, h["j"], False) > LIM:
-                        break
-                    if blanco(uso(at, j2, h["j"], False)) > TOPE:
-                        continue
-                    nuevo = f.ajustar(rep.fotos[g["foto"]] + LIM - uso(at, ha["i"], j2, ha["primera"]) - 1.0)
-                    falta = LIM - uso(at, ha["i"], j2 + 1, ha["primera"])      # lo que hay que crecer para empujar
-                    if nuevo and nuevo - rep.fotos[g["foto"]] > falta + 0.5:
-                        hecho = f"hoja {s}: {g['foto']} de {rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt (empuja a la {s + 1})"
-                        rep.fotos[g["foto"]] = nuevo
-                        break
-                if hecho:
-                    break
-        if hecho:
-            registro.append(f"{cap['id']}: {hecho}")
-        else:
-            sin_arreglo.add((h["i"], h["j"]))
-    raise RuntimeError(f"{cap['id']}: no converge")
+    quedan = malas(r, ultimo_doc)
+    if len(quedan) >= len(todas):
+        r, quedan = hojas, todas
+        modo = "voraz"
+    else:
+        modo = "repartido"
+        registro.append(f"{cap['id']}: corte repartido en {len(r)} hojas")
+    for k in quedan:
+        registro.append(f"{cap['id']}: !! la hoja {k + 1} queda con {r[k]['blanco']:.0%} en blanco y no hay como llenarla")
+    return m, r, at, modo
 
 
 def rellenar(dib, cap, caps, rep, m, hojas, at, registro, umbral=0.15):

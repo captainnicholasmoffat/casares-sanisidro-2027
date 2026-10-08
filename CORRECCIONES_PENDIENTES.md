@@ -3140,3 +3140,33 @@ Páginas de la versión de pantalla (52 págs.).
      Isidro, Noticias de Salud, 19/02/2019.
 - Pantalla: 52 páginas, la más alta de 2.676 pt (la 32 pasa a 2.673); controles iguales a los del dispatch 9; cinco
   tests OK (data/ restaurado). La A4 lo suma cuando se arme la del dispatch 10 (en el borrador ya está).
+
+## DISPATCH 10 · LA A4 CORRIDA, SIN HUECOS (08/10) · APLICADO
+Muestras (hojas 7, 8, 12, 13, 24 y 71) aprobadas por Nick con dos decisiones: partir los bloques de texto a dos
+columnas entre párrafos, nunca a mitad de uno; y partir los dos recuadros que no entran en una hoja entre puntos,
+repitiendo arriba su título con «(sigue)».
+- El diseño no cambia (mismas letras, colores, recuadros, cuadros, gráficos y fotos, todo al 90%). Cambia el reparto:
+  el contenido corre seguido de hoja en hoja; sólo empiezan hoja nueva la tapa, el índice y cada capítulo, que arranca
+  arriba de todo con su título (doc/corte_a4.py, rehecho).
+- Huecos: se llenan subiendo el bloque siguiente si entra entero, partiendo el texto a dos columnas entre párrafos,
+  mostrando más alta una foto de esa sección o subiendo una foto de su apartado (la de la barrera, dentro de la costa).
+  La foto de apertura de un capítulo puede ir al final del anterior: la Catedral (entera, con la aguja) cierra «Qué
+  proponemos hacer» y la escalera cierra el capítulo 2. Donde no hay fotos (capítulo 6, anexo, glosario), el corte se
+  reparte entre las últimas hojas.
+- Fotos: 12 van más altas que en pantalla (costanera, Catedral, Boulogne y Martínez, escalera, vecina con la voz, mesa
+  del mapa, Escuela Náutica, pasantía, barrera, apoyo escolar, profesor digital y calle); ninguna corta una cara ni su
+  motivo principal (caras detectadas en doc/a4_caras.json; motivos en MOTIVOS: la Catedral entera, la barrera con la
+  boca del desagüe, el patrullero, el escenario de los shows, los foodtrucks enteros o nada).
+- Recuadros partidos con «(sigue)»: el de espectáculos (5.5) y el de la inteligencia artificial del Municipio, del lado
+  del vecino (multas de tránsito). Los cuadros largos se parten entre filas con el encabezado repetido; los gráficos,
+  nunca.
+- Control del blanco al pie (medido en cada hoja dibujada, desde el último contenido hasta la raya del pie): ninguna
+  hoja con más de un tercio en blanco; la última, 6%. Antes: 46 hojas con más de un tercio y 33 entre 15% y un tercio;
+  ahora 0 y 36.
+- A4: 126 hojas (antes 145). Índice con los números de hoja nuevos, 64 entradas, ninguna fuera de lugar; 42 cuadros y
+  gráficos seguidos; ninguna fuente Liberation ni DejaVu; ninguna marca [23 …]. Sin texto escondido (161 recortes, cada
+  uno con sólo el texto que se ve, y se ve igual): todo el texto de la A4 es el de la pantalla, palabra por palabra; de
+  más, sólo los encabezados repetidos de los cuadros partidos y los títulos con «(sigue)». Palabras (pypdf): A4 86.464,
+  pantalla 82.413 (la diferencia: encabezado y pie en cada hoja, encabezados de cuadros y «(sigue)»); «El domicilio de
+  los adjudicatarios», sólo en la hoja 119.
+- Incluye el agregado del 08/10 (la foto de la costa corregida y la guardia por gravedad).
