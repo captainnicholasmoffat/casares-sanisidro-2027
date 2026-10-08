@@ -521,15 +521,20 @@ C5A = dict(id="cap5a", runhead=RH, html=fig("f_nautica",
 <div class="stand">&Aacute;rea por &aacute;rea: qu&eacute; hay hoy, qu&eacute; proponemos y de d&oacute;nde sale.</div>
 
 <h2><span class="n">5.1</span>C&oacute;mo leer este cap&iacute;tulo</h2>
-<p>Un intendente gobierna todo: salud, seguridad, educaci&oacute;n, transporte, ambiente, obras,
-comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacute;amos.</p>
-<p>Cada &aacute;rea lleva una o dos de cuatro etiquetas que dicen de d&oacute;nde sale lo que propone: <b>fondos nuevos</b>, que pide dinero adicional, costeado en el cap&iacute;tulo 3; <b>reasignaci&oacute;n</b>, que mueve fondos ya presupuestados sin aumentar el gasto total, y dice de d&oacute;nde salen; <b>gesti&oacute;n</b>, que no cuesta dinero porque cambia c&oacute;mo se administra lo que ya se gasta; y <b>gratis</b>, que cuesta cero: registrar, contestar, ordenar.</p>
+<p>Un intendente gobierna todo: salud, seguridad, educaci&oacute;n, transporte, ambiente, obras y comercio. Este cap&iacute;tulo toma cada &aacute;rea y dice qu&eacute; har&iacute;amos.</p>
+<p>Cada &aacute;rea lleva una o dos etiquetas. Dicen de d&oacute;nde sale el dinero de lo que se propone. Hay cuatro:</p>
+<ul class="b">
+<li><b>Fondos nuevos:</b> pide dinero adicional, y su costo est&aacute; en el cap&iacute;tulo 3.</li>
+<li><b>Reasignaci&oacute;n:</b> usa dinero que ya est&aacute; en el presupuesto, sin aumentar el gasto total, y dice de d&oacute;nde sale.</li>
+<li><b>Gesti&oacute;n:</b> no cuesta dinero, porque cambia c&oacute;mo se administra lo que ya se gasta.</li>
+<li><b>Gratis:</b> cuesta cero, como registrar, contestar u ordenar.</li>
+</ul>
 <div class="pull"><p>Las dos propuestas m&aacute;s grandes ya ocupan el 41,4% del gasto flexible. Lo que sigue
 entra en el 58,6% restante, o no cuesta nada.</p></div>
 
 <h2><span class="n">5.2</span>D&oacute;nde va hoy cada peso</h2>
 """ + ex("g", "Ecolog&iacute;a y agua potable juntas no llegan al 1,5% del presupuesto",
-     "Parte del gasto de 2025 que fue a cada &aacute;rea del presupuesto, y cu&aacute;nto es por habitante. Destacadas, ambiente y agua y cloacas.",
+     "Qu&eacute; parte del gasto de 2025 fue a cada &aacute;rea del presupuesto, y cu&aacute;nto es por habitante. Est&aacute;n destacadas ambiente, y agua y cloacas.",
      "ex16.png",
      "Municipio de San Isidro, ejecuci&oacute;n presupuestaria 2025, informe anual. Gasto devengado; por habitante, sobre los 297.282 del Censo 2022.",
      "&laquo;Urbanismo&raquo; y &laquo;Vivienda y urbanismo&raquo; son dos funciones distintas del presupuesto municipal, con sus nombres oficiales.",
@@ -540,46 +545,32 @@ presupuesto son esas dos funciones.</p>
      "Cu&aacute;nto cambi&oacute; de 2024 a 2025 el gasto en cada &aacute;rea, descontada la inflaci&oacute;n.",
      "ex17.png",
      "elaboraci&oacute;n propia sobre la ejecuci&oacute;n presupuestaria trimestral del Municipio, informes anuales 2024 y 2025.",
-     "Se excluyen Transporte, Comercio y Agua potable: cambian de contenido entre los dos a&ntilde;os por reclasificaci&oacute;n contable, no porque haya cambiado el gasto.") + """
+     "No est&aacute;n Transporte, Comercio y Agua potable. De un a&ntilde;o al otro cambi&oacute; lo que se cuenta en cada una, por un cambio en la forma de clasificar. No es que haya cambiado el gasto.") + """
 
 <h2><span class="n">5.3</span>Empleo <span class="tag">Fondos nuevos</span></h2>
 <div class="cols">
-<p>De las veinte funciones en que el propio Municipio divide su gasto, la que se llama
-<span class="sg">Trabajo</span> es la &uacute;ltima: <b>170,3 millones</b>. Menos que Judicial. Menos que
-Control de la gesti&oacute;n p&uacute;blica. El clasificador oficial de San Isidro ordena su propio
-presupuesto de mayor a menor y termina en el trabajo.</p>
+<p>El propio Municipio divide su gasto en veinte funciones. La que se llama <span class="sg">Trabajo</span> es la &uacute;ltima: <b>170,3 millones</b>. Recibe menos que Judicial y menos que Control de la gesti&oacute;n p&uacute;blica. Si se ordena el presupuesto oficial de San Isidro de mayor a menor, termina en el trabajo.</p>
 <p><b>Hoy:</b> 170 millones en Apoyo y Promoci&oacute;n al Empleo, el 0,05% del presupuesto (cuadro
 [[n:dos_partidas]]).</p>
-<p><b>Propuesta:</b> llevar el gasto conjunto en empleo y vivienda a <b>7.730,9 millones anuales en
-r&eacute;gimen</b>, quince veces lo que se gasta hoy, alcanzados en cuatro a&ntilde;os. C&oacute;mo se paga, en el
-cap&iacute;tulo 3 (3.5).</p>
+<p><b>Propuesta:</b> llevar el gasto en empleo y vivienda a <b>7.730,9 millones por a&ntilde;o</b>, cuando funcione completo. Es quince veces lo que se gasta hoy, y se alcanza en cuatro a&ntilde;os. El cap&iacute;tulo 3 explica c&oacute;mo se paga (3.5).</p>
 </div>
 <h3>Qu&eacute; hace hoy el Municipio con esos 170 millones</h3>
 <div class="cols">
-<p>Lo que hace es <span class="sg">intermediar</span>: un portal
-donde empresas privadas publican vacantes, ferias de empleo por barrio, y ayuda a los comercios que
-abren a conseguir personal. Seg&uacute;n el Municipio, <b>131 empresas y alrededor de 600 puestos</b>,
-casi la mitad en gastronom&iacute;a, oficios y ventas.</p>
-<p><b>Es hacer de bolsa de trabajo para terceros.</b> El empleo lo crea y lo paga otro; el Municipio
-acerca las partes. <b>No se encontr&oacute; ninguna cl&aacute;usula
-que ate el gasto propio del Municipio al empleo local.</b></p>
-<p><b>Lo que este programa agrega es lo otro.</b> Usar el presupuesto del propio Municipio &mdash;la obra
-y los servicios que ya paga&mdash; para que los hagan <span class="sg">empresas y cooperativas del
-partido, con gente formada ac&aacute;</span>, y en lo que paga mejor. No reemplaza la intermediaci&oacute;n:
-le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, que es el que financia
-&eacute;l.</p>
+<p>Lo que hace es <span class="sg">poner en contacto</span> a quien busca trabajo con quien lo ofrece. Tiene un portal donde empresas privadas publican puestos. Hace ferias de empleo por barrio. Y ayuda a los comercios que abren a conseguir personal. Seg&uacute;n el Municipio, hay <b>131 empresas y alrededor de 600 puestos</b>. Casi la mitad son de gastronom&iacute;a, oficios y ventas.</p>
+<p><b>Es hacer de bolsa de trabajo para otros.</b> El empleo lo crea y lo paga otro, y el Municipio acerca a las partes. <b>No se encontr&oacute; ninguna regla que obligue a que el gasto del propio Municipio d&eacute; empleo en el partido.</b></p>
+<p><b>Lo que este programa agrega es lo otro.</b> Usa el presupuesto del propio Municipio: la obra y los servicios que ya paga. As&iacute;, esos trabajos los hacen <span class="sg">empresas y cooperativas del partido, con gente formada ac&aacute;</span>. Y apunta a los puestos que mejor pagan. No reemplaza la bolsa de trabajo. Le suma el &uacute;nico empleo sobre el que un intendente decide de verdad: el que paga &eacute;l.</p>
 </div>
-""" + exhead("c", "Hoy hay talleres de empleo, pr&aacute;cticas de Medicina y Veterinaria y 15 pasantes en las fiscal&iacute;as; proponemos que 928 alumnos por a&ntilde;o hagan una pasant&iacute;a paga",
+""" + exhead("c", "Hoy hay talleres de empleo, pr&aacute;cticas de Medicina y Veterinaria y 15 pasantes en las fiscal&iacute;as. Proponemos que 928 alumnos por a&ntilde;o hagan una pasant&iacute;a paga",
              "Lo que el Municipio hace hoy en primer empleo, pasant&iacute;as y pr&aacute;cticas, y lo que propone este programa.",
              key="hoy_propuesta") + """
 <table>
 <colgroup><col style="width:70pt"><col><col></colgroup>
 <tr class="hd"><th></th><th>Hoy</th><th>Lo que proponemos</th></tr>
-<tr><td class="l">Qu&eacute; hay</td><td class="m">Talleres de curr&iacute;culum y un portal de empleo; pr&aacute;cticas de Medicina y Veterinaria sin pago; 15 pasantes pagos en las fiscal&iacute;as.</td><td class="m">Una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, con un a&ntilde;o de pasant&iacute;a paga para cada alumno.</td></tr>
-<tr><td class="l">Cu&aacute;ntos</td><td class="m">El portal muestra 131 empresas y unos 600 puestos; las pr&aacute;cticas no dicen cu&aacute;ntos lugares tienen.</td><td class="m">928 alumnos por a&ntilde;o, y cada uno tiene asegurado su lugar de pasant&iacute;a.</td></tr>
+<tr><td class="l">Qu&eacute; hay</td><td class="m">Talleres de curr&iacute;culum y un portal de empleo. Pr&aacute;cticas de Medicina y Veterinaria, sin pago. 15 pasantes pagos en las fiscal&iacute;as.</td><td class="m">Una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, con un a&ntilde;o de pasant&iacute;a paga para cada alumno.</td></tr>
+<tr><td class="l">Cu&aacute;ntos</td><td class="m">El portal muestra 131 empresas y unos 600 puestos. Las pr&aacute;cticas no dicen cu&aacute;ntos lugares tienen.</td><td class="m">928 alumnos por a&ntilde;o, y cada uno tiene asegurado su lugar de pasant&iacute;a.</td></tr>
 <tr><td class="l">Cu&aacute;nto cobran</td><td class="m">Las pr&aacute;cticas, nada. Los 15 de las fiscal&iacute;as, 747.500 $ por mes, como beca por decreto.</td><td class="m">240.000 $ por mes por 20 horas semanales, con ART y obra social.</td></tr>
 <tr><td class="l">Qu&eacute; hacen</td><td class="m">Rotaciones de Medicina, pr&aacute;ctica en Zoonosis y tareas en las fiscal&iacute;as.</td><td class="m">Construyen los proyectos de inteligencia artificial que necesita el Municipio.</td></tr>
-<tr><td class="l">Despu&eacute;s</td><td class="m">Una gacetilla dice que m&aacute;s de 300 vecinos consiguieron trabajo por el portal; no hay un registro para consultar.</td><td class="m">Siguen como junior en el Municipio, en una empresa del partido o en el semillero, y cualquier vecino puede ver d&oacute;nde termin&oacute; cada camada.</td></tr>
+<tr><td class="l">Despu&eacute;s</td><td class="m">Una gacetilla dice que m&aacute;s de 300 vecinos consiguieron trabajo por el portal. No hay un registro para consultar.</td><td class="m">Siguen como junior en el Municipio, en una empresa del partido o en el semillero, y cualquier vecino puede ver d&oacute;nde termin&oacute; cada camada.</td></tr>
 <tr><td class="l">El Municipio</td><td class="m">Acerca candidatos y empresas.</td><td class="m">Forma a la gente, le da el primer empleo y le compra trabajo a las empresas del partido.</td></tr>
 <tr><td class="l">Las empresas</td><td class="m">Publican avisos. Desde 2018 no se publica d&oacute;nde est&aacute;n las que cobran del Municipio.</td><td class="m">Las que cobran del Municipio toman al menos 75% de gente del partido, y el 20% de cada licitaci&oacute;n va a pymes del partido.</td></tr>
 </table>
@@ -587,103 +578,33 @@ le agrega el &uacute;nico empleo sobre el que un intendente decide de verdad, qu
 775/2026 y 298/2026; nota del Municipio del 3 de septiembre de 2026; Zona Norte Visi&oacute;n, 16 de junio de 2025 y 11 de agosto
 de 2026. El detalle, en las notas del cap&iacute;tulo 5.</p>
 <ol class="n">
-<li><b>Formaci&oacute;n laboral orientada a la demanda real.</b> <b>Proponemos una tecnicatura
-universitaria de dos a&ntilde;os en inteligencia artificial aplicada y datos</b>, de la UNSO, dictada en
-sedes de las seis zonas. Nace en el <b>Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio La
-Cava</b>, de B&eacute;ccar, donde ya funciona <b>La Cava 4.0</b>. <b>Abre inscripci&oacute;n cada seis meses:</b> el primer a&ntilde;o es cursada y el segundo, dos pasant&iacute;as de seis meses en proyectos reales, la primera en el Municipio y la segunda en una empresa del partido. La pr&aacute;ctica la da el centro de formaci&oacute;n, con docentes que paga la Provincia, y la UNSO dicta sus materias, con docentes que designa ella, y firma las pasant&iacute;as. Es una carrera de verdad, con materias que se aprueban cada a&ntilde;o, y el t&iacute;tulo se entrega al terminar el segundo: el pasante sigue siendo estudiante regular todo ese a&ntilde;o, que es lo que exige la Ley 26.427.</li>
-<li><b>Proponemos la obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4,
-ejecutados por cooperativas de vecinos, emplean gente del barrio.</li>
-<li><b>Proponemos la intermediaci&oacute;n laboral dentro del programa formativo y no en una oficina aparte.</b> El tutor que vincula al egresado con el empleador es parte de la formaci&oacute;n: es la pieza que
-distingue a los programas que funcionan de los que entregan un certificado y sueltan a la persona. El
-tutor es uno de sus profesores, el que mejor lo conoce, y por eso es quien lo vincula con el empleador; ese
-papel, junto con el sueldo, es lo que atrae a gente capaz a ense&ntilde;ar. Con un seguimiento de inserci&oacute;n que cualquier vecino puede consultar, porque hoy ese dato aparece suelto en una
-gacetilla y no en un registro.</li>
-<li><b>Y proponemos que el Municipio sea el primer escal&oacute;n: el primer empleo del egresado, con prioridad.</b> La
-plataforma del cap&iacute;tulo 4, la operaci&oacute;n de cada &aacute;rea, la anal&iacute;tica de seguridad, las
-habilitaciones, los turnos de salud: todo eso lo hacen equipos que se contratan ac&aacute;, con tres
-reglas. <b>Los egresados tienen prioridad para ocupar la mayor cantidad posible de esos puestos</b>, y su
-capacidad la avala su tutor, sin pasar por ning&uacute;n panel. <b>Para contratar a alguien de afuera
-en lugar de un egresado, hay que demostrar ante un panel que ning&uacute;n egresado tiene la capacidad
-t&eacute;cnica</b>: la carga de la prueba est&aacute; en traer gente de afuera. Y <b>cada alumno vota a su
-tutor</b> entre sus profesores; el profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo recibe una
-menci&oacute;n y el incentivo de la partida de incentivo docente, con un tope de tutorados por profesor.
-<b>A las tres reglas se suma una cuarta, para todo contrato del Municipio</b> &mdash;obra, servicios,
-desarrollos y la obra que ejecutan las asociaciones vecinales&mdash;: <b>el 75% del personal tiene que vivir en
-el partido hace al menos un a&ntilde;o</b>, y dentro de ese m&iacute;nimo los egresados van primero. Quien quiera traer
-m&aacute;s gente de afuera de lo que el m&iacute;nimo permite, lo justifica ante el mismo panel. La empresa que trabaja
-para el Municipio pregunta d&oacute;nde consigue gente, y la respuesta es la que formamos. <span class="sg">Formar
-sin decir d&oacute;nde se trabaja despu&eacute;s es la mitad de una pol&iacute;tica.</span></li>
+<li><b>Formaci&oacute;n para los trabajos que de verdad se buscan.</b> <b>Proponemos una tecnicatura universitaria de dos a&ntilde;os en inteligencia artificial aplicada y datos</b>, de la UNSO. Se dicta en sedes de las seis zonas. Nace en el <b>Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio La Cava</b>, de B&eacute;ccar, donde ya funciona <b>La Cava 4.0</b>. <b>Abre la inscripci&oacute;n cada seis meses.</b> El primer a&ntilde;o es de cursada. El segundo a&ntilde;o son dos pasant&iacute;as de seis meses en proyectos reales: la primera en el Municipio y la segunda en una empresa del partido. La pr&aacute;ctica la da el centro de formaci&oacute;n, con docentes que paga la Provincia. La UNSO dicta sus materias, con docentes que elige ella, y firma las pasant&iacute;as. Es una carrera de verdad, con materias que se aprueban cada a&ntilde;o. El t&iacute;tulo se entrega al terminar el segundo a&ntilde;o. As&iacute;, el pasante sigue siendo alumno regular todo ese a&ntilde;o, como exige la Ley 26.427.</li>
+<li><b>Proponemos la obra vecinal como pol&iacute;tica de empleo.</b> Los 28.908 millones del cap&iacute;tulo 4, en obras que hacen cooperativas de vecinos, dan trabajo a gente del barrio.</li>
+<li><b>Proponemos que la b&uacute;squeda de trabajo sea parte de la formaci&oacute;n, y no de una oficina aparte.</b> El tutor que conecta al egresado con el empleador es parte de la formaci&oacute;n. Es lo que diferencia a los programas que funcionan de los que entregan un certificado y dejan sola a la persona. El tutor es uno de sus profesores, el que mejor lo conoce. Por eso es quien lo conecta con el empleador. Ese papel, junto con el sueldo, es lo que atrae a gente capaz a ense&ntilde;ar. Y cualquier vecino puede consultar d&oacute;nde consigui&oacute; trabajo cada egresado. Hoy ese dato aparece suelto en una gacetilla, y no en un registro.</li>
+<li><b>Y proponemos que el Municipio sea el primer escal&oacute;n: el primer empleo del egresado, con prioridad.</b> Hay muchos trabajos que hacen equipos contratados ac&aacute;. Por ejemplo, la plataforma del cap&iacute;tulo 4, el an&aacute;lisis de video de seguridad, las habilitaciones y los turnos de salud. Para esos equipos hay tres reglas. <b>Primera: los egresados tienen prioridad para ocupar la mayor cantidad posible de esos puestos.</b> Su capacidad la garantiza su tutor, sin pasar por ning&uacute;n panel. <b>Segunda: para contratar a alguien de afuera en lugar de un egresado, hay que demostrar ante un panel que ning&uacute;n egresado tiene la capacidad t&eacute;cnica.</b> El que tiene que probar algo es el que quiere traer gente de afuera. <b>Tercera: cada alumno elige a su tutor entre sus profesores.</b> El profesor cuyos alumnos m&aacute;s se reciben y consiguen trabajo recibe una menci&oacute;n y el incentivo de la partida de incentivo docente. Cada profesor tiene un m&aacute;ximo de alumnos a su cargo. <b>Y hay una cuarta regla, para todo contrato del Municipio</b>: obra, servicios, desarrollos y la obra que hacen las asociaciones vecinales. <b>El 75% del personal tiene que vivir en el partido hace al menos un a&ntilde;o</b>, y dentro de ese m&iacute;nimo los egresados van primero. Quien quiera traer m&aacute;s gente de afuera de lo que permite el m&iacute;nimo, lo tiene que justificar ante el mismo panel. La empresa que trabaja para el Municipio pregunta d&oacute;nde consigue gente, y la respuesta es: la que formamos. <span class="sg">Formar sin decir d&oacute;nde se trabaja despu&eacute;s es la mitad de una pol&iacute;tica.</span></li>
 </ol>
-<p class="cap"><b>De d&oacute;nde sale el 75%:</b> es el m&iacute;nimo, con un a&ntilde;o de residencia, de las ordenanzas de
-General Guido (9/2022) y San Andr&eacute;s de Giles (2279/2020); Neuqu&eacute;n (Ley 2750) y Santa Cruz (Ley 2743) exigen
-70% en su obra p&uacute;blica. La Corte Suprema anul&oacute; cupos provinciales de residentes (Argenova, 2010), y la
-justicia bonaerense, una preferencia local aplicada sin reglas previas (Wayro contra Olavarr&iacute;a, 2022): por
-eso el m&iacute;nimo no es el 100%, pide un a&ntilde;o y no cinco, admite excepciones ante el panel y va en cada pliego
-antes del llamado. El texto est&aacute; en la Ordenanza X del anexo.</p>
+<p class="cap"><b>De d&oacute;nde sale el 75%:</b> es el m&iacute;nimo de las ordenanzas de General Guido (9/2022) y San Andr&eacute;s de Giles (2279/2020), con un a&ntilde;o de residencia. Neuqu&eacute;n (Ley 2750) y Santa Cruz (Ley 2743) exigen 70% en su obra p&uacute;blica. La Corte Suprema anul&oacute; cupos provinciales para residentes (Argenova, 2010). Y la justicia bonaerense anul&oacute; una preferencia local que se aplic&oacute; sin reglas previas (Wayro contra Olavarr&iacute;a, 2022). Por eso el m&iacute;nimo no es el 100%, y pide un a&ntilde;o de residencia, no cinco. Tambi&eacute;n admite excepciones ante el panel, y va en cada pliego antes del llamado. El texto est&aacute; en la Ordenanza X del anexo.</p>
 <div class="callout g">
 <div class="clabel">La Cava 4.0, y por qu&eacute; el diagn&oacute;stico y la propuesta caen en la misma cuadra</div>
-<p>El cap&iacute;tulo 4 se&ntilde;ala un conglomerado de nueve radios censales dentro de la fracci&oacute;n
-32, en B&eacute;ccar: 8.749 habitantes y el peor NBI del partido. <b>Ese conglomerado coincide con el barrio La Cava.</b> Su punto
-central, seg&uacute;n OpenStreetMap, queda a 136 metros del centro del pol&iacute;gono que dibuja el
-mapa, sobre una superficie de 0,28 km&sup2;.</p>
-<p>No hace falta inferirlo: <b>el centro se llama Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio
-La Cava.</b> Lleva el barrio en el nombre. Y ah&iacute; funciona <b>La Cava 4.0</b>, que articula
-secundario t&eacute;cnico, formaci&oacute;n profesional y educaci&oacute;n superior con empresas,
-universidades y organizaciones del barrio, bajo la idea de que la actividad tecnol&oacute;gica sea el
-rasgo identitario del lugar. <span class="sg">El punto que el diagn&oacute;stico marca como el m&aacute;s
-cr&iacute;tico del distrito es exactamente donde ya hay algo funcionando.</span></p>
-<p><b>Y el Concejo Deliberante ya lo reconoci&oacute;.</b> Declar&oacute; de inter&eacute;s, por unanimidad, &laquo;La Cava 4.0&raquo;, el
-proyecto de formaci&oacute;n en software, rob&oacute;tica e inteligencia artificial del Centro de Formaci&oacute;n Laboral N&ordm; 404 de
-La Cava, y dispuso un reconocimiento a su director, Jos&eacute; Luis Casares (Resoluci&oacute;n N&ordm; 26, sesi&oacute;n del 6 de agosto de
-2025). <span class="sg">Es un antecedente propio: la formaci&oacute;n que propone este programa parte de ah&iacute; y la actualiza
-para lo que la inteligencia artificial cambi&oacute; en el trabajo.</span></p>
-<p><b>De qui&eacute;n depende hoy.</b> El CFL 404 no es municipal: tiene convenio con la CGT Regional Zona Norte y
-depende del Instituto Provincial de Formaci&oacute;n Laboral del Ministerio de Trabajo bonaerense; los cargos
-docentes los paga la Provincia, por la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que es quien emite
-los certificados. El Municipio no lo financia.</p>
-<p><b>Lo que proponemos.</b> <span class="sg">Recursos municipales para replicar el modelo donde hoy no hay
-nada</span>, con la regla con que la Provincia abre centros nuevos: <b>el Municipio firma como entidad
-conveniante de las sedes nuevas y pone edificio, permisos, seguro y equipamiento; la Provincia paga los
-cargos docentes</b>, y el curso es gratis. Si no los paga, los paga el Municipio, por matr&iacute;cula
-indirecta. El t&iacute;tulo lo da la UNSO; el centro da la pr&aacute;ctica. <b>Los tres millones por persona son el
-costo si paga todo el Municipio; si la Provincia paga los cargos docentes, con el mismo dinero se forma a
-m&aacute;s gente.</b></p>
+<p>El cap&iacute;tulo 4 marca un grupo de nueve radios censales pegados, dentro de la fracci&oacute;n 32, en B&eacute;ccar. Tienen 8.749 habitantes y el peor NBI del partido. <b>Ese grupo coincide con el barrio La Cava.</b> El punto central del barrio, seg&uacute;n OpenStreetMap, queda a 136 metros del centro de la zona que dibuja el mapa. Esa zona tiene 0,28 km&sup2;.</p>
+<p>No hace falta adivinarlo: <b>el centro se llama Centro de Formaci&oacute;n Laboral N&ordm; 404 Barrio La Cava.</b> Lleva el barrio en el nombre. Y ah&iacute; funciona <b>La Cava 4.0</b>. Une la secundaria t&eacute;cnica, la formaci&oacute;n profesional y la educaci&oacute;n superior con empresas, universidades y organizaciones del barrio. La idea es que la tecnolog&iacute;a sea lo que identifique al lugar. <span class="sg">El punto que el diagn&oacute;stico marca como el m&aacute;s cr&iacute;tico del partido es justo donde ya hay algo funcionando.</span></p>
+<p><b>Y el Concejo Deliberante ya lo reconoci&oacute;.</b> Declar&oacute; de inter&eacute;s, por unanimidad, &laquo;La Cava 4.0&raquo;, el proyecto de formaci&oacute;n en software, rob&oacute;tica e inteligencia artificial del Centro de Formaci&oacute;n Laboral N&ordm; 404 de La Cava. Y dispuso un reconocimiento a su director, Jos&eacute; Luis Casares (Resoluci&oacute;n N&ordm; 26, sesi&oacute;n del 6 de agosto de 2025). <span class="sg">Es un antecedente propio. La formaci&oacute;n que propone este programa parte de ah&iacute;, y la pone al d&iacute;a con lo que la inteligencia artificial cambi&oacute; en el trabajo.</span></p>
+<p><b>De qui&eacute;n depende hoy.</b> El Centro de Formaci&oacute;n Laboral 404 no es municipal. Tiene convenio con la CGT Regional Zona Norte y depende del Instituto Provincial de Formaci&oacute;n Laboral, del Ministerio de Trabajo bonaerense. Los cargos docentes los paga la Provincia, a trav&eacute;s de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que es la que da los certificados. El Municipio no lo financia.</p>
+<p><b>Lo que proponemos.</b> <span class="sg">Poner recursos del Municipio para repetir el modelo donde hoy no hay nada.</span> Se hace con la regla con la que la Provincia abre centros nuevos. <b>El Municipio firma el convenio de cada sede nueva y pone el edificio, los permisos, el seguro y el equipamiento. La Provincia paga los cargos docentes</b>, y el curso es gratis. Si la Provincia no los paga, los paga el Municipio, por matr&iacute;cula indirecta. El t&iacute;tulo lo da la UNSO, y el centro da la pr&aacute;ctica. <b>Los tres millones por persona son el costo si paga todo el Municipio. Si la Provincia paga los cargos docentes, con el mismo dinero se forma a m&aacute;s gente.</b></p>
 </div>
 
 <h3>Qu&eacute; se ense&ntilde;a, y por qu&eacute; cambia</h3>
 <div class="cols">
-<p><b>El 4.0 de 2015 era f&aacute;brica. El de hoy es software.</b> Cuando se acu&ntilde;&oacute; la
-expresi&oacute;n, industria 4.0 significaba sensores, automatizaci&oacute;n y manufactura. Formar en eso
-hoy es formar para una demanda que se contrae.</p>
-<p><b>Y el propio centro ya empez&oacute; a girar.</b> Lanz&oacute; quince cursos de inform&aacute;tica
-bajo el paraguas de la econom&iacute;a del conocimiento, tiene un &aacute;rea de inform&aacute;tica con un
-curso de programador, y firm&oacute; un convenio de colaboraci&oacute;n t&eacute;cnica y
-acad&eacute;mica con la <b>Facultad de Ingenier&iacute;a de la UBA</b>.
-</p>
-<p><span class="sg">Proponemos acompa&ntilde;ar con presupuesto algo que la instituci&oacute;n ya
-decidi&oacute; sola.</span></p>
-<p><b>La decisi&oacute;n no es ideol&oacute;gica, es de mercado.</b> Ense&ntilde;ar un oficio para el que
-no hay empleador no es formaci&oacute;n laboral: es ocupar el tiempo de alguien que necesita trabajar.
-Proponemos que el eje pase a ser <span class="sg">inteligencia artificial aplicada, datos y servicios digitales</span>,
-que es donde hay demanda ahora.</p>
-<p><b>Y cuesta much&iacute;simo menos.</b> Un taller de fabricaci&oacute;n necesita m&aacute;quinas,
-espacio, seguridad y mantenimiento. Esto necesita equipos livianos y conexi&oacute;n. Con lo que sale una
-sola m&aacute;quina herramienta se equipa un aula entera.</p>
-<p><b>Adem&aacute;s desata del territorio.</b> Un torno ata a quien lo opera al lugar donde est&aacute; el
-torno. Un cliente remoto no pregunta de d&oacute;nde se factura. Para un barrio aislado, eso no es un detalle
-t&eacute;cnico: es la diferencia entre mejorar el barrio y poder
-trabajar desde &eacute;l.</p>
+<p><b>El &laquo;4.0&raquo; de 2015 era f&aacute;brica. El de hoy es software.</b> Cuando apareci&oacute; la expresi&oacute;n &laquo;industria 4.0&raquo;, quer&iacute;a decir sensores, automatizaci&oacute;n y f&aacute;bricas. Formar en eso hoy es formar para trabajos que cada vez se buscan menos.</p>
+<p><b>Y el propio centro ya empez&oacute; a cambiar.</b> Lanz&oacute; quince cursos de inform&aacute;tica dentro de la econom&iacute;a del conocimiento. Tiene un &aacute;rea de inform&aacute;tica con un curso de programador. Y firm&oacute; un convenio de colaboraci&oacute;n t&eacute;cnica y acad&eacute;mica con la <b>Facultad de Ingenier&iacute;a de la UBA</b>. <span class="sg">Proponemos acompa&ntilde;ar con presupuesto algo que la instituci&oacute;n ya decidi&oacute; sola.</span></p>
+<p><b>La decisi&oacute;n no es ideol&oacute;gica: depende de qu&eacute; trabajos se buscan.</b> Ense&ntilde;ar un oficio para el que no hay quien contrate no es formaci&oacute;n laboral. Es ocupar el tiempo de alguien que necesita trabajar. Proponemos que el centro de la formaci&oacute;n pase a ser <span class="sg">la inteligencia artificial aplicada, los datos y los servicios digitales</span>. Ah&iacute; est&aacute; hoy la demanda.</p>
+<p><b>Y cuesta much&iacute;simo menos.</b> Un taller de fabricaci&oacute;n necesita m&aacute;quinas, espacio, seguridad y mantenimiento. Esto necesita equipos livianos y conexi&oacute;n. Con lo que cuesta una sola m&aacute;quina herramienta se equipa un aula entera.</p>
+<p><b>Adem&aacute;s, no ata a nadie a un lugar.</b> Un torno ata a quien lo maneja al lugar donde est&aacute; el torno. Un cliente a distancia no pregunta desde d&oacute;nde se le factura. Para un barrio aislado, eso no es un detalle t&eacute;cnico. Es la diferencia entre mejorar el barrio y poder trabajar desde &eacute;l.</p>
 </div>
 <h3>Qu&eacute; se estudia: un a&ntilde;o com&uacute;n y cuatro orientaciones</h3>
 <div class="cols">
-<p><b>Proponemos un primer a&ntilde;o com&uacute;n</b>, equivalente a las certificaciones profesionales de
-arquitectura de inteligencia artificial, y <b>cuatro orientaciones en el segundo</b>, cada una hacia uno
-de los puestos que m&aacute;s crecen seg&uacute;n LinkedIn en 2026 (cuadro [[n:estudia]]). Para quien quiera
-fundar su empresa, el camino es el semillero. El plan de materias se arma con la UNSO.</p>
-<p><b>La lista es de Estados Unidos, y la formaci&oacute;n apunta tambi&eacute;n al trabajo remoto:</b> en
-tres de las cuatro orientaciones, m&aacute;s de un cuarto de los puestos es remoto. All&aacute; los ingenieros
-en inteligencia artificial entran con una mediana de 3,7 a&ntilde;os de experiencia laboral; <span
-class="sg">los nuestros entran como juniors, y la pasant&iacute;a achica la distancia.</span></p>
+<p><b>Proponemos un primer a&ntilde;o igual para todos.</b> Equivale a las certificaciones profesionales de arquitectura de inteligencia artificial. <b>En el segundo a&ntilde;o hay cuatro orientaciones.</b> Cada una apunta a uno de los puestos que m&aacute;s crecen seg&uacute;n LinkedIn en 2026 (cuadro [[n:estudia]]). Para quien quiera fundar su empresa, el camino es el semillero. El plan de materias se arma con la UNSO.</p>
+<p><b>La lista es de Estados Unidos, y la formaci&oacute;n apunta tambi&eacute;n al trabajo a distancia.</b> En tres de las cuatro orientaciones, m&aacute;s de un cuarto de los puestos es a distancia. All&aacute;, la mitad de los ingenieros en inteligencia artificial entra con m&aacute;s de 3,7 a&ntilde;os de experiencia. <span class="sg">Los nuestros entran como juniors, y la pasant&iacute;a achica la diferencia.</span></p>
 </div>
 """ + exhead("c", "Un a&ntilde;o com&uacute;n y cuatro orientaciones, hacia los puestos que m&aacute;s crecen",
              "Qu&eacute; se estudia cada a&ntilde;o y a qu&eacute; puesto apunta cada orientaci&oacute;n, con su lugar entre los 25 que m&aacute;s crecen en Estados Unidos.",
@@ -691,10 +612,10 @@ class="sg">los nuestros entran como juniors, y la pasant&iacute;a achica la dist
 <table>
 <colgroup><col style="width:112pt"><col><col style="width:118pt"></colgroup>
 <tr class="hd"><th>A&ntilde;o y orientaci&oacute;n</th><th>Qu&eacute; se estudia</th><th>Puesto y lugar</th></tr>
-<tr class="hi"><td class="l">Primer a&ntilde;o, com&uacute;n</td><td class="m">Arquitectura de agentes; programar con asistentes de c&oacute;digo; dise&ntilde;o de instrucciones para modelos; dise&ntilde;o de herramientas y conexi&oacute;n entre sistemas, con protocolos abiertos como MCP; manejo de contexto; evaluar y validar lo que produce la inteligencia artificial; e ingl&eacute;s</td><td class="m">Lo que piden las certificaciones profesionales de arquitectura de IA</td></tr>
+<tr class="hi"><td class="l">Primer a&ntilde;o, com&uacute;n</td><td class="m">Arquitectura de agentes. Programar con asistentes de c&oacute;digo. Dise&ntilde;o de instrucciones para modelos. Dise&ntilde;o de herramientas y conexi&oacute;n entre sistemas, con protocolos abiertos como MCP. Manejo de contexto. Evaluar y validar lo que produce la inteligencia artificial. Ingl&eacute;s.</td><td class="m">Lo que piden las certificaciones profesionales de arquitectura de IA</td></tr>
 <tr><td class="l">Desarrollo con IA</td><td class="m">Aplicaciones sobre modelos: LangChain, recuperaci&oacute;n aumentada (RAG), PyTorch</td><td class="m">Ingeniero en IA, 1&ordm;</td></tr>
 <tr><td class="l">IA en organizaciones</td><td class="m">Elegir modelos de lenguaje, ponerlos a funcionar en un &aacute;rea o una empresa y mantenerlos</td><td class="m">Consultor en IA, 2&ordm;</td></tr>
-<tr><td class="l">Datos para IA</td><td class="m">Planillas, bases de datos y SQL; calidad y etiquetado; los documentos de los que la IA contesta y las pruebas de que contesta bien; datos personales (Ley 25.326)</td><td class="m">Anotador y curador de datos, 4&ordm;</td></tr>
+<tr><td class="l">Datos para IA</td><td class="m">Planillas, bases de datos y SQL. Calidad y etiquetado de datos. Los documentos de los que la IA saca sus respuestas, y las pruebas de que contesta bien. Datos personales (Ley 25.326).</td><td class="m">Anotador y curador de datos, 4&ordm;</td></tr>
 <tr><td class="l">Equipos e infraestructura</td><td class="m">Instalar, cablear y operar equipos y centros de datos</td><td class="m">T&eacute;cnico de centros de datos, 17&ordm;</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> LinkedIn, &laquo;Jobs on the Rise 2026&raquo;, 7 de enero de 2026: los 25 puestos
@@ -702,76 +623,34 @@ cuyas contrataciones m&aacute;s crecieron en Estados Unidos entre 2023 y julio d
 """ + fig("f_tecnicatura", "La tecnicatura en inteligencia artificial. Ilustraci&oacute;n.") + """
 <h3>Ense&ntilde;ar IA sin acceso a IA es ense&ntilde;ar oficios sin herramientas</h3>
 <div class="cols">
-<p><b>Proponemos que el Municipio d&eacute; acceso gratuito a inteligencia artificial de nivel profesional</b> &mdash;la misma
-que usan las empresas&mdash; a todos los alumnos y docentes del programa, y a los vecinos en los centros
-de acceso. Porque el que puede pagar una suscripci&oacute;n aprende y el que no, mira: eso reproduce adentro
-del aula la desigualdad que el cap&iacute;tulo 1 documenta afuera, y la vuelve peor, porque el que ya
-est&aacute; atr&aacute;s sale de la carrera sin haber tocado la herramienta. <b>El acceso se trata como
-infraestructura, no como un beneficio.</b> <span class="sg">Es tan importante como el agua y como internet</span>: sin eso, lo que se dicta es una
-clase sobre algo, no una formaci&oacute;n en algo.</p>
-<p><b>Dos v&iacute;as, y las dos son baratas.</b> Centros con equipamiento en las sedes vecinales y
-culturales que ya existen, para quien no tiene computadora. Y escritorio remoto en la nube, para que una
-m&aacute;quina vieja alcance: el trabajo ocurre del otro lado y en la casa s&oacute;lo hace falta
-pantalla y conexi&oacute;n. <b>Y primero se mide la conectividad</b> en La Cava y en Boulogne, que hoy
-no est&aacute; relevada: es el relevamiento que propone la secci&oacute;n 5.4.</p>
-<p><b>Lo que se licita es el servicio de inteligencia artificial: el acceso a los modelos.</b> Primero la
-capacidad &mdash;las universidades del partido prueban cu&aacute;l rinde mejor&mdash;, despu&eacute;s el
-costo. Y para cada herramienta, la opci&oacute;n &oacute;ptima en calidad y precio, sea un servicio, c&oacute;digo abierto o algo propio:
-lo que ya existe bien hecho no se fabrica, y nada de precios de lista caros. La implementaci&oacute;n y el soporte los toman
-empresas del partido, con el mismo criterio de proximidad del resto del programa.</p>
+<p><b>Proponemos que el Municipio d&eacute; acceso gratis a inteligencia artificial de nivel profesional</b>, la misma que usan las empresas. Es para todos los alumnos y docentes del programa, y para los vecinos en los centros de acceso. El que puede pagar una suscripci&oacute;n aprende, y el que no puede, mira. As&iacute;, adentro del aula se repite la desigualdad que el cap&iacute;tulo 1 muestra afuera. Y se vuelve peor, porque el que ya est&aacute; atr&aacute;s termina la carrera sin haber usado la herramienta. <b>El acceso se trata como infraestructura, no como un beneficio.</b> <span class="sg">Es tan importante como el agua y como internet.</span> Sin acceso, lo que se da es una clase sobre algo, no una formaci&oacute;n en algo.</p>
+<p><b>Hay dos caminos, y los dos son baratos.</b> Uno son centros con equipos en las sedes vecinales y culturales que ya existen, para quien no tiene computadora. El otro es un escritorio remoto en la nube, para que alcance con una computadora vieja. El trabajo se hace del otro lado, y en la casa s&oacute;lo hace falta una pantalla y conexi&oacute;n. <b>Y primero se mide la conexi&oacute;n a internet</b> en La Cava y en Boulogne, que hoy nadie midi&oacute;. Es el relevamiento que propone la secci&oacute;n 5.4.</p>
+<p><b>Lo que se licita es el servicio de inteligencia artificial: el acceso a los modelos.</b> Primero se mira la capacidad, y las universidades del partido prueban cu&aacute;l rinde mejor. Despu&eacute;s se mira el costo. Para cada herramienta se elige la mejor opci&oacute;n en calidad y precio. Puede ser un servicio, un programa de c&oacute;digo abierto o algo propio. Lo que ya existe bien hecho no se fabrica de nuevo, y no se pagan precios de lista caros. La instalaci&oacute;n y el soporte los hacen empresas del partido, con el mismo criterio de cercan&iacute;a del resto del programa.</p>
 </div>
 
 <div class="callout a">
 <div class="clabel">Lo que la inteligencia artificial le hace al empleo, dicho sin adornos</div>
-<p><b>No desaparecen los puestos: sube la vara de entrada.</b> Saber usar estas herramientas pas&oacute;
-de ventaja a requisito. Lo que se destruye en el medio es lo que no se adapt&oacute;, no la
-ocupaci&oacute;n. Y pasa r&aacute;pido, en a&ntilde;os y no en d&eacute;cadas, que es lo que vuelve
-urgente formar ahora.</p>
-<p><b>La otra mitad es que la demanda crece</b>, porque aparecieron trabajos que antes no cerraban. Un
-municipio desarrollando su propia plataforma era impensable hace cinco a&ntilde;os; una
-verduler&iacute;a con su aplicaci&oacute;n, tambi&eacute;n.</p>
-<p><b>Y el perfil cambi&oacute;, que es lo que le sirve a este programa.</b> Hasta hace poco, para
-programar hac&iacute;an falta a&ntilde;os de formaci&oacute;n t&eacute;cnica. Ese filtro dejaba afuera a
-mucha gente creativa, o que entend&iacute;a de verdad lo que necesita un comercio o un barrio, pero no
-ten&iacute;a esos a&ntilde;os de estudio. Hoy la inteligencia artificial escribe buena parte del
-c&oacute;digo: lo que hace falta es entender el problema y saber pedir la soluci&oacute;n. <span
-class="sg">Esa puerta se abri&oacute;, y es exactamente la gente que este programa forma.</span></p>
-<p><b>Por eso el egresado no sale a competir por un puesto de entrada.</b> Sale con la plataforma del
-cap&iacute;tulo 4 en producci&oacute;n, los m&oacute;dulos que construy&oacute; funcionando, las
-auditor&iacute;as hechas y el t&iacute;tulo de la UNSO. <span class="sg">El modelo es aprender
-construyendo</span>, no formarse primero y trabajar despu&eacute;s.</p>
+<p><b>No desaparecen los puestos: se pide m&aacute;s para entrar.</b> Saber usar estas herramientas pas&oacute; de ser una ventaja a ser un requisito. Lo que se pierde en el camino es lo que no se adapt&oacute;, no el oficio. Y pasa r&aacute;pido, en a&ntilde;os y no en d&eacute;cadas. Por eso es urgente formar ahora.</p>
+<p><b>La otra mitad es que la demanda crece</b>, porque aparecieron trabajos que antes no conven&iacute;an. Hace cinco a&ntilde;os era impensable que un municipio hiciera su propia plataforma. Tambi&eacute;n era impensable una verduler&iacute;a con su propia aplicaci&oacute;n.</p>
+<p><b>Y cambi&oacute; el tipo de persona que se busca, y eso le sirve a este programa.</b> Hasta hace poco, para programar hac&iacute;an falta a&ntilde;os de formaci&oacute;n t&eacute;cnica. Eso dejaba afuera a mucha gente creativa, o que entend&iacute;a de verdad lo que necesita un comercio o un barrio, pero no ten&iacute;a esos a&ntilde;os de estudio. Hoy la inteligencia artificial escribe buena parte del c&oacute;digo. Lo que hace falta es entender el problema y saber pedir la soluci&oacute;n. <span class="sg">Esa puerta se abri&oacute;, y esa es justo la gente que este programa forma.</span></p>
+<p><b>Por eso el egresado no sale a competir por un puesto de entrada.</b> Sale con la plataforma del cap&iacute;tulo 4 funcionando y con las partes que construy&oacute; en uso. Sale con las auditor&iacute;as hechas y con el t&iacute;tulo de la UNSO. <span class="sg">La idea es aprender haciendo</span>, y no formarse primero y trabajar despu&eacute;s.</p>
 </div>
 
 <h3>El segundo a&ntilde;o: la pasant&iacute;a</h3>
 <div class="cols">
-<p><b>Proponemos que todos tengan lugar.</b> La ley no permite obligar a nadie a hacer una pasant&iacute;a (art&iacute;culo 2), as&iacute; que lo que el programa garantiza es el lugar: cada uno de los 928 alumnos del a&ntilde;o puede hacer el segundo como pasante, con las condiciones de la Ley 26.427: <b>240.000 $ por mes</b> &mdash;el sueldo de la categor&iacute;a de ingreso municipal, proporcional a veinte horas&mdash;, <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>, durante doce meses en <b>dos tramos de seis</b>, con ART y cobertura de salud. La ley admite pasant&iacute;as de dos a doce meses (art&iacute;culo 13), y cada tramo lleva su convenio y su acuerdo individual, que firma la UNSO. <b>El primer tramo lo paga el &aacute;rea del Municipio</b> para la que trabaja el pasante, de su propio presupuesto; <b>el segundo, la empresa</b>.</p><p><b>Por qu&eacute; con la UNSO.</b> La Ley 26.427 incluye a la formaci&oacute;n profesional (art&iacute;culo 1), pero en la Provincia la excluye una resoluci&oacute;n, la 5356/24 de la Direcci&oacute;n General de Cultura y Educaci&oacute;n, que s&oacute;lo le da pr&aacute;cticas que no se pagan. Como estudiantes de una carrera universitaria, la ley cubre a los alumnos sin depender de esa resoluci&oacute;n,
-y <b>la UNSO ya tiene su reglamento de pasant&iacute;as en marcha desde 2025</b>, con pasant&iacute;as pagas en pymes del
-partido: el programa se apoya en &eacute;l.</p><p><b>Proponemos, en paralelo, que el Municipio le pida a la Provincia que habilite la pasant&iacute;a en la formaci&oacute;n profesional</b>: la ley lo permite, y su reglamentaci&oacute;n le da a la Provincia esa llave (art&iacute;culo 13 de la Resoluci&oacute;n Conjunta 825/2009 y 338/2009). No es una idea nueva: <b>Rauch, Olavarr&iacute;a, Necochea y Las Flores tienen una tecnicatura de la UNICEN por convenio con el municipio, y Chivilcoy, Escobar y Z&aacute;rate, una de la UTN en espacios municipales</b>; Rauch, Necochea y Chivilcoy la pagan con fondos propios. El Municipio paga la de la UNSO dentro de los 3 millones por persona.</p><p><b>Quien no termin&oacute; el secundario.</b> La universidad pide el secundario completo, o m&aacute;s de 25 a&ntilde;os y aprobar sus evaluaciones de ingreso. Quien no lo tiene y es menor de 25 hace el segundo a&ntilde;o como pr&aacute;ctica profesionalizante, con una <b>beca municipal igual a la asignaci&oacute;n del pasante, 240.000 $ por mes</b>, y termina el secundario por el Plan FinEs mientras cursa.</p>
-<p><b>Los pasantes trabajan s&oacute;lo en proyectos nuevos:</b> construir, automatizar, relevar datos que hoy
-no existen. <b>Nunca hacen tareas de la planta ni cubren vacantes</b>: la ley lo proh&iacute;be (art&iacute;culo 12),
-y si pasara, la pasant&iacute;a se convertir&iacute;a en empleo por tiempo indeterminado (art&iacute;culo 19). <span
-class="sg">La pasant&iacute;a es formativa, no estructural</span>: si un a&ntilde;o no hubiera pasantes, el Municipio
-funcionar&iacute;a igual. La operaci&oacute;n de todos los d&iacute;as la sostienen los juniors y la planta reasignada. Entre esos proyectos, ayudan a cada asociaci&oacute;n a armar los m&oacute;dulos de su espacio en la inteligencia artificial del Municipio (4.11).</p>
-<p><b>D&oacute;nde.</b> En el Municipio entran como m&aacute;ximo 556 pasantes: el 7% de los 7.946 cargos del presupuesto 2026, que es el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. El tope se cuenta sobre los pasantes en curso, igual que los supervisores, uno cada diez pasantes, que tienen que estar presentes todo el horario. Con seis meses cada uno, <b>hay 464 a la vez</b>, y los proyectos de las &aacute;reas, la plataforma y los dispositivos tienen lugar para 467 (cuadro [[n:proyectos]]). <b>La segunda mitad es en una empresa del partido o una contratista del Municipio</b>, con la misma regla y pagada por ella, por un convenio marco con la C&aacute;mara de Comercio y Servicios del Partido de San Isidro &mdash;en su estatuto, C&aacute;mara del Comercio e Industria de San Isidro&mdash; y con las c&aacute;maras de Boulogne y de B&eacute;ccar. Las empresas tambi&eacute;n tienen tope: uno cada diez empleados, o el 7% si tienen m&aacute;s de doscientos. Para 464 a la vez hacen falta empresas con entre 4.640 y 6.629 empleados: <b>del 5% al 7% de los 93.071 puestos privados registrados del partido</b>.</p><p><b>Si a alguien no le toca lugar en la segunda mitad.</b> Primero, hasta 92 lugares que el tope todav&iacute;a deja en el Municipio; despu&eacute;s, otros organismos p&uacute;blicos del partido, cada uno con su propio 7% &mdash;el Concejo Deliberante tiene 416 cargos: 29 lugares&mdash;; y si a&uacute;n falta, la pr&aacute;ctica en proyectos del centro de formaci&oacute;n, que no tiene tope. La pr&aacute;ctica no se paga, as&iacute; que el Municipio da la misma beca de 240.000 $ por mes. <b>El peor caso, que ninguna empresa tome a nadie, cuesta 1.336,3 millones por a&ntilde;o</b>, y sale del gasto flexible que queda libre (3.4).</p>
-<p><b>Un tutor y un supervisor.</b> El tutor es uno solo: el profesor que el alumno vota, que la UNSO designa como &laquo;docente gu&iacute;a&raquo; de la ley y que lo acompa&ntilde;a y lo vincula con el empleo. <b>Su incentivo lo paga el Municipio, a la
-vista:</b> los convenios con el centro de formaci&oacute;n y con la UNSO llevan una <b>partida de incentivo docente</b>, y cada instituci&oacute;n se la paga a su profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. El dinero es del Municipio; la instituci&oacute;n s&oacute;lo lo transfiere. No es un cargo en el Municipio, que es lo que el art&iacute;culo 10 de
-la ley le proh&iacute;be al docente gu&iacute;a. En el lugar de trabajo, adem&aacute;s, hay <b>un supervisor cada diez
-pasantes, presente todo el horario</b>: en las &aacute;reas, planta reasignada; en la plataforma, sus
-seniors.</p>
-<p><b>La planta que se reasigna no pierde nada.</b> Cuando la automatizaci&oacute;n libera tareas, nadie se va:
-el empleado estudia para el rol nuevo, conserva su sueldo y ocupa un puesto de la pir&aacute;mide. Son 77: 45 supervisores, 26 que sostienen la operaci&oacute;n de noche y los fines de semana, y 6 que atienden en cada zona
-a quien no puede usar solo la inteligencia artificial del Municipio. No cobran como pasantes. <span
-class="sg">Es un programa de reconversi&oacute;n, no de recorte</span>, y baja el costo nuevo, porque esos puestos
-ya se pagan. <b>Hasta el mes 27, la operaci&oacute;n de todos los d&iacute;as la sigue haciendo la planta actual,
-como hoy</b>; los juniors la toman cuando egresan.</p>
+<p><b>Proponemos que todos tengan lugar.</b> La ley no permite obligar a nadie a hacer una pasant&iacute;a (art&iacute;culo 2). Por eso, lo que el programa garantiza es el lugar. Cada uno de los 928 alumnos del a&ntilde;o puede hacer el segundo a&ntilde;o como pasante, con las condiciones de la Ley 26.427. Cobra <b>240.000 $ por mes</b>, que es el sueldo de la categor&iacute;a de ingreso del Municipio, en proporci&oacute;n a veinte horas. Trabaja <b>hasta 20 horas por semana y 6,5 por d&iacute;a, de d&iacute;a</b>. Son doce meses en <b>dos tramos de seis</b>, con ART y cobertura de salud. La ley permite pasant&iacute;as de dos a doce meses (art&iacute;culo 13). Cada tramo tiene su convenio y su acuerdo individual, que firma la UNSO. <b>El primer tramo lo paga el &aacute;rea del Municipio</b> para la que trabaja el pasante, con su propio presupuesto. <b>El segundo lo paga la empresa</b>.</p><p><b>Por qu&eacute; con la UNSO.</b> La Ley 26.427 incluye a la formaci&oacute;n profesional (art&iacute;culo 1). Pero en la Provincia la deja afuera una resoluci&oacute;n: la 5356/24 de la Direcci&oacute;n General de Cultura y Educaci&oacute;n. Esa resoluci&oacute;n s&oacute;lo le permite pr&aacute;cticas que no se pagan. Como alumnos de una carrera universitaria, la ley los cubre sin depender de esa resoluci&oacute;n. Y <b>la UNSO ya tiene su reglamento de pasant&iacute;as en marcha desde 2025</b>, con pasant&iacute;as pagas en pymes del partido. El programa se apoya en ese reglamento.</p><p><b>Al mismo tiempo, proponemos que el Municipio le pida a la Provincia que permita la pasant&iacute;a en la formaci&oacute;n profesional.</b> La ley lo permite, y su reglamentaci&oacute;n le da a la Provincia esa llave (art&iacute;culo 13 de la Resoluci&oacute;n Conjunta 825/2009 y 338/2009). No es una idea nueva. <b>Rauch, Olavarr&iacute;a, Necochea y Las Flores tienen una tecnicatura de la UNICEN por convenio con el municipio. Chivilcoy, Escobar y Z&aacute;rate tienen una de la UTN en espacios municipales.</b> Rauch, Necochea y Chivilcoy la pagan con fondos propios. El Municipio paga la de la UNSO dentro de los 3 millones por persona.</p><p><b>Quien no termin&oacute; la secundaria.</b> La universidad pide la secundaria completa, o tener m&aacute;s de 25 a&ntilde;os y aprobar sus ex&aacute;menes de ingreso. Quien no la termin&oacute; y tiene menos de 25 hace el segundo a&ntilde;o como pr&aacute;ctica profesional. Recibe una <b>beca del Municipio igual a lo que cobra el pasante: 240.000 $ por mes</b>. Y termina la secundaria con el Plan FinEs mientras cursa.</p>
+<p><b>Los pasantes trabajan s&oacute;lo en proyectos nuevos:</b> construir, automatizar y relevar datos que hoy no existen. <b>Nunca hacen tareas del personal ni cubren puestos vac&iacute;os.</b> La ley lo proh&iacute;be (art&iacute;culo 12). Si pasara, la pasant&iacute;a se convertir&iacute;a en un empleo por tiempo indeterminado (art&iacute;culo 19). <span class="sg">La pasant&iacute;a es para aprender, no para hacer funcionar al Municipio.</span> Si un a&ntilde;o no hubiera pasantes, el Municipio funcionar&iacute;a igual. El trabajo de todos los d&iacute;as lo hacen los juniors y el personal reasignado. Entre esos proyectos, los pasantes ayudan a cada asociaci&oacute;n a armar su espacio en la inteligencia artificial del Municipio (4.11).</p>
+<p><b>D&oacute;nde.</b> En el Municipio pueden entrar como m&aacute;ximo 556 pasantes. Es el 7% de los 7.946 cargos del presupuesto 2026, el tope que la reglamentaci&oacute;n de la ley fija para un organismo p&uacute;blico. El tope se cuenta sobre los pasantes que est&aacute;n trabajando en ese momento. Lo mismo pasa con los supervisores: uno cada diez pasantes, presente todo el horario. Como cada uno est&aacute; seis meses, <b>hay 464 a la vez</b>. Los proyectos de las &aacute;reas, la plataforma y los dispositivos tienen lugar para 467 (cuadro [[n:proyectos]]). <b>La segunda mitad se hace en una empresa del partido o en una contratista del Municipio</b>, con la misma regla y pagada por ella. Para eso hay un convenio marco con la C&aacute;mara de Comercio y Servicios del Partido de San Isidro. En su estatuto, se llama C&aacute;mara del Comercio e Industria de San Isidro. Tambi&eacute;n con las c&aacute;maras de Boulogne y de B&eacute;ccar. Las empresas tambi&eacute;n tienen un tope: un pasante cada diez empleados, o el 7% si tienen m&aacute;s de doscientos. Para tener 464 pasantes a la vez, hacen falta empresas que sumen entre 4.640 y 6.629 empleados. Es <b>del 5% al 7% de los 93.071 puestos privados registrados del partido</b>.</p><p><b>Si a alguien no le toca lugar en la segunda mitad.</b> Primero est&aacute;n los hasta 92 lugares que el tope todav&iacute;a deja en el Municipio. Despu&eacute;s, otros organismos p&uacute;blicos del partido, cada uno con su propio 7%. Por ejemplo, el Concejo Deliberante tiene 416 cargos, as&iacute; que tiene 29 lugares. Y si todav&iacute;a falta, queda la pr&aacute;ctica en proyectos del centro de formaci&oacute;n, que no tiene tope. La pr&aacute;ctica no se paga, as&iacute; que el Municipio da la misma beca de 240.000 $ por mes. <b>El peor caso es que ninguna empresa tome a nadie. Cuesta 1.336,3 millones por a&ntilde;o</b>, y sale de la parte libre del gasto flexible (3.4).</p>
+<p><b>Un tutor y un supervisor.</b> El tutor es uno solo: el profesor que el alumno elige. La UNSO lo nombra &laquo;docente gu&iacute;a&raquo;, como dice la ley. Acompa&ntilde;a al alumno y lo conecta con el empleo. <b>Su incentivo lo paga el Municipio, a la vista de todos.</b> Los convenios con el centro de formaci&oacute;n y con la UNSO tienen una <b>partida de incentivo docente</b>. Cada instituci&oacute;n se la paga a su profesor cuyos alumnos m&aacute;s se reciben y consiguen trabajo. El dinero es del Municipio, y la instituci&oacute;n s&oacute;lo lo pasa. No es un cargo en el Municipio, que es lo que el art&iacute;culo 10 de la ley le proh&iacute;be al docente gu&iacute;a. En el lugar de trabajo, adem&aacute;s, hay <b>un supervisor cada diez pasantes, presente todo el horario</b>. En las &aacute;reas es personal reasignado, y en la plataforma, sus seniors.</p>
+<p><b>El personal que se reasigna no pierde nada.</b> Cuando la automatizaci&oacute;n libera tareas, nadie se va. El empleado estudia para su nuevo puesto, conserva su sueldo y ocupa un lugar de la pir&aacute;mide que se explica m&aacute;s abajo. Son 77 personas. Hay 45 supervisores y 26 que sostienen el trabajo de noche y los fines de semana. Y hay 6 que atienden en cada zona a quien no puede usar solo la inteligencia artificial del Municipio. No cobran como pasantes. <span class="sg">Es un programa para cambiar de tarea, no para recortar.</span> Y baja el costo nuevo, porque esos puestos ya se pagan. <b>Hasta el mes 27, el trabajo de todos los d&iacute;as lo sigue haciendo el personal actual, como hoy.</b> Los juniors lo toman cuando se reciben.</p>
 </div>
-""" + exhead("c", "Los pasantes, en proyectos nuevos; la operaci&oacute;n de todos los d&iacute;as, en manos de juniors",
-             "&Aacute;rea por &aacute;rea, en r&eacute;gimen: cu&aacute;ntos lugares hay para pasantes, qu&eacute; construyen o relevan, y cu&aacute;ntos juniors sostienen la operaci&oacute;n.",
+""" + exhead("c", "Los pasantes trabajan en proyectos nuevos. El trabajo de todos los d&iacute;as queda en manos de juniors",
+             "&Aacute;rea por &aacute;rea, con el programa completo: cu&aacute;ntos lugares hay para pasantes, qu&eacute; construyen o relevan, y cu&aacute;ntos juniors hacen el trabajo de todos los d&iacute;as.",
              key="proyectos") + """
 <table>
 <colgroup><col style="width:84pt"><col style="width:46pt"><col><col style="width:128pt"></colgroup>
-<tr class="hd"><th>&Aacute;rea</th><th class="r">Pasantes</th><th>Proyectos: construir, automatizar, relevar lo que no existe</th><th>Juniors en la operaci&oacute;n</th></tr>
-<tr><td class="l">Salud</td><td class="n">180</td><td class="m">Diecisiete equipos que automatizan tareas de sus 3.366 cargos, y uno que releva el precio por unidad de cada compra de los tres hospitales, arma las agendas de los trece efectores y mide la espera</td><td class="m">40: turnos y ayuda a quien no puede solo, guardias, stock y compras, prestaciones</td></tr>
+<tr class="hd"><th>&Aacute;rea</th><th class="r">Pasantes</th><th>Proyectos: construir, automatizar, relevar lo que no existe</th><th>Juniors en el trabajo diario</th></tr>
+<tr><td class="l">Salud</td><td class="n">180</td><td class="m">Diecisiete equipos que automatizan tareas de sus 3.366 cargos. Y uno que releva el precio por unidad de cada compra de los tres hospitales, arma las agendas de los trece centros de salud y mide la espera</td><td class="m">40: turnos y ayuda a quien no puede solo, guardias, stock y compras, prestaciones</td></tr>
 <tr><td class="l">Seguridad</td><td class="n">40</td><td class="m">Tres de automatizaci&oacute;n, y uno que hace el inventario verificado de cada c&aacute;mara y el registro de las &oacute;rdenes judiciales</td><td class="m">7: alertas en vivo, c&aacute;maras, &oacute;rdenes judiciales, 911</td></tr>
 <tr><td class="l">Educaci&oacute;n</td><td class="n">40</td><td class="m">Tres de automatizaci&oacute;n, y uno que releva la conectividad hogar por hogar en La Cava y Boulogne, y el Fondo Educativo obra por obra</td><td class="m">15: una por sede, el Fondo Educativo y el registro de inserci&oacute;n laboral</td></tr>
 <tr><td class="l">Obra</td><td class="n">30</td><td class="m">Uno de automatizaci&oacute;n, y dos que relevan casa por casa los hogares sin cloaca y sin gas, el estado de las 3.250 manzanas y la obra de los &uacute;ltimos a&ntilde;os, zona por zona</td><td class="m">17: el seguimiento de las obras en curso y de las manzanas</td></tr>
@@ -786,154 +665,88 @@ como hoy</b>; los juniors la toman cuando egresan.</p>
 <tr class="hi"><td class="l">Municipio</td><td class="n"><b>467</b></td><td class="m">El tope de la ley es 556; a la vez hay 464</td><td class="m"><b>109</b></td></tr>
 <tr><td class="l">Empresas del partido</td><td class="n">464</td><td class="m">La segunda mitad, con la misma regla: proyectos, no puestos</td><td class="m">&mdash;</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay uno de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de esa planta &mdash;en ambiente, dos, porque 593 de sus 966 cargos son de barrido&mdash;; y uno de relevamiento por &aacute;rea, dos en obra, que es donde m&aacute;s datos faltan. La operaci&oacute;n son 90 puestos de ocho
-horas, cada uno con un junior. <span class="tag m">Estimado</span></p>
+<p class="cap"><b>Nota:</b> cada equipo tiene diez pasantes y un supervisor. Hay un equipo de automatizaci&oacute;n cada 200 cargos del &aacute;rea, seg&uacute;n el presupuesto 2026, porque lo que se automatiza son tareas de ese personal. En ambiente hay dos, porque 593 de sus 966 cargos son de barrido. Y hay un equipo de relevamiento por &aacute;rea, y dos en obra, que es donde m&aacute;s datos faltan. El trabajo de todos los d&iacute;as son 90 puestos de ocho horas, cada uno con un junior. <span class="tag m">Estimado</span></p>
 
 """ + fig("f_pasantia", "La pasant&iacute;a en el Municipio. Ilustraci&oacute;n.") + """
 <h3>Un puente con los grandes laboratorios de inteligencia artificial</h3>
 <div class="cols">
-<p><b>Hoy casi ning&uacute;n laboratorio tiene programas para quien vive en la Argentina.</b> Casi todos piden estar cursando
-una carrera de grado o un doctorado, o tener permiso de trabajo en Estados Unidos, el Reino Unido o Canad&aacute;. Hay algunos
-a distancia, y para ir a Estados Unidos la v&iacute;a m&aacute;s realista es la visa de pasante (necesita dictamen de un abogado).
-Y los acuerdos que firman los laboratorios son con gobiernos nacionales: ninguno con un municipio.</p>
+<p><b>Hoy casi ning&uacute;n laboratorio tiene programas para quien vive en la Argentina.</b> Casi todos piden estar cursando una carrera de grado o un doctorado. O piden tener permiso de trabajo en Estados Unidos, el Reino Unido o Canad&aacute;. Hay algunos programas a distancia. Para ir a Estados Unidos, el camino m&aacute;s realista es la visa de pasante (necesita dictamen de un abogado). Y los acuerdos que firman los laboratorios son con gobiernos nacionales: ninguno es con un municipio.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: un puente, no una promesa de trabajo</div>
-<p><b>1 &middot; El Municipio, con la UNSO, se acerca</b> a los grandes laboratorios de inteligencia artificial de Estados Unidos,
-Europa y Asia para contarles lo que se hace ac&aacute; y armar un puente.</p>
-<p><b>2 &middot; Que vayan los nuestros:</b> los egresados con pasant&iacute;a y experiencia &mdash;los que construyeron la inteligencia
-artificial del Municipio&mdash; van a intercambios, residencias o trabajos en sus equipos, en otros pa&iacute;ses, para aprender
-m&aacute;s. <b>3 &middot; Que vengan ellos:</b> que manden gente a ver lo que se hace ac&aacute; e intercambiar.</p>
-<p><b>4 &middot; La puerta es el t&iacute;tulo.</b> Que la tecnicatura tenga validez nacional, que este programa pide en los primeros
-tres meses (6.4), es lo que abre la visa de pasante y las pr&aacute;cticas en Europa. Y los programas piden ingl&eacute;s: la
-tecnicatura lo ense&ntilde;a.</p>
-<p><b>5 &middot; Qui&eacute;n firma:</b> el rector de la UNSO y el intendente, con autorizaci&oacute;n del Concejo (Ley Org&aacute;nica, art&iacute;culo 41;
-necesita dictamen de un abogado). Lo lleva una persona del equipo de la plataforma. No promete trabajos: arma el
-puente.</p>
+<p><b>1 &middot; El Municipio, con la UNSO, se acerca</b> a los grandes laboratorios de inteligencia artificial de Estados Unidos, Europa y Asia. Les cuenta lo que se hace ac&aacute;, para armar un puente.</p>
+<p><b>2 &middot; Que vayan los nuestros.</b> Los egresados con pasant&iacute;a y experiencia, los que construyeron la inteligencia artificial del Municipio, van a sus equipos en otros pa&iacute;ses. Van a intercambios, residencias o trabajos, para aprender m&aacute;s. <b>3 &middot; Que vengan ellos.</b> Que manden gente a ver lo que se hace ac&aacute; y a intercambiar.</p>
+<p><b>4 &middot; La puerta es el t&iacute;tulo.</b> Este programa pide la validez nacional de la tecnicatura en los primeros tres meses (6.4). Esa validez es la que abre la visa de pasante y las pr&aacute;cticas en Europa. Y los programas piden ingl&eacute;s: la tecnicatura lo ense&ntilde;a.</p>
+<p><b>5 &middot; Qui&eacute;n firma.</b> Firman el rector de la UNSO y el intendente, con permiso del Concejo (Ley Org&aacute;nica, art&iacute;culo 41, necesita dictamen de un abogado). Lo lleva una persona del equipo de la plataforma. No promete trabajos: arma el puente.</p>
 </div>
 
 <h3>La pir&aacute;mide: del pasante al empleo</h3>
 <div class="cols">
-<p><b>La meta son 250 a 300 empleos pagos por a&ntilde;o</b> para los que siguen despu&eacute;s de la pasant&iacute;a. <b>El
-Municipio es el primer escal&oacute;n:</b> uno o dos a&ntilde;os como junior en los puestos que la inteligencia
-artificial necesita de verdad &mdash;la operaci&oacute;n de cada &aacute;rea, la plataforma, los dispositivos&mdash;. <b>Las
-empresas contratadas son el segundo</b>, y la cl&aacute;usula del 75% es la que las hace buscar gente en el
-partido.</p>
-<p><b>Es un flujo, no un stock.</b> Los 109 puestos de junior rotan: cada uno queda libre al a&ntilde;o y medio,
-as&iacute; que entran 73 egresados por a&ntilde;o y salen otros tantos, a las empresas o al escal&oacute;n de arriba. Si
-trescientos juniors por a&ntilde;o se quedaran, a sueldo de mercado costar&iacute;an m&aacute;s de 28.000 millones a los cuatro a&ntilde;os. <span class="sg">As&iacute;, los de las &aacute;reas cuestan 720 millones por a&ntilde;o, a escala municipal.</span></p>
+<p><b>La meta son 250 a 300 empleos pagos por a&ntilde;o</b> para los que siguen despu&eacute;s de la pasant&iacute;a. <b>El Municipio es el primer escal&oacute;n:</b> uno o dos a&ntilde;os como junior, en los puestos que la inteligencia artificial necesita de verdad. Son el trabajo diario de cada &aacute;rea, la plataforma y los dispositivos. <b>Las empresas contratadas son el segundo escal&oacute;n.</b> La regla del 75% es la que las hace buscar gente en el partido.</p>
+<p><b>Es un paso, no un lugar donde quedarse.</b> Los 109 puestos de junior van rotando: cada uno queda libre al a&ntilde;o y medio. As&iacute;, entran 73 egresados por a&ntilde;o y salen otros tantos, a las empresas o al escal&oacute;n de arriba. Si trescientos juniors por a&ntilde;o se quedaran, a sueldo de mercado costar&iacute;an m&aacute;s de 28.000 millones a los cuatro a&ntilde;os. <span class="sg">As&iacute;, los de las &aacute;reas cuestan 720 millones por a&ntilde;o, con la escala de sueldos del Municipio.</span></p>
 </div>
 """ + exhead("c", "Del pasante al empleo: 928 pasantes por a&ntilde;o, 250 a 300 empleos pagos",
-             "La pir&aacute;mide del programa en r&eacute;gimen: cu&aacute;ntos hay en cada escal&oacute;n, d&oacute;nde trabajan, qui&eacute;n los paga y cu&aacute;ntos suben por a&ntilde;o.",
+             "La pir&aacute;mide del programa completo: cu&aacute;ntos hay en cada escal&oacute;n, d&oacute;nde trabajan, qui&eacute;n los paga y cu&aacute;ntos suben por a&ntilde;o.",
              key="piramide") + """
 <table>
 <colgroup><col style="width:88pt"><col style="width:52pt"><col><col style="width:100pt"><col style="width:84pt"></colgroup>
 <tr class="hd"><th>Escal&oacute;n</th><th class="r">Cu&aacute;ntos</th><th>D&oacute;nde</th><th>Qui&eacute;n paga</th><th>Suben por a&ntilde;o</th></tr>
 <tr><td class="l">Pasante, en el segundo a&ntilde;o</td><td class="n">928</td><td class="m">464 a la vez en el Municipio, los primeros seis meses, y 464 en empresas del partido, los segundos</td><td class="m">El &aacute;rea los primeros seis meses; la empresa, los segundos</td><td class="m">250 a 300 pasan a un empleo pago</td></tr>
-<tr><td class="l">Junior, el primer escal&oacute;n</td><td class="n">109</td><td class="m">90 en la operaci&oacute;n de las &aacute;reas, 17 en la plataforma y 2 en dispositivos, por uno o dos a&ntilde;os</td><td class="m">Cada &aacute;rea, a escala municipal; la plataforma, a sueldo de mercado</td><td class="m">Entran 73</td></tr>
+<tr><td class="l">Junior, el primer escal&oacute;n</td><td class="n">109</td><td class="m">90 en el trabajo diario de las &aacute;reas, 17 en la plataforma y 2 en dispositivos, por uno o dos a&ntilde;os</td><td class="m">Cada &aacute;rea, a escala municipal; la plataforma, a sueldo de mercado</td><td class="m">Entran 73</td></tr>
 <tr><td class="l">Semi-senior</td><td class="n">18</td><td class="m">Plataforma y dispositivos</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 6 desde junior</td></tr>
 <tr><td class="l">Senior</td><td class="n">10</td><td class="m">Plataforma</td><td class="m">Ciencia y T&eacute;cnica</td><td class="m">Suben 2 o 3 desde semi-senior</td></tr>
 <tr><td class="l">Supervisor</td><td class="n">95</td><td class="m">48 en el Municipio &mdash;planta reasignada y los seniors de la plataforma&mdash; y 47 en las empresas</td><td class="m">Ya se pagan</td><td class="m">&mdash;</td></tr>
 <tr class="hi"><td class="l">Segundo escal&oacute;n</td><td class="n">180 a 230</td><td class="m">Empresas contratadas: obra, servicios, desarrollos y obra vecinal</td><td class="m">Cada empresa</td><td class="m">Por a&ntilde;o, m&aacute;s los juniors que dejan el Municipio</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> egresan 1.286 en el mandato; un junior queda un a&ntilde;o y medio en promedio, un semi-senior tres
-y un senior cuatro. El detalle, en las notas del cap&iacute;tulo 5. <span class="tag m">Estimado</span></p>
-<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de empleo, en r&eacute;gimen, 2.783,1 millones van a formaci&oacute;n, con la intermediaci&oacute;n adentro, y 1.855,4 a
-contratar desarrollos. A vivienda van 3.092,4 millones. <b>La obra vecinal hace las redes de agua, cloaca y
-gas en la calle; la partida de vivienda, la conexi&oacute;n de cada casa</b> donde falta, que es lo que el
-cap&iacute;tulo 1 mide.</p>
+<p class="cap"><b>Nota:</b> egresan 1.286 en el mandato. Un junior se queda un a&ntilde;o y medio en promedio, un semi-senior tres y un senior cuatro. El detalle est&aacute; en las notas del cap&iacute;tulo 5. <span class="tag m">Estimado</span></p>
+<p><b>C&oacute;mo se reparten los 7.730,9 millones.</b> El 60% va a empleo y el 40% a vivienda. Dentro de empleo, con el programa completo, 2.783,1 millones van a formaci&oacute;n, que incluye la b&uacute;squeda de trabajo. Y 1.855,4 van a contratar desarrollos. A vivienda van 3.092,4 millones. <b>La obra vecinal hace las redes de agua, cloaca y gas en la calle. La partida de vivienda paga la conexi&oacute;n de cada casa</b> donde falta, que es lo que mide el cap&iacute;tulo 1.</p>
 """ + exhead("c", "Los 7.730,9 millones de empleo y vivienda: 60% para empleo, 40% para vivienda",
              "Monto por a&ntilde;o una vez que el programa funciona completo, en pesos de diciembre de 2025.", key="reparto_empleo") + """
 <table>
 <colgroup><col style="width:215pt"><col><col></colgroup>
 <tr class="hd"><th>Destino</th><th class="r">Monto anual</th><th>Qu&eacute; paga</th></tr>
 <tr class="hi"><td class="l">Empleo &mdash; 60%</td><td class="n"><b>4.638,5 M</b></td><td class="m">&nbsp;</td></tr>
-<tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la intermediaci&oacute;n adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, 464 cada seis meses, dos a&ntilde;os cada una: cursada y pasant&iacute;a</td></tr>
-<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Salud y automatizaci&oacute;n de tareas de la planta. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
-<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">La conexi&oacute;n de cada casa al agua, la cloaca y el gas. Las redes en la calle, la obra vecinal (cap&iacute;tulo 4)</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Formaci&oacute;n, con la b&uacute;squeda de trabajo adentro &mdash; 60%</td><td class="n">2.783,1 M</td><td class="m">928 personas por a&ntilde;o, 464 cada seis meses. Cada una hace dos a&ntilde;os: cursada y pasant&iacute;a</td></tr>
+<tr><td class="l">&nbsp;&nbsp;&nbsp;Contrataci&oacute;n de desarrollos &mdash; 40%</td><td class="n">1.855,4 M</td><td class="m">Salud y automatizaci&oacute;n de tareas del personal. <b>No</b> la plataforma del cap&iacute;tulo 4, que sale de Ciencia y T&eacute;cnica</td></tr>
+<tr class="hi"><td class="l">Vivienda y servicios b&aacute;sicos &mdash; 40%</td><td class="n"><b>3.092,4 M</b></td><td class="m">La conexi&oacute;n de cada casa al agua, la cloaca y el gas. Las redes en la calle las hace la obra vecinal (cap&iacute;tulo 4)</td></tr>
 <tr class="hd"><td class="l">Total</td><td class="n">7.730,9 M</td><td class="m">De los cuales 505,7 M ya se gastan hoy</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por persona; los dos primeros
-a&ntilde;os la formaci&oacute;n usa toda la partida de empleo. El detalle, en las notas del cap&iacute;tulo 5.
+<p class="cap"><b>Nota:</b> las 928 personas salen de dividir 2.783,1 millones por 3 millones por persona. Los dos primeros a&ntilde;os, la formaci&oacute;n usa toda la partida de empleo. El detalle est&aacute; en las notas del cap&iacute;tulo 5.
 <span class="tag m">Estimado</span></p>
 <div class="cols">
-<p><b>El 60/40 invierte el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> El motivo
-es que las redes de cloaca y gas ya se financian con la obra vecinal que propone el cap&iacute;tulo 4:
-<span class="sg">sostener vivienda en dos tercios ser&iacute;a pagar dos veces lo mismo</span>. La obra
-vecinal hace las redes en la calle; la partida de vivienda, la conexi&oacute;n de cada casa.</p>
-<p><b>Los tres millones por persona son la propuesta.</b> El resto
-promete miles de egresados porque presupuesta a los docentes con lo que se les paga hoy, y por eso el
-certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor formadas, con
-t&iacute;tulo que sirve afuera del municipio.</span> Con ese n&uacute;mero entran equipamiento, acceso a
-las herramientas, los profesores &mdash;uno de ellos, el tutor que acompa&ntilde;a hasta el empleo&mdash;, la partida de
-incentivo docente y las materias y el t&iacute;tulo de la UNSO.</p>
-<p><b>Los cupos se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 4</b>, el mismo que
-reparte la partida vecinal: <b>Boulogne 315, B&eacute;ccar 307, Mart&iacute;nez 98, San Isidro 96, Villa
-Adelina 94 y Acassuso 18</b>. Cinco sedes fijas y Acassuso itinerante, porque dieciocho personas al
-a&ntilde;o no justifican un edificio. Suman exacto las 928 que el presupuesto compra: las fracciones se
-asignan por el resto mayor.</p>
-<p><b>Y es el n&uacute;mero que m&aacute;s mueve todo:</b> si el costo
-por persona resulta menor, se forma a m&aacute;s gente con el mismo dinero. Lo que no se hace es al
-rev&eacute;s &mdash;bajar el costo para poder anunciar m&aacute;s egresados&mdash;, que es exactamente
-lo que produce certificados que nadie mira.</p>
+<p><b>El 60/40 da vuelta el reparto de hoy, que es 33,7 para empleo y 66,3 para vivienda.</b> La raz&oacute;n es que las redes de cloaca y gas ya se pagan con la obra vecinal que propone el cap&iacute;tulo 4. <span class="sg">Dejar dos tercios para vivienda ser&iacute;a pagar dos veces lo mismo.</span> La obra vecinal hace las redes en la calle, y la partida de vivienda, la conexi&oacute;n de cada casa.</p>
+<p><b>Los tres millones por persona son la propuesta.</b> Otros programas prometen miles de egresados porque calculan a los docentes con lo que se les paga hoy. Por eso su certificado no vale nada. <span class="sg">Ac&aacute; son menos personas, mejor formadas, con un t&iacute;tulo que sirve fuera del Municipio.</span> Con ese n&uacute;mero se pagan el equipamiento y el acceso a las herramientas. Tambi&eacute;n los profesores, y uno de ellos es el tutor que acompa&ntilde;a hasta el empleo. Y la partida de incentivo docente, y las materias y el t&iacute;tulo de la UNSO.</p>
+<p><b>Los lugares se reparten con el &iacute;ndice de necesidad del cap&iacute;tulo 4</b>, el mismo que reparte la partida vecinal. Son <b>315 en Boulogne, 307 en B&eacute;ccar, 98 en Mart&iacute;nez, 96 en San Isidro, 94 en Villa Adelina y 18 en Acassuso</b>. Hay cinco sedes fijas, y en Acassuso la sede va rotando, porque dieciocho personas por a&ntilde;o no justifican un edificio. Suman justo las 928 que paga el presupuesto: las fracciones se reparten por el resto mayor.</p>
+<p><b>Y es el n&uacute;mero que m&aacute;s mueve todo.</b> Si el costo por persona resulta menor, se forma a m&aacute;s gente con el mismo dinero. Lo que no se hace es lo contrario: bajar el costo para poder anunciar m&aacute;s egresados. Eso es justo lo que produce certificados que nadie mira.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que dice la evidencia</div>
-<p><b>La capacitaci&oacute;n es lo que tiene m&aacute;s probabilidad de funcionar.</b> Las evaluaciones
-de impacto de pol&iacute;ticas activas de empleo muestran efectos positivos para la capacitaci&oacute;n,
-mientras que <b>los subsidios salariales y los programas de empleo y obra p&uacute;blica muestran
-impactos no positivos</b> sobre el empleo o el ingreso posteriores. Por eso la formaci&oacute;n se lleva
-el 60% de la partida de empleo y no al rev&eacute;s.</p>
-<p><b>Y los n&uacute;meros que se anuncian suelen ser el doble de los reales.</b> El Proyecto Joven de
-la Argentina reportaba 40% de mejora en el empleo de sus egresados; medido contra un grupo de control,
-la mejora cay&oacute; al 23%. <span class="sg">Es la raz&oacute;n por la que la meta del cap&iacute;tulo 6
-se mide en personas que consiguieron trabajo y no en cursos dictados.</span></p>
-<p><b>Lo que s&iacute; funciona en la regi&oacute;n combina las dos cosas:</b> capacitaci&oacute;n
-m&aacute;s experiencia laboral real en empresas, con un tutor que vincula al egresado con el
-empleador. Es exactamente este modelo, y es por eso que la intermediaci&oacute;n no es una oficina
-aparte.</p>
-<p><b>Y una advertencia.</b> Ese mismo hallazgo pone en duda los programas de
-empleo por obra p&uacute;blica, y el cap&iacute;tulo 4 dice que la obra vecinal es pol&iacute;tica de
-empleo. <span class="sg">La diferencia es que ac&aacute; no se crea trabajo para ocupar gente: se hace
-una obra que hace falta igual, y se decide qui&eacute;n la ejecuta.</span></p>
+<p><b>La capacitaci&oacute;n es lo que tiene m&aacute;s chances de funcionar.</b> Hay estudios que midieron el efecto de los programas de empleo. Muestran efectos positivos de la capacitaci&oacute;n. En cambio, <b>los subsidios al sueldo y los programas de empleo en obra p&uacute;blica no muestran efectos positivos</b> en el empleo o en el ingreso de despu&eacute;s. Por eso la formaci&oacute;n se lleva el 60% de la partida de empleo, y no al rev&eacute;s.</p>
+<p><b>Y los n&uacute;meros que se anuncian suelen ser el doble de los reales.</b> El Proyecto Joven de la Argentina dec&iacute;a que el empleo de sus egresados mejoraba un 40%. Cuando se lo compar&oacute; con un grupo que no hizo el programa, la mejora baj&oacute; al 23%. <span class="sg">Por eso la meta del cap&iacute;tulo 6 se mide en personas que consiguieron trabajo, y no en cursos dados.</span></p>
+<p><b>Lo que s&iacute; funciona en la regi&oacute;n combina las dos cosas.</b> Junta capacitaci&oacute;n con experiencia de trabajo real en empresas, y con un tutor que conecta al egresado con el empleador. Es justo este modelo. Por eso la b&uacute;squeda de trabajo no es una oficina aparte.</p>
+<p><b>Y una advertencia.</b> Esos mismos estudios ponen en duda los programas de empleo en obra p&uacute;blica. Y el cap&iacute;tulo 4 dice que la obra vecinal es una pol&iacute;tica de empleo. <span class="sg">La diferencia es que ac&aacute; no se inventa trabajo para ocupar gente. Se hace una obra que hace falta igual, y se decide qui&eacute;n la hace.</span></p>
 </div>
 <h3>Proponemos un semillero de empresas</h3>
 <div class="cols">
-<p><b>Para el egresado que no queda contratado.</b> Entra en equipo, con un proyecto, en una de las dos convocatorias del a&ntilde;o, despu&eacute;s de cada egreso: <b>veinte empresas por a&ntilde;o</b> en r&eacute;gimen, diez por convocatoria y de tres egresados en promedio; en el mandato, diecis&eacute;is. Tiene un a&ntilde;o de incubaci&oacute;n: lugar de trabajo en las sedes; mentores, que son los tutores y los empresarios del partido del convenio con las c&aacute;maras; y una ventanilla del Municipio que resuelve lo que traba al principio: constituir la sociedad, inscribirse y facturar. Las que crecen contratan a los egresados que vienen. <span class="sg">El semillero no arranca con un subsidio sino con un contrato.</span></p>
-<p><b>El primer cliente, por pliego.</b> <b>El 20% de cada licitaci&oacute;n se subcontrata a pymes del partido</b>, de cualquier antig&uuml;edad, y <b>dentro de ese 20%, el 5% del valor del contrato se reserva para empresas del partido de menos de cinco a&ntilde;os</b>, con las del semillero primero. Sobre los contratos m&aacute;s grandes &mdash;la recolecci&oacute;n y la mitad de la obra que sigue por contratista en el cuarto a&ntilde;o&mdash;, son 15.635,6 millones para pymes y 3.908,9 para empresas nuevas. La cl&aacute;usula nombra una categor&iacute;a, nunca empresas, y quien no encuentre qui&eacute;n lo haga lo justifica ante el panel, como en el 75%. Francia pide 20% a las pymes en sus grandes contratos desde 2025, y la Provincia exige 30% de pymes en su propia obra p&uacute;blica desde 2000 (Ley 6021, art&iacute;culo 9 ter).</p>
-<p><b>El capital de trabajo.</b> Lo que mata a la empresa chica que le vende al Estado es que el Estado paga tarde: en la Uni&oacute;n Europea, la morosidad explica una de cada cuatro quiebras de pymes. <b>El pago a quince d&iacute;as va en el pliego, para todos los oferentes</b>, y la parte subcontratada el Municipio se la paga directo a la empresa chica, por cesi&oacute;n del cr&eacute;dito, como lo admite el Tribunal de Cuentas bonaerense. Cuando Estados Unidos baj&oacute; el plazo de treinta a quince d&iacute;as, las empresas chicas que le vend&iacute;an aumentaron su empleo. Y el pliego puede dar un anticipo al firmar, con p&oacute;liza de cauci&oacute;n por el total.</p>
-<p><b>Y un fondo que multiplica.</b> El Municipio presta un peso por cada peso de capital privado, nacional o provincial que entre, hasta el costo de un a&ntilde;o de un junior, 23,4 millones por empresa, y se devuelve con lo que la empresa factura. Va por ordenanza, porque el Municipio no puede ser due&ntilde;o ni socio de esas empresas (5.7) y el fondo nacional de la Ley 27.349 se disolvi&oacute; en 2024. Es lo que hizo Israel con Yozma en 1993: el Estado pon&iacute;a s&oacute;lo si entraba dinero privado. <b>El semillero cuesta 121 millones por a&ntilde;o y sale de Ciencia y T&eacute;cnica</b>, que con la plataforma queda ocupada en 22,0%.</p>
+<p><b>Es para el egresado que no queda contratado.</b> Entra en equipo, con un proyecto, en una de las dos convocatorias del a&ntilde;o, despu&eacute;s de cada egreso. Con el programa completo, son <b>veinte empresas por a&ntilde;o</b>: diez por convocatoria, de tres egresados en promedio. En el mandato son diecis&eacute;is. Cada empresa tiene un a&ntilde;o de incubaci&oacute;n. Tiene lugar de trabajo en las sedes. Tiene mentores, que son los tutores y los empresarios del partido del convenio con las c&aacute;maras. Y tiene una ventanilla del Municipio que resuelve lo que traba al principio: formar la sociedad, inscribirse y facturar. Las empresas que crecen contratan a los egresados que vienen despu&eacute;s. <span class="sg">El semillero no arranca con un subsidio, sino con un contrato.</span></p>
+<p><b>El primer cliente, por pliego.</b> <b>El 20% de cada licitaci&oacute;n se subcontrata a pymes del partido</b>, de cualquier antig&uuml;edad. Y <b>dentro de ese 20%, el 5% del valor del contrato se reserva para empresas del partido de menos de cinco a&ntilde;os</b>, con las del semillero primero. En los contratos m&aacute;s grandes, son 15.635,6 millones para pymes y 3.908,9 para empresas nuevas. Esos contratos son la recolecci&oacute;n y la mitad de la obra que sigue haciendo un contratista en el cuarto a&ntilde;o. La regla nombra un tipo de empresa, nunca una empresa. Y quien no encuentre qui&eacute;n haga ese trabajo lo justifica ante el panel, como en el 75%. Francia pide 20% para las pymes en sus grandes contratos desde 2025. Y la Provincia exige 30% de pymes en su propia obra p&uacute;blica desde 2000 (Ley 6021, art&iacute;culo 9 ter).</p>
+<p><b>El dinero para trabajar.</b> Lo que mata a la empresa chica que le vende al Estado es que el Estado paga tarde. En la Uni&oacute;n Europea, los pagos atrasados explican una de cada cuatro quiebras de pymes. <b>El pago a quince d&iacute;as va en el pliego, para todos los que se presentan.</b> Y la parte subcontratada, el Municipio se la paga directo a la empresa chica, por cesi&oacute;n del cr&eacute;dito, como lo admite el Tribunal de Cuentas bonaerense. Cuando Estados Unidos baj&oacute; el plazo de pago de treinta a quince d&iacute;as, las empresas chicas que le vend&iacute;an dieron m&aacute;s empleo. Y el pliego puede dar un adelanto al firmar, con una p&oacute;liza de cauci&oacute;n por el total.</p>
+<p><b>Y un fondo que multiplica.</b> Por cada peso de capital privado, nacional o provincial que entre, el Municipio presta otro peso. El tope es el costo de un a&ntilde;o de un junior: 23,4 millones por empresa. Y se devuelve con lo que la empresa factura. Va por ordenanza, porque el Municipio no puede ser due&ntilde;o ni socio de esas empresas (5.7). Adem&aacute;s, el fondo nacional de la Ley 27.349 se disolvi&oacute; en 2024. Es lo que hizo Israel con Yozma en 1993: el Estado pon&iacute;a dinero s&oacute;lo si entraba dinero privado. <b>El semillero cuesta 121 millones por a&ntilde;o y sale de Ciencia y T&eacute;cnica.</b> Con la plataforma, esa partida queda ocupada en un 22,0%.</p>
 </div>
 """ + fig("f_taller", "Formaci&oacute;n laboral. Ilustraci&oacute;n.") + """
 
 <h2><span class="n">5.4</span>Vivienda y servicios b&aacute;sicos
 <span class="tag">Fondos nuevos</span> <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p><b>Hoy:</b> Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado,
-3.320 millones, el 1,0%. <b>El problema, medido:</b> 6.488 hogares sin cloacas, <b>25.165 sin gas de
-red</b> y 8.569 con hacinamiento, zona por zona en el cuadro [[n:indicadores]].</p>
+<p><b>Hoy:</b> Infraestructura Habitacional recibe 335 millones, el 0,10%. Agua potable y alcantarillado recibe 3.320 millones, el 1,0%. <b>El problema, medido:</b> hay 6.488 hogares sin cloaca, <b>25.165 sin gas de red</b> y 8.569 con hacinamiento. Est&aacute;n zona por zona en el cuadro [[n:indicadores]].</p>
 <h3>La carencia que el Censo no mide</h3>
 <div class="cols">
-<p>El Censo 2022 cuenta cloacas, gas, agua y hacinamiento. <span class="sg">No cuenta
-conexi&oacute;n</span>, y en 2026 una casa sin internet est&aacute; tan afuera como una sin gas: sin
-tr&aacute;mite, sin escuela a distancia, sin turno m&eacute;dico y sin la posibilidad de trabajar desde
-casa que la secci&oacute;n 5.3 propone ense&ntilde;ar.</p>
-<p><b>Y es obra, no es un plan tecnol&oacute;gico.</b> Tender una red dentro de un barrio es
-infraestructura, igual que un ca&ntilde;o. Entra en el mismo r&eacute;gimen: es bienes de uso, la puede
-priorizar una comisi&oacute;n vecinal y la puede ejecutar una asociaci&oacute;n bajo el art&iacute;culo
-132. No hace falta una partida nueva ni un programa aparte.</p>
-<p><b>El dato de conexi&oacute;n no existe a nivel de radio censal.</b> En el conurbano norte la red
-suele pasar por la puerta y lo que falta es otra cosa &mdash;el abono, la imposibilidad de contratar sin
-t&iacute;tulo o sin direcci&oacute;n formal, el tendido interno&mdash;.</p>
-<p><b>Lo que se compromete</b> es medirlo: relevar la conexi&oacute;n por zona junto con el
-primer ciclo de asambleas, que cualquier vecino pueda preguntar c&oacute;mo est&aacute; la suya, y que cada comisi&oacute;n decida si el tendido de su barrio entra
-o no en su partida. Es la misma l&oacute;gica de todo este programa: primero el dato, despu&eacute;s la
-decisi&oacute;n, y que la tome quien vive ah&iacute;.</p>
+<p>El Censo 2022 cuenta cloacas, gas, agua y hacinamiento. <span class="sg">No cuenta la conexi&oacute;n a internet.</span> Y en 2026, una casa sin internet est&aacute; tan afuera como una sin gas. No puede hacer tr&aacute;mites ni seguir la escuela a distancia. No puede sacar turno m&eacute;dico. Y no puede trabajar desde casa, que es lo que la secci&oacute;n 5.3 propone ense&ntilde;ar.</p>
+<p><b>Y es obra, no un plan tecnol&oacute;gico.</b> Tender una red dentro de un barrio es infraestructura, igual que un ca&ntilde;o. Sigue las mismas reglas: es obra (bienes de uso), la puede elegir una comisi&oacute;n vecinal y la puede hacer una asociaci&oacute;n con el art&iacute;culo 132. No hace falta una partida nueva ni un programa aparte.</p>
+<p><b>El dato de la conexi&oacute;n no existe por radio censal.</b> En el conurbano norte, la red suele pasar por la puerta. Lo que falta es otra cosa: el abono, poder contratar sin t&iacute;tulo o sin una direcci&oacute;n formal, o el cableado dentro de la casa.</p>
+<p><b>Lo que se compromete es medirlo.</b> Se mide la conexi&oacute;n por zona junto con el primer ciclo de asambleas. Cualquier vecino puede preguntar c&oacute;mo est&aacute; la suya. Y cada comisi&oacute;n decide si el tendido de su barrio entra o no en su partida. Es la misma idea de todo este programa: primero el dato, despu&eacute;s la decisi&oacute;n, y que la tome quien vive ah&iacute;.</p>
 </div>
 
-<p><b>Propuesta:</b> el d&eacute;ficit de servicios b&aacute;sicos se ataca con dos partidas. <b>La obra
-vecinal del cap&iacute;tulo 4 hace las redes en la calle</b>, que es exactamente el tipo de obra que el
-art&iacute;culo 132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal; <b>la partida de vivienda,
-3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa</b>.</p>
+<p><b>Propuesta:</b> la falta de servicios b&aacute;sicos se resuelve con dos partidas. <b>La obra vecinal del cap&iacute;tulo 4 hace las redes en la calle.</b> Es justo el tipo de obra que el art&iacute;culo 132 inciso c) permite hacer a una asociaci&oacute;n vecinal. <b>La partida de vivienda, de 3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa.</b></p>
 """)
 
 
@@ -943,112 +756,40 @@ art&iacute;culo 132 inciso c) permite ejecutar a una asociaci&oacute;n vecinal; 
 C5B = dict(id="cap5b", runhead=RH, html="""
 <h2><span class="n">5.5</span>Ambiente <span class="tag v">Reasignaci&oacute;n</span></h2>
 <div class="cols">
-<p><b>Hoy:</b> 1.410 millones, el 0,4% del presupuesto. Cuatro mil setecientos pesos por habitante por
-a&ntilde;o.</p>
-<p><b>Propuesta:</b> llevar la funci&oacute;n ambiental al 1,5% del presupuesto &mdash;unos 4.865
-millones&mdash; reasignando dentro de Servicios Econ&oacute;micos y Urbanismo, sin fondos nuevos.
-Prioridades: la costa &mdash;que deje de entrar cloaca y que vuelva la arena&mdash;, el arbolado, la gesti&oacute;n de residuos y el saneamiento de las cuencas del Bajo.</p>
-
-<p><b>Por qu&eacute; 1,5% y no otra cifra.</b> Es lo que hace falta para que la funci&oacute;n deje de
-ser residual, y es lo que entra sin tocar el gasto r&iacute;gido: 3.455 millones adicionales, el 4,0%
-del margen flexible.</p>
-<p><b>El dato que falta.</b> Ambiente creci&oacute; 23,1% real entre 2024 y
-2025 &mdash;es la tercera funci&oacute;n que m&aacute;s creci&oacute;&mdash; y aun as&iacute; es el 0,4%.
-<span class="sg">Crecer un cuarto sobre casi nada sigue siendo casi nada</span>, y es exactamente el
-tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
+<p><b>Hoy:</b> 1.410 millones, el 0,4% del presupuesto. Son cuatro mil setecientos pesos por habitante por a&ntilde;o.</p>
+<p><b>Propuesta:</b> llevar el gasto en ambiente al 1,5% del presupuesto, unos 4.865 millones. El dinero sale de otros gastos de Servicios Econ&oacute;micos y Urbanismo, sin fondos nuevos. Las prioridades son cuatro. La costa, para que deje de entrar cloaca y vuelva la arena. El arbolado. Los residuos. Y sanear las cuencas del Bajo, la zona baja junto al r&iacute;o.</p>
+<p><b>Por qu&eacute; 1,5% y no otra cifra.</b> Es lo que hace falta para que ambiente deje de ser casi nada en el presupuesto. Y es lo que entra sin tocar el gasto que no se puede mover: 3.455 millones m&aacute;s, el 4,0% del gasto flexible.</p>
+<p><b>El dato que falta.</b> Ambiente creci&oacute; 23,1% entre 2024 y 2025, descontada la inflaci&oacute;n. Es el tercer gasto que m&aacute;s creci&oacute;, y aun as&iacute; es el 0,4%. <span class="sg">Crecer un cuarto sobre casi nada sigue siendo casi nada.</span> Es justo el tipo de cifra que suena bien en un anuncio y no cambia una cuadra.</p>
 
 </div>
 <h3>La costa: que deje de entrar cloaca, que est&eacute; limpia y que vuelva la arena</h3>
-<p class="tight">La idea es simple: cortar lo que contamina, limpiar, que vuelva la arena y cuidar a la gente
-inform&aacute;ndola en lugar de prohibirle. <span class="sg">Que la costa sea m&aacute;s linda que antes.</span></p>
+<p class="tight">La idea es simple. Cortar lo que contamina y limpiar. Lograr que vuelva la arena. Y cuidar a la gente inform&aacute;ndola, en lugar de prohibirle. <span class="sg">Que la costa sea m&aacute;s linda que antes.</span></p>
 <div class="cols">
-<p><b>Hoy, el peor punto de toda la costa norte es el desag&uuml;e de la calle Per&uacute;.</b> Las 31 muestras tomadas
-entre 2016 y 2025 superan el valor gu&iacute;a para ba&ntilde;arse: la mediana es de 19.000 bacterias <i>E. coli</i> por
-100 mililitros, contra un valor gu&iacute;a de 126. Es un conducto pluvial que empieza en Mazza y Moreno, en Villa
-Adelina, y seg&uacute;n el Municipio trae agua pluvial o servida de partes de San Mart&iacute;n, Vicente L&oacute;pez y San
-Isidro. Se toman de dos a cuatro muestras por a&ntilde;o, y desde noviembre de 2024 s&oacute;lo en Per&uacute;.</p>
-<p><b>La ley ya obliga a AySA</b> a tener un programa para eliminar las conexiones cloacales clandestinas a los
-pluviales (Decreto 805/2025, art&iacute;culo 16). No se encontr&oacute;.</p>
-<p><b>La gente se mete al r&iacute;o todos los d&iacute;as</b>: kite, windsurf, nado. El ba&ntilde;o est&aacute; prohibido desde 1978 por la
-Ordenanza 5304, que obliga al propio Municipio a &laquo;vigilar su cumplimiento estricto&raquo;, y la prohibici&oacute;n no se
-cumple. La limpieza de la costa hoy es con voluntarios: seg&uacute;n el Municipio, 65 jornadas y unas 20 toneladas en
-2025.</p>
-<p><b>Y hubo arena, y todav&iacute;a la hay.</b> La muestran notas y fotos de 1934 y 1937 en San Isidro. Y frente a
-Dulce Mar&iacute;a, en General Pacheco 1545 y el r&iacute;o, en Mart&iacute;nez, hay una playa que <b>el Municipio hizo en 2014</b>
-(Decreto 2559/2014): seg&uacute;n <i>Clar&iacute;n</i>, la arena est&aacute; sobre una base de piedra en canastos de alambre. En las
-im&aacute;genes satelitales de 2016 a 2026 la arena llega al agua y no se ve que el r&iacute;o se la haya llevado.</p>
+<p><b>Hoy, el peor punto de toda la costa norte es el desag&uuml;e de la calle Per&uacute;.</b> Entre 2016 y 2025 se tomaron 31 muestras, y todas superan el valor gu&iacute;a para ba&ntilde;arse. La mitad de las muestras tiene m&aacute;s de 19.000 bacterias <i>E. coli</i> por 100 mililitros, y el valor gu&iacute;a es 126. Es un conducto de agua de lluvia que empieza en Mazza y Moreno, en Villa Adelina. Seg&uacute;n el Municipio, trae agua de lluvia o agua servida de partes de San Mart&iacute;n, Vicente L&oacute;pez y San Isidro. Se toman de dos a cuatro muestras por a&ntilde;o, y desde noviembre de 2024 s&oacute;lo en Per&uacute;.</p>
+<p><b>La ley ya obliga a AySA</b> a tener un programa para eliminar las cloacas conectadas sin permiso a los desag&uuml;es de lluvia (Decreto 805/2025, art&iacute;culo 16). Ese programa no se encontr&oacute;.</p>
+<p><b>La gente se mete al r&iacute;o todos los d&iacute;as</b>: hace kite, windsurf o nada. El ba&ntilde;o est&aacute; prohibido desde 1978 por la Ordenanza 5304. Esa ordenanza obliga al propio Municipio a &laquo;vigilar su cumplimiento estricto&raquo;, y la prohibici&oacute;n no se cumple. Hoy, la costa la limpian voluntarios. Seg&uacute;n el Municipio, en 2025 hubo 65 jornadas y se juntaron unas 20 toneladas.</p>
+<p><b>Y hubo arena, y todav&iacute;a la hay.</b> La muestran notas y fotos de 1934 y 1937 en San Isidro. Y hay una playa que <b>el Municipio hizo en 2014</b> (Decreto 2559/2014). Est&aacute; frente a Dulce Mar&iacute;a, en General Pacheco 1545 y el r&iacute;o, en Mart&iacute;nez. Seg&uacute;n <i>Clar&iacute;n</i>, la arena est&aacute; sobre una base de piedras en canastos de alambre. En las im&aacute;genes satelitales de 2016 a 2026, la arena llega al agua y no se ve que el r&iacute;o se la haya llevado.</p>
 </div>
 <div class="callout">
 <div class="clabel">Qu&eacute; quiere decir &laquo;no apto&raquo;</div>
-<p><b>No quiere decir enfermarse grave.</b> Quiere decir que algunas de cada cien personas que se meten ese d&iacute;a
-pueden tener despu&eacute;s un malestar leve, que en general se pasa solo en pocos d&iacute;as: diarrea, v&oacute;mitos, otitis o dolor
-de garganta. Con el agua en el l&iacute;mite de lo apto, seg&uacute;n la EPA de los Estados Unidos, son unas cuatro de cada cien
-m&aacute;s que entre quienes no se metieron; con el agua muy contaminada, seg&uacute;n la Organizaci&oacute;n Mundial de la Salud, m&aacute;s
-de diez de cada cien.</p>
-<p><b>La v&iacute;a principal es tragar agua.</b> El consejo es no tragar y, despu&eacute;s de una lluvia fuerte, esperar dos
-d&iacute;as antes de meterse.</p>
-<p><b>Y hoy las &uacute;nicas muestras son de la boca de Per&uacute;, el peor punto de la costa.</b> Por eso proponemos medir en
-cada tramo antes de concluir nada. <span class="sg">La gente ya usa el r&iacute;o: el programa la cuida
-inform&aacute;ndola.</span></p>
+<p><b>No quiere decir enfermarse grave.</b> Quiere decir que algunas de cada cien personas que se meten ese d&iacute;a pueden tener despu&eacute;s un malestar leve. En general se pasa solo en pocos d&iacute;as: diarrea, v&oacute;mitos, otitis o dolor de garganta. Con el agua en el l&iacute;mite de lo apto, tienen malestar unas cuatro de cada cien m&aacute;s que entre los que no se metieron. Lo dice la agencia ambiental de los Estados Unidos (EPA). Con el agua muy contaminada, son m&aacute;s de diez de cada cien. Lo dice la Organizaci&oacute;n Mundial de la Salud.</p>
+<p><b>La forma principal de enfermarse es tragar agua.</b> El consejo es no tragar agua. Y despu&eacute;s de una lluvia fuerte, esperar dos d&iacute;as antes de meterse.</p>
+<p><b>Y hoy las &uacute;nicas muestras son de la boca de Per&uacute;, el peor punto de la costa.</b> Por eso proponemos medir en cada tramo antes de sacar conclusiones. <span class="sg">La gente ya usa el r&iacute;o, y el programa la cuida inform&aacute;ndola.</span></p>
 </div>
 <div class="callout a">
 <div class="clabel">C&oacute;mo lo hace Montevideo, y qu&eacute; dicen los jueces</div>
-<p><b>Montevideo informa todos los d&iacute;as, dentro de playas habilitadas.</b> Cada una tiene guardavidas en
-temporada, y cuando el agua no est&aacute; apta ponen la bandera sanitaria, roja con una cruz verde: <span
-class="sg">desaconseja el ba&ntilde;o, pero no cierra la playa</span>. Se toman muestras dos o tres veces por semana en
-verano, se recomienda no ba&ntilde;arse hasta 24 horas despu&eacute;s de una lluvia, y el estado de cada playa est&aacute; en un mapa.
-Fuera de las playas habilitadas, ba&ntilde;arse est&aacute; prohibido.</p>
-<p><b>Los jueces castigan al municipio que habilita sin cuidar, y protegen al que avisa claro.</b> La Suprema
-Corte bonaerense dej&oacute; firmes las condenas a General Pueyrredon, por una playa urbana apta para el ba&ntilde;o sin
-guardavidas, y a Villa Gesell, porque no hab&iacute;a bandera roja que advirtiera el peligro, las dos en 2014. La Corte
-Suprema de la Naci&oacute;n rechaz&oacute; en 2005 una demanda contra C&oacute;rdoba: el deber del Estado &laquo;cede cuando las personas se
-exponen voluntariamente&raquo; al riesgo. Y en la Provincia, la playa habilitada como balneario lleva guardavidas: uno
-cada 80 metros, como m&iacute;nimo dos, y un bote (Ley 14.798).</p>
+<p><b>Montevideo informa todos los d&iacute;as, en las playas habilitadas.</b> Cada una tiene guardavidas en temporada. Cuando el agua no est&aacute; apta, ponen la bandera sanitaria, roja con una cruz verde. <span class="sg">Esa bandera recomienda no ba&ntilde;arse, pero no cierra la playa.</span> En verano se toman muestras dos o tres veces por semana. Se recomienda no ba&ntilde;arse hasta 24 horas despu&eacute;s de una lluvia. Y el estado de cada playa est&aacute; en un mapa. Fuera de las playas habilitadas, est&aacute; prohibido ba&ntilde;arse.</p>
+<p><b>Los jueces castigan al municipio que habilita sin cuidar, y protegen al que avisa claro.</b> En 2014, la Suprema Corte bonaerense dej&oacute; firmes dos condenas. Una fue a General Pueyrredon, por una playa urbana apta para el ba&ntilde;o y sin guardavidas. La otra fue a Villa Gesell, porque no hab&iacute;a bandera roja que avisara del peligro. En 2005, la Corte Suprema de la Naci&oacute;n rechaz&oacute; una demanda contra C&oacute;rdoba. Dijo que el deber del Estado &laquo;cede cuando las personas se exponen voluntariamente&raquo; al riesgo. Y en la Provincia, la playa habilitada como balneario tiene que tener guardavidas: uno cada 80 metros, como m&iacute;nimo dos, y un bote (Ley 14.798).</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos para la costa</div>
-<p><b>1 &middot; Cortar la cloaca en el origen, empezando por Per&uacute;.</b> Antes de cualquier obra, en este orden: medir con
-el marcador de ADN humano, unos 5.000 a 15.000 d&oacute;lares de laboratorio; rastrear el origen ca&ntilde;o arriba con unos
-veinte sensores de unos 25 d&oacute;lares cada uno &mdash;unos 500 d&oacute;lares en total&mdash;, en los tres partidos de la cuenca; si es la red de AySA, exigirle el arreglo ante
-su ente regulador, con el art&iacute;culo 16 de su marco; si son casas, intimar y subsidiar el arreglo, como Par&iacute;s: el
-Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (Ley 5965). Reci&eacute;n despu&eacute;s, si hace falta,
-un desviador de tiempo seco en la boca, acordado con AySA y pagado como obra p&uacute;blica. <span class="sg">El
-compromiso es el resultado &mdash;que deje de entrar cloaca&mdash;, no una obra que nadie dise&ntilde;&oacute; todav&iacute;a.</span></p>
-<p><b>2 &middot; Frenar la basura.</b> Rejas en unas diez bocas de los desag&uuml;es, revisadas cada semana
-y despu&eacute;s de cada lluvia, con alivio para que no inunden: si la reja se llena, el agua pasa por arriba. En las dos bocas grandes, Per&uacute; y Alto Per&uacute;, no van rejas sino barreras flotantes en &laquo;J&raquo;, como ya ped&iacute;a para Per&uacute; el Plan de Manejo de la Reserva en 2012: de unos 30 metros en Per&uacute; y de unos 48 en Alto Per&uacute;, con un anclaje que sube y baja con el r&iacute;o. Las rejas las vac&iacute;a una cuadrilla municipal de la costa m&aacute;s grande, con personal del Municipio reasignado; las barreras, el cami&oacute;n con almeja que el Municipio ya alquila, con la cuadrilla, despu&eacute;s de cada lluvia fuerte y de cada sudestada, y se revisan cada semana. Para las dos cosas se llama a concurso a las cooperativas de trabajo del partido, con un contrato por resultado &mdash;se paga por boca vaciada&mdash;: si cobran menos, lo hacen ellas (necesita dictamen de un abogado). La ubicaci&oacute;n exacta de la boca de Alto Per&uacute;, la crecida para la que se dise&ntilde;a el anclaje y el permiso de la Autoridad del Agua los define el proyecto; el permiso del titular de la d&aacute;rsena necesita dictamen de un abogado. Robots y barcazas no sirven en una
-costa abierta como esta.</p>
-<p><b>3 &middot; Informar en lugar de prohibir, como Montevideo.</b> Muestras de agua en cada tramo que se usa, por lo
-menos dos veces por semana, y una bandera sanitaria por tramo, todos los d&iacute;as. <b>El ba&ntilde;o se habilita en los
-pilotos de arena</b>, con los guardavidas que pide la ley &mdash;el Municipio ya los contrata para sus natatorios&mdash; y
-la bandera del d&iacute;a. En el resto del r&iacute;o el ba&ntilde;o no se habilita, y cada acceso lo dice; pero la bandera y el mapa
-del d&iacute;a tambi&eacute;n est&aacute;n para quien hace kite, windsurf o nada. Al vecino que pregunta &laquo;&iquest;d&oacute;nde me meto hoy?&raquo;, la
-inteligencia artificial del Municipio le muestra la costa tramo por tramo en verde, amarillo o rojo; despu&eacute;s de
-una lluvia, rojo por lo menos un d&iacute;a, y dos despu&eacute;s de una lluvia fuerte. <span class="sg">Las primeras temporadas el mapa va a estar casi todo en
-rojo, y eso es lo que empuja la limpieza.</span> Este r&eacute;gimen reemplaza a la Ordenanza 5304 (anexo, Ordenanza
-XI).</p>
-<p><b>4 &middot; Recuperar parque por parque, con sus vecinos.</b> Empezando por el Parque del &Aacute;guila y el Bosque Alegre,
-con sus asociaciones desde el dise&ntilde;o (m&aacute;s abajo). El Bosque Alegre es Paisaje Protegido desde 2012, y el decreto
-que lo protegi&oacute; dice que el predio vecino &laquo;era un ba&ntilde;ado rellenado con residuos domiciliarios&raquo;: el plan de
-remediaci&oacute;n que ese mismo decreto pide no se encontr&oacute;. Con naturaleza, no con cemento.</p>
-<p><b>5 &middot; Un plan con los vecinos del r&iacute;o.</b> Un convenio con Vicente L&oacute;pez, San Fernando, Tigre y San Mart&iacute;n,
-por la cuenca de Per&uacute;, como el que San Isidro firm&oacute; con Vicente L&oacute;pez por la calle Paran&aacute; (Ordenanza 8935); un
-comit&eacute; de cuenca de la costa norte en la Autoridad del Agua, que ya cre&oacute; uno para Berazategui, Quilmes y Florencio
-Varela; y AySA en la mesa.</p>
-<p><b>6 &middot; Que vuelva la arena.</b> Tramos piloto con condiciones parecidas a las de Pacheco: lejos de las bocas de
-los desag&uuml;es y donde la costa natural ayude a retenerla, sobre un pie de piedra, como Pacheco, para que funcionen
-desde el primer verano; con bordes de vegetaci&oacute;n natural y una partida anual para reponer arena. <b>Arranca en
-paralelo con el corte de la cloaca, no despu&eacute;s</b>: la arena se ve r&aacute;pido, el agua mejora con el tiempo, y
-mientras tanto la bandera del d&iacute;a dice d&oacute;nde meterse. Como toda obra en la costa, con evaluaci&oacute;n de impacto
-ambiental, la decisi&oacute;n del panel sorteado y, en un parque costero, el dictamen de su asociaci&oacute;n. Si los pilotos
-funcionan, se extienden por la costa.</p>
-<p><b>Cu&aacute;nto cuesta.</b> Un piloto de arena de 100 por 20 metros, con su pie de piedra, 196 millones una vez, con
-los precios del propio contrato municipal, y de 4 a 20 millones por a&ntilde;o para reponer arena; sus guardavidas, 29
-millones por temporada, m&aacute;s 33 millones una vez por el bote y el desfibrilador. Las rejas, de 70,4 a 130,9 millones una vez, y las dos barreras, 125,6 millones una vez (de 86 a 199, seg&uacute;n lo que defina el proyecto), con el anclaje, el proyecto y los permisos; vaciarlas y reponer lo que se gasta, 39,3 millones por a&ntilde;o (de 27 a 57). Con las rejas, las barreras, la cuadrilla y las muestras, lo que funciona todo el a&ntilde;o suma de 139 a 346 millones: <span
-class="sg">entre el 4% y el 10% de los 3.455 millones m&aacute;s para ambiente</span>. Como ese aumento empieza a
-moverse en el mes 12, el primer a&ntilde;o se adelanta lo que cuesta empezar &mdash;el diagn&oacute;stico de Per&uacute;, el piloto, las
-muestras y la primera temporada de guardavidas, unos 335 millones&mdash;, con dinero de los programas que
-ceden (cuadro [[n:ceden]]) y no de lo que Ambiente ya gasta: sin gasto nuevo. El
-desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas se fija con el diagn&oacute;stico.</p>
+<p><b>1 &middot; Cortar la cloaca donde empieza, comenzando por Per&uacute;.</b> Antes de cualquier obra, se hace esto, en este orden. Primero, medir con un marcador de ADN humano, que cuesta unos 5.000 a 15.000 d&oacute;lares de laboratorio. Segundo, buscar de d&oacute;nde viene, ca&ntilde;o arriba, con unos veinte sensores de unos 25 d&oacute;lares cada uno, unos 500 d&oacute;lares en total. Se busca en los tres partidos por donde pasa el desag&uuml;e. Tercero, si el problema es la red de AySA, exigirle el arreglo ante su ente regulador, con el art&iacute;culo 16 de su marco. Cuarto, si el problema son casas, intimarlas y ayudar a pagar el arreglo, como en Par&iacute;s. El Municipio puede inspeccionar, multar y hacer la obra a cargo del due&ntilde;o (Ley 5965). Reci&eacute;n despu&eacute;s, si hace falta, se pone en la boca un desviador de tiempo seco. Los d&iacute;as sin lluvia, ese aparato saca el agua sucia antes de que llegue al r&iacute;o. Se acuerda con AySA y se paga como obra p&uacute;blica. <span class="sg">El compromiso es el resultado: que deje de entrar cloaca. No es una obra que nadie dise&ntilde;&oacute; todav&iacute;a.</span></p>
+<p><b>2 &middot; Frenar la basura.</b> Se ponen rejas en unas diez bocas de los desag&uuml;es. Se revisan cada semana y despu&eacute;s de cada lluvia. Tienen un alivio para que no inunden: si la reja se llena, el agua pasa por arriba. En las dos bocas grandes, Per&uacute; y Alto Per&uacute;, no van rejas sino barreras flotantes en forma de &laquo;J&raquo;. Ya las ped&iacute;a para Per&uacute; el Plan de Manejo de la Reserva en 2012. Miden unos 30 metros en Per&uacute; y unos 48 en Alto Per&uacute;, y tienen un anclaje que sube y baja con el r&iacute;o. Las rejas las vac&iacute;a una cuadrilla municipal de la costa, agrandada con personal del Municipio reasignado. Las barreras las vac&iacute;a el cami&oacute;n con almeja que el Municipio ya alquila, con la cuadrilla. Se vac&iacute;an despu&eacute;s de cada lluvia fuerte y de cada sudestada, y se revisan cada semana. Para las dos cosas se llama a concurso a las cooperativas de trabajo del partido, con un contrato por resultado: se paga por cada boca vaciada. Si cobran menos, lo hacen ellas (necesita dictamen de un abogado). El proyecto define tres cosas: d&oacute;nde est&aacute; exactamente la boca de Alto Per&uacute;, para qu&eacute; crecida se dise&ntilde;a el anclaje y el permiso de la Autoridad del Agua. El permiso del due&ntilde;o de la d&aacute;rsena necesita dictamen de un abogado. Los robots y las barcazas no sirven en una costa abierta como esta.</p>
+<p><b>3 &middot; Informar en lugar de prohibir, como Montevideo.</b> Se toman muestras de agua en cada tramo que se usa, por lo menos dos veces por semana. Y cada tramo tiene una bandera sanitaria, todos los d&iacute;as. <b>El ba&ntilde;o se habilita en los pilotos de arena</b>, con los guardavidas que pide la ley y la bandera del d&iacute;a. El Municipio ya contrata guardavidas para sus natatorios. En el resto del r&iacute;o, el ba&ntilde;o no se habilita, y cada acceso lo dice. Pero la bandera y el mapa del d&iacute;a tambi&eacute;n sirven para quien hace kite, windsurf o nada. Un vecino le puede preguntar a la inteligencia artificial del Municipio: &laquo;&iquest;d&oacute;nde me meto hoy?&raquo;. Ella le muestra la costa tramo por tramo, en verde, amarillo o rojo. Despu&eacute;s de una lluvia, el mapa queda en rojo por lo menos un d&iacute;a, y dos d&iacute;as despu&eacute;s de una lluvia fuerte. <span class="sg">Las primeras temporadas, el mapa va a estar casi todo en rojo, y eso es lo que empuja la limpieza.</span> Estas reglas reemplazan a la Ordenanza 5304 (anexo, Ordenanza XI).</p>
+<p><b>4 &middot; Recuperar parque por parque, con sus vecinos.</b> Se empieza por el Parque del &Aacute;guila y el Bosque Alegre, con sus asociaciones desde el dise&ntilde;o (m&aacute;s abajo). El Bosque Alegre es Paisaje Protegido desde 2012. El decreto que lo protegi&oacute; dice que el terreno vecino &laquo;era un ba&ntilde;ado rellenado con residuos domiciliarios&raquo;. Ese mismo decreto pide un plan para recuperar ese terreno, y el plan no se encontr&oacute;. Se recupera con naturaleza, no con cemento.</p>
+<p><b>5 &middot; Un plan con los municipios vecinos del r&iacute;o.</b> Un convenio con Vicente L&oacute;pez, San Fernando, Tigre y San Mart&iacute;n, por la cuenca del desag&uuml;e de Per&uacute;. Es como el que San Isidro firm&oacute; con Vicente L&oacute;pez por la calle Paran&aacute; (Ordenanza 8935). Un comit&eacute; de cuenca de la costa norte en la Autoridad del Agua, que ya cre&oacute; uno para Berazategui, Quilmes y Florencio Varela. Y AySA en la mesa.</p>
+<p><b>6 &middot; Que vuelva la arena.</b> Se hacen tramos piloto, de prueba, en lugares parecidos a la playa de Pacheco. Tienen que estar lejos de las bocas de los desag&uuml;es, y donde la costa natural ayude a que la arena no se vaya. Van sobre una base de piedra, como en Pacheco, para que funcionen desde el primer verano. Tienen bordes de plantas naturales y una partida anual para reponer arena. <b>Empieza al mismo tiempo que el corte de la cloaca, no despu&eacute;s.</b> La arena se ve r&aacute;pido, y el agua mejora con el tiempo. Mientras tanto, la bandera del d&iacute;a dice d&oacute;nde meterse. Como toda obra en la costa, necesita un estudio de impacto ambiental y la decisi&oacute;n del panel sorteado. En un parque de la costa, necesita tambi&eacute;n el dictamen de su asociaci&oacute;n. Si los pilotos funcionan, se extienden por la costa.</p>
+<p><b>Cu&aacute;nto cuesta.</b> Un piloto de arena de 100 por 20 metros, con su base de piedra, cuesta 196 millones una sola vez, con los precios del propio contrato del Municipio. Reponer la arena cuesta de 4 a 20 millones por a&ntilde;o. Sus guardavidas cuestan 29 millones por temporada, m&aacute;s 33 millones una sola vez por el bote y el desfibrilador. Las rejas cuestan de 70,4 a 130,9 millones una sola vez. Las dos barreras cuestan 125,6 millones una sola vez, con el anclaje, el proyecto y los permisos. Seg&uacute;n lo que defina el proyecto, pueden costar de 86 a 199. Vaciarlas y reponer lo que se gasta cuesta 39,3 millones por a&ntilde;o (de 27 a 57). Lo que funciona todo el a&ntilde;o, con las rejas, las barreras, la cuadrilla y las muestras, suma de 139 a 346 millones. <span class="sg">Es entre el 4% y el 10% de los 3.455 millones m&aacute;s para ambiente.</span> Ese aumento empieza a llegar en el mes 12. Por eso, el primer a&ntilde;o se adelanta lo que cuesta empezar: el diagn&oacute;stico de Per&uacute;, el piloto, las muestras y la primera temporada de guardavidas. Son unos 335 millones. Salen de los programas que ceden parte de su gasto (cuadro [[n:ceden]]), y no de lo que Ambiente ya gasta. No es gasto nuevo. El desviador, si hace falta, se paga como obra p&uacute;blica. Y la ayuda a las casas se fija con el diagn&oacute;stico.</p>
 </div>
 
 
@@ -1056,542 +797,203 @@ desviador, si hace falta, va por obra p&uacute;blica, y el subsidio a las casas 
 <h3>Se intent&oacute; licitar cuatro veces, las cuatro fracasaron, y el contrato de seis meses va por el
 a&ntilde;o diecisiete</h3>
 <div class="cols">
-<p><b>Recolecci&oacute;n de residuos, barrido y limpieza son 49.270 millones al a&ntilde;o</b>: la
-subfunci&oacute;n m&aacute;s cara del presupuesto municipal, casi tanto como toda la obra p&uacute;blica de un a&ntilde;o entero.
-<b>El mismo grupo de empresas presta el servicio desde el 30 de abril de 1998</b>, por la Licitaci&oacute;n
-P&uacute;blica 12/97 (Decreto 29/2003), y <span class="sg">ninguna de las cuatro licitaciones que se llamaron
-despu&eacute;s termin&oacute; en un contrato</span>.</p>
-<p><b>La 01/2004</b> la fren&oacute; treinta d&iacute;as una medida cautelar de un tribunal laboral, y no se
-encontr&oacute; el acto que la cierra. <b>La 17/2008</b> se adjudic&oacute; en forma provisoria al mismo grupo, y
-siete meses despu&eacute;s el Decreto 513 del 24 de febrero de 2009 derog&oacute; esa adjudicaci&oacute;n y la
-<b>declar&oacute; desierta</b>, invocando la crisis financiera global. En mayo de ese a&ntilde;o el Municipio
-contrat&oacute; directamente a esa uni&oacute;n de empresas por <b>seis meses</b>, con un plazo corto
-&laquo;debido a la prudencia que se debe adoptar por la crisis econ&oacute;mica mundial&raquo;.</p>
-<p><b>La 40/2019</b>, llamada por el Decreto 2278 del 26 de diciembre de 2019 con un presupuesto oficial de
-5.100 millones: compraron el pliego <b>dos empresas</b>, una de ellas el prestador vigente, y el <b>Decreto 1566
-del 13 de noviembre de 2020</b> desestim&oacute; <b>la totalidad de las ofertas</b>, porque la mejor superaba las
-estimaciones del propio Municipio. <b>Y la 41/2022</b>, con un presupuesto anual de 3.600 millones,
-termin&oacute; en diciembre de ese a&ntilde;o con todas las ofertas rechazadas por &laquo;la magnitud de las
-ofertas presentadas&raquo; (Decreto 2214/2022).</p>
-<p><b>Y los seis meses de 2009 siguen corriendo.</b> El contrato se prorrog&oacute; sin interrupci&oacute;n
-&mdash;en 2022, <span class="sg">&laquo;hasta que se resuelva una nueva contrataci&oacute;n&raquo;</span>, sin
-fecha&mdash;, y la &uacute;ltima pr&oacute;rroga, de diciembre de 2025, lo lleva hasta el 31 de diciembre de 2026
-&laquo;o hasta la adjudicaci&oacute;n de los procesos que resulten en su reemplazo&raquo; (DECRE-2025-1507). En el
-Decreto 2293 de 2022, la columna &laquo;decreto de adjudicaci&oacute;n&raquo; de la fila del servicio troncal
-<b>est&aacute; en blanco</b>, mientras la de servicios complementarios s&iacute; la consigna.</p>
-<p><b>Lo que se firma cada a&ntilde;o son redeterminaciones de precio.</b> El expediente 5229/2008
-acumula alcances numerados hasta el 68, y el acto m&aacute;s reciente sobre el troncal es de junio de
-2026. Las &uacute;nicas licitaciones adjudicadas a esa uni&oacute;n de empresas en todo el per&iacute;odo son de
-servicios <b>complementarios</b>: la 01/2012, de lavado de contenedores y veredas, y la 17/2014.</p>
-<p><b>No es una irregularidad de esta gesti&oacute;n ni de la anterior:</b> atraviesa a las dos y a las
-que hubo antes. Y la administraci&oacute;n llama &laquo;adjudicataria&raquo; a una empresa que sus
-propios papeles describen como contratada directamente tras una licitaci&oacute;n desierta.</p>
+<p><b>La recolecci&oacute;n de residuos, el barrido y la limpieza cuestan 49.270 millones por a&ntilde;o.</b> Es el gasto m&aacute;s caro del presupuesto del Municipio, y es casi tanto como toda la obra p&uacute;blica de un a&ntilde;o. <b>El mismo grupo de empresas da el servicio desde el 30 de abril de 1998</b>, por la Licitaci&oacute;n P&uacute;blica 12/97 (Decreto 29/2003). <span class="sg">Despu&eacute;s se llamaron cuatro licitaciones, y ninguna termin&oacute; en un contrato.</span></p>
+<p><b>La 01/2004</b> la fren&oacute; treinta d&iacute;as una medida cautelar de un tribunal laboral. No se encontr&oacute; el acto que la cierra. <b>La 17/2008</b> se adjudic&oacute; en forma provisoria al mismo grupo. Siete meses despu&eacute;s, el Decreto 513 del 24 de febrero de 2009 dej&oacute; sin efecto esa adjudicaci&oacute;n y la <b>declar&oacute; desierta</b>, por la crisis financiera mundial. En mayo de ese a&ntilde;o, el Municipio contrat&oacute; directamente a esa uni&oacute;n de empresas por <b>seis meses</b>. Dijo que el plazo era corto &laquo;debido a la prudencia que se debe adoptar por la crisis econ&oacute;mica mundial&raquo;.</p>
+<p><b>La 40/2019</b> se llam&oacute; por el Decreto 2278 del 26 de diciembre de 2019, con un presupuesto oficial de 5.100 millones. Compraron el pliego <b>dos empresas</b>, y una era la que ya daba el servicio. El <b>Decreto 1566 del 13 de noviembre de 2020</b> rechaz&oacute; <b>todas las ofertas</b>, porque la mejor costaba m&aacute;s de lo que calculaba el propio Municipio. <b>Y la 41/2022</b>, con un presupuesto anual de 3.600 millones, termin&oacute; en diciembre de ese a&ntilde;o. Se rechazaron todas las ofertas por &laquo;la magnitud de las ofertas presentadas&raquo; (Decreto 2214/2022).</p>
+<p><b>Y los seis meses de 2009 siguen corriendo.</b> El contrato se renov&oacute; una y otra vez, sin cortes. En 2022 se renov&oacute; <span class="sg">&laquo;hasta que se resuelva una nueva contrataci&oacute;n&raquo;</span>, sin fecha. La &uacute;ltima renovaci&oacute;n, de diciembre de 2025, lo lleva hasta el 31 de diciembre de 2026, &laquo;o hasta la adjudicaci&oacute;n de los procesos que resulten en su reemplazo&raquo; (DECRE-2025-1507). En el Decreto 2293 de 2022 hay una tabla. Su columna &laquo;decreto de adjudicaci&oacute;n&raquo; <b>est&aacute; en blanco</b> en la fila del servicio principal. En cambio, en la fila de los servicios complementarios s&iacute; est&aacute;.</p>
+<p><b>Lo que se firma cada a&ntilde;o son actualizaciones del precio.</b> El expediente 5229/2008 junta agregados numerados hasta el 68. El m&aacute;s reciente sobre el servicio principal es de junio de 2026. En todo ese tiempo, esa uni&oacute;n de empresas s&oacute;lo gan&oacute; licitaciones de servicios <b>complementarios</b>: la 01/2012, de lavado de contenedores y veredas, y la 17/2014.</p>
+<p><b>No es una irregularidad de esta gesti&oacute;n ni de la anterior:</b> pasa en las dos y en las que hubo antes. Y el Municipio llama &laquo;adjudicataria&raquo; a una empresa que, seg&uacute;n sus propios papeles, fue contratada directamente despu&eacute;s de una licitaci&oacute;n desierta.</p>
 </div>
 <div class="callout g">
 <div class="clabel">C&oacute;mo salir: lo que proponemos</div>
-<p><b>Dos zonas, licitadas por separado</b>, para que haya competencia y un segundo precio con el que
-comparar, que desde 1998 no se public&oacute;: es el mismo argumento del precio unitario en salud. Con el pliego
-discutido <b>antes</b> del llamado: frecuencias, horarios, zonas y qu&eacute; se separa.</p>
-<p><b>Todos los trabajadores siguen, con su antig&uuml;edad.</b> El pliego obliga al que gane a quedarse con todo el
-personal del servicio, con su antig&uuml;edad y sus derechos (Ley de Contrato de Trabajo, art&iacute;culos 225 y 228).
-La antig&uuml;edad acumulada hasta el cambio la paga el Municipio, auditada, sobre un padr&oacute;n que se congela al llamado; desde ah&iacute;, cada empresa la pone en su precio. <span class="sg">Esa deuda crece unos 650 millones por cada a&ntilde;o que pasa sin licitar</span> (6.6).</p>
-<p><b>Un presupuesto oficial realista.</b> Las dos &uacute;ltimas licitaciones se cayeron porque las ofertas superaban
-lo que estimaba el Municipio: <span class="sg">el presupuesto oficial se arma con precios de mercado</span>.</p>
-<p><b>Se paga por lo que se mide.</b> GPS en cada cami&oacute;n, sensores en los contenedores y c&aacute;maras: una parte
-del pago depende del resultado, el descuento es autom&aacute;tico y el control no lo hace el que presta el servicio.
-Cualquier vecino le pregunta a la inteligencia artificial del Municipio si pasaron por su cuadra, y cada
-comisi&oacute;n vecinal ve el indicador de su zona.</p>
-<p><b>Lo reciclable y lo compostable, fuera del contrato</b>, con cooperativas del partido, en la medida en que no
-choque con el convenio colectivo del sector. Las comisiones no ejecutan la recolecci&oacute;n: es un servicio diario
-que no puede fallar un d&iacute;a.</p>
+<p><b>Dos zonas, licitadas por separado.</b> As&iacute; hay competencia y un segundo precio para comparar, algo que no se publica desde 1998. Es la misma raz&oacute;n por la que en salud se publica el precio de cada unidad. El pliego se discute <b>antes</b> del llamado: frecuencias, horarios, zonas y qu&eacute; se separa.</p>
+<p><b>Todos los trabajadores siguen, con su antig&uuml;edad.</b> El pliego obliga al que gane a quedarse con todo el personal del servicio, con su antig&uuml;edad y sus derechos (Ley de Contrato de Trabajo, art&iacute;culos 225 y 228). La antig&uuml;edad acumulada hasta el cambio la paga el Municipio, despu&eacute;s de controlarla. Se calcula sobre una lista del personal que se cierra al llamar a licitaci&oacute;n. Desde ah&iacute;, cada empresa la incluye en su precio. <span class="sg">Esa deuda crece unos 650 millones por cada a&ntilde;o que pasa sin licitar</span> (6.6).</p>
+<p><b>Un presupuesto oficial realista.</b> Las dos &uacute;ltimas licitaciones se cayeron porque las ofertas costaban m&aacute;s de lo que calculaba el Municipio. <span class="sg">Por eso, el presupuesto oficial se arma con precios de mercado.</span></p>
+<p><b>Se paga por lo que se mide.</b> Hay GPS en cada cami&oacute;n, sensores en los contenedores y c&aacute;maras. Una parte del pago depende del resultado, y el descuento es autom&aacute;tico. El control no lo hace el que da el servicio. Cualquier vecino le puede preguntar a la inteligencia artificial del Municipio si pasaron por su cuadra. Y cada comisi&oacute;n vecinal ve c&oacute;mo funciona el servicio en su zona.</p>
+<p><b>Lo reciclable y lo que sirve para compost quedan fuera del contrato</b>, con cooperativas del partido, siempre que no choque con el convenio colectivo del sector. Las comisiones no hacen la recolecci&oacute;n: es un servicio diario que no puede fallar ni un d&iacute;a.</p>
 <p><b>Y la costa no va en este contrato:</b> la limpia la cuadrilla municipal de la costa.</p>
 </div>
 
 
 <h3>El ruido es la contaminaci&oacute;n que nadie mide</h3>
-<p class="tight">La partida de ambiente se describe hoy como arbolado, residuos y saneamiento. Falta la
-que afecta a m&aacute;s gente todos los d&iacute;as y no tiene un solo n&uacute;mero publicado.</p>
+<p class="tight">Hoy, la partida de ambiente se usa en arbolado, residuos y saneamiento. Falta la contaminaci&oacute;n que afecta a m&aacute;s gente todos los d&iacute;as, y que no tiene un solo n&uacute;mero publicado.</p>
 <div class="cols">
-<p><b>Es competencia municipal sin discusi&oacute;n.</b> La Ley Org&aacute;nica, en su art&iacute;culo 27
-inciso 17, pone en cabeza del Concejo Deliberante la <b>&laquo;prevenci&oacute;n y eliminaci&oacute;n de
-las molestias que afecten la tranquilidad&raquo;</b>, en especial las de origen sonoro. Y la Justicia de
-Faltas municipal juzga las infracciones de tr&aacute;nsito cometidas en el partido.</p>
-<p><b>Hay norma; lo que no hay es medici&oacute;n.</b> El C&oacute;digo Contravencional municipal (Ordenanza 5182/1976, art&iacute;culo
-81) sanciona los ruidos molestos por la hora y el lugar o por su calidad o intensidad, con multa de hasta 9.517.720
-pesos y/o clausura de hasta 60 d&iacute;as. Rige adem&aacute;s la Ordenanza General 27/1968: su art&iacute;culo 4 d) proh&iacute;be las motos sin
-silenciador, y la Ordenanza General 154 las multa directo, sin apercibimiento. <span class="sg">Lo que no hay es
-medici&oacute;n ni l&iacute;mites en decibeles para veh&iacute;culos en circulaci&oacute;n</span>, y los canales de reclamo que existen son para
-comercios, industrias y obras: <b>ninguno menciona el ruido de veh&iacute;culos en circulaci&oacute;n</b>.</p>
-<p><b>El l&iacute;mite ya est&aacute; escrito en la norma nacional.</b> El Anexo 1 del Decreto 779/95,
-que reglamenta la Ley de Tr&aacute;nsito, fija para un colectivo <b>80 decibeles</b> &mdash;83 si el
-motor es grande&mdash; en las configuraciones posteriores a 1997, y 89 en las anteriores. Para cualquier
-veh&iacute;culo en circulaci&oacute;n, moto incluida, la regla operativa es no superar el valor
-homologado de su modelo m&aacute;s tres decibeles.</p>
-<p><b>Dos fuentes distintas:</b> motores viejos de colectivo, que son un problema
-de flota, y escapes modificados de moto, que son una infracci&oacute;n individual. La ley provincial
-y la norma municipal obligan a las motos a llevar silenciador de escape; lo que falta no es la norma, es medir y labrar.</p>
+<p><b>Le toca al Municipio, sin discusi&oacute;n.</b> La Ley Org&aacute;nica, en su art&iacute;culo 27 inciso 17, le da esa tarea al Concejo Deliberante. Habla de la <b>&laquo;prevenci&oacute;n y eliminaci&oacute;n de las molestias que afecten la tranquilidad&raquo;</b>, en especial las que vienen del ruido. Y la Justicia de Faltas del Municipio juzga las infracciones de tr&aacute;nsito que se cometen en el partido.</p>
+<p><b>Hay normas. Lo que no hay es medici&oacute;n.</b> El C&oacute;digo Contravencional del Municipio (Ordenanza 5182/1976, art&iacute;culo 81) castiga los ruidos molestos por la hora, el lugar, el tipo de ruido o su fuerza. La multa llega a 9.517.720 pesos, y puede haber clausura de hasta 60 d&iacute;as. Adem&aacute;s rige la Ordenanza General 27/1968. Su art&iacute;culo 4 d) proh&iacute;be las motos sin silenciador, y la Ordenanza General 154 las multa directamente, sin aviso previo. <span class="sg">Lo que no hay es medici&oacute;n ni l&iacute;mites en decibeles para los veh&iacute;culos que circulan.</span> Y los canales de reclamo que existen son para comercios, industrias y obras. <b>Ninguno nombra el ruido de los veh&iacute;culos que circulan.</b></p>
+<p><b>El l&iacute;mite ya est&aacute; escrito en la norma nacional.</b> El Anexo 1 del Decreto 779/95 reglamenta la Ley de Tr&aacute;nsito. Para un colectivo aprobado despu&eacute;s de 1997, fija <b>80 decibeles</b>, u 83 si el motor es grande. Para los anteriores, fija 89. Para cualquier veh&iacute;culo que circula, motos incluidas, la regla es no pasar el valor aprobado para su modelo m&aacute;s tres decibeles.</p>
+<p><b>Hay dos fuentes distintas.</b> Una son los motores viejos de los colectivos, que son un problema de la flota. La otra son los escapes modificados de las motos, que son una infracci&oacute;n de cada conductor. La ley provincial y la norma del Municipio obligan a las motos a llevar silenciador. Lo que falta no es la norma: es medir y hacer el acta.</p>
 </div>
 <div class="callout a">
 <div class="clabel">La herramienta, hoy</div>
-<p><b>La medici&oacute;n de ruido con lectura de patente ya multa en tres lugares, y en los tres revisa una persona
-antes.</b> Nueva York la prueba desde 2021 y multa desde 2022: 1.602 actas hasta fines de 2024, y en 2025 doce
-c&aacute;maras emitieron 1.691 sobre 15.994 eventos &mdash;el 11%&mdash;. La multa por escape va de 800 a 2.625
-d&oacute;lares, y el personal mira cada video antes de mandar el aviso. En Kensington y Chelsea, en Londres, hay
-c&aacute;maras desde 2020: entre noviembre de 2021 y octubre de 2024 registraron 1.615 infracciones y aplicaron 577
-multas de 100 libras, decididas despu&eacute;s de revisar los datos a mano. Y Taiw&aacute;n multa desde 2021, con
-m&aacute;s de 300 equipos.</p>
-<p><b>En otros lugares, todav&iacute;a no.</b> Francia la ensaya con un umbral de 85 decibeles y una multa prevista
-de 135 euros, pero ninguna ciudad la aplica: falta homologar el instrumento. El ensayo nacional ingl&eacute;s
-funcion&oacute; sin sancionar, y calcul&oacute; que un sensor se paga solo si registra al menos dos casos genuinos por
-d&iacute;a. En Jap&oacute;n, un prototipo de investigaci&oacute;n con 31 micr&oacute;fonos e inteligencia artificial
-todav&iacute;a no multa, y Barcelona tiene once puntos instalados que tampoco multan. <span class="sg">No se
-encontr&oacute; ning&uacute;n caso en la Argentina ni en la regi&oacute;n.</span></p>
+<p><b>Medir el ruido y leer la patente ya sirve para multar en tres lugares. En los tres, una persona revisa antes.</b> Nueva York lo prueba desde 2021 y multa desde 2022. Hasta fines de 2024 hizo 1.602 actas. En 2025, doce c&aacute;maras hicieron 1.691 actas sobre 15.994 casos detectados, el 11%. La multa por escape va de 800 a 2.625 d&oacute;lares, y el personal mira cada video antes de mandar el aviso. En Kensington y Chelsea, en Londres, hay c&aacute;maras desde 2020. Entre noviembre de 2021 y octubre de 2024 registraron 1.615 infracciones y pusieron 577 multas de 100 libras. Las multas se decidieron despu&eacute;s de revisar los datos a mano. Y Taiw&aacute;n multa desde 2021, con m&aacute;s de 300 equipos.</p>
+<p><b>En otros lugares, todav&iacute;a no.</b> Francia lo prueba con un l&iacute;mite de 85 decibeles y una multa prevista de 135 euros. Pero ninguna ciudad lo aplica, porque falta aprobar el instrumento. La prueba nacional inglesa funcion&oacute; sin multar. Calcul&oacute; que un sensor se paga solo si registra al menos dos casos reales por d&iacute;a. En Jap&oacute;n hay un prototipo de investigaci&oacute;n con 31 micr&oacute;fonos e inteligencia artificial, que todav&iacute;a no multa. Y Barcelona tiene once puntos instalados, que tampoco multan. <span class="sg">No se encontr&oacute; ning&uacute;n caso en la Argentina ni en la regi&oacute;n.</span></p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: la prueba del vecino, la medici&oacute;n y la multa</div>
-<p><b>1 &middot; El vecino graba, y la prueba queda sellada.</b> Graba el ruido desde la inteligencia artificial del
-Municipio, que sella la prueba en el momento de grabar, con firma digital, hora y lugar: el Municipio pide gratis a la
-Naci&oacute;n un certificado de aplicaci&oacute;n, que hace presumir que el archivo viene del Municipio y no cambi&oacute; (Ley 25.506,
-art&iacute;culo 10). La inteligencia artificial arma el mapa del ruido y el expediente. Y sirve igual para denuncias de todo
-tipo, con foto, video o audio.</p>
-<p><b>2 &middot; C&oacute;mo se prueba.</b> En ruidos molestos alcanzan varias grabaciones selladas m&aacute;s el acta del inspector, sin
-decibeles (Ordenanza 5182, art&iacute;culo 81): un tribunal civil de La Plata dijo en 2023 que el exceso de ruido no se define
-s&oacute;lo por decibeles. Para la moto sin silenciador alcanza con verla y labrar el acta (necesita dictamen de un abogado:
-el art&iacute;culo 81 pide intimar antes).</p>
-<p><b>3 &middot; Con l&iacute;mites.</b> El vecino se identifica ante el Municipio, no ante el denunciado, y se le avisa desde el
-principio que, si el caso llega a juicio, un juez puede pedir su nombre. Graba el ruido desde su casa, sin grabar a
-otras personas (C&oacute;digo Civil y Comercial, art&iacute;culo 53), y la denuncia falsa se sanciona (Decreto-Ley 8031/73, art&iacute;culo
-79). Antes de mandar al inspector, la inteligencia artificial ofrece una mediaci&oacute;n voluntaria.</p>
-<p><b>4 &middot; La multa por decibeles a motos y colectivos, por ordenanza ambiental municipal</b> y no por la v&iacute;a de
-tr&aacute;nsito, para que las estaciones se puedan mover sin pedirle a la Provincia una autorizaci&oacute;n por lugar. En la
-Argentina no hay homologaci&oacute;n de son&oacute;metros, as&iacute; que la ordenanza define el instrumento homologado: son&oacute;metro clase 1
-o 2, con certificado de laboratorio de hasta dos a&ntilde;os y calibrador al empezar y al terminar cada medici&oacute;n, como la
-Ciudad de Buenos Aires (Decreto 740/2007). El m&eacute;todo de medici&oacute;n lo fija la reglamentaci&oacute;n (anexo, Ordenanza VIII;
-necesita dictamen de un abogado).</p>
+<p><b>1 &middot; El vecino graba, y la prueba queda sellada.</b> Graba el ruido con la inteligencia artificial del Municipio. Ella sella la prueba en el momento de grabar, con firma digital, hora y lugar. Para eso, el Municipio le pide gratis a la Naci&oacute;n un certificado de aplicaci&oacute;n. Con ese certificado, la ley da por hecho que el archivo viene del Municipio y que no se cambi&oacute; (Ley 25.506, art&iacute;culo 10). La inteligencia artificial arma el mapa del ruido y el expediente. Y sirve igual para denuncias de todo tipo, con foto, video o audio.</p>
+<p><b>2 &middot; C&oacute;mo se prueba.</b> Para los ruidos molestos, alcanzan varias grabaciones selladas y el acta del inspector, sin medir decibeles (Ordenanza 5182, art&iacute;culo 81). Un tribunal civil de La Plata dijo en 2023 que el exceso de ruido no se define s&oacute;lo por decibeles. Para la moto sin silenciador, alcanza con verla y hacer el acta. Esto necesita dictamen de un abogado, porque el art&iacute;culo 81 pide intimar antes.</p>
+<p><b>3 &middot; Con l&iacute;mites.</b> El vecino se identifica ante el Municipio, no ante el denunciado. Desde el principio se le avisa que, si el caso llega a juicio, un juez puede pedir su nombre. Graba el ruido desde su casa, sin grabar a otras personas (C&oacute;digo Civil y Comercial, art&iacute;culo 53). Y la denuncia falsa se castiga (Decreto-Ley 8031/73, art&iacute;culo 79). Antes de mandar al inspector, la inteligencia artificial ofrece una mediaci&oacute;n voluntaria.</p>
+<p><b>4 &middot; La multa por decibeles a motos y colectivos va por una ordenanza ambiental del Municipio</b>, y no por las reglas de tr&aacute;nsito. As&iacute;, las estaciones se pueden mover sin pedirle a la Provincia un permiso para cada lugar. En la Argentina no hay aprobaci&oacute;n oficial de son&oacute;metros. Por eso, la ordenanza define qu&eacute; instrumento vale: un son&oacute;metro clase 1 o 2, con certificado de laboratorio de hasta dos a&ntilde;os. Y se calibra al empezar y al terminar cada medici&oacute;n, como en la Ciudad de Buenos Aires (Decreto 740/2007). La forma de medir la fija la reglamentaci&oacute;n (anexo, Ordenanza VIII, necesita dictamen de un abogado).</p>
 <p><b>5 &middot; Estaciones m&oacute;viles.</b> Se mueven seg&uacute;n el mapa de la inteligencia artificial, y moverlas no obliga a
 calibrarlas de nuevo. Los lugares se publican en la inteligencia artificial del Municipio, como los de las c&aacute;maras de
 velocidad. As&iacute; las mueven Nueva York, Londres y Taiw&aacute;n.</p>
-<p><b>6 &middot; Primero el aviso, y una persona valida.</b> La inteligencia artificial distingue un escape adulterado de una
-sirena o una bocina y sincroniza el sonido con la c&aacute;mara que lee la patente. Ninguna c&aacute;mara en uso lo hace sola
-todav&iacute;a: en Nueva York esa separaci&oacute;n la hacen inspectores a mano, y un ensayo de Cornell Tech con sus datos acert&oacute; el
-98,5% de los casos que no eran infracci&oacute;n y el 71% de los que s&iacute;. <span class="sg">Por eso arma la prueba &mdash;audio,
-video, decibeles, patente, hora y lugar&mdash; y un inspector la valida antes de multar.</span> La escala es un aviso
-con d&oacute;nde arreglarlo, despu&eacute;s la multa, y m&aacute;s si reincide. En los colectivos, la prueba va a la empresa y a la
-autoridad de transporte.</p>
-<p><b>Lo que se promete</b> es la ordenanza, la medici&oacute;n y que cualquier vecino pueda preguntar qu&eacute; midieron las
-estaciones de su zona. Y el efecto buscado no es recaudar: <span class="sg">con dos multas, el ca&ntilde;o de escape vuelve a
-tener silenciador</span>.</p>
+<p><b>6 &middot; Primero el aviso, y una persona lo confirma.</b> La inteligencia artificial distingue un escape adulterado de una sirena o de una bocina. Y une el sonido con la c&aacute;mara que lee la patente. Todav&iacute;a no hay ninguna c&aacute;mara en uso que lo haga sola. En Nueva York, esa separaci&oacute;n la hacen inspectores a mano. Una prueba de Cornell Tech con esos datos acert&oacute; el 98,5% de los casos que no eran infracci&oacute;n, y el 71% de los que s&iacute; lo eran. <span class="sg">Por eso, la inteligencia artificial arma la prueba: audio, video, decibeles, patente, hora y lugar. Y un inspector la confirma antes de multar.</span> Primero va un aviso que dice d&oacute;nde arreglar el escape. Despu&eacute;s viene la multa, y una m&aacute;s alta si vuelve a pasar. En los colectivos, la prueba va a la empresa y a la autoridad de transporte.</p>
+<p><b>Lo que se promete</b> es la ordenanza, la medici&oacute;n y que cualquier vecino pueda preguntar qu&eacute; midieron las estaciones de su zona. Y lo que se busca no es recaudar. <span class="sg">Con dos multas, el ca&ntilde;o de escape vuelve a tener silenciador.</span></p>
 </div>
 
 <h3>El urbanismo no pasa por el Concejo</h3>
 <div class="cols">
-<p>En los 15.464 actos administrativos publicados en el Bolet&iacute;n Oficial entre febrero de 2024 y
-septiembre de 2026, <span class="sg">la expresi&oacute;n &laquo;convenio urban&iacute;stico&raquo; no
-aparece ni una sola vez.</span></p>
-<p><b>Hoy, lo que se da de m&aacute;s se da por decreto.</b> Lo que otorga m&aacute;s de lo que permite la zona
-son factibilidades firmadas por el intendente, con herramientas que el propio C&oacute;digo de Ordenamiento Urbano le
-deja: la urbanizaci&oacute;n especial, con alturas fijadas caso por caso (art&iacute;culo 1.2.1.1); un apartamiento
-de hasta el 10% &laquo;por casos particulares&raquo; (art&iacute;culo 1.1.2.6); y premios por cocheras, por cesiones o
-por demoler usos que la zona no admite. <span class="sg">Nada de eso pasa por el Concejo.</span></p>
-<p><b>Lo que s&iacute; aparece son decretos individuales:</b> 95 decretos de materia urban&iacute;stica
-&mdash;permisos de localizaci&oacute;n, factibilidades y afines&mdash; de los cuales 73 identifican un
-inmueble concreto. Y una sola ordenanza que toca el C&oacute;digo de Ordenamiento Urbano en todo el
-per&iacute;odo.</p>
-<p><b>Y no caen parejo.</b> De los 73 decretos con inmueble identificado, <b>Mart&iacute;nez concentra el
-28,8%, San Isidro ciudad el 27,4% y Boulogne el 19,2%</b>. <span class="sg">Tres localidades explican
-tres de cada cuatro decisiones urban&iacute;sticas del per&iacute;odo</span>, mientras Villa Adelina
-re&uacute;ne tres en dos a&ntilde;os y medio. El desarrollo tambi&eacute;n tiene mapa.</p>
-<p><b>Eso significa que el desarrollo urbano se decide caso por caso, por decreto del Ejecutivo</b>, y no
-por una norma que el Concejo discuta y vote. Cada permiso es legal; lo que no existe es la instancia donde
-se discuta el conjunto.</p>
-<p><b>Y no siempre se ve qu&eacute; se dio.</b> De cien actos revisados desde diciembre de 2023, catorce dieron
-m&aacute;s que el valor b&aacute;sico de la zona; en los cuatro m&aacute;s grandes de 2026 no se publicaron el factor de
-ocupaci&oacute;n, las alturas ni la cantidad de unidades; y otros tres cambiaron la cesi&oacute;n de una calle por
-dinero: 2.030 millones de pesos de 2025 por 5.890 metros cuadrados. En el mismo per&iacute;odo el Concejo no
-convalid&oacute; ninguna excepci&oacute;n por ordenanza, y el intendente vet&oacute; cuatro ordenanzas del Concejo,
-entre ellas la que proteg&iacute;a un tramo de la ribera.</p>
-<p><b>Y explica el reclamo vecinal.</b> Cuando los vecinos objetan la construcci&oacute;n en altura y
-hablan de falta de di&aacute;logo, no es una impresi&oacute;n: <b>no hay un &aacute;mbito donde plantearlo,
-porque estas decisiones no pasan por el cuerpo deliberativo.</b></p><p>Este programa propone que el criterio
-se discuta y se vote, y que cualquier vecino pueda preguntar qu&eacute; permisos se dieron en su localidad.</p>
-<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veintid&oacute;s d&iacute;as h&aacute;biles.</b>
-La reforma del C&oacute;digo de Ordenamiento Urbano, la Ordenanza 9432, se vot&oacute; el <b>6 de mayo de 2026</b>,
-veintid&oacute;s d&iacute;as h&aacute;biles despu&eacute;s de entrar al Concejo, <b>sin audiencia p&uacute;blica y sin estudio de
-impacto ambiental ni de las redes</b>: el expediente trae un solo estudio t&eacute;cnico, de transporte, hecho con
-&laquo;supuestos est&aacute;ndar de planificaci&oacute;n&raquo;. Ninguna norma municipal ped&iacute;a la audiencia: el
-C&oacute;digo no la nombra ni una vez.</p>
-<p><span class="sg">Que una decisi&oacute;n llegue al cuerpo deliberativo no alcanza si llega sin
-instancia de participaci&oacute;n</span>: lo que este programa propone es la instancia, no el tr&aacute;mite.</p>
-<p><b>Y hay un caso donde el &uacute;nico &aacute;mbito que funcion&oacute; fue un juzgado.</b> En
-Boulogne, la asamblea vecinal que reclama un parque p&uacute;blico en el predio lindero al ex Arsenal
-consigui&oacute; en <b>julio de 2025 una medida cautelar</b> que suspendi&oacute; la obra; la C&aacute;mara la
-confirm&oacute; en septiembre, y el 30 de diciembre, despu&eacute;s de una nueva consulta del Municipio, un juzgado la
-levant&oacute;, en una resoluci&oacute;n que figura como no firme.
-<b>Cuando un juez tiene que frenar una obra porque no hubo d&oacute;nde discutirla, el problema no es el
-juez: es que falta el &aacute;mbito.</b> Boulogne es la localidad m&aacute;s poblada del partido y la que
-menos espacio verde tiene.</p>
+<p>Entre febrero de 2024 y septiembre de 2026 se publicaron 15.464 actos administrativos en el Bolet&iacute;n Oficial. <span class="sg">En ninguno aparece la expresi&oacute;n &laquo;convenio urban&iacute;stico&raquo;.</span></p>
+<p><b>Hoy, lo que se permite de m&aacute;s se permite por decreto.</b> Cuando se da m&aacute;s de lo que permite la zona, es con factibilidades que firma el intendente. Usa herramientas que le da el propio C&oacute;digo de Ordenamiento Urbano. Una es la urbanizaci&oacute;n especial, con alturas fijadas caso por caso (art&iacute;culo 1.2.1.1). Otra es apartarse hasta un 10% de la norma &laquo;por casos particulares&raquo; (art&iacute;culo 1.1.2.6). Y tambi&eacute;n hay premios por cocheras, por ceder terreno o por demoler usos que la zona no admite. <span class="sg">Nada de eso pasa por el Concejo.</span></p>
+<p><b>Lo que s&iacute; aparece son decretos para cada caso.</b> Hay 95 decretos sobre urbanismo, como permisos de localizaci&oacute;n y factibilidades. De ellos, 73 nombran un inmueble concreto. Y en todo ese tiempo hay una sola ordenanza que toca el C&oacute;digo de Ordenamiento Urbano.</p>
+<p><b>Y no caen parejo.</b> De los 73 decretos con inmueble identificado, <b>el 28,8% es en Mart&iacute;nez, el 27,4% en la ciudad de San Isidro y el 19,2% en Boulogne</b>. <span class="sg">Tres localidades tienen tres de cada cuatro decisiones de urbanismo de esos a&ntilde;os.</span> En cambio, Villa Adelina tiene tres en dos a&ntilde;os y medio. El desarrollo tambi&eacute;n tiene mapa.</p>
+<p><b>Eso quiere decir que c&oacute;mo crece la ciudad se decide caso por caso, por decreto del Ejecutivo.</b> No se decide con una norma que el Concejo discuta y vote. Cada permiso es legal. Lo que no existe es un lugar donde se discuta el conjunto.</p>
+<p><b>Y no siempre se ve qu&eacute; se dio.</b> Se revisaron cien actos desde diciembre de 2023. Catorce dieron m&aacute;s que el valor b&aacute;sico de la zona. En los cuatro m&aacute;s grandes de 2026 no se public&oacute; cu&aacute;nto terreno se puede ocupar, ni las alturas, ni la cantidad de unidades. Y otros tres cambiaron por dinero la cesi&oacute;n de una calle: 2.030 millones de pesos de 2025 por 5.890 metros cuadrados. En esos mismos a&ntilde;os, el Concejo no aprob&oacute; ninguna excepci&oacute;n por ordenanza. Y el intendente vet&oacute; cuatro ordenanzas del Concejo, entre ellas la que proteg&iacute;a un tramo de la ribera.</p>
+<p><b>Y eso explica el reclamo de los vecinos.</b> Los vecinos se quejan de los edificios altos y de que no hay di&aacute;logo. No es una impresi&oacute;n. <b>No hay un lugar donde plantearlo, porque estas decisiones no pasan por el Concejo.</b> Este programa propone que el criterio se discuta y se vote. Y que cualquier vecino pueda preguntar qu&eacute; permisos se dieron en su localidad.</p>
+<p><b>La &uacute;nica vez que s&iacute; pas&oacute; por el Concejo, pas&oacute; en veintid&oacute;s d&iacute;as h&aacute;biles.</b> La reforma del C&oacute;digo de Ordenamiento Urbano, la Ordenanza 9432, se vot&oacute; el <b>6 de mayo de 2026</b>. Fue veintid&oacute;s d&iacute;as h&aacute;biles despu&eacute;s de entrar al Concejo, <b>sin audiencia p&uacute;blica y sin estudio de impacto ambiental ni de las redes</b>. El expediente trae un solo estudio t&eacute;cnico, de transporte, hecho con &laquo;supuestos est&aacute;ndar de planificaci&oacute;n&raquo;. Ninguna norma del Municipio ped&iacute;a la audiencia: el C&oacute;digo no la nombra ni una vez. <span class="sg">No alcanza con que una decisi&oacute;n llegue al Concejo, si llega sin que los vecinos puedan participar.</span> Lo que este programa propone es ese lugar para participar, no el tr&aacute;mite.</p>
+<p><b>Y hay un caso donde el &uacute;nico lugar que funcion&oacute; fue un juzgado.</b> En Boulogne, una asamblea vecinal reclama un parque p&uacute;blico en el terreno de al lado del ex Arsenal. En <b>julio de 2025</b> consigui&oacute; una medida cautelar que suspendi&oacute; la obra. La C&aacute;mara la confirm&oacute; en septiembre. El 30 de diciembre, despu&eacute;s de una nueva consulta del Municipio, un juzgado la levant&oacute;, en una resoluci&oacute;n que todav&iacute;a no est&aacute; firme. <b>Cuando un juez tiene que frenar una obra porque no hubo d&oacute;nde discutirla, el problema no es el juez: es que falta ese lugar.</b> Boulogne es la localidad con m&aacute;s habitantes del partido y la que menos espacio verde tiene.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos para las excepciones</div>
-<p><b>No se trata de prohibir excepciones: se trata de frenar las excepciones que no se justifican.</b>
-Proponemos que ninguna excepci&oacute;n ni cambio de zona salga sin <b>audiencia p&uacute;blica y sin dictamen de la
-comisi&oacute;n vecinal de la zona</b>, los dos previos y obligatorios, con respuesta por escrito a cada
-observaci&oacute;n.</p>
-<p><b>Y que lo que la zona rechace no salga.</b> El voto vecinal no puede obligar al Concejo, que sanciona las
-ordenanzas &laquo;con exclusividad&raquo; (Ley Org&aacute;nica, art&iacute;culo 24). Lo que s&iacute; puede hacer el intendente, y
-proponemos que se comprometa a hacerlo por ordenanza, es no otorgar por decreto lo que la zona rechace y vetar la
-ordenanza de excepci&oacute;n que la zona rechace: el Concejo s&oacute;lo la impone con 16 de sus 24 votos
-(anexo, Ordenanza XIII).</p>
-<p><b>Que la valorizaci&oacute;n pague.</b> La Ley provincial 14.449 obliga a cobrar por ordenanza al menos el 10% de lo
-que se valoriza un terreno por una decisi&oacute;n municipal, y San Isidro adhiri&oacute; en 2017 pero no la cobra.
-Proponemos el <b>15%</b>, como La Plata, y que vaya a vivienda y a obra donde falta.</p>
-<p><b>Y la inteligencia artificial del Municipio, del lado del vecino.</b> Registra cada excepci&oacute;n y detecta a
-quienes se repiten; compara lo aprobado con el C&oacute;digo y, con im&aacute;genes, lo construido de m&aacute;s; avisa a los
-vecinos de la zona y les arma el caso: qu&eacute; permite el C&oacute;digo y qu&eacute; se pide de m&aacute;s, los precedentes, el
-impacto en cloacas, agua, tr&aacute;nsito y desag&uuml;es, cu&aacute;nto se valoriza el terreno, el historial de quien lo
-pide y un borrador de intervenci&oacute;n para la audiencia, con las normas citadas. Para cualquier vecino.</p>
+<p><b>No se trata de prohibir las excepciones. Se trata de frenar las que no se justifican.</b> Proponemos que ninguna excepci&oacute;n ni cambio de zona salga sin dos cosas. Las dos son obligatorias y van antes: <b>una audiencia p&uacute;blica y el dictamen de la comisi&oacute;n vecinal de la zona</b>. Y cada observaci&oacute;n tiene que tener una respuesta por escrito.</p>
+<p><b>Y que lo que la zona rechace no salga.</b> El voto de los vecinos no puede obligar al Concejo, que aprueba las ordenanzas &laquo;con exclusividad&raquo; (Ley Org&aacute;nica, art&iacute;culo 24). Pero el intendente s&iacute; puede hacer dos cosas, y proponemos que se comprometa a hacerlas por ordenanza. No dar por decreto lo que la zona rechace. Y vetar la ordenanza de excepci&oacute;n que la zona rechace. As&iacute;, el Concejo s&oacute;lo puede imponerla con 16 de sus 24 votos (anexo, Ordenanza XIII).</p>
+<p><b>Que la suba de valor pague.</b> Cuando una decisi&oacute;n del Municipio hace subir el valor de un terreno, la Ley provincial 14.449 obliga a cobrar por ordenanza al menos el 10% de esa suba. San Isidro adhiri&oacute; en 2017, pero no lo cobra. Proponemos cobrar el <b>15%</b>, como La Plata, y usarlo en vivienda y en obra donde falta.</p>
+<p><b>Y la inteligencia artificial del Municipio, del lado del vecino.</b> Registra cada excepci&oacute;n y detecta a quienes piden excepciones una y otra vez. Compara lo aprobado con el C&oacute;digo, y con im&aacute;genes detecta lo que se construy&oacute; de m&aacute;s. Avisa a los vecinos de la zona y les arma el caso. Les dice qu&eacute; permite el C&oacute;digo, qu&eacute; se pide de m&aacute;s y cu&aacute;les son los casos anteriores. Les dice qu&eacute; efecto tiene en las cloacas, el agua, el tr&aacute;nsito y los desag&uuml;es, y cu&aacute;nto sube el valor del terreno. Les muestra la historia de quien lo pide. Y les prepara un borrador de lo que pueden decir en la audiencia, con las normas citadas. Sirve para cualquier vecino.</p>
 </div>
 
 <h3>El espacio p&uacute;blico: qui&eacute;n decide qu&eacute; se hace con &eacute;l</h3>
 <div class="cols">
-<p><b>El caso m&aacute;s claro es la costa: Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y Barisidro, en el 1602.</b>
-Las fechas, una al lado de la otra.</p>
-<p><b>Desde 1996</b> los dos funcionaban con un permiso municipal precario, como todos los permisos de uso.
-Ninguno tuvo nunca una habilitaci&oacute;n definitiva.</p>
-<p><b>En junio y julio de 2024</b> los dos estuvieron clausurados. El 7 de agosto el Concejo pidi&oacute; por unanimidad
-que se explicaran los motivos; no se encontr&oacute; la respuesta.</p>
-<p><b>En diciembre de 2024</b> Catalejo firm&oacute; la devoluci&oacute;n del predio.</p>
-<p><b>En junio de 2025</b> se demoli&oacute; Catalejo y se revoc&oacute; el permiso de Barisidro; <b>en agosto</b> se demoli&oacute;
-Barisidro. No se encontr&oacute; publicado ning&uacute;n acto que autorice las demoliciones.</p>
-<p><b>En marzo de 2026</b>, despu&eacute;s, el Municipio firm&oacute; con la Provincia el convenio que le da por diez a&ntilde;os la
-tenencia de la costa (Ordenanza 9430).</p>
-<p><b>Lo que contaron quienes explotaban los locales:</b> que le pagaban el canon a la Provincia todos los a&ntilde;os;
-que la habilitaci&oacute;n se les quitaba y se les devolv&iacute;a por pocos d&iacute;as antes de volver a clausurar; que antes de cada
-rehabilitaci&oacute;n se les exig&iacute;an obras, como renovar los ba&ntilde;os; y que hoy le pasa lo mismo a un club de la ribera,
-cerca del Parque del &Aacute;guila.</p>
-<p><b>Lo que se demoli&oacute;</b> estaba frente al r&iacute;o, sobre un predio que seg&uacute;n el Municipio tiene 9.775 metros
-cuadrados, y s&oacute;lo la estructura de Catalejo ten&iacute;a m&aacute;s de mil: dos locales que durante casi treinta a&ntilde;os emplearon
-gente y trajeron p&uacute;blico al Bajo.</p>
-<p><b>Y el orden de los pasos fue el inverso al que este programa propone.</b> El plan de
-participaci&oacute;n ciudadana, con recorridas y escucha de vecinos, se anunci&oacute; entre julio y
-septiembre de 2025 &mdash;cuando Catalejo ya estaba demolido y Barisidro entregado&mdash;.
-<span class="sg">Se consult&oacute; a los vecinos sobre un espacio que ya se hab&iacute;a
-vaciado.</span></p>
-<p><b>Y hubo una p&eacute;rdida que nadie cont&oacute;:</b> esos locales no le costaban un peso al
-Municipio. El cap&iacute;tulo 1 muestra que toda la
-partida municipal de empleo son 170 millones al a&ntilde;o. <b>Acceso p&uacute;blico y actividad
-no son excluyentes</b>, y no se hizo el ejercicio de intentar las dos.</p>
+<p><b>El caso m&aacute;s claro es la costa: Catalejo, en Roque S&aacute;enz Pe&ntilde;a 1601, y Barisidro, en el 1602.</b> Estas son las fechas, en orden.</p>
+<p><b>Desde 1996</b>, los dos funcionaban con un permiso precario del Municipio, como todos los permisos de uso. Ninguno tuvo nunca una habilitaci&oacute;n definitiva.</p>
+<p><b>En junio y julio de 2024</b>, los dos estuvieron clausurados. El 7 de agosto, el Concejo pidi&oacute; por unanimidad que se explicaran los motivos. No se encontr&oacute; la respuesta.</p>
+<p><b>En diciembre de 2024</b>, Catalejo firm&oacute; la devoluci&oacute;n del terreno.</p>
+<p><b>En junio de 2025</b> se demoli&oacute; Catalejo y se quit&oacute; el permiso de Barisidro. <b>En agosto</b> se demoli&oacute; Barisidro. No se encontr&oacute; publicado ning&uacute;n acto que autorice las demoliciones.</p>
+<p><b>En marzo de 2026</b>, despu&eacute;s de todo eso, el Municipio firm&oacute; un convenio con la Provincia. Ese convenio le da la tenencia de la costa por diez a&ntilde;os (Ordenanza 9430).</p>
+<p><b>Lo que contaron quienes manejaban los locales.</b> Dijeron que le pagaban el canon a la Provincia todos los a&ntilde;os. Que la habilitaci&oacute;n se les quitaba y se les devolv&iacute;a por pocos d&iacute;as, antes de volver a clausurar. Que antes de cada nueva habilitaci&oacute;n se les ped&iacute;an obras, como renovar los ba&ntilde;os. Y que hoy le pasa lo mismo a un club de la ribera, cerca del Parque del &Aacute;guila.</p>
+<p><b>Lo que se demoli&oacute;</b> estaba frente al r&iacute;o, en un terreno que, seg&uacute;n el Municipio, tiene 9.775 metros cuadrados. S&oacute;lo el edificio de Catalejo ten&iacute;a m&aacute;s de mil. Eran dos locales que durante casi treinta a&ntilde;os dieron trabajo y llevaron gente al Bajo.</p>
+<p><b>Y el orden de los pasos fue el contrario al que propone este programa.</b> El plan de participaci&oacute;n, con recorridas y escucha de vecinos, se anunci&oacute; entre julio y septiembre de 2025. Para entonces, Catalejo ya estaba demolido y Barisidro, entregado. <span class="sg">Se consult&oacute; a los vecinos sobre un espacio que ya se hab&iacute;a vaciado.</span></p>
+<p><b>Y hubo una p&eacute;rdida que nadie cont&oacute;:</b> esos locales no le costaban un peso al Municipio. El cap&iacute;tulo 1 muestra que toda la partida de empleo del Municipio es de 170 millones por a&ntilde;o. <b>El acceso p&uacute;blico y la actividad pueden convivir</b>, y no se intent&oacute; tener las dos cosas.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos para la costa que ya funciona</div>
-<p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa hoy ocupadas o de
-acceso restringido.</p><p>Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n
-decide qu&eacute; se hace con cada una.</p>
-<p><b>Desde 2026 el Municipio tiene por diez a&ntilde;os la tenencia de la costa, que sigue siendo de la Provincia</b>
-(Ordenanza 9430). Con ella, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b> en sus predios, no
-adentro de los parques, paguen
-un canon al Municipio y empleen gente del partido, con la cl&aacute;usula del 75% (anexo, Ordenanza X). Por una ley
-provincial de 2025, el 40% de ese canon va a la Provincia, pero s&oacute;lo en los predios del convenio, donde est&aacute;n el
-Parque del &Aacute;guila, S&aacute;enz Pe&ntilde;a, Centenera y Pacheco; en el Puerto y en 33 Orientales, que no est&aacute;n en el convenio, no
-corresponde (necesita dictamen de un abogado). <b>Lo que queda en el Municipio se destina a la costa</b> (anexo,
-Ordenanza XII). <span class="sg">No se
-destruye capital ni empleo que funciona</span>: demoler es la &uacute;ltima opci&oacute;n, no la primera, y exige fundamentar
-por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
-<p><b>El objetivo es una costa linda que traiga gente y trabajo a los comercios toda la semana y todo el
-a&ntilde;o.</b> La costa no es de una zona, y la secci&oacute;n 4.6 ya fija qui&eacute;n la decide.</p>
+<p>El Municipio anunci&oacute; que va a recuperar ocho hect&aacute;reas de costa que hoy est&aacute;n ocupadas o tienen el acceso limitado. Este programa tambi&eacute;n las quiere abiertas. Lo que cambia es qui&eacute;n decide qu&eacute; se hace con cada una.</p>
+<p><b>Desde 2026, el Municipio tiene la tenencia de la costa por diez a&ntilde;os. La costa sigue siendo de la Provincia</b> (Ordenanza 9430). Con esa tenencia, proponemos que <b>los comercios que funcionan en la costa sigan trabajando</b> en sus terrenos, no adentro de los parques. Pagan un canon al Municipio y emplean gente del partido, con la regla del 75% (anexo, Ordenanza X). Por una ley provincial de 2025, el 40% de ese canon va a la Provincia. Pero eso es s&oacute;lo en los terrenos del convenio, donde est&aacute;n el Parque del &Aacute;guila, S&aacute;enz Pe&ntilde;a, Centenera y Pacheco. En el Puerto y en 33 Orientales, que no est&aacute;n en el convenio, no corresponde (necesita dictamen de un abogado). <b>Lo que queda en el Municipio se usa en la costa</b> (anexo, Ordenanza XII). <span class="sg">No se destruye lo que funciona, ni el empleo que da.</span> Demoler es la &uacute;ltima opci&oacute;n, no la primera. Y hay que explicar por escrito por qu&eacute; lo que est&aacute; construido no sirve.</p>
+<p><b>El objetivo es una costa linda, que lleve gente y trabajo a los comercios toda la semana y todo el a&ntilde;o.</b> La costa no es de una sola zona, y la secci&oacute;n 4.6 ya dice qui&eacute;n decide sobre ella.</p>
 </div>
 <h3>La costa toda la semana</h3>
 <div class="cols">
-<p><b>Hoy no hay ning&uacute;n conteo de tr&aacute;nsito ni de visitantes en la costa</b>: ni de fin de semana, ni de d&iacute;as
-h&aacute;biles, ni por estaci&oacute;n del a&ntilde;o. Y lo que organiza el Municipio cae casi todo en verano y en fines de semana: de
-las 145 actividades de las vacaciones de invierno de 2026, la &uacute;nica en la costa fue la Reserva.</p>
-<p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa al final de la calle Per&uacute; hay unos 300 metros a
-pie, y de Anchorena a Pacheco y el r&iacute;o, unos 400. Su operador ya muestra en su aplicaci&oacute;n, en tiempo real, cu&aacute;ndo
-llega cada tren a cada estaci&oacute;n; la Ciudad distribu&iacute;a la posici&oacute;n de los trenes en su API de transporte, que hoy
-est&aacute; suspendida.</p>
-<p><b>Y ya hay cosas en la semana que nadie cuenta</b>: la Reserva, con escuelas de lunes a viernes, y Puerto
-Libre, para adultos mayores. La Reserva lleg&oacute; a recibir 13.500 alumnos en 1998; en 2018, seg&uacute;n el Municipio, entre
-6.000 y 7.000.</p>
+<p><b>Hoy nadie cuenta cu&aacute;nta gente ni cu&aacute;ntos autos van a la costa.</b> No se cuenta ni el fin de semana, ni los d&iacute;as h&aacute;biles, ni por estaci&oacute;n del a&ntilde;o. Y lo que organiza el Municipio cae casi todo en verano y en fines de semana. En las vacaciones de invierno de 2026 hubo 145 actividades, y la &uacute;nica en la costa fue la Reserva.</p>
+<p><b>El tren deja cerca.</b> De la estaci&oacute;n Las Barrancas del Tren de la Costa al final de la calle Per&uacute; hay unos 300 metros a pie. Y de Anchorena a Pacheco y el r&iacute;o hay unos 400. El que maneja el tren ya muestra en su aplicaci&oacute;n cu&aacute;ndo llega cada tren a cada estaci&oacute;n, en tiempo real. La Ciudad publicaba la ubicaci&oacute;n de los trenes en su servicio de datos de transporte, que hoy est&aacute; suspendido.</p>
+<p><b>Y ya hay cosas en la semana que nadie cuenta.</b> Est&aacute; la Reserva, que recibe escuelas de lunes a viernes, y Puerto Libre, para adultos mayores. La Reserva lleg&oacute; a recibir 13.500 alumnos en 1998. En 2018, seg&uacute;n el Municipio, recibi&oacute; entre 6.000 y 7.000.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: que la gente vaya tambi&eacute;n en la semana</div>
-<p><b>El foco es la semana.</b> Si la gente va tambi&eacute;n de lunes a jueves, se descomprimen los fines de semana y
-los feriados.</p>
-<p><b>1 &middot; La inteligencia artificial empuja hacia la semana.</b> Si alguien le pregunta por el fin de semana, le
-avisa que va a estar lleno y le muestra qu&eacute; d&iacute;as hay lugar.</p>
-<p><b>2 &middot; Las escuelas del partido, en la costa en horario escolar</b>, con educaci&oacute;n ambiental en la Reserva y en
-los parques.</p>
+<p><b>Lo importante es la semana.</b> Si la gente va tambi&eacute;n de lunes a jueves, hay menos gente los fines de semana y los feriados.</p>
+<p><b>1 &middot; La inteligencia artificial anima a ir en la semana.</b> Si alguien le pregunta por el fin de semana, le avisa que va a estar lleno. Y le muestra qu&eacute; d&iacute;as hay lugar.</p>
+<p><b>2 &middot; Las escuelas del partido van a la costa en horario escolar</b>, con educaci&oacute;n ambiental en la Reserva y en los parques.</p>
 <p><b>3 &middot; Ofertas de lunes a jueves.</b> Los comercios de la costa hacen ofertas los d&iacute;as de semana, y la
 inteligencia artificial del Municipio las difunde.</p>
-<p><b>4 &middot; Actividades fijas, no eventos sueltos</b>: clases n&aacute;uticas &mdash;la Escuela N&aacute;utica, m&aacute;s abajo&mdash;, de kite, caminatas guiadas, todas las
-semanas el mismo d&iacute;a, que se van extendiendo por la costa a medida que crecen, empezando por algunos parques. Los
-eventos solos no alcanzan: en los Docklands de Melbourne, tres noches de festival llevaron 100.000 personas y los
-locales vac&iacute;os siguieron entre el 15% y el 20%. Y en cada puesto, de lunes a jueves, la Escuela N&aacute;utica, clases gratis de gimnasia y de baile, foodtrucks con ofertas y espect&aacute;culos al aire libre: m&aacute;s abajo.</p>
-<p><b>5 &middot; Medir cu&aacute;nta gente va cada d&iacute;a, para saber si funciona.</b> Una c&aacute;mara que cuenta en cada acceso de los
-21 playones de la costa: unos 110 a 117 millones una vez y 13 millones por a&ntilde;o, dentro del aumento de ambiente, a
-los que falta sumar el montaje y el programa. Cualquiera ve el resultado en la inteligencia artificial del
-Municipio.</p>
-<p><b>6 &middot; El tren en tiempo real.</b> La inteligencia artificial del Municipio, conectada con el Tren de la Costa y
-el Mitre, dice d&oacute;nde est&aacute; de verdad cada tren y cu&aacute;nto falta &mdash;no el horario de papel&mdash;, y avisa cuando el
-tren viene a dos estaciones. El dato ya existe: proponemos ped&iacute;rselo por convenio a Trenes Argentinos, que opera
-las dos l&iacute;neas. Y carteles desde cada estaci&oacute;n hasta el r&iacute;o.</p>
-<p><b>7 &middot; Estacionar sin pagar, nunca, y sin construir.</b> No se cobra estacionamiento en la costa ni se usa la
-gr&uacute;a para recaudar: ser&iacute;a regresivo, porque un cobro igual para todos pesa m&aacute;s en quien menos tiene, y el r&iacute;o es de
-todos. Tampoco se construyen playones: no hay lugar. En los d&iacute;as de mucha gente, la inteligencia artificial del
-Municipio orienta el tr&aacute;nsito y dice d&oacute;nde hay lugar; la gente estaciona en los barrios, y a la costa accede la
-cantidad que entre.</p>
-<p><b>8 &middot; Clausuras totalmente transparentes.</b> Ninguna clausura sin motivo escrito ni sin plazo para
-corregir antes. Toda inspecci&oacute;n que termine en una clausura queda grabada y sellada, como las dem&aacute;s
-inspecciones (anexo, Ordenanza IV): se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro
-real obliga a cerrar en el momento, igual se graba y se explica. Todo queda en la inteligencia artificial del
-Municipio, que cualquier vecino puede consultar y que audita las clausuras: avisa si a un mismo comercio se lo
-clausura una y otra vez, o si una clausura no se sostiene con una infracci&oacute;n. Y siempre hay derecho a reclamar. Y si a un comerciante le piden una coima o lo aprietan, tiene la herramienta del 5.9.
-<span class="sg">As&iacute; a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y
-Barisidro.</span></p>
-<p><b>9 &middot; La costa en la inteligencia artificial del Municipio</b>, en un solo lugar: c&oacute;mo est&aacute; el agua, d&oacute;nde
-estacionar, cu&aacute;ndo llega el tren, qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del
-&uacute;ltimo dato.</p>
+<p><b>4 &middot; Actividades fijas, no eventos sueltos.</b> Hay clases n&aacute;uticas (la Escuela N&aacute;utica, m&aacute;s abajo), clases de kite y caminatas guiadas. Son todas las semanas, el mismo d&iacute;a. Empiezan en algunos parques y se van extendiendo por la costa a medida que crecen. Los eventos solos no alcanzan. En los Docklands de Melbourne, tres noches de festival llevaron 100.000 personas, y los locales vac&iacute;os siguieron siendo entre el 15% y el 20%. Y en cada puesto, de lunes a jueves, hay Escuela N&aacute;utica, clases gratis de gimnasia y de baile, foodtrucks con ofertas y espect&aacute;culos al aire libre. Todo eso est&aacute; m&aacute;s abajo.</p>
+<p><b>5 &middot; Medir cu&aacute;nta gente va cada d&iacute;a, para saber si funciona.</b> Se pone una c&aacute;mara que cuenta gente en cada acceso de los 21 playones de la costa. Cuesta unos 110 a 117 millones una sola vez, y 13 millones por a&ntilde;o, dentro del aumento de ambiente. A eso falta sumarle la instalaci&oacute;n y el programa. Cualquiera ve el resultado en la inteligencia artificial del Municipio.</p>
+<p><b>6 &middot; El tren en tiempo real.</b> La inteligencia artificial del Municipio se conecta con el Tren de la Costa y con el Mitre. Dice d&oacute;nde est&aacute; de verdad cada tren y cu&aacute;nto falta, no el horario de papel. Y avisa cuando el tren est&aacute; a dos estaciones. El dato ya existe: proponemos ped&iacute;rselo por convenio a Trenes Argentinos, que maneja las dos l&iacute;neas. Y poner carteles desde cada estaci&oacute;n hasta el r&iacute;o.</p>
+<p><b>7 &middot; Estacionar es gratis, siempre, y no se construyen playones.</b> No se cobra estacionamiento en la costa, ni se usa la gr&uacute;a para recaudar. Ser&iacute;a injusto, porque un cobro igual para todos pesa m&aacute;s en quien menos tiene. Y el r&iacute;o es de todos. Tampoco se construyen playones, porque no hay lugar. En los d&iacute;as de mucha gente, la inteligencia artificial del Municipio gu&iacute;a el tr&aacute;nsito y dice d&oacute;nde hay lugar. La gente estaciona en los barrios, y a la costa entra la cantidad que entre.</p>
+<p><b>8 &middot; Clausuras totalmente a la vista.</b> No hay clausura sin un motivo escrito y sin un plazo para corregir antes. Toda inspecci&oacute;n que termina en una clausura queda grabada y sellada, como las dem&aacute;s inspecciones (anexo, Ordenanza IV). Se ve qu&eacute; se inspeccion&oacute;, qu&eacute; se encontr&oacute; y por qu&eacute; se clausura. Si un peligro real obliga a cerrar en el momento, igual se graba y se explica. Todo queda en la inteligencia artificial del Municipio, que cualquier vecino puede consultar. Y ella controla las clausuras. Avisa si a un mismo comercio se lo clausura una y otra vez, o si una clausura no tiene una infracci&oacute;n que la justifique. Siempre hay derecho a reclamar. Y si a un comerciante le piden una coima o lo aprietan, tiene la herramienta del 5.9. <span class="sg">As&iacute;, a los comercios los protegen sus vecinos, y a ninguno le puede pasar lo de Catalejo y Barisidro.</span></p>
+<p><b>9 &middot; Toda la costa en la inteligencia artificial del Municipio</b>, en un solo lugar. Dice c&oacute;mo est&aacute; el agua, d&oacute;nde estacionar y cu&aacute;ndo llega el tren. Dice qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del &uacute;ltimo dato.</p>
 </div>
 """ + fig("f_costa_semana", "La costa en la semana: gimnasia, vela, kayak y foodtrucks. Ilustraci&oacute;n.", "47%") + """
 <h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>
 <div class="cols">
-<p><b>Hoy el Municipio ya ense&ntilde;a a navegar en el r&iacute;o</b>, en el Campo de Deportes N&deg; 9 del Bajo: kayak, vela,
-windsurf, kitesurf y stand up paddle, con instructores, y en 2025 abri&oacute; la inscripci&oacute;n gratuita para vecinos
-adultos, seg&uacute;n su propia convocatoria. <b>Funciona, y es una sola.</b> Y seg&uacute;n el Municipio, quien no es socio de
-un club no tiene una bajada p&uacute;blica al r&iacute;o.</p>
+<p><b>Hoy el Municipio ya ense&ntilde;a a navegar en el r&iacute;o</b>, en el Campo de Deportes N&deg; 9 del Bajo. Ense&ntilde;a kayak, vela, windsurf, kitesurf y stand up paddle, con instructores. Y en 2025 abri&oacute; la inscripci&oacute;n gratis para vecinos adultos, seg&uacute;n su propia convocatoria. <b>Funciona, y es una sola.</b> Y seg&uacute;n el Municipio, quien no es socio de un club no tiene una bajada p&uacute;blica al r&iacute;o.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: la Escuela N&aacute;utica en cada parque de la costa</div>
-<p><b>1 &middot; Un puesto n&aacute;utico en cada parque de la costa con acceso al agua: seis, de a dos por a&ntilde;o.</b> Primero el
-Parque del &Aacute;guila, despu&eacute;s de medir su agua y con el dictamen de su asociaci&oacute;n de parque. Los otros cinco
-&mdash;Roque S&aacute;enz Pe&ntilde;a y el r&iacute;o, el final de Del Barco Centenera, la d&aacute;rsena del Puerto, el Paseo 33 Orientales y
-Pacheco&mdash; siguen, primero los de mejor agua. El final de la calle Per&uacute; no, por la boca del desag&uuml;e; la
-Reserva, el Bosque Alegre y las islas tampoco, porque son &aacute;reas protegidas.</p>
-<p><b>2 &middot; Liviano, natural y desmontable, sin cemento</b>: un m&oacute;dulo de madera para guardar los equipos y una
-bajada de madera al r&iacute;o (anexo, Ordenanza XIV).</p>
-<p><b>3 &middot; Clases gratuitas, sobre todo en la semana</b>: kayak y stand up paddle en los seis; vela y windsurf en
-los cuatro de agua abierta. A la ma&ntilde;ana, las escuelas del partido, en horario escolar; a la tarde y el s&aacute;bado, los
-vecinos.</p>
-<p><b>4 &middot; El agua manda.</b> La clase en el agua se da cuando la bandera del d&iacute;a lo permite, con un valor propio
-para lo que no es ba&ntilde;o: 630 <i>E. coli</i> cada 100 mililitros, el que usa Texas. El windsurf, que el Ministerio de
-Salud pone junto a la nataci&oacute;n, sigue el valor del ba&ntilde;o (anexo, Ordenanza XI). Si la bandera no deja, la clase es en
-tierra: seguridad, armado, nudos. Las muestras de cada puesto entran en las de la costa, que ya paga Ambiente.</p>
-<p><b>5 &middot; Profesores del Municipio, por concurso abierto, uno por uno</b>: se postulan, muestran que son
-profesores y pasan una prueba t&eacute;cnica y de rescate. Trabajan en cuadrillas propias del Municipio: m&aacute;s profesores,
-trabajo nuevo. No se subcontrata a escuelas ni a empresas privadas, y as&iacute; el dinero va a las clases y no a
-intermediarios. Las escuelas privadas siguen con sus clases pagas.</p>
+<p><b>1 &middot; Un puesto n&aacute;utico en cada parque de la costa que tiene acceso al agua: seis, de a dos por a&ntilde;o.</b> Primero va el Parque del &Aacute;guila, despu&eacute;s de medir su agua y con el dictamen de su asociaci&oacute;n de parque. Despu&eacute;s siguen los otros cinco, primero los de mejor agua. Son Roque S&aacute;enz Pe&ntilde;a y el r&iacute;o, el final de Del Barco Centenera, la d&aacute;rsena del Puerto, el Paseo 33 Orientales y Pacheco. El final de la calle Per&uacute; no, por la boca del desag&uuml;e. La Reserva, el Bosque Alegre y las islas tampoco, porque son &aacute;reas protegidas.</p>
+<p><b>2 &middot; Liviano, natural y desmontable, sin cemento.</b> Es un m&oacute;dulo de madera para guardar los equipos y una bajada de madera al r&iacute;o (anexo, Ordenanza XIV).</p>
+<p><b>3 &middot; Clases gratis, sobre todo en la semana.</b> Hay kayak y stand up paddle en los seis puestos, y vela y windsurf en los cuatro de agua abierta. A la ma&ntilde;ana van las escuelas del partido, en horario escolar. A la tarde y los s&aacute;bados, los vecinos.</p>
+<p><b>4 &middot; El agua manda.</b> La clase en el agua se da cuando la bandera del d&iacute;a lo permite. Para lo que no es ba&ntilde;arse hay un valor propio: 630 <i>E. coli</i> cada 100 mililitros, el que usa Texas. El windsurf sigue el valor del ba&ntilde;o, porque el Ministerio de Salud lo pone junto a la nataci&oacute;n (anexo, Ordenanza XI). Si la bandera no deja, la clase es en tierra: seguridad, armado de los equipos y nudos. Las muestras de cada puesto entran en las de la costa, que ya paga Ambiente.</p>
+<p><b>5 &middot; Profesores del Municipio, elegidos por concurso abierto, uno por uno.</b> Se postulan, muestran que son profesores y pasan una prueba t&eacute;cnica y de rescate. Trabajan en equipos propios del Municipio: m&aacute;s profesores, m&aacute;s trabajo. No se subcontrata a escuelas ni a empresas privadas. As&iacute;, el dinero va a las clases y no a intermediarios. Las escuelas privadas siguen con sus clases pagas.</p>
 <p><b>6 &middot; Seguridad</b>: cada puesto tiene un bote de apoyo con un conductor habilitado, como pide la Prefectura, y
 profesores formados en rescate.</p>
 <p><b>7 &middot; La inteligencia artificial del Municipio</b> dice qu&eacute; parque tiene clase hoy, si es en el agua o en
 tierra, y c&oacute;mo anotarse.</p>
-<p><b>Cu&aacute;nto cuesta.</b> Cada puesto, de 62 a 91 millones una vez &mdash;el m&oacute;dulo, la bajada, que es una
-estimaci&oacute;n, los equipos para un grupo de doce y el bote&mdash; y de 60 a 62 millones por a&ntilde;o, casi todo en
-profesores. Vela y windsurf suman de 22 a 43 millones una vez y de 3 a 6 por a&ntilde;o. A&ntilde;o por a&ntilde;o, de a dos puestos:</p>
+<p><b>Cu&aacute;nto cuesta.</b> Cada puesto cuesta de 62 a 91 millones una sola vez. Eso incluye el m&oacute;dulo, la bajada (que es una estimaci&oacute;n), los equipos para un grupo de doce y el bote. Y cuesta de 60 a 62 millones por a&ntilde;o, casi todo en profesores. Vela y windsurf suman de 22 a 43 millones una sola vez, y de 3 a 6 por a&ntilde;o. A&ntilde;o por a&ntilde;o, abriendo dos puestos por a&ntilde;o:</p>
 <p><b>A&ntilde;o 1</b>, el Parque del &Aacute;guila y otro: de 167 a 268 millones de inversi&oacute;n, y de 127 a 136 por a&ntilde;o.</p>
 <p><b>A&ntilde;o 2</b>, dos m&aacute;s: de 145 a 225 millones de inversi&oacute;n, y el gasto sube a entre 250 y 266 por a&ntilde;o.</p>
-<p><b>A&ntilde;o 3</b>, los dos &uacute;ltimos: de 145 a 225 millones de inversi&oacute;n; desde ah&iacute;, con los seis, de 373 a 395 por a&ntilde;o
-y unos 36 profesores nuevos.</p>
-<p><span class="sg">Lo paga Deportes: la inversi&oacute;n, con obras deportivas, y lo de cada a&ntilde;o, con su propio
-presupuesto.</span></p>
+<p><b>A&ntilde;o 3</b>, los dos &uacute;ltimos: de 145 a 225 millones de inversi&oacute;n. Desde ah&iacute;, con los seis, cuesta de 373 a 395 por a&ntilde;o, con unos 36 profesores nuevos.</p>
+<p><span class="sg">Lo paga Deportes. La inversi&oacute;n sale de obras deportivas, y el gasto de cada a&ntilde;o, de su propio presupuesto.</span></p>
 </div>
-<h3>Alrededor de cada puesto: movida, ba&ntilde;os y clases</h3>
+<h3>Alrededor de cada puesto: comida, ba&ntilde;os y clases</h3>
 <div class="cols">
-<p><b>Hoy San Isidro no tiene ordenanza de foodtrucks</b>: un proyecto de 2024 sigue en comisi&oacute;n, y por ocupar la
-superficie p&uacute;blica se cobra 246 pesos por metro cuadrado y por d&iacute;a. El Municipio ya hizo movida con comida en Bosque
-Alegre, seg&uacute;n el propio Municipio: Bocas Abiertas, un parador con foodtrucks y los DJ Sunset de los domingos. Pero
-el art&iacute;culo 9 de una ordenanza de 1983, la 5824, s&oacute;lo permite ah&iacute; la venta de bebidas en kioscos.</p>
-<p><b>No hay ba&ntilde;os p&uacute;blicos fijos confirmados en ninguno de los seis lugares</b>; el Municipio licit&oacute; el alquiler
-de ba&ntilde;os qu&iacute;micos para 33 Orientales, el Centro de Exposiciones y Del Barco Centenera. Y hay clases gratis al aire libre &mdash;funcional, running, Mix Dance y
-yoga&mdash; con profesores de Deportes, pero en la costa hay una sola: Funcional en Alvear y el R&iacute;o, lunes y
-mi&eacute;rcoles de 9:15 a 10:15. En los puestos y en Bosque Alegre, ninguna. Sobre los instructores privados que dan
-clases en plazas y parques no hay ninguna norma.</p>
+<p><b>Hoy San Isidro no tiene una ordenanza de foodtrucks.</b> Un proyecto de 2024 sigue en comisi&oacute;n. Por ocupar el espacio p&uacute;blico se cobran 246 pesos por metro cuadrado y por d&iacute;a. El Municipio ya hizo actividades con comida en Bosque Alegre, seg&uacute;n el propio Municipio. Fueron Bocas Abiertas, un parador con foodtrucks y los DJ Sunset de los domingos. Pero el art&iacute;culo 9 de una ordenanza de 1983, la 5824, s&oacute;lo permite ah&iacute; vender bebidas en kioscos.</p>
+<p><b>No hay ba&ntilde;os p&uacute;blicos fijos confirmados en ninguno de los seis lugares.</b> El Municipio licit&oacute; el alquiler de ba&ntilde;os qu&iacute;micos para 33 Orientales, el Centro de Exposiciones y Del Barco Centenera. Hay clases gratis al aire libre con profesores de Deportes: funcional, running, Mix Dance y yoga. Pero en la costa hay una sola: Funcional en Alvear y el R&iacute;o, los lunes y mi&eacute;rcoles de 9:15 a 10:15. En los puestos y en Bosque Alegre no hay ninguna. Y no hay ninguna norma sobre los instructores privados que dan clases en plazas y parques.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Lo que proponemos: que cada puesto tenga movida, ba&ntilde;o y clases</div>
-<p><b>1 &middot; Foodtrucks al borde de cada puesto.</b> En la calle o en playones pavimentados o de ripio, aunque
-est&eacute;n dentro de la parcela del parque; nunca sobre el pasto: un play&oacute;n no es espacio verde (anexo, Ordenanza XIV;
-necesita dictamen de un abogado).
-Seg&uacute;n quienes conocen el lugar, hay m&aacute;s playones que los que figuran en los mapas: en fotos satelitales aparecen
-cinco que no figuran. Con una ordenanza nueva de foodtrucks y un canon como el de Tigre, 201.350 pesos por mes
-por veh&iacute;culo. Lo que queda en el Municipio va a la costa: el 60% en los cuatro lugares del convenio, donde el 40% va a
-la Provincia, y todo en el Puerto y en 33 Orientales. El mismo 75% de empleo local de la Ordenanza X, ofertas de
-lunes a jueves, y la inteligencia artificial del Municipio muestra qu&eacute; hay hoy en cada puesto.</p>
-<p><b>2 &middot; Bosque Alegre, polo de foodtrucks y movida.</b> Sobre la calle ancha &mdash;la prolongaci&oacute;n de Del Barco
-Centenera hasta el r&iacute;o&mdash;, con cinco metros de margen al Paisaje Protegido, y en el lote de ripio del Centro de Exposiciones, sin entrar al bosque: en la calle entran
-entre 15 y 20 foodtrucks, y se suma el lote. Seg&uacute;n quienes lo conocen, todo el mundo va ah&iacute; a relajarse. Es el mismo
-lugar que el puesto del final de Del Barco Centenera, que queda a siete metros del Paisaje Protegido: son seis
-lugares, no siete. Proponemos modificar el art&iacute;culo 9 de la Ordenanza 5824 (necesita dictamen de un abogado).</p>
-<p><b>3 &middot; Ba&ntilde;os gratis, conectados a la cloaca</b>, nunca qu&iacute;micos ni secos, y al borde, nunca adentro del
-parque. Los construye el Municipio, de a dos por a&ntilde;o, en el mismo orden que la Escuela N&aacute;utica, empezando por el
-&Aacute;guila; en S&aacute;enz Pe&ntilde;a y en Centenera, con bomba hacia la cloaca. Antes, el Municipio le pide a AySA la factibilidad
-de cada uno. Con encargado fijo, abiertos de d&iacute;a y cerrados de noche. En
-la inteligencia artificial del Municipio, el vecino ve si est&aacute; abierto y avisa si est&aacute; sucio o roto. El canon de los
-foodtrucks paga una parte de la limpieza.</p>
-<p><b>4 &middot; Clases municipales gratis en cada lugar</b>, una a la ma&ntilde;ana y una a la tarde, de lunes a jueves:
-Deportes fija los horarios con los vecinos y coordina los combos con la Escuela N&aacute;utica. Plataforma desmontable de
-madera dura, como el m&oacute;dulo n&aacute;utico, bebedero, sombra y luz solar, y lugar para guardar equipos en el m&oacute;dulo.</p>
-<p><b>5 &middot; Instructores privados, con un registro gratis por ordenanza</b>, sin canon y con reglas simples: el
-registro no da lugares ni horarios exclusivos (necesita dictamen de un abogado). Para que las plazas tengan movimiento
-en la semana y eso llegue a los comercios: prioridad en los mejores lugares y horarios de lunes a jueves, para quien
-da clases en la semana; plataforma, ba&ntilde;os, bebedero y guardado, gratis; la
-inteligencia artificial del Municipio arma la agenda de cada parque con todas las clases, municipales y privadas, y
-la gente se anota ah&iacute;; los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase,
-y la inteligencia artificial lo avisa; curso gratis de primeros auxilios para los instructores registrados; y las
-c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase. La agenda suma tambi&eacute;n los espect&aacute;culos y vale para todas las plazas y parques del partido, no s&oacute;lo para la costa: cualquier vecino le pregunta a la inteligencia artificial del Municipio &laquo;&iquest;qu&eacute; hay para hacer hoy?&raquo; y le contesta con todo &mdash;clases de baile y de gimnasia, instructores privados, espect&aacute;culos y lo del Municipio, de d&iacute;a y despu&eacute;s de la oficina&mdash;. As&iacute; se entera sin ir a averiguar, y va m&aacute;s gente de lunes a jueves (punto 1, m&aacute;s arriba).</p>
+<div class="clabel">Lo que proponemos: que cada puesto tenga comida, ba&ntilde;o y clases</div>
+<p><b>1 &middot; Foodtrucks al borde de cada puesto.</b> Van en la calle o en playones de cemento o de ripio, aunque est&eacute;n dentro del terreno del parque. Nunca van sobre el pasto: un play&oacute;n no es espacio verde (anexo, Ordenanza XIV, necesita dictamen de un abogado). Seg&uacute;n quienes conocen el lugar, hay m&aacute;s playones que los que figuran en los mapas. En fotos satelitales aparecen cinco que no figuran. Se hace con una ordenanza nueva de foodtrucks y un canon como el de Tigre: 201.350 pesos por mes por veh&iacute;culo. Lo que queda en el Municipio va a la costa. En los cuatro lugares del convenio queda el 60%, porque el 40% va a la Provincia. En el Puerto y en 33 Orientales queda todo. Rige el mismo 75% de empleo local de la Ordenanza X, y hay ofertas de lunes a jueves. Y la inteligencia artificial del Municipio muestra qu&eacute; hay hoy en cada puesto.</p>
+<p><b>2 &middot; Bosque Alegre, centro de foodtrucks y de actividades.</b> Van sobre la calle ancha, que es la continuaci&oacute;n de Del Barco Centenera hasta el r&iacute;o, a cinco metros del Paisaje Protegido. Y tambi&eacute;n en el lote de ripio del Centro de Exposiciones, sin entrar al bosque. En la calle entran entre 15 y 20 foodtrucks, y se suma el lote. Seg&uacute;n quienes lo conocen, todo el mundo va ah&iacute; a relajarse. Es el mismo lugar que el puesto del final de Del Barco Centenera, que queda a siete metros del Paisaje Protegido. Por eso son seis lugares, no siete. Proponemos cambiar el art&iacute;culo 9 de la Ordenanza 5824 (necesita dictamen de un abogado).</p>
+<p><b>3 &middot; Ba&ntilde;os gratis, conectados a la cloaca.</b> Nunca qu&iacute;micos ni secos, y siempre al borde, nunca adentro del parque. Los construye el Municipio, de a dos por a&ntilde;o, en el mismo orden que la Escuela N&aacute;utica, empezando por el &Aacute;guila. En S&aacute;enz Pe&ntilde;a y en Centenera llevan una bomba hacia la cloaca. Antes, el Municipio le pide a AySA que confirme que se puede hacer cada uno. Tienen un encargado fijo, y est&aacute;n abiertos de d&iacute;a y cerrados de noche. En la inteligencia artificial del Municipio, el vecino ve si est&aacute;n abiertos, y avisa si est&aacute;n sucios o rotos. El canon de los foodtrucks paga una parte de la limpieza.</p>
+<p><b>4 &middot; Clases gratis del Municipio en cada lugar</b>, una a la ma&ntilde;ana y una a la tarde, de lunes a jueves. Deportes fija los horarios con los vecinos, y arma combinaciones con la Escuela N&aacute;utica. Cada lugar tiene una plataforma desmontable de madera dura, como el m&oacute;dulo n&aacute;utico. Tiene bebedero, sombra y luz solar, y lugar para guardar equipos en el m&oacute;dulo.</p>
+<p><b>5 &middot; Instructores privados, con un registro gratis por ordenanza.</b> No pagan canon y tienen reglas simples. El registro no da lugares ni horarios exclusivos (necesita dictamen de un abogado). La idea es que las plazas tengan movimiento en la semana, y que eso llegue a los comercios. Por eso, quien da clases en la semana tiene prioridad en los mejores lugares y horarios de lunes a jueves. Puede usar gratis la plataforma, los ba&ntilde;os, el bebedero y el lugar para guardar. La inteligencia artificial del Municipio arma la agenda de cada parque con todas las clases, del Municipio y privadas, y la gente se anota ah&iacute;. Los comercios y foodtrucks de al lado ofrecen descuentos a los alumnos despu&eacute;s de la clase, y la inteligencia artificial lo avisa. Hay un curso gratis de primeros auxilios para los instructores registrados. Y las c&aacute;maras que cuentan gente en cada acceso muestran cu&aacute;nto movimiento trae cada clase. La agenda suma tambi&eacute;n los espect&aacute;culos. Y vale para todas las plazas y parques del partido, no s&oacute;lo para la costa. Cualquier vecino le puede preguntar a la inteligencia artificial del Municipio &laquo;&iquest;qu&eacute; hay para hacer hoy?&raquo;. Ella le contesta con todo: clases de baile y de gimnasia, instructores privados, espect&aacute;culos y lo del Municipio, de d&iacute;a y despu&eacute;s de la oficina. As&iacute; se entera sin ir a averiguar, y va m&aacute;s gente de lunes a jueves (punto 1, m&aacute;s arriba).</p>
 <p><b>6 &middot; Espect&aacute;culos al aire libre, en la semana:</b> m&aacute;s abajo.</p>
-<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o, de 50 a 176 millones de obra seg&uacute;n lo lejos que est&eacute; la
-cloaca, y de 1,0 a 2,3 millones por mes de operaci&oacute;n, m&aacute;s de 2,3 a 3,0 de encargado. Los seis, de 426 a 791
-millones de obra, de a dos por a&ntilde;o desde el &Aacute;guila: de 142 a 296 el a&ntilde;o 1 y de 122 a 265 los a&ntilde;os 2 y 3, seg&uacute;n qu&eacute;
-lugares sigan. Funcionando, de 82 a 121 millones el a&ntilde;o 1, de 167 a 240 el a&ntilde;o 2 y de 251 a 354 por a&ntilde;o desde el
-a&ntilde;o 3, con los seis. Equipar cada lugar para las clases &mdash;plataforma de madera dura, bebedero, sombra y luz&mdash;,
-de 36 a 76 millones; los seis, de 215 a 454, de a dos por a&ntilde;o, y de 3 a 32 millones por a&ntilde;o de mantenimiento. Las
-clases, una a la ma&ntilde;ana y una a la tarde de lunes a jueves en cada lugar: unos 23,5 millones por a&ntilde;o de
-profesores. Con tres foodtrucks, el canon de un puesto es de unos
-600.000 pesos por mes, y en Bosque Alegre, con 15 a 20, de 3,0 a 4,0 millones; en los lugares del convenio queda el
-60%. <span class="sg">La obra de los ba&ntilde;os y las plataformas sale de obras deportivas, como la Escuela N&aacute;utica; la
-limpieza, el encargado y el mantenimiento, de Ambiente, menos lo que pague el canon; los profesores, de
-Deportes.</span> Entra: con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a
-obras deportivas en los a&ntilde;os 1 a 3, y el resto de esas obras se achica en esa medida; y la costa pasa de usar entre el 4% y el 10% del aumento de Ambiente a entre el 11% y el 21%.</p>
+<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Cada ba&ntilde;o cuesta de 50 a 176 millones de obra, seg&uacute;n lo lejos que est&eacute; la cloaca. Funcionando, cuesta de 1,0 a 2,3 millones por mes, m&aacute;s de 2,3 a 3,0 de encargado. Los seis cuestan de 426 a 791 millones de obra, de a dos por a&ntilde;o desde el &Aacute;guila. Son de 142 a 296 millones el a&ntilde;o 1, y de 122 a 265 los a&ntilde;os 2 y 3, seg&uacute;n qu&eacute; lugares sigan. Funcionando, cuestan de 82 a 121 millones el a&ntilde;o 1 y de 167 a 240 el a&ntilde;o 2. Desde el a&ntilde;o 3, con los seis, cuestan de 251 a 354 por a&ntilde;o. Equipar cada lugar para las clases cuesta de 36 a 76 millones: plataforma de madera dura, bebedero, sombra y luz. Los seis cuestan de 215 a 454, de a dos por a&ntilde;o, y de 3 a 32 millones por a&ntilde;o de mantenimiento. Las clases, una a la ma&ntilde;ana y una a la tarde de lunes a jueves en cada lugar, cuestan unos 23,5 millones por a&ntilde;o de profesores. Con tres foodtrucks, el canon de un puesto es de unos 600.000 pesos por mes. En Bosque Alegre, con 15 a 20 foodtrucks, es de 3,0 a 4,0 millones. En los lugares del convenio queda el 60%. <span class="sg">La obra de los ba&ntilde;os y de las plataformas sale de obras deportivas, como la Escuela N&aacute;utica. La limpieza, el encargado y el mantenimiento salen de Ambiente, descontado lo que pague el canon. Los profesores, de Deportes.</span> Y entra en el presupuesto. Con la Escuela N&aacute;utica, la obra usa entre el 17% y el 37% de lo que le queda cada a&ntilde;o a obras deportivas en los a&ntilde;os 1 a 3. El resto de esas obras se achica en esa misma medida. Y la costa pasa de usar entre el 4% y el 10% del aumento de Ambiente a usar entre el 11% y el 21%.</p>
 </div>
 <h3>Espect&aacute;culos al aire libre, en la semana</h3>
 """ + fig("f_banda", "Una banda emergente del partido, en una plaza. Ilustraci&oacute;n.") + """
 
 <div class="cols">
-<p><b>Hoy San Isidro no tiene reglas para los artistas callejeros:</b> una ordenanza de 2019 reconoce el arte a la gorra,
-pero no crea un permiso ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Ninguna norma del partido fija un tope de volumen para un show al aire libre, y la Ordenanza 5182 presume molesto, sin admitir prueba en contrario, todo parlante en o hacia la v&iacute;a p&uacute;blica. Y lo que organiza el Municipio en la costa cae
-casi todo los fines de semana, con artistas que elige el propio Municipio: en 2026 hubo un solo espect&aacute;culo en un d&iacute;a
-h&aacute;bil, seg&uacute;n el Municipio, que no publica cu&aacute;nta gente fue.</p>
+<p><b>Hoy San Isidro no tiene reglas para los artistas callejeros.</b> Una ordenanza de 2019 reconoce el arte a la gorra. Pero no crea un permiso, ni dice d&oacute;nde, cu&aacute;ndo ni con cu&aacute;nto volumen. Ninguna norma del partido fija un volumen m&aacute;ximo para un show al aire libre. Y la Ordenanza 5182 da por molesto todo parlante en la calle o hacia la calle, sin aceptar prueba en contra. Lo que organiza el Municipio en la costa cae casi todo los fines de semana, con artistas que elige el propio Municipio. Seg&uacute;n el Municipio, en 2026 hubo un solo espect&aacute;culo en un d&iacute;a h&aacute;bil. Y no publica cu&aacute;nta gente fue.</p>
 </div>
 """ + fig("f_show_costa", "Un show en la costa, al atardecer. Ilustraci&oacute;n.") + """
 <div class="callout g">
 <div class="clabel">Lo que proponemos: m&aacute;s espect&aacute;culos, mejores y con m&aacute;s p&uacute;blico, sin lugar para la corrupci&oacute;n</div>
-<p><b>D&oacute;nde:</b> en las plazas y los espacios p&uacute;blicos, y sobre todo en el r&iacute;o, para llevar gente a la costa en la
-semana.</p>
+<p><b>D&oacute;nde:</b> en las plazas y los espacios p&uacute;blicos. Y sobre todo junto al r&iacute;o, para llevar gente a la costa en la semana.</p>
 <p><b>Artistas callejeros, a la gorra.</b></p>
-<p><b>1 &middot; El Municipio no les da dinero:</b> les da todo lo dem&aacute;s. Un equipo de producci&oacute;n municipal les lleva y arma
-el sonido, los micr&oacute;fonos y un escenario chico, y los ayuda durante el show; y la inteligencia artificial del
-Municipio promociona sus shows. El artista puede usar su propio sonido siempre que quiera.</p>
-<p><b>2 &middot; Reglas simples:</b> puntos se&ntilde;alizados; cien metros entre puntos con sonido; turnos de una hora; un tope de
-volumen medido; de lunes a jueves, con hora de corte; y zonas tranquilas: la Reserva Ribera Norte, el Bosque Alegre y
-los frentes de vivienda.</p>
-<p><b>3 &middot; Primero, una prueba por decreto;</b> despu&eacute;s, el registro gratis de artistas en la Ordenanza XIV, junto al de
-instructores (necesita dictamen de un abogado).</p>
+<p><b>1 &middot; El Municipio no les da dinero: les da todo lo dem&aacute;s.</b> Un equipo de producci&oacute;n del Municipio les lleva y les arma el sonido, los micr&oacute;fonos y un escenario chico. Y los ayuda durante el show. La inteligencia artificial del Municipio promociona sus shows. El artista puede usar su propio sonido siempre que quiera.</p>
+<p><b>2 &middot; Reglas simples.</b> Hay lugares se&ntilde;alizados, con cien metros entre los que tienen sonido. Los turnos son de una hora. Hay un volumen m&aacute;ximo, que se mide. Es de lunes a jueves, con hora de fin. Y hay zonas que se respetan como tranquilas: la Reserva Ribera Norte, el Bosque Alegre y los frentes de las casas.</p>
+<p><b>3 &middot; Primero, una prueba por decreto.</b> Despu&eacute;s, un registro gratis de artistas en la Ordenanza XIV, junto al de instructores (necesita dictamen de un abogado).</p>
 <p><b>Shows que paga el Municipio.</b></p>
-<p><b>4 &middot; Doscientos por a&ntilde;o, todo el a&ntilde;o, s&oacute;lo con artistas emergentes del partido:</b> ning&uacute;n famoso y nadie de
-afuera. Al aire libre, del 20 de septiembre al 15 de abril: 114 shows. Los otros 86, bajo techo: los solistas, en espacios municipales, y los dem&aacute;s, en cuatro clubes o centros culturales del partido, por convenio (el instrumento lo define un abogado), por 17,8 millones por a&ntilde;o. Los shows grandes, al aire libre. Es del partido si al menos la mitad de sus
-integrantes tiene en el DNI domicilio en San Isidro, y es emergente si tiene menos de 50.000 oyentes mensuales en
-Spotify, que se verifican con una captura fechada, una declaraci&oacute;n jurada y un acceso de &laquo;lector&raquo; que el artista le da
-gratis al Municipio; quien no est&aacute; en Spotify no queda afuera. Como no se gasta en famosos, alcanza para pagar bien a
-muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]): unos 329 millones por a&ntilde;o, 201,9 de ellos para los artistas, y 467 el primer a&ntilde;o, con la compra de los equipos.</p>
-<p><b>5 &middot; Eligen los vecinos, no un empleado:</b> proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y
-eso se contrata. Los que mejor califican los vecinos, con un voto por persona, se siguen contratando, y siempre queda
-un cupo grande para artistas nuevos. La grilla cumple el cupo de la Ley 27.539 &mdash;al menos un 30% de mujeres&mdash;, y la
-inteligencia artificial del Municipio lo controla.</p>
-<p><b>6 &middot; Sin intermediarios y a la vista:</b> se le paga directo al artista, sin productora; cada pago se publica en la
-inteligencia artificial del Municipio, con un tope por artista por a&ntilde;o; y el show se graba desde la inteligencia
-artificial: si el artista no se presenta, no se paga. Si a un artista le piden algo a cambio, lo denuncia en la
-inteligencia artificial del Municipio (4.11).</p>
-<p><b>7 &middot; Si cancela el Municipio, el artista no pierde:</b> el Municipio le paga el 70% del show al cancelar, y el show
-entero cuando se hace en la nueva fecha, que se fija en el momento, con el artista. Si la nueva fecha tambi&eacute;n se
-cancela, se paga otro 70%, y la tercera se hace bajo techo, en los espacios del convenio. Va como cl&aacute;usula del contrato
-(C&oacute;digo Civil y Comercial, art&iacute;culo 1261), con la constancia de la funci&oacute;n reprogramada (necesita dictamen de un
-abogado). La inteligencia artificial les avisa a todos los que iban la nueva fecha, y aclara que cancel&oacute; el Municipio, no
-el artista, para que el artista no quede mal con su p&uacute;blico.</p>
-<p><b>8 &middot; El clima, con una regla fija:</b> se cancela s&oacute;lo si la alerta amarilla del Servicio Meteorol&oacute;gico Nacional
-para San Isidro cubre el horario del show, y si truena en el lugar, se pausa y se espera 30 minutos desde el &uacute;ltimo
-trueno: es el procedimiento ante tormenta el&eacute;ctrica que pide la Resoluci&oacute;n 1749/2014 del Ministerio de Seguridad
-bonaerense. Cada cancelaci&oacute;n se publica con su motivo.</p>
-<p><b>9 &middot; El sonido justo:</b> dos equipos de calidad para bandas, con subwoofer y monitores, de 29,5 millones cada uno con tarima y toldo, y dos chicos para los callejeros, de 4,9 millones cada uno. Se compran por licitaci&oacute;n p&uacute;blica, abierta a cualquier proveedor, con requisitos de calidad publicados, y reemplazan al alquilado s&oacute;lo en los eventos chicos. Los manejan tres equipos de producci&oacute;n con ocho personas nuevas, 85,3 millones por a&ntilde;o con reemplazos. El p&uacute;blico va de 50 a 1.000 personas: nada de potencia para multitudes. El volumen tiene un tope seg&uacute;n el lugar, medido junto a la consola: 80 decibeles en las plazas chicas, 85 en los parques y 88 en la costa, y nunca m&aacute;s de 60 en la fachada de la casa m&aacute;s cercana; el equipo grande va sobre todo al r&iacute;o. Cada equipo de show lleva un limitador con bloqueo y clave, y dos bafles chicos para el &laquo;modo plaza&raquo;, sin subwoofer: 7,7 millones m&aacute;s por los dos. Se mide con el son&oacute;metro del Municipio. Los shows se reparten en unos 17 lugares, sin pasar de 12 por lugar por a&ntilde;o, y terminan a las 22. Un decreto u ordenanza saca a los shows autorizados de la presunci&oacute;n de ruido molesto de la Ordenanza 5182 (art&iacute;culo 81) y de la Ordenanza General 27 (necesita dictamen de un abogado).</p>
-<p><b>10 &middot; Sin robos ni roturas:</b> cada equipo tiene un cargo patrimonial firmado por quien lo tiene a cargo; en cada
-show hay remito de salida y de entrada, con QR y la firma de dos personas; Patrimonio, no Cultura, hace un arqueo
-sorpresa cada mes; y el dep&oacute;sito tiene registro de acceso y c&aacute;maras. Cada equipo lleva el sello del Municipio y su
-n&uacute;mero de serie, en un inventario p&uacute;blico en la inteligencia artificial del Municipio, un rastreador GPS y seguro.
-Cuesta 5,2 millones una vez y de 2,0 a 2,7 por a&ntilde;o. Lo que falta o se rompe por mal uso es responsabilidad de quien lo
-firm&oacute;, y los m&uacute;sicos y los vecinos pueden denunciar en la inteligencia artificial, con foto o video, si alguien roba o
-maltrata los equipos.</p>
+<p><b>4 &middot; Doscientos por a&ntilde;o, todo el a&ntilde;o, s&oacute;lo con artistas nuevos del partido:</b> ning&uacute;n famoso y nadie de afuera. Al aire libre hay 114 shows, del 20 de septiembre al 15 de abril. Los otros 86 son bajo techo. Los solistas tocan en espacios del Municipio. Los dem&aacute;s, en cuatro clubes o centros culturales del partido, por convenio (el instrumento lo define un abogado). Eso cuesta 17,8 millones por a&ntilde;o. Los shows grandes son al aire libre. Un artista es del partido si al menos la mitad de sus integrantes tiene domicilio en San Isidro en el DNI. Y es nuevo, o emergente, si tiene menos de 50.000 oyentes por mes en Spotify. Eso se comprueba con una captura de pantalla con fecha, una declaraci&oacute;n jurada y un acceso de &laquo;lector&raquo; que el artista le da gratis al Municipio. Quien no est&aacute; en Spotify no queda afuera. Como no se gasta en famosos, alcanza para pagar bien a muchos artistas del partido. Los paga Cultura (cuadro [[n:programa]]). Cuestan unos 329 millones por a&ntilde;o, y 201,9 de ellos son para los artistas. El primer a&ntilde;o cuestan 467, con la compra de los equipos.</p>
+<p><b>5 &middot; Eligen los vecinos, no un empleado.</b> Los vecinos proponen en la inteligencia artificial del Municipio a qui&eacute;n quieren ver, y eso se contrata. Los artistas que los vecinos califican mejor, con un voto por persona, se siguen contratando. Y siempre queda un lugar grande para artistas nuevos. La programaci&oacute;n cumple el cupo de la Ley 27.539, que pide al menos un 30% de mujeres. La inteligencia artificial del Municipio lo controla.</p>
+<p><b>6 &middot; Sin intermediarios y a la vista.</b> Se le paga directo al artista, sin productora. Cada pago se publica en la inteligencia artificial del Municipio, con un tope por artista por a&ntilde;o. Y el show se graba con la inteligencia artificial: si el artista no se presenta, no se paga. Si a un artista le piden algo a cambio, lo denuncia en la inteligencia artificial del Municipio (4.11).</p>
+<p><b>7 &middot; Si cancela el Municipio, el artista no pierde.</b> Al cancelar, el Municipio le paga el 70% del show. Y le paga el show entero cuando se hace en la nueva fecha, que se fija en el momento, con el artista. Si la nueva fecha tambi&eacute;n se cancela, se paga otro 70%, y la tercera vez se hace bajo techo, en los espacios del convenio. Esto va como cl&aacute;usula del contrato (C&oacute;digo Civil y Comercial, art&iacute;culo 1261), con la constancia de la nueva fecha (necesita dictamen de un abogado). La inteligencia artificial les avisa la nueva fecha a todos los que iban a ir. Y aclara que cancel&oacute; el Municipio, no el artista, para que el artista no quede mal con su p&uacute;blico.</p>
+<p><b>8 &middot; El clima, con una regla fija.</b> Se cancela s&oacute;lo si la alerta amarilla del Servicio Meteorol&oacute;gico Nacional para San Isidro cubre el horario del show. Si truena en el lugar, se pausa y se esperan 30 minutos desde el &uacute;ltimo trueno. Es lo que pide la Resoluci&oacute;n 1749/2014 del Ministerio de Seguridad bonaerense ante una tormenta el&eacute;ctrica. Cada cancelaci&oacute;n se publica con su motivo.</p>
+<p><b>9 &middot; El sonido justo.</b> Hay dos equipos de calidad para bandas, con subwoofer y monitores. Cada uno cuesta 29,5 millones, con tarima y toldo. Y hay dos chicos para los artistas callejeros, de 4,9 millones cada uno. Se compran por licitaci&oacute;n p&uacute;blica, abierta a cualquier proveedor, con requisitos de calidad publicados. Reemplazan al sonido alquilado s&oacute;lo en los eventos chicos. Los manejan tres equipos de producci&oacute;n, con ocho personas nuevas, que cuestan 85,3 millones por a&ntilde;o con reemplazos. El p&uacute;blico va de 50 a 1.000 personas: no hace falta potencia para multitudes. El volumen tiene un m&aacute;ximo seg&uacute;n el lugar, medido junto a la consola. Son 80 decibeles en las plazas chicas, 85 en los parques y 88 en la costa. Y nunca m&aacute;s de 60 en el frente de la casa m&aacute;s cercana. El equipo grande va sobre todo al r&iacute;o. Cada equipo lleva un limitador con bloqueo y clave. Tambi&eacute;n lleva dos parlantes chicos para el &laquo;modo plaza&raquo;, sin subwoofer, que cuestan 7,7 millones m&aacute;s por los dos. Se mide con el son&oacute;metro del Municipio. Los shows se reparten en unos 17 lugares, sin pasar de 12 por lugar por a&ntilde;o, y terminan a las 22. Un decreto u ordenanza aclara que los shows autorizados no son ruido molesto. Lo aclara para la Ordenanza 5182 (art&iacute;culo 81) y para la Ordenanza General 27 (necesita dictamen de un abogado).</p>
+<p><b>10 &middot; Sin robos ni roturas.</b> Cada equipo tiene una persona responsable, que firma que lo tiene a cargo. En cada show hay un remito de salida y otro de entrada, con c&oacute;digo QR y la firma de dos personas. Patrimonio, y no Cultura, hace un control sorpresa cada mes. El dep&oacute;sito tiene registro de qui&eacute;n entra y c&aacute;maras. Cada equipo lleva el sello del Municipio y su n&uacute;mero de serie, en un inventario p&uacute;blico en la inteligencia artificial del Municipio. Tambi&eacute;n lleva un rastreador GPS y seguro. Todo eso cuesta 5,2 millones una sola vez, y de 2,0 a 2,7 por a&ntilde;o. Lo que falta o se rompe por mal uso es responsabilidad de quien lo firm&oacute;. Y los m&uacute;sicos y los vecinos pueden denunciar en la inteligencia artificial, con foto o video, si alguien roba o maltrata los equipos.</p>
 <p><b>M&aacute;s p&uacute;blico.</b></p>
-<p><b>11 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino</b> qu&eacute; hay, d&oacute;nde y cu&aacute;ndo, seg&uacute;n lo que le
-gusta; y con quienes le avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien lo acepta
-expresamente; el grupo ve el nombre de pila, el show y el punto de encuentro, nunca el tel&eacute;fono ni la ubicaci&oacute;n, y todo
-se borra despu&eacute;s del show (Ley 25.326, de datos personales).</p>
+<p><b>11 &middot; La inteligencia artificial del Municipio le cuenta a cada vecino qu&eacute; hay, d&oacute;nde y cu&aacute;ndo</b>, seg&uacute;n lo que le gusta. Con los que avisan que van, arma grupos para que los vecinos se conozcan. S&oacute;lo entra al grupo quien lo acepta expresamente. El grupo ve el nombre de pila, el show y el punto de encuentro, nunca el tel&eacute;fono ni la ubicaci&oacute;n. Y todo se borra despu&eacute;s del show (Ley 25.326, de datos personales).</p>
 <p><b>12 &middot; D&iacute;as de semana y de d&iacute;a,</b> junto con los foodtrucks y las ofertas de los comercios.</p>
 </div>
 """ + fig("f_show_club", "Un show bajo techo, en un club, en invierno. Ilustraci&oacute;n.", "13%") + """
 <h3>Cemento o naturaleza: la obra en parques y costa</h3>
 <div class="cols">
-<p><b>Hoy, la obra m&aacute;s visible de la costa no tuvo licitaci&oacute;n propia.</b> El Paseo 33 Orientales se
-pag&oacute; ampliando contratos que ya exist&iacute;an; el de mantenimiento de espacios verdes, al 99% de su monto. El
-Decreto 1077/2025 dice que esos fondos &laquo;fueron aplicados a cubrir los costos de obras de envergadura no previstas
-inicialmente, tales como el Paseo 33 Orientales&raquo;, y ning&uacute;n acto publicado da el monto por obra.</p>
-<p><b>En ese mismo contrato, el mismo cesto de acero cuesta 1.887.875 $ en una zona y 339.743 $ en la otra</b>,
-con precios desde marzo de 2025, y no se public&oacute; el an&aacute;lisis de precios que explique la diferencia. En las
-dos licitaciones propias m&aacute;s grandes, de mobiliario y de juegos, qued&oacute; una sola oferta admisible por
-rengl&oacute;n, y se adjudicaron 8,1% y 8,4% por encima del presupuesto oficial.</p>
-<p><b>No se encontr&oacute; ninguna evaluaci&oacute;n de impacto ambiental de una obra p&uacute;blica en la costa.</b> Y desde
-julio de 2026 avanza una obra de 907 metros entre el Parque del &Aacute;guila y Alvear, en la ribera que
-proteg&iacute;a una ordenanza vetada, sin licitaci&oacute;n, convenio ni monto publicados; seg&uacute;n el Municipio, la
-hace un privado.</p>
-<p><b>Esa ordenanza era la 9395</b>, de mayo de 2025, que proteg&iacute;a los &aacute;rboles y los juncales de ese tramo.
-El intendente la vet&oacute; (Decreto 614/2025) porque &laquo;una protecci&oacute;n excesiva de dicha zona en esta etapa
+<p><b>Hoy, la obra m&aacute;s visible de la costa no tuvo una licitaci&oacute;n propia.</b> El Paseo 33 Orientales se pag&oacute; agrandando contratos que ya exist&iacute;an. Uno fue el de mantenimiento de espacios verdes, ampliado al 99% de su monto. El Decreto 1077/2025 dice que esos fondos &laquo;fueron aplicados a cubrir los costos de obras de envergadura no previstas inicialmente, tales como el Paseo 33 Orientales&raquo;. Ning&uacute;n acto publicado dice cu&aacute;nto cost&oacute; cada obra.</p>
+<p><b>En ese mismo contrato, el mismo cesto de acero cuesta 1.887.875 $ en una zona y 339.743 $ en la otra</b>, con precios desde marzo de 2025. No se public&oacute; ning&uacute;n an&aacute;lisis de precios que explique la diferencia. Hubo dos licitaciones propias grandes, de mobiliario y de juegos. En las dos qued&oacute; una sola oferta v&aacute;lida por rengl&oacute;n. Y se adjudicaron un 8,1% y un 8,4% por encima del presupuesto oficial.</p>
+<p><b>No se encontr&oacute; ning&uacute;n estudio de impacto ambiental de una obra p&uacute;blica en la costa.</b> Y desde julio de 2026 avanza una obra de 907 metros entre el Parque del &Aacute;guila y Alvear. Es en la ribera que proteg&iacute;a una ordenanza vetada. No se publicaron licitaci&oacute;n, convenio ni monto. Seg&uacute;n el Municipio, la hace un privado.</p>
+<p><b>Esa ordenanza era la 9395</b>, de mayo de 2025, y proteg&iacute;a los &aacute;rboles y los juncales de ese tramo. El intendente la vet&oacute; (Decreto 614/2025). Dijo que &laquo;una protecci&oacute;n excesiva de dicha zona en esta etapa
 podr&iacute;a limitar la capacidad del Municipio para intervenir y llevar a cabo futuras mejoras&raquo;.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos para la obra en parques y costa</div>
-<p><b>Ninguna obra nueva se paga ampliando un contrato de mantenimiento:</b> licitaci&oacute;n propia, cualquiera
-sea el monto. <b>Evaluaci&oacute;n de impacto ambiental obligatoria en toda obra en la costa</b>, incluidos los
-pilotos de arena (anexo, Ordenanza XII).</p>
-<p><b>Ning&uacute;n cemento en un parque ni en la costa sin los vecinos:</b> el dictamen de la asociaci&oacute;n de cada
-parque, y la decisi&oacute;n de la comisi&oacute;n de la zona en sus parques o del panel sorteado en la costa (m&aacute;s
-abajo).</p>
-<p><b>Naturaleza donde la evidencia la respalda, sin exagerar.</b> El juncal baja en promedio el 72% la altura de
-las olas chicas, pero no frena la subida del agua en una sudestada, que sigue necesitando albardones y
-bombeo. Y los muros verticales son los que m&aacute;s fallan en una tormenta: un hurac&aacute;n da&ntilde;&oacute; el 76% de los
-relevados, y en las marismas no se detect&oacute; da&ntilde;o. Con los precios del propio contrato municipal,
-un sendero de tosca cuesta la quinta parte que uno de hormig&oacute;n.</p>
+<p><b>Ninguna obra nueva se paga agrandando un contrato de mantenimiento.</b> Cada obra tiene su propia licitaci&oacute;n, sea cual sea el monto. <b>Toda obra en la costa necesita un estudio de impacto ambiental</b>, tambi&eacute;n los pilotos de arena (anexo, Ordenanza XII).</p>
+<p><b>No se pone cemento en un parque ni en la costa sin los vecinos.</b> Hace falta el dictamen de la asociaci&oacute;n de cada parque. Y hace falta la decisi&oacute;n de la comisi&oacute;n de la zona, en sus parques, o la del panel sorteado, en la costa (m&aacute;s abajo).</p>
+<p><b>Naturaleza donde los estudios la respaldan, sin exagerar.</b> El juncal baja en promedio un 72% la altura de las olas chicas. Pero no frena la subida del agua en una sudestada, que sigue necesitando terraplenes y bombeo. Y los muros verticales son los que m&aacute;s fallan en una tormenta. Un hurac&aacute;n da&ntilde;&oacute; el 76% de los muros revisados, y en las marismas no se encontr&oacute; da&ntilde;o. Con los precios del propio contrato del Municipio, un sendero de tosca cuesta la quinta parte que uno de hormig&oacute;n.</p>
 <p><b>Y la inteligencia artificial del Municipio muestra el costo por metro de cada obra</b>, comparado con el de
 las dem&aacute;s.</p>
-<p><b>Los parques no se tocan.</b> Se recuperan con naturaleza, pero nunca se privatizan, nunca se edifican y
-nunca se achican: no pueden convertirse en viviendas ni en edificios, y los comercios de la costa funcionan en sus
-predios, no adentro de los parques (anexo, Ordenanza XIV). Una ordenanza la puede cambiar otra ordenanza; lo que un
-gobierno municipal no puede cambiar es una ley provincial. Ya rige una: el art&iacute;culo 60 del Decreto-Ley 8912 proh&iacute;be
-cambiar el destino de las plazas y los parques y edificarlos. <span class="sg">Y le pedimos a la Legislatura que
-declare protegida la ribera, como ya hizo en 2020 con el Golf de Villa Adelina.</span></p>
+<p><b>Los parques no se tocan.</b> Se recuperan con naturaleza, pero nunca se privatizan, nunca se construye en ellos y nunca se achican. No pueden convertirse en viviendas ni en edificios. Y los comercios de la costa funcionan en sus terrenos, no adentro de los parques (anexo, Ordenanza XIV). Una ordenanza la puede cambiar otra ordenanza. Lo que un gobierno municipal no puede cambiar es una ley provincial, y ya rige una. El art&iacute;culo 60 del Decreto-Ley 8912 proh&iacute;be cambiar el uso de las plazas y los parques, y construir en ellos. <span class="sg">Y le pedimos a la Legislatura que declare protegida la ribera, como ya hizo en 2020 con el Golf de Villa Adelina.</span></p>
 </div>
 
 <h3>El que usa el parque est&aacute; ah&iacute; todos los d&iacute;as</h3>
-<p class="tight">El cap&iacute;tulo 4 resolvi&oacute; qui&eacute;n decide qu&eacute; obra se hace. Falta
-qui&eacute;n cuida cada parque el resto del a&ntilde;o: la asamblea decide una vez, y el que usa la
-plaza est&aacute; ah&iacute; siempre y se entera antes que cualquier sistema.</p>
+<p class="tight">El cap&iacute;tulo 4 resolvi&oacute; qui&eacute;n decide qu&eacute; obra se hace. Falta qui&eacute;n cuida cada parque el resto del a&ntilde;o. La asamblea decide una vez. En cambio, el que usa la plaza est&aacute; ah&iacute; siempre, y se entera antes que nadie de lo que pasa.</p>
 <div class="cols">
-<p><b>Proponemos asociaciones de parque: vecinos organizados que cuidan cada parque</b>, reconocidas por ordenanza
-con el marco de la 6045 extendido al espacio verde. No es un &oacute;rgano nuevo: es la misma figura de
-asociaci&oacute;n vecinal que el cap&iacute;tulo 4 usa, aplicada a un parque y no a una zona entera. <b>En varios
-parques ya existen:</b> el Concejo salud&oacute; en abril de 2026 a la asamblea del Parque del &Aacute;guila, y en 2012
-la Asamblea Bosque Alegre present&oacute; un proyecto con 4.000 adhesiones para proteger el bosque. El programa los
-reconoce y les da poder.</p>
-<p><b>Ninguna obra en un parque sin el dictamen de su asociaci&oacute;n.</b> La asociaci&oacute;n participa del
-dise&ntilde;o de la recuperaci&oacute;n desde el principio; recibe la informaci&oacute;n de cada obra antes que nadie y
-la sigue con la inteligencia artificial del Municipio &mdash;costo por metro y avance&mdash;; y <span
-class="sg">firma la recepci&oacute;n: sin esa firma no se paga</span>. Tiene quince d&iacute;as para firmar u observar;
-si no hace ninguna de las dos cosas, resuelve la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo. Y cada asociaci&oacute;n tiene su propio espacio en la inteligencia artificial del Municipio (4.11).</p>
-<p><b>Y qui&eacute;n decide.</b> La obra en los parques de cada zona la vota la comisi&oacute;n de esa zona; la de la
-costa, que es de todo el partido, la decide el panel sorteado del cap&iacute;tulo 4. En un parque costero, como el
-del &Aacute;guila, las dos cosas: el dictamen de su asociaci&oacute;n y la decisi&oacute;n del panel.</p>
-<p><b>Con plazo.</b> Si la asociaci&oacute;n no dictamina a tiempo, la comisi&oacute;n o el panel deciden igual. No es
-un veto: una disconformidad no puede paralizar una obra, o el mecanismo termina sirviendo para frenar y no
-para cuidar.</p>
-<p><b>Qu&eacute; corrige.</b> Se cementa lo que estaba verde, y pasa porque la obra se decide arriba y
-nadie con inter&eacute;s en ese parque tiene c&oacute;mo intervenir a tiempo.</p><p><span class="sg">Lo que proponemos crea a ese alguien.</span></p>
+<p><b>Proponemos asociaciones de parque: vecinos organizados que cuidan cada parque.</b> Las reconoce una ordenanza, con el marco de la 6045 extendido a los espacios verdes. No es un &oacute;rgano nuevo. Es la misma figura de asociaci&oacute;n vecinal que usa el cap&iacute;tulo 4, aplicada a un parque y no a una zona entera. <b>En varios parques ya existen.</b> En abril de 2026, el Concejo salud&oacute; a la asamblea del Parque del &Aacute;guila. Y en 2012, la Asamblea Bosque Alegre present&oacute; un proyecto con 4.000 firmas para proteger el bosque. El programa las reconoce y les da poder.</p>
+<p><b>Ninguna obra en un parque sin el dictamen de su asociaci&oacute;n.</b> La asociaci&oacute;n participa del dise&ntilde;o de la recuperaci&oacute;n desde el principio. Recibe la informaci&oacute;n de cada obra antes que nadie, y la sigue con la inteligencia artificial del Municipio: costo por metro y avance. Y <span class="sg">firma la recepci&oacute;n: sin esa firma, la obra no se paga</span>. Tiene quince d&iacute;as para firmar o hacer observaciones. Si no hace ninguna de las dos cosas, decide la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo. Y cada asociaci&oacute;n tiene su propio espacio en la inteligencia artificial del Municipio (4.11).</p>
+<p><b>Y qui&eacute;n decide.</b> La obra en los parques de cada zona la vota la comisi&oacute;n de esa zona. La de la costa, que es de todo el partido, la decide el panel sorteado del cap&iacute;tulo 4. En un parque de la costa, como el del &Aacute;guila, hacen falta las dos cosas: el dictamen de su asociaci&oacute;n y la decisi&oacute;n del panel.</p>
+<p><b>Con plazo.</b> Si la asociaci&oacute;n no da su dictamen a tiempo, la comisi&oacute;n o el panel deciden igual. No es un veto. Un desacuerdo no puede frenar una obra para siempre. Si no, el mecanismo terminar&iacute;a sirviendo para frenar y no para cuidar.</p>
+<p><b>Qu&eacute; corrige.</b> Hoy se pone cemento donde hab&iacute;a verde. Pasa porque la obra se decide arriba, y nadie que cuide ese parque tiene c&oacute;mo intervenir a tiempo. <span class="sg">Lo que proponemos crea a ese alguien.</span></p>
 </div>
 
 <div class="pull"><div class="plabel">Y hab&iacute;a 1.037 firmas pidiendo lo contrario</div>
-<p>La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro en la costa
-sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b> y junt&oacute;
-<b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025 y Barisidro en agosto.
-<span class="sg">No es que nadie haya dicho nada: es que no hab&iacute;a d&oacute;nde decirlo con
-efecto.</span> Una firma junta en una plataforma no obliga a nadie.</p><p>Por eso este programa propone el
-&aacute;mbito donde ese mismo reclamo se plantee antes de la firma del decreto y tenga respuesta
-escrita.</p></div>
+<p>La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro en la costa sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b>. Junt&oacute; <b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025, y Barisidro, en agosto. <span class="sg">No es que nadie haya dicho nada. Es que no hab&iacute;a d&oacute;nde decirlo para que sirviera.</span> Una firma juntada en una p&aacute;gina de internet no obliga a nadie.</p><p>Por eso, este programa propone un lugar donde ese mismo reclamo se pueda plantear antes de que se firme el decreto. Y donde tenga una respuesta por escrito.</p></div>
 
 <h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
 <p class="lead">San Isidro tiene tres hospitales municipales, uno odontol&oacute;gico y una red de centros
