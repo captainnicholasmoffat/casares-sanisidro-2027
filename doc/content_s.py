@@ -19,21 +19,20 @@ f&oacute;rmula escrita, seg&uacute;n la poblaci&oacute;n y la necesidad de cada 
 Sur Mer y a B&eacute;ccar. <b>Y el dinero de cada zona queda reservado por ordenanza</b>, para que no se pueda usar en otra
 cosa. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y cooperativas
-de San Isidro. Si al licitar el Municipio descubre que en el partido nadie sabe hacer un trabajo,
-<span class="sg">forma a gente para que aprenda</span>. Y las universidades del partido la ayudan a armar su empresa o
-su cooperativa. Adem&aacute;s, <b>cada licitaci&oacute;n p&uacute;blica subcontrata el 20% a pymes del partido</b>. Dentro de
-ese 20%, el 5% del contrato va a empresas de menos de cinco a&ntilde;os. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que esa obra, y los servicios que paga el Municipio, se contraten con empresas y cooperativas de San
+Isidro.</b> Puede pasar que, al licitar un trabajo, no se presente ninguna empresa del partido capaz de hacerlo. En ese
+caso, el Municipio va a intentar formar a vecinos para que aprendan ese trabajo, armen su propia empresa o cooperativa y
+den ellos el servicio. Las universidades del partido los van a acompa&ntilde;ar en ese camino. Adem&aacute;s, en cada
+licitaci&oacute;n p&uacute;blica, <span class="sg">una parte del trabajo queda para las pymes del partido</span>.
+<i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
 La formaci&oacute;n es una tecnicatura de la universidad nacional del partido, para que lo aprendido sirva tambi&eacute;n
 fuera del Municipio. Cada a&ntilde;o entran <b>928 personas</b>. El primer a&ntilde;o estudian y el segundo trabajan como
-pasantes, seis meses en el Municipio y seis en una empresa del partido. En el mandato egresan 1.286. El presupuesto de
-empleo y vivienda pasa de 505,7 a 7.730,9 millones por a&ntilde;o, quince veces lo de hoy.
-<span class="sg">La formaci&oacute;n laboral se paga con la partida de empleo, no con la de educaci&oacute;n.</span>
-Y que haya <b>un centro de apoyo escolar en cada localidad</b>. Hoy hay apenas cinco espacios chicos, todos en
-B&eacute;ccar y Boulogne, a los que van unos cien chicos. En las otras cuatro localidades no hay ninguno.
-<i>(Cap&iacute;tulo 5)</i></li>
+pasantes, seis meses en el Municipio y seis en una empresa del partido. <span class="sg">El presupuesto de empleo y vivienda
+se multiplica por quince.</span> Y que haya <b>un centro de apoyo escolar en cada localidad</b>. Hoy hay apenas cinco
+espacios chicos, todos en B&eacute;ccar y Boulogne, a los que van unos cien chicos. En las otras cuatro localidades no hay
+ninguno. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Que esa gente construya la inteligencia artificial del Municipio.</b> Es una inteligencia artificial propia, a
 la que cualquier vecino le pregunta lo que necesita, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y
