@@ -3170,3 +3170,9 @@ repitiendo arriba su título con «(sigue)».
   pantalla 82.413 (la diferencia: encabezado y pie en cada hoja, encabezados de cuadros y «(sigue)»); «El domicilio de
   los adjudicatarios», sólo en la hoja 119.
 - Incluye el agregado del 08/10 (la foto de la costa corregida y la guardia por gravedad).
+
+## AGREGADO · LA LÍNEA QUE FALTABA EN LA GUARDIA (08/10) · APLICADO
+- 5.6 (pág. 32): «Según quienes la conocen, cada nivel de gravedad espera en una sala distinta.», después del triage
+  por colores. La pág. 32 pasa a 2.688 pt (debajo de 2.700). Queda el 4.11 con «por nivel de gravedad» (Nick).
+- Pantalla (52 págs.) y A4 (126 hojas) exportadas de nuevo: ninguna hoja con más de un tercio en blanco (la última,
+  6%), índice con sus 64 entradas en su lugar, sin texto escondido, mismos controles que la entrega anterior.

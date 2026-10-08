@@ -2166,7 +2166,8 @@ avisa cuando algo se sale del rango.</p>
 <p><b>Se&ntilde;ala anomal&iacute;as, no acusa</b>, con las reglas del 4.11:
 <span class="sg">no imputa a nadie, acorta el tiempo entre que algo pasa y que se ve</span>.</p>
 <p><b>Y proponemos la guardia en n&uacute;mero, por gravedad.</b> En las guardias municipales el triage clasifica
-la urgencia por colores y se espera por color; proponemos mostrar en tiempo real la espera de cada uno: &laquo;hoy, en
+la urgencia por colores y se espera por color. Seg&uacute;n quienes la conocen, cada nivel de gravedad espera en una
+sala distinta. Proponemos mostrar en tiempo real la espera de cada uno: &laquo;hoy, en
 la guardia del Central: leves, unos cuarenta minutos; medios, unos quince; los graves entran directo&raquo;, para que
 quien tiene que ir elija a cu&aacute;l. La inteligencia artificial del Municipio no clasifica a nadie: eso lo hace el
 personal del triage, y ante s&iacute;ntomas graves siempre manda a la guardia o al 107.
