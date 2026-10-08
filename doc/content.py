@@ -72,9 +72,10 @@ C5B3, C5B3B = split_at(C5B3, '<h2><span class="n">5.14</span>', "cap5b3b", "")
 C5B2B, C5B2C = split_at(C5B2B, '<h3>Multas de tr&aacute;nsito:', "cap5b2c", "")
 # 5.8 y 5.9 ya no entran juntas: la inspeccion grabada se mudo al 5.9
 C5B2, C5B2A2 = split_at(C5B2, '<h2><span class="n">5.9</span>', "cap5b2a2", "")
-C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.6</span>', "cap6c",
+# dispatch 11: con el lenguaje llano el 6.4 crece, y el 6.5 pasa a la pagina del 6.6
+C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.5</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
-# el calendario suma las fechas propuestas de multas y costa: 6.4 y 6.5 en pagina propia
+# el calendario suma las fechas propuestas de multas y costa: el 6.4 en pagina propia
 C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
 
 # nota de metodo y notas de cada capitulo en una pagina; las fuentes del texto, en la

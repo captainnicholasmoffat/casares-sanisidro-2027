@@ -124,7 +124,7 @@ _IDX = [
  ("i", "6.4 &nbsp;El calendario del mandato, mes por mes", "cap6b2"),
  ("i", "6.5 &nbsp;Qu&eacute; no prometemos, y de qui&eacute;n depende", "cap6b2"),
  ("i", "6.6 &nbsp;Qu&eacute; puede salir mal", "cap6c"),
- ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis l&iacute;neas", "cap6c"),
+ ("i", "6.7 &nbsp;Lo que dice este cap&iacute;tulo, en seis puntos", "cap6c"),
  ("g", "Cierre", None),
  ("i", "Para cerrar", "cierre"),
  ("g", "Anexo &middot; El articulado", None),
@@ -157,9 +157,8 @@ def _indice():
       .irow .ilead{flex:1 1 auto;border-bottom:.75pt dotted var(--rule);margin:0 6pt}
       .irow .ipg{font-family:'Spectral',serif;font-size:8.6pt;color:var(--taupe)}
     </style>"""
-    corte = ('<div class="stand">Los datos est&aacute;n actualizados al 20 de septiembre de 2026. '
-             'Donde el texto dice &laquo;hoy&raquo;, se refiere a esa fecha.</div>')
-    return style + '<h1>&Iacute;ndice</h1>' + corte + "".join(rows)
+    # Dispatch 11, punto 1: la fecha de actualizacion sale del indice; queda en la nota de metodo.
+    return style + '<h1>&Iacute;ndice</h1>' + "".join(rows)
 
 
 INDICE = dict(id="indice", runhead=RH, html=_indice())
@@ -348,232 +347,70 @@ paga el 64%.</p></div>
 METODO = dict(id="metodo", runhead=RH, html="""
 <h1>Nota de m&eacute;todo</h1>
 <div class="stand">C&oacute;mo est&aacute; construido este documento, de d&oacute;nde sale cada cifra y qu&eacute; l&iacute;mites tiene.</div>
-<p class="lead">Cada cifra de este documento proviene de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l; la de lo que afirma el texto, en las p&aacute;ginas
-que siguen a esta nota.</p>
+<p class="lead">Cada cifra de este documento sale de un documento p&uacute;blico. La fuente de cada cuadro y de cada gr&aacute;fico con datos va debajo de &eacute;l. La de lo que dice el texto va en las p&aacute;ginas que siguen a esta nota.</p>
 <div class="cols">
-<p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026, y donde el texto
-dice &laquo;hoy&raquo; se refiere a esa fecha. Hay cuatro excepciones: el modelo fiscal est&aacute; cerrado al 31 de diciembre de 2025; el portal de transparencia se relev&oacute; en septiembre de 2026; la valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026; y lo que la lista de fuentes fecha despu&eacute;s del corte lleva su fecha al lado.</p>
-<p>Las series fiscales salen de los informes de ejecuci&oacute;n presupuestaria y las rendiciones de
-cuentas que publica la propia Municipalidad de San Isidro, de los fallos del Tribunal de Cuentas de la
-Provincia y del sistema SIMCo provincial. Los indicadores territoriales salen del Censo Nacional 2022,
-a nivel de radio censal. El modelo fiscal reproduce la ejecuci&oacute;n 2025 del Municipio con
-diferencia cero.</p>
-<p><b>Las investigaciones de esta edici&oacute;n.</b> Los informes 21 (ruido y prueba sellada), 22 (profesores digitales),
-23 (costos con la opci&oacute;n &oacute;ptima en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y g&eacute;nero y discapacidad), 23 bis (rejas en los desag&uuml;es, tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital, espect&aacute;culos y mensajes de texto), 23 ter (los tel&eacute;fonos sin transmisi&oacute;n, los colegios con aporte del 100% y los doscientos shows) 23 qu&aacute;ter (los inspectores de Habilitaciones y de obra, el banco de los sueldos, las grabaciones a la vista, el invierno bajo techo y el volumen) y 23 quinquies (las barreras de Per&uacute; y Alto Per&uacute;, y la temporada bajo techo) se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el
-repositorio, y marcan qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. Lo que est&aacute; en d&oacute;lares va al de diciembre de
-2025, $1.447,84 (BCRA).</p>
-<p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos y
-reproducibles.</span> Cualquiera los baja de un repositorio abierto desde que se presenta este programa, con las pruebas autom&aacute;ticas que los verifican. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
+<p><b>Fecha de corte.</b> Los datos est&aacute;n actualizados al 20 de septiembre de 2026. Donde el texto dice &laquo;hoy&raquo;, se refiere a esa fecha. Hay cuatro excepciones. El modelo fiscal est&aacute; cerrado al 31 de diciembre de 2025. El portal de transparencia se revis&oacute; en septiembre de 2026. La valuaci&oacute;n de la tierra del 3.5 usa las parcelas de ARBA descargadas el 25 de septiembre de 2026. Y lo que la lista de fuentes fecha despu&eacute;s del corte lleva su fecha al lado.</p>
+<p>Las cifras de las cuentas salen de tres lugares. Uno son los informes de ejecuci&oacute;n presupuestaria y las rendiciones de cuentas que publica la propia Municipalidad de San Isidro. Otro, los fallos del Tribunal de Cuentas de la Provincia. Y el tercero, el sistema SIMCo de la Provincia. Los datos de cada zona salen del Censo Nacional 2022, por radio censal. El modelo fiscal reproduce exactamente lo que gast&oacute; y cobr&oacute; el Municipio en 2025, sin ninguna diferencia.</p>
+<p><b>Las investigaciones de esta edici&oacute;n.</b> Son siete informes. Se hicieron en octubre de 2026, s&oacute;lo con fuentes p&uacute;blicas que quedan guardadas en el repositorio. Cada uno marca qu&eacute; se ley&oacute; en la fuente y qu&eacute; es c&aacute;lculo propio. El 21 trata el ruido y la prueba sellada. El 22, los profesores digitales. El 23, los costos con la mejor opci&oacute;n en calidad y precio, el puente con los laboratorios, los espect&aacute;culos, los turnos, y g&eacute;nero y discapacidad. El 23 bis, las rejas en los desag&uuml;es, los tel&eacute;fonos de los inspectores, qui&eacute;n tiene gratis el profesor digital, los espect&aacute;culos y los mensajes de texto. El 23 ter, los tel&eacute;fonos sin transmisi&oacute;n, los colegios con aporte del 100% y los doscientos shows. El 23 qu&aacute;ter, los inspectores de Habilitaciones y de obra, el banco de los sueldos, las grabaciones a la vista, el invierno bajo techo y el volumen. Y el 23 quinquies, las barreras de Per&uacute; y Alto Per&uacute;, y la temporada bajo techo. Lo que est&aacute; en d&oacute;lares se pasa a pesos con el d&oacute;lar de diciembre de 2025, $1.447,84 (BCRA).</p>
+<p><span class="sg">El modelo, los datos, las series y los catorce gr&aacute;ficos son p&uacute;blicos, y cualquiera puede rehacerlos.</span> Desde que se presenta este programa, se pueden bajar de un repositorio abierto, con las pruebas autom&aacute;ticas que los controlan. Cualquiera puede correrlos y llegar a los mismos n&uacute;meros, o encontrar que no llega.</p>
 </div>
 
 <div class="callout a">
 <div class="clabel">Los l&iacute;mites</div>
-<p>Los datos de los otros 105 municipios provienen de un procesador de terceros y no fueron verificados
-uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no
-publica los suyos. El Municipio cambi&oacute; su nomenclador de funciones en 2025, lo que vuelve
-incomparable buena parte de las series interanuales.</p>
+<p>Los datos de los otros 105 municipios vienen de un sitio de terceros, y no se comprobaron uno por uno. Los l&iacute;mites de las localidades son de OpenStreetMap, porque la Municipalidad no publica los suyos. En 2025, el Municipio cambi&oacute; la forma de clasificar su gasto por funci&oacute;n. Por eso, buena parte de las series no se puede comparar de un a&ntilde;o al otro.</p>
 </div>
 
 <div class="hairline"></div>
 <h2>Las notas de cada cap&iacute;tulo</h2>
 <h3>Cap&iacute;tulo 1 &middot; Diagn&oacute;stico</h3>
 <div class="note">
-<p>Las series fiscales provienen de los informes de ejecuci&oacute;n
-presupuestaria y rendiciones de cuentas publicados por la Municipalidad de San Isidro, de los fallos del
-Honorable Tribunal de Cuentas de la Provincia de Buenos Aires y del sistema SIMCo provincial, validadas de
-forma cruzada entre s&iacute;. Los datos territoriales provienen del Censo Nacional de Poblaci&oacute;n,
-Hogares y Viviendas 2022 (INDEC), a nivel de radio censal. Los importes est&aacute;n expresados en pesos
-constantes de diciembre de 2025 salvo indicaci&oacute;n expresa.</p>
-<p>Las seis zonas de 1.1 son los l&iacute;mites de las localidades del partido seg&uacute;n OpenStreetMap,
-proyectados sobre los 360 radios censales del INDEC: cada radio se asigna a la localidad que contiene su
-punto representativo. Los 360 caen dentro de exactamente una, sin hu&eacute;rfanos y sin dobles.</p>
-<p>El domicilio de los adjudicatarios sale de 3.670 decretos del Bolet&iacute;n Oficial municipal que
-lo publican. La proporci&oacute;n de 2002 a 2017 excluye 41 designaciones de inspector t&eacute;cnico,
-porque no son adjudicaciones a terceros: el domicilio que publican es el del inspector. Es de actos y
-no de montos, porque los importes est&aacute;n en pesos corrientes de cada a&ntilde;o. La concentraci&oacute;n usa los 407 decretos que nombran a cada
-empresa con su importe; sumando los 144 que informan s&oacute;lo un total, baja al 42,1%.</p>
-<p>Los datos de los otros 105 municipios bonaerenses usados en 1.2 provienen de informes de
-ejecuci&oacute;n RAFAM procesados por La Verdadera PBA, un sitio de terceros que republica datos oficiales
-de la Provincia. Las cifras de San Isidro fueron validadas contra el estado de ejecuci&oacute;n del propio
-Municipio y coinciden en las siete categor&iacute;as del gasto por objeto. Las de los otros municipios no
-fueron validadas individualmente: se usan para calcular la mediana provincial y la posici&oacute;n relativa
-de San Isidro.</p>
-<p>El gasto devengado total de 2025, 324.304 millones, es el del estado de ejecuci&oacute;n del Municipio
-por objeto y por programa, y el que publica RAFAM. El estado por finalidad y funci&oacute;n suma 324.133,9
-millones porque deja afuera 170,1 millones de activos financieros.</p>
+<p>Las cifras de las cuentas salen de los informes de ejecuci&oacute;n presupuestaria y de las rendiciones de cuentas que publica la Municipalidad de San Isidro. Tambi&eacute;n salen de los fallos del Honorable Tribunal de Cuentas de la Provincia de Buenos Aires y del sistema SIMCo de la Provincia. Las tres fuentes se compararon entre s&iacute;. Los datos de cada zona salen del Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022 (INDEC), por radio censal. Salvo que se diga otra cosa, los montos est&aacute;n en pesos constantes de diciembre de 2025, es decir, ajustados por la inflaci&oacute;n hasta esa fecha.</p>
+<p>Las seis zonas del 1.1 son las localidades del partido, con los l&iacute;mites de OpenStreetMap, aplicados a los 360 radios censales del INDEC. Cada radio va a la localidad que contiene su punto representativo, que siempre cae dentro del radio. Los 360 caen en una sola localidad: ninguno queda afuera y ninguno est&aacute; en dos.</p>
+<p>El domicilio de las empresas que ganaron contratos sale de 3.670 decretos del Bolet&iacute;n Oficial municipal que lo publican. La proporci&oacute;n de 2002 a 2017 deja afuera 41 designaciones de inspector t&eacute;cnico. No son contratos con terceros, y el domicilio que publican es el del inspector. La proporci&oacute;n cuenta decretos, no montos, porque los montos est&aacute;n en pesos de cada a&ntilde;o, sin ajustar por inflaci&oacute;n. La concentraci&oacute;n usa los 407 decretos que nombran a cada empresa con su monto. Si se suman los 144 que informan s&oacute;lo un total, baja al 42,1%.</p>
+<p>Los datos de los otros 105 municipios bonaerenses del 1.2 salen de informes de ejecuci&oacute;n RAFAM, procesados por La Verdadera PBA. Es un sitio de terceros que vuelve a publicar datos oficiales de la Provincia. Las cifras de San Isidro se compararon con el estado de ejecuci&oacute;n del propio Municipio, y coinciden en las siete categor&iacute;as del gasto por objeto. Las de los otros municipios no se compararon una por una. Se usan para calcular la mediana de la Provincia y el lugar de San Isidro entre los dem&aacute;s.</p>
+<p>El gasto devengado total de 2025, 324.304 millones, es el del estado de ejecuci&oacute;n del Municipio por objeto y por programa. Es tambi&eacute;n el que publica RAFAM. El estado por finalidad y funci&oacute;n suma 324.133,9 millones, porque deja afuera 170,1 millones de activos financieros.</p>
 </div>
 <h3>Cap&iacute;tulo 2 &middot; La gesti&oacute;n, medida</h3>
 <div class="note">
-<p>Todas las cifras provienen de documentos
-publicados por la Municipalidad de San Isidro &mdash;estados de ejecuci&oacute;n presupuestaria,
-situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas
-2024&ndash;2025&raquo;&mdash; y de los informes de ejecuci&oacute;n RAFAM de los 106 municipios
-bonaerenses con datos comparables para 2025, cuyo origen y l&iacute;mite se declaran en la nota del cap&iacute;tulo 1. El relevamiento del portal de transparencia se realiz&oacute; en septiembre de 2026 y es reproducible:
-cualquiera puede abrir el portal municipal y verificar el estado de cada una de las siete secciones que el
-cap&iacute;tulo 5 enumera.</p>
-<p><b>Cuadro [[n:accion]].</b> El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; tiene tres prioridades,
-diecinueve objetivos y setenta y siete metas numeradas, contadas una por una. Las metas est&aacute;n agrupadas por tema, no
-recortadas: las cuatro primeras filas del cuadro cubren las tres prioridades completas del plan.</p>
+<p>Todas las cifras salen de documentos publicados por la Municipalidad de San Isidro. Son los estados de ejecuci&oacute;n presupuestaria, la situaci&oacute;n econ&oacute;mico-financiera y el documento &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;. Tambi&eacute;n salen de los informes de ejecuci&oacute;n RAFAM de los 106 municipios bonaerenses con datos comparables para 2025. De d&oacute;nde vienen esos datos, y qu&eacute; l&iacute;mites tienen, lo dice la nota del cap&iacute;tulo 1. La revisi&oacute;n del portal de transparencia se hizo en septiembre de 2026, y cualquiera la puede repetir. Alcanza con abrir el portal del Municipio y mirar c&oacute;mo est&aacute; cada una de las siete secciones que enumera el cap&iacute;tulo 5.</p>
+<p><b>Cuadro [[n:accion]].</b> El plan &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo; tiene tres prioridades, diecinueve objetivos y setenta y siete metas numeradas, contadas una por una. Las metas est&aacute;n agrupadas por tema, y no se recort&oacute; ninguna. Las cuatro primeras filas del cuadro cubren las tres prioridades completas del plan.</p>
 </div>
 <h3>Cap&iacute;tulo 3 &middot; Los fondos</h3>
 <div class="note">
-<p>El modelo est&aacute; construido sobre la ejecuci&oacute;n presupuestaria 2010&ndash;2025 del Municipio, los fallos del Tribunal de Cuentas de la Provincia, el
-Estado de Situaci&oacute;n Econ&oacute;mico-Financiera municipal y las planillas de transferencias de la
-Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. Todas las series fueron deflactadas por IPC
-(INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con el empalme declarado).</p>
-<p>Los cuatro par&aacute;metros fueron calculados desde la serie hist&oacute;rica, no supuestos. El
-a&ntilde;o cero reproduce la ejecuci&oacute;n 2025 oficial con diferencia cero. Las identidades contables
-se verifican autom&aacute;ticamente en los treinta y nueve a&ntilde;os-escenario del modelo. El modelo,
-los datos y las pruebas de validaci&oacute;n son p&uacute;blicos y reproducibles.</p>
-<p>El escenario base congela el gasto real en el nivel de 2025: cero recomposici&oacute;n salarial y cero
-ampliaci&oacute;n de servicios durante doce a&ntilde;os. La deuda entra con su saldo al 31 de diciembre de
-2025 &mdash;8.960 millones, la cifra del informe oficial de ese trimestre&mdash;; el informe de junio de
-2026 es posterior y no est&aacute; incorporado. La comparaci&oacute;n de la tabla municipal con ARBA
-cruza las dos escalas sobre 69.258 parcelas, ponderando por superficie. Como los metros construidos no son
-p&uacute;blicos, el aporte de actualizar la tabla de valuaci&oacute;n entra en el modelo calculado sobre la parte tierra.</p>
-<p><b>Gr&aacute;fico [[n:sinada]].</b> El programa tambi&eacute;n est&aacute; en el modelo: en 2029 y 2030 la tabla nueva
-cobra m&aacute;s de lo que el programa gasta, y en 2028 y desde 2031 cobra menos (cuadro [[n:programa_base]]).</p>
-<p><b>Cuadro [[n:programa]].</b> Las cifras marcadas son estimaciones del equipo de este programa, no
-cifras oficiales, y se presupuestan o se licitan antes de comprometerse: apoyo escolar, las inspecciones grabadas, la plataforma,
-las pasant&iacute;as, el semillero, los cuidadores, la Escuela N&aacute;utica, los ba&ntilde;os y las clases de la costa, los espect&aacute;culos, lo que se deja de
-cobrar en multas y los equipos. Las dem&aacute;s salen de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
-<p><b>Los equipos, cada uno en la l&iacute;nea de su &aacute;rea y dentro de su monto:</b> ambiente, seis estaciones de monitoreo de
-ruido, 313,5 M una vez; formaci&oacute;n, sesenta puestos en seis centros de acceso, 137,1 M una vez y 39,5 M por a&ntilde;o de
-conexi&oacute;n; salud, trece pantallas de ocupaci&oacute;n de guardia, 8,3 M una vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las
-personas que los instalan (cuadro [[n:equipo]]). Fuentes: compras p&uacute;blicas de la Ciudad (estaci&oacute;n de ruido, diciembre de
-2024; mini PC y enlace de fibra, 2026) y de la Naci&oacute;n (notebook, noviembre de 2025; televisor, escritorio y silla,
-2026), llevadas a diciembre de 2025 con el IPC. Las inspecciones se graban con el tel&eacute;fono del agente: no hay
-c&aacute;maras corporales, y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (informe 23). Lo que
-est&aacute; en d&oacute;lares va al de diciembre de 2025, $1.447,84 (BCRA). Cuidadores: 427.806,54 $ por mes, categor&iacute;a asistencia y
-cuidado de personas, diciembre de 2025 (Comisi&oacute;n Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025), con
-las cargas del cuadro [[n:equipo]] y trece sueldos.</p>
-<p><b>Cuadro [[n:tabla2008]].</b> Las parcelas salen del geoservicio de ARBA, y &laquo;reconocido&raquo; usa los
-valores sin redondear; el detalle est&aacute; en el informe 09. Las localidades son las de los cap&iacute;tulos 1 y 4, armadas con
-radios censales, y sus l&iacute;mites no siguen el catastro: cada parcela va a la localidad donde cae. El grueso de cada una,
-por circunscripci&oacute;n y secci&oacute;n: Acassuso, III-A y III-C; Mart&iacute;nez, III-B, III-D a III-J y IV-A a IV-D; la localidad de
-San Isidro, I-A, I-B, II-A a II-C, III-K, IV-E, VII-C, VII-D y VII-H; B&eacute;ccar, VII-A, VII-B, VII-E a VII-G y VIII-A a
-VIII-E; Villa Adelina, V-B, V-D, V-F y V-G; Boulogne Sur Mer, V-A, V-C, V-E y VI-A a VI-J. El 2,9% de las parcelas cae
-en una secci&oacute;n donde la mayor&iacute;a es de otra localidad; con las secciones enteras, Acassuso da 2,37 contra 2,94 veces
-Boulogne Sur Mer. La lista parcela por parcela est&aacute; en data/valuacion_parcelas.csv y el cruce por secci&oacute;n, en
-data/valuacion_secciones_localidad.csv. L&iacute;mites: la comparaci&oacute;n es de proporciones, no de pesos, porque las dos escalas
-usan unidades distintas. Cruzan con la tabla municipal 68.644 de las 69.258 parcelas de la valuaci&oacute;n provincial, el
-99,1%. Es s&oacute;lo tierra, sin construcci&oacute;n, y la valuaci&oacute;n provincial es de un reval&uacute;o de 2016: no es el mercado de hoy. Lo
-que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
-<p><b>Cuadro [[n:deuda]].</b> La deuda flotante son obligaciones de corto plazo y oscila mucho entre
-trimestres; la consolidada es la que muestra la tendencia, y creci&oacute; de 1.408 a 5.927 millones; descontada la inflaci&oacute;n,
-de 2.660 a 5.072 millones de pesos de diciembre de 2025: casi el doble. El bono de 30.000 millones no est&aacute; en el cuadro
-porque se coloc&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio.</p>
-<p><b>Cuadro [[n:programa_base]].</b> Los dos escenarios tienen los mismos supuestos de recaudaci&oacute;n
-propia y de coparticipaci&oacute;n: lo &uacute;nico que cambia es el programa y lo que cobra la tabla nueva. El programa empieza en
-2028, el primer ejercicio completo del mandato. La &uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de
-lotes chicos (3.5). Las diferencias se calculan sin redondear.</p>
+<p>El modelo usa cuatro fuentes. La ejecuci&oacute;n presupuestaria 2010&ndash;2025 del Municipio. Los fallos del Tribunal de Cuentas de la Provincia. El Estado de Situaci&oacute;n Econ&oacute;mico-Financiera del Municipio. Y las planillas de transferencias de la Direcci&oacute;n Provincial de Coordinaci&oacute;n Municipal. A todas las series se les descont&oacute; la inflaci&oacute;n con el IPC (INDEC 2016&ndash;2026; IPC San Luis 2010&ndash;2016, con la forma de unir las dos series explicada).</p>
+<p>Los cuatro par&aacute;metros se calcularon con la serie hist&oacute;rica, y no se supusieron. El a&ntilde;o cero reproduce exactamente la ejecuci&oacute;n oficial de 2025. Que las cuentas cierren se controla en forma autom&aacute;tica, en los treinta y nueve a&ntilde;os-escenario del modelo. El modelo, los datos y las pruebas son p&uacute;blicos, y cualquiera puede rehacerlos.</p>
+<p>El escenario base congela el gasto, descontada la inflaci&oacute;n, en el nivel de 2025. Durante doce a&ntilde;os no hay aumento real de sueldos ni m&aacute;s servicios. La deuda entra con su saldo al 31 de diciembre de 2025: 8.960 millones, la cifra del informe oficial de ese trimestre. El informe de junio de 2026 es posterior, y no est&aacute; incluido. La comparaci&oacute;n de la tabla municipal con ARBA cruza las dos escalas en 69.258 parcelas, y cada parcela pesa seg&uacute;n su superficie. Los metros construidos no son p&uacute;blicos. Por eso, lo que aporta actualizar la tabla de valuaci&oacute;n se calcula en el modelo s&oacute;lo sobre la tierra.</p>
+<p><b>Gr&aacute;fico [[n:sinada]].</b> El programa tambi&eacute;n est&aacute; en el modelo. En 2029 y 2030, la tabla nueva cobra m&aacute;s de lo que el programa gasta. Y en 2028, y desde 2031, cobra menos (cuadro [[n:programa_base]]).</p>
+<p><b>Cuadro [[n:programa]].</b> Las cifras marcadas son c&aacute;lculos del equipo de este programa, no cifras oficiales. Antes de comprometerse, se presupuestan o se licitan. Son las de apoyo escolar, las inspecciones grabadas, la plataforma, las pasant&iacute;as, el semillero, los cuidadores y la Escuela N&aacute;utica. Tambi&eacute;n las de los ba&ntilde;os y las clases de la costa, los espect&aacute;culos, lo que se deja de cobrar en multas y los equipos. Las dem&aacute;s salen de la ejecuci&oacute;n 2025 publicada y del modelo del cap&iacute;tulo.</p>
+<p><b>Los equipos van cada uno en el rengl&oacute;n de su &aacute;rea, y dentro de su monto.</b> Ambiente: seis estaciones que miden el ruido, 313,5 M una sola vez. Formaci&oacute;n: sesenta puestos en seis centros de acceso, 137,1 M una sola vez y 39,5 M por a&ntilde;o de conexi&oacute;n. Salud: trece pantallas que muestran la gente en la guardia, 8,3 M una sola vez. En Ciencia y T&eacute;cnica quedan s&oacute;lo las personas que los instalan (cuadro [[n:equipo]]). Los precios salen de compras p&uacute;blicas de la Ciudad y de la Naci&oacute;n, llevados a diciembre de 2025 con el IPC. De la Ciudad: la estaci&oacute;n de ruido, de diciembre de 2024, y la mini PC y el enlace de fibra, de 2026. De la Naci&oacute;n: la notebook, de noviembre de 2025, y el televisor, el escritorio y la silla, de 2026. Las inspecciones se graban con el tel&eacute;fono del agente, as&iacute; que no hay c&aacute;maras corporales. Y el an&aacute;lisis de video de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (informe 23). Lo que est&aacute; en d&oacute;lares se pasa con el d&oacute;lar de diciembre de 2025, $1.447,84 (BCRA). Los cuidadores cobran 427.806,54 $ por mes, en la categor&iacute;a asistencia y cuidado de personas, a diciembre de 2025 (Comisi&oacute;n Nacional de Trabajo en Casas Particulares, Resoluci&oacute;n 3/2025). Se suman las cargas del cuadro [[n:equipo]], y se cuentan trece sueldos por a&ntilde;o.</p>
+<p><b>Cuadro [[n:tabla2008]].</b> Las parcelas salen del servicio de mapas de ARBA, y &laquo;reconocido&raquo; usa los valores sin redondear. El detalle est&aacute; en el informe 09. Las localidades son las de los cap&iacute;tulos 1 y 4, armadas con radios censales, y sus l&iacute;mites no siguen el catastro. Cada parcela va a la localidad donde cae. La mayor parte de cada una est&aacute; en estas circunscripciones y secciones. En Acassuso, III-A y III-C. En Mart&iacute;nez, III-B, III-D a III-J y IV-A a IV-D. En la localidad de San Isidro, I-A, I-B, II-A a II-C, III-K, IV-E, VII-C, VII-D y VII-H. En B&eacute;ccar, VII-A, VII-B, VII-E a VII-G y VIII-A a VIII-E. En Villa Adelina, V-B, V-D, V-F y V-G. Y en Boulogne Sur Mer, V-A, V-C, V-E y VI-A a VI-J. El 2,9% de las parcelas cae en una secci&oacute;n donde la mayor&iacute;a es de otra localidad. Si se toman las secciones enteras, Acassuso da 2,37 veces Boulogne Sur Mer, en vez de 2,94. La lista parcela por parcela est&aacute; en data/valuacion_parcelas.csv, y el cruce por secci&oacute;n, en data/valuacion_secciones_localidad.csv. <b>L&iacute;mites.</b> La comparaci&oacute;n es de proporciones, no de pesos, porque las dos escalas usan unidades distintas. De las 69.258 parcelas de la valuaci&oacute;n provincial, 68.644 cruzan con la tabla municipal: el 99,1%. Es s&oacute;lo tierra, sin lo construido. Y la valuaci&oacute;n provincial es de un reval&uacute;o de 2016, as&iacute; que no es el precio de mercado de hoy. Lo que se compara es c&oacute;mo ordena cada escala, no cu&aacute;nto vale un inmueble.</p>
+<p><b>Cuadro [[n:deuda]].</b> La deuda flotante son pagos de corto plazo, y cambia mucho de un trimestre a otro. La que muestra la tendencia es la consolidada. Creci&oacute; de 1.408 a 5.927 millones. Descontada la inflaci&oacute;n, creci&oacute; de 2.660 a 5.072 millones de pesos de diciembre de 2025: casi el doble. El bono de 30.000 millones no est&aacute; en el cuadro, porque se emiti&oacute; el 13 de agosto de 2026 y el &uacute;ltimo informe publicado cierra en junio.</p>
+<p><b>Cuadro [[n:programa_base]].</b> Los dos escenarios suponen lo mismo sobre lo que recauda el Municipio y sobre la coparticipaci&oacute;n. Lo &uacute;nico que cambia es el programa, y lo que cobra la tabla nueva. El programa empieza en 2028, el primer a&ntilde;o completo del mandato. La &uacute;ltima fila supone que el m&iacute;nimo de la tasa frena todas las subas de los lotes chicos (3.5). Las diferencias se calculan sin redondear.</p>
 </div>
 <h3>Cap&iacute;tulo 4 &middot; El mecanismo</h3>
 <div class="note">
-<p>Los art&iacute;culos 60, 132 y 119 de la Ley
-Org&aacute;nica de las Municipalidades fueron verificados contra tres fuentes oficiales independientes: la
-copia de la LOM del Ministerio del Interior de la Naci&oacute;n, el digesto del Concejo Deliberante de La
-Plata y el digesto del Municipio de Tigre. El art&iacute;culo 211 de la Constituci&oacute;n provincial fue
-verificado contra el texto constitucional oficial. El Decreto 2099/2025 de Pinamar fue verificado contra
-el Sistema de Boletines Oficiales Municipales de la Provincia. La Ordenanza 6045/1984 de San Isidro fue
-verificada contra el Digesto municipal; su &uacute;nica modificaci&oacute;n posterior es la Ordenanza
-7164/1993, que no altera los art&iacute;culos 5, 8, 9 ni 10.</p>
-<p>Las cifras de obra p&uacute;blica y su distribuci&oacute;n por zona surgen de la ejecuci&oacute;n
-presupuestaria 2025 del Municipio y del Censo 2022 (INDEC) a nivel de radio censal. El reparto se calcula
-sobre 295.978 habitantes, la poblaci&oacute;n en viviendas particulares del Censo 2022. Las 1.304 personas
-restantes viven en viviendas colectivas, que el Censo no publica por radio censal y por lo tanto no pueden
-asignarse a una zona.</p>
-<p>El 1,5% que paga el funcionamiento de las comisiones sale de estos supuestos, sobre el sueldo de la
-categor&iacute;a de ingreso municipal &mdash;categor&iacute;a 6, 35 horas: 432.624 pesos por mes en la Ordenanza 9422 de
-presupuesto 2026, 420.507 en pesos de diciembre de 2025&mdash;. Cuatro asambleas por zona y por a&ntilde;o, 24 en
-total, como el ciclo m&iacute;nimo de la Ciudad de Buenos Aires, con dos cuidadoras cuatro horas cada una: medio
-mill&oacute;n por a&ntilde;o. Una obra promedio de 100 millones, que da 289 obras el a&ntilde;o 4, con tres vecinos por obra que
-cobran un cuarto de ese sueldo cada uno: 91 millones. Y un 3% de administraci&oacute;n sobre lo que ejecutan las
-propias comisiones, si ejecutan un cuarto de la partida: 217 millones. Suman 308 millones, el 1,1%; con
-obras promedio de 50 millones son 400, el 1,4%, y el 1,5% alcanza en los dos casos. El panel sorteado: 40
-personas, cuatro sesiones y un d&iacute;a de ese sueldo por sesi&oacute;n.</p>
-<p>El d&eacute;ficit de la franja costera baja se cuenta en la zona San Isidro: tres radios contiguos de la
-fracci&oacute;n 02 &mdash;los terminados en 03, 04 y 05&mdash; tienen entre 4,3% y 11,8% de hogares con NBI
-y entre 24,8% y 63,1% sin gas de red, sobre una zona cuyo promedio es 1,83% y 16,64%. En Acassuso no hay
-bols&oacute;n de pobreza: sus diecis&eacute;is radios tienen NBI de 0,0% a 2,4%, el 19,48% sin gas de red
-est&aacute; repartido parejo, y el &uacute;nico radio con d&eacute;ficit de cloaca relevante &mdash;el
-067560403, con 17,4% sobre 316 hogares&mdash; tiene 0,6% de NBI.</p>
-<p>Los antecedentes del panel sorteado &mdash;Ostbelgien, Winterthur, Darebin, Melbourne, Bolonia,
-Barcelona, Par&iacute;s, Se&uacute;l, Reikiavik, Nueva York, Chicago, C&oacute;rdoba y la Ciudad de Buenos
-Aires&mdash; son experiencias en curso o documentadas; el argumento sobre pregunta acotada y captura
-proviene de la literatura acad&eacute;mica sobre sorteo y control popular. Ninguno es transferible sin
-adaptaci&oacute;n: Barcelona y Par&iacute;s no tienen las restricciones de la Ley Org&aacute;nica
-bonaerense, y la Ciudad de Buenos Aires tiene comunas con autoridades electas que San Isidro no tiene.</p>
-<p><b>Cuadro [[n:equipo]].</b> Sueldos brutos de mercado &mdash;mediana de la encuesta de Sysarmy 2026.1:
-senior 3,40 M por mes, semi-senior 2,43 M, junior 1,50 M&mdash; por trece, m&aacute;s las cargas del empleador: 16,8% de
-contribuciones (IPS 12%, Decreto-Ley 9650/80, e IOMA 4,8%, Decreto 2655/04) y la ART que contrat&oacute; el Municipio, 3,275%
-m&aacute;s una suma fija por persona (Decreto 1587/2025). Pasantes, 240.000 $ por mes, con ART y salud. Las 10 personas
-nuevas y las 8 de las &aacute;reas salen del informe 23. Infraestructura y licencias, con precios publicados y el d&oacute;lar de
-diciembre de 2025, $1.447,84 (informe 23): lo que usan los vecinos, las 160 asociaciones inscriptas al 40% de su cupo,
-los alumnos, el semillero y las herramientas del equipo; los avisos van por la propia inteligencia artificial del
-Municipio, sin WhatsApp. Auditor&iacute;a externa, 10% del equipo de las primeras 49 personas, sin cargas. El soporte en cada una de las seis zonas lo hace planta
-reasignada, que ya cobra su sueldo.</p>
+<p>Los art&iacute;culos 60, 132 y 119 de la Ley Org&aacute;nica de las Municipalidades se comprobaron en tres fuentes oficiales distintas. Son la copia de la ley del Ministerio del Interior de la Naci&oacute;n, el digesto del Concejo Deliberante de La Plata y el digesto del Municipio de Tigre. El art&iacute;culo 211 de la Constituci&oacute;n provincial se comprob&oacute; en el texto oficial. El Decreto 2099/2025 de Pinamar se comprob&oacute; en el Sistema de Boletines Oficiales Municipales de la Provincia. La Ordenanza 6045/1984 de San Isidro se comprob&oacute; en el Digesto del Municipio. Su &uacute;nico cambio posterior es la Ordenanza 7164/1993, que no toca los art&iacute;culos 5, 8, 9 ni 10.</p>
+<p>Las cifras de obra p&uacute;blica y su reparto por zona salen de la ejecuci&oacute;n presupuestaria 2025 del Municipio y del Censo 2022 (INDEC), por radio censal. El reparto se calcula sobre 295.978 habitantes, que es la gente que vive en viviendas particulares seg&uacute;n el Censo 2022. Las otras 1.304 personas viven en viviendas colectivas. El Censo no las publica por radio censal, as&iacute; que no se pueden asignar a una zona.</p>
+<p>El 1,5% que paga el funcionamiento de las comisiones sale de estos supuestos. Se calcula sobre el sueldo de la categor&iacute;a de ingreso del Municipio: categor&iacute;a 6, 35 horas. Son 432.624 pesos por mes en la Ordenanza 9422 de presupuesto 2026, y 420.507 en pesos de diciembre de 2025. Hay cuatro asambleas por zona y por a&ntilde;o, 24 en total, como el ciclo m&iacute;nimo de la Ciudad de Buenos Aires. Cada una tiene dos cuidadoras, cuatro horas cada una: medio mill&oacute;n por a&ntilde;o. Una obra promedio es de 100 millones, lo que da 289 obras el a&ntilde;o 4. Hay tres vecinos por obra, y cada uno cobra un cuarto de ese sueldo: 91 millones. Y hay un 3% de administraci&oacute;n sobre lo que hacen las propias comisiones, si hacen un cuarto de la partida: 217 millones. En total, son 308 millones, el 1,1%. Con obras promedio de 50 millones son 400, el 1,4%. En los dos casos, el 1,5% alcanza. El panel sorteado tiene 40 personas y cuatro sesiones, y cobra un d&iacute;a de ese sueldo por sesi&oacute;n.</p>
+<p>Lo que falta en la franja baja de la costa se cuenta en la zona San Isidro. Hay tres radios vecinos de la fracci&oacute;n 02, los terminados en 03, 04 y 05. Tienen entre 4,3% y 11,8% de hogares con NBI, y entre 24,8% y 63,1% sin gas de red. El promedio de la zona es 1,83% y 16,64%. En Acassuso no hay un bols&oacute;n de pobreza. Sus diecis&eacute;is radios tienen NBI de 0,0% a 2,4%, y el 19,48% sin gas de red est&aacute; repartido parejo. El &uacute;nico radio donde la falta de cloaca pesa es el 067560403, con 17,4% sobre 316 hogares, y tiene 0,6% de NBI.</p>
+<p>Los casos de panel sorteado son experiencias en marcha o documentadas. Son Ostbelgien, Winterthur, Darebin, Melbourne, Bolonia, Barcelona, Par&iacute;s, Se&uacute;l, Reikiavik, Nueva York, Chicago, C&oacute;rdoba y la Ciudad de Buenos Aires. La idea de hacer una pregunta concreta, y de evitar que un grupo se quede con el panel, sale de los estudios acad&eacute;micos sobre sorteo y control popular. Ning&uacute;n caso se puede copiar sin adaptarlo. Barcelona y Par&iacute;s no tienen los l&iacute;mites de la Ley Org&aacute;nica bonaerense. Y la Ciudad de Buenos Aires tiene comunas con autoridades electas, que San Isidro no tiene.</p>
+<p><b>Cuadro [[n:equipo]].</b> Los sueldos son brutos y de mercado, seg&uacute;n la mediana de la encuesta de Sysarmy 2026.1. Un senior cobra 3,40 M por mes, un semi-senior 2,43 M y un junior 1,50 M. Se cuentan trece sueldos por a&ntilde;o, m&aacute;s las cargas del empleador. Son el 16,8% de contribuciones (IPS 12%, Decreto-Ley 9650/80, e IOMA 4,8%, Decreto 2655/04) y la ART que contrat&oacute; el Municipio: 3,275% m&aacute;s una suma fija por persona (Decreto 1587/2025). Los pasantes cobran 240.000 $ por mes, con ART y salud. Las 10 personas nuevas y las 8 de las &aacute;reas salen del informe 23. La infraestructura y las licencias van con precios publicados y el d&oacute;lar de diciembre de 2025, $1.447,84 (informe 23). Incluyen lo que usan los vecinos, las 160 asociaciones inscriptas al 40% de su cupo, los alumnos, el semillero y las herramientas del equipo. Los avisos van por la propia inteligencia artificial del Municipio, sin WhatsApp. La auditor&iacute;a externa es el 10% del equipo de las primeras 49 personas, sin cargas. La ayuda en cada una de las seis zonas la dan empleados que ya cobran su sueldo y cambian de tarea.</p>
 </div>
 <h3>Cap&iacute;tulo 5 &middot; Qu&eacute; hacemos en cada &aacute;rea</h3>
 <div class="note">
-<p>El gasto por funci&oacute;n proviene del estado
-de ejecuci&oacute;n presupuestaria acumulado anual 2025 del Municipio de San Isidro. Las variaciones reales
-entre 2024 y 2025 est&aacute;n calculadas en pesos constantes de diciembre de 2025, deflactadas por IPC.
-Los indicadores territoriales provienen del Censo 2022 (INDEC) a nivel de radio censal. El costeo de las
-propuestas est&aacute; desarrollado en el cap&iacute;tulo 3.</p>
-<p>En 2025 el Municipio clasific&oacute; su gasto en veinte funciones y en 2024 en catorce. S&oacute;lo se
-usan en este cap&iacute;tulo las variaciones interanuales de funciones presentes en ambos ejercicios y cuya
-finalidad no incorpor&oacute; funciones nuevas. Las dem&aacute;s quedan declaradas como no comparables.</p>
-<p>La historia de la recolecci&oacute;n se reconstruy&oacute; leyendo el texto de 527 boletines quincenales y 324
-ediciones extra, de 2002 a 2024, y el visor nuevo del Bolet&iacute;n Oficial, de 2024 a 2026: la plataforma vieja,
-que publica hasta marzo de 2024, s&oacute;lo indexa el t&iacute;tulo del bolet&iacute;n y no el texto de los decretos. El
-contrato de 1998 lo cita el Decreto 29/2003.</p>
-<p>La evidencia de seguridad es internacional: el metaan&aacute;lisis de 65 estudios es de la Campbell
-Collaboration, actualizado por Braga y otros; la evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del
-plan municipal con diferencias en diferencias; los 35,5 minutos por turno provienen de un experimento de
-campo controlado. Son estudios sobre fuerzas policiales, no sobre patrullas municipales argentinas: la
-l&oacute;gica de concentraci&oacute;n es transferible, la magnitud del efecto no est&aacute; demostrada
-para este caso. Los datos de Tigre son comunicaciones del propio Municipio de Tigre.</p>
-<p>La propuesta de Bezos se formul&oacute; en el America Business Forum de Miami en noviembre de 2025, y la
-adopci&oacute;n de la plataforma por la Ciudad de Miami se anunci&oacute; en marzo de 2026: es una
-referencia de d&oacute;nde est&aacute; la vara, sin resultados medidos todav&iacute;a.</p>
-<p><b>Cuadro [[n:piramide]].</b> En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segundo, 355 y
-356 el tercero y 464 y 464 el cuarto; cada uno pasa seis meses por el Municipio y seis por las empresas. El equipo de la
-plataforma (cuadro [[n:equipo]]) es parte de los pasantes y juniors del Municipio (cuadro [[n:proyectos]]), y &eacute;stos son
-parte de esta pir&aacute;mide.</p>
-<p><b>Cuadro [[n:reparto_empleo]].</b> Los 3 millones por persona pagan los dos a&ntilde;os de formaci&oacute;n; la
-pasant&iacute;a la paga quien la recibe. Los dos primeros a&ntilde;os la formaci&oacute;n usa toda la partida de empleo, porque todav&iacute;a no hay
-egresados que contratar: entran 462 y 824 en vez de 277 y 494, y egresan 1.286 en el mandato. El tercer a&ntilde;o vuelve este
-reparto. El m&oacute;dulo de salud de los meses 12 a 18, que se pagaba con la contrataci&oacute;n de desarrollos, sale esos dos a&ntilde;os del
-gasto flexible libre.</p>
-<p><b>Cuadro [[n:hoy_propuesta]].</b> Mi Primer Empleo da talleres de curr&iacute;culum y contacto con empresas, y el
-portal de empleo: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas de Medicina son en hospitales y
-centros de salud &mdash;Barcel&oacute; (Decreto 374/2025, sin gasto municipal), UCA (Decreto 498/2026) y, de 2026 a 2028,
-Favaloro, seg&uacute;n una nota del Municipio reproducida por InfoBAN&mdash;, y las de Veterinaria, en Zoonosis, con la UBA, hasta
-dos meses (Decreto 775/2026). Las de Barcel&oacute; y de Veterinaria no se pagan, y los convenios de Favaloro y de la UCA no est&aacute;n
-publicados. Los 15 pasantes de las fiscal&iacute;as los paga el Municipio por un convenio de 2003 con el Ministerio P&uacute;blico:
-747.500 $ por mes desde marzo de 2026, becas designadas por decreto (Decreto 298/2026), fuera del r&eacute;gimen de pasant&iacute;as, sin
-horas publicadas ni cobertura encontrada. La UNSO tiene pasant&iacute;as pagas con pymes, sin convenio vigente con el Municipio:
-el de 2021 no tiene movimientos desde 2022 (Zona Norte Visi&oacute;n, 16 de junio de 2025). Lo de los m&aacute;s de 300 vecinos con
-trabajo es de una gacetilla citada por Zona Norte Visi&oacute;n el 11 de agosto de 2026. D&oacute;nde est&aacute;n las empresas que cobran del
-Municipio se dej&oacute; de publicar en 2018 (1.2).</p>
+<p>El gasto por funci&oacute;n sale del estado de ejecuci&oacute;n presupuestaria acumulado de todo 2025 del Municipio de San Isidro. Los cambios entre 2024 y 2025 est&aacute;n calculados en pesos constantes de diciembre de 2025, descontada la inflaci&oacute;n con el IPC. Los datos de cada zona salen del Censo 2022 (INDEC), por radio censal. Cu&aacute;nto cuesta cada propuesta est&aacute; en el cap&iacute;tulo 3.</p>
+<p>En 2025 el Municipio dividi&oacute; su gasto en veinte funciones, y en 2024 en catorce. En este cap&iacute;tulo s&oacute;lo se usan los cambios de un a&ntilde;o al otro de las funciones que est&aacute;n en los dos a&ntilde;os, y cuyo grupo no sum&oacute; funciones nuevas. Las dem&aacute;s se marcan como no comparables.</p>
+<p>La historia de la recolecci&oacute;n se arm&oacute; leyendo el texto de 527 boletines quincenales y 324 ediciones extra, de 2002 a 2024. Tambi&eacute;n se ley&oacute; el visor nuevo del Bolet&iacute;n Oficial, de 2024 a 2026. La plataforma vieja, que publica hasta marzo de 2024, s&oacute;lo permite buscar por el t&iacute;tulo del bolet&iacute;n, y no por el texto de los decretos. El contrato de 1998 lo cita el Decreto 29/2003.</p>
+<p>Las pruebas sobre seguridad son de otros pa&iacute;ses. La revisi&oacute;n de 65 estudios es de la Campbell Collaboration, actualizada por Braga y otros. La evaluaci&oacute;n de Dallas mide el primer a&ntilde;o del plan de la ciudad, con el m&eacute;todo de diferencias en diferencias. Los 35,5 minutos por turno salen de un experimento controlado en la calle. Son estudios sobre polic&iacute;as, no sobre patrullas municipales argentinas. La idea de concentrar el patrullaje se puede aplicar ac&aacute;. Cu&aacute;nto baja el delito no est&aacute; demostrado para este caso. Los datos de Tigre son comunicados del propio Municipio de Tigre.</p>
+<p>Bezos hizo su propuesta en el America Business Forum de Miami, en noviembre de 2025. La Ciudad de Miami anunci&oacute; que adoptaba la plataforma en marzo de 2026. Sirve para ver d&oacute;nde est&aacute; la vara, pero todav&iacute;a no tiene resultados medidos.</p>
+<p><b>Cuadro [[n:piramide]].</b> En el mandato entran 231 y 231 el primer a&ntilde;o, 412 y 412 el segundo, 355 y 356 el tercero, y 464 y 464 el cuarto. Cada uno pasa seis meses por el Municipio y seis por las empresas. El equipo de la plataforma (cuadro [[n:equipo]]) es parte de los pasantes y juniors del Municipio (cuadro [[n:proyectos]]). Y ellos son parte de esta pir&aacute;mide.</p>
+<p><b>Cuadro [[n:reparto_empleo]].</b> Los 3 millones por persona pagan los dos a&ntilde;os de formaci&oacute;n. La pasant&iacute;a la paga quien la recibe. Los dos primeros a&ntilde;os, la formaci&oacute;n usa toda la partida de empleo, porque todav&iacute;a no hay egresados para contratar. Entran 462 y 824, en vez de 277 y 494, y egresan 1.286 en el mandato. El tercer a&ntilde;o vuelve este reparto. La parte de salud de los meses 12 a 18 se pagaba con la contrataci&oacute;n de desarrollos. Esos dos a&ntilde;os sale del gasto flexible libre.</p>
+<p><b>Cuadro [[n:hoy_propuesta]].</b> Mi Primer Empleo da talleres de curr&iacute;culum y contacto con empresas, y tiene el portal de empleo: 131 empresas y unos 600 puestos, seg&uacute;n el Municipio. Las pr&aacute;cticas de Medicina se hacen en hospitales y centros de salud. Son con la Barcel&oacute; (Decreto 374/2025, sin gasto del Municipio), con la UCA (Decreto 498/2026) y, de 2026 a 2028, con la Favaloro, seg&uacute;n una nota del Municipio que public&oacute; InfoBAN. Las de Veterinaria son en Zoonosis, con la UBA, por hasta dos meses (Decreto 775/2026). Las de la Barcel&oacute; y las de Veterinaria no se pagan, y los convenios de la Favaloro y de la UCA no est&aacute;n publicados. Los 15 pasantes de las fiscal&iacute;as los paga el Municipio, por un convenio de 2003 con el Ministerio P&uacute;blico. Cobran 747.500 $ por mes desde marzo de 2026. Son becas dadas por decreto (Decreto 298/2026), fuera del r&eacute;gimen de pasant&iacute;as. No se publican sus horas, y no se encontr&oacute; qu&eacute; cobertura tienen. La UNSO tiene pasant&iacute;as pagas con pymes, sin un convenio vigente con el Municipio. El de 2021 no tiene movimientos desde 2022 (Zona Norte Visi&oacute;n, 16 de junio de 2025). Lo de los m&aacute;s de 300 vecinos con trabajo sale de un comunicado del Municipio, citado por Zona Norte Visi&oacute;n el 11 de agosto de 2026. D&oacute;nde est&aacute;n las empresas que cobran del Municipio se dej&oacute; de publicar en 2018 (1.2).</p>
 </div>
 <h3>Cap&iacute;tulo 6 &middot; El plan, con fechas</h3>
 <div class="note">
-<p>Este cap&iacute;tulo no introduce datos nuevos, salvo el caso de Los &Aacute;ngeles del cuadro de riesgos, del LA School Report (23 de julio de 2024); el plan B de la cara y del modelo del profesor digital sale del informe 23.
-Cada cifra proviene del cap&iacute;tulo que la desarrolla: los indicadores territoriales del cap&iacute;tulo
-1, la auditor&iacute;a del plan de gobierno 2024&ndash;2025 del cap&iacute;tulo 2, el modelo fiscal y las l&iacute;neas de base
-presupuestarias del cap&iacute;tulo 3, la rampa y la f&oacute;rmula de distribuci&oacute;n del
-cap&iacute;tulo 4, y el estado del portal de transparencia del cap&iacute;tulo 5.</p>
-<p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar sobre los
-360 radios censales del Censo 2022, no derivados de un porcentaje. Las dos zonas son los l&iacute;mites de
-localidad de OpenStreetMap proyectados sobre esos radios; el cap&iacute;tulo 4 lo detalla.</p>
-<p><b>Cuadro [[n:compromisos]].</b> Los dos primeros van juntos a la sesi&oacute;n extraordinaria porque sin
-partida no hay asamblea que decida, y sin derogaci&oacute;n de los art&iacute;culos 8 a 10 de la Ordenanza 6045 la asociaci&oacute;n que decide
-puede ser disuelta por quien le respondi&oacute; que no. Los compromisos 15, 16 y 21 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en vivo
-usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;: no hay nada que licitar, y funciona a los cien
-d&iacute;as. Las inspecciones se graban con el tel&eacute;fono del agente: el decreto sale a los cien d&iacute;as, con el convenio de 24 cuotas sin inter&eacute;s con el banco que paga los sueldos, y funciona en el
-mes 9, primero con los inspectores y los agentes de tr&aacute;nsito; la patrulla, en una segunda etapa. La ordenanza que vuelve inv&aacute;lida el acta labrada sin grabaci&oacute;n sellada y subida va despu&eacute;s, y est&aacute; escrita en
-el anexo. La denuncia del comerciante y el registro de instructores y artistas arrancan por decreto, y las Ordenanzas IV y XIV los fijan despu&eacute;s.</p>
+<p>Este cap&iacute;tulo no trae datos nuevos, salvo el caso de Los &Aacute;ngeles del cuadro de riesgos, que sale del LA School Report (23 de julio de 2024). El plan B de la cara y del programa del profesor digital sale del informe 23. Cada cifra sale del cap&iacute;tulo que la explica. Los datos de cada zona, del cap&iacute;tulo 1. La revisi&oacute;n del plan de gobierno 2024&ndash;2025, del cap&iacute;tulo 2. El modelo fiscal y los n&uacute;meros de hoy del presupuesto, del cap&iacute;tulo 3. La rampa y la f&oacute;rmula de reparto, del cap&iacute;tulo 4. Y el estado del portal de transparencia, del cap&iacute;tulo 5.</p>
+<p>Los 4.616 hogares sin cloaca de Boulogne y B&eacute;ccar est&aacute;n contados hogar por hogar en los 360 radios censales del Censo 2022, y no calculados con un porcentaje. Las dos zonas son las localidades, con los l&iacute;mites de OpenStreetMap, aplicados a esos radios. El cap&iacute;tulo 4 lo explica.</p>
+<p><b>Cuadro [[n:compromisos]].</b> Los dos primeros van juntos a la sesi&oacute;n extraordinaria. Sin partida, no hay asamblea que decida. Y sin derogar los art&iacute;culos 8 a 10 de la Ordenanza 6045, la asociaci&oacute;n que decide puede ser disuelta por el mismo al que le dijo que no. Los compromisos 15, 16 y 21 dependen s&oacute;lo del Ejecutivo. La detecci&oacute;n en el momento usa las 110 licencias de an&aacute;lisis de video que el Municipio ya compr&oacute;. No hay nada que licitar, y funciona a los cien d&iacute;as. Las inspecciones se graban con el tel&eacute;fono del agente. El decreto sale a los cien d&iacute;as, con el convenio de 24 cuotas sin inter&eacute;s con el banco que paga los sueldos. Funciona en el mes 9, primero con los inspectores y los agentes de tr&aacute;nsito. La patrulla entra en una segunda etapa. La ordenanza que anula el acta hecha sin grabaci&oacute;n sellada y subida va despu&eacute;s, y est&aacute; escrita en el anexo. La denuncia del comerciante y el registro de instructores y artistas empiezan por decreto, y las Ordenanzas IV y XIV los dejan fijos despu&eacute;s.</p>
 </div>
 """)

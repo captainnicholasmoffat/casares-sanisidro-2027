@@ -62,4 +62,14 @@ parte 5.</td></tr>
 <tr><td class="l">6.1 &middot; c&oacute;mo abr&iacute;a su ciclo el presupuesto participativo de la Ciudad</td><td>Reglamento del Presupuesto Participativo de la Ciudad de Buenos Aires, Consejo del Presupuesto Participativo, mayo de 2004, puntos 4.2 (plenario de apertura: informar a los vecinos y considerar el diagn&oacute;stico) y 4.8 (plenario de cierre: votaci&oacute;n de las prioridades), y su cronograma: apertura del 24 de mayo al 4 de junio, cierre del 2 al 5 de agosto; buenosaires.gob.ar/areas/hacienda/pp, consultado el 30 de septiembre de 2026.</td></tr>
 <tr><td class="l">6.6 &middot; la empresa que quebr&oacute; en Los &Aacute;ngeles</td><td>LA School Report, &laquo;LA Unified faces criticism after collapse of splashy AI tool Ed&raquo;, 23 de julio de 2024. El plan B de la cara y del modelo: informe 23.</td></tr>
 </table>
+<h2>Lo que este programa no hace</h2>
+<p class="tight">Estas reglas valen para todo el documento. Se dicen una sola vez, ac&aacute;.</p>
+<ul class="b">
+<li><b>C&aacute;maras.</b> Las c&aacute;maras analizan hechos, no personas: reconocen lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo. El Municipio no usa reconocimiento facial masivo en la v&iacute;a p&uacute;blica, y no arma un registro de personas sin orden de un juez (Qu&eacute; proponemos hacer, 2.3, 2.4, 5.7 y 5.15).</li>
+<li><b>Salud.</b> La inteligencia artificial del Municipio no diagnostica ni clasifica a nadie. En la guardia, clasifica el personal de triage, y el que decide es el m&eacute;dico. Ante una urgencia o s&iacute;ntomas graves, siempre manda a la guardia o al 107. Sobre lo que falta, contesta por la compra y por lo que hay, nunca con datos de un paciente (5.6).</li>
+<li><b>Lo que no cierra.</b> Cuando marca algo que no cierra, la inteligencia artificial del Municipio no acusa ni sanciona a nadie, con las reglas del 4.11. S&oacute;lo acorta el tiempo entre que algo pasa y que se ve (5.6). Con el profesor digital, tampoco acusa ni sanciona a un chico (5.8).</li>
+<li><b>Tr&aacute;mites e inspecciones.</b> La inteligencia artificial del Municipio no reemplaza la inspecci&oacute;n, ni las decisiones que necesitan criterio. La mitad de los proyectos que fracasan son los que prometieron reemplazar el juicio de las personas. Y grabar las inspecciones no es vigilar al trabajador: lo que se graba es el acto de autoridad (5.9).</li>
+<li><b>Internet.</b> La oficina de delitos por internet junta pruebas, no censura. No da de baja nada, no pide que se baje nada y no decide qu&eacute; se puede decir (5.7).</li>
+<li><b>La constancia de que no consta.</b> No es un verificador de noticias, y no decide qu&eacute; es verdad (5.7).</li>
+</ul>
 """

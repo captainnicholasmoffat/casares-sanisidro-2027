@@ -3,14 +3,11 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Una ordenanza central &mdash;la de la partida vecinal&mdash; y quince cortas. Se votan por separado porque son
-discusiones distintas, y ninguna excede lo que un municipio bonaerense puede dictar.</div>
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal, y quince cortas. Se votan por separado, porque son discusiones distintas. Y ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar.</div>
 
 <div class="callout a">
 <div class="clabel">Borrador para revisi&oacute;n de asesor&iacute;a letrada</div>
-<p>Esto es un borrador de trabajo, no un proyecto presentado. Antes de ingresar al Concejo necesita
-revisi&oacute;n de un abogado municipalista: la redacci&oacute;n definitiva, los considerandos y la
-concordancia con el Digesto de San Isidro no est&aacute;n resueltos ac&aacute;.</p>
+<p>Esto es un borrador de trabajo, no un proyecto presentado. Antes de entrar al Concejo, lo tiene que revisar un abogado especialista en municipios. Ac&aacute; no est&aacute;n resueltos la redacci&oacute;n final, los fundamentos ni c&oacute;mo encaja con el Digesto de San Isidro.</p>
 </div>
 
 <h2>I &middot; Ordenanza de la Partida de Obra Vecinal</h2>
