@@ -3122,3 +3122,21 @@ Páginas de la versión de pantalla (52 págs.). El Dispatch 8 no llegó; el pun
 - Controles de pantalla: 52 páginas de hasta 2.676 pt; índice, 65 entradas, ninguna fuera de lugar; 42 cuadros y
   gráficos seguidos; ninguna fuente Liberation ni DejaVu; sin marcas [23 …] y sin empresas ni personas nuevas. Cinco
   tests OK (data/ restaurado).
+
+## AGREGADO · LA FOTO DE LA COSTA EN LA SEMANA Y LA GUARDIA POR GRAVEDAD (08/10) · APLICADO
+Páginas de la versión de pantalla (52 págs.).
+1. Foto (pág. 28): la versión corregida aprobada por Nick (los dos foodtrucks rehechos), en el mismo lugar, del
+   mismo tamaño y con el mismo epígrafe. El encuadre baja apenas (del 52% al 47%) para que los dos foodtrucks queden
+   enteros; en la A4, ningún recorte los corta (MOTIVOS de doc/corte_a4.py) y las caras se volvieron a detectar.
+2. Guardia: «catorce personas esperando, demora estimada cuarenta minutos» pasa a la espera por gravedad.
+   - Pág. 4, punto 5: «¿cómo viene la guardia del Central?» («leves, unos cuarenta minutos; medios, unos quince; los
+     graves entran directo»: la urgencia la clasifica el personal de la guardia, no la inteligencia artificial).
+   - 5.6 (pág. 32): en las guardias municipales el triage clasifica la urgencia por colores y se espera por color;
+     proponemos mostrar en tiempo real la espera de cada uno, con el mismo ejemplo; la inteligencia artificial del
+     Municipio no clasifica a nadie (lo hace el personal del triage) y ante síntomas graves siempre manda a la guardia
+     o al 107.
+   - 4.11 (pág. 19): la ocupación de guardias en tiempo real, «por nivel de gravedad».
+   - Fuentes (pág. 52, 5.6): inscripción en la ventanilla, triage por colores y espera por color, Municipio de San
+     Isidro, Noticias de Salud, 19/02/2019.
+- Pantalla: 52 páginas, la más alta de 2.676 pt (la 32 pasa a 2.673); controles iguales a los del dispatch 9; cinco
+  tests OK (data/ restaurado). La A4 lo suma cuando se arme la del dispatch 10 (en el borrador ya está).

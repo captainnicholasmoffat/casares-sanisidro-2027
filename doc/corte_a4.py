@@ -120,6 +120,7 @@ MOTIVOS = {
     "f_show_costa":  {"debe": (0.38, 0.58)},
     "f_mesa":        {"debe": (0.33, 0.72)},                                    # las cabezas y el mapa
     "f_boulogne":    {"debe": (0.52, 0.80)},                                    # la cuadrilla en la zanja
+    "f_costa_semana": {"sin_cortar": [(0.335, 0.485)]},                         # los dos foodtrucks, enteros o nada
     "f_apoyo":       {"debe": (0.21, 0.62)},                                    # las caras de la mesa
     "f_profesor":    {"debe": (0.45, 0.70)},                                    # el alumno con el profesor digital en la pantalla
     "f_show_club":   {"debe": (0.15, 0.40)},                                    # el escenario

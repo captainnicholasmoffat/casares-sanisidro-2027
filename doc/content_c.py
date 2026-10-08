@@ -697,7 +697,7 @@ costar lo mismo que buscarla en un documento de texto.</p>
 hospitales y centros de salud</b>, que la inteligencia artificial saca en la charla, recuerda y, si se cancela, pasa al
 siguiente de la lista de espera (5.6), sobre la plataforma municipal que ya da los de la veterinaria, con la
 adhesi&oacute;n al sistema provincial Mi Salud Digital pedida; <b>ocupaci&oacute;n de guardias en tiempo
-real</b>, como n&uacute;mero y no como imagen, para que la gente elija a cu&aacute;l ir; y
+real</b>, por nivel de gravedad, como n&uacute;mero y no como imagen, para que la gente elija a cu&aacute;l ir; y
 <b>habilitaciones comerciales</b>, con consulta previa desde la c&aacute;mara del tel&eacute;fono antes de
 firmar un alquiler.</p>
 <p>Para controlar: <b>auditor&iacute;a de compras</b> &mdash;precio unitario, stock y comparaci&oacute;n
@@ -1736,7 +1736,7 @@ Barisidro.</span></p>
 estacionar, cu&aacute;ndo llega el tren, qu&eacute; hay hoy y qu&eacute; d&iacute;as hay lugar. Y cuando no sabe algo, lo dice, con la fecha del
 &uacute;ltimo dato.</p>
 </div>
-""" + fig("f_costa_semana", "La costa en la semana: gimnasia, vela, kayak y foodtrucks. Ilustraci&oacute;n.") + """
+""" + fig("f_costa_semana", "La costa en la semana: gimnasia, vela, kayak y foodtrucks. Ilustraci&oacute;n.", "47%") + """
 <h3>La Escuela N&aacute;utica, en todos los parques de la costa</h3>
 <div class="cols">
 <p><b>Hoy el Municipio ya ense&ntilde;a a navegar en el r&iacute;o</b>, en el Campo de Deportes N&deg; 9 del Bajo: kayak, vela,
@@ -2165,8 +2165,11 @@ avisa cuando algo se sale del rango.</p>
 <div class="cols">
 <p><b>Se&ntilde;ala anomal&iacute;as, no acusa</b>, con las reglas del 4.11:
 <span class="sg">no imputa a nadie, acorta el tiempo entre que algo pasa y que se ve</span>.</p>
-<p><b>Y proponemos la guardia en n&uacute;mero.</b> Ocupaci&oacute;n en tiempo real: &laquo;catorce personas
-esperando, demora estimada cuarenta minutos&raquo;, para que quien tiene que ir elija a cu&aacute;l.
+<p><b>Y proponemos la guardia en n&uacute;mero, por gravedad.</b> En las guardias municipales el triage clasifica
+la urgencia por colores y se espera por color; proponemos mostrar en tiempo real la espera de cada uno: &laquo;hoy, en
+la guardia del Central: leves, unos cuarenta minutos; medios, unos quince; los graves entran directo&raquo;, para que
+quien tiene que ir elija a cu&aacute;l. La inteligencia artificial del Municipio no clasifica a nadie: eso lo hace el
+personal del triage, y ante s&iacute;ntomas graves siempre manda a la guardia o al 107.
 <b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
 historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
 </div>

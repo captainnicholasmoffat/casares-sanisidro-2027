@@ -44,8 +44,9 @@ de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millon
 <li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Responde en castellano y muestra
 de d&oacute;nde sac&oacute; cada dato: <i>mostrame esta obra, de qui&eacute;n es, de qu&eacute; se trata
 y c&oacute;mo la est&aacute;n administrando</i>; <i>&iquest;c&oacute;mo saco turno en el hospital
-m&aacute;s cercano?</i>; <i>&iquest;c&oacute;mo viene la guardia, puedo ir ahora o est&aacute;
-llena?</i>; <i>estoy buscando trabajo, este es mi curr&iacute;culum, ayudame</i>;
+m&aacute;s cercano?</i>; <i>&iquest;c&oacute;mo viene la guardia del Central?</i> (&laquo;leves, unos cuarenta minutos;
+medios, unos quince; los graves entran directo&raquo;: la urgencia la clasifica el personal de la guardia,
+no la inteligencia artificial); <i>estoy buscando trabajo, este es mi curr&iacute;culum, ayudame</i>;
 <i>&iquest;cu&aacute;nto se gast&oacute; en mi zona este a&ntilde;o?</i> Y antes de votar en la asamblea de
 su zona, el vecino le pregunta y llega sabiendo. <span class="sg">La aplicaci&oacute;n de reclamos que el
 Municipio tiene hoy est&aacute; puntuada 1,84 sobre 5 por sus propios usuarios. Lo nuestro es la
