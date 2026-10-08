@@ -7,82 +7,79 @@ from content_a import RH, exhead
 # la que le permite al vecino informarse y decidir (correcciones 125 y 126).
 SINTESIS = dict(id="sintesis", runhead=RH, html="""
 <h1>Qu&eacute; proponemos hacer</h1>
-<div class="stand">Que decida sobre la obra p&uacute;blica quien vive donde falta la obra p&uacute;blica.</div>
+<div class="stand">Proponemos una democracia semidirecta asistida por inteligencia artificial: los vecinos de cada zona
+deciden la mitad de la obra p&uacute;blica y controlan c&oacute;mo se usa el dinero de todos. Hoy se puede hacer porque la
+inteligencia artificial del Municipio le da a cada vecino la informaci&oacute;n para decidir, y escucha a miles de vecinos
+a la vez.</div>
 
 <ol class="n">
-<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Al cuarto a&ntilde;o son
-28.908 millones por a&ntilde;o. El reparto entre zonas lo fija una f&oacute;rmula escrita, mitad por poblaci&oacute;n y
-mitad por necesidad contada en hogares, y no el intendente de turno: el dinero va sobre todo a Boulogne
-Sur Mer y B&eacute;ccar. Donde el 60% de los vecinos beneficiados lo pida por escrito, la
-asociaci&oacute;n vecinal de la zona hace la obra ella misma, contratada directamente por el Municipio: la ley
-provincial de municipios lo permite desde 1976 y Pilar ya lo hace. <b>Y el dinero de cada zona queda
-reservado por ordenanza</b>: la Constituci&oacute;n provincial no deja que el voto de una asamblea obligue al
-Municipio, pero s&iacute; permite reservar ese dinero, y eso es lo que este programa hace. <i>(Cap&iacute;tulo 4)</i></li>
+<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Al cuarto a&ntilde;o, los
+vecinos van a decidir 28.908 millones por a&ntilde;o. El intendente no elige a qu&eacute; zona va el dinero: lo reparte una
+f&oacute;rmula escrita, seg&uacute;n la poblaci&oacute;n y la necesidad de cada zona. Por eso la mayor parte va a Boulogne
+Sur Mer y a B&eacute;ccar. <b>Y el dinero de cada zona queda reservado por ordenanza</b>, para que no se pueda usar en otra
+cosa. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y
-cooperativas de San Isidro, igual que la ley provincial ya permite contratar sin licitaci&oacute;n a las
-cooperativas y asociaciones de vecinos para la obra de su propio barrio. Y si ac&aacute; nadie puede hacerlo, <span class="sg">la
-capacidad se crea</span>: el Municipio detecta al licitar qu&eacute; falta, se forma gente en eso y las universidades del partido acompa&ntilde;an a armar la empresa o la cooperativa, que entra al semillero del Municipio con su primer cliente: <b>cada licitaci&oacute;n p&uacute;blica subcontrata el 20% a pymes del partido y, dentro de ese 20%, el 5% del contrato a empresas de menos de cinco a&ntilde;os</b>; y todos cobran a quince d&iacute;as.
+<li><b>Que esa obra, y los servicios que paga el Municipio, se contraten en el partido.</b> Con empresas y cooperativas
+de San Isidro. Si al licitar el Municipio descubre que en el partido nadie sabe hacer un trabajo,
+<span class="sg">forma a gente para que aprenda</span>. Y las universidades del partido la ayudan a armar su empresa o
+su cooperativa. Adem&aacute;s, <b>cada licitaci&oacute;n p&uacute;blica subcontrata el 20% a pymes del partido</b>. Dentro de
+ese 20%, el 5% del contrato va a empresas de menos de cinco a&ntilde;os. <i>(Cap&iacute;tulo 5)</i></li>
+
+<li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
+La formaci&oacute;n es una tecnicatura de la universidad nacional del partido, para que lo aprendido sirva tambi&eacute;n
+fuera del Municipio. Cada a&ntilde;o entran <b>928 personas</b>. El primer a&ntilde;o estudian y el segundo trabajan como
+pasantes, seis meses en el Municipio y seis en una empresa del partido. En el mandato egresan 1.286. El presupuesto de
+empleo y vivienda pasa de 505,7 a 7.730,9 millones por a&ntilde;o, quince veces lo de hoy.
+<span class="sg">La formaci&oacute;n laboral se paga con la partida de empleo, no con la de educaci&oacute;n.</span>
+Y que haya <b>un centro de apoyo escolar en cada localidad</b>. Hoy hay apenas cinco espacios chicos, todos en
+B&eacute;ccar y Boulogne, a los que van unos cien chicos. En las otras cuatro localidades no hay ninguno.
 <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y
-tecnolog&iacute;a</b>, con una tecnicatura de la universidad nacional del partido, para que lo aprendido
-sirva tambi&eacute;n fuera del Municipio: un a&ntilde;o com&uacute;n y cuatro orientaciones, hacia los puestos
-que m&aacute;s crecen. Y <b>un centro de apoyo escolar en cada localidad</b>: hoy hay cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno. Empleo y vivienda pasan de 505,7 a 7.730,9 millones anuales, quince veces lo de hoy, y se
-abren as&iacute;: <b>60% a empleo</b> y <b>40% a vivienda y servicios b&aacute;sicos</b>; y dentro de
-empleo, <b>60% forma</b> y <b>40% paga el software que el Municipio encarga</b> &mdash;turnos de salud, automatizar tareas
-administrativas&mdash;, que es donde esa gente despu&eacute;s trabaja. De la
-parte que forma &mdash;2.783,1 millones&mdash; salen las <b>928 personas por a&ntilde;o</b>, que entran de a 464 cada seis meses y se forman en dos a&ntilde;os: el primero cursan, y el segundo trabajan como pasantes, seis meses en el Municipio y seis en una empresa del partido, con un tutor que las acompa&ntilde;a hasta el empleo: uno de sus profesores, votado por cada alumno. En el mandato egresan 1.286. <span class="sg">La formaci&oacute;n laboral se
-paga con la partida de empleo, no con la de educaci&oacute;n.</span> <i>(Cap&iacute;tulo 5)</i></li>
-
-<li><b>Que esa gente construya la inteligencia artificial del Municipio</b>: una inteligencia artificial propia,
-a la que cualquier vecino le pregunta en castellano, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y t&eacute;cnicos del partido con pasantes y egresados de
-la formaci&oacute;n en el equipo, y las universidades del partido auditan su seguridad. Se paga con la partida
-de Ciencia y T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones al a&ntilde;o: no son fondos nuevos.
+<li><b>Que esa gente construya la inteligencia artificial del Municipio.</b> Es una inteligencia artificial propia, a
+la que cualquier vecino le pregunta lo que necesita, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y
+t&eacute;cnicos del partido, junto con los pasantes y egresados de la formaci&oacute;n. Se paga con la partida de Ciencia y
+T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones por a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Responde en castellano y muestra
-de d&oacute;nde sac&oacute; cada dato: <i>mostrame esta obra, de qui&eacute;n es, de qu&eacute; se trata
-y c&oacute;mo la est&aacute;n administrando</i>; <i>&iquest;c&oacute;mo saco turno en el hospital
-m&aacute;s cercano?</i>; <i>&iquest;c&oacute;mo viene la guardia del Central?</i> (&laquo;leves, unos cuarenta minutos;
-medios, unos quince; los graves entran directo&raquo;: la urgencia la clasifica el personal de la guardia,
-no la inteligencia artificial); <i>estoy buscando trabajo, este es mi curr&iacute;culum, ayudame</i>;
-<i>&iquest;cu&aacute;nto se gast&oacute; en mi zona este a&ntilde;o?</i> Y antes de votar en la asamblea de
-su zona, el vecino le pregunta y llega sabiendo. <span class="sg">La aplicaci&oacute;n de reclamos que el
-Municipio tiene hoy est&aacute; puntuada 1,84 sobre 5 por sus propios usuarios. Lo nuestro es la
+<li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Le puede preguntar lo
+que necesite sobre el Municipio, y siempre le muestra de d&oacute;nde sac&oacute; cada dato. Antes de la asamblea de su zona,
+el vecino le puede preguntar a la inteligencia artificial del Municipio por cada tema que se va a votar, con su historia y
+su contexto. As&iacute; llega a la reuni&oacute;n entendiendo de qu&eacute; se trata. <span class="sg">Hoy el Municipio tiene una
+aplicaci&oacute;n de reclamos muy mal puntuada: sus propios usuarios le ponen 1,84 sobre 5. Lo que proponemos es la
 respuesta a eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Un hecho violento
-detectado mientras ocurre, con aviso autom&aacute;tico al m&oacute;vil que est&aacute; a tres cuadras. Y
-despu&eacute;s de un robo denunciado, <b>el sistema reconstruye hacia d&oacute;nde fue quien lo cometi&oacute; y orienta a la polic&iacute;a en el momento</b>, para que vaya directo a buscarlo.
-<span class="sg">Lo que se gana es tiempo</span>: horas en vez de d&iacute;as, y un patrullero que llega
-en vez de uno que toma la denuncia. Es an&aacute;lisis de hechos y no de personas: ni reconocimiento
-facial masivo ni registro municipal de personas sin orden judicial. <i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Si una c&aacute;mara ve un hecho violento
+mientras est&aacute; pasando, avisa en el momento al patrullero que est&aacute; a tres cuadras, para que llegue a tiempo. Y
+cuando alguien denuncia un robo, con las c&aacute;maras se puede seguir hacia d&oacute;nde se fue el que lo cometi&oacute;, y
+la polic&iacute;a va directo a buscarlo. <span class="sg">Lo que se gana es tiempo</span>: el caso se resuelve en horas y no
+en d&iacute;as, y el patrullero llega cuando todav&iacute;a puede hacer algo, no cuando ya pas&oacute; todo y s&oacute;lo le
+queda tomar la denuncia. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que las inspecciones de comercios queden grabadas y selladas.</b> El inspector graba todo su turno con su tel&eacute;fono, y cada grabaci&oacute;n se sella en el momento de grabar: si alguien la cambia, se nota. Cualquier vecino ve despu&eacute;s cada inspecci&oacute;n: que pas&oacute; donde dice que pas&oacute;
-y qu&eacute; pas&oacute; adentro. <b>Y el comerciante
-inspeccionado tambi&eacute;n graba</b>, con el mismo valor en el expediente. Esto no resuelve el delito
-en la calle: resuelve <span class="sg">la coima en el tr&aacute;mite</span>.
-<i>(Cap&iacute;tulo 5)</i></li>
+<li><b>Que las inspecciones de comercios queden grabadas.</b> El inspector graba con su tel&eacute;fono cada
+inspecci&oacute;n, y despu&eacute;s cualquier vecino puede ver c&oacute;mo fue. El comerciante tambi&eacute;n tiene derecho a
+grabarla, y ese video queda guardado en la inteligencia artificial del Municipio, igual que el del inspector. As&iacute;
+el comerciante se protege si el inspector no hace las cosas como corresponde. El objetivo es <span class="sg">bajar la
+corrupci&oacute;n en las inspecciones y habilitaciones</span> de los comercios del partido. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que todo esto se pague sin subir el porcentaje de la tasa de servicios generales ni tomar deuda.</b> Cuesta 7.225,2 millones
-por a&ntilde;o &mdash;el 8,3% del gasto que el Municipio puede reasignar libremente&mdash;: 5.983 salen de actualizar la
-tabla de 2008 con la que se cobra esa tasa, cobrada como hoy, y los 1.242 que faltan, del
-gasto flexible. <span class="sg">Bajan m&aacute;s parcelas
-de las que suben</span>: sube lo que pagan las propiedades que esa tabla tiene subvaluadas, y lo que el
-Municipio factura en total por la tierra sube 10,9%. <i>(Cap&iacute;tulo 3)</i></li>
+<li><b>Que todo esto se pague sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</b> Cuesta
+7.225,2 millones por a&ntilde;o. La mayor parte sale de actualizar la tabla de valores de 2008 con la que hoy se cobra esa
+tasa, y el resto, de reordenar gastos del Municipio. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
-<p><b>Y adem&aacute;s:</b> multas de tr&aacute;nsito que no hunden a nadie, y una costa con movida toda la semana. <i>(Cap&iacute;tulo 5)</i></p>
+<p><b>Y adem&aacute;s,</b> multas de tr&aacute;nsito seg&uacute;n lo que gana cada persona, para que ninguna sea imposible de
+pagar. Tambi&eacute;n proponemos un l&iacute;mite: la suma de las multas de una persona nunca puede superar lo que puede pagar
+con su ingreso, ni el valor de su auto o su moto. Lo que el Municipio no pueda hacer solo, se lo va a pedir a la
+Provincia. Mientras tanto, avisa antes de multar y deja pagar en cuotas. Y una agenda mucho m&aacute;s amplia de shows y
+espect&aacute;culos al aire libre, con 200 por a&ntilde;o en plazas y espacios p&uacute;blicos de todo el partido, y una costa
+que funcione como una riviera, con actividades y gente todos los d&iacute;as de la semana, no s&oacute;lo el fin de semana.
+<i>(Cap&iacute;tulo 5)</i></p>
 
-<p><b>Los primeros cien d&iacute;as.</b> El mandato empieza el <b>10 de diciembre de 2027</b>. El 19 de
-marzo de 2028, un vecino de San Isidro ya fue convocado a la asamblea de su zona, puede anotar a su hijo
-en el primer centro de apoyo escolar, encuentra abierta la inscripci&oacute;n a la formaci&oacute;n laboral
-en su zona, con la primera cohorte ya arrancando en los espacios que existen, y ya funcionan tres
-m&oacute;dulos de la inteligencia artificial del Municipio: la consulta, el turno m&eacute;dico por internet y la escucha de los vecinos. Y hay
-<b>ocho ordenanzas en el Concejo</b>, seis de ellas ingresadas en la sesi&oacute;n extraordinaria de diciembre: la que reserva el dinero
-de obra de cada zona, con la f&oacute;rmula de reparto escrita; la que actualiza la tabla de 2008 con la que se
-cobra la tasa; y la que deroga los art&iacute;culos que hoy permiten al
-intendente disolver una asociaci&oacute;n vecinal, entre otras. <span class="sg">Son veinti&uacute;n
-compromisos y el cap&iacute;tulo 6 los lista con el documento que comprueba cada uno.</span></p>
+<p><b>Los primeros cien d&iacute;as.</b> El nuevo gobierno asume el <b>10 de diciembre de 2027</b>. Ese mismo mes, el
+intendente manda al Concejo Deliberante las primeras ordenanzas. Una aparta el dinero de obra que le toca a cada zona,
+para que no se pueda usar en otra cosa. Otra actualiza los valores de 2008 con los que hoy se cobra la tasa de servicios
+generales. En los meses siguientes empieza a funcionar la inteligencia artificial del Municipio: ya se le puede
+preguntar, sacar un turno m&eacute;dico y hacerle llegar un reclamo. En esos mismos meses abre el primer centro de apoyo
+escolar y empieza el primer grupo de la formaci&oacute;n laboral. Para el <b>19 de marzo de 2028</b>, a los cien d&iacute;as,
+todos los vecinos ya est&aacute;n convocados a la primera asamblea de su zona. <span class="sg">En total son veinti&uacute;n
+compromisos con fecha. El cap&iacute;tulo 6 los explica uno por uno.</span></p>
 
 """)

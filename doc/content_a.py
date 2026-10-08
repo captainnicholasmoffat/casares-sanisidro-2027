@@ -200,8 +200,8 @@ de red</b>, <b>m&aacute;s gente formada y con trabajo</b>, y <b>los vecinos deci
 gasta la obra de su barrio</b>. Ninguna de las tres da una foto el d&iacute;a que se hace.</p>
 <p><b>Somos una propuesta de gobierno que gestiona.</b> Que administra para que el partido crezca, y
 <span class="sg">ese crecimiento econ&oacute;mico es de todos</span>. Por eso el cap&iacute;tulo 4 no pide
-un peso nuevo. La mitad de la obra p&uacute;blica que el Municipio ya hace pasa a
-<span class="sg">decidirla el barrio</span>.</p>
+un peso nuevo. La mitad de la obra p&uacute;blica que hoy hace el Municipio
+<span class="sg">la van a decidir los vecinos de cada barrio</span>.</p>
 </div>
 """ + fig("f_costanera", "La costanera de San Isidro. Ilustraci&oacute;n."))
 # Correccion 132: la firma de Casares (nombre y cargo) sale hasta que el
