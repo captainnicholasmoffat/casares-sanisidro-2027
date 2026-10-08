@@ -1,30 +1,37 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Version A4: la version de pantalla tal cual, achicada en forma pareja (660 -> 595,28 pt de ancho, un 90%)
-y cortada en hojas A4. No rehace nada: toma cada pagina del PDF de pantalla y la reparte en hojas, cortando
-solo entre bloques (parrafo, bloque de dos columnas, recuadro, cuadro, grafico, foto). Un titulo nunca queda
-separado de lo que sigue, ni un cuadro o grafico de su rotulo y de su fuente. Un grafico nunca se corta.
+"""Version A4 (dispatch 10, 08/10): el mismo diseño de la version de pantalla, todo al 90% (660 -> 595,28 pt de
+ancho), pero el contenido corre seguido de hoja en hoja. Solo empiezan hoja nueva la tapa, el indice y cada capitulo.
 
-Lo que no entra en una hoja se parte (aprobado por Nick el 07/10): un cuadro, entre filas, repitiendo arriba la
-fila del encabezado; un recuadro, entre sus puntos; una lista, entre sus items.
+Cada capitulo se dibuja entero, con el mismo HTML y el mismo CSS de build.py, como una sola tira (sin los cortes de
+pagina de la version de pantalla), y se reparte en hojas A4 cortando solo entre bloques:
+- un titulo nunca queda separado de lo que sigue, ni un cuadro o grafico de su rotulo y de su fuente;
+- los graficos, los recuadros y las fotos nunca se parten (si un recuadro no entra en una hoja entera, se parte
+  entre sus puntos y se avisa); los cuadros largos se parten entre filas repitiendo el encabezado, y las listas
+  largas entre sus puntos;
+- cada capitulo arranca arriba de todo de una hoja, con su titulo (y su foto de apertura pegada, arriba).
 
-Cada hoja lleva el encabezado y el pie de la pagina de pantalla; el pie dice el numero de hoja de la A4. El
-indice es el mismo, con los numeros de hoja de la A4.
+Ninguna hoja puede quedar con mas de un tercio en blanco, salvo la ultima del documento (regla de Nick). Para
+llenar un hueco, en este orden: subir el bloque siguiente si entra entero; mostrar mas alta una foto de esa
+seccion (menos recortada, nunca deformada); subir una foto de esa seccion. La foto de apertura de un capitulo puede
+ir al final del capitulo anterior, si ahi sobra lugar. Cuando un capitulo sin fotos termina con una hoja casi
+vacia, el corte se reparte entre sus ultimas hojas para que ninguna pase del tercio. Nunca se cambia el tamaño de
+la letra ni se estira el texto. Ninguna foto corta una cara ni su motivo principal (a4_caras.json y MOTIVOS).
 
-Cada hoja guarda solo el texto que se ve en ella (dispatch 9): cada recorte sale de una copia de la pagina de
-pantalla a la que se le borro el texto de afuera del recorte, y se comprueba que lo que se ve no cambia.
+Cada hoja lleva el encabezado y el pie de pantalla; el pie dice el numero de hoja de la A4. El indice es el mismo,
+con los numeros de hoja de la A4. Cada hoja guarda solo el texto que se ve en ella (dispatch 9).
 
-Uso:  python3 doc/corte_a4.py              (la A4 entera, a salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf)
-      python3 doc/corte_a4.py --muestras   (cuatro hojas de muestra, al lado de la version de pantalla)
-Lee salida/PROGRAMA_SAN_ISIDRO_2027.pdf y out/sNN.html, que deja doc/build.py: correr antes build.py."""
-import collections, html as H, os, pathlib, re, sys, unicodedata
+Uso:  python3 doc/corte_a4.py                    (la A4 entera, a salida/PROGRAMA_SAN_ISIDRO_2027_A4.pdf)
+      python3 doc/corte_a4.py --muestras N N ...  (esas hojas, a salida/muestras_a4/, sin tocar la A4)
+Lee salida/PROGRAMA_SAN_ISIDRO_2027.pdf (solo la tapa) y content.py; correr antes build.py."""
+import collections, html as H, json, os, pathlib, re, sys, unicodedata
 import pymupdf as fitz
 from playwright.sync_api import sync_playwright
 
 HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 import build as B          # solo se lee: el HTML, el CSS y el script de columnas de la version de pantalla
-import content             # solo se lee: las secciones, para el indice
+import content             # solo se lee: las secciones
 import content_a as CA
 
 ROOT = HERE.parent
@@ -37,9 +44,14 @@ HOJA = A4_H / ESC                         # alto de una hoja A4, en pt de la pag
 ARRIBA_CONT = 40.5 + 6.75 + 16.5          # en una hoja que sigue: el encabezado y el aire de un titulo h2
 ABAJO = 28.1 + 7 + 0.75 + 6.4 + 30        # aire antes del pie, el pie y el margen de abajo
 LIM = HOJA - ABAJO                        # hasta donde puede llegar el contenido de una hoja
+AREA0 = 40.5 + 6.75                       # donde termina el encabezado
+AREA1 = LIM + 28.1                        # la raya del pie
+TERCIO = 1 / 3                            # el blanco maximo al pie de una hoja, sobre el alto entre encabezado y pie
+TOPE = 0.32                               # al cortar se apunta un poco por debajo, por lo que el dibujo agrega al medir
 FONDO = None                              # el beige de la pagina de pantalla, tal como lo dibujo Chrome (--ground)
 GRIS = (0x6E / 255, 0x62 / 255, 0x5A / 255)       # --taupe, el color del pie
 INTER = HERE / "_fonts" / "Inter-Regular.ttf"
+FOTO_W, DUO_W = 570.0, (570.0 - 12.0) / 2          # ancho de una foto y de cada una de un par (design.css)
 
 JS_MEDIR = r"""() => {
   const pg = document.getElementById('pg');
@@ -49,10 +61,14 @@ JS_MEDIR = r"""() => {
   const out = {alto: pt(r0.height), bloques: [], titulos: []};
   for (const e of pg.children) {
     const [top, bottom] = caja(e);
+    const st = getComputedStyle(e);
     const b = {tag: e.tagName.toLowerCase(), cls: e.className || '', top, bottom,
+               mt: pt(parseFloat(st.marginTop) || 0), mb: pt(parseFloat(st.marginBottom) || 0),
                txt: (e.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 90),
                tabla: e.tagName === 'TABLE' || !!e.querySelector('table'),
-               dibujo: !!e.querySelector('svg, img') || ['FIGURE', 'IMG', 'SVG'].includes(e.tagName)};
+               dibujo: !!e.querySelector('svg, img') || ['FIGURE', 'IMG', 'SVG'].includes(e.tagName),
+               sec: e.dataset.sec || null, foto: e.dataset.foto || null, i: e.dataset.i != null ? +e.dataset.i : null};
+    if (b.foto) { const [a, z] = caja(e.querySelector('img')); b.img_h = z - a; }
     // una lista larga se parte entre sus puntos; un cuadro, entre sus filas; un recuadro, entre sus parrafos
     if (e.tagName === 'OL' || e.tagName === 'UL') b.items = [...e.children].map(caja);
     const t = e.tagName === 'TABLE' ? e : e.querySelector('table');
@@ -68,169 +84,617 @@ JS_MEDIR = r"""() => {
   return out;
 }"""
 
+# el reparto de las fotos: el alto y el encuadre de cada una, y las que se suben a otro lugar
+JS_CONFIG = r"""(cfg) => {
+  const pg = document.getElementById('pg');
+  [...pg.children].forEach((e, i) => { e.dataset.i = i; });
+  for (const [f, c] of Object.entries(cfg.fotos)) {
+    const el = pg.querySelector(`[data-foto="${f}"]`);
+    if (!el) continue;
+    const imgs = el.tagName === 'FIGURE' ? [el.querySelector('img')] : [...el.querySelectorAll('img')];
+    imgs.forEach((img, k) => {
+      img.style.height = c.h + 'pt';
+      const p = Array.isArray(c.pos) ? c.pos[k] : c.pos;
+      img.style.objectPosition = `center ${p}%`;
+    });
+  }
+  for (const mv of cfg.mover) {
+    const el = pg.querySelector(`[data-foto="${mv.foto}"]`);
+    const ref = pg.querySelector(`:scope > [data-i="${mv.antes}"]`);
+    if (el && ref) pg.insertBefore(el, ref);
+  }
+  return pg.children.length;
+}"""
 
-def _abrir(pw):
-    exe = os.environ.get("PW_CHROMIUM")
-    br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
-    return br, br.new_page(viewport={"width": int(B.PAGE_W_PX), "height": 1200})
+
+# ---------------------------------------------------------------------------------------------- las fotos
+# Lo que no se puede cortar en cada foto, ademas de las caras (a4_caras.json). En el alto de la foto, 0 es arriba y
+# 1 abajo. "debe": tiene que verse entero; "sin_cortar": entero o nada (ningun borde lo atraviesa); "mejor": entero,
+# si el alto alcanza. Las caras se protegen como "sin_cortar", con el pelo y el menton.
+MOTIVOS = {
+    "f_catedral":    {"debe": (0.055, 0.77)},                                   # la Catedral entera, con la aguja
+    "f_barrera":     {"debe": (0.37, 0.86), "sin_cortar": [(0.02, 0.36)], "mejor": (0.02, 0.86)},  # y la almeja
+    "f_patrullero":  {"debe": (0.53, 0.69), "sin_cortar": [(0.12, 0.20)], "mejor": (0.12, 0.69)},  # y la camara
+    "f_escalera":    {"debe": (0.50, 0.80)},
+    "f_banda":       {"debe": (0.24, 0.53)},
+    "f_show_costa":  {"debe": (0.38, 0.58)},
+    "f_mesa":        {"debe": (0.33, 0.72)},                                    # las cabezas y el mapa
+    "f_boulogne":    {"debe": (0.52, 0.80)},                                    # la cuadrilla en la zanja
+    "f_apoyo":       {"debe": (0.21, 0.62)},                                    # las caras de la mesa
+    "f_profesor":    {"debe": (0.45, 0.70)},                                    # el alumno con el profesor digital en la pantalla
+    "f_show_club":   {"debe": (0.15, 0.40)},                                    # el escenario
+}
+_CARAS = json.loads((HERE / "a4_caras.json").read_text(encoding="utf-8"))
 
 
-def _medir_archivo(pg, f):
-    pg.goto(f.as_uri())
-    pg.wait_for_timeout(450)
-    try:
-        pg.evaluate("document.fonts.ready")
-    except Exception:
-        pass
-    pg.wait_for_timeout(250)
-    pg.evaluate(B.JS_COLFILL)
-    m = pg.evaluate(JS_MEDIR)
-    m["archivo"] = f.name
-    return m
+def _limites(nombre):
+    d = MOTIVOS.get(nombre, {})
+    sin_cortar = list(d.get("sin_cortar", []))
+    for a, b, conf in _CARAS.get(nombre, {}).get("caras", []):
+        alto = b - a
+        if conf >= 0.6 and 0.02 <= alto <= 0.25:            # las caras chicas del fondo no; las falsas grandes tampoco
+            sin_cortar.append((max(0.0, a - 0.2 * alto), min(1.0, b + 0.1 * alto)))
+    return d.get("debe"), sin_cortar, d.get("mejor")
 
 
-def medir():
-    """Los bloques de primer nivel de cada pagina de pantalla, como los dibujo build.py (con las columnas
-    llenadas por su mismo script)."""
-    archivos = sorted(B.OUT.glob("s[0-9][0-9].html"))
-    with sync_playwright() as pw:
-        br, pg = _abrir(pw)
-        res = [_medir_archivo(pg, f) for f in archivos]
-        br.close()
-    return res
+def _franjas(nombre, v):
+    """Los comienzos posibles (desde arriba, en fraccion del alto) de una ventana de alto v que no corta nada."""
+    if v >= 0.9999:
+        return [(0.0, 0.0)]
+    debe, sin_cortar, _ = _limites(nombre)
+    lo, hi = 0.0, 1.0 - v
+    if debe:
+        lo, hi = max(lo, debe[1] - v), min(hi, debe[0])
+    if lo > hi + 1e-9:
+        return []
+    ivs = [(lo, hi)]
+    for a, b in sin_cortar:
+        for x0, x1 in ((a, b), (a - v, b - v)):                  # el borde de arriba y el de abajo
+            nuevo = []
+            for p, q in ivs:
+                if x1 <= p or x0 >= q:
+                    nuevo.append((p, q))
+                    continue
+                if p <= x0:
+                    nuevo.append((p, x0))
+                if x1 <= q:
+                    nuevo.append((x1, q))
+            ivs = nuevo
+    return ivs
+
+
+class Foto:
+    def __init__(self, nombre, duo=False, h0=None, pos0=52.0):
+        self.nombre, self.duo = nombre, duo
+        ancho_px, alto_px = _CARAS[nombre]["ancho"], _CARAS[nombre]["alto"]
+        self.h_nat = (DUO_W if duo else FOTO_W) * alto_px / ancho_px
+        self.h0 = h0 if h0 is not None else (196.0 if duo else 232.0)
+        self.pos0 = pos0
+
+    def posible(self, h):
+        return bool(_franjas(self.nombre, h / self.h_nat))
+
+    def pos(self, h):
+        """El encuadre (object-position, en %) para el alto h: el de pantalla, o el mas cercano que no corta nada."""
+        v = h / self.h_nat
+        if v >= 0.9999:
+            return 50.0
+        ivs = _franjas(self.nombre, v)
+        if not ivs:
+            raise ValueError(f"{self.nombre}: con {h:.0f} pt no hay encuadre que no corte una cara o el motivo")
+        t0 = (1 - v) * self.pos0 / 100
+        mejor = _limites(self.nombre)[2]
+        if mejor:
+            m = [(max(p, mejor[1] - v), min(q, mejor[0])) for p, q in ivs]
+            m = [(p, q) for p, q in m if p <= q + 1e-9]
+            if m:
+                ivs = m
+        t = min((min(max(t0, p), q) for p, q in ivs), key=lambda x: abs(x - t0))
+        return round(t / (1 - v) * 100, 2)
+
+    def h_min(self):
+        h = self.h0
+        while h < self.h_nat and not self.posible(h):
+            h += 1.0
+        return min(h, self.h_nat)
+
+    def ajustar(self, h):
+        """El alto posible mas grande hasta h (ni menos que en pantalla ni mas que la foto entera)."""
+        h = min(h, self.h_nat)
+        while h >= self.h_min():
+            if self.posible(h):
+                return round(h, 1)
+            h -= 0.5
+        return None
+
+
+# ---------------------------------------------------------------------------------------------- los capitulos
+FIG_RE = re.compile(r'<figure><img src="asset:(f_\w+)\.jpg" alt=""(?: style="object-position:center ([\d.]+)%")?>'
+                    r'<figcaption>')
+DUO_RE = re.compile(r'<div class="duo"><figure><img src="asset:(f_\w+)\.jpg" alt=""></figure>'
+                    r'<figure><img src="asset:(f_\w+)\.jpg" alt=""></figure></div>')
+
+
+def capitulos():
+    """Las secciones de content.py agrupadas por capitulo: uno nuevo en cada titulo de capitulo (h1)."""
+    caps = []
+    for s in content.SECTIONS[1:]:
+        if "<h1" in s["html"] or not caps:
+            caps.append({"id": s["id"], "secs": []})
+        caps[-1]["secs"].append(s)
+    for c in caps:
+        c["fotos"] = {}
+        for s in c["secs"]:
+            for m in FIG_RE.finditer(s["html"]):
+                c["fotos"][m.group(1)] = Foto(m.group(1), pos0=float(m.group(2) or 52))
+            for m in DUO_RE.finditer(s["html"]):
+                c["fotos"]["duo:" + m.group(1)] = Foto(m.group(1), duo=True)
+        primera = c["secs"][0]["html"].lstrip()
+        m = FIG_RE.match(primera)
+        c["apertura"] = None
+        if m:                                        # la foto de apertura: la figura de arriba, antes del titulo
+            fin = primera.index("</figure>") + len("</figure>")
+            c["apertura"] = (m.group(1), primera[:fin])
+    return caps
+
+
+def _marcar(h, sid):
+    """El HTML de una seccion con su id en el primer elemento y el nombre de cada foto en su figura."""
+    h = DUO_RE.sub(lambda m: m.group(0).replace('<div class="duo">', f'<div class="duo" data-foto="duo:{m.group(1)}">', 1), h)
+    h = FIG_RE.sub(lambda m: m.group(0).replace("<figure>", f'<figure data-foto="{m.group(1)}">', 1), h)
+    m = re.search(r"<(?!style)(\w+)", h)
+    return h[:m.end()] + f' data-sec="{sid}"' + h[m.end():]
+
+
+def html_capitulo(cap, caps, plan_fotos):
+    """El capitulo entero en una sola pagina: encabezado, todas sus secciones seguidas y el pie. Si la foto de
+    apertura se fue al capitulo anterior, no esta; si la del siguiente vino a este, va al final."""
+    partes = []
+    for s in cap["secs"]:
+        h = s["html"]
+        if s["id"] == "fuentes":                     # las fuentes vuelven a ser un solo cuadro
+            h = h[:h.rindex("</table>")]
+        if s["id"] == "fuentes2":
+            assert h.startswith(content._F_CAB), h[:200]
+            h = h[len(content._F_CAB):]
+        if s is cap["secs"][0] and cap["apertura"] and cap["apertura"][0] in plan_fotos["al_anterior"]:
+            h = h.lstrip()[len(cap["apertura"][1]):]
+        partes.append(_marcar(h, s["id"]))
+    k = caps.index(cap)
+    if k + 1 < len(caps):
+        sig = caps[k + 1]
+        if sig["apertura"] and sig["apertura"][0] in plan_fotos["al_anterior"]:
+            partes.append(_marcar(sig["apertura"][1], sig["secs"][0]["id"] + "-foto"))
+    head = f'<div class="runhead">{cap["secs"][0]["runhead"]}</div>'
+    foot = f'<div class="runfoot"><span>{content.DOC_TITLE}</span><span>P&aacute;gina 2 de 145</span></div>'
+    return f'<div class="page" id="pg">{head}{"".join(partes)}{foot}</div>'
+
+
+class Dibujante:
+    """Un Chromium abierto para dibujar y medir los capitulos."""
+    def __init__(self, pw):
+        exe = os.environ.get("PW_CHROMIUM")
+        self.br = pw.chromium.launch(executable_path=exe) if exe else pw.chromium.launch()
+        self.pg = self.br.new_page(viewport={"width": int(B.PAGE_W_PX), "height": 1200})
+        self.n = 0
+
+    def dibujar(self, body, nombre, cfg=None, pdf=False):
+        f = B.OUT / f"{nombre}.html"
+        f.write_text(B.SHELL % {"css": B.CSS, "body": B.inline_images(B.inline_svgs(body))}, encoding="utf-8")
+        self.pg.goto(f.as_uri())
+        self.pg.wait_for_timeout(350)
+        try:
+            self.pg.evaluate("document.fonts.ready")
+        except Exception:
+            pass
+        self.pg.wait_for_timeout(150)
+        self.pg.evaluate(JS_CONFIG, cfg or {"fotos": {}, "mover": []})
+        self.pg.evaluate(B.JS_COLFILL)
+        m = self.pg.evaluate(JS_MEDIR)
+        self.n += 1
+        if not pdf:
+            return m, None
+        destino = B.OUT / f"{nombre}.pdf"
+        h_px = max(m["alto"], 841.89) * B.PT
+        for extra in (2, 8, 14, 20, 26, 32):
+            self.pg.pdf(path=str(destino), print_background=True, width=f"{B.PAGE_W_PX:.0f}px",
+                        height=f"{h_px + extra:.0f}px", margin={"top": "0", "bottom": "0", "left": "0", "right": "0"})
+            d = fitz.open(str(destino))
+            if len(d) == 1:
+                return m, d
+        raise RuntimeError(f"{nombre}: el PDF no entra en una pagina")
+
+    def cerrar(self):
+        self.br.close()
 
 
 # ---------------------------------------------------------------------------------------------- el corte
 def grupos(m):
-    """Bloques que van juntos: un titulo con lo que sigue; el rotulo de un cuadro o grafico con el cuadro o
-    grafico; un cuadro o grafico con su fuente y sus notas."""
+    """Bloques que van juntos: un titulo con lo que sigue; la foto de apertura con el titulo del capitulo; el rotulo
+    de un cuadro o grafico con el cuadro o grafico; un cuadro o grafico con su fuente y sus notas."""
     bl = [b for b in m["bloques"] if b["cls"] not in ("runhead", "runfoot") and b["tag"] != "style"
           and b["bottom"] - b["top"] > 0.1]
     out = []
     pegar_al_siguiente = False
+    seccion = apartado = None
     for b in bl:
         previo = out[-1]["partes"][-1] if out else None
         de_cuadro = previo is not None and (previo["tabla"] or previo["dibujo"] or previo["tag"] == "table"
                                             or (previo["tag"] == "p" and previo["cls"].startswith("cap")))
         es_cola = ((b["tag"] == "p" and b["cls"].startswith("cap")) or b["tag"] == "figcaption"
-                   or (b["cls"] == "note" and de_cuadro))
+                   or (b["cls"] == "note" and de_cuadro)
+                   or (b["tag"] == "h1" and previo is not None and previo["tag"] == "figure"))
+        if b["tag"] in ("h1", "h2"):
+            seccion, apartado = b["txt"][:40], None
+        if b["tag"] == "h3":
+            apartado = b["txt"][:40]
         if out and (pegar_al_siguiente or es_cola):
             g = out[-1]
             g["bottom"] = max(g["bottom"], b["bottom"])
             g["partes"].append(b)
         else:
-            out.append({"top": b["top"], "bottom": b["bottom"], "partes": [b]})
+            out.append({"top": b["top"], "bottom": b["bottom"], "partes": [b], "sec": seccion, "sub": apartado})
         titulo = b["tag"] in ("h1", "h2", "h3", "h4") or b["cls"] in ("stand", "igrp", "hairline")
         rotulo = b["cls"].split(" ")[0] == "ex" and not (b["tabla"] or b["dibujo"])
         pegar_al_siguiente = titulo or rotulo
+        if titulo and b["tag"] in ("h1", "h2", "h3"):
+            out[-1]["sec"], out[-1]["sub"] = seccion, apartado
+    for g in out:
+        g["foto"] = next((p["foto"] for p in g["partes"] if p["foto"]), None)
+        g["inicio"] = g["partes"][0]["i"]
     return out
 
 
-def _pieza(top, bottom, pt=2.0, pb=2.0, repetir=None, parte=None):
-    return dict(top=top, bottom=bottom, pt=pt, pb=pb, repetir=repetir, parte=parte)
-
-
-def piezas(m):
-    """Los pedazos entre los que se puede cortar. Lo que no entra en una hoja se parte: un cuadro entre filas
-    (con su encabezado repetido), un recuadro entre sus parrafos y una lista entre sus items."""
+def atomos(m):
+    """Los pedazos entre los que se puede cortar. Un grupo va entero, salvo un cuadro largo (entre filas, con el
+    encabezado repetido arriba), una lista larga (entre puntos) y un recuadro que no entra en una hoja entera
+    (entre sus parrafos, y se avisa). Cada pedazo: arriba, abajo, aire arriba y abajo, encabezado a repetir."""
     entra = LIM - ARRIBA_CONT
-    out, partidos, no_entran = [], [], []
+    largo = entra / 3
+    out, partidos = [], []
+
+    def nuevo(g, top, bottom, pt=2.0, pb=2.0, rep=None, primero=True, parte=None):
+        out.append(dict(top=top, bottom=bottom, pt=pt, pb=pb, rep=rep, primero=primero, g=g, parte=parte))
+
     for g in grupos(m):
-        if g["bottom"] - g["top"] <= entra:
-            out.append(_pieza(g["top"], g["bottom"]))
-            continue
+        alto = g["bottom"] - g["top"]
         tabla = next((p for p in g["partes"] if p.get("filas")), None)
-        recuadro = next((p for p in g["partes"] if p.get("hijos")), None)
         lista = next((p for p in g["partes"] if p.get("items")), None)
-        if tabla:
+        recuadro = next((p for p in g["partes"] if p.get("hijos")), None)
+        if tabla and alto > largo:
             filas = tabla["filas"]
             enc = [f for f in filas[:2] if f["th"]]
-            datos = filas[len(enc):]
             rep = (enc[0]["top"], enc[-1]["bottom"]) if enc else None
-            # la primera fila de datos va con el rotulo, el titulo y el encabezado; una fila de subtitulo, con la
-            # que la sigue; la ultima, con la fuente y las notas
-            trozos, actual = [], [g["top"], datos[0]["bottom"]]
-            pegada = datos[0]["sub"]
-            for f in datos[1:]:
-                if pegada:
-                    actual[1] = f["bottom"]
-                else:
-                    trozos.append(actual)
+            unidades, actual = [], None
+            for f in filas[len(enc):]:                 # una fila de subtitulo va con la que la sigue
+                if actual is None:
                     actual = [f["top"], f["bottom"]]
-                pegada = f["sub"]
-            actual[1] = g["bottom"]
-            trozos.append(actual)
-            ult = len(trozos) - 1
-            for k, (a, z) in enumerate(trozos):
-                out.append(_pieza(a, z, pt=2.0 if k == 0 else 0.0, pb=2.0 if k == ult else 0.0,
-                                  repetir=rep if k else None, parte="cuadro"))
-            partidos.append(("cuadro", g))
-        elif recuadro:
+                else:
+                    actual[1] = f["bottom"]
+                if not f["sub"]:
+                    unidades.append(actual)
+                    actual = None
+            if actual:
+                unidades.append(actual)
+            if len(unidades) >= 4:
+                nuevo(g, g["top"], unidades[1][1], pb=0.0, parte="cuadro")
+                for u in unidades[2:-2]:
+                    nuevo(g, u[0], u[1], 0.0, 0.0, rep, False, "cuadro")
+                nuevo(g, unidades[-2][0], g["bottom"], pt=0.0, rep=rep, primero=False, parte="cuadro")
+                partidos.append(("cuadro", g))
+                continue
+        if lista and alto > largo and len(lista["items"]) >= 4 and not recuadro:
+            it = lista["items"]
+            nuevo(g, g["top"], it[1][1], parte="lista")
+            for a, z in it[2:-2]:
+                nuevo(g, a, z, primero=False, parte="lista")
+            nuevo(g, it[-2][0], g["bottom"], primero=False, parte="lista")
+            partidos.append(("lista", g))
+            continue
+        if recuadro and alto > entra:
             hijos = recuadro["hijos"]
             cortes = [hijos[1][1]] + [h[1] for h in hijos[2:-1]]      # el rotulo va con el primer punto
             a = g["top"]
-            for c in cortes:
-                out.append(_pieza(a, c, parte="recuadro"))
+            for k, c in enumerate(cortes):
+                nuevo(g, a, c, primero=(k == 0), parte="recuadro")
                 a = c
-            out.append(_pieza(a, g["bottom"], parte="recuadro"))
+            nuevo(g, a, g["bottom"], primero=False, parte="recuadro")
             partidos.append(("recuadro", g))
-        elif lista:
-            a = g["top"]
-            for (t, z) in lista["items"][:-1]:
-                out.append(_pieza(a, z, parte="lista"))
-                a = z
-            out.append(_pieza(a, g["bottom"], parte="lista"))
-            partidos.append(("lista", g))
-        else:
-            out.append(_pieza(g["top"], g["bottom"]))
-            no_entran.append(g)
-    return out, partidos, no_entran
+            continue
+        nuevo(g, g["top"], g["bottom"])
+    return out, partidos
 
 
-def cortar(m):
-    """Reparte los pedazos de una pagina en hojas. Cada hoja es una lista de tramos [desde, hasta, aire arriba,
-    aire abajo, encabezado repetido] de la pagina de pantalla, que se ponen uno abajo del otro; la primera hoja
-    de cada pagina empieza en 0, con su encabezado de pagina."""
-    ps, partidos, no_entran = piezas(m)
-    hojas = []
-    tramos, usado, primera = [], 0.0, True
-    for p in ps:
-        for intento in (0, 1):
-            nuevo, alto = [list(t) for t in tramos], usado
-            if primera and not nuevo:
-                nuevo, alto = [[0.0, p["bottom"], 0.0, p["pb"], False]], p["bottom"]
-            elif not nuevo:
-                if p["repetir"]:
-                    a, z = p["repetir"]
-                    nuevo.append([a, z, 0.0, 0.0, True])
-                    alto += z - a
-                nuevo.append([p["top"], p["bottom"], p["pt"], p["pb"], False])
-                alto += p["bottom"] - p["top"]
-            else:
-                alto += p["bottom"] - nuevo[-1][1]
-                nuevo[-1][1], nuevo[-1][3] = p["bottom"], p["pb"]
-            if alto <= LIM or not tramos:
-                tramos, usado = nuevo, alto
+def uso(at, i, j, primera):
+    """Hasta donde llega el contenido de una hoja con los pedazos i..j-1."""
+    if primera:
+        return at[j - 1]["bottom"]
+    rep = at[i]["rep"]
+    extra = (rep[1] - rep[0]) if (rep and not at[i]["primero"]) else 0.0
+    return ARRIBA_CONT + extra + at[j - 1]["bottom"] - at[i]["top"]
+
+
+def blanco(u):
+    return (AREA1 - u) / (AREA1 - AREA0)
+
+
+def _hoja(at, i, j, primera):
+    tramos = []
+    if primera:
+        tramos.append([0.0, at[j - 1]["bottom"], 0.0, at[j - 1]["pb"], False])
+    else:
+        rep = at[i]["rep"]
+        if rep and not at[i]["primero"]:
+            tramos.append([rep[0], rep[1], 0.0, 0.0, True])
+        tramos.append([at[i]["top"], at[j - 1]["bottom"], at[i]["pt"], at[j - 1]["pb"], False])
+    u = uso(at, i, j, primera)
+    return {"tramos": tramos, "primera": primera, "i": i, "j": j, "uso": u, "blanco": blanco(u)}
+
+
+def voraz(at):
+    """Cada hoja se llena con todo lo que entra: un cuadro o una lista larga se parte solo si dejarlo entero para la
+    hoja siguiente deja mas de un tercio en blanco."""
+    hojas, i, primera = [], 0, True
+    while i < len(at):
+        j = i + 1
+        while j < len(at) and uso(at, i, j + 1, primera) <= LIM:
+            j += 1
+        # no partir un grupo si dejarlo entero para la siguiente hoja no deja un hueco grande
+        if j < len(at) and not at[j]["primero"]:
+            k = j
+            while k > i + 1 and not at[k]["primero"]:
+                k -= 1
+            if at[k]["primero"] and k > i and blanco(uso(at, i, k, primera)) <= TOPE:
+                j = k
+        hojas.append(_hoja(at, i, j, primera))
+        i, primera = j, False
+    return hojas
+
+
+def repartido(at, ultimo_doc, estricto=True):
+    """El corte con menos hojas de mas de un tercio en blanco (salvo la ultima del documento) y, entre esos, con
+    menos hojas, cortando cada hoja lo mas abajo posible. Estricto: None si alguna hoja pasa del tercio."""
+    n = len(at)
+    INF = (10 ** 9, 10 ** 9)
+    mejor = [INF] * (n + 1)
+    mejor[n] = (0, 0)
+
+    def costo(i, j):
+        u = uso(at, i, j, i == 0)
+        mala = blanco(u) > TOPE and not (j == n and ultimo_doc)
+        return u, int(mala)
+
+    for i in range(n - 1, -1, -1):
+        for j in range(i + 1, n + 1):
+            u, mala = costo(i, j)
+            if u > LIM and j > i + 1:
                 break
-            hojas.append({"tramos": tramos, "primera": primera})
-            tramos, usado, primera = [], ARRIBA_CONT, False
-    if tramos:
-        hojas.append({"tramos": tramos, "primera": primera})
-    return hojas, partidos, no_entran
+            if mejor[j] == INF:
+                continue
+            c = (mala + mejor[j][0], 1 + mejor[j][1])
+            if c < mejor[i]:
+                mejor[i] = c
+    if mejor[0] == INF or (estricto and mejor[0][0] > 0):
+        return None
+    hojas, i = [], 0
+    while i < n:
+        elegido = None
+        for j in range(i + 1, n + 1):
+            u, mala = costo(i, j)
+            if u > LIM and j > i + 1:
+                break
+            if mejor[j] != INF and (mala + mejor[j][0], 1 + mejor[j][1]) == mejor[i]:
+                elegido = j
+        hojas.append(_hoja(at, i, elegido, i == 0))
+        i = elegido
+    return hojas
+
+
+def malas(hojas, ultimo_doc):
+    return [k for k, h in enumerate(hojas) if h["blanco"] > TOPE and not (ultimo_doc and k == len(hojas) - 1)]
+
+
+# ---------------------------------------------------------------------------------------------- llenar huecos
+class Reparto:
+    """Las decisiones sobre las fotos de todo el documento: alto y encuadre de cada una, las que se suben dentro de
+    su seccion (antes de que bloque) y las fotos de apertura que pasan al final del capitulo anterior."""
+    def __init__(self, caps):
+        self.caps = caps
+        self.fotos = {}                         # nombre -> alto
+        self.mover = {}                         # nombre -> data-i del bloque antes del cual va
+        self.al_anterior = set()
+        self.notas = []
+        for c in caps:
+            for nombre, f in c["fotos"].items():
+                self.fotos[nombre] = f.h_min()
+
+    def foto(self, nombre):
+        for c in self.caps:
+            if nombre in c["fotos"]:
+                return c["fotos"][nombre]
+
+    def cfg(self, cap):
+        fotos = {}
+        for c in self.caps:
+            for nombre, f in c["fotos"].items():
+                h = self.fotos[nombre]
+                pos = f.pos(h)
+                if f.duo:                            # el par: el mismo alto, cada una con su encuadre
+                    otra = Foto(_otra_del_duo(nombre), duo=True)
+                    pos = [pos, otra.pos(min(h, otra.h_nat))]
+                fotos[nombre] = {"h": round(h, 2), "pos": pos}
+        mover = [{"foto": f, "antes": i} for f, i in self.mover.items() if f in cap["fotos"]]
+        return {"fotos": fotos, "mover": mover}
+
+    def plan(self):
+        return {"al_anterior": self.al_anterior}
+
+
+def _otra_del_duo(nombre):
+    for s in content.SECTIONS:
+        for m in DUO_RE.finditer(s["html"]):
+            if "duo:" + m.group(1) == nombre:
+                return m.group(2)
+
+
+def _fotos_en(hojas_k, at):
+    return [a["g"] for a in at[hojas_k["i"]:hojas_k["j"]] if a["g"]["foto"] and a["primero"]]
+
+
+def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
+    """Dibuja el capitulo, lo corta y llena los huecos con las fotos, hasta que ninguna hoja pase del tercio."""
+    k_cap = caps.index(cap)
+    sin_arreglo = set()                       # huecos que ninguna foto puede llenar (por su lugar en el capitulo)
+    for vuelta in range(80):
+        body = html_capitulo(cap, caps, rep.plan())
+        m, _ = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap))
+        at, _ = atomos(m)
+        hojas = voraz(at)
+        todas = malas(hojas, ultimo_doc)
+        mal = [k for k in todas if (hojas[k]["i"], hojas[k]["j"]) not in sin_arreglo]
+        if not todas:
+            return m, hojas, at, "voraz"
+        if not mal:
+            # sin fotos que sirvan: se reparte el corte entre las hojas
+            r = repartido(at, ultimo_doc)
+            if r is not None:
+                registro.append(f"{cap['id']}: corte repartido en {len(r)} hojas (sin fotos para llenar "
+                                f"{', '.join('la hoja %d' % (k + 1) for k in todas)})")
+                return m, r, at, "repartido"
+            r = repartido(at, ultimo_doc, estricto=False)
+            quedan = malas(r, ultimo_doc)
+            if len(quedan) >= len(todas):
+                r, quedan = hojas, todas
+            for k in quedan:
+                registro.append(f"{cap['id']}: !! la hoja {k + 1} queda con {r[k]['blanco']:.0%} en blanco y no hay "
+                                f"como llenarla")
+            return m, r, at, "repartido"
+        s = mal[0]
+        h = hojas[s]
+        espacio = LIM - h["uso"]
+        ultima_del_cap = s == len(hojas) - 1
+        hecho = None
+        # 1) una foto de esa hoja, mas alta
+        cands = _fotos_en(h, at)
+        sec_final = at[h["j"] - 1]["g"]["sec"]
+        cands.sort(key=lambda g: (g["sec"] != sec_final, -g["top"]))
+        for g in cands:
+            f = rep.foto(g["foto"])
+            nuevo = f.ajustar(rep.fotos[g["foto"]] + espacio - 1.0)
+            if nuevo and nuevo > rep.fotos[g["foto"]] + 0.5 and blanco(h["uso"] + nuevo - rep.fotos[g["foto"]]) <= TOPE:
+                hecho = f"hoja {s + 1}: {g['foto']} de {rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt"
+                rep.fotos[g["foto"]] = nuevo
+                break
+        # 2) subir una foto de esa seccion (de mas adelante en el capitulo) al final de la hoja
+        if not hecho and not ultima_del_cap and at[h["j"]]["primero"]:
+            ref = at[h["j"]]["g"]
+            ultimo = at[h["j"] - 1]["g"]["partes"][-1]
+            sub_final = at[h["j"] - 1]["g"]["sub"]
+            for g in [a["g"] for a in at[h["j"]:] if a["primero"] and a["g"]["foto"]]:
+                if (g["sec"], g["sub"]) != (sec_final, sub_final) or g["foto"].startswith("duo:") or g["foto"] in rep.mover:
+                    continue
+                if ultimo["foto"] or ref["foto"]:              # nunca dos fotos seguidas
+                    continue
+                if any(p["tag"] == "h1" for p in g["partes"]):
+                    continue
+                fig = next(p for p in g["partes"] if p["foto"])
+                cola = (fig["bottom"] - fig["top"]) - fig["img_h"]
+                aire = max(ultimo["mb"], 0) + fig["mt"]
+                f = rep.foto(g["foto"])
+                nuevo = f.ajustar(espacio - aire - cola - 1.0)
+                if nuevo:
+                    hecho = f"hoja {s + 1}: sube {g['foto']} ({nuevo:.0f} pt)"
+                    rep.fotos[g["foto"]] = nuevo
+                    rep.mover[g["foto"]] = ref["inicio"]
+                    break
+        # 3) en la ultima hoja del capitulo, la foto de apertura del siguiente
+        if not hecho and ultima_del_cap and k_cap + 1 < len(caps):
+            sig = caps[k_cap + 1]
+            if sig["apertura"] and sig["apertura"][0] not in rep.al_anterior:
+                nombre = sig["apertura"][0]
+                f = sig["fotos"][nombre]
+                ultimo = at[h["j"] - 1]["g"]["partes"][-1]
+                cola = 18.0                                   # epigrafe de una linea y su aire
+                nuevo = f.ajustar(espacio - max(ultimo["mb"], 0) - 13.0 - cola - 1.0)
+                if nuevo:
+                    hecho = f"hoja {s + 1}: la foto de apertura del capitulo siguiente ({nombre}, {nuevo:.0f} pt)"
+                    rep.al_anterior.add(nombre)
+                    rep.fotos[nombre] = nuevo
+        # 4) una foto de la hoja anterior, mas alta, empuja su ultimo bloque a esta hoja
+        if not hecho and s > 0:
+            ha = hojas[s - 1]
+            for g in _fotos_en(ha, at):
+                f = rep.foto(g["foto"])
+                for kk in range(1, 6):
+                    j2 = ha["j"] - kk
+                    if j2 <= ha["i"] or at[j2]["top"] <= g["bottom"] or not at[j2]["primero"]:
+                        break
+                    if uso(at, j2, h["j"], False) > LIM:
+                        break
+                    if blanco(uso(at, j2, h["j"], False)) > TOPE:
+                        continue
+                    nuevo = f.ajustar(rep.fotos[g["foto"]] + LIM - uso(at, ha["i"], j2, ha["primera"]) - 1.0)
+                    falta = LIM - uso(at, ha["i"], j2 + 1, ha["primera"])      # lo que hay que crecer para empujar
+                    if nuevo and nuevo - rep.fotos[g["foto"]] > falta + 0.5:
+                        hecho = f"hoja {s}: {g['foto']} de {rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt (empuja a la {s + 1})"
+                        rep.fotos[g["foto"]] = nuevo
+                        break
+                if hecho:
+                    break
+        if hecho:
+            registro.append(f"{cap['id']}: {hecho}")
+        else:
+            sin_arreglo.add((h["i"], h["j"]))
+    raise RuntimeError(f"{cap['id']}: no converge")
+
+
+def rellenar(dib, cap, caps, rep, m, hojas, at, registro, umbral=0.15):
+    """Ya sin huecos de mas de un tercio: en cada hoja con mas de 15% en blanco que tenga una foto, la foto se
+    muestra mas alta hasta llenarla (no mueve nada de las otras hojas)."""
+    for vuelta in range(40):
+        cambio = False
+        for s, h in enumerate(hojas):
+            if h["blanco"] <= umbral or (s == len(hojas) - 1 and caps.index(cap) == len(caps) - 1):
+                continue
+            espacio = LIM - h["uso"]
+            for g in sorted(_fotos_en(h, at), key=lambda g: -g["top"]):
+                f = rep.foto(g["foto"])
+                nuevo = f.ajustar(rep.fotos[g["foto"]] + espacio - 1.0)
+                if nuevo and nuevo > rep.fotos[g["foto"]] + 3:
+                    registro.append(f"{cap['id']}: hoja {s + 1} ({h['blanco']:.0%} en blanco): {g['foto']} de "
+                                    f"{rep.fotos[g['foto']]:.0f} a {nuevo:.0f} pt")
+                    rep.fotos[g["foto"]] = nuevo
+                    cambio = True
+                    break
+            if cambio:
+                break
+        if not cambio:
+            return m, hojas, at
+        cortes = [(h["i"], h["j"], h["primera"]) for h in hojas]
+        body = html_capitulo(cap, caps, rep.plan())
+        m, _ = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap))
+        at2, _ = atomos(m)
+        if len(at2) != len(at):
+            raise RuntimeError(f"{cap['id']}: llenar con una foto cambio los pedazos")
+        at = at2
+        hojas = [_hoja(at, i, j, p) for i, j, p in cortes]      # los mismos cortes: solo crece esa hoja
+        if any(h["uso"] > LIM + 0.5 for h in hojas):
+            raise RuntimeError(f"{cap['id']}: llenar con una foto desbordo una hoja")
+    return m, hojas, at
 
 
 # ---------------------------------------------------------------------------------------------- la hoja
 def fondo(src):
-    """El color del fondo, leido de una pagina de pantalla (Chrome lo dibuja apenas distinto del CSS)."""
+    """El color del fondo, leido de una pagina dibujada por Chrome (lo dibuja apenas distinto del CSS)."""
     global FONDO
     if FONDO is None:
-        px = src[1].get_pixmap(clip=fitz.Rect(2, 2, 6, 6)).pixel(1, 1)
+        px = src[0].get_pixmap(clip=fitz.Rect(2, 2, 6, 6)).pixel(1, 1)
         FONDO = tuple(v / 255 for v in px[:3])
     return FONDO
 
 
 def pie_original(src_pg, m):
-    """Donde esta el pie en la pagina de pantalla: la raya de arriba, y desde donde empieza el numero."""
+    """Donde esta el pie en la pagina dibujada: la raya de arriba, y desde donde empieza el numero."""
     pie = next(b for b in m["bloques"] if b["cls"] == "runfoot")
     num = [s for b in src_pg.get_text("dict")["blocks"] for l in b.get("lines", []) for s in l["spans"]
            if s["text"].strip().startswith("Página") and s["bbox"][1] > pie["top"] - 2]
@@ -270,20 +734,21 @@ def escribir(pg, x_der, base, texto, tam, espaciado):
 
 
 # ---------------------------------------------------------------------------------------------- solo lo visible
-# show_pdf_page pone en la hoja la pagina de pantalla entera y la recorta: lo de afuera del recorte no se ve, pero su
+# show_pdf_page pone en la hoja la pagina dibujada entera y la recorta: lo de afuera del recorte no se ve, pero su
 # texto queda guardado en la hoja y lo leen los buscadores y los programas que sacan el texto de un PDF (dispatch 9).
 # Por eso cada recorte sale de una copia de la pagina a la que se le borro, con redaccion, el texto de afuera del
-# recorte; los dibujos y las imagenes quedan como estan. Lo que se ve no cambia: cada copia se compara con la pagina
-# original adentro del recorte, letra por letra y pixel por pixel.
+# recorte, y los dibujos que quedan enteros afuera (un capitulo es una sola pagina larga: sin esto, cada hoja
+# llevaria todos sus graficos). Las imagenes quedan como estan. Lo que se ve no cambia: cada copia se compara con la
+# pagina original adentro del recorte, letra por letra y pixel por pixel.
 TODO_EL_TEXTO = fitz.TEXT_PRESERVE_LIGATURES | fitz.TEXT_PRESERVE_WHITESPACE   # todo el texto, aun fuera de la hoja
 _COPIAS, _LETRAS = {}, {}
 CONTROL_COPIAS = {"copias": 0, "problemas": []}
 
 
-def _letras(pg):
-    """Las letras de una pagina, con su lugar y su centro."""
+def _letras(pg, clip=None):
+    """Las letras de una pagina (o de una franja), con su lugar y su centro."""
     out = []
-    for b in pg.get_text("rawdict", flags=TODO_EL_TEXTO)["blocks"]:
+    for b in pg.get_text("rawdict", flags=TODO_EL_TEXTO, clip=clip)["blocks"]:
         for l in b.get("lines", []):
             for s in l["spans"]:
                 for c in s["chars"]:
@@ -315,12 +780,11 @@ def visible(src, pno, clip):
                   fitz.Rect(0, clip.y0, clip.x0, clip.y1), fitz.Rect(clip.x1, clip.y0, w, clip.y1)):
             if r.width > 0.01 and r.height > 0.01:
                 pg.add_redact_annot(r, fill=False)
-        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_NONE,
+        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE, graphics=fitz.PDF_REDACT_LINE_ART_REMOVE_IF_COVERED,
                             text=fitz.PDF_REDACT_TEXT_REMOVE)
         # el control: la copia tiene justo las letras que se ven en el recorte, y adentro del recorte se ve igual
-        if (id(src), pno) not in _LETRAS:
-            _LETRAS[(id(src), pno)] = _letras(src[pno])
-        se_ven = collections.Counter(c for c, x, y in _LETRAS[(id(src), pno)] if clip.x0 <= x <= clip.x1
+        franja = fitz.Rect(0, clip.y0 - 40, w, clip.y1 + 40)
+        se_ven = collections.Counter(c for c, x, y in _letras(src[pno], franja) if clip.x0 <= x <= clip.x1
                                      and clip.y0 <= y <= clip.y1)
         quedan = collections.Counter(c for c, _, _ in _letras(pg))
         igual = _pixeles(src[pno], clip) == _pixeles(pg, clip)
@@ -333,7 +797,7 @@ def visible(src, pno, clip):
 
 
 def componer(dst, src, pno, m, hoja, n_hoja, total):
-    """Una hoja A4: fondo, encabezado, los tramos de la pagina de pantalla y el pie con el numero de hoja."""
+    """Una hoja A4: fondo, encabezado, los tramos de la pagina dibujada y el pie con el numero de hoja."""
     pg = dst.new_page(width=A4_W, height=A4_H)
     pg.draw_rect(pg.rect, color=None, fill=fondo(src), overlay=False)
     E = ESC
@@ -385,18 +849,22 @@ def _plano(t):
     return re.sub(r"\s+", " ", t).strip().lower()
 
 
-def hoja_de_titulo(m, hojas, n_primera, txt):
-    """La hoja de la A4 donde cae el titulo de una entrada del indice."""
+def hoja_de_seccion(m, hojas, n_primera, sid, txt):
+    """La hoja de la A4 donde cae el titulo de una entrada del indice (o, si no se lo encuentra, el comienzo de su
+    seccion)."""
+    desde = next((b["top"] for b in m["bloques"] if b["sec"] == sid), None)
     plano = _plano(txt)
     num = re.match(r"(\d+\.\d+)\s", plano)
     y = None
     for t, top in m["titulos"]:
+        if desde is not None and top < desde - 1:
+            continue
         tp = _plano(t)
         if (num and re.match(re.escape(num.group(1)) + r"(?!\d)", tp)) or (not num and tp.startswith(plano[:24])):
             y = top
             break
     if y is None:
-        return n_primera
+        y = desde if desde is not None else 0.0
     for k, h in enumerate(hojas):
         if any(a - 3 <= y <= z + 3 for a, z, _, _, rep in h["tramos"] if not rep):
             return n_primera + k
@@ -417,193 +885,174 @@ def indice_html(numeros):
     return cab + "".join(filas)
 
 
-def render_indice(numeros, total):
-    """Dibuja la pagina del indice con los numeros de la A4, con el mismo HTML y CSS de build.py."""
+def body_indice(numeros, total):
     s = content.SECTIONS[0]
     assert s["id"] == "indice"
     head = f'<div class="runhead">{s["runhead"]}</div>' if s.get("runhead") else ""
-    foot = (f'<div class="runfoot"><span>Programa de gobierno &middot; San Isidro 2027</span>'
+    foot = (f'<div class="runfoot"><span>{content.DOC_TITLE}</span>'
             f'<span>P&aacute;gina 2 de {total}</span></div>')
-    body = f'<div class="page" id="pg">{head}{indice_html(numeros)}{foot}</div>'
-    f = B.OUT / "a4_indice.html"
-    f.write_text(B.SHELL % {"css": B.CSS, "body": B.inline_images(B.inline_svgs(body))}, encoding="utf-8")
-    pdf = B.OUT / "a4_indice.pdf"
-    with sync_playwright() as pw:
-        br, pg = _abrir(pw)
-        m = _medir_archivo(pg, f)
-        h_px = max(m["alto"], 841.89) * B.PT
-        extra = 2
-        for _ in range(8):
-            pg.pdf(path=str(pdf), print_background=True, width=f"{B.PAGE_W_PX:.0f}px", height=f"{h_px + extra:.0f}px",
-                   margin={"top": "0", "bottom": "0", "left": "0", "right": "0"})
-            if len(fitz.open(str(pdf))) == 1:
-                break
-            extra += 6
-        br.close()
-    return fitz.open(str(pdf)), m
+    return f'<div class="page" id="pg">{head}{indice_html(numeros)}{foot}</div>'
+
+
+def cortar_parejo(m):
+    at, _ = atomos(m)
+    return repartido(at, False) or voraz(at)
 
 
 # ---------------------------------------------------------------------------------------------- todo
 def plan_completo():
-    """Mide, corta y numera: [(pagina de pantalla, hoja, numero de hoja)], el total, lo que se parte y lo que no
-    entra en una hoja, y la primera hoja y las hojas de cada pagina."""
-    med = medir()
-    src = fitz.open(str(PANTALLA))
-    assert len(src) == len(med) + 1, (len(src), len(med))
-    for i, m in enumerate(med):
-        h_pdf = src[i + 1].rect.height
-        assert abs(max(m["alto"], 841.89) - h_pdf) < 9, (i + 2, m["alto"], h_pdf)
-    plan, partidos, no_entran, por_pagina, n = [], [], [], [], 1
-    for i, m in enumerate(med):
-        hs, pt, ne = cortar(m)
-        por_pagina.append((n + 1, hs))
-        for h in hs:
-            n += 1
-            plan.append((i + 1, h, n))
-        partidos += [(i + 2, k, g) for k, g in pt]
-        no_entran += [(i + 2, g) for g in ne]
-    return med, src, plan, n, partidos, no_entran, por_pagina
+    """Arma cada capitulo con sus fotos, lo corta, numera las hojas y dibuja el indice con esos numeros."""
+    caps = capitulos()
+    rep = Reparto(caps)
+    registro = []
+    res = []
+    with sync_playwright() as pw:
+        dib = Dibujante(pw)
+        for k, cap in enumerate(caps):
+            m, hojas, at, modo = armar_capitulo(dib, cap, caps, rep, k == len(caps) - 1, registro)
+            m, hojas, at = rellenar(dib, cap, caps, rep, m, hojas, at, registro)
+            res.append({"cap": cap, "m": m, "hojas": hojas, "modo": modo,
+                        "cortes": [(h["i"], h["j"], h["primera"]) for h in hojas]})
+        # el capitulo anterior pudo llevarse la foto de apertura de este despues de cortarlo: se rehacen todos
+        # con las decisiones finales, y se comprueba que el corte no cambia
+        for k, r in enumerate(res):
+            cap = r["cap"]
+            body = html_capitulo(cap, caps, rep.plan())
+            m, doc = dib.dibujar(body, f"a4_{cap['id']}", rep.cfg(cap), pdf=True)
+            at, partidos = atomos(m)
+            hojas = [_hoja(at, i, j, p) for i, j, p in r["cortes"]]      # los cortes ya decididos
+            assert all(h["uso"] <= LIM + 0.5 for h in hojas), cap["id"]
+            r.update(m=m, hojas=hojas, doc=doc, partidos=partidos)
+        # el indice: primero con numeros de prueba, para saber cuantas hojas lleva
+        n_idx = sum(1 for x in CA._IDX if x[0] == "i")
+        m_ind, _ = dib.dibujar(body_indice(["000"] * n_idx, 999), "a4_indice")
+        h_ind = len(cortar_parejo(m_ind))
+        n = 1 + h_ind
+        for r in res:
+            r["n_primera"] = n + 1
+            n += len(r["hojas"])
+        total = n
+        por_sec = {s["id"]: r for r in res for s in r["cap"]["secs"]}
+        nums = []
+        for kind, txt, key in CA._IDX:
+            if kind != "i":
+                continue
+            r = por_sec[key]
+            nums.append(hoja_de_seccion(r["m"], r["hojas"], r["n_primera"], key, txt))
+        m_ind, doc_ind = dib.dibujar(body_indice(nums, total), "a4_indice", pdf=True)
+        hojas_ind = cortar_parejo(m_ind)
+        assert len(hojas_ind) == h_ind, (len(hojas_ind), h_ind)
+        print(f"  dibujos: {dib.n}")
+        dib.cerrar()
+    return res, rep, registro, (m_ind, doc_ind, hojas_ind), nums, total
 
 
-def numeros_indice(med, por_pagina):
-    """Para cada entrada del indice, la hoja de la A4 donde cae su titulo."""
-    ids = [s["id"] for s in content.SECTIONS]
-    out = []
-    for kind, txt, key in CA._IDX:
-        if kind != "i":
-            continue
-        k = ids.index(key)
-        n_primera, hojas = por_pagina[k]
-        out.append(hoja_de_titulo(med[k], hojas, n_primera, txt))
-    return out
-
-
-def comparar(fuentes, dst, plan, total):
-    """Hoja por hoja contra la version de pantalla, con todo el texto que guarda cada hoja, se vea o no (como lo lee
-    cualquier programa que saca el texto de un PDF): las palabras de cada pagina de pantalla tienen que estar, todas y
-    una sola vez, en sus hojas de la A4. De cada hoja se descuentan el encabezado y el pie de pagina, su numero y el
-    encabezado repetido de los cuadros partidos; si una hoja guardara texto escondido, sobraria."""
-    def palabras(pg, zona=None):
-        """Las palabras de una pagina (todas, se vean o no), o las que tienen el centro adentro de zona."""
-        return collections.Counter(w[4] for w in pg.get_text("words", flags=TODO_EL_TEXTO)
-                                   if zona is None or (zona.x0 <= (w[0] + w[2]) / 2 <= zona.x1
-                                                       and zona.y0 <= (w[1] + w[3]) / 2 <= zona.y1))
-    malas = []
-    por_pag = collections.defaultdict(list)
-    for (pno, h, n) in plan:
-        por_pag[pno].append((h, n))
-    for pno, hs in sorted(por_pag.items()):
-        sp, m = fuentes[pno]
-        cab = next(b for b in m["bloques"] if b["cls"] == "runhead")
-        pie = next(b for b in m["bloques"] if b["cls"] == "runfoot")
-        alto = max(m["alto"], 841.89)
-        _, x_num, _ = pie_original(sp, m)
-        cabeza = palabras(sp, fitz.Rect(0, 0, 660, cab["bottom"] + 1))
-        pie_izq = palabras(sp, fitz.Rect(0, pie["top"], x_num - 2, alto))
-        esperado = palabras(sp, fitz.Rect(0, cab["bottom"] + 1, 660, pie["top"]))
-        visto = collections.Counter()
-        for h, n in hs:
-            ws = palabras(dst[n - 1]) - cabeza - pie_izq - collections.Counter(f"Página {n} de {total}".split())
-            for (a, z, _, _, rep) in h["tramos"]:
-                if rep:
-                    ws -= palabras(sp, fitz.Rect(0, a, 660, z))
-            visto += ws
-        if esperado != visto:
-            falta, sobra = esperado - visto, visto - esperado
-            malas.append((pno + 1, sum(falta.values()), sum(sobra.values()), list(falta)[:6], list(sobra)[:6]))
-    return malas
-
-
-def armar():
-    med, src, plan, total, partidos, no_entran, por_pagina = plan_completo()
-    print(f"A4: {total} hojas (con la portada)")
-    for p, k, g in partidos:
-        print(f"  partido ({k}): pag. {p}, {g['bottom'] - g['top']:.0f} pt: {g['partes'][0]['txt'][:60]}")
-    for p, g in no_entran:
-        print(f"  !! pag. {p}: un bloque de {g['bottom'] - g['top']:.0f} pt no entra en una hoja y no se puede partir: "
-              f"{g['partes'][0]['txt'][:60]}")
-    # el indice, con los numeros de hoja de la A4 (su largo no cambia: se comprueba)
-    nums = numeros_indice(med, por_pagina)
-    ind_doc, ind_m = render_indice(nums, total)
-    ind_hojas, _, _ = cortar(ind_m)
-    assert len(ind_hojas) == len(por_pagina[0][1]), (len(ind_hojas), len(por_pagina[0][1]))
+def armar(solo=None, destino=SALIDA):
+    res, rep, registro, (m_ind, doc_ind, hojas_ind), nums, total = plan_completo()
+    print(f"A4: {total} hojas (con la tapa)")
+    for x in registro:
+        print("  ", x)
+    for r in res:
+        for k, g in r["partidos"]:
+            print(f"  partido ({k}): {r['cap']['id']}, {g['bottom'] - g['top']:.0f} pt: {g['partes'][0]['txt'][:60]}")
+    tapa = fitz.open(str(PANTALLA))
+    fondo(res[0]["doc"])                         # el beige, de una pagina dibujada (no de la tapa)
     dst = fitz.open()
-    portada(dst, src)
-    k_ind, plan_final = 0, []
-    for (pno, h, n) in plan:
-        if pno == 1:
-            h = ind_hojas[k_ind]
-            k_ind += 1
-            componer(dst, ind_doc, 0, ind_m, h, n, total)
+    plan = [(None, None, None, 1)]
+    for k, h in enumerate(hojas_ind):
+        plan.append((doc_ind, m_ind, h, 2 + k))
+    for r in res:
+        for k, h in enumerate(r["hojas"]):
+            plan.append((r["doc"], r["m"], h, r["n_primera"] + k))
+    assert plan[-1][3] == total, (plan[-1][3], total)
+    for doc, m, h, n in plan:
+        if solo and n not in solo:
+            continue
+        if doc is None:
+            portada(dst, tapa)
         else:
-            componer(dst, src, pno, med[pno - 1], h, n, total)
-        plan_final.append((pno, h, n))
-    dst.save(str(SALIDA), garbage=3, deflate=True)
-    dst = fitz.open(str(SALIDA))
-    print(f"-> {SALIDA} | {len(dst)} hojas | {SALIDA.stat().st_size / 1e6:.1f} MB")
+            componer(dst, doc, 0, m, h, n, total)
+    dst.save(str(destino), garbage=3, deflate=True)
+    dst = fitz.open(str(destino))
+    print(f"-> {destino} | {len(dst)} hojas | {destino.stat().st_size / 1e6:.1f} MB")
     print(f"  recortes con solo el texto que se ve: {CONTROL_COPIAS['copias']}; con diferencias: "
           f"{len(CONTROL_COPIAS['problemas'])}")
     for p in CONTROL_COPIAS["problemas"]:
         print("     !! pag. %d, recorte %s: faltan %d letras, sobran %d, se ve igual: %s" % p)
-    fuentes = {pno: (src[pno], med[pno - 1]) for pno in range(2, len(src))}
-    fuentes[1] = (ind_doc[0], ind_m)
-    return dst, plan_final, fuentes, nums, total
+    fotos = {n: round(h) for n, h in rep.fotos.items()}
+    print("  fotos (alto en pt de pantalla):", fotos)
+    print("  subidas:", rep.mover, "| al capitulo anterior:", sorted(rep.al_anterior))
+    return dst, plan, res, rep, nums, total
 
 
-def lado_a_lado(src, dst, pno_src, desde, hasta, pno_dst, rotulo_izq, rotulo_der, salida, dpi=110):
-    """La misma parte de la version de pantalla (izquierda) y la hoja A4 (derecha), a la misma escala."""
-    from PIL import Image, ImageDraw, ImageFont
-    clip = fitz.Rect(0, max(0, desde - 24), 660, hasta + 24)
-    izq = src[pno_src].get_pixmap(dpi=dpi, clip=clip)
-    der = dst[pno_dst].get_pixmap(dpi=dpi)
-    a = Image.frombytes("RGB", (izq.width, izq.height), izq.samples)
-    b = Image.frombytes("RGB", (der.width, der.height), der.samples)
-    f = ImageFont.truetype(str(HERE / "_fonts" / "Inter-SemiBold.ttf"), 22)
-    m, cab = 40, 60
-    lienzo = Image.new("RGB", (a.width + b.width + 3 * m, max(a.height, b.height) + cab + m), "white")
-    lienzo.paste(a, (m, cab))
-    lienzo.paste(b, (2 * m + a.width, cab))
-    d = ImageDraw.Draw(lienzo)
-    d.text((m, 18), rotulo_izq, font=f, fill=(124, 46, 35))
-    d.text((2 * m + a.width, 18), rotulo_der, font=f, fill=(124, 46, 35))
-    lienzo.save(salida)
+# ---------------------------------------------------------------------------------------------- controles
+def blanco_al_pie(dst, desde=2):
+    """El blanco de cada hoja, medido en la hoja dibujada: desde el ultimo contenido hasta la raya del pie, sobre el
+    alto entre el encabezado y la raya."""
+    import numpy as np
+    out = []
+    y_cab, y_raya = AREA0 * ESC, AREA1 * ESC
+    for n in range(desde, len(dst) + 1):
+        pm = dst[n - 1].get_pixmap(dpi=72, alpha=False)
+        a = np.frombuffer(pm.samples, dtype=np.uint8).reshape(pm.height, pm.width, 3).astype(int)
+        zona = a[int(y_cab) + 2:int(y_raya) - 2, 40:int(A4_W) - 40]
+        distinto = (np.abs(zona - a[3, 3]).sum(axis=2) > 6).any(axis=1)
+        filas = np.nonzero(distinto)[0]
+        ultimo = int(y_cab) + 2 + (filas[-1] if len(filas) else 0)
+        out.append((n, (y_raya - 1 - ultimo) / (y_raya - y_cab)))
+    return out
 
 
-def muestras(elegidas):
-    med, src, plan, total, _, _, _ = plan_completo()
-    dst = fitz.open()
-    portada(dst, src)
-    detalle = []
-    for n_hoja in elegidas:
-        pno, h, n = next(x for x in plan if x[2] == n_hoja)
-        componer(dst, src, pno, med[pno - 1], h, n, total)
-        detalle.append((pno, h, n))
-    carpeta = ROOT / "salida" / "muestras_a4"
+def comparar(dst, total, n_ind):
+    """Todo el texto de la A4 (se vea o no) contra el de la version de pantalla, sin la tapa, el indice, los
+    encabezados y los pies: tiene que ser el mismo, palabra por palabra; de mas solo pueden estar los encabezados
+    repetidos de los cuadros partidos."""
+    src = fitz.open(str(PANTALLA))
+
+    def cuerpo(pg, esc):
+        H_ = pg.rect.height
+        return collections.Counter(w[4] for w in pg.get_text("words", flags=TODO_EL_TEXTO)
+                                   if 52 * esc < (w[1] + w[3]) / 2 < H_ - 40 * esc)
+    p = collections.Counter()
+    for k in range(2, len(src)):
+        p += cuerpo(src[k], 1.0)
+    a = collections.Counter()
+    for k in range(1 + n_ind, len(dst)):
+        a += cuerpo(dst[k], ESC)
+    return p - a, a - p
+
+
+def muestras(hojas, carpeta):
+    """Esas hojas de la A4, en un PDF y en imagenes, para el visto bueno (la A4 entera queda en out/)."""
+    dst, plan, res, rep, nums, total = armar(destino=B.OUT / "a4_completa.pdf")
     carpeta.mkdir(parents=True, exist_ok=True)
-    pdf = carpeta / "MUESTRAS_A4.pdf"
-    dst.save(str(pdf), garbage=3, deflate=True)
-    dst = fitz.open(str(pdf))
-    lado_a_lado(src, dst, 0, 0, src[0].rect.height - 24, 0, "PANTALLA · tapa", "A4 · hoja 1 (al 90%)",
-                carpeta / "muestra_1_portada.png")
-    nombres = ["muestra_2_texto_y_recuadro", "muestra_3_cuadro", "muestra_4_grafico"]
-    for k, (pno, h, n) in enumerate(detalle):
-        a, z = h["tramos"][0][0], h["tramos"][-1][1]
-        lado_a_lado(src, dst, pno, a, z, k + 1, f"PANTALLA · pág. {pno + 1} (la misma parte)",
-                    f"A4 · hoja {n} de {total} (al 90%)", carpeta / f"{nombres[k]}.png")
-    print("muestras:", pdf, [d[2] for d in detalle])
+    for f in carpeta.glob("*"):
+        f.unlink()
+    m = fitz.open()
+    for n in hojas:
+        m.insert_pdf(dst, from_page=n - 1, to_page=n - 1)
+        dst[n - 1].get_pixmap(dpi=110).save(str(carpeta / f"hoja_{n:03d}.png"))
+    m.save(str(carpeta / "MUESTRAS_A4.pdf"), garbage=3, deflate=True)
+    return dst, plan, total
+
+
+def controles(dst, total, n_ind):
+    print("  blanco al pie (de la raya del pie al ultimo contenido, sobre el alto entre encabezado y raya):")
+    b = blanco_al_pie(dst)
+    malas_h = [(n, f) for n, f in b if f > TERCIO and n != len(dst)]
+    print(f"     hojas con mas de un tercio en blanco (sin contar la ultima): {len(malas_h)} {[(n, round(f * 100)) for n, f in malas_h]}")
+    print(f"     entre 15% y un tercio: {sum(1 for n, f in b if 0.15 < f <= TERCIO)} | la ultima: {b[-1][1]:.0%}")
+    faltan, sobran = comparar(dst, total, n_ind)
+    print(f"  texto contra la pantalla: faltan {sum(faltan.values())} {list(faltan.items())[:12]}; "
+          f"sobran {sum(sobran.values())} {list(sobran.items())[:12]}")
+    return b
 
 
 if __name__ == "__main__":
     if "--muestras" in sys.argv:
-        muestras([int(x) for x in sys.argv[sys.argv.index("--muestras") + 1:]] or [78, 26, 57])
-        sys.exit(0)
-    dst, plan, fuentes, nums, total = armar()
-    malas = comparar(fuentes, dst, plan, total)
-    if malas:
-        print("  !! paginas cuyas palabras no coinciden con las de sus hojas A4:")
-        for p in malas:
-            print("     pag. %d: faltan %d, sobran %d · %s · %s" % p)
+        hojas = [int(x) for x in sys.argv[sys.argv.index("--muestras") + 1:]]
+        dst, plan, total = muestras(hojas, ROOT / "salida" / "muestras_a4")
     else:
-        print("  OK: cada pagina de pantalla esta entera en sus hojas A4, palabra por palabra, y ninguna hoja guarda "
-              "texto escondido")
-    print("  indice A4:", ", ".join(map(str, nums)))
+        dst, plan, res, rep, nums, total = armar()
+        print("  indice A4:", ", ".join(map(str, nums)))
+    controles(dst, total, sum(1 for x in plan if x[0] is not None and x[0] is plan[1][0]))
