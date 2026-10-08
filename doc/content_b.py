@@ -214,7 +214,7 @@ C3B = dict(id="cap3b", runhead=RH, html="""
              key="ceden") + """
 <table>
 <colgroup><col style="width:196pt"><col><col></colgroup>
-<tr class="hd"><th>Programa</th><th class="r">Devengado 2025</th><th>Para tener una idea del tama&ntilde;o</th></tr>
+<tr class="hd"><th>Programa</th><th class="r">Gastado en 2025</th><th>Para tener una idea del tama&ntilde;o</th></tr>
 <tr class="hi"><td class="l">Mantenimiento y embellecimiento</td><td class="n"><b>14.654,8 M</b></td><td class="m">Es el quinto programa m&aacute;s grande del presupuesto. Es <b>ochenta y seis veces</b> lo que se gasta en empleo.</td></tr>
 <tr><td class="l">Construcci&oacute;n de infraestructura deportiva</td><td class="n">2.688,8 M</td><td class="m">Es <b>ocho veces</b> lo que se gasta en Infraestructura Habitacional.</td></tr>
 <tr><td class="l">Mantenimiento y reposici&oacute;n del arbolado</td><td class="n">7.406,2 M</td><td class="m">&mdash;</td></tr>

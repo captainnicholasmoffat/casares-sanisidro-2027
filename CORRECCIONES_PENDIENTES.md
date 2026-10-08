@@ -3219,3 +3219,17 @@ repitiendo arriba su título con «(sigue)».
   Boulogne y Martínez, que es del mismo 1.1, con su epígrafe (regla de Nick: subir una foto de esa misma sección;
   doc/corte_a4.py ahora acepta otra foto de la sección y el par, sólo en una hoja que pasa del tercio).
 - Cinco tests OK (data/ y 01_raw/indec restaurados). El Excel no cambia.
+
+## DISPATCH 11 · CIERRE (08/10) · APLICADO
+- Índice (pantalla y A4): 2.1 «Gastar el presupuesto no es prestar el servicio» y 3.2 «Los cuatro números que deciden
+  el futuro de las cuentas de San Isidro», como sus títulos. Los demás títulos del índice ya coincidían.
+- «Aprietes» pasa a «presiones» en el 4.11 y en el título del artículo 6 de la Ordenanza IV (anexo), por orden de Nick.
+- 4.11: vuelve el dato que había quedado sólo en el resumen viejo del capítulo 4: «El equipo son 59 personas en la
+  plataforma y 5 en dispositivos.», al lado del cuadro del equipo.
+- Decisión de Nick: en los encabezados de los cuadros, «Devengado» pasa a «Gastado» (1.2, dos cuadros y el de los
+  programas; 3.4, cuadro de lo que ceden los programas). Queda «devengado» en la explicación del capítulo 3, en el
+  glosario, en la nota de método, en las fuentes de los gráficos y en el anexo. Los ejes de dos gráficos (pág. 12 y 22)
+  siguen diciendo «devengados»: no son cuadros.
+- Pantalla: 52 páginas, la más alta de 2.680 pt. A4: 127 hojas, ninguna con más de un tercio en blanco (33 entre 15% y
+  un tercio; la última, 6%); índice con sus 64 entradas en su lugar; 161 recortes sin diferencias; el texto de la A4 es
+  el de la pantalla. Cinco tests OK (data/ y 01_raw restaurados). El Excel no cambia.

@@ -198,7 +198,7 @@ artificial del Municipio registra cada clausura con su grabaci&oacute;n, su moti
 avisa cuando a un mismo comercio se lo clausura de manera reiterada o cuando una clausura no se sostiene con una
 infracci&oacute;n constatada. Toda clausura puede reclamarse.</p>
 
-<h3>Art&iacute;culo 6 &mdash; Denuncia de coimas, aprietes y amenazas</h3>
+<h3>Art&iacute;culo 6 &mdash; Denuncia de coimas, presiones y amenazas</h3>
 <p class="tight">Toda persona puede denunciar ante la inteligencia artificial del Municipio que un agente le exige dinero,
 la amenaza o le clausura sin motivo. La denuncia, con la prueba sellada al momento de grabar, se remite a la Comisi&oacute;n de
 Obras y Servicios P&uacute;blicos del Concejo Deliberante, a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a, y nunca s&oacute;lo

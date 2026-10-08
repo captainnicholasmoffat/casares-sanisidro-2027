@@ -75,13 +75,13 @@ _IDX = [
  ("i", "1.5 &nbsp;San Isidro se financia solo. Eso cambia todo.", "cap1b"),
  ("i", "1.6 &nbsp;Lo que dice este cap&iacute;tulo, en cinco puntos", "cap1b"),
  ("g", "2 &middot; La gesti&oacute;n, medida", None),
- ("i", "2.1 &nbsp;Ejecutar el presupuesto no es prestar el servicio", "cap2"),
+ ("i", "2.1 &nbsp;Gastar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
  ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
  ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en once puntos", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
- ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que gobiernan el futuro fiscal", "cap3a"),
+ ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que deciden el futuro de las cuentas de San Isidro", "cap3a"),
  ("i", "3.3 &nbsp;C&oacute;mo quedan las cuentas si nadie cambia nada", "cap3a"),
  ("i", "3.4 &nbsp;Cu&aacute;nto cuesta este programa", "cap3b"),
  ("i", "3.5 &nbsp;De d&oacute;nde salen los fondos", "cap3b2"),
@@ -239,7 +239,7 @@ C1A = dict(id="cap1a", runhead=RH, html=fig("f_catedral",
              "Lo que gast&oacute; cada municipio en 2025 y qu&eacute; parte fue a obra p&uacute;blica. Est&aacute;n San Isidro, los cuatro municipios que lo rodean y el municipio t&iacute;pico de la provincia.") + """
 <table>
 <colgroup><col style="width:190pt"><col><col></colgroup>
-<tr class="hd"><th>Municipio</th><th class="r">Gasto devengado total 2025 (millones de pesos)</th>
+<tr class="hd"><th>Municipio</th><th class="r">Total gastado en 2025 (millones de pesos)</th>
 <th class="r">Parte que fue a obra p&uacute;blica (%)</th></tr>
 <tr class="hi"><td class="l">San Isidro</td><td class="n">324.304</td><td class="n"><b>17,8</b></td></tr>
 <tr><td class="l">Vicente L&oacute;pez</td><td class="n">318.824</td><td class="n">7,4</td></tr>
@@ -260,7 +260,7 @@ C1A = dict(id="cap1a", runhead=RH, html=fig("f_catedral",
              "Lo que gast&oacute; el Municipio en 2025 en cada servicio urbano, y en agua y cloacas.") + """
 <table>
 <colgroup><col style="width:300pt"><col></colgroup>
-<tr class="hd"><th>En qu&eacute; se gast&oacute;</th><th class="r">Devengado 2025</th></tr>
+<tr class="hd"><th>En qu&eacute; se gast&oacute;</th><th class="r">Gastado en 2025</th></tr>
 <tr><td class="l">Recolecci&oacute;n de residuos, barrido y limpieza</td><td class="n">49.270 M</td></tr>
 <tr class="hi"><td class="l">Alumbrado p&uacute;blico</td><td class="n"><b>10.313 M</b></td></tr>
 <tr><td class="l">Otros servicios urbanos</td><td class="n">5.829 M</td></tr>
@@ -295,7 +295,7 @@ y Funci&oacute;n, ejercicio 2025. Subfunciones 3.9.1 a 3.9.9 y funci&oacute;n 3.
              "Lo que se gast&oacute; en 2025 en los dos programas, en total y por habitante.", key="dos_partidas") + """
 <table>
 <colgroup><col style="width:200pt"><col><col><col></colgroup>
-<tr class="hd"><th>Programa</th><th class="r">Devengado</th><th class="r">% del gasto total</th>
+<tr class="hd"><th>Programa</th><th class="r">Gastado</th><th class="r">% del gasto total</th>
 <th class="r">Por habitante</th></tr>
 <tr><td class="l">Apoyo y Promoci&oacute;n al Empleo</td><td class="n">170 M$</td><td class="n"><b>0,05%</b></td><td class="n"><b>572 $/a&ntilde;o</b></td></tr>
 <tr><td class="l">Infraestructura Habitacional</td><td class="n">335 M$</td><td class="n"><b>0,10%</b></td><td class="n"><b>1.127 $/a&ntilde;o</b></td></tr>
