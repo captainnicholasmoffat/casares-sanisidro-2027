@@ -271,7 +271,7 @@ def g_rigidez():
             ha="right", va="center", fontsize=6.6, color=SAGED, fontweight="semibold")
     ax.plot([224979/1000]*2,[0,1.35], color=TAUPE, lw=.6, ls=(0,(2,2)))
     ax.set_yticks([]); ax.set_xlim(0,330); ax.set_ylim(-.1,2.55)
-    ax.set_xlabel("miles de millones de pesos devengados en 2025", fontsize=6.2)
+    ax.set_xlabel("miles de millones de pesos gastados en 2025", fontsize=6.2)
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
     save(fig,"g_rigidez")
 
@@ -399,7 +399,7 @@ def g_funcion():
     ax.set_yticks(list(y)); ax.set_yticklabels([f[0] for f in FUNC], fontsize=7)
     ax.set_xlim(0,128); ax.set_xticks([0,20,40,60,80])
     ax.xaxis.set_major_formatter(FuncFormatter(lambda v,p:nb(v)))
-    ax.set_xlabel("miles de millones de pesos devengados en 2025", fontsize=6.2)
+    ax.set_xlabel("miles de millones de pesos gastados en 2025", fontsize=6.2)
     save(fig,"g_funcion")
 
 # --- 14. variacion real por funcion -----------------------------------------

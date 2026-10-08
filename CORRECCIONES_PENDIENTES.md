@@ -3233,3 +3233,7 @@ repitiendo arriba su título con «(sigue)».
 - Pantalla: 52 páginas, la más alta de 2.680 pt. A4: 127 hojas, ninguna con más de un tercio en blanco (33 entre 15% y
   un tercio; la última, 6%); índice con sus 64 entradas en su lugar; 161 recortes sin diferencias; el texto de la A4 es
   el de la pantalla. Cinco tests OK (data/ y 01_raw restaurados). El Excel no cambia.
+- Agregado (decisión de Nick): en los ejes de los gráficos de las págs. 12 (lo que se puede mover del gasto) y 22 (en
+  qué se gasta cada peso), «pesos devengados» pasa a «pesos gastados» (assets/svg y doc/charts.py). Lo demás queda.
+  Pantalla 52 págs. (máx. 2.680 pt); A4 127 hojas, ninguna con más de un tercio en blanco, 161 recortes sin
+  diferencias, el texto igual al de la pantalla; cinco tests OK.
