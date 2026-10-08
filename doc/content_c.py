@@ -996,719 +996,298 @@ las dem&aacute;s.</p>
 <p>La petici&oacute;n vecinal &laquo;No al cierre de Catalejo y Barisidro en la costa sanisidrense&raquo; se abri&oacute; el <b>28 de octubre de 2024</b>. Junt&oacute; <b>1.037 firmas verificadas</b>. Catalejo se demoli&oacute; en junio de 2025, y Barisidro, en agosto. <span class="sg">No es que nadie haya dicho nada. Es que no hab&iacute;a d&oacute;nde decirlo para que sirviera.</span> Una firma juntada en una p&aacute;gina de internet no obliga a nadie.</p><p>Por eso, este programa propone un lugar donde ese mismo reclamo se pueda plantear antes de que se firme el decreto. Y donde tenga una respuesta por escrito.</p></div>
 
 <h2><span class="n">5.6</span>Salud <span class="tag v">Gesti&oacute;n</span></h2>
-<p class="lead">San Isidro tiene tres hospitales municipales, uno odontol&oacute;gico y una red de centros
-de atenci&oacute;n primaria: una infraestructura que pocos municipios bonaerenses tienen. Y el turno se
-sigue sacando haciendo la cola.</p>
-<p><b>Hoy:</b> 78.217 millones, el 24,1% del presupuesto. Es, de lejos, la funci&oacute;n m&aacute;s grande del
-Municipio. <b>Y un dato de partida:</b> el Materno Infantil pas&oacute; de historias cl&iacute;nicas en papel a un
-sistema digital interno; el Central no. <span class="sg">La digitalizaci&oacute;n de este Municipio avanza
-hospital por hospital y &aacute;rea por &aacute;rea</span>, no para todos a la vez.</p>
+<p class="lead">San Isidro tiene tres hospitales municipales, uno odontol&oacute;gico y una red de centros de atenci&oacute;n primaria. Pocos municipios bonaerenses tienen algo as&iacute;. Y el turno se sigue sacando haciendo la cola.</p>
+<p><b>Hoy:</b> 78.217 millones, el 24,1% del presupuesto. Es, de lejos, el gasto m&aacute;s grande del Municipio. <b>Y un dato para empezar:</b> el Materno Infantil pas&oacute; de historias cl&iacute;nicas en papel a un sistema digital interno. El Central no. <span class="sg">En este Municipio, lo digital avanza hospital por hospital y &aacute;rea por &aacute;rea</span>, no para todos a la vez.</p>
 <h3>Lo que encontr&oacute; un recorrido por los hospitales</h3>
 <div class="cols">
-<p><b>Porque el problema de fondo sigue ah&iacute;, y est&aacute; documentado.</b> En un recorrido por
-los hospitales municipales, m&eacute;dicos de planta y pacientes describieron
-<b>faltantes de reactivos, faltantes de medicamentos, falta de camas de internaci&oacute;n y escasez de
-personal</b>. En el Hospital Central hay <b>tres pisos en desuso</b>, en mal estado, usados como
-dep&oacute;sito.</p>
-<p><span class="sg">&laquo;El hospital podr&iacute;a dar para much&iacute;simo m&aacute;s; parece
-m&aacute;s de lo que es&raquo;</span>, resumi&oacute; uno de los m&eacute;dicos consultados. Eso se
-constat&oacute; cinco meses despu&eacute;s del cambio de gobierno, y los profesionales dijeron que en
-buena parte segu&iacute;a igual. <b>Es un problema estructural y por eso una compra no lo
-resuelve.</b></p>
-<p>Una vecina de Boulogne describi&oacute; la cola as&iacute;: llegar a la ventanilla despu&eacute;s de una fila larga y que le digan que se acabaron, que
-vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b></p>
-<p><b>Y la cola tiene tama&ntilde;o medido.</b> En la ventanilla de turnos del Hospital Central se
-contaron <b>37 personas</b> esperando, con esperas de m&aacute;s de una hora. Una paciente hab&iacute;a
-pedido turno de endocrinolog&iacute;a <b>en enero y se lo dieron para junio: cinco meses</b>. Otra hizo la
-fila para laboratorio y, al llegar a la ventanilla, le dijeron que <b>no hab&iacute;a reactivos</b>.
-<span class="sg">Las tres cosas est&aacute;n documentadas en junio de 2024, y nadie las volvi&oacute; a
-medir desde entonces</span>, y eso es parte del problema.</p>
-<p><b>Ah&iacute; est&aacute; la distancia entre comprar un tom&oacute;grafo y que el sistema funcione.</b>
-El equipamiento se inaugura y se fotograf&iacute;a. El turno, el insumo y la cama no.</p>
+<p><b>El problema de fondo sigue ah&iacute;, y est&aacute; documentado.</b> En un recorrido por los hospitales municipales, m&eacute;dicos de planta y pacientes contaron lo que falta. <b>Faltan reactivos, medicamentos, camas de internaci&oacute;n y personal.</b> En el Hospital Central hay <b>tres pisos sin uso</b>, en mal estado, que se usan como dep&oacute;sito.</p>
+<p><span class="sg">&laquo;El hospital podr&iacute;a dar para much&iacute;simo m&aacute;s; parece m&aacute;s de lo que es&raquo;</span>, resumi&oacute; uno de los m&eacute;dicos consultados. Eso se comprob&oacute; cinco meses despu&eacute;s del cambio de gobierno, y los m&eacute;dicos dijeron que en buena parte segu&iacute;a igual. <b>Es un problema de fondo, y por eso una compra no lo resuelve.</b></p>
+<p>Una vecina de Boulogne cont&oacute; c&oacute;mo es la cola. Llega a la ventanilla despu&eacute;s de una fila larga, y le dicen que se acabaron los turnos, que vuelva la semana que viene. <b>&laquo;Uno falta al trabajo para venir.&raquo;</b></p>
+<p><b>Y la cola est&aacute; medida.</b> En la ventanilla de turnos del Hospital Central se contaron <b>37 personas</b> esperando, con esperas de m&aacute;s de una hora. Una paciente hab&iacute;a pedido turno de endocrinolog&iacute;a <b>en enero, y se lo dieron para junio: cinco meses despu&eacute;s</b>. Otra hizo la fila para laboratorio, y al llegar a la ventanilla le dijeron que <b>no hab&iacute;a reactivos</b>. <span class="sg">Las tres cosas se documentaron en junio de 2024, y nadie las volvi&oacute; a medir desde entonces.</span> Eso tambi&eacute;n es parte del problema.</p>
+<p><b>Ah&iacute; est&aacute; la diferencia entre comprar un tom&oacute;grafo y que el sistema funcione.</b> Los equipos se inauguran y se fotograf&iacute;an. El turno, el insumo y la cama, no.</p>
 </div>
 <h3>El Municipio ya tiene turnos digitales en funcionamiento. No los us&oacute; para los hospitales</h3>
 <div class="cols">
-<p><span class="sg">No hay turno m&eacute;dico en
-l&iacute;nea en ning&uacute;n efector de salud humana del partido.</span> Ni en los tres hospitales, ni
-en el odontol&oacute;gico, ni en los nueve centros de atenci&oacute;n primaria. Son telef&oacute;nicos o
-presenciales.</p>
-<p><b>Y el turno para castrar una mascota se saca cien por ciento en l&iacute;nea</b>, por la misma
-plataforma municipal con la que se pide una licencia de conducir, un aviso de obra o una copia de plano.
-El Municipio <b>ya tiene la infraestructura montada y operativa</b>: no la aplic&oacute; a los
-hospitales. <b>No es un problema de tecnolog&iacute;a ni de dinero: es de prioridad.</b></p>
-<p><b>El detalle, verificado en septiembre de 2026.</b> En el Hospital Central, Cardiolog&iacute;a,
-Diabetolog&iacute;a, Endocrinolog&iacute;a y Neurolog&iacute;a se piden <b>s&oacute;lo por
-tel&eacute;fono</b>. En el Materno Infantil hay dieciocho especialidades por tel&eacute;fono en una
-ventana de cuatro horas y veinte <b>s&oacute;lo presenciales</b>, entre ellas Ecograf&iacute;a,
-electrocardiograma, Laboratorio y Radiolog&iacute;a Infantil.</p>
-<p><b>Hay adem&aacute;s una p&aacute;gina municipal llamada &laquo;Portal de turnos online&raquo;</b> que
-no incluye salud: ofrece licencias de conducir, aviso de obra y copia de plano.
-<span class="sg">El nombre promete m&aacute;s de lo que da.</span></p>
+<p><span class="sg">No se puede sacar turno m&eacute;dico por internet en ning&uacute;n centro de salud para personas del partido.</span> Ni en los tres hospitales, ni en el odontol&oacute;gico, ni en los nueve centros de atenci&oacute;n primaria. Los turnos se piden por tel&eacute;fono o en persona.</p>
+<p><b>En cambio, el turno para castrar una mascota se saca entero por internet.</b> Se saca con la misma plataforma del Municipio con la que se pide una licencia de conducir, un aviso de obra o una copia de plano. El Municipio <b>ya tiene todo armado y funcionando</b>, pero no lo us&oacute; para los hospitales. <b>No es un problema de tecnolog&iacute;a ni de dinero: es de prioridad.</b></p>
+<p><b>El detalle.</b> En el Hospital Central, los turnos de Cardiolog&iacute;a, Diabetolog&iacute;a, Endocrinolog&iacute;a y Neurolog&iacute;a se piden <b>s&oacute;lo por tel&eacute;fono</b>. En el Materno Infantil, dieciocho especialidades se piden por tel&eacute;fono, en un horario de cuatro horas. Y veinte se piden <b>s&oacute;lo en persona</b>, entre ellas Ecograf&iacute;a, electrocardiograma, Laboratorio y Radiolog&iacute;a Infantil.</p>
+<p><b>Adem&aacute;s, hay una p&aacute;gina del Municipio que se llama &laquo;Portal de turnos online&raquo;.</b> No incluye salud: ofrece licencias de conducir, aviso de obra y copia de plano. <span class="sg">El nombre promete m&aacute;s de lo que da.</span></p>
 </div>
 
 <div class="callout g">
-<div class="clabel">La plataforma ya existe, y proponemos pedir la adhesi&oacute;n</div>
-<p><span class="sg">Proponemos montar el turno m&eacute;dico en l&iacute;nea sobre la plataforma municipal que ya
-da turnos para otros tr&aacute;mites: no hay que construirla ni pagarla.</span> <b>Es la propuesta
-m&aacute;s barata de este programa y la que m&aacute;s r&aacute;pido se nota</b>: el d&iacute;a que
-funcione, nadie pierde una ma&ntilde;ana de trabajo para pedir un turno.</p>
-<p><b>Y la inteligencia artificial del Municipio hace dos cosas m&aacute;s.</b> Al vecino le saca el turno en la charla
-&mdash;&laquo;sacame turno con el cardi&oacute;logo&raquo;&mdash;; le dice a qu&eacute; servicio y a qu&eacute; centro ir, qu&eacute; llevar, qu&eacute; d&iacute;a hay lugar
-antes y si lo suyo se resuelve por teleconsulta; le recuerda el turno con un mensaje para contestar &laquo;confirmo&raquo; o
-&laquo;cancelo&raquo; y, si no puede ir, lo cancela. No diagnostica: si hay urgencia, lo manda a la guardia o al 107.</p>
-<p><b>Y a los hospitales les mejora la turnera,</b> que hoy funciona con la cola en la ventanilla: confirma y recuerda
-para que se pierdan menos turnos &mdash;en 21 ensayos, los recordatorios por mensaje bajaron los faltazos de 21% a 15%&mdash;;
-cuando alguien cancela, le ofrece el turno al siguiente de la lista de espera; prev&eacute; la demanda por especialidad y por
-centro, y marca d&oacute;nde falta un m&eacute;dico o un horario. Propone c&oacute;mo reorganizar las agendas, y lo decide la direcci&oacute;n de
-cada hospital. El personal que hoy atiende la ventanilla controla que funcione y llama a quienes no usan la
-inteligencia artificial del Municipio.</p>
-<p><b>Mi Salud Digital</b> es el sistema de la Provincia de Buenos
-Aires: turno por celular, historia cl&iacute;nica digital y teleconsulta por videollamada, con receta y
-orden integradas autom&aacute;ticamente. <b>La historia cl&iacute;nica digital ya opera en m&aacute;s de
-sesenta municipios bonaerenses</b>, el sistema lleva registrados m&aacute;s de 19,5 millones de turnos y la
-Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000 computadoras, lectoras de DNI e
-impresoras para conectarse. No hay constancia de que San Isidro haya adherido.</p>
-<p>Proponemos pedir la adhesi&oacute;n, en paralelo.</p>
+<div class="clabel">La plataforma ya existe, y proponemos sumarnos al sistema de la Provincia</div>
+<p><span class="sg">Proponemos poner el turno m&eacute;dico por internet en la plataforma del Municipio que ya da turnos para otros tr&aacute;mites. No hay que construirla ni pagarla.</span> <b>Es la propuesta m&aacute;s barata de este programa y la que m&aacute;s r&aacute;pido se nota.</b> El d&iacute;a que funcione, nadie va a perder una ma&ntilde;ana de trabajo para pedir un turno.</p>
+<p><b>Y la inteligencia artificial del Municipio hace dos cosas m&aacute;s.</b> Al vecino le saca el turno mientras conversa con ella: &laquo;sacame turno con el cardi&oacute;logo&raquo;. Le dice a qu&eacute; servicio y a qu&eacute; centro ir, y qu&eacute; llevar. Le dice qu&eacute; d&iacute;a hay lugar antes, y si lo suyo se puede resolver por teleconsulta. Le recuerda el turno con un mensaje para contestar &laquo;confirmo&raquo; o &laquo;cancelo&raquo;. Y si no puede ir, lo cancela.</p>
+<p><b>Y a los hospitales les mejora el sistema de turnos</b>, que hoy funciona con la cola en la ventanilla. Confirma y recuerda los turnos, para que se pierdan menos. En 21 estudios, los recordatorios por mensaje bajaron las faltas de 21% a 15%. Cuando alguien cancela, le ofrece el turno al siguiente de la lista de espera. Calcula cu&aacute;nta demanda va a haber por especialidad y por centro, y marca d&oacute;nde falta un m&eacute;dico o un horario. Propone c&oacute;mo reorganizar las agendas, y lo decide la direcci&oacute;n de cada hospital. El personal que hoy atiende la ventanilla controla que funcione. Y llama a quienes no usan la inteligencia artificial del Municipio.</p>
+<p><b>Mi Salud Digital</b> es el sistema de la Provincia de Buenos Aires. Tiene turno por celular, historia cl&iacute;nica digital y teleconsulta por videollamada, con la receta y la orden incluidas solas. <b>La historia cl&iacute;nica digital ya funciona en m&aacute;s de sesenta municipios bonaerenses.</b> El sistema ya registr&oacute; m&aacute;s de 19,5 millones de turnos. Y la Provincia entreg&oacute; a hospitales y municipios m&aacute;s de 5.000 computadoras, lectoras de DNI e impresoras para conectarse. No hay constancia de que San Isidro se haya sumado. Proponemos pedir sumarse, al mismo tiempo.</p>
 </div>
 <div class="cols">
-<p><b>Proponemos teleconsulta para lo que no necesita ir al hospital.</b> Renovar una receta cr&oacute;nica, una
-consulta por fiebre un domingo, un control de seguimiento. En las experiencias argentinas medidas la
-espera es de <b>3 a 6 minutos</b>, la atenci&oacute;n dura entre 6 y 7, y el 86% de las consultas se
-resuelven. <b>Cada teleconsulta libera un turno presencial</b> para quien s&iacute; necesita el
-consultorio.</p>
-<p><b>Arreglar los edificios, que el propio gobierno reconoce.</b> La gesti&oacute;n actual
-identific&oacute; filtraciones y humedades como problema estructural de los hospitales municipales.</p><p>Proponemos tratarlo como obra, en la partida de obra: <span class="sg">la de los centros de atenci&oacute;n primaria la prioriza la comisi&oacute;n de cada zona</span> con el mecanismo del cap&iacute;tulo 4, y la de los hospitales, que sirven a todo el partido, va por la mitad que decide el Ejecutivo (6.2).</p>
-<p><b>Y reci&eacute;n entonces, que el vecino pregunte.</b> Una vez que el turno es digital, el tiempo de espera por
-especialidad y por establecimiento existe como dato sin que nadie lo cargue a mano. Que cualquier vecino pueda preguntar cu&aacute;nto se espera un turno en cada hospital deja de ser una promesa administrativa y pasa a ser la forma de saber d&oacute;nde falta un m&eacute;dico. Lo mismo
-con la ejecuci&oacute;n por centro y por zona, que hoy no se sabe: con 263.106 pesos por habitante al
-a&ntilde;o en juego, esa es la diferencia entre saber y suponer si el sistema llega a Boulogne.</p>
+<p><b>Proponemos teleconsulta para lo que no necesita ir al hospital.</b> Por ejemplo, renovar la receta de un tratamiento largo, consultar por fiebre un domingo o hacer un control. En las experiencias argentinas que se midieron, la espera es de <b>3 a 6 minutos</b> y la atenci&oacute;n dura entre 6 y 7. Y el 86% de las consultas se resuelven. <b>Cada teleconsulta libera un turno en persona</b> para quien s&iacute; necesita el consultorio.</p>
+<p><b>Arreglar los edificios, algo que el propio gobierno reconoce.</b> La gesti&oacute;n actual reconoci&oacute; que las filtraciones y la humedad son un problema de fondo de los hospitales municipales. Proponemos tratarlo como obra, con la partida de obra. <span class="sg">La obra de los centros de atenci&oacute;n primaria la elige la comisi&oacute;n de cada zona</span>, con el mecanismo del cap&iacute;tulo 4. La de los hospitales, que sirven a todo el partido, va por la mitad que decide el Ejecutivo (6.2).</p>
+<p><b>Y reci&eacute;n entonces, que el vecino pregunte.</b> Cuando el turno es digital, el tiempo de espera por especialidad y por hospital queda registrado solo, sin que nadie lo cargue a mano. Entonces, que cualquier vecino pueda preguntar cu&aacute;nto se espera en cada hospital deja de ser una promesa. Pasa a ser la forma de saber d&oacute;nde falta un m&eacute;dico. Lo mismo pasa con lo que se gasta en cada centro y en cada zona, que hoy no se sabe. Est&aacute;n en juego 263.106 pesos por habitante por a&ntilde;o. Es la diferencia entre saber y suponer si la salud llega a Boulogne.</p>
 </div>
 
 """ + fig("f_turno", "El turno, sacado desde el tel&eacute;fono, en un hospital municipal. Ilustraci&oacute;n.") + """
 <h3>La inteligencia artificial en salud ya fue anunciada. Lo que falta es auditarla</h3>
 <div class="pull"><div class="plabel">La fecha importa, y es la mitad del argumento</div>
-<p>El anuncio es de <b>abril de 2023</b>. Lo que se anunci&oacute; con esa etiqueta es <i>triage</i>
-sobre im&aacute;genes: software que marca si una placa se aparta de lo esperado.
-<span class="sg">No es lo que este programa propone, y no es lo que hoy se entiende por inteligencia
-artificial.</span> Lo mismo vale para las c&aacute;maras: lo que se anuncia como inteligencia artificial
-es anal&iacute;tica de video, una tecnolog&iacute;a de hace a&ntilde;os. En los dos casos la palabra
-lleg&oacute; antes que la capacidad.</p></div>
+<p>El anuncio es de <b>abril de 2023</b>. Lo que se anunci&oacute; con ese nombre es un programa que revisa radiograf&iacute;as. Marca si una placa se aparta de lo esperado. <span class="sg">No es lo que este programa propone, y no es lo que hoy se entiende por inteligencia artificial.</span> Lo mismo vale para las c&aacute;maras. Lo que se anuncia como inteligencia artificial es an&aacute;lisis de video, una tecnolog&iacute;a de hace a&ntilde;os. En los dos casos, la palabra lleg&oacute; antes que la capacidad.</p></div>
 <div class="cols">
-<p><b>Lo dice el propio Municipio.</b> En abril de 2023 anunci&oacute; ser &laquo;el primer municipio en
-sumar inteligencia artificial en salud&raquo;, en los tres hospitales. Seg&uacute;n la cobertura
-period&iacute;stica de esos d&iacute;as hubo antes un a&ntilde;o de prueba con estad&iacute;sticas
-propias, y <span class="sg">el m&eacute;dico decide</span>, que es exactamente la l&iacute;nea que este
-programa no cruza.</p>
-<p><b>Y hay dos cosas que el anuncio dice y ninguna fuente respalda.</b> El entonces secretario de Salud
-afirm&oacute; que el sistema reduce un 70% el error de diagn&oacute;stico y ahorra un 30% del tiempo en
-los casos urgentes. <b>No hay estudio, informe ni evaluaci&oacute;n publicada detr&aacute;s de esas dos
-cifras.</b> Son declaraciones.</p>
-<p><b>Ninguna fuente p&uacute;blica nombra al proveedor.</b> Que un municipio contrate un sistema que
-interviene en un diagn&oacute;stico y no diga de qui&eacute;n es, es el hallazgo.
-<span class="sg">La ANMAT exige que el software cuyo uso previsto sea diagn&oacute;stico se registre
-como producto m&eacute;dico</span>, y de ese registro no hay rastro p&uacute;blico.</p>
-<p><b>Por eso lo que se promete ac&aacute; no es comprar: es contestar.</b> Cualquiera puede preguntar qu&eacute; sistema es,
-qui&eacute;n lo provee, si est&aacute; registrado ante la ANMAT, qu&eacute; mide y con qu&eacute;
-resultados. Y los datos del a&ntilde;o de prueba, si existen: <b>ser&iacute;an la &uacute;nica evidencia
-argentina de resultados medidos en un municipio</b>, y hoy nadie los vio.</p>
-<p><b>Y hay una raz&oacute;n de responsabilidad, no s&oacute;lo de transparencia.</b> El m&eacute;dico
-que usa la herramienta responde por su criterio; pero <b>el hospital y el Municipio responden como
-due&ntilde;o y guardi&aacute;n de la cosa</b> cuando el da&ntilde;o viene de un defecto del sistema.
-Quien es responsable tiene que poder decir qu&eacute; contrat&oacute;.</p>
-<p><b>La propuesta: los egresados del programa desarrollan sobre los sistemas del Municipio y las universidades del
-partido validan</b>, con el mismo esquema del cap&iacute;tulo 4. Y hay antecedentes p&uacute;blicos
-argentinos para mirar: RETINAR, del CONICET y la Universidad del Centro, es el mejor caso nacional, y el
-Hospital San Bernardo de Salta fue el primer hospital p&uacute;blico argentino con IA en
-radiograf&iacute;a de t&oacute;rax.</p>
+<p><b>Lo dice el propio Municipio.</b> En abril de 2023 anunci&oacute; que era &laquo;el primer municipio en sumar inteligencia artificial en salud&raquo;, en los tres hospitales. Seg&uacute;n los diarios de esos d&iacute;as, antes hubo un a&ntilde;o de prueba con estad&iacute;sticas propias. <span class="sg">Y el que decide es el m&eacute;dico.</span></p>
+<p><b>Y hay dos cosas que el anuncio dice y ninguna fuente respalda.</b> El que era secretario de Salud dijo que el sistema baja un 70% los errores de diagn&oacute;stico. Y dijo que ahorra un 30% del tiempo en los casos urgentes. <b>No hay ning&uacute;n estudio, informe ni evaluaci&oacute;n publicada detr&aacute;s de esas dos cifras.</b> Son declaraciones.</p>
+<p><b>Ninguna fuente p&uacute;blica dice qui&eacute;n es el proveedor.</b> Ese es el hallazgo: un municipio contrata un sistema que participa en un diagn&oacute;stico y no dice de qui&eacute;n es. <span class="sg">La ANMAT exige que el software que se usa para diagnosticar se registre como producto m&eacute;dico.</span> Y no hay rastro p&uacute;blico de ese registro.</p>
+<p><b>Por eso lo que se promete ac&aacute; no es comprar: es contestar.</b> Cualquiera puede preguntar qu&eacute; sistema es, qui&eacute;n lo provee y si est&aacute; registrado ante la ANMAT. Tambi&eacute;n qu&eacute; mide y con qu&eacute; resultados. Y puede pedir los datos del a&ntilde;o de prueba, si existen. <b>Ser&iacute;an la &uacute;nica prueba argentina de resultados medidos en un municipio</b>, y hoy nadie los vio.</p>
+<p><b>Y hay una raz&oacute;n de responsabilidad, no s&oacute;lo de transparencia.</b> El m&eacute;dico que usa la herramienta responde por su criterio. Pero si el da&ntilde;o viene de una falla del sistema, <b>el hospital y el Municipio responden como due&ntilde;os y guardianes de esa herramienta</b>. Quien es responsable tiene que poder decir qu&eacute; contrat&oacute;.</p>
+<p><b>La propuesta: los egresados del programa desarrollan sobre los sistemas del Municipio, y las universidades del partido controlan que funcione</b>, con el mismo esquema del cap&iacute;tulo 4. Y hay casos p&uacute;blicos argentinos para mirar. RETINAR, del CONICET y la Universidad del Centro, es el mejor caso del pa&iacute;s. Y el Hospital San Bernardo de Salta fue el primer hospital p&uacute;blico argentino con inteligencia artificial en radiograf&iacute;as de t&oacute;rax.</p>
 </div>
 <div class="callout a">
 <div class="clabel">Lo que s&iacute; falta comprar, y no es software</div>
-<p><b>La tomograf&iacute;a y la resonancia no son equipamiento propio de los hospitales municipales.</b>
-Las tomograf&iacute;as funcionan sobre espacios concesionados a un tercero y la resonancia se contrata
-como servicio a un prestador privado, con licitaciones y pr&oacute;rrogas sucesivas. Es un dato de estructura que cambia cualquier discusi&oacute;n sobre diagn&oacute;stico por im&aacute;genes en
-San Isidro: <b>la decisi&oacute;n sobre el estudio que m&aacute;s pesa no est&aacute; enteramente del
-lado del Municipio</b>.</p>
+<p><b>Los tom&oacute;grafos y el resonador no son de los hospitales municipales.</b> Las tomograf&iacute;as se hacen en espacios dados en concesi&oacute;n a otra empresa. Y la resonancia se contrata como servicio a una empresa privada, con licitaciones y renovaciones una tras otra. Este dato cambia cualquier discusi&oacute;n sobre los estudios por im&aacute;genes en San Isidro. <b>La decisi&oacute;n sobre el estudio que m&aacute;s pesa no est&aacute; del todo en manos del Municipio.</b></p>
 </div>
 
 <h3>Y lo que decide si hay gasas: c&oacute;mo se compra</h3>
-<p class="tight">Es la funci&oacute;n m&aacute;s grande del presupuesto municipal &mdash;el 24,1%&mdash; y
-la que menos se puede mirar desde afuera. Tambi&eacute;n es, en todo el mundo, donde se pierde m&aacute;s
-dinero p&uacute;blico.</p>
+<p class="tight">Es el gasto m&aacute;s grande del presupuesto del Municipio, el 24,1%, y el que menos se puede mirar desde afuera. Tambi&eacute;n es, en todo el mundo, donde m&aacute;s dinero p&uacute;blico se pierde.</p>
 <div class="cols">
-<p><b>El dato general es contundente.</b> Entre el <b>40% y el 60%</b> de los casos documentados de
-corrupci&oacute;n en sistemas de salud est&aacute;n vinculados a la compra y el suministro de
-medicamentos e insumos. No es una particularidad argentina: es d&oacute;nde falla el mecanismo en
-cualquier pa&iacute;s.</p>
-<p><b>Y no hace falta que haya delito para que el da&ntilde;o exista.</b> Cuando un hospital no puede
-saber cu&aacute;nto paga otro hospital p&uacute;blico por el mismo producto, es imposible detectar
-si se paga de m&aacute;s. <span class="sg">Basta con que falte la comparaci&oacute;n para que el gasto se vuelva
-estructuralmente ineficiente</span>, sin que nadie robe nada.</p>
-<p><b>Y en San Isidro ya pas&oacute;.</b> En 2024 el Municipio denunci&oacute; penalmente a
-exfuncionarios de Salud y directores de hospitales &mdash;<b>al menos diez personas</b>&mdash; por
-sobrefacturaci&oacute;n en las viandas del Materno Infantil y el Ciudad de Boulogne, con un perjuicio
-estimado en <b>262 millones de pesos s&oacute;lo en 2023</b>. Se rescindi&oacute; el contrato y se dio de
-baja al proveedor del registro municipal.</p>
-<p><span class="sg">Y hubo un segundo hallazgo que casi no se coment&oacute; y que importa m&aacute;s
-ac&aacute;</span>: las dudas se repitieron en la compra de insumos hospitalarios &mdash;guantes
-descartables, entre otros&mdash; al detectar que varios materiales se compraban despu&eacute;s a precios
-m&aacute;s bajos que los facturados en noviembre de 2023. <b>Se descubri&oacute; comparando un precio
-contra otro. Si ese dato hubiera sido p&uacute;blico, se ve&iacute;a mientras pasaba y no dos
-a&ntilde;os despu&eacute;s.</b></p>
-<p><b>Hay un precedente argentino con resultado medido, y es sorprendente.</b> La Secretar&iacute;a de
-Salud de la Ciudad de Buenos Aires empez&oacute; en 1996 a monitorear los precios de compra de sus
-hospitales y a difundirlos entre los propios establecimientos. <b>S&oacute;lo difundir la
-informaci&oacute;n redujo los precios un 13%</b> en el primer a&ntilde;o.</p>
-<p><span class="sg">No hizo falta un organismo nuevo, ni una ley, ni una auditor&iacute;a.</span>
-Alcanz&oacute; con que cada hospital pudiera ver lo que pagaba el de al lado. Eso es exactamente lo que
-San Isidro no tiene y podr&iacute;a tener el primer mes.</p>
+<p><b>El dato general es claro.</b> Entre el <b>40% y el 60%</b> de los casos documentados de corrupci&oacute;n en salud tienen que ver con la compra y la entrega de medicamentos e insumos. No pasa s&oacute;lo en la Argentina: es donde falla el sistema en cualquier pa&iacute;s.</p>
+<p><b>Y no hace falta que haya delito para que haya da&ntilde;o.</b> Si un hospital no puede saber cu&aacute;nto paga otro hospital p&uacute;blico por el mismo producto, no puede saber si paga de m&aacute;s. <span class="sg">Alcanza con que falte la comparaci&oacute;n para que se gaste mal, sin que nadie robe nada.</span></p>
+<p><b>Y en San Isidro ya pas&oacute;.</b> En 2024, el Municipio hizo una denuncia penal contra exfuncionarios de Salud y directores de hospitales, <b>al menos diez personas</b>. Fue por cobros de m&aacute;s en las viandas del Materno Infantil y del Ciudad de Boulogne. El da&ntilde;o se estim&oacute; en <b>262 millones de pesos s&oacute;lo en 2023</b>. Se cort&oacute; el contrato y se sac&oacute; al proveedor del registro del Municipio.</p>
+<p><span class="sg">Y hubo un segundo hallazgo, que casi no se coment&oacute; y que ac&aacute; importa m&aacute;s.</span> Hubo dudas tambi&eacute;n en la compra de insumos de los hospitales, como guantes descartables. Se vio que varios materiales se compraban despu&eacute;s a precios m&aacute;s bajos que los facturados en noviembre de 2023. <b>Se descubri&oacute; comparando un precio con otro. Si ese dato hubiera sido p&uacute;blico, se habr&iacute;a visto mientras pasaba, y no dos a&ntilde;os despu&eacute;s.</b></p>
+<p><b>Hay un caso argentino con resultado medido, y sorprende.</b> En 1996, la Secretar&iacute;a de Salud de la Ciudad de Buenos Aires empez&oacute; a seguir los precios de compra de sus hospitales. Y se los mostr&oacute; a los propios hospitales. <b>S&oacute;lo con mostrar esa informaci&oacute;n, los precios bajaron un 13%</b> en el primer a&ntilde;o.</p>
+<p><span class="sg">No hizo falta un organismo nuevo, ni una ley, ni una auditor&iacute;a.</span> Alcanz&oacute; con que cada hospital pudiera ver lo que pagaba el de al lado. Eso es justo lo que San Isidro no tiene, y podr&iacute;a tener el primer mes.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Proponemos cuatro medidas, y la cuarta es la que hace que las otras tres sirvan</div>
-<p><b>1 &middot; Precio unitario a la vista.</b> De cada compra de insumos y medicamentos, cualquier vecino puede preguntar producto, cantidad, <b>precio unitario</b> y proveedor, desde el d&iacute;a en que se compra. No el total del expediente: el precio por unidad,
-que es lo &uacute;nico comparable. Es el mismo principio que el cap&iacute;tulo 1 aplica a los decretos
-de adjudicaci&oacute;n.</p>
-<p><b>2 &middot; Stock y faltantes a la vista, el mismo d&iacute;a.</b> Qu&eacute; insumo b&aacute;sico hay y
-cu&aacute;l falta, por establecimiento. <span class="sg">Si en un hospital faltan gasas, eso tiene que
-poder verse desde afuera hoy</span>, no enterarse por un paciente. Y el dato ya existe: todo hospital
-lleva su stock. Cualquier vecino le puede preguntar a la inteligencia artificial del Municipio por cualquier faltante en la salud municipal &mdash;un medicamento, un insumo, una cama, un turno&mdash;, y le contesta por qu&eacute; falta: si no se compr&oacute;, si la compra est&aacute; demorada o si el proveedor no entreg&oacute;, y desde cu&aacute;ndo. Si un paciente no tuvo un stent a tiempo, dice por qu&eacute;, aunque al gobierno le resulte inc&oacute;modo. Contesta sobre la compra y el stock, nunca con datos de un paciente.</p>
-<p><b>3 &middot; El control lo hace quien usa el hospital.</b> La comisi&oacute;n vecinal de cada zona ve
-lo que se compr&oacute; y lo que se ejecut&oacute; en los efectores de su territorio, con la
-obligaci&oacute;n de respuesta fundada del cap&iacute;tulo 4. <b>El que espera el turno es el que mejor
-sabe si el insumo lleg&oacute;.</b></p>
-<p><b>4 &middot; Y la comparaci&oacute;n la hace la inteligencia artificial del Municipio, no el vecino.</b> Tener el precio unitario a mano sirve s&oacute;lo si alguien compara, y nadie tiene tiempo de comparar miles de compras.
-<span class="sg">La inteligencia artificial del Municipio compara sola</span>: contra las compras anteriores
-del mismo establecimiento, contra los otros dos hospitales y contra los municipios que publiquen, y
-avisa cuando algo se sale del rango.</p>
+<p><b>1 &middot; El precio por unidad, a la vista.</b> De cada compra de insumos y medicamentos, cualquier vecino puede preguntar el producto, la cantidad, el <b>precio por unidad</b> y el proveedor, desde el d&iacute;a en que se compra. No el total del expediente, sino el precio por unidad, que es lo &uacute;nico que se puede comparar. Es la misma idea que el cap&iacute;tulo 1 aplica a los decretos de adjudicaci&oacute;n.</p>
+<p><b>2 &middot; Lo que hay y lo que falta, a la vista, el mismo d&iacute;a.</b> Qu&eacute; insumo b&aacute;sico hay y cu&aacute;l falta, en cada hospital y centro. <span class="sg">Si en un hospital faltan gasas, eso se tiene que poder ver desde afuera hoy</span>, y no enterarse por un paciente. Y el dato ya existe: todo hospital lleva la cuenta de lo que tiene. Cualquier vecino le puede preguntar a la inteligencia artificial del Municipio por cualquier faltante en la salud municipal. Puede ser un medicamento, un insumo, una cama o un turno. Ella le contesta por qu&eacute; falta: si no se compr&oacute;, si la compra est&aacute; demorada o si el proveedor no entreg&oacute;. Y le dice desde cu&aacute;ndo. Si un paciente no tuvo un stent a tiempo, dice por qu&eacute;, aunque al gobierno le resulte inc&oacute;modo.</p>
+<p><b>3 &middot; El control lo hace quien usa el hospital.</b> La comisi&oacute;n vecinal de cada zona ve lo que se compr&oacute; y lo que se gast&oacute; en los centros de salud de su zona. Y el Municipio le tiene que contestar con razones, como exige el cap&iacute;tulo 4. <b>El que espera el turno es el que mejor sabe si el insumo lleg&oacute;.</b></p>
+<p><b>4 &middot; Y la comparaci&oacute;n la hace la inteligencia artificial del Municipio, no el vecino.</b> Tener el precio por unidad a mano sirve s&oacute;lo si alguien compara. Y nadie tiene tiempo de comparar miles de compras. <span class="sg">La inteligencia artificial del Municipio compara sola.</span> Compara con las compras anteriores del mismo hospital, con los otros dos hospitales y con los municipios que publiquen sus datos. Y avisa cuando algo se sale de lo normal. As&iacute; se acorta el tiempo entre que algo pasa y que se ve.</p>
 </div>
 <div class="cols">
-<p><b>Se&ntilde;ala anomal&iacute;as, no acusa</b>, con las reglas del 4.11:
-<span class="sg">no imputa a nadie, acorta el tiempo entre que algo pasa y que se ve</span>.</p>
-<p><b>Y proponemos la guardia en n&uacute;mero, por gravedad.</b> En las guardias municipales el triage clasifica
-la urgencia por colores y se espera por color. Seg&uacute;n quienes la conocen, cada nivel de gravedad espera en una
-sala distinta. Proponemos mostrar en tiempo real la espera de cada uno: &laquo;hoy, en
-la guardia del Central: leves, unos cuarenta minutos; medios, unos quince; los graves entran directo&raquo;, para que
-quien tiene que ir elija a cu&aacute;l. La inteligencia artificial del Municipio no clasifica a nadie: eso lo hace el
-personal del triage, y ante s&iacute;ntomas graves siempre manda a la guardia o al 107.
-<b>Como cifra y no como imagen:</b> no se transmite el interior de un hospital, porque hay pacientes e
-historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
+<p><b>Y proponemos mostrar la espera de la guardia en n&uacute;meros, por gravedad.</b> En las guardias municipales, el personal de triage clasifica a cada paciente por colores, seg&uacute;n la urgencia. Y se espera seg&uacute;n el color. Seg&uacute;n quienes la conocen, cada nivel de gravedad espera en una sala distinta. Proponemos mostrar en tiempo real la espera de cada uno: &laquo;hoy, en la guardia del Central: leves, unos cuarenta minutos; medios, unos quince; los graves entran directo&raquo;. As&iacute;, quien tiene que ir elige a cu&aacute;l. <b>Se muestra como una cifra y no como una imagen.</b> No se transmite el interior de un hospital, porque hay pacientes e historias cl&iacute;nicas a la vista. Es m&aacute;s &uacute;til que un video y no expone a nadie.</p>
 </div>
 
 <h2><span class="n">5.7</span>Seguridad <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p class="lead">Proponemos usar lo que ya se compr&oacute;
-&mdash;que es lo que hoy no se hace y lo que la evidencia dice que m&aacute;s baja el delito&mdash; y
-<span class="sg">que cualquiera pueda saber si sirve</span>.</p>
+<p class="lead">Proponemos usar lo que ya se compr&oacute;, algo que hoy no se hace. Seg&uacute;n la evidencia, es lo que m&aacute;s baja el delito. Y proponemos <span class="sg">que cualquiera pueda saber si sirve</span>.</p>
 <div class="cols">
-<p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto, despu&eacute;s de crecer <b>34,8% real en un
-a&ntilde;o</b>. <b>Lo que es municipal, y no es poco:</b> la patrulla municipal, las c&aacute;maras y el
-centro de monitoreo, el 911 municipal, la iluminaci&oacute;n. Ah&iacute; el intendente decide todo, y
-ah&iacute; se gastaron esos 32.446 millones.</p>
-<p>El equipamiento est&aacute; comprado: c&aacute;maras HD en reemplazo del 100% de las anal&oacute;gicas, un anillo digital
-con lectoras de patente, m&aacute;s m&oacute;viles y m&aacute;s motos. Lo que falta no es hardware.</p>
+<p><b>Hoy:</b> 32.446 millones, el 10,0% del presupuesto. En un a&ntilde;o <b>creci&oacute; un 34,8%, descontada la inflaci&oacute;n</b>. <b>Lo que es municipal no es poco.</b> Son la patrulla municipal, las c&aacute;maras y el centro de monitoreo, el 911 municipal y la iluminaci&oacute;n. En todo eso decide el intendente, y en eso se gastaron esos 32.446 millones.</p>
+<p>Los equipos ya est&aacute;n comprados. Se cambiaron el 100% de las c&aacute;maras viejas por c&aacute;maras de alta definici&oacute;n. Hay un anillo digital con lectoras de patentes, y hay m&aacute;s m&oacute;viles y m&aacute;s motos. Lo que falta no son equipos.</p>
 </div>
 
-<h3>1. Patrullar donde el delito ocurre, no repartido parejo</h3>
+<h3>1. Patrullar donde pasa el delito, y no parejo en todos lados</h3>
 <div class="cols">
-<p><b>Es la estrategia con m&aacute;s evidencia de toda la investigaci&oacute;n policial.</b> Un
-metaan&aacute;lisis de la Campbell Collaboration revis&oacute; 65 estudios &mdash;ensayos aleatorizados
-y cuasiexperimentales&mdash;: cerca del <b>80% report&oacute; reducciones significativas del delito</b>.
-En Dallas, el delito violento cay&oacute; <b>11% en los puntos tratados</b> durante el primer a&ntilde;o,
-sin desplazamiento hacia las zonas vecinas.</p>
-<p><b>Y el delito se concentra donde uno no lo esperar&iacute;a de concentrado</b>: unos pocos lugares
-peque&ntilde;os generan la mitad de todos los hechos. <span class="sg">Es la misma l&oacute;gica que el
-cap&iacute;tulo 4 aplica al d&eacute;ficit de infraestructura</span>, que no est&aacute; repartido sino
-concentrado en nueve radios censales.</p>
-<p><b>No es mano dura.</b> Un estudio de 2025 encontr&oacute; que en las zonas tratadas con enfoque
-disuasivo los agentes no iniciaron m&aacute;s detenciones ni m&aacute;s controles que en las zonas de
-control. Se reduce el delito sin endurecer el trato.</p>
-<p><b>Y cuesta poco.</b> En un experimento controlado, el efecto se obtuvo con un promedio de
-<b>35,5 minutos de patrullaje por turno</b> en el punto caliente. No es m&aacute;s patrulla: es la misma
-patrulla, en otro lado y a otra hora.</p>
+<p><b>Es la forma de patrullar que m&aacute;s pruebas tiene a favor en toda la investigaci&oacute;n sobre la polic&iacute;a.</b> Una revisi&oacute;n de la Campbell Collaboration junt&oacute; 65 estudios, entre experimentos y comparaciones. Cerca del <b>80% encontr&oacute; que el delito bajaba de forma clara</b>. En Dallas, el delito violento baj&oacute; un <b>11% en los lugares donde se aplic&oacute;</b>, durante el primer a&ntilde;o. Y no se corri&oacute; a las zonas vecinas.</p>
+<p><b>Y el delito est&aacute; mucho m&aacute;s concentrado de lo que uno espera.</b> Unos pocos lugares chicos juntan la mitad de todos los hechos. <span class="sg">Es la misma idea que el cap&iacute;tulo 4 aplica a lo que falta de infraestructura.</span> Eso tampoco est&aacute; repartido: se concentra en nueve radios censales.</p>
+<p><b>No es mano dura.</b> Un estudio de 2025 mir&oacute; las zonas donde se patrull&oacute; para disuadir. Ah&iacute;, los agentes no hicieron m&aacute;s detenciones ni m&aacute;s controles que en las dem&aacute;s zonas. El delito baja sin tratar peor a la gente.</p>
+<p><b>Y cuesta poco.</b> En un experimento, el efecto se logr&oacute; con <b>35,5 minutos de patrullaje por turno</b>, en promedio, en cada lugar con m&aacute;s delito. No hace falta m&aacute;s patrulla. Es la misma patrulla, en otro lugar y a otra hora.</p>
 </div>
 <div class="callout a">
-<div class="clabel">El paso cero, y es el que falta</div>
-<p>Nada de esto funciona sin un dato georreferenciado de incidentes, y <b>en San Isidro no existe en
-ninguna forma p&uacute;blica</b>. El portal de datos abiertos <b>no responde</b> &mdash;y en el archivo de
-la Wayback Machine ninguno de sus conjuntos de datos era de seguridad&mdash; y el Mapa Digital municipal figura &laquo;en construcci&oacute;n&raquo;. Las
-estad&iacute;sticas salen como nota de prensa mensual y agregadas a todo el partido: en agosto de 2026
-el Municipio comunic&oacute; <b>240 detenidos y 27.457 personas identificadas</b>, sin una sola
-desagregaci&oacute;n por zona y sin archivo descargable. <span class="sg">Son las cifras que el
-Municipio elige publicar de s&iacute; mismo</span>, y no incluyen delitos esclarecidos ni tiempos de
-respuesta.</p>
-<p><b>Y no es que otros lo hagan y San Isidro no.</b> Tigre tiene un portal de datos abiertos con
-219 conjuntos publicados, y sobre seguridad s&oacute;lo ofrece ubicaciones de bomberos, comisar&iacute;as
-e hidrantes. Del funcionamiento de su centro de operaciones comunica resultados en prensa, igual que San
-Isidro. <span class="sg">Ning&uacute;n municipio del conurbano norte publica hoy el dato que esta
-propuesta necesita</span>, lo que la vuelve la primera y tambi&eacute;n la m&aacute;s exigente.</p>
-<p>Por eso proponemos que el patrullaje dirigido empiece por <b>construir el mapa de incidentes municipales</b>, que
-hoy no existe. Sin saber d&oacute;nde pasan las cosas, mandar el patrullero a donde m&aacute;s hace
-falta es una frase.</p>
+<div class="clabel">El primer paso, que es el que falta</div>
+<p>Nada de esto funciona sin saber en qu&eacute; lugar exacto pasa cada hecho. <b>En San Isidro, ese dato no es p&uacute;blico de ninguna forma.</b> El portal de datos abiertos <b>no responde</b>. En el archivo de la Wayback Machine, ninguno de sus conjuntos de datos era de seguridad. Y el Mapa Digital del Municipio figura &laquo;en construcci&oacute;n&raquo;. Las estad&iacute;sticas salen en una nota de prensa por mes, con un solo total para todo el partido. En agosto de 2026, el Municipio comunic&oacute; <b>240 detenidos y 27.457 personas identificadas</b>. No las separ&oacute; por zona ni dio un archivo para descargar. <span class="sg">Son las cifras que el Municipio elige publicar sobre s&iacute; mismo.</span> No incluyen los delitos resueltos ni cu&aacute;nto tarda el m&oacute;vil en llegar.</p>
+<p><b>Y no es que otros lo hagan y San Isidro no.</b> Tigre tiene un portal de datos abiertos con 219 conjuntos publicados. Sobre seguridad, s&oacute;lo muestra d&oacute;nde est&aacute;n los bomberos, las comisar&iacute;as y los hidrantes. Y sobre c&oacute;mo funciona su centro de operaciones, informa resultados en la prensa, igual que San Isidro. <span class="sg">Ning&uacute;n municipio del conurbano norte publica hoy el dato que esta propuesta necesita.</span> Por eso ser&iacute;a la primera, y tambi&eacute;n la m&aacute;s exigente.</p>
+<p>Por eso proponemos que este patrullaje empiece por <b>armar el mapa de los hechos que registra el Municipio</b>, que hoy no existe. Si no se sabe d&oacute;nde pasan las cosas, mandar el patrullero adonde m&aacute;s hace falta es s&oacute;lo una frase.</p>
 </div>
 
 <h3>2. Las c&aacute;maras ya est&aacute;n compradas. Lo que falta es que hagan tres cosas</h3>
 <div class="cols">
-<p><b>Lo que el Municipio anuncia.</b> Que complet&oacute; el recambio de su sistema y opera alrededor de
-<b>2.646 c&aacute;maras de alta definici&oacute;n</b> con anal&iacute;tica de video y alertas en tiempo
-real, sobre fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal, por una
-inversi&oacute;n anunciada de <b>15.000 millones</b>.</p>
-<p><b>Lo que compr&oacute; s&iacute; est&aacute; publicado.</b> Entre 2025 y 2026 compr&oacute; 110 licencias de an&aacute;lisis de video con inteligencia
-artificial, con tres a&ntilde;os de soporte, que en vivo marcan una persona ca&iacute;da, una agrupaci&oacute;n, un objeto abandonado o un
-auto a contramano, y permiten buscar despu&eacute;s en lo grabado.</p>
-<p><b>Y lo que no se puede verificar es lo que hacen.</b> Las cifras que el propio Municipio
-public&oacute; entre 2025 y 2026 van de 500 a 1.000, a 2.100 y a 2.646 seg&uacute;n la fecha del
-anuncio. <b>Esa anal&iacute;tica nunca tuvo una auditor&iacute;a externa</b>, y el Municipio no publica
-delitos esclarecidos, tiempo de respuesta del m&oacute;vil ni cu&aacute;ntas de sus alertas terminaron en
-una detenci&oacute;n. <span class="sg">Lo &uacute;nico verificable es lo que el vecino recibe, y hasta
-hoy es el anuncio</span>: en el relevamiento de testimonios vecinales de este programa no aparece un solo
-caso en que una c&aacute;mara municipal haya resuelto un robo.</p>
-<p>La primera meta sobre c&aacute;maras no es instalar una
-m&aacute;s: es que exista un n&uacute;mero auditado de qu&eacute; hace el sistema.</p>
+<p><b>Lo que el Municipio anuncia.</b> Dice que termin&oacute; de cambiar su sistema, y que maneja unas <b>2.646 c&aacute;maras de alta definici&oacute;n</b>. Dice que tienen an&aacute;lisis de video y alertas en el momento, con fibra &oacute;ptica propia, desde el Centro de Operaciones Municipal. Y anunci&oacute; que invirti&oacute; <b>15.000 millones</b>.</p>
+<p><b>Lo que compr&oacute; s&iacute; est&aacute; publicado.</b> Entre 2025 y 2026 compr&oacute; 110 licencias de an&aacute;lisis de video con inteligencia artificial, con tres a&ntilde;os de soporte. En el momento, marcan una persona ca&iacute;da, un grupo de gente, un objeto abandonado o un auto a contramano. Y despu&eacute;s permiten buscar en lo grabado.</p>
+<p><b>Y lo que no se puede comprobar es lo que hacen.</b> Entre 2025 y 2026, el propio Municipio public&oacute; cifras distintas de c&aacute;maras: 500, 1.000, 2.100 y 2.646, seg&uacute;n la fecha del anuncio. <b>Ese an&aacute;lisis de video nunca lo revis&oacute; nadie de afuera.</b> Y el Municipio no publica los delitos resueltos, cu&aacute;nto tarda el m&oacute;vil en llegar ni cu&aacute;ntas alertas terminaron en una detenci&oacute;n. <span class="sg">Lo &uacute;nico que se puede comprobar es lo que le llega al vecino, y hasta hoy es el anuncio.</span> Este programa junt&oacute; testimonios de vecinos, y en ninguno aparece una c&aacute;mara del Municipio que haya resuelto un robo.</p>
+<p>La primera meta con las c&aacute;maras no es poner una m&aacute;s. Es tener un n&uacute;mero, revisado por alguien de afuera, de lo que hace el sistema.</p>
 </div>
 <h3>Los tres usos, en orden</h3>
 <div class="cols">
-<p><b>1 &middot; Detecci&oacute;n en vivo de hechos violentos</b>, con alerta autom&aacute;tica al
-patrullaje m&aacute;s cercano, en las 110 c&aacute;maras con inteligencia artificial que ya hay, sin ampliar. <span class="sg">Es an&aacute;lisis de eventos, no de personas</span>: el
-sistema reconoce lo que est&aacute; pasando, no qui&eacute;n lo est&aacute; haciendo. Un robo detectado
-mientras ocurre y avisado al m&oacute;vil que est&aacute; a tres cuadras es la diferencia entre un
-patrullero que llega y uno que toma la denuncia.</p>
-<p><b>2 &middot; Reconstrucci&oacute;n del recorrido despu&eacute;s de un hecho denunciado.</b> El
-sistema busca en las c&aacute;maras qui&eacute;n estuvo y hacia d&oacute;nde fue, y orienta a la
-polic&iacute;a en el momento y no tres d&iacute;as despu&eacute;s.</p>
-<p><b>3 &middot; Seguimiento sostenido de una persona en el tiempo: s&oacute;lo con orden judicial</b>,
-y con registro p&uacute;blico de cu&aacute;ntas &oacute;rdenes se recibieron y cu&aacute;ntas se
-cumplieron. Es el &uacute;nico de los tres que mira a una persona y no a un hecho, y por eso es el
-&uacute;nico que necesita un juez.</p>
-<p><b>Y una precisi&oacute;n de competencia.</b> La seguridad p&uacute;blica es
-competencia exclusiva de la Provincia por la Ley 12.154: <span class="sg">el Municipio opera
-c&aacute;maras como colaborador, no como fuerza de seguridad</span>. Cuanto m&aacute;s se aleje la
-anal&iacute;tica de detectar hechos y m&aacute;s se acerque a identificar personas, m&aacute;s
-d&eacute;bil es su cobertura legal. De ah&iacute; el orden de los tres usos.</p>
-<p><b>Y dos cosas que este programa no hace:</b> no arma un registro municipal de personas sin
-intervenci&oacute;n judicial, ni reconocimiento facial masivo en la v&iacute;a p&uacute;blica.</p>
-<p><b>Y hay un precedente concreto detr&aacute;s de esa decisi&oacute;n.</b> El sistema de
-reconocimiento facial de la Ciudad de Buenos Aires fue declarado <b>parcialmente inconstitucional en
-septiembre de 2022</b>, despu&eacute;s de que se comprobara que se hab&iacute;a consultado por m&aacute;s
-de quince mil personas ajenas al universo autorizado. La Ciudad al menos ten&iacute;a una ley que lo
-creaba: <span class="sg">un municipio bonaerense no tiene ni eso</span>, y a un caso as&iacute; le
-sumar&iacute;a el problema de competencia de la Ley 12.154.</p>
-<p><b>Entregar im&aacute;genes a la fiscal&iacute;a s&iacute; tiene base legal firme.</b> El
-art&iacute;culo 265 bis del C&oacute;digo Procesal Penal bonaerense, incorporado por la Ley 14.172 de
-2010, habilita al fiscal a requerir las filmaciones de un sistema de monitoreo, en soporte original y
-sin editar. <b>Por causa individualizada y con pedido escrito</b>: no cubre el acceso libre en vivo de
-la polic&iacute;a al sistema municipal ni la entrega masiva sin causa.</p>
+<p><b>1 &middot; Detectar en el momento los hechos violentos.</b> Se usan las 110 c&aacute;maras con inteligencia artificial que ya hay, sin agregar m&aacute;s. Cuando detectan algo, avisan solas al patrullero m&aacute;s cercano. Un robo que se detecta mientras pasa, y se avisa al m&oacute;vil que est&aacute; a tres cuadras, cambia todo. Es la diferencia entre un patrullero que llega a tiempo y uno que s&oacute;lo toma la denuncia.</p>
+<p><b>2 &middot; Reconstruir el recorrido despu&eacute;s de un hecho denunciado.</b> El sistema busca en las c&aacute;maras qui&eacute;n estuvo y hacia d&oacute;nde fue. As&iacute; orienta a la polic&iacute;a en el momento, y no tres d&iacute;as despu&eacute;s.</p>
+<p><b>3 &middot; Seguir a una persona durante un tiempo, s&oacute;lo con orden de un juez.</b> Y con un registro p&uacute;blico de cu&aacute;ntas &oacute;rdenes se recibieron y cu&aacute;ntas se cumplieron. Es el &uacute;nico de los tres usos que mira a una persona y no a un hecho. Por eso es el &uacute;nico que necesita un juez.</p>
+<p><b>Y una aclaraci&oacute;n sobre qui&eacute;n puede hacer qu&eacute;.</b> Por la Ley 12.154, la seguridad p&uacute;blica le toca s&oacute;lo a la Provincia. <span class="sg">El Municipio maneja las c&aacute;maras para colaborar, no como fuerza de seguridad.</span> Cuanto m&aacute;s se use el an&aacute;lisis de video para identificar personas, y menos para detectar hechos, menos respaldo legal tiene. Por eso los tres usos van en ese orden.</p>
+<p><b>Hay un caso concreto que lo muestra.</b> El sistema de reconocimiento facial de la Ciudad de Buenos Aires fue declarado <b>en parte inconstitucional en septiembre de 2022</b>. Se comprob&oacute; que se hab&iacute;a buscado a m&aacute;s de quince mil personas que no estaban en la lista autorizada. Y la Ciudad al menos ten&iacute;a una ley que creaba ese sistema. <span class="sg">Un municipio bonaerense no tiene ni eso.</span> Y a un caso as&iacute; se le sumar&iacute;a el problema de la Ley 12.154.</p>
+<p><b>Darle im&aacute;genes a la fiscal&iacute;a s&iacute; tiene una base legal firme.</b> Es el art&iacute;culo 265 bis del C&oacute;digo Procesal Penal bonaerense, que agreg&oacute; la Ley 14.172 de 2010. Permite que el fiscal pida las filmaciones de un sistema de monitoreo, en el soporte original y sin editar. <b>Tiene que ser para una causa concreta y con un pedido por escrito.</b> No cubre que la polic&iacute;a entre libremente al sistema del Municipio para mirar en vivo. Tampoco cubre entregar todo sin una causa.</p>
 </div>
 
 
 """ + fig("f_patrullero", "La c&aacute;mara avisa y el patrullero llega. Ilustraci&oacute;n.") + """
-<h3>3. Estafas virtuales, grooming y robo de identidad: una oficina de ciberdelito</h3>
+<h3>3. Estafas por internet, grooming y robo de identidad: una oficina para los delitos por internet</h3>
 <div class="cols">
-<p><b>Estafas virtuales, robo de identidad, grooming y extorsiones por redes: es lo que menos aparece
-en lo que el Municipio publica sobre seguridad.</b> Ni en las estad&iacute;sticas mensuales, ni en el
-plan de gobierno 2024&ndash;2025, ni entre los canales de reclamo.</p>
-<p>Tigre tiene <b>CiberCOT</b>, una oficina que recibe y asiste al vecino que sufri&oacute; un delito
-cibern&eacute;tico, lo contiene, lo asesora y trabaja con las fiscal&iacute;as y las fuerzas de la zona.
-<b>En San Isidro no se encontr&oacute; nada equivalente publicado</b>: ni oficina, ni canal, ni
-menci&oacute;n en el sitio municipal ni en el plan de gobierno 2024&ndash;2025, al 20 de septiembre de 2026.</p>
-<p><b>Proponemos una oficina unida a la capa t&eacute;cnica del punto anterior, y no suelta.</b> Sola queda como un
-mostrador de denuncias sin nadie que pueda hacer nada con ellas.
-<span class="sg">Unificada con la anal&iacute;tica y con la seguridad de los sistemas municipales, tiene
-estructura, personal t&eacute;cnico y trabajo todo el a&ntilde;o</span>, y ese personal es el mismo que
-forma la secci&oacute;n 5.3.</p>
-<p><b>Incluye asistencia a quien sufre una campa&ntilde;a de hostigamiento:</b> orientaci&oacute;n legal,
-ayuda para documentar lo que est&aacute; pasando, canal con las plataformas y derivaci&oacute;n a
-fiscal&iacute;a. Hoy eso lo hace cada uno como puede, y el que no sabe c&oacute;mo, no lo hace.</p>
-<p><b>Y detecci&oacute;n de campa&ntilde;as coordinadas, que es prueba y no censura.</b> Mostrar que
-cincuenta cuentas creadas la misma semana publican lo mismo es un hecho verificable que sirve en un
-expediente. <span class="sg">La oficina no tiene facultad de moderar contenido</span>: no da de baja
-nada, no pide que se baje nada y no decide qu&eacute; se puede decir.</p>
-<p><b>Y es competencia municipal sin discusi&oacute;n.</b> Asistir, orientar, capacitar y derivar no
-requiere facultades policiales. Es exactamente lo que un municipio puede hacer solo.</p>
-<p><b>La capacitaci&oacute;n es la mitad del trabajo.</b> La mayor&iacute;a de estas estafas se previenen
-sabiendo reconocerlas, y eso se ense&ntilde;a. Articula con la formaci&oacute;n de la secci&oacute;n 5.3 y
-con las comisiones vecinales del cap&iacute;tulo 4.</p>
+<p><b>Las estafas por internet, el robo de identidad, el grooming y las extorsiones por redes son lo que menos aparece en lo que el Municipio publica sobre seguridad.</b> No est&aacute;n en las estad&iacute;sticas de cada mes, ni en el plan de gobierno 2024&ndash;2025, ni entre los canales de reclamo.</p>
+<p>Tigre tiene <b>CiberCOT</b>, una oficina para el vecino que sufri&oacute; un delito por internet. Lo recibe, lo acompa&ntilde;a y lo asesora. Y trabaja con las fiscal&iacute;as y las fuerzas de seguridad de la zona. <b>En San Isidro no se encontr&oacute; nada parecido publicado.</b> No hay oficina ni canal, y no se lo menciona en el sitio del Municipio ni en el plan de gobierno 2024&ndash;2025.</p>
+<p><b>Proponemos una oficina unida a la parte t&eacute;cnica del punto anterior, la de las c&aacute;maras, y no suelta.</b> Sola, ser&iacute;a un mostrador de denuncias sin nadie que pueda hacer nada con ellas. <span class="sg">Unida al an&aacute;lisis de video y a la seguridad de los sistemas del Municipio, tiene estructura, personal t&eacute;cnico y trabajo todo el a&ntilde;o.</span> Y ese personal es el mismo que forma la secci&oacute;n 5.3.</p>
+<p><b>Tambi&eacute;n ayuda a quien sufre una campa&ntilde;a de acoso en internet.</b> Le da orientaci&oacute;n legal y lo ayuda a juntar pruebas de lo que est&aacute; pasando. Lo comunica con las plataformas y, si hace falta, lo manda a la fiscal&iacute;a. Hoy eso lo hace cada uno como puede. Y el que no sabe c&oacute;mo, no lo hace.</p>
+<p><b>Y detecta campa&ntilde;as organizadas, para tener pruebas.</b> Por ejemplo, puede mostrar que cincuenta cuentas creadas la misma semana publican lo mismo. Es un hecho que se puede comprobar, y sirve en un expediente.</p>
+<p><b>Y esto le toca al Municipio, sin discusi&oacute;n.</b> Para ayudar, orientar, ense&ntilde;ar y derivar no hacen falta poderes de polic&iacute;a. Es justo lo que un municipio puede hacer solo.</p>
+<p><b>Ense&ntilde;ar es la mitad del trabajo.</b> La mayor&iacute;a de estas estafas se evitan si uno sabe reconocerlas, y eso se puede ense&ntilde;ar. Se hace junto con la formaci&oacute;n de la secci&oacute;n 5.3 y con las comisiones vecinales del cap&iacute;tulo 4.</p>
 </div>
 
 <h3>4. La constancia de que no consta</h3>
 <p class="tight">Hoy arruinar un nombre tarda una tarde y limpiarlo tarda meses.</p>
 <p class="tight">Proponemos corregir la parte que un municipio puede corregir.</p>
 <div class="cols">
-<p><b>Qu&eacute; proponemos, exactamente.</b> Si a alguien lo acusan p&uacute;blicamente de un delito y no hay
-causa, no hay imputaci&oacute;n y no hay condena, el Municipio certifica exactamente eso: que en los
-registros consultados, al d&iacute;a de la fecha, <b>no consta</b>.
-<span class="sg">Es una afirmaci&oacute;n sobre el registro, no sobre el hecho.</span></p>
-<p><b>Y no es una figura nueva.</b> Es lo mismo que un certificado de antecedentes, que ya existe y que
-nadie considera un dictamen sobre la inocencia de nadie. <b>No es un verificador de noticias y no
-dictamina qu&eacute; es verdad.</b></p>
-<p><b>Las condiciones, todas necesarias.</b> La pide el afectado y s&oacute;lo el afectado: el Municipio
-no sale de oficio. Se resuelve <b>en horas y no en meses</b>, y para eso est&aacute; la inteligencia artificial del
-Municipio (cap&iacute;tulo 4). Va con f&oacute;rmula fija &mdash;qu&eacute; registros se consultaron, con qu&eacute;
-fecha, qu&eacute; consta y qu&eacute; no&mdash;, sin adjetivos y sin conclusi&oacute;n.</p>
-<p><b>Y s&oacute;lo sobre hechos con registro p&uacute;blico:</b> causas, condenas, habilitaciones,
-sanciones. Queda registrada con su fecha en la inteligencia artificial del Municipio, para que el afectado la muestre y
-cualquiera la verifique.</p>
+<p><b>Qu&eacute; proponemos, exactamente.</b> A veces se acusa a alguien en p&uacute;blico de un delito, y no hay causa, ni imputaci&oacute;n, ni condena. En ese caso, el Municipio certifica justo eso. Certifica que, en los registros consultados, a esa fecha, <b>no consta</b>. <span class="sg">Habla de lo que dice el registro, no de lo que pas&oacute;.</span></p>
+<p><b>Y no es algo nuevo.</b> Es igual que un certificado de antecedentes, que ya existe. Y nadie piensa que ese certificado diga si alguien es inocente.</p>
+<p><b>Las condiciones, y tienen que cumplirse todas.</b> La pide la persona acusada, y s&oacute;lo ella. El Municipio no la da por su cuenta. Se resuelve <b>en horas y no en meses</b>, y para eso est&aacute; la inteligencia artificial del Municipio (cap&iacute;tulo 4). Siempre se escribe igual. Dice qu&eacute; registros se consultaron, en qu&eacute; fecha, qu&eacute; consta y qu&eacute; no. No lleva adjetivos ni conclusiones.</p>
+<p><b>Y s&oacute;lo sirve para hechos que tienen un registro p&uacute;blico</b>, como causas, condenas, habilitaciones y sanciones. La constancia queda guardada con su fecha en la inteligencia artificial del Municipio. As&iacute;, la persona la puede mostrar y cualquiera la puede comprobar.</p>
 </div>
 <div class="pull"><p>La constancia no impide denunciar: impide condenar sin juicio. El que acusa tiene un
 camino, y es el judicial.</p></div>
 
-<h3>5. Que lo que se contrate se contrate ac&aacute;, y si no hay qui&eacute;n, se crea</h3>
+<h3>5. Que se contrate ac&aacute;, y si no hay qui&eacute;n, que se forme</h3>
 <div class="cols">
-<p><b>Todo lo anterior se compra</b> &mdash;anal&iacute;tica, desarrollo, monitoreo, soporte&mdash;, y
-<span class="sg">se contrata a empresas de San Isidro</span>, con la cl&aacute;usula de empleo local de la Ordenanza X. Y la tecnicatura de la UNSO, con la pr&aacute;ctica en el Centro de Formaci&oacute;n Laboral N&ordm; 404 y en las sedes nuevas, forma a la gente que ocupa esos puestos, con el eje en inteligencia artificial y servicios digitales que describe la secci&oacute;n 5.3.</p>
-<p><b>Qu&eacute; pasa si nadie ac&aacute; puede hacerlo.</b> Si la respuesta es contratar afuera, la
-regla es decorativa. <span class="sg">La respuesta de este programa es que la capacidad se
-fomenta.</span> El Municipio detecta al licitar qu&eacute; capacidad falta, el Centro de
-Formaci&oacute;n forma en eso, la inteligencia artificial del Municipio muestra qui&eacute;n est&aacute; disponible y las
-universidades del partido acompa&ntilde;an la constituci&oacute;n de la empresa o de la cooperativa.</p>
-<p><b>Con dos l&iacute;mites escritos.</b> El Municipio <b>no es due&ntilde;o ni socio</b> de ninguna de
-esas empresas: si lo fuera se rompe la incompatibilidad del art&iacute;culo 44 de la Ley Org&aacute;nica.
-Y la contrataci&oacute;n sigue siendo competitiva: <span class="sg">se fomenta que existan oferentes
-locales, no que haya uno solo con el contrato asegurado</span>. Sin ese segundo l&iacute;mite, en tres
-a&ntilde;os tenemos otro caso como el de la recolecci&oacute;n.</p>
+<p><b>Todo lo anterior se compra</b>: el an&aacute;lisis de video, el desarrollo, el monitoreo y el soporte. Y <span class="sg">se contrata a empresas de San Isidro</span>, con la regla de empleo local de la Ordenanza X. La gente que ocupa esos puestos la forma la tecnicatura de la UNSO. La pr&aacute;ctica se hace en el Centro de Formaci&oacute;n Laboral N&ordm; 404 y en las sedes nuevas. Y se centra en inteligencia artificial y servicios digitales, como describe la secci&oacute;n 5.3.</p>
+<p><b>Qu&eacute; pasa si nadie de ac&aacute; puede hacerlo.</b> Si la respuesta es contratar afuera, la regla no sirve para nada. <span class="sg">La respuesta de este programa es formar a la gente que falta.</span> Al licitar, el Municipio ve qu&eacute; trabajo no puede hacer nadie del partido. El Centro de Formaci&oacute;n ense&ntilde;a ese trabajo. La inteligencia artificial del Municipio muestra qui&eacute;n est&aacute; disponible. Y las universidades del partido acompa&ntilde;an a los vecinos a armar su empresa o su cooperativa.</p>
+<p><b>Con dos l&iacute;mites escritos.</b> El primero: el Municipio <b>no es due&ntilde;o ni socio</b> de ninguna de esas empresas. Si lo fuera, chocar&iacute;a con la incompatibilidad que fija el art&iacute;culo 44 de la Ley Org&aacute;nica. El segundo: se sigue contratando por competencia. <span class="sg">Se busca que haya varias empresas del partido que se presenten, no una sola con el contrato asegurado.</span> Sin ese segundo l&iacute;mite, en tres a&ntilde;os tendr&iacute;amos otro caso como el de la recolecci&oacute;n.</p>
 </div>
 
 <h3>6. Y que el vecino sepa lo que se hace</h3>
 <ol class="n">
-<li><b>Que cualquier vecino pueda preguntar por los datos que el Municipio efectivamente produce</b> &mdash;patrullaje, c&aacute;maras que funcionan, cu&aacute;nto tarda el 911&mdash;, <b>con el dato del d&iacute;a y no cada tres meses</b>,
-porque se generan ya cargados; y
-<span class="sg">gestionar ante la Provincia el acceso al dato delictual desagregado por zona</span>.</li>
-<li><b>Que cada comisi&oacute;n vecinal reciba el dato de su zona</b> y pueda pedir explicaci&oacute;n
-fundada, con el mecanismo del cap&iacute;tulo 4.</li>
+<li><b>Que cualquier vecino pueda preguntar por los datos que el Municipio ya produce.</b> Por ejemplo, el patrullaje, las c&aacute;maras que funcionan y cu&aacute;nto tarda el 911. <b>Con el dato del d&iacute;a, y no cada tres meses</b>, porque esos datos ya se generan cargados. Y <span class="sg">pedirle a la Provincia los datos de delitos separados por zona</span>.</li>
+<li><b>Que cada comisi&oacute;n vecinal reciba el dato de su zona.</b> Y que pueda pedir una explicaci&oacute;n con razones, como prev&eacute; el cap&iacute;tulo 4.</li>
 </ol>
-<div class="pull"><div class="plabel">Lo que falta no es dinero, es la medici&oacute;n</div>
-<p>Gastar un tercio m&aacute;s en seguridad sin publicar si funciona no es una pol&iacute;tica: es un
-presupuesto.</p></div>
+<div class="pull"><div class="plabel">Lo que falta no es dinero, es medir</div>
+<p>Gastar un tercio m&aacute;s en seguridad, sin publicar si funciona, no es una pol&iacute;tica. Es s&oacute;lo un presupuesto.</p></div>
 
 <h2><span class="n">5.8</span>Educaci&oacute;n y cultura <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p><b>Hoy:</b> 13.986 millones, el 4,3%. Cay&oacute; <b>11,6% real</b> entre 2024 y 2025. La
-educaci&oacute;n obligatoria es competencia provincial, no municipal. Pero el Municipio administra el Fondo
-de Financiamiento Educativo &mdash;3.931 millones devengados en 2025&mdash; y sostiene infraestructura
-escolar y talleres de empleo. Y tiene un programa de apoyo escolar: cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, con un centenar de chicos de primaria, una hora por semana y dos educadores; en las otras cuatro localidades, ninguno (seg&uacute;n el Municipio, junio de 2026).</p>
+<p><b>Hoy:</b> 13.986 millones, el 4,3% del presupuesto. Entre 2024 y 2025 <b>baj&oacute; un 11,6%, descontada la inflaci&oacute;n</b>. La educaci&oacute;n obligatoria le toca a la Provincia, no al Municipio. Pero el Municipio maneja el Fondo de Financiamiento Educativo, del que gast&oacute; 3.931 millones en 2025. Tambi&eacute;n mantiene edificios escolares y talleres de empleo. Y tiene un programa de apoyo escolar. Son cinco espacios chicos, s&oacute;lo en B&eacute;ccar y Boulogne, a los que van unos cien chicos de primaria. Van una hora por semana, con dos educadores. En las otras cuatro localidades no hay ninguno (seg&uacute;n el Municipio, junio de 2026).</p>
 <h3>Lo que un intendente s&iacute; puede hacer en educaci&oacute;n</h3>
 <p class="tight">Puede hacer todo lo que pasa fuera del aula, y ese margen es amplio.</p>
 <div class="cols">
-<p><b>1 &middot; Proponemos apoyo escolar donde los chicos se est&aacute;n quedando atr&aacute;s.</b> Es la
-pol&iacute;tica educativa municipal por excelencia y funciona en todo el pa&iacute;s: la capital de
-Catamarca sostiene <b>46 centros de apoyo escolar</b> en centros vecinales, parroquias y organizaciones
-barriales, gratuitos, para primaria y secundaria. San Juan tiene un programa equivalente que alcanza a
-m&aacute;s de 800 chicos.</p>
-<p><b>Y San Isidro ya tiene d&oacute;nde ponerlos.</b> Los polideportivos, los centros de la tercera
-edad, las sedes barriales.</p>
-<p>Proponemos que <span class="sg">el &iacute;ndice de necesidad del cap&iacute;tulo 4 diga
-d&oacute;nde.</span> No hay que
-construir un edificio: hay que abrir los que est&aacute;n cerrados a la tarde y pagar docentes.</p>
-<p><b>2 &middot; Que el apoyo escolar detecte lo que la escuela no ve.</b> En los programas que
-funcionan, el centro de apoyo es adem&aacute;s el lugar donde se detectan situaciones de riesgo &mdash;un
-chico que dej&oacute; de venir, una familia que no llega&mdash; y se derivan a las &aacute;reas sociales
-y de salud del Municipio, que ya existen. <b>Es articulaci&oacute;n, no estructura nueva.</b></p>
-<p><b>3 &middot; Y el modelo del CFL 404, que la secci&oacute;n 5.3 lleva a las seis zonas:</b>
-<span class="sg">el puente entre la escuela y el trabajo que hoy no existe a esa escala</span>.</p>
+<p><b>1 &middot; Proponemos apoyo escolar donde los chicos se est&aacute;n quedando atr&aacute;s.</b> Es lo m&aacute;s t&iacute;pico que hace un municipio en educaci&oacute;n, y funciona en todo el pa&iacute;s. La capital de Catamarca tiene <b>46 centros de apoyo escolar</b> gratuitos, para primaria y secundaria. Est&aacute;n en centros vecinales, parroquias y organizaciones de los barrios. San Juan tiene un programa parecido, al que van m&aacute;s de 800 chicos.</p>
+<p><b>Y San Isidro ya tiene d&oacute;nde ponerlos.</b> Est&aacute;n los polideportivos, los centros de la tercera edad y las sedes de los barrios. Proponemos un centro de apoyo escolar gratuito en cada localidad. <span class="sg">Y que el &iacute;ndice de necesidad del cap&iacute;tulo 4 diga en qu&eacute; lugar.</span> No hay que construir un edificio. Hay que abrir los que est&aacute;n cerrados a la tarde, y pagar docentes.</p>
+<p><b>2 &middot; Que el apoyo escolar vea lo que la escuela no ve.</b> En los programas que funcionan, el centro de apoyo es tambi&eacute;n el lugar donde se ven los problemas a tiempo. Por ejemplo, un chico que dej&oacute; de venir, o una familia que no llega a fin de mes. Esos casos se pasan a las &aacute;reas sociales y de salud del Municipio, que ya existen. <b>No hace falta armar nada nuevo: s&oacute;lo que trabajen juntos.</b></p>
+<p><b>3 &middot; Y el modelo del CFL 404, que la secci&oacute;n 5.3 lleva a las seis zonas.</b> <span class="sg">Es el puente entre la escuela y el trabajo, que hoy no existe para tanta gente.</span></p>
 </div>
 """ + fig("f_apoyo", "Apoyo escolar en Boulogne, con un tutor y el profesor digital. Ilustraci&oacute;n.") + """
 <h3>Un profesor digital particular para cada chico</h3>
-<div class="cols">
-<p><b>Hoy los chicos ya usan inteligencia artificial para estudiar</b>: el 52% de los alumnos argentinos de 15 a&ntilde;os
-usa cada semana un chatbot para aprender (PISA 2025). Los gratuitos les dan la respuesta. Y el Municipio no ofrece
-ning&uacute;n tutor digital.</p>
-</div>
+<p><b>Hoy los chicos ya usan inteligencia artificial para estudiar.</b> El 52% de los alumnos argentinos de 15 a&ntilde;os usa cada semana un chatbot para aprender (PISA 2025). Los chatbots gratis les dan la respuesta. Y el Municipio no ofrece ning&uacute;n profesor digital.</p>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: un profesor digital que da pistas, nunca la respuesta</div>
-<p><b>1 &middot; Qu&eacute; es.</b> En la inteligencia artificial del Municipio, un profesor digital particular, con una cara realista
-de cat&aacute;logo y video, que le explica al chico sus dudas de la tarea. Antes de elegir el servicio, una prueba a ciegas de
-un mes compara la calidad y el precio de cada uno. Da pistas, nunca la respuesta: en Turqu&iacute;a, un chatbot que daba
-respuestas subi&oacute; un 48% las notas de pr&aacute;ctica y baj&oacute; un 17% el examen sin inteligencia artificial, y el que daba pistas
-evit&oacute; ese da&ntilde;o.</p>
-<p><b>2 &middot; Lo que dice la evidencia.</b> En ensayos con alumnos de escuela, los tutores con inteligencia artificial
-subieron el aprendizaje entre 0,06 y 0,36 desv&iacute;os est&aacute;ndar, siempre en la escuela, con un docente y en horario fijo.
-En casa no est&aacute; probado.</p>
-<p><b>3 &middot; D&oacute;nde.</b> En los centros de apoyo escolar municipales, con horario fijo y un docente, y adem&aacute;s en casa,
-para todos los chicos del partido, de primaria y secundaria.</p>
-<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis en las escuelas p&uacute;blicas y en los colegios privados que el Estado financia por
-completo &mdash;22.748 alumnos&mdash;, y en el apoyo escolar municipal; la gratuidad va por nivel, con el aporte vigente al
-empezar el a&ntilde;o. En los dem&aacute;s colegios privados lo contrata el colegio para todos sus alumnos, no cada familia: de
-10.887 a 12.146 pesos por alumno por a&ntilde;o con el uso que se espera, con su parte del equipo, y el precio se revisa cada
-a&ntilde;o con el uso real; no hay precio por sesi&oacute;n ni por familia. El Municipio paga s&oacute;lo el de los alumnos que lo tienen
-gratis, con lo que Educaci&oacute;n recupera de su ca&iacute;da de 2025 (m&aacute;s abajo).</p>
-<p><b>5 &middot; Qu&eacute; informa.</b> C&oacute;mo avanza el chico y qu&eacute; temas le cuestan. Y le avisa al docente si sospecha trampa, con
-los hechos concretos que vio &mdash;una respuesta pegada de afuera, una tarea que no coincide con lo trabajado&mdash;,
-nunca con detectores de &laquo;texto hecho con inteligencia artificial&raquo;, que marcaron como tal el 61% de los ensayos de
-alumnos que escriben en segunda lengua. <span class="sg">La inteligencia artificial no acusa ni sanciona: decide
-siempre el docente, que habla con el chico.</span> El chico y la familia ven lo mismo que el docente (Ley 25.326,
-art&iacute;culo 20, y Resoluci&oacute;n 9/2025 de la Provincia; necesita dictamen de un abogado).</p>
-<p><b>6 &middot; A qu&eacute; docentes les llega.</b> A los de todas las escuelas: en el apoyo escolar municipal, directo; en las
-p&uacute;blicas, por convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c); en los colegios que el Estado financia por completo, por acuerdo con cada uno; y en los dem&aacute;s, en el contrato de
-cada colegio.</p>
-<p><b>7 &middot; Los datos de los chicos, cuidados.</b> Consentimiento de la familia en dos partes &mdash;el profesor digital
-y el informe al docente&mdash;, que puede revocar; el chico sabe qu&eacute; se informa de &eacute;l; la base se crea por ordenanza;
-nada de diagn&oacute;sticos, salud ni emociones; el modelo, con los datos procesados en Europa, que la ley argentina acepta
-(Disposici&oacute;n 60/2016); un contrato que le proh&iacute;be al proveedor entrenar modelos con estos datos; y las conversaciones se
-borran en d&iacute;as (necesita dictamen de un abogado).</p>
-<p><b>8 &middot; Sin reemplazar a la escuela.</b> El Municipio lo hace como apoyo complementario, sin evaluar ni reemplazar a
-la escuela (Ley 13.688, art&iacute;culo 6). Primero, una prueba de seis meses en los primeros centros de apoyo escolar,
-medida con pruebas sin inteligencia artificial; despu&eacute;s, a todos.</p>
+<p><b>1 &middot; Qu&eacute; es.</b> Es un profesor digital particular, dentro de la inteligencia artificial del Municipio. Tiene una cara realista, elegida de un cat&aacute;logo, y habla por video. Le explica al chico las dudas de la tarea. Antes de elegir el servicio, se hace una prueba a ciegas de un mes, que compara la calidad y el precio de cada uno. Da pistas, nunca la respuesta. En Turqu&iacute;a, un chatbot que daba las respuestas subi&oacute; un 48% las notas de pr&aacute;ctica. Pero baj&oacute; un 17% la nota del examen hecho sin inteligencia artificial. El que daba pistas evit&oacute; ese da&ntilde;o.</p>
+<p><b>2 &middot; Lo que dice la evidencia.</b> Hay estudios con alumnos de escuela que usaron profesores con inteligencia artificial. Su aprendizaje subi&oacute; entre 0,06 y 0,36 desv&iacute;os est&aacute;ndar. Siempre fue en la escuela, con un docente y en un horario fijo. En casa no est&aacute; probado.</p>
+<p><b>3 &middot; D&oacute;nde.</b> En los centros de apoyo escolar del Municipio, con horario fijo y un docente. Y tambi&eacute;n en casa, para todos los chicos del partido, de primaria y secundaria.</p>
+<p><b>4 &middot; Qui&eacute;n paga.</b> Es gratis en las escuelas p&uacute;blicas y en los colegios privados que el Estado paga por completo, que tienen 22.748 alumnos. Tambi&eacute;n es gratis en el apoyo escolar del Municipio. Se mira cada nivel por separado, con el aporte del Estado que tiene el colegio al empezar el a&ntilde;o. En los dem&aacute;s colegios privados, lo contrata el colegio para todos sus alumnos, y no cada familia. Cuesta de 10.887 a 12.146 pesos por alumno por a&ntilde;o, con el uso que se espera y con su parte del equipo. El precio se revisa cada a&ntilde;o, seg&uacute;n el uso real. No hay precio por sesi&oacute;n ni por familia. El Municipio paga s&oacute;lo el de los alumnos que lo tienen gratis. Lo paga con lo que Educaci&oacute;n recupera de lo que perdi&oacute; en 2025 (m&aacute;s abajo).</p>
+<p><b>5 &middot; Qu&eacute; informa.</b> Informa c&oacute;mo avanza el chico y qu&eacute; temas le cuestan. Y le avisa al docente si sospecha que hubo trampa. Lo hace con los hechos concretos que vio, como una respuesta pegada de afuera o una tarea que no coincide con lo trabajado. Nunca usa detectores de &laquo;texto hecho con inteligencia artificial&raquo;. Esos detectores marcaron as&iacute; al 61% de los trabajos de alumnos que escriben en un idioma que no es el suyo. <span class="sg">Decide siempre el docente, que habla con el chico.</span> El chico y la familia ven lo mismo que el docente (Ley 25.326, art&iacute;culo 20, y Resoluci&oacute;n 9/2025 de la Provincia; necesita dictamen de un abogado).</p>
+<p><b>6 &middot; A qu&eacute; docentes les llega.</b> A los de todas las escuelas. En el apoyo escolar del Municipio, les llega directo. En las escuelas p&uacute;blicas, por un convenio con la Direcci&oacute;n General de Cultura y Educaci&oacute;n (Ley 13.688, art&iacute;culo 61 c). En los colegios que el Estado paga por completo, por un acuerdo con cada uno. Y en los dem&aacute;s, por el contrato de cada colegio.</p>
+<p><b>7 &middot; Los datos de los chicos, cuidados.</b> La familia da su permiso en dos partes: una para el profesor digital y otra para el informe al docente. Y lo puede retirar cuando quiera. El chico sabe qu&eacute; se informa de &eacute;l. La base de datos se crea por ordenanza. No guarda diagn&oacute;sticos, ni datos de salud, ni emociones. El programa procesa los datos en Europa, algo que la ley argentina acepta (Disposici&oacute;n 60/2016). El contrato le proh&iacute;be al proveedor usar estos datos para entrenar sus programas. Y las conversaciones se borran a los pocos d&iacute;as (necesita dictamen de un abogado).</p>
+<p><b>8 &middot; Sin reemplazar a la escuela.</b> El Municipio lo hace como un apoyo extra. No pone notas ni reemplaza a la escuela (Ley 13.688, art&iacute;culo 6). Primero se prueba seis meses en los primeros centros de apoyo escolar. Los resultados se miden con ex&aacute;menes hechos sin inteligencia artificial. Despu&eacute;s, llega a todos.</p>
 </div>
 
 """ + fig("f_profesor", "El profesor digital, en una escuela p&uacute;blica. Ilustraci&oacute;n.") + """
 <h3>Y lo que hay que arreglar del dinero</h3>
 <ol class="n">
-<li><b>Revertir la ca&iacute;da real</b>, devolviendo la funci&oacute;n educativa al nivel de 2024. Son
-<b>2.064 millones</b> de pesos constantes, que no salen de adentro de educaci&oacute;n, que
-ser&iacute;a circular, sino del programa de mantenimiento y embellecimiento, que el
-cap&iacute;tulo 3 identifica con nombre. Es el <b>2,4% de los 87.326 millones</b> reasignables. Adentro va el profesor digital de los 22.748 alumnos
-que lo tienen gratis: de 151,9 a 180,5 millones por a&ntilde;o con el uso que se espera, y de 788,3 a 979,1 si lo usan
-todos. Su parte del equipo, 120,7 millones, ya est&aacute; en el cuadro [[n:equipo]].</li>
-<li><b>Que cualquiera pueda preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra y escuela por escuela.</b> Es dinero
-afectado con destino espec&iacute;fico: su ejecuci&oacute;n deber&iacute;a ser trazable y hoy no lo es.
-Y sirve para lo &uacute;nico que importa ac&aacute;: saber si la obra escolar cae donde est&aacute;n las
-escuelas que peor est&aacute;n.</li>
+<li><b>Recuperar lo que se perdi&oacute;</b>, y volver a gastar en educaci&oacute;n lo mismo que en 2024, descontada la inflaci&oacute;n. Son <b>2.064 millones</b>, en pesos ajustados por inflaci&oacute;n. No salen de adentro de educaci&oacute;n, porque eso ser&iacute;a sacar de un lado para ponerlo en el mismo lado. Salen del programa de mantenimiento y embellecimiento, que el cap&iacute;tulo 3 nombra. Es el <b>2,4% de los 87.326 millones</b> que se pueden cambiar de destino. Ah&iacute; adentro va el profesor digital de los 22.748 alumnos que lo tienen gratis. Cuesta de 151,9 a 180,5 millones por a&ntilde;o con el uso que se espera, y de 788,3 a 979,1 si lo usan todos. Su parte del equipo, 120,7 millones, ya est&aacute; en el cuadro [[n:equipo]].</li>
+<li><b>Que cualquiera pueda preguntar en qu&eacute; se gast&oacute; el Fondo Educativo, obra por obra y escuela por escuela.</b> Es dinero que la ley destina a algo concreto. Por eso se deber&iacute;a poder seguir en qu&eacute; se gasta, y hoy no se puede. Y sirve para lo &uacute;nico que importa ac&aacute;: saber si la obra escolar llega a las escuelas que peor est&aacute;n.</li>
 </ol>
 
-<h3>Cultura: el problema no es que falten lugares, es la norma de 1970 que sigue publicada</h3>
+<h3>Cultura: el problema no es que falten lugares. Es una norma de 1970 que sigue publicada</h3>
 <div class="cols">
-<p><b>Cultura devenga 1.360,4 millones al a&ntilde;o: el 0,42% del gasto municipal</b>, y comparte
-cr&eacute;dito con turismo sin desagregar. Al lado, Deporte y Recreaci&oacute;n devenga 3.813,3
-millones, <span class="sg">2,8 veces m&aacute;s</span>.
-No es que falten fondos: falta d&oacute;nde.</p>
-<p><b>Y ac&aacute; est&aacute; el hallazgo, que no es de presupuesto.</b> El r&eacute;gimen que regula
-la m&uacute;sica en vivo en San Isidro es de <b>1970</b> y sigue publicado en el Digesto municipal.</p>
+<p><b>Cultura gasta 1.360,4 millones al a&ntilde;o, el 0,42% del gasto del Municipio.</b> Y ese n&uacute;mero incluye turismo, sin separar cu&aacute;nto va a cada cosa. Deporte y Recreaci&oacute;n, en cambio, gasta 3.813,3 millones, <span class="sg">2,8 veces m&aacute;s</span>. No es que falte dinero: falta d&oacute;nde hacerlo.</p>
+<p><b>Y ac&aacute; est&aacute; el hallazgo, que no tiene que ver con el presupuesto.</b> Las reglas de la m&uacute;sica en vivo en San Isidro son de <b>1970</b>, y siguen publicadas en el Digesto del Municipio.</p>
 </div>
 <div class="callout a">
 <div class="clabel">Lo que dice hoy el Digesto de San Isidro</div>
-<p><b>El Decreto 725/1970, en su art&iacute;culo 7, proh&iacute;be &laquo;el acceso al local y
-permanencia en &eacute;l, de mujeres solas&raquo;.</b> No hace falta agregar nada sobre por qu&eacute;
-hay que reescribir ese r&eacute;gimen.</p>
-<p><b>Y el Decreto 718/1970 cierra la puerta por otro lado.</b> Su art&iacute;culo 5 no autoriza
-m&uacute;sica en locales que formen parte de predios con viviendas &mdash;en un partido donde casi todo
-tiene una vivienda al lado, eso alcanza&mdash;; su art&iacute;culo 3 exige que el sonido no trascienda
-&laquo;bajo ning&uacute;n concepto&raquo;; y su art&iacute;culo 6 fija el horario entre las cuatro de la
-tarde y las cuatro de la ma&ntilde;ana.</p>
-<p><b>La Ordenanza 8216/2006 agrega el cierre obligatorio entre las doce y las siete</b>, salvo con un
-Permiso de Funcionamiento Nocturno que exige un sal&oacute;n de m&aacute;s de cincuenta metros cuadrados
-y que, por s&iacute; solo, <b>no autoriza a emitir m&uacute;sica</b>. Estos decretos <b>siguen publicados en el
-Digesto como vigentes</b>, y nadie los revis&oacute; en cincuenta y seis a&ntilde;os.</p>
+<p><b>El Decreto 725/1970, en su art&iacute;culo 7, proh&iacute;be &laquo;el acceso al local y permanencia en &eacute;l, de mujeres solas&raquo;.</b> No hace falta explicar por qu&eacute; hay que reescribir esas reglas.</p>
+<p><b>Y el Decreto 718/1970 cierra la puerta por otro lado.</b> Su art&iacute;culo 5 no permite m&uacute;sica en locales que est&eacute;n en un terreno con viviendas. En un partido donde casi todo tiene una vivienda al lado, eso solo ya deja afuera a casi todos. Su art&iacute;culo 3 exige que el sonido no salga del local &laquo;bajo ning&uacute;n concepto&raquo;. Y su art&iacute;culo 6 fija el horario entre las cuatro de la tarde y las cuatro de la ma&ntilde;ana.</p>
+<p><b>La Ordenanza 8216/2006 agrega que hay que cerrar entre las doce y las siete.</b> La excepci&oacute;n es tener un Permiso de Funcionamiento Nocturno, que exige un sal&oacute;n de m&aacute;s de cincuenta metros cuadrados. Y ese permiso, por s&iacute; solo, <b>no autoriza a pasar m&uacute;sica</b>. Estos decretos <b>siguen publicados en el Digesto como vigentes</b>, y nadie los revis&oacute; en cincuenta y seis a&ntilde;os.</p>
 </div>
 <div class="cols">
-<p><b>Y no hay categor&iacute;a para espacios peque&ntilde;os.</b> El marco de habilitaciones de 2024 y su decreto
-reglamentario tienen los rubros &laquo;caf&eacute; concert&raquo; y &laquo;centro cultural&raquo;, los
-dos con licencia e inspecci&oacute;n previa y <span class="sg">sin umbral de aforo ni r&eacute;gimen
-simplificado</span>. Una sala de ciento cincuenta personas cumple con lo mismo que un boliche.</p>
-<p><b>Ah&iacute; est&aacute; el costo que nadie ve.</b> Habilitar cuesta tanto que el &uacute;nico lugar
-donde conviene hacer un evento es uno grande y caro, y entonces la entrada es inaccesible.
-<b>No se puede velar s&oacute;lo por el vecino que se acuesta a las nueve.</b></p>
-<p><b>La propuesta es adherir, no inventar.</b> La Provincia sancion&oacute; en 2021 la <b>Ley
-15.302</b>, que regula salas de teatro independiente, centros culturales y espacios culturales
-alternativos con un tope de <b>300 asistentes y 500 metros cuadrados</b>, e invita expresamente a los
-municipios a adherir. <span class="sg">San Isidro no adhiri&oacute;.</span> Adherir por ordenanza es el
-camino m&aacute;s corto y no exige escribir un r&eacute;gimen nuevo.</p>
-<p><b>Que qui&eacute;n decide d&oacute;nde puede haber m&uacute;sica sea el barrio</b>, no un reclamo
-aislado. Es la misma l&oacute;gica del cap&iacute;tulo 4: la comisi&oacute;n de la zona opina sobre
-horarios y cuadras y esa opini&oacute;n queda escrita. Hoy un solo reclamo alcanza para clausurar y el
-criterio no se discute nunca.</p>
-<p><b>Y la cultura municipal tampoco es gratuita.</b> Las cinco Casas de Cultura cobran sus cursos entre
-<b>26.000 y 32.000 pesos por mes</b>: la oferta p&uacute;blica de cultura tiene un precio de
-entrada.</p>
-<p><b>Y la m&uacute;sica sale a la calle.</b> Los espect&aacute;culos al aire libre de lunes a jueves &mdash;los artistas a la gorra, con el sonido del Municipio, y los shows que eligen los vecinos, con artistas emergentes del partido&mdash; est&aacute;n en el 5.5.</p>
+<p><b>Y no hay una categor&iacute;a para lugares chicos.</b> Las reglas de habilitaciones de 2024, y su decreto, tienen los rubros &laquo;caf&eacute; concert&raquo; y &laquo;centro cultural&raquo;. Los dos piden licencia e inspecci&oacute;n antes de abrir. <span class="sg">No hay un tope de gente por debajo del cual el tr&aacute;mite sea m&aacute;s simple.</span> Una sala para ciento cincuenta personas tiene que cumplir lo mismo que un boliche.</p>
+<p><b>Ah&iacute; est&aacute; el costo que nadie ve.</b> Habilitar cuesta tanto que s&oacute;lo conviene hacer un evento en un lugar grande y caro. Y entonces la entrada sale demasiado cara. <b>No se puede cuidar s&oacute;lo al vecino que se acuesta a las nueve.</b></p>
+<p><b>La propuesta es sumarse a una ley que ya existe, no inventar.</b> En 2021, la Provincia aprob&oacute; la <b>Ley 15.302</b>. Regula las salas de teatro independiente, los centros culturales y los espacios culturales alternativos, con un tope de <b>300 personas y 500 metros cuadrados</b>. Y les pide a los municipios que se sumen. <span class="sg">San Isidro no se sum&oacute;.</span> Sumarse por ordenanza es el camino m&aacute;s corto, y no obliga a escribir reglas nuevas.</p>
+<p><b>Que el que decida d&oacute;nde puede haber m&uacute;sica sea el barrio</b>, y no un solo reclamo. Es la misma idea del cap&iacute;tulo 4. La comisi&oacute;n de la zona opina sobre horarios y cuadras, y esa opini&oacute;n queda escrita. Hoy, un solo reclamo alcanza para clausurar, y nunca se discute con qu&eacute; criterio.</p>
+<p><b>Y la cultura del Municipio tampoco es gratis.</b> Las cinco Casas de Cultura cobran sus cursos entre <b>26.000 y 32.000 pesos por mes</b>. Para usar la cultura p&uacute;blica, hay que pagar.</p>
+<p><b>Y la m&uacute;sica sale a la calle.</b> Los espect&aacute;culos al aire libre de lunes a jueves est&aacute;n en el 5.5. Hay artistas a la gorra, con el sonido del Municipio. Y hay shows que eligen los vecinos, con artistas nuevos del partido.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que se perdi&oacute; en la costa, contado entero</div>
-<p>Los locales de la costa que se demolieron (5.5) no eran s&oacute;lo empleo y capital construido:
-<b>eran un lugar donde la gente iba.</b> En
-un partido donde habilitar un espacio con m&uacute;sica se rige por un decreto de 1970, cerrar dos
-lugares que funcionaban no es s&oacute;lo un problema econ&oacute;mico.</p>
+<p>Los locales de la costa que se demolieron (5.5) no eran s&oacute;lo trabajo y edificios. <b>Eran un lugar adonde la gente iba.</b> En este partido, habilitar un lugar con m&uacute;sica depende de un decreto de 1970. Por eso, cerrar dos lugares que funcionaban no es s&oacute;lo un problema econ&oacute;mico.</p>
 </div>
 
 <h3>A qui&eacute;n se le pregunta cuando hace falta un estudio</h3>
 <div class="cols">
-<p><b>La regla que proponemos es simple.</b> Cuando el Municipio convoque
-expertos o encargue un estudio, convoca a <span class="sg">instituciones con sede en el partido</span>,
-y la composici&oacute;n se pondera por el &iacute;ndice de necesidad del cap&iacute;tulo 4, el que
-reparte la partida vecinal. Hoy esa ponderaci&oacute;n da dos tercios de instituciones
-p&uacute;blicas.</p>
-<p><b>El criterio, dicho de frente.</b> En el radio 067562205 de Boulogne, el 13,7% de los hogares
-tiene necesidades b&aacute;sicas insatisfechas y el <b>95,8% cocina sin gas de red</b>.
-<span class="sg">De ah&iacute; no se sale a estudiar a una universidad privada cara.</span> Si el que
-asesora sobre un barrio nunca tuvo un compa&ntilde;ero de ese barrio, el diagn&oacute;stico se escribe
-desde afuera.</p>
-<p><b>Las instituciones con sede en el partido son dos:</b> la <b>Universidad Nacional de San Isidro</b>,
-p&uacute;blica y nacional, y la <b>Universidad de San Isidro &laquo;Dr. Pl&aacute;cido Mar&iacute;n&raquo;</b>,
-privada, en Avenida Libertador 17115, B&eacute;ccar.</p>
+<p><b>La regla que proponemos es simple.</b> Cuando el Municipio llame a expertos o encargue un estudio, llama a <span class="sg">instituciones con sede en el partido</span>. Y el peso de cada una se fija con el &iacute;ndice de necesidad del cap&iacute;tulo 4, el mismo que reparte la partida vecinal. Hoy, esa cuenta da dos tercios de instituciones p&uacute;blicas.</p>
+<p><b>El criterio, dicho de frente.</b> En el radio 067562205 de Boulogne, el 13,7% de los hogares tiene necesidades b&aacute;sicas insatisfechas. Y el <b>95,8% cocina sin gas de red</b>. <span class="sg">De ah&iacute; no se sale a estudiar a una universidad privada cara.</span> Si el que asesora sobre un barrio nunca tuvo un compa&ntilde;ero de ese barrio, mira el barrio desde afuera.</p>
+<p><b>Las instituciones con sede en el partido son dos.</b> Una es la <b>Universidad Nacional de San Isidro</b>, que es p&uacute;blica y nacional. La otra es la <b>Universidad de San Isidro &laquo;Dr. Pl&aacute;cido Mar&iacute;n&raquo;</b>, que es privada y est&aacute; en Avenida Libertador 17115, B&eacute;ccar.</p>
 </div>
 
 <h2><span class="n">5.9</span>Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos <span class="tag v">Reasignaci&oacute;n</span></h2>
-<p class="lead">Un tr&aacute;mite digitalizado sigue siendo un formulario que hay que saber completar.
-Lo que este programa propone no es digitalizar m&aacute;s formularios: es que la inteligencia artificial del Municipio
-<span class="sg">conteste</span>, y que el gasto de construirlo vuelva al partido.</p>
+<p class="lead">Un tr&aacute;mite digital sigue siendo un formulario que hay que saber completar. Este programa no propone pasar m&aacute;s formularios a internet. Propone que la inteligencia artificial del Municipio <span class="sg">conteste</span>. Y que lo que se gaste en construirla vuelva al partido.</p>
 <div class="cols">
-<p><b>Hoy:</b> el plan de gobierno 2024&ndash;2025 se propuso digitalizar el 30% de los tr&aacute;mites municipales, firma
-digital en el 100% de los puestos ejecutivos y un nuevo centro de atenci&oacute;n telef&oacute;nica.
-Son metas de volumen: cu&aacute;ntos tr&aacute;mites, cu&aacute;ntos puestos.</p>
-<p><b>Y lo que falta es lo que m&aacute;s pesa.</b> Quien abre un local, ampl&iacute;a una casa o pide
-una habilitaci&oacute;n <b>no necesita un PDF en l&iacute;nea: necesita una respuesta</b>. Ninguna de
-esas metas mide si la obtuvo.</p>
+<p><b>Hoy:</b> el plan de gobierno 2024&ndash;2025 se puso tres metas. Pasar a digital el 30% de los tr&aacute;mites del Municipio. Tener firma digital en el 100% de los puestos ejecutivos. Y abrir un nuevo centro de atenci&oacute;n telef&oacute;nica. Son metas de cantidad: cu&aacute;ntos tr&aacute;mites y cu&aacute;ntos puestos.</p>
+<p><b>Y lo que falta es lo que m&aacute;s pesa.</b> El que abre un local, ampl&iacute;a una casa o pide una habilitaci&oacute;n <b>no necesita un PDF en internet: necesita una respuesta</b>. Ninguna de esas metas mide si la consigui&oacute;.</p>
 </div>
 <div class="callout a">
 <div class="clabel">La vara la puso Miami, y despu&eacute;s la compr&oacute;</div>
-<p>En noviembre de 2025, en un foro empresario en Miami, Jeff Bezos propuso que la ciudad tuviera
-<b>una aplicaci&oacute;n que lea un permiso de obra y devuelva un s&iacute; o un no en diez
-segundos</b> &mdash;y que si es no, diga las seis cosas que hay que cambiar para que sea s&iacute;&mdash;.
-La pregunta que hizo fue por qu&eacute; tarda meses.</p>
-<p><b>No qued&oacute; en una frase.</b> En marzo de 2026 la Ciudad de Miami adopt&oacute; una plataforma
-de permisos y licencias que consolida ocho aplicaciones en una y automatiza los circuitos de
-revisi&oacute;n. El promedio de aprobaci&oacute;n en Miami-Dade rondaba los noventa d&iacute;as.</p>
-<p><span class="sg">Y el diagn&oacute;stico que m&aacute;s le sirve a este programa vino de la
-cr&iacute;tica, no del elogio</span>: la tecnolog&iacute;a ya existe, y la barrera principal no es
-t&eacute;cnica sino pol&iacute;tica. La lentitud persiste porque a alguien le sirve.</p>
+<p>En noviembre de 2025, en un encuentro de empresarios en Miami, Jeff Bezos propuso una idea para la ciudad. <b>Una aplicaci&oacute;n que lea un permiso de obra y conteste s&iacute; o no en diez segundos.</b> Y que, si es no, diga las seis cosas que hay que cambiar para que sea s&iacute;. Pregunt&oacute; por qu&eacute; ese tr&aacute;mite tarda meses.</p>
+<p><b>No qued&oacute; en una frase.</b> En marzo de 2026, la Ciudad de Miami empez&oacute; a usar una plataforma de permisos y licencias. Junta ocho aplicaciones en una, y hace sola buena parte de la revisi&oacute;n. Antes, en Miami-Dade, aprobar un permiso tardaba unos noventa d&iacute;as en promedio.</p>
+<p><span class="sg">Y la conclusi&oacute;n que m&aacute;s le sirve a este programa vino de las cr&iacute;ticas, no de los elogios.</span> La tecnolog&iacute;a ya existe. El problema principal no es t&eacute;cnico, es pol&iacute;tico. La demora sigue porque a alguien le conviene.</p>
 </div>
 <div class="cols">
-<p><b>Qu&eacute; propone este programa.</b> Que la inteligencia artificial del Municipio lea la solicitud contra la norma y devuelva
-tres cosas: <b>s&iacute; o no, qu&eacute; falta exactamente, y en cu&aacute;nto tiempo</b>. Empezando por
-habilitaci&oacute;n comercial, que es el tr&aacute;mite que traba la apertura de un local, y siguiendo por
-obra particular.</p>
-<p><b>Con el l&iacute;mite que la propia experiencia marca.</b> Donde esto funciona es en el cotejo entre
-lo presentado y la norma escrita, que es la parte lenta y repetitiva. <b>No reemplaza la
-inspecci&oacute;n ni la decisi&oacute;n sobre lo que requiere criterio</b>: la
-mitad de los proyectos que fracasan son los que prometieron reemplazar el juicio humano.</p>
-<p><b>Y quien hoy atiende ventanilla pasa a hacer lo que hoy no se hace:</b> seguimiento de expedientes
-demorados, inspecci&oacute;n en territorio y atenci&oacute;n presencial a quien la necesita.
-<b>La inteligencia artificial del Municipio absorbe el volumen, no el empleo.</b></p>
-<p><b>Y el que atiende que atienda en castellano.</b> A la inteligencia artificial del Municipio se le puede
-preguntar &laquo;qu&eacute; necesito para abrir una rotiser&iacute;a en Boulogne&raquo; y recibir
-la lista, el costo y el plazo. Quien no maneja formularios es exactamente el que hoy pierde una
-ma&ntilde;ana de trabajo en una cola.</p>
+<p><b>Qu&eacute; propone este programa.</b> Que la inteligencia artificial del Municipio compare el pedido con la norma y conteste tres cosas: <b>s&iacute; o no, qu&eacute; falta exactamente y en cu&aacute;nto tiempo</b>. Empieza por la habilitaci&oacute;n comercial, que es el tr&aacute;mite que frena la apertura de un local. Y sigue por las obras particulares. Esto funciona bien para comparar lo presentado con la norma escrita, que es la parte lenta y repetitiva.</p>
+<p><b>Y quien hoy atiende la ventanilla pasa a hacer lo que hoy no se hace.</b> Sigue los expedientes demorados, inspecciona en la calle y atiende en persona a quien lo necesita. <b>La inteligencia artificial del Municipio se hace cargo de la cantidad de tr&aacute;mites, no de los puestos de trabajo.</b></p>
+<p><b>Y que cualquiera pueda preguntar, sin saber de tr&aacute;mites.</b> A la inteligencia artificial del Municipio se le puede preguntar &laquo;qu&eacute; necesito para abrir una rotiser&iacute;a en Boulogne&raquo;. Y contesta con la lista, el costo y el plazo. El que no sabe llenar formularios es justo el que hoy pierde una ma&ntilde;ana de trabajo en una cola.</p>
 </div>
 <h3>La mayor&iacute;a se pierde antes de saber qu&eacute; tr&aacute;mite hacer</h3>
 <div class="cols">
-<p><b>Que la inteligencia artificial del Municipio lea la solicitud y responda sirve a quien ya sabe qu&eacute; presentar.</b> El que
-reci&eacute;n arranca se pierde antes: en averiguar si el rubro est&aacute; permitido en esa cuadra, si
-necesita obra, cu&aacute;nto tarda y cu&aacute;nto sale. <span class="sg">Ah&iacute; empieza la
-discrecionalidad</span>, porque la respuesta depende de a qui&eacute;n le preguntes.</p>
-<p><b>Proponemos consulta previa, desde la c&aacute;mara del tel&eacute;fono.</b> El vecino apunta al local y
-pregunta si puede poner ah&iacute; lo que tiene en la cabeza. La inteligencia artificial del Municipio cruza zonificaci&oacute;n, rubro
-y superficie y contesta <b>antes de que firme el alquiler</b>, que es el momento en que todav&iacute;a
-puede cambiar de idea sin perder dinero.</p>
-<p><b>Y con habilitaci&oacute;n autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico
-momento discrecional que sobra.</b> Por eso, como proponemos para toda inspecci&oacute;n municipal, queda grabada y sellada en el momento de grabar, para que se vea que fue real y para que cualquier vecino la vea
-despu&eacute;s; y el comerciante puede objetar por escrito y recibir respuesta fundada.</p>
-<p><b>Programada, no aleatoria.</b> La inteligencia artificial del Municipio la agenda, y el comerciante sabe cu&aacute;ndo va el
-inspector. Tambi&eacute;n compara las inspecciones del mismo rubro y marca las que se apartan del
-patr&oacute;n, que es el mismo mecanismo que el 5.6 aplica a los precios de los insumos.</p>
+<p><b>Que la inteligencia artificial del Municipio lea el pedido y conteste le sirve a quien ya sabe qu&eacute; presentar.</b> El que reci&eacute;n empieza se pierde antes. Se pierde averiguando si el rubro est&aacute; permitido en esa cuadra, si necesita obra, cu&aacute;nto tarda y cu&aacute;nto sale. <span class="sg">Ah&iacute; empieza el criterio de cada empleado</span>, porque la respuesta depende de a qui&eacute;n le preguntes.</p>
+<p><b>Proponemos poder consultar antes, con la c&aacute;mara del tel&eacute;fono.</b> El vecino apunta al local y pregunta si puede poner ah&iacute; lo que tiene pensado. La inteligencia artificial del Municipio mira la zona, el rubro y la superficie. Y contesta <b>antes de que firme el alquiler</b>. Es el momento en que todav&iacute;a puede cambiar de idea sin perder dinero.</p>
+<p><b>Si la habilitaci&oacute;n es autom&aacute;tica, la inspecci&oacute;n queda como el &uacute;nico momento en que alguien decide a su criterio.</b> Por eso, como proponemos para toda inspecci&oacute;n del Municipio, queda grabada y sellada en el momento de grabar. As&iacute; se ve que fue real, y cualquier vecino la puede ver despu&eacute;s. Y el comerciante puede objetar por escrito, y recibir una respuesta con razones.</p>
+<p><b>Con fecha fija, no por sorpresa.</b> La inteligencia artificial del Municipio la agenda, y el comerciante sabe cu&aacute;ndo va el inspector. Tambi&eacute;n compara las inspecciones del mismo rubro, y marca las que se salen de lo normal. Es lo mismo que el 5.6 hace con los precios de los insumos.</p>
 </div>
 
-<p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma
-(4.11), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). Los soportes, las bater&iacute;as, los datos y la guarda de las grabaciones de la primera etapa &mdash;inspectores, Habilitaciones, obra y tr&aacute;nsito&mdash; cuestan de 20,5 a 27,5 millones una vez y de 107,6 a 145,5 millones por a&ntilde;o, m&aacute;s 9,5 millones por cada base donde se descargan los videos (tr&aacute;nsito tiene dos); difuminar las caras cuando alguien pide ver una inspecci&oacute;n, de 5 a 23 millones por a&ntilde;o; y la patrulla municipal, en la segunda etapa, de 29,5 a 35,3 millones una vez y de 135,7 a 162,4 millones por a&ntilde;o. Salen de
-los tres programas que ceden su gasto (3.4).</p>
+<p><b>Cu&aacute;nto cuesta.</b> La inteligencia artificial que lee los tr&aacute;mites la construye el equipo de la plataforma (4.11). Y el an&aacute;lisis de video de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). La primera etapa incluye a los inspectores, Habilitaciones, obra y tr&aacute;nsito. Sus soportes, bater&iacute;as, datos y la guarda de las grabaciones cuestan de 20,5 a 27,5 millones una sola vez. Y despu&eacute;s, de 107,6 a 145,5 millones por a&ntilde;o. A eso se suman 9,5 millones por cada base donde se descargan los videos, y tr&aacute;nsito tiene dos. Difuminar las caras cuando alguien pide ver una inspecci&oacute;n cuesta de 5 a 23 millones por a&ntilde;o. La patrulla municipal entra en la segunda etapa. Cuesta de 29,5 a 35,3 millones una sola vez, y de 135,7 a 162,4 millones por a&ntilde;o. Todo sale de los tres programas que ceden su gasto (3.4).</p>
 
-<h3>La coima en la inspecci&oacute;n: el acto de autoridad, grabado y sellado</h3>
-<p class="tight">Lo anterior resuelve que el tr&aacute;mite conteste. Falta lo otro, que es el punto
-donde el tr&aacute;mite se compra: <span class="sg">el momento en que un agente con facultad de
-clausurar entra a un local</span>.</p>
+<h3>La coima en la inspecci&oacute;n: todo queda grabado y sellado</h3>
+<p class="tight">Lo anterior hace que el tr&aacute;mite conteste. Falta lo otro: el punto donde el tr&aacute;mite se compra. <span class="sg">Es el momento en que un agente que puede clausurar entra a un local.</span></p>
 <div class="cols">
-<p><b>La propuesta es que ese acto quede grabado y sellado.</b> El agente graba todo su turno con su tel&eacute;fono,
-para que nada pase fuera de c&aacute;mara, desde la inteligencia artificial del Municipio, en un soporte en el pecho: no hay
-c&aacute;maras corporales que comprar. Cada
-grabaci&oacute;n se sella en el momento de grabar, y su huella llega en ese momento a la inteligencia artificial del Municipio;
-el video se sube al volver a la base, y si una grabaci&oacute;n sellada no se sube, la inteligencia artificial lo marca. As&iacute;
-nadie puede editarla ni borrarla sin que se note. La inteligencia artificial corta el turno en una grabaci&oacute;n por
-inspecci&oacute;n y la guarda en una base por comercio o domicilio: cualquier vecino puede ver cualquier inspecci&oacute;n, de a
-una, y comprobar que pas&oacute; donde dice que pas&oacute; y que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; grabando.</span></p>
-<p><b>El tel&eacute;fono es propio.</b> Quien sale a inspeccionar o trabaja de agente de tr&aacute;nsito necesita un tel&eacute;fono propio apto. El Municipio no compra tel&eacute;fonos ni adelanta dinero: firma un convenio con el banco que paga los sueldos para que los modelos aptos se puedan comprar en 24 cuotas sin inter&eacute;s todo el a&ntilde;o, y el riesgo de cobro lo toma el banco (necesita dictamen de un abogado). Paga el plan de datos, el soporte de pecho y la bater&iacute;a. La Ley 14.656, del empleo municipal,
-pone a cargo del Municipio los &uacute;tiles de trabajo: la salida es compensar el gasto, como prev&eacute; su art&iacute;culo 75, y
-acordarlo con los trabajadores municipales (necesita dictamen de un abogado). Las grabaciones se guardan dos a&ntilde;os en una nube
-con servidores en B&eacute;lgica, adonde la ley argentina permite llevar datos personales, y se ven al instante durante todo ese
-tiempo.</p>
-<p><b>No es &laquo;todos los empleados municipales&raquo;.</b> Es todo agente con facultad de
-fiscalizaci&oacute;n o autoridad &mdash;inspectores, fiscalizadores, agentes de tr&aacute;nsito, patrulla municipal: quien puede
-labrar un acta, clausurar, multar o demorar a alguien&mdash; <b>durante su turno</b>. Fuera del turno, no. Empiezan los inspectores de comercio y de la Agencia de Control, los de Habilitaciones &mdash;unos cuatro&mdash; y los de Obras Particulares &mdash;de tres a seis&mdash;, s&oacute;lo quienes salen a inspeccionar, y los agentes de tr&aacute;nsito: de 208 a 280 agentes. La patrulla municipal, en una segunda etapa.</p>
-<p><b>No es vigilancia del trabajador: es publicidad del acto de autoridad</b>, que es p&uacute;blico por
-naturaleza. Es la misma l&oacute;gica de la c&aacute;mara corporal policial,
-y protege a los dos lados: <span class="sg">al vecino del abuso y al inspector honesto de la
-acusaci&oacute;n falsa</span>.</p>
-<p><b>Y tiene una consecuencia escrita:</b> sin grabaci&oacute;n sellada y subida, el acta no vale. Sin eso la regla es
-una recomendaci&oacute;n, y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no
-cumplirla.</p>
-<p><b>Del otro lado, el vecino graba y lo sube a la inteligencia artificial del Municipio</b>, y ese registro tiene el mismo valor
-en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
-<p><b>Qui&eacute;n ve qu&eacute;.</b> Una ordenanza crea la base de las inspecciones y declara de inter&eacute;s general que se puedan ver, como pide la Disposici&oacute;n 10/2015 para difundir grabaciones. Cualquier vecino puede ver cualquier inspecci&oacute;n, de a una, busc&aacute;ndola por comercio o por domicilio, con su fecha y el agente: todo vecino tiene un inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, que es de todos, y la ordenanza lo declara as&iacute; para cumplir con el art&iacute;culo 20 de la Constituci&oacute;n bonaerense (necesita dictamen de un abogado). Cuando alguien pide ver una inspecci&oacute;n, la inteligencia artificial difumina las caras de los clientes y de la gente que pasa, y una persona lo revisa antes de mostrarla: unos 2.200 pesos por pedido, de 5 a 23 millones por a&ntilde;o. Lo que pasa entre una inspecci&oacute;n y otra lo ven s&oacute;lo los auditores del Municipio y la auditor&iacute;a externa. Adentro de una casa &mdash;sobre todo en las inspecciones de obra&mdash; se graba igual, como prueba y para que no haya coima, pero el interior nunca se publica: lo ven s&oacute;lo el due&ntilde;o, los auditores y, si hace falta, un juez (necesita dictamen de un abogado, por la Ley 25.326).</p>
+<p><b>La propuesta es que ese momento quede grabado y sellado.</b> El agente graba todo su turno con su tel&eacute;fono, desde la inteligencia artificial del Municipio, para que nada pase fuera de c&aacute;mara. Lleva el tel&eacute;fono en un soporte en el pecho, as&iacute; que no hay que comprar c&aacute;maras. Cada grabaci&oacute;n se sella en el momento de grabar, y su huella llega en ese mismo momento a la inteligencia artificial del Municipio. El video se sube al volver a la base. Si una grabaci&oacute;n sellada no se sube, la inteligencia artificial lo marca. As&iacute;, nadie puede editarla ni borrarla sin que se note. La inteligencia artificial corta el turno en una grabaci&oacute;n por inspecci&oacute;n. Y la guarda en una base, ordenada por comercio o por domicilio. Cualquier vecino puede ver cualquier inspecci&oacute;n, de a una. Y puede comprobar que pas&oacute; donde dice que pas&oacute;, y que no hubo coima. <span class="sg">Una coima no se paga delante de una c&aacute;mara que est&aacute; grabando.</span></p>
+<p><b>El tel&eacute;fono es del agente.</b> Quien sale a inspeccionar o trabaja de agente de tr&aacute;nsito necesita su propio tel&eacute;fono, que sirva para esto. El Municipio no compra tel&eacute;fonos ni adelanta dinero. Firma un convenio con el banco que paga los sueldos, para que esos tel&eacute;fonos se puedan comprar en 24 cuotas sin inter&eacute;s todo el a&ntilde;o. Si alguien no paga, el riesgo lo toma el banco (necesita dictamen de un abogado). El Municipio paga el plan de datos, el soporte de pecho y la bater&iacute;a. La Ley 14.656, del empleo municipal, dice que el Municipio tiene que dar las herramientas de trabajo. La salida es compensarle ese gasto al agente, como prev&eacute; su art&iacute;culo 75, y acordarlo con los trabajadores municipales (necesita dictamen de un abogado). Las grabaciones se guardan dos a&ntilde;os en una nube con servidores en B&eacute;lgica. La ley argentina permite llevar datos personales a ese pa&iacute;s. Y se pueden ver al instante durante todo ese tiempo.</p>
+<p><b>No son &laquo;todos los empleados municipales&raquo;.</b> Son los agentes que pueden controlar o ejercer autoridad, <b>durante su turno</b>. Son los inspectores, los fiscalizadores, los agentes de tr&aacute;nsito y la patrulla municipal. Es decir, quienes pueden labrar un acta, clausurar, multar o demorar a alguien. Fuera del turno, no se graba. Empiezan los inspectores de comercio y de la Agencia de Control. Tambi&eacute;n los de Habilitaciones, que son unos cuatro, y los de Obras Particulares, que son de tres a seis. En los dos casos, s&oacute;lo quienes salen a inspeccionar. Y los agentes de tr&aacute;nsito. En total, son de 208 a 280 agentes. La patrulla municipal entra en una segunda etapa.</p>
+<p><b>Lo que se graba es un acto de autoridad, y eso es p&uacute;blico por naturaleza.</b> Es la misma idea de la c&aacute;mara que llevan en el pecho algunos polic&iacute;as. Y protege a los dos lados: <span class="sg">al vecino, del abuso, y al inspector honesto, de una acusaci&oacute;n falsa</span>.</p>
+<p><b>Y tiene una consecuencia escrita: sin grabaci&oacute;n sellada y subida, el acta no vale.</b> Sin eso, la regla ser&iacute;a s&oacute;lo una recomendaci&oacute;n. Y una recomendaci&oacute;n no se cumple el d&iacute;a que conviene no cumplirla.</p>
+<p><b>Del otro lado, el vecino tambi&eacute;n graba y lo sube a la inteligencia artificial del Municipio.</b> Esa grabaci&oacute;n vale lo mismo en el expediente. Si el acto es p&uacute;blico para uno, es p&uacute;blico para los dos.</p>
+<p><b>Qui&eacute;n ve qu&eacute;.</b> Una ordenanza crea la base de las inspecciones. Y declara que es de inter&eacute;s general que se puedan ver, como pide la Disposici&oacute;n 10/2015 para difundir grabaciones. Cualquier vecino puede ver cualquier inspecci&oacute;n, de a una. La busca por comercio o por domicilio, y ve la fecha y el agente. Todo vecino tiene un inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, que es de todos. La ordenanza lo declara as&iacute; para cumplir con el art&iacute;culo 20 de la Constituci&oacute;n bonaerense (necesita dictamen de un abogado). Cuando alguien pide ver una inspecci&oacute;n, la inteligencia artificial difumina las caras de los clientes y de la gente que pasa. Y una persona lo revisa antes de mostrarla. Cuesta unos 2.200 pesos por pedido, de 5 a 23 millones por a&ntilde;o. Lo que pasa entre una inspecci&oacute;n y otra lo ven s&oacute;lo los auditores del Municipio y la auditor&iacute;a externa. Adentro de una casa, sobre todo en las inspecciones de obra, tambi&eacute;n se graba. Sirve como prueba y para que no haya coima. Pero el interior de una casa nunca se publica. Lo ven s&oacute;lo el due&ntilde;o, los auditores y, si hace falta, un juez (necesita dictamen de un abogado, por la Ley 25.326).</p>
 </div>
 """ + fig("f_inspeccion", "Una inspecci&oacute;n grabada: graban el inspector y el comerciante. Ilustraci&oacute;n.", "30%") + """
-<h3>Si a un comerciante le piden una coima, lo aprietan o lo amenazan</h3>
+<h3>Si a un comerciante le piden una coima, lo presionan o lo amenazan</h3>
 <div class="callout g">
-<div class="clabel">Lo que proponemos: la herramienta del comerciante frente a coimas, aprietes y amenazas</div>
-<p><b>1 &middot; Lo cuenta, y la inteligencia artificial lo defiende.</b> El comerciante, o cualquier vecino, le cuenta a la
-inteligencia artificial del Municipio que un funcionario le pide dinero, lo amenaza o le clausura sin motivo. Le explica
-sus derechos: a quien le exigen dinero es v&iacute;ctima; exigirlo es delito (C&oacute;digo Penal, art&iacute;culo 266, exacciones ilegales),
-y recibirlo tambi&eacute;n (art&iacute;culo 256, cohecho). Sella la prueba en el momento de grabar, como la del vecino que denuncia un
-ruido (5.5), y le arma la denuncia. Es la misma puerta por la que cualquiera denuncia, en cualquier &aacute;rea, el mal uso de
-un bien municipal o un pedido indebido de un empleado (4.11).</p>
-<p><b>2 &middot; La denuncia va a quien no depende del denunciado:</b> la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo
-(el canal del cap&iacute;tulo 4), la auditor&iacute;a externa y, si hay delito, la fiscal&iacute;a. Nunca s&oacute;lo al jefe del denunciado.</p>
-<p><b>3 &middot; Sin represalias.</b> La identidad del comerciante queda reservada. Mientras se investiga, a ese comercio no lo
-inspecciona el mismo agente, y cualquier clausura nueva la revisa antes un supervisor que no dependa del
-denunciado.</p>
-<p><b>4 &middot; Cruza los datos.</b> La inteligencia artificial cruza denuncias, clausuras e inspecciones: si se concentran en
-un mismo agente, rubro o zona, avisa al control independiente. Y le cuenta al comerciante en qu&eacute; est&aacute; su denuncia
-(4.11).</p>
-<p><b>5 &middot; Tambi&eacute;n protege al inspector honesto:</b> la grabaci&oacute;n sellada lo cubre, y la denuncia falsa se sanciona
-(anexo, Ordenanza IV; necesita dictamen de un abogado).</p>
+<div class="clabel">Lo que proponemos: la herramienta del comerciante frente a coimas, presiones y amenazas</div>
+<p><b>1 &middot; Lo cuenta, y la inteligencia artificial lo defiende.</b> El comerciante, o cualquier vecino, le cuenta a la inteligencia artificial del Municipio lo que le pasa. Puede ser que un funcionario le pida dinero, lo amenace o le clausure sin motivo. La inteligencia artificial le explica sus derechos. A quien le exigen dinero es v&iacute;ctima. Exigirlo es delito (C&oacute;digo Penal, art&iacute;culo 266, exacciones ilegales). Y recibirlo tambi&eacute;n lo es (art&iacute;culo 256, cohecho). Sella la prueba en el momento de grabar, como la del vecino que denuncia un ruido (5.5). Y le arma la denuncia. Es el mismo canal por el que cualquiera denuncia, en cualquier &aacute;rea, el mal uso de un bien del Municipio o un pedido indebido de un empleado (4.11).</p>
+<p><b>2 &middot; La denuncia va a quien no depende del denunciado.</b> Va a la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo, que es el canal del cap&iacute;tulo 4. Tambi&eacute;n va a la auditor&iacute;a externa y, si hay delito, a la fiscal&iacute;a. Nunca va s&oacute;lo al jefe del denunciado.</p>
+<p><b>3 &middot; Sin represalias.</b> El nombre del comerciante queda reservado. Mientras se investiga, ese comercio no lo inspecciona el mismo agente. Y cualquier clausura nueva la revisa antes un supervisor que no dependa del denunciado.</p>
+<p><b>4 &middot; Cruza los datos.</b> La inteligencia artificial cruza denuncias, clausuras e inspecciones. Si se juntan en un mismo agente, rubro o zona, le avisa al control independiente. Y le cuenta al comerciante en qu&eacute; est&aacute; su denuncia (4.11).</p>
+<p><b>5 &middot; Tambi&eacute;n protege al inspector honesto.</b> La grabaci&oacute;n sellada lo cubre. Y la denuncia falsa se sanciona (anexo, Ordenanza IV; necesita dictamen de un abogado).</p>
 </div>
 
 <h2><span class="n">5.10</span>Transparencia <span class="tag v">Gratis</span></h2>
-<p class="tight"><b>Proponemos que nada de lo que sigue se publique para que el vecino lo vaya a buscar: se lo pregunta a
-la inteligencia artificial del Municipio, y le contesta.</b> Es el argumento del cap&iacute;tulo 4: lo que
-hay que leer no se lee, y lo que nadie lee no controla nada. Antes hay que poner en orden lo que el
-Municipio ya public&oacute; alguna vez, y eso <span class="sg">no cuesta un peso</span>: se hace, no se
-anuncia. Y adem&aacute;s escucha: lo que los vecinos le cuentan, lo junta, le hace el seguimiento y les responde (4.11).</p>
+<p class="tight"><b>Proponemos que el vecino no tenga que salir a buscar nada de lo que sigue. Se lo pregunta a la inteligencia artificial del Municipio, y ella le contesta.</b> Es lo que dice el cap&iacute;tulo 4: lo que hay que leer no se lee, y lo que nadie lee no controla nada. Antes, hay que ordenar lo que el Municipio ya public&oacute; alguna vez. Eso <span class="sg">no cuesta un peso</span>: se hace, no se anuncia. Y la inteligencia artificial del Municipio adem&aacute;s escucha. Junta lo que le cuentan los vecinos, le hace el seguimiento y les responde (4.11).</p>
 """ + exhead("c", "La informaci&oacute;n que el Municipio ya public&oacute;: qu&eacute; est&aacute;, qu&eacute; est&aacute; escondido y qu&eacute; no est&aacute;") + """
 <table>
 <colgroup><col style="width:150pt"><col style="width:96pt"><col></colgroup>
 <tr class="hd"><th>Qu&eacute; se busc&oacute;</th><th>Estado</th><th>Qu&eacute; se encontr&oacute;</th></tr>
-<tr class="hi"><td class="l">Portal de Datos Abiertos</td><td><b>Ca&iacute;do</b></td><td class="m">Devuelve 504 Gateway Time-out. En dos reintentos la solicitud qued&oacute; colgada sin llegar al error. Cero datasets accesibles.</td></tr>
-<tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Lleva a otra cosa</b></td><td class="m">El &uacute;nico enlace con ese nombre va a ARSI, a declaraciones juradas de tributos de contribuyentes: seguridad e higiene, tasas ambientales.</td></tr>
-<tr><td class="l">Planta de personal y escala salarial</td><td><b>No verificable</b></td><td class="m">Vivir&iacute;an en el portal de datos abiertos, que no responde. No se puede afirmar que falten ni que est&eacute;n.</td></tr>
-<tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlazar</b></td><td class="m">Existe y est&aacute; completo hasta subsecretar&iacute;a, con nombre y apellido. Vive en un subdominio de prueba y no hay un solo enlace hacia &eacute;l desde el sitio municipal.</td></tr>
-<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n con oferentes, adjudicatario, CUIT y monto. No figuran en la ficha de la licitaci&oacute;n: hay que saber buscarlos.</td></tr>
-<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Los ejercicios se rinden y el Tribunal de Cuentas de la Provincia los aprueba. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba el de 2023, cita un expediente de tres cuerpos en dos carillas y no adjunta un solo n&uacute;mero; el enlace de 2018 es una imagen; y en la secci&oacute;n de ejercicios anteriores la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
-<tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="m">La vigente es la de 2026, sancionada en diciembre de 2025, con actualizaciones hasta agosto de 2026. Se busc&oacute; y estaba.</td></tr>
+<tr class="hi"><td class="l">Portal de Datos Abiertos</td><td><b>Ca&iacute;do</b></td><td class="m">Devuelve el error 504 Gateway Time-out. Se prob&oacute; dos veces m&aacute;s, y la p&aacute;gina qued&oacute; colgada sin llegar al error. No se puede abrir ning&uacute;n conjunto de datos.</td></tr>
+<tr class="hi"><td class="l">Declaraciones juradas de funcionarios</td><td><b>Lleva a otra cosa</b></td><td class="m">El &uacute;nico enlace con ese nombre lleva a ARSI, a las declaraciones juradas que presentan los contribuyentes para pagar tasas, como seguridad e higiene y tasas ambientales.</td></tr>
+<tr><td class="l">Planta de personal y escala salarial</td><td><b>No se puede comprobar</b></td><td class="m">Estar&iacute;an en el portal de datos abiertos, que no responde. No se puede saber si faltan o si est&aacute;n.</td></tr>
+<tr><td class="l">Organigrama municipal</td><td><b>Publicado, sin enlace</b></td><td class="m">Existe y est&aacute; completo hasta el nivel de subsecretar&iacute;a, con nombre y apellido. Est&aacute; en una direcci&oacute;n de prueba, y no hay un solo enlace hacia &eacute;l desde el sitio del Municipio.</td></tr>
+<tr><td class="l">Qui&eacute;n gana las licitaciones</td><td><b>Publicado, enterrado e incompleto</b></td><td class="m">El Bolet&iacute;n publica los decretos de adjudicaci&oacute;n, con qui&eacute;nes se presentaron, qui&eacute;n gan&oacute;, su CUIT y el monto. No aparecen en la ficha de la licitaci&oacute;n: hay que saber buscarlos.</td></tr>
+<tr class="hi"><td class="l">Rendici&oacute;n de cuentas</td><td><b>Aprobada, sin estados contables</b></td><td class="m">Las cuentas de cada a&ntilde;o se rinden, y el Tribunal de Cuentas de la Provincia las aprueba. Lo que no est&aacute; publicado son los estados contables que respaldan esa aprobaci&oacute;n. La Ordenanza 9341, que aprueba las de 2023, cita en dos carillas un expediente de tres cuerpos, y no trae un solo n&uacute;mero. El enlace de 2018 es una imagen. Y en la secci&oacute;n de a&ntilde;os anteriores, la &uacute;ltima rendici&oacute;n completa es la de 2022.</td></tr>
+<tr><td class="l">Ordenanza Fiscal e Impositiva</td><td><b>Publicada y al d&iacute;a</b></td><td class="m">La vigente es la de 2026, aprobada en diciembre de 2025, con cambios hasta agosto de 2026. Se busc&oacute; y estaba.</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> relevamiento propio del sitio municipal, del portal de datos abiertos y del
 Bolet&iacute;n Oficial, con hora y URL asentadas, el 12 de septiembre de 2026.</p>
 
 <div class="cols">
-<p><b>El hallazgo no es que no se publique. Es d&oacute;nde queda lo que se publica.</b> El organigrama
-existe en un subdominio de prueba al que no lleva ning&uacute;n enlace. Las adjudicaciones existen en el
-Bolet&iacute;n, pero el buscador corre dentro de un recuadro fijo que muestra cuatro filas de treinta y
-esconde el paginador, y abierto por fuera devuelve un error de permisos.
-<span class="sg">Un vecino ve una fracci&oacute;n de lo que hay.</span></p>
-<p><b>Es informaci&oacute;n publicada y no encontrable</b>, que es un problema de dise&ntilde;o antes que
-de voluntad. Pero el efecto sobre el vecino es el mismo, y arreglarlo cuesta poco.</p>
-<p><b>Por eso el compromiso no es crear nada desde cero:</b> es poner en orden lo que ya existe
-&mdash;reponer el portal ca&iacute;do, enlazar lo que est&aacute; escondido, corregir el enlace equivocado y completar
-lo que est&aacute; a medias&mdash; para que la inteligencia artificial del Municipio lo pueda contestar.
-<span class="sg">No cuesta nada.</span></p>
+<p><b>El hallazgo no es que no se publique. Es d&oacute;nde queda lo que se publica.</b> El organigrama est&aacute; en una direcci&oacute;n de prueba, y ning&uacute;n enlace lleva hasta ah&iacute;. Las adjudicaciones est&aacute;n en el Bolet&iacute;n. Pero el buscador funciona dentro de un recuadro fijo, que muestra cuatro filas de treinta y esconde los botones para pasar de p&aacute;gina. Y si se lo abre por fuera, da un error de permisos. <span class="sg">Un vecino ve s&oacute;lo una parte de lo que hay.</span></p>
+<p><b>Es informaci&oacute;n publicada que no se puede encontrar.</b> Es m&aacute;s un problema de dise&ntilde;o que de voluntad. Pero para el vecino el efecto es el mismo, y arreglarlo cuesta poco.</p>
+<p><b>Por eso el compromiso no es crear nada desde cero, sino ordenar lo que ya existe.</b> Hay que volver a poner en marcha el portal ca&iacute;do y enlazar lo que est&aacute; escondido. Hay que corregir el enlace equivocado y completar lo que est&aacute; a medias. As&iacute;, la inteligencia artificial del Municipio lo puede contestar. <span class="sg">No cuesta nada.</span></p>
 </div>
 
 <h3>El presupuesto: publicado, y escaneado</h3>
 <div class="cols">
-<p><b>Los presupuestos de 2025 y de 2026 est&aacute;n publicados</b>, con la ordenanza completa, y este
-programa los usa: los cargos de cada &aacute;rea salen del de 2026, que abre por programa y trae la
-descripci&oacute;n de cada uno.</p>
-<p><b>Pero son 492 y 416 p&aacute;ginas de imagen, sin texto:</b> no se puede buscar una palabra
-adentro. <span class="sg">Est&aacute;n publicados y no se pueden preguntar</span>, que es el mismo
-problema de todo este cuadro.</p>
+<p><b>Los presupuestos de 2025 y de 2026 est&aacute;n publicados</b>, con la ordenanza completa, y este programa los usa. Los puestos de cada &aacute;rea salen del de 2026, que separa el gasto por programa y explica cada uno. <b>Pero son 492 y 416 p&aacute;ginas escaneadas, sin texto.</b> No se puede buscar una palabra adentro. <span class="sg">Est&aacute;n publicados, pero no se les puede preguntar nada.</span> Es el mismo problema de todo este cuadro.</p>
 </div>
 
 <h3>Desde cu&aacute;ndo se puede preguntar cada cosa, y por qu&eacute; casi siempre es el mismo d&iacute;a</h3>
-<p class="tight">Lo trimestral qued&oacute; de cuando publicar significaba que un empleado armara un
-informe cada tres meses.</p><p class="tight">Proponemos que sea el mismo d&iacute;a: con la inteligencia artificial del Municipio (cap&iacute;tulo 4), <span class="sg">la adjudicaci&oacute;n
-queda cargada el d&iacute;a que se firma</span>, y mostrarla no es una tarea aparte: es el mismo
-registro.</p>
+<p class="tight">Lo de informar cada tres meses viene de una &eacute;poca en que un empleado ten&iacute;a que armar un informe a mano.</p><p class="tight">Proponemos que sea el mismo d&iacute;a. Con la inteligencia artificial del Municipio (cap&iacute;tulo 4), <span class="sg">la adjudicaci&oacute;n queda cargada el d&iacute;a que se firma</span>. Y mostrarla no es una tarea aparte, porque es el mismo registro.</p>
 <div class="cols">
-<p><b>Continuo, el mismo d&iacute;a.</b> Reclamos y tiempo de respuesta. Stock hospitalario.
-Ocupaci&oacute;n de guardias. Avance de cada obra priorizada. Adjudicaciones, a medida que se firman y
-no al cierre del trimestre. Patrullaje. <b>Nada de esto necesita que alguien lo compile</b>: se carga
-una sola vez, el d&iacute;a que pasa.</p>
-<p><b>Trimestral s&oacute;lo lo que depende del cierre contable</b>, que es la ejecuci&oacute;n
-presupuestaria: antes del cierre las cifras cambian, y contestar con un n&uacute;mero que despu&eacute;s se corrige es peor que no contestar. <span class="sg">Igual se muestra el devengado
-del mes, marcado como provisorio</span>, para que nadie tenga que esperar tres meses para ver una
-tendencia.</p>
+<p><b>Siempre al d&iacute;a, el mismo d&iacute;a.</b> Los reclamos y cu&aacute;nto se tarda en responderlos. Lo que hay y lo que falta en los hospitales. Cu&aacute;nta gente hay en las guardias. C&oacute;mo avanza cada obra elegida. Las adjudicaciones, a medida que se firman, y no al cierre del trimestre. Y el patrullaje. <b>Nada de esto necesita que alguien lo arme</b>: se carga una sola vez, el d&iacute;a que pasa.</p>
+<p><b>Cada tres meses, s&oacute;lo lo que depende del cierre de las cuentas.</b> Es lo que se gast&oacute; del presupuesto. Antes del cierre, las cifras cambian. Y contestar con un n&uacute;mero que despu&eacute;s se corrige es peor que no contestar. <span class="sg">Igual se muestra lo gastado en el mes, marcado como provisorio.</span> As&iacute;, nadie tiene que esperar tres meses para ver hacia d&oacute;nde va.</p>
 </div>
 
 """ + fig("f_archivo", "El archivo municipal. Ilustraci&oacute;n.") + """
@@ -1716,129 +1295,48 @@ tendencia.</p>
 
 <h2><span class="n">5.11</span>Transporte y comercio <span class="tag v">Gesti&oacute;n</span></h2>
 <div class="cols">
-<p><b>Transporte:</b> 36.356 millones, el 11,2%, la tercera funci&oacute;n del Municipio. Casi todo es
-mantenimiento vial: bacheo, se&ntilde;alizaci&oacute;n, semaforizaci&oacute;n y el tr&aacute;nsito
-municipal.</p>
-<p>Este programa propone lo mismo que en todo el resto: que el mantenimiento vial entre en la
-priorizaci&oacute;n vecinal. Una calle sin asfaltar es obra p&uacute;blica de bienes de uso, igual que
-una cloaca, y entra en la partida del cap&iacute;tulo 4 sin necesidad de una l&iacute;nea nueva.</p>
-<p>La l&iacute;nea 437, que
-circula por calles internas del Bajo, es de <b>jurisdicci&oacute;n provincial</b>: el recorrido lo
-autoriza la Provincia, no el Municipio. En 2026 San Isidro propuso y la Provincia aprob&oacute;.</p>
-<p><b>Proponemos que, donde decide la Provincia, se pida, y que cualquier vecino pueda preguntar qu&eacute; contest&oacute;.</b></p>
-<p><b>Comercio:</b> 2.216 millones, el 0,7%, junto con turismo y otros servicios. San Isidro tiene
-centros comerciales a cielo abierto en las seis localidades y el Municipio los habilita, los inspecciona
-y les cobra la tasa de seguridad e higiene.</p>
-<p>Dos medidas, ninguna con costo: <b>que cualquiera pueda preguntar cu&aacute;nto tarda de verdad una habilitaci&oacute;n</b> comercial, que hoy no se sabe y es la queja m&aacute;s frecuente de quien abre un local; y <b>que cada
-comisi&oacute;n vecinal reciba el padr&oacute;n de habilitaciones de su zona</b>, porque el centro
-comercial de un barrio es infraestructura del barrio.</p>
+<p><b>Transporte:</b> 36.356 millones, el 11,2% del presupuesto. Es el tercer gasto m&aacute;s grande del Municipio. Casi todo es arreglo de calles: baches, se&ntilde;ales, sem&aacute;foros y el tr&aacute;nsito del Municipio.</p>
+<p>Este programa propone lo mismo que en todo lo dem&aacute;s: que los vecinos elijan qu&eacute; calles se arreglan primero. Una calle sin asfaltar es obra p&uacute;blica, igual que una cloaca. Entra en la partida del cap&iacute;tulo 4, sin que haga falta un rengl&oacute;n nuevo.</p>
+<p>La l&iacute;nea 437, que pasa por calles internas del Bajo, <b>depende de la Provincia</b>. El recorrido lo autoriza la Provincia, no el Municipio. En 2026, San Isidro propuso ese recorrido y la Provincia lo aprob&oacute;.</p>
+<p><b>Proponemos que, donde decide la Provincia, el Municipio pida. Y que cualquier vecino pueda preguntar qu&eacute; contest&oacute; la Provincia.</b></p>
+<p><b>Comercio:</b> 2.216 millones, el 0,7%, junto con turismo y otros servicios. San Isidro tiene centros comerciales a cielo abierto en las seis localidades. El Municipio los habilita, los inspecciona y les cobra la tasa de seguridad e higiene.</p>
+<p>Proponemos dos medidas, y ninguna cuesta dinero. La primera: <b>que cualquiera pueda preguntar cu&aacute;nto tarda de verdad una habilitaci&oacute;n comercial</b>. Hoy no se sabe, y es la queja m&aacute;s com&uacute;n de quien abre un local. La segunda: <b>que cada comisi&oacute;n vecinal reciba la lista de los comercios habilitados en su zona</b>. El centro comercial de un barrio tambi&eacute;n es parte de su infraestructura.</p>
 </div>
-<h3>Multas de tr&aacute;nsito: que no hundan a nadie y que pesen a quien m&aacute;s tiene</h3>
+<h3>Multas de tr&aacute;nsito: que todos las puedan pagar, y que tambi&eacute;n le pesen a quien m&aacute;s tiene</h3>
 <div class="cols">
-<p><b>Hoy los montos los fija la Provincia</b>, en unidades de multa que valen lo que un litro de la nafta m&aacute;s
-cara: 2.281 pesos desde septiembre de 2026. La ley nacional no deja que una norma local sea &laquo;m&aacute;s benigna&raquo; (Ley
-24.449, art&iacute;culo 2).</p>
-<p><b>Un exceso de velocidad cuesta lo mismo si uno se pas&oacute; por 5 o por 50 km/h</b>: de 342.150 a 2.281.000
-pesos, y pagando enseguida, 171.075. Para el 10% que menos gana, eso es el 125% del ingreso de un mes; para el 10%
-que m&aacute;s gana, el 5%. <span class="sg">Una multa igual para todos pesa m&aacute;s en quien menos tiene.</span> Y si no se
-paga, no se congela: se paga al valor del d&iacute;a.</p>
-<p><b>El juez de faltas ya puede dar cuotas a quien tiene pocos recursos</b> (Ley 24.449, art&iacute;culo 85 c), y el
-Tribunal de Faltas ya recibe por correo electr&oacute;nico los pedidos de pago voluntario. Las fotomultas de San Isidro
-est&aacute;n suspendidas desde el 23 de abril de 2025 (Decretos 411/2025 y 65/2026), y no se publica cu&aacute;ntas multas se
-labran por a&ntilde;o. Hasta entonces las c&aacute;maras las operaban dos universidades nacionales, que cobraban un porcentaje de lo recaudado (Decretos 704, 1542, 1543, 1588 y 1982 de 2022).</p>
-<p><b>De las 109 personas que murieron en el tr&aacute;nsito de San Isidro entre 2017 y 2024, 53 murieron en la
-Panamericana</b>, que es ruta nacional. El Municipio adjudic&oacute; en 2025 reductores de velocidad por 536,7 millones,
-sin publicar d&oacute;nde van.</p>
+<p><b>Hoy, los montos los fija la Provincia.</b> Se cuentan en unidades de multa, y cada una vale lo que un litro de la nafta m&aacute;s cara. Desde septiembre de 2026, son 2.281 pesos. La ley nacional no deja que una norma local sea &laquo;m&aacute;s benigna&raquo; (Ley 24.449, art&iacute;culo 2).</p>
+<p><b>Un exceso de velocidad cuesta lo mismo si uno se pas&oacute; por 5 o por 50 km/h.</b> Cuesta de 342.150 a 2.281.000 pesos, o 171.075 si se paga enseguida. Para el 10% que menos gana, eso es el 125% de lo que gana en un mes. Para el 10% que m&aacute;s gana, es el 5%. <span class="sg">Una multa igual para todos pesa m&aacute;s en quien menos tiene.</span> Y si no se paga, la deuda no se congela: se paga con el valor que tenga la unidad de multa ese d&iacute;a.</p>
+<p><b>El juez de faltas ya puede dar cuotas a quien tiene pocos recursos</b> (Ley 24.449, art&iacute;culo 85 c). Y el Tribunal de Faltas ya recibe por correo electr&oacute;nico los pedidos de pago voluntario. Las fotomultas de San Isidro est&aacute;n suspendidas desde el 23 de abril de 2025 (Decretos 411/2025 y 65/2026). Y no se publica cu&aacute;ntas multas se hacen por a&ntilde;o. Hasta esa fecha, las c&aacute;maras las manejaban dos universidades nacionales, que se quedaban con un porcentaje de lo recaudado (Decretos 704, 1542, 1543, 1588 y 1982 de 2022).</p>
+<p><b>Entre 2017 y 2024 murieron 109 personas en el tr&aacute;nsito de San Isidro, y 53 murieron en la Panamericana</b>, que es una ruta nacional. En 2025, el Municipio contrat&oacute; reductores de velocidad por 536,7 millones. No public&oacute; d&oacute;nde van.</p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: la inteligencia artificial del Municipio, del lado del vecino</div>
-<p><b>La inteligencia artificial del Municipio es aliada del vecino antes que del gobierno.</b> Y una regla de
-fondo: las multas no pueden ser regresivas, y el vecino no hace nada para recibir la rebaja: ni juzgado, ni
-tr&aacute;mites, ni abogado.</p>
-<p><b>1 &middot; La calle primero.</b> Mesetas, sendas elevadas y zonas de 30 donde hay choques; almohadas que dejan pasar
-a ambulancias y bomberos en sus recorridos; todo dise&ntilde;ado para la velocidad de cada calle, como pide la norma
-nacional (Decreto 779/95, anexo 1, art&iacute;culo 23). Se publica d&oacute;nde va cada reductor de la licitaci&oacute;n de 2025. La
-Panamericana es ruta nacional: ah&iacute; el Municipio no decide.</p>
-<p><b>2 &middot; C&aacute;maras s&oacute;lo donde hay choques.</b> La inteligencia artificial del Municipio propone los puntos con los
-datos de choques y un umbral publicado, como el Reino Unido &mdash;al menos 3 choques con muertos o heridos graves por
-kil&oacute;metro en 3 a&ntilde;os (Circular 01/2007)&mdash; o Francia, que pide un balance de 5 a&ntilde;os. En cada punto, la comisi&oacute;n zonal
-elige entre c&aacute;mara y reductor, pero no puede elegir no hacer nada: la calle primero, y el reductor sale del dinero de
-obra de la zona. En las avenidas que cruzan zonas decide el panel sorteado, como en la costa. Donde el problema es la
-velocidad, c&aacute;maras de tramo, que miden el promedio entre dos puntos: bajan entre 36% y 56% los choques graves, contra
-11% a 44% de las fijas. La inteligencia artificial revisa cada c&aacute;mara cada a&ntilde;o &mdash;en Nueva Gales del Sur, de 92 fijas
-se retiraron 3 en 2023&mdash;, y los datos de cada c&aacute;mara son p&uacute;blicos. Cada punto lo autoriza la Provincia
-(Disposiciones 14/2020 y 43/2021).</p>
-<p><b>3 &middot; Avisar antes de multar.</b> La inteligencia artificial del Municipio dice d&oacute;nde est&aacute;n las c&aacute;maras y cu&aacute;l
-es el l&iacute;mite de cada calle; avisa al primer exceso por la propia inteligencia artificial y, a quien dio su celular, por
-mensaje de texto, sin enlaces de pago; y
-muestra la foto, la velocidad, el descuento del error y la calibraci&oacute;n del equipo. Marca las multas de equipos con
-la verificaci&oacute;n vencida, y una persona las anula. Cuando una multa est&aacute; mal, se lo avisa al vecino y le arma el
-reclamo, que sigue el circuito de la inteligencia artificial que escucha, con plazo y respuesta (4.11). El aviso no reemplaza a la notificaci&oacute;n, que sigue llegando al domicilio (necesita dictamen de un
-abogado).</p>
-<p><b>4 &middot; En zona de 40, la multa empieza en 47.</b> Se descuentan los 3 km/h de error que admite el equipo
-(Resoluci&oacute;n 753/98) y s&oacute;lo hay multa con un exceso de 4 o m&aacute;s, como en los Pa&iacute;ses Bajos. Con la regla del Reino
-Unido &mdash;10% m&aacute;s 2 millas&mdash; empezar&iacute;a en 48, y en Francia, en 46. Se programa en los equipos (necesita
-dictamen de un abogado: puede hacer falta la autorizaci&oacute;n de la Provincia).</p>
-<p><b>5 &middot; Cuotas sin tr&aacute;mites.</b> El pago voluntario en cuotas, por decreto del intendente, como Balcarce
-(Decretos 26/2022 y 21/2026). La cuota del mes, sumando todas las multas, no pasa del 2% del ingreso dividido por
-la ra&iacute;z de las personas del hogar, como en Nueva York y Florida, que la limitan al 2% del ingreso. Sin plazo
-m&aacute;ximo. El vecino se anota una sola vez, en l&iacute;nea, en la inteligencia artificial del Municipio, con una ordenanza
-como la de Bragado (Ordenanza 5398/2021), y la inteligencia artificial le avisa antes de cada vencimiento. M&aacute;s de
-ocho cuotas tiene m&aacute;s riesgo legal, y en los planes largos la multa puede prescribir a los cinco a&ntilde;os (necesita
-dictamen de un abogado).</p>
-<p><b>6 &middot; Los datos, cuidados.</b> Consentimiento expreso; el ingreso y el hogar se usan s&oacute;lo para las multas; la
-base se crea por ordenanza y se inscribe; hay contrato con el proveedor de la inteligencia artificial; y una
-persona decide de verdad, porque un acto no puede fundarse s&oacute;lo en un tratamiento automatizado (Ley 25.326,
-art&iacute;culo 20).</p>
-<p><b>7 &middot; El juez, sin que el vecino vaya.</b> Si la multa no se paga, el juez dicta la sentencia sin que el vecino
-se presente, con las cuotas seg&uacute;n ese criterio: la inteligencia artificial la prepara y el juez la revisa y la
-firma (Ley 13.927, art&iacute;culo 35 g; Ley 24.449, art&iacute;culos 85 c y 90; C&oacute;digo Penal, art&iacute;culo 21; necesita dictamen de
-un abogado).</p>
-<p><b>8 &middot; Varias pasadas, una multa.</b> Que las pasadas por la misma c&aacute;mara antes del aviso cuenten como una
-necesita a la Provincia (Ley 24.449, art&iacute;culo 81). Mientras tanto, el juez une las del mismo viaje. Para quien no
-se anota en el aviso, cuentan como una s&oacute;lo las del primer d&iacute;a.</p>
-<p><b>Todo esto vale para todas las multas</b>, no s&oacute;lo para las de velocidad: el aviso, las cuotas con tope y las
-pasadas que cuentan como una valen tambi&eacute;n para las de sem&aacute;foro, que seg&uacute;n la prensa eran el 85% de las c&aacute;maras.</p>
-<p><b>9 &middot; Reincidencia, sin dejar a nadie sin trabajo.</b> Hoy el juez ya puede dar una suspensi&oacute;n corta en la
-primera y en la segunda reincidencia grave &mdash;la ley dice &laquo;hasta&raquo; 9 y 12 meses&mdash;, limitada a un tipo de
-veh&iacute;culo, m&aacute;s el curso; la tercera son 18 meses obligatorios (Ley 13.927, art&iacute;culo 39 ter). Con una ley provincial,
-un permiso para trabajar con horarios y recorridos; si reincide, suspensi&oacute;n doble y sin permiso. Con una
-advertencia: en California, quienes ten&iacute;an licencia restringida reincidieron menos, pero chocaron m&aacute;s.</p>
-<p><b>10 &middot; Nadie cobra por multa.</b> Las c&aacute;maras las opera el Municipio &mdash;cuatro personas en Tr&aacute;nsito o el Juzgado de
-Faltas validan las actas, con los egresados de la tecnicatura primero&mdash;, y los proveedores cobran s&oacute;lo los equipos y su
-mantenimiento, a precio fijo. As&iacute; lo hacen Australia y Francia, que les pagan a
-los proveedores por insumos u horas &mdash;Francia paga sus autos-radar por hora de manejo y &laquo;en ning&uacute;n caso&raquo; por
-infracci&oacute;n&mdash;; en Estados Unidos, Virginia, Seattle y la gu&iacute;a federal de 2023 pagan un fijo por equipo. Se aplica al
-vencer cada contrato actual: dos convenios obligan a pagar igual el promedio de los &uacute;ltimos seis meses si se deja de
-multar antes (necesita dictamen de un abogado). La regla vale tambi&eacute;n para la UNSO, que sigue en el programa con la
-tecnicatura.</p>
-<p><b>11 &middot; Lo que se cobra, a la seguridad vial.</b> Lo que se cobra por multas va a un fondo cerrado de seguridad vial,
-en un rengl&oacute;n propio del presupuesto: calles, cruces, reductores y educaci&oacute;n vial, como ya manda la ley (Ley 24.449,
-art&iacute;culo 85). Lo hacen Nueva Gales del Sur y Victoria, en Australia, y Brasil; en el Reino Unido, desde 2007, las
-multas ni siquiera van al gobierno local.</p>
-<p><b>12 &middot; La deuda vieja.</b> Un plan de pagos sin inter&eacute;s por ordenanza, como Baradero (2018) y Chivilcoy (2020);
-se depuran las multas prescriptas; y la inteligencia artificial del Municipio le avisa a cada vecino cu&aacute;nto debe y
-hasta cu&aacute;ndo.</p>
-<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Los reductores ya est&aacute;n contratados: 536,7 millones de la licitaci&oacute;n de
-2025. El aviso, el mapa y el reclamo son parte de la inteligencia artificial del Municipio, que paga Ciencia y
-T&eacute;cnica (4.11); el mensaje de texto, de 0,8 a 5,9 millones por a&ntilde;o, lo paga Tr&aacute;nsito. Las cuatro personas que validan las actas cuestan
-108,3 millones por a&ntilde;o y van con el resto del presupuesto, no con el fondo: pagar con las multas a quien multa invita a
-multar m&aacute;s. Los equipos y su mantenimiento se pagan con el fondo de seguridad vial, que no cambia las cuentas: en 2025
-se cobraron 3.819 millones de multas en la v&iacute;a p&uacute;blica y el Municipio gast&oacute; 7.199 millones en semaforizaci&oacute;n,
-se&ntilde;alamiento y movilidad. Lo que el Municipio deja de cobrar no tiene un n&uacute;mero cerrado, porque no se publica cu&aacute;ntas multas
-se labran: en 2024 se pagaron entre 13.000 y 456.000, y cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o.
-<span class="sg">Las multas no son para recaudar:</span> lo que se deja de cobrar sale del gasto flexible libre
-(3.4).</p>
+<p><b>La inteligencia artificial del Municipio est&aacute; primero del lado del vecino, y despu&eacute;s del gobierno.</b> Y hay una regla de fondo: las multas no pueden pesar m&aacute;s en quien menos tiene. Y el vecino no tiene que hacer nada para recibir la rebaja. No tiene que ir al juzgado, ni hacer tr&aacute;mites, ni pagar un abogado.</p>
+<p><b>1 &middot; Primero, arreglar la calle.</b> Donde hay choques, se ponen mesetas, sendas peatonales elevadas y zonas de 30 km/h. En los recorridos de ambulancias y bomberos, se ponen almohadas: reductores que los dejan pasar. Todo se dise&ntilde;a para la velocidad de cada calle, como pide la norma nacional (Decreto 779/95, anexo 1, art&iacute;culo 23). Se publica d&oacute;nde va cada reductor de la licitaci&oacute;n de 2025. La Panamericana es una ruta nacional, y ah&iacute; el Municipio no decide.</p>
+<p><b>2 &middot; C&aacute;maras s&oacute;lo donde hay choques.</b> La inteligencia artificial del Municipio propone los lugares, con los datos de choques y un m&iacute;nimo publicado. As&iacute; lo hace el Reino Unido: al menos 3 choques con muertos o heridos graves por kil&oacute;metro en 3 a&ntilde;os (Circular 01/2007). Francia mira lo que pas&oacute; en 5 a&ntilde;os. En cada lugar, la comisi&oacute;n de la zona elige entre una c&aacute;mara y un reductor. Pero no puede elegir no hacer nada. Primero va la calle, y el reductor se paga con el dinero de obra de la zona. En las avenidas que cruzan varias zonas decide el panel sorteado, como en la costa. Donde el problema es la velocidad, se usan c&aacute;maras de tramo, que miden la velocidad promedio entre dos puntos. Bajan entre 36% y 56% los choques graves, contra 11% a 44% de las c&aacute;maras fijas. La inteligencia artificial revisa cada c&aacute;mara cada a&ntilde;o. En Nueva Gales del Sur, de 92 c&aacute;maras fijas se sacaron 3 en 2023. Los datos de cada c&aacute;mara son p&uacute;blicos. Cada lugar lo autoriza la Provincia (Disposiciones 14/2020 y 43/2021).</p>
+<p><b>3 &middot; Avisar antes de multar.</b> La inteligencia artificial del Municipio dice d&oacute;nde est&aacute;n las c&aacute;maras y cu&aacute;l es el l&iacute;mite de cada calle. Al primer exceso, avisa por la propia inteligencia artificial. Y a quien dio su celular, le avisa tambi&eacute;n por mensaje de texto, sin enlaces para pagar. Muestra la foto, la velocidad, el descuento por el error del equipo y su calibraci&oacute;n. Marca las multas de equipos con el control vencido, y una persona las anula. Cuando una multa est&aacute; mal, se lo avisa al vecino y le arma el reclamo. El reclamo sigue el mismo camino que todo lo que escucha la inteligencia artificial, con plazo y respuesta (4.11). El aviso no reemplaza a la notificaci&oacute;n, que sigue llegando al domicilio (necesita dictamen de un abogado).</p>
+<p><b>4 &middot; En zona de 40, la multa empieza en 47.</b> Se descuentan los 3 km/h de error que admite el equipo (Resoluci&oacute;n 753/98). Y s&oacute;lo hay multa si el exceso es de 4 o m&aacute;s, como en los Pa&iacute;ses Bajos. Con la regla del Reino Unido, que es 10% m&aacute;s 2 millas, empezar&iacute;a en 48. Y en Francia, en 46. Se programa en los equipos (necesita dictamen de un abogado: puede hacer falta la autorizaci&oacute;n de la Provincia).</p>
+<p><b>5 &middot; Cuotas sin tr&aacute;mites.</b> El pago voluntario se puede hacer en cuotas, por un decreto del intendente, como en Balcarce (Decretos 26/2022 y 21/2026). La cuota del mes, sumando todas las multas, no pasa de un tope. El tope es el 2% del ingreso, dividido por la ra&iacute;z cuadrada de la cantidad de personas del hogar. Nueva York y Florida tambi&eacute;n limitan la cuota al 2% del ingreso. No hay un plazo m&aacute;ximo. El vecino se anota una sola vez, por internet, en la inteligencia artificial del Municipio, con una ordenanza como la de Bragado (Ordenanza 5398/2021). Y la inteligencia artificial le avisa antes de cada vencimiento. Dar m&aacute;s de ocho cuotas tiene m&aacute;s riesgo legal. Y en los planes largos, la multa puede prescribir a los cinco a&ntilde;os, y despu&eacute;s ya no se puede cobrar (necesita dictamen de un abogado).</p>
+<p><b>6 &middot; Los datos, cuidados.</b> El vecino da su permiso de forma expresa. Su ingreso y su hogar se usan s&oacute;lo para las multas. La base de datos se crea por ordenanza y se registra. Hay un contrato con el proveedor de la inteligencia artificial. Y una persona decide de verdad, porque una decisi&oacute;n del Municipio no puede basarse s&oacute;lo en un proceso autom&aacute;tico (Ley 25.326, art&iacute;culo 20).</p>
+<p><b>7 &middot; El juez, sin que el vecino tenga que ir.</b> Si la multa no se paga, el juez dicta la sentencia sin que el vecino se presente. Y pone las cuotas con el mismo tope. La inteligencia artificial prepara la sentencia, y el juez la revisa y la firma (Ley 13.927, art&iacute;culo 35 g; Ley 24.449, art&iacute;culos 85 c y 90; C&oacute;digo Penal, art&iacute;culo 21; necesita dictamen de un abogado).</p>
+<p><b>8 &middot; Varias pasadas, una multa.</b> Para que las pasadas por la misma c&aacute;mara antes del aviso cuenten como una, hace falta la Provincia (Ley 24.449, art&iacute;culo 81). Mientras tanto, el juez junta en una las del mismo viaje. Para quien no se anota para recibir el aviso, cuentan como una s&oacute;lo las del primer d&iacute;a.</p>
+<p><b>Todo esto vale para todas las multas</b>, no s&oacute;lo para las de velocidad. El aviso, las cuotas con tope y las pasadas que cuentan como una valen tambi&eacute;n para las de sem&aacute;foro. Seg&uacute;n la prensa, el 85% de las c&aacute;maras eran de sem&aacute;foro.</p>
+<p><b>9 &middot; Si alguien repite una falta grave, que no pierda el trabajo.</b> Hoy, si alguien repite una falta grave por primera o por segunda vez, el juez ya puede darle una suspensi&oacute;n corta. La ley dice &laquo;hasta&raquo; 9 y 12 meses. La suspensi&oacute;n puede ser para un solo tipo de veh&iacute;culo, y se suma el curso. La tercera vez son 18 meses obligatorios (Ley 13.927, art&iacute;culo 39 ter). Con una ley provincial, habr&iacute;a un permiso para trabajar, con horarios y recorridos. Si vuelve a repetir la falta, la suspensi&oacute;n es doble y sin permiso. Hay una advertencia: en California, quienes ten&iacute;an una licencia con l&iacute;mites repitieron menos las faltas, pero chocaron m&aacute;s.</p>
+<p><b>10 &middot; Nadie cobra por cada multa.</b> Las c&aacute;maras las maneja el Municipio. Cuatro personas, en Tr&aacute;nsito o en el Juzgado de Faltas, revisan las actas, y primero se toma a egresados de la tecnicatura. Los proveedores cobran s&oacute;lo los equipos y su mantenimiento, a precio fijo. As&iacute; lo hacen Australia y Francia, que les pagan a los proveedores por insumos o por horas. Francia paga sus autos con radar por hora de manejo, y &laquo;en ning&uacute;n caso&raquo; por infracci&oacute;n. En Estados Unidos, Virginia, Seattle y la gu&iacute;a federal de 2023 pagan un monto fijo por equipo. Esta regla se aplica cuando vence cada contrato actual. Hay dos convenios que obligan a seguir pagando el promedio de los &uacute;ltimos seis meses si se deja de multar antes (necesita dictamen de un abogado). La regla vale tambi&eacute;n para la UNSO, que sigue en el programa con la tecnicatura.</p>
+<p><b>11 &middot; Lo que se cobra va a la seguridad vial.</b> Lo que se cobra por multas va a un fondo de seguridad vial, con un rengl&oacute;n propio en el presupuesto, que no se puede usar para otra cosa. Se usa en calles, cruces, reductores y educaci&oacute;n vial, como ya manda la ley (Ley 24.449, art&iacute;culo 85). Lo hacen Nueva Gales del Sur y Victoria, en Australia, y tambi&eacute;n Brasil. En el Reino Unido, desde 2007, las multas ni siquiera van al gobierno local.</p>
+<p><b>12 &middot; La deuda vieja.</b> Se arma un plan de pagos sin inter&eacute;s por ordenanza, como en Baradero (2018) y Chivilcoy (2020). Se borran las multas que ya prescribieron. Y la inteligencia artificial del Municipio le avisa a cada vecino cu&aacute;nto debe y hasta cu&aacute;ndo.</p>
+<p><b>13 &middot; Un tope a lo que se debe.</b> Lo que una persona debe en multas, sumadas todas, nunca supera su capacidad de pago seg&uacute;n su ingreso. Tampoco supera el valor de su veh&iacute;culo. Muchos vecinos trabajan y ahorran durante a&ntilde;os para comprarse un veh&iacute;culo, y no es justo que lo pierdan porque se le acumularon multas excesivas que terminan valiendo m&aacute;s que el propio auto (necesita dictamen de un abogado: puede hacer falta la Provincia).</p>
+<p><b>Cu&aacute;nto cuesta y de d&oacute;nde sale.</b> Los reductores ya est&aacute;n contratados: son 536,7 millones de la licitaci&oacute;n de 2025. El aviso, el mapa y el reclamo son parte de la inteligencia artificial del Municipio, que paga Ciencia y T&eacute;cnica (4.11). El mensaje de texto cuesta de 0,8 a 5,9 millones por a&ntilde;o, y lo paga Tr&aacute;nsito. Las cuatro personas que revisan las actas cuestan 108,3 millones por a&ntilde;o. Se pagan con el resto del presupuesto, y no con el fondo, porque pagarle con las multas a quien multa lo empuja a multar m&aacute;s. Los equipos y su mantenimiento se pagan con el fondo de seguridad vial, y eso no cambia las cuentas. En 2025 se cobraron 3.819 millones de multas en la v&iacute;a p&uacute;blica. Y el Municipio gast&oacute; 7.199 millones en sem&aacute;foros, se&ntilde;ales y movilidad. Lo que el Municipio deja de cobrar, con las rebajas y con el tope a la deuda, no tiene un n&uacute;mero cerrado, porque no se publica cu&aacute;ntas multas se hacen. En 2024 se pagaron entre 13.000 y 456.000. Y cada 10% de rebaja promedio cuesta unos 323 millones por a&ntilde;o. <span class="sg">Las multas no son para recaudar.</span> Lo que se deja de cobrar sale del gasto flexible libre (3.4).</p>
 </div>
 
 """ + exhead("c", "Seis casos: lo que se paga hoy, lo que hace el Municipio solo y lo que hace falta de la Provincia",
-             "Exceso de velocidad, en pesos. Cuota m&aacute;xima: 2% del ingreso dividido por la ra&iacute;z de las personas del hogar.",
+             "Exceso de velocidad, en pesos. Cuota m&aacute;xima: 2% del ingreso dividido por la ra&iacute;z cuadrada de las personas del hogar.",
              key="multas_casos") + """
 <table>
 <colgroup><col style="width:118pt"><col><col><col></colgroup>
 <tr class="hd"><th>Caso</th><th class="r">Hoy</th><th class="r">Hoy, el Municipio</th><th class="r">Con la Provincia</th></tr>
 <tr><td class="l">Un mill&oacute;n por mes, vive solo, una multa</td><td class="m">Paga 171.075 de una vez: el 17% de su ingreso.</td><td class="m">Paga 9 cuotas de 20.000, sin tr&aacute;mites.</td><td class="m">Paga menos, porque el pago voluntario depende del ingreso.</td></tr>
-<tr><td class="l">Un mill&oacute;n por mes, diez pasadas por la misma c&aacute;mara</td><td class="m">Debe 1.710.750: el 171% de su ingreso.</td><td class="m">El juez une las del mismo viaje; si fueron d&iacute;as distintos, paga 86 cuotas de 20.000.</td><td class="m">Las diez cuentan como una: paga 9 cuotas de 20.000.</td></tr>
+<tr><td class="l">Un mill&oacute;n por mes, diez pasadas por la misma c&aacute;mara</td><td class="m">Debe 1.710.750: el 171% de su ingreso.</td><td class="m">El juez junta las del mismo viaje. Si fueron d&iacute;as distintos, paga 86 cuotas de 20.000.</td><td class="m">Las diez cuentan como una: paga 9 cuotas de 20.000.</td></tr>
 <tr><td class="l">Un mill&oacute;n por mes, hogar de cuatro</td><td class="m">Paga 171.075 de una vez.</td><td class="m">Paga 18 cuotas de 10.000.</td><td class="m">Paga menos, porque el pago voluntario depende del ingreso.</td></tr>
 <tr><td class="l">Diez millones por mes, una falta grave</td><td class="m">Paga 171.075: el 1,7% de su ingreso.</td><td class="m">Paga lo mismo, en una cuota.</td><td class="m">Paga seg&uacute;n su ingreso: 1.896.084.</td></tr>
 <tr><td class="l">41 km/h en zona de 40</td><td class="m">Puede tener multa: ninguna norma obliga a descontar el error del equipo.</td><td class="m">No tiene multa: la multa empieza en 47.</td><td class="m">&mdash;</td></tr>
@@ -1847,175 +1345,82 @@ se labran: en 2024 se pagaron entre 13.000 y 456.000, y cada 10% de rebaja media
 <p class="cap"><b>Fuente:</b> c&aacute;lculo propio con la unidad de multa de 2.281 pesos (Resoluci&oacute;n 4/2026) y el pago
 voluntario por exceso de velocidad, 75 unidades; la multa seg&uacute;n el ingreso, como en Finlandia: 12 d&iacute;as-multa del
 ingreso menos la canasta b&aacute;sica, dividido por 60.</p>
-<p class="cap"><b>Nota:</b> sin la Provincia, quien m&aacute;s gana sigue pagando menos en proporci&oacute;n: 171.075 pesos son
-el 17% de un ingreso de un mill&oacute;n y el 1,7% de uno de diez millones.</p>
+<p class="cap"><b>Nota:</b> sin la Provincia, quien m&aacute;s gana sigue pagando menos en proporci&oacute;n. Una multa de 171.075 pesos es el 17% de un ingreso de un mill&oacute;n, y el 1,7% de uno de diez millones.</p>
 <div class="callout">
 <div class="clabel">Lo que se le pide a la Provincia</div>
-<p><b>Un pago voluntario seg&uacute;n el ingreso</b> &mdash;hasta 57.025 pesos para quien menos gana&mdash; y, para quien
-m&aacute;s gana, una multa seg&uacute;n el ingreso, s&oacute;lo en faltas graves y s&oacute;lo para subir, como en Finlandia. Depende de la
-Provincia: es un decreto del Gobernador y probablemente una ley.</p>
-<p><b>Un protocolo adicional al convenio de multas de 2020</b> que blinde las cuotas de San Isidro; <b>congelar la
-deuda en pesos</b>, como hizo en 2020; <b>que las pasadas antes del aviso cuenten como una</b>; <b>el permiso para
-trabajar</b> durante la suspensi&oacute;n; y que la Legislatura bonaerense apruebe <b>la licencia por puntos</b>.</p>
+<p><b>Un pago voluntario seg&uacute;n el ingreso.</b> Quien menos gana pagar&iacute;a hasta 57.025 pesos. Y para quien m&aacute;s gana, una multa seg&uacute;n el ingreso, s&oacute;lo en faltas graves y s&oacute;lo para subir, como en Finlandia. Depende de la Provincia: hace falta un decreto del Gobernador, y probablemente una ley.</p>
+<p><b>Un agregado al convenio de multas de 2020</b>, que proteja las cuotas de San Isidro. <b>Congelar la deuda en pesos</b>, como hizo la Provincia en 2020. <b>Que las pasadas antes del aviso cuenten como una.</b> <b>El permiso para trabajar</b> durante la suspensi&oacute;n. <b>Un tope a la deuda por multas</b>, seg&uacute;n el ingreso y el valor del veh&iacute;culo. Y que la Legislatura bonaerense apruebe <b>la licencia por puntos</b>.</p>
 </div>
 
 <h2><span class="n">5.12</span>Los que tienen que ejecutar todo esto <span class="tag v">Gesti&oacute;n</span></h2>
 <div class="cols">
-<p><b>Este programa no propone reducir la planta.</b> Ni congelarla, ni reemplazarla por contratos, ni
-tercerizar funciones. Las dos propuestas m&aacute;s grandes se financian con la actualizaci&oacute;n de la base de valuaci&oacute;n y el gasto flexible, y con reasignaci&oacute;n dentro del rubro de bienes de uso: <span class="sg">ninguna sale del gasto en
-personal</span>, y el modelo del cap&iacute;tulo 3 trata ese gasto como r&iacute;gido precisamente porque
-no se toca.</p>
-<p><b>Pero prometer que no se despide a nadie es una promesa defensiva, y no alcanza.</b> Lo que este
-programa propone es otra cosa: <span class="sg">la automatizaci&oacute;n le saca al empleado lo que no
-requiere criterio</span> &mdash;cargar datos, cruzar planillas, contestar cien veces lo mismo&mdash; y
-lo deja para lo que s&iacute;: inspeccionar en territorio, atender a quien necesita una persona del otro
-lado, y resolver lo que se sale del molde.</p>
-<p><b>Y quien mejor sabe qu&eacute; automatizar es el empleado que hace esa tarea todos los
-d&iacute;as.</b> No una consultora: el que la hace. Automatizar esas tareas es, adem&aacute;s, trabajo para los pasantes, que paga cada &aacute;rea, y para las empresas del partido, con la partida de contrataci&oacute;n que el 5.3 abre.</p>
-<p><b>Y la parte pol&iacute;tica.</b> El sindicato municipal est&aacute; en
-conflicto. <b>&laquo;Te sacamos lo aburrido y no tocamos tu puesto&raquo; es m&aacute;s defendible que
-&laquo;prometemos no despedir&raquo;</b>, y cambia de lugar al empleado: de obst&aacute;culo del cambio
-a parte del cambio.</p>
-<p><b>Lo que s&iacute; cambia es el trabajo de algunas &aacute;reas.</b> Imputar el gasto con referencia
-territorial, responder por escrito a cada priorizaci&oacute;n zonal y registrar cada dato por zona el d&iacute;a que ocurre son tareas nuevas para las secretar&iacute;as de Hacienda y de Obras. No requieren personal adicional,
-pero requieren decisi&oacute;n y capacitaci&oacute;n.</p>
-<p><b>Y hay un compromiso de transparencia que toca a la propia planta.</b> Enlazar el organigrama desde el sitio oficial, que el 5.10 encontr&oacute; publicado y sin
-enlazar, y que cualquiera pueda preguntar la planta de personal y la escala salarial, que el 5.10 no pudo
-verificar. <span class="sg">Es informaci&oacute;n sobre los propios empleados y se contesta igual</span>, porque
-un municipio que le pide al vecino que justifique cada peso de una obra tiene que poder decir qui&eacute;n
-trabaja en &eacute;l y cu&aacute;nto cobra.</p>
+<p><b>Este programa no propone achicar la planta de empleados.</b> Tampoco congelarla, ni reemplazarla por contratos, ni pasar tareas a empresas de afuera. Las dos propuestas m&aacute;s grandes se pagan con la actualizaci&oacute;n de la base de valuaci&oacute;n y con el gasto flexible. Tambi&eacute;n se pagan cambiando de destino parte del gasto, dentro del rubro de obra (bienes de uso). <span class="sg">Ninguna sale del gasto en personal.</span> Y el modelo del cap&iacute;tulo 3 trata ese gasto como fijo, justamente porque no se toca.</p>
+<p><b>Pero prometer que no se echa a nadie es s&oacute;lo defenderse, y no alcanza.</b> Este programa propone otra cosa. <span class="sg">Automatizar le saca al empleado las tareas que no necesitan criterio</span>, como cargar datos, cruzar planillas o contestar cien veces lo mismo. As&iacute;, el empleado queda libre para lo que s&iacute; lo necesita. Por ejemplo, inspeccionar en la calle, atender a quien necesita una persona del otro lado y resolver lo que se sale de lo com&uacute;n.</p>
+<p><b>Y el que mejor sabe qu&eacute; automatizar es el empleado que hace esa tarea todos los d&iacute;as.</b> No una consultora, sino el que la hace. Adem&aacute;s, automatizar esas tareas les da trabajo a los pasantes, que paga cada &aacute;rea. Y tambi&eacute;n a las empresas del partido, con la partida de contrataci&oacute;n que abre el 5.3.</p>
+<p><b>Y la parte pol&iacute;tica.</b> El sindicato municipal est&aacute; en conflicto. <b>&laquo;Te sacamos lo aburrido y no tocamos tu puesto&raquo; se defiende mejor que &laquo;prometemos no despedir&raquo;.</b> Y cambia el lugar del empleado: deja de ser un obst&aacute;culo para el cambio y pasa a ser parte del cambio.</p>
+<p><b>Lo que s&iacute; cambia es el trabajo de algunas &aacute;reas.</b> Las secretar&iacute;as de Hacienda y de Obras tienen tareas nuevas. Tienen que anotar cada gasto con la zona donde se hace. Tienen que responder por escrito a lo que elige cada zona. Y tienen que registrar cada dato por zona el d&iacute;a que pasa. No hace falta m&aacute;s personal, pero s&iacute; decisi&oacute;n y capacitaci&oacute;n.</p>
+<p><b>Y hay un compromiso de transparencia sobre los propios empleados.</b> Hay que poner un enlace al organigrama desde el sitio oficial. El 5.10 encontr&oacute; que est&aacute; publicado, pero sin enlace. Y cualquiera tiene que poder preguntar la planta de personal y la escala de sueldos, que el 5.10 no pudo comprobar. <span class="sg">Es informaci&oacute;n sobre los propios empleados, y se contesta igual.</span> Un municipio que le pide al vecino que justifique cada peso de una obra tiene que poder decir qui&eacute;n trabaja en &eacute;l y cu&aacute;nto cobra.</p>
 </div>
 <h3>Un Municipio que atiende los siete d&iacute;as</h3>
 <div class="cols">
-<p><b>Hoy ya atienden todos los d&iacute;as</b> los hospitales, las emergencias, la seguridad, los cementerios y los
-campos de deportes, y el 147 contesta las 24 horas desde enero de 2025. Siete de los nueve centros de atenci&oacute;n
-primaria abren el s&aacute;bado a la ma&ntilde;ana.</p>
-<p><b>Las delegaciones, el Juzgado de Faltas y los turnos de salud por tel&eacute;fono atienden de lunes a
-viernes.</b></p>
+<p><b>Hoy ya atienden todos los d&iacute;as</b> los hospitales, las emergencias, la seguridad, los cementerios y los campos de deportes. Y desde enero de 2025, el 147 contesta las 24 horas. Siete de los nueve centros de atenci&oacute;n primaria abren el s&aacute;bado a la ma&ntilde;ana. <b>Pero las delegaciones, el Juzgado de Faltas y los turnos de salud por tel&eacute;fono atienden s&oacute;lo de lunes a viernes.</b></p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: horarios rotativos optativos</div>
-<p><b>Quien opta trabaja el fin de semana y descansa en la semana.</b> Mismas horas, otros d&iacute;as: sin costo extra
-en sueldos.</p>
-<p><b>Por qu&eacute;.</b> Para que el Municipio est&eacute; disponible tambi&eacute;n el s&aacute;bado y el domingo. Para que quien trabaja de
-lunes a viernes no pierda una ma&ntilde;ana de trabajo por un tr&aacute;mite: el que m&aacute;s pierde es el que cobra por d&iacute;a. Para
-descomprimir el tr&aacute;nsito y la gente de los fines de semana. Y porque el empleado que opta descansa en la semana y es &eacute;l
-mismo quien va a los parques y a los comercios de lunes a jueves: eso genera demanda en la semana para la costa y sus
-comercios (5.5). Es optativo y en positivo: a mucha gente le conviene un franco en la semana para sus tr&aacute;mites, para
-viajar m&aacute;s barato o para estar con los chicos.</p>
-<p><b>Empieza por tres:</b> las delegaciones el s&aacute;bado a la ma&ntilde;ana, rotando por zona; el Juzgado de Faltas; y los
-turnos de salud por tel&eacute;fono el s&aacute;bado. Y la inteligencia artificial del Municipio atiende todos los d&iacute;as, a toda
-hora.</p>
-<p><span class="sg">C&oacute;rdoba abre por turnos sus centros de atenci&oacute;n a la tarde y los s&aacute;bados desde 2024, y La Plata
-atiende los s&aacute;bados a la ma&ntilde;ana en su centro de tr&aacute;mites.</span></p>
+<p><b>Quien quiere, trabaja el fin de semana y descansa durante la semana.</b> Trabaja las mismas horas, en otros d&iacute;as, as&iacute; que no cuesta m&aacute;s en sueldos.</p>
+<p><b>Por qu&eacute;.</b> Para que el Municipio atienda tambi&eacute;n el s&aacute;bado y el domingo. Para que quien trabaja de lunes a viernes no pierda una ma&ntilde;ana de trabajo por un tr&aacute;mite. El que m&aacute;s pierde es el que cobra por d&iacute;a. Para que haya menos tr&aacute;nsito y menos gente los fines de semana. Y porque el empleado que elige este horario descansa en la semana. &Eacute;l mismo va a los parques y a los comercios de lunes a jueves. Eso lleva gente en la semana a la costa y a sus comercios (5.5). Es optativo, y es algo bueno para el empleado. A mucha gente le conviene un franco en la semana para sus tr&aacute;mites, para viajar m&aacute;s barato o para estar con los chicos.</p>
+<p><b>Empieza por tres lugares.</b> Las delegaciones abren el s&aacute;bado a la ma&ntilde;ana, rotando por zona. Tambi&eacute;n el Juzgado de Faltas. Y los turnos de salud por tel&eacute;fono se dan tambi&eacute;n el s&aacute;bado. Adem&aacute;s, la inteligencia artificial del Municipio atiende todos los d&iacute;as, a toda hora.</p>
+<p><span class="sg">Desde 2024, C&oacute;rdoba abre sus centros de atenci&oacute;n por turnos, a la tarde y los s&aacute;bados. Y La Plata atiende los s&aacute;bados a la ma&ntilde;ana en su centro de tr&aacute;mites.</span></p>
 </div>
 
 <h2><span class="n">5.13</span>Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad <span class="tag v">Gesti&oacute;n</span></h2>
-<p class="lead">Cuatro &aacute;reas dentro de la funci&oacute;n que m&aacute;s cay&oacute; en 2025: tres
-comparten un solo programa presupuestario y discapacidad tiene uno propio, el m&aacute;s chico. Al abrirlas una por una aparecieron cuatro problemas
-distintos, y cada uno necesita una cosa distinta.</p>
+<p class="lead">Son cuatro &aacute;reas dentro del gasto que m&aacute;s cay&oacute; en 2025. Tres comparten un solo programa del presupuesto, y discapacidad tiene uno propio, el m&aacute;s chico. Al mirarlas una por una aparecieron cuatro problemas distintos. Y cada uno necesita una soluci&oacute;n distinta.</p>
 <div class="cols">
-<p><b>Empecemos por el dato que ordena todo lo dem&aacute;s:</b> San Isidro
-<span class="sg">ya tiene m&aacute;s viejos que chicos</span>. Hasta 14 a&ntilde;os hay 51.388 personas,
-el 17,4%; de 65 y m&aacute;s hay 52.769, el 17,8%. No es una proyecci&oacute;n: es el Censo 2022.</p>
-<p><b>Y no es un matiz: es el partido m&aacute;s envejecido de su regi&oacute;n.</b> Ese 17,8% se
-compara con el <b>11,7% de los veinticuatro partidos del Gran Buenos Aires</b> y el 12,1% de toda la
-provincia. <span class="sg">San Isidro tiene una vez y media la proporci&oacute;n de personas mayores de
-su entorno</span>, y ninguna pol&iacute;tica municipal est&aacute; escrita alrededor de eso.</p>
-<p><b>Y viene pasando hace cuarenta a&ntilde;os, a la vista de todos.</b> Era el 8,9% en 1980, el 10,8%
-en 1991, el 14,0% en 2001, el 14,9% en 2010 y el 17,8% en 2022. <b>Se duplic&oacute;.</b> No es un
-cambio que sorprenda a nadie: es un cambio que nadie atendi&oacute;.</p>
-<p><b>Y los dos mapas est&aacute;n invertidos.</b> Los chicos se concentran en B&eacute;ccar, con el
-21,0% de menores de 14, y en Boulogne, con el 18,7%. Los mayores, en Acassuso con el 22,5% y en
-Mart&iacute;nez con el 22,4%. <b>No se puede hacer la misma pol&iacute;tica en todo el partido.</b></p><p><b>La propuesta:</b> los
-centros de infancia van donde est&aacute;n los chicos y los de personas mayores donde est&aacute;n los
-mayores. Es el mismo criterio territorial del cap&iacute;tulo 1, aplicado a la edad en vez de a la
-carencia.</p>
-<p><b>Y hay 1.810 chicos en hogares con necesidades b&aacute;sicas insatisfechas</b>, de los cuales el
-76% vive en Boulogne y B&eacute;ccar. Es el mismo mapa de la cloaca y del gas de red.</p>
+<p><b>Empecemos por el dato que ordena todo lo dem&aacute;s:</b> San Isidro <span class="sg">ya tiene m&aacute;s personas mayores que chicos</span>. Hasta los 14 a&ntilde;os hay 51.388 personas, el 17,4%. De 65 a&ntilde;os para arriba hay 52.769, el 17,8%. No es un c&aacute;lculo a futuro: es el Censo 2022.</p>
+<p><b>Y no es un detalle: es el partido con m&aacute;s personas mayores de su regi&oacute;n.</b> Ese 17,8% se compara con el <b>11,7% de los veinticuatro partidos del Gran Buenos Aires</b>, y con el 12,1% de toda la provincia. <span class="sg">En proporci&oacute;n, San Isidro tiene una vez y media m&aacute;s personas mayores que los partidos de alrededor.</span> Y ninguna pol&iacute;tica del Municipio est&aacute; pensada a partir de eso.</p>
+<p><b>Y viene pasando hace cuarenta a&ntilde;os, a la vista de todos.</b> Era el 8,9% en 1980, el 10,8% en 1991, el 14,0% en 2001, el 14,9% en 2010 y el 17,8% en 2022. <b>Se duplic&oacute;.</b> No es un cambio que sorprenda a nadie. Es un cambio que nadie atendi&oacute;.</p>
+<p><b>Y los dos mapas est&aacute;n al rev&eacute;s.</b> Los chicos est&aacute;n sobre todo en B&eacute;ccar, donde el 21,0% tiene menos de 14 a&ntilde;os, y en Boulogne, con el 18,7%. Las personas mayores est&aacute;n sobre todo en Acassuso, con el 22,5%, y en Mart&iacute;nez, con el 22,4%. <b>No se puede hacer la misma pol&iacute;tica en todo el partido.</b></p><p><b>La propuesta:</b> los centros para chicos van donde est&aacute;n los chicos, y los de personas mayores, donde est&aacute;n las personas mayores. Es el mismo criterio por zona del cap&iacute;tulo 1. S&oacute;lo que se aplica a la edad, y no a lo que le falta a cada zona.</p>
+<p><b>Y hay 1.810 chicos en hogares con necesidades b&aacute;sicas insatisfechas.</b> El 76% de ellos vive en Boulogne y B&eacute;ccar. Es el mismo mapa de la falta de cloaca y de gas de red.</p>
 </div>
-<h3>Y para el partido m&aacute;s envejecido de la regi&oacute;n no hay una sola cama</h3>
+<h3>Y en el partido con m&aacute;s personas mayores de la regi&oacute;n no hay una sola cama</h3>
 <div class="cols">
-<p><b>No hay residencia, no hay hogar y no hay atenci&oacute;n domiciliaria municipal.</b> Lo que hay
-es Puerto Libre, que es recreativo y comedor, y no reemplaza a ninguna de las tres cosas.</p>
-<p><b>Y los treinta y cinco &laquo;centros de tercera edad&raquo; que se cuentan son, en su
-mayor&iacute;a, de la sociedad civil</b>, no sedes municipales. <span class="sg">Articular con ellos es
-correcto; contarlos como estructura propia no lo es.</span></p>
-<p><b>La m&aacute;s barata de las tres es la que falta primero, y la proponemos.</b> La atenci&oacute;n domiciliaria
-&mdash;que alguien vaya a la casa de quien ya no puede salir&mdash; no exige un edificio, exige
-personal formado y una agenda. La dar&iacute;an cuidadores formados en el curso de operador de cuidados de adultos
-mayores que el CFL 404 ya dicta &mdash;380 horas, gratuito, no la tecnicatura&mdash;, y los pagar&iacute;a Desarrollo
-Social: <b>una primera etapa de cien cuidadores atiende a unas 240 personas, cuatro horas por d&iacute;a cada una, y
-cuesta 667,8 millones por a&ntilde;o</b> con cargas. El relevamiento del 5.3 dice cu&aacute;ntos m&aacute;s hacen falta.</p>
+<p><b>El Municipio no tiene residencia, ni hogar, ni atenci&oacute;n en domicilio.</b> Lo que hay es Puerto Libre, que es un lugar de recreaci&oacute;n y un comedor. No reemplaza a ninguna de las tres cosas.</p>
+<p><b>Y los treinta y cinco &laquo;centros de tercera edad&raquo; que se cuentan son, en su mayor&iacute;a, de organizaciones sociales</b>, y no del Municipio. <span class="sg">Est&aacute; bien trabajar con ellos. Pero no est&aacute; bien contarlos como si fueran del Municipio.</span></p>
+<p><b>La m&aacute;s barata de las tres es la que falta primero, y la proponemos.</b> Es la atenci&oacute;n en domicilio: que alguien vaya a la casa de quien ya no puede salir. No necesita un edificio. Necesita personal formado y una agenda. La dar&iacute;an cuidadores formados en el curso de operador de cuidados de adultos mayores que ya da el CFL 404. Es un curso gratuito de 380 horas, y no es la tecnicatura. Los pagar&iacute;a Desarrollo Social. <b>En una primera etapa, cien cuidadores atienden a unas 240 personas, cuatro horas por d&iacute;a cada una. Cuesta 667,8 millones por a&ntilde;o</b>, con las cargas sociales. El relevamiento del 5.3 dice cu&aacute;ntos m&aacute;s hacen falta.</p>
 </div>
 <h3>G&eacute;nero es el &aacute;rea con menos estructura de todo el Municipio</h3>
 <div class="cols">
-<p><b>Es una direcci&oacute;n con una sola sede</b>, en la ciudad de San Isidro. No hay presencia en
-Boulogne, B&eacute;ccar, Mart&iacute;nez ni Villa Adelina. Para comparar: el servicio de ni&ntilde;ez
-tiene tres sedes, discapacidad dos, y hay treinta y cinco centros de tercera edad articulados.</p>
-<p><b>No tiene partida propia.</b> No hay programa presupuestario ni funci&oacute;n de g&eacute;nero:
-queda adentro de un programa que comparte con ni&ntilde;ez, juventud y personas mayores.
-<span class="sg">Sin partida propia no hay ejecuci&oacute;n que se pueda auditar</span>, ni siquiera
-para saber cu&aacute;nto se gasta.</p>
-<p><b>San Isidro no tiene un hogar propio para v&iacute;ctimas:</b> cuando hace falta, el Municipio pide una vacante a la red
-provincial. Y el patrocinio jur&iacute;dico gratuito que hay cerca no es del Municipio: es del colegio de abogados, de la
-Defensa Oficial y de la universidad p&uacute;blica.</p>
-<p><b>Y la p&aacute;gina institucional del &aacute;rea est&aacute; vac&iacute;a:</b> tiene el
-t&iacute;tulo y nada m&aacute;s. La l&iacute;nea de atenci&oacute;n publicada es un
-<b>n&uacute;mero de WhatsApp de guardia</b>, no una l&iacute;nea institucional. La &uacute;nica ordenanza
-del &aacute;rea, de 2018, es declarativa: ordena los programas existentes y no crea ning&uacute;n
-dispositivo ni asigna un peso.</p>
+<p><b>Es una direcci&oacute;n con una sola sede</b>, en la ciudad de San Isidro. No est&aacute; en Boulogne, B&eacute;ccar, Mart&iacute;nez ni Villa Adelina. Para comparar, el servicio de ni&ntilde;ez tiene tres sedes y discapacidad tiene dos. Y hay treinta y cinco centros de tercera edad que trabajan con el Municipio.</p>
+<p><b>No tiene una partida propia.</b> No hay un programa del presupuesto para g&eacute;nero. Est&aacute; adentro de un programa que comparte con ni&ntilde;ez, juventud y personas mayores. <span class="sg">Sin partida propia, no se puede controlar en qu&eacute; se gasta</span>, ni siquiera saber cu&aacute;nto se gasta.</p>
+<p><b>San Isidro no tiene un hogar propio para v&iacute;ctimas.</b> Cuando hace falta, el Municipio pide un lugar a la red de la Provincia. Y la defensa legal gratuita que hay cerca no es del Municipio. Es del colegio de abogados, de la Defensa Oficial y de la universidad p&uacute;blica.</p>
+<p><b>Y la p&aacute;gina del &aacute;rea en el sitio del Municipio est&aacute; vac&iacute;a:</b> tiene el t&iacute;tulo y nada m&aacute;s. La l&iacute;nea de atenci&oacute;n publicada es un <b>n&uacute;mero de WhatsApp de guardia</b>, no una l&iacute;nea oficial. La &uacute;nica ordenanza del &aacute;rea es de 2018, y es s&oacute;lo una declaraci&oacute;n. Ordena los programas que ya exist&iacute;an, pero no crea ning&uacute;n servicio ni le da un peso.</p>
 </div>
 <h3>Discapacidad es el &aacute;rea con menos dinero</h3>
 <div class="cols">
-<p><b>Su &uacute;nico programa propio deveng&oacute; 65,9 millones en todo 2025: el 0,020% del gasto
-municipal.</b> Es <b>menos</b> que el programa de abordaje de las adicciones, y
-<span class="sg">veinte veces menos que cultura</span>.</p>
-<p><b>A diferencia de g&eacute;nero,</b> discapacidad s&iacute; tiene infraestructura visible: dos sedes, dispositivos propios y una junta
-evaluadora municipal, que funciona en el Hospital Central y emite los certificados del partido. <b>El problema no es que no exista: es que
-no tiene fondos.</b></p>
+<p><b>Su &uacute;nico programa propio gast&oacute; 65,9 millones en todo 2025: el 0,020% del gasto del Municipio.</b> Es <b>menos</b> que el programa de adicciones, y <span class="sg">veinte veces menos que cultura</span>. <b>A diferencia de g&eacute;nero,</b> discapacidad s&iacute; tiene estructura a la vista. Tiene dos sedes, servicios propios y una junta evaluadora municipal. La junta funciona en el Hospital Central y da los certificados del partido. <b>El problema no es que no exista: es que no tiene dinero.</b></p>
 </div>
 <h3>Lo que el Municipio tiene y nadie m&aacute;s tiene</h3>
 <div class="cols">
-<p><b>No existe dato p&uacute;blico de certificados de discapacidad por partido.</b> El organismo
-nacional publica por regi&oacute;n y por provincia, y el Censo 2022 <b>no incluy&oacute; m&oacute;dulo de
-discapacidad</b>. <span class="sg">El &uacute;nico lugar donde ese dato existe materialmente es el
-propio Municipio</span>, porque la junta evaluadora es municipal y emite los certificados del partido.
-</p><p>Proponemos que cualquiera pueda preguntarlo por zona: no cuesta un peso, y nadie m&aacute;s tiene ese dato.</p>
+<p><b>No hay un dato p&uacute;blico de certificados de discapacidad por partido.</b> El organismo nacional publica por regi&oacute;n y por provincia. Y el Censo 2022 <b>no pregunt&oacute; por discapacidad</b>. <span class="sg">El &uacute;nico lugar donde ese dato existe es el propio Municipio</span>, porque la junta evaluadora es municipal y da los certificados del partido.</p><p>Proponemos que cualquiera pueda preguntarlo por zona. No cuesta un peso, y nadie m&aacute;s tiene ese dato.</p>
 </div>
 <div class="callout g">
-<div class="clabel">La propuesta, sin fondos nuevos ni unidades nuevas: con lo que el programa ya tiene</div>
-<p><b>Ni&ntilde;ez y personas mayores.</b> Los dos mapas, cada uno donde corresponde: infancia en B&eacute;ccar y Boulogne; personas
-mayores en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido y los n&uacute;meros dicen que no deber&iacute;a serlo.
-Y atenci&oacute;n domiciliaria para personas mayores, que hoy no existe y es lo &uacute;nico de las tres que no pide un edificio: cien
-cuidadores formados en el CFL 404 y pagados por Desarrollo Social, que se miden en personas atendidas, no en centros
-abiertos.</p>
+<div class="clabel">La propuesta, sin dinero nuevo ni oficinas nuevas: con lo que el programa ya tiene</div>
+<p><b>Ni&ntilde;ez y personas mayores.</b> Cada cosa donde corresponde, seg&uacute;n los dos mapas. Lo de chicos, en B&eacute;ccar y Boulogne. Lo de personas mayores, en Mart&iacute;nez y Acassuso. Hoy la pol&iacute;tica es la misma en todo el partido, y los n&uacute;meros dicen que no deber&iacute;a serlo. Y proponemos atenci&oacute;n en domicilio para personas mayores, que hoy no existe. Es la &uacute;nica de las tres cosas que no necesita un edificio. Son cien cuidadores formados en el CFL 404 y pagados por Desarrollo Social. Se miden por las personas que atienden, no por los centros que se abren.</p>
 <p><b>G&eacute;nero.</b></p>
-<p><b>1 &middot; La inteligencia artificial del Municipio, primer contacto a toda hora:</b> orienta y deriva sin juzgar &mdash;a
-la direcci&oacute;n de g&eacute;nero, a la l&iacute;nea nacional 144 o a la guardia&mdash;, saca el turno y tiene un modo discreto: la charla
-no queda guardada en el tel&eacute;fono.</p>
-<p><b>2 &middot; La prueba sellada (5.5)</b> le sirve a una v&iacute;ctima para guardar mensajes, audios y fotos con su fecha. Quedan
-en la inteligencia artificial del Municipio y no en el tel&eacute;fono, donde el agresor podr&iacute;a verlos.</p>
-<p><b>3 &middot; Sin sedes nuevas:</b> la direcci&oacute;n atiende d&iacute;as fijos en lugares que ya existen en cada zona &mdash;delegaciones,
-centros de salud, centros de apoyo escolar&mdash;, empezando por Boulogne y B&eacute;ccar.</p>
-<p><b>4 &middot; Patrocinio jur&iacute;dico y refugio, sin oficinas nuevas:</b> la inteligencia artificial del Municipio arma el caso y lo
-deriva al patrocinio gratuito que existe &mdash;el del colegio de abogados, la Defensa Oficial y la universidad p&uacute;blica&mdash;, y
-la direcci&oacute;n pide la vacante en la red provincial de hogares.</p>
-<p><b>5 &middot; La partida propia</b>, separada del programa que hoy comparte con ni&ntilde;ez, juventud y personas mayores, sin dinero
-nuevo, y una p&aacute;gina con una l&iacute;nea de atenci&oacute;n de verdad.</p>
+<p><b>1 &middot; La inteligencia artificial del Municipio es el primer contacto, a toda hora.</b> Orienta sin juzgar, y manda a la persona adonde corresponde: a la direcci&oacute;n de g&eacute;nero, a la l&iacute;nea nacional 144 o a la guardia. Saca el turno. Y tiene un modo discreto, en el que la charla no queda guardada en el tel&eacute;fono.</p>
+<p><b>2 &middot; La prueba sellada (5.5)</b> le sirve a una v&iacute;ctima para guardar mensajes, audios y fotos con su fecha. Quedan guardados en la inteligencia artificial del Municipio, y no en el tel&eacute;fono, donde el agresor podr&iacute;a verlos.</p>
+<p><b>3 &middot; Sin sedes nuevas.</b> La direcci&oacute;n atiende d&iacute;as fijos en lugares que ya existen en cada zona, como delegaciones, centros de salud y centros de apoyo escolar. Empieza por Boulogne y B&eacute;ccar.</p>
+<p><b>4 &middot; Abogados y refugio, sin oficinas nuevas.</b> La inteligencia artificial del Municipio arma el caso y lo pasa a la defensa legal gratuita que ya existe. Es la del colegio de abogados, la Defensa Oficial y la universidad p&uacute;blica. Y la direcci&oacute;n pide un lugar en la red de hogares de la Provincia.</p>
+<p><b>5 &middot; Una partida propia</b>, separada del programa que hoy comparte con ni&ntilde;ez, juventud y personas mayores, sin dinero nuevo. Y una p&aacute;gina con una l&iacute;nea de atenci&oacute;n de verdad.</p>
 <p><b>6 &middot; Lo que escucha la inteligencia artificial (4.11)</b> se junta por zona y le muestra a la direcci&oacute;n ad&oacute;nde
 ir.</p>
 <p><b>Discapacidad.</b></p>
 <p><b>1 &middot; Los cien cuidadores a domicilio</b> atienden tambi&eacute;n a personas con discapacidad que no pueden salir.</p>
-<p><b>2 &middot; Turnos (5.6):</b> la inteligencia artificial les saca el turno, les ofrece teleconsulta cuando no pueden
-moverse y los acompa&ntilde;a en el tr&aacute;mite del certificado ante la junta evaluadora municipal, en el Hospital Central.</p>
-<p><b>3 &middot; Veredas y rampas:</b> las barreras que los vecinos le cuentan a la inteligencia artificial llegan a la comisi&oacute;n
-de cada zona, que decide la obra de veredas (cap&iacute;tulo 4).</p>
+<p><b>2 &middot; Turnos (5.6).</b> La inteligencia artificial les saca el turno y les ofrece teleconsulta cuando no pueden moverse. Y los acompa&ntilde;a en el tr&aacute;mite del certificado ante la junta evaluadora municipal, en el Hospital Central.</p>
+<p><b>3 &middot; Veredas y rampas.</b> Los obst&aacute;culos que los vecinos le cuentan a la inteligencia artificial llegan a la comisi&oacute;n de cada zona. Y la comisi&oacute;n decide la obra de veredas (cap&iacute;tulo 4).</p>
 <p><b>4 &middot; La inteligencia artificial del Municipio se usa por voz, con letra grande y en lectura f&aacute;cil.</b></p>
 <p><b>5 &middot; El profesor digital (5.8)</b>, tambi&eacute;n para chicos con discapacidad.</p>
-<p><b>6 &middot; Y lo que ya estaba:</b> cualquiera pregunta cu&aacute;ntos certificados de discapacidad emiti&oacute; la junta municipal en
-su zona. Discapacidad ya tiene su partida, con 65,9 millones en 2025: lo que falta es abrir la ejecuci&oacute;n para que se
-pueda ver y discutir cada a&ntilde;o.</p>
+<p><b>6 &middot; Y lo que ya estaba.</b> Cualquiera puede preguntar cu&aacute;ntos certificados de discapacidad dio la junta municipal en su zona. Discapacidad ya tiene su partida, con 65,9 millones en 2025. Lo que falta es mostrar en qu&eacute; se gasta, para que se pueda ver y discutir cada a&ntilde;o.</p>
 </div>
 
 <h2><span class="n">5.14</span>Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;</h2>
@@ -2026,38 +1431,38 @@ afuera.</p>
 <colgroup><col style="width:150pt"><col style="width:96pt"><col></colgroup>
 <tr class="hd"><th>&Aacute;rea</th><th>Por qu&eacute; no est&aacute;</th><th class="r">D&oacute;nde queda</th></tr>
 <tr><td class="l">Residuos</td><td>Est&aacute; adentro de ambiente</td><td class="n">5.5: es una de las prioridades de la reasignaci&oacute;n</td></tr>
-<tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo exceden al Municipio</td><td class="n">5.5 toma la parte municipal; el resto es provincial</td></tr>
-<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, la funci&oacute;n que m&aacute;s cay&oacute; en 2025: &minus;32,5% real</td><td class="n">5.13: tres &aacute;reas con una partida compartida, discapacidad con una propia y chica, y una propuesta para cada una</td></tr>
-<tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema es el r&eacute;gimen de habilitaci&oacute;n, no el subsidio</td></tr>
-<tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin secci&oacute;n propia: su propuesta es la Escuela N&aacute;utica en los parques de la costa (5.5), con su propio presupuesto. Cede parte de la construcci&oacute;n de infraestructura deportiva (cuadro [[n:ceden]]); se se&ntilde;ala la comparaci&oacute;n</td></tr>
-<tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n en s&iacute; misma y no se resuelve en un anexo</td><td class="n">Fuera de este programa, salvo c&oacute;mo se otorgan las excepciones (anexo, Ordenanza XIII)</td></tr>
-<tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No son competencia municipal</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente d&oacute;nde termina lo que un intendente puede</td></tr>
+<tr><td class="l">Obra hidr&aacute;ulica e inundaciones</td><td>Las cuencas del Bajo van m&aacute;s all&aacute; del Municipio</td><td class="n">5.5 toma la parte del Municipio. El resto le toca a la Provincia</td></tr>
+<tr><td class="l">Ni&ntilde;ez, adultos mayores, g&eacute;nero y discapacidad</td><td>Est&aacute;n en promoci&oacute;n y asistencia social, el gasto que m&aacute;s cay&oacute; en 2025: &minus;32,5%, descontada la inflaci&oacute;n</td><td class="n">5.13: tres &aacute;reas con una partida compartida, discapacidad con una propia y chica, y una propuesta para cada una</td></tr>
+<tr><td class="l">Cultura</td><td>Comparte partida con turismo: 0,42% del gasto</td><td class="n">5.8: el problema son las reglas para habilitar, no el subsidio</td></tr>
+<tr><td class="l">Deporte</td><td>Recibe 3.813 M, m&aacute;s que agua y cloacas</td><td class="n">Sin secci&oacute;n propia. Su propuesta es la Escuela N&aacute;utica en los parques de la costa (5.5), con su propio presupuesto. Cede parte de lo que gasta en construir instalaciones deportivas (cuadro [[n:ceden]]). Ac&aacute; se se&ntilde;ala la comparaci&oacute;n</td></tr>
+<tr><td class="l">C&oacute;digo de ordenamiento urbano</td><td>Es una discusi&oacute;n aparte, y no se resuelve en un anexo</td><td class="n">Fuera de este programa, salvo c&oacute;mo se dan las excepciones (anexo, Ordenanza XIII)</td></tr>
+<tr><td class="l">Polic&iacute;a, escuelas, justicia y salud compleja</td><td>No le tocan al Municipio</td><td class="n">5.6, 5.7 y 5.8 dicen exactamente hasta d&oacute;nde puede llegar un intendente</td></tr>
 </table>
 
-<h2><span class="n">5.15</span>Lo que dice este cap&iacute;tulo, en veinte l&iacute;neas</h2>
+<h2><span class="n">5.15</span>Lo que dice este cap&iacute;tulo, en veinte puntos</h2>
 <ol class="n">
-<li>Cada &aacute;rea lleva una o dos etiquetas que dicen de d&oacute;nde sale lo que propone &mdash;fondos nuevos, reasignaci&oacute;n, gesti&oacute;n o gratis&mdash;, y s&oacute;lo empleo y vivienda necesitan fondos nuevos: todo lo dem&aacute;s mueve gasto que ya existe, o no cuesta nada.</li>
-<li>San Isidro es sobre todo un municipio de salud y de obra: ambiente y agua potable juntas no llegan al 1,5% del presupuesto, y en 2025 lo que m&aacute;s creci&oacute; fue el pago de deudas, 36,3% por encima de la inflaci&oacute;n, y lo que m&aacute;s cay&oacute;, la asistencia social, 32,5%.</li>
-<li>La funci&oacute;n Trabajo es la &uacute;ltima de las veinte del presupuesto, con 170 millones. Proponemos llevar empleo y vivienda a 7.730,9 millones por a&ntilde;o: una tecnicatura de dos a&ntilde;os de la UNSO en inteligencia artificial, que nace en el Centro de Formaci&oacute;n Laboral N&ordm; 404 de La Cava, donde ya funciona La Cava 4.0, declarada de inter&eacute;s por el Concejo, y llega a las seis zonas; el segundo a&ntilde;o, una pasant&iacute;a paga, seis meses en el Municipio y seis en una empresa del partido. Son 928 alumnos por a&ntilde;o, de 250 a 300 empleos pagos por a&ntilde;o y 1.286 egresados en el mandato.</li>
-<li>Para que el trabajo quede en el partido, los egresados tienen prioridad, quien trabaja para el Municipio toma al menos el 75% de su gente del partido y el 20% de cada licitaci&oacute;n va a pymes del partido. Del dinero, el 60% va a empleo y el 40% a vivienda; y un semillero de empresas, por 121 millones por a&ntilde;o, le da al egresado que no queda contratado su primer cliente.</li>
-<li>El Censo no mide la conexi&oacute;n a internet. Proponemos medirla por zona con el primer ciclo de asambleas; las redes de cloaca y de gas en la calle las hace la obra vecinal, y la partida de vivienda, 3.092,4 millones por a&ntilde;o, paga la conexi&oacute;n de cada casa.</li>
-<li>En la boca de Per&uacute;, las 31 muestras tomadas desde 2016 superan el valor gu&iacute;a para ba&ntilde;arse, y ambiente es el 0,4% del presupuesto. Proponemos llevarlo al 1,5%, 3.455 millones m&aacute;s, reasignados, y empezar por la costa: cortar la cloaca en su origen, frenar la basura, una bandera sanitaria por tramo todos los d&iacute;as, como Montevideo, y pilotos de arena como la playa de Pacheco, de 139 a 346 millones por a&ntilde;o.</li>
-<li>La recolecci&oacute;n, con barrido y limpieza, es el servicio m&aacute;s caro que paga el Municipio, 49.270 millones por a&ntilde;o: la presta el mismo grupo desde 1998, cuatro licitaciones fracasaron, y corre sobre un contrato directo de seis meses de 2009. Proponemos licitarla en dos zonas, con el pliego aprobado antes del llamado, todos sus trabajadores con su antig&uuml;edad, y el pago seg&uacute;n lo que se mide.</li>
-<li>El ruido tiene norma, pero nadie lo mide. Proponemos que el vecino lo grabe con la inteligencia artificial del Municipio y la prueba quede sellada, y estaciones m&oacute;viles que midan motos y colectivos con el instrumento que fija la ordenanza; primero va el aviso, y un inspector valida antes de multar.</li>
-<li>En urbanismo, lo que se da de m&aacute;s se da por decreto, sin pasar por el Concejo; y en la costa se demolieron Catalejo y Barisidro. Proponemos audiencia p&uacute;blica y dictamen de la comisi&oacute;n de la zona antes de cada excepci&oacute;n, y cobrar el 15% de lo que se valoriza un terreno; que los comercios de la costa sigan en sus predios, con canon y 75% de empleo local; ninguna obra en un parque sin el dictamen de su asociaci&oacute;n; y parques que nunca se privatizan, se edifican ni se achican.</li>
-<li>Para que la costa tenga gente tambi&eacute;n de lunes a jueves, proponemos que la inteligencia artificial del Municipio empuje hacia la semana y avise d&oacute;nde est&aacute; el tren; una Escuela N&aacute;utica gratis en seis parques, de a dos por a&ntilde;o, de 373 a 395 millones por a&ntilde;o desde el tercero; y en cada puesto, foodtrucks al borde, ba&ntilde;os gratis conectados a la cloaca, clases municipales gratis y espect&aacute;culos en la semana. Sin cobrar estacionamiento.</li>
-<li>Salud es el 24,1% del presupuesto, y <b>no hay turno por internet en ning&uacute;n hospital ni centro de salud municipal</b>, mientras el turno para castrar una mascota s&iacute; se saca por internet. Proponemos el turno en l&iacute;nea sobre esa misma plataforma, y que la inteligencia artificial del Municipio lo saque en la charla, lo recuerde y pase a otro el lugar que se libera.</li>
-<li>Y que cada compra de insumos se vea con su precio por unidad y se compare sola contra las anteriores y contra los otros hospitales &mdash;en la Ciudad de Buenos Aires, que cada hospital viera lo que pagaban los dem&aacute;s baj&oacute; los precios 13% en el primer a&ntilde;o&mdash;; que cualquiera pregunte por qu&eacute; falta un medicamento, un insumo o una cama; y que se audite la inteligencia artificial que el Municipio anunci&oacute; en 2023 en los tres hospitales, sin proveedor conocido.</li>
-<li>Seguridad creci&oacute; 34,8% por encima de la inflaci&oacute;n en un a&ntilde;o, y el Municipio anuncia unas <b>2.646 c&aacute;maras con anal&iacute;tica que nunca tuvo una auditor&iacute;a externa</b>. No proponemos comprar c&aacute;maras: patrullar donde se concentra el delito, empezando por el mapa de incidentes que hoy no existe; que las c&aacute;maras que hay detecten hechos violentos en vivo y avisen al patrullero m&aacute;s cercano, sin reconocimiento facial masivo; una oficina de ciberdelito; y una constancia para quien es acusado sin causa.</li>
-<li>Educaci&oacute;n cay&oacute; 11,6% real en 2025, y hoy hay cinco espacios chicos de apoyo escolar, s&oacute;lo en B&eacute;ccar y Boulogne. Proponemos devolverle los 2.064 millones que perdi&oacute;, un centro de apoyo escolar gratuito en cada localidad, en edificios que ya existen, y un profesor digital particular que da pistas y nunca la respuesta, probado primero seis meses. En cultura, la m&uacute;sica en vivo se rige por decretos de 1970 &mdash;uno, publicado todav&iacute;a como vigente, proh&iacute;be la entrada de &laquo;mujeres solas&raquo;&mdash;; proponemos adherir a la Ley 15.302 de espacios culturales.</li>
-<li>La inteligencia artificial del Municipio lee cada tr&aacute;mite contra la norma y contesta en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda, empezando por la habilitaci&oacute;n comercial; y antes de alquilar, con la c&aacute;mara del tel&eacute;fono, dice si ese negocio se puede poner ah&iacute;. Cada inspecci&oacute;n queda grabada y sellada, y sin esa grabaci&oacute;n el acta no vale. Y al comerciante al que le piden una coima, lo aprietan o lo amenazan, lo defiende: su denuncia va a quien no depende del denunciado.</li>
-<li>De siete cosas que se buscaron en el sitio del Municipio, seis est&aacute;n ca&iacute;das, escondidas, incompletas o no se pueden verificar. Ponerlas en orden no cuesta nada, y desde ah&iacute; todo se le pregunta a la inteligencia artificial del Municipio, casi siempre al d&iacute;a.</li>
-<li>Hoy una multa por exceso de velocidad pagada enseguida, 171.075 pesos, es el 17% de un ingreso de un mill&oacute;n y el 1,7% de uno de diez millones. Proponemos multas que no hundan a nadie: avisar antes de multar, cuotas sin tr&aacute;mites con un tope seg&uacute;n el ingreso, c&aacute;maras s&oacute;lo donde hay choques, que nadie cobre por multa y que lo que se cobra vaya a un fondo cerrado de seguridad vial; cada 10% de rebaja media cuesta unos 323 millones por a&ntilde;o. Y las calles y veredas entran en el dinero de obra de cada zona.</li>
-<li>No se reduce la planta: la automatizaci&oacute;n le saca al empleado lo que no requiere criterio y lo deja para lo que s&iacute;. Y el Municipio atiende tambi&eacute;n el fin de semana, con horarios rotativos optativos &mdash;mismas horas, otros d&iacute;as, sin costo extra&mdash;, empezando por las delegaciones, el Juzgado de Faltas y los turnos de salud.</li>
-<li>San Isidro ya tiene m&aacute;s personas mayores que chicos, 17,8% contra 17,4%, y no tiene una sola cama ni atenci&oacute;n a domicilio; g&eacute;nero no tiene partida propia y tiene una sola sede; y discapacidad deveng&oacute; 65,9 millones en 2025, el 0,020% del gasto. Proponemos cien cuidadores formados en el CFL 404, por 667,8 millones por a&ntilde;o, que atienden tambi&eacute;n a personas con discapacidad; para g&eacute;nero, la partida propia, la inteligencia artificial del Municipio como primer contacto, con un modo discreto, y atenci&oacute;n en lugares que ya existen, empezando por Boulogne y B&eacute;ccar; y para discapacidad, turnos y teleconsulta, veredas que decide cada comisi&oacute;n, y la inteligencia artificial del Municipio por voz y en lectura f&aacute;cil.</li>
-<li>Lo que queda afuera &mdash;el c&oacute;digo de ordenamiento urbano, la polic&iacute;a, las escuelas, la justicia y la salud compleja&mdash; est&aacute; dicho, con su porqu&eacute; y d&oacute;nde queda.</li>
+<li>Cada &aacute;rea lleva una o dos etiquetas que dicen de d&oacute;nde sale el dinero. S&oacute;lo empleo y vivienda necesitan fondos nuevos. Todo lo dem&aacute;s usa gasto que ya existe, o no cuesta nada.</li>
+<li>San Isidro gasta sobre todo en salud y en obra. En 2025, lo que m&aacute;s creci&oacute; fue el pago de deudas, y lo que m&aacute;s cay&oacute; fue la asistencia social.</li>
+<li>Trabajo es el gasto m&aacute;s chico del presupuesto. Proponemos una tecnicatura de la UNSO en inteligencia artificial, que empieza en La Cava y llega a las seis zonas. Cada a&ntilde;o entran 928 personas. El primer a&ntilde;o estudian, y el segundo trabajan como pasantes: seis meses en el Municipio y seis en una empresa del partido.</li>
+<li>Para que el trabajo quede en el partido, los egresados tienen prioridad. Quien trabaja para el Municipio toma al menos el 75% de su gente del partido. Y una parte de cada licitaci&oacute;n queda para las pymes del partido. Al egresado que no queda contratado, un semillero de empresas le da su primer cliente.</li>
+<li>Hoy nadie mide la conexi&oacute;n a internet por zona, y proponemos medirla en las asambleas. La obra vecinal hace las redes de cloaca y de gas, y la partida de vivienda paga la conexi&oacute;n de cada casa.</li>
+<li>El agua de la costa no sirve para ba&ntilde;arse, y ambiente recibe muy poco. Proponemos darle m&aacute;s, con dinero que cambia de destino, y empezar por la costa. Hay que cortar la cloaca donde nace y frenar la basura. Y cada tramo tiene una bandera que dice, cada d&iacute;a, si el agua est&aacute; apta.</li>
+<li>La recolecci&oacute;n de basura es el servicio m&aacute;s caro que paga el Municipio. La da el mismo grupo desde 1998, con un contrato directo de 2009. Proponemos licitarla en dos zonas, con todos sus trabajadores, y pagar seg&uacute;n lo que se mide.</li>
+<li>El ruido tiene una norma, pero nadie lo mide. Proponemos que el vecino lo grabe con la inteligencia artificial del Municipio, y que esa prueba quede sellada. Primero va un aviso, y un inspector revisa antes de multar.</li>
+<li>En urbanismo, las excepciones se dan por decreto, sin pasar por el Concejo. Proponemos una audiencia p&uacute;blica y la opini&oacute;n de la comisi&oacute;n de la zona antes de cada excepci&oacute;n. Que los comercios de la costa sigan en sus lugares. Y que los parques nunca se privaticen, se edifiquen ni se achiquen.</li>
+<li>Para que la costa tenga gente tambi&eacute;n de lunes a jueves, proponemos una Escuela N&aacute;utica gratis en seis parques. Y en cada puesto, foodtrucks, ba&ntilde;os gratis, clases y espect&aacute;culos en la semana. Sin cobrar estacionamiento.</li>
+<li>Salud es el gasto m&aacute;s grande del Municipio, y <b>no hay turno por internet en ning&uacute;n hospital ni centro de salud municipal</b>. Proponemos el turno por internet, en la plataforma que ya existe. Y que la inteligencia artificial del Municipio lo saque, lo recuerde y le pase el lugar libre a otro.</li>
+<li>Proponemos que cada compra de los hospitales muestre su precio por unidad, y que se compare sola con las dem&aacute;s. Que cualquiera pueda preguntar por qu&eacute; falta algo. Y que se audite la inteligencia artificial que el Municipio anunci&oacute; en 2023 en los hospitales.</li>
+<li>El gasto en seguridad creci&oacute; mucho, y nadie de afuera revis&oacute; nunca qu&eacute; hacen las c&aacute;maras. No proponemos comprar m&aacute;s. Proponemos patrullar donde se concentra el delito, y que las c&aacute;maras que ya hay avisen al patrullero m&aacute;s cercano cuando pasa algo. Tambi&eacute;n, una oficina para los delitos por internet y una constancia para quien es acusado sin causa.</li>
+<li>Educaci&oacute;n perdi&oacute; dinero en 2025, y hay apoyo escolar s&oacute;lo en dos localidades. Proponemos devolverle lo que perdi&oacute;, un centro de apoyo escolar gratuito en cada localidad y un profesor digital que da pistas y nunca la respuesta. En cultura, la m&uacute;sica en vivo se rige por decretos de 1970, y proponemos sumarse a la ley provincial de espacios culturales.</li>
+<li>La inteligencia artificial del Municipio lee cada tr&aacute;mite y contesta en el momento: s&iacute; o no, qu&eacute; falta y cu&aacute;nto tarda. Cada inspecci&oacute;n queda grabada y sellada, y sin esa grabaci&oacute;n el acta no vale. Y si a un comerciante le piden una coima, lo presionan o lo amenazan, la inteligencia artificial del Municipio lo defiende.</li>
+<li>Mucho de lo que el Municipio publica est&aacute; ca&iacute;do, escondido o incompleto. Ordenarlo no cuesta nada. Y despu&eacute;s, todo se le puede preguntar a la inteligencia artificial del Municipio, casi siempre al d&iacute;a.</li>
+<li>Hoy una multa pesa mucho m&aacute;s en quien menos gana. Proponemos avisar antes de multar, cuotas sin tr&aacute;mites seg&uacute;n el ingreso y c&aacute;maras s&oacute;lo donde hay choques. Que nadie cobre por cada multa, y que lo que se cobra vaya a la seguridad vial. Y un tope a lo que una persona puede deber en multas.</li>
+<li>No se achica la planta de empleados. Automatizar les saca las tareas repetidas, y los deja para lo que necesita criterio. Y el Municipio atiende tambi&eacute;n el fin de semana, con horarios rotativos que cada empleado elige.</li>
+<li>San Isidro ya tiene m&aacute;s personas mayores que chicos, y no tiene atenci&oacute;n en domicilio. Proponemos cien cuidadores formados en el CFL 404. Para g&eacute;nero, una partida propia, y la inteligencia artificial del Municipio como primer contacto, a toda hora. Para discapacidad, turnos, veredas que decide cada zona y la inteligencia artificial del Municipio por voz y en lectura f&aacute;cil.</li>
+<li>Lo que queda afuera, como la polic&iacute;a, las escuelas y la justicia, est&aacute; dicho, con su porqu&eacute;.</li>
 </ol>
-<p><b>Lo que tiene costo est&aacute; calculado en el cap&iacute;tulo 3, y todo est&aacute; fechado en el 6.</b> Las metas verificables del mandato, con su l&iacute;nea de base y su fuente de verificaci&oacute;n, est&aacute;n ah&iacute;.</p>
+<p><b>Lo que tiene costo est&aacute; calculado en el cap&iacute;tulo 3, y todo tiene fecha en el 6.</b> Ah&iacute; est&aacute;n las metas del mandato, con el n&uacute;mero de hoy y el documento con el que se van a poder comprobar.</p>
 
 """)
 

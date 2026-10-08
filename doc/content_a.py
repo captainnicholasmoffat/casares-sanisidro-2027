@@ -116,7 +116,7 @@ _IDX = [
  ("i", "5.12 &nbsp;Los que tienen que ejecutar todo esto", "cap5b2c"),
  ("i", "5.13 &nbsp;Ni&ntilde;ez, personas mayores, g&eacute;nero y discapacidad", "cap5b3"),
  ("i", "5.14 &nbsp;Lo que no est&aacute; en este cap&iacute;tulo, y por qu&eacute;", "cap5b3b"),
- ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en veinte l&iacute;neas", "cap5b3b"),
+ ("i", "5.15 &nbsp;Lo que dice este cap&iacute;tulo, en veinte puntos", "cap5b3b"),
  ("g", "6 &middot; El plan, con fechas", None),
  ("i", "6.1 &nbsp;Los primeros cien d&iacute;as", "cap6"),
  ("i", "6.2 &nbsp;La rampa de la obra vecinal, a&ntilde;o por a&ntilde;o", "cap6"),
