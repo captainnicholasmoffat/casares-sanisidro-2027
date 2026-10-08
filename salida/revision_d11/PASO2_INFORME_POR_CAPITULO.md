@@ -222,3 +222,65 @@ Por cada capítulo: cuántas oraciones cambiaron, la lista de números antes y d
 - Gráfico del 73,1%: «no dentro del ejercicio» → «no se cambian en el año»; «reasignable» → «se puede cambiar de destino».
 - Gráfico de sensibilidad: «Recursos propios» → «Lo que recauda»; «Percepción de recursos: 86,32%» → «Se cobra el 86,32%» (y 92,32%); «efecto sobre el resultado financiero de 2031» → «cuánto cambia lo que sobra en 2031».
 
+## Capítulo 4 · El mecanismo
+
+**Oraciones cambiadas:** 365.
+
+**Números del capítulo (sin el resumen):** idénticos antes y después (371 números).
+
+- Antes: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 8, 9, 10, 10, 10, 10, 14, 15, 15, 16, 16, 17, 17, 17, 17, 17, 20, 21, 22, 23, 24, 24, 24, 24, 25, 26, 27, 32, 40, 45, 50, 50, 50, 58, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 64, 71, 75, 77, 1,3, 1,4, 1,5, 1,6, 100, 102, 102, 110, 119, 119, 119, 119, 119, 120, 132, 132, 132, 132, 132, 135, 144, 190, 192, 193, 2,0, 2,2, 211, 3,1, 3,7, 3.4, 3.4, 300, 354, 356, 360, 360, 374, 4,5, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.6, 4.6, 4.7, 4.8, 4.9, 474, 5.3, 5.3, 5.3, 5.3, 5.6, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 574, 6,7, 6.4, 7,3, 7,3, 722, 775, 8,1, 8,1, 8,8, 8,9, 809, 827, 9,0, 9,4, 936, 936, 950, 0,94, 1,58, 1,71, 10,1, 10,1, 10,2, 10,3, 10,5, 10,7, 11,1, 11,1, 12,5, 12,5, 12,5, 12,8, 15,1, 1958, 1976, 1984, 1994, 1994, 2008, 2013, 2014, 2018, 2019, 2019, 2019, 2020, 2022, 2022, 2022, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2026, 2027, 2027, 2099, 23,4, 25,0, 25,6, 27,1, 27,6, 31,1, 32,6, 32,7, 32,7, 33,0, 33,0, 34,0, 35,4, 35,8, 36,4, 36,6, 37,5, 38,0, 38,0, 4.10, 4.11, 4.12, 5.10, 5.10, 50,0, 53,1, 6045, 6045, 6045, 61,3, 61,4, 6769, 7124, 91,0, 9395, 9396, 9399, 9399, 9405, 1.088, 1.280, 108,4, 114,5, 114,5, 114,5, 117,6, 120,8, 135,4, 175,9, 188,5, 188,5, 19,48, 2.034, 2.295, 2.321, 2.794, 202,0, 211,8, 243,5, 3.121, 3.221, 3.497, 3.806, 433,6, 6.488, 6.947, 7.227, 8.155, 8.221, 8.221, 8.569, 14.454, 21.681, 24.310, 25.165, 25.326, 28.908, 28.908, 28.908, 28.908, 28.908, 48.620, 57.816, 57.816, 57.816, 72.930, 77.000, 97.241, 1.621,8, 2.000,7, 2.000,7, 2.000,7, 2.091,7, 2.091,7, 240.000, 297.282, 14.654,8
+- Después: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 8, 9, 10, 10, 10, 10, 14, 15, 15, 16, 16, 17, 17, 17, 17, 17, 20, 21, 22, 23, 24, 24, 24, 24, 25, 26, 27, 32, 40, 45, 50, 50, 50, 58, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 64, 71, 75, 77, 1,3, 1,4, 1,5, 1,6, 100, 102, 102, 110, 119, 119, 119, 119, 119, 120, 132, 132, 132, 132, 132, 135, 144, 190, 192, 193, 2,0, 2,2, 211, 3,1, 3,7, 3.4, 3.4, 300, 354, 356, 360, 360, 374, 4,5, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.6, 4.6, 4.7, 4.8, 4.9, 474, 5.3, 5.3, 5.3, 5.3, 5.6, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 574, 6,7, 6.4, 7,3, 7,3, 722, 775, 8,1, 8,1, 8,8, 8,9, 809, 827, 9,0, 9,4, 936, 936, 950, 0,94, 1,58, 1,71, 10,1, 10,1, 10,2, 10,3, 10,5, 10,7, 11,1, 11,1, 12,5, 12,5, 12,5, 12,8, 15,1, 1958, 1976, 1984, 1994, 1994, 2008, 2013, 2014, 2018, 2019, 2019, 2019, 2020, 2022, 2022, 2022, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2025, 2026, 2027, 2027, 2099, 23,4, 25,0, 25,6, 27,1, 27,6, 31,1, 32,6, 32,7, 32,7, 33,0, 33,0, 34,0, 35,4, 35,8, 36,4, 36,6, 37,5, 38,0, 38,0, 4.10, 4.11, 4.12, 5.10, 5.10, 50,0, 53,1, 6045, 6045, 6045, 61,3, 61,4, 6769, 7124, 91,0, 9395, 9396, 9399, 9399, 9405, 1.088, 1.280, 108,4, 114,5, 114,5, 114,5, 117,6, 120,8, 135,4, 175,9, 188,5, 188,5, 19,48, 2.034, 2.295, 2.321, 2.794, 202,0, 211,8, 243,5, 3.121, 3.221, 3.497, 3.806, 433,6, 6.488, 6.947, 7.227, 8.155, 8.221, 8.221, 8.569, 14.454, 21.681, 24.310, 25.165, 25.326, 28.908, 28.908, 28.908, 28.908, 28.908, 48.620, 57.816, 57.816, 57.816, 72.930, 77.000, 97.241, 1.621,8, 2.000,7, 2.000,7, 2.000,7, 2.091,7, 2.091,7, 240.000, 297.282, 14.654,8
+
+**Números del resumen:** antes 25, después 5 (el resumen deja sólo la idea).
+- Antes: 4, 5, 8, 9, 10, 16, 24, 50, 59, 60, 119, 132, 827, 1,71, 12,5, 1994, 2008, 2025, 2025, 4.13, 6045, 7.227, 28.908, 28.908, 2.091,7
+- Después: 16, 60, 1994, 2008, 4.13
+
+**Gráficos y cuadros: títulos, bajadas y notas, antes y después.**
+
+*CUADRO 21*
+- Titulo (igual): Proponemos que la obra pública que deciden los vecinos suba del 12,5% al 50% en cuatro años
+- Bajada antes: Sobre la obra pública ejecutada en 2025: 57.816 millones. No es gasto nuevo: cambia quién decide en qué se usa ese dinero.
+- Bajada ahora: Se calcula sobre la obra pública de 2025: 57.816 millones. No es gasto nuevo. Lo que cambia es quién decide en qué se usa ese dinero.
+
+- Encabezados (igual):  · % de la obra pública · Monto anual · % del gasto total · Por habitante
+
+*CUADRO 22*
+- Titulo (igual): Hogares con cada carencia, zona por zona, y la parte de la necesidad del partido que le toca a cada una
+- Bajada antes: Hogares con necesidades básicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados; entre paréntesis, qué parte del total del partido son. La última columna promedia esas cuatro partes: con ella proponemos repartir la mitad del dinero.
+- Bajada ahora: Hogares con cada una de las cuatro carencias. Entre paréntesis, qué parte del total del partido son. La última columna es el promedio de esas cuatro partes. Con ella proponemos repartir la mitad del dinero.
+- Notas antes: Fuente: INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, agregado por zona sobre los 360 radios censales del partido. · Cómo se lee: Béccar tiene 8.221 hogares sin gas de red, que son el 32,7% de todos los hogares sin gas de red del partido. El promedio de sus cuatro participaciones da 33,0%, y eso es lo que pesa en la mitad del reparto que no va por población.
+- Notas ahora: Fuente: INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, agregado por zona sobre los 360 radios censales del partido. · Cómo se lee: Béccar tiene 8.221 hogares sin gas de red. Son el 32,7% de todos los hogares sin gas de red del partido. El promedio de sus cuatro partes da 33,0%. Eso es lo que cuenta en la mitad del reparto que no va por población.
+- Encabezados (igual): Zona · Con NBI · Sin cloaca · Sin gas de red · Hacinamiento · Índice
+
+*GRÁFICO 23* — sin cambios
+
+*GRÁFICO 24*
+- Titulo (igual): Las carencias no están repartidas: se concentran en nueve radios censales pegados, en Béccar
+- Bajada antes: El partido en sus 360 radios censales, las zonas de unas 300 viviendas con que trabaja el Censo. El contorno grueso marca los nueve radios de la fracción 32, la de más hogares con necesidades básicas insatisfechas del partido.
+- Bajada ahora: El partido dividido en sus 360 radios censales. Un radio censal es una zona de unas 300 viviendas, la unidad con la que trabaja el Censo. El contorno grueso marca los nueve radios de la fracción 32. Es la fracción con más hogares con necesidades básicas insatisfechas del partido.
+- Notas antes: Fuente: INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7. · Nota: Los radios se identifican por código y fracción censal, porque los barrios no tienen geometría oficial; cuando un conjunto de radios coincide con un barrio conocido, se lo nombra, como La Cava en el 5.3.
+- Notas ahora: Fuente: INDEC, Censo Nacional de Población, Hogares y Viviendas 2022, procesado con Redatam 7. · Nota: Los radios se identifican por su código y su fracción censal, porque los barrios no tienen límites oficiales. Cuando un grupo de radios coincide con un barrio conocido, se lo nombra, como La Cava en el 5.3.
+
+
+*CUADRO 25*
+- Titulo (igual): Diez bloques para veinticuatro bancas: hacen falta trece votos
+- Bajada antes: Integración publicada por el propio Concejo Deliberante de San Isidro.
+- Bajada ahora: Cómo está formado hoy, según lo que publica el propio Concejo Deliberante de San Isidro.
+- Notas antes: Fuente: Honorable Concejo Deliberante de San Isidro, integración de bloques publicada en su sitio oficial, consultada en septiembre de 2026. · Nota: el cuerpo renueva la mitad de sus bancas cada dos años, de modo que la composición cambia en diciembre de 2027, dentro del primer año de mandato.
+- Notas ahora: Fuente: Honorable Concejo Deliberante de San Isidro, integración de bloques publicada en su sitio oficial, consultada en septiembre de 2026. · Nota: el Concejo renueva la mitad de sus bancas cada dos años. Por eso, su composición cambia en diciembre de 2027, en el primer año de mandato.
+- Encabezados (igual): Bloque · Bancas
+
+*GRÁFICO 26* — sin cambios
+
+*CUADRO 27*
+- Titulo antes: Cincuenta y nueve personas, abiertas por función: 10 seniors, 17 semi-seniors, 17 juniors y 15 pasantes
+- Titulo ahora: Cincuenta y nueve personas, según lo que hace cada una: 10 seniors, 17 semi-seniors, 17 juniors y 15 pasantes
+- Bajada antes: Equipo en régimen, con las cargas del empleador, en pesos de diciembre de 2025.
+- Bajada ahora: El equipo completo, con las cargas que paga el empleador, en pesos de diciembre de 2025.
+- Notas antes: Nota: sueldos brutos de mercado por trece, más las cargas del empleador; pasantes, 240.000 $ por mes. Son de referencia, a presupuestar y licitar antes de comprometerse; el detalle, en las notas del capítulo 4. Estimado
+- Notas ahora: Nota: son sueldos brutos de mercado, por trece meses, más las cargas del empleador. Los pasantes cobran 240.000 $ por mes. Son cifras de referencia, que se presupuestan y se licitan antes de comprometerse. El detalle está en las notas del capítulo 4. Estimado
+- Encabezados (igual): Función · Sr · SSr · Jr · Pasantes · Por año
+
+
+*Capítulo 4, además:* en el 4.11 se agregó «Contesta en el idioma en que le hablen, sea castellano, inglés, chino o cualquier otro» y salió «en castellano» de los otros tres lugares (4.11, cuadro del equipo y resumen). Las cuatro reglas de la inteligencia artificial del 4.11 («no acusa», «nunca qué conviene votar»…) quedan donde están, porque son la propuesta misma. Títulos que cambian: 4.6 «Cómo se forma una comisión, y cómo rinde cuentas»; 4.9 «Las otras dos piezas del mecanismo».
+

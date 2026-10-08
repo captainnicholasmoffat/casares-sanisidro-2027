@@ -7,73 +7,41 @@ from content_a import RH, ex, exhead, fig
 C4A = dict(id="cap4a", runhead=RH, html=fig("f_asamblea",
     "Asamblea vecinal. Ilustraci&oacute;n.") + """
 <h1><span class="n">4</span>El mecanismo</h1>
-<div class="stand">En la Provincia de Buenos Aires lo que vota una asamblea de vecinos no puede obligar al Municipio, pero el dinero reservado para cada zona s&iacute; puede volverse obligatorio, y la ley permite que la asociaci&oacute;n vecinal haga la obra, contratada directamente por el Municipio. Sobre esos dos hechos se apoya el mecanismo que proponemos: 28.908 millones anuales, uno de cada dos pesos de obra p&uacute;blica.</div>
+<div class="stand">En la Provincia de Buenos Aires, lo que vota una asamblea de vecinos no puede obligar al Municipio. Pero el dinero reservado para cada zona s&iacute; puede volverse obligatorio. Y la ley permite que el Municipio contrate directamente a la asociaci&oacute;n vecinal para que haga la obra. Sobre esos dos hechos se apoya lo que proponemos: 28.908 millones por a&ntilde;o, uno de cada dos pesos de obra p&uacute;blica.</div>
 
 <h2><span class="n">4.1</span>El l&iacute;mite legal: lo que un intendente bonaerense no puede delegar</h2>
-<p class="lead">Casi toda campa&ntilde;a municipal argentina promete participaci&oacute;n vecinal, y casi
-ninguna explica el mecanismo. Hay una raz&oacute;n:
-<span class="sg">en la Provincia de Buenos Aires la forma m&aacute;s obvia de hacerlo no es legal.</span></p>
+<p class="lead">Casi todas las campa&ntilde;as municipales prometen participaci&oacute;n vecinal. Casi ninguna explica c&oacute;mo. Hay una raz&oacute;n: <span class="sg">en la Provincia de Buenos Aires, la forma m&aacute;s obvia de hacerlo no es legal.</span></p>
 <div class="cols">
-<p>La Constituci&oacute;n provincial establece que el municipio tiene <span class="sg">dos</span>
-&oacute;rganos con capacidad de decidir, y s&oacute;lo dos: el Concejo Deliberante y el Departamento
-Ejecutivo (art. 190). El presupuesto lo vota el Concejo (art. 192 inc. 5). Las tasas requieren asamblea
-de concejales y mayores contribuyentes (art. 193 inc. 2). La Ley Org&aacute;nica de las Municipalidades
-agrega que el Concejo sanciona ordenanzas &laquo;con exclusividad&raquo; (art. 24).</p>
-<p>Crear por ordenanza un tercer &oacute;rgano cuyas decisiones <span class="sg">obliguen
-jur&iacute;dicamente</span> al municipio es, en la lectura dominante, delegaci&oacute;n impropia de
-facultades indelegables.</p>
+<p>La Constituci&oacute;n provincial dice que el municipio tiene <span class="sg">dos</span> &oacute;rganos que pueden decidir, y s&oacute;lo dos. Son el Concejo Deliberante y el Departamento Ejecutivo (art. 190). El presupuesto lo vota el Concejo (art. 192 inc. 5). Las tasas necesitan una asamblea de concejales y mayores contribuyentes (art. 193 inc. 2). Y la Ley Org&aacute;nica de las Municipalidades agrega que s&oacute;lo el Concejo aprueba ordenanzas: lo hace &laquo;con exclusividad&raquo; (art. 24).</p>
+<p>Supongamos que una ordenanza crea un tercer &oacute;rgano, cuyas decisiones <span class="sg">obliguen por ley</span> al municipio. Seg&uacute;n la interpretaci&oacute;n m&aacute;s extendida, eso ser&iacute;a delegar poderes que la ley no permite delegar.</p>
 </div>
 <div class="callout">
 <div class="clabel">El precedente, con n&uacute;mero de decreto</div>
-<p>En 2025 el Concejo Deliberante de Pinamar sancion&oacute; por unanimidad la <b>Ordenanza
-7124/2025</b>, que creaba un presupuesto participativo con votaci&oacute;n vinculante. El intendente la
-vet&oacute; en su totalidad mediante el <b>Decreto 2099/2025, del 17 de diciembre de 2025</b>, con
-fundamento constitucional. Una ordenanza de participaci&oacute;n vinculante no lleg&oacute; a regir en un municipio de esta misma Provincia.</p>
+<p>En 2025, el Concejo Deliberante de Pinamar aprob&oacute; por unanimidad la <b>Ordenanza 7124/2025</b>. Creaba un presupuesto participativo en el que el voto de los vecinos obligaba al Municipio. El intendente la vet&oacute; entera con el <b>Decreto 2099/2025, del 17 de diciembre de 2025</b>, por razones constitucionales. As&iacute;, una ordenanza de participaci&oacute;n obligatoria no lleg&oacute; a regir en un municipio de esta misma Provincia.</p>
 </div>
 <h3>Lo que s&iacute; es legal, y lleva d&eacute;cadas funcionando</h3>
-<p>El l&iacute;mite es sobre <span class="sg">la fuerza jur&iacute;dica del voto</span>, no sobre
-<span class="sg">el monto</span>. Rosario, Mor&oacute;n y decenas de municipios argentinos
-administran presupuestos participativos desde hace a&ntilde;os sin que ninguno haya sido vetado, porque lo
-que se vuelve jur&iacute;dicamente obligatorio es <span class="sg">la partida</span>, no el proyecto
-votado. Ah&iacute; est&aacute; el margen, y es m&aacute;s grande de lo que se usa.</p>
+<p>El l&iacute;mite est&aacute; en <span class="sg">la fuerza legal del voto</span>, no en <span class="sg">el monto</span>. Rosario, Mor&oacute;n y decenas de municipios argentinos tienen presupuestos participativos desde hace a&ntilde;os. A ninguno se lo vetaron. La raz&oacute;n es que lo que se vuelve obligatorio por ley es <span class="sg">la partida</span>, no el proyecto votado. Ah&iacute; est&aacute; el margen, y es m&aacute;s grande de lo que se usa.</p>
 
 <h2><span class="n">4.2</span>La deuda que la Provincia tiene con sus municipios</h2>
 <div class="cols">
-<p>Cuando la Provincia de Buenos Aires reform&oacute; su Constituci&oacute;n en 1994, incluy&oacute; el
-<b>art&iacute;culo 211</b>: &laquo;La Ley Org&aacute;nica de las Municipalidades deber&aacute; contemplar
+<p>En 1994, la Provincia de Buenos Aires reform&oacute; su Constituci&oacute;n. Incluy&oacute; el <b>art&iacute;culo 211</b>: &laquo;La Ley Org&aacute;nica de las Municipalidades deber&aacute; contemplar
 la posibilidad que los municipios accedan a los institutos de democracia semidirecta&raquo;.</p>
-<p>La Constituci&oacute;n orden&oacute; habilitar refer&eacute;ndum, consulta popular e iniciativa popular
-municipal. <span class="sg">Treinta y dos a&ntilde;os despu&eacute;s, la Legislatura no lo hizo.</span> El
-Decreto-Ley 6769/58 sigue sin contener ninguna de esas palabras.</p>
+<p>La Constituci&oacute;n orden&oacute; habilitar en los municipios el refer&eacute;ndum, la consulta popular y la iniciativa popular. <span class="sg">Treinta y dos a&ntilde;os despu&eacute;s, la Legislatura todav&iacute;a no lo hizo.</span> El Decreto-Ley 6769/58, que es la ley de los municipios, sigue sin nombrar ninguna de esas tres cosas.</p>
 </div>
 <h3>Qu&eacute; son los institutos de democracia semidirecta</h3>
 <div class="cols">
-<p>Tres: el refer&eacute;ndum, que
-somete una ordenanza al voto; la consulta popular, que somete una decisi&oacute;n antes de tomarla; y la
-iniciativa popular, que permite a un grupo de vecinos presentar un proyecto y obligar al Concejo a
-tratarlo. Las tres existen en la Constituci&oacute;n nacional desde 1994 y en la provincial
-tambi&eacute;n. <span class="sg">Ninguna de las tres existe hoy para un municipio bonaerense.</span></p>
-<p><b>Qu&eacute; hacen otras provincias.</b> Varias reconocen autonom&iacute;a municipal plena, con carta
-org&aacute;nica propia: un municipio dicta su propia norma fundamental y decide ah&iacute; sus mecanismos
-de participaci&oacute;n. Buenos Aires no la reconoce, y sus 135 municipios se rigen por un decreto-ley de
-1958 que ning&uacute;n cuerpo democr&aacute;tico sancion&oacute;.</p>
-<p><b>Por qu&eacute; importa para este programa.</b> Si la Legislatura hubiera cumplido, nada de lo que
-propone el cap&iacute;tulo 4 ser&iacute;a necesario: el voto vecinal ser&iacute;a vinculante y no
-har&iacute;a falta el rodeo de fijar la partida por ordenanza. <span class="sg">Todo el
-dise&ntilde;o de este mecanismo es una forma de trabajar alrededor de una omisi&oacute;n legislativa de
-treinta y dos a&ntilde;os.</span></p>
+<p>Son tres. El refer&eacute;ndum pone una ordenanza a votaci&oacute;n de los vecinos. La consulta popular les pregunta a los vecinos antes de tomar una decisi&oacute;n. Y la iniciativa popular permite que un grupo de vecinos presente un proyecto y obligue al Concejo a tratarlo. Las tres est&aacute;n en la Constituci&oacute;n nacional desde 1994, y tambi&eacute;n en la provincial. <span class="sg">Ninguna de las tres existe hoy para un municipio bonaerense.</span></p>
+<p><b>Qu&eacute; hacen otras provincias.</b> Varias les dan a sus municipios autonom&iacute;a plena, con carta org&aacute;nica propia. As&iacute;, cada municipio escribe su propia norma de base, y ah&iacute; decide c&oacute;mo participan los vecinos. Buenos Aires no lo permite. Sus 135 municipios se rigen por un decreto-ley de 1958, que no aprob&oacute; ning&uacute;n &oacute;rgano elegido por el voto.</p>
+<p><b>Por qu&eacute; importa para este programa.</b> Si la Legislatura hubiera cumplido, nada de lo que propone el cap&iacute;tulo 4 ser&iacute;a necesario. El voto de los vecinos obligar&iacute;a al Municipio, y no har&iacute;a falta el rodeo de fijar la partida por ordenanza. <span class="sg">Todo este mecanismo es una forma de rodear algo que la Legislatura no hizo en treinta y dos a&ntilde;os.</span></p>
 </div>
 
 <h2><span class="n">4.3</span>Cu&aacute;nto dinero: el n&uacute;mero</h2>
 <div class="cols">
-<p>En 2025 San Isidro ejecut&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>, y
-<span class="sg">quien decide d&oacute;nde se invierte ese dinero no vive donde est&aacute; el
-d&eacute;ficit.</span></p>
-<p>Proponemos un mecanismo que cambia eso de dos maneras verificables: la f&oacute;rmula manda m&aacute;s dinero por
-habitante a las zonas con peores indicadores, y cada obra la prioriza la asamblea de la zona; cuando la ejecuta la propia asociaci&oacute;n vecinal, el art&iacute;culo 132 exige adem&aacute;s que la pida por escrito el 60% de los beneficiarios. <span class="sg">Ninguna obra se hace donde nadie la pidi&oacute;.</span> <span class="sg">Propuesta: las comisiones vecinales llegan a decidir la mitad de la obra p&uacute;blica municipal, en cuatro a&ntilde;os.</span></p>
+<p>En 2025, San Isidro gast&oacute; <b>57.816 millones de pesos en obra p&uacute;blica</b>. Y <span class="sg">quien decide d&oacute;nde se invierte ese dinero no vive donde est&aacute;n las carencias.</span></p>
+<p>Proponemos un mecanismo que cambia eso de dos maneras que se pueden comprobar. Primero, una f&oacute;rmula manda m&aacute;s dinero por habitante a las zonas que est&aacute;n peor. Segundo, la asamblea de cada zona elige el orden de sus obras. Cuando la obra la hace la propia asociaci&oacute;n vecinal, el art&iacute;culo 132 exige algo m&aacute;s: que la pida por escrito el 60% de los que se benefician. <span class="sg">Ninguna obra se hace donde nadie la pidi&oacute;.</span> <span class="sg">La propuesta es que, en cuatro a&ntilde;os, las comisiones vecinales lleguen a decidir la mitad de la obra p&uacute;blica del Municipio.</span></p>
 </div>
 """ + exhead("c", "Proponemos que la obra p&uacute;blica que deciden los vecinos suba del 12,5% al 50% en cuatro a&ntilde;os",
-             "Sobre la obra p&uacute;blica ejecutada en 2025: 57.816 millones. No es gasto nuevo: cambia qui&eacute;n decide en qu&eacute; se usa ese dinero.",
+             "Se calcula sobre la obra p&uacute;blica de 2025: 57.816 millones. No es gasto nuevo. Lo que cambia es qui&eacute;n decide en qu&eacute; se usa ese dinero.",
              key="rampa") + """
 <table>
 <colgroup><col style="width:100pt"><col><col><col><col></colgroup>
@@ -85,37 +53,24 @@ habitante a las zonas con peores indicadores, y cada obra la prioriza la asamble
 <tr class="hi"><td class="l">A&ntilde;o 4</td><td class="n"><b>50,0%</b></td><td class="n"><b>28.908 M</b></td><td class="n"><b>8,9%</b></td><td class="n"><b>97.241 $</b></td></tr>
 </table>
 <div class="cols">
-<p>En el cuarto a&ntilde;o proponemos <b>28.908 millones de pesos anuales decididos por los vecinos</b>: casi
-nueve pesos de cada cien que gasta el Municipio, y <span class="sg">uno de cada dos que se invierten en
-obra</span>.</p>
-<p><b>Por qu&eacute; la obra p&uacute;blica y no otra cosa.</b> Porque es la parte flexible del
-presupuesto. El gasto en personal y en servicios est&aacute; comprometido por contratos y convenios; la
-inversi&oacute;n se decide cada a&ntilde;o. Y porque es exactamente el rubro que resuelve lo que el cap&iacute;tulo 1 documenta &mdash;cloacas y gas de red&mdash; y lo que falta en cada cuadra: desag&uuml;es, veredas, iluminaci&oacute;n.</p>
+<p>En el cuarto a&ntilde;o, proponemos que los vecinos decidan <b>28.908 millones de pesos por a&ntilde;o</b>. Son casi nueve pesos de cada cien que gasta el Municipio, y <span class="sg">uno de cada dos que se invierten en obra</span>.</p>
+<p><b>Por qu&eacute; la obra p&uacute;blica y no otra cosa.</b> Porque es la parte flexible del presupuesto. El gasto en personal y en servicios est&aacute; atado a contratos y convenios. La inversi&oacute;n, en cambio, se decide cada a&ntilde;o. Y porque la obra es justo lo que resuelve los problemas que muestra el cap&iacute;tulo 1, como las cloacas y el gas de red. Tambi&eacute;n resuelve lo que falta en cada cuadra: desag&uuml;es, veredas e iluminaci&oacute;n.</p>
 </div>
 
 <h2><span class="n">4.4</span>C&oacute;mo se reparte: por poblaci&oacute;n y por necesidad contada</h2>
-<p>Repartir en partes iguales por habitante ser&iacute;a tratar como iguales a barrios que no lo son. La
-ordenanza que proponemos fija una f&oacute;rmula: <b>50% por poblaci&oacute;n, 50% por un &iacute;ndice de
-necesidad</b> construido con cuatro indicadores del Censo 2022 &mdash;NBI, hogares sin cloacas, sin gas de
-red y con hacinamiento&mdash;. <b>El &iacute;ndice cuenta hogares, no porcentajes.</b></p>
+<p>Repartir lo mismo por habitante ser&iacute;a tratar como iguales a barrios que no lo son. La ordenanza que proponemos fija una f&oacute;rmula: <b>50% por poblaci&oacute;n y 50% por un &iacute;ndice de necesidad</b>. El &iacute;ndice usa cuatro datos del Censo 2022: hogares con NBI, sin cloaca, sin gas de red y con hacinamiento. <b>El &iacute;ndice cuenta hogares, no porcentajes.</b></p>
 <div class="callout g">
 <div class="clabel">El &iacute;ndice de necesidad</div>
-<p><i>Necesidad de una zona = promedio, sobre los cuatro indicadores, de los hogares con esa carencia en
-la zona sobre los hogares con esa carencia en todo el partido.</i></p>
+<p><i>Para cada una de las cuatro carencias, se calcula qu&eacute; parte de los hogares del partido que la tienen vive en la zona. La necesidad de la zona es el promedio de esas cuatro partes.</i></p>
 </div>
 <div class="cols">
-<p><span class="sg">Porque las obras se cuentan en casas.</span> Ocho mil doscientos veintiún hogares sin
-gas de red necesitan m&aacute;s ca&ntilde;os que novecientos treinta y seis, sin importar qu&eacute;
-proporci&oacute;n representen de su zona. Un porcentaje no sabe cu&aacute;nta gente hay detr&aacute;s.</p>
-<p><b>El &iacute;ndice mide cuatro cosas y no s&oacute;lo pobreza.</b> Acassuso tiene el NBI
-m&aacute;s bajo del partido, 0,94%, y sin embargo <b>el 19,48% de sus hogares no tiene gas de red</b>
-&mdash;m&aacute;s que Mart&iacute;nez, m&aacute;s que San Isidro y m&aacute;s que Villa Adelina&mdash;.</p>
-<p><span class="sg">El d&eacute;ficit de infraestructura no sigue al de ingresos.</span> Miden cuatro
-cosas porque hay cuatro cosas que faltan, y no siempre faltan juntas.</p>
+<p><span class="sg">Se cuentan hogares porque las obras se cuentan en casas.</span> Ocho mil doscientos veinti&uacute;n hogares sin gas de red necesitan m&aacute;s ca&ntilde;os que novecientos treinta y seis. No importa qu&eacute; parte de su zona sean. Un porcentaje no dice cu&aacute;nta gente hay detr&aacute;s.</p>
+<p><b>El &iacute;ndice mide cuatro cosas, y no s&oacute;lo pobreza.</b> Acassuso tiene el NBI m&aacute;s bajo del partido: 0,94%. Y sin embargo, <b>el 19,48% de sus hogares no tiene gas de red</b>. Es m&aacute;s que en Mart&iacute;nez, en San Isidro y en Villa Adelina.</p>
+<p><span class="sg">La falta de infraestructura no va siempre junto con la falta de ingresos.</span> Se miden cuatro cosas porque hay cuatro cosas que faltan, y no siempre faltan juntas.</p>
 </div>
 <h3>La f&oacute;rmula, abierta</h3>
 """ + exhead("c", "Hogares con cada carencia, zona por zona, y la parte de la necesidad del partido que le toca a cada una",
-             "Hogares con necesidades b&aacute;sicas insatisfechas (NBI), sin cloaca, sin gas de red y hacinados; entre par&eacute;ntesis, qu&eacute; parte del total del partido son. La &uacute;ltima columna promedia esas cuatro partes: con ella proponemos repartir la mitad del dinero.", key="indicadores") + """
+             "Hogares con cada una de las cuatro carencias. Entre par&eacute;ntesis, qu&eacute; parte del total del partido son. La &uacute;ltima columna es el promedio de esas cuatro partes. Con ella proponemos repartir la mitad del dinero.", key="indicadores") + """
 <table>
 <colgroup><col style="width:118pt"><col><col><col><col><col style="width:64pt"></colgroup>
 <tr class="hd"><th>Zona</th><th class="r">Con NBI</th><th class="r">Sin cloaca</th><th class="r">Sin gas de red</th><th class="r">Hacinamiento</th><th class="r">&Iacute;ndice</th></tr>
@@ -129,28 +84,19 @@ cosas porque hay cuatro cosas que faltan, y no siempre faltan juntas.</p>
 </table>
 <p class="cap"><b>Fuente:</b> INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022,
 agregado por zona sobre los 360 radios censales del partido.</p>
-<p class="cap"><b>C&oacute;mo se lee:</b> B&eacute;ccar tiene 8.221 hogares sin gas de red, que son el
-32,7% de todos los hogares sin gas de red del partido. El promedio de sus cuatro participaciones da
-33,0%, y eso es lo que pesa en la mitad del reparto que no va por poblaci&oacute;n.</p>
+<p class="cap"><b>C&oacute;mo se lee:</b> B&eacute;ccar tiene 8.221 hogares sin gas de red. Son el 32,7% de todos los hogares sin gas de red del partido. El promedio de sus cuatro partes da 33,0%. Eso es lo que cuenta en la mitad del reparto que no va por poblaci&oacute;n.</p>
 """ + ex("g", "Propuesta: el dinero de obra que deciden los vecinos llega 71% m&aacute;s por habitante a B&eacute;ccar que a Mart&iacute;nez",
      "Reparto de los 28.908 millones del cuarto a&ntilde;o: mitad por poblaci&oacute;n y mitad seg&uacute;n cu&aacute;ntos hogares tienen carencias. Adentro de cada barra, el monto anual de la zona.",
      "ex14.png",
      "c&aacute;lculo propio sobre la ejecuci&oacute;n 2025 y los indicadores censales por zona.")
 + ex("g", "Las carencias no est&aacute;n repartidas: se concentran en nueve radios censales pegados, en B&eacute;ccar",
-     "El partido en sus 360 radios censales, las zonas de unas 300 viviendas con que trabaja el Censo. El contorno grueso marca los nueve radios de la fracci&oacute;n 32, la de m&aacute;s hogares con necesidades b&aacute;sicas insatisfechas del partido.",
+     "El partido dividido en sus 360 radios censales. Un radio censal es una zona de unas 300 viviendas, la unidad con la que trabaja el Censo. El contorno grueso marca los nueve radios de la fracci&oacute;n 32. Es la fracci&oacute;n con m&aacute;s hogares con necesidades b&aacute;sicas insatisfechas del partido.",
      "ex15.png",
      "INDEC, Censo Nacional de Poblaci&oacute;n, Hogares y Viviendas 2022, procesado con Redatam 7.",
-     "Los radios se identifican por c&oacute;digo y fracci&oacute;n censal, porque los barrios no tienen geometr&iacute;a oficial; cuando un conjunto de radios coincide con un barrio conocido, se lo nombra, como La Cava en el 5.3.") + """
+     "Los radios se identifican por su c&oacute;digo y su fracci&oacute;n censal, porque los barrios no tienen l&iacute;mites oficiales. Cuando un grupo de radios coincide con un barrio conocido, se lo nombra, como La Cava en el 5.3.") + """
 <div class="cols">
-<p>Con la propuesta, B&eacute;ccar recibe <b>1,71 veces por habitante</b> lo que recibe Mart&iacute;nez. Boulogne, 1,58
-veces.</p>
-<p>Hoy ning&uacute;n barrio decide nada.</p>
-<p>La f&oacute;rmula que proponemos corrige, y va escrita
-en la ordenanza para que no dependa del intendente de turno. Mart&iacute;nez y Acassuso tambi&eacute;n
-reciben, y reciben m&aacute;s de lo que reciben hoy.</p>
-<p><span class="sg">El tama&ntilde;o desigual no desequilibra el reparto</span>, porque la f&oacute;rmula
-pondera necesidad contada. Acassuso, la m&aacute;s peque&ntilde;a y la de menor NBI, recibe 827 millones: alcanzan
-de sobra para las 102 conexiones de cloaca y las 936 de gas que le faltan.</p>
+<p>Con la propuesta, B&eacute;ccar recibe <b>1,71 veces por habitante</b> lo que recibe Mart&iacute;nez. Boulogne recibe 1,58 veces. Hoy ning&uacute;n barrio decide nada. La f&oacute;rmula que proponemos corrige eso, y va escrita en la ordenanza para que no dependa del intendente de turno. Mart&iacute;nez y Acassuso tambi&eacute;n reciben, y reciben m&aacute;s de lo que reciben hoy.</p>
+<p><span class="sg">Que las zonas tengan distinto tama&ntilde;o no desequilibra el reparto</span>, porque la f&oacute;rmula tiene en cuenta cu&aacute;ntos hogares tienen cada carencia. Acassuso es la zona m&aacute;s chica y la de menor NBI. Recibe 827 millones. Alcanzan de sobra para las 102 conexiones de cloaca y las 936 de gas que le faltan.</p>
 </div>
 """)
 
@@ -160,297 +106,137 @@ de sobra para las 102 conexiones de cloaca y las 936 de gas que le faltan.</p>
 # =====================================================================
 C4B = dict(id="cap4b", runhead=RH, html="""
 <h2><span class="n">4.5</span>Qui&eacute;n decide y qui&eacute;n ejecuta: dos capas</h2>
-<p class="lead">Ac&aacute; est&aacute; lo que distingue este modelo del presupuesto participativo
-cl&aacute;sico.</p>
+<p class="lead">Esto es lo que diferencia este modelo del presupuesto participativo de siempre.</p>
 <h3>Capa 1 &mdash; Los vecinos priorizan</h3>
 <div class="cols">
-<p>Proponemos que cada comisi&oacute;n zonal defina, en asamblea abierta, en qu&eacute; se invierte la partida de su
-zona. El Departamento Ejecutivo queda obligado por ordenanza a <span class="sg">responder por escrito, con
-fundamentos y en plazo</span>, a cada priorizaci&oacute;n.</p>
-<p>Jur&iacute;dicamente es consultivo, y por eso sobrevive a un veto. Pol&iacute;ticamente, un intendente
-que ignore por escrito lo que vot&oacute; su barrio paga el costo en la elecci&oacute;n siguiente. La
-obligaci&oacute;n de respuesta fundada convierte el silencio administrativo en un acto p&uacute;blico.
-Esta capa es lo que hacen Porto Alegre, Rosario y Mor&oacute;n, y hace d&eacute;cadas.</p>
+<p>Proponemos que cada comisi&oacute;n zonal decida, en una asamblea abierta, en qu&eacute; se invierte la partida de su zona. Una ordenanza obliga al Departamento Ejecutivo a <span class="sg">responder por escrito a cada decisi&oacute;n, con sus razones y dentro de un plazo</span>.</p>
+<p>Para la ley, es una consulta: no obliga. Por eso un veto no la puede voltear. Pero en la pol&iacute;tica es distinto. Un intendente que rechace por escrito lo que vot&oacute; su barrio paga el costo en la elecci&oacute;n siguiente. Como tiene que responder con razones, ya no puede quedarse callado: su respuesta es p&uacute;blica. Esta capa es lo que hacen hace d&eacute;cadas Porto Alegre, Rosario y Mor&oacute;n.</p>
 </div>
 <h3>Capa 2 &mdash; Los vecinos ejecutan</h3>
 <div class="cols">
-<p>Y ac&aacute; proponemos lo que ellos no tienen. La Ley Org&aacute;nica de las Municipalidades,
-<b>art&iacute;culo 60</b>, establece c&oacute;mo se realiza la obra p&uacute;blica municipal:
-a) Administraci&oacute;n. b) Contrataci&oacute;n con terceros. <span class="sg">c) Cooperativas o
-asociaciones de vecinos.</span> d) Acogimiento a leyes de la Provincia o de la Naci&oacute;n.</p>
-<p>El <b>art&iacute;culo 132 inciso c)</b> permite contratarlas <span class="sg">directamente, sin
-licitaci&oacute;n</span>, cuando &laquo;se trate de obras de infraestructura realizadas por cooperativas o
-asociaciones de vecinos&raquo;. El mismo art&iacute;culo exige que esa contrataci&oacute;n directa proceda
-<b>s&oacute;lo si los vecinos la peticionan expresamente, con adhesi&oacute;n de al menos el 60% de los
-beneficiarios</b>.</p>
+<p>Y ac&aacute; proponemos lo que ellos no tienen. El <b>art&iacute;culo 60</b> de la Ley Org&aacute;nica de las Municipalidades dice de qu&eacute; maneras se puede hacer la obra p&uacute;blica municipal. Son cuatro. a) La hace el propio Municipio. b) La contrata con terceros. <span class="sg">c) La hacen cooperativas o asociaciones de vecinos.</span> d) Se hace por medio de leyes de la Provincia o de la Naci&oacute;n.</p>
+<p>El <b>art&iacute;culo 132 inciso c)</b> permite contratar a esas cooperativas y asociaciones <span class="sg">directamente, sin licitaci&oacute;n</span>, cuando &laquo;se trate de obras de infraestructura realizadas por cooperativas o asociaciones de vecinos&raquo;. Pero el mismo art&iacute;culo pone una condici&oacute;n. Esa contrataci&oacute;n directa vale <b>s&oacute;lo si los vecinos la piden expresamente, con el apoyo de al menos el 60% de los que se benefician</b>.</p>
 </div>
 <div class="callout g">
-<div class="clabel">Ese 60% no es un obst&aacute;culo: es el mecanismo de legitimidad que la propia ley provee</div>
-<p>Convierte &laquo;la comisi&oacute;n decidi&oacute;&raquo; en &laquo;el 60% de los vecinos beneficiados
-lo pidi&oacute; por escrito&raquo;. Es m&aacute;s exigente que cualquier votaci&oacute;n. Proponemos que, donde una zona quiera y re&uacute;na ese 60%, su asociaci&oacute;n
-vecinal ejecute la obra como parte contratante: la hace, la cobra, justifica cada peso y responde por ella.</p>
+<div class="clabel">Ese 60% no es un obst&aacute;culo: es la prueba de apoyo que pide la propia ley</div>
+<p>As&iacute;, ya no se dice &laquo;la comisi&oacute;n decidi&oacute;&raquo;. Se dice &laquo;el 60% de los vecinos beneficiados lo pidi&oacute; por escrito&raquo;. Es m&aacute;s exigente que cualquier votaci&oacute;n. Proponemos que, donde una zona quiera y re&uacute;na ese 60%, su asociaci&oacute;n vecinal haga la obra por contrato con el Municipio. La hace, la cobra, justifica cada peso y responde por ella.</p>
 </div>
 <div class="callout">
 <div class="clabel">Ya funciona en otro municipio bonaerense</div>
-<p>El Municipio de Pilar contrata cooperativas de vecinos bajo el art&iacute;culo 132 inciso c). Hay al
-menos tres decretos publicados en el Bolet&iacute;n Oficial Municipal de la Provincia, y en uno de ellos
-&mdash;el del expediente 144/2019, por obras en el Barrio Los Cachorros de Manuel Alberti&mdash; consta
-expresamente la acreditaci&oacute;n de la adhesi&oacute;n de los vecinos beneficiarios.
-<b>Proponemos hacer en San Isidro algo que la ley habilita desde 1976 y que otro municipio bonaerense ya hace.</b></p>
+<p>El Municipio de Pilar contrata cooperativas de vecinos con el art&iacute;culo 132 inciso c). Hay al menos tres decretos publicados en el Bolet&iacute;n Oficial Municipal de la Provincia. Uno es el del expediente 144/2019, por obras en el Barrio Los Cachorros de Manuel Alberti. Ese decreto dice expresamente que se comprob&oacute; el apoyo de los vecinos beneficiados. <b>Proponemos hacer en San Isidro algo que la ley permite desde 1976 y que otro municipio bonaerense ya hace.</b></p>
 </div>
 
 
 
-<h2><span class="n">4.6</span>C&oacute;mo se constituye una comisi&oacute;n, y c&oacute;mo responde</h2>
+<h2><span class="n">4.6</span>C&oacute;mo se forma una comisi&oacute;n, y c&oacute;mo rinde cuentas</h2>
 <h3>No se crean comisiones nuevas: se reconoce a las que ya existen</h3>
 <div class="cols">
-<p>San Isidro ya tiene asociaciones vecinales y sociedades de fomento.</p>
-<p>Proponemos que la ordenanza las reconozca como la
-comisi&oacute;n de su zona, sin inventar una estructura paralela. <span class="sg">No es una preferencia:
-es el &uacute;nico camino que deja abierto el art&iacute;culo 132</span>, que exige una asociaci&oacute;n
-de vecinos como parte contratante. Una comisi&oacute;n creada por decreto no podr&iacute;a ejecutar una
-sola obra.</p>
-<p>Donde haya m&aacute;s de una asociaci&oacute;n en la misma zona, act&uacute;an como una sola comisi&oacute;n y la partida es una sola. Donde no haya ninguna en condiciones, el Municipio convoca a asamblea abierta y
-acompa&ntilde;a la constituci&oacute;n. <b>Ese caso no es hipot&eacute;tico y el cap&iacute;tulo 6 lo
-carga como riesgo.</b></p>
+<p>San Isidro ya tiene asociaciones vecinales y sociedades de fomento. Proponemos que la ordenanza las reconozca como la comisi&oacute;n de su zona, sin inventar una estructura paralela. <span class="sg">No es un gusto: es el &uacute;nico camino que deja abierto el art&iacute;culo 132.</span> Ese art&iacute;culo exige que la parte contratada sea una asociaci&oacute;n de vecinos. Una comisi&oacute;n creada por decreto no podr&iacute;a hacer una sola obra.</p>
+<p>Donde haya m&aacute;s de una asociaci&oacute;n en la misma zona, act&uacute;an como una sola comisi&oacute;n, y la partida es una sola. Donde no haya ninguna en condiciones, el Municipio convoca a una asamblea abierta y ayuda a formarla. <b>Ese caso no es imaginario, y el cap&iacute;tulo 6 lo cuenta como un riesgo.</b></p>
 </div>
 <h3>Un voto por persona, desde los 16, para quien vive o trabaja en la zona</h3>
 <div class="cols">
-<p>&Eacute;sa es la regla entera que proponemos:
-<span class="sg">la obra la usan las personas, no las casas</span>. La cloaca de una cuadra sirve igual
-a los nueve que viven en una casa que al que vive solo, y el inquilino la usa tanto como el
-propietario.</p>
-<p>Se vota en asamblea abierta o en forma digital, con identidad verificada, y cualquiera puede saber
-qui&eacute;n fue. La edad de 16 es la misma con la
-que se vota en la Provincia. <span class="sg">Y vota tambi&eacute;n quien desarrolla en la zona su
-actividad principal</span>, comercial o comunitaria, acredit&aacute;ndolo.</p>
+<p>&Eacute;sa es toda la regla que proponemos, porque <span class="sg">la obra la usan las personas, no las casas</span>. La cloaca de una cuadra les sirve igual a nueve personas que viven en una casa que a una que vive sola. Y el inquilino la usa tanto como el due&ntilde;o.</p>
+<p>Se vota en una asamblea abierta o por internet, con la identidad verificada. Y cualquiera puede saber qui&eacute;n particip&oacute;. Los 16 a&ntilde;os son la misma edad con la que se vota en la Provincia. <span class="sg">Vota tambi&eacute;n quien tiene en la zona su actividad principal</span>, comercial o comunitaria, si lo demuestra.</p>
 </div>
 
 <h3>C&oacute;mo proponemos lograr que la gente venga</h3>
 <div class="cols">
-<p><b>Las barreras est&aacute;n identificadas y son las mismas en todos lados:</b> falta de tiempo, falta
-de movilidad y <b>falta de con qui&eacute;n dejar a los chicos</b>. La &uacute;ltima casi nunca se
-nombra y es la m&aacute;s barata de resolver: una asamblea con espacio de cuidado para ni&ntilde;os
-cuesta poco y cambia qui&eacute;n puede ir.</p>
-<p><b>Horario y lugar tambi&eacute;n deciden qui&eacute;n participa.</b> Las asambleas se convocan fuera
-del horario laboral, en el propio barrio y no en el centro administrativo, y se complementan con votaci&oacute;n
-digital, con identidad verificada, para quien no puede asistir. Ninguna de las tres cosas cuesta dinero.</p>
-<p><b>Comunicar el resultado es parte del mecanismo, no cortes&iacute;a.</b> Que el vecino pueda saber qu&eacute; se decidi&oacute;, qu&eacute; se hizo y qu&eacute; falta no cambia la participaci&oacute;n de este
-a&ntilde;o: <span class="sg">cambia la del a&ntilde;o siguiente</span>. Donde no se comunic&oacute;, la
-convocatoria cay&oacute; edici&oacute;n tras edici&oacute;n.</p>
-<p><b>Y una regla que este programa adopta de una experiencia espa&ntilde;ola:</b> en las asambleas no
-participa ning&uacute;n dirigente pol&iacute;tico en ejercicio. Ni del oficialismo ni de la
-oposici&oacute;n. La comisi&oacute;n es de vecinos.</p>
+<p><b>Ya se sabe qu&eacute; impide ir, y es lo mismo en todos lados:</b> falta de tiempo, falta de transporte y <b>no tener con qui&eacute;n dejar a los chicos</b>. Lo &uacute;ltimo casi nunca se nombra, y es lo m&aacute;s barato de resolver. Una asamblea con un espacio para cuidar a los chicos cuesta poco y cambia qui&eacute;n puede ir.</p>
+<p><b>El horario y el lugar tambi&eacute;n deciden qui&eacute;n participa.</b> Las asambleas se hacen fuera del horario de trabajo y en el propio barrio, no en el centro administrativo. Y quien no puede ir puede votar por internet, con la identidad verificada. Ninguna de esas tres cosas cuesta dinero.</p>
+<p><b>Contar el resultado es parte del mecanismo, no una cortes&iacute;a.</b> Que el vecino sepa qu&eacute; se decidi&oacute;, qu&eacute; se hizo y qu&eacute; falta no cambia cu&aacute;nta gente participa este a&ntilde;o. <span class="sg">Cambia cu&aacute;nta participa el a&ntilde;o siguiente.</span> Donde no se cont&oacute;, cada a&ntilde;o fue menos gente.</p>
+<p><b>Y una regla que este programa toma de una experiencia espa&ntilde;ola:</b> en las asambleas no participa ning&uacute;n dirigente pol&iacute;tico con un cargo en ejercicio. Ni del oficialismo ni de la oposici&oacute;n. La comisi&oacute;n es de vecinos.</p>
 </div>
 
 
 <h3>Proponemos un mandato de cuatro a&ntilde;os</h3>
 <div class="cols">
-<p>Coincide con el mandato del intendente, de modo que la comisi&oacute;n que se constituye al inicio
-acompa&ntilde;a la rampa completa del a&ntilde;o 1 al a&ntilde;o 4 y responde por ella entera.</p>
-<p>Atar los dos mandatos le quita
-algo de la autonom&iacute;a que este cap&iacute;tulo defiende: si las comisiones se renuevan cuando se
-renueva el intendente, dependen m&aacute;s del ciclo pol&iacute;tico de lo que depender&iacute;an con un
-mandato propio. Lo que protege a la partida no es el calendario sino la ordenanza y la afectaci&oacute;n
-de recursos del art&iacute;culo 119.</p>
+<p>Coincide con el mandato del intendente. As&iacute;, la comisi&oacute;n que se forma al principio acompa&ntilde;a toda la subida de la partida, del a&ntilde;o 1 al a&ntilde;o 4, y responde por toda ella. Atar los dos mandatos le quita algo de la independencia que este cap&iacute;tulo defiende. Si las comisiones cambian cuando cambia el intendente, dependen m&aacute;s de la pol&iacute;tica que con un mandato propio. Pero lo que protege la partida no es el calendario. La protegen la ordenanza y la afectaci&oacute;n de recursos del art&iacute;culo 119, que reserva el dinero para ese fin.</p>
 </div>
 <h3>Si una comisi&oacute;n falla, proponemos que se intervenga y se vuelva a constituir</h3>
 <div class="cols">
-<p>Ante gastos sin justificar, obra sin ejecutar o asamblea sin convocar, el Departamento Ejecutivo
-interviene la comisi&oacute;n y convoca a nueva asamblea en treinta d&iacute;as, un plazo escrito en la ordenanza. La
-partida de esa zona queda en el Ejecutivo <span class="sg">y se ejecuta en esa misma zona</span>, no se
-reparte entre las dem&aacute;s.</p>
-<p>Eso &uacute;ltimo importa. Reasignar la partida a las otras zonas castigar&iacute;a al barrio por lo
-que hizo su comisi&oacute;n, y es exactamente el mecanismo que el cap&iacute;tulo 1 denuncia: que quien
-decide no sea quien tiene el problema.</p>
+<p>Puede pasar que una comisi&oacute;n no justifique gastos, no haga la obra o no convoque a la asamblea. En ese caso, el Departamento Ejecutivo interviene la comisi&oacute;n. Y convoca a una nueva asamblea en treinta d&iacute;as, un plazo escrito en la ordenanza. Mientras tanto, la partida de esa zona la maneja el Ejecutivo <span class="sg">y se gasta en esa misma zona</span>. No se reparte entre las dem&aacute;s.</p>
+<p>Eso &uacute;ltimo importa. Pasar la partida a otras zonas castigar&iacute;a al barrio por lo que hizo su comisi&oacute;n. Y ser&iacute;a justo lo que denuncia el cap&iacute;tulo 1: que el que decide no sea el que tiene el problema.</p>
 </div>
 <div class="callout g">
 <div class="clabel">La diferencia con los art&iacute;culos que se derogan</div>
-<p>La Ordenanza 6045 permite hoy <b>disolver</b> una asociaci&oacute;n vecinal.</p>
-<p>Lo que esta secci&oacute;n propone es otra cosa: <b>intervenir una comisi&oacute;n</b>, por
-causa escrita, con plazo para volver a constituirse y con la partida retenida en su propia zona. Se
-interviene la administraci&oacute;n de una partida, no se disuelve una organizaci&oacute;n de vecinos.</p>
+<p>Hoy, la Ordenanza 6045 permite <b>disolver</b> una asociaci&oacute;n vecinal. Lo que esta secci&oacute;n propone es otra cosa: <b>intervenir una comisi&oacute;n</b>. Se hace por una causa escrita, con un plazo para volver a formarla, y la partida queda guardada para su propia zona. Se interviene el manejo de una partida. No se disuelve una organizaci&oacute;n de vecinos.</p>
 </div>
 
 <h3>Qui&eacute;n controla: nadie nuevo</h3>
 <div class="cols">
-<p>Este programa <span class="sg">no crea una oficina de control</span>. El <b>Tribunal de Cuentas de
-la Provincia</b> ya audita este gasto, porque sigue siendo gasto municipal: la partida es municipal, la
-obra es municipal y sus gastos entran en las cuentas del Municipio.</p>
-<p>Lo que s&iacute; agrega, porque hoy no existe, es que <b>cualquier vecino le pregunta a la inteligencia
-artificial del Municipio qu&eacute; obra se prioriz&oacute; en su zona, qu&eacute; se contrat&oacute;, a qui&eacute;n, por cu&aacute;nto y en qu&eacute;
-estado est&aacute;, y tiene la respuesta</b>. <span class="sg">Al d&iacute;a, no cada tres meses</span>: la
-adjudicaci&oacute;n queda registrada el d&iacute;a que se firma y el avance de obra el d&iacute;a que se carga. A la vista, no
-archivada. Es la misma l&oacute;gica que la del 5.10 para la informaci&oacute;n p&uacute;blica: no cuesta nada, y lo que
-cambia no es qui&eacute;n controla sino qui&eacute;n puede ver.</p>
+<p>Este programa <span class="sg">no crea una oficina de control</span>. El <b>Tribunal de Cuentas de la Provincia</b> ya controla este gasto, porque sigue siendo gasto municipal. La partida y la obra son del Municipio, y sus gastos entran en sus cuentas.</p>
+<p>Lo que s&iacute; agrega es algo que hoy no existe. <b>Cualquier vecino le puede preguntar a la inteligencia artificial del Municipio qu&eacute; obra se eligi&oacute; en su zona. Y tambi&eacute;n qu&eacute; se contrat&oacute;, a qui&eacute;n, por cu&aacute;nto y en qu&eacute; estado est&aacute;.</b> Tiene la respuesta <span class="sg">al d&iacute;a, no cada tres meses</span>. La adjudicaci&oacute;n queda registrada el d&iacute;a en que se firma, y el avance de la obra, el d&iacute;a en que se carga. Est&aacute; a la vista, no archivada. Es la misma idea que la del 5.10 para la informaci&oacute;n p&uacute;blica. No cuesta nada, y lo que cambia no es qui&eacute;n controla, sino qui&eacute;n puede ver.</p>
 </div>
 
 
 <h3>Qui&eacute;n decide y qui&eacute;n cobra no pueden ser la misma persona</h3>
-<p class="tight">La capa 2 permite que la asociaci&oacute;n vecinal ejecute la obra que la comisi&oacute;n
-prioriz&oacute;. Eso abre un problema que proponemos cerrar en la ordenanza, no despu&eacute;s.</p>
+<p class="tight">La capa 2 permite que la asociaci&oacute;n vecinal haga la obra que eligi&oacute; la comisi&oacute;n. Eso abre un problema, y proponemos resolverlo en la ordenanza, no despu&eacute;s.</p>
 <div class="cols">
-<p><b>La literatura sobre conflictos de inter&eacute;s es expl&iacute;cita:</b> cuanto mayor es la
-participaci&oacute;n de alguien en la ejecuci&oacute;n del presupuesto, mayor es la probabilidad de que
-se perciba un conflicto de inter&eacute;s. <span class="sg">Y basta con que se perciba para que el
-mecanismo pierda legitimidad</span>, aunque no haya delito.</p>
-<p><b>La regla, entonces, es de incompatibilidad, y es personal.</b> Quien integra la comisi&oacute;n
-que prioriza <b>no cobra ni provee en la obra que prioriz&oacute;</b>, ni tiene inter&eacute;s
-econ&oacute;mico en ella. Si lo tiene, se excusa y queda asentado en el acta.</p>
-<p><b>Y dos cuerpos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de
-Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con funciones definidas por ley. El
-que hace la obra no es el que la controla. Ac&aacute; vale lo mismo: la asamblea que prioriza elige
-adem&aacute;s <b>tres vecinos que no ejecutan, que no son de la asociaci&oacute;n que ejecuta y que
-firman la recepci&oacute;n de la obra</b>. Cobran un honorario por obra con la misma referencia que el panel sorteado, el sueldo de la categor&iacute;a de ingreso municipal: un cuarto de ese sueldo cada uno.</p>
-<p><b>Lo que cuesta que esto funcione sale de la propia partida.</b> Un 1,5% fijo de la partida de cada
-zona paga el cuidado de chicos en cada asamblea, el honorario de los tres vecinos que firman la recepci&oacute;n y
-la administraci&oacute;n de las obras que ejecuta la comisi&oacute;n: cuentas, seguro y justificaci&oacute;n de cada peso. Son
-433,6 millones el a&ntilde;o 4 y 108,4 millones el a&ntilde;o 1.</p>
-<p><b>Un candado m&aacute;s, contra la falla m&aacute;s com&uacute;n.</b> En Bariloche las juntas
-vecinales denunciaron que el gobierno destin&oacute; el dinero del presupuesto participativo a obras
-viales por decisi&oacute;n propia, sin acuerdo de los vecinos. <span class="sg">La partida afectada del
-art&iacute;culo 119 protege el dinero; lo que hay que proteger tambi&eacute;n es el destino</span>:
-priorizada una obra, el Ejecutivo no puede sustituirla por otra sin volver a la asamblea.</p>
+<p><b>Los estudios sobre conflictos de inter&eacute;s son claros.</b> Cuanto m&aacute;s participa alguien en gastar el presupuesto, m&aacute;s probable es que la gente vea un conflicto de inter&eacute;s. <span class="sg">Y alcanza con que la gente lo vea para que el mecanismo pierda credibilidad</span>, aunque no haya delito.</p>
+<p><b>Por eso la regla es que no se pueden hacer las dos cosas, y vale para cada persona.</b> Quien integra la comisi&oacute;n que elige la obra <b>no cobra ni vende nada en la obra que eligi&oacute;</b>, ni gana dinero con ella. Si tiene alg&uacute;n inter&eacute;s, no participa de esa decisi&oacute;n, y eso queda escrito en el acta.</p>
+<p><b>Y hay dos grupos separados, no uno.</b> La Ciudad de M&eacute;xico lo resuelve con un Comit&eacute; de Ejecuci&oacute;n y un Comit&eacute; de Vigilancia distintos, cada uno con sus tareas fijadas por ley. El que hace la obra no es el que la controla. Ac&aacute; vale lo mismo. La asamblea que elige la obra elige tambi&eacute;n a <b>tres vecinos que firman la recepci&oacute;n de la obra</b>. Esos vecinos no hacen la obra y no son de la asociaci&oacute;n que la hace. Cobran un honorario por obra, con la misma referencia que el panel sorteado: el sueldo de la categor&iacute;a de ingreso del Municipio. Cada uno cobra un cuarto de ese sueldo.</p>
+<p><b>Lo que cuesta que esto funcione sale de la propia partida.</b> Un 1,5% fijo de la partida de cada zona paga tres cosas. Paga el cuidado de los chicos en cada asamblea y el honorario de los tres vecinos que firman la recepci&oacute;n. Y paga la administraci&oacute;n de las obras que hace la comisi&oacute;n: las cuentas, el seguro y la justificaci&oacute;n de cada peso. Son 108,4 millones el a&ntilde;o 1 y 433,6 millones el a&ntilde;o 4.</p>
+<p><b>Un candado m&aacute;s, contra la falla m&aacute;s com&uacute;n.</b> En Bariloche, las juntas vecinales denunciaron que el gobierno us&oacute; el dinero del presupuesto participativo en obras viales que eligi&oacute; solo, sin acuerdo de los vecinos. <span class="sg">La partida reservada del art&iacute;culo 119 protege el dinero. Pero tambi&eacute;n hay que proteger el destino.</span> Una vez elegida una obra, el Ejecutivo no puede cambiarla por otra sin volver a la asamblea.</p>
 </div>
 
 
 <h3>Lo que proponemos que una comisi&oacute;n zonal no decida</h3>
-<p class="lead">Una partida por zona sirve para la obra de esa zona. No sirve, y no debe servir, para
-decidir sobre algo que es de todo el partido.</p>
+<p class="lead">Una partida por zona sirve para la obra de esa zona. No sirve, y no debe servir, para decidir sobre algo que es de todo el partido.</p>
 <div class="cols">
-<p><b>El caso obvio es la costa.</b> La ribera del R&iacute;o de la Plata es de los 297.282 habitantes de
-San Isidro, no de la localidad que la tiene enfrente. Una comisi&oacute;n zonal decidiendo sobre ella
-decidir&iacute;a por gente que no la vot&oacute;; y al mismo tiempo, alguien de Villa Adelina que va al
-r&iacute;o los domingos no tendr&iacute;a voz. <span class="sg">Lo mismo vale para un hospital, una
-avenida troncal o una planta de tratamiento.</span></p>
-<p><b>La regla, entonces, es de alcance y no de tama&ntilde;o.</b> Decide la comisi&oacute;n zonal lo que
-sirve principalmente a su zona: cloacas, gas de red, desag&uuml;es, veredas, iluminaci&oacute;n, calles.
-No decide lo que sirve a varias zonas a la vez. Esa distinci&oacute;n va escrita en la ordenanza, no
-librada al criterio de quien gobierne.</p>
-<p><b>Es como funciona el presupuesto participativo en casi todo el mundo:</b> cada distrito recibe una partida proporcional a su tama&ntilde;o y
-sus residentes votan proyectos locales. Par&iacute;s reparte as&iacute; m&aacute;s de cien millones de
-euros por a&ntilde;o desde 2014; Nueva York, Boston, Chicago, Toronto, Lisboa, Madrid, Se&uacute;l y
-Chengdu usan variantes del mismo esquema.</p>
-<p><b>Lo que agrega esta f&oacute;rmula es la mitad por necesidad</b>, que casi ninguno tiene. C&oacute;rdoba
-es la excepci&oacute;n cercana: reparte con un &iacute;ndice de prioridad social y destina por ordenanza
-el 10% o m&aacute;s de su obra p&uacute;blica desde 2020.</p>
+<p><b>El caso m&aacute;s claro es la costa.</b> La orilla del R&iacute;o de la Plata es de los 297.282 habitantes de San Isidro, no s&oacute;lo de la localidad que la tiene enfrente. Si una comisi&oacute;n zonal decidiera sobre ella, decidir&iacute;a por gente que no la vot&oacute;. Y alguien de Villa Adelina que va al r&iacute;o los domingos no tendr&iacute;a voz. <span class="sg">Lo mismo vale para un hospital, una avenida principal o una planta de tratamiento.</span></p>
+<p><b>Entonces, la regla depende de a qui&eacute;n sirve la obra, no de su tama&ntilde;o.</b> La comisi&oacute;n zonal decide lo que sirve sobre todo a su zona: cloacas, gas de red, desag&uuml;es, veredas, iluminaci&oacute;n y calles. No decide lo que sirve a varias zonas a la vez. Esa diferencia va escrita en la ordenanza. No queda librada al criterio de quien gobierne.</p>
+<p><b>As&iacute; funciona el presupuesto participativo en casi todo el mundo.</b> Cada distrito recibe una partida seg&uacute;n su tama&ntilde;o, y sus vecinos votan proyectos para su lugar. Par&iacute;s reparte as&iacute; m&aacute;s de cien millones de euros por a&ntilde;o desde 2014. Nueva York, Boston, Chicago, Toronto, Lisboa, Madrid, Se&uacute;l y Chengdu usan variantes del mismo sistema.</p>
+<p><b>Lo que agrega esta f&oacute;rmula es la mitad por necesidad, que casi ninguno tiene.</b> C&oacute;rdoba es la excepci&oacute;n m&aacute;s cercana. Reparte con un &iacute;ndice de prioridad social. Y desde 2020, por ordenanza, destina a esto el 10% o m&aacute;s de su obra p&uacute;blica.</p>
 </div>
 
 
 <h3>Para lo que excede al barrio: un panel sorteado</h3>
-<p class="tight">Una asamblea abierta no sirve para decidir sobre un bien de todo el partido, porque a una
-asamblea va el que puede ir. La alternativa que us&oacute; el resto del mundo para este problema exacto
-es sortear.</p>
+<p class="tight">Una asamblea abierta no sirve para decidir sobre algo que es de todo el partido, porque a una asamblea va el que puede ir. Para este mismo problema, el resto del mundo us&oacute; otra soluci&oacute;n: el sorteo.</p>
 <div class="cols">
-<p><b>C&oacute;mo funciona lo que proponemos.</b> Se invita por correo a varios cientos de personas al azar y, entre
-quienes aceptan, se selecciona un panel estratificado por localidad, edad, g&eacute;nero y nivel
-educativo, de modo que refleje al partido en miniatura. El panel escucha a t&eacute;cnicos, delibera
-durante varias sesiones y produce una recomendaci&oacute;n fundada.</p>
-<p><b>Funciona en lugares m&aacute;s peque&ntilde;os que San Isidro.</b> Ostbelgien, la regi&oacute;n
-german&oacute;fona de B&eacute;lgica, tiene 77.000 habitantes &mdash;<span class="sg">cuatro veces menos
-que este partido</span>&mdash; y desde 2019 sostiene el primer Consejo Ciudadano permanente del mundo,
-con un cuerpo sorteado que fija la agenda y otro que elabora las recomendaciones. Lisboa y Par&iacute;s
-copiaron el modelo.</p>
-<p><b>Y con pocas personas alcanza.</b> En Winterthur, Suiza, treinta y siete ciudadanos sorteados
-reparten el presupuesto cultural desde 2019: se mandaron trescientas invitaciones y aceptaron treinta y
-siete. En Darebin, Australia, un jurado sorteado defini&oacute; el presupuesto participativo en cuatro
-reuniones a lo largo de cuatro meses, y los observadores registraron que los jurados propusieron ellos
-mismos los criterios de decisi&oacute;n y eligieron a qu&eacute; expertos convocar.</p>
-<p><b>Tambi&eacute;n resuelve qui&eacute;n cuenta como vecino.</b> Bolonia sorte&oacute; su asamblea
-clim&aacute;tica incluyendo expresamente a estudiantes que viven lejos de su casa y a
-&laquo;usuarios de la ciudad&raquo;. <span class="sg">Es el problema de la costa, resuelto en el
-dise&ntilde;o del sorteo</span>: el que la usa entra en la bolsa aunque duerma en otro lado.</p>
+<p><b>C&oacute;mo funciona lo que proponemos.</b> Se invita por correo a varios cientos de personas elegidas al azar. Entre las que aceptan, se arma un panel que se parezca al partido en miniatura. Para eso se tiene en cuenta la localidad, la edad, el g&eacute;nero y el nivel de estudios. El panel escucha a t&eacute;cnicos y discute durante varias reuniones. Al final, da una recomendaci&oacute;n con sus razones.</p>
+<p><b>Funciona en lugares m&aacute;s chicos que San Isidro.</b> Ostbelgien, la regi&oacute;n de B&eacute;lgica donde se habla alem&aacute;n, tiene 77.000 habitantes, <span class="sg">cuatro veces menos que este partido</span>. Desde 2019 tiene el primer Consejo Ciudadano permanente del mundo. Un grupo sorteado fija los temas, y otro prepara las recomendaciones. Lisboa y Par&iacute;s copiaron el modelo.</p>
+<p><b>Y alcanza con pocas personas.</b> En Winterthur, Suiza, treinta y siete ciudadanos sorteados reparten el presupuesto de cultura desde 2019. Se mandaron trescientas invitaciones y aceptaron treinta y siete. En Darebin, Australia, un jurado sorteado decidi&oacute; el presupuesto participativo en cuatro reuniones, a lo largo de cuatro meses. Los observadores vieron que los propios jurados propusieron c&oacute;mo decidir y eligieron a qu&eacute; expertos llamar.</p>
+<p><b>Tambi&eacute;n resuelve qui&eacute;n cuenta como vecino.</b> Bolonia sorte&oacute; su asamblea sobre el clima e incluy&oacute; a prop&oacute;sito a estudiantes que viven lejos de su casa y a &laquo;usuarios de la ciudad&raquo;. <span class="sg">Es el problema de la costa, resuelto en la forma de hacer el sorteo.</span> El que usa la costa entra en el sorteo aunque viva en otro lado.</p>
 </div>
 
 
 <h3>Por qu&eacute; proponemos pagarle al que participa</h3>
 <div class="cols">
-<p><b>No es un incentivo: es sacar el filtro econ&oacute;mico de la puerta.</b> Si participar es gratis y
-voluntario, no va quien tiene la agenda llena ni quien no puede perder un turno de trabajo o pagar una
-guarder&iacute;a. La sala termina representando a quien tiene tiempo libre un martes a las siete de la
-tarde.</p>
-<p><b>Y est&aacute; medido.</b> Una revisi&oacute;n de evidencia escocesa de 2018 concluye que los
-incentivos econ&oacute;micos ayudan de manera significativa a que participen los grupos habitualmente
-subrepresentados: j&oacute;venes, madres y padres solos, personas a cargo del cuidado de otros y personas
-con problemas econ&oacute;micos.</p>
-<p><b>C&oacute;mo se paga.</b> Un honorario por el proceso completo, no un sueldo, anunciado de antemano,
-condicionado a asistir a todas las sesiones y <span class="sg">cobrado al final</span>. M&aacute;s
-vi&aacute;ticos. Eso tambi&eacute;n reduce las ausencias de &uacute;ltimo momento, que son lo que rompe la
-representatividad del panel.</p>
-<p><b>Cu&aacute;nto, y con qu&eacute; referencia.</b> No se fija por comparaci&oacute;n con
-experiencias extranjeras: <span class="sg">se fija por referencia a la escala salarial municipal
-vigente</span>, como una fracci&oacute;n del salario de la categor&iacute;a inicial por sesi&oacute;n.
-Un municipio tiene jerarqu&iacute;as y paralelismos, y un honorario por fuera de esa escala abre un
-conflicto con la planta que el mecanismo no resistir&iacute;a. Con cuarenta personas y cuatro sesiones, a un d&iacute;a
-de sueldo de la categor&iacute;a de ingreso por sesi&oacute;n, <b>un panel cuesta 3,1 millones</b>, que salen de
-reasignaci&oacute;n.</p>
-<p><b>Eso pone un techo bajo:</b> puede no alcanzar para compensar un d&iacute;a de trabajo perdido, y
-por eso el honorario es un complemento de las medidas de m&aacute;s arriba, no la soluci&oacute;n.</p>
+<p><b>No es un premio: es sacar el dinero como filtro para entrar.</b> Si participar es gratis y voluntario, no va quien tiene la agenda llena. Tampoco va quien no puede perder un turno de trabajo o pagar una guarder&iacute;a. As&iacute;, la sala termina representando a quien tiene tiempo libre un martes a las siete de la tarde.</p>
+<p><b>Y est&aacute; medido.</b> Un estudio escoc&eacute;s de 2018 revis&oacute; la evidencia. Concluye que pagar ayuda mucho a que participen los que casi nunca participan. Son los j&oacute;venes, las madres y los padres solos, quienes cuidan a otras personas y quienes tienen problemas econ&oacute;micos.</p>
+<p><b>C&oacute;mo se paga.</b> Es un honorario por todo el proceso, no un sueldo. Se anuncia antes, se cobra s&oacute;lo si se va a todas las reuniones, y <span class="sg">se cobra al final</span>. Se pagan tambi&eacute;n los gastos de viaje. Eso adem&aacute;s reduce las faltas de &uacute;ltimo momento, que son las que hacen que el panel deje de parecerse al partido.</p>
+<p><b>Cu&aacute;nto, y comparado con qu&eacute;.</b> No se fija comparando con otros pa&iacute;ses. <span class="sg">Se fija seg&uacute;n la escala de sueldos del Municipio</span>: por cada reuni&oacute;n, una parte del sueldo de la categor&iacute;a de ingreso. Un municipio tiene jerarqu&iacute;as y comparaciones entre sueldos. Un honorario fuera de esa escala generar&iacute;a un conflicto con el personal que el mecanismo no aguantar&iacute;a. Con cuarenta personas y cuatro reuniones, a un d&iacute;a de sueldo de la categor&iacute;a de ingreso por reuni&oacute;n, <b>un panel cuesta 3,1 millones</b>. Salen de cambiar de destino otros gastos.</p>
+<p><b>Eso pone un techo bajo.</b> Puede no alcanzar para compensar un d&iacute;a de trabajo perdido. Por eso, el honorario se suma a las medidas de m&aacute;s arriba. No es la soluci&oacute;n por s&iacute; solo.</p>
 </div>
 
 
 <h3>C&oacute;mo se protege de que lo capturen</h3>
-<p class="tight">Cualquier mecanismo participativo puede corromperse, y varios se corrompieron. Proponemos
-las cinco reglas que la literatura identifica.</p>
+<p class="tight">Cualquier mecanismo de participaci&oacute;n puede corromperse, y varios se corrompieron. Proponemos las cinco reglas que se&ntilde;alan los estudios.</p>
 <div class="cols">
-<p><b>1 &middot; Pregunta acotada, no mandato abierto.</b> Es el hallazgo m&aacute;s importante y el
-menos intuitivo. Cuando a un panel sorteado se le da una tarea amplia, quien fija la agenda y quien
-modera se quedan con el poder real. <span class="sg">Un panel con una pregunta concreta necesita
-d&iacute;as para estar a la altura, no a&ntilde;os</span>, y queda mucho menos expuesto a que lo
-manejen.</p>
-<p><b>2 &middot; Mandato corto y no renovable.</b> A un funcionario electo se lo puede presionar o
-financiar durante a&ntilde;os porque se sabe qui&eacute;n es y va a seguir estando. A un ciudadano
-sorteado que act&uacute;a unos meses y no se repite, no. <b>La rotaci&oacute;n es la defensa.</b></p>
-<p><b>3 &middot; Quien sortea no es el Municipio.</b> Si el sorteo lo hace el Departamento Ejecutivo,
-cualquiera puede decir que est&aacute; arreglado, y no habr&iacute;a c&oacute;mo desmentirlo. La
-selecci&oacute;n y la coordinaci&oacute;n las lleva un tercero, con reglas p&uacute;blicas y padr&oacute;n
-auditable. En el Reino Unido esa funci&oacute;n la cumplen organizaciones especializadas que trabajan
-sobre la base de direcciones postales.</p>
-<p><b>4 &middot; Los expertos no los elige s&oacute;lo el Municipio.</b> El panel puede convocar a
-qui&eacute;n quiera o&iacute;r, y cualquier organizaci&oacute;n interesada puede presentar su
-posici&oacute;n por escrito. Si la informaci&oacute;n la provee &uacute;nicamente quien tiene la
-decisi&oacute;n tomada, el panel es un sello de goma.</p>
-<p><b>5 &middot; Todo p&uacute;blico.</b> Sesiones, materiales, n&oacute;mina de participantes,
-recomendaci&oacute;n final y respuesta del Ejecutivo. Y quienes ocupan cargos electivos no integran el
-panel.</p>
-<p><b>Una advertencia.</b> Los mecanismos de participaci&oacute;n no son
-inmunes por definici&oacute;n: en California, empresas tecnol&oacute;gicas gastaron cientos de millones
-de d&oacute;lares para imponer una iniciativa popular, y los procedimientos de consulta regulatoria
-llevan d&eacute;cadas cooptados por los sectores que deb&iacute;an regular. <b>Lo que protege no es la
-participaci&oacute;n en s&iacute;: es el dise&ntilde;o.</b></p>
+<p><b>1 &middot; Una pregunta concreta, no un encargo abierto.</b> Es lo m&aacute;s importante que encontraron los estudios, y lo menos esperable. Cuando a un panel sorteado se le da una tarea amplia, el poder real queda en manos de quien fija los temas y de quien coordina. <span class="sg">Un panel con una pregunta concreta necesita d&iacute;as para estar preparado, no a&ntilde;os.</span> Y es mucho m&aacute;s dif&iacute;cil manejarlo.</p>
+<p><b>2 &middot; Un mandato corto, que no se renueva.</b> A un funcionario electo se lo puede presionar o financiar durante a&ntilde;os, porque se sabe qui&eacute;n es y va a seguir estando. A un ciudadano sorteado que participa unos meses y no se repite, no. <b>Que la gente cambie es la defensa.</b></p>
+<p><b>3 &middot; El que sortea no es el Municipio.</b> Si el sorteo lo hiciera el Departamento Ejecutivo, cualquiera podr&iacute;a decir que est&aacute; arreglado, y no habr&iacute;a c&oacute;mo probar lo contrario. La selecci&oacute;n y la coordinaci&oacute;n las hace otra organizaci&oacute;n, con reglas p&uacute;blicas y con un padr&oacute;n que se puede controlar. En el Reino Unido, eso lo hacen organizaciones especializadas que sortean entre direcciones postales.</p>
+<p><b>4 &middot; Los expertos no los elige s&oacute;lo el Municipio.</b> El panel puede llamar a quien quiera escuchar. Y cualquier organizaci&oacute;n interesada puede presentar su opini&oacute;n por escrito. Si la informaci&oacute;n la da s&oacute;lo quien ya tiene la decisi&oacute;n tomada, el panel s&oacute;lo pone el sello.</p>
+<p><b>5 &middot; Todo es p&uacute;blico.</b> Son p&uacute;blicas las reuniones, los materiales, la lista de participantes, la recomendaci&oacute;n final y la respuesta del Ejecutivo. Y quienes tienen cargos electivos no forman parte del panel.</p>
+<p><b>Una advertencia.</b> La participaci&oacute;n no protege por s&iacute; sola. En California, empresas de tecnolog&iacute;a gastaron cientos de millones de d&oacute;lares para imponer una iniciativa popular. Y hay consultas para fijar reglas que llevan d&eacute;cadas en manos de los mismos sectores que deb&iacute;an ser controlados. <b>Lo que protege no es la participaci&oacute;n: es c&oacute;mo est&aacute; dise&ntilde;ada.</b></p>
 </div>
 <div class="callout a">
 <div class="clabel">Lo que sale mal en estos sistemas, y c&oacute;mo lo enfrenta esta propuesta</div>
-<p><b>Se apagan.</b> Es el modo de falla m&aacute;s com&uacute;n.
+<p><b>Se apagan.</b> Es la falla m&aacute;s com&uacute;n.
 <b>Un panel sorteado no depende de que la gente se entere y vaya</b>: se invita, se convoca y se paga.</p>
-<p><b>Los capturan grupos organizados.</b> En Cambridge, Massachusetts, la cr&iacute;tica es que el
-presupuesto participativo se volvi&oacute; un buen lugar para que los grupos de inter&eacute;s financien
-sus proyectos preferidos &mdash;y peor, para financiar cosas que el Municipio ya iba a hacer&mdash;. Ac&aacute;
-la partida est&aacute; afectada por el art&iacute;culo 119 y separada del resto, y la capa 2 exige el 60%
-de adhesi&oacute;n por escrito de los vecinos.</p>
-<p><b>Se vota lo que despu&eacute;s no se puede hacer</b>, por sobrecostos o por seguridad, y la gente
-deja de participar. Por eso el filtro de admisibilidad &mdash;competencia municipal, ejecutable dentro
-del mandato, finalidad concreta, sin contradecir planes aprobados&mdash; se aplica antes de votar y no
-despu&eacute;s.</p>
-<p><b>Y quedan en consulta.</b> Se&uacute;l lo vivi&oacute;: despu&eacute;s de unos a&ntilde;os, la
-sociedad civil plante&oacute; que los vecinos propon&iacute;an y votaban pero la estrategia y el
-dise&ntilde;o de los proyectos segu&iacute;an en manos de los funcionarios, y hubo que redise&ntilde;ar
-el sistema. <span class="sg">Es exactamente lo que la capa 2 de este cap&iacute;tulo evita</span>: ac&aacute;
-el vecino no s&oacute;lo prioriza, tambi&eacute;n ejecuta.</p>
+<p><b>Los toman grupos organizados.</b> En Cambridge, Massachusetts, se critica que el presupuesto participativo se volvi&oacute; un buen lugar para que los grupos de inter&eacute;s paguen sus proyectos preferidos. Y peor: para pagar cosas que el Municipio ya iba a hacer. Ac&aacute;, la partida est&aacute; reservada por el art&iacute;culo 119 y separada del resto. Y la capa 2 exige que el 60% de los vecinos la pida por escrito.</p>
+<p><b>Se vota lo que despu&eacute;s no se puede hacer</b>, porque cuesta m&aacute;s de lo pensado o por seguridad. Y la gente deja de participar. Por eso, cada proyecto se revisa antes de votar, y no despu&eacute;s. Tiene que ser algo que le toque hacer al Municipio y que se pueda hacer dentro del mandato. Tiene que tener un fin concreto. Y no puede contradecir planes ya aprobados.</p>
+<p><b>Y se quedan en una consulta.</b> Le pas&oacute; a Se&uacute;l. Despu&eacute;s de unos a&ntilde;os, las organizaciones de vecinos se quejaron. Los vecinos propon&iacute;an y votaban, pero el plan y el dise&ntilde;o de los proyectos segu&iacute;an en manos de los funcionarios. Hubo que cambiar el sistema. <span class="sg">Es justo lo que evita la capa 2 de este cap&iacute;tulo</span>: ac&aacute; el vecino no s&oacute;lo elige, tambi&eacute;n hace la obra.</p>
 </div>
-<p><b>Y proponemos que, hasta que el panel exista, ninguna parcela de alcance distrital se contrate ni se demuela antes
-de que haya un procedimiento de consulta que alcance a todo el partido.</b></p>
+<p><b>Y proponemos que, hasta que el panel exista, no se contrate ni se demuela ninguna parcela que sea de todo el partido. Antes tiene que haber una consulta que alcance a todo el partido.</b></p>
 
 
 <h2><span class="n">4.7</span>El Concejo Deliberante: diez bloques y ninguna mayor&iacute;a</h2>
 <p class="lead">Todo lo que propone este cap&iacute;tulo se aprueba por ordenanza.</p>
-<p>El Concejo Deliberante de San Isidro tiene <b>24 concejales</b>, repartidos hoy en <b>diez
-bloques</b>. El m&aacute;s grande tiene cuatro bancas. Para sancionar una ordenanza hacen falta trece
-votos. <span class="sg">La aritm&eacute;tica es la que es: ning&uacute;n bloque puede aprobar nada por su
-cuenta, y cualquier ordenanza necesita el acuerdo de cuatro bloques como m&iacute;nimo.</span> Eso vale
-para este programa igual que para cualquier otro.</p>
+<p>El Concejo Deliberante de San Isidro tiene <b>24 concejales</b>, repartidos hoy en <b>diez bloques</b>. El m&aacute;s grande tiene cuatro bancas. Para aprobar una ordenanza hacen falta trece votos. <span class="sg">Las cuentas son claras: ning&uacute;n bloque puede aprobar nada solo. Cualquier ordenanza necesita el acuerdo de cuatro bloques, como m&iacute;nimo.</span> Eso vale para este programa igual que para cualquier otro.</p>
 """ + exhead("c", "Diez bloques para veinticuatro bancas: hacen falta trece votos",
-             "Integraci&oacute;n publicada por el propio Concejo Deliberante de San Isidro.") + """
+             "C&oacute;mo est&aacute; formado hoy, seg&uacute;n lo que publica el propio Concejo Deliberante de San Isidro.") + """
 <table>
 <colgroup><col><col style="width:80pt"></colgroup>
 <tr class="hd"><th>Bloque</th><th class="r">Bancas</th></tr>
@@ -468,79 +254,38 @@ para este programa igual que para cualquier otro.</p>
 </table>
 <p class="cap"><b>Fuente:</b> Honorable Concejo Deliberante de San Isidro, integraci&oacute;n de bloques
 publicada en su sitio oficial, consultada en septiembre de 2026.</p>
-<p class="cap"><b>Nota:</b> el cuerpo renueva la mitad de sus bancas cada dos a&ntilde;os, de modo que la
-composici&oacute;n cambia en diciembre de 2027, dentro del primer a&ntilde;o de mandato.</p>
+<p class="cap"><b>Nota:</b> el Concejo renueva la mitad de sus bancas cada dos a&ntilde;os. Por eso, su composici&oacute;n cambia en diciembre de 2027, en el primer a&ntilde;o de mandato.</p>
 <div class="cols">
-<p><b>Por eso el mecanismo est&aacute; dise&ntilde;ado para ser votable.</b> No pide reformar la Ley
-Org&aacute;nica, no pide facultades nuevas para el intendente y no crea un &oacute;rgano que compita con
-el Concejo. Pide fijar una partida por ordenanza y obligar al Ejecutivo a responder por escrito: dos
-cosas que <span class="sg">le sacan discrecionalidad al intendente, no al Concejo</span>.</p>
-<p><b>Y el primer proyecto es el m&aacute;s f&aacute;cil de acompa&ntilde;ar.</b> Derogar los
-art&iacute;culos que hoy permiten al Ejecutivo disolver una asociaci&oacute;n vecinal no le cuesta un peso
-a nadie ni le quita nada a ning&uacute;n bloque. Es la prueba de si hay acuerdo, y llega en la primera
-sesi&oacute;n.</p>
-<p><b>Qu&eacute; pasa si no hay acuerdo.</b> La rampa no arranca. No hay plan
-alternativo por decreto: <span class="sg">un mecanismo que dependiera de un decreto no
-sobrevivir&iacute;a al intendente siguiente</span>, que es justamente lo que se busca evitar.</p>
-<p>La renovaci&oacute;n de diciembre de 2027 cambia la mitad del cuerpo. Un programa que necesita cuatro
-bloques tiene que poder explicarse a bloques que todav&iacute;a no est&aacute;n sentados, y &eacute;sa es
-otra raz&oacute;n para que la f&oacute;rmula y la rampa est&eacute;n escritas y no negociadas cada
-a&ntilde;o.</p>
+<p><b>Por eso el mecanismo est&aacute; pensado para que se pueda votar.</b> No pide reformar la Ley Org&aacute;nica. No pide poderes nuevos para el intendente. Y no crea un &oacute;rgano que compita con el Concejo. Pide dos cosas: fijar una partida por ordenanza y obligar al Ejecutivo a responder por escrito. <span class="sg">Las dos le quitan margen de decisi&oacute;n al intendente, no al Concejo.</span></p>
+<p><b>Y el primer proyecto es el m&aacute;s f&aacute;cil de apoyar.</b> Se trata de derogar los art&iacute;culos que hoy permiten al Ejecutivo disolver una asociaci&oacute;n vecinal. No le cuesta un peso a nadie ni le quita nada a ning&uacute;n bloque. Es la prueba de si hay acuerdo, y llega en la primera sesi&oacute;n.</p>
+<p><b>Qu&eacute; pasa si no hay acuerdo.</b> La partida no empieza a subir. No hay un plan alternativo por decreto. <span class="sg">Un mecanismo que dependiera de un decreto lo podr&iacute;a borrar el intendente siguiente</span>, y eso es justo lo que se quiere evitar.</p>
+<p>En diciembre de 2027 cambia la mitad del Concejo. Un programa que necesita cuatro bloques tiene que poder explicarse a bloques que todav&iacute;a no llegaron. Es otra raz&oacute;n para que la f&oacute;rmula y la subida de la partida est&eacute;n escritas, y no se negocien cada a&ntilde;o.</p>
 </div>
 
 
 <h3>Lo que el propio Ejecutivo dice sobre el l&iacute;mite del Concejo</h3>
 <div class="cols">
-<p><b>Entre junio y agosto de 2025 el Departamento Ejecutivo vet&oacute; cuatro ordenanzas</b>
-&mdash;la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405&mdash; y observ&oacute; parcialmente
-otras dos. Todas en un lapso de once semanas.</p>
-<p><b>Lo que interesa es el fundamento, porque est&aacute; escrito.</b> Al vetar la Ordenanza 9399, el
-Ejecutivo sostuvo que las decisiones t&eacute;cnicas y discrecionales son exclusivas suyas y que el
-Departamento Deliberativo no puede invadir esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>.
-Y calific&oacute; un plazo de cuarenta y ocho horas fijado por el Concejo como
-<b>&laquo;arbitrario, desproporcionado&raquo;</b>.</p>
-<p><b>Ese es exactamente el problema que este cap&iacute;tulo resuelve.</b> Si la prioridad vecinal fuera
-una instrucci&oacute;n administrativa, caer&iacute;a bajo esa misma doctrina: decisi&oacute;n
-discrecional del Ejecutivo, revocable cuando incomode.
-<span class="sg">Por eso el mecanismo va por ordenanza y con partida afectada</span>, que es lo que el
-art&iacute;culo 119 permite y lo que un veto no alcanza a desarmar solo.</p>
-<p><b>Y por eso la obligaci&oacute;n de respuesta lleva plazo escrito.</b> Si el plazo no est&aacute; en
+<p><b>Entre junio y agosto de 2025, el Departamento Ejecutivo vet&oacute; cuatro ordenanzas.</b> Fueron la 9395 de Paisaje Protegido, la 9396, la 9399 y la 9405. Y vet&oacute; en parte otras dos. Todo en once semanas.</p>
+<p><b>Lo que importa son sus razones, porque est&aacute;n escritas.</b> Al vetar la Ordenanza 9399, el Ejecutivo dijo que las decisiones t&eacute;cnicas y las que dependen de su criterio son s&oacute;lo suyas. Dijo que el Concejo no puede meterse en esa <b>&laquo;zona de reserva de la administraci&oacute;n&raquo;</b>. Y dijo que un plazo de cuarenta y ocho horas fijado por el Concejo era <b>&laquo;arbitrario, desproporcionado&raquo;</b>.</p>
+<p><b>&Eacute;se es justo el problema que este cap&iacute;tulo resuelve.</b> Si lo que eligen los vecinos fuera s&oacute;lo una instrucci&oacute;n administrativa, le pasar&iacute;a lo mismo. Ser&iacute;a una decisi&oacute;n del Ejecutivo, que la podr&iacute;a anular cuando le molestara. <span class="sg">Por eso el mecanismo va por ordenanza y con la partida reservada</span>, como permite el art&iacute;culo 119. Eso, un veto solo no lo puede desarmar.</p>
+<p><b>Y por eso la obligaci&oacute;n de responder lleva un plazo escrito.</b> Si el plazo no est&aacute; en
 la norma, el propio Ejecutivo ya dijo qu&eacute; piensa de los plazos que le fija el Concejo.</p>
 </div>
 <div class="callout a">
 <div class="clabel">Un dato que no existe, y por qu&eacute; eso importa</div>
-<p><b>El Bolet&iacute;n Oficial publica lo que el Ejecutivo promulga, no la actividad del cuerpo
-deliberativo.</b> Y un pedido de informes, como recuerda el propio Ejecutivo en uno de esos vetos, se hace
-por <b>Comunicaci&oacute;n</b>, seg&uacute;n el reglamento interno del Concejo y el
-art&iacute;culo 77 de la Ley Org&aacute;nica. <span class="sg">Las comunicaciones no se promulgan, y por
-lo tanto no se publican en ning&uacute;n lado.</span></p>
-<p><b>De modo que el control del Concejo sobre el Ejecutivo transcurre entero fuera de toda fuente
-p&uacute;blica.</b></p>
-<p>Proponemos que cualquier vecino pueda preguntar qu&eacute; pidi&oacute; el Concejo y qu&eacute; le contest&oacute; el Ejecutivo: no cuesta un peso ni requiere autorizaci&oacute;n de nadie. Para eso cada comunicaci&oacute;n y su respuesta se registran el d&iacute;a que entran y el d&iacute;a que salen.</p>
+<p><b>El Bolet&iacute;n Oficial publica lo que el Ejecutivo promulga, no lo que hace el Concejo.</b> Y un pedido de informes se hace por <b>Comunicaci&oacute;n</b>, como recuerda el propio Ejecutivo en uno de esos vetos. As&iacute; lo dicen el reglamento del Concejo y el art&iacute;culo 77 de la Ley Org&aacute;nica. <span class="sg">Las comunicaciones no se promulgan, y por eso no se publican en ning&uacute;n lado.</span></p>
+<p><b>Entonces, todo el control del Concejo sobre el Ejecutivo pasa sin que quede nada publicado.</b></p>
+<p>Proponemos que cualquier vecino pueda preguntar qu&eacute; pidi&oacute; el Concejo y qu&eacute; le contest&oacute; el Ejecutivo. No cuesta un peso ni necesita permiso de nadie. Para eso, cada comunicaci&oacute;n y su respuesta se registran el d&iacute;a en que entran y el d&iacute;a en que salen.</p>
 </div>
 
 
 <h2><span class="n">4.8</span>Por qu&eacute; las dos capas juntas cambian todo</h2>
 <div class="cols">
-<p>Un presupuesto participativo cl&aacute;sico deja al vecino como peticionante: prioriza una lista y el
-municipio ejecuta. El dinero de la obra se va del barrio hacia una empresa contratista.</p>
-
-<p><b>La diferencia no es de grado, es de naturaleza.</b> En el modelo cl&aacute;sico el vecino
-propone y el Estado hace; el poder que se reparte es el de sugerir. Con este programa, el vecino propone
-<span class="sg">y adem&aacute;s hace</span>: lo que se reparte es la ejecuci&oacute;n, que es donde
-est&aacute;n el dinero, el trabajo y el aprendizaje.</p>
-<p><b>Tres cosas cambian cuando la obra la ejecuta el barrio.</b> Primero, el dinero se queda: la
-cooperativa contrata gente del lugar y compra donde puede. Segundo, el control es directo, porque quien
-recibe la obra conoce a quien la hizo y lo cruza en la calle. Tercero, la capacidad queda instalada: una
-asociaci&oacute;n que ejecut&oacute; una obra puede ejecutar la siguiente, y eso no se pierde cuando
-cambia el intendente.</p>
-<p><b>Y hay una consecuencia en el empleo.</b> Una obra ejecutada por vecinos es pol&iacute;tica de
-empleo real, financiada con la partida de obra y no con la de empleo. <span class="sg">Los 28.908 millones del a&ntilde;o 4 son casi cuatro veces este programa
-completo de empleo y vivienda</span>, y no le cuestan un peso adicional al presupuesto.</p>
-<p><b>El costo de esta capa es que exige m&aacute;s.</b> La primera no pide nada al vecino salvo ir a una
-asamblea; la segunda le pide constituirse, reunir el 60% por escrito, contratar, justificar cada peso y responder. Por
-eso la rampa empieza en 12,5% y por eso 4.6 detalla qu&eacute; pasa cuando una comisi&oacute;n no
-est&aacute; a la altura. <span class="sg">Repartir ejecuci&oacute;n es repartir responsabilidad.</span></p>
+<p>En un presupuesto participativo de siempre, el vecino s&oacute;lo pide. Ordena una lista de obras y el municipio las hace. El dinero de la obra se va del barrio hacia una empresa contratista.</p>
+<p><b>La diferencia no es de cantidad, es de fondo.</b> En el modelo de siempre, el vecino propone y el Estado hace. El poder que se reparte es el de sugerir. Con este programa, el vecino propone <span class="sg">y adem&aacute;s hace</span>. Lo que se reparte es hacer la obra, y ah&iacute; est&aacute;n el dinero, el trabajo y el aprendizaje.</p>
+<p><b>Tres cosas cambian cuando la obra la hace el barrio.</b> Primero, el dinero se queda: la cooperativa contrata gente del lugar y compra donde puede. Segundo, el control es directo, porque quien recibe la obra conoce a quien la hizo y se lo cruza en la calle. Tercero, el barrio aprende a hacer: una asociaci&oacute;n que hizo una obra puede hacer la siguiente. Y eso no se pierde cuando cambia el intendente.</p>
+<p><b>Y hay un efecto en el empleo.</b> Una obra hecha por vecinos da trabajo de verdad, y se paga con la partida de obra, no con la de empleo. <span class="sg">Los 28.908 millones del a&ntilde;o 4 son casi cuatro veces todo el programa de empleo y vivienda.</span> Y no le cuestan un peso m&aacute;s al presupuesto.</p>
+<p><b>El costo de esta capa es que exige m&aacute;s.</b> La primera capa no le pide nada al vecino, salvo ir a una asamblea. La segunda le pide m&aacute;s: formar la comisi&oacute;n y reunir el 60% por escrito. Tambi&eacute;n le pide contratar, justificar cada peso y responder. Por eso la partida empieza en 12,5%. Y por eso el 4.6 explica qu&eacute; pasa cuando una comisi&oacute;n no est&aacute; a la altura. <span class="sg">Repartir la obra es repartir la responsabilidad.</span></p>
 </div>
 
 
@@ -596,166 +341,77 @@ est&aacute; a la altura. <span class="sg">Repartir ejecuci&oacute;n es repartir 
 Un &aacute;rbol m&aacute;s en una plaza que ya ten&iacute;a &aacute;rboles, no. Esa es la diferencia entre
 las dos flechas de la izquierda de cada circuito.</p>
 <div class="cols">
-<p>Hoy la obra la decide el Ejecutivo.</p>
-<p><b>Propuesta: decide el barrio.</b> Cuando decide la comisi&oacute;n de la zona, lo que se hace es lo que
-hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
-<p><b>Ejecuta el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, el
-dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera.</p>
-<p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; se cierra con el cap&iacute;tulo 5: proponemos que la obra que ejecuta la asociaci&oacute;n, como todo contrato del Municipio, tome al menos el 75% de su gente del partido, con los egresados primero (Ordenanza X).
-<b>Sin ejecuci&oacute;n vecinal, ese trabajo lo hace gente de otro distrito.</b></p>
-<p><b>Gasta y recauda donde vive.</b> Ese salario se consume en el partido, y esa actividad es base
-imponible. El cap&iacute;tulo 1 muestra que los recursos propios pagan el 64% de lo que el Municipio gasta:
-<span class="sg">m&aacute;s actividad local es m&aacute;s capacidad de hacer, con las mismas
-al&iacute;cuotas.</span></p>
+<p>Hoy la obra la decide el Ejecutivo. <b>Con la propuesta, decide el barrio.</b> Cuando decide la comisi&oacute;n de la zona, se hace lo que hac&iacute;a falta. <span class="sg">No se gasta menos: se gasta en lo que rinde.</span></p>
+<p><b>La hace el barrio.</b> La capa 2 permite que la asociaci&oacute;n vecinal haga la obra. Sin eso, el dinero entra al barrio y sale el mismo d&iacute;a hacia una empresa de afuera.</p>
+<p><b>Trabaja un vecino formado ac&aacute;.</b> Ac&aacute; esto se une con el cap&iacute;tulo 5. Proponemos que la obra que hace la asociaci&oacute;n tome al menos el 75% de su gente del partido, como todo contrato del Municipio. Y que los egresados vayan primero (Ordenanza X). <b>Si la obra no la hacen los vecinos, ese trabajo lo hace gente de otro distrito.</b></p>
+<p><b>Gasta y paga tasas donde vive.</b> Ese sueldo se gasta en el partido, y esa actividad genera tasas que el Municipio cobra. El cap&iacute;tulo 1 muestra que lo que recauda el propio Municipio paga el 64% de su gasto. <span class="sg">M&aacute;s actividad en el partido es m&aacute;s capacidad de hacer, sin subir los porcentajes que se cobran.</span></p>
 </div>
 <div class="callout g">
 <div class="clabel">Lo que hace que el ciclo no se apague</div>
-<p>El 60% de adhesi&oacute;n por escrito del art&iacute;culo 132 obliga al barrio a ponerse de acuerdo
-<b>antes</b> de pedir. Eso deja instalada una capacidad de organizarse que no se compra y que sirve para
-la vuelta siguiente. <span class="sg">Cada ciclo empieza con m&aacute;s capacidad que el anterior.</span></p>
-<p>Es tambi&eacute;n lo que falta en los presupuestos participativos que se apagaron. Donde el vecino
-s&oacute;lo vota una lista de obras que ejecuta otro, la participaci&oacute;n cae a&ntilde;o a a&ntilde;o.
-Donde el vecino decide, ejecuta y cobra, la vuelta siguiente tiene m&aacute;s gente, no menos.</p>
+<p>El art&iacute;culo 132 pide que el 60% de los vecinos apoye la obra por escrito. Eso obliga al barrio a ponerse de acuerdo <b>antes</b> de pedir. Y le deja una capacidad de organizarse que no se compra, y que sirve para la vuelta siguiente. <span class="sg">Cada vuelta empieza con m&aacute;s capacidad que la anterior.</span></p>
+<p>Es tambi&eacute;n lo que les falt&oacute; a los presupuestos participativos que se apagaron. Donde el vecino s&oacute;lo vota una lista de obras que hace otro, cada a&ntilde;o participa menos gente. Donde el vecino decide, hace la obra y cobra, la vuelta siguiente tiene m&aacute;s gente, no menos.</p>
 </div>
 <div class="cols">
-<p><b>Y las otras propuestas son ramas del mismo circuito, no ciclos aparte.</b> La anal&iacute;tica de
-seguridad del 5.7 se contrata a empresas del partido y la ocupa gente formada ac&aacute;. La habilitaci&oacute;n que contesta la
-inteligencia artificial del Municipio (5.9) tambi&eacute;n, y adem&aacute;s abarata abrir un local, lo que agrega actividad al
-mismo circuito.</p>
-<p><b>Por eso el orden importa.</b> Empezar por la formaci&oacute;n sin obra vecinal produce egresados sin
-d&oacute;nde trabajar. Empezar por la obra vecinal sin formaci&oacute;n produce cooperativas que
-contratan afuera. <span class="sg">Las dos piezas juntas son una pol&iacute;tica; cada una sola es un
-programa m&aacute;s.</span></p>
+<p><b>Y las otras propuestas son parte del mismo circuito, no circuitos aparte.</b> El an&aacute;lisis de video de las c&aacute;maras de seguridad (5.7) se contrata a empresas del partido, y lo hace gente formada ac&aacute;. Lo mismo pasa con la habilitaci&oacute;n que contesta la inteligencia artificial del Municipio (5.9). Adem&aacute;s, abarata abrir un local, y eso suma actividad al mismo circuito.</p>
+<p><b>Por eso el orden importa.</b> Si se empieza por la formaci&oacute;n sin obra vecinal, quedan egresados sin d&oacute;nde trabajar. Si se empieza por la obra vecinal sin formaci&oacute;n, quedan cooperativas que contratan afuera. <span class="sg">Las dos piezas juntas son una pol&iacute;tica. Cada una sola es un programa m&aacute;s.</span></p>
 </div>
 
 
-<h2><span class="n">4.9</span>Las otras dos facultades</h2>
+<h2><span class="n">4.9</span>Las otras dos piezas del mecanismo</h2>
 <div class="cols">
-<p><b>Acceso a la informaci&oacute;n.</b> Proponemos que cada comisi&oacute;n vea la ejecuci&oacute;n presupuestaria de
-su zona: qu&eacute; se gast&oacute;, en qu&eacute; y d&oacute;nde. <span class="sg">Trimestral, porque
-depende del cierre contable</span>, con el devengado del mes a la vista marcado como provisorio. Todo lo
-dem&aacute;s &mdash;adjudicaciones, avance de obra, reclamos&mdash; es continuo.</p>
-<p><span class="sg">Hay que construirlo</span>: esa
-informaci&oacute;n no existe desagregada territorialmente en ning&uacute;n municipio del conurbano norte,
-porque requiere imputar el gasto con referencia territorial y hoy el Municipio no lo hace. No es mostrar un archivo que ya existe: es cambiar c&oacute;mo se registra el gasto. Por eso el cap&iacute;tulo 6 lo
-compromete como meta del mandato y no de los primeros cien d&iacute;as.</p>
-<p><b>Protecci&oacute;n de la partida.</b> El <b>art&iacute;culo 119 de la LOM</b> permite al Departamento
-Ejecutivo crear y ampliar partidas financiadas con recursos afectados sin volver al Concejo. Afectando el
-recurso, los fondos de las comisiones dejan de depender de la negociaci&oacute;n presupuestaria de cada
-a&ntilde;o.</p>
+<p><b>Acceso a la informaci&oacute;n.</b> Proponemos que cada comisi&oacute;n vea lo que se gast&oacute; en su zona: cu&aacute;nto, en qu&eacute; y d&oacute;nde. <span class="sg">Se publica cada tres meses, porque depende del cierre de las cuentas.</span> Lo gastado en el mes est&aacute; a la vista, marcado como provisorio. Todo lo dem&aacute;s se publica en el momento: las adjudicaciones, el avance de obra y los reclamos.</p>
+<p><span class="sg">Hay que construirlo.</span> Ning&uacute;n municipio del conurbano norte tiene esa informaci&oacute;n separada por zona. Para tenerla, hay que registrar cada gasto con la zona donde se hace, y hoy el Municipio no lo hace. No es mostrar un archivo que ya existe: es cambiar c&oacute;mo se anota el gasto. Por eso el cap&iacute;tulo 6 lo pone como meta del mandato, y no de los primeros cien d&iacute;as.</p>
+<p><b>Protecci&oacute;n de la partida.</b> El <b>art&iacute;culo 119 de la Ley Org&aacute;nica de las Municipalidades</b> permite al Departamento Ejecutivo crear y agrandar partidas pagadas con recursos reservados para un fin, sin volver al Concejo. Si el recurso queda reservado, el dinero de las comisiones ya no depende de la discusi&oacute;n del presupuesto de cada a&ntilde;o.</p>
 </div>
 
 
 <h2><span class="n">4.10</span>El primer acto de gobierno: derogar tres art&iacute;culos</h2>
 <div class="cols">
-<p>San Isidro tiene vigente la <b>Ordenanza 6045/1984</b> de sociedades de fomento. Sus <b>art&iacute;culos 8, 9 y 10</b> facultan al Departamento Ejecutivo a
-investigar, intervenir, hacer caducar la autorizaci&oacute;n y <span class="sg">disolver</span> una
-asociaci&oacute;n vecinal. Sin plazo de defensa. Sin recurso ante el Concejo Deliberante.</p>
-<p>Un programa construido sobre autonom&iacute;a vecinal no puede convivir con un art&iacute;culo que le
-permite al intendente disolver asociaciones de vecinos. <b>No se acotan: se derogan.</b> Es el primer
-proyecto de ordenanza que este gobierno env&iacute;a al Concejo.</p>
-<p><b>Qu&eacute; pasa con las sociedades de fomento que hoy existen.</b> La 6045 las autoriza y las registra, pero su
-oficina de aplicaci&oacute;n fue disuelta y el registro qued&oacute; sin actualizar.</p>
-<p>Proponemos no tocarlas: siguen existiendo, y lo que se deroga es la facultad del Ejecutivo de disolverlas.
-<span class="sg">Son exactamente las organizaciones que la secci&oacute;n 4.6 reconoce como comisi&oacute;n
-de su zona</span>: este programa no las reemplaza, las convierte en la contraparte de una partida. La
-ordenanza de la partida vecinal repone el registro, y cualquier vecino puede consultarlo.</p>
+<p>En San Isidro sigue vigente la <b>Ordenanza 6045/1984</b> de sociedades de fomento. Sus <b>art&iacute;culos 8, 9 y 10</b> le permiten al Departamento Ejecutivo investigar e intervenir una asociaci&oacute;n vecinal. Tambi&eacute;n le permiten quitarle la autorizaci&oacute;n y <span class="sg">disolverla</span>. Sin plazo para defenderse. Sin poder apelar ante el Concejo Deliberante.</p>
+<p>Un programa basado en la independencia de los vecinos no puede convivir con un art&iacute;culo que le permite al intendente disolver asociaciones de vecinos. <b>No se limitan: se derogan.</b> Es el primer proyecto de ordenanza que este gobierno manda al Concejo.</p>
+<p><b>Qu&eacute; pasa con las sociedades de fomento que hoy existen.</b> La 6045 las autoriza y las registra. Pero la oficina que la aplicaba se disolvi&oacute;, y el registro qued&oacute; sin actualizar. Proponemos no tocarlas: siguen existiendo. Lo que se deroga es el poder del Ejecutivo de disolverlas.</p>
+<p><span class="sg">Son justo las organizaciones que el 4.6 reconoce como comisi&oacute;n de su zona.</span> Este programa no las reemplaza: las convierte en las que reciben y manejan una partida. La ordenanza de la partida vecinal vuelve a armar el registro, y cualquier vecino puede consultarlo.</p>
 </div>
 
 
 <h2><span class="n">4.11</span>La inteligencia artificial del Municipio</h2>
-<p class="lead">Todo lo que propone este cap&iacute;tulo produce informaci&oacute;n: actas, obras
-priorizadas, decretos de adjudicaci&oacute;n, ejecuci&oacute;n, respuestas fundadas. Nadie tiene las
-horas para leerla, y <span class="sg">lo que nadie lee no controla nada</span>.</p>
+<p class="lead">Todo lo que propone este cap&iacute;tulo produce informaci&oacute;n: actas, obras elegidas, decretos de adjudicaci&oacute;n, gastos y respuestas. Nadie tiene tiempo para leerla toda. Y <span class="sg">lo que nadie lee no controla nada</span>.</p>
 <div class="cols">
-<p><b>Es el l&iacute;mite hist&oacute;rico de todos estos mecanismos, y explica por qu&eacute; se
-apagan.</b> Reikiavik cay&oacute; del 8,1% al 7,3% de participaci&oacute;n en tres a&ntilde;os;
-Wa&#322;brzych pierde propuestas desde 2013. No es que la gente no quiera decidir: es que decidir bien
-exige comparar presupuestos y seguir obras, y eso no entra despu&eacute;s del trabajo.</p>
-<p><b>Las medidas de m&aacute;s arriba atacan la barrera de poder ir.</b> <b>Ninguna ataca la barrera de poder entender</b>, que es la que
-decide si el voto vale algo o es una firma a ciegas.</p>
-<p><b>Y esa barrera, hasta hace poco, no ten&iacute;a soluci&oacute;n.</b> Ahora s&iacute;: proponemos una inteligencia artificial que lee todo lo que registra el Municipio y contesta preguntas en castellano. <span class="sg">Qu&eacute; se
-decidi&oacute; en mi zona este a&ntilde;o. En qu&eacute; est&aacute; la cloaca de mi calle. Qui&eacute;n
-gan&oacute; esa licitaci&oacute;n. Cu&aacute;nto se gast&oacute; ac&aacute; comparado con
-Mart&iacute;nez.</span></p>
-<p><b>Pero si sirviera s&oacute;lo para votar, una vez al a&ntilde;o, nadie la usar&iacute;a.</b> Por eso la inteligencia artificial del Municipio sirve para votar y para todo lo dem&aacute;s: contesta sobre todo lo que hace el Municipio, y la votaci&oacute;n de la partida vecinal es una de las cosas que hace.
-<span class="sg">Lo que hace que la gente la use los otros once meses es el turno, el trabajo y el tr&aacute;mite.</span></p>
+<p><b>Es el l&iacute;mite que tuvieron siempre estos mecanismos, y explica por qu&eacute; se apagan.</b> En Reikiavik, la participaci&oacute;n baj&oacute; del 8,1% al 7,3% en tres a&ntilde;os. En Wa&#322;brzych hay menos propuestas cada a&ntilde;o desde 2013. No es que la gente no quiera decidir. Es que decidir bien exige comparar presupuestos y seguir obras, y no hay tiempo para eso despu&eacute;s del trabajo.</p>
+<p><b>Las medidas de m&aacute;s arriba ayudan a poder ir.</b> <b>Ninguna ayuda a poder entender</b>, y eso es lo que decide si el voto vale algo o es una firma a ciegas.</p>
+<p><b>Y eso, hasta hace poco, no ten&iacute;a soluci&oacute;n.</b> Ahora s&iacute;. Proponemos una inteligencia artificial que lee todo lo que registra el Municipio y contesta las preguntas de los vecinos. Contesta en el idioma en que le hablen, sea castellano, ingl&eacute;s, chino o cualquier otro. <span class="sg">Qu&eacute; se decidi&oacute; en mi zona este a&ntilde;o. En qu&eacute; est&aacute; la cloaca de mi calle. Qui&eacute;n gan&oacute; esa licitaci&oacute;n. Cu&aacute;nto se gast&oacute; ac&aacute; comparado con Mart&iacute;nez.</span></p>
+<p><b>Pero si sirviera s&oacute;lo para votar, una vez por a&ntilde;o, nadie la usar&iacute;a.</b> Por eso, la inteligencia artificial del Municipio sirve para votar y para todo lo dem&aacute;s. Contesta sobre todo lo que hace el Municipio, y la votaci&oacute;n de la partida vecinal es una de esas cosas. <span class="sg">Lo que hace que la gente la use los otros once meses es el turno, el trabajo y el tr&aacute;mite.</span></p>
 </div>
 
 """ + fig("f_voz", "Una vecina le pregunta con la voz a la inteligencia artificial del Municipio. Ilustraci&oacute;n.", "30%") + """
 <h3>Qu&eacute; hace</h3>
 <div class="cols">
-<p>En el centro, <b>la inteligencia artificial del Municipio</b>, que lee todo lo que registra el Municipio y contesta en
-castellano mostrando de qu&eacute; documento sali&oacute;. Para decidir: <b>votaci&oacute;n y
-priorizaci&oacute;n de la partida vecinal</b>, con el padr&oacute;n de la zona y el acta, que cualquier
-vecino pide el mismo d&iacute;a; <b>seguimiento de cada obra priorizada</b>, con alerta autom&aacute;tica
-cuando se atrasa; y <b>transmisi&oacute;n de las asambleas, transcriptas y buscables</b>, con consulta en
-vivo durante la transmisi&oacute;n. Buscar una palabra en la asamblea de hace dos a&ntilde;os tiene que
-costar lo mismo que buscarla en un documento de texto.</p>
-<p>Para el resto del a&ntilde;o, que es lo que sostiene el uso y no s&oacute;lo la semana de la asamblea:
-<b>mercado laboral, p&uacute;blico y privado</b>, que es el enganche con el cap&iacute;tulo 5; <b>turnos de
-hospitales y centros de salud</b>, que la inteligencia artificial saca en la charla, recuerda y, si se cancela, pasa al
-siguiente de la lista de espera (5.6), sobre la plataforma municipal que ya da los de la veterinaria, con la
-adhesi&oacute;n al sistema provincial Mi Salud Digital pedida; <b>ocupaci&oacute;n de guardias en tiempo
-real</b>, por nivel de gravedad, como n&uacute;mero y no como imagen, para que la gente elija a cu&aacute;l ir; y
-<b>habilitaciones comerciales</b>, con consulta previa desde la c&aacute;mara del tel&eacute;fono antes de
-firmar un alquiler.</p>
-<p>Para controlar: <b>auditor&iacute;a de compras</b> &mdash;precio unitario, stock y comparaci&oacute;n
-autom&aacute;tica contra las compras anteriores, contra los otros dos hospitales y contra los municipios
-que publiquen&mdash; y un <b>canal de denuncias</b> que revisa la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del
-Concejo Deliberante &mdash;personas, no un algoritmo&mdash;, con cada denuncia y su respuesta consultables en la
-inteligencia artificial del Municipio. No se crea ning&uacute;n &oacute;rgano nuevo. Por ese canal llegan tambi&eacute;n las denuncias de comerciantes por coimas, aprietes y amenazas (5.9).</p>
-<p><b>Y todo lo que este programa promete que el vecino va a poder saber se pregunta ac&aacute;</b>, no se
-busca en un PDF suelto en un portal: lo que el 5.10 encontr&oacute; ca&iacute;do o escondido, la
-ejecuci&oacute;n por zona, el tiempo de respuesta de los reclamos y las veinte metas del cap&iacute;tulo 6.</p>
+<p>En el centro est&aacute; <b>la inteligencia artificial del Municipio</b>. Lee todo lo que registra el Municipio y contesta mostrando de qu&eacute; documento sali&oacute; cada dato. <b>Para decidir</b>, sirve para tres cosas. La primera es la <b>votaci&oacute;n de la partida vecinal y el orden de las obras</b>. Se hace con el padr&oacute;n de la zona y con un acta que cualquier vecino puede pedir el mismo d&iacute;a. La segunda es el <b>seguimiento de cada obra elegida</b>, con un aviso autom&aacute;tico cuando se atrasa. La tercera es la <b>transmisi&oacute;n de las asambleas</b>, que quedan escritas, se pueden buscar y se pueden consultar en vivo. Buscar una palabra en la asamblea de hace dos a&ntilde;os tiene que ser tan f&aacute;cil como buscarla en un documento de texto.</p>
+<p><b>Para el resto del a&ntilde;o, sirve para mucho m&aacute;s.</b> Eso es lo que hace que la gente la use, y no s&oacute;lo la semana de la asamblea. Muestra <b>ofertas de trabajo, p&uacute;blicas y privadas</b>, y as&iacute; se une con el cap&iacute;tulo 5. Saca <b>turnos de hospitales y centros de salud</b> mientras uno conversa con ella. Los recuerda, y si alguien cancela, le pasa el lugar al siguiente de la lista de espera (5.6). Usa la plataforma del Municipio que ya da los turnos de la veterinaria. Y el Municipio pide sumarse al sistema provincial Mi Salud Digital. Muestra en tiempo real <b>la ocupaci&oacute;n de las guardias</b>, por nivel de gravedad. La muestra como un n&uacute;mero y no como una imagen, para que la gente elija a cu&aacute;l ir. Y resuelve las <b>habilitaciones comerciales</b>: antes de firmar un alquiler, se puede consultar mostrando el local con la c&aacute;mara del tel&eacute;fono.</p>
+<p><b>Para controlar</b>, sirve para dos cosas. Una es la <b>auditor&iacute;a de compras</b>. Muestra el precio de cada unidad y lo que hay en dep&oacute;sito. Y compara sola cada compra con las anteriores, con los otros dos hospitales y con los municipios que publiquen sus datos. La otra es un <b>canal de denuncias</b>. Las denuncias las revisa la Comisi&oacute;n de Obras y Servicios P&uacute;blicos del Concejo Deliberante: personas, no un algoritmo. Cada denuncia y su respuesta se pueden consultar en la inteligencia artificial del Municipio. No se crea ning&uacute;n &oacute;rgano nuevo. Por ese canal llegan tambi&eacute;n las denuncias de comerciantes por coimas, aprietes y amenazas (5.9).</p>
+<p><b>Y todo lo que este programa promete que el vecino va a poder saber se pregunta ac&aacute;.</b> No hay que buscarlo en un PDF suelto en un portal. Se puede preguntar por lo que el 5.10 encontr&oacute; ca&iacute;do o escondido, y por lo que se gast&oacute; en cada zona. Tambi&eacute;n por el tiempo de respuesta de los reclamos y por las veinte metas del cap&iacute;tulo 6.</p>
 </div>
 <h3>Escucha a los vecinos, les hace el seguimiento y les responde</h3>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: un solo circuito, del vecino al responsable y de vuelta al vecino</div>
-<p><b>1 &middot; Escucha todo.</b> Cuenta todo lo que los vecinos le dicen a la inteligencia artificial del Municipio en
-cualquier charla, no s&oacute;lo el reclamo formal. Y recibe denuncias, porque el Municipio es de todos los vecinos: cualquier
-vecino, comerciante o artista le muestra, con foto o video, el mal uso de un bien municipal o un pedido indebido de un
-empleado, en cualquier &aacute;rea; lo registra, lo deriva al responsable y le cuenta qu&eacute; se hizo, como con los reclamos.</p>
-<p><b>2 &middot; Junta todo.</b> Con miles de quejas por d&iacute;a, no manda cada una: las agrupa por tema y por zona, con cu&aacute;ntas
-son, si crecen y qu&eacute; tan urgentes son. Cada responsable de &aacute;rea y cada comisi&oacute;n vecinal recibe ese resumen, y una alerta
-cuando algo se dispara: la obra que se atrasa, la recolecci&oacute;n que falla en una zona, la inspecci&oacute;n que se aparta de lo
-normal, el reclamo que tarda m&aacute;s en Boulogne que en Acassuso.</p>
-<p><b>3 &middot; Hace el seguimiento.</b> Le pone plazo a cada tema y le recuerda al responsable que act&uacute;e y conteste. Si no
-contesta a tiempo, el tema sube a su superior y queda a la vista en el seguimiento p&uacute;blico.</p>
+<p><b>1 &middot; Escucha todo.</b> Tiene en cuenta todo lo que los vecinos le dicen a la inteligencia artificial del Municipio en cualquier conversaci&oacute;n, no s&oacute;lo el reclamo formal. Y recibe denuncias, porque el Municipio es de todos los vecinos. Cualquier vecino, comerciante o artista le puede mostrar, con una foto o un video, el mal uso de algo del Municipio. Tambi&eacute;n le puede mostrar un pedido indebido de un empleado, en cualquier &aacute;rea. Ella lo registra, se lo pasa al responsable y le cuenta al vecino qu&eacute; se hizo, como con los reclamos.</p>
+<p><b>2 &middot; Junta todo.</b> Con miles de quejas por d&iacute;a, no manda cada una por separado. Las agrupa por tema y por zona. Dice cu&aacute;ntas son, si crecen y qu&eacute; tan urgentes son. Cada responsable de &aacute;rea y cada comisi&oacute;n vecinal recibe ese resumen. Y recibe un aviso cuando algo se dispara, como una obra que se atrasa o un reclamo que tarda m&aacute;s en Boulogne que en Acassuso.</p>
+<p><b>3 &middot; Hace el seguimiento.</b> Le pone un plazo a cada tema y le recuerda al responsable que act&uacute;e y conteste. Si no contesta a tiempo, el tema pasa a su jefe y queda a la vista de todos en el seguimiento p&uacute;blico.</p>
 <p><b>4 &middot; Le responde al vecino como alguien que lo representa ante el Municipio:</b> &laquo;El otro d&iacute;a me comentaste que te
 hab&iacute;as quejado de esto. Habl&eacute; con el encargado del &aacute;rea y me mand&oacute; esta respuesta. &iquest;Est&aacute; bien? &iquest;Quer&eacute;s que le diga algo
 m&aacute;s?&raquo;. Lo que el vecino contesta vuelve al circuito. <span class="sg">Trabaja para el vecino, que se siente defendido y
 representado.</span></p>
-<p><b>5 &middot; Lo grave va a quien no depende del responsable.</b> Lo que parece corrupci&oacute;n, mala intenci&oacute;n o un error grave
-no va s&oacute;lo al responsable, que puede estar involucrado: va tambi&eacute;n a un control independiente &mdash;la auditor&iacute;a
-externa, el Concejo y la asociaci&oacute;n de la zona&mdash;.</p>
-<p><b>6 &middot; Con l&iacute;mites.</b> La inteligencia artificial corrige sola lo que es informaci&oacute;n, respuestas y datos; cambiar
-reglas o sancionar a alguien lo decide siempre una persona (Ley 25.326, art&iacute;culo 20). Al responsable le llegan los temas
-y las zonas, no los nombres de los vecinos, salvo que el vecino quiera darlo.</p>
+<p><b>5 &middot; Lo grave va a alguien que no depende del responsable.</b> Lo que parece corrupci&oacute;n, mala intenci&oacute;n o un error grave no va s&oacute;lo al responsable, que puede estar involucrado. Va tambi&eacute;n a un control independiente: la auditor&iacute;a externa, el Concejo y la asociaci&oacute;n de la zona.</p>
+<p><b>6 &middot; Con l&iacute;mites.</b> La inteligencia artificial corrige sola lo que es informaci&oacute;n, respuestas y datos. Cambiar reglas o sancionar a alguien lo decide siempre una persona (Ley 25.326, art&iacute;culo 20). Al responsable le llegan los temas y las zonas, no los nombres de los vecinos, salvo que el vecino quiera dar el suyo.</p>
 </div>
 <h3>Un espacio propio para cada asociaci&oacute;n</h3>
 <div class="callout g">
 <div class="clabel">Lo que proponemos: las asociaciones, con la misma herramienta que el Municipio</div>
-<p><b>1 &middot; Gratis, para cada asociaci&oacute;n vecinal, asociaci&oacute;n de parque y comisi&oacute;n zonal:</b> su propio espacio en la
-inteligencia artificial del Municipio, primero para las asociaciones inscriptas en el Municipio.</p>
-<p><b>2 &middot; Ah&iacute; arma lo que necesita para organizarse y defender lo que defiende</b> &mdash;su parque, su zona, sus
-vecinos&mdash;. No s&oacute;lo procesa textos y contesta: genera lo que haga falta para cuidar y mejorar el Municipio, como
-notas y pedidos de informes; im&aacute;genes y renders de c&oacute;mo quedar&iacute;a la plaza con la obra que proponen; actas, padr&oacute;n y
-votaciones internas; y an&aacute;lisis de los datos del Municipio sobre su zona.</p>
-<p><b>3 &middot; Los pasantes de la tecnicatura la ayudan a armar sus m&oacute;dulos</b>: es pr&aacute;ctica para ellos y apoyo para la
-asociaci&oacute;n.</p>
-<p><b>4 &middot; El espacio es de la asociaci&oacute;n:</b> el Municipio no lo lee ni lo filtra, y la asociaci&oacute;n lo puede usar para
-oponerse al propio Municipio.</p>
-<p><b>5 &middot; Un l&iacute;mite de para qu&eacute; se usa, m&aacute;s que de cu&aacute;nto, y vale para toda la inteligencia artificial del
-Municipio.</b> Es para los temas del Municipio, para cualquier vecino; para lo de cada asociaci&oacute;n, en su espacio; para la
-formaci&oacute;n, para los alumnos y pasantes de la tecnicatura; y, por convenio, para las empresas del semillero que trabajan
-con pasantes del Municipio. No es para trabajo privado que no tiene que ver con el Municipio: si alguien pide algo
-ajeno, le dice que no es para eso. Hay cupos l&oacute;gicos por tipo de usuario, generosos para el uso normal, y quien
-necesita m&aacute;s para algo del Municipio lo pide y se ampl&iacute;a. Una cuenta por persona, con identidad verificada, y ning&uacute;n
-programa de terceros se conecta sin convenio: as&iacute; nadie engancha robots. El control es autom&aacute;tico y mira la categor&iacute;a
-de uso y el volumen, no el contenido, para no leer el espacio de nadie: marca lo que se sale de lo normal, una persona
-revisa, y antes de cortar se le avisa al usuario o a la asociaci&oacute;n. Nada de propaganda partidaria (necesita dictamen de
-un abogado).</p>
+<p><b>1 &middot; Cada asociaci&oacute;n vecinal, asociaci&oacute;n de parque y comisi&oacute;n zonal tiene gratis su propio espacio</b> en la inteligencia artificial del Municipio. Empieza por las asociaciones inscriptas en el Municipio.</p>
+<p><b>2 &middot; Ah&iacute; arma lo que necesita para organizarse y defender lo suyo:</b> su parque, su zona, sus vecinos. No s&oacute;lo lee textos y contesta. Tambi&eacute;n hace lo que haga falta para cuidar y mejorar el Municipio. Puede escribir notas y pedidos de informes. Puede hacer im&aacute;genes de c&oacute;mo quedar&iacute;a la plaza con la obra que proponen. Puede llevar las actas, el padr&oacute;n y las votaciones internas. Y puede analizar los datos del Municipio sobre su zona.</p>
+<p><b>3 &middot; Los pasantes de la tecnicatura ayudan a cada asociaci&oacute;n a armar sus herramientas.</b> Para ellos es pr&aacute;ctica, y para la asociaci&oacute;n es apoyo.</p>
+<p><b>4 &middot; El espacio es de la asociaci&oacute;n.</b> El Municipio no lo lee ni lo filtra. Y la asociaci&oacute;n lo puede usar para oponerse al propio Municipio.</p>
+<p><b>5 &middot; Hay un l&iacute;mite sobre para qu&eacute; se usa, m&aacute;s que sobre cu&aacute;nto, y vale para toda la inteligencia artificial del Municipio.</b> Es para los temas del Municipio, y la puede usar cualquier vecino. Cada asociaci&oacute;n la usa para sus temas, en su espacio. Los alumnos y pasantes de la tecnicatura la usan para formarse. Y, por convenio, la usan las empresas del semillero que trabajan con pasantes del Municipio. No es para trabajos privados que no tienen que ver con el Municipio: si alguien pide algo ajeno, le dice que no es para eso. Hay l&iacute;mites razonables de uso seg&uacute;n el tipo de usuario, amplios para el uso normal. Quien necesita m&aacute;s para algo del Municipio lo pide, y se ampl&iacute;a. Hay una cuenta por persona, con la identidad verificada. Y ning&uacute;n programa de otros se conecta sin convenio: as&iacute; nadie conecta robots. El control es autom&aacute;tico. Mira el tipo de uso y la cantidad, no el contenido, para no leer el espacio de nadie. Marca lo que se sale de lo normal, y una persona lo revisa. Antes de cortar, se le avisa al usuario o a la asociaci&oacute;n. No se permite propaganda partidaria (necesita dictamen de un abogado).</p>
 </div>
 <div class="pull"><div class="plabel">Por qu&eacute; esto no se puede simular</div>
 <p>Publicar en un PDF que nadie abre se puede simular. Que la adjudicaci&oacute;n aparezca el d&iacute;a que
@@ -765,54 +421,35 @@ se firma, y que cualquiera se la pregunte a la inteligencia artificial del Munic
 <div class="cols">
 <p><b>Responde s&oacute;lo sobre lo que el Municipio registr&oacute;, y siempre muestra de qu&eacute; documento sali&oacute;.</b>
 Si el dato no existe, lo dice: esa respuesta tambi&eacute;n es informaci&oacute;n.</p>
-<p><b>No modera, no filtra y no decide qu&eacute; puede saber el vecino.</b> Un filtro autom&aacute;tico entre el
-vecino y la denuncia ser&iacute;a exactamente lo que este cap&iacute;tulo combate.</p>
-<p><b>Se&ntilde;ala anomal&iacute;as, no acusa.</b> Dice &laquo;este precio est&aacute; 40% por encima
-de la compra anterior&raquo; y muestra los dos documentos. <span class="sg">Qui&eacute;n explica es el
-funcionario y qui&eacute;n decide si hay delito es un juez.</span></p>
-<p><b>Y sugiere d&oacute;nde est&aacute; el dato, nunca qu&eacute; conviene votar.</b> Puede consultar
-lo que publican otros municipios, de modo que un vecino compare cu&aacute;nto cost&oacute; una obra
-parecida en otro lado <b>antes</b> de votar. La comparaci&oacute;n es la &uacute;nica herramienta de
-control que funciona sin auditores.</p>
+<p><b>No modera, no filtra y no decide qu&eacute; puede saber el vecino.</b> Un filtro autom&aacute;tico entre el vecino y la denuncia ser&iacute;a justo lo que este cap&iacute;tulo combate.</p>
+<p><b>Muestra lo que no cierra, pero no acusa.</b> Dice &laquo;este precio est&aacute; 40% por encima de la compra anterior&raquo; y muestra los dos documentos. <span class="sg">El que explica es el funcionario, y el que decide si hay delito es un juez.</span></p>
+<p><b>Y dice d&oacute;nde est&aacute; el dato, nunca qu&eacute; conviene votar.</b> Puede consultar lo que publican otros municipios. As&iacute;, un vecino puede comparar cu&aacute;nto cost&oacute; una obra parecida en otro lado <b>antes</b> de votar. Comparar es la &uacute;nica forma de control que funciona sin auditores.</p>
 </div>
 
 <h3>Por qu&eacute; proponemos desarrollarla ac&aacute; y no adoptar la plataforma que ya existe</h3>
 <div class="cols">
-<p><b>La candidata obvia era Decidim</b>, la plataforma de participaci&oacute;n que desarroll&oacute;
-Barcelona y que usan Nueva York, Helsinki, la Comisi&oacute;n Europea y el Senado franc&eacute;s. Se
-descarta por una raz&oacute;n de licencia y no de calidad.</p>
-<p><b>Decidim es AGPL, que es una licencia copyleft:</b> todo m&oacute;dulo construido encima debe
-publicarse libre. <span class="sg">Eso impedir&iacute;a licenciar o cobrar por lo que San Isidro
-desarrolle</span>, y lo que se desarrolle es el activo que este cap&iacute;tulo quiere dejar instalado
-en el partido.</p>
-<p><b>Queda como referencia de dise&ntilde;o, no como base de c&oacute;digo.</b> Mirar un producto y
-hacer el propio es legal; partir de su c&oacute;digo, no. El cimiento son componentes con licencia
-permisiva &mdash;MIT, Apache&mdash;, que no arrastran esa obligaci&oacute;n.</p>
-<p><b>Y la construye gente del partido.</b> Docentes y t&eacute;cnicos locales, con pasantes del segundo a&ntilde;o
-de la formaci&oacute;n laboral y egresados como juniors, contratados con la prioridad de los egresados y el m&iacute;nimo local de la Ordenanza X. Las universidades del partido auditan la seguridad, <span class="sg">y esa
-auditor&iacute;a es a su vez trabajo</span>.</p>
+<p><b>La opci&oacute;n m&aacute;s obvia era Decidim</b>, la plataforma de participaci&oacute;n que hizo Barcelona. La usan Nueva York, Helsinki, la Comisi&oacute;n Europea y el Senado franc&eacute;s. La descartamos por su licencia, no por su calidad.</p>
+<p><b>Decidim tiene una licencia AGPL.</b> Esa licencia obliga a publicar libre todo lo que se construya encima. <span class="sg">As&iacute;, San Isidro no podr&iacute;a licenciar ni cobrar por lo que desarrolle.</span> Y lo que se desarrolle es justo lo que este cap&iacute;tulo quiere dejar en el partido.</p>
+<p><b>Decidim queda como ejemplo de dise&ntilde;o, no como base del programa.</b> Mirar un producto y hacer uno propio es legal. Partir de su c&oacute;digo, no. La base son piezas con licencias que no traen esa obligaci&oacute;n, como MIT o Apache.</p>
+<p><b>Y la construye gente del partido.</b> La hacen docentes y t&eacute;cnicos del partido, con pasantes del segundo a&ntilde;o de la formaci&oacute;n y con egresados como juniors. Se contratan con prioridad para los egresados y con el m&iacute;nimo de gente del partido de la Ordenanza X. Las universidades del partido controlan la seguridad, <span class="sg">y ese control es tambi&eacute;n trabajo</span>.</p>
 </div>
 
 <h3>El t&iacute;tulo, que es lo que hace que el egresado no quede atado</h3>
 <div class="cols">
-<p><b>Proponemos que el t&iacute;tulo lo d&eacute; la UNSO</b>, la universidad nacional con sede en San Isidro: una tecnicatura universitaria de dos a&ntilde;os, con la validez nacional que se le pide al Ministerio de Educaci&oacute;n en los primeros tres meses (6.4).</p>
-<p><b>Sin eso, el egresado tiene experiencia y no puede probarla</b>, y queda atado al Municipio como
-&uacute;nico empleador que sabe lo que sabe hacer. Con t&iacute;tulo, lo que aprendi&oacute; en los proyectos del Municipio &mdash;la plataforma, la automatizaci&oacute;n, los relevamientos&mdash; vale en cualquier empresa del pa&iacute;s.</p>
-<p><span class="sg">El municipio es la cuna y no el techo: si se van, funcion&oacute;.</span> Un programa
-de formaci&oacute;n cuyo &uacute;nico destino es el propio Estado que lo dicta no es pol&iacute;tica de
-empleo, es planta encubierta. Y para que puedan ir m&aacute;s lejos, el Municipio arma con la UNSO un puente con los grandes
-laboratorios de inteligencia artificial del mundo (5.3).</p>
+<p><b>Proponemos que el t&iacute;tulo lo d&eacute; la UNSO</b>, la universidad nacional con sede en San Isidro. Es una tecnicatura universitaria de dos a&ntilde;os. Su validez nacional se le pide al Ministerio de Educaci&oacute;n en los primeros tres meses (6.4).</p>
+<p><b>Sin t&iacute;tulo, el egresado tiene experiencia y no puede probarla.</b> Y queda atado al Municipio, el &uacute;nico empleador que sabe lo que &eacute;l sabe hacer. Con t&iacute;tulo, lo que aprendi&oacute; en los proyectos del Municipio vale en cualquier empresa del pa&iacute;s. Por ejemplo, lo que aprendi&oacute; con la plataforma, la automatizaci&oacute;n o los relevamientos.</p>
+<p><span class="sg">El Municipio es el punto de partida, no el techo: si se van, funcion&oacute;.</span> Si el &uacute;nico destino de una formaci&oacute;n es el propio Estado que la da, no es una pol&iacute;tica de empleo. Es sumar personal al Estado de forma encubierta. Y para que puedan ir m&aacute;s lejos, el Municipio arma con la UNSO un puente con los grandes laboratorios de inteligencia artificial del mundo (5.3).</p>
 </div>
 
 <h3>Cu&aacute;nto cuesta y de d&oacute;nde sale</h3>
-""" + exhead("c", "Cincuenta y nueve personas, abiertas por funci&oacute;n: 10 seniors, 17 semi-seniors, 17 juniors y 15 pasantes",
-             "Equipo en r&eacute;gimen, con las cargas del empleador, en pesos de diciembre de 2025.",
+""" + exhead("c", "Cincuenta y nueve personas, seg&uacute;n lo que hace cada una: 10 seniors, 17 semi-seniors, 17 juniors y 15 pasantes",
+             "El equipo completo, con las cargas que paga el empleador, en pesos de diciembre de 2025.",
              key="equipo") + """
 <table>
 <colgroup><col><col style="width:30pt"><col style="width:34pt"><col style="width:30pt"><col style="width:48pt"><col style="width:64pt"></colgroup>
 <tr class="hd"><th>Funci&oacute;n</th><th class="r">Sr</th><th class="r">SSr</th><th class="r">Jr</th><th class="r">Pasantes</th><th class="r">Por a&ntilde;o</th></tr>
 <tr><td class="l">Decidir: votaci&oacute;n y seguimiento de obra</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">4</td><td class="n">188,5 M</td></tr>
-<tr><td class="l">Consultar: respuestas en castellano, datos al d&iacute;a, auditor&iacute;a de compras</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">4</td><td class="n">188,5 M</td></tr>
+<tr><td class="l">Consultar: respuestas en el idioma del vecino, datos al d&iacute;a, auditor&iacute;a de compras</td><td class="n">1</td><td class="n">2</td><td class="n">2</td><td class="n">4</td><td class="n">188,5 M</td></tr>
 <tr><td class="l">Servicios: turnos, guardias, habilitaciones, empleo, denuncias</td><td class="n">1</td><td class="n">2</td><td class="n">3</td><td class="n">4</td><td class="n">211,8 M</td></tr>
 <tr><td class="l">Transmisi&oacute;n y transcripci&oacute;n</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">2</td><td class="n">120,8 M</td></tr>
 <tr><td class="l">Integraci&oacute;n con los sistemas del Municipio</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">117,6 M</td></tr>
@@ -834,22 +471,12 @@ laboratorios de inteligencia artificial del mundo (5.3).</p>
 <tr class="hi"><td class="l"><b>Ciencia y T&eacute;cnica, en total</b></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"><b>2.091,7 M</b></td></tr>
 <tr><td class="l">Fuera de Ciencia y T&eacute;cnica, en las &aacute;reas: 4 docentes que revisan el profesor digital, en Educaci&oacute;n, y 4 que validan las actas de multas, en Tr&aacute;nsito o el Juzgado de Faltas</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">202,0 M</td></tr>
 </table>
-<p class="cap"><b>Nota:</b> sueldos brutos de mercado por trece, m&aacute;s las cargas del empleador; pasantes, 240.000 $ por
-mes. Son de referencia, a presupuestar y licitar antes de comprometerse; el detalle, en las notas del cap&iacute;tulo 4.
+<p class="cap"><b>Nota:</b> son sueldos brutos de mercado, por trece meses, m&aacute;s las cargas del empleador. Los pasantes cobran 240.000 $ por mes. Son cifras de referencia, que se presupuestan y se licitan antes de comprometerse. El detalle est&aacute; en las notas del cap&iacute;tulo 4.
 <span class="tag m">Estimado</span></p>
 <div class="cols">
-<p><b>Proponemos que salga de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones al a&ntilde;o.</b> Con los dispositivos son
-2.091,7 millones, el <b>25,6%</b> de esa partida, y con el semillero de empresas del 5.3, el 27,1%. No hay fondos nuevos y no hay una partida que crear.</p>
-<p><b>Para dimensionarlo:</b> la plataforma, 2.000,7 millones, es
-<span class="sg">el 14% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>
-&mdash;14.654,8 millones, el quinto programa del presupuesto&mdash;.</p>
-<p><b>No se cuenta dos veces.</b> Estos 2.000,7 millones pagan la plataforma y los m&oacute;dulos que construye el propio
-equipo, entre ellos las habilitaciones y el profesor digital. El m&oacute;dulo de salud se construye con el presupuesto de su
-&aacute;rea y se integra a la misma plataforma: con la partida de contrataci&oacute;n del cap&iacute;tulo 5 &mdash;los dos primeros a&ntilde;os, con el
-gasto flexible libre (3.4)&mdash;, igual que la automatizaci&oacute;n de tareas de la planta. Lo que usa el profesor digital &mdash;el
-modelo, la voz y la cara&mdash; lo paga Educaci&oacute;n (5.8), y la anal&iacute;tica de seguridad usa las 110 licencias que el Municipio ya
-compr&oacute; (5.7). <span class="sg">El vecino ve una sola cosa; el presupuesto est&aacute; en varios lugares, y cada uno se paga una
-vez.</span></p>
+<p><b>Proponemos que salga de Ciencia y T&eacute;cnica, que ya tiene 8.155 millones por a&ntilde;o.</b> Con los dispositivos, son 2.091,7 millones: el <b>25,6%</b> de esa partida. Con el semillero de empresas del 5.3, es el 27,1%. No hay fondos nuevos y no hay que crear una partida.</p>
+<p><b>Para tener una idea del tama&ntilde;o:</b> la plataforma cuesta 2.000,7 millones. Es <span class="sg">el 14% de lo que cuesta un a&ntilde;o de mantenimiento y embellecimiento</span>, que son 14.654,8 millones. Es el quinto programa m&aacute;s grande del presupuesto.</p>
+<p><b>Nada se cuenta dos veces.</b> Estos 2.000,7 millones pagan la plataforma y las partes que construye el propio equipo, como las habilitaciones y el profesor digital. La parte de salud se construye con el presupuesto de salud y se suma a la misma plataforma. Se paga con la partida de contrataci&oacute;n del cap&iacute;tulo 5, y los dos primeros a&ntilde;os, con la parte libre del gasto flexible (3.4). Lo mismo pasa con la automatizaci&oacute;n de tareas del personal. Lo que usa el profesor digital lo paga Educaci&oacute;n (5.8): el modelo, la voz y la cara. Y el an&aacute;lisis de video de seguridad usa las 110 licencias que el Municipio ya compr&oacute; (5.7). <span class="sg">El vecino ve una sola cosa. El presupuesto est&aacute; en varios lugares, y cada parte se paga una vez.</span></p>
 <p><b>Y se licita.</b> Lo que queda comprometido no es el n&uacute;mero: es que la inteligencia artificial del Municipio exista y que la
 construya gente del partido.</p>
 </div>
@@ -859,37 +486,26 @@ construya gente del partido.</p>
 <p class="lead">El cap&iacute;tulo 3 dice cu&aacute;nto cuesta este programa en dinero. Falta decir
 cu&aacute;nto cuesta en otra moneda, porque tambi&eacute;n se paga.</p>
 <div class="cols">
-<p><b>Al Departamento Ejecutivo, que es el que lo propone.</b> Hoy el intendente decide d&oacute;nde van
-los 57.816 millones de obra p&uacute;blica.</p>
-<p>Proponemos que al cuarto a&ntilde;o decida sobre la mitad.
-<span class="sg">Este programa le saca facultades al cargo que pretende ocupar</span>, y las escribe en
-una ordenanza para que no pueda devolv&eacute;rselas despu&eacute;s. Es la &uacute;nica manera de que
-valga algo: un mecanismo que el intendente pueda desarmar cuando le incomode no es un mecanismo.</p>
-<p><b>A las &aacute;reas que hoy priorizan la obra.</b> Secretar&iacute;as que arman su plan de trabajo
-decidiendo qu&eacute; se hace y d&oacute;nde, pasan a ejecutar prioridades que se votaron en una
-asamblea. Es una p&eacute;rdida real de discrecionalidad.</p>
-<p><b>A las empresas que hoy ejecutan esa obra.</b> Donde una asociaci&oacute;n vecinal re&uacute;na el
-60% y ejecute directamente, hay una contratista que no factura eso. No es la mitad del mercado
-&mdash;s&oacute;lo ocurre donde la zona quiera y pueda&mdash; pero es trabajo que cambia de manos.</p>
-<p><b>Y a quien la tabla de valuaci&oacute;n de 2008 le viene cobrando de menos.</b> Actualizarla
-<span class="sg">le cuesta exactamente a quien viene pagando por debajo de lo que vale su
-manzana</span>.</p>
+<p><b>Le molesta al Departamento Ejecutivo, que es el que lo propone.</b> Hoy el intendente decide d&oacute;nde van los 57.816 millones de obra p&uacute;blica. Proponemos que, al cuarto a&ntilde;o, decida s&oacute;lo sobre la mitad. <span class="sg">Este programa le quita poder al cargo que quiere ocupar</span>, y lo escribe en una ordenanza para que no pueda recuperarlo despu&eacute;s. Es la &uacute;nica manera de que valga algo. Un mecanismo que el intendente puede desarmar cuando le molesta no es un mecanismo.</p>
+<p><b>Les molesta a las &aacute;reas que hoy eligen la obra.</b> Hay secretar&iacute;as que arman su plan decidiendo qu&eacute; se hace y d&oacute;nde. Ahora van a hacer lo que se vot&oacute; en una asamblea. Pierden de verdad margen para decidir.</p>
+<p><b>Les molesta a las empresas que hoy hacen esa obra.</b> Donde una asociaci&oacute;n vecinal re&uacute;na el 60% y haga la obra, hay una contratista que no la factura. No es la mitad del mercado, porque s&oacute;lo pasa donde la zona quiera y pueda. Pero es trabajo que cambia de manos.</p>
+<p><b>Y le molesta a quien la tabla de valuaci&oacute;n de 2008 le viene cobrando de menos.</b> Actualizarla <span class="sg">le cuesta justo a quien viene pagando menos de lo que vale su manzana</span>.</p>
 </div>
 
-<h2><span class="n">4.13</span>Lo que dice este cap&iacute;tulo, en doce l&iacute;neas</h2>
+<h2><span class="n">4.13</span>Lo que dice este cap&iacute;tulo, en doce puntos</h2>
 <ol class="n">
-<li>En la Provincia de Buenos Aires lo que vota una asamblea de vecinos no puede obligar al Municipio: en diciembre de 2025 el intendente de Pinamar vet&oacute; por eso una ordenanza que lo intentaba. Lo que s&iacute; puede volverse obligatorio es la partida, y as&iacute; funcionan hace a&ntilde;os Rosario, Mor&oacute;n y decenas de municipios.</li>
-<li>La Constituci&oacute;n provincial manda desde 1994 que los municipios tengan refer&eacute;ndum, consulta e iniciativa popular, y la Legislatura sigue sin hacerlo: todo este mecanismo trabaja alrededor de esa omisi&oacute;n de treinta y dos a&ntilde;os.</li>
-<li>Proponemos que la obra que deciden los vecinos suba del 12,5% al 50% de la obra p&uacute;blica en cuatro a&ntilde;os: de 7.227 a 28.908 millones por a&ntilde;o, uno de cada dos pesos de obra, sin gasto nuevo.</li>
-<li>Boulogne y B&eacute;ccar suman dos tercios de la necesidad del partido. Proponemos repartir el dinero mitad por poblaci&oacute;n y mitad por necesidad contada en hogares &mdash;sin cloaca, sin gas de red, con necesidades b&aacute;sicas insatisfechas y hacinados&mdash;, con la f&oacute;rmula escrita en la ordenanza: B&eacute;ccar recibe 1,71 veces por habitante lo que Mart&iacute;nez, y a Acassuso sus 827 millones le alcanzan de sobra para lo que le falta.</li>
-<li>Dos capas: los vecinos priorizan en asamblea y el Ejecutivo tiene que contestar por escrito, con fundamentos y en plazo; y donde el 60% de los beneficiarios lo pide por escrito, la asociaci&oacute;n vecinal hace la obra, contratada directamente, como permite el art&iacute;culo 132 de la Ley Org&aacute;nica y como ya hace Pilar.</li>
-<li>Las comisiones son las asociaciones vecinales que ya existen; vota cada persona de 16 a&ntilde;os o m&aacute;s que vive o trabaja en la zona; si una comisi&oacute;n falla, se la interviene y su partida queda en su zona; quien prioriza una obra no la cobra, y la reciben tres vecinos que no la hacen; y lo que es de todo el partido, como la costa, lo decide un panel sorteado.</li>
-<li>El Concejo tiene 24 bancas repartidas en diez bloques, y ninguno pasa de cuatro: cada ordenanza necesita trece votos, de cuatro bloques por lo menos. Y en 2025 el Ejecutivo vet&oacute; cuatro ordenanzas en once semanas, y en uno de esos vetos sostuvo que las decisiones t&eacute;cnicas son s&oacute;lo suyas: por eso el mecanismo va por ordenanza, con la partida afectada y los plazos escritos.</li>
-<li>Juntas, las dos capas cambian qui&eacute;n hace la obra: el dinero, el trabajo y lo aprendido se quedan en el barrio, y los 28.908 millones del a&ntilde;o 4 son casi cuatro veces todo el programa de empleo y vivienda.</li>
-<li>Cada comisi&oacute;n ve cu&aacute;nto se gast&oacute; en su zona, en qu&eacute; y d&oacute;nde &mdash;un dato que hoy no existe y hay que construir&mdash;, y la partida queda protegida como recurso afectado (art&iacute;culo 119).</li>
-<li>El primer proyecto que entra al Concejo deroga los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045, que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
-<li>Y nada de esto funciona sin la inteligencia artificial del Municipio: lee todo lo que el Municipio registra y contesta en castellano mostrando de d&oacute;nde sale cada dato; sirve para votar y para el resto del a&ntilde;o &mdash;turnos, guardias, trabajo, habilitaciones, compras y denuncias&mdash;; escucha a los vecinos, les hace el seguimiento y les responde, y lo grave lo manda a un control independiente; y cada asociaci&oacute;n tiene ah&iacute; su espacio, gratis. La construye gente del partido, con t&iacute;tulo de la UNSO, y cuesta 2.091,7 millones por a&ntilde;o, de Ciencia y T&eacute;cnica: 59 personas en la plataforma y 5 en dispositivos.</li>
-<li>Le molesta al propio cargo de intendente, que deja de decidir la mitad de la obra; a las &aacute;reas que hoy la priorizan; a las empresas que hoy la hacen, donde la haga el barrio; y a quien la tabla de 2008 le cobra de menos.</li>
+<li>En la Provincia de Buenos Aires, lo que vota una asamblea de vecinos no puede obligar al Municipio. Lo que s&iacute; puede volverse obligatorio es la partida. As&iacute; funcionan hace a&ntilde;os Rosario, Mor&oacute;n y decenas de municipios.</li>
+<li>La Constituci&oacute;n provincial manda desde 1994 que los municipios tengan refer&eacute;ndum, consulta e iniciativa popular. La Legislatura todav&iacute;a no lo hizo, y este mecanismo trabaja alrededor de ese vac&iacute;o.</li>
+<li>Proponemos que, en cuatro a&ntilde;os, los vecinos decidan la mitad de la obra p&uacute;blica. No es gasto nuevo.</li>
+<li>El dinero se reparte mitad por poblaci&oacute;n y mitad por necesidad, contada en hogares. La f&oacute;rmula queda escrita en la ordenanza. As&iacute; reciben m&aacute;s las zonas que m&aacute;s necesitan, como Boulogne y B&eacute;ccar.</li>
+<li>Hay dos capas. En la primera, los vecinos eligen las obras en asamblea, y el Ejecutivo tiene que contestar por escrito. En la segunda, donde el 60% de los vecinos lo pide, la asociaci&oacute;n vecinal hace la obra, como permite la ley y como ya hace Pilar.</li>
+<li>Las comisiones son las asociaciones vecinales que ya existen. Votan las personas de 16 a&ntilde;os o m&aacute;s que viven o trabajan en la zona. Quien elige una obra no la cobra. Y lo que es de todo el partido, como la costa, lo decide un panel sorteado.</li>
+<li>Ning&uacute;n bloque del Concejo puede aprobar nada solo: cada ordenanza necesita cuatro bloques. Por eso el mecanismo va por ordenanza, con la partida reservada y los plazos escritos.</li>
+<li>Juntas, las dos capas cambian qui&eacute;n hace la obra. El dinero, el trabajo y lo aprendido se quedan en el barrio.</li>
+<li>Cada comisi&oacute;n ve cu&aacute;nto se gast&oacute; en su zona, y la partida queda protegida por ley.</li>
+<li>El primer proyecto que entra al Concejo deroga los art&iacute;culos que hoy le permiten al intendente disolver una asociaci&oacute;n vecinal.</li>
+<li>Nada de esto funciona sin la inteligencia artificial del Municipio. Contesta lo que cualquier vecino le pregunte y muestra de d&oacute;nde sale cada dato. Sirve para votar y para todo el a&ntilde;o: turnos, trabajo, tr&aacute;mites y denuncias. La construye gente del partido, y se paga con la partida de Ciencia y T&eacute;cnica.</li>
+<li>Le molesta al propio cargo de intendente, que deja de decidir la mitad de la obra. Tambi&eacute;n a las &aacute;reas y a las empresas que hoy deciden y hacen esa obra. Y a quien la tabla de 2008 le cobra de menos.</li>
 </ol>
 <p><b>Proponemos que este mecanismo decida la mitad de la obra p&uacute;blica. El cap&iacute;tulo siguiente dice qu&eacute; hacemos con todo lo dem&aacute;s.</b></p>
 """ + fig("f_mesa", "Trabajo sobre el mapa del partido. Ilustraci&oacute;n.") + """
