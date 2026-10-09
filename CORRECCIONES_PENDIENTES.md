@@ -3237,3 +3237,29 @@ repitiendo arriba su título con «(sigue)».
   qué se gasta cada peso), «pesos devengados» pasa a «pesos gastados» (assets/svg y doc/charts.py). Lo demás queda.
   Pantalla 52 págs. (máx. 2.680 pt); A4 127 hojas, ninguna con más de un tercio en blanco, 161 recortes sin
   diferencias, el texto igual al de la pantalla; cinco tests OK.
+
+## DISPATCH 12 · SEGUNDA LECTURA (09/10) · APLICADO
+- «Chicos» pasa a «alumnos» en la segunda mención, en los cuatro lugares: «Qué proponemos hacer», punto 3 («a los que
+  van unos cien alumnos»); 5.8 («unos cien alumnos de primaria»); 6.1, compromiso 13, y 6.3, meta («con unos cien
+  alumnos»).
+- «Qué proponemos hacer»: el «Y además» se integra a los puntos y desaparece. Punto 6: al final, el texto de Nick sobre
+  las multas de tránsito según el ingreso, el límite, la Provincia, el aviso y las cuotas. Punto 8 nuevo: 200 shows y
+  espectáculos al aire libre por año y la costa como una riviera (capítulo 5). El punto de cómo se paga pasa a ser el 9.
+  Índice: «Nueve puntos, y los primeros cien días». Antes y después en salida/revision_d12/.
+- Epígrafe de las fotos de Boulogne Sur Mer y Martínez (pág. 5): «Boulogne Sur Mer y Martínez pagan la misma tasa
+  municipal, pero no tienen los mismos servicios. Ilustración.»
+- Ninguna oración empieza con «Y» ni con «E». Antes: 533 con «Y» y 0 con «E», en la pantalla y en la A4. Después: 0 y 0.
+  Barrido de todo el documento: texto, cuadros, gráficos, recuadros, fuentes, glosario, cierre y anexo (en el anexo,
+  sólo tres frases de los textos que lo explican; el articulado no tenía ninguna). Los textos de Nick van tal cual: 1.5 («Hoy, el
+  64% de lo que gasta el Municipio sale de lo que recauda él mismo, y esa parte viene creciendo.»; 205.939 / 324.304
+  millones = 63,5%, como el «64%» del capítulo 4) y los tres de «Qué proponemos hacer». En el resto: se saca la «Y» en
+  316; «Además» en 79; «También» en 66; «Así» en 2; se une a la oración anterior en 32 (cortas); otro conector o arreglo
+  a mano en 38 («Pero», «Tampoco», «Después», «Entonces», «De ahí», «Incluso», «Sin embargo», «Otras veinte», «AySA
+  también tiene que estar en la mesa»). Ningún número cambia, salvo el 64% de Nick. Ningún «También» o «Además» dos
+  veces seguidas.
+- Pantalla: 52 páginas; la 9 pasaba a 2.708 pt: en el 2.4, puntos 4 y 5, «También propone» y «Además, propone» quedan
+  en «Propone». La más alta queda en 2.694 pt.
+- A4: 127 hojas; ninguna con más de un tercio en blanco (34 entre 15% y un tercio; la última, 6%); los capítulos abren
+  en las mismas hojas que antes; índice con sus 64 entradas; 161 recortes sin diferencias (sin texto escondido); el
+  texto es el de la pantalla (de más, sólo encabezados repetidos y «(sigue)»). Cinco tests OK (data/ y 01_raw
+  restaurados). El Excel no cambia.

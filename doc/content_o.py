@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; El articulado</h1>
-<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal, y quince cortas. Se votan por separado, porque son discusiones distintas. Y ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar.</div>
+<div class="stand">Lo que este programa promete necesita normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal, y quince cortas. Se votan por separado, porque son discusiones distintas. Ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar.</div>
 
 <div class="callout a">
 <div class="clabel">Borrador para revisi&oacute;n de asesor&iacute;a letrada</div>
@@ -541,7 +541,7 @@ fundamento. Donde no hay un n&uacute;mero, el articulado manda fijarlo y publica
 <p><b>No toca lo que no es municipal.</b> Quedan fuera el recorrido de las l&iacute;neas de colectivo,
 que autoriza la Provincia; la estad&iacute;stica criminal; y todo lo que exija reformar la Ley
 Org&aacute;nica, que este programa reclama y no promete.</p>
-<p><b>Y deroga s&oacute;lo lo que reemplaza.</b> La Ordenanza XI deroga la 5304 de 1978, que proh&iacute;be el
+<p><b>Adem&aacute;s, deroga s&oacute;lo lo que reemplaza.</b> La Ordenanza XI deroga la 5304 de 1978, que proh&iacute;be el
 ba&ntilde;o en todo el r&iacute;o, porque pone en su lugar el ba&ntilde;o con guardavidas y la bandera de cada d&iacute;a. La
 derogaci&oacute;n de los art&iacute;culos 8, 9 y 10 de la Ordenanza 6045 va en un proyecto separado, que es el primero
 que entra al Concejo. Son dos discusiones distintas y
@@ -565,7 +565,7 @@ vivo y la reconstrucci&oacute;n de recorrido corren sobre las c&aacute;maras que
 licencias de an&aacute;lisis de video que ya compr&oacute;, como dice el 5.7. No es una facultad que haya que crear. <span class="sg">Una ordenanza que mandara
 usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el Ejecutivo</span>, y eso
 se ordena por decreto.</p>
-<p><b>Y la sexta se resuelve con la ley y los contratos:</b> que lo cobrado por multas vaya a la seguridad vial ya lo
+<p><b>La sexta se resuelve con la ley y los contratos:</b> que lo cobrado por multas vaya a la seguridad vial ya lo
 manda la Ley 24.449 (art&iacute;culo 85), y que nadie cobre por multa se escribe en cada contrato, al vencer el actual
 (5.11).</p>
 <p><span class="sg">De las seis, lo que s&iacute; queda normado es c&oacute;mo se comprueban</span>:
