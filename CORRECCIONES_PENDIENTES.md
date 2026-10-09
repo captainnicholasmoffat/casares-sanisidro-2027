@@ -3263,3 +3263,21 @@ repitiendo arriba su título con «(sigue)».
   en las mismas hojas que antes; índice con sus 64 entradas; 161 recortes sin diferencias (sin texto escondido); el
   texto es el de la pantalla (de más, sólo encabezados repetidos y «(sigue)»). Cinco tests OK (data/ y 01_raw
   restaurados). El Excel no cambia.
+
+## DISPATCH 13 · NINGUNA ORACIÓN EMPIEZA CON «QUE» (09/10) · APLICADO
+- Regla: ninguna oración ni punto de lista empieza con «Que». Quedan las preguntas y los títulos con «Qué».
+- Antes: 65, en la pantalla y en la A4 (29 oraciones de texto corrido y 36 puntos de listas, filas de cuadros y
+  títulos). Después: 0. Las oraciones que empiezan con «Y» siguen en 0.
+- «Qué proponemos hacer»: el comienzo de los nueve puntos, con los textos del pedido; el resto de cada punto queda.
+  2.1: «¿Qué muestra esto? Gastar todo el presupuesto no prueba que el servicio sea bueno. Sin embargo, lo único que
+  el Municipio publica sobre sí mismo es cuánto gastó.», como pide el ejemplo.
+- En el resto, los puntos pasan a afirmaciones («Cualquier vecino va a poder preguntar…», «Cada comisión vecinal va a
+  recibir…»), con la forma de los demás puntos de la misma lista: infinitivo donde la lista ya usa infinitivos (5.5,
+  «Recuperar la arena»; 5.11, «Contar como una sola…»), frase en presente en los riesgos del 6.6 («Un grupo se queda
+  con una comisión»), y frase sin verbo en «Lo que este programa no promete». En el 3.6 los riesgos van con
+  «podría». El texto corrido se reescribe entero. «Les pedimos que» va una sola vez; no se agrega ningún «Proponemos
+  que» ni «Queremos que». Lista completa en salida/revision_d13/.
+- Ningún número cambia.
+- Pantalla: 52 páginas, la más alta de 2.694 pt. A4: 127 hojas, ninguna con más de un tercio en blanco (34 entre 15%
+  y un tercio; la última, 6%); los capítulos abren en las mismas hojas; índice con sus 64 entradas; 161 recortes sin
+  diferencias; el texto es el de la pantalla. Cinco tests OK (data/ y 01_raw restaurados). El Excel no cambia.

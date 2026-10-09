@@ -13,20 +13,20 @@ inteligencia artificial del Municipio le da a cada vecino la informaci&oacute;n 
 a la vez.</div>
 
 <ol class="n">
-<li><b>Que la mitad de la obra p&uacute;blica la decidan los vecinos, en cuatro a&ntilde;os.</b> Al cuarto a&ntilde;o, los
-vecinos van a decidir 28.908 millones por a&ntilde;o. El intendente no elige a qu&eacute; zona va el dinero: lo reparte una
+<li><b>Los vecinos van a decidir la mitad de la obra p&uacute;blica, en cuatro a&ntilde;os.</b> Al cuarto a&ntilde;o, eso son
+28.908 millones por a&ntilde;o. El intendente no elige a qu&eacute; zona va el dinero: lo reparte una
 f&oacute;rmula escrita, seg&uacute;n la poblaci&oacute;n y la necesidad de cada zona. Por eso la mayor parte va a Boulogne
 Sur Mer y a B&eacute;ccar. <b>El dinero de cada zona queda reservado por ordenanza</b>, para que no se pueda usar en otra
 cosa. <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que esa obra, y los servicios que paga el Municipio, se contraten con empresas y cooperativas de San
+<li><b>La obra y los servicios que paga el Municipio se van a contratar con empresas y cooperativas de San
 Isidro.</b> Puede pasar que, al licitar un trabajo, no se presente ninguna empresa del partido capaz de hacerlo. En ese
 caso, el Municipio va a intentar formar a vecinos para que aprendan ese trabajo, armen su propia empresa o cooperativa y
 den ellos el servicio. Las universidades del partido los van a acompa&ntilde;ar en ese camino. Adem&aacute;s, en cada
 licitaci&oacute;n p&uacute;blica, <span class="sg">una parte del trabajo queda para las pymes del partido</span>.
 <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que para eso se forme a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
+<li><b>Vamos a formar a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
 La formaci&oacute;n es una tecnicatura de la universidad nacional del partido, para que lo aprendido sirva tambi&eacute;n
 fuera del Municipio. Cada a&ntilde;o entran <b>928 personas</b>. El primer a&ntilde;o estudian y el segundo trabajan como
 pasantes, seis meses en el Municipio y seis en una empresa del partido. <span class="sg">El presupuesto de empleo y vivienda
@@ -34,20 +34,20 @@ se multiplica por quince.</span> Tambi&eacute;n proponemos <b>un centro de apoyo
 espacios chicos, todos en B&eacute;ccar y Boulogne, a los que van unos cien alumnos. En las otras cuatro localidades no hay
 ninguno. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que esa gente construya la inteligencia artificial del Municipio.</b> Es una inteligencia artificial propia, a
+<li><b>Esa misma gente va a construir la inteligencia artificial del Municipio.</b> Es una inteligencia artificial propia, a
 la que cualquier vecino le pregunta lo que necesita, en lugar de otra aplicaci&oacute;n m&aacute;s. La hacen docentes y
 t&eacute;cnicos del partido, junto con los pasantes y egresados de la formaci&oacute;n. Se paga con la partida de Ciencia y
 T&eacute;cnica del presupuesto municipal, que ya tiene 8.155 millones por a&ntilde;o: no son fondos nuevos.
 <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que la inteligencia artificial del Municipio le permita al vecino informarse y decidir.</b> Le puede preguntar lo
+<li><b>La inteligencia artificial del Municipio le va a permitir al vecino informarse y decidir.</b> Le puede preguntar lo
 que necesite sobre el Municipio, y siempre le muestra de d&oacute;nde sac&oacute; cada dato. Antes de la asamblea de su zona,
 el vecino le puede preguntar a la inteligencia artificial del Municipio por cada tema que se va a votar, con su historia y
 su contexto. As&iacute; llega a la reuni&oacute;n entendiendo de qu&eacute; se trata. <span class="sg">Hoy el Municipio tiene una
 aplicaci&oacute;n de reclamos muy mal puntuada: sus propios usuarios le ponen 1,84 sobre 5. Lo que proponemos es la
 respuesta a eso.</span> <i>(Cap&iacute;tulo 4)</i></li>
 
-<li><b>Que las c&aacute;maras detecten y avisen, y no s&oacute;lo graben.</b> Si una c&aacute;mara ve un hecho violento
+<li><b>Las c&aacute;maras van a detectar y avisar, y no s&oacute;lo grabar.</b> Si una c&aacute;mara ve un hecho violento
 mientras est&aacute; pasando, avisa en el momento al patrullero que est&aacute; a tres cuadras, para que llegue a tiempo.
 Cuando alguien denuncia un robo, con las c&aacute;maras se puede seguir hacia d&oacute;nde se fue el que lo cometi&oacute;, y
 la polic&iacute;a va directo a buscarlo. <span class="sg">Lo que se gana es tiempo</span>: el caso se resuelve en horas y no
@@ -57,17 +57,17 @@ ninguna sea imposible de pagar. Tambi&eacute;n proponemos un l&iacute;mite: la s
 superar lo que puede pagar con su ingreso, ni el valor de su auto o su moto. Lo que el Municipio no pueda hacer solo, se lo
 va a pedir a la Provincia. Mientras tanto, el Municipio avisa antes de multar y deja pagar en cuotas. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que las inspecciones de comercios queden grabadas.</b> El inspector graba con su tel&eacute;fono cada
+<li><b>Las inspecciones de comercios van a quedar grabadas.</b> El inspector graba con su tel&eacute;fono cada
 inspecci&oacute;n, y despu&eacute;s cualquier vecino puede ver c&oacute;mo fue. El comerciante tambi&eacute;n tiene derecho a
 grabarla, y ese video queda guardado en la inteligencia artificial del Municipio, igual que el del inspector. As&iacute;
 el comerciante se protege si el inspector no hace las cosas como corresponde. El objetivo es <span class="sg">bajar la
 corrupci&oacute;n en las inspecciones y habilitaciones</span> de los comercios del partido. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que haya muchos m&aacute;s shows y espect&aacute;culos al aire libre: 200 por a&ntilde;o, en plazas y espacios p&uacute;blicos de
+<li><b>Va a haber muchos m&aacute;s shows y espect&aacute;culos al aire libre: 200 por a&ntilde;o, en plazas y espacios p&uacute;blicos de
 todo el partido.</b> Tambi&eacute;n queremos que la costa funcione como una riviera, con actividades y gente todos los d&iacute;as
 de la semana, no s&oacute;lo el fin de semana. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Que todo esto se pague sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</b> Cuesta
+<li><b>Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</b> Cuesta
 7.225,2 millones por a&ntilde;o. La mayor parte sale de actualizar la tabla de valores de 2008 con la que hoy se cobra esa
 tasa, y el resto, de reordenar gastos del Municipio. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
