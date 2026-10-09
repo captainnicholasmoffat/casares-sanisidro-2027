@@ -69,7 +69,7 @@ C2 = dict(id="cap2", runhead=RH, html=fig("f_barranca",
 <tr class="hi"><td class="l">Educaci&oacute;n</td><td class="m"><b>&mdash;</b></td><td class="m">Un centro de apoyo escolar gratuito en cada localidad, para los chicos que se est&aacute;n quedando atr&aacute;s. Funciona en edificios que ya existen y hoy cierran a la tarde. Un profesor digital particular en la inteligencia artificial del Municipio. Explica la tarea con pistas, nunca con la respuesta. Devolverle a educaci&oacute;n los 2.064 millones que perdi&oacute; en 2025.</td></tr>
 <tr class="hd"><td class="l">Qui&eacute;n decide la obra</td><td class="m">El Departamento Ejecutivo decide el 100%</td><td class="m">Al cuarto a&ntilde;o, los vecinos deciden la mitad</td></tr>
 </table>
-<p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente Ram&oacute;n Lan&uacute;s: 77 metas,
+<p class="cap"><b>Fuente:</b> &laquo;Prioridades Estrat&eacute;gicas 2024&ndash;2025&raquo;, firmado por el intendente: 77 metas,
 agrupadas por tema. Las celdas vac&iacute;as del medio son &aacute;reas en las que ese plan no fija ninguna meta. El detalle est&aacute; en las notas del cap&iacute;tulo 2.</p>
 
 
@@ -80,18 +80,12 @@ agrupadas por tema. Las celdas vac&iacute;as del medio son &aacute;reas en las q
 </div>
 """ + fig("f_parada", "Una parada en Mart&iacute;nez. Ilustraci&oacute;n.") + """
 
-<h2><span class="n">2.4</span>Lo que dice este cap&iacute;tulo, en once puntos</h2>
+<h2><span class="n">2.4</span>Lo que dice este cap&iacute;tulo, en cinco puntos</h2>
 <ol class="n">
 <li>Gastar el presupuesto no es prestar el servicio. La partida de los &aacute;rboles se gast&oacute; casi entera, y aun as&iacute; entraban <b>setenta reclamos por d&iacute;a</b>. Durante a&ntilde;os, las cuadrillas se repartieron con la Panamericana como l&iacute;mite. Hoy no se publica cu&aacute;nto tarda el Municipio en resolver un reclamo en cada zona.</li>
 <li>Mucho de lo que se prometi&oacute; publicar no est&aacute;. El portal de datos abiertos est&aacute; ca&iacute;do. La &uacute;ltima rendici&oacute;n de cuentas con estados contables es la de 2022. Las tres cifras que dio el Municipio sobre su propia flota no coinciden.</li>
 <li>El plan de gobierno 2024&ndash;2025 no nombra la salud, la vivienda, el empleo, la pobreza, la cloaca ni el agua. Nombra a los hospitales y a las escuelas s&oacute;lo para se&ntilde;alizar sus esquinas. El plan venci&oacute;: hoy el Municipio no tiene un plan de gobierno vigente y publicado.</li>
-<li>El cuadro [[n:accion]] compara los dos planes, &aacute;rea por &aacute;rea. En seguridad, ese plan propone m&aacute;s c&aacute;maras y m&aacute;s patrulleros. Este programa propone patrullar donde ocurre el delito y usar mejor las c&aacute;maras que ya hay. Propone una oficina de ciberdelito.</li>
-<li>En espacio p&uacute;blico, ese plan propone &aacute;rboles nuevos y podas. Este programa propone primero la poda que falta y el &aacute;rbol ca&iacute;do. Propone asociaciones de parque, sin cuya firma ninguna obra se paga. Propone parques que nunca se privatizan, ni se construye en ellos, ni se achican.</li>
-<li>En residuos y ambiente, ese plan propone ocuparse de una parte de los reciclables. Este programa propone licitar la recolecci&oacute;n en dos zonas, con todos sus trabajadores. Propone gastar m&aacute;s en ambiente, empezando por la costa. Tambi&eacute;n propone medir el ruido.</li>
-<li>En tr&aacute;nsito, ese plan propone multas digitales y se&ntilde;alizar las esquinas de escuelas y hospitales. Este programa propone que las calles y veredas las decida la comisi&oacute;n de cada zona, con su dinero de obra.</li>
-<li>En tr&aacute;mites, ese plan propone pasar una parte a internet y un centro de atenci&oacute;n telef&oacute;nica nuevo. Este programa propone que la inteligencia artificial del Municipio atienda todos los d&iacute;as, a toda hora, y que conteste cada tr&aacute;mite en el momento.</li>
-<li>En transparencia, ese plan propone un &iacute;ndice y un tablero por secretar&iacute;a. Este programa propone que cualquiera le pregunte a la inteligencia artificial del Municipio, y que ella muestre de d&oacute;nde saca cada dato.</li>
-<li><b>En empleo, vivienda, salud y educaci&oacute;n, ese plan no propone nada.</b> Este programa multiplica por quince el gasto en empleo y vivienda. Reduce a la mitad los hogares sin cloaca de Boulogne y B&eacute;ccar. Permite sacar el turno m&eacute;dico conversando con la inteligencia artificial del Municipio. Tambi&eacute;n abre un centro de apoyo escolar en cada localidad.</li>
+<li>El cuadro [[n:accion]] compara los dos planes, &aacute;rea por &aacute;rea. En empleo, vivienda, salud y educaci&oacute;n, ese plan no propone nada.</li>
 <li>La obra: hoy la decide entera el Departamento Ejecutivo. Con este programa, al cuarto a&ntilde;o, los vecinos deciden la mitad.</li>
 </ol>
 <p>Nada de esto se puede corregir sin saber si hay dinero para hacerlo. El cap&iacute;tulo siguiente lo mide.</p>
@@ -178,8 +172,8 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <table>
 <colgroup><col style="width:150pt"><col style="width:74pt"><col style="width:88pt"><col></colgroup>
 <tr class="hd"><th>Parte del programa</th><th class="r">Cu&aacute;nto cuesta</th><th>&iquest;Es dinero nuevo?</th><th>De qu&eacute; partida sale</th></tr>
-<tr class="hi"><td class="l">Empleo y vivienda</td><td class="n"><b>7.730,9 M</b></td><td class="m"><b>S&iacute;: 5.983 M.</b> Los otros 1.747,7 M ya se gastan hoy o salen del gasto flexible.</td><td class="m">5.983 M, de actualizar la base de valuaci&oacute;n (3.5). 1.242 M, del gasto flexible. 505,7 M, de los dos programas de hoy: Apoyo y Promoci&oacute;n al Empleo e Infraestructura Habitacional.</td></tr>
-<tr><td class="l">Obra p&uacute;blica vecinal, la mitad de la obra al cuarto a&ntilde;o</td><td class="n">28.908 M</td><td class="m">No</td><td class="m">De la obra p&uacute;blica que ya se hace: los 57.816 M por a&ntilde;o que hoy se gastan en obra (bienes de uso).</td></tr>
+<tr><td class="l">Empleo y vivienda</td><td class="n">7.730,9 M, el 2,5% del gasto total</td><td class="m"><b>S&iacute;: 5.983 M.</b> Los otros 1.747,7 M ya se gastan hoy o salen del gasto flexible.</td><td class="m">5.983 M, de actualizar la base de valuaci&oacute;n (3.5). 1.242 M, del gasto flexible. 505,7 M, de los dos programas de hoy: Apoyo y Promoci&oacute;n al Empleo e Infraestructura Habitacional.</td></tr>
+<tr><td class="l">Obra p&uacute;blica vecinal, la mitad de la obra al cuarto a&ntilde;o</td><td class="n">28.908 M</td><td class="m">No. No cambia el d&eacute;ficit ni el super&aacute;vit: s&oacute;lo cambia qui&eacute;n decide en qu&eacute; se gasta.</td><td class="m">De la obra p&uacute;blica que ya se hace: los 57.816 M por a&ntilde;o que hoy se gastan en obra (bienes de uso).</td></tr>
 <tr><td class="l">Ambiente, de 0,4% a 1,5% del presupuesto</td><td class="n">3.455 M</td><td class="m">No. Incluye la costa (5.5) y las seis estaciones que miden el ruido: 313,5 M, una sola vez.</td><td class="m">Mantenimiento y Embellecimiento del Municipio (programa 49) y Construcci&oacute;n de Infraestructura Deportiva (programa 35)</td></tr>
 <tr><td class="l">Educaci&oacute;n, de vuelta al nivel de 2024, descontada la inflaci&oacute;n</td><td class="n">2.064 M</td><td class="m">No. Incluye el profesor digital de los 22.748 alumnos que lo tienen gratis: de 151,9 a 180,5 M por a&ntilde;o (5.8).</td><td class="m">De Mantenimiento y embellecimiento, no de otras partes de educaci&oacute;n.</td></tr>
 <tr><td class="l">Apoyo escolar, seis sedes</td><td class="n">1.080 M*</td><td class="m">No</td><td class="m">De los tres programas del cuadro siguiente: mantenimiento y embellecimiento, infraestructura deportiva y arbolado.</td></tr>
@@ -194,17 +188,6 @@ C3B = dict(id="cap3b", runhead=RH, html="""
 <tr><td class="l">Multas de tr&aacute;nsito (5.11)</td><td class="n">Unos 323 M por a&ntilde;o por cada 10% de rebaja promedio. 108,3 M por a&ntilde;o para las cuatro personas que validan las actas. De 0,8 a 5,9 M para los mensajes de texto*</td><td class="m">No. Es lo que se deja de cobrar. Las cuatro personas y los mensajes se pagan con el resto del presupuesto.</td><td class="m">Lo que se deja de cobrar sale de la parte libre del gasto flexible. Las cuatro personas salen del presupuesto de Tr&aacute;nsito o del Juzgado de Faltas. Los mensajes de texto salen del presupuesto de Tr&aacute;nsito, no del fondo. Los reductores ya est&aacute;n contratados (536,7 M). El aviso es parte de la inteligencia artificial del Municipio (Ciencia y T&eacute;cnica). Lo que se cobra va a un fondo cerrado de seguridad vial, con un rengl&oacute;n propio en el presupuesto.</td></tr>
 </table>
 <p class="cap"><b>Fuente:</b> ejecuci&oacute;n presupuestaria 2025 y modelo del cap&iacute;tulo 3. Las cifras marcadas con * son estimaciones de este programa. El detalle est&aacute; en las notas del cap&iacute;tulo 3.</p>
-<p><b>Por qu&eacute; se destacan dos.</b> Empleo y vivienda y la obra vecinal son las partes m&aacute;s grandes. Son los dos extremos: <span class="sg">una necesita 5.983 millones nuevos y la otra, ninguno</span>.</p>
-<h3>Empleo y vivienda: esto s&iacute; son fondos nuevos</h3>
-<div class="cols">
-<p>Hoy el Municipio gasta <b>505,7 millones por a&ntilde;o</b> en dos programas: Apoyo y Promoci&oacute;n al Empleo (170 M) e Infraestructura Habitacional (335 M).</p>
-<p>Este programa lleva ese gasto a <b>7.730,9 millones por a&ntilde;o</b>, cuando funcione completo. Es el 2,5% del gasto total proyectado, y <span class="sg">quince veces</span> lo que se gasta hoy. De esos 7.730,9 millones, 505,7 ya se gastan. <b>Lo que hay que conseguir son 7.225,2 millones.</b> El 3.5 explica c&oacute;mo se pagan.</p>
-</div>
-<h3>Obra p&uacute;blica vecinal: esto no son fondos nuevos</h3>
-<div class="cols">
-<p>Los <b>28.908 millones</b> del cap&iacute;tulo 4 no son gasto nuevo. San Isidro ya gasta 57.816 millones por a&ntilde;o en obra p&uacute;blica. La propuesta le da otro destino a la mitad de ese dinero, <span class="sg">dentro del mismo rubro de obra (bienes de uso)</span>. No hay un peso m&aacute;s de gasto ni un peso m&aacute;s de ingreso.</p>
-<p><span class="sg">No cambian en nada el resultado de las cuentas.</span> No cambian el d&eacute;ficit ni el super&aacute;vit de ning&uacute;n a&ntilde;o del modelo. Lo &uacute;nico que cambia es <span class="sg">qui&eacute;n decide en qu&eacute; se gasta</span>.</p>
-</div>
 
 <h3>De d&oacute;nde sale, con nombre</h3>
 <p class="lead">El gasto flexible ya paga cosas que hoy se hacen. Si algo nuevo entra, otra cosa tiene que salir.</p>
@@ -227,26 +210,13 @@ ejercicio 2025, acumulado anual.</p>
 <p><b>El arbolado sigue el mismo criterio que los otros dos.</b> Lo que repone un servicio que falta no se toca, como la poda que no se hizo o el &aacute;rbol que se cay&oacute;. Lo que se agrega sobre lo que ya funciona, espera.</p>
 <p><b>Esto tiene un costo pol&iacute;tico.</b> Hay personas que trabajan en esos programas, y hay proveedores contratados. Nadie pierde su empleo: el cap&iacute;tulo 5 se compromete a no reducir el personal. Pero s&iacute; cambia en qu&eacute; trabajan. <span class="sg">La secci&oacute;n 4.12 dice a qui&eacute;n le molesta esto, y &eacute;sta es una de las respuestas.</span></p>
 </div>
-<h3>Cu&aacute;nto suma todo, y cu&aacute;nto queda libre</h3>
-<p class="tight"><b>Lo que el programa compromete cada a&ntilde;o es esto:</b></p>
-<ul class="b">
-<li><b>7.225,2 millones para empleo y vivienda (3.5).</b> Para esto hay que actualizar la base de valuaci&oacute;n.</li>
-<li><b>6.767 millones del gasto flexible que cambian de destino.</b> Pagan ambiente, educaci&oacute;n y apoyo escolar. Tambi&eacute;n pagan los datos, la guarda y el difuminado de las grabaciones de las inspecciones. Para esto hay que decidir distinto con el dinero que ya existe.</li>
-<li>Las &aacute;reas mueven 2.135,3 millones dentro de su propio presupuesto, para pasantes y juniors.</li>
-<li>108,3 millones son para las cuatro personas que validan las actas de las multas. Hasta 5,9 millones, para los mensajes de texto que avisan antes de multar.</li>
-<li>Desarrollo Social pone 667,8 millones para los cuidadores.</li>
-<li>Deportes pone hasta 419 millones por a&ntilde;o desde el tercer a&ntilde;o, para la Escuela N&aacute;utica y las clases de la costa. La inversi&oacute;n en la Escuela, de hasta 717 millones en tres a&ntilde;os, sale de obras deportivas.</li>
-<li>De obras deportivas salen tambi&eacute;n la obra de los ba&ntilde;os de la costa y el equipamiento para las clases: hasta 1.245 millones en tres a&ntilde;os.</li>
-<li>Ambiente paga, dentro de su aumento, la limpieza y los encargados: hasta 386 millones por a&ntilde;o.</li>
-<li>Cultura paga los espect&aacute;culos al aire libre: unos 329 millones por a&ntilde;o, y 467 el primer a&ntilde;o, con la compra de los equipos.</li>
-</ul>
-<p><span class="sg">Con empleo y vivienda y la obra vecinal, todo junto ocupa el 53,3% del gasto flexible. Queda libre el 46,7%.</span> De ese margen salen dos cosas, si hacen falta. Una es la beca de pr&aacute;ctica: 1.336,3 millones en el peor caso, si ninguna empresa toma pasantes. La otra es el m&oacute;dulo de salud de los dos primeros a&ntilde;os: como m&aacute;ximo, 988,4 millones. <b>Aun con las dos cosas, queda libre el 44,0%.</b> Cada 10% de rebaja promedio en las multas ocupa 0,4 puntos de ese margen (5.11). La plataforma y el semillero se pagan dentro de Ciencia y T&eacute;cnica (4.11 y 5.3).</p>
+<h3>&iquest;Alcanza el dinero? S&iacute;, y sobra margen</h3>
+<p>Cada a&ntilde;o, el Municipio puede decidir libremente en qu&eacute; usa 87.326 millones. Es la parte del presupuesto que no est&aacute; atada a sueldos, deudas ni contratos firmados. <span class="sg">Todo lo que este programa propone, sumado, ocupa el 53,3% de esa parte. Queda libre el 46,7%.</span> Aun en el peor caso, si ninguna empresa toma pasantes y hay que pagar el m&oacute;dulo de salud de los dos primeros a&ntilde;os, <b>queda libre el 44,0%</b>. Cada 10% de rebaja promedio en las multas ocupa 0,4 puntos m&aacute;s (5.11). La plataforma de inteligencia artificial y el semillero de empresas se pagan con lo que ya tiene Ciencia y T&eacute;cnica. El detalle de cada parte est&aacute; en el cuadro [[n:programa]].</p>
 <h3>Lo que cuesta administrar todo esto</h3>
 <div class="cols">
 <p><b>Las comisiones vecinales no se pagan.</b> Son asociaciones que ya existen, y sus miembros no cobran. No se crea una oficina de control ni ning&uacute;n organismo nuevo.</p>
 <p><b>Lo que s&iacute; cuesta son cuatro cosas.</b> Tres se pagan con un <b>1,5% fijo de la partida vecinal</b>: 108,4 millones el a&ntilde;o 1 y 433,6 millones el a&ntilde;o 4. La primera es el cuidado de los chicos en cada asamblea, que cambia qui&eacute;n puede participar. La segunda es un honorario por obra para los tres vecinos que firman la recepci&oacute;n. La tercera es la administraci&oacute;n de las obras que hace la propia comisi&oacute;n: las cuentas, el seguro y la justificaci&oacute;n de cada peso. La cuarta es el honorario del panel sorteado que el cap&iacute;tulo 4 propone para lo que es de todo el partido, como la costa. Sale de cambiar de destino otro gasto: <b>3,1 millones por panel</b>. Adem&aacute;s, hay que <b>registrar cada gasto con la zona donde se hace</b>. Eso permite que cualquier vecino sepa cu&aacute;nto se gast&oacute; en su zona. No hace falta personal nuevo ni una estructura nueva, y entra dentro del 44,0% del gasto flexible que queda libre con todo sumado.</p>
 </div>
-<p>El gasto flexible es de 87.326 millones. <b>Empleo y vivienda y la obra vecinal ocupan juntas el 41,4%.</b> Una es gasto nuevo y la otra es gasto que cambia de destino.</p>
 """ + ex("g", "El 73,1% del presupuesto no se puede mover dentro del a&ntilde;o",
      "El gasto de 2025, dividido en dos. Una parte no se puede dejar de pagar en el a&ntilde;o: sueldos, deuda y contratos firmados. La otra se decide cada a&ntilde;o. El gr&aacute;fico muestra cu&aacute;nto de esa parte usan, con este programa, empleo y vivienda y la obra que deciden los vecinos.",
      "ex10.png",
@@ -271,7 +241,7 @@ ejercicio 2025, acumulado anual.</p>
 <h3>El bono de 30.000 millones lo paga el gobierno que entra</h3>
 <div class="cols">
 <p><b>Qu&eacute; se hizo.</b> El 8 de julio de 2026, la Asamblea de Concejales y Mayores Contribuyentes autoriz&oacute; el <b>Bono de Infraestructura de San Isidro</b> por hasta 30.000 millones. El bono sali&oacute; a la venta el 13 de agosto. Se vendieron los 30.000 millones completos. Hubo ofertas por 38.576 millones, 1,29 veces el monto, y cien &oacute;rdenes de compra.</p>
-<p><b>Las condiciones.</b> Se devuelve en 36 meses. La tasa es variable: <b>TAMAR m&aacute;s 7%</b>. TAMAR es la tasa de referencia de los bancos. Cuando se vendi&oacute; el bono, eso daba un <b>30,88% nominal anual</b>. Los intereses se pagan cada tres meses. La calificadora FIX SCR le dio la nota BBB+(arg). Adem&aacute;s, tiene una garant&iacute;a que importa: <span class="sg">el Municipio cede los derechos de cobro de la coparticipaci&oacute;n provincial</span>, es decir, de lo que le manda la Provincia.</p>
+<p><b>Las condiciones.</b> Se devuelve en 36 meses. La tasa es variable: <b>TAMAR m&aacute;s 7%</b>. TAMAR es la tasa de referencia de los bancos. Cuando se vendi&oacute; el bono, eso daba un <b>30,88% nominal anual</b>. Los intereses se pagan cada tres meses. Una calificadora de riesgo le dio la nota BBB+(arg). Adem&aacute;s, tiene una garant&iacute;a que importa: <span class="sg">el Municipio cede los derechos de cobro de la coparticipaci&oacute;n provincial</span>, es decir, de lo que le manda la Provincia.</p>
 <p><b>Ac&aacute; est&aacute; lo que define todo.</b> El capital se devuelve en ocho cuotas de 12,5%, una cada tres meses. <b>La primera vence en el mes 15.</b> Contado desde agosto de 2026, eso cae en <b>noviembre de 2027</b>. El mandato del actual intendente termina en diciembre de ese a&ntilde;o.</p>
 <p><b>De las ocho cuotas de capital, esta gesti&oacute;n paga una. Las otras siete, el 87,5% del capital, las paga el gobierno que asuma en diciembre de 2027.</b> No es una irregularidad: la operaci&oacute;n tiene las tres autorizaciones que exige la ley.</p>
 </div>

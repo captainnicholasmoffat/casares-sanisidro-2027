@@ -3281,3 +3281,27 @@ repitiendo arriba su título con «(sigue)».
 - Pantalla: 52 páginas, la más alta de 2.694 pt. A4: 127 hojas, ninguna con más de un tercio en blanco (34 entre 15%
   y un tercio; la última, 6%); los capítulos abren en las mismas hojas; índice con sus 64 entradas; 161 recortes sin
   diferencias; el texto es el de la pantalla. Cinco tests OK (data/ y 01_raw restaurados). El Excel no cambia.
+
+## DISPATCH 14 · SEGUNDA LECTURA HASTA LA HOJA 26 (09/10) · APLICADO
+- 2.4: los puntos 4 a 10, que repetían el cuadro 9 fila por fila, quedan en uno solo: «El cuadro 9 compara los dos
+  planes, área por área. En empleo, vivienda, salud y educación, ese plan no propone nada.» El 2.4 queda «en cinco
+  puntos», también en el índice.
+- Fuente del cuadro 9: «firmado por el intendente», sin el nombre.
+- Cuadro 14: sin la nota «Por qué se destacan dos» y sin el fondo de color (ni la negrita) de la fila de empleo y
+  vivienda; la de la obra vecinal no tenía fondo. Salen los apartados «Empleo y vivienda: esto sí son fondos nuevos» y
+  «Obra pública vecinal: esto no son fondos nuevos». Sus dos datos propios van a las celdas: «7.730,9 M, el 2,5% del
+  gasto total» y «No. No cambia el déficit ni el superávit: sólo cambia quién decide en qué se gasta.» (Los 170 y 335
+  millones de hoy siguen en el 1.2 y en el 5.3.)
+- «Cuánto suma todo, y cuánto queda libre» pasa a «¿Alcanza el dinero? Sí, y sobra margen», con el texto del pedido.
+  Salen la lista de puntos y la línea del 41,4%. Control con el modelo (Excel, Supuestos, fila 180): el 53,3% suma
+  todas las partes del cuadro 14 salvo la plataforma y el semillero, con dos diferencias. No incluye la rebaja de las
+  multas, que depende de cuánto se rebaje (cada 10% de rebaja promedio, 0,4 puntos). De empleo y vivienda cuenta sólo
+  los 7.225,2 M nuevos; los 505,7 M de hoy ya se gastan. Decisión tomada: el texto del pedido, más una línea después
+  del 44,0%: «Cada 10% de rebaja promedio en las multas ocupa 0,4 puntos más (5.11).» «Lo que cuesta administrar todo
+  esto» sigue diciendo 44,0%, y coincide.
+- 3.5: «Una calificadora de riesgo le dio la nota BBB+(arg)». El nombre de la calificadora no aparecía en otro lugar.
+- Sigue en 0 lo que empieza con «Y» o con «Que».
+- Pantalla: 52 páginas, la más alta de 2.598 pt. A4: 126 hojas (antes 127); ninguna con más de un tercio en blanco
+  (32 entre 15% y un tercio; la última, 6%); los capítulos abren arriba de la hoja; índice con sus 64 entradas; 160
+  recortes sin diferencias; el texto es el de la pantalla. El cuadro 18 («La deuda que ya existe, y que este programa
+  no aumenta») queda en la hoja 26 de la A4 (pág. 13 de la pantalla). Cinco tests OK. El Excel no cambia.

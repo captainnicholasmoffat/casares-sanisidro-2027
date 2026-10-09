@@ -78,7 +78,7 @@ _IDX = [
  ("i", "2.1 &nbsp;Gastar el presupuesto no es prestar el servicio", "cap2"),
  ("i", "2.2 &nbsp;Lo que se prometi&oacute; publicar y no est&aacute; publicado", "cap2b"),
  ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
- ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en once puntos", "cap2b"),
+ ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en cinco puntos", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
  ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que deciden el futuro de las cuentas de San Isidro", "cap3a"),
