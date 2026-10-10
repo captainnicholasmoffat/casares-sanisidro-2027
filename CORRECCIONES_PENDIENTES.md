@@ -3336,3 +3336,11 @@ repitiendo arriba su título con «(sigue)».
   director (fecha de las comisiones, tomógrafos y panel sin fecha, «200 al aire libre», etc.).
 - Excel: Supuestos C281 (394 M), C283 (532 M), filas 285–301 nuevas (tomógrafos y resonancia), C180–C182 con el ahorro.
   Recalculado con LibreOffice: 0 errores.
+- Pantalla: 57 páginas, la más alta de 2.677,7 pt. A4: 139 hojas, ninguna con más de un tercio en blanco (60 entre 15% y
+  un tercio; la última, 81%); controles nuevos en cero (título al pie con menos de seis renglones, rótulo separado, hoja
+  con sólo una foto, dos fotos seguidas); los capítulos abren arriba de la hoja (Introducción 5, Qué proponemos hacer 6,
+  1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 49, 6 → 101, Para cerrar 114, Anexo 115, Glosario 126, Nota de método 128); índice
+  con sus 68 entradas; 176 recortes con el texto que se ve, sin letras de más ni de menos. Para que ninguna hoja pase
+  del tercio se acortaron cuatro oraciones de «Qué proponemos hacer» y algunas oraciones de nueve definiciones del glosario, y el último punto de la lista
+  del 5.3 se partió en dos (la regla del 75% va en un punto propio). Cinco tests OK. Excel recalculado, 0 errores.
+
