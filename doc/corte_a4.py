@@ -347,9 +347,8 @@ def grupos(m):
     out = []
     pegar_al_siguiente = False
     seccion = apartado = None
-    for kb, b in enumerate(bl):
+    for b in bl:
         previo = out[-1]["partes"][-1] if out else None
-        nxt = bl[kb + 1] if kb + 1 < len(bl) else None
         de_cuadro = previo is not None and (previo["tabla"] or previo["dibujo"] or previo["tag"] == "table"
                                             or (previo["tag"] == "p" and previo["cls"].startswith("cap")))
         es_cola = ((b["tag"] == "p" and b["cls"].startswith("cap")) or b["tag"] == "figcaption"
@@ -368,19 +367,6 @@ def grupos(m):
         titulo = b["tag"] in ("h1", "h2", "h3", "h4") or b["cls"] in ("stand", "igrp", "hairline")
         rotulo = b["cls"].split(" ")[0] == "ex" and not (b["tabla"] or b["dibujo"])
         pegar_al_siguiente = titulo or rotulo
-        # dispatch 15 (regla A12): si lo que sigue a un titulo es corto y no se puede partir, el titulo se lleva
-        # tambien lo siguiente, hasta tener seis renglones de su texto
-        if not pegar_al_siguiente and out and out[-1]["partes"][-1] is b:
-            g = out[-1]
-            tits = [p for p in g["partes"][:-1] if p["tag"] in ("h1", "h2", "h3")]
-            partible = (len(b.get("parrafos") or []) >= 2 or bool(b.get("items")) or bool(b.get("filas"))
-                        or bool(b.get("hijos")))
-            sigue_texto = (nxt is not None and nxt["tag"] not in ("h1", "h2", "h3", "h4", "figure")
-                           and nxt["cls"].split(" ")[0] not in ("stand", "igrp", "hairline")
-                           and not nxt.get("foto"))
-            if (tits and sigue_texto and not partible and not b["dibujo"]
-                    and g["bottom"] - tits[-1]["bottom"] < MIN_TRAS):
-                pegar_al_siguiente = True
         if titulo and b["tag"] in ("h1", "h2", "h3"):
             out[-1]["sec"], out[-1]["sub"] = seccion, apartado
     for g in out:
@@ -451,6 +437,15 @@ def atomos(m):
             nuevo(g, a, g["bottom"], primero=False, parte="recuadro")
             partidos.append(("recuadro", g))
             continue
+        # dispatch 15 (A12): la apertura de un capitulo (foto, titulo y bajada) que no entra entera con su primer
+        # apartado en una hoja se corta antes de ese apartado, que empieza en la hoja siguiente
+        h2s = [k for k, p in enumerate(g["partes"]) if p["tag"] == "h2"]
+        if alto > entra and h2s and h2s[0] > 0 and any(p["tag"] == "h1" for p in g["partes"][:h2s[0]]):
+            corte = g["partes"][h2s[0] - 1]["bottom"]
+            nuevo(g, g["top"], corte, parte="apertura")
+            nuevo(g, g["partes"][h2s[0]]["top"], g["bottom"], primero=False, parte="apertura")
+            partidos.append(("apertura", g))
+            continue
         nuevo(g, g["top"], g["bottom"])
     return out, partidos
 
@@ -481,6 +476,22 @@ def _hoja(at, i, j, primera):
     return {"tramos": tramos, "primera": primera, "i": i, "j": j, "uso": u, "blanco": blanco(u)}
 
 
+def corte_malo(at, j):
+    """Dispatch 15 (regla A12): cortar la hoja antes de at[j] deja al pie un titulo de apartado con menos de seis
+    renglones de su texto, y el apartado sigue en la hoja siguiente."""
+    if j <= 0 or j >= len(at):
+        return False
+    a = at[j - 1]
+    g = a["g"]
+    if a["bottom"] < g["bottom"] - 0.5:
+        return False                                 # se corta adentro de un grupo partido: lo cuida atomos
+    tits = [p for p in g["partes"] if p["tag"] in ("h1", "h2", "h3")]
+    if not tits or g["bottom"] - tits[-1]["bottom"] >= MIN_TRAS:
+        return False
+    sig = at[j]["g"]["partes"][0]
+    return sig["tag"] not in ("h1", "h2", "h3", "h4") or at[j]["g"] is g
+
+
 def voraz(at):
     """Cada hoja se llena con todo lo que entra: un cuadro o una lista larga se parte solo si dejarlo entero para la
     hoja siguiente deja mas de un tercio en blanco."""
@@ -496,6 +507,8 @@ def voraz(at):
                 k -= 1
             if at[k]["primero"] and k > i and blanco(uso(at, i, k, primera)) <= TOPE:
                 j = k
+        while j < len(at) and j > i + 1 and corte_malo(at, j):
+            j -= 1
         hojas.append(_hoja(at, i, j, primera))
         i, primera = j, False
     return hojas
@@ -514,12 +527,47 @@ def repartido(at, ultimo_doc, estricto=True):
         mala = blanco(u) > TOPE and not (j == n and ultimo_doc)
         return u, int(mala)
 
+    if not estricto:
+        # dispatch 15: si no hay corte sin huecos, el que deja el hueco mas chico (y despues, el de menos huecos)
+        def peor(i, j):
+            u = uso(at, i, j, i == 0)
+            return 0.0 if (j == n and ultimo_doc) else max(0.0, blanco(u) - TOPE)
+        mm = [None] * (n + 1)
+        mm[n] = (0.0, 0, 0)
+        for i in range(n - 1, -1, -1):
+            for j in range(i + 1, n + 1):
+                u, mala = costo(i, j)
+                if u > LIM and j > i + 1:
+                    break
+                if mm[j] is None or (j < n and j > i + 1 and corte_malo(at, j)):
+                    continue
+                c = (round(max(peor(i, j), mm[j][0]), 4), mala + mm[j][1], 1 + mm[j][2])
+                if mm[i] is None or c < mm[i]:
+                    mm[i] = c
+        if mm[0] is None:
+            return None
+        hojas, i = [], 0
+        while i < n:
+            elegido = None
+            for j in range(i + 1, n + 1):
+                u, mala = costo(i, j)
+                if u > LIM and j > i + 1:
+                    break
+                if mm[j] is None or (j < n and j > i + 1 and corte_malo(at, j)):
+                    continue
+                c = (round(max(peor(i, j), mm[j][0]), 4), mala + mm[j][1], 1 + mm[j][2])
+                if c == mm[i]:
+                    elegido = j
+            hojas.append(_hoja(at, i, elegido, i == 0))
+            i = elegido
+        return hojas
+
     for i in range(n - 1, -1, -1):
         for j in range(i + 1, n + 1):
             u, mala = costo(i, j)
             if u > LIM and j > i + 1:
                 break
-            if mejor[j] == INF:
+            if mejor[j] == INF or (j < n and j > i + 1 and corte_malo(at, j)):
                 continue
             c = (mala + mejor[j][0], 1 + mejor[j][1])
             if c < mejor[i]:
@@ -533,6 +581,8 @@ def repartido(at, ultimo_doc, estricto=True):
             u, mala = costo(i, j)
             if u > LIM and j > i + 1:
                 break
+            if j < n and j > i + 1 and corte_malo(at, j):
+                continue
             if mejor[j] != INF and (mala + mejor[j][0], 1 + mejor[j][1]) == mejor[i]:
                 elegido = j
         hojas.append(_hoja(at, i, elegido, i == 0))
@@ -829,7 +879,9 @@ def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
         hojas = voraz(at)
         todas = malas(hojas, ultimo_doc)
     quedan = malas(r, ultimo_doc)
-    if len(quedan) >= len(todas):
+    peor_r = max([r[k]["blanco"] for k in quedan], default=0.0)
+    peor_v = max([hojas[k]["blanco"] for k in todas], default=0.0)
+    if (peor_r, len(quedan)) >= (peor_v, len(todas)):
         r, quedan = hojas, todas
         modo = "voraz"
     else:

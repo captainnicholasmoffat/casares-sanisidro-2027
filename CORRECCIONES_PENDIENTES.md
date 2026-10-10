@@ -3305,3 +3305,34 @@ repitiendo arriba su título con «(sigue)».
   (32 entre 15% y un tercio; la última, 6%); los capítulos abren arriba de la hoja; índice con sus 64 entradas; 160
   recortes sin diferencias; el texto es el de la pantalla. El cuadro 18 («La deuda que ya existe, y que este programa
   no aumenta») queda en la hoja 26 de la A4 (pág. 13 de la pantalla). Cinco tests OK. El Excel no cambia.
+
+## DISPATCH 15 · REGLAS PARA TODO EL DOCUMENTO, CORRECCIONES PUNTUALES, BARRIDOS DE COMPRENSIÓN Y DE CONCORDANCIA (10/10) · APLICADO
+- A1–A11 en todo el documento, con diez lectores (uno por tramo) y un barrido de concordancia. Control final en cero:
+  dos oraciones del mismo párrafo que empiezan igual, «informes/», «.md», «.csv», «(necesita dictamen», «decide un
+  panel» o «lo decide el panel». Queda un solo «Lo que…» al comienzo de oración: el cierre dictado del 5.15.
+- A3: «partido» → «San Isidro» en todo el texto; «Partido de San Isidro» sólo como nombre oficial y en el articulado.
+- A5: 131 títulos cambiados (h1, h2, h3, rótulos y títulos de cuadros), lista en salida/revision_d15/. Índice al día.
+- A8: las 30 notas «(necesita dictamen de un abogado)» salen del texto y van a «Lo que tiene que confirmar un
+  abogado», al final, junto a «Lo que este programa no hace», cada una con la propuesta a la que se refiere.
+- A9: ninguna fuente manda a archivos del repositorio: fuente pública o «cálculo propio sobre…».
+- A10: ordenanzas del anexo con números arábigos («Ordenanza 10»).
+- A12 (corte de la A4): un título de apartado no queda al pie con menos de seis renglones de su texto; si no entran,
+  el apartado empieza en la hoja siguiente. La apertura de un capítulo que no entra con su primer apartado se corta
+  antes de ese apartado. Si no hay corte sin huecos, se elige el que deja el hueco más chico.
+- B1–B29 aplicados. Cifras que cambian:
+  - B21 (shows, mezcla 10/40/50): 394 M por año y 532 M el primer año (antes 329 y 467); cachets 270,6 M; salas 14,1 M.
+  - B24 (tomógrafos propios, opción A): equipos y salas 1.315 M una vez; tenerlos 1.132 M por año; ahorro 1.360 M por
+    año (660 en el peor caso), contra el servicio a su precio de hoy (2.492 M con 20.000 estudios). Resonancia sigue
+    contratada: 370,8 M; un resonador propio conviene desde unas 7.500 por año (hoy unas 3.400). Cuadro nuevo en el
+    5.6, fila nueva en el cuadro 14 (quince partes), fuentes con los decretos.
+  - Margen («¿Alcanza el dinero?»): ocupado 53,3% → 51,8%; libre 46,7% → 48,2%; peor caso 44,0% → 44,7%. El ahorro de
+    los tomógrafos resta en el ocupado (en el peor caso, el de 660 M).
+  - B13: «el dinero nuevo que necesita este programa» (7.225,2 M por año, para empleo y vivienda) separado de lo que
+    ya se gasta y sólo cambia quién decide (la obra vecinal, 28.908 M).
+  - B14: el 41,4% / 58,6% sale de la apertura del capítulo 5 y del 6.5; los dos lugares usan las cifras del 3.4.
+- Otras cifras corregidas por coherencia: Ciencia y Técnica en el 5.3 «22,0%» → 27,1% (como el 3.4 y el 4.11); «catorce
+  partes» → «quince»; el 5.13 ya no dice que discapacidad gasta menos que adicciones (65,9 M contra 28,4 M en 2025).
+- Concordancia (capítulo 6, resumen, anexo): 23 contradicciones resueltas con los capítulos 3 a 5; 5 quedan para el
+  director (fecha de las comisiones, tomógrafos y panel sin fecha, «200 al aire libre», etc.).
+- Excel: Supuestos C281 (394 M), C283 (532 M), filas 285–301 nuevas (tomógrafos y resonancia), C180–C182 con el ahorro.
+  Recalculado con LibreOffice: 0 errores.

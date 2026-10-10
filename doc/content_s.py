@@ -27,7 +27,7 @@ licitaci&oacute;n p&uacute;blica, <span class="sg">una parte del trabajo va a qu
 
 <li><b>Vamos a formar a la gente ac&aacute;, en lo que mejor paga: inteligencia artificial y tecnolog&iacute;a.</b>
 La formaci&oacute;n ser&aacute; una tecnicatura de la universidad nacional que tiene sede en San Isidro, para que lo aprendido sirva
-tambi&eacute;n fuera del Municipio. Cuando la formaci&oacute;n funcione completa, van a entrar <b>928 personas</b> por a&ntilde;o. Los alumnos van a estudiar el primer a&ntilde;o, y el segundo
+tambi&eacute;n fuera del Municipio. Con la formaci&oacute;n completa, van a entrar <b>928 personas</b> por a&ntilde;o. Los alumnos van a estudiar el primer a&ntilde;o, y el segundo
 van a trabajar como pasantes, seis meses en el Municipio y seis en una empresa de San Isidro. <span class="sg">El presupuesto
 de empleo y vivienda se va a multiplicar por quince.</span> Tambi&eacute;n proponemos <b>un centro de apoyo escolar en cada localidad</b>.
 Hoy hay apenas cinco espacios peque&ntilde;os de apoyo escolar, todos en B&eacute;ccar y Boulogne. A ellos van unos cien alumnos. En las
@@ -57,19 +57,19 @@ superar lo que puede pagar con su ingreso, ni el valor de su auto o su moto. El 
 los cambios en las multas que no pueda hacer por su cuenta. Mientras tanto, va a avisar antes de multar y va a dejar pagar en cuotas. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Las inspecciones de comercios van a quedar grabadas.</b> Los inspectores van a grabar con su tel&eacute;fono cada
-inspecci&oacute;n, y despu&eacute;s cualquier vecino podr&aacute; ver c&oacute;mo fue. Si la inspecci&oacute;n no queda grabada y sellada, no van a valer el acta, la clausura ni la habilitaci&oacute;n que salgan de esa inspecci&oacute;n. El comerciante tambi&eacute;n va a tener derecho a grabar la
+inspecci&oacute;n, y despu&eacute;s cualquier vecino podr&aacute; ver c&oacute;mo fue. Sin grabaci&oacute;n sellada, no valen el acta, la clausura ni la habilitaci&oacute;n. El comerciante tambi&eacute;n va a tener derecho a grabar la
 inspecci&oacute;n, y ese video va a quedar guardado en la inteligencia artificial del Municipio, igual que el del inspector.
 As&iacute;, el comerciante podr&aacute; protegerse si el inspector no hace las cosas como corresponde. Nuestro objetivo es <span class="sg">bajar la
 corrupci&oacute;n en las inspecciones y habilitaciones</span> de los comercios de San Isidro. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Va a haber muchos m&aacute;s shows y espect&aacute;culos al aire libre: 200 por a&ntilde;o, en plazas y espacios p&uacute;blicos de
-todo San Isidro.</b> Van a tocar artistas nuevos de San Isidro, y las bandas van a tener prioridad, para que haya trabajo para m&aacute;s m&uacute;sicos. Tambi&eacute;n queremos que la costa funcione como una riviera, con actividades y gente todos los d&iacute;as
+todo San Isidro.</b> Las bandas van a tener prioridad, para que haya trabajo para m&aacute;s m&uacute;sicos. Tambi&eacute;n queremos que la costa funcione como una riviera, con actividades y gente todos los d&iacute;as
 de la semana, no s&oacute;lo el fin de semana. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</b> El dinero nuevo
 que necesita este programa es de 7.225,2 millones por a&ntilde;o, para empleo y vivienda. La mayor parte va a salir de actualizar la tabla de valores de 2008
-con la que hoy se cobra esa tasa, y el resto, de reordenar gastos del Municipio. Lo dem&aacute;s ya se gasta hoy. Con la obra
-p&uacute;blica que van a elegir los vecinos, por ejemplo, no cambia cu&aacute;nto se gasta: s&oacute;lo cambia qui&eacute;n decide qu&eacute; obra se hace. <i>(Cap&iacute;tulo 3)</i></li>
+con la que hoy se cobra esa tasa, y el resto, de reordenar gastos del Municipio. Lo dem&aacute;s ya se gasta hoy. En la obra
+p&uacute;blica, por ejemplo, s&oacute;lo cambia qui&eacute;n decide qu&eacute; obra se hace. <i>(Cap&iacute;tulo 3)</i></li>
 </ol>
 <p><b>Los primeros cien d&iacute;as.</b> El nuevo gobierno asume el <b>10 de diciembre de 2027</b>. Ese mismo mes, el
 intendente va a mandar al Concejo Deliberante las primeras ordenanzas. Una va a apartar el dinero de obra que le toca a
