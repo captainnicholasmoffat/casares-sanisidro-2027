@@ -71,7 +71,7 @@ Ministerio de Seguridad bonaerense; Ley 25.326, art&iacute;culos 5, 6 y 11; las 
 <li><b>Alertas.</b> Cuando la inteligencia artificial del Municipio avise que algo se sale de lo normal, no acusar&aacute; ni sancionar&aacute; a nadie, seg&uacute;n las reglas del 4.11. S&oacute;lo va a servir para acortar el tiempo entre que algo pasa y que se ve (5.6). Con el profesor digital, tampoco va a acusar ni a sancionar a un chico (5.8).</li>
 <li><b>Tr&aacute;mites e inspecciones.</b> La inteligencia artificial del Municipio no va a reemplazar la inspecci&oacute;n, ni las decisiones que necesitan criterio. De los proyectos que fracasan, la mitad son los que prometieron reemplazar el juicio de las personas. Grabar las inspecciones no es vigilar al trabajador: se graba el acto de autoridad (5.9).</li>
 <li><b>Internet.</b> La oficina de delitos por internet que proponemos junta pruebas, no censura. No da de baja nada, no pide que se baje nada y no decide qu&eacute; se puede decir (5.7).</li>
-<li><b>La constancia de que no consta.</b> No es un verificador de noticias, y no decide qu&eacute; es verdad (5.7).</li>
+<li><b>Una constancia para quien es acusado en p&uacute;blico sin una causa judicial.</b> No es un verificador de noticias, y no decide qu&eacute; es verdad (5.7).</li>
 </ul>
 
 <h2>Lo que tiene que confirmar un abogado</h2>

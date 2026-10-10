@@ -110,7 +110,7 @@ _IDX = [
  ("i", "5.6 &nbsp;Salud", "cap5bb"),
  ("i", "5.7 &nbsp;Seguridad", "cap5bc"),
  ("i", "5.8 &nbsp;Educaci&oacute;n y cultura", "cap5b2"),
- ("i", "5.9 &nbsp;Digitalizaci&oacute;n: que el tr&aacute;mite tarde diez segundos", "cap5b2a2"),
+ ("i", "5.9 &nbsp;Digitalizaci&oacute;n: tr&aacute;mites r&aacute;pidos e inspecciones grabadas", "cap5b2a2"),
  ("i", "5.10 &nbsp;Transparencia", "cap5b2b"),
  ("i", "5.11 &nbsp;Transporte y comercio", "cap5b2b"),
  ("i", "5.12 &nbsp;Los empleados del Municipio", "cap5b2c"),

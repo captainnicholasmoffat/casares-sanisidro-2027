@@ -26,7 +26,7 @@ C4A, C4A2 = split_at(C.C4A, '<h2><span class="n">4.4</span>', "cap4a2",
 # el capitulo 4 entra en siete paginas: la aplicacion (4.11) es seccion
 # propia y se lleva una entera.
 _c4 = C.C4B
-C4B,    _c4 = split_at(_c4, '<h3>Lo que proponemos que una comisi&oacute;n zonal no decida</h3>', "cap4bb", "")
+C4B,    _c4 = split_at(_c4, '<h3>Qu&eacute; no va a decidir una comisi&oacute;n zonal</h3>', "cap4bb", "")
 C4B_B,  _c4 = split_at(_c4, '<h2><span class="n">4.7</span>', "cap4bb2", "")
 C4B_B2, _c4 = split_at(_c4, '<h2><span class="n">4.9</span>', "cap4b2", "")
 C4B2,  C4B_C = split_at(_c4, '<h2><span class="n">4.12</span>', "cap4bc", "")
