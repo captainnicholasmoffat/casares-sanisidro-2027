@@ -80,7 +80,7 @@ _IDX = [
  ("i", "2.3 &nbsp;El hallazgo central: el plan no nombra el empleo, la vivienda ni la salud", "cap2b"),
  ("i", "2.4 &nbsp;Lo que dice este cap&iacute;tulo, en cinco puntos", "cap2b"),
  ("g", "3 &middot; Los fondos", None),
- ("i", "3.1 &nbsp;La trampa contable que casi nos hace decir lo contrario", "cap3a"),
+ ("i", "3.1 &nbsp;En 2025 hubo d&eacute;ficit, si se cuenta lo que de verdad se cobr&oacute;", "cap3a"),
  ("i", "3.2 &nbsp;Los cuatro n&uacute;meros que deciden el futuro de las cuentas de San Isidro", "cap3a"),
  ("i", "3.3 &nbsp;C&oacute;mo quedan las cuentas si nadie cambia nada", "cap3a"),
  ("i", "3.4 &nbsp;Cu&aacute;nto cuesta este programa", "cap3b"),

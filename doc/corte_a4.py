@@ -347,8 +347,9 @@ def grupos(m):
     out = []
     pegar_al_siguiente = False
     seccion = apartado = None
-    for b in bl:
+    for kb, b in enumerate(bl):
         previo = out[-1]["partes"][-1] if out else None
+        nxt = bl[kb + 1] if kb + 1 < len(bl) else None
         de_cuadro = previo is not None and (previo["tabla"] or previo["dibujo"] or previo["tag"] == "table"
                                             or (previo["tag"] == "p" and previo["cls"].startswith("cap")))
         es_cola = ((b["tag"] == "p" and b["cls"].startswith("cap")) or b["tag"] == "figcaption"
@@ -374,7 +375,11 @@ def grupos(m):
             tits = [p for p in g["partes"][:-1] if p["tag"] in ("h1", "h2", "h3")]
             partible = (len(b.get("parrafos") or []) >= 2 or bool(b.get("items")) or bool(b.get("filas"))
                         or bool(b.get("hijos")))
-            if tits and not partible and not b["dibujo"] and g["bottom"] - tits[-1]["bottom"] < MIN_TRAS:
+            sigue_texto = (nxt is not None and nxt["tag"] not in ("h1", "h2", "h3", "h4", "figure")
+                           and nxt["cls"].split(" ")[0] not in ("ex", "stand", "igrp", "hairline")
+                           and not nxt["dibujo"] and not nxt.get("foto"))
+            if (tits and sigue_texto and not partible and not b["dibujo"]
+                    and g["bottom"] - tits[-1]["bottom"] < MIN_TRAS):
                 pegar_al_siguiente = True
         if titulo and b["tag"] in ("h1", "h2", "h3"):
             out[-1]["sec"], out[-1]["sub"] = seccion, apartado
