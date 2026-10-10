@@ -3344,3 +3344,55 @@ repitiendo arriba su título con «(sigue)».
   del tercio se acortaron cuatro oraciones de «Qué proponemos hacer» y algunas oraciones de nueve definiciones del glosario, y el último punto de la lista
   del 5.3 se partió en dos (la regla del 75% va en un punto propio). Cinco tests OK. Excel recalculado, 0 errores.
 
+
+## DISPATCH 16 · RESPUESTAS DEL DIRECTOR A LAS DUDAS DEL 15 (10/10) · APLICADO
+- Aprobadas sin cambios las correcciones propias del 15 (adicciones en el 5.13, 27,1%, tercera propuesta, recortes del
+  resumen y del glosario, «Nuestra propuesta:», título del anexo).
+- 1 · Comisiones: fila del 6.4 y nota del calendario iguales: en los meses 4 a 6 donde ya hay una asociación vecinal;
+  donde hay que formar una nueva (el Municipio convoca a una asamblea abierta, 4.6), a más tardar en el mes 12.
+- 2 · Tomógrafos en el calendario: meses 1–3, se estudia el contrato actual y cómo termina; meses 4–9, compra o
+  leasing y obras en las salas, con el contrato actual vigente; mes 12, funcionando. Panel sorteado: su ordenanza (la
+  12, obra en parques y costa) entra con las del anexo en los meses 4–6; el primer panel funciona apenas la aprueba el
+  Concejo, en los meses 7–12; mientras tanto rige la regla de los terrenos de todo San Isidro (4.6).
+- 3 · Las diez acciones del capítulo 5 sin fila, ahora en el calendario (fecha elegida según el capítulo 5 y los
+  costos por año del capítulo 3):
+  - certificado de firma digital para la prueba sellada (5.5 y 5.9): meses 1–3;
+  - clases gratis del Municipio en plazas y parques (5.5): meses 4–6;
+  - cien cuidadores a domicilio (5.13): meses 4–6;
+  - mapa de los hechos que registra el Municipio y patrullaje donde se concentra el delito (5.7): meses 4–6;
+  - constancia para quien es acusado en público sin causa judicial (5.7): meses 6–9;
+  - tren en tiempo real, con el convenio pedido a Trenes Argentinos (5.5): meses 6–9;
+  - Escuela Náutica (5.5): los dos primeros puestos en los meses 7–12 (Águila y el de mejor agua, después del panel),
+    dos en el año 2 y los dos últimos en el año 3;
+  - baños de la costa con su plataforma (5.5): mismos meses y mismo orden que la Escuela Náutica;
+  - cámaras que cuentan gente en los 21 playones (5.5): meses 12–18, con el aumento del gasto en ambiente;
+  - oficina de delitos por internet (5.7): mes 15, con los primeros pasantes de la tecnicatura y egresados desde el 27.
+  El costo del año 1 de la Escuela Náutica, los baños y los cuidadores (cuadro 14) cuenta un año entero: queda como techo.
+- 4 · «200 shows al aire libre» → «200 por año, la mayoría al aire libre» (resumen, 5.5 y cuadro 14).
+- 5 · Catalejo y Barisidro, fila de fuentes: el permiso de la Provincia y el canon, por testimonio de quienes manejaban
+  los locales; sale el Decreto 1189/1996 como permiso municipal.
+- 6 · Ordenanza 12, art. 3: el Ejecutivo responde a la recomendación del panel en público, por escrito, con sus razones
+  y dentro de los treinta días corridos (el mismo plazo en el 4.6, el 5.5 y «Lo que estas ordenanzas no dicen»; el 5.11
+  dice «en público, por escrito y con sus razones»).
+- 7, 9, 13 y 15: sin cambios (los cinco medios, teleconsulta desde fines de 2024, todos los nombres, Villa Adelina).
+- 8 · Nota de método: sale la promesa de abrir el repositorio y la oración «cualquiera puede rehacerlos».
+- 10 · «la línea 144», sin «nacional» (5.13 y Ordenanza 6).
+- 11 · Art. 193, inc. 2 de la Constitución provincial: «impuestos». La Ley Orgánica (art. 29) pide la asamblea con
+  mayores contribuyentes para impuestos y contribuciones de mejoras, no para tasas: el texto lo dice así en el 3.5, el
+  4.1 y la nota de la Ordenanza 3 (San Isidro igual aprueba por asamblea su ordenanza impositiva, que fija las tasas).
+- 12 · 4.7: se mantiene el plazo escrito y se cuenta el antecedente: el intendente actual vetó la Ordenanza 9399; con
+  nuestra propuesta, la propone el mismo Ejecutivo que la promulga.
+- 14 · 5.12: el Sindicato de Trabajadores Municipales de San Isidro está en conflicto con el Ejecutivo por los sueldos
+  (paro de octubre de 2025 por un premio firmado y no pagado, según el sindicato; aumento del 10% rechazado en julio de
+  2026 y paro anunciado). Fila nueva en fuentes: Diario Lo Nuestro (8/10/2025) y La Noticia 1 (23/07/2026). Sin nombres
+  nuevos de personas.
+- 16 · 5.10: sale el «error de permisos» del buscador del Boletín.
+- A1 entre párrafos seguidos (control nuevo): 13 arreglos («No es… No es…» del 5.13 incluido); quedan seis
+  enumeraciones a propósito (Año 1/2/3, puntos numerados, «La cuarta/La quinta» del anexo). Dentro de un párrafo: cero.
+- Pantalla: 58 páginas (el calendario del 6.4 sigue en otra página desde el mes 12, con el encabezado del cuadro
+  repetido); la más alta, 2.693,2 pt. A4: 140 hojas, ninguna con más de un tercio en blanco; controles de título al
+  pie, rótulo, foto sola y dos fotos seguidas en cero; texto contra la pantalla sin faltantes; el calendario vuelve a
+  ser un solo cuadro. Capítulos: Introducción 5, Qué proponemos hacer 6, 1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 49,
+  6 → 101, Para cerrar 115, Anexo 116, Glosario 127, Nota de método 129. La última hoja queda con 76% en blanco (antes
+  81%): no entra en la anterior sin dejar otra hoja con más de un tercio vacío o un título al pie sin su texto.
+- Excel sin cambios (ya decía 114 shows al aire libre y 86 bajo techo). Cinco tests OK.

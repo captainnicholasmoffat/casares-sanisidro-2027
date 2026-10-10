@@ -129,8 +129,9 @@ que la ley argentina considera adecuados. Responde el &aacute;rea municipal de e
 de acceso, rectificaci&oacute;n y supresi&oacute;n.</p>
 
 <h2>3 &middot; Ordenanza de actualizaci&oacute;n de la base de valuaci&oacute;n</h2>
-<p class="tight"><i>Como sube lo que se emite, la sanciona la asamblea de concejales y mayores contribuyentes
-(Constituci&oacute;n provincial, art. 193, inc. 2) sobre una ordenanza preparatoria del Concejo. As&iacute; se
+<p class="tight"><i>La sanciona la asamblea de concejales y mayores contribuyentes sobre una ordenanza preparatoria
+del Concejo, como cada a&ntilde;o la ordenanza impositiva. Esa asamblea la exigen la Constituci&oacute;n provincial (art. 193, inc. 2) y la Ley
+Org&aacute;nica (art. 29) para los impuestos; para la tasa se sigue el mismo camino. As&iacute; se
 sancion&oacute; la tabla de 2008.</i></p>
 
 <h3>Art&iacute;culo 1 &mdash; Actualizaci&oacute;n</h3>
@@ -258,7 +259,7 @@ lugares se consultan en la inteligencia artificial del Municipio.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Primer contacto y prueba</h3>
 <p class="tight">La inteligencia artificial del Municipio orienta y deriva a toda hora, sin juzgar, a la direcci&oacute;n de
-g&eacute;nero, a la l&iacute;nea nacional 144 o a la guardia, y saca el turno. Tiene un modo discreto, en el que la charla no queda
+g&eacute;nero, a la l&iacute;nea 144 o a la guardia, y saca el turno. Tiene un modo discreto, en el que la charla no queda
 guardada en el tel&eacute;fono. Quien sufre violencia puede guardar mensajes, audios y fotos con la prueba sellada al momento de
 grabar (Ordenanza 8, art&iacute;culo 5), que queda en el Municipio y no en su tel&eacute;fono.</p>
 
@@ -419,7 +420,7 @@ antes de contratarse</b>, y toda persona puede consultarla completa en el Sistem
 <p class="tight">La obra en un parque se somete a la comisi&oacute;n vecinal de su zona. Cada obra en la costa se somete a un panel de
 vecinos sorteado entre quienes viven en San Isidro y quienes usan la costa, que se integra para cada caso, da una
 recomendaci&oacute;n fundada y se disuelve al darla. Si el parque est&aacute; en la costa, la obra se somete a los dos. En todos los casos, con el dictamen de la asociaci&oacute;n
-del parque (Ordenanza 5). <b>El Departamento Ejecutivo no contrata la obra que rechace la comisi&oacute;n vecinal, y responde por escrito y en forma fundada a la recomendaci&oacute;n del panel.</b></p>
+del parque (Ordenanza 5). <b>El Departamento Ejecutivo no contrata la obra que rechace la comisi&oacute;n vecinal, y responde a la recomendaci&oacute;n del panel en p&uacute;blico, por escrito y en forma fundada, dentro de los treinta (30) d&iacute;as corridos de recibirla.</b></p>
 
 <h3>Art&iacute;culo 4 &mdash; El canon de la costa</h3>
 <p class="tight">El Municipio <b>destina a la costa</b> lo que percibe por los permisos y las concesiones en
@@ -515,7 +516,7 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 <h2>Lo que estas ordenanzas no dicen, y por qu&eacute;</h2>
 <div class="cols">
 <p><b>No hace obligatorio el resultado del voto vecinal.</b> La Constituci&oacute;n provincial no lo permite, y el
-veto de Pinamar de diciembre de 2025 lo confirm&oacute;. S&oacute;lo se vuelven obligatorias la partida y la respuesta, no el proyecto votado. Sobre la obra en la costa, el panel sorteado s&oacute;lo da una recomendaci&oacute;n, y el Ejecutivo le responde por escrito. En dos casos, el Departamento Ejecutivo (el intendente y sus secretar&iacute;as, que gobiernan el Municipio) se obliga a no hacer lo que los vecinos rechazan: la obra en un parque y las excepciones urban&iacute;sticas. Ah&iacute; es el Ejecutivo el que se limita a s&iacute; mismo, y el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
+veto de Pinamar de diciembre de 2025 lo confirm&oacute;. S&oacute;lo se vuelven obligatorias la partida y la respuesta, no el proyecto votado. Sobre la obra en la costa, el panel sorteado s&oacute;lo da una recomendaci&oacute;n, y el Ejecutivo le responde en p&uacute;blico, por escrito y con sus razones, dentro de los treinta d&iacute;as. En dos casos, el Departamento Ejecutivo (el intendente y sus secretar&iacute;as, que gobiernan el Municipio) se obliga a no hacer lo que los vecinos rechazan: la obra en un parque y las excepciones urban&iacute;sticas. Ah&iacute; es el Ejecutivo el que se limita a s&iacute; mismo, y el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
 que esta ordenanza sobreviva a un veto.</span></p>
 <p><b>No crea un &oacute;rgano nuevo.</b> Ninguna ordenanza crea una junta, un comit&eacute; permanente o un consejo. Las comisiones zonales son las asociaciones vecinales que ya existen, reconocidas por la propia Ordenanza 6045. El comit&eacute; de vigilancia del art&iacute;culo 7 de la Ordenanza 1 se elige para cada obra y termina con ella. Pasa lo mismo con el panel de la costa de la Ordenanza 12: se sortea para cada caso y se disuelve al dar su recomendaci&oacute;n.</p>
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> Los art&iacute;culos 60 y 132 de la Ley Org&aacute;nica ya dicen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el municipio, y con qu&eacute; requisito de adhesi&oacute;n, as&iacute; que no hace falta.</p>
@@ -533,8 +534,8 @@ ac&aacute;</b>. Las otras seis no lo necesitan.</p>
 <p><b>Tres se deciden en el presupuesto anual, que el Concejo vota cada a&ntilde;o:</b> llevar el gasto
 conjunto en empleo y vivienda a 7.730,9 millones, llevar la funci&oacute;n ambiental al 1,5% y abrir un
 centro de apoyo escolar en cada localidad. <b>Una ordenanza que fijara esos montos de una vez
-atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone. La formaci&oacute;n
-laboral tiene sus reglas en la Ordenanza 10 &mdash;pasant&iacute;as, incentivo docente, becas, empleo local, subcontrataci&oacute;n y semillero&mdash;, pero el presupuesto tambi&eacute;n fija cu&aacute;ntas
+atar&iacute;a el presupuesto de los cuatro a&ntilde;os siguientes</b>, y este programa no lo propone. Para la formaci&oacute;n
+laboral, las reglas est&aacute;n en la Ordenanza 10 &mdash;pasant&iacute;as, incentivo docente, becas, empleo local, subcontrataci&oacute;n y semillero&mdash;, pero el presupuesto tambi&eacute;n fija cu&aacute;ntas
 personas forma por a&ntilde;o.</p>
 <p><b>La cuarta se resuelve conectando sistemas:</b> el turno m&eacute;dico en l&iacute;nea se va a montar sobre la
 plataforma de turnos que el Municipio ya usa para otros tr&aacute;mites, y no necesita una norma local.</p>

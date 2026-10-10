@@ -62,8 +62,8 @@ inspecci&oacute;n, y ese video va a quedar guardado en la inteligencia artificia
 As&iacute;, el comerciante podr&aacute; protegerse si el inspector no hace las cosas como corresponde. Nuestro objetivo es <span class="sg">bajar la
 corrupci&oacute;n en las inspecciones y habilitaciones</span> de los comercios de San Isidro. <i>(Cap&iacute;tulo 5)</i></li>
 
-<li><b>Va a haber muchos m&aacute;s shows y espect&aacute;culos al aire libre: 200 por a&ntilde;o, en plazas y espacios p&uacute;blicos de
-todo San Isidro.</b> Las bandas van a tener prioridad, para que haya trabajo para m&aacute;s m&uacute;sicos. Tambi&eacute;n queremos que la costa funcione como una riviera, con actividades y gente todos los d&iacute;as
+<li><b>Va a haber muchos m&aacute;s shows y espect&aacute;culos: 200 por a&ntilde;o, la mayor&iacute;a al aire libre, en plazas y espacios
+p&uacute;blicos de todo San Isidro.</b> Las bandas van a tener prioridad, para que haya trabajo para m&aacute;s m&uacute;sicos. Tambi&eacute;n queremos que la costa funcione como una riviera, con actividades y gente todos los d&iacute;as
 de la semana, no s&oacute;lo el fin de semana. <i>(Cap&iacute;tulo 5)</i></li>
 
 <li><b>Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</b> El dinero nuevo

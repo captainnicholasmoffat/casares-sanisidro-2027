@@ -77,6 +77,12 @@ C6B_A, C6B_B = split_at(C62_SRC, '<h2><span class="n">6.5</span>', "cap6c",
                         H_CONT.format(n=6, t="El plan, con fechas"))
 # el calendario suma las fechas propuestas de multas y costa: el 6.4 en pagina propia
 C6B_A, C6B_A2 = split_at(C6B_A, '<h2><span class="n">6.4</span>', "cap6b2", "")
+# dispatch 16: con las fechas de los tomografos y del panel, y las diez acciones del capitulo 5 que no tenian fila,
+# el calendario pasa de 2.700 pt: sigue en otra pagina desde el mes 12, con el encabezado del cuadro repetido
+_CAL_CAB = ('<table>\n<colgroup><col style="width:84pt"><col><col style="width:150pt"></colgroup>\n'
+            '<tr class="hd"><th>Cu&aacute;ndo</th><th>Qu&eacute;</th><th class="r">C&oacute;mo se comprueba</th></tr>\n')
+C6B_A2, C6B_A3 = split_at(C6B_A2, '<tr class="hi"><td class="l">Mes 12</td><td>A&ntilde;o 1 de la rampa', "cap6b3", _CAL_CAB)
+C6B_A2 = dict(C6B_A2, html=C6B_A2["html"] + "</table>\n")
 
 # nota de metodo y notas de cada capitulo en una pagina; las fuentes del texto, en la
 # siguiente, la ultima del documento (correccion 138, respuesta 6; la 40 pasaba de 2.700 pt)
@@ -112,7 +118,7 @@ ORD_C, ORD_D = split_at(ORD_C, '<h2>11 &middot; Ordenanza de la costa', "ordenan
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
-            C5A, C5A2, C5A3, C5A3B, C5A4, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3]
+            C5A, C5A2, C5A3, C5A3B, C5A4, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_A3, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:
