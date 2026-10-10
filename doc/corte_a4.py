@@ -47,7 +47,7 @@ LIM = HOJA - ABAJO                        # hasta donde puede llegar el contenid
 AREA0 = 40.5 + 6.75                       # donde termina el encabezado
 AREA1 = LIM + 28.1                        # la raya del pie
 TERCIO = 1 / 3                            # el blanco maximo al pie de una hoja, sobre el alto entre encabezado y pie
-MIN_TRAS = 6 * 9.7 * 1.44                 # dispatch 15: un titulo de apartado se lleva al menos seis renglones
+MIN_TRAS = 7 * 9.7 * 1.44                 # dispatch 15: un titulo de apartado se lleva al menos seis renglones
 TOPE = 0.32                               # al cortar se apunta un poco por debajo, por lo que el dibujo agrega al medir
 FONDO = None                              # el beige de la pagina de pantalla, tal como lo dibujo Chrome (--ground)
 GRIS = (0x6E / 255, 0x62 / 255, 0x5A / 255)       # --taupe, el color del pie
@@ -478,18 +478,28 @@ def _hoja(at, i, j, primera):
 
 def corte_malo(at, j):
     """Dispatch 15 (regla A12): cortar la hoja antes de at[j] deja al pie un titulo de apartado con menos de seis
-    renglones de su texto, y el apartado sigue en la hoja siguiente."""
+    renglones de su texto (aunque ese texto sean varios bloques cortos), y el apartado sigue en la hoja siguiente."""
     if j <= 0 or j >= len(at):
         return False
-    a = at[j - 1]
-    g = a["g"]
-    if a["bottom"] < g["bottom"] - 0.5:
+    if at[j]["g"] is at[j - 1]["g"]:
         return False                                 # se corta adentro de un grupo partido: lo cuida atomos
-    tits = [p for p in g["partes"] if p["tag"] in ("h1", "h2", "h3")]
-    if not tits or g["bottom"] - tits[-1]["bottom"] >= MIN_TRAS:
-        return False
     sig = at[j]["g"]["partes"][0]
-    return sig["tag"] not in ("h1", "h2", "h3", "h4") or at[j]["g"] is g
+    if at[j]["primero"] and sig.get("foto"):
+        return False
+    nivel = {"h1": 1, "h2": 2, "h3": 3, "h4": 4}
+    fin = at[j - 1]["bottom"]
+    k = j - 1
+    while k >= 0 and fin - at[k]["top"] < MIN_TRAS + 40:
+        a = at[k]
+        tits = [p for p in a["g"]["partes"] if p["tag"] in ("h1", "h2", "h3")
+                and p["top"] >= a["top"] - 0.5 and p["bottom"] <= a["bottom"] + 0.5]
+        if tits:
+            t = tits[-1]
+            if at[j]["primero"] and sig["tag"] in nivel and nivel[sig["tag"]] <= nivel[t["tag"]]:
+                return False                         # lo que sigue empieza un apartado del mismo nivel o mayor
+            return fin - t["bottom"] < MIN_TRAS
+        k -= 1
+    return False
 
 
 def voraz(at):
@@ -680,7 +690,7 @@ def _alto_parte_recuadro(b, n):
     return b["hijos"][n][1] - b["top"] + 11.0
 
 
-def proponer_particion(g, h, s, at, partir, estado, sin_partir, entra, forzar=False):
+def proponer_particion(g, h, s, at, partir, estado, sin_partir, entra, forzar=False, minimo=0.0):
     """Si lo que sigue a la hoja h es un bloque a dos columnas, o un recuadro que no entra en una hoja, lo parte para
     llenarla: el texto entre parrafos, el recuadro entre puntos. Devuelve el texto del registro o None."""
     b = g["partes"][-1]
@@ -706,7 +716,7 @@ def proponer_particion(g, h, s, at, partir, estado, sin_partir, entra, forzar=Fa
             if tits and g["partes"][-1] is b:
                 return (b["top"] - tits[-1]["bottom"]) + _alto_parte_texto(b, n) >= MIN_TRAS
             return True
-        validos = [n for n in validos if _ok(n)]
+        validos = [n for n in validos if _ok(n) and _alto_parte_texto(b, n) >= minimo]
         tipo = "texto"
     else:
         npuntos = len(b["hijos"]) - 1
@@ -841,6 +851,14 @@ def armar_capitulo(dib, cap, caps, rep, ultimo_doc, registro):
             continue
         if not ultima and at[h["j"]]["primero"]:
             txt = proponer_particion(at[h["j"]]["g"], h, s, at, partir, estado, sin_partir, entra)
+            # dispatch 15 (A12): lo que sigue es un titulo con poco texto; se parte el bloque de despues, para que el
+            # titulo baje a esta hoja con sus seis renglones
+            q = h["j"] + 1
+            if not txt and q < len(at) and at[q]["primero"] and corte_malo(at, q):
+                tg = at[h["j"]]["g"]
+                tts = [p for p in tg["partes"] if p["tag"] in ("h1", "h2", "h3")]
+                falta = MIN_TRAS - (tg["bottom"] - tts[-1]["bottom"]) if tts else 0.0
+                txt = proponer_particion(at[q]["g"], h, s, at, partir, estado, sin_partir, entra, minimo=falta)
             if txt:
                 registro.append(f"{cap['id']}: hoja {s + 1}: {txt}")
                 probando = partir[-1]["i"]
