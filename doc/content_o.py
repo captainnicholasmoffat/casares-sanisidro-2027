@@ -357,7 +357,7 @@ afuera en lugar de un egresado hay que demostrar ante el panel t&eacute;cnico qu
 capacidad requerida.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Pasant&iacute;as</h3>
-<p class="tight">El Municipio firma con la Universidad Nacional Ra&uacute;l Scalabrini Ortiz un convenio para dictar en las sedes de formaci&oacute;n una tecnicatura universitaria de dos a&ntilde;os, y con ella el convenio de pasant&iacute;as de la Ley 26.427. La pasant&iacute;a dura doce meses en dos tramos de seis: el primero en el Municipio y el segundo en una empresa del Partido de San Isidro o una contratista del Municipio. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. Para el tope del 7% de la planta se cuentan los pasantes en curso. Cada &aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus pasantes; en el segundo tramo, la empresa.</p>
+<p class="tight">El Municipio firma con la Universidad Nacional de San Isidro &laquo;Ra&uacute;l Scalabrini Ortiz&raquo; (UNSO) un convenio para dictar en las sedes de formaci&oacute;n una tecnicatura universitaria de dos a&ntilde;os, y con ella el convenio de pasant&iacute;as de la Ley 26.427. La pasant&iacute;a dura doce meses en dos tramos de seis: el primero en el Municipio y el segundo en una empresa del Partido de San Isidro o una contratista del Municipio. Los pasantes trabajan s&oacute;lo en proyectos nuevos y nunca en tareas de la planta ni en vacantes. Para el tope del 7% de la planta se cuentan los pasantes en curso. Cada &aacute;rea paga la asignaci&oacute;n est&iacute;mulo, la cobertura de riesgos del trabajo y la cobertura de salud de sus pasantes; en el segundo tramo, la empresa.</p>
 
 <h3>Art&iacute;culo 5 &mdash; Partida de incentivo docente</h3>
 <p class="tight">Los convenios con el centro de formaci&oacute;n y con la universidad incluyen una <b>partida de incentivo docente</b>, a cargo del Municipio, que cada instituci&oacute;n paga a su profesor cuyos tutorados m&aacute;s se reciben y consiguen trabajo. Cada
@@ -515,7 +515,7 @@ que se revise. El proveedor de la inteligencia artificial act&uacute;a por contr
 <h2>Lo que estas ordenanzas no dicen, y por qu&eacute;</h2>
 <div class="cols">
 <p><b>No hace obligatorio el resultado del voto vecinal.</b> La Constituci&oacute;n provincial no lo permite, y el
-veto de Pinamar de diciembre de 2025 lo confirm&oacute;. S&oacute;lo se vuelven obligatorias la partida y la respuesta, no el proyecto votado. En dos casos, el Departamento Ejecutivo (el intendente y sus secretar&iacute;as, que gobiernan el Municipio) se obliga a no hacer lo que los vecinos rechazan: la obra en parques y costa, y las excepciones urban&iacute;sticas. Ah&iacute; es el Ejecutivo el que se limita a s&iacute; mismo, y el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
+veto de Pinamar de diciembre de 2025 lo confirm&oacute;. S&oacute;lo se vuelven obligatorias la partida y la respuesta, no el proyecto votado. Sobre la obra en la costa, el panel sorteado s&oacute;lo da una recomendaci&oacute;n, y el Ejecutivo le responde por escrito. En dos casos, el Departamento Ejecutivo (el intendente y sus secretar&iacute;as, que gobiernan el Municipio) se obliga a no hacer lo que los vecinos rechazan: la obra en un parque y las excepciones urban&iacute;sticas. Ah&iacute; es el Ejecutivo el que se limita a s&iacute; mismo, y el Concejo conserva todas sus facultades. <span class="sg">De ah&iacute; depende
 que esta ordenanza sobreviva a un veto.</span></p>
 <p><b>No crea un &oacute;rgano nuevo.</b> Ninguna ordenanza crea una junta, un comit&eacute; permanente o un consejo. Las comisiones zonales son las asociaciones vecinales que ya existen, reconocidas por la propia Ordenanza 6045. El comit&eacute; de vigilancia del art&iacute;culo 7 de la Ordenanza 1 se elige para cada obra y termina con ella. Pasa lo mismo con el panel de la costa de la Ordenanza 12: se sortea para cada caso y se disuelve al dar su recomendaci&oacute;n.</p>
 <p><b>No regula la ejecuci&oacute;n de la obra.</b> Los art&iacute;culos 60 y 132 de la Ley Org&aacute;nica ya dicen c&oacute;mo una asociaci&oacute;n de vecinos contrata con el municipio, y con qu&eacute; requisito de adhesi&oacute;n, as&iacute; que no hace falta.</p>
@@ -545,8 +545,8 @@ usar un equipo comprado ser&iacute;a una ordenanza sobre c&oacute;mo trabaja el 
 se ordena por decreto.</p>
 <p><b>La sexta se resuelve con la ley y los contratos:</b> la Ley 24.449 (art&iacute;culo 85) ya manda que lo cobrado por multas vaya a la seguridad vial. Cuando venza el contrato actual, el contrato nuevo va a decir que nadie cobra por multa
 (5.11).</p>
-<p><span class="sg">De las seis metas, una ordenanza s&iacute; fija c&oacute;mo se comprueban</span>:
-la espera por especialidad, el precio unitario, el stock, la matr&iacute;cula por sede, las &oacute;rdenes
+<p><span class="sg">Para cuatro de esas seis metas, una ordenanza s&iacute; fija c&oacute;mo se comprueban</span>:
+la espera por especialidad, la matr&iacute;cula por sede, las &oacute;rdenes
 judiciales y la inserci&oacute;n laboral entran en el art&iacute;culo 2 de la Ordenanza 2. Una ordenanza no puede atar el monto, pero s&iacute; puede obligar a que el resultado se vea.</p>
 </div>
 """)

@@ -376,8 +376,8 @@ def grupos(m):
             partible = (len(b.get("parrafos") or []) >= 2 or bool(b.get("items")) or bool(b.get("filas"))
                         or bool(b.get("hijos")))
             sigue_texto = (nxt is not None and nxt["tag"] not in ("h1", "h2", "h3", "h4", "figure")
-                           and nxt["cls"].split(" ")[0] not in ("ex", "stand", "igrp", "hairline")
-                           and not nxt["dibujo"] and not nxt.get("foto"))
+                           and nxt["cls"].split(" ")[0] not in ("stand", "igrp", "hairline")
+                           and not nxt.get("foto"))
             if (tits and sigue_texto and not partible and not b["dibujo"]
                     and g["bottom"] - tits[-1]["bottom"] < MIN_TRAS):
                 pegar_al_siguiente = True
