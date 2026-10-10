@@ -39,7 +39,7 @@ C3B_A, C3B_B = split_at(B.C3B, '<h3>Lo que cuesta administrar todo esto</h3>', "
                         H_CONT.format(n=3, t="Los fondos"))
 C3B_B, C3B_C = split_at(C3B_B, '<h3>La deuda que ya existe', "cap3b3", "")
 C2A, C2B  = split_at(B.C2,  '<h2><span class="n">2.2</span>', "cap2b",
-                     H_CONT.format(n=2, t="La gesti&oacute;n, medida"))
+                     H_CONT.format(n=2, t="El gobierno actual, medido"))
 C5A, C5A2 = split_at(C.C5A, '<h2><span class="n">5.3</span>', "cap5a2",
                      H_CONT.format(n=5, t="Qu&eacute; hacemos en cada &aacute;rea"))
 C5A2, C5A3 = split_at(C5A2, '<h3>Ense&ntilde;ar IA sin acceso', "cap5a3", "")
@@ -95,11 +95,11 @@ FUENTES2 = dict(id="fuentes2", runhead=A.RH, html=_F_CAB + F.FUENTES_HTML[_F_COR
 
 # el anexo articulado entra en cuatro paginas (C1: crecieron la II, la VI y llegaron la XV y la XVI)
 ORD_A, ORD_B = split_at(O.ORDENANZA,
-                        '<h2>IV &middot; Ordenanza de grabaci&oacute;n de los actos de fiscalizaci&oacute;n</h2>',
+                        '<h2>4 &middot; Ordenanza de grabaci&oacute;n de los actos de fiscalizaci&oacute;n</h2>',
                         "ordenanza2", "")
-ORD_B, ORD_C = split_at(ORD_B, '<h2>VIII &middot; Ordenanza de ruido</h2>', "ordenanza3", "")
+ORD_B, ORD_C = split_at(ORD_B, '<h2>8 &middot; Ordenanza de ruido</h2>', "ordenanza3", "")
 # de la XI en adelante (costa, obra en parques y costa, excepciones, parques y cuotas de multas) va en una cuarta
-ORD_C, ORD_D = split_at(ORD_C, '<h2>XI &middot; Ordenanza de la costa', "ordenanza4", "")
+ORD_C, ORD_D = split_at(ORD_C, '<h2>11 &middot; Ordenanza de la costa', "ordenanza4", "")
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,

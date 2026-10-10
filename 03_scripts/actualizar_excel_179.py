@@ -405,12 +405,12 @@ s_row(176, "Reasignación del gasto flexible, en régimen", formula="=(C52*C127-
 s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mitad de la obra pública")
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
-      note="El 41,4% del documento")
-s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271+C273+C281)/C128", fmt=FMT_PCT1,
-      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores y mensajes de texto de las multas, espectáculos de Cultura y obra vecinal: el 53,3% del documento")
-s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 46,7%")
-s_row(182, "Libre con la beca y el módulo de salud", formula="=C181-(C174+C175)/C128", fmt=FMT_PCT1,
-      note="El 44,0%. La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
+      note="41,4%. Desde el dispatch 15 el documento ya no lo usa: usa la fila 180")
+s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271+C273+C281-C296)/C128", fmt=FMT_PCT1,
+      note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores y mensajes de texto de las multas, espectáculos de Cultura y obra vecinal, menos el ahorro de los tomógrafos propios (fila 296): el 51,8% del documento")
+s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 48,2%")
+s_row(182, "Libre con la beca, el módulo de salud y el ahorro de tomógrafos del peor caso", formula="=C181-(C174+C175+C296-C298)/C128", fmt=FMT_PCT1,
+      note="El 44,7%: el peor caso, con el ahorro de tomógrafos del peor caso (fila 298). La plataforma y el semillero se pagan dentro de Ciencia y Técnica")
 
 s_header(184, "R · EL SISTEMA VECINAL (capítulo 4)")
 s_row(185, "Funcionamiento: parte fija de la partida vecinal", 0.015, fmt=FMT_PCT1,
@@ -528,7 +528,7 @@ s_row(255, "Año 3 · lo que falta", formula="=MAX(0,C143*3/4-IF(C142=1,C140,C13
 s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,C141,C137))",
       note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
 s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
-      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,0%)")
+      note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,7%)")
 s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
 s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
       note="5.5: una clase a la mañana y una a la tarde, de lunes a jueves, en los seis lugares; 48 horas por semana, categoría 991 "
@@ -557,7 +557,7 @@ s_row(269, "Cada 10% de rebaja media de las multas, por año", 323000000,
       note="En 2024 se pagaron entre 13.000 y 456.000 multas (81.000 como estimación central). No se publica cuántas se "
            "labran, así que no entra en el resultado: sale del gasto flexible libre")
 s_row(270, "Cada 10% de rebaja media, sobre el gasto flexible", formula="=C269/C128", fmt=FMT_PCT1,
-      note="0,4%: puntos del margen libre (44,0%)")
+      note="0,4%: puntos del margen libre (44,7%)")
 s_row(271, "Tránsito o Juzgado de Faltas · cuatro personas que validan las actas, por año", 108280000,
       note="Informe 23: 1 semi-senior y 3 juniors, con los sueldos del cuadro 27. Con el resto del presupuesto y no con el "
            "fondo de seguridad vial: pagar con las multas a quien multa invita a multar más. Entra en el gasto flexible ocupado")
@@ -574,12 +574,41 @@ s_row(277, "Gasto 2025 en semaforización y señalamiento vial y en la política
 s_row(278, "Lo que ya se gasta en seguridad vial menos lo que se cobra en multas", formula="=C277-C276",
       note="Positivo: lo que se cobra ya se gasta en seguridad vial, como manda la Ley 24.449, art. 85. El fondo no mueve el margen")
 s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informes 23 ter a 23 quinquies)")
-s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 329000000,
-      note="Informe 23 quinquies: 114 shows al aire libre, del 20 de septiembre al 15 de abril, y 86 bajo techo; cachets de los 200 shows con las cancelaciones, 201,9 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, en espacios municipales para los solistas y en cuatro clubes o centros culturales por convenio, 17,8 M; control contra robos, 2,0 a 2,7 M: unos 329 M. Entra en el gasto flexible ocupado")
+s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 394000000,
+      note="Informe 23 quinquies: 114 shows al aire libre, del 20 de septiembre al 15 de abril, y 86 bajo techo; cachets de los 200 shows (10% solistas, 40% dúos o tríos y 50% bandas de cuatro o más) con las cancelaciones, 270,6 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, en espacios municipales para los solistas y en cuatro clubes o centros culturales por convenio, 14,1 M; control contra robos, 2,0 a 2,7 M: unos 394 M. Entra en el gasto flexible ocupado")
 s_row(282, "Cultura · compra de equipos, limitadores y control contra robos, una vez", 138800000,
       note="Informe 23 ter: 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control. Informe 23 quáter: un limitador con bloqueo y clave y dos bafles chicos para el «modo plaza» en cada equipo de show, 7,7 M por los dos")
-s_row(283, "Cultura · el primer año, con la compra", 467000000, note="Informe 23 quinquies: unos 467 M, de 328,5 a 329,2 M por año más 138,8 M de compra")
-for rr in range(106, 284):
+s_row(283, "Cultura · el primer año, con la compra", 532000000, note="Unos 532 M, de 393,5 a 394,2 M por año más 138,8 M de compra (dispatch 15, mezcla 10/40/50)")
+s_header(285, "AB · TOMÓGRAFOS PROPIOS Y RESONANCIA A LA VISTA (5.6, dispatch 15)")
+s_row(286, "Tomografía 2024 · montos autorizados, a pesos de diciembre de 2025", 2564050000,
+      note="Orden de compra 117/2024 por 900 M, ampliada en 600 M (Decreto 1352/2024), y 1.418 estudios convalidados por 124,3 M (Decreto 1812/2024), con el IPC del INDEC. Son montos autorizados, no pagos")
+s_row(287, "Tomografías por año (estimación)", 20000, fmt=FMT_N,
+      note="Cálculo propio: 620 estudios en 33 días en el Central y 798 en 21 días en Boulogne (Decreto 1812/2024), llevados a un año. El Municipio no publica la cantidad")
+s_row(288, "Precio del servicio por tomografía, en dólares", 86.05, fmt="0.00",
+      note="Valor IOMA, código 88 pesados, más 43% (Ordenanza 9299 y Decreto 1755/2023), con 35% de estudios con contraste")
+s_row(289, "Dólar de diciembre de 2025 (BCRA, Comunicación A 3500)", 1447.8377, fmt="0.00")
+s_row(290, "Servicio de tomografía a ese precio, por año", formula="=C287*C288*C289",
+      note="2.492 M: contra este monto se calcula el ahorro")
+s_row(291, "Precio de un tomógrafo nuevo, en dólares", 394740, fmt=FMT_N,
+      note="Ciudad de Buenos Aires, Buenos Aires Compras, diciembre de 2025. La Provincia pagó 670 M por uno de 64 cortes en enero de 2026 (unos 450.000 dólares): es el peor caso")
+s_row(292, "Adecuación de la sala, sobre el precio del equipo", 0.15, fmt=FMT_PCT0, note="Supuesto del estudio. En el peor caso, 25%")
+s_row(293, "Dos tomógrafos y sus salas, una vez", formula="=2*C291*(1+C292)*C289",
+      note="1.315 M. Se puede comprar o tomar con el leasing de la Provincia para municipios, en 48 cuotas, pagadas con la misma partida que hoy paga el servicio")
+s_row(294, "Tener los dos equipos, por año, en dólares", 781756, fmt=FMT_N,
+      note="Cálculo propio: la compra repartida en 10 años al 8% real, mantenimiento 10%, 11 puestos de técnico (convenio FATSA más 20%), informe y contraste a valor IOMA, 5% de gastos generales, con 20.000 estudios")
+s_row(295, "Tener los dos equipos, por año", formula="=C294*C289", note="1.132 M por año, contando la compra")
+s_row(296, "Ahorro por año con tomógrafos propios", formula="=C290-C295",
+      note="1.360 M por año. Resta en el gasto flexible ocupado (fila 180)")
+s_row(297, "Ahorro por año, peor caso, en dólares", 455200, fmt=FMT_N,
+      note="Equipo al precio de la Provincia, sala 25%, 8 años de vida, mantenimiento 12%, técnicos e informes por 1,5 y contraste por 2")
+s_row(298, "Ahorro por año, peor caso", formula="=C297*C289", note="660 M por año. Entra en el peor caso (fila 182)")
+s_row(299, "Resonancia · servicio por año (Licitación Pública 40/2025)", 370800000,
+      note="Valor IOMA más 35% (Decreto 1219/2025). En 2021 era IOMA menos 11% (Decreto 1069/2021). Se sigue contratando")
+s_row(300, "Resonancias por año (estimación)", 3400, fmt=FMT_N,
+      note="Cálculo propio: 370,8 M divididos por el valor IOMA de octubre de 2025 más 35%, con 30% de estudios con contraste")
+s_row(301, "Resonancias por año desde las que conviene un resonador propio", 7500, fmt=FMT_N,
+      note="Cálculo propio: un equipo de 1,5 T con su obra (1,85 M de dólares) cuesta 507.386 dólares fijos por año. Con 3.400 estudios costaría unos 277.000 dólares más por año que el servicio")
+for rr in range(106, 302):
     S.row_dimensions[rr].height = None
 
 # ======================================================================

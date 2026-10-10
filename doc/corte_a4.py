@@ -47,6 +47,7 @@ LIM = HOJA - ABAJO                        # hasta donde puede llegar el contenid
 AREA0 = 40.5 + 6.75                       # donde termina el encabezado
 AREA1 = LIM + 28.1                        # la raya del pie
 TERCIO = 1 / 3                            # el blanco maximo al pie de una hoja, sobre el alto entre encabezado y pie
+MIN_TRAS = 6 * 9.7 * 1.44                 # dispatch 15: un titulo de apartado se lleva al menos seis renglones
 TOPE = 0.32                               # al cortar se apunta un poco por debajo, por lo que el dibujo agrega al medir
 FONDO = None                              # el beige de la pagina de pantalla, tal como lo dibujo Chrome (--ground)
 GRIS = (0x6E / 255, 0x62 / 255, 0x5A / 255)       # --taupe, el color del pie
@@ -366,6 +367,15 @@ def grupos(m):
         titulo = b["tag"] in ("h1", "h2", "h3", "h4") or b["cls"] in ("stand", "igrp", "hairline")
         rotulo = b["cls"].split(" ")[0] == "ex" and not (b["tabla"] or b["dibujo"])
         pegar_al_siguiente = titulo or rotulo
+        # dispatch 15 (regla A12): si lo que sigue a un titulo es corto y no se puede partir, el titulo se lleva
+        # tambien lo siguiente, hasta tener seis renglones de su texto
+        if not pegar_al_siguiente and out and out[-1]["partes"][-1] is b:
+            g = out[-1]
+            tits = [p for p in g["partes"][:-1] if p["tag"] in ("h1", "h2", "h3")]
+            partible = (len(b.get("parrafos") or []) >= 2 or bool(b.get("items")) or bool(b.get("filas"))
+                        or bool(b.get("hijos")))
+            if tits and not partible and not b["dibujo"] and g["bottom"] - tits[-1]["bottom"] < MIN_TRAS:
+                pegar_al_siguiente = True
         if titulo and b["tag"] in ("h1", "h2", "h3"):
             out[-1]["sec"], out[-1]["sub"] = seccion, apartado
     for g in out:
@@ -414,8 +424,14 @@ def atomos(m):
                 continue
         if lista and alto > largo and len(lista["items"]) >= 4 and not recuadro:
             it = lista["items"]
-            nuevo(g, g["top"], it[1][1], parte="lista")
-            for a, z in it[2:-2]:
+            # dispatch 15: con un titulo arriba, la primera parte lleva por lo menos seis renglones de texto
+            tit = max([p["bottom"] for p in g["partes"] if p["tag"] in ("h1", "h2", "h3") and p["top"] <= it[0][0]]
+                      or [None]) if any(p["tag"] in ("h1", "h2", "h3") for p in g["partes"]) else None
+            k0 = 1
+            while tit is not None and k0 < len(it) - 3 and it[k0][1] - tit < MIN_TRAS:
+                k0 += 1
+            nuevo(g, g["top"], it[k0][1], parte="lista")
+            for a, z in it[k0 + 1:-2]:
                 nuevo(g, a, z, primero=False, parte="lista")
             nuevo(g, it[-2][0], g["bottom"], primero=False, parte="lista")
             partidos.append(("lista", g))
@@ -624,6 +640,18 @@ def proponer_particion(g, h, s, at, partir, estado, sin_partir, entra, forzar=Fa
         disponible = LIM - ARRIBA_CONT - (b["top"] - g["top"]) - 4.0
     if es_texto:
         validos = [n for n in _cortes_texto(b) if _alto_parte_texto(b, n) <= disponible]
+        # dispatch 15 (A12): con un titulo justo antes, o un subtitulo adentro, la parte que queda en esta hoja lleva
+        # por lo menos seis renglones de texto despues de ese titulo
+        tits = [p for p in g["partes"][:-1] if p["tag"] in ("h1", "h2", "h3")]
+        def _ok(n):
+            ps = b["parrafos"]
+            sub = [k for k in range(n) if ps[k]["tag"] in ("h2", "h3", "h4")]
+            if sub:
+                return _alto_parte_texto(b, n) - _alto_parte_texto(b, sub[-1] + 1) >= MIN_TRAS
+            if tits and g["partes"][-1] is b:
+                return (b["top"] - tits[-1]["bottom"]) + _alto_parte_texto(b, n) >= MIN_TRAS
+            return True
+        validos = [n for n in validos if _ok(n)]
         tipo = "texto"
     else:
         npuntos = len(b["hijos"]) - 1

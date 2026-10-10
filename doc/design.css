@@ -154,3 +154,37 @@ figcaption{margin-top:4.6pt;font-family:'Spectral',serif;font-style:italic;font-
 .kv td{border-bottom:.75pt solid var(--hair);font-size:8.3pt}
 .kv td:first-child{width:120pt;font-family:'Inter',sans-serif;font-size:6.4pt;font-weight:600;
  letter-spacing:.6pt;text-transform:uppercase;color:var(--oxblood);padding-top:6.4pt}
+
+/* ---------- grafico del mecanismo (dispatch 15, capitulo 4) ---------- */
+.mec{margin-top:9pt;font-family:'Spectral',serif;color:var(--ink)}
+.mec p,.mec li{text-align:left;hyphens:manual;-webkit-hyphens:manual}
+.mec .mec-lab{font-family:'Inter',sans-serif;font-weight:600;font-size:6.6pt;line-height:1.2;letter-spacing:1.5pt;text-transform:uppercase}
+.mec .mec-sub{margin-top:2.6pt;font-style:italic;font-size:7.9pt;line-height:1.35;color:var(--taupe)}
+.mec .mec-reglas{background:var(--panel);border-left:2.6pt solid var(--oxblood);border-radius:3pt;padding:9pt 12pt 10pt}
+.mec .mec-reglas .mec-lab{color:var(--oxblood)}
+.mec .mec-reglas p{margin-top:4pt;font-size:9pt;line-height:1.42}
+.mec .mec-pills{margin-top:7pt;display:flex;gap:6pt;flex-wrap:wrap}
+.mec .mec-pills span{font-family:'Inter',sans-serif;font-size:6.9pt;line-height:1;padding:4.6pt 8pt;border:.75pt solid var(--hair);border-radius:9pt;background:var(--white);color:var(--ink)}
+.mec .mec-pills b{font-family:'Inter',sans-serif;font-weight:600;color:var(--oxblood)}
+.mec .mec-flechas{display:flex;height:16pt;align-items:center}
+.mec .mec-flechas span{flex:1;text-align:center;color:var(--amber);font-family:'Inter',sans-serif;font-size:11pt;line-height:1}
+.mec .mec-dos{display:flex;gap:12pt;align-items:stretch}
+.mec .mec-col{flex:1;background:var(--white);border:.75pt solid var(--hair);border-top:2.6pt solid var(--coral);border-radius:3pt;padding:9pt 11pt 8pt}
+.mec .mec-col.mec-todo{border-top-color:var(--sage-deep)}
+.mec .mec-zona .mec-lab{color:var(--coral)}
+.mec .mec-todo .mec-lab{color:var(--sage-deep)}
+.mec ol{list-style:none;margin-top:5pt;counter-reset:mec}
+.mec ol li{position:relative;padding-left:17pt;margin-top:5.2pt;font-size:8.6pt;line-height:1.42;counter-increment:mec}
+.mec ol li::before{content:counter(mec);position:absolute;left:0;top:.6pt;width:11.5pt;height:11.5pt;border-radius:50%;
+ background:var(--coral);color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:6.6pt;line-height:11.5pt;text-align:center}
+.mec .mec-todo ol li::before{background:var(--sage-deep)}
+.mec .mec-zona ol li b{color:var(--oxblood)}
+.mec .mec-todo ol li b{color:var(--sage-deep)}
+.mec .mec-ia{background:var(--pill-amber);border-left:2.6pt solid var(--amber);border-radius:3pt;padding:9pt 12pt 10pt}
+.mec .mec-ia .mec-lab{color:var(--amber)}
+.mec .mec-ia p{margin-top:4pt;font-size:9pt;line-height:1.42}
+.mec .mec-control{margin-top:10pt;background:var(--panel);border-left:2.6pt solid var(--taupe);border-radius:3pt;padding:9pt 12pt 11pt}
+.mec .mec-control .mec-lab{color:var(--taupe)}
+.mec .mec-cards{margin-top:6pt;display:flex;gap:7pt}
+.mec .mec-cards div{flex:1;background:var(--white);border:.75pt solid var(--hair);border-radius:3pt;padding:6pt 7pt 7pt;font-size:8pt;line-height:1.38}
+.mec .mec-cards b{color:var(--ink)}
