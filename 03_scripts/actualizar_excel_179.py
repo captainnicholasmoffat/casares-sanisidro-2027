@@ -8,8 +8,10 @@ Uso: python3 03_scripts/actualizar_excel_179.py ORIGEN DESTINO [--habilitaciones
 ORIGEN es el Excel tal como llego (commit 8358497, salida/). Lee los datos de data/.
 Despues hay que recalcular con LibreOffice para que las celdas tengan valores.
 """
+import re
 import sys
 import openpyxl
+import openpyxl.utils
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter as L
 
@@ -211,15 +213,15 @@ s_note(27, "Objeto 7. En la cuenta Ahorro-Inversión va debajo de la línea: es 
 # --- C · parametros: la cobranza sale como forma de pagar el programa
 s_row(33, "Percepción de los recursos corrientes · 2025",
       formula="=ROUND((C7+C9+C10+C11)/(C6+C8+C10+C11),4)", fmt=FMT_PCT2,
-      note="301.155 percibidos sobre 337.149 facturados en 2025. El modelo del repo usa la cifra redondeada: 89,32%")
+      note="301.155 percibidos sobre 337.149 facturados en 2025. El documento usa la cifra redondeada: 89,32% (3.2)")
 s_row(34, "Percepción · palanca de la sensibilidad", 0.8932, fmt=FMT_PCT2, key=True,
       note="En 89,32% no cambia nada. La sensibilidad del 3.6 la mueve tres puntos, a 86,32% y 92,32%, "
-           "y el cambio entra en cuatro años desde 2025, como en el modelo del repo. El programa no se paga cobrando mejor")
+           "y el cambio entra en cuatro años desde 2025. El programa no se paga cobrando mejor")
 s_note(31, "Recursos de origen municipal en pesos constantes, 2010–2025, punta a punta. La media de los seis tramos da 3,49% con desvío de 8,14 puntos")
 s_note(32, "Parte de San Isidro en lo que la Provincia reparte a los 135 municipios, 2021–2025: de 1,9378% a 1,7731%. "
            "Mueve el 82,4% de lo provincial (bloque L)")
-s_note(35, "Supuesto conservador, el del modelo del repo: cero recomposición salarial real")
-s_note(36, "Supuesto conservador, el del modelo del repo: cero servicios nuevos, salvo el programa")
+s_note(35, "Supuesto conservador: cero recomposición salarial real")
+s_note(36, "Supuesto conservador: cero servicios nuevos, salvo el programa")
 
 # --- E · programas del capitulo 5
 s_row(49, "Empleo y vivienda · base 2025", formula="=C147+C148",
@@ -234,29 +236,29 @@ s_row(52, "Ambiente · objetivo, sobre el gasto devengado de 2025", 0.015, fmt=F
 s_row(53, "Educación · recomposición anual", 2064000000,
       note="Devolver la función educativa al nivel real de 2024, que cayó 11,6%: 2.064 M (5.8, cuadro 14). Desde el mes 12 (6.4)")
 s_row(54, "Inspecciones grabadas · soportes, baterías y dos bases de descarga, una vez (primera etapa)", 46500000,
-      note="Informe 23 quáter: de 20,5 a 27,5 M para la primera etapa completa, 208 a 280 agentes (inspectores de comercio y de la Agencia de Control, los de Habilitaciones y de Obras Particulares que salen a inspeccionar, y agentes de tránsito), más 9,5 M por cada base de descarga (tránsito tiene 2); se toma el tope: 27,5 + 19. El teléfono es propio: se compra en 24 cuotas sin interés todo el año por convenio con el banco que paga los sueldos, sin dinero del Municipio (decisión del 07/10). La patrulla, en la segunda etapa (29,5 a 35,3 M una vez y 135,7 a 162,4 M por año), no está sumada")
+      note="Cálculo propio (5.9): de 20,5 a 27,5 M para la primera etapa completa, 208 a 280 agentes (inspectores de comercio y de la Agencia de Control, los de Habilitaciones y de Obras Particulares que salen a inspeccionar, y agentes de tránsito), más 9,5 M por cada base de descarga (tránsito tiene 2); se toma el tope: 27,5 + 19. El teléfono es propio: se compra en 24 cuotas sin interés todo el año por convenio con el banco que paga los sueldos, sin dinero del Municipio. La patrulla, en la segunda etapa (29,5 a 35,3 M una vez y 135,7 a 162,4 M por año), no está sumada")
 s_row(55, "Apoyo escolar · costo anual por sede", 180000000,
       note="ESTIMACIÓN PROPIA, NO VERIFICADA. Seis sedes: 1.080 M (cuadro 14). Dos sedes por año es supuesto de este libro")
 s_row(56, "Salud · adhesión al sistema provincial", 0,
       note="Mi Salud Digital no tiene costo de licencia para el municipio que adhiere")
 s_row(57, "Inspecciones grabadas · plan de datos, guarda de dos años, reposición y difuminado a pedido, por año (primera etapa)", 168500000,
-      note="Informe 23 quáter: de 107,6 a 145,5 M por año en régimen para la primera etapa completa, y de 5 a 23 M por año para difuminar las caras cuando alguien pide ver una inspección, con revisión de una persona (unos $2.200 por pedido, de 1.000 a 10.000 pedidos); se toman los topes: 145,5 + 23. Las grabaciones se guardan dos años en una nube con servidores en Bélgica y se ven al instante todo ese tiempo. Salen los 264 M de mantenimiento de antes (el 22% de una lista de precios)")
+      note="Cálculo propio con el convenio de telefonía de la Ciudad de Buenos Aires y los precios oficiales de la nube (5.9): de 107,6 a 145,5 M por año en régimen para la primera etapa completa, y de 5 a 23 M por año para difuminar las caras cuando alguien pide ver una inspección, con revisión de una persona (unos $2.200 por pedido, de 1.000 a 10.000 pedidos); se toman los topes: 145,5 + 23. Las grabaciones se guardan dos años en una nube con servidores en Bélgica y se ven al instante todo ese tiempo. Salen los 264 M de mantenimiento de antes (el 22% de una lista de precios)")
 
 # --- F · deuda
-s_row(59, "Stock de deuda al 30/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),
+s_row(59, "Deuda al 31/12/2025, consolidada y flotante", float(_deu["1"]["saldo"]) + float(_deu["2"]["saldo"]),
       note="Formulario Ley 12.462, cuarto trimestre de 2025: 4.984 M consolidada y 3.976 M flotante (cuadro 18). "
-           "Es la deuda con que entra el modelo del repo")
+           "Es la deuda con la que empiezan las cuentas de este libro y del documento")
 s_row(60, "Deuda flotante al 30/06/2026 · no entra en el modelo", 8231000000,
       note="Informe del segundo trimestre de 2026 (cuadro 18). Es posterior al cierre del modelo y el documento no la "
            "incorpora: la flotante al 31/12/2025 ya está en la fila anterior")
 S["C60"].font = font(9, color=GRAY)
 s_row(61, "Amortización del ejercicio 1 (2026)", float(_deu["1"]["amortiz_ej1"]),
-      note="Formulario Ley 12.462. El resto del stock se amortiza en partes iguales en 2027, 2028 y 2029, como en el "
-           "modelo del repo: la deuda llega a cero en 2029 (3.5)")
+      note="Formulario Ley 12.462. El resto de la deuda se paga en partes iguales en 2027, 2028 y 2029: "
+           "llega a cero en 2029 (3.5)")
 s_note(62, "Constitución provincial, artículo 193, inciso 3: los servicios de amortización e intereses no pueden "
            "pasar del 25% de los recursos ordinarios")
-s_row(64, "Años para amortizar el resto del stock (desde 2027)", 3, fmt="0",
-      note="Supuesto declarado del modelo del repo: el formulario sólo publica el vencimiento del ejercicio 1")
+s_row(64, "Años para pagar el resto de la deuda (desde 2027)", 3, fmt="0",
+      note="Supuesto de este libro y del documento: el formulario sólo publica el vencimiento del ejercicio 1")
 
 # --- nota del anio base
 put(S, "B69", "El año base es la ejecución 2025 oficial. Los recursos van por lo percibido y los gastos por lo devengado, "
@@ -275,17 +277,17 @@ s_row(76, "Origen nacional · % de libre disponibilidad", 0, fmt=FMT_PCT2,
       note="Los 190 M de origen nacional llegan afectados. Los otros orígenes, 7.332 M, son de libre disponibilidad")
 
 # --- I · deuda por acreedor: la composicion oficial
-s_header(86, "I · LA DEUDA AL 30/12/2025, ABIERTA (formulario Ley 12.462)")
+s_header(86, "I · LA DEUDA AL 31/12/2025, ABIERTA (formulario Ley 12.462)")
 s_row(87, "Deuda consolidada", float(_deu["1"]["saldo"]),
       note="Organismos provinciales 2.923 M —IPS 2.100 e IOMA 823—, CEAMSE 465 M y otras deudas 1.596 M")
 s_row(88, "Deuda flotante", float(_deu["2"]["saldo"]),
-      note="Obligaciones de corto plazo. Entra en el stock del modelo y se amortiza con él")
+      note="Obligaciones de corto plazo. Entra en la deuda de la fila 59 y se paga con ella")
 s_row(89, "Préstamo del Banco Provincia · no entra en el modelo", 1000000000,
       note="Aparece por primera vez en el informe de junio de 2026 (3.5): es posterior al cierre del modelo")
 S["C89"].font = font(9, color=GRAY)
 s_row(90, "Tasa de interés real anual de la deuda", 0, fmt=FMT_PCT2,
       note="El modelo no proyecta intereses: está en pesos constantes y el del bono es nominal y variable (3.6)")
-s_row(91, "Control · consolidada más flotante menos el stock del bloque F", formula="=C87+C88-C59",
+s_row(91, "Control · consolidada más flotante menos la deuda del bloque F", formula="=C87+C88-C59",
       note="Tiene que dar cero")
 
 # --- J · la cancelacion de la flotante heredada sale: esa flotante esta en el stock
@@ -311,12 +313,12 @@ s_row(113, "Control: lo municipal por origen menos no tributarios, rentas y recu
       formula="=(C107+C108)-(C9+C10+C12)",
       note="Tiene que dar cero: los recursos de capital (rubro 2.1) son todos de origen municipal")
 s_row(114, "Origen municipal · corrientes, como en el modelo", formula="=C107+C108-C12",
-      note="Los recursos de capital se restan enteros de lo municipal, como en 03_scripts/modelo.py (corrección 180)")
+      note="Los recursos de capital se restan enteros de lo municipal, como en las cuentas del documento")
 s_row(115, "Origen provincial · corrientes", formula="=C109+C110")
 s_row(116, "Origen nacional · corrientes", formula="=C111")
 s_row(117, "Otros orígenes · corrientes", formula="=C112")
 s_row(118, "Parte de lo provincial que se mueve con la coparticipación", 0.824, fmt=FMT_PCT1,
-      note="Calculada en 2025 en el modelo del repo. El resto son fondos específicos que no dependen del coeficiente")
+      note="Cálculo propio con la ejecución de recursos de 2025. El resto son fondos específicos que no dependen del coeficiente")
 
 s_header(120, "M · CUENTA AHORRO-INVERSIÓN 2025, OFICIAL (Estado de Situación Económico-Financiera)")
 s_row(121, "I · Ingresos corrientes", sef_aif("ingresos_corrientes"), note="Percibido")
@@ -331,7 +333,7 @@ s_row(127, "Gasto devengado total 2025", formula="=C15+C17+C19+C21+C23+C25+C27",
 s_row(128, "Gasto flexible 2025", formula="=C17+C21+C23+C25",
       note="Bienes de consumo, bienes de uso, transferencias y activos financieros: lo único que se puede reasignar dentro del año (3.4)")
 
-s_header(130, "N · BASE DE VALUACIÓN ACTUALIZADA (escenario B: 3.5 e informe 09)")
+s_header(130, "N · BASE DE VALUACIÓN ACTUALIZADA (escenario B, 3.5)")
 s_row(131, "Suba pareja de la escala de ARBA sobre la neutral", 0.1088, fmt=FMT_PCT2,
       note="Se fija para que la parte tierra emita 8.089 M más por año: un 10,9% más que hoy. La alícuota no se toca")
 s_row(132, "Tope de suba por boleta y por año", 0.25, fmt=FMT_PCT0,
@@ -342,12 +344,12 @@ for i, (v, vm) in enumerate([(float(_val[k]["cobrado"]), float(_val[k]["cobrado_
     et = ["Año 1 del programa (2028)", "Año 2 (2029)", "Año 3 (2030)", "Año 4 en adelante (2031–2035)"][i]
     s_row(134 + i, f"{et} · lo cobrado", v,
           note=("Lo cobrado como se cobra el ABL: 73,97%, el peor caso (fila 252). "
-                "data/valuacion_rendimiento_por_anio.csv" if i == 0 else None))
+                "Cálculo propio sobre las parcelas de ARBA (3.5)" if i == 0 else None))
     s_row(138 + i, f"Si el mínimo frena subas · {et.lower()}", vm,
           note=("Si el mínimo de la tasa frena todas las subas de lotes chicos: hasta 37 M menos por año (3.5)"
                 if i == 0 else None))
 s_row(142, "¿El mínimo frena las subas de lotes chicos? 1 = sí, 0 = no", 0, fmt="0", key=True,
-      note="El documento y el modelo del repo corren el 0. Con 1, lo cobrado en régimen es 5.946,4 M: "
+      note="El documento usa el 0. Con 1, lo cobrado en régimen es 5.946,4 M: "
            "el rango del 3.5 es 5.946 a 5.983 M")
 s_row(143, "Lo que el programa necesita en régimen", formula="=C50-C49",
       note="Los 7.225,2 M que el programa suma por año: 5.983 de la tabla y 1.242 del gasto flexible (fila 256)")
@@ -370,7 +372,7 @@ s_row(153, "Costo por persona, los dos años de formación", 3000000,
 s_row(154, "Mes del primer ingreso de cada año", 3, fmt="0", note="La primera cohorte arranca a los cien días")
 s_row(155, "Mes del segundo ingreso de cada año", 9, fmt="0")
 s_row(156, "Meses desde el ingreso hasta el egreso", 24, fmt="0",
-      note="Doce de cursada y doce de pasantía: seis en el Municipio y seis en una empresa del partido")
+      note="Doce de cursada y doce de pasantía: seis en el Municipio y seis en una empresa de San Isidro")
 s_row(157, "Tope de pasantes a la vez en el Municipio: 7% de los cargos", 556, fmt=FMT_N,
       note="7% de los 7.946 cargos del presupuesto 2026 (Res. Conj. 825/2009 y 338/2009, art. 14)")
 
@@ -378,10 +380,10 @@ s_header(159, "P · CIENCIA Y TÉCNICA: PLATAFORMA, DISPOSITIVOS Y SEMILLERO (4.
 s_row(160, "Ciencia y Técnica · devengado 2025", formula="=C199",
       note="Función 3.5 (bloque S): los 8.155 M del documento")
 s_row(161, "Plataforma: 59 personas con cargas, infraestructura y licencias, y auditoría", 2000700000,
-      note="Cuadro 27, suma exacta de sus filas: equipo 1.621,8 M (las 49 personas de antes y 10 nuevas del informe 23: profesor digital, escucha y seguimiento, prueba sellada, aviso de multas y puente con los laboratorios); infraestructura y licencias 243,5 M (informe 23 con el dólar de diciembre de 2025, $1.447,84, y sin WhatsApp: lo que usan los vecinos, 78,3 M; con las herramientas del equipo, las 160 asociaciones inscriptas al 40% de su cupo, los alumnos y el semillero, 226,1 M; y las licencias de las 10 nuevas, 17,4 M; usadas enteras, las 160 asociaciones suman hasta 66 M más); auditoría externa 135,4 M, el 10% del sueldo del equipo de 59 personas (decisión del 07/10). Con los dispositivos, 2.091,7 M. ESTIMACIÓN PROPIA")
+      note="Cuadro 27, suma exacta de sus filas: equipo 1.621,8 M (las 49 personas de antes y 10 nuevas: profesor digital, escucha y seguimiento, prueba sellada, aviso de multas y puente con los laboratorios); infraestructura y licencias 243,5 M (cálculo propio con el dólar de diciembre de 2025, $1.447,84, y sin WhatsApp: lo que usan los vecinos, 78,3 M; con las herramientas del equipo, las 160 asociaciones inscriptas al 40% de su cupo, los alumnos y el semillero, 226,1 M; y las licencias de las 10 nuevas, 17,4 M; usadas enteras, las 160 asociaciones suman hasta 66 M más); auditoría externa 135,4 M, el 10% del sueldo del equipo de 59 personas. Con los dispositivos, 2.091,7 M. ESTIMACIÓN PROPIA")
 s_row(162, "Dispositivos", 91000000, note="Cuadro 27")
 s_row(163, "Semillero de empresas", 121000000,
-      note="5.3 e informe 10: 117,1 M del fondo que presta uno a uno (hasta cinco empresas por año, 23,4 M cada una) y 3,9 M para constituirlas")
+      note="Cálculo propio (5.3): 117,1 M del fondo que presta uno a uno (hasta cinco empresas por año, 23,4 M cada una) y 3,9 M para constituirlas")
 s_row(164, "Parte de Ciencia y Técnica ocupada", formula="=(C161+C162+C163)/C160", fmt=FMT_PCT1,
       note="El 27,1% del documento. Sin el semillero, 25,6%")
 
@@ -391,8 +393,8 @@ s_row(168, "De ellos, en la plataforma y los dispositivos", 17, fmt=FMT_N, note=
 s_row(169, "Costo de un pasante por año, con ART y salud", 3166250,
       note="240.000 $ por mes: 1.013,2 M por 320 pasantes (5.3)")
 s_row(170, "Beca de práctica por mes", 240000, note="La asignación del pasante: la misma para quien no tiene lugar en una empresa")
-s_row(171, "Juniors de las áreas, por año", 720000000, note="90 puestos de operación, a escala municipal (5.3)")
-s_row(172, "Lo que pagan las áreas: pasantes y juniors", formula="=(C167-C168)*C169+C171",
+s_row(171, "Principiantes que contratan las áreas, por año", 720000000, note="90 puestos de operación, a escala municipal (5.3)")
+s_row(172, "Lo que pagan las áreas: pasantes y principiantes", formula="=(C167-C168)*C169+C171",
       note="Del presupuesto de cada área: los 2.135,3 M del cuadro 14. No es gasto nuevo")
 s_row(173, "Lo que pagan las empresas por los segundos seis meses · no es gasto municipal",
       formula="=C167*C169", note="1.469,1 M por año")
@@ -405,7 +407,7 @@ s_row(176, "Reasignación del gasto flexible, en régimen", formula="=(C52*C127-
 s_row(177, "Obra vecinal del año 4", formula="=C21*C45", note="28.908 M: la mitad de la obra pública")
 s_row(178, "Fondos nuevos sobre el gasto flexible", formula="=C143/C128", fmt=FMT_PCT1, note="El 8,3% del documento")
 s_row(179, "Empleo y vivienda y obra vecinal sobre el gasto flexible", formula="=(C143+C177)/C128", fmt=FMT_PCT1,
-      note="41,4%. Desde el dispatch 15 el documento ya no lo usa: usa la fila 180")
+      note="41,4%. El documento ya no usa esta cifra: usa la de la fila 180")
 s_row(180, "Gasto flexible ocupado, con todo", formula="=(C143+C176+C172+C228+C177+C240+C260+C271+C273+C281-C296)/C128", fmt=FMT_PCT1,
       note="Fondos nuevos, reasignación, áreas, cuidadores, Escuela Náutica, clases de la costa, validadores y mensajes de texto de las multas, espectáculos de Cultura y obra vecinal, menos el ahorro de los tomógrafos propios (fila 296): el 51,8% del documento")
 s_row(181, "Gasto flexible libre", formula="=1-C180", fmt=FMT_PCT1, note="El 48,2%")
@@ -443,7 +445,7 @@ FUNCIONES = [
 ]
 for rr, lab, v in FUNCIONES:
     s_row(rr, lab, v)
-s_note(189, "data/gastos_finalidad_funcion.csv, 2025, acumulado anual")
+s_note(189, "Estado de ejecución de gastos por finalidad y función 2025, acumulado anual")
 s_row(208, "Total por función", formula="=SUM(C189:C207)",
       note="Es el gasto por objeto sin los activos financieros: control en la hoja Resumen anual", bold=True)
 
@@ -460,7 +462,7 @@ _an = float([r for r in _r12 if r["periodo_tipo"] == "acumulado_anual"][0]["perc
 s_header(216, "U · SI LA TABLA NUEVA NO SALE EN DICIEMBRE Y COBRA DESDE ABRIL (6.6)")
 s_row(217, "Parte de lo cobrado en el año que entra de abril a diciembre", round(1 - _q1 / _an, 6), fmt=FMT_PCT1,
       note="2025: el primer trimestre trajo el 27,3% de lo cobrado en el año por tasas y derechos (rubro 1.2), "
-           "en pesos constantes (data/ejecucion_recursos.csv)")
+           "en pesos constantes (estado de ejecución de recursos, cálculo propio)")
 s_row(218, "Año 1: lo que cobra la tabla nueva si cobra desde abril", formula="=C134*C217",
       note="1.190 M en vez de 1.637 M")
 s_row(219, "Año 1: lo que necesita el programa", formula="=C143/4", note="1.806 M")
@@ -497,7 +499,7 @@ put(S, "B236", "Cada equipo entra en la línea de su área y dentro de su monto;
     "personas que los instalan (cuadro 27). Precios llevados a diciembre de 2025 con el IPC.",
     font(8, italic=True, color=GRAY))
 s_row(238, "Ambiente · adelanto del año 1 para la costa, una vez", 335000000,
-      note="5.5 (189): diagnóstico de Perú 8-22 M (veinte sensores de unos 25 dólares, unos 500 dólares en total, informe 16), piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
+      note="Cálculo propio (5.5): diagnóstico de Perú 8-22 M (veinte sensores de unos 25 dólares, unos 500 dólares en total), piloto de arena con pie de piedra 196 M, muestras 42-75 M, bote, "
            "desfibrilador y primera temporada de guardavidas 42 M. Sale de los tres programas que ceden (contrapartida, "
            "Programas fila 16), no de los 1.410 M que Ambiente ya gasta: no cambia el gasto total ni el resultado")
 s_row(240, "Deportes · Escuela Náutica, seis puestos desde el año 3, por año", 395416610,
@@ -513,9 +515,9 @@ s_row(245, "Escuela Náutica · año 2, dos más: inversión", 224637400, note="
 s_row(246, "Escuela Náutica · año 2: por año, cuatro puestos", 265767740, note="De 250 a 266 M (el tope)")
 s_row(247, "Escuela Náutica · año 3, los dos últimos: inversión", 224637400,
       note="De 145 a 225 M (el tope). Supuesto: dos puestos de agua abierta el año 1 y uno en cada uno de los siguientes")
-s_header(249, "W · LA TABLA SE COBRA COMO EL ABL; LO QUE FALTA SALE DEL GASTO FLEXIBLE (3.5 e informe 20)")
+s_header(249, "W · LA TABLA SE COBRA COMO EL ABL; LO QUE FALTA SALE DEL GASTO FLEXIBLE (3.5)")
 s_row(250, "ABL 2025 · facturado (devengado)", 112987300000,
-      note="Rubro 1.2.1.01, ejecución de recursos 2025, acumulado anual (informe 20)")
+      note="Rubro 1.2.1.01, ejecución de recursos 2025, acumulado anual")
 s_row(251, "ABL 2025 · cobrado (percibido)", 83572600000, note="Incluye deuda de años anteriores y pagos adelantados")
 s_row(252, "Lo que se cobra del ABL", formula="=C251/C250", fmt=FMT_PCT2,
       note="73,97%: el peor caso del rango de 74% a 82% (2024: 82,1%; primer semestre de 2026: 79,3%). El 89,32% "
@@ -529,7 +531,7 @@ s_row(256, "Año 4 en adelante · lo que falta", formula="=MAX(0,C143-IF(C142=1,
       note="1.242 M: la tabla cobra 5.983 M y el programa pide 7.225,2 M")
 s_row(257, "Lo que falta en régimen, sobre el gasto flexible", formula="=C256/C128", fmt=FMT_PCT1,
       note="1,4%. Ya está dentro de los 7.225,2 M del programa: el gasto flexible libre no cambia (44,7%)")
-s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5 e informe 20, segunda parte)")
+s_header(259, "X · LA COSTA: BAÑOS, CLASES Y FOODTRUCKS (5.5)")
 s_row(260, "Deportes · profesores de las clases de la costa, por año", 23536080,
       note="5.5: una clase a la mañana y una a la tarde, de lunes a jueves, en los seis lugares; 48 horas por semana, categoría 991 "
            "(490.335 $ por hora semanal y por año, con aguinaldo y cargas). Lo paga Deportes con su propio presupuesto: "
@@ -552,34 +554,34 @@ s_row(265, "Obras deportivas · con la Escuela Náutica, lo que usa de lo que le
 s_row(266, "Canon de un foodtruck por mes, como el de Tigre", 201350,
       note="Ordenanza Impositiva 2026 de Tigre, en pesos de 2026. Con tres por puesto, 604.050 $ por mes; en Bosque "
            "Alegre, con 15 a 20, de 3,0 a 4,0 M. En los cuatro lugares del convenio queda el 60%")
-s_header(268, "Y · MULTAS DE TRÁNSITO: LO QUE SE DEJA DE COBRAR (5.11 e informe 19)")
+s_header(268, "Y · MULTAS DE TRÁNSITO: LO QUE SE DEJA DE COBRAR (5.11)")
 s_row(269, "Cada 10% de rebaja media de las multas, por año", 323000000,
       note="En 2024 se pagaron entre 13.000 y 456.000 multas (81.000 como estimación central). No se publica cuántas se "
            "labran, así que no entra en el resultado: sale del gasto flexible libre")
 s_row(270, "Cada 10% de rebaja media, sobre el gasto flexible", formula="=C269/C128", fmt=FMT_PCT1,
       note="0,4%: puntos del margen libre (44,7%)")
 s_row(271, "Tránsito o Juzgado de Faltas · cuatro personas que validan las actas, por año", 108280000,
-      note="Informe 23: 1 semi-senior y 3 juniors, con los sueldos del cuadro 27. Con el resto del presupuesto y no con el "
+      note="Cálculo propio: una persona con experiencia y tres principiantes, con los sueldos del cuadro 27. Con el resto del presupuesto y no con el "
            "fondo de seguridad vial: pagar con las multas a quien multa invita a multar más. Entra en el gasto flexible ocupado")
 s_row(272, "Educación · cuatro docentes que revisan el profesor digital, por año", 93760000,
-      note="Informe 23: a sueldo de junior. Dentro de la recomposición de Educación (fila 53): no suma")
+      note="Cálculo propio, con sueldo de principiante. Dentro de la recomposición de Educación (fila 53): no suma")
 s_row(273, "Tránsito · mensajes de texto para avisar antes de multar, por año", 5900000,
-      note="Informe 23 bis: de 0,8 a 5,9 M por año; se toma el tope. El aviso va por la inteligencia artificial del Municipio y, a quien dio su celular, por mensaje de texto (decisión del 07/10). Lo paga Tránsito: entra en el gasto flexible ocupado")
-s_header(274, "Z · EL FONDO DE SEGURIDAD VIAL NO MUEVE EL MARGEN (5.11 e informe 18)")
+      note="Cálculo propio: de 0,8 a 5,9 M por año; se toma el tope. El aviso va por la inteligencia artificial del Municipio y, a quien dio su celular, por mensaje de texto. Lo paga Tránsito: entra en el gasto flexible ocupado")
+s_header(274, "Z · EL FONDO DE SEGURIDAD VIAL NO MUEVE EL MARGEN (5.11)")
 s_row(275, "Multas cobradas en 2025: otras multas en vía pública, a pesos de diciembre de 2025", 3818583182,
-      note="Rubro 1.2.6.04, trimestre por trimestre con el IPC (informe 18, 1.8). El presupuesto no separa las de tránsito")
+      note="Rubro 1.2.6.04 de la ejecución de recursos, trimestre por trimestre, llevado a pesos de diciembre de 2025 con el IPC: cálculo propio. El presupuesto no separa las de tránsito")
 s_row(276, "Con las multas por contravenciones", 4420261601, note="Más el rubro 1.2.6.01: el techo de lo que puede ser de tránsito")
 s_row(277, "Gasto 2025 en semaforización y señalamiento vial y en la política de movilidad, a pesos de diciembre de 2025",
       7199058415, note="Programas 27 y 26 de 2025 (1.654,2 M y 4.687,6 M), por 1,1352: el promedio del IPC del año")
 s_row(278, "Lo que ya se gasta en seguridad vial menos lo que se cobra en multas", formula="=C277-C276",
       note="Positivo: lo que se cobra ya se gasta en seguridad vial, como manda la Ley 24.449, art. 85. El fondo no mueve el margen")
-s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5 e informes 23 ter a 23 quinquies)")
+s_header(280, "AA · ESPECTÁCULOS AL AIRE LIBRE: LOS PAGA CULTURA (5.5)")
 s_row(281, "Cultura · 200 shows, tres equipos de producción, salas bajo techo y control contra robos, por año", 394000000,
-      note="Informe 23 quinquies: 114 shows al aire libre, del 20 de septiembre al 15 de abril, y 86 bajo techo; cachets de los 200 shows (10% solistas, 40% dúos o tríos y 50% bandas de cuatro o más) con las cancelaciones, 270,6 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, en espacios municipales para los solistas y en cuatro clubes o centros culturales por convenio, 14,1 M; control contra robos, 2,0 a 2,7 M: unos 394 M. Entra en el gasto flexible ocupado")
+      note="Cálculo propio (5.5): 114 shows al aire libre, del 20 de septiembre al 15 de abril, y 86 bajo techo; lo que se les paga a los artistas por los 200 shows (10% solistas, 40% dúos o tríos y 50% bandas de cuatro o más) con las cancelaciones, 270,6 M; producción con equipo propio, 106,8 M (8 personas nuevas, 85,3 M con reemplazos); salas bajo techo, en espacios municipales para los solistas y en cuatro clubes o centros culturales por convenio, 14,1 M; control contra robos, 2,0 a 2,7 M: unos 394 M. Entra en el gasto flexible ocupado")
 s_row(282, "Cultura · compra de equipos, limitadores y control contra robos, una vez", 138800000,
-      note="Informe 23 ter: 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control. Informe 23 quáter: un limitador con bloqueo y clave y dos bafles chicos para el «modo plaza» en cada equipo de show, 7,7 M por los dos")
-s_row(283, "Cultura · el primer año, con la compra", 532000000, note="Unos 532 M, de 393,5 a 394,2 M por año más 138,8 M de compra (dispatch 15, mezcla 10/40/50)")
-s_header(285, "AB · TOMÓGRAFOS PROPIOS Y RESONANCIA A LA VISTA (5.6, dispatch 15)")
+      note="Cálculo propio (5.5): 125,9 M de equipos (dos de sonido para bandas, de 29,5 M con tarima y toldo; dos para callejeros, de 4,9 M; camioneta) y 5,2 M de control. Además, un limitador con bloqueo y clave y dos bafles chicos para el «modo plaza» en cada equipo de show, 7,7 M por los dos")
+s_row(283, "Cultura · el primer año, con la compra", 532000000, note="Unos 532 M, de 393,5 a 394,2 M por año más 138,8 M de compra, con el 10% de los shows de solistas, el 40% de dúos o tríos y el 50% de bandas")
+s_header(285, "AB · TOMÓGRAFOS PROPIOS Y RESONANCIA A LA VISTA (5.6)")
 s_row(286, "Tomografía 2024 · montos autorizados, a pesos de diciembre de 2025", 2564050000,
       note="Orden de compra 117/2024 por 900 M, ampliada en 600 M (Decreto 1352/2024), y 1.418 estudios convalidados por 124,3 M (Decreto 1812/2024), con el IPC del INDEC. Son montos autorizados, no pagos")
 s_row(287, "Tomografías por año (estimación)", 20000, fmt=FMT_N,
@@ -628,11 +630,11 @@ put(E, "B8", "Nacional y otros orígenes", font(9))
 put(E, "P10", "Doce sueldos parejos: un doceavo cada mes", font(8, italic=True, color=GRAY), wrap=True)
 
 # ======================================================================
-# RECURSOS: por origen, como el modelo del repo
+# RECURSOS: por origen, como el documento
 # ======================================================================
 R = wb["Recursos"]
 put(R, "B2", "RECURSOS MENSUALES POR ORIGEN · 2028–2035", font(13, True, color=WINE))
-put(R, "B3", "Percibidos, por origen del dinero, como el modelo del repo. Lo facturado y no cobrado va como memo.",
+put(R, "B3", "Percibidos, por origen del dinero, como en el documento. Lo facturado y no cobrado va aparte, como dato.",
     font(9, italic=True, color=GRAY))
 for rr in range(7, 24):
     clear_row(R, rr)
@@ -755,7 +757,7 @@ lab2 = {27: "Empleo y vivienda · total del mes",
         37: "Egresan",
         38: "Egresados acumulados",
         39: "Pasantes en el Municipio: los primeros seis meses",
-        40: "Pasantes en empresas del partido: los segundos seis meses",
+        40: "Pasantes en empresas de San Isidro: los segundos seis meses",
         41: "Margen contra el tope del Municipio",
         43: "El año 1 y el 2 la formación usa toda la partida de empleo; desde el 3, el 60%. Cada año entran lo que paga "
             "formación dividido por 3 M, mitad en cada ingreso: 231 y 231, 412 y 412, 355 y 356, y 464 y 464. Egresan "
@@ -832,18 +834,18 @@ put(V, "B37", "Cada zona recibe la parte entera de su cuota; las vacantes que fa
 # DEUDA: la del 31/12/2025 llega a cero en 2029; el bono, en cuotas trimestrales
 # ======================================================================
 D = wb["Deuda"]
-put(D, "B3", "Sin nuevo endeudamiento. La deuda al 31/12/2025 se amortiza como en el modelo del repo; el bono 2026 "
+put(D, "B3", "Sin deuda nueva. La deuda al 31/12/2025 se paga como en el documento (3.5); el bono 2026 "
     "va aparte, debajo de la línea.", font(9, italic=True, color=GRAY))
-put(D, "B8", "Stock al inicio: la deuda al 31/12/2025 que queda y el bono 2026", font(9))
+put(D, "B8", "Deuda al inicio: lo que queda de la deuda al 31/12/2025 y el bono 2026", font(9))
 put(D, "B9", "Amortización del mes", font(9))
 put(D, "B13", "Deuda flotante por rezago de pago · al inicio", font(9))
 put(D, "B18", "Margen contra el tope del artículo 193 de la Constitución provincial", font(9))
 for rr in range(24, 31):
     clear_row(D, rr)
 put(D, "B24", "LA DEUDA AL 31/12/2025 Y EL BONO 2026, POR SEPARADO", font(9, True), fill=F_SEC)
-for rr, t in {25: "Deuda al 31/12/2025 · stock al inicio del mes",
+for rr, t in {25: "Deuda al 31/12/2025 · saldo al inicio del mes",
               26: "Deuda al 31/12/2025 · amortización del mes",
-              27: "Deuda al 31/12/2025 · stock al cierre",
+              27: "Deuda al 31/12/2025 · saldo al cierre",
               28: "Bono 2026 · capital pendiente al inicio del mes",
               29: "Bono 2026 · cuota de capital",
               30: "Bono 2026 · capital pendiente al cierre"}.items():
@@ -866,7 +868,7 @@ for m in MESES:
     for rr in range(25, 31):
         D[f"{X}{rr}"].number_format = FMT_M
         D[f"{X}{rr}"].font = font(9, bold=rr in (27, 30))
-put(D, "B20", "La deuda al 31/12/2025 —8.960 M, consolidada y flotante— se amortiza como en el modelo del repo: "
+put(D, "B20", "La deuda al 31/12/2025 —8.960 M, consolidada y flotante— se paga como en el documento: "
     "3.388 M en 2026 y el resto en partes iguales en 2027, 2028 y 2029. Llega a cero en 2029 (3.5). La flotante que "
     "aparece acá es la que genera el rezago de pago de este libro.", font(8, italic=True, color=GRAY))
 put(D, "B22", "El bono de 30.000 M de agosto de 2026 entra con sus siete cuotas pendientes del 12,5%: febrero, mayo, "
@@ -879,7 +881,7 @@ put(D, "B22", "El bono de 30.000 M de agosto de 2026 entra con sus siete cuotas 
 # ======================================================================
 G = wb["Gastos objeto"]
 put(G, "B14", "6 · Activos financieros · debajo de la línea", font(9))
-put(G, "B15", "7 · Deuda: amortización del stock y del bono · debajo de la línea", font(9))
+put(G, "B15", "7 · Deuda: lo que se paga de la deuda y del bono · debajo de la línea", font(9))
 put(G, "B16", "Programas del capítulo 5: lo que suma empleo y vivienda", font(9))
 
 # ======================================================================
@@ -1076,35 +1078,39 @@ for r, t, oficial, modelo in ctrl:
     put(RA, f"D{r}", "=" + modelo, font(9), FMT_M)
     put(RA, f"E{r}", f"=ROUND(D{r}-C{r},2)", font(9, True), FMT_P)
 
-# control 2: los mismos numeros que el modelo del repo
-REPO_BASE = [float(_mod[("base", 2028 + y)]["resultado_financiero"]) for y in ANIOS]
-REPO_VAL = [float(_mod[("reformista_valuacion", 2028 + y)]["resultado_financiero"]) for y in ANIOS]
-REPO_GT_VAL = [float(_mod[("reformista_valuacion", 2028 + y)]["gastos_totales"]) for y in ANIOS]
-put(RA, "B66", "CONTROL · LOS MISMOS NÚMEROS QUE EL MODELO DEL REPO (data/modelo_flujo_caja.csv)", font(9, True),
+# control 2: los mismos numeros que el documento (cuadro 20, hoja 29 de la A4; dispatch 17: el libro es publico,
+# ya no compara con archivos internos)
+DOC_BASE = [1576e6, 4347e6, 7233e6, 10236e6]          # cuadro 20, «Si nada cambia», 2028 a 2031
+DOC_PROG = [1576e6, 5585e6, 7751e6, 10236e6]          # cuadro 20, «Con este programa, pagado con la tabla nueva»
+DOC_DIF = [0, 1238e6, 517e6, 0]                       # cuadro 20, «Diferencia»
+put(RA, "B66", "CONTROL · LOS MISMOS NÚMEROS QUE EL DOCUMENTO (cuadro 20, hoja 29 de la A4)", font(9, True),
     fill=F_SEC)
 filas = [
-    (67, "Repo · resultado si nada cambia (escenario base)", REPO_BASE, None),
+    (67, "Documento · resultado si nada cambia (cuadro 20)", DOC_BASE, None),
     (68, "Este libro · resultado si nada cambia", None, "Escenarios!{c}6"),
-    (69, "Diferencia", None, "ROUND({c}68-{c}67,0)"),
-    (70, "Repo · resultado con el programa (reformista_valuacion)", REPO_VAL, None),
+    (69, "Diferencia", None, "ROUND({c}68/1000000,0)*1000000-{c}67"),
+    (70, "Documento · resultado con el programa (cuadro 20)", DOC_PROG, None),
     (71, "Este libro · resultado con el programa", None, "{c}33"),
-    (72, "Diferencia", None, "ROUND({c}71-{c}70,0)"),
-    (73, "Repo · gastos totales con el programa", REPO_GT_VAL, None),
-    (74, "Este libro · gastos totales", None, "{c}29"),
-    (75, "Diferencia", None, "ROUND({c}74-{c}73,0)"),
+    (72, "Diferencia", None, "ROUND({c}71/1000000,0)*1000000-{c}70"),
+    (73, "Documento · lo que mejora el resultado con el programa (cuadro 20)", DOC_DIF, None),
+    (74, "Este libro · lo que mejora el resultado con el programa", None, "{c}71-{c}68"),
+    (75, "Diferencia", None, "ROUND({c}74/1000000,0)*1000000-{c}73"),
 ]
 for r, t, vals, fx in filas:
     put(RA, f"B{r}", t, font(9, bold=t == "Diferencia"))
     for y in ANIOS:
         c = COL_ANIO[y]
-        if vals is not None:
+        if y >= len(DOC_BASE):                         # el cuadro 20 llega a 2031
+            put(RA, f"{c}{r}", None, font(9))
+        elif vals is not None:
             put(RA, f"{c}{r}", vals[y], font(9, color=BLUE), FMT_M)
         else:
             put(RA, f"{c}{r}", "=" + fx.format(c=c), font(9, bold=t == "Diferencia"),
                 FMT_P if t == "Diferencia" else FMT_M)
-put(RA, "B77", "Las filas azules son el resultado del modelo del repo con los supuestos del documento, copiado de "
-    "data/modelo_flujo_caja.csv. Las diferencias dan cero mientras los supuestos sean los del documento: si se "
-    "mueve una palanca, se separan.", font(8, italic=True, color=GRAY))
+put(RA, "B77", "Las filas azules copian el cuadro 20 del documento (hoja 29 de la A4), en millones redondeados. "
+    "Las diferencias dan cero mientras los supuestos sean los del documento: si se mueve una palanca, se separan. "
+    "El cuadro llega a 2031: para 2032 a 2035 el documento no trae cifras para comparar.",
+    font(8, italic=True, color=GRAY))
 put(RA, "B78", "El programa pide 7.225,2 M por año en régimen. La tabla nueva, cobrada como el ABL, da 5.983 M, y lo "
     "que falta, 1.242 M, sale del gasto flexible: por eso en 2028 y desde 2031 el resultado es el mismo con y sin "
     "programa. En 2029 y 2030 la tabla cobra más de lo que pide la rampa (cuadro 20).", font(8, italic=True, color=GRAY))
@@ -1174,8 +1180,8 @@ for r, lab, var, fx, nota in sens:
     put(ES, f"E{r}", f"=D{r}-{BASE31}", font(9), FMT_M)
     if nota:
         put(ES, f"F{r}", nota, font(8, italic=True, color=GRAY), wrap=True)
-put(ES, "B24", "Cada variable se mueve sola, con las otras dos en su valor de hoy, como en el modelo del repo "
-    "(data/sensibilidad.csv, que también da 2037; este libro llega a 2035). Las variantes azules se pueden cambiar.",
+put(ES, "B24", "Cada variable se mueve sola, con las otras dos en su valor de hoy, como en la sensibilidad del 3.6 "
+    "del documento. Las variantes azules se pueden cambiar.",
     font(8, italic=True, color=GRAY))
 put(ES, "B25", "El bono de 2026 no está en la sensibilidad: para 2031 ya está pagado, y su tasa es nominal y "
     "variable (3.6).", font(8, italic=True, color=GRAY))
@@ -1187,85 +1193,99 @@ for cc in "GHIJ":
     ES.column_dimensions[cc].width = 15
 
 # ======================================================================
-# METAS: las veinte del 6.3 (dispatch 3, C1: siete nuevas)
+# METAS: las veinte del 6.3, con el texto final del documento
 # ======================================================================
 MT = wb["Metas"]
 for rr in range(1, 40):
     clear_row(MT, rr)
 put(MT, "B2", "LAS VEINTE METAS DEL MANDATO (6.3)", font(13, True, color=WINE))
-put(MT, "B3", "Línea de base de hoy, lo que proyecta este libro donde lo hay y la fuente pública que la comprueba.",
+put(MT, "B3", "Las veinte metas del 6.3 del documento (hojas 104 a 106 de la A4): el número de hoy, lo que proyecta este libro donde lo hay y cómo se comprueba cada una.",
     font(9, italic=True, color=GRAY))
-for cc, t in (("B", "META"), ("C", "LÍNEA DE BASE"), ("D", "AÑO 4 · 2031"), ("E", "AÑO 8 · 2035"),
-              ("F", "FUENTE DE VERIFICACIÓN")):
+for cc, t in (("B", "META"), ("C", "EL NÚMERO DE HOY"), ("D", "AÑO 4 · 2031"), ("E", "AÑO 8 · 2035"),
+              ("F", "CÓMO SE COMPRUEBA")):
     put(MT, f"{cc}5", t, font(8, True, color="FFFFFFFF"), fill=F_HDR, wrap=True, align="center")
 NP = "No la proyecta el modelo"
 metas = [
-    ("Reducir a la mitad los hogares sin cloacas en Boulogne y Béccar", "4.616 hogares (Censo 2022)",
-     "Depende de ejecución", "—", "Registro de conexiones y próximo censo"),
-    ("Llevar el gasto conjunto en empleo y vivienda a 7.730,9 M anuales", "505,7 M (2025)",
-     "='Resumen anual'!F52", "='Resumen anual'!J52", "Ejecución presupuestaria por programa"),
-    ("Llevar la función ambiental al 1,5% del presupuesto", "0,4% (2025)",
+    ('Reducir a la mitad los hogares sin cloacas en Boulogne y Béccar',
+     '4.616 hogares (Censo 2022)',
+     'Depende de que se hagan las obras', '—',
+     'Registro de conexiones y próximo censo'),
+    ('Llevar el gasto en empleo y vivienda, sumados, a 7.730,9 M por año',
+     '505,7 M (2025)',
+     "='Resumen anual'!F52", "='Resumen anual'!J52",
+     'Ejecución presupuestaria por programa'),
+    ('Llevar el gasto en ambiente al 1,5% del presupuesto',
+     '0,4% (2025)',
      "=SUM('Gastos función'!AM23:AX23)/Supuestos!$C$127", "=SUM('Gastos función'!CI23:CT23)/Supuestos!$C$127",
-     "Gastos por finalidad y función"),
-    ("50% de la obra pública decidida por comisiones vecinales", "0%",
-     "='Resumen anual'!F47", "='Resumen anual'!J47", "Ordenanza y ejecución presupuestaria"),
-    ("Imputar el gasto municipal con referencia territorial, de modo que exista el dato de cuánto se gastó en "
-     "cada zona", "El dato no existe: ningún municipio del conurbano norte lo produce", NP, NP,
-     "Cuánto se gastó en cada zona: se le pregunta a la inteligencia artificial del Municipio"),
-    ("La inteligencia artificial del Municipio en producción, con la partida vecinal, las asambleas transcriptas "
-     "y cada dato cargado el día que ocurre", "No existe. Hoy el Municipio publica en PDF y su portal de datos "
-     "abiertos devuelve error", NP, NP, "Se le pregunta a la inteligencia artificial del Municipio: cualquiera puede hacerlo"),
-    ("Turno médico en línea en los tres hospitales, el odontológico y los nueve centros de atención primaria, que la "
-     "inteligencia artificial del Municipio saca en la charla, con recordatorio y lista de espera",
-     "Cero efectores de salud humana con turno en línea", NP, NP, "La propia plataforma, consultable por cualquiera"),
-    ("Que cada compra de insumos se compare sola contra la compra anterior y contra los otros dos hospitales, y "
-     "avise cuando se sale del rango", "Hoy se publica el total del expediente, no el precio por unidad", NP, NP,
-     "Se le pregunta a la inteligencia artificial del Municipio, con el histórico y las alertas"),
-    ("Adjudicar el servicio de recolección de residuos por licitación pública, con el pliego discutido antes del "
-     "llamado", "Cuatro licitaciones llamadas desde 2004 y ninguna terminó en un contrato; el mismo grupo presta el "
-     "servicio desde 1998", NP, NP, "Boletín Oficial municipal"),
-    ("Detección en vivo de hechos violentos y reconstrucción de recorrido sobre las cámaras que el Municipio ya "
-     "tiene, y que cualquiera pueda preguntar cuántas órdenes judiciales se recibieron y cuántas se cumplieron",
-     "No hay registro público de que ninguno de los dos usos opere", NP, NP,
-     "Se le pregunta a la inteligencia artificial del Municipio: tiempo de respuesta y órdenes"),
-    ("Partida presupuestaria propia para género, separada del programa que hoy comparte, y la dirección atendiendo "
-     "días fijos en cada zona, empezando por Boulogne y Béccar",
-     "Género no tiene partida propia; discapacidad sí, y devengó 65,9 M en 2025. La dirección tiene una sola sede, en "
-     "la ciudad de San Isidro", NP, NP,
-     "Estado de ejecución por programa; los días y lugares de atención se le preguntan a la inteligencia artificial del Municipio"),
-    ("Un centro de apoyo escolar gratuito en cada una de las seis localidades",
-     "Cinco espacios chicos, sólo en Béccar y Boulogne, con un centenar de chicos; en las otras cuatro localidades, ninguno",
-     "=SUM(Programas!AM12:AX12)/Supuestos!$C$55", "=SUM(Programas!CI12:CT12)/Supuestos!$C$55",
-     "Ejecución por programa; la matrícula por sede se le pregunta a la inteligencia artificial del Municipio"),
-    ("La tecnicatura de dos años de la UNSO en las seis zonas, el segundo como pasante —seis meses en el Municipio "
-     "y seis en una empresa del partido—: desde el mes 27 egresa una cohorte cada seis meses; 1.286 en el mandato "
-     "y 928 por año en régimen; y 250 a 300 egresados con empleo pago por año. En el año 4, egresados acumulados; "
-     "en el 8, egresados del año",
-     "Una sede, la del Barrio La Cava", "=Programas!AX38", "=SUM(Programas!CI37:CT37)",
-     "Ejecución por programa y convenios de pasantías; la matrícula por sede se le pregunta a la inteligencia "
-     "artificial del Municipio; el empleo, al registro de inserción laboral"),
-    ("El profesor digital, probado seis meses en los primeros centros de apoyo escolar, medido con pruebas sin "
-     "inteligencia artificial y con el resultado publicado antes de extenderlo",
-     "No existe: el Municipio no ofrece ningún tutor digital", NP, NP,
-     "El resultado de la prueba se le pregunta a la inteligencia artificial del Municipio"),
-    ("Que cada responsable conteste en plazo lo que junta la inteligencia artificial que escucha a los vecinos",
-     "No hay forma pública de saber cuánto tarda el Municipio en responder un reclamo", NP, NP,
-     "Se le pregunta a la inteligencia artificial del Municipio: tema por tema y zona por zona, el plazo y la respuesta"),
-    ("Que cada denuncia de un comerciante por coimas, aprietes o amenazas tenga respuesta, y llegue a la fiscalía "
-     "cuando hay delito", "No existe: el canal es nuevo (5.9)", NP, NP,
-     "Se le pregunta a la inteligencia artificial del Municipio: cuántas denuncias hubo, en qué están y cuántas "
-     "llegaron a la fiscalía"),
-    ("Espectáculos al aire libre todas las semanas, de lunes a jueves, en los parques y plazas del partido",
-     "En 2026, un solo espectáculo en un día hábil en la costa, según el Municipio", NP, NP,
-     "La agenda, en la inteligencia artificial del Municipio; la gente, con las cámaras que cuentan cada acceso"),
-    ("Medir el ruido de motos y colectivos con estaciones móviles, y que cualquiera pueda preguntar qué midieron en "
-     "su zona", "No hay medición ni límites en decibeles para vehículos en circulación", NP, NP,
-     "Se le pregunta a la inteligencia artificial del Municipio"),
-    ("Cada asociación inscripta en el Municipio, con su espacio propio en la inteligencia artificial del Municipio",
-     "No existe", NP, NP, "Cuántas asociaciones lo usan: se le pregunta a la inteligencia artificial del Municipio"),
-    ("Que nadie cobre por multa, y que lo cobrado vaya a un fondo cerrado de seguridad vial",
-     "Hasta 2025, las universidades que operaban las cámaras cobraban un porcentaje de lo recaudado", NP, NP,
-     "Los contratos, en el Boletín Oficial; el fondo, en la ejecución presupuestaria"),
+     'Gastos por finalidad y función'),
+    ('50% de la obra pública decidida por comisiones vecinales',
+     '0%',
+     "='Resumen anual'!F47", "='Resumen anual'!J47",
+     'Ordenanza y ejecución presupuestaria'),
+    ('Anotar cada gasto del Municipio con la zona donde se hace, para saber cuánto se gastó en cada zona',
+     'El dato no existe: ningún municipio del conurbano norte lo produce',
+     NP, NP,
+     'Cuánto se gastó en cada zona: se le pregunta a la inteligencia artificial del Municipio'),
+    ('La inteligencia artificial del Municipio funcionando, con la partida vecinal, las asambleas pasadas a texto y cada dato cargado el mismo día en que ocurre',
+     'No existe. Hoy el Municipio publica en PDF y su portal de datos abiertos devuelve error',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio: cualquiera puede hacerlo'),
+    ('Turno médico por internet en los tres hospitales, el odontológico y los nueve centros de atención primaria. La inteligencia artificial del Municipio lo va a sacar mientras uno conversa, con recordatorio y lista de espera',
+     'Ningún centro de salud para personas tiene turno por internet. El único turno de salud por internet es el de castración de mascotas',
+     NP, NP,
+     'La propia plataforma, consultable por cualquiera'),
+    ('La inteligencia artificial del Municipio va a comparar sola cada compra de insumos con la compra anterior, con los otros dos hospitales y con lo que cobran los laboratorios y pagan los sanatorios y las obras sociales. Va a avisar cuando algo se salga de lo normal',
+     'Hoy no hay con qué comparar: se publica el total del expediente, no el precio por unidad',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio, con las compras anteriores y los avisos'),
+    ('Adjudicar por licitación pública el servicio de recolección de residuos, es decir, darle el contrato a la empresa que gane. El pliego se discute antes del llamado',
+     'Desde 2004 se llamó a cuatro licitaciones, y ninguna terminó en un contrato. El mismo grupo da el servicio desde 1998',
+     NP, NP,
+     'Boletín Oficial municipal'),
+    ('Las cámaras que el Municipio ya tiene van a detectar en el momento los hechos violentos. Cuando alguien denuncie un hecho, también van a servir para ver quién estuvo en el lugar y hacia dónde fue. Cualquiera le va a poder preguntar a la inteligencia artificial del Municipio cuántas órdenes de un juez se recibieron para seguir a una persona con las cámaras, y cuántas se cumplieron',
+     'No hay registro público de que la detección en el momento ni la búsqueda después de un hecho funcionen. Las alertas no se publican',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio: cuánto tarda el patrullero, y las órdenes'),
+    ('Darle a la dirección de género una partida propia, separada del programa que hoy comparte. Llevar su atención a cada zona, con días fijos, empezando por Boulogne y Béccar',
+     'Género no tiene partida propia. Discapacidad sí, y gastó 65,9 M en 2025, el 0,020% del gasto. La dirección de género tiene una sola sede, en la ciudad de San Isidro',
+     NP, NP,
+     'Estado de ejecución por programa. Los días y lugares de atención se le preguntan a la inteligencia artificial del Municipio'),
+    ('Un centro de apoyo escolar gratuito en cada una de las seis localidades',
+     'Cinco espacios pequeños de apoyo escolar, sólo en Béccar y Boulogne, con unos cien alumnos. En las otras cuatro localidades, ninguno',
+     '=SUM(Programas!AM12:AX12)/Supuestos!$C$55', '=SUM(Programas!CI12:CT12)/Supuestos!$C$55',
+     'Ejecución por programa. La matrícula por sede se le pregunta a la inteligencia artificial del Municipio'),
+    ('Llevar la forma de trabajar del Centro de Formación Laboral (CFL) 404 Barrio La Cava, de Béccar, a las seis zonas, con cinco sedes fijas y una sede móvil en Acassuso. Se suma una tecnicatura de la UNSO, que es una carrera universitaria corta, de dos años. En el segundo año, los alumnos trabajan como pasantes: seis meses en el Municipio y seis en una empresa de San Isidro. Desde el mes 27, cada seis meses egresa un grupo de alumnos con un año de trabajo real. Durante todo el mandato egresan 1.286 personas, y cuando la formación funcione completa van a ser 928 por año. La meta es que de 250 a 300 egresados por año consigan empleo pago En esta hoja, la columna del año 4 da los egresados acumulados, y la del año 8, los egresados de ese año.',
+     'Hoy hay una sola sede de formación laboral, la del Barrio La Cava. No se publica cuántos alumnos hay ni cuántos consiguen trabajo. El primer registro que se haga va a dar esos dos números, como punto de partida',
+     '=Programas!AX38', '=SUM(Programas!CI37:CT37)',
+     'Ejecución por programa y convenios de pasantías. La matrícula por sede se le pregunta a la inteligencia artificial del Municipio, y el empleo, al registro de inserción laboral'),
+    ('El profesor digital, probado seis meses en los primeros centros de apoyo escolar, medido con pruebas sin inteligencia artificial y con el resultado publicado antes de extenderlo',
+     'No existe: el Municipio no ofrece ningún profesor digital',
+     NP, NP,
+     'El resultado de la prueba se le pregunta a la inteligencia artificial del Municipio'),
+    ('Cada funcionario responsable va a contestar, dentro del plazo fijado, lo que los vecinos le plantean a la inteligencia artificial del Municipio',
+     'No hay forma pública de saber cuánto tarda el Municipio en responder un reclamo',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio: tema por tema y zona por zona, el plazo y la respuesta'),
+    ('Cada denuncia de un comerciante por coimas, presiones o amenazas va a tener respuesta. Cuando haya delito, la denuncia va a llegar a la fiscalía',
+     'No existe: el canal es nuevo (5.9)',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio: cuántas denuncias hubo, en qué están y cuántas llegaron a la fiscalía'),
+    ('Doscientos shows por año, de artistas nuevos de San Isidro. Las bandas tienen prioridad: como máximo, el 10% de los shows son de solistas, y al menos la mitad, de bandas de cuatro músicos o más. Además, espectáculos al aire libre todas las semanas, de lunes a jueves, en los parques y plazas de San Isidro',
+     'En 2026, un solo espectáculo en un día hábil en la costa, según el Municipio',
+     NP, NP,
+     'La agenda se consulta en la inteligencia artificial del Municipio. Cuánta gente va se mide con las cámaras que cuentan cada acceso'),
+    ('Medir el ruido de motos y colectivos con estaciones móviles, y que cualquiera pueda preguntar qué midieron en su zona',
+     'No se mide, y no hay límites en decibeles para los vehículos que circulan',
+     NP, NP,
+     'Se le pregunta a la inteligencia artificial del Municipio'),
+    ('Cada asociación inscripta en el Municipio, con su espacio propio en la inteligencia artificial del Municipio',
+     'No existe',
+     NP, NP,
+     'Cuántas asociaciones lo usan: se le pregunta a la inteligencia artificial del Municipio'),
+    ('Nadie va a ganar dinero por cada multa que se pone. El dinero de las multas va a ir a un fondo de seguridad vial, que no se puede usar para otra cosa',
+     'Hasta 2025, las universidades que operaban las cámaras cobraban un porcentaje de lo recaudado',
+     NP, NP,
+     'Los contratos, en el Boletín Oficial; el fondo, en la ejecución presupuestaria'),
 ]
 FMTS = {1: FMT_M, 2: FMT_PCT1, 3: FMT_PCT1, 11: "0", 12: FMT_N}
 for i, (meta, base, a4, a8, fuente) in enumerate(metas):
@@ -1293,12 +1313,12 @@ GU = wb["Guía"]
 for rr in range(1, 60):
     clear_row(GU, rr)
 put(GU, "B2", "MODELO FISCAL · MUNICIPIO DE SAN ISIDRO", font(15, True, color=WINE))
-put(GU, "B3", "Proyección mensual 2028–2035 · ocho ejercicios · los mismos números que el documento y que el modelo del repo",
+put(GU, "B3", "Proyección mensual 2028–2035 · ocho ejercicios · los mismos números que el documento",
     font(9, italic=True, color=GRAY))
 guia = [
     ("QUÉ ES", "La cuenta del Municipio mes a mes para los cuatro años del mandato (2028–2031) y los cuatro "
-     "siguientes, con el programa del documento aplicado. Sumada por año, da lo mismo que el modelo del repo "
-     "(03_scripts/modelo.py) y que el capítulo 3: el cuadro 20, el gráfico 13 y la sensibilidad del 3.2 y el 3.6."),
+     "siguientes, con el programa del documento aplicado. Sumada por año, da lo mismo que el capítulo 3 del "
+     "documento: el cuadro 20, el gráfico 13 y la sensibilidad del 3.2 y el 3.6."),
     ("UNIDAD", "Pesos constantes de diciembre de 2025. Sin supuesto de inflación: todo crecimiento que aparece es real."),
     ("AÑO BASE", "2025 es la ejecución real, no una estimación: los estados de ejecución de recursos y de gastos, "
      "acumulado anual, y el Estado de Situación Económico-Financiera 2025. Reproduce la cuenta oficial con "
@@ -1363,7 +1383,7 @@ hojas = [
     ("Vecinal", "La rampa del 12,5% al 50%, el reparto entre las seis zonas y el 1,5% del funcionamiento."),
     ("Programas", "Los programas del capítulo 5, empleo y vivienda abiertos, y la formación: ingresos, pasantes y egresados."),
     ("Deuda", "La deuda al 31/12/2025, que llega a cero en 2029; el bono 2026; la flotante del rezago; el margen contra el tope de la Constitución provincial."),
-    ("Resumen anual", "Los ocho ejercicios en la cuenta Ahorro-Inversión, con los dos controles: año base y modelo del repo."),
+    ("Resumen anual", "Los ocho ejercicios en la cuenta Ahorro-Inversión, con los dos controles: el año base y el cuadro 20 del documento."),
     ("Escenarios", "Si nada cambia y con el programa, año por año (cuadro 20), y la sensibilidad de 2031."),
     ("Metas", "Las veinte metas del 6.3, con lo que proyecta el modelo donde lo hay."),
 ]
@@ -1372,12 +1392,138 @@ for h, t in hojas:
     put(GU, f"C{r}", t, font(10), wrap=True)
     r += 1
 r += 1
-put(GU, f"C{r}", "Este modelo proyecta el marco fiscal, no el resultado de las políticas. Que haya fondos para una "
+put(GU, f"C{r}", "Este modelo proyecta el marco fiscal, no el resultado de las políticas. Tener fondos para una "
     "obra no significa que la obra se haga bien ni a tiempo.", font(10, italic=True), wrap=True)
 GU.column_dimensions["B"].width = 22
 GU.column_dimensions["C"].width = 110
 for rr in range(5, r + 1):
     GU.row_dimensions[rr].height = None
+
+# ======================================================================
+# LIBRO PUBLICO (dispatch 17): nada interno, «San Isidro», lenguaje llano, todo arriba y cada fila con su alto
+# ======================================================================
+def _cambiar(ws, coord, viejo, nuevo):
+    v = ws[coord].value
+    assert isinstance(v, str) and viejo in v, (ws.title, coord, v)
+    ws[coord].value = v.replace(viejo, nuevo)
+
+
+_cambiar(wb["Vecinal"], "B24", "toma la parte del partido que está en la zona", "toma la parte de San Isidro que está en la zona")
+_cambiar(wb["Flujo mensual"], "B54", "Stock de uso de afectados", "Uso de los fondos afectados para gastos corrientes")
+_cambiar(wb["Flujo mensual"], "B65", "El «stock de uso de afectados» mide",
+         "El «uso de los fondos afectados para gastos corrientes» mide")
+_cambiar(wb["Deuda"], "B11", "Stock consolidado al cierre", "Deuda consolidada al cierre")
+_cambiar(wb["Supuestos"], "E63", "de la LOM", "de la Ley Orgánica de las Municipalidades")
+
+PROHIBIDO = re.compile(r"repo\b|repositorio|\.py\b|\.csv\b|03_scripts|data/|dispatch|correcci[oó]n \d|[Ii]nforme \d|"
+                       r"informes? 2\d|decisi[oó]n del \d|\bpartido\b|\bstock\b|junior|senior|cachet|mafia|\bplata\b|"
+                       r"sobreprecio|\bIA\b|asistente|\bNick\b", re.I)
+for ws in wb:
+    for fila in ws.iter_rows():
+        for c in fila:
+            if isinstance(c.value, str) and not c.value.startswith("="):
+                m = PROHIBIDO.search(c.value)
+                assert not m, (ws.title, c.coordinate, m.group(0), c.value[:120])
+
+
+def _ancho(ws, letra):
+    w = ws.column_dimensions[letra].width if letra in ws.column_dimensions else None
+    return w or 8.43
+
+
+_LETRAS = {}
+
+
+def _letra(tam, negrita, cursiva):
+    """Liberation Sans tiene las mismas medidas que Arial: con ella se mide cada renglon como lo arma la planilla."""
+    k = (tam, negrita, cursiva)
+    if k not in _LETRAS:
+        try:
+            from PIL import ImageFont
+            estilo = {(False, False): "Regular", (True, False): "Bold", (False, True): "Italic", (True, True): "BoldItalic"}
+            _LETRAS[k] = ImageFont.truetype(f"/usr/share/fonts/truetype/liberation/LiberationSans-{estilo[(negrita, cursiva)]}.ttf",
+                                            size=round(tam * 96 / 72 * 10))
+        except Exception:
+            _LETRAS[k] = None
+    return _LETRAS[k]
+
+
+def _renglones(texto, ancho_col, tam, negrita=False, cursiva=False):
+    """Cuantos renglones ocupa el texto en una columna de ese ancho (con un 6% de margen, por si Excel arma el
+    renglon un poco mas ancho que LibreOffice)."""
+    util = (ancho_col * 7 + 5 - 7) * 0.94
+    f = _letra(tam, negrita, cursiva)
+    n = 0
+    for parrafo in str(texto).split("\n"):
+        if f is None:
+            n += max(1, -(-len(parrafo) * 0.5 * tam * 4 / 3 // util))
+            continue
+        renglon, k = "", 1
+        for palabra in parrafo.split(" "):
+            prueba = (renglon + " " + palabra).strip()
+            if f.getlength(prueba) / 10 > util and renglon:
+                k += 1
+                renglon = palabra
+            else:
+                renglon = prueba
+        n += k
+    return n
+
+
+# la ultima columna del cuadro de cada hoja sin paneles fijos: ahi se extiende una nota larga que va sola en su fila
+ULTIMA = {"Supuestos": "E", "Escenarios": "J", "Metas": "F"}
+for ws in wb:
+    if ws.title not in ULTIMA:
+        continue
+    fin = openpyxl.utils.column_index_from_string(ULTIMA[ws.title])
+    for fila in ws.iter_rows(min_row=1, max_row=ws.max_row):
+        llenas = [c for c in fila if c.value is not None]
+        if len(llenas) != 1 or not isinstance(llenas[0].value, str) or llenas[0].value.startswith("="):
+            continue
+        c = llenas[0]
+        if c.column >= fin or c.alignment.wrap_text:
+            continue
+        tam = c.font.sz or 11
+        if _renglones(c.value, _ancho(ws, c.column_letter), tam, bool(c.font.b), bool(c.font.i)) > 1:
+            ws.merge_cells(start_row=c.row, start_column=c.column, end_row=c.row, end_column=fin)
+            c.alignment = Alignment(horizontal=c.alignment.horizontal, vertical="top", wrap_text=True)
+
+
+def _ancho_celda(ws, c):
+    """El ancho de la celda, o de toda la union si la celda abre una."""
+    for rng in ws.merged_cells.ranges:
+        if rng.min_row == c.row and rng.min_col == c.column:
+            return sum(_ancho(ws, openpyxl.utils.get_column_letter(k)) for k in range(rng.min_col, rng.max_col + 1))
+    return _ancho(ws, c.column_letter)
+
+
+for ws in wb:
+    for fila in ws.iter_rows():
+        alto = 0.0
+        for c in fila:
+            if c.value is None:
+                continue
+            al = c.alignment
+            envolver = bool(al.wrap_text)
+            if isinstance(c.value, str) and not c.value.startswith("=") and not envolver:
+                # un rotulo que no entra en su columna se corta si tiene un dato al lado, y si va solo obliga a
+                # correr la hoja hacia la derecha para leerlo: va en varios renglones
+                tam = c.font.sz or 11
+                vecino = ws.cell(c.row, c.column + 1).value
+                f = _letra(tam, bool(c.font.b), bool(c.font.i))
+                largo = f.getlength(c.value) / 10 if f else len(c.value) * 0.5 * tam * 4 / 3
+                if _renglones(c.value, _ancho(ws, c.column_letter), tam, bool(c.font.b), bool(c.font.i)) > 1 and \
+                        (vecino is not None or largo > 900):
+                    envolver = True
+            c.alignment = Alignment(horizontal=al.horizontal, vertical="top", wrap_text=envolver,
+                                    indent=al.indent, text_rotation=al.text_rotation)
+            if envolver and isinstance(c.value, str) and not c.value.startswith("="):
+                tam = c.font.sz or 11
+                alto = max(alto, _renglones(c.value, _ancho_celda(ws, c), tam, bool(c.font.b), bool(c.font.i))
+                           * tam * 1.25 + 5)
+        if alto:
+            r = fila[0].row
+            ws.row_dimensions[r].height = max(alto, 15)
 
 wb.save(OUT)
 print("guardado", OUT)

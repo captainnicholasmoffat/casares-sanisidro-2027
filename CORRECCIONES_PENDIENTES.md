@@ -3396,3 +3396,34 @@ repitiendo arriba su título con «(sigue)».
   6 → 101, Para cerrar 115, Anexo 116, Glosario 127, Nota de método 129. La última hoja queda con 76% en blanco (antes
   81%): no entra en la anterior sin dejar otra hoja con más de un tercio vacío o un título al pie sin su texto.
 - Excel sin cambios (ya decía 114 shows al aire libre y 86 bajo techo). Cinco tests OK.
+
+## DISPATCH 17 · EXCEL DEL MODELO FISCAL, PARA MANDAR AFUERA (11/10) · APLICADO
+- El PDF y la A4 no cambian. El Excel se rehace con 03_scripts/actualizar_excel_179.py desde la base de siempre
+  (commit 8358497) y se recalcula con LibreOffice: 13.435 fórmulas, 0 errores. Ningún número del modelo cambia; sólo
+  el bloque de control del Resumen anual.
+- 1 · Formato: todas las celdas con dato, en todas las hojas, alineadas arriba (0 celdas fuera). Cada fila con el alto
+  que pide su texto, medido renglón por renglón con Liberation Sans (las medidas de Arial) sobre el ancho de Excel. Los
+  rótulos que no entran en su columna van en varios renglones; las notas largas que van solas en su fila, en varios
+  renglones (en Supuestos, Escenarios y Metas, a lo ancho del cuadro). Control: cada hoja abierta en LibreOffice,
+  pasada a PDF y mirada en imagen; ninguna de las 7.575 palabras de las celdas falta en el PDF (el Excel anterior
+  perdía 257). El texto se cortaba porque LibreOffice había calculado los altos sin la letra Calibri: con su reemplazo
+  las columnas salían un 30% más anchas que en Excel.
+- 2 · Nada interno: fuera «el modelo del repo», 03_scripts/modelo.py y los .csv (Guía B3, C5 y C32; Supuestos E33 a
+  E36, E59, E61, E64, E114, E118, E134, E142, E189 y E217; Recursos B3; Deuda B3 y B20; Escenarios B24), «dispatch 15»
+  (Supuestos B285, E179 y E283), «corrección 180» (E114), «(189)» (E238) y «decisión del 07/10» (E54, E161 y E273).
+  Las citas a informes internos (B130, B249, B259, B268, B274, B280, E54, E57, E161, E163, E238, E250, E271 a E273,
+  E275, E281 y E282) pasan a la fuente pública o a «cálculo propio», con la sección del documento.
+- Resumen anual: el control compara con el cuadro 20 del documento (hoja 29 de la A4), 2028 a 2031: resultado si nada
+  cambia, con el programa y lo que mejora; las tres diferencias dan cero. Sale la comparación de gastos totales, que
+  el documento no publica.
+- 3 · «partido» → «San Isidro»: Supuestos E156, Vecinal B24, Programas B40, Metas B18 y B22.
+- 4 · Metas: las veinte, con el texto final del 6.3 (hojas 104 a 106 de la A4); columnas «El número de hoy» y «Cómo
+  se comprueba», como en el documento. La de la tecnicatura aclara qué muestran las columnas del año 4 y del año 8.
+- 5 · Lenguaje llano: «stock» → «deuda» o «saldo»; «juniors» y «semi-senior» → «principiantes» y «una persona con
+  experiencia»; «cachets» → «lo que se les paga a los artistas»; «LOM» → «Ley Orgánica de las Municipalidades»;
+  «Depende de ejecución» → «Depende de que se hagan las obras»; «Que haya fondos» → «Tener fondos». La deuda de partida
+  dice «al 31/12/2025» (decía 30/12 en dos rótulos). Sin «mafia», «plata» ni «sobreprecio».
+- Seis notas de Supuestos (E179 a E182, E257 y E270) seguían con los porcentajes de antes del dispatch 15 (53,3%,
+  46,7%, 44,0%); ahora dicen 51,8%, 48,2% y 44,7%, como el documento y como las propias celdas.
+- El generador termina con un control: si algún texto vuelve a nombrar el repositorio, un archivo, un dispatch, un
+  informe interno o «partido», no guarda el libro. Cinco tests OK.
