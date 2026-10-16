@@ -3427,3 +3427,28 @@ repitiendo arriba su título con «(sigue)».
   46,7%, 44,0%); ahora dicen 51,8%, 48,2% y 44,7%, como el documento y como las propias celdas.
 - El generador termina con un control: si algún texto vuelve a nombrar el repositorio, un archivo, un dispatch, un
   informe interno o «partido», no guarda el libro. Cinco tests OK.
+
+## DISPATCH 18 · LO QUE CAMBIÓ EN LA WEB, AL PDF Y A LA A4 (16/10) · APLICADO
+- Textos copiados de la web (sanisidro2027.pages.dev, data/programa.json, bajada el 16/10), con sus negritas. Antes de
+  copiar, cada texto del dispatch se comparó con la web: coinciden todos, letra por letra. Después, todo el texto de la
+  web está en el documento (sólo difieren los números de cuadro, que el documento pone al armar, y las viñetas).
+- A1 5.3 (las dieciséis empresas: 3, 3, 5 y 5) · A2 y A4 cuadro 42 (la oficina de delitos por internet; la ordenanza
+  de las grabaciones, desde el mes 9) · A3 Ordenanza 4, art. 3 (la oración nueva va sin negrita, como en la web) ·
+  A5 anexo (los dos cambios menores).
+- B1 párrafo del comercio del 5.11 · B2 cuatro recuadros verdes «Nuestra propuesta» antes de «Multas de tránsito» ·
+  B3 3.4 (las compras, hasta otro 0,4%) · B4 3.6 («de los cuatro primeros» y el punto 5) · B5 anexo («diecisiete
+  cortas» y las Ordenanzas 17 y 18) · B6 cuatro puntos en «Lo que tiene que confirmar un abogado» · B7 fila de
+  fuentes «5.11 · el comercio de cercanía», después de la de multas (como la muestra la web).
+- Pantalla: 60 páginas (los cuatro recuadros y las Ordenanzas 17 y 18 abren página propia); la más alta, 2.693,2 pt.
+  Índice: una línea nueva para las Ordenanzas 17 y 18; «Lo que estas ordenanzas no dicen» y «Las metas que no llevan
+  ordenanza» pasan a esa página.
+- A4: 143 hojas, ninguna con más de un tercio en blanco (la última, 35%); título al pie, rótulo, foto sola y dos fotos
+  seguidas en cero; 180 recortes sin texto escondido; texto contra la pantalla sin faltantes. Capítulos: Introducción
+  5, Qué proponemos hacer 6, 1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 49, 6 → 103, Para cerrar 117, Anexo 118, Glosario 130,
+  Nota de método 132.
+- Números por capítulo, antes y después: iguales salvo los nuevos de este dispatch; ninguno sale (en el índice se
+  corren las páginas).
+- Barrido de los textos nuevos: «Y» o «Que» al empezar, 0; palabras prohibidas, 0. Dos puntos seguidos de un recuadro
+  empiezan igual («Lo que el comerciante declare…» y «4 · Lo pagan los grandes…»), como las otras enumeraciones.
+- El calendario (cuadro 42) sigue sin fecha para las Ordenanzas 17 y 18, igual que en la web.
+- Excel sin cambios. Cinco tests OK.

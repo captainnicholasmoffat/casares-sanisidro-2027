@@ -115,10 +115,14 @@ ORD_A, ORD_B = split_at(O.ORDENANZA,
 ORD_B, ORD_C = split_at(ORD_B, '<h2>8 &middot; Ordenanza de ruido</h2>', "ordenanza3", "")
 # de la XI en adelante (costa, obra en parques y costa, excepciones, parques y cuotas de multas) va en una cuarta
 ORD_C, ORD_D = split_at(ORD_C, '<h2>11 &middot; Ordenanza de la costa', "ordenanza4", "")
+# dispatch 18: las ordenanzas 17 y 18, del comercio de cercania, van en una quinta pagina con las dos notas finales
+ORD_D, ORD_E = split_at(ORD_D, '<h2>17 &middot; Ordenanza del tope de la tasa de seguridad e higiene</h2>', "ordenanza5", "")
+# dispatch 18: los cuatro recuadros del comercio de cercania no entran con el 5.10 y el 5.11: van en pagina propia
+C5B2B, C5B2B2 = split_at(C5B2B, '<div class="callout g">\n<div class="clabel">Nuestra propuesta: la tasa del comercio chico', "cap5b2b2", "")
 
 SECTIONS = [A.INDICE, A.INTRO, S.SINTESIS, C1A, C1A2, A.C1B, C2A, C2B, B.C3A, C3B_A, C3B_B, C3B_C,
             C4A, C4A2, C4B, C4B_B, C4B_B2, C4B2, C4B2B, C4B_C,
-            C5A, C5A2, C5A3, C5A3B, C5A4, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B2, C5B2A2, C5B2B, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_A3, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3]
+            C5A, C5A2, C5A3, C5A3B, C5A4, C5B, C5B_REC, C5B_R, C5B_A2, C5B_A3, C5B_A4, C5B_A5, C5B_B, C5B_B2, C5B_C, C5B2, C5B2A2, C5B2B, C5B2B2, C5B2C, C5B3, C5B3B, C6, C6B_A, C6B_A2, C6B_A3, C6B_B, C6B_C, E.CIERRE, ORD_A, ORD_B, ORD_C, ORD_D, ORD_E, D.GLOSARIO, METODO, FUENTES, FUENTES2, FUENTES3]
 
 # las referencias [[n:clave]] a cuadros y graficos, con el numero ya asignado
 for _s in SECTIONS:

@@ -3,7 +3,7 @@ from content_a import RH
 
 ORDENANZA = dict(id="ordenanza", runhead=RH, html="""
 <h1>Anexo &middot; Las ordenanzas que proponemos</h1>
-<div class="stand">Las promesas de este programa necesitan normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal (el dinero que el presupuesto reserva para la obra que deciden los vecinos), y quince cortas. Se van a votar por separado, porque son discusiones distintas. Ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar.</div>
+<div class="stand">Las promesas de este programa necesitan normas, y ac&aacute; est&aacute;n escritas. Hay una ordenanza central, la de la partida vecinal (el dinero que el presupuesto reserva para la obra que deciden los vecinos), y diecisiete cortas. Se van a votar por separado, porque son discusiones distintas. Ninguna va m&aacute;s all&aacute; de lo que un municipio bonaerense puede aprobar. Faltan dos cambios menores, que se redactan en los meses 4 a 6 (cuadro 42): la ordenanza de los foodtrucks y el cambio del art&iacute;culo 9 de la Ordenanza 5824.</div>
 
 <div class="callout a">
 <div class="clabel">Borrador para que lo revise un abogado</div>
@@ -184,7 +184,7 @@ municipal.</p>
 <p class="tight">Cada grabaci&oacute;n se sella en el momento de grabar, con firma digital, fecha, hora y lugar, y su huella se registra en ese momento en la inteligencia artificial del Municipio. El video se sube al volver a la base, y la inteligencia artificial marca toda grabaci&oacute;n sellada que no se suba. Cr&eacute;ase la base de datos de los actos de fiscalizaci&oacute;n: la inteligencia artificial corta el turno en una grabaci&oacute;n por acto y la guarda por comercio o domicilio. Decl&aacute;rase de inter&eacute;s general la publicidad de esos actos: toda persona tiene inter&eacute;s leg&iacute;timo en controlar lo que hacen los agentes del Municipio, y puede ver la grabaci&oacute;n de cualquier acto, de a una, busc&aacute;ndola por comercio o domicilio, con su fecha y el agente interviniente. Cuando alguien pide ver un acto, la inteligencia artificial difumina las caras de quienes no son parte de &eacute;l, y una persona lo revisa antes de mostrarlo. Lo grabado entre un acto y otro s&oacute;lo lo ven los auditores del Municipio y la auditor&iacute;a externa. Dentro de una vivienda, el acto se graba igual, pero su interior nunca se publica: lo ven s&oacute;lo su titular, los auditores y, si hace falta, un juez. Las grabaciones se guardan dos a&ntilde;os.</p>
 
 <h3>Art&iacute;culo 3 &mdash; Consecuencia</h3>
-<p class="tight"><b>El acta labrada sin grabaci&oacute;n sellada y subida carece de validez. Tampoco tienen validez la clausura ni la habilitaci&oacute;n que surjan de esa inspecci&oacute;n.</b></p>
+<p class="tight"><b>El acta labrada sin grabaci&oacute;n sellada y subida carece de validez. Tampoco tienen validez la clausura ni la habilitaci&oacute;n que surjan de esa inspecci&oacute;n.</b> Esta consecuencia rige desde que el sistema de grabaci&oacute;n sellada funciona en todas las inspecciones.</p>
 
 <h3>Art&iacute;culo 4 &mdash; Registro del vecino</h3>
 <p class="tight">La persona alcanzada por el acto podr&aacute; registrarlo por sus propios medios,
@@ -511,6 +511,40 @@ expreso, y se usa s&oacute;lo para las multas. Se inscribe ante la autoridad de 
 <h3>Art&iacute;culo 2 &mdash; Una persona decide</h3>
 <p class="tight">La inteligencia artificial del Municipio prepara la cuota; la fija una persona, y el vecino puede pedir
 que se revise. El proveedor de la inteligencia artificial act&uacute;a por contrato y no usa estos datos para otro fin.</p>
+
+<h2>17 &middot; Ordenanza del tope de la tasa de seguridad e higiene</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Tope para el comercio monotributista</h3>
+<p class="tight">Quien paga la Tasa por Inspecci&oacute;n de Seguridad e Higiene y est&aacute; inscripto en el monotributo paga por mes, como m&aacute;ximo, un porcentaje de los ingresos brutos m&aacute;ximos de su categor&iacute;a, dividido por doce. La Ordenanza Impositiva fija cada a&ntilde;o ese porcentaje. Si la cuota que le corresponde es menor, paga la cuota.</p>
+
+<h3>Art&iacute;culo 2 &mdash; La categor&iacute;a</h3>
+<p class="tight">La categor&iacute;a es la que informa la Agencia de Recaudaci&oacute;n y Control Aduanero (ARCA), a pedido del Departamento Ejecutivo (Ley 11.683, art&iacute;culo 101). Lo que el contribuyente declare al Municipio no cambia su tope. Si no est&aacute; en el monotributo o su categor&iacute;a no se puede verificar, paga como hasta ahora.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Sin que baje lo que se cobra</h3>
+<p class="tight">Lo que se deja de cobrar por el tope se cubre con una suba de las al&iacute;cuotas sobre los ingresos de los dem&aacute;s contribuyentes, de modo que la recaudaci&oacute;n total de la tasa no baje. El primer a&ntilde;o, el tope alivia alrededor de un cuarto de lo que pagan los comercios alcanzados, y la suba es de alrededor de 4%. Cada a&ntilde;o, el Departamento Ejecutivo publica el c&aacute;lculo, que prepara la inteligencia artificial del Municipio con lo recaudado el a&ntilde;o anterior.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Asesoramiento</h3>
+<p class="tight">La inteligencia artificial del Municipio le explica a cada contribuyente cu&aacute;nto le corresponde pagar y qu&eacute; beneficios de la Ordenanza Fiscal puede usar, y le prepara la declaraci&oacute;n jurada.</p>
+
+<h3>Art&iacute;culo 5 &mdash; C&oacute;mo se aprueba</h3>
+<p class="tight">Por aumentar al&iacute;cuotas, esta ordenanza se vota en la Asamblea de Concejales y Mayores Contribuyentes (Constituci&oacute;n de la Provincia, art&iacute;culo 193, inciso 2).</p>
+
+<h2>18 &middot; Ordenanza de compras al comercio de San Isidro y de donaci&oacute;n de alimentos</h2>
+
+<h3>Art&iacute;culo 1 &mdash; Prioridad local</h3>
+<p class="tight">En las compras del Municipio se prefiere la oferta de un comercio habilitado en San Isidro hace al menos un a&ntilde;o, aunque sea m&aacute;s cara, siempre que no supere en m&aacute;s de 5% a la mejor oferta (Ley Org&aacute;nica de las Municipalidades, art&iacute;culo 156 bis).</p>
+
+<h3>Art&iacute;culo 2 &mdash; Compras por rengl&oacute;n y por zona</h3>
+<p class="tight">Las compras de alimentos, art&iacute;culos de limpieza, ferreter&iacute;a y &uacute;tiles se licitan por rengl&oacute;n y por zona, y cada rengl&oacute;n se adjudica por separado, para que pueda cotizar un comercio chico. Dividir una compra no cambia el procedimiento que corresponde a su monto total. La inteligencia artificial del Municipio arma el registro de proveedores con los comercios habilitados, le avisa a cada uno las compras de su rubro y lo ayuda a cotizar.</p>
+
+<h3>Art&iacute;culo 3 &mdash; Donaci&oacute;n de alimentos</h3>
+<p class="tight">La inteligencia artificial del Municipio conecta al comercio que dona alimentos con el comedor inscripto m&aacute;s cercano que pueda retirarlos a tiempo. Registra cada donaci&oacute;n con los datos que pide la Ley 25.989, lleva el registro de donantes y ayuda a los comedores a inscribirse en el registro nacional de instituciones receptoras de alimentos.</p>
+
+<h3>Art&iacute;culo 4 &mdash; Puntaje del que dona</h3>
+<p class="tight">Todo comercio que dona alimentos suma puntaje en la calificaci&oacute;n de las ofertas, dentro del l&iacute;mite de 5% del art&iacute;culo 1. El Departamento Ejecutivo fija y publica c&oacute;mo se calcula.</p>
+
+<h3>Art&iacute;culo 5 &mdash; Control</h3>
+<p class="tight">Cada compra se publica como manda el art&iacute;culo 2 de la Ordenanza 2. Adem&aacute;s, la inteligencia artificial del Municipio marca los precios que se salen de lo normal. La asociaci&oacute;n vecinal de cada zona ve las compras de su zona y puede objetarlas por escrito, y el Departamento Ejecutivo le responde con sus razones.</p>
 
 <div class="hairline"></div>
 <h2>Lo que estas ordenanzas no dicen, y por qu&eacute;</h2>
