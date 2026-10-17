@@ -3,7 +3,7 @@
 fondo; lo que cambia es como esta puesto en pagina."""
 
 DOC_TITLE = "Programa de gobierno &middot; San Isidro 2027"
-RH = "PROGRAMA DE GOBIERNO &middot; PARTIDO DE SAN ISIDRO"
+RH = "PROGRAMA DE GOBIERNO &middot; SAN ISIDRO"
 
 # numeros de pagina del indice; se completan despues de la primera pasada
 PAGES = {}
@@ -132,7 +132,7 @@ _IDX = [
  ("i", "La fiscalizaci&oacute;n, las asociaciones de parque, g&eacute;nero y los espacios culturales", "ordenanza2"),
  ("i", "El ruido, la higiene urbana y el empleo local", "ordenanza3"),
  ("i", "La costa, la obra en parques y costa, las excepciones urban&iacute;sticas, los parques y las cuotas de las multas", "ordenanza4"),
- ("i", "El comercio de cercan&iacute;a: el tope de la tasa y las compras al comercio de San Isidro", "ordenanza5"),
+ ("i", "El comercio de cercan&iacute;a: la tasa, las compras, los comedores y los hornos", "ordenanza5"),
  ("i", "Lo que estas ordenanzas no dicen, y por qu&eacute;", "ordenanza5"),
  ("i", "Las metas que no llevan ordenanza, y por qu&eacute;", "ordenanza5"),
  ("g", "Glosario", None),

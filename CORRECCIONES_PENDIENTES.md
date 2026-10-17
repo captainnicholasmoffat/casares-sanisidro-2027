@@ -3452,3 +3452,23 @@ repitiendo arriba su título con «(sigue)».
   empiezan igual («Lo que el comerciante declare…» y «4 · Lo pagan los grandes…»), como las otras enumeraciones.
 - El calendario (cuadro 42) sigue sin fecha para las Ordenanzas 17 y 18, igual que en la web.
 - Excel sin cambios. Cinco tests OK.
+
+## DISPATCH 19 · DECISIONES SOBRE EL INFORME DEL 18 (16/10) · APLICADO
+- 1 · Índice: «El comercio de cercanía: la tasa, las compras, los comedores y los hornos» (hoja 4).
+- 2 · 5.11, recuadro de la tasa, punto 3: «Su tope no cambia por lo que declare al Municipio.» (hoja 94). Con esto deja
+  de haber dos puntos seguidos que empiezan igual en ese recuadro.
+- 3 · Cuadro 42: «las diez ordenanzas», el punto 10 (compras al comercio de San Isidro y donación de alimentos) y la
+  fila nueva de la Ordenanza 17 (meses 4–6), después de la de foodtrucks y la Ordenanza 5824 (hoja 109). Textos
+  iguales a los de la web. El cuadro corre su contenido de la hoja 109 a la 113; desde la 114, todo igual.
+- 4 · «Partido»: el encabezado de todas las páginas y hojas dice «PROGRAMA DE GOBIERNO · SAN ISIDRO»; gráfico 1, «San
+  Isidro promedia 3,16%» (hoja 8); gráfico 24, «el peor NBI de San Isidro» (hojas 33 y 52, el mismo mapa). Los dos SVG
+  se corrigieron en el texto, sin regenerarlos: con la versión de matplotlib de hoy el mapa sale distinto del aprobado
+  (etiquetas sin el borde blanco). Medido con la Inter, «el peor NBI de San Isidro» entra en su recuadro. charts.py
+  queda con los textos nuevos. Barrido sin espacios entre letras: quedan sólo el nombre legal en el articulado de las
+  ordenanzas, la Cámara de Comercio y Servicios del Partido de San Isidro, «Partido Demócrata» y «repartido».
+- Pantalla: 60 páginas, la más alta 2.693,2 pt. A4: 143 hojas, ninguna con más de un tercio en blanco (la última,
+  35%); controles en cero; 180 recortes sin texto escondido; texto contra la pantalla sin faltantes. Capítulos sin
+  cambios: Introducción 5, Qué proponemos hacer 6, 1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 49, 6 → 103, Para cerrar 117,
+  Anexo 118, Glosario 130, Nota de método 132.
+- Textos nuevos: «Y» y «Que» al empezar, 0; dos oraciones que empiezan igual en un párrafo, 0. Excel sin cambios.
+  Cinco tests OK. Los dos SVG, también en salida/.

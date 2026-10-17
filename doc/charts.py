@@ -686,7 +686,7 @@ def g_mapa_zonas():
         lg.text(.98, yy, nb(val[z],2)+"%", fontsize=6.7, color=INK, va="center",
                 ha="right", fontweight="semibold")
         lg.plot([.06,.98],[yy-.055]*2, color=HAIR, lw=.4)
-    lg.text(.06, .045, "el partido promedia 3,16%", fontsize=6.1, color=TAUPE,
+    lg.text(.06, .045, "San Isidro promedia 3,16%", fontsize=6.1, color=TAUPE,
             style="italic", va="center")
     save(fig, "g_mapa_zonas")
 
@@ -760,7 +760,7 @@ def g_mapa_radios():
                 path_effects=[pe.withStroke(linewidth=2.1, foreground="#FBF8F3")])
 
     cc = cong.centroid; kxp = proj((cc.x, cc.y))
-    ax.annotate("fracción censal 32\n9 radios · 8.749 hab\nel peor NBI del partido",
+    ax.annotate("fracción censal 32\n9 radios · 8.749 hab\nel peor NBI de San Isidro",
                 kxp, xytext=(X(.735), Y(.235)), textcoords="data",
                 ha="left", va="center", fontsize=6.4, color=INK, fontweight="semibold",
                 zorder=7, bbox=dict(boxstyle="square,pad=.38", fc=GROUND, ec=INK, lw=.6),
