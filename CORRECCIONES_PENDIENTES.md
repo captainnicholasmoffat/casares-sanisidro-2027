@@ -3472,3 +3472,21 @@ repitiendo arriba su título con «(sigue)».
   Anexo 118, Glosario 130, Nota de método 132.
 - Textos nuevos: «Y» y «Que» al empezar, 0; dos oraciones que empiezan igual en un párrafo, 0. Excel sin cambios.
   Cinco tests OK. Los dos SVG, también en salida/.
+
+## DISPATCH 20 · PROFESORES DE GIMNASIA EN LAS PLAZAS (26/10) · APLICADO
+- Textos copiados de la web y comparados antes letra por letra con el dispatch: coinciden. Después, todo el texto de la
+  web está en el documento.
+- 5.5, recuadro «que cada puesto tenga comida, baño y clases»: punto 5 con los 246 pesos por m² y por día y el lugar y
+  horario garantizados (hoja 72); punto 6 nuevo, «El lugar de la clase, protegido.» en negrita (hoja 72); el viejo 6
+  pasa a 7 (hoja 72); costos con los 929 millones de 2025 y la protección sin gasto nuevo (hoja 73).
+- Anexo, Ordenanza 14, art. 6: lugar y horario garantizados, sin el derecho de ocupación y con multa a quien ocupe el
+  lugar durante la clase (hoja 128). «Partido de San Isidro» queda, es el nombre legal.
+- «Lo que tiene que confirmar un abogado», 5.5 (hoja 143). Fuentes de 5.5, lo que se puede cobrar y lo recaudado
+  (hoja 140).
+- Pantalla: 60 páginas, la más alta 2.693,2 pt. A4: 144 hojas (una más); hojas 5 a 71 sin cambios; el 5.5 se
+  reacomoda entre la 72 y la 78; desde la 79, lo mismo de antes corrido una hoja. Ninguna hoja con más de un tercio en
+  blanco (la última, 35%); controles en cero; 181 recortes sin texto escondido; texto contra la pantalla sin faltantes.
+  Capítulos: Introducción 5, Qué proponemos hacer 6, 1 → 8, 2 → 13, 3 → 18, 4 → 30, 5 → 49, 6 → 104, Para cerrar 118,
+  Anexo 119, Glosario 131, Nota de método 133.
+- Textos nuevos: «Y» y «Que» al empezar, 0; dos oraciones que empiezan igual en un párrafo, 0. Excel sin cambios.
+  Cinco tests OK.
