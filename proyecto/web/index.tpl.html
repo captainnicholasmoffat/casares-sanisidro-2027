@@ -1,0 +1,349 @@
+<title>San Isidro 2027</title>
+<meta name="description" content="Programa de gobierno San Isidro 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --ground:#F5F0E8; --paper:#FBF8F2; --ink:#2A211C; --ink-2:#5E534B; --rule:#DCD2C3;
+  --oxblood:#7C2E23; --coral:#DB6B4B; --sage:#5F7057; --amber:#B4863A;
+  --band:#E6E6DA; --band-ink:#2F3A2B;
+  --on-image:#FBF7F1; --on-image-2:#E9DFD3; --scrim:rgba(28,15,10,.82);
+  --focus:#7C2E23;
+  --serif:"Spectral", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --gutter:clamp(16px, 4vw, 48px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#1A1512; --paper:#221C18; --ink:#EFE7DB; --ink-2:#B9ADA1; --rule:#3A302A;
+    --oxblood:#D9806F; --coral:#E8906F; --sage:#A3B597; --amber:#D9AE62;
+    --band:#232A21; --band-ink:#DCE5D3; --focus:#E8906F; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1A1512; --paper:#221C18; --ink:#EFE7DB; --ink-2:#B9ADA1; --rule:#3A302A;
+  --oxblood:#D9806F; --coral:#E8906F; --sage:#A3B597; --amber:#D9AE62;
+  --band:#232A21; --band-ink:#DCE5D3; --focus:#E8906F; color-scheme:dark;
+}
+html.lenis, html.lenis body{height:auto}
+.lenis:not(.lenis-autoToggle).lenis-stopped{overflow:clip}
+.lenis.lenis-smooth iframe{pointer-events:none}
+
+*{box-sizing:border-box}
+body{background:var(--ground); color:var(--ink); font-family:var(--serif); font-size:1.125rem; line-height:1.6; -webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus); outline-offset:3px; border-radius:2px}
+.wrap{padding-inline:var(--gutter); max-width:1240px; margin-inline:auto}
+h1,h2,h3{font-weight:500; text-wrap:balance; margin:0}
+p{margin:0}
+
+/* ---------- Portada ---------- */
+.scene{position:relative; display:grid; grid-template-columns:minmax(0,1fr); background:var(--ground)}
+.scene-visual{position:relative; overflow:hidden; background:#2b2420}
+.scene-visual img, .scene-visual canvas{display:block; width:100%; height:100%; object-fit:cover}
+.scene-visual canvas{position:absolute; inset:0; opacity:0; transition:opacity .4s}
+.scene-visual.ready canvas{opacity:1}
+.scene-caption{position:absolute; right:12px; bottom:10px; font:500 .78rem/1.3 var(--sans); color:var(--on-image); text-shadow:0 1px 3px rgba(0,0,0,.55); max-width:60%; text-align:right}
+.scene-text{position:relative; padding:40px var(--gutter) 56px; display:grid; gap:48px}
+.rail{display:none}
+.kicker{font:500 .95rem/1.3 var(--sans); color:var(--oxblood); letter-spacing:.01em}
+.beat h1{font-family:var(--serif); font-weight:600; font-size:clamp(3rem, 8vw, 6.4rem); line-height:.95; letter-spacing:-.02em; margin:.18em 0 .28em}
+.beat h2{font-size:clamp(1.9rem, 4.2vw, 3.4rem); line-height:1.06; letter-spacing:-.012em; margin-bottom:.5em}
+.beat p{font-size:clamp(1.05rem, 1.35vw, 1.25rem); color:var(--ink-2); max-width:34em}
+.beat .lede{font-style:italic; font-size:clamp(1.2rem, 1.9vw, 1.6rem); color:var(--ink); max-width:24em}
+.hint{margin-top:28px; font:500 .9rem/1.3 var(--sans); color:var(--ink-2); display:flex; align-items:center; gap:10px}
+.hint::before{content:""; width:1px; height:28px; background:currentColor; animation:drop 1.8s ease-in-out infinite; transform-origin:top}
+@keyframes drop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0); transform-origin:bottom}}
+.btn{display:inline-flex; align-items:center; gap:.5em; font:600 1rem/1 var(--sans); padding:14px 20px; border-radius:999px; text-decoration:none; background:var(--oxblood); color:var(--paper); border:0; cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.beat .actions{margin-top:24px; display:flex; flex-wrap:wrap; gap:12px}
+
+/* Modo scroll (con JS y sin "menos movimiento") */
+html.scrub .scene{height:100vh; height:100svh; overflow:hidden}
+html.scrub .scene-text{position:absolute; inset:0; display:block; padding:0}
+html.scrub .beat{position:absolute; left:var(--gutter); right:var(--gutter); bottom:clamp(40px, 9vh, 96px); visibility:hidden; opacity:0}
+html.scrub .beat-0{visibility:visible; opacity:1}
+html.scrub .scene-visual{position:absolute; inset:0}
+html.scrub .scene-text{color:var(--on-image)}
+html.scrub .scene-text::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, var(--scrim) 0%, rgba(28,15,10,.55) 42%, rgba(28,15,10,0) 72%); pointer-events:none}
+html.scrub .beat p{color:var(--on-image-2)}
+html.scrub .beat .lede{color:var(--on-image)}
+html.scrub .kicker{color:var(--on-image-2)}
+html.scrub .hint{color:var(--on-image-2)}
+html.scrub .scene-caption{top:calc(env(safe-area-inset-top, 0px) + 12px); bottom:auto}
+html.scrub .rail{display:flex; position:absolute; left:var(--gutter); top:calc(env(safe-area-inset-top, 0px) + 18px); gap:6px; margin:0; padding:0; list-style:none; z-index:2}
+html.scrub .rail li{width:18px; height:3px; border-radius:2px; background:rgba(251,247,241,.35); transition:width .3s, background .3s}
+html.scrub .rail li.on{width:34px; background:var(--on-image)}
+
+@media (min-width: 900px){
+  .scene{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+  .scene-visual{order:2; min-height:70vh}
+  .scene-text{order:1; align-content:center}
+  html.scrub .scene-visual{left:auto; width:52%}
+  html.scrub .scene-text{width:48%; color:var(--ink)}
+  html.scrub .scene-text::before{display:none}
+  html.scrub .beat{top:50%; bottom:auto; left:var(--gutter); right:clamp(24px, 4vw, 64px)}
+  html.scrub .beat p{color:var(--ink-2)}
+  html.scrub .beat .lede{color:var(--ink)}
+  html.scrub .kicker{color:var(--oxblood)}
+  html.scrub .hint{color:var(--ink-2)}
+  html.scrub .rail{top:auto; bottom:clamp(28px, 5vh, 56px); flex-direction:row}
+  html.scrub .rail li{background:var(--rule)}
+  html.scrub .rail li.on{background:var(--oxblood)}
+  html.scrub .scene-caption{top:auto; bottom:14px}
+}
+
+/* ---------- Los nueve puntos ---------- */
+.nine{padding-block:clamp(72px, 12vw, 140px) clamp(56px, 8vw, 96px)}
+.nine-grid{display:grid; gap:40px}
+.nine-head h2{font-size:clamp(2.2rem, 4.6vw, 3.6rem); line-height:1.04; letter-spacing:-.015em}
+.nine-head p{margin-top:20px; color:var(--ink-2); max-width:32em}
+.nine-tools{margin-top:24px}
+.linkbtn{font:600 .95rem/1 var(--sans); color:var(--oxblood); background:none; border:0; padding:8px 0; cursor:pointer; text-decoration:underline; text-underline-offset:4px}
+.pts{list-style:none; margin:0; padding:0; border-top:1px solid var(--rule)}
+.pt{border-bottom:1px solid var(--rule)}
+.pt summary{list-style:none; cursor:pointer; display:grid; grid-template-columns:2.4rem minmax(0,1fr) 24px; gap:14px; align-items:baseline; padding:22px 0}
+.pt summary::-webkit-details-marker{display:none}
+.pt-n{font:600 1.5rem/1 var(--serif); color:var(--oxblood); font-variant-numeric:lining-nums}
+.pt-lead{font-size:clamp(1.15rem, 1.6vw, 1.35rem); line-height:1.35; font-weight:500}
+.pt-tog{width:14px; height:14px; position:relative; align-self:center}
+.pt-tog::before,.pt-tog::after{content:""; position:absolute; left:0; top:6px; width:14px; height:2px; background:var(--ink-2); transition:transform .25s}
+.pt-tog::after{transform:rotate(90deg)}
+.pt details[open] .pt-tog::after{transform:rotate(0)}
+.pt-body{padding:0 0 26px calc(2.4rem + 14px); display:grid; gap:14px; justify-items:start}
+.pt-body p{color:var(--ink-2); max-width:38em}
+.chip{font:500 .82rem/1 var(--sans); color:var(--sage); border:1px solid currentColor; border-radius:999px; padding:6px 10px}
+@media (min-width: 900px){
+  .nine-grid{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:64px}
+  .nine-head{position:sticky; top:calc(env(safe-area-inset-top, 0px) + 40px); align-self:start}
+}
+
+/* ---------- Los primeros cien días ---------- */
+.cien{background:var(--band); color:var(--band-ink); padding-block:clamp(64px, 10vw, 120px)}
+.cien h2{font-size:clamp(2rem, 4vw, 3rem); line-height:1.06; letter-spacing:-.012em}
+.cien-grid{display:grid; gap:36px}
+.cien-text{max-width:38em}
+.cien-text p{margin-top:18px}
+.dates{list-style:none; margin:0; padding:0; display:grid; gap:0; border-left:2px solid var(--sage)}
+.dates li{position:relative; padding:0 0 26px 22px}
+.dates li::before{content:""; position:absolute; left:-7px; top:.45em; width:12px; height:12px; border-radius:50%; background:var(--band); border:2px solid var(--sage)}
+.dates li:last-child{padding-bottom:0}
+.dates b{display:block; font:600 .95rem/1.3 var(--sans); color:var(--sage)}
+.dates span{display:block; margin-top:4px; line-height:1.4}
+@media (min-width: 900px){ .cien-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); gap:72px; align-items:start} }
+
+.foot{padding-block:40px 56px; font:400 .9rem/1.5 var(--sans); color:var(--ink-2)}
+.foot p + p{margin-top:8px}
+
+@media (prefers-reduced-motion: reduce){ .hint::before{animation:none} }
+</style>
+
+<main>
+  <section class="scene" id="inicio" aria-label="Portada">
+    <div class="scene-visual" id="visual">
+      <img src="img/scrub/poster.webp" alt="La costanera de San Isidro al atardecer: gente sentada sobre el murallón, pescadores y veleros en el río." width="1244" height="1664">
+      <canvas id="scrub" aria-hidden="true"></canvas>
+      <p class="scene-caption">La costanera de San Isidro. Ilustración.</p>
+    </div>
+    <div class="scene-text">
+      <ol class="rail" aria-hidden="true"><li class="on"></li><li></li><li></li><li></li><li></li></ol>
+      <div class="beat beat-0">
+        <p class="kicker">Programa de gobierno</p>
+        <h1>San Isidro 2027</h1>
+        <p class="lede">Con los recursos que el Municipio ya tiene, y con decisión vecinal sobre la inversión pública.</p>
+        <p class="hint">Bajá para recorrer la costanera</p>
+      </div>
+      <div class="beat beat-1">
+        <h2>Menos hogares sin cloaca y sin gas de red.</h2>
+        <p>Según el Censo 2022, en San Isidro hay 25.165 hogares sin gas de red y 6.488 que no tienen cloaca. La mayoría está en Boulogne y en Béccar.</p>
+      </div>
+      <div class="beat beat-2">
+        <h2>Más gente formada y con trabajo.</h2>
+        <p>Una tecnicatura gratuita en inteligencia artificial, con un año de pasantía paga. Con la formación completa, van a entrar 928 personas por año.</p>
+      </div>
+      <div class="beat beat-3">
+        <h2>Los vecinos van a decidir la mitad de la obra pública.</h2>
+        <p>Hoy no deciden ninguna obra pública. Van a decidir el 12,5% el primer año y la mitad al cuarto año, que son 28.908 millones por año.</p>
+      </div>
+      <div class="beat beat-4">
+        <h2>Todo esto se paga sin subir el porcentaje de la tasa de servicios generales y sin tomar deuda.</h2>
+        <p>Lo demás ya se gasta hoy. En la obra pública, por ejemplo, sólo cambia quién decide qué obra se hace.</p>
+        <div class="actions"><a class="btn" href="#propuestas" data-goto="#propuestas">Leer los nueve puntos</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nine" id="propuestas" aria-labelledby="t-nine">
+    <div class="wrap nine-grid">
+      <div class="nine-head">
+        <h2 id="t-nine">Qué proponemos hacer</h2>
+        <p>{{INTRO}}</p>
+        <div class="nine-tools"><button class="linkbtn" type="button" id="toggle-all" aria-pressed="false">Abrir los nueve</button></div>
+      </div>
+      <ol class="pts">
+{{ITEMS}}
+      </ol>
+    </div>
+  </section>
+
+  <section class="cien" aria-labelledby="t-cien">
+    <div class="wrap cien-grid">
+      <div class="cien-text">
+        <h2 id="t-cien">Los primeros cien días</h2>
+        <p>{{CIEN}}</p>
+      </div>
+      <ol class="dates" aria-label="Fechas de los primeros cien días">
+        <li><b>10 de diciembre de 2027</b><span>Asume el nuevo gobierno.</span></li>
+        <li><b>Diciembre de 2027</b><span>El intendente manda al Concejo Deliberante las primeras ordenanzas.</span></li>
+        <li><b>19 de marzo de 2028</b><span>A los cien días, todos los vecinos ya están convocados a la primera asamblea de su zona.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="wrap foot">
+    <p>Programa de gobierno San Isidro 2027.</p>
+    <p>Borrador de la web. Todavía faltan el programa completo por capítulos, el mapa de las seis zonas y «Preguntale al programa».</p>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+<script>
+(function(){
+  document.documentElement.lang = 'es';
+
+  // Abrir / cerrar los nueve puntos
+  var tog = document.getElementById('toggle-all');
+  var dets = Array.prototype.slice.call(document.querySelectorAll('.pt details'));
+  function syncTog(){
+    var allOpen = dets.every(function(d){ return d.open; });
+    tog.textContent = allOpen ? 'Cerrar los nueve' : 'Abrir los nueve';
+    tog.setAttribute('aria-pressed', allOpen ? 'true' : 'false');
+  }
+  tog.addEventListener('click', function(){
+    var allOpen = dets.every(function(d){ return d.open; });
+    dets.forEach(function(d){ d.open = !allOpen; });
+    syncTog();
+  });
+  dets.forEach(function(d){ d.addEventListener('toggle', syncTog); });
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var haveLibs = window.gsap && window.ScrollTrigger;
+  if (reduce || !haveLibs) return;   // queda la versión quieta, con todo el texto
+
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add('scrub');
+
+  // Scroll suave (una sola capa de suavizado)
+  var lenis = null;
+  if (window.Lenis) {
+    lenis = new Lenis({ autoRaf: false, lerp: 0.1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+  document.querySelectorAll('[data-goto]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var target = document.querySelector(a.getAttribute('data-goto'));
+      if (!target) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(target, { offset: 0, duration: 1.4 });
+      else target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // ---------- Cuadros del video ----------
+  var N = 100;
+  var set = window.matchMedia('(min-width: 900px)').matches ? 'd' : 'm';
+  var frames = new Array(N);
+  var visual = document.getElementById('visual');
+  var canvas = document.getElementById('scrub');
+  var ctx = canvas.getContext('2d');
+  var current = 0, drawn = -1;
+
+  function src(i){ return 'img/scrub/' + set + '/f_' + String(i + 1).padStart(3, '0') + '.webp'; }
+  function isReady(im){ return im && im.complete && im.naturalWidth > 0; }
+
+  // Orden de carga: primero cuadros salteados, después los del medio
+  var order = [], seen = {};
+  [32, 16, 8, 4, 2, 1].forEach(function(step){
+    for (var i = 0; i < N; i += step) if (!seen[i]) { seen[i] = 1; order.push(i); }
+  });
+  if (!seen[N - 1]) order.splice(1, 0, N - 1);
+  var q = 0, active = 0, MAX = 6;
+  function pump(){
+    while (active < MAX && q < order.length) {
+      (function(i){
+        var im = new Image();
+        im.decoding = 'async';
+        active++;
+        im.onload = im.onerror = function(){
+          active--;
+          if (Math.abs(i - current) <= 2) render(true);
+          pump();
+        };
+        im.src = src(i);
+        frames[i] = im;
+      })(order[q++]);
+    }
+  }
+  pump();
+
+  function nearest(i){
+    for (var d = 0; d < N; d++) {
+      if (isReady(frames[i - d])) return i - d;
+      if (isReady(frames[i + d])) return i + d;
+    }
+    return -1;
+  }
+  function size(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; drawn = -1; }
+  }
+  function render(force){
+    var k = nearest(current);
+    if (k < 0 || (k === drawn && !force)) return;
+    var im = frames[k];
+    var cw = canvas.width, ch = canvas.height, iw = im.naturalWidth, ih = im.naturalHeight;
+    var s = Math.max(cw / iw, ch / ih), w = iw * s, h = ih * s;
+    ctx.drawImage(im, (cw - w) / 2, (ch - h) / 2, w, h);
+    drawn = k;
+    if (!visual.classList.contains('ready')) visual.classList.add('ready');
+  }
+  size();
+  window.addEventListener('resize', function(){ size(); render(true); });
+
+  // ---------- Escena fija con el recorrido ----------
+  var ticks = Array.prototype.slice.call(document.querySelectorAll('.rail li'));
+  var proxy = { f: 0 };
+  var beats = gsap.utils.toArray('.beat');
+  var isDesk = set === 'd';
+  var yIn = 36;
+
+  var tl = gsap.timeline({
+    defaults: { ease: 'power2.out' },
+    scrollTrigger: {
+      trigger: '.scene', start: 'top top', end: '+=450%',
+      pin: true, scrub: true, anticipatePin: 1,
+      onUpdate: function(st){
+        var p = st.progress, idx = p < 0.16 ? 0 : p < 0.40 ? 1 : p < 0.64 ? 2 : p < 0.88 ? 3 : 4;
+        ticks.forEach(function(t, j){ t.classList.toggle('on', j === idx); });
+      }
+    }
+  });
+  tl.to(proxy, { f: N - 1, duration: 10, ease: 'none', onUpdate: function(){ current = Math.round(proxy.f); render(false); } }, 0);
+
+  function out(el, at){ tl.to(el, { autoAlpha: 0, y: -yIn, duration: 0.6, ease: 'power1.in' }, at); }
+  function inn(el, at){ tl.fromTo(el, { autoAlpha: 0, y: yIn }, { autoAlpha: 1, y: 0, duration: 0.6 }, at); }
+  if (isDesk) beats.forEach(function(b){ gsap.set(b, { yPercent: -50 }); });
+  out(beats[0], 1.2);
+  inn(beats[1], 1.9); out(beats[1], 3.7);
+  inn(beats[2], 4.3); out(beats[2], 6.1);
+  inn(beats[3], 6.7); out(beats[3], 8.5);
+  inn(beats[4], 9.1);
+  tl.to({}, { duration: 0.4 }, 9.7); // un respiro al final antes de soltar la escena
+})();
+</script>

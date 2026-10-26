@@ -1,0 +1,69 @@
+<!-- Menú del celular (opción A, 12 de octubre): barra fija con «Menú» y lista grande. Sólo cambia en pantallas de hasta 760 px. -->
+<style>
+.mm-btn{display:none}
+.mm-sheet{position:fixed;inset:0;z-index:60;background:#7C2E23;color:#FBF8F2;overflow-y:auto;overscroll-behavior:contain}
+.mm-in{min-height:100%;display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto}
+.mm-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid rgba(251,248,242,.22)}
+.mm-top .brand{color:#FBF8F2}
+.mm-list{list-style:none;margin:8px 0 0;padding:0}
+.mm-list a{display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;color:#FBF8F2;padding:16px 2px;border-bottom:1px solid rgba(251,248,242,.22)}
+.mm-list b{display:block;font-family:"Spectral","Iowan Old Style",Georgia,serif;font-weight:500;font-size:24px;line-height:1.15}
+.mm-list span{display:block;font-size:14px;color:#F1E3DC;margin-top:2px}
+.mm-list svg{flex:none;width:18px;height:18px;opacity:.8}
+.mm-list em{flex:none;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#F1E3DC;border:1px solid rgba(251,248,242,.35);border-radius:999px;padding:3px 9px}
+.mm-small{display:flex;gap:22px;margin-top:22px;font-size:15px}
+.mm-small a{color:#F1E3DC}
+.mm-note{margin-top:auto;padding-top:28px;font-size:12px;line-height:1.5;color:#F1E3DC;opacity:.85}
+@media (max-width:760px){
+  .mm-bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:15}
+  .mm-bar > .wrap{flex-wrap:nowrap;align-items:center;padding-block:10px}
+  .mm-bar .nav,.mm-bar .site-nav{display:none}
+  .mm-btn{display:inline-flex;align-items:center;gap:8px;flex:none;background:rgba(255,255,255,.1);border:1px solid rgba(251,248,242,.28);color:#FBF8F2;border-radius:999px;padding:8px 14px;font:600 15px/1.2 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;cursor:pointer}
+  .mm-btn svg{width:18px;height:18px}
+  .mm-btn:focus-visible,.mm-sheet a:focus-visible,.mm-sheet button:focus-visible{outline:2px solid #FBF8F2;outline-offset:3px}
+  /* Las barras fijas que ya tenían las páginas quedan debajo de la barra nueva */
+  .views{top:var(--mm-h,64px)!important}
+  .nav[aria-label="Secciones"]:not(.mm-bar .nav){top:calc(env(safe-area-inset-top,0px) + var(--mm-h,64px))!important}
+  #inicio,#propuestas,#programa,.sec,[id^="cap-"]{scroll-margin-top:calc(var(--mm-h,64px) + 8px)}
+  #thread .q,#thread .a{scroll-margin-top:calc(var(--mm-h,64px) + 12px)}
+}
+</style>
+<div class="mm-sheet" id="mm-sheet" role="dialog" aria-modal="true" aria-label="Menú" hidden>
+  <div class="mm-in">
+    <div class="mm-top"><a class="brand" href="/"><b>San Isidro 2027</b><span>Programa de gobierno</span></a><button class="mm-btn" type="button" id="mm-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Cerrar</button></div>
+    <ol class="mm-list">
+      <li><a href="/#inicio" data-p="/"><div><b>Preguntale al programa</b><span>Contá tu problema y te dice qué proponemos</span></div></a></li>
+      <li><a href="/#propuestas" data-p="/"><div><b>Qué proponemos</b><span>Los nueve puntos del programa</span></div></a></li>
+      <li><a href="/#programa" data-p="/"><div><b>El programa completo</b><span>Los seis capítulos, para leer entero</span></div></a></li>
+      <li><a href="/cuentas/" data-p="/cuentas/"><div><b>Las cuentas</b><span>Cuánto entra, cuánto sale y cómo se paga</span></div></a></li>
+      <li><a href="/despliegue/" data-p="/despliegue/"><div><b>Plan de despliegue</b><span>Qué se hace, quién lo hace y en qué orden</span></div></a></li>
+    </ol>
+    <div class="mm-small"><a href="/contacto/">Escribinos</a><a href="/contacto/#privacidad">Privacidad</a></div>
+    <p class="mm-note">Propuesta de programa de gobierno para San Isidro. No es un sitio de la Municipalidad de San Isidro.</p>
+  </div>
+</div>
+<script>
+(function(){
+  var sh = document.getElementById("mm-sheet"), open = document.getElementById("mm-open"), close = document.getElementById("mm-close"), bar = document.querySelector(".mm-bar");
+  if (!sh || !open || !bar) return;
+  var GO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var here = location.pathname.replace(/index\.html$/, "");
+  sh.querySelectorAll(".mm-list a").forEach(function(a){
+    var cur = here !== "/" && a.getAttribute("data-p") === here;
+    if (cur) a.setAttribute("aria-current", "page");
+    a.insertAdjacentHTML("beforeend", cur ? "<em>Estás acá</em>" : GO);
+  });
+  function h(){ document.documentElement.style.setProperty("--mm-h", bar.getBoundingClientRect().height + "px"); }
+  h(); window.addEventListener("resize", h);
+  function set(v){
+    sh.hidden = !v; open.setAttribute("aria-expanded", v ? "true" : "false");
+    document.documentElement.style.overflow = v ? "hidden" : "";
+    if (v) close.focus(); else open.focus({preventScroll: true});
+  }
+  open.addEventListener("click", function(){ set(true); });
+  close.addEventListener("click", function(){ set(false); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !sh.hidden) set(false); });
+  sh.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ sh.hidden = true; open.setAttribute("aria-expanded", "false"); document.documentElement.style.overflow = ""; }); });
+  window.addEventListener("resize", function(){ if (!sh.hidden && window.innerWidth > 760) set(false); });
+})();
+</script>

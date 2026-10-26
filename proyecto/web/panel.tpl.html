@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · San Isidro 2027</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@400;500;600&display=swap">
+<style>
+:root{--ground:#F5F0E8;--paper:#FBF8F2;--card:#FFFFFF;--ink:#2A211C;--ink-2:#5E534B;--ink-3:#7A6E64;--rule:#DCD2C3;--rule-2:#EAE2D5;--ox:#7C2E23;--ox-ink:#FBF8F2;--ox-soft:#F1E3DC;--link:#7C2E23;--sage:#5F7057;--amber:#8F6A24;--amber-line:#B4863A;--panel:#EFE7DA;--sand:#EAE0CF;--bar:#5F7057;--warn-bg:#F2E7D4;
+  --serif:"Spectral",Georgia,serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--ground:#1A1512;--paper:#211B17;--card:#2A231E;--ink:#EFE7DB;--ink-2:#BFB3A6;--ink-3:#A39687;--rule:#3B312A;--rule-2:#352C26;--ox:#5E2219;--link:#E8A08F;--sage:#A3B597;--amber:#D9B169;--amber-line:#D9B169;--panel:#2E2621;--sand:#3A3029;--bar:#A3B597;--warn-bg:#3D3222;color-scheme:dark}}
+:root[data-theme="dark"]{--ground:#1A1512;--paper:#211B17;--card:#2A231E;--ink:#EFE7DB;--ink-2:#BFB3A6;--ink-3:#A39687;--rule:#3B312A;--rule-2:#352C26;--ox:#5E2219;--link:#E8A08F;--sage:#A3B597;--amber:#D9B169;--amber-line:#D9B169;--panel:#2E2621;--sand:#3A3029;--bar:#A3B597;--warn-bg:#3D3222;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.5 var(--sans)}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:18px}
+.top{background:var(--ox);color:var(--ox-ink);padding-block:22px 26px}
+.top .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ox-soft)}
+.top h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.4rem);margin:6px 0 0}
+.top p{margin:6px 0 0;color:var(--ox-soft);font-size:15px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding-block:16px}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;overflow:hidden;background:var(--card)}
+.seg button{font:600 14px var(--sans);border:0;background:none;color:var(--ink);padding:8px 14px;cursor:pointer;border-right:1px solid var(--rule)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ox);color:var(--ox-ink)}
+.btn{font:600 14px var(--sans);border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.danger{border-color:var(--ox);color:var(--link)}
+.warn{background:var(--warn-bg);border-left:4px solid var(--amber-line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.warn b{color:var(--amber)}
+.tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:14px 16px}
+.tile .l{font-size:13px;color:var(--ink-2);font-weight:600}.tile .v{font-size:1.9rem;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums}.tile .d{font-size:13px;color:var(--ink-3)}
+@media (max-width:760px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.tiles .tile:first-child{grid-column:span 2}}
+section{padding-block:26px 4px}
+h2{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--ink-2);font-size:15px;margin:0 0 12px}
+.list{display:flex;flex-direction:column;gap:8px}
+.it{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:12px 14px}
+.it .q{font-weight:600}.it .m{font-size:13px;color:var(--ink-3);margin-top:2px}
+.it .fb{margin-top:8px;border-left:3px solid var(--sage);padding-left:10px;color:var(--ink)}
+.it details{margin-top:6px}.it summary{cursor:pointer;font-size:14px;color:var(--link)}
+.it details p{font-size:14px;color:var(--ink-2);white-space:pre-wrap;margin:6px 0 0}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:2px 8px;margin-left:6px;vertical-align:1px}
+.t-sd{background:var(--warn-bg);color:var(--amber)}.t-ct{background:var(--ox-soft);color:var(--ox)}.t-fb{background:var(--panel);color:var(--sage)}
+.hb{display:flex;flex-direction:column;gap:8px}
+.hb-r{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:4px 12px;align-items:center}
+.hb-l{font-size:14px}.hb-l small{display:block;color:var(--ink-3);font-size:12px}
+.hb-t{display:flex;align-items:center;gap:8px}.hb-b{height:14px;border-radius:0 4px 4px 0;background:var(--bar)}.hb-v{font-size:13px;font-weight:600}
+@media (max-width:600px){.hb-r{grid-template-columns:minmax(0,1fr)}}
+input[type=search]{font:inherit;width:100%;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--card);color:var(--ink);margin-bottom:10px}
+.empty{color:var(--ink-3);font-size:15px}
+.err{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:18px;margin-top:20px}
+footer{padding-block:40px;color:var(--ink-3);font-size:13px}
+.mail{font-weight:600;color:var(--ink);user-select:all}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="k">Privado · sólo con tu mail</div>
+  <h1>Lo que pregunta la gente</h1>
+  <p>Las preguntas del chat y los mensajes de «Escribinos». Para ver qué le falta al programa y qué críticas llegan.</p>
+</div></header>
+<main class="wrap">
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Período"><button type="button" data-d="7" aria-pressed="false">7 días</button><button type="button" data-d="30" aria-pressed="true">30 días</button><button type="button" data-d="0" aria-pressed="false">Todo</button></div>
+    <a class="btn" href="/api/panel/exportar">Descargar preguntas y mensajes (Excel)</a>
+  </div>
+  <div class="warn" id="warn" hidden></div>
+  <div class="err" id="err" hidden></div>
+  <div class="tiles" id="tiles"></div>
+  <section><h2>Mensajes de «Escribinos»</h2><p class="sub">Lo que la gente manda desde la página de contacto. El mail aparece sólo si lo dejaron, y sólo acá: la descarga lo deja afuera. Ojo: puede haber texto ofensivo.</p><div class="list" id="msg"></div></section>
+  <section><h2>Lo que el programa no cubre</h2><p class="sub">Preguntas donde la respuesta dijo que el programa no habla del tema. Es la lista de huecos.</p><div class="list" id="sd"></div></section>
+  <section><h2>Lo que les faltó</h2><p class="sub">Lo que escribió la gente con «¿Le faltó algo a esta respuesta?». Ojo: puede haber texto ofensivo; no se publica nada sin tu revisión.</p><div class="list" id="fb"></div></section>
+  <section><h2>De qué preguntan más</h2><p class="sub">Las partes del programa, de las cuentas y del plan que más se usaron para responder.</p><div class="hb" id="top"></div></section>
+  <section><h2>Todas las preguntas</h2><p class="sub">Las últimas 300 del período.</p><input type="search" id="buscar" placeholder="Buscar una palabra" autocomplete="off"><div class="list" id="all"></div></section>
+</main>
+<footer class="wrap">Panel privado de San Isidro 2027. Las preguntas y los mensajes no se borran solos: cuando haya de más de 6 meses, este panel avisa y pide permiso. La descarga junta preguntas y mensajes en un solo archivo, para el reporte de mejoras.</footer>
+<script>
+(function(){
+  var $ = function(s){ return document.querySelector(s); };
+  function el(t, a, x){ var e = document.createElement(t); if (a) for (var k in a) { if (k === "class") e.className = a[k]; else e.setAttribute(k, a[k]); } if (x != null) e.textContent = x; return e; }
+  function fecha(ts){ var d = new Date(ts); return d.toLocaleDateString("es-AR", {day: "numeric", month: "short"}) + " " + d.toLocaleTimeString("es-AR", {hour: "2-digit", minute: "2-digit"}); }
+  function nf(v){ return Number(v || 0).toLocaleString("es-AR"); }
+  var TIT = {}, DATA = null, DIAS = 30;
+  Promise.all([
+    fetch("/data/programa.json").then(function(r){ return r.json(); }).then(function(d){ d.forEach(function(e){ TIT["p:" + e.id] = [(/^\d/.test(e.id) ? e.id + " " : "") + e.titulo, e.capitulo]; }); }).catch(function(){}),
+    fetch("/data/cuentas_ia.json").then(function(r){ return r.json(); }).then(function(d){ d.forEach(function(e){ TIT["p:" + e.id] = [e.titulo, "Las cuentas"]; }); }).catch(function(){}),
+    fetch("/data/plan_ia.json").then(function(r){ return r.json(); }).then(function(d){ d.forEach(function(e){ TIT["p:" + e.id] = [e.titulo, "Plan de despliegue"]; }); }).catch(function(){}),
+    fetch("/data/investigaciones.json").then(function(r){ return r.json(); }).then(function(d){ d.forEach(function(x){ TIT["i:" + x.id] = [String(x.informe || "").replace(/^Informe\s+[0-9]+[a-z ]*\s*·\s*/i, ""), "Investigación"]; }); }).catch(function(){})
+  ]).then(function(){ load(); });
+  function load(){
+    fetch("/api/panel/datos?dias=" + DIAS, {credentials: "same-origin"}).then(function(r){ if (r.status === 403) throw "403"; if (!r.ok) throw "err"; return r.json(); })
+      .then(function(d){ DATA = d; draw(); })
+      .catch(function(e){ var b = $("#err"); b.hidden = false; b.textContent = e === "403" ? "No tenés acceso a este panel. Entrá con el mail autorizado." : "No se pudieron cargar los datos. Probá de nuevo en un rato."; });
+  }
+  function item(r, opts){
+    var d = el("div", {"class": "it"}), q = el("div", {"class": "q"}, r.pregunta);
+    if (r.sin_dato) q.appendChild(el("span", {"class": "tag t-sd"}, "no lo cubre"));
+    if (r.cortada) q.appendChild(el("span", {"class": "tag t-ct"}, "cortada"));
+    if (r.feedback && !opts.fb) q.appendChild(el("span", {"class": "tag t-fb"}, "comentario"));
+    d.appendChild(q); d.appendChild(el("div", {"class": "m"}, fecha(opts.fb ? (r.feedback_ts || r.ts) : r.ts) + (r.pagina && r.pagina !== "/" ? " · " + r.pagina : "")));
+    if (opts.fb && r.feedback) d.appendChild(el("div", {"class": "fb"}, r.feedback));
+    if (r.respuesta) { var det = el("details"); det.appendChild(el("summary", null, "Ver la respuesta")); det.appendChild(el("p", null, r.respuesta)); d.appendChild(det); }
+    return d;
+  }
+  function list(box, rows, opts){ box.textContent = ""; if (!rows.length) { box.appendChild(el("p", {"class": "empty"}, opts.vacio)); return; } rows.forEach(function(r){ box.appendChild(item(r, opts)); }); }
+  function draw(){
+    var s = DATA.resumen, t = $("#tiles"); t.textContent = "";
+    [["Preguntas", nf(s.n), nf(s.personas) + " conexiones distintas"], ["No las cubre el programa", nf(s.sd), s.n ? Math.round(s.sd * 100 / s.n) + "% del total" : ""], ["Comentarios", nf(s.fb), "«¿Le faltó algo?»"], ["Mensajes", nf(DATA.mensajes.length), "desde «Escribinos»"], ["Respuestas cortadas", nf(s.ct), "deberían ser cero"]].forEach(function(x){ var d = el("div", {"class": "tile"}); d.appendChild(el("div", {"class": "l"}, x[0])); d.appendChild(el("div", {"class": "v"}, x[1])); d.appendChild(el("div", {"class": "d"}, x[2])); t.appendChild(d); });
+    var mb = $("#msg"); mb.textContent = "";
+    if (!DATA.mensajes.length) mb.appendChild(el("p", {"class": "empty"}, "Todavía no hay mensajes en este período."));
+    DATA.mensajes.forEach(function(r){ var d = el("div", {"class": "it"}); d.appendChild(el("div", {"class": "q"}, r.texto)); var m = el("div", {"class": "m"}, fecha(r.ts) + (r.pagina && r.pagina !== "/" ? " · desde " + r.pagina : "")); if (r.mail) { m.appendChild(document.createTextNode(" · ")); m.appendChild(el("span", {"class": "mail"}, r.mail)); } else m.appendChild(document.createTextNode(" · sin mail")); d.appendChild(m); mb.appendChild(d); });
+    list($("#sd"), DATA.sinDato, {vacio: "Todavía no hay preguntas sin respuesta en este período."});
+    list($("#fb"), DATA.comentarios, {fb: true, vacio: "Todavía no hay comentarios en este período."});
+    var top = $("#top"); top.textContent = "";
+    if (!DATA.fuentes.length) top.appendChild(el("p", {"class": "empty"}, "Todavía no hay datos."));
+    var max = DATA.fuentes.length ? DATA.fuentes[0][1] : 1;
+    DATA.fuentes.forEach(function(f){ var tt = TIT[f[0]] || [f[0], ""]; var r = el("div", {"class": "hb-r"}), l = el("div", {"class": "hb-l"}, tt[0]); if (tt[1]) l.appendChild(el("small", null, tt[1])); var tk = el("div", {"class": "hb-t"}), b = el("div", {"class": "hb-b"}); b.style.width = "calc((100% - 60px) * " + (f[1] / max).toFixed(3) + ")"; tk.appendChild(b); tk.appendChild(el("span", {"class": "hb-v"}, nf(f[1]))); r.appendChild(l); r.appendChild(tk); top.appendChild(r); });
+    filtrar();
+    var w = $("#warn"), rt = DATA.retencion, rm = DATA.retencionMensajes || {mas5: 0, mas6: 0}; w.textContent = "";
+    rt = {mas5: rt.mas5 + rm.mas5, mas6: rt.mas6 + rm.mas6};
+    if (rt.mas5 > 0) {
+      w.hidden = false;
+      w.appendChild(el("div", null, "")).innerHTML = "<b>Hay " + nf(rt.mas5) + " preguntas y mensajes de más de 5 meses</b>" + (rt.mas6 > 0 ? ", y " + nf(rt.mas6) + " ya pasaron los 6 meses." : ".") + " Antes de borrarlas, descargalas.";
+      if (rt.mas6 > 0) {
+        var bt = el("button", {"class": "btn danger", type: "button"}, "Borrar las de más de 6 meses (" + nf(rt.mas6) + ")");
+        bt.addEventListener("click", function(){
+          if (bt.dataset.ok !== "1") { bt.dataset.ok = "1"; bt.textContent = "¿Seguro? Tocá de nuevo para borrar " + nf(rt.mas6) + " preguntas y mensajes. No se puede deshacer."; return; }
+          bt.disabled = true;
+          fetch("/api/panel/borrar", {method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({confirmar: "BORRAR"})}).then(function(r){ return r.json(); }).then(function(j){ bt.textContent = j.ok ? "Listo: se borraron " + nf(j.borradas + (j.mensajes || 0)) + "." : "No se pudo borrar."; load(); });
+        });
+        w.appendChild(bt);
+      }
+    } else w.hidden = true;
+  }
+  function filtrar(){ var v = ($("#buscar").value || "").toLowerCase().trim(); list($("#all"), DATA.todas.filter(function(r){ return !v || String(r.pregunta).toLowerCase().indexOf(v) >= 0 || String(r.respuesta || "").toLowerCase().indexOf(v) >= 0; }), {vacio: v ? "Ninguna pregunta tiene esa palabra." : "Todavía no hay preguntas en este período."}); }
+  $("#buscar").addEventListener("input", function(){ if (DATA) filtrar(); });
+  document.querySelectorAll(".seg button").forEach(function(b){ b.addEventListener("click", function(){ DIAS = +b.getAttribute("data-d"); document.querySelectorAll(".seg button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); load(); }); });
+})();
+</script>
+</body>
+</html>

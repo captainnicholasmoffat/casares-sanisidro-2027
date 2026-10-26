@@ -1,0 +1,387 @@
+  /* ---------- Lector del programa ---------- */
+  var PAGES = [], PAGE_OF = {}, GROUPS = [], BYID = {}, CUR = null, lastFocus = null;
+  var lector = $("#lector"), lside = $("#l-side");
+  var HERO = {"Introducción":"f_costanera","1 · Diagnóstico":"f_catedral","2 · El gobierno actual, medido":"f_barranca","3 · Los fondos":"f_escalera","4 · El mecanismo":"f_asamblea","5 · Qué hacemos en cada área":"f_nautica","Para cerrar":"f_calle"};
+  var CAP = {"f_costanera":"La costanera de San Isidro. Ilustración.","f_catedral":"El casco histórico. Ilustración.","f_barranca":"La barranca sobre el río. Ilustración.","f_escalera":"Bajada a la costa. Ilustración.","f_asamblea":"Asamblea vecinal. Ilustración.","f_nautica":"Escuela de náutica en el bajo. Ilustración.","f_calle":"San Isidro, a primera hora. Ilustración."};
+  var DIAG = {"Gráfico 25":"g_mecanismo","Gráfico 27":"g_circuitos"};
+  function hojas(a, b){ if (!a) return ""; if (!b || b === a) return "hoja " + a; return b === a + 1 ? "hojas " + a + " y " + b : "hojas " + a + " a " + b; }
+  function isAp(id){ return /^\d+\.\d+$/.test(id); }
+  function grpKey(g){ var m = g.name.match(/^(\d+) · (.*)$/); return m ? {n: m[1], t: m[2]} : null; }
+  function buildPages(d){
+    var by = {}, order = [];
+    d.forEach(function(e){ BYID[e.id] = e; if (!by[e.capitulo]) { by[e.capitulo] = []; order.push(e.capitulo); } by[e.capitulo].push(e); });
+    order.forEach(function(g){
+      var list = by[g], parents = [], boxes = {}, last = null, chars = 0, ids = {};
+      list.forEach(function(e){ chars += String(e.texto || "").length; if (!/-r\d+$/.test(e.id)) ids[e.id] = 1; });
+      list.forEach(function(e){
+        var m = e.id.match(/^(.*)-r\d+$/);
+        if (m) { var pid = ids[m[1]] ? m[1] : last; if (pid) (boxes[pid] = boxes[pid] || []).push(e); }
+        else { parents.push(e); last = e.id; }
+      });
+      var numbered = parents.some(function(e){ return isAp(e.id); });
+      var grp = {name: g, pages: [], list: list};
+      if (g === "Glosario" || (!numbered && chars < 6000)) grp.pages.push({group: grp, entries: parents, id: parents[0].id, title: g});
+      else parents.forEach(function(e){ grp.pages.push({group: grp, entries: [e], id: e.id, title: isAp(e.id) ? e.id + " " + e.titulo : (/^\d+$/.test(e.id) ? e.capitulo : e.titulo)}); });
+      grp.pages.forEach(function(pg){
+        var a = Infinity, z = 0;
+        pg.boxes = {};
+        pg.entries.forEach(function(e){
+          PAGE_OF[e.id] = pg; pg.boxes[e.id] = boxes[e.id] || [];
+          pg.boxes[e.id].forEach(function(b){ PAGE_OF[b.id] = pg; z = Math.max(z, b.hoja_a4_fin || b.hoja_a4 || 0); });
+          a = Math.min(a, e.hoja_a4 || Infinity); z = Math.max(z, e.hoja_a4_fin || e.hoja_a4 || 0);
+        });
+        pg.a = a === Infinity ? 0 : a; pg.z = z;
+        PAGES.push(pg);
+      });
+      grp.a = grp.pages[0].a; grp.z = grp.pages[grp.pages.length - 1].z;
+      GROUPS.push(grp);
+    });
+  }
+  function words(s){ return String(s || "").split(/\s+/).length; }
+  function readMin(pg){
+    var n = 0;
+    pg.entries.forEach(function(e){ n += words(e.texto); (pg.boxes[e.id] || []).forEach(function(b){ n += words(b.texto); }); });
+    return Math.max(1, Math.round(n / 210));
+  }
+  function firstFoto(pg){
+    for (var i = 0; i < pg.entries.length; i++) {
+      var o = pg.entries[i].orden || [];
+      for (var j = 0; j < o.length; j++) if (o[j][0] === "foto" && o[j][1][0] !== HERO[pg.group.name]) return o[j][1][0];
+    }
+    return null;
+  }
+  function firstSentence(t, max){
+    var s = (String(t || "").trim().match(/^[\s\S]*?[.!?](?=\s|$)/) || [String(t || "").slice(0, max || 160)])[0];
+    if (s.length > (max || 170)) s = s.slice(0, (max || 170) - 5).replace(/\s+\S*$/, "") + "…";
+    return s;
+  }
+  function markedP(tag, text, marks, cls){
+    var p = el(tag, cls ? {"class": cls} : null);
+    if (!marks || !marks.length) { p.textContent = text; return p; }
+    var ms = marks.slice().sort(function(a, b){ return a[0] - b[0] || b[1] - a[1]; }), pos = 0;
+    ms.forEach(function(m){
+      if (m[0] < pos || m[1] > text.length) return;
+      if (m[0] > pos) p.appendChild(document.createTextNode(text.slice(pos, m[0])));
+      p.appendChild(el("span", {"class": m[2] === "b" ? "mb" : (m[2] === "sg" ? "ms" : "mi")}, text.slice(m[0], m[1])));
+      pos = m[1];
+    });
+    if (pos < text.length) p.appendChild(document.createTextNode(text.slice(pos)));
+    return p;
+  }
+  var NUMCELL = /^[-–+]?\s?\$?\s?[\d.,]+\s?(%|M|millones|mill\.)?$/;
+  function tableOf(t){
+    var rows = t.split("\n").filter(function(l){ return l.trim(); }).map(function(l){ return l.split(" | "); });
+    var w = el("div", {"class": "cw", tabindex: "0", "aria-label": "Tabla. Si no entra, deslizá hacia el costado."}), tb = el("table");
+    rows.forEach(function(r, i){
+      var tr = el("tr");
+      r.forEach(function(cell){ tr.appendChild(el(i === 0 ? "th" : "td", NUMCELL.test(cell.trim()) ? {"class": "num"} : null, cell)); });
+      tb.appendChild(tr);
+    });
+    w.appendChild(tb); return w;
+  }
+  function cuadro(c){
+    var d = el("figure", {"class": "lec-cuadro"});
+    var mt = String(c.titulo || "").match(/^(Gráfico|Cuadro)\s+(\d+)\s+·\s+([\s\S]*)$/);
+    if (mt) { d.appendChild(el("p", {"class": "ck"}, mt[1] + " " + mt[2])); d.appendChild(el("p", {"class": "ct"}, mt[3])); }
+    else d.appendChild(el("p", {"class": "ct"}, c.titulo || "Cuadro"));
+    var img = c.grafico || (mt && DIAG[mt[1] + " " + mt[2]]);
+    var blocks = String(c.texto || "").split(/\n\n+/).map(function(s){ return s.trim(); }).filter(Boolean);
+    var notes = [], sub = [], tables = [], other = [];
+    blocks.forEach(function(b, i){
+      if (/^(Fuentes?|Notas?):/.test(b)) notes.push(b);
+      else if (b.split("\n").some(function(l){ return l.indexOf(" | ") >= 0; })) tables.push(b);
+      else if (i === 0) sub.push(b);
+      else other.push(b);
+    });
+    sub.forEach(function(s){ d.appendChild(el("p", {"class": "cs"}, s)); });
+    if (img) {
+      var bt = el("button", {"class": "cimg", type: "button", "aria-label": "Ver el gráfico más grande"});
+      bt.appendChild(el("img", {src: "img/" + img + ".webp", alt: mt ? mt[3] : (c.titulo || ""), loading: "lazy"}));
+      bt.addEventListener("click", function(){ zoom("img/" + img + ".webp", c.titulo); });
+      d.appendChild(bt);
+      d.appendChild(el("p", {"class": "zoom"}, "Tocá el gráfico para verlo más grande."));
+    } else {
+      tables.forEach(function(t){ d.appendChild(tableOf(t)); });
+      other.forEach(function(o){ d.appendChild(el("p", {"class": "cp"}, o)); });
+    }
+    notes.forEach(function(n){ d.appendChild(el("p", {"class": "cn"}, n)); });
+    return d;
+  }
+  function renderBlocks(box, e, ctx){
+    var ps = e.texto ? String(e.texto).split("\n\n") : [], mk = e.marcas || {}, used = {};
+    function para(i){
+      var t = ps[i]; if (t == null) return;
+      var m = mk[String(i)] || [];
+      var hp = t.match(/^(Hoy|Propuesta): /);
+      if (hp) {
+        var off = hp[0].length, mm = m.map(function(x){ return [x[0] - off, x[1] - off, x[2]]; }).filter(function(x){ return x[0] >= 0; });
+        var d = el("div", {"class": hp[1] === "Hoy" ? "hoy" : "pro"});
+        d.appendChild(el("span", {"class": "k"}, hp[1]));
+        d.appendChild(markedP("span", t.slice(off), mm));
+        var lastEl = box.lastElementChild;
+        if (lastEl && lastEl.classList.contains("lec-hp") && lastEl.children.length < 2) { lastEl.appendChild(d); lastEl.className = "lec-hp"; }
+        else { var w = el("div", {"class": "lec-hp one"}); w.appendChild(d); box.appendChild(w); }
+        ctx.first = false; return;
+      }
+      var cls = ctx.first && t.length > 60 ? "lead" : null; ctx.first = false;
+      box.appendChild(markedP("p", t, m, cls));
+    }
+    function head(i){
+      var t = ps[i], id = "s-" + String(e.id).replace(/[^a-z0-9]/gi, "") + "-" + i;
+      box.appendChild(el("h3", {id: id}, t)); ctx.toc.push({id: id, t: t}); ctx.first = false;
+    }
+    function boxR(id){
+      var b = BYID[id]; if (!b || used[id]) return; used[id] = 1;
+      var prop = /propuesta|proponemos/i.test(b.titulo);
+      var d = el("aside", {"class": "lec-box" + (prop ? " prop" : ""), id: "e-" + b.id});
+      d.appendChild(el("p", {"class": "bt"}, b.titulo));
+      var bm = b.marcas || {};
+      (b.texto ? String(b.texto).split("\n\n") : []).forEach(function(t, i){ d.appendChild(markedP("p", t, bm[String(i)])); });
+      (b.cuadros || []).forEach(function(c){ d.appendChild(cuadro(c)); });
+      box.appendChild(d);
+    }
+    function foto(arr, cap){
+      if (arr.length === 1 && arr[0] === ctx.heroImg) return;
+      var f = el("figure", {"class": "lec-fig" + (arr.length > 1 ? " duo" : "")});
+      arr.forEach(function(a){
+        var b = el("button", {type: "button", "aria-label": "Ver la imagen más grande"});
+        b.appendChild(el("img", {src: "img/" + a + "-800.webp", alt: cap.replace(/\s*Ilustración\.$/, ""), loading: "lazy"}));
+        b.addEventListener("click", function(){ zoom("img/" + a + "-1600.webp", cap); });
+        f.appendChild(b);
+      });
+      f.appendChild(el("figcaption", null, cap));
+      box.appendChild(f);
+    }
+    if (e.orden && e.orden.length) {
+      e.orden.forEach(function(x){
+        if (x[0] === "p") para(x[1]);
+        else if (x[0] === "h3") head(x[1]);
+        else if (x[0] === "box") boxR(x[1]);
+        else if (x[0] === "foto") foto(x[1], x[2]);
+        else if (x[0] === "cuadro") { var c = (e.cuadros || [])[x[1]]; if (c) box.appendChild(cuadro(c)); }
+      });
+    } else {
+      ps.forEach(function(t, i){ if (t.length < 110 && t.indexOf("\n") < 0 && !/[.:;!?»”)]$/.test(t)) head(i); else para(i); });
+      (e.cuadros || []).forEach(function(c){ box.appendChild(cuadro(c)); });
+    }
+    (ctx.boxes || []).forEach(function(b){ boxR(b.id); });
+  }
+  function renderSide(){
+    lside.textContent = "";
+    lside.appendChild(el("p", {"class": "lbl"}, "Índice del programa"));
+    GROUPS.forEach(function(g){
+      var on = CUR && CUR.group === g, k = grpKey(g);
+      var b = el("button", {"class": "grp" + (on ? " on" : ""), type: "button"});
+      b.appendChild(el("span", {"class": "gn", "aria-hidden": "true"}, k ? k.n : "·"));
+      b.appendChild(el("span", null, k ? k.t : g.name.replace(/^Anexo · /, "Anexo: ")));
+      b.appendChild(el("span", {"class": "h"}, String(g.a || "")));
+      if (on && CUR === g.pages[0]) b.setAttribute("aria-current", "page");
+      b.addEventListener("click", function(){ show(g.pages[0]); });
+      lside.appendChild(b);
+      if (on && g.pages.length > 1) {
+        var ul = el("ul");
+        g.pages.slice(1).forEach(function(pg){
+          var li = el("li"), bt = el("button", {type: "button"}, pg.title);
+          if (pg === CUR) bt.setAttribute("aria-current", "page");
+          bt.addEventListener("click", function(){ show(pg); });
+          li.appendChild(bt); ul.appendChild(li);
+        });
+        lside.appendChild(ul);
+      }
+    });
+  }
+  function openLector(){
+    if (lector.hidden) { lastFocus = document.activeElement; lector.hidden = false; document.body.style.overflow = "hidden"; }
+  }
+  function setHero(pg){
+    var g = pg.group, k = grpKey(g), hero = $("#l-hero"), isHub = pg === g.pages[0], img = HERO[g.name];
+    hero.textContent = "";
+    hero.className = "lec-hero" + (img ? " ph" : "") + (isHub ? " hub" : "");
+    if (img) { hero.appendChild(el("img", {src: "img/" + img + "-1600.webp", alt: ""})); hero.appendChild(el("span", {"class": "lec-credit"}, CAP[img] || "Ilustración.")); }
+    else hero.appendChild(el("span", {"class": "wm", "aria-hidden": "true"}, k ? k.n : (g.name === "Glosario" ? "G" : (g.name === "Nota de método" ? "N" : (/^Anexo/.test(g.name) ? "§" : "")))));
+    var inn = el("div", {"class": "lec-hero-in"});
+    inn.appendChild(el("p", {"class": "lec-eyebrow"}, k ? "Capítulo " + k.n + (isHub ? "" : " · " + k.t) : (isHub ? "El programa" : g.name.replace(/^Anexo · /, "Anexo · "))));
+    var h1 = el("h1", {id: "l-title"});
+    if (isAp(pg.id)) { h1.appendChild(el("span", {"class": "n"}, pg.id)); h1.appendChild(document.createTextNode(pg.entries[0].titulo)); }
+    else h1.textContent = isHub ? (k ? k.t : g.name.replace(/^Anexo · /, "")) : pg.title;
+    inn.appendChild(h1);
+    var row = el("div", {"class": "lec-hero-row"}), meta = el("div", {"class": "lec-hero-meta"});
+    if (pg.a) meta.appendChild(el("span", null, hojas(pg.a, pg.z).replace(/^h/, "H") + " de la versión A4"));
+    meta.appendChild(el("span", null, readMin(pg) + " min de lectura"));
+    if (isHub && g.pages.length > 1) meta.appendChild(el("span", null, (g.pages.length - 1) + (k ? " apartados" : " partes")));
+    row.appendChild(meta);
+    var ab = el("button", {"class": "lec-ask", type: "button"}, isAp(pg.id) ? "Preguntale sobre este apartado" : "Preguntale sobre esta parte");
+    ab.addEventListener("click", function(){ var t = pg.title; closeLector(); ask("Explicame " + (isAp(pg.id) ? "el apartado " : "") + t + " del programa."); });
+    row.appendChild(ab);
+    inn.appendChild(row);
+    hero.appendChild(inn);
+  }
+  function goTo(id){ var x = document.getElementById(id); if (x) x.scrollIntoView({block: "start"}); }
+  function setToc(items, on){
+    var lay = $("#l-lay"), toc = $("#l-toc"), tin = $("#l-tocin");
+    toc.textContent = ""; tin.textContent = ""; tin.open = false;
+    lay.className = "lec-lay" + (on ? "" : " no-toc");
+    toc.hidden = !on; tin.hidden = !on;
+    if (!on) return;
+    toc.appendChild(el("p", {"class": "lbl"}, "En esta página"));
+    tin.appendChild(el("summary", null, "En esta página (" + items.length + ")"));
+    var ol = el("ol");
+    items.forEach(function(t){
+      var a = el("a", {href: "#" + t.id}, t.t); a.addEventListener("click", function(ev){ ev.preventDefault(); goTo(t.id); }); toc.appendChild(a);
+      var li = el("li"), a2 = el("a", {href: "#" + t.id}, t.t); a2.addEventListener("click", function(ev){ ev.preventDefault(); tin.open = false; goTo(t.id); });
+      li.appendChild(a2); ol.appendChild(li);
+    });
+    tin.appendChild(ol);
+  }
+  function pnBtn(p2, label, cls){
+    var b = el("button", {"class": cls || "", type: "button"}), im = firstFoto(p2) || HERO[p2.group.name];
+    if (im) b.appendChild(el("img", {"class": "th", src: "img/" + im + "-800.webp", alt: "", loading: "lazy"})); else b.appendChild(el("span", {"class": "th", "aria-hidden": "true"}));
+    var t = el("span"); t.appendChild(el("small", null, label)); t.appendChild(el("span", null, p2.title));
+    b.appendChild(t); b.addEventListener("click", function(){ show(p2); });
+    return b;
+  }
+  function show(pg, focusId){
+    CUR = pg; openLector();
+    var g = pg.group, k = grpKey(g);
+    $("#l-where").textContent = g.name;
+    setHero(pg);
+    var body = $("#l-body"); body.textContent = "";
+    var ctx = {first: true, toc: [], heroImg: HERO[g.name] || null};
+    if (g.name === "Glosario") {
+      pg.entries.filter(function(e){ return !/^glosario-/.test(e.id); }).forEach(function(e){ ctx.boxes = pg.boxes[e.id]; renderBlocks(body, e, ctx); });
+      var dl = el("dl", {"class": "glos"});
+      pg.entries.filter(function(e){ return /^glosario-/.test(e.id); }).forEach(function(e){
+        var d = el("div", {id: "e-" + e.id}); d.appendChild(el("dt", null, e.titulo)); d.appendChild(el("dd", null, e.texto)); dl.appendChild(d);
+      });
+      body.appendChild(dl);
+    } else {
+      pg.entries.forEach(function(e){
+        if (pg.entries.length > 1 && e.titulo !== pg.title) { body.appendChild(el("h3", {id: "e-" + e.id}, (isAp(e.id) ? e.id + " " : "") + e.titulo)); ctx.toc.push({id: "e-" + e.id, t: e.titulo}); }
+        ctx.boxes = pg.boxes[e.id];
+        renderBlocks(body, e, ctx);
+        if (e.fuentes) { var det = el("details", {"class": "lec-fts"}); det.appendChild(el("summary", null, "Fuentes de este apartado")); det.appendChild(el("p", null, e.fuentes)); body.appendChild(det); }
+      });
+    }
+    if (pg === g.pages[0] && g.pages.length > 1) {
+      var hub = el("nav", {"class": "lec-hub", "aria-label": k ? "Apartados del capítulo" : "Partes"});
+      hub.appendChild(el("h2", null, k ? "Los apartados de este capítulo" : "Las partes"));
+      g.pages.slice(1).forEach(function(p2, i){
+        var im = firstFoto(p2), e0 = p2.entries[0];
+        var b = el("button", {"class": "hub-row" + (im ? "" : " noimg"), type: "button"});
+        var am = String(e0.id).match(/^anexo-(\d+)$/);
+        b.appendChild(el("span", {"class": "hn"}, isAp(p2.id) ? p2.id : (am ? am[1] : String(i + 1))));
+        var mid = el("span");
+        mid.appendChild(el("span", {"class": "ht"}, String(e0.titulo).replace(/^\d+ · /, "")));
+        var ld = firstSentence(e0.texto, 170); if (ld) mid.appendChild(el("span", {"class": "hl"}, ld));
+        mid.appendChild(el("span", {"class": "hm"}, (p2.a ? hojas(p2.a, p2.z).replace(/^h/, "H") + " · " : "") + readMin(p2) + " min de lectura"));
+        b.appendChild(mid);
+        if (im) b.appendChild(el("img", {src: "img/" + im + "-800.webp", alt: "", loading: "lazy"}));
+        b.addEventListener("click", function(){ show(p2); });
+        hub.appendChild(b);
+      });
+      body.appendChild(hub);
+    }
+    setToc(ctx.toc, ctx.toc.length >= 3 && g.name !== "Glosario");
+    var pn = $("#l-pn"); pn.textContent = ""; pn.hidden = false;
+    var i = PAGES.indexOf(pg);
+    if (i > 0) pn.appendChild(pnBtn(PAGES[i - 1], "Anterior"));
+    if (i < PAGES.length - 1) pn.appendChild(pnBtn(PAGES[i + 1], "Siguiente", "nx"));
+    lside.setAttribute("data-closed", ""); $("#l-idx").setAttribute("aria-expanded", "false");
+    renderSide();
+    var target = focusId && document.getElementById("e-" + focusId);
+    if (target) target.scrollIntoView({block: "start"}); else lector.scrollTop = 0;
+    $("#l-main").focus({preventScroll: true});
+  }
+  function openEntry(id){
+    loadProg().then(function(){ var pg = PAGE_OF[id]; if (pg) show(pg, pg.id === id ? null : id); }).catch(function(){});
+  }
+  function openInv(x){
+    CUR = null; openLector();
+    $("#l-where").textContent = "Investigación";
+    var hero = $("#l-hero"); hero.textContent = ""; hero.className = "lec-hero";
+    hero.appendChild(el("span", {"class": "wm", "aria-hidden": "true"}, "i"));
+    var inn = el("div", {"class": "lec-hero-in"});
+    inn.appendChild(el("p", {"class": "lec-eyebrow"}, "Investigación que respalda el programa"));
+    inn.appendChild(el("h1", {id: "l-title"}, cleanInforme(x.informe)));
+    hero.appendChild(inn);
+    var body = $("#l-body"); body.textContent = "";
+    if (x.seccion) body.appendChild(el("p", {"class": "lec-sec"}, x.seccion));
+    var ctx = {first: true, toc: []};
+    renderBlocks(body, {id: "inv", texto: x.texto}, ctx);
+    if (x.descartado && x.nota) { var d = el("aside", {"class": "lec-box"}); d.appendChild(el("p", {"class": "bt"}, "El programa decidió distinto")); d.appendChild(el("p", null, x.nota)); body.appendChild(d); }
+    setToc([], false);
+    $("#l-pn").hidden = true;
+    renderSide();
+    lector.scrollTop = 0; $("#l-main").focus({preventScroll: true});
+  }
+  function closeLector(){ lector.hidden = true; document.body.style.overflow = ""; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+  var lbox = null;
+  function closeZoom(){ if (lbox) lbox.hidden = true; }
+  function zoom(src, cap){
+    if (!lbox) {
+      lbox = el("div", {"class": "lbox", role: "dialog", "aria-modal": "true", "aria-label": "Imagen ampliada"});
+      lbox.addEventListener("click", function(ev){ if (ev.target === lbox) closeZoom(); });
+      lbox.addEventListener("keydown", function(ev){ if (ev.key === "Escape") { ev.stopPropagation(); closeZoom(); } });
+      document.body.appendChild(lbox);
+    }
+    lbox.textContent = "";
+    var x = el("button", {"class": "x", type: "button"}, "Cerrar"); x.addEventListener("click", closeZoom);
+    lbox.appendChild(x); lbox.appendChild(el("img", {src: src, alt: cap || ""}));
+    if (cap) lbox.appendChild(el("p", null, cap));
+    lbox.hidden = false; lbox.scrollTop = 0; x.focus();
+  }
+  $("#l-home").addEventListener("click", closeLector);
+  $("#l-idx").addEventListener("click", function(){
+    var closed = lside.hasAttribute("data-closed");
+    if (closed) lside.removeAttribute("data-closed"); else lside.setAttribute("data-closed", "");
+    this.setAttribute("aria-expanded", closed ? "true" : "false");
+  });
+  lector.addEventListener("keydown", function(ev){ if (ev.key === "Escape") closeLector(); });
+  document.addEventListener("click", function(ev){
+    var t = ev.target.closest ? ev.target.closest("[data-open]") : null;
+    if (t) openEntry(t.getAttribute("data-open"));
+  });
+
+  /* Capítulos y partes del programa, en la portada */
+  loadProg().then(function(d){
+    buildPages(d);
+    var chs = $("#chs"), ta = $("#tiles-a"), tb = $("#tiles-b");
+    chs.textContent = ""; ta.textContent = ""; tb.textContent = "";
+    var seenCh = false;
+    GROUPS.forEach(function(g){
+      var k = grpKey(g);
+      if (k) {
+        seenCh = true;
+        var c = el("button", {"class": "ch-card", type: "button"}), im = HERO[g.name];
+        var iw = el("span", {"class": "ch-img" + (im ? "" : " solid")});
+        if (im) iw.appendChild(el("img", {src: "img/" + im + "-800.webp", alt: "", loading: "lazy"}));
+        iw.appendChild(el("span", {"class": "big", "aria-hidden": "true"}, k.n));
+        c.appendChild(iw);
+        var b = el("span", {"class": "ch-b"});
+        b.appendChild(el("span", {"class": "tag"}, "Capítulo " + k.n));
+        b.appendChild(el("span", {"class": "tt"}, k.t));
+        b.appendChild(el("span", {"class": "ld"}, firstSentence(g.list[0].texto, 150)));
+        var mt = el("span", {"class": "mt"});
+        mt.appendChild(el("span", null, g.pages.filter(function(p){ return isAp(p.id); }).length + " apartados · " + hojas(g.a, g.z)));
+        mt.appendChild(el("b", null, "Leer"));
+        b.appendChild(mt); c.appendChild(b);
+        c.addEventListener("click", function(){ show(g.pages[0]); });
+        chs.appendChild(c);
+      } else {
+        var t = el("button", {"class": "tile", type: "button"});
+        var ic = {"Introducción": "I", "Qué proponemos hacer": "9", "Para cerrar": "C", "Glosario": "G", "Nota de método": "N"}[g.name] || (/^Anexo/.test(g.name) ? "§" : "·");
+        t.appendChild(el("span", {"class": "ic", "aria-hidden": "true"}, ic));
+        var mid = el("span");
+        mid.appendChild(el("span", {"class": "tt"}, g.name.replace(/^Anexo · /, "")));
+        var sm = /^Anexo/.test(g.name) ? g.list.filter(function(e){ return /^anexo-\d+$/.test(e.id); }).length + " ordenanzas · " + hojas(g.a, g.z)
+          : g.name === "Glosario" ? g.list.filter(function(e){ return /^glosario-/.test(e.id); }).length + " palabras · " + hojas(g.a, g.z)
+          : g.name === "Qué proponemos hacer" ? "Nueve puntos y los primeros cien días · " + hojas(g.a, g.z)
+          : hojas(g.a, g.z);
+        mid.appendChild(el("span", {"class": "sm"}, sm.charAt(0).toUpperCase() + sm.slice(1)));
+        t.appendChild(mid); t.appendChild(el("b", null, "Leer"));
+        t.addEventListener("click", function(){ show(g.pages[0]); });
+        (seenCh ? tb : ta).appendChild(t);
+      }
+    });
+  }).catch(function(){ $("#chs").textContent = "No se pudo cargar el programa. Recargá la página."; });
+
